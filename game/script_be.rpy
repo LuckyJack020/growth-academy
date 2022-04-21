@@ -253,7 +253,7 @@ label BE003:
     show BE sad
     BE "Woof, yeah, I wasn't planning on that, either. Hopefully there'll be some refreshments there, though. They can't really keep us out for too long without giving us some water at least."
     menu:
-        "You uh, want some of my drink?" if getAffection("BE") > 2:
+        "You uh, want some of my drink?" if checkAffection("BE", ">", 2):
             jump BE003_c1
         "Maybe grab something to drink then before you get going":
             jump BE003_c2
@@ -806,7 +806,7 @@ label BE007:
     MC "What do you mean?"
     BE "Like, you're going to get longer hair, I'm going to get bigger boobs. Is Alice just going to get a bigger stomach, or is it an all-over deal?"
     menu:
-        "I actually know the answer to that." if getAffection("WG") >= 3:
+        "I actually know the answer to that." if checkAffection("WG", ">=", 3):
             jump BE007_c1
         "I'm not really sure.":
             jump BE007_c2
@@ -2122,9 +2122,12 @@ label BE018:
     show BE neutral
     with fade
     "I was hanging out in Honoka's room, playing video games with her, as had become a fairly frequent occurrence."
-    "She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
+    "She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, "
+    play sound Knock
+    extend "a knock came at her door."
     MC "I thought you said your roomie was going to be out until evening?"
     BE "That's what she said... Maybe it's someone else?"
+    hide BE with dissolve
     "Honoka stood up to open the door, and I peered over to check out who it was. Surprisingly, there stood Aida, fiddling with her fingers, but otherwise waiting patiently."
     show BE happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
@@ -2146,7 +2149,7 @@ label BE018:
     BE "Ah! Good point. So see, not a problem for me if he's up here."
     MC "Honoka..."
     MC "Anyway. What's going on, Kodama-san? Is everything all right?"
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         "With Aida's condition, I was fairly concerned over what she could be worried about. "
     else:
         "Hopefully nothing was wrong with Aida. She didn't look sick, but it could have been something else, I supposed."
@@ -2295,7 +2298,7 @@ label BE018_c1_after:
     "Honoka raised her hand in such a studious, professor-ly manner that I'm surprised glasses didn't manifest on her face."
     show BE neutral
     BE "So, for this example rack, the difference is thirty centimeters. A new cup size is given every two and a half centimeters, give or take. So that's, let's see..."
-    if getSkill("Academics") > 5:
+    if checkSkill("Academics", ">", 5):
         MC "That'd be 12."
         $setAffection("BE", 1)
         $setAffection("PRG", 1)
@@ -2325,7 +2328,7 @@ label BE018_c1_after:
     show PRG happy
     PRG "N-No. Thank you both then."
     MC "Do you want to stick around, Kodama-san? We only have two controllers but we could swap out if you want to play."
-    if getAffection("PRG") > 8:
+    if checkAffection("PRG", ">", 8):
         show PRG surprised
         PRG "Oh, um... sure! I suppose I could, if it's alright with Inoue-san. It is her room."
         show BE happy
@@ -2513,7 +2516,7 @@ label BE019_c1_after:
     MC "I mean, it was a fun day! Nothing wrong in my book."
     show BE neutral
     BE "Still. Maybe we should think about doing another skip day some time while we're here."
-    if getAffection("BE") > 8:
+    if checkAffection("BE", ">", 8):
         show BE aroused
         BE "Maybe if we do, then we can have a better night together."
         "Honoka stared at me and winked, then stuck out her tongue as she grabbed her trash to throw it away, leaving me slightly dumbfounded about her last words."
@@ -2597,7 +2600,7 @@ label BE020_c1_2:
     jump BE020_c1_after
 
 label BE020_c1_3:
-    if getAffection("BE") > 10:
+    if checkAffection("BE", ">", 10):
         MC "I'm sure Nikumaru-san would be interested."
         show BE sad
         BE "Aw. Heh. Are you worried we're hanging out too much? I like our classmates a lot too, but, well... I really wanna go with you."
@@ -2977,7 +2980,7 @@ label BE021:
     BE "Like this?"
     Haruhiro "Almost."
     "Haruhiro took her hand and adjusted it so Honoka's thumb went under her jawline."
-    if getAffection("BE") > 8:
+    if checkAffection("BE", ">", 8):
         "Seeing how close he got to Honoka was... upsetting to say the least."
     show BE happy
     BE "Okay. And I put my finger out to point where I'm aiming, right?"
@@ -2991,7 +2994,7 @@ label BE021:
     BE "Hey! I did it!"
     Haruhiro "Well done. See, it's relatively simple. At the club you'll learn more on how to be more accurate and adjust for wind and distance. Ready to try yourself, Keisuke?"
     MC "I am."
-    if getSkill("Athletics") > 5:
+    if checkSkill("Athletics", ">", 5):
         jump BE021_testpass
     else:
         jump BE021_testfail
@@ -3186,7 +3189,7 @@ label BE022:
             jump BE022_c1_1
         "I don't know, we'll just have to help with this experiment again later?":
             jump BE022_c1_2
-        "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("WG") > 6:
+        "(Convince Honoka to come clean)" if checkAffection("BE", ">", 6) and checkAffection("WG", ">", 6):
             jump BE022_c1_3
         "(Say nothing)":
             jump BE022_c1_4
@@ -3536,7 +3539,7 @@ label BE022_c1_4:
     show WG angry at Transform(xzoom=1)
     WG "You saw I was getting upset, and that did nothing to change your mind?"
     MC "I'm, I'm sorry. That was clearly a mistake."
-    if getAffection("WG") > 4:
+    if checkAffection("WG", ">", 4):
         WG "Really, Hotsure-san, I thought you were a better judge of character..."
     else:
         WG "Thank you for your unique, valuable input. Clearly you were a boon to this test."
@@ -3549,8 +3552,8 @@ label BE022_c1_4:
     WG "Never mind. If you wanted them so much, you can just have them."
     "Alice turned around and began walking out of the cafeteria."
     MC "Wait, please, let us make it up to you!"
+    show BE at altMove(0.5, 0.5)
     hide WG with dissolve
-    show BE at center with dissolve
     "Honoka opened her mouth to speak, but nothing came out. Alice left the room in a huff. I slumped back down in my seat and looked over at Honoka."
     BE "I feel... like a real jerk."
     "Honoka's elbows rested on the table, her hands resting on one another. She pulled her torso back enough to get... a majority of her breasts under the table, at least, then tilted forward and rested her head on her hands with a sigh."
@@ -3564,7 +3567,7 @@ label BE022_c1_4:
     MC "You're probably right."
     show BE sad
     BE "I'm sorry, Kei-chan. I didn't mean to get Alice-chan upset at you."
-    if getAffection("WG") > 4:
+    if checkAffection("WG", ">", 4):
         BE "I really hope I didn't screw up your relationship with her. You two seem close."
     else:
         BE "She's always been hard to get friendly with, I hope this doesn't wreck everything."
@@ -4340,12 +4343,12 @@ label BE025_c1_after:
     "The kid panicked, and let go of the string after turning the bow away from down range."
     "Right towards Honoka and I."
     hide BE with dissolve
-    if getSkill("Athletics") <= 0:
-        jump BE025_c2_1
-    elif getSkill("Athletics") <= 5:
+    if checkSkill"Athletics", ">", 5):
+        jump BE025_c2_3
+    elif checkSkill("Athletics", ">", 0):
         jump BE025_c2_2
     else:
-        jump BE025_c2_3
+        jump BE025_c2_1
 
 label BE025_c2_1:
     "Suddenly, I was pushed onto the ground. I winced a bit as my elbow dug into the grass. Honoka's chest pushed into me from below."
@@ -4573,7 +4576,7 @@ label BE026_c2_2:
     show BE sad with dissolve
     BE "Kei-chan, that stuff sucks."
     MC "I know, but it'll help."
-    if getSkill("Academics") > 5:
+    if checkSkill("Academics", ">", 5):
         MC "I'll put it on a cotton ball and make it easier on you."
     MC "Go ahead and sit down."
     show BE happy
@@ -4581,7 +4584,7 @@ label BE026_c2_2:
     MC "I mean... if you want. Wait. That's not the way these fantasies are supposed to play out. You're supposed to be the nurse."
     BE "I can still be the nurse! Nurses get injuries."
     MC "Yeah, that's fair."
-    if getSkill("Academics") > 5:
+    if checkSkill("Academics", ">", 5):
         "I took the moistened cotton ball and brought it up to Honoka's arm."
         MC "Now, nurse, this might sting a little."
         "Rubbing the peroxide on Honoka's cut, she took my hand and squeezed it to help diffuse the discomfort. After rubbing a bit of antibacterial cream on it, I slapped two bandages on the cut to cover it up completely."
@@ -4670,32 +4673,32 @@ label BE026_c3_1:
     "Unfortunately, the angle was off, and her net didn't land with a perfect seal around the cicada. The bug began to run away from the net, and fluttered into the air."
     show BE surprised
     BE "Darnit! Get it, Kei-chan!"
-    if getSkill("Athletics") <= 5:
-        "I grabbed my net, and tried to watch for the flight of the cicada. It didn't zoom straight up into the air. After a few seconds, I swung my net, and landed it on the ground."
-        MC "I think I got it!"
-        BE "You did?!"
-        MC "Yeah, come here and see."
-    else:
+    if checkSkill("Athletics", ">", 5):
         "I didn't feel like there was enough time to grab my net. I just reached out with both hands and clasped them together."
         "My heart nearly jumped out of my chest when I felt the flutter of the cicada's wings in my grasp."
         MC "Holy crap, I caught it!"
         $setAffection("BE", 2)
         BE "You did? With your bare hands? You didn't hurt it, did you?"
         MC "No no, it's right here, and it's okay. You've gotta check this out!"
+    else:
+        "I grabbed my net, and tried to watch for the flight of the cicada. It didn't zoom straight up into the air. After a few seconds, I swung my net, and landed it on the ground."
+        MC "I think I got it!"
+        BE "You did?!"
+        MC "Yeah, come here and see."
     "Honoka stood up, and dusted herself off. She rushed off to my position as quick as she could, making sure to keep the cicada contained."
     show BE neutral
     BE "Oh my gosh, I can't believe you caught it!"
     MC "Yeah, here, take a look..."
-    if getSkill("Athletics") <= 5:
-        "I carefully opened up my hands so Honoka could peer inside and see the cicada."
-        show BE happy
-        BE "It looks perfectly fine. Hehe, I can't believe you were quick enough to grab it like that."
-        MC "It wasn't exactly easy, to be fair."
-    else:
+    if checkSkill("Athletics", ">", 5):
         "I carefully moved the net, so Honoka could see the cicada inside."
         show BE surprised
         BE "Wow! Good catch, Kei-chan."
         MC "Heh, I'm surprised I got it in one swing."
+    else:
+        "I carefully opened up my hands so Honoka could peer inside and see the cicada."
+        show BE happy
+        BE "It looks perfectly fine. Hehe, I can't believe you were quick enough to grab it like that."
+        MC "It wasn't exactly easy, to be fair."
     jump BE026_c3_after
 
 label BE026_c3_2:
@@ -5017,7 +5020,7 @@ label BE027_c3_2:
     MC "Oh, can't I?"
     "I double-checked that the door was locked, and stepped behind Honoka, making sure she looked into the mirror."
     MC "How could I be lying about this figure being beautiful?"
-    if getSkill("Art") > 5:
+    if checkSkill("Art", ">", 5):
         MC "When you look so stunning that the mirror can't even properly show all of your beauty, limited by what's achievable by the science of mirrors?"
         MC "When every part of you, from your cocoa-brown hair, to your soft, gentle lips, seems to have been crafted to perfection?"
         MC "How could I deny that I'm staring at a dress that somehow took the most magnificent set of breasts I've ever seen, and elevated them to levels that goddesses wish they could muster?"
@@ -5153,18 +5156,18 @@ label BE028:
     MC "Oh, duh. It can't really test our compatibility if we're not holding hands."
     MC "Okay. Here we go!"
     if getVar("BEMode") == "Feminine":
-        show cg BE028 with dissolve
-    else:
         show cg BE028_fem with dissolve
+    else:
+        show cg BE028 with dissolve
     "The machine lit up 'Squeeze Now' and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
     #show BE happy
     BE "Come on, Kei-chan, we can do this."
-    if getAffection("BE") < 8:
-        jump BE028_test_1
-    elif getAffection("BE") < 16:
+    if checkAffection("BE", ">=", 16):
+        jump BE028_test_3
+    elif checkAffection("BE", ">=", 8):
         jump BE028_test_2
     else:
-        jump BE028_test_3
+        jump BE028_test_1
 
 label BE028_test_1:
     "As Honoka and I squeezed the handle as hard as we could, the display on the machine moved up and down. It passed by the first two titles easily, and continued to waver around the remaining ones."
@@ -5398,7 +5401,7 @@ label BE029:
     show BE neutral
     BE "Yeah. It seems like it could be one of a bunch of things. Maybe a chunk of iron? It's shiny, it's like, medium hard, looks like it has some cleavage but it's not obvious where..."
     MC "Ah, hm. Let me take a look."
-    if getSkill("Academics") > 9:
+    if checkSkill("Academics", ">", 9):
         MC "Ahhh, wait a second. I think I know what's going on here. Hm, where's the... ah, see, you forgot to grab something from the toolset."
         show BE surprised
         BE "I did? I got the coin, and the little tablet to do the streaks, and the nail."
@@ -6046,9 +6049,9 @@ label BE033:
             jump BE033_honokaside
         "Side with Shiori":
             jump BE033_shioriside
-        "They're both just games for kids. Relax!" if getSkill("Academics") > 7:
+        "They're both just games for kids. Relax!" if checkSkill("Academics", ">", 7):
             jump BE033_academics
-        "Both versions bring different parts of the same world to life, focus on the commonalities." if getSkill("Art") > 7:
+        "Both versions bring different parts of the same world to life, focus on the commonalities." if checkSkill("Art", ">", 7):
             jump BE033_art
         "Say nothing":
             jump BE033_silence
@@ -6467,8 +6470,11 @@ label BE035A:
     "When Honoka and I first visited the cooking club to get her signed up, there had only been a few people in the cooking space. Now that we were at an actual meeting, it was a lot more crowded."
     "There was a large row of ovens and stoves lined up, with a wide amount of space for food preparation. On the wall were various types of knives for different cooking purposes, and all sorts of cooking utensils stacked up nearby."
     Kanami "Hello everyone. Thank you all for coming today. I hope your week has been well. We have some new people today who will be joining us in the world of cooking. Please be kind to them and offer your guidance if they need it."
+    MCT "I recognised this teacher. I know I met her somewhere. It wasn't Takamura-sensei, it was someone else. Are there more cooking teachers here?"
     "The cooking club was large enough that there were several 'heads' of the club, but it was the spokesperson who spoke to us currently."
-    "Kanami Tozakura was a soft-spoken woman with very long black hair. Her posture looked perfect. She looked like she'd been designed to wear an apron, like she did currently."
+    MCT "Oh, it's Kanami-san. Damnit, I thought she was a teacher again..."
+    "Kanami Tozakura was a soft-spoken woman with very long black hair. Her posture was perfect, and carried herself with maturity and poise."
+    "She looked so comfortable in her apron, it was like she'd been born to wear it."
     Kanami "As always, before you begin today, please make sure to wash your hands thoroughly, and to do so whenever you switch between ingredients to be safe. Those of you with long hair should tie it back, as I have."
     Kanami "For those of you in the beginner level, we have a few recipes available for you to try out today. I'd recommend the fried rice, personally. If you're more advanced, the same goes for you but my recommendation would be the okoyamonaki. "
     Kanami "Be safe. Be clean. Be delicious. Let me or the others know if you need aid."
@@ -6481,10 +6487,10 @@ label BE035A:
     BE "Hehe, yeah. It's just, did you notice, Kei-chan?"
     MC "Notice what?"
     show BE neutral
-    BE "Kanami-chan. She's got the same growth factor as me."
+    BE "Kanami-chan. Remember I mentioned she's got the same growth factor as me?"
     MC "Oh!"
-    "It wasn't that I'd missed that Kanami had a large chest. Looking again, her breasts were very full, and clearly lifted up her apron quite a lot. She was only a bit smaller than Honoka."
-    MC "I, I guess I didn't notice."
+    "The last time I'd met Kanami-chan, I couldn't really tell and didn't want to make any assumptions about her factor. Looking at her now, her breasts had gotten much larger, and clearly lifted up her apron quite a lot. But, she was only a bit smaller than Honoka."
+    MC "I... I guess I forgot."
     show BE unique
     BE "I know I've got a bit of a leg up on her but, hey, if she can do all this cooking stuff, so can I!"
     MC "Very good point. Let's get started then, shall we? Got your apron on. Let's take a look at these instructions."
@@ -6499,9 +6505,16 @@ label BE035A:
     MC "Why is it 'shelling' the shrimp? Aren't I really 'de-shelling' them?"
     BE "Ha. Yeah I don't know. One of those dumb quirks of language I guess."
     "As Honoka and I worked, Kanami came up and observed for a moment."
-    Kanami "Very nice, Hotsure-kun. Please don't forget to check the intestinal tract on the back there. If you take a small knife, you can gently slice into the end and lift it up to pull it out."
+    Kanami "Very nice, Hotsure-san. Please don't forget to check the intestinal tract on the back there. If you take a small knife, you can gently slice into the end and lift it up to pull it out."
     MC "Oh, right. Thanks. That wouldn't exactly taste good, would it?"
-    Kanami "Ufufu, no, no it wouldn't. How are you doing, Inoue-chan?"
+    Kanami "Ufufu, no, no it wouldn't."
+    MC "By the way you’re handling things, you must be the president of the cooking club, right Kanami-san?"
+    Kanami "Actually, I’m not the president. Three of us manage different parts of the cooking club."
+    Kanami "Takamura-sensei is the supervisor, she's always around to help everyone and organizes everything on the school side. She's also doing the meetings for advanced classes and organizing the cooking contests."
+    Kanami "Michiko Sano, who you already met during signing up, takes the reigns of organising things on students side. She takes it really seriously... Sometimes too seriously. She’s also my cooking partner."
+    Kanami "And here's me, helping around and leading the meetings for beginner classes."
+    MC "Well, with a club this big, I guess you’d need multiple people to help make sure things run smoothly."
+    Kanami "You would be correct, Hotsure-san. And how are you doing, Inoue-chan?"
     BE "Ha. I think I'm doing okay. How does it look?"
     Kanami "Your cuts are okay. But your hands aren't quite in the right position. May I?"
     show BE happy
@@ -6531,7 +6544,7 @@ label BE035A:
     show BE neutral
     BE "Are we forgetting anything?"
     MC "Hmm..."
-    if getSkill("Art") > 6:
+    if checkSkill("Art", ">", 6):
         jump BE035A_sauce
     else:
         jump BE035A_nosauce
@@ -6610,7 +6623,7 @@ label BE035A_nosauce:
     "Honoka nodded, so Kanami took a spoon for herself and sampled it. She closed her eyes and tilted her head as she chewed on the rice."
     Kanami "Hm. The rice is cooked well. Nothing seems overdone. But, oh, I see. It's missing soy sauce."
     MC "Ah, nuts. We forgot something."
-    Kanami "Don't fret too much, Hotsure-kun. It was your first time. Excitement can make you a bit klutzy, ufu, but it's not a problem."
+    Kanami "Don't fret too much, Hotsure-san. It was your first time. Excitement can make one a bit klutzy, but it's not a problem."
     Kanami "If you like you could still mix in some soy sauce with it, but I would only use a tablespoon as there's going to be less heat in the rice at this point, and it won't be able to incorporate as much."
     BE "Okay. Thanks for the tip."
     "Honoka did as suggested and put a bit of soy sauce in the rice. Now we could see the color we were used to with fried rice, though it still wasn't 100%% correct. It was better than before, though."
@@ -6697,7 +6710,7 @@ label BE035B:
     "I discarded by glove to grab the bat, and had the implement in my hand, ready to go."
     UNKNOWN "Oh crap, heads up!"
 
-    if getSkill("Athletics"):
+    if checkSkill("Athletics", ">", 7):
         jump BE035B_pass
     else:
         jump BE035B_fail
@@ -6915,7 +6928,7 @@ label BE036:
     GTS "Hehe, well, if Seichou ever decides to reserve a large amount of space for such a thing for several years, I'll let you know and perhaps the two of you can assist me in coming up with a design for it."
     "I pointed to a group of flowers near the side closest to Naomi."
     MC "I like these ones. What are they? It looks like a..."
-    if getSkill("Academics") > 5:
+    if checkSkill("Academics", ">", 5):
         jump BE036_c1_1
     else:
         jump BE036_c1_2
@@ -7232,7 +7245,7 @@ label BE038B_c1_after:
     "Honoka looked nervous. Her foot was planted more firmly on the plate than it was the first time she got on base."
     "The next person at bat managed to push them both forward a base, leaving Honoka halfway to home plate. She was antsy as she moved back and forth on the base."
     "Honoka watched the pitcher as they threw the ball and it got a nice solid hit up in the air. It looked easily-caught, so she was careful and stayed put. Her intuition was right on the money as the ball was caught leaving her stuck there with only one out left."
-    if getSkill("Athletics") > 8:
+    if checkSkill("Athletics", ">", 8):
         jump BE038B_pass #+1
     else:
         jump BE038B_fail
@@ -8563,24 +8576,7 @@ label BE044_C3_1:
     BE "Seriously Kei-chan, where are you? I'm getting worried..."
     "I swam under Honoka's landmasses and prepared myself for lifting her upwards."
     MCT "Okay...no time to second guess myself.  Upsie-daisy!"
-    if getSkill("Athletics") < 7:
-        "...Or at least, I thought it would be that easy."
-        "I wrapped my arms around Honoka's thighs and tried lifting her upward."
-        show BE surprised-2
-        BE "Whoa! Kei-chan??"
-        "Except...she isn't rising."
-        MCT "This...isn't as easy as I thought it would be."
-        show BE doubt
-        BE "Kei-chan...these things aren't filled with air, you know."
-        "I strained a little harder, but even considering how... {i}buoyant{/i} Honoka is, she just wasn't moving."
-        MCT "Let me just stop before I embarrass myself anymore than I already have."
-        "I released Honoka and rose up to the surface."
-        show BE angry
-        BE "You tried."
-        $setAffection("BE", -2)
-        MC "...I tried."
-        jump BE044_after
-    if getSkill("Athletics") >= 7:
+    if checkSkill("Athletics", ">=", 7):
         "I wrapped my arms around Honoka's thighs and tried lifting her upward."
         show BE surprised-2
         BE "W-Whoa! Kei-chan??"
@@ -8598,6 +8594,24 @@ label BE044_C3_1:
         show BE neutral
         BE "But it was pretty cool."
         jump BE044_after
+    else:
+        "...Or at least, I thought it would be that easy."
+        "I wrapped my arms around Honoka's thighs and tried lifting her upward."
+        show BE surprised-2
+        BE "Whoa! Kei-chan??"
+        "Except...she isn't rising."
+        MCT "This...isn't as easy as I thought it would be."
+        show BE doubt
+        BE "Kei-chan...these things aren't filled with air, you know."
+        "I strained a little harder, but even considering how... {i}buoyant{/i} Honoka is, she just wasn't moving."
+        MCT "Let me just stop before I embarrass myself anymore than I already have."
+        "I released Honoka and rose up to the surface."
+        show BE angry
+        BE "You tried."
+        $setAffection("BE", -2)
+        MC "...I tried."
+        jump BE044_after
+
 
 label BE044_after:
     stop music fadeout 1.0

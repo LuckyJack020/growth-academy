@@ -145,16 +145,17 @@ label AE002:
     MC "Oh, okay... I just kind of figured that you would put it back..."
     AE "Had I put it back or not, it would have inevitably ended up in its original spot when the library closed, yes? It is a common courtesy, however it's not officially required."
     play music AE
-    if getSkill("Academics") < 1:
-        MC "True... and I checked it out anyway, so no harm no foul!"
-        jump AE002_c1_after
-    else:
+    if checkSkill("Academics", ">=", 1):
         menu:
             "She's lying, call her out.":
                 jump AE002_c1_1
             "She's telling the truth.":
                 MC "True... and I checked it out anyway, so no harm no foul!"
                 jump AE002_c1_after
+    else:
+        MC "True... and I checked it out anyway, so no harm no foul!"
+        jump AE002_c1_after
+
 
 label AE002_c1_1:
     $setFlag("AE002_c1_1")
@@ -332,13 +333,13 @@ label AE003_c1_1:
     MC "If you guys are gonna talk shit about a girl, at least leave their sex life out of it, I mean c'mon."
     Student1 "Eh? The hell's your problem?"
     MC "It ain't cool, is all. I mean, I get it, you're pissed, but you don't gotta bring up banging her. Just cause she can't get any doesn't mean you get to be salty cause you aren't getting any either."
-    if getSkill("Athletics") > getSkill("Academics") and getSkill("Athletics") > getSkill("Art"):
+    if isHighestSkill("Athletics"):
         "The biggest of the three seemed to take exception to this, as he walked up to me with his chest puffed up."
         Student3 "What was that, punk?"
         MC "Try it and get laid out."
         Student3 "..."
         "I'm not exactly the strongest, but apparently neither is he, as he felt intimidated enough to back down quickly."
-    elif getSkill("Academics") > getSkill("Art"):
+    elif checkSkill("Academics", ">", getSkill("Art")):
         "One of his friends decided to get up and hold the line for him."
         Student2 "Now hold on, what does how much we get laid have to do with anything?!"
         MC "If it doesn't, then why'd he bring it up in the first place?"
@@ -435,7 +436,11 @@ label AE004:
     show AE neutral-eyebrow
     AE "Hm?"
     MC "What exactly... did Daichi do?"
-    if getAffection("AE") <= 1:
+    if checkAffection("AE", ">", 1):
+        "Shiori-san paused for a moment, before turning to me and holding the file out in her hands."
+        AE "I suppose if anyone should know, it should be you. Take a look."
+        jump AE004_testpass
+    else:
         show AE neutral-annoyed
         AE "It's a matter between myself and him. There's no need to pry any further."
         menu:
@@ -462,10 +467,6 @@ label AE004:
                 show AE neutral
                 AE "...Very well. Here."
                 jump AE004_testpass
-    else:
-        "Shiori-san paused for a moment, before turning to me and holding the file out in her hands."
-        AE "I suppose if anyone should know, it should be you. Take a look."
-        jump AE004_testpass
 
 label AE004_testpass:
     "Shiori handed me the file with both hands and then crossed them across her chest, fingers tapping at her forearms as she awaited my response. What I saw was..."
@@ -652,7 +653,7 @@ label AE005_c2:
     AE "Y-you!"
     show AE aroused-3
     AE "..."
-    if getAffection("AE") >= 3:
+    if checkAffection("AE", ">=", 3):
         show AE sad
         AE "It's all right Hotsure-san, I realize that this is a stressful time for us all... Yes, you're correct. The growth I came to this school for is my... rear."
         "I looked down at Shiori-sans hips. They were already flared out as it was. I've seen butts like hers from American media and stuff like that, but seeing it on a Japanese girl was still so surreal to me."
@@ -691,7 +692,7 @@ label AE005_after:
     stop music
     "Shiori-san walked away toward the library, holding her skirt with one hand from behind her. As I watched her walk away, I started to contemplate what she said."
     MCT "Mutual learning..."
-    if getAffection("AE") >= 3:
+    if checkAffection("AE", ">=", 3):
         MCT "I... look forward to it."
     else:
         MCT "Yeesh, could she get any creepier?"
@@ -796,14 +797,7 @@ label AE006:
     show AE neutral-annoyed
     AE "What?"
     "Shiori-san seemed to be taken aback from my statement for a moment."
-    if getAffection("AE") < -3:
-        AE "I apologize, however I think you misunderstood my gesture by giving these papers to you. I didn't want you to run around outside because the school would be liable. I have no intention of spending any more time with you than I need to."
-        MC "Oh... I mean, I just wanted to help."
-        AE "I'll take my chances with one of the other members should the need come. Good day."
-        MCT "Ouch... Well, I guess that's that."
-        $setProgress("AE", "AE007b")
-        jump daymenu
-    elif getAffection("AE") > 2:
+    if checkAffection("AE", ">", 2):
         show AE neutral
         AE "Perhaps... it would be better if I had someone with me. From what I gather, you seem competent and responsible."
         MC "Thank you. And if anything, it will make your work be done more efficiently."
@@ -812,7 +806,7 @@ label AE006:
         show AE neutral
         AE "Very well. I will see to it that you will begin to work under me after class ends. Do your best to not miss a day, will you?"
         MC "You have my word, Shiori-san. See you tomorrow."
-    else:
+    elif checkAffection("AE", ">=", -3):
         show AE neutral-eyebrow
         AE "I... No. I can manage this by myself."
         MC "Oh. Um, I didn't mean to say that you needed my help. Just that I think, y'know, it would get done more efficiently."
@@ -823,6 +817,13 @@ label AE006:
         AE "...Very well. If anything, I'll be doing a service to the school by helping you prepare for the outside world."
         MC "Thank you, Shiori-san! I promise, you won't regret this."
         AE "I certainly hope not."
+    else:
+        AE "I apologize, however I think you misunderstood my gesture by giving these papers to you. I didn't want you to run around outside because the school would be liable. I have no intention of spending any more time with you than I need to."
+        MC "Oh... I mean, I just wanted to help."
+        AE "I'll take my chances with one of the other members should the need come. Good day."
+        MCT "Ouch... Well, I guess that's that."
+        $setProgress("AE", "AE007b")
+        jump daymenu
     show AE neutral
     AE "Hotsure-san?"
     MC "Hm? Yeah, what's up?"
@@ -1186,7 +1187,7 @@ label AE009_c1:
 
 label AE009_c2:
     MC "Well, I guess in a way it is kind of distracting, yeah. But, I wouldn't say it's that big of a deal."
-    if getAffection("AE") >= 4:
+    if checkAffection("AE", ">=", 4):
         $setAffection("AE", 1)
         show AE angry
         AE "Getting distracted isn't a big deal? Hotsure-san, your academic standing is one of my top priorities, if for any reason you feel distracted I would not hesitate-"
@@ -1378,7 +1379,7 @@ label AE010:
     AE "Well..."
     MC "And that's why you've been hiding your back."
     MCT "Now that I'm saying it out loud, I'm starting to realize how dumb I was for not noticing it earlier."
-    if getAffection("AE") >= 4:
+    if checkAffection("AE", ">=", 4):
         "Shiori-san winced a bit when she realized that her gambit had been called, then, finally resigned to the inevitable."
         show AE sad
         AE "...Yes. Yes it is."
@@ -1414,7 +1415,7 @@ label AE010:
     play music AE
     AE "..."
     MC "I mean... oh my god!"
-    if getAffection("AE") >= 4:
+    if checkAffection("AE", ">=", 4):
         AE "I get it, Hotsure-san."
     else:
         show AE angry
@@ -1517,7 +1518,7 @@ label AE011_010followup:
     show AE neutral
     AE "From the other day."
     MC "I don't... know what you're talking about."
-    if getAffection("AE") >= 4:
+    if checkAffection("AE", ">=", 4):
         show AE neutral-smug
         "Shiori-san turned around with a slight smirk on her face."
         AE "Ah, I see. Very astute of you, Hotsure-san. You're diligent."
@@ -1533,7 +1534,7 @@ label AE011_010followup:
         MC "The... uh..."
         show AE angry
         AE "You said you weren't going to dwell on the events of yesterday or tell anyone."
-        if getSkill("Academics") > 3:
+        if checkSkill("Academics", ">", 3):
             $ setAffection("AE", 2)
             MC "I realize, Shiori-san. That's why I've been pretending like I didn't know."
             show AE neutral
@@ -1899,7 +1900,7 @@ label AE012_after:
     show AE aroused
     AE "I'm... your friend?"
     MC "I mean... we spend a lot of time together and stuff so... Yeah."
-    if getAffection("AE") >= 5:
+    if checkAffection("AE", ">=", 5):
         AE "Friend... Hm."
         "Shiori-san adjusted her glasses, clearly not wholly sure how to take what I just said."
         AE "Well..."
@@ -2014,7 +2015,7 @@ label AE013:
     MC "Isn't that analogy a bit much?"
     show AE neutral
     AE "Mmm, perhaps, but I got my point across. I prefer a harsh reality to a comforting fantasy. It makes things easier to assess and easier to fix."
-    if getSkill("Academics") > 5:
+    if checkSkill("Academics", ">", 5):
         MC "So long as you're not building a harsh fantasy in its stead."
         AE "...Fair."
     "We continued to work after that somewhat strange discussion, until we ran into a particularly high area."
@@ -2388,7 +2389,7 @@ label AE015_watch:
         jump AE015_menu
 
 label AE015_aftermenu:
-    if getVar("AE015_watch") >= 9 and getSkill("Academics") > 3:
+    if getVar("AE015_watch") >= 9 and checkSkill("Academics", ">", 3):
         $setAffection("AE", 2)
         MCT "Oh, wait, hang on."
         "For subtleties sake, I snuck out of the room, then out of the library before making a show of entering again and making loud footsteps as I entered the office."
@@ -3062,8 +3063,35 @@ label AE018:
     MC "You want to know what I think?"
     show AE neutral-annoyed
     AE "You're going to tell me anyway, go ahead."
-
-    if getSkill("Academics") < 2:
+    if checkSkill("Academics", ">=", 4):
+        MC "I think... that you're worried about your future."
+        show AE neutral-annoyed
+        AE "...What?"
+        MC "Your vision of the horizon, of the top, is completely clouded by fog."
+        MC "You let your fears of isolation completely stop you from being able to visualize a good future for yourself."
+        show AE sad-2
+        AE "...I... I feel we should stop."
+        MC "O-oh, I'm sorry I didn't mean to-"
+        AE "No, no, I... That was just a little off-putting, is all."
+        MCT "I must have hit too hard with that."
+    elif checkSkill("Academics", ">=", 2):
+        MC "I think... you subconsciously believe that you're lonely."
+        show AE neutral
+        AE "..."
+        MC "You stand alone. At the top, but alone. It's signifying a deeper fear of alienation."
+        show AE neutral-annoyed
+        AE "Oh, w-, enough of this nonsense, Hotsure-san."
+        MC "Huh?"
+        AE "I'll have you know that I don't feel lonely. I've plenty of company, includi-"
+        MC "Student council doesn't count."
+        show AE sad-2
+        AE "..."
+        AE "Including you."
+        MC "..."
+        play sound Bird
+        "We stood there, the sounds of the wind carrying with it the chirping of the birds."
+        MC "W-... Thank you, Shiori-san."
+    else:
         MC "I think... it represents your fear of heights."
         show AE neutral-smug
         AE "Hmm... Do you know what I see?"
@@ -3084,34 +3112,6 @@ label AE018:
         AE "And the roof is...?"
         MC "Okay, okay, I get it, yeesh."
         AE "You're the Sigmund Freud of dream analysis, Hotsure-san."
-    elif getSkill("Academics") >= 2 and getSkill("Academics") < 4:
-        MC "I think... you subconsciously believe that you're lonely."
-        show AE neutral
-        AE "..."
-        MC "You stand alone. At the top, but alone. It's signifying a deeper fear of alienation."
-        show AE neutral-annoyed
-        AE "Oh, w-, enough of this nonsense, Hotsure-san."
-        MC "Huh?"
-        AE "I'll have you know that I don't feel lonely. I've plenty of company, includi-"
-        MC "Student council doesn't count."
-        show AE sad-2
-        AE "..."
-        AE "Including you."
-        MC "..."
-        play sound Bird
-        "We stood there, the sounds of the wind carrying with it the chirping of the birds."
-        MC "W-... Thank you, Shiori-san."
-    elif getSkill("Academics") >= 4:
-        MC "I think... that you're worried about your future."
-        show AE neutral-annoyed
-        AE "...What?"
-        MC "Your vision of the horizon, of the top, is completely clouded by fog."
-        MC "You let your fears of isolation completely stop you from being able to visualize a good future for yourself."
-        show AE sad-2
-        AE "...I... I feel we should stop."
-        MC "O-oh, I'm sorry I didn't mean to-"
-        AE "No, no, I... That was just a little off-putting, is all."
-        MCT "I must have hit too hard with that."
     show AE neutral
     AE "Well... Now we at least know each other's dreams, whatever good that does."
     MCT "Eh, I can see I'm not gonna get through to her with the idea."
@@ -3243,7 +3243,7 @@ label AE019:
     show AE neutral
     AE "Oh-no, no, none taken. I was merely thinking to myself."
     MC "About what?"
-    if getAffection("AE") >= 6:
+    if checkAffection("AE", ">=", 6):
         AE "Well, admittedly..."
         "Shiori-san looked to me, a light smirk forming on the sides of her lips."
         show AE neutral-smug
@@ -3482,7 +3482,7 @@ label AE020_c1_1:
     MC "Yep... yep."
     hide AE with dissolve
     "I walked out of the office for the final time. My chest was somewhat heavy, but I feel like I made the decision that was in my heart."
-    if getAffection("AE") >= 8:
+    if checkAffection("AE", ">=", 8):
         show AE sad-2 at center with dissolve
         AE "Um, w-wait, Hotsure-san."
         "Shiori-san came bounding from behind me, and put a hand on my shoulder."
@@ -3577,32 +3577,10 @@ label AE021:
     with dissolve
     WG "Ohoho, now what's going on here?~"
     MC "E-eh? Oh, Nikumaru-san, good morning."
-    if getAffection("WG") < 0:
-        WG "My my, Hotsure-san, mind telling what's going on here with our dear president?"
-        MC "E-eh?"
-        WG "From the sounds of it, that was a '-chan' forming in your mouth. You and miss assiduous are getting a bit close I see."
-        show AE neutral-annoyed
-        AE "Our business is between ourselves."
-        WG "Of course it is. Don't let me interrupt."
-        "Alice gave a little wink before walking to her chair. Before sitting down, she motioned to me to come over to where she was."
-        hide AE
-        hide PRG
-        with dissolve
-        MC "U-um... yeah?"
+
+    if checkAffection("WG", ">=", 0):
         show WG neutral
-        WG "Bit of advice... you'll catch pneumonia if you stay to close to the ice queen. I'd recommend keeping your distance a bit for fear of frostbite."
-        MC "...I'll keep that in mind."
-        if getAffection("PRG") > 0:
-            show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-            PRG "H-hi, Hotsure-san."
-            MC "Hey, Kodama-san."
-            "Aida gave a little smile. It felt nice to know the whole school wasn't against me."
-            hide PRG
-            hide WG
-            with dissolve
-    else:
-        show WG neutral
-        WG "G-good morning, Hotsure-san."
+        PRG "G-good morning, Hotsure-san."
         "Aida shrunk back a bit and gave a tiny smile. I reciprocated with a nod and a smile as well."
         MC "Good morning, Kodama-san."
         WG "I see you're a bit busy. I don't want to interrupt."
@@ -3619,6 +3597,29 @@ label AE021:
         hide WG
         hide PRG
         with dissolve
+    else:
+        WG "My my, Hotsure-san, mind telling what's going on here with our dear president?"
+        MC "E-eh?"
+        WG "From the sounds of it, that was a '-chan' forming in your mouth. You and miss assiduous are getting a bit close I see."
+        show AE neutral-annoyed
+        AE "Our business is between ourselves."
+        WG "Of course it is. Don't let me interrupt."
+        "Alice gave a little wink before walking to her chair. Before sitting down, she motioned to me to come over to where she was."
+        hide AE
+        hide PRG
+        with dissolve
+        MC "U-um... yeah?"
+        show WG neutral
+        WG "Bit of advice... you'll catch pneumonia if you stay to close to the ice queen. I'd recommend keeping your distance a bit for fear of frostbite."
+        MC "...I'll keep that in mind."
+        if checkAffection("PRG", ">", 0):
+            show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+            PRG "H-hi, Hotsure-san."
+            MC "Hey, Kodama-san."
+            "Aida gave a little smile. It felt nice to know the whole school wasn't against me."
+            hide PRG
+            hide WG
+            with dissolve
     show HR neutral at center with dissolve
     "Tashi-sensei walked in the room, and after standing and bowing; as well as opening the door for Honoka, we began our lessons... however there was a problem. I couldn't help it, but I felt like I was being watched."
     "My attention was drawn to the picture of the second president of Japan on the wall when I noticed something... bright beaming glasses staring at me on the reflective glass. I looked down to my desk."
@@ -3658,16 +3659,7 @@ label AE021:
     AE "..."
     show AE neutral-annoyed
     AE "Hotsure-san, it's very impolite to interrupt someone mid-sentence."
-    if getSkill("Academics") < 4:
-        MC "A-ah. Yes. Sorry, Shiori-san."
-        show AE neutral
-        AE "No worries. As long as you keep that in mind."
-        MC "S-so, um..."
-        AE "Yes?"
-        MC "I can't... um..."
-        AE "Hmm... well, I suppose I should get going. I'll see you around."
-        MC "Huh? Oh. S-sure."
-    else:
+    if checkSkill("Academics", ">=", 4):
         MC "And it's very impolite to stare."
         show AE aroused-3
         AE "...W-well... I suppose so."
@@ -3677,6 +3669,15 @@ label AE021:
         MC "...Have you thought about my request?"
         AE "...I have to go."
         MC "Huh? W-wait."
+    else:
+        MC "A-ah. Yes. Sorry, Shiori-san."
+        show AE neutral
+        AE "No worries. As long as you keep that in mind."
+        MC "S-so, um..."
+        AE "Yes?"
+        MC "I can't... um..."
+        AE "Hmm... well, I suppose I should get going. I'll see you around."
+        MC "Huh? Oh. S-sure."
     hide AE with dissolve
     "Shiori-san walked away briskly, her now further distended rear bumping into a desk knocking it out of line. She turned, and straightened it before turning around and leaving."
     MC "Huh..."
@@ -4036,16 +4037,7 @@ label AE022:
     MC "Then perhaps you can put forth effort in clearing MY concerns?"
     show AE sad-2
     AE "Mph..."
-    if getAffection("AE") <= 8:
-        "Shiori-san straightened up before exhaling."
-        show AE neutral
-        AE "Put quite frankly... I don't trust you."
-        "Shiori-sans words hit like a metal baseball bat to the temple, sinking my beating heart in my chest."
-        MC "...Oh."
-        show AE sad-2
-        AE "N-now, I don't instantly assume that you have alternative intentions... It's simply that, well... Hm... I'm struggling to find the correct phrasing."
-        MC "..."
-    else:
+    if checkAffection("AE", ">", 8):
         show AE embarrassed
         AE "I was simply... I want to know why."
         MC "...Why what?"
@@ -4057,6 +4049,15 @@ label AE022:
         show AE neutral
         AE "..."
         MCT "Huh? I'm sensing... a bit of hesitation from her when I said that."
+    else:
+        "Shiori-san straightened up before exhaling."
+        show AE neutral
+        AE "Put quite frankly... I don't trust you."
+        "Shiori-sans words hit like a metal baseball bat to the temple, sinking my beating heart in my chest."
+        MC "...Oh."
+        show AE sad-2
+        AE "N-now, I don't instantly assume that you have alternative intentions... It's simply that, well... Hm... I'm struggling to find the correct phrasing."
+        MC "..."
     show AE neutral-annoyed
     AE "I-in any case. I need to have a bit of a talk with your roommate. Sneaking about in the vents?! That's absolutely absurd!"
     MC "U-um... at least it isn't against school rules?"
@@ -4456,7 +4457,7 @@ label AE024_c1_1:
     show AE sad-2
     AE "I... I wanted to trust you, Hotsure-san... goodbye."
     hide AE with dissolve
-    if getAffection("AE") > 10:
+    if checkAffection("AE", ">", 10):
         MC "Shiori-san... Shiori-san, wait!"
         AE "..."
         "She stopped on the first step of the stairwell, not looking back."
@@ -5142,7 +5143,7 @@ label AE026:
     MC "I... I'm your boyfriend. Allow me."
     "I held my hand out for her. She looked at it, and then looked up at me; a bright glimmer quickly gleaming across her glasses."
     AE "Oh... well... in that case."
-    if getSkill("Athletics") >= 3:
+    if checkSkill("Athletics", ">=", 3):
         $setAffection("AE", 2)
         MC "Alright, hrg..."
         "I grabbed her arm and pulled upwards. Shiori-chan let out a little yelp as she quickly was lifted from her sitting position. She got her balance on her feet, giant ass wobbling like mad in response to my pull."
@@ -5565,7 +5566,7 @@ label AE028:
     MC "Heh."
     "I sat down next to her. To my expectations, her behind took up much more space than before. My hand, tactically placed at my side, brushed past her exposed flesh as I sat, causing her to bristle slightly."
     MC "O-oops. Sorry, Shiori-chan."
-    if getAffection("AE") > 10: #half
+    if checkAffection("AE", ">", 10): #half
         AE "N-no need to apologize, Hotsure-san. I don't... I don't mind that much."
         "I blushed slightly and rubbed the back of my neck."
     else:
@@ -6080,7 +6081,7 @@ label AE030:
     MCT "..."
     MCT "But what if she's hurt?"
     MCT "Gah! I haven't been worried about anyone like this in a long time. What's gotten into me?"
-    if getSkill("Academics") > 6:
+    if checkSkill("Academics", ">", 6):
         MCT "Okay, I need to think logically."
         MCT "...Hmm... It was a while ago, but I do remember her being absent before."
         MCT "I didn't think much of it at the time, but looking back on it was a big deal."
@@ -6446,15 +6447,15 @@ label AE031:
     "Placing her hands on the pristine white keys, she straightened her posture."
     "She took a deep breath and closed her eyes. After opening them, she began."
     #PLAY DIE FORELLE
-    if getSkill("Art") < 4:
-        "She played a song unfamiliar to me, and yet so relaxing. I leaned back in my chair and just watched her play."
-    else:
+    if checkSkill("Art", ">=", 4):
         MC "Ah! Schubert."
         AE "You're familiar?"
         $setAffection("AE", 3)
         MC "Yeah, I learned about him recently, fantastic composer."
         show AE aroused
         AE "Yes... yes he is."
+    else:
+        "She played a song unfamiliar to me, and yet so relaxing. I leaned back in my chair and just watched her play."
     scene black with fade
     "The song went on for a little while longer, all while I watched her gently and gracefully tapping away."
     scene Music Classroom
@@ -6496,7 +6497,7 @@ label AE031:
     MC "Sounds foreign."
     AE "German, in fact. A former organist and administrator of a diocese in southern Munich. He was a true connoisseur of music; cultured beyond any man or woman I'd ever met."
     show AE happy
-    if getSkill("Art") > 5:
+    if checkSkill("Art", ">", 5):
         AE "You remind me a bit of him, actually."
         MC "Really?"
         AE "Mhm..."
@@ -6645,7 +6646,7 @@ label AE032:
         "You aren't.":
             MC "That's... true, unfortunately. You're not a very comfortable person."
             jump AE032_c1_after
-        "You are to me." if getSkill("Art") >= 3:
+        "You are to me." if checkSkill("Art", ">=", 3):
             jump AE032_c1_3
 
 label AE032_c1_1:
@@ -6676,7 +6677,7 @@ label AE032_c1_after:
     scene Hallway
     show AE neutral
     with fade
-    if getSkill("Academics") > 4:
+    if checkSkill("Academics", ">", 4):
         MC "And because you feel like you're not someone people can confide their feelings in, you feel like a less effective leader."
         AE "Exactly."
     else:
@@ -6823,7 +6824,7 @@ label AE033_c1_3:
 label AE033_c1_after:
     show AE neutral
     AE "Let's not discuss it here though. Come. Walk with me to the dorms."
-    if getFlag("AE033_c1_3") and getSkill("Academics") > 3:
+    if getFlag("AE033_c1_3") and checkSkill("Academics", ">", 3):
         MC "O-ho-hoo, no. If I let you leave I lose some leverage. I see the game you're playing."
         show AE neutral-annoyed
         AE "Gch-now look here-"
@@ -7293,25 +7294,7 @@ label AE035:
     MC "Hoo, well, what can I say, you're the boss."
     MC "Ah, but, your forms-"
     AE "I can make time. Come. Sit."
-    if getSkill("Academics") < 6:
-        MC "Oh, but I don't have-"
-        show AE neutral
-        AE "Chopsticks, right."
-        AE "No matter, I can go and get some from the cafeteria. Just a moment."
-        hide AE with dissolve
-        "As she sat up, her sizeable derriere wiggled gently. She walked off with a small skip, her skirt swishing from side to side as her bulbous behind began to slow its movements."
-        "I watched tantalized all the while, a tinge of pink overtaking my cheeks as I focused on hers."
-        MC "Haahn..."
-        MCT "Pfft, did Daichi poison the food. That was clever of her..."
-        "I waited in the shade for a short moment before-"
-        MCT "...DID Daichi do anything to it?!"
-        "I looked around the box, however it seemed as though it had no signs of tampering. Growing suspicious of the box itself, I lifted it, yet not a single aberration was found."
-        "Still on guard, I placed it down as Shiori-chan came out of the door with the utensils in hand."
-        show AE happy with dissolve
-        AE "Here we are."
-        MC "Thank you."
-        MCT "I swear to god, if he did anything..."
-    else:
+    if checkSkill("Academics", ">=", 6):
         "I pulled out a pair of chopsticks out of my pocket as Shiori-chan sat down on the ground."
         show AE neutral
         AE "Oh, right, you need-"
@@ -7331,6 +7314,24 @@ label AE035:
         MC "Heh, I swear, that would have worked against most in a heartbeat."
         show AE happy
         AE "Mhm. Well, come, sit down. Enjoy the fruits of your mental labor."
+    else:
+        MC "Oh, but I don't have-"
+        show AE neutral
+        AE "Chopsticks, right."
+        AE "No matter, I can go and get some from the cafeteria. Just a moment."
+        hide AE with dissolve
+        "As she sat up, her sizeable derriere wiggled gently. She walked off with a small skip, her skirt swishing from side to side as her bulbous behind began to slow its movements."
+        "I watched tantalized all the while, a tinge of pink overtaking my cheeks as I focused on hers."
+        MC "Haahn..."
+        MCT "Pfft, did Daichi poison the food. That was clever of her..."
+        "I waited in the shade for a short moment before-"
+        MCT "...DID Daichi do anything to it?!"
+        "I looked around the box, however it seemed as though it had no signs of tampering. Growing suspicious of the box itself, I lifted it, yet not a single aberration was found."
+        "Still on guard, I placed it down as Shiori-chan came out of the door with the utensils in hand."
+        show AE happy with dissolve
+        AE "Here we are."
+        MC "Thank you."
+        MCT "I swear to god, if he did anything..."
     MC "Let's dig in!"
     AE "Mm."
     "We pointed our sticks to the food, she moved hers around from piece to piece as I waited patiently for her."
@@ -7453,7 +7454,7 @@ label AE036:
     AE "W-woah!"
     "I rushed up and grabbed Shiori-chan's hand trying to pull her away. It was strange, but since we held hands I felt as though she was more open to hold on to, and in turn I felt more tactile."
     MC "Sorry Utagashi-chan, I'm gonna need to borrow her for a little bit!"
-    if getSkill("Athletics") > 3:
+    if checkSkill("Athletics", ">", 3):
         "Shiori-chan was pulled swiftly and effortlessly, and soon the two of us were going towards my planned destination."
     else:
         "I barely made it a few inches before I felt a short tug from Shiori-chan's arm which stopped me dead in my place."
@@ -7715,13 +7716,13 @@ label AE037_c1_after:
     with fade
     "We walked along the side of the gravelly road from the school. The town was far in the distance, and seemed nestled among the green hills."
     "After a few minutes, we'd walked past the two mountains in the front of the school into the windswept valley."
-    if getSkill("Athletics") < 5:
+    if checkSkill("Athletics", ">=", 5):
+        "I looked to Shiori-chan, and to my surprise, after this fairly long trek hauling her wide load she still hadn't broken a sweat."
+    else:
         "After a while, I began to slow down and walk behind Shiori-chan, though not on purpose, as my shins began to ache. She slowed to match my speed and eventually we came to a stop as I sat along the hillside in the grass."
         MC "Phew~ Hah, it's quite a walk, uh- S-sorry."
         show AE happy
         AE "It's perfectly alright, Hotsure-san. Rest until you feel ready."
-    else:
-        "I looked to Shiori-chan, and to my surprise, after this fairly long trek hauling her wide load she still hadn't broken a sweat."
     MC "Hey, Shiori-chan."
     show AE neutral
     AE "Hm?"
@@ -8157,7 +8158,7 @@ label AE038:
     show AE neutral
     AE "Hm?"
     MC "What's the best meal you've ever had?"
-    if getAffection("AE") > 15: #IF POINTS ABOVE 2/3 OF TOTAL
+    if checkAffection("AE", ">", 15): #IF POINTS ABOVE 2/3 OF TOTAL
         show AE happy
         AE "Well, I'd... I'd say the bento you made me."
         MC "Ach, c'mon. You don't gotta try and be cute-"
@@ -8495,7 +8496,7 @@ label AE040:
     scene Hill Road
     show AE surprised
     with fade
-    if getSkill("Athletics") >= 5:
+    if checkSkill("Athletics", ">=", 5):
         show AE embarrassed
         AE "Pah... Ah... Hotsure-sah... agh..."
         "It would have been a cute view. An exhausted, sweaty Shiori-chan, panting for breath, massive bum in my face as she bent over to catch her breath..."
@@ -8704,7 +8705,7 @@ label AE041:
     "As the bell rang out Shiori-chan concluded the class with a respectful bow to the teacher, however, I didn't take the leisure of looking up, as my mind was focused elsewhere."
     MCT "Today's the day... It's almost time."
     play music Rain
-    if getAffection("FMG") > 0:
+    if checkAffection("FMG", ">", 0):
         show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         AE "..."
         show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -9450,7 +9451,7 @@ label AE044:
     AE "Many of them, yes. Although I really just try and gather the most important bits."
     MC "Yeah, that and you seem to fancy a lot of western books, huh?"
     AE "I suppose that's one way to put it, yes. Though you surprised me with how well you knew The Prince. I never took you as a Machiavelli type of man."
-    if getSkill("Academics") > 7 and getSkill("Art") > 7:
+    if checkSkill("Academics", ">", 7) and checkSkill("Art", ">", 7):
         MC "Mhm, I used to research him a lot. Thought his stuff was pretty interesting, though it was hard to find a translated copy."
         $setAffection("AE", 4)
         AE "Hmm~ It's been so long since I've had anyone to talk to about things like this. Honestly, you make me feel just so... open when I'm around you."
@@ -10799,7 +10800,7 @@ label AE049:
     Tako "I know you're actually a huge liar."
     MC "Liar?"
     Tako "You act all humble and afraid to step on anyone's toes, but in reality you're just a massive perv."
-    if getSkill("Academics") > 10:
+    if checkSkill("Academics", ">", 10):
         MC "Oh yeah?"
         Tako "Yeah. I don't know many 'nice guys' who'd tag along with a girl who's so cold to them."
         MC "Well... I don't know any 'punk queens' who wear seventy thousand yen designer underwear either."
@@ -12056,7 +12057,13 @@ label AE053:
     WG "Mhm, no worries."
     hide AE with dissolve
     if True: #If you haven't gone through crossover scenes (TBI)
-        if getAffection("WG") < 10:
+        if checkAffection("WG", ">=", 10):
+            MC "Thanks a lot for this, Nikumaru-san. I know you don't exactly get along with Shiori."
+            WG "Oh, she's definitely a thorn in my side from time to time, but don't be fooled. I intend to help her to the best of my ability."
+            show WG happy
+            WG "After all, she has a good taste in suitors."
+            MC "Eheh, well, thanks."
+        else:
             MC "Alright, Nikumaru-san, what's the end goal?"
             show WG angry
             WG "Moi? I don't have any sort of..."
@@ -12069,13 +12076,7 @@ label AE053:
             show WG haughty
             WG "No, no. Just seizing an opportunity that presented itself."
             MC "Well, whatever, just please don't mess with her too much."
-            WG "Ohohoo, Hotsure-san, I would never.~"
-        else:
-            MC "Thanks a lot for this, Nikumaru-san. I know you don't exactly get along with Shiori."
-            WG "Oh, she's definitely a thorn in my side from time to time, but don't be fooled. I intend to help her to the best of my ability."
-            show WG happy
-            WG "After all, she has a good taste in suitors."
-            MC "Eheh, well, thanks."
+            WG "Ohohoo, Hotsure-san, I would never~"
     else: #If you have gone through crossover scenes
         MC "Thanks for helping out Shiori, Alice."
         show WG neutral
@@ -12364,15 +12365,15 @@ label AE053_c1_after:
     MCT "There we go. Wouldn't want to think I slipped into the wrong timeline."
     show WG sad
     WG "...Satisfy my curiosity... why is she so attached to her headpiece?"
-    if getSkill("Academics") < 10:
-        MC "Honestly? I'm not completely sure, but... I know it's important to her. That should be all that matters."
-        show WG neutral
-        WG "Hm... I understand."
-    else:
+    if checkSkill("Academics", ">=", 10):
         MC "I think... I think that it means something deeper to her about {i}who{/i} she is. Like... she attaches it to her identity."
         MC "Does that make sense?"
         show WG sad
         WG "I see."
+    else:
+        MC "Honestly? I'm not completely sure, but... I know it's important to her. That should be all that matters."
+        show WG neutral
+        WG "Hm... I understand."
     show WG happy
     WG "Clothes have strong powers, Keisuke. They determine how someone is seen by a simple glance. It gives people insight into who they are, even if they don't want to let it be known."
     MC "Heh, I get you. I mean, I love this old jacket too."
@@ -12547,7 +12548,7 @@ label AE054:
     AE "That's very true."
     show AE sad
     AE "..."
-    if getAffection("AE") > 50: #80%
+    if checkAffection("AE", ">", 50): #80%
         AE "..."
         AE "I never told you how I met my mentor, did I?"
         MC "Um..."
@@ -12683,7 +12684,7 @@ label AE055:
     AE "You come out here a lot, then?"
     MC "Eh, on occasion."
     MC "C'mon. It's just up this hill."
-    if getAffection("AE") > 50:
+    if checkAffection("AE", ">", 50):
         "As I stepped forward into a less step part of the incline, Shiori gently grabbed me by the shoulder."
         show AE happy
         AE "Ah-ah... I think {i}I'll{/i} go first."
@@ -12726,9 +12727,9 @@ label AE055:
     "As she lay down on the sheet, belly side down, her large rump stuck up a good distance from her body as it softly jiggled, her skirt only sparsely covering up half of her cheeks."
     "I myself sat down a few feet away, resting my back on on a tree as my hair scattered out on the ground beneath me."
     MC "What's it you're reading?"
-    if getSkill("Art") >= getSkill("Athletics") and getSkill("Art") >= getSkill("Academics"):
+    if isHighestSkill("Art"):
         AE "Mm, it's {i}Journey to the West.{/i}"
-    elif getSkill("Athletics") >= getSkill("Academics"):
+    elif checkSkill("Athletics", ">=", getSkill("Academics")):
         AE "Mm, it's {i}A Book of Five Rings.{/i}"
     else:
         AE "Mm, it's {i}Mathematical Principles of Natural Philosophy.{/i}"
@@ -13127,7 +13128,7 @@ label AE056_c1_after:
     MC "You feeling all right?"
     show AE neutral
     AE "Huh? Yeah. Yeah, I'm... doing fine."
-    if getSkill("Academics") > 10:
+    if checkSkill("Academics", ">", 10):
         MC "Ah."
         show AE smile
         AE "Yes."
@@ -13191,7 +13192,14 @@ label AE057:
     MC "Italy?"
     show AE smile
     AE "Mm."
-    if getSkill("Academics") < 2:
+    if checkSkill("Academics", ">=", 2):
+        MC "Nice! Nice. Anywhere in particular you wanna check out?"
+        show AE happy
+        AE "Hmm... St. Peter's Basilica would be nice. Cathedral of Milan, the Alps; there's just a lot of places to visit in general."
+        MC "Yeah. I think Venice would be cool."
+        show AE smile
+        AE "Mm."
+    else:
         MC "I mean, I'd at least want to go somewhere warm."
         show AE neutral
         AE "...Keisuke, Italy is moderately warm."
@@ -13225,13 +13233,6 @@ label AE057:
         "She looked over to me, her face a light pink and tears in her eyes as she took off her glasses and covered her eyes with one hand."
         "Biting her lip, she positioned her glasses onto her face as she cleared her throat and began to play again."
         #resume music?
-    else:
-        MC "Nice! Nice. Anywhere in particular you wanna check out?"
-        show AE happy
-        AE "Hmm... St. Peter's Basilica would be nice. Cathedral of Milan, the Alps; there's just a lot of places to visit in general."
-        MC "Yeah. I think Venice would be cool."
-        show AE smile
-        AE "Mm."
     "As she continued to play quietly, I walked over and rested my hand on the wooden frame of the piano."
     MC "Can I try?"
     show AE surprised
@@ -13241,29 +13242,7 @@ label AE057:
     MC "What, don't think I can do it?"
     show AE neutral
     AE "You are welcome to try."
-    if getSkill("Art") < 20:
-        show AE smile
-        AE "A-ha! How's about this one then, hm?"
-        MC "A-Apa..."
-        AE "Appassionata."
-        MC "Euch, no. Too many notes."
-        show AE angry
-        AE "Ach- too many notes indeed."
-        show AE smile
-        AE "Shall I slow it down for you, mein kaiser?"
-        MC "Eh?"
-        AE "Ah. B-Because, um... the emperor of Austria and..."
-        show AE embarrassed
-        AE "{i}Khm{/i}, never mind."
-        MC "Oh my God, you and your awkward jokes."
-        show AE smile
-        AE "Ehehe, s-sorry."
-        MC "Here. I'll flip through and see if there's anything I can figure out."
-        "I looked through three pages-"
-        MC "Oookay! That's about enough on my end."
-        AE "Figured."
-        MC "Don't look so proud of yourself!"
-    else:
+    if checkSkill("Art", ">=", 20):
         "I pointed to the song on the next page."
         MC "There we go. Norwegian Dance. Greig."
         show AE neutral
@@ -13305,6 +13284,28 @@ label AE057:
         AE "...Mhmhmhm~"
         "Shiori gently flipped back to the previous page and started playing once more."
         #return to previous music
+    else:
+        show AE smile
+        AE "A-ha! How's about this one then, hm?"
+        MC "A-Apa..."
+        AE "Appassionata."
+        MC "Euch, no. Too many notes."
+        show AE angry
+        AE "Ach- too many notes indeed."
+        show AE smile
+        AE "Shall I slow it down for you, mein kaiser?"
+        MC "Eh?"
+        AE "Ah. B-Because, um... the emperor of Austria and..."
+        show AE embarrassed
+        AE "{i}Khm{/i}, never mind."
+        MC "Oh my God, you and your awkward jokes."
+        show AE smile
+        AE "Ehehe, s-sorry."
+        MC "Here. I'll flip through and see if there's anything I can figure out."
+        "I looked through three pages-"
+        MC "Oookay! That's about enough on my end."
+        AE "Figured."
+        MC "Don't look so proud of yourself!"
     MC "Hm~"
     show AE surprised
     AE "A-ah!~"
@@ -13408,10 +13409,11 @@ label AE058:
     show AE happy
     with fade
     play music Schoolday
-    if getSkill("Academics") < 10:
-        jump AE058_c1_fail
-    else:
+    if checkSkill("Academics", ">=", 10):
         jump AE058_c1_pass
+    else:
+        jump AE058_c1_fail
+
 
 label AE058_c1_fail:
     MC "Uhh..."
@@ -13534,13 +13536,13 @@ label AE058_c1_after:
     MC "Who's your favorite writer of all time?"
     show AE smile
     AE "Ah, that'd be Erasmus of Rotterdam."
-    if getSkill("Academics") < 30:
-        MC "Hmm... Gotta admit, I don't think I've ever heard of him."
-    else:
+    if checkSkill("Academics", ">=", 30):
         MC "Erasmus of Rotterdam? Hmm..."
         MC "Yeah, I think I know who that is. Dutch philosopher, right?"
         AE "Y-Yeah! Exactly right!"
         MC "I'm always surprised at just how much you know."
+    else:
+        MC "Hmm... Gotta admit, I don't think I've ever heard of him."
     MC "Why him?"
     AE "Ah! Well, other than personal reasons, I suppose that it'd be because I like his idea of 'Docta Pietas' or 'Learned Piety'."
     MC "Learned piety?"
@@ -13742,18 +13744,7 @@ label AE059:
     MC "Mmn~"
     show AE surprised
     AE "Mmm-Ah, the bell."
-    if getSkill("Art") < 6:
-        MC "R-really? So soon?"
-        show AE happy
-        AE "Hmm, don't worry, Hotsure-san. My meeting will only be an hour or so. Until then~"
-        "Shiori-chan pecked me once more quickly on the cheek."
-        show AE smile
-        AE "Let that tide you over."
-        if getSkill("Art") >= 4:
-            MC "Mhm, you know it won't."
-            show AE happy
-            AE "Hmm~"
-    else:
+    if checkSkill("Art", ">=", 6):
         MC "Gods forsake it. Every second with you is timeless."
         show AE happy
         AE "O-oh!"
@@ -13761,17 +13752,28 @@ label AE059:
         show AE smile
         AE "Hahn~ Now I'm really going to be late."
         MC "Mhm... You can make it."
+    else:
+        MC "R-really? So soon?"
+        show AE happy
+        AE "Hmm, don't worry, Hotsure-san. My meeting will only be an hour or so. Until then~"
+        "Shiori-chan pecked me once more quickly on the cheek."
+        show AE smile
+        AE "Let that tide you over."
+        if checkSkill("Art", ">=", 4):
+            MC "Mhm, you know it won't."
+            show AE happy
+            AE "Hmm~"
     "Shiori-chan looked back at me with a smile as her hand slowly slipped from mine. I watched her now-massive rear bounce and wobble up and down as she hurried along, bag under her arm."
     "I let out a sigh as I leaned back onto the cold concrete of the fountain, my hand rubbing the warm spot where my lover's bountiful body had just been as my thoughts raced with passion."
     "I looked down into the water. Honestly, it'd been awhile since I'd seen my own face, either. I looked at my reflection for a moment."
     MC "Hmm..."
     "I stared at myself a bit longer, before stroking my hair gently. At this point, it must have at least reached to my mid back. I lifted my head, and took a look at my straight black locks in my hand before letting them fall."
     MCT "It won't do to wait here until she's back. I should head in and wait by the door."
-    if getSkill("Art") > getSkill("Academics") and getSkill("Art") > getSkill("Athletics") :
+    if isHighestSkill("Art"):
         "I stood up and pulled out my fine arts book to read and pass the time. Putting it under my arm, I began to walk inside towards the office. I only got a few feet away from the fountain before turning back."
         "I stared at the pool one last time before solemnly heading inside."
         $setSkill("Art", 1)
-    elif getSkill("Academics") > getSkill("Athletics"):
+    elif checkSkill("Academics", ">", getSkill("Athletics")):
         "I stood up and pulled out my science book to read and pass the time. Putting it under my arm, I began to walk inside towards the office. I only got a few feet away from the fountain before turning back."
         "I stared at the pool one last time before solemnly heading inside."
         $setSkill("Academics", 1)
@@ -13843,7 +13845,7 @@ label AE060:
     AE "Nngh..."
     MC "Trust me, hon, it's not too big."
     AE "It's {i}beyond{/i} too big."
-    if getSkill("Art") > 17:
+    if checkSkill("Art", ">", 17):
         MC "Is the sky too blue? Is the sun too bright?"
         MC "You're a sight to behold; a wonder. You're not {i}too{/i} anything."
         show AE smile
@@ -14181,7 +14183,7 @@ label AE061:
     show AE sad
     AE "...Not until recently. I never considered it a possibility for me."
     MC "Oh."
-    if getSkill("Academics") > 14:
+    if checkSkill("Academics", ">", 14):
         MC "...I'm guessing you didn't want to bring me here to work on papers, did you?"
         show AE neutral
         AE "..."
@@ -14738,7 +14740,7 @@ label AE062:
     show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     MC "Haaah, what a night, eh?"
     AE "Hmm..."
-    if getSkill("Academics") > 11:
+    if checkSkill("Academics", ">", 11):
         MC "You feeling alright?"
         AE "...Yeah, yeah I'm feeling fine. Why do you ask?"
         MC "First time I've seen you budge on a rule like that."
@@ -14809,7 +14811,7 @@ label AE063:
     MC "Do you ever think about how your friends or peers would think of you, now that you're at Seichou?"
     "Daichi tipped his glass of orange juice up until the glass was polished off. Placing it down on the table, he took his chopsticks up once again and continued to eat."
     RM "Dunno, don't care."
-    if getAffection("RM") > 5:
+    if checkAffection("RM", ">", 5):
         MC "How is it so easy for you to just say you don't care about what others think?"
         RM "Because I don't. Why should I?"
         MC "Well, you gotta admit, a lot of the shit you do is pretty out there. Most people don't buy spy gear off the dark web."
@@ -14942,7 +14944,7 @@ label AE063:
     show AE neutral
     AE "I dunno. It's just... weird trying out all of these new things. My curiosity has just been getting the better of me recently."
     AE "What about you? Are you okay? It was a bit out of the blue to ask me something like that."
-    if getAffection("RM") > 5:
+    if checkAffection("RM", ">", 5):
         MC "Actually... I'm feeling pretty good."
         show AE happy
         AE "Yeah, you definitely seem a lot more upbeat today."
@@ -15062,7 +15064,7 @@ label AE064:
     MC "..."
     AE "..."
     MC "Anything you can tell me about?"
-    if getAffection("AE") > 35: #~3/4
+    if checkAffection("AE", ">", 35): #~3/4
         show AE sad
         AE "It's just... well... I've been looking for a letter for a while."
         MC "A letter?"
@@ -15109,7 +15111,7 @@ label AE064:
     show AE neutral
     AE "But you're right. We shouldn't let worries about the past muck up what we have."
     "I could tell that Shiori still felt a strong sense of self doubt with her feelings, even after giving off a warm smile and assuring nod."
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         MC "You shouldn't forget the past, just don't let it hold you back, is all."
         show AE surprised
         AE "Hm?"
@@ -15264,7 +15266,7 @@ label AE065:
     AE "Ah, there we are."
     AE "*Khm*"
     #Play Moonlight Sonata
-    if getSkill("Art") >= 9:
+    if checkSkill("Art", ">=", 9):
         MC "Moonlight Sonata?"
         show AE smile
         AE "Mm."
@@ -15602,7 +15604,7 @@ label AE066_c1_2:
     AE "Keisuke, please, I can handle this."
     #hamikawa angry
     Hamikawa "And why should I listen to you? Eh?"
-    if getSkill("Art") > 10:
+    if checkSkill("Art", ">", 10):
         MC "You don't have to listen to me at all, but it couldn't hurt to calm down and maybe explain what's going on."
         #hamikawa surprised
         Hamikawa "I..."
@@ -15633,7 +15635,7 @@ label AE066_c1_2:
     Hamikawa "I'm... someone who has better things to do with my time. Standing here and arguing about nothing is pointless."
     MCT "Something was different about that. While it could just be seen as her being rash and dismissive... I feel like she just helped Shiori out for some reason."
     "She then turned and began to briskly walk away."
-    if getSkill("Art") > 20 and getSkill("Academics") > 10:
+    if checkSkill("Art", ">", 20) and checkSkill("Academics", ">", 10):
         $setFlag("AE066_pass")
         MCT "Something seems wrong here. Like there's a veil of secrecy and discretion that usually isn't present unless Shiori..."
         "In a quick flash of mental associations, I began to piece the reality of the situation together in my head. Blindly, off of the assumption I {i}thought{/i} may have been true..."
@@ -15979,12 +15981,7 @@ label AE068_c1_after:
     MC "Ah, so soon?"
     AE "Yeah. A lot of work tomorrow. If you want, come down to my room and wait for me there, okay? Maybe we can talk more, maybe spend some time together."
     MC "O-okay."
-    if getAffection("AE") < 20: # 1/2 of all points
-        "Before I could so much as get up for a hug, Shiori san walked out of the door. Leaving me with little but the background noise of the television."
-        MC "Phaaan..."
-        "I don't know why, but at this moment, I felt like there was a bit more of a divide between the two of us that I would have liked."
-        "To comfort myself, I laid in bed and watched television until Daichi got back, as I wondered to myself what exactly it was Shiori-san wanted to do in her room."
-    else:
+    if checkAffection("AE", ">=", 20): # 1/2 of all points
         "Shiori-san bent down and gave me a small peck on the cheek, causing my face to pinken a bit."
         show AE happy
         AE "Keisuke-kun, thank you for having me over."
@@ -15992,6 +15989,11 @@ label AE068_c1_after:
         "I pulled her in for a kiss as she left my room with a bit of a squeeze at the door. I wasn't much of a betting man, but at the moment I'd bet any amount of money that Shiori-chan and I were going to be okay."
         "Though she said some things that worried me at times, I couldn't help but feel that we had a special bond between each other."
         "I continued to watch television until Daichi got home, and much of the while let my mind race with what all tomorrow would bring."
+    else:
+        "Before I could so much as get up for a hug, Shiori san walked out of the door. Leaving me with little but the background noise of the television."
+        MC "Phaaan..."
+        "I don't know why, but at this moment, I felt like there was a bit more of a divide between the two of us that I would have liked."
+        "To comfort myself, I laid in bed and watched television until Daichi got back, as I wondered to myself what exactly it was Shiori-san wanted to do in her room."
     jump daymenu
 
 label AE069:
@@ -16049,7 +16051,7 @@ label AE069:
     HR "Oy, Hotsure-san. You been doing alright?"
     MC "Oh, um... yes, sir."
     HR "Your classes going alright with the other teachers?"
-    if getSkill("Academics") >= 3:
+    if checkSkill("Academics", ">=", 3):
         MC "Yeah, that kinda stuff usually isn't a problem for me. I can doze off from time to time but... it's going good."
         HR "I've noticed. You're a bright kid in your own right."
     else:
@@ -16232,7 +16234,7 @@ label AE070:
     scene Bathroom with fade
     "I looked myself in the mirror for a moment... just staring. Looking at myself..."
     "After a moment, I took off my shirt."
-    if getSkill("Athletics") > 5:
+    if checkSkill("Athletics", ">", 5):
         MCT "I'm glad I've been hitting the gym recently. I think I look pretty good."
     MCT "..."
     MCT "I look good enough for Shiori, right?"
@@ -16271,14 +16273,14 @@ label AE070:
     MC "Oh! I was just here to get a resupply of the shampoo but... I didn't know Shiori was here."
     #nurse neutral
     Nurse2 "Ah. Well, yes, she's going through her physical therapies today."
-    if getSkill("Art") >= 5:
+    if checkSkill("Art", ">=", 5):
         MC "I see. Which ones in particular?"
         MCT "Let's see if I can bluff this."
         Nurse2 "Ah, no doubt the ones Matsumoto-san has already told you about: Sensitivity testing, vibration therapy, ice rod therapy, muscle density testing, elasticity tests; somewhat standard fare for students with her condition."
         MC "Ah. Right. And the therapies are the ones that..."
         "I made a subtle show of snapping my fingers trying to 'remember' information I was never told."
         MCT "I wouldn't usually fish for information like this, but I know how Shiori can be when she's embarrassed, and I want to know as much as I can to help her..."
-        if getSkill("Art") >= 10 and getSkill("Academics") >= 7:
+        if checkSkill("Art", ">=", 10) and checkSkill("Academics", ">=", 7):
             #nurse smile
             Nurse2 "The experimental ones for slowing the process she signed up for last month, yes."
             MCT "Experimental... to slow the process?"
@@ -16339,7 +16341,7 @@ label AE070:
     show AE aroused
     AE "A-At least there's more of me for you to love, right?"
     MC "You can say that again."
-    if getAffection("AE") > 20: #1/3
+    if checkAffection("AE", ">", 20): #1/3
         "Though my delivery was a bit shaky, it seemed like she got the message."
         show AE happy
         AE "Ehehe, t-thanks."
@@ -16945,7 +16947,7 @@ label AE073_c1_after:
     "Looking at the date on the cover, it confirmed my suspicion that this edition came out only shortly before we officially started dating."
     MCT "Was she... concerned about this kind of stuff even back then?"
     "'If you can't please your man, he will definitely want to leave eventually, so make sure you show your affection physically as soon as possible. If you don't give him what he wants, he can and will try looking around for someone else. Make sure to spice up your life together.'"
-    if getSkill("Academics") >= 6:
+    if checkSkill("Academics", ">=", 6):
         MCT "... So that's why."
         MCT "Was she... really worried about this? Is that why she's been so proactive these past few days? I thought her growth was just kicking her libido into overdrive... that may still be the case, but is there actually more to it than that?"
         MCT "Is she worried about losing me?"
@@ -17342,7 +17344,7 @@ label AE075:
         "Though I tried to talk more on it, I felt as though I couldn't explain the fullness of what I feel. If I did... it could do more harm than good."
     show AE sad
     AE "... Am I a good girlfriend?"
-    if getSkill("Academics") > 20:
+    if checkSkill("Academics", ">", 20):
         "It took all of my strength to not instantly respond to her in panic, however by this point I knew Shiori well enough to know that she never asks a question without purpose."
         MC "... Well what do you mean?"
         AE "I feel as though I'm nowhere near good enough for you. Like I need to... do things to make myself worthy."
@@ -17487,7 +17489,7 @@ label AE076:
     MC "Uhh!"
     MCT "I can't just leave her here! This is really far out from the main building!"
     MCT "What do I do? What the hell do I do?!"
-    if getSkill("Athletics") > 13:
+    if checkSkill("Athletics", ">", 13):
         jump AE076_c1_pass
     else:
         jump AE076_c1_fail
@@ -17538,7 +17540,7 @@ label AE076_c1_fail:
     MC "HEEEY!!!"
     show FMG neutral with dissolve
     FMG "Eeeeh?"
-    if getAffection("FMG") > 10: #>30%
+    if checkAffection("FMG", ">", 10): #>30%
         show FMG happy
         FMG "Ayy, Keisuke! Buddy! How's it goin, ma-"
         MC "Akira! Shiori's hurt, please, help!"
@@ -17546,7 +17548,7 @@ label AE076_c1_fail:
         FMG "Wait... wait, what the hell are you on about-?"
         MC "Hurry!"
         FMG "Woah, okay, okay, chill. I'll check it out for ya, kay?"
-    elif getAffection("FMG") > 0: #30-0%
+    elif checkAffection("FMG", ">", 0): #30-0%
         FMG "Huh? Ooy! Keisuke! What are you running around fo-"
         show FMG surprised
         FMG "Ophf!"
@@ -17560,7 +17562,7 @@ label AE076_c1_fail:
         "As I continued to pull on her worriedly, she only stood her ground more firm. Looking at her, she showed only scorn, and looked as though she was about to punt me across the courtyard."
         show FMG angry-2
         FMG "Ngh! Stop tugging on me! I'm gonna fu-"
-        if getSkill("Athletics") > 7:
+        if checkSkill("Athletics", ">", 7):
             show FMG angry
             FMG "Huh?"
             "Apparently, my panic had awoken something in me, as Mizutani-san had observed; I managed to pull her a few inches."
@@ -18293,7 +18295,7 @@ label AE079:
     AE "..."
     show AE neutral-annoyed
     AE "I refuse to be truant."
-    if getAffection("AE") >= 10:
+    if checkAffection("AE", ">=", 10):
         AE "And I refuse to cause you to be truant as well."
     else:
         AE "And I refuse to let you be truant as well."
@@ -18431,7 +18433,7 @@ label AE080:
     show AE sad
     AE "I handchose my subordinates for their intellect and principles. The idea that they would betray me..."
     AE "It seems my judgement has failed."
-    if getSkill("Academics") > 13:
+    if checkSkill("Academics", ">", 13):
         MC "What if there was an oversight?"
         AE "An oversight?"
         MC "Right, like instead of there being intentional manipulation, there was a mix up in some of the records?"
@@ -19220,7 +19222,7 @@ label AE084:
     MC "Huh? She said she would be busy."
     show Minori happy
     Minori "Well, by all intents and purposes, the Council was relieved to get to rest a day."
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         MC "But you know better... that's why you're standing out here, right?"
         Minori "... Haaah, you really are in touch with Matsumoto-san."
     else:
@@ -19452,7 +19454,7 @@ label AE085:
     MC "Shiori-chan, calm down-"
     AE "How on earth am I supposed to remain calm?!"
     AE "With every step, every twitch, I can FEEL it wobble around. I can hear my ass slosh every time these damned hips FORCE me to waddle like an oversized...!"
-    if getAffection("AE") > 30:
+    if checkAffection("AE", ">", 30):
         MC "Shi-chan."
         AE "Eh?"
         show AE sad-2
@@ -19519,7 +19521,7 @@ label AE085:
 
 label AE086:
     $setProgress("AE", "AE087")
-    if getAffection("AE") >= 30 and getSkill("Academics") >= 7:
+    if checkAffection("AE", ">=", 30) and checkSkill("Academics", ">=", 7):
         jump AE086B
     else:
         scene Dorm Interior with fade
@@ -19611,32 +19613,32 @@ label AE086_menu:
             "I typed in the name in the box..."
             "And no results."
             MC "Damnit."
-            if getSkill("Academics") < 10 or getFlag("AE086_c1_2"):
+            if not getFlag("AE086_c1_2") and checkSkill("Academics", ">=", 10):
+                MC "I must have the name wrong... but what is it?"
+                jump AE086_menu
+            else:
                 MC "Well... it seems like there really is nothing."
                 MCT "Damnit. I thought for sure he would have sent her something..."
                 MC "Thank you for your time, ma'am."
                 Postwoman "No worries. Have a good rest of your morning, sir."
                 "Dejected, I walked to class, resigned to the fact that I wouldn't be able to get much help."
                 jump AE086_ending
-            else:
-                MC "I must have the name wrong... but what is it?"
-                jump AE086_menu
         "Haen Schmitz" if not getFlag("AE086_c1_2"):
             $setFlag("AE086_c1_2")
             MC "I know this one, I think. It's Haen Schmitz."
             "I typed in the name in the box..."
             "And no results."
             MC "Damnit."
-            if getSkill("Academics") < 10 or getFlag("AE086_c1_1"):
+            if not getFlag("AE086_c1_1") and checkSkill("Academics", ">=", 10):
+                MC "I must have the name wrong... but what is it?"
+                jump AE086_menu
+            else:
                 MC "Well... it seems like there really is nothing."
                 MCT "Damnit. I thought for sure he would have sent her something..."
                 MC "Thank you for your time, ma'am."
                 Postwoman "No worries. Have a good rest of your morning, sir."
                 "Dejected, I walked to class, resigned to the fact that I wouldn't be able to get much help."
                 jump AE086_ending
-            else:
-                MC "I must have the name wrong... but what is it?"
-                jump AE086_menu
         "Hans Schultz":
             $setFlag("AE086_FoundLetter")
             "*Ding*"
@@ -21102,9 +21104,9 @@ label AE094:
     MC "..."
     show AE angry-2
     AE "Do you even have an answer?"
-    if getFlag("AE007_Contract") and getFlag("AE086_FoundLetter") and getAffection("AE") >= 69:
+    if getFlag("AE007_Contract") and getFlag("AE086_FoundLetter") and checkAffection("AE", ">=", 69):
         jump AE094_Gold
-    elif getFlag("AE073_crime") and getAffection("AE") >= 55:
+    elif getFlag("AE073_crime") and checkAffection("AE", ">=", 55):
         jump AE094_Gold
     else:
         show AE sad
@@ -21570,9 +21572,7 @@ label AE097:
     ". . ."
     "Silence."
     "Silence and nothing more."
-    if getAffection("AE") < 20:
-        jump daymenu
-    else:
+    if checkAffection("AE", ">=", 20):
         MCT "Am I really okay with letting it end like that?"
         MCT "..."
         scene Dorm Interior with fade
@@ -21587,6 +21587,9 @@ label AE097:
         MCT "My head hurts..."
         MCT "But still."
         MCT "I can't help but think about her."
+        jump AE097_menu_start
+    else:
+        jump daymenu
 
 label AE097_menu_start:
     menu:
@@ -22621,7 +22624,7 @@ label AEBE004:
     show BE surprised
     BE "WOoooah- that's her butt."
     "The crowd went from chuckling to full on laughing."
-    if getSkill("Academics") > 15 and getSkill("Art") < 8:
+    if checkSkill("Academics", ">", 15) and checkSkill("Art", "<", 8):
         MC "...Wait, she was wearing a different pair of panties earlier."
         "I was correct. Earlier, when Shiori walked away, I was certain I saw her wearing the standard panties she always does. Why is she now suddenly wearing a g-string?"
         show BE angry
@@ -22725,7 +22728,7 @@ label AEBE004:
     BE "N-No way! She disappeared!"
     Magician "Don't worry about her ladies and gentlemen, she'll be just fine! However, first, let me tell you a story of how I first learned the art of hypnosis!"
     "As he went on for a few minutes explaining his craft and what he did, meanwhile... I couldn't help but think about when Shiori's eyes met with mine. It was just a moment, but something seemed... off about it. "
-    if getSkill("Academics") > 10:
+    if checkSkill("Academics", ">", 10):
         MC "Hey, Honoka, do you think Shiori checked this place out on her rounds?"
         BE "Huh-? What do you-?"
     Magician "And now-!"
@@ -22769,7 +22772,7 @@ label AEBE004:
     "Unlike earlier, Shiori wasn't being silly, in fact the way she moved was extremely seductive. Her movements were graceful despite her size."
     "It was actually beautiful."
     "Alluring..."
-    if getSkill("Academics") > 10:
+    if checkSkill("Academics", ">", 10):
         "...Practiced?"
     BE "Kei! Earth to Kei-chan!"
     MC "Wha-huh?"
@@ -22794,7 +22797,7 @@ label AEBE004:
     "Silently, I did so as the crowd applauded for me and I sheepishly smiled and bowed."
     BE "W-Woah. What the hell was that?!"
     MC "I... dunno."
-    if getSkill("Academics") > 10:
+    if checkSkill("Academics", ">", 10):
         MC "...How did he get an outfit that fit Matsumoto-san?"
         BE "Eh?! Same way he hypnotized Shiori, dummy! Magic!"
         "I squinted a bit as I thought the sequence of what happened over in my head."
@@ -22844,7 +22847,7 @@ label AEBE004:
     "I quickly began to chase after her as we ran towards Seichou, away from the carnival grounds, and Shiori."
     show AE neutral-smug
     AE "... Heh."
-    if getSkill("Academics") > 11:
+    if checkSkill("Academics", ">", 11):
         "However, I stopped. Turning around, I gave a weak smile to Shiori."
         MC "Amazing dance moves, by the way. I can tell dancing is one of your passions."
         show AE neutral
@@ -23065,7 +23068,7 @@ label AE007b:
     MCT "Damn. Didn't think I'd be treated to such a gorgeous sight this early. Usually the sun was the first thing to see in the morning. Not a full moon."
     MC "Yo! Shiori-san, you're up early. How's it going?"
     "Now aware of my presence, Shiori-san pulled down her skirt to hide her panties and stood flat on her feet once more."
-    if getAffection("AE") > 1:
+    if checkAffection("AE", ">", 1):
         "Shiori-san looked up from her notepad as she wrote a few final comments down. She clicked her pen, and placed it, and the clipboard, under her arm."
         show AE neutral with dissolve
         AE "Ah, well if it isn't Hotsure-san."
@@ -23193,7 +23196,7 @@ label AE007b_c1_after:
     show AE neutral
     AE "They were elected, of course. My situation is not the norm."
     MC "Ahh, so there are things even the mighty student council president can't control, eh?"
-    if getAffection("AE") > 3:
+    if checkAffection("AE", ">", 3):
         show AE neutral-eyebrow
         AE "Oh? Do I give off the appearance as though I'm in control of everything?"
         MC "Well, Yeah, I'd say so."
@@ -23262,7 +23265,7 @@ label AE007b_c1_after:
 #S annoyed: I see thousands of records, Hotsure-san. It's perfectly normal.
 #S neutral: Besides, the things I know about you, I only know for your betterment.
 #MC "Y-Yeah...
-    if getAffection("AE") > 1:
+    if checkAffection("AE", ">", 1):
         MC "Anyways, I won't keep you. Sorry for the interruption."
         show AE neutral
         AE "Oh, no worries. Feel free to speak to me at any time."
@@ -23385,7 +23388,15 @@ label AE008b:
     show AE neutral-annoyed
     AE "...-gize."
     "Shiori-san sighed in exasperation before shaking her head and turning around to face me."
-    if getAffection("AE") < 2:
+    if checkAffection("AE", ">=", 6):
+        show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
+        AE "Can I help-"
+        show AE happy
+        AE "Ah. Hotsure-san. Well now, at the very least it's a welcome face. Anything you need?"
+    elif checkAffection("AE", ">=", 2):
+        show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
+        AE "Hm? Is there something you need, Hotsure-san?"
+    else:
         show AE neutral-annoyed at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
         AE "...Oh. It's you."
         MCT "O-OY! Don't 'Oh, it's you.' me!"
@@ -23398,14 +23409,6 @@ label AE008b:
         AE "..."
         show AE neutral
         AE "You're right. My apologies. What is it?"
-    elif getAffection("AE") < 6:
-        show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
-        AE "Hm? Is there something you need, Hotsure-san?"
-    else:
-        show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
-        AE "Can I help-"
-        show AE happy
-        AE "Ah. Hotsure-san. Well now, at the very least it's a welcome face. Anything you need?"
     MC "I don't think I've ever seen you act that scary before."
     show AE neutral-eyebrow
     AE "You've seen me enough to know?"

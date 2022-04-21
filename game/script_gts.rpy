@@ -7,7 +7,7 @@ label GTS001:
     "What Daichi had told me earlier was starting to resonate more, and I began to wonder if others knew about the purpose of this school before they were enrolled."
     "If only to focus on the things I could understand for a while, I decided to take a walk and take stock of the new campus; the little pamphlet map they gave us, I figured, would only do for so long."
     UNKNOWN "Excuse me!"
-    if getSkill("Athletics") > 2:
+    if checkSkill("Athletics", ">", 2):
         "No sooner had the shout crossed my ears than something smacked hard into my shoulder, and some guy my age stumbled in front of me before breaking back into a stampede."
     else:
         "A fraction of a second after I processed the machine-gun footsteps behind me, their owner smashed into me like someone throwing a machine gun at me."
@@ -40,7 +40,7 @@ label GTS001:
     MCT "You... didn't know that?"
     show GTS neutral at Transform(xzoom=1)
     GTS "But let us contemplate more wholesome things."
-    if getAffection("GTS") > 1:
+    if checkAffection("GTS", ">", 1):
         extend " If you are also getting familiar with the campus, would you perhaps like to take a walk together?"
         MC "Sure, I'm down for that. Did you have anywhere you wanted to check out next, or?..."
         GTS "Oh, no. It is well with me if you lead the way, if you would."
@@ -351,9 +351,9 @@ label GTS004:
     "I still wasn’t used to this place; as I passively guessed at the number of students there, in and between the vast, blocky shadows of the bookshelves, I realized there really were quite a few."
     "It just really didn’t look like it at a glance, with the bookshelves noticeably taller than any I’d ever seen and the aisles between them looking wide enough for six normal people."
     "The space was well-used, too. Every row of shelves constituted a veritable wall of books, intermittent plastic coverslips gleaming in the sun, some of the signs claiming whole aisles for topics I’d never heard of."
-    if getSkill("Athletics") > getSkill("Academics") and getSkill("Athletics") > getSkill("Art"):
+    if isHighestSkill("Athletics"):
         "Well, I never found the library all that exciting, but my assignment wasn’t gonna do itself."
-    if getSkill("Art") > getSkill("Academics") and getSkill("Art") > getSkill("Athletics"):
+    if isHighestSkill("Art"):
         "I stopped for a moment, absorbed. In spite of the strangeness of this academy’s very existence, the air in the library still lazily swirled with silent discoveries, lazy afternoons in the sunlight, hushed and cheery chats between friends."
     else:
         "The sight of it all made me a little more confident in the face of the unanswerable strangeness of this academy’s existence. Looking the aisles up and down, I could imagine they could answer just about any question I cared to ask."
@@ -424,7 +424,7 @@ label GTS004_after:
     "She placed her hand on her chin and tapped it once or twice."
     GTS "I'm not sure... the reasoning seems sound, but I would hate to impose on another."
     MC "Ah... yeah, fair enough. Other than Honoka-chan and me, we’re all still pretty much strangers."
-    if getAffection("GTS") > 3:
+    if checkAffection("GTS", ">", 3):
         GTS "Indeed. Although, I don’t think a stranger typically would just drop by for an impromptu chat."
         pause 0.25
         MC "Heh... yeah, good point. Maybe not {i}all{/i} of us."
@@ -1038,7 +1038,7 @@ label GTS010_after:
     show GTS embarrassed
     GTS "I..."
     GTS "Thank you..."
-    if getAffection("GTS") >= 7:
+    if checkAffection("GTS", ">=", 7):
         $setFlag("GTS011_unlock")
         if getProgress("GTS") == "GTS011b":
             $setProgress("GTS", "GTS011")
@@ -1152,10 +1152,10 @@ label GTS011b:
     UNKNOWN "Hi there, I'm Ryoko Tanaka. Nice to meet you."
     MC "Nice to meet you too, I'm Keisuke Hotsure."
     Ryoko "Pleasure. Saw you talking to Yamazaki-san, you two friends?"
-    if getAffection("GTS") < 2:
-        MC "We're in the same class."
-    else:
+    if checkAffection("GTS", ">=", 2):
         MC "Yeah, a bit."
+    else:
+        MC "We're in the same class."
     Ryoko "I see. So Hotsure-san, you ever been in a movie before?"
     MC "W-what? A movie?"
     Ryoko "Yeah, you ever play a role before?"
@@ -1301,7 +1301,7 @@ label GTS013:
     "{i}Pff pff{/i}"
     "{i}Shkt shkt shkt shkt shkt{/i}"
     MC "Hmmm..."
-    if getSkill("Academics") > 4:
+    if checkSkill("Academics", ">", 4):
         MCT "The videos did not prepare me for this."
         "On a whim one calm Sunday afternoon, I found myself sketching an architectural diagram of the structure of the class building."
         "And yet, despite walking those halls almost every day for the past month..."
@@ -1372,7 +1372,7 @@ label GTS013_c1_2:
     GTS "In fact, would you perhaps like to join me? I believe you could provide a much-needed second opinion."
     MCT "You're too good, Hotsure, too good."
     MC "Yeah, I'd love to. "
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         extend " Maybe we'd both learn a thing or two. Kodama-san really knows her stuff."
         show GTS happy
         GTS "Manifestly."
@@ -1496,7 +1496,7 @@ label GTS013_c3:
     PRG "Have you ever seen someone make the dough for a pizza?"
     "Naomi put a finger to her lips, and tapped it."
     GTS "I don't well remember it if I have."
-    if getSkill("Academics") > 2:
+    if checkSkill("Academics", ">", 2):
         MC "Where you like mush the dough ball into itself?"
         show PRG neutral at Transform(xzoom=-1) with dissolve
         PRG "Yeah, exactly. That helps make sure there aren't any cracks or gaps in the dough."
@@ -1576,14 +1576,14 @@ label GTS013_c3:
     GTS "I don't believe you did."
     "She shook her head slowly as she placed the cookie tray in the oven and set a timer for ten minutes."
     GTS "Well, I believe more than a vacation would be in order. The root of it is that her energies are invested in an irreciprocal relationship."
-    if getSkill("Academics") < 2:
+    if checkSkill("Academics", ">=", 2):
+        "I shrugged."
+        MC "At least she gets paid for her time."
+    else:
         MC "A what relationship?"
         GTS "In other words, she gives a good deal more in the relationship than she receives."
         MC "Oh."
         MC "Well, at least she gets paid for her time."
-    else:
-        "I shrugged."
-        MC "At least she gets paid for her time."
     show GTS neutral at Transform(xzoom=1) with dissolve
     GTS "That's true. And yet there is clearly a certain lack of harmony for which the pay does not fully compensate. The effect on Kodama-san's nerves is apparent."
     menu:
@@ -1603,7 +1603,7 @@ label GTS013_c3_1:
     GTS "That is true, and I will try to make her glad she agreed."
     GTS "I, however, would not offer her something as common as money as a ploy to oblige her to more than I could rightly ask."
     GTS "We must respect our fellows in matters small and great alike."
-    if getSkill("Academics") > 4:
+    if checkSkill("Academics", ">", 4):
         MC "...Yamazaki-san, are you trying to... teach me something?"
         show GTS embarrassed
         GTS "I like to think of it more as sharing my thoughts."
@@ -1617,7 +1617,7 @@ label GTS013_c3_2:
     GTS "In effect, Kodama-san has been goaded into exchanging half of her life for someone else's. Something as common as money hardly constitutes a fair trade."
     show GTS neutral
     GTS "Simply put, we must respect our fellows in matters small and great alike."
-    if getSkill("Academics") > 4:
+    if checkSkill("Academics", ">", 4):
         MC "...Yamazaki-san, are you trying to... teach me something?"
         show GTS embarrassed
         GTS "I like to think of it more as sharing my thoughts."
@@ -2338,13 +2338,13 @@ label GTS019:
 label GTS019_c1_1:
     "My mind drew a blank as I simply let my hand move with the first thought that came to mind, and as such my work was done almost as soon as it started."
     GTS "Let's see what you did."
-    if getSkill("Art") < 2:
+    if checkSkill("Art", ">=", 2):
+        $setAffection("GTS", 1)
+        GTS "Ah, human. Interesting choice, Hotsure-san."
+    else:
         show GTS embarrassed
         GTS "O-oh, a very... interesting style, Hotsure-san..."
         MC "Thanks, been a while since I did this."
-    else:
-        $setAffection("GTS", 1)
-        GTS "Ah, human. Interesting choice, Hotsure-san."
     MC "Yeah... I kind of blanked there, so I let my hand take the wheel."
     GTS "That's all right. I'm sorry for putting you on the spot like that. Still, I think it came out nicely."
     "She carefully removed the paper and placed it in the pile along with the ones she had done."
@@ -2355,17 +2355,7 @@ label GTS019_c1_2:
     "I got to work, planning out my movements before my hands executed them. As long as I focused, I could get this done."
     "After a few minutes passed, I finally let out a sigh of relief and placed the brush down."
     GTS "Let's see what you did."
-    if getSkill("Art") < 6:
-        $setAffection("GTS", 2)
-        show GTS embarrassed
-        GTS "Ah... I see what you went for, Hotsure-san. That was quite the brave effort."
-        show GTS embarrassed at Transform(xzoom=-1)
-        GTS "{size=-6}At least... I think I know what this is...{/size}"
-        MC "Uh thanks..."
-        show GTS embarrassed at Transform(xzoom=1)
-        GTS "Ah! I mean no offense, Hotsure-san. Here, let's put it with the others..."
-        "She carefully removed the paper and placed it in the pile along with the ones she had done."
-    else:
+    if checkSkill("Art", ">=", 6):
         $setAffection("GTS", 3)
         show GTS surprised
         GTS "Oh my! This is rather lovely Hotsure-san. I wasn't aware you had a talent for shodō as well..."
@@ -2377,24 +2367,34 @@ label GTS019_c1_2:
         MC "Hm? U-uh, sure you can keep it."
         GTS "T-thank you..."
         "I watched as she reached over, grabbing her stamp and placing a seal on the bottom portion of the paper. My face grew a little warm, as she really did seem to appreciate the piece quite a bit before she put it away."
+    else:
+        $setAffection("GTS", 2)
+        show GTS embarrassed
+        GTS "Ah... I see what you went for, Hotsure-san. That was quite the brave effort."
+        show GTS embarrassed at Transform(xzoom=-1)
+        GTS "{size=-6}At least... I think I know what this is...{/size}"
+        MC "Uh thanks..."
+        show GTS embarrassed at Transform(xzoom=1)
+        GTS "Ah! I mean no offense, Hotsure-san. Here, let's put it with the others..."
+        "She carefully removed the paper and placed it in the pile along with the ones she had done."
     jump GTS019_c1_after
 
 label GTS019_c1_3:
     "I pondered on what I could write down as a soft breeze blew my hair. That gave me the inspiration I needed, as I thought back to how peaceful the day felt and how it made me feel."
     "Smiling, I got to work with my project, making short strokes as I finished the art piece in a few minutes."
     GTS "Let's see what you did."
-    if getSkill("Art") < 4:
-        $setAffection("GTS", 1)
-        GTS "Ah, I see it. Happiness. A nice choice to go with, Hotsure-san."
-        MC "Thanks, just went with how I was feeling."
-        GTS "Well, I'm glad you're happy."
-    else:
+    if checkSkill("Art", ">=", 4):
         $setAffection("GTS", 2)
         GTS "Heh, a nice mood to have, Hotsure-san."
         MC "Yeah, I have to admit the atmosphere of today has made me rather happy."
         show GTS happy
         GTS "It makes me happy to hear that. The piece came out well, too."
         MC "Thanks, it's been a while since I've done shodō, but it was fun."
+    else:
+        $setAffection("GTS", 1)
+        GTS "Ah, I see it. Happiness. A nice choice to go with, Hotsure-san."
+        MC "Thanks, just went with how I was feeling."
+        GTS "Well, I'm glad you're happy."
     "She took the sheet and placed it on the pile with hers before looking back at me and smiling."
     jump GTS019_c1_after
 
@@ -2641,7 +2641,7 @@ label GTS022:
     GTS "Yes, quite! I very much like the presentation here. The way the author weaves Nijō-sama's poems into accounts of his life is very thoughtful and evocative."
     GTS "I borrowed it yesterday, and I must confess I continued reading a bit after I would normally go to bed."
     MC "Wow, sounds like interesting technique. Maybe I should check that out."
-    if getSkill("Academics") > 2:
+    if checkSkill("Academics", ">", 2):
         MC "Nijō-sama was a regent of the old Northern court for a while in the 1300s, if I remember right."
         GTS "Indeed. That's really what I find fascinating about it."
     else:
@@ -2664,11 +2664,11 @@ label GTS022:
     show GTS neutral with dissolve
     GTS "How familiar are you with the art of poetry itself?"
     menu:
-        "Whose woods these are I think I know..." if getSkill("Academics") > 6:
+        "Whose woods these are I think I know..." if checkSkill("Academics", ">", 6):
             jump GTS022_frost
-        "On a bright, calm day..." if getSkill("Academics") > 4:
+        "On a bright, calm day..." if checkSkill("Academics", ">", 4):
             jump GTS022_nijou
-        "There was an old drunkard from Devon..." if getSkill("Academics") > 2:
+        "There was an old drunkard from Devon..." if checkSkill("Academics", ">", 2):
             jump GTS022_limerick
         "Not very, to tell you the truth.":
             jump GTS022_none
@@ -2850,7 +2850,7 @@ label GTS022_c3:
     scene black with fade
     $setSkill("Academics", 1)
     "And so on for a few hours."
-    if getAffection("GTS") > 20:
+    if checkAffection("GTS", ">", 20):
         "I was genuinely surprised how much seemed to stick afterward, even if it wasn't everything. Something about the way she relayed things just cleared the blocks in my brain."
         "I told her that, in fact. She thanked me with grace and efficiency."
     scene Dorm Interior with fade
@@ -2883,7 +2883,7 @@ label GTS022_scribe:
     MC "Oh yeah! Sure, lemme think."
     "I sat back with the grass and dirt snaking around my palms, and I cast my eyes on high. Warm sighs of breezes came floating down on needles of sunlight. A hundred white-green leaves waved to a tune I couldn't hear."
     "So I closed my eyes, to let myself hear the birds, frogs, and cicadas; it seemed they had more to say than the students all around."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "'Neath our thickest shade, your voice we oft have heard, yes... the noon o'er heaven."
         show AE happy with dissolve
         AE "Well!"
@@ -2911,7 +2911,7 @@ label GTS022_scribe:
     "I was, however slowly, realizing the challenge of maintaining a coherent flow on top of the various regulations Shiori so dutifully held us accountable for."
     "I leaned forward to think."
     MC "..."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         extend " Skylark in her nest, never fearing the far earth, chirps up to the sun."
         "Another nod, another scribble."
     else:
@@ -2924,7 +2924,7 @@ label GTS022_scribe:
     "At the very least, I was not alone. Naomi leaned back against the tree in the muffled throes of ponderment."
     GTS "...Earth and sun and wind betwixt, gladly received, never missed."
     AE "Hotsure-san?"
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Let them to and fro, write their journeys on the wind bound from east to west."
     else:
         MC "Nutshell plunges, crack! Up again on mother's wings, her young ones to feed."
@@ -2961,7 +2961,7 @@ label GTS022_c4a:
     show GTS neutral at Transform(xzoom=-1) with dissolve
     MCT "Heh."
     MCT "Oh crap, they're staring. Uh..."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Pray scatter the mist, you mountain wind among us, that the warmth be clean."
         show GTS neutral at Transform(xzoom=1) with dissolve
         "Naomi, suddenly roused to attention, gave me a gentle nod."
@@ -2987,7 +2987,7 @@ label GTS022_c4a:
 
 label GTS022_c5a:
     show AE neutral
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "So all has been drank, now let us straighten ourselves, for her, down below."
         GTS "Oh!"
     else:
@@ -3013,7 +3013,7 @@ label GTS022_c5a:
             jump GTS022_cutoff_a
 
 label GTS022_c6a:
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Eyes command the heart, but her temp'rance guides my feet down a peaceful road."
         show GTS embarrassed with dissolve
     else:
@@ -3164,7 +3164,7 @@ label GTS022_noscribe:
     MC "..."
     "Some changeless minutes went by... admittedly, I wasn't sure how many... and then Naomi eased herself straight upright."
     GTS "Take us under wing, maple and nests high above; haze again rolls off."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Good prose... but..."
         GTS "I forgot the cutting word."
         "She stared dead ahead, at nothing I could see."
@@ -3189,7 +3189,7 @@ label GTS022_noscribe:
     MCT "I still got nothing."
     "I leaned forward to think, spreading some dirt on my knee and chin."
     MC "..."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Skylark in her nest, never fearing the far earth, chirps up to the sun."
     else:
         MC "Skylark in her humble nest, never fearing the far earth, chirps up to the sun."
@@ -3201,7 +3201,7 @@ label GTS022_noscribe:
     "I realized as she came to an utter stillness that she was thinking just as hard as I was."
     GTS "...Earth and sun and wind betwixt, gladly received, never missed."
     "She paused a moment, and wrote it down."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Let them to and fro, write their journeys on the wind bound from east to west."
     else:
         MC "Nutshell plunges, crack! Up again on mother's wings, her young ones to feed."
@@ -3247,7 +3247,7 @@ label GTS022_c4b:
     show GTS neutral at Transform(xzoom=-1)
     MCT "Heh."
     MCT "Oh crap, she's staring. Uh..."
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Pray scatter the mist, you mountain wind among us, that the warmth be clean."
         show GTS neutral at Transform(xzoom=1)
         "Naomi, suddenly roused to attention, gave me a gentle nod."
@@ -3270,7 +3270,7 @@ label GTS022_c4b:
             jump GTS022_cutoff_b
 
 label GTS022_c5b:
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "So all has been drank, now let us straighten ourselves, for her, down below."
         GTS "Oh!"
     else:
@@ -3300,7 +3300,7 @@ label GTS022_c5b:
             jump GTS022_cutoff_b
 
 label GTS022_c6b:
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Eyes command the heart, but her temp'rance guides my feet down a peaceful road."
         show GTS embarrassed with dissolve
     else:
@@ -3439,7 +3439,7 @@ label GTS023:
     "It was... both funny and not to see Honoka do the daughter role so well."
     "Pedestrians passed by behind them as they walked into the sunset, and it was all captured by the cameraman carefully performing a dolly shot by hand."
     Ryoko "Cut!"
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Think it's something to do with the delivery of the lines?"
         Ryoko "No, no, the lines are fine."
         MC "Something visual?"
@@ -3481,7 +3481,7 @@ label GTS023:
     GTS "Goodness!"
     "From just around the corner, Naomi stood before me clutching a platter while a few cookies bounced and crumbled on the ground."
     menu:
-        "Aw sick, you made cookies?" if getSkill("Art") > 6:
+        "Aw sick, you made cookies?" if checkSkill("Art", ">", 6):
             jump GTS023_c1_1
         "Jeez, I didn't see you coming.":
             jump GTS023_c1_2
@@ -3727,7 +3727,7 @@ label GTS024:
     "She gave me a brisk nod."
     GTS "Very much so. I suppose I just happened to miss that spot when I was pouring out the plant food. We need only set it gently back on the path to health."
     MC "Okay, cool. "
-    if getSkill("Academics") > 4:
+    if checkSkill("Academics", ">", 4):
         MC "So, do you have some plant food and, I guess, an eyedropper handy?"
         GTS "But of course."
     else:
@@ -3764,7 +3764,7 @@ label GTS024:
     scene Campus Center
     show GTS neutral
     with fade
-    if getSkill("Athletics") > 2:
+    if checkSkill("Athletics", ">", 2):
         "I honestly had no trouble keeping up with her after the initial surprise, but nonetheless we remained silent for a good minute or two crossing behind the admin building. Something was occuring to me that held my tongue."
         "However, Naomi stole a glance at me and must have noticed my drastically quickened pace. She covered her mouth and came gently to a stop."
     else:
@@ -3849,29 +3849,7 @@ label GTS024:
     MC "Don't worry, though, I got a notebook I can use to cover my head for the short distance to the boys' dorms."
     GTS "That seems rather wasteful."
     MC "Um... well, yeah, probably. Maybe you could lend me your umbrella and I could run over there real quick?"
-    if getAffection("GTS") < 30:
-        show GTS neutral with dissolve
-        GTS "Yes, that sounds like a fine plan."
-        "She handed me her umbrella, which I took with a bow."
-        MC "Be back in no time."
-        GTS "No need to trouble yourself by hurrying. A few moments of reflection wouldn't be the worst thing in the world."
-        MC "Oh, certainly not."
-        hide GTS with dissolve
-        "Thusly, I raised the umbrella and briskly set out on newly pitter-pattering, damp ground down to my dorm."
-        scene black with fade
-        pause 2
-        scene Dorm Exterior with fade
-        "I fear I ended up forcing Naomi to wait some time as well. I searched every nook and cranny of my dorm that I could conceive in the quest for my umbrella...{w} ultimately to find it in my raincoat pocket."
-        "This done, I hastened to beneath the awning where Naomi was standing, hands folded in front of her thighs and eyes cast aloft to the sky."
-        show GTS neutral with dissolve
-        GTS "You found it?"
-        MC "Eventually. Apologies about the delay."
-        GTS "Think nothing of it. If absolutely nothing else, turnabout is fair play."
-        "I took cover from the rain and did my best to shake off some stray droplets from Naomi's umbrella. Once satisfied, I gave it back to her."
-        GTS "Thank you. Now, let's head back to the classroom building."
-        MC "Let's."
-        hide GTS with dissolve
-    else:
+    if checkAffection("GTS", ">=", 30):
         GTS "Well, I have another, faster idea..."
         "She craned her neck to look over at the boys' dormitories; I did too, and saw that there didn't seem to be anyone around there, either."
         show GTS embarrassed with dissolve
@@ -3879,7 +3857,7 @@ label GTS024:
         MC "You? Having uncouth thoughts? Please, do tell."
         GTS "Well, what if we were to walk over there together?{w} At the same time...{w} under my umbrella?"
         "Some air caught in my chest for a second and I prayed the clouds obscured the blush I could feel coming on."
-        if getSkill("Academics") > 1:
+        if checkSkill("Academics", ">", 1):
             MC "On the contrary, that sounds like a perfectly lovely idea."
             GTS "If you really think so... then by all means, let's try it."
             show GTS neutral with dissolve
@@ -3924,6 +3902,28 @@ label GTS024:
         MC "Very well, then. I do believe we have a garden to attend to."
         show GTS happy with dissolve
         GTS "Precisely."
+        hide GTS with dissolve
+    else:
+        show GTS neutral with dissolve
+        GTS "Yes, that sounds like a fine plan."
+        "She handed me her umbrella, which I took with a bow."
+        MC "Be back in no time."
+        GTS "No need to trouble yourself by hurrying. A few moments of reflection wouldn't be the worst thing in the world."
+        MC "Oh, certainly not."
+        hide GTS with dissolve
+        "Thusly, I raised the umbrella and briskly set out on newly pitter-pattering, damp ground down to my dorm."
+        scene black with fade
+        pause 2
+        scene Dorm Exterior with fade
+        "I fear I ended up forcing Naomi to wait some time as well. I searched every nook and cranny of my dorm that I could conceive in the quest for my umbrella...{w} ultimately to find it in my raincoat pocket."
+        "This done, I hastened to beneath the awning where Naomi was standing, hands folded in front of her thighs and eyes cast aloft to the sky."
+        show GTS neutral with dissolve
+        GTS "You found it?"
+        MC "Eventually. Apologies about the delay."
+        GTS "Think nothing of it. If absolutely nothing else, turnabout is fair play."
+        "I took cover from the rain and did my best to shake off some stray droplets from Naomi's umbrella. Once satisfied, I gave it back to her."
+        GTS "Thank you. Now, let's head back to the classroom building."
+        MC "Let's."
         hide GTS with dissolve
     scene Campus Center with fade
     "As we crossed the campus back to the building where the garden awaited, the rain began to come down more regularly but not much harder. It was a quintessential lukewarm spring drizzle."
@@ -4322,7 +4322,7 @@ label GTS026_c2:
     show GTS neutral with dissolve
     "Silently, I ceased to breathe."
     "Her very presence cast me in blessed shade, as her wavering straw hat did for her. The rest of her statuesque frame was wreathed in the sleepy, swaying grays and blues of a distant mountain."
-    if getSkill("Art") > 3:
+    if checkSkill("Art", ">", 3):
         MC "Yamazaki-san, you look like a work of art, and an original at that."
         show GTS happy
         $setAffection("GTS", 1)
@@ -4370,7 +4370,7 @@ label GTS026_c2:
             jump GTS026_c2_2
 
 label GTS026_c2_1:
-    if getAffection("GTS") > 20:
+    if checkAffection("GTS", ">", 20):
         $setFlag("GTS026_bus")
         GTS "It occurs to me that if I do become tall enough to warrant moving to special facilities..."
         show GTS neutral at Transform(xzoom=-1)
@@ -4475,12 +4475,12 @@ label GTS026_c4:
     "I had to lock what felt like every muscle in my body to maintain eye contact."
     "And by God, for what?"
     GTS "I think we should be together."
-    if getAffection("GTS") > 20:
+    if checkAffection("GTS", ">", 20):
         GTS "There's a wholesomeness in you, Hotsure-san, and I can tell that it's genuine."
         GTS "So often you know just what to say, and not just to me, it seems, but to almost everyone."
-        if getSkill("Academics") > 5:
+        if checkSkill("Academics", ">", 5):
             GTS "You clearly have a good head on your shoulders, as well."
-        if getSkill("Art") > 5:
+        if checkSkill("Art", ">", 5):
             GTS "And even more than that, you're such a soulful person, full of life."
         GTS "It is not my nature to put it so plainly, but even for what time we've spent together, all of that means a great deal to me."
     else:
@@ -4502,7 +4502,7 @@ label GTS026_c4:
     MC "I'm listening."
     GTS "Well, if we were to call what we have by its more proper nomenclature, I would prefer to abide by more proper channels."
     "I took another quiet sip of the rich matcha as I pondered her meaning."
-    if getSkill("Academics") > 2:
+    if checkSkill("Academics", ">", 2):
         MC "I see."
         MCT "Probably should've seen this coming now that I think of it."
         MC "Yeah, I understand, and that's fine. But what does that mean for us now?"
@@ -4968,7 +4968,7 @@ label GTS028S_c2_1:
     BE "C'mon, as if it wasn't obvious what I was {i}really{/i} looking for."
     show BE happy
     BE "So the dinner last week! Gimme deets!"
-    if getAffection("GTS") > 20:
+    if checkAffection("GTS", ">", 20):
         MC "It honestly went... awesome."
         BE "Yeah?"
         MC "I've met some girls where the niceness was an act, but her... nah, she's genuine. Really smart and talented, too."
@@ -5535,7 +5535,7 @@ label GTS029_c1_1:
     MC "I'm sorry to hear that, Yamazaki-san. It sounds very important to you."
     show GTS neutral
     GTS "It is. My parents gave me it in preparation for my Maiko training."
-    if getSkill("Art") > 35:
+    if checkSkill("Art", ">", 35):
         MC "Oh, you were training to be a Geisha?"
         GTS "That's right. That was what my parents originally intended for me at least."
         MC "Did something change?"
@@ -5564,7 +5564,7 @@ label GTS029_c1_2:
     MC "Is there a reason this particular kimono was your favorite?"
     show GTS neutral
     GTS "Mhm. It belonged to my great-great grandmother, and has been passed down in my family line, before my parents gave it to me for my Maiko training."
-    if getSkill("Art") > 35: #this is WAY too high
+    if checkSkill("Art", ">", 35): #this is WAY too high
         MC "Oh, you were training to be a Geisha?"
         GTS "That's right. That was what my parents originally intended for me at least."
         MC "Did something change?"
@@ -5726,7 +5726,7 @@ label GTS030_c2_2:
     MC "I trust you can handle yourself, Yamazaki-san. The stuff you have left should be of no problem to you at your current size."
     show GTS happy at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     GTS "It shouldn't be a problem at all. I'd hate for you to waste your time with such a menial task."
-    if getAffection("GTS") > 15: #FIXME
+    if checkAffection("GTS", ">", 15): #FIXME
         $setFlag("GTS030_festival")
         MC "Oh, I nearly forgot, would you be interested in going to the Children's Day festival later this month?"
         GTS "Oh my, of course, that's a wonderful idea. It has been quite some time since I last partook in a festival."
@@ -6039,13 +6039,13 @@ label GTS032:
     MC "I can agree with that. Hell, the only reason I'm still able to see is because I have the discipline to actually wash and comb this haystack I call 'hair.'"
     "Naomi giggled, keeping her hand close to her mouth to keep it covered."
     GTS "Hygiene is important, of course, but I meant your drive. What motivates you, Kei-chan? What would you consider to be your greatest strength?"
-    if getSkill("Art") > getSkill("Athletics"):
-        if getSkill("Art") > getSkill("Academics"):
-            if getSkill("Art") >= 7:
+    if checkSkill("Art", ">", getSkill("Athletics")):
+        if checkSkill("Art", ">", getSkill("Academics")):
+            if checkSkill("Art", ">=", 7):
                 $setAffection("GTS", 1)
             jump GTS032_art
-        elif getSkill("Art") == getSkill("Academics"):
-            if getSkill("Art") >= 7:
+        elif checkSkill("Art", "==", getSkill("Academics")):
+            if checkSkill("Art", ">=", 7):
                 $setAffection("GTS", 1)
             menu:
                 "My artistic prowess.":
@@ -6053,12 +6053,12 @@ label GTS032:
                 "My supreme intellect.":
                     jump GTS032_academics
         else:
-            if getSkill("Academics") >= 7:
+            if checkSkill("Academics", ">=", 7):
                 $setAffection("GTS", 1)
             jump GTS032_academics
-    elif getSkill("Art") == getSkill("Athletics"):
-        if getSkill("Art") == getSkill("Academics"):
-            if getSkill("Art") >= 7:
+    elif checkSkill("Art", "==", getSkill("Athletics")):
+        if checkSkill("Art", "==", getSkill("Academics")):
+            if checkSkill("Art", ">=", 7):
                 $setAffection("GTS", 1)
             menu:
                 "My artistic prowess.":
@@ -6067,8 +6067,8 @@ label GTS032:
                     jump GTS032_academics
                 "My athletic pursuits.":
                     jump GTS032_athletics
-        elif getSkill("Art") > getSkill("Academics"):
-            if getSkill("Art") >= 7:
+        elif checkSkill("Art", ">", getSkill("Academics")):
+            if checkSkill("Art", ">=", 7):
                 $setAffection("GTS", 1)
             menu:
                 "My artistic prowess.":
@@ -6076,24 +6076,24 @@ label GTS032:
                 "My athletic pursuits.":
                     jump GTS032_athletics
         else:
-            if getSkill("Academics") >= 7:
+            if checkSkill("Academics", ">=", 7):
                 $setAffection("GTS", 1)
             jump GTS032_academics
     else:
-        if getSkill("Athletics") == getSkill("Academics"):
-            if getSkill("Athletics") >= 7:
+        if checkSkill("Athletics", "==", getSkill("Academics")):
+            if checkSkill("Athletics", ">=", 7):
                 $setAffection("GTS", 1)
             menu:
                 "My supreme intellect.":
                     jump GTS032_academics
                 "My athletic pursuits.":
                     jump GTS032_athletics
-        elif getSkill("Athletics") > getSkill("Academics"):
-            if getSkill("Athletics") >= 7:
+        elif checkSkill("Athletics", ">", getSkill("Academics")):
+            if checkSkill("Athletics", ">=", 7):
                 $setAffection("GTS", 1)
             jump GTS032_athletics
         else:
-            if getSkill("Academics") >= 7:
+            if checkSkill("Academics", ">=", 7):
                 $setAffection("GTS", 1)
             jump GTS032_academics
 
@@ -6253,7 +6253,7 @@ label GTS034_c1_3:
     MC "What did you request from her?"
     show GTS wink
     GTS "You will see when the time comes. Now then, I've gone ahead and set up a mock dinner table. Please show me what you know about proper dining etiquette."
-    if getSkill("Academics") > 5: #tbd?
+    if checkSkill("Academics", ">", 5): #tbd?
         "As I had done many times before, I served Naomi and myself a bowl of rice."
         "Next, I looked to Naomi and we both said 'itadakimasu'; with that out of the way we dug into our meal. Once finished, I placed my chopsticks back into place and we both said 'gochisōsama deshita'."
         show GTS unique
@@ -6443,7 +6443,7 @@ label GTS035_testpass:
     GTS_S "Let's keep the names formal for today and discuss the matter later."
     MC "I understand, Yamazaki-san. Now, pardon me while I get ready."
     "I closed my window and got ready all the while I could hear Naomi humming the same tune to herself."
-    if getSkill("Art") >= 6:
+    if checkSkill("Art", ">=", 6):
         "When deciding what to wear, I decided that since this is a very special kind of event and I should dress appropriately."
         "Reaching under my bed and I produced my dark blue Yukata that hadn't been used in some time. Throwing on the article and tying the sash I headed outside."
         MC "How do I look?"
@@ -6466,7 +6466,7 @@ label GTS035_testpass:
 
     scene Hill Road with fade
     play music GTS
-    if getSkill("Athletics") >= 7:
+    if checkSkill("Athletics", ">=", 7):
         "As we made our way down the road towards the inn I began to notice just how much effort it was taking to keep pace with Naomi. Every eight steps for me was like one for her which made keeping pace a good workout."
         MCT "Man, I better not slack off on the track. Otherwise, I can't see myself keeping pace with her much longer."
     else:
@@ -6482,7 +6482,7 @@ label GTS035_testpass:
         "After a minute or so I felt my energy return and we continued on our way, though I noticed how much shorter Naomi took her strides."
     "We reached the inn just as the first rays of the sun could be seen creeping up on the horizon. The inn was several small huts in a circle around the cul-de-sac entrance."
     "As we approached, we heard the sound of scampering feet before the family dog came rushing up to us. Eventually, Kazumi showed up wearing her kimono."
-    if getSkill("Art") >= 6:
+    if checkSkill("Art", ">=", 6):
         #kazumi position left, face right
         Kazumi "Good to see you made it early. Father will be quite pleased to know you're here."
         show GTS_S neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -6620,7 +6620,7 @@ label GTS035_testpass:
     "He handed me a large mallet."
     Barker "C'mon kid you can do it, you'd hate to disappoint the fine lady."
     "Naomi blushes as I raise the mallet."
-    if getSkill("Athletics") >= 7:
+    if checkSkill("Athletics", ">=", 7):
         "I slammed the hammer down and watched the little peg rocket up but fall a mere inch away from the bell."
     else:
         "I slammed the hammer down and watched the little peg get about halfway up before falling back down."
@@ -6742,10 +6742,10 @@ label GTS035_testpass:
         MC "Pardon?"
         Akihiro "Your manners tonight were quite splendid but showed obvious signs of underutilization and lack of polish. My daughter's subtle movements and mannerisms were a tad obvious in your body movement and posture during dinner."
         MC "My family doesn't practice these sorts of traditions at home so I was a bit rusty."
-        if getSkill("Art") < 6:
-            Akihiro "I suggest the next time we meet, invest in some more appropriate attire."
-        else:
+        if checkSkill("Art", ">=", 6):
             Akihiro "It is reassuring to know you were able to dress properly for this occasion."
+        else:
+            Akihiro "I suggest the next time we meet, invest in some more appropriate attire."
         "Before I could form a response he patted my arm and headed inside, leaving alone on the porch."
     hide Akihiro with dissolve
     MCT "Well, he certainly is blunt when he wants to be."
@@ -6780,7 +6780,7 @@ label GTS036:
     "It had been two days since the meeting with Naomi's parents, and things had been quiet between us."
     "This left me plenty of time to repeat the dinner scene over and over. Her father had been particularly difficult to deal with, but not in a way that was malicious."
     "It had grown apparent the task that lay ahead of me in rising not only to Naomi's standards, but her family's too."
-    if getAffection("GTS") > 30:
+    if checkAffection("GTS", ">", 30):
         extend " But it would be a small price to pay."
     "Eventually, I had to roll out of bed and get to work on my homework. A shower would hopefully allow me some time to destress."
     play sound Knock
@@ -6891,7 +6891,7 @@ label GTS036_c2_1:
     MC "You know there was no real choice."
     show GTS unique
     "A sputtering grin escaped her, before with a wave of her hand she composed herself again."
-    if getAffection("GTS") > 70:
+    if checkAffection("GTS", ">", 70):
         show GTS aroused
         GTS "I love you, too, Hotsure-san."
         show GTS aroused at Transform(yoffset=90) with move
@@ -6927,10 +6927,10 @@ label GTS036_c2_2:
     show GTS neutral
     GTS "I feel that you've expressed an interest in me, since you were willing to go so far as to meet my family."
     GTS "I hope that I have conveyed my interest in you as well. But then, to answer your question, I want to know how {i}you{/i} see our relationship."
-    if getAffection("GTS") < 40:
-        MC "I'm still figuring that out for myself."
-    else:
+    if checkAffection("GTS", ">=", 40):
         MC "Well, I've sort of... been in this kind of thing before, I guess. But never with someone like you. I guess I sort of feel like... I want to try to live life the way you do."
+    else:
+        MC "I'm still figuring that out for myself."
     "She nodded."
     GTS "Based on your experience, how do you feel? Do you see us as a couple? Are you comfortable with saying that you love me?"
     jump GTS036_menu
@@ -6945,7 +6945,7 @@ label GTS036_c2_3:
     show GTS despaired-thought
     GTS "So, you enjoy spending time with me, but you're afraid of the implications that come with saying that you love me. I understand. It can't be an easy thing to say."
     GTS "I'm curious about one other thing, if you would indulge me. What is love to you?"
-    if getAffection("GTS") > 60 and getSkill("Art") > 5:
+    if checkAffection("GTS", ">", 60) and checkSkill("Art", ">", 5):
         MC "Love is an unbreakable bond. You don't think about it, you feel it. The way you light up when the other person's happy. The way they can cover each other's weaknesses. How you can know they'll be there for you, even on your darkest days..."
         MC "...That's what love means to me."
         show GTS unique
@@ -6957,7 +6957,7 @@ label GTS036_c2_3:
         "Blushing, her stoic countenance regarded her hands wringing in her lap."
         GTS "Indeed, nothing worth having is easily gained."
         show GTS neutral
-    elif getAffection("GTS") > 40:
+    elif checkAffection("GTS", ">", 40):
         MC "...Something to be cultivated, I suppose."
         $setAffection("GTS", -5)
         show GTS embarrassed
@@ -7703,7 +7703,7 @@ label GTS040_c2:
             MCCell "Of... your factor?"
             GTSCell "Yes."
             MCCell "I...{w} uh, kinda like it."
-            if getSkill("Academics") > 3:
+            if checkSkill("Academics", ">", 3):
                 MCCell "It fits you, in a weird way."
                 GTSCell "I'm not sure I take your meaning."
                 MCCell "Just all the things that make you someone you can look u... uh... "
@@ -7711,7 +7711,7 @@ label GTS040_c2:
                 GTSCell "Thank you. I wouldn't want to forget my virtues for anything."
                 GTSCell "I confess it is something that worries me, in my more idle moments. My tai chi lessons are no small help in developing self-control..."
                 GTSCell "...But as necessary as these facilities are, it seems impossible to put what I'm learning into practice where it is truly needed."
-                if getSkill("Academics") > 6:
+                if checkSkill("Academics", ">", 6):
                     MCCell "Like you can't help but think of all the divisions in your life."
                     $setAffection("GTS", 3)
                     GTSCell "That is {i}precisely{/i} what I was thinking."
@@ -8077,7 +8077,7 @@ label GTS042:
     show Ryoko confused
     Ryoko "Hang on, {i}you{/i} do that? I thought the school'sth groundsthkeeper handled it."
     MC "I mean, he handles everything else on the grounds, but I take care of the rooftop garden. I told Naomi-chan I would before she moved."
-    if getAffection("GTS") > 40:
+    if checkAffection("GTS", ">", 40):
         MC "Besides, like... I don't want all of her effort to be forgotten. You know?"
     show Ryoko happy
     Ryoko "{i}Now{/i} I get it."
@@ -8087,7 +8087,7 @@ label GTS042:
     Ryoko "Yamathaki-san speakth {i}pretty{/i} highly of you on the occathion we get to talk, you know."
     show Ryoko neutral
     Ryoko "Anyway, thi-...mm... ssince you know the code to get into the old mine, could you pleasse come with me so I can ask Yamazaki-san to do a voiceover? It'th for a film project."
-    if getSkill("Academics") > 3:
+    if checkSkill("Academics", ">", 3):
         MC "Wait, why can't Tomoe-san handle that for you? Isn't she on the student council?"
         Ryoko "Yep. The trouble is she lookths to have come down with a pretty wicked sstomach bug. She's in no shape to walk all the way over there."
         MC "Oh, really? Well damn, I hope she feels better soon."
@@ -8152,7 +8152,7 @@ label GTS042:
     show Ryoko neutral
     MC "By the way, what's that script you want her to read about?"
     Ryoko "Ever watched Il Lago and or Ognum Pond?"
-    if getSkill("Art") > 6:
+    if checkSkill("Art", ">", 6):
         MC "I think I {i}heard{/i} of them... one's a romance, and the other's a weird horror movie, right?"
         MC "I don't think she'd care much for the latter..."
     else:
@@ -8692,7 +8692,7 @@ label GTS044:
     scene black with fade
     pause 1.5
     scene Library with fade
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         MCT "Alright, I'm maybe kinda sorta starting to get this."
         "After skimming and re-skimming a couple times, I had filled in my notes a lot more, never mind the several times I wrote something down thrice for good measure. I felt, should I stay the course, that I would actually pass the exam."
         "I set to copying down a table of bond types in my own abbreviated notation, when another insight struck me."
@@ -8733,14 +8733,14 @@ label GTS044_c1_2:
     "I held my phone over my study materials and got typing at once."
     MCCell "hey naomi-chan, i missed your text. something up?"
     "Naturally, I stared at a still screen for a few moments."
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         extend " I tried to resume a little of my study for a moment while I awaited a response."
     GTSCell "Pardon me, Keisuke-kun. I should have said something earlier."
     GTSCell "During class I couldn't help but notice you were tugging on your hair a bit."
     menu:
         "Oh yeah, honestly I've been stressing a bit over this upcoming test.":
             jump GTS044_c2_1
-        "Oh yeah, I've kinda developed a tic since my hair started getting longer." if getSkill("Art") > 3:
+        "Oh yeah, I've kinda developed a tic since my hair started getting longer." if checkSkill("Art", ">", 3):
             jump GTS044_c2_2
 
 label GTS044_c2_1:
@@ -8848,7 +8848,7 @@ label GTS044_c3a:
         ease 2.0 xpos 0.7
     show GTS neutral with dissolve
     GTS "There we are. How far did you get on your own, exactly?"
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         MC "121?... Yeah, 121."
         GTS "Oh my, you're almost done as it is. Well, what would you say to going on a bit of a stroll to pass the time afterward?"
         MC "I'd say it's a gorgeous night for it."
@@ -8940,7 +8940,7 @@ label GTS044_c4a_2:
     MCT "..."
     MCT "..."
     MCT "..."
-    if getAffection("GTS") > 70:
+    if checkAffection("GTS", ">", 70):
         MCT "Meh. None of my concern."
     else:
         MCT "Man, it's pretty out tonight..."
@@ -8967,7 +8967,7 @@ label GTS044_c5a:
     MC "Heh, thanks. Now, what do we have here..."
     "My finger hovered, yearning but afraid to mar the thing before me."
     MC "Wow, this is..."
-    if getSkill("Academics") > 4 or getSkill("Art") > 7:
+    if checkSkill("Academics", ">", 4) or checkSkill("Art", ">", 7):
         extend " hold up."
         "I leaned in, studying Naomi's brushstrokes slower and closer."
         $setVar("GTS_selfhood", getVar("GTS_selfhood") + 1)
@@ -9018,7 +9018,7 @@ label GTS044_c5a:
 
 label GTS044_c3b:
     scene Library with fade
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         "I'd made some good progress in the hours to follow, but not enough that I felt I'd totally grasped the chapter before the library was about to close."
     else:
         "I'd made some progress... technically... but not enough to close the proverbial book on it before the literal library was about to close."
@@ -9034,7 +9034,7 @@ label GTS044_c3b:
     pause 1
     scene Dorm Interior with fade
     "After beginning my second run-through of the material, I took notice of the waning light and flipped on the overhead lights."
-    if getSkill("Academics") > 7:
+    if checkSkill("Academics", ">", 7):
         "I was, at that point, actually pretty sure of myself... but I was still cramming, after all. I made a point to review more than felt necessary."
     else:
         MCT "Uggghhh, this is so dumb. I'm giving this one more go before I drop this pencil and do something that doesn't make me want to die."
@@ -9079,7 +9079,7 @@ label GTS044_c3b:
     RM "And then there's their sweet, perfect daughter, who only likes things father dearest says she can and winces whenever she says something wrong."
     show RM neutral
     RM "That don't sound like Charlotte Brontë to me, Hotsure-san, that sounds like H.P. Lovecraft."
-    if getSkill("Academics") < 4:
+    if not checkSkill("Academics", ">=", 4):
         MC "...Who?"
         RM "Brontë was a British romance and drama novelist and poet. Lovecraft was an American horror writer. Who specialized in reclusive families being depraved in their mansions in the woods."
     MC "Okay, yeah, they're a little stuffy, maybe it's a little weird the way they dress in public, but I highly doubt they're in some kind of death cult or whatever you're saying."
@@ -9106,7 +9106,7 @@ label GTS044_c4b_1:
 
 label GTS044_c4b_2:
     RM "You serious? You're the one dating her, what do {i}you{/i} think?"
-    if getAffection("GTS") > 70 and getSkill("Academics") > 4:
+    if checkAffection("GTS", ">", 70) and checkSkill("Academics", ">", 4):
         MC "...Sometimes I think she has issues with self-worth. Like she can't live up to what's expected of her."
         RM "Uh huh... I could see that, a woman of 'breeding' like her. She probably holds herself to pretty high standards."
         MC "Yeah. I remember way back when she was still learning to bake... she was really sensitive about her skills for a long time."
@@ -9192,7 +9192,7 @@ label GTS044_c5b:
     RM "For?"
     MC "I can't get a good picture of the moon. I wanna try to magnify it."
     pause 1
-    if getAffection("RM") > 1:
+    if checkAffection("RM", ">", 1):
         show RM happy
     RM "Sure."
     "He slid open his desk drawer and from it passed me a compact pair of binoculars."
@@ -9218,7 +9218,7 @@ label GTS044_c5b:
     MC "I was thinking about that just now. I actually took a picture, I'll send it to you."
     GTS "Oh?"
     pause 0.75
-    if getSkill("Art") > 7:
+    if checkSkill("Art", ">", 7):
         $setAffection("GTS", 1)
         GTS "Oh! Gracious, that's beautifully composed. It almost looks professional."
         MC "I dunno about that. I was just trying to make it look good."
@@ -9670,7 +9670,7 @@ label GTS045:
     MC "Well, I don't know how this compares to the sorts of birthday celebrations you're used to, but I hope you like it anyway."
     GTS "Perhaps it's too early to say... but I already feel it's the best one I've ever had."
     "Hearing that, I felt a sudden kinship with the flames swelling brighter before me."
-    if getSkill("Academics") > 2:
+    if checkSkill("Academics", ">", 2):
         MC "..."
         MC "You... never had birthday parties, did you?"
         show GTS despaired-thought
@@ -9735,7 +9735,7 @@ label GTS045:
     "I stepped just inside the veil of the trees, turned left at the arched branch, and there was the prize just where I'd left it."
     "I withdrew the baggy of mizuhiki from my pocket and set to work tying a nice bow around it."
     MC "...Perfect."
-    if getSkill("Athletics") > 2:
+    if checkSkill("Athletics", ">", 2):
         "I knelt down, hugged the base, and stood to carry it into the clearing."
     else:
         "I knelt down, wrapped my arms as far as they would go around the base, and tried to lift."

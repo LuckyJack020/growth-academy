@@ -695,7 +695,7 @@ label WG005_c3:
     HR "I can't tell you how many times I thought about just biting this thing off, hoping it would go away."
     HR "A teacher told me about a student with my growth who tried just that— it only grew back longer in a couple of days!"
     HR "As morbid as that was, it was a turning point for me. I knew I couldn't stop it, so I had to accept it. And from there, things got better for me."
-    MC "Man, that's pretty deep Tashi-sensi."
+    MC "Man, that's pretty deep Tashi-sensei."
     HR "Just trying to help as best I know how. I may be a teacher now, but I was in your shoes once as a student here."
     HR "Luckily for your sake, everyone else is going through the same thing, well more or less. Try to support each other the best you can. This is only the start. I'll see you two in class."
     hide HR with dissolve
@@ -1590,7 +1590,7 @@ label WG010_c2:
     PRG "No, no! I'm sorry for, um, wasting your time... I'll, uh, still take one of the pamphlets, if you like..."
     "Hesitantly, I handed her one. I think not doing so would have made her more embarrassed."
     MC "If you'd like to place an order... Well, you know where to find me."
-    if getAffection("PRG") >= 3:
+    if checkAffection("PRG", ">=", 3):
         show PRG happy
         PRG "Yes, th-thank you, Hotsure-san... I-I'll see you later."
     else:
@@ -1851,7 +1851,7 @@ label WG011_c3:
     show WG neutral
     WG "No, no, I'm not talking about simple gifts."
     WG "I'm talking about romance. Do you know how to {i}woo{/i} a lady?"
-    if getAffection("WG") >= 9:
+    if checkAffection("WG", ">=", 9):
         MC "Well, if I had to give an answer, I'd say it's one of those 'If you have to ask, you'll never know' type of things."
         show WG surprised-2
         WG "Oh?"
@@ -2767,9 +2767,9 @@ label WG015_c1_2:
     play music AE
     AE "Hotsure-san? What are you doing here?"
     "Her eyes flicked down to the mailing envelope. I had to think of something, quick."
-    if getAffection("AE") >= 4:
+    if checkAffection("AE", ">=", 4):
         jump WG015_test_pass
-    if getAffection("AE") >= 2:
+    if checkAffection("AE", ">=", 2):
         jump WG015_test_semipass
     jump WG015_test_fail
 
@@ -3088,7 +3088,7 @@ label WG017:
     MC "I picked out the names of some of the more popular titles of the tycoon genre, though I'm not as familiar with them as I used to."
     WG "I trust your judgement on this as you seem to be an expert in the field of videogames."
     WG "You have taken care of your homework, yes? I wouldn't want to impose on your time with something as frivolous as this."
-    if getSkill("Academics") >= 2:
+    if checkSkill("Academics", ">=", 2):
         MC "Huh? Oh, yeah. I've taken care of everything."
         show WG happy
         WG "Excellent."
@@ -3267,7 +3267,7 @@ label WG017_c2_3:
     WG "Obviously there is much room for improvement, so much to learn and master, but I am undaunted."
     WG "If you have any tips, though, I'm open to them."
     MC "Actually, I don't really play these games."
-    if getSkill("Academics") >= 2:
+    if checkSkill("Academics", ">=", 2):
         MC "But I think I noticed a couple things you could have done better. You didn't have to restrict your defenses in each city like you did, for one."
         $setAffection("WG", 1)
         WG "Yes, I saw that. And maybe if I had stuck to one path with technological developments..."
@@ -3334,7 +3334,7 @@ label WG018_arcade:
     WG "I can't say I've ever been to this place before."
     WG "Is it fair to assume you have spent some time at these sorts of places?"
     MC "I actually don't come here all that often, but it sounded like fun for a change."
-    if getAffection("WG") >= 5:
+    if checkAffection("WG", ">=", 5):
         MC "Hey, you don't have any delivery jobs for me, do you?"
         $setAffection("WG", 1)
         show WG happy
@@ -3374,10 +3374,10 @@ label WG018_arcade:
     "She gave me a look that was one part 'Uh huh' and one part 'Really?'"
     show WG neutral
     WG "What about practicing piano? Have you been keeping up with it?"
-    if getSkill("Art") >= 3 and isEventCleared("WG001M"):
+    if checkSkill("Art", ">=", 3) and isEventCleared("WG001M"):
         MC "Yeah, I've been making pretty decent progress, like you saw last time. I've even started playing guitar a bit. Think you'd be up for another mini-concert?"
         WG "Well that's good to hear— and I certainly would."
-    elif getSkill("Art") >= 3:
+    elif checkSkill("Art", ">=", 3):
         MC "Yeah, I've been making pretty decent progress. I'll have to show you some time."
         show WG neutral-2
         WG "Oh? Is that so? I would certainly be interested in seeing that for myself."
@@ -3436,7 +3436,7 @@ label WG018_cafe:
     show WG neutral
     WG "Aida and I were running errands and we stopped in for refreshments."
     WG "But are you really just having coffee by yourself on an afternoon like this?"
-    if getAffection("WG") >= 5:
+    if checkAffection("WG", ">=", 5):
         MC "Why? You don't have any delivery jobs for me, do you?"
         show WG happy
         $setAffection("WG", 1)
@@ -3508,13 +3508,13 @@ label WG018_theater:
     PRG "H-Hello."
     WG "Thinking of catching a show?"
     MC "I was considering the idea."
-    if getAffection("WG") >= 5:
+    if checkAffection("WG", ">=", 5):
         MC "Why? You don't have any delivery jobs for me, do you?"
         $setAffection("WG", 1)
         WG "Not at the moment. Why the eagerness?"
         MC "No particular reason."
     MC "None of these speak to me, but I've got nothing else going on right now."
-    if getSkill("Art") >= 3:
+    if checkSkill("Art", ">=", 3):
         MC "I might check out this one. The Chrysanthemum Shadow."
         WG "Ah. A fan of historical dramas?"
         MC "Not exactly, but it's supposed to have gotten good reviews. And the director's well-regarded."
@@ -3580,7 +3580,7 @@ label WG019:
     scene Dorm Interior with fade
     play music Schoolday
     "I was back in my room relaxing another day of classes. I knew I needed to cut my break short and start studying though."
-    "I found out early on if I didn't keep up with the reading in Tashi-sensi's class I was going to fall behind real quick."
+    "I found out early on if I didn't keep up with the reading in Tashi-sensei's class I was going to fall behind real quick."
     "Just when I was about to motivate myself to do something productive, my phone buzzed."
     "It was Alice."
     WGCell "<Can you come to my room? I need help with something.>"
@@ -3602,7 +3602,7 @@ label WG019:
     "Aida answered the door."
     show PRG neutral at center with dissolve
     PRG "H-Hello Hotsure-san... Thank you for coming. Alice could use some help-"
-    if getAffection("WG") >= 3:
+    if checkAffection("WG", ">=", 3):
         WG "Is that Keisuke?"
     else:
         WG "Is that Hotsure-san?"
@@ -3646,14 +3646,14 @@ label WG019:
     MC "What would you like help with moving first?"
     show WG happy
     WG "The bed is the centerpiece, so I want to adjust that first. Everything else will follow from there."
-    if getSkill("Athletics") < 1:
+    if not checkSkill("Athletics", ">=", 1):
         "I went to the head of the bed and bent my knees, while Alice and Aida went to the other side."
         MC "On three."
         MC "1... 2... 3-"
         "The plan was to rise and lift the bed in one fluid motion, but when the legs of the bed left the floor and I was now supporting its weight I felt a fire erupt in my back."
         MC "Ah!"
         "I let go of the bed, causing the ladies to drop their end, both crying out as well. Just not in pain."
-        if getAffection("WG") >= 3:
+        if checkAffection("WG", ">=", 3):
             show WG sad
             WG "Keisuke?"
         else:
@@ -3693,7 +3693,7 @@ label WG019:
         MC "Wow, these are good."
         WG "They are not easy to make either. Aida's cooking skills are on par with early career professionals."
         show PRG flattered
-        "T-Thank you, Alice."
+        PRG "T-Thank you, Alice."
         "I couldn't just up and leave now, so I took a closer look at the various effects Alice had around her side of the room."
         hide PRG with dissolve
         "The books on her shelf (a number of biographies, plus a few bodice-ripper romance novels)."
@@ -3722,7 +3722,7 @@ label WG019:
         WG "We were closer once, but after graduating our paths went in different directions."
         show WG neutral
         WG "I wasn't interested in a long-distance relationship, and he has his own ambitions for university and beyond, so we called it quits."
-        if getAffection("WG") >= 13:
+        if checkAffection("WG", ">=", 13):
             WG "Perhaps it's for the best."
             show WG neutral-2
             extend " Besides, I've had my eye on a potential suitor that I think holds more promise."
@@ -3750,7 +3750,7 @@ label WG019:
         MCT "Play it cool."
         MC "Just curious is all. I was in a somewhat similar position with someone from my old school that it was best to move on from."
         MC "I guess I was just interested in someone else's take on how they felt about it."
-        if getAffection("WG") >= 17:
+        if checkAffection("WG", ">=", 17):
             show WG doubt
             WG "Do you still have feelings for this person?"
             MC "Oh, no. No it's not like that. Trust me, I'm over it."
@@ -3763,7 +3763,7 @@ label WG019:
         MC "Well, I wouldn't mind staying longer, but I need to get back and take care of my homework."
         MC "I'll see you in class tomorrow."
         WG "Yes, thank you for your help."
-        if getAffection("WG") >= 3:
+        if checkAffection("WG", ">=", 3):
             show WG happy
             WG "Oh, you're perspiring. Here."
             "She handed me a handkerchief, silk with lace around the edges."
@@ -3778,7 +3778,7 @@ label WG019:
 
 label WG019_c1_3:
     "I wasn't really in the mood for whatever Alice had in mind right now. Probably some chore she wanted me to do for her, but hopefully not something violating the rules."
-    if getAffection("WG") >= 16:
+    if checkAffection("WG", ">=", 16):
         "I texted back that I was in the middle of studying and explained that I needed to catch up, and could I take a rain check?"
         WGCell "<That's fine. I should have planned ahead better if I knew I might need your assistance. I'll see you in class tomorrow.>"
     else:
@@ -3805,7 +3805,7 @@ label WG020:
     WG "Keisuke, could you please give a rundown of your work in deliveries?"
     "She looked as no-nonsense as a teacher calling on a student."
     MC "Uh... I didn't prepare anything."
-    if getAffection("WG") >= 7:
+    if checkAffection("WG", ">=", 7):
         WG "I know, I'm dropping this on you out of the blue. This meeting itself was a last-minute change of plans."
     else:
         WG "These business meetings are serious Keisuke, I expect you to have something prepared to present in advance next time."
@@ -3843,7 +3843,7 @@ label WG020:
     WG "Just... Be ready in a day or two to start pushing bikinis and crop-tops."
     MC "Got it."
     WG "I'm working on a revised catalog with our summer line at the forefront, with only the most stylish or boldest designs on offer."
-    if getSkill("Academics") >= 2:
+    if checkSkill("Academics", ">=", 2):
         MC "Women want to feel beautiful. Even here."
         WG "Especially here."
         MC "Yeah, I've noticed a lot of orders have been for things like bath salts and oils."
@@ -4108,7 +4108,7 @@ label WG021_c1_2:
             jump WG021_c2_1
         "How about the rooftop?":
             jump WG021_c2_2
-        "What about your dorm?" if getSkill("Academics") < 3 and not getFlag("WG021_c2_3"):
+        "What about your dorm?" if not checkSkill("Academics", ">=", 3) and not getFlag("WG021_c2_3"):
             jump WG021_c2_3
         "How about the woods?" if getFlag("GTS_WG_021"):
             jump WG021_c2_4
@@ -4125,10 +4125,11 @@ label WG021_c2_1:
     else:
         show WG neutral
         WG "Is there a lot of foot traffic there? I've never been to that part of the school."
-        if getAffection("GTS") <= 5:
-            MC "I don't think so."
-        else:
+        if checkAffection("GTS", ">", 5):
             MC "No. It's practically an isolated island in the middle of the school."
+        else:
+            MC "I don't think so."
+
         WG "That sounds perfect."
         scene black with fade
         pause 1
@@ -4272,7 +4273,7 @@ label WG022:
     scene Classroom with fade
     $setProgress("WG", "WG024")
     play music Peaceful
-    "It was another slow, boring day of class. My attentioned flickered in and out as Tashi-sensi droned on and on."
+    "It was another slow, boring day of class. My attentioned flickered in and out as Tashi-sensei droned on and on."
     show HR neutral with dissolve
     HR "And yes, that will be on the test."
     MCT "!"
@@ -4371,7 +4372,7 @@ label WG022_c1_2:
 
 label WG022_c1_3:
     MCT "I think I can pull off both the errand and the studying."
-    if getSkill("Academics") < 3:
+    if not checkSkill("Academics", ">=", 3):
         jump WG022_c1_2
     else:
         MC "Sure, I can do it. Just give me the address."
@@ -4528,7 +4529,7 @@ label WG023_c1_1:
     show WG happy
     WG "Exactly. Seems like you catch on quick."
     $setAffection("WG", 1)
-    if getAffection("WG") >= 13:
+    if checkAffection("WG", ">=", 13):
         WG "But I already figured that out about you."
     "She looked at her watch."
     WG "Speaking of schedules, I need to go. Sorry to cut this conversation short. The swim team should be done with the pool now, so I'm going to get my workout in."
@@ -5013,7 +5014,7 @@ label WG025_c3:
     "it still seemed like the business with the list must have left her feeling self-conscious about her appearance, or at least what the future may hold for it."
     "The longer the silence went on the more pressure I felt. Alice was pondering, so she had an excuse not to say anything."
     "It felt like she was waiting for me to break through whatever wall was being set up, but I honestly couldn't think of anything else left to say on the matter."
-    MC "Well... I should probably get back to my room. I've still got to study for the quiz Tashi-sensi announced today and I haven't eaten dinner yet."
+    MC "Well... I should probably get back to my room. I've still got to study for the quiz Tashi-sensei announced today and I haven't eaten dinner yet."
     "Alice nodded, not looking up at me, and left me to my devices."
     "Part of me wished I had something more assuring or conciliatory to say on the matter,"
     "but I wasn't too keen on outing my preferences so boldly and I didn't want to make things anymore awkward than they were at this point already."
@@ -5158,7 +5159,7 @@ label WG026_C1_3:
     show WG happy
     WG "Though I'm certainly flattered by the attention, in the future, try to keep your gaze at eye level next time."
     show WG happy at altMove(0.5, 0.25)
-    "Alice slowly sauntered past me as she made her walk back to the lockers, subtly sashaying her hips as she did so, unwittingly causing a slight giggle in her belly."
+    "Alice slowly sauntered past me as she made her walk back to the lockers, subtly sashaying her hips as she did so, unwittingly causing a slight jiggle in her belly."
     "Her confident smile showed she knew full well I was simply putty in her hands at this point."
     hide WG with dissolve
     MCT "Real smooth there man."
@@ -5271,7 +5272,39 @@ label WG027_c1_1:
 label WG027_c1_2:
     MCT "Deep breath. Here we go."
     MC "Alice. Would you like to go out some time?"
-    if getAffection("WG") < 18:
+    if checkAffection("WG", ">=", 18):
+        $setFlag("WG_dating")
+        $lockRoute("WG")
+        show WG surprised-2
+        WG "'Go out' as in go out on a date, I take it?"
+        MC "Correct."
+        show WG haughty
+        WG "You do realize what you are suggesting violates every ethical rule about the relationship between an employer and her employee, yes?"
+        MCT "Man, this doesn't sound too promising, but I didn't come this far just to back out now!"
+        MC "I am aware."
+        show WG neutral
+        WG "Hmm, you are quite determined then, it would seem.{w} Though to answer your question..."
+        show WG happy
+        WG "Yes, I would."
+        MC "Really?!"
+        MC "I mean, {i}ahem{/i}.{w} Wonderful. Splendid."
+        MC "Say... Saturday night?"
+        MC "Dinner and a movie?"
+        WG "That sounds nice."
+        MC "OK. I'll meet you at 6."
+        "I might have stammered for a few minutes more if Aida hadn't turned up just then,"
+        show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        extend " with a stack of mail and Alice's evening itinerary."
+        "It was the perfect out, so I excused myself and walked out of the cafeteria."
+        hide WG
+        hide PRG
+        with dissolve
+        scene Hallway with fade
+        "It was hard to fight the urge to skip or whoop, until I reached the hall and suddenly realized—{w} I had no idea where I was going to take her."
+        MCT "Aw crap! Now what am I going to do? I didn't plan this far!"
+        "I was so focused on just getting the question out I didn't think about what came next."
+        jump daymenu
+    else:
         $setFlag("WG027A_unlock")
         show WG neutral
         WG "'Go out' as in go out on a date I take it?"
@@ -5317,38 +5350,6 @@ label WG027_c1_2:
         "So, OK. I just have to prove myself more to be more serious."
         "Not impossible, but it wasn't going to be easy either."
         $setProgress("WG", "WG027A")
-        jump daymenu
-    else:
-        $setFlag("WG_dating")
-        $lockRoute("WG")
-        show WG surprised-2
-        WG "'Go out' as in go out on a date, I take it?"
-        MC "Correct."
-        show WG haughty
-        WG "You do realize what you are suggesting violates every ethical rule about the relationship between an employer and her employee, yes?"
-        MCT "Man, this doesn't sound too promising, but I didn't come this far just to back out now!"
-        MC "I am aware."
-        show WG neutral
-        WG "Hmm, you are quite determined then, it would seem.{w} Though to answer your question..."
-        show WG happy
-        WG "Yes, I would."
-        MC "Really?!"
-        MC "I mean, {i}ahem{/i}.{w} Wonderful. Splendid."
-        MC "Say... Saturday night?"
-        MC "Dinner and a movie?"
-        WG "That sounds nice."
-        MC "OK. I'll meet you at 6."
-        "I might have stammered for a few minutes more if Aida hadn't turned up just then,"
-        show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-        extend " with a stack of mail and Alice's evening itinerary."
-        "It was the perfect out, so I excused myself and walked out of the cafeteria."
-        hide WG
-        hide PRG
-        with dissolve
-        scene Hallway with fade
-        "It was hard to fight the urge to skip or whoop, until I reached the hall and suddenly realized—{w} I had no idea where I was going to take her."
-        MCT "Aw crap! Now what am I going to do? I didn't plan this far!"
-        "I was so focused on just getting the question out I didn't think about what came next."
         jump daymenu
 
 label WG027A:
@@ -5526,7 +5527,7 @@ label WG028:
             jump WG028_c1_1
         "I hope you appreciate what I went through.":
             jump WG028_c2_1
-        "If the tea helps you, it was worth it." if getAffection("WG") > 27:
+        "If the tea helps you, it was worth it." if checkAffection("WG", ">", 27):
             jump WG028_c3_1
 
 label WG028_c1_1:
@@ -5752,18 +5753,18 @@ label WG029:
     MC "..."
     MCT "Damn it, man. Think of something else to talk about."
     MCT "Something to impress her. Maybe talk about the arts, or current events."
-    if getSkill("Art") < 3 and getSkill("Academics") < 3:
+    if not checkSkill("Art", ">=", 3) and not checkSkill("Academics", ">=", 3):
         "But my mind drew a blank."
         $setAffection("WG", -1)
         "The walk into town wasn't unpleasant, but the dead space hanging in the air wasn't a good start to our date."
     else:
         menu:
-            "Ask if she's seen the new art film that's playing." if getSkill("Art") >= 3:
+            "Ask if she's seen the new art film that's playing." if checkSkill("Art", ">=", 3):
                 MC "Have you heard anything about Autumn Tide? I'm not the biggest fan of costume dramas, but this one looks pretty... intense."
                 show WG happy
                 WG "No, I don't get to the movies that much. What's it about?"
                 "Having found something not related to school or work to talk about, the rest of the walk to town went by quickly."
-            "Ask about current market trends and investments." if getSkill("Academics") >= 3:
+            "Ask about current market trends and investments." if checkSkill("Academics", ">=", 3):
                MC "I've been hearing a lot in finance news about real estate being overvalued and tech futures are expected to rise. I'm sure you follow that stuff better than I do though."
                WG "That is the current buzz, but it's seldom wise to just start de-vesting long term assets like real estate based on rumors of rumblings in the market."
                WG "Tech stocks on the other hand tend to be fairly volatile and don't pay dividends."
@@ -6170,7 +6171,7 @@ label WG030:
     "I handed the example flier she showed me back to her."
     MC "Maybe you could redo these. Make them better."
     WG "If I had the time..."
-    if getSkill("Art") >= 5:
+    if checkSkill("Art", ">=", 5):
         MC "I could do it for you."
         WG "Could you?"
         MC "It wouldn't be anything too fancy, but give me an hour in the computer lab and I can make something a little more eye-catching."
@@ -6269,15 +6270,7 @@ label WG031:
     "The flare of her wide hips and bulging posterior were quite a sight... {w}Only to be outmatched by the side profile of her almost perfectly spherical belly."
     "Needless to say, the gears in my mind were turning a bit too fast. Not that I was perving on her or anything, just... {w}Okay, maybe I was perving a little."
     "She finally caught me sneaking a glance one too many times."
-    if getAffection("WG") < 19:
-        show WG angry at altMove(0.5, 0.2)
-        WG "What do you keep staring at?"
-        MC "Huh?"
-        "I tried to play dumb."
-        MC "Oh, nothing."
-        show WG stern
-        WG "Hmph."
-    else:
+    if checkAffection("WG", ">=", 19):
         show WG happy at Position(xcenter=0.2, yanchor=1.0) with dissolve
         WG "What are you looking at?"
         MC "Nothing. Just..."
@@ -6285,6 +6278,15 @@ label WG031:
         "She said it teasingly, so I tried to return the volley."
         MC "It is a majestic view."
         MCT "Oof. I could have done better."
+    else:
+        show WG angry at altMove(0.5, 0.2)
+        WG "What do you keep staring at?"
+        MC "Huh?"
+        "I tried to play dumb."
+        MC "Oh, nothing."
+        show WG stern
+        WG "Hmph."
+
     "Alice rolled her eyes, then went back to wiping down the desks."
     "But when she bent over to grab a fresh towel her expression soured."
     show WG stern at altMove(0.5, 0.5)
@@ -6319,20 +6321,21 @@ label WG031:
     "As I tried to think of an appropriate thing to say, the silent pause was broken by a deep gurgling sound."
     show WG worried
     "I didn't realize what it was at first, until I saw Alice blushing."
-    if getAffection("WG") < 19:
-        MC "If we hurry up we can finish this soon, and you can get something to eat."
-        show WG angry
-        WG "I {i}am{/i} hurrying. And I'm not so gluttonous that I can be motivated simply by the promise of food."
-        MC "Right! Right! Didn't mean to imply anything."
-        MC "Um..."
-        "I honestly didn't know what to say next, but my morbid curiosity got the better of me."
-    else:
+    if checkAffection("WG", ">=", 19):
         MC "Do you want to get a snack after we're done here?"
         show WG sad
         "She frowned, but just for a second."
         show WG neutral-2
         WG "That wouldn't be a bad idea."
         MC "That does remind me, something I've been meaning to ask..."
+    else:
+        MC "If we hurry up we can finish this soon, and you can get something to eat."
+        show WG angry
+        WG "I {i}am{/i} hurrying. And I'm not so gluttonous that I can be motivated simply by the promise of food."
+        MC "Right! Right! Didn't mean to imply anything."
+        MC "Um..."
+        "I honestly didn't know what to say next, but my morbid curiosity got the better of me."
+
     MC "I've been wondering— and don't take this the wrong way— but has your appetite, you know... {w}increased... with your growth?"
     show WG neutral
     "She didn't say anything at first. I suspected she was conflicted whether to disclose her true thoughts or deflect the issue entirely. I tried to ease the situation, realizing I might have extended a bit too far."
@@ -6361,7 +6364,7 @@ label WG031_c1:
             jump WG031_c1_1
         "Ask if she's working out to help deal with her body." if not getFlag("WG031_c1_2"):
             jump WG031_c1_2
-        "It's not that unusual, classical beauty standards favored heavier physiques." if not getFlag("WG031_c1_3") and getSkill("Art") > 4:
+        "It's not that unusual, classical beauty standards favored heavier physiques." if not getFlag("WG031_c1_3") and checkSkill("Art", ">", 4):
             jump WG031_c1_3
         "I'm sure your growth will level off soon." if getFlag("WG031_c1_1") or getFlag("WG031_c1_2") or getFlag("WG031_c1_3"):
             jump WG031_c1_after
@@ -6497,12 +6500,12 @@ label WG031_c1_after:
     MC "Yeah."
     "The mood seemed noticeably lighter as we finished cleaning up."
     show WG neutral
-    if getAffection("WG") < 17:
-        "We parted ways after we were done. Alice headed back to her room to find Aida while I went back to my dorm."
-    else:
+    if checkAffection("WG", ">=", 17):
         "We headed to the cafeteria when we were done to grab a snack, Alice dominating the conversation with her thoughts about a film she had recently seen."
         "From how she described it, it was obviously one of those highbrow arthouse type movies."
         "It did sound interesting, but I really didn't have anything too meaningful to contribute to the conversation. I was just content to listen to her talk about something she enjoyed."
+    else:
+        "We parted ways after we were done. Alice headed back to her room to find Aida while I went back to my dorm."
     jump daymenu
 
 label WG032:
@@ -6785,7 +6788,7 @@ label WG033_c1_2:
     WG "This is true."
     MC "My point is, you're either going to have to hold your tongue and keep your head down or you'll be kicked out of the club."
     MC "One choice can lead to you being in a position to change things, the other doesn't."
-    if getSkill("Academics") >= 3:
+    if checkSkill("Academics", ">=", 3):
         MC "Aaand, showing you're a team player can also help you gain points with the other members of the club."
         show WG aroused
         MC "If they see you carrying your share of the load they'll remember it when you try to become the club leader."
@@ -6891,7 +6894,7 @@ label WG034:
     "She hurried out of the classroom, and I moseyed out at my own leisure."
     "Since there was no meeting today, I had some time freed up in my schedule."
     MCT "So what do I do with it?"
-    if getSkill("Academics") < 3:
+    if not checkSkill("Academics", ">=", 3):
         MCT "Hmm, maybe I should take care of my homework? Haven't exactly been keeping up with that."
         scene Dorm Interior with fade
         "I went back to my room and started on my homework."
@@ -6900,7 +6903,7 @@ label WG034:
         MCT "Well with that out of the way, I should probably get myself cleaned up for the concert."
         MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
         "I ran a brush through my hair real quick, then headed out for a trip into town."
-    elif getSkill("Athletics") < 3:
+    elif not checkSkill("Athletics", ">=", 3):
         MCT "Hmm, maybe I should hit the gym? Haven't exactly been keeping up with that. I'm already caught up on my homework."
         scene Gym with fade
         "I headed off to the gym and got a full workout in."
@@ -7215,7 +7218,7 @@ label WG035:
     "Her mood softened a bit, but she still looked on edge."
     WG "Sorry, as much as I would like to, I'm afraid I do not have time to stop and chat."
     MC "Oh..."
-    if getAffection("WG") >= 25:
+    if checkAffection("WG", ">=", 25):
         show WG worried
         "Alice stopped herself once she noticed my dejected tone."
         show WG neutral
@@ -7227,7 +7230,7 @@ label WG035:
     with fade
     MC "You have the concert tonight, right?"
     WG "Yes, it's tonight."
-    if getAffection("WG") >= 35:
+    if checkAffection("WG", ">=", 35):
         WG "You plan on coming, don't you?"
         MC "I wouldn't miss it for anything."
     MC "That's why I caught you. I wanted to wish you luck."
@@ -7270,7 +7273,7 @@ label WG035:
     WG "The bigger picture, yes."
     "We had stopped outside of the auditorium. It appeared that my time with Alice prior to her concert was up."
     WG "I have to go now. We're expected at the auditorium an hour before the curtain rises."
-    if getAffection("WG") >= 20:
+    if checkAffection("WG", ">=", 20):
         WG "I wish we had a little more time, but unfortunately I need to make sure I give myself enough time to prepare."
         MC "No problem."
     MC "I'll be there."
@@ -7830,7 +7833,7 @@ label WG038:
     MCT "Okay. The next bus isn't for half an hour. I can wait or I can run to town."
     MCT "..."
     MC "Better get moving."
-    if getSkill("Athletics") == 0:
+    if not checkSkill("Athletics", ">", 0):
         stop music
         scene black
         "I was barely 5 minutes into the run when my body simply couldn't take anymore."
@@ -8231,7 +8234,7 @@ label WG039:
     WG "Just as I trust you not to abuse this opportunity."
     MC "Not sure what you mean by 'opportunity.'"
     WG "You get to put your hands on me. And we've only gone out three times."
-    if getSkill("Academics") > 3:
+    if checkSkill("Academics", ">", 3):
         MC "Yes, but this isn't undressing you. This is the exact opposite."
         MC "A real opportunity would be to help you take the shirt off later."
         $setAffection("WG", 1)
@@ -8247,7 +8250,7 @@ label WG039:
     MC "It?"
     WG "My belly."
     WG "I would not have thought it could develop into an erogenous zone, but it seems there are secondary attributes to these physical changes."
-    if getAffection("AE") > 12:
+    if checkAffection("AE", ">", 12):
         MC "You sound kind of like Shiori."
     else:
         MC "You sound like Matsumoto-san."
@@ -8505,24 +8508,24 @@ label WG040:
     show WG stern with dissolve
     "Something about it seemed to be frustrating her. I weighed the pros and cons of interrupting her, but  ultimately decided to do what I came to do."
     MC "Hello, Alice. Aida told me you might be here. I hope I'm not interrupting anything. I just wanted to catch up with you and see if you needed any more deliveries."
-    if getAffection("WG") >= 45:
+    if checkAffection("WG", ">=", 45):
         show WG neutral-2
         WG "You're not interrupting anything terribly important. I appreciate your eagerness and follow-through, but you are caught up on all the orders."
         show WG neutral
         WG "For whatever reason this has been a bit of a slow week, but I expect that to change soon."
         "Having answered my question, Alice turned her attention back to her painting."
-    elif getAffection("WG") <= 12:
-        WG "I'm busy at the moment Keisuke, is this really that urgent?"
-        "Her tone was not particularly welcoming, I guess this was a bad time to approach her."
-        MC "Not terribly. {w}Sorry, I just wanted to make sure I was on top of things with the deliveries since I hadn't seen any new ones in a while."
-        WG "I would let you know if you had an issue with keeping up, but I checked this morning and you are caught up on all the orders."
-        "She was only half-paying attention as she answered me, already turning back to her painting before she even finished talking."
-    else:
+    elif checkAffection("WG", ">", 12):
         WG "Hmm? What can I do for you?"
         "Clearly she was preoccupied. I guess this was a bad time to approach her."
         MC "I just wanted to check with you to see if there were any deliveries I needed to make, or any other work."
         WG "Don't worry. For whatever reason this has been a bit of a slow week, but just be ready. I expect that to change soon."
         "She was only half-paying attention as she answered me, already turning back to her painting after she finished talking."
+    else:
+        WG "I'm busy at the moment Keisuke, is this really that urgent?"
+        "Her tone was not particularly welcoming, I guess this was a bad time to approach her."
+        MC "Not terribly. {w}Sorry, I just wanted to make sure I was on top of things with the deliveries since I hadn't seen any new ones in a while."
+        WG "I would let you know if you had an issue with keeping up, but I checked this morning and you are caught up on all the orders."
+        "She was only half-paying attention as she answered me, already turning back to her painting before she even finished talking."
     "Curious what was giving her trouble, I glanced at the painting. It was a landscape, a grassy cliff overlooking the ocean. It could use a few more touches, but it was a pretty good representation of what it was supposed to be."
     MC "A landscape portrait? I didn't know you were a painter, Alice. It looks like it's coming together pretty well."
     "I was then going to head out and leave her to her work, since I got the feeling I had already disturbed her concentration. But I guess Alice needed to vent."
@@ -9340,19 +9343,7 @@ label WG042_C2_2:
     show WG stern
     WG "Are you mad!? Don't do such foolish things— you'll end up hurting yourself!"
     MC "I-It's really not that bad, and you barely notice it once the flavors hit you."
-    if getAffection("WG") < 13:
-        WG "You must be joking. There is no way I am damaging my tastebuds with this dubious method of eating."
-        "Alice's stern face watched me eat while her Takoyaki cooled off. Although there were several seconds where it looked like she was about to crack and start eating."
-        "She did poke and prod the ball of fried dough. And even took the slightest nibble out of it, but eventually she set it back down, likely not wanting to join me in burning the roof of her mouth off."
-        show WG haughty
-        WG "There, patience is a virtue. Now I can enjoy it properly, without the risk of burns."
-        "A vast array of emotions flew across Alice's face, it was impossible to pin down her feelings at first."
-        show WG surprised-2
-        WG "...Mmmph-gmmh..."
-        "First it was shock, the confusion, finally yielding to sheer delight."
-        show WG happy
-        "Well? How is it?"
-    else:
+    if checkAffection("WG", ">=", 13):
         show WG doubt
         WG "I swear, if this is some sort of elaborate prank..."
         "With a deep hesitation, Alice gently lifted the skewer to her lips. Giving me one last skeptical look, she daintily placed one of the dough balls in her mouth."
@@ -9369,6 +9360,18 @@ label WG042_C2_2:
         MC "Did you enjoy it?"
         $setAffection("WG", 1)
         WG "Well, baring the exception of my burnt tongue, it was quite possibly one of the most delicious bites I've ever tasted!"
+    else:
+        WG "You must be joking. There is no way I am damaging my tastebuds with this dubious method of eating."
+        "Alice's stern face watched me eat while her Takoyaki cooled off. Although there were several seconds where it looked like she was about to crack and start eating."
+        "She did poke and prod the ball of fried dough. And even took the slightest nibble out of it, but eventually she set it back down, likely not wanting to join me in burning the roof of her mouth off."
+        show WG haughty
+        WG "There, patience is a virtue. Now I can enjoy it properly, without the risk of burns."
+        "A vast array of emotions flew across Alice's face, it was impossible to pin down her feelings at first."
+        show WG surprised-2
+        WG "...Mmmph-gmmh..."
+        "First it was shock, the confusion, finally yielding to sheer delight."
+        show WG happy
+        "Well? How is it?"
     WG "The fresh doughy exterior, hiding the centerpiece of chewy seafood. Combined with the sauces and cheese, it is almost too much for me to handle."
     MC "Heh heh, that's why it's sold at such a high price. Everybody enjoys a good bit of fair Takoyaki."
     WG "And I am no exception, this is simply divine. I must look into this meal at a later date."
@@ -10269,7 +10272,7 @@ label WG045_art:
     show PRG happy at Position(xpos=0.2)
     with dissolve
     PRG "Keisuke! Good morning!"
-    if getAffection("PRG") > 3:
+    if checkAffection("PRG", ">", 3):
         MC "Good morning Aida."
         WG "We can sit on my bed Keisuke, I have my laptop here with me."
         hide PRG with dissolve
@@ -10284,7 +10287,7 @@ label WG045_art:
     WG "Do you know what this painting is?"
     MC "Yes, Starry Night by Van Gogh."
     WG "Good, now tell me about the picture."
-    if getSkill("Art") > 4:
+    if checkSkill("Art", ">", 4):
         MC "It was painted in 1898, and it's debatably his most famous piece, alongside Sunflowers."
     else:
         MC "It was painted in the 1800s right? And it's obviously a famous picture."
@@ -10643,7 +10646,7 @@ label WG045_wine:
     show WG neutral with dissolve
     Misaki "And here it is, the newest addition to the collection."
     WG "This is a fine piece, Keisuke what do you know about this painting?"
-    if getSkill("Art") > 5 or getFlag("WG045_art"):
+    if checkSkill("Art", ">", 5) or getFlag("WG045_art"):
         MC "Well the use of many short, quick brushstrokes is a tell-tale sign of Van Gogh- this is definitely one of his."
         MC "Though I haven't seen this particular one before."
         Misaki "That is absolutely correct. You clearly know your art."
@@ -11289,15 +11292,7 @@ label WG047_c3_after:
     "After a while, I heard Alice sigh out. Something was very clearly bothering her."
     WG "Maybe if I... no, that wouldn't work."
     MC "Is something wrong?"
-    if getAffection("WG") < 14:
-        show WG neutral
-        WG "Of course not, I was just pondering what Aida is reading over there."
-        MC "Oh, ok."
-        "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
-        "Although after very little time had passed, she announced that she would rather head back inside."
-        "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
-        jump daymenu
-    else:
+    if checkAffection("WG", ">=", 14):
         show WG surprised
         WG "What? Oh no, it's nothing to worry about."
         MC "Really?"
@@ -11308,6 +11303,15 @@ label WG047_c3_after:
                 jump WG047_c4_1
             "Stop asking":
                 jump WG047_c4_2
+    else:
+        show WG neutral
+        WG "Of course not, I was just pondering what Aida is reading over there."
+        MC "Oh, ok."
+        "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
+        "Although after very little time had passed, she announced that she would rather head back inside."
+        "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
+        jump daymenu
+
 
 label WG047_c4_2:
     MC "If you say so."
@@ -12766,7 +12770,7 @@ label WG053:
     "Closing the door behind me I notice Alice standing in front of her makeup mirror putting on lipstick. Standing in front of me is Alice, wrapped in a floor-length dress. Out of all her outfits so far, this one was by far the one I think I liked the most."
     show WG neutral with dissolve
     WG "Do you recognize the piece playing Kei?"
-    if getSkill("Art") > 4:
+    if checkSkill("Art", ">", 4):
          MC "It's Beethoven's Moonlight Sonata. At least one section of it, correct?"
          show WG happy
          WG "It is indeed, it's good to see the classics are still appreciated."
@@ -12862,7 +12866,7 @@ label WG053_c1_3:
     show WG sad
     WG "That's not how it came off, so much has been happening recently that just having that idea seemingly confirmed, struck a little too deep to be comfortable."
     MC "Well as I've said time and time before, that is not how I see you at all. I probably can't understand everything you've been feeling recently but I'm still here regardless of your size."
-    if getAffection("WG") >= 20:
+    if checkAffection("WG", ">=", 20):
         show WG haughty
         WG "If you truly mean that, then that's what I will expect from now on."
         MC "You have my word, Alice."
@@ -14370,7 +14374,7 @@ label WG057_c1_after:
     "I had wrapped the dish in a kitchen sheet to help keep it covered on the walk over here."
     MC "You assume correctly. Here, let me show you."
     "I set the dish down on Alice's tea table in the middle of her room."
-    if getSkill("Athletics") >= 7:
+    if checkSkill("Athletics", ">=", 7):
         "Moving the sheet out from under the dish, so as to not mess it up, I quickly pulled off the sheet, clearing it from the table in a split second while presenting the dish with an outstretched arm using my free hand."
     MC "Voila!"
     show WG surprised
@@ -14608,7 +14612,7 @@ label WG058:
     show WG neutral
     WG "Well, what's an example of a good one?"
     menu:
-        "My Fairest Lady" if getSkill("Art") > 7:
+        "My Fairest Lady" if checkSkill("Art", ">", 7):
             jump WG058_c1_1
         "Genteel Men Prefer Blondes":
             jump WG058_c1_2
@@ -15181,7 +15185,7 @@ label WG059:
     Sakura "Hmm, those are good points to consider. Thanks for your feedback Alice. If we tweak it just a bit, I think this will blow the judges away with something completely unexpected."
     PRG "What do you think, Hotsure-san?"
     "By this point I had more than halfway gone through my plate as Alice was talking with the two of them. It was that damn good."
-    if getSkill("Academics") >= 5:
+    if checkSkill("Academics", ">=", 5):
         MC "It's excellent, I hate to say anything negative, because it's a stellar dish, but I think Alice has a point."
         MC "If I had to put my finger on it, I think the outer dough layer is a bit too thick, slightly detracting from the star of the show, which is the meat."
         PRG "That's helpful. I'll roll the dough out a little thinner next time before wrapping it."
@@ -15414,7 +15418,9 @@ label WG059S:
     show WG neutral at center with move
     WG "The conversation was indeed informative, I'll admit. Can't say I was familiar with that concept before now."
     "A silence descended on the room as I struggled on how to approach the matter."
-    if getAffection("WG") <= 50:
+    if checkAffection("WG", ">", 50):
+        $setProgress("WG", "WG060S")
+    else:
         $setProgress("WG", "WG061")
         $setFlag("WG059_aff_fail")
         WG "Such a strange concept, deriving enjoyment from watching someone else eat. I don't really understand it myself."
@@ -15459,8 +15465,6 @@ label WG059S:
         "I left Alice's dorm and began the walk back to mine. Though not the outcome I had hoped for, I thought I still had managed to salvage something from the situation."
         "I hope that I can broach the subject again at a more opportune time, maybe when Alice was a bit more receptive to the idea."
         jump daymenu
-    else:
-        $setProgress("WG", "WG060S")
     menu:
         "What do you think about the subject?":
             jump WG059S_C1_1
@@ -16811,7 +16815,7 @@ label WG061S:
     "My question appeared to catch her attention and bring her reeling back to reality."
     show WG worried
     WG "Yes, though if you could be a dear and help me up I'd appreciate it."
-    if getSkill("Athletics") >= 4:
+    if checkSkill("Athletics", ">=", 4):
         show WG doubt
         "Grabbing hold of her hand and with our strength combined we were able to get her standing. Her body rolled like jello as she found her new balance."
     else:
@@ -16909,7 +16913,7 @@ label WG061S:
         WG "Please do."
         "I continued my diligent task, though now I did get a bit more touchy. Grazing her ponderous breasts did result in a subdued yelp, which Alice waved off when I expressed concern. A few scrubs between her folds did produce a few moans."
         "I did not help matters by occasionally pressing myself against her, letting myself sink ever so slightly into her softness."
-        if getVar("WGSSPR") >= 6 and getAffection("WG") >= 69:
+        if getVar("WGSSPR") >= 6 and checkAffection("WG", ">=", 69):
             menu:
                 "Be bold":
                     jump WG061S_C1_1
@@ -20527,7 +20531,7 @@ label WGFMG001:
     "But it was summer, and it was way too hot outside— screw that.{w} So the gym it was."
     "I was pretty impressed with just how much they had in this gym."
     "There were tons of lifting machines, most I didn't even recognize, with plenty of free weights, and aerobic machines like treadmills, ellipticals, even those stair climbers."
-    if getSkill("Athletics") <= 2:
+    if not checkSkill("Athletics", ">", 2):
         "Not gonna lie, it had been a while since I set foot in a gym. I messed around with some of the weight machines."
         "I got a total body workout in since I didn't know when the next time would be that I felt motivated to do this again."
     else:

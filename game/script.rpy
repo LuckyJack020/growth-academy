@@ -22,6 +22,7 @@ transform wiggle_loop():
 
 init python:
     preferences.set_volume("music", 0.65)
+    preferences.set_volume("sound", 0.75)
     config.use_cpickle = False
     #style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
     #style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
@@ -448,8 +449,8 @@ init python:
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
-        if affection[girl] < 0:
-            affection[girl] = 0
+        #if affection[girl] < 0:
+        #    affection[girl] = 0
         if val > 0:
             img = "Graphics/ui/notification/" + girl + "-up.png"
         elif val < 0:
@@ -463,6 +464,59 @@ init python:
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
         return affection[girl]
+
+    def checkAffection(girl, exp, checkVal):
+        if not girl in girllist and not girl == "RM":
+            renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
+            return
+        if exp == ">":
+            if affection[girl] > checkVal:
+                img = "Graphics/ui/notification/" + girl + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == "<":
+            if affection[girl] < checkVal:
+                img = "Graphics/ui/notification/" + girl + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == ">=":
+            if affection[girl] >= checkVal:
+                img = "Graphics/ui/notification/" + girl + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == "<=":
+            if affection[girl] <= checkVal:
+                img = "Graphics/ui/notification/" + girl + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == "==":
+            if affection[girl] == checkVal:
+                img = "Graphics/ui/notification/" + girl + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                showNotification(img)
+                return False
+        else:
+            renpy.log("ERROR: Expression used in code is not a valid operator.")
+            return
 
     #Returns girl with highest affection. In the event of a tie, returns a random girl among those tieing.
     def getHighestAffection():
@@ -492,7 +546,7 @@ init python:
         return secondGirl
 
     def isHighestSkill(s):
-        if getSkill(s) >= getSkill("Art") and getSkill(s) >= getSkill("Academics") and getSkill(s) >= getSkill("Athletics"):
+        if checkSkill(s, ">=", getSkill("Art")) and checkSkill(s, ">=", getSkill("Academics")) and checkSkill(s, ">=", getSkill("Athletics")):
             return True
         return False
 
@@ -588,6 +642,59 @@ init python:
         else:
             return skills[s]
 
+    def checkSkill(s, exp, checkVal):
+        if s not in skills.keys():
+            renpy.log("Unknown skill ID: %s" % s)
+            return -1
+        if exp == ">":
+            if skills[s] > checkVal:
+                img = "Graphics/ui/notification/" + s + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + s + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == "<":
+            if skills[s] < checkVal:
+                img = "Graphics/ui/notification/" + s + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + s + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == ">=":
+            if skills[s] >= checkVal:
+                img = "Graphics/ui/notification/" + s + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + s + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == "<=":
+            if skills[s] <= checkVal:
+                img = "Graphics/ui/notification/" + s + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + s + "-fail.png"
+                showNotification(img)
+                return False
+        elif exp == "==":
+            if skills[s] == checkVal:
+                img = "Graphics/ui/notification/" + s + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + s + "-fail.png"
+                showNotification(img)
+                return False
+        else:
+            renpy.log("ERROR: Expression used in code is not a valid operator.")
+            return
+
     def showNotification(img):
         global activenotifications
         if not persistent.enable_notifications:
@@ -596,7 +703,7 @@ init python:
             activenotifications
         except NameError:
             activenotifications = 0
-        if activenotifications <= 2:
+        if activenotifications <= 4:
             activenotifications += 1
             renpy.show_screen("notification" + str(activenotifications), img)
 
@@ -906,18 +1013,7 @@ screen daymenu():
             xanchor 1.0
             background Solid(Color((0, 0, 0, 100)))
             if debugenabled:
-                if highlitevent.find('GTS') != -1 and "GTS005" not in clearedevents: #People wanted Naomi and Aida's growth factors hidden from new players who happened to be playing the game in debug mode, until the scene plays that reveals their growth factor to the player.
-                    if highlitevent.find('PRG') != -1 and "PRG026" not in clearedevents:
-                        text("(" + highlitevent.replace("GTS", "???").replace("PRG", "???") + ") " + eventlibrary[highlitevent]["name"])
-                    else:
-                        text("(" + highlitevent.replace("GTS", "???") + ") " + eventlibrary[highlitevent]["name"])
-                elif highlitevent.find('PRG') != -1 and "PRG026" not in clearedevents:
-                    if highlitevent.find('GTS') != -1 and "GTS005" not in clearedevents:
-                        text("(" + highlitevent.replace("PRG", "???").replace("GTS", "???") + ") " + eventlibrary[highlitevent]["name"])
-                    else:
-                        text("(" + highlitevent.replace("PRG", "???") + ") " + eventlibrary[highlitevent]["name"])
-                else:
-                    text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
+                text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
             else:
                 text(eventlibrary[highlitevent]["name"])
         frame:
@@ -941,7 +1037,7 @@ screen notification1(img):
         background None
         add img
         at notif_transform
-    timer 5.0 action [Hide("notification1"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 4.0 action [Hide("notification1"), SetVariable("activenotifications", activenotifications - 1)]
 
 screen notification2(img):
     frame:
@@ -949,7 +1045,7 @@ screen notification2(img):
         background None
         add img
         at notif_transform
-    timer 5.0 action [Hide("notification2"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 4.2 action [Hide("notification2"), SetVariable("activenotifications", activenotifications - 1)]
 
 screen notification3(img):
     frame:
@@ -957,12 +1053,28 @@ screen notification3(img):
         background None
         add img
         at notif_transform
-    timer 5.0 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 4.4 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
+
+screen notification4(img):
+    frame:
+        xalign .6
+        background None
+        add img
+        at notif_transform
+    timer 4.6 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
+
+screen notification5(img):
+    frame:
+        xalign .5
+        background None
+        add img
+        at notif_transform
+    timer 4.8 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
 
 transform notif_transform:
     yalign -0.2
     linear 1.0 yalign 0.009
-    pause 3
+    pause 2
     linear 1.0 yalign -0.2
 
 screen debugmenu():

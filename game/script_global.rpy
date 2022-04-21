@@ -184,7 +184,7 @@ image Dorm Hallway = "Graphics/ui/bg/archiveBG/dormhallway.png"
 image Dorm Interior = DynamicImage("Graphics/ui/bg/archiveBG/dorminterior_[gametime].png")
 image Dorm AE = DynamicImage("Graphics/ui/bg/archiveBG/AEdorm_[gametime].png")
 image Dorm BE = DynamicImage("Graphics/ui/bg/archiveBG/BEdorm_[gametime].png")
-image Dorm FMG = DynamicImage("Graphics/ui/bg/archiveBG/FMGdorm_[gametime].png")
+image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
 image Dorm GTS = DynamicImage("Graphics/ui/bg/archiveBG/GTSdorm_[gametime].png")
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 image Dorm WG = DynamicImage("Graphics/ui/bg/archiveBG/WGDorm_[gametime].png")
@@ -330,6 +330,7 @@ image cg FMG041 = "Graphics/ui/gallery/FMG041.png"
 image cg FMG050 = "Graphics/ui/gallery/FMG050.png"
 image cg FMG055 = "Graphics/ui/gallery/FMG055.png"
 image cg FMG056 = "Graphics/ui/gallery/FMG056.png"
+image cg FMG058 = "Graphics/ui/gallery/FMG058.png"
 image cg FMG061 = "Graphics/ui/gallery/FMG061.png"
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
@@ -354,6 +355,7 @@ image cg WG047 = "Graphics/ui/gallery/WG047.png"
 image cg WG060S = "Graphics/ui/gallery/WG060S.png"
 
 image cg MC000 = "Graphics/ui/gallery/MC000.png"
+image cg MC003 = "Graphics/ui/gallery/MC003.png"
 
 image cg RM000 = "Graphics/ui/gallery/RM000.png"
 image cg RM000_escape1 = "Graphics/ui/gallery/RM000_escape1.png"
@@ -885,7 +887,7 @@ image FerryTomo1 = "Graphics/minor/tomoko/1/overlays/table-overlay.png"
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"
 define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
-define audio.BE = "Audio/BGM/scene_BE.mp3"
+define audio.BE = "Audio/BGM/scene_BE.ogg"
 define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
 define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
 define audio.RM = "Audio/BGM/scene_RM.ogg"

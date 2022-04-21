@@ -795,7 +795,7 @@ label global000_RM_after:
     "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
     MCT "Hard to believe that just yesterday I was in my hometown, and now I'm off on this little island..."
     "I got up and got into my uniform, doing my best to comb my shaggy hair into something approaching proper. In the corner of my eye I saw Daichi watching me."
-    if getAffection("RM") >= 0:
+    if checkAffection("RM", ">=", 0):
         show RM neutral
         RM "Today's the welcoming ceremony. I'm going to go get the lay of the campus."
         MC "You're going to skip the opening ceremony?"
@@ -805,7 +805,7 @@ label global000_RM_after:
         "I shook my head, but waved goodbye nonetheless as Daichi left. At least he seemed in good spirits."
         $ setFlag("global000_RM_friendly")
         jump global000_part2
-    if getAffection("RM") < 0:
+    else:
         show RM sad
         "As soon as he realized I'd noticed him, he spun on his heel and headed out the door."
         hide RM with dissolve
@@ -1748,14 +1748,17 @@ label MC003:
     scene black with fade
     pause 1
 
-    scene Dorm Exterior with fade
     play music MC
+    show cg MC003 with dissolve
     "What felt like hours for me was probably just 20 minutes before Tomo texted back."
     TomokoCell "What do you want? Why did you have my roommate wake me up?"
     MCCell "Just meet me outside the dorm. I got something for you."
     TomokoCell "This better be good."
     "I knew Tomo wasn't going to set any landspeed records with her level of urgency, so I just bided my time sitting on one of the benches outside the dorm until she came out."
-    show Tomoko neutral with dissolve
+    hide cg
+    scene Dorm Exterior
+    show Tomoko neutral
+    with dissolve
     Tomoko "What was so important you couldn't have just texted me for instead?"
     MC "Nice to see you too, Tomo."
     Tomoko "Ugh, don't be like that. You know I didn't mean it like that."
@@ -1772,9 +1775,11 @@ label MC003:
     MC "Besides, it's strawberry. I figured you'd like it."
     Tomoko "It's one of the better ones. Thanks, I guess. {w}Was that it?"
     MC "How are things, Tomo?"
-    Tomoko "Alright I guess. People here seem nice. There doesn't seem much to do around here though."
+    Tomoko "Alright I guess. People here seem nice. My roommate seems okay, but she wants to talk my ear off and blow up my phone with every piece of gossip that she comes across. {w}It’s all a bit much, to be honest."
+    MC "Interesting, I hear my fair share of rumors from my roommate as well. But at least he seems quiet for the most part."
+    Tomoko "She’s not that bad though, it’s whatever. Still, though, there doesn't seem much to do around here though."
     MCT "I don't know why you care. If there were a million things to do, you'd still choose to nap."
-    MC "I mean how are you holding up after, you know, the test?"
+    MC "Well, what I meant more was how are you holding up after, you know, the test?"
     show Tomoko distracted
     Tomoko "We haven't been here that long. I haven't had any major tests in classes."
     MCT "This is going nowhere fast."
@@ -1836,9 +1841,9 @@ label MC006:
     $setPRGOutfit(OutfitEnum.ATHLETIC)
     $setFMGOutfit(OutfitEnum.ATHLETIC)
     "We were told our class had some kind of special assembly today. There weren't too many details, but we all had to show up to the auditorium in our gym clothes."
-    if getSkill("Athletics") == 0:
+    if not checkSkill("Athletics", ">", 0):
         "It'd been a while since I'd done anything athletic. I was probably going to be sore tomorrow, whatever this was."
-    elif getSkill("Athletics") >= 3:
+    elif checkSkill("Athletics", ">=", 3):
         MCT "Seems like it could be fun— I'm ready."
     show BE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
     BE "Does anyone know why we're here?"
@@ -1959,7 +1964,7 @@ label MC006_Team1:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
-    Naoki "Alright, Team 1 is Hotsure-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is Utagashi-san, Nikumaru-san, Mitzutani-san, and Kodama-san."
+    Naoki "Alright, Team 1 is Hotsure-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is Utagashi-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
     show WG doubt
@@ -2493,7 +2498,7 @@ label MC006_Team2:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
-    Naoki "Alright, Team 1 is Utagashi-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is, Hotsure-san, Nikumaru-san, Mitzutani-san, and Kodama-san."
+    Naoki "Alright, Team 1 is Utagashi-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is, Hotsure-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
     show WG doubt
@@ -3503,18 +3508,18 @@ label RM001:
     menu:
         "What are you working on?":
             MC "What are you working on, exactly?"
-            if getAffection("RM") < -2:
-                jump RM001_fail
-            else:
+            if checkAffection("RM", ">=", -2):
                 jump RM001_c1_1
+            else:
+                jump RM001_fail
         "What do you like to do for fun?":
             jump RM001_after
         "Where do you go after class?":
             MC "So I can't help but notice you usually come home kind of late. Are you in a club, or something?"
-            if getAffection("RM") < -2:
-                jump RM001_fail
-            else:
+            if checkAffection("RM", ">=", -2):
                 jump RM001_c1_2
+            else:
+                jump RM001_fail
 
 label RM001_c1_1:
     $setFlag("RM001_c1_1")
@@ -3622,7 +3627,7 @@ label RM001_c2_1:
         RM "Camera. It's a camera."
         MC "Yeah, that."
     "He paused for a moment."
-    if getAffection("RM") > -3:
+    if checkAffection("RM", ">" -3):
         $setAffection("RM", 1)
         show RM happy
         "Eventually his expression relaxed a little."

@@ -18,13 +18,13 @@ init python:
     ost.manualDefineList.append(theme_AE)
 
     theme_BE = ost.soundtrack(
-        name = "I'm Just Motivated",
-        path = "Audio/BGM/scene_BE.mp3",
+        name = "Peaks and Valleys",
+        path = "Audio/BGM/scene_BE.ogg",
         priority = 1,
-        author = "Yoshiki ARA",
+        author = "Post-Bop",
         description = "Honoka's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_BE.mp3")
+        unlocked = renpy.seen_audio("Audio/BGM/scene_BE.ogg")
     )
     ost.manualDefineList.append(theme_BE)
 

@@ -381,9 +381,9 @@ label FMG004:
     pause 0.25
     FMG "Three!"
     hide FMG with dissolve
-    if getSkill("Athletics") >= 4:
+    if checkSkill("Athletics", ">=", 4):
         jump FMG004_testpass
-    elif getSkill("Athletics") >= 2:
+    elif checkSkill("Athletics", ">=", 2):
         jump FMG004_testsemipass
     else:
         jump FMG004_testfail
@@ -1024,7 +1024,7 @@ label FMG010:
     AE "Goodbye, Hotsure-san."
     scene Hallway with fade
     "I left Shiori alone and exited the room. With no help from Shiori, I figured it was probably best just to leave it be for now..."
-    if getAffection("FMG") >= 3:
+    if checkAffection("FMG", ">=", 3):
         jump FMG010_testpass
     else:
         jump FMG010_testfail
@@ -1343,7 +1343,7 @@ label FMG012:
     show FMG happy
     FMG "All right Kei-kun, you're definitely improving!"
     MC "Thanks, I guess I have, I'm- wait, did you just call me Kei-kun?"
-    if getAffection("FMG") >= 10:
+    if checkAffection("FMG", ">=", 10):
         show FMG sad
         FMG "W-well, I thought it would be alright to call you that since we've been hanging out a lot, if you're not okay about it I can-"
         MC "Oh no, it's fine, I was just a bit surprised is all."
@@ -1863,14 +1863,14 @@ label FMGOPT016:
     with dissolve
     Chibuki "God, out of all the people in the world to come to this one maid café, it had to be my roommate and her boyfriend!"
     "Chibuki vented out her frustrations, though in our defense this island wasn't exactly Tokyo."
-    if getAffection("FMG") > 10:
+    if checkAffection("FMG", ">", 10):
         show FMG aroused
         FMG "B-boyfriend?"
         show FMG surprised
         FMG "I-I mean um..."
         show FMG neutral
         FMG "Uh hey Chibuki, I almost didn't recognize you without your bulging nips."
-    elif getAffection("FMG") > 5:
+    elif checkAffection("FMG", ">", 5):
         FMG "Ha, boyfriend; He's just a friend Chibuki. But back to you, I didn't recognize you without your bulging nips!"
     else:
         show FMG angry
@@ -2337,7 +2337,7 @@ label FMG018_c1_1:
     AE "Ah, splendid. We've been working on the mashed potatoes."
     FMG "Yeah! Check {i}this{/i} out."
     "In her excitement to help, Akira picked up an unpeeled potato and placed the potato between her forearm and upper arm and mashes it with a bicep flex, with such great force that the chunky remains splattered into a bowl."
-    if getAffection("FMG") > 12:
+    if checkAffection("FMG", ">", 12):
         MCT "Huh... That's... oddly interesting."
     AE "Aha... Well, if you'd like to contribute more, then how about coring the apples for the applesauce? There should be a device for it under the kitchenware."
     MC "Yeesh, this place has everything."
@@ -2383,7 +2383,7 @@ label FMG018_c1_1:
 label FMG018_c1_2:
     MC "Let's ask Naomi, she might be a good cook."
     FMG "How would you know that?"
-    if getAffection("GTS") > 4:
+    if checkAffection("GTS", ">", 4):
         MC "Well, from what I've seen, she's pretty domestic, and knows how to grow food... "
         FMG "Domestic doesn't exactly mean she's a good cook."
     else:
@@ -2619,7 +2619,7 @@ label FMG020:
     show FMG neutral
     FMG "Cool, enjoy dude."
     MC "Wait, you don't want to come?"
-    if getAffection("FMG") > 10:
+    if checkAffection("FMG", ">", 10):
         show FMG surprised
         FMG "H-Huh? Y-you mean like a date?"
         MC "Hey, you're the one who called it that. I'm just inviting you."
@@ -2672,7 +2672,7 @@ label FMG020:
     show FMG sad
     FMG "I... I don't know. It has honestly been part of my life for so long that I don't really have a good approximation of when I started. Sometime after I was 5 or 6 years old is the best timeframe I got."
     menu:
-        "Ask her out" if getAffection("FMG") >= 10:
+        "Ask her out" if checkAffection("FMG", ">=", 10):
             jump FMG020_c1_1
         "Say nothing":
             jump FMG020_c1_2
@@ -2893,7 +2893,7 @@ label FMG022:
     scene Track with fade
     play music Busy
     "At last the pounding of my feet and the whistle of the wind ground to a halt."
-    if getSkill("Athletics") > 3:
+    if checkSkill("Athletics", ">", 3):
         "I had kept a solid pace running around the track with Akira, and even when I started to flag in the fifth lap I felt like it was... not as far back as the last time."
         "I couldn't actually see a difference, but I could just {i}feel{/i} the centimeters of progress I'd made."
         $setSkill("Athletics", 1)
@@ -3009,7 +3009,7 @@ label FMG022:
     MC "Oh, uh...{w} I didn't actually pick out a spot beforehand. I just thought it would be a nice idea."
     show FMG angry
     FMG "Do you mean we gotta {i}find{/i} a rock to climb on?"
-    if getSkill("Academics") > 2:
+    if checkSkill("Academics", ">", 2):
         MC "We're near a mountain. If we follow the terrain up, we'll find one. It won't take long."
         FMG "Egh... if you say so. I've got other stuff I wanted to do today."
         MC "I know, I know. Just trust me."
@@ -3032,7 +3032,7 @@ label FMG022:
     MC "And hey, after we're done, we've got something to drink."
     show FMG neutral at Transform(xzoom=1)
     FMG "Naw, I'm good with my shake, thanks. Fish {i}poop{/i} in there."
-    if getSkill("Academics") > 2:
+    if checkSkill("Academics", ">", 2):
         FMG "Thought you'd know that there, Dr. Science."
         MC "Oh, hush."
     "Akira pulled her stopwatch from her pocket and looped the lanyard around her neck."
@@ -3058,7 +3058,7 @@ label FMG022:
     MC "But now it's my turn. Time me."
     "I saw her nod back down with a smirk and press the button, just as I took a breath and grabbed a rock."
     hide FMG with dissolve
-    if getSkill("Athletics") > 5:
+    if checkSkill("Athletics", ">", 5):
         "My fingers pierced the loose soil veneer and dug into the cold, solid rock just past, and the dirt came with me, on my fingers and knees and the tips of my shoes, as I pulled myself higher and higher up the cliff."
         "I chanced to look up, and saw Akira's smile replaced with a dubious frown."
     else:
@@ -3089,7 +3089,7 @@ label FMG022_c1_1:
     show FMG neutral
     FMG "Yeah... uh, thanks, I guess..."
     MC "Hmph... yep."
-    if getSkill("Athletics") > 5:
+    if checkSkill("Athletics", ">", 5):
         $setAffection("FMG", 1)
         "I was definitely starting to feel it in my back and my chest, pulling myself upwards as I was, but I still had no real trouble to that point. Nevertheless, I gave every hold an obligatory wiggle before climbing it."
         "I guess, taking it slower made me better appreciate the breeze passing by as I got higher up, wicking away my budding sweat."
@@ -3149,7 +3149,7 @@ label FMG022_c1_2:
     "And I started hauling ass like never ass had been hauled before or, to my knowledge, since."
     show FMG surprised
     FMG "Hey! That's the opposite of slow!"
-    if getSkill("Athletics") > 5:
+    if checkSkill("Athletics", ">", 5):
         "I began yanking myself up hard on every hold, even using one or two to leap up from. Higher and higher I climbed, ascending to the seat of my rocky throne."
         show FMG angry
         "At last I sprung over the ledge and bounced to a standing position."
@@ -3263,7 +3263,7 @@ label FMG023_c2:
     show FMG neutral
     "I tried to crane my neck over the crowd to see whatever was at the head of it.{w} But a couple giants were blocking the view, so I stepped to the side and tried again."
     "A giant red plastic bun... on a truck... with an open side... and a dancing bear mascot... with a wizard hat... holding a sign."
-    if getSkill("Academics") > 5:
+    if checkSkill("Academics", ">", 5):
         MC "Hey, that's... Mr. Minei's Magic Mochi."
         $setVar("FMG023bored", getVar("FMG023bored") - 1)
         show FMG happy
@@ -3276,7 +3276,7 @@ label FMG023_c2:
         show FMG happy
         FMG "It's... {i}Mr. Minei's Magic Mochi!{/i}"
         "She half-sang it, maybe half-remembering an old commercial jingle."
-        if getAffection("FMG") > 4:
+        if checkAffection("FMG", ">", 4):
             "I just grinned for a second at the attempt before I thought of anything to say."
         MC "You and Mr. Minei go back a ways, huh?"
     show FMG neutral
@@ -3307,7 +3307,7 @@ label FMG023_c2:
     FMG "You visit there often?"
     MC "Sure do. Born and raised around Shibuya."
     FMG "Oh wow, for real?"
-    if getAffection("FMG") > 4:
+    if checkAffection("FMG", ">", 4):
         $setVar("FMG023bored", getVar("FMG023bored") - 1)
         extend " Damn, right at the heart of it. Must've been a ton of cool stuff."
         MC "Definitely. Like, uh, I used to go to the Tatsumi swim center from time to time. It was closer to Koto, so a little bit of a ride there, but all the different pools there were awesome."
@@ -3593,7 +3593,7 @@ label FMG023_c2_after:
     FMG "Gonna be so cool to see Mr. Minei again."
     MC "Definitely. Lotta those startup guys are all business, it'll be cool to meet one who gets to know his customers."
     MC "Put in a good word for me?"
-    if getAffection("FMG") > 3:
+    if checkAffection("FMG", ">", 3):
         FMG "You know you got nothing to worry about. You guys are gonna get along fine."
     else:
         FMG "Heh, sure, yeah."
@@ -4981,206 +4981,208 @@ label FMG032:
     jump daymenu
 
 label FMG033:
-   $setProgress("FMG", "FMG034")
-   scene Classroom with fade
-   "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
-   "I mean, for myself, the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... My life hadn't changed."
-   "And even being surrounded by ladies who were getting improbably muscular or tall or whatever, didn't elicit so much as a second glance."
-   "So when I entered the class and saw a very heavy woman arguing with a very muscled woman, my only thought was how the morning's peace was going to be broken by their bickering."
-   play music Tension
-   show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
-   WG "I do not care to repeat myself, and asking again is not going to result in a different answer."
-   show FMG angry at Position(xcenter=0.75, yanchor=1.0) with dissolve
-   FMG "At least give me a reason. Would it kill you to not act like a selfish-"
-   if getAffection("WG") >= getAffection("FMG"):
+    $setProgress("FMG", "FMG034")
+    scene Classroom with fade
+    "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
+    "I mean, for myself, the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... My life hadn't changed."
+    "And even being surrounded by ladies who were getting improbably muscular or tall or whatever, didn't elicit so much as a second glance."
+    "So when I entered the class and saw a very heavy woman arguing with a very muscled woman, my only thought was how the morning's peace was going to be broken by their bickering."
+    play music Tension
+    show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    WG "I do not care to repeat myself, and asking again is not going to result in a different answer."
+    show FMG angry at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    FMG "At least give me a reason. Would it kill you to not act like a selfish-"
+    if checkAffection("WG", ">=", getAffection("FMG")):
        jump FMG033_WG
-   else:
+    else:
        jump FMG033_FMG
 
 label FMG033_WG:
-   "Akira was cut off when Alice noticed my arrival and turned to me."
-   WG "Keisuke, can you talk some sense into this woman? I am quickly running out of patience."
-   MC "What's the issue?"
-   FMG "I just want-"
-   WG "Ms. Mizutani asked if she could borrow a certain garment of mine, I said no, and she will not let matter drop."
-   FMG "You won't even explain why, though."
-   WG "Must I? Must I justify the decisions I make concerning my own property?"
-   menu:
+    "Akira was cut off when Alice noticed my arrival and turned to me."
+    WG "Keisuke, can you talk some sense into this woman? I am quickly running out of patience."
+    MC "What's the issue?"
+    FMG "I just want-"
+    WG "Ms. Mizutani asked if she could borrow a certain garment of mine, I said no, and she will not let matter drop."
+    FMG "You won't even explain why, though."
+    WG "Must I? Must I justify the decisions I make concerning my own property?"
+    menu:
        "You can at least give her a reason. Saying 'No' just because comes across as rather petty.":
            jump FMG033_WG_1
        "If she said 'No,' Akira, you should just accept it. She doesn't have to give a reason.":
            jump FMG033_WG_2
 
 label FMG033_WG_1:
-   stop music
-   FMG "Yeah Alice, it's common courtesy."
-   play music Peaceful
-   show WG neutral
-   WG "Very well."
-   WG "The fact is, the article in question was tailored to me specifically. To my proportions."
-   WG "Just because it is... 'expansive' does not mean it's suitable for any plus-sized woman."
-   WG "You don't have the right figure for it, Mizutani-san."
-   show FMG sad
-   FMG "Oh..."
-   FMG "I hadn't thought about that."
-   show WG happy
-   WG "If you would like something appropriate for this special occasion (whatever it may be), I would happy to procure a dress better-suited to you."
-   WG "My business caters to men and women of all dimensions."
-   FMG "No. I don't have money for that. That's why I needed to borrow something."
-   FMG "It's OK. I'll figure something else out... hopefully."
-   hide FMG with dissolve
-   show WG happy at center with dissolve
-   $setAffection("WG", 1)
-   $setAffection("FMG", 1)
-   WG "Thank you for your help, Keisuke."
-   MC "It was really nothing. People like it when you give them a reason for rejection."
-   MC "You can't just say 'Because I said so.' I think any parent could tell you that never works."
-   "She raised an eyebrow."
-   WG "Really? I never had trouble acquiescing to my parent's authority."
-   "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I bit my tongue and found my seat."
-   jump daymenu
+    stop music
+    FMG "Yeah Alice, it's common courtesy."
+    play music Peaceful
+    show WG neutral
+    WG "Very well."
+    WG "The fact is, the article in question was tailored to me specifically. To my proportions."
+    WG "Just because it is... 'expansive' does not mean it's suitable for any plus-sized woman."
+    WG "You don't have the right figure for it, Mizutani-san."
+    show FMG sad
+    FMG "Oh..."
+    FMG "I hadn't thought about that."
+    show WG happy
+    WG "If you would like something appropriate for this special occasion (whatever it may be), I would happy to procure a dress better-suited to you."
+    WG "My business caters to men and women of all dimensions."
+    FMG "No. I don't have money for that. That's why I needed to borrow something."
+    FMG "It's OK. I'll figure something else out... hopefully."
+    hide FMG with dissolve
+    show WG happy at center with dissolve
+    $setAffection("WG", 1)
+    $setAffection("FMG", 1)
+    WG "Thank you for your help, Keisuke."
+    MC "It was really nothing. People like it when you give them a reason for rejection."
+    MC "You can't just say 'Because I said so.' I think any parent could tell you that never works."
+    "She raised an eyebrow."
+    WG "Really? I never had trouble acquiescing to my parent's authority."
+    "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I bit my tongue and found my seat."
+    jump daymenu
 
 label FMG033_WG_2:
-   "Akira didn't get any angrier, but having her glare at me instead of Alice was chilling."
-   FMG "Of course you'd take her side."
-   $setAffection("FMG", -1)
-   stop music
-   FMG "Fine! Forget I even asked."
-   play music Peaceful
-   hide FMG with dissolve
-   show WG neutral at center with dissolve
-   "Alice clucked her tongue."
-   WG "Most unbecoming. Rejection is an inevitability in life, but disappointment only comes when we open the door to it."
-   MC "Maybe you should have just told her why you turned her down."
-   WG "Why? I already said I don't have to justify myself."
-   MC "Yeah, but-"
-   "And that's when Tashi-sensei walked in, so I shut my mouth and found my seat."
-   MCT "Maybe I shouldn't have taken Alice's side so readily."
-   jump daymenu
+    "Akira didn't get any angrier, but having her glare at me instead of Alice was chilling."
+    FMG "Of course you'd take her side."
+    $setAffection("FMG", -1)
+    stop music
+    FMG "Fine! Forget I even asked."
+    play music Peaceful
+    hide FMG with dissolve
+    show WG neutral at center with dissolve
+    "Alice clucked her tongue."
+    WG "Most unbecoming. Rejection is an inevitability in life, but disappointment only comes when we open the door to it."
+    MC "Maybe you should have just told her why you turned her down."
+    WG "Why? I already said I don't have to justify myself."
+    MC "Yeah, but-"
+    "And that's when Tashi-sensei walked in, so I shut my mouth and found my seat."
+    MCT "Maybe I shouldn't have taken Alice's side so readily."
+    jump daymenu
 
 label FMG033_FMG:
-   "She cut herself off when she saw me."
-   FMG "Kei-kun, help me out here."
-   FMG "I just asked Queen Belly-"
-   #[Crash SFX]
-   #[Screen shakes]
-   WG "Grrrr!"
-   FMG "...if I could borrow a dress of hers for our date, and she won't even give me a reason why not!"
-   WG "As if I'm going to help you out after insulting me like that."
-   menu:
+    "She cut herself off when she saw me."
+    FMG "Kei-kun, help me out here."
+    FMG "I just asked Queen Belly-"
+    #[Crash SFX]
+    #[Screen shakes]
+    WG "Grrrr!"
+    FMG "...if I could borrow a dress of hers for our date, and she won't even give me a reason why not!"
+    WG "As if I'm going to help you out after insulting me like that."
+    menu:
        "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.":
            jump FMG033_FMG_1
        "Saying 'I don't wanna' sounds childish.":
            jump FMG033_FMG_2
 
 label FMG033_FMG_1:
-   if getAffection("WG") < 6:
+    if checkAffection("WG", ">=", 6):
+        MC "Alice, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
+    else:
        MC "Alice-"
        WG "Nikumaru-san. Let's observe propriety while we're in class."
        MC "OK. Nikumaru-san, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
-   else:
-       MC "Alice, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
-   stop music
-   "She exhaled slowly."
-   play music Peaceful
-   show WG neutral
-   $setAffection("WG", 1)
-   WG "Very well."
-   WG "If you must know, I do not believe the dress would flatter Mizutani-san."
-   WG "It was designed for me personally, for my proportions."
-   jump FMG033_FMG_after
+
+    stop music
+    "She exhaled slowly."
+    play music Peaceful
+    show WG neutral
+    $setAffection("WG", 1)
+    WG "Very well."
+    WG "If you must know, I do not believe the dress would flatter Mizutani-san."
+    WG "It was designed for me personally, for my proportions."
+    jump FMG033_FMG_after
 
 label FMG033_FMG_2:
-   MC "Saying 'I don't wanna' sounds childish."
-   MC "You could at least say why you don't want to."
-   $setAffection("WG", -1)
-   stop music
-   WG "You want to know why not?"
-   play music Peaceful
-   WG "It's because Mizutani is much too bulky to wear the dress."
-   FMG "Hey! You're no stringbean yourself."
-   WG "My body may have a little extra here and there-"
-   FMG "A lot of extra everywhere, you mean."
-   WG "-which is why I've had my clothes specially made to suit me."
-   jump FMG033_FMG_after
+    MC "Saying 'I don't wanna' sounds childish."
+    MC "You could at least say why you don't want to."
+    $setAffection("WG", -1)
+    stop music
+    WG "You want to know why not?"
+    play music Peaceful
+    WG "It's because Mizutani is much too bulky to wear the dress."
+    FMG "Hey! You're no stringbean yourself."
+    WG "My body may have a little extra here and there-"
+    FMG "A lot of extra everywhere, you mean."
+    WG "-which is why I've had my clothes specially made to suit me."
+    jump FMG033_FMG_after
 
 label FMG033_FMG_after:
-   show FMG neutral
-   FMG "Yeah, so it should be big enough to fit me."
-   show WG angry
-   WG "Grrr..."
-   show WG neutral
-   WG "That is not how clothing works. Not everything is designed to be stretchy like tracksuits or yoga pants."
-   FMG "Couldn't I at least try it on? It can't be that tight on you, otherwise you'd rip-"
-   show WG angry
-   WG "Grrr..."
-   MC "I think what Akira means to say is that your outfits probably have a certain amount of give."
-   MC "And with a little work the dress can be adapted to suit her. We could find video tutorials online to help with that."
-   WG "You can't just take 'No' for an answer."
-   FMG "Hey, I don't work for you."
-   MC "If there's a solution to your objection it's worth trying to work around it."
-   show WG neutral
-   WG "Why don't you just buy a dress that would fit you? I sell clothing for men and women of all dimensions."
-   show FMG sad
-   FMG "I don't have money for that."
-   MC "Think of it as a test-drive. Akira could buy something else later once she sees how fashionable your inventory is."
-   show FMG happy
-   FMG "Yeah! Think of it like a test-drive."
-   if getAffection("WG") < 6:
-       WG "Well-played, Hotsure-san."
-   else:
+    show FMG neutral
+    FMG "Yeah, so it should be big enough to fit me."
+    show WG angry
+    WG "Grrr..."
+    show WG neutral
+    WG "That is not how clothing works. Not everything is designed to be stretchy like tracksuits or yoga pants."
+    FMG "Couldn't I at least try it on? It can't be that tight on you, otherwise you'd rip-"
+    show WG angry
+    WG "Grrr..."
+    MC "I think what Akira means to say is that your outfits probably have a certain amount of give."
+    MC "And with a little work the dress can be adapted to suit her. We could find video tutorials online to help with that."
+    WG "You can't just take 'No' for an answer."
+    FMG "Hey, I don't work for you."
+    MC "If there's a solution to your objection it's worth trying to work around it."
+    show WG neutral
+    WG "Why don't you just buy a dress that would fit you? I sell clothing for men and women of all dimensions."
+    show FMG sad
+    FMG "I don't have money for that."
+    MC "Think of it as a test-drive. Akira could buy something else later once she sees how fashionable your inventory is."
+    show FMG happy
+    FMG "Yeah! Think of it like a test-drive."
+    if checkAffection("WG", ">=", 6):
        show WG happy
        WG "Well-played, Keisuke."
-   show WG neutral
-   WG "Very well. Consider this a free trial of the wares the Nikumaru Outlet Direct has for offer."
-   FMG "Sweet, thanks Alice!"
-   "Tashi-sensei showed up then, so we tabled the conversation as class started."
-   stop music
-   scene Hallway with fade
-   "After class Alice and Akira went to the former's dorm and Akira tried on the dress."
-   "Alice said she knew a few tricks for making loose or oversized garments fit better, pinning up excess fabric in ways that didn't show."
-   "I thought the matter was solved, trying to imagine how Akira would look dressed up."
-   scene Cafeteria with fade
-   "But when I went to the cafeteria for dinner I found out things hadn't worked out like I'd hoped."
-   play music Tension
-   show WG angry with dissolve
-   WG "Hotsure-san!"
-   MC "Gah!"
-   MC "What?"
-   show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
-   show FMG sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
-   WG "My custom-made Vantelli dress. Ruined!"
-   FMG "I said I was sorry."
-   MC "I take it the dress didn't fit?"
-   WG "No, it fit. I made it work."
-   WG "But your girlfriend apparently thought that she could compete in a decathlon while wearing a designer evening gown."
-   show FMG angry
-   FMG "Hey! All I did was bend over."
-   WG "You can't make any sudden movements while wearing a dress like that!"
-   WG "You have to move elegantly. Slow, sweeping motions."
-   show FMG sad
-   FMG "Well I know that now."
-   MCT "I was almost expecting her to say Akira flexed her arms and the sleeves exploded."
-   MC "I'm sure Akira will make it up to you."
-   WG "She'd better."
-   show FMG angry
-   FMG "I will! I'll pay you back!"
-   show FMG sad
-   FMG "Somehow..."
-   WG "We'll see."
-   WG "Now if you'll excuse me, I need to get my seamstress on the phone. The dress may still be salvageable."
-   hide WG with dissolve
-   show FMG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
-   FMG "She didn't have to take it so personally."
-   MC "Well, it sounds like it was an expensive dress."
-   FMG "But she's loaded."
-   MC "That doesn't mean she likes throwing money away."
-   FMG "I guess."
-   FMG "I just thought it would have been nice to get dressed up for our date."
-   MC "Yeah."
-   MC "Why don't we grab some food? We can have dinner together."
-   "The mood improved as we ate and talked about nothing in particular, the drama with Alice forgotten."
-   jump daymenu
+    else:
+       WG "Well-played, Hotsure-san."
+
+    show WG neutral
+    WG "Very well. Consider this a free trial of the wares the Nikumaru Outlet Direct has for offer."
+    FMG "Sweet, thanks Alice!"
+    "Tashi-sensei showed up then, so we tabled the conversation as class started."
+    stop music
+    scene Hallway with fade
+    "After class Alice and Akira went to the former's dorm and Akira tried on the dress."
+    "Alice said she knew a few tricks for making loose or oversized garments fit better, pinning up excess fabric in ways that didn't show."
+    "I thought the matter was solved, trying to imagine how Akira would look dressed up."
+    scene Cafeteria with fade
+    "But when I went to the cafeteria for dinner I found out things hadn't worked out like I'd hoped."
+    play music Tension
+    show WG angry with dissolve
+    WG "Hotsure-san!"
+    MC "Gah!"
+    MC "What?"
+    show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show FMG sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    WG "My custom-made Vantelli dress. Ruined!"
+    FMG "I said I was sorry."
+    MC "I take it the dress didn't fit?"
+    WG "No, it fit. I made it work."
+    WG "But your girlfriend apparently thought that she could compete in a decathlon while wearing a designer evening gown."
+    show FMG angry
+    FMG "Hey! All I did was bend over."
+    WG "You can't make any sudden movements while wearing a dress like that!"
+    WG "You have to move elegantly. Slow, sweeping motions."
+    show FMG sad
+    FMG "Well I know that now."
+    MCT "I was almost expecting her to say Akira flexed her arms and the sleeves exploded."
+    MC "I'm sure Akira will make it up to you."
+    WG "She'd better."
+    show FMG angry
+    FMG "I will! I'll pay you back!"
+    show FMG sad
+    FMG "Somehow..."
+    WG "We'll see."
+    WG "Now if you'll excuse me, I need to get my seamstress on the phone. The dress may still be salvageable."
+    hide WG with dissolve
+    show FMG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    FMG "She didn't have to take it so personally."
+    MC "Well, it sounds like it was an expensive dress."
+    FMG "But she's loaded."
+    MC "That doesn't mean she likes throwing money away."
+    FMG "I guess."
+    FMG "I just thought it would have been nice to get dressed up for our date."
+    MC "Yeah."
+    MC "Why don't we grab some food? We can have dinner together."
+    "The mood improved as we ate and talked about nothing in particular, the drama with Alice forgotten."
+    jump daymenu
 
 label FMG034:
     $setProgress("FMG", "FMG037")
@@ -9512,14 +9514,14 @@ label FMG056:
     MCT "Get ripped apart training with Nat or get ripped apart training with Akira."
     MC "I'll train with-"
     Natsuko  "Has he even been improving following your advice?"
-    if getSkill("Athletics") < 5:
-        FMG "Uhh...well, he's a work in progress. Aren't we all? Hehe..."
-        MC "I'm right here! Under the bus, where you threw me."
-        Natsuko "I'll take that as a no."
-    else:
+    if checkSkill("Athletics", ">=", 5):
         FMG "Kei-kun has improved a lot. I mean sure, he doesn't have any natural talent for this sort of thing, but he's definitely one of the more athletic guys at the school by this point."
         MC "If only your natural talents extended to compliments."
         Natsuko "Improvement should be expected, not a surprise."
+    else:
+        FMG "Uhh...well, he's a work in progress. Aren't we all? Hehe..."
+        MC "I'm right here! Under the bus, where you threw me."
+        Natsuko "I'll take that as a no."
     Natsuko "Hotsure-san, if you're serious about getting stronger, I'll invite you to train with someone who actually knows what they're doing."
     show FMG angry
     Natsuko "I promise better results一 and more pleasant company."
@@ -9898,7 +9900,7 @@ label FMG058:
     MC "Fine. Should we make a little bit of room so we can begin?"
     "The three of us move some of the benches around to make room for our impromptu Ms. Galaxy competition."
     MCT "...Shorts, don't fail me now."
-    "Akira was wearing her signature red sports bra. While Natsuko's bra was a dark grey. Last time I saw this sight, Akira lost to Natsuko in an arm wrestling contest. Looking closer, their clothes looked even tighter than that day."
+    "Akira was wearing her signature red sports bra, while Natsuko's was black. Last time I saw this sight, Akira lost to Natsuko in an arm wrestling contest. Looking closer, their clothes looked even tighter than that day."
     MCT "I'm both scared and aroused..."
     MCT "I'm scaroused."
     MCT "I feel like I shouldn't be staring so hard before the contest even begins."
@@ -9946,11 +9948,13 @@ label FMG058:
     MC "Pff-{i}Ahem{/i}. There's a male version of the pose that doesn't involve crossing your legs, so we can compromise with that. Does that work for you girls?"
     "The two titans nodded and the tension had loosened up a little."
     MC "Front double bicep!"
-    show FMG flex
-    show Natsuko flex
+    show cg FMG058 with dissolve
     "This time, they both stepped shoulder width apart and flexed their arms. Considering how relatively simple this pose looks in the picture, seeing it in real life, with these larger than life ladies, I can tell how much of their muscles they were flexing."
     MCT "...Hang in there, Kei..."
     "The curvature of both of their bodies was very evident in this pose, even as they did the masculine version of it."
+    show FMG flex
+    show Natsuko flex
+    hide cg with dissolve
     "And while Akira flexes like this twenty times a day, and I drool over her biceps every single goddamn time, Natsuko's larger biceps and overall hourglass body shape really does this pose justice for her."
     MC "F-first point goes to Natsuko."
     Natsuko "Naturally."

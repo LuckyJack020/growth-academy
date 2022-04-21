@@ -285,9 +285,6 @@ label PRG002:
     BE "Eh, class stuff. I was kind of hoping that such a private and exclusive school would have a slightly more entertaining workload."
     show BE neutral
     BE "But, nope! Still snoozin' in my seat."
-    scene Campus Center
-    show BE neutral
-    with fade
     if isEventCleared("global005"):
         MC "Well, considering that the exclusivity here comes from the condition of the students, I don't think they really need to focus too hard on next level learning techniques."
         BE "Yeah, I guess. Still kinda crazy that we both ended up here, huh?"
@@ -342,7 +339,7 @@ label PRG002:
     BE "I definitely don't blame you for your feelings in the slightest, of course. I mean, I could barely tolerate the time you and I spent with her. If I would've been there for this..."
     BE "Yeah... no way."
     MC "Mhm."
-    scene Hallway
+    scene Campus Center
     show BE neutral
     with fade
     "Honoka and I headed out through the large double doors into the center of campus."
@@ -862,7 +859,7 @@ label PRG004:
     if isEventCleared("global005"):
         "We started across toward the garden. Aida walked beside me, but at an awkward length away. Like, if I would've stuck my arm straight out, I wouldn't have been able to touch her."
         MCT "Gah, do I stink or something?"
-        if getSkill("Athletics") > 1:
+        if checkSkill("Athletics", ">", 1):
             MCT "Maybe I'd better lay off the exercise for a few days."
         "We continued this awkward walk past the garden and alongside the building, over to the track."
         "Aida and I spoke a precious few sentences, mainly pertaining to the weather or classes."
@@ -1340,7 +1337,7 @@ label PRG007_c1_2:
     PRG "Thank you."
     MC "Anytime. You share your book, I share my chocolate. That's just simple math, right?"
     MC "Granted... math was never my forte."
-    if getAffection("PRG") > 3:
+    if checkAffection("PRG", ">", 3):
         PRG "Y-You're telling me that you've never had someone share a book with you, then you share your chocolate with them?"
         MC "Oh, and you have?"
         PRG "H-Happens all the time."
@@ -1770,34 +1767,7 @@ label PRG009:
     MC "No slam dunk topics yet?"
     PRG "No..."
     MC "What about cooking? Or the Koi, perhaps?"
-    if getAffection("PRG") < 2:
-        PRG "I-I don't really think those would work very well."
-        MC "Pardon me for seeming forceful, but aren't the Koi and cooking two of your favorite things to talk about?"
-        MC "I would think that you could go on for hours about those topics."
-        PRG "W-Well, I do like those things a lot, b-but I don't really want to write about them."
-        MC "Huh, that's kind of surprising."
-        PRG "Why?"
-        MC "I would just think that it would be a source of comfort for something like this. Like an easy topic to cover in order to gain a better grade."
-        PRG "I-I..."
-        show PRG sad
-        PRG "..."
-        "Aida's eyes went right back into her book."
-        "I looked back down at mine and started flipping through pages."
-        "Aida's pencil laid unused on her notebook as Aida held her book up. She was sitting in such a way that I couldn't see her face through her bangs."
-        "I sat there flipping pages, looking through the book, until I was about two chapters in."
-        "Aida had shut her book and set it into her bag. She got up and pushed her chair in."
-        MC "Heading out, Kodama-san?"
-        PRG "Mmm..."
-        MC "Alright, well have a good weekend!"
-        PRG "B-Bye."
-        hide PRG with dissolve
-        "As Aida walked past me, I turned in my seat to watch her leave."
-        "She walked quietly between the rows of tables and seated students, heading out into the hall."
-        "I turned back to my book, looking down and half reading, half skimming."
-        "I could relate to her. At this point, I was just trying to force a topic to come to me, rather than writing about something meaningful."
-        "I shut the book with a sigh, and sat back in my chair. This stupid essay shouldn't be this annoying."
-        jump daymenu
-    else:
+    if checkAffection("PRG", ">=", 2):
         PRG "Mmm... I-I don't really want to write about those topics."
         MC "Oh? Why's that?"
         show PRG unique
@@ -1853,6 +1823,33 @@ label PRG009:
         MC "You're welcome. I hope you get a grade that you can hang on your fridge at home."
         PRG "Hehe... I hope so too."
         jump daymenu
+    else:
+        PRG "I-I don't really think those would work very well."
+        MC "Pardon me for seeming forceful, but aren't the Koi and cooking two of your favorite things to talk about?"
+        MC "I would think that you could go on for hours about those topics."
+        PRG "W-Well, I do like those things a lot, b-but I don't really want to write about them."
+        MC "Huh, that's kind of surprising."
+        PRG "Why?"
+        MC "I would just think that it would be a source of comfort for something like this. Like an easy topic to cover in order to gain a better grade."
+        PRG "I-I..."
+        show PRG sad
+        PRG "..."
+        "Aida's eyes went right back into her book."
+        "I looked back down at mine and started flipping through pages."
+        "Aida's pencil laid unused on her notebook as Aida held her book up. She was sitting in such a way that I couldn't see her face through her bangs."
+        "I sat there flipping pages, looking through the book, until I was about two chapters in."
+        "Aida had shut her book and set it into her bag. She got up and pushed her chair in."
+        MC "Heading out, Kodama-san?"
+        PRG "Mmm..."
+        MC "Alright, well have a good weekend!"
+        PRG "B-Bye."
+        hide PRG with dissolve
+        "As Aida walked past me, I turned in my seat to watch her leave."
+        "She walked quietly between the rows of tables and seated students, heading out into the hall."
+        "I turned back to my book, looking down and half reading, half skimming."
+        "I could relate to her. At this point, I was just trying to force a topic to come to me, rather than writing about something meaningful."
+        "I shut the book with a sigh, and sat back in my chair. This stupid essay shouldn't be this annoying."
+        jump daymenu
 
 label PRG010:
     $setSize(2)
@@ -1871,7 +1868,7 @@ label PRG010:
         MCT "My brother, Sasquatch, would be so proud."
         scene Library with fade
         "I walked into the library and placed my nearly overdue book into the return bin."
-        if getSkill("Athletics") == 0 and isHighestSkill("Athletics"):
+        if not checkSkill("Athletics", ">", 0) and isHighestSkill("Athletics"):
             "I'd gone digging through the library and found another fiction book I could use, this time one that I actually remembered from school."
             "Okay, I'd been forced to read it for a high school class, but a grade was a grade, and I figured that I'd get a passing one if I could think of a deep way to describe the brilliance of a red velvet rocking chair."
         elif isHighestSkill("Athletics"):
@@ -2925,20 +2922,20 @@ label PRG013:
     "I threw my blinds open completely, allowing the light to stream through like water into a desert wasteland."
     MCT "I have to go do something. I'm gonna get a vitamin D deficiency if I sit here collecting dust all day."
     "I pulled some clothes out of my closet and yanked off my sweats, pulling my pants on and sitting on the bed."
-    if isHighestSkill("Art") and getSkill("Art") > 0:
+    if isHighestSkill("Art") and checkSkill("Art", ">", 0):
         $setFlag("PRG013_art")
         MCT "I could use some time with a sketchbook or something. Flex the good ol' creative muscle."
         "I grabbed a belt and my shirt, getting myself ready and finishing with my shoes."
         MCT "Realistically, I could just draw here, but where's the fun in that? I get to get some air and use some pro level art stuff all at once."
         MCT "Sure beats the old pencil with teeth marks, for sure."
-    elif isHighestSkill("Academics") and getSkill("Academics") > 0:
+    elif isHighestSkill("Academics") and checkSkill("Academics", ">", 0):
         $setFlag("PRG013_academics")
         MCT "Should I just... study or something?"
         "It wasn't the best way to spend a Saturday by any means, but it was better than just sitting there with my finger up my butt."
         "I finished getting dressed and grabbed my backpack from my desk chair."
         "I glanced over my shoulder at my lonely looking desk."
         MCT "I could easily just study here, but getting out somewhere and studying almost always beats doing it at the same, boring place."
-    elif isHighestSkill("Athletics") and getSkill("Athletics") > 0:
+    elif isHighestSkill("Athletics") and checkSkill("Athletics", ">", 0):
         $setFlag("PRG013_athletics")
         "A trip to the track sounded nice. Even for a quick jaunt around the place."
         "I glanced at my legs, staring at my nice pants."
@@ -3025,7 +3022,7 @@ label PRG013:
     PRG "Aheh..."
     show PRG sad-2
     PRG "W-Well... I wanted to go to the kitchen again today. The Koi were playing earlier today, a-and I sometimes like to bring my radio to the kitchen, and listen to the game while I cook."
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         PRG "I-It's really relaxing for me."
     else:
         PRG "I-It's... fun."
@@ -3045,7 +3042,7 @@ label PRG013:
     MC "But, hold on a sec. You cook in front of me a lot. Didn't you say you don't like cooking in front of people?"
     PRG "W-Well yeah, but..."
     play music PRG
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         show PRG worried
         PRG "Y-You're different, Hotsure-san..."
         PRG "Y-You don't make me nervous..."
@@ -3109,7 +3106,7 @@ label PRG013:
     scene black with fade
     pause 1
     scene Hallway2 with fade
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         "Aida didn't say a word the entire way. I initially thought of trying to make some small talk to liven things up, but I simply chose to walk with her."
         "Now didn't feel like the right time for a chat. It was go time."
     else:
@@ -3127,7 +3124,7 @@ label PRG013:
     "Aida was the best chef I'd ever known. She even blew my mother away, which took some serious chops."
     "And yeah, I knew all too well how scary competition was. But, if Aida didn't join, then all that talent of hers would never be seen."
     "A true crime, if I'd ever seen one."
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         MC "I know you can. I believe in you."
     else:
         MC "You've got this. I have no doubts."
@@ -3154,7 +3151,7 @@ label PRG013:
     MC "Excuse me! Takamura-sensei?"
     "The cooking teacher turned around to face us."
     Takamura "Yes? May I help you with something?"
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         "Beside me, Aida walked forward a bit."
         PRG "Uhm... I was... I was wondering if... if there was room for me to cook with the cooking club?"
         Takamura "Ah, you'll have to ask Sano-san about that. She's the club president. I'm simply here to show the club what they'll be working with in the kitchen."
@@ -3247,7 +3244,7 @@ label PRG013:
     hide Sakura
     with dissolve
     "I nodded and headed out the door."
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         "I'd admittedly had my doubts, especially when Aida seemed so hellbent against even cooking in the same room with them."
         "But, the minute she picked up that egg and knew what to do without even a moment's hesitation, my worries were immediately gone."
     "I'd gone into the kitchen thinking that I'd have to pull teeth to get Aida involved, especially when I'd done most of the talking with Takamura-sensei."
@@ -3334,7 +3331,7 @@ label PRG014:
     PRG "Of course there is!"
     MC "Well, forget this line then! Let's go!"
     "Aida followed closely behind me while I found a table. I chose a spot far enough away from the main crowd, where the two of us could hear each other."
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         "Instead of sitting across from me, Aida scooted in on the seat next to me and sat."
     else:
         "Aida took the seat across from me and set her bag beside her."
@@ -3346,7 +3343,7 @@ label PRG014:
     MC "Wow... I... like, wow."
     MC "This looks incredible. Thank you so much."
     PRG "You're welcome."
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         "Beside me, Aida reached into her bag and pulled out a small thermos, pouring herself some soup."
     else:
         "Across from me, Aida reached into her bag and pulled out a small thermos, pouring herself some soup."
@@ -3400,7 +3397,7 @@ label PRG014:
     UNKNOWN "Hey! Kodama-san!"
     show PRG surprised
     show Sakura happy at Position (xcenter=0.25, yalign=1.0) with dissolve
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         "Out of the crowd of people in line, Sakura emerged and took a seat right across from us at the table."
     else:
         "Out of the crowd of people in line, Sakura emerged and took a seat right beside Aida across from me."
@@ -3453,7 +3450,7 @@ label PRG014:
             Sakura "Awesome! So, can you help me convince her?"
         "Well, we're classmates.":
             MC "Well, we're classmates."
-            if getAffection("PRG") > 5:
+            if checkAffection("PRG", ">", 5):
                 $setFlag("PRG014_classmates")
                 show PRG sad
                 PRG "I-I-I... I-I thought we were friends?"
@@ -3558,7 +3555,7 @@ label PRG014:
             $setAffection("PRG", 1)
         "Finish it.":
             "To show my appreciation and love of her cooking, I continued eating with gusto. I didn't have to fake it, either. The girl could really cook."
-        "Feed her a piece." if getAffection("PRG") > 7:
+        "Feed her a piece." if checkAffection("PRG", ">", 7):
             "I picked up some noodles in my chopsticks in such a way that they wouldn't go flying off. Even still, I put my hand under for good measure."
             MC "Okay. Open up."
             show PRG surprised
@@ -3633,7 +3630,7 @@ label PRG015:
     HR "Hotsure-san!"
     MC "Hm?! Ah, yeah?"
     HR "Could you enlighten us as to what the ceiling was painted with? As in, what medium?"
-    if getSkill("Art") > 2:
+    if checkSkill("Art", ">", 2):
         MC "Ah..."
         MCT "Come on. You know this. Think."
         MC "It was... ah... paint on plaster."
@@ -3676,7 +3673,7 @@ label PRG015:
     pause 1
     show PRG nervous
     PRG "... T-That sounded mean. I-I'm sorry."
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         MC "Hah, don't worry about it. I appreciate the invite, and I'll be front and center!"
         show PRG neutral
         PRG "O-Okay! I-I need to go practice now, though. Sakura and I are making cinnamon rolls for the competition, and I want to make sure my recipe is going to work."
@@ -3842,7 +3839,7 @@ label PRG016:
     "I undid my buttons, and as I did, I noticed my hands were clammy and cold, trembling as I fumbled with the buttons again."
     "I almost asked myself aloud why I was so nervous, but I bit my tongue before I even opened my mouth. I knew why."
     "My talk with Alice still rang clear in my skull. It was deep, and now clung to me like a magnet to metal."
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         "Aida was a great friend, and I loved what we had."
         "But, I wanted to see... maybe we could even be more."
         "It sounded cheesy, like every dumb romance show I'd ever seen, but it was true."
@@ -3906,7 +3903,7 @@ label PRG016:
     MC "I don't know. Passing you guys secret information about the other teams?"
     PRG "But... w-what's there to know?"
     MC "That's classified, Ma'am."
-    if getAffection("PRG") > 5:
+    if checkAffection("PRG", ">", 5):
         PRG "I..."
         show PRG happy
         "The lights suddenly clicked on in her head."
@@ -3924,7 +3921,7 @@ label PRG016:
     PRG "Well, the different competition rounds are split up so two teams will be competing at once, head to head."
     Sakura "The winner gets some points, which are added to a running total. That'll determine the participants of the final rounds of competition later on in the year."
     MC "I see. Well, I'm excited to watch. What are you guys making?"
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         PRG "Cinnamon rolls. R-Remember I told you the other day?"
         MC "Oh, I definitely do. Your recipe worked out, I take it?"
         Sakura "Worked out? God, yeah. I haven't tasted cinnamon rolls like that since... ever."
@@ -4167,7 +4164,7 @@ label PRG016:
     play music PRG
     PRG "T-These are for you."
     MC "Wha- are you sure? These are the fruits of your labor, Kodama-san! You have to celebrate with them!"
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         PRG "I-I know... b-but I'd like you to have them."
         show PRG unique
         PRG "I wouldn't... I wouldn't have done this if it wasn't for you."
@@ -4220,7 +4217,7 @@ label PRG016:
 
     scene black with fade
     "The two of us went off for lunch together."
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         "We talked the entire time, barely a moment of silence between the two of us."
         "And, of course, I forced Aida to share the cinnamon rolls with me."
         jump daymenu
@@ -4315,7 +4312,7 @@ label PRG017:
     else:
         "I hadn't spent a ton of time here yet, but from what I had seen, this place almost always was quiet and peaceful."
     "I was actually pretty excited to draw."
-    if getSkill("Art") > 1:
+    if checkSkill("Art", ">", 1):
         "I'd just picked up a sketchbook during a recent run into town, and I was really excited to try it out."
     else:
         "I wasn't the next up and coming artist, but I could draw decently well. At least, enough to look like I'd held a pencil before."
@@ -4410,7 +4407,7 @@ label PRG017:
     "The eraser on the pencil was practically nonexistent, indicating the use that the utensil got."
     "She turned to a clean page near the back of the sketchbook and sat with her legs off to her side, only then looking over at me."
     PRG "D-Do you have something to draw on?"
-    if getSkill("Art") > 1:
+    if checkSkill("Art", ">", 1):
         MCT "She looks so... natural."
         pause .25
         PRG "H-Hotsure-san?"
@@ -4541,7 +4538,7 @@ label PRG017:
         show PRG scared
         PRG "Y-Y-You're drawing... m-me?!"
         MC "Mhm! Don't move too much though! I don't wanna mess up."
-        if getAffection("PRG") > 6:
+        if checkAffection("PRG", ">", 6):
             show PRG flattered
             "Aida's cheeks were completely scarlet, but she nodded and looked back at her sketchbook."
         else:
@@ -4549,7 +4546,7 @@ label PRG017:
             "Aida looked like she was going to say something, then looked down, and went back to her drawing, albeit with now far shakier hands."
         hide PRG with dissolve
         "As I finished my sketch of her general form, I moved back up to her head to start on details."
-        if getAffection("PRG") > 6:
+        if checkAffection("PRG", ">", 6):
             show PRG unique-happy with dissolve
         else:
             show PRG sad-2 with dissolve
@@ -4570,7 +4567,7 @@ label PRG017:
                 show PRG flattered
                 PRG "H-Hotsure-san..."
                 MC "Shh... don't move."
-                if getAffection("PRG") > 6:
+                if checkAffection("PRG", ">", 6):
                     show PRG aroused
                     "Aida was blushing even brighter now, but she looked back down to draw, leaving the flower in its place."
                     "I drew some lines for her hair, then moved down into her face. I drew the one bigger piece of hair that cut down between her eyes, then drew her eyes around it."
@@ -4975,7 +4972,7 @@ label PRG018:
     "Luckily for me, I had the perfect way to take my mind off of important schoolwork, and I took relief glances at Aida whenever my brain started to feel heavy with knowledge."
     pause .5
     "So, about every other minute."
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         "Most of the time, she was facing front, her head buried in her notebook, likely copying down every word that flowed off of Tashi-sensei's... tongue."
         "However, a few times, I'd caught her glancing over at me, as well."
         "This turned into both her and I breaking the gaze immediately, lest we be caught giving the other participant angel-eyes."
@@ -4983,7 +4980,7 @@ label PRG018:
         "Aida, as expected, kept her head down and in her notebook, diligently jotting down note after note."
         MCT "How does she manage to pull pages of information out of this?"
     "As a whole though, I'd been feeling pretty decent about Aida as of late."
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         "However, our little mini-drawing workshop had really given me a new perspective on things."
         "In general, Aida was, very gradually, opening up to me."
         "It felt similar in many ways to feeding a fish. After a while, the fish gets to know you and knows that you only have good intentions in store."
@@ -4994,23 +4991,23 @@ label PRG018:
         "It wasn't like we were on bad terms. Far from it, in fact. We were actually getting to know each other fairly well."
         "Though, there were definitely times where I could've played my cards better."
         "And, it was far and away more my fault. I'd been given the proper hand most times. I just couldn't seem to lay them down properly."
-    if getSkill("Art") > 1:
+    if checkSkill("Art", ">", 1):
         "I'd also learned that I was a pretty decent artist, so that was nice, too."
-        if getAffection("PRG") > 7 and getFlag("PRG017_flower"):
+        if checkAffection("PRG", ">", 7) and getFlag("PRG017_flower"):
             "I had definitely overstepped with the flower-in-hair thing."
             "However, life goes on. And, if Aida held a grudge, I sure didn't see it."
     play sound Bell
     "The bell rang throughout the classroom, shaking me out of my daydream-esque recollection."
     "I put my bag in my lap and started loading my supplies into it without any care as to the organization of it."
     MCT "Organization is for the weak."
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         PRG "H-Hello, Hotsure-san."
         show PRG neutral with dissolve
     else:
         PRG "H-Hi... Hotsure-san."
         show PRG unique with dissolve
     "I looked up. Aida was standing in the aisle, close to my desk."
-    if getAffection("PRG") > 6:
+    if checkAffection("PRG", ">", 6):
         "She looked at me with her usual soft, gray eyes, and smiled."
     else:
         "She wouldn't meet my eyes."
@@ -5588,7 +5585,7 @@ label PRG019_c1_1:
     hide Sakura with dissolve
     "Aida turned back to me. Her cheeks were red, but she looked up at me."
     pause .3
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         show PRG unique-happy
         PRG "I-I'd love to go..."
     else:
@@ -5710,7 +5707,7 @@ label PRG019_c1_1:
     MCT "File that mental note under VIP. Very Important Place."
     "Reaching the end of the block, we turned and immediately spotted a tiny ice cream parlor tucked between two shops."
     show PRG neutral
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         PRG "Um... w-would you...{w} like to get some ice cream?"
     else:
         PRG "Um... c-could we stop for some ice cream?"
@@ -5739,7 +5736,7 @@ label PRG019_c1_1:
     MC "Alright."
     MC "Here's to Aida Kodama and Sakura Myoga. May they destroy the competition in the future."
     "I held my ice cream up like a rich business tycoon giving a toast."
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         "Aida giggled beside me."
     else:
         "Aida smiled, but stayed quiet."
@@ -5811,7 +5808,7 @@ label PRG019_c1_1:
     show PRG neutral
     PRG "I... I think it's just that you aren't familiar with the words for it."
     MC "Well, you're more than welcome to try mine if you'd like. Show me how a proper description of mint ice cream is done."
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         show PRG flattered
         "Aida blushed and looked at my cone."
         PRG "A-Are you sure?"
@@ -5876,7 +5873,7 @@ label PRG019_c1_1:
     PRG "S-So... is it okay if we go back now?"
     MC "Oh, no problem at all."
     MC "The town is only a bus ride away, anyway. If you wanted to, you could come visit anytime you'd like."
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         PRG "I'd love to.{w} But... would you come with me?"
         MC "Be delighted to!"
         PRG "O-Okay."
@@ -5993,7 +5990,7 @@ label PRG019_c1_1:
     MCT "Nice to know I'm not the only nervous one."
     PRG "I-I've...{w} never been on a... d-date before."
     MC "How would you rate it then? Was it a nice first date experience?"
-    if getAffection("PRG") > 7:
+    if checkAffection("PRG", ">", 7):
         PRG "Y-Yeah. It was really nice."
     else:
         PRG "I-I had fun..."
@@ -6185,7 +6182,7 @@ label PRG020:
     MC "Wait... an issue? She isn't in trouble or anything, right?"
     WG "Trouble? Oh, no. Far from it, in fact."
     WG "She simply hasn't been acting like herself as of late, and I was curious if you might know why."
-    if getAffection("PRG") > 9:
+    if checkAffection("PRG", ">", 9):
         WG "You two have been spending quite a good deal of time together as of late."
     else:
         WG "You two have gotten to know each other quite well as of late."
@@ -9220,7 +9217,7 @@ label PRG026:
     MC "Okay..."
     pause .25
     MC "Kodama-san, I need to come clean with you."
-    if getAffection("PRG") > 9:
+    if checkAffection("PRG", ">", 9):
         MC "This weekend... it meant so much to me."
     else:
         MC "This weekend... it was very special."
@@ -10556,7 +10553,7 @@ label PRG028:
     "She leaned forward with one hand to slide her shoe off as I threw all of my discarded pants into the laundry... well, now the laundry heap."
     PRG "Ach... mm..."
     MC "Kodama-san? Would you like a hand?"
-    if getAffection("PRG") > 10:
+    if checkAffection("PRG", ">", 10):
         show PRG nervous
         pause .5
         PRG "Um... {w}c-could you, please?"
@@ -10723,7 +10720,7 @@ label PRG028:
     MC "Completely, Kodama-san. I could eat now too."
     show PRG neutral
     "I walked over to the door and grabbed Aida's shoes, plus my own."
-    if getAffection("PRG") > 10:
+    if checkAffection("PRG", ">", 10):
         MC "Would you like a hand getting your shoes back on?"
         PRG "I-I can get them back on. T-Thank you, though."
         MC "Sure."
@@ -12929,7 +12926,7 @@ label PRG030:
     #flip Takamura sprite, slide back to normal position
     Takamura "Now. If you two would come with me, please."
     "Takamura set off down the hall. The two of us followed her along."
-    if getAffection("PRG") > 9:
+    if checkAffection("PRG", ">", 9):
         "I silently reached out and took Aida's hand. And in return, I received a very tight squeeze from Aida."
         "Beside me, she looked pale. As if all essence of life and vibrance had just left her."
     else:
@@ -13401,7 +13398,7 @@ label PRG031:
             "I took a board and laid it down, then grabbed a knife from the block."
             pause .25
             MCT "Okay..."
-            if getSkill("Academics") > 1:
+            if checkSkill("Academics", ">", 1):
                 "I started by cutting the base of the onion and peeling the top papery layers away."
                 "I left the root as it was. I'd heard that cutting it would make the onion infinitely worse in the 'causing tears that feel like liquid acid in your eye socket' department."
                 MC "Ach..."
@@ -13929,7 +13926,7 @@ label PRG032:
     show PRG worried
     PRG "I... I guess I do..."
     Nurse "Now, did you have any questions for me before we get started, Hotsure-san?"
-    if getAffection("PRG") > 11:
+    if checkAffection("PRG", ">", 11):
         MC "Yes, I actually do."
         pause .25
         MC "How can I best help Aida as she progresses along? Is there anything that I should or shouldn't do?"
@@ -15125,7 +15122,7 @@ label PRG033_c2:
     "I got down onto one knee and took Aida's foot in hand, then got her shoe on."
     "She lightly tapped her foot on the floor to adjust, then put up her other one."
     "Once her second shoe was on, Aida looked up to me."
-    if getAffection("PRG") > 9:
+    if checkAffection("PRG", ">", 9):
         show PRG neutral
         "Aida held one hand out to me."
         "I smiled at her, took her hand, and gave her a small pull."
@@ -15542,7 +15539,7 @@ label PRG034:
     PRG "S-S-Sakura-san! P-Please!"
     Sakura "Oh, I'm only kidding! But seriously, congrats you guys! You two are going to be amazing parents, not to mention that those kids are going to be spoiled rotten from all of the amazing food they'll have!"
     "Sakura nudged Aida playfully in the side."
-    if getAffection("PRG") > 18:
+    if checkAffection("PRG", ">", 18):
         MC "Thank you, Sakura-san. We're both going to do our absolute best, right Aida?"
         "As I put my hand out to Aida, she leapt at the opportunity to get out of Sakura's reach, and came to stand next to me, resting her hand in mine."
         show PRG happy
@@ -15847,7 +15844,7 @@ label PRG035:
     MC "You've got me there. Maybe something happened yesterday that really threw her over the edge? Do you know if she has any events coming up with the choir?"
     PRG "Not that I know of. If something did happen yesterday, it would explain the random conversation coming out of nowhere."
     MC "All things considered, it's probably best for us to put it out of our minds. If she needs something, I'm sure she'll come to you for advice."
-    if getAffection("WG") > 8:
+    if checkAffection("WG", ">", 8):
         PRG "Yeah, but she could very well come to you too. S-She's mentioned before that she sees you as a trustworthy person."
         MC "Really? She said that?"
         PRG "Yeah... she did..."
@@ -16166,7 +16163,7 @@ label PRG036_c1_after:
     PRG "All right, I guess. B-But, I usually don't talk about my past that often."
     "I blinked. Come to think of it, what did I actually know about Aida from before she came to the academy? Well, her dad and mom met at a baseball game, her whole family loves the Koi, and... was that all?"
     MC "Well, I... what's there to know?"
-    if getAffection("PRG") > 14:
+    if checkAffection("PRG", ">", 14):
         "Aida released her arms and looked at me sadly."
         PRG "If... If I tell you this... do you promise to never tell anyone? Not a soul?"
         "I didn't even have to think."
@@ -16281,7 +16278,7 @@ label PRG036_c1_after:
     MC "W-Wait. You pulled an all nighter?"
     PRG "Mhmm..."
     "I shook my head and went to Aida's bedside, pulling her sheets back into place. I adjusted her comforter and placed her pillows back against the headboard."
-    if getAffection("PRG") > 17:
+    if checkAffection("PRG", ">", 17):
         "I set my shoes next to her bed and slid under Aida's covers, patting the sheets next to me."
         MC "Come here."
         "Aida looked at her bed warily before laying down in her bed next to me, not even bothering to change out of her uniform beforehand. I rested my arm on her pillow as she laid down, pulling her in until her head came to rest on my chest."
@@ -16592,42 +16589,42 @@ label PRG037:
 
     scene Hallway with fade
     "I sidled out of the room and walked off down the hall. After sitting in that room for most of the day and having to smell all of those delicious entrees, my stomach was crying for substance. Maybe the cafeteria would have some ramen or something."
-    if getAffection("PRG") <= 17:
+    if checkAffection("PRG", ">", 17):
+        scene Dorm Interior with fade
+        play music HigherEdu
+        $setFlag("PRG037_pass")
+        "After I had gorged myself on cheap cafeteria ramen and doused my mouth with water afterwards to clear my system of god knows how much extra sodium, I went back to my dorm, ready to slip away into a college style food coma."
+        "My bed had never looked more heavenly as I flopped face first into it."
+        MCT "Ah, sweet sanctuary."
+        "I sat up on my bed and was about to pull my shoes off when I glanced over at my desk."
+        "Now, my desk was always a complete hodge podge of different papers and homework assignments that needed doing, but my eyes landed on a light purple binder that jutted out from the bottom of the stack."
+        "I'd had it since before the school year had even begun. I had read my class assignment sheet wrong before going to the store, so I accidentally bought an extra binder, which now just sat there collecting dust."
+        MCT "Wait..."
+        "I crawled from my bed and went to my desk. I grabbed the edge of the dust covered binder and yanked it from beneath the pile of papers, sending a few sheets flying across my room."
+        MC "Yeah, this'll work."
+        "I grabbed a sticky note from my desk and my nearest pen. I wrote in big letters across the note: 'Fill me with your best recipes!' and stuck it to the front of the binder, dusting it off as I did so."
+
+        scene Dorm Exterior with fade
+        "In a flash, I was out the door again. I knew that I had to work fast, especially since Aida and Sakura were working on dishes together, so I knew they'd be done much quicker than usual."
+        "I raced across the path between the two dorms, holding the note down tightly."
+        "I rounded the corner and darted down the hall until I had reached Aida and Alice's room. Panting as if I'd just ran a half marathon, I leaned the binder against the door and knocked. I was nearly out of the hallway when I heard a door open behind me."
+        WG "Hotsure-san?"
+        show WG surprised with dissolve
+        "I spun around. Alice stood in the hallway, my binder in hand."
+        MC "Eheheh... Um, could you give that to Kodama-san? And... you didn't see me here, okay?"
+        show WG neutral
+        "To my surprise, Alice winked at me and chuckled to herself."
+        WG "Never saw a thing."
+        hide WG with dissolve
+        "She nodded to me before going back into her room. I breathed a sigh of relief as I turned back around and went down the path toward the boy's dorms."
+
+        scene Dorm Interior with fade
+        "I flung my door open and, as I had before, face planted straight into bed. I had that sort of half lovesick butterflies, half nerves and anxiety butterflies feeling going on. I hoped that she wouldn't think that my gift was too cheap or anything."
+        "Rather than laying there and stewing on it, I hauled myself up and changed into my pajamas, which, as is the case most nights, consisted of my boxers. I half assed my way through brushing my teeth and did a quick run through my hair before laying down in bed."
+        "I pulled my phone out and loaded up a video to fall asleep to. Turns out, I didn't even make it halfway through before I passed out."
         jump daymenu
-
-    scene Dorm Interior with fade
-    play music HigherEdu
-    $setFlag("PRG037_pass")
-    "After I had gorged myself on cheap cafeteria ramen and doused my mouth with water afterwards to clear my system of god knows how much extra sodium, I went back to my dorm, ready to slip away into a college style food coma."
-    "My bed had never looked more heavenly as I flopped face first into it."
-    MCT "Ah, sweet sanctuary."
-    "I sat up on my bed and was about to pull my shoes off when I glanced over at my desk."
-    "Now, my desk was always a complete hodge podge of different papers and homework assignments that needed doing, but my eyes landed on a light purple binder that jutted out from the bottom of the stack."
-    "I'd had it since before the school year had even begun. I had read my class assignment sheet wrong before going to the store, so I accidentally bought an extra binder, which now just sat there collecting dust."
-    MCT "Wait..."
-    "I crawled from my bed and went to my desk. I grabbed the edge of the dust covered binder and yanked it from beneath the pile of papers, sending a few sheets flying across my room."
-    MC "Yeah, this'll work."
-    "I grabbed a sticky note from my desk and my nearest pen. I wrote in big letters across the note: 'Fill me with your best recipes!' and stuck it to the front of the binder, dusting it off as I did so."
-
-    scene Dorm Exterior with fade
-    "In a flash, I was out the door again. I knew that I had to work fast, especially since Aida and Sakura were working on dishes together, so I knew they'd be done much quicker than usual."
-    "I raced across the path between the two dorms, holding the note down tightly."
-    "I rounded the corner and darted down the hall until I had reached Aida and Alice's room. Panting as if I'd just ran a half marathon, I leaned the binder against the door and knocked. I was nearly out of the hallway when I heard a door open behind me."
-    WG "Hotsure-san?"
-    show WG surprised with dissolve
-    "I spun around. Alice stood in the hallway, my binder in hand."
-    MC "Eheheh... Um, could you give that to Kodama-san? And... you didn't see me here, okay?"
-    show WG neutral
-    "To my surprise, Alice winked at me and chuckled to herself."
-    WG "Never saw a thing."
-    hide WG with dissolve
-    "She nodded to me before going back into her room. I breathed a sigh of relief as I turned back around and went down the path toward the boy's dorms."
-
-    scene Dorm Interior with fade
-    "I flung my door open and, as I had before, face planted straight into bed. I had that sort of half lovesick butterflies, half nerves and anxiety butterflies feeling going on. I hoped that she wouldn't think that my gift was too cheap or anything."
-    "Rather than laying there and stewing on it, I hauled myself up and changed into my pajamas, which, as is the case most nights, consisted of my boxers. I half assed my way through brushing my teeth and did a quick run through my hair before laying down in bed."
-    "I pulled my phone out and loaded up a video to fall asleep to. Turns out, I didn't even make it halfway through before I passed out."
-    jump daymenu
+    else:
+        jump daymenu
 
 label PRG038:
     $setProgress("PRG", "PRG039")
@@ -16792,7 +16789,7 @@ label PRG038:
     MC "No need for apologies. You beat me fair and square. That was, like, crazy impressive though!"
     PRG "I never miss a game. It's one of the few things I'd call myself a master of."
     MC "Clearly for a good reason."
-    if getAffection("PRG") > 15:
+    if checkAffection("PRG", ">", 15):
         jump PRG038_testpass
     else:
         jump PRG038_testfail
@@ -16950,7 +16947,7 @@ label PRG039:
     PRG "Okay! I'll meet you there!"
     hide PRG with dissolve
     "Aida smiled genuinely as she left the room."
-    if getAffection("PRG") > 26:
+    if checkAffection("PRG", ">", 26):
         "A warm feeling permeated through me. Even with all of the craziness that had been accenting our lives lately, things were going great, at least in my eyes."
         "Aida finally seemed like she was loosening up around me a bit, especially compared to how she had been when I first met her."
         scene Hallway with fade
@@ -17555,7 +17552,7 @@ label PRG041:
     show PRG unique with dissolve
     PRG "K-Keisuke..."
     "I looked up and caught her straight in the eye, before looking down at her. It was obvious now why she had come to the infirmary."
-    if getAffection("PRG") > 35:
+    if checkAffection("PRG", ">", 35):
         MC "Aida, I know how scared you probably feel. But, I want to say that no matter what, I'm with you all the way for this. No matter what."
         PRG "B-But... I don't know if I can handle this, Keisuke. I-I knew I was prone to multiples, but... I never expected five."
         MC "You're a strong girl, Aida. One of the strongest I've ever met, in fact. And I know for a fact that you're going to be an incredible mother, whether you're the mother to two kids or to two thousand kids."
@@ -17615,7 +17612,7 @@ label PRG042:
     "Across the room, Aida slid out from her desk as carefully as she could, taking every precaution to protect her belly."
     "She loaded all of her papers and folders into what looked like a new purse/satchel hybrid and walked across the room towards me, taking care to not bump into anything."
     show PRG neutral with dissolve
-    if getAffection("PRG") > 34:
+    if checkAffection("PRG", ">", 34):
         MC "Afternoon, my dearest."
         PRG "D-Dearest? T-That's new."
         MC "Gotta keep you on your toes. Plus, every girl deserves a pet name from her boyfriend, no?"
@@ -17957,7 +17954,7 @@ label PRG043:
     show PRG surprised at center with dissolve
     play music PRG
     "Aida tore one of the envelopes open faster than a paper shredder and scanned the letter over carefully. Alice moved over to her side of the dorm, giving us privacy."
-    if getAffection("PRG") > 34:
+    if checkAffection("PRG", ">", 34):
         PRG "I-I don't believe it! I-I..."
         show PRG happy
         PRG "K-Keisuke, read this!"
@@ -18005,7 +18002,7 @@ label PRG043:
     PRG "This is... ¥45000! T-That's so much!"
     "Aida counted through it once more, as if looking through it again would somehow make it more real. I thought about her reaction, and given her financial background, I doubted that she'd ever had this much money to herself all at once."
     PRG "I-I don't believe it! Why would she send me this much?!"
-    if getAffection("PRG") > 34:
+    if checkAffection("PRG", ">", 34):
         MC "I think she just really wants you to enjoy yourself. I mean, she said so in her letter, right?"
         show PRG unique
         PRG "I mean, yes, but... I don't even know what to do with all of this..."
@@ -18062,7 +18059,7 @@ label PRG043_c1_after:
     PRG "Yep! I'll see you then!"
     hide PRG with dissolve
     "Aida went to get the door for me as I hiked my bag onto my back. Just as I was about to walk out the door, Aida took my hand and squeezed it. She leaned over and whispered to me so Alice couldn't hear."
-    if getAffection("PRG") > 36:
+    if checkAffection("PRG", ">", 36):
         show PRG neutral with dissolve
         PRG "J-Just so you know... I'm really happy."
         PRG "Like, I've never been happier."
@@ -18495,7 +18492,7 @@ label PRG045:
     "I rounded the corner from the cafeteria and took off down the hall, almost in a full sprint."
 
     scene Dorm Exterior with fade
-    if getSkill("Athletics") > 4:
+    if checkSkill("Athletics", ">", 4):
         "I reached the dorms in no time at all and hurried toward Aida and Alice's door, knocking on it hard."
     else:
         "By the time I reached the dorms, I was panting up a storm. Still, I went to Aida and Alice's door and pounded on it, desperately trying to catch my breath before the door opened."
@@ -18508,7 +18505,7 @@ label PRG045:
     with fade
     "Alice hurried me through the door. Across the room, the bathroom door was slightly ajar, and the sounds of sobbing echoed into the room."
     WG "Kodama-san? Hotsure-san is here. I will be back with you in a moment."
-    if getAffection("PRG") > 42:
+    if checkAffection("PRG", ">", 42):
         jump PRG045_c1_pass
     else:
         jump PRG045_c1_fail
@@ -19249,7 +19246,7 @@ label PRG047:
     MC "Eh, hey? What's up?"
     "I raised an eyebrow. Daichi almost never greeted me, much less so normally."
     RM "I was curious. How have things been with Kodama-san?"
-    if getAffection("PRG") > 30:
+    if checkAffection("PRG", ">", 30):
         MC "Things have been great. It's been really nice getting to know her better."
     else:
         MC "They've been all right. To be fair, every couple has their hard times, but I think we work out okay."
@@ -20002,7 +19999,7 @@ label PRG050:
     menu:
         "Go back and review the first three pages.":
             jump PRG050_c1_1
-        "Keep going." if getSkill("Academics") >= 5:
+        "Keep going." if checkSkill("Academics", ">=", 5):
             "Ignoring the nagging in my stomach, I pressed on. It was probably best to stick to my guns on my answers, and not second guess my original answers."
             jump PRG050_c1_after
 
@@ -21522,7 +21519,7 @@ label PRG055A:
     MC "Yes, ma'am!"
     "Sakura took a seat at the nearby table, and Aida sprung into action, opening a cupboard and retrieving a smaller salad bowl. She hustled to the fridge and came back with two fresh avocados."
     PRG "Okay. Do you know how to cut an avocado for a salad?"
-    if getSkill("Art") > 3:
+    if checkSkill("Art", ">", 3):
         MC "Of course!"
         hide PRG with dissolve
         hide Sakura with dissolve
@@ -21904,7 +21901,7 @@ label PRG055C:
     "I stopped outside of the girl's dorm and hit Aida with the 'I'm here' text. I took one last look down at my printed off recipe for chicken dumplings and sighed, cramming the paper back into my pocket."
     "Once again, Aida had clobbered me in baseball. Every pitch I'd tried to throw was hit, resulting in at least a double from each batter. And, whereas I was giving it my all, Aida was barely even trying to score on me."
     "Needless to say, she'd brought new meaning to the phrase 'getting shut out.'"
-    if getSkill("Art") > 4:
+    if checkSkill("Art", ">", 4):
         "I ran over the recipe once more in my head. I knew a bit about cooking, but compared to Aida, I was nothing. It was like comparing a fast food employee to a head chef at a five star restaurant."
         "The main difference from that analogy, though? Fast food tastes amazing after a certain time. Maybe I'd be better waiting till after like nine o'clock to cook for her."
     else:
@@ -22372,7 +22369,7 @@ label PRG056B:
     PRG "Yeah! Wait... where are you, Keisuke?"
     MC "Outside! I didn't check my email! I literally ran all the way to the classrooms!"
 
-    if getAffection("PRG") > 30:
+    if checkAffection("PRG", ">", 30):
         PRG "Well, why don't you just come over here? You can dry off and we can sort through the cards you got me, like we planned."
         MC "I'll be right there!"
         "I hung up the phone and, hugging the wall like a close relative, shimmied my way along it toward Aida's dorm. Her dorm was only around halfway down the building, and it was on the first floor, so I didn't have too far to go."
@@ -22510,7 +22507,7 @@ label PRG056B:
     PRG "Oh!!"
     show PRG aroused
     PRG "That's... just fine."
-    if getAffection("PRG") > 37:
+    if checkAffection("PRG", ">", 37):
         "Chuckling to myself, I worked my boxers off of me, being careful of my dressings. I took the boxers and hung them on the side of the tub by my other clothes."
         PRG "Oh..."
         PRG "I never dried down there, did I?"
@@ -23430,7 +23427,7 @@ label PRG057A_c1_after:
     MC "Was that..."
     PRG "A-A kick!"
     show PRG excited
-    if getAffection("PRG") > 30:
+    if checkAffection("PRG", ">", 30):
         PRG "Our babies are kicking!"
         "Aida squealed happily, running her hands in the same spot. Just like for me, she felt the same feeling. This time, I could've sworn that I saw her belly shift ever so slightly."
     else:
@@ -23582,7 +23579,7 @@ label PRG057B:
         "I took the card from the bag and laid it on my desk. Flipping it open, I took in the blank white paper before me."
         MCT "Ah. The open canvas."
         "Thinking for a moment, I went through a few possible ideas in my head, before putting my pen to the paper and starting in."
-        if getSkill("Art") > 4:
+        if checkSkill("Art", ">", 4):
             Card "Aida. I know how hard today must be for you. These competitions have become such a huge part of your daily life, and it's been so interesting to watch you learn and grow."
             Card "I can see it in your eyes when you cook. The hunger, not for the food in the pan before you, but for the knowledge and skill that you receive from each and every practice session."
             Card "With quarterfinals coming up soon, I'm sure that the contests and your cooking and meal choices for it are all that have been on your mind. But, there's something that I hope you know without any doubt."
@@ -24312,7 +24309,7 @@ label PRG058:
             MC "Just open it up."
             "Aida dug her fingernail under the flap and tore open the envelope. She did this incredibly neatly, not tearing the main body at all, and only getting the flap."
             "She pulled out my card, opening it and reading."
-            if getSkill("Art") > 4:
+            if checkSkill("Art", ">", 4):
                 show PRG sad-2
                 PRG "I... wow."
                 PRG "Keisuke, I... I don't know what to say."
@@ -24608,7 +24605,7 @@ label PRG058:
     show PRG unique
     PRG "Well... I just wanted to know how it feels."
     PRG "I don't think you'd be able to pick me up when I'm out of the water."
-    if getSkill("Athletics") > 5:
+    if checkSkill("Athletics", ">", 5):
         MC "Wanna bet?"
         PRG "I-I... are you sure?"
         MC "Mhm. I'll prove it."
@@ -24792,7 +24789,7 @@ label PRG059:
     PRG "So did I, but I guess it's more real than I thought. And with all this time off lately, I got used to eating whenever I wanted, and just being able to snack if it wasn't near a mealtime."
     MC "And on top of that increased hunger, you couldn't have breakfast this morning."
     PRG "Yeah. I wanted to..."
-    if getAffection("PRG") > 37:
+    if checkAffection("PRG", ">", 37):
         "Aida came around the table and sat beside me on the bench, not even looking as her belly knocked the table out and away from me."
         "My noodles thankfully remained happily in their bowl."
         show PRG unique
@@ -25248,7 +25245,7 @@ label PRG060:
     MC "Great."
     "I glanced up at the clock. We still had a few minutes until class would officially start."
     MC "So... when did this happen?"
-    if getAffection("PRG") > 40:
+    if checkAffection("PRG", ">", 40):
         PRG "I-I could kind of feel it coming, I guess. Like, over the last few days.
         I know this probably sounds a little strange, but it almost felt like my uterus was getting tighter."
         "Aida looked at the other girls to make sure they weren't eavesdropping, then motioned me closer."
@@ -25372,7 +25369,7 @@ label PRG061:
     show PRG unique
     PRG "Right..."
     "Aida went back to her clipboard and lifted her arm to write."
-    if getAffection("PRG") > 45:
+    if checkAffection("PRG", ">", 45):
         "The way she had to write now didn't exactly look comfortable. I tried to imagine writing on my own swollen body part, before immediately shoving that idea out of my head."
         MC "Would you like me to write for you?"
         "Aida looked down at the paper."
@@ -25474,7 +25471,7 @@ label PRG061:
             Nurse2 "The fact of the matter is, we simply aren't equipped for that sort of thing here. Most hospitals have full floors dedicated to women and infants. We have this side room with our ultrasound machine, and that's basically it."
             MC "So, Aida and I would be flown there or something?"
             Nurse2 "Let's worry about that when the time draws closer. But, yes. Something along those lines."
-        "Is it safe for us to have sex?" if getAffection("PRG") > 44:
+        "Is it safe for us to have sex?" if checkAffection("PRG", ">", 44):
             MC "Is it safe for us to have sex?"
             show PRG surprised
             PRG "KEISUKE!"
@@ -25684,7 +25681,7 @@ label PRG061:
         PRG "It definitely sounded like you did..."
         MC "Aida, I don't want to give up. On you or the babies. I..."
         MC "I don't have an excuse for how I acted before. I was scared. I still am, I guess."
-        if getAffection("PRG") > 30:
+        if checkAffection("PRG", ">", 30):
             MC "But, you mean far too much to me. I'm not running."
             MC "I'd not only lose my kids, but I'd lose you too."
             show PRG nervous
@@ -25726,7 +25723,7 @@ label PRG062:
     else:
         "Nervously, I trudged up to Aida's door, and after briefly considering running back to my dorm and diving into bed, I knocked on her door."
     "Behind the door, I heard a noise that sounded like something falling, then some muttering from inside."
-    if getAffection("PRG") > 40:
+    if checkAffection("PRG", ">", 40):
         PRG "Keisuke?"
         MC "Yep!"
         PRG "Come in!"
@@ -25800,7 +25797,7 @@ label PRG062:
     MC "..."
     PRG "..."
     MC "Look... no matter what my parents say..."
-    if getAffection("PRG") > 35:
+    if checkAffection("PRG", ">", 35):
         "Aida reached over and held my hand, rubbing the back of my hand with her thumb."
         PRG "I know."
         MC "Okay... let's do this."
@@ -25830,7 +25827,7 @@ label PRG062:
     MomCell "Been feeling tired at all? Or any morning sickness?"
     PRG "I've been making sure to get enough sleep each night. My roommate makes sure of that, too."
     PRG "As for morning sickness, I had that for about a week earlier on. But, it's been gone for awhile now."
-    if getAffection("PRG") > 40:
+    if checkAffection("PRG", ">", 40):
         MC "You only brought that up that one time!"
         show PRG neutral
         PRG "Well, it's not exactly something that's fun to talk about in a new relationship!"
@@ -25876,7 +25873,7 @@ label PRG062:
     "Alice waddled across the room and out the door, leaving Aida and I together."
     "I opened my camera app and laid the ultrasounds out on the bed. I set them together to try and get them all in frame."
     "The digital shutter clicked, and I put away the photos, setting them on Aida's desk before sitting down."
-    if getAffection("PRG") > 45:
+    if checkAffection("PRG", ">", 45):
         show PRG worried
         PRG "Wait... before you send that..."
         "Aida grunted and got to her feet, a process which took a little over ten seconds. Aida walked in front of me and turned sideways."
@@ -25931,7 +25928,7 @@ label PRG062:
     MC "Mom, you went and made Aida start crying now."
     MomCell "Oh, honey! I didn't-"
     PRG "It's okay, Ma'am. It's a happy cry."
-    if getAffection("PRG") > 45:
+    if checkAffection("PRG", ">", 45):
         MomCell "Now, Kodama-san. I mean no offense when I ask this, but how is your back holding up?"
         show PRG happy
         "Aida burst out laughing, her tummy shaking as she giggled."
@@ -25966,7 +25963,7 @@ label PRG062:
     "Aida shook her head."
     PRG "No. You help give me strength. And, I hope I can give you some semblance of it too."
     MC "Of course, you do. More than I could've ever imagined."
-    if getAffection("PRG") > 45:
+    if checkAffection("PRG", ">", 45):
         MC "Also, would you mind if I save that picture? It's pretty sexy."
         show PRG satisfied
         PRG "Dork..."
@@ -26026,7 +26023,7 @@ label PRG063:
     HR "There. As you can see, it's fully adjustable based on however much space is required."
     "In addition to the unique desk shape and the sheer customizability, the entire thing was also wider than most other desks. The attention to detail and care put into the desk was astounding."
     MC "Wow. Yeah, I think this'll work out really well for her. But, why exactly are you telling me this, Sensei?"
-    if getAffection("PRG") > 38:
+    if checkAffection("PRG", ">", 38):
         HR "Simple. You two are very close, yes?"
         MC "Yeah? We're dating and having kids together."
         HR "Exactly. And, with this sort of a thing, many students have a hard time when they realize that they need special accommodations just to learn. To help alleviate this, it's best to have a trusted friend or someone close to help them come to terms with it."
@@ -26082,7 +26079,7 @@ label PRG063:
         MC "There we are. And if you need to get up, all you have to do is raise the desk."
         "Aida took her bag back from me and set it on the surface on her left. She pulled out a notebook and pencil and tried out her new desk."
         MC "What do you think?"
-        if getAffection("PRG") > 38:
+        if checkAffection("PRG", ">", 38):
             PRG "It's okay."
             show PRG unique
             PRG "I feel a little... awkward, though."
@@ -26221,7 +26218,7 @@ label PRG063:
     "Aida drifted closer to me until her torso was nearly touching mine."
     show PRG neutral
     PRG "You don't have to worry about me getting offended."
-    if getAffection("PRG") > 43:
+    if checkAffection("PRG", ">", 43):
         show PRG worried
         PRG "After we finished our homework last night, I stayed up thinking for a little while."
         show PRG unique
@@ -26304,7 +26301,7 @@ label PRG063:
     "I rubbed my eyes with a sigh."
     MC "Look, Aida just had an ultrasound a few days ago. And the results were... well, more than a little bit of a shock."
     "Tomo nodded, listening somewhat carefully from her bed."
-    if getAffection("PRG") > 44:
+    if checkAffection("PRG", ">", 44):
         MC "So, essentially-"
         show PRG worried
         PRG "I-I'm having 13 babies, Hotsure-san."
@@ -26378,7 +26375,7 @@ label PRG063:
     "Aida was blushing all shades of red beside me, but she was smiling."
     Tomoko "Come on. Don't tell me neither of you two have thought about that?"
     "I looked at Aida. It wasn't exactly something I hadn't thought about."
-    if getAffection("PRG") > 40:
+    if checkAffection("PRG", ">", 40):
         "Aida was a great girl. Fantastic even. She was willing to do almost anything for those she cared about, and she had the drive to improve herself, even when odds were against her."
         "And, she was carrying my kids. In a good number of cases, that came after marriage, but now wasn't the time to fret over the natural order of things."
     else:
@@ -26401,7 +26398,7 @@ label PRG063:
     PRG "Oh, and Keisuke?"
     MC "Eh?"
     show PRG unique
-    if getAffection("PRG") > 40:
+    if checkAffection("PRG", ">", 40):
         PRG "About the marriage thing..."
         PRG "Um... I'd like to get married someday. And..."
         PRG "E-Even if it wasn't for a long time, and w-we were older, I-I..."
@@ -26522,7 +26519,7 @@ label PRG064:
     show PRG worried
     PRG "Keisuke?"
     MC "Hm? What's up?"
-    if getAffection("PRG") > 37:
+    if checkAffection("PRG", ">", 37):
         show PRG unique
         PRG "Do you think we could walk just a little bit slower?"
         MC "Oh! Oh, sure!"
@@ -26602,7 +26599,7 @@ label PRG064:
     MC "Comfy? Ground feel okay under you?"
     "Aida simply nodded sweetly."
     PRG "I'm really comfy. And just..."
-    if getAffection("PRG") > 39:
+    if checkAffection("PRG", ">", 39):
         PRG "I'm really happy, Keisuke."
         PRG "Just... yeah. I don't really know how else to say it, but I just feel good."
         MC "I'm so glad to hear it."
@@ -26686,7 +26683,7 @@ label PRG064:
     "I shut the book gently and set it back in the bag."
     "Now, with one hand free, my free hand came up to Aida's head and held her against me, holding her close."
     "Neither of us spoke. We simply rubbed her belly together, sitting beside each other and listening to the sounds of the forest."
-    if getAffection("PRG") > 35:
+    if checkAffection("PRG", ">", 35):
         MC "I love you."
         PRG "I love you too, Keisuke. So much."
     else:
@@ -26757,7 +26754,7 @@ label PRG065:
     show PRG neutral
     PRG "I don't really like bragging, but I hope you like mine better."
     MC "Heh... we'll find out, I guess."
-    if getAffection("PRG") > 42:
+    if checkAffection("PRG", ">", 42):
         jump PRG065_pass
     else:
         jump PRG065_fail
@@ -27052,7 +27049,7 @@ label PRG065_fail:
     show PRG worried
     "Aida stepped back from the counter as I joined her, picking up the knife."
     "I looked over all of the vegetables before me, picking up the mushrooms to start."
-    if getSkill("Academics") > 6:
+    if checkSkill("Academics", ">", 6):
         MC "Okay, so I think I may have an idea of how to do this. But, you'll have to be careful."
         "Aida nodded intently, watching me."
         "I set the knife down, then centered a mushroom, and picked the knife back up. I wanted to simulate working with one hand as closely as possible."
@@ -27201,7 +27198,7 @@ label PRG065_fail:
     Sakura "Like... this blows my soup away. Holy cow."
     "Aida turned to me."
     PRG "What do you think, Keisuke?"
-    if getSkill("Art") > 5:
+    if checkSkill("Art", ">", 5):
         MC "Mmm..."
         MC "Okay. When I say this, I mean no offense to you at all, Myoga-chan."
         Sakura "Oh, of course. None taken."
@@ -27997,7 +27994,7 @@ label PRG030Z:
     "A bit later, I'd finished off my burger and was nibbling at my fries. Aida took the last bite of sandwich and sat back in her seat."
     MC "Would you like some fries?"
     "I slid forward my tray of french fries to her. I felt guilty just sitting here eating them in front of her."
-    if getAffection("PRG") > 20:
+    if checkAffection("PRG", ">", 20):
         show PRG unique
         PRG "But, they're yours. You paid for them."
         MC "And? That means that they're mine to share."
