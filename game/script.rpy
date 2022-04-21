@@ -703,6 +703,8 @@ init python:
             activenotifications
         except NameError:
             activenotifications = 0
+        if activenotifications < 0:
+            activenotifications = 0
         if activenotifications <= 4:
             activenotifications += 1
             renpy.show_screen("notification" + str(activenotifications), img)
@@ -1069,7 +1071,7 @@ screen notification5(img):
         background None
         add img
         at notif_transform
-    timer 4.8 action [Hide("notification5"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 4.8 action [Hide("notification5"), SetVariable("activenotifications", 0)]
 
 transform notif_transform:
     yalign -0.2
