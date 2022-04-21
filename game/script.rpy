@@ -1061,7 +1061,7 @@ screen notification4(img):
         background None
         add img
         at notif_transform
-    timer 4.6 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 4.6 action [Hide("notification4"), SetVariable("activenotifications", activenotifications - 1)]
 
 screen notification5(img):
     frame:
@@ -1069,7 +1069,7 @@ screen notification5(img):
         background None
         add img
         at notif_transform
-    timer 4.8 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 4.8 action [Hide("notification5"), SetVariable("activenotifications", activenotifications - 1)]
 
 transform notif_transform:
     yalign -0.2
