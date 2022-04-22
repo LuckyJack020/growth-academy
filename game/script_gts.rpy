@@ -2884,6 +2884,7 @@ label GTS022_scribe:
     "I sat back with the grass and dirt snaking around my palms, and I cast my eyes on high. Warm sighs of breezes came floating down on needles of sunlight. A hundred white-green leaves waved to a tune I couldn't hear."
     "So I closed my eyes, to let myself hear the birds, frogs, and cicadas; it seemed they had more to say than the students all around."
     if checkSkill("Art", ">", 2):
+        $setFlag("GTS022_artPass")
         MC "'Neath our thickest shade, your voice we oft have heard, yes... the noon o'er heaven."
         show AE happy with dissolve
         AE "Well!"
@@ -2911,7 +2912,7 @@ label GTS022_scribe:
     "I was, however slowly, realizing the challenge of maintaining a coherent flow on top of the various regulations Shiori so dutifully held us accountable for."
     "I leaned forward to think."
     MC "..."
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         extend " Skylark in her nest, never fearing the far earth, chirps up to the sun."
         "Another nod, another scribble."
     else:
@@ -2924,7 +2925,7 @@ label GTS022_scribe:
     "At the very least, I was not alone. Naomi leaned back against the tree in the muffled throes of ponderment."
     GTS "...Earth and sun and wind betwixt, gladly received, never missed."
     AE "Hotsure-san?"
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Let them to and fro, write their journeys on the wind bound from east to west."
     else:
         MC "Nutshell plunges, crack! Up again on mother's wings, her young ones to feed."
@@ -2961,7 +2962,7 @@ label GTS022_c4a:
     show GTS neutral at Transform(xzoom=-1) with dissolve
     MCT "Heh."
     MCT "Oh crap, they're staring. Uh..."
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Pray scatter the mist, you mountain wind among us, that the warmth be clean."
         show GTS neutral at Transform(xzoom=1) with dissolve
         "Naomi, suddenly roused to attention, gave me a gentle nod."
@@ -2987,7 +2988,7 @@ label GTS022_c4a:
 
 label GTS022_c5a:
     show AE neutral
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "So all has been drank, now let us straighten ourselves, for her, down below."
         GTS "Oh!"
     else:
@@ -3013,7 +3014,7 @@ label GTS022_c5a:
             jump GTS022_cutoff_a
 
 label GTS022_c6a:
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Eyes command the heart, but her temp'rance guides my feet down a peaceful road."
         show GTS embarrassed with dissolve
     else:
@@ -3165,6 +3166,7 @@ label GTS022_noscribe:
     "Some changeless minutes went by... admittedly, I wasn't sure how many... and then Naomi eased herself straight upright."
     GTS "Take us under wing, maple and nests high above; haze again rolls off."
     if checkSkill("Art", ">", 2):
+        $setFlag("GTS022_artPass")
         MC "Good prose... but..."
         GTS "I forgot the cutting word."
         "She stared dead ahead, at nothing I could see."
@@ -3189,7 +3191,7 @@ label GTS022_noscribe:
     MCT "I still got nothing."
     "I leaned forward to think, spreading some dirt on my knee and chin."
     MC "..."
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Skylark in her nest, never fearing the far earth, chirps up to the sun."
     else:
         MC "Skylark in her humble nest, never fearing the far earth, chirps up to the sun."
@@ -3201,7 +3203,7 @@ label GTS022_noscribe:
     "I realized as she came to an utter stillness that she was thinking just as hard as I was."
     GTS "...Earth and sun and wind betwixt, gladly received, never missed."
     "She paused a moment, and wrote it down."
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Let them to and fro, write their journeys on the wind bound from east to west."
     else:
         MC "Nutshell plunges, crack! Up again on mother's wings, her young ones to feed."
@@ -3247,7 +3249,7 @@ label GTS022_c4b:
     show GTS neutral at Transform(xzoom=-1)
     MCT "Heh."
     MCT "Oh crap, she's staring. Uh..."
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Pray scatter the mist, you mountain wind among us, that the warmth be clean."
         show GTS neutral at Transform(xzoom=1)
         "Naomi, suddenly roused to attention, gave me a gentle nod."
@@ -3270,7 +3272,7 @@ label GTS022_c4b:
             jump GTS022_cutoff_b
 
 label GTS022_c5b:
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "So all has been drank, now let us straighten ourselves, for her, down below."
         GTS "Oh!"
     else:
@@ -3300,7 +3302,7 @@ label GTS022_c5b:
             jump GTS022_cutoff_b
 
 label GTS022_c6b:
-    if checkSkill("Art", ">", 2):
+    if getFlag("GTS022_artPass"):
         MC "Eyes command the heart, but her temp'rance guides my feet down a peaceful road."
         show GTS embarrassed with dissolve
     else:

@@ -546,9 +546,12 @@ init python:
         return secondGirl
 
     def isHighestSkill(s):
-        if checkSkill(s, ">=", getSkill("Art")) and checkSkill(s, ">=", getSkill("Academics")) and checkSkill(s, ">=", getSkill("Athletics")):
+        if getSkill(s) >= getSkill("Art") and getSkill(s) >= getSkill("Academics") and getSkill(s) >= getSkill("Athletics"):
+            checkSkill(s, "==", getSkill(s))
             return True
-        return False
+        else:
+            checkSkill(s, ">", getSkill(s))
+            return False
 
     def isEventCleared(event):
         return event in clearedevents
