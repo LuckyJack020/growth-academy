@@ -3042,7 +3042,7 @@ label WG016_c3_3:
     WGCell "<Do you have any of those types of games?>"
     MCCell "<I don't, but I can find one or two.>"
     MCCell "<Interested in trying them?>"
-    WGCell "<I suppose I owe it to myself to sample all forms of art, so that I may make a more discerning judgement.>"
+    WGCell "<I suppose I owe it to myself to sample all forms of art, so that I may make a more discerning judgment.>"
     WGCell "<Certainly it is more impressive to appreciate the interplay of light and shadow in a Raphael than to master some violent spectacle.>"
     WGCell "<I will take you up on your proposition so that I can judge for myself.>"
     MCCell "<I'll look into finding some business management simulators.>"
@@ -3086,7 +3086,7 @@ label WG017:
     hide PRG with dissolve
     MC "Not really. Graphics and sound aren't as important as gameplay, and we aren't going to be looking at the latest AAA titles or anything."
     MC "I picked out the names of some of the more popular titles of the tycoon genre, though I'm not as familiar with them as I used to."
-    WG "I trust your judgement on this as you seem to be an expert in the field of videogames."
+    WG "I trust your judgment on this as you seem to be an expert in the field of videogames."
     WG "You have taken care of your homework, yes? I wouldn't want to impose on your time with something as frivolous as this."
     if checkSkill("Academics", ">=", 2):
         MC "Huh? Oh, yeah. I've taken care of everything."
@@ -8714,7 +8714,7 @@ label WG041_after_choice1:
     WG "This fair cuisine had better be fantastic, or I'm never attending such a low-class event with you ever again."
     MC "It's a promise, you'll be amazed by the carnival in its entirety."
     show WG haughty
-    WG "I am highly doubtful of that, but for some reason I trust your judgement. Don't disappoint me, Keisuke."
+    WG "I am highly doubtful of that, but for some reason I trust your judgment. Don't disappoint me, Keisuke."
     show WG neutral
     "After giving her the time and location for the date, we had some small talk before leaving. My excitement was more than visible as I giddily made my way back to get changed."
     "In a way, this entire date setup was an excuse to pull Alice out of her comfort zone. As hard as it is to explain, I just feel like there are so many ‘commoner' things that she'd love if given the chance."
@@ -8858,7 +8858,7 @@ label WG041_C1_2:
     "With gusto, Alice started taking forkful after forkful of the funnel cake. We had a pleasant chat as she pondered in what ways this simple dish could be improved."
     "By the time the plate was cleared, I came to the realization Alice had managed to eat over three quaters of the whole thing. Which by itself was impressive, but the fact she still looked hungry afterwards was shocking."
     show WG neutral
-    WG "Pardon me for a second... The compliments must go to the chef. I must thank you for such a wonderful meal, my apologies for any prior judgements of your cuisine."
+    WG "Pardon me for a second... The compliments must go to the chef. I must thank you for such a wonderful meal, my apologies for any prior judgments of your cuisine."
     Cook "Woah, really? Well thank you kindly, ma'am! Don't think I've ever gotten a compliment for my stall food before, heh."
     Cook "You two have a great time at the rest of the fair."
     MC "We will, thank you!"
@@ -11408,7 +11408,7 @@ label WG047_c4_1:
             jump WG047_c5_after
 
 label WG047_c5_1:
-    "Against my better judgement, the idea of holding Alice's belly proved too much for me to handle."
+    "Against my better judgment, the idea of holding Alice's belly proved too much for me to handle."
     "With all the subtlety one could muster, I stretched forward. Some part of me was curious if my hand could reach the other side of her belly from the other."
     "The answer to that was no, unsurprisingly. Despite my best efforts, I was only able to get most of my arm across her middle."
     "Alice's plush middle was forcing itself very harshly against my arms length. I could feel myself almost sinking into her ever so slowly. Her substantial rolls imbibing me deeper and deeper."
@@ -13372,7 +13372,7 @@ label WG054_c3_pass:
     WG "Kei, if I told you something that was completely insane, you wouldn't walk away would you?"
     MC "Of course not, I'm here for you in all circumstances."
     WG "I only ask cause the real reason is quite odd and rather embarrassing for me."
-    MC "It would be unfair for me to pass judgement on you, especially since it seems to be bothering you this much."
+    MC "It would be unfair for me to pass judgment on you, especially since it seems to be bothering you this much."
     WG "If that's true, then here's the reason. I've been having weird dreams, primarily ones focused on food. They vary wildly in terms of what happens, but food seems to be the one constant."
     "I took a seat on a bench and gestured for her to join me."
     MC "I take it you've been paranoid about them being true."
@@ -13492,7 +13492,7 @@ label WG054_c4_3:
     MC "Are you afraid people will notice your clothes are slightly ill-fitting?"
     show WG neutral
     WG "Not really, I was just a bit self conscious of what they would say if I were to start acting more into their cliched image for me."
-    MC "It's highly doubtful that they would pass such judgement on you now. At the beginning of the year things were far different than they are now. If anything, people now seem far kinder than before."
+    MC "It's highly doubtful that they would pass such judgment on you now. At the beginning of the year things were far different than they are now. If anything, people now seem far kinder than before."
     WG "I have noticed that as well. I suppose when everyone is in the same boat, they are less inclined to make such comments, as the same could be said about them."
     WG "...."
     show WG worried
@@ -14992,7 +14992,7 @@ label WG059:
     show WG happy
     WG "Hehe. I know I like to tease you about how much of a ‘work in progress' you are, but I must admit, you do manage to exceed my expectations from time to time."
     show WG neutral
-    WG "But, since you seem to think the fish they serve at the cafeteria ‘isn't that bad', I won't be deferring to your culinary judgement any time soon."
+    WG "But, since you seem to think the fish they serve at the cafeteria ‘isn't that bad', I won't be deferring to your culinary judgment any time soon."
     play music Schoolday
 
     scene Cooking Classroom with fade
@@ -15075,7 +15075,7 @@ label WG059:
     show WG neutral
     WG "I would normally be inclined to say no."
     show WG neutral-2
-    WG "Buutttt... you have been correct in the past when trying to introduce me to new things I've been hesitant on— so I will trust your judgement this time."
+    WG "Buutttt... you have been correct in the past when trying to introduce me to new things I've been hesitant on— so I will trust your judgment this time."
     MC "Great! It's a date. Don't worry, I'll talk with Aida to get some recipes that will be easy but still tasty."
     WG "I'll be looking forward to it then."
     MC "So what is this dish they are making like?"
@@ -15178,7 +15178,7 @@ label WG059:
     show Sakura neutral
     Sakura "So... What do you think?"
     show WG neutral
-    "Before Alice replied to Sakura's question, she carved herself another bite. Likely double‑checking her initial judgement before delivering a definitive verdict."
+    "Before Alice replied to Sakura's question, she carved herself another bite. Likely double‑checking her initial judgment before delivering a definitive verdict."
     WG "It's quite excellent ladies. The meat is tender, the vegetables are seared but not burnt, the pastry is flaky and more than satisfactory given that you didn't have time to make it from scratch."
     WG "But I must say, I think you could have made more of the pan sauce, and you need to more aggressively season the beef."
     WG "Since it is wrapped up with other ingredients I think the seasoning became too diffuse and I did not get enough pepper to fully complement the beef tenderloin."
@@ -15445,7 +15445,7 @@ label WG059S:
         WG "Perhaps... {w}What exactly do you have planned?"
         MC "Why would I want to spoil the surprise?"
         show WG doubt
-        WG "Are you being serious? Your palette is not exactly the most discerning, Keisuke. I'm not terribly keen to trust your judgement on matters pertaining to gastronomy."
+        WG "Are you being serious? Your palette is not exactly the most discerning, Keisuke. I'm not terribly keen to trust your judgment on matters pertaining to gastronomy."
         MC "I understand your reservations, but it's more about the process than the final product. If the recipe doesn't turn out we can just chuck it into the trash and dinner is on me."
         MC "There really isn't anything to lose on your end."
         show WG haughty
@@ -16589,7 +16589,7 @@ label WG061:
     WG "Okay, but why didn't you start heating it yet? Wouldn't that have saved some time?"
     MC "That's what I would have thought, but Sakura said with fatty cuts the fat melts at a lower temperature than the meat cooks, so you want to start with a cold pan if you're going to try to render the fat."
     show WG neutral-2
-    WG "You seem to have thought of everything, I guess I should try not to second guess your judgement."
+    WG "You seem to have thought of everything, I guess I should try not to second guess your judgment."
     MC "What was that? Can I get that in writing?"
     show WG doubt
     WG "Must you always make me regret encouraging you?"
@@ -16747,7 +16747,7 @@ label WG061:
     MC "Naw, just eat it out of the carton. The flavor combo didn't sound that great to me so I don't need any."
     show WG doubt
     WG "You expect me to just eat this out of the carton?"
-    MC "Why not? It's just me and you here, Alice. There's no need to worry about proper plating, pretense, or judgement from prying eyes."
+    MC "Why not? It's just me and you here, Alice. There's no need to worry about proper plating, pretense, or judgment from prying eyes."
     MC "I know you were hesitant to go along with this idea, so I figured you deserved a reward for pushing through and trusting me, despite your doubts."
     show WG happy
     if getFlag("WG059_aff_fail"):
@@ -17933,7 +17933,7 @@ label WG064:
     MC "Are you sure this is a good idea?"
     show WG haughty
     play music WG
-    WG "Are you questioning my judgement?"
+    WG "Are you questioning my judgment?"
     menu:
         "Yes, it's obvious she has a few screws loose.":
             MC "Yes, unfortunately I am. It's obvious she has a few screws loose. Are you sure you're comfortable with this?"
@@ -18171,7 +18171,7 @@ label WG065:
     show PRG neutral
     Sakura "Which is why we needed more taste testers. We need to get rid of these somehow."
     "Admittedly, I was a bit perplexed by Sakura's statement. Alice's palette and appetite were all they needed as far as I was concerned."
-    "Though I guess they would feel better about hearing more opinions, even if they trusted Alice's judgement on culinary matters."
+    "Though I guess they would feel better about hearing more opinions, even if they trusted Alice's judgment on culinary matters."
     Sakura "You've gotten a chance to sample all of them so far. What do you think, Alice?"
     WG "Well, the types of cookies so far have all been standard fair, nothing overly exotic or innovative, but likely a more prudent bet with something as standard as a cookie."
     show WG neutral-2
@@ -18964,13 +18964,13 @@ label WG067:
     show WG worried
     "The word she wanted to say was on her tongue but I could see that there was a certain pain behind it."
     show WG sad
-    WG "It would be tough to bear their judgement is what I'm trying to get at. I'm not sure how they would take my current appearance."
+    WG "It would be tough to bear their judgment is what I'm trying to get at. I'm not sure how they would take my current appearance."
     MC "I mean where is this event being held?"
     show WG neutral
     WG "According to this he plans to hold it on the island."
     MC "Really? That's an interesting decision, but that should at least take the pressure off of you if they see some of the other inhabitants."
     WG "Depending who they see, most of those affected may be unusual in appearance, but at least able to blend in with normal people... Sure they may have larger features but none to my degree."
-    MC "I mean even then these are people you know. They should be able to avoid being overly judgemental."
+    MC "I mean even then these are people you know. They should be able to avoid being overly judgmental."
     show WG doubt
     WG "Kei, dear, these are friends in name only. They are associates of my father primarily, so they are my friends by proximity. They can easily show an ugly side."
     MC "At a formal event that seems like a rather ill mannered thing."
@@ -21368,7 +21368,7 @@ label WGFMG003:
             MC "I told her you wouldn't be interested, but I figured she deserved to at least hear it from the source."
             $setAffection("WG", 1)
             show WG haughty
-            WG "How considerate of you, Keisuke. Since you've exercised such good judgement, feel free to speak on my behalf when it comes to such ridiculous requests in the future."
+            WG "How considerate of you, Keisuke. Since you've exercised such good judgment, feel free to speak on my behalf when it comes to such ridiculous requests in the future."
         "I'm kind of curious to see it myself to be honest.":
             MC "I'm kind of curious to see it myself to be honest."
             $setAffection("BE", 1)
@@ -21663,7 +21663,7 @@ label WGGTS002:
     "Judging by Naomi's worried expression, she was probably thinking the same thing. Might as well just hang back and ride this out."
     WG "Furthermore, misappropriation is a gross mischaracterization. Student dorms are specifically furnished for living space."
     WG "What activities I choose to occupy myself with within the confines of my furnished amenities is none of your concern, whether you approve of such activities or not."
-    AE "My personal approval does not enter into my judgement on the matter. You are still using school facilities in the operation of a for-profit venture."
+    AE "My personal approval does not enter into my judgment on the matter. You are still using school facilities in the operation of a for-profit venture."
     AE "That is not why your accommodations have been provided to you and it is not their intended use."
     WG "If that's the issue, I fail to see how this is different than any of the school clubs. The school furnishes space and funds for them to do their activities, but they're always trying to fundraise more money for themselves."
     WG "Almost every other weekend there's some bake sale or movie screening, or spectator event they are using to make extra cash."
@@ -21858,7 +21858,7 @@ label WGGTS003:
     "I really hated to see all of this, but these two seemed determined to make their distaste for each other plainly clear."
     "I know it's not realistic that everyone would get along all the time, but this was something well beyond a normal disagreement. These two hated each other."
     "By this point though, they had been so wrapped up in their quarreling I had to wonder if they forgot I was even here."
-    "I wanted to think of some inspired words of reconciliation, but my better judgement told me that would float about as well as a lead balloon."
+    "I wanted to think of some inspired words of reconciliation, but my better judgment told me that would float about as well as a lead balloon."
     "Honestly, I was just dumbfounded by how the entire exchange had just blown up."
     MC "Uh, I can't believe I'm saying this, but um, can I get back to work?"
     show GTS surprised
@@ -21898,7 +21898,7 @@ label WGGTS003:
     WG "{b}I'M SO SICK OF IT!{/b}"
     "I had never seen Alice lose her composure like that before. This was obviously a pretty sore spot for her, one that was a lot deeper than whatever opinion Naomi held of Alice."
     MC "I'm sorry you've had to deal with that for so long. But is it really fair to put all of that on Naomi?"
-    MC "She doesn't seem like the judgemental type to me. Are you sure this isn't just a big misunderstanding between the two of you?"
+    MC "She doesn't seem like the judgmental type to me. Are you sure this isn't just a big misunderstanding between the two of you?"
     show WG haughty
     WG "Hmph, perhaps. I'm not betting on it though. If she wants to apologise to me, then so be it, but as far as I'm concerned I don't owe her an explanation for myself."
     "As I suspected, Alice wasn't too keen on assigning any blame to herself regarding how the situation played out."

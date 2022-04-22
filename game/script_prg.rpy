@@ -11451,7 +11451,7 @@ label PRG029:
     PRG "H-Have you had a girlfriend before?"
     "I lowered my head... and set my laptop off to the side."
     "I didn't think that this story would ever be brought up again, but I looked at Aida."
-    "Her face was soft, and not judgemental in any way."
+    "Her face was soft, and not judgmental in any way."
     "It was just open and kind."
     pause .25
     MC "Ah... yeah. Once."
@@ -26901,7 +26901,7 @@ label PRG065_pass:
     "I came in her again. My seed flooded Aida's insides, her vagina compressing around my dick, as if sucking the cum out of me."
     "I supported myself on her ass as I let my dick slow to a stop."
     "I stood there, balls deep in Aida, the post-nut clarity hitting me as I looked down at her."
-    "Even when my judgement wasn't clouded with the haze of horniness, Aida was still one of the most beautiful, sweet, and adorable girls I'd ever seen."
+    "Even when my judgment wasn't clouded with the haze of horniness, Aida was still one of the most beautiful, sweet, and adorable girls I'd ever seen."
     "She panted under me, pulling her arms under her pillow. We both had the thinnest layer of sweat over us, a piece of incriminating evidence as to what we'd just done."
     "I pulled out of her, my breathing deep and labored."
     show PRG neutral

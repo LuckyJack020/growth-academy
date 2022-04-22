@@ -9868,7 +9868,7 @@ label GTS046:
 label GTS046_c1_1:
     $setFlag("GTS046_peek")
     "I slowly craned my neck upwards and saw what truly lay hidden beneath her skirt."
-    show cg GTS046 with dissolve
+    show cg GTS046_upskirt with dissolve
     "Up above me, almost gleaming in the darkness, was a pair of brilliant red silken panties, outlined in their center an obscure but distinctly plump ridge that I could only assume was the entrance I'd only dreamed of seeing."
     stop music fadeout 1.0
     "A humble {i}clink{/i} rang in my ears as I, with thoughts elsewhere entirely, dropped the pencil."
@@ -9958,17 +9958,19 @@ label GTS046_c1_1:
     "She lowered me down a little, until my suspended arms were about level with the topmost button of her shirt."
     GTS "Would you be so kind?"
     MC "...Uh, y-yeah. Love to."
+    show cg GTS046_hold1
+    hide GTS
+    with dissolve
     "Even knowing exactly where we were headed, there was some whisper in my mind telling me to show some restraint, against every tingling muscle and tempting thought in my body. How could I say no to the birthday girl, anyway?"
     "I reached forward and began undoing her shirt, and with each button released Naomi gently lowered me down to the next one."
     "With each one, the pale, bulbous teardrops of her breasts, each bigger than my head, peeked out a little more boldly, at last down to her stark crimson brassiere."
     "With each one, I saw the quiver of those plush mounds like a dance for newfound freedom. And with each one, I noticed how strained the buttons really were, how eagerly they ripped apart under my fingers."
     MCT "She's still growing, alright."
     MC "...When did you get this shirt again?"
-    show GTS neutral
     GTS "Hmm... a little over a week ago or so."
     MC "I see..."
     "She lifted me up again once I'd gone halfway down her abdomen."
-    scene black with fade
+    show cg GTS046_hold2 with dissolve
     "And hugged me tight to her now-exposed chest. I sank in deep."
     MC "Mmm..."
     GTS "Mmm... hmhm..."
@@ -9978,9 +9980,9 @@ label GTS046_c1_1:
     "Altogether, I was in her world, and I loved it."
     "I splayed out my arms to catch her breasts, clutching my fingers to her sides."
     "It was some time before I noticed, definitively, a throbbing tightness growing between my legs. I didn't doubt she did, too."
-    scene Giant Dorm Interior
+    hide cg
     show GTS_S aroused
-    with fade
+    with dissolve
     "And then, like releasing a field mouse back into the grass, she lowered me down."
     GTS_S "You needn't be so high-strung, you know."
     "Her hand cupped my backside as she began to speak in a lower register... God, it really was like a little chair."
@@ -10008,6 +10010,7 @@ label GTS046_c1_1:
     "As I was seconds from exploding she lifted me up again..."
     show GTS aroused with vpunch
     MC "G-Gah!..."
+    show cg GTS046_hold3 with dissolve
     "And pressed my body into her face, slipping my dick in between her slick wet lips. She squeezed my backside a little, lapped her tongue on my tip, gasped a dreamy sigh that rolled up my chest."
     "And I burst."
     "I flooded into her, harder than ever in my life, convulsing, blind under crashing waves of joy."
@@ -10016,7 +10019,9 @@ label GTS046_c1_1:
     MC "Naomi-chan..."
     pause 0.25
     GTS "Thank you, Keisuke-kun... for the best birthday I've ever had."
+    hide cg
     show GTS aroused at Transform(xzoom=-1)
+    with dissolve
     GTS "Was that, erm, satisfactory?"
     MC "Satisfactory?...{w} Holy shit, not even my {i}dreams{/i} are that good."
     MC "Uh, pardon my language."

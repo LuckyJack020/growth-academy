@@ -4827,7 +4827,7 @@ label BE027_c1_2:
     "I pulled the tag closer to my face, and brushed some of my hair out of the way to get a better look."
     MC "Jeez. That feels pricy for just a shirt. It feels nice enough. But, egh, I don't know."
     "Shopping usually didn't feel this hard. Then again, typically I would have just strolled in, found the first shirt that looked good, and bought as many similar-styled ones as I could to avoid trying on different ones."
-    "Maybe shopping with Honoka nearby was affecting my judgement. It wasn't just clothes for me, it felt like clothes for Honoka as well. "
+    "Maybe shopping with Honoka nearby was affecting my judgment. It wasn't just clothes for me, it felt like clothes for Honoka as well. "
     MC "Bleh, I need a haircut."
     "My hair had gotten in my eyes again. Though, I supposed that was going to be a more recurring problem as time went on. Clothes, hair... Neither of those were things I felt like dealing with at the moment."
     show BE happy with dissolve
@@ -9052,7 +9052,7 @@ label BEGTS002:
     GTS "You're a poet, Inoue-san."
     show BE embarrassed
     BE "Oh, shut up~! I bet you could come up with something better, since you can see them closer."
-    GTS "I'll trust your judgement, Inoue-san. Your phrase was a lovely way to describe a sea of stars."
+    GTS "I'll trust your judgment, Inoue-san. Your phrase was a lovely way to describe a sea of stars."
     show BE neutral
     BE "Would you like to head back now?"
     show GTS neutral-2

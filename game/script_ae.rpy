@@ -558,7 +558,7 @@ label AE004_c3:
     AE "I see. That's okay Hotsure-san. Moments of weakness can be common. Next time, don't even say anything, and things will turn out better."
     MC "I know, I-"
     MCT "Wait... What?"
-    AE "I can tell your heart was in the right place, but perhaps leave things to your better judgement, hm?"
+    AE "I can tell your heart was in the right place, but perhaps leave things to your better judgment, hm?"
     MC "U-uh."
     show AE glasses-2
     AE "The only thing I am worried about is that lack of resolve. If you do something, commit to it. That is all."
@@ -914,7 +914,7 @@ label AE007_c1:
     show AE neutral-annoyed
     AE "You don't plan on reading through it first?"
     MCT "THIS beast?!"
-    MC "I trust your judgement. If you made it, I'm sure everything in the contract is agreeable. If I ever get confused I can just refer back to it."
+    MC "I trust your judgment. If you made it, I'm sure everything in the contract is agreeable. If I ever get confused I can just refer back to it."
     AE "...Well then, thank you for placing your faith in me."
     "I signed my name on the line provided and handed it back to Shiori-san, who put it in one of her folders for safe keeping."
     jump AE007_after
@@ -5691,7 +5691,7 @@ label AE028_c2_2:
     MC "You could have just asked me. I would have understood."
     AE "Yes, b-but I just didn't..."
     show AE embarrassed
-    AE "I was worried about our relationship. It clouded my judgement."
+    AE "I was worried about our relationship. It clouded my judgment."
     MC "Our relationship?"
     AE "I was... admittedly interested in you, too. As you can guess, I'm not very good at dealing with romantic situations."
     MC "...Shiori-chan."
@@ -12171,7 +12171,7 @@ label AE053:
     show AE embarrassed
     AE "..."
     show AE sad
-    AE "You're right. I wouldn't have took her help if I didn't trust her judgement."
+    AE "You're right. I wouldn't have took her help if I didn't trust her judgment."
     "After a few more moments, she returned."
     show WG neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     WG "And here we are. Your outfit and undergarments."
@@ -12231,7 +12231,7 @@ label AE053_c1_2:
 label AE053_c1_after:
     AE "..."
     WG "Come now, don't be so bashful. You {i}did{/i} ask me to find you something."
-    AE "I... you're right. I trust your judgement."
+    AE "I... you're right. I trust your judgment."
     WG "Well, then, off to the dressing room with you!"
     "Shiori nodded, as she handed me her prized headband, letting her hair down and walked into the dressing room."
 
@@ -16155,7 +16155,7 @@ label AE069:
     "Shiori inadvertently avoided my gaze as she began to blush, biting her bottom lip."
     AE "Oh, you know, um... just some stuff I was thinking of picking up on."
     MCT "Of all the times to be cryptic, now is not one of them..."
-    MCT "Still... I shouldn't let this get to me too hard. After all, I know Shiori, and I've learned to trust her judgement."
+    MCT "Still... I shouldn't let this get to me too hard. After all, I know Shiori, and I've learned to trust her judgment."
     MCT "Even when I feel anxious about it."
     "Shaking my head, I did my best to push my worries aside as I smiled warmly to Shiori."
     MC "Did you understand what Tashi-sensei was talking about in class?"
@@ -18304,7 +18304,7 @@ label AE079:
     pause 1
     MC "Understood."
     AE "...I'm going to need to go out eventually."
-    AE "Let's not make a habit of forestalling judgement, shall we?"
+    AE "Let's not make a habit of forestalling judgment, shall we?"
     hide AE with dissolve
     "As she opened up the door, she began to walk out but stumbled for a moment before adjusting her posture and waddling forward."
     MC "Ah-!"
@@ -18432,7 +18432,7 @@ label AE080:
     "Before Shiori could finish her sentence, she clenched her fist and scowled angrily as she dug her other into the arm of the chair."
     show AE sad
     AE "I handchose my subordinates for their intellect and principles. The idea that they would betray me..."
-    AE "It seems my judgement has failed."
+    AE "It seems my judgment has failed."
     if checkSkill("Academics", ">", 13):
         MC "What if there was an oversight?"
         AE "An oversight?"
@@ -18843,7 +18843,7 @@ label AE082:
     show AE sad-2
     AE "You're correct."
     MC "So... will you at least give that a rest? You can rely on your friends."
-    AE "I... fine. I'll trust Tomoe-san's judgement on it... she's already told me she doesn't see anything but... I... suppose that's what you mean by trusting her."
+    AE "I... fine. I'll trust Tomoe-san's judgment on it... she's already told me she doesn't see anything but... I... suppose that's what you mean by trusting her."
     show AE pondering
     AE "But relying on others..."
     "Shiori began biting the tip of her thumb as she rested her rump on the cold concrete wall behind her."
@@ -19927,7 +19927,7 @@ label AE088:
     MCT "Ahh, that's why she took a bit. She timed it."
     MC "Heh, you think you're clever, eh?"
     AE "I try."
-    "I trusted her judgement, even though I knew she was going through some hard stuff."
+    "I trusted her judgment, even though I knew she was going through some hard stuff."
     MC "Of course. Lead the way."
     "Shiori nodded before turning around and going to walk out of the door, this time forcing her body into the doorframe as she turned to the side in order to save herself from further stuckage."
     scene black with fade
@@ -22277,7 +22277,7 @@ label AE100:
     AE "Because I was given an important reminder."
     MC "A reminder?"
     show AE neutral
-    AE "Along the way I forgot something important. I don't have all the answers... but I can still seek them. I can't always make the perfect judgements we all desire to... but I can have faith."
+    AE "Along the way I forgot something important. I don't have all the answers... but I can still seek them. I can't always make the perfect judgments we all desire to... but I can have faith."
     AE "I was so worried that I peaked, I never stopped to realize that I never left the summit."
     show AE admire
     AE "I feel... whole again. As though the woman I was has returned, reaffirmed in my own identity."
