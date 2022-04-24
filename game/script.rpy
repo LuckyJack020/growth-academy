@@ -466,6 +466,8 @@ init python:
         return affection[girl]
 
     def checkAffection(girl, exp, checkVal):
+        if persistent.enable_notifications < 2:
+            return
         if not girl in girllist and not girl == "RM":
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
@@ -610,8 +612,6 @@ init python:
             return -1
         else:
             skills[s] += val
-            if persistent.enable_notifications < 2:
-                return
             if val >= 0:
                 img = "Graphics/ui/notification/" + s + "-up.png"
             else:
@@ -624,8 +624,6 @@ init python:
             renpy.log("Unknown skill ID: %s" % s)
         else:
             skills[s] += val
-            if persistent.enable_notifications < 2:
-                return
             if val >= 0:
                 img = "Graphics/ui/notification/" + s + "-up.png"
             else:
