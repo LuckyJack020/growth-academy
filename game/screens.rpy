@@ -736,8 +736,9 @@ screen preferences():
                 vbox:
                     style_prefix "radio"
                     label _("Notifications")
-                    textbutton _("On") action SetField(persistent, "enable_notifications", True)
-                    textbutton _("Off") action SetField(persistent, "enable_notifications", False)
+                    textbutton _("All On") action SetField(persistent, "enable_notifications", 2)
+                    textbutton _("Affection Only") action SetField(persistent, "enable_notifications", 1)
+                    textbutton _("All Off") action SetField(persistent, "enable_notifications", 0)
 
                 vbox:
                     style_prefix "radio"

@@ -1,4 +1,4 @@
-default persistent.enable_notifications = True
+default persistent.enable_notifications = 2
 default persistent.enable_nsfw = True
 
 #Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
@@ -610,6 +610,8 @@ init python:
             return -1
         else:
             skills[s] += val
+            if persistent.enable_notifications < 2:
+                return
             if val >= 0:
                 img = "Graphics/ui/notification/" + s + "-up.png"
             else:
@@ -622,6 +624,8 @@ init python:
             renpy.log("Unknown skill ID: %s" % s)
         else:
             skills[s] += val
+            if persistent.enable_notifications < 2:
+                return
             if val >= 0:
                 img = "Graphics/ui/notification/" + s + "-up.png"
             else:
@@ -646,6 +650,8 @@ init python:
             return skills[s]
 
     def checkSkill(s, exp, checkVal):
+        if persistent.enable_notifications < 2:
+            return
         if s not in skills.keys():
             renpy.log("Unknown skill ID: %s" % s)
             return -1
@@ -700,7 +706,7 @@ init python:
 
     def showNotification(img):
         global activenotifications
-        if not persistent.enable_notifications:
+        if persistent.enable_notifications == 0:
             return
         try:
             activenotifications
