@@ -16,7 +16,7 @@ define config.log = "debug_log.txt"
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Growth Academy (2022.4.2)")
+define config.name = _("Growth Academy (2022.4.27)")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -27,7 +27,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "2022.4.2"
+define config.version = "2022.4.27"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
