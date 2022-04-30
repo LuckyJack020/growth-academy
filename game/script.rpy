@@ -30,6 +30,7 @@ init python:
 
     #style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
     activeevent = ""
+    eventname = ""
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
@@ -985,9 +986,9 @@ screen daymenu():
                     xmaximum 250
                     ymaximum 40
                     if eventlibrary[c]["location"] in locationlist:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     else:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png", (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png", (0, 0, 250, 40)) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     hbox:
                         spacing -140
                         order_reverse True
@@ -1211,6 +1212,7 @@ label debugevent:
     $renpy.block_rollback()
     if debuginput in eventlibrary:
         $activeevent = debuginput
+        $eventname = eventlibrary[debuginput]["name"]
         jump startevent
     "I couldn't call that event. Check the spelling and case (it's case sensitive, for example 'BE001')"
     jump debugmenu
@@ -1237,6 +1239,7 @@ label daymenu:
         renpy.choice_for_skipping()
         showQuickMenu = False
         activeevent = ""
+        eventname = ""
         eventchoices = rollEvents()
         cleanupCostumes()
     play music Daymenu
