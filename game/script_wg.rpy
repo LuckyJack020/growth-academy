@@ -6454,7 +6454,7 @@ label WG031_c1_2:
 label WG031_c1_3:
     $setFlag("WG031_c1_3")
     MC "It's not that unusual, classical beauty standards favored heavier physiques in their depiction of the ideal female form. Just look at Renaissance paintings. {w}I mean, think about it."
-    MC "That ideal had persisted so long ago and for so much longer it could be argued that today's standards of thinness as part of the femine ideal are backwards— rather than the other way around."
+    MC "That ideal had persisted so long ago and for so much longer it could be argued that today's standards of thinness as part of the feminine ideal are backwards— rather than the other way around."
     show WG haughty
     "She looked at me with a mildly smug expression, and I realized at once I wasn't telling her anything new."
     WG "You're referring to artists such as Rubens?"
@@ -7322,7 +7322,7 @@ label WG035:
     "I was still nervous for Alice, even in spite of how confident she had been, but now I also felt chagrined for her and the rest of the music club that practically the whole school was ignoring their efforts."
     "Then again, if Alice wasn't in the music club, I doubt I would have shown up either."
     show PRG neutral with dissolve
-    "H-Hello, Hotsure-san. May I sit with you?"
+    PRG "H-Hello, Hotsure-san. May I sit with you?"
     MC "Sure! Here, take a seat."
     PRG "Thank you."
     "Aida looked around the auditorium."
@@ -15012,7 +15012,7 @@ label WG059:
     "Having retrieved from the cabinet what looked to be a large, deep steel pan, the woman in question stood up straight."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "So this was the elusive Sakura. Elusive is the right word, because I would have remembered seeing her if I had before."
-    "Long, dark auburn hair, big, soft brown eyes, a warm smile, with femine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
+    "Long, dark auburn hair, big, soft brown eyes, a warm smile, with feminine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
     "Simply put, Sakura was a knockout."
     "I mean she wasn't going to turn my head away from Alice any time soon, but I'd be a bad liar if I said she wasn't enough to make my eyes wander."
     Sakura "Thanks again for coming, Nikumaru-san."
