@@ -391,6 +391,17 @@ init python:
     )
     ost.manualDefineList.append(PsO)
 
+    theme_ToM = ost.soundtrack(
+        name = "Finding Purpose",
+        path = "Audio/BGM/scene_tomoko.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Tomoko's Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ToM)
+
     ## Base Template
     ######################################
 

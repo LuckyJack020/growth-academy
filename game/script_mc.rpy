@@ -1775,9 +1775,9 @@ label MC003:
     MC "Besides, it's strawberry. I figured you'd like it."
     Tomoko "It's one of the better ones. Thanks, I guess. {w}Was that it?"
     MC "How are things, Tomo?"
-    Tomoko "Alright I guess. People here seem nice. My roommate seems okay, but she wants to talk my ear off and blow up my phone with every piece of gossip that she comes across. {w}It’s all a bit much, to be honest."
+    Tomoko "Alright I guess. People here seem nice. My roommate seems okay, but she wants to talk my ear off and blow up my phone with every piece of gossip that she comes across. {w}It's all a bit much, to be honest."
     MC "Interesting, I hear my fair share of rumors from my roommate as well. But at least he seems quiet for the most part."
-    Tomoko "She’s not that bad though, it’s whatever. Still, though, there doesn't seem much to do around here though."
+    Tomoko "She's not that bad though, it's whatever. Still, though, there doesn't seem much to do around here though."
     MCT "I don't know why you care. If there were a million things to do, you'd still choose to nap."
     MC "Well, what I meant more was how are you holding up after, you know, the test?"
     show Tomoko distracted
@@ -3339,7 +3339,156 @@ label MC007:
     MC "Nah..."
     jump daymenu
 
-label MC008:
+label MC011:
+    scene Cafeteria with fade
+    play music Schoolday
+    if not isEventCleared("BE032"):
+        MCT "Alright, time to eat. I could use the break."
+        show BE neutral with dissolve
+        MC "Yo, Honoka, mind if I sit here?"
+        show BE happy
+        BE "Of course, Kei-chan. You don't have to ask you know?"
+        MC "Heh, good to know."
+        BE "How are you doing?"
+        MC "Could be better."
+        show BE doubt
+        BE "Same, to be honest."
+        "Today had been a particularly stressful day of classes, and it wasn't even halfway over. It was still early in the semester, but just late enough when classes were starting to drop notice of their first big test."
+        show BE neutral
+        "That was normal school stuff, but what wasn't normal was the very noticeable transformation that was taking place across much of the student body at school."
+        "By now it was pretty clear what was going on with everyone."
+        show BE unique
+        extend " Some, like Honoka, seemed to be enjoying it,"
+        show BE happy
+        " but most everyone wasn't all too happy about it and there wasn't any way of hiding it anymore."
+        show BE neutral
+        "For my money, I hadn't had to deal with too much more than an uncooperative hairdo and a slightly obscured view. It still felt weird feeling it halfway down my back. Still though, it was pretty mild compared to most. Honestly, I got off easy."
+        "Putting it all in perspective though, it was easy to see that people here were starting to feel on edge."
+        "Which is why it wasn't too hard to imagine that an innocent bump into someone might instigate a full blown incident."
+        play sound Thud
+        play music Tension
+        show BE surprised
+        UNKNOWN "Hey watch where you're going, {i}fatass{/i}!"
+        "Fat Student" "Maybe you shouldn't lean back into the isle where people are walking, {i}dumbass{/i}. {w}I guess I shouldn't be too mad about it since you obviously got more meat than brains growing in that head of yours."
+        hide BE with dissolve
+    else:
+        MCT "Alright, time to eat. I could use the break."
+        "The cafeteria was packed, but I was looking around for a familiar face to sit next to so I wouldn't have to sit with strangers."
+        show AE neutral with dissolve
+        MC "Hello Matsumoto-san, mind if I sit here?"
+        show AE neutral-eyebrow
+        BE "You're certainly welcome to, Hotsure-san"
+        MC "Cool. So, how are things going?"
+        show AE neutral
+        AE "Coursework has started to pick up, but it hasn't proved too difficult as long as I keep on top of my studies. I've been more preoccupied with matters pertaining to the student council."
+        MC "Oh? Is that so, like what?"
+        show AE neutral-annoyed
+        AE "There's been an uptick in student disciplinary matters."
+        show AE unique
+        extend " I'll spare you the details, but it has been rather distracting."
+        show AE neutral
+        MCT "Sounds like I'm not the only one feeling a bit strung out lately."
+        "Today had been a particularly stressful day of classes, and it wasn't even halfway over. It was still early in the semester, but just late enough when classes were starting to drop notice of their first big test."
+        "That was normal school stuff, but what wasn't normal was the very noticeable transformation that was taking place across much of the student body at school."
+        "By now it was pretty clear what was going on with everyone."
+        extend " Some, seemed to be enjoying it,"
+        show AE pondering
+        " but most everyone, like Matsumoto-san, wasn't all too happy about it and there wasn't any way of hiding it anymore."
+        show AE neutral
+        "For my money, I hadn't had to deal with too much more than an uncooperative hairdo and a slightly obscured view. It still felt weird feeling it halfway down my back. Still though, it was pretty mild compared to most. Honestly, I got off easy."
+        "Putting it all in perspective though, it was easy to see that people here were starting to feel on edge."
+        "Which is why it wasn't too hard to imagine that an innocent bump into someone might instigate a full blown incident."
+        play sound Thud
+        play music Tension
+        show AE surprised
+        UNKNOWN "Hey watch where you're going, {i}fatass{/i}!"
+        "Fat Student" "Maybe you shouldn't lean back into the isle where people are walking, {i}dumbass{/i}. {w}I guess I shouldn't be too mad about it since you obviously got more meat than brains growing in that head of yours."
+        show AE neutral annoyed
+        AE "Please excuse me Hotsure-san."
+        hide AE with dissolve
+    "Muscle Student" "Now that's uncalled for, aren't you people supposed to be jolly?"
+    "Fat Student" "Oh that's {i}real{/i} funny. You think I wanted this? On second thought, I'll be feeling pretty jolly once I knock your sorry ass out."
+    "Muscle Student" "You think I'm supposed to feel sorry for you just because you got the shit end of the stick? I've been itching to try these babies out, I'll wreck you in a heartbeat porkchop."
+    "Fat Student" "You're all talk, I'll lay you out right here, {i}right now{/i}!"
+    if not isEventCleared("AE029"):
+        show Tako excited with dissolve
+        Student "FIGHT!"
+        show Tako happy
+        extend " {i}We got a fiiiight{/i}!"
+    else:
+        show Tako excited with dissolve
+        Tako "FIGHT!"
+        show Tako happy
+        extend " {i}We got a fiiiight{/i}!"
+    "Crowd" "{i}Fight! {w}Fight! {w}Fight!{/i}"
+    hide Tako with dissolve
+    "Whether it was an expression of their own tensions, or an amusing distraction, the entire cafeteria seemed just as eager as the participants to see a fight go down."
+    "I was pretty curious myself to be honest. {w}But just before either could start swinging, they both met a significant roadblock."
+    #show Hageshi neutral
+    stop music
+    Hageshi "What seems to be the issue here, gentlemen?"
+    "Both would-be fighters froze in place as they looked out the corner of their eyes to see where the eerily calm voice had come from. {w}The rest of the cafeteria took notice too— you could hear a pin drop in the place."
+    "Students" "Hageshi-sensei! {w}He started it!"
+    "Sensing it best not to instigate anything further, the rest of the cafeteria went back to their usual business,"
+    play music Schoolday
+    extend " likely in hopes of escaping the ire of Hageshi in the process as the usual cacophony slowly resumed."
+    Hageshi "Oh? Is that so? Tell me, why are you both so quiet? You both seemed so worked up just now. What changed?"
+    "Hageshi-sensei slowly approached both students, gently placing one hand on each of their shoulders, towering over them in the process. Both were shaking like they were about to piss themselves."
+    "Muscle Student" "N-Nothing... W-We were just joking... {size=-6}hehe{/size}"
+    "Fat Student" "Y-Yeah, j-just having a laugh... {size=-6}haah{/size}"
+    Hageshi "Why don't we have a seat gentlemen?"
+    "Hageshi tightened his grip on their shoulders, nearly crumpling them to the ground if he hadn't shoved them into seats in the process."
+    "Students" "{i}Giiaak! {w}{size=-6}Ow!{/i}{/size}"
+    Hageshi "Gentlemen, I didn't come here to tell you to stop what you were about to do, moreso to offer up a perspective that might make you... reconsider your current course of action."
+    "Muscle Student" "S-Sure thing Hageshi-sensei... I've reconsidered. Can I go now?"
+    Hageshi "No."
+    "Judging by the wensing on their faces, Hageshi must have tightened his grip on them even further."
+    Hageshi "Listen. Every man has to decide for himself what's worth fighting for. That's not for me to say to you. But what I want to impress upon you is that when you choose to fight— whether you know it or not— you're putting your life on the line."
+    "Fat Student" "It wasn't supposed to be that serious..."
+    Hageshi "It never is. A clean shot. An unexpected knockout. A poorly placed ledge. A bad bump on the head. And {i}boom{/i}— it's all over for someone."
+    Hageshi "It might not be what you're looking for, but it's what you're asking for when you decide to throw down with someone."
+    if isEventCleared("FMG030"):
+        Hageshi "You want to know how I got these scars? It's a funny story really, but that's for another time. I can assure you though that the other guy looks a lot worse than I do."
+        Hageshi "The point is, just know that the consequences of a split second can stick with you the rest of your life."
+    else:
+        Hageshi "You've seen the scars on my face, yes? There's nothing to be done to undo them, and I can assure you that the other guy looks a lot worse. Just know that the consequences of a split second can stick with you the rest of your life."
+    Hageshi "Do with that knowledge what you will. But if you still have the will to fight, why don't you join me and some of your fellow students at judo club practice tomorrow?"
+    "Muscle Student" "{size=-4}O-Okay, Hageshi-sensei...{/size}"
+    "Fat Student" "{size=-4}S-Sure thing, Hageshi-sensei...{/size}"
+    Hageshi "Good. That's what I like to see. {w}Now get the hell out of here."
+    "Students" "Yes Hageshi-sensei!"
+    "Both students scurried away about as fast as they could, despite neither one of them having gotten a chance to eat their lunches."
+    if isEventCleared("MC002"):
+        MC "Man Hageshi-sensei, you really spooked them."
+        Hageshi "Oh, hello, Hotsure-san. You think so? I suppose that's a useful outcome in its own right, but I was just trying to impress upon them the gravity of their decisions."
+        Hageshi "You're all adults now. It's high time you all realized how the decisions you make today will have lasting effects throughout the rest of your life."
+    else:
+        "Hageshi-sensei, the math teacher. I had heard rumors he wasn't someone you wanted to mess with, but I thought that was just because of his size. Those two guys were pretty big themselves— and they were terrified of him."
+        Hageshi "Hm?"
+        MCT "Looks like he noticed me."
+        Hageshi "Hello there, Hotsure-san. Hope that little incident didn't ruin your lunch."
+        MCT "To be honest, I kind of wanted to see a fight..."
+        MC "No big deal, you certainly taught them a lesson though."
+        Hageshi "One too few know, sadly. You're all adults now. It's high time you all realized how the decisions you make today will have lasting effects throughout the rest of your life."
+    Hageshi "This school is here to help you with those decisions, at least in so far as how they relate to your growth, but anything can be a life lesson if you let it."
+    MC "Hmm, that's good advice, Hageshi-sensei. I'll try to keep that in mind."
+    Hageshi "Good to hear. {w}I wanted to ask, have you given any thought to signing up for my discrete mathematics course next semester? You're one of the better students, I think you'd enjoy it."
+    MC "Ummm, I'll have to think about it more, Hageshi-sensei."
+    Hageshi "You can say no, it's fine. You're an adult now, make your own decisions. Besides, if you're here, that means you have a lot of other more important things going on that are weighing on your mind."
+    Hageshi "I know hair growth probably doesn't seem like much compared to what a lot of other people are going through, but I know it's not without its own issues."
+    MC "Thanks Hageshi-sensei. It hasn't been that bad so far."
+    Hageshi "Someone might be dealing well with their growth now, but that might not be the case come next semester. Keep that in mind, and have a bit more empathy than those two stooges."
+    MC "Right."
+    Hageshi "Just know that we're here to help, but more importantly, your fellow students are going to need your help as well."
+    MCT "I'm not sure I'm in a position to help anyone, but okay..."
+    MC "Sounds good. Thanks Hageshi-sensei."
+    Hageshi "I'll see you in class later, Hotsure-san."
+    #hide Hageshi with dissolve
+    "I didn't really know what to think of everything any more. Seeing people growing and changing in strange ways, myself included— what did it mean? How was this going to affect us? What were things going to be like after leaving this place?"
+    "It was quite a bit to take in. I didn't have all the answers, but after listening to Hageshi-sensei, I at least felt better that my time here might help me find some."
+    jump daymenu
+
+label MC012:
     "This marks the current end of the Keisuke-centric scenes."
     "More are planned for a later release. Until then, feel free to explore the main routes."
     jump daymenu

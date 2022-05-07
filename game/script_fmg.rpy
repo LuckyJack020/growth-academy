@@ -11976,6 +11976,312 @@ label FMG066:
 
 #The next scenes with Akira will all have PrioEnum.ALL similar to the Alice summer trip arc
 label FMG067:
+    $setProgress("FMG", "FMG068")
+    scene Plane Interior with fade
+    play music FMG
+    "I had fallen asleep after Akira and I raided Alice's ice cream stash and polished off roughly three tubs. Having to compete with Akira for every scoop was a challenge, unlike anything I'd done before."
+    "I was enjoying catching some rest after fighting for my life over hojicha. That is, until I was shaken awake by a combination of Akira tossing me around in my seat and her screaming way too loud."
+    show dummy with hpunch
+    FMG "Kei-kun, we are going to land soon."
+    MC "A-A-Akira... Can you stop shaking me? Please."
+    show FMG happy with dissolve
+    FMG "We are actually here! I can't believe it!"
+    MCT "That was fast..."
+    FMG "Look!"
+    "Akira plucked me right out of my seat and pressed me against the plane window."
+    MC "Wow..."
+    "The view was nothing short of breathtaking. The water was crystal clear, I could even make out a family of sea turtles gliding below the surface."
+    MC "We're swimming with the turtles, yeah? I want to swim with the turtles."
+    show FMG neutral
+    FMG "If we have time. There is so much to do and we probably don't have enough time with everything I have planned."
+    MC "Since when do you plan?"
+    FMG "I plan when it matters... which is now. I totally didn't do it at the last minute or anything."
+    "{i}DING{/i}"
+    Intercom "We will be landing shortly. Please find your seat and prepare for landing."
+    "Alice had exited from the bathroom as the intercom shut off. On her way back she stopped to look at the window herself."
+    show FMG neutral at altMove(0.5, 0.75)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    WG "My father said Okinawa was beautiful and he wasn't wrong. It is marvelous."
+    show FMG happy
+    FMG "Yeah it is! Thank you again for this Alice."
+    WG "Think nothing of it. Now, let's get prepared to land, shall we?"
+    "I couldn't help but smile. Akira was so happy to be back, she could barely sit still in her seat."
+    FMG "You're going to love it here, Kei."
+    MC "I couldn't agree more."
+    scene black with fade
+    pause 1
+
+    scene Airport Flip with fade
+    "Thanks to Alice's help we got unloaded in record time. Before we set off for our next big adventure, we set our bags down to thank Alice for everything."
+    if isEventCleared("FMGWG004"):
+        show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        WG "Akira, shouldn't you call your parents to tell them you've landed? I'm sure they're looking forward to hearing from you."
+        show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        FMG "Yeah, good call. I'll be right back."
+        hide FMG with dissolve
+        WG "Keisuke. I would like to have a word with you if you don't mind."
+        MC "Sure. What's up?"
+        show WG neutral at altMove(0.5, 0.5)
+        WG "It's... It's about Akira."
+        MC "Okay? What about her?"
+        pause .5
+        show WG sad
+        WG "She told me about her brother...."
+        pause .5
+        MC "I see. How did it go?"
+        WG "To my surprise, she kept herself together rather well for a topic so heavy. I kept my composure on the outside, but even I found it difficult to do so."
+        WG "It... It was a lot to take in. I never would've imagined in a million years that's what she wanted to tell me."
+        show WG sad
+        extend " I'm amazed she didn't cry when she told me. To think she had been keeping all that to herself for so long. I can't even imagine."
+        MC "I'm surprised she told someone else so fast. Goes to show that she seriously trusts you, Alice. I can't thank you enough for this."
+        show WG worried
+        WG "I hope it's enough for her. I tried to get us out here as soon as possible. I wish I could do more, but I'm afraid this is where my contribution ends. Please take care of her. I'm sure this will be difficult, for both of you, when the time comes."
+        MC "You know if you said that a few weeks ago, I'd have to agree with you."
+        "I turned to look at her... laughing and smiling as she spoke with her parents."
+        MC "However, she's come a long way in a short amount of time. Call it a wild guess, but I think she's finally ready to let go."
+        show WG neutral
+        WG "You think so?"
+        MC "Without a doubt... {w} Thank you for everything, Alice. I'm forever in your debt."
+        WG "It's nothing. Enjoy your time together. I'm looking forward to hearing about your trip when I come back to get you two."
+        MC "You will, trust me."
+        hide WG with dissolve
+        "Alice began to head back to the plane before turning back to me one last time."
+        show WG neutral with dissolve
+        WG "Thank you for being there for her, Keisuke."
+        MC "Heh, comes with the job. I'll always be there for her. She's my everything."
+        show WG happy
+        "She smiled softly, waved her goodbyes, and boarded."
+        hide WG with dissolve
+        MCT "Both of you have come a long way."
+        pause 1
+        MC "Welp, back to it."
+    else:
+        show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        WG "That should be all your belongings, yes?"
+        show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        FMG "I got everything. What about you, Kei-kun?"
+        MC "Pretty positive I have everything. Your help moves quick, Alice."
+        WG "Glad to hear. I expect nothing but the best and they always deliver.."
+        WG "Fortunately, I was able to fit this stop into my plans. I can't stay long to see you off, but please enjoy your trip. I'll be back to get you at the end of the week."
+        FMG "No problem, thank you again, Alice. Sorry, for nagging you so much about this..."
+        WG "I'll admit it was a little— nay— {i}very{/i} annoying. However, I was surprised by how adamant you were."
+        pause .5
+        show WG surprised-2
+        WG "Oh!"
+        show WG neutral
+        WG "Hmm, it appears I must be going if I'm going to stick to my appearance."
+        show WG neutral
+        WG "Don't have too much fun now."
+        hide WG with dissolve
+        "Alice smiled softly, waved her goodbyes, and boarded."
+        MC "Always on the move that one... which is kind of ironic now that I think about it."
+        MC "Oh, jeez, did you call your folks yet?"
+        show FMG surprised
+        FMG "Ah crap, no. Give me three minutes."
+    scene black with fade
+    pause 0.5
+    scene Airport Flip with fade
+    pause 0.5
+    show FMG neutral with dissolve
+    MC "Everything good with your parents?"
+    FMG "Yep! We can come by whenever, all my mom has to do is to get the blow-up mattress for you."
+    MC "Your bed isn't big enough for the two of us?"
+    FMG "Uh, now that I'm like this... no. Definitely not."
+    MC "Ooooh my god, I completely forgot. I'm so used to everything fitting our growths. It hasn't even been that long, jeez."
+    FMG "Yeah... now that you mention it, there's probably a lot of other things we haven't had to think about until now."
+    MC "Wow... anyways, you got ready? I got all my stuff."
+    FMG "Yes sir! You're going to love it here. The sights, the food, the people. Did I say the food?!?"
+    MC "If you said it twice it has to be good. Where are we going first?"
+    FMG "To my house, dummy. Do you want to walk around with all this stuff? My parents aren't home yet so we can grab the spare, toss our stuff, and hit the streets."
+    MC "*{i}inhales{/i}* I'm in."
+    scene black with fade
+    pause 1
+
+    scene Okinawa Market
+    show FMG neutral
+    with fade
+    #(Not too sure what to use as a background, maybe show the market early?)
+    "We ran into a teeny tiny problem when we called a taxi to get to Akira's house. She had a little trouble getting in, thankfully it was nothing we couldn't fix."
+    MC "Hold my hand. You'll be fine."
+    FMG "R-Right. Need to stay calm."
+    "The driver, albeit a little taken aback by Akira being... large, was extremely helpful getting her in and moving the seats around."
+    FMG "Heh, thanks. Sorry, about uh... my size."
+    Driver "Don't worry about it. I've seen a lot of stuff in my time driving taxis. Comes with the territory."
+    Driver "So where to?"
+    "Akira gave him her parent's address and the rest was history."
+    "The drive there wasn't anything crazy. Akira was her cheerful self as the driver asked her various questions like if she's taken part in weight lifting competitions, what's the heaviest thing she's lifted, and why she's taking a trip to Okinawa."
+    FMG "My brother's birthday is coming up and I came to visit him."
+    Driver "That's lovely. I bet you can't wait to see the surprise on his face."
+    FMG "Ha. Y-Yeah, I'm sure he'll lose his mind when he sees me again..."
+    Driver "Wonderful. It'll be a day he won't forget. {w}And here we are."
+    scene Okinawa Cottage
+    show FMG neutral
+    with fade
+    #(need background that shows the outside of a house)
+    pause .5
+    "It took some elbow grease trying to wiggle Akira out— thankfully we got her out without damaging the car."
+    MC "Thank you again, sir."
+    Driver "Nah, this one's on the house. Thanks for keeping an old man entertained."
+    MC "I appreciate it, thanks."
+    "He gently nodded, thanked us once more, and drove off."
+    MC "You okay?"
+    FMG "Mhm, not like I lied about why we came here. It still tugs at my heart to talk about Tatsuya. {w}{i}Sigh{/i} Better than breaking down into a hot mess like before."
+    MC "You don't need to feel bad about it if you do."
+    FMG "I know, still though... {w}Come on, let's set our stuff down and hit the market."
+    MC "Right."
+    scene black with fade
+    pause 0.5
+
+    scene Okinawa Bedroom with fade
+    "While we were walking to her room, she couldn't stop talking about all the foods she wanted me to try and that we {i}had{/i} to visit this one restaurant she practically lived at as a kid."
+    show FMG neutral with dissolve
+    FMG "You won't be able to stop, I swear. The food is so-"
+    play sound Thud
+    show FMG sad-2
+    FMG "..."
+    MC "Heh, you hit your head... on the door."
+    show FMG angry-2
+    FMG "I should rip the door off and hit you with it. That way you can suffer like me."
+    MC "Myah. Don't do that."
+    show FMG sad
+    FMG "You didn't even ask if I was okay."
+    MCT "Gonna cry?"
+    MC "... {w}Nah."
+    show FMG neutral
+    FMG "Hmph, be that way. Your time will come."
+    MC "I sure hope it does. Now are we going to keep chitchatting or are we going to start exploring Okinawa???"
+    FMG "Sure.{w} I want to do one thing before we head out."
+    MC "Doesn't bother me. We're here for you, not me. Do what you need to do."
+    FMG "Thanks. I'll be right back."
+    "She headed out the door and entered the neighboring room."
+    hide FMG with dissolve
+    FMG "By the way... I ducked this time. So suck it."
+    MC "100 yen you hit your head on the way back."
+    FMG "300 yen I throw my bed at you when I come back. Sheets included."
+    MCT "I prefer you throw yourself at me so I can die in peace."
+    FMG "I found it! {w}Yes! They got here safe and sound!"
+    "Akira was {i}this{/i} close to hitting her head on the return trip. Narrowly avoiding it due to me being so thoughtful."
+    MC "Wait, don't run back iiin. You'll hit your head again. Be careful."
+    MC "How was that? Did I sound concerned? Man. I should've dropped to my knees to make it more dramatic."
+    show FMG sad-2
+    FMG "A part of me regrets not chucking you out of Alice's plane."
+    MC "Imagine me, the sexy boyfriend and all-around chad. Being considerate of his girlfriend only for said girlfriend to threaten to toss me out of a plane. My love means nothing to you."
+    show FMG neutral
+    FMG "Hit the nail on the head. Sorry."
+    MC "Show me you're really sorry by crying and maybe I can find it in my heart to forgive you. However, you feeling bad can wait. What did you find?"
+    FMG "I have this picture of my brother and me that I kept in a scrapbook and I wanted to make sure I take it back with me so I can frame it back at school."
+    FMG "Take a look."
+    #CG PLACEMENT
+    "The photo was over a decade old, yet it was in perfect condition. No bends, no creases, no imperfections. {w}Well, unless you count Akira being in the photo but that's beside the point."
+    "It was when they were kids. Tatsuya was pushing Akira down the slide, both of them laughing and smiling."
+    MC "This is awesome. Huh? {w}You WORE GLASSES????"
+    show FMG happy
+    FMG "Hell yes! And might I add I look {i}very{/i} cute with them on."
+    MC "We need to find a pair I need to see. Show me the cuteness."
+    FMG "That was the other thing I wanted to show you. I had my new pair sent down here."
+    pause .5
+    #(Glasses sprite?)
+    FMG "Ta-da!"
+    MCT "Hngh... she's hot!"
+    MC "Wow, what can I say? Besides... you should have worn these from the start, helps hide the ugly."
+    show FMG neutral
+    FMG "Pfff, we both know that's false! {w}I knew you'd like them though!"
+    MC "I do! They fit you very well. I want you to wear them more often, you look adorable."
+    show FMG aroused-2
+    FMG "Thanks."
+    show FMG neutral
+    FMG "By the way, are you ready to go? We won't have much time if we keep talking about how insanely hot I am."
+    MC "Lucky us there isn't much to talk about. Ready when you are."
+    scene black with fade
+    pause 1
+
+    scene Okinawa Market with fade
+    "I was quite surprised with how close Akira's family lived to the local market. A \"peaceful\" twenty-minute walk and we were there. That is, it {i}would've{/i} been peaceful if it wasn't for all the side comments and wandering eyes from strangers."
+    "Insecure Male" "Who would want to date a woman who's bigger than them???"
+    "Random Woman" "I wouldn't be caught dead looking like that. Why would any woman want to look like a man."
+    "Old Timer" "That boy, needs to cut his hair. Looks like one of those freaks from the circus."
+    pause .5
+    MC "These people have some nerve."
+    show FMG neutral with dissolve
+    FMG "Meh, don't worry about it."
+    MC "You aren't annoyed? That old fart basically called me a clown."
+    FMG "Kei-kun, these people aren't used to seeing people like us. We knew this was coming when we flew down here."
+    show FMG flex
+    FMG "Besides no one has the balls to talk shit to my face, anyways. I'm probably the biggest person on the island ever since Alice left."
+    show FMG neutral
+    FMG "Don't let these people take away from our trip. The opinions of people we won't see again don't mean anything."
+    MC "You're right. You're right."
+    FMG "Of course I'm right! Come on, time is wasting thinking about those jamokes."
+    "In classic Akira fashion, she grabbed my hand, yanking me towards the nearest food stand."
+    MCT "One day she'll rip my arm off and I'm going to make her pay for dinner to make up for it."
+    FMG "Here we are! {w}Have you had Onisasa before?"
+    MC "Uh... I don't think so? It doesn't sound familiar."
+    FMG "Give me two seconds."
+    pause .75
+    MC "Don't give the vendor a heart attack."
+    FMG "Hi, I was wondering if I could get two orders of Onisasa?"
+    MCT "I know she isn't {i}that{/i} tall but jeez she makes everyone look tiny."
+    Vendor "Uh... Yeah... No problem."
+    FMG "Thank you, I haven't had these in ages."
+    Vendor "Heh, luckily for you these are the best on the island. {w} Here you are."
+    FMG "Thank you, they smell delicious."
+    "She walked back over to me food in hand with the cheekiest grin on her face."
+    FMG "I had to hold back the urge to dance, didn't want to damage the goods."
+    MC "What exactly is this... Onisasa?"
+    FMG "It's fried chicken with sauce, seasonings, and rice. Before you eat it you {i}need{/i} to squeeze it together. It looks messy but it is in a league of its own in the flavor department."
+    MC "I guess you can say we're going on a trip to flavor town?"
+    FMG "Uh... sure?"
+    MC "Mmm, this-this is good! Ugh, the chicken is so tender. Oah mah lawd..."
+    FMG "Everything okay, Kei-kun?"
+    MC "Y-Yeah? Should I not be?"
+    FMG "Getting a little freaky with your chicken there. I know I said it's good but you're scaring me a little."
+    MC "{i}cough{/i} My bad."
+    FMG "Don't get so intimate with your food... save that for me, dude."
+    MC "Oooooh, is that a hint that you're up for doing squat thrusts in the cucumber patch?"
+    show FMG sad-2
+    FMG "W-What?"
+    show FMG angry-2
+    extend " Ugh, ew, why do you have to word it like that?!?"
+    show FMG neutral
+    FMG "But no, we aren't. Especially not while at my house. My mom would flip. When we get back though, we can make up for the lost time."
+    MC "My body is always ready."
+    FMG "Yeah, I know. You are horrendously down bad. {w}We should probably start heading back to my house before it gets dark out."
+    MC "Hang on, I have to get another Onisasa, and then we can go."
+    FMG "Get me two more too, please."
+    MC "I'll think about it..."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+
+    scene Okinawa Bedroom
+    show FMG neutral
+    with fade
+    FMG "Wow, you didn't pack much."
+    MC "I see nothing wrong with what I brought. That's enough clothes for three days which was how long I was told we were staying."
+    FMG "Hey, I'm not flaming, it's just an observation. I took you for the guy to overpack and bring all types of unnecessary crap."
+    MC "Eeeeh, I like to think I'm pretty good at only bringing the essentials."
+    FMG "Only the essentials, huh? {w}Explain this?"
+    MC "That-That is none of your business, you put that back and we never speak of it again."
+    FMG "I didn't take you for one to use-"
+    MC "Nope, I said we weren't talking about it anymore."
+    show FMG happy
+    FMG "Hahaha, okay tough guy we won't."
+    pause .75
+    "Akira fell silent for a second when her eyes drifted towards another photo on the wall of her family having a picnic."
+    show FMG neutral
+    FMG "Thanks, Kei."
+    MC "Huh? For what?"
+    FMG "For being there for me all the time. I've thrown a lot at you recently and I was nervous-"
+    MC "Stop. Seriously. {i}We've{/i} been through a lot. I'll always say it and I'll never stop saying it. I will and I mean this with all my heart... I will always be here for you."
+    MC "I know how much this all means to you. I'm here to show you how much you mean to me."
+    FMG "You're so incredibly cheesy, haha. Thank you, Kei. I don't know what I'd do without you."
+    MC "Well, I know for sure you wouldn't be having such a fun time without me. I am the life of the party after all."
+    FMG "If you're the only person there, probably."
+    MC "I think you should sleep on the air mattress tonight."
+    FMG "Hm, let me think about that... {w}Nah."
+    jump daymenu
+
+label FMG068:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

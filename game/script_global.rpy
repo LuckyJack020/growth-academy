@@ -106,11 +106,13 @@ define Coach = Character('Coach', color="#C0C0C0")
 define Cook = Character('Cook', color="#C0C0C0")
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define DJ = Character('DJ', color="#C0C0C0")
+define Driver = Character('Driver', color="#C0C0C0")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
 define Girls = Character('Girls', color="#ffffff")
 define Guard = Character('Guard', color="#C0C0C0")
 define Hostess = Character('Hostess', color="#C0C0C0")
+define Intercom = Character('Intercom', color="#C0C0C0")
 define Interviewer = Character('Interviewer', color="#C0C0C0")
 define Judge = Character('Judge', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
@@ -277,6 +279,7 @@ image Okinawa Ocean = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_ocean_[game
 
 #General
 image Airport = "Graphics/ui/bg/NYI.png"
+image Airport Flip = im.Flip("Graphics/ui/bg/NYI.png", horizontal=True)
 image Bus Interior = DynamicImage("Graphics/ui/bg/archiveBG/businterior_[gametime].png")
 image Ferry = DynamicImage("Graphics/ui/bg/ferry_[gametime].png")
 image Plane Interior = "Graphics/ui/bg/NYI.png"
@@ -935,6 +938,7 @@ define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/tension.ogg" #A Tense Moment
+define audio.Tomoko = "Audio/BGM/scene_tomoko.ogg" #Finding Purpose
 define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
 define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"
 define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"
@@ -971,11 +975,12 @@ define audio.ReleaseArrow = "Audio/SFX/sfw_releasearrow.wav"
 
 init 1 python:
     eventlibrary['MC001'] = {"name": "Sharpening the Senses", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.NOEVENT, "global005"]]}
-    eventlibrary['MC002'] = {"name": "Warmth of a Heart", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "classroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC001"]]}
+    eventlibrary['MC002'] = {"name": "Warmth of a Heart", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "classroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "MC001"]]}
     eventlibrary['MC003'] = {"name": "Will She Ever Grow up?", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "global005"]]}
     eventlibrary['MC006'] = {"name": "A Bad Handoff", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                               "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX20"],      "conditions": [[ConditionEnum.TIMEFLAG, "aftersize2"]]}
     eventlibrary['MC007'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,   "location": "unknown",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]}
-    eventlibrary['MC008'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC006"]]}
+    eventlibrary['MC011'] = {"name": "Put Up a Fight", "girls": ["BE", "AE"], "type": EventTypeEnum.OPTIONAL,                           "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
+    eventlibrary['MC012'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC011"]]}
 
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC001"]]}
@@ -1216,7 +1221,8 @@ init 2 python:
     eventlibrary['FMG064'] = {"name": "I Hate Sand", "girls": ["FMG", "PRG"], "type": EventTypeEnum.CORE,                                        "location": "cookingclassroom",    "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG065", "obsflags": [],               "conditions": []}
     eventlibrary['FMG065'] = {"name": "Belly and Abs", "girls": ["FMG", "PRG"], "type": EventTypeEnum.CORE,                                        "location": "beach",          "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG066", "obsflags": [],               "conditions": []}
     eventlibrary['FMG066'] = {"name": "Altitude Apprehension", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                          "location": "airport",               "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG067", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG067'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG067'] = {"name": "Okinawa Bliss", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                                  "location": "plane_interior",               "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG068", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG068'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
