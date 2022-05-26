@@ -8344,6 +8344,7 @@ label PRG024:
             MC "I..."
             MCT "... In some messed up way... she's kind of right."
             MC "You're... you're right. It's a lot simpler when you say it like that."
+            $setAffection("TM", 1)
             Tomoko "You're welcome."
             pause .25
             Tomoko "Can I go back to bed now?"

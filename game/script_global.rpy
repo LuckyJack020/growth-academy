@@ -78,6 +78,7 @@ define Chie = Character('Chie', color="#FF9900") #FMG Route, MC Route
 define Francois = Character('François', color="#CC33FF") #WG Route
 define Fujimoto = Character('Fujimoto', color="#FF9900") #FMG Route
 define Haruko = Character('Haruko', color="#FF9900") #FMG Route, MC Route
+define Hidaka = Character('Hidaka', color="#FF9900") #FMG Route
 define Katsumi = Character('Katsumi', color="#C0C0C0") #AE Route
 define Lee = Character('Lee', color="#C0C0C0") #WG Route - Summer Arc
 define Minei = Character('Minei', color="#C0C0C0") #FMG Route
@@ -316,17 +317,28 @@ image cg AE053_mirror2 = "Graphics/ui/gallery/AE053_mirror2.png"
 image cg AE074_snow1 = "Graphics/ui/gallery/AE074_snow1.png"
 image cg AE074_snow2 = "Graphics/ui/gallery/AE074_snow2.png"
 image cg AE074_snow3 = "Graphics/ui/gallery/AE074_snow3.png"
+image cg AE092_tv1 = "Graphics/ui/gallery/AE092_tv1.png"
+image cg AE092_tv2 = "Graphics/ui/gallery/AE092_tv2.png"
+image cg AE092_tv3 = "Graphics/ui/gallery/AE092_tv3.png"
 
 image cg BE000 = "Graphics/ui/gallery/BE000.png"
 image cg BE000b = "Graphics/ui/gallery/BE000b.png"
 image cg BE001 = "Graphics/ui/gallery/BE001.png"
-image cg BE010 = "Graphics/ui/gallery/BE010.png"
+image cg BE010_pov1 = "Graphics/ui/gallery/BE010_pov1.png"
+image cg BE010_pov2 = "Graphics/ui/gallery/BE010_pov2.png"
+image cg BE010_pov3 = "Graphics/ui/gallery/BE010_pov3.png"
+image cg BE010_pov4 = "Graphics/ui/gallery/BE010_pov4.png"
+image cg BE010_pov5 = "Graphics/ui/gallery/BE010_pov5.png"
 image cg BE028 = "Graphics/ui/gallery/BE028.png"
 image cg BE028_fem = "Graphics/ui/gallery/BE028_fem.png"
 image cg BE031 = "Graphics/ui/gallery/BE031.png"
 image cg BE031b = "Graphics/ui/gallery/BE031b.png"
 image cg BE031c = "Graphics/ui/gallery/BE031c.png"
 image cg BE032 = "Graphics/ui/gallery/BE032.png"
+image cg BE043_movie1 = "Graphics/ui/gallery/BE043_movie1.png"
+image cg BE043_movie2 = "Graphics/ui/gallery/BE043_movie2.png"
+image cg BE043_movie1_fem = "Graphics/ui/gallery/BE043_movie1_fem.png"
+image cg BE043_movie2_fem = "Graphics/ui/gallery/BE043_movie2_fem.png"
 
 image cg FMG016 = "Graphics/ui/gallery/FMG016.png"
 image cg FMG041 = "Graphics/ui/gallery/FMG041.png"
@@ -745,7 +757,9 @@ image PRG embarrassed = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/embarra
 image WG neutral = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral.png")
 image WG neutral-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral-2.png")
 image WG happy = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/happy.png")
+image WG happy-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/happy-2.png")
 image WG sad = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/sad.png")
+image WG sly = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/sly.png")
 image WG surprised = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/surprised.png")
 image WG surprised-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/surprised-2.png")
 image WG angry = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/angry.png")
@@ -807,7 +821,22 @@ image HR unique = "Graphics/minor/faculty/HR/unique.png"
 
 #legalsizes already updated, change images when bigger sprites exist
 image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/annoyed.png")
-image Tomoko distracted = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted.png")
+image Tomoko distracted = Composite(
+    (443, 651),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted.png"),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+        None, Null()),
+    )
 image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/neutral.png")
 image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/happy.png")
 image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/surprised.png")
@@ -888,7 +917,7 @@ image Chibuki neutral = "Graphics/minor/chibuki/neutral.png"
 image dummy = "Graphics/ui/dummy.png"
 
 #Overlays
-image FerryTomo1 = "Graphics/minor/tomoko/1/overlays/table-overlay.png"
+image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.png"
 
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"
@@ -1154,7 +1183,7 @@ init 2 python:
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,        "location": "dorminterior",     "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BE010'] = {"name": "Surprise, Her Boobs are Bigger", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,        "location": "dorminterior",     "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                   "location": "arcade",           "priority": PrioEnum.ALL,               "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
 
     eventlibrary['BEGTS001'] = {"name": "You Make Me Feel Like a Woman", "girls": ["BE", "GTS"], "type": EventTypeEnum.OPTIONAL,        "location": "dormexterior",     "priority": PrioEnum.NONE,               "obsflags": [],                                   "conditions": [[ConditionEnum.VAR, "BEMode", "Feminine"], [ConditionEnum.EVENT, "BE020"]]}
@@ -1222,7 +1251,8 @@ init 2 python:
     eventlibrary['FMG065'] = {"name": "Belly and Abs", "girls": ["FMG", "PRG"], "type": EventTypeEnum.CORE,                                        "location": "beach",          "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG066", "obsflags": [],               "conditions": []}
     eventlibrary['FMG066'] = {"name": "Altitude Apprehension", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                          "location": "airport",               "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG067", "obsflags": [],               "conditions": []}
     eventlibrary['FMG067'] = {"name": "Okinawa Bliss", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                                  "location": "plane_interior",               "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG068", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG068'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG068'] = {"name": "Shells By The Shore", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                  "location": "beach",                         "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG069", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG069'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}

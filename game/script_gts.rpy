@@ -9358,6 +9358,7 @@ label GTS045:
     MC "I know."
     pause 1
     show Tomoko happy
+    $setAffection("TM", 1)
     "I leaned in, then, to squeeze her far arm in a side hug which she half-returned."
     MC "I better head back. Good to hear you're doing okay, Tomo-chan. And if you ever need something, you shoot me a text, okay?"
     show Tomoko distracted

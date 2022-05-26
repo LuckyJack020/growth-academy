@@ -712,7 +712,7 @@ label BE006:
     show BE neutral
     BE "Again, there was a lot more girl–talk about things we'd be experiencing in the future. But she talked to us in a really...friendly way about it. Not so technical like the nurse."
     BE "And Takamura-sensei's really cool. Like, did you know she went to culinary school in Paris?"
-    MCT "Huh. The only advice I got from the nurse was to ‘get some scissors'."
+    MCT "Huh. The only advice I got from the nurse was to 'get some scissors'."
     MC "Wow... that's really cool. Sounds like they really do want to help us. That's a bit of a relief, honestly."
     show BE happy
     BE "Agreed!"
@@ -1158,7 +1158,7 @@ label BE010:
     show BE neutral at center with dissolve
     play music Schoolday
     MC "Hi Honoka."
-    show BE surprised
+    show BE surprised # BE smug
     BE "Oh, you recognize me?"
     "I looked up at her in confusion. She sounded oddly serious."
     "Stepping away, I took a better look at her face, somewhat worried that she'd cut her hair or something had happened to her face. Just something that would make me have trouble recognizing her. Nothing seemed out of the ordinary, though."
@@ -1167,13 +1167,14 @@ label BE010:
     BE "Because I'm bigger?"
     MC "Bigger?"
     "I held my hand to the top of my head, and then moved it flat towards Honoka. Seemed to be the same height difference as before..."
-    show BE happy
-    BE "Kei-chan, you dork. I mean, 'bigger'."
+    show BE disoriented
+    BE "Kei-chan, you dork. Not 'taller'. I mean, {i}'bigger'{/i}."
     "Her gaze made it obvious what she was referring to, but clearly Honoka wasn't sure that I got the hint."
     "To ensure I knew exactly what she was talking about, she reached down and grabbed her chest, lifting up a breast in each hand, as if she were presenting them to me."
     MC "Oh! Duh, right. That makes sense."
     "It did, but it was strange that she was so surprised about it."
     MC "Did you, like, not believe that your breasts were going to get bigger? You were all about it when you received your confirmation."
+    show BE neutral
     BE "Well yeah, obviously. It's not like I just jumped up a bunch this morning. They've been growing for a while now. Bit by bit. I've been measuring. It's usually somewhere around a centimeter every day."
     MC "Wait, really?"
     "I looked at her chest again. It looked bigger than before, maybe? It was kind of hard to tell. All the past weeks being constantly surrounded by bigger-than-average everything made it a bit difficult to judge growth, oddly enough."
@@ -1193,11 +1194,21 @@ label BE010:
     MC "Yeah?"
     BE "Alright then."
     "Honoka stepped forward and gained a devious smirk on her face."
+    show cg BE010_pov1 with dissolve:
+        subpixel True
+        crop(0, 0, 1280, 720)
+        size(1280,720)
+        linear 7 crop(0, 720, 1280, 720)
     play music BE
     BE "Touch 'em."
     MC "What?"
     BE "I want you to touch them, so you have proof that they've grown significantly since you first saw them again."
     MC "You... you wha... Uh..."
+    show cg BE010_pov2:
+        subpixel True
+        crop(0, 720, 1280, 720)
+        size(1280,720)
+        linear 7 crop(0, 0, 1280, 720)
     "My brain struggled to comprehend what Honoka had just offered. Her tone of voice wasn't like she was trying to be flirtatious or intentionally sexy."
     "It was more like a judo instructor demanding you try and grab their arm so they could perform a flip and toss you onto your back."
     "It just felt like a trap. But, my hand still twitched a bit, trying to fight the impulse in my head. There was nothing that sounded bad about getting a handful of Honoka's chest, it might be worth any potential repercussions..."
@@ -1256,23 +1267,33 @@ label BE010_c2:
     MC "You know, this will be my first time doing this."
     BE "Well, then I'm honored to be your first."
     MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
-    show cg BE010 with dissolve
+    show cg BE010_pov3:
+        subpixel True
+        crop(0, 0, 1280, 720)
+        size(1280,720)
+        linear 7 crop(0, 720, 1280, 720)
     "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once."
     "It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
     "Honoka still had a smile on her face, so I kept examining them. I felt like a doctor, medically probing her, but really all I was doing was trying to take in the feel. Soft, yes. Squishy as well."
+    show cg BE010_pov4:
+        subpixel True
+        crop(0, 720, 1280, 720)
+        size(1280,720)
+        linear 7 crop(0, 0, 1280, 720)
     "I swore they made sounds like stress balls being squeezed as I applied a bit of pressure to them."
     "But, also, they were... dense. It seemed like an odd term to describe breasts, but it was accurate. For as big as they were, they still felt heavier than I expected them to."
     "I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up."
     "They took a slight bit more effort to move than I thought they would, and when I finally pulled my hands away, I got to see them bounce for a few seconds before stopping."
     MC "Wow."
-    hide cg with dissolve
+    hide cg
     show BE happy at center
+    with dissolve
     BE "Heh, heh. Get yourself a good handful? How did they feel? Were they as soft as you imagined? Were they warm? Tell me!"
     MC "Whoa, um, well. They're... big?"
-    show BE happy at center, Transform(xzoom=-1)
+    show BE happy at center, Transform(xzoom=-1) #BE smug
     BE "And?"
     MC "Soft?"
-    show BE neutral at center, Transform(xzoom=1)
+    show BE disoriented at center, Transform(xzoom=1)
     BE "Yes, yes, and?"
     MC "I, I, I don't... they're awesome?"
     show BE happy
@@ -1280,7 +1301,7 @@ label BE010_c2:
     MC "Well. Not by default, no."
     BE "Ah, you're saying they have to be at my size to be any good at all?"
     MC "Not necessarily. Yours definitely... transcend most sizes though. And probably eclipse a lot of them in softness too. They've bumped into me before but, it really feels different in the hand compared to the back of the head."
-    show BE sad
+    show BE worried
     BE "That's good to know. It kind of stinks I don't get to experience them in that way."
     show BE happy
     BE "Though, since they're attached to me, I guess I get a whole unique experience that nobody else would get. So, that's pretty cool, too."
@@ -1292,7 +1313,7 @@ label BE010_c2:
     MC "Hey, Honoka?"
     BE "Yeah?"
     MC "In all seriousness, why did you ask me to grab your breasts?"
-    show BE happy
+    show BE happy #BE Smug
     BE "Oh, is that what happened?"
     MC "Yeah, it is."
     BE "Ah, ah. Think back, Kei-chan. I just asked you to {i}touch{/i} them. You could have easily just poked them, and that would have sufficed. Or even just gave them a quick little grope."
@@ -1300,16 +1321,21 @@ label BE010_c2:
     show BE neutral
     BE "You know what that means?"
     MC "N-No?"
-    show BE happy
+    show BE aroused
     BE "Hehehe..."
     "Honoka suddenly loomed forward, her breasts inches away from my face. My knees buckled. I felt like I was suddenly talking to Shiori, not my childhood friend."
-    show cg BE010
+    show cg BE010_pov5 with dissolve:
+        subpixel True
+        crop(0, 0, 1280, 720)
+        size(1280,720)
+        linear 7 crop(0, 720, 1280, 720)
     BE "It means I know what kind of guy you are."
     MC "I... um."
     BE "A guy who takes charge and opportunity when he can."
     "Honoka pulled back and smirked at me, her smile looking like it could slide off of her face. She grabbed the handle of my door with one hand, and then turned to wink at me."
     hide cg
     show BE happy at center
+    with dissolve
     BE "And I like that kind of guy."
     hide BE with dissolve
     "With that, Honoka shut the door behind her, leaving me to wonder what just happened."
@@ -1321,7 +1347,8 @@ label BE010_c3:
     "I just couldn't say anything. My mouth felt like it dried up. Something about this was wrong. I wasn't sure what her game was, but I felt like the smart thing to do was just shut up."
     hide cg
     show BE neutral at center
-    stop music
+    with dissolve
+    stop music fadeout 1.0
     BE "Hello, Kei-chan?"
     "The only sound that managed to come out of my mouth was a weak, guttural stutter."
     show BE sad
@@ -6508,12 +6535,12 @@ label BE035A:
     Kanami "Very nice, Hotsure-san. Please don't forget to check the intestinal tract on the back there. If you take a small knife, you can gently slice into the end and lift it up to pull it out."
     MC "Oh, right. Thanks. That wouldn't exactly taste good, would it?"
     Kanami "Ufufu, no, no it wouldn't."
-    MC "By the way you’re handling things, you must be the president of the cooking club, right Kanami-san?"
-    Kanami "Actually, I’m not the president. Three of us manage different parts of the cooking club."
+    MC "By the way you're handling things, you must be the president of the cooking club, right Kanami-san?"
+    Kanami "Actually, I'm not the president. Three of us manage different parts of the cooking club."
     Kanami "Takamura-sensei is the supervisor, she's always around to help everyone and organizes everything on the school side. She's also doing the meetings for advanced classes and organizing the cooking contests."
-    Kanami "Michiko Sano, who you already met during signing up, takes the reigns of organising things on students side. She takes it really seriously... Sometimes too seriously. She’s also my cooking partner."
+    Kanami "Michiko Sano, who you already met during signing up, takes the reigns of organising things on students side. She takes it really seriously... Sometimes too seriously. She's also my cooking partner."
     Kanami "And here's me, helping around and leading the meetings for beginner classes."
-    MC "Well, with a club this big, I guess you’d need multiple people to help make sure things run smoothly."
+    MC "Well, with a club this big, I guess you'd need multiple people to help make sure things run smoothly."
     Kanami "You would be correct, Hotsure-san. And how are you doing, Inoue-chan?"
     BE "Ha. I think I'm doing okay. How does it look?"
     Kanami "Your cuts are okay. But your hands aren't quite in the right position. May I?"
@@ -8103,25 +8130,33 @@ label BE043:
     "Honoka raised the remote to the TV in a dramatic fashion. Definitely forgetting that we're in for an awful 98 minutes and 24 seconds."
     BE "...Now!"
     "Honoka pressed the play button and leaned on my shoulder, getting nice and comfy."
+    if getVar("BEMode") == "Tomboy":
+        show cg BE043_movie1 with dissolve
+    else:
+        show cg BE043_movie1_fem with dissolve
     MCT "And not even 30 seconds in, they've parodied three different movies... poorly. Save me from this hell..."
     scene black with fade
     pause 0.5
-    scene Dorm BE with fade
+    if getVar("BEMode") == "Tomboy":
+        show cg BE043_movie2 with fade
+    else:
+        show cg BE043_movie2_fem with fade
     "45 minutes later, and the only thing that's been keeping me sane during this god-forsaken movie has been Honoka."
     "We've long since finished the popcorn, and Honoka's used that opportunity to get even more comfortable, leaning her head against my chest."
-    show BE angry
     BE "Man, this is really bad. I can't even keep track of how many movies they've made jokes about."
     MC "My brain shut off after the 7th superhero movie reference. And that was during the first 10 minutes. But still..."
     "I kiss the top of Honoka's head."
     MC "I'm still enjoying myself. I wouldn't want to do this with anyone else."
-    show BE embarrassed
     BE "Aww~ Thanks, Kei-chan."
     "Honoka snuggles even closer, resting more of her chest on top of mine."
     BE "Y'know, everything really is better when you're around."
     MC "I feel the same way."
     "We both shifted our focus back onto the movie for a few more minutes before Honoka paused the movie to get my attention again."
-    stop music fadeout 1.0
+    hide cg
+    scene Dorm BE
     show BE neutral
+    with fade
+    stop music fadeout 1.0
     BE "Kei-chan, I have to confess something. {w}Two things, actually."
     play music Peaceful fadein 1.0
     BE "First of all, I think I actually hate this movie and I can't finish it."
@@ -8309,7 +8344,7 @@ label BE044:
     BE "Ah, sorry hehe. I, uh... got a little carried away."
     MC "That's okay. I think that going for a walk on the beach would be pretty fun first. We need to find ourselves a good spot after all."
     show BE neutral
-    BE "Remember last time we went? We tried so hard to find a ‘secret spot' where there weren't so many people-"
+    BE "Remember last time we went? We tried so hard to find a 'secret spot' where there weren't so many people-"
     MC "And after we finally found one with a huge boulder we could climb on, we decided to pretend it was a watchtower-"
     BE "Because we just finished watching an anime episode about a guy with a pompadour fighting some other guy on a huge tower!"
     MC "Man... that was a fun day."
@@ -8460,7 +8495,7 @@ label BE044:
     MCT "What's that supposed to ..."
     BE "Oof. Make this quick, Kei-chan. They may look soft like pillows, but this is not the most comfortable."
     "Honoka laid as much as she could on her front causing her chest to smush around her torso."
-    "As I began rubbing the cream onto Honoka's lower back, right above her butt, I thought about what she meant by ‘areas she hasn't reached yet'."
+    "As I began rubbing the cream onto Honoka's lower back, right above her butt, I thought about what she meant by 'areas she hasn't reached yet'."
     "I went higher and finished off her back, I looked over her body for any areas that aren't shining with sunscreen, when I found the two huge culprits."
     "Honoka looked over her shoulder, giving me a sultry glance."
     show BE unique

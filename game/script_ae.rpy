@@ -7170,6 +7170,7 @@ label AE034:
     MC "S-Shiori-chan?"
     AE "Yes, well, {i}khm{/i} that's a bit of Post hoc ergo propter hoc, however I'd suppose If I had it would be quite the interesting cause."
     show AE neutral
+    $setAffection("TM", 1)
     Tomoko "Eheh, it must have been the extra big bubble kind."
     AE "..."
     MCT "O-OY, BRAT, ARE YOU TRYING TO GET US BOTH KILLED?!"
@@ -11708,6 +11709,7 @@ label AE052:
     MC "Well, yeah, but-"
     MC "Ah, whatever, you get what I mean."
     show Tomoko happy
+    $setAffection("TM", 1)
     Tomoko "Hmm~"
     "Sitting next to Tomo felt refreshing in a way. Though we'd both changed drastically, I felt as though she was kind of like an anchor to me from my time before coming to Seichou. In a way, I liked to think she felt the same."
     show Tomoko neutral
@@ -16995,6 +16997,7 @@ label AE074:
     AE "Well, I'm very glad you're doing this together. I know how hard learning sign language can be."
     "I looked over softly to Tomo before smiling warmly to her and petting her on the head."
     MC "Hoo yeah. Proud of ya, sis."
+    $setAffection("TM", 1)
     Tomoko "Neeh, geez, cut it out, your hands are freezing."
     show AE admire
     AE "Hmm..."
@@ -18388,6 +18391,7 @@ label AE080:
     MC "I mean, I'm not allowed to be in here anyways."
     Tomoko "... You're not?"
     MC "I don't think...? Um, I dunno, to be honest. But um... thanks for helping me out, sis. I really appreciate it."
+    $setAffection("TM", 1)
     Tomoko "Mhm."
     MCT "After spending 18 years with her, I can never really fathom her unabashed aloofness, but still... I'm glad to have Tomo with me through this."
     "With a smile, I got my shoes on and left for the office to meet with Shiori."
@@ -20252,6 +20256,7 @@ label AE089:
 
 label AE090:
     $setSize(6)
+    $setTimeFlag("size6")
     $setProgress("AE", "AE091")
     scene Classroom with fade
     play music Rain
@@ -20562,10 +20567,15 @@ label AE092:
     Takamura "Oh yeah?"
     show AE sad
     "Takamura-sensei and I turned our attention to the television, as a woman with a gargantuan rear end was shown talking to an interviewer with a microphone."
+    show cg AE092_tv1 with dissolve
     Interviewer "So, how do you feel with the knowledge that the record is held by someone else."
+    show cg AE092_tv2 with dissolve
     Woman "Eeeh, honestly I just feel kind of relieved! Though congratulations to her, definitely— best of luck!"
+    show cg AE092_tv3 with dissolve
     MCT "C-Congratulations?!"
     show AE sad-2
+    hide cg
+    with dissolve
     AE "... I just learned I surpassed her record a few months ago."
     Takamura "Ah..."
     AE "Around the time I stopped keeping track..."
@@ -21381,6 +21391,7 @@ label AE095:
     "As Tomo spoke, she made a few motions with her hands to Yuki-chan who nodded along before making a few signs back."
     Tomoko "I guess, yeah."
     RM "What did she say? Sis, what are you saying?"
+    $setAffection("TM", 1)
     Tomoko "She said the best we can do is hope."
     Minori "I've never seen her get this upset before..."
     MC "..."

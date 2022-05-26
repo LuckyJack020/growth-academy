@@ -51,6 +51,7 @@ label global000:
     Tomoko "Did you say something?"
     MC "You know, since we're not going to know anyone else here, the least you could do is be a little more social."
     hide cg with dissolve
+    pause 0.25
     show Tomoko neutral
     Tomoko "For what? We're only going to be here for a year. Odds are that we'll never see most of these people again anyway."
     MC "A lot can happen in a year, Tomo."
@@ -638,6 +639,7 @@ label global000_RM:
     "On my walk over, I slid my phone out of my pocket."
     MCCell "Hey, get yourself situated okay?"
     "A moment later, my phone buzzed in my hand."
+    $setAffection("TM", 1)
     TomokoCell "Yeah."
     MCCell "Good. Meet your roommate yet?"
     scene Dorm Hallway with fade
@@ -1826,6 +1828,7 @@ label MC003:
     Tomoko "Yeah?"
     MC "Don't be afraid to come see me, if you need anything."
     show Tomoko happy
+    $setAffection("TM", 1)
     Tomoko "Okay. I'll keep that in mind. Later."
     hide Tomoko with dissolve
     "I suppose I got all worked up for nothing. But something about all this was strange. I had no idea what we were getting into, but something told me it wasn't all going to go away with just a haircut."

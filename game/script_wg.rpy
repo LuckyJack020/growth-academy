@@ -51,7 +51,7 @@ label WG001:
     WG "What? François cannot perform at his best in a classroom kitchen. He needs a full assemblage of utensils and appliances-"
     Lunch "I said {i}you{/i} can make your meals.{w} Yourself."
     show WG haughty
-    WG "What!? That notion is absurd. It takes years of culinary study and experience to achieve the level of skill required to satisfy my fine pallet."
+    WG "What!? That notion is absurd. It takes years of culinary study and experience to achieve the level of skill required to satisfy my fine palate."
     WG "I can't be expected to devote adequate time to my studies if I am preoccupied with culinary pursuits. That is all the more ridiculous in light of the fact that François is already here."
     Lunch "If you don't get out of my kitchen in the next five seconds, you'll be dunking that expensive manicure in cold, greasy dishwater as I have you scrubbing every pot and pan we have."
     show WG angry
@@ -7443,7 +7443,7 @@ label WG036:
     "I resisted the urge to follow up with anything immediate the next day, not wanting to over-play my hand any further than I did on that occasion— especially knowing I'd see her in class soon anyway."
     show WG neutral with dissolve
     "I should have felt nervous approaching her after that, not really knowing how to follow that up, but I wasn't. I guess I got all of the jitters out of me knowing I successfully made a move on her."
-    "I didn't have any delusions about suddenly becoming Cassinova incarnate, but it did give me a bit more confidence to trust my instincts more."
+    "I didn't have any delusions about suddenly becoming Casanova incarnate, but it did give me a bit more confidence to trust my instincts more."
     "And I thought it was at least worth reiterating my compliments on her performance at the concert."
     MC "Hello Alice, got a minute?"
     show WG happy
@@ -11399,7 +11399,7 @@ label WG047_c4_1:
     MC "Oh, ok. Do you want me to continue?"
     WG "Y-Yes please."
     "Despite all of Alice's bravado from before, the moment I took her in my hand, she started to unwind. Right before my very eyes, the elegant beauty was starting to relax."
-    "Continuing my task, my arms kept up the attack on her belly. Flowing too and fro, back and forth, all across her rotund middle."
+    "Continuing my task, my arms kept up the attack on her belly. Flowing to and fro, back and forth, all across her rotund middle."
     "At some point I started to feel like a baker, preparing dough. I would gently knead the dough, not too much that it was disturbed. But also applying enough force that it spread was spread out evenly."
     menu:
         "Push your luck.":
@@ -11474,7 +11474,7 @@ label WG048:
     "What I thought was going to be a brief, but relaxing shower in this luxury bathroom turned into a tediously difficult task that was taking the better part of an hour to accomplish."
     MC "Man, that is a lot of sand. Probably could have made a sandcastle out of all of that.
     I hope the pipes can handle all of it."
-    MC "It wasn't too far fetched to imagine all of my sheddings mixed with sand was going to form some kind of makeshift concrete that would end up flooding the whole house."
+    "It wasn't too far fetched to imagine all of my sheddings mixed with sand was going to form some kind of makeshift concrete that would end up flooding the whole house."
     MC "Probably not... but might want to wrap this up quickly just in case."
     play sound Knock
     "{i}knock knock{/i}"
@@ -11642,7 +11642,7 @@ label WG048_afterchoice_1:
             jump WG048_c3_2
 
 label WG048_c2_1:
-    MC "Mmmm, I agree Alice, this dish is truly exquisite. I have to thank you for being such a generous hostess, I would never have had such a wonderful culinary experience if not for your refined pallet."
+    MC "Mmmm, I agree Alice, this dish is truly exquisite. I have to thank you for being such a generous hostess, I would never have had such a wonderful culinary experience if not for your refined palate."
     "Each bite just makes me want to slow down and savor the flavor for as long as possible."
     show WG happy
     WG "I'm glad you are enjoying it as well Keisuke. Indeed, a truly great meal is worth savoring to its fullest."
@@ -11679,7 +11679,7 @@ label WG048_c2_2:
     show WG neutral
     WG "Even if one dish were to stand out above others, it would lose its luster to the point of being mundane if divulged in too frequently."
     MC "True, variety is the spice of life, as they say. When I was a kid I thought when I became an adult I'd get to eat as much candy as I'd want. I learned pretty fast that gets way too sickening real quick."
-    WG "Precisely. Glad to know your pallet has matured."
+    WG "Precisely. Glad to know your palate has matured."
     show WG neutral-2
     WG "But to answer your question, I couldn't possibly begin to rank my favorite dishes. There's simply too many considerations to account for in what constitutes the perfect meal for the occasion."
     WG "The ambiance, time of day, the seasons, pairing with drinks and h'orderves— what makes for the perfect dish can only truly be evaluated in the moment..."
@@ -13244,7 +13244,7 @@ label WG054_c1_1:
     MC "Then it's a date."
     hide WG with dissolve
     "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out."
-    "Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
+    "Her tray still had a fair amount of food on it. Something had happened since the beach house- her appetite wasn't adding up."
     stop music
     scene black with fade
     jump WG054_c1_after
@@ -13266,7 +13266,7 @@ label WG054_c1_2:
     MC "Then it's a date."
     hide WG with dissolve
     "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out."
-    "Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
+    "Her tray still had a fair amount of food on it. Something had happened since the beach house- her appetite wasn't adding up."
     stop music
     scene black with fade
     jump WG054_c1_after
@@ -13322,7 +13322,7 @@ label WG054_c1_after:
     "With ice cream in hand, I joined Alice at the table she'd grabbed us."
     MC "Thank you for this, it looks really good."
     show WG happy with dissolve
-    WG "Your welcome, it was the least I could do to repay you."
+    WG "You're welcome, it was the least I could do to repay you."
     "As we ate I noticed her picking at the ice cream, only taking small chunks at a time."
     menu:
         "Ask":
@@ -13378,7 +13378,7 @@ label WG054_c3_pass:
     MC "I take it you've been paranoid about them being true."
     WG "To an extent, yes. Now more than ever have I wanted my eating habits to not define me as a person."
     MC "I see. For the record, regardless of your habit it would not sway my feelings for you. How long have these dreams been happening?"
-    WG "Since we returned from the lakehouse, so approximately two weeks, almost three."
+    WG "Since we returned from the beach house, so approximately two weeks, almost three."
     MC "If it occurs tonight I'd suggest going to the school nurse. She's probably one of the few here that has any sort of idea about our factors, let alone this sort of specific thing."
     WG "I suppose you are right in that regard, I'd considered going to her, but felt this was just a fluke. If it happens again I'll go there tomorrow before class."
     MC "Sounds like a good plan, if I do say so myself."
@@ -13425,7 +13425,7 @@ label WG054_c3_pass:
     MC "Well that's a relief that this isn't an isolated incident, but I have to ask why were you trying to limit your appetite?"
     show WG worried
     WG "That's a bit embarrassing I must confess. Since arriving here I could normally go two, almost three weeks, without a new uniform,"
-    WG "but since the lake house it's shortened dramatically to nearly a week at max. I've been eating the same size meals as before, but the urge to snack has certainly spiked."
+    WG "but since the beach house it's shortened dramatically to nearly a week at max. I've been eating the same size meals as before, but the urge to snack has certainly spiked."
     menu:
         "Be Understanding":
             jump WG054_c4_1
@@ -14106,6 +14106,7 @@ label WG056:
     "Alice handed Tomo a mirror."
     Tomoko "Whoa! I didn't realize it could look like this. Thanks! Although... I'm kind of sad it is not going to stay like this. It's going to get tangled and frizzy again."
     WG "Well, you could always come see me when you need help with it again."
+    $setAffection("TM", 1)
     Tomoko "Thanks Alice... I think I will."
     jump daymenu
 
@@ -14428,7 +14429,7 @@ label WG057_c1_after:
     "My plan to surprise Alice had been working better than I thought possible. Judging by the flush in her cheeks, she was enjoying this on an entirely other level that I hadn't anticipated."
     WG "{i}Whew{/i}... Perhaps it has simply been too long since I've had a proper desert given the uninspired selection available at the cafeteria."
     show WG happy
-    WG "This was such a refreshing change of pace for my pallet. I must say, your dish has been an unqualified success, Keisuke. Most impressive for a first time as well."
+    WG "This was such a refreshing change of pace for my palate. I must say, your dish has been an unqualified success, Keisuke. Most impressive for a first time as well."
     "Leaning back in her chair with her hand on top of her belly and a satisfied smile on her face, Alice motioned for me to come closer."
     WG "Thank you for such a thoughtful gift."
     "She pulled me in close and gave me a long wet kiss on the lips."
@@ -14561,7 +14562,7 @@ label WG058:
     MC "Well, we're a little ways away to make other plans if I hadn't thought to bring enough. Besides, you can always take the rest back with you to eat later."
     show WG neutral
     WG "That is true."
-    "Alice and I worked through the spread that was before us. I was relieved to finally receive the verdict if the culinary offerings provided had satisfied her fine pallet."
+    "Alice and I worked through the spread that was before us. I was relieved to finally receive the verdict if the culinary offerings provided had satisfied her fine palate."
     show WG happy
     "Seeing her truly enjoying her food, just indulging in the moment, like she loved, not worrying about her growth— it brought a smile to my face."
     WG "What?"
@@ -14579,7 +14580,7 @@ label WG058:
     show WG neutral at Position(xcenter=0.2, yalign=1.0)
     show Ryoko camera at Position(xcenter=0.8, yalign=1.0)
     with dissolve
-    Ryoko "Alight, action!"
+    Ryoko "Alright, action!"
     "They were a good distance from us, but her director's cues were still audible to us. I don't know too much about cinematography,{w} but they were clearly going for the 'long lost lovers finally reunited' vibe as the costumed actors raced across the field to embrace each other."
     MC "Looks like the film club is getting some footage. Not quite dinner and a movie, but lunch and a preview isn't too bad for a date, huh?"
     show WG stern
@@ -14868,8 +14869,8 @@ label WG058_c2_2:
     show WG happy
     "Alice leaned in close, giving me a long soft kiss... she tasted sweet."
     WG "And I'll be looking forward to more in the future."
-    MCT "I packed up the picnic blanket and food containers back into the basket."
-    MCT "Alice waited while I did so and we walked back together, taking in the beautiful scenery and enjoying each other's company before she had to get back to managing her business."
+    "I packed up the picnic blanket and food containers back into the basket."
+    "Alice waited while I did so and we walked back together, taking in the beautiful scenery and enjoying each other's company before she had to get back to managing her business."
     jump daymenu
 
 label WG058_c2_3:
@@ -14925,7 +14926,7 @@ label WG059:
     MCCell "<Oh, that's fine. I hope everything is alright.>"
     WGCell "<No, it's nothing like that. Aida and her friend Sakura are practicing for their cooking competition and they asked if I could be their mock judge.>"
     MCCell "<That sounds fun.>"
-    WGCell "<Naturally, I have the best pallet in the school, so it only makes sense they would ask me. Would you like to come along?>"
+    WGCell "<Naturally, I have the best palate in the school, so it only makes sense they would ask me. Would you like to come along?>"
     "Like I was going to miss an opportunity to watch Alice eat."
     MCCell "<Absolutely. What time and where?>"
     WGCell "<Just come by my room after class. We'll walk over together.>"
@@ -16431,9 +16432,9 @@ label WG061:
     "Honestly it was a pretty good solution to the dilemma I constantly have trying to plan one of our dates: what do you give to the girl that has everything?"
     if getFlag("WG059_aff_fail"):
         "That and I was trying to salvage the situation where I had let on a bit too much about my feeding preferences..."
-        "Especially since I knew my wallet wasn't big enough to hold all the bills needed to pay for a fancy dinner that would impress her refined pallet that also satisfied how much I imagined she could eat."
+        "Especially since I knew my wallet wasn't big enough to hold all the bills needed to pay for a fancy dinner that would impress her refined palate that also satisfied how much I imagined she could eat."
     else:
-        "My wallet wasn't big enough to hold all the bills needed to pay for a fancy dinner that would impress her refined pallet, even if such a restaurant existed on this island."
+        "My wallet wasn't big enough to hold all the bills needed to pay for a fancy dinner that would impress her refined palate, even if such a restaurant existed on this island."
     "That, and just plain dinner at a restaurant was far too mundane after a while, even for such an enthusiastic gourmand as Alice."
     "Not that it wasn't a solid option every now and then, I knew I just couldn't over-rely on it."
     "The other part of it was that I wanted to see if I could get Alice to do something outside of her comfort zone. If Alice didn't want to do something, she wasn't going to do it."
@@ -16703,7 +16704,7 @@ label WG061:
     WG "But if you would like to cook for me again... I would gladly accept."
     MC "Is that so? Well, I'll have to take you up on that offer."
     "I'd be lying if I said I wasn't disappointed that Alice didn't exactly swoon over the dish we made."
-    "But in retrospect, I don't know why I would have expected two novice chefs to create something that could fully satisfy a pallet as sophisticated as Alice's."
+    "But in retrospect, I don't know why I would have expected two novice chefs to create something that could fully satisfy a palate as sophisticated as Alice's."
     "I took a forkful of my own serving to try it out myself. Honestly, I hadn't had anything like it."
     "The creamy yolk sauce, the meaty bits of crisped pork, and a slight veg taste of the peas cutting through it with the thick starch. It was great!"
     "I didn't know what it was supposed to taste like, but it seemed pretty good to me. I was happy with it, but despite her qualified criticisms, I still felt like a bit of a failure for not making something Alice liked."
@@ -17853,7 +17854,7 @@ label WG063:
     show WG surprised-2
     WG "Oh!"
     show WG happy
-    "Hehe."
+    extend " Hehe."
     "The tape flopped across her backside, but I hiked it up across the small of her back, if anything could still be called small on her anymore."
     "Spreading out my arms as wide as I could, I began to pull it taught across the sides of her belly."
     MC "..."
@@ -18434,7 +18435,7 @@ label WG065:
     MC "Huh, well I guess that wasn't the tupperware drawer..."
     FMG "Holy shit that was loud!"
     show FMG neutral
-    "What the hell were you doing, Kei-kun?"
+    extend " What the hell were you doing, Kei-kun?"
     show Natsuko neutral
     Natsuko "If you needed help reaching the top shelf, you should have just asked, Hotsure-san."
     show FMG surprised-2
@@ -20365,7 +20366,7 @@ label WGBE003:
     "Given how many were in the crate, that would have been a sensible estimate, but on the other hand, underestimating Alice's appetite was not sensible in the slightest."
     "And here was the moment of truth, Alice's first Miracle Bar experience. She daintily peeled back the wrapper before taking a reserved bite."
     show WG surprised-2
-    "Her reaction was instantaneous. The overindulgent surgery confection hit her pallet like an explosion."
+    "Her reaction was instantaneous. The overindulgent surgery confection hit her palate like an explosion."
     WG "!"
     "It was one of the very few times Alice was at a loss for words. I had a hunch before, but now I knew for certain that terrible things had been set into motion."
     Chibuki "Blah! {w}These are way too sweet. Is this what chocolate tastes like over in the States?"

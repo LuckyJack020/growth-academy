@@ -446,7 +446,7 @@ init python:
         return True
     #Other misc functions
     def setAffection(girl, val):
-        if not girl in girllist and not girl == "RM":
+        if not girl in girllist and not girl == "RM" and not girl == "TM":
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
@@ -461,7 +461,7 @@ init python:
         showNotification(img)
 
     def getAffection(girl):
-        if not girl in girllist and not girl == "RM":
+        if not girl in girllist and not girl == "RM" and not girl == "TM":
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
         return affection[girl]
@@ -469,7 +469,7 @@ init python:
     def checkAffection(girl, exp, checkVal):
         if persistent.enable_notifications < 2:
             return
-        if not girl in girllist and not girl == "RM":
+        if not girl in girllist and not girl == "RM" and not girl == "TM":
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         if exp == ">":
@@ -915,7 +915,7 @@ init python:
 label start:
     python:
         #Global Variables
-        affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'WG': 0, 'PRG': 0, 'RM': 0}
+        affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'WG': 0, 'PRG': 0, 'RM': 0, 'TM': 0}
         prefgirl = ""
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
@@ -1089,7 +1089,7 @@ transform notif_transform:
 
 screen debugmenu():
     $debuginput = ""
-    grid 3 15:
+    grid 3 16:
         xalign 0.5
         yalign 0.5
 
@@ -1160,6 +1160,13 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "RM", -1)
             text str(affection["RM"])
             textbutton "+" action Function(setAffection, "RM", 1)
+        text ""
+
+        text "TM"
+        hbox:
+            textbutton "-" action Function(setAffection, "TM", -1)
+            text str(affection["TM"])
+            textbutton "+" action Function(setAffection, "TM", 1)
         text ""
 
         hbox:
