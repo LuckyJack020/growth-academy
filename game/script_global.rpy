@@ -212,6 +212,7 @@ image Festival = DynamicImage("Graphics/ui/bg/archiveBG/festival_[gametime].png"
 image Festive Tent = "Graphics/ui/bg/NYI.png"
 image Game Store = "Graphics/ui/bg/archiveBG/gamestore.png"
 image Hotel Room = DynamicImage("Graphics/ui/bg/archiveBG/hotelroom_[gametime].png")
+image Hotel Lobby = "Graphics/ui/bg/NYI.png"
 image Movie Theater = "Graphics/ui/bg/archiveBG/movietheater.png"
 image Movie Theater Lights = "Graphics/ui/bg/archiveBG/movietheater_lights.png"
 image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheaterext_[gametime].png")
@@ -1476,7 +1477,9 @@ init 2 python:
     eventlibrary['WG068'] = {"name": "The Lady in Waiting", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                             "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 10,     "next": "WG069", "obsflags": [],                               "conditions": []}
     eventlibrary['WG069'] = {"name": "Having a Ball", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                             "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 10,     "next": "WG070", "obsflags": [],                               "conditions": []}
     eventlibrary['WG070'] = {"name": "The Businessman and the Ballroom", "girls": ["WG"], "type": EventTypeEnum.CORE,                                           "location": "ballroom",      "priority": PrioEnum.ALL, "sp": 10,     "next": "WG071", "obsflags": [],                               "conditions": []}
-    eventlibrary['WG071'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 10,     "next": "", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG071'] = {"name": "The Businessman and the Ballroom", "girls": ["WG"], "type": EventTypeEnum.CORE,                                           "location": "ballroom",      "priority": PrioEnum.ALL, "sp": 10,     "next": "WG072", "obsflags": [],                               "conditions": []}
+    eventlibrary['WG072'] = {"name": "In the Morning Light", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                       "location": "ballroom",      "priority": PrioEnum.ALL, "sp": 10,     "next": "WG073", "obsflags": [],                               "conditions": []}
+    eventlibrary['WG073'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 10,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['WG009'] = {"name": "Between a Soft and a Hard Place", "girls": ["WG", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WG008"]]}

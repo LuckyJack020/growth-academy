@@ -10440,7 +10440,7 @@ label FMG060:
     show FMG neutral
     FMG "Heh, my smile {i}is{/i} quite stunning. Soooo... it's your turn now."
     MC "Ah, right, right."
-    MC "I knew him for abouuuut five years. We played all sorts of games together. He and one of my other friends got me into an older version of LoA."
+    MC "I knew him for about five years. We played all sorts of games together. He and one of my other friends got me into an older version of LoA."
     MC "It was one of our favorite things to play after we finished our schoolwork or came back from our jobs at the time. He was one of the best friends anyone could ask for. Man, I miss those days. What I'd give to go back."
     MC "Naaaaaaa! Why do you pick me up when I'm daydreaming?"
     show FMG happy
@@ -10450,8 +10450,9 @@ label FMG060:
     FMG "I guess. Only because I like you though."
     MC "I am quite a fan of the free rides. Do you run for tips?"
     FMG "I'll leave you here."
-    MC "Come on, it was fuuuunnnny."
-    FMG "Meh. I'll give it a five outta ten."
+    MC "I'm being considerate of your time, this could pay for a burger, you know. {w}You should consider this a side hustle it might turn into a successful business."
+    FMG "I'm good. The only person I want to carry is you."
+    MC "I'm touched."
     jump daymenu
 
 label FMG061:
