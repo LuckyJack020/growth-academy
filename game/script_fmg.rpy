@@ -10365,7 +10365,7 @@ label FMG060:
     MC "I have something to tell you. It's another one of my stories that hits close to home. I hope it will help you understand what I'm trying to say a little bit better."
     show FMG sad-2
     FMG "{i}*sniff*{/i} O-Okay..."
-    MC "Back in high school, I had a friend. Great guy, got along with everyone. He ended up transferring to another school later and on and I didn't see much of him anymore."
+    MC "Back in high school, I had a friend. Great guy, got along with everyone. He ended up transferring to another school later on and I didn't see much of him anymore."
     MC "Months passed and we would hang out now and then just to catch up, you know? He seemed happy with how his life was going and it was awesome to hear about all the adventures he went on."
     MC "One day... I was scrolling through social media and someone posted a picture of his face. \"That's odd, what could this be about?\" I thought. And then I scrolled down a little bit to see, I wish I didn't."
     MC "He had... taken his own life."
@@ -10450,9 +10450,10 @@ label FMG060:
     FMG "I guess. Only because I like you though."
     MC "I am quite a fan of the free rides. Do you run for tips?"
     FMG "I'll leave you here."
-    MC "I'm being considerate of your time, this could pay for a burger, you know. {w}You should consider this a side hustle it might turn into a successful business."
+    MC "I'm being considerate of your time, this could pay for a burger, you know. {w}You should consider this as a side hustle; it might turn into a successful business."
     FMG "I'm good. The only person I want to carry is you."
-    MC "I'm touched."
+    MC "I'm touched.{w} Onward, Akira!"
+    FMG "Don't make me regret my decision."
     jump daymenu
 
 label FMG061:

@@ -8718,6 +8718,370 @@ label BE044_after:
     jump daymenu
 
 label BE045:
+    $setProgress("BE", "BE046")
+    scene Classroom with fade
+    play music Peaceful
+    "The events from the beach trip were still fresh in my mind. It's one of those days I don't think I'll ever forget."
+    MCT "The bus ride, the sand, the swimming... Honoka's smile, her laughter, her terrible jokes, her teasing... her boobs."
+    MCT "...all of Honoka."
+    "My eyes were drawn over to Honoka's seat. She was restlessly tapping her foot and glancing at the clock."
+    MCT "She's planning on crashing the swim club practice today after all. Here I thought she'd wait a longer before goin-"
+    show HR neutral with dissolve
+    HR "Hotsure. Repeat what I just said."
+    MCT "Shit. Spaced out too long."
+    MC "Of course, Sensei. You said-"
+    play sound ClockTower
+    pause .25
+    MC "Ah, there's the bell. Time to go!"
+    show HR annoyed
+    "Tashi-sensei narrowed his eyes."
+    HR "Hmph. Class dismissed."
+    hide HR with dissolve
+    MCT "Phew..."
+    "By the time I packed up all of my things, and looked over to walk Honoka back to her dorm, her seat was empty and she'd sped off down the hallway."
+    show AE neutral-annoyed with dissolve
+    extend " I could hear Shiori sigh in front of me."
+    MCT "Ooookay, I guess I'll see her after practice."
+    hide AE with dissolve
+    MCT "It's a little weird if I hang around outside the pool as practice is going on. I'll just hang out on the roof. It's not like I have anything better to do."
+    scene black with fade
+    pause .5
+
+    scene Roof with fade
+    "It's a little weird to be at our usual spot, without Honoka. My brain decided to wander off. The view got me thinking about the landscape of the city and where I'd start with sketching this image."
+    play sound Boing
+    "Before I even had a chance to really space out, I felt the sensation of two silk missiles spreading out of the surface of my back. A long, dejected sigh followed the sensation."
+    show BE sad with dissolve
+    BE "Hey, Kei-chan..."
+    MC "Hey, Honoka. What happened? Did practice end early?"
+    show BE doubt
+    BE "No... I ripped my school swimsuit as I was trying to put it on, so I have to order another one to be made before I can even show up to practice."
+    MCT "True. She has been going through a pretty rapid growth spurt lately. Even for her."
+    "I pulled Honoka in for a hug, which I noticed was getting progressively more difficult reaching all the way around her from the front."
+    MC "Aw, that's a bummer. The uniform turnaround is pretty quick at the school, so you'll be able to practice with them in no time!"
+    MC "I mean...you {i}could{/i} wear the swimsuit you wore to the beach, but I have a feeling that wouldn't turn out very well."
+    show BE neutral
+    BE "{i}Pff{/i}. You dummy. There's no way I'd wear that thing to my FIRST swim practice. And besides..."
+    pause .25
+    show BE disoriented
+    BE "That swimsuit is for your eyes only~"
+    MC "Now there's the smile I know and love."
+    show BE neutral
+    BE "Thanks. Can we go do something today? I need something to distract myself."
+    MC "Yeah, of course. Did you have anything in mind?"
+    BE "Hmm... I kind of want to play some video games. But I don't really want to walk all the way to the arcade today."
+    MC "Fair enough. Let's see... Oh! I know what we can do!"
+    BE "What's that?"
+    MC "I'd been meaning to check up on Tomo one of these days, and god knows she has a lot of video games to take up her time."
+    show BE surprised-2
+    BE "Oh yeah! I haven't seen her in so long! That's a good idea! You should text her to see if she's at her dorm!"
+    MC "Oh, she's there."
+    show BE neutral
+    BE "How do you know for sure?"
+    MC "It's my twin sister. She's definitely there. Twin telepathy and all that."
+    BE "Ah, yeah... She still isn't leaving her room very often, right? But you should still text her to see if she's there. It's rude to barge in on a girl."
+    MC "{i}Fineee...{/i}"
+    MCCell "Hey, you in your room?"
+    "Almost instantaneously, my phone buzzed in reply"
+    TomokoCell "Yeah?"
+    MCCell "Coming over to visit. Is your room clean?"
+    TomokoCell "Clean-ish...?"
+    MCCell "Good enough, I wanted to introduce you to my girlfriend. Be on your best behavior."
+    TomokoCell "You tried this joke before, and it didn't work. Nice try. See you soon."
+    MCT "Heh, she has no idea.."
+    BE "So..."
+    BE "What'd she say?"
+    MC "We're clear. Want to head over there now?"
+    show BE happy
+    BE "Yeah, of course! Time to revive HonoTomo!"
+    MC "HonoTomo...?"
+    "I looked down and furrowed my brow as I wracked my memory to figure out just what Honoka was talking about. Then, like lightning, it hit me."
+    MC "Oh my God...you just unlocked a memory I locked away."
+    BE "Well, I don't blame you for not remembering. Tomo would always be locked in her room whenever I came over to your place."
+    MC "That's true, but whenever you convinced her to come out of her room, she would be glad to see you."
+    BE "That was like...three times, Kei-chan."
+    MC "My point still stands! Now then, lets head out."
+    BE "Okay!"
+    scene black with fade
+    pause .5
+
+    scene Dorm Hallway
+    show BE neutral
+    with fade
+    MC "Okay, I'm knocking now. You ready?"
+    BE "Just knock already! It's been ages since I've seen her!"
+    MC "Alright, alright! Jeez."
+    play sound Knock
+    pause .5
+    play music Tomoko
+    MC "Hey Tomo, how've you been?"
+    Tomoko "Neh... my game autosaved the second I died."
+    MC "... Nice to see you too. So are we gonna stand outside all day or are you gonna let us in?"
+    "AUGH"
+    "DUN DUN DUUUUN"
+    "Click"
+    "AUGH"
+    "DUN DUN DUUUUN"
+    "Click"
+    "That was all that played for a few seconds as there was a palpable din on the other end of the door. After another, silence entirely. And after another..."
+    MC "And aren't you gonna say hi to Honoka?"
+    Tomoko "Huh?"
+    show BE neutral at altMove(0.5, 0.25)
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    "Slowly, she cracked the door open further to see Honoka as she stood next to me."
+    show Tomoko surprised
+    Tomoko "Honoka?"
+    show BE happy at Transform(xzoom=-1)
+    BE "Heya Tomo! It's been a while! How've you been?"
+    "As though staring at a ghost, Tomo blinked slowly as she held her concave, shrimp like posture."
+    show Tomoko neutral
+    Tomoko "Wow... it's been a long time since I've seen you."
+    show BE neutral
+    BE "I know right! Forever!"
+    "As they talked to each other, my mind returned to youthful days in the park, back when even the ever reclusive Tomo would step out into the sun to play."
+    "Back when things were, in a sense, normal."
+    Tomoko "Alright, alright Kei. So where's your supposed girlfriend? This joke's better than the last time because you at least brought Honoka."
+    show BE embarrassed
+    MC "Actually..." (multiple=2)
+    BE "Actually..." (multiple=2)
+    Tomoko "?"
+    Tomoko "..."
+    pause .5
+    Tomoko "...No fucking way."
+    Tomoko "Are you serious?"
+    MC "Like a heart attack. Lets uh...get inside so you two can catch up."
+
+    scene Dorm Tomoko
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    "Tomo nodded as we walked into her room. There were, naturally, clothes and convenience store box lunch boxes abound."
+    MC "Well, you were right on the phone...your room's...clean-ish. {w}Emphasis on the -ish."
+    show Tomoko annoyed
+    Tomoko "You could have just not acknowledged it..."
+    show BE happy
+    BE "Psh, don't worry about it Tomo. Kei-chan's been to my own dorm room and it's looked worse than this. You're fine."
+    show Tomoko neutral
+    MC "It's true."
+    show BE angry
+    BE "Hey! I can say that about my own room, Kei-chan. You're not supposed to talk about your girlfriend's room like that!"
+    show Tomoko happy
+    Tomoko "... Heh... eheheh... hehehe!"
+    "Suddenly, Tomo began giggling in a way I had not heard in years."
+    Tomoko "You know, I always knew that you two would be a good fit together. Even from back when we were kids. Glad you finally made your move, Kei."
+    show BE happy
+    BE "See? She gets it! Anyways, I'm glad to see you again, Tomo! How's the school been treating you so far?"
+    show Tomoko neutral
+    Tomoko "Eh... fine? I guess I've been alright. Luckily the classes are nice and quiet."
+    Tomoko "N-Not like the dorm, at least."
+    show BE surprised-2
+    BE "Eh? The dorm?"
+    show BE neutral
+    BE "Oh right! You're dormed with Utagashi-chan, right?"
+    Tomoko "Yeah..."
+    BE "How's she? Y'know, like as a roommate."
+    Tomoko "..."
+    Tomoko "She's... okay. I guess I'd say that I don't mind her.."
+    Tomoko "She has days where she's... a lot. But, she's alright, all things considered."
+    show BE happy
+    BE "Woah, for real? Awesome! Glad to see you're kickin' it into gear with school life and stuff, ehehe..."
+    MCT "You're telling me. Seeing Tomo finally go out and start to open up even a bit... it's really something."
+    show BE doubt
+    BE "And how about the... um... other part of why we're here?"
+    "Honoka motioned to her torso."
+    BE "Obviously, you can see why I'm here..."
+    "Tomo looked down to where Honoka motioned as her eyes widened."
+    Tomoko "Good to see you haven't changed all that much."
+    show BE surprised-2
+    MCT "...Is she serious? There's being polite, and there's just straight up lying."
+    show BE angry
+    BE "Pffft. Thanks for trying, Tomo. But you can be honest, it's okay."
+    Tomoko "Sorry..."
+    "She couldn't help but take rather obvious glances to Honoka's chest every few seconds as she fidgeted."
+    Tomoko "Like... I've seen Kanami-chan around and she's pretty big, but you're um... {b}Big{/b}."
+    MCT "Ah, there's the Tomo I know and love..."
+    MC "Tomo...!"
+    show BE surprised-2
+    "Honoka's eyes widened a bit after she heard Tomo's unintentionally brutal honesty."
+    show BE sad
+    BE "I-It's okay, Kei-chan. It's not like she hasn't seen the girl with the massive boobs walking around campus."
+    show BE neutral
+    BE "B-But Tomo! You know Kanami-chan? She's a friend of mine! Birds of a feather, and all that."
+    Tomoko "Heh, w-well I guess that'd make you both boobies, eheheh."
+    show BE worried
+    BE "Haha...{size=-6}{i}yeah...{/i}{/size}"
+    MCT "Honoka seems to be pretty done with this conversation topic."
+    MC "But how about your hair, Tomo? Have you been taking care of it like you're supposed to?"
+    show BE surprised-2
+    BE "Wait...you and your sister have the same factor? Isn't that really, really rare?"
+    MC "Is it? Maybe it's because we're twins? I dunno. "
+    show Tomoko happy
+    Tomoko "I'm telling you, it's the gum. It has something in it..."
+    "Tomo looked at me and smiled."
+    Tomoko "Or, maybe the peanut butter."
+    show BE surprised
+    BE "OH MY GOD I REMEMBER THAT-!"
+    MC "NOOOOPE."
+    show Tomoko neutral
+    show BE surprised-2
+    BE "Yo, hold up..."
+    "Honoka turned and looked at the pause screen for but a moment before her eyes lit up."
+    BE "Oooo! Far Skies! I remember this game!"
+    Tomoko "You do?"
+    show BE happy
+    BE "Yeah! I used to play all the time and-"
+    "Unceremoniously, Tomo unpaused her game as, for a split second, her character was falling off a cliff before instantly dying."
+    "Then, after a small interlude where the game loaded the last autosave, Tomo was brought right back to the area she was falling before dying once again."
+    BE "It was so-"
+    pause .5
+    show BE surprised
+    BE "-ooOOOH MY GOD THEY DIDN'T FIX THAT BUG?!"
+    Tomoko "Cannot load the previous save while falling."
+    show BE confused
+    BE "THAT'S SO JANK WHAT?!"
+    scene black with fade
+    pause .5
+
+    scene Dorm Tomoko
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    "A few minutes had gone by as Honoka and Tomo continued to try and work out their conundrum after Honoka brought it upon herself to help remedy the situation as 'The Far Skies Master'."
+    show BE neutral
+    BE "Okay, so like, maybe try to quickly open the inventory and drop an item to make the fall damage less."
+    "Tomo looked up from her gamepad, her long, brown hair trickling down onto the screen like a waterfall. With a listless yawn, she rubbed her eye."
+    Tomoko "Mhm."
+    "{i}*Click*{/i}"
+    "AUGH"
+    "DUN DUN DUUUUN"
+    show BE confused
+    BE "Damnit!"
+    Tomoko "Nnng."
+    show BE neutral
+    BE "Okay, press the nipples."
+    Tomoko "... H-Huh?"
+    BE "The nipples! The spinny knobs on the controller!"
+    MC "Did you have to word it like that? They're also called \"analog sticks\"..."
+    "Honoka blushes as she bites her lip and looks at Keisuke in embarrassment..."
+    show BE angry
+    BE "{i}Dch{/i}-No, shut up tho."
+    MC "You can shut me up, but the truth still stands."
+    "As they continued to play, Tomo smiled at Honoka's attempts."
+    show BE happy
+    BE "Aww man, it's been so long since I actually played this."
+    Tomoko "Y-Yeah, it's my first time playing it."
+    BE "You mean aside from when we did that one time back home?"
+    show Tomoko surprised
+    Tomoko "..."
+    "Tomo seemed a bit confused at this as she looked to the screen."
+    Tomoko "Huh?"
+    BE "Y'know, like... when we played a week before I had to go?"
+    Tomoko "..."
+    BE "You remember that, right?"
+    Tomoko "Uh... n-not that I can recall."
+    show BE confused
+    BE "Eh?"
+    "As Honoka paused the game once again to come up with a new plan, she stopped and looked to Tomo."
+    show BE neutral
+    BE "Really? That was so much fun for me! It was, like, the last time we got to play a game together!"
+    Tomoko "Um... I don't... really remember the last time we played a game together to be honest."
+    show BE sad
+    BE "O-Oh..."
+    Tomoko "..."
+    show Tomoko neutral
+    MC "Um..."
+    MCT "Wait... when {i}was{/i} the last time they played games together? Was I in the room?"
+    BE "E-Ehh...?"
+    show BE shrug
+    BE "Well, look on the bright side! That just means you forgot me totally beating you and Kei both in multiplayer!"
+    MC "Oi!"
+    Tomoko "So... if I don't remember, then how does that count?"
+    MC "Exactly! You can't just say that you won when neither of us remember it otherwise!"
+    MC "Ahahaha!"
+    show BE doubt
+    BE "..."
+    BE "Sooo... you don't remember it either?"
+    MC "Hmm... can't say that I do?"
+    MCT "This is awkward..."
+    MC "B-But, honestly after how many times you've totally beaten me when we play together, the times start to blur together, you know?"
+    show BE sad
+    BE "Y-Yeah, you're totally right..."
+    "The air in the room seemed to stagnate with Honoka's last line as the three of us played in an awkward silence."
+    show BE angry
+    BE "Haaah, man, I gotta say, I'm pretty hungry!"
+    MC "Yeah... I could use some food too, now that you mention it. How about you, Tomo? Hungry?"
+    show Tomoko sad
+    "Tomo, for her part, however, was mostly silent as she sat on the bed next to me, looking down at the floor as she fiddled with her stuffed bear."
+    Tomoko "Hm? Ah, no thanks. Um... I figure it's probably really busy out in the lunchroom."
+    MC "Ah, that's true."
+    MCT "Oh yeah, Tomo never did like crowds."
+    show BE neutral
+    BE "We can bring you back something if you really want? They got some new snacks that have become my new obsession lately!"
+    show Tomoko neutral
+    Tomoko "Eh? What are they?"
+    BE "I think they're imported from somewhere in the Americas. They're ketchup flavored chips!"
+    MC "{i}Eugh...{/i}those sound actually awful. Who would eat those?"
+    show BE happy
+    BE "Don't knock 'em till you try 'em! It's like...cutting out the middleman when eating fries and ketchup! It's genius actually!"
+    Tomoko "I don't think I've ever had ketchup before, actually... sure thing."
+    "Though weakly, Tomo smiled as she shrunk back."
+    Tomoko "And uh... by the way... how are things back home?"
+    "Honoka paused for a second."
+    show BE neutral
+    BE "Home, huh?"
+    show BE doubt
+    BE "...Haven't thought about it in a while actually. I'm sure Mom and Dad are doing just fine, I just haven't checked on them in a while."
+    MCT "Now that she mentions it, I haven't talked to my parent's in a while either..."
+    MCT "Actually, I wonder how they would react to learning that my girlfriend is Honoka of all people?"
+    Tomoko "Y-Yeah, I hope uh... my parents are too."
+    MC "Baaah, you know we can call them whenever."
+    Tomoko "I... I know."
+    MCT "... Actually, this brings up a good question... do I even remember what Honoka's parents even look like?"
+    "Though taken aback by my train of thought, I poked Honoka in the arm."
+    MC "So uh, let's go get those chips, eh?"
+    show BE sad
+    BE "..."
+    show BE neutral
+    BE "Oh! Yeah, let's do it! Be right back, Tomo!"
+    Tomoko "T-Thanks, Kei."
+    $setAffection("TM", 1)
+    "As I nodded and closed the door, I turned to Honoka."
+
+    scene Dorm Hallway
+    show BE sad
+    with fade
+    MC "Alright! That went... better than I thought."
+    "However, the look on Honoka's face told a different story."
+    BE "Could have been worse, I guess..."
+    MC "Tomo seemed pretty glad to see you though."
+    BE "Yeah..."
+    MC "..."
+    BE "..."
+    MC "What's wrong? You went quiet all of a sudden."
+    show BE doubt
+    BE "I guess...I'd never really thought about how much I missed after I moved away from you guys. Of course our lives moved on after I moved, but I never considered how much until now."
+    BE "I really treasure our memories as kids, but I guess...I didn't think that you two would forget any of them."
+    MC "Ah..."
+    "I didn't really know what to say to that. Of course I treasured our memories together, and I knew Tomo did too."
+    MC "Well... I mean, we did so much right? When you do so much... I guess some stuff just gets caught up in the shuffle, y'know?"
+    MCT "Hang on..."
+    MC "Wait a minute. Wasn't that the day where you lost like 30 rounds of Tamashi Tantō in a row to Tomo?"
+    play music BE
+    show BE surprised
+    BE "Nooo! You remembered the worst part of it!"
+    MC "Then you lost another few times against me at Blazin'Red?"
+    BE "That one didn't count! That was my first time playing!"
+    "And with that, I smiled once more."
+    MC "See? It's all coming back to me. It just took me a bit to remember!"
+    "Honoka leapt forward and embraced me as well as she could, slightly knocking the wind out of me with her twin wrecking balls."
+    show BE happy
+    BE "Yeah you did! And there's more memories we can make together too!"
+    MCT "Yep. There's Hopeful Honoka again, eheheh."
+    BE "Now then! Let's go get those chips! The new chapter of the TomoHono Adventures await!"
+    MCT "Wait...wasn't it HonoTomo before?"
+    jump daymenu
+
+label BE046:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
