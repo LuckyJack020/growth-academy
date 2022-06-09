@@ -402,6 +402,17 @@ init python:
     )
     ost.manualDefineList.append(theme_ToM)
 
+    theme_SeB = ost.soundtrack(
+        name = "Sea Breeze",
+        path = "Audio/BGM/scene_beach.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Beach Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_SeB)
+
     ## Base Template
     ######################################
 

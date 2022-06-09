@@ -3725,7 +3725,7 @@ label FMG025:
     MCT "I wonder what that could mean."
 
     scene black with fade
-    $setTime(TimeEnum.NIGHT)
+    $setTime(TimeEnum.NIGHTLIGHTS)
     scene Dorm Exterior with fade
     "For tonight, I went with a white button-down and a pair of black dress pants. Nothing over the top. I'm curious as to what Akira could be wearing; I never saw her as one to dress up. I'd be lying if I said I wasn't excited to see."
     MC "Hey Akira, I'm outside when you're all set!"
@@ -3769,10 +3769,13 @@ label FMG025:
     MC "You may not be worthy to be in my presence but you are definitely worthy to help ice my back when we get back."
     show FMG neutral
     FMG "I pinky promise."
+    scene black with fade
+    pause 1
 
     scene Disco Club
     show FMG surprised
     with fade
+    play music FMG
     FMG "Jeez this place is freaking incredible!"
     "She was right, lights camouflaged the floor and the ceiling, surrounding us in rays of various colors. The only thing brighter than the dance floor was Akira's smile. She seemed lost in trying to take in everything around her. It was like watching a kid in a candy store."
     DJ "Welcome everyone! Tonight is going to be crazy, I hope to see everyone moving and having fun."
@@ -12122,11 +12125,11 @@ label FMG067:
     scene black with fade
     pause 1
 
-    scene Okinawa Market
+    scene Car Interior
     show FMG neutral
     with fade
     #(Not too sure what to use as a background, maybe show the market early?)
-    "We ran into a teeny tiny problem when we called a taxi to get to Akira's house. She had a little trouble getting in, thankfully it was nothing we couldn't fix."
+    "We ran into a teeny tiny problem when we called a taxi to get to Akira's house. She had some trouble getting in, thankfully it was nothing we couldn't fix."
     MC "Hold my hand. You'll be fine."
     FMG "R-Right. Need to stay calm."
     "The driver, albeit a little taken aback by Akira being... large, was extremely helpful getting her in and moving the seats around."
@@ -12143,14 +12146,13 @@ label FMG067:
     show FMG neutral
     with fade
     #(need background that shows the outside of a house)
-    pause .5
     "It took some elbow grease trying to wiggle Akira out— thankfully we got her out without damaging the car."
     MC "Thank you again, sir."
     Driver "Nah, this one's on the house. Thanks for keeping an old man entertained."
     MC "I appreciate it, thanks."
     "He gently nodded, thanked us once more, and drove off."
     MC "You okay?"
-    FMG "Mhm, not like I lied about why we came here. It still tugs at my heart to talk about Tatsuya. {w}{i}Sigh{/i} Better than breaking down into a hot mess like before."
+    FMG "Mhm, not like I lied about why we came here. It still tugs at my heart to talk about Tatsuya. {w}{i}sigh{/i}... Better than breaking down into a hot mess like before."
     MC "You don't need to feel bad about it if you do."
     FMG "I know, still though... {w}Come on, let's set our stuff down and hit the market."
     MC "Right."
@@ -12568,6 +12570,175 @@ label FMG068:
     jump daymenu
 
 label FMG069:
+    $setProgress("FMG", "FMG070")
+    scene Okinawa Bedroom with fade
+    "I woke up in a silent and empty room, the only noise coming from the waves gently crashing onto the shore."
+    MC "God, this island is gorgeous... Now, then... {w}Where is everybody???"
+    MC "Guess I have to do the responsible thing and text her."
+    pause .5
+    MCCell "Hey, is everything alright? I woke up to an empty house."
+    "Akira responded in record time."
+    FMGCell "Hey, sorry, my mom and I went to get flowers and I didn't want to wake you up so early. We'll be back in like five minutes."
+    MCCell "Okay, sounds good. Had me worry for a little bit."
+    FMGCell "Sorry, that's my fault. I'll make it up to you later, I promise. Love you."
+    MCCell "No worries. As long as you're okay. Love you too, be safe."
+    pause .5
+    MC "Hm, she said she'll be back in five minutes. That should be {i}just{/i} enough time to take a shower and get everything cleaned up."
+    scene black with fade
+    pause 1
+    scene Okinawa Bedroom with fade
+    MC "Clean as a whistle. I'm so much more productive when she isn't around. {w}Never too late to consider a career change."
+    FMG "You wouldn't last a day without me."
+    show dummy with vpunch
+    MC "!"
+    MC "Can you not???"
+    show FMG neutral with dissolve
+    FMG "And ruin the fun of watching you nearly shit your pants? Never. It's one of my favorite things."
+    MC "Harassing me?"
+    FMG "Yes."
+    FMG "I do what I do out of love, Kei-kun."
+    MC "Yeah, yeah..."
+    pause 1
+    MC "Hey, about yesterday at the beach-"
+    FMG "I'm fine."
+    show FMG sad-2
+    FMG "There's a lot going on in my head right now and I don't honestly know how to feel."
+    show FMG neutral
+    FMG "I'm happy to be here... especially with you. But at the same time, I'm sad to be here."
+    FMG "There are so many good memories everywhere I go, I can't resist the urge to smile."
+    show FMG sad-2
+    FMG "Then I remind myself why I'm here and my mood goes from one hundred to zero within the blink of an eye."
+    FMG "Yesterday was better than I could've ever hoped for... {w}Then I started thinking about Tatsuya being here... getting to meet you... getting to see how happy I am."
+    show FMG sad
+    FMG "I'm sorry, I've said too much."
+    MC "Akira, please..."
+    FMG "{i}sigh{/i}..."
+    show FMG neutral
+    extend " I'll be alright, I promise..."
+    "The way her voice trailed off... it told me everything I needed to know."
+    MC "Okay..."
+    "Silence filled the room, with neither of us knowing how to break it. {w}Until her mom poked her head in."
+    show FMG neutral at altMove(0.5, 0.75)
+    show Yuko neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with easeinleft
+    Yuko "Is everything okay? You two are usually so talkative. This quiet is so odd."
+    show FMG happy
+    FMG "Everything is fine, Mom."
+    Yuko "You're lying."
+    show FMG sad-2
+    Yuko "Sweetie, I know how you feel. I do. I always will. We should be celebrating the life Tatsuya lived... every day. That's what he'd want. And I know he'd be mad seeing you so gloomy."
+    Yuko "We'll leave to go see him soon. Hopefully, your father can get out of his meeting in time to join us."
+    pause .5
+    Yuko "Keep your head up, Akira. {w}I'll be back for you two in forty-five minutes."
+    show Yuko neutral at Transform(xzoom=+1)
+    pause 0.1
+    hide Yuko with easeoutleft
+    FMG "I hate when she's right..."
+    MC "She is your mom after all. No one knows you better than her."
+    show FMG neutral at altMove(0.5, 0.5)
+    FMG "I know it's the worst."
+    "I joined her on her bed, taking her hand into mine."
+    FMG "I feel like I'm going crazy."
+    MC "You've got a lot going on in your head, Akira. Take a step back and breathe, slow down."
+    FMG "Kei?"
+    MC "Yeah?"
+    FMG "Can we cuddle before we leave? I need a hug."
+    MC "Sure."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    #replace with Graveyard
+    scene Park with fade
+    "I expected the car ride to be quiet and awkward and thankfully it wasn't. {w}The only awkward part was trying to squeeze Akira {i}in and out{/i} of her mom's car. I think we might've damaged the seat a{i}tiny{/i} bit trying to make it work."
+    MC "I'm sure it's fine. Let me work some Keisuke magic."
+    "I reached in to slide the seat forward... {w}and took the seat adjuster with me."
+    MC "Hmm, I'm no mechanic but this might be broken. Maybe."
+    show FMG sad-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
+    FMG "... Sorry, mom..."
+    show Yuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Yuko "It happens, sweetie. Well, not everyone has big giant muscles and gets-"
+    FMG "Mom..."
+    Yuko "Heh, sorry dear."
+    Yuko "We should get going, don't want to keep Tatsuya waiting."
+    show FMG neutral
+    FMG "Right behind you. Is dad going to be able to join us?"
+    show Yuko neutral #need Yuko sad sprite
+    Yuko "{i}sigh{/i}... No, he won't be able to make it till the night. He's going to come with Hidaka after he closes."
+    show FMG sad-2
+    FMG "At least he's coming this time, he was heartbroken he couldn't make it last year."
+    Yuko "We all were..."
+    show Yuko neutral
+    Yuko "Kei, could you grab the flower from the back seat?"
+    show FMG neutral
+    MC "You got it."
+    pause 1
+    MC "You picked out some nice flowers, oba-san."
+    Yuko "Akira picked them out this time. Don't worry, I was also surprised by what she picked out."
+    FMG "Moooom!"
+    Yuko "I'm teasing! You two do it to each other all the time, let your mother have some fun."
+    MCT "They are way too similar..."
+    scene black with fade
+    pause 1
+
+    #also replace with Graveyard
+    scene Park
+    show FMG sad-2 at Position(xcenter=0.25, yalign=1.0)
+    show Yuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    "The mood shifted once we entered the cemetery. The quiet mixed in with wind rustling the leaves made me increasingly uneasy. I stood beside Akira holding her hand as we walked toward Tatsuya."
+    "A part of me wanted to pull her away to avoid what was going to happen, I didn't want another hole in my heart."
+    "I could feel Akira's grip tighten and loosen constantly as we continued walking. I could feel her trembling, her legs struggling to keep her up."
+    "Approaching Tatsuya's grave, I was hit with a familiar feeling. The same one I felt back on the rooftop that night. {w}This time, however, I would have to take a step back."
+    "I handed Mizutani-san the flowers and watched the two walk up in silence."
+    "I lowered my head and listened to the wind blowing with the sound of tears sprinkled over."
+    Yuko "I-I love you, Tatsuya. Not... not a d-day goes by where I don't think of your... your smile."
+    Yuko "I miss you... so so much. I hope wherever... wherever you are... you're happy... Happy birthday, Tatsuya. I love you always."
+    FMG "I-I-I'm sorry... I wish you were here. I... I just want to s-see you... one m-m-more time."
+    "Every word felt like a knife in the back. The pain was unbearable."
+    FMG "It's not fair..."
+    pause 1
+    Yuko "We brought fl-flowers... your favorites"
+    FMG "I picked them out. I-I hope you like them."
+    "I turned my back, I wanted to scream... {w}I wanted to do anything to make the pain go away."
+    FMG "W-Would you like to meet him, Keisuke?"
+    "I didn't feel Akira's hand on my shoulder until her words snapped me back to reality."
+    MC "Yes. Yes... I would."
+    show FMG sad-2 at altMove(0.5, 0.5)
+    hide Yuko with dissolve
+    "I took her hand, gripping it tightly, and walked towards his grave as I pulled myself together as best I could. {w}Miztuani-san was calming herself down as she slowly stepped away."
+    pause 1
+    MC "Hey, Tatsuya, It's nice to meet you. I've heard a lot about you. Mostly good though, I promise."
+    MC "Your sis made you out to be pretty cool. I-I gotta say... I'm a little jealous."
+    "Through the sound of her crying, I could feel a smile forming followed by a slight chuckle."
+    MC "Oh, that's right. I have a gift."
+    "I reached out into my pocket and pulled out the beach glass we had collected the other day."
+    MC "She said you like collecting them. I figured you'd want to add another to your collection."
+    MC "Thank you for being an inspiration for her. She can be a bit crazy at times, but her heart is in the right place."
+    MC "I'll keep an eye on her the best I can. She's a loose cannon but she's our loose cannon."
+    pause 1
+    MC "Happy birthday, Tatsuya."
+    "Her arms wrapped around me instantly and I was hoisted up into the air. And this time I didn't mind the pain. Anything to see her smile."
+    show FMG neutral
+    FMG "T-Thank you, Kei."
+    MC "Hang... Hang on. You... You have to wish Tatsuya a happy birthday."
+    "She lowered me to the ground and rested her hand on his grave."
+    hide FMG with dissolve
+    FMG "S-Sorry, to get so... emotional all the time with you, Tatsuya. I-I have trouble controlling them."
+    FMG "I'll... I'll do m-my best this... t-time."
+    FMG "I wish... I wish you were here. You'd like this guy I'm dating... he's got this crazy hair problem. You'd have to see it to b-believe it."
+    FMG "Dad will be by later with Hidaka to come see you. He-He feels terrible about last year. Don't... be too hard on him."
+    pause 1
+    FMG "I miss you, Tatsuya. Everyday. Save me some sand up there, I'll help you finish that sandcastle in another life."
+    FMG "Happy birthday, big brother. {w}I love you."
+    "Her mother came back up to join us, embracing Akira in a hug."
+    MCT "I'm proud of you."
+    scene black with fade
+    "The car ride back was filled with more stories of all the crazy things Akira and Tatsuya did as kids. Pranking their dad with whoopee cushions, getting stuck in the elevators at hotels after clicking all the buttons."
+    "There wasn't anything those two wouldn't do together."
+    "We might not be able to turn back time. We can remember him though. Through every smile, every laugh, and every tear. Tatsuya will always be there for her. That's what she walked away with today."
+    jump daymenu
+
+label FMG070:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
