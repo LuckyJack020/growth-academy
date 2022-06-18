@@ -11386,7 +11386,7 @@ label WG047_c4_1:
     show cg WG047 with dissolve
     "Alice gave me a reaffirming nod as I positioned myself beside her. Lowering down onto my knees, I could feel the smooth grain of the sand envelop my shins."
     "It took only a second to position myself comfortably, but the sheer size of my task had just dawned on me."
-    "It was enormous even when standing eye level with Alice, but being this close to it gave her belly gave it a daunting aura."
+    "It was enormous even when standing eye level with Alice, but being this close to her belly gave it a daunting aura."
     "With each breath, I could see it rising and falling like the tides on the beach. A veritable tsunami of soft fat, crashing over itself again and again."
     "My hands acted almost on their own, as my eyes were too busy gawking. Before I even knew what I was doing, the bottle of lotion had been opened."
     "Tilting it over Alice's behemoth belly, I let the lotion pour out on the upper most part of her stomach. The liquid spread and pooled all across her, dripping into whatever folds it could find."
@@ -11400,7 +11400,7 @@ label WG047_c4_1:
     WG "Y-Yes please."
     "Despite all of Alice's bravado from before, the moment I took her in my hand, she started to unwind. Right before my very eyes, the elegant beauty was starting to relax."
     "Continuing my task, my arms kept up the attack on her belly. Flowing to and fro, back and forth, all across her rotund middle."
-    "At some point I started to feel like a baker, preparing dough. I would gently knead the dough, not too much that it was disturbed. But also applying enough force that it spread was spread out evenly."
+    "At some point I started to feel like a baker, preparing dough. I would gently knead the dough, not too much that it was disturbed, but also applying enough force that it spread out evenly."
     menu:
         "Push your luck.":
             jump WG047_c5_1
@@ -19994,7 +19994,7 @@ label WG071:
     "It was a mass of pure blubber, packed so tightly beneath her supple skin it was heavier than any flab one could imagine."
     show WG aroused
     "I rubbed it along her sides. Short back and forth strokes at first, slowly turning into circles, broader and broader until I was going the entire length of her abdomen."
-    WG "{size=-6}}{i}Eehhn...mmph!{/i}{/size}"
+    WG "{size=-6}{i}Eehhn...mmph!{/i}{/size}"
     "Alice was clearly enjoying this even more than what I was doing before. More than a few times I grabbed ahold of her love handles and attempted to lift her titanic mass."
     "Handfuls upon handfuls of sheer lard, more than I could grasp, as I fondled and wobbled its girth."
     "I was putting in serious effort to lift it up from her sides, but I only succeeded in drawing it taught from the pendulous apex of her mass, not even close to actually lifting it. I'd need to get under there to do that."
@@ -20055,7 +20055,7 @@ label WG071:
     "Softly caressing with my lips at first, tantalizing the overly engorged erogenous zone that was her belly, I was soon sucking mouthfuls of flab as I rocked her wobbling ball of fat back and forth, no doubt also feeling my manhood pressed against it in the process."
     WG "Oh Kei! {w}Oh Kei! Yes! Aaaaahhh! Aaah!"
     WG "{b}AAAAAAHHH!{/b}"
-    MCT "Holy shit it happened... a full on bellygasm. {w}And that was just the foreplay But we're not done yet."
+    MCT "Holy shit it happened... a full on bellygasm. {w}And that was just the foreplay. But we're not done yet."
     MC "Everything alright there, Alice?"
     show WG surprised-2
     WG "I... I should say so. That was..."
@@ -20264,6 +20264,7 @@ label WG071:
     extend " But you managed to exceed even those."
     MC "I could say much the same. Alice, you are beyond my wildest fantasies. I couldn't have even imagined a woman as beautiful and sexy as you. {w}I love you."
     WG "And I love you, Keisuke."
+    $setAffection("WG", 3)
     "And with that, we sealed the occasion with a soft kiss between us."
     show WG neutral
     "With the heat of the moment finally dissipating, a new sensation swept over us— we were both exhausted!"

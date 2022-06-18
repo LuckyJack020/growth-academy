@@ -2679,7 +2679,7 @@ label AE016_after:
     show AE angry
     AE "'Satoru-sensei is-' nggh."
     "And another."
-    MC "Jeez what's with these dumb requests?!"
+    MC "Jeez... {w}what's with these dumb requests?!"
     show AE neutral-annoyed
     AE "It's par for the course. It was the same as in my previous school."
     MC "Well, is there any way to... I guess cull the requests so there are only serious ones?"
@@ -18187,7 +18187,7 @@ label AE079:
     MC "Hey."
     show AE neutral
     AE "Hm?"
-    MC "Everythings going to be alright."
+    MC "Everything's going to be alright."
     show AE smile
     "She smiled, looking down at her food before taking the last bite."
     "{i}Crrrrk{/i}"
@@ -19942,7 +19942,7 @@ label AE088:
     with fade
     "As we approached the clocktower, the setting sun once more bathed the white snow a light orange as I huddled close to Shiori, who let out not even a slight shiver."
     AE "I haven't been in here in quite some time."
-    "She walked foreward, straight towards the entrance of the tower..."
+    "She walked forward, straight towards the entrance of the tower..."
     MC "H-Hey wait-"
     "Only to walk straight ahead and accidently wedge her hips in the doorframe."
     AE "EEP!"
@@ -20138,7 +20138,7 @@ label AE089:
     "Tako, for her part, still seemed a bit shellshock from the sudden and drastic shift in dialect and voice that came from Shiori."
     "Shiori herself had always spoken with a really official and proper Tokyo accent aside from a few slip ups, and it seemed as though Tako had never caught on to it before either."
     Tako "A-Ah! Right, yeah, no big."
-    MC "Um, if you two want, I made brekfa-"
+    MC "Um, if you two want, I made breakfa-"
     Tako "GRUBS ON!"
     #Put on Tako's casual sprite here
     "Throwing on a ragged, wrinkled shirt from her bedroom floor, Tako nearly barreled into the table with the full width of her massive hips as she pulled out her chair and sat down."

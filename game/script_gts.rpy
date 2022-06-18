@@ -263,7 +263,9 @@ label GTS003:
     "I will admit I was rather surprised by what I saw. There were trays upon trays of warm food prepared for us, a lot of which looked just heavenly to the eyes and assuredly tasted as wonderful."
     "Not wishing to hold up the line though, I quickly grabbed what I felt would be a decent quick breakfast, getting some steamed rice, a rolled omelette, and a small bowl of miso soup. I thanked the cooks before searching for a place to sit."
     "There were a good amount of unfamiliar faces among those sitting at various tables, but one face was rather familiar. Sitting down with a slight smile, I spoke to my neighbor."
-    show GTS neutral at center with dissolve
+    show GTS neutral
+    show HairpinGTS1
+    with dissolve
     MC "Hey there, Yamazaki-san. Nice to see someone I know here."
     GTS "Good morning, Hotsure-san. I hope you're having a pleasant day so far."
     "Her hands gently repositioned her utensils and napkin in an extremely orderly fashion before wiping her hands off with a moist towelette. She then looked at me, as if to give me a hint, until I realized what I'd forgotten."
@@ -294,10 +296,12 @@ label GTS003_c1:
     $setAffection("GTS", 2)
     $setSkill("Art", 1)
     $setFlag("GTS008_flowers")
-    show GTS embarrassed at center, Transform(xzoom=-1)
+    show GTS embarrassed at Transform(xzoom=-1)
+    show HairpinGTS1 at Transform(xzoom=-1)
     "For the briefest of moments I could see Naomi's cheeks flash a slight crimson in what I assumed was embarrassment as her hand went to touch the accessory."
     "She looked away for a second, but returned her eyes back to mine and retrieved that small smile she had before."
-    show GTS embarrassed at center, Transform(xzoom=1)
+    show GTS embarrassed at Transform(xzoom=1)
+    show HairpinGTS1 at Transform(xzoom=1)
     GTS "Oh, why thank you so much. It's just a little something I decided to add to the rest of my attire for today. I have a bit of a collection of them, various species and things of that nature."
     MC "Well, I think it suits you rather well."
     GTS "Thank you..."

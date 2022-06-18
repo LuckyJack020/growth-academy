@@ -30,7 +30,7 @@ label global000:
     scene Ferry with fade
     play music MC
     "The hard bench under me lightly hummed with the vibrations of the ferry. Two hours of sitting here twiddling my thumbs and scrolling through my phone had left me beyond bored."
-    "I leaned against the side of the boat, looking out across the shimmering, tranquil sea as the salty air blew through my thick, brown hair."
+    "I leaned against the side of the boat, looking out across the shimmering, tranquil sea as the sun shimmered across its waves."
     "Not finding anything interesting to look at aside from water and sunshine, I turned back and glanced at my sister across from me, her gaze buried deep in the glass of her phone."
     MC "Nervous at all?"
     $setTomoOutfit(OutfitEnum.CASUAL)
@@ -83,7 +83,7 @@ label global000:
     "Tomoko and I got up from our spots and shuffled in the crowd of students toward the center of the ferry."
 
     scene Dock with fade
-    play music Country
+    play music Tomoko
     "Leaving the ferry, I spotted a small dock with red pillars and a red roof. The whole thing looked new, as if it had been built literally moments before I stepped off the boat."
     "From there, I could look around and see the town nearby."
     MCT "That's comforting. Kinda feels like home."
@@ -103,7 +103,7 @@ label global000:
     Takamura "Can I get your name, please?"
     Tomoko "Tomoko Hotsure."
     #show Takamura reassuring
-    Takamura "Right... there you are! Here's a key for your dorm. We have a mandatory assembly tomorrow morning, so be sure not to miss it!"
+    Takamura "Right... there you are! Here’s a key for your dorm. We have a mandatory assembly tomorrow morning with the principal’s annual speech, so be sure not to miss it!"
     Takamura "Group one, right over there. Just follow them to the academy. Welcome to Seichou!"
     Tomoko "Alright. Later bro."
     MC "Yeah. See ya."
@@ -840,7 +840,7 @@ label global000_part2:
     "My sister walked off and took a spot in the back row off to one side."
     MCT "Now... where should I sit...?"
     menu:
-        "I should sit in the front where the Principal can see me.":
+        "I should sit in the front where I can see.":
             jump global000_sit_c1
         "I should sit somewhere in the middle.":
             jump global000_sit_c2
@@ -1111,14 +1111,11 @@ label global000_homeroom:
     show FMG neutral with dissolve
     FMG "Beats me...{w} I feel like I should be putting up a volleyball net or something."
 
-    scene Classroom with fade
-    MC "Whoa!"
-    show WG neutral with dissolve
-    WG "...Is this for real?{w} How come there are so few seats?"
-    hide WG with dissolve
-    show PRG neutral with dissolve
-    PRG "And... so far away..."
-    hide PRG with dissolve
+    scene Classroom
+    show GTS surprised
+    with fade
+    GTS "These seats are... rather far apart."
+    hide GTS surprised with dissolve
     show AE neutral with dissolve
     AE "Some kind of anti-cheating measure...?"
     hide AE with dissolve
@@ -1912,11 +1909,10 @@ label MC006:
     play music Busy
     #show Naoki neutral with dissolve
     Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
-    Naoki "Today we're going to be playing a game called handball. It's not that difficult to explain, it's basically like football where you pass the ball and score only using your feet, but with your hands instead."
-    show WG doubt with dissolve
-    WG "In America, football means something entirely different."
-    Naoki "Hmm, yes in Australia too. Okay, maybe that wasn't the best analogy, but it is still a simple sport by most standards."
-    hide WG with dissolve
+    if isEventCleared("MC002"):
+        MCT "That’s the guy I saw in the faculty room with three whistles. I guess that explains why he has {i}a{/i} whistle— but not three."
+    Naoki "Today we're going to be playing a game called handball. As you might have guessed by the name, you handle a ball... with your hands. It's not that complicated really.”
+    “Sort of like soccer where you pass the ball and score only using your feet, just think the opposite of that."
     Naoki "To score, you throw the ball into the goal. {w}Have I lost anyone yet? Good. {w}Doesn't matter if you bounce it off the floor, if it's in, it's in."
     Naoki "Now the caveat is that when shooting a goal, you can't step into the goal zone near the goal. That's only for the goalie, no one else. You have to shoot it behind that line."
     Naoki "You can't hold on to the ball for more than three seconds, and you can't take more than three steps with the ball, but you're allowed to dribble it to get around this."
@@ -2202,6 +2198,8 @@ label MC006_Team1:
     show AE sad-2 at Position(xcenter=0.9, yalign=1.0) behind GTS
     with dissolve
     "No one was used to their changing bodies. Everyone was feeling frustrated with themselves and everyone else."
+    $setSkill("Athletics", 1)
+    "Not to mention I was already feeling beat. Keeping up in a game of handball was proving much tougher than I had initially suspected."
     "This was a complete disaster. Something had to change if we were going to turn this around. Not just for myself, but everyone else."
     "But what was I going to do to change any of that? I could barely see anymore with this tangled mess in front of my face!"
     hide FMG
@@ -2767,6 +2765,8 @@ label MC006_Team2:
     show AE sad-2 at Position(xcenter=0.9, yalign=1.0) behind GTS
     with dissolve
     "No one was used to their changing bodies. Everyone was feeling frustrated with themselves and everyone else."
+    $setSkill("Athletics", 1)
+    "Not to mention I was already feeling beat. Keeping up in a game of handball was proving much tougher than I had initially suspected."
     "This was a complete disaster. Something had to change if we were going to turn this around. Not just for myself, but everyone else."
     "But what was I going to do to change any of that? I could barely see anymore with this tangled mess in front of my face!"
     hide FMG

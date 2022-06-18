@@ -202,7 +202,7 @@ label FMG003_c1:
     MCT "I am totally going to regret this later."
     "I honestly have no idea why I came off so excited, maybe some of Akira's energy had rubbed off on me. Well, that and she's kinda hot."
     show FMG happy
-    FMG "Heck yeah! That's the spirit, Keisuke! You won't regret this... maybe. I wo'nt work you {i}too{/i} hard."
+    FMG "Heck yeah! That's the spirit, Keisuke! You won't regret this... maybe. I won't work you {i}too{/i} hard."
     MCT "Why do I feel like she's lying?"
     MC "All right, when do get started?"
     show FMG neutral
@@ -2407,7 +2407,7 @@ label FMG018_c1_2:
     MC "...Oh."
     $setAffection("FMG", -2)
     show FMG angry
-    FMG "So much your 'feeling', dude. Now what, genius?"
+    FMG "So much for your 'feeling', dude. Now what, genius?"
     MC "Ummm... Do you guys think we can make ramen?"
     show GTS neutral
     GTS "Well, I suppose it would not hurt to try."
@@ -11376,7 +11376,7 @@ label FMG064:
     "Overly-Stressed Employee" "I t-think I have ex-exactly what you're looking for... ma'am. If you'd j-just follow me."
     Natsuko "Great. Thank you for your help."
     hide Natsuko with dissolve
-    "While Nat went off with the guy who looked like he had slept in days. I made the brilliant decision to help Akira pick out the {i}perfect{/i} swimsuit."
+    "While Nat went off with the guy who looked like he hadn't slept in days. I made the brilliant decision to help Akira pick out the {i}perfect{/i} swimsuit."
     MC "How's it going? Find anything you like?"
     show FMG sad-2 at altMove(0.5, 0.5)
     FMG "Eh, not really. Some of this stuff seems kinda small. The last thing I need is for the top to snap off when we're out in public."
@@ -11997,7 +11997,7 @@ label FMG066:
     show WG neutral
     WG "Yes, we do have ice cream. Though I suggest you save it for dessert and not spoil your appetite for the on-flight dinner that is planned."
     show WG happy
-    WG "We'll start with horderves— champagne anyone?"
+    WG "We'll start with hors d'oeuvres— champagne anyone?"
     show FMG happy
     "Despite the rough start, something told me this was going to be a pretty good trip after all."
     jump daymenu
@@ -12142,7 +12142,9 @@ label FMG067:
     Driver "That's lovely. I bet you can't wait to see the surprise on his face."
     FMG "Ha. Y-Yeah, I'm sure he'll lose his mind when he sees me again..."
     Driver "Wonderful. It'll be a day he won't forget. {w}And here we are."
-    scene Okinawa Cottage
+    scene black with fade
+    pause 1
+    scene Okinawa House Exterior
     show FMG neutral
     with fade
     #(need background that shows the outside of a house)
@@ -12159,7 +12161,7 @@ label FMG067:
     scene black with fade
     pause 0.5
 
-    scene Okinawa Bedroom with fade
+    scene Okinawa House Hallway with fade
     "While we were walking to her room, she couldn't stop talking about all the foods she wanted me to try and that we {i}had{/i} to visit this one restaurant she practically lived at as a kid."
     show FMG neutral with dissolve
     FMG "You won't be able to stop, I swear. The food is so-"
@@ -12179,16 +12181,21 @@ label FMG067:
     MC "I sure hope it does. Now are we going to keep chitchatting or are we going to start exploring Okinawa???"
     FMG "Sure.{w} I want to do one thing before we head out."
     MC "Doesn't bother me. We're here for you, not me. Do what you need to do."
-    FMG "Thanks. I'll be right back."
+    FMG "Thanks. I'll be right back. You can chill on my bed, I won’t be long."
     "She headed out the door and entered the neighboring room."
-    hide FMG with dissolve
+    scene black with fade
+    pause 1
+
+    scene Okinawa Bedroom with fade
+    "I made myself comfortable as Akira continued her search in the room over."
     FMG "By the way... I ducked this time. So suck it."
     MC "100 yen you hit your head on the way back."
     FMG "300 yen I throw my bed at you when I come back. Sheets included."
     MCT "I prefer you throw yourself at me so I can die in peace."
     FMG "I found it! {w}Yes! They got here safe and sound!"
     "Akira was {i}this{/i} close to hitting her head on the return trip. Narrowly avoiding it due to me being so thoughtful."
-    MC "Wait, don't run back iiin. You'll hit your head again. Be careful."
+    show FMG neutral with dissolve
+    MC "Wait, don't run back in... You'll hit your head again... Be careful."
     MC "How was that? Did I sound concerned? Man. I should've dropped to my knees to make it more dramatic."
     show FMG sad-2
     FMG "A part of me regrets not chucking you out of Alice's plane."
@@ -12736,6 +12743,20 @@ label FMG069:
     "The car ride back was filled with more stories of all the crazy things Akira and Tatsuya did as kids. Pranking their dad with whoopee cushions, getting stuck in the elevators at hotels after clicking all the buttons."
     "There wasn't anything those two wouldn't do together."
     "We might not be able to turn back time. We can remember him though. Through every smile, every laugh, and every tear. Tatsuya will always be there for her. That's what she walked away with today."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.NIGHT)
+    scene Okinawa Bedroom with fade
+    "We arrived back at her house both physically and mentally exhausted. I slumped back over to my air mattress and rolled over exhaling."
+    MC "How are you feeling?"
+    show FMG neutral with dissolve
+    FMG "Honestly, pretty good. Much better at least. {w}Thank you for being there today, it meant the world to have you by my side."
+    MC "No problem, whatever you need."
+    FMG "Hey… I was thinking tomorrow we could go pet the turtles. I know that’s something you’ve been wanting to do since we landed."
+    MC "Are you serious?!?!?"
+    show FMG happy
+    FMG "Very."
+    MCT "Nothing can possibly ruin this!"
     jump daymenu
 
 label FMG070:

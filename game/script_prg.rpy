@@ -4560,6 +4560,7 @@ label PRG017:
                 "I firmly plucked a bicolored one from the ground, taking a small length of stem with me."
                 MC "Don't move, okay? Sit very still."
                 show PRG unique
+                show FlowerPRG2 with dissolve
                 PRG "Okay..."
                 "I scooted myself just a bit closer, and in one motion, gently tucked the Azalea behind her ear."
                 show PRG surprised
@@ -4697,10 +4698,14 @@ label PRG017:
                     PRG "But..."
                     pause .5
                     PRG "P-Please don't draw me anymore."
-                    hide PRG with dissolve
+                    hide FlowerPRG2
+                    hide PRG
+                    with dissolve
                     "I put my pencil down, and forced myself to flip back to the flower."
                     "I'd wanted to draw Aida so badly. But now, I didn't really want to draw much of anything."
-                    show PRG unique with dissolve
+                    show PRG unique
+                    show FlowerPRG2
+                    with dissolve
                     "After about fifteen or so minutes, Aida looked down at her flower."
                     PRG "I-I'm finished."
                     MC "Yeah. Me too."
@@ -4710,7 +4715,9 @@ label PRG017:
                     MC "Alright. I have some things to take care of with some homework, so I'll see you."
                     show PRG unique
                     PRG "B-Bye..."
-                    hide PRG dissolve
+                    hide PRG
+                    hide FlowerPRG2
+                    with dissolve
                     pause .75
                     "I didn't really have any homework."
                     "I really didn't want to spend time around Aida if I'd offended her."
@@ -27377,7 +27384,7 @@ label PRG027Z:
     hide BE with dissolve
     MCT "God, I must look down in the dumps if she was able to pick up on it that easily."
     show WG neutral at Position(xcenter=0.2, yalign=1.0)
-    show PRG worried-handsbehind at Position(xcenter=0.8, yalign=1.0)
+    show PRG worried at Position(xcenter=0.8, yalign=1.0)
     with dissolve
     "At the front of the room, Alice and Aida walked in together, both taking their seats."
     hide WG
@@ -27497,7 +27504,7 @@ label PRG028Z:
     scene Hallway with fade
     "Once the bell had rung, I headed off down the hallway. I was a little surprised by Honoka's absence, mostly by her not letting me know that she wouldn't be around today."
     UNKNOWN "Um... H-Hotsure-san?"
-    show PRG worried-handsbehind with dissolve
+    show PRG worried with dissolve
     "I turned toward the voice and looked down just a bit. Aida stood behind me, looking up at me like a deer in the headlights."
     MC "Oh. Um, hey."
     show PRG unique
@@ -27509,7 +27516,7 @@ label PRG028Z:
     MC "Did you?"
     PRG "No..."
     "More silence. Aida dug the toe of her shoe into the ground."
-    show PRG worried-handsbehind
+    show PRG worried
     PRG "Um... i-if you didn't have anyone in mind already, w-would you... want to work together?"
     "I thought about it momentarily. While I normally would've been more than happy to work with Aida, I wasn't sure how it would work out now."
     "If anything, we'd be stuck sitting around until one of us had an idea, then we'd both work while barely speaking to each other."
@@ -27527,7 +27534,7 @@ label PRG028Z:
     scene Cafeteria with fade
     "Aida and I got in line straight away, both of us loading up our trays with food."
     "After choosing a table, Aida took a spare notebook and pencil out of her bag."
-    show PRG worried-handsbehind with dissolve
+    show PRG worried with dissolve
     PRG "Did you already have an idea in mind?"
     MC "Not particularly. I was probably just going to look up a random topic and go from there."
     PRG "Oh..."
@@ -27545,7 +27552,7 @@ label PRG028Z:
     hide PRG with dissolve
     "The knotting in my stomach was growing more severe. So much so that the simple idea of eating more was nauseating by itself. Sighing, I got up and dumped whatever was left on my tray in the trash."
     "Heading back for my table, I grabbed my bag and slipped it on."
-    show PRG worried-handsbehind with dissolve
+    show PRG worried with dissolve
     MC "I guess I'll see you tomorrow then?"
     PRG "Y-Yeah. See you."
     hide PRG with dissolve

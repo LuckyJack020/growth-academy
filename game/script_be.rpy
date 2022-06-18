@@ -7394,7 +7394,7 @@ label BE039:
     BE "Just go with it."
     show BE neutral with dissolve
     BE "What do you see, Kokutan?"
-    Kokutan "I see a dark, mysterious backdrop to your life. Your decades forward will be fraughtfrought with even more misery and woe, and there is absolutely no hope for you."
+    Kokutan "I see a dark, mysterious backdrop to your life. Your decades forward will be fraught with even more misery and woe, and there is absolutely no hope for you."
     MC "Uh."
     Kokutan "You will be beset by demons and devils of all sorts. You'll find yourself facing corruption and temptation from all manner of foes, and your only hope of salvation will be..."
     MC "...What? What will my salvation be."
@@ -8111,7 +8111,7 @@ label BE043:
     MC "Jeez. And... why are we watching this?"
     show BE shrug
     BE "I thought it'd be fun! Plus, it'd be nice to spend some cozy time together, since we don't do that very often."
-    "Honoka walked over to the couch and floppped down, as she kept eye-contact with me the entire time."
+    "Honoka walked over to the couch and flopped down, as she kept eye-contact with me the entire time."
     play sound Boing
     "{i}WHUB WHUB{/i}"
     "Honoka's breasts continued to heavily bounce off of each other after she completed moving."

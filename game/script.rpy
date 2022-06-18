@@ -157,6 +157,8 @@ init python:
         BEND = "bend"
         CASUAL = "casual"
         CASUAL2 = "casual-2"
+        COOKING = "cooking"
+        FORMAL = "formal"
         SWIM = "swim"
         SWIMSUIT = "swimsuit"
         COW = "cow"
@@ -847,6 +849,11 @@ init python:
         global NatsOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             NatsOutfit = o
+
+    def setDaitaroOutfit(o):
+        global DaitaroOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.FORMAL:
+            DaitaroOutfit = o
 
     def setRyokoOutfit(o):
         global RyokoOutfit

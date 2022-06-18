@@ -62,6 +62,7 @@ define Takara = Character('Takara', color="#C0C0C0") #Aida’s Mother
 define Tomoko = Character('Tomo', color="#FF3300") #Keisuke’s Sister
 define TomokoCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell") #Keisuke’s Sister Cell
 define Yuko = Character('Yuko', color="#C0C0C0") #Akira’s Mother
+define YukoCell = Character('Yuko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="YukoCell") #Akira’s Mother Cell
 
 #Other Students
 define Fumika = Character('Fumika', color="#FF91DC") #GTS Route
@@ -281,9 +282,18 @@ image Okinawa Airport = "Graphics/ui/bg/archiveBG/okinawa_airport.png"
 image Okinawa Beach = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_beach_[gametime].png")
 image Okinawa Bedroom = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_bedroom_[gametime].png")
 image Okinawa Cottage = "Graphics/ui/bg/archiveBG/okinawa_cottage.png"
+image Okinawa House Exterior = DynamicImage("Graphics/ui/bg/okinawa_houseexterior_[gametime].png")
+image Okinawa House Interior = DynamicImage("Graphics/ui/bg/okinawa_houseinterior_[gametime].png")
+image Okinawa House Hallway = DynamicImage("Graphics/ui/bg/okinawa_househallway_[gametime].png")
 image Okinawa Island = "Graphics/ui/bg/archiveBG/okinawa_island.png"
 image Okinawa Market = "Graphics/ui/bg/archiveBG/okinawa_market.png"
 image Okinawa Ocean = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_ocean_[gametime].png")
+
+#Okinawa - Tokyo
+image Tokyo = DynamicImage("Graphics/ui/bg/tokyo_streets_[gametime].png")
+image Tokyo House Exterior = DynamicImage("Graphics/ui/bg/tokyo_houseexterior_[gametime].png")
+image Tokyo Station = DynamicImage("Graphics/ui/bg/tokyo_station_[gametime].png")
+image Tokyo Train = DynamicImage("Graphics/ui/bg/tokyo_train_[gametime].png")
 
 #General
 image Airport = "Graphics/ui/bg/NYI.png"
@@ -328,6 +338,11 @@ image cg AE074_snow3 = "Graphics/ui/gallery/AE074_snow3.png"
 image cg AE092_tv1 = "Graphics/ui/gallery/AE092_tv1.png"
 image cg AE092_tv2 = "Graphics/ui/gallery/AE092_tv2.png"
 image cg AE092_tv3 = "Graphics/ui/gallery/AE092_tv3.png"
+image cg AE098D_musicvideo1 = "Graphics/ui/gallery/AE092_musicvideo1.png"
+image cg AE098D_musicvideo2 = "Graphics/ui/gallery/AE092_musicvideo2.png"
+image cg AE098D_musicvideo3 = "Graphics/ui/gallery/AE092_musicvideo3.png"
+image cg AE098D_musicvideo4 = "Graphics/ui/gallery/AE092_musicvideo4.png"
+image cg AE098D_musicvideo5 = "Graphics/ui/gallery/AE092_musicvideo5.png"
 
 image cg BE000 = "Graphics/ui/gallery/BE000.png"
 image cg BE000b = "Graphics/ui/gallery/BE000b.png"
@@ -461,6 +476,21 @@ image BE sad = Composite(
         None, Null()),
     (24, 0), ConditionSwitch(
         "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
+        None, Null())
+    )
+image BE smug = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
         "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
@@ -743,11 +773,12 @@ image PRG surprised = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/surprised
 image PRG angry = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/angry.png")
 image PRG aroused = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/aroused.png")
 image PRG blush = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/blush.png")
+image PRG blush-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/blush-2.png")
 image PRG flattered = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/flattered.png")
 image PRG unique = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique.png")
 image PRG unique-happy = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique-happy.png")
+image PRG unique-blush = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique-blush.png")
 image PRG worried = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/worried.png")
-image PRG worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/worried.png") #NYI
 image PRG sad-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/sad-2.png")
 image PRG lactate = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/lactate.png")
 image PRG lactate2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/lactate2.png")
@@ -755,11 +786,13 @@ image PRG admire = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/admire.png")
 image PRG admire-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/admire-2.png")
 image PRG doubt = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/doubt.png")
 image PRG insecure = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/insecure.png")
+image PRG unsure = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unsure.png")
 image PRG nervous = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/nervous.png")
 image PRG satisfied = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/satisfied.png")
 image PRG angry-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/angry-2.png")
 image PRG scared = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/scared.png")
 image PRG grope = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/grope.png")
+image PRG grope-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/grope-2.png")
 image PRG embarrassed = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/embarrassed.png")
 
 image WG neutral = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral.png")
@@ -786,6 +819,7 @@ image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.pn
 image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.png")
 image side TomoCell = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/side.png")
 image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/side.png")
+image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.png")
 
 #Minor characters
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
@@ -860,6 +894,10 @@ image Ryoko tongue = "Graphics/minor/ryoko/[RyokoOutfit]/unique.png"
 image Ryoko confused = "Graphics/minor/ryoko/[RyokoOutfit]/confused.png"
 image Ryoko embarrassed = "Graphics/minor/ryoko/[RyokoOutfit]/embarrassed.png"
 
+image Chibuki neutral = "Graphics/minor/chibuki/neutral.png"
+
+image Kokutan neutral = "Graphics/minor/kokutan/neutral.png"
+
 image Minori neutral = "Graphics/minor/minori/neutral.png"
 image Minori happy = "Graphics/minor/minori/happy.png"
 image Minori embarrassed = "Graphics/minor/minori/embarrassed.png"
@@ -909,7 +947,6 @@ image Yuko smug = "Graphics/minor/parents/yuko/smug.png"
 image Yuko surprised = "Graphics/minor/parents/yuko/surprised.png"
 image Yuko unique = "Graphics/minor/parents/yuko/unique.png"
 
-image Kokutan neutral = "Graphics/minor/kokutan/neutral.png"
 image Akihiro neutral = "Graphics/minor/parents/akihiro/neutral.png"
 image Miko neutral = "Graphics/minor/parents/miko/neutral.png"
 
@@ -919,13 +956,14 @@ image Minami dark = "Graphics/minor/parents/minami/dark.png"
 image Minami happy = "Graphics/minor/parents/minami/happy.png"
 image Minami unique = "Graphics/minor/parents/minami/unique.png"
 
-image Chibuki neutral = "Graphics/minor/chibuki/neutral.png"
-#image Daitaro neutral = "Graphics/minor/parents/daitaro/neutral.png"
+image Daitaro neutral = "Graphics/minor/parents/daitaro/neutral.png"
 
 image dummy = "Graphics/ui/dummy.png"
 
 #Overlays
 image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.png"
+image HairpinGTS1 = "Graphics/GTS/1/overlays/hairpin-overlay.png"
+image FlowerPRG2 = "Graphics/PRG/2/overlays/flower-overlay.png"
 
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"
