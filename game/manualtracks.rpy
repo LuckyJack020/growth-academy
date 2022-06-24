@@ -413,6 +413,17 @@ init python:
     )
     ost.manualDefineList.append(theme_SeB)
 
+    theme_LaB = ost.soundtrack(
+        name = "Last Bell",
+        path = "Audio/BGM/general4.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Now or Never",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_LaB)
+
     ## Base Template
     ######################################
 

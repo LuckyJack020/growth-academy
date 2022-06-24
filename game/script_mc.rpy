@@ -97,29 +97,30 @@ label global000:
     pause .75
     MCT "... Weird."
     "I waited in line for a few minutes before reaching the building line at the end of the dock, where I was handed a small welcome gift bag by a warm looking woman with raven black hair."
-    #show Takamura neutral with dissolve
+    show Takamura neutral with dissolve
     "On her chest hung a bright nametag that read ‘Aoi Takamura'."
-    show Tomoko neutral with dissolve
+    show Takamura neutral at altMove(0.5, 0.75)
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with easeinleft
     Takamura "Can I get your name, please?"
     Tomoko "Tomoko Hotsure."
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "Right... there you are! Here’s a key for your dorm. We have a mandatory assembly tomorrow morning with the principal’s annual speech, so be sure not to miss it!"
     Takamura "Group one, right over there. Just follow them to the academy. Welcome to Seichou!"
     Tomoko "Alright. Later bro."
     MC "Yeah. See ya."
+    show Takamura neutral at altMove(0.5, 0.5)
     hide Tomoko with dissolve
-    #show Takamura neutral
     Takamura "And, your name, please?"
     MC "Keisuke Hotsure."
     Takamura "Another Hotsure? Okay... one second...{w} Ah! There you are."
     "The teacher blinked a few times."
     Takamura "Hmm... two Hotsures and two Utagashis. Curious..."
     "The teacher briefly scanned the table and grabbed something from it, then turned and glanced off at the group of students who were already almost out of sight."
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "Well, looks like they were a little eager to get a move on. Just follow this path here all the way down."
     Takamura "And, here's a key for your dorm! As I'm sure you heard, assembly is tomorrow morning in the auditorium. Welcome to Seichou, Hotsure-san. Hope you enjoy your stay here!"
     MC "Alright. Thank you very much."
-    #hide Takamura
+    hide Takamura with dissolve
     "I took off at a brisk pace, and left the rest of the students behind as I tried to catch up with my group."
     scene black with fade
     pause 1
@@ -3609,7 +3610,7 @@ label global005:
     MCT "...Those two aren't used to accepting 'no' for an answer, that's for sure..."
 
     scene Auditorium with fade
-    play music Rain
+    play music LastBell
     "The auditorium had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
     "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
     AE "Class 3-B, over here! Line up along this partition, and no, not alphabetically, by seat number. What do you mean you don't know what your seat number is? Haven't you been paying attention at all?"

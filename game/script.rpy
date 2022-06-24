@@ -63,6 +63,7 @@ init python:
         'lockers': ("school", (730,220)),
         'musicclassroom': ("school", (740,490)),
         'nurseoffice': ("school", (590,590)),
+        'okinawa': ("town", (1100,650)),
         'office': ("school", (590,590)),
         'pool': ("school", (440,165)),
         'roof': ("school", (750,375)),
@@ -779,6 +780,7 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
+            "Jineko": [1, 2, 3, 4, 5, 6],
             "Natsuko": [1, 2, 3, 4, 5, 6],
             "Tako": [1, 2, 3, 4, 5, 6],
             "Tomoko": [1, 2, 3, 4, 5, 6],
@@ -855,10 +857,20 @@ init python:
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.FORMAL:
             DaitaroOutfit = o
 
+    def setJinekoOutfit(o):
+        global JinekoOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+            JinekoOutfit = o
+
     def setRyokoOutfit(o):
         global RyokoOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
             RyokoOutfit = o
+
+    def setTakamuraOutfit(o):
+        global TakamuraOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.COOKING:
+            TakamuraOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -939,6 +951,9 @@ label start:
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
         RyokoOutfit = OutfitEnum.DEFAULT
+        JinekoOutfit = OutfitEnum.DEFAULT
+        DaitaroOutfit = OutfitEnum.DEFAULT
+        TakamuraOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []
@@ -1316,6 +1331,10 @@ label startevent:
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
+        RyokoOutfit = OutfitEnum.DEFAULT
+        JinekoOutfit = OutfitEnum.DEFAULT
+        DaitaroOutfit = OutfitEnum.DEFAULT
+        TakamuraOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
         updateSP(activeevent)
         showQuickMenu = True

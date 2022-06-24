@@ -351,18 +351,18 @@ label GTS004:
     $setProgress("GTS", "GTS006")
     scene Library with fade
     play music Peaceful
-    "The afternoon sun trickled, glowing, through the library’s large and numerous windows, and through the gaps in my bangs."
-    "I still wasn’t used to this place; as I passively guessed at the number of students there, in and between the vast, blocky shadows of the bookshelves, I realized there really were quite a few."
-    "It just really didn’t look like it at a glance, with the bookshelves noticeably taller than any I’d ever seen and the aisles between them looking wide enough for six normal people."
-    "The space was well-used, too. Every row of shelves constituted a veritable wall of books, intermittent plastic coverslips gleaming in the sun, some of the signs claiming whole aisles for topics I’d never heard of."
+    "The afternoon sun trickled, glowing, through the library's large and numerous windows, and through the gaps in my bangs."
+    "I still wasn't used to this place; as I passively guessed at the number of students there, in and between the vast, blocky shadows of the bookshelves, I realized there really were quite a few."
+    "It just really didn't look like it at a glance, with the bookshelves noticeably taller than any I'd ever seen and the aisles between them looking wide enough for six normal people."
+    "The space was well-used, too. Every row of shelves constituted a veritable wall of books, intermittent plastic coverslips gleaming in the sun, some of the signs claiming whole aisles for topics I'd never heard of."
     if isHighestSkill("Athletics"):
-        "Well, I never found the library all that exciting, but my assignment wasn’t gonna do itself."
+        "Well, I never found the library all that exciting, but my assignment wasn't gonna do itself."
     if isHighestSkill("Art"):
-        "I stopped for a moment, absorbed. In spite of the strangeness of this academy’s very existence, the air in the library still lazily swirled with silent discoveries, lazy afternoons in the sunlight, hushed and cheery chats between friends."
+        "I stopped for a moment, absorbed. In spite of the strangeness of this academy's very existence, the air in the library still lazily swirled with silent discoveries, lazy afternoons in the sunlight, hushed and cheery chats between friends."
     else:
-        "The sight of it all made me a little more confident in the face of the unanswerable strangeness of this academy’s existence. Looking the aisles up and down, I could imagine they could answer just about any question I cared to ask."
+        "The sight of it all made me a little more confident in the face of the unanswerable strangeness of this academy's existence. Looking the aisles up and down, I could imagine they could answer just about any question I cared to ask."
     "As I walked among the shelves in search of the book I needed for my Contemporary Society course, out of the corner of my eye I spotted Naomi sitting at a nearby table."
-    "Though her expression was characteristically mild, she raised an eyebrow once or twice at whatever she was reading, with one hand holding the book down flat and the other hovering a pencil over a notebook. Her attention didn’t drift for a second."
+    "Though her expression was characteristically mild, she raised an eyebrow once or twice at whatever she was reading, with one hand holding the book down flat and the other hovering a pencil over a notebook. Her attention didn't drift for a second."
     "Curious, I walked up behind her."
     menu:
         "Hey there!":
@@ -377,13 +377,13 @@ label GTS004_c1:
     show GTS angry at Transform(xzoom=-1) with dissolve
     "She closed her eyes before turning to face me, air hissing through her nose."
     GTS "Please don't do that."
-    "There wasn’t a hint of anger in her voice; no, the faint furrow in her brow as she went right back to her book was hint enough that she hadn’t taken it as just a friendly greeting."
-    MCT "Didn’t think I said it that loud..."
+    "There wasn't a hint of anger in her voice; no, the faint furrow in her brow as she went right back to her book was hint enough that she hadn't taken it as just a friendly greeting."
+    MCT "Didn't think I said it that loud..."
     MC "Sorry, sorry. I just wanted to drop by and say hey."
     show GTS neutral
-    "I let out a small chuckle, which softened her expression a bit. Nevertheless, she didn’t take her eyes off her book."
+    "I let out a small chuckle, which softened her expression a bit. Nevertheless, she didn't take her eyes off her book."
     GTS "Would you like to have a seat?"
-    MC "Don’t mind if I do."
+    MC "Don't mind if I do."
     "I took the opportunity to see what she was reading: on one page, a couple blocks of strange, angular characters arranged in an odd fashion, and on the other... some really dumbed-down story about a lumberjack and his pet ox."
     jump GTS004_after
 
@@ -391,9 +391,9 @@ label GTS004_c2:
     "I stooped down and peeked over her shoulder to see what she was reading, letting myself hover into her peripheral vision."
     show GTS neutral with dissolve
     GTS "Good afternoon, Hotsure-san."
-    MC "Hey, Yamazaki-san. Sorry if I’m intruding, I just wanted to say hello and I was curious what you’re reading."
+    MC "Hey, Yamazaki-san. Sorry if I'm intruding, I just wanted to say hello and I was curious what you're reading."
     "She looked up at me, her face a characteristic portrait of mellowness and hospitality."
-    GTS "That's quite alright. I appreciate that you didn’t want to interrupt."
+    GTS "That's quite alright. I appreciate that you didn't want to interrupt."
     MC "Mind if I sit down?"
     GTS "By all means."
     "I took a seat across from her. I also peered over at what she was reading: on one page, a couple blocks of strange, angular characters arranged in an odd fashion, and on the other... some really dumbed-down story about a lumberjack and his pet ox."
@@ -402,17 +402,17 @@ label GTS004_c2:
 label GTS004_after:
     MC "What language is that? English?"
     "She nodded and angled her book a little more towards me."
-    GTS "It is; rather, it’s a book of short, simple stories in both English and Japanese. I’m trying to brush up on what I retained from my high school classes in my free time."
+    GTS "It is; rather, it's a book of short, simple stories in both English and Japanese. I'm trying to brush up on what I retained from my high school classes in my free time."
     MC "Neat. Thinking of taking a vacation in Hawaii in the near future?"
     show GTS surprised
     GTS "Not in particular, though I suppose one never knows. "
     show GTS happy
-    extend "It's also a good skill to have should your job require it, or if you’re ever hosting international guests."
+    extend "It's also a good skill to have should your job require it, or if you're ever hosting international guests."
     MC "Heh, quite the foresight. I barely even think about what I'll be doing a month from now. But hey, if you manage to make it work, that's one big advantage in the job market. Good luck!"
     show GTS neutral
     GTS "Thank you."
     "A certain warmth and a hint of a smile lingered on her face as she looked back down."
-    "Perhaps I should’ve left her to her studies, but some intangible thing made me want to keep the talk going."
+    "Perhaps I should've left her to her studies, but some intangible thing made me want to keep the talk going."
     MC "So, uh, did you get what sensei was talking about in class today?"
     "She puffed out the smallest sigh as she reached over to her backpack and retrieved the paper brick we had for a chemistry textbook."
     "Her wrist strained visibly lifting it; her prim, trim hand covered barely a sixth of the front of the book, and it almost dragged on the table as it hung at an angle in her grip."
@@ -421,27 +421,27 @@ label GTS004_after:
     MC "Well, I doubt we're expected to get everything memorized from the start. I'm sure it'll ease up a bit in the next few days."
     GTS "That is true, but there is still the matter of the quiz at the end of the week. I'll just have to shift my focus a bit, keep my English studies to an hour while devoting more of the afternoon to this."
     show GTS neutral
-    GTS "No matter. I’ll simply make plenty of room in my schedule for studying, even if I may have to set aside other pursuits for a while."
+    GTS "No matter. I'll simply make plenty of room in my schedule for studying, even if I may have to set aside other pursuits for a while."
     MC "Hmm... you know, why not get a study partner? I remember when I was younger one of my teachers told me that the best way to learn and retain knowledge was to teach others."
     show GTS neutral at Transform(xzoom=-1)
     MC "So, if you have someone you can bounce information to and maybe even quiz, then you'll understand it better. After all, if you're making the quizzes then that means you have the answers already."
     "She placed her hand on her chin and tapped it once or twice."
     GTS "I'm not sure... the reasoning seems sound, but I would hate to impose on another."
-    MC "Ah... yeah, fair enough. Other than Honoka-chan and me, we’re all still pretty much strangers."
+    MC "Ah... yeah, fair enough. Other than Honoka-chan and me, we're all still pretty much strangers."
     if checkAffection("GTS", ">", 3):
-        GTS "Indeed. Although, I don’t think a stranger typically would just drop by for an impromptu chat."
+        GTS "Indeed. Although, I don't think a stranger typically would just drop by for an impromptu chat."
         pause 0.25
         MC "Heh... yeah, good point. Maybe not {i}all{/i} of us."
     MC "Well... tell you what, I volunteer."
     show GTS surprised
-    GTS "Oh! Are you sure? You really needn’t take time out of your schedule simply to help me."
-    MC "Well, I have my price of course, as an experienced quiz-taker. If you don’t mind 5000 yen blowing away in the wind, surely you wouldn’t mind 5000 yen blowing away into my hand?"
+    GTS "Oh! Are you sure? You really needn't take time out of your schedule simply to help me."
+    MC "Well, I have my price of course, as an experienced quiz-taker. If you don't mind 5000 yen blowing away in the wind, surely you wouldn't mind 5000 yen blowing away into my hand?"
     GTS "Oh, well... what would your rates be, exactly? Would that cover a month?"
     pause 0.5
-    MC "I... I’m joking, Yamazaki-san."
+    MC "I... I'm joking, Yamazaki-san."
     show GTS embarrassed
     GTS "Ah. Very good."
-    MC "Heheh, yeah, I’d be glad to help you, free of charge. I bet we’d both learn a lot."
+    MC "Heheh, yeah, I'd be glad to help you, free of charge. I bet we'd both learn a lot."
     show GTS neutral
     GTS "Hmm. Perhaps I could help you with one of our other subjects, then. Is there any you think might give you trouble?"
     MC "Oh, math, a hundred percent. Pre-calc was the {i}bane{/i} of my {i}existence{/i}."
@@ -453,7 +453,7 @@ label GTS004_after:
     Student1 "Sssh!"
     "We both tensed up as someone at another table once again reminded me of my surroundings. "
     show GTS embarrassed
-    GTS "{size=-6}I didn’t think you said it that loudly...{/size}"
+    GTS "{size=-6}I didn't think you said it that loudly...{/size}"
     "Naomi was blushing slightly, but neither of us could stop a small giggle from slipping out as we started working more quietly."
     jump daymenu
 
@@ -622,69 +622,128 @@ label GTS006_after:
 label GTS007:
     $setProgress("GTS", "GTS008")
     scene School Planter with fade
-    play music Peaceful
-    "Petals danced in the breeze, carried aloft by the wind. They flowed rhythmically down the pathway, where I saw a familiar figure sitting underneath the shade of a tree. Naomi's hair moved much like the flower petals had. I noticed a piece of paper in her hand."
+    play music HigherEdu
+    "Petals, dancing, fluttered down in the whispering wind, roosting on my shoulders and at my feet. They were almost ghostly, so light I hardly felt or heard them."
+    "I cast my view languidly from side to side, in no particular hurry to take in the view of the courtyard."
+    "I saw, faintly under the shade of a painted maple, Naomi reclined against the trunk, one hand supporting her chin while the other held a piece of paper. Her expression was as tall grass swaying in the breeze."
     MC "Hey there, Yamazaki-san. How are you?"
-    "She looked up from a letter when I called out to her, and responded with a gentle wave of her hand."
+    "She looked up from her reading, and stood at a gentle pace before bowing with immaculate posture."
     show GTS neutral at center with dissolve
-    GTS "Hello, Hotsure-san. I was reading a letter that my mother sent me. How are you?"
-    "Naomi's direct and formal language was somewhat different from the others I talked to at school. She appeared to be very disciplined and tactful, the way that she spoke."
-    MC "I've been pretty good, for the most part. Also, a handwritten letter? I'm surprised people still make those."
+    GTS "Good afternoon, Hotsure-san. I was reading a letter from my mother. How are you?"
+    MC "Pretty good, pretty good. So, a handwritten letter, eh? Didn't know people still made those."
     "A faint smile crossed her face as she folded up the letter and placed it back into the envelope."
-    GTS "Yes, they seem to be quite rare nowadays. However, my mother really enjoys traditional writing. It's become sort of a thing she does for those living far from home."
-    MC "That's pretty cool. I bet the post office loves having actual mail to give out that aren't just bills or packages people ordered online. That's a neat little postcard, too. Where is it from?"
-    "She looked down at the postcard in her hand that had come with the letter and lifted it towards me. It was a picture of Kyoto, adorned with a wax seal."
-    MC "Oh hey, it's Kyoto. I thought I recognized that tower there. Are you from there?"
-    "Naomi nodded."
-    GTS "Yes, I am."
-    MC "Interesting. I've never been to Kyoto, but it always looked like a pretty neat place. I've heard that it's one of the best places to go for food, too."
-    "There was the faintest smirk out of Naomi as her smile grew a little, giving a nod of acknowledgement as I sat down beside her."
-    GTS "Yes, Kyoto is very well known for its cuisine. Specifically, our tofu and Kaiseki cuisine."
-    GTS "My friends and I made it our personal goal to visit a new restaurant every weekend. It was rather fun, and it gave me a deep appreciation for my hometown. It lets you explore more, and sometimes you find little underappreciated establishments."
-    MC "Wow, that sounds like it'd be cool to do. Though, it also sounds like it'd be pretty heavy on the wallet after a while, wouldn't it?"
-    GTS "Some places were more expensive than others, yes. You'd be surprised by some of the places you find, though. Every now and then, we'd stumble across a place that not only had great dishes, but reasonable prices too."
-    GTS "We had really expanded our list of places we could socialize. We'd claim that a new spot was our favorite, only to change it again a few weeks later."
-    MC "Heh, that doesn't sound like a bad habit to have. Though, now I'm trying to think if I ever did anything like that."
-    MC "I mean, I think I did a normal amount of exploring, but it was never too extensive. It might just be because of how crowded it often gets where I'm from."
-    GTS "Where are you from, if you don't mind me asking?"
-    MC "Oh, I'm from Tokyo. The big city, Gojira's favorite playground. Just a little bit off of Shibuya."
-    GTS "Oh, wow! That must have been exciting, being so close to the center of all the action. You must have seen and experienced many interesting things."
-    MC "Yeah, especially during the holidays when all the tourists take over the streets. You basically turn an already crowded intersection into an impenetrable wall of people."
-    MC "I felt bad for the people driving because, well... they weren't going anywhere for quite a long while."
-    GTS "I do hope that you were careful during those times. I've heard stories of how overwhelming Shibuya can get during the holidays."
-    show GTS sad
-    GTS "I've also heard quite a few horror stories about some of the nastier incidents that can take place due to the massive amount of traffic."
-    MC "Yeah, I was okay. I knew well enough to not get too absorbed into the larger crowds, and kept away from people who could have looked like trouble."
-    MC "Plus, it's always good to have a couple of friends with you. Makes some of the troublemakers think twice before trying anything."
-    MC "That's just Shibuya during the big times of the year, though. How about Kyoto? Does it get as crowded as Tokyo?"
-    show GTS neutral
-    GTS "Well, it would depend on the time of year, I suppose. It's the same as any big city, I imagine. Around Christmas time, though, restaurants tend to start charging more for meals -- sometimes even doubling their prices."
-    MC "Because of all the people, I assume?"
-    GTS "It'd make sense, yes. A lot of people see Christmas as a big date night event in Kyoto."
-    GTS "I don't exactly approve of their tactics, but I can understand why it happens. Dining out on a holiday is a lot more difficult when you consider how many places will close."
-    GTS "I recall that many of my friends enjoy going out on dates to places like La Part Dieu, this wonderful French restaurant. Alternatively, they might go to Daimaru to visit the stores and see the decorations."
-    MC "I bet they saved up all year long for that night, if it's as expensive as you say it is. I can't say I've ever found myself in a scenario like that, though."
-    MC "Which is probably for the best, because I don't know any fancy places to eat. But how about you? Did you ever do anything with someone special?"
-    "Naomi's cheeks turned quite the adorable shade of red as her composure broke and she looked down at her letter."
+    GTS "One could hardly blame you. They're a bit of a rarity these days, perhaps to our detriment. The writing of a letter cultivates grace and compassion when properly done."
+    pause 0.25
     show GTS embarrassed
-    GTS "M-me!? Oh no, I haven't...  I never had any time for things like that. I was always too focused on other things like helping around the house or preparing for other social events."
-    MC "Oh? Are you telling me that you've never been on a date, then?"
-    show GTS embarrassed at center, Transform(xzoom=-1)
-    "I could see her face brightening up more as she tried avoiding eye contact. It was rather sweet seeing this side of her."
-    GTS "I'll admit... I have not. My schedule was -- and to an extent, still is -- filled up with many responsibilities. It would have been nice to have seen what it was like, but I suppose fate hadn't said it was the right time yet."
-    show GTS neutral at center, Transform(xzoom=1)
-    "She looked back towards me as she managed to regain her composure. I gave her a small nod, as I didn't want to push the issue too hard."
-    MC "Yeah, I guess it would be pretty tough if you're always busy. But at the same time, I wouldn't worry too much about it."
-    MC "Back on the topic of hanging out with friends, have you managed to make any new ones here?"
-    GTS "...No, not really. It's been a chaotic time since everyone's trying to get settled in, so I try not to impose on them. I hope that more people open up to me in the next few weeks."
-    GTS "Maybe then, it'll be a bit easier to introduce myself to more people."
-    MC "Well if you'd like, you could hang out with me and my friends. I can't promise you'll hit it out of the park right away but it's worth a shot, right?"
-    "Naomi silently pondered to herself for a few moments."
-    GTS "Would it be okay if I took a little time to figure out my schedule before giving you an answer, Hotsure-san?"
-    MC "Heh, yeah... it's okay, Yamazaki-san. We're still young, after all. Take your time."
-    "I gave her a small chuckle, and she returned a brief nod. I leaned back a little, enjoying the calm of the garden and the gentle breeze."
-    "The two of us remained silent for several minutes. We breathed rhythmically, entering a zen state."
-    "I didn't mind the quiet. It was probably the most peaceful I had felt in quite some time."
+    GTS "But yes, my mother is quite fond of writing letters. I enjoy reading them."
+    MC "That's pretty cool. I bet it gives the mailman warm fuzzies, delivering handwritten letters instead of bills and packages. That's a neat little postcard, too, where's it from?"
+    show GTS neutral
+    GTS "Kyoto."
+    "She pulled the postcard away from the letter in her hand and held it out for me. It was a skyline picture centered on a distinctive red tower, the shimmering paper adorned with a wax seal."
+    MC "Oh yeah, there it is. I thought I recognized that tower there. Are you from there, then?"
+    show GTS unique
+    GTS "Indeed I am."
+    MC "Huh, neat. I've never been to Kyoto, but I've heard it's pretty cool. I've heard it's one of the best places to go for food, too."
+    "I walked over and sat down next to her spot, and after a moment she sat down, too."
+    GTS "Deservedly so! It's the birthplace of several forms of kaiseki cuisine... including the old imperial court style, naturally."
+    show GTS neutral
+    GTS "My friends and I made it our personal goal to visit a new restaurant every weekend. It was quite fun, and it gave me a deep appreciation for my hometown. Sometimes one can find a veritable diamond in the rough, as well."
+    MC "Wow, that sounds like it'd be cool to do. Though, it also sounds like it'd be pretty hard on your wallet after a while, wouldn't it?"
+    GTS "Well, it was valuable practice when it came to budgeting expenses. And we most certainly made lasting memories."
+    show GTS happy
+    GTS "Once we visited a novelty restaurant wherein the customer would catch a fish out of a pond that the cooks would then prepare. Heavens, my mother nearly fainted when I returned home with a bloodstain on my shirt."
+    MC "PFFF"
+    show GTS embarrassed
+    MC "That's... a pretty funny image. You, of all people, showing up like that after dinner out with your high school friends."
+    GTS "Hmhm, it is rather amusing, isn't it?"
+    GTS "My friends and I thought so, at any rate."
+    MC "Heh. Personally, me and my friends never did much exploring, at least not like that. Of course, not far from my house, traffic could get preeetty insane."
+    GTS "Where are {i}you{/i} from, if you don't mind my asking?"
+    MC "Oh, I'm from Tokyo. The big city, Gojira's old stomping grounds. Our house was just a little bit off of Shibuya."
+    GTS "My, my! That must be a lively place to grow up. I imagine you've seen some interesting sights."
+    MC "Oh for sure, especially around the holidays when all the tourists take over the streets. You turn an already crowded intersection into basically an impenetrable wall of people."
+    MC "I felt bad for the people driving because, well... they weren't going anywhere for quite a while."
+    show GTS surprised
+    GTS "I've heard stories of how overwhelming Shibuya can get during the holidays."
+    show GTS sad
+    GTS "I've also heard quite a few horror stories about some of the nastier incidents on account of the excessive traffic."
+    MC "Yeah, some bad accidents happened from time to time. I knew well enough to not get too absorbed into the larger crowds, and my dad made sure I knew to stay away from shady types."
+    MC "That's where my friends came in handy. Said shady types usually think twice before they try anything when they're outnumbered."
+    MC "Does, uh, Kyoto get pretty crowded, or nah?"
+    show GTS neutral
+    GTS "It can be, yes. Around Christmas in particular, it can be rather difficult to find seating in a restaurant if one is not reserved well in advance. It's a popular time for couples to have a date night."
+    MC "Ohhh, yeah, it's kinda like that in Tokyo, too."
+    GTS "I would imagine so. A couple of my friends would call weeks in advance to reserve a table for two at a French restaurant called L'Atelier du Goût. As you can imagine, it was dreadfully expensive normally, and prices were marked up considerably for Christmas."
+    GTS "At the very least, they could also go see the decorations in Daimaru for free."
+    MC "{i}Whew{/i}. I can't imagine saving up that much money and going through that much hassle just to choke down some French food. I could get the same experience eating a baguette on the subway."
+    show GTS unique
+    GTS "Goodness, Hotsure-san!"
+    MC "Of course, I never really had a reason to go somewhere fancy. But how about you? Did you ever do anything with someone special?"
+    show GTS surprised
+    pause 0.5
+    show GTS embarrassed at Transform(xzoom=-1)
+    GTS "Oh, my, no."
+    GTS "My responsibilities to my household never allowed for that sort of thing."
+    GTS "In truth, being away from it all still feels rather... like something is missing."
+    MC "So you've really never been on one date? You seem like you must've been pretty popular in school."
+    show GTS embarrassed at Transform(xzoom=1)
+    "Her cheeks began to turn a peachy red and she looked away."
+    GTS "I believe I made a good impression on most of my classmates. I never went quite that far, though, no."
+    show GTS neutral
+    "She looked back towards me as she breathed back in her composure. I nodded gently, not wanting to press the issue."
+    MC "Yeah, I guess it would be pretty tough if you're always busy. But hey, it'll come when it comes."
+    GTS "Indeed, as with everything in life."
+    MC "Well... anyway, on the topic of friends, have you made any new ones yet?"
+    if checkAffection("GTS", ">", 7):
+        GTS "{i}Our{/i} friendship has been quite worthwhile."
+        "I smiled."
+        MC "Yeah, I think so too."
+        MC "What about other people?"
+    GTS "...Not to speak of, so far. There's still a sort of distance between many of us from adjusting to this whole situation."
+    GTS "Perhaps then, it'll be a bit easier to introduce myself to more people."
+    MC "Well if you'd like, you could hang out with me and my-"
+    show GTS surprised at Transform(xzoom=-1)
+    pause 0.1
+    show GTS surprised at altMove(0.5, 0.45)
+    show BE happy at Position(xcenter=0.75, yalign=1.0) with easeinright
+    BE "'Sup, guys?"
+    "Somehow, I hadn't noticed Honoka, of all people, coming towards us at all. I waved, prompting one in return from her."
+    show GTS neutral
+    MC "Just shootin' the breeze. How's it going, Honoka?"
+    show BE neutral
+    BE "Good, just taking a cooldown walk after soccer practice. Thought I'd say hey."
+    MC "Oh, actually, I wanted to ask you something."
+    show BE neutral at Transform(xzoom=-1)
+    extend " You think it'd be cool if Yamazaki-san tagged along next time we hang out?"
+    show BE happy at Transform(xzoom=1)
+    BE "Oh, that'd be swell! We could go to the park, grab some coffee, start up that weed farm we've been talking about. You do pretty good with plants, dontcha Yamazaki-san?"
+    show GTS surprised
+    GTS "W-what? Are you-"
+    MC "Joking? Yes, she's hilarious."
+    show BE aroused
+    BE "I'm hilarious."
+    show GTS unique
+    show BE neutral
+    BE "But yeah, that sounds fun. If our schedules line up, let's get together sometime!"
+    GTS "Thank you kindly, you two."
+    MC "Of course."
+    show BE happy
+    BE "No problem!"
+    pause 0.5
+    show BE neutral
+    BE "And hey, favor for favor, you guys mind if I have a seat next to you?"
+    show GTS neutral
+    "Naomi firmly patted a soft, grassy patch on her side opposite me."
+    BE "Thanks."
+    "She stepped over, turned around, and {i}thwump{/i}ed down onto the spot; I tried not to stare at her chest bouncing from the force, but unlike Naomi's, I think my effort was more apparent."
+    "But then... we just sat there for a bit. Nothing disturbed us, not even the lazy flutter of the wind as it carried away our old breath in exchange for the new. There was no time but the metronomic shift of the leaves and beams of sunlight overhead."
+    show BE embarrassed
+    BE "Haaahn... this is nice."
+    MC "Yeah."
+    GTS "I couldn't agree more."
+    "Naomi opened her mouth again, looking skyward, but only closed her mouth in silence."
+    "I puffed out the quietest snort I could, and I too looked to the sky."
+    MCT "Y'know... I'm starting to like it here."
     jump daymenu
 
 label GTS008:

@@ -2369,7 +2369,7 @@ label AE015_watch:
         "I continuously watched as sweat began to form along the seat of Shiori-san's skirt."
         show dummy with hpunch
         AE "{i}Pant{/i}... {i}Pant{/i}... Hng... Hnnnnn~."
-        "I opened up my backpack and pulled out a bag of shrimp flavored popcorn chips. I slowly began to much on the treat as sadistically and smugly as I possibly could."
+        "I opened up my backpack and pulled out a bag of shrimp flavored popcorn chips. I slowly began to munch on the treat as sadistically and smugly as I possibly could."
         AE "H-huh? Hello? Is that shrimp? What's happening?!"
         MC "...{i}Munch{/i}"
         MCT "Y'know, I should probably help her... or just wait for some students to walk by for end of the day cleaning."
@@ -19200,11 +19200,13 @@ label AE084:
     "As the sander slowed down, the whirring of the machinery came to a halt as I looked over my handiwork."
     MC "Perfect."
     "As I placed my work in my bag to prepare it for the last stage of refining when I would next come in, Watanabe-san, who had been watching me from outside the window of the shop, finally spoke up."
+    show Jineko neutral with dissolve
     Jineko "Yeesh, you've been coming in every day and damn near running yourself ragged, man!"
     MC "Not *every* day."
     Jineko "I keep track of all the tool usage and resources, Hotsure-san."
     Jineko "Besides, you can't bullshit a bullshitter."
     MC "... In what way are you a bullshitter?"
+    show Jineko happy
     Jineko "Yeaaah, you're right, I was just bullshittin' you."
     MC "That's what I tho- wait."
     Jineko "Gotcha shorty!"

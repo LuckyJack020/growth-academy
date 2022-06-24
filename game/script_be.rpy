@@ -9082,6 +9082,237 @@ label BE045:
     jump daymenu
 
 label BE046:
+    $setProgress("BE", "BE047")
+    scene Classroom with fade
+    play music Busy
+    play sound Bell
+    "As the school bell finished ringing, Honoka ran up to me just as Tashi-sensei left the classroom."
+    show BE happy with dissolve
+    BE "Finally! Today's the day, Kei-chan! Guess what starts today~!"
+    "Honoka swung my arm back and forth in excitement."
+    MC "Your month long \"No Chocolate Challenge\"?"
+    show BE surprised
+    BE "Don't even joke about that!"
+    show BE happy
+    BE "And by the way, the proper name is the ‘Continuous Chocolate Challenge!'"
+    MCT "Just hearing that makes my stomach ache..."
+    MC "Hmm... well if it's not that, then it must be your first day of the swim club, right?"
+    BE "Exactly! First day of swim club! I'm soo excited!"
+    MC "Did you try on your refitted uniform today?"
+    BE "Yup! Made sure to do it before class! So, assuming I haven't grown a few centimeters larger from this morning until now, it should still fit just fine."
+    MC "Well honestly, my hair tends to grow that quickly, so I can't really relate with that example."
+    show BE surprised-2
+    BE "It does? So like... if I shave you bald, you'd have all your hair back by the end of the day?"
+    MCT "...Would I?"
+    MC "Please don't try."
+    show BE neutral
+    BE "Ehehe, sorry. Anyway, you're coming to watch practice right?"
+    MC "Am I allowed to? I don't want to come off as a creep or something like that..."
+    BE "Pff, you'll be fine. It's not like it's a bikini paradise. It's just gonna be a bunch of us trying our best to improve our times."
+    MC "So it'll be like when people who aren't artists think that the people in art classes who sketch nude models are really lucky because they get to stare at naked bodies? When in reality everyone's crying because it doesn't look right?"
+    BE "Exactly! Wait, no. What are you talking about? That's such a specific example, Kei-chan."
+    MC "I was always the first one to cry, actually."
+    show BE wink
+    BE "You should sketch me one of these days! I guarantee you won't cry~"
+    MCT "Don't count on it. Those boobs look like they'd be a nightmare to draw correctly... then again, a man has to learn to face his fears."
+    MC "Is that a challenge?"
+    show BE seductive
+    BE "No! Please don't cry when you see me naked, Kei-chan, I might not be able to recover from that!"
+    MCT "Wait... {i}when?{/i}"
+    MC "Okay, I promise not to cry, but only if you don't cry when my drawing sucks."
+    show BE happy
+    BE "Deal."
+    BE "Hehe~ You know what they say about promises, Kei-chan."
+    show BE aroused
+    pause .5
+    BE "{i}Only make promises you can keep~{/i}"
+    "Honoka leaned in a bit further to whisper in my ear."
+    show BE wink
+    BE "Because I intend to hold you to that promise."
+    MC "!!"
+    play sound ClockTower
+    pause 0.5
+    show BE happy
+    BE "Kei-chan, I'm gonna be late! We still need to stop at my dorm to pick up my swimsuit. Let's go!"
+    MC "A-Alright, let's get going."
+    "Honoka and I packed up the rest of our things and left towards the girls' dorms."
+    scene black with fade
+    pause 1
+
+    scene Lockers with fade
+    MC "Did you really have to stuff your face with those ketchup chips before we came?"
+    show BE angry with dissolve
+    BE "It was important! I'm a little nervous actually. I really want this one to work out."
+    MCT "She's really worried about this, huh..."
+    "I wrapped my arms around Honoka as much as I could."
+    MC "You're gonna do great. You'll swim circles around the rest of the team."
+    show BE neutral
+    BE "Thanks, Kei-chan. But I'm pretty sure I'm not gonna be {i}that{/i} good yet."
+    MC "I know, I know. Just wanted to boost your spirits a bit."
+    BE "Kei-chan."
+    MC "Hm? What's up?"
+    BE "Not that I really mind, but..."
+    show BE embarrassed
+    pause .5
+    BE "You know this is the girls locker room, right?"
+    MC "..."
+    show BE neutral
+    BE "Don't worry, you can just stand guard for me while I get changed. No one should be coming in here anyway."
+    MC "Will do, madam. No one will be seeing those two while I'm around."
+    show BE disoriented
+    BE "Oh, my hero~"
+    hide BE with dissolve
+    "As I turned away from Honoka, she began unbuttoning her uniform, grunting in the process."
+    BE "Come on, come {i}onnn{/i}. Almost there..."
+    MCT "She must be struggling with the button that's at the apex of her chest."
+    MC "You okay? Need some help?"
+    "{i}*POP*{/i}"
+    BE "Nah, that's okay! I got it!"
+    "After she finally got that pesky button, I focused in on the sound of her clothes rustling behind me as she removed the rest of her clothing and finished changing into her swimsuit."
+    BE "Aha! There we go!"
+    BE "Alright, you can turn around, Kei-chan."
+    $setBEOutfit(OutfitEnum.SWIM)
+    show BE happy with dissolve
+    MC "Well, seems like it still fits. You ready?"
+    BE "One more thing before we head towards the pool."
+    "Honoka grabbed her breasts and lifted them up slightly towards her chin."
+    show BE worried
+    BE "Alright girls. Here's how it's gonna go down."
+    MC "...What...are you doing?"
+    show BE neutral
+    BE "It's a pep talk! I just gotta lay out the rules for how today's gonna go."
+    MC "..."
+    MCT "Out of all things I've seen Honoka do over the years, this is one of the most out there."
+    BE "It's like these things have a mind of their own sometimes, Kei-chan. Just let me do this, okay?"
+    MC "Make it quick, I hear the coach blowing his whistle out by the pool as we speak."
+    "Honoka grabs her breasts once again and lifts them upwards towards her chin again."
+    show BE worried
+    BE "Okay, anyway. Here's the rules. One. No escaping! We have to make sure that Kei-chan doesn't get jealous after all."
+    BE "Two! Do the best you can to try and not embarrass Mama."
+    MCT "M-Mama?"
+    BE "Go down when you're supposed to go down, and stay afloat when you're supposed to."
+    show BE neutral
+    BE "Three! Umm...Let's just do our best!"
+    MCT "I'd cheer along with her if she wasn't talking directly to her breasts..."
+    BE "Phew!"
+    MC "...Honoka?"
+    show BE angry
+    BE "I know what you're going to say. No. I don't do that all the time."
+    MC "Wait, so you've done this before?"
+    show BE shrug
+    BE "Only a few times! I know it's silly! You don't need to rub it in, you dummy!"
+    show BE sad
+    BE "Can we talk about this later? I'm already embarrassed enough as it is..."
+    MC "Alright, alright. You gotta go! I'll meet you out there!"
+    show BE happy
+    BE "Okay! See you soon!"
+    "Honoka rushed out of the locker room, her feet slapping across the ground."
+    pause .5
+    MC "... and now I'm alone in the girls locker room."
+    "I quickly rushed out after Honoka so I wouldn't get labeled as the school pervert if anyone caught me standing in here alone."
+    scene black with fade
+    pause 0.5
+
+    scene Pool with fade
+    "I decided to sit near the fence, so as to not interrupt the swim club practice in progress. By the time I got there, Honoka was in the circle of the rest of the swimmers going through their warm-up stretches."
+    MCT "Huh...a lot of them seem to have pretty non-obtrusive growth factors."
+    Naoki "Alright, final set!"
+    "As Naoki-sensei blew his whistle and barked some more orders at the swim team, they finally lined up at the starting point of the pool."
+    show BE neutral with dissolve
+    BE "Um, Senbonzakura-sensei?"
+    MCT "That's definitely not right. That's too cool of a last name for {i}anyone{/i}."
+    Naoki "*sigh* ... Just Naoki-sensei is fine."
+    BE "Ah, sorry. Naoki-sensei?"
+    Naoki "Yes, Inoue-san?"
+    show BE shrug
+    BE "Actually, this is my first time swimming in a competitive environment like this, so...what should I do? Where should I start?"
+    Naoki "Hmm..."
+    "Naoki-sensei looked Honoka up and down."
+    Naoki "Hold on a second."
+    "Naoki-sensei blew two of his three whistles he had dangling around his neck. Honoka actually covered her ears in response to the sound, considering she's the closest to Naoki-sensei."
+    MCT "Jeez. He's right next to them, does he need to be heard that well?"
+    Naoki "BEGIN!"
+    "Sensei turned back to Honoka."
+    Naoki "I'm gonna be straight with you, Inoue-san. I don't usually have to worry about these club members when it comes to...why you all are here."
+    MCT "Oh boy... Really, sensei? On day one?"
+    show BE worried
+    "Honoka reflexively looks downward towards her chest."
+    Naoki "However, I believe that anyone who joins my clubs has the drive towards participating and improving themselves."
+    show BE neutral
+    BE "I do, Sensei. I really, really want this."
+    Naoki "I understand. However, I just think it's only fair for me to be transparent with you. Students with your factor tend to have a more difficult time in this club. So you'll have your work cut out for you."
+    if getFlag("BE_SOFTBALL"):
+        Naoki "Besides, you've joined and quit many clubs already, including the softball club."
+    MC "Harsh, but fair. He's only trying to look out for his students."
+    "However, Honoka only looked Naoki-sensei straight in his eyes, determined."
+    BE "Thank you for the warning, Sensei. But I don't want this to hinder me. I'll swim my heart out just so I can keep up with the rest of the team. You don't have to worry about me."
+    MCT "Damn."
+    Naoki "Heh. I like that. Alright, Inoue. I want 200m out of you. Freestyle, Breaststroke, Backstroke, Butterfly. 50m of each. If you can't manage one of the strokes, finish off with the one most comfortable to you.  Let's get you in the pool."
+    show BE happy
+    BE "Yes, Sensei!"
+    "Honoka trotted off towards the poolside and before jumping in, she looked in my direction."
+    "I gave Honoka a thumbs up, and she replied with a victory sign."
+    "Honoka finally dove into the pool to begin practicing."
+    MCT "Hell yeah, Honoka. You got this!"
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.EVE)
+
+    scene Pool with fade
+    play music Sunset
+    "Naoki-sensei's whistle has blown and the rest of the club members start heading back towards the locker room to get changed."
+    "Honoka took some extra time to towel off, and once she finished, she ran up towards me."
+    show BE happy with dissolve
+    BE "Kei-chan! What'd you think!"
+    MC "First of all, No running at the poolside!"
+    show BE angry
+    BE "Pfft. {i}Sorry Mr. Lifeguard~{/i}"
+    MC "Second of all..."
+    "I couldn't hold myself back from bringing Honoka in for a hug and a chlorine flavored kiss on the top of her head."
+    show BE embarrassed
+    BE "Kei-chan! I'm still not totally dry!"
+    MC "Wet clothes be damned. I'm so proud of you for what you said to Naoki-sensei! I was so worried about the bomb he dropped on you so fast."
+    pause .25
+    MC "I'm still fuming about that, actually."
+    show BE shrug
+    BE "It's fine, Kei-chan. I kind of expected this. I mean, I don't exactly have the most hydrodynamic figure."
+    MCT "It's pretty ‘dynamic' in other ways..."
+    show BE happy
+    BE "I have a nice pair of floaties though! And besides! It's not like he kicked me out, so I'm gonna ride this wave as long as I can."
+    MC "Aaaah...I see what you did there."
+    show BE embarrassed
+    BE "Thank you, thank you. I'm a comedy genius, I know~"
+    MC "You're welcome. So did you decide on which style you're gonna focus on? I saw you uh...struggling with one of them."
+    show BE angry
+    BE "Hah, yeah...Butterfly is out. My chest is totally in the way. Plus it's really difficult!"
+    MC "Your freestyle is killer, though!"
+    show BE happy
+    BE "I know, right! And...funny enough, my breaststroke isn't too shabby either."
+    MC "What about the backstroke?"
+    show BE neutral
+    BE "That one's...tricky."
+    pause .25
+    BE "I'm not {i}bad{/i} at it, but doing it made me nervous."
+    MC "Nervous? How so?"
+    BE "Well...the weight of my chest pushes me under the surface a little. But that's just a matter of getting my breathing right. That's not the biggest issue. It's mostly about how I look when I do it."
+    MCT "Oh..."
+    show BE angry
+    BE "Like twin icebergs."
+    MC "Ah. I see what you're saying. Well, if it doesn't make you feel comfortable, you don't have to do it. Just focus on your forward stroke!"
+    show BE happy
+    BE "That's the plan! Which reminds me, there's no practice tomorrow since it's the weekend, and I want to try and get used to the water a little more... so can you come with me to this public pool I found on the island?"
+    MC "Oh really? I didn't know we had one."
+    BE "Technically, it does!"
+    MCT "I don't like the sound of ‘technically'..."
+    MC "Well, I don't have any plans tomorrow, so I don't mind. Let's do it."
+    show BE seductive
+    BE "Heck yeah! Okay, let me go get changed and you can walk me back to my dorm! No coming into the locker room this time!"
+    MC "Aw man, and here I thought I'd get to witness another ‘pep-talk'."
+    show BE surprised-2
+    BE "Hey!"
+    jump daymenu
+
+label BE047:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
