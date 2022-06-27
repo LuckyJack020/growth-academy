@@ -20520,7 +20520,9 @@ label AE091:
 
 label AE092:
     $setProgress("AE", "AE093")
-    scene Dorm Hallway with fade
+    scene Dorm Hallway
+    show Takamura neutral
+    with fade
     play music Requiem
     $setAEOutfit(OutfitEnum.TIRED)
     play sound Knock
@@ -20536,7 +20538,8 @@ label AE092:
     AE "..."
     "Takamura-sensei and I stood in silence for a moment, before we finally heard the slow click of the door bolt as it was unlocked, and then stepped back as it opened."
     scene Dorm AE
-    show AE sad
+    show AE sad at Position(xcenter=0.25, yalign=1.0)
+    show Takamura sad at Position(xcenter=0.75, yalign=1.0)
     with fade
     "As Shiori opened the door for us, we stepped in— {w}but were almost instantly stopped by Shiori."
     "Not for her actively trying to stop us, but in turning around and giving us some room, her gigantic ass almost bounced us back."
@@ -20589,6 +20592,7 @@ label AE092:
     "Shiori looked surprised at first, then seemed too clam up as she nodded quietly in acknowledgement."
     show AE sad-2
     AE "My condolences."
+    show Takamura reassuring
     Takamura "Oh, no need to. Both of my parents were students here, actually."
     Takamura "They found each other, same as you do, and they found a way to make it work."
     MC "He also had a hair growth factor?"
@@ -20596,6 +20600,7 @@ label AE092:
     "Takamura-sensei looked at the window and smiled."
     Takamura "Mm... no."
     Takamura "Something different."
+    show Takamura neutral
     Takamura "Matsumoto-san, I'm not going to ask if you need anything, since I know you well enough to know you'll say no."
     Takamura "But instead... I'm going to ask."
     Takamura "What can I provide you that could help?"
@@ -20605,20 +20610,25 @@ label AE092:
     "Takamura-sensei reached into her bag, and then pulled out two chocolate bars."
     show AE surprised-2
     AE "Huh?"
+    show Takamura happy
     Takamura "Chocolate helps everything."
     show AE neutral
+    show Takamura reassuring
     AE "... Heh, thank you."
     MC "Y-Yeah, thanks-"
     "As I began to reach out, Takamura-sensei unwrapped the second piece and began eating, encouraging Shiori to open her piece too."
     MCT "Thaaaat'd explain the hips."
     show AE sad-2
+    show Takamura neutral
     AE "I'm just trying to figure out how to... deal with it? The almost daily... urges and sensations?"
     Takamura "You don't."
     show AE surprised
     AE "..."
     "Though at first it seemed like being frank and honest was her initial approach, as she noticed that the remark was without necessary tact, she quickly began to try to rephrase."
     show AE sad
+    show Takamura sad
     Takamura "Ah, pardon me."
+    show Takamura neutral
     Takamura "What I mean is that... it's not really something that just goes away but... I suppose it doesn't need to."
     Takamura "You kind of just learn to embrace it."
     show AE neutral-annoyed
@@ -20712,12 +20722,13 @@ label AE092:
     MC "Do you have anyone in your life to at least bear it with, though? Or like... anyone who you wanna spend it with?"
     HR "..."
     Takamura "Okay, I did the best I could."
-    #show Takumaru neutral with dissolve
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     show HR neutral at wiggle_loop
     pause 0.7
     show HR unique at altMove(0,0.5)
     "As Tashi-sensei was about to speak, Takamura-sensei entered the room, breathing a sigh of exhaustion as Tashi-sensei stood up straight."
     MC "How's she holding up?"
+    show Takamura sad
     Takamura "Well, she seemed to get behind what I was saying..."
     Takamura "But she really is in a bad place. I didn't at all know how deep all this went with her."
     MCT "Yeah, kind of telling me what I know..."
@@ -20725,6 +20736,7 @@ label AE092:
     "At the very least, they were trying to help. And what's more, they could give help that I couldn't."
     show HR neutral
     HR "So uh... what's the plan?"
+    show Takamura neutral
     Takamura "Well, from the looks of it, we're going to need to stay up late tonight doing some rounds around the dorms."
     Takamura "Kaeru-chan, are you okay with accompanying me?"
     HR "Uh..."
@@ -21056,7 +21068,6 @@ label AE093:
     jump daymenu
 
 label AE094:
-    $setProgress("AE", "AE095")
     $setAEOutfit(OutfitEnum.TIRED)
     scene Dorm Hallway with fade
     MC "Shiori? Could you please open up?"
@@ -21121,6 +21132,7 @@ label AE094:
     elif getFlag("AE073_crime") and checkAffection("AE", ">=", 55):
         jump AE094_Gold
     else:
+        $setProgress("AE", "AE095")
         show AE sad
         stop music
         "Shiori's overwhelming despair completely choked out my senses. I was completely frozen for a moment, unsure what to say to prevent things from getting worse."
@@ -21144,6 +21156,7 @@ label AE094:
         jump daymenu
 
 label AE094_Gold:
+    $setProgress("AE", "AE095G")
     stop music
     "I don't know what to say. "
     "I don't know what I should say..."
@@ -21458,6 +21471,235 @@ label AE095:
     MCT "Is that even what she wants anymore?"
     jump daymenu
 
+label AE095G:
+    $setProgress("AE", "AE096G")
+    scene Dorm Interior with fade
+    "{i}<Click>{/i}"
+    "My suitcase clicked shut as the early morning sun shone brightly through the window, its rays cascading down onto the pristine white carpet as I made sure I had everything I would need for the trip."
+    MC "Haaah, okay. Clothes? Check. Bathroom stuff? Check."
+    show AE neutral with dissolve
+    AE "..."
+    MC "Hey."
+    "Shiori was silent for a moment as she looked out to the mountain view from my window, however, gently, she peered over to me from her trance."
+    MC "You gonna be okay?"
+    "She gave a listless smile to me as she nodded."
+    show AE smile
+    AE "Mhm."
+    MC "Packing light?"
+    AE "I don't think I'll need to bring much. I have a small bag."
+    MC "Well, that's nice heh..."
+    MC "But uh..."
+    MC "Are you gonna be okay?"
+    show AE neutral
+    AE "..."
+    show AE smile
+    AE "..."
+    show AE happy
+    AE "Yes, I think I will be."
+    "I walked over and brought her in for a hug, as for a moment, we merely swayed there side by side together..."
+    "Until I heard the clearing of a throat come from the door."
+    show AE surprised
+    AE "Hm?"
+    "Yureno-san waved as she walked into the room, a doofy smile betraying her sad eyes."
+    show AE surprised at altMove(0.5, 0.75)
+    show Tako neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Tako "Yo."
+    AE "Hello, Yureno-san."
+    show Tako sad
+    Tako "Haaa? Hello? That's some way to say bye!"
+    show AE sad
+    AE "... I... didn't know if I'd have the strength to."
+    Tako "... Okay, that was extremely adorable, but my point still stands!"
+    show Tako happy
+    Tako "You ain't gonna get rid of Yureno-Sama that easily!"
+    show AE happy
+    AE "If only I were so lucky, ehehe."
+    Tako "..."
+    show Tako sad
+    Tako "Heh. Y'know... I am gonna miss you."
+    show AE sad
+    AE "H-Hey, we're going to be back during graduation, and I will still need to move my things out!"
+    Tako "True, true..."
+    show Tako neutral
+    Tako "... Uh..."
+    Tako "So where are you gonna be living? Y'know, while you wait to get into that fancy overseas school."
+    MC "Fancy overseas school?"
+    show AE happy
+    "I looked to Shiori, who merely nodded as she smiled at me."
+    AE "..."
+    MC "... You got in, didn't you?"
+    AE "And here I was going to surprise you-"
+    "I immediately went in with a hug as Shiori reciprocated."
+    AE "Haah, I... I didn't know if I'd have the strength to accept it but..."
+    show AE happy
+    AE "No. Now I know."
+    MC "Heheh..."
+    show Tako happy
+    Tako "Well, what are ya thinking?"
+    show AE sad
+    AE "Mmm... I am not sure. I... don't rightfully think I can stay at my parents house-"
+    show Tako neutral
+    Tako "I got ya covered."
+    show AE surprised
+    AE "Eh?"
+    "Yureno-san smiled as she bowed to Shiori."
+    Tako "I got ya covered. I'll shoot ya a text when you get back. I'm sure I can get you somewhere to stay for a bit."
+    show AE sad
+    AE "Yureno-san..."
+    AE "Thank you so much. I... I don't know how I can ever-"
+    Tako "Aht- shh, no. No paying back. Only you letting me hook you up."
+    AE "..."
+    Tako "..."
+    show Tako happy
+    Tako "Seeya, bitch."
+    show AE neutral-annoyed
+    AE "Language, Yureno-san."
+    Tako "Heheh, yeah, I know."
+    show Tako sad
+    Tako "Fuuuaaah, geez, this entire time and I couldn't even get ya to let loose even a li-"
+    "Suddenly, and without warning, Shiori rushed forward, cutting her off mid sentence with a tight, sudden hug."
+    #show Tako surprised - NYI
+    Tako "Ah!"
+    show AE happy
+    AE "..."
+    "Yureno-san blushed as Shiori let go, before taking off her cap and holding it in her hands."
+    show Tako sad
+    Tako "A-Aw geez... Shiori..."
+    AE "Hmm... don't worry..."
+    show AE neutral-smug
+    AE "We'll always be bubble booty babes, hm?~"
+    #show Tako surprised - NYI
+    Tako "WHA-!"
+    MC "PFFFF!"
+    show Tako happy
+    Tako "LETS GOOOOO!"
+    scene black with fade
+    "With that, Yureno-san and I exchanged numbers and then... we parted ways."
+    "After all..."
+    "We had a loooot of things to say to a lot of people."
+    scene Office with fade
+    "We stood in the office as I looked around, gazing at it one last time before, possibly, I wouldn't see it again. At least, not until graduation..."
+    "Meanwhile, Shiori bowed to Tomoe-Chan and Utagashi-Chan as they stood and listened, Daichi sitting on the table."
+    show AE sad with dissolve
+    AE "My sincerest apologies for leaving you in the last week of classes, however-"
+    show AE sad at altMove(0.5, 0.75)
+    show Minori happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Minori "At-sssh! No! You. Break. Now."
+    "Not even letting Shiori finish, Tomoe-chan walked over and placed a finger on Shiori's lips."
+    show AE surprised
+    AE "W-Wha-"
+    show Minori neutral
+    Minori "Matsumoto-san, we love having you as our boss, but..."
+    hide Minori
+    show RM angry at Position(xcenter=0.25, yalign=1.0)
+    RM "You're nuts!"
+    hide RM
+    show Yuki neutral at Position(xcenter=0.25, yalign=1.0) #need Yuki angry sprite for this
+    Yuki "MMPH!"
+    "With a punch to the arm, Daichi yelped as Utagashi-chan gave him a glare."
+    hide Yuki
+    show Minori neutral at Position(xcenter=0.25, yalign=1.0)
+    Minori "The work and dedication you put in every day... this has been a long time coming."
+    hide Minori
+    show Yuki happy at Position(xcenter=0.25, yalign=1.0)
+    Yuki "Mhm!"
+    hide Yuki
+    show RM neutral at Position(xcenter=0.25, yalign=1.0)
+    RM "Yeah, and I myself gotta say, Keisuke. Dude. Go outside for once."
+    MC "O-Oy! You're the last person who should be telling me that!"
+    hide RM
+    show Minori happy at Position(xcenter=0.25, yalign=1.0)
+    Minori "Ehehe!"
+    hide Minori
+    show RM happy at Position(xcenter=0.25, yalign=1.0)
+    RM "Ahh, I'm just messin with you."
+    RM "You two have fun, okay?"
+    hide RM
+    show Yuki happy at Position(xcenter=0.25, yalign=1.0)
+    Yuki "Mm!"
+    "After a moment, Yuki walked over and, from her breast pocket, pulled out a pen, handing it to Shiori."
+    AE "Hm?"
+    "Yuki did her best to smile as she pointed to the paper on the table."
+    AE "What... is this?"
+    hide Yuki
+    show Minori neutral at Position(xcenter=0.25, yalign=1.0)
+    Minori "An RW2-Section 8 form. It's to allow a current student-"
+    AE "To announce a temporary break for personal or medical reasons..."
+    Minori "We remembered you almost forgot to sign it before you left, and if you hadn't we would have written you a demerit for an unexcused absence."
+    AE "Tomoe-chan... Utagashi-chan..."
+    "Shiori looked as though she were about to tear up."
+    AE "This is the nicest thing... either of you could have done for me!"
+    MCT "She really is nuts..."
+    MCT "I love her so fucking much."
+    scene black with fade
+    "After getting the papers signed, Shiori then had both of us sign another form that would allow us to take the finals upon our return."
+    "However, once we got everything squared away and said our thank yous and goodbyes..."
+    "Shiori requested that we go meet one last person. Someone she saw in the courtyard earlier."
+    scene Campus Center
+    show AE sad
+    with fade
+    AE "..."
+    Hamikawa "..."
+    Hamikawa "Hmph. Is there a reason why you wanna talk to me or what?"
+    AE "Yes. I wanted to talk to you to tell you something I should have a long time ago."
+    Hamikawa "Haaa? Well, if you got something to say, say it!"
+    AE "You were right."
+    Hamikawa "Eh?"
+    #Hamikawas eyes seemed to open wide in shock as Shiori looked down at her feet."
+    Hamikawa "I was... right?"
+    AE "I... I'd fallen into the trap of moralism."
+    Hamikawa "When... when the fuck did I say that?"
+    AE "I was acting so... I was looking down on you. And I shouldn't've been."
+    AE "I was talking to you like I was better than you because I thought that I behaved better but... that don't matter."
+    Hamikawa "...."
+    AE "I'd become so obsessed with not being like my mother... that I'd forgotten what makes me *me*. And... and I'd gotten caught in the trap of thinking that I was somehow just or righteous..."
+    AE "Hamikawa... you have every right to hold that against me-"
+    Hamikawa "Of course not, I'm a bigger woman than that."
+    AE "Eh?"
+    Hamikawa "Yeah, it's no big. Like, you get it. If you get it, I ain't finna be mad or nothin."
+    MC "That was... surprisingly easy."
+    Hamikawa "What's that supposed to mean, eh?! I'm saying it's no big, that don't mean I ain't still mad!"
+    MCT "G-Guess not..."
+    MC "But... why?"
+    Hamikawa "That's... that ain't-"
+    AE "Because I hurt you."
+    Hamikawa "..."
+    AE "All those years ago..."
+    AE "You... you were in the same place as me. You just wanted people to think you were cool and... I hurt you for it."
+    AE "Hamikawa-san... Nanako..."
+    AE "I'm sorry."
+    Hamikawa "I was a little dumbass. I thought by beating on you I could have at least gotten some respect."
+    Hamikawa "Besides, I at least went to the docs, you just let that cut on your finger scar over. And you wouldn't have even needed to pay the medical bills if you hadn't snitched on yourself! Like, damn..."
+    AE "I... I'm sorry."
+    Hamikawa "..."
+    Hamikawa "What were the chances that we would meet here of all places?"
+    AE "I... I don't know but... can we... move past it?"
+    Hamikawa "We were kids. Let's put the kid shit behind us."
+    AE "Eheh."
+    "The two smiled at each other as they bowed. I wasn't sure exactly what all was going on between them but..."
+    "I'm glad it was worked out."
+    Hamikawa "So, where are ya going now?"
+    AE "..."
+    AE "Home."
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.NIGHT)
+    scene Dock with fade
+    "*DING*"
+    "The small chime sounded to signify that the ferry was ready to leave. We stood there in the dock, the cool wind causing our breath to mist from our mouths as our hearts fluttered in our chests."
+    MC "You ready? The bullet train leaves at about 3 a.m."
+    AE "Mhm."
+    AE "..."
+    AE "..."
+    AE "Goodbye for now, Seichou..."
+    "As the ferry drove out into the dark sea, it's crested waves illuminated by the pale moonli-"
+    AE "Did you remember to file your RW2-Section 8 form?"
+    scene black with fade
+    MC "..."
+    MC "Shit."
+    "An extra 30 minutes was added to our time after Shiori requested for the ferry to turn around."
+    jump daymenu
+
 label AE096:
     $setProgress("AE", "AE097")
     $setAEOutfit(OutfitEnum.TIRED)
@@ -21576,8 +21818,178 @@ label AE096:
     MC "..."
     jump daymenu
 
+label AE096G:
+    $setProgress("AE", "AE097G")
+    #Terminal Sound
+    "Attention: The train will be arriving at the Tokyo metropolitan station in three minutes. Please prepare to depart to the terminal in an orderly fashion"
+    scene Tokyo Train with fade
+    "The bright, white light of the snow came in from the window of our train terminal. When we entered it this morning, it was pretty spacious, and Shiori-chan thankfully grabbed a few seats before it began to fill up."
+    MC "Hey."
+    show AE neutral with dissolve
+    AE "Hm?"
+    MC "You doin okay?"
+    "She shuffled about in her seats a bit, her thighs squishing against my leg."
+    show AE embarrassed
+    AE "Y-yeah, just a bit snug."
+    "Looking up to a woman holding a small child, Shiori-chan worriedly spoke up, clearly pained from the inconvenience of taking three seats all to herself."
+    AE "M-Ma'am, are you sure you don't want to sit here?"
+    Woman "O-oh! No, no it's fine."
+    "Of course, the woman denied the request, despite the free space it would alot, as she was well aware of where her own face would be positioned should she accept."
+    Woman "Really, it's fine."
+    show AE sad
+    "Shiori-chan nodded, and shrunk back. Looking around, she caught a few glares, some of pity, others of disgust, but mostly of shock at her elephantine legs."
+    MCT "I outta help her out here. Get her mind off the situation."
+    "I smiled warmly, and held her hand in my own."
+    MC "Hey, are you excited?"
+    show AE surprised
+    AE "Huh?"
+    MC "Y'know, for Shinjuku?"
+    AE "Oh, um..."
+    "After a moment of hesitation, there it was, a smile."
+    show AE happy
+    AE "Yeah, yeah I am."
+    "I gave a chuckle under my breath, and kissed her softly on the temple."
+    scene black with fade
+    pause 0.5
+
+    scene Tokyo with fade
+    "Exiting the terminal, we found ourselves walking along with a flood of people. I stuck close to Shiori-chan, her wide hips causing others to keep an at least managable distance as the two of us walked."
+    "Making our way to a nice, moderately secluded area, I took a deep breath and got a look at the cityscape; the city I'd lived most of my life knowing."
+    MC "Haaaah."
+    MC "It's nice to be back home again."
+    show AE neutral with dissolve
+    AE "Well, it certainly is busy this time of year, isn't it."
+    MC "Oh! Speaking of, we need to look for hotels!"
+    "Pulling out my phone, I went online and looked through local hotels and places to stay. Shiori-chan, meanwhile, began to walk away before stopping and turning to me."
+    show AE surprised
+    AE "Something wrong?"
+    MC "Huh?"
+    MC "Oh, no, just looking for hotels."
+    AE "On your phone?"
+    MC "...Y-yeah."
+    AE "You can do that?"
+    MCT "I can...huh?!"
+    MC "Have you... never looked for hotels and stuff on a phone before?"
+    show AE neutral
+    AE "I've never been in a hotel before."
+    MC "Wha- Really?!"
+    AE "Never."
+    MC "Well, uh... tonight's a first, I guess!"
+    MCT "Has she really never been to a hotel before?"
+    AE "Will there be anywhere that can accommodate me?"
+    MCT "Oh yeah...that's a good point."
+    MC "I'm sure there's somewhere."
+    "While I searched though the websites, however, options started becoming more and more scarce. Whether it be returns of two star hotels, or five star, five hundred a night hotels, we were running low on possibilities."
+    "I put it off to the side, however, as we began to walk around town. Surprisingly, Shiori-chan was staying composed and confident as we walked, even with the stray stare and off comment. Her massive body certainly was a spectacle for all to see."
+    show AE happy
+    AE "Hey, Keisuke."
+    MC "Hm?"
+    "I turned to Shiori as she beamed at me, a gentle smile across her face as she pointed over to a small play area."
+    AE "Want to go take a rest on the bench with me?"
+    MC "Oh! Getting tired?"
+    show AE smile
+    AE "Mmm, no, just a little place I used to play around in as a child."
+    MC "Oh really?"
+    AE "Mhm!"
+    MC "Eheh, alright, we can rest up there."
+    "As the two of us sat down together, we got to talking about our childhoods, growing up, and just living life here in the city."
+    AE "And that store right there, I actually used to sit outside and watch their tv through the window after school instead of going home."
+    MC "Really?"
+    AE "Mhm."
+    MC "And they didn't care?"
+    AE "... They didn't until they shooed me away, but some days they just ignored me."
+    MC "Aaaaah, okay."
+    MC "Wow, you must really not have wanted to go home huh?"
+    show AE neutral
+    AE "..."
+    MC "Eh... y-yeah, I guess that makes sense."
+    AE "Mhm."
+    MC "..."
+    "However, over time, our conversations became more scarce, and Shiori-chan, more worried."
+    show AE sad
+    AE "..."
+    MC "..."
+    MCT "She's been awfully quiet for the past few minutes..."
+    MC "You alright?"
+    AE "Um..."
+    "She hesitated, but sat closer to me, looking off past the line of buildings towards what looked to be an old, dilapidated apartment building in the distance."
+    AE "I just realized... we're very close to Chūō."
+    MC "Huh? Oh, yeah, I guess we are."
+    AE "I realize that it's rude of me to be asking a favor of you, but..."
+    MC "What's wrong?"
+    AE "Well... you see, I was hoping that now that I'm back home..."
+    "She was struggling to find words. Her mouth opened, searching for them, she merely turned to me and bowed."
+    AE "I have somewhere I need to be."
+    MC "Do you want me to come with?"
+    AE "N-no, I'm fine going on my own for now."
+    MC "Oh."
+    AE "I... I'm really sorry. I don't want to be a burden on our tri-"
+    MC "Don't worry about it. I've known you long enough to know to trust you to your own business."
+    MC "Just don't leave me TOO long, okay!"
+    AE "Are... are you sure? I-It'll only be for about an hour and an half or so."
+    MC "Don't worry about me! Go, do your thing. I'll be looking at hotels in the area, alright? We'll meet up here when you're done."
+    hide AE with dissolve
+    "Saying nothing more, she nodded, and after thanking me once more she walked off, leaving me alone. I pulled out my phone and continued my search."
+    MC "No, no, too expensive."
+    "I scrolled through pages as... I stopped, looking around."
+    "Tokyo has always been a pretty safe, if not populated city. At this moment, though... I felt neither. This little area nestled between the buildings was pretty out of place in a lot of ways, and it felt so... alone."
+    MC "..."
+    "As I looked around, meanwhile, quietly, a car rolled up next to the playground."
+    MC "Hm?"
+    "I looked at it for a moment. It was black, an old looking car, but still rather expensive. Almost limo-like. The windows were all tinted with the exception of one in the back, which was fully down."
+    "And within... I couldn't see the passenger. Only their hand on the window frame."
+    "Or rather... a claw?"
+    MC "Um... hello?"
+    "My heart jumped at my thoughtless call out, as though I hadn't contemplated it for a second."
+    "And yet..."
+    "The hand pulled in from the window as it rolled up... and the car merely kept driving."
+    MC "... Whaaaat the fuck was that?"
+    "Unnerved, I kept looking for hotels, begging, praying that Shiori returned... even if only for my own safety."
+    "By the time I knew it, a significant amount of time had passed, and the feeling of anxiety did with it. Taking breaks only to catch a few videos online, I spent most of the time looking for hotels."
+    MC "Ah, there we go! This one seems pretty affordable! Let's see..."
+    "\"Pink Heart Hotel. Complete discretion, perfect for a lover's getaway!\""
+    MC "Oh...this is...oh..."
+    MC "..."
+    "Imagining fully well what Shiori-chan would say, I went against my better judgement and looked at the website."
+    MC "Student special? Multi-growth accommodations?"
+    MC "..."
+    MCT "This pricing...this convenience..."
+    MCT "It's...It's too good to pass up."
+    "The moment I hit \"Book\" for one room, I looked up and saw..."
+    MC "Ah! H-Hey! Shiori-chan!"
+    "I smiled and waved at Shiori but... she didn't seem to be doing well. In fact, she looked downright crestfallen. Confused, I lowered my hand as she walked up with a nod."
+    show AE sad with dissolve
+    AE "Hello, Hotsure-san."
+    MC "Hey!"
+    "I tried to keep positive but Shiori's face was unmistakable."
+    MC "Uh... everything... everything alright?"
+    AE "..."
+    AE "I... I tried to go and... check on my old home. At least, for a moment."
+    MC "Oh..."
+    AE "... I couldn't do it. I... I didn't feel I had the strength to."
+    MC "Well, it's probably for the best. After all, that sounds like it could have been pretty dangerous!"
+    AE "..."
+    MC "..."
+    MC "Are you okay?"
+    AE "I said I'm fine. I really am..."
+    MCT "This...this isn't something I can just tell her is okay."
+    MC "Okay. T-Tell me if there's anything you need, alright?"
+    show AE neutral
+    AE "Thank you. I will."
+    "I smiled as a bit of consolation, quick to change the topic into something lighter."
+    MC "So! Sun's still out, plenty more to do around town, got any ideas?"
+    AE "Hmm..."
+    AE "May I see your house?"
+    MC "My house?"
+    MCT "...Mom should make her feel better. She always knows how to bring a smile to people's faces..."
+    MC "Ah! That's a good idea!"
+    MCT "I haven't seen mom or dad since I moved to Seichou. They'd be cross with me if I didn't at least say hi."
+    MC "Alright, let's go. It's a bit of a walk, though."
+    AE "That's fine. I could use a nice, calm walk."
+    "Taking her by the hand, we walked through the city together towards my parents house."
+    jump daymenu
+
 label AE097:
-    $setProgress("AE", "AE098") #remove once AE098D is written
     $setTime(TimeEnum.NIGHT)
     "..."
     "..."
@@ -21698,13 +22110,302 @@ label AE097_menu_again5:
                 jump AE097_c2_3
 
 label AE097_c1_5:
-    #setProgress to regular AE098 here once AE098D is written
+    $setProgress("AE", "AE098")
     MC "Move forward."
     jump daymenu
 
 label AE097_c2_5:
+    $setProgress("AE", "AE098D")
     MC "Move on."
-    jump daymenu #(When AE 098-D is written, jump to AE 098-D))
+    jump daymenu
+
+label AE097G:
+    $setProgress("AE", "AE098G")
+    scene Tokyo House Exterior with fade
+    "Nestled deep in the hills and valleys on the north end of the city, I walked ahead a few feet of Shiori as we walked towards my neighborhood."
+    "There, sitting quietly nestled on the hill at the inclined road, cars still parked in the driveway and lights on in the living room, was my home."
+    MC "Well, here it is."
+    "It was just like I'd remembered it. A nice, contemporary house. Unassuming, but warm and homely. I looked over towards Shiori-chan, who looked at the simple building with amazement."
+    AE "Wow..."
+    MC "Hm? What's up?"
+    AE "I didn't... I had no idea you lived like this."
+    MC "Huh? I mean...it's just a house."
+    AE "It's beautiful."
+    MCT "Beautiful..."
+    MC "O-oh! Look, in the window!"
+    "A familiar figure made herself apparent in the window."
+    AE "Is that your mother?"
+    MC "Yeah! Come on, let's go say hi!"
+    AE "W-wait, I-I-I'm not sure I'm ready to meet your parents just yet!"
+    MC "Nonsense! I've been telling them all about you."
+    AE "But...I look so..."
+    MC "Hey."
+    "Taking Shiori-chan by the hands, I looked her deeply in the eyes and smiled."
+    MC "They know about your growth. It'll be okay."
+    AE "...Okay, Keisuke-kun."
+    MC "Great! I already texted them and told them I was coming by anyways."
+    AE "W-wait, you did what?!"
+    "Trotting up to the door, Shiori-chan holding my hand, I knocked with the other enthusiastically. And meeting us, at the door, was mom."
+    Mom "Hellooo~ It's so nice t-"
+    "She opened her eyes, and got a good look at Shiori-chan."
+    Mom "O-OH, WOW. Um..."
+    Mom "*Khm* Ha, ha-ha, I'm so sorry, dear, I didn't...well, expect..."
+    "Clearly embarrassed by the infraction, mother bowed deeply and closed her eyes."
+    Mom "I'm very sorry!"
+    MCT "Eheh, good to know mom hasn't changed much."
+    AE "I-It's alright, ma'am, I understand."
+    Mom "Oh, well, come in! Come in, you two! Ryuta just got home with chicken."
+    "Mom ushered me into the house. Taking off my shoes and putting them on the shelf, I took a deep breath. It was good to be home."
+    AE "U-um, Keisuke-kun, the door."
+    Mom "Ohoho, -kun, how sweet!"
+    Mom "Ryuta, our son's home, and he brought his girlfriend!"
+    "{i}*Pmpf*{/i}"
+    AE "Hagn..."
+    "Mom trotted up, and gave me a big hug, standing on her tiptoes to do so."
+    Mom "Oooh, my baby's home~"
+    MC "Ack! H-hey mom, careful with the baby stuff in front of Shiori-chan."
+    Dad "Hey, boy! How's it goin? It's so good to see you- Ohp, and look at that hair!"
+    "Dad rustled my hair and gave a hearty laugh. I responded in kind."
+    "*{i}FLMPH{/i}*"
+    AE "...O-Oh, God no."
+    Mom "I know! I'm telling you, both you AND your sister have such long locks!"
+    MC "Aww, mom, geez!"
+    MC "Oh, is she here?"
+    Mom "Mhm! She came in from Seichou a few days ago!"
+    AE "Hgn, hgnnnn~"
+    MC "Oh, mom, dad, you two need to meet Shiori-chan. She's right-"
+    MC "Huh?"
+    "I looked over, but Shiori-chan wasn't there. That's when it hit me."
+    MCT "The doorframe."
+    "I rushed over to the stairs to look down and see...Shiori-chan, massive ass stuck in the doorframe. Mom and dad looked around the corner to see the commotion."
+    Mom "Oh she looks stunning! E-erm, but..."
+    Mom "T-try not to stare, dear."
+    "Shiori-chan turned cherry red, and covered her face with her hands."
+    AE "No, no, no, no, no, why here?"
+    MC "Hey, Shiori-chan, are you alright?"
+    AE "Y-yes! I'm fine, I just need to...*hggn!*"
+    MC "Are...are you stuck?"
+    AE "..."
+    AE "P-please help."
+    "I nodded, and turned to my parents, both looking on in awe and confusion."
+    Mom "Everything okay, hun?"
+    MC "Um... m-mom, can you, uh..."
+    "I made a pulling motion with my hands, and without any words needed to be exchanged, she got it."
+    Mom "O-oh dear! Ryuta! Matsumoto-san is-!"
+    Dad "Ohh...oh boy, uh..."
+    "Dad scratched the back of his neck with his hand, a trait I picked up from him early on."
+    Dad "Hey, Keisuke, come with me around back, we can go around and uh...we can push while your mom pulls."
+    MC "R-right."
+    "As dad and I left out of the back door, mom walked over and began to console the absolutely humiliated Shiori-chan."
+    Mom "It's gonna be okay, dear."
+    AE "I-I'm very sorry for this ma'am. I'm so sorry."
+    Mom "I know, It's okay."
+    Dad "Alright, let's head round back."
+    MC "Right."
+    "We made our way around the house to the front door, and before us was a pair of big, fluffy, rotund asscheeks, barely contained by their skirt, resting atop Shiori-chan's tree trunk legs, knocked at the knees."
+    Dad "Alright, well, uh..."
+    "Though he hesitated a bit, he bent over and placed both of his hands on one cheek, his shoulder pushing into her rear."
+    AE "A-ah!"
+    Dad "Alright, got your hands on her, boy?"
+    MC "D-D-Dad!"
+    Dad "Well, do you want her in the house or not?"
+    "Seeing my dad nuzzle up to my girlfriend's ass was weird, but if any onlookers happened to see what was going on, I'd never hear the end of it. I did the same, placing both of my hands a bit lower."
+    MC "Ok, got it."
+    MC "Are you okay, Shiori-chan?"
+    AE "K-Keisuke-kun, your hands are really cold!"
+    MC "Really? I feel like I'm sweating bullets..."
+    Dad "Oops, sorry bout that."
+    MC "DAD!"
+    Mom "Okay, I'm gonna start pulling."
+    "Mom tried to look Shiori-chan in the eyes to comfort her."
+    Mom "Ready. Sweety?"
+    AE "M-mhm."
+    Mom "On three. One."
+    MC "Two."
+    MC "Three!"
+    AE "W-woah!"
+    "Putting my back into it, my hands sunk into the fabric, and as warmth began to envelop my hands from her pillowy ass, {i}pop{/i}— and she was pushed through."
+    "Nearly landing on mom, she was able to balance herself with a clumsy, staggered hop; putting her arms out to keep central balance."
+    "I let out a sigh, and looked up, expecting to see Shiori-chan standing, possibly catching her breath, in the house."
+    "Instead, I looked down, and saw her crouched down, ballooning butt stuck up in the air, with her head planted firmly on the ground as she apologized."
+    AE "I-I am so sorry! That was the most ungraceful I've ever been in my entire life! I'm sorry for being so unladylike, for being such a pig, I-"
+    "Mom nealt down, and placed a hand on her shoulder. Shiori-chan looked up to her smiling face."
+    Mom "N-now, now, dear, everything is alright."
+    Mom "However..."
+    Dad "NYAH!"
+    MC "HAGN-AH-AH!"
+    "She strutted over like a storm, and grabbed both myself {b}and{/b} my dad by the ear."
+    Mom "Groping a nice young girl's exposed backside...I expected this much from you, Ryuta, but not you, Keisuke."
+    Dad "I-I-I just forgot, honest! My hands just kind of sunk in!"
+    MC "O-oy, oy! What are you grabbing my ear for, she's my girlfriend!"
+    "At the last statement, I could feel her grip tightening, causing me to yelp out."
+    Mom "Honestly, you two boys..."
+    "Releasing dad from her grip, he quickly got away from the anger zone, as I could do nothing but apologize."
+    MC "S-Shiori-chan! I'm very sorry! I was gonna use my back to push, honest!"
+    AE "It's...*hahn* q-quite alright, Hotsure-san."
+    MC "Good, I'm glad you fa-"
+    "She moved more swiftly than I've ever seen her move, like a shadow to the dying of the light, as she got right next to me and grabbed my other ear."
+    MC "AGN!"
+    AE "But care to tell me just WHY there was a warm hand under my panties?!"
+    Mom "What?!"
+    MC "Ah-AHHHGN! I-I'M SUPER SORRY, I'M REALLY SORRY! DAD, HELP ME OUT, HE-!"
+    Dad "Ohhh, I gotta go get the chicken out of the oven!"
+    Dad "You're on your own, boy."
+    "Dad rushed off into the kitchen, leaving me to my painful punishment."
+    AE "Keisuke Hotsure!"
+    Mom "Keisuke Hotsure!"
+    MC "HEEELP!"
+    scene black with fade
+    pause 0.5
+    scene Tokyo Dining Room with fade
+    "Ears red, I sat next to Shiori-chan, allotted two chairs to sit, as Mom began passing out plates, a bucket of fried chicken and containers of mashed potatoes sitting in the middle of the table."
+    MCT "He didn't have to go to the oven at all."
+    scene black with fade
+    "As dinner passed, Shiori-chan got to know my parents, and they got to know her. Tomoko-chan seemed somewhat distant at first, but as time went on she came around to having Shiori-chan here as well."
+    scene Tokyo Dining Room with fade
+    Mom "So, how did you and Keisuke meet?"
+    MC "We actually met on the first day of school."
+    AE "Mhm. I was actually having a disagreement with a student at the time during regular council business, but... I'd be lying if I didn't at least think in the back of my mind that he didn't catch my eye."
+    Mom "Council business? Oh, well, Keisuke told me you were the student council president, but on the first day?"
+    "Dabbing her mouth with a napkin, she nodded and cleared her throat."
+    AE "Yes ma'am. It was a special election, as no other candidates were available. The school heard of my skills at my last school and placed me in the position."
+    Dad "Well it sounds like you got a good head on your shoulders. I'm sure you'll go far."
+    AE "I certainly hope so."
+    MC "I know you will."
+    "I placed a hand on her thigh, and she looked over at me, blushing."
+    AE "S-So, um, you're a writer, Mrs. Hotsure?"
+    Mom "Oh, well, I write a bit from time to time."
+    Dad "Himari has been writing ever since we met-"
+    AE "Himari?"
+    Dad "Hm?"
+    "Shiori-chan's eyes widened slightly on hearing my mom's name, and I began to smirk, if only a little, and took a sip of cola."
+    AE "You're...*that* Himari Hotsure?"
+    Mom "Oho, you recognize me?~"
+    AE "I've...read one of your books."
+    "Hand still on her thigh, she grabbed it, and began to squeeze."
+    AE "So {i}that's{/i} how you knew..."
+    MCT "Nehehehehe, what can I say, I use the resources I have at hand, eh, Shiori-chan?"
+    "I looked at her and smiled, and she did so it turn, semi-maliciously."
+    Dad "Well what a little coincidence! I was surprised Keisuke never told you her name!"
+    MC "Ehehe..."
+    Dad "Say, speaking of names..."
+    Dad "Have you ever heard of a woman named Minami Matsumoto?"
+    AE "..."
+    "Silence. As though a window had been left open, Shiori-chan's all too familiar cold aura enveloped the room."
+    AE "Why do you ask?"
+    Dad "She used to work at a department store I'm the manager of."
+    AE "...No, I'm afraid I've never heard the name."
+    Dad "Ahh, okay. Worth a shot. She was a good worker. Kind lil lady, but uh...I dunno. Things happen."
+    AE "What happened to the woman?"
+    "Dad seemed taken aback by her quick and blunt question, and looked to me, perhaps out of concern."
+    Dad "Oh, well...*khm*, she was, um... stacking boxes and... there was a workplace accident. She... wasn't moving when I called an ambulance. I never really caught up with her after that."
+    AE "..."
+    Dad "Poor girl... she was so young... she even had a little child of her own. I don't remember their name but I think it-"
+    AE "No, No, I don't think I know anyone of that description. I'll tell you if I do learn of anyone though."
+    "From that moment, we ate in silence for a few minutes, my parents being able to pick up the mood in the room. After clearing her throat, my mom finally spoke."
+    Mom "Oh! That reminds me, dear, how is Tomoko in class, hm?"
+    Tomoko "Eh? M-Mom, why am I suddenly coming up?"
+    Mom "Because I want to know how my little girl is doing!"
+    "Shiori-chan's severity finally lightened, and the cold aura left as quickly as it came."
+    AE "Well, her math is beautiful, and her humanities are going well, buuut..."
+    "She looked over to Tomoko-chan and smirked."
+    AE "I think you could spend a bit more time on your chemistry studies, hm?"
+    Mom "Aha! I knew it! Science was always her worst topic!"
+    Tomoko "Eep!"
+    "I looked to Shiori-chan and laughed, and soon the others followed. Shiori-chan swept her hair to the side and smiled. I could tell on her face that this is what she wanted. What she was looking for. She wrapped her fingers around mine, and held on tight."
+    scene black with fade
+    pause 1
+
+    scene Tokyo House Exterior with fade
+    Dad "You sure the two of you don't need a ride to your hotel? Sun's comin down, and Shinjuku is a pretty big walk from here."
+    MC "Eh, It'll be alright, dad."
+    "I looked down to Shiori-chan, giving a little smile."
+    MC "I'll keep her safe."
+    "With a proud smile on his face, Dad walked up and patted me on the shoulder."
+    Dad "Thaaats my boy."
+    Mom "Oh, honey, I'm so glad to see the man you've become."
+    Mom "And I think you've picked an excellent girl to be with."
+    "She nodded to Shiori-chan, causing her to blush."
+    AE "Th-thank you ma'am."
+    MC "Thanks, mom, dad."
+    "As mom came in for a hug, she poked me in the chest with something."
+    "A small wad of cash."
+    MC "Huh?"
+    Mom "Here, take it."
+    MC "...Mom?"
+    Mom "There's an antique shop nearby. Give her something nice."
+    "I looked down, and thumbed through the bills. Shiori-chan, being barely any the wiser, tilted her head."
+    MC "M-mom, this is a lot!"
+    AE "Hm? Keisuke-kun?"
+    Mom "Oh, I'm just giving Keisuke a bit of a hard time!"
+    "She backed away, and gave a sincere, loving smile."
+    Mom "She deserves it."
+    MC "Thanks...thanks, Mom."
+    Mom "Hm~"
+    "I waved goodbye to mom and dad, not knowing when I would see them again, and headed down the road with Shiori-chan."
+    scene black with fade
+    pause 0.5
+    scene Tokyo with fade
+    "Walking into the city proper, I looked around, Shiori-chan at my side. It was obvious I was up to something, and it was obvious from her face that she was trying to figure it out."
+    MC "Hmm, let's seeee..."
+    AE "Keisuke-kun, you're acting-"
+    MC "Oh, oh, there!"
+    "I hurriedly walked over to the shop. Looking in the window, I saw it. Exactly what I wanted to get her."
+    MC "Hey, Shiori-chan, can we stop here real quick?"
+    AE "Oh?"
+    MC "Just reeeal quick, in and out."
+    AE "I... suppose there's no harm in it."
+    MC "Great! Then close your eyes and count to one hundred."
+    "Shiori-chan put her hand up and shook her head, not understanding exactly what was going on."
+    AE "W-wait, what? One hundred? Are you-?"
+    MC "Shhh, sh, sh, just do it!"
+    AE "..."
+    MC "Pleease?"
+    AE "... One, two, three, four...-"
+    MCT "Yes!"
+    "Hurriedly, I rushed into the store, and got to the clerks counter in what had to be record time."
+    Cashier "Welcome!"
+    MC "H-Hey, I noticed the little brass thing in the windowsill."
+    Cashier "Ahh, the box? Yeah, that one's actually an old foreign one. It still works, too."
+    MCT "Perfect!"
+    MC "How much?"
+    "After paying the man, I grabbed the box and began to rush it into my pocket, heading out onto the sidewalk where Shiori-chan was waiting."
+    AE "Ninety-eight, Ninety-nine-"
+    MC "Wait, wait, wait, not yet!"
+    AE "One hundred."
+    AE "Alright, Keisuke-kun, what-?"
+    "One hand in my pocket, and an obvious protrusion, Shiori-chan eyed it and looked back at me."
+    AE "...What is that?"
+    MC "Oh, this? It's nothin, just some old...eh..eheh..."
+    MC "...Ahh, you caught me."
+    MC "I was gonna give you this at the park tonight, but..."
+    "I pulled it out, and Shiori-chan's face beamed as she looked at it."
+    AE "Ah!"
+    MC "Ehe, yeah."
+    AE "It's... for me?"
+    MC "Of course!"
+    AE "I..."
+    "I had her hold out her hands, and I plopped the little box in between. She looked at it, hands almost shaking, as I smiled."
+    "She just stared at it. Her mouth was agape, as though I'd given her the most beautiful thing she's ever seen."
+    "No words. She closed her hands, and nearly on the verge of tears, waddled over to me. I gave her a big hug, and nuzzled my nose into her hair."
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.EVE)
+    scene Tokyo with fade
+    "She winded it again, the light twing of the chords playing out in an old song."
+    AE "Preussenlied. It's such a beautiful old song..."
+    MC "Ehehe, you're so happy about your new toy, eh?"
+    "A smile was more than enough to signify her happiness."
+    AE "Mhm..."
+    AE "..."
+    AE "..."
+    AE "Keisuke?"
+    MC "Hm?"
+    AE "..."
+    AE "Can I take you somewhere before sundown?"
+    MC "Sure thing. I'll go with you anywhere."
+    "The sun had almost completely faded from the sky, leaving a fading blue across the skyline as we walked."
+    jump daymenu
 
 label AE098:
     $setProgress("AE", "AE099")
@@ -21881,6 +22582,358 @@ label AE098:
     #show Tako surprised - NYI
     Tako "Eh?"
     MC "Next time you see Shiori out and about, tell her this..."
+    jump daymenu
+
+label AE098G:
+    "This marks the current end of Shiori's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance
+
+label AE098D:
+    $setProgress("AE", "AE099D")
+    $setTime(TimeEnum.NIGHT)
+    MCT "..."
+    MCT "Man, can tonight get any more boring?"
+    scene Tokyo with fade
+    #City SFX
+    Coworker "Naaa, Hotsure-san, what's with that look on your face?"
+    MC "Maybe it has somethin' or another to do with the fact that I had to pay you guys' tab, eh?"
+    Coworker "Whaaat, ain't our fault the Koi won the game!"
+    MC "Tsssh."
+    "As I walked out of the bar, the cold wind of the mid-winter air pummeled my face, the liquor running through my veins having not hit me nearly as hard as it had my coworkers, who I had supported with my arms and, apparently, with my wallet."
+    Coworker "Oy, Hotsure-san, check it out."
+    MC "Hm?"
+    Coworker "Over at the titty bar."
+    "They pointed over towards the main strip of the backroad to a building covered in lights, including two spotlights outside illuminating the gentlemans club 'Exotica'"
+    Coworker "They got a Nikku show goin on tonight."
+    MC "Nikku show?"
+    Coworker "Yeaaaah, yeah. Dances and shit by fat chicks and girls with them big uh... shit what are they called? Growth things. You got one, yeah?"
+    MC "Ahh..."
+    Coworker2 "Back when we was kids, this Nikku show stuff would have been what you laugh at, not cum to."
+    Coworker "Ehh true, true, but it's a new generation, eh? May as well see what the hubbub is about."
+    "Almost rolling my eyes, I sighed as I just smiled and went along with it, accepting that, apparently, the night was far from over."
+    scene black with fade
+    pause 0.5
+    scene Tokyo Club with fade
+    "As we entered into the club, it looked like, despite being rather late, there was quite a good turn out. Music blared over the speakers as the beats reverberated through my body."
+    "The lights in the center of the room swiveled throughout, leading to purple, pink, and magenta beams streaking around the room as a rather well endowed woman in the center stage danced, a big screen behind her showing ads for the bar."
+    Coworker "Eheheeey, alright! Looks like there are three front row seats! Lucky, eh?"
+    Coworker2 "Yeeeaaah, lucky us. It's mostly foreigners in here... Eh, well, as long as it's just ladies with some big breasts, it's probably gonna be alright."
+    MC "Eh, depends on how big we're gonna see."
+    Coworker2 "How big do they get?"
+    MC "Eh... I mean, I got a friend who I can probably introduce you to."
+    DJ "Aaaalllright, we're getting ready for the last show of the night! This is a little thank you for all of you out there, so we got a special act comin right up!"
+    Coworker2 "Eeeeeh?! C'moooon, we just sat down."
+    MC "Well from the sound of it, it's almost closing time."
+    Coworker "Baaah, I just wanted to give a peek to see what this is about. Special showing though, eh?"
+    Coworker2 "Ahhh come on."
+    MCT "We sat waiting in the front as it seemed like other guys in the bar seemed to be getting excited for something."
+    DJ "Alright, for this next dancer, you can hold your applause! Leave the clappin' to her!"
+    "Despite this, a few men in the room began to holler out, leading to me shifting in my seat a bit."
+    MC "..."
+    DJ "Get ready for our last lady for the night: Wobbelz d'Azz!"
+    "With that, a pink sheet descended down on the stage as a silhouette of a woman appeared behind it, illuminated by a spotlight as the large monitor above her shined."
+    "\"{i}BubbleBubble-Pop! Bubble-Pop! Bubble- Bubble- Pop!{/i}\""
+    "The womans face was... familiar? Tan, and covered in makeup, but... familiar. On the monitor, it looked as though she was starting to blow a bubble, and as she did..."
+    "The silhouettes ass began to inflate along with her... hair? The woman's face in the video had a look of shock and surprise as the bubble continued to inflate covering her face until..."
+    "\"{i}POP{/i}\""
+    "The video cut out and the sheet dropped, showing the woman before us... gigantic garbage barge ass and all."
+    "\"{i}BWOOOOING!{/i}\""
+    "Almost immediately, all of our jaws dropped. However, I could tell mine was for a completely different reason than my coworkers."
+    MCT "No fucking way..."
+    MCT "It  can't be..."
+    "As she walked out in front of the pole, she put her hands to it as she gave one of the most exaggerated blowjob faces I've ever seen. Then, quickly, she pulled her thong down and placed the pole between her bootycheeks, bouncing up and down."
+    "\"{i}Bubble- Bubble- Pop! Lemme see your bubble pop!{/i}\""
+    MCT "There's no way that's her, right?"
+    MCT "What am I saying, that's 100%% her."
+    Coworker2 "Hoooly shit, are you seeing this?!"
+    Coworker2 "Seriously, isn't that a bit much?"
+    MC "I think she's looking good for herself."
+    Coworker2 "Eh? Do you know her?"
+    Coworker "Maybe they are like, on some kind of growth thing dating app or something, heh."
+    MC "Nope."
+    MC "That's my ex."
+    Coworker "..."
+    Coworker2 "..."
+    Coworker "A-Are you serious?"
+    Coworker "Oh, shit, uh... s-sorry, Hotsure-san. We didn't mean to uh..."
+    MC "Feh, it's all good boys."
+    Coworker2 "I mean, t-to each their own, man, eheh."
+    MC "Eh, it was just the school I went to. All the girls were like that, if you know what I mean."
+    Coworker "Y-Yeah, definitely, definitely."
+    MC "..."
+    "After dropping it low for the crowd, she stood straight up, spreading her legs a bit as she put her hands on her hips, making her gigantic asscheeks clap as the crowd cheered."
+    "\"{i}Lemme see you pop-pop-bubble pop-{/i}\""
+    MC "..."
+    MCT "Well... not all like that. Not *at* all like that."
+    "However, it looked as though her set was about to come to an end... and the finale kicked in."
+    "\"{i}Bubble-bubble Pop-Pop! Lemme see you pop-pop!{/i}\""
+    "As Shiori turned around and put her hands on her knees, she pushed her butt out to the room as the music picked up."
+    "\"{i}Let me see you pop-pop-pop-pop-{/i}\""
+    "As the beat bounced through the building, so did Shiori's booty to the rhythm; the lights flashed every time she did. It was such an experience, all of the rhythm and cadence going together at once I couldn't help but feel like my heartbeat was synching up..."
+    "\"{i}-pop-pop-pop-pop-{/i}\""
+    "As was the pulse from the bulge in my pants. From the physical reactions of my coworkers, it seemed they were in the same boat."
+    "\"{i}-pop-pop-pop-pop-{/i}\""
+    "And then..."
+    "\"{i}-pop-pop-pop-pop-{/i}\""
+    "At each 'Pop', it sped up."
+    "\"{i}-pop-pop-pop-pop-POP-POP-POP-POP-POPOPOPOPOPOPOPOPOP-!{/i}\""
+    "I clenched the leather of the chair as my eyes were affixed to Shiori's wildly wobbling booty, the throbbing from down low increasing in intensity as it felt like... any second now..."
+    MCT "F-Feel like... I'm... g-gonna...!"
+    "At the last utterance of 'Pop', the music stopped as the speakers echoed the sound of a bubble inflating and popping, and Shiori smacked her ass."
+    "Ooogh!~ {w}Fuuck!~ {w}MMF!~"
+    MCT "Nnng. Holy shit that was intense. Thank fuck I have some self control."
+    MCT "From the sounds of it, a couple of the guys in here couldn't exactly handle it."
+    "The music then started again as Shiori did a few more moves."
+    Coworker "Hoooly shit!"
+    MC "I know, right?"
+    "My friend smiled ear to ear at what he just witnessed, clearly awestruck by the dancer."
+    Coworker "Hey, you all good man?"
+    "My other friend, however, was completely silent, holding his hands to his groin as his face was bright red, his eyes looking from side to side."
+    Coworker2 "Y-Yeah uh... I'm... p-probably gonna go to the bathroom for a sec, though."
+    MCT "To each their own, man."
+    DJ "Alright, let's give it up for Wobbelz!~"
+    "As the crowd cheered, \"Wobbelz\" turned around and winked at us before, by sheer coincidence, looking down to my seat... as her ditzy, vapid looking expression dropped."
+    "Our eyes met for the first time in 7 years as a look of embarrassment overcame her... and then arousal."
+    MC "Oy, I'm probably gonna chill here for the night. You good to get a taxi?"
+    Coworker "Yeah, uh... I'll call a taxi for me and... shit how long has he been in the bathroom? Eh. I'm sure he can get home."
+    MC "Mm."
+    "With that, I got up and sat at one of the tables off to the side. The booths were wide, owing to the clientele and talent the bar used, leading to me sitting at the very edge as I watched the club slowly empty out."
+    "After a few minutes though, it felt like I myself may be on the verge of getting kicked out."
+    "Untill..."
+    AE "Keisuke...? Hotsure Keisuke?"
+    "There she was."
+    MC "Heeey, Matsumoto-san!"
+    "Trotting over, she bent down as I went to stand up, leading to us colliding for a somewhat awkward hug."
+    MC "I-It's been forever since I've seen you!"
+    AE "Seven years, yeah."
+    "I couldn't believe it. This was Shiori."
+    "Her breasts, well, implants, were the size of basketballs, and barely constrained by her triangle bra. Her blonde hair was put up into the shape of a... heart, and her behind... well... it's exactly how I remember it, though perhaps a bit less round and smooth."
+    "The smell of baby oil was overwhelming, though it made sense given how shiny her caramel skin looked. With a smile, she put a hand on her gargantuan hip."
+    MC "You look, um..."
+    AE "..."
+    "Her serious look gave way to a gentle smile."
+    AE "You don't have to sugar coat it, I know how I look. Eheheh."
+    MC "You wanna get a drink at the bar?"
+    AE "Bah, I don't drink. Besides, whenever someone asks to buy a stripper a drink, the bartender fills the girls cup with water and makes it look like vodka."
+    MCT "That explains a lot."
+    MC "Eheh, alright, fair, fair... just wanna hang out until it's closing time?"
+    AE "That's what I usually do."
+    MC "Alright, cool."
+    AE "Eheh..."
+    "And with that, we both sat at the rather large booths, talking to eachother for a bit as people began to filter out, many taking quite long glances at Shiori as she adjusted her hair with her hand."
+    MC "So, what's been going on? How've you been?"
+    AE "Honestly? Pretty great. I make pretty good money, relatively speaking, and my relationship with my mom has never been better."
+    MC "Really...?"
+    AE "Mhm. Aside from that, I've just been, y'know, living day by day and night by night. How about you? Did you ever get your degree in architecture?"
+    MC "Yeah, actually, I work in a firm a few blocks from here."
+    AE "Ahh."
+    MC "..."
+    MC "How'd you remember that?"
+    AE "..."
+    AE "Well how could I forget? You were my first and only boyfriend."
+    MC "Really? First and only?"
+    AE "Mhm."
+    MC "So you're telling me someone like you doesn't have a baby daddy?"
+    AE "... No, no um... I am not in a committed relationship."
+    MC "Yeah, that's fair."
+    MC "I'm guessing uh... from the looks of it, you have been having a LOT of fun, huh?"
+    AE "Actually, I was in a music video."
+    "I lifted my eyebrows in surprise as I looked to Shiori in amazement and a bit of disbelief."
+    MC "Reeeeally?"
+    AE "American rap video."
+    MC "Can I see?"
+    AE "Uhh... eheh, sure."
+    "With that, she pulled out her phone and went to look up the video, tapping at the screen in a way which masterfully allowed her inputs to be read despite her eye-rollingly long nails, the rhinestones on them glistening in the light of the club."
+    "After a second or so of buffering, we began to watch the video."
+    MC "Wow, 500 Million views."
+    AE "Yep. I'm the \"Booty Twerk\" girl."
+    MC "\"Booty Twerk\" girl?"
+    AE "Waaait for it."
+    show cg AE098D_musicvideo1 with fade
+    "The video was, for a lack of a better term, annoying. A bunch of flashing lights, close ups of girls butts and butt shaped imagery. Around the half way mark of the video, however..."
+    show cg AE098D_musicvideo2 with dissolve
+    "\"{i}Booty Twerk, Booty Twerk, Booty-Booty-Booty Twerk{/i}\""
+    show cg AE098D_musicvideo3 with dissolve
+    "Her butt shaking side to side, Shiori was wearing a thong, a bra, a pair of stockings, and an unreasonably tall pair of heels as the vapid lyrics played over her bouncing her butt, hands out at the side. She looked exactly like she appeared before me now."
+    show cg AE098D_musicvideo4 with dissolve
+    MC "Oh damn."
+    AE "Mhm."
+    show cg AE098D_musicvideo5 with dissolve
+    "The camera zoomed in on her face, a fake excited and surprised look plastered on her visage as the song droned on."
+    MC "Lyrics are a bit complex though."
+    hide cg with fade
+    AE "..."
+    MC "..."
+    AE "Pffff!~"
+    MC "Eheheh."
+    AE "Shut up~"
+    MC "Wow, ain't that something."
+    AE "Bet you never would have expected this from me, eh?"
+    MC "Well, you always did love dancing."
+    AE "... How do you still remember that?"
+    MC "How could I forget? Just uh... didn't know it'd be something like this."
+    AE "..."
+    AE "Besides, it was my mothers idea."
+    MC "Your mother... huh... yeah..."
+    "There was a silent, awkward din between us as I contemplated this. Do I do it? Should I just say 'Great seeing you' and walk away?"
+    "... No. I've waited for this moment for too long. Seven years too long."
+    MC "Actually, there is something else I wanted to talk to you about."
+    AE "Sure thing, what's up?"
+    MC "How much uh... do you usually, y'know, go for?"
+    "Shiori seemed confused but, after a second, she furrowed her brow in... what may have been disappointment or... perhaps longing?"
+    AE "You... want to purchase my services for the night?"
+    MC "... Yeah. I guess you could say that."
+    AE "Hm... I... honestly wouldn't have expected this from you, Keisuke."
+    MC "What can I say? I've... been wanting you for a while."
+    AE "..."
+    AE "So, does that mean I'm on the clock?"
+    MC "I guess so."
+    AE "Hm..."
+    "She looked off to the side, conflict visible in her eyes as she bit her lip. I was about to speak up and let her know not to worry about it, however..."
+    AE "Okay. One sec."
+    "Quietly, she reached into the top of her corset and pulled out a stick of bubblegum, quietly unwrapping it."
+    MC "Um, Shiori...?"
+    AE "Don't worry about it... just gotta... get in the mood."
+    "Throwing it in her mouth, she chewed and chewed until..."
+    "*Fsssss*"
+    "*Pop*"
+    "Her eyes lit up as she looked to me like I was the hottest man she'd ever seen, an almost cartoonishly exaggerated ditzy smile spread across her face."
+    AE "Like, omigawd!~"
+    MC "Eh? Shiori, you all good?"
+    AE "Ehehe, never better~"
+    AE "Soo, you and me? Your place?"
+    MC "Heh, you move fast, huh? Okay, we can head back."
+    "As I held out my hand, she took it with an almost sensual, girlish movement of her arm which lifted her breasts up. After that, we exited out of the back door."
+    #scene lobby with fade
+    MC "Well, here it is."
+    "We entered into the lobby of my building as the receptionist looked over with a smile, which quickly transitioned to a look of shock and horror."
+    MC "Hey. Sorry, girlfriend is in town."
+    AE "Ooo, this place looks, like, totes fancy!"
+    MC "Eh, yeah, it's pretty nice I guess."
+    "The receptionist stood there with her jaw dropped as the two of us walked over to the elevator. I swiped my keycard as I looked to her expectantly."
+    Receptionist "... A-...Ah..."
+    "Quickly, she pressed the 4 number key, 2016, on the pad and after a moment, the elevator door swung open."
+    MC "Thank you."
+    "I nodded as I went in first, Shiori following me. As I pressed the button to the 42nd floor, Shiori turned around and put her ass directly in my groin as she shook it from side to side."
+    AE "I'm like, sooo excited!~"
+    MC "I can tell."
+    "*ding*"
+    #scene room with fade
+    "As the door opened, the two of us walked out into the hall as we made our way to my door. With this, Shiori waddled forward first as soon as I unlocked the door."
+    MC "Uh-"
+    "And upon trying to walk in, she got stuck."
+    AE "Eep!"
+    "Shiori stood with her asscheeks wedged firmly into the double wide doorframe. Giving an audibly fake gasp and bringing her hands up to her face in 'shock', she looked back at me."
+    AE "Oooou, I'm such a dumb bimbo doll!~"
+    MCT "She knows me. Why is she acting like this?"
+    MCT "Unless... it's because she knows me that she's acting like this."
+    MC "Alright, lemme give it a try. Can't exactly have ya in my bed while you're in my doorframe."
+    "I placed my hands on her tightly packed ass as I started to push. Thankfully, however, being covered in baby oil made it much easier for her to squeeze through, as she stumbled, her big fat ass and ridiculous hair wobbling as she did."
+    AE "Ooops!~ I'm such a dumb little slut!"
+    MC "..."
+    MCT "Even if it's a persona... I don't exactly feel comfortable hearing her talk like that."
+    MC "So uh... you're acting pretty giddy, heh."
+    AE "Because my brain popped, silly!~"
+    MC "... Ahh..."
+    MCT "I think I get it. It's weird, but I get it."
+    MC "Sooo... how do you wanna start?"
+    AE "Ooo, that's not what you should be asking. How do yooouuu wanna start?~"
+    MC "Hmmm..."
+    "I bit my lip as I looked Shiori over and she gave a little sashay of the hips."
+    MC "I'm thinkiiing... maybe you can introduce me to what that butt can do?~"
+    AE "Oh this? My booty? My bubble butt? My bouncy caked up dump truck? My chunky double wide badonkadonk?"
+    "*SMACK*"
+    AE "This door jamming posterior? My rotund rump? This stupid fucking ever-growing wobble wagon?"
+    "*SMACK*"
+    AE "Just one glimpse of my gigantic, wobbly booty. Fuck you don't even have to LOOK at it, just hear it 'clap clap clap' as I walk in my 9 inch heels, baby~!"
+    "With that, she rolled her hips as she began to throw it back, clapping her big behind as she giggled. Then, after that, she turned around, walking towards me."
+    "Knowingly, I unzipped my pants as Shiori waddled forward, getting on her knees as I sat at the edge of my bed. With that, she looked at me as though she had seen the most amazing thing in her life."
+    AE "OH! EM! GEE! Your cock is like, sooooo huge!~"
+    MC "Eheh, really? I figure it hasn't changed much since the last time you had it in your mouth."
+    AE "..."
+    AE "Heh... well, like, I totally have!~"
+    "*thud thud thud*"
+    "After bouncing her breasts together with audible thudding, she placed my dick between her laughably fake silicone filled breasts, letting it slide between her cleavage as she rubbed it up and down."
+    AE "See how fiiiirm and faaaake my titties are?"
+    AE "Cuz, like, having the best, sexiest ass on the planet wasn't enough for this bimbo; she wanted big fat hooters too!"
+    "She seemed to be getting lost in the sheer euphoria of the lewd, trashy things she was saying. It seemed a bit obvious to me, at this point, that it wasn't just an act. I could hardly register it at the moment, however, as she wrapped her lips around my dick."
+    MC "Mmmg..."
+    "Shiori continued to squeeze my cock with her tits as she bobbed her head up and down, sucking me off as her bulbous hair pushed against my chest. With a loud pop, she released her lips and then leaned forward and looked at me with a goofy smile."
+    AE "You know what I want, Ki-ki?"
+    MC "What's that, baby?"
+    AE "The like, thrust that makes my booty jiggle! Oh my gawd...~"
+    MC "You like making your booty jiggle, huh?"
+    AE "I want to walk down the streets, and, like, like, like, get everyone groping and fondling and spanking and pinching and slapping and kissing my huge tanned rump! Just jiggle it forever, and let everyone watch."
+    "By now, she was starting to get worked up as she stammered and visibly shook in anticipation."
+    MC "Daaamn, girl. Well you know what I want?"
+    AE "What's that, baby?"
+    "There was a lot I wanted right now. A lot I wanted to say, even... but now wasn't the time."
+    MC "I want to motorboat that fat money maker you got."
+    AE "Oooo, kinky!~ Ehehe!~"
+    "With that, after a bit of maneuvering, I took my shirt off and laid down on the bed, Shiori sitting on my chest, a few inches from my face. She was heavy, but thankfully I'd been working out for a while."
+    "Wrapping both of her gigantic buttcheeks in my arms, I borrowed my head between them, pushing past her thong as I let myself be wedged between her cheeks."
+    AE "Mmm, damn..."
+    MC "Mmmph..."
+    AE "How's my bumper hon?"
+    "I could barely hear what she was saying, but instinctively, I began to ferociously motorboat her giant ass, making it wobble."
+    AE "OOOHH!~ OHH BABY!~"
+    "As I kept going, she thrust her butt back into me repeatedly, shoving my face between her ass over and over as she drunk in the pleasure."
+    "She moaned loudly as I continued. After a moment, I felt her gentle hand wrap around my member as she began to lick the tip, pumping me up and down with her hand."
+    MC "Mmf..."
+    "It seemed like her sensitivity never faded. I continued to shake my head between her ass for a good amount of time before giving it a smack, and she instinctively got up, the string from her thong pulling me forward for a moment before I freed myself."
+    AE "Hope you don't got nowhere to be tomorrow~"
+    MC "Let's worry about tomorrow when we wake up."
+    "Lumbering forward, Shiori took a few steps before bending over, putting her hands on the ground as she looked back at me, the weight of her breasts causing her to bend further."
+    AE "Ready to make this bimbo booty bounce?~"
+    MC "Heh, you know it."
+    "And with that, I stood up, positioning myself behind her as she wiggled her butt from side to side in a cutesy way. I however, wasn't trying to be cute. With a hearty smack, I wedged myself between her cheeks as I got into position."
+    MC "Ready?"
+    AE "Mhm..."
+    "With little hesitation, I pushed forward into her back end."
+    AE "Aaah!~"
+    MC "GCH!?"
+    "Almost immediately, it was like a wave of pure ecstasy washed over me. Seven years worth. I started thrusting as Shiori took it all in stride."
+    AE "OOOOohhh yeah!~ Fuck me silly!~"
+    MC "MNnng!"
+    MCT "F-Fuck! Why does this feel so good?!"
+    "My body began to tense..."
+    MCT "N-No way... I'm not already about to-"
+    MC "HAAAHGN!~"
+    "My balls contracted as my dick immediately began to shoot one of the largest loads of my life into Shiori."
+    AE "Oooh, you're fillin' up mah booty!~"
+    MC "Haah, ah!~"
+    "This was insane. It felt like my mind was melting. It was a pleasure that was completely indescribable, feeling Shiori's full ass surround me as I just pumped away nonstop."
+    AE "Ouuu! Yeah baby! Make me cum!~"
+    "And as I continued, Shiori seemed to instinctively begin to buck back and forth as she herself reached climax."
+    MC "Ahh... haah..."
+    AE "Ooooh... that was like... totally great!~"
+    MC "Mmm... yeah."
+    AE "..."
+    MC "..."
+    AE "Well... that was... haah... rather enjoyable. Being completely honest... far more than usual."
+    "As I dislodged myself from her buttcheeks, my eyebrows raised. He pitch, tone of talking, demeanor... it all seemed to go back to normal."
+    MC "Oh yeah?"
+    AE "Mm. I... I feel as though I needed that."
+    MC "Heh. I'm glad."
+    AE "..."
+    "We stood there in silence as, quietly, Shiori gave a sheepish nod unbecoming of her rather gaudy appearance. With a smile and nod of my own, I laid back down in bed before sitting up, remembering."
+    MC "So uh... I just realized, you never told me how much."
+    AE "Ah. Well, no worries, we can go to an ATM. I won't be unreasonable."
+    MC "Well... there's an ATM in my building, but it's off until the morning. Wanna stay for the night?"
+    AE "Uh... n-nah, that ain't..."
+    AE "..."
+    AE "Sure thing, actually."
+    "Shiori sat down in the bed next to me, her gigantic ass spilling out to the left of me, leaving a giant imprint of glitter which I knew for a fact I would need to hire a cleaner for in the morning."
+    MC "Hey."
+    AE "Hm?"
+    MC "How much extra would it cost for you to lay on me while I sleep?"
+    AE "..."
+    AE "Eheh, how about we make that one a freebee?"
+    "I smiled gently as she adjusted her position, sitting on my lap as, after a moment, she swung one of her gargantuan legs to the other side of my body as if to straddle me, laying down on me as I placed my hands on her rump."
+    "Thoughts rushed through my head. Thoughts beyond just how her heavy implants felt as they pressed against my chest."
+    "I know for a fact what I want to talk about with her tomorrow..."
+    "But a night of indulgence can't hurt."
     jump daymenu
 
 label AE099:
@@ -22182,6 +23235,11 @@ label AE099:
     #CG 9 goes here (Climax)
     #CG 10 goes here (Close up of holding hands)
     jump daymenu
+
+label AE099D:
+    "This marks the current end of Shiori's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance
 
 label AE100:
     $setProgress("AE", "AE101")

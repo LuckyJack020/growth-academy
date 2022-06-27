@@ -632,12 +632,14 @@ label BE006:
     Takamura "Well, if it isn't {i}another{/i} Hotsure!"
     if isEventCleared("MC002"):
         "A familiar voice rung out behind me."
-        #show Takamura neutral
+        show BE neutral at altMove(0.5, 0.75)
+        show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
         MC "Oh, hello Takamura-sensei."
         Takamura "Good morning, Hotsure-san."
     else:
         "A slightly familiar voice rung out, but I can't really put my finger on it."
-        #show Takamura neutral
+        show BE neutral at altMove(0.5, 0.75)
+        show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
         MC "Oh, I remember you from the first day we arrived! Hello... uh, Sensei."
         Takamura "Aoi Takamura. You can call me Takamura-sensei."
     BE "Hello, Takamura-sensei!"
@@ -646,7 +648,7 @@ label BE006:
     BE "You really helped put what we'll be going through in perspective for me, so I've really kept it in mind. Thanks again!"
     Takamura "Of course! Feel free to drop by my office if you have anything you'd like to get off your chest."
     "Takamura-sensei winks at Honoka."
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "Figuratively, of course."
     MCT "Teachers can say that?"
     show BE happy
@@ -658,7 +660,7 @@ label BE006:
         Takamura "And, I couldn't help but overhear, but I wouldn't worry yourself over your sister."
         Takamura "I'm her homeroom teacher, and I'd be happy to keep an eye on her for you."
     MC "Thank you. That's a relief, Sensei."
-    #show Takamura neutral
+    show Takamura neutral
     Takamura "Now then, if you would please exc-"
     Woman "There you are, Sensei!"
     "A voice rang out behind us, but this one was totally unfamiliar to me."
@@ -670,7 +672,7 @@ label BE006:
     "Honoka suddenly bursts out laughing."
     BE "Pfff- Hahaha! Nice one, Kei-chan!"
     MC "Hmm? What'd I do?"
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "Hotsure-san, she's wearing a uniform."
     MCT "...and there's my idiot moment of the day."
     show BE neutral
@@ -683,13 +685,13 @@ label BE006:
     MCT "Honoka knows her too? Jeez, does she just introduce herself to anyone she comes across?"
     show BE shrug
     BE "Eh, I'll manage. I'll just keep it all in mind."
-    #show Takamura neutral
+    show Takamura neutral
     Takamura "That's all we ask of you two. Now then, Kanami-san. We're running late for our meeting. We shouldn't keep Myoga-san and the rest waiting! Have a good day, you two."
-    #hide Takamura with dissolve
+    hide Takamura with dissolve
     #hide Kanami with dissolve
     "Takamura-sensei, and Kanami walked off together."
     MC "What was that all about?"
-    show BE neutral
+    show BE neutral at altMove(0.5, 0.5)
     BE "Well, Nurse Kiyomi called Kanami-chan and myself to the nurses office not too long after our factor test yesterday."
     MC "Hmm? Why the two of you together?"
     show BE happy
@@ -8361,6 +8363,7 @@ label BE044:
     scene Beach
     show BE happy
     with fade
+    play music Beach
     BE "IT'S THE BEACH!"
     "Honoka charged off the bus as soon as it stopped and ran towards the sand."
     "Our stop was in Beachside Village. We crossed a long road with shops and went towards the shore."
@@ -8421,7 +8424,7 @@ label BE044:
     scene Beach
     show BE happy
     with fade
-    play music BrightLights
+    play music Beach
     pause .75
     BE "Ta-daaa!"
     pause .5

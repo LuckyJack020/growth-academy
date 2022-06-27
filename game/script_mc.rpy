@@ -1468,46 +1468,46 @@ label MC002:
     "All the way across the room stood two other teachers, who were literally standing around the water cooler."
     "One of them had not just one, but three whistles around his neck, and was chatting warmly with the other teacher."
     MCT "Who the hell's attention is he trying to get with those?"
-    #show Takamura happy
+    show Takamura happy with dissolve
     Takamura "My my, Tashi-chan. You look like you could use a nap or three."
     pause .25
-    show HR annoyed with dissolve
+    show Takamura happy at altMove(0.5, 0.25)
+    show HR annoyed at Position(xcenter=0.75, yalign=1.0) with dissolve
     HR "... I've told you not to call me that."
-    #show Takamura reassuring
+    show Takamura reassuring
     show HR unique
     Takamura "Oh, I'm just teasing. Always such a stiff, Tashi-chan."
     "Tashi waved his hand and shook his head in disbelief, choosing instead to rummage through one of his bags."
-    hide HR with dissolve
-    #show Takamura neutral
+    show Takamura neutral
     Takamura "Ah, another Hotsure. My word. What brings you here?"
     MC "Ah... pardon, Sensei?"
     Takamura "You're the brother of my Hotsure, aren't you?"
     MC "Another Hotsure? You're Tomo's homeroom teacher then?"
     Takamura "Indeed."
     pause .25
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "Guess you and I both get to teach the members of the Hotsure clan, hm Tashi-chan?"
-    show HR annoyed with dissolve
+    show HR annoyed
     HR "Egh... {w}He's borrowing a book from me for an assignment I'm having his class work on."
-    #hide Takamura with dissolve
     HR "Do me a favor, Hotsure-san, and have a seat over by Takamura-san."
     hide HR with dissolve
     "I nodded as the look in his eyes turned from a dull, blasé look to one that asked ‘please do this for me for the love of all that's holy.'"
+    show Takamura happy at altMove(0.5, 0.5)
     "I walked around the table and took a seat by Takamura-sensei. In front of her was a large binder with multiple colored tabs sticking out from hoards of paper."
-    #show Takamura happy with dissolve
     Takamura "So, how have your first few days been here, Hotsure-san? Well enough, I hope."
     MC "Yeah, I'd say so. Thank you for asking, Takamura-sensei."
     Takamura "Of course!"
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "And, if I may, how are you feeling in regards to the knowledge of what the academy is here for? And, how it applies to you?"
     MC "I... well, I'm doing my best to keep doing what I'm doing, I suppose."
     MC "It is definitely not what I was expecting upon coming here, though."
-    #show Takamura neutral
+    show Takamura neutral
     Takamura "Your perspective is one of realism. I can't fault you there."
     Takamura "I'm glad to hear you've been able to keep yourself grounded through all of these admittedly hectic first few days."
-    show HR annoyed with dissolve
+    show Takamura neutral at altMove(0.5, 0.25)
+    show HR annoyed at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "No privacy for him at all, Takamura-san?"
-    #show Takamura strict
+    show Takamura strict
     Takamura "Well, my apologies for assuring that our students are feeling alright."
     HR "All I'm saying is that you ought to keep your eyes on your own responsibilities. Not everyone needs the close talk treatment."
     Takamura "Maybe you'd be comfortable with that sort of approach if you'd had someone reach out to you in a similar way when you were younger."
@@ -1522,13 +1522,13 @@ label MC002:
     HR "So, let me ask you this, then. Why all of the fuss over this extra... fluff?"
     "Tashi waved one hand over Takamura's overstuffed binder."
     HR "Why worry so much over it?"
-    #show Takamura happy
+    show Takamura happy
     show HR unique
     Takamura "Someone has to."
     "Takamura clicked her tongue twice and raised her eyebrows at Tashi."
     "Tashi rolled his eyes and dug his head into a larger locker off to one side."
     hide HR with dissolve
-    #show Takamura neutral
+    show Takamura neutral at altMove(0.5, 0.5)
     MC "So, if I may, Sensei. How is my sister doing in your class?"
     Takamura "Well, she's always on time. She does seem a tad quiet, but that's nothing unusual, especially given the circumstances of a new academy with all new people to get to know."
     "In front of her, Takamura shut her binder and set it on the desk."
@@ -1537,13 +1537,13 @@ label MC002:
     Takamura "It's a rather tall order, but I think that with proper application, we could have something wonderful here."
     Takamura "Oh, but come to think of it, I suppose you haven't met most of the rest here, have you?"
     MC "Ah... not yet, no."
-    #show Takamura reassuring
+    show Takamura reassuring
     Takamura "Well, we can't have a guest here feeling unintroduced."
     pause .25
-    #show Takamura happy
+    show Takamura happy
     Takamura "Tsubasa-sensei? Rest your eyes for a moment."
     "Across from us, the older teacher lowered his paper just enough to look over the top."
-    #show Takamura neutral
+    show Takamura neutral
     #show Tsubasa neutral
     Tsubasa "Hm?"
     Takamura "We have a visitor, courtesy of Tashi-chan."
@@ -1558,18 +1558,18 @@ label MC002:
     pause .5
     MCT "... He could at least lower the paper."
     pause .25
-    #show Takamura happy
+    show Takamura happy
     Takamura "Quite well, thank you. Just celebrated their anniversary a few weeks ago actually."
     Tsubasa "How nice."
     pause .25
-    #show Takamura neutral
+    show Takamura neutral
     Tsubasa "I assume that your efforts are going into the recent Caverns project?"
     Takamura "They are, Sensei. I think you'll find it quite intriguing once our ideas take shape."
     "Tsubasa-sensei coughed twice, then flicked his paper a bit and turned the page."
-    #show Takamura happy
+    show Takamura happy
     "I glanced over at Takamura, and she waved one hand with a small laugh."
     Takamura "And at the end there is our young pup. Yoshito Hageshi."
-    #show Takamura neutral
+    show Takamura neutral
     #show Hageshi neutral
     "Hageshi-sensei glanced up from his pile of papers."
     Takamura "How long have you been here now, Hageshi-san? Five years now?"
@@ -1577,27 +1577,27 @@ label MC002:
     Hageshi "... Four, actually."
     #show Hageshi satisfied
     Hageshi "And, last time I checked, you've been here for only three years. So, by my count, you'd be the ‘young pup.'"
-    #show Takamura happy
+    show Takamura happy
     Takamura "And, who's the youngest teacher in the room?"
     pause .5
     #show Hageshi neutral
     Hageshi "..."
     pause .25
     "My eyes immediately went to his bulging biceps and shoulders. The dude looked like he could legitimately throw a car."
-    #show Takamura neutral
+    show Takamura neutral
     "In addition, he was tall, and seemed to fill the entire room around him, especially compared to Takamura."
     Takamura "He's the academy's math teacher, so you'll probably see him sooner or later."
+    hide Takamura
     show HR neutral
     HR "Do yourself a favor and don't start any fights around campus."
     HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And, you don't want that."
-    hide HR with dissolve
+    hide HR
+    show Takamura neutral
     #hide Hageshi
-    #hide Takamura
     "Behind Hageshi-sensei, the two teachers by the water cooler left their positions and exited the room. As they left, I noticed the whistles around the neck of that one faculty member wearing an athletic outfit."
     if isEventCleared("BE003"):
         MCT "Huh. That's the same outfit that Honoka had on the other day."
     pause .25
-    #show Takamura neutral
     MC "If I may, Takamura-sensei, what's with the... uh..."
     Takamura "The whistles?"
     MC "Yes, Sensei."
@@ -1614,9 +1614,9 @@ label MC002:
     Tsubasa "Ridiculous compensation."
     pause .25
     #hide Takamura
-    #hide Hageshi
     #hide Tsubasa
-    show HR neutral with dissolve
+    show Takamura neutral at altMove(0.5, 0.25)
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "Alright, Hotsure-san. Here you are."
     show HR unique
     "Tashi handed me a thick book with some light wear to the front cover and spine. On the cover was what appeared to be some old pottery and a typical, cheesy ‘I had no idea what to put on the cover, so here's a landscape' image."
@@ -1627,20 +1627,21 @@ label MC002:
     HR "Again, I'll expect it back on Monday."
     MC "Yes, Sensei."
     pause .25
-    #show Takamura reassuring
+    show Takamura reassuring
     show HR unique
     Takamura "Pardon me, Tashi-chan, but why all the worry over this extra fluff?"
-    #show Takamura flattered
+    show Takamura flattered
     Takamura "Bending over backwards to help a student? Could it be that the cold and brash Tashi-chan does have a warmer side?"
     HR "..."
-    #show Takamura neutral
+    show Takamura neutral
     pause .5
     show HR annoyed
     HR "Have a good day, Hotsure-san."
     MC "Y-Yes. You as well, Sensei."
     Takamura "Lovely to meet you again, Hotsure-san."
-    hide HR with dissolve
-    #hide Takamura
+    hide HR
+    hide Takamura
+    with dissolve
     "Tsubasa and Hageshi both nodded politely at me from where they sat as I left the room, shutting the door quietly behind me."
     scene HallwayStairs with fade
     "I was no more than 15 steps down the hall when I heard more banter from the faculty room behind me."
@@ -1912,8 +1913,8 @@ label MC006:
     Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
     if isEventCleared("MC002"):
         MCT "That’s the guy I saw in the faculty room with three whistles. I guess that explains why he has {i}a{/i} whistle— but not three."
-    Naoki "Today we're going to be playing a game called handball. As you might have guessed by the name, you handle a ball... with your hands. It's not that complicated really.”
-    “Sort of like soccer where you pass the ball and score only using your feet, just think the opposite of that."
+    Naoki "Today we're going to be playing a game called handball. As you might have guessed by the name, you handle a ball... with your hands. It's not that complicated really."
+    "Sort of like soccer where you pass the ball and score only using your feet, just think the opposite of that."
     Naoki "To score, you throw the ball into the goal. {w}Have I lost anyone yet? Good. {w}Doesn't matter if you bounce it off the floor, if it's in, it's in."
     Naoki "Now the caveat is that when shooting a goal, you can't step into the goal zone near the goal. That's only for the goalie, no one else. You have to shoot it behind that line."
     Naoki "You can't hold on to the ball for more than three seconds, and you can't take more than three steps with the ball, but you're allowed to dribble it to get around this."
@@ -3500,12 +3501,39 @@ label MC012:
 label global005:
     $setTimeFlag("testday2")
     scene Dorm Interior with fade
-    "When I woke up this morning, Daichi was nowhere to be found."
-    "I thought it was unusual for him, usually the mornings were filled with the clicking of mice and keyboards as he did his 'research'. Still, it was a welcome break to not have him eyeing me as I brushed my teeth or whatever."
+    play music Schoolday
+    pause .5
+    play sound AlarmClock
+    pause .5
+    MC "Agh..."
+    "I let a groan slip out from my lips as I swung my arm over to grab my phone and silence my infernal alarm."
+    MC "Daichi? You..."
+    "..."
+    "I sat up in bed and looked around."
+    MC "Huh?"
+    MC "The heck is he?"
+    "I put my elbows on my knees and rubbed my eyes."
+    "Today, instead of normal classes, was something that Tashi-sensei had called ‘Measuring Day.’"
+    MCT "What exactly are we measuring anyway? Height or something?"
+    "I got out of bed and staggered into the bathroom."
+    scene Bathroom with fade
+    "I did up my toothbrush and started scrubbing away at my teeth in a sleepy sort of manner."
+    MCT "Is... Measuring Day about factors, maybe? Like, is it going to tell all of us what we’re going to be dealing with?"
+    MCT "Do I... even have anything?"
+    "I finished with my teeth then examined my face in the mirror."
+    "I didn’t really have anything prominent that I could really imagine swelling like crazy on me, but then again, who said it had to be prominent?"
+    MCT "Tashi-sensei did say we’re here because we, or a sibling, have expressed a certain trait that causes unusual growth..."
+    MCT "Wait, shit... what about Tomo?"
+    MCT "What if she has something crazy? Like some sort of crazy muscle growing gene or something?"
+    MCT "...{w} Or tongue growth."
+    MCT "God..."
+    scene Dorm Interior with fade
+    "I walked back into my room and got uniformed up, then headed promptly outside, trying my damndest to keep my fears internalized."
 
     scene Hallway with fade
     play music Busy
-    "As I made my way inside the classroom building, I ran into a few of my classmates."
+    "As I made my way inside the classroom building, I glanced down the hall."
+    "Up ahead were most of my classmates, all seeming to be waiting, much like I was."
     if getHighestAffection() == "BE":
         show BE neutral with dissolve
         BE "Hey there, Kei-chan! How are things going for you?"
@@ -3524,10 +3552,10 @@ label global005:
         show WG haughty
         WG "Good to hear. Some find adherence to a routine to be restrictive, but I find the gains in productivity from an optimized schedule to be far more freeing than leaving idle time for its own sake."
     if getHighestAffection() == "GTS":
-        "I noticed Naomi-san walking next to me as we made our way to class. Like, noticeably close."
+        "I noticed Naomi walking next to me as we made our way to class. Like, noticeably close."
         show GTS neutral with dissolve
         GTS "..."
-        MC "Hey there, Naomi-san."
+        MC "Hey there, Yamazaki-san.."
         GTS "Oh, h-hello."
         MC "..."
         GTS "..."
@@ -3536,24 +3564,23 @@ label global005:
         MCT "Boy, she's not much for conversation today... but she seems happy."
     if getHighestAffection() == "FMG":
         show FMG neutral with dissolve
-        FMG "Hotsure-san! How ya doin'?"
+        FMG "Keisuke! How ya doin'?"
         "I cringed as Akira slapped me on the back in what she probably thought was a friendly manner."
         MC "Hrrrk!"
         FMG "Haha, catch you by surprise, did I? Well, hopefully that'll wake you up a bit!"
-        MC "It's nice to see you too, Mizutani-san..."
+        MC "It's nice to see you too..."
         FMG "Guess what I found out yesterday? They've got an outdoor weight area behind the gym! Can't wait to try it out!"
         MC "Does that make a difference?"
         FMG "Sure! Morning and evening workouts can go harder than normal because you're being naturally cooled by the cold air!"
         MCT "I boggled to think what a 'harder' workout was for Akira, seeing how hard she already pushed herself..."
     if getHighestAffection() == "PRG":
         show PRG neutral with dissolve
-        PRG "H-hi Kei-sama!"
+        PRG "H-Hello, H-Hotsure-san...!"
         MC "Oh, hi Kodama-san."
-        PRG "I... I'd like it if you'd call me Aida..."
-        MC "Yeah?"
-        PRG "Yeah. Like... a lot."
-        MC "Okay, Aida. How are you today?"
-        PRG "I'm fine. How are you? Did you sleep good? Get enough breakfast? I've got a snack if you're hungry..."
+        PRG "H-Having a good morning?"
+        MC "Yeah, I’d say so. Pretty typical day. You?"
+        PRG "Y-Yes. I-It’s g-good for me too."
+        MC "That’s good to hear."
     if getHighestAffection() == "AE":
         show AE neutral with dissolve
         AE "Hotsure-san."
@@ -3562,89 +3589,115 @@ label global005:
         MC "Oh?"
         AE "It's measuring day for our class. I might need help corralling the student bodies through the process in an efficient manner."
         MC "Er, all right, sure."
-        AE "I wasn't asking."
-
-    scene Classroom with fade
-    "When we got to Room 3-B, we found a message written out on the blackboard, announcing that we were all supposed to head to the gymnasium."
-    show AE neutral at Position (xcenter=0.8) with dissolve
-    AE "All right, everyone, it's measuring day for our class, so let's get an orderly line going."
-    show FMG happy at Position (xcenter=0.25) with dissolve
-    FMG "Oooh, neat! I've been wanting to get my guns professionally measured for a while!"
-    WG "..."
-    hide FMG with dissolve
-    AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
-    show PRG neutral at center
-    show WG neutral at Position (xcenter=0.2)
-    with dissolve
-    WG "Excuse me, but Aida is otherwise engaged."
-    show PRG neutral at Transform(xzoom=-1)
-    AE "Not now she isn't, unless there's some other class president I'm unaware of."
-    show PRG neutral at Transform(xzoom=1)
-    WG "I'm sure you can find someone else. Aida is developing a set of very specialized skills."
-    show PRG neutral at Transform(xzoom=-1)
-    AE "I'm sure she is. AFTER classes. During school hours she'll submit to school authority."
-    show PRG neutral at Transform(xzoom=1)
-    show WG angry
-    show AE angry
-    WG "..."
-    AE "..."
-    show PRG neutral at Transform(xzoom=-1)
-    pause 1
-    show PRG neutral at Transform(xzoom=1)
-    WG "..."
-    AE "..."
-    show PRG sad at Transform(xzoom=-1)
+        AE "Thank you."
+        MC "So, what exactly is Measuring Day all about, anyway?"
+        AE "..."
+        AE "You’ll see."
+    scene Classroom
+    show HR neutral
+    with fade
+    "When we got to Room 3-B, Tashi-sensei was standing at the front of the room. He nodded at us as we all came in."
+    HR "Alright, everyone. Today is Measuring Day for this class."
+    HR "In layman’s terms, it’s the day when you’ll all learn the nature of your specific factor."
+    HR "You’ll be taken privately into separate areas, and have the basics of your factor laid out for you."
+    HR "From there, the rest of today will consist of measurements and such, to essentially give each of you a starting baseline."
+    show WG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    WG "Baseline?"
+    HR "So, I’ll be leading you all into the gym where everything will be occurring. Matsumoto-san, would you mind getting everyone together?"
+    show AE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    AE "Understood. Everyone, please form a line at the door, single file, please."
+    scene black with fade
     pause .5
-    show PRG sad at Transform(xzoom=1)
-    pause .5
-    show PRG sad at Transform(xzoom=-1)
-    pause .5
-    show PRG sad at Transform(xzoom=1)
-    pause .5
-    show PRG sad at Transform(xzoom=-1)
-    pause .5
-    show PRG sad at Transform(xzoom=1)
-    pause 1
-    show WG neutral
-    WG "...Hmph!"
-    MCT "...Those two aren't used to accepting 'no' for an answer, that's for sure..."
 
     scene Auditorium with fade
     play music LastBell
     "The auditorium had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
     "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
-    AE "Class 3-B, over here! Line up along this partition, and no, not alphabetically, by seat number. What do you mean you don't know what your seat number is? Haven't you been paying attention at all?"
+    show HR neutral with dissolve
+    HR "Alright. Class 3-B over by this wall. Alphabetically, please."
+    hide HR with dissolve
+    show BE neutral with dissolve
+    "I lined up by the wall near the front of the line, and due to the nature of the alphabet, Honoka was right behind me."
+    BE "Nervous, Kei-chan?"
+    MC "Ahh... maybe a bit? Helps that everyone here is in the same boat, though."
+    hide BE with dissolve
+    "I could see other classes lining up as well, but couldn’t really make out any familiar faces among them. Not even Tomo."
+    if isEventCleared("MC002"):
+        show Takamura neutral with dissolve
+        "That being said, though, I did see Takamura-sensei walk to the front of a group and get them settled into line, so Tomo was likely somewhere around."
+        hide Takamura with dissolve
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
     Nurse "Hello, Hotsure-san, please have a seat."
+    Nurse "My name is Hitomi Kiyomi. Or, as I usually go by, Nurse Kiyomi."
     "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp."
     "They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
     "What was more, she had decided to cover them in bright red lipstick. It was nearly impossible not to stare as she looked down at a clipboard full of papers."
-    Nurse "So, your growth factor has been confirmed to be... Heh, you like them?"
-    MCT "Oh crap, she caught me staring!"
-    MC "No, I, uh, I mean, they're-"
+    Nurse "So, your growth factor has been confirmed to be..."
+    Nurse "Heh, you like them?"
+    MC "Ah... eh..."
+    MC "No! I-I mean, yes! I-I mean... they're-"
     "Her lips actually managed to pull out into a smile, making nearly the entire bottom half of her face hidden behind them."
     Nurse "It's all right, I know they can be surprising. Whenever I go off-campus I have to wear a surgical mask or I can hardly do anything for all the gawking and questions."
     "I just nodded and looked away, wondering what I would have to do to live a normal life."
     Nurse "Anyways, your growth factor. According to these results, you have hyper-productive hair follicles."
     Nurse "Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
-    MC "My hair? It's always grown like a weed, that's nothing new."
-    Nurse "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
+    MC "My hair? It's always grown like a weed, that's not really anything new."
+    Nurse "Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
     MC "And... and my sister? Does she have the same thing? Does she have anything at all?"
-    Nurse "I'm sorry, but since she's not a minor anymore I'm not allowed to share her medical information with anyone she hasn't specified..."
+    Nurse "I'm sorry Hotsure-san, but I’m not allowed to share her medical information with anyone she hasn't specified..."
+    MC "But I’m her brother..."
+    Nurse "All the same, Hotsure-san. I can’t."
     "I mulled over this for a few seconds while she wrote on her clipboard."
-    MC "So, that's it? Is it going to be all of my hair, er, everywhere?"
+    MC "So, that's it? Is like every hair follicle on my body going into overdrive?"
     Nurse "Body and head hair grow at different cycles and intensities, so it's hard to say. But we'll be sure to check up on all of your growth throughout the year, so please try and keep a record of each time you cut any of your hair."
-    MC "...Do I have to?"
+    MC "... Do I have to?"
     Nurse "No, but we're only here to help. If you're comfortable only knowing what you know now about your condition, we won't force you. But you still have to come in for measurements and such."
     MC "So, can I go?"
     Nurse "Right after we take some blood, yes. Just sit still and roll up your sleeve..."
 
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow. Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
-    "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
-    jump daymenu
+    "I craned my neck to see over the various heads."
+    MCT "Who am I kidding? Tomo isn’t that tall."
+    MCT "But, come on... where is she?"
+    "I walked on to the next station where my height and weight would be taken."
+    scene black with fade
+    pause .25
+    scene Auditorium with fade
+    MCT "God... still nothing."
+    "About half an hour of measurements later, and I was free of all the poking and prodding."
+    MCT "Where the hell is Tomo?"
+    if isEventCleared("MC002"):
+        show Takamura neutral with dissolve
+        "I glanced off to one side and noticed Takamura-sensei with some of the members of her class."
+        MCT "Takamura-sensei! Tomo’s probably with her!"
+        "I had to force myself to not sprint straight at her."
+        Takamura "Hotsure-san? What’s going on?"
+        "Takamura walked forward as I came to her and put one hand on my shoulder, looking at me with a worried expression."
+        show Takamura sad
+        MC "I... do you know my sister’s factor? I can’t find her anywhere."
+        Takamura "Oh... Hotsure-san, I’m afraid I can’t give out that information. I’m very sorry."
+        Takamura "That information is not public to allow each student to process the news at their own pace, and to allow them to disclose that information when they feel ready.."
+        show Takamura neutral
+        Takamura "I understand your concern. I do. However, your sister is another student as far as the academy is concerned, and these protocols have to be upheld."
+        Takamura "If I were you, I would go see her this afternoon, and have a heart to heart with her. I’m certain that’ll help ease your mind."
+        MC "I... I see."
+        MC "Thank you, Sensei."
+        hide Takamura with dissolve
+        "I turned and walked away from her, feeling slightly dejected."
+        "I understood the logic behind it. The factors did affect some pretty personal things about each student."
+        MCT "But come on! She’s my goddamn sister!"
+        "I let out a groan."
+        MCT "Guess I’ll find her later."
+        jump daymenu
+    else:
+        "I glanced around one last time for any sight of my sister, then sighed."
+        MCT "She should be here... what the hell?"
+        MCT "Is it so hard just to get a damn answer?"
+        MC "I... guess I’ll find her later."
+        jump daymenu
 
 label RM001:
     scene Dorm Interior with fade

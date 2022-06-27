@@ -2250,19 +2250,28 @@ label FMG018:
     MC "Well, we don't know what exactly is happening. For now let's get with the rest of the class, before they notice we're not there."
     show FMG neutral
     FMG "Okay... but I'm warning you, it will not come out edible."
-    scene Cooking Classroom with fade
+    $setTakamuraOutfit(OutfitEnum.COOKING)
+    scene Cooking Classroom
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0)
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
     "We managed to catch up with the rest of the class before anyone (especially Shiori) figured out we were behind."
     "Once we were at the cooking class, we waited till the cooking teacher began explaining."
     Takamura "So, here's what we have planned, you will team up in groups of three to create any dish you can find a recipe for, be it from the cookbooks here or online."
     Takamura "And... ah, it looks like we're going to have an uneven number."
+    show Takamura reassuring
     Takamura "Then, I suppose you'll have to fill in, Tashi-chan."
     HR "Wait, what?"
     HR "I-"
     Takamura "Oh, come now, Tashi-chan. Let's see those cooking skills that you brag about so much."
     HR "When have I ever-?"
+    show Takamura happy
     HR "Ach... fine."
     HR "... And, I thought I told you not to call me that-"
     Takamura "Ah-dah-dah! Get in there!"
+    hide HR
+    hide Takamura
+    with dissolve
     "As the teachers were settling their dispute, Akira pulled me aside."
     show FMG neutral with dissolve
     FMG "Okay Kei-kun, there is no way I'm going to be able to make anything without help, so can you please help me?"
@@ -2348,24 +2357,31 @@ label FMG018_c1_1:
     MC "Eheheh..."
     show FMG happy
     FMG "A+ baby, let's go!"
-    show FMG neutral
+    show AE neutral at altMove(0.5, 0.8)
+    show FMG neutral at altMove(0.5, 0.2)
+    show Takamura neutral with dissolve
     "After a moment, Takamura-sensei came over to test our individual plates, starting with Shiori-san."
+    show Takamura happy
     Takamura "....Mm... very nice! What did you say this was?"
     AE "Himmel Und Erde, ma'am."
+    show Takamura happy
     Takamura "Splendid!"
     AE "...Indeed."
     Takamura "Hotsure-san, good work as well. A bit heavy on the cinnamon, but that's okay."
     MCT "Yes!"
     Takamura "And... Mizutani-san..."
     FMG "Nehehe~ It'll be fine!"
+    show Takamura reassuring
     Takamura "Y-You're right, it can't be that bad..."
     Takamura "..."
     Takamura "...Passable!"
     $setAffection("FMG", 2)
     show FMG happy
     FMG "YES! YEAH! WOO!"
+    show Takamura strict
     Takamura "Hmm, a bit heavy on the cinnamon- *urch*... but passable!"
     "Shiori let out a sigh, whether out of disappointment or relief, I wasn't sure."
+    hide Takamura with dissolve
     FMG "Finally! I cooked something that didn't taste like ash!"
     show FMG neutral
     FMG "Shiori, thank you for helping us, I ain't exactly the best cook!"
@@ -2471,7 +2487,9 @@ label FMG018_c1_3:
     show BE neutral
     BE "...Well, no, but..."
     BE "Look. It had all the measurements for the ingredients, easy to read. Maybe we just didn't add them in the right order."
-    #show Takamura neutral
+    show BE neutral at altMove(0.5, 0.8)
+    show FMG surprised at altMove(0.5, 0.2)
+    show Takamura neutral with dissolve
     Takamura "Pardon me, but did I happen to hear you three mention a French recipe?"
     MC "Ah... yeah. Honoka was just talking about it."
     Takamura "I see. Do you happen to have it on you?"
@@ -2498,6 +2516,7 @@ label FMG018_c1_3:
     Takamura "Yes. Right here. {i}Le beurre{/i}."
     BE "I... thought that said vegetable oil."
     Takamura "Mmm, I see."
+    show Takamura reassuring
     Takamura "Don't fret over it, you three. You still attempted to make something with directions in a completely different language."
     Takamura "And, you still managed to make a pie. Even if the flavors are a little... unique."
     $setAffection("FMG", 1)
@@ -2506,7 +2525,7 @@ label FMG018_c1_3:
     MC "You have a point, Akira. Honoka, thank you for planning things out. Even if they didn't quite turn out how we all hoped."
     FMG "Yeah, you've been a big help."
     Takamura "Indeed. Great work all the same, you three."
-    #hide Takamura
+    hide Takamura with dissolve
     BE "Hey, well, thanks for letting me help. Even if I did mix most of this up."
     BE "So... we should probably try our creation, huh?"
     FMG "...Uh... I guess?"

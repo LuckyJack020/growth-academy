@@ -22684,3 +22684,183 @@ label WGGTS003:
     WG "You're welcome Keisuke. I wanted to."
     MCT "Hmm, I guess she really does like me more than she lets on."
     jump daymenu
+
+label WGGTS004:
+    scene Dorm Exterior with fade
+    play music DayByDay
+    "The forecast had predicted sunny skies but I guess the weatherman was off today as the clouds had begun to set in shortly after lunch."
+    "Surprisingly, despite the less than ideal weather Alice had insisted on going for a walk around the school grounds."
+    show WG neutral with dissolve
+    MC "Where are we going again?"
+    WG "Oh nowhere in particular, just wanted to check out the rest of the campus. We've been here for quite a few months but I have yet to check out all the places around here."
+    MC "What about that small area towards the Giant's dorms?"
+    WG "Can't say I'm familiar with that place."
+    MC "I think it was called Chūkan Point. It's the place with the large Japanese maple on a small island."
+    show WG neutral-2
+    WG "Hmm, interesting. Sounds like a serene place for one to ease their mind. Do you know the way?"
+    MC "Vaguely, I've seen it from the classroom window before."
+    show WG neutral
+    WG "Not sure how I never noticed that before."
+    if isEventCleared("WGGTS003"):
+        "I honestly couldn't tell if this was some kind of subconscious omission on Alice's part, or if she was low key being facetious, wanting to avoid running into ‘you know who' after their last exchange."
+    scene Chukan Point
+    show WG neutral
+    with fade
+    "As we walked towards the area, I noticed a large woman approaching from the other direction."
+    show WG neutral at altMove(0.5, 0.75)
+    show Jineko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Though when I say large I mean tall, like nearly four and a half meters in height."
+    "The woman stopped for a moment, looking down at us with a quizzical expression before speaking up."
+    UNKNOWN "Are you miss Nikumaru by chance?"
+    show WG surprised
+    WG "That would be me indeed."
+    UNKNOWN "Ah wonderful, I wasn't sure for a moment as the descriptor I had was to look for a rather rubenesque woman."
+    show WG doubt
+    WG "I suppose that's the most {i}polite{/i} way to describe my physique."
+    show WG neutral
+    extend " What's your name? I don't think we've had the pleasure of meeting before."
+    Jineko "Jineko Watanabe, pleasure to meet you."
+    WG "What can I do for you?"
+    Jineko "I heard from a few friends that you run a nice little side hustle selling more casual clothing options for the students."
+    show WG doubt
+    WG "Well it is certainly much more developed than a side hustle."
+    show WG happy
+    extend " However, you have heard correctly that I do try to sell the students here some more variety to their wardrobe then what the school provides."
+    show WG haughty
+    WG "And at a competitive price point I might add."
+    show WG happy
+    "The two began chatting, but my attention was caught by the approach of Yamazaki-san from the Giant's Dorms."
+    show Jineko neutral at altMove(0.5, 0.15) behind WG
+    show WG happy at altMove(0.5, 0.5)
+    show GTS neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    "The ground shook slightly but grew in intensity as she approached."
+    MCT "Oh, why do I hear the trumpets of war?"
+    show GTS angry
+    show side GTS_S angry at Position(xcenter=0.1) onlayer overlay
+    "I could see Yamazaki-san's face looking towards us— a faint furrow in her brow betrayed her distaste."
+    show WG doubt
+    "Glancing back, I noticed Alice's eyes glance towards the approaching giantess."
+    show WG neutral
+    extend " Though she bore it no mind and continued her conversation with Jineko."
+    if isEventCleared("WGGTS001") or isEventCleared("WGGTS002") or isEventCleared("WGGTS003"):
+        "Though unlike previous encounters Yamazaki-san approached with no hesitation."
+    "In a rather uncharacteristically brash way, Yamazaki-san cut into the conversation as soon as an opportunity to speak presented itself."
+    show GTS pondering
+    GTS "Watanabe-san, were you able to find the school store?"
+    Jineko "Yeah, I'll have to get used to finding it from the outside. Also, I found that clothing person everyone's been talking about."
+    hide GTS
+    show GTS_S angry at Position(xcenter=0.8, yalign=1.0)
+    show WG stern
+    GTS_S "So it seems. Do mind your pocketbook, Watanabe-san. There are some people who would wring it dry if you let them..."
+    show WG surprised
+    WG "I do beg your pardon, Yamazaki-san, but that's quite uncalled for."
+    show WG doubt
+    GTS_S "I was only offering her some salient advice. I apologize if you found it offensive, Nikumaru-san."
+    show WG stern
+    WG "I do, unfortunately. What evidence do you have to make such a harsh statement?"
+    GTS_S "Well for one, there is the matter of your treatment of Kodama-san."
+    hide Jineko with dissolve
+    if isEventCleared("WGGTS001") or isEventCleared("WGGTS003"):
+        show WG haughty
+        WG "I thought based on our previous conversation on the matter I had made it clear about Kodama-san's relationship with myself. She is well compensated for our mutual arrangement."
+        GTS_S "That does not excuse the matter of you still taking advantage of her politeness."
+    else:
+        show WG haughty
+        WG "I don't feel it necessary to divulge personal information of others without them being present. But if you must know, Aida and I are close friends,"
+        show WG stern
+        extend " and I take umbrage with the insinuation that I treat her and my other employees poorly."
+    GTS_S "I fail to see how mere compensation makes up for treating your boyfriend as some kind of errand boy."
+    if checkAffection("WG", ">=", 57):
+        show WG angry
+        "In contrast to her previous accusation, that last remark got under Alice's skin a bit more than she anticipated."
+    else:
+        show WG doubt
+        "Alice raised an eyebrow in annoyance at that remark, but was able to keep herself in check."
+    MC "Hey now... I'm right here."
+    if isEventCleared("WGGTS003"):
+        show WG neutral
+        WG "Like I told you before, Keisuke is his own person. He's free to refuse any request."
+    else:
+        show WG neutral
+        WG "Keisuke is a grown man, he can make his own decisions. He doesn't need someone doting on him like a mother hen to make sure his feelings aren't being hurt."
+    WG "Tell me something then Yamazaki-san, do you look down on him too as some helpless shrinking violet like you do with Aida?"
+    GTS_S "I never said anything of the sort about either of them! You would be wise to not put words in my mouth."
+    show WG sly
+    WG "You'd be wiser still not to let any leave your mouth."
+    if isEventCleared("WGGTS002"):
+        GTS_S "There's still the fundamental matter that your business is not even legitimately recognized by the school."
+        show WG doubt
+        WG "Oh please. Matsumoto-san is an even bigger busy-body than you are and I still managed to placate her exacting demands with the paperwork I provided."
+        show WG stern
+        GTS_S "Papers your father's lawyers provided for you— not by legitimately petitioning to the student council."
+        show WG sly
+        WG "Well, lucky for me your personal seal of approval wasn't part of the application process."
+    else:
+        GTS_S "I don't know how your whole questionable operation hasn't been shut down for running a commercial business out of the school dorms, which is school property mind you."
+        show WG haughty
+        WG "Yes yes, pardon me but I don't think I stand to learn anything about commercial zoning laws from listening to your thoughts on the subject."
+    show WG neutral
+    WG "Honestly Yamazaki-san, you not liking something isn't a good enough reason to stop someone else from conducting their business."
+    show WG haughty
+    WG "It's quite childish and petty of you to wish to sabotage me based on whatever imagined slight you've somehow managed to infer from me."
+    hide GTS_S
+    show GTS despaired-thought at Position(xcenter=0.8, yalign=1.0)
+    GTS "I would have thought the particular growth you've been experiencing might help to teach you humility, Nikumaru-san. But I see now that you are still as arrogant and insufferable as ever."
+    show WG angry
+    show GTS angry
+    "Alice was not going to take that remark lying down. Gritting her teeth, she began to fire back as the two bickered back and forth as things began to escalate into a full blown incident."
+    show Jineko neutral at Position(xcenter=0.2, yalign=1.0) with vpunch
+    stop music
+    Jineko "THAT'S ENOUGH!"
+    show WG surprised
+    show GTS surprised
+    "..."
+    "In an instant silence fell."
+    "I swore for a moment I saw the windows rattle on the school building from how loud Jineko had shouted."
+    show WG surprised-2
+    show GTS sad-2
+    "Naomi and Alice both looked at her in stunned surprise."
+    show WG neutral-2
+    play music Sunset
+    Jineko "Geez you two act like children for people who normally are quite mature."
+    Jineko "Yamazaki-san I understand you don't agree with her, but I think I can make my own decisions on this kind of matter. My shirt barely fits right now so having a decent replacement handy would be fantastic."
+    show WG neutral
+    Jineko "As for you miss Nikumaru, I would like to place an order for a said replacement shirt. Though I should also mention that you shouldn't get so defensive when people start pushing you to a verbal confrontation."
+    show WG surprised-2
+    "I think this was the first time I'd seen Alice speechless. Naomi-san looked like her pride had taken a hit, her expression a bit sunken."
+    hide GTS
+    show GTS_S sad at Position(xcenter=0.8, yalign=1.0)
+    GTS_S "Apologies, you are correct Watanabe-san. That was quite immature of me to start acting like that."
+    show GTS_S sad-2
+    "Naomi-san adjusted her hair in what I assumed to be an attempt at hiding her shame, before departing back to the quarry."
+    hide GTS
+    hide GTS_S
+    with dissolve
+    "Looking towards Alice I could see her cheeks flushed red with embarrassment as well, but also jotting down on a notepad Jineko's request."
+    show Jineko neutral at altMove(0.5, 0.25)
+    show WG neutral-2 at altMove(0.5, 0.75)
+    Jineko "Apologies for the outburst, the shouting was getting annoying."
+    show WG neutral
+    WG "I should also offer my apologies, that was unprofessional of me."
+    Jineko "Eh, not everyone will get along. Anger is a finicky emotion like that, never knowing how it'll manifest or be triggered."
+    show WG happy
+    WG "That's a nice way of putting it. I'll make sure to put this order in as soon as I return to my dorm."
+    Jineko "Fantastic, can't wait to get some new clothes. Maybe I can retire this thing to be a shop shirt. Have a good day you two!"
+    hide Jineko with dissolve
+    show WG neutral-2
+    "With that she also turned and headed back towards the quarry."
+    MC "That, uh... was eventful."
+    show WG surprised-2 at altMove(0.5, 0.5)
+    WG "Was certainly not how I expected that interaction to evolve."
+    MC "At least Watanabe-san didn't seem too phased by it."
+    show WG neutral
+    pause .5
+    show WG doubt
+    MC "You know you really need work on not letting her get under your skin. Otherwise this is just gonna repeat again. Plus, I think this sale just showed us a new market to expand into."
+    show WG neutral
+    WG "Expanding to the Giant's Dorm is certainly somewhere I'd like to go. However, I highly doubt I'd make any progress with her spreading bad press."
+    MC "Sounds like you two probably need to bury this hatchet."
+    show WG haughty
+    WG "We certainly do, but I can assure you I won't be making the first move. She instigated this, she can conclude it."
+    MCT "Of all the mole hills to fight over... or boulders to push up a mountain"
+    jump daymenu
