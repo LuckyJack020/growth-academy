@@ -470,59 +470,51 @@ init python:
         return affection[girl]
 
     def checkAffection(girl, exp, checkVal):
-        if persistent.enable_notifications < 2:
-            return
         if not girl in girllist and not girl == "RM" and not girl == "TM":
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         if exp == ">":
             if affection[girl] > checkVal:
-                img = "Graphics/ui/notification/" + girl + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + girl + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == "<":
             if affection[girl] < checkVal:
-                img = "Graphics/ui/notification/" + girl + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + girl + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == ">=":
             if affection[girl] >= checkVal:
-                img = "Graphics/ui/notification/" + girl + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + girl + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == "<=":
             if affection[girl] <= checkVal:
-                img = "Graphics/ui/notification/" + girl + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + girl + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == "==":
             if affection[girl] == checkVal:
-                img = "Graphics/ui/notification/" + girl + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + girl + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         else:
             renpy.log("ERROR: Expression used in code is not a valid operator.")
             return
+        if persistent.enable_notifications < 2:
+            if checkResult:
+                return True
+            else:
+                return False
+        else:
+            if checkResult:
+                img = "Graphics/ui/notification/" + girl + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                showNotification(img)
+                return False
 
     #Returns girl with highest affection. In the event of a tie, returns a random girl among those tieing.
     def getHighestAffection():
@@ -834,7 +826,7 @@ init python:
 
     def setWGOutfit(o):
         global WGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
             WGOutfit = o
 
     def setTakoOutfit(o):

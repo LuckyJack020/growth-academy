@@ -16947,14 +16947,14 @@ label WG061S:
         play sound Knock
         "*{i}knock knock{/i}*"
         MC "Is everything ok?"
-        show WG worried with dissolve
         WG "I wish this could happen under less embarrassing circumstances, but could you come in the shower with me. I require a second pair of hands for some areas."
         MCT "Who am I to turn this opportunity down?"
         MC "Sure thing, give me a minute."
         "Like a man possessed, I tossed my clothes onto the floor, before scampering into the bathroom."
         "Before now I had never considered what Alice's bathroom would look like. Though seeing a floor to ceiling shower that took up the entire back wall was still more than I could've guessed."
+        $setWGOutfit(OutfitEnum.NUDE)
         play music Love
-        show WG surprised
+        show WG surprised with dissolve
         "However, in my blind eagerness I had forgotten to prepare myself for actually facing Alice in nothing but my birthday suit."
         show WG aroused
         "Even through the steam of the showers heat I could still make out the blush on her cheeks as we shared the embarrassment of the moment."
@@ -17139,6 +17139,7 @@ label WG061S_C2_1:
     "Once dry and reclothed, I continued my task of cleaning up the discarded scraps and dishes."
     "The sound of the shower eventually stopped and the audible thuds of Alice walking around replaced it. The gentle shuddering of the floor below me was a strange sensation, but relaxing in an odd sort of way."
     MCT "She's already this big, I can't imagine her being larger. Heck, her bedroom door is beginning to look snug."
+    $setWGOutfit(OutfitEnum.DEFAULT)
     show WG neutral with dissolve
     "Eventually Alice made her not so unannounced reentry to the kitchen. Now dressed back into her school uniform, which while fitting, was unmistakably tight around her still taunt middle."
     WG "Thank you again Keisuke for this, but I think I ought to finish cleaning the mess I made."
@@ -20352,6 +20353,7 @@ label WG071:
 
 label WG072:
     $setProgress("WG", "WG073")
+    $setWGOutfit(OutfitEnum.NUDE)
     play music Peaceful
     scene Hotel Room with fade
     "Despite having the curtains closed, the light peering through the space between them and their outline was enough to wake me from my slumber."
@@ -22764,6 +22766,7 @@ label WGGTS004:
         show WG haughty
         WG "I thought based on our previous conversation on the matter I had made it clear about Kodama-san's relationship with myself. She is well compensated for our mutual arrangement."
         GTS_S "That does not excuse the matter of you still taking advantage of her politeness."
+        WG "You do realize she's not the only one in my employment? I haven't heard any of them complain about their treatment or compensation."
     else:
         show WG haughty
         WG "I don't feel it necessary to divulge personal information of others without them being present. But if you must know, Aida and I are close friends,"
@@ -22853,8 +22856,6 @@ label WGGTS004:
     show WG surprised-2 at altMove(0.5, 0.5)
     WG "Was certainly not how I expected that interaction to evolve."
     MC "At least Watanabe-san didn't seem too phased by it."
-    show WG neutral
-    pause .5
     show WG doubt
     MC "You know you really need work on not letting her get under your skin. Otherwise this is just gonna repeat again. Plus, I think this sale just showed us a new market to expand into."
     show WG neutral

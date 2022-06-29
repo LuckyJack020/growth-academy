@@ -20538,7 +20538,7 @@ label AE092:
     AE "..."
     "Takamura-sensei and I stood in silence for a moment, before we finally heard the slow click of the door bolt as it was unlocked, and then stepped back as it opened."
     scene Dorm AE
-    show AE sad at Position(xcenter=0.25, yalign=1.0)
+    show AE sad at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
     show Takamura sad at Position(xcenter=0.75, yalign=1.0)
     with fade
     "As Shiori opened the door for us, we stepped in— {w}but were almost instantly stopped by Shiori."
@@ -22014,6 +22014,7 @@ label AE097:
         MCT "I can't help but think about her."
         jump AE097_menu_start
     else:
+        $setProgress("AE", "AE098D")
         jump daymenu
 
 label AE097_menu_start:

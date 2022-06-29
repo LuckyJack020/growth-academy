@@ -100,7 +100,7 @@ label global000:
     show Takamura neutral with dissolve
     "On her chest hung a bright nametag that read ‘Aoi Takamura'."
     show Takamura neutral at altMove(0.5, 0.75)
-    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with easeinleft
+    show Tomoko neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with easeinleft
     Takamura "Can I get your name, please?"
     Tomoko "Tomoko Hotsure."
     show Takamura reassuring
@@ -1758,8 +1758,10 @@ label MC003:
     "I knew Tomo wasn't going to set any landspeed records with her level of urgency, so I just bided my time sitting on one of the benches outside the dorm until she came out."
     hide cg
     scene Dorm Exterior
-    show Tomoko neutral
-    with dissolve
+    with fade
+    show Tomoko neutral at Position(xcenter=1.10, yalign=1.0)
+    pause 0.1
+    show Tomoko neutral at altMove(2.0, 0.5)
     Tomoko "What was so important you couldn't have just texted me for instead?"
     MC "Nice to see you too, Tomo."
     Tomoko "Ugh, don't be like that. You know I didn't mean it like that."
@@ -3541,7 +3543,7 @@ label global005:
         BE "Still getting used to how big this campus is! I've been spending some time walking around each night and I still haven't seen it all!"
         MC "Wow, I haven't been around much either..."
         BE "Maybe we can go exploring together sometime!"
-    if getHighestAffection() == "WG":
+    elif getHighestAffection() == "WG":
         show WG neutral with dissolve
         WG "Hotsure-san."
         MC "Oh, hello Nikumaru-san."
@@ -3551,7 +3553,7 @@ label global005:
         MC "As well as anyone I suppose..."
         show WG haughty
         WG "Good to hear. Some find adherence to a routine to be restrictive, but I find the gains in productivity from an optimized schedule to be far more freeing than leaving idle time for its own sake."
-    if getHighestAffection() == "GTS":
+    elif getHighestAffection() == "GTS":
         "I noticed Naomi walking next to me as we made our way to class. Like, noticeably close."
         show GTS neutral with dissolve
         GTS "..."
@@ -3562,7 +3564,7 @@ label global005:
         MC "Nice day we're having, yeah?"
         GTS "...Yes."
         MCT "Boy, she's not much for conversation today... but she seems happy."
-    if getHighestAffection() == "FMG":
+    elif getHighestAffection() == "FMG":
         show FMG neutral with dissolve
         FMG "Keisuke! How ya doin'?"
         "I cringed as Akira slapped me on the back in what she probably thought was a friendly manner."
@@ -3573,7 +3575,7 @@ label global005:
         MC "Does that make a difference?"
         FMG "Sure! Morning and evening workouts can go harder than normal because you're being naturally cooled by the cold air!"
         MCT "I boggled to think what a 'harder' workout was for Akira, seeing how hard she already pushed herself..."
-    if getHighestAffection() == "PRG":
+    elif getHighestAffection() == "PRG":
         show PRG neutral with dissolve
         PRG "H-Hello, H-Hotsure-san...!"
         MC "Oh, hi Kodama-san."
@@ -3581,7 +3583,7 @@ label global005:
         MC "Yeah, I’d say so. Pretty typical day. You?"
         PRG "Y-Yes. I-It’s g-good for me too."
         MC "That’s good to hear."
-    if getHighestAffection() == "AE":
+    elif getHighestAffection() == "AE":
         show AE neutral with dissolve
         AE "Hotsure-san."
         MC "Oh, hello Matsumoto-san."
@@ -3833,7 +3835,7 @@ label RM001_c2_1:
         RM "Camera. It's a camera."
         MC "Yeah, that."
     "He paused for a moment."
-    if checkAffection("RM", ">" -3):
+    if checkAffection("RM", ">", -3):
         $setAffection("RM", 1)
         show RM happy
         "Eventually his expression relaxed a little."

@@ -12895,7 +12895,7 @@ label PRG030:
 
     scene Hallway2
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0)
-    show PRG worried at Position(xcenter=0.25, yalign=1.0)
+    show PRG worried at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with fade
     "Luckily for us, the hallway was well past dead at this point."
     "In fact, it was quieter than I'd ever heard it."
@@ -12904,7 +12904,7 @@ label PRG030:
     MC "Ah...  in regards to?"
     Takamura "I believe you both know."
     pause .25
-    show PRG sad-2 with dissolve
+    show PRG sad-2
     pause .5
     PRG "I'm... fine."
     MC "Yeah, I-"
@@ -12962,7 +12962,7 @@ label PRG030:
 
     scene Classroom3
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0)
-    show PRG sad-2 at Position(xcenter=0.25, yalign=1.0)
+    show PRG sad-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with fade
     pause .25
     "Takamura led us to a classroom and opened the door for us, letting us inside."
@@ -13131,7 +13131,7 @@ label PRG030:
     Takamura "Ah? Oh, pardon me. Are you both ready?"
     MC "We are, Sensei."
     scene Classroom3
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with fade
     "I walked back in and over to Aida, as Takamura entered a moment later."
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
@@ -15604,8 +15604,8 @@ label PRG034:
     play music Busy
     "The room had a decidedly chill feel to it as I walked in. The usual crowd was cut in half, likely from the later hour and the looming threat of missing assignments, but there were still a few familiar faces among the folding chairs."
     "I scanned the room and all of the stations, looking for my girlfriend among the group of cooking club members."
-    show PRG nervous at Position(xcenter=0.25, yalign=1.0)
-    show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
+    show PRG nervous at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1)
+    show Sakura neutral at Position(xcenter=0.55, yalign=1.0)
     with dissolve
     "Off by where the folding table normally was, I spotted her seated beside Sakura in the sea of other students."
     "Sakura had what appeared to be a small notebook in her hands, and Aida was looking on as Sakura seemed to be explaining something."
@@ -15702,7 +15702,7 @@ label PRG034:
     scene Cooking Classroom with fade
     "A couple of hours later, I glanced up at the clock."
     "It was past nine in the evening, and the rounds were dwindling to the final few teams."
-    show Takamura neutral
+    show Takamura neutral with dissolve
     Takamura "I know it's getting late, however, we still have two rounds left!"
     Takamura "So, let's give a big hand to Tozakura-san and Sano-san!"
     #show Kanami neutral
@@ -16150,7 +16150,7 @@ label PRG035:
     play sound Knock
     "I stepped back a touch."
     pause .75
-    show PRG nervous at Position(xcenter=0.75, yalign=1.0) with easeinright
+    show PRG nervous with dissolve
     pause .5
     PRG "... Hi."
     MC "Hey..."
@@ -16308,7 +16308,7 @@ label PRG035:
     PRG "W-While we were there..."
     pause .5
     show PRG unique
-    pause .5
+    pause 1
     show PRG sad-2
     pause .75
     PRG "There was an... {w}e-earthquake."
@@ -16405,11 +16405,11 @@ label PRG035:
     show PRG nervous
     PRG "W-What's he going to think when he hears that... t-that I'm..."
     PRG "W-When he hears that I... h-had sex..."
+    show PRG sad
     PRG "..."
     PRG "W-What if the shock kills him?!"
     PRG "What if I tell him, and he says that I'm not his daughter anymore?!"
     PRG "W-What if he... h-he doesn't want to see me anymore?!"
-    show PRG sad
     PRG "I-I can't call, Keisuke! I-I can't!!"
     PRG "I-I can't even see him again once the year is over! B-Because even if I'm not pregnant then, look at the rest of me!"
     PRG "A-And by then, who knows how big I'll be?"
@@ -16895,6 +16895,7 @@ label PRG035:
                 "Aida turned her face up and leaned up, resting her head on my chest."
                 PRG "Thank you."
                 "Aida sighed beside me after a moment."
+                show PRG unique
                 PRG "... I'm still really worried about my dad, though."
                 MC "I understand..."
                 PRG "But I..."
@@ -16903,6 +16904,7 @@ label PRG035:
                 MC "I completely understand."
                 MC "I can tell how hard all of that must have been."
                 MC "And I know that I can never know exactly what feelings you held back then, but I want you to know that if you ever would like to talk, or you need someone to listen, I'll be here."
+                show PRG unique-happy
                 PRG "... I know you'll be there. I..."
                 PRG "I can never thank you enough for that."
                 MC "You don't have to thank me. I know you'd do the exact same for me."
@@ -17344,7 +17346,7 @@ label PRG035B_2:
     play sound Knock
     "I stopped at Aida's door and knocked twice."
     pause .5
-    show PRG neutral with easeinright
+    show PRG neutral with dissolve
     play music PRG
     pause .25
     PRG "Hi."
@@ -17355,13 +17357,15 @@ label PRG035B_2:
     show PRG worried
     PRG "Y-Yeah..."
     "Aida held the door for me as I walked in and took my shoes off."
-    show Dorm PRG with fade
+    scene Dorm PRG
+    show PRG worried
+    with fade
     "I walked into Aida's dorm and sat back on her bed as she came in, sitting beside me right away."
     "I took my phone out and clicked my contacts. But, as I scrolled down..."
     "Aida put one hand on my arm."
     PRG "Um... b-before you call..."
     PRG "I-I was... t-thinking."
-    show PRG nervous with dissolve
+    show PRG nervous
     pause .5
     PRG "... Keisuke."
     PRG "W-What I did to you... f-forcing myself on you like that... it still really bothers me."
@@ -17935,12 +17939,13 @@ label PRG036:
     show PRG neutral
     PRG "That's a really good idea, Keisuke."
     MC "Thanks! I thought of it all by myself."
+    show PRG happy
     PRG "Eheheh!"
     scene Hallway with fade
     "Aida and I walked out into the hall."
     "Since we'd gotten dismissed early, the halls were dead quiet, and the feeling of suspense hung heavily in the air."
     MC "So, I've been meaning to ask you something."
-    show PRG worried
+    show PRG worried with dissolve
     PRG "W-What?"
     MC "How are you feeling?"
     PRG "About...?"
@@ -18107,7 +18112,7 @@ label PRG036:
     MC "Ah. Going stag in the kitchen, then?"
     show PRG worried
     PRG "Going... stag?"
-    MC "I'm 99% sure that it means ‘flying solo.' Just some slang I heard somewhere."
+    MC "I'm 99%% sure that it means ‘flying solo.' Just some slang I heard somewhere."
     PRG "Oh, I see. I-I don't really know a lot of slang."
     MC "Ah."
     MC "So, if I were to say ‘damn dude, that was some serious gnar gnar. Wicked shreddage, my guy,' what would you say that means?"
