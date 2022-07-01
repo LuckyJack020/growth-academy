@@ -13107,7 +13107,7 @@ label WG053_c3_after:
     if getFlag("WG053_c2_1"):
         $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
-        play music BrightLights
+        play music TwilightAmbient
         "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
         show WG sad with dissolve
         WG "Hey Kei, I want to thank you for tonight."
@@ -13475,7 +13475,7 @@ label WG054_c3_pass:
     PRG "That's probably for the best. Alice would most likely prefer to keep something like that quiet, anway."
     MC "Exactly my thinking. Thank you for the information, have a good day."
     PRG "You too."
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     "Knocking on the door, I was relieved to feel the vibrations of someone approaching the door."
     show WG happy with dissolve
     WG "I take it you either encountered Aida or got curious that I wasn't in class."
@@ -14429,8 +14429,8 @@ label WG057_c1_after:
     pause 1
     $setTime(TimeEnum.DAY)
     scene Dorm WG
-    show PRG neutral at Position(xcenter=0.2, yalign=1.0)
-    show WG haughty at Position(xcenter=0.8, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG haughty at Position(xcenter=0.75, yalign=1.0)
     with fade
     play music WG
     WG "Alright now Keisuke, praytell what is this 'surprise' of yours? You do realize it's not much of a surprise if you've already told me in advance."
@@ -19704,15 +19704,15 @@ label WG070:
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.DRESS)
     scene Ballroom
-    show WG neutral
+    show WG neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1)
     with fade
     play music Requiem
     "Entering the ballroom I could see everyone's attention repeat the same motion as outside, if not somehow worse."
     "The atmosphere of the room felt like it shifted from a warm, inviting feel to a cold, concerned feeling. A wave of murmuring quickly followed as we made our way further through the crowd."
-    #show Daitaro neutral
+    show WG neutral-2 at altMove(0.5, 0.3)
+    show Daitaro neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Alice suddenly stopped as we approached a stern looking man, standing with a group of well dressed individuals. I could feel the man's gaze not fall towards Alice, but onto me."
     MCT "Wait is this..."
-    show WG neutral-2
     WG "Hello Father."
     "Alice pulled her arm away and did a curtsy towards the man. I followed with a bow to him as well."
     "Not breaking his gaze he approached us, silent and unchanging. His martini glass in hand giving him the air of a Bond-esque villain."
@@ -19829,6 +19829,7 @@ label WG070:
     $renpy.music.set_volume(0.2, delay=0.8, channel='music')
     "I followed him outside the ballroom into the empty hallway outside."
     "As he turned to face me, his expression returned to the cold, calculated face he had earlier."
+    show Daitaro neutral at altMove(0.5, 0.5)
     Daitaro "Alright, Mr. Hotsure-san. I'll cut to the chase. How do I know you're not some slick huckster who's only after her money— {i}my{/i} money."
     MC "Umm, with no disrespect Sir... don't you think she'd see right through me if that were the case?"
     Daitaro "... {w}You do have a point..."
@@ -19852,14 +19853,16 @@ label WG070:
     Daitaro "But for now, let's just say your potential has caught my attention. Enjoy the rest of your evening with her, Mr. Hotsure-san."
     "With a new sort of reassurance, I returned with him to the party inside."
     $renpy.music.set_volume(1.0, delay=0.8, channel='music')
-    show WG neutral with dissolve
+    show Daitaro neutral at altMove(0.5, 0.75)
+    show WG neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1) with dissolve
     extend " It wasn't hard to spot Alice considering her size and choice of red dress. Though where I found her was enough to make me chuckle."
     "Despite her statement earlier, she had found her way over to the food and drink table happily talking with the other members of the party as she munched on a small sandwich."
     "As her father and I returned, she exchanged a glance with her father who responded with a nod."
+    hide Daitaro with dissolve
     WG "Hopefully he didn't discourage you from taking me out for a dance."
     MC "Oh not at all, and if you want to, I'd be happy to take you to the floor."
     "Finishing her glass of punch, I led her to the ballroom floor."
-    show WG haughty
+    show WG haughty at altMove(0.5, 0.5)
     WG "You remember any of those moves I practiced with you?"
     MC "Vaguely, so please lead if you will."
     show WG happy
@@ -19883,7 +19886,8 @@ label WG070:
     "After several minutes of dancing, and of me trying to avoid stepping on her feet, we decided to retire from the dance floor. We made our way over to a table along the wall where her father and some associates were sitting and chatting."
     "Attempting to be discreet, so as to not call attention to the matter, I moved an adjacent chair next to another when I pulled out a seat for Alice at the table."
     "It might have raised a few eyebrows at the table, but her comfort was far more important to me than the thoughts of strangers at this point, not to mention the potential for an incident without such precaution."
-    show WG neutral
+    show WG neutral at altMove(0.5, 0.3)
+    show Daitaro neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     Daitaro "That was some great skill out there from both of you. I know your mother taught you, my dear, but what about you sir? Where did you learn to waltz?"
     MC "Oh, actually Alice taught me the basics."
     Daitaro "She did? That's quite impressive, as she had trouble with the waltz when her mother taught her many years ago."
@@ -19911,8 +19915,8 @@ label WG070:
     "Mr. Nikumaru looked dead at me, nearly boring a hole through me with his steely gaze in the process."
     Daitaro "Make sure she has a lovely evening."
     MC "Will do, sir."
-    #hide Daitaro with dissolve
-    show WG surprised-2
+    show WG surprised-2 at altMove(0.5, 0.5)
+    hide Daitaro with dissolve
     WG "Apparently you managed to make a better impression than I thought you would."
     MC "What? You doubted me?"
     show WG neutral
@@ -20487,6 +20491,7 @@ label WG072:
     play music WGAlt
     #long hair
     #$setWGOutfit(OutfitEnum.CASUAL)
+    $setWGOutfit(OutfitEnum.DEFAULT) #Remove once casual outfit is ready
     show WG neutral with dissolve
     "My vision faded into view, seeing a cherub cheeked angel, I began to wonder if everything really had all been a dream after all..."
     MC "Wha?"

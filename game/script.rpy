@@ -644,59 +644,51 @@ init python:
             return skills[s]
 
     def checkSkill(s, exp, checkVal):
-        if persistent.enable_notifications < 2:
-            return
         if s not in skills.keys():
             renpy.log("Unknown skill ID: %s" % s)
             return -1
         if exp == ">":
             if skills[s] > checkVal:
-                img = "Graphics/ui/notification/" + s + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + s + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == "<":
             if skills[s] < checkVal:
-                img = "Graphics/ui/notification/" + s + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + s + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == ">=":
             if skills[s] >= checkVal:
-                img = "Graphics/ui/notification/" + s + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + s + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == "<=":
             if skills[s] <= checkVal:
-                img = "Graphics/ui/notification/" + s + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + s + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         elif exp == "==":
             if skills[s] == checkVal:
-                img = "Graphics/ui/notification/" + s + "-win.png"
-                showNotification(img)
-                return True
+                checkResult = True
             else:
-                img = "Graphics/ui/notification/" + s + "-fail.png"
-                showNotification(img)
-                return False
+                checkResult = False
         else:
             renpy.log("ERROR: Expression used in code is not a valid operator.")
             return
+        if persistent.enable_notifications < 2:
+            if checkResult:
+                return True
+            else:
+                return False
+        else:
+            if checkResult:
+                img = "Graphics/ui/notification/" + s + "-win.png"
+                showNotification(img)
+                return True
+            else:
+                img = "Graphics/ui/notification/" + s + "-fail.png"
+                showNotification(img)
+                return False
 
     def showNotification(img):
         global activenotifications

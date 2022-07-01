@@ -15728,7 +15728,9 @@ label PRG034:
     hide Takamura with dissolve
     play music PRGChallenge
     "Aida and Sakura both leapt into their tasks the minute Takamura said the magic word."
-    show PRG worried at altMove(0.5, 0.65)
+    show PRG worried at Transform(xzoom=-1)
+    pause 0.1
+    show PRG worried at altMove(0.5, 0.6)
     show Sakura neutral at altMove(0.5, 0.80)
     "Aida carefully measured out a cup of rice and set it beside the stovetop, taking a pot from nearby which she filled with water."
     "Beside her, Sakura went to the pantry and retrieved flour, some reddish powder, and what appeared to be olive oil."
@@ -15749,31 +15751,41 @@ label PRG034:
     #hide Kanami
     "Back across from them, Aida had a number of different powders mixed together, and the once white, creamy substance had changed to a red fluffy cream."
     "She took the red cream and mixed it with the powders in a sort of flipping motion, taking the powder and turning it over top of the cream."
-    show PRG angry at Position(xcenter=0.75, yalign=1.0)
+    show PRG angry at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1)
     show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
     "As Aida did this, she made a strained face and backed up a bit."
     "Reaching this way, her belly was pressed up against the counter, and she was clearly having a hard time working the ingredients in such a fashion."
     "Sakura, meanwhile, had a thick mixture in a frying pan, which she added to the stewed ingredients in a large pot on the stove."
     "She gave the whole thing a mix, then cranked down the heat on the stove."
-    show PRG worried
+    show PRG worried at Transform(xzoom=1)
+    show Sakura neutral at Transform(xzoom=-1)
+    pause 0.1
     show Sakura neutral at altMove(0.5, 0.55)
     "She turned and said something to Aida. Aida nodded at her and said something in return, and Sakura added the rice to Aida's boiling water."
     "Sakura looked to Aida and said something else, then reached over and cranked the dial of the oven up."
+    show PRG worried at Transform(xzoom=-1)
+    show Sakura neutral at Transform(xzoom=1)
+    pause 0.1
     show Sakura neutral at altMove(0.5, 0.25)
     "Aida took her mixture and put it inside a large plastic bag with a plastic cutout on one edge, which she squeezed onto a large sheet. She dotted this sheet with equal amounts of cream, then walked the sheet over to the stove and set it on the side."
     show PRG nervous
     "As I watched though, Aida's hands seemed to be shaking as she squeezed the bag."
     MCT "Hm. Must be thick stuff."
+    show PRG nervous at Transform(xzoom=1)
+    pause 0.1
     show PRG nervous at altMove(0.5, 0.45)
     "Next, Aida went to the fridge and took out some large sides of different fish. She brought these to the counter where Sakura was already making quick work of filet."
     "The oven dinged loudly behind the two girls, and Aida spun to get her dessert baking."
+    show PRG nervous at Transform(xzoom=-1)
+    pause 0.1
     show PRG nervous at altMove(0.5, 0.75)
     "The tray was slid into the oven, and Aida leaned carefully over the stove to set the timer."
     stop music
     "She turned away from the stove-"
     show PRG scared
     show dummy with vpunch
+    show Sakura neutral at Transform(xzoom=-1)
     "{i}CLANG!{/i}"
     pause .5
     "Aida quickly backpedaled away from the stove as the pot of rice slid off of the burner and off of the stove, the whole thing falling and dumping out onto the floor."
@@ -15782,6 +15794,8 @@ label PRG034:
     pause .5
     "The whole room was quiet. Even the competing team stopped for a moment to look over at the commotion."
     "Aida looked down at the mess on the floor, her hand on the spot of her belly that had bumped the handle of the pot and rotated it off into oblivion."
+    show Sakura neutral at altMove(0.5, 0.55)
+    show PRG unique at Transform(xzoom=1)
     "Sakura put her hand on Aida's shoulder and nodded back at the counter while she said something to Aida."
     show PRG unique at altMove(0.5, 0.35)
     show Sakura neutral at altMove(0.5, 0.65)
@@ -15805,7 +15819,7 @@ label PRG034:
     MCT "That looks like red bean paste. Alright."
     #hide Kanami
     show PRG nervous at Position(xcenter=0.25, yalign=1.0)
-    show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1)
     with dissolve
     "I looked back over to Aida and Sakura."
     MCT "Come on, Team Koyoga..."
@@ -15828,6 +15842,8 @@ label PRG034:
     Takamura "One minute!"
     "Finally, as Aida laid out plates on the counter, Sakura took the macarons and set three onto each plate, then set them down just as-"
     stop music
+    show PRG nervous at Transform(xzoom=-1)
+    show Sakura neutral at Transform(xzoom=1)
     Takamura "Time!"
     Takamura "Appetizers, please."
     "Tozakura came forward and set a skewer of meatballs in front of each judge, as Sakura came forward with their sashimi."

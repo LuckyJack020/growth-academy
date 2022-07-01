@@ -9209,7 +9209,10 @@ label BE046:
     MC "Alright, alright. You gotta go! I'll meet you out there!"
     show BE happy
     BE "Okay! See you soon!"
+    show BE happy:
+        linear 0.5 alpha 0.0
     "Honoka rushed out of the locker room, her feet slapping across the ground."
+    hide BE
     pause .5
     MC "... and now I'm alone in the girls locker room."
     "I quickly rushed out after Honoka so I wouldn't get labeled as the school pervert if anyone caught me standing in here alone."

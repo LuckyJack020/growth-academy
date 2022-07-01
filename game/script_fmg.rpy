@@ -12591,7 +12591,11 @@ label FMG068:
     show FMG happy
     extend " Thank you again, Kei."
     "Even with the strength to crush a rock between her bare hands, I've never felt safer in someone else's arms. The sun sinking into the ocean absorbing its colors, the yellows, and the oranges staring back at us."
-    "I turned to her to give her a kiss— and that's when I spotted it. {w}A smile across her face with tears rolling down her eyes, but not a single sound to be heard. Today was hard for her and tomorrow would be even harder."
+    "I turned to her to give her a kiss— and that's when I spotted it."
+    show FMG:
+        linear 0.5 alpha 0.0
+    extend " A smile across her face with tears rolling down her eyes, but not a single sound to be heard. Today was hard for her and tomorrow would be even harder."
+    hide FMG
     "I couldn't say what tomorrow would bring. However, I know for certain, that I'd be there for her... {w}to hold her close."
     jump daymenu
 
