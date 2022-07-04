@@ -200,7 +200,7 @@ label GTS002_c2:
     GTS "Now, these last ones may seem rather plain compared to the others, but azaleas are deservedly popular the world over. I know of more than a few festivals dedicated to them here in Japan."
     show GTS unique
     GTS "I've read that in Chinese culture they're associated with nostalgia... looking at them, one could imagine why."
-    "She handed me the last bag, which displayed flatly pink, five-petaled flowers; a warm, simple, pure smile illuminated her countenance as she did."
+    "She handed me the last bag, which displayed flatly pink, six-petaled flowers; a warm, simple, pure smile illuminated her countenance as she did."
     $setSkill("Art", 1)
     MC "Heh, you must really have a thing for flowers."
     "Her smile faltered, she pursed her lips, and a light blush formed across her cheeks."
@@ -275,7 +275,7 @@ label GTS003:
     MC "Yeah it's been a pretty good morning so far, I managed to wake early so it gave me just the right amount of time to fully wake up, which is a pretty good start of the day in my opinion."
     MC "Thankfully since I woke up so early it allowed me to shower without feeling rushed."
     "She gave a small smile in response before picking up her chopsticks. Her hand softly slid her hair back as she picked up some cooked vegetables to eat."
-    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had five white petals in a sort of star configuration."
+    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had six white petals in a sort of star configuration."
     MC "How was the start of your day, if you don't mind me asking?"
     "Naomi perked up slightly as I asked my question, taking her napkin to delicately wipe her lips and properly placing it back in place before answering."
     show GTS neutral
@@ -789,7 +789,7 @@ label GTS008_c1:
     MC "I, uh... what?"
     GTS "Apologies, but you mentioned cooperation and that made me think about Verbena."
     MC "Verbena?"
-    GTS "They are a species of small flowers with five petals and borne in dense spikes. They come in a nice variety of colors so it could add to the visual appeal of the garden."
+    GTS "They are a species of small flowers with six petals and borne in dense spikes. They come in a nice variety of colors so it could add to the visual appeal of the garden."
     MC "Heh... well, glad I could help. Even if accidentally."
     "She giggled lightly and gave a warm smile."
     jump GTS008_after
@@ -3949,6 +3949,7 @@ label GTS024:
         "She nodded."
         GTS "I'll be right here."
         scene black with fade
+        $setTime(TimeEnum.DAY)
         pause 2
         scene Dorm Interior with fade
         "As it happened, I would not be back in just a minute."
@@ -3958,6 +3959,9 @@ label GTS024:
         "I pulled it out and chanced to feel around inside the pockets."
         MCT "...Yep."
         "I thanked the stars at least Daichi wasn't there to see that in person as I left again and headed back down to the entrance."
+        scene black with fade
+        $setTime(TimeEnum.RAIN)
+        pause 1
         scene Dorm Exterior
         show GTS neutral
         with fade

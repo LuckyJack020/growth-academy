@@ -21068,7 +21068,7 @@ label AE093:
     jump daymenu
 
 label AE094:
-    $setAEOutfit(OutfitEnum.TIRED)
+    $setAEOutfit(OutfitEnum.DEFAULT)
     scene Dorm Hallway with fade
     MC "Shiori? Could you please open up?"
     pause .3
@@ -21179,7 +21179,7 @@ label AE094_Gold:
     AE "I..."
     MC "And don't you dare say you're a burden to me. You wouldn't be a burden if I literally had to carry you."
     AE "..."
-    show AE angry 2
+    show AE angry-2
     AE "Look me in the eyes right now and tell me your life wouldn't have been better off if you had just never come to Seichou."
     MC "Gladly."
     show AE surprised

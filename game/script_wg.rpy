@@ -19319,7 +19319,8 @@ label WG068:
     show PRG surprised
     WG "In all honesty, I should have found a replacement sooner, but despite my initial hesitations there was really only one suitable alternative for your skills—"
     PRG "Y-You're replacing me? W-With who?!"
-    show PRG surprised at altMove(0.5, 0.5)
+    show WG neutral at altMove(0.25, 0.2)
+    show PRG surprised at altMove(0.25, 0.5)
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) behind PRG with dissolve
     Sakura "The roast is ready!"
     show PRG sad-2 at Transform(xzoom=-1)
@@ -20153,7 +20154,7 @@ label WG071:
     WG "I... I love you Keisuke."
     MC "I love you too Babe."
     show WG sly
-    WG "Not that I've had my turn, it's well past time for yours."
+    WG "Now that I've had my turn, it's well past time for yours."
     show WG haughty
     WG "After all, I think you've earned it at this point."
     show WG stern

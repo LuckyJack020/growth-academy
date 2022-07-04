@@ -4372,7 +4372,7 @@ label BE025_c1_after:
     "The kid panicked, and let go of the string after turning the bow away from down range."
     "Right towards Honoka and I."
     hide BE with dissolve
-    if checkSkill"Athletics", ">", 5):
+    if checkSkill("Athletics", ">", 5):
         jump BE025_c2_3
     elif checkSkill("Athletics", ">", 0):
         jump BE025_c2_2

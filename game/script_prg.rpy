@@ -25261,7 +25261,7 @@ label PRG056C_c1_2:
     PRG "I-I'm sure. Let's meet again tomorrow and we can continue."
     BE "M'kay. I'll see you guys tomorrow then."
     hide BE with dissolve
-    show PRG unique at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
+    show PRG unique at Position(xcenter=0.5, yalign=1.0) with dissolve
     "Honoka waved goodbye to us as she headed out the door. After she was surely gone, Aida sighed and started cleaning up the knives and cut vegetables."
     "While she was sorting the knives in the block, I joined her, putting an arm around her shoulders and pulling her into a side hug."
     MC "I know."
@@ -26594,7 +26594,7 @@ label PRG058:
     MC "Yep. No one but us."
     PRG "O-Okay..."
     PRG "{size=-6}Um... p-please don't laugh...{/size}"
-    show PRG sad-2 at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
+    show PRG sad-2 at Position(xcenter=0.5, yalign=1.0) with dissolve
     MC "Uh... whoa..."
     PRG "I-I don't have a swimsuit that... f-fits me. So... I-I had to wear one of Alice's old ones..."
     PRG "And, none of her one-piece suits fit me, so..."
