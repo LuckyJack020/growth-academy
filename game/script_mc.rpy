@@ -1459,7 +1459,10 @@ label MC002:
     "Inside, the room was quiet. However, it was far from empty."
     "In the middle were some desks pressed together to form a sort of ‘mega-desk.'"
     play music Rain
-    "At it sat a familiar looking teacher, who upon further inspection, I recognized from when I'd first arrived on the island with Tomo."
+    if isEventCleared("BE006"):
+        "At it sat a familiar looking teacher, Takamura-sensei."
+    else:
+        "At it sat a familiar looking teacher, who upon further inspection, I recognized from when I'd first arrived on the island with Tomo."
     pause .25
     "Across from her was a man that I could only describe as a stereotypical professor type, with thick, black-rimmed glasses perched on his nose."
     "He held a newspaper in front of him, and was skimming through it with a bored look on his face."
@@ -1479,11 +1482,14 @@ label MC002:
     Takamura "Oh, I'm just teasing. Always such a stiff, Tashi-chan."
     "Tashi waved his hand and shook his head in disbelief, choosing instead to rummage through one of his bags."
     show Takamura neutral
-    Takamura "Ah, another Hotsure. My word. What brings you here?"
-    MC "Ah... pardon, Sensei?"
-    Takamura "You're the brother of my Hotsure, aren't you?"
-    MC "Another Hotsure? You're Tomo's homeroom teacher then?"
-    Takamura "Indeed."
+    if isEventCleared("BE006"):
+        Takamura "Ah, another Hotsure. My word. What brings you here?"
+    else:
+        Takamura "Ah, another Hotsure. My word. What brings you here?"
+        MC "Ah... pardon, Sensei?"
+        Takamura "You're the brother of my Hotsure, aren't you?"
+        MC "Another Hotsure? You're Tomo's homeroom teacher then?"
+        Takamura "Indeed."
     pause .25
     show Takamura reassuring
     Takamura "Guess you and I both get to teach the members of the Hotsure clan, hm Tashi-chan?"
@@ -1529,8 +1535,12 @@ label MC002:
     "Tashi rolled his eyes and dug his head into a larger locker off to one side."
     hide HR with dissolve
     show Takamura neutral at altMove(0.5, 0.5)
-    MC "So, if I may, Sensei. How is my sister doing in your class?"
-    Takamura "Well, she's always on time. She does seem a tad quiet, but that's nothing unusual, especially given the circumstances of a new academy with all new people to get to know."
+    if isEventCleared("BE006"):
+        MC "I know we discussed it earlier, Sensei, but how is Tomo doing in your class?"
+        Takamura "Well, she's always on time. She does seem a tad quiet, but that's nothing unusual, especially given the circumstances of a new academy with all new people to get to know."
+    else:
+        MC "So, if I may, Sensei. How is my sister doing in your class?"
+        Takamura "Well, she's always on time. She does seem a tad quiet, but that's nothing unusual, especially given the circumstances of a new academy with all new people to get to know."
     "In front of her, Takamura shut her binder and set it on the desk."
     pause .25
     Takamura "You'll have to excuse me. I'm finishing some references for an upcoming project that I'm working with the principal on."
@@ -2186,7 +2196,7 @@ label MC006_Team1:
     pause .2
     show HR neutral with dissolve
     #show Naoki neutral with dissolve
-    #show Hageshit neutral with dissolve
+    #show Hageshi neutral with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
     Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
@@ -2753,7 +2763,7 @@ label MC006_Team2:
     pause .2
     show HR neutral with dissolve
     #show Naoki neutral with dissolve
-    #show Hageshit neutral with dissolve
+    #show Hageshi neutral with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
     Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
@@ -3384,7 +3394,7 @@ label MC011:
         show AE neutral with dissolve
         MC "Hello Matsumoto-san, mind if I sit here?"
         show AE neutral-eyebrow
-        BE "You're certainly welcome to, Hotsure-san"
+        AE "You're certainly welcome to, Hotsure-san"
         MC "Cool. So, how are things going?"
         show AE neutral
         AE "Coursework has started to pick up, but it hasn't proved too difficult as long as I keep on top of my studies. I've been more preoccupied with matters pertaining to the student council."
@@ -3410,7 +3420,7 @@ label MC011:
         show AE surprised
         UNKNOWN "Hey watch where you're going, {i}fatass{/i}!"
         "Fat Student" "Maybe you shouldn't lean back into the isle where people are walking, {i}dumbass{/i}. {w}I guess I shouldn't be too mad about it since you obviously got more meat than brains growing in that head of yours."
-        show AE neutral annoyed
+        show AE neutral-annoyed
         AE "Please excuse me Hotsure-san."
         hide AE with dissolve
     "Muscle Student" "Now that's uncalled for, aren't you people supposed to be jolly?"
@@ -4008,7 +4018,7 @@ label RM002_c2_after:
     stop music
     "I began to walk down the hallway, but after a couple of seconds Yuki ran up to me."
     show Yuki neutral with dissolve
-    Yuki "Hey... Hotsure-senpai."
+    Yuki "Hey... Hotsure-san."
     MC "Huh? What's wrong?"
     Yuki "Do you think that there's something weird happening at this school?"
     MC "What do you mean?"

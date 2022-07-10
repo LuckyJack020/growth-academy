@@ -12134,7 +12134,7 @@ label FMG067:
     FMG "Uh, now that I'm like this... no. Definitely not."
     MC "Ooooh my god, I completely forgot. I'm so used to everything fitting our growths. It hasn't even been that long, jeez."
     FMG "Yeah... now that you mention it, there's probably a lot of other things we haven't had to think about until now."
-    MC "Wow... anyways, you got ready? I got all my stuff."
+    MC "Yeah, for real... {w} Nothing to worry about at the moment, I guess. You ready? I got all my stuff."
     FMG "Yes sir! You're going to love it here. The sights, the food, the people. Did I say the food?!?"
     MC "If you said it twice it has to be good. Where are we going first?"
     FMG "To my house, dummy. Do you want to walk around with all this stuff? My parents aren't home yet so we can grab the spare, toss our stuff, and hit the streets."
