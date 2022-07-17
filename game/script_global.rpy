@@ -153,9 +153,10 @@ image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Bathroom = "Graphics/ui/bg/archiveBG/bathroom.png"
 image Cafeteria = "Graphics/ui/bg/archiveBG/cafeteria.png"
 image Campus Center = DynamicImage("Graphics/ui/bg/archiveBG/campuscenter_[gametime].png")
-image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png")
-image Classroom2 = DynamicImage("Graphics/ui/bg/classroom_2_[gametime].png")
-image Classroom3 = DynamicImage("Graphics/ui/bg/archiveBG/classroom_3_[gametime].png")
+image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png") #Tashi-sensei's Homeroom Classroom
+image ClassroomAlt = DynamicImage("Graphics/ui/bg/classroom_alt_[gametime].png") #Tashi-sensei's Homeroom Classroom - Alternate View
+image Classroom2 = DynamicImage("Graphics/ui/bg/archiveBG/classroom_2_[gametime].png") #Takamura-sensei's Homeroom Classroom
+image Classroom3 = DynamicImage("Graphics/ui/bg/classroom_3_[gametime].png") #Tsubasa-sensei's Homeroom Classroom
 image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].png")
 image Computer Room = DynamicImage("Graphics/ui/bg/computerroom_[gametime].png")
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
@@ -394,6 +395,7 @@ image cg GTS046_hold3 = "Graphics/ui/gallery/GTS046_hold3.png"
 image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
+image cg PRG038 poster = "Graphics/ui/gallery/PRG038_poster.png"
 
 image cg WG000 = "Graphics/ui/gallery/WG000.png"
 image cg WG009 = "Graphics/ui/gallery/WG009.png"
@@ -1327,7 +1329,8 @@ init 2 python:
     eventlibrary['FMG067'] = {"name": "Okinawa Bliss", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                                  "location": "okinawa",               "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG068", "obsflags": [],               "conditions": []}
     eventlibrary['FMG068'] = {"name": "Shells By The Shore", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                  "location": "okinawa",                         "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG069", "obsflags": [],               "conditions": []}
     eventlibrary['FMG069'] = {"name": "In Another Life", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "okinawa",                         "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG070", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG070'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG070'] = {"name": "Size Woes", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "okinawa",                         "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG071", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG071'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}

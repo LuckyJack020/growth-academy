@@ -12960,7 +12960,7 @@ label PRG030:
     scene black with fade
     pause .5
 
-    scene Classroom3
+    scene Classroom2
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0)
     show PRG sad-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with fade
@@ -13130,7 +13130,7 @@ label PRG030:
     MC "Sensei?"
     Takamura "Ah? Oh, pardon me. Are you both ready?"
     MC "We are, Sensei."
-    scene Classroom3
+    scene Classroom2
     show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with fade
     "I walked back in and over to Aida, as Takamura entered a moment later."

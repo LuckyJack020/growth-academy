@@ -9,7 +9,7 @@ init python:
     galImgList["GTS"] = [["GTS000", "GoodNotGreat", 995], ["GTS024", "Ekkonshon", 1040], ["GTS025", "GoodNotGreat", 995], ["GTS035", "GoodNotGreat", 995], ["GTS044_stars1", "Ekkonshon", 1040], ["GTS044_stars2", "Ekkonshon", 1040], ["GTS046_upskirt", "GoodNotGreat", 995],  ["GTS046_hold1", "GoodNotGreat", 995], ["GTS046_hold2", "GoodNotGreat", 995], ["GTS046_hold3", "GoodNotGreat", 995]]
     galImgList["FMG"] = [["FMG016", "Sheepapp", 1050], ["FMG041", "Sheepapp", 1050], ["FMG050", "Sheepapp", 1050], ["FMG055", "Sheepapp", 1050], ["FMG056", "Sheepapp", 1050], ["FMG058", "Sheepapp", 1050], ["FMG061", "Sheepapp", 1050], ["FMG067", "Sheepapp", 1050]]
     galImgList["WG"] = [["WG000", "GoodNotGreat", 995], ["WG009", "GoodNotGreat", 995], ["WG039", "Radoon & Sparkcadia", 905], ["WG042", "MOLOT.CO", 1050], ["WG046", "GoodNotGreat", 995], ["WG047", "GoodNotGreat", 995], ["WG060S", "MOLOT.CO", 1050]]
-    galImgList["PRG"] = [["PRG020", "Marrazan", 1055], ["PRG025", "Marrazan", 1055], ["PRG038", "Marrazan", 1055]]
+    galImgList["PRG"] = [["PRG020", "Marrazan", 1055], ["PRG025", "Marrazan", 1055], ["PRG038", "Marrazan", 1055], ["PRG038_poster", "GoodNotGreat", 995]]
     galImgList["OTHER"] = [["MC000", "GoodNotGreat", 995], ["RM000", "GoodNotGreat", 995], ["RM000_escape1", "GoodNotGreat", 995], ["RM000_escape2", "GoodNotGreat", 995], ["RM000_escape3", "GoodNotGreat", 995], ["MC003", "GoodNotGreat", 995]]
 
     for g in girllist:

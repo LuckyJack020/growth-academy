@@ -1057,11 +1057,11 @@ label FMG010_testpass:
     "When I arrived I spotted the clothes on the counter. {w}Not like they were hard to miss with the bright red shirt... the note that had her name on it might have helped a little as well."
     scene Dorm Exterior with fade
     play music FMG
-    "With the clothes in hand, I made my way to her dorm, picking up a few pebbles along the way. Following Chibuki’s description, I found the exact window she had described."
-    MC "Now, I’m curious about how her side of the room looks."
+    "With the clothes in hand, I made my way to her dorm, picking up a few pebbles along the way. Following Chibuki's description, I found the exact window she had described."
+    MC "Now, I'm curious about how her side of the room looks."
     pause .25
-    MCT "It’s probably for the best not to think about it after what Akira was going on about the other day."
-    "Repressing those thoughts, I threw a pebble at the window in hopes to get Akira’s attention and sure enough she stuck her head out, looking like she was wrapped up in some blanket."
+    MCT "It's probably for the best not to think about it after what Akira was going on about the other day."
+    "Repressing those thoughts, I threw a pebble at the window in hopes to get Akira's attention and sure enough she stuck her head out, looking like she was wrapped up in some blanket."
     FMG "Keisuke!? Why are you throwing rocks at my window? Where's Chibuki? She was supposed to be here by now with- hey, my clothes!"
     MC "That's why I'm here, Chibuki had a meeting with Shiori and asked me to give you your new outfit."
     FMG "Well, how are you going to do that?! I wouldn't let you up here even if I wanted to!"
@@ -1137,8 +1137,8 @@ label FMG010_testpass:
     FMG "Man I don't even know, and I don't think I {i}want{/i} to know. That girl is something else."
     MC "You know, she seems like a good friend, even if she's a bit weird."
     FMG "I guess. Listen, these past two days have been irritating..."
-    FMG "I'm going to go up to my room and yell at Chibuki to get the brand name soda from now on and not leave me stuck with a crappy off-brand. I’ll talk to you later, Kei. Thanks again!"
-    MC "Think nothing of it. I’ll see you around."
+    FMG "I'm going to go up to my room and yell at Chibuki to get the brand name soda from now on and not leave me stuck with a crappy off-brand. I'll talk to you later, Kei. Thanks again!"
+    MC "Think nothing of it. I'll see you around."
     hide FMG with dissolve
     FMG "Chibuki! You better get Cane Cola from now on or I swear..."
     Chibuki "Who cares about soda, you ruined my Nyte Lyte poster!"
@@ -1162,13 +1162,13 @@ label FMG010_testfail:
     FMG "Yes, I know I'm big but can you please not stare at me? I've had a long day!"
     MC "Um, are you all right?"
     show FMG sad
-    FMG "Ugh, no. I’ve been trapped in my room for the past two days... {w}I had to live off of Chibuki’s cheap junk food and soda. To make matters even worse, it wasn’t even name brand, I got stuck with some cheap knock-off called Kool Kola."
+    FMG "Ugh, no. I've been trapped in my room for the past two days... {w}I had to live off of Chibuki's cheap junk food and soda. To make matters even worse, it wasn't even name brand, I got stuck with some cheap knock-off called Kool Kola."
     MC "Wait, why were you stuck in your room?"
     FMG "Because I had a growth spurt! I couldn't fit into my clothes without ripping them. Chibuki was supposed to get my replacement uniform from the tailor's but got detention, leaving me all alone in my room till she got back an hour ago!"
     FMG "I mean, I'm glad I got bigger muscles, but the day has been so awful that I couldn't really enjoy them."
     MC "Sorry, I would have helped if I'd known."
     show FMG neutral
-    FMG "Thanks, you would’ve done a better job than Chibuki, I’m sure. {w}Uh, would you want to join me for dinner? I think I could use the company right about now."
+    FMG "Thanks, you would've done a better job than Chibuki, I'm sure. {w}Uh, would you want to join me for dinner? I think I could use the company right about now."
     MC "Totally. I could absolutely go for some fries."
     scene black with fade
     pause 0.5
@@ -12224,7 +12224,7 @@ label FMG067:
     FMG "Take a look."
     "The photo was over a decade old, yet it was in perfect condition. No bends, no creases, no imperfections. {w}Well, unless you count Akira being in the photo but that's beside the point."
     show cg FMG067 with fade
-    "It was when they were kids. Tatsuya was holding Akira’s arms up as they went down the slide, both of them smiling."
+    "It was when they were kids. Tatsuya was holding Akira's arms up as they went down the slide, both of them smiling."
     MC "This is awesome. Huh? {w}You WORE GLASSES????"
     hide cg
     show FMG happy
@@ -12783,6 +12783,375 @@ label FMG069:
     jump daymenu
 
 label FMG070:
+    $setProgress("FMG", "FMG071")
+    $setSize(5)
+    $setTimeFlag("size5")
+    $setFMGOutfit(OutfitEnum.NUDE)
+    "After everything that had happened yesterday, a good night's rest was what we all needed; and it was a great night's rest, fantastic even. {w}Until the air mattress popped and I was delegated to the couch."
+    "The couch was... rough. It was one of those couches that looks incredibly comfy and then when you sit or lay down on it you immediately regret your life choices. Freaking terrible."
+    "To make matters even worse when I finally started to doze off. I heard what sounded like a bomb going off in Akira's room."
+    play sound Thud
+    FMG "Uh, Kei, I need your help."
+    FMG "We {i}may{/i} have a small problem!"
+    MC "I'll be right there. Hold tight!"
+    "I was a bit nervous I'll admit, Akira rarely cries for help and that massive thud before did anything but ease my nerves."
+    scene Okinawa Bedroom with fade
+    pause 1
+    play music FMG
+    MC "Is everything-"
+    MC "Oh my..."
+    "Right there smack in the middle of the room, naked as can be, was Akira even bigger than before."
+    MC "Not the bed! Oh man, your parents are going to be pissed..."
+    show FMG angry with dissolve
+    FMG "Kei!"
+    pause 1
+    MC "Oh..."
+    "I had to crane my neck up to see all of her."
+    MC "Holy crap. Did you eat an elephant??? What happened!?"
+    show FMG surprised
+    FMG "I don't know! I must've had another growth spurt!"
+    MC "But we didn't even... {size=6}you know.{/size}"
+    show FMG angry
+    FMG "Yes, I know! {w}Now, help me close the blinds, everything is hanging out for the world to see!"
+    MCT "And it is glorious."
+    MC "I'm on it! You find something... anything to cover up and I'll take care of the windows."
+    hide FMG with dissolve
+    "I rushed to the windows and slammed the blinds shut as quickly as I could. Meanwhile, Akira was cursing about how small everything was."
+    FMG "Ugh, come on, what the hell! Even this is too small."
+    show FMG angry with dissolve
+    MC "Blinds are shut. Is... um, everything okay?"
+    FMG "Do things look okay?!?"
+    MC "Hey, calm down. We didn't expect this to happen, we couldn't have planned for this."
+    show FMG sad
+    pause .5
+    FMG "Sorry... I didn't mean to yell."
+    MC "You're fine, just work with me here. We need to take things slow right now. You are way too big right now to be getting worked up, the last thing we need is to destroy your room even more."
+    MC "When do your parents come back from work again? Like in a couple of hours, yeah?"
+    FMG "Not today. They won't be back till dark..."
+    show FMG angry
+    extend " I don't know what to do!"
+    MC "Relax, getting angry isn't going to solve anything. We're not at Seichou anymore, we need to take this one step at a time."
+    show FMG sad
+    FMG "R-Right."
+    MC "First, I'm going to call your parents and let them know then we'll look for some clothes to cover you. I don't know what's going to fit you though"
+    MC "Man, you are... massive, you have to be at least two meters tall."
+    FMG "I wouldn't be freaking out like this if we {i}weren't{/i} at my house. I can't enjoy this new size at all."
+    MC "Yeah, I know it sucks. When we get back you can crush all the rocks we can find and maybe my head. Let's deal with what's in front of us for now."
+    show FMG neutral
+    FMG "What was that one part?"
+    MC "Not important."
+    FMG "Okaaay, whatever, you say."
+    MC "Alrighty then, where's your phone?"
+    FMG "On my nightstand, behind the lamp."
+    pause 1
+    MC "Got it. I'll call your mom first, hopefully, she picks up."
+    pause .5
+    MC "Nice, it's ringing."
+    MCCell "{w}Heeey, Mizutani-san. Hope your day is going well."
+    YukoCell "Keisuke? Why are you using Akira's phone? Is she okay???"
+    MCCell "Weeeell, we have a little problem. Akira... uh, she's bigger. And I mean {i}really{/i} big."
+    YukoCell "Can... Can you put her on the phone?"
+    MCCell "Hang on, I'll put you on speaker."
+    pause .25
+    MC "You're on speaker."
+    YukoCell "Akira, is everything okay?"
+    show FMG sad
+    FMG "Kei and I are both fine. My room is... not. My bed is in pieces..."
+    YukoCell "Jeez, how big did you get?"
+    FMG "Big enough to make my room look like a dollhouse."
+    YukoCell "Did you break anything else but your bed?"
+    FMG "No, I haven't been moving around too much. I don't know how strong I am now."
+    YukoCell "Mhm, at least it's just the bed... {i}sigh{/i}, I'll see if I can leave early to come help. Just promise me you won't destroy the house."
+    show FMG neutral
+    FMG "I'll do my best."
+    YukoCell "Please do. I'll give your father a call and let him know what's happening. Please be careful, you two."
+    MC "You can count on us, Mizutani-san."
+    YukoCell "I know. I'll see you guys soon."
+    FMG "Bye, mom."
+    pause .5
+    MC "Now that that's out of the way... We should probably find you some clothes."
+    show FMG aroused
+    FMG "I look good though, don't I?"
+    MC "Very much so. {w}But we must stay focused."
+    MCT "Me especially, my mind is going loco looking at her."
+    show FMG neutral
+    FMG "My bad, I couldn't help myself. The teasing is helping me relax a little, heh."
+    MC "Helps me too."
+    MC "Now, where's your bag? Something {i}has{/i} to fit."
+    show FMG surprised
+    FMG "I just remembered! Alice and I were talking before the trip in case something like this happened."
+    MC "What? Did she lend you a muumuu or something?"
+    show FMG neutral
+    FMG "No, she did offer me one though. I didn't want to risk ripping something else of hers."
+    FMG "That's beside the point, my bag should be in the bathroom. I can go grab it."
+    MC "Wait. {i}I'll{/i} go grab it."
+    MC "And ummm, before I go...uuuuse {w}this to cover yourself up."
+    FMG "A towel?"
+    MC "Better than nothing. How bad can it be?"
+    pause 1
+    show FMG sad
+    FMG "Kei, this barely covers me... my boobs barely fit..."
+    MC "I don't know, looks good to me. I did prefer your previous outfit, probably just me though, heheheh."
+    show FMG neutral
+    FMG "I can't express how much you make me roll my eyes."
+    MC "I'm well aware at this point, ha. I'll be right back, stay put and try not to move so much."
+    FMG "Fiiine."
+    hide FMG with dissolve
+    MCT "Gotta love having the bathroom directly across from her room, nice and easy."
+    MC "Alright, I got it!"
+    FMG "I was worried you might have gotten lost!"
+    pause .5
+    show FMG neutral with dissolve
+    MC "The only thing I get lost in is your eyes."
+    FMG "Let's at least be honest here. There isn't a doubt in my mind that you don't get lost staring at my abs or ass more so than my eyes. "
+    MC "That's up for debate."
+    MC "Back on topic, what exactly are we looking for?"
+    FMG "It should be a gray tank top and a pair of yoga pants. They should be way bigger than everything else."
+    MC "How did you possibly plan for this? You can't predict how big you'd get."
+    FMG "We guessed, we had to. Alice and Chibuki ran some numbers to get a rough estimate based on my last jump in size."
+    FMG "Man, I'm praying I didn't forget to pack it..."
+    MC "Is this it...? {w}Oooh, that's a nice bra, nice pattern."
+    FMG "Right???"
+    show FMG aroused
+    FMG "I got some matching panties to go with it..."
+    MC "You are hornier than me today and I didn't think that would ever happen."
+    show FMG neutral
+    FMG "You don't understand how badly I've been wanting to throw you on a bed and just tear off your clothes."
+    MC "..."
+    MCT "Aaaaaaaaaaaaaaaaaaa."
+    MC "Moving on. I think I found it? No? Maybe? {w}Why is it so hard to find a gray tank top and some pants???"
+    MC "Are you sure it's this bag?"
+    FMG "Yes, I'm sure of it."
+    MC "Skincare, no. Thongs... no. Come on, where are you hiding?"
+    "Akira got down on her knees to help search and when she met the ground, sent a tiny shockwave through the floor."
+    show FMG happy
+    FMG "That is dope! I'm so big I can shake the ground?!?"
+    MCT "Sit on my face, please."
+    MC "That is equal parts terrifying and awesome... {w}I FOUND THEM!"
+    show FMG surprised
+    "At the {i}very{/i} bottom, folded neatly without any wrinkles, was my salvation."
+    MC "I should've realized it was the only neat thing in your bag. You never fold your clothes."
+    show FMG angry
+    FMG "Didn't you pack a-"
+    MC "Nope, doesn't matter put these on, nakie."
+    pause 1
+    FMG "Uugh, my back is too wide, I can't get it past my chest! Stupid big tits, how does Inoue-san deal with this crap??"
+    MC "Get on your knees again, I'll try to pull from the back."
+    show FMG neutral
+    FMG "Okay."
+    play sound Thud
+    show FMG flex
+    FMG "That is never going to stop being cool."
+    show FMG neutral
+    extend " You ready?"
+    MC "As I'll ever be."
+    pause .25
+    MC "On the count of three, we pull."
+    FMG "Mhm."
+    MC "1... 2... {w}3."
+    FMG "Finally. Thanks, Kei."
+    MC "Don't mention it. At least it covers like a third of your upper body."
+    FMG "As long as my boobs aren't hanging out, I don't care. Besides, my abs were already poking out of my shirt before."
+    show FMG flex
+    extend " Now, you can stare at them in their full glory."
+    show FMG neutral
+    FMG "Before you say anything can you please toss me a thong and those pants?"
+    MC "Huh? {w}Oooh, yeah, sure."
+    pause .25
+    FMG "Thanks."
+    MC "You sure the thongs gonna fit?"
+    FMG "Only one way to find out."
+    pause .25
+    FMG "Perfect, and it's not squeezing my ass."
+    MC "I volunteer to fill that role."
+    FMG "Later, little man."
+    MC "Excuse me, but I am average height, thank you very much."
+    show FMG aroused
+    FMG "I know and you look so cute being so tiny."
+    MC "...Just put the pants on."
+    show FMG neutral
+    FMG "Alriiight."
+    pause .25
+    show FMG angry
+    FMG "Dude, these are even worse than the shirt! Cooome on, just a little more!"
+    pause .25
+    $setFMGOutfit(OutfitEnum.CASUAL)
+    show FMG neutral
+    FMG "Holy crap, finally dressed!"
+    MC "I have to ask, what material Alice is using for her clothes. There isn't a single rip or tear."
+    MC "Try not to flex too much though, we don't know how durable the fabric is and your pants look like they're gasping for air with how tight they are around your quads."
+    FMG "Oh, oh, come over to me real quick, I have to see something."
+    MC "Sure?"
+    FMG "Okay, stand here."
+    "She picked me up like I was a child, one hand carefully lifting me off the ground and placing me beside one of her quads."
+    FMG "Kei-kun, you can't deny how freaking awesome it is that one of my thighs is almost as big as your body."
+    show FMG flex
+    FMG "Love to see it."
+    MC "Hm, it is quite... as they say {i}thick{/i}. Heck, it might even be thicc with two c's."
+    MC "I wonder how your parents are going to react to you."
+    show FMG neutral
+    FMG "My mom will be surprised by the size of me but she'll calm down quickly. My dad, however... well he's probably going to pass out. I don't see him not freaking out."
+    MC "I'll stand behind him just to be safe, ha."
+    FMG "Heh... {w}Hey, do you think we can go outside? I want to get out of this room. Everything looks so small and fragile, I don't want to risk breaking anything else."
+    MC "Yeah, no problem."
+    pause .5
+    MC "On second thought, we do have a problem."
+    show FMG sad
+    FMG "The door?"
+    MC "The door."
+    MC "Let me step out for a second. {w}Okay, walk to the door."
+    hide FMG with dissolve
+    "It was a little funny to see her standing next to the door, she had become so wide that her arms were hidden by the door frames leaving only her gigantic quads and puffed out chest in the opening."
+    MC "I won't laugh but it is downright hilarious that your head is cut off by the door."
+    FMG "It's not my fault my parents bought a small house!"
+    MC "Honestly, shame on them."
+    MC "Try and turn to the side and see if you can fit your way through."
+    FMG "Wouldn't I be better off just walking through the door at this point?"
+    MC "As hot as that would be, we told your mom we {i}wouldn't{/i} destroy the house."
+    FMG "I'm sure we could ask Alice to help with the repairs."
+    MC "I'm sure she would but I'd like for it to not come to that."
+    FMG "Uuugh, why couldn't this have happened at school. All I want is to uproot a tree and lift a car, is that too much for a girl to ask?"
+    MC "Most girls wouldn't be asking for that— to each their own I guess."
+    FMG "Pfff."
+    FMG "Back up a bit Kei, I'm going to try and squeeze through."
+    "She turned to her side and tried to push through as slowly and carefully as best she could. It wasn't very effective as she was constantly adjusting herself into such a tight space but damn was it hot."
+    show FMG angry with dissolve
+    FMG "Kei, this isn't working so well."
+    "Akira kept pushing herself through, managing to get a little under half her body out."
+    FMG "..."
+    FMG "Kei, I'm stuck..."
+    MCT "Of course she is."
+    MC "How bad? Can I pull you by chance?"
+    show FMG neutral
+    FMG "While I appreciate the thought, you won't be able to move me a centimeter. {w}You have Alice's number?"
+    MC "Don't do it. We told your mom we'd do our best."
+    FMG "Call Alice and we'll go from there."
+    MCT "You've got to be kidding me."
+    MC "Alice don't fail me now, please."
+    pause .5
+    MCT "Please pick up..."
+    pause .25
+    if isEventCleared("FMGWG004"):
+        WGCell "Hello?"
+        MCT "Alright, time to turn on the charm."
+        MCCell "Heeey, Alice. How are things?"
+        WGCell "{i}Sigh{/i}. What did you two get into now?"
+        MCCell "Hm? Nothing... nothing at all, just calling to catch up with a friend. How's your... uh, clothing business?"
+        WGCell "Let's cut to the chase Keisuke, you've never taken an interest in my business before."
+        MCCell "Alice, I'm appalled by the mere insinuation that I'm harboring some ulterior motive. Can't a friend take an interest in his friend's interests?"
+        WGCell "Name something of interest to me that isn't my business."
+        MCT "Easy-peazy."
+        WGCell "And {i}don't{/i} say food."
+        MCT "Welp, I got nothing."
+        WGCell "How is Akira doing? I'm a bit worried now that you're being so evasive."
+        MCCell "Okay, you got me. So, you know how Akira, Chibuki, and you discussed her potentially having a growth spurt?"
+        WGCell "Yes, I do remember that conversation.... Where are you going with this, if I may ask?"
+        MCCell "Well she did have one and now she's too big to get through the door and as we're talking right now she's stuck about halfway between one."
+        WGCell "Oh my goodness! That sounds awful."
+        MCCell "It's actually kinda funny."
+        show FMG angry-2
+        FMG "For {i}you{/i} maybe."
+        WGCell "It probably is quite the sight, now that you say that. Hehe."
+        FMG "Can we get to the part where you actually help me out here, Kei?"
+        WGCell "Is she alright?"
+        MCCell "Here I'll put you on speaker."
+        pause 0.5
+        show FMG sad-2
+        FMG "Uh... Hey, Alice. I'm alright, not hurt, but I am kind of stuck... actually, more like really {i}really{/i} stuck. And I need your help."
+        WGCell "Well I'd like to help Akira but I'm halfway across the country at the moment."
+        FMG "That's just it, I think you can, but I wanted to ask you first. {w}There's no getting around it, I'm going to have to destroy this door. It's either that or I'm stuck in here forever."
+        WGCell "{i}Sigh{/i}. Don't tell me..."
+        FMG "Look, I know it sounds bad, asking for another favor after getting a free ride on a  private jet across the country..."
+        MC "{size=-6}Not like it was the big fancy jet she owns...{/size}"
+        WGCell "I {i}heard{/i} that."
+        FMG "But the only way I can think to have my parents not absolutely flip out is to assure them the damages are covered somehow. {w}Please, {i}please{/i} Alice, could you help me cover the damages of a broken door frame?"
+        WGCell "Ughh... I can't believe this. What is with you two, always getting into trouble like this?"
+        show FMG neutral
+        FMG "So that's a yes?"
+        MC "It wasn't a no."
+        WGCell "Alright fine. The time I'll spend going back and forth on this is worth less than the door anyway. {w}Just send me the bill when it comes— and make sure it's itemized."
+        FMG "Thank you! You're the best, Alice!"
+    else:
+        WGCell "Hello?"
+        MCCell "Hey, Alice. How have you been?"
+        WGCell "Hotsure-san? {i}Sigh{/i}, what has gone wrong now?"
+        MCT "Sounds like she's not in a particularly good mood. Alright, try to ease her into it."
+        MCCell "What? Can't a friend just call another up for a chat every now and then?"
+        WGCell "I don't recall you being terribly chatty before this occasion, Keisuke. Is everything alright?"
+        MCCell "Oh, yeah, for sure, it's been quite an experience, I'll say that much. Anyway, a quick question for you?"
+        WGCell "Alright, out with it, I guess."
+        MCCell "You know how Akira, Chibuki, and you discussed her potentially having a growth spurt?"
+        WGCell "Yes, I do remember that conversation.... Where are you going with this, if I may ask?"
+        MCCell "Heheh, well she did have one and she's too big to get through the door. It's kinda funny, as we're talking she's stuck about halfway between one."
+        show FMG angry
+        FMG "It is not funny!"
+        WGCell "She's stuck?!? Is she okay?"
+        MCCell "Um, yes?"
+        WGCell "Put the phone on speaker, I want to hear what she has to say."
+        MCCell "R-Right."
+        pause .25
+        MC "All set."
+        WGCell "Akira, Keisuke told me you're stuck in a door? Are you alright?"
+        pause 0.5
+        show FMG sad
+        FMG "Sadly. I'm too big to fit..."
+        show FMG neutral
+        extend " Besides that everything is just peachy."
+        show FMG sad
+        FMG "But seriously, Alice, we need your help."
+        WGCell "I'm not terribly sure how I can help from here. What do you want me to do?."
+        FMG "So, we're in a tough spot. I'm most likely going to have to destroy the door so I can free myself and I hate to ask this... {w}Could you help with paying the damages?"
+        WGCell "So, let me get this straight. {w}You're asking me if I could pay to replace a door that you are planning to destroy, but haven't yet?"
+        FMG "Yes."
+        WGCell "After you just got a plane ride all the way across the country, for free, on my private jet?"
+        MC "Exactly. See, when you put it that way we would have never been in this spot in the first place if it wasn't for you. So it's only fair you help get us out of this mess."
+        show FMG surprised
+        WGCell "I'm hanging up now. Enjoy the rest of your trip."
+        FMG "NOO! Please! Alice, I really need help. Forget what Kei said, he doesn't have the best speech skill, and he's kind of an idiot anyway."
+        MC "I don't know what you're talking about, my logic was flawless. Plus that's just plain rude, I always max speech first, followed by sneak."
+        FMG "Alice, I'm completely wedged in this door frame, it's already starting to crack."
+        FMG "I gotta tell my parents what just happened and the only thing I can think of to stop them from completely freaking out is that the damage will be covered somehow. {i}Pleeeease!{/i}"
+        WGCell "Alright, alright. If it means that much to you. Just send me the bill when it comes. And make sure it's itemized."
+        show FMG neutral
+        MC "What does that even mean?"
+        FMG "Thank you, Alice. Seriously, thank you."
+    WGCell "It's fine, just try not to hurt yourself. I'll be flying down soon for you two and I'd prefer for you to be alive."
+    MCT "No guarantees if I can manage to slide myself between those thighs before then."
+    MCT "I still got it."
+    FMG "We will. Thank you again."
+    WGCell "Mhm, be careful, please."
+    pause .25
+    MC "That went way better than I could've imagined."
+    FMG "True."
+    FMG  "We need to call my parents next. You still have my phone?"
+    MC "Yeah. I'll give them a call."
+    "I called her mom again, giving her a rundown of the whole situation. Mizutani-san wasn't very pleased her house was getting torn apart at first, even with the knowledge that it would be repaired. Not like I could really blame her."
+    "Akira asked to speak to her and told her it was basically our only option. It took a bit to get her to come around but she came around after Akira started begging."
+    YukoCell "It's just the one door, yeah?"
+    FMG "Aheh, we wanted to go outside and that-"
+    YukoCell "Oh my god..."
+    YukoCell "Please, please just {i}try{/i} to keep the damage to a minimum. Your father is already having a heart attack."
+    MCT "Alice is gonna have one too when she gets the bill..."
+    FMG "I will! I swear! Thank you, mom!"
+    YukoCell "My Christmas present this year better be the best damn gift you've ever gotten me."
+    FMG "It will be, I'll get you anything."
+    "They talked for a while longer before Mizutani-san got pulled away into a meeting. Leaving us to our door troubles."
+    FMG "Stand back, Kei."
+    "Finally uncrouching, she began to stand up, easily knocking the top frame out of place as it bowed across her back. Cracks were becoming more noticeable as she pushed the sides of the doorway apart."
+    FMG "Almost got it..."
+    "I had to take a step back as I watched the door morph before my eyes. The supports were crumbling in her grip like paper. The door was playdoh in her hands."
+    "With little to no effort, she had given the door a whole different shape, what was once a rectangle could only be described as a poorly drawn pentagon."
+    show FMG angry
+    FMG "Damn it, I still have to bend down."
+    MC "You rearranged the shape of a door with your bare hands and you're complaining about having to duck."
+    show FMG flex
+    FMG "Yes."
+    MC "You're going to do the same thing to the other door aren't you..."
+    FMG "No, we aren't going out the front. The backdoor slides open, that one should be okay... maybe."
+    MCT "At least Alice has us covered..."
+    jump daymenu
+
+label FMG071:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
