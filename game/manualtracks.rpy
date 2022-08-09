@@ -424,6 +424,28 @@ init python:
     )
     ost.manualDefineList.append(theme_LaB)
 
+    theme_TwiDus = ost.soundtrack(
+        name = "Dusk",
+        path = "Audio/BGM/twilightDusk.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Twilight (Dark)",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_TwiDus)
+
+    theme_WiBr = ost.soundtrack(
+        name = "Wild Blur",
+        path = "Audio/BGM/scene_uncategorized1.mp3",
+        priority = 3,
+        author = "Pocket Sound",
+        description = "Energetic and Fast",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_WiBr)
+
     ## Base Template
     ######################################
 

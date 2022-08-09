@@ -12830,7 +12830,7 @@ label FMG070:
     FMG "Not today. They won't be back till dark..."
     show FMG angry
     extend " I don't know what to do!"
-    MC "Relax, getting angry isn't going to solve anything. We're not at Seichou anymore, we need to take this one step at a time."
+    MC "Relax, getting angry isn't going to solve anything. We're not at Seichou right now, we need to take this one step at a time."
     show FMG sad
     FMG "R-Right."
     MC "First, I'm going to call your parents and let them know then we'll look for some clothes to cover you. I don't know what's going to fit you though"
@@ -12983,8 +12983,9 @@ label FMG070:
     FMG "Oh, oh, come over to me real quick, I have to see something."
     MC "Sure?"
     FMG "Okay, stand here."
-    "She picked me up like I was a child, one hand carefully lifting me off the ground and placing me beside one of her quads."
-    FMG "Kei-kun, you can't deny how freaking awesome it is that one of my thighs is almost as big as your body."
+    "I walked over to her right leg and looked up at her, amazed by the sheer size of her legs."
+    MC "Can I poke it? I've never seen so much muscle definition in quads before."
+    FMG "Kei-kun, don't make it weird... {w}But, you can't deny how freaking awesome it is that one of my thighs is almost as big as your body."
     show FMG flex
     FMG "Love to see it."
     MC "Hm, it is quite... as they say {i}thick{/i}. Heck, it might even be thicc with two c's."
@@ -13151,7 +13152,888 @@ label FMG070:
     MCT "At least Alice has us covered..."
     jump daymenu
 
-label FMG071:
+label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
+    $setProgress("FMG", "FMG072")
+    scene Okinawa House Interior with fade
+    play music Peaceful
+    "With what happened yesterday, Akira slept on the family room floor, I hopped off the couch to keep her some company and so we could be just a little closer to each other."
+    "Today was our last day in Okinawa. I honestly wish we could have stayed here longer. The weather was much nicer than back at school, where it was starting to get cold."
+    MC "You got your stuff packed?"
+    show FMG neutral with dissolve
+    FMG "You're the last person who should be asking me that."
+    MC "Excuse me for being concerned. {w}I take it back. I hope you didn't pack anything now."
+    FMG "Pfft! You just want to see me with less clothes."
+    MC "That's just a side benefit of jinxing you."
+    "{i}bzzt... bzzt...{i}"
+    FMG "I bet that's Alice. Probably to tell us not to be late."
+    MC "It's her alright."
+    if isEventCleared("FMGWG004"):
+        FMG "Kind of sucks she didn't get to come with us on the trip."
+        "I picked up Akira's phone since I was closer and put Alice on speaker for her."
+        FMG "Yo, Alice. What's happening?"
+        WGCell "I'm two hours out from landing. I hope you two are packed and ready to be at the airport by the time I arrive."
+        MC "Don't worry, we'll be ready."
+        WGCell "That's what I was hoping to hear. I'll see you two then."
+        FMG "Wait. Alice."
+        WGCell "Hm? What is it, Akira?"
+        FMG "You said you hadn't seen Okinawa before. Do you want to come hang out with us for a little while before we have to leave?"
+        WGCell "Hmmm, well it did look beautiful from the plane view as we descended in, and I heard the weather is nice this time of year..."
+        FMG "So that's a yes?"
+        WGCell "I suppose the flight crew could use a more extended break. I had accounted for some delay in my itinerary and we've made good time so far. So I think I can work in some extra time to visit."
+        FMG "Sweet. I'll text you my address. Just meet us here and we'll go from there when you land."
+        WGCell "That sounds like a plan then. I'll see you both in a couple of hours."
+        "{i}*Click*{/i}"
+        MC "Are you sure about this?"
+        FMG "Sure about what?"
+        MC "Bringing along Alice. I mean, yeah this place is basically a tropical paradise, but nothing really impresses her. That and she's kind of a wet blanket to be honest. Maybe not as allergic to fun as Natsuko, but pretty close."
+        FMG "I know, I know. But I guess that's part of why I wanted her to come. Hopefully pull her away from being such a stick in the mud. She's been a good friend."
+        FMG "That and I feel like I owe her {i}something{/i} after she gave me a free plane ride and I guilted her into paying for that door."
+        FMG "I bet she'll love the beaches here."
+        MC "I heard she has her own private beach at her family's summer home."
+        FMG "What?!? {w}I take back everything I said, she's been holding out on us."
+        MC "Tell me about it."
+        FMG "Either way though, I wanted to show her Hidaka-san's soba shop."
+        MC "Oh yeah, you'd be doing that old man a favor. When he sees her waddling through the doors, he'll think he hit the jackpot!"
+        show FMG sad
+        FMG "Assuming she can fit through the doors..."
+        MC "Oh come on. The shop had double doors. She's not {i}that{/i} fat."
+        show FMG neutral
+        FMG "Kei, I know five fat people and she's four of them. I might have made a mistake with this one."
+        MC "That's assuming you still even fit through the doors with those boulder shoulders."
+        show FMG flex
+        FMG "I prefer cannonballs myself."
+        show FMG neutral
+        FMG "Looks like we got a little while before Alice arrives. Whatcha want to do to kill some time?"
+        MC "You want to play some cards? I got a pack in my bag."
+        FMG "I guess. Not like we got anything better to do."
+        pause .5
+        show FMG angry-2
+        "We passed the time with a few card games, which I will add, had me winning most of them."
+        FMG "You've been cheating haven't you?"
+        MC "Why is that automatically your first assumption? The more likely possibility is that you just suck."
+        FMG "If I find out you've been cheating, I'm going to have Alice sit on your head."
+        MCT "Not that I think she would... but I'm going to let her win the next one just in case."
+        "{i}bzzt... bzzt...{i}"
+        MC "Looks like you got a text."
+        WGCell "<I'll be arriving in a couple of minutes.>"
+        show FMG happy
+        FMG "Sweet! She's almost here. I'm looking forward to that soba."
+        MC "It's a good thing we're heading back to the school after this. I think you'd start to look like Alice if you still got to live so close to that place everyday."
+        show FMG surprised-2
+        FMG "Yeah, well... you..."
+        show FMG angry-3
+        extend " That's not a nice thing to say to a lady."
+        MC "Hehe, not feeling so confident about that one huh?"
+        show FMG angry-2
+        FMG "A-At least I can see!"
+        MC "{i}gasp{/i}... You take that back before I hit you with a hair flip."
+        FMG "Try me little man."
+        MC "Just you wait. When we get back, it is ON."
+        show FMG flex
+        FMG "If that's what you want..."
+        MC "No, no, you're not supposed to look forward to it. You're supposed to fear my threats."
+        show FMG neutral
+        FMG "You're about as threatening as a puppy, ha!"
+        MC "{size=-6}Your time will come...{/size}"
+        scene Okinawa House Exterior
+        show FMG neutral at Transform(xzoom=-1)
+        with fade
+        play music WGAlt
+        "We walked out the back sliding door that was still big enough for Akira to get out of the house without breaking anything. Looking down the street we saw a giant black luxury SUV with tinted windows coming up the road."
+        "Judging by the bulge in the tires and the groaning in the exhaust from it having to downshift to get up the hill, it was hauling something pretty heavy."
+        FMG "That's gotta be her. No one in this neighborhood has that nice of a ride."
+        "As it grinded to a stop outside Akira's house, a uniformed chauffeur hopped out and proceeded to open the side double doors that flared outward from each other, saloon style."
+        "Alice emerged from the car... or who I thought was Alice. {w}She looked more like someone who {i}ate{/i} Alice... plus a couple of cheesecakes."
+        show FMG neutral at altMove(0.5, 0.25)
+        show WG neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+        FMG "{size=-6}You know, what I said about her being four of the fat people I know... make that {i}seven{/i}...{/size}"
+        MC "{size=-6}Looks like you're not the only one who had a growth spurt!{/size}"
+        FMG "{size=-6}Yeah, a growth spurt, not a growth explosion...{/size}"
+        show WG surprised-2
+        "Alice was just as shocked to see Akira as both of us were to see her. She gave Akira a lookover from foot to head as she craned her neck upward, her jaw dropped the entire time."
+        WG "Akira? Is that you!?"
+        WG "You've grown so much I hardly recognize you!"
+        show FMG flex
+        FMG "Thanks! You too."
+        show WG stern
+        show FMG surprised-2
+        extend " !!"
+        MCT "And you think my speech skill is terrible."
+        show WG doubt
+        FMG "You too-ook so long to get here I could hardly wait."
+        show FMG neutral
+        extend " There's just so much to show you. Let's go!"
+        MCT "Quick to deflect, you've learned from the best."
+        scene black with fade
+        pause 1
+
+        scene Okinawa Market
+        show FMG neutral at Transform(xzoom=-1), Position(xcenter=0.25, yalign=1.0)
+        show WG neutral at Position(xcenter=0.75, yalign=1.0)
+        with fade
+        play music Country
+        FMG "You gotta see this beach. I guarantee you've never seen anything like it, not even on your private island."
+        WG "My father doesn't own the entire island, just a large portion of it. I've seen some very beautiful beaches before, from Fiji all the way to the Caribbean, but I would certainly be remiss to overlook such a beautiful site found right here in Japan."
+        "Navigating the sidewalks down the town's streets proved more of a hassle than we had expected. It just wasn't built for big girls like these two. They couldn't walk side by side and not be halfway into the street."
+        "Walker 1" "What is this? Is the circus coming to town?"
+        "Walker 2" "I don't know, but it's some kind of freak show."
+        show FMG flex
+        FMG "Take a picture, it'll last longer."
+        "Walker 2" "S-Shit! She wasn't supposed to hear that."
+        show FMG angry
+        FMG "Yeah, get lost."
+        "Fitting on the sidewalk was the least of our worries, the spectacle we drew was by far the worst part."
+        "Gawker" "Look at that. A gorilla, a hippo, and a wooly sheep."
+        "Apparently I wasn't immune to their audible insults either."
+        FMG "{i}Pfft{/i}! Now that I think about it, you do look due for a sheer there dude."
+        MC "Uh, little help here?"
+        FMG "Oh, right."
+        FMG "Hey you!"
+        "Gawker" "!"
+        FMG "Less gawking, more walking."
+        "Gawker" "R-Right!"
+        show FMG neutral
+        "Akira didn't mind being the center of attention, she wanted to be noticed. But as we walked further along, it was pretty clear she was {i}not{/i} the center of attention."
+        show FMG angry-2
+        "Rude Lady" "Oh my god! Look at how fat she is! What a pig!"
+        "Rude Guy" "Now that's just rude— to pigs. {w}Pigs don't get that fat. She's a heifer if I ever saw one."
+        "None of this was surprising. What was surprising was how unflinching Alice was to every insult and mockery directed towards her. Was she hard of hearing?"
+        "Rude Lady" "I can't believe someone would let themselves go like that. Clearly she has no self-control."
+        "Rude Guy" "Yeah, she's probably trying to find another buffet to get kicked out of."
+        show FMG angry
+        FMG "That's it! I'm gonna teach those two a lesson. No one talks about my friends like that."
+        "Akira looked to be on the warpath to go sort out those two— {w}until she felt a firm tug on her arm holding her back."
+        show WG stern
+        show FMG neutral
+        FMG "?"
+        WG "Don't let them see you weak. {w}When you react, you've shown them they've already gotten to you."
+        FMG "It's not a big deal Alice. None of them can back it up. As soon as I even twitch in their general direction they all shut up. Besides, if I don't do something they'll never stop."
+        "Alice looked right up at Akira, with her stern, steely eyes."
+        WG "Believe me Akira, it never stops."
+        WG "We'll never make it anywhere if you have to stop and confront every slack-jawed jackass that thinks they need to say something. Let's just ignore them and get to where we're going."
+        show FMG sad-2
+        FMG "Right. Sorry. Let's just go."
+        show FMG upbeat at altMove(0.5, 0.5)
+        hide WG with dissolve
+        "Having said that, as Alice and I walked on, Akira turned around looking right at those two cackling hyenas, Akira put her two fingers in front of her eyes and then pointed at them."
+        "I think the guy just about pissed himself before they both turned around running."
+        scene black with fade
+        "Our quicker pace made it easier to get to the beach without as much fanfare."
+
+        scene Okinawa Beach with fade
+        play music Beach
+        "The turquoise waters of the beach were as breathtaking as the first time Akira took me to see them. Maybe not as breathtaking as one of Akira's hugs, but close enough."
+        "I could understand why she would have felt homesick to have to suddenly leave all this behind out of nowhere to come to the academy."
+        show FMG neutral at Transform(xzoom=-1), Position(xcenter=0.25, yalign=1.0)
+        show WG surprised-2 at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        WG "Well, this certainly did not disappoint, Akira. I've seen quite a few beaches around the world and this is certainly right up there with the best in the world."
+        show WG happy
+        extend " It's simply picturesque. I love it!"
+        show FMG happy
+        FMG "See? What did I tell you! Well worth the trip, huh?"
+        WG "I have to agree. I wish I would have brought my swimsuit."
+        MCT "That's about the last thing I'd wish for. {i}Yikes{/i}."
+        "An image flashed in my mind of Alice in a swimsuit with more bulge than fabric visible... and suddenly I wasn't that hungry for soba anymore."
+        MCT "{i}Oh the humanity!{/i} {w}Wait a second..."
+        MC "{size=-6}Hehe... huge manatee. I crack myself up.{/size}"
+        FMG "They're not manatees, Kei. They're called dugongs."
+        MCT "If only I could reveal my comedic genius without the threat of Alice sitting on me."
+        MC "Wait really? You can see those too? Where?"
+        "Sure enough, just off the shore the gentle giants were floating around hoovering up whatever sea grasses they could find on the ocean floor. Strange creatures, really. I couldn't decide if they were cute or ugly, but they were neat to watch."
+        FMG "Look! There's the sea turtles. I told you you'd get to see them."
+        MC "This has gotta be the coolest trip I've ever taken."
+        "I don't know what it was about watching those things just gently paddle their way through the water, but I felt like I could watch them for hours."
+        show FMG happy at altMove(0.5, 0.5)
+        hide WG with dissolve
+        "I snuck in next to Akira to hold her hand while Alice watched on. Her grip was way too tight, but I didn't think I was going to break anything— at least yet."
+        "I could tell she had been waiting the whole trip to share this with us. I felt relieved to finally see her happy again after all she'd been through recently."
+        scene black with fade
+        pause .5
+        scene Okinawa Beach with fade
+        "After taking in the sights and sounds of the Okinawan ocean, our sightseeing adventure was interrupted by what I could only describe as what sounded like a pack of wild beasts snarling."
+        show FMG surprised-2 at Transform(xzoom=-1), Position(xcenter=0.25, yalign=1.0)
+        show WG surprised-2 at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        "Which turned out to be the combined rumblings of Alice and Akira's stomachs. Probably the worst sounding duet I've ever heard in my life."
+        MC "Hungry?"
+        show WG neutral
+        show FMG neutral
+        FMG "I think it's about time for some soba."
+        WG "Soba? It has been a while since I've had any. That does sound good."
+        show FMG happy
+        FMG "Oh Alice, you gotta check this place out. It's the best soba on the island, maybe even the entire country! It's that good."
+        show WG doubt
+        WG "Are you sure? You aren't just saying that are you?"
+        "I could tell Alice didn't want to get her hopes up, but one could be forgiven for assuming there was approximately zero chance she'd ever turn down anything remotely edible."
+        MC "She's probably right Alice. It's pretty good."
+        show WG haughty
+        WG "Very well then. I will defer to your judgment, Akira."
+        show WG neutral-2
+        extend " Lead the way."
+        scene black with fade
+        pause 1
+
+        scene Restaurant with fade
+        play music DayByDay
+        "It didn't take us too long to get to the soba shop. Although getting into the place required a bit of maneuvering."
+        show FMG neutral at Transform(xzoom=-1), Position(xcenter=0.25, yalign=1.0) with dissolve
+        "Akira had to duck to avoid hitting her head on the door,"
+        show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
+        extend " and Alice had to give herself an extra nudge to pass through as her hips brushed the sides of the double doors."
+        show WG neutral
+        FMG "See? What do you think?"
+        show WG neutral
+        WG "It's rather modest, but some of the best food in the world comes from humble origins. It certainly smells lovely."
+        "Hearing the commotion, I could see a figure walking out from behind the curtain that led to the kitchen."
+        Hidaka "Is that you Mizutani-chan!? How have you grown so much since the last time!?"
+        show FMG happy at Transform(xzoom=-1)
+        FMG "Hehe. Yeah, that happens sometimes. I can't really explain it."
+        Hidaka "My my, and I thought you were big before!"
+        Hidaka "{size=-6}Speaking of big...{/size} {w}I see you've brought a friend."
+        show FMG neutral
+        FMG "Hidaka-san, this is Alice. I told her you had the best Soba on the whole island. She seemed skeptical, but I know you'll prove her wrong."
+        Hidaka "Ohoh! You flatter an old man, but I do think it is quite good. What would you like?"
+        show FMG happy
+        FMG "We're both starving. We'll have two family specials. What do you want, Kei-kun?"
+        MC "I'll have the beef soba bowl."
+        Hidaka "Two family specials? Those are soup bowls intended for a family of four!"
+        show FMG flex
+        FMG "I know what I'm about Hidaka-san. {size=-6}And besides, you could probably fit a family of four in that belly, let alone a bowl of soup for one.{/size}"
+        Hidaka "{size=-6}Hmm, good point.{/size} Alright, two family specials and one beef sobal bowl coming up!"
+        "It didn't take long for the old man to bring out the soba bowls. I'm assuming most everything was ready to go except to throw the fresh soba noodles into scalding hot water."
+        "I would have thought the tiny old man would have been pretty unsteady bringing out two massive bowls, plus my dish on a single tray, but I suppose he had plenty of practice over the years."
+        Hidaka "For you sir, and for our two hungry ladies. Enjoy!"
+        FMG "It looks amazing! Thank you Hidaka-san!"
+        Hidaka "My pleasure."
+        WG "Mmm, it does smell delightful."
+        "I cannot stress enough how daunting the size of these bowls were. They could comfortably feed a family of four— {w}rugby players."
+        "I could probably finish one, shortly before my stomach would rupture and I died. That's what we're talking about here."
+        show FMG happy
+        show WG doubt
+        FMG "{i}*SLLUUUURRRRRP!*{/i}"
+        WG "Could you at least {i}try{/i} to be less disgusting?"
+        FMG "Oh, come on Alice. It's really good. You're supposed to slurp soba! Besides, no one else is around. Who cares if we slurp a bit too loud?"
+        WG "Fine. You can do as you wish, but I prefer to maintain more proper etiquette regardless of my surroundings."
+        show FMG neutral
+        show WG neutral
+        FMG "Suit yourself. But for my money I'm going to enjoy it to the fullest. I have no idea when's the next time I'll get to have this soba— so I'm going to make the most of it."
+        WG "{size=-6}{i}*SLURRP*{/i}{/size}"
+        show WG surprised-2
+        FMG "I heard that!"
+        show WG sly
+        WG "Oh who cares? I'm on vacation."
+        show FMG happy
+        FMG "That's what I'm talking about!"
+        show WG neutral
+        show FMG neutral
+        "Naturally, despite having a portion more than four times the size of my dish, it did nothing to stop either of them from plowing through all of theirs before I even got halfway through mine."
+        show FMG happy
+        FMG "Mm Mm Mmm! That was great! I could probably even go for another."
+        MCT "I'm starting to think hanging out with Alice isn't the best influence on Akira."
+        show WG neutral-2
+        WG "I must admit, it was quite good."
+        show FMG neutral
+        FMG "‘Quite good'? Come on! You gotta admit this is the best soba you've ever had!"
+        show WG neutral
+        WG "Well... maybe not quite, but it is up there."
+        show FMG angry-3
+        FMG "What!?"
+        show WG neutral
+        WG "Don't get me wrong, it's right up there with the best I've had, but I don't think it's fair to compare it to a 12,000 yen lunch at a five star restaurant in Singapore."
+        show FMG surprised
+        FMG "12,000 yen! For soba! Who has that kind of cash?"
+        WG "..."
+        show FMG neutral
+        FMG "Oh right..."
+        FMG "Well to me it's the best I ever had. I love it so much I bet I could eat even more than you could."
+        show WG surprised-2
+        WG "I beg your pardon?"
+        FMG "Oh I'm not joking. I'd eat this everyday if I could."
+        show WG doubt
+        WG "I don't doubt you enjoy this Akira, but trust me, you don't even know what a real appetite feels like."
+        show FMG angry
+        FMG "What did you say?"
+        show WG sly
+        WG "You heard me just fine."
+        FMG "Oh it's on now! No one questions my love for Hidaka-san's soba!"
+        FMG "I'll prove it too!"
+        WG "Is that a dare? Are you going to pull out your chicken dance and squawk like a fool again?"
+        show FMG upbeat
+        show WG surprised-2
+        FMG "No. It's a bet!"
+        show FMG neutral
+        FMG "What do you say? Whoever can eat the most soba picks up the tab."
+        show WG doubt
+        show FMG surprised-2
+        WG "We both know you didn't bring any money to pay for lunch when you invited me."
+        show FMG sad-2
+        FMG "{size=-6}You didn't have to say it outloud...{/size}"
+        show FMG flex
+        FMG "But that's how confident I am that I'm going to win this!"
+        show WG sly
+        WG "Bluffing only works when the other player folds."
+        show WG haughty
+        show FMG angry-3
+        extend " You may have grown taller, but you're in over your head."
+        FMG "Hidaka-san! Two more family specials, and keep them coming!"
+        Hidaka "{i}Whaa!{/i} You finished already!?"
+        "I couldn't believe what I was hearing. I should have intervened, but I can never get a word in edgewise when these two go at it with each other. I had to pull Akira aside."
+        show FMG neutral at altMove(0.5, 0.5)
+        hide WG with dissolve
+        MC "{size=-6}Akira, you know I love you and will support you no matter what... {w}But this is by far the dumbest thing you've ever done.{/size}"
+        FMG " {size=-6}Geesh, thanks for the support dude.{/size}"
+        show FMG happy
+        extend " {size=-6}Relax. I got this. All the best competitive eaters are ripped. All that extra belly just pushes down on the stomach and limits how much fat people can eat in one sitting.{/size}"
+        show FMG neutral
+        MC "{size=-6}Do you honestly think the normal rules of how things should work apply to anything that's happened to us since the start of the year?{/size}"
+        show FMG surprised-2
+        FMG "Aw damnit! You're right. This {i}is{/i} the dumbest thing I've ever done."
+        show FMG sad-2
+        FMG "No way to back out now."
+        show FMG neutral
+        extend " Oh well. She's paying for my door, I don't want to owe her even more when she picks up the tab."
+        MC "That's the spirit... or something like that. Just try not to throw up, or you know... die."
+        FMG "Pshhh! Don't be so dramatic. Have a {i}little{/i} faith at least."
+        show FMG neutral at altMove(0.5, 0.25)
+        show WG haughty at Position(xcenter=0.75, yalign=1.0) with dissolve
+        "Needless to say— I didn't. Akira was going down in flames, and I wanted to rub her nose in it forever. In that respect, it was glorious."
+        Hidaka "Here you go ladies. You must be quite hungry, ohoho!"
+        show FMG upbeat
+        FMG "I'm just getting started."
+        show WG sly
+        WG "Could have fooled me, you look like you already started to slow down after the first one."
+        show FMG happy
+        FMG "Fat chance!"
+        show WG doubt
+        show FMG surprised-2
+        FMG "..."
+        show FMG neutral
+        show WG neutral
+        FMG "Whatever, you know what I meant. Just keep it coming Hidaka until one of us cries uncle!"
+        Hidaka "I think I'm gonna need a bigger bowl."
+        "Hidaka scurried back into the kitchen to get ahead of things while Akira and Alice began their chow-down in earnest."
+        "Between all the slurping and guzzling between the two it didn't take long to see them near the bottom of their new bowls."
+        "Meanwhile, I was just sitting between them debating if grabbing the soy sauce in the center of the table was worth the risk of losing a hand in the midst of this soba bloodbath."
+        show WG haughty
+        WG "Finished."
+        FMG "Done!"
+        Hidaka "Finished already? Ohoho! You must really like this soba. Here are the next bowls as you requested. I'll take the dirty ones."
+        show FMG happy
+        show WG neutral
+        FMG "Good food and fast service. Thanks Hidaka-san!"
+        show FMG neutral
+        "Though neither one would admit it, they were already starting to slow down on the third one. Not normal slow mind you, more like a normal person that hadn't eaten anything for a week, but still noticeably slower."
+        show FMG happy
+        FMG "Slowing down there, Alice?"
+        show WG sly
+        WG "Not as slow as you, if that's what you're asking."
+        show FMG angry-2
+        FMG "Less talking, more eating."
+        "At this point, I should have at least made an attempt to stop the madness, but the bigger part of me wanted Akira to learn her lesson... so I could make fun of her later."
+        scene black with fade
+        pause .5
+        scene Restaurant
+        show WG worried at Position(xcenter=0.75, yalign=1.0)
+        show FMG sad-2 at Transform(xzoom=-1), Position(xcenter=0.25, yalign=1.0)
+        with fade
+        "Once they finished the third bowl, it was clear neither one actually wanted to be doing this anymore."
+        MC "Uhh, you both realize you don't have to do this, right?"
+        show WG doubt
+        FMG "That sounds like loser talk, Kei. Maybe Alice wants to throw in the towel, but I'm going to push on."
+        WG "We'll see about that!"
+        MCT "Dang, Akira was right, my speech skill really {i}is{/i} terrible."
+        Hidaka "Read for another I see? Sorry this one took so long to bring out. You ladies are hard to keep pace with! Enjoy."
+        show FMG neutral at Transform(xzoom=-1)
+        show WG doubt
+        FMG "Ready to give up buttercup?"
+        show WG haughty
+        WG "Sounds more to me like you're trying to offer a truce."
+        show WG sly
+        extend " Which just means you're ready to quit."
+        show FMG angry-2
+        FMG "You're going down! {w}...That is {i}urp{/i} uh, after I get this down."
+        show FMG sad-2
+        show WG worried
+        "In contrast to the previous bowls this latest one was a slog for both of them. I knew Akira was tough as nails, but Alice wasn't nearly as soft as her appearance suggested, they both powered through like champs."
+        Hidaka "You're about to clear me out, ohoho! I need to roll out some more soba dough. The next one will take longer."
+        show FMG surprised
+        show WG surprised
+        FMG "The next one!?" (multiple=2)
+        WG "The next one!?" (multiple=2)
+        show FMG neutral
+        show WG surprised-2
+        FMG "I mean uhh.. bring it on!"
+        show WG doubt
+        WG "Your false bravado is fooling no one."
+        show FMG sad-2
+        show WG worried
+        FMG "I don't even care anymore, let's do this."
+        "Both of them were practically quaking in fear at the prospect of tackling this fifth bowl. They were eating slow, even by my standards, but to their credit, they both steadily whittled away at their bowls."
+        show FMG sad
+        show WG neutral
+        FMG "{size=-6}{i}Ughhhh!{/i} I don't think I'm gonna make it, Kei-kun.{/size-6}"
+        MC "Oh come on, you have like two bites left and some broth, just slurp the rest down and you'll be finished."
+        MCT "Hopefully not finished all over the carpet afterward either."
+        show FMG happy
+        FMG "You're right! {i}whew{/i} I... can... do this!"
+        "Mustering her last strength of will, Akira managed to shotgun down the last few morsels of her bowl."
+        show FMG flex
+        FMG "I did it!"
+        show FMG surprised-2
+        extend " {i}Ooof!{/i}"
+        show FMG sad
+        extend " I don't feel so good..."
+        "It wasn't going to be enough to beat Alice, but she gave it her all."
+        show WG neutral-2
+        show FMG surprised-2
+        WG "I have had enough. You win."
+        play music Peaceful
+        MC "...? {w}You what now?"
+        WG "I don't think I could handle another bite of soba. I'm not going to finish this bowl."
+        "Sure enough, Alice's bowl still had some bites left at the bottom and a little bit of broth."
+        MC "Holy shit! You really did it Akira! {w}...I mean, of course. No doubt in my mind. Never doubted you for a second. Yes sir-ee!"
+        show FMG neutral
+        FMG "You're such a bad liar! I'd crush your tiny head if the thought of moving an inch didn't make me want to blow chunks right now."
+        MCT "Finally..."
+        Hidaka "Sorry for the delay but I need to make more noodles for the dinner crowd. You two cleared me out."
+        FMG "That won't be necessary Hidaka-san. We're done here."
+        Hidaka "Oh great. To be honest, this old man was getting tired trying to keep up with you two hungry ladies. I'll get you the check."
+        show FMG surprised-2
+        WG "Actually, I'd be interested in viewing the dessert menu."
+        Hidaka "Ohoho! Certainly. Anything for my best customers!"
+        MC "What? You just said you were full."
+        show WG surprised-2
+        WG "No, I said I have had enough. As in \"I have had enough soba\". It's just simply not enjoyable to eat the same thing {i}ad nauseam{/i}."
+        show WG neutral
+        extend " Besides, no proper meal is complete without a dessert course."
+        show FMG neutral
+        "Akira and I just stared at each other, dumbfounded."
+        MCT "What the hell just happened?"
+        hide WG with easeoutright
+        MC "You really beat her... well mostly— sort of anyway. You beat the challenge and that's all the matters. It's pretty crazy to think about, honestly."
+        MC "{size=-6}I mean I thought her belly was big before... but just look at it now...{/size}"
+        FMG "Uh... you okay there Kei-kun?"
+        show FMG sad-2
+        FMG "Don't tell me that's what you're into now."
+        show FMG angry-2
+        MC "For your sake that'd be a good thing if you keep making this a habit."
+        FMG "{i}Urrp!{/i} Ugh, just shut up! I'm too full to think of a comeback."
+        show FMG angry
+        FMG "And stop staring at her belly. It's getting weird man."
+        MC "I know but I can't help it. It's like I'm stuck in its gravitational pull."
+        show FMG surprised-2
+        FMG "Hmm, now that you mention it... the jiggling... it's hypnotic."
+        show WG doubt at Position(xcenter=0.75, yalign=1.0) with easeinright
+        WG "What are you two staring at?"
+        show FMG surprised
+        MC "Nothing!" (multiple=2)
+        FMG "Nothing!" (multiple=2)
+        jump daymenu
+    else:
+        "I answered my phone and put it on speaker for Akira."
+        MC "Hey, Alice, what's up?"
+        WGCell "Hello, you two, I'm calling to let you know I'm two hours out from landing. I hope you two are packed and ready to be at the airport by the time I arrive."
+        FMG "Yeah, we're all packed. But I... um, I don't know if we can take a taxi anymore."
+        WGCell "Ah, that's right. Hmm, I'm sure you'll figure something out. Give me a call if it's still an issue in an hour."
+        show FMG happy
+        FMG "Will do. See you soon, Alice."
+        WGCell "Mhm, try to enjoy the remainder of your trip.."
+        "{i}*Click*{/i}"
+        pause .5
+        MC "You have any ideas for transportation? Cause I got nothing and I don't think you're fitting on the biggest bus they have here."
+        show FMG neutral
+        FMG "Hmmmm, I could carry you there. We didn't bring any carry-ons, I should be able to get everything on my shoulders."
+        MC "That's like eight or nine bags worth of stuff..."
+        show FMG flex
+        FMG "You think I can't handle a few bags and you? I'm wider than my house doors, I can easily fit the straps around my shoulders."
+        show FMG neutral
+        "Sure enough, she was able to get all of our luggage around her shoulders with the exception of her backpack."
+        MC "I got it, don't worry."
+        FMG "Thanks, Kei-kun."
+        pause .25
+        FMG "Here's the plan, Kei. We don't know how strong I am, so I'll get down on my knees and you can hop into my arm. I don't want to risk picking you up and accidentally crushing you."
+        MC "{size=-6}Damn it{/size}... {w}I understand..."
+        play sound Thud
+        MC "That is sooo cool."
+        show FMG flex
+        FMG "I know, right?!?! I can't wait to freak Chibuki out with it."
+        show FMG neutral
+        FMG "I'll do my best to keep my hand still. Try not to move so much and we should be okay. We'll go out the back door, at least one door still works in this house."
+        scene black with fade
+        pause 1
+        scene Okinawa House Exterior
+        show FMG neutral
+        with fade
+        stop music
+        FMG "Hold on as best you can."
+        MC "Why-"
+        play music WildBlur
+        "I knew Akira was fast, that didn't prepare me however for how fast she was now..."
+        MC "Going a little fast, dontcha think?"
+        FMG "You want me to go faster? I'm jogging right now."
+        MC "HUH?!?"
+        MC "Nah, I'm good. My breakfast might come back up if you decide to sprint."
+        scene black with fade
+        pause 1
+        scene Airport Flip
+        show FMG neutral
+        with fade
+        play music DayByDay
+        MC "That-That is freaking impressive, holy crap... You ran for like 40 minutes straight."
+        FMG "To be fair, I could've done that when I was smaller. The impressive part is carrying you in one arm and the luggage on top of that."
+        show FMG flex
+        FMG "And I don't feel a thing. Heck, I'm ready to do that again. It was dope."
+        show FMG neutral
+        FMG "We got some time to kill before Alice arrives. Whatcha want to do to kill some time?"
+        MC "I've wanted to thumb wrestle you. Unfortunately, that ship sailed when your second growth spurt happened. I feel you'd snap my whole arm with just your thumb alone."
+        FMG "Sounds cool. Let me see your arm, we can put your theory to the test right now!"
+        MC "Don't touch me, you fiend."
+        show FMG happy
+        FMG "Scared?"
+        MC "Hardly. I'd dropped you like a sack of potatoes."
+        "She bent down and gently kissed me on the cheek."
+        MC "That's it??? Come back."
+        "She bent down again and I planted my lips on hers."
+        show FMG neutral
+        FMG "Love you."
+        MC "Feelings mutual. {w}You want to play cards at that table? I got a pack in my bag."
+        FMG "I guess. Not like we got anything better to do."
+        "We passed the time with a few card games, which might I just add, had me winning most of them."
+        MC "The size of the cards in your hands makes me chuckle. They look so small, it's hilarious."
+        FMG "Almost as funny as how bad you're getting your ass kicked."
+        MC "Pfff, did you forget the other five rounds?"
+        show FMG angry-2
+        FMG "Those don't count. You were cheating!"
+        MC "S-A-L-T-Y."
+        "{i}bzzt... bzzt...{i}"
+        MC "That has to be Alice... {w}Yep, it is. I'm surprised how fast time flew."
+        show FMG neutral
+        FMG "At least it means we're done playing these awful games."
+        MC "Youuuu suuuuck. {w}I'll make fun of you some more after the phone call."
+        show FMG angry
+        pause 1
+        MC "Alice! What's the update?"
+        show FMG neutral
+        WGCell "We're landing now, you two can make your way over."
+        MC "On our way, thanks again for all this. Talk to you soon."
+        "{i}*Click*{/i}"
+        FMG "Let's roll."
+        scene black with fade
+        pause 1
+        scene Airport Flip
+        show FMG neutral at Transform(xzoom=-1), Position(xcenter=0.5, yalign=1.0)
+        with fade
+        "As we approached the airplane, I noticed that something seemed off about it..."
+        MC "Hey... Does something seem... different about Alice's airplane?"
+        show FMG neutral at Transform(xzoom=-1)
+        FMG "I don't know, looks like any old airplane to me. Maybe you're starting to go crazy... well, crazier."
+        MC "Hmmmm... {w}The door is wider!"
+        FMG "You're telling the wrong person, it looks smaller to me. You know, cause I got taller... {size=-6}shorty{/size}"
+        MC "I hope you hit your head on the door."
+        FMG "Shorty says what?"
+        MC "I'm not saying it."
+        "Our banter was interrupted by the plane door swinging opening, followed by Alice stepping out to greet us... much larger than she was when she dropped us off..."
+        show FMG surprised-2 at altMove(0.5, 0.25)
+        show WG neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+        MCT "{i}Yikes!{/i} Akira's not the only one who had a growth spurt it seems."
+        MC "{size=-6}Don't say a single word about her size.{/size}"
+        FMG "{size=-6}I was going to tell you the same thing...{/size}"
+        show WG neutral
+        WG "Greetings, you two, I hope you've enjoyed your trip. I'll have the help get your bags and we can get ready for taking off."
+        MC "Hahahaha... right..."
+        MC "{size=-6}Akira, the size of that stomach is doing something to me, it's like it has its own gravitational pull. My mind is getting hazy...{/size}"
+        show FMG neutral
+        FMG "{size=-6}Stay strong, dude, I'll flex my arms for you when we board. Just keep it together a little while longer.{/size}"
+        MC "{size=-6}I can't... not anymore. I'm not... strong enough.{/size}"
+        FMG "Uhh, Alice, do you have any medicine on board??"
+        show WG surprised-2
+        WG "Is everything alright???"
+        show FMG sad
+        FMG "Kei is having a small headache and could use some aspirin... {i}cough{/i}"
+        show WG neutral
+        WG "Pick him up, and toss him inside. We'll get him sorted."
+        MC "{size=-6}B...Belly.{/size}"
+        jump daymenu
+
+label FMG072:
+    $setProgress("FMG", "FMG073")
+    play music Schoolday
+    scene Dorm Interior with fade
+    "The flight back was... okay. Alice didn't restock her ice cream stash in fear of us eating all of it, which I mean like fine, I get it, we might have eaten a little too much the first time."
+    "I would've been under the impression that after getting that uh, {i}large{/i}, you'd be in the mood for a dairy treat every now and then... or every hour of the day if we're being honest."
+    "I'm coping incredibly hard, but a man can dream, right?"
+    "{i}Siiigh{/i} Anyway, back to the flight. Akira handled it really well, all things considered. It was like flying with a whole different person, she didn't panic or crush an armrest—"
+    extend " Well, she did but it wasn't related to her claustrophobia."
+    "Alice understood thankfully, all she asked was that Akira keep her arms off of what was left of the armrest."
+    "It was refreshing to finally see Akira comfortable. The best part was how she didn't even mention it. The whole flight she was kicking back, eating even more of Alice's food, and taking in the sights."
+    "She needed this. While I don't think she's fully let go of Tatsuya, and who could blame her, she's taken the right steps to move forward with herself. She's removed the shackles that have kept her weighted down for so long and I couldn't be happier for her."
+    "That pretty much sums it up, we landed and Akira immediately wanted to see Chibuki so she can freak her out {i}again{/i} and I went back to my dorm to catch a few z's with Daichi nowhere in sight... unsurprisingly."
+    pause 1
+    MCT "Just what I needed. Now, I can start my day by doing nothing but losing in ranked."
+    "My master plan was rudely interrupted by my phone buzzing on my nightstand."
+    MC "I'm coming, I'm coming."
+    pause .5
+    MCT "Chibuki? That's... odd."
+    pause .5
+    MC "Yello."
+    FMGCell "Hey, Kei-kun..."
+    MC "Akira? Why are you using Chibuki's phone?"
+    FMGCell "Yeah about that... I might have crushed my phone by accident. I picked it up and it crumbled like paper in my hand."
+    FMGCell "Chibuki is holding the phone to my ear as we speak."
+    MC "Nice, so she's not totally useless."
+    Chibuki "Don't make me come over there, Keisuke."
+    FMGCell "Anyways, can you come to the nurse's office with me?"
+    MC "Is everything okay??? Did you get hurt???"
+    FMGCell "I'm okay... I can't say the rest about my dorm though... heh"
+    Chibuki "Oh yeah, ripping the front door off is hilarious, almost as hilarious as you breaking the couch."
+    MC "You broke the couch?! How did you even manage that?"
+    pause 1
+    MC "Hello?"
+    MC "Akira?"
+    FMGCell "I... sat down..."
+    MCT "Next time call me and I'll give you an even better cushion to sit on."
+    MC "Wow... {w}you really weigh that much?"
+    FMGCell "Kei!"
+    MC "It's an honest question, jeez..."
+    Chibuki "How haven't you punched him through a wall yet is my question."
+    FMGCell "Moving on. When the workers came to fix the room and saw the damages, they told me to visit the nurse asap."
+    MC "Uh-huh, alright if that's what you gotta do, I'll be at your dorm in five. Wait outside for me."
+    Chibuki "Ooooh, don't worry, she's definitely not allowed back in until the room is fixed."
+    FMGCell "Chibuki, you don't even pick up your soda cans and chip bags."
+    Chibuki "Don't compare my laziness with your inhuman strength, we are at two different ends of the spectrum."
+    FMGCell "I should've smashed your bed so you'd have to sleep with your mess."
+    MC "I'll talk to you guys, soon. Later."
+    Chibuki "If you even think-"
+    MC "Those two are something alright. Kinda wish I saw Akira destroy the couch, maybe I can convince her to do it to mine. I'll... sit on it for later, time to get my stuff and go."
+
+    scene Dorm Exterior with fade
+    "I made it over to her dorm to see a few workers hammering away at the door and a couple carrying various pieces of furniture with Akira standing to the side watching them work. These dudes weren't small by any means but Akira towered over them with ease."
+    "She spotted me out of the corner of her eye and hurried down the stairs to greet me."
+    $setFMGOutfit(OutfitEnum.CASUAL)
+    show FMG happy with dissolve
+    FMG "Kei-kun!"
+    MC "That's my name, don't wear it out. {w}Still wearing your outfit from Okinawa, I see."
+    show FMG sad
+    FMG "The one they had prepared for me was too small... I couldn't flex without it ripping."
+    MCT "I always miss the good stuff. ‘Tis my curse."
+    show FMG flex
+    FMG "At least with this, I can move around semi-freely and show off my arms!"
+    MC "Ma'am do you even have a license to carry those guns?"
+    pause .5
+    FMG "I don't know, why don't you ask your mom?"
+    MC "..."
+    show FMG sad
+    FMG "It-It was funnier in my head..."
+    MC "We should get going."
+    FMG "Yeaaaa..."
+    MCT "The gall to talk about my mother like that. Rude."
+    scene black with fade
+    pause 1
+
+    scene Hallway2
+    show FMG neutral
+    with fade
+    MC "Do you know why you have to go to the nurse's office? Seems out of the blue, especially coming from a couple of random workers."
+    FMG "I couldn't tell you. I don't think it's going to be anything bad, at least I hope it isn't."
+    MC "Guess that's all we really can do. You think they're going to charge you for the door and couch?"
+    FMG "Nat didn't get charged, I'd be pissed if I did, talk about unfair."
+    MC "I wouldn't worry about it too much."
+    MC "By the way, I've been thinking that since your traps and shoulders are so big, I can probably chill there now."
+    FMG "Hm, that's not a bad idea. It would be kinda cute to have you sitting on my shoulders."
+    show FMG flex
+    FMG "Would help make me feel even bigger than I already am."
+    show FMG neutral
+    extend " We'll test that out later. We're almost at the nurse's office."
+    MC "We better. I never get tired of less walking."
+    FMG "Even after all the muscle you put on working out with me, you're still so lazy, haha."
+    MC "It hurts being the one who carries the relationship. Less walking means I can put all my strength toward carrying it."
+    FMG "Oh, yeah, I'm sure you do..."
+    MC "I'm glad we can finally agree on something."
+
+    scene Nurse Office
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    "When we entered the nurse's office, we found Nat speaking with Nurse Kiyomi."
+    Nurse "Can't say I'm surprised given the pace of your growth. Your mother was a previous record-holder after all."
+    Natsuko "Not like it was much of a record, to begin with, if she set it."
+    "This was our first time seeing Nat after returning from our trip and frankly I don't have any more words to describe these two. Massive, gigantic— it just doesn't do them justice."
+    "Nat was almost as wide as the desk, Nurse Kiyomi sat behind. It was unreal. {w}When she heard us enter and turned to face us my jaw hit the floor."
+    show FMG surprised
+    MCT "My god, what have these two been eating..."
+    FMG "Holy crap, your muscles have muscles."
+    show Natsuko flex
+    Natsuko "Ha. Impressed? I can tell you are, Hotsure-san. You wanna feel?"
+    MC "I'm... I'm good."
+    "Akira, however, took her up on that offer..."
+    show FMG surprised
+    FMG "Woooow, Nat, your biceps are huge. They have to be bigger than my face!"
+    show Natsuko smug
+    Natsuko "I'd expect nothing less since being declared the biggest muscle growth student... ever."
+    show FMG angry
+    FMG "Woah, woah, hang on. Says who?"
+    Nurse "It's true. Natsuko has surpassed the current record holder. Still, an impressive feat even if her mother was one of the previous holders."
+    show FMG surprised
+    FMG "What?!?!? Your mom has the same factor as us???"
+    MCT "That explains... {w}quite a bit."
+    show Natsuko neutral
+    Natsuko "Unfortunately, she does. She wasted her potential, I won't be the same."
+    Natsuko "Either way, it's not worth talking about."
+    show FMG neutral
+    FMG "I don't know, I think it is. I wish my mom had my factor, you know how cool that would be?"
+    Natsuko "Yeah, sounds great. Sorry to cut this short but I have to get going, I should've been at the gym ten minutes ago."
+    MC "Um, alright... Later, Nat."
+    show FMG happy
+    FMG "See you around."
+    "She didn't say anything else, she simply rolled her shoulders and walked out."
+    hide Natsuko with dissolve
+    MC "You think her face is stuck like that?"
+    show FMG happy at altMove(0.5, 0.5)
+    FMG "Has to be."
+    FMG "If you don't mind me asking Nurse Kiyomi could you tell us more about Nat's mom and why I'm here."
+    Nurse "We called you here to take your measurements just like Okamoto-san. I received numerous reports about both of you girls. Like I said before, Okamoto-san beat the current record holder by quite a large margin."
+    Nurse "Now having said that, I don't know much about Okamoto-san's mother, Yua, besides what I have on file. She was here long before me."
+    FMG "Could I take a look at it. It's not top secret or anything, yeah?"
+    Nurse "Sorry, but no. The most I can provide about Yua Okamoto is her measurements."
+    FMG "Better than nothing, I guess. At least I can compare myself to her after all this is done."
+    Nurse "Mhm...By the way, I'll order you a uniform for you with the proper adjustments when we've wrapped up here. It should be ready at the tailors by the time you get there."
+    MC "I'll be surprised if they have enough fabric for you."
+    show FMG angry
+    MC "Heh."
+    Nurse "Step over there and we can get started."
+    show FMG neutral
+    Nurse "For what we'll be measuring... Biceps, shoulders, quads, your back, and all the other important muscles in no particular order. We'll see how you compare to Okamoto-san and the others. Sound good?"
+    FMG "Yeah! I'm excited to find out. Ooooh, if I'm bigger than Nat she's going to be pissed, hahaha. I can already imagine the look on her face."
+    Nurse "We shall see. {w}Now then, give me your biggest bicep."
+    show FMG flex
+    pause .5
+    Nurse "Perfect, thank you. Let's see here... {w}Mhm, your biceps are roughly 88 centimeters. Certainly bigger than all the other record holders."
+    show FMG neutral
+    FMG "But what about Nat? Are my arms bigger than hers??"
+    Nurse "I'll show you her results after yours are collected."
+    FMG "Alriiight..."
+    Nurse "Flex your quads for me, please."
+    MC "Those are some {i}very{/i} muscular legs. You might actually give Nat a run for her money in the thigh department."
+    FMG "Now that is one I'm not too sure about. If there is one thing Nat will always have over me it's the size of her legs. I'm impressed she can still get stockings that fit."
+    Nurse "The number of complaints I've heard from the tailors regarding Okamoto-san's stockings... I'd be able to write a book about it."
+    MC "That bad?"
+    Nurse "That bad. {w}Okay, Mizutani-san, your quads are 123 centimeters. For comparison sake, the previous record holder was 102."
+    MC "Holy crap..."
+    show FMG flex
+    FMG "Easy."
+    Nurse "Onto the last measurement. Spread your back for me and then we can see how you fare against Okamoto-san."
+    show FMG flex #flex-2?
+    FMG "This good?"
+    Nurse "Yep, this should only take a second."
+    pause 1
+    Nurse "215 centimeters, very impressive, Mizutani-san."
+    MC "I thought your lat spread before was wide, you take up like a fourth of the room, god damn."
+    FMG "I wish I was that big, haha."
+    Nurse "Ha, you wouldn't be able to fit in the room if you were any bigger. We'll measure your shoulders next."
+    show FMG neutral
+    MC "How big is a cannonball? I think they might have some competition, sheesh."
+    Nurse "Hers are much bigger than a cannonball, Hotsure-san... {w}Her shoulders are nearing 240 centimeters."
+    "Nurse Kiyomi jotted down her findings and continued to maneuver around the small giant in front of her collecting the last remaining measurements."
+    pause 1
+    Nurse "All set! Give me a few minutes and I'll get everything put together."
+    show FMG happy
+    FMG "I can't wait! The excitement is killing me."
+    MC "I can wait. I should've grabbed a ramen bowl on our way here."
+    show FMG neutral
+    FMG "It's a good thing we're at the nurse's office already."
+    MC "Your threats mean nothing to me, amazon."
+    FMG "I don't recall making any threats. I'm just saying it would suck if anything bad happened to you, like... oh, I don't know... {w}having your shoes tied together and falling."
+    MC "Mhm, mhm. I hope your back doesn't start itching cause that's not my problem anymore."
+    FMG "You wouldn't dare leave me with an itchy back. You know my arms are too big to reach there!"
+    MC "Tough."
+    show FMG angry
+    FMG "I'll just buy a backscratcher, I don't need your baby hands!"
+    MC "Yeah? How much you wanna bet you crush it. Face it, you {i}need{/i} my baby hands."
+    FMG "I'll slap-fight you right here, right now."
+    MC "Akira, I love you with all my heart. However, you don't want this smoke."
+    show FMG flex
+    FMG "Is that a challenge?"
+    MC "Uh, no. I'm all talk... for now, at least."
+    Nurse "Mizutani-san, when you have a moment, I can give you your results."
+    show FMG happy
+    FMG "Yes! Finally! I'm pumped!"
+    show FMG flex
+    FMG "You're a lucky man, Kei-kun. Not only do you get to date the hottest girl on campus, but you'll also be dating the {i}biggest{/i}."
+    MC "Are you sure? If we factor in height, you are definitely not the biggest. Cause, you know, giants."
+    show FMG sad
+    FMG "Sometimes, I question my decision to be your girlfriend. No support."
+    MC "Relatable."
+    Nurse "Haha, alright, alright, you two. Save it for later. You should try and be more supportive of your girlfriend, Hotsure-san. She's worked hard for her body."
+    show FMG flex
+    MC "{size=-6}Cringe.{/size}"
+    Nurse "Now then, let's get to the results!"
+    show FMG happy
+    FMG "I can barely contain myself! I have to know, aaaaaaa!!!"
+    Nurse "We'll start with the upper body. {w}Hmm, compared to Okamoto-san, you are slightly behind in nearly every measurement..."
+    Nurse "She's ahead by at least 5 to 10 centimeters for each one."
+    show FMG sad
+    FMG "Uuuuugh, come on! If I can't beat her upper body I have no chance against her lower body."
+    Nurse "On the bright side, you are also bigger than every previous record breaker."
+    MC "Heeey, that's pretty good!"
+    pause 1
+    show FMG neutral
+    FMG "Guess, I'll have to settle for being the second biggest on campus."
+    Nurse "We still have a few measurements left to compare."
+    "Nurse Kiyomi read off Akira's remaining measurements while following up with Nat's shortly after."
+    show FMG sad
+    Nurse "Hmmm, I'm sorry, Mizutani-san. While you are most certainly a record breaker you do fall behind Okamoto-san. Both of your results are extremely impressive regardless. You two girls are the largest muscle growth students on campus."
+    show FMG neutral
+    FMG "Heh, at least there's some good news at the end. It totally blows that I'm smaller than Nat, unfortunately."
+    Nurse "Be proud of what you've achieved. {w}Now, I need to get a bite to eat. You two are welcome to stay as long as you like. When I get back from lunch, I'll get your outfit ordered, Mizutani-san. Should be ready at the end of the day."
+    FMG "Thank you, Nurse Kiyomi. I appreciate it."
+    Nurse "I'll see you two around."
+    pause .5
+    MC "You okay?"
+    FMG "Hm? Yeah, I'm not as annoyed as I thought I'd be. In the back of my head, I assumed I wouldn't be able to best Nat. Gotta temper your expectations, you know?"
+    show FMG flex
+    FMG "And knowing that, it's all I need to push myself even more. Nat doesn't stand a chance."
+    MC "Are you going to tell her about any of this?"
+    show FMG neutral
+    FMG "Not a chance in hell. She still holds her bench press over me. Her 300 kilograms will look like child's play soon enough."
+    MC "I mean..."
+    FMG "You're right! She's probably doubled that if not tripled it since she got bigger."
+    MC "I wasn't going to say {i}that{/i}, but that is downright scary to think she might be able to bench that much."
+    FMG "I'll have to shoot for at least 1000, maybe more."
+    MC "What! That's like a small car. Are you crazy?!?"
+    FMG "I'll be fine if you're spotting me. Don't worry about it."
+    MC "I... I don't... {w}Just drop the bar on me next time we're in the gym. This is too much for me."
+    FMG "I'm kidding, bozo. Come on, as if I'd ever have you do something that dangerous. We're going to have to start experimenting in the gym."
+    show FMG flex
+    FMG "I need to see what this body can do."
+    MC "Pretty sure we figured that out back at your parent's place..."
+    show FMG neutral
+    FMG "Heh, okay... let me rephrase."
+    show FMG flex
+    extend " I need to see what this body can do that doesn't involve breaking things."
+    MC "We can always try twister again! I'm always down for twister. Oooh, hang on, what about monopoly!?!?"
+    show FMG angry
+    FMG "I'm not playing either of those games with you again after you cheated."
+    MC "Sorry, you suck at negotiating and rolling dice... sounds like a skill issue."
+    FMG "I saw you take money out of the bank when you didn't even earn it!"
+    MC "Hm, maybe. A part of me thinks you're lying... {w}Look, what happened a few weeks ago doesn't matter. You, Shiori, and Nat lost and I won. We can talk this over, over your favorite movie back at my place."
+    show FMG angry-3
+    FMG "Can I pick the snacks?"
+    MC "Sure."
+    show FMG neutral
+    FMG "Then I'm down and quit gaslighting me you cheater. Shiori and Nat both called your ass out."
+    MC "Maybe if Nat didn't give Shiori a monopoly on a whole row I wouldn't have had to. I'm playing to win by any means."
+    FMG "I'll make sure to tell Nat about how unhappy her decision made you."
+    MC "Wait-Wait, we don't need to do that... hahaha. It was a joke made in poor taste."
+    FMG "I'm sure she'll love hearing that from you."
+    MC "You'll protect me, yeah?"
+    show FMG upbeat
+    FMG "..."
+    MC "You'll protect me, yeah?????"
+    FMG "Good luck."
+    jump daymenu
+
+label FMG073:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

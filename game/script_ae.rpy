@@ -30,7 +30,7 @@ label AE001:
     AE "...Hello, Hotsure-san."
     MC "How, uh, w-what are you doing?"
     MCT "Uaaah, she's absolutely chilling me to the bone!"
-    AE "Researching questions I had that Tashi-Sensei was unable to answer."
+    AE "Researching questions I had that Tashi-sensei was unable to answer."
     MC "Ah, what about?"
     AE "The nature of the Academy.{w} What is going on,{w} how long has this been happening,{w} what preventative measures there are,{w} what school records exist."
     AE "There are so many questions I have, and I plan to make sure they are all answered."
@@ -14493,7 +14493,7 @@ label AE062:
     BE "You're not the cheapskate you used to be!"
     MC "Used to be?! I never was!"
     BE "Oh, really?"
-    BE "Remember that time you straight up gave your little sister a game she already owned for Christmas, and it was {i}her{/i} game you wrapped up in seran wrap?"
+    BE "Remember that time you straight up gave your sister a game she already owned for Christmas, and it was {i}her{/i} game you wrapped up in seran wrap?"
     MC "...Wh-Well, hey now."
     show BE happy
     BE "Pffff!"
@@ -16167,7 +16167,7 @@ label AE069:
     AE "Oh, no doubt. I can't think of any time he's led me wrong thus far."
     "Though I nodded in agreement, I couldn't help but feel a sense of ironic concern hearing Shiori say that, especially given the circumstances."
     show AE sad
-    AE "Uch, I was such a pig to just act so irreverently in front of Tashi-Sensei today."
+    AE "Uch, I was such a pig to just act so irreverently in front of Tashi-sensei today."
     MC "N-Nah, I think it's okay."
     MC "Besides, I feel like it's really impossible for him to take offense to anything, not gonna lie."
     show AE happy
@@ -21251,7 +21251,7 @@ label AE094_Gold:
     AE "Eh?"
     "She seemed to almost reel back from my proposition, blinking as she couldn't believe what I was saying."
     AE "I-I don't think we can... i-it's almost the end of the year and-"
-    MC "Tashi-Sensei will understand. I'm sure he'll let us take it easy tomorrow, but we need to go."
+    MC "Tashi-sensei will understand. I'm sure he'll let us take it easy tomorrow, but we need to go."
     MC "We need to confront the outside world head on together."
     MC "Will you do it with me?"
     show AE surprised

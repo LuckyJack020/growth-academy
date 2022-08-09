@@ -1238,6 +1238,7 @@ label WG008A_c1:
     jump daymenu
 
 label WG008A_c2:
+    $setVar("BEP", getVar("BEP") + 1)
     MC "If you feel this strongly, go for it. You're the one talking about squeaky wheels, right?"
     show WG neutral
     "Honestly at this point, I didn't think I could stop her anyway."
@@ -1564,6 +1565,7 @@ label WG010_c1:
     jump daymenu
 
 label WG010_c2:
+    $setVar("BEP", getVar("BEP") + 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral at center with dissolve
@@ -3646,30 +3648,7 @@ label WG019:
     MC "What would you like help with moving first?"
     show WG happy
     WG "The bed is the centerpiece, so I want to adjust that first. Everything else will follow from there."
-    if not checkSkill("Athletics", ">=", 1):
-        "I went to the head of the bed and bent my knees, while Alice and Aida went to the other side."
-        MC "On three."
-        MC "1... 2... 3-"
-        "The plan was to rise and lift the bed in one fluid motion, but when the legs of the bed left the floor and I was now supporting its weight I felt a fire erupt in my back."
-        MC "Ah!"
-        "I let go of the bed, causing the ladies to drop their end, both crying out as well. Just not in pain."
-        if checkAffection("WG", ">=", 3):
-            show WG sad
-            WG "Keisuke?"
-        else:
-            show WG neutral
-            WG "Hotsure-san?"
-        show PRG sad
-        PRG "Ho-Hotsure-san?"
-        scene black with fade
-        "I hadn't thrown my back out, but I had pulled a muscle."
-        "I couldn't move for a while, but by the time I was able to walk to the nurse's station I felt more embarrassed than in pain."
-        "Alice sent me a text later that evening, making sure I was OK."
-        "I played it off as no big deal, but I was sore for a couple days after that."
-        "I found out later Alice paid one of the musclebound students to help move her furniture instead."
-        "She didn't look at me any less after that, but I could feel I had lost a little standing in her eyes."
-        jump daymenu
-    else:
+    if checkSkill("Athletics", ">=", 1):
         "I went to the head of the bed and bent my knees, while Alice and Aida went to the other side."
         MC "On three."
         MC "1... 2... 3!"
@@ -3775,8 +3754,33 @@ label WG019:
         "I was simultaneously worried that Alice was still pining for her old boyfriend, while also cheering myself on with the fact that I was here and he wasn't."
         "Maybe there was a chance for me here— if I wanted it."
         jump daymenu
+    else:
+        $setVar("BEP", getVar("BEP") + 1)
+        "I went to the head of the bed and bent my knees, while Alice and Aida went to the other side."
+        MC "On three."
+        MC "1... 2... 3-"
+        "The plan was to rise and lift the bed in one fluid motion, but when the legs of the bed left the floor and I was now supporting its weight I felt a fire erupt in my back."
+        MC "Ah!"
+        "I let go of the bed, causing the ladies to drop their end, both crying out as well. Just not in pain."
+        if checkAffection("WG", ">=", 3):
+            show WG sad
+            WG "Keisuke?"
+        else:
+            show WG neutral
+            WG "Hotsure-san?"
+        show PRG sad
+        PRG "Ho-Hotsure-san?"
+        scene black with fade
+        "I hadn't thrown my back out, but I had pulled a muscle."
+        "I couldn't move for a while, but by the time I was able to walk to the nurse's station I felt more embarrassed than in pain."
+        "Alice sent me a text later that evening, making sure I was OK."
+        "I played it off as no big deal, but I was sore for a couple days after that."
+        "I found out later Alice paid one of the musclebound students to help move her furniture instead."
+        "She didn't look at me any less after that, but I could feel I had lost a little standing in her eyes."
+        jump daymenu
 
 label WG019_c1_3:
+    $setVar("BEP", getVar("BEP") + 1)
     "I wasn't really in the mood for whatever Alice had in mind right now. Probably some chore she wanted me to do for her, but hopefully not something violating the rules."
     if checkAffection("WG", ">=", 16):
         "I texted back that I was in the middle of studying and explained that I needed to catch up, and could I take a rain check?"
@@ -4821,6 +4825,7 @@ label WG024_c3_2:
     jump daymenu
 
 label WG024_c3:
+    $setVar("BEP", getVar("BEP") + 1)
     MC "Well... it's all relative. Beauty is in the eye of the beholder and all that."
     MC "I mean, when you say 'attractive' are you talking about pure physical beauty, and do we then go off of classical standards of what a given culture considered ideal?"
     MC "For that matter, how do you compare two different objects that are both, in their own ways, beautiful? A landscape and a portrait differ in their subject matter, but they each have their own criteria for what is beautiful or not."
@@ -4999,6 +5004,7 @@ label WG025_c2:
 
 label WG025_c3:
     $setFlag("WG025_c3")
+    $setVar("BEP", getVar("BEP") + 1)
     "I simply shrugged at her remark."
     MC "To each his own, I guess. It seems pointless to speculate on the motives of another."
     show WG neutral
@@ -5073,6 +5079,7 @@ label WG026:
 
 label WG026_C1_1:
     $setFlag("WG026_C1_1")
+    $setVar("BEP", getVar("BEP") + 1)
     MC "Uhh... Yeah. Of course! It's such a nice day outside, barely a cloud in the sky.{w} Just trying to soak it all in before I take my first dip in the water."
     show WG doubt
     $setAffection("WG", -2)
@@ -5356,6 +5363,7 @@ label WG027A:
     $lockRoute("WG")
     $setProgress("WG", "WG028")
     $setFlag("WG_dating")
+    $setVar("BEP", getVar("BEP") + 1)
     scene Cafeteria with fade
     "I was having trouble paying attention to the week's company meeting."
     show WG neutral at center with dissolve
@@ -5571,6 +5579,7 @@ label WG028_c1_1:
     jump daymenu
 
 label WG028_c2_1:
+    $setVar("BEP", getVar("BEP") + 1)
     MC "I hope you appreciate what I went through."
     show WG stern
     WG "{i}Ugghh{/i}..."
@@ -8311,7 +8320,7 @@ label WG039_c2_1:
     WG "Get your hands off me!"
     show WG angry at center with dissolve
     $setAffection("WG", -1)
-    #BEP
+    $setVar("BEP", getVar("BEP") + 2)
     WG "Get out."
     MC "I'm sorr-"
     WG "No! I don't want to hear it! Out!"
@@ -8335,6 +8344,7 @@ label WG039_c2_1:
     jump daymenu
 
 label WG039_c2_2:
+    $setVar("BEP", getVar("BEP") + 1)
     MC "Sorry! My hand slipped!"
     "I pulled my hand back at once, chastened by the whipcrack of her tone, but I didn't panic."
     "She was simply too intimidating for me to press further."
@@ -11308,6 +11318,7 @@ label WG047_c3_after:
             "Stop asking":
                 jump WG047_c4_2
     else:
+        $setVar("BEP", getVar("BEP") + 1)
         show WG neutral
         WG "Of course not, I was just pondering what Aida is reading over there."
         MC "Oh, ok."
@@ -11318,6 +11329,7 @@ label WG047_c3_after:
 
 
 label WG047_c4_2:
+    $setVar("BEP", getVar("BEP") + 1)
     MC "If you say so."
     show WG worried
     "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
@@ -12907,6 +12919,7 @@ label WG053_c1_2:
 
 label WG053_c1_3:
     $setFlag("WG053_c1_3")
+    $setVar("BEP", getVar("BEP") + 1)
     MC "There is a new seafood restaurant that recently opened in town, they have a dress code that's why I asked that you get dressed up for this occasion."
     $setAffection("WG", -1)
     show WG sad
@@ -14841,6 +14854,7 @@ label WG058_c1_after:
             jump WG058_c2_3
 
 label WG058_c2_1:
+    $setVar("BEP", getVar("BEP") + 1)
     MC "Sure! That sounds fun!"
     "I wasn't about to pass up an opportunity to get smothered by the two biggest asses I've ever seen. Whether it was for comedic purposes or my own execution, I've never been more down for anything in my life."
     show Ryoko happy
@@ -15490,6 +15504,7 @@ label WG059S:
     else:
         $setProgress("WG", "WG061")
         $setFlag("WG059_aff_fail")
+        $setVar("BEP", getVar("BEP") + 1)
         WG "Such a strange concept, deriving enjoyment from watching someone else eat. I don't really understand it myself."
         MC "Hehe...{size=-6}heh...{/size} {w}It does sound rather strange doesn't it?"
         WG "Indeed, it's not as if a person can taste the food on someone else's behalf."
@@ -15626,6 +15641,7 @@ label WG059S_C1_1:
 
 label WG059S_C2_1:
     $setFlag("WG059S_Lie")
+    $setVar("BEP", getVar("BEP") + 1)
     MC "Can't say I have ever heard of it before either."
     WG "It certainly sounds rather... unique I have to say."
     MC "I have to agree on that assessment."
@@ -16450,6 +16466,7 @@ label WG060S_Stop:
 
 label WG060S_Greedy:
     $setFlag("WG060S_Greedy")
+    $setVar("BEP", getVar("BEP") + 2)
     "No. This didn't stop until she physically refused any more food I had to offer— and she wasn't anywhere close to that point."
     "Having picked over most everything else there was on the cart and finding nothing left but some miscellaneous parfetts, cookies, brownies, whatever had been seemingly left over from unfinished kitchen batches."
     "I peaked under the mid level of the three shelved cart to see a meter long submarine sandwich."
@@ -20276,36 +20293,32 @@ label WG071:
     "I could have slept here forever if air supply wouldn't have been a limiting factor."
     show WG doubt
     WG "Well you better get to work, because I can't see anything down there now."
+    show cg WG071 with dissolve
     "Not even a semblance of patience anymore, Alice lifted up her belly. I in turn pressed it up as best I could. With our combined efforts I managed to catch a glimpse of where I was— and where she was— and what I had to do to get there."
-    show WG surprised-2
     "With a little bit of maneuvering— I was back in!"
-    show WG aroused
     "And she took it {i}all{/i} in."
     MC "You said you wanted it harder right? Well, ride me as hard as you want!"
     WG "{i}Oh Keisuke!{/i}"
     "With just a thrust of her hips, I swear I sank four more centimeters into the mattress. {w}If before I thought I was being crushed under her weight, I think I felt my eyeballs bulge from their sockets when she bounced on my cock."
-    show WG surprised
     WG "Oh my god, Kei! How are you this thick?"
     MCT "The feeling is mutual."
-    show WG sly
     WG "Faster! Give me more!"
-    show WG aroused
     "Feeling the weight of her on me, squashing my guts as her fat belly slammed into me with each thrust of her hips— it was ecstasy. {w}Alice was indescribably fat and beautiful. I wanted nothing more than to live in this moment forever."
     "Instinct took over as she rode my dick, her lips clenching on it tight as if she hoped to suck the life out of me. My hips bucked uncontrollably like a wild stallion with a first time rider, causing her jiggling blubber to violently quake."
     WG "Oh! Ohh! OHH! OOOHHHH! {w}{i}AAAAAAAHHHH!{/i}"
     "In the midst of her moans, a torrent unleashed from inside of me. Wave after wave surged out of me as I filled her up, her hungry pussy taking in all of it."
-    show WG surprised-2
     "{i}*Creeeeaaak*{/i}"
     MC "What the fu—"
     "{i}*CRACK*{/i}"
     "{i}*BOOM*{/i}"
-    show WG surprised
     play sound Crash
     MC "{i}OOOFFFFT!{/i}"
     "The fucking bed broke! {w}But neither of us gave a shit. {w}We were still riding the big O."
     "She stumbled further on top of me as the bed folded in the middle, smothering me completely. Though I could scarcely breathe, I had no issue draining the rest of myself completely into her."
     stop music
+    hide cg
     show WG surprised-2
+    with dissolve
     WG "Holy shit!"
     MC "You're telling me."
     "We broke the fucking bed! I mean, yeah, look at the size of her, but still, I didn't see that coming. {w}Then again, I wasn't going to see much of anything if my vision was going to keep fading like it was now."
@@ -20634,6 +20647,600 @@ label WG072:
     jump daymenu
 
 label WG073:
+    $setProgress("WG", "WG074")
+    $setSize(5)
+    $setTimeFlag("size5")
+    scene Dorm WG with fade
+    play music WG
+    "Alice had called a company meeting. For me personally, I take a while to wind back up to get back into the swing of things after taking time off."
+    "But Alice seemed completely re-energized from the brief bit of time away from work to attend her father's ball last weekend."
+    show WG neutral at Position(xcenter=0.7, yalign=1.0)
+    show Kokutan neutral at Transform(xzoom=-1), Position(xcenter=0.15, yalign=1.0)
+    show Chibuki neutral at Transform(xzoom=-1), Position(xcenter=0.35, yalign=1.0)
+    with dissolve
+    WG "Business has seen a steady uptick as of late. Even those with more minor cases in their growth factors are experiencing the inconvenience of ill-fitting clothing and the lack of options having unique proportions entails."
+    if isEventCleared("WGGTS004"):
+        show WG haughty
+        WG "That, on top of the steady headway into securing more customers living in the giant dorms has really put us over my initial projections. Thanks to good word of mouth from our first satisfied customer."
+    WG "I don't think I need to tell you all that all of this together means that business is booming."
+    show WG doubt
+    Chibuki "Does that mean we'll get paid more?"
+    MC "Hey, that sounds like a good idea."
+    Kokutan "Ooo, maybe then I can finally buy that black pearl necklace I've wanted for so long."
+    show WG stern
+    WG "{i}Ahem{/i}. Compensation adjustments are only discussed during your one-on-one meetings— thank you."
+    MC "{size=-6}That sounds like a no.{/size}"
+    Chibuki "{size=-6}That's definitely a no.{/size}"
+    show WG haughty
+    WG "Trust me, there will be plenty of opportunities for earning more with the increased hours needed to keep pace with this operation."
+    show WG neutral
+    WG "Now, as I was saying, business is booming— but we could be doing better. {w}We're limiting ourselves by just confining the scope of the business to the school. The entire island is home to a relatively sizable population of people with growth factors."
+    MC "That is a good point. What do you have in mind?"
+    show WG sly
+    WG "We set up shop in town."
+    show WG neutral
+    Chibuki "No offense Alice, but that sounds a bit too ambitious, even for you. We're still students after all."
+    Kokutan "Ooo, I hope I get more people interested in having me customize their wardrobe."
+    Chibuki "I don't think the whole ‘vampire chique' is going to catch on anytime soon, Miss Looney."
+    show WG neutral-2
+    WG "I understand your misgivings Chibuki, but the idea is to start with a small outlet with limited hours to do fittings by appointment."
+    show WG happy
+    WG "My plan is to hire some part-time help from those looking for more flexible hours. Once properly trained by myself and Kokutan they will be ready to relay the measurements needed for us to process the orders here."
+    show WG haughty
+    WG "Obviously, any time spent traveling to and from town, as well as bus fare used for business purposes, will be covered."
+    MC "Am I going to have to do door-to-door deliveries in town?"
+    show WG neutral
+    WG "Only if it's cheaper than postage."
+    Chibuki "{size=-6}That sounds like a yes.{/size}"
+    MC "{size=-6}That's definitely a yes.{/size}"
+    WG "This isn't effective immediately, I'm just giving you all advanced notice."
+    show WG haughty
+    extend " But do be prepared for an increase in workload as the business absorbs this increase in demand and the necessary expansion that entails."
+    show WG doubt
+    Chibuki "{size=-6}It's not the only thing that's been expanding lately.{/size}"
+    show WG angry
+    "Leave it to Chibuki to mention the elephant in the room. {w}Errrm... perhaps that analogy was a bit too on the nose, but it was undeniable to all of us that Alice had grown quite noticeably recently. Even more so than what we had become used to."
+    show WG stern
+    "Normally Alice wasn't bothered by Chibuki's flippant remarks she often quipped, but I could tell Alice wasn't brushing this one off so easily."
+    Chibuki "...Oops."
+    show WG haughty
+    "Seeing that her initial glare got the reaction she desired, Alice managed to compose herself sufficiently to deliver our marching orders."
+    WG "Alright, that seems to have covered everything on the agenda."
+    show WG neutral-2
+    WG "Keisuke, we currently have a backlog of orders due to material shortages, but expect a surge and some long hours to make up for the delays once we get the new materials in the next couple of days."
+    MC "Right, will do."
+    show WG neutral
+    WG "Chibuki, find some time in my schedule next week to interview these potential new hires I received resumes from. Here are their numbers. {w}Make sure my new uniform is pressed and ready for tomorrow."
+    Chibuki "Oh joy..."
+    hide Chibuki with dissolve
+    show WG stern
+    WG "Kokutan, you need to start filling resupply orders before running out of materials. We're backlogged on orders now because you aren't thinking ahead."
+    Kokutan "I-I'm s-sorry Alice! I'll do better I swear!"
+    show WG doubt
+    extend " P-Please don't eat me!"
+    WG "I honestly don't even know what to say to that."
+    show WG neutral
+    WG "Moving on. {w}I want you to work with Chibuki to come up with a spreadsheet that documents your usage rates of materials so we can anticipate stock outs and sync them with their order lead times."
+    Kokutan "Yes! I'll get right on that. {w}Oh wait. Where did she go? I'll go find her right away."
+    show WG sly
+    WG "I'm sure she'd like that."
+    hide Kokutan with dissolve
+    "And just like that, we all got sorted out."
+    show WG neutral-2 at altMove(0.5, 0.5)
+    MC "Well huh, you really took care of business there. It's impressive to see you in action, honestly."
+    MC "Things seem to be going pretty well, resupply issues aside. Looks like you have everything under control here."
+    play music Bittersweet
+    show WG sad
+    WG "At least one of us thinks so."
+    MC "Oh? What's on your mind, Babe? You know you can tell me anything."
+    show WG worried
+    "Alice let out a deep and exhausted sigh. I could tell she must have been holding a lot in."
+    WG "Truthfully Keisuke, I don't feel in control. Not one bit."
+    WG "In fact, I feel like my life is spiraling out of control."
+    show WG doubt
+    WG "Just look at me! I know my recent changes haven't escaped your notice."
+    show WG stern
+    "They certainly hadn't. She was bigger than ever. I mean everyday she's bigger, but I would have never hazard a guess she would get even half this big when she first told me about her factor."
+    "Of course to me it just meant she was all the more beautiful."
+    show WG angry
+    WG "I ordered this winter uniform in several sizes above my current estimates at the time, planning on it lasting me the rest of the season— and it's already getting snug!"
+    show WG worried
+    "Part of me wanted to interject and get her to stop agonizing over this issue again, but I could tell she had a lot pent up that she needed to let out. So I just let her go."
+    show WG neutral-2
+    WG "I was at the nurses' office two days ago for an evaluation. They had me get on the scale, as per usual. Not that I even want to know, but I figure there's no point in sticking my head in the sand just hoping that it will all go away."
+    MC "What did it say, if you don't mind me asking?"
+    show WG doubt
+    WG "{i}{b}Error{/i}{/b}. That's what it said. {w}I've completely maxed out the school's scale, which means even this place had not thought to accommodate someone of my size."
+    show WG stern
+    MCT "Holy shit! I've seen the scales they have in the office and they look pretty damn sturdy. That's just crazy to even think about."
+    MC "What did the nurse say?"
+    show WG sad
+    WG "She just nervously laughed and said ‘This has never happened before...'."
+    show WG stern
+    extend " She obviously was embarrassed enough for the both of us."
+    show WG worried
+    MCT "Yeah, I can't imagine she was exactly keen on congratulating her for being the fattest student they've ever seen."
+    "I could scarcely believe it... {w}on second thought, looking at her again, how could I not? She was HUGE! Alice doubtlessly since had time to process this revelation, but the shock of the news was still fresh to me."
+    MC "I guess I could imagine that weighing on your mind... {w}!"
+    show WG doubt
+    extend " Sorry, poor choice of words."
+    show WG stern
+    WG "I think we're past tip-toeing around it, Keisuke."
+    MC "True. Still though, I know you try your best to take this all in stride, but I'm sure that hit kind of different to find that out. How have you been feeling about it?"
+    show WG sad
+    WG "It was certainly a shocking realization at the time, but more so it's just been increasingly frustrating. I was already struggling with dressing myself back in the summer, now I can't even manage to wrap myself around any part of me anymore."
+    "I found it a bit odd that she would mention that now, since both Aida and Chibuki have helped with that issue for quite a while, but perhaps her ability to even assist in the process had now dramatically diminished."
+    show WG neutral-2
+    WG "And I feel like I'm constantly hungry. If I don't eat enough, I become irritated and unpleasant towards others far too easily."
+    MC "Wait, how is that different than normal?"
+    show WG stern
+    WG "Har  har. You're hilarious Kei. I'm serious here."
+    MC "Sorry. Poor timing. Continue, I'm listening."
+    show WG neutral
+    WG "As I was saying, even if I eat a hearty meal in order to try to adequately quell my appetite, I'm hungry again not even two hours later."
+    show WG doubt
+    WG "It's become a constant distraction that interferes with my ability to focus and manage my busy schedule."
+    stop music
+    show WG worried
+    pause .4
+    show WG sad
+    pause .4
+    show WG stern
+    pause .4
+    show WG angry
+    WG "It's all because I'm so...{w}so...{w}{i}{b}FAT{/i}{b}! {w}It's consuming everything! Or at least it would if I wasn't already! {w}It's absurd! How is this even happening to me!?"
+    show WG surprised-2
+    MC "..."
+    play music Memories
+    WG "...I'm sorry for raising my voice."
+    show WG worried
+    extend " I'm not mad at you Keisuke, I've just been feeling rather hopeless lately."
+    "Part of me was just in shock that she would be so direct as to use {i}that{/i} word. We'd danced around the term more times than I could count, but even she had now managed to lose all pretense in her exasperation to come out and say it."
+    "But let's face it, there was no way to deny it: Alice was fat. {w}Not just fat, she was huge beyond huge by this point! To pretend otherwise would be to insult the intelligence of her and everyone in the same room."
+    show WG neutral
+    MC "You don't need to apologize, Alice. I know you weren't directing any of that to me. You have every right to be frustrated. Nothing about this is fair, or even makes sense."
+    MC "If anything, I appreciate you being so forthwrite about everything you've been going through lately. It must have been hard to put on a brave face in front of everyone at the meeting with all of this going on inside."
+    show WG sad
+    MC "You're really good at that, you know? Sometimes a bit too good, if I'm being honest. You certainly had me fooled, and I think I know you pretty well by now."
+    show WG worried
+    WG "...It was never my intention to deceive you. I would hope by now that I'm past all of that with you. Looking back, I'm sorry for all the times before when I wasn't as forthright as I should have been."
+    show WG neutral-2
+    MC "It's understandable that it can take a while to warm up to someone. Besides, that's why we're talking now."
+    MC "I know I don't have any magic words that can make all of this go away, but whenever I feel hopeless and unsure of myself I think about what I learned from the most confident person I ever met."
+    show WG neutral
+    WG "Who was that?"
+    MC "Well it's a strange story really. I had just started a new chapter in my life. A new school in a strange place where I hardly knew anyone."
+    MC "Shortly after starting there I got some really crappy news, we all did. I felt like my world had been upended and I couldn't make sense of anything. Everyone else felt the same way."
+    MC "Except for this one girl. She had blonde hair and blue eyes with these curls that draped down across her shoulders— a real knockout."
+    show WG happy-2
+    WG "...Is that so?"
+    MC "Like you wouldn't believe. Anyway, when I asked her about how she handled the bad news, she shrugged it off with a confident smirk, stating that she refused the destiny fate had for her, only accepting the one she would build for herself."
+    MC "What she said always stuck with me. I kind of wonder what she'd say to you now in this situation."
+    show WG sad
+    WG "...I can't help but think she'd be very disappointed."
+    MC "Eh, I don't think so."
+    show WG surprised-2
+    WG "Oh? I have to wonder just how well you knew this girl who was so confident if you'd say that."
+    show WG neutral
+    MC "She said that not knowing how long and trying everything she'd face would be. She never said she wouldn't occasionally waver, or that she'd never wish for something else."
+    MC "She just committed herself to overcoming whatever challenges she'd have to face, no matter what."
+    MC "Who knows? Maybe she wouldn't have if she knew what she was up against, but I know for a fact she'd never go back on her word."
+    show WG happy
+    WG "That was an intriguing story. Tell me more about this girl you met back then."
+    MC "Well, she's really sharp— like nothing gets past her."
+    show WG happy-2
+    WG "Uh-huh. Go on."
+    MC "She's really hard working. Like, she even started her own business while still in school while most other students could barely make time to do their homework."
+    WG "I see. Please continue."
+    MC "And she's just gorgeous. I'd find myself getting lost in her azure eyes. I'd go out of my way and make every excuse just to try to be able to spend time with her."
+    show WG aroused
+    WG "This person sounds like she's pretty special to you."
+    MC "Oh she is, more than anyone."
+    show WG doubt
+    MC "Oh, and she'd laugh at all my jokes, offer to do my laundry, and would constantly want to go to the arcade with me."
+    show WG happy-2
+    WG "Now you're just making stuff up."
+    MC "Excuse me, this is {i}my{/i} story about this magical dream girl I met at school who somehow became my girlfriend."
+    MC "You won't see me interrupting your story about a stunningly handsome knight in shining armor that swept you off your feet."
+    show WG sly
+    "Alice rolled her eyes and shook her head, all while smiling at the same time."
+    play music Peaceful
+    WG "I think we'll save that story for another time, Keisuke."
+    show WG happy
+    WG "In all seriousness though, I appreciated the ‘story', as it were. You do have a way with words, more often than not. I always know I can count on you to be a sounding board or a shoulder to cry on."
+    show WG neutral
+    WG "Still though, I'm just not sure what to do about what's been happening."
+    show WG sad
+    extend " I had dreams of shattering the glass ceiling, but at this rate I'm more likely to crack the tile floor."
+    show WG neutral
+    "I took a step closer to her, wrapping myself around her as well as I reasonably could, with what must have looked like an awkward side hug if anyone else were to have seen. But it was the best I could do to embrace the woman I loved."
+    "God she was soft. Every time I touched her, I felt myself sinking into her heavenly softness. Her body did a much better job of wrapping around me than I could hers as I sank even deeper."
+    MC "Hey."
+    "I let my free hand move down to her belly, massaging it back and forth, knowing it would provide some modicum of comfort to her while I kept my other arm across her shoulder as we leaned cheek-to-cheek."
+    MC "I know it's cliché, but there's always a bright side to things."
+    show WG aroused
+    WG "{size=-6}{i}Oof{/i}{/size}... why does that have to feel so good?"
+    MC "See there you go, that's something at least, right?"
+    show WG neutral
+    WG "Ha! Yes, it's certainly something alright. I can't say anything else comes to mind though."
+    MC "Well, you are a gourmand. Is it such a shame that your body can accommodate more of the culinary delights this world has to offer?"
+    show WG neutral-2
+    WG "That is true I suppose. I have found myself enjoying food more than I have ever before."
+    "Alice gave her belly a couple of gentle pats to emphasize her words, sending small but persistent jiggles throughout her blubbery dome in the process."
+    show WG worried
+    WG "Apparently it shows as well."
+    show WG neutral
+    MC "Hey, none of that now. You know you're beautiful, right?"
+    "I reached in for a kiss, just to drive home my point even more."
+    show WG aroused
+    WG "Mm."
+    show WG happy
+    WG "I know, but it never hurts to be reminded."
+    MC "I don't have all the answers, but I promise I'm gonna find some way to help you with this."
+    show WG neutral-2
+    "Alice brushed my cheek with the back of her fingers as she proceeded to play with my hair."
+    WG "That's sweet of you to say Keisuke, but I don't think there's really much of anything you can do about it. You already help me enough, more than I could ask of you even. I didn't mean to make you worry about me."
+    WG "I'll be fine."
+    "Strong and unwavering as ever... {w}but this time, I didn't believe her."
+    "Too proud to admit it to herself, much less to me, I could tell by the look in her eyes, for probably the first time in her life, she wasn't feeling so confident about what the future held for her."
+    "I wanted to tell her that didn't make her weak— it just made her human. I hadn't forgotten what I told myself that morning, waking next to her in the morning light."
+    "I promised I'd do whatever I could to make sure she would feel as happy as she did then, no matter how much more she would grow, or whatever the future held for us."
+    "And I meant it."
+    jump daymenu
+
+label WG074:
+    $setProgress("WG", "WG075")
+    scene Dorm Interior with fade
+    play music Schoolday
+    "I know Alice didn't want me worrying about her, but I couldn't shake it from my mind that something was troubling her. I felt like I had to do something— it just wasn't very clear if there was even something to do."
+    "To be honest I didn't really even know how to feel about her situation myself. She was beautiful, statuesque even, to use a term of hers I hadn't known before."
+    "But while watching her voluptuous body grow everyday in front of my eyes was a glorious sight to me, the reality for her was that it was becoming a considerable annoyance, even despite being unencumbered due to the nature of her growth."
+    "I wasn't able to share her burden, but I figured I could at least show her I cared."
+    scene black with fade
+    pause 1
+    scene Classroom with fade
+    "Class was fairly uneventful. We had a quiz a couple of days ago so there wasn't any pressure ramping up to diligently study quite yet."
+    show WG doubt with dissolve
+    "Looking back over at Alice though I could tell she didn't look to be in a particularly good mood."
+    show WG stern
+    "I would've thought she was mad at something, hell maybe something I had done, but then it clicked for me when I remembered what she told me last night. {w}She wasn't angry— she was hungry."
+    "She was practically fidgeting in her chair. I bet she was eager for class to get over."
+    hide WG with dissolve
+    show HR neutral with dissolve
+    HR "Don't forget your homework assignment on the Meji Era due next class. This is your last reminder. Three pages minimum, and I'll be docking for needless padding too."
+    if checkSkill("Academics", ">=", 5):
+       MCT "Luckily I've been keeping on top of my assignments and already got that one done."
+    else:
+       MCT "Crap. I haven't even started that stupid thing."
+    play sound ClockTower
+    hide HR with dissolve
+    "Alright. Finally out of here."
+    show WG doubt with dissolve
+    "As I suspected, Alice was eager to leave class as well. Shifting her weight around with short, forceful movements that caused her flesh to wobble under her uncomfortably tight uniform."
+    "She made steady, not to say fast, progress to get her belly in a position that would let her stand freely."
+    MC "Here, let me give you a hand."
+    show WG stern
+    WG "Though I appreciate the gesture Keisuke, your assistance is not always needed."
+    "She said that despite having readily taken her hand in mind. She stood up without much trouble after that."
+    show WG neutral
+    MC "True, but I figured it couldn't hurt as an excuse to hold your hand."
+    show WG happy
+    WG "That's very sweet of you."
+    show WG neutral
+    WG "But you don't need to hover over me. I have paid assistants for that. {w}And as much as I wouldn't mind chatting with you I'm afraid I need to be quick about heading back to my room before the next class."
+    "We walked hand in hand briefly until we were at the classroom door. Once a very spacious frame at the beginning of the year, it was not impossible for anyone to walk side-by-side with Alice through it now."
+    MC "Ladies first."
+    "I gestured as I stepped aside."
+    WG "Such a gentleman."
+    hide WG with dissolve
+    show BE happy with dissolve
+    BE "It seems she taught you well, Kei-chan."
+    MC "I have my moments, I suppose."
+    scene Hallway with fade
+    "Alice had not waited on me during my brief exchange with Honoka. Granted it wasn't much to catch up to her ponderous waddling gait, but her pace was enough to sense an urgency in her steps."
+    show WG neutral with dissolve
+    MC "Hey, I know you're in a hurry, but I just wanted to see if you were feeling alright. The other day you seemed..."
+    show WG stern
+    WG "Keisuke, I told you not to worry about me. I can manage just fine! I'm dealing with it the way {i}I{/i} know how and what {i}I{/i} know works. I don't need the added stress from you fretting over every little thing with me."
+    MC "...Sorry."
+    show WG worried
+    WG "{i}Sigh{/i}..."
+    show WG neutral-2
+    extend " I didn't mean to snap at you like that. That was uncalled for. {w}Being hungry like this just makes me feel so irritated."
+    show WG sad
+    WG "Truth be told, I was hoping to keep my appetite in check before we got the chance to see each other today so you could avoid such unpleasantness from me."
+    show WG worried
+    extend " And I couldn't even make it through the first period..."
+    MC "Hey, like you said, you're dealing with it. You'll figure out how to make it work for you. I don't want to hold you up if you gotta go."
+    show WG neutral-2
+    WG "Thanks, Keisuke. I'm going to be on my way now. Take the afternoon off, we still don't have those new orders filled. We'll do something together tomorrow. I'm behind on my work and I need to clear my afternoon and evening schedule."
+    show WG happy
+    "She leaned her head towards me and I met her the rest of the way so she could give me a parting peck on the cheek."
+    hide WG with dissolve
+    MCT "Ugh... I'm such an idiot. I just wanted to make her feel better but ended up getting in her way and making things more difficult for her."
+    "I wasn't ready to give up just yet, but I was certainly second guessing myself at this point."
+    scene black with fade
+    pause 1
+    scene Gym with fade
+    play music MC
+    "I made use of my afternoon off to go to the gym. I figured a solid workout would help do some good, help clear my head, or at least serve as a distraction."
+    if checkSkill("Athletics", ">", 7):
+        "I wouldn't consider myself to be a regular here exactly, but I knew who all the regulars were."
+    else:
+        "I definitely wasn't a regular at the gym, but I didn't need to be to know who I'd bump into here."
+    #show Hageshi neutral with dissolve
+    "Hageshi-sensei was over in the corner pounding on a speed bag so fast it sounded like a herd of galloping horses. He didn't even look like he was trying that hard. The guy didn't even bother to change out of his school clothes."
+    #hide Hageshi with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    "Then you had the two titanic amazons over at the squat rack. You'd think the most astonishing thing would be that the barbell they were using was so full with weight plates they had to hang more from inside the collars."
+    "But I was more so surprised by just how damn big both of them were now. They were similar height to me when I started here but now I didn't even come up to shoulder height on them."
+    "The real surprise though was seeing them working out together."
+    Natsuko "We could always take more weight off the bar for you, since you're not keeping up."
+    show FMG angry-3
+    FMG "Not a chance. What do you even mean? That was only like 2 reps less than you that last set."
+    Natsuko "Yeah, but I'm still going to move it up, you're only going to do worse from here."
+    FMG "Bullshit, I'll show you. Load it up."
+    Natsuko "Fine. But you aren't my problem if you hurt yourself."
+    MCT "I suppose things aren't {i}that{/i} different between them then, but at least they can be in the same room together now."
+    hide Natsuko
+    hide FMG
+    with dissolve
+    "Moving on to mind my own business, I did a circuit of between the treadmill, the bike, some machines, and free weights. I didn't have anything specific in mind other than to try to hit a total body workout."
+    $setSkill("Athletics", 1)
+    "It worked well enough. I felt like I hit that sweet spot between feeling energized and worn out from a good workout. I threw my stuff in my gym back and proceeded to head out. On my way to the lockers I noticed Akira and Natsuko were finishing up too."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    FMG "I still can't get over you drinking protein shakes. The taste is just... ew"
+    show Natsuko neutral
+    Natsuko "Maybe if you drank them instead of that other junk you put into your body."
+    show Natsuko flex
+    extend " You'd be as big as me."
+    FMG "Pfff, I don't need that garbage to surpass you. While you drink that, I have old reliable."
+    show FMG neutral
+    Natsuko "Chocolate milk is ‘old reliable'? What are you, 12?"
+    show FMG happy
+    FMG "You're missing out is all I'm saying. It's sweet and refreshing, there isn't anything better."
+    show Natsuko smug
+    Natsuko "I'll chalk it up to having a better taste in drinks than you."
+    show FMG neutral
+    FMG "I have a feeling you're trying to cope with the fact you're no fun."
+    show Natsuko neutral
+    Natsuko "Not at all, you simply don't understand how much more effective protein shakes are. I try to keep one handy to have after a workout to help with recovery, or if I know it's going to be a while between meals so I can keep my protein intake up."
+    MCT "Wait a second... between meals..."
+    MC "Okamoto-san, sorry to interrupt. I was curious about the protein shakes you use."
+    Natsuko "Hm? Looking to put on some more muscle yourself?"
+    MC "I suppose that would be a nice bonus, but I was curious about how filling they are. Like does it help tide you over until dinner?"
+    Natsuko "They do a decent job of that, yes. Though if you wanted something more filling you'd probably want to use a meal replacement shake that had fiber as well as protein. The milk helps with that too."
+    MC "Hmm, good call. That gives me an idea, thanks. {w}Nice to see both of you, I'm going to hit the shower."
+    Natsuko "Goodbye, Hotsure-san."
+    hide Natsuko
+    hide FMG
+    with dissolve
+    "As I started to head out I heard some heavy steps rush up behind me before feeling a heavy tap on my shoulder."
+    show FMG neutral with dissolve
+    FMG "Hey, Kei. Wait up."
+    MC "What's up?"
+    show FMG sad
+    FMG "Hey uh, I wanted to ask Alice about something but she didn't seem like she's been in a good mood the last few times I saw her."
+    show FMG sad-2
+    FMG "I was wondering if you could put in a good word for me and ask her to talk to me when she had some time."
+    if isEventCleared("WGFMG001") and isEventCleared("WGFMG002") and isEventCleared("WGFMG003"):
+        "To be honest I was surprised she was telling me this instead of going to Alice directly. They were pretty good friends by this point after all."
+        "Then again, maybe it was a touchy subject she needed help with. It was probably best not to pry."
+        MC "Sure, no problem. I'll put in a good word. I guess you've noticed that she's been under a lot of stress. She's been dealing with a lot lately, but I think I got something that might help her out."
+        show FMG neutral
+        FMG "That's good to hear. I've been kind of worried about her. She's certainly uh... filled out more than usual lately. I figure that might have something to do with it."
+        FMG "But I'm glad to know you're trying to help her out."
+        MC "I try anyway."
+        show FMG happy
+        MC "I'll tell her to give you a call the next time I talk to her."
+        show FMG flex
+        FMG "Sweet! You're the best! I knew I could count on you, Kei-kun!"
+    else:
+        "If I had to guess, Akira needed some big favor she didn't feel comfortable just outright asking Alice for. She looked kind of downtrodden and sad compared to her usual boisterous self, so I had to assume it was something important."
+        MC "Sure, no problem. I'll put in a good word. I think I got something that might put her in a better mood too."
+        show FMG flex
+        FMG "Sweet! Thanks bro!"
+    MC "Later."
+    scene black with fade
+    pause .5
+    scene Lockers with fade
+    "I now had a plan. I didn't know if it was going to work, but it certainly sounded better than doing nothing. I took a quick shower before heading out to take a trip into town."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+    scene Dorm Hallway with fade
+    play music Sunset
+    "I managed to make it back to school before it got too late so I could show Alice what I got her."
+    play sound Knock
+    PRG "W-Who is it?"
+    MC "It's Kei. Can I come in?"
+    PRG "O-Oh! Of course, Hotsure-san."
+    scene Dorm PRG
+    show PRG neutral
+    with fade
+    "Aida greeted me at the entrance to their dorm, standing at the threshold of her room, I couldn't help but notice how much she had grown recently herself, and not just solely in her belly anymore. Looking \"ripe\" would have been an understatement."
+    PRG "I'm glad you came to see Alice. I think she could use some cheering up."
+    MC "Well that's the plan anyway."
+    MCT "!"
+    MC "Uh... Aida?"
+    PRG "Y-Yes, Hotsure-san?"
+    MC "Your, uh... shirt."
+    show PRG lactate
+    PRG "O-Oh... n-not again."
+    show PRG sad-2
+    PRG "E-Excuse me, Hotsure-san..."
+    MC "No problem."
+    scene Dorm WG with fade
+    MCT "Well that was awkward as hell."
+    WG "Aida, who was that at the door?"
+    show WG surprised-2 with dissolve
+    WG "Oh, Keisuke, I wasn't expecting you."
+    show WG doubt
+    WG "I'm sorry, but I don't have time to hang out with you this evening. As I told you earlier today I need to catch up on things."
+    show WG worried
+    WG "Between the constant distraction of my hunger, and barely being able to reach the keyboard on my laptop, my productivity has been on a steady decline."
+    MC "You know, they have specialty keyboards that aren't limited to the standard width."
+    show WG neutral
+    WG "Well how does that work with the key spacing?"
+    MC "They're like these split keyboards. You can place the two halves as far apart as you want, they're designed to be more ergonomic. They're becoming more popular for gaming setups. Just get a wireless one for your laptop."
+    show WG surprised-2
+    WG "That's—"
+    show WG happy
+    extend " That's a really good idea Dear."
+    MC "See, I knew all that time playing video games would pay off somehow."
+    show WG happy-2
+    WG "I'm not sure I'd go that far, but it is a helpful suggestion. I'll order one right away."
+    show WG happy-2 at altMove(0.5, 0.3)
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    Sakura "Dinner will be ready in about 20 minutes Alice."
+    show WG neutral at Transform(xzoom=-1)
+    WG "Thank you Sakura."
+    "Dang, I thought Sakura had an ass on her before, but it practically exploded from the last time I remember seeing her. She was getting quite the belly on her as well."
+    "Well, you know, compared to normal standards we're talking about here. Alice and Aida aren't the most realistic comparators."
+    "I knew it was driven by her growth, but I had to imagine taking on the mantle of becoming Alice's personal chef, on top of her cooking club activities, wasn't exactly a neutral proposition for her waistline."
+    Sakura "Oh, hello Hotsure-san. Will you be joining Alice for dinner tonight?"
+    MC "Hello Myoga-san. No thanks. I won't be too long."
+    show WG haughty
+    play music WGAlt
+    WG "Let's reconsider that, dear."
+    show WG neutral
+    extend " Sakura, I know it's rather short notice, but could you whip up something for Keisuke. He doesn't eat that much anyway."
+    show Sakura happy
+    Sakura "Sure thing. No problem."
+    hide Sakura with easeoutright
+    MC "I thought you needed to get work done?"
+    show WG neutral-2 at altMove(0.5, 0.5)
+    WG "I do, but you've already proven to be quite helpful already in such a short amount of time since you showed up. It would be rude to send you away so unceremoniously. And besides—"
+    show WG happy at Transform(xzoom=1)
+    "Alice interrupted her chain of thought to lean in for a smooch on the lips."
+    WG "Mm."
+    WG "I really am glad to see you."
+    show WG surprised-2
+    extend " What's that that you're carrying?"
+    show WG neutral
+    MC "Oh right, that's why I came here. I had something to show you. Something I think can help with your other dilemma."
+    "I had my backpack and a couple of grocery bags I had brought in with me. I pulled out the boxes and set them down on her table."
+    if getVar("BEP") <= 8 or checkAffection("WG", ">=", 40):
+        MC "I picked up some meal replacement shakes for you."
+        show WG surprised-2
+        WG "Meal replacement shakes?"
+        show WG doubt
+        extend " I think the train has left the station on setting up some kind of diet plan Kei."
+    else:
+        MC "I picked up some shakes for you."
+        show WG stern
+        WG "Are these weight gain shakes? Are you trying to fatten me up even more?"
+        MCT "Good thing I didn't try sneaking those past her instead. I had an idea she might be onto me already."
+    show WG neutral
+    MC "No no, it's not like that. These things are high in protein and fiber, with just enough fat and carbs to taste good and have a nice texture. It's something nice and portable that should help you keep full between meals."
+    MC "See look, I got you some different flavors: chocolate, vanilla, strawberry, milk tea, and matcha tea."
+    show WG neutral-2
+    WG "Hmmm, those do sound good, and a decent variety."
+    MC "That's just to start, there's like a dozen other flavors if you get bored. But I heard the trick is to mix them with milk."
+    "I pulled a couple of liter bottles of milk from my backpack and plopped them on her table."
+    MC "I figured one of them isn't going to be much, but I figured if you mixed up four of them into a liter of milk that would be something decent and still portable that could tide you over between meals."
+    MC "Plus, if it's in a container, no one would see or assume that you're eating in class."
+    if getVar("BEP") <= 8 or checkAffection("WG", ">=", 40):
+        show WG happy
+        WG "You really have put a lot of thought into this, haven't you?"
+        MC "I wanted to help."
+        show WG worried
+        WG "{i}Sigh{/i}... And I realize now I should have asked you to, instead of just pushing you away."
+        MC "You don't have to ask for my help. I'm always willing to offer it."
+        show WG happy
+        WG "It's comforting to know that you're thinking of me."
+        MC "I'm always thinking of you."
+        show WG haughty
+        WG "Really now? {i}Always{/i}?"
+        show WG doubt
+        MC "Well maybe not always... {w}Probably if I had to say..."
+        show WG sly
+        extend " Nope, now that I think about it— it's always."
+        WG "Now that's what I like to hear."
+    else:
+        show WG surprised-2
+        WG "You've put a surprising amount of thought into this."
+        MC "Is it that surprising?"
+        WG "I guess I hadn't realized how much you cared."
+        MC "Ouch. Look, I know I don't always get things right, but I'm trying."
+        show WG neutral-2
+        WG "And it's certainly appreciated."
+    play music LoveC
+    show WG aroused
+    WG "Come here."
+    pause .2
+    show Sakura happy at Position(xcenter=0.85, yalign=1.0) with easeinright
+    "Dinner is—"
+    show Sakura surprised
+    "Oh..."
+    "By the time Sakura came back in we were practically touching the backs of our throats with our tongues while my hands were roaming all over Alice's belly."
+    show WG surprised
+    WG "Oh my..."
+    show WG neutral at Transform(xzoom=-1)
+    show Sakura neutral
+    play music WG
+    extend " It appears that dinner is served. Please join us, Keisuke."
+    "Sakura was gracious enough to whip up some stir fry that was enough for my portion, it was pretty good. We both knew full well subtracting a portion from Alice's was not going to leave enough for her to be satisfied."
+    "Sakura wasn't exactly taking small portions for herself either. Overall it was a pleasant evening for what had started out as a pretty crappy day."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.DAY)
+
+    scene Classroom with fade
+    play music Peaceful
+    show WG neutral-2 with dissolve
+    "The next day it was clear to see Alice was in a much better mood. Taking regular sips from her large thermos seemed to keep her topped off. I didn't even hear her stomach rumble once."
+    "Then again, four meal replacements mixed into a liter of whole milk was probably something like 2000 calories— as much as a normal person needed to eat in a whole day."
+    "That would seem like a lot, but was still rather paltry in comparison to her usual meals as of late. I hoped it was enough to tide her over for a little while."
+    scene black with fade
+    pause 1
+    scene Dorm Exterior with fade
+    "I caught up with Alice later in the day to see how she was doing."
+    show WG neutral
+    MC "How are the shakes working out?"
+    show WG happy
+    WG "Excellent. It's a life saver, honestly. I feel like I can focus in class again. Thank you again, it was a great idea."
+    MC "My pleasure."
+    show WG neutral-2
+    WG "I wanted to tell you too, we got the supplies in and Kokutan has started working on the orders again. Plan on making quite a few deliveries tomorrow."
+    MC "Sure thing."
+    WG "Oh, and I hope it's not too much to ask, but could you pick up some more milk for me? I used up the couple of liters you brought over last night. If I'm not around, just drop them off in my room."
+    MC "No problem, consider it done."
+    show WG happy-2
+    WG "I knew I could count on you."
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.EVE)
+    scene Dorm Hallway with fade
+    play sound Knock
+    pause 2
+    scene Dorm WG with fade
+    "I knocked on her door, but let myself in after I didn't get an immediate response."
+    show WG neutral-2 with dissolve
+    WG "Oh, come in, Keisuke. Sorry I didn't get the door sooner. I was in the middle of mixing up another shake with the milk you had dropped off earlier."
+    MC "Huh?"
+    show WG happy
+    WG "I must say this other brand definitely has a smoother and creamier texture. Rich and sweet. It's quite decadent when added in with the rich flavors of the shakes."
+    MC "Uhhh..."
+    show WG happy at altMove(0.5, 0.3)
+    show PRG nervous at Position(xcenter=0.8, yalign=1.0) with easeinright
+    PRG "U-Um, Alice?"
+    show WG neutral at Transform(xzoom=-1)
+    WG "Yes, Aida?"
+    PRG "D-Do you happen to know what happened to the milk I had put in the fridge?"
+    show WG surprised-2
+    PRG "I-I know it takes up a lot of space in there. I-It's okay if you moved it, but I need to um... {w}pump again... and I can't find the glass bottles I was using."
+    show WG surprised
+    show PRG surprised
+    "Alice's skin turned a shade of green not far off from the matcha shake she had just made for herself."
+    "Okay, so the shakes were {i}mostly{/i} a success— minus a little mix up."
+    jump daymenu
+
+label WG075:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

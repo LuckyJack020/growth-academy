@@ -5361,68 +5361,88 @@ label BE029:
     play music Peaceful
     #Setting: School. Science Room
     scene Classroom
-    show BE sad
+    show BE doubt
     with fade
-    BE "So, explain this to me one more time, because, I'm just not getting it."
-    "I couldn't help but sigh. Explaining something once was necessary. A second explanation could be useful for clarification. A third time would be seen as worrisome."
-    "I was on the fifth explanation. At that point, it could also be my fault. Maybe I had to approach this in a different way."
+    BE "So, can you explain this to me one more time? Because I'm just not getting it."
+    "I couldn't help but sigh. Explaining something once was necessary. A second explanation could be useful for clarification. A third time would be seen as worrisome, but I can work with that."
+    "I was on the fifth explanation. At that point, it could also be my fault."
+    MCT "Maybe I should try explaining this in a different way..."
     MC "Okay, look at it this way. Imagine all of these minerals are a variety of bad guys in a video game."
     MC "You know ahead of time that each one is weak to a specific combination of weapons. But they aren't named. So you need to figure out what they are."
+    show BE surprised
+    "Honoka loudly clapped her hands together."
+    BE "Oh! Kind of like Flame Insignia: Champions!"
+    MCT "Now we’ve got a bite."
+    MC "Exactly."
     MC "All these tests we can do are like testing out the weapons on the minions of them we've captured ahead of time. So we can try one thing after another and make sure we know exactly what we have in our sights."
     "Honoka and I had a small tray in front of us. Twenty different minerals rested on it in five columns of four, numbered, with no other indicators of what they actually were."
+    show BE happy
     MC "So, we'll start with 1, for example. Now the first thing you look at it is color. But this is the... weakest option, I guess you'd say. Some minerals can be multiple colors. Quartz is like a mimic, it could be practically any color."
     MC "So then, you can look at the luster. Think of it as you're wanting to know if you need metal-piercing rounds for your weapon. It's either going to be metallic, or non-metallic. Or, basically, shiny or not-shiny."
     show BE neutral
-    BE "Okay, got it. So this is not shiny, so it's non-metallic. And it also feels really weak. If that makes sense?"
+    BE "Okay, I’m getting it now. So this is not shiny, so it's non-metallic. And it also feels really...weak. If that makes sense?"
     MC "It does! That could do with its hardness. See how your fingernail scratches the surface, that means it's very soft."
     MC "So we could tell the weapons engineers in our fictional video game to save some of the budget for the harder enemies. Er, minerals."
     "I continued to assist Honoka as we went down the list of different tests we could do, to narrow down what minerals we had here."
     show BE happy
-    BE "I... think I'm actually getting it. Guh, somehow when you describe it, it actually sounds a lot simpler than I thought it was."
-    MC "Well, hey. Geology can be tricky too. Like this here. "
-    MC "This is kind of a gimme. Fool's gold, or pyrite. It's not like they're going to give us real gold to work with. There's a lot of obvious clues. The cube shape, the shine, the color, obviously. But, watch this."
+    BE "I... think I'm actually getting it! Guh, somehow when you describe it, it actually sounds a lot simpler than I thought it was."
+    MC "Well, hey. Geology can be tricky too. Like this here."
+    "I pointed over to the gold rock labeled number 7."
+    MC "This is kind of a gimme."
+    BE "Isn’t this a really expensive rock? It’s gold, right?"
+    MC "It’s fool's gold, or pyrite. It's not like they're going to give us real gold to work with. There's a lot of obvious clues. The cube shape, the shine, the color, obviously. But, watch this."
     "Unable to hide my smirk, I took the gold chunk and rubbed it across the material given to us."
     MC "Black streak."
-    BE "But... it's gold."
-    MC "Yep. I don't know how to explain that one. But it helps prove it's pyrite. You don't need to do every test for all the minerals, but most of them will help you narrow it down."
+    show BE confused
+    BE "But... it's golden. How does it make a black streak?"
+    MC "Yeah... I don't know how to explain that one. But it helps prove it's pyrite. You don't need to do every test for all the minerals, but most of them will help you narrow it down."
     show BE neutral
     BE "That's cool. Okay. I think I've got a handle on this now. Thanks, Kei-chan."
     MC "I'll let you take it from here, then."
+    "Tsubasa-sensei gave all of us an assignment instead of having his regular boring lectures."
     "Honoka had asked me for help with this assignment, and I had been happy to do so. Though the only reason I'd known so much was from struggling with it myself early on..."
     show BE happy
-    BE "And this one's shaped like, a diamond prism or something... so that would be this then. Yeah, that makes sense. Okay, I'm getting the hang of this."
+    BE "And this one's shaped like a diamond prism or something... so that would be this then. Yeah, that makes sense. Okay, I'm getting the hang of this."
     MC "Yeah, see? I knew you could do it yourself."
     "Honoka nodded and wrote down her answer, then moved onto the next one. I was working on an assignment myself. For the most part things stayed quiet, except for Honoka's occasional chattering."
     BE "Hehe."
     MC "What's up?"
     show BE neutral
-    BE "Well, I'm having trouble figuring out this one. Can you take a look?"
+    BE "Well... I'm having trouble figuring this one out. Can you take a looook~?"
     "I nodded and stepped over."
     MC "Which number is it?"
     show BE unique
     BE "Number 12."
-    MC "Okay, so..."
+    MC "Oh, I remember that one. Okay, so..."
     "I looked at the tray, but couldn't see a mineral in the twelfth spot. The number was missing as well."
-    MC "I'm confused. Where is it?"
+    MC "Huh? Where is it?"
+    show BE disoriented
     "Honoka chuckled, bringing my gaze to her."
     "In the middle of her breasts was the missing mineral, the tiny chunk looking like it would be lost forever if it sank into the depths of her bosom. The paper with the number on it rested just below the mineral."
     show BE aroused
-    BE "This cleavage is just so ridiculous, I can't figure out how it's so massive and full. Can you help me?"
+    BE "This cleavage is just so ridiculous, I can't figure out how it's so {i}massive and full{/i}. Can you help me~?"
     MC "Oh, Honoka..."
+    BE "{i}Mhm...?{/i}"
     MC "If you're trying to force me into a higher ranking on the Mohs Scale, it's definitely working."
-    show BE happy
-    BE "Hahaha! Good one, Kei-chan."
-    "I reached forward, and gently plucked the piece out of her breasts, wagging it at her."
-    MC "But science is no time for flirting!"
+    show BE doubt
+    BE "..."
+    MC "Heh...get it...? Because-"
+    BE "It’s a hardness joke. I get it, Kei-chan."
+    MCT "Is there a draft in here?"
+    MC "{i}Ahem.{/i}"
+    show BE neutral
+    BE "Anyways, take the rock, Kei-chan. Let’s get back to work."
+    "I reached forward, and gently plucked the piece out of her breasts."
+    MC "What? You didn’t think it was funny?"
     show BE sad
-    BE "Aw. That was clever, too."
-    MC "Yes, it was. I'm rather proud of that. But I'll be prouder when you ace this assignment."
+    BE "You’re lucky you’re cute, Kei-chan."
+    MC "Yes, I am. I'm rather proud of that. But I'll be prouder when you ace this assignment."
     show BE angry
     BE "Grrrr."
     show BE neutral
     BE "Just tryin' to have a little fun, is all."
-    MC "Heh, I get that. But it's important to focus on the work. You don't want to lose your luster after all. "
-    BE "Yeah, three puns is too many. Back to work."
+    MC "Heh, I get that. But it's important to focus on the work. You don't want to lose your {i}luster{/i} after all."
+    BE "Oh my god. Please stop."
     "I got back to my own assignment as well, until Honoka called me back over."
     show BE sad
     BE "Um, Kei-chan, I actually do need help with this last one."
@@ -5432,25 +5452,26 @@ label BE029:
     MC "Ah, hm. Let me take a look."
     if checkSkill("Academics", ">", 9):
         MC "Ahhh, wait a second. I think I know what's going on here. Hm, where's the... ah, see, you forgot to grab something from the toolset."
-        show BE surprised
+        show BE surprised-2
         BE "I did? I got the coin, and the little tablet to do the streaks, and the nail."
         MC "Yep. One sec, I'll grab it."
         "I walked over to where the geology kits had been stored, and grabbed something off of the table. When I got back to Honoka, I kept it hidden in my hand."
         MC "Behold."
         "I dropped the item right above the specimen and watched as it clung to the mineral. Honoka's eyes widened in confusion."
-        BE "You have gravity powers?"
+        show BE surprised
+        BE "{i}You have gravity powers?{/i}"
         MC "Haha, no. Magnetism powers!"
         "I took the mineral and the magnet and separated them, then brought them together again. As the two items touched, there was a distinct click of the two getting magnetized."
         MC "It's easy to forget this one because not a lot of minerals are automatically magnetized. This is magnetite."
-        show BE happy
+        show BE seductive
         $setAffection("BE", 1)
         BE "Oh, darn. That's tricky then! Haha, you fixed it for me, though. You're so smart, Kei-chan."
         MC "Nah. It's just a lot of studying. This kind of stuff would trip me up a lot too without hitting the books. But now that you're caught up it'll be a piece of cake."
         BE "Heh, hopefully. Okay, let me just finish this up here and I'll be done, I think."
     else:
         MC "Hm. I don't really know what this one would be. You did all the tests for it, that you can find?"
-        BE "Yeah."
-        MC "So, hm."
+        BE "Yeah. I think so..."
+        MC "So... hm."
         "Honoka had written down a few examples on her paper of what it could be. But they were all so similar in their attributes that it was hard to get it down to one specific mineral."
         MC "Well. I suppose you may just have to guess here. But you have your notes here, and proof that you did the tests. "
         MC "I'd say to just pick one of these three. With the work you showed you should still get partial credit. And everything else seems right, so you still will get enough to ace this paper for sure."
@@ -5465,7 +5486,7 @@ label BE029:
     BE "Well, maybe if I think about it in geology terms, I can figure it out..."
     MC "I think you might just be better off with restarting your save and save-scumming."
     show BE sad
-    BE "Aw, phooey."
+    BE "Man... that’s my third time!"
     jump daymenu
 
 label BE030:
@@ -5681,7 +5702,7 @@ label BE030_neutral:
 
 label BE031:
     $setProgress("BE", "BE032")
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     play music HigherEdu
     "I'm not quite sure what Honoka had planned for us tonight. She had told me it would be a surprise, but didn't even indicate if she wanted to go out, or stay in."
     "I was fine with both choices, but knowing Honoka, she probably just forgot to tell me if it was one or the other."
@@ -5696,7 +5717,9 @@ label BE031:
     MC "Honoka?"
     BE "Sorry! Just a sec. Dang socks all over the place. Coming!"
     #[SFX- Door_Open]
-    show BE neutral with dissolve
+    show BE neutral
+    show NoHairpinBE2
+    with dissolve
     "A few seconds later, Honoka opened the door. We greeted each other, but as I looked at Honoka, something was different. I couldn't quite put my finger on it."
     MC "So, what's the plan for tonight?"
     show BE surprised
@@ -5709,10 +5732,8 @@ label BE031:
     stop music
     "Honoka peered her head outside her door and looked down the hallway, twice on both sides, before grabbing my hand and yanking me inside."
     #[Effect- Screen Shake (1 time, low intensity)]
-
-    scene Dorm BE
-    show BE surprised
-    with hpunch
+    show Dorm BE behind BE with CropMove(0.35, "wipeleft")
+    show BE surprised with hpunch
     #[Transition- wipe][(S)Or other  fast  transition, I'm not sure what options we have?]
     play music Steamy
     "Being unprepared for such an act, I was caught off-balance. My feet tripped over each other, and I began fumbling towards Honoka's chest."
@@ -5860,7 +5881,7 @@ label BE031_c1_after:
     hide cg
     stop music
     "Even sporty, peppy Honoka seemed somewhat exhausted after the workout she'd given herself, and I couldn't blame her."
-    show BE aroused with dissolve
+    show BE aroused
     BE "It, heh, it was good, right?"
     "The thought that Honoka could be unsure about such a thing was a travesty to me."
     MC "Honoka, it was perfect. I don't even know how to describe how good that felt."
@@ -8965,7 +8986,7 @@ label BE045:
     Tomoko "... H-Huh?"
     BE "The nipples! The spinny knobs on the controller!"
     MC "Did you have to word it like that? They're also called \"analog sticks\"..."
-    "Honoka blushes as she bites her lip and looks at Keisuke in embarrassment..."
+    "Honoka blushes as she bites her lip and looks at me in embarrassment."
     show BE angry
     BE "{i}Dch{/i}-No, shut up tho."
     MC "You can shut me up, but the truth still stands."

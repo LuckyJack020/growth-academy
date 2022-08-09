@@ -3,7 +3,7 @@ label GTS001:
     $setVar("GTS_selfhood", 0)
     scene Campus Center with fade
     play music Peaceful
-    "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn't sure how to properly process what we were told."
+    "The words from Tashi-sensei stayed with me long after class had concluded. I just wasn't sure how to properly process what we were told."
     "What Daichi had told me earlier was starting to resonate more, and I began to wonder if others knew about the purpose of this school before they were enrolled."
     "If only to focus on the things I could understand for a while, I decided to take a walk and take stock of the new campus; the little pamphlet map they gave us, I figured, would only do for so long."
     UNKNOWN "Excuse me!"
@@ -62,7 +62,7 @@ label GTS001:
             jump GTS001_c1
         "I'm curious about what changes I might go through...":
             jump GTS001_c2
-        "I'm concerned about what that might mean for my younger sister, honestly.":
+        "I'm concerned about what that might mean for my sister, honestly.":
             jump GTS001_c3
 
 label GTS001_c1:
@@ -86,7 +86,7 @@ label GTS001_c2:
 
 label GTS001_c3:
     $setAffection("GTS", 1)
-    GTS "Oh? You have a younger sister, Hotsure-san?"
+    GTS "Oh? You have a sister, Hotsure-san?"
     MC "Yeah, she's going to school here, too. I'm just thinking about what Sensei said, about how sometimes siblings are transferred to this school simply because of the results of the other."
     MC "I'm sure I can cope with whatever might happen to me, but I'm worried about her. I just don't want her to go through something that might hurt her."
     GTS "It's only natural to worry as the older sibling Hotsure-san, but you mustn't let it concern you too much. There's no way to know for certain at the moment, and as such it may be best to be hopeful and keep your chin up."
@@ -7227,7 +7227,7 @@ label GTS037_c1_after:
     MC "Is something on your mind, Naomi-chan?"
     show GTS sad
     GTS "I was just pondering how it'd be best to speak to others. On one hand, craning my neck down might be seen as intimidating, but on the other hand, slouching and leaning might be seen as condescending."
-    "I don't want to come across as scary, but I don't want others to think I'm belittling them either. What should I do?"
+    GTS "I don't want to come across as scary, but I don't want others to think I'm belittling them either. What should I do?"
     MC "I don't think you can take the same approach with every single person you meet. It might just be something that doesn't have a universal answer."
     MC "What do the other giants do?"
     show GTS neutral
