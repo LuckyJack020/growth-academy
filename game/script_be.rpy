@@ -1045,7 +1045,6 @@ label BE009:
     $setTimeFlag("size2")
     $setProgress("BE", "BE011")
     $setBEOutfit(OutfitEnum.ATHLETIC)
-    #change back to ATHLETICSOCCER after global010 scene has been implemented
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
@@ -1886,7 +1885,7 @@ label BE016:
     $setProgress("BE", "BE017")
     scene Auditorium with fade
     play music Busy
-    $setBEOutfit(OutfitEnum.ATHLETICBASKETBALL)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was a practice for the basketball club tonight. Would be good to give her encouragement."
     "The basketball court was fairly typical, from what I remembered of my old school."
     "Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
@@ -3612,7 +3611,7 @@ label BE022_c1_4:
 
 label BE023:
     $setProgress("BE", "BE024")
-    $setBEOutfit(OutfitEnum.ATHLETICARCHERY)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     scene Track with dissolve
     play music BE
     "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
@@ -4204,7 +4203,7 @@ label BE024_c2_3:
 
 label BE025:
     $setProgress("BE", "BE026")
-    $setBEOutfit(OutfitEnum.ATHLETICARCHERY)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     scene Field with fade
     play music Schoolday
     "As much as I wanted to be close to the action for Honoka's archery competition, I had to keep a good distance away from the archers. Not just for safety's sake, but the whistling happened frequently enough that it bothered me to no end."
@@ -5450,7 +5449,7 @@ label BE029:
     show BE neutral
     BE "Yeah. It seems like it could be one of a bunch of things. Maybe a chunk of iron? It's shiny, it's like, medium hard, looks like it has some cleavage but it's not obvious where..."
     MC "Ah, hm. Let me take a look."
-    if checkSkill("Academics", ">", 9):
+    if checkSkill("Academics", ">", 3):
         MC "Ahhh, wait a second. I think I know what's going on here. Hm, where's the... ah, see, you forgot to grab something from the toolset."
         show BE surprised-2
         BE "I did? I got the coin, and the little tablet to do the streaks, and the nail."
@@ -6315,7 +6314,7 @@ label BE034:
     play sound ReleaseArrow
     pause 1.5
     play sound Thud
-    $setBEOutfit(OutfitEnum.ATHLETICARCHERY)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     "With nothing important to do during the afternoon, I'd gone to one of Honoka's archery club meetings to watch her perform."
     play music HigherEdu
     "I suppose it was wrong to say it was unimportant. Considering what we'd done, and how we felt for one another, coming to support someone you cared about seemed to be pretty vital."
@@ -6334,7 +6333,6 @@ label BE034:
     MC "..."
     MC "It was rough today, yeah."
     "Honoka reached behind her shoulder and unstrapped her breast guard. With the garment on the ground, she rubbed at the side of her boob, wincing as she did."
-    $setBEOutfit(OutfitEnum.ATHLETIC)
     BE "This is the biggest size they have. But even if they had one that fit, I just can't spread my arms out far enough to avoid smacking a boob without losing out on power."
     show BE angry
     BE "But a full-power shot means I have to be close which means, bowstring against the titty and ow, it really smarts..."
@@ -7206,7 +7204,7 @@ label BE038B:
     scene Baseball Field with fade
     play music Busy
     #SFX: General chatter
-    $setBEOutfit(OutfitEnum.ATHLETICSOFTBALL)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     MC "Let's goooo, Honoka!"
     "It was a day off of classes, and what perfect weather for it too. Honoka and her softball club were doing a match within the club."
     "With the secrecy of the school as it was, they couldn't exactly go to challenge another academy's softball club. Honoka was first at bat. The pitcher was a rather short girl with impressive thighs."
@@ -7511,7 +7509,7 @@ label BE041A:
 
 label BE041B:
     $setProgress("BE", "BE042")
-    $setBEOutfit(OutfitEnum.ATHLETICSOFTBALL)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     scene Baseball Field with fade
     play music BE
     pause 1.5

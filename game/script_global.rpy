@@ -915,22 +915,24 @@ image Minori happy = "Graphics/minor/minori/happy.png"
 image Minori embarrassed = "Graphics/minor/minori/embarrassed.png"
 image Minori sad = "Graphics/minor/minori/sad.png"
 
-image Sakura angry = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/angry.png")
-image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/deadpan.png")
-image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/frustrated.png")
-image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/neutral.png")
-image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/happy.png")
-image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/nervous.png")
-image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/sad.png")
-image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/sad-2.png")
-image Sakura surprised = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/surprised.png")
+image Sakura angry = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/angry.png")
+image Sakura awkward = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/awkward.png")
+image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/deadpan.png")
+image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/frustrated.png")
+image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral.png")
+image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy.png")
+image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/nervous.png")
+image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad.png")
+image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-2.png")
+image Sakura sad-3 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-3.png")
+image Sakura surprised = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/surprised.png")
 
 image Natsuko neutral = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/neutral.png")
 image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/annoyed.png")
-image Natsuko angry = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/angry.png")
 image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/disappointed.png")
 image Natsuko smug = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/smug.png")
 image Natsuko flex = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flex.png")
+image Natsuko frustrated = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/frustrated.png")
 image Natsuko happy = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/happy.png")
 image Natsuko flirty = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flirty.png")
 image Natsuko aroused = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/aroused.png")
@@ -983,6 +985,7 @@ image dummy = "Graphics/ui/dummy.png"
 image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.png"
 image HairpinGTS1 = "Graphics/GTS/1/overlays/hairpin-overlay.png"
 image FlowerPRG2 = "Graphics/PRG/2/overlays/flower-overlay.png"
+image WmHairpinBE2 = "Graphics/BE/2/overlays/hairpin-overlay.png"
 image NoHairpinBE2 = "Graphics/BE/2/overlays/nohairpin-overlay.png"
 
 #Audio
@@ -1011,7 +1014,7 @@ define audio.Country = "Audio/BGM/scene_country.ogg" #Country Theme
 define audio.CreepingPresence = "Audio/BGM/CreepingPresence.ogg"
 define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
-define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
+define audio.Festival = "Audio/BGM/scene_festival.ogg" #Dokkoi!
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
@@ -1336,7 +1339,9 @@ init 2 python:
     eventlibrary['FMG070'] = {"name": "Size Woes", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "okinawa",                         "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG071", "obsflags": [],               "conditions": []}
     eventlibrary['FMG071'] = {"name": "A Big Send-Off", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                                            "location": "airport",                         "priority": PrioEnum.ALL, "sp": 8,     "next": "FMG072", "obsflags": [],               "conditions": []}
     eventlibrary['FMG072'] = {"name": "Record Breaking", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG073", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG073'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG073'] = {"name": "Disaster Zone", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG074", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG074'] = {"name": "A Tough Nut to Crack", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG075", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG075'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}

@@ -22664,7 +22664,7 @@ label WGFMG003:
     Natsuko "Are you trying to throw out your back?"
     show FMG flex
     FMG "Sounds like you're scared, Natsy. This is the perfect challenge! But I'll understand if you want to back down."
-    show Natsuko angry
+    show Natsuko frustrated
     Natsuko "If I ever hear \"Natsy\" come out of your mouth again. It won't be Nikumaru-san's weight that sends you to the nurse."
     MCT "I don't know if I like where this is going."
     show FMG neutral

@@ -151,15 +151,13 @@ init python:
         DRESS = "dress"
         NUDE = "nude"
         ATHLETIC = "athletic"
-        ATHLETICSOCCER = "athletic-soccer"
-        ATHLETICARCHERY = "athletic-archery"
-        ATHLETICBASKETBALL = "athletic-basketball"
-        ATHLETICSOFTBALL = "athletic-softball"
+        ALTERNATE = "alternate"
         BEND = "bend"
         CASUAL = "casual"
         CASUAL2 = "casual-2"
         COOKING = "cooking"
         FORMAL = "formal"
+        GYM = "gym"
         SWIM = "swim"
         SWIMSUIT = "swimsuit"
         COW = "cow"
@@ -798,12 +796,12 @@ init python:
 
     def setBEOutfit(o):
         global BEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ATHLETICSOCCER or o == OutfitEnum.ATHLETICARCHERY or o == OutfitEnum.ATHLETICBASKETBALL or o == OutfitEnum.ATHLETICSOFTBALL or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             BEOutfit = o
 
     def setFMGOutfit(o):
         global FMGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             FMGOutfit = o
 
     def setGTSOutfit(o):
@@ -833,8 +831,13 @@ init python:
 
     def setNatsOutfit(o):
         global NatsOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             NatsOutfit = o
+
+    def setSakuraOutfit(o):
+        global SakuraOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL:
+            SakuraOutfit = o
 
     def setDaitaroOutfit(o):
         global DaitaroOutfit
@@ -934,6 +937,7 @@ label start:
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
+        SakuraOutfit = OutfitEnum.DEFAULT
         RyokoOutfit = OutfitEnum.DEFAULT
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT
@@ -1315,6 +1319,7 @@ label startevent:
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
+        SakuraOutfit = OutfitEnum.DEFAULT
         RyokoOutfit = OutfitEnum.DEFAULT
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT

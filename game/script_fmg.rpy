@@ -13611,7 +13611,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         "Akira and I just stared at each other, dumbfounded."
         MCT "What the hell just happened?"
         hide WG with easeoutright
-        MC "You really beat her... well mostly— sort of anyway. You beat the challenge and that's all the matters. It's pretty crazy to think about, honestly."
+        MC "You really beat her... well mostly— sort of anyway. You beat the challenge and that's all that matters. It's pretty crazy to think about, honestly."
         MC "{size=-6}I mean I thought her belly was big before... but just look at it now...{/size}"
         FMG "Uh... you okay there Kei-kun?"
         show FMG sad-2
@@ -13730,7 +13730,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         FMG "I don't know, looks like any old airplane to me. Maybe you're starting to go crazy... well, crazier."
         MC "Hmmmm... {w}The door is wider!"
         FMG "You're telling the wrong person, it looks smaller to me. You know, cause I got taller... {size=-6}shorty{/size}"
-        MC "I hope you hit your head on the door."
+        MC "I hope your pillow is warm on both sides..."
         FMG "Shorty says what?"
         MC "I'm not saying it."
         "Our banter was interrupted by the plane door swinging opening, followed by Alice stepping out to greet us... much larger than she was when she dropped us off..."
@@ -14034,6 +14034,435 @@ label FMG072:
     jump daymenu
 
 label FMG073:
+    $setProgress("FMG", "FMG074")
+    scene Dorm Interior with fade
+    play music Peaceful
+    MCT "Akira is really going to like this gift I got her. I'd been looking forward to giving it to her ever since I saw it at the store."
+    MC "Let me just send her a text here..."
+    play sound Knock
+    FMG "Hey, it's Akira. Can I come in?"
+    MCT "Well that was fast..."
+    FMG "Can you get the door?"
+    MCT "Huh? I thought I left it unlocked."
+    MC "Sure thing."
+    show FMG neutral with dissolve
+    MC "Hey! Look at you with your fresh new duds. Got that fresh fit."
+    FMG "Oh yeah! Thanks. Finally feels nice to have something that actually fits. That and it's starting to get cold out, I definitely needed something warmer."
+    MC "I was just texting you to tell you to come over. Well, Chibuki's phone that is... to tell you to come over— you get what I mean. It's like you're psychic or something."
+    show FMG sad-2
+    FMG "Oh, yeah... Crap, I still need to get a new phone."
+    show FMG neutral
+    extend " Guess it's a good thing I stopped by."
+    "I couldn't quite put my finger on it, but something seemed a bit off. But that didn't matter, she was going to be totally stoked when I showed her what I got her."
+    MC "Alright, it's been a while since we got some games in. I picked up a copy of Wordly Fighters V: The Arcade Edition. It got pretty good reviews and I heard it fixed all the crap they messed up in the series with IV."
+    show FMG happy
+    FMG "A new Wordly Fighter's game? I thought they just kept making remakes of II. Sign me up!"
+    MCT "Little does she know the combo system is completely different with this one. She isn't going to know shit. There's no way she can beat me!"
+    MC "Oh, and while I was at the store I picked up something special for you."
+    show FMG surprised-2
+    MC "Since a regular controller isn't going to fit in your bear mitts anymore, I picked up this arcade style joystick controller for you."
+    show FMG happy
+    FMG "Ohmygod! That's so cool! Thank you Kei-kun!"
+    "Akira rushed to give me a hug, and before I even could brace myself for impact I found my mouth muffled by some soft boobies while my forehead slammed into a set of rock hard pecs."
+    "{i}*Craaaack*{/i}"
+    show FMG surprised
+    FMG "What was that?"
+    MC "{size=-6}{i}Huuuuuuuugggggghhhhhh.{/i} I think it was my back.{/size}"
+    FMG "Oh this is bad! Are you okay, Kei-kun?"
+    MC "Yeah, uh, it feels pretty good actually. I think you popped my back. {w}Although I'm not so sure I'm supposed to be seeing all these spots..."
+    show FMG surprised-2
+    FMG "L-Let's just take it easy for a bit then."
+    show FMG neutral
+    MC "Naw, it's fine. Let's fire this thing up."
+    "{i}*Dunananuntnannaa!*{/i}"
+    MC "I swear this song goes with everything. It's so sweet."
+    FMG "All the fighter's themes are pretty good, they're practically gaming classics."
+    MC "Alright, who are you going with?"
+    FMG "I don't know, I don't even recognize half of these characters."
+    MC "Try someone new I guess. You could always just go with your old stand-by and pick the green monster guy."
+    FMG "Does that mean you're going to pick the muscled girl with the unusually thick thighs?"
+    MC "My tastes are not on trial here, your reputation is, Ms. Queen of Fighters."
+    show FMG angry-3
+    FMG "I've never called myself that."
+    MC "What do you mean? You yelled it to the entire arcade last time you crushed me. {w}It was pretty cringe, bro."
+    show FMG neutral
+    FMG "I think I would have remembered that."
+    MC "Okay, fine. Since your memory is so fuzzy, I'll fill it in for you and tell you I won."
+    show FMG happy
+    FMG "So does that mean you call yourself the ‘Queen of Fighters'?"
+    MC "...Speaking of fuzzy memories— why do I hang out with you again?"
+    show FMG angry-3
+    FMG "Cause no one else would put up with your shit."
+    MC "Oh yeah. That does sound familiar, now that you mention it."
+    show FMG neutral
+    "{i}AND FIGHT!{/i}"
+    "The game's announcer signaled the start of the match. I was so stoked to finally beat Akira in a match. I had been practicing all the combos on this character against the AI. All of my hard work was about to pay off."
+    "And if my hard work somehow didn't pay off, I was going to hide in the corner and do leg sweeps until she gave up."
+    MCT "I'm a genius! This plan can't fail."
+    show FMG surprised
+    "{i}*CRUNCH*{/i}"
+    MCT "What the hell was that?"
+    play music Requiem
+    "I looked over to see Akira had accidentally crumpled the control in her hands before she even got her first move off."
+    MC "Oh... well that sucks."
+    show FMG surprised-2
+    FMG "I'm. So. Sorry."
+    show FMG sad
+    FMG "First, I nearly break your back, and then I completely destroy the gift you {i}just{/i} gave me..."
+    show FMG sad-2
+    FMG "Let's call it a day, Kei-kun."
+    MC "Wait! Since we can't play Wordly Fighters, that frees up our schedule for a little sexy time in bed, right?"
+    MCT "I don't care if you break that thing. Sleeping on the floor would be worth it."
+    show FMG surprised
+    FMG "NO!"
+    MC "?"
+    show FMG sad-2
+    FMG "I mean, I want to, but I don't have a good feeling about that right now."
+    MC "Well... when do you think you would?"
+    show FMG angry-3
+    FMG "I DON'T KNOW, OKAY!?"
+    show FMG angry-2
+    FMG "I'm trying not to hurt you, you big horney idiot!"
+    MC "..."
+    "I genuinely didn't know what to say to that. That didn't sound like one of her usual insults we use to poke fun at each other. She was really pissed. It was pretty scary."
+    show FMG sad
+    FMG "Shit, I'm sorry, Kei-kun. I didn't mean it like that. I just- {w}I just don't want to make things any worse than I already have today."
+    MC "It's not that big of a deal, Akira. I can always get you another one."
+    show FMG sad-2
+    FMG "It's not just that, I... {w}I came by because Chibuki kicked me out of our room after I broke the faucet in our bathroom. Water was going all over the place and she had to call maintenance... again."
+    MC "Oh, that sucks."
+    show FMG sad
+    FMG "I was going to text you that I was coming over... but I broke Chibuki's phone too."
+    MCT "More stuff destroyed? This sounds pretty bad, way worse than her last growth spurt."
+    MC "Ouch. I bet she's {i}really{/i} pissed at you now."
+    FMG "I wouldn't be surprised if she never talks to me again."
+    MC "Oh come on, it can't be that bad. You need something to take your mind off it while this blows over."
+    FMG "I don't know man, she was {i}pret-ty{/i} mad. But I guess you're right. Let's just chill on the couch or something. We don't have to do anything today."
+    show FMG surprised-2
+    extend " On second thought, I'll take the couch."
+    show FMG neutral
+    extend " You just sit over there on your bed while we chill."
+    MC "Akira, you can't live your life like this forever, always being afraid that you're just going to break everything or hurt people."
+    show FMG sad-3
+    FMG "I know. {w}Ugh, you're right. {w}But every time I try to not break something, I just end up breaking something else. I tried not to rip the towel rack off the wall after washing my hands, but then I bumped into the faucet handle."
+    FMG "Then I tried to save Chibuki's phone from falling into the toilet. I caught the phone, only to pulverize it, but not before knocking over the toilet and I {i}still{/i} ended up ripping the towel rack off the wall."
+        MC "That's a bit more than the faucet handle..."
+        "At this point, I even began to wonder if inviting her into my room was a good idea. But she needed {i}someplace{/i} to go."
+        FMG I feel like the whole world is made of paper now."
+    FMG "I don't know what to do. I thought being this jacked would be awesome, that it would make me a better athlete. Now I just feel like a bull in a china shop."
+    MCT "Man, this sucks seeing her like this. It must be really bothering her if she's feeling this down. I wish I could help, but I don't know how... {w}Wait a second."
+    MCT "I don't know how to help Akira, but I think I know someone who can."
+    MC "Hey, tell you what? Why don't I go get us some snacks? It's been a stressful morning for you. Just take it easy and rest on my couch... assuming you can still fit on it."
+    show FMG neutral
+    FMG "Thanks Kei-kun. I could use a break."
+    "Akira laid on my couch, her shins dangling past the sofa arm. She looked stiff like she was trying not to move. This wasn't the chill Akira I was used to, I could tell she wasn't in a good place."
+    MCT "I don't know how to help her, but I think I know who can."
+    scene black with fade
+    pause .2
+    play music daybyday
+    scene gym with fade
+    MCT "Come on, she's gotta be here."
+    show Natsuko with dissolve
+    MCT "Bingo! I knew she'd be here."
+    show Natsuko neutral with dissolve
+    MC "Hey Nat, I don't want to interrupt your routine but I could use your help."
+    Natsuko "If Akira fainted, I'm not going to carry her back to the nurse's office again. She needs to learn her own limitations."
+    MC "Not what I was getting at, but sorta... in a different way... I guess."
+    Natsuko "Hmm? What are you talking about?"
+    MC "Akira needs some help. She doesn't have good control over her own strength after this latest growth spurt. You've always managed to keep good control over everything despite being even bigger than her."
+    MC "I mean, looking around, it doesn't seem like you're having trouble with breaking stuff, so that's gotta count for something, right?"
+    MC "I figured you have to have some insight or some trick how you manage to do it. Akira really needs some help and I don't have the answers, but I hoped you might. Do you think you could help her?"
+    show Natsuko annoyed
+    "Nat was obviously annoyed by my question, but I knew deep down she cared enough about Akira to help me out."
+    Natsuko "Ugh... If you must know, the reason why I have more control over my strength is that I've had some help."
+    MC "Nat, asking someone for help? Did I hear that right? Is the world somehow ending?"
+    Natsuko "Weren't you practically begging me to help you just now?"
+    MC "Okay, you're right. I'll shut up. I'm not very good at being serious, you know that, but Akira really does need help."
+    show Natsuko neutral
+    Natsuko "The last time I had a significant growth spurt I broke all sorts of stuff in my dorm. Myoga-san tried to be supportive and just laugh it off, but I could tell she was afraid..."
+    Natsuko "I knew I had to get serious about getting things under control when the most supportive friend I had felt terrified to be around me."
+    MC "So what did you do?"
+    Natsuko "I got some help from someone who had been through this before."
+    MC "Are you talking about your mom? You did mention she had a muscle growth factor like you."
+    Natsuko "Just forget I even said anything about that. I was talking about someone else."
+    "{i}*BOOOM!*{/i}
+    "A shockwave that felt like thunder moved through the floor of the gym."
+    MC "What the hell was that?"
+    Natsuko "Convenient timing. That must be him. Come on, let's talk to him."
+    MC "Who are you talking about?"
+    Natskuko "You know who he is."
+    "{i}*Whoomp!* {w}*Whoomp!*  {w}*Whap!* *Crat!*{/i}"
+    "Someone was hammering on the punching bag with what sounded like meteor strikes as we walked towards the other side of the gym."
+    #show Hageshi neutral with dissolve
+    "I should have known. Hageshi-sensei, the math teacher."
+    if isEventCleared(MC002):
+        "When I first saw him, at the time, he was probably the biggest person I'd ever seen... well, in person."
+        "I heard he had a muscle growth factor, which made sense at the time, but after seeing what Akira and Nat have gone through, he looked kind of small by comparison."
+        "Judging by how loud he was hitting that bag though, the guy certainly knew how to throw a punch."
+    else:
+        "He was a pretty big dude, and I heard he had a muscle growth factor, but next to Akira and Nat he didn't really look the part to be honest. The guy certainly knew how to throw a punch though."
+    Natsuko "Excuse me, Hageshi-sensei, do you have a minute?"
+    Hageshi "Nice to see you, Okomoto-san. I have several, in fact. I wasn't really doing much. I was just passing through this part of campus and I couldn't help myself from getting a little time on the bag. What do you need?"
+    Natsuko "Well? What are you waiting for? Talk to the man."
+    MC "Right. {w}Hey, Hageshi-sensei, I was wondering if you could help me out... well, {i}us{/i} out. Akira's growth has been getting harder for her to control lately."
+    MC "You've been through this before and you seem to know how to manage it pretty well if you taught Nat a thing or two. I mean, I've never seen you break anything or hurt anyone... well, unintentionally anyway."
+    "Hageshi-sensei just looked at me with his placid, unflinching eyes. Patient and understanding, but intimidating at the same time. He wasn't the easiest person to read."
+    Hageshi "Hmm, I think I can help. That is if she's up for it. I'm not going to waste my time trying to help someone who doesn't want it for themselves."
+    MC "Come on, this is Akira we're talking about. She's gonna do whatever it takes to be the best she can be. No BS, I'd bet my life on that."
+    Hageshi "You say that now, but it's not your place to speak for others. Nonetheless, I have faith in Mitzutani-san too. Bring her to my classroom when you get the chance. I have papers to grade, so I'll be there anyway."
+    MC "Thank you Hageshi-sensei! I'll bring her right over."
+    Hageshi-san "What about you, Okomoto-san? You've grown quite a bit yourself recently. Have you been keeping up with your training?"
+    show Natsuko annoyed
+    Natsuko "I-I've been doing just fine, Hageshi-sensei."
+    Hageshi "Oh? Good to hear. My door is always open if you need help again."
+    show Natsuko angry
+    "Natsuko shot me a glare out the side of her eye as if to say ‘not a word'."
+    MC "Right. Good talk. I'll go find Akira. See you in a bit, Hageshi-sensei!"
+    jump daymenu
+
+label FMG074:
+    $setProgress("FMG", "FMG075")
+    scene dorminterior with fade
+    play music sunset
+    show FMG sad with dissolve
+    MC "Hey, Akira I got something I want to show you. Quick! There's no time to explain, you have to come with me!"
+    FMG "What are you talking about?"
+    MC "Just come with me."
+    show FMG sad-2
+    "I reached out my hand to Akira, {w}but she pulled away... {w}I know she didn't mean to, but it kind of hurt to see her do that."
+    FMG "I-I don't want to hurt you."
+    "I didn't really have the heart to tell her it was too late for that."
+    MC "This is what I mean though, we can't even hold hands now? Just trust me. Let me show you something."
+    show FMG neutral
+    FMG "Sorry. Go ahead, lead the way."
+    "She took her hand in mine, absolutely burying it in the process and proceeded to crush it."
+    MCT "Okay, I lied, this hurts much worse. But I can't tell her that now!"
+    scene black with fade
+    pause .2
+    scene classroom with fade
+    play music peaceful
+    #show Hageshi neutral with dissolve
+    MC "Tada!"
+    show FMG sad-2 with dissolve
+    FMG "Hageshi-sensei's class? This is what you dragged me to? Kei, I'm doing fine in math class. I don't feel like studying right now."
+    MC "Come on, have a little bit of faith in me. This is Hageshi-sensei, if anyone knows how to help you, it's gotta be him. He's been through this before, he's gotta have some tips or tricks to help you out."
+    "Hageshi-sensei looked up from me to turn his attention to Akira. {w}He seemed equally concerned that her usual infectious enthusiasm was gone, leaving a sad and dejected amazon in her place."
+    show FMG sad
+    FMG "{i}Sigh{/i}... It's true. Hageshi-sensei, I could use some help. My roommate doesn't want to see me, and I'm afraid of hurting my boyfriend. {w}I've tried everything just to not break anything I touch, and I just seem to keep making things worse."
+    Hageshi "That doesn't surprise me. Sometimes the things we use to protect us end up hurting others more. {w}Let me ask you something. Do you know why they use gloves in boxing?"
+    show FMG neutral
+    MC "Because it's safer? Can't hit as hard with pads on your hands."
+    Hageshi "Right, most people think that, but what it actually does is pad the knuckles, so people can punch harder while not having to worry about breaking their hand."
+    Hageashi "In bare knuckle fights you'd never want to punch somebody in the head. Too many bones to bust your knuckles on. Might even get a nasty gash from grazing a tooth."
+    Hageashi "But with gloves on, now you can really beat somebody's brains in."
+    MC "What's this about again?"
+    show FMG angry-2
+    FMG "Apparently he needs to knock some sense into you."
+    Hageshi "Couldn't hurt. {w}Well, actually it would hurt a lot— heh! My point is, playing things too safe can end up making things worse."
+    show FMG neutral
+    Hageshi "Physical distance creates emotional distance. Sitting things out all the time feels the same as disinterest. Fear doesn't turn into love. {w}You have to get this under control if you're going to get your life back."
+    show FMG sad-2
+    MC "Whoa, that's pretty deep, Hageshi-senesi."
+    FMG "Can I ask you something, Hageshi-sensei?"
+    Hageshi "Of course, that's why I'm here."
+    FMG "What was it like for you when you were going through all of this? {w}At first I thought it would be fun... {w}Now I'm starting to realize it isn't always very fun."
+    show FMG neutral
+    Hageshi "I was a small scrawny kid before I came to Seichou. I got picked on all the time."
+    MC "Kind of hard to imagine you being small, Hageshi-sensei."
+    Hageshi "I'm sure with a long hard look in the mirror, Hotsure-san,"
+    show FMG surprised
+    extend " it wouldn't be that difficult for you to imagine."
+    show FMG neutral
+    FMG "Damn, he got you good. How does it feel?"
+    MC "Can we get to the part where you're supposed to be helping, Hageshi-sensei?"
+    Hageshi "Okay fine, here's a tissue. {w}Listening to you two talk to each other I thought you'd be used to being a verbal punching bag by now."
+    MC "Shouldn't that make me the sympathetic character here then?"
+    FMG "It's always somehow about you isn't it, Kei-kun?
+    Hageshi ``{i}Anyway{/i}, {w}getting back to your question, Mitzutani-san, my ‘transformation', for lack of a better term, was the best thing that ever happened to me."
+    Hageshi "But for others, even some with the same factor, it was the worst thing that ever happened to them."
+    Hageshi "I felt more confident in my body, all while others around me felt so much worse about theirs. I had been given a gift, and I wished others could see theirs like that too."
+    Hageshi "I've spent the better part of my life training martial arts and combat sports. At the core of all of them was the self-discipline to restrain your power until it was the right time to use it."
+    Hageshi "So I never really had an issue with controlling my strength. But I knew plenty of people that did and I thought some of my training I learned could help them out."
+    show FMG flex
+    FMG "That's so cool! You gotta show me what you know Hageshi-sensei!"
+    Hageshi "You sound eager now, but just you wait."
+    show FMG neutral
+    "Hageshi-sensei pulled out a drawer from his desk and took out what looked like a burlap sack. Reaching in, he pulled out what looked be... some kind of giant seed?"
+    MC "What's that?"
+    Hageshi "This here is a walnut in its shell. Doesn't look terribly appetizing, but..."
+    "Hageshi-sensei took the nut between his thumb and index finger, cracking it into two pieces effortlessly."
+    Hageshi "The inside reveals a delightful treat."
+    "Hageshi-sensei had a satisfied smile on his face as he put the two walnut halves into his month."
+    Hageshi "Why don't you give it a try, Mitzutani-san?"
+    show FMG flex
+    FMG "Pfft! That's easy. Give it here!"
+    Hageshi "Easy for us maybe. Hotsure-san here could train his whole life and still might not reach the level necessary for the feat."
+    MCT "I'm right here bruh!"
+    show FMG happy
+    FMG "I guess you have a point. Still though, I got this! Let me see here."
+    "Akira grabbed one of the nuts in its shell, carefully placing it between her thumb and index finger just like Hageshi. And with a slight squeeze—"
+    show FMG surprised
+    "The walnut exploded into a thousand pieces."
+    show FMG flex
+    FMG "See? Easy enough."
+    Hageshi "Impressive, Mitzutani-san, but walnuts are for eating, not smashing. Tell me, do you see a single morsel left over from this catastrophe that would be considered edible?"
+    show FMG surprised-2
+    FMG "Oh... crap. You're right."
+    show FMG sad-2
+    extend" Man, I feel like such an idiot."
+    Hageshi "Strength without patience or precision is just wasted energy. {w}Here, take this bag. There's hundreds in here."
+    Hageshi "I want you to practice until you reach the point where you can crack the shell in two, and actually have something to show for it. {w}Come find me when you've got it mastered."
+    show FMG angry-3
+    FMG "Wait. This is it? Smashing some nuts? I thought this was gonna be something hard. I'll get the hang of this in no time!"
+    Hageshi "Oh? And if it was so easy why didn't you just do it right the first time?"
+    show FMG neutral
+    FMG "..."
+    Hageshi "Don't be so eager to rush into things, Mitzutani-san. {w}I would recommend you practice outside. It can get messy pretty quick."
+    MC "Exactly, so not in my room. Great idea!"
+    scene black with fade
+    pause .2
+    play music busy
+    scene track with fade
+    FMG "Okay, so just cracking some nuts— should be no problem."
+    MC "You're pretty good at helping me bust nuts, so it should be easy."
+    FMG "You're done talking for forever now."
+    MC "I know I deserve that, yet I feel no shame."
+    FMG "I bet. Now shut up dude, I gotta focus. {w}Let's see here, nice and easy..."
+    show FMG surprise
+    "{i}*CRACK*{/i}"
+    "The walnut shattered into what I could only guess was about a million pieces."
+    MC "How did you do worse this time?"
+    show FMG surprised-2
+    FMG "I don't know!"
+    show FMG sad-2
+    extend " Maybe this is going to be tougher than I thought..."
+    MC "Naw, come on. You got this!"
+    show FMG happy
+    FMG "You're right Kei-kun! I'll get this in no time."
+    pause 1
+    show FMG neutral
+    "But as time wore on."
+    FMG "Hmm, that's not right..."
+    pause 1
+    "It was apparent that this wasn't so simple."
+    show FMG angry
+    FMG "Stupid nut! I'll show you."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause .5
+    scene track with fade
+    show FMG sad-2 with dissolve
+    play music bittersweet
+    FMG "This is hopeless. I'm so sorry Kei-kun..."
+    FMG "{i}Sniff...sniff...{w}{size=-6}Please, not like this...{/size}{/i}"
+    "Tears welled up in Akira's eyes before I caught one streaming down her cheek."
+    MC "Hey now. No need for all of this. It's okay."
+    show FMG sad
+    FMG "But it's not okay, Kei! How am I ever going to touch you without crippling you? How am I even going to open a door without destroying the handle?"
+    show FMG san-2
+    FMG "I'm just a big oaf who can't control herself! A big, stupid oaf!"
+    MC "Shut up! You're the one who's done talking now. I don't want to hear that from you."
+    "I wasn't the most eloquent with words, but I knew more than anything she needed my help. I wrapped my arms around her as best as I could, and as tight as I could manage."
+    show FMG surprised
+    FMG "NO DON'T! I'm only going to hurt you!"
+    MC "I don't care! It hurts more not to."
+    "It felt like wrapping my arms around a stone column, while my head was cushioned by firm, springy pillows in her chest. It was still crazy how much she towered over me, but it felt nice. {w}I missed this."
+    show FMG surprised-2
+    "And we just stood there for what felt like minutes. Me holding on for dear life, while Akira tried not to move."
+    show FMG neutral
+    extend " She peered down at me with a worried look in her eyes, until she finally stooped over to hug me back."
+    FMG "I needed this."
+    "Her hug was firm, heavy and crushing, but not injurious, gentle even, in her own way."
+    MC "I don't care if you never crack a stupid walnut right. That doesn't change that you're the person I want to hang out with all the time. Who's funny, and fun to be around— not to mention is sexy as hell."
+    FMG "You're such a dork! {w}But I feel the same way."
+    MC "Let's just get something to eat. You've been at it for a while now."
+    FMG "Yeah that's probably for the best. But let me try one more time."
+    "Akira looked a lot more at ease this time as she reached into the pouch for another walnut. With a gentle exhale, she gave it another shot."
+    FMG "Here goes..."
+    "{/i}{size=-8}CRACK{/size}{/i}"
+    show FMG sad-2
+    "The nut cracked into what looked like eight pieces before slipping out of her fingers."
+    FMG "{i}Sigh...{i} Still no good..."
+    MC "Wait! Try it again."
+    FMG "Ugh, it's just a waste of time."
+    MC "No, it isn't, look, that was like ten pieces at most, that's a lot less than the bazillion you've been doing before. It's working. Try again."
+    FMG "If you say so..."
+    "{/i}{size=-6}CRACK{/size}{/i}"
+    show FMG surprised
+    play music peaceful
+    "And just like that, she managed a slight crack that split the shell in two."
+    FMG "HO-LY SHIT."
+    FMG "I did it! I freak'n did it! WHOOO!"
+    MC "You totally got it! Look at that!"
+    "Akira dug out the nut from the shell and popped it in her mouth."
+    show FMG angry-3
+    FMG "Ew, these are gross. What's wrong with Hageshi-sensei?"
+    MC "Wait, we gotta show Hageshi! Hopefully he hasn't left for the day."
+    show FMG neutral
+    FMG "Good call. I wonder when he goes home? Crap, we might not have that much time. We gotta get there quick."
+    MC "If only there was some way I could run there fast enough with you."
+    FMG "This is only going to end one way you know it. Come here."
+    "Akra grabbed the sack of the leftover walnuts and scooped me up in her arms as she hauled ass back to the classroom buildings."
+    scene dormexterior with fade
+    "We almost didn't make it, but we managed to run into Hageshi-sensei along the way."
+    #show Hageshi neutral with dissolve
+    show FMG neutral with dissolve
+    FMG "Hageshi-sensei!"
+    Hageshi "Mitzutani-san? Is there something the matter?"
+    FMG "I did it! I finally did it. I cracked a walnut without destroying it!"
+    Hageshi "Oh? Is that so? Show me then."
+    FMG "Alright, here we go."
+    "Akira pulled a walnut out of the bag, giving it a sligh squeeze."
+    show FMG surprise
+    "Only for us all to see it explode all over the place."
+    show FMG sad
+    FMG "Aw man..."
+    Hageshi "It's alright, maybe you were just over-eager. Give it a try with your left hand."
+    show FMG neutral
+    FMG "..."
+    Hageshi "You have been practicing with {i}both{/i} hands, correct?"
+    FMG "..."
+    Hageshi "{i}Hoo boy{/i}, alright then..."
+    show FMG angry-3
+    FMG "What!? You didn't tell me to!"
+    show FMG surprised-2
+    Hageshi "Do I have to tell you to look both ways before crossing the street? I'm here to help you Mitzutani-san, not hold your hand."
+    MC "Yeah, that's my job."
+    show FMG angry-3
+    FMG "That's very sweet, but you're not helping here, Kei-kun."
+    show FMG neutral
+    Hageshi "Look, I believe you did it. Sometimes it can be hard to repeat something under pressure. I bet when you did finally do it you were feeling a bit more relaxed and at ease, right?"
+    show FMG happy
+    "Akira turned to me with a knowing smile."
+    FMG "Yeah, that's exactly what happened."
+    Hageshi "Good, now remember that feeling. Slow down and really feel for it. You need to adjust your grip and pressure as you press down so you can follow the cracks and fault lines to apply just enough pressure for a clean break."
+    Hageshi "It's not easy, and it's not supposed to be, but you'll get there."
+    Hageshi "Think of it as a marathon, not a sprint. In my experience when you're in the middle of a long and arduous fight, run, predicament— what have you— the moment you feel like giving up, is when you're only at 40%%."
+    show FMG sad-2
+    FMG "Only 40%%!? Man this sucks."
+    Hageshi "You're going to have to dig deep and persevere much longer than you planned on. You've already done it once, but once in a blue moon isn't once, always, and forever."
+    show FMG neutral
+    Hageshi "Keep working at it, with {i}both{/i} hands. {w}Just pace yourself this time. Come see me when you know you're ready. Just take it easy for the rest of the evening. Know how to take a win. You've made a lot of progress today, don't discount that."
+    show FMG flex
+    FMG "Thanks Hageshi-sensei."
+    Hageshi "I have to head home. I'll see you two tomorrow."
+    #hide Hageshi with dissolve
+    MC "Want to get some dinner then?"
+    show FMG neutral
+    FMG "Yeah. That sounds good."
+    MC "Sounds good to me too."
+    FMG "Hey, Kei-kun..."
+    MC "Yeah?"
+    FMG "Thanks for what you said... what you did for me earlier. I needed that."
+    MC "Hey no problem, you know me I'm—"
+    show FMG aroused
+    FMG "Shhhh. Don't spoil the moment by saying something stupid. I just wanted to say I love you."
+    MC "Heh, I love you too, Akira. I'm not going anywhere, you're stuck with me whether you like it or not."
+    show FMG happy
+    FMG "That's probably a bad thing now that I think about it, but it still makes me happy."
+    jump daymenu
+
+label FMG075:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

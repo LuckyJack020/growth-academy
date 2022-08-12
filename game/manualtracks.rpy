@@ -150,13 +150,13 @@ init python:
     ost.manualDefineList.append(Busy)
 
     Festival = ost.soundtrack(
-        name = "Festival",
-        path = "Audio/BGM/scene_festival.mp3",
+        name = "Dokkoi!",
+        path = "Audio/BGM/scene_festival.ogg",
         priority = 3,
         author = "Post-Bop",
-        description = "Town Festival Theme",
+        description = "Festival Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_festival.mp3")
+        unlocked = renpy.seen_audio("Audio/BGM/scene_festival.ogg")
     )
     ost.manualDefineList.append(Festival)
 
