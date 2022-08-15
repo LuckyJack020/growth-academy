@@ -3909,36 +3909,29 @@ label BE023_c1_after:
 
 label BE024:
     $setProgress("BE", "BE025")
-    scene black
+    $setBEOutfit(OutfitEnum.CASUAL2)
+    scene Town
     show BE angry
     with fade
-    play music Steamy
-    #panting
+    play music BrightLights
     BE "Mmm, Kei-chan, it's so hot!"
     MC "I know. Just keep going at it. It'll help."
-    #panting
     show BE aroused
-    BE "I'm trying. It just, there's so much of it!"
+    BE "I'm trying. It's just… there's just so much of it!"
     MC "You can handle it. I've seen you gobble down more than that before."
-    #panting
     show BE unique
     BE "But nothing else has ever been this good before."
-    MC "It'll be over soon. Then you can relax."
-    #panting
+    MC "Just hold out a little longer. It'll be over soon. Then you can relax."
     show BE happy
     BE "I just think it'd be so much better if I took my shirt off..."
-    stop music
     show BE neutral
     BE "Here, Kei-chan, hold my ice cream for me."
     MC "What?! Honoka, no, you can't just strip in the middle of town."
-    scene Town
     show BE sad
-    with fade
-    play music BrightLights
     BE "But it's so ho-o-o-ottttt..."
-    "Honoka wasn't kidding. The heat was pretty bad that day. Still, it had been her own idea to brave the heat and get some ice cream. We would have been fine at our rooms, with the air conditioning on."
+    "Honoka wasn't kidding. The heat was pretty bad that day. Still, it had been her own idea to brave the heat and get some ice cream. We would have been fine in our rooms, with the air conditioning on."
     MC "Do you want to go back into the ice cream shop and finish there?"
-    show BE neutral
+    show BE shrug
     BE "Nah, what's the point of getting a cone if you can't eat it on the go? Besides, I wanna see what else there is around here."
     MC "Fair enough. I offered."
     "My own double-scoop was struggling in the heat. Honoka had wanted soft-serve at first, but it was a good thing I changed her mind. The hard stuff was melting enough as it was."
@@ -3958,6 +3951,7 @@ label BE024_c1_1:
     show BE happy
     BE "Ooh, sure!"
     "Apparently, Honoka's own quadruple-scoop of chocolate, chocolate strawberry, double-fudge, and chocolate chip wasn't enough chocolatey goodness for her."
+    show BE embarrassed
     "I smirked and lifted the cone up to her mouth. Honoka blushed for a second, and then took a small bite."
     BE "Mm. Ooh yeah, that's good cookie dough in there."
     MC "Yeah you can tell they actually make the dough and don't just buy frozen dough pellets or something."
@@ -3968,7 +3962,7 @@ label BE024_c1_1:
     show BE sad
     BE "C-Cold..."
     "I pulled my cone back towards me, and saw the telltale splatter of off-white cream on Honoka's exposed cleavage."
-    show BE neutral
+    show BE shrug
     BE "Hah. I guess it really is too hot out here. Do you have a napkin, Kei-chan?"
     menu:
         "Wipe up Honoka's spill yourself.":
@@ -3979,15 +3973,15 @@ label BE024_c1_1:
             jump BE024_c2_3
 
 label BE024_c1_2:
-    "I felt it would have been the polite thing to offer Honoka a bite of my ice cream. But she already had more than I did, she probably didn't want one."
-    "I was mistaken. Despite her having four flavors to my one, Honoka leaned to the side and tried to take a bite of my ice cream."
+    "Now, the {i}polite{/i} to do would have been to offer Honoka some of my own ice cream. But she already had more than I did. And I’ve been craving cookie dough ice cream for weeks."
+    "But apparently, so was Honoka. Despite her having four flavors to my one, Honoka leaned to the side and tried to take a bite of my ice cream."
     MC "H-Hey, that's mine!"
     "I pulled my hand away but Honoka insisted. Though she had difficulty coming at the ice cream with her bust getting pressed up against me so firmly."
     show BE happy
     BE "But Kei-chan, ice creaaaam!"
-    show BE neutral
-    BE "It would be the proper thing to do."
-    MC "It's less proper to expect something."
+    show BE seductive
+    BE "It would be the polite thing to do."
+    MC "It's {i}impolite{/i} to sneak bites from someone else’s ice cream!"
     "Trying to keep my ice cream out of Honoka's greedy clutches, I kept moving the cone around. I stopped when Honoka pulled back unexpectedly, shivering where she stood."
     show BE surprised
     BE "Kya!"
@@ -3995,7 +3989,7 @@ label BE024_c1_2:
     show BE sad
     BE "C-Cold..."
     "Honoka invited me to look with a gesture of her hand, and I saw the telltale splatter of off-white cream on Honoka's exposed cleavage."
-    show BE neutral
+    show BE shrug
     BE "Hah. Well, that's what I get, I suppose. Do you have a napkin, Kei-chan?"
     menu:
         "Wipe up Honoka's spill yourself.":
@@ -4015,7 +4009,7 @@ label BE024_c2_1:
         "But, my pocket had a few extra napkins. I grabbed one and placed it on Honoka's ample chest to wipe the ice cream away."
     MC "It's really sticky."
     show BE neutral
-    BE "No kidding. Maybe you need to moisten it first."
+    BE "You’re telling me. Maybe you should moisten it first."
     if not getFlag("BE024_c1_1"):
         MC "Oh, I'm doing the work am I?"
     "Thinking back to something my mom always did, I took the napkin and just blotted it on my tongue. With a bit of dampness, I was able to clean up the rest of the dessert from Honoka's bosom."
@@ -4025,14 +4019,14 @@ label BE024_c2_1:
     MC "What?"
     show BE sad
     BE "Dude, you just rubbed your drool on my boobs."
-    MC "What? No I didn't! That... okay maybe but don't put it like that, that's gross."
+    MC "What? No I didn't! …Okay, I did. But don't put it like that, that's gross!"
     show BE happy
-    BE "Exactly! I deserve to do something to make it equal."
+    BE "Exactly! So, I deserve to do something in return to make it even."
     if getFlag("BE024_c1_1"):
         MC "Uh, like what?"
         show BE neutral
         BE "Hmm."
-        show BE happy
+        show BE wink
         BE "I get to drool on your boobs."
         MC "Honoka, I don't have boobs."
         $setAffection("BE", 1)
@@ -4046,12 +4040,12 @@ label BE024_c2_1:
         BE "No, because I didn't get any drool on you then."
         MC "You should not want that. Ever."
         show BE unique
-        BE "What if I do something even better than that to make us so unbalanced that there's only one way to make it even?"
+        BE "What if I do something {i}even better{/i} than that to make us so unbalanced that there's only one way to make it even?"
         MC "Huh?"
-    "Honoka leaned towards me, her breasts swinging in my direction like two missiles about to be launched. I backed up into the nearest wall, and felt her chest push me into it."
+    "Honoka leaned towards me, her breasts swinging in my direction like two missiles prepped for launch. I backed up into the nearest wall, and felt her chest push me into it."
     MC "H-Honoka!"
-    show BE neutral
-    BE "What's wrong, Kei-chan?"
+    show BE disoriented
+    BE "What's wrong, {i}Kei-chan{/i}?"
     show BE unique
     $setAffection("BE", 1)
     BE "I thought all guys dreamed of a girl pushing them into a wall, saying they wanted to swap bodily fluids?"
@@ -4059,20 +4053,22 @@ label BE024_c2_1:
         MC "Th... This isn't really what I had in mind..."
     else:
         MC "I don't... think this is what they mean."
-    show BE surprised
+    show BE angry
     BE "No?"
+    show BE disoriented
+    BE "Well let me change your mind, then~"
+    "With nowhere to go, Honoka loomed closer. Her chest squished into mine, creating a vacuum seal that felt like it stuck me to the wall. Honoka's face leaned in near my own, a devilish smirk on her face."
     show BE unique
-    BE "Well let me change your mind, then."
-    "With nowhere to go, Honoka loomed closer. Her chest squished into mine, creating a vacuum seal that felt like it stuck me to the wall. Honoka's face leaned in near, a devilish smirk on her face."
-    show BE happy
     BE "Are you ready, Kei-chan?"
     MC "M-Maybe?"
     "Honoka leaned closer, and soon, I felt the cold touch..."
-    "Of Honoka's ice cream as she nudged it into my cheek. She giggled like an idiot as she reached into my pocket for another napkin."
+    "...Of Honoka's ice cream as she nudged it into my cheek. She giggled like an idiot as she reached into my pocket for another napkin."
+    show BE wink
     BE "Hehe, did you think I was gonna kiss ya?"
     MC "I mean... yeah?"
     "Honoka licked the napkin and rubbed it against my cheek. I squinted and grumbled as she rubbed it against my face far more than necessary for the small dab of ice cream she left there."
     MC "Did you get it?"
+    show BE happy
     BE "Mm, yeah. I think so. Now we're even."
     "Like clinking wine glasses at a toast, Honoka took her ice cream cone and pushed it into mine. She left it there for a few seconds, letting the flavors mingle as the sun melted them further."
     BE "Perfect."
@@ -4086,9 +4082,10 @@ label BE024_c2_1:
     BE "I bet they'd be yummy. But you know what the trick to cereal is, Kei-chan?"
     MC "What's that?"
     "I feared the answer."
-    show BE unique
+    show BE disoriented
+    "Honoka patted the side of her breast."
     BE "You can't have cereal without a nice, big splash of milk~"
-    "It was a good thing I still was near the wall to support myself. I never thought of flirting as something that could be 'won' before, but Honoka won this time for sure."
+    "It was a good thing I was still near the wall to support myself. I never thought of flirting as something that could be 'won' before, but Honoka won this time for sure."
     jump daymenu
 
 label BE024_c2_2:
@@ -4100,43 +4097,47 @@ label BE024_c2_2:
     show BE surprised
     $setAffection("BE", 1)
     BE "K-Kei-chan!"
-    if not getFlag("BE024_c1_1"):
+    if getFlag("BE024_c1_1"):
         MC "Hush. This is my payment for you getting a bite of my ice cream."
         $setAffection("BE", 1)
         BE "..."
         "Hearing those words come out of my mouth shocked me, but it seemed to stun Honoka enough that I could continue my work."
+        show BE surprised-2
     "Doing such a thing in public made me feel like a hole opening up beneath my feet would be preferable to being called out. But it was a rare time I could get one over on Honoka!"
+    show BE aroused
     "Even once the ice cream was gone, I didn't stop sliding my tongue up her breast. I reached as far as my neck and tongue could reach, until I just barely grazed the nape of Honoka's neck."
     "With the ice cream thoroughly gone, I pulled back, and licked my lips."
-    MC "There we go. All gone."
+    MC "T-There we go. All gone."
     "I stared at Honoka for a moment. She stared back. I could visibly see the gulp of anxiousness go down her throat."
     MC "W-Was that too much? So-Sorry, I thought it'd be-"
     "Honoka looked down at her chest for a moment, still holding her ice cream cone. She moved her cone right over her rack again, and pulled her other hand up to the top scoop."
     "With a quick flick, she knocked the top scoop right off, landing the thick hunk of ice cream into her cleavage."
     MC "Wh-What the? Honoka, what are you doing?!"
-    show BE unique
-    BE "Oops. I spilled more. Can you help me out again, Kei-chan?"
+    show BE disoriented
+    BE "{i}Oops.{/i} I spilled more. Can you help me out again, Kei-chan?"
     MC "Bwuh."
     "The scoop was slowly drifting south. There were already rivulets of chocolate moving down the pale curves of her breasts, ready to stain her blouse at any moment."
     MC "Muh."
-    BE "Get in there."
+    show BE unique
+    BE "{i}Get in there.{/i}"
     "Before I could reply, though it's not like I was about to decline, Honoka grabbed the collar of my shirt and yanked me into her cleavage. Her aim was great, with my mouth landing right on the scoop of ice cream."
     "Honoka held a firm grip on my collar. It was a struggle to not drop my own ice cream as she heaved her chest up insistently into my face. I gulped, and began eating away at the ice cream on her bust."
     "Despite how enjoyable the situation was at its core, I was desperate to get it finished, on the off chance anyone we knew saw us."
-    "My tongue just dragged over her chest again and again, until there wasn't a droplet of ice cream that remained. She made sure of that. She only let go when she no longer felt the chill of the dessert on her chest."
-    "When I stood back, I couldn't help but notice the obvious bumps in her shirt, despite the heat outside. The ice cream had really been cold..."
+    "My tongue just dragged over her chest again and again, until there wasn't even an atom of ice cream that remained. She made {i}sure{/i} of that. She only let go when she no longer felt the chill of the dessert on her chest."
+    "When I stood back, I couldn't help but notice the obvious peaks in her shirt, despite the heat outside. The ice cream had really been cold..."
     show BE happy
     BE "..."
     MC "..."
     BE "Well. That was a thing."
     MC "Yeah."
+    show BE wink
     BE "Was it tasty?"
     MC "..."
     MC "It was, yes."
     show BE unique
-    BE "And how did the ice cream taste?"
+    BE "Hehehe~ And how did the ice cream taste?"
     MC "I already said-"
-    BE "Oh I know what you said. I know what I meant."
+    BE "Oh, I know what you said. I know what I meant."
     "I had nothing to say back as we walked further down the street. I thought that move would get me one up on Honoka."
     "Turns out we weren't even playing the same game..."
     jump daymenu
@@ -4146,23 +4147,24 @@ label BE024_c2_3:
     MC "No, sorry, I don't."
     if getFlag("BE024_c1_1"):
         "I wasn't sure what voice in my head told me to say that. I had napkins in my pocket, I could have helped, obviously."
-        "Maybe it was my curiosity at just seeing the bit of cookie dough ice cream run down Honoka's cleavage. She hadn't ever really buttoned it up all the way since we've arrived here."
+        "Maybe it was my curiosity at just seeing the bit of cookie dough ice cream run down Honoka's cleavage. The collar of her shirt plunged fairly deeply, a sign of this t shirt being on it’s last legs."
         "Though, in this heat, I couldn't blame her this time. It probably helped with ventilation. I bet the ice cream falling on her chest felt nice as well."
     else:
         "That oughta teach her. She'd have to deal with sticky boobs as penance for taking my ice cream!"
-    show BE neutral
-    BE "Ah, hm, don't worry about it. I've got an idea."
+    show BE shrug
+    BE "Hm. Actually, don't worry about it. I've got an idea."
     MC "Oh, you brought napkins?"
     show BE happy
     BE "Nope. Something better."
     show BE unique
-    BE "Pillows."
+    BE "{i}Pillows.{/i}"
     MC "Huh?"
     "Refusing to answer my question with words, Honoka heaved up one of her breasts with her forearm. She lifted it close to her face, and leaned forward until her face nearly touched it."
+    show BE aroused
     "With a long, slow lick, she cleaned up her breast of the ice cream that had melted onto it. Her expression as she stared at me, giving it one last lick, should have been criminal."
     "Honoka repeated her action with the other breast after swapping which hand held her ice cream cone. Even after both boobs had been licked, there was still a small amount in the middle."
     "That should have been the moment that I offered to help. But instead, Honoka beat me to the punch, pushing her head down further and getting one last lick in to make sure her boobs were perfectly pristine."
-    show BE happy
+    show BE wink
     BE "There we go. Much better now."
     "I kept watching her so intently that I nearly tripped. Judging by her reaction, it was exactly what she'd wanted."
     show BE neutral
@@ -4171,6 +4173,7 @@ label BE024_c2_3:
     BE "How? Hm..."
     show BE happy
     BE "I guess because it makes it easier to think about what kind of stuff I won't do in public. And, well..."
+    show BE seductive
     BE "It makes you happy, doesn't it, Kei-chan?"
     MC "Um. Yeah I suppose that makes me pretty happy."
     BE "Hehe, good."
@@ -4181,8 +4184,8 @@ label BE024_c2_3:
     show BE surprised
     BE "Oh no, Kei-chan!"
     "Honoka rushed over to help me, helping me back up. Thankfully there hadn't been any scrapes, just wounded pride."
-    show BE sad
-    BE "Are you okay, Kei-chan?"
+    show BE doubt
+    BE "Are you okay?"
     MC "Y-Yeah, I'm fine. Ice cream survived, too."
     show BE happy
     BE "Phew, good. Didn't mean to go that far."
@@ -4192,13 +4195,14 @@ label BE024_c2_3:
     show BE happy
     BE "Hahaha!"
     "Honoka giggled, her chest making the ice cream wobble in her chest. It was a miracle that the heat from her bosom wasn't making it melt faster."
-    BE "Okay, that was a good one. But it wouldn't have worked right now, you'd have fallen right into ice cream, instead."
+    BE "Okay, that was a good one. But it wouldn't have worked right now, you'd have fallen right into my ice cream, instead."
     MC "Yeah about that, won't you just get more ice cream on your boobs?"
     show BE neutral
     BE "Maaaaaybe. But I can always lick it up again!"
-    show BE unique
-    BE "Unless you'd prefer to do that, Kei-chan?"
-    "I urged Honoka to stop before I tripped again. I didn't think going out to get ice cream would be so memorable, but I wouldn't be forgetting that date for a while..."
+    show BE disoriented
+    BE "Unless {i}you'd{/i} prefer to do that, Kei-chan?"
+    MC "Careful with what you say, this sidewalk is still pretty treacherous if I’m not watching where I’m walking."
+    "I didn't think going out for ice cream would be so memorable, but I wouldn't be forgetting this date for a while..."
     jump daymenu
 
 label BE025:

@@ -5818,7 +5818,7 @@ label AE028_c1_after:
 
 label AE029:
     $setProgress("AE", "AE030")
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     play music Peaceful
     "After class, Shiori-chan and I got up together and made our way to her room. After yesterday's events, I figured it would be nice to see what Shiori-chan's room was like, get a closer look at how she's living."
     show AE neutral with dissolve

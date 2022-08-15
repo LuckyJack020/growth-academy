@@ -20150,331 +20150,253 @@ label PRG038:
 
 label PRG039:
     $setProgress("PRG", "PRG040")
-    scene Classroom
-    show HR neutral
-    with fade
+    scene Dorm Interior with fade
     play music Peaceful
-    HR "Now, the important thing to remember is that gagaku dates back to the imperial courts of the Heian period. Make a note of that."
-    "I pressed my pencil to the page and rolled my eyes. Tashi-sensei had an unfortunate habit of trying to cram information up until the bell rang, which left little time to actually write down information."
-    HR "All right. That's all I've got for you guys today. Before you all try to bash down the door, I'm assigning a short essay on traditional Japanese music, due in two weeks."
-    HR "I expect at least ten pages of solid writing, and I'd like you to convey your opinions on traditional music and how you feel it lead to the music of today."
-    hide HR with dissolve
-    "I quickly penciled the assignment into my practically untouched planner. Usually, I tried to just remember when my assignments were due, but an essay usually was worth more towards my grade, and I couldn't risk letting it slip my mind."
-    "We had a few minutes until the bell rang, so I threw my planner into my bag and craned backwards, stretching my back and hearing at least four individual pops. Apparently, I had the spine of a sixty year old man."
-    "Finally, the welcome ding of the dismissal bell rang true throughout the classroom. The classroom was nearly empty in under twenty seconds, save for myself and one short, clearly pregnant girl."
-    show PRG neutral with dissolve
-    PRG "Hey, Keisuke. G-Got any big plans today?"
-    MC "Not really, but I'm sure you've got something fun in mind."
-    show PRG aroused
-    PRG "A-Am I that obvious?"
-    MC "Just a tad. But, your ideas are always welcome, so let's hear it!"
-    PRG "Can we go to town? There's a café that I've been hearing about and I really want to try it."
-    MC "Yeah, that sounds like a ton of fun! Let's drop our bags off at our dorms, and meet by the bus stop."
-    show PRG happy
-    PRG "Okay! I'll meet you there!"
-    hide PRG with dissolve
-    "Aida smiled genuinely as she left the room."
-    if checkAffection("PRG", ">", 26):
-        "A warm feeling permeated through me. Even with all of the craziness that had been accenting our lives lately, things were going great, at least in my eyes."
-        "Aida finally seemed like she was loosening up around me a bit, especially compared to how she had been when I first met her."
-        scene Hallway with fade
-        "I slung my bag over my shoulder and went off down the hallway."
-        "Of course, relationships had their ups and downs, and having a relationship that had absolutely no conflict at all was generally not healthy."
-        "And even if and when a conflict or issue arose, I had confidence that the two of us could barrel straight through it and come out happier on the other side."
-    else:
-        scene Hallway with fade
-        "I picked up my bag and walked off down the hall. It was nice to see Aida's smile, especially with how much had been thrown at us lately. It was her smile that kept me going when things got hard on us."
-        "Aida was worth all the struggles, and so were my kids growing inside of her. No matter what obstacles came up, I had to stay resolute, both for her and our babies."
-
-    scene School Front with fade
-    "Around thirty-five minutes later, I sat by the bus stop, picking at a loose piece of paint on the old, metal bench."
-    "I wondered exactly how old the school was, and how many students had been here in its early years. Couldn't have been more than fifty. Maybe Daichi could dig up a yearbook or something from back then."
-    "I looked off toward the dorms. The usual flow of students had died down for the day, and now, only a few stragglers roamed across the campus, and certainly, no Aida."
-    "I went back to picking at the bench. By now, I'd made a sort of weird looking S shape in the paint. I remembered my friends and I drawing them on our notebooks as kids and acting like we were gang members."
-    "Three lines on top, three on bottom, two diagonal lines to join them, and the pointed ends closed off on the sides. It was simple, yet I had no idea where the trend even started. Probably an American trend of sorts."
-    "I knocked the paint chips off from my nail and stood, turning towards the dorms. Just as I was about to go off searching for her, a distinctly Aida shaped form came trotting across the grass, her face red and her forehead glistening."
-    show PRG sad with dissolve
-    PRG "I-I'm s-sorry, Keisuke!"
-    MC "Hey, hey, don't get yourself worked up over it! It's not like we have a concrete schedule. Is everything alright?"
-    show PRG unique
-    PRG "Y-Yeah. When I got back to my dorm, I suddenly felt really sick. I-It kind of came out of nowhere."
-    MC "What sort of sickness?"
-    PRG "Nausea, a-and really intense. I-I went to my bathroom and..."
-    "Aida looked away. I knew just from filling in the blanks what had probably happened."
-    MC "You mean almost like a... morning sickness?"
-    "Aida nodded."
-    PRG "I had been expecting it, but I thought it would happen sooner. I was really hopeful that I wouldn't get it at all."
-    MC "Hm. Weird that it happened in the afternoon and not before class. Isn't it called morning sickness because it usually kicks in in the morning?"
-    PRG "I did feel a little queasy before class, but I just thought that my stomach was upset. I'm prone to having an upset tummy, so I didn't think anything was wrong."
-    show PRG neutral
-    PRG "But, I'll be fine though! I feel a lot better now."
-    MC "Great! Just keep me posted. I'd hate for you to feel sick while we're out and about."
-    PRG "I don't think it'll be a problem."
-    hide PRG with dissolve
-    "Just then, the trademark clunking and backfiring of the bus came from around the corner, accompanied by the usual cloud of acrid, black exhaust."
-
-    scene Town
-    show PRG neutral
-    with fade
-    MC "So, where is this café?"
-    PRG "It should be near the center of town. It's fairly close to the movie theater, if I remember correctly."
-    "After a handful of minutes spent walking, the café came into view. It looked fairly trendy, but being that it was the mid afternoon, there were hardly any people."
-    UNKNOWN "Hey, Kei-chan!! Kodama-chan!!"
-    play music Busy
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
-    show BE happy at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
-    "Both of us whipped around to see Honoka across the street, waving to us vigorously. She waited on a passing car before crossing the street with a huge grin on her face."
-    BE "What brings you love birds here today?"
-    PRG "W-We wanted to try this new café."
-    show BE neutral
-    BE "Oh, yeah? I was there a week back. I didn't really care for it, their coffee wasn't sweet enough."
-    show PRG unique
-    PRG "Oh... I heard it was really good."
-    BE "Well, anyway. I was just heading to the game store down the street. You guys wanna join me?"
-    PRG "No, thanks. I think we're gonna go to the café instead. T-Thank you though, Inoue-san."
-    MC "You know, that game store does sound pretty cool. What do they have?"
-    show BE happy
-    BE "Things like video games, card games, board games, the usual stuff. You should totally come check it out!"
-    PRG "But... Keisuke..."
-    menu:
-        "Go with Aida to the café":
-            jump PRG039_c1_1
-        "Go with Honoka to the game shop":
-            jump PRG039_c1_2
-
-label PRG039_c1_1:
-    MC "I told Aida that I would go with her to the café, Honoka, and that's what I'm gonna do."
-    show PRG neutral
-    show BE sad
-    BE "Oh."
-    show BE neutral
-    BE "That's okay, Kei-chan. Some other time then. You kids have fun, 'kay?"
-    MC "We will. See ya around, Honoka!"
-    hide BE
-    hide PRG
-    with dissolve
-    "Honoka waved goodbye and continued down the street as Aida and I entered the café."
+    "As I wrapped my towel around my waist, I peeked out from the bathroom."
+    MCT "Good. No Daichi."
+    "I adjusted my towel and walked out and into the kitchen."
+    "I'd woken up starving for some strange reason, so I decided to take a shower first, then dig in, lest I lay in bed with a meal and not make it out again for a few hours."
+    "I walked to the fridge, the cool breezes of a much colder room blowing up and around... a lot of things."
+    MCT "Okay..."
+    pause .5
+    MCT "... Shit."
+    "My fridge was bare, save for a few sticks of butter, a bottle of soy sauce, and a jug of juice, which I knew for a fact had been in there long enough to start molding or rotting or whatever juice did when it came of age."
+    "I took it from the fridge and dumped it in the sink, turning my head away and sinking my nose into a bit of hair that was hanging down, really taking the time to appreciate the smell of my shampoo."
+    "I discarded the empty jug and went to get dressed. Now starving with no salvation, grocery shopping looked to be inevitable."
+    pause .25
+    "Once dressed, I pulled my phone out and pulled up Daichi's number."
+    MCCell "Want anything from the supermarket?"
+    "I put my phone back in my pocket and got my shoes on, then headed out into the great outdoors."
+    scene black with fade
+    pause .5
+    scene Town with fade
+    pause .5
+    MCT "God, I should have written down some essentials."
+    MCT "Not so I remember everything, but just so I don't hunger-shop."
+    "I kept my eyes on the prize. Only get the essentials. Some canned stuff, bread, noodles, rice, and a few snack items. It should be easy."
+    stop music
+    "But I knew myself. I was starving, and the odds and ends like cookies, candy, and the like always looked far more appetizing on an empty stomach."
+    MCT "Ugh..."
+    MCT "I wonder how Aida deals with this."
+    MCT "She's smart, so she probably eats ahead of time before making a trip."
+    "I glanced across the street at the burger shop."
+    MCT "That sounds fantastic right now..."
+    MCT "Mm... no. It's warm out, and that heavy stuff will just make me want to take a nap, not buy actual food so this doesn't happen again, or at least not for a while."
+    "I pulled my now drying hair from my face and looked up."
+    "Ahead on my right was that café I'd seen around from time to time."
+    MCT "Actually..."
+    pause .5
+    "I immediately walked in."
 
     scene Cafe with fade
-    play music Peaceful
-    "The two of us took two steps in and began eyeing up the large menu hanging from the wall."
-    show PRG neutral with dissolve
-    PRG "Thanks for coming with me, Keisuke. We can stop at the game shop after we're done here, if you want?"
-    MC "You and I had plans and it would've been disrespectful to you if I just bailed on you. But, yeah, I'd be down to stop there later."
-    PRG "Okay!"
-    "The café served mainly pastry type dishes and desserts, so there wasn't a ton of variety. But, they did have a chocolate filled croissant that was practically screaming in my ear to order it."
-    MC "What sounds good to you?"
-    PRG "Ah... the blueberry muffin sounds really good. And maybe a hot chocolate to go with it?"
-    MC "Ooh. Yeah, that does sound great."
-    "Seeing our eyes transfixed on the menu, the cashier took her place by the register and waited patiently."
-    Cashier "Something I can grab for you two?"
-    MC "Yes... Ahm, could I have a chocolate filled croissant and a coffee, please?"
-    Cashier "Certainly. Will you be taking your coffee black today?"
-    MC "Ah, on second thought, I'll take some cream and sugar with it too. It'll add some character to the coffee."
-    Cashier "Good choice. And for you, dear?"
-    PRG "I-I'd like a blueberry muffin, please. And could I have a medium hot chocolate, too?"
-    Cashier "Coming right up. Give me just a moment."
-    "She disappeared behind the counter, as I began counting yen onto the counter. A moment later, the cashier reappeared with my croissant and Aida's muffin on two small plates."
-    Cashier "Here you are. I'll bring those drinks out for you once they're ready. Shouldn't be too long."
-    MC "No rush. And, don't worry about the change."
-    Cashier "Thank you very much, you two!"
-    "Aida and I nodded to her in thanks as we claimed a small table near the entrance for ourselves. As Aida picked the tiny berries from the top of her muffin and popped them into her mouth one by one, I took a deep inhale of my croissant."
-    PRG "Does it smell good?"
-    MC "Yeah. You can tell from the smell alone that it's fresh. It has that light and almost doughy sort of smell."
-    PRG "Isn't doughy a texture though? Not a smell?"
-    MC "I mean, yes. But, by smelling it, you can get a vague freshly baked smell."
-    "I held it out to Aida, and she leaned across the table to give it a tiny sniff, her stomach brushing ever so slightly against the faded tablecloth."
-    PRG "Hmm. I smell mainly chocolate with a hint of vanilla. Probably from them baking the crusts with a vanilla extract. But I can also smell the buttery scent of the bread."
-    MC "That's what I mean! The buttery scent!"
-    PRG "W-Well, butter and dough are two entirely different things, Keisuke."
-    MC "Hey, I'm not the master chef here! I don't work with these things all the time like you do!"
-    "Our friendly squabble was broken up by the cashier's arrival with our steaming hot drinks. My coffee was poured into a cup with an intricate cream design decorating the surface."
-    "Meanwhile, Aida's hot chocolate was totally decked out with whipped cream and cinnamon flakes dusting it."
-    show PRG happy
-    PRG "Thank you!"
-    Cashier "My pleasure. Just flag me down if either of you need anything else!"
-    show PRG neutral
-    "The cashier faded back behind the counter once more. Aida brought her mug to her face and took a delicate sip, her whipped cream tower leaving a small blob of white creamy deliciousness on her nose."
-    MC "Careful. The cream is attacking you. "
-    "Aida crossed her eyes and stared at the whipped cream perched on her nose."
-    MC "From what I've heard, whipped cream only goes on top of sweet things. Clearly the whipped cream has chosen its target well."
-    "Aida wiped the excess cream off of her nose and smiled."
-    show PRG aroused
-    PRG "Y-You're calling me sweet?"
-    MC "I'm sure as hell not calling you sour!"
-    "Aida blushed as she slurped her hot chocolate. I made quick work of my croissant before moving onto my coffee."
-    "These were the dates I could really get behind. Just the two of us sitting together and talking. It seemed simple, yet it seemed that I learned more about Aida during these times than any other."
-    "By the time I had finished my coffee, Aida was inspecting her final uneaten chunk of muffin. It stay mostly intact as she rolled it between her thumb and forefinger, a scarce few chunks falling onto the crinkled muffin wrapper."
-    show PRG neutral
-    PRG "Hmm."
-    MC "Something the matter?"
-    PRG "No, not at all. I'm just trying to figure out what they used to bake this. It has a certain unique flavor that I can't put my finger on."
-    MC "Can I try it? Maybe my untrained tastebuds can help in some way."
-    "Aida broke her remaining piece and handed half over to me. I popped it into my mouth and chewed slowly, assessing each flavor as it came."
-    MC "There's blueberry, of course. Then... almost a sort of spice type flavor. Maybe cinnamon?"
-    PRG "I figured those two out, but there's a third flavor too. It seems to be more prominent in the aftertaste."
-    "I finished chewing and swallowed. There it was, right at the end. A sort of final zip of flavor, as if the muffin was waving goodbye as it disappeared into my cesspool of a stomach."
-    MC "It's almost... salty."
-    show PRG surprised
-    PRG "I-I think you're right, Keisuke!"
-    "Aida stood suddenly and hurried to the counter, surprising the cashier so much that she looked like she might faint."
-    PRG "Excuse me, ma'am! When these muffins are being mixed, do you add salt into the mixture?"
-    Cashier "Wah- erm, yes, I think so at least. The baker is only here in the early mornings, but he does add salt to most of his creations. He is always going on about how a bit of saltiness counteracts the sweet flavors of his pastries."
-    PRG "T-That's genius! Thank you, ma'am!"
-    Cashier "I... uh, you're welcome?"
-    "Aida dashed back to me and grabbed my arm excitedly, bouncing up and down like a kid on the night before christmas."
-    show PRG happy
-    PRG "Keisuke! That's it! Salt is what I need! All this time I've been searching for this mystery ingredient, and here it was sitting right in front of my face!"
-    MC "W-Whoa! Slow down a sec! I've never even heard you bring this up before!"
-    PRG "I never thought I'd be able to find the key to making my pastries better, so I kind of gave up on them. But now that I know what salt does for the flavor, I can make all kinds of new creations!"
-    MC "I can't wait to try them! But, don't go too crazy on the salt. I don't think either of us want kidney stones."
-    show PRG neutral
-    PRG "I-I won't use that much. Just enough to get the flavor right."
-    MC "Perfect. Now, what's next on our agenda for today?"
-    PRG "Well, did you want to stop at that game store yet?"
-    MC "Meh, I can do that a different day. Honestly, I should probably get back to my dorm and get started on that paper we were assigned today. I can't afford to get a failing grade on this."
-    PRG "O-Oh, of course! I-I should probably start on that too."
-    "Aida and I brought our mugs to the counter and thanked the cashier. Heading outside, I took Aida's hand in mine, and she gave my hand a gentle squeeze."
+    play music Sunset
+    pause .5
+    MCT "..."
+    MCT "Oh yeah..."
+    "My eyes immediately went to the menu, which featured pastries of all sorts, along with a long list of drinks."
+    "I stared up for probably a few minutes, more than likely looking like I hadn't seen a good meal in over a week."
+    Cashier "May I help you?"
+    MC "..."
+    Cashier "Sir?"
+    MC "Hm?!"
+    MC "Ah, y-yes! Could I have a... an iced coffee with... hm... {w}a slice of ogura toast, please?"
+    Cashier "Of course! That will be 815 yen, please."
+    "I dug out my wallet for some yen and set it beside the register."
+    Cashier "We'll bring it out for you when it's ready. Feel free to have a seat!"
+    MC "Thank you very much."
+    "I bowed ever so slightly, then turned to scan the cafe."
+    "Given the late morning time, the place was mostly empty, save for a couple of students occupying some tables."
+    "They glanced up at me as I walked, looking for a seat as I headed toward the front of the café where the windows were open, letting a gentle sea breeze blow in."
+    "I turned a corner and kept walking, glancing idly at a woman seated at a table by herself, a book in her hands and a cup of tea in front of her."
+    "As I passed by, I turned to have a seat at a nearby table, and scooted my chair out."
+    UNKNOWN "Oh, Hotsure-san! Good morning!"
+    "I glanced up toward the woman."
+    show Takamura neutral with fade
+    MC "Oh, Takamura-sensei! I didn't notice you!"
+    Takamura "Well, I suppose it is a bit strange seeing a teacher outside of their usual domain. I know it was for me back in my university days."
+    "She marked the page in her book with an overly colorful bookmark and shut it."
+    Takamura "Care to join me?"
+    MC "I wouldn't want to interrupt your reading, Sensei."
+    Takamura "No trouble at all. I was just about to take a break anyway."
+    "She waved me over with one hand and I got up to join her."
+    "Something about Takamura always gave me a sort of safe feeling. That sort of friendly warmth that you could just relax in for a bit."
+    Takamura "So! How has your break been treating you?"
+    MC "Very well, thank you. And for you?"
+    Takamura "Oh, I'm still working as I always am. A few of the teachers took some time off, but I always try to keep myself occupied."
+    MC "I can see that. Keep up the motivation and all."
+    Takamura "That's something I'll never lose track of. Rather, keeping up a strong rhythm of work is what's important to me, so I try to not break that habit."
+    Takamura "Though, I do take things a bit easier during this time."
+    "I nodded intently and glanced down at her book, which read ‘Japanese Sign Language Compendium' across the hard cover."
+    MC "You know sign language, Sensei?"
+    show Takamura sad
+    Takamura "Not extensively, no. However, due to a... factor related issue, I believe one of my students might benefit from knowing it, so I felt it wise to brush up myself."
+    MC "Ahh, I see."
+    show Takamura neutral
+    Takamura "Indeed. So, what brings you into town today, Hotsure-san?"
+    MC "Originally, I'd planned on just going grocery shopping, but I didn't want to go to the supermarket on an empty stomach."
+    show Takamura happy
+    Takamura "Ah, that's a dangerous game, Hotsure-san."
+    Takamura "The more empty your stomach, the faster that cart will fill."
+    MC "Hah, if only you knew, Sensei,"
+    show Takamura neutral
+    Takamura "I do, Hotsure-san. I handle much of the shopping for the cooking club, and I've impulse purchased my fair share of candy bars and sweets during those trips."
+    MC "..."
+    MC "Had not thought of that."
+    "The cashier came around the counter and over to us, setting down my toast and coffee in front of me."
+    MC "Thank you again."
+    Cashier "You're very welcome. Enjoy!"
+    "I politely bit into my toast, taking care not to get crumbs all over myself in front of the main food connoisseur of the academy."
+    Takamura "So, how have you been occupying yourself during your break, Hotsure-san? Taking some time off for yourself, I hope?"
+    MC "Of course. I've been taking it easy. It's mostly been taking time to relax, and spending time with Kodama-san."
+    show Takamura reassuring
+    Takamura "That's wonderful to hear."
+    Takamura "And how is Kodama-san doing?"
+    MC "She's been doing pretty well, I'd say."
+    show Takamura neutral
+    MC "I'd say a lot better since you had that talk with us."
+    Takamura "Wonderful."
+    "Takamura took a sip from her tea and looked off out the window for a moment, sighing as she set her cup back down."
+    Takamura "I'm sure that you're likely quite fed up with this topic being dug back up constantly, but how are you feeling in regards to it all, Hotsure-san?"
+    Takamura "In relation to Kodama-san and your situation with her, I should clarify."
+    MC "I..."
+    MC "Well, I guess I would say... it's a mixed situation."
+    MC "I'm overjoyed to be in a relationship with her, and I'm sure she feels similar. But, I feel like sometimes she still feels a little-"
+    Takamura "Pardon me, Hotsure-san. I don't mean to interrupt."
+    Takamura "However, I asked about you. Not Kodama-san. How are {i}YOU{/i}feeling about it all?"
+    MC "I..."
+    MC "I feel... both happy and nervous."
+    MC "Like I said, I love being in a relationship with her, and I think she's an incredible girl. However, the idea of me being a father... it's still a little crazy to wrap my head around."
+    Takamura "I'm sure. It's as big a change for you as it is for her."
+    Takamura "Now. Do those thoughts come up when you're with Kodama-san?"
+    MC "Occasionally. I'm working to keep them out of our times together, though."
+    Takamura "Hm."
+    Takamura "If I may, why do you feel you should keep those thoughts out?"
+    MC "Because I don't want those feelings to hang over our relationship. I want our time together to be about us. Not about this looming worry."
+    MC "I want Aida to feel happy and relaxed around me. Not scared."
+    Takamura "I see."
+    Takamura "Well, I would advise you against that."
+    MC "Why do you say that, Sensei? You mean that we should let ourselves be worried about this stuff constantly?"
+    Takamura "Oh, not at all, Hotsure-san. Not at all."
+    Takamura "What I'm referring to is that trying to deliberately shut out your feelings isn't doing any good for either of you."
+    Takamura "Your thoughts and feelings exist, and you should do your best to acknowledge them in a healthy manner. Shutting them out entirely isn't healthy, but wallowing in them like a pool isn't good for you either."
+    Takamura "It's a matter of balance. Should you try to have carefree, fun, and enjoyable times with your girlfriend? Of course you should! That's a large part of what brings two people together. Mutual enjoyment."
+    Takamura "However, part of a relationship is being able to rely on the other person to catch you when you're not at your best. It's a mutual give and take, if you will."
+    Takamura "Now. I understand that you two have been under quite the stress load as of late. Likely a lot of questions, and a lot of things being thrown at you that you never expected."
+    Takamura "Have you and Kodama-san taken time to just exist together?"
+    MC "We have. Recently, she met my sister and we all had lunch together, and we played some video games, just Aida and I, and watched a movie together."
+    Takamura "Good. Very good."
+    Takamura "What other feelings have you had?"
+    MC "Well... I guess I would say... thinking of how to be there for her?"
+    MC "I understand the idea of standing by her side for all of this, but it's the more specific pregnancy stuff, I guess."
+    MC "Also, there's still a sort of... I guess..."
+    MC "Agh... nevermind."
+    "Takamura took a sip from her tea again and set it down, looking at me."
+    pause .75
+    MC "..."
+    MC "You're not going to let me move on from that, are you, Sensei?"
+    show Takamura reassuring
+    "Takamura smiled and shook her head."
+    Takamura "Out with it."
+    show Takamura neutral
+    MC "It's... well... I'm slightly unsure of how to... proceed, I guess?"
+    MC "With how things... happened between Aida and I, our relationship started off at... like, level ten, then went back down to one. Like, we..."
+    Takamura "I understand, Hotsure-san."
+    MC "Right. But anyway, Aida still seems a little... awkward around me sometimes? I guess? And like, I don't want her to feel that way, because I care about her."
+    MC "I want her to feel free to express herself and come to me for anything."
+    Takamura "Hotsure-san, I'm going to stop you there."
+    Takamura "Have a bite of your toast, and a sip of coffee."
+    Takamura "Your hands are shaking."
+    "I glanced down at my hands that had been moving as I spoke, and heeded her advice."
+    Takamura "Now. I know Kodama-san fairly well through the cooking club. And, I can gather quite a bit about her from that exposure, plus what I've heard from you."
+    Takamura "I would like you to take a minute, Hotsure-san. And think about her."
+    Takamura "She's a quiet girl who came here alone. She knew no one, and she had no idea what was about to come her way, the entire idea of a ‘growth factor' being a new, and likely an almost unbelievable phenomenon to her."
+    Takamura "She learns her factor and learns that it's the rarest and one of the most life altering of all."
+    Takamura "She meets someone, a man, who she likes and sees as someone who she can grow closer to, so she does."
+    Takamura "Then, her factor kicks in, and due to it, it forces her into a moment of passion that she couldn't control."
+    Takamura "Of course... well, you know the rest."
+    Takamura "And, as much as I hate to say it, people tend to talk. Rumors spread. And, just like that, most of the academy knows about the one woman on campus dealing with a pregnancy growth factor."
+    Takamura "In addition to that, she was shy prior to this all happening, but after all of this, she worries that the only person who she believed she could talk to fully now hates her due to what she feels she did to him."
+    pause .5
+    Takamura "Do you see what I'm getting at here?"
+    MC "I... I believe so, but go on, Sensei."
+    Takamura "Actually... no."
+    "She crossed both arms and sat back in her seat."
+    Takamura "Tell me what you think I'm getting at."
+    menu:
+        "I'll try.":
+            if checkSkill("Academics", ">", 2):
+                MC "A... o-okay."
+                MC "She feels like... because she let go once, the minute she lets loose again, something bad may happen."
+                Takamura "Exactly."
+            else:
+                MC "Ah..."
+                MC "She feels like... she doesn't know who she is anymore. And that she's kind of lost."
+                Takamura "Mm... not quite."
+                Takamura "She feels that, because she let go once, the minute she does so again, something bad may happen."
+        "I don't know.":
+            MC "I... I don't know. I'm sorry."
+            Takamura "No apologies needed, Hotsure-san."
+            Takamura "Simply put, she feels that, because she let go once, the minute she does so again, something bad may happen."
+            MC "Ah."
 
-    scene Town
-    show PRG neutral
-    with fade
-    PRG "Um, Keisuke?"
-    MC "Yeah? What's up?"
-    PRG "Y-You mentioned before that you couldn't afford to get a bad grade on that paper?"
-    MC "I did, yes."
-    show PRG unique
-    PRG "Um... what grade do you have in that class right now that you can't afford a bad grade on a paper?"
-    "I raised my eyebrows at her and chuckled to myself."
-    MC "If I told you, you'd be appalled."
-    jump daymenu
-
-label PRG039_c1_2:
-    $setFlag("PRG039_c1_2")
-    MC "Actually, would you be okay with going to the game shop with Honoka? We could stop by the café afterwards, if you'd like."
-    show PRG unique
-    PRG "I..."
-    PRG "Alright, I-I guess."
-    BE "Sweet! You're gonna flip when you see this place, Kei-chan! They even have Warblade 4000 there!"
-    MC "Warblade 4000? Can't say I've heard of it?"
-    show BE surprised
-    BE "You've never... Kei-chan, I am surprised at you! Shame shame."
-    hide BE
-    hide PRG
-    with dissolve
-    "Honoka shook her head and tsk-tsked all the way across the street and into the game store with Aida and I close behind her."
-
-    scene Game Store with fade
-    MC "Oy..."
-    show PRG surprised at Position(xcenter=0.25, yalign=1.0)
-    show BE neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
-    PRG "W-Wow..."
-    "The store was jam packed full of any game you could think of. The walls were stacked high with different board games of all sorts ranging from strategy to chance."
-    "Near the front counter was a huge case filled with different colored dice and assorted game pieces."
-    "Behind the cases, a pale man with long hair held tightly in a ponytail was arranging a wall display."
-    show PRG neutral
-    Owner "Good afternoon! If you need help finding anything, give me a shout!"
-    "The man turned to see who his latest customers were. As soon as his eyes fell on Honoka, his expression soured."
-    Owner "You again? Feel free to look around, but please be careful around the displays."
-    BE "Will do!"
-    "As the three of us ventured deeper into the store, I turned to Honoka and sighed."
-    MC "Alright, what happened?"
-    show BE aroused
-    BE "I-I don't know what you could possibly be referring to!"
-    MC "That man clearly knew you, and he was aiming that warning straight at you. What happened?"
-    show BE angry
-    BE "Gosh, does anything get past you, Kei-chan? Fine, ya got me."
-    show BE neutral
-    BE "...I maaaay have accidentally taken out one of his displays the last time I was here."
-    MC "What the...?! How?!"
-    BE "Erm, let's just say that I had grabbed a game from a shelf and turned around without checking my surroundings. All I can say is, who in their right mind puts a display with over fifty boxes of dominos next to me?"
-    show PRG unique
-    PRG "B-But weren't the dominos there first?"
-    show BE happy
-    BE "Psshh, details! Long story short, I swept almost all fifty boxes onto the floor with one titty."
-    MC "Honoka! That's... that's..."
-    BE "I know! I didn't even need to go back for a second shot!"
-    MC "That's not what I... gah, whatever."
-    hide PRG
-    hide BE
-    with dissolve
-    "The three of us split up. Honoka looked over each Warblade figurine on display, picking them up here and there to examine them closer. I picked out a few packs of Tapinon cards while Aida wandered toward the front of the store."
-    "I was flipping through a binder of foil cards and wishing I had more yen to my name when heard an excited gasp from up front. I looked toward the noise and saw Aida walking towards me, a single laminated card held in her hands."
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    MC "What kind of card is that?"
-    PRG "It's a Japanese baseball card. I used to have a tiny collection of these growing up. I had all of the Koi player's cards in a binder organized by name. My dad helped me find them all, but we could never find one specific player."
-    if getFlag("PRG007_c1_2"):
-        MC "Aw, really? I used to have a fairly sizeable collection myself. Maybe I had that player's card."
-    else:
-        MC "Which player was that?"
-    PRG "It was Hyousuke Domen. The two of us looked all over for his card, but we could never find it. But now..."
-    "She flipped the card over and showed it to me."
-    show PRG happy
-    PRG "Here it is!"
-    "I looked from the card to Aida's face. She had the look of a kid who had just gotten exactly what they wanted for christmas. In fact, the look on her face kind of reminded me of myself."
-    MC "Wow, talk about crazy odds! Is there something special about this card that made it so hard to track down? Like, is it rare or anything?"
-    show PRG neutral
-    PRG "Out of all of the Koi's players, Hyousuke Domen had the least cards printed for him. Only a few thousand, I think. That made his card insanely hard to find."
-    PRG "However, since the Koi's record when it comes to winning big ticket games isn't exactly... stellar, the card never sold for high prices."
-    PRG "And apart from that, he... he was my dad's favorite player."
-    MC "Oh... Oh, I see. May I see the card?"
-    "Aida handed it over to me as if it were made from pure gold. Just then, Honoka came around the corner and spotted us."
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    BE "Find something, guys?"
-    PRG "I-I did!"
-    "I held the card out to Honoka. She skimmed through the description quickly before passing it back to Aida."
-    BE "Huh, never would have pegged you as a baseball fan, Kodama-san! I've caught a few Koi games on TV from time to time, myself."
-    PRG "I've loved the Koi since I was little. I never miss a game."
-    show BE happy
-    BE "Hey, it's cool to have a passion! Anyway, I hate to rush us along, but the guy behind the counter is giving me some serious evil eyes, so we might wanna speed this along."
-    MC "Alright, we'd best get moving then, Aida. Real quick, Honoka, did you want to come over tonight for a game of dominos with Aida and I?"
-    BE "Hah- erm... don't joke about that."
-    hide BE with dissolve
-    "Honoka turned and marched toward the counter in a huff. I looked at Aida and smiled a wry smile. We went to the counter and set our purchases down next to Honoka's. As Aida went for her wallet, I grabbed mine out and put a hand on her arm."
-    MC "Don't worry about it. I've got this."
-    show PRG unique
-    PRG "K-Keisuke... I'd feel guilty."
-    MC "Well, how about this? I'll buy the card for you, if you will make me breakfast some morning."
-    show PRG happy
-    "Aida beamed and took my hand in hers."
-    PRG "Deal!"
-    "I grinned and set the yen on the counter. The man behind the counter counted our money quickly, clearly in a hurry to get Honoka out and away from his store as quickly as possible."
-    Owner "You three are good to go. Have a good one!"
-
+    Takamura "And, she's thrust into the limelight, something she never wanted in the first place, all because of something she couldn't control, and in a way that she potentially sees as incredibly... sinful, I guess I would say."
+    Takamura "Essentially, many eyes are on her. And those are eyes she never wanted in the first place."
+    pause .25
+    MC "She's... probably worried about being judged?"
+    Takamura "I'd say so."
+    Takamura "Now, I'd be willing to bet that Kodama-san feels incredibly indebted to you after all of this. And, she likely is just having a hard time showing it, so she comes off as awkward because she doesn't quite know how to put it into words."
+    Takamura "I'd also bet that she's worried about rushing things, given how her factor essentially rushed things along for her."
+    Takamura "And finally, I'd venture a guess that she feels like, after what happened, you sticking by her side through all of this might be too good to be true. So, she's still rather guarded as a result."
+    MC "I... wow, Sensei."
+    MC "So, what do you think I should do?"
+    Takamura "After all of this hecticness, I would advise you to spend time with just the two of you, or with some close friends."
+    Takamura "Have either of you considered taking some time away from the island during break?"
+    MC "I... no, actually."
+    pause .25
+    Takamura "That might be something. Maybe you two could go visit one of your families or something. You have told them about the situation, yes?"
+    MC "We have."
+    Takamura "And how did that go?"
+    MC "Hah... it was stressful, I won't lie. But, I feel much better having done that than not."
+    MC "Even still, though. There is a part of me that still feels a degree of stress toward how my parents, and Aida's for that matter, feel about the whole thing."
+    Takamura "I can understand that stress."
+    Takamura "It's... likely difficult, with them not fully knowing the specifics of how Kodama-san's factor works."
+    Takamura "That said, might I give you a bit more... casual advice? Think of it coming not from a teacher, but from someone who wishes to see you both content and comfortable."
+    MC "Please do, Sensei."
+    "She took another sip of tea and glanced to me."
+    Takamura "They will feel however they choose to feel. Bad or good."
+    Takamura "And, those feelings are theirs to hold."
+    "She stirred her tea delicately."
+    pause .5
+    Takamura "However... nothing says you can't... prove them wrong."
+    "Takamura cocked her head ever so slightly, and raised one eyebrow."
+    Takamura "If they have doubts regarding your relationship with Kodama-san, or your abilities in regards to fatherhood, then... you could theoretically shut them down through your own efforts, no?"
+    MC "I... you're very right."
+    Takamura "Now, I should say as well, everything that I'm telling you is simply my point of view. I would never try to tell you or Kodama-san how to conduct your relationship, nor how to handle the situation with your parents."
+    Takamura "You both are adults, and those choices are yours alone to make."
+    Takamura "I... I suppose you could say that I've... thought a great deal about how Kodama-san must be feeling, and I simply would like to help her in any way that I can."
+    Takamura "And, I also must say, I carry a great deal of respect for you, Hotsure-san."
+    Takamura "You've stood by her through quite a few harsh moments. That speaks volumes on your character."
+    Takamura "And, I don't doubt that Kodama-san is quite grateful for that, as well."
+    MC "I... I just want her to feel that she's safe and that she can be herself. That she doesn't have to be on her guard all of the time."
+    Takamura "I believe she'll get there. It will take time, of course, but no good ever comes without effort and patience."
+    MC "Of course."
+    Takamura "Now, eat your toast and drink your coffee. Don't want it to pass its prime."
+    "I looked down at my coffee and the now smaller sizes of the ice cubes floating in it."
+    "Takamura sipped her tea until she finally finished off her cup and glanced up at a clock on the wall."
+    Takamura "Well, I should be on my way."
+    Takamura "I thoroughly enjoyed our chat, Hotsure-san. Thank you for sitting with me."
+    MC "As did I, Sensei. Thank you."
+    show Takamura reassuring
+    Takamura "Of course. Enjoy your day."
+    "Takamura rose with her book under her arm and brought her cup to the counter, then walked briskly out of the café."
+    hide Takamura with dissolve
+    "By now, my toast was slightly above room temp, and my coffee was a bit watery, but still, it hit the spot all the same."
+    pause .5
+    "And filled in the void in my stomach."
+    MCT "Now I can shop properly. Wonderful."
+    "I finished off my toast and coffee and brought my dishes to the counter as well, then headed back out to the streets."
     scene Town with fade
-    play music BrightLights
-    "As the door shut behind us, Honoka turned back and blew a raspberry towards the shop."
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    BE "I'd take any bet that that guy has never even felt a woman's touch before."
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    PRG "Didn't he touch your hand when he took the money from you, Inoue-san?"
-    show BE sad
-    BE "Uhm..."
-    MC "Looks like Aida just won the bet."
-    show BE surprised
-    BE "W-We never shook on it! I call shenanigans!"
-    PRG "I-It's alright, Inoue-san. We can bet on something more official next time."
-    show BE neutral
-    BE "Next time? Who said there will be a next time?"
-    MC "Alright, I bet that there will be another bet between you two at some point."
-    show PRG happy
-    PRG "I-I'd bet that Keisuke would win that bet!"
-    MC "I'd bet that Aida would be right that I would win that bet that she bet on!"
-    show BE surprised
-    BE "Geez, fine! You two win! Now, can you both stop hurting my brain, please? I need that for thinking!"
-    MC "I bet you do."
-    show BE angry
-    BE "Haaaah..."
-    BE "You are evil, Kei-chan. A very evil and very hairy man."
-    MC "Alright, I yield. We'd better be getting to the café now, right Aida?"
-    show BE neutral
-    show PRG neutral
-    PRG "Actually, could we do that another day? I want to go back to my dorm and put this card in my binder."
-    MC "Hey, that's no problem at all. Are you heading back too, Honoka?"
-    BE "Yeah, probably. I should at least get a start on that paper."
-    MC "Oh... thanks for reminding me of that..."
+    "As I walked out, I took my phone from my pocket to check the time, and walked off to the supermarket."
     jump daymenu
 
 label PRG040:

@@ -1926,7 +1926,7 @@ label MC006:
     if isEventCleared("MC002"):
         MCT "That’s the guy I saw in the faculty room with three whistles. I guess that explains why he has {i}a{/i} whistle— but not three."
     Naoki "Today we're going to be playing a game called handball. As you might have guessed by the name, you handle a ball... with your hands. It's not that complicated really."
-    "Sort of like soccer where you pass the ball and score only using your feet, just think the opposite of that."
+    Naoki "Sort of like soccer where you pass the ball and score only using your feet, just think the opposite of that."
     Naoki "To score, you throw the ball into the goal. {w}Have I lost anyone yet? Good. {w}Doesn't matter if you bounce it off the floor, if it's in, it's in."
     Naoki "Now the caveat is that when shooting a goal, you can't step into the goal zone near the goal. That's only for the goalie, no one else. You have to shoot it behind that line."
     Naoki "You can't hold on to the ball for more than three seconds, and you can't take more than three steps with the ball, but you're allowed to dribble it to get around this."

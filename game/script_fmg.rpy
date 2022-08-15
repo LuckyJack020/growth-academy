@@ -14146,9 +14146,9 @@ label FMG073:
     show FMG sad-3
     FMG "I know. {w}Ugh, you're right. {w}But every time I try to not break something, I just end up breaking something else. I tried not to rip the towel rack off the wall after washing my hands, but then I bumped into the faucet handle."
     FMG "Then I tried to save Chibuki's phone from falling into the toilet. I caught the phone, only to pulverize it, but not before knocking over the toilet and I {i}still{/i} ended up ripping the towel rack off the wall."
-        MC "That's a bit more than the faucet handle..."
-        "At this point, I even began to wonder if inviting her into my room was a good idea. But she needed {i}someplace{/i} to go."
-        FMG I feel like the whole world is made of paper now."
+    MC "That's a bit more than the faucet handle..."
+    "At this point, I even began to wonder if inviting her into my room was a good idea. But she needed {i}someplace{/i} to go."
+    FMG "I feel like the whole world is made of paper now."
     FMG "I don't know what to do. I thought being this jacked would be awesome, that it would make me a better athlete. Now I just feel like a bull in a china shop."
     MCT "Man, this sucks seeing her like this. It must be really bothering her if she's feeling this down. I wish I could help, but I don't know how... {w}Wait a second."
     MCT "I don't know how to help Akira, but I think I know someone who can."
@@ -14158,13 +14158,13 @@ label FMG073:
     "Akira laid on my couch, her shins dangling past the sofa arm. She looked stiff like she was trying not to move. This wasn't the chill Akira I was used to, I could tell she wasn't in a good place."
     MCT "I don't know how to help her, but I think I know who can."
     scene black with fade
-    pause .2
-    play music daybyday
-    scene gym with fade
+    pause .5
+
+    scene Gym with fade
+    play music DayByDay
     MCT "Come on, she's gotta be here."
-    show Natsuko with dissolve
-    MCT "Bingo! I knew she'd be here."
     show Natsuko neutral with dissolve
+    MCT "Bingo! I knew she'd be here."
     MC "Hey Nat, I don't want to interrupt your routine but I could use your help."
     Natsuko "If Akira fainted, I'm not going to carry her back to the nurse's office again. She needs to learn her own limitations."
     MC "Not what I was getting at, but sorta... in a different way... I guess."
@@ -14185,24 +14185,24 @@ label FMG073:
     Natsuko "I got some help from someone who had been through this before."
     MC "Are you talking about your mom? You did mention she had a muscle growth factor like you."
     Natsuko "Just forget I even said anything about that. I was talking about someone else."
-    "{i}*BOOOM!*{/i}
+    "{i}*BOOOM!*{/i}"
     "A shockwave that felt like thunder moved through the floor of the gym."
     MC "What the hell was that?"
     Natsuko "Convenient timing. That must be him. Come on, let's talk to him."
     MC "Who are you talking about?"
-    Natskuko "You know who he is."
+    Natsuko "You know who he is."
     "{i}*Whoomp!* {w}*Whoomp!*  {w}*Whap!* *Crat!*{/i}"
     "Someone was hammering on the punching bag with what sounded like meteor strikes as we walked towards the other side of the gym."
     #show Hageshi neutral with dissolve
     "I should have known. Hageshi-sensei, the math teacher."
-    if isEventCleared(MC002):
+    if isEventCleared("MC002"):
         "When I first saw him, at the time, he was probably the biggest person I'd ever seen... well, in person."
         "I heard he had a muscle growth factor, which made sense at the time, but after seeing what Akira and Nat have gone through, he looked kind of small by comparison."
         "Judging by how loud he was hitting that bag though, the guy certainly knew how to throw a punch."
     else:
         "He was a pretty big dude, and I heard he had a muscle growth factor, but next to Akira and Nat he didn't really look the part to be honest. The guy certainly knew how to throw a punch though."
     Natsuko "Excuse me, Hageshi-sensei, do you have a minute?"
-    Hageshi "Nice to see you, Okomoto-san. I have several, in fact. I wasn't really doing much. I was just passing through this part of campus and I couldn't help myself from getting a little time on the bag. What do you need?"
+    Hageshi "Nice to see you, Okamoto-san. I have several, in fact. I wasn't really doing much. I was just passing through this part of campus and I couldn't help myself from getting a little time on the bag. What do you need?"
     Natsuko "Well? What are you waiting for? Talk to the man."
     MC "Right. {w}Hey, Hageshi-sensei, I was wondering if you could help me out... well, {i}us{/i} out. Akira's growth has been getting harder for her to control lately."
     MC "You've been through this before and you seem to know how to manage it pretty well if you taught Nat a thing or two. I mean, I've never seen you break anything or hurt anyone... well, unintentionally anyway."
@@ -14211,19 +14211,19 @@ label FMG073:
     MC "Come on, this is Akira we're talking about. She's gonna do whatever it takes to be the best she can be. No BS, I'd bet my life on that."
     Hageshi "You say that now, but it's not your place to speak for others. Nonetheless, I have faith in Mitzutani-san too. Bring her to my classroom when you get the chance. I have papers to grade, so I'll be there anyway."
     MC "Thank you Hageshi-sensei! I'll bring her right over."
-    Hageshi-san "What about you, Okomoto-san? You've grown quite a bit yourself recently. Have you been keeping up with your training?"
+    Hageshi "What about you, Okamoto-san? You've grown quite a bit yourself recently. Have you been keeping up with your training?"
     show Natsuko annoyed
     Natsuko "I-I've been doing just fine, Hageshi-sensei."
     Hageshi "Oh? Good to hear. My door is always open if you need help again."
-    show Natsuko angry
+    show Natsuko frustrated
     "Natsuko shot me a glare out the side of her eye as if to say ‘not a word'."
     MC "Right. Good talk. I'll go find Akira. See you in a bit, Hageshi-sensei!"
     jump daymenu
 
 label FMG074:
     $setProgress("FMG", "FMG075")
-    scene dorminterior with fade
-    play music sunset
+    scene Dorm Interior with fade
+    play music Sunset
     show FMG sad with dissolve
     MC "Hey, Akira I got something I want to show you. Quick! There's no time to explain, you have to come with me!"
     FMG "What are you talking about?"
@@ -14238,9 +14238,10 @@ label FMG074:
     "She took her hand in mine, absolutely burying it in the process and proceeded to crush it."
     MCT "Okay, I lied, this hurts much worse. But I can't tell her that now!"
     scene black with fade
-    pause .2
-    scene classroom with fade
-    play music peaceful
+    pause .5
+
+    scene Classroom with fade #Classroom alt optimal for Hageshi's classroom
+    play music Peaceful
     #show Hageshi neutral with dissolve
     MC "Tada!"
     show FMG sad-2 with dissolve
@@ -14253,8 +14254,8 @@ label FMG074:
     show FMG neutral
     MC "Because it's safer? Can't hit as hard with pads on your hands."
     Hageshi "Right, most people think that, but what it actually does is pad the knuckles, so people can punch harder while not having to worry about breaking their hand."
-    Hageashi "In bare knuckle fights you'd never want to punch somebody in the head. Too many bones to bust your knuckles on. Might even get a nasty gash from grazing a tooth."
-    Hageashi "But with gloves on, now you can really beat somebody's brains in."
+    Hageshi "In bare knuckle fights you'd never want to punch somebody in the head. Too many bones to bust your knuckles on. Might even get a nasty gash from grazing a tooth."
+    Hageshi "But with gloves on, now you can really beat somebody's brains in."
     MC "What's this about again?"
     show FMG angry-2
     FMG "Apparently he needs to knock some sense into you."
@@ -14277,8 +14278,8 @@ label FMG074:
     MC "Can we get to the part where you're supposed to be helping, Hageshi-sensei?"
     Hageshi "Okay fine, here's a tissue. {w}Listening to you two talk to each other I thought you'd be used to being a verbal punching bag by now."
     MC "Shouldn't that make me the sympathetic character here then?"
-    FMG "It's always somehow about you isn't it, Kei-kun?
-    Hageshi ``{i}Anyway{/i}, {w}getting back to your question, Mitzutani-san, my ‘transformation', for lack of a better term, was the best thing that ever happened to me."
+    FMG "It's always somehow about you isn't it, Kei-kun?"
+    Hageshi "{i}Anyway{/i}, {w}getting back to your question, Mitzutani-san, my ‘transformation', for lack of a better term, was the best thing that ever happened to me."
     Hageshi "But for others, even some with the same factor, it was the worst thing that ever happened to them."
     Hageshi "I felt more confident in my body, all while others around me felt so much worse about theirs. I had been given a gift, and I wished others could see theirs like that too."
     Hageshi "I've spent the better part of my life training martial arts and combat sports. At the core of all of them was the self-discipline to restrain your power until it was the right time to use it."
@@ -14297,7 +14298,7 @@ label FMG074:
     show FMG flex
     FMG "Pfft! That's easy. Give it here!"
     Hageshi "Easy for us maybe. Hotsure-san here could train his whole life and still might not reach the level necessary for the feat."
-    MCT "I'm right here bruh!"
+    MCT "I'm right here, bruh!"
     show FMG happy
     FMG "I guess you have a point. Still though, I got this! Let me see here."
     "Akira grabbed one of the nuts in its shell, carefully placing it between her thumb and index finger just like Hageshi. And with a slight squeeze—"
@@ -14309,7 +14310,7 @@ label FMG074:
     show FMG surprised-2
     FMG "Oh... crap. You're right."
     show FMG sad-2
-    extend" Man, I feel like such an idiot."
+    extend " Man, I feel like such an idiot."
     Hageshi "Strength without patience or precision is just wasted energy. {w}Here, take this bag. There's hundreds in here."
     Hageshi "I want you to practice until you reach the point where you can crack the shell in two, and actually have something to show for it. {w}Come find me when you've got it mastered."
     show FMG angry-3
@@ -14320,15 +14321,18 @@ label FMG074:
     Hageshi "Don't be so eager to rush into things, Mitzutani-san. {w}I would recommend you practice outside. It can get messy pretty quick."
     MC "Exactly, so not in my room. Great idea!"
     scene black with fade
-    pause .2
-    play music busy
-    scene track with fade
+    pause .5
+
+    scene Track
+    show FMG neutral
+    with fade
+    play music Busy
     FMG "Okay, so just cracking some nuts— should be no problem."
     MC "You're pretty good at helping me bust nuts, so it should be easy."
     FMG "You're done talking for forever now."
     MC "I know I deserve that, yet I feel no shame."
     FMG "I bet. Now shut up dude, I gotta focus. {w}Let's see here, nice and easy..."
-    show FMG surprise
+    show FMG surprised
     "{i}*CRACK*{/i}"
     "The walnut shattered into what I could only guess was about a million pieces."
     MC "How did you do worse this time?"
@@ -14350,16 +14354,18 @@ label FMG074:
     scene black with fade
     $setTime(TimeEnum.EVE)
     pause .5
-    scene track with fade
-    show FMG sad-2 with dissolve
-    play music bittersweet
+
+    scene Track
+    show FMG sad-2
+    with fade
+    play music Bittersweet
     FMG "This is hopeless. I'm so sorry Kei-kun..."
     FMG "{i}Sniff...sniff...{w}{size=-6}Please, not like this...{/size}{/i}"
     "Tears welled up in Akira's eyes before I caught one streaming down her cheek."
     MC "Hey now. No need for all of this. It's okay."
     show FMG sad
     FMG "But it's not okay, Kei! How am I ever going to touch you without crippling you? How am I even going to open a door without destroying the handle?"
-    show FMG san-2
+    show FMG sad-2
     FMG "I'm just a big oaf who can't control herself! A big, stupid oaf!"
     MC "Shut up! You're the one who's done talking now. I don't want to hear that from you."
     "I wasn't the most eloquent with words, but I knew more than anything she needed my help. I wrapped my arms around her as best as I could, and as tight as I could manage."
@@ -14379,17 +14385,17 @@ label FMG074:
     FMG "Yeah that's probably for the best. But let me try one more time."
     "Akira looked a lot more at ease this time as she reached into the pouch for another walnut. With a gentle exhale, she gave it another shot."
     FMG "Here goes..."
-    "{/i}{size=-8}CRACK{/size}{/i}"
+    "{i}{size=-8}CRACK{/size}{/i}"
     show FMG sad-2
     "The nut cracked into what looked like eight pieces before slipping out of her fingers."
-    FMG "{i}Sigh...{i} Still no good..."
+    FMG "{i}Sigh...{/i} Still no good..."
     MC "Wait! Try it again."
     FMG "Ugh, it's just a waste of time."
     MC "No, it isn't, look, that was like ten pieces at most, that's a lot less than the bazillion you've been doing before. It's working. Try again."
     FMG "If you say so..."
-    "{/i}{size=-6}CRACK{/size}{/i}"
+    "{i}{size=-6}CRACK{/size}{/i}"
     show FMG surprised
-    play music peaceful
+    play music Peaceful
     "And just like that, she managed a slight crack that split the shell in two."
     FMG "HO-LY SHIT."
     FMG "I did it! I freak'n did it! WHOOO!"
@@ -14403,7 +14409,7 @@ label FMG074:
     MC "If only there was some way I could run there fast enough with you."
     FMG "This is only going to end one way you know it. Come here."
     "Akra grabbed the sack of the leftover walnuts and scooped me up in her arms as she hauled ass back to the classroom buildings."
-    scene dormexterior with fade
+    scene Dorm Exterior with fade
     "We almost didn't make it, but we managed to run into Hageshi-sensei along the way."
     #show Hageshi neutral with dissolve
     show FMG neutral with dissolve
@@ -14413,7 +14419,7 @@ label FMG074:
     Hageshi "Oh? Is that so? Show me then."
     FMG "Alright, here we go."
     "Akira pulled a walnut out of the bag, giving it a sligh squeeze."
-    show FMG surprise
+    show FMG surprised
     "Only for us all to see it explode all over the place."
     show FMG sad
     FMG "Aw man..."
@@ -14463,6 +14469,834 @@ label FMG074:
     jump daymenu
 
 label FMG075:
+    $setProgress("FMG", "FMG076")
+    scene Dorm Exterior with fade
+    play music DayByDay
+    "Even though last night ended on a high note, I was still kind of worried about Akira. I know how hard she can be on herself when she's determined to accomplish something."
+    FMG "YOOOO! KEI-KUUUUNN!"
+    "Judging by how loud she was yelling, either Akira was in a good mood, or this was some kind of emergency."
+    show FMG happy with dissolve
+    "Since she looked so happy, I had to assume it was the former."
+    FMG "Dude! You'll never guess what just happened!"
+    MC "You blew out my eardrums?"
+    show FMG angry-3
+    FMG "Okay, okay!"
+    show FMG neutral
+    FMG "Sorry, I got a bit worked up. {w}But you won't believe it! I was able to show Hageshi-sensei that I could crack the stupid walnut with both hands this morning."
+    show FMG flex
+    extend " He was impressed!"
+    MC "Wait, what? Classes haven't even started yet, when did you do this? How did you improve so much?"
+    show FMG neutral
+    FMG "I sorta... didn't sleep last night. I just kept working at it. {w}Completely unrelated, can I crash at your place for a nap after Tashi's class?"
+    show FMG sad-2
+    extend " Chibuki is still mad at me since they hadn't replaced the sink yet. {w}Well, that and the whole phone thing..."
+    show FMG neutral
+    MC "Unrelated huh? Well, you're always welcome to crash at my place for whatever reason."
+    MC "So that's it then? Everything good? You feeling in control of things more now?"
+    FMG "I do feel better. I thought it was stupid at first, but Hageshi-sensei really does know what he's talking about. I have a lot more control now, but there's still more."
+    MCT "I don't care if you crush my head in, when are we going to get back to sexy time?"
+    MC "More? What do you mean more?"
+    FMG "He told me the next part of the training would start tomorrow."
+    MC "Tomorrow? But tomorrow's Saturday."
+    show FMG flex
+    FMG "Well, guess what we're doing Saturday then? He's got the whole day booked. He said it would be fun."
+    MC "I don't really trust what Hageshi-sensei considers ‘fun'."
+    show FMG neutral
+    FMG "Hmm, when you put it that way, the last test was kind of boring and sadistic— in a weird way... {w}Then again, so is his math class."
+    MC "This is true."
+    show FMG happy
+    FMG "But there's no getting around this. I gotta do it. I know it's a lot to ask you to give up your Saturday, but I want you to be there."
+    MC "Hey, I never said I wasn't going to come. I just meant I really didn't want to."
+    show FMG flex
+    FMG "Pfft! Whatever! I know you wouldn't miss the chance to watch me totally crush whatever Hageshi-sensei has planned. You just wait and see!"
+    MC "I got a feeling I'll be doing a lot of waiting, and not a lot of seeing."
+    show FMG aroused
+    FMG "I was thinking about taking a nap with my shirt off, but just for that I'll keep it on."
+    MC "Sure thing tropic lady. It's winter here. You hate the cold, that was never on the table. I'm easy to manipulate— but I'm not braindead."
+    show FMG sad
+    FMG "{size=-6}Oh no, he's learning.{/size}"
+    scene black with fade
+    pause .5
+
+    scene Track with fade
+    "The next day we both got up nice and early to meet Hageshi-sensei outside by the track."
+    #show Hageshi neutral with dissolve
+    "As we made our way over we noticed Hageshi-sensei was already there carrying with him what looked like a giant tote bag full of heavy stuff."
+    show FMG neutral with dissolve
+    FMG "Yo, Hageshi-sensei! What have you got planned for the day?"
+    Hageshi "We're going to be playing some bocce ball."
+    MC "Bocce ball? What is this a retirement home?"
+    show FMG angry-3
+    FMG "Come on, Kei-kun. He's trying to help me out here."
+    show FMG sad-2
+    "I could tell Akira was just as disappointed as I was, but she didn't want to seem ungrateful to Hageshi-sensei."
+    Hageshi "That is to say, bocce ball... with bowling balls."
+    show FMG neutral
+    "Hageshi-sensei proceeded to dump the contents of his tote bag to reveal eight bowling balls that bounced out as they spread across the ground by his feet."
+    Hageshi "The idea is to learn control. Distance and accuracy. The extra weight of the bowling balls is so it won't feel so flimsy."
+    Hageshi "See, the idea is to place the balls as close to the pallina as possible— we'll just use a golf ball for it. I'll just toss it on the ground over here."
+    Hageshi "Now, Mitzutani-san, {i}gently{/i} toss the ball down the length of our makeshift court here so that it lands as close to the golf ball as possible. It's 30 meters long, I'll be here to make sure nothing goes too far out of bounds."
+    MCT "No problem! That's plenty of distance for the ball to run out of steam. She's got this!"
+    show FMG flex
+    FMG "Alright, here it goes! Nice and easy..."
+    show FMG upbeat
+    "Akira picked up one of the bowling balls, which judging from the numbers on them must have been 10kg in weight and proceeded to give it a light underhand toss down the court..."
+    show FMG surprised-2
+    "Well, that was the plan anyway— and things did not go to plan. The ball zoomed down the length of the 30 meters, skipping violently as it left divots in the ground."
+    "Luckily Hageshi-sensei knew more of what to expect than we both did, as he caught the wild bowling ball in what I could only describe as a circus performer taking a cannonball to the gut as he wrapped his arms around it."
+    Hageshi "Oof! That was a little too spicy, Mitzutani-san."
+    FMG "Sorry!"
+    Hageshi "It's okay. That's why I'm here. We'll call that a practice run, but that would have been out of bounds and a dead ball in a real game."
+    show FMG neutral
+    FMG "Right. Go ahead with your turn then Hageshi-sensei."
+    Hageshi "I'm not the one you're playing against."
+    MCT "Wait a second... That must mean—"
+    show FMG neutral:
+        xzoom -1
+        linear 0.5 xcenter 0.25
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    Natsuko "I hope you have more control over yourself than that if you hope to even score a single point."
+    Hageshi "I wanted to make sure Okamoto-san didn't get rusty, so I invited her out too."
+    show FMG angry
+    FMG "Think you could do better?"
+    show Natsuko frustrated
+    Natsuko "I know I can."
+    show FMG neutral
+    FMG "Why did I even ask? Still though, I'm glad you're here, Nat."
+    show Natsuko neutral
+    Natsuko "Well... Hageshi-sensei insisted, so I thought it would be for the best."
+    FMG "Did he make you do the thing with the walnuts too?"
+    Natsuko "That was a while ago, but yes. Fresh walnuts taste pretty good though, so it wasn't too bad."
+    show FMG sad-2
+    FMG "{size=-6}What is wrong with this woman?{/size}"
+    show FMG neutral
+    Hageshi "Alright Okamoto-san, it's your turn. You know the rules to this thing. Take your shot."
+    show Natsuko annoyed
+    Natsuko "I'm still not sure of the point of having me come out here, but let's just get this over with."
+    "In contrast to the red bowling ball Akira picked out, Natsuko picked up one of the blue ones to toss down the lane. I expected Nat to gently float it down the lane, but she shot it off like a cannon almost as bad as Akira."
+    Hageshi "{i}Ooff!{/i}"
+    show FMG surprised-2
+    "Hageshi-sensei caught her ball before it could wildly skip across the entire campus. I'm not entirely sure how he could shrug off the impact so easily."
+    show Natsuko disappointed
+    show FMG neutral
+    Natsuko "That was not...{w} {size=-6}This isn't right... I should be...{/size}"
+    MC "Well that wasn't any better."
+    show Natsuko annoyed
+    Natsuko "{i}I know!{/i}"
+    "I'd be lying if I said I didn't nearly piss myself when Nat snapped back at me so loudly."
+    show Natsuko disappointed
+    Natsuko"{size=-6}Maybe Hageshi-sensei was right after all.{/size}"
+    Hageshi "Are you ready to take this seriously now, Okamoto-san?"
+    Natsuko "Yes, Hageshi-sensei."
+    show Natsuko neutral
+    Hageshi "Good. Alright, ladies you're at a 14, I need you to dial it back down to a 2.5 here. How about we try just rolling it with your wrist instead of using your whole arm, okay? Try to use a nice shallow angle relative to the ground too."
+    Hageshi "Here, like this."
+    "Hageshi took one of the balls and with a subtle flick of his wrist he got the bowling ball to gently coast across the ground until it stopped about five centimeters from the score marker."
+    Hageshi "See? Nothing to it. {w}Here's a tip, if your last throws are any indication, I'd suggest trying to just not roll it out of bounds if you want to score against your opponent sometime within this century."
+    show FMG angry-2
+    show Natsuko frustrated
+    "That last little dig must have gotten under Akira and Nat's skin. Both of them locked side-eyed glares at each other, as I watched their initial disappointment turn into determination."
+    Hageshi "Alright, you're up again, Mitzutani-san."
+    show Natsuko neutral
+    show FMG neutral
+    "Akira took Hageshi-sensei's advice and tried her best to just roll it with her wrist,"
+    show FMG surprised-2
+    extend " but it still had way too much heat on it and rolled well past the pallina- or whatever he called it."
+    show FMG angry-2
+    FMG "Dang-it!"
+    Hageshi "Not bad, still out of bounds, but not a wild throw."
+    show FMG neutral
+    "Natsuko took her turn. It was a bit slower than Akira's, but ended up with quite a bit of hook that veered off to the side, still way out of bounds."
+    show Natsuko annoyed
+    Natsuko "Hmph."
+    show Natsuko neutral
+    Hageshi "Turn your hips next time Okamoto-san to compensate for that natural hook of yours. Still no score, but at least no one was in danger of dying this time. Play through the round ladies, keep focused, there's no rush."
+    "Akira and Nat took a couple more turns but no one managed to score, but at least a few of them started to get close to staying in bounds."
+    show Natsuko annoyed
+    show FMG sad-2
+    extend " Both were obviously frustrated with how poorly they were doing."
+    MCT "I hate to say it, but I think it's going to be a long day."
+    show FMG neutral
+    show Natsuko neutral
+    Hageshi "Alright, I think we passed the major hurdle of too much power into the throws with the wrist action, but the accuracy still needs work. So let's try again with using the whole arm, which should give you more control."
+    Hageshi "This isn't fast pitch softball. Don't think about throwing a ball, think of it as gently lofting up a paper lantern. We want a nice, gentle arc with only a couple of bounces on the ground— like so."
+    "Hageshi-sensei floated up a toss with one of the 10kg bowling balls like it was a cloud. It lazily plunked to the ground, rolling a few meters just before it stopped right next to the pallina-thing."
+    show FMG angry-2
+    show Natsuko annoyed
+    FMG "Oh come on! You made that look {i}so{/i} easy."
+    Natsuko "Just because you don't think you can do it doesn't mean I'm not going to try."
+    show FMG angry
+    FMG "I never said that! You just watch me. You might learn a thing or two."
+    show Natsuko smug
+    Natsuko "I'm always watching you— to learn what not to do."
+    Hageshi "How about you two practice control over your jaw muscles and let your performance speak for itself?"
+    show FMG neutral
+    show Natsuko neutral
+    FMG "{size=-6}Okay, let's see here... Paper lantern, come on now...{/size}"
+    "Akira closed her eyes and slowed down her breathing before pitching a floater down the lane. As soon as it left her hand I could see the smile grow across her face as she watched the ball tumble before stopping within a meter of the pallina ball."
+    show FMG flex
+    FMG "I did it!"
+    Hageshi "Hey, we got one in bounds! Good shot Mitzutani-san."
+    show Natsuko annoyed
+    "Natsuko wasn't exactly happy to see Akira do so well so soon, but she had a confident smirk as she wound up for her pitch."
+    "At first, it was obvious that she tossed it way too hard—"
+    show Natsuko smug
+    extend " only to have it slam right into Akira's ball, knocking it straight out of bounds, leaving hers where Akira's ball used to be."
+    Hageshi "Nice steal. Impressive accuracy, Okamoto-san."
+    show FMG upbeat
+    FMG "So it's like that eh?"
+    Natsuko "Yeah, it's like that. Get used to it."
+    FMG "Good, cause I'm tired of going soft on you."
+    Hageshi "Perhaps I've misjudged your talents, because if both of you are sandbagging as much as you're pretending with each other then I'm sending both your asses to the theater club."
+    show FMG surprised-2
+    show Natsuko disappointed
+    MCT "Hageshi-sensei out of nowhere going straight for the jugular."
+    Natsuko "Sorry, Hageshi-sensei."
+    FMG "We'll be good."
+    Hageshi "I can do this all day, all I ask is you make it worth my time. You both know what to do, now it's time you actually start scoring some points."
+    show FMG neutral
+    show Natsuko neutral
+    "I didn't exactly understand the rules of bocce ball, or bocce bowling balls as it were, but from what I figured out the player scores points based on how many balls are closest to the pallina (or golf ball in this case) compared to their opponent."
+    "You could in theory score a maximum of four points per round, but despite a steady improvement over the course of the game, Nat and Akira were still pretty terrible. Only about half of their shots would be considered decent."
+    scene black with fade
+    pause .5
+
+    scene Track
+    show FMG upbeat at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    FMG "Heh! You're going to be falling behind after this, Nat."
+    Natsuko "I don't think so."
+    "Nat proceeded to chuck her ball way harder than necessary to knock into the three that Akira had managed to place into scoring position— scattering the whole arrangement all over the place."
+    show FMG sad-2
+    FMG "Do you like winning, or do you just like to see me lose?"
+    Natsuko "If you must know, I honestly can't decide. It's part of the rules, you have no reason to complain."
+    hide FMG
+    hide Natsuko
+    with dissolve
+    #show Hageshi neutral with dissolve
+    MC "Hageshi sensei, how long do bocce ball games usually last?"
+    Hageshi "About 20 minutes."
+    MC "How long have we been out here?"
+    Hageshi "About three hours."
+    MC "Ugh, why are they so bad at this?"
+    Hageshi "Rome wasn't built in a day, Hotsure-san. Okamoto-san and Mitzutani-san are the most extreme cases of their growth on record. If anyone would need more time and practice to adjust, it would be them."
+    Hageshi "You're acting like a bored kid at a wedding or a funeral. The event isn't about you— just accept that and stop whining."
+    MC "Hmm. On second thought... forget I said anything."
+    Hageshi "Alright 11-11, match point if one of you can manage to score this round."
+    #hide Hageshi with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "I'd have Akira's back no matter what, but Nat already had three balls closer than Akira's this round and it wasn't looking too likely she was going to turn this around with her last throw. But I hoped against hope for her anyway."
+    show FMG happy
+    "Akira lofted up a really nice throw, barreling towards the middle of Nat's cluster to knock them away."
+    show FMG surprised
+    "But instead of batting away all three balls, it only hit two."
+    show FMG sad-2
+    MCT "Bummer."
+    show Natsuko smug
+    Hageshi "12-11, Okamoto-san wins."
+    Hageshi "Still though, that was a pretty impressive throw, Mitzutani-san. Nothing less than a perfect shot was going to make it happen, but you came close."
+    show FMG neutral
+    FMG "Congrats, Nat. You won fair and square."
+    show Natsuko neutral
+    Natsuko "Thanks. You didn't make it easy."
+    show Natsuko disappointed
+    extend " Then again, we both performed below expectations."
+    Hageshi "Oh stop pouting, Okamoto-san. Do you honestly expect to be good at everything you touch on the first try? Unless you had your heart set on becoming a bocce ball champion I think you both should be pretty pleased with yourselves."
+    show Natsuko neutral
+    Hageshi "You've both improved a lot. That was the point. Not winning some stupid game."
+    Natsuko "I suppose you're right."
+    Hageshi "Alright, go get some lunch and then meet me at the front of the school in an hour, we still got the rest of the days worth of drills to run through."
+    show FMG flex
+    FMG "Awesome! I'm starving."
+    show Natsuko annoyed
+    Natsuko "Don't tell me we're going to play shuffleboard like last time."
+    show FMG happy
+    FMG "{i}Pfft! Hahaha!{/i} That's what he had you do before? What's the deal with these old man sports, Hageshi-sensei?"
+    Hageshi "Apparently Okamoto-san still isn't over losing so badly to Tsubasa-san."
+    FMG "You lost to Tsubasa-sensei? That's even worse! You couldn't even beat an old man!"
+    show Natsuko annoyed
+    Natsuko "Like you would have done any better. I didn't know Hageshi-sensei would call in a ringer."
+    Hageshi "You can call Tsubasa-san and me old men all you want, but I find that to be pretty rich coming from two people who have invested so much time into playing golf."
+    show FMG angry-3
+    MC "The man has a point."
+    FMG "Shut up. Let's go get lunch."
+    scene black with fade
+    pause .5
+
+    scene School Front
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    FMG "Alright, we're back, what are we doing next, Hageshi-sensei?"
+    show FMG sad-2
+    extend " {size=-6}Please not shuffleboard...{/size}"
+    show FMG neutral
+    Hageshi "We're going into town. Consider it a field trip. The bus is just about to pull up. Let's go."
+    scene black with fade
+    pause .5
+
+    play music WildBlur
+    scene Arcade
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    FMG "What? No way! You're taking us to the arcade? Awesome!"
+    Natsuko "I appreciate the gesture Hageshi-sensei, but I'd rather spend my time on something more productive."
+    #show Hageshi neutral with dissolve
+    Hageshi "I can't decide what's worse, being naive or ungrateful, but don't be so quick to underestimate me. You both still have more training to do."
+    "Akira and Nat gave each other confused looks as Hageshi-sensei fed 5,000 yen into the token machine."
+    Hageshi "Alright. Here are your tokens. See those skee-ball machines in the back? Score 5,000 points in a single round and you're done for the day. Whoever does that first wins."
+    Hageshi "Now, be gentle with your throws, make them count, and be quick about it or you'll miss out on points."
+    show FMG flex
+    FMG "Awesome! I totally got this. 5,000 is in the bag!"
+    show Natsuko annoyed
+    Natsuko "{i}This{/i} is what you had in mind, Hageshi-sensei?"
+    Hageshi "You don't need to stay here if you don't want to, Okamoto-san, but if you leave I'll consider it a forfeiture to Mitzutani-san."
+    show Natsuko neutral
+    Natsuko "Give me the tokens."
+    Hageshi "{size=-6}It's almost {i}too{/i} easy...{/size}"
+    #hide Hageshi with dissolve
+    "Akira had already gotten a head start, already eagerly rushing over to the skeeball machines. Putting a token in, the boops and beeps of the machine came to life as the lights lit up."
+    "Natsuko soon followed, rushing to make up for lost time knowing she could fall behind if Akira got more rounds in first. It was quite a sight, even with another skee-ball lane between each of theirs they were practically shoulder to shoulder."
+    "Much like the bocce ball, their first efforts weren't so great."
+    show FMG surprised-2
+    "{i}*CLACK*{/i}"
+    FMG "Oops!"
+    show Natsuko disappointed
+    "{i}*CLACK*{/i}"
+    Natsuko "Ermm..."
+    "Their first couple of throws sounded like they were going to practically bust the ceiling on the hood of the machine, bouncing right back down into the 10 point hole."
+    Hageshi "Ladies, no one is getting a 5,000 score any time soon. Focus on trying to hit some 40 and 50 point holes before you pick up the pace. Haste makes waste, don't let the other rush you, think about what you need to do to do better."
+    show FMG neutral
+    show Natsuko neutral
+    FMG "Right!" (multiple=2)
+    Natsuko "Right!" (multiple=2)
+    Hageshi "Neither one of you broke the machine, so I know you'll do just fine. I'll be here if you need me, but just keep working at it. If you need more tokens that's not an issue either."
+    show FMG upbeat
+    show Natsuko smug
+    "Akira and Natsuko really hunkered down and were starting to think carefully about their throws. It didn't seem to make much of a difference mind you, but I could tell they were trying, even getting close a couple of times."
+    "They'd have to pick up the pace quite a bit though to get to 5,000 points."
+    MCT "Wait a second..."
+    hide FMG
+    hide Natsuko
+    with dissolve
+    #show Hageshi neutral with dissolve
+    MC "Hageshi-sensei, is 5,000 points really even possible?"
+    Hageshi "Well let's see, given the max you can score in a throw is 100, there's five balls, and the time it takes the balls to return... I'd say with every throw being perfect, done as fast as possible, the max you could score is 4,000."
+    MC "Are you like some kind of evil genius Hageshi-sensei?"
+    Hageshi "Call it another lesson— being bad at math makes life harder."
+    MCT "This MFer."
+    Hageshi "They'll be at that for a while. Why don't you kill some time with the arcade machines here?"
+    MC "Sounds good."
+    scene black with fade
+    pause .5
+    scene Arcade with fade
+    "I played some rail shooters, some racers, even a couple of beat 'em ups. I would occasionally check in on Akira. I wanted to cheer her on but I could tell she needed to focus."
+    MCT "Who would have thought so much was at stake over a stupid game of skee-ball?"
+    "Although at this point in my year here at Seicho, the idea of a high stakes skee-ball game didn't even rank in the top 100 list of weirdest things I'd seen."
+    "After a while I had exhausted all my usual options, but I did notice a cabinet for Wordly Fighters IV that gave me an idea."
+    #show Hageshi neutral with dissolve
+    MC "Hey, Hageshi-sensei, you want to play me in some Wordly Fighters?"
+    Hageshi "Wordly Fighters? Been a long time since I heard that name. Sure, why not?"
+    MCT "This is all coming together."
+    "I queued up the character select screen while Hageshi-sensei took his controller spot at the cabinet, hunching over to get a good look at the screen."
+    Hageshi "Why did I have a feeling you'd pick {i}her{/i} for your character?"
+    MC "First of all, I'm feeling very judged right now. Second of all, it's purely a tactical decision, Hageshi-sensei."
+    "Hageshi took his time and proceeded to pick the karate looking fighter in the pink gi, which was basically the worst character in the game."
+    MCT "Time to get you back for making fun of me, old man."
+    "{i}AND FIGHT!{/i}"
+    MC "Hehe!"
+    "I jumped back to pull out a long range move but right when my character landed Hagashi-sensei was right there with his and proceeded to unleash an unbroken combo that lasted for what felt like 20 minutes."
+    "{i}PLAYER 2 WINS!{/i}"
+    "{i}FLAWLESS!{/i}"
+    MC "Did I just get hustled in Worldly Fighters by the math teacher?"
+    Hageshi "Most of these machines were here when I went to school, Hotsure-san. Like I said, being bad at math makes life harder."
+    MCT "I've given up on winning today."
+    Hageshi "Let's check in on the girls."
+    #hide Hageshi with dissolve
+    show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "Hageshi-sensei! I'm glad you're here. We just ran out of quarters."
+    Hageshi "Alright, let's see here, looks like a new high score of 2,730. Very nice Mitzutani-san."
+    Natsuko "That's still not close to 5,000."
+    FMG "Beats your 2,550."
+    Hageshi "Oh? That's a good score too. I noticed you had both improved quite a bit. You wouldn't be able to get those scores without some well placed shots to land the 50, 40, and even some 100 point holes. You both did great."
+    show FMG neutral
+    FMG "But what about hitting 5,000?"
+    Hageshi "Oh, who cares?"
+    show Natsuko annoyed
+    Natsuko "We do."
+    Hageshi "Well then tough. Come back and try to beat your score some other time, because I'm more than satisfied. Let's go to the ice cream shop. They serve hot chocolate this time of year— it's my treat."
+    show FMG flex
+    FMG "Awesome! You're the best Hageshi-sensei!"
+    "Akira had moved on to hot chocolate, but Natsuko was having none of it."
+    hide FMG with dissolve
+    #show Hageshi neutral with dissolve
+    Natsuko "What was supposed to be the prize for winning then?"
+    Hageshi "Something something it's the friends we make along the way? I don't know— think of something inspirational someone else once told you if it makes you feel better."
+    Hageshi "Look, you're both losers for not hitting 5,000, but you get free hot chocolate anyway. Anything can become a competition, Okamoto-san, but few things are worth the gray hairs."
+    show Natsuko disappointed at altMove(0.5, 0.5)
+    "Hageshi-sensei pulled Natsuko aside for a second. I probably wasn't supposed to hear it but I could."
+    Hageshi "{size=-6}You don't need to keep trying to prove yourself Okamoto-san. You're an amazing athlete, but don't let your ego about that get in the way of allowing yourself to live an amazing life. Have some fun with your friends.{/size}"
+    Natsuko "{size=-6}Sorry. Hageshi-sensei... I will try.{/size}"
+    scene black with fade
+    pause .5
+
+    $setTime(TimeEnum.EVE)
+    play music BrightLights
+    scene Town with fade
+    "Hageshi ordered an extra large hot chocolate each for the girls and a cup of tea for himself. I went for a medium hot chocolate with peppermint added to it."
+    MC "{i}*Slurrrrp!*{/i} Ah! That's good stuff."
+    show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    FMG "Thanks for the hot chocolate, Hageshi sensei."
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "I wouldn't order this for myself, but it is a nice treat."
+    #show Hageshi neutral with dissolve
+    Hageshi "A hard days work deserves a reward. I know it wasn't the easiest thing for the both of you, but you both have a lot more control now. {w}Still though, there's one other test I have in mind."
+    Natsuko "Oh? What's that, Hageshi-sensei?"
+    show FMG sad-2
+    FMG "Please not shuffle board."
+    show FMG neutral
+    Hageshi "Well the walnut test is about control, the bocce balls was about control and accuracy, the skee-ball was about control, accuracy, and speed. Now it's time to combine them all together and add back in raw strength and power."
+    show Natsuko smug
+    Natsuko "I'm listening."
+    show FMG happy
+    FMG "Sounds cool! What is it?"
+    Hageshi "Well, I didn't think it would take much convincing for either of you two, but how about a wrestling match between the two of you? Now that you've learned some control, you'll have my permission to go wild."
+    show FMG flex
+    FMG "Let's do it!"
+    Hageshi "Easy now. Give yourselves some rest. Come see me Monday after classes are over. Meet me in the auditorium at 5:30. We should be wrapping up judo club practice by then. I'm going to head home now, but I'll see you then."
+    show Natsuko neutral
+    Natsuko "I'll be there, Hageshi-sensei. {w}And {i}you{/i} better show."
+    show FMG neutral
+    FMG "Pfft! Like I wouldn't be there."
+    show FMG upbeat
+    extend " I'll take any chance I can get to toss you on the floor."
+    Natsuko "I'd like to see you try and touch me with those man hands."
+    Hageshi "Save it for another time, ladies. Enjoy the hot coco and each other's company. {w}{size=-6}As best as you two can.{/size}"
+    #hide Hageshi with dissolve
+    show FMG happy
+    FMG "Yeah, he's right. {w}{i}Mmm!{/i} You gotta try this Nat!"
+    Natsuko "I won't lie, it does smell very good."
+    FMG "Oh it is. You have no idea what you've been missing out on."
+    "Akira proceeded to rattle off all the different flavored syrups you could add, along with their pros and cons and what mood they were for to Natsuko."
+    "Nat for her part didn't seem to mind either. It was fun to see her loosen up for a change."
+    "Even though I knew come Monday they would be back to their usual rivalry."
+    jump daymenu
+
+label FMG076:
+    $setProgress("FMG", "FMG077")
+    scene Auditorium with fade
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setNatsOutfit(OutfitEnum.GYM)
+    play music Busy
+    "The day had finally come. This was gonna be the payoff for all of the training Akira and Nat put in with Hageshi-sensei."
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Although bocce ball and ski ball seemed kind of trivial, I could definitely tell both of them had been in a much better mood since then."
+    "Chibuki even let Akira back into their room and she hadn't broken anything since— {w}at least that she had told me about anyway."
+    "We managed to get to the gymnasium a little earlier than needed. Nat had been pretty insistent that we not leave Hageshi-sensei waiting."
+    "When we got there, it looked like the judo club had set out mats and was having practice."
+    "I was kind of hoping to see some buff chicks brawling with each other, but it was a total sausage-fest."
+    MCT "Ugh, so lame."
+    hide FMG
+    hide Natsuko
+    with dissolve
+    "On the mat they had this guy that looked every bit of 250kg. He was a big boy. Lot of blubber, kind of reminded me of a walrus."
+    "He was shoving around some other muscular dude that looked like a meathead until he finally dragged him to the ground."
+    #show Hageshi neutral with dissolve
+    Hageshi "That was sloppy. You can't just throw your weight around and expect to dominate every opponent."
+    "Walrus Dude" "It's been working pretty well so far, Hageshi-sensei."
+    "Meathead" "Get your fatass off of me!"
+    "Walrus Dude" "Just for that, I'm going to sit on your head, assclown."
+    #show Hageshi angry
+    Hageshi "Alright, that's enough. Get off of him. {w}If you're so great, why don't you go up against me?"
+    "Walrus Dude" "Hageshi-sensei, you aren't even wearing your gi."
+    Hageshi "Did I stutter? Go ahead, grab whatever you can, I don't care. You won't get the chance anyway."
+    "Walrus Dude" "We'll see about that."
+    #show Hageshi satisfied
+    Hageshi "Don't keep me waiting. Give it your best shot then."
+    "The portly fellow charged him faster than that much blubber had any right to move,"
+    #show Hageshi angry
+    extend " but as soon as he got close, Hageshi grabbed the sleeve of his robe-thing, pulling him off balance while he grabbed his collar with the other arm."
+    #show Hageshi satisfied
+    "In a split second, Hageshi stepped across him and proceeded to toss Mt. Fatass over his hip and slammed him into the mat."
+    play sound Thud
+    show dummy with vpunch
+    "{i}*BOOM*{/i}"
+    #show Hageshi neutral
+    "Dust fell from the light fixtures as the impact reverberated through the whole auditorium."
+    MCT "What I wouldn't give for Akira to toss me around like that."
+    pause .25
+    MC "{size=-6}Focus Kei. You must stay focused. {/size}"
+    "Walrus Dude" "{size=-6}Uuuuhhhh{/size}."
+    Hageshi "No whining now. This is collegiate level, the training wheels are off."
+    Hageshi "Let that be a lesson to all of you. Someone's strength is also their weakness. If they rely on something, that means they've neglected something else. If they use something too often, that makes them predictable."
+    #hide Hageshi with dissolve
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    MC "I heard rumors that Hageshi-sensei was low-key some kind of badass, but I didn't expect him to toss someone as big as Butterball there like trash into the dumpster."
+    Natsuko "Hageshi-sensei is very humble. He doesn't like to show off."
+    FMG "Sounds like you could learn a thing-or-two from him, Nat."
+    show Natsuko annoyed
+    Natsuko "That's rich, especially coming from you."
+    show Natsuko flex
+    extend " I'll have you know I'm his favorite student. I've learned plenty from him."
+    show Natsuko neutral
+    extend " If anything, you're the one that could stand to learn more from him."
+    show FMG sad-2
+    FMG "Oh please!"
+    show FMG neutral
+    extend " Seems like all the girls at this school have a crush on Hageshi-sensei, but I didn't peg you for one of them Nat."
+    MC "Yeah, what's the deal with that? What's he got that I don't?"
+    Natsuko "He's tall, well, compared to most."
+    show FMG happy
+    FMG "He's really handsome, and those scars make him look pretty bad-ass."
+    MC "I think I get the point..."
+    Natsuko "He's intelligent."
+    show FMG flex
+    FMG "And super fit! He has the same factor as us, after all."
+    MC "Alright, alright! I got it. Geesh!"
+    show FMG aroused
+    FMG "Feeling a little jealous, Kei-kun?"
+    show FMG neutral
+    MC "Not a chance, there's no way he's as funny and charming as I am. You're lucky to have me, you know?"
+    show FMG angry-3
+    FMG "I take back what I said, Nat."
+    show FMG neutral
+    Natsuko "I respect Hageshi-sensei, but I'm not one of his admirers like Myoga-san."
+    show Natsuko aroused
+    extend " I prefer my men a bit more... submissive."
+    MCT "TMI there Nat..."
+    hide Natsuko
+    hide FMG
+    with dissolve
+    #show Hageshi neutral with dissolve
+    play music Peaceful
+    "My train of thought was interrupted when it looked like Hageshi-sensei was getting ready to dismiss the club meeting."
+    Hageshi "And remember, just because someone else is bigger and stronger, doesn't excuse you from having to work to be better than you are now. {w}That's enough for the day. Now hit the showers."
+    "Hageshi-sensei looked around as the group walked off while we hurried to to meet up with him."
+    MC "Damn, Hageshi-sensei! You don't hold back for nothing!"
+    Hageshi "Oh? Hello, Hotsure-san. I take it you saw my demonstration? {w}Funny you would say that though, I was holding back plenty. He is a student after all."
+    MC "You call {i}that{/i} holding back? You bounced his fat butt off the mat! I saw air between him and the floor after he landed."
+    Hageshi "Ehh, he has the padding to take a pounding. Don't feel sorry for him."
+    "Hagesi-sensei turned his attention from me to the girls."
+    Hageshi "So, feeling ready for the big match?"
+    #hide Hageshi with dissolve
+    show FMG flex at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "You bet!"
+    Natsuko "I can scarcely wait any longer, Hageshi-sensei."
+    show FMG neutral
+    Hageshi "Good, that's what I like to hear. As I mentioned before, we're going to do a wrestling match, it's time to put that new found sense of control to good use, and using it to channel your power into something useful."
+    Hageshi "As to the style of wrestling we'll be doing—"
+    MC "Oo! Which one is the kind where they wrestle in their underwear covered in oil?"
+    show FMG sad-2
+    show Natsuko disappointed
+    FMG "..." (multiple=2)
+    Natsuko "..." (multiple=2)
+    Hageshi "Those kinds of wrestlers tend to be sweaty fat guys, but if that's what you're into, feel free to start a club."
+    MCT "...Not exactly what I had in mind, Hageshi-sensei."
+    MC "But could we try that with Akira and Nat!?! We shouldn't discriminate."
+    Hageshi "The oil is used for sun-protection in cultures where they wrestle outside for hours on end. This is an air conditioned gymnasium. I don't think that's necessary here."
+    MCT "i DoN't ThInK tHaT's NeCeSsArY hErE! This clown has no imagination... No one understands my genius."
+    MC "{size=-6}I thought you were cool, Hageshi-sensei.{/size}"
+    show FMG neutral
+    show Natsuko neutral
+    Hageshi "We're going to be doing the wrestling style that is the most strength intensive, which is Greco-Roman."
+    MCT "Greco-Roman?!"
+    MC "Wait! Isn't that from back in the day when they would wrestle naked?"
+    Hageshi "Yeah, and it was only dudes. {w}Like I said, feel free to start a club if you want, just don't expect me to be the faculty sponsor."
+    MCT "I would {i}so{/i} throw hands at this dude if I knew he wasn't going to kick my ass before I even twitched my nose."
+    Hageshi "It's also probably the best style for you two given your inexperience. Not that it's easy, it's actually quite hard. But since it's so restrictive, it makes the rules a bit easier to understand."
+    FMG "What do you mean?"
+    Hageshi "Greco-Roman wrestling doesn't allow you to attack your opponent's legs, and in turn you can't use your legs to actively defend against attacks."
+    Natsuko "Hmmm, sounds odd."
+    Hageshi "Basically everything has to be done with your upper body. Because of this, it places a heavy emphasis on throws and suplexes."
+    show FMG happy
+    FMG "Sounds awesome!"
+    MC "I think it sounds awesome too, and I don't even know what a suplex is."
+    show FMG neutral
+    Hageshi "It's where you grab someone by the waist then slam them on their back by throwing them behind you."
+    MC "Now that's kick ass!"
+    Hageshi "I do have to admit, it feels pretty good when you pull it off."
+    show FMG flex
+    FMG "Let's get started then!"
+    show FMG neutral
+    Hageshi "Slow down Mizutani-san, we'll need to go over the rules first. Have either of you ever done a sport like this before?"
+    FMG "Ummm..."
+    Natsuko "You're going to need to give us a run-down of how to do it."
+    Hageshi "Alright, I'll give you a run through then. Luckily, you're both more than strong enough to not need the conditioning to pull these moves off."
+    Hageshi "I could use a volunteer to demonstrate."
+    MC "Don't worry ladies, I got this! Wouldn't want to see either of you getting hurt."
+    show FMG sad-2
+    FMG "Yeah, because that's what I'm worried about."
+    show Natsuko annoyed
+    Natsuko "I think you're too late, it's already painfully embarrassing for us."
+    show FMG neutral
+    show Natsuko neutral
+    Hageshi "Very gracious of you Hotsure-san."
+    Hageshi "Okay since you can't attack the legs, you basically stand fairly upright, you're going to be trying to grab your opponents hands, arms, whatever and however you can to set up a throw."
+    "Hageshi-sensei proceeded to grab at my arms and twist me back and forth and in circles like I was some rag doll he was waltzing with."
+    Hageshi "Usually that's going to be with an over or underarm hook, or some combination of them with the head or the waist. Here's an example of a Lat-whip."
+    "Hageshi-sensei pinned my left arm in the crook of his bicep in what could only be described as the world's shittiest side hug."
+    Hageshi "Just reach around over the top here."
+    "Hageshi-sensei reached around my back and sunk his free hand into my armpit like he was trying to claw me open."
+    "Before I realized what was happening my feet were up in the air and I was staring at the ceiling."
+    play sound Thud
+    show dummy with vpunch
+    "He just tossed me over his shoulder and bounced my ass across the mat before I could blink!"
+    MC "{i}Hhhhheeeee...{/i}"
+    MCT "Did he seriously just knock the wind out of me?"
+    show FMG happy
+    FMG "That happened pretty quick, Hageshi-sensei. Think you could show us that one more time?"
+    Hageshi "Sure thing."
+    MCT "!"
+    MC "Wait a sec—"
+    play sound Thud
+    show dummy with vpunch
+    MC "Uhhhggg."
+    show Natsuko smug
+    "As I looked over I saw Akira and Nat exchanging a low-five."
+    MCT "Yeah, really needed to see that one more time."
+    MC "My back... someone help..."
+    show FMG flex
+    FMG "Ooo! Show us a powerbomb!"
+    Hageshi "No problem."
+    MC "Power what!? I don't like the sound of that."
+    show FMG neutral
+    show Natsuko neutral
+    Hageshi "Relax, Hotsure-san. I wouldn't do that to a student. Powerbombs and piledrivers are illegal. You can't just drop somebody on their head."
+    Hageshi "But, that being said, if you land on your head during a legal throw, well that's on you. Try harder not to get tossed."
+    Natsuko "So what's next?"
+    Hageshi "I suppose we should cover the suplexes."
+    MC "Uhhh, let's not and say we did..."
+    Hageshi "I guess Hotsure-san isn't going to hold up for too much longer. Luckily, I have a substitute."
+    "Hageshi went to one of the gymnasium closets and pulled out what I could only assume was a wrestling dummy. It looked like a punching bag with some blocky limbs stitched onto it."
+    show FMG happy
+    FMG "I think I preferred the old dummy, haha."
+    MC "I'm feeling very flattered, in case you couldn't tell."
+    show FMG neutral
+    "Hageshi proceeded to demo a bunch of crazy shit with the dummy. I didn't realize there were so many ways to wrap around something with your arms and throw it."
+    "He was throwing out some weird terms I didn't quite get either, like ‘par terre' and ‘grand amplitude', but Akira and Nat seemed to be picking up on it."
+    Hageshi "Alright, that about covers it. Only so much can be shown, what's left is to do it. Square up with each other on the mat and let's go."
+    "The two hulking amazons walked their way to the center of the mat, neither one taking their eyes off the other, sizing each other up the whole way."
+    show FMG upbeat
+    show Natsuko smug
+    "Akira had her trademark cocky smirk, but I could tell she was a bit more serious than usual."
+    "Nat on the other hand took her RBF up to 11 and was staring daggers into Akira."
+    play music Rivalry
+    Hageshi "And go!"
+    #hide Hageshi with dissolve
+    play sound Whistle
+    "The two titans immediately close the gap between them. A series of low pitch smacks filled the otherwise silent auditorium as the two solid walls of muscle lunged at each other trying to grab at each other's arms."
+    Hageshi "Stop playing patty-cake and try to make something happen."
+    "I certainly didn't agree with Hageshi's take on what was going on. It'd be pretty easy to lose a finger if you reached in to stop Akira and Nat clawing at each other's arms just to try to get a hook in."
+    show FMG angry-3
+    show Natsuko annoyed
+    "Come to think of it, they were having quite a bit of trouble grabbing each other. They were both still sweaty from the workout earlier. It wasn't quite the same as them being covered in oil and in their underwear though."
+    "But with their muscle bodies glistening in their skimpy workout attire, it was as close as I could ask for."
+    MCT "Heheh, yeaaaah boy!"
+    show FMG angry-2
+    "Nat hooked her hand around the back of Akira's neck and proceeded to try to shove her head to the mat."
+    FMG "Ow! Hey! Cut it out!"
+    Hageshi "I'll allow it."
+    show Natsuko smug
+    Natsuko "Heh."
+    show FMG angry
+    FMG "ARRRGH!"
+    show Natsuko neutral
+    "Just as Akira popped her head back up, Nat stole the opportunity to wrap Akira up in a body lock."
+    show FMG surprised-2
+    "She full on body checked her, taking all of Akira's upward momentum and using it against her to push her backwards and tackle her down the mat."
+    play sound Thud
+    Hageshi "Take-down, two points."
+    show FMG angry
+    FMG "{i}RAAAR!{/i}"
+    show Natsuko smug
+    "Akira was not happy. She quickly got off her back and out of Nat's hold. She spun around and stood up to face Nat again."
+    show Natsuko neutral
+    "They immediately barreled towards each other, the raw smack from their dense bodies crashing into each other resumed as they began to entangle each other with their arms, jockeying for position with holds and hooks."
+    show FMG angry-3
+    FMG "{i}Oof. {w}Erh. {w}Mfft!{/i}"
+    "Akira was getting annoyed with Nat wrenching down on her arm with an underhook."
+    show FMG angry
+    "Akira finally got sick of it and lunged for a headlock, but Nat proceeded to flip Akira's arm past her as she ducked under and snuck around her, meeting her other arm in a waist lock that she cinched up."
+    show FMG surprised
+    FMG "Shiii—"
+    "In what felt like slow motion, but happened in an instant, Nat wrenched her entire body in a hyperextended arch, sending Akira's feet in the air and her back sailing toward the mat over her shoulder."
+    "It shouldn't have been possible to send that much mass airborne, but the collective several hundred kilos crashed down on Akira's shoulder blades."
+    play sound Thud
+    show dummy with vpunch
+    "*{i}BOOM!{/i}*"
+    show FMG surprised-2
+    "The suplex Nat landed on Akira was every bit as loud and reverberating across the gymnasium as when Hageshi bounced fatboy across the mat..."
+    "...But the density of the two wrestlers this time created more of a dull splat sound when they hit the mat. It was almost sickening to think about how hard the impact must have been."
+    Hageshi "Nice throw. That's worth four."
+    show Natsuko smug
+    Natsuko "Hmph."
+    show FMG angry-3
+    FMG "That's it! You've got me seeing red, and it's not just your goofy looking hair."
+    Natsuko "I'd like to see you try something. You're too far behind to catch up now."
+    show FMG upbeat
+    "With surprising speed Akira recovered and lunged back at Natsuko. She must have caught her off guard because she was setting up to grab a headlock,"
+    show Natsuko neutral
+    extend " but Nat was able to pivot her around during the ensuing struggle."
+    play sound Whistle
+    Hageshi "Out of bounds. That's a point for Okamoto-san. Restart in the center."
+    show FMG angry-3
+    FMG "You've gotta be kidding me! Come on Hageshi-sensei, don't you think we could expand the ring a bit? Nine meters feels a bit cramped."
+    Hageshi "Alright, fair enough. Standard mats aren't built for muscle growth students. You can use the outer circle for bounds, but I'm not giving that point back."
+    show FMG surprised-2
+    FMG "But—"
+    show FMG sad
+    Hageshi "You knew the rules before you started. No whining after I just agreed to change them in your favor."
+    MC "{size=-6}{i}Psst!{/i} Akira!{/size}"
+    show FMG neutral
+    FMG "Huh?"
+    MC "{size=-6}You can't keep letting Nat get you worked up. She's taking advantage of how you'll react when she gets aggressive. Just keep your head and you'll do fine.{/size}"
+    show FMG flex
+    FMG "Right! Don't worry, I got this Kei-kun!"
+    show FMG neutral
+    "They reset in the center."
+    play sound Whistle
+    show FMG upbeat
+    show Natsuko smug
+    extend " And they were right back at it. Nat smelled blood and lunged at Akira once she got a tiny opening from batting her arms away."
+    "Nat got another bodylock around Akira's waist—"
+    show FMG angry
+    extend " naturally, Akira was looking pretty pissed off at this point..."
+    show FMG upbeat
+    extend " but then I noticed something like a switch flip behind her eyes."
+    show Natsuko annoyed
+    "Instead of trying to squirm and struggle out of it, Akira flared her legs out and back, posting an immovable rampart even Nat couldn't budge."
+    "Akira reached over Nat and hooked both her arms over Nat's, prying her arms away from her torso and overextending Nat from the base of her legs."
+    "Nat suddenly realized this wasn't going to plan and let go of Akira, but it was too late. Akira had completely pincered both of Nat's arms like she had a set of big meaty claws."
+    show FMG angry
+    FMG "Erraaaaggghh!"
+    "Akira snapped her entire body backwards like she was trying to touch her head to the floor while still standing."
+    "In what I could only describe as a tree falling in reverse, Nat's legs flew over her head straight in the air as she was yanked back, and then proceeded to pick up speed as Akira kept wrenching her backwards over her shoulder."
+    play sound Thud
+    show dummy with vpunch
+    "*{i}BOOOM!{/i}*"
+    show Natsuko disappointed
+    MCT "That really did sound like a falling tree."
+    show FMG upbeat
+    "Akira had slammed Nat into the mat and was now on top of her in a headlock. She might just pin her!"
+    show Natsuko frustrated
+    Natsuko "Not. A. Chance!"
+    "I don't know if I'd ever seen Nat so pissed in my life. I could tell she was a lot more angry with herself than Akira. She quickly flipped her hips facing down towards the mat to get her feet digging in to stand up."
+    show FMG surprised-2
+    "Without being able to stop her from using her legs Akira had to let go or Nat was going to roll her over if Akira held on."
+    show FMG neutral
+    show Natsuko neutral
+    Hageshi "Four points, nice double overhook."
+    MC "Nice, she's on the board!"
+    play sound Whistle
+    Hageshi "Alright, midpoint, second round. 7 - 4, Okamoto-san leads, she gets to take top position."
+    MCT "Knowing her, she probably likes it on top..."
+    show FMG angry-3
+    FMG "Don't let this give you any ideas, Kei-kun."
+    MCT "Aw come on! Am I that easy to read?"
+    show FMG neutral
+    MC "I have no idea what you're talking about."
+    "They had to do that weird top and bottom position start, where Akira had to go on her hands and knees while Nat could kneel over the top of her, but couldn't grab anything until the round restarted."
+    play sound Whistle
+    show FMG angry-3
+    "Nat wasted no time and wrapped up around Akira. While Akira struggled to stand up with Natsuko burying her shoulder into her back to keep her down."
+    "They were facing opposite directions which made all the sweaty muscled gyrations each of them were doing look like an overly aggressive and awkward attempt at 69'ing."
+    "I was aroused, confused, and intrigued all at the same time."
+    Natsuko "This is a lot easier if you don't struggle."
+    show FMG upbeat
+    FMG "You wish."
+    show FMG surprised
+    "Nat used the brief window of distraction she created to tuck Akira's waist into her hip and tossed Akira over her shoulder."
+    play sound Thud
+    show dummy with vpunch
+    Hageshi "A reverse gut-wrench, nice one for an amataur. Two points."
+    show FMG neutral
+    FMG "{i}Whoo, hee, ahhh.{/i}"
+    show Natsuko disappointed
+    Natsuko "{i}Huff, ahh, whew.{/i}"
+    "The two titans were dripping with sweat at this point. Everything was taking longer for them to do. They were the fittest chicks I'd ever seen, but going full force at someone nonstop who's an equal match would wear down anyone."
+    "At this point, everything they were trying to do was failing. They kept slipping off each other, both of them looking like a totally frazzled hot mess."
+    show FMG angry-3
+    show Natsuko disappointed
+    Hageshi "Make something happen ladies, or you'll lose points for stalling."
+    "Neither one of them like the sound of that at all."
+    show Natsuko neutral
+    extend " Nat lunged at Akira, grabbing a bodylock around the waist."
+    show FMG upbeat
+    "Akira had a similar idea and reached over her back to snag her own bodylock around Nat. Both were shoving each other around grunting and growling, trying to get the other off balance for a throw."
+    show FMG angry-3
+    "Literally being locked together, it was like watching two moose locking antlers as they pushed back and forth, grunts and all."
+    "Akira had the advantage this time though, being able to press on top of Nat, using her weight to pry on her arms and over extend her."
+    show FMG flex
+    "She finally got Nat's grip to break! Wasting no time she heaved the hulking redhead across her hip, leaving Nat's legs flailing as she tried to recover her footing, but it was too late."
+    show FMG upbeat
+    "Akira's hold had Nat completely upside down as Akira twisted backwards, slamming Nat right down on the back of her head."
+    play sound Thud
+    show dummy with vpunch
+    MC "*{i}DAMN!{/i}*"
+    show Natsuko disappointed
+    MCT "I know Nat is tough, but she got freaking wrecked with that one."
+    Hageshi "A little sloppy, but good for three."
+    show FMG neutral
+    "Both of them flew apart on impact. Needless to say, Nat looked a little dazed. Recovering their senses from the impact, they both rushed to get back at each other—"
+    play sound Whistle
+    Hageshi "Time."
+    play music Peaceful
+    pause .5
+    show Natsuko neutral
+    Hageshi "Final score 9 - 7. Okamoto-san wins."
+    Hageshi "Though I must say that was quite the admirable comeback from you Mizutani-san. You were one point away from losing to a technical pin before your first score."
+    show FMG happy
+    FMG "Fair and square. You win again this time, Nat."
+    show Natsuko disappointed
+    Natsuko "Ugh, it makes it harder to rub it in your face when you're gracious in defeat."
+    show Natsuko neutral
+    Natsuko "You definitely had some good throws on me, that last one especially. If the match had gone on longer..."
+    show FMG flex
+    FMG "Yeah?"
+    Natsuko "But it didn't, and I still would have won anyway. You're too predictable."
+    show FMG happy
+    FMG "Apparently not as predictable as you'd like."
+    Natsuko "Maybe some things actually do get through that thick skull of yours."
+    show FMG upbeat
+    FMG "Not as thick as yours since your head didn't crack open."
+    show FMG happy
+    extend " You're damn tank Nat to walk that last throw off."
+    show Natsuko happy
+    Natsuko "Thanks, I guess."
+    show Natsuko neutral
+    extend " That was enough of a workout for me today. I'm going to hit the shower."
+    hide Natsuko with dissolve
+    MC "Yo, that shit was awesome! You did great, Akira."
+    FMG "Thanks Kei-kun."
+    show FMG sad at altMove(0.5, 0.5)
+    extend " Not nearly great enough though."
+    MC "I wouldn't be so sure. I think you had her scared there at the end."
+    show FMG happy
+    FMG "You think so?"
+    MC "Oh, definitely."
+    show FMG neutral
+    FMG "Thanks for the pep-talk earlier. If I had just let her get me frustrated the whole match she would have bulldozed me in a hurry. I need to get myself under control if I'm going to be able to use all this strength properly."
+    MC "Any time. You look tired. How about a massage?"
+    show FMG happy
+    FMG "I was actually thinking ice cream."
+    MC "Both and you got a deal."
+    show FMG flex
+    FMG "Deal!"
+    jump daymenu
+
+label FMG077:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
