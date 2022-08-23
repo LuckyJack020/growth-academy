@@ -35,6 +35,7 @@ define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakura = Character('Sakura', color="#FF3399")
 define Tako = Character('Tako', color="#ce9b50")
 define Yuki = Character('Yuki', color="#FF91DC")
+define YukiCell = Character('Yuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="YukiCell")
 
 #School Staff
 define HR = Character('Tashi-sensei', color="#C0C0C0")
@@ -87,6 +88,7 @@ define Lee = Character('Lee', color="#C0C0C0") #WG Route - Summer Arc
 define Minei = Character('Minei', color="#C0C0C0") #FMG Route
 define Misaki = Character('Misaki', color="#C0C0C0") #WG Route
 define Miura = Character('Miura', color="#C0C0C0") #FMG Route
+define Ren = Character('Ren', color="#C0C0C0") #Botanist: MC Route, GTS Route
 define Shino = Character('Shino', color="#C0C0C0") #WG Route - Summer Arc
 define Takada = Character('Takada', color="#C0C0C0") #WG Route - Summer Arc
 define Wobbles = Character('Wobbles', color="#E54C84") #AE Route - Shiori's Hypnotized State
@@ -832,6 +834,7 @@ image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.png")
 image side TomoCell = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/side.png")
 image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/side.png")
 image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.png")
+image side YukiCell = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/side.png")
 
 #Minor characters
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
@@ -1079,7 +1082,8 @@ init 1 python:
     eventlibrary['MC001'] = {"name": "Sharpening the Senses", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.NOEVENT, "global005"]]}
     eventlibrary['MC002'] = {"name": "Warmth of a Heart", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "classroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "MC001"]]}
     eventlibrary['MC003'] = {"name": "Will She Ever Grow up?", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "global005"]]}
-    eventlibrary['MC006'] = {"name": "A Bad Handoff", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                               "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX20"],      "conditions": [[ConditionEnum.TIMEFLAG, "aftersize2"]]}
+    eventlibrary['MC005'] = {"name": "Golden Week", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.TIMEFLAG, "aftersize2"]]}
+    eventlibrary['MC006'] = {"name": "A Bad Handoff", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                               "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX20"],      "conditions": [[ConditionEnum.EVENT, "MC005"]]}
     eventlibrary['MC007'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,   "location": "unknown",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]}
     eventlibrary['MC011'] = {"name": "Put Up a Fight", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
     eventlibrary['MC012'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC011"]]}

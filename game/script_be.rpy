@@ -1515,6 +1515,7 @@ label BE012:
     show BE neutral
     with fade
     play music BrightLights
+    $setFlag("VisitedTown")
     "Now that she was headed in the right direction, I followed Honoka to the bus stop, where we were just in time to hop aboard. With a little more hop in Honoka's case. After a few stops, we ended up in a small shopping district in the city."
     MC "Now, if I remember the directions right, we just go this way, and take a right, and we should be there soon."
     show BE happy
@@ -9120,7 +9121,7 @@ label BE046:
     show BE surprised
     BE "Don't even joke about that!"
     show BE happy
-    BE "And by the way, the proper name is the ‘Continuous Chocolate Challenge!'"
+    BE "And by the way, the proper name is the \"Continuous Chocolate Challenge!\""
     MCT "Just hearing that makes my stomach ache..."
     MC "Hmm... well if it's not that, then it must be your first day of the swim club, right?"
     BE "Exactly! First day of swim club! I'm soo excited!"
@@ -9305,7 +9306,7 @@ label BE046:
     MC "I'm still fuming about that, actually."
     show BE shrug
     BE "It's fine, Kei-chan. I kind of expected this. I mean, I don't exactly have the most hydrodynamic figure."
-    MCT "It's pretty ‘dynamic' in other ways..."
+    MCT "It's pretty \"dynamic\" in other ways..."
     show BE happy
     BE "I have a nice pair of floaties though! And besides! It's not like he kicked me out, so I'm gonna ride this wave as long as I can."
     MC "Aaaah...I see what you did there."
@@ -9332,11 +9333,11 @@ label BE046:
     BE "That's the plan! Which reminds me, there's no practice tomorrow since it's the weekend, and I want to try and get used to the water a little more... so can you come with me to this public pool I found on the island?"
     MC "Oh really? I didn't know we had one."
     BE "Technically, it does!"
-    MCT "I don't like the sound of ‘technically'..."
+    MCT "I don't like the sound of \"technically\"..."
     MC "Well, I don't have any plans tomorrow, so I don't mind. Let's do it."
     show BE seductive
     BE "Heck yeah! Okay, let me go get changed and you can walk me back to my dorm! No coming into the locker room this time!"
-    MC "Aw man, and here I thought I'd get to witness another ‘pep-talk'."
+    MC "Aw man, and here I thought I'd get to witness another \"pep-talk\"."
     show BE surprised-2
     BE "Hey!"
     jump daymenu

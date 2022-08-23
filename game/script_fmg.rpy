@@ -969,7 +969,7 @@ label FMG009:
     FMG "What?! No! God, Chibuki, he's a friend of mine, we just happened to run into each other."
     UNKNOWN "Oh yeah? Just a friend?"
     FMG "Y-Yes, just... just a friend..."
-    Chibuki "Well, are you going to introduce me to your ‘friend'."
+    Chibuki "Well, are you going to introduce me to your \"friend\"."
     show FMG neutral
     FMG "Of course! This is my {i}friend{/i}, Keisuke Hotsure."
     Chibuki "Oh, this is that Keisuke kid you've been spending your time exercising with? Well then, allow me to introduce myself."
@@ -1684,6 +1684,7 @@ label FMG015:
     $setFlag("XX15")
     scene Town with fade
     play music HigherEdu
+    $setFlag("VisitedTown")
     "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."
     "The streets were full of bustling people given the time and day, everyone was either working or buying things from the many open stores. Seeing so many going shopping made me feel like buying something too."
     "As I was taking in the sites as well as wondering what store I should go to, a thought came to me."
@@ -4867,7 +4868,7 @@ label FMG031:
     FMG "...You feeling better now?"
     MC "????"
     MC "That was like twenty seconds. No, I am not feeling better."
-    FMG "Come on then slowpoke, dinner's waiting! I might not be able to get seconds if someone like Alice gets to ‘em first!"
+    FMG "Come on then slowpoke, dinner's waiting! I might not be able to get seconds if someone like Alice gets to 'em first!"
     MC "I'm coming, jeez."
     MCT "I help her with her problems and this is my reward... Pain and suffering."
     "I got up from kneeling, stretching myself out before I realized that Akira was already jogging away."
@@ -6861,7 +6862,7 @@ label FMG043:
     MC "..."
     MC "I don't need this, I'm leaving!"
     FMG "Where do you think you're going?!"
-    MC "To the café! ‘Cause I'm hungry!"
+    MC "To the café! 'Cause I'm hungry!"
     FMG "Can I come?"
     MC "Yeah, sure."
     show FMG neutral
@@ -7151,7 +7152,7 @@ label FMG046:
     FMG "But I'll give her a call."
     MC "When did you get her number? I've never seen you talk to her."
     show FMG happy
-    FMG "I got her number when she was helping me with math a couple of months back. You know, ‘cause you're bad at it and couldn't help me."
+    FMG "I got her number when she was helping me with math a couple of months back. You know, 'cause you're bad at it and couldn't help me."
     MC "False, I'm a freaking genius. Sorry, you can't handle triangles."
     show FMG angry
     FMG "Shush! It's ringing! ...And no, you couldn't even do basic division."
@@ -7403,7 +7404,7 @@ label FMG047:
     FMG "I'm surprised with how badly you suck at it! It's nothing but chance and you're still cheeks at it."
     MC "I will not tolerate such disrespect. We go again."
     show FMG happy
-    FMG "Can you handle another ‘L'? Seems like all these losses are getting to you."
+    FMG "Can you handle another \"L\"? Seems like all these losses are getting to you."
     MC "I won't lose again. On the count of three."
     FMG "No tears when I win, okay?"
     MC "No TeArS wHeN i WiN..."
@@ -8049,7 +8050,7 @@ label FMG049:
     Chibuki "Good luck, Keisuke, hahahaha."
     MC "Good luck with what?"
     Chibuki "Nothing! Nothing at all."
-    Chibuki "I just hope you're still in one piece after she's finished with ‘ya.."
+    Chibuki "I just hope you're still in one piece after she's finished with 'ya.."
     MC "Uh... alright then."
     hide Chibuki with dissolve
     MC "How bad can a game of soccer be? Yeah, Akira is big, but she isn't going to go out of her way to hurt me."
@@ -8717,7 +8718,7 @@ label FMG052:
     Chibuki "Ah, I almost forgot. You have to take off your clothes, Akira."
     MCT "Ah, yeah, I'm loving this already."
     Chibuki "You can keep your bra and underwear on for now."
-    MCT "Can't win ‘em all..."
+    MCT "Can't win 'em all..."
     "Chibuki pulled out a measuring tape while Akira stripped down, revealing her new chiseled body."
     MCT "It never gets old..."
     "The size difference between Akira and I was staggering. With her standing next to Chibuki it was even more jaw-dropping."
@@ -9033,7 +9034,7 @@ label FMG053:
     show FMG sad-2
     FMG "And you call yourself a gamer..."
     show FMG neutral
-    FMG "But alright, show me these ‘champs'."
+    FMG "But alright, show me these \"champs\"."
     MC "Finally, I didn't think you'd ever stop talking, haha."
     show FMG angry
     FMG "I'll leave."
@@ -9289,7 +9290,7 @@ label FMG054:
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "Yes, I know. You already told me."
     show FMG sad-2
-    FMG "Sometimes I wonder if you act like this on purpose. All you have to do is say ‘Yeah, no problem, it was my pleasure.'"
+    FMG "Sometimes I wonder if you act like this on purpose. All you have to do is say \"Yeah, no problem, it was my pleasure.\""
     show Natsuko disappointed
     Natsuko "Right... Sorry. I swear I'm not always like this."
     MC "Nat, seriously, it's chill. Since you were an ass to Akira for a long time, I assume it's like a force of habit. I can't say I blame you, she sucks...{w} especially at video games"
@@ -9461,7 +9462,7 @@ label FMG055:
     MC "First off, holy shit, you look amazing! Second, I have a question. How did you get a sundress to fit you? There is no way the school is providing you with something {i}that{/i} nice."
     FMG "Funny that you ask. After you left the day I got measured for the new clothes, I texted Alice and asked if she could get something different for me."
     FMG "I don't know, I don't get to be girly a lot. I figured with this, I could get my hair done and we could do something like a picnic."
-    MC "Oh, so that's why you bought all these groceries! Should've told me you wanted to go on a picnic sooner. I would've postponed your defeat ‘till tomorrow."
+    MC "Oh, so that's why you bought all these groceries! Should've told me you wanted to go on a picnic sooner. I would've postponed your defeat 'till tomorrow."
     show FMG sad-2
     FMG "What??? You didn't even win."
     MC "I did. Anyway, do you want to get going now??? Do you want me to go change into something nicer??? Or is what I have on now good???"
@@ -9611,7 +9612,7 @@ label FMG056:
     Natsuko "In your dreams."
     "Akira extended her hand out over the threshold after planting her elbow on the pad and gripping into the handle on the other side."
     "She grasped it with a hooked wrist that made her bicep pop into a huge mound, even as her arm was mostly extended."
-    "Natsuko on the other hand took a rather odd grip on the handle, hooking her wrist over the top, with her forearm in a ‘gooseneck' position."
+    "Natsuko on the other hand took a rather odd grip on the handle, hooking her wrist over the top, with her forearm in a \"gooseneck\" position."
     "Natsuko reached for Akiras hand forcefully, aggressively wringing across the back of her palm and jostling her as she vied for a better hand position."
     FMG "Hey! Two can play that game."
     "The two massive mitts squirmed across the backs of their hands as each tried to crush the other while craning their wrist to sink into the other's fingers more."
@@ -9836,7 +9837,7 @@ label FMG057:
     show FMG surprised with dissolve
     FMG "Oh my gosh, Kei, are-"
     MC "Stop."
-    MC "I know what you're thinking right now. ‘I just crushed my boyfriend and he is currently dying so I should get up so he can breathe.'"
+    MC "I know what you're thinking right now. \"I just crushed my boyfriend and he is currently dying so I should get up so he can breathe.\""
     MC "Please don't do that."
     FMG "...Are you serious right now?"
     MC "I know you had big boobies but this is AWESOME!"
@@ -10214,7 +10215,7 @@ label FMG059:
     MC "Nice to meet you, Yureno-san. I hope Akira has told you all the great things about me."
     Tako "Yeah, dude! She told me everything about ya, and I do mean everything. Sorry to hear about the peanut butter incident, my guy."
     MC "I see... so how did you two even meet?"
-    Tako "Haaa? How could I *not* get to know her? She's helped me with so many schemes I can't count ‘em all! She's the muscle, and I'm...!"
+    Tako "Haaa? How could I *not* get to know her? She's helped me with so many schemes I can't count 'em all! She's the muscle, and I'm...!"
     show FMG neutral
     FMG "Yureno-san, you mentioned something about some advert?"
     Tako "Ehhhh? For real? No props for me? And here I was gonna tell you you got this kick me sign on you!"
@@ -11906,7 +11907,7 @@ label FMG066:
     show FMG neutral
     MCT "Loaded might have been the wrong choice of words there."
     show WG doubt
-    WG "What do you mean ‘that's it'?!"
+    WG "What do you mean \"that's it\"?!"
     show WG angry
     show FMG surprised
     extend " Fine, you two can sit here and wait for your jet to pull up."
@@ -12429,7 +12430,7 @@ label FMG068:
     scene Okinawa Market with fade
     MC "I'm a total fool for not asking, but what's the name of this place?"
     show FMG neutral with dissolve
-    FMG "It's nothing crazy fancy, I hope they haven't changed the name. Back when I was a kid it was called ‘Fortune Dragon'. It should be down this street unless they moved."
+    FMG "It's nothing crazy fancy, I hope they haven't changed the name. Back when I was a kid it was called \"Fortune Dragon\". It should be down this street unless they moved."
     pause 1
     show FMG flex
     FMG "Found it!"
@@ -13434,7 +13435,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         show WG neutral-2
         WG "I must admit, it was quite good."
         show FMG neutral
-        FMG "‘Quite good'? Come on! You gotta admit this is the best soba you've ever had!"
+        FMG "\"Quite good\"? Come on! You gotta admit this is the best soba you've ever had!"
         show WG neutral
         WG "Well... maybe not quite, but it is up there."
         show FMG angry-3
@@ -13816,7 +13817,7 @@ label FMG072:
     MC "That's my name, don't wear it out. {w}Still wearing your outfit from Okinawa, I see."
     show FMG sad
     FMG "The one they had prepared for me was too small... I couldn't flex without it ripping."
-    MCT "I always miss the good stuff. ‘Tis my curse."
+    MCT "I always miss the good stuff. 'Tis my curse."
     show FMG flex
     FMG "At least with this, I can move around semi-freely and show off my arms!"
     MC "Ma'am do you even have a license to carry those guns?"
@@ -14089,7 +14090,7 @@ label FMG073:
     FMG "I think I would have remembered that."
     MC "Okay, fine. Since your memory is so fuzzy, I'll fill it in for you and tell you I won."
     show FMG happy
-    FMG "So does that mean you call yourself the ‘Queen of Fighters'?"
+    FMG "So does that mean you call yourself the \"Queen of Fighters\"?"
     MC "...Speaking of fuzzy memories— why do I hang out with you again?"
     show FMG angry-3
     FMG "Cause no one else would put up with your shit."
@@ -14216,7 +14217,7 @@ label FMG073:
     Natsuko "I-I've been doing just fine, Hageshi-sensei."
     Hageshi "Oh? Good to hear. My door is always open if you need help again."
     show Natsuko frustrated
-    "Natsuko shot me a glare out the side of her eye as if to say ‘not a word'."
+    "Natsuko shot me a glare out the side of her eye as if to say \"not a word\"."
     MC "Right. Good talk. I'll go find Akira. See you in a bit, Hageshi-sensei!"
     jump daymenu
 
@@ -14279,7 +14280,7 @@ label FMG074:
     Hageshi "Okay fine, here's a tissue. {w}Listening to you two talk to each other I thought you'd be used to being a verbal punching bag by now."
     MC "Shouldn't that make me the sympathetic character here then?"
     FMG "It's always somehow about you isn't it, Kei-kun?"
-    Hageshi "{i}Anyway{/i}, {w}getting back to your question, Mitzutani-san, my ‘transformation', for lack of a better term, was the best thing that ever happened to me."
+    Hageshi "{i}Anyway{/i}, {w}getting back to your question, Mitzutani-san, my \"transformation\", for lack of a better term, was the best thing that ever happened to me."
     Hageshi "But for others, even some with the same factor, it was the worst thing that ever happened to them."
     Hageshi "I felt more confident in my body, all while others around me felt so much worse about theirs. I had been given a gift, and I wished others could see theirs like that too."
     Hageshi "I've spent the better part of my life training martial arts and combat sports. At the core of all of them was the self-discipline to restrain your power until it was the right time to use it."
@@ -14500,7 +14501,7 @@ label FMG075:
     MC "Tomorrow? But tomorrow's Saturday."
     show FMG flex
     FMG "Well, guess what we're doing Saturday then? He's got the whole day booked. He said it would be fun."
-    MC "I don't really trust what Hageshi-sensei considers ‘fun'."
+    MC "I don't really trust what Hageshi-sensei considers \"fun\"."
     show FMG neutral
     FMG "Hmm, when you put it that way, the last test was kind of boring and sadistic— in a weird way... {w}Then again, so is his math class."
     MC "This is true."
@@ -15085,7 +15086,7 @@ label FMG076:
     MC "I'm feeling very flattered, in case you couldn't tell."
     show FMG neutral
     "Hageshi proceeded to demo a bunch of crazy shit with the dummy. I didn't realize there were so many ways to wrap around something with your arms and throw it."
-    "He was throwing out some weird terms I didn't quite get either, like ‘par terre' and ‘grand amplitude', but Akira and Nat seemed to be picking up on it."
+    "He was throwing out some weird terms I didn't quite get either, like \"par terre\" and \"grand amplitude\", but Akira and Nat seemed to be picking up on it."
     Hageshi "Alright, that about covers it. Only so much can be shown, what's left is to do it. Square up with each other on the mat and let's go."
     "The two hulking amazons walked their way to the center of the mat, neither one taking their eyes off the other, sizing each other up the whole way."
     show FMG upbeat

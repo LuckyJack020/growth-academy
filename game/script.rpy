@@ -168,6 +168,8 @@ init python:
         SUMINT = "summer-interior"
         SUMINTSG = "summer-interior-sunglasses"
         TIRED = "tired"
+        TRADITIONAL = "traditional"
+        WORK = "work"
         NOHAT = "nohat"
 
     class ConditionEnum:
@@ -806,7 +808,7 @@ init python:
 
     def setGTSOutfit(o):
         global GTSOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.NUDE or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.WORK:
             GTSOutfit = o
 
     def setPRGOutfit(o):

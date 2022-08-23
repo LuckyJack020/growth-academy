@@ -29,7 +29,7 @@ label GTS001:
     GTS "Well now, what are you up to?"
     MC "Nothing much, just checking out what's on campus. How about you?"
     GTS "Much the same. For all its peculiarities, this place has a sort of charm to it, does it not?"
-    MC "I guess so. I'm kinda distracted by all the ‘peculiarities' at the moment."
+    MC "I guess so. I'm kinda distracted by all the \"peculiarities\" at the moment."
     show GTS happy
     "She closed her eyes in a genteel, whispered chuckle, which she moved to cover with her hand."
     show GTS neutral at Transform(xzoom=-1)
@@ -831,6 +831,7 @@ label GTS009:
     scene Town with fade
     play music HigherEdu
     #Afternoon, gentle music, scene becomes locked after scene 10.
+    $setFlag("VisitedTown")
     "My stride was rather lax as I wandered the various blocks of the town. It was rather quaint and not crowded."
     "Well, that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
     "I didn't get to stay on that train of thought for long however as I faintly heard a gentle voice speaking."
@@ -917,10 +918,13 @@ label GTS009:
     "I only had enough money left to get one of the items as I looked back down the aisles as the girls were still examining things."
     menu:
         "Buy a pin for Honoka": #+5 Affection Honoka
+            $setFlag("GTS009_Honoka")
             jump GTS009_c1_1
         "Buy the headband for Naomi": #+5 Affection Naomi
+            $setFlag("GTS009_Naomi")
             jump GTS009_c1_2
         "Save your money": #+0 Affection.
+            $setFlag("GTS009_None")
             jump GTS009_c1_3
 
 label GTS009_c1_1:
@@ -5196,7 +5200,7 @@ label GTS028S_c2_3:
     GTS "Oh, I see."
     "She gingerly put it back and bent down a little to scan the other games on display."
     GTS "This one has some enticing cover art as well. What do you make of it?"
-    "I looked down and saw the cover's depiction of a blue-haired girl... I think... standing in shallow water, a cardinal perched on her outstretched finger. ‘Chrysanthemum Tussle: Farewell, My Friend.'"
+    "I looked down and saw the cover's depiction of a blue-haired girl... I think... standing in shallow water, a cardinal perched on her outstretched finger. \"Chrysanthemum Tussle: Farewell, My Friend.\""
     MC "Oh, I think I heard of that."
     GTS "Do you think I would enjoy it?"
     MC "You... might? I can't really comment, visual novels kinda put me to sleep."
@@ -7005,11 +7009,11 @@ label GTS036_c2_2:
     jump GTS036_menu
 
 label GTS036_c2_3:
-    MC "Well, ‘love' is a very complicated word. I don't know if I'm ready to say it yet."
+    MC "Well, \"love\" is a very complicated word. I don't know if I'm ready to say it yet."
     show GTS neutral
     GTS "Then what are you ready to say?"
     MC "Huh?"
-    GTS "If not ‘love,' then what?"
+    GTS "If not \"love,\" then what?"
     MC "I mean, I respect you a lot. You've got a lot of talents, and you're always so chill and nice. I just like spending time with you."
     show GTS despaired-thought
     GTS "So, you enjoy spending time with me, but you're afraid of the implications that come with saying that you love me. I understand. It can't be an easy thing to say."
@@ -7745,7 +7749,7 @@ label GTS040_c2:
             MCCell "The evidence seems pretty unassailable. I mean, we know you're majorly into gardening. Have you noticed any white hairs? What's your stance on doilies? Or Nortfight dances?"
             GTSCell "I haven't noticed any such thing, no. I'll be sure to check again after this conversation."
             GTSCell "And I happen to have a good deal of respect for the craftsmanship and visual aesthetic of the doily, though I myself prefer other modes of ornamentation."
-            GTSCell "...I confess, before I offer an opinion, I must ask precisely what a ‘Nortfight dance' is."
+            GTSCell "...I confess, before I offer an opinion, I must ask precisely what a \"Nortfight dance\" is."
             MCCell "Eh... honestly I don't think knowing would enhance your life."
             GTSCell "I do find myself inclined to believe you."
             jump GTS040_c3
@@ -8109,7 +8113,7 @@ label GTS041_After_C1:
     MC "I wonder what sorta lives await giants when they finish school..."
     GTS "Although it may sound bad on my part, I haven't really looked into it. I was hoping that I would stay below the 4 meter threshold, but as we both can see that ship has sailed."
     GTS "I'd love to return to the mainland someday, but I fear I may not be permitted to."
-    MC "I assume you mean ‘without resistance from the government'."
+    MC "I assume you mean \"without resistance from the government\"."
     GTS "Correct."
     MC "Yeah, that already brings up a lot of issues. I was surprised to hear how involved they are in the store."
     GTS "It was quite surprising, but considering how prominent they are in the dorms, I shouldn't be."
@@ -8298,7 +8302,7 @@ label GTS042:
     GTS "Now, by contrast, nearly everything feels perfectly suited to me, down to the finest detail. In fact, some things still feel a bit... grand, as it were."
     show GTS unique
     GTS "I'm certain you relate."
-    MC "Yeah, ‘grand' is perhaps an understatement."
+    MC "Yeah, \"grand\" is perhaps an understatement."
     show GTS neutral
     "Naomi slowly rocked her body backward, returning to a relaxed position. Due to the size and strength of the room's furniture, nothing creaked under weight. It still felt like a major event every time she moved."
     GTS "Well, that's quite enough about me, I'm sure. What can I do for you today?"
@@ -8961,7 +8965,7 @@ label GTS044_c4a:
     "She chuckled, as did I. I sat, as did she."
     show cg GTS044_stars1 with dissolve
     "It seemed every star ever given a name smiled down on her that shimmering night, along with their sisters and brothers suspended on the glassy sheen of the lake."
-    "But the misty periwinkle sheen of the grass we sat on was all thanks to the moon above. ‘Super' was right; it was bigger and brighter and a purer white than ever I'd seen, its divine glow casting the night into its own kind of day."
+    "But the misty periwinkle sheen of the grass we sat on was all thanks to the moon above. \"Super\" was right; it was bigger and brighter and a purer white than ever I'd seen, its divine glow casting the night into its own kind of day."
     "It occurred to me to look over to Naomi; her calligraphy set was nestled in the grass beside her, while she had settled into a meditative pose."
     menu:
         "Kiss her":
@@ -9663,7 +9667,7 @@ label GTS045:
     hide GTS
     show GTS_S angry with vpunch
     GTS_S "That perfidious harlot! How could she betray you?"
-    "My staggering legs carried me backwards a meter or so as Naomi‘s voice resounded, shattering the air like I'd never heard it before. And though I knew she could be stern, I'd never seen the sort of intense, pointed scowl that now hardened her huge face."
+    "My staggering legs carried me backwards a meter or so as Naomi's voice resounded, shattering the air like I'd never heard it before. And though I knew she could be stern, I'd never seen the sort of intense, pointed scowl that now hardened her huge face."
     GTS_S "Of all the selfish, thoughtless, wanton..."
     hide GTS_S
     show GTS sad
@@ -9675,7 +9679,7 @@ label GTS045:
     MC "Well... if nothing else, it's good to know you've got my back."
     show GTS neutral
     GTS "Of course, Keisuke-kun. I always shall."
-    GTS "I'm sure that was extraordinarily difficult to say aloud. I'm sorry to have dredged up bitter memories, but I‘m thankful for your trust and I hope that airing them has brought you some peace."
+    GTS "I'm sure that was extraordinarily difficult to say aloud. I'm sorry to have dredged up bitter memories, but I'm thankful for your trust and I hope that airing them has brought you some peace."
     MC "Heh... Yeah, I do feel better."
     GTS "As do I."
     stop music fadeout 5.0
@@ -10066,7 +10070,7 @@ label GTS046_c1_1:
     MC "Ng!"
     "The air was cold enough to jolt through my core, until her hand, swaddled in heat and ladylike softness, eased me down to a seated position. Her other fingertip caught nearly the entirety of my stiffened dick, and I took in one sharp breath."
     MC "Holy shit that's good, you're so, y- whew..."
-    "I bit my tongue from saying ‘you're so huge', even if her towering, curvaceous body occluded anything else from my mind."
+    "I bit my tongue from saying \"you're so huge\", even if her towering, curvaceous body occluded anything else from my mind."
     "And it was enveloping, her warmth, her {i}size{/i}. I was putty in her hands, while she exerted no greater effort than that to stroke a cat. But stroke she did, curling her finger around most of my length and gently squeezing."
     GTS_S "Oh, this will be easier than I thought. What a specimen~..."
     "While she looked fondly down between us, every slow, accelerating crooking of her soft finger sent Heaven's lightning up my belly. I was going mad, mad for her."

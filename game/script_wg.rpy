@@ -20681,7 +20681,7 @@ label WG073:
     show WG neutral
     Chibuki "No offense Alice, but that sounds a bit too ambitious, even for you. We're still students after all."
     Kokutan "Ooo, I hope I get more people interested in having me customize their wardrobe."
-    Chibuki "I don't think the whole ‘vampire chique' is going to catch on anytime soon, Miss Looney."
+    Chibuki "I don't think the whole \"vampire chique\" is going to catch on anytime soon, Miss Looney."
     show WG neutral-2
     WG "I understand your misgivings Chibuki, but the idea is to start with a small outlet with limited hours to do fittings by appointment."
     show WG happy
@@ -20755,7 +20755,7 @@ label WG073:
     MCT "Holy shit! I've seen the scales they have in the office and they look pretty damn sturdy. That's just crazy to even think about."
     MC "What did the nurse say?"
     show WG sad
-    WG "She just nervously laughed and said ‘This has never happened before...'."
+    WG "She just nervously laughed and said \"This has never happened before...\"."
     show WG stern
     extend " She obviously was embarrassed enough for the both of us."
     show WG worried
@@ -20847,7 +20847,7 @@ label WG073:
     play music Peaceful
     WG "I think we'll save that story for another time, Keisuke."
     show WG happy
-    WG "In all seriousness though, I appreciated the ‘story', as it were. You do have a way with words, more often than not. I always know I can count on you to be a sounding board or a shoulder to cry on."
+    WG "In all seriousness though, I appreciated the \"story\", as it were. You do have a way with words, more often than not. I always know I can count on you to be a sounding board or a shoulder to cry on."
     show WG neutral
     WG "Still though, I'm just not sure what to do about what's been happening."
     show WG sad
@@ -21000,7 +21000,7 @@ label WG074:
     extend " You'd be as big as me."
     FMG "Pfff, I don't need that garbage to surpass you. While you drink that, I have old reliable."
     show FMG neutral
-    Natsuko "Chocolate milk is ‘old reliable'? What are you, 12?"
+    Natsuko "Chocolate milk is \"old reliable\"? What are you, 12?"
     show FMG happy
     FMG "You're missing out is all I'm saying. It's sweet and refreshing, there isn't anything better."
     show Natsuko smug
@@ -23317,7 +23317,7 @@ label WGGTS004:
     show WG neutral
     WG "Not sure how I never noticed that before."
     if isEventCleared("WGGTS003"):
-        "I honestly couldn't tell if this was some kind of subconscious omission on Alice's part, or if she was low key being facetious, wanting to avoid running into ‘you know who' after their last exchange."
+        "I honestly couldn't tell if this was some kind of subconscious omission on Alice's part, or if she was low key being facetious, wanting to avoid running into \"you know who\" after their last exchange."
     scene Chukan Point
     show WG neutral
     with fade
