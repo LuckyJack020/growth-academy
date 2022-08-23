@@ -88,7 +88,7 @@ screen gallery():
         else:
             null
         textbutton "Return" action ShowMenu("galleryselect") xalign 0.5 yalign 0.5
-        if page < (math.ceil(len(galImgList[activegal]) / 6)):
+        if page < (math.ceil(len(galImgList[activegal]) / 6)) - 1:
             textbutton "Next" action SetScreenVariable("page", page + 1) xalign 0.5 yalign 0.5
         else:
             null

@@ -5273,7 +5273,7 @@ label FMG034:
     FMG "I was hoping you'd be a {i}little{/i} saucy back..."
     MC "Ooooooooooh, well why didn't you just say so!"
     pause 1
-    MC "{size=6}I'm going to rub out those stains {i}so{/i} hard.{/size}"
+    MC "{size=-6}I'm going to rub out those stains {i}so{/i} hard.{/size}"
     pause .5
     FMG "We should talk about something else. You... You need a lot of practice."
     MCT "I thought it was pretty good. Can't please everyone, I guess."
@@ -12811,7 +12811,7 @@ label FMG070:
     MC "Holy crap. Did you eat an elephant??? What happened!?"
     show FMG surprised
     FMG "I don't know! I must've had another growth spurt!"
-    MC "But we didn't even... {size=6}you know.{/size}"
+    MC "But we didn't even... {size=-6}you know.{/size}"
     show FMG angry
     FMG "Yes, I know! {w}Now, help me close the blinds, everything is hanging out for the world to see!"
     MCT "And it is glorious."
@@ -15301,6 +15301,205 @@ label FMG077:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label FMG078:
+    scene Arcade with fade
+    play music BrightLights
+    MC "I don't know what's worse... the amount of room you take up or the fact you are playing this freaking bullshit fighter."
+    pause 1
+    MC "Dude! Like, COME ON!"
+    show FMG flex with dissolve
+    "When Akira found out a new fighting game was added to the arcade in town she dropped everything... both literally and figuratively. The other gym goers weren't ready for her barbell to hit the floor...{w} neither was the floor."
+    FMG "Another L, Kei-kun. Care for yet another rematch?"
+    MC "Yeah, if you pick another fighter, I'm over this ‘Senator Strongarm.' garbage."
+    show FMG neutral
+    FMG "Haha, sorry you can't hurt me, Kei. {w}Have you checked the internet lately? Maybe you'll find some tips on how to beat him."
+    MC "No, no I haven't checked the internet lately. Just... Just pick a different character."
+    FMG "... Nah..."
+    MC "Oh my god, Akira, I swear if you lock him again..."
+    pause .5
+    MCT "I want to bash my head against this machine and scream at the top of my lungs."
+    "The match went as expected... getting my ass handed to me round after round."
+    MC "I can't believe this... Why won't you die?!?!?! I hit you with what had to have been 150 punches and your dude just slides a little and dusts himself off. What is Strongarm made of???"
+    show FMG happy
+    FMG "Heheh, it's my little secret."
+    MC "Yeah, well your secret sucks ass."
+    show FMG neutral
+    FMG "Okay, because you're super butthurt I'll let you in on it."
+    MC "{size=-6}I am {i}not{/i} butthurt{/size}."
+    FMG "You totally are. {w}Anyway, Strongarm has this special move where he infuses himself with nanomachines."
+    MC "Nanomachines?"
+    FMG "Nanomachines, Kei. They harden in response to physical trauma. It's OP, I'm surprised the devs kept it in the game."
+    MC "This is the worst game we've ever played. How are you supposed to beat this crap?"
+    FMG "Maybe if you pick the guy with the glowing red sword you'd stand a chance for once. Like it literally says in bold that he counters Strongarm."
+    MC "I hate everything..."
+    "Giving in to the salty taste in my mouth I locked in the cyborg ninja dude and prepared myself for the next round."
+    MC "Holy crap, finally some freaking damage! {w}Ha! I even chopped your arm off."
+    FMG "Tis, but a scratch..."
+    MC "A scratch?!? You lost an arm? Just give me the round, Akira. You've lost."
+    show FMG flex
+    FMG "Meh, I've had worse. This is nothing."
+    MC "You freaking liar, no you haven't."
+    show FMG upbeat
+    FMG "Come on, you pansy. The round isn't over just yet..."
+    "As the fight raged on, it was clear how one-sided the match was becoming."
+    MC "Oooooh, lost another arm, have we? Shame."
+    show FMG angry
+    FMG "I still have my legs!"
+    MC "Hey! Stop kicking me! Your fighter doesn't even have any arms left, give it up!"
+    FMG "Oh, have you had enough, little man??? I figured you'd concede eventually. Even with all these flesh wounds, you're no match for me."
+    MC "HUH? Why do your kicks hit so hard?!"
+    show FMG upbeat
+    FMG "The fewer limbs Strongarm has the more damage he does, haha."
+    MC "You freaking tricked me! You knew I'd chop off his arms."
+    FMG "Akira Mizutani always triumphs!"
+    MC "...I lost... I lost again. I'm going to lose my mind, this game is trash."
+    show FMG neutral
+    FMG "I think you're just really bad at it. Care to try again?"
+    MC "Not really, no. I can only take getting my ass handed to me so much."
+    FMG "Fair. Practice some more and we can run it back a few more times. It's not like you can get any worse."
+    MC "Thanks?"
+    MC "You know, standing here, I've realized something..."
+    FMG "You are just like me? Trying to make history?"
+    MC "No, what? Not at all. Where did you get that? {w}It's catchy though, feels like it can be a part of a song."
+    MC "Anyway, I wanted to say I realized that you crushed the handle on the machine."
+    pause .5
+    show FMG sad
+    FMG "Man... This happens all the time when I get too excited. Why do you have to be so bad at games, Kei?"
+    MC "Huuuuh? You picked some OP crap and mopped the floor with someone with no knowledge of the game. {w}I'm not paying for your hot chocolate now."
+    show FMG neutral
+    FMG "You want a hug? I give great hugs."
+    MC "No, woman, do not touch me. It has to be this way... in the end..."
+    FMG "You should consider joining the drama club, you'd fit right in. Might make everyone else quit though, hahaha."
+    MC "{size=-6}My NaMe iS AKiRa AnD I'm So fUnNy aNd HaVe No FrIeNdS.{/size}"
+    FMG "I'm hugging you."
+    "Against my will, the amazon wrapped her arms around me squeezing, me as tightly as she could without breaking my bones."
+    FMG "And a kiss for good measure."
+    MC "Your signs of affection make me sick."
+    FMG "Cry about it. Now, let's go get some coco, your girl can't wait any longer."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause .5
+    scene Town with fade
+    MC "Are you not cold? I can't imagine a skirt is very fitting for the winter."
+    show FMG neutral with dissolve
+    FMG "It's not terrible. The socks they gave me are seriously comfy though. I did buy some fuzzy socks the other day online, oh my gosh, I can't wait to try them on."
+    MC "You sure they'll fit?"
+    FMG "I freaking hope so. I ordered 30 centimeters ones..."
+    FMG "I'm going to be devastated if they rip, They look so cute too... Kei, I even bought some matching gloves and I'm scared my hands are too big for them..."
+    show FMG sad
+    FMG "I can't get any of the cute stuff I want anymore cause of my size..."
+    MC "Just go to Alice and ask her for help. I know it and you know it, she's our only hope... well, for you, I don't get height for free... or muscles."
+    MC "Honestly, having hair growth in comparison to everything you get with muscles is so god damn lame."
+    show FMG flex
+    FMG "Tough."
+    "As we approached the store, there was a guy standing out front with a megaphone screaming about something no one probably cared about."
+    "Large-Nosed Dude" "People of Seichou, you have been cheated and lied to for far too long."
+    show FMG neutral
+    FMG "What is this dude going on about?"
+    MC "Who knows. Maybe he's taking a stand against the {i}man{/i}."
+    show FMG surprised
+    FMG "Yikes, did you see granny over there smack her husband?"
+    MC "I did, let's hurry up and get inside. We don't need to listen or see any more of this."
+    FMG "Good call."
+    scene black with fade
+    pause .5
+    scene Cafe with fade
+    "We entered the store which to our surprise was rather empty besides the two dudes sitting in the back with mullets and cut-up jean shorts."
+    show FMG neutral with dissolve
+    FMG "Someone might want to teach those dudes some style and what to wear during winter. Imagine styling your hair like that, ew."
+    MC "Hmmm, I'm not sold on the mullets buuuut, I wouldn't say no to you in shorts that short."
+    FMG "I wouldn't be caught dead in shorts that small, they'd hug my ass too much."
+    MC "That's what I was hoping you'd say, I'll have some ordered for you by tonight."
+    FMG "Heh, okay, Kei. No promises that I'll wear them. {w}Now, cmon man, it's our turn to order."
+    "I looked up at the menu in awe of the flavors they had... {w}They easily had more than four."
+    "We got our coco and sat down at the nearest table to relax."
+    MC "Did I tell you about the dream I had a couple of nights ago?"
+    FMG "No and I think we should keep it that way."
+    MC "Just because of that I'm going to tell you, anyway... I'll keep it simple though since your attention span is so short you wouldn't be able to appreciate it in great detail."
+    FMG "Hm? What did you say? I tend to stop listening when you start talking."
+    MC "..."
+    MC "You're making the mother of all omelets here, Akira."
+    FMG "You can make an omelet?"
+    MC "You can't even boil water?"
+    show FMG angry
+    FMG "Don't say it out loud!"
+    MC "While you think about what you've done, I'm going to get myself a chocolate bar."
+    show FMG neutral
+    FMG "And for me?"
+    MC "I'll think about it."
+    hide FMG with dissolve
+    pause 1
+    MC "Okay, I'm back."
+    show FMG angry with dissolve
+    FMG "And with one chocolate bar! We better be splitting that."
+    MC "Huh, it seems right here in my notes that I won't be doing that."
+    FMG "Gimme that."
+    MC "Wow, ripping a candy out of a poor defenseless man. You took my only food and now I'm going to starve..."
+    MC "Good thing I got another one!"
+    FMG "...You're the worst."
+    MC "Oh, totally."
+    show FMG neutral
+    FMG "You want to see my new outfit when we get back to my dorm? Guess I shouldn't say it's ‘new', It's been sitting in my closet for a month."
+    MC "It fits?"
+    FMG "Ha, barely."
+    show FMG aroused
+    FMG "It shows off a lot. You'll love it."
+    FMG "In fact, I can't wait any longer. We're leaving now."
+    MC "B-But I didn't finish my coco..."
+    show FMG neutral
+    FMG "You won't regret it, trust me."
+    scene black with fade
+    pause 1
+
+    scene Dorm FMG with fade
+    play music Sunset
+    MC "Amazon girlfriend is the only way to travel."
+    show FMG flex with dissolve
+    FMG "Thick thighs save lives and time, my man."
+    show FMG neutral
+    FMG "Now, I'm going to take my clothes off, Kei. Tissues are on my nightstand if your nose starts bleeding."
+    hide FMG with dissolve
+    MCT "It happens a few times and she won't let it go."
+    $setFMGOutfit(OutfitEnum.NUDE)
+    show FMG flex with dissolve
+    FMG "There isn't a better feeling than getting to take a bra off after a long day..."
+    show FMG aroused
+    FMG "Don't stare too much~"
+    MC "I'm looking at your space posters, it's not always about you and your bod, Akira."
+    show FMG angry
+    FMG "Liar!"
+    MC "Perhaps..."
+    show FMG neutral
+    FMG "I'll be right back, don't have too much fun while I'm gone."
+    hide FMG with dissolve
+    MC "I'll be spinning in your chair if you need me."
+    pause 1
+    FMG "All done."
+    $setFMGOutfit(OutfitEnum.SWIMSUIT)
+    show FMG flex with dissolve
+    FMG "What do you think? Too much?"
+    MC "Not something I thought you'd buy. On top of that, why didn't you wear this before winter came?"
+    #show FMG flex-2
+    FMG "Because of you bozo, we had other people with us that day."
+    show FMG neutral
+    extend " Consider yourself lucky, it's even skimpier now that I'm bigger."
+    show FMG aroused
+    FMG "You can't deny how good it looks~"
+    MC "I'd say you have no power here but I'd be lying."
+    show FMG flex
+    FMG "I see I'm finally getting through. You can never resist my muscles."
+    MC "Tis my weakness."
+    show FMG aroused
+    FMG "You want to help me take it off? I'm soo tired after today."
+    MC "Eeeeeh... Not really, no."
+    show FMG angry
+    FMG "Are you kidding me???"
+    pause .5
+    MC "No. Do you know how much worm that is? Hard pass."
+    FMG "I'm going to send you through the floor."
+    MC "That would be very mean and I'd advise against that."
+    jump daymenu
 
 label FMGWG001:
     scene black with fade
