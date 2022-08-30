@@ -447,6 +447,7 @@ init python:
             if t[0] in timeflags and not t[1] in timeflags:
                 return False
         return True
+
     #Other misc functions
     def setAffection(girl, val):
         if not girl in girllist and not girl == "RM" and not girl == "TM":
@@ -1330,6 +1331,7 @@ label startevent:
         updateSP(activeevent)
         showQuickMenu = True
         renpy.block_rollback()
+        save_name = eventlibrary[activeevent]["name"]
         renpy.jump(activeevent)
 
 label train:

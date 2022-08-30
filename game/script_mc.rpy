@@ -21,6 +21,7 @@ label global000:
             "(DEBUG) Skip intro":
                 jump daymenu
             "View intro":
+                $save_name = "Prologue"
                 pass
 
     #SFX Light Motor SFX
@@ -2647,6 +2648,7 @@ label MC005_GTS:
     GTS "I am."
     "She put away her supplies, then joined me as we left together."
     $eventname = "Prairie Genteel"
+    $save_name = "Prairie Genteel"
     scene Campus Center
     show GTS happy
     with fade
@@ -2860,6 +2862,7 @@ label MC005_TM:
     hide GTS with dissolve
     "I turned from the garden as Naomi headed out the door toward the bus stop."
     $eventname = "It's On!"
+    $save_name = "It's On!"
     scene Campus Center with fade
     play music Peaceful
     "Instead, I headed back across campus toward the dorms."
@@ -3248,6 +3251,7 @@ label MC005_RM:
     hide GTS with dissolve
     "I turned from the garden and headed back outside."
     $eventname = "Following the Thread"
+    $save_name = "Following the Thread"
     scene Dorm Exterior with fade
     MCT "..."
     MCT "This feels slightly insane."
@@ -3592,6 +3596,7 @@ label MC005_finale:
     pause 0.5
     play music TwilightBright
     $eventname = "Reflection"
+    $save_name = "Reflection"
     scene Dorm Interior with fade
     pause .5
     "{i}CREEEEAK{/i}"

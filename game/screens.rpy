@@ -592,7 +592,9 @@ screen file_slots(title):
     use game_menu(title):
 
         fixed:
-
+            if renpy.current_screen().screen_name[0] == "save":
+                input:
+                    value VariableInputValue('save_name')
             ## This ensures the input will get the enter event before any of the
             ## buttons do.
             order_reverse True
