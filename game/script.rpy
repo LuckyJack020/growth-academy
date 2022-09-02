@@ -767,6 +767,7 @@ init python:
             "Yuki": [1, 3],
             "Jineko": [1, 2, 3, 4, 5, 6],
             "Natsuko": [1, 2, 3, 4, 5, 6],
+            "Okisho": [1, 2, 3, 4, 5, 6],
             "Tako": [1, 2, 3, 4, 5, 6],
             "Tomoko": [1, 2, 3, 4, 5, 6],
             "Sakura": [1, 2, 3, 4, 5, 6]
@@ -836,6 +837,11 @@ init python:
         global NatsOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             NatsOutfit = o
+
+    def setOkishoOutfit(o):
+    	global OkishoOutfit
+    	if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+        	OkishoOutfit = o
 
     def setSakuraOutfit(o):
         global SakuraOutfit
@@ -1322,6 +1328,7 @@ label startevent:
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
+        OkishoOutfit = OutfitEnum.DEFAULT
         SakuraOutfit = OutfitEnum.DEFAULT
         RyokoOutfit = OutfitEnum.DEFAULT
         JinekoOutfit = OutfitEnum.DEFAULT

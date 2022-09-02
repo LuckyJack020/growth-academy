@@ -5508,164 +5508,158 @@ label global005:
 
 label RM001:
     scene Dorm Interior with fade
+    play music Schoolday
     MCT "Another day of classes over..."
     "When I arrived back at my room, Daichi was already there, poking some device on his desk very intently with a soldering iron."
-    "I couldn't really tell what it was, beyond some kind of circuit board."
+    MCT "What on earth is he up to?"
+    "Part of me wondered if he was going to burn the whole place down with that thing.It was definitely some kind of electronic piece he was working on."
+    "It was hard to tell what exactly it was from over here, beyond some kind of circuit board. I guess he looked like he knew what he was doing though."
     show RM neutral with dissolve
     RM "..."
-    MCT "To be honest, I still haven't had a good chance to talk with him yet. Mostly because I don't really see much of him outside of class."
-    MCT "I guess now is as good of a time as any to try and get to know him."
+    "By any reasonable measure, the guy seemed like an odd duck— and that's if I'm being polite about it."
+    if isEventCleared("MC007") or isEventCleared("FMGWG001") or getFlag("MC005RM"):
+        "It didn't help that he'd already established a penchant for spying on people if he thought it might somehow help him ‘gather information', as he put it. To be honest, I didn't know that much about him beyond that."
+    else:
+        "Outside of our first encounter and the rather strange conversation where he basically asked me to be part of his personal spy network, I honestly hadn't gotten a chance to talk with him that much."
+    "The better part of me thought I should probably keep it that way, but it was only going to be increasingly awkward to live with someone I barely knew or talked to. I decided it was best to try to break the ice."
     play music RM
     MC "Hey, Daichi."
-    RM "Yes?"
-    menu:
-        "What are you working on?":
-            MC "What are you working on, exactly?"
-            if checkAffection("RM", ">=", -2):
-                jump RM001_c1_1
-            else:
-                jump RM001_fail
-        "What do you like to do for fun?":
-            jump RM001_after
-        "Where do you go after class?":
-            MC "So I can't help but notice you usually come home kind of late. Are you in a club, or something?"
-            if checkAffection("RM", ">=", -2):
-                jump RM001_c1_2
-            else:
-                jump RM001_fail
-
-label RM001_c1_1:
-    $setFlag("RM001_c1_1")
-    "He answered me without turning around, opting instead to continue tinkering with the device."
-    RM "A miniature video camera. I want to keep tabs on someone."
-    MC "What, like a teacher? Is that a good idea?"
-    "That last question got his attention. He put the soldering iron down and turned to me, eyes narrowed."
-    RM "It's something I need to know. Whether it's a good idea or not is irrelevant."
-    show RM angry
-    RM "Unless you know someone in the class below us who'd be willing to spy for me, this is my best option."
-    MC "Can't say that I do."
-    MCT "I'm {i}not{/i} getting my sister involved with this guy."
-    show RM neutral
-    RM "Then I'm using the camera."
-    "I didn't really have a good response to that. He took the opening to continue his work."
-    MCT "Maybe I should try a lighter topic?"
-    jump RM001_after
-
-label RM001_c1_2:
-    "He answered me without turning around, opting instead to continue tinkering with the device."
-    RM "I'm busy investigating."
-    MC "The school, you mean?"
-    RM "Of course."
-    "An awkward silence descended upon the room."
-    MCT "Maybe I should try a lighter topic?"
-    jump RM001_after
-
-label RM001_fail:
-    "He put down the soldering iron and glared over his shoulder at me."
-    show RM angry
-    RM "None of your business."
+    RM "Yes? {w}You got anything for me?"
+    MCT "What the hell is he talkin- Oh. I remember now. {w}He must be thinking about that weird favor he asked about to report to him if I find anything suspicious about the school."
+    MC "Uh, not really no. Just wanted to talk."
+    RM "Okay. What did you want to talk about?"
+    MC "Well, what do you got going on there?"
     if getFlag("RM_govagent"):
-        MC "Are you still upset over the 'I'm a government agent' thing?"
+        "He put down the soldering iron and glared over his shoulder at me."
+        show RM angry
+        RM "None of your business."
+        MC "Uhh, did I do something to offend you?"
+        show RM neutral
+        RM "For one, you don't appreciate the situation we're in."
+        MC "Are you still upset over the \"I'm a government agent\" thing?"
         show RM neutral
         RM "Yes."
-        MC "Look, I'm sorry. I didn't realize it was such a... sensitive subject."
-    else:
-        MC "Did I do something to offend you?"
+        MCT "I thought it was pretty funny at the time, but the guy did seem pretty spooked if he was ready to jump out the window when I told him I was from the government. Probably need to tread more lightly in the future."
+        MC "Look, I'm sorry. I didn't realize it was such a... sensitive subject. It was just an off the cuff joke, I didn't mean anything with it."
+        $setAffection("RM", 1)
+        RM "Alright I guess."
+        show RM smug
+        extend " Apology accepted - I'll forgive your ignorance. If you're willing to take this seriously, I can enlighten you on a few things. Interested?"
+        MCT "Can't say I'm too excited about what he might mean by the word ‘enlighten', but I guess it wouldn't hurt to humor him for a bit if it will help smooth things over."
+        MC "Sounds good. So, what are you working on there?"
         show RM neutral
-        RM "You don't appreciate the situation we're in, for one."
-        MC "I'm... sorry?"
-    show RM smug
-    RM "Apology accepted - I'll forgive your ignorance. If you're willing to take this seriously, I can enlighten you on a few things. Interested?"
-    MCT "Is it too late to change roommates?"
-    MC "Maybe another time."
-    show RM neutral
-    RM "Suit yourself."
-    "An awkward silence descended as he went back to working on... Whatever it was."
-    MCT "Maybe I should try a lighter topic?"
-    jump RM001_after
-
-label RM001_after:
-    MC "Hey, what do you like to do for fun? Got any hobbies?"
-    RM "Not really. Haven't had time lately. Been too busy trying to figure out what's going on here."
-    MC "Well, what about before you came to the school? Or was it just more conspiracies?"
-    "That comment caused him to finally stop working and turn around to face me."
+    else:
+        "He answered me without turning around, opting instead to continue tinkering with the device."
+    RM "It's nothing. Don't worry about it."
+    MC "Seems like something to me. Judging by the audio input you're attaching to it, it's probably some kind of recording device."
+    show RM distrustful
+    "That got his attention. He put the soldering iron down and turned to me, with his eyes narrowed."
+    RM "Alright. You're more clever than I gave you credit for, I'll give you that much. Just forget about it, okay? I'm not doing anything illegal here."
+    MC "Spying on people sounds like it {i}could{/i} be illegal."
+    show RM concerned
+    RM "Look, I'll level with you, this concerns something that I {i}need{/i} to know. I've already exhausted more conventional means of obtaining information, so this is what I'm left with."
+    MC "Are you sure about that?"
+    show RM distrustful
+    RM "Why? Are you going to rat me out?"
+    MC "No. I'm not a rat. Just as long as it's nothing pervy okay?"
     show RM angry
-    RM "Please. I'm not some kind of conspiracy nut. It's just that this school is too weird."
-    RM "The fact that more people aren't suspicious of this place is mind-boggling to me."
-    MC "Fine, fine, whatever. What did you do before you came here?"
+    RM "I'm not some kind of voyeuristic creep, if that's what you're implying."
+    MC "I'm not saying you are, I'm just telling you what it looks like."
+    show RM neutral
+    RM "Don't worry, it isn't."
+    "That didn't give me a lot of assurances, but I decided to just roll with it for now."
+    show RM doubt
+    RM "If you must know, I'm busy investigating."
+    MC "The school, you mean?"
+    RM "Of course."
+    MC "You still think there's something else going on here?"
+    show RM distrustful
+    RM "There has to be. I'm surprised you don't."
+    MC "I mean it's certainly an unusual circumstance, but given what I've seen so far it seems to check out."
+    RM "What did I tell you about just believing what you see?"
+    MC "Fair enough I suppose, but have you ever heard the expression ‘Sometimes a cigar is just a cigar'?"
+    show RM doubt
+    RM "If you're satisfied with the way things seem to be, I'll leave you to it, but some of us require more evidence to be convinced."
+    MCT "I'm not sure you as a single person counts as ‘some of us' but whatever."
+    "I didn't really care for his not-so-subtle suggestion that I was some kind of simpleton, but I resisted the urge to be snarky and tried to get him off the topic of this supposed ‘grand conspiracy'."
+    MC "This can't be the only thing you spend time on. I'm sure there's something you do for fun, right? Got any hobbies?"
+    RM "Not really. Haven't had time lately. Been too busy trying to figure out what's going on here."
+    MCT "You're killing me here dude."
+    MC "Well, what about before you came to the school?"
     show RM neutral
     RM "...I read manga, I guess?"
-    MC "That's a start! What did you read?"
+    MC "See, there you go. That's a start! What did you read?"
     RM "I liked Two Pieces. Is that still going?"
-    MC "...It ended like three years ago."
-    show RM sad
-    RM "Oh."
+    MC "It's been going on longer than we've been alive. I don't know if it will ever stop at this rate."
+    RM "Nice. I should probably get back into it then."
     MC "You read anything else?"
     show RM neutral
-    RM "Not really, unless you count studying."
-    MC "..."
-    RM "..."
-    MC "Games? Movies? Music?"
+    RM "When it comes to leisurely reading, mostly novels I guess."
+    MC "Like detective novels?"
+    show RM doubt
+    RM "... {w}Not just detective novels, I'll have you know."
+    MCT "Suuure."
+    MC "What about other stuff? Games? Movies? Music?"
+    show RM concerned
     RM "I used to play Suncraft, a few years back. Haven't played in a while, though."
-    MC "Oh. I've never heard of it."
-    RM "It's a strategy game. I always thought it was pretty fun."
-    MC "I see."
+    MC "Oh, yeah. I had some friends that were really into that. I've never played it though."
+    show RM angry
+    RM "What do you mean you've never played it? It's one of the most popular strategy games of all time."
+    show RM neutral
+    MC "I know, I'm probably missing out, but I never really got into those kinds of games."
     show RM sad
-    RM "..."
+    RM "Oh, I see..."
     MC "..."
-    MC "Well, what about your project there? Do you like tinkering with stuff?"
-    show RM neutral
-    RM "It's alright, I guess."
-    MC "What about when you graduate? You going to go into electrical engineering or something?"
-    RM "Maybe? I haven't decided yet."
-    RM "I've thought about becoming a teacher, too."
-    MC "Why a teacher? You like learning?"
-    RM "I want kids to get more critical thinking skills, so they won't just mindlessly obey authority."
-    MC "Oh."
-    RM "..."
-    MC "..."
-    MCT "This is going great."
+    MCT "Well that died out pretty quickly."
     menu:
-        "Can you show me what you're working on?":
-            jump RM001_c2_1
-        "Well, time to study!":
-            jump RM001_c2_2
+        "Ask him about the device.":
+            MCT "Honestly, is it my job to keep this conversation going?"
+            MC " Sooo, what about your project there? Do you like tinkering with stuff?"
+            show RM neutral
+            RM "Sometimes I suppose. I know a thing or two, if that's what you're asking."
+            MC "I see. {w}What about when you graduate? You going to go into electrical engineering or something?"
+            RM "Maybe? I haven't decided yet."
+            RM "I've thought about becoming a teacher, too."
+            MC "Why a teacher? You like learning?"
+            show RM happy
+            RM "I want kids to get more critical thinking skills, so they won't just mindlessly obey authority."
+            MC "I suppose that would be a good thing."
+            MCT "Unless they turn into paranoid weirdos like you…"
+            MC "Well, hey, why don't you show me your... Whatever it is."
+            show RM doubt
+            "He sighed and held up a lens, which was hiding behind some other components."
+            RM "It's a recording device"
+            MC "Yeah, that."
+            "He paused for a moment."
+            $setAffection("RM", 1)
+            show RM happy
+            "Eventually his expression relaxed a little."
+            RM "Sure, why not? Pull up a chair."
+            scene black with fade
+            "We spent most of the evening working on his audio device. He got a lot more talkative once he started talking about something he was more comfortable with."
+            "He taught me quite a bit about how all the components work: the capacitor, resistor, diode, transistor, etc. I'd seen the stuff before and they were talked a little bit about in the physics class I had before."
+            $setSkill("Academics", 1)
+            "But now I felt like I understood what was happening. Maybe he'd make a good teacher after all."
+            jump daymenu
+        "Focus on your homework.":
+            MC "Alright, well looks like you're busy. I'll leave you to it. Good talk."
+            RM "Okay, sounds good. Thanks for asking though. Since we'll be living together for the foreseeable future, we should probably talk more often."
+            MC "For sure."
+            RM "And let me know if you hear anything of interest, okay?"
+            MC "Sure thing. No problem."
+            hide RM with dissolve
+            "Yikes, that whole thing was awkward, but I suppose he isn't such a bad guy, just a little odd, as I suspected."
+            "Still though, not having a chatty roommate was probably a good thing for my studies."
+            $setSkill("Academics", 1)
+            if isEventCleared("MC002") and not isEventCleared("global005"):
+                "Using it as an excuse to exit the conversation, I decided to get a headstart on the Jōmon period paper for Tashi's class."
+                MCT "Hmm, now where did I put that book I borrowed from him?"
+            elif isEventCleared("MC008") and not isEventCleared("global026"):
+                "Using it as an excuse to exit the conversation, I decided to get a headstart with studying for the test on carbohydrates for Tsubasa's class."
+            else:
+                "Using it as an excuse to exit the conversation, I decided to get a headstart on the assignment for Tashi's class."
+            jump daymenu
 
-label RM001_c2_1:
-    if getFlag("RM001_c1_1"):
-        MC "Well, hey, why don't you show me what you're doing with your camera?"
-    else:
-        MC "Well, hey, why don't you show me your... Whatever it is."
-        "He sighed and held up a lens, which was hiding behind some other components."
-        RM "Camera. It's a camera."
-        MC "Yeah, that."
-    "He paused for a moment."
-    if checkAffection("RM", ">", -3):
-        $setAffection("RM", 1)
-        show RM happy
-        "Eventually his expression relaxed a little."
-        RM "Sure, why not? Pull up a chair."
-        scene black with fade
-        "We spent most of the evening working on his camera. He got a lot more talkative once he started talking about something he was more comfortable with."
-        "He taught me quite a bit about how all the components work."
-        MCT "I don't know if it's ever going to be useful, but it was pretty informative."
-        $setSkill("Academics", 1)
-        jump daymenu
-    else:
-        show RM angry
-        "...But then turned back around in a huff."
-        RM "I'm busy. I've wasted enough time answering your questions."
-        MC "Fine."
-        jump RM001_c2_2
-
-label RM001_c2_2:
-    MC "Well, I need to study. Have fun with your project."
-    show RM neutral
-    RM "Mmm."
-    "We didn't say anything to each other for the rest of the night."
-    "The quiet room helped me focus, though."
-    $setSkill("Academics", 1)
-    jump daymenu
 
 label RM002:
     scene Hallway with fade

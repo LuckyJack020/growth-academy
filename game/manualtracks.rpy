@@ -446,6 +446,17 @@ init python:
     )
     ost.manualDefineList.append(theme_WiBr)
 
+    theme_HoL = ost.soundtrack(
+        name = "Winter Wonderland",
+        path = "Audio/BGM/scene_holiday.mp3",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Snowy Holiday Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_HoL)
+
     ## Base Template
     ######################################
 

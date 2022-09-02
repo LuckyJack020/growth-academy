@@ -30,6 +30,7 @@ define Jineko = Character('Jineko', color="#228B22")
 define Kokutan = Character('Kokutan', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Natsuko = Character('Natsuko', color="#C0C0C0")
+define Okisho = Character('Okisho', color="#FF4D40", what_prefix='{size=+1.5}', what_suffix='{/size}'))
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakura = Character('Sakura', color="#FF3399")
@@ -956,6 +957,14 @@ image Midori sad = "Graphics/minor/parents/midori/sad.png"
 image Midori surprised = "Graphics/minor/parents/midori/surprised.png"
 image Midori unique = "Graphics/minor/parents/midori/unique.png"
 
+image Okisho neutral = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/neutral.png"
+image Okisho neutral-2 = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/neutral-2.png"
+image Okisho angry = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/angry.png"
+image Okisho happy = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/happy.png"
+image Okisho sad = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/sad.png"
+image Okisho surprised = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/surprised.png"
+image Okisho unique = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/unique.png"
+
 image Yuko neutral = "Graphics/minor/parents/yuko/neutral.png"
 image Yuko angry = "Graphics/minor/parents/yuko/angry.png"
 image Yuko happy = "Graphics/minor/parents/yuko/happy.png"
@@ -1020,6 +1029,7 @@ define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
 define audio.Festival = "Audio/BGM/scene_festival.ogg" #Dokkoi!
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
+define audio.Holiday = "Audio/BGM/scene_holiday.ogg" #Winter Wonderland
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
 define audio.FullKnowMyself = "Audio/BGM/knowmyself_full.mp3" #Know Myself (full song)
 define audio.LastBell = "Audio/BGM/general4.ogg" #Last Bell
@@ -1090,7 +1100,7 @@ init 1 python:
 
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC001"]]}
-    eventlibrary['RM002'] = {"name": "You and Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
+    eventlibrary['RM002'] = {"name": "You and Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1404,7 +1414,10 @@ init 2 python:
     eventlibrary['GTS044'] = {"name": "Spéirghealach", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS045", "obsflags": [],       "conditions": []}
     eventlibrary['GTS045'] = {"name": "A Legacy to Protect", "girls": ["GTS"], "type": EventTypeEnum.CORE,                 "location": "dormexterior",        "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS046", "obsflags": [],       "conditions": []}
     eventlibrary['GTS046'] = {"name": "The Harder She Falls", "girls": ["GTS"], "type": EventTypeEnum.CORE,                 "location": "giantdorminterior",  "priority": PrioEnum.ALL, "sp": 7,          "next": "GTS047", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS047'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
+    eventlibrary['GTS047'] = {"name": "Placeholder", "girls": ["GTS"], "type": EventTypeEnum.CORE,                 "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS048", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS048'] = {"name": "Placeholder", "girls": ["GTS"], "type": EventTypeEnum.CORE,                 "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS049", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS049'] = {"name": "In the Hall of the Mountain Queen", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 7,  "next": "GTS050", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS050'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
 
     #Optional
     eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "cafeteria",        "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS001"]]}

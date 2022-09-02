@@ -15311,7 +15311,7 @@ label FMG078:
     show FMG flex with dissolve
     "When Akira found out a new fighting game was added to the arcade in town she dropped everything... both literally and figuratively. The other gym goers weren't ready for her barbell to hit the floor...{w} neither was the floor."
     FMG "Another L, Kei-kun. Care for yet another rematch?"
-    MC "Yeah, if you pick another fighter, I'm over this ‘Senator Strongarm.' garbage."
+    MC "Yeah, if you pick another fighter, I'm over this \"Senator Strongarm.\" garbage."
     show FMG neutral
     FMG "Haha, sorry you can't hurt me, Kei. {w}Have you checked the internet lately? Maybe you'll find some tips on how to beat him."
     MC "No, no I haven't checked the internet lately. Just... Just pick a different character."
@@ -15440,7 +15440,7 @@ label FMG078:
     FMG "...You're the worst."
     MC "Oh, totally."
     show FMG neutral
-    FMG "You want to see my new outfit when we get back to my dorm? Guess I shouldn't say it's ‘new', It's been sitting in my closet for a month."
+    FMG "You want to see my new outfit when we get back to my dorm? Guess I shouldn't say it's \"new\", It's been sitting in my closet for a month."
     MC "It fits?"
     FMG "Ha, barely."
     show FMG aroused
