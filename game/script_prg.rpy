@@ -108,7 +108,7 @@ label PRG001:
     "I shook my head. The idea of most, or all of these students growing into some sort of supersized version of themselves still seemed so farfetched to me."
     MCT "This doesn't make sense. Besides the occasional outlier, everyone still looks normal."
     "But as I mulled this over and walked through the halls, my head hung up on what Daichi had been going on and on about."
-    "Sure, he defined the word 'eccentric,' but he didn't seem stupid."
+    "Sure, he defined the word \"eccentric,\" but he didn't seem stupid."
     "And then, there was Tashi-sensei."
     "Growth like that... that didn't happen. That wasn't normal."
     if isEventCleared("global005"):
@@ -274,10 +274,10 @@ label PRG002:
     scene Hallway with fade
     play music Schoolday
     "As I walked out of class, I glanced around as I headed down the hall."
-    "I felt like I was still in the 'I don't know anyone, so I'm just gonna do my thing until I come across someone' phase."
+    "I felt like I was still in the \"I don't know anyone, so I'm just gonna do my thing until I come across someone\" phase."
     "Still though, the academy was really nice, all things considered.  They even had a fairly wide variety of clubs to check out."
     "Not sure how a good number of students would be able to participate in said clubs, given how their growing could provide a noticeable handicap, but I figured they had ways around that."
-    "Probably part of their whole 'help you learn to live with it' philosophy."
+    "Probably part of their whole \"help you learn to live with it\" philosophy."
     BE "Hey, Kei-chan!"
     show BE happy with dissolve
     "Honoka ran up beside me, her face all a-smile."
@@ -411,7 +411,7 @@ label PRG002_c1_1:
     "It was fairly warm out, and standing in the freezer section in a  grocery store sounded like pure bliss right now."
     "But, if I went shopping now and happened to bump into Aida, that would be a major problem, especially after her reaction to my joining her."
     MCT "Yeah... awkward moments are awkward."
-    "Rather than dwelling on it, I just headed off to my dorm. I would go shopping some other time. A time where I wouldn't be labeled as 'creepy.'"
+    "Rather than dwelling on it, I just headed off to my dorm. I would go shopping some other time. A time where I wouldn't be labeled as \"creepy.\""
     jump daymenu
 
 label PRG002_c1_2:
@@ -452,7 +452,7 @@ label PRG003:
     "Peeking inside, it was as if I'd fallen into the cooking channel."
     "The kitchen was fully stocked, with multiple stoves lining the walls.  Heavy duty stainless steel counters stretched around the room, with islands of them in the middle.  Off to one side and along the top of the room were several large cupboards."
     "Over on one side of the room were some stacked chairs and a few folding tables, along with a fairly large open space, where one of the folding tables was already set up."
-    "A few huge refrigerators and freezers dotted the room, all in all, leaving about four segmented 'sections' of the kitchen."
+    "A few huge refrigerators and freezers dotted the room, all in all, leaving about four segmented \"sections\" of the kitchen."
     "In the section furthest from the door, Aida was washing a large steel mixing bowl in the sink.  She was facing the wall, and didn't seem to notice me."
     show PRG happy with dissolve
     MC "Hey, Kodama-san!"
@@ -494,7 +494,7 @@ label PRG003_c1_2:
     show PRG aroused
     "I smiled at her reassuringly, but Aida nevertheless blushed hotly."
     PRG "Oh, I don't know a-about that... I just, um... know how to cook."
-    MC "People who just 'know how to cook' can't concoct something that can lure in anyone with its smell alone."
+    MC "People who just \"know how to cook\" can't concoct something that can lure in anyone with its smell alone."
     PRG "Oh, n-no, t-they're really nothing special.  J-Just some cupcakes..."
     menu:
         "Don't be so modest. You're great.":
@@ -532,7 +532,7 @@ label PRG003_c1_3:
             jump PRG003_c1_3a
         "You think you could teach me?":
             jump PRG003_c1_3b
-        "'All you're doing'? That's such an important skill to have!":
+        "\"All you're doing\"? That's such an important skill to have!":
             jump PRG003_c1_3c
 
 label PRG003_c1_1a:
@@ -684,7 +684,7 @@ label PRG003_c1_3a:
     PRG "Oh, okay, w-well..."
     "Aida dried her hands off quickly and opened a drawer, pulling out an unusually shaped spoon."
     show PRG neutral
-    PRG "This odd-looking spoon, that's called a pasta fork, actually. A-and this, this is a ravioli stamp. Alice says she enjoys Italian food, but uhm, a lot of 'Italian' food, like modern pizza, was actually invented in America..."
+    PRG "This odd-looking spoon, that's called a pasta fork, actually. A-and this, this is a ravioli stamp. Alice says she enjoys Italian food, but uhm, a lot of \"Italian\" food, like modern pizza, was actually invented in America..."
     PRG "Maybe, uhm, inspired by original Italian dishes like Parmigiana, but..."
     scene black with fade
     pause 0.5
@@ -737,7 +737,7 @@ label PRG003_c1_3b:
     jump daymenu
 
 label PRG003_c1_3c:
-    MC "'All you're doing'? That's such an important skill to have!"
+    MC "\"All you're doing\"? That's such an important skill to have!"
     show PRG surprised
     PRG "It-It is?"
     MC "Well, of course! Everyone has to eat. Being able to take what's available and make something delicious out of it..."
@@ -1241,7 +1241,7 @@ label PRG007:
     "I took another sip of tea and looked over at her."
     "For once, she actually seemed fairly relaxed. She didn't have her usual nervous, almost jerky movements, or her general deer-in-the-headlights look."
     "It was just a girl and her book."
-    "This was new for me. Whenever I thought about Aida, my first thoughts were always 'polite' and 'quiet.' The word 'relaxed' hadn't come into that equation yet."
+    "This was new for me. Whenever I thought about Aida, my first thoughts were always \"polite\" and \"quiet.\" The word \"relaxed\" hadn't come into that equation yet."
     "Did I even want to interrupt her? I had a feeling that she rarely got this sort of time to herself."
     "I glanced over at her again. She crossed her legs in her chair and lifted her book into one hand."
     "The cover of the book had a distinctive white and orange color, and it looked similar to a coffee table book that you'd see at your distant relative's house. The kind that you only notice because you have literally nothing else to do."
@@ -1252,7 +1252,7 @@ label PRG007:
     MCT "I know that logo. Gah, why can't I remember where from?"
     hide PRG with dissolve
     "I pulled my phone out of my pocket to confirm my suspicions, opening up my web browser."
-    "I typed 'fish baseball team' in and hit enter, then clicked photos."
+    "I typed \"fish baseball team\" in and hit enter, then clicked photos."
     "I scrolled through a bit, past team photos and logos until I saw the fish that was on the cover of Aida's book. Clicking it, I read through the random internet links and such underneath. Then, it clicked."
     MCT "The Kanagawa Koi. Of course."
     show PRG neutral at Position(xpos=0.25) with dissolve
@@ -1708,7 +1708,7 @@ label PRG009:
         "Truth be told, I'd had it for dinner the night after, but Aida didn't need to know that."
         show PRG neutral
         PRG "I'm glad, Hotsure-san. I always hate getting headaches."
-        MC "Yeah, I've never met anyone who enjoys them. Have you ever met someone that has said outright, 'Oh, hell yeah! Headaches are the best! If the head ain't stingin', it ain't worth nothing!'"
+        MC "Yeah, I've never met anyone who enjoys them. Have you ever met someone that has said outright, \"Oh, hell yeah! Headaches are the best! If the head ain't stingin', it ain't worth nothing!\""
         show PRG excited
         PRG "{i}*Snrghk!*{/i}"
         "Aida's hands went over her mouth as she held in her laughter."
@@ -2110,7 +2110,7 @@ label PRG011:
     scene black with fade
     pause 1
     scene Dorm Exterior with fade
-    "The temperature was fairly warm, though not nearly at the levels of 'hellfire'. Despite that, my hair seemed to trap the sun's heat under it like a fuzzy tarp."
+    "The temperature was fairly warm, though not nearly at the levels of \"hellfire\". Despite that, my hair seemed to trap the sun's heat under it like a fuzzy tarp."
     "This not only meant that my neck was always warm, but it also kept me from getting burnt. So yeah, double edged sword."
 
     scene black with fade
@@ -2132,7 +2132,7 @@ label PRG011:
     "Curiosity might not be the correct term, however."
     MCT "Aida is... cute. Really cute."
     "We'd been spending a decent amount of time together as of late, mostly by seemingly random encounters. And, each time I met her, I got a slightly different take on Miss Kodama."
-    "But, whether it was 'sweet, fairy-like Aida' or 'wound up ball of anxiety Aida,' I didn't really care."
+    "But, whether it was \"sweet, fairy-like Aida\" or \"wound up ball of anxiety Aida,\" I didn't really care."
     "She was the perfect blend of sweet, kind, and cute all at once."
     MCT "God... where is she, anyway?"
 
@@ -2207,7 +2207,7 @@ label PRG011:
             MC "Yes. Do you know how to convert Metric into American?"
             Tsubasa "American? Oh, you mean measurements?"
             MC "Yes, Sensei. Measurements."
-            Tsubasa "Yes, well it's called 'Imperial', not 'American.' What do you need to convert?"
+            Tsubasa "Yes, well it's called \"Imperial\", not \"American.\" What do you need to convert?"
             MC "Milliliters into... whatever the American equivalent is."
             Tsubasa "Right, that would be ounces, by the way. And, that is... twenty nine point five milliliters in an ounce. You can round up to thirty for simplicity."
             MC "Thank you, Sensei!"
@@ -2261,7 +2261,7 @@ label PRG011:
             PRG "..."
             "I glanced at different websites as I scrolled down. I didn't think that it really made a difference, so I scrolled a bit and chose one."
             "It was one of those forum websites for cooking, so if anyone would know their stuff, it would be these people."
-            MC "Okay... it says here that 'oz' stands for ounces. And, it says that 1 ounce is equal to... 23 milliliters."
+            MC "Okay... it says here that \"oz\" stands for ounces. And, it says that 1 ounce is equal to... 23 milliliters."
             PRG "O-Okay. Thank you for doing that."
             MC "No problem. Glad I could help. Hopefully, you can get this done in time for dinner now."
             PRG "I hope so too."
@@ -2272,7 +2272,7 @@ label PRG011:
             MC "I know the conversion rate."
             show PRG surprised
             PRG "W-Wait, you do?!"
-            MC "Yep. The 'oz' stands for ounces. I don't know why I didn't think of that until now."
+            MC "Yep. The \"oz\" stands for ounces. I don't know why I didn't think of that until now."
             MC "And, there are about 29 and a half milliliters in an ounce. I'd round it up to 30 to make things simple."
             show PRG nervous
             PRG "I'd rather be accurate, though..."
@@ -2633,7 +2633,7 @@ label PRG012:
     "And, after I got my bearings and caught my breath from my quick bout of follicle suffocation, I grabbed the first uniform I could find, brushed my teeth and hair, and tied my shoes as fast as possible."
     "As I ran for the door, I took one last glance at my phone before leaving."
     MCT "Class has already been going for ten minutes!"
-    "I felt like a Saturday morning cartoon character dashing out the door and doing one of those 'slide on one foot while turning a corner' things. I could almost hear the tire skidding sound effect superimposed over my life."
+    "I felt like a Saturday morning cartoon character dashing out the door and doing one of those \"slide on one foot while turning a corner\" things. I could almost hear the tire skidding sound effect superimposed over my life."
     "I had my backpack in one hand, and I got my arms through the straps as I ran."
     "Normally, I'd be concerned about possible reprimand for running on campus, but with class being in session currently, that thought went on the backburner. Anyone who would enforce that was probably in class anyway."
     "I blasted through the door and-"
@@ -2692,12 +2692,12 @@ label PRG012:
     show BE happy
     BE "Bah... better."
     BE "So, did you get your sentencing for your late appearance?"
-    MC "Nope. Tashi-sensei was actually pretty cool about it. Just a simple 'don't do it again,' and I was on my way."
+    MC "Nope. Tashi-sensei was actually pretty cool about it. Just a simple \"don't do it again,\" and I was on my way."
     show BE neutral
     BE "Noted. Now, I know what to expect on my first time being tardy."
     MC "I'm glad you could profit from my blunder."
     BE "What're friends for, Kei-chan? You mess up, I learn from your failure. Our friendship can survive quite well on these guidelines."
-    MC "'Where will you be when Keisuke's tardiness strikes?'"
+    MC "\"Where will you be when Keisuke's tardiness strikes?\""
     show BE happy
     BE "You get it, now!"
     show BE neutral
@@ -2758,7 +2758,7 @@ label PRG012:
     BE "Anyway! So, when are ya gonna ask her on a date?"
     MC "W-Wha?!"
     BE "Oh, come on! You two are teetering over the chasm of love! All you need is a little push!"
-    "As she said the word 'push,' she puffed her chest out once more."
+    "As she said the word \"push,\" she puffed her chest out once more."
     BE "And, just think about it, Kei-chan! You keep on randomly running into her! The universe is trying to tell you something here!"
     MC "Yeah, maybe it is. Or, perhaps it's a random string of coincidences?"
     show BE angry
@@ -2769,7 +2769,7 @@ label PRG012:
     hide BE with dissolve
     "Honoka's question went deep into my core, where all of my deep thoughts mulled around."
     "Did I want to take things up a notch with Aida?"
-    "Currently, our 'hangouts' were more awkward exchanges of words than anything."
+    "Currently, our \"hangouts\" were more awkward exchanges of words than anything."
     "And, Aida did seem distant most of the time. Though, it wasn't a head in the clouds type of distance."
     "So, I'd likely have to go up a few notches. Not just one."
     "Then, there were those moments where Aida just blossomed."
@@ -3190,7 +3190,7 @@ label PRG013:
     hide PRG with dissolve
     "Aida and I turned away. She took her bag and set it on the folding table with some of the other students."
     "As her bag lay amongst the others, something stuck out to me."
-    "Most of the other students' backpacks and bookbags were clean, fresh, and had an overall 'new' look."
+    "Most of the other students' backpacks and bookbags were clean, fresh, and had an overall \"new\" look."
     "Aida's, while clean, looked a little more battered. The color that I presumed was once green had faded into a hazy green, almost gray color."
     "The straps were fraying in a few spots, and a small hole was worn in one side."
     "Two of the zippers had been replaced with paper clips, presumably after the old ones had fallen off."
@@ -3661,7 +3661,7 @@ label PRG015:
     HR "Now, remember to study up on this. Tomorrow, we'll be delving even deeper into more renaissance culture and art, and I expect no slacking."
     "The bell rang out to punctuate the end of his sentence."
     hide HR with dissolve
-    "I was out of my seat and packing up faster than I could say 'I'm tired and I want to go pass out.'"
+    "I was out of my seat and packing up faster than I could say \"I'm tired and I want to go pass out.\""
     PRG "E-Excuse me? H-Hotsure-san?"
     show PRG worried with dissolve
     "Aida stood behind me waiting patiently."
@@ -3857,7 +3857,7 @@ label PRG016:
             "I mean... I'd outright bailed on talking to her to go take a nap instead."
     "But, be that as it may, I was going into today with a renewed gusto. I was gonna be there, hell or high water. And, I was going to be my best."
     "This competition today was a test for myself and Aida."
-    "Obviously, one was more of an official 'test,' and I sure as hell wasn't planning to hop in there and show any judges my mad microwave popcorn making skills."
+    "Obviously, one was more of an official \"test,\" and I sure as hell wasn't planning to hop in there and show any judges my mad microwave popcorn making skills."
     "However, it was a test in my head. The test to support Aida today, and to just be the best... well, me that I could be."
     "I finally got my buttons done, and looked in the mirror."
     MCT "I look fine. Damn fine."
@@ -4964,7 +4964,7 @@ label PRG017:
         PRG "I-I wouldn't want to make you do it if you were just... you know... being nice..."
         MC "Well, I had a lot of fun, and I'd love to draw again with you."
         PRG "O-Okay."
-        MC "Now, I hate to be a typical 'dude,' but I'm starving. I think I might go grab something from the cafeteria."
+        MC "Now, I hate to be a typical \"dude,\" but I'm starving. I think I might go grab something from the cafeteria."
         MC "You're welcome to join me, if you'd like."
         show PRG neutral
         PRG "I-I think I will. I'm a little hungry, too."
@@ -5091,7 +5091,7 @@ label PRG018:
     show PRG unique
     PRG "Uhm... a-are you ready then?"
     MC "Yep. Whenever you are."
-    "I gave Aida a reassuring smile, one of those that hopefully said 'I trust you,' and not 'please, dear God, don't screw up my hair.'"
+    "I gave Aida a reassuring smile, one of those that hopefully said \"I trust you,\" and not \"please, dear God, don't screw up my hair.\""
     "I sat down at the bench, and I felt something drape over my shoulders. I took a look down. Aida was draping an off white towel around my shoulders. She tucked it gently into my collar, then smoothed it out around all sides."
     MC "Thank you, Kodama-san."
     show PRG neutral
@@ -5099,7 +5099,7 @@ label PRG018:
     MC "So, if I can ask, who taught you to cut hair?"
     PRG "Oh, m-my mom did. I-It's not something I do often, but... s-she told me that it never hurts to have another skill under your belt."
     PRG "M-My mom would usually cut my hair too, so I was learning from someone who... uh, who knew what they were doing."
-    MC "Oh, my mom used to cut my hair all the time when I was little. She always used to tell me 'It may not be the most glamourous haircut, but it's free.'"
+    MC "Oh, my mom used to cut my hair all the time when I was little. She always used to tell me \"It may not be the most glamourous haircut, but it's free.\""
     "Aida smiled and reached for her bag, taking out a smaller bag which she unzipped, producing a pair of scissors and a few other odds and ends hair-doing utensils."
     show PRG unique-happy
     pause .5
@@ -5361,7 +5361,7 @@ label PRG019_c1_1:
     "I was just about to ask Aida what she was referring to, when the realization hit me like a fist to the gut."
     pause .5
     MCT "Wait. Is the 2nd round of the competition today?!"
-    "Flicking through my apps, I opened up my calendar and swiped to today's date, where it clearly said: 'Aida competition 10 AM.'"
+    "Flicking through my apps, I opened up my calendar and swiped to today's date, where it clearly said: \"Aida competition 10 AM.\""
     MCCell "Yep! Almost there!!"
     MCT "Shit!"
     MCT "Shit shit shit!"
@@ -5475,7 +5475,7 @@ label PRG019_c1_1:
     pause .5
 
     scene Cooking Classroom with fade
-    "After a short while, the timer dinged and the steamer lid was opened. A savory smell of freshly cooked shrimp with a hint of garlic wafted over the crowd, with the occasional 'ooh' and 'ahh' being murmured here and there."
+    "After a short while, the timer dinged and the steamer lid was opened. A savory smell of freshly cooked shrimp with a hint of garlic wafted over the crowd, with the occasional \"ooh\" and \"ahh\" being murmured here and there."
     show PRG worried at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -5743,7 +5743,7 @@ label PRG019_c1_1:
     "The two of us hurried down the block side by side. I couldn't help myself, and took a delicate lick of my cone before we got there, but Aida abstained herself."
     scene Park with fade
     "When we passed through the gates, I immediately found us a bench under a large tree."
-    "Now, this bench was tiny, and definitely wouldn't be winning any 'largest bench in Japan' awards, so we had to sit fairly close to each other."
+    "Now, this bench was tiny, and definitely wouldn't be winning any \"largest bench in Japan\" awards, so we had to sit fairly close to each other."
     show PRG neutral with dissolve
     MC "Alright."
     MC "Here's to Aida Kodama and Sakura Myoga. May they destroy the competition in the future."
@@ -5755,7 +5755,7 @@ label PRG019_c1_1:
     "I'd gone with a fairly typical mint-chip ice cream, and I looked down at it as it glistened in the sunshine."
     "I looked beside me."
     "I'd honestly expected Aida to go with something simple. Vanilla maybe, or strawberry if she was feeling dangerous."
-    "But, no. Aida had ordered the 'Chocolate Overdose' flavor. According to the description in the parlor, this was a chocolate ice cream base, with brownies, chocolate chips, and hot fudge all on top."
+    "But, no. Aida had ordered the \"Chocolate Overdose\" flavor. According to the description in the parlor, this was a chocolate ice cream base, with brownies, chocolate chips, and hot fudge all on top."
     "The more I looked at it, and my mint ice cream in comparison, the more I became jealous of Aida's flavor."
     "She dipped her spoon in, getting a bit of ice cream, brownie, and hot fudge all in the mix, then slid it into her mouth carefully."
     pause .5
@@ -5903,7 +5903,7 @@ label PRG019_c1_1:
     "Regardless though, the campus had a lazy and relaxed sort of feel today."
     show PRG worried with dissolve
     MC "Ugh. I don't know why I'm so tired today. I feel like I could sleep for a week."
-    MC "Probably the whole 'getting up early on the weekend' thing."
+    MC "Probably the whole \"getting up early on the weekend\" thing."
     PRG "W-What did you have to be up for?"
     MC "Your competition, of course!"
     PRG "It... started at ten."
@@ -6593,7 +6593,7 @@ label PRG020_c2_1:
     MC "I see."
     pause .25
     PRG "But then... I asked her why. I asked her if I did something wrong, a-and what I could do to make up for it."
-    PRG "And, she told me about how she was concerned with me and my... health. S-She said that I was 'running myself into the ground.'"
+    PRG "And, she told me about how she was concerned with me and my... health. S-She said that I was \"running myself into the ground.\""
     show PRG sad
     PRG "And..."
     pause .5
@@ -6957,7 +6957,7 @@ label PRG021:
         "My heart was still fluttering from the other day."
         "I'd started off feeling like I had just fixed Aida's entire stress debacle, which only led to me feeling worse later when I realized that she didn't see it the same way I did."
         "The fact that the entire thing had ended with us holding hands and making up felt too good to be true."
-        "Most girls probably would've just told me off and left without so much as a 'nice to see you.'"
+        "Most girls probably would've just told me off and left without so much as a \"nice to see you.\""
         "But not Aida."
         "She'd listened, and she'd understood. She saw what I had been trying to do, even though it wasn't executed the best on my end."
     "The walk home afterwards had seemed like torture. It had been quiet and calm, but the feelings of longing were definitely there, and they were stronger than I could've ever imagined."
@@ -7239,7 +7239,7 @@ label PRG021:
         show PRG neutral
         PRG "I-I just wanted to thank you... f-for the other day."
         MC "Well, I appreciate it, but I don't think I really deserve that."
-        MC "I kind of... eh, there's no 'kind of.' I did poke my nose somewhere where it shouldn't be."
+        MC "I kind of... eh, there's no \"kind of.\" I did poke my nose somewhere where it shouldn't be."
         PRG "I... I-I know that... your heart was in the right place, Hotsure-san."
         PRG "T-Things... turned out for the best."
         PRG "And the time off has been really nice."
@@ -7761,7 +7761,7 @@ label PRG023:
     pause .25
     MC "Right. Well, what exactly is she down with? Got a cold or something?"
     show WG worried
-    WG "She had told me that she was feeling very, as she put it, 'off.'"
+    WG "She had told me that she was feeling very, as she put it, \"off.\""
     WG "She was not sick with a virus or any such thing, that I'm certain of."
     WG "However, she did mention that she felt rather achy."
     MC "Huh. Do you think she'd mind me popping in to give her the notes from today?"
@@ -7984,7 +7984,7 @@ label PRG023:
     "It was kind of funny, but compared to the rest of Aida's possessions that I'd seen, her Koi book seemed so new."
     "Even now, her backpack sat on her bed, and I could see the fraying straps, the small holes wearing into the fabric, and the paper clips in place of the actual zippers. It looked just like it had when I'd last seen it in the kitchen."
     "I thought back to her cutting my hair, and I remembered the old school radio that she'd brought along, which I also spied in her room."
-    "I remembered clearly the handle that had been duct taped, as well as the general 'older' feel of it."
+    "I remembered clearly the handle that had been duct taped, as well as the general \"older\" feel of it."
     MCT "Maybe she's got older siblings that passed things down to her? It would explain the haggard look of some of her stuff."
     MCT "... Actually, a lot of her stuff looks like that."
     "I kept eyeing up her desk, and spotted a few sketchbooks laying nearby."
@@ -8048,7 +8048,7 @@ label PRG024:
     "Normally I was pretty decent when it came to this sort of thing, but I just couldn't focus on the task at hand, no matter how much mental effort I put forth."
     "My thoughts kept returning to Aida. For the entire rest of the day and into the night."
     "I had date ideas on the mind, and I'd jotted down a few of them in place of research."
-    "And admittedly, some of them were stereotypical 'cheesy date' ideas, though I didn't really care that much."
+    "And admittedly, some of them were stereotypical \"cheesy date\" ideas, though I didn't really care that much."
     pause .25
     MCT "I just want to see her."
     play music Sunset
@@ -8167,7 +8167,7 @@ label PRG024:
     pause .5
     MCT "But... who?"
     "Honoka came to mind right away. She was always happy to lend an ear when I needed her, even if it didn't apply to her."
-    "Tomo was an option too. Though... she was more of the 'I'll listen, but don't expect any advice' type."
+    "Tomo was an option too. Though... she was more of the \"I'll listen, but don't expect any advice\" type."
     "There was Sakura, of course. She did likely know Aida better than anyone on campus, save for Alice."
     "However, though I knew Aida and Sakura were close, Sakura and I had barely ever spoken. If I was going to talk to someone about this, it would have to be someone I trusted."
     menu:
@@ -8381,7 +8381,7 @@ label PRG025:
     "Even still, things could have been worse."
     if getFlag("PRG024_BE"):
         "My talk with Honoka had really lifted my spirits regarding Aida, and my feelings toward her."
-        "Yeah, I still was nervous, or 'lovesick' as Honoka had referred to it, but I at least felt better about waiting until Aida felt better to ask her out."
+        "Yeah, I still was nervous, or \"lovesick\" as Honoka had referred to it, but I at least felt better about waiting until Aida felt better to ask her out."
         MCT "Funny. We can be sick together."
     else:
         "I felt better after my talk with Tomoko. {w}Well, kind of."
@@ -8721,7 +8721,7 @@ label PRG025_Sex:
     pause .5
     "Her hips were wide, her thighs thick, and her boobs huge."
     "Her bra was clearly too tight, and her panties, though not nearly to the level of her bra, were practically painted on."
-    "Every piece of her screamed 'impure,' yet she was the most serene soul I'd ever met."
+    "Every piece of her screamed \"impure,\" yet she was the most serene soul I'd ever met."
     MCT "She truly is an angel in disguise."
     "I stood up and slipped my pants off, working them down."
     "By now... well, I was hard. Like... really hard. And, me pulling my pants off made it more difficult to hide the growing problem."
@@ -8916,7 +8916,7 @@ label PRG025_Sex:
     pause .25
     "My dick flopped out of her, now shrinking back down after a hard day's work."
     "She bent over to grab her clothes from the floor, and I couldn't help but admire her."
-    "Her form was so soft, yet so curvy. She had the dream 'thicc' body that every slutty girl online dreamed of having."
+    "Her form was so soft, yet so curvy. She had the dream \"thicc\" body that every slutty girl online dreamed of having."
     "Yet, she was so... not that."
     "She slipped her panties on and pulled them up, then pulled her bra on and hooked it in the front, then spun it around, and pulled each boob into the proper cup."
     "She slid her skirt back on, then put each sock back on."
@@ -9855,7 +9855,7 @@ label PRG027:
     "Before I'd left Aida's yesterday, we'd made a plan for today. There weren't many pieces to it, but it was important all the same."
     "Aida was going to go back to class. And, given the inevitable storm of questions that would fly, I was going along with her to help field them."
     pause .25
-    MCT "I fully expect Honoka to come running up and be like 'OMGEE! That's so CYUTE!'"
+    MCT "I fully expect Honoka to come running up and be like \"OMGEE! That's so CYUTE!\""
     MCT "Shiori will probably put a curse on my unholy name, but I can live with that."
     "However, even with this loose plan laid down, I still didn't exactly feel... comfy."
     "Aida and I were good, of course. But... I was going to be a dad."
@@ -9894,7 +9894,7 @@ label PRG027:
     WG "You'd be wise to make some of your own, you know."
     MC "Noted."
     "I stood with Alice in the kitchen. I didn't really know what to say to her, given the circumstances."
-    "Of course, she had given me her 'blessing' yesterday, but even still, it was a jarring thing."
+    "Of course, she had given me her \"blessing\" yesterday, but even still, it was a jarring thing."
     MCT "Hey Alice. Nice to see you. Oh, by the way, thanks for being okay with me dicking down your roommate."
     MCT "Yeah. No way in hell."
     WG "Well. I'd best be on my way. I'd like to have some breakfast before class."
@@ -9955,7 +9955,7 @@ label PRG027:
         show PRG aroused
         PRG "M-Me? I-I..."
         pause .5
-        PRG "Well... I-I... wouldn't really call myself 'cool,' but... I'm... I'm glad she likes me."
+        PRG "Well... I-I... wouldn't really call myself \"cool,\" but... I'm... I'm glad she likes me."
         MC "Mhm! She does."
     else:
         PRG "Right... I-I know..."
@@ -11813,7 +11813,7 @@ label PRG029_aftermenu:
     show PRG neutral
     PRG "I-I got it as a gift quite some time ago from my father. It's... really special to me."
     PRG "Whenever I'm feeling sad, or I'm having a bad day, I come back here, put this on, and it reminds me of home. A-And of my dad."
-    PRG "I-I read this quote in a book once a long time ago. 'I can never be lost, as long as this is around.'"
+    PRG "I-I read this quote in a book once a long time ago. \"I can never be lost, as long as this is around.\""
     show PRG unique
     PRG "... I-I don't think I'm quoting that right, but the meaning is close."
     PRG "It isn't really that deep or anything, and I think they were describing a necklace or something meaningful to them to be honest..."
@@ -12058,7 +12058,7 @@ label PRG029B:
     MC "Why would I laugh about that? Movies are awesome!"
     show PRG neutral
     MC "What's your favorite?"
-    PRG "I-I like a lot of them. But, one of my favorites is 'The Backslash Deputation.'"
+    PRG "I-I like a lot of them. But, one of my favorites is \"The Backslash Deputation.\""
     MC "The prison movie?!"
     MC "That's a fantastic movie!"
     show PRG happy
@@ -12785,7 +12785,7 @@ label PRG030:
     Sakura "I kind of thought so when you told me."
     show PRG sad-2
     PRG "You did?"
-    Sakura "Yeah. You two spend so much time together that I figured, 'If Kodama-san is going to do that with anyone, it would be Hotsure-san.'"
+    Sakura "Yeah. You two spend so much time together that I figured, \"If Kodama-san is going to do that with anyone, it would be Hotsure-san.\""
     PRG "T-There's more, too."
     Sakura "Eh? You two didn't like get married or anything did you?"
     PRG "Well... n-no."
@@ -12813,7 +12813,7 @@ label PRG030:
     PRG "W-WHA?!"
     Sakura "Yeah! Remember the last competition? The one where you two scurried off to go hang out?"
     show Sakura neutral
-    Sakura "Well, when I got back to my dorm, my roommate jacked me up for 'flashing the entire island!'"
+    Sakura "Well, when I got back to my dorm, my roommate jacked me up for \"flashing the entire island!\""
     show PRG unique
     PRG "I-I didn't want to be rude..."
     Sakura "Ah, I'm just teasing you, Kodama-san. It's okay."
@@ -13114,7 +13114,7 @@ label PRG030:
     pause .5
     PRG "... You are."
     "Aida leaned her head against me again."
-    "I had that 'hit by a truck' feeling again. Only this time, it was a much smaller truck, and I was healing much faster."
+    "I had that \"hit by a truck\" feeling again. Only this time, it was a much smaller truck, and I was healing much faster."
     MC "Let's get Takamura-sensei..."
     PRG "M-Mhm..."
     hide PRG with dissolve
@@ -13430,7 +13430,7 @@ label PRG031:
             MCT "Okay..."
             if checkSkill("Academics", ">", 1):
                 "I started by cutting the base of the onion and peeling the top papery layers away."
-                "I left the root as it was. I'd heard that cutting it would make the onion infinitely worse in the 'causing tears that feel like liquid acid in your eye socket' department."
+                "I left the root as it was. I'd heard that cutting it would make the onion infinitely worse in the \"causing tears that feel like liquid acid in your eye socket\" department."
                 MC "Ach..."
                 "Even still, the vapor from the accursed demon vegetable stung my eyes as I cut into it, somehow permeating my hair helmet."
                 "I turned and took one of the measuring cups from beside Aida."
@@ -13826,7 +13826,7 @@ label PRG032:
     "The receptionist brought Aida and I back into the bowels of the infirmary."
     "The room contained all manner of different devices, in addition to quite a bit of literature on some shelves."
     "The receptionist brought us to the back of the infirmary, where there were marked examination rooms all labeled by number."
-    "Down to the end we went, to a room labeled 'Sonography.'"
+    "Down to the end we went, to a room labeled \"Sonography.\""
     show PRG worried with dissolve
     Receptionist "Feel free to get comfortable. One of the nurses will be with you in just a moment."
     PRG "T-Thank you..."
@@ -14364,9 +14364,9 @@ label PRG033:
     "No cooking contests, no papers, no worries about growing, none of that. Just Aida."
     "The thing was, ever since her ultrasound, things between Aida and I felt... closer."
     "I had no idea if it was just me, but things felt right."
-    "It was for that reason that I wanted to get out of 'paper duties' with her, and over to normal relationship stuff."
+    "It was for that reason that I wanted to get out of \"paper duties\" with her, and over to normal relationship stuff."
     "The paper was fun to do together of course, but being all business the whole time was a little tough."
-    "Thing was, when we were being all serious and working on something, or when Aida was cooking with Sakura or whatever, I would get little glimpses of Aida not being quite so 'business-y.'"
+    "Thing was, when we were being all serious and working on something, or when Aida was cooking with Sakura or whatever, I would get little glimpses of Aida not being quite so \"business-y.\""
     "Granted, she wasn't anywhere near Alice or Shiori levels of stoicism, but she knew how to focus when it was time for that."
     MCT "A few more types of the keys, and this paper will be steaming fresh out of the printer and on Tashi-sensei's desk."
     play sound Knock
@@ -14477,7 +14477,7 @@ label PRG033:
     MC "The \"I'm finished\" relief? Oh, it's the best."
     MC "And, that relief makes whatever you do immediately after feel about ten times more rewarding."
     PRG "Mhm!"
-    PRG "... What should we do now then? What should we use our 'rewarding feeling' on?"
+    PRG "... What should we do now then? What should we use our \"rewarding feeling\" on?"
     MC "Well, I know we talked about getting food. Are you hungry?"
     show PRG unique
     PRG "Uhm..."
@@ -15062,7 +15062,7 @@ label PRG033_c1:
     "Maybe it was just her not feeling well. The odds of something that we made simply not agreeing with her sensitive belly now were pretty high, all things considered."
     "Though, she did seem to lose her cool when calling our parents came up."
     "But, how could she possibly keep her composure in that situation?"
-    MCT "With me, it's simply 'hey, Mom and Dad. Schools going well. I got a haircut this morning. Oh, and I got a girl pregnant, then asked her out after, and now we're having triplets."
+    MCT "With me, it's simply \"hey, Mom and Dad. Schools going well. I got a haircut this morning. Oh, and I got a girl pregnant, then asked her out after, and now we're having triplets.\""
     MCT "But for Aida, she has to not only tell her parents about her incredibly personal, and honestly life-changing growth factor, but also that she actually is pregnant, and that she's having not one, but three babies."
     pause .25
     MCT "And, when her dad hears that his precious daughter was defiled by a man, he's going to lose his shit."
@@ -15092,7 +15092,7 @@ label PRG033_c1:
     MC "You're welcome. I have all of the leftovers in the fridge for you."
     PRG "D-Don't forget some for yourself."
     MC "I won't."
-    MCT "... I totally will 'forget.'"
+    MCT "... I totally will \"forget.\""
     PRG "I um..."
     "Aida put her legs off the bed and sat on the edge."
     PRG "..."
@@ -15447,7 +15447,7 @@ label PRG033_c2:
     MC "Mhm. This isn't just yours to carry, Aida. It's ours."
     MC "And, if anything gets ugly, or anything rough gets said, then I'm going to be right by your side."
     MC "Now. I think what we need to do is make a general plan. Write down points that we should mention in conversation."
-    MC "For example, we should tell them about our factors first. If we lead off with 'hey, congrats Grandma and Grandpa,' then that might not turn out the best."
+    MC "For example, we should tell them about our factors first. If we lead off with \"hey, congrats Grandma and Grandpa,\" then that might not turn out the best."
     show PRG unique
     PRG "R-Right."
     MC "So, we start off with greetings. Then, we update them on what's new, aside from the obvious, of course."
@@ -15477,7 +15477,7 @@ label PRG033_c2:
     MC "But, your case specifically... it doubles that stress..."
     MC "You aren't just growing. You're growing something. Multiple somethings."
     MC "That takes a lot of mental strength, Aida. A lot of it."
-    MC "And, I know that once all of these 'reveals' are over with, you'll probably feel a lot better."
+    MC "And, I know that once all of these \"reveals\" are over with, you'll probably feel a lot better."
     MC "It... kind of sucks that we can't get them all over at once, doesn't it?"
     PRG "Y-Yeah... it does..."
     pause .25
@@ -15686,6 +15686,7 @@ label PRG034:
     Takamura "And begin!"
     hide Takamura with dissolve
     "The teams jumped into it. Takamura observed for a moment, then took her seat."
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     if isEventCleared("MC002"):
         "Beside her on her other side, Hageshi sat, looking at the competitors with a sort of bored expression on his face."
         MCT "I wonder if these meals will hit his daily protein intake requirements."
@@ -15693,6 +15694,7 @@ label PRG034:
         "Beside her on her other side, another teacher sat, this one being one that I didn't recognize."
         "He struck me as meek, yet his build said otherwise. I had no doubt in my mind that he could likely rip a door off of its hinges with one push too hard."
         "However, even as he watched the competitors start in, his look was one of taciturn intrigue."
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "On the other side of Takamura, Tashi watched with a sort of sleepy haze over his eyes."
     MCT "Coffee, Tashi-sensei?"
     MCT "Wait, if he burns his tongue... ach."
@@ -15878,15 +15880,14 @@ label PRG034:
     hide Sakura
     with dissolve
     "I glanced over at the judges table as the competition raged on."
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     if isEventCleared("MC002"):
         "Hageshi was looking off at one of the teams that seemed to be making ramen."
     else:
         "The muscular looking teacher was looking off toward one of the teams that seemed to be making ramen."
-    show HR neutral with dissolve
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Tashi was looking at the other team, then passed his gaze over to the ramen making team."
-    hide HR
-    show Takamura sad
-    with dissolve
+    show Takamura sad with dissolve
     "In the middle of them, Takamura seemed to be missing everything around her."
     "She was looking right at Aida and Sakura."
     scene black with fade
@@ -20595,7 +20596,7 @@ label PRG041:
     play music Rain
     "I let loose a huge yawn as I idly brushed my freshly trimmed hair from the counter into the waiting wastebasket."
     "Even with my daily reshaping of my hair, it would always grow out again by the end of each day. Despite that, I thought it good to keep it fairly manageable."
-    "I set the can by my door so I'd remember to empty it into the dumpster, before moving to the closet and grabbing my usual 'lazy weekend' clothes. I sat on the edge of my bed."
+    "I set the can by my door so I'd remember to empty it into the dumpster, before moving to the closet and grabbing my usual \"lazy weekend\" clothes. I sat on the edge of my bed."
     MCT "8:45. Just enough time to get to breakfast."
     "Rather than being proper and untying my shoes, I crammed my feet into them and popped the backs over my heels. I couldn't bother to waste time now, and risk being late for our early morning get together."
 
@@ -20924,7 +20925,7 @@ label PRG042:
     AE "Erm... that would be a good idea, but she tends to come back to our dorm rather late at night with an appetite unlike any other, and I'd rather not have her eating these without even stopping to enjoy them."
     PRG "Does she not eat enough?"
     AE "Oh, she eats her fill. Often, quite a bit more than necessary. However, it's the other... substances that enter into her system that seem to cause this sudden insatiable hunger."
-    "Aida looked at me quizzically and I shot her the 'I'll tell you later' look."
+    "Aida looked at me quizzically and I shot her the \"I'll tell you later\" look."
     AE "But, as it were, I do appreciate the good will, Kodama-san."
     PRG "N-No trouble at all! I'm just glad you're enjoying them."
     show PRG unique
@@ -20990,7 +20991,7 @@ label PRG042:
     "Aida went and stood directly in front of me, her breasts and belly mere inches from me."
     show PRG aroused
     PRG "Y-You know? You're kind of cute... for a bad boy~"
-    MC "Cute? Ma'am, please. Us bad boys generally prefer the term 'handsome.'"
+    MC "Cute? Ma'am, please. Us bad boys generally prefer the term \"handsome.\""
     PRG "Oh, excuse me. Handsome it is then."
     PRG "Do bad boys usually have a girlfriend with them, then?"
     MC "Well, that depends, how bad are you?"
@@ -22064,7 +22065,7 @@ label PRG046_c3_AE:
     MC "Easy. July 4th."
     PRG "Yes!"
     "Shockingly, I actually got around half of Aida's questions right. So, I wasn't a lost cause yet."
-    MC "Now, which American state is known as 'The Dairy State?'"
+    MC "Now, which American state is known as \"The Dairy State?\""
     show PRG unique
     PRG "Um... Wisconsin?"
     MC "Yep!"
@@ -22132,7 +22133,7 @@ label PRG046_c3_BE:
     if getFlag("PRG046_c2_2"):
         show PRG neutral
         PRG "Are you all ready to study then?"
-        BE "Ehh... define 'ready.'"
+        BE "Ehh... define \"ready.\""
         MC "Able to take in information and not go too crazy during the process."
         BE "In that case, no. I am most definitely not ready!"
         MC "Come on. The sooner we start, the sooner we finish."
@@ -22214,7 +22215,7 @@ label PRG046_c3_AEBE:
     if getFlag("PRG046_c2_2"):
         show PRG neutral
         PRG "Are you all ready to study then?"
-        BE "Ehh... define 'ready.'"
+        BE "Ehh... define \"ready.\""
         MC "Able to take in information and not go too crazy during the process."
         BE "In that case, no. I am most definitely not ready!"
         MC "Come on. The sooner we start, the sooner we finish."
@@ -22520,7 +22521,7 @@ label PRG048:
     "I rubbed my eyes and checked my alarm clock. Even though the clock read 12:15, I still felt as if I'd barely made a dent in this."
     "Across the room, Daichi was snoring softly into his pillow, laying in a pile of notes, pencils, and printed off articles from a number of sketchy sites."
     "The exam was in two days, and after class today, I felt way less than prepared. Tashi-sensei had done a full review with us, and the minute I saw everything that would be on the test, I knew I was in deep trouble."
-    "When I'd studied in the library the other day, all of the principles and facts seemed fairly easy to grasp. But now, seeing everything that we had to have memorized for this exam, it brought a whole new meaning to the phrase 'scared shitless.'"
+    "When I'd studied in the library the other day, all of the principles and facts seemed fairly easy to grasp. But now, seeing everything that we had to have memorized for this exam, it brought a whole new meaning to the phrase \"scared shitless.\""
     "I'd been at it since around seven. I'd gone over my notes carefully and skimmed through the book to double check myself if I felt I wasn't 100%% correct."
     "I didn't even think my brain still had the capacity to retain information, but I wasn't going to stop until I felt like I had a good grasp on the material."
     "Turning the page of my textbook over to the next, my phone buzzed on my desk, making me jump and sending my heart rate sky high. I collected myself and unlocked my phone."
@@ -22552,7 +22553,7 @@ label PRG048:
     scene Dorm Interior with fade
     "My eyes fluttered open as the sun shone into my room. I groaned and peeled my head off of the desk, wiping a tiny string of drool from my chin."
     "At one time, I'd prided myself on my ability to fall asleep in most locations. Now, I was kicking myself for wasting valuable study time."
-    "I checked my phone and noticed a tiny missed call icon sitting at the top of my notifications bar. The notification read 'AIDA' in big bold letters, with a voicemail icon next to it."
+    "I checked my phone and noticed a tiny missed call icon sitting at the top of my notifications bar. The notification read \"AIDA\" in big bold letters, with a voicemail icon next to it."
     "Curious, I checked the time that the call was placed at."
     MCT "3:30 in the morning?! What the?"
     "I practically smashed my finger onto the voicemail icon and lifted the phone to my ear, my heart racing in my chest..."
@@ -22951,7 +22952,7 @@ label PRG049_c1_2:
     "It had been raining most of the day, and while I'd been studying, it had morphed into a pretty insane storm. The rain pelted my windows as I brushed my teeth and pulled my hair back for bed."
     "Coming back into my room, I checked the time."
     MCT "Dang, still early. Maybe I won't feel like a caffeine deprived zombie tomorrow."
-    "I plugged my phone in and laid down. I leaned over in the awkward 'hand off bed so I can check my phone while it's charging' pose. As I was setting my alarm, a call came through, making my phone vibrate and shocking me out of my sleepy haze."
+    "I plugged my phone in and laid down. I leaned over in the awkward \"hand off bed so I can check my phone while it's charging\" pose. As I was setting my alarm, a call came through, making my phone vibrate and shocking me out of my sleepy haze."
     "Aida's name appeared at the top. Pulling myself back together, I answered quickly."
     MC "Hello?"
     PRG "Hey... were you sleeping?"
@@ -23165,7 +23166,7 @@ label PRG050_c1_1:
 label PRG050_c1_after:
     "I moved onto the fifth page and breezed through it. Most of those questions were cultural things, which I knew pretty well."
     "I flipped onto the sixth, and thankfully last page and stared at the last question."
-    "'Name the four most popular sports in America.'"
+    "\"Name the four most popular sports in America.\""
     "Without thinking, I wrote baseball immediately."
     MCT "Basketball is fairly popular there, I think. And I'm guessing football is too."
     "I wrote those two in, but got stumped on the last one."
@@ -23239,16 +23240,16 @@ label PRG051:
     menu:
         "Wear the lighter scent.":
             $setFlag("PRG051_light")
-            "I reached for the lighter scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a 'scent slap to the face' sort of way."
+            "I reached for the lighter scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a \"scent slap to the face\" sort of way."
             "The scent seemed to compliment my outfit quite well, and seemed to give off a loose and happy vibe."
         "Wear the deeper scent.":
             $setFlag("PRG051_heavy")
-            "I grabbed the deeper scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a 'scent slap to the face' sort of way."
+            "I grabbed the deeper scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a \"scent slap to the face\" sort of way."
             "Since this scent was already rather bold, I took care to apply only what was necessary. No need to alert the entire island of my presence."
             "The cologne gave off a calm and chill vibe, with just a touch of a nature smell. Seemed fitting, given that Aida could use some calmness in her life lately."
         "Wear the masculine scent.":
             $setFlag("PRG051_masc")
-            "I took the masculine scent in hand and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a 'scent slap to the face' sort of way."
+            "I took the masculine scent in hand and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a \"scent slap to the face\" sort of way."
             "The scent immediately gave off a classy and suave vibe. Just by wearing it, I felt like I could charm anyone with the blink of an eye."
             MCT "If they could see my eyes."
         "Go without cologne.":
@@ -23531,7 +23532,7 @@ label PRG051_c1_after:
     MC "Ooh. Excellent choice, mi amor."
     show PRG neutral
     PRG "Mi amor?"
-    MC "I'm pretty sure it means 'my love' in Spanish."
+    MC "I'm pretty sure it means \"my love\" in Spanish."
     "Aida shrugged and led us happily into the restaurant."
 
     scene Sushi Restaurant with fade
@@ -23570,7 +23571,7 @@ label PRG051_c1_after:
     PRG "I'll do a bowl of oyakodon, please."
     Waitress "Certainly. Small or large?"
     show PRG unique
-    "Aida looked over to me. I shot her a 'don't worry about it' look."
+    "Aida looked over to me. I shot her a \"don't worry about it\" look."
     PRG "Um... the large, please."
     Waitress "All right. And for you?"
     MC "I'll have a large order of the gyukatsu, please."
@@ -23763,7 +23764,7 @@ label PRG052:
     $setPRGOutfit(OutfitEnum.DRESS)
     "I headed across the way to the girl's dorms. It was well past curfew, but I couldn't have cared any less. I went down the rows of doors until I came to Aida and Alice's."
     "Inhaling deeply to stop my heart from bursting out of my ribcage, I knocked on the door three times."
-    "I stood there for around thirty seconds, give or take, before reaching for my phone, ready to send the 'I'm here' text."
+    "I stood there for around thirty seconds, give or take, before reaching for my phone, ready to send the \"I'm here\" text."
     "Then, the door opened."
     show PRG neutral with dissolve
     PRG "H-Hey, Keisuke!"
@@ -23781,11 +23782,11 @@ label PRG052:
     hide PRG with dissolve
     "Aida slipped briskly into the bathroom, her clothes in hand. I sat cross legged on Aida's bed and looked through the movies."
     "Turns out that Aida had quite the movie collection. She had mentioned once that her parents liked movies a lot, so perhaps Aida was some sort of closet film buff."
-    "I flipped through the case she'd laid on the bed, looking over each one. I saw a bunch of famous ones, like 'The Sparkling,' that classic horror movie about an insane wife and mother in a hotel trying to kill her husband."
-    "I slid 'The Sparkling' out of its slot and laid it aside. I'd heard that all girls like horror movies, so it probably was a safe bet."
+    "I flipped through the case she'd laid on the bed, looking over each one. I saw a bunch of famous ones, like \"The Sparkling,\" that classic horror movie about an insane wife and mother in a hotel trying to kill her husband."
+    "I slid \"The Sparkling\" out of its slot and laid it aside. I'd heard that all girls like horror movies, so it probably was a safe bet."
     "Flipping through, I read over a few more titles."
     MCT "Shaving Corporal Bryan? The Chatter of the Ewes? What the hell kind of movies did Aida enjoy?"
-    "I eventually settled on 'The Sparkling' and 'The Queen of the Bracelets.' I'd never heard of the last one, but I was due for a new flick to watch."
+    "I eventually settled on \"The Sparkling\" and \"The Queen of the Bracelets.\" I'd never heard of the last one, but I was due for a new flick to watch."
     "Aida's bathroom door opened quietly."
     PRG "Did you pick something out?"
     $setPRGOutfit(OutfitEnum.COW)
@@ -23796,7 +23797,7 @@ label PRG052:
     "The cherry on top was the large, metal cowbell that hung from a collar around her neck, which rang deeply with each step she took."
     show PRG happy
     "Aida grinned and sat beside me, looking over the movies I'd picked."
-    PRG "Oh! I love 'The Queen of the Bracelets!'"
+    PRG "Oh! I love \"The Queen of the Bracelets!\""
     MC "Eh- I uh, you... eh..."
     show PRG neutral
     PRG "What, Keisuke?"
@@ -23812,7 +23813,7 @@ label PRG052:
     PRG "Have you ever roleplayed, Keisuke?"
     MC "No. Not in a sexual manner, anyway."
     show PRG neutral
-    "Aida grinned and reached into the drawer of her nightstand, seizing a piece of paper and laying it in my hands. It was folded in half and taped shut, with the name 'Keisuke' written on it. All around my name were cartoon styled hearts."
+    "Aida grinned and reached into the drawer of her nightstand, seizing a piece of paper and laying it in my hands. It was folded in half and taped shut, with the name \"Keisuke\" written on it. All around my name were cartoon styled hearts."
     "I picked the tape off and unfolded it. A small pen rolled out of the letter. I took it and started reading Aida's impressively neat handwriting."
     Letter "Congratulations on your purchase of a genuine Kodama grade breeding cow! You may do as you wish with her. She is a gentle soul, but don't be afraid to be rough with her, or punish her if she misbehaves."
     Letter "She should have daily milkings, and have the utmost care given to her. Some of her interests include:"
@@ -23824,7 +23825,7 @@ label PRG052:
     Letter "Do you agree to love and care for your Kodama grade breeding cow?"
     "Underneath that was two check boxes, one labeled yes and the other labeled no."
     "Without hesitation, I checked the yes box. Underneath the boxes was some more text."
-    Letter "Please hand this form to your Kodama grade breeding cow when you are finished. P.S. The safe word is 'Mochi.'"
+    Letter "Please hand this form to your Kodama grade breeding cow when you are finished. P.S. The safe word is \"Mochi.\""
     "I passed the form over to Aida. She snatched it from me quickly and read through to the bottom where the checkboxes were. She shuffled nervously on the bed as she folded the paper back up and laid it aside with the pen."
     show PRG neutral
     PRG "..."
@@ -24102,7 +24103,7 @@ label PRG052_c1_2:
     "Aida grinned."
     PRG "Deal."
     hide PRG with dissolve
-    "Aida and I both cleaned up a bit before laying back down and watching 'The Sparkling.'"
+    "Aida and I both cleaned up a bit before laying back down and watching \"The Sparkling.\""
     "True to our words, no clothes were worn the entire time. And truth be told, we spent more time watching each other than we did the movie."
     jump daymenu
 
@@ -24111,7 +24112,7 @@ label PRG053:
     scene Dorm PRG with dissolve
     play music Peaceful
     $setPRGOutfit(OutfitEnum.NUDE)
-    "Light streamed through Aida's window as I blinked groggily. The DVD menu music of 'The Sparkling' was playing on repeat on the TV. We must've passed out before the movie had finished."
+    "Light streamed through Aida's window as I blinked groggily. The DVD menu music of \"The Sparkling\" was playing on repeat on the TV. We must've passed out before the movie had finished."
     "Aida had fallen asleep right beside me, and I was turned inward, spooning her. My dick, while flaccid, was nestled comfortably between her two, billowy ass cheeks."
     "My arms were around her, holding her close. One hand, the one on top, was holding onto her belly, as if I'd been guarding my treasure during the night."
     "My other hand apparently had a different agenda, because it was clinging to her right boob, her nipple poking out from between my fingers."
@@ -24305,7 +24306,7 @@ label PRG053_c1_2:
     "I scooted closer to her, rubbing her back and holding her hand. Her entire body was trembling, and her stuttering seemed to be getting worse and worse with each word that she spoke."
     Takara "Honey... you need to relax."
     show PRG unique
-    "Aida looked to me nervously. I mouthed the words 'you can do this' to her."
+    "Aida looked to me nervously. I mouthed the words \"you can do this\" to her."
     PRG "Mom, I-I..."
     Takara "Shhh... it's okay, honey. I'm here, and so is your boyfriend."
     Takara "Now. I want you to do what I always told you to do when you got nervous when you were little. Remember? Take in a breath. Close your eyes. Breath out the nerves, and smile."
@@ -24621,7 +24622,7 @@ label PRG055A:
     "I had taken no more than one step outside when a gust blasted me from behind, making my hair flap like a flag in the wind. I shook my head lightly, sending tiny bits of trimmed hair flying."
 
     scene Campus Center with fade
-    "In preparation for my 'official' introduction to the wondrous art of cooking, I'd trimmed my hair much shorter this morning in hopes that I could keep my hair as far away from the food as possible."
+    "In preparation for my \"official\" introduction to the wondrous art of cooking, I'd trimmed my hair much shorter this morning in hopes that I could keep my hair as far away from the food as possible."
     "Even still, I pulled it all back into a hair tie and gave it an extra shake for good measure. God forbid any of my baby hairs ruin an otherwise wonderful meal."
     "The weight being gone from my head brought me a sort of freeing feeling as I crossed campus. I knew that the feeling would be short lived, however, because I'd more than likely have a good portion of the weight back by dinner time."
 
@@ -24725,7 +24726,7 @@ label PRG055A:
         Sakura "Well, technically, this entire training regimen is for Kodama-san, so as long as you're doing good enough to pass by, it's all good."
         show PRG worried
         "Aida looked over from her plate and to my avocado, picking up a slice as if it were a snowflake."
-        PRG "I think this is better than 'just good enough to pass by.'"
+        PRG "I think this is better than \"just good enough to pass by.\""
         Sakura "Oh, I didn't mean that it was shoddy quality. All I was saying was that it's good for his very first try."
         show PRG doubt
         "Aida looked up at her."
@@ -25047,9 +25048,9 @@ label PRG055C:
     scene Dorm Exterior with fade
     play music Schoolday
     MCT "Curse my big mouth."
-    "I stopped outside of the girl's dorm and hit Aida with the 'I'm here' text. I took one last look down at my printed off recipe for chicken dumplings and sighed, cramming the paper back into my pocket."
+    "I stopped outside of the girl's dorm and hit Aida with the \"I'm here\" text. I took one last look down at my printed off recipe for chicken dumplings and sighed, cramming the paper back into my pocket."
     "Once again, Aida had clobbered me in baseball. Every pitch I'd tried to throw was hit, resulting in at least a double from each batter. And, whereas I was giving it my all, Aida was barely even trying to score on me."
-    "Needless to say, she'd brought new meaning to the phrase 'getting shut out.'"
+    "Needless to say, she'd brought new meaning to the phrase \"getting shut out.\""
     if checkSkill("Art", ">", 4):
         "I ran over the recipe once more in my head. I knew a bit about cooking, but compared to Aida, I was nothing. It was like comparing a fast food employee to a head chef at a five star restaurant."
         "The main difference from that analogy, though? Fast food tastes amazing after a certain time. Maybe I'd be better waiting till after like nine o'clock to cook for her."
@@ -25258,7 +25259,7 @@ label PRG055C_c1_1:
     scene Hallway with fade
     "Once I was far enough from the kitchen, I breathed a sigh. I had just gotten an unexpected gift of more practice time for my cooking, but also gained two more girls to cook for."
     "And by the time I would actually get around to cooking, Honoka would have enough kitchen skills to know what was good and what wasn't."
-    "I whipped out my phone and started searching for other recipes to try, looking more for ones that started with the phrase 'easiest blank you'll ever make!'"
+    "I whipped out my phone and started searching for other recipes to try, looking more for ones that started with the phrase \"easiest blank you'll ever make!\""
     jump daymenu
 
 label PRG055c_1_2:
@@ -25602,7 +25603,7 @@ label PRG056B:
     "Aida started by working my arms through my sweatshirt sleeves, moving with extraordinary care around my hands. She pulled the wet sweatshirt over my head and laid it on the side of the bathtub. I kicked off my shoes with my heel and slid them aside."
     "Next, Aida slid my shirt over my head and hung it as well. Finally, off came my sweatpants and socks, leaving me in just my boxers."
     "She then took a towel and began drying my body, working it around my torso, then my arms. She bent over as well as she could to get my legs."
-    "I knew now was no time to admit it, but Aida rubbing my bare chest with a towel was establishing a new definition for the word 'Heavenly.'"
+    "I knew now was no time to admit it, but Aida rubbing my bare chest with a towel was establishing a new definition for the word \"Heavenly.\""
     PRG "All right. Put your hands on the counter."
     "I did as I was told and laid my hands out, my right hand palm down, and my left vice versa."
     PRG "It doesn't look like there's anything in the wound. I think rinsing it should be enough before we start dressing it."
@@ -26434,7 +26435,7 @@ label PRG057A_c1_after:
     PRG "You act like I want to ruin the surprise."
     MC "Well, I wouldn't want to give you any hints."
     PRG "From what I hear, Sakura likes it."
-    "I shot a 'really' look at Sakura, who responded by covering her mouth with both hands."
+    "I shot a \"really\" look at Sakura, who responded by covering her mouth with both hands."
     show PRG happy
     PRG "The good thing is she has a pretty varied palette, s-so I have no idea what you chose."
     MC "Wonderful. Keep guessing then."
@@ -26489,7 +26490,7 @@ label PRG057A_c1_after:
     PRG "Y-You like it?"
     MC "Yeah! I like the richness of the vegetables mixed with the more simple tasting noodles."
     Sakura "Hey, you're starting to sound like a food critic, Hotsure-san! Trying to earn some brownie points with Kodama-chan?"
-    MC "The way I see it, I'm supporting her competitions by learning how to properly grade her food. I figure that saying 'it's good' for everything doesn't really give much ground to work from."
+    MC "The way I see it, I'm supporting her competitions by learning how to properly grade her food. I figure that saying \"it's good\" for everything doesn't really give much ground to work from."
     show PRG aroused
     PRG "That's really sweet, Keisuke."
     MC "You support me in my endeavors. It's only fair that I do my best to help you in yours."
@@ -26653,7 +26654,7 @@ label PRG057B:
             "Not even mentioning brands, I hadn't even considered whether she preferred dark chocolate, milk chocolate, or white chocolate."
             "I mean, I {i}thought{/i} that most people liked milk chocolate, but I wasn't exactly dealing with your run of the mill girl, here."
             "I'd heard of what horrors pregnancy cravings could wreak on a girl's body, and I was pretty sure that it was something I shouldn't be trifling with."
-            "I ultimately chose a mixed box of chocolates with a bow on it. Across the ribbon of the bow, the words 'Thinking of you' were embroidered into it. Perfect."
+            "I ultimately chose a mixed box of chocolates with a bow on it. Across the ribbon of the bow, the words \"Thinking of you\" were embroidered into it. Perfect."
             "Taking my box of chocolate to the counter, I quickly paid and was out the door. I didn't want to waste any time."
         "Browse the store":
             "Rather than committing to something right away, I chose a direction and just strolled down a random aisle. I figured that something would pop out at me sooner or later."
@@ -26706,7 +26707,7 @@ label PRG057B:
     "Walking into my dorm, I set the bag down on my bed and grabbed a pen from my pencil cup."
     if getFlag("PRG057B_chocolate"):
         "I sat at my desk and pulled the chocolate box from the bag."
-        "On the front of it, just under the bow, was a small, white box for writing a person's name. I took my time and wrote 'Aida' in the small box, using the steadiest hand I could."
+        "On the front of it, just under the bow, was a small, white box for writing a person's name. I took my time and wrote \"Aida\" in the small box, using the steadiest hand I could."
         MCT "This is why moveable printed type was invented."
         "Satisfied with my kindergarten level penmanship, I looked down at the empty grocery bag."
         MCT "No, this won't do."
@@ -26715,7 +26716,7 @@ label PRG057B:
         "After I was sure that my bag was clean and empty, I carefully slid the chocolate box inside and eased the bag onto my back. With the cool, fall air outside, I wasn't overly worried about the chocolate melting in my backpack."
         "The totally on purpose hole that was forming at the top of my bag assured good, clean ventilation."
     if getFlag("PRG057B_apron"):
-        "I fished the gift tag out of the shopping bag and wrote 'Aida' under the receivers section of the tag. My handwriting totally screamed 'dude writing,' but that was fine by me."
+        "I fished the gift tag out of the shopping bag and wrote \"Aida\" under the receivers section of the tag. My handwriting totally screamed \"dude writing,\" but that was fine by me."
         "I took the string at the end of the tag and fastened it to apron around one of the shoulder bands."
         "Once I had the tag on, I looked at my handiwork sitting in the plastic shopping bag."
         MCT "No, this won't do."
@@ -26748,7 +26749,7 @@ label PRG057B:
     play sound Knock
     show WG neutral with dissolve
     MC "Hey, Alice. Is Aida around?"
-    WG "Unfortunately not. She seemed quite preoccupied when she woke up this morning, so she decided to take a day for herself on the island. She said she wanted to 'clear her head.'"
+    WG "Unfortunately not. She seemed quite preoccupied when she woke up this morning, so she decided to take a day for herself on the island. She said she wanted to \"clear her head.\""
     MC "Yeah, I think I know what's up. Her and Myoga-chan were supposed to have their competition today."
     WG "I take it you assume that her missing it is what's on her mind?"
     MC "Well, yeah. I'd think it would be obvious, wouldn't you?"
@@ -26933,7 +26934,7 @@ label PRG057C:
     MC "So, what exactly does this do?"
     PRG "This is called a honing steel. It's used to help prepare your knives."
     MC "So, it sharpens them?"
-    PRG "Not exactly. It doesn't even really 'hone' them, either."
+    PRG "Not exactly. It doesn't even really \"hone\" them, either."
     PRG "All this really does is keeps the metal in the blade from curving. It just kind of straightens it back out again."
     MC "So, why don't they call it a knife refresher instead of a honing steel?"
     PRG "Well..."
@@ -27076,7 +27077,7 @@ label PRG057C:
         MC "So, if I were carrying a bowl of water, and you a bowl of cinnamon, you'd move around me while I made my moves closer to the counter."
         Sakura "Exactly right!"
         MC "So, what happens if you both have something liquid? Like, what decides who moves in what way there?"
-        Sakura "Oh, that's easy. One of us will simply say 'outside,' which means that we will take the outside path."
+        Sakura "Oh, that's easy. One of us will simply say \"outside,\" which means that we will take the outside path."
         MC "Oh, that seems simple enough."
         Sakura "Mhm! There is one overarching rule, though."
         Sakura "If you are using a knife, you automatically stay closest to the counter when you move with it. No exceptions."
@@ -27444,7 +27445,7 @@ label PRG058:
             MC "Oh! Sounds good!"
             PRG "'Kay. Be right back."
             hide PRG with dissolve
-            "Aida ran back to her room. Her 'run' had gone from a typical jog when I'd first met her to now, which was a quick speed-walk."
+            "Aida ran back to her room. Her \"run\" had gone from a typical jog when I'd first met her to now, which was a quick speed-walk."
             "She returned almost immediately."
             show PRG neutral with dissolve
             PRG "We have about ten minutes. Let's hurry."
@@ -27597,7 +27598,7 @@ label PRG058:
     "Without skipping a beat, I was right by her side. I rubbed her back, comforting her for all I was worth."
     MC "Hey. Remember what I told you back when you first told me that I got you pregnant?"
     PRG "W-What?"
-    MC "I said 'Be proud. You're a mom.'"
+    MC "I said \"Be proud. You're a mom.\""
     MC "That statement still stands true, you know."
     PRG "I-It was easy then! I at least looked like a normal pregnant girl! N-Now, I..."
     PRG "Keisuke. Do you have any idea what it's like to not even be able to tie your own shoes? Or even the trouble that comes from trying to sit in my desk in class?"
@@ -27685,7 +27686,7 @@ label PRG058:
     show PRG unique #nervous
     PRG "Um... I-I guess."
     show FMG flex
-    FMG "Sweet! This is called 'The Cross Country Ski.'"
+    FMG "Sweet! This is called \"The Cross Country Ski.\""
     show FMG happy
     FMG "Throw your shoulders back, and stand up as straight as possible. Then, jump up and down in the water."
     show PRG worried
@@ -28137,7 +28138,7 @@ label PRG059:
     show PRG unique
     "I pulled Aida down into a lying position, with my arms around her. I held her incredibly close to me, her eyes incredibly close to mine."
     stop music
-    MC "Aida, do you realize one thing? One huge thing? Every 'issue' you've mentioned, no matter what, doesn't matter."
+    MC "Aida, do you realize one thing? One huge thing? Every \"issue\" you've mentioned, no matter what, doesn't matter."
     MC "I will NOT be leaving you, or the babies. I told you this same thing when you first told me that you were pregnant. And, I'm telling you again, right now."
     MC "I swear on everything that I own. I'm not going anywhere."
     MC "Do you know why I stay close to you? Why, even through every worry or anxious thought, I stay right beside you?"
@@ -28510,8 +28511,8 @@ label PRG061:
     show PRG aroused
     PRG "..."
     MC "What's with that cute smile?"
-    PRG "You said 'give us some answers.'  Not 'you.'"
-    MC "We're a team, aren't we? Of course, we're boyfriend and girlfriend, but we're also going to be parents together too, right? So yeah, it's 'we.'  Aida and Keisuke. Mom and Dad."
+    PRG "You said \"give us some answers.\"  Not \"you.\""
+    MC "We're a team, aren't we? Of course, we're boyfriend and girlfriend, but we're also going to be parents together too, right? So yeah, it's \"we.\"  Aida and Keisuke. Mom and Dad."
     PRG "..."
     PRG "I can't wait to be a parent with you."
     MC "Me either, Aida. Now, best get writing."
@@ -28533,8 +28534,8 @@ label PRG061:
         PRG "Yeah. I'm 18."
         MC "Right."
         "I nodded and continued on, stopping at another line."
-        "On the line marked 'FACTOR,' I wrote 'HYPERFERTILITY.'"
-        "After a few more lines, there was one final line with the generic heading of 'REASON FOR VISIT.'"
+        "On the line marked \"FACTOR,\" I wrote \"HYPERFERTILITY.\""
+        "After a few more lines, there was one final line with the generic heading of \"REASON FOR VISIT.\""
         "I stole a glance at Aida out of the corner of my eye."
         MCT "Growth spurt should work."
         MC "Here you are. I can hold it for your signature."
@@ -28611,7 +28612,7 @@ label PRG061:
             MC "What can I do to help Aida?"
             show PRG unique-happy
             Nurse2 "As I'm sure you can imagine, having a baby is rather hard on a woman's body. Unfortunately, there isn't much anyone can do to stop Kodama-san from having to go through those difficulties."
-            Nurse2 "What you can do is help her with the odds and ends things. As they say, 'it's the small things that count.'"
+            Nurse2 "What you can do is help her with the odds and ends things. As they say, \"it's the small things that count.\""
             MC "Of course. Thank you."
             Nurse2 "Anytime. Now, let's get underway, shall we?"
         "Where will the delivery take place?":
@@ -28793,7 +28794,7 @@ label PRG061:
         "She pulled me up and out the door, shutting it behind me and walking us away from the door."
         Nurse2 "Now, you open those ears and listen."
         Nurse2 "Do you have any idea how difficult this is for Kodama-san?"
-        "The nurse looked at me with eyes that said 'answer, or I'll bury you six feet under.'"
+        "The nurse looked at me with eyes that said \"answer, or I'll bury you six feet under.\""
         Nurse2 "Well? Do you?"
         MC "N-Not firsthand."
         Nurse2 "Picture this. Imagine waking up, and each day, it gets just a little harder to get out of bed."
@@ -28922,8 +28923,8 @@ label PRG062:
         "Or, there could be something as simple as my parents hanging up on me, leaving me an anxious wreck until our next phone call."
         "Of course, all of this could've been alleviated if I would've just called them earlier."
         "But, even if I would've done that, how logical would that have sounded?"
-        "'Hey, Mom and Dad. School is good. I've been making a lot of friends. Oh, by the way, I got this girl at school pregnant and she's already showing a few days after we did the deed.'"
-        "'She's got a factor that increases her odds of having multiple babies, so expect a Keisuke and Aida herd to be running around soon. Yes, Tomo is just fine. Okay, gotta go. Love you too. Bye.'"
+        "\"Hey, Mom and Dad. School is good. I've been making a lot of friends. Oh, by the way, I got this girl at school pregnant and she's already showing a few days after we did the deed.\""
+        "\"She's got a factor that increases her odds of having multiple babies, so expect a Keisuke and Aida herd to be running around soon. Yes, Tomo is just fine. Okay, gotta go. Love you too. Bye.\""
         "Of course they knew about that nature of Seichou and how growth factors were so incredibly erratic, but this... this was lunacy as far as they were concerned."
         show PRG neutral
         PRG "Hey, Keisuke. Sorry about that."
@@ -29804,7 +29805,7 @@ label PRG064:
     PRG "I was reading online the other day that talking to your babies before they're born is good for them."
     MC "I think I've heard of that."
     "Aida nodded and slid over the black tote bag she'd brought with her. She reached into it and pulled out a book with a soft cover."
-    "The book was worn, with the binding frayed on one side and a small wearing on the cover. Across the front, the title read 'Where the Fairies Go Play.'"
+    "The book was worn, with the binding frayed on one side and a small wearing on the cover. Across the front, the title read \"Where the Fairies Go Play.\""
     stop music
     show PRG unique-happy
     PRG "I thought that maybe... you and I could read them a story together?"
@@ -29814,7 +29815,7 @@ label PRG064:
     "Aida grinned, her cheeks red as she set her sandwich beside her and held the book with the hand closest to me, so I could see."
     show PRG neutral
     PRG "Could you turn the pages?"
-    "I nodded and flipped the cover to the first page. On the inside of the cover, the name 'Aida Kodama' could be seen written in perfect handwriting, with a date written under it."
+    "I nodded and flipped the cover to the first page. On the inside of the cover, the name \"Aida Kodama\" could be seen written in perfect handwriting, with a date written under it."
     PRG "This was my first book when I was a baby. My mom used to read it to me every night before bed."
     "I ran my hand gently across it."
     "Turning the first page, I snuggled in against Aida. Her other hand was on top of her belly, rubbing gently. My free hand was on the other side, rubbing with her."

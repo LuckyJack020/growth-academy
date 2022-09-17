@@ -1126,7 +1126,7 @@ label FMG010_testpass:
     MCT "Understatement of the day."
     show FMG neutral
     FMG "Oh, I'm big? You're not so small yourself, torpedo-nips."
-    "I couldn't tell if Akira was annoyed because of the scare, or from having to break the hug. Wait, what had she said about Chibuki's 'nips'...?"
+    "I couldn't tell if Akira was annoyed because of the scare, or from having to break the hug. Wait, what had she said about Chibuki's \"nips\"...?"
     MC "Does that mean Chibuki's...?"
     Chibuki "Yeah, my growth thingy is my nipples; I don't mind though, I plan to use 'em to my advantage! Anyways, sorry I was earwigging on your conversation; If you need me, I'll be in our room venting my frustrations into a sketchbook. Later."
     hide Chibuki with dissolve
@@ -1145,7 +1145,7 @@ label FMG010_testpass:
     FMG "What did you expect!? I had to get to the window somehow!"
     MCT "...It's probably best if I leave those two alone..."
     "Once I gave it more thought, I realized the more I hung out with Akira, the more I became aware she was hiding something. I guessed the only thing I could do at the time was wait, but there was something else still bugging me..."
-    MC "...What the hell is 'earwigging'?"
+    MC "...What the hell is \"earwigging\"?"
     jump daymenu
 
 label FMG010_testfail:
@@ -1176,157 +1176,205 @@ label FMG010_testfail:
 
 label FMG011:
     scene School Planter with fade
-    "It was a cloudy day that day, but I figured it would be nice to just walk around the school despite that."
+    play music Rain
+    "It was a cloudy day, but I figured it would be nice to just walk around the school despite that."
     "...At least, until it started raining."
-    "Luckily, I found a room of some kind that was attached to the school, and entered without questioning its purpose. As I entered, I realized it was a recreation room of some kind, like something from an 80's arcade or something."
+    "I huffed it over to the closest door back inside that I could find, not wanting to deal with a drenched head of hair or the frizz from the damp air even if I did manage to stay dry."
     scene Recreation with fade
+    if getFlag("MC005_readbrochure") and not getFlag("MC005TM"):
+        "To my surprise, I stumbled smack dab into the rec room on campus that I had only known about from the brochure they gave us when we first arrived. I was hoping to find it walking around the school, a slight silver lining to the situation."
+        MC "How old is this place, anyway?"
+        "A few fellow students had the same idea, taking shelter from the downpour. None that I recognized until I realized there was someone who had already been in here before the rain started."
+    elif getFlag("MC005TM"):
+        "I didn't even recognize the place at first, having come in from the outside in the damp dark pouring rain."
+        "But upon entering and hearing the clacks of the air hockey table from some of the other students playing, I realized this was the campus rec room I visited with Tomo on Greenery Day."
+    else:
+        "Luckily, I found a room of some kind that was attached to the school, and entered without questioning its purpose."
+        "As I entered, I realized it was a rec room of some kind, like something from an 80's arcade or something."
+        MC "How old is this place, anyway?"
+        "A few fellow students had the same idea, taking shelter from the downpour. None that I recognized until I realized there was someone who had already been in here before the rain started."
     play music Busy
-    MC "How old is this place, anyway?"
-    "A few fellow students had the same idea I had, taking shelter from the downpour, but I realized there was someone who had already been in here before the rain started."
-    "To my surprise, Akira was playing on one of the machines..."
-    if isEventCleared("WG009"):
-        "...And she looked focused. I walked up to get a better view of the game."
-        show FMG neutral at Position (xpos=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
-        FMG "Hey. Can't talk now. Killing."
-        "She was in the middle of a boss fight with a strange mutated creature. Given the size of its health bar, I thought it might be the final boss."
-        show FMG angry
-        FMG "Come on you stupid bat-cat-zombie-thing. Just die already."
-        "Despite being annoyed, she was able to keep focused. About 5 minutes later she killed the boss, keeping a cool head the entire time."
-        show FMG happy at Transform(xzoom=1)
-        FMG "Woo!"
-        "...For the most part, at least."
-        MC "Wow, you're good."
-        show FMG neutral
-        FMG "Yeah, practice makes perfect and all, I've been playing this thing whenever I get spare time since losing that swim bet."
-        MCT "...Ah, balls. I forgot about that."
-        MC "Er... you okay?"
-        FMG "Don't worry, I ain't mad at you, if that's what you're wondering. I just want to give that smug jerk a taste of her own medicine."
-        show FMG angry at Position(yalign=1.0), Transform(xzoom=-1)
-        FMG "Heh. She thinks all I do is work out, well she's not the only one with a hidden talent."
-        MC "Well, you never know. She could be good at this kinda stuff."
-        FMG "Any overweight, smug overachiever can play and be good, but it takes skill and practice to be great at something."
-        "Oh great, history was repeating itself. This time, the one behind her was-"
-        show WG neutral at Position (xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-        FMG "You don't just sit around to be great at something, you gotta go out there and do it yourself."
-        "Alice, and she looked angry. I'd say I was surprised this was happening again... but I wasn't."
-        FMG "But no, people want to do it the easy way, by sitting down, getting fat, and having everything given to them. Not all of us were born with a silver spoon in our mouths."
-        MC "Ak-"
-        FMG "And by the way, I know you're behind me, Alice, I can hear you breathing."
-        MCT "At least your hearing's better than Alice's, I guess..."
-        show WG angry
-        WG "Well at least you have some skills of perception."
-        show WG haughty
-        WG "I'm just curious how it is someone who 'sits around all day' trounced you so thoroughly at the pool."
-        show FMG angry at Transform(xzoom=1)
-        FMG "What the heck does 'trounced' mean?"
-        WG "Beaten. Clobbered."
-        FMG "T-Then why didn't you- you know what, I want a rematch- and I pick this time."
-        WG "Certainly, assuming you have any interests besides athletics?"
-        FMG "...Do you not see that I'm standing next to an arcade game?"
-        WG "Oh! I didn't know you were actually playing."
-        WG "I thought you were just waving a toy gun around, going 'Pew pew!'"
-        MCT "Oh no, Alice... now you've done it."
-        FMG "...You... grab the gun and put your cash in so we can start."
-        "Akira was visibly shaking with rage while Alice got into position. All I could do was watch this happen while Akira grabbed the second player gun."
-        show FMG angry at Position(yalign=1.0), Transform(xzoom=-1)
-        show WG haughty at Position (xpos=0.55) with dissolve
-        FMG "I'm going to take a wild guess and say you want to be player one. Doesn't matter in the long run, though."
-        WG "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped."
-        show FMG neutral
-        FMG "Quit speaking... whatever language that is and let's do this."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
+    "I was pleasantly surprised to find Akira playing one of the arcade machines. I guess I shouldn't have been that surprised. She did mention before to me she liked playing arcade games."
+    "Guess that explains why she was already here before the rest of us came in soaked to the bone."
+    "...She looked focused too. I was curious what she was playing, so I walked up to get a better view of the game."
+    MC "Hey."
+    FMG "Yo, what's up?"
+    MC "It's raining, so I came in here. Shouldn't you be focusing on the game?"
+    show FMG happy
+    FMG "Oh, it's no big deal. It's going to enter a cutscene in a sec."
+    FMG "Can you believe this school has a rec room, let alone three arcade games!"
+    if getFlag("MC005_readbrochure") and not getFlag("MC005TM"):
+        MC "I had heard about it, but I'd yet to see it with my own eyes. Gotta say, it's pretty cool actually, I should come here more often. What are you playing?"
+    elif getFlag("MC005TM"):
+        MC "It's pretty sweet. I managed to find the place once before but didn't get a chance to play many of the games. What are you playing?"
+    else:
+        MC "Honestly I had no clue. I just came in here to get out of the rain. Gotta say, it's pretty cool actually, I should come here more often. What are you playing?"
+    FMG "Dead Awakening 2: Resurgence, it's just a first person rail shooter about killing zombies in a made up place called Fallon City. I think it's a play on the words \"Fallen City\". I'm just about to fight the final boss once this cutscene finishes."
+    pause .5
+    "She was in the middle of a boss fight with a strangely mutated creature. Given the size of its health bar, I thought it might be the final boss."
+    show FMG angry-2
+    FMG "Come on you stupid bat-cat-zombie-thing. Just die already!"
+    "Despite being annoyed, she was able to keep focused. Honestly, she was really kicking ass. These games were designed to eat your yen but she still had plenty of lives left."
+    show FMG surprised
+    MC "Oh shit! Look out!"
+    "The boss was flinging axes, ninja stars, missiles, and all sorts of crap, but one of them almost escaped her notice."
+    show FMG happy
+    "But she avoided it just fine before it hit. {w}She was practically untouchable."
+    "About 5 minutes later she killed the boss, keeping a cool head the entire time."
+    show FMG flex at Transform(xzoom=1)
+    FMG "Woo!"
+    "...For the most part, at least."
+    MC "Wow! You're good."
+    show FMG neutral
+    FMG "What can I say? Practice makes perfect after all."
+    MC "You come here a lot then, I take it?"
+    FMG "Not too often. I got a pretty good setup in my dorm that I play most of my games on, but every now and then I feel a little nostalgic and go back to the old classics like these. Gotta remember your roots, ya know?"
+    MC "Definitely. Reminds me of some of the old games Honoka and I used to play together."
+    FMG "Wait a moment, you two knew each other before coming here?"
+    MC "Oh yeah, I guess I never mentioned it before. We grew up together in the same neighborhood."
+    FMG "Seriously? That's pretty cool."
+    MC "Honestly I'm surprised we haven't run into her here already, she'd love this place. I doubt she knows about it because she probably would have dragged me over as soon as she found out."
+    "As if right on cue, a familiar face materialized into view from among the small crowd of students in the room..."
+    show WG doubt at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Who wasn't Honoka."
+    MCT "Face it, today is not your day dude."
+    "By the doorway stood a slightly soaked Alice, who was obviously annoyed from having been caught out in the rain herself. I have to imagine she goes through quite a lot to get her hair to look like that."
+    "Then again, when doesn't she look mad?"
+    MC "Alice? I definitely didn't expect to see her here."
+    if isEventCleared("FMGWG001"):
+        show WG surprised-2
+        FMG "Yo, Alice! Over here."
         show WG neutral
+        "Recognizing a friendly face, she walked over to see what we were up to."
+        FMG "Hey Alice! How's it going?"
+        WG "Irritatingly. The weather report said nothing of showers, and... Look at me."
+        FMG "Oh yeah, Kei said something about rain but I wasn't paying attention. At least you found shelter before it really got bad."
+        show WG neutral
+        WG "{i}Sigh{i}. Any damage to my hair or clothing is bad enough, but I won't bemoan a fair sprinkling."
+        "Akira turned to Alice and pointed her thumb at the arcade game behind her."
+        FMG "Well, wanna take your anger out on these zombies?"
+        show WG doubt
+        "Alice's expression remained like she was smelling something slightly unpleasant, but she walked up to Akira and took the proffered gun."
+        show WG haughty
+        WG "Let me guess, I point and shoot anything that moves?"
+        show WG surprised-2
+        FMG "Well, yeah, if you wanna lose points by killing innocent people."
+        show WG neutral
+        "It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
+        "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
+        "Eventually the zombies got to her, the screen turning red with blood splotches until the words \"Game Over\" came up."
+        show FMG sad
+        FMG "...Um, you shoot off the screen... to reload. I'm sorry."
+        show WG surprised-2
+        WG "I see now."
+        show WG neutral
+        "She put in another 100 yen coin. Her game didn't improve by much, but she did manage to avoid getting mobbed again. Come the boss, though..."
+        show WG doubt
+        WG "And this is what people do for fun?"
+        FMG "Eh, it's not for everyone, I know. I've been playing arcade games most of my life. But yeah, if this isn't doing anything for you, you can stop playing."
+        show WG haughty
+        WG "Not so fast. I'm not going to let some cheap toy beat me."
+        show WG neutral
+        FMG "Um actually, they cost a lot of cash to produce, you gotta program, animate the people, it's basically like a movie..."
+        "This cycle went on for about an hour, Alice making incrementally more progress with each bit of cash, but eventually I realized the rain stopped."
+        MC "Hey, the rain stopped, I should head back to my room."
+        FMG "Yeah, Hey... Alice, the rain stopped, are you going to stop?"
+        show WG stern
+        WG "Not just yet. One more go at that cyber-brain and I should have it beat."
+        show FMG sad at Transform(xzoom=-1.0)
+        FMG "{size=-6}Yeah I don't think she realizes that's the third boss and there's three more to go...{/size}"
+        FMG "Well, see you at class tomorrow, don't play for too long."
+        show WG neutral
+        WG "I'll be fine."
+        hide WG with dissolve
+        "We left Alice there, playing that game for who knows how long."
+        MC "Huh, I was surprised to see her get so sucked into it."
+        show FMG neutral at altMove(0.5, 0.5)
+        FMG "Yeah, who would've thought? I didn't think she had it in her. She can be a little uptight, I would have thought she'd think something like that was beneath her."
+        MC "Really? Who doesn't like video games?"
+        FMG "Those that haven't played them usually."
+        MC "Good point. Hey, I don't think Alice is going to offer anytime soon, but if you want to play something together sometime, give me a shout. That is if you're up for it."
+        show FMG happy
+        $setAffection("FMG", 1)
+        FMG "Definitely."
+        show FMG surprised-2
+        extend " Oh crap!"
+        show FMG neutral
+        FMG "That took longer than I thought. I was gonna get a run in before it gets too late. I'll see you later."
+        hide FMG with dissolve
+        MCT "At least she didn't ask me to join her. I think I'll continue my leisurely walk across campus now that the sun's out again. Maybe things are looking up today after all."
+        jump daymenu
+    else:
+        "Likely being the only people in the room she recognized, Alice came over to see what we were up to, with her typical sour expression unchanging."
+        FMG "{size=-6}Oh great, here comes Princess Prissy herself.{/size}"
+        MC "Hey Alice. How's it going?"
+        show WG stern
+        WG "Irritatingly. The weather report said nothing of showers, and... Look at me."
+        MCT "Trust me, you take up enough space that I don't have to try to."
+        FMG "Eh, it's just a little water. Nothing that's gonna hurt you."
+        WG "Speak for yourself. Not all of us just toss on a hairband in the morning and call it a style."
+        FMG "Try it sometime. Life's more fun when things are less complicated."
+        show WG haughty
+        WG "I'm afraid I'd rather take your word for it."
+        "Akira just shrugged"
+        FMG "Suit yourself."
+        show WG neutral
+        WG "What are you two up to anyway?"
+        MC "I was just watching Akira finish this game. She's pretty good."
+        WG "Watching people play this frivolous time sinks sounds even less entertaining than wasting time on them."
+        show FMG angry-3
+        FMG "Whoa whoa whoa, hold up. Waste of time? A lot of time, creativity, and work goes into making these things come to life so people can have some fun in their lives."
+        WG "Oh please, you make it sound like it's a work of art."
+        show WG haughty
+        show FMG angry
+        extend " All I see is you just waving a toy gun around, going \"Pew pew!\""
+        MCT "Uh oh, she doesn't know who she's messing with."
+        show FMG upbeat
+        FMG "Is that so? Well if you think it's so easy why don't you give it a try?"
+        show WG surprised-2
+        WG "I beg your pardon?"
+        show WG doubt
+        FMG "Put your money where your mouth is, princess. You vs me, high score wins."
+        show WG stern
+        WG "First of all, don't call me that."
+        show WG haughty
+        extend " Secondly, I'll gladly accept your challenge."
+        FMG "Fair enough, now grab the gun and put your cash in so we can start."
+        show FMG angry at Transform(xzoom=-1)
+        show WG haughty at altMove(0.5, 0.55)
         "Thus began a duel for honor, pride, and some other third thing. About ten minutes into it Akira was already ahead of Alice by ten thousand points, mostly because Alice was shooting normal civilians before realizing she lost points for doing that."
         "Both were too focused on the game to say anything to the other, but I could tell that Akira was feeling smug about her lead, while Alice was both confused and annoyed."
         "An hour later, and a lot of both their coins, they managed to get to the final boss, and once it was dead, the scoreboard tallied up the results, with Alice's score first."
-        show WG neutral at Position (xpos=0.40) with dissolve
+        show WG neutral at altMove(0.5, 0.4)
         "Player One Score: 21521"
         show FMG neutral
         FMG "Huh. Not bad..."
         WG "Why of course I would do great, only someone like me can reach a score lik-"
-        "Player Two Score: 74681 !NEW RECORD!"
-        show WG angry
+        "Player Two Score: 74681! NEW RECORD!"
+        show WG surprised-2
         WG "-What!?"
         show FMG happy at Transform(xzoom=1)
         FMG "...For a beginner, that is!"
         "Alice looked at her gun for a moment before putting it back, her face stony."
         show WG neutral
-        WG "It should be expected that I would not master this the first time."
-        WG "So congratulations. You have defeated a newcomer."
-        show FMG sad
-        FMG "...I'm just trying to show how I felt at the swim dare and you can't even let me have that..."
-        WG "..."
-        WG "That wasn't your first time swimming, though, was it?"
-        FMG "No, and that's why it hurt when you acted all high and mighty, especially when you didn't realize I was behind you."
-        WG "..."
-        "Alice didn't reply for a moment, and I thought she was about to say something vicious or snide. Instead she exhaled slowly, pinching the bridge of her nose."
-        WG "I was unaware it would hurt you. I apologize if you were offended."
-        MCT "That's not really an apology..."
-        FMG "Whatever, just promise me one thing..."
-        "As if a burning passion was ignited, Akira stared down Alice with fire in her eyes..."
-        FMG "Don't you ever insult me and my father's work of arcade games ever again!"
-        "Akira looked down on Alice before going to normal. To this day I'll never forget the look of shock Alice had on her face."
-        show FMG happy
-        FMG "I hope we have a understanding. Let's play again sometime."
-        hide FMG happy with dissolve
-        "That was all Akira said before leaving me, Alice, and the machine in the room..."
-        MC "Alice, are you okay?"
-        "She took a second to clear her throat before responding."
-        WG "S-strange girl..."
-        WG "She's upset about losing at swimming, but she's more concerned about her gaming skills?"
-        MC "To be fair, you did say something about waving the gun around, going 'Pew pew'. She takes her hobby seriously, I guess."
-        WG "Apparently..."
-        MC "Well, thanks for kinda apologizing. I'm heading back to my room. See you at class."
-        show WG happy
-        WG "Indeed. Good day, Hotsure-san."
-    else:
-        "...Though she looked rather casual, like she was really just playing it for fun, not trying to beat it or anything. I walked up to get a better look of the game."
-        show FMG neutral at Position (xpos=0.75) with dissolve
-        FMG "Yo, what's up?"
-        MC "It's raining, so I came in here. Shouldn't you be focusing on the game?"
-        show FMG happy
-        FMG "Nah, I don't care if I lose or not. Besides, it's going to enter a cutscene in a sec."
-        FMG "Can you believe this school has a recreation room, let alone three arcade games!"
-        MC "Yeah, so what's that you're playing?"
-        FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of 'Fallen City'. I'm just about to fight the final boss once this cutscene finishes."
-        show FMG happy at Position(yalign=1.0), Transform(xzoom=-1.0)
-        "Just then, a bat-cat-zombie-thing showed up. Akira took about 3 minutes to beat it, and once she did a leaderboard showed up, displaying her score."
-        show FMG neutral at Transform(xzoom=1)
-        FMG "Man, that was fun. Third place too, not bad."
-        MC "Yeah, thinking of going for first place?"
-        FMG "Nah, unless I've got a VERY good reason, I'm not that competitive. Speaking of competitiveness, look who just came in..."
-        "By the doorway was a slightly soaked Alice, looking annoyed."
-        FMG "Hey Alice! How's it going?"
-        show WG angry at Position(xpos=0.25) with dissolve
-        WG "Irritatingly. The weather report said nothing of showers, and... Look at me."
-        FMG "Oh yeah, Kei said something about rain but I wasn't paying attention. At least you found shelter before it really got bad."
-        show WG neutral
-        WG "(Sigh) Any damage to my hair or clothing is bad enough, but I won't bemoan a fair sprinkling."
-        "Akira turned to Alice and  pointed her thumb at the arcade game behind her."
-        FMG "Well, wanna take your anger out on these zombies?"
-        "Alice's expression remained like she was smelling something slightly unpleasant, but she walked up to Akira and took the proffered gun."
-        WG "Let me guess, I point and shoot anything that moves?"
-        FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
-        "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
-        "Eventually the zombies got to her, the screen turning red with blood splotches until the words 'Game Over' came up."
-        show FMG sad
-        FMG "...Um, you shoot off the screen... to reload. I'm sorry."
-        WG "I see now."
-        "She put in another 100 yen coin. Her game didn't improve by much, but she did manage to avoid getting mobbed again. Come the boss, though..."
-        WG "And this is what people do for fun?"
-        FMG "Eh, it's not for everyone, I know. I've been playing arcade games most of my life. But yeah, if this isn't doing anything for you, you can stop playing."
-        WG "Not so fast. I'm not going to let some cheap toy beat me." #had suggestion
-        FMG "Um actually, they cost a lot of cash to produce, you gotta program, animate the people, it's basically like a movie..."
-        "This cycle went on for about an hour, Alice making incrementally more progress with each bit of cash, but eventually I realized the rain stopped."
-        MC "Hey, the rain stopped, I should head back to my room."
-        FMG "Yeah, Hey... Alice, the rain stopped, are you going to stop?"
-        show WG angry
-        WG "Not just yet. One more go at that cyber-brain and I should have it beat."
-        show FMG sad at Position(yalign=1.0), Transform(xzoom=-1.0)
-        FMG "{i}(Yeah I don't think she realizes that's the third boss and there's three more to go...){/i}"
-        FMG "Well, see you at class tomorrow, don't play for too long."
-        WG "I'll be fine."
-        "We left Alice there, playing that game for who knows how long. As for Akira and I, we exchanged goodbyes and went our separate ways."
-    jump daymenu
+        WG "Alright, fair enough. I will admit I underestimated the skill required to do well in this game. It's much more complex than I initially gave it credit for. You certainly showed quite the aptitude for it."
+        FMG "Heh, that's what I like to hear. I hope we have an understanding then? Let's play again sometime."
+        show WG neutral-2
+        WG "Sure. But it probably won't be any time soon. It's not an activity that's well suited for my talents. Speaking of that though, if you do want to get a workout in swimming at the pool, let me know. I'd be happy to join you."
+        FMG "Sounds good. I'd like that."
+        WG "Looks like the sun has come out again. I'm going to head back to my room. I'll leave you two to it."
+        hide WG with dissolve
+        MC "Gotta be honest, I expected her to throw a fit after she lost. She doesn't strike me as being used to not getting her way."
+        FMG "Yeah, tell me about it. I was thinking the same thing. She's not near as bad as people say. Still a bit stuffy, but whatever."
+        MC "You up for another round? I promise to give you a better run for your money than Alice."
+        show FMG happy at altMove(0.5, 0.5)
+        FMG "Wouldn't exactly be hard, hehe."
+        show FMG neutral
+        FMG "I gotta get going though. I had originally planned to do a run before it got too late. I'll catch you later."
+        MC "Later."
+        "Having a bit more time to kill, with a few coins of my own I fired up the game. I wanted to prove to myself that I could at least get a better score than Alice. Wouldn't want to embarrass myself in front of Akira if I did finally get to play a game with her."
+        jump daymenu
 
 label FMG012:
     scene Gym
@@ -1687,36 +1735,56 @@ label FMG015:
     $setFlag("VisitedTown")
     "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."
     "The streets were full of bustling people given the time and day, everyone was either working or buying things from the many open stores. Seeing so many going shopping made me feel like buying something too."
-    "As I was taking in the sites as well as wondering what store I should go to, a thought came to me."
+    "As I was taking in the sites and wondering what store I should go to, a thought came to me."
     "Akira had been going out of her way to help me work on my muscles; while I did believe that just working out was payment enough for her, I felt like I should at least give her something."
-    "While lost in thought, I came across a store called ' Pop Culture', the front of the building was made of bricks and concrete, with anime figures and cardboard cutouts in the window frames. I figured this was as good a spot as any, so I went inside."
-    "The store seemed to, as the name implied, caters to pop culture of this generation, the inside also had brick walls as well as posters of various media. The stores goods for sale consisted of toys, games, and of course, clothing."
-    "Now because of my only knowledge of what I went to the hoodie section to find a few that popped out to me."
-    "On the right was a gray hoodie, the hoodie was a weightlifting stick figure sweating profusely, with the words 'No Pain no Muscle Gain.' on the bottom. Considering her lifestyle, Akira might love this one."
-    "In the middle was a crimson hoodie and this one was a detective looking man holding a gun, and the words 'Sun's out Guns out!' were displayed in a word bubble. I think I recognize the guy from that one arcade game Akira likes, Cyber Rage."
-    "Last but not least was... a mint green hoodie that has a picture of a cute anime cat girl with white stripes on the left chest area... on the back was the words 'Nya'dorable' above four anime cat-girls."
-    "..."
-    MCT "I'm tempted to get it just as a joke."
+    "While lost in thought, I came across a store called \"Pop Culture\", the front of the building was made of bricks and concrete, with anime figures and cardboard cutouts in the window frames. I figured this was as good a spot as any, so I went inside."
+    "As the name implied, the store seemed to cater to the pop culture of this generation. The inside also had brick walls as well as posters of various media. The store's goods for sale consisted of toys, games, and of course, clothing."
+    "I didn't really know what I was looking for specifically, but I was drawn to the hoodie section when I noticed a few that popped out to me."
+    "To my right was a gray hoodie, it had this little stick figure dude sweating profusely as he was doing a few bicep curls. Right above the character's head were the words \"No Pain, No Muscle Gained.\""
+    MC "Hm, Akira might like this. Let me see what else they have and I'll come back to it if the others suck."
+    "In the middle was this crimson hoodie, this one had a detective pointing a gun and holding a magnifying glass. It had the words \"Hunt the Truth\" below the detective in what I could only describe as a cyber-punk font."
+    MC "Ah, I think I remember this guy. He should be from that arcade game Akira is into... {w}Damn, what's the name???"
+    pause .5
+    MC "Cyber Rage! That's it! I'll add this to the list of potential purchases."
+    "The only other hoodie that caught my attention was this mint green one that had an anime cat girl on it followed by the words \"Nya'dorable\" on the back."
+    MC "Wow, this is hideous... I love it! This would be fantastic as a joke."
+    MCT "Hm, I could be here all afternoon at this rate, I should probably just make a decision..."
     menu:
         "No Pain no Muscle Gain.": #+1
             $setFlag("FMG015_c1_1")
             MCT "Well, she does work out a lot, I'll get her this one, I'm sure she'll like it."
-        "Sun's out Guns out!": #+2
+        "Hunt the Truth.": #+2
             $setFlag("FMG015_c1_2")
             MCT "Well, she sure does love arcade games, I think she'll like this one a lot."
         "Nya'dorable.": #+5
             $setFlag("FMG015_c1_3")
-            MCT "...Yeah, I don't know if she'll like this... but it might be funny to give this to her."
-    "With the sweat shirt in hand, I paid for it, and set my sights on finding Akira."
-    "I figured that given I was already in town, I would start my search for her at the local gym."
-    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment."
-    "The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a 'Rowing Machine', pulling the rope thing in a similar manner of rowing a boat."
-    "It did not take long for her to see me, she smiled and gave me a wave to come over."
+            MCT "The more I think about it, the more I'm not sure if she'll like this... Argh, but it would be so funny to give this to her. {w}I'm risking it for the biscuit."
+    "With the sweatshirt in hand, I paid for it, and set my sights on finding Akira."
+    MCT "I'll send her a text and see where she's at, I'm not running for five hours looking for her."
+    MCCell "Hey, Akira! I got something I think you'd love. Are you hanging around town by chance?"
+    FMGCell "Yo, Kei-kun! I'm hanging out at the arcade right now."
+    MCCell "Noice, I'll be there soon. Don't go anywhere."
+    FMGCell "No promises, haha. See ya soon."
+    scene black with fade
+    pause 0.5
+
+    scene Arcade with fade
+    play music Busy
+    MC "Alrighty, where is she? Shouldn't be hard to find her given her build."
+    pause 1
+    MC "Ah-ha, there she is. I'd recognize that ponytail anywhere."
+    pause .5
+    MC "Yo, Akira!"
     show FMG happy with dissolve
-    FMG "Sup Kei-kun! What brings you to this side of the island?"
-    MC "Well, I wanted to thank you for going out of your way to help me workout. So I got you something?"
+    FMG "Ayyy, what's up, dude? I was wondering when you'd show up."
+    MC "I didn't think I'd survive the walk over here. If it goes over five minutes I start to sweat and die. Terrible, really."
     show FMG neutral
-    FMG "Hmm? You got me something? What is it?"
+    FMG "Sounds horrible. Have you ever considered trying to stop, you know, dying?"
+    MC "Sometimes... other times I just get back up, it's a vicious cycle. {w}Buuut, getting back to what we discussed on the phone... sorta."
+    MC "I got you a gift! For helping me at the gym!"
+    show FMG happy
+    FMG "You didn't have to! Your company is enough for me, honestly."
+    MC "Nah, you're going to love it... {w}Here."
     "I handed her the bag with the hoodie in it. She pulled it out to get a good look at it..."
     if getFlag("FMG015_c1_1"):
         "...only to look a mix between confused and disappointed."
@@ -1725,10 +1793,10 @@ label FMG015:
         MC "Something wrong?"
         FMG "Well, don't get me wrong, I appreciate the hoodie and I am probably going to wear it... but don't you think it's kinda generic and unoriginal?"
         MCT "...In hindsight, Akira was never one to cater to the cliche of being a muscular tomboy..."
-        MC "Oh... I'm sorry, it's just that I when I saw it I thought of you."
+        MC "Oh...I-I'm sorry. It's... it's that when I saw it I thought of y-you."
         show FMG surprised
         FMG "...You... thought of..."
-        "It appeared that my words had swayed her in someway. Her slight disdain turned into surprised and then joy."
+        "It appeared that my words had swayed her in some way. Her slight disdain turned into surprise and then joy."
         $setAffection("FMG", 1)
         show FMG happy
         FMG "You know what, I really appreciate it that you got me this."
@@ -1736,9 +1804,10 @@ label FMG015:
         "...and upon seeing it, looked happy."
         show FMG happy
         $setAffection("FMG", 2)
-        FMG "Aww sweet! It's Matthew Ryberg from Cyber Rage:CB saying his famous catchphrase!"
-        MC "Oh, you like it?"
-        FMG "Yeah I do! Thanks dude!"
+        FMG "Yooo! It's Matthew Ryberg from Cyber Rage with the game's slogan. Ugh, I freaking love this!"
+        MCT "I'm so good at this, I deserve an award."
+        MC "I'm happy you like it!"
+        FMG "It's awesome! Thank you so much, Kei."
     else:
         "...and her reaction was not confusion like I had predicted, but pure joy and excitement... and that was an understatement."
         show FMG surprised
@@ -1746,176 +1815,47 @@ label FMG015:
         show FMG happy
         FMG "*GASP* OH MY GOD! I LOVE NYA'DORABLE!"
         "She was squealing like a child."
-        MCT "...Huh?"
+        MCT "...Huh? Did I... Did I just play myself?"
         MC "Wait, really?"
         $setAffection("FMG", 5)
-        FMG "Yeah! I was in grade School when the manga came out and I've been a huge fan of Nya'dorable ever since! I even plan to watch the anime when it comes out this summer!"
+        FMG "Yeah! I was in grade school when the manga came out and I've been a huge fan of Nya'dorable ever since! I even plan to watch the anime when it comes out this summer!"
         FMG "I mean, sure I'll have to cut the sleeves and a bit of the gut area, but I absolutely love it! How did you know?!"
         MC "I... had a hunch."
+        MCT "Not the reaction I was expecting but we take those... I guess...?"
         show FMG neutral
-        FMG "Guess you got lucky then. After all, love it!"
+        FMG "Guess you got lucky then, haha. Man, this is the best!"
         "She pauses for a moment."
         FMG "Though..."
         show FMG happy
         FMG "...I'm glad you didn't get something that has a bodybuilder on it or something."
         MCT "!!!"
-        MC "Yeah... Right..."
+        MC "Y-Yeah... Totally {size=-6}What clown would've bought that...{/size}"
     show FMG happy
-    FMG "Hey look, as much as we workout, why don't we just hang out?"
-    MC "Sure, we're already in town, let's go exploring."
-    FMG "Alright! Just wait right here while I make the appropriate trimmings on this in the locker room, I'll be right back."
-    "It didn't take her long to trim the hoodie, roughly ten minutes or so. By the time she came out, she was wearing the hoodie with pride."
-    FMG "Okay! I'm dressed to not impress and hyped!"
-    MC "So what's the game plan?"
-    FMG "Funny you should say. We're going to the one place I go when I'm bored and don't feel like exercising."
-    FMG "The arcade!"
-
-    scene Arcade with fade
-    "After about a 15 minute walk, we made it to Akira's favorite arcade, Grand Blaze Arcade."
-    "Inside was filled with the sounds of a hundred arcade games being played mixed with the sounds of enjoyment from People of various ages playing. Beyond that there wasn't much in the way of decoration beyond the arcade cabinets."
-    "There was a man behind the front counter. Late 20's black hair covered with a baseball hat, glasses, beard and wearing a gray long sleeve shirt."
-    show FMG happy with dissolve
-    FMG "Yo Fujimoto!"
-    Fujimoto "Hey Mizutani, not everyday you come here before six pm, let alone bring someone with you. What's the occasion?"
-    FMG "Wanted to hang out with this guy for getting me this hoodie!"
-    Fujimoto "Nice, have fun you two."
-    FMG "We will."
-    FMG "Alright, I got a bunch of coins in cases like this. Let's do this!"
-    "For the next hour and a half, I played various arcade games with Akira. Spending time with her, either exercising or just hanging out, has been enjoyable and exhilarating."
-    jump daymenu
-
-label FMGOPT016:
-    scene School Planter with fade
-    play music HigherEdu
-    "It was such a beautiful day; the sun is shining, the birds were flying, the wind was blowing..."
-    "...and I was so bored!"
-    "Seriously, normally I'd have something to do, but for the life of me I can't think of anything to do besides lay down on the grass, stare at the blue sky, and sulk in my boredom!"
-    "My vision of the sunlight was then blocked by Akira standing over me."
-    show FMG neutral with dissolve
-    FMG "Hey Kei-kun, how's it going?"
-    MCT "Finally! Something not boring! Thank you my savior! Wait, she's expecting a response. Quick you fool! Say something!"
-    menu:
-        "I'm bored.":
-            MC "...Bored..."
-        "I'm SUPER bored.":
-            MC "...Super... Bored..."
-        "I'm so bored I fear the onset of rigor mortis.":
-            MC "...Too bored... for big words..."
-    show FMG happy
-    FMG "*Giggle*"
-    MCT "...Smooth move, genius... Well, at least Akira got a giggle out of my suffering."
-    FMG "Well then, how about you take that offer of mine, and let's head into town?"
-    MC "Yes! ...I mean, sure."
-    "..."
-    MCT "Okay well, I'm just going to ignore my small outburst and follow Akira to town."
-    FMG "Man, you're nuts, dude. Well, come on, let's see what the town has to offer."
-    scene Town with fade
-    play music BrightLights
-    "While walking down a street, we came across what appeared to be a shopping district dedicated to technology and electronics. Despite the fact we could pick literally any electronic store, retro shop, or even the otaku store to check out..."
-    show FMG neutral with dissolve
-    FMG "You know what, what the hell, let's check out this café!"
-    "...She picks the only maid café in this district, if not the entire town."
-    MC "...Um, that looks like a maid café."
-    FMG "Yeah so? I want to see what the fuss is about with these places. Guess you never thought I'd be up for something like this?"
-    MC "A little, I'm more surprised there's even one on this island."
-    FMG "Meh, I think the town's main income comes from the school, so they probably want to get every niche of school life for extra income."
-    MCT "Huh, that actually makes sense."
-    MC "Well, you've convinced me."
-    show FMG happy
-    FMG "All right!"
-    scene Cafe with fade
-    play music Schoolday
-    "As we entered the café, we were greeted with a flurry of pink and white decorum. The room itself felt inviting, if not a bit too... pastel, for my tastes."
-    "Still, feminine style or not, it gave of a naturally comfortable aura enough to beckon us to stay."
-    show FMG neutral with dissolve
-    FMG "Huh, this place is cute."
-    MCT "I find it more cloying than cute."
-    "Once we were done 'admiring' the scenery, we took our seats and waited for the waitress."
-    MC "You know, never thought we'd be in a café like this."
-    FMG "Well, I don't know about you, but I'll try anything once."
-    "About two minutes later, our waitress came by, but I couldn't shake the feeling I knew her."
-    show Chibuki neutral at Position(xpos=0.75)
-    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1)
-    with dissolve
-    Chibuki "Hi, welcome mast- oh, crap."
-    show FMG surprised
-    FMG "Wait a minute, CHIBUKI?!"
-    MC "Wait is that rea-"
-    Chibuki "*ahem* Why masters, I would love to have a conversation once my break starts, until then what would you like?"
-    MC "Um... the Sunshine Sundae with extra nuts."
-    FMG "...Milk tea."
-    Chibuki "Fantastic choices! I'll have them right away!"
-    hide Chibuki with dissolve
-    MC "...Well, this is happening, I guess."
-    "I didn't get a single response. Akira was silent the entire time, staring at the spot Chibuki was."
-    "Though to be fair, it must have been quite the shock, seeing your roommate acting the exact opposite way you'd always seen her... while dressed as a maid."
-    show Chibuki neutral at Position(xpos=0.75) with dissolve
-    Chibuki "Here you go, and I'll see you in 10. Till then masters, I bid you adieu!"
-    hide Chibuki with dissolve
-    "We did nothing but consume our orders in silence while we waited for Chibuki's break to happen."
-    scene Town with fade
-    play music HigherEdu
-    "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki."
-    "I heard a 'hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
-    show Chibuki neutral at Position(xpos=0.75)
-    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1)
-    with dissolve
-    Chibuki "God, out of all the people in the world to come to this one maid café, it had to be my roommate and her boyfriend!"
-    "Chibuki vented out her frustrations, though in our defense this island wasn't exactly Tokyo."
-    if checkAffection("FMG", ">", 10):
-        show FMG aroused
-        FMG "B-boyfriend?"
-        show FMG surprised
-        FMG "I-I mean um..."
-        show FMG neutral
-        FMG "Uh hey Chibuki, I almost didn't recognize you without your bulging nips."
-    elif checkAffection("FMG", ">", 5):
-        FMG "Ha, boyfriend; He's just a friend Chibuki. But back to you, I didn't recognize you without your bulging nips!"
-    else:
-        show FMG angry
-        FMG "Geez, Chibuki. You think I can't talk to a guy without it meaning something? "
-        show FMG neutral
-        FMG "Getting back on track, you look different without your bulging nips!"
-    Chibuki "Yeah well, My growth is still concealable so I don't have to worry too much for now. Besides, all the padding over them to smooth out the bulge makes me look bustier, which usually means more tips."
-    MC "I never would have thought you would work here."
-    Chibuki "I think I got the job because I'm half-British, guys love the British maid type. Plus I guess they wanted some variety."
-    show FMG surprised
-    FMG "But why are you even working here in the first place?!"
-    Chibuki "I want money, the job pays well."
+    FMG "Hey, since you're here, you want to join me for a few rounds on Brain Blasters RX?"
+    MC "Uh... Yeah, why not? I'll hop in for some games."
     show FMG neutral
-    FMG "Chibuki, I know you too well. If that was the case, than why didn't you get a job at a mini market or something less... degrading."
-    Chibuki "...Fine! I really like acting like a maid, ok! It's one of my biggest fantasies ever! The maid falling in love with her master, willingly mind you... I find it romantic, THERE, HAPPY?!"
-    MCT "Huh... Never picked Chibuki as the hopeless romantic type."
-    Chibuki "Look, if any of the students, god forbid Shiori, finds out about this, then I'm so boned. Gossip spreads fast. Akira, if you keep quiet about this... I'll clean my half of the room. And Kei..."
-    $setVar("RinFavor", getVar("RinFavor") + 1)
-    if getVar("RinFavor") >= 1:
-        Chibuki "I know I already owe you a favor Kei, but I'll give you another for your word."
-    else:
-        Chibuki "I'll give you a favor for later, deal?"
-    FMG "On one condition Chibuki. You gotta clean the room, while dressed as a maid!"
-    MCT "I can't tell if she's serious or not, maybe I should-"
-    Chibuki "I'll do it."
-    show FMG surprised
-    FMG "..."
-    FMG "WHAT?!"
-    Chibuki "If that's what it takes to buy your loyalty, then so be it... master."
-    FMG "...Nope. Nope, I'm not dealing with this! Nope! I'm nope'ing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
-    hide FMG with dissolve
-    "Akira just left, repeating 'nope' to herself till she was out of earshot. I turned to Chibuki to say something, but to my confusion and surprise, she was grinning like she'd won something."
-    show Chibuki neutral at Position(xpos=0.5)
-    Chibuki "And that, my dear Keisuke, is how you win a battle against your roommate."
-    MC "...Huh?"
-    Chibuki "That whole romantic BS was just to fluster Akira; an act, if you will. Dad always did say I had the makings of a great method actor."
-    MC "Then, why are you working here?"
-    Chibuki "For the money of course. I thought we established that. Now then, my break is almost over. Oh and don't worry, the favor's still there so long as ya keep this on the down low."
-    "Before anything was said, she... did that weird peace symbol pose and winked..."
-    Chibuki "Come again, master! <3"
-    hide Chibuki with dissolve
-    "Once she was finished with that, Chibuki went back into the café."
-    MC "Well, at least I'm not bored anymore..."
-    MC "..."
-    MC "....."
-    MC "...Aaannnd I'm bored again. What am I going to do now?"
+    FMG "That's what I like to hear!"
+    "I popped in some coins and readied myself for the onslaught of brain invaders."
+    FMG "On your left!"
+    MC "I got it, don't worry. {w}Damn, I'm good."
+    FMG "If it wasn't for my callout, you would've been toast. You don't have any awareness, haha."
+    MC "Bruh, don't pretend like you didn't almost die when the major rolled up. I was {i}watching{/i} your health bar vanish."
+    FMG "I'm watching your health bar vanish right now, bozo."
+    MC "Huh? {w}Oh, crap... four majors?!?! What is the difficulty?"
+    show FMG flex
+    FMG "Hard, duh."
+    show FMG neutral
+    FMG "Did you need me to pick easy mode for the damage reduction and increased healing?"
+    MC "N-No... {size=-6}She reads me like a book...{/size}."
+    MC "Pass me the chainsaw and the MSG-9000 and I'll be just peachy."
+    MC "Wait, never mind... they killed me."
+    show FMG sad
+    FMG "I'll put it on normal."
+    MC "No, no it's fine. Rez me, I have the Fray Gun, I can carry us."
+    show FMG neutral
+    FMG "Don't fail me, Kei-kun. This is my last rez pack."
+    pause 2
+    "I may or may have not failed her. I refuse to comment on what happened..."
     jump daymenu
 
 label FMG016:
@@ -2138,7 +2078,7 @@ label FMG017:
     MC "I didn't say it made sense."
     show FMG neutral
     FMG "Ignoring that, what kind of messages has she been sending?"
-    MC "Well, it's mostly just 'How are you doing?' and such. In the latest one, she was asking about why my sis-"
+    MC "Well, it's mostly just \"How are you doing?\" and such. In the latest one, she was asking about why my sis-"
     show FMG surprised
     FMG "O-Oh no!"
     "Alas, I was not able to complete my sentence about how my sister has not been replying to mother's mail thanks to Akira. My confusion as to why Akira interrupted me was answered to what was in front of us."
@@ -2307,10 +2247,10 @@ label FMG018_c1_1:
     AE "Of course."
     show FMG happy
     FMG "Wow, that's awesome of you!"
-    AE "What say you to a plate of 'Himmel und Erde', hm?"
+    AE "What say you to a plate of \"Himmel und Erde\", hm?"
     show FMG neutral
     FMG "Eh? H-Hey, was that French? Are we gonna make French food, because I can't even cook cereal right."
-    AE "No, that was German. It means 'Heaven and Ea-'"
+    AE "No, that was German. It means \"Heaven and Ea-\""
     show AE surprised
     AE "Did you just say you can't make cereal?"
     FMG "Yeah, my mom never taught me how to cook it."
@@ -2422,7 +2362,7 @@ label FMG018_c1_2:
     MC "...Oh."
     $setAffection("FMG", -2)
     show FMG angry
-    FMG "So much for your 'feeling', dude. Now what, genius?"
+    FMG "So much for your \"feeling\", dude. Now what, genius?"
     MC "Ummm... Do you guys think we can make ramen?"
     show GTS neutral
     GTS "Well, I suppose it would not hurt to try."
@@ -2455,7 +2395,7 @@ label FMG018_c1_3:
     MC "Hey Honoka, Akira and I need a third partner, are you open?"
     BE "Oh yeah! I could join up with ya, Kei-chan."
     FMG "Sweet, but do you have any cooking experience?"
-    BE "Ah, I've made instant ramen before. Oh, and those 'make your own candy' kits you can find sometimes."
+    BE "Ah, I've made instant ramen before. Oh, and those \"make your own candy\" kits you can find sometimes."
     FMG "That's better than what I can do, I can't even cook cereal right."
     BE "Uh. But you don't... cook... okay!"
     MC "Okay, do you guys have any ideas on what we can make?"
@@ -2890,11 +2830,11 @@ label FMG021:
     HR "Hotsure-san, did you actually help Mizutani-san?"
     MC "You know what, there was not only nothing I could do, but I felt like impeding the trainwreck would have just made me a casualty."
     HR "Well, regardless, I'd think she'd have SOME knowledge on her own topic."
-    HR "The emu war was in 1932 by Major G.P.W. Meredith, not 'Emmet Mel'."
+    HR "The emu war was in 1932 by Major G.P.W. Meredith, not \"Emmet Mel\"."
     MCT "...Huh?"
     HR "I figured Matsumoto-chan gave up at some point, but I'd think you'd know better to just find facts on the internet."
     MC "We, uh, used the book in the library."
-    MCT "'Used' being in massive quotations."
+    MCT "\"Used\" being in massive quotations."
     HR "Oh, yeah. The old one? Christ, I don't think anyone picked that up since I was a student."
     MC "..."
     MC "You drew dicks on page 25, didn't you?"
@@ -3080,7 +3020,7 @@ label FMG022:
         "My fingers pierced the loose soil veneer and dug into the cold, solid rock just past, and the dirt came with me, on my fingers and knees and the tips of my shoes, as I pulled myself higher and higher up the cliff."
         "I chanced to look up, and saw Akira's smile replaced with a dubious frown."
     else:
-        "And that's when I learned that 'well begun is half done' is an abhorrent, malicious lie."
+        "And that's when I learned that \"well begun is half done\" is an abhorrent, malicious lie."
         "Every meter I climbed was pain, tendon-wringing, lung-searing pain, sprinkled with dirt and drizzled with shortness of breath, all set in a bowl of tragic irony."
         "I think I was two meters off the ground and my arms were already beginning to shake; I think; I dared not look down."
         "But in my throes, I happened to look up and saw Akira... frowning down at me."
@@ -3121,7 +3061,7 @@ label FMG022_c1_1:
         hide FMG with dissolve
         "Gravity was for once a kindly mistress as we retraced our steps back down the slope; she hit the ground first and got a couple jumping jacks in before I touched down, too."
     else:
-        "Luckily, I had the 'take it slow' part downpat."
+        "Luckily, I had the \"take it slow\" part downpat."
         "The slope mellowed out closer to the top, which meant my arms had a slightly easier time dragging my useless legs and chest up across the rocks."
         "As new scrapes and bruises formed on my body by the second, I craned my neck up to see how far I had yet to go."
         show FMG happy with dissolve
@@ -3779,7 +3719,7 @@ label FMG025:
     FMG "I forgot to ask you at the field, but how do you feel about dancing anyway?"
     MC "I don't mind it, it's not my favorite thing in the world and it's also not my least favorite."
     MC "That being said, I am trying to see if I can still pull off some of my signature moves."
-    MC "Back in elementary school, I was kind of a big deal. Some called me the 'Disco King.'"
+    MC "Back in elementary school, I was kind of a big deal. Some called me the \"Disco King.\""
     show FMG happy
     FMG "Wow...I never thought I'd be going to a club with the Disco King himself, it is an honor my lord."
     "Akira kneeled down and bowed her head before quickly rising up and giving me a quick slap on the back."
@@ -3824,7 +3764,7 @@ label FMG025:
         FMG "Don't hurt yourself, I can't go far in heels."
         "I dropped to the floor and immediately started doing the worm."
         show FMG sad
-        FMG "Ya know...I didn't think that would be one of your 'signature moves'. I'm a bit disappointed Kei, I thought you'd have something more...flashy."
+        FMG "Ya know...I didn't think that would be one of your \"signature moves\". I'm a bit disappointed Kei, I thought you'd have something more...flashy."
         MC "Oh please it wasn't THAT bad. I think you are just jealous."
         FMG "Hm, I don't think that's it."
         show FMG angry-2
@@ -3959,7 +3899,7 @@ label FMG026_c1_2:
     show FMG angry-2
     $setAffection("FMG", -1)
     FMG "..."
-    MCT "I have a feeling she's not in a 'pun' kinda mood. Knew I should have gone with the crosswalk bit."
+    MCT "I have a feeling she's not in a \"pun\" kinda mood. Knew I should have gone with the crosswalk bit."
     "She turned from me and walked back down the mountain."
     MC "Akira, hold up."
     "She stopped and let out a huge sigh of frustration."
@@ -5031,9 +4971,9 @@ label FMG033_WG:
     FMG "You won't even explain why, though."
     WG "Must I? Must I justify the decisions I make concerning my own property?"
     menu:
-       "You can at least give her a reason. Saying 'No' just because comes across as rather petty.":
+       "You can at least give her a reason. Saying \"No\" just because comes across as rather petty.":
            jump FMG033_WG_1
-       "If she said 'No,' Akira, you should just accept it. She doesn't have to give a reason.":
+       "If she said \"No\", Akira, you should just accept it. She doesn't have to give a reason.":
            jump FMG033_WG_2
 
 label FMG033_WG_1:
@@ -5043,7 +4983,7 @@ label FMG033_WG_1:
     show WG neutral
     WG "Very well."
     WG "The fact is, the article in question was tailored to me specifically. To my proportions."
-    WG "Just because it is... 'expansive' does not mean it's suitable for any plus-sized woman."
+    WG "Just because it is... \"expansive\" does not mean it's suitable for any plus-sized woman."
     WG "You don't have the right figure for it, Mizutani-san."
     show FMG sad
     FMG "Oh..."
@@ -5059,7 +4999,7 @@ label FMG033_WG_1:
     $setAffection("FMG", 1)
     WG "Thank you for your help, Keisuke."
     MC "It was really nothing. People like it when you give them a reason for rejection."
-    MC "You can't just say 'Because I said so.' I think any parent could tell you that never works."
+    MC "You can't just say \"Because I said so.\" I think any parent could tell you that never works."
     "She raised an eyebrow."
     WG "Really? I never had trouble acquiescing to my parent's authority."
     "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I bit my tongue and found my seat."
@@ -5095,7 +5035,7 @@ label FMG033_FMG:
     menu:
        "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.":
            jump FMG033_FMG_1
-       "Saying 'I don't wanna' sounds childish.":
+       "Saying \"I don't wanna\" sounds childish.":
            jump FMG033_FMG_2
 
 label FMG033_FMG_1:
@@ -5117,7 +5057,7 @@ label FMG033_FMG_1:
     jump FMG033_FMG_after
 
 label FMG033_FMG_2:
-    MC "Saying 'I don't wanna' sounds childish."
+    MC "Saying \"I don't wanna\" sounds childish."
     MC "You could at least say why you don't want to."
     $setAffection("WG", -1)
     stop music
@@ -5142,7 +5082,7 @@ label FMG033_FMG_after:
     WG "Grrr..."
     MC "I think what Akira means to say is that your outfits probably have a certain amount of give."
     MC "And with a little work the dress can be adapted to suit her. We could find video tutorials online to help with that."
-    WG "You can't just take 'No' for an answer."
+    WG "You can't just take \"No\" for an answer."
     FMG "Hey, I don't work for you."
     MC "If there's a solution to your objection it's worth trying to work around it."
     show WG neutral
@@ -5655,7 +5595,7 @@ label FMG038:
     show FMG sad
     FMG "Did you hit your head or something? You've been so weird today..."
     show FMG flex
-    FMG "Maybe another bear hug can fix your 'broken arm', I'll snap it back in place, no problem!"
+    FMG "Maybe another bear hug can fix your \"broken arm\", I'll snap it back in place, no problem!"
     MC "Actually, I don't think it's broken anymore. It must be a Christmas miracle!"
     show FMG neutral
     FMG "...It's the middle of July..."
@@ -5782,7 +5722,7 @@ label FMG038:
     FMG "You are no fun sometimes you know that?!"
     show FMG neutral
     FMG "Anyway let's get started...the kuchisake onna is the ghost of a woman who was brutally killed and came back seeking vengeance. Her name comes from the deep, bloody gash that runs across her face, leaving her smiling from ear to ear."
-    FMG "She appears before lonely travelers at nightfall covering her face with a cloth to hide her true appearance. She'll sneak up on her victims and ask them if they think she is beautiful 'Watashi, kirei?' If they answer yes, she takes off her mask revealing her blood-dripping smile."
+    FMG "She appears before lonely travelers at nightfall covering her face with a cloth to hide her true appearance. She'll sneak up on her victims and ask them if they think she is beautiful \"Watashi, kirei?\" If they answer yes, she takes off her mask revealing her blood-dripping smile."
     MC "Hold on, if this wasn't a ghost you could apply this to any woman. They always ask guys if we think they are beautiful and it usually ends poorly regardless of our answer. That's true horror."
     show FMG neutral
     FMG "Please save your comments till the tale is over, thank you."
@@ -5792,7 +5732,7 @@ label FMG038:
     FMG "I'm big and beautiful, you couldn't ask for a better combo."
     MCT "Humble as always, I see."
     show FMG neutral
-    FMG "Okay no more interruptions, back to the tale. Where was I... Oh yeah! So after she reveals her face she'll ask the victim again if they think she is beautiful, 'Kore demo?'"
+    FMG "Okay no more interruptions, back to the tale. Where was I... Oh yeah! So after she reveals her face she'll ask the victim again if they think she is beautiful, \"Kore demo?\""
     FMG "If the victim says no or screams in fright, she'll slash them from ear to ear mimicking her own disfiguration. But if the victim lies and says yes again, she'll walk away-"
     MC "I don't know, this doesn't seem very scary."
     show FMG neutral
@@ -6240,7 +6180,7 @@ label FMG041:
     MC "Why though? It's not going to hurt you."
     show FMG sad
     FMG "I-I haven't told you... But I'm claustrophobic. It's the reason I don't button my shirt."
-    MC "That makes a lot of sense. I had always thought you did it cause it looked 'cool'. I wish you told me about this sooner though, I would've been willing to help."
+    MC "That makes a lot of sense. I had always thought you did it cause it looked \"cool\". I wish you told me about this sooner though, I would've been willing to help."
     FMG "You're right, I should've told you sooner. I-I guess I was scared..."
     MC "Of what? Did you think I'd be mad or weirded out that you kept this from me? Nah, fuck that. What kind of boyfriend would I be if I didn't support you?"
     show FMG happy
@@ -6923,7 +6863,7 @@ label FMG044:
     show FMG aroused-2
     FMG "Then stop talking and take off your clothes! Grab the bull by the horns, man!"
     MCT "I'm gonna die today, aren't I?"
-    MCT "Well, I suppose 'suffocating under a lusting bodybuilder' is probably one of the better ways to go..."
+    MCT "Well, I suppose \"suffocating under a lusting bodybuilder\" is probably one of the better ways to go..."
     MC "Are you sure about this Akira?"
     show FMG neutral
     FMG "We have to start sometime, no better time than the present, right?"
@@ -14194,7 +14134,9 @@ label FMG073:
     Natsuko "You know who he is."
     "{i}*Whoomp!* {w}*Whoomp!*  {w}*Whap!* *Crat!*{/i}"
     "Someone was hammering on the punching bag with what sounded like meteor strikes as we walked towards the other side of the gym."
-    #show Hageshi neutral with dissolve
+    hide Natsuko
+    show Hageshi neutral
+    with dissolve
     "I should have known. Hageshi-sensei, the math teacher."
     if isEventCleared("MC002"):
         "When I first saw him, at the time, he was probably the biggest person I'd ever seen... well, in person."
@@ -14202,6 +14144,8 @@ label FMG073:
         "Judging by how loud he was hitting that bag though, the guy certainly knew how to throw a punch."
     else:
         "He was a pretty big dude, and I heard he had a muscle growth factor, but next to Akira and Nat he didn't really look the part to be honest. The guy certainly knew how to throw a punch though."
+    show Hageshi neutral at altMove(0.5, 0.75)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
     Natsuko "Excuse me, Hageshi-sensei, do you have a minute?"
     Hageshi "Nice to see you, Okamoto-san. I have several, in fact. I wasn't really doing much. I was just passing through this part of campus and I couldn't help myself from getting a little time on the bag. What do you need?"
     Natsuko "Well? What are you waiting for? Talk to the man."
@@ -14241,11 +14185,13 @@ label FMG074:
     scene black with fade
     pause .5
 
-    scene Classroom with fade #Classroom alt optimal for Hageshi's classroom
+    scene Classroom
+    show Hageshi neutral
+    with fade #Classroom alt optimal for Hageshi's classroom
     play music Peaceful
-    #show Hageshi neutral with dissolve
     MC "Tada!"
-    show FMG sad-2 with dissolve
+    show Hageshi neutral at altMove(0.5, 0.25)
+    show FMG sad-2 at Position(xcenter=0.75, yalign=1.0) with easeinright
     FMG "Hageshi-sensei's class? This is what you dragged me to? Kei, I'm doing fine in math class. I don't feel like studying right now."
     MC "Come on, have a little bit of faith in me. This is Hageshi-sensei, if anyone knows how to help you, it's gotta be him. He's been through this before, he's gotta have some tips or tricks to help you out."
     "Hageshi-sensei looked up from me to turn his attention to Akira. {w}He seemed equally concerned that her usual infectious enthusiasm was gone, leaving a sad and dejected amazon in her place."
@@ -14412,8 +14358,9 @@ label FMG074:
     "Akra grabbed the sack of the leftover walnuts and scooped me up in her arms as she hauled ass back to the classroom buildings."
     scene Dorm Exterior with fade
     "We almost didn't make it, but we managed to run into Hageshi-sensei along the way."
-    #show Hageshi neutral with dissolve
-    show FMG neutral with dissolve
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     FMG "Hageshi-sensei!"
     Hageshi "Mitzutani-san? Is there something the matter?"
     FMG "I did it! I finally did it. I cracked a walnut without destroying it!"
@@ -14453,9 +14400,9 @@ label FMG074:
     show FMG flex
     FMG "Thanks Hageshi-sensei."
     Hageshi "I have to head home. I'll see you two tomorrow."
-    #hide Hageshi with dissolve
+    hide Hageshi with dissolve
     MC "Want to get some dinner then?"
-    show FMG neutral
+    show FMG neutral at altMove(0.5, 0.5)
     FMG "Yeah. That sounds good."
     MC "Sounds good to me too."
     FMG "Hey, Kei-kun..."
@@ -14521,9 +14468,10 @@ label FMG075:
 
     scene Track with fade
     "The next day we both got up nice and early to meet Hageshi-sensei outside by the track."
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral with dissolve
     "As we made our way over we noticed Hageshi-sensei was already there carrying with him what looked like a giant tote bag full of heavy stuff."
-    show FMG neutral with dissolve
+    show Hageshi neutral at altMove(0.5, 0.75)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) behind Hageshi with easeinleft
     FMG "Yo, Hageshi-sensei! What have you got planned for the day?"
     Hageshi "We're going to be playing some bocce ball."
     MC "Bocce ball? What is this a retirement home?"
@@ -14552,10 +14500,8 @@ label FMG075:
     FMG "Right. Go ahead with your turn then Hageshi-sensei."
     Hageshi "I'm not the one you're playing against."
     MCT "Wait a second... That must mean—"
-    show FMG neutral:
-        xzoom -1
-        linear 0.5 xcenter 0.25
-    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    show Hageshi neutral at altMove(0.5, 0.5)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) behind Hageshi with easeinright
     Natsuko "I hope you have more control over yourself than that if you hope to even score a single point."
     Hageshi "I wanted to make sure Okamoto-san didn't get rusty, so I invited her out too."
     show FMG angry
@@ -14674,8 +14620,8 @@ label FMG075:
     Natsuko "If you must know, I honestly can't decide. It's part of the rules, you have no reason to complain."
     hide FMG
     hide Natsuko
+    show Hageshi neutral
     with dissolve
-    #show Hageshi neutral with dissolve
     MC "Hageshi sensei, how long do bocce ball games usually last?"
     Hageshi "About 20 minutes."
     MC "How long have we been out here?"
@@ -14685,7 +14631,7 @@ label FMG075:
     Hageshi "You're acting like a bored kid at a wedding or a funeral. The event isn't about you— just accept that and stop whining."
     MC "Hmm. On second thought... forget I said anything."
     Hageshi "Alright 11-11, match point if one of you can manage to score this round."
-    #hide Hageshi with dissolve
+    hide Hageshi
     show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -14746,7 +14692,7 @@ label FMG075:
     with fade
     FMG "What? No way! You're taking us to the arcade? Awesome!"
     Natsuko "I appreciate the gesture Hageshi-sensei, but I'd rather spend my time on something more productive."
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral with dissolve
     Hageshi "I can't decide what's worse, being naive or ungrateful, but don't be so quick to underestimate me. You both still have more training to do."
     "Akira and Nat gave each other confused looks as Hageshi-sensei fed 5,000 yen into the token machine."
     Hageshi "Alright. Here are your tokens. See those skee-ball machines in the back? Score 5,000 points in a single round and you're done for the day. Whoever does that first wins."
@@ -14759,7 +14705,7 @@ label FMG075:
     show Natsuko neutral
     Natsuko "Give me the tokens."
     Hageshi "{size=-6}It's almost {i}too{/i} easy...{/size}"
-    #hide Hageshi with dissolve
+    hide Hageshi with dissolve
     "Akira had already gotten a head start, already eagerly rushing over to the skeeball machines. Putting a token in, the boops and beeps of the machine came to life as the lights lit up."
     "Natsuko soon followed, rushing to make up for lost time knowing she could fall behind if Akira got more rounds in first. It was quite a sight, even with another skee-ball lane between each of theirs they were practically shoulder to shoulder."
     "Much like the bocce ball, their first efforts weren't so great."
@@ -14783,8 +14729,8 @@ label FMG075:
     MCT "Wait a second..."
     hide FMG
     hide Natsuko
+    show Hageshi neutral
     with dissolve
-    #show Hageshi neutral with dissolve
     MC "Hageshi-sensei, is 5,000 points really even possible?"
     Hageshi "Well let's see, given the max you can score in a throw is 100, there's five balls, and the time it takes the balls to return... I'd say with every throw being perfect, done as fast as possible, the max you could score is 4,000."
     MC "Are you like some kind of evil genius Hageshi-sensei?"
@@ -14799,7 +14745,7 @@ label FMG075:
     MCT "Who would have thought so much was at stake over a stupid game of skee-ball?"
     "Although at this point in my year here at Seicho, the idea of a high stakes skee-ball game didn't even rank in the top 100 list of weirdest things I'd seen."
     "After a while I had exhausted all my usual options, but I did notice a cabinet for Wordly Fighters IV that gave me an idea."
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral with dissolve
     MC "Hey, Hageshi-sensei, you want to play me in some Wordly Fighters?"
     Hageshi "Wordly Fighters? Been a long time since I heard that name. Sure, why not?"
     MCT "This is all coming together."
@@ -14817,9 +14763,8 @@ label FMG075:
     Hageshi "Most of these machines were here when I went to school, Hotsure-san. Like I said, being bad at math makes life harder."
     MCT "I've given up on winning today."
     Hageshi "Let's check in on the girls."
-    #hide Hageshi with dissolve
-    show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind Hageshi
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) behind Hageshi
     with dissolve
     FMG "Hageshi-sensei! I'm glad you're here. We just ran out of quarters."
     Hageshi "Alright, let's see here, looks like a new high score of 2,730. Very nice Mitzutani-san."
@@ -14836,11 +14781,10 @@ label FMG075:
     FMG "Awesome! You're the best Hageshi-sensei!"
     "Akira had moved on to hot chocolate, but Natsuko was having none of it."
     hide FMG with dissolve
-    #show Hageshi neutral with dissolve
     Natsuko "What was supposed to be the prize for winning then?"
     Hageshi "Something something it's the friends we make along the way? I don't know— think of something inspirational someone else once told you if it makes you feel better."
     Hageshi "Look, you're both losers for not hitting 5,000, but you get free hot chocolate anyway. Anything can become a competition, Okamoto-san, but few things are worth the gray hairs."
-    show Natsuko disappointed at altMove(0.5, 0.5)
+    show Natsuko disappointed
     "Hageshi-sensei pulled Natsuko aside for a second. I probably wasn't supposed to hear it but I could."
     Hageshi "{size=-6}You don't need to keep trying to prove yourself Okamoto-san. You're an amazing athlete, but don't let your ego about that get in the way of allowing yourself to live an amazing life. Have some fun with your friends.{/size}"
     Natsuko "{size=-6}Sorry. Hageshi-sensei... I will try.{/size}"
@@ -14856,7 +14800,7 @@ label FMG075:
     FMG "Thanks for the hot chocolate, Hageshi sensei."
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "I wouldn't order this for myself, but it is a nice treat."
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral with dissolve
     Hageshi "A hard days work deserves a reward. I know it wasn't the easiest thing for the both of you, but you both have a lot more control now. {w}Still though, there's one other test I have in mind."
     Natsuko "Oh? What's that, Hageshi-sensei?"
     show FMG sad-2
@@ -14879,7 +14823,7 @@ label FMG075:
     extend " I'll take any chance I can get to toss you on the floor."
     Natsuko "I'd like to see you try and touch me with those man hands."
     Hageshi "Save it for another time, ladies. Enjoy the hot coco and each other's company. {w}{size=-6}As best as you two can.{/size}"
-    #hide Hageshi with dissolve
+    hide Hageshi with dissolve
     show FMG happy
     FMG "Yeah, he's right. {w}{i}Mmm!{/i} You gotta try this Nat!"
     Natsuko "I won't lie, it does smell very good."
@@ -14910,27 +14854,27 @@ label FMG076:
     with dissolve
     "On the mat they had this guy that looked every bit of 250kg. He was a big boy. Lot of blubber, kind of reminded me of a walrus."
     "He was shoving around some other muscular dude that looked like a meathead until he finally dragged him to the ground."
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral with dissolve
     Hageshi "That was sloppy. You can't just throw your weight around and expect to dominate every opponent."
     "Walrus Dude" "It's been working pretty well so far, Hageshi-sensei."
     "Meathead" "Get your fatass off of me!"
     "Walrus Dude" "Just for that, I'm going to sit on your head, assclown."
-    #show Hageshi angry
+    show Hageshi angry
     Hageshi "Alright, that's enough. Get off of him. {w}If you're so great, why don't you go up against me?"
     "Walrus Dude" "Hageshi-sensei, you aren't even wearing your gi."
     Hageshi "Did I stutter? Go ahead, grab whatever you can, I don't care. You won't get the chance anyway."
     "Walrus Dude" "We'll see about that."
-    #show Hageshi satisfied
+    show Hageshi satisfied
     Hageshi "Don't keep me waiting. Give it your best shot then."
     "The portly fellow charged him faster than that much blubber had any right to move,"
-    #show Hageshi angry
+    show Hageshi angry
     extend " but as soon as he got close, Hageshi grabbed the sleeve of his robe-thing, pulling him off balance while he grabbed his collar with the other arm."
-    #show Hageshi satisfied
+    show Hageshi satisfied
     "In a split second, Hageshi stepped across him and proceeded to toss Mt. Fatass over his hip and slammed him into the mat."
     play sound Thud
     show dummy with vpunch
     "{i}*BOOM*{/i}"
-    #show Hageshi neutral
+    show Hageshi neutral
     "Dust fell from the light fixtures as the impact reverberated through the whole auditorium."
     MCT "What I wouldn't give for Akira to toss me around like that."
     pause .25
@@ -14938,7 +14882,7 @@ label FMG076:
     "Walrus Dude" "{size=-6}Uuuuhhhh{/size}."
     Hageshi "No whining now. This is collegiate level, the training wheels are off."
     Hageshi "Let that be a lesson to all of you. Someone's strength is also their weakness. If they rely on something, that means they've neglected something else. If they use something too often, that makes them predictable."
-    #hide Hageshi with dissolve
+    hide Hageshi
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
     show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with dissolve
@@ -14977,8 +14921,8 @@ label FMG076:
     MCT "TMI there Nat..."
     hide Natsuko
     hide FMG
+    show Hageshi neutral
     with dissolve
-    #show Hageshi neutral with dissolve
     play music Peaceful
     "My train of thought was interrupted when it looked like Hageshi-sensei was getting ready to dismiss the club meeting."
     Hageshi "And remember, just because someone else is bigger and stronger, doesn't excuse you from having to work to be better than you are now. {w}That's enough for the day. Now hit the showers."
@@ -14989,9 +14933,8 @@ label FMG076:
     Hageshi "Ehh, he has the padding to take a pounding. Don't feel sorry for him."
     "Hagesi-sensei turned his attention from me to the girls."
     Hageshi "So, feeling ready for the big match?"
-    #hide Hageshi with dissolve
-    show FMG flex at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG flex at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind Hageshi
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) behind Hageshi
     with dissolve
     FMG "You bet!"
     Natsuko "I can scarcely wait any longer, Hageshi-sensei."
@@ -15095,7 +15038,7 @@ label FMG076:
     "Nat on the other hand took her RBF up to 11 and was staring daggers into Akira."
     play music Rivalry
     Hageshi "And go!"
-    #hide Hageshi with dissolve
+    hide Hageshi with dissolve
     play sound Whistle
     "The two titans immediately close the gap between them. A series of low pitch smacks filled the otherwise silent auditorium as the two solid walls of muscle lunged at each other trying to grab at each other's arms."
     Hageshi "Stop playing patty-cake and try to make something happen."
@@ -15618,14 +15561,14 @@ label FMGWG001:
     MC "W-Why do you even have these in the first place?"
     RM "You can never be too careful. Now then..."
     show RM smug
-    RM "Operation 'Stakeout at the Bakeout' starts now!"
+    RM "Operation \"Stakeout at the Bakeout\" starts now!"
     scene Town with fade
     play music HigherEdu
     "A few hours later, we arrived at the town with five minutes till the meeting. We peeked around to see the bakery in question."
     MC "Is that the place?"
     show RM neutral with dissolve
     RM "This is the only bakery on Genki Street, and the next closest bakery is nine blocks away on Enoshima Ave."
-    RM "Not to mention the obvious sign that reads 'Kazomazumi's Bakery.'"
+    RM "Not to mention the obvious sign that reads \"Kazomazumi's Bakery.\""
     MCT "Jeez. I was just being thorough."
     MC "Hey, why are we hiding behind a pole?"
     "...I forgot to mention we were peeking around a telephone pole."
@@ -15638,7 +15581,7 @@ label FMGWG001:
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
     "It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
     "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup."
-    "She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said 'Haruko' pinned to the front."
+    "She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said \"Haruko\" pinned to the front."
     Cashier "Hi, welcome to Kazomazumi Bakery! What can I get you two?"
     MC "Yeah, hi! This is our first time here, what do you recommend?"
     Cashier "Well, today we have a special on pies, or the cupcakes."
@@ -15897,7 +15840,7 @@ label FMGWG002:
     FMG "But I guess not."
     MCT "Oof."
     show Natsuko disappointed
-    Natsuko "Your 'jokes' are as pathetic as your athletic ability. Now if you'll excuse me I have other more important matters to attend to."
+    Natsuko "Your \"jokes\" are as pathetic as your athletic ability. Now if you'll excuse me I have other more important matters to attend to."
     "Natsuko tossed the dress over her shoulder and was halfway out the door before stopping and turning back towards us."
     show Natsuko smug
     Natsuko "Next time we cross paths you better be ready."

@@ -234,9 +234,9 @@ label global000:
     MC "What about when you said I was going to end up being a mutant monster that lived in the sewer?"
     show BE shrug
     BE "Hmm. I don't remember that. So it must never have happened. You're just making it up to toy with me."
-    MC "I swear. Your words were, and I quote: 'I'll end up a beautiful princess, and you'll probably end up living in ooze.'"
+    MC "I swear. Your words were, and I quote: \"I'll end up a beautiful princess, and you'll probably end up living in ooze.\""
     show BE happy
-    BE "Noooo, I said 'living the... schmooz...y life?'"
+    BE "Noooo, I said \"living the... schmooz...y life?\""
     MC "Did you now?"
     show BE neutral
     BE "Probably! Hehe."
@@ -284,7 +284,7 @@ label global000_cbreak_2:
     BE "Were you kidnapped or something...?"
     "I laughed in spite of myself."
     MC "No! I just, I was curious about stuff we never learned in high school."
-    MC "Things like how to say 'hello' and 'thank you' and stuff in a bunch of languages, weird science things they don't let us play with in chemistry class, all sorts of neat stuff..."
+    MC "Things like how to say \"hello\" and \"thank you\" and stuff in a bunch of languages, weird science things they don't let us play with in chemistry class, all sorts of neat stuff..."
     show BE happy
     BE "Gosh, when you put it like that, it doesn't sound like studying!"
     show BE happy with hpunch
@@ -753,7 +753,7 @@ label global000_RM_c3:
     RM "Hmph..."
     pause .5
     show RM distrustful
-    RM "Don't get any funny ideas, 'Keisuke Hotsure.' I've got my eye on you..."
+    RM "Don't get any funny ideas, \"Keisuke Hotsure.\" I've got my eye on you..."
     $setFlag("RM_govagent")
     $setAffection("RM", -2)
     jump global000_RM_after
@@ -1042,7 +1042,7 @@ label global000_sit_after:
     "The ceremony continued, all dreadfully familiar and rote, but at the end there was something different. The principal settled the papers behind the podium and hesitated for a too-long moment."
     Principal "Thank you to each and every one of you for your attendance today. My name is Manabu Noguchi, and I'm the principal of this academy."
     Principal "The future is forever uncertain. But no matter what the future holds, years hence or any day now, one thing is important above all else."
-    Principal "'Nosce te Ipsum.' {w}Latin, 'To thine own self be true'. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need."
+    Principal "'Nosce te Ipsum.' {w}Latin, \"To thine own self be true\". Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need."
     Principal "I'm sure you all have many questions as to why you're here. And, I assure you that the rest of the faculty and I will do our best to answer all of those for you."
     Principal "Now, each of you have been assigned a homeroom teacher. They will give you more information during class in a few minutes."
     Principal "Feel free to reach out to them should you need to. As is the same with every member of our faculty, they're here to help."
@@ -1054,7 +1054,7 @@ label global000_sit_after:
     "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way that was impossible to not draw the eye."
     MC "Matsumoto-san? What's going on?"
     show AE neutral-annoyed
-    AE "A more apt question would be 'Where is Utagashi-san'? This assembly is mandatory."
+    AE "A more apt question would be \"Where is Utagashi-san\"? This assembly is mandatory."
     AE "He's your roommate, is he not?"
     menu:
         "I haven't seen him...":
@@ -1580,18 +1580,18 @@ label MC002:
     show Takamura happy
     "I glanced over at Takamura, and she waved one hand with a small laugh."
     Takamura "And at the end there is our young pup. Yoshito Hageshi."
-    show Takamura neutral
-    #show Hageshi neutral
+    show Takamura neutral at altMove(0.5, 0.25)
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Hageshi-sensei glanced up from his pile of papers."
     Takamura "How long have you been here now, Hageshi-san? Five years now?"
     pause .25
     Hageshi "... Four, actually."
-    #show Hageshi satisfied
+    show Hageshi satisfied
     Hageshi "And, last time I checked, you've been here for only three years. So, by my count, you'd be the \"young pup.\""
     show Takamura happy
     Takamura "And, who's the youngest teacher in the room?"
     pause .5
-    #show Hageshi neutral
+    show Hageshi neutral
     Hageshi "..."
     pause .25
     "My eyes immediately went to his bulging biceps and shoulders. The dude looked like he could legitimately throw a car."
@@ -1599,12 +1599,11 @@ label MC002:
     "In addition, he was tall, and seemed to fill the entire room around him, especially compared to Takamura."
     Takamura "He's the academy's math teacher, so you'll probably see him sooner or later."
     hide Takamura
-    show HR neutral
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
     HR "Do yourself a favor and don't start any fights around campus."
     HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And, you don't want that."
     hide HR
-    show Takamura neutral
-    #hide Hageshi
+    show Takamura neutral at Position(xcenter=0.25, yalign=1.0)
     "Behind Hageshi-sensei, the two teachers by the water cooler left their positions and exited the room. As they left, I noticed the whistles around the neck of that one faculty member wearing an athletic outfit."
     if isEventCleared("BE003"):
         MCT "Huh. That's the same outfit that Honoka had on the other day."
@@ -1616,12 +1615,11 @@ label MC002:
     Takamura "Ergo, lots of whistles."
     MC "I... see..."
     pause .25
-    #show Hageshi neutral
     Hageshi "I thought the whistle thing was a joke between students?"
     Takamura "Well, joke or not, he's a busy man."
     #show Tsubasa annoyed
     Tsubasa "Pardon? Are you saying that my-last-name-is-too-long-san is wearing whistles for every club he coaches?"
-    pause .25
+    hide Hageshi with dissolve
     Tsubasa "Ridiculous compensation."
     pause .25
     #hide Takamura
@@ -2595,7 +2593,7 @@ label MC005:
     "Naomi grinned and turned back to her potted plant."
     show GTS happy at Transform(xzoom=-1)
     if not isEventCleared("GTS002"):
-        MCT "Wow, she's never this chipper. Is she like a 'plant mom' or something?"
+        MCT "Wow, she's never this chipper. Is she like a \"plant mom\" or something?"
     show GTS neutral
     MC "So, what have you got planned today? Any Greenery Day adventures?"
     GTS "Well, I wanted to come here before I did anything else, so I could make sure the garden looked proper for Greenery Day."
@@ -3704,17 +3702,20 @@ label MC006:
     HR "This little activity was Hageshi-san's idea, so blame him if you'd rather be somewhere else, but it's been pretty successful ever since we started it in the few years since he's been here."
     HR "Hmm? {w}Speaking of Hageshi-san..."
     play music RM
-    #show Hageshi neutral with dissolve
-    show HR at altMove(0.5, 0.25)
-    show RM concerned-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+
+    show HR at altMove(0.5, 0.25) with None
+    show Hageshi neutral
+    show RM concerned-2 at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Hageshi "Look what I found crawling in the vents."
     "Hageshi-sensei was carrying Daichi by his collar, like he had pulled out a stray cat from a storm drain."
     Hageshi "Nice try Utagashi-san, but no one gets out of this."
     HR "Thank you, Hageshi-san."
     hide RM with dissolve
     extend " Well, looks like the gang's all here. Let's get into what you'll be doing. I'll let Naoki-san give you the run-down."
-    hide HR with dissolve
-    #hide Hageshi with dissolve
+    hide HR
+    hide Hageshi
+    with dissolve
     play music Busy
     #show Naoki neutral with dissolve
     Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
@@ -3989,16 +3990,17 @@ label MC006_Team1:
     hide GTS
     with dissolve
     pause .2
-    show HR neutral with dissolve
     #show Naoki neutral with dissolve
-    #show Hageshi neutral with dissolve
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
     Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
     "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
     hide HR
     #hide Naoki with dissolve
-    #hide Hageshi with dissolve
+    hide Hageshi
     show FMG sad-2 at Position(xcenter=0.10, yalign=1.0)
     show WG angry at Position(xcenter=0.28, yalign=1.0) behind FMG
     show PRG sad at Position(xcenter=0.45, yalign=1.0)
@@ -4068,16 +4070,16 @@ label MC006_Team1:
     RM "Even I don't know what is going on anymore."
     MC "Hey now, you may not like it, but this is what peak performance looks like... or at least peak peripheral vision."
     hide RM
-    show HR neutral
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
-    #show Hageshi with dissolve
     #show Naoki with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
     HR "I don't know if anyone likes to see that."
     MCT "I'm not going back to playing blind, at this point it's best if I just own it."
     hide HR
-    #hide Hageshi with dissolve
+    hide Hageshi
     #hide Naoki with dissolve
     show FMG sad at Position(xcenter=0.10, yalign=1.0)
     show WG doubt at Position(xcenter=0.25, yalign=1.0) behind FMG
@@ -4267,13 +4269,15 @@ label MC006_Team1:
     hide WG
     hide FMG
     hide PRG
-    with dissolve
     #show Naoki with dissolve
-    #show Hageshi with dissolve
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Naoki "I knew this guy was a softy at heart."
     Hageshi "You're not the only one, Aoi-san seems to think so too."
     HR "Alright, we're done here. Class dismissed."
-    hide HR with dissolve
+    hide HR
+    hide Hageshi
+    with dissolve
     "So it wasn't exactly the greatest game of handball ever played. It was pretty clear things were starting to change. {w}{i}We{/i} were starting to change."
     "I wasn't sure what the future held for all of us, but for now I was glad we all got to have a little fun."
     jump daymenu
@@ -4556,16 +4560,17 @@ label MC006_Team2:
     hide GTS
     with dissolve
     pause .2
-    show HR neutral with dissolve
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
     #show Naoki neutral with dissolve
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
     Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
     "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
     hide HR
+    hide Hageshi
     #hide Naoki with dissolve
-    #hide Hageshi with dissolve
     show FMG sad-2 at Position(xcenter=0.10, yalign=1.0)
     show WG angry at Position(xcenter=0.28, yalign=1.0) behind FMG
     show PRG sad at Position(xcenter=0.45, yalign=1.0)
@@ -4634,16 +4639,16 @@ label MC006_Team2:
     RM "Even I don't know what is going on anymore."
     MC "Hey now, you may not like it, but this is what peak performance looks like... or at least peak peripheral vision."
     hide RM
-    show HR neutral
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
-    #show Hageshi with dissolve
     #show Naoki with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
     HR "I don't know if anyone likes to see that."
     MCT "I'm not going back to playing blind, at this point it's best if I just own it."
     hide HR
-    #hide Hageshi with dissolve
+    hide Hageshi
     #hide Naoki with dissolve
     show FMG sad at Position(xcenter=0.10, yalign=1.0)
     show WG doubt at Position(xcenter=0.25, yalign=1.0) behind FMG
@@ -4835,13 +4840,15 @@ label MC006_Team2:
     hide WG
     hide FMG
     hide PRG
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     #show Naoki with dissolve
-    #show Hageshi with dissolve
     Naoki "I knew this guy was a softy at heart."
     Hageshi "You're not the only one, Aoi-san seems to think so too."
     HR "Alright, we're done here. Class dismissed."
-    hide HR with dissolve
+    hide HR
+    hide Hageshi
+    with dissolve
     "So it wasn't exactly the greatest game of handball ever played. It was pretty clear things were starting to change. {w}{i}We{/i} were starting to change."
     "I wasn't sure what the future held for all of us, but for now I was glad we all got to have a little fun."
     jump daymenu
@@ -4963,7 +4970,7 @@ label MC007:
     MC "W-Why do you even have these in the first place?"
     RM "You can never be too careful. Now then..."
     show RM smug
-    RM "Operation 'Stakeout at the Bakeout' starts now!"
+    RM "Operation \"'Stakeout at the Bakeout\" starts now!"
     scene black with fade
     pause 1
 
@@ -4973,7 +4980,7 @@ label MC007:
     MC "Is that the place?"
     show RM neutral with dissolve
     RM "This is the only bakery on Genki Street, and the next closest bakery is nine blocks away on Enoshima Ave."
-    RM "Not to mention the obvious sign that reads 'Kazomazumi's Bakery.'"
+    RM "Not to mention the obvious sign that reads \"Kazomazumi's Bakery.\""
     MCT "Jeez. I was just being thorough."
     MC "Hey, why are we hiding behind a pole?"
     "...I forgot to mention we were peeking around a telephone pole."
@@ -4986,7 +4993,7 @@ label MC007:
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
     "It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
     "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup."
-    "She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said 'Haruko' pinned to the front."
+    "She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said \"Haruko\" pinned to the front."
     Haruko "Hi, welcome to Kazomazumi Bakery! What can I get for you two?"
     MC "Yeah, hi! This is our first time here, what do you recommend?"
     Haruko "Well, today we have a special on pies and the cupcakes."
@@ -5236,7 +5243,7 @@ label MC011:
     hide Tako with dissolve
     "Whether it was an expression of their own tensions, or an amusing distraction, the entire cafeteria seemed just as eager as the participants to see a fight go down."
     "I was pretty curious myself to be honest. {w}But just before either could start swinging, they both met a significant roadblock."
-    #show Hageshi neutral
+    show Hageshi neutral with dissolve
     stop music
     Hageshi "What seems to be the issue here, gentlemen?"
     "Both would-be fighters froze in place as they looked out the corner of their eyes to see where the eerily calm voice had come from. {w}The rest of the cafeteria took notice too— you could hear a pin drop in the place."
@@ -5379,7 +5386,7 @@ label global005:
         FMG "Guess what I found out yesterday? They've got an outdoor weight area behind the gym! Can't wait to try it out!"
         MC "Does that make a difference?"
         FMG "Sure! Morning and evening workouts can go harder than normal because you're being naturally cooled by the cold air!"
-        MCT "I boggled to think what a 'harder' workout was for Akira, seeing how hard she already pushed herself..."
+        MCT "I boggled to think what a \"harder\" workout was for Akira, seeing how hard she already pushed herself..."
     elif getHighestAffection() == "PRG":
         show PRG neutral with dissolve
         PRG "H-Hello, H-Hotsure-san...!"

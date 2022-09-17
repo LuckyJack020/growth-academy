@@ -156,6 +156,9 @@ init python:
         CASUAL = "casual"
         CASUAL2 = "casual-2"
         COOKING = "cooking"
+        EPILOGUE = "epilogue"
+        EPILOGUEBAD = "epilogue-bad"
+        EPILOGUEGOOD = "epilogue-good"
         FORMAL = "formal"
         GYM = "gym"
         SWIM = "swim"
@@ -795,12 +798,12 @@ init python:
 
     def setAEOutfit(o):
         global AEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.EPILOGUEBAD or o == OutfitEnum.EPILOGUEGOOD or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.CASUAL:
             AEOutfit = o
 
     def setBEOutfit(o):
         global BEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             BEOutfit = o
 
     def setFMGOutfit(o):
@@ -839,9 +842,9 @@ init python:
             NatsOutfit = o
 
     def setOkishoOutfit(o):
-    	global OkishoOutfit
-    	if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
-        	OkishoOutfit = o
+        global OkishoOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+            OkishoOutfit = o
 
     def setSakuraOutfit(o):
         global SakuraOutfit

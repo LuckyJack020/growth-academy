@@ -457,6 +457,28 @@ init python:
     )
     ost.manualDefineList.append(theme_HoL)
 
+    theme_WiN = ost.soundtrack(
+        name = "Solstice Night",
+        path = "Audio/BGM/scene_winter.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Wintry Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_WiN)
+
+    theme_WiV = ost.soundtrack(
+        name = "Solstice Night (Vocal Mix)",
+        path = "Audio/BGM/scene_wintervocal.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Wintry Theme Vocals",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_WiV)
+
     ## Base Template
     ######################################
 
