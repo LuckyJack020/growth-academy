@@ -27,10 +27,11 @@ define MC_BE = Character('Keisuke & Honoka', color="#C0C0C0")
 define Chibuki = Character('Chibuki', color="#CC33FF")
 define ChibukiCell = Character('Chibuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="ChibukiCell")
 define Jineko = Character('Jineko', color="#228B22")
+define Kanami = Character('Kanami', color="#C0C0C0")
 define Kokutan = Character('Kokutan', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Natsuko = Character('Natsuko', color="#C0C0C0")
-define Okisho = Character('Okisho', color="#FF4D40", what_prefix='{size=+1.5}', what_suffix='{/size}')
+define Okisho = Character('Okisho', color="#FF4D40", what_prefix='{size=+2}', what_suffix='{/size}')
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakura = Character('Sakura', color="#FF3399")
@@ -71,7 +72,6 @@ define YukoCell = Character('Yuko', color="#C0C0C0", what_prefix='{i}', what_suf
 define Fumika = Character('Fumika', color="#FF91DC") #GTS Route
 define Hamikawa = Character('Hamikawa', color="#C0C0C0") #AE Route
 define Haruhiro = Character('Haruhiro', color="#C0C0C0") #BE Route
-define Kanami = Character('Kanami', color="#C0C0C0") #BE Route
 define Koneko = Character('Koneko', color="#C0C0C0") #BE Route
 define Michiko = Character('Michiko', color="#C0C0C0") #PRG Route
 define Sakie = Character('Sakie', color="#C0C0C0") #BE Route
@@ -81,9 +81,9 @@ define Akio = Character('Akio', color="#C0C0C0") #GTS Route
 define Chie = Character('Chie', color="#FF9900") #FMG Route, MC Route
 define Chiyo = Character('Chiyo-san', color="#FF9900") #MC Route - Tsubasa-sensei’s wife
 define Francois = Character('François', color="#CC33FF") #WG Route
-define Fujimoto = Character('Fujimoto', color="#FF9900") #FMG Route
-define Haruko = Character('Haruko', color="#FF9900") #FMG Route, MC Route
-define Hidaka = Character('Hidaka', color="#FF9900") #FMG Route
+define Fujimoto = Character('Fujimoto', color="#DDA510") #FMG Route
+define Haruko = Character('Haruko', color="#DDA510") #FMG Route, MC Route
+define Hidaka = Character('Hidaka', color="#DDA510") #FMG Route
 define Katsumi = Character('Katsumi', color="#C0C0C0") #AE Route
 define Lee = Character('Lee', color="#C0C0C0") #WG Route - Summer Arc
 define Minei = Character('Minei', color="#C0C0C0") #FMG Route
@@ -97,6 +97,7 @@ define Wobbles = Character('Wobbles', color="#E54C84") #AE Route - Shiori's Hypn
 #General Use
 define All = Character('Everyone', color="#ffffff")
 define Announcer = Character('Announcer', color="#C0C0C0")
+define Attendant = Character('Attendant', color="#C0C0C0")
 define Barker = Character('Barker', color="#C0C0C0")
 define Barista = Character('Barista', color="#C0C0C0")
 define Card = Character('Card', color="#C0C0C0")
@@ -912,6 +913,13 @@ image Ryoko embarrassed = "Graphics/minor/ryoko/[RyokoOutfit]/embarrassed.png"
 
 image Chibuki neutral = "Graphics/minor/chibuki/neutral.png"
 
+image Kanami neutral = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/neutral.png"
+image Kanami angry = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/angry.png"
+image Kanami embarrassed = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/embarrassed.png"
+image Kanami happy = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/happy.png"
+image Kanami sad = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/sad.png"
+image Kanami surprised = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/surprised.png"
+
 image Kokutan neutral = "Graphics/minor/kokutan/neutral.png"
 
 image Minori neutral = "Graphics/minor/minori/neutral.png"
@@ -1007,6 +1015,7 @@ define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
 define audio.BE = "Audio/BGM/scene_BE.ogg"
 define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
 define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
+define audio.GTSAlt = "Audio/BGM/scene_GTS2.ogg" #Hidden Meadow (Taishogoto Ver.)
 define audio.RM = "Audio/BGM/scene_RM.ogg"
 define audio.MC = "Audio/BGM/scene_MC.ogg" #Our Protagonist
 define audio.MCGuitar = "Audio/BGM/scene_MCguitar.ogg"
@@ -1073,6 +1082,7 @@ define audio.BachGavottes = "Audio/BGM/Bach_Gavottes.mp3"
 define audio.ConcertinoTeleman = "Audio/BGM/Concertino_Teleman.mp3"
 define audio.InvitationCastleBall = "Audio/BGM/InvitationCastle_Doug.mp3"
 define audio.BaroqueCoffeeHouse = "Audio/BGM/BaroqueCoffee_Doug.mp3"
+define audio.SonataFMajor = "Audio/BGM/Sonata_AllegroF.mp3"
 
 define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
@@ -1099,7 +1109,8 @@ init 1 python:
     eventlibrary['MC006'] = {"name": "A Bad Handoff", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                               "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX20"],      "conditions": [[ConditionEnum.EVENT, "MC005"]]}
     eventlibrary['MC007'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,   "location": "unknown",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]}
     eventlibrary['MC011'] = {"name": "Put Up a Fight", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
-    eventlibrary['MC012'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC011"]]}
+    eventlibrary['MC033'] = {"name": "Put Up a Fight", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX80"],     "conditions": [[ConditionEnum.FLAG, "XX73"]]}
+    eventlibrary['MC034'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC011"]]}
 
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC001"]]}
@@ -1276,8 +1287,9 @@ init 2 python:
     eventlibrary['BE043'] = {"name": "(Insert Movie Here)", "girls": ["BE"], "type": EventTypeEnum.CORE,                             "location": "dorminterior",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE044", "obsflags": [],                  "conditions": []}
     eventlibrary['BE044'] = {"name": "Beach Day", "girls": ["BE"], "type": EventTypeEnum.CORE,                                       "location": "schoolfront",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE045", "obsflags": [],                  "conditions": []}
     eventlibrary['BE045'] = {"name": "TomoHono", "girls": ["BE"], "type": EventTypeEnum.CORE,                                       "location": "classroom",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE046", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE046'] = {"name": "200m", "girls": ["BE"], "type": EventTypeEnum.CORE,                                       "location": "classroom",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE047", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE047'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE046'] = {"name": "200m", "girls": ["BE"], "type": EventTypeEnum.CORE,                                       "location": "classroom",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE047A", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE047A'] = {"name": "Pool Floaties", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "businterior",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE048", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE048'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -1616,6 +1628,8 @@ init 2 python:
     eventlibrary['WGFMG001'] = {"name": "Afraid of a Little Fun?", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                             "location": "gym",               "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "WG043"], [ConditionEnum.OR, [ConditionEnum.EVENT, "WG032"], [ConditionEnum.EVENT, "WG037"]]]]}
     eventlibrary['WGFMG002'] = {"name": "Tamer of Dragons", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                   "location": "dorminterior",     "priority": PrioEnum.NONE,              "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "WG043"]]}
     eventlibrary['WGFMG003'] = {"name": "An Immovable Object", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "schoolexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size5"],        "conditions": [[ConditionEnum.EVENT, "WG063"]]}
+    eventlibrary['WGFMG004A'] = {"name": "Tropical Getaway", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "WG079"], [ConditionEnum.AND, [ConditionEnum.FLAG, "WGFMG001_3"], [ConditionEnum.EVENT, "WG074"]]]]}
+    eventlibrary['WGFMG004B'] = {"name": "Soba Shop Showdown", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "okinawa",     "priority": PrioEnum.ALL,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WGFMG004A"]]}
     eventlibrary['WGGTS001'] = {"name": "Off to a Bad Start", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": ["size3"],            "conditions": [[ConditionEnum.EVENT, "WG005"]]}
     eventlibrary['WGGTS002'] = {"name": "Aggressive Expansion", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                               "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": ["size3"],           "conditions": [[ConditionEnum.EVENT, "WG012"]]}
     eventlibrary['WGGTS003'] = {"name": "Delivery Boy Debacle", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                               "location": "dormexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size4"],           "conditions": [[ConditionEnum.EVENT, "WG022"]]}

@@ -669,7 +669,7 @@ label BE006:
     Woman "There you are, Sensei!"
     "A voice rang out behind us, but this one was totally unfamiliar to me."
     "Another woman walked up to Takamura-sensei."
-    #show Kanami neutral
+    show Kanami neutral with dissolve
     Woman "I had a question about our meeting later today."
     MCT "Ah, another teacher at the school it seems."
     MC "I don't think we've met, sensei. My name's Keisuke Hotsure."
@@ -691,8 +691,9 @@ label BE006:
     BE "Eh, I'll manage. I'll just keep it all in mind."
     show Takamura neutral
     Takamura "That's all we ask of you two. Now then, Kanami-san. We're running late for our meeting. We shouldn't keep Myoga-san and the rest waiting! Have a good day, you two."
-    hide Takamura with dissolve
-    #hide Kanami with dissolve
+    hide Takamura
+    hide Kanami
+    with dissolve
     "Takamura-sensei, and Kanami walked off together."
     MC "What was that all about?"
     show BE neutral at altMove(0.5, 0.5)
@@ -3934,7 +3935,7 @@ label BE024:
     BE "Mmm, Kei-chan, it's so hot!"
     MC "I know. Just keep going at it. It'll help."
     show BE aroused
-    BE "I'm trying. It's just… there's just so much of it!"
+    BE "I'm trying. It's just... there's just so much of it!"
     MC "You can handle it. I've seen you gobble down more than that before."
     show BE unique
     BE "But nothing else has ever been this good before."
@@ -3990,7 +3991,7 @@ label BE024_c1_1:
             jump BE024_c2_3
 
 label BE024_c1_2:
-    "Now, the {i}polite{/i} to do would have been to offer Honoka some of my own ice cream. But she already had more than I did. And I’ve been craving cookie dough ice cream for weeks."
+    "Now, the {i}polite{/i} to do would have been to offer Honoka some of my own ice cream. But she already had more than I did. And I've been craving cookie dough ice cream for weeks."
     "But apparently, so was Honoka. Despite her having four flavors to my one, Honoka leaned to the side and tried to take a bite of my ice cream."
     MC "H-Hey, that's mine!"
     "I pulled my hand away but Honoka insisted. Though she had difficulty coming at the ice cream with her bust getting pressed up against me so firmly."
@@ -3998,7 +3999,7 @@ label BE024_c1_2:
     BE "But Kei-chan, ice creaaaam!"
     show BE seductive
     BE "It would be the polite thing to do."
-    MC "It's {i}impolite{/i} to sneak bites from someone else’s ice cream!"
+    MC "It's {i}impolite{/i} to sneak bites from someone else's ice cream!"
     "Trying to keep my ice cream out of Honoka's greedy clutches, I kept moving the cone around. I stopped when Honoka pulled back unexpectedly, shivering where she stood."
     show BE surprised
     BE "Kya!"
@@ -4026,7 +4027,7 @@ label BE024_c2_1:
         "But, my pocket had a few extra napkins. I grabbed one and placed it on Honoka's ample chest to wipe the ice cream away."
     MC "It's really sticky."
     show BE neutral
-    BE "You’re telling me. Maybe you should moisten it first."
+    BE "You're telling me. Maybe you should moisten it first."
     if not getFlag("BE024_c1_1"):
         MC "Oh, I'm doing the work am I?"
     "Thinking back to something my mom always did, I took the napkin and just blotted it on my tongue. With a bit of dampness, I was able to clean up the rest of the dessert from Honoka's bosom."
@@ -4036,7 +4037,7 @@ label BE024_c2_1:
     MC "What?"
     show BE sad
     BE "Dude, you just rubbed your drool on my boobs."
-    MC "What? No I didn't! …Okay, I did. But don't put it like that, that's gross!"
+    MC "What? No I didn't! ...Okay, I did. But don't put it like that, that's gross!"
     show BE happy
     BE "Exactly! So, I deserve to do something in return to make it even."
     if getFlag("BE024_c1_1"):
@@ -4164,7 +4165,7 @@ label BE024_c2_3:
     MC "No, sorry, I don't."
     if getFlag("BE024_c1_1"):
         "I wasn't sure what voice in my head told me to say that. I had napkins in my pocket, I could have helped, obviously."
-        "Maybe it was my curiosity at just seeing the bit of cookie dough ice cream run down Honoka's cleavage. The collar of her shirt plunged fairly deeply, a sign of this t shirt being on it’s last legs."
+        "Maybe it was my curiosity at just seeing the bit of cookie dough ice cream run down Honoka's cleavage. The collar of her shirt plunged fairly deeply, a sign of this t shirt being on it's last legs."
         "Though, in this heat, I couldn't blame her this time. It probably helped with ventilation. I bet the ice cream falling on her chest felt nice as well."
     else:
         "That oughta teach her. She'd have to deal with sticky boobs as penance for taking my ice cream!"
@@ -4218,7 +4219,7 @@ label BE024_c2_3:
     BE "Maaaaaybe. But I can always lick it up again!"
     show BE disoriented
     BE "Unless {i}you'd{/i} prefer to do that, Kei-chan?"
-    MC "Careful with what you say, this sidewalk is still pretty treacherous if I’m not watching where I’m walking."
+    MC "Careful with what you say, this sidewalk is still pretty treacherous if I'm not watching where I'm walking."
     "I didn't think going out for ice cream would be so memorable, but I wouldn't be forgetting this date for a while..."
     jump daymenu
 
@@ -5392,7 +5393,7 @@ label BE029:
     show BE surprised
     "Honoka loudly clapped her hands together."
     BE "Oh! Kind of like Flame Insignia: Champions!"
-    MCT "Now we’ve got a bite."
+    MCT "Now we've got a bite."
     MC "Exactly."
     MC "All these tests we can do are like testing out the weapons on the minions of them we've captured ahead of time. So we can try one thing after another and make sure we know exactly what we have in our sights."
     "Honoka and I had a small tray in front of us. Twenty different minerals rested on it in five columns of four, numbered, with no other indicators of what they actually were."
@@ -5400,7 +5401,7 @@ label BE029:
     MC "So, we'll start with 1, for example. Now the first thing you look at it is color. But this is the... weakest option, I guess you'd say. Some minerals can be multiple colors. Quartz is like a mimic, it could be practically any color."
     MC "So then, you can look at the luster. Think of it as you're wanting to know if you need metal-piercing rounds for your weapon. It's either going to be metallic, or non-metallic. Or, basically, shiny or not-shiny."
     show BE neutral
-    BE "Okay, I’m getting it now. So this is not shiny, so it's non-metallic. And it also feels really...weak. If that makes sense?"
+    BE "Okay, I'm getting it now. So this is not shiny, so it's non-metallic. And it also feels really...weak. If that makes sense?"
     MC "It does! That could do with its hardness. See how your fingernail scratches the surface, that means it's very soft."
     MC "So we could tell the weapons engineers in our fictional video game to save some of the budget for the harder enemies. Er, minerals."
     "I continued to assist Honoka as we went down the list of different tests we could do, to narrow down what minerals we had here."
@@ -5409,8 +5410,8 @@ label BE029:
     MC "Well, hey. Geology can be tricky too. Like this here."
     "I pointed over to the gold rock labeled number 7."
     MC "This is kind of a gimme."
-    BE "Isn’t this a really expensive rock? It’s gold, right?"
-    MC "It’s fool's gold, or pyrite. It's not like they're going to give us real gold to work with. There's a lot of obvious clues. The cube shape, the shine, the color, obviously. But, watch this."
+    BE "Isn't this a really expensive rock? It's gold, right?"
+    MC "It's fool's gold, or pyrite. It's not like they're going to give us real gold to work with. There's a lot of obvious clues. The cube shape, the shine, the color, obviously. But, watch this."
     "Unable to hide my smirk, I took the gold chunk and rubbed it across the material given to us."
     MC "Black streak."
     show BE confused
@@ -5447,15 +5448,15 @@ label BE029:
     show BE doubt
     BE "..."
     MC "Heh...get it...? Because-"
-    BE "It’s a hardness joke. I get it, Kei-chan."
+    BE "It's a hardness joke. I get it, Kei-chan."
     MCT "Is there a draft in here?"
     MC "{i}Ahem.{/i}"
     show BE neutral
-    BE "Anyways, take the rock, Kei-chan. Let’s get back to work."
+    BE "Anyways, take the rock, Kei-chan. Let's get back to work."
     "I reached forward, and gently plucked the piece out of her breasts."
-    MC "What? You didn’t think it was funny?"
+    MC "What? You didn't think it was funny?"
     show BE sad
-    BE "You’re lucky you’re cute, Kei-chan."
+    BE "You're lucky you're cute, Kei-chan."
     MC "Yes, I am. I'm rather proud of that. But I'll be prouder when you ace this assignment."
     show BE angry
     BE "Grrrr."
@@ -5506,7 +5507,7 @@ label BE029:
     BE "Well, maybe if I think about it in geology terms, I can figure it out..."
     MC "I think you might just be better off with restarting your save and save-scumming."
     show BE sad
-    BE "Man... that’s my third time!"
+    BE "Man... that's my third time!"
     jump daymenu
 
 label BE030:
@@ -6538,6 +6539,7 @@ label BE035A:
     play music Busy
     "When Honoka and I first visited the cooking club to get her signed up, there had only been a few people in the cooking space. Now that we were at an actual meeting, it was a lot more crowded."
     "There was a large row of ovens and stoves lined up, with a wide amount of space for food preparation. On the wall were various types of knives for different cooking purposes, and all sorts of cooking utensils stacked up nearby."
+    show Kanami neutral with dissolve
     Kanami "Hello everyone. Thank you all for coming today. I hope your week has been well. We have some new people today who will be joining us in the world of cooking. Please be kind to them and offer your guidance if they need it."
     MCT "I recognised this teacher. I know I met her somewhere. It wasn't Takamura-sensei, it was someone else. Are there more cooking teachers here?"
     "The cooking club was large enough that there were several \"heads\" of the club, but it was the spokesperson who spoke to us currently."
@@ -6547,8 +6549,9 @@ label BE035A:
     Kanami "As always, before you begin today, please make sure to wash your hands thoroughly, and to do so whenever you switch between ingredients to be safe. Those of you with long hair should tie it back, as I have."
     Kanami "For those of you in the beginner level, we have a few recipes available for you to try out today. I'd recommend the fried rice, personally. If you're more advanced, the same goes for you but my recommendation would be the okoyamonaki. "
     Kanami "Be safe. Be clean. Be delicious. Let me or the others know if you need aid."
+    hide Kanami with dissolve
     MC "Well, Honoka, what should we try?"
-    show BE happy
+    show BE happy with dissolve
     BE "..."
     MC "Honoka?"
     BE "Oh! Right. Let's see. The fried rice sounds good, then."
@@ -6573,6 +6576,7 @@ label BE035A:
     "Honoka and I placed our cutting boards down and got to work. She pulled over a few carrots and peppers and lined them up, while I started to shell the shrimp."
     MC "Why is it \"shelling\" the shrimp? Aren't I really \"de-shelling\" them?"
     BE "Ha. Yeah I don't know. One of those dumb quirks of language I guess."
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with easinleft
     "As Honoka and I worked, Kanami came up and observed for a moment."
     Kanami "Very nice, Hotsure-san. Please don't forget to check the intestinal tract on the back there. If you take a small knife, you can gently slice into the end and lift it up to pull it out."
     MC "Oh, right. Thanks. That wouldn't exactly taste good, would it?"
@@ -6596,7 +6600,9 @@ label BE035A:
     Kanami "Yes, yes. Perfect, Inoue-chan. Now for the peppers, that's a little trickier. Do you mind if I show you?"
     "As Honoka learned how to properly cut up peppers, our rice finished cooking. With Kanami's written instructions I dumped it out onto a baking sheet, spread it thin, and put it in a freezer to cool. By the time I finished, Honoka was done slicing."
     Kanami "You two seem to be doing well. Enjoy. Let me know if you need anything."
+    show Kanami neutral at Transform(xzoom=-1)
     Kanami "Oh my. Koumori-chan, please be careful with how much of that you add..."
+    hide Kanami with easeoutleft
     "Kanami left Honoka and I together to continue our cooking while she tended to another student."
     BE "Phew, this is hard work. But, hey, cutting stuff is kind of fun."
     MC "Good to hear. So, we need to cook the shrimp a bit first, and then some eggs to mix into the rice, while the rice itself cools down."
@@ -6644,6 +6650,7 @@ label BE035A_sauce:
     BE "HOT."
     "Honoka opened up her mouth and fanned into it a few times to cool down the hot food in her mouth. Eventually she swallowed. Taking a cue from her, I blew on my spoon before taking my bite."
     MC "Mmf. Wow. Yeah, that is good. It was pretty simple to make as well."
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
     Kanami "Oho. Everything come out well for you two?"
     "Honoka gave a thumbs-up to Kanami, her mouth already full with another bite."
     Kanami "I take it that's a yes. Wonderful. So glad you could learn something new today. Next lesson we'll be doing something sweet."
@@ -6653,6 +6660,7 @@ label BE035A_sauce:
     show BE neutral
     BE "{i}gulp{/i}"
     Kanami "Ufu, it's always a delight to see people enjoying the food they create. Please make sure to clean up well. A clean kitchen is a good kitchen."
+    hide Kanami with easeoutleft
     MC "Yes, we will."
     BE "After eating."
     MC "Which won't be long if you keep scarfing it down like that! Gimme more."
@@ -6685,6 +6693,7 @@ label BE035A_nosauce:
     BE "Yeah..."
     MC "What's up?"
     BE "I'm not sure. It tastes different from what I'm used to."
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
     Kanami "Mm, hello you two. How did your dish come out?"
     MC "Fine, thanks."
     BE "Yeah, it's okay. I think something's off, though."
@@ -6703,6 +6712,7 @@ label BE035A_nosauce:
     show BE happy
     BE "Sounds good! We'll be here for sure. Thanks Kanami."
     Kanami "Anytime, Inoue-san."
+    hide Kanami with easeoutleft
     "Kanami left, so Honoka and I finished up and cleaned up our station. As we stood by one of the sinks and scrubbed our dishes I turned to Honoka, elbow-deep in the sink."
     MC "So what did you think of the club?"
     BE "It's very nice. Kanami's great and it seems like everyone here is learning cool stuff. It's cool. And getting to eat extra food is always a plus."
@@ -8597,8 +8607,10 @@ label BE044:
     MCT "How am I getting back at her?"
     menu:
         "Poke her in the tummy":
+            $setFlag("BE044_C1_1")
             jump BE044_C1_1
         "Tickle her underboob":
+            $setFlag("BE044_C2_1")
             jump BE044_C2_1
         "Lift her out of the water":
             jump BE044_C3_1
@@ -8638,7 +8650,7 @@ label BE044_C2_1:
     pause .5
     show BE surprised
     pause .5
-    show BE happy at wiggle_loop
+    show BE happy at wiggle_loop(0.15)
     BE "{i}HYAAA!{/i}! Hahaha! Kei-channn! Nonono! STAAAAHAHAHAAAAAHP!"
     $setAffection("BE", 2)
     "Satisfied with my work, I swam out from under the topside shelf, an impish grin plastered across my face."
@@ -8655,6 +8667,7 @@ label BE044_C3_1:
     "I swam under Honoka's landmasses and prepared myself for lifting her upwards."
     MCT "Okay...no time to second guess myself.  Upsie-daisy!"
     if checkSkill("Athletics", ">=", 7):
+        $setFlag("BE044_C3_1_Pass")
         "I wrapped my arms around Honoka's thighs and tried lifting her upward."
         show BE surprised-2
         BE "W-Whoa! Kei-chan??"
@@ -8673,6 +8686,7 @@ label BE044_C3_1:
         BE "But it was pretty cool."
         jump BE044_after
     else:
+        $setFlag("BE044_C3_1_Fail")
         "...Or at least, I thought it would be that easy."
         "I wrapped my arms around Honoka's thighs and tried lifting her upward."
         show BE surprised-2
@@ -9125,7 +9139,7 @@ label BE045:
     jump daymenu
 
 label BE046:
-    $setProgress("BE", "BE047")
+    $setProgress("BE", "BE047A")
     scene Classroom with fade
     play music Busy
     play sound Bell
@@ -9358,7 +9372,410 @@ label BE046:
     BE "Hey!"
     jump daymenu
 
-label BE047:
+label BE047A:
+    $setProgress("BE", "BE047B")
+    scene Bus Interior
+    show BE happy
+    with fade
+    play music BE
+    MC "Urgh... I don't get how you have so much energy today. We played so much Far Skies last night I almost missed curfew."
+    BE "Tomo's copy was the Complete Edition with the DLC I never got to play! I was itching to play it all through practice yesterday. And besides, you got something good out of it too~"
+    MC "Thanks again for the copy of Devil's Spirits, by the way."
+    BE "Anytime!"
+    MC "{i}*Yaaaaawn...*{/i}"
+    show BE angry
+    BE "Oh come on, we didn't stay up {i}that{/i} late. Shiori-chan usually starts rounds on another floor anyway. You were fine!"
+    MC "That wasn't the problem. Once I got back to my dorm, I started up a new playthrough of Devil's Spirits and I spent {i}WAY{/i} too long creating my character. I was up for another two hours..."
+    show BE neutral
+    BE "Oh... you shouldn't have done that so late at night. Those types of games require doing homework before you even start swinging your axe."
+    MC "You're telling me. Who even chooses to start their playthrough without any armor or weapons?"
+    show BE shrug
+    BE "Hardcore fans of the series. Or Masochists.{w}Now that I think about it, there's a lot of overlap between the two of those types of people."
+    MCT "She's not wrong."
+    MC "But yeah... didn't get as much sleep as I wanted to last night."
+    show BE happy
+    BE "Hehehe... good thing we're going to the public pool to wake you up!"
+    MC "You said it \"technically\" has a pool. I didn't forget. So what kind of loophole did you come up with this time?"
+    BE "It's a secret! Just let me lead the way, I have everything planned out."
+    MCT "Honoka? Planning things out? Since when...?"
+    MC "You know... if I really wanted to see where we're going, I could just look out the window."
+    show BE surprised
+    BE "Nonono! You can't do that yet! It has to be a surprise!"
+    MC "Why would I need to be surprised if we're just going to the pool?"
+    "Honoka's eyes darted back and forth."
+    show BE sad
+    BE "B-Because... uh... It's a special pool!"
+    MCT "She's never really been the best liar...but I'll just go along with it. This is hard to watch."
+    MC "Special, huh? That's all you had to say!"
+    show BE neutral
+    BE "Kei-chan."
+    MC "Too much?"
+    BE "Too much."
+    MC "Okay, I'll dial it back. But it's gonna be hard to not look out the windows to see where we're going."
+    show BE happy
+    BE "{i}Well~{/i} you have a whole girlfriend here you can look at instead~"
+    MCT "Damn right."
+    MC "Well, it'll be a little weird if I just stare at you without saying anything, don't you think? How about if we play shiritori in the meantime?"
+    show BE sad
+    BE "Mmmph. Ouch."
+    "Honoka wasn't paying attention to me as she tugged at her hip, and she wiggled in place."
+    MC "Honoka? Something wrong?"
+    BE "Ah...no, everything's fine! No need to worry! Shiritori, right? How about you start?"
+    scene black with fade
+
+    stop music
+    "Three losing rounds of Shiritori later, the bus finally stopped at our destination. But Honoka still wouldn't let me take in our surroundings."
+    BE "Okay Kei-chan, we're here! Keep your eyes shut and take my hand. I'll lead you to where we have to go!"
+    MCT "Heh, joke's on her, I've gotten pretty good at seeing through my hair so-"
+    BE "And no peeking! Don't think I can't see where you're looking just because of that mop you have growing out of your head!"
+    MC "...Damnit, fine. But I'm gonna be so mad at you if this is a prank."
+    BE "Aww, Kei-chan. When have I ever lead you astray?~"
+    MC "Don't tempt me to give you a list."
+    BE "Nyehe!"
+    "Closing my eyes, I let Honoka's soft, warm hand hold onto mine as she led me to wherever it was she wished for us to go."
+    "My feet plopped against the wet ground as we walked ahead, and yet still I'd not known even the slightest bit of where we were, keeping true to my word until, finally..."
+    BE "Okay! Open up, buttercup!"
+    scene Waterpark
+    show BE happy
+    with fade
+    play music Beach
+    MC "Tsssh-"
+    "Opening my eyes, I came across Honoka's smiling face gazing back at me, but behind her was a full on water park area, the smell of rushing water and chlorine blasting me as soon as I noticed."
+    "To the side was a large, open pool area, with three long waterslides which had been reinforced and prepped for students of all sizes. As I gazed around, Honoka had an almost puppy-like excitement as she pushed my shoulder."
+    MC "Wo-hoow!"
+    BE "I KNOW RIGHT?!"
+    MC "This is sick!"
+    BE "Dude, I didn't even consider this a possibility!"
+    MC "Yeah! It's... it's honestly pretty nice to have something like this."
+    show BE worried
+    BE "Oh, for real! I never thought I'd be slipping and sliding down a tube with these chest mammoths again."
+    MC "Okay. First things first. Let's change into our swimsuits and claim our spots. Do you need to find a restroom to change?"
+    show BE neutral
+    BE "Nah, I thought ahead this time and wore mine under my clothes!"
+    MC "...Did you remember-"
+    show BE seductive
+    BE "Yes, I remembered to bring extra underwear. It's in my bag! Too bad for you~"
+    MCT "Damnit..."
+    MC "G-Good. Carry on then."
+    "As I shimmied my shirt off and hopped out of my uniform pants all in one move, I felt a tap on my arm."
+    show BE sad
+    BE "Umm, Kei-chan? Mind giving me a hand here?"
+    "Honoka motioned to her prominent bosom. Specifically over the row of buttons down the middle of her shirt."
+    MCT "Oh man. Her arms are starting to not be able to reach all the way around her front?"
+    MC "O-oh. Sure."
+    BE "Just the very middle one where I stick out the farthest. That one's the main problem. I can handle the rest."
+    "As I unbuttoned the one button that eluded her grasp, I couldn't help but realize that I was undressing my girlfriend in a public area."
+    MC "Okay, there we go! You can uh...reach the rest, right?"
+    BE "Mhm."
+    hide BE with dissolve
+    $setBEOutfit(OutfitEnum.SWIMSUIT)
+    "Honoka quickly unbuttoned the rest of her uniform and tossed it aside onto the beach chair. As she did, I couldn't help but marvel at her swimsuited form once again."
+    show BE happy with dissolve
+    MCT "God...they're packed in even more than last time I saw her in this..."
+    BE "I know what you're gonna say, and yes. It looks even {i}better{/i} on me than last time!"
+    MC "...You got that right. How did you even manage?"
+    BE "It was a long, hard fought battle between me and these two. I came out on top though, hehe~!"
+    "Honoka lifted the taut straps of her swimsuit and bounced her twin rebels a few times."
+    MCT "Stop staring, idiot."
+    MC "Okay, now that that's done with...soooo... You thinking what I-"
+    BE "I CALL THE BLUE ONE!"
+    MC "AHP- BITCH, NAH!"
+    BE "AHAHA!~"
+    hide BE with dissolve
+    "We rushed towards the slides, determined to beat one another to the bottom first as we ascended the metal stairwell up, the gaps digging into our heels as we did, though we gave very little care in the rush."
+    "Eventually, I got to the top, not caring to look over to see how far Honoka was ahead or behind me."
+    Attendant "Okaaay, make sure to keep your back fla-"
+    "The attendant could hardly get a word in as I jumped head first down the slide."
+    Attendant "Oh godda-"
+    "I jumped down with force as I slid down the slide, yelling with glee the whole way."
+    MC "WOO-! BLEGH-! OOO-! BWEGH!"
+    "At least when I wasn't getting blasted with water in the face."
+    "With a mighty splash, I hit the pool, my long hair creating a trail behind me like seaweed as I swam before popping back up."
+    MC "Hoo! Haah, {i}*kakh*{/i}, woo!"
+    MCT "Damn, that was fun!"
+    MCT "I wonder where Honoka is tho-"
+    show BE happy
+    "And just like that, springing out from the water, Honoka popped up with force as she grabbed on to me and pulled me under."
+    hide BE with vpunch
+    MC "GYA-!"
+    "There was a large splash for a moment, but just as quickly she grabbed onto me, we bobbed back up together!"
+    show BE happy with dissolve
+    BE "WOO!"
+    MC "*Khk* H-Hono-*khh*a- pff!"
+    if getFlag("BE044_C1_1"):
+        BE "Haha! That's for the full tummy poke! You poked your girlfriend's tummy after she ate, you dummy!"
+        MC "You used to do that to me back then all the time! I still remember!"
+    elif getFlag("BE044_C2_1"):
+        BE "Haha! That's for the underwater titty tickle! I told you I was ticklish there in good faith, Kei-chan!"
+        MC "What can I say? I saw the chance and I took it!"
+    elif getFlag("BE044_C3_1_Fail"):
+        show BE angry
+        BE "Ha! That's for the {i}amazing{/i} show of strength at the beach, Kei-chan. Really made a girl feel petite, didnt'cha?"
+        MCT "Ah. She's still mad about that..."
+    elif getFlag("BE044_C3_1_Pass"):
+        BE "Haha! That's for the sudden synchronized swimming routine! We could take the world by storm if we toured together!"
+        MC "Maybe we should. Could be fun!"
+    else:
+        BE "That was refreshing, don't you think?"
+        MC "I have water in places where there shouldn't be water..."
+    BE "Ehe-!"
+    show BE surprised
+    BE "OOOOOOOO! KEI-CHAN!"
+    BE "WAVEPOOL!"
+    MC "Wait, what?"
+    "I turned to the side and saw the wavepool undulate with vigor as Honoka very well did the same."
+    BE "Wavepool-wavepool-wavepool!"
+    MC "Okay! Geez, slow down, ehehe!"
+    "Grabbing my hand, she pulled me out of the pool as we walked towards the crashing waves."
+    show BE happy
+    BE "Woooah... I haven't been in one of these in forever."
+    MC "I know, right? I always look at them and get afraid of drowning in pee."
+    show BE confused
+    BE "EEEW! TMI!"
+    MC "It-It's happened!"
+    BE "Euuuugh! Way to ruin it for me!"
+    MC "Baaah, it's just a joke."
+    show BE angry
+    BE "Well no dip, but ya don't gotta say it!"
+    show BE neutral
+    BE "C'mon, let's catch some waves!"
+    "Honoka more or less cannonballed into the pool as I followed suit. The push and pull of the waves felt surreal, but it was always such a fun experience, especially as we held each other's hands tightly. That said, I noticed something rather peculiar."
+    show BE happy at wiggle_loop(0.75)
+    BE "WooOOAAAH, WoooOOAAAH!"
+    "Honoka wasn't getting pushed under the waves as much as she was... well, her top heavy figure was causing her to travel with them a bit more intensely."
+    MC "Hooooly- how's it going up on sea level?"
+    show BE sad
+    BE "Buuuh, I think I'm gonna hurl!"
+    MC "HAHAHA!"
+    show BE happy
+    BE "Grab on!"
+    MC "What?"
+    "She looked down at me with a smile."
+    BE "You gotta try this! Grab on!"
+    "And just like that, I swam over to Honoka and grabbed onto her, causing me to be lifted along with her."
+    MC "WOAH-! Geez, how buoyant are these things!?"
+    BE "Ehehehe! Never had to deal with this during club practice!"
+    hide BE
+    show BE surprised
+    BE "Eh?"
+    show BE happy
+    BE "Oh hey! KANAMI-CHAN! OVER HERE!"
+    MC "Hm?"
+    "I turned to where Honoka was looking, and sure enough..."
+    Kanami "Hm? Ah! Inoue-san!"
+    "...There Kanami was, as she waved back at us from one of the beach chairs."
+    BE "Let's go say hi, Kei-chan!"
+    hide BE with dissolve
+    "Before I could even agree with her, Honoka rode the waves of the pool all the way over to Kanami's chair before she stepped out of the pool."
+    MCT "Damn, she got over there fast. She didn't need to kick her legs at all either."
+    "I rode the next few waves over to the two of them."
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show Kanami happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    Kanami "And hello to you too, Hotsure-san. Nice to see you both."
+    MC "Hey! Didn't expect to see you here, Kanami-san."
+    BE "It's nice to see you without the kitchen behind you, Kanami-chan!"
+    "Kanami sighed, her bosom rising and falling along with her."
+    show Kanami neutral
+    Kanami "Yes, you're right. It's part of the reason I'm here actually."
+    show BE neutral
+    BE "Is it...a cooking club field trip? I haven't seen Aida here if that's the case."
+    Kanami "Nothing to do with the cooking club either. I've been meaning to see some of the attractions the island has since I've arrived here. And I can't very well do that if I'm in the kitchen all the time!"
+    MC "Good point. Well, what else have you seen? There's a pretty good burger shop Honoka and I stopped at before."
+    BE "Seconded! It was suuuuuper good!"
+    Kanami "...Actually this is the first place I've been to that wasn't a necessity like the convenience store or the clothing store."
+    MCT "Really? Nowhere else?"
+    show BE surprised-2
+    BE "WHAT??? Not even the arcade?"
+    Kanami "There's an arcade on the island? My brothers have always wanted to go to one that wasn't just full of crane games."
+    show BE happy
+    BE "Okay, that's it. We're sticking together today, Kanami-chan. I'm gonna tell you about all of the cool things Kei-chan and I have done since we've been here!"
+    MCT "So much for \"swim club practice\"..."
+    MC "Only if that's okay with you, Kanami-san."
+    Kanami "No problem at all. In return for your company..."
+    "Kanami reached down beside her chair, bringing up a picnic basket."
+    show Kanami happy
+    Kanami "...I can share some of this lunch I packed!"
+    BE "You sure? I don't want us picking off of your plate."
+    "Kanami uncharacteristically avoided our gaze, looking embarrassed."
+    show Kanami neutral
+    Kanami "I...um... tend to pack too much food whenever I make baskets like this. I'm just so used to taking my siblings everywhere that I over pack."
+    Kanami "I was planning on giving food to some random people I came across here. But who would consume homemade food from a total stranger?"
+    MCT "Definitely not me."
+    BE "I would!"
+    show Kanami happy
+    Kanami "Be that as it may, the two of you would be doing me a favor if you had some!"
+    MC "Well, how can we say no at that point?"
+    hide BE with dissolve
+    "Before I could finish accepting, Honoka rushed past me with the promise of a fresh meal driving her with a near inhuman speed."
+    MC "H-hey! At least try to be subtle with your desires! Ugh... Sorry about her."
+    "With what I hoped was an appropriately apologetic bow, I rushed after her as Kanami jumped back."
+    Kanami "Eep!"
+    Kanami "W-Wait up!"
+    scene black with fade
+    pause .5
+    scene Waterpark
+    show BE happy
+    with fade
+    "Honoka finally decided on one of the tables nearby the huge waterslide in the park, waving her arms at Kanami-san and me like we weren't following right behind her."
+    BE "Yoo! Got us a table over here!"
+    "Kanami-san and I walked over to get a glimpse and, to her credit, it seemed perfect: umbrella was still in place, it was in the shade, and we got a good view of the mountains out in the distance."
+    MC "Ayy, alright, nice!"
+    show BE happy at altMove(0.5, 0.25)
+    show Kanami happy at Position(xcenter=0.75, yalign=1.0) with easeinright
+    Kanami "Mhm! This should be fine!"
+    "As we sat down, Kanami-san stood and waited for us to settle in with a gentle, yet nervous, smile across her face."
+    Kanami "So! What were you in the mood for to begi-"
+    BE "Give me food."
+    MC "I think-"
+    BE "Food me. Food now-"
+    MC "We can mabe start-"
+    BE "Me a food needing a lot now-"
+    MC "-please shut up-"
+    BE "Pfff."
+    MC "-we can probably start with something light, I guess."
+    Kanami "I have just the thing."
+    "Kanami pulled out a sizable thermos and handed each of us a small bowl to drink out of."
+    Kanami "Miso soup! Hopefully it's still warm, I made it this morning."
+    show BE neutral
+    BE "Kanami-chan...weren't you going to hand this out to people? Why did you bring so many extra dishes?"
+    "Kanami reached over the table to pour each of us our portions of soup, her bosom nudging her basket across the table a few centimeters."
+    Kanami "Ah, well like I said before, I usually pack for my siblings whenever I make a basket to take with us so we don't have to spend so much on food."
+    MC "But...you still have like five extra bowls."
+    Kanami "Correct. I have five siblings to feed after all."
+    show BE surprised
+    BE "FIVE???" (multiple=2)
+    MC "FIVE???" (multiple=2)
+    Kanami "Yes, I'm the eldest of six."
+    "Honoka set her empty bowl onto the table."
+    show BE angry
+    BE "Jeez. Do you have a leash on all those kids?"
+    Kanami "Haha...I don't need a leash on all of them. But my youngest brother...some days I really consider it!"
+    "Kanami glanced at the stack of five unused bowls, sighing as she did."
+    show Kanami sad
+    Kanami "They... all would have really loved a place like this. We don't have a waterpark where I'm from so none of us have ever been to one."
+    Kanami "Every summer they used to beg me for weeks to take them all to a place like this..."
+    MCT "I'm guessing she decided to come here because she really misses her family. It's a good thing we didn't leave her alone with her thoughts."
+    show BE doubt
+    "Honoka and I glanced at each other, not really knowing how to clear this awkward air."
+    MC "Well, hey. Now you know where one is, so next time your family is in town, you can show them around here!"
+    show BE neutral
+    BE "Exactly!"
+    Kanami "Yes...that may be possible."
+    MCT "That wasn't very convincing. Homesickness isn't something you just get over that quickly."
+    "Kanami reached back into her basket and pulled out a bento box for each of us. Glancing down at the basket, I noticed there were still a few boxes left."
+    MC "God...did you really make ALL this food before coming here?"
+    show Kanami happy
+    Kanami "Yes, actually. I've learned how to cook in bulk pretty quickly over the years."
+    Kanami "Regardless! Here's the main course!"
+    "With a gentle nod, she gave them to us with both hands, bowing as she did. We took them, perhaps myself a bit more graciously and reserved than Honoka, and opened them up."
+    "Inside was a box with rice, a piece of round tuna in the center of it, and a few sticks of yakitori off to the side."
+    show BE surprised-2
+    BE "Uwaaah! That looks sooo good! It's like restaurant quality!"
+    Kanami "Ehe, thanks."
+    "With a smile, Honoka snapped her chopsticks and slid her box closer to her."
+    show BE happy
+    BE "Thanks for the meal!~"
+    MC "Yes. Thank you very much."
+    "As I started eating the rice, the warm, fluffy grains glided across my tounge with a soft, almost almond flavor. I quietly enjoyed the food as I nodded. Honoka, however, was already holding it up, quickly moving the rice to her mouth with her sticks."
+    MC "Whoa, woah!"
+    BE "Mmmn!~"
+    MC "Slow down, will ya?"
+    Kanami "Oh, nono, it's fine! It's actually kind of a compliment."
+    MC "Watching someone just inhale down food you worked hard on is a compliment?"
+    Kanami "Watching someone enjoy food I worked hard on always is."
+    MC "Heh, fair enough, aye."
+    "I looked over to Honoka, with a smile at that. She wasn't always the most refined girl, but she always did have a way of bringing a smile to anyone's face no matter what..."
+    "I gazed down as I watched a few grains of rice drop into her cavernous cleavage, barely restrained by her wet, tight swimsuit."
+    MCT "Seriously, girl..."
+    Kanami "Inoue-san you have a little..."
+    "Kanami motioned to her own cleavage."
+    show BE neutral
+    BE "Oh, are the girls trying to eat too?"
+    MC "Don't leave them there like you usually do. You don't want rice grains in the pool."
+    MCT "Eugh. Just imagining one of those gross pool flavored rice grains floating into my mouth makes me want to hurl..."
+    BE "Yeah, yeah. I know. How about you, Kanami-chan? Do your girls like to steal your food too?"
+    "I almost choked on my own rice."
+    Kanami "I-I'm sorry?"
+    BE "Your boobs! I would imagine you and I share a lot of similar problems."
+    pause .5
+    show BE shrug
+    BE "Oh, and if you're worried about Kei-chan being here during this topic, don't be. He's been through so many boob talks that he might as well start contributing and talk about his own boobs!"
+    MC "Hey!"
+    Kanami "Oh, it's not that. To me, talking about my own growth factor should be no different than Hotsure-san talking about his. I was just taken aback from the sudden topic change."
+    MCT "That's...I've never thought about it that way before."
+    Kanami "But yes. I tend to find stragglers after meals. It's incredible how they attract food like magnets."
+    show BE embarrassed
+    BE "I know, right?? I swear, at the rate I'm going, I'm going to find an entire loaf of bread down there one day."
+    MC "You know that would imply you would eat an entire loaf of bread, right?"
+    Kanami "Well, hopefully it doesn't get to that point. Speaking of which..."
+    "Kanami glanced down at Honoka's overburdened swimsuit."
+    Kanami "If I may be direct, Inoue-san-"
+    show BE happy
+    BE "Kanami-chan. We're bonding over boobie problems. You can't get more direct than that. Also you can call me Honoka, it's okay!"
+    MC "And you can call me Keisuke. You don't have to be so formal with us."
+    show Kanami happy
+    Kanami "\"Honoka-chan and Keisuke-san\" it is then."
+    BE "Hehe!"
+    Kanami "As I was saying, if I may be direct Honoka-chan...we've been roughly around the same size since we've met, but lately you've been outpacing me quite rapidly as of late."
+    pause .25
+    show BE sad
+    pause .5
+    BE "You've noticed too, huh..."
+    MCT "Well it's not like it's a secret. The proof reaches out in front of her more and more each day."
+    Kanami "Well, it's not like I can talk. I don't exactly have light burdens, per se."
+    show BE angry
+    BE "Pssh, you can say that again. Seriously, these things are sensitive as hell and the pinching from the bra frame is...uggggh."
+    Kanami "I know what you mean. I mean, I figure it's even worse for you, Honoka-chan. Do you ever get the sensation where, like, you can feel tension on the skin in the middle of your back but you can't soothe it because-"
+    show BE neutral
+    BE "You can't reach that ONE spot? Mmmhm."
+    MC "Damn. I don't usually uh... think about that kinda stuff. I didn't know you go through that, Honoka."
+    show BE shrug
+    BE "Well, Kei-chan, it's bound to happen, y'know? Especially when you start gettin' to the end of your growth cycle and like, you have to push your chest out like a pigeon because your body is adjusting to the changing center of gravity."
+    MC "Wait. {i}That's{/i} why you've been arching your back like that lately?"
+    Kanami "Mmm, the balancing is sooo annoying."
+    show BE happy
+    BE "Exactly!"
+    show BE embarrassed
+    BE "And like, when your nips get {i}really{/i} sensitive from being up against your tight bra all day so you wanna rub them but like, you straight up just can't even reach!"
+    MCT "...wait, what?"
+    Kanami "..."
+    MC "..."
+    Kanami "U-Umm..."
+    show BE sad
+    BE "... Yeeeaaahhh, TMI. Sorry."
+    Kanami "Actually...it's not that. But..."
+    pause .25
+    Kanami "I can still reach mine..."
+    show BE worried
+    pause .5
+    BE "Oh."
+    MCT "Now that I think about it... The fact that she can't reach the button at the first curves of her breasts would imply that she can't reach the \"peaks\" of each one either..."
+    BE "S-Sorry, I guess I didn't realize that it was a problem exclusive to me."
+    MC "N-Nah, it's all good, I mean... it is what it is."
+    Kanami "Mhm! Yeah, um... d-don't worry about it, Honoka-chan."
+    show BE doubt
+    BE "... Uuumm..."
+    show BE neutral
+    BE "W-Well, uh, anyway! That was a great lunch! Your cooking is fantastic, Kanami-chan!"
+    Kanami "Oh thank you!"
+    MC "Yeah! Great job."
+    Kanami "Thank you both so much! I'm glad you both enjoyed it. Especially you, Honoka-chan. Now I don't have to carry as much back to campus!"
+    show BE sad
+    BE "Yeah... No problem..."
+    "I glanced over to Honoka's side of the table, she was leaning back with her hands on her slightly bloated tummy. She squeezed her paunch with a dissatisfied look on her face. On the table, I noticed that she had eaten another bento box of Kanami's food."
+    MCT "Kanami must have placed another box on the table for Honoka to eat after she practically inhaled the first one."
+    MC "Well then, now that our bellies are full, it's time to...?"
+    show BE happy
+    BE "Swim!" (multiple=2)
+    Kanami "-Rest for 30 minutes!" (multiple=2)
+    MC "Kanami-san...you know that the whole \"wait 30 minutes after eating to swim\" thing is a myth, right?"
+    Kanami "Is it?"
+    BE "The big sister in you really came out in full force, didn't it?"
+    Kanami "Ach! H-Hey! I thought it was a real thing!"
+    jump daymenu
+
+label BE048:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

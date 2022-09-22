@@ -16794,6 +16794,7 @@ label AE072:
     jump daymenu
 
 label AE073:
+    $setFlag("XX73")
     $setProgress("AE", "AE074")
     scene Dorm AE with fade
     play music Rain
@@ -18344,6 +18345,7 @@ label AE079:
     jump daymenu
 
 label AE080:
+    $setFlag("XX80")
     $setProgress("AE", "AE081")
     scene Dorm Tomoko with fade
     play music Peaceful

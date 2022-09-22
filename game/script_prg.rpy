@@ -15707,13 +15707,13 @@ label PRG034:
     show Takamura neutral with dissolve
     Takamura "I know it's getting late, however, we still have two rounds left!"
     Takamura "So, let's give a big hand to Tozakura-san and Sano-san!"
-    #show Kanami neutral
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Two girls stood up from across the room, one of which I recognized as Michiko Sano, the cooking club's student president."
     if isEventCleared("BE006"):
         MCT "Wait... that's Kanami-san, that one girl I thought was a teacher."
     else:
         "The other, Tozakura, I assumed, had a chest that could give Honoka and Aida a run for their money, and long, black hair that hung lightly on her shoulders."
-    #hide Kanami
+    hide Kanami with dissolve
     Takamura "And opposing them, we have Kodama-san and Myoga-san!"
     show PRG worried at Position(xcenter=0.25, yalign=1.0)
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
@@ -15746,11 +15746,11 @@ label PRG034:
     hide Sakura
     with dissolve
     "I shifted my attention to their competition."
-    #show Kanami
+    show Kanami neutral with dissolve
     "The other two girls moved in tandem, just as Aida and Sakura were. However, Michiko and this Tozakura girl seemed to be almost cyborg-like in their movements."
     "They had each step worked out to the millisecond, and they wasted no extra trips, or even a movement in their approach."
     "From the angle I was seated at, I couldn't quite make out what they were making. But, I could tell that whatever their concoction was, it wasn't their first time making it together."
-    #hide Kanami
+    hide Kanami with dissolve
     "Back across from them, Aida had a number of different powders mixed together, and the once white, creamy substance had changed to a red fluffy cream."
     "She took the red cream and mixed it with the powders in a sort of flipping motion, taking the powder and turning it over top of the cream."
     show PRG angry at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1)
@@ -15809,7 +15809,7 @@ label PRG034:
     hide Sakura
     with dissolve
     "I glance worriedly over at the other team."
-    #show Kanami
+    show Kanami with dissolve
     "They had three bowls filled with rice, and they were adding what looked to be salmon, and a myriad of vegetables to the top."
     "A loud whistle struck my ears as Michiko went to the stove and removed a tea kettle from it."
     if isEventCleared("BE006"):
@@ -15819,7 +15819,7 @@ label PRG034:
     "Lastly, Michiko went to the freezer and removed a glass container filled with a red paste."
     "With a spoon, she removed the paste and started plating it on a smaller dish."
     MCT "That looks like red bean paste. Alright."
-    #hide Kanami
+    hide Kanami
     show PRG nervous at Position(xcenter=0.25, yalign=1.0)
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1)
     with dissolve

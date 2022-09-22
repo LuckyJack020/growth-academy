@@ -2060,49 +2060,72 @@ label FMG017:
     show FMG neutral
     with fade
     play music Busy
-    MC "So, how's life been?"
-    FMG "Eh, nothing much has changed really, my mom send some cookies from home, so that was nice of her."
-    MC "Oh, your mom bakes?"
-    FMG "Oh yeah, she likes to bake, something about it being relaxing for her."
-    MC "How long did it take to get your care package?"
-    FMG "Well, about a day or so because it takes a plane to get from here to Okinawa."
-    MC "Oh, you're from Okinawa, explains your accent."
-    show FMG happy
-    FMG "Yep, born and raised. Might not hold the same excitement Tokyo has, but it's home and I love it. I'm a fourth-generation Mizutani that's lived there."
-    MC "Huh, that's cool. Hey, speaking of moms, mine's been sending mail. Not packages or anything, but just normal mail."
+    MC "Sooo, what have you been up to? Feels like we haven't talked in days."
+    show FMG sad
+    FMG "Sorry, I've been busy with homework. I've been getting bombarded with projects..."
+    MC "Tell me about it... {w}Have you talked to your parents lately?"
     show FMG neutral
-    FMG "What does she not use email?"
-    MC "She does, the thing is that she doesn't want to clutter my inbox."
-    show FMG sad #confused
-    FMG "...So she thinks it's better to clutter your dorm room with real mail?"
-    MC "I didn't say it made sense."
+    FMG "Totally, I text my parents every day. I talk with my mom a little bit more than my dad since she has a bit more time on her hands nowadays. She also sent me down some cookies the other day."
+    FMG "I... almost finished them as soon as I got them."
+    MC "Sounds like your mom is quite the baker. You saved me a few, yeah?"
+    FMG "{size=-6}Absolutely{/size}..."
+    MC "Hmmmmmm."
+    FMG "Heh, but yeah she bakes every now and then. Says it helps her relax, won't hear me complaining though,  her cookies smack."
+    MC "Would've been nice if you saved me one."
+    FMG "That's tough."
+    MC "Watch your back."
+    FMG "I'm terrified, really."
+    MC "I would be too. Hey, speaking of moms, mine's been sending me... mail... normal mail... and not packages..."
+    MC "Maybe my mom doesn't love me as much as I thought if she isn't sending me any cookies."
+    show FMG happy
+    FMG "Can't say I blame her."
+    show FMG neutral
+    MC "I hope you always have snow in your driveway."
+    FMG "Hm, I don't think I have one here. Good try though, I'll give you an A for effort."
+    FMG "Anyways, you were saying your mom's only been sending you mail. Does she not use email?"
+    MC "Nah, she does, the thing is that she doesn't want to clutter my inbox."
+    show FMG sad
+    FMG "...So she's sending actual mail to clutter your dorm?"
+    MC "Well, when you put it like that it sounds bad and like it doesn't make any sense. {w}And you'd be right."
     show FMG neutral
     FMG "Ignoring that, what kind of messages has she been sending?"
     MC "Well, it's mostly just \"How are you doing?\" and such. In the latest one, she was asking about why my sis-"
     show FMG surprised
     FMG "O-Oh no!"
-    "Alas, I was not able to complete my sentence about how my sister has not been replying to mother's mail thanks to Akira. My confusion as to why Akira interrupted me was answered to what was in front of us."
-    "A raggedy old stuffed bear on the ground; there wasn't anything odd about it, but it was kinda an eyesore. I went up to it to gra-"
+    "Alas, I was not able to complete my sentence about how my sister has not been replying to my mother's email thanks to Akira's sudden outburst."
+    MC "I know it's not the most interesting thing you've heard buuuut..."
+    "My voice trailed off as I spotted what had captured Akira's attention."
+    MC "Is that a stuffed bear? Has it just been sitting there the whole time?"
+    MCT "Who just leaves a toy bear in the middle of campus...?"
+    MCT "I'm gonna poke it."
+    "Getting closer to the bear I realized how raggedy and old it was. There didn't appear to be anything odd about it... besides the smell that is. Regardless, I went to grab it before Akira interrupted me."
     stop music
     FMG "Woah Woah Woah, do NOT touch that bear!"
-    MC "What?"
+    MC "What? It's nothing but a dirty bear. What's the worst that happens? I die?"
     show FMG sad
     play music Tension
     FMG "Don't you know that picking up abandoned scruffy dolls on the ground will bring you bad luck!?"
-    MCT "I legit have never heard that before."
+    MCT "I legit have never heard that before. Did you get that from those tabloids my grandma reads?"
     show FMG neutral
-    FMG "Trust me, I've seen it happen to another kid when I was in kindergarten."
+    FMG "Maybe..."
+    FMG "Just trust me on this, I've seen it happen to another kid when I was in kindergarten."
     MC "...Okay, you have to explain this one."
     "Akira had taken a breath in before explaining what kind of oddity she had as a child... One of several, now that I look back on it."
-    FMG "Well, what happened was this girl, she found an old-looking stuffed rabbit on top of the slide."
-    FMG "She wanted to ride the slide, so she grabbed it and tossed it; the moment she slid down, she went faster then she should and crashed into the sand ass up. Ever since then, word got around town and thus, a curse was born."
-    "Her story explained why I never heard of it since it was only local."
-    "Though in all likelihood, that girl crashing seems to be more out of bad luck than a curse from a stuffed rabbit. Despite this, it did not call much of my confusion on the subject matter."
-    MC "Okay, well, even so, it shouldn't matter because we're nowhere near Okinawa."
+    FMG "Well, during recess this girl found an old-looking stuffed rabbit on top of the slide."
+    FMG "She wanted to ride the slide, so she grabbed it and tossed it; the moment she slid down, she went faster than she should and crashed into the sand ass up. Ever since then, word got around town and thus, a curse was born."
+    MCT "Explains why I never heard about this... like five people know about it."
+    MC "Did she die?"
+    FMG "No?"
+    MC "Great, I'm touching the bear."
+    show FMG angry
+    FMG "Don't be an ass, Kei. You could get seriously hurt!"
+    MC "Okay, okay."
+    MCT "In my opinion, that girl eating shit seems to be more of bad luck than some stuffed animal curse. Sounds like something out of a bad Leven Queen book if you ask me."
+    MC "Hm, well, the more I think about it, it shouldn't really matter since we aren't near Okinawa."
     show FMG sad
-    FMG "Be that as it may, I don't think it's a great idea to mess with that bear. Look, just don't pick it up okay?"
+    FMG "Be that as it may, I don't think it's a great idea to mess with that bear.{w} Look, just don't pick it up okay?"
     menu:
-        "Pick it up.": #-1
+        "Pick it up, you pussy.": #-1
             jump FMG017_c1_1
         "Don't pick it up.": #+1
             jump FMG017_c1_2
@@ -2110,22 +2133,27 @@ label FMG017:
 label FMG017_c1_1:
     MCT "Yeah, that thing looks as harmful as a... thing that's less harmful than a teddy bear... Whatever, I'm picking it up."
     MC "See, no harm do-"
-    MCT "QUACK!"
+    "Duck" "QUACK!"
     MC "Wha- GAH!"
     stop music
     show FMG surprised
-    "Somehow out of nowhere a duck came in and started to attack me. It got so bad I dropped the bear."
+    "Somehow out of nowhere a duck came in and started attacking me, aggressively biting at my hands. It got so bad I ended up dropping the bear."
     MC "AHHH! DUCK! GET IT OFF OF ME!"
     MC "HELP!"
     MC "AKIRA!"
-    "For five minutes the stupid duck kept attacking me, all the while Akira was just watching me being assaulted by a duck. It didn't stop until I laid down and pretended to be dead."
+    MC "WHERE DID YOU EVEN COME FROM!?!?"
+    "For five minutes the stupid duck kept attacking me, all the while Akira was just watching me being brutally assaulted by a duck. It didn't stop until I laid down and pretended to be dead."
     "By the time the duck left, I was beaten and my clothes were a mess. Akira on the other hand just looked at me in disappointment."
+    MC "H-Holy crap..."
     show FMG sad
     $setAffection("FMG", -1)
     FMG "Yep, I was right. Can't say I warned you. Maybe if I leave you there you'll learn to believe in curses."
-    hide FMG with dissolve
-    MCT "Yep, she left me on the ground..."
-    MC "I hate ducks now."
+    MC "Wait, don't go... everything hurts."
+    FMG "Come on, doofus, let's go to the nurse."
+    show FMG neutral
+    FMG "You're such a goof."
+    MCT "Pain..."
+    MC "He bit my thumb..."
     jump daymenu
 
 label FMG017_c1_2:
@@ -2135,27 +2163,29 @@ label FMG017_c1_2:
     show FMG happy
     $setAffection("FMG", 1)
     FMG "Phew, thanks Kei-Kun. No telling what would have happened if you picked up that plushie."
+    MCT "Probably nothing. I should've messed with the \"supernatural\". Next time, bear... next time."
+    show FMG happy at altMove(1.5, 0.25)
     "With my decision made, I left the bear on the ground where it sat, however just when we thought it was over, we heard someone and..."
-    hide FMG with dissolve
-    show BE sad with dissolve
+    show BE sad at Position(xcenter=0.85, yalign=1.0) with easeinright
     BE "Aww poor thing, why would anyone abandon you..."
     show BE happy
     BE "Don't worry, I'll give you a new home little gu-"
-    "Inoue-san was about to bend over to pick up the doll, we didn't have a chance to say anything before she grabbed it and-"
+    "Inoue-san was about to bend over to pick up the doll. Unfortunately, neither one of us had a chance to say anything before she grabbed it and-"
     "{i}POP! POP! POP!{/i}"
     "Every single one of her shirt buttons popped off, leaving absolutely nothing left but her bra for the world to see."
     show BE neutral
     BE "A-ah..."
     show BE sad
     BE "I... I..."
-    show BE angry
+    show BE angry at Transform(xzoom=-1)
     BE "Awww not again... I just got this top!"
-    hide BE with dissolve
+    show FMG sad
+    hide BE with easeoutright
     "All Honoka could do was run towards the dorm rooms. She was so focused on her lack of ability to button her shirt that she left the bear in its place."
     play music Schoolday
-    show FMG surprised with dissolve
-    FMG "Yep, I was right, that thing is cursed..."
-    MCT "WOW. Am I glad I didn't touch it."
+    show FMG surprised
+    FMG "What did I say? As per usual, I'm right."
+    MCT "It wasn't {i}that{/i} bad."
     jump daymenu
 
 label FMG018:
@@ -10207,7 +10237,7 @@ label FMG059:
     "Her eyes drifted away from me as she got lost in her thoughts."
     show FMG sad-2
     FMG "Nothing. It's nothing. Sorry. We should head back to my dorm."
-    MC "Yeah, okay. Is everything okay? I'm here for you."
+    MC "Yeah... sure. Is everything okay? I'm here for you."
     pause .5
     show FMG neutral
     FMG "Mhmm. I'm okay. I promise."
@@ -13975,6 +14005,7 @@ label FMG072:
     jump daymenu
 
 label FMG073:
+    $setFlag("XX73")
     $setProgress("FMG", "FMG074")
     scene Dorm Interior with fade
     play music Peaceful
@@ -16591,7 +16622,7 @@ label FMGWG004_afterchoice:
     "Sure enough, after that brief delay, Alice began a slow, shaky ascent into the air, her feet now completely off the ground."
     FMG "{i}Mmmmmrrrrrrggg!{/i}"
     "Akira was clearly trying really hard. Her guttural scream was muffled under Alice's smothering belly. I would have imagined her face to be as red as a tomato— if it were visible."
-    MCT "I hope she doesn't accidentally suffocate, that belly is bigger than I imaged up close."
+    MCT "I hope she doesn't accidentally suffocate, that belly is bigger than I imagined up close."
     "Steadily, Alice and Akira rose. Well, steady pace-wise, the motion itself was pretty shaky."
     "I was starting to have my doubts if Akira could pull this off, but she was quick to put my doubts to rest. She planted her feet, lifting Alice even higher."
     "Honoka and I stood in awe. Akira was getting pumped. I thought her arms were big before, her biceps looked ready to tear out of her uniform. She was pushing herself to her limit lifting Alice this high."

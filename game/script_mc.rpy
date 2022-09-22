@@ -5307,7 +5307,289 @@ label MC011:
     "It was quite a bit to take in. I didn't have all the answers, but after listening to Hageshi-sensei, I at least felt better that my time here might help me find some."
     jump daymenu
 
-label MC012:
+label MC033:
+    scene Dorm Interior with fade
+    play music MC
+    "Just another day, nothing really all that exciting. {w}I had to buckle down to start studying for this trimester's finals though. But that was no fun. I needed a distraction."
+    "{i}*Bzzt Bzzt*{/i}"
+    if checkAffection("TM", ">=", 6):
+        MCT "Speaking of a distraction... A text from Tomo?"
+        TomokoCell "<Hey Bro>"
+        "What a coincidence, just when I was looking for something to do."
+        MCCell "<Yo. What's up?>"
+        TomokoCell "<I feel sick today. Can you drop off my homework today so it won't get counted as late?>"
+        MCCell "<Sure, no problem. I'll be on my way shortly.>"
+        MCT "Not exactly what I had in mind, but I hope she's alright. Honestly I think she could use a little more fresh air now and then and maybe she probably wouldn't have gotten sick."
+    else:
+        MCT "Looks like I got a text from Tomo. Not exactly the distraction I was looking for. Must mean she either wants something or she's dying."
+        TomokoCell "<Hey Bro, I feel sick today. Can you drop off my homework today so it won't get counted as late?>"
+        MCT "Called it."
+        MCCell "<What's in it for me?>"
+        TomokoCell "<I'll tell Mom if you don't.>"
+        MCCell "<I suppose I'll be a good brother and help you out. I'm on my way. See you soon.>"
+        MCT "Kind of annoying, but not the worst thing that could have come up."
+    scene black with fade
+    pause .5
+
+    scene Dorm Hallway with fade
+    play sound Knock
+    "After a short delay, Tomo answered the door."
+    show Tomoko neutral with dissolve
+    extend "Wearing a blanket no less."
+    MCT "Yikes. She looks like shit. I guess she wasn't kidding. Glassy eyes, red nose, that and she's practically shivering— I probably shouldn't stay long or I might catch what she's got."
+    Tomoko "Gnhey. Nhere's my omework that was du taday. Can yu get me thu class assignments fum the tweachers so I dwon't fall behind?"
+    MC "You sound really stuffed up."
+    Tomoko "Ey gnow."
+    if checkAffection("TM", ">=", 9):
+        MC "Don't worry, it's no problem, but why don't you ask Yuki-san? You share the same classes."
+    else:
+        MC "Don't worry, it's no problem, but why don't you ask your roommate?"
+    Tomoko "Who do yu thenk guve me twis cold? Fwigures, she can't keep awnything to herswelf anyway."
+    MC "Ah, gotcha. Well that sucks."
+    Tomoko "Oy, there's one uther thwing. I ned you to gwive this form to Takamera-sunsei. It's the lawst day to regaster for electwives for the mext trimester of cwlasses."
+    MCT "I'd ask why she waited so long but I'm almost as bad of a procrastinator as she is."
+    MC "Alright, I'll make sure this gets taken care of. Feel better Tomo."
+    Tomoko "Twhanks. It's mot so bad. I dun't feel well enough to goo to class, but I still weel alright unough to play wideo games."
+    MC "Still though, get some rest. Not like I need to tell you that."
+    Tomoko "Dhat's not a bad idea. I do feel tiired."
+    MC "Heh, I figured. Later."
+    Tomoko "Later."
+    scene black with fade
+    pause .5
+
+    scene Classroom with fade
+    "I did my best to track down the various teachers before I had class, but didn't quite make it to all of them. I'd have to catch up with them later. I had my own classes to get to."
+    pause 1
+    show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    HR "Alright, I'm feeling generous, so no new assignment since you have a quiz on the Azuchi-Momoyama period next class."
+    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    BE "Yes!"
+    HR "Don't count on it in the future though."
+    show BE angry
+    BE "Boo!"
+    show BE shrug
+    HR "I heard that."
+    play sound ClockTower
+    hide BE with dissolve
+    "Finally, class was over. But I still needed to track down the rest of the teachers for Tomo."
+    MC "Tashi-sensei, I gave you Tomoko's homework earlier, but I'm still trying to track down a few more teachers to give them her homework and get the new assignments."
+    MC "I tried to find them this morning but they weren't around. Do you know where they might be?"
+    show HR neutral at altMove(0.5, 0.5)
+    HR "Who are you looking for?"
+    if isEventCleared("MC009") or isEventCleared("PRG030"):
+        MC "Takamura-sensei. I checked the cooking room before class this morning but I didn't find her there."
+        HR "Hmm, she was probably busy with what she's been working on to help with the school's counseling program."
+        HR "You probably won't find her there now since it's the lunch period. Just follow me, we can probably find her in the faculty lounge."
+    else:
+        MC "Takamura-sensei. I didn't see her in her room before class this morning."
+        HR "Did you check the kitchen? She's usually there if she's not in her home room. Unless she's pulling double duty with helping the school counselor. "
+        MC "No, I didn't. I'll go check now."
+        HR "I'd hold off on that. It's lunch period now. Just follow me, we can probably find her in the faculty lounge."
+    if isEventCleared("MC002"):
+        HR "It wouldn't be the first time you got to step in there."
+    scene HallwayStairs with fade
+    "I followed Tashi-sensei to the faculty lounge, but stopped just short of getting there when we heard an argument breaking out between students. And these guys were big."
+    "Giant 1" "What did you just call me?"
+    "Giant 2" "I called you a shrimp— shrimp. Get used to it."
+    "Giant 1" "That makes no sense. I'm 296 centimeters tall."
+    "Giant 2" "And I'm 318 centimeters. You're tiny compared to me, so know your place and get out of my way."
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Takamura "Now now, boys, that's not necessary."
+    show HR neutral with dissolve
+    "Unfortunately, Takamura-sensei's polite warning was completely ignored by those two hot heads."
+    "Giant 1" "You'll think I look pretty damn tall once I knock your ass to the floor!"
+    "Giant 2" "Like your short little reach is going to let you land a punch on me."
+    show Takamura strict
+    Takamura "That's quite enough boys!"
+    HR "{size=-6}Ugh. She's about as threatening as a mouse. This is going no where.{/size}"
+    "Giant 1" "Take a swing then if you're so confident."
+    "Giant 2" "Is that an invitation?"
+    stop music
+    "{i}*clack* {w}*clack* {w}*clack*{/i}"
+    "The previous ruckus suddenly faded into complete silence, save for the clipping of a pair of dress shoes echoing throughout the now still halls."
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Hageshi "Mind what Takamura-san tells you, gentlemen."
+    "Hageshi-sensei just walked on pass them, not even bothering to turn his head when addressing the two."
+    "Giant 1" "Y-Yes H-Hagashi-sensei! {w}My apologies Takamura-sensei!"
+    "Giant 2" "{size=-6}Like you're gonna do anything to me if I don't.{/size}"
+    Hageshi "..."
+    "Hageshi-sensei stopped dead in tracks, straighten himself up, only to turn his eyes towards the student with a very perplexed raised eyebrow."
+    "Giant 2" "I-I'll be good. {w}S-Sorry Takamura-sensei."
+    "Now recognizing their audience, both of the two would be brawlers bowed deeply at Takamura-sensei."
+    show Takamura reassuring
+    "Takamura-sensei in turn nodded and smiled."
+    Takamura "I accept your apologies."
+    show HR annoyed
+    HR "Alright, get going you two. There's still half a day of classes. Go cool off somewhere else."
+    show Takamura neutral
+    "The two students scrammed in separate directions after that."
+    HR "Thanks for your help with that Hageshi-san."
+    play music HigherEdu
+    Hageshi "What did I do?"
+    HR "Heh. Like you don't know."
+    Takamura "Would you like to join us for lunch in the faculty lounge, Hageshi-san?"
+    Hageshi "I'll take you up on the offer another time. I was going to monitor the cafeteria today. I find it helps to remind the students every now and then that someone is watching."
+    hide Hageshi with dissolve
+    "As Hageshi-sensei walked down the hall, Takamura-sensei's gaze shifted from him over towards me."
+    Takamura "Oh, Hotsure-san! What a pleasant surprise."
+    if isEventCleared("MC002"):
+        Takamura "Here to visit us again?"
+    MC "My sister is sick. She asked me to drop off her homework and get the next assignment from you."
+    Takamura "Ah yes, I suspected as much. Both Hotsure-san and Utagashi-san were not in attendance this morning."
+    Takamura "Thank you for letting me know. I will visit them later to see how they are doing."
+    if checkAffection("TM", ">=", 4):
+        MC "Thank you Takamura-sensei. I would appreciate that."
+    Takamura "Well come in. I'll put her assignment in with my bag. The homework is a little tricky, I'll have to write out the instructions for you to pass on."
+    MC "Actually, Takamura-sensei, it wasn't just that. Tomo asked me to give you this. She said it was a registration form for an elective class."
+    Takamura "Oh, thank you Hotsure-san. I'm glad your sister decided to take me up on my recommendation for her to enroll in a new course that will be offered next trimester."
+    Takamura "With her joining now there'll be enough students to offer it this time."
+    scene black with fade
+    pause 1
+
+    scene Faculty Room
+    show Takamura neutral
+    with fade
+    Takamura "I'm sorry you had to see that little incident earlier there Hotsure-san. Such things do not properly reflect the safe and supportive environment the school tries to offer with those going through these kinds of changes."
+    show Takamura at altMove(0.5, 0.75)
+    show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    HR "All I can say is it's a good thing Hageshi-san showed up."
+    Takamura "Yes, while I do appreciate his effectiveness in such manners, I don't understand why the students are so afraid of him. He's such a sweet and kind person. I've never known him to hurt a fly."
+    #show Tsubasa neutral with dissolve
+    Tsubasa "Beware the fury of a patient man, as the saying goes."
+    Takamura "I'm not sure I'd use the word ‘fury' to describe Hageshi-san. I've never even heard him raise his voice."
+    HR "Believe me Takamura-san, he's far from harmless."
+    Tsubasa "The true strength of a strong man comes from his ability to contain his wrath, not his willingness to unleash it."
+    Tsubasa "He has matured well since his time as a student at the academy."
+    MC "You had Hageshi-sensei as a student, Tsubasa-sensei?"
+    "Finally turning his gaze up from the newspaper he was reading, Tsubasa-sensei only just now realized there was a guest in the faculty lounge."
+    Tsubasa "Oh, hello there Hotsure-san."
+    if isEventCleared("MC002"):
+        Tsubasa "Come for another visit have we?"
+    Tsubasa "To answer your question, yes. Tashi-san was one of his teachers as well. It may seem like half a lifetime to you, Hotsure-san, but eight years is not a very long time to an old man like myself."
+    MC "What was he like as a student, if you don't mind me asking?"
+    HR "Well for one, you wouldn't have recognized him back then. I can scarcely believe they were the same person myself."
+    Tsubasa "Yes, he was quite the sight for sore eyes, as they say. Not just figuratively, but literally as well."
+    HR "He certainly stood out, and not in a good way. I'll never forget it. Fresh off the ferry, he had a black eye, a busted lip, and scraped up knuckles. He looked like trouble."
+    Tsubasa "Or attracted trouble, as seemed to be the case. His unusually diminutive stature at 151cm made him an obvious target for harassment and ridicule, along with a physique that looked like his last meal had been weeks ago."
+    show Takamura sad
+    Takamura "Oh my! That seems hard to visualize, knowing him now."
+    show Takamura neutral
+    extend " It's hard to imagine him being smaller than me even. I suspect he was still a good student though, in spite of those things."
+    HR "When he first got here, he was very sullen and quiet. There was even a rumor amongst the students that he couldn't talk."
+    HR "But he never had an issue with answering a question when called upon in class. Though I didn't know him to speak a word beyond that myself either."
+    Tsubasa "In that regard, not as much has changed."
+    Takamura "He certainly fits the ‘strong silent' type."
+    MC "I take it he got picked on a lot?"
+    HR "As faculty we do our best to stop that from happening when we see it, but as far as what I could piece together from other students, yes, quite frequently too."
+    Tsubasa "I suspect those who did pick on the poor young man were in for a nasty surprise however. His file indicated he was a nationally ranked judo athlete, even if it was in the under 55kg class."
+    MC "So what happened later? Besides somehow growing over 40cm in less than a year?"
+    HR "I take you're interested in his ugly duckling story?"
+    show Takamura strict
+    Takamura "That doesn't seem like a nice way of putting it, Tashi-chan."
+    HR "And how else would you describe it? If only we could all be so lucky..."
+    show Takamura neutral
+    Tsubasa "Ah yes, Hageshi's growth factor. Rum thing really. He's certainly one of the more unique cases."
+    MC "He is? How so? I thought he was considered ‘small' for a muscle growth factor."
+
+    if routelock == "WG" or routelock == "FMG":
+        Tsubasa "While this may be true, keep in mind your perspective is quite skewed from what you've seen with Mizutani-san and Okamoto-san."
+    else:
+        Tsubasa "While this may be true, keep in mind your perspective is quite skewed from what you've seen with Mizutani-san."
+    Tsubasa "Hageshi-san's case is still remarkable with regards to the degree in which his height and size have increased relative to his starting point, at least among those with muscle growth factors."
+    Tsubasa "It's a peculiar thing really. Most growth factors follow a fairly predictable trajectory, even if the final degree of development is unknown."
+    Tsubasa "They obviously have common elements, or else there would not be discernibly distinct types, as we understand them today. But, every so often, some of them possess their own little idiosyncrasies."
+    if routelock == "WG" or routelock == "PRG":
+        MC "You mean like how Nikumaru-san and Myoga-san look different, despite having the same factor?"
+    elif routelock == "AE":
+        MC "You mean like how Matsumoto-san and Yureno-san look different, despite having the same factor?"
+    elif routelock == "BE" or routelock == "FMG":
+        MC "You mean like how Inoue-san and Blackburne-san look different, despite having the same factor?"
+    else:
+        MC "You mean like how all the different giant students vary so much in height?"
+    Tsubasa "Precisely. It's a peculiar thing, as interesting as it is maddening, if I'm being honest."
+    Tsubasa "In all my studies of the factors, it's still not clear if the growths are influenced by the underlying physiology of the person or if they simply transform it entirely."
+    MC "Is there something special about Hageshi-sensei then?"
+    Tsubasa "A few things at least. He's unusually lean even among those with muscle growth factors that are known for their leanness."
+    Tsubasa "I do not know if this is due to his body's natural propensity or the fact that he doesn't eat much. He never developed the prodigious appetite that typically characterizes other muscle growth students."
+    if routelock == "FMG":
+        MC "Huh, that is odd. You should see how much Akira eats. That girl can pack it away."
+    elif routelock == "WG":
+        MC "Huh, that is odd. Mitzutani-san eats a lot. Maybe not as much as Alice... but still a lot."
+    else:
+        MC "Huh, that is odd. Mitzutani-san eats a lot. Maybe not as much as Nikumaru-san... but still a lot."
+    HR "He's also known to have remarkably fast reflexes. Then again, he was, and still is, a trained fighter. Maybe that has something to do with it besides his growth."
+    Tsubasa "It's a possibility I've considered as well."
+    Tsubasa "Most peculiar of all though is his strength to bodyweight ratio."
+    Tsubasa "Though not quite at the level of some of the past record breakers— and current for that matter— in terms of absolute strength, he was easily the strongest in his class, despite others being much larger."
+    MC "Sounds like he's as scary as everyone thinks he is."
+    HR "Yes, which is why I like to impress the fact upon students to dissuade them from causing trouble."
+    MC "Still though, some of those giant students are pretty big. Like those guys in the hall arguing earlier. Seems like even he would have trouble keeping them in line if they really wanted to press the issue."
+    HR "Heh. Trust me, he's dealt with much worse than those two."
+    MC "Really? Like how big are we talking here?"
+    Tsubasa "As Hageshi-san is fond of saying, \"The bigger they are, the harder they fall.\"."
+    HR "We've probably said too much already. You'd have to ask him sometime, he might tell you."
+    Tsubasa "Hotsure-san, you do understand that we would not normally be at liberty to talk about another faculty member so freely when they are not present. We discuss these things for Aoi-san's benefit, as a colleague of Hageshi-san."
+    Tsubasa "Not only that, but with the understanding that Hageshi-san wants his story and experience with his growth factor to be an inspiration and source of hope to students that struggle with theirs."
+    Tsubasa "If you want to know more, I'd encourage you to talk with him yourself sometime."
+    MC "Gotcha. Will do. I won't pry any further. Thanks for the history lesson Tsubasa-sensei and Tashi-sensei."
+    Tsubasa "You're welcome."
+    MC "For what it's worth, it does help to know that others have been through the same thing as students here, and come out the other side just fine."
+    Tsubasa "I'm sure Hageshi-san would be happy to hear that."
+    "Tsubasa-sensei returned to reading his newspaper, seemingly no longer interested in further conversation."
+    Takamura "Oh, I almost forgot with this whole discussion, here's the assignment for your sister. I do hope she starts feeling better. If you see her before then, be sure to let her know I plan to stop by."
+    MC "Thanks, Takamura-sensei. Sure thing. I'll get going now."
+    scene black with fade
+    pause 1
+    scene Campus Center with fade
+    "I was on my way back to Tomo's dorm when I came across someone I recognized from earlier. Sulking around like a whipped puppy."
+    "Giant 2" "Stupid Hageshi. Everyone thinks he's so tough. He can't do shit to me, I'm nearly twice his height. Where does he get off giving me his stupid little stinkeye?"
+    MC "..."
+    "Giant 2" "Huh!?"
+    MCT "Looks like he noticed me listening to him mumbling to himself."
+    "Giant 2" "What are you looking at, pipsqueak?"
+    "I should have just kept on walking, but I couldn't resist putting this whiney jackass in his place one more time."
+    MC "You do realize you wouldn't even stand a chance against Hageshi-sensei right?"
+    "Giant 2" "Just who the hell are you and where do you think you get off telling me that?"
+    MC "He's taken down much bigger guys than you with ease."
+    "Giant 2" "Is that so? Color me skeptical."
+    MC "You had your chance to express your skepticism, but you backed off like a little bitch when all he did was twitch his eyebrow at you. Just move on with your life dude, and stop talking shit to people."
+    "Giant 2" "How about I just pound you into the ground right now. What are you going to do about it when Hageshi-sensei's nowhere in sight?"
+    MC "Do you really think starting something with me isn't going to end with him breaking his foot off in your ass?"
+    "Giant 2" "{i}Arrgh!{/i} Just get lost."
+    MC "Yeah I'm going... {size=-6}loser.{/size}"
+    scene Dorm Hallway with fade
+    play sound Knock
+    pause 1
+    show Tomoko neutral with dissolve
+    MC "Here's your homework."
+    Tomoko "Thanks, I guess. Not the most fun present."
+    MC "Feeling better?"
+    if checkAffection("TM", ">=", 6):
+        Tomoko "A little. It's just a cold, it's not a big deal. I'll be fine."
+        MC "You sound better. Still though, you don't look so good. I think you should rest more."
+        Tomoko "You're probably right."
+        $setAffection("TM", 1)
+        Tomoko "I guess I'll rest up a bit before trying to get this homework done."
+    else:
+        Tomoko "It's just a cold. Not a big deal. Why do you care?"
+        MC "Eh, I care a little. At least enough to ask."
+        "I was at least relieved she didn't seem so stuffed up like she did this morning."
+        $setAffection("TM", 1)
+        Tomoko "Thanks."
+        MC "You sound cranky. I can't believe I'm saying this, but maybe you need a nap."
+        Tomoko "I probably should have taken a nap, but I was just playing games. I guess I'll rest up a bit before trying to get this homework done."
+    MC "Sounds like a plan. I'll see you later Tomo. Feel better."
+    Tomoko "Thanks Bro, later."
+    MC "Oh, and Takamura-sensei said she planned on stopping by to check up on you."
+    Tomoko "That's nice of her, I guess. Thanks for the head's up."
+    MC "No problem."
+    MCT "Can't say I'd be thrilled to see Tashi-sensei if he showed up at my door, but at least Takamura-san means well."
+    "Tomo didn't say, and I didn't want to pry, but I was curious about this elective course that she seemed keen on making sure she made it in before the registration deadline."
+    "If nothing else, it was a convenient opportunity to get to know the teachers a bit better."
+    "I knew Hageshi-sensei was a tough customer from having him in class. But now I understand a bit more why the other students were so terrified of him if they were caught causing trouble."
+    jump daymenu
+
+label MC034:
     "This marks the current end of the Keisuke-centric scenes."
     "More are planned for a later release. Until then, feel free to explore the main routes."
     jump daymenu
@@ -5631,7 +5913,7 @@ label RM001:
             show RM happy
             RM "I want kids to get more critical thinking skills, so they won't just mindlessly obey authority."
             MC "I suppose that would be a good thing."
-            MCT "Unless they turn into paranoid weirdos like you…"
+            MCT "Unless they turn into paranoid weirdos like you..."
             MC "Well, hey, why don't you show me your... Whatever it is."
             show RM doubt
             "He sighed and held up a lens, which was hiding behind some other components."

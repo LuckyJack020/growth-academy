@@ -9,15 +9,15 @@ default persistent.enable_nsfw = True
 transform altMove (xSp, xCen):
     linear xSp xcenter xCen
 
-transform wiggle_loop():
-    easein 0.15 xoffset 20
-    easeout 0.15 xoffset 0
-    easein 0.15 xoffset -15
-    easeout 0.15 xoffset 0
-    easein 0.15 xoffset 10
-    easeout 0.15 xoffset 0
-    easein 0.15 xoffset -5
-    ease 0.15 xoffset 0
+transform wiggle_loop(xSP):
+    easein xSP xoffset 20
+    easeout xSP xoffset 0
+    easein xSP xoffset -15
+    easeout xSP xoffset 0
+    easein xSP xoffset 10
+    easeout xSP xoffset 0
+    easein xSP xoffset -5
+    ease xSP xoffset 0
     repeat
 
 init python:
@@ -771,6 +771,7 @@ init python:
             "Jineko": [1, 2, 3, 4, 5, 6],
             "Natsuko": [1, 2, 3, 4, 5, 6],
             "Okisho": [1, 2, 3, 4, 5, 6],
+            "Kanami": [1, 2, 3, 4, 5, 6],
             "Tako": [1, 2, 3, 4, 5, 6],
             "Tomoko": [1, 2, 3, 4, 5, 6],
             "Sakura": [1, 2, 3, 4, 5, 6]
@@ -840,6 +841,11 @@ init python:
         global NatsOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             NatsOutfit = o
+
+    def setKanamiOutfit(o):
+        global KanamiOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.SWIMSUIT:
+            KanamiOutfit = o
 
     def setOkishoOutfit(o):
         global OkishoOutfit
@@ -938,7 +944,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Tako': 1, 'Tomoko': 1, 'Sakura': 1}
+        minorsizes = {'Yuki': 1, 'Jineko': 1, 'Natsuko': 1, 'Okisho': 1, 'Kanami': 1, 'Tako': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
@@ -950,6 +956,7 @@ label start:
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
         SakuraOutfit = OutfitEnum.DEFAULT
+        KanamiOutfit = OutfitEnum.DEFAULT
         RyokoOutfit = OutfitEnum.DEFAULT
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT

@@ -479,6 +479,17 @@ init python:
     )
     ost.manualDefineList.append(theme_WiV)
 
+    theme_HmT = ost.soundtrack(
+        name = "Hidden Meadow (Taishogoto Ver.)",
+        path = "Audio/BGM/scene_GTS2.ogg",
+        priority = 1,
+        author = "Post-Bop",
+        description = "Alternate Naomi Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_HmT)
+
     ## Base Template
     ######################################
 
