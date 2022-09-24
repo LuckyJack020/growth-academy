@@ -1360,6 +1360,7 @@ label GTS012_after:
     jump daymenu
 
 label GTS013:
+    $setFlag("XX12")
     $setProgress("GTS", "GTS014")
     scene Campus Center with fade
     play music Peaceful
@@ -10185,7 +10186,296 @@ label GTS046_c2:
     jump daymenu
 
 label GTS047:
-    "Scene not yet implemented."
+    scene Field with fade
+    play music HigherEdu
+    "No matter how many times I made the long walk to the giant dorms, the change in scale never ceased to put me off my footing, even if just a little."
+    $setSkill("Athletics", 1)
+    "Even still, visiting Naomi after class was just about a daily routine by now; making the trip so many times every week through the baking summer haze was good for cardio, that was for sure."
+    "I was easily working off Naomi's steady line of experimental baked goods and then some."
+    "I guess... she was just getting a little harder to resist these days. I really looked forward to getting to see her, and I could tell the feeling was mutual."
+    scene Giant Dorm Exterior with fade
+    "A butterfly resting on the chain link fencing whisked away as the gate rattled open before me. I spared a glance at it, flickering leafy green against the vast blue, as I strolled past and off towards Naomi's dorm."
+    "I entered the building's engulfing shadow and stepped up to knock on the door."
+    play sound Knock
+    "After a few seconds, I heard a familiar booming voice from a few meters above me. Light and airy as it was, the reverb from the high ceilings and the sheer volume of her unrestrained voice still produced a potent echo."
+    GTS "Hello, Keisuke-kun! One moment, I'll be right there!"
+    "Hearing Naomi assume it was me brought some of the old butterflies fluttering back. And then I thought... she must not get a lot of visitors..."
+    "A few moments later, the lock on the giants' door opened with a CLUNK and swung open; it looked as if the entire wall were opening up."
+    scene Giant Dorm Interior
+    show GTS neutral
+    with fade
+    "Naomi smiled down at me as she eased the big door closed. After a second, her eyes drifted to the small bag that I brought."
+    GTS "It's good to see you again."
+    show GTS pondering
+    "The glint in her wayward eye told me she was curious. The more time passed, the more obvious her true thoughts were becoming."
+    MC "Hey, Naomi-chan. You're probably wondering what's in the bag, right?"
+    show GTS neutral
+    GTS "My curiosity {i}has{/i} been piqued. Will you show me?"
+    "Naomi slowly knelt down in front of me to get a better look. I rustled around in my bag, and her eyes widened, a slight motion greatly exaggerated by her size, the exact moment I pulled it out."
+    show GTS surprised
+    GTS "Looking Up to Nobi-Sensei'? What's that?"
+    MC "Oh, just a show I watched a couple years ago. I was in the mood to rewatch it, I thought I'd offer if you wanted to join me. I think you might like it."
+    show GTS happy
+    GTS "Why, that sounds perfectly lovely."
+    show GTS neutral
+    GTS "What's it about?"
+    MC "Well, during the reign of Emperor Saga, there's a yōkai named Nobiagari who attacks somebody on the road one day... but they turn out to be an imperial court wizard."
+    MC "And as punishment for attacking people, he cast a spell to send Nobiagari into the future, where she'll be trapped in human form until she redeems herself..."
+    show GTS surprised
+    MC "...By becoming a middle school teacher for a year."
+    GTS "A yōkai schoolteacher! What an outlandish idea!"
+    MC "Yeah, it's pretty cool."
+    MC "Oh, but first, is there anything you wanna do today?"
+    show GTS happy
+    "She nodded with vigor, her smile widening."
+    GTS "Well, I finally found a suitable spot to transplant the sapling you gave me. And as lovely as it is, it did look a bit lonely..."
+    show GTS neutral at Transform(xzoom=-1)
+    GTS "I was wondering if you wouldn't mind coming with me to the nursery in town."
+    MC "Not at all. That actually works out, the plant food jug for the roof is almost empty."
+    show GTS happy with vpunch
+    "She knelt down with a swiftness that was almost frightening in conjunction with her size... and gave me a peck on the forehead. Her lower lip half-covered my eyes and the suction pulled me a step towards her."
+    GTS "You are the sweetest, Keisuke-kun."
+    show GTS surprised
+    "She shortly noticed my wide-eyed stare up at her."
+    GTS "I apologize for that outburst. I should calm myself."
+    MC "Heh... it's okay. Still... don't know your own strength, huh?"
+    GTS "I, erm... suppose it will take more discipline on my part."
+    MC "Well hey, don't sweat it. We'll just have to figure it out together."
+    pause 0.5
+    GTS "...Yes, you're quite right."
+    "For a second, I pondered what I just signed myself up for with the woman who just knocked me around like a toy with only a breeze of a kiss."
+    "Not that I would've ever chosen different."
+    MC "Well! Should we go take care of business?"
+    show GTS neutral
+    GTS "Yes, let's. I'll show you where I planted the sapling on our way out."
+    scene Giant Dorm Exterior with fade
+    "I followed her outside and she beckoned me toward the back of the hangar."
+    show GTS_S neutral with dissolve
+    GTS_S "Here we are. These are rather humble beginnings, I admit, but it seems to be dealing with the soil well enough."
+    show GTS_S embarrassed
+    pause 0.25
+    GTS_S "I do apologize about its placement."
+    MC "What do you mean?"
+    GTS_S "Well, this spot has the best light for a persimmon tree. Yet... it hardly seems appropriate to sequester away such a thoughtful gift behind a shack in a pit of dirt."
+    MC "Well, for the time being there's nothing really to be done about the whole ‘dirt pit' part."
+    show GTS_S sad
+    GTS_S "Indeed."
+    MC "So, let's just be thankful it's found a home where it'll flourish. Okay?"
+    show GTS_S surprised
+    "I sidled up next to her and put my arm around her knee; her hip took in a good portion of my face, like a mother songbird."
+    show GTS_S happy
+    GTS_S "Yes, let's."
+    "After a moment of savoring the embrace, I looked again at the persimmon tree and noticed a handful of X's the size of throw pillows drawn in the dirt."
+    MC "What are those marks? Are you planning on planting more stuff here?"
+    "Naomi slowly nodded while she lowered herself, almost like a parent addressing her child. The height gap was so big at this point, we couldn't be next to each other without looking awkward."
+    hide GTS_S
+    show GTS neutral
+    GTS "Luckily, saplings and small shrubs are permitted by the dormitory policy. As such, I thought planning out a small plot would be a nice little pastime."
+    show GTS pondering
+    GTS "Although, I have wondered if the administration might hear a petition for further efforts."
+    MC "Efforts to do what?"
+    show GTS neutral
+    GTS "Well, I have also been contemplating the possibility of introducing some more greenery to these facilities as a whole. I know that I'm hardly the only one who‘s been rather put off by all this desolation."
+    menu:
+        "Isn't that kind of futile? We're only going to be here another six months or so, and half of that will be winter.":
+            GTS "In a certain light, yes. But our enjoyment here and now is not the point."
+            MC "Oh. That's fair, I guess."
+            $setAffection("GTS", -3)
+        "But how would you do that? Autumn's only a month away.":
+            GTS "Well, I may be able to overwinter some plants inside my dormitory. The lighting is not quite ideal, but I think hardier plants shall have to rule the day regardless."
+        "But is it not that yearning for greenery that is the cause of all the discontent?" if checkSkill("Academics", ">", 5):
+            $setVar("GTS_selfhood", getVar("GTS_selfhood") - 1)
+            $setAffection("GTS", 1)
+            show GTS happy
+            GTS "Well said."
+            show GTS neutral
+            GTS "Nevertheless, I do think it would be kind to do something small to help future students reckon with the changes they will face."
+        "You think they'll approve that plan? There's probably a lot of red tape to go through.":
+            GTS "That is true. One cannot say for sure."
+        "What about, like, turning the top and bottom levels into a giant rock garden?":
+            show GTS surprised
+            GTS "Oh!"
+            show GTS pondering at Transform(xzoom=-1)
+            "Her eyes went wide and meandered over the parched, craggy landscape; her fingers curled over her chin in contemplation."
+            show GTS surprised
+            $setAffection("GTS", 1)
+            GTS "Keisuke-kun, that's an excellent idea!"
+            show GTS pondering
+            GTS "Granted, even for the sort of person these facilities are intended for, that scale {i}would{/i} be rather ostentatious for a rock garden. The theming would be rather stretched thin, and it would be quite the chore to maintain properly, besides."
+            show GTS neutral
+            GTS "Hmm... but one or two well-placed gardens could make for a lovely setpiece, lovely indeed..."
+    GTS "..."
+    show GTS despaired-thought
+    "Naomi looked around the quarry as a whole, scanning her head slowly as she viewed one end of the mining pit to the other."
+    GTS "Mmm... it'd take far more than a few trees and shrubs to make the area feel liveable, though."
+    GTS "First, the soil would need to be tilled to plant grass. That would make conditions more favorable for some flowering weeds, which would liven up the space a bit whilst we begin proper landscaping."
+    MC "So, similar to the courtyard on the main campus."
+    show GTS neutral
+    GTS "Exactly. While we may not get the luxury of a sidewalk, I should think most would prefer to tread on grass over sandy dirt."
+    MC "That'd definitely help with the whole, uh, ‘construction site' chic this place's got going on."
+    show GTS happy
+    "Naomi chuckled."
+    GTS "One can hope."
+    MC "Do you think your classmates will appreciate the changes?"
+    show GTS neutral
+    GTS "I certainly hope so. I can understand if some of them would prefer a more modern aesthetic with tile and sidewalk, but I need to think realistically. There's only so much that an individual can do."
+    MC "You know, it doesn't {i}have{/i} to just be you. I bet your neighbors would pitch in, if you asked."
+    "Naomi nodded."
+    GTS "Yes... you're right. So often, I forget that I can go to my fellow man for help."
+    show GTS sad
+    GTS "I always did wish dearly to be the proverbial heart of the home. I am proud of how I contributed to my family, but now... {w}now..."
+    MC "Now?..."
+    show GTS neutral
+    "A warm smile bloomed again on her face as she looked at me."
+    GTS "Now, you're here... to show me how to live another way."
+    "I smiled in return."
+    MC "I'm glad that I helped make a difference."
+    show GTS unique
+    GTS "Thank you for being here for me."
+    "We both stood there quietly, enjoying the moment. Time slowed down around us once more as a gentle breeze rolled through the quarry."
+    "Specks of dust and sand flitted across my cheeks on the wind, but we could still find a brief moment of inner peace."
+    hide GTS
+    show GTS_S neutral
+    "Naomi took a deep, hollow breath, then stood to her full height. Her shadow loomed over the trail connecting the dorms to the center of the quarry."
+    MC "Well, should we head into town? Maybe we can add grass seed to the list."
+    show GTS_S happy
+    GTS_S "That would be wonderful."
+    MC "The only trouble will be finding a grass dealer in a town this small."
+    show GTS_S aroused
+    "Smirking, she shot me a judgmental glare and lightly swung her leg out towards me."
+    show GTS_S surprised with vpunch
+    "Her playful kick rammed into me with the force of a clock tower pendulum, and I staggered on my toes with the world swirling around me..."
+    hide GTS_S
+    show GTS surprised with vpunch
+    "But as I began to fall over, I found Naomi's massive yet graceful hands waiting for me. She caught my abdomen in her hands and gently righted my posture; there was the faintest tremble in her palms."
+    show GTS sad
+    GTS "I'm terribly sorry. Are you hurt?"
+    MC "Heh, no. Maybe a little in awe."
+    show GTS embarrassed
+    GTS "I myself am a little in awe of all I have yet to learn."
+    MC "Hey, turn that frown upside down, okay? No harm, no foul."
+    show GTS neutral
+    GTS "Mhm... as you say, Keisuke-kun."
+    MC "That's the spirit. Now let's hit town, shall we?"
+    stop music fadeout 5.0
+    "She nodded, hoisted me up against her chest, and we made our way to the main road."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+    scene Town with fade
+    play music TwilightBright
+    "After setting me down just as we were entering the town proper, Naomi seemed to want to set the pace this time around."
+    "Every time her colossal legs made a stride in front of me, Naomi briefly stopped and turned her head to ensure I was keeping pace."
+    "All that practice that we had with her slowing her strides helped a lot. Even though she was leading this time, her rhythm was perfect."
+    show GTS neutral with dissolve
+    "Naomi briefly exhaled, a very subtle look of nervousness upon her face as she returned to the tiled sidewalks in town."
+    show GTS despaired-thought
+    GTS "This perspective always feels so... unnatural."
+    GTS "Part of me hopes that I never get used to this, while another part is telling me that I must. I'm not certain which I should listen to."
+    menu:
+        "You won't need to think about it all the time.":
+            MC "I think you shouldn't have to 'get used to it'. Sure, it'll change you, but it's not a part of who you are. You'll still be Yamazaki-san to everyone else... and Naomi-chan to me."
+            show GTS pondering
+            "Naomi stood still for a few seconds as she slowly appeared more relieved."
+            $setAffection("GTS", 2)
+            GTS "That's very well put, Kei-chan. It's a very idealistic point of view."
+            MC "Don't let it occupy your thoughts too much. You shouldn't worry about adjusting everything you do. Only... well, the walking stuff."
+            show GTS neutral
+            GTS "As well as holding things and speaking to others."
+            MC "Well, yeah, that too."
+            GTS "Though, you mean to say that... while my body may change, I can still present myself the same way to others. I'll still be myself. The essence of my spirit will be the same."
+            MC "Exactly."
+        "You should come to terms with it. It's something you can't stop.":
+            $setVar("GTS_selfhood", getVar("GTS_selfhood") - 1)
+            MC "You'll need to get used to your new size eventually."
+            show GTS sad
+            "Naomi slowly lowered her head as a gloomy air washed over her."
+            GTS "Yes. I suppose you're right."
+            MC "I... didn't mean to make you upset."
+            show GTS neutral
+            GTS "No, no. Don't worry about it. You haven't done anything wrong. If anything, I feel like that's what I needed to hear."
+            MC "Something you needed to hear?"
+            GTS "Exactly. I tell myself all the time about what I ‘should' do, or what a disciplined person ought to do. Left alone to one's own thoughts, though, we slowly become clouded with doubt."
+            MC "That's why we rely on the people close to us. To hear more opinions, and gather advice."
+            GTS "Right. I need to come to terms with my growth. I'll need to lean on others for support, just as you said."
+            MCT "I hope I didn't sound too harsh..."
+    scene Store with fade
+    "We eventually made our way to a family-owned general store."
+    show GTS happy with dissolve
+    "Naomi needed to crouch down to see inside, but I could tell that she liked this place."
+    GTS "Aha, perfect."
+    MC "You found the seeds already?"
+    show GTS neutral
+    GTS "Actually, I was looking at that travel brochure."
+    #MC "Mount Lanakila?"
+    MC "Mount Kikai?"
+    GTS "Well, that's one possible destination, yes. I was moreso pointing out the fact that the island is full of beautiful structures."
+    GTS "For being such a small landmass, we're home to a lot of different biomes. Forests, plains, mountains, beaches..."
+    MC "Would you wanna go there sometime?"
+    show GTS pondering
+    GTS "To where, specifically? There are so many choices, it'd be difficult to select just one."
+    MC "Mountain climbing sounds enjoyable. It's challenging, but rewarding. It's a lot more interesting than a simple nature walk, isn't it?"
+    show GTS surprised
+    GTS "You think I'd be suited for mountain climbing?"
+    "I chuckled."
+    MC "Well, it'd be easier for you, certainly, but that's not what I was getting at. I meant it more as... like, a spectacle thing."
+    show GTS neutral
+    GTS "A spectacle?"
+    MC "Yeah. The mountain range is nature's tallest formation, right? I guess I was trying to point out that it... suited you, for lack of better terms."
+    show GTS embarrassed
+    GTS "Ah. That's what you meant."
+    MC "I didn't want it to sound too obvious."
+    GTS "I understand. It's just funny that you mention mountaineering in particular."
+    MC "Oh? Why is that?"
+    show GTS neutral
+    GTS "Winter happens to be my favorite season. I love the aesthetic of freshly fallen powder evenly coating a rolling field. The way that the snow weaves and curls as it gets blown by the wind..."
+    GTS "I've always been curious what the peak of a mountain looks like when you're actually standing there. I've seen pictures, of course, but I imagine the experience can't accurately be captured in an image."
+    show GTS happy
+    GTS "Coincidentally, did you know that not all mountains are covered in snow year-round? Apparently, the trail we climbed to the shrine is often covered in a reddish-brown ash due to the volcanic crater at the top."
+    MC "Really? I never thought about that. Every single travel brochure and postcard depicts it covered in snow. It's hard to imagine a mountain peak without it."
+    show GTS neutral
+    GTS "Exactly. It almost sounds like a foreign concept, doesn't it?"
+    MC "I would like to go with you, if that's what you're suggesting."
+    GTS "I'll need to make sure that there's proper equipment for someone my height, but... yes."
+    GTS "I don't look forward to finding a winter coat in my size, but hopefully the academy should be able to accommodate me."
+    MC "You mentioned that your favorite season is Winter?"
+    GTS "That's correct."
+    MC "It isn't Spring? I just sort of assumed, with all the projects you do..."
+    "Naomi gave me a cold, piercing stare."
+    GTS "There's a lot that you don't know about me, Keisuke."
+    MC "..."
+    MC "..."
+    show GTS unique
+    "Naomi began to laugh under her breath. She covered her mouth as a billowing breeze flowed through her cupped fingers."
+    show GTS neutral
+    GTS "Joking aside, I can understand why you'd feel that way. I appreciate the bounty that Spring gives us, but... Winter just has a certain inimitable beauty. It's like nature's way of resetting itself."
+    GTS "It's as if the plains are being wiped clean, ready for another season of gorgeous flowers and crops."
+    MC "I can see the wisdom in that."
+    MC "...I actually believed you for a second, there."
+    show GTS happy
+    GTS "I can sound quite serious when I need to be. I hope I assured you that it was all sarcastic, though."
+    MC "You did."
+    "I briefly looked at the storefront, then slowly craned my view upwards towards Naomi."
+    MC "Ah, right. How many bags of grass seed should I get?"
+    show GTS neutral
+    GTS "Two bags should be enough for my... er, grounds. I'll start with that, then go from there. I would like to make sure it can actually grow in the quarry before I invest more."
+    MC "Got it."
+    stop music fadeout 5.0
+    "I walked inside the hobby store and picked up two moderately-sized bags of grass seed, about the size of a cereal box each."
+    "With one bag in each hand, I paid for the bags at the register, then exited the store."
+    show GTS neutral
+    "Naomi was waiting for me outside, awkwardly trying to recline herself on the side of the neighboring building."
+    show GTS unique
+    GTS "Thank you, Kei-chan. I really appreciate this."
+    show GTS embarrassed
+    GTS "I would have loved to walk alongside you, but, ah- doorways."
+    GTS "And ceilings."
+    "I chuckled."
+    MC "I understand. You can walk next to me now, though."
+    show GTS unique
+    GTS "I'll do just that."
+    "I handed Naomi one of the bags, and she cradled it in her left hand. The bag, which I had to hold under my arm, fit like a graham cracker box in Naomi's enormous grip."
+    "The two of us walked next to each other as the sun slowly began to set."
     jump daymenu
 
 label GTS048:

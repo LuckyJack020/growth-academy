@@ -1484,6 +1484,7 @@ label BE011_c3:
     jump daymenu
 
 label BE012:
+    $setFlag("XX12")
     $setProgress("BE", "BE014")
     scene Campus Center with fade
     play music Busy
@@ -2582,18 +2583,18 @@ label BE020:
     $setTimeFlag("XX20")
     $setProgress("BE", "BE021")
     scene Campus Center with fade
-    "Classes were over for the day, thankfully. Today's lessons hadn't been hard, necessarily. But they'd been mentally draining. The dining hall for dinner wouldn't open up for another hour or two, so I pondered over what I could do in the interim."
+    "Classes were over for the day, thankfully. Today's lessons hadn't been hard, necessarily. But they'd been mentally draining. The cafeteria was closed for dinner prep for another hour, so I pondered over what I could do in the meantime."
     show BE happy at center with dissolve
     play music BE
     BE "Hi, Kei-chan!"
-    "Honoka appeared as she often did, out of nowhere. The major clue that it was her being the two soft lumps pressed into my back when she leapt into me. She quickly jumped back and smiled."
+    "Honoka appeared as she often did, out of nowhere, mashing her two soft lumps into my back when she leapt into me. She quickly jumped back and smiled."
     show BE neutral
-    BE "What are you up to?"
+    BE "What'cha up to?"
     MC "Nothing really. I think I was going to go to my room and just chill until it was time to eat."
-    BE "Oh? Well, hey. I'm glad I found you. See, I got this gift card from my mom."
-    "Honoka reached into her cleavage and extracted a small certificate."
+    BE "Oh you're hungry? Well I'm glad I found you! See, I got this gift card from my mom in the mail today."
+    "Honoka reached into her cleavage and extracted a small card."
     show BE happy
-    BE "Apparently she got it at a work raffle, and she saw there was a location near here. I haven't ever been to this restaurant before. I was looking for someone to go with."
+    BE "Apparently she got it at a work raffle, and she saw there was a location here on the island! I haven't ever been to this restaurant before and I was looking for someone to go with."
     menu:
         "Are you asking me out?":
             jump BE020_c1_1
@@ -2607,39 +2608,44 @@ label BE020_c1_1:
     BE "Pff. Kei-chan you're like my best friend. I can have dinner with you without it being a \"date\", right?"
     MC "Yeah. I guess so. Just, I dunno. Wasn't sure."
     show BE neutral
-    BE "I mean, if it \"was\" a date, you wouldn't be opposed to it, would you?"
+    BE "I mean, what if it {i}was{/i} a date? Would you be against it?"
+    MCT "Easiest question of my life."
     MC "No. Not at all."
     show BE happy
-    BE "Good. Glad we're on the same page then."
+    BE "Good! Glad we're on the same page then."
     MC "Are we?"
-    BE "Yep! Now I already looked into it and there's a bus that leaves in 45 minutes that will drop us off close to the restaurant, so by the time we sit and order, it should be good for dinner time. Does that sound fine?"
+    BE "Yep~!"
+    BE "Now I already looked into it. There's a bus that leaves in 45 minutes that will drop us off pretty close to the restaurant. By the time we sit and order, we should make it there {i}just{/i} before the dinner rush. Sound like a plan?"
     MC "Sure. Should I, like, dress up or something?"
     "Honoka looked at the gift card."
-    show BE angry
-    BE "Uh, I really don't know. This doesn't say there's a dress code or anything like that. So I guess the answer to that is \"It's optional\"?"
-    MC "Okay. Well, yeah that sounds good then. So, I guess I'll meet you at the bus stop when it's time to leave?"
+    show BE shrug
+    BE "Hmm... I really don't know. This doesn't say there's a dress code or anything like that. So I guess the answer to that is 'It's optional'?"
+    MC "Okay. Well, why don't we just dress up then? Sounds like a nice change of pace, right?"
     show BE happy
-    BE "Yep! All right, I'm going to go change. See you in a bit, Kei-chan!"
+    BE "Agreed! Alright, I'm going to go change. Let's meet back up at the bus stop. See you in a bit, Kei-chan!"
     hide BE with dissolve
     "With that, Honoka left towards her dorm room and I did the same."
-    MCT "I should probably get out of my uniform, at least."
+    MCT "I should probably bust out the {i}good{/i} cologne."
     jump BE020_c1_after
 
 label BE020_c1_2:
     MC "I'd love to go, if you're offering."
-    BE "Oh! Well, good! Yeah, I mean, you were clearly my first choice. I thought it would be nice for us to go out some place that wasn't an arcade. I mean, not that I'm sick of arcades."
-    MC "If you said that, I'd decline the invite if only because you'd need to go to the doctor."
-    show BE neutral
-    BE "Ha. So. If you want to go, then, there's a bus that leaves campus in like, 45 minutes, and it stops within walking distance."
+    BE "Oh! Well, good! Yeah, I mean, you were clearly my first choice."
+    show BE embarrassed
+    BE "I-thought-it-would-be nice-for-us-to-go-out-some-place-that-wasn't-an-arcade-I mean-not-that-I'm-sick-of-arcades."
+    MC "Breathe, Honoka! I believe you."
+    "Honoka tooka deep breath, her chest heaving up and down as she did."
+    show BE happy
+    BE "{i}Haaaa... phew.{/i} Sorry about that. So. If you want to go, then, there's a bus that leaves campus in like, 45 minutes, and it stops within walking distance."
     MC "That sounds perfect. What kind of restaurant is it, actually?"
-    show BE angry
-    BE "You know, I honestly didn't check. But it's free, so..."
+    show BE shrug
+    BE "You know, I honestly didn't check. But it's a gift card good for 15,000 yen, so..."
     MC "Fair enough. I was just wondering if this was something that needed, like, a collared shirt or they'd kick you out."
     show BE neutral
-    BE "I don't think they would. But, hey, try it out. Could be fun. I'll find something nice too."
+    BE "Nah. Mom knows that I don't like restaurants with strict dress codes. But hey, let's try it out. Could be fun! I've got something nice I've been itching to try on too!"
     MC "Sounds like a plan. Okay. Meet you at the bus stop then?"
     show BE happy
-    BE "Yeah! Okay, I'm excited. Hehe, awesome. See you then, Kei-chan!"
+    BE "Yeah! Okay, awesome! Hehe. See you soon, Kei-chan!"
     "I smiled as Honoka left."
     hide BE with dissolve
     "I'm sure I had something decent I could put on in order to look presentable. This sounded like it would be fun."
@@ -2647,45 +2653,47 @@ label BE020_c1_2:
 
 label BE020_c1_3:
     if checkAffection("BE", ">", 10):
-        MC "I'm sure Nikumaru-san would be interested."
+        MC "I'm sure Nikumaru-san would be interested. Have you asked her yet?"
         show BE sad
-        BE "Aw. Heh. Are you worried we're hanging out too much? I like our classmates a lot too, but, well... I really wanna go with you."
-        MC "Oh. Gosh. No no it's not that I'm tired of spending time with you. I just, I didn't even put it together. Sorry. I'm dumb."
+        BE "Oh... Are you worried we're hanging out too much? I like our classmates a lot too, but, well... I really wanted to go with you..."
+        MC "Oh. Gosh. No no it's not that I'm tired of spending time with you. I just, I didn't even put it together that you would want to go with me. Sorry. I'm dumb."
         show BE neutral
-        BE "Mm. Dumb? No. Oblivious at times, definitely."
-        MC "Yeah, heh. Sorry. My bad. But, um, yeah, I'd love to go with you!"
-        show BE aroused
+        BE "Mm. Dumb? No. Oblivious sometimes? Definitely."
+        MC "Alright, alright. Fair enough. My bad. But yeah, I'd love to go with you!"
+        show BE wink
         BE "Good. Cuz if you didn't, I was gonna have to knock you out and drag you there, caveman-style."
-        "Honoka stuck out her tongue, then looked at the gift certificate."
+        "Honoka stuck out her tongue, then looked at the gift card."
         show BE neutral
-        BE "Alice would probably find some way to critique the place anyway. I'm not sure what kind of cuisine it serves, actually."
-        MC "Well like I said, I had no plans. So unless it serves, like, insects, then I'm still down to go."
-        BE "Cool. We can catch a bus there. Leaves at a quarter 'til. Meet up there?"
+        BE "And besides, Nikumaru-san would probably find some way to critique the place anyway. I'm not sure what kind of cuisine it serves, actually."
+        MC "Well like I said, I had no plans. So unless it serves, like, insects floating in ramen broth, then I'm still down to go."
+        BE "Cool! We can catch a bus there. Leaves in 45 minutes. Wanna meet up at the bus stop?"
         MC "Yeah, I can do that. Should I put something else on?"
-        BE "Probably just anything other than your school uniform would work. Might be kind of weird otherwise."
-        MC "Good call. All right, I'll see you then."
+        show BE happy
+        BE "Actually, let's try something other than our uniforms this time! We don't get a chance to do that very often!"
+        MC "Sounds good to me. All right, I'll see you then."
         "Honoka nodded and headed off to her dorm to change."
         hide BE with dissolve
         "I figured I'd do the same, maybe see if I could get a shower in as well."
     else:
         MC "I'm sure Nikumaru-san would be interested."
         show BE sad
-        BE "I'm sure she would, Kei-chan. But I came to you for a reason."
-        "The realization hit me and I couldn't help feel like a bit of an idiot."
-        MC "You ah. You were asking me if I wanted to go, weren't you?"
+        BE "Maybe so, Kei-chan. But I came to you for a reason."
+        MCT "... OH."
+        MC "You uh... You were asking me if I wanted to go, weren't you?"
         show BE angry
-        BE "Yeah. Duh."
-        MC "Well, If I didn't embarrass myself enough to get booted off of your list, I could still go."
-        show BE aroused
+        BE "Duh."
+        MC "Well, If I didn't embarrass myself enough to get booted off of your VIP list, I would still go."
+        show BE seductive
         BE "May as well go with you."
-        "Honoka stuck out her tongue, then looked at the gift certificate."
+        "Honoka stuck out her tongue, then looked at the gift card."
         show BE neutral
-        BE "Alice would probably find some way to critique the place anyway. I'm not sure what kind of cuisine it serves, actually."
-        MC "Well like I said, I had no plans. So unless it serves, like, insects, then I'm still down to go."
-        BE "Cool. We can catch a bus there. Leaves at a quarter 'til. Meet up there?"
+        BE "Nikumaru-san would probably find some way to critique the place anyway. I'm not sure what kind of cuisine it serves, actually."
+        MC "Well like I said, I had no plans. So unless it serves, like, insects floating in ramen broth, then I'm still down to go."
+        BE "Cool! We can catch a bus there. Leaves in 45 minutes. Wanna meet up at the bus stop?"
         MC "Yeah, I can do that. Should I put something else on?"
-        BE "Probably just anything other than your school uniform would work. Might be kind of weird otherwise."
-        MC "Good call. All right, I'll see you then."
+        show BE happy
+        BE "Actually, let's try something other than our uniforms this time! We don't get a chance to do that very often!"
+        MC "Sounds good to me. All right, I'll see you then."
         "Honoka nodded and headed off to her dorm to change."
         hide BE with dissolve
         "I figured I'd do the same, maybe see if I could get a shower in as well."
@@ -2694,43 +2702,48 @@ label BE020_c1_3:
 label BE020_c1_after:
     scene School Front with fade
     stop music
-    "After I got back to my dorm room, I decided on what to wear. My school uniform was already a collared shirt, so changing into another one seemed redundant, but the red one I pulled out of my closet seemed nice, and more comfortable."
+    "After I got back to my dorm room, I decided on what to wear. Honoka and I decided to wear something nicer than normal, so I pulled out a charcoal gray button-up shirt with some black slacks. Simple, but effective."
     play music Rain
-    "I went to the bus stop to meet Honoka after checking my homework load, and making sure it wouldn't be too much for that night after we got back. She was already waiting when I arrived."
-    MC "Hey, Honoka. Have you been waiting long?"
+    "I went to the bus stop to meet Honoka after checking over my appearance multiple times. I even asked Daichi for an appearance check. Not sure why I was feeling so nervous about how I looked, this was Honoka after all."
+    "When I got to the bus stop, she was already waiting when I arrived."
+    MC "Hey, Honoka. Didn't keep you waiting, did I?"
+    $setBEOutfit(OutfitEnum.DRESS)
     show BE neutral at center with dissolve
     BE "Nope. Just got here a minute ago. Just waiting on you and the bus."
     MC "Good. Did you happen to find out what kind of restaurant it is?"
     show BE happy
-    BE "Yeah, actually. It's a sushi place. The gift card was for 5,000 yen. So I figure we can get some drinks, and then a few rolls. Maybe an order of edamame to go with it?"
-    MC "Oh. Great. I love sushi. Yes, that sounds great. Shouldn't take too long to make it either."
-    BE "That's the hope."
-    "Honoka smiled and checked the time on her phone as we waited for the bus. She looked nice. She wasn't wearing anything flashy. Just a blue blouse with a matching pencil skirt, and a shawl over her shoulders. It still looked good on her. "
-    "Eventually our bus arrived. We appeared to be the only two headed on it at this time. I approached the door and waited to the side for her."
+    BE "Yeah, actually. It's a sushi place. The gift card was worth 5,000 yen!"
+    MC "Wow, that's really nice of her to do."
+    BE "So I figure we can get some drinks, and then a few rolls. Maybe an order of edamame to go with it?"
+    MC "Great! I haven't been to a nice sushi restaurant in a while. Shouldn't take too long to make it either."
+    BE "Fingers crossed!"
+    "Honoka smiled and checked the time on her phone as we waited for the bus."
+    MC "You look very nice by the way, Honoka. The shawl is a nice touch."
+    show BE embarrassed
+    BE "Oh, thank you~! I'm glad you like the shawl. I was worried it might be too much. You look nice too!"
+    "Eventually our bus arrived. We appeared to be the only two getting picked up at this stop. I approached the door, but stepped aside."
     MC "Ladies first."
-    BE "Thank you, Kei-chan. Such a gentleman."
-    "Honoka seemed to direct the second comment more to the bus driver, who barely paid it mind as he closed the doors behind us and went underway."
-    "We sat together during the short trip, watching the nice atmosphere. Seichou Academy was nestled in quite a nice area. Which was probably intentional."
-    "A school would have a tough time helping the self-esteem of young people with odd quirks if it was dingy."
+    BE "Such a gentleman~"
+    "We sat next to each other during the short trip, watching the nice atmosphere. Seichou Academy was nestled in quite a nice area."
     scene Town with fade
-    play music BrightLights
+    play music DayByDay
     "Eventually our bus stopped, and we found ourselves in the middle of a small street, with several people walking around, coming in and out of various buildings."
-    MC "Alright. We're here. You said the restaurant was close?"
+    MC "Alright. We're here. You said the restaurant was close to here?"
     show BE neutral
-    BE "Yep. Should be up that block, and then around the corner."
+    BE "Yep! Should be up that block, and then around the corner."
     "Honoka pointed towards our destination and led the way."
     scene Sushi Restaurant with fade
     "The restaurant looked small, but looked very nice when we stepped inside. Once we got in, we saw only six tables, along with a small area where people could sit at stools."
     show BE neutral at center with dissolve
     BE "Hi. Table for two please."
-    "Honoka had already gone up to the head waitress while I was looking around. The waitress led us to a small table in the corner of the restaurant, where we sat opposite each other. "
-    Waitress "Here are your menus. Could I get you started with anything to drink?"
-    MC "Ah. Not sure. Honoka?"
+    "Honoka had already gone up to the head waitress while I was looking around. The waitress led us to a small table in the corner of the restaurant, where we sat opposite each other."
+    Waitress "Welcome! Here are the menus. Could I get you started with anything to drink?"
+    MC "Ah. Not sure yet. Honoka?"
     show BE happy
     BE "I'll have a lemonade, please."
     MC "I'll just take a water for now, thank you."
     "The waitress left so we could mull over our options."
-    MC "This is a nice place. Small but nice. Surprised it had gift cards."
+    MC "This is a nice place. Small but nice. Surprised it even {i}had{/i} gift cards."
     show BE neutral
     BE "There must be a few locations."
     "We only had to wait a moment before our drinks arrived, and Honoka asked for a plate of edamame. We still were deciding on what sushi we wanted to get."
@@ -2741,59 +2754,63 @@ label BE020_c1_after:
     show BE neutral
     BE "That means it's like, more rich?"
     MC "Yeah basically. Anago is more... I would say sweet, maybe?"
-    BE "Ah, okay. Much as I like sweet, I don't know if that'd go good with sushi. Yeah, I'll get this one then."
+    BE "Ah, okay. Much as I like sweet stuff, I don't know if that'd go good with sushi. Yeah, I'll get this one then."
     MC "Sounds good. Hm. I'm leaning towards either the shrimp tempura or a crab roll."
     BE "I was thinking about a crab roll too. How about we get that one to share, and we also get, maybe a tuna roll, and then you can get the tempura for yourself?"
     MC "Will that all fit on your gift card?"
     show BE happy
-    BE "Yeah, I think so!"
+    BE "Yeah! The prices here are pretty cheap actually, so we can afford a lot more than we planned!"
     MC "Okay then, that sounds good."
     "After putting our menus down, our waitress came over to take our orders almost instantly. The service here was impeccable. Now with nothing but our drinks, and two small bowls for soy sauce, we sat."
-    show BE neutral
-    BE "So, uh. How's school going?"
-    MC "Pretty good, I suppose. Same as you. Though, I don't know. Some days it's hard, some days it's soft, you know?"
-    "Honoka raised an eyebrow at me as she sipped her lemonade through a straw."
-    MC "I mean the classes, Honoka."
-    show BE unique
-    BE "I knew that. What did you think I was thinking?"
-    MC "I haven't the foggiest idea what you're talking about."
-    "Honoka snickered."
-    MC "But, what about you? Club situation the same?"
-    show BE neutral
-    BE "Yeah, I think I'm moving on to archery club."
-    MC "Archery huh? That's pretty cool. That was one of the gym activities I always liked. Maybe because there's not much moving around."
+    BE "Soooo...how's school treating you? Tsubasa-sensei's class is pretty tough."
+    MC "Pretty good, I suppose. Same as you. Tsubasa-sensei's teaching style can be dry sometimes, but as long as you pay attention in class, it's not too bad."
+    MC "But, what about you? How's basketball club?"
+    show BE doubt
+    BE "Actually... I think I'm moving on to the archery club."
+    MCT "Moving clubs again?"
+    MC "Archery, huh? That's pretty cool. That was one of the gym activities I always liked. Maybe because there's not much moving around."
     show BE happy
-    BE "Ha. Yeah. It seems pretty simple. There's only like, seven steps to shooting a bow and arrow anyway. And two rules. Don't point your bow at people, and don't be a person in the way of a bow. Sounds easy."
-    "I brushed a lock of hair out of my eyes, behind my ear, and sighed. I should have trimmed it a bit before heading out. Though that did remind me of something that could give Honoka difficulty."
-    MC "You think you'll be able to do archery?"
-    show BE neutral
-    BE "I don't see why not. It's just learning how to adjust for wind. I'm not saying I'll win competitions or anything like that."
+    BE "For sure! It seems pretty simple. There's only like, seven steps to shooting a bow and arrow anyway. And two rules. Don't point your bow at people, and don't be a person in the way of a bow. Sounds easy."
+    "I brushed a lock of hair out of my eyes, behind my ear, and sighed. I trimmed it a bit before heading out, but I guess it grew back."
+    MCT "Though that reminds me..."
+    MC "Do you think you'll be able to do archery? Considering..."
+    show BE shrug
+    BE "I don't see why not. It's just learning how to adjust your aim for the wind. I'm not saying I'll win any competitions or anything like that though."
     MC "No, no, I mean... I'm pretty sure it was a myth, but I remember reading about female archers having a breast cut off to make it easier to aim a bow."
-    show BE sad
-    BE "Oh gross. No, I'm not doing that."
-    MC "I, I know that. I mean, more in the effect that the string comes back really hard and whips you. You're big enough that it's almost guaranteed to hit you."
-    BE "No... come on, Kei-chan. This is a club at a school meant for bigger guys and girls. They'd have to have safety equipment, right?"
-    MC "Well yeah. They do make arm guards and chest guards."
-    show BE happy
+    show BE worried
+    BE "Oh gross! I'm definitely not doing {i}that{/i}!"
+    show BE angry
+    BE "Can't believe you'd say something so scary to someone like me, Kei-chan."
+    MC "Sorry, I just figured meant-"
+    BE "Now I have to mention that you've had a wad of chewing gum in your hair since we got off the bus."
+    "My hands immediately flew to my scalp, as I frantically ran my hands through my hair."
+    MC "OH GOD PLEASE NOT AGAI-"
+    show BE wink
+    BE "Gotcha~!"
+    MC "Okay, I asked for that. I'm serious though. I heard that the string can whip pretty hard once you let go. You're big enough that it's almost guaranteed to hit you every time."
+    show BE neutral
+    BE "Come on, Kei-chan. This is a club at a school meant for bigger students... They'd have to have safety equipment to fit them, right?"
+    MC "Well yeah. They make arm and chest guards, but-"
+    show BE wink
     BE "That's fine then! I'll just wear a chest guard! I'll wear two if I have to."
     MC "I don't think that will be super comfortable."
-    show BE sad
-    BE "I don't care, Kei-chan..."
+    show BE doubt
+    BE "I don't care, Kei-chan. If it's what I need to do, I'll do it."
     MC "..."
-    show BE angry
-    BE "Can't I just do it now before I get so big that it's impossible, and not just difficult?"
-    MC "You're right. Sorry, I didn't mean to upset you or anything."
+    show BE worried
+    BE "I haven't stopped growing yet. So I might as well try it now, before I get big enough that archery becomes impossible, not just difficult."
+    MC "You're right. Sorry, I didn't mean to try talk you out of it or anything."
     "Honoka sighed, and slumped back in her seat, a tiny thud on the table as her chest smacked into it."
     show BE sad
     BE "It's okay. Sorry, I just want to make sure I have a full experience. You know?"
-    MC "Right. I'm sorry too."
+    MC "Right..."
     "I sighed next, sipping my water."
-    "Soon the awkward silence was broken by the edamame arriving, giving us a few minutes to chew on those as our sushi were finished."
+    "The awkward silence was broken by the edamame arriving, giving us a few minutes to chew on those as our sushi was finished."
     show BE neutral
     BE "So, what about you? You're still not in a permanent club either?"
-    MC "No. I just always feel kind of drained after classes. Too much to go to another function."
-    BE "You've gotta stick with something for at least a week though."
-    MC "I know I should..."
+    MC "Nah. I just always feel drained after classes. I don't think I could fully commit to a club."
+    BE "You could try something for at least a week though!"
+    MC "True, true. Got any recommendations?"
     "Honoka and I discussed possible clubs I could join for a bit as we munched our edamame, tossing the pods in the extra plate provided. Soon our sushi arrived. Four plates between us, two in the middle and one directly in front of each of us."
     MC "Well. Thanks for the meal!"
     show BE happy
@@ -2801,16 +2818,15 @@ label BE020_c1_after:
     "Honoka giggled, and grabbed a piece of her eel roll."
     show BE surprised
     BE "Mm! Ooh. That's good!"
-    "She already had the second piece in her mouth before I had finished my first piece. Which, as I finally started chewing, realized was delicious. "
-    MC "Ooh. Mm, the crunch of the shrimp really like... goes well with the soft rice."
+    "She already had the second piece in her mouth before I had finished my first piece. Which, as I finally started chewing, was {i}delicious{/i}."
+    MC "Oh man. Mmph, the crunch of the shrimp really like... goes well with the soft rice. And even though it's fried it tastes so fresh, too!"
     show BE happy
-    BE "Heh. Easy there culinary boy. You sound like you want to join a cooking club."
-    MC "I mean, if I get to eat food all the time."
-    show BE neutral
-    BE "Yeah actually that's not a bad idea."
-    MC "Probably won't be as good as this if we're making it though."
-    show BE happy
-    BE "Not worth the risk then."
+    BE "Heh. Easy there, food critic. Next thing you know, you'll travel the country leaving anonymous reviews at restaurants."
+    MC "I mean, if I get paid to eat food all the time..."
+    show BE wink
+    BE "Yeah, actually that's not a bad idea. Think you'll have room for a cute traveling companion~?"
+    MC "Heh, sure. How about I take the entrees, and you take the desserts? "
+    BE "Sounds like a plan, man."
     "Honoka popped another piece in her mouth, then took a piece of ginger in her mouth before switching to one of the center plates. I followed her lead."
     show BE surprised
     BE "Ooh. Mm. I know that's not real crab meat. But it's so good."
@@ -2822,43 +2838,43 @@ label BE020_c1_after:
     "Honoka had two of her rolls left, same as me."
     MC "Sure."
     "I reached over to the plate, but Honoka took it and yanked it back."
-    BE "Uh-uh. Open your mouth."
-    MC "Huh?"
+    BE "Nuh-uh. Open your mouth."
+    MC "H-Huh?"
+    show BE seductive
     BE "Open your mouth, Kei-chan."
     MC "Um. Okay."
     "I'd have had to be an idiot to not recognize what she was doing, but it still seemed odd. I opened my mouth and leaned forward."
     show BE aroused at Position(yalign=0.0), Transform(zoom=2.0)
-    BE "Ahhh."
+    BE "Ahhh~"
     "Honoka took a piece of sushi and plopped it in my mouth."
-    MC "Mm..."
-    "It was good. This place would have to stay on our radar."
-    MC "That's nice. Thanks for sharing. Here, you want one of mine?"
+    MC "Mm! You're right, it's pretty good! Thanks for sharing. Here, you want one of mine?"
     show BE happy at center, Transform(zoom=1.0)
     BE "Yes please!"
     "I smiled and grabbed my shrimp roll, and put it towards her waiting mouth. Honoka closed her eyes, which seemed a bit weird. But she still accepted the sushi piece."
     "Along with the tip of my finger as her lips wrapped around it."
-    show BE surprised
+    show BE embarrassed
     BE "Omf. Hmm..."
     MC "What'd you think?"
     show BE angry
     BE "Mmm. Not sure. Give me the other to make sure."
     MC "Heck no, this last one's mine."
     "I tossed the last one in my mouth without even bothering to cleanse my palette. Honoka did the same as I jokingly reached for her last piece, leaving us both with mouthfuls of sushi."
-    show BE happy
+    show BE embarrassed
     BE "Pff."
     MC "Hehe."
     BE "Hehehehehehe."
     "The two of us probably looked stupid, laughing at each other just from eating sushi. But there was nothing to be done about it. We kind of were stupid."
     "Honoka let out a sigh and leaned back in her chair, placing a hand on her stomach."
+    show BE happy
     BE "Woo, that was good. Mm. We should probably get going though. The next bus back to school leaves soon and we don't want to miss it."
     MC "Right."
     "We stood up and walked over to the register to pay."
     Waitress "Did you enjoy dining with us today?"
     BE "Yes we did."
     MC "Agreed. It was delicious."
-    Waitress "Thank you very much. Your bill today comes to 6,000 yen."
+    Waitress "Thank you very much. Your bill today comes to 16,000 yen."
     show BE neutral at center, Transform(xzoom=-1)
-    BE "Okay. I have a gift card to cover most of that."
+    BE "Okay. I have the gift card to cover most of that."
     "Honoka reached into her pocket to grab the card, along with her wallet."
     MC "Oh, I'll cover the difference."
     show BE neutral at center, Transform(xzoom=1)
@@ -2875,12 +2891,11 @@ label BE020_c2_1:
     $setVar("BEFeminine", getVar("BEFeminine") + 1)
     MC "Honoka, I'm paying the rest, it's only proper. Here you go, miss."
     "I took out my wallet and handed the waitress a 1,000 yen note before Honoka could fish her note out of her wallet."
-    show BE happy
-    BE "Oh, okay, Kei-chan. Thank you."
-    "Honoka blushed, and I swore I saw a faint smile before she put her wallet away."
+    show BE embarrassed
+    BE "Oh okay, Kei-chan. If you insist. Thank you!"
     "The waitress took Honoka's gift card and my note, and closed the register after the bill was paid."
-    Waitress "Thank you again for dining with us. We hope to see you again."
-    MC "I'm sure we'll be back. It was delicious."
+    Waitress "Thank you for dining with us! We hope to see you again."
+    MC "We'll definitely be back. This place is too good to only eat at once."
     "Honoka nodded, and we turned to leave, so we could head back to our bus stop. As we left the building, Honoka wrapped her arm in mine."
     BE "Thanks for covering the rest, Kei-chan. That was really nice of you."
     MC "Oh. It's no trouble. You paid most of it."
@@ -2889,17 +2904,17 @@ label BE020_c2_1:
     show BE happy at center, Transform(xzoom=1)
     BE "Having you pay for the meal at the end... I think that makes this official."
     MC "Makes what official?"
-    "Honoka stood on her toes and leaned up, planting a kiss on my cheek. The warmth of her lips on the side of my face in that one moment felt hotter than the heat that had been rubbing against my side since she stood next to me."
-    show BE surprised
-    BE "That this is our first real date, silly."
+    "Honoka stood on her toes and leaned up to the side of my face, planting a kiss on my cheek. The warmth of her lips on the side of my face in that one moment felt hotter than the heat that had been rubbing against my side since she stood next to me."
+    show BE embarrassed
+    BE "That this is our first {i}real{/i} date, silly."
     "Honoka giggled and got back down on her feet, holding my arm closer."
     MC "Y-yeah? I mean. We've been out on dates before."
     show BE happy
-    BE "As friends. But friends don't typically feed each other like we did today. I'm not saying we have to make anything official."
-    BE "But... this was a really nice time. I think the only way it could be nicer is if it was our official first date. Don't you?"
+    BE "As friends, sure. But friends don't typically dress up super nice and feed each other like we did today. I'm not saying we have to make anything official between us right this moment."
+    BE "But... this was a really nice time. I think the only way it could be nicer is if we remember it as our first official date. Don't you think?"
     MC "...Yeah. Yeah I do."
     "I intentionally pulled Honoka closer with my arm until she was as close to my torso as she could get. She smiled back up at me, and we stood like that, waiting at the bus stop, until the bus came to take us home."
-    "Yeah, this was a good day."
+    MCT "Yeah, this was a good day."
     jump daymenu
 
 label BE020_c2_2:
@@ -2907,20 +2922,20 @@ label BE020_c2_2:
     MC "Ah, go ahead then. Sorry."
     "Honoka was trying to be polite after all. Eventually it became rude to try and insist on something, I figured."
     "She took out two 500 yen notes in addition to her gift card and handed them over to the waitress. She began putting it in the register and smiled back once it was finished."
-    Waitress "Thank you again for dining with us. We hope to see you again."
+    Waitress "Thank you for dining with us! We hope to see you again."
     show BE happy
     BE "It was super tasty. I'd love to come back some time. Thank you!"
     MC "Yes, thanks very much."
     "Honoka smiled as we walked out of the restaurant. She stretched her arms up in the sky and smiled as she cracked her back."
     show BE aroused
-    BE "Ah. That was a good meal. Mmf."
+    BE "Ahh... That was a good meal."
     MC "It was. Thank you again for treating me."
-    show BE happy
+    show BE wink
     BE "Hey, nothing says the guy has to be the one to pay for stuff on dates, right?"
     MC "I guess I wasn't sure if this was a date or not."
-    BE "Oh it's totally a date. I just wasn't sure if you'd come if I told you that upfront."
+    BE "Oh, this was totally a date. I just wasn't sure if you'd come if I told you that upfront."
     MC "Is that so? How many dates have we been on, then?"
-    show BE neutral
+    show BE shrug
     BE "A bunch, I figure. But this is the first date in terms of, like... dating."
     MC "So we're dating now?"
     show BE happy
@@ -2930,14 +2945,14 @@ label BE020_c2_2:
     BE "Nah. That's not what makes a first date important. Ooh, I know what does, though."
     MC "What?"
     "Honoka suddenly stepped in front of me, and nudged me towards a wall, until my back was up against it. I let out a stutter of confusion before she stepped on my feet, leaning up."
-    MC "Uh."
-    "Honoka smirked, staring at me right in the eyes, before leaning up and kissing me on the nose. Her boobs pushed right up underneath my chin, smothering my jaw. My knees started to wobble and it wasn't due to her feet pressing on mine."
-    show BE happy
-    BE "Hehe. First date's too early for mouth-kissing. But maybe next time."
+    MC "Uh..."
+    "Honoka smirked, staring at me right in the eyes, before leaning up and kissing me on the nose. Her boobs pushed right up underneath my collarbone, the outer edges flowing near my shoulders. My knees started to wobble and it wasn't due to her feet pressing on mine."
+    show BE embarrassed
+    BE "Shoot, missed the lips. Maybe next time, Kei-chan~."
     "Honoka smirked coyly and wagged her finger."
-    show BE unique
-    BE "But I bet you were thinking I'd do something naughty, didn't you, Kei-chan?"
-    MC "Er, um... maybe not \"thinking\", as much as... \"hoping\"?"
+    show BE disoriented
+    BE "I bet you were thinking I'd do something naughty, didn't you, Kei-chan?"
+    MC "Er, um... maybe not 'thinking', but um..."
     BE "That's why I've gotta pace out the affection, Kei-chan! You're already enough of a perv. Gotta make sure you don't get too outta control or you'll end up like some lame harem protagonist."
     MC "Heh, okay. "
     "I rubbed the bridge of my nose. It was somewhat damp. I didn't see any lipstick on her, but had she put on some lip balm or something?"

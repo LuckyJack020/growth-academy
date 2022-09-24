@@ -1445,6 +1445,7 @@ label FMG012:
     jump daymenu
 
 label FMG013:
+    $setFlag("XX12")
     $setTime(TimeEnum.EVE)
     $setProgress("FMG", "FMG014")
     scene Dorm Interior with fade
@@ -2511,9 +2512,9 @@ label FMG018_c1_3:
 
 label FMG019:
     $setProgress("FMG", "FMG020")
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     play music Rain
-    "After a long day of classes, I realized that during that day I couldn't find any sign of Akira. My first thought was that she was locked in her room again, so I went to check it out."
+    "After a long day of classes, I realized that I hadn't seen Akira all day. I figured I'd head to her dorm to see if she was maybe under the weather."
     play sound Knock
     pause 1
     MC "Hello?"
@@ -2521,41 +2522,49 @@ label FMG019:
     "A minute later, the door opened with a tired-looking Chibuki wearing a shirt that looked three sizes too large standing in front of me."
     show Chibuki neutral with dissolve
     Chibuki "Oh... Hey Keisuke."
-    MC "Umm, hey. Did I wake you up?"
+    MC "Umm, hey... Did I wake you up?"
     Chibuki "Yeah... I was napping... something up?"
-    MC "Is Akira here? I thought she was stuck in the room."
-    "Chibuki gave me a look of a mix between confusion and irritation before sighing. She took a moment to leaned her head out of the door to look around the room."
-    Chibuki "Yo! Akira! You stuck?"
+    MC "Is Akira here? I didn't see her in any of our classes. So I, uh, assumed she might not be feeling well... or something."
+    "Chibuki gave me a look of a mix between confusion and irritation before sighing. She took a moment to lean out the door to look around the room."
+    Chibuki "Yo! Akira! Are you sick or something? Keisuke seems very worried!"
+    MCT "Bruh..."
     "No response. She turned her attention back at me."
-    Chibuki "Yep, nah, pretty sure she's not stuck. If she's not here she's probably at her thinking spot."
+    Chibuki "Seems she's not here— and if she's not here... {w}she's probably at her thinking spot."
     MC "Thinking spot?"
     Chibuki "Yeah, it's the rooftop on the athletics building, normally you'll find her there if she's not working out."
-    MC "Got it. Thanks for letting me know."
+    MC "Huh, got it. Thanks for letting me know."
     Chibuki "No problem... Later, I guess."
     "As Chibuki closed the door, I turned around and set off towards the Athletics Building... Which, in hindsight, I should have checked anyways."
+    scene black with fade
+    pause 1
 
     scene Gym with fade
     "I made my way to the back and looked around to find a door that would lead to the rooftop. After finding an easy entrance, I entered without issue, regardless of signs nearby letting me know that I was entering a restricted area, and climbed up to the roof."
 
     scene Roof with fade
-    "As I opened the doorway, A warm wind pushed my hair aside as I sputtered to keep the strands out of my mouth. It only took me a second to find my target."
-    "Laying on the ground with a popsicle stick sticking out of her mouth. Akira turned her head to see who was walking towards her. She held up an errant peace sign, her large biceps bulging slightly as she did."
+    "As I opened the doorway, A warm wind pushed my hair aside as I sputtered to keep the strands out of my mouth."
+    MCT "Long hair is a curse..."
+    "After getting my hair situation in order, it didn't take me long to find Akira."
+    "Laying on the ground with a popsicle stick dangling out of her mouth. Akira turned her head to see me walking toward her. She held up an errant peace sign, her large biceps bulging slightly as she did."
     show FMG neutral with dissolve
     FMG "Yo, Kei-Kun."
     MC "Hey, I was wondering where you been, and here I find you catching some rays."
     FMG "Heh. Yeah, been here since after class."
-    MC "So, what are you doing up here?"
-    FMG "Thinking."
-    MC "Oh yeah? What are you thinking about?"
+    MC "I could tell. What are you doing up here anyway?"
+    FMG "Nothing much. Just thinking and staring at the clouds."
+    MC "Well, what are you thinking about, you goof? I wanna know what Akira Mizutani thinks about in her free time."
     FMG "Stuff."
-    MC "...What kind of stuff?"
+    MC "Yeah, but like... {w}What kind of stuff?"
     FMG "Meh, life stuff, I guess. Right now I just want to get school life behind me."
-    MC "Why is that?"
-    FMG "I guess I'm just a little tired, mentally. What with not only classes but how there's gonna be like, a lot of big and tall students."
-    FMG "Myself included, hopefully."
-    MC "Heh, for what it's worth I think you're pretty big, or at least have a big personality."
-    MC "Speaking of, classes been good?"
-    FMG "Well, as good as they could be. To be honest I never liked school, besides P.E. that is."
+    MC "Why's that?"
+    FMG "I guess I'm just a little tired, mentally. I guess I'm just a little tired, mentally. Classes, these body changes... It's a lot to take in all at once. For me at least."
+    FMG "Don't get me wrong I want to be huge, haha. But I also want to pass all my classes and make new friends. A girl can only handle so much."
+    MC "Hey, if it's any consolation... I think you're pretty big {i}and{/i} you have a big personality. Not many people have both."
+    show FMG happy
+    FMG "Thanks, dude. I appreciate it, haha."
+    MC "How have classes been? Good? Lame? Fill me, I wanna know."
+    show FMG neutral
+    FMG "Well, as good as they could be. To be honest, I never liked school, besides P.E. and history, depending on the topics."
     FMG "I get why it's important, it's to help build up the path to our future and what we are going to be..."
     FMG "...But for the life of me, I can't think about what I want to do after I graduate."
     MC "You mean job-wise? Have you thought about going to a university afterward?"
@@ -2563,24 +2572,56 @@ label FMG019:
     FMG "The problem is... well, can I be completely honest with you?"
     MC "Sure, go right ahead."
     FMG "As much as I enjoy becoming strong and muscular... it limits what I can and can't do."
-    MC "What you don't want to become a bodybuilder or an athlete?"
-    FMG "Maybe, but..."
-    "Akira had sat up, cracking her back in the process. The series of pops and cracks were loauder then one would think. Once done she rested her head on her hand, looking out in the setting sun."
-    FMG "I dunno, I guess I just want more options in my life. That's not the only thing I've been thinking about, though."
-    FMG "I've been wondering if destiny actually exists."
+    MC "I take it being a bodybuilder isn't on the to-do list after all of this."
+    FMG "Eh, not completely. I like practicing some of the poses they do at contests. Might as well show off what I worked for is my thought process, at least."
+    FMG "But I don't want it to be my {i}only{/i} option."
+    MC "And who's to say that it would be? Think about it, no one knows how big you'll get. Heck, you could stop growing tomorrow for all we know."
+    MC "On the flip side you might be able to lift a tank with one hand, we can't really say. There's a ton of stuff out there for you."
+    MC "You have to keep an open mind, there's a lot of paths to take."
+    MC "I know it's still in the realm of fitness, but being a personal trainer is an option. {w}We can always wikiHow jobs later 'cause that's pretty much all I got. I don't know, honestly, I didn't think you'd let me talk so much."
+    show FMG happy
+    FMG "Hahaha, I guess I was heavily invested."
+    "Akira had sat up, cracking her back in the process. The series of pops and cracks were louder than I expected. Once done she rested her head on her hand, looking out in the setting sun."
+    show FMG neutral
+    FMG "It's funny... recently I've been wondering if destiny actually exists."
     MC "Huh, any reason?"
     FMG "I mean, look at me, I've always wanted to become strong, but what were the chances that my growth factor is becoming stronger."
-    "Honestly, quite slim looking back on it."
+    "Honestly, quite slim looking back on it. She's been luckier than most in that regard."
     FMG "If destiny has been leading me on a path... then it's sure has been a crappy path."
-    MC "Huh?"
-    FMG "I- I mean that I should decide on what I should do. Not some mystical force."
-    MC "Well, I don't know about stuff like destiny, what I do know is that only you can choose to follow the path life has given you, or you can make your own."
-    FMG "True that. Thanks, Kei-Kun."
-    "Akira smiled, she turned her head back into the direction of the sunset, in all its glory."
+    MC "How come?"
+    FMG "Like shouldn't {i}I{/i} be the one to decide? It's my life, you know."
+    MC "I get what you're saying. However, a part of me gets the feeling you aren't looking at the bigger picture."
+    MC "I don't know if I'm misunderstanding you, so bear with me for another albeit small lecture. But think about it."
+    MC "You weren't able to choose your factor and I bet there have been some other things that have happened to you that you couldn't control either."
+    show FMG sad
+    FMG "{size=-6}One could say that...{/size}"
+    "I don't know what it was about what I said, but Akira got real quiet all of a sudden as she turned to stare off into the distance."
+    MC "Hey, is everything okay? Do you want to talk about something that's on your mind?"
+    show FMG neutral
+    FMG "Nah, it's cool... and I'm hanging in there, you can continue, don't worry about me."
+    MC "Alright... uuuuh, where was I? {w}Right! So while stuff happens you can't control— good or bad— I think it helps define who you are and sets you on the right course."
+    MC "It has a small or maybe even a big influence on the decisions you make throughout your life."
+    MC "Heh, what I'm trying to say is that even if we can't choose what's put onto us. We can, however, choose to make the most of it and help those around us along the way."
+    show FMG happy
+    FMG "Yeah, that makes sense and I think that's what I want to do. Use my gift or whatever you'd want to call it to help people that need it."
+    MC "Think of all the pickle jars you could open!"
+    show FMG flex
+    FMG "They wouldn't stand a chance against these arms, hahaha."
+    show FMG neutral
+    FMG "Thanks, Kei-Kun. I-I needed this."
+    "Akira smiled, turning her head back towards the sunset."
     FMG "I love this spot, it has such a great view of the sunset."
     FMG "But I think it's better with friends."
-    $setAffection("FMG", 1)
-    "I only smiled as I sat down next to Akira, we spend the next 20 minutes in silence as the sunset on that beautiful day."
+    $setAffection("FMG", 2)
+    "I smiled back and sat down next to her. We spent the next fifteen minutes watching the sunset shoulder to shoulder."
+    scene black with fade
+    FMG "Uh, did you bring any snacks by chance?"
+    MC "...No. Was I supposed to?"
+    FMG "Yeah! Do you not plan ahead?? Man, I would kill for some gummies right about now."
+    MC "Do I look like a mind reader?! You should've said something sooner!"
+    FMG "You distracted me with your speech! Next time don't talk so much, jeez."
+    MC "I can't believe this..."
+    "Jokes aside, I had this nagging feeling that something else was bothering her that would cause her to miss her classes for the day. That being said I think our talk today put some her worries at ease."
     jump daymenu
 
 label FMG020:
@@ -2588,62 +2629,84 @@ label FMG020:
     $setTime(TimeEnum.NIGHT)
     $setProgress("FMG", "FMG021")
     scene Campus Center with fade #night
-    play music FMG
-    "Evening came, and the stars appeared through as the day ended. Street lights began to illuminate the street."
-    "As I was walking towards the school's cafeteria for dinner, I began to think about what I wanted to eat."
-    "That is, until I realized that A) I've eaten every menu dish served at least once, and B) I didn't know if I'd already eaten dinner outside of the school, and if I had I couldn't remember at that point due to hunger."
-    "I stood in place thinking of what I could do, I could eat something again or go out to eat; the latter seemed more appealing. My thought process was interrupted by seeing an all-too-familiar workout partner jogging past me."
-    "She stopped jogging the moment she saw me; however, her mood changed to one of concern when she saw my expression."
+    play music TwilightDusk
+    "Evening came and the stars began to cover the sky, like something out of a painting. The street lights followed close behind as they sprung to life and illuminated the campus."
+    MCT "Should probably head to the cafeteria, I'm starving. Please have miso soup, I beg of you, lunch ladies."
+    "I rattled off other options in my head I could have if they decided to fail me."
+    MCT "They might have udon again... No, they wouldn't do that. People actually enjoyed that one. Ugh, they'll probably serve the mapo tofu again..."
+    MCT "Just thinking about it makes me gag..."
+    MC "Probably better off going to a burger joint or something to play it safe... {w}Wow, I haven't had a burger since I left Tokyo... could try that new burger place."
+    "My train of thought was interrupted when I spotted an all too familiar workout partner jogging towards me."
     show FMG neutral
-    FMG "Hey, Kei-Kun, are you alright? You're just standing there like you just got dropped off by aliens or something."
-    MC "Eh, I'm hungry, but I don't want to eat the food at the cafeteria again."
+    FMG "Hey, Kei-Kun, what's up?"
+    MC "Nothing much, just thinking about what my dinner plans are. I'm trying to avoid going to the cafeteria again."
     show FMG sad
-    FMG "You too? I'm only going because it's close, and I wish they mixed up the meals once in a while."
+    FMG "You too? I'm only going because it's close. Man, I wish they'd mixed up the meals once in a while. I can only tolerate chicken for so long."
     MC "Yeah, a bit of variety would be nice, like a sandwich or..."
-    "I stopped my train of speech for a revelation I had popped into my head out of randomness; I haven't had a burger in a while, not since a month or so before I left Tokyo."
-    "With the thought of hamburgers fresh in my mind, I soon crave hamburgers, and thereby what I wanted for dinner."
-    MCT "Hmmm, I think I remember a rumor of a place that sells burgers called Lunar Burger on Shinjuku street, probably the only open one on the island if anything."
-    MC "Actually, I think I'm going to get a burger."
+    pause .5
+    MC "Hey, actually, you wanna get burgers? I was thinking about heading over to this new joint that recently opened up called Lunar Burger. It's on Shinjuku Street if I remember right."
     show FMG neutral
-    FMG "Cool, enjoy dude."
-    MC "Wait, you don't want to come?"
-    if checkAffection("FMG", ">", 10):
-        show FMG surprised
-        FMG "H-Huh? Y-you mean like a date?"
-        MC "Hey, you're the one who called it that. I'm just inviting you."
-        show FMG aroused
-        FMG "Um, Y-yeah, I guess I did."
-        show FMG neutral
-        FMG "Sure, dude, I would lov- like to."
-    else:
-        FMG "Oh, thought you wanted to be alone? Sure dude, I think I can skip training for the night- not like my body allows me to get fat anyway."
-    MC "Alrighty, thanks! Always nice to share a meal with a friend."
+    FMG "Hmm, I'm not in a very burger mood."
+    MC "You sure? I'll pay for you."
+    show FMG surprised
+    FMG "Y-You mean like a d-date?"
+    MC "Well, I, uh, didn't mean it like that... b-but if you want to call it that. That's-That's cool with me... heh."
+    show FMG aroused
+    FMG "{size=-6}Y...Yeah.(/size}"
     show FMG neutral
-    FMG "Totally."
-
+    FMG "Sure, Kei. I'd lov-like to join you for dinner."
+    scene black with fade
+    pause 1
     scene Town with fade
     play music BrightLights
-    "It took a while to make it to town, as by the time we got there it was already seven at night. It was a busy night for everyone, people minding their own business, having fun, and relaxing."
-    "Akira and I managed to find the glowing lights of Lunar Burger, a fast-food chain whose theme was space fiction and the Moon."
-
-    scene Diner with fade #burger restaurant
-    "The interior looked retro-futuristic, with a chrome and blue theme. Akira and I waited in line for our turn to order."
-    Cashier "Hi, welcome to Lunar Burger, how may I help you?"
-    MC "I'll have a medium cheeseburger combo."
+    "It took a while to make it to town, as by the time we got there it was already seven at night. The streets were packed, full of people laughing, taking pictures, and eating street food."
     show FMG neutral with dissolve
+    "Akira and I managed to find the glowing lights of Lunar Burger, a fast-food chain whose theme was space."
+    show FMG happy
+    FMG "Yo, I love space! I have posters all over my room, this place is awesome already."
+    MC "Didn't take you as someone who would be into that."
+    FMG "That's because you've only scratched the surface of getting to know me. Aliens, rockets, all of it... it's freaking awesome."
+    FMG "I could go on for hours, but that's not what we're here for. Let's get some grub."
+    MC "That's all you had to say!"
+    scene black with fade
+    pause 1
+
+    scene Diner
+    show FMG neutral
+    with fade
+    "The interior looked retro-futuristic, with a chrome and blue theme. It was a blessing that the line wasn't very long; we hurried over to secure our place anyhow."
+    pause 1
+    FMG "Ayyy, we're almost up. Let's get it!"
+    MC "It's just burgers, Akira."
+    show FMG happy
+    FMG "Yeah, burgers in a space-themed restaurant! Come on, captain killjoy have some fun! Don't make me yoink your fries."
+    MC "I will straight up bite your hand."
+    show FMG neutral
+    FMG "I'd like to see you try."
+    Cashier "Next!"
+    show FMG happy
+    FMG "{size=-6}Aaaaaaa{/size}."
+    Cashier "Hi, welcome to Lunar Burger, how may I help you?"
+    MC "Hi, I'll have a medium cheeseburger combo, please."
+    show FMG neutral
     FMG "And I'll have an extra large triple patty American style cheeseburger combo and one milkshake."
+    MCT "And she wants to steal my fries???? I'll have to fight her off with a chair."
     Cashier "Alrighty, that will be 850 Yen."
-    "I noticed when pulling my wallet was that Akira pulled out hers as well."
-    MC "Hmm? You want to pay? I invited you here so I shou-"
-    FMG "Yeah I'm gonna stop you there fam. My momma taught me you should never let anyone pay for your meal if you got the cash..."
+    "I noticed when pulling out my wallet that Akira pulled out hers as well."
+    MC "Hey, I said I'd pay. I invited you here, I got this."
+    FMG "I know what you said, fam. However, my mom taught me that you should never let anyone pay for your meal if you got the cash."
     show FMG happy
     FMG "Unless they got more cash than you."
     show FMG neutral
-    FMG "But in this case, I wouldn't feel right if you paid for my meal, you get me. It's honor among the workin' man, right?"
-    MC "I... suppose so."
-    "We paid for our meals and walked to a nearby table, waiting for our number to be called; though I will admit Akira paying for her meal did catch me off guard. I began a conversation to pass the time."
-    MC "So, guessing you were hungry, huh?"
-    FMG "Yeah, I've been working hard on my arm reps and jogging today, so I've worked up a killer hunger. Plus, I haven't had a burger since... I left home, I think."
+    FMG "For real though, it wouldn't feel right if you paid for my meal. {size=-6}Besides, if we ever go on more dates, you can pay for me next time...{/size}."
+    MCT "Hmmmmm."
+    MC "Uh, sure if that's what you want to do."
+    "We paid for our meals and walked to a nearby table, waiting for our number to be called. I tried my best to have a conversation to help pass the time."
+    MC "I didn't expect you to order the entire menu. Guess you were {i}really{/i} hungry."
+    show FMG flex
+    FMG "I am a growing girl after all, heheheh."
+    show FMG neutral
+    FMG "But yeah, I've pushed myself on today during my routine and I worked up a killer appetite. Figured I better go big or go home."
     MC "Huh, glad to see you're still keeping up the regime."
     show FMG sad
     FMG "Yeah, yeah... hmmm."
@@ -2651,18 +2714,19 @@ label FMG020:
     show FMG neutral
     FMG "Don't worry, it's just a thing I remembered I have to do."
     "Soon enough, our orders were ready. We got them and began consuming the food the lunar gods had blessed us with."
-    "Despite the sheer size, it didn't take long for her to finish her burger; She'd finished it before I could get halfway through mine."
+    "Despite the sheer size, it didn't take long for her to finish her burger. Hell, she had finished it before I could even get halfway through mine."
     MC "Man, you sure do eat a lot."
-    show FMG happy
-    FMG "Yeah, after a long workout, you've usually burned a lot of calories, so you have to eat more to replenish them. Usually not too much, though; otherwise you might start getting fat."
-    MC "Makes sense. If I may ask, how long have you been working out anyways, Akira?"
-    "She looked deep in thought for a minute. I had to admit, the way she presented herself had an air of control and vigor, something few don't have. Before long she gave me an answer."
+    MCT "Smooth... like a rock, Kei..."
+    show FMG neutral
+    FMG "Ha, usually after my long workouts I tend to eat a lot more than a normal person should. Like I said I'm lucky my factor prevents me from getting fat. I'd be as big as a house if it wasn't for that."
+    MC "Damn, I wish I got that in combination with my hair growth. I'd eat miso soup constantly. {w}Say, how long have you been working out anyways, Akira?"
+    "She looked deep in thought for a minute. I had to admit that the way she presented herself had an air of control and vigor, something few don't have. Before long she gave me an answer."
     show FMG sad
-    FMG "I... I don't know. It has honestly been part of my life for so long that I don't really have a good approximation of when I started. Sometime after I was 5 or 6 years old is the best timeframe I got."
+    FMG "I... I don't know. It has honestly been part of my life for so long that I don't really have a good approximation of when I started. Sometime after I was five or six years old is the best timeframe I could give."
     menu:
-        "Ask her out" if checkAffection("FMG", ">=", 10):
+        "Ask her out" if checkAffection("FMG", ">=", 11):
             jump FMG020_c1_1
-        "Say nothing":
+        "Just roll with it":
             jump FMG020_c1_2
 
 label FMG020_c1_1:
@@ -2670,10 +2734,12 @@ label FMG020_c1_1:
     show FMG neutral
     FMG "Well yeah, duh, why get into it if you ain't gonna put it in your life! That's what a regiment is, am I right?"
     "With a sly chuckle, Akira took a swig of her milkshake as I began to bounce my leg with anxious enthusiasm."
+    MCT "Do it, you little bitch! Come on!"
     MC "Well... um... so, have you ever... have you ever had a relationship like that?"
-    show FMG confused
+    show FMG neutral
     FMG "Huh?"
-    "Akira looked up from her shake and tilted her head ever so slightly as I began to panic. Though I knew better of her, the fact that Akira could very easily rip me in half if she wanted to add no small amount of tension to things."
+    "Akira looked up from her shake and tilted her head ever so slightly as I began to panic."
+    MCT "This is horrible, I'm going to blow it."
     MC "What do you think... do you want to go out?"
     show FMG neutral
     FMG "Uh... we are out, aren't we?"
@@ -2691,11 +2757,12 @@ label FMG020_c1_1:
     show FMG surprised #blush?
     FMG "... M-Meep..."
     MC "Huh?"
+    MCT "Did she just meep? Like those fish from that cartoon?"
     "As I looked closer, I then noticed as her face was covered in a deep pink blush, her eyes wide open as her mouth quivered."
     FMG "Y-Yeah! Uh... I... I like your face!"
-    MC "Huh?"
+    MC "Huuuh?"
     FMG "C-C-C-C-Cool p-p-pockets man, where did you buy them, the pocket store? H-Hahaha!"
-    MC "..."
+    MC "...Are you okay?"
     show FMG sad #blush?
     FMG "Ha... ha..."
     "Akira quickly looked down and covered her eyes with her large hand as she began to audibly mumble."
@@ -2703,37 +2770,47 @@ label FMG020_c1_1:
     "Despite clearly still nervous, she took a deep breath, then gave me a broad smile and a thumbs up."
     show FMG happy #blush?
     FMG "S-Sorry! I've never been in a relationship like that before, so I'm nervous. But awesome! Totally awesome! I'd love to date you!"
+    MCT "Wasn't even worried, ha."
     "I couldn't help but let out a breath of relief, in gratitude both that she accepted my date proposal and that she didn't rip my arms off."
     MC "Thank you, is there anything you wanna do after we eat?"
     show FMG sad
     FMG "Umm I... I have no clue how this dating stuff works, never been on one."
     MC "Well, if you want we can go to the movies or something like that."
     show FMG neutral
-    FMG "Eh, I don't feel like going to the movies or anything like that. I'd rather just do something simple, like watch the stars."
+    FMG "Eh, I don't feel like going to the movies or anything like that. I'd rather just do something simple, like watching the stars."
     MC "Okay, I would be down with that."
     FMG "Sweet. In that case, are you gonna finish that, or what? Dates share food, right?"
     "She pointed to my half-eaten burger. I pushed my tray closer to her, mostly because I was already full. It took her about thirty seconds before it was gone entirely."
+    MC "You were going to ask for my food regardless of me asking you."
+    FMG "Yeah, but now I can feel less guilty about it."
+    pause 0.5
     show FMG happy
     FMG "Okay, let's go!"
     "Akira grabbed my hand excitedly, and before I knew it, we were running out of the building and onto the street."
 
     scene Hill Road with fade
+    play music TwilightAmbient
     "Before long, I found that Akira's favorite location had guided me towards a hill not too far from the school."
     show FMG aroused with dissolve
-    FMG "Here we are, I come here sometimes when I wanna look at the stars."
-    "Sure enough, the stars were in clear, full view for anyone watching the sky on this starry night. With the stars came the company of the Moon, full and shining bright on this beautiful night."
+    FMG "Here we are, I come here sometimes when I wanna look at the stars. Another one of my favorite spots."
+    "Sure enough, the stars were in clear, full view for anyone watching the sky on this starry night. With the stars came the company of the moon, full and shining bright on this beautiful night."
     MC "Wow. It sure is beautiful."
     show FMG aroused
     FMG "Yeah, I'm just glad I can spend it with you, Kei-Kun."
-    "We both just sat there for a while, spending time together as the light of a billion distant stars glittered in the sky and the Moon gleamed with beauty."
+    MC "Me too."
+    "I'm glad I was able to muster the courage to ask her. That feeling you get when someone you're into is actually interested in you as well... it's surreal."
+    "We both sat there for a while, spending time together as the light of a billion distant stars glittered in the sky and the moon gleamed with beauty."
     jump daymenu
 
 label FMG020_c1_2:
+    $setProgress("FMG", "FMG026")
     "I didn't say anything out of fear, fear of the unknown. By the time I did manage to say something, it was already too late."
     FMG "Well, this has been fun, Kei-kun, but I feel like I got a second wind. Later, dude!"
     MC "Wha-"
+    hide FMG with easeoutleft
     "I didn't even so much as finish the first word before she left."
-    MCT "Well, whatever I may have to say can wait, there's always next time."
+    MC "God damn it... Ugh, I should've just gone for it."
+    MCT "Well, whatever I may have to say can wait, there's always next time, I guess."
     jump daymenu
 
 label FMG021:
@@ -3866,7 +3943,7 @@ label FMG025:
 label FMG024:
     jump FMG026
 
-label FMG026:
+label FMG026: #change to FMG024, once FMG026 is fully written.
     $setProgress("FMG", "FMG027")
     play music Rain
     scene Woods with fade
@@ -9583,7 +9660,7 @@ label FMG056:
     "Akira extended her hand out over the threshold after planting her elbow on the pad and gripping into the handle on the other side."
     "She grasped it with a hooked wrist that made her bicep pop into a huge mound, even as her arm was mostly extended."
     "Natsuko on the other hand took a rather odd grip on the handle, hooking her wrist over the top, with her forearm in a \"gooseneck\" position."
-    "Natsuko reached for Akiras hand forcefully, aggressively wringing across the back of her palm and jostling her as she vied for a better hand position."
+    "Natsuko reached for Akira's hand forcefully, aggressively wringing across the back of her palm and jostling her as she vied for a better hand position."
     FMG "Hey! Two can play that game."
     "The two massive mitts squirmed across the backs of their hands as each tried to crush the other while craning their wrist to sink into the other's fingers more."
     FMG "Cut it out! I thought you said our wrists had to be straight to start."
@@ -15272,9 +15349,168 @@ label FMG076:
     jump daymenu
 
 label FMG077:
-    "This marks the current end of Akira's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
-    jump daymenu_noadvance
+    $setProgress("FMG", "FMG079")
+    $setTime(TimeEnum.EVE)
+    scene Library with fade
+    "I decided to get away from the computer games for a bit and finally tackle some of the homework I had been slacking on these last few days."
+    MCT "I'm going to regret every single second of this..."
+    "{i}bzzt... bzzt{/i}"
+    MC "This better be important... "
+    pause .5
+    MC "Ay, It's Akira! Wonder what she's been up to today."
+    FMGCell "Hey, you want to come over and have sex? I'm super horny..."
+    MCT "Alrighty..."
+    MCCell "Straight to the point, I'll be at your dorm in 10. Do you need me to bring anything?"
+    FMGCell "Yeah, yourself. Now hurry up, bozo!"
+    MCCell "Well {i}this{/i} bozo has some studying to do too, you know?"
+    FMGCell "I will drag you and your little butt here if I have to."
+    MCCell "Guess I've got no say in this anyways."
+    MCCell "See you soon."
+    FMGCell "<3."
+    MC "Uuuuugh, I'm definitely going to lose yet another outfit tonight..."
+    scene black with fade
+    pause 1
+    scene Dorm FMG with fade
+    play music FMG
+    $setFMGOutfit(OutfitEnum.NUDE)
+    "I let myself in and made myself right at home. Well, as best as I could, that is. It certainly got easier the further away I got from Chibuki's side of the dorm."
+    FMG "Kei-kun, is that you?"
+    MC "I think? Sometimes I forget my own name, I get confused easily."
+    "I heard a door creak open as Akira walked out of the bathroom, her imposing figure filling nearly the entire doorway. She was wearing nothing but a hair tie to keep her ponytail together."
+    show FMG neutral with dissolve
+    MC "I see you're dressed for the occasion. Before you even say anything, I will undress myself."
+    FMG "You're no fun. I'm only trying to set the mood!"
+    MC "{i}Siiiiiigh{/i}... fine..."
+    show FMG happy
+    FMG "Yessssss!"
+    "Placing her hands on my hips, she managed to get a hold of both my shirt and pants."
+    "{i}Schriiiiiip!{/i}"
+    MC "Huh. That was surprisingly clean, actually. you've gotten pretty good at this."
+    show FMG neutral
+    FMG "I've done this like, 30 times now, dude. Bigger hands certainly help, but practice makes perfect!"
+    show FMG aroused
+    FMG "Now that that's outta the way. We can get down to business."
+    "Ignoring me completely, she picked me up with one hand carrying me over to the bed and tossing me on it."
+    MC "Why do I get the feeling this is going to be more aggressive than the last time?"
+    FMG "Because it's going to be... {w}I hope you're ready to fill me up with some more protein..."
+    MCT "Oh yeah, I'm going to die."
+    "After kneeling onto her bed, Akira slowly crawled towards me."
+    FMG "You know, the more I look at you, the more trouble I have with controlling myself. You're just so... small."
+    "She propped herself up a little, still reaching eye level as I laid in front of her. I could feel a small shiver run up my spine."
+    MC "Well, I'm sure I'm quite irresistible because I'm so h- Wow... You really are big."
+    FMG "Are you ready for the best time of your life?"
+    MC "Absolutely..."
+    "Her arms were pinned into the cushion of the mattress as she loomed over from above before her massive chest pushed me deeper and deeper into the bed. Her hot breath went down my neck, goosebumps covering my skin."
+    "Her body was heavy, yet delicate, as she continued to weigh me down, the mass of her muscles pressing down on me like the weight of an entire harem of women."
+    MC "Mmmf, fuck..."
+    FMG "You okay? I-I uh... I can try to um-"
+    "It was comforting seeing her soft side once again. Beneath that wall of sinew and bulk was still the caring, delicate Akira. I gently grabbed her arm and tugged her closer."
+    MC "Nah, I'm all good. Let's keep going."
+    FMG "M-Mm..."
+    " That delicate side of her made all of her that weighed upon me feel comforting, like a weighted quilt. I gazed into her eyes as I leaned in for a kiss."
+    FMG "Mmmn~"
+    "And then... with a wry hand, I began to rub her slit."
+    FMG "MMN!"
+    "Akira tensed a bit as a shock ran up her body. The sensitivity of her nether regions was like a trigger to completely catch her off guard, which while dangerous for me, must have been sheer ecstasy for her."
+    FMG "F-Fuck, man..."
+    MC "Mhm~"
+    "As we got prepared, I felt as though I was ready, and I could tell she was too. It was like a moment of silence, not a single noise apart from the beating of our hearts... and then..."
+    "I plunged forward."
+    FMG "KYAA~"
+    MC "MMGH!~"
+    "It felt amazing. Her body tensed up, creating a barrier that surrounded me, and yet simultaneously seeming like she was completely melting in my embrace as I kept going more and more."
+    FMG "Ooooh yeah!~"
+    "Focusing all of my strength into my arms and legs, I wrapped myself around her as I continued to thrust, using the strength I'd been building up with her for this moment. My back left the bed as I hung from her and thrusted like mad."
+    FMG "A-HAAAre you fu-u-u-ucking kidding meeee?!~"
+    "Akira's arms and legs began to shake and buckle as she panted more and more. I could feel her heart pound as our chests pressed together, and after I kept going with no sign of stopping."
+    "She caught herself as we both jolted down, her mass almost crushing me as her arms gave out."
+    MC "Ohp-Shit."
+    FMG "Ooo!~ Haaahn!~ Nggggn..."
+    MC "Looks like you couldn't lift me~"
+    FMG "C-C-Cheating son of a bitch."
+    MC "Hehe!"
+    FMG "Hmmmn..."
+    "Akira puffed out her cheeks in an adorable fashion as a blush of flustered embarrassment came over her face. It seems like her own body betrayed her... until she gave a little wry smile."
+    FMG "If that's how it's gonna be... tap."
+    MC "Huh?"
+    "Akira leaned forward, kissing my cheek as she put her arms behind my back and placed her legs betwixt mine."
+    FMG "Tap."
+    "And suddenly, she lurched forward as she placed my waist in a vice."
+    MC "GYAK!"
+    MCT "I NEVER SHOULD HAVE SAID SHIT ABOUT HER BODY CONTROL"
+    FMG "What's the matter, Kei? C'mon bro, just tap and I'll let you on top."
+    MC "HFFFF! Haaah!"
+    "I instead used all the strength in my back to push, using my legs as a lever to try to twist as I did everything I could to lift my girlfriend."
+    FMG "C-mon, tap out!~"
+    MC "HNNG!"
+    FMG "Huh? Wait, am I-?"
+    MC "NGGG! RAH!"
+    FMG "Ohp-"
+    "*KRSH*"
+    "Akira landed on the bed back first as I flipped her over, a look of shock and awe on her face as I panted."
+    FMG "Holy shit, dude..."
+    MC "Haah... haaah..."
+    FMG "Wow..."
+    "My face was red and hot as I continued to pant, my arms aching and my knees wobbling as I almost collapsed on top of her, my cock landing between the divets of her abs."
+    FMG "Wo-hoooah, tiger, easy, easy..."
+    FMG "That was... wow... that... REALLY turned me on."
+    MC "Foooh... enough to... haah... let me be on top?"
+    FMG "Hehe, alright, damn. If you think you got the stamina for it."
+    "I inhaled deeply as I let a breath out, my heart beating like crazy."
+    MC "I can go all night."
+    "Once again, I placed the head of my dick between her folds and pressed forward as she moaned."
+    FMG "Ooooh!~"
+    "I kept going. More and more, as Akira wrapped her muscular legs around my own, pulling me in deeper as I kept going with the stamina I had remaining."
+    FMG "Oh shit! Fuck! D-Don't stop! Ahn!~"
+    MC "Ah-Ah-Ah!~"
+    "Thrust after thrust, I pounded deep into Akira's tight pussy as she moaned loudly, gripping the wood of the bedframe even harder."
+    FMG "Ooooh, fuuuck!~"
+    "*CRRRRK*"
+    "*KRAK*"
+    "With a loud, echoing snap, the wooden frame in her hands crumpled and snapped like it was nothing more than a twig from an ancient tree. The loud bang was like a gunshot which caused us both to jump and tense with shock."
+    MC "Fuck!"
+    FMG "Eep!"
+    MC "..."
+    FMG "..."
+    FMG "Oops... ehe..."
+    MC "... Pfff-"
+    FMG "Ahahaha!~"
+    MC "Ho-Hoooly shit, haha!"
+    "I reached up with my hand and poked at the limp piece of wood, looking down at Akira."
+    FMG "Uhhh... shit. Welp... guess that's it for the night?"
+    MC "Nah. My wood is harder."
+    FMG "Aaaand you're a genuine dumbass."
+    MC "Tsssh."
+    "I leaned down once more and planted a kiss on her lips."
+    FMG "Mmm, my dumbass..."
+    "As we made out, she placed a single finger on my chest, pushing me away."
+    FMG "I c-can feel it. Home stretch, buddy, let's go!~"
+    MC "Mhm!"
+    "I went to thrust again, but she stopped me, sitting up."
+    FMG "Naaah, nah, nah. Lay down. I got this."
+    "I was confused, but above all, I could feel I was about to cum. I could tell by her frantic breathing she was there too. It took all of our strength to keep it up... but we both knew we weren't done with our workout just yet."
+    "It was time for the home stretch."
+    "Akira got on top of me, pressing the weight of her body on top of my groin as I moaned, her pussy wrapping all the way around my dick, all the way down to the base, as I felt my release coming."
+    FMG "Let's do this... mmmmng!~"
+    "Suddenly, I could feel as the walls of her vagina began to tense up, squeezing my dick and releasing it in a rhythmic pattern as she held onto my hands."
+    MC "OOOH FUCK!~"
+    "It was ecstasy. Every time I was about to cum, she squeezed my dick and stopped me, edging me as she became more frantic. By instinct, I reached up and wrapped my fingers around her nipples."
+    FMG "EEK!~"
+    "I would have chuckled at her almost uncharacteristically girlish squeals if it weren't for the fact that I felt like I was on the brink of exploding."
+    "That's when it happened. We could both feel it coming. I could tell. Thoughts raced through my mind like a runner at the finish line."
+    MCT "F-Fuck, I... I-"
+    "And that's when the thinking stopped. Only a look of sheer lust and desire in our eyes as they locked, and the moment they did..."
+    FMG "OOOOH!~"
+    MC "AAHHH!~"
+    "We came together."
+    MC "Haah... oooh fuck..."
+    FMG "Nng... haaa..."
+    "Akira seemed faint as she fell backwards, flopping down onto the bed as I matched her movements, landing directly on her chest as my head collided with her breasts."
+    FMG "Haaah... haaah..."
+    MC "Haaah... aaah..."
+    "No words. No need. I merely laid on her as my head nuzzled her breasts, her large hand reaching up and stroking my head as we lie there in sheer euphoria."
+    "The silence said far more than either of us could... and eventually... it lulled us both into sleep after our deep embrace."
+    jump daymenu
 
 label FMG078:
     scene Arcade with fade
@@ -15474,6 +15710,11 @@ label FMG078:
     FMG "I'm going to send you through the floor."
     MC "That would be very mean and I'd advise against that."
     jump daymenu
+
+label FMG079:
+    "This marks the current end of Akira's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance
 
 label FMGWG001:
     scene black with fade

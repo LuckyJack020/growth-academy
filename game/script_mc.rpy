@@ -266,6 +266,7 @@ label global000:
             jump global000_cbreak_3
 
 label global000_cbreak_1:
+    $setFlag("global000_beach")
     MC "...swimming at the beach."
     $setSkill("Athletics", 3)
     show BE surprised
@@ -276,6 +277,7 @@ label global000_cbreak_1:
     jump global000_cbreak_after
 
 label global000_cbreak_2:
+    $setFlag("global000_library")
     MC "...at the library."
     $setSkill("Academics", 3)
     show BE surprised
@@ -293,6 +295,7 @@ label global000_cbreak_2:
     jump global000_cbreak_after
 
 label global000_cbreak_3:
+    $setFlag("global000_museum")
     MC "...touring the local museums."
     $setSkill("Art", 3)
     show BE happy
@@ -1844,6 +1847,417 @@ label MC003:
     "I suppose I got all worked up for nothing. But something about all this was strange. I had no idea what we were getting into, but something told me it wasn't all going to go away with just a haircut."
     jump daymenu
 
+label MC004:
+    $setTime(TimeEnum.EVE)
+    scene Dorm Interior with fade
+    play music Schoolday
+    "In under five seconds, I had my shoes off, backpack flung onto my bed, and head jammed into the fridge."
+    MCT "Gah... after class munchies. Always welcome, yet always ruining my dinner."
+    "I retrieved an apple that had been there for... some time{w}, at least based on the rest of the slim pickings in the fridge. Without any other real prospects, I rinsed it in the sink, then took a bite of it."
+    "I walked over to my desk and sat, gazing out the window."
+    MCT "Alright. Friday afternoon, and I have no homework for once. Maybe I can actually chill out for a while."
+    "..."
+    MCT "Who am I kidding? I do that even when I do have homework."
+    "I watched the fluffy clouds fluff lazily across the sky overhead, and glanced towards my balcony."
+    "I could probably have counted the amount of times on one hand that I'd been on the balcony."
+    if getFlag("RM_govagent"):
+        MCT "One of them being Daichi nearly hurling himself off the damn thing..."
+    "I took another bite of apple, working my way in a straight line down the middle of it."
+    MC "Mngh...?"
+    MC "Acgh-"
+    "I opened my mouth and reached in, withdrawing one long strand of hair."
+    MC "{i}Egh{/i}."
+    MCT "Better get used to this, I suppose..."
+    "I dropped the strand to the floor then swept my hair away from my face."
+    MCT "There. I don't need any extra toppings on this."
+    "I took another, less fuzzy bite and chewed thoughtfully, glancing around my dorm."
+    "It didn't have that warm, welcoming feeling of a well lived-in home yet, but it did feel nice all the same. Especially after a long day of classes."
+    "Nights there felt relaxing enough, save for when Daichi got a little too rambunctious. And even then, he wasn't... too out there."
+    "I took the last bite of the middle line, then started nibbling at the upper edge of the apple."
+    "I put my arms over my head and leaned back in my desk chair, stretching backwards and letting out a near primal groan."
+    MCT "This is sad. I should be out doing fun, young adult things. Not sitting here stretching and... getting my daily dose of vitamin D."
+    "I stood up and walked to the balcony, gazing out through the glass."
+    MCT "It's... actually really serene here. All things considered."
+    "The academy was quiet, for the most part."
+    "No city sounds. Not a lot of cars. Not even really that many people, save for the town and the academy."
+    "I glanced up at the sun, shimmering through a cover of clouds"
+    "One moved in the sky and broke, sifting apart and letting the sun shine down onto the courtyard outside, and my balcony."
+    MCT "Hm. Maybe some time in the sunshine could help get me in the action-y mood."
+    pause .5
+    MCT "Or just make me feel like taking a nap."
+    "I glanced over at my headphones that I kept in the corner of my desk."
+    MCT "... Then again, I could always just listen to something. Find a playlist online or something."
+    MCT "That way, I can get myself in the mood to do something, or in the mood to catch up on my sleep."
+    "I took another bite of apple and cleaned it up before walking and trashing the core."
+    menu:
+        "Listen to music":
+            $setFlag("MC004_music")
+            "I walked back to my desk and grabbed my headphones, then took my phone out and flicked a switch on the side of my headphones, connecting them to my phone."
+            MCT "No headphone jack. Because why not?"
+            stop music
+            "I sighed, thinking back to every cell phone reviewer online, and laid on my bed, scrolling through to one of my music streaming apps."
+            MCT "..."
+            MCT "... Heard that twice this week already."
+            MCT "Huh... people still listen to Dimefront?"
+            "I scrolled past the mediocre rock band and clicked on another playlist."
+            play music FullKnowMyself
+            pause .5
+            "♪...Love is just a game...♪"
+            "♪...If I'm having fun then it's okay...♪"
+            MCT "..."
+            MCT "Wait, isn't this-"
+            MCT "Oh, this is a cover. I remember this song. Mom used to listen to this all the time."
+            MCT "Who covered this?"
+            "I glanced down at the screen."
+            MCT "Hm. Never heard of... Pre-Bop before. Kind of a unique name, I guess."
+            "I rested my head on my pillow and shut my eyes, letting myself enjoy in a guilty pleasure sort of manner."
+            scene black with fade
+            MCT "Hmn..."
+            if getHighestAffection() == ("BE"):
+                MCT "I wonder if Honoka knows this group. She seems like she'd be pretty in the know with newer bands."
+            elif getHighestAffection() == ("AE"):
+                pause .5
+                MCT "..."
+                MCT "Matsumoto-san would never listen to this. That much I know."
+                MCT "It is good music to shake it to, though..."
+                pause .5
+                MCT "Or wobble, in her case."
+            elif getHighestAffection() == ("GTS"):
+                MCT "I wonder... what would Yamazaki-san think of this?"
+                MCT "I can totally picture her judging a song by the feelings it implies, rather than any technical aspects."
+                MCT "Not like I could pick out the rhythm or the harmony myself. Wouldn't know a good one from a bad one anyhow."
+            elif getHighestAffection() == ("WG"):
+                MCT "Huh."
+                MCT "Part of me feels like Alice would absolutely despise this song."
+                MCT "At the same time, though... maybe not?"
+            elif getHighestAffection() == ("PRG"):
+                "I listened as the music swelled in my headphones."
+                MCT "I wonder what Kodama-san listens to in her spare time."
+            elif getHighestAffection() == ("FMG"):
+                "..."
+                MCT "Mizutani-san totally has at least five different workout playlists saved to her phone. Guaranteed."
+            "I felt my thoughts drift away a bit as I turned up the volume a touch."
+            "The idea of going out and having fun tonight was really nice, and did sound like the ‘in' thing to do... but my bed was comfy, and this music was-"
+            scene Dorm Interior with vpunch
+            stop music
+            "I jerked up, my eyes jolting open as my ringtone blasted my eardrums multiple centimeters deeper into my skull, halting my music in the process."
+            MC "ACH!! WHO THE-"
+            pause .25
+            MC "Oh..."
+            "I gazed in a slightly worried fashion at my Mom's caller ID on my phone screen."
+            MCT "Alright... I guess I have to do this eventually."
+            pause .5
+            MC "Hello?"
+            MomCell "Keisuke? Are you alive?"
+            MC "Uh... yeah?"
+            MomCell "Could have fooled me. I heard Tomoko's voice before I heard yours."
+            MC "Wait, seriously?"
+            play music MC
+            MomCell "... Well, I heard her voice via her voicemail, but still. I was hoping to hear from you sooner."
+            MCT "She acts as though I've had better luck talking to Tomo..."
+            MC "Yeah. Sorry about that, Mom. Things have been a little crazy here."
+            MomCell "I would imagine so."
+            MomCell "What are you up to today?"
+            MC "Just got back to my dorm. I had some classes earlier, and now I'm just relaxing for a little bit."
+            MomCell "I see. Make sure you take some time for that. It's not good to run yourself ragged."
+            MC "Yeah, I know."
+            MomCell "So, how is it otherwise, Keisuke? Are you doing alright? Feeling okay?"
+            MC "I-I'm fine, Mom. No need to worry."
+            MomCell "I... I know, Dear. I know. I just worry about you and Tomoko."
+            "The line went dead for a few seconds."
+            MomCell "So... do you know what... growing thing you have?"
+            MC "You mean my growth factor? Yeah. Yeah I do."
+            MomCell "Well, out with it then. Don't hold me in suspense."
+            MC "I have a hair factor."
+            pause .5
+            MomCell "Ah... {w}hair factor?"
+            MomCell "Like... the hair on your head, right?"
+            MC "Yes, Mom. I'm not turning into a sasquatch. At least as far as I can tell so far."
+            MomCell "Alright, alright. So, how does that work?"
+            MC "Well, my hair has been growing faster and faster now. Like, I can cut it, and it'll grow back really quick."
+            MomCell "Wow... I'll be frank, Keisuke. With what I'd heard, I assumed it was going to be something more severe. Like you'd be as tall as a building when I saw you next."
+            MomCell "What about your sister? Is she doing okay?"
+            MC "She's about the same. She has the same factor as I do."
+            MC "And, she's really not overly fired up about the whole thing."
+            MomCell "I see. And it works the same in women as it does for men?"
+            MC "As far as I know, yes."
+            MomCell "I see."
+            MomCell "I... I'm relieved to hear that you two are okay, Keisuke."
+            MomCell "Your father and I... well, we didn't know what to think."
+            MomCell "The whole thing seems so out there..."
+            MC "I know, Mom. It still feels a little far-fetched for me too sometimes. But... it's real."
+            MC "Oh, you won't believe this. Remember Honoka Inoue? She's here too."
+            MomCell "Honoka? As in, your old friend Honoka?"
+            MC "Mhm. We bumped into each other when I got off the ferry."
+            MomCell "Wow. Small world. How is she doing?"
+            MC "Good. She's definitely grown up."
+            MomCell "I'm sure. I remember her playing in the mud in our backyard when you two were little. Remember that mud castle she tried making? She was so adorable.."
+            MC "I... yeah. I think I remember that too."
+            MCT "I also wouldn't put it past Honoka to try something like that now."
+            MomCell "Well, I'm glad you have someone you know there with you and Tomoko. Hopefully, it'll make the whole process a lot easier."
+            MomCell "Have you met anyone else?"
+            MC "Yeah, quite a few people."
+            if getHighestAffection() == ("BE"):
+                MC "I've been mainly hanging out with Honoka, though."
+                MomCell "That's good to hear, Dear. She was always a sweetheart."
+            MomCell "I'm glad to hear that you've been putting yourself out there. I think it'll help make this whole thing a lot easier to deal with."
+            MC "Yeah, hopefully."
+            MC "Is Dad doing okay?"
+            MomCell "He's about the same. Working a lot of hours, but he's doing well. He misses you two, though."
+            MomCell "Feels strange being empty nesters now, you know."
+            MC "Heh, I suppose so."
+            MC "Feel old yet?"
+            MomCell "Oh, don't even start that."
+            "My mom and I both laughed over the phone."
+            MomCell "Have you made any plans for Golden Week yet?"
+            MC "Not yet. Probably gonna see what there is to do here when that gets a little closer and figure it out then."
+            MC "We have a test right after the holiday break, so I'll probably try to study for that a little."
+            MomCell "I know you, Keisuke. You say that, but will you really?"
+            MC "Ouch."
+            MomCell "I'm just teasing, Dear. I'm sure you'll put in the time."
+            MomCell "Well, Dear. I'll let you go. I'm sure you've got something fun planned for tonight, and I wouldn't want to interrupt that."
+            MomCell "It was nice to hear from you though, Honey. Keep us in the loop if you can, okay?"
+            MC "I will, Mom. Sorry it took me so long."
+            MomCell "Oh, it's okay. I understand. New school, new people, crazy body changes going on. I don't blame you."
+            MC "Thanks Mom. I love you."
+            MomCell "Love you too, Keisuke. And tell Tomoko to give me a call, would you?"
+            MC "I'll try, but she never listens to me."
+            MomCell "It's the effort that counts."
+            MomCell "Bye, Honey. Have a good night."
+            MC "You too, Mom. Bye."
+            "I hung up the phone and glanced down at the screen as the ‘call ended' sat there for a moment."
+            "Talking to Mom...felt nice."
+            "It was different from when I was at home. When I was here, it was nice to know that she was thinking of me and Tomo. Made me feel loved."
+            "I grunted a bit and sat up on my bed."
+            "..."
+            MCT "It feels more like a home already."
+            jump daymenu
+
+        "Head out to the balcony":
+            $setFlag("MC004_balcony")
+            "I glanced at my balcony, and the sunlight that was streaming onto it, illuminating the deck in a soft glow."
+            MCT "If video games have taught me anything, I should head out there."
+            "I walked to the door and pulled it open, stepping outside."
+            scene Dorm Exterior with fade
+            MCT "Hm. Not bad."
+            "I glanced around, and at the balconies on either side of my own."
+            "All of them were made in quite a sound manner, and based on the heavy duty hardware that I could see under the one beside mine, it could likely handle more than a few people."
+            MCT "Or one or two with a heavy duty factor."
+            "I put both hands on the railing and gazed out, then looked back to the balcony beside mine."
+            "A white shirt and some blue shorts hung over the railing and flapped in the breeze."
+            MCT "I've been here for... at least a few weeks, and it's just striking me now that I have neighbors."
+            "I'd never met the students on either side of my dorm, though I was sure that Daichi likely knew their home address, legal first and last names, blood type, favorite colors, and name of the first person they kissed."
+            "I glanced back at the clothes hanging from the railing."
+            if checkSkill("Athletics", ">", 3):
+                MCT "Seems like the dude takes his fitness seriously. Those are athletic clothes."
+            else:
+                MCT "I... wait, aren't those the clothes they gave us for athletic stuff? I think I have some like that somewhere too."
+                MCT "I should really find those..."
+            "Each student had been given an athletic outfit, and had been instructed to come to them should we need to order a new size."
+            "It was comforting to know that the support was there... but also kind of foreboding."
+            if isEventCleared("BE003"):
+                MCT "Maybe the dude is into soccer or something?"
+                MCT "And that reminds me that Honoka has a soccer game tomorrow."
+            else:
+                MCT "Guess he's a fan of air-drying."
+                "I glanced down at the ground below."
+                MCT "Screw that. I'm not going chasing my boxers if they flutter down to the courtyard."
+            "I sighed and looked out over the courtyard between the two dorm buildings."
+            "There was sort of a mini-terrace looking area in between, with a pathway and some plants around it."
+            if getHighestAffection() == ("BE"):
+                show BE neutral with dissolve
+                MCT "Oh, shit!"
+                MC "Heeeyyy! Honoka!"
+                "I waved one arm overhead as Honoka stopped in her tracks and looked around for whoever was calling her name."
+                show BE happy
+                "Finally, she looked up."
+                BE "Hey! Kei-chaaaaan!"
+                "Both of us started laughing as she waved back and continued on her way."
+                hide BE with dissolve
+                "I smiled and put both hands on the railing around my dorm, grateful for the feeling of familiarity that Honoka brought."
+            elif getHighestAffection() == ("AE"):
+                show AE neutral with dissolve
+                "Down the path, Shiori walked in a quick sort of manner, heading off toward the direction of the school."
+                "I raised one arm to wave, but brought it back down as she walked past, already out of the range of my gesture."
+                MCT "Probably heading to a student council meeting most likely."
+                hide AE with dissolve
+            elif getHighestAffection() == ("FMG"):
+                show FMG neutral with dissolve
+                "Below, Akira walked by, looking about and admiring the foliage and the like."
+                MC "Ey! Mizutani-san!"
+                show FMG happy
+                "Akira looked up toward me."
+                "She waved at me vigorously as I returned the gesture, then let her go on her way."
+                hide FMG with dissolve
+            elif getHighestAffection() == ("GTS"):
+                show GTS neutral with dissolve
+                "I glanced toward the side away from the campus and spotted Naomi walking slowly, looking at the various bits of shrubbery and foliage in the terrace."
+                "Her eyes went up along the sides of the building and rested there, then went over, finally landing on me."
+                show GTS happy
+                "Naomi beamed and waved at me as I returned the gesture."
+                hide GTS with dissolve
+                "I watched her continue on and back around the dorms, likely to her own as I put both hands on the railing and inhaled the clean sea air, then glanced back at Naomi."
+                "..."
+                MCT "I think... she's a little taller."
+            elif getHighestAffection() == ("WG"):
+                "I glanced down and along toward the school."
+                show WG neutral with dissolve
+                "Alice was walking slowly along, the sunshine making her golden hair shimmer."
+                "I considered calling out to her, but thought better of it. I didn't want to frighten her."
+                hide WG with dissolve
+                "I simply rested my hands on the railing and watched her walk around the dorms, her body swaying gently with each step."
+            elif getHighestAffection() == ("PRG"):
+                "I brushed the hair out of my face, only for it to flop back down as I looked toward the side away from the school."
+                show PRG neutral with dissolve
+                pause .5
+                "Aida was walking alone in the middle of the terrace, heading for the school."
+                "In her arms was a cream colored file folder, held tightly to her chest, and based on her gait, she seemed to be in a hurry to get that document to... somewhere."
+                MCT "Probably running an errand for Alice."
+                "I leaned over the railing a bit and held my arm out, waving over my head."
+                MC "Hey, Kodama-san!"
+                show PRG surprised
+                "Aida immediately whipped her head up toward me."
+                show PRG embarrassed
+                "Seeing me, she blushed a bright red and waved quickly with one hand, before continuing on her way."
+                hide PRG with dissolve
+            Student "Ey."
+            "I blinked and glanced toward the voice beside me."
+            "On the balcony with the clothes hanging was who I assumed to be the clothes' owner. He was a fairly skinny, slightly shorter guy, with a bit of stubble."
+            MC "Yo."
+            Student "You got nothing going on tonight either?"
+            MC "What gave you that idea?"
+            Student "Do you stand on your balcony when you have major plans going on?"
+            MC "Good point."
+            Student "Genji Nakayama. Fukuoka."
+            MC "Ah..."
+            MC "Keisuke Hotsure. Tokyo."
+            MC "Nice to meet you."
+            Genji "Likewise."
+            "Genji felt the t-shirt hanging from the railing."
+            Genji "Hagh. Still damp."
+            MC "Dryer break down?"
+            Genji "Nah. I have practice soon and was hoping that hanging it in the wind would get the job done faster."
+            MC "Ah."
+            Genji "So Tokyo, what's your story?"
+            MC "My story?"
+            Genji "Mhm. Before you got all factorized."
+            MC "Well, there isn't too much to tell. Grew up in the Shibuya ward of Tokyo with my sister. Lived in a smaller house with my parents. Pretty standard. You?"
+            Genji "Pretty much the same deal, to be honest."
+            MC "Cool. Island feels pretty small by comparison, doesn't it?"
+            Genji "Tell me about it. The quiet has been messing with me a bit. Makes me feel like something bad is about to happen."
+            MC "I get that. Can't take the big city out of you, I suppose."
+            Genji "Guess not."
+            Genji "So... how'd your family take the news when you came here?"
+            MC "Well... Dad was curious and a little... I guess unbelieving of the whole thing. Mom was panicky, I guess. She definitely was the more concerned of the two."
+            Genji "Same deal with me as well, save for a different city and no siblings. The thing I always think about though, is what would they say?"
+            MC "Huh? Like, in what context?"
+            Genji "Here. What would they say if they saw all of this?"
+            Genji "Like the history teacher, for instance. What would they say if they saw that tongue flop out down to his waist right before their eyes?"
+            Genji "It sounds fictional if you don't see it yourself. But it's right there."
+            Genji "It's... strange to think that that sort of thing can happen to us."
+            MC "Yeah. I suppose they'll see it eventually, like it or not. It's nice to know that this isn't happening when we're all alone, though. Like, it's nice to have a support system for it."
+            MC "Doesn't make the concept of it any less wild though. Like... it's pretty mind blowing to consider that I can look and see something on my body having grown considerably larger in the matter of a few hours."
+            Genji "It is."
+            Genji "Well anyways, nice chatting with you."
+            MC "Yeah, likewise. See ya."
+            "Genji nodded and walked back into his dorm."
+            stop music
+            MCT "Hm. Nice guy."
+            MCT "Wonder what his factor is, though. Maybe he's got a weight gain factor or something."
+            "I stopped myself and glanced up at the sky."
+            MCT "... Maybe I should be focusing more on the kind of person he is, rather than how his body is going to change. These are people that are growing, after all."
+            "I turned and walked back into my dorm, shutting the door behind me."
+            scene Dorm Interior with fade
+            MCT "..."
+            MCT "Yeah, I'm still hungry."
+            "I walked to my fridge again and opened it, rummaging through."
+            "My phone erupted with rings from my pocket, and I sighed, standing up and reaching into my pocket."
+            "I glanced down at the screen with a slightly worried pit in my gut."
+            MCT "Well... talk about her, and she shall appear."
+            "I swiped over on my screen."
+            MC "Hello?"
+            MomCell "Keisuke? Are you alive?"
+            MC "Uh... yeah?"
+            MomCell "Could have fooled me. I heard Tomoko's voice before I heard yours."
+            MC "Wait, seriously?"
+            play music MC
+            MomCell "... Well, I heard her voice via her voicemail, but still. I was hoping to hear from you sooner."
+            MCT "She acts like I've had better luck than her..."
+            MC "Yeah. Sorry about that, Mom. Things have been a little crazy here."
+            MomCell "I would imagine so."
+            MomCell "What are you up to today?"
+            MC "Just got back to my dorm. I had some classes earlier, and now I'm just relaxing for a little bit."
+            MomCell "I see. Make sure you take some time for that. It's not good to run yourself ragged."
+            MC "Yeah, I know."
+            MomCell "So, how is it otherwise, Keisuke? Are you doing alright? Feeling okay?"
+            MC "I-I'm fine, Mom. No need to worry."
+            MomCell "I... I know, Dear. I know. I just worry about you and Tomoko."
+            "The line went dead for a few seconds."
+            MomCell "So... do you know what... growing thing you have?"
+            MC "You mean my growth factor? Yeah. Yeah I do."
+            MomCell "Well, out with it then. Don't hold me in suspense."
+            MC "I have a hair factor."
+            pause .5
+            MomCell "Ah... {w}hair factor?"
+            MomCell "Like... the hair on your head, right?"
+            MC "Yes, Mom. I'm not turning into a sasquatch. At least as far as I can tell so far."
+            MomCell "Alright, alright. So, how does that work?"
+            MC "Well, my hair has been growing faster and faster now. Like, I can cut it, and it'll grow back really quick."
+            MomCell "Wow... I'll be frank, Keisuke. With what I'd heard, I assumed it was going to be something more severe. Like you'd be as tall as a building when I saw you next."
+            MomCell "What about your sister? Is she doing okay?"
+            MC "She's about the same. She has the same factor as I do."
+            MC "And, she's really not overly fired up about the whole thing."
+            MomCell "I see. And it works the same in women as it does for men?"
+            MC "As far as I know, yes."
+            MomCell "I see."
+            MomCell "I... I'm relieved to hear that you two are okay, Keisuke."
+            MomCell "Your father and I... well, we didn't know what to think."
+            MomCell "The whole thing seems so out there..."
+            MC "I know, Mom. It still feels a little far-fetched for me too sometimes. But... it's real."
+            MC "Oh, you won't believe this. Honoka Inoue is here too."
+            MomCell "Honoka? As in, your old friend Honoka?"
+            MC "Mhm. We bumped into each other when I got off the ferry."
+            MomCell "Wow. Small world. How is she doing?"
+            MC "Good. She's definitely grown up."
+            MomCell "I'm sure. I remember her playing in the mud in our backyard when you two were little. Remember that mud castle she tried making? She was so adorable.."
+            MC "I... yeah. I think I remember that too."
+            MCT "I also wouldn't put it past Honoka to try something like that now."
+            MomCell "Well, I'm glad you have someone you know there with you and Tomoko. Hopefully, it'll make the whole process a lot easier."
+            MomCell "Have you met anyone else?"
+            MC "Yeah, quite a few people."
+            if getHighestAffection() == ("BE"):
+                MC "I've been mainly hanging out with Honoka, though."
+                MomCell "That's good to hear, Dear. She was always a sweetheart."
+            MomCell "I'm glad to hear that you've been putting yourself out there. I think it'll help make this whole thing a lot easier to deal with."
+            MC "Yeah, hopefully."
+            MC "Is Dad doing okay?"
+            MomCell "He's about the same. Working a lot of hours, but he's doing well. He misses you two, though."
+            MomCell "Feels strange being empty nesters now, you know."
+            MC "Heh, I suppose so."
+            MC "Feel old yet?"
+            MomCell "Oh, don't even start that."
+            "My mom and I both laughed over the phone."
+            MomCell "Have you made any plans for Golden Week yet?"
+            MC "Not yet. Probably gonna see what there is to do here when that gets a little closer and figure it out then."
+            MC "We have a test right after the holiday break, so I'll probably try to study for that a little."
+            MomCell "I know you, Keisuke. You say that, but will you really?"
+            MC "Ouch."
+            MomCell "I'm just teasing, Dear. I'm sure you'll put in the time."
+            MomCell "Well, Dear. I'll let you go. I'm sure you've got something fun planned for tonight, and I wouldn't want to interrupt that."
+            MomCell "It was nice to hear from you though, Honey. Keep us in the loop if you can, okay?"
+            MC "I will, Mom. Sorry it took me so long."
+            MomCell "Oh, it's okay. I understand. New school, new people, crazy body changes going on. I don't blame you."
+            MC "Thanks Mom. I love you."
+            MomCell "Love you too, Keisuke. And tell Tomoko to give me a call, would you?"
+            MC "I'll try, but she never listens to me."
+            MomCell "It's the effort that counts."
+            MomCell "Bye, Honey. Have a good night."
+            MC "You too, Mom. Bye."
+            "I hung up the phone and glanced down at it, then went and sat down at my desk."
+            MCT "Hm."
+            MCT "Somehow... it already feels better in here."
+            jump daymenu
+
 label MC005:
     scene Dorm Interior with fade
     play music HigherEdu
@@ -2178,6 +2592,7 @@ label MC005:
     HR "Ahrm... yes, hello Hotsure-san."
     "I bowed to both of them politely."
     show HR neutral
+    $setFlag("Meet_Chiyo")
     Chiyo "Hotsure-san? I don't believe we've met."
     Chiyo "A student of yours, dear?"
     Tsubasa "Not in my homeroom, no. This is Keisuke Hotsure, one of Kaeru's students."
@@ -5794,6 +6209,184 @@ label global005:
         MCT "Is it so hard just to get a damn answer?"
         MC "I... guess I'll find her later."
         jump daymenu
+
+label global026:
+    $setPregnant()
+    play sound AlarmClock
+    pause 1
+    scene Dorm Interior with fade
+    play music Rain
+    MCT "Urgh."
+    "Leaning forward in my bed, I shut off my alarm clock and stretched, feeling my back pop and crack as I reached for the ceiling."
+    MCT "God, I feel old."
+    "I gently twisted my neck to crack it, stopping when I felt a searing pain coming from my head. Trying not to yelp, I stopped twisting and felt around. Nothing was out of the ordinary up there. Puzzled, I looked down and silently cursed."
+    "My hair had grown so long that it had gotten caught in my armpit, and when I had tried to crack my neck, it started tugging away at my scalp. Wincing, I freed my hair and gave my neck another twist, this time accompanied by a satisfying pop."
+    "After a quick shower and a run of the brush through my junglesque hair, I threw on my uniform and headed out the door."
+
+    scene Campus Center with fade
+    "It was almost time for first period, yet there was hardly a single student on the path to the classrooms. Even the main courtyard was almost entirely empty."
+
+    scene Hallway with fade
+    play music Schoolday
+    "I soon found out why. The space around my usual morning classroom was congested with students, all trying to push through the door."
+    "I spotted an opening on the far side near the door and tried to snake my way through, but was instantly pushed out of the group."
+    MC "Hey, could I get through? Unlike the rest of this crowd, I actually have class here."
+    "One of the boys that pushed me turned around and sneered, an almost angry tone in his voice."
+    Student "Yeah right, pal. You're just looking to get in there and get a good look at her, aren't you?"
+    MC "Uh... who?"
+    Student "Pshhh, as if you don't know!"
+    "The boy turned around again and attempted to force his way through the growing crowd."
+    "Nearby him, I saw a small gap open in the sea of people and dove for it, somehow crawling my way into the room with all of my limbs intact."
+
+    scene Classroom
+    show BE surprised at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    BE "Kei-chan! Are you alright?"
+    "Honoka plowed through the other students and helped me to my feet, dusting off the front of my uniform."
+    MC "I'm fine. What the hell is all of this?"
+    show BE neutral
+    BE "I don't even know! All of these students just showed up to see her. Who this mystery girl is, and why everyone wants to get a look at her, I have no idea."
+    "Next to the door, Shiori stood guard, helplessly barking orders and trying to control the horde of people."
+    show AE neutral-annoyed at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
+    AE "Everyone, disperse immediately."
+    hide AE with dissolve
+    "Over the roar of the crowd, the bell to signal that class would begin in one minute sounded. Students scattered in all directions, followed by Shiori hustling them along, leaving everyone in our classroom speechless."
+    AE "Please make your way to your respective classrooms {i}without{/i} running! The school thanks you for your cooperation."
+    show FMG angry at Position(xcenter=0.85, yalign=1.0) with dissolve
+    FMG "Dang, what the hell was that about?"
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    stop music
+    "Across the room, Alice sat at her desk, nonchalantly scribbling in a notebook. She lifted her eyes when the students had disappeared and leaned down next to her, whispering at what appeared to be the floor tiles."
+    "Crawling out from behind Alice's sizeable frame came..."
+    show PRG unique behind WG at Position(xcenter=0.75, yalign=1.0)
+    play music PRG
+    pause 0.5
+    show PRG unique at altMove(0.75, 0.5)
+    extend " Aida."
+    show FMG surprised
+    FMG "W-Whoa!"
+    BE "A-Ah... Hello, Kodama-san."
+    PRG "H-Hi everyone. S-Sorry for causing all the commotion."
+    hide FMG
+    hide BE
+    with dissolve
+    WG "It wasn't your doing. Don't blame yourself for something you couldn't control, Kodama-san."
+    PRG "I-I... Alright."
+    PRG "T-There's something all of you need to hear."
+    "She stopped and looked around at all of us, as if making sure we were all listening. Shiori emerged from the hallway, her expression changing the minute she saw Aida."
+    PRG "E-Everyone, I'm...{w} pregnant."
+    show BE surprised at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind PRG with vpunch
+    BE "Whoa! I mean... uhm... congrats, Kodama-san!"
+    show AE surprised at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind BE with dissolve
+    AE "Y-You're..."
+    "I stared at Aida in complete bewilderment. Aida, the most quiet and reserved person I'd ever met, was pregnant. What was even more amazing was how quickly she had grown."
+    "I had no way of knowing when... it happened, but she had barely a trace of a belly last week, and now here she was, looking as if she were eight or nine months pregnant."
+    PRG "This..."
+    "Aida stopped, as if she had a lump in her throat. Surprisingly, Alice gave her a reassuring pat on the arm."
+    WG "Best to tell them now, as long as you have their undivided attention."
+    PRG "This... is my growth factor."
+    "Everyone gaped at her in total shock, before Tashi-sensei entered the room."
+    hide BE
+    hide AE
+    hide WG
+    hide PRG
+    with dissolve
+    show HR neutral with dissolve
+    HR "Everyone to your seats, if you please. Just because someone has grown a few inches doesn't excuse unprofessionalism."
+    "Going to my seat, I took one last glance back to Aida, who was trying to space herself the correct amount from her desk to accommodate her new belly."
+    MCT "Who would've thought?"
+    "I looked back once more to the demure, mousey girl. She was practically shaking in her seat as Nikumaru-san took the off glances at her belly."
+    "Out of all of the girls in this classroom, I would have never expected that the small woman who'd never uttered so much as a peep would have ended up pregnant at such a young age."
+    "Regardless, I nodded and looked back to the front of the class as Tashi-sensei began his lecture."
+    "This isn't the first mind boggling thing to happen in this place, and based purely on the fact that Kodama-san's belly was as flat as a board just the night prior..."
+    "I doubt it will be the last."
+    jump daymenu
+
+label global026_BE:
+    scene Hallway with fade
+    "After class, I decided to avoid getting entangled in the Q&A that was surrounding Aida's desk, and made my way down the hall."
+    BE "HEEEEEYYY! KEI-CHAN!!"
+    "Honoka came running after me, both arms wrapped around her chest to avoid giving herself a black eye."
+    show BE happy with dissolve
+    BE "Trying to avoid the craziness in there?"
+    MC "Yeah, something like that. Crowds of people were never my thing."
+    show BE neutral
+    BE "I'm sure no one enjoys being smothered by people, especially not that many. But hey, Kodama-san, am I right?"
+    MC "What do you mean?"
+    show BE surprised
+    BE "I mean, look at her! She was gone for only a handful of days, and if we assume that she was actually diagnosed with the babies on the first day, that means that she grew that much in only two to three days!"
+    show BE shrug
+    BE "I mean, at the very least, we know what her factor is now."
+    MC "You've got a point there. But if getting pregnant was the key to get her growth factor moving, then maybe a tiny jumpstart like that is to be expected."
+    show BE neutral
+    BE "Uhh... not sure that tiny is the right word in this case, Kei-chan. But that's a good thought."
+    show BE surprised
+    BE "Ooh! Do you think she'd let me be Auntie Honoka! I'd be a good aunt, I know I would! I wonder if she has any sisters..."
+    MC "You could ask, but I'm not sure if now is the right time. She's probably dealing with a lot right now. Not to mention that her body changed so much in such a short period."
+    "Suddenly, the roar of the crowd died down from the room behind us. We spun around to see Aida leave the room first, followed by the rest of the class. Behind them, I could've sworn I caught a glimpse of Tashi-sensei shaking his head."
+    "All of the students broke apart from the crowd and went their separate ways, but Aida came directly towards us."
+    show BE happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    BE "Hey Kodama-san!"
+    show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    PRG "O-Oh... hey guys."
+    BE "Congrats, by the way. I'm sure you've already heard that a couple of times today."
+    show PRG neutral
+    PRG "Just a few times, but thank you, Inoue-san."
+    show BE neutral
+    BE "Did you come up with any names yet? How about like, like... something really cool, like..."
+    show PRG happy
+    PRG "No, not yet. I'm thinking I may just wait until they're actually born, and come up with something on the spot."
+    show BE surprised
+    BE "Wait... they?! As in, more than one?!"
+    show PRG unique
+    PRG "See... I really don't know how many I'm having. When I went to the infirmary the other day, they said it was too soon to tell, but they did say that me having more than one is quite likely. Of course, with how big I am already..."
+    show BE neutral
+    BE "Well, if you ever need an emergency babysitter, you know where to find me!"
+    show PRG neutral
+    PRG "I'll keep that in mind, thanks Inoue-san."
+    BE "You in, Kei-chan?"
+    MC "Uh... wha?"
+    BE "Kodama-san asked if you and I wanted to have lunch with her. Are you in?"
+    MC "Oh! Yeah, of course!"
+    jump daymenu
+
+label global026_FMG:
+    "The minute the bell rang, the whole class crowded around Aida's desk, asking her question after question with a congratulations thrown in here and there. Off to one side, Akira noticeably hung back, taking awkward glances at Aida."
+    MC "You alright?"
+    show FMG surprised with dissolve
+    FMG "Huh?! Oh... yeah. I'm good."
+    MC "You know, body language can say a lot about how a person is feeling, Akira."
+    show FMG sad
+    FMG "Look, I...{w} okay. Meet me in the cafeteria for lunch later. I'll fill you in."
+    MC "You got it."
+    hide FMG with dissolve
+    "Akira smiled weakly and spun around to leave. Even her pace, which was pretty much one step below a run, gave away her feelings."
+
+    scene Cafeteria with fade
+    "After barely entering the cafeteria, I spotted Akira sitting at a table near the wall, unenthusiastically picking at a bowl of rice. I hurried through the line as quick as I could, and took the seat across from Akira."
+    MC "Yo, Akira!"
+    show FMG neutral
+    FMG "Oh, hey."
+    MC "Alright, I know you and I both aren't people that beat around the bush, so what's eating you?"
+    "Akira sighed before finally looking up at me."
+    show FMG sad
+    FMG "That obvious, huh?"
+    MC "Yeah, more than just a little."
+    show FMG neutral
+    FMG "Augh... alright. Pregnancy and childbirth just kind of freaks me out, alright?"
+    "I sat and politely listened, choosing the high road and not butting in until she had finished speaking."
+    FMG "It's just, the very idea of it gives me chills. Don't get me wrong, it's cool that Kodama-san is having kids and all that, and yeah, I'm happy for her. But at the same time... I don't think I could ever see myself going through that myself."
+    MC "Really? No kids?"
+    FMG "Maybe I'd adopt someday. But the idea of pushing something that big out of me is just crazy. And, if my stomach grew that huge, I couldn't lift like I do anymore."
+    FMG "I've heard of what pregnancy does to your body, and I don't want anything to do with that. The pain alone was a big turn off for me, but when I thought of how having a kid can mess up your body so much, it totally pushed me away from it."
+    FMG "And don't even think about mentioning the epidural shots. I've heard that some women still feel the pain from those even years after childbirth. Yeah, no thanks. Screw that."
+    "I hadn't even considered how a woman's body could change after childbirth, but what Akira said made sense. And, given her strong opinions on needles, no wonder she didn't want to have kids."
+    MC "I guess I've never thought about all that. As a guy, it isn't really something that comes up often."
+    FMG "Well, as a girl, the idea does pop into my head from time to time, and I shut it down any time it does."
+    FMG "But, thanks for asking, dude. Nice to know that someone's looking out for my feelings. You're like a... hairy guardian angel, or something."
+    MC "Heh. I'll add that to the list of aliases that I have."
+    "Akira began digging more heartily into her rice, and even though she had finished eating long before I did, she stayed and chatted with me until I had finished."
+    jump daymenu
 
 label RM001:
     scene Dorm Interior with fade
