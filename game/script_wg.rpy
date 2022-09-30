@@ -656,12 +656,14 @@ label WG005_c3:
     show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     HR "Mind if I take a seat here?"
     show WG doubt
+    show HR unique
     WG "Erm, I guess not. {size=-6}Just keep that {i}thing{/i} away from me.{/size}"
     HR "Hm?"
     show WG surprised
     WG "{i}Ahem{/i}, nothing! Please, go right ahead."
     show WG worried
     MC "Tashi-sensei? What are you doing here?"
+    show HR neutral
     HR "Hey, I gotta eat like everyone else here too."
     HR "I don't want to pry, but I couldn't help but overhear a bit of your conversation. The faculty and staff try to be especially attentive for the first few days after students get their results."
 
@@ -689,13 +691,17 @@ label WG005_c3:
     with fade
     HR "I'm here to tell ya kid, you may think you have a plan of how to stop this, or maybe just slow it down, but that's not how these kinds of things work."
     HR "It can't be stopped. That's why you're here, that's why we're here."
+    show HR unique
     WG "What do you mean by \"can't be stopped\"? Surely {i}something{/i} can be done? Are you really saying there's nothing that can be done whatsoever?"
+    show HR neutral
     HR "That's why I was so blunt about it the first day of class. The sooner you realize this is your new life, and that it's really happening, the sooner you'll be able to move on and accept your growth."
     HR "Just look at me. You think I was jumping for joy when I found out about {i}this{/i} thing?"
     HR "I can't tell you how many times I thought about just biting this thing off, hoping it would go away."
     HR "A teacher told me about a student with my growth who tried just that— it only grew back longer in a couple of days!"
     HR "As morbid as that was, it was a turning point for me. I knew I couldn't stop it, so I had to accept it. And from there, things got better for me."
+    show HR unique
     MC "Man, that's pretty deep Tashi-sensei."
+    show HR neutral
     HR "Just trying to help as best I know how. I may be a teacher now, but I was in your shoes once as a student here."
     HR "Luckily for your sake, everyone else is going through the same thing, well more or less. Try to support each other the best you can. This is only the start. I'll see you two in class."
     hide HR with dissolve
@@ -1045,6 +1051,7 @@ label WG008_Meet:
     MC "Huh, is that so? That does make things tricky. I'd like to help Alice out, but to do that I think it's probably best to hear the issue straight from the source, rather than just speculating."
     PRG "I-I'll wait here then. Good luck, Hotsure-san."
     scene Music Classroom with fade
+    play music HallowedHalls
     "I gently eased the door open to the music room."
     #play sound door creak
     extend " In my attempt to make a subtle entrance, the creaking door made it as awkward as possible instead."
@@ -1086,10 +1093,10 @@ label WG008_C1_M1:
 
 label WG008_C2_M1:
     $setFlag("WG008_C2_M1")
-    MC "Let's get something straight, Mizawa-san. I'm not one of Alice's ‘lackeys', she doesn't keep me on retainer. I didn't come to talk to you because I was told to, I came to hear your side of the story because I wanted to."
+    MC "Let's get something straight, Mizawa-san. I'm not one of Alice's \"lackeys\", she doesn't keep me on retainer. I didn't come to talk to you because I was told to, I came to hear your side of the story because I wanted to."
     MC "I understand Nikumaru-san's personality can be a bit forceful, and rub people the wrong way. That doesn't always bring out the best in people. I just think you deserve a fair shake."
     MC "So what's all this about?"
-    Okisho "I suppose one fair shake deserves another. I apologize for my initial assumption. You certainly don't seem like some ‘yes-man' that does whatever she says."
+    Okisho "I suppose one fair shake deserves another. I apologize for my initial assumption. You certainly don't seem like some \"yes-man\" that does whatever she says."
     Okisho "If you're interested in the real story, the fact of the matter is I was placed in charge of the music club, and it's something I take very seriously."
     Okisho "I see it as my job to ensure that the music club is a place that everyone who likes music can enjoy. I love performing music, but I understand not everyone has the talent or the years of experience I do."
     Okisho "Nikumaru-san on the other hand, sees this very real fact of life as an excuse for why everyone else isn't as good as her."
@@ -1098,7 +1105,7 @@ label WG008_C2_M1:
     Okisho "Exactly. It's not so hard to see where I'm coming from now, is it?"
     MC "I hear you. {w}Look, I can't make any promises about how well I can help smooth things over with Nikumaru-san for you, but it's probably better than nothing."
     MC "But if nothing else, at least {i}I{/i} understand now where you're coming from."
-    Okisho "I'd appreciate whatever help you're willing to offer, Hotsure-san. You seem like a pretty stand-up guy. I don't know why you hang out with her, and it's probably none of my business, but don't be afraid to say ‘hi' in the future."
+    Okisho "I'd appreciate whatever help you're willing to offer, Hotsure-san. You seem like a pretty stand-up guy. I don't know why you hang out with her, and it's probably none of my business, but don't be afraid to say \"hi\" in the future."
     MC "I'm sure I will. Have a nice day, Mizawa-san."
     scene Hallway2
     show PRG nervous
@@ -1121,7 +1128,7 @@ label WG008_C3_M1:
     Okisho "Exactly. It's not so hard to see where I'm coming from now, is it?"
     MC "I hear ya. Believe me I do. {w}Look, I can't make any promises about how well I can help smooth things over with Alice for you, but it's probably better than nothing."
     MC "But if nothing else, at least I understand now where you're coming from."
-    Okisho "I'd appreciate whatever help you're willing to offer, Hotsure-san. You seem like a pretty chill guy. I don't know why you'd hang out with her, but don't be afraid to say ‘hi' in the future."
+    Okisho "I'd appreciate whatever help you're willing to offer, Hotsure-san. You seem like a pretty chill guy. I don't know why you'd hang out with her, but don't be afraid to say \"hi\" in the future."
     MC "Sounds good to me. Have a nice day, Mizawa-san."
     scene Hallway2
     show PRG nervous
@@ -2098,6 +2105,7 @@ label WG001M:
     MC "For sure."
     hide WG with dissolve
     "I tried playing the same song again, but I kept screwing it up in the transitions. I guess I had a lot more practice to do if I was going to impress Alice with anything new."
+    $setSkill("Art", 1)
     jump daymenu
 
 label WG012:
@@ -4418,6 +4426,7 @@ label WG022:
     "It was another slow, boring day of class. My attentioned flickered in and out as Tashi-sensei droned on and on."
     show HR neutral with dissolve
     HR "And yes, that will be on the test."
+    show HR unique
     MCT "!"
     MCT "Test?! Oh... crud."
     MCT "The test I haven't made time to study for yet."
@@ -8889,7 +8898,7 @@ label WG041_after_choice1:
     show WG doubt with dissolve
     WG "Are you positive this is the place you wanted to take me?"
     "Alice was wearing a form fitting teal striped tank-top with light jean shorts that must've been custom made by her specifications."
-    "I was rather caught off guard to see her in something so casual, and well... revealing, at least for her. {w}NOt that I was complaining."
+    "I was rather caught off guard to see her in something so casual, and well... revealing, at least for her. {w}Not that I was complaining."
     MC "Hm? Oh yeah! What do you think, it's certainly a shining spectacle isn't it?"
     show WG stern
     "Alice slowly peered back and forth, observing the area like a hawk. Her arms crossed as she focused back on me."
@@ -13730,7 +13739,7 @@ label WG054_c4_1:
     jump daymenu
 
 label WG054_c4_2:
-    MC "Really? your previous size meals aren't cutting it anymore?"
+    MC "Really? Your previous size meals aren't cutting it anymore?"
     show WG doubt
     WG "It would appear not, which is quite ridiculous. I already look quite..."
     show WG angry
@@ -15283,7 +15292,7 @@ label WG059:
     Sakura "Oh right. Sorry, I forgot about that."
     show Sakura neutral
     Sakura "So who's this?"
-    WG "This is my boyfriend, Keisuke-Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
+    WG "This is my boyfriend, Keisuke Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
     MC "Nice to meet you Myoga-san. It's nice to finally put a face to the name."
     Sakura "Likewise. Kodama-chan and Alice have had nothing but good things to say about you."
     show Sakura happy
@@ -21090,6 +21099,7 @@ label WG074:
     hide WG with dissolve
     show HR neutral with dissolve
     HR "Don't forget your homework assignment on the Meji Era due next class. This is your last reminder. Three pages minimum, and I'll be docking for needless padding too."
+    show HR unique
     if checkSkill("Academics", ">=", 5):
        MCT "Luckily I've been keeping on top of my assignments and already got that one done."
     else:
@@ -21553,7 +21563,7 @@ label WG075:
     MC "What!?"
     MomCell "HAHAHA! Oh my!"
     show WG doubt
-    WG "I mean, I know it's not considered 'high art', but I can't be the only one who likes her books."
+    WG "I mean, I know it's not considered \"high art\", but I can't be the only one who likes her books."
     MomCell "Oh no, dear you're fine. Of course I know her. I must say I'm quite flattered to know you're a fan."
     show WG surprised-2
     WG "You can't possibly mean..."
@@ -21573,16 +21583,16 @@ label WG075:
     MomCell "Oh dear, haha! Well, as much as I would like it if my children took more of an interest in writing, I should cut Kei a little slack. He's not exactly the intended audience for my books."
     WG "This is true."
     MomCell "Which story is your favorite, if you don't mind me asking?"
-    WG "Hmmm, that is a tough choice, but if I had to say, it would probably be 'Defiant Heart'."
+    WG "Hmmm, that is a tough choice, but if I had to say, it would probably be \"Defiant Heart\"."
     MomCell "Interesting. That is a personal favorite of mine as well, but doesn't rank as well commercially for me compared to others. I'm surprised you know of it."
     MC "I don't remember that one too well myself. What's it about?"
     MomCell "Well it's set in the Sengoku period—"
     show WG happy
-    WG "It's about a daimyō's daughter who is kidnapped by bandits on her way to be wed off as tribute to become one of the wives a cruel warlord vying for the shogunate."
+    WG "It's about a daimyō's daughter who is kidnapped by bandits on her way to be wed off as tribute to become one of the wives of a cruel warlord vying for the shogunate."
     WG "At first she despises the leader of the bandits for holding her for ransom, but he treats her well despite the modest means they can provide."
     show WG happy-2
     WG "It's later revealed that the leader of the bandits is actually the son of a daimyō whose father was killed and their clan dissolved by the warlord, and turns out to be her intended betrothed before the warlord seized power in the region."
-    WG "See, you're led to believe the titular 'Defiant Heart' is the young princess stuck having to live amongst bandits, but you later realize it is referring to the young daimyō who defied the shogunate to reclaim his true love."
+    WG "See, you're led to believe the titular \"Defiant Heart\" is the young princess stuck having to live amongst bandits, but you later realize it is referring to the young daimyō who defied the shogunate to reclaim his true love."
     WG "And in the end, it comes back to her, during the climactic battle when she could have easily snuck away to go on to live a life of luxury in the shogunate's palace,"
     WG "she defies her own sensibilities and longings for her old life of luxury to be able to live the rest of her life with the man she loves instead."
     MC "Huh. Well that's surprising..."
@@ -21651,7 +21661,7 @@ label WG075:
 
 label WG004M:
     scene Music Classroom with fade
-    play music ConcertinoTeleman
+    play music Pastorale
     "The practice room had slowly become my second dorm in the past few months. When I wasn't with Alice and I found myself with idle time, I would think to come here."
     "What started as a scheme in my mind to impress Alice had taken on a life of its own. {w}At least that's what I told myself anyway."
     "Still though, regardless of my true intentions, the fact remained, I was starting to get pretty good. I was already better than when I was originally taking lessons."
@@ -21730,7 +21740,7 @@ label WG004M:
     MC "Look, I'm not going to sit here and tell you she's the easiest person to get along with. I'm just saying maybe look past a bad first impression, and give her a fair shot again. You might find you have more in common than you think."
     Okisho "I don't know dude, you and I seem to be talking about two different people when it comes to her."
     MC "Two different people, or a side of her you refuse to see? {w}Take my word for it. She really does want what's best for the music club. Just hear her out for a change and let her help you."
-    Okisho "Alright fine. Things have been getting more hectic for me lately and I could use the help. But if things are going to change you better, you need to work your magic on her, whatever it is you do."
+    Okisho "Alright fine. Things have been getting more hectic for me lately and I could use the help. But if things are going to change for the better, you need to work your magic on her, whatever it is you do."
     Okisho "If I extend an olive branch and all I get is her typical condescending attitude I'm kicking her out of the club and I'm going to sit on your head— is that clear?"
     MCT "Don't threaten me with a good time."
     MC "Crystal. It's been a pleasure doing business with you Mizawa-san."
@@ -21751,7 +21761,7 @@ label WG004M:
     WG "Is that so? Interesting..."
     show WG stern
     WG "What was Mizawa doing in here with you just now?"
-    MC "What? You act as if she's some kind of charming vixen. {w}I know I have a ‘type' Alice, but give me some credit, I'm a bit more loyal than that."
+    MC "What? You act as if she's some kind of charming vixen. {w}I know I have a \"type\" Alice, but give me some credit, I'm a bit more loyal than that."
     show WG worried
     WG "{i}Sigh{/i}... I know. I really do."
     show WG angry
@@ -21784,7 +21794,7 @@ label WG004M:
     "I didn't really know what to make of that. Sure, I knew it was kind of shallow to throw myself into something so hard just on the off chance it might catch her attention."
     "I guess we've come far enough that these kinds of theatrics are besides the point. But still, every time I look at her I'm just stunned that this amazing woman would even think to take an interest in me."
     show WG neutral
-    "I'm constantly asking myself, ‘What can I give to a woman that has everything?'. It sure as hell isn't money and expensive gifts. But I have to strive to do something, right?"
+    "I'm constantly asking myself, \"What can I give to a woman that has everything?\". It sure as hell isn't money and expensive gifts. But I have to strive to do something, right?"
     "I guess I still haven't figured that out, even after all this time with her. {w}But even if there isn't anything left to prove at this point, I'd still give anything to see that satisfied smirk on her face."
     show WG surprised-2
     MC "Maybe I want to?"
@@ -21820,9 +21830,9 @@ label WG004M:
     show WG neutral
     WG "Perhaps it just suffers by comparison to now."
     MC "I'll take that as a complement."
-    pause 10
+    pause 8
     show WG happy
-    pause 10
+    pause 8
     stop music fadeout 2.0
     pause 1
     MC "So what did you think?"
@@ -21918,7 +21928,7 @@ label WG076:
     WG "Thank goodness Aida was around or who knows how long I would have been stuck here by myself."
     show WG sad
     show PRG sad-2
-    WG "I... I'm so glad you came, Keisuke. Trapped by my own body in a bath that's supposed to be too big to outgrow... It's {i}sniff{/i} ...It's so embarrassing. {w}I... {i}sniff{/i} I've never felt so utterly helpless in my life."
+    WG "I... I'm so glad you came, Keisuke. Trapped by my own body in a bath that's supposed to be too big to outgrow... {w}It's {i}sniff{/i} ...It's {i}so{/i} embarrassing. {w}I... {i}sniff{/i} I've never felt so utterly helpless in my life."
     "Despite Alice's best efforts to compose herself, she began to sob, hot tears streaking down from her eyes, even as she tried to suppress it, her quiet whimpering was heart wrenching to hear."
     MC "Hey hey hey!"
     "I rushed to her side, and kneeled next to her, disregarding the sopping wet floor, squeezing her pudgy little hand in mine as tight as I could without hurting her."
@@ -21952,6 +21962,7 @@ label WG076:
     "Though I will admit, having her naked boobs right up in my face in the process certainly served as enough motivation to try."
     MC "Ready? Hold on tight."
     show WG surprised
+    show PRG worried
     MC "{i}Hrrtt{/i}!"
     WG "{i}Uffft{/i}!"
     "Our combined efforts didn't even amount to budging her one centimeter. Just from that little bit of pulling on her I could tell just how firmly stuck she really was, even if her staggering mass wasn't also a factor."
@@ -21998,7 +22009,7 @@ label WG076:
     MC "What's that?"
     Chibuki "We'll just call my roommate. Have you seen her lately? She's practically a giant now, on top of her muscles that have muscles. She'll pop Alice out of that tub in a jiffy with her gorilla mitts."
     show WG stern
-    show PRG sad
+    show PRG sad-2
     WG "No! {w}This is beyond embarrassing, and as far as I'm concerned too many people already know about this— and that includes me!"
     show WG doubt
     Chibuki "Well what do you want us to do? Have skinnyboy and I pull on your arms while pregnant lady here pushes from behind?"
@@ -22073,7 +22084,7 @@ label WG076:
     Jineko "Sure thing. Let's see, that's probably over here with the support equipment. {w}Ah, here's one. Just be sure to bring it back when you're done with it."
     MC "No problem. I shouldn't need it for too long."
     Jineko "What else did you need?"
-    MC "Got any wood boards? I need like a 5\" x 25\" that's like 180 cm long."
+    MC "Got any wood boards? I need like a 5 x 25 that's like 180 cm long."
     Jineko "That's kinda specific, but we do have that width. I could cut you one that length on the bandsaw real quick."
     MC "If you could, I'd appreciate it."
     Jineko "No problem. What do you need this stuff for anyway?"
@@ -22088,7 +22099,7 @@ label WG076:
     Jineko "Have some other projects in mind, I take it?"
     MC "You could say that. {w}I don't want to be rude, but I've probably taken too long here already. I gotta get going. Thanks again for all your help, Watanabe-san."
     Jineko "Well, I'm always willing to help if you got something in mind. See you later, little guy."
-    "Can't say I took a shine to being called ‘little guy', considering I'm at least average height by any reasonable metric, but I appreciated her eagerness to help me all the same."
+    "Can't say I took a shine to being called \"little guy\", considering I'm at least average height by any reasonable metric, but I appreciated her eagerness to help me all the same."
     scene Dorm Exterior with fade
     "I ran back just about as fast as my freezing legs could carry me to Alice's dorm. I hoped Akira hadn't beat me to the punch or else I figured she might get impatient and just rip Alice out of the tub without a good plan."
     scene Dorm WG
@@ -22126,9 +22137,8 @@ label WG076:
     MC "Do you have any cooking oil?"
     PRG "Uh... t-there should be some in the pantry."
     MC "Can you get some for me?"
-    pause .5
-    "Aida disappeared back into the dorm, a slight paleness tinging her cheeks."
     hide PRG with dissolve
+    "Aida disappeared back into the dorm, a slight paleness tinging her cheeks."
     show WG doubt
     WG "Cooking oil? I hate to admit it, but I think too much cooking oil is part of what got me in this situation in the first place."
     MC "Our best shot to get you unstuck is to get some lubrication between your skin and the side walls of the tub. It's a better bet and much less smellier than something petroleum based out of a spray can."
@@ -23732,7 +23742,7 @@ label WGFMG003:
     scene Pool with fade
     "The whole way over I couldn't help but think to myself how much of a disaster this was going to be. That, and I could only assume I'd never hear the end of it from Alice about going along with this whole thing."
     $setWGOutfit(OutfitEnum.SWIM)
-    show WG neutral at Position(xpos=0.25, yalign=1.0)
+    show WG neutral at Position(xpos=0.3, yalign=1.0)
     show FMG happy at Position(xpos=0.75, yalign=1.0)
     with dissolve
     WG "Keisuke? I didn't expect to see you here. Were you looking for me?"
@@ -23836,7 +23846,7 @@ label WGFMG003:
     FMG "I'm going to have to hold my breath while my head is trapped under that belly."
     MC "Probably, but keep that to yourself."
     show FMG happy at altMove(0.75, 0.5)
-    show WG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.3, yalign=1.0) with dissolve
     WG "Well? What was that about? I thought you were eager to do this. Personally I'd prefer to get this over with as soon as possible, if you don't mind."
     FMG "Kei-kun was just making sure you'd be comfortable."
     WG "Well that was certainly considerate of hi—"
@@ -23868,7 +23878,7 @@ label WGFMG003:
     "Honoka and I were completely drenched, despite standing over two meters away from the pool's edge."
     "The combined mass of the two titans haphazardly flopping into water had created a tsunami, leaving disaster in its wake."
     hide BE with dissolve
-    show WG doubt at Position(xpos=0.25, yalign=1.0)
+    show WG doubt at Position(xpos=0.3, yalign=1.0)
     show FMG surprised at Position(xpos=0.75, yalign=1.0)
     with dissolve
     MCT "Aw, crap."
@@ -23921,7 +23931,7 @@ label WGFMG003:
     BE "Aw, you're no fun."
     hide BE with dissolve
     show FMG neutral
-    show WG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.3, yalign=1.0) with dissolve
     FMG "Here, give me your hand Alice. I'll give you a lift up."
     WG "Thank you, Akira."
     FMG "It's the least I can do, after dunking you by accident."
@@ -23974,14 +23984,14 @@ label WGFMG004A:
     WG "Come, sit. Have something warm to take the chill off."
     MC "Thanks."
     show WG aroused
-    "I gave her a nice smooch on her chubby cheek as I passed by on my way to sit down across from her at the 'tea table', as I called it."
+    "I gave her a nice smooch on her chubby cheek as I passed by on my way to sit down across from her at the \"tea table\", as I called it."
     show WG neutral
     "I took a sip from the cup. Scalding was not quite the right word for it, but it was darn close. Even still, it was a welcome sensation that helped take the edge off the damp cold I had from being outside most of the afternoon."
     MC "Ahh! That's nice."
     show WG happy
     WG "I figured you could use something hot."
     MC "Definitely. Much appreciated. Thank you. {w}So, what did you want to talk to me about?"
-    "I'd be lying if part of me didn't wonder if the extra pleasantries weren't intended as some device intended to soften the blow of bad news, but I hadn't been able to read anything from Alice that that would be the case here."
+    "I'd be lying if part of me didn't wonder if the extra pleasantries weren't intended as some device cleverly employed to soften the blow of bad news, but I hadn't been able to read anything from Alice that that would be the case here."
     show WG neutral
     WG "I was wondering if you had any plans for this weekend."
     MCT "This has got to be some trap."
@@ -24018,7 +24028,7 @@ label WGFMG004A:
     WG "I trust you're caught up on your assignments well enough to allow time for such an excursion?"
     if checkSkill("Academics", ">=", 4):
         MC "Way ahead of ya. I've been doing a pretty good job of keeping ahead of things."
-        show WG surprise-2
+        show WG surprised-2
         WG "I was being facetious, but I'm pleasantly surprised to hear that Dear."
         $setAffection("WG", 1)
         show WG neutral
@@ -24066,7 +24076,7 @@ label WGFMG004A:
     FMG "{size=-6}Yo, what did you do, dude? You'll have to tell me your secrets. She's been in a much better mood lately.{/size}"
     MC "{size=-6}I've just been trying to help her out. I think the stress of her more recent changes has got her out of sorts.{/size}"
     FMG "{size=-6}What do you mean?{/size}"
-    MC "{size=-6}What do you mean 'What do I mean?'? Haven't you noticed how much she's grown recently?{/size}"
+    MC "{size=-6}What do you mean \"What do I mean?\"? Haven't you noticed how much she's grown recently?{/size}"
     show FMG neutral
     FMG "{size=-6}Not really. She always looks pretty fat to me.{/size}"
     MCT "Now I'm starting to realize why you asked me to talk to her instead."
@@ -24137,11 +24147,11 @@ label WGFMG004A:
     show WG haughty
     WG "Akira, believe me, no one understands better how restrictive confined spaces can feel. It's not unnatural to find the sensation distressing."
     show WG angry
-    WG "But let me make myself clear. You can either begin to appreciate the 'coziness' of the cabin,"
+    WG "But let me make myself clear. You can either begin to appreciate the \"coziness\" of the cabin,"
     show FMG surprised
     extend " or you {i}will{/i} get to appreciate the wide open spaces of the Pacific Ocean."
     play music Peaceful
-    FMG "Yeah... 'cozy'. That sounds much better..."
+    FMG "Yeah... \"cozy\". That sounds much better..."
     show WG neutral
     show FMG neutral
     WG "Besides, you'll be able to get up and walk around soon. Just be patient."
@@ -24205,7 +24215,7 @@ label WGFMG004A:
     play music Beach
     "The ocean view was beautiful. The sapphire and turquoise shades of the water danced in the light as they commingled and then separated with the gentle waves."
     "It was hard to believe I just came from the sharp cold of a Seichou winter not even a full day ago."
-    show WG neutral
+    show WG neutral with dissolve
     MCT "Speaking of beautiful views..."
     #specific description of her casual swimsuit when it becomes finalized
     show WG neutral-2
@@ -24238,11 +24248,11 @@ label WGFMG004A:
     MC "Good catch, it's a hard to reach spot."
     "Moving back up to finish around her shoulders, I moved to the area she requested to see a massive flab roll surging out from the back top of her dress where it could no longer confine her voluptuousness."
     "She had more chub in a single roll of back fat than a chubby girl might have on their poochy belly. Just even lifting her arms up one at a time to get in there was like lifting a bag of cement— well, except a bit more bouncy than that."
-    "Noticing she had a lot of skin showing up top, I got to work on the 'upper deck' region, so to speak."
+    "Noticing she had a lot of skin showing up top, I got to work on the \"upper deck\" region, so to speak."
     show WG surprised
     "Not waiting for an invitation, I made sure to get down in there on top of and around her breasts. Had to make sure there was full coverage as her deep cleavage was going to obscure some areas that would see some sun."
     show WG doubt
-    WG "Uh, Dear, as much as I appreciate your 'attention to detail' as it were. This is still a public beach."
+    WG "Uh, Dear, as much as I appreciate your \"attention to detail\" as it were. This is still a public beach."
     show WG sly
     MC "Oh, right. Sorry. Just trying to be thorough."
     show WG aroused
@@ -24271,10 +24281,10 @@ label WGFMG004A:
     show WG neutral
     WG "There, that should do it. Now why don't you join me in the water when you're finished?"
     show WG sly
-    extend " Given how 'thorough' you like to be, I'm sure that might take a while. Do make sure it has time to set now."
+    extend " Given how \"thorough\" you like to be, I'm sure that might take a while. Do make sure it has time to set now."
     show WG happy-2
     WG "But don't keep me waiting too long."
-    "I could tell Alice was eager to get into the water. She had been under a lot of stress lately after all. She waddled as tantily as her corpulent form could allow to the water's edge, and dove right under once she waded into the ocean."
+    "I could tell Alice was eager to get into the water. She had been under a lot of stress lately after all. She waddled as daintily as her corpulent form could allow to the water's edge, and dove right under once she waded into the ocean."
     hide WG with dissolve
     "Having put the final touches on my sunscreen coverage, I was just about to get into the water."
     "Turning back toward the ocean, I stopped to admire the scenery once again, when I couldn't help but overhear a conversation from some nearby fellow tourists."
@@ -24343,7 +24353,7 @@ label WGFMG004A:
 
 label WGFMG004A_C1:
     MCT "That's it. I can't take it. I'm going to give those assholes a piece of my mind."
-    show WG surprise
+    show WG surprised
     MC "Hey you two!"
     "Tourist1" "Huh?"
     "Tourist2" "You talking to us?"
@@ -24371,8 +24381,8 @@ label WGFMG004A_C1:
         jump daymenu
     else:
         show WG sly
-        Toursist2 "Alright, alright. Sorry man, I don't want any trouble."
-        Toursist1 "We didn't mean anything by it. We'll be going."
+        Tourist2 "Alright, alright. Sorry man, I don't want any trouble."
+        Tourist1 "We didn't mean anything by it. We'll be going."
         "The two of them walked away— obviously they weren't in a mood to start something over their careless comments."
         $setAffection("WG", 1)
         show WG haughty
@@ -24396,7 +24406,7 @@ label WGFMG004A_C2:
     "Tourist2" "Are you talking to us?"
     MC "Yes. You see, I couldn't help but overhear your comments about that lady over there."
     "Tourist1" "You mean the one who's beyond morbidly obese?"
-    "Tourist2" "Yeah, what about it? You her boyfriend or something."
+    "Tourist2" "Yeah, what about it? You her boyfriend or something?"
     "At this point I was practically gritting my teeth so as to not go completely ballistic, but I managed to keep my cool."
     MC "As a matter of fact— I am. {w}Have you considered, if as you say, that she seems to be larger than what is considered possible, wouldn't you think that's far more likely due to a medical condition than something she has control over?"
     "Tourist1" "I... I didn't consider that, no."
@@ -24524,10 +24534,10 @@ label WGFMG004B:
     scene Restaurant with fade
     play music DayByDay
     "It didn't take us too long to get to the soba shop. Although getting into the place required a bit of maneuvering."
-    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     "Akira had to duck to avoid hitting her head on the door,"
     show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
-    extend " and Akira had to give Alice an extra tug to pass through as when hips brushed the sides of the double doors."
+    extend " and Akira had to give Alice an extra tug to pass through when her hips brushed the sides of the double doors."
     show WG neutral
     FMG "So? What do you think?"
     show WG neutral
@@ -24575,7 +24585,7 @@ label WGFMG004B:
     show WG neutral-2
     WG "I must admit, it was quite good."
     show FMG neutral
-    FMG "Just ‘quite good'? Come on, I bet this is the best soba you've ever had by far."
+    FMG "Just \"quite good\"? Come on, I bet this is the best soba you've ever had by far."
     show WG neutral
     WG "Well... maybe not quite the best, but it is up there."
     show FMG angry-3
@@ -24646,7 +24656,7 @@ label WGFMG004B:
     show WG neutral
     FMG "Good food and fast service. I told you this place was the best!"
     show FMG neutral
-    "The third bowl saw a noticeably slower pace between the two of them. Though when I say ‘normal', I meant more like how a normal person would eat if they hadn't eaten all day."
+    "The third bowl saw a noticeably slower pace between the two of them. Though when I say \"normal\", I meant more like how a normal person would eat if they hadn't eaten all day."
     show FMG happy
     FMG "Slowing down there, Alice?"
     show WG sly
@@ -24754,7 +24764,7 @@ label WGFMG004B:
     show WG neutral-2
     MC "Hey Babe, how about this parfait? It looks pretty good. If you don't want it, I think I might have some— that is, if Akira doesn't want it."
     WG "No, no. That won't be necessary, I would love some. We can split it."
-    "By this point Alice was so glutted she could barely move to retrieve it herself. Sparing her the indignity of the ‘here comes the airplane' routine, I proceeded to spoon feed her each morsel of the parfait."
+    "By this point Alice was so glutted she could barely move to retrieve it herself. Sparing her the indignity of the \"here comes the airplane\" routine, I proceeded to spoon feed her each morsel of the parfait."
     "Her lips eagerly reached forward for each bite as I brought each spoonful near. By the time she was done, there wasn't even one morsel left for me— much to my delight."
     show WG happy
     WG "Oh that was heavenly."
@@ -24794,7 +24804,7 @@ label WGFMG004B:
     show WG worried
     WG "{i}Ooo{/i}..."
     show WG neutral-2
-    extend " Not that I take any personal pride in the matter, but it would be wrong to deny my ‘talents' as it were. I suppose it is a bit odd, but I guess I can't complain if you find it to be a source of admiration."
+    extend " Not that I take any personal pride in the matter, but it would be wrong to deny my \"talents\" as it were. I suppose it is a bit odd, but I guess I can't complain if you find it to be a source of admiration."
     MC "Babe, you have no idea..."
     $setVar("WGSSPR", getVar("WGSSPR") +2)
     show FMG flex
@@ -24817,7 +24827,6 @@ label WGFMG004B:
     FMG "You have got to be kidding me... {w}Man... {i}Aaargh{/i}! I wasn't even close. What was I thinking!?"
     Hidaka "Ohoho! You girls must really like soba. I'm honored to have such great customers. Here is your bill, go ahead and take your time. I'll get this cleaned up for you."
     show WG sly
-    show WG surprised-2
     WG "I believe you'll be picking this one up, per our little wager?"
     FMG "B-But I don't have that kind of cash!"
     show WG neutral
@@ -24869,7 +24878,7 @@ label WGFMG004B:
         WG "When you put it that way, I suppose I shouldn't worry so much about it."
     elif getVar("BEP") < 8:
         show WG surprised-2
-        MC "Good or bad, right or wrong, I'm still going to be here Alice. Whether it's a food rub or a belly rub, whatever you need— and no matter how much you might grow— none of that changes how I feel about you."
+        MC "Good or bad, right or wrong, I'm still going to be here Alice. Whether it's a foot rub or a belly rub, whatever you need— and no matter how much you might grow— none of that changes how I feel about you."
         show WG sad
         WG "That's..."
         show WG happy-2
@@ -24889,7 +24898,7 @@ label WGFMG004B:
     WG "{i}Sigh{/i}. {w}It certainly isn't something I would normally agree to. Doesn't even seem like there's much of a point if the food isn't enjoyable anymore."
     MC "So I noticed. You looked like you were getting pretty burnt out on soba noodles."
     show WG neutral-2
-    WG "I definitely was. Thank you for your ‘assistance', as it were. Although I'm not sure I appreciate it as much now given how stuffed I feel."
+    WG "I definitely was. Thank you for your \"assistance\", as it were. Although I'm not sure I appreciate it as much now given how stuffed I feel."
     show WG haughty
     extend " But at least I managed to save a bit of face— even if it was just a stupid little contest."
     show WG neutral
@@ -24932,8 +24941,11 @@ label WGGTS001:
     play sound Bell
     show HR neutral with dissolve
     HR "Alright times up, hand in your quizzes on my desk on your way out of class."
+    show HR unique
     "A collective whiney \"Awwwww!\" from the class let me know I wasn't the only one who had trouble with this quiz."
+    show HR neutral
     HR "And no complaining. Two days is plenty of time to prepare for a quiz. You have only yourself to blame if you failed to study properly."
+    show HR unique
     "I was in no position to argue with his assessment, but he could have at least conceded it was way harder than a normal person would expect a quiz to be."
     "I dropped my quiz off on Tashi-sensei's desk on my way out of class."
     scene Hallway with fade

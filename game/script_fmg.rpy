@@ -2225,7 +2225,7 @@ label FMG018:
     $setTakamuraOutfit(OutfitEnum.COOKING)
     scene Cooking Classroom
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0)
-    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show HR unique at Position(xcenter=0.25, yalign=1.0)
     with fade
     "We managed to catch up with the rest of the class before anyone (especially Shiori) figured out we were behind."
     "Once we were at the cooking class, we waited till the cooking teacher began explaining."
@@ -2233,6 +2233,7 @@ label FMG018:
     Takamura "And... ah, it looks like we're going to have an uneven number."
     show Takamura reassuring
     Takamura "Then, I suppose you'll have to fill in, Tashi-chan."
+    show HR neutral
     HR "Wait, what?"
     HR "I-"
     Takamura "Oh, come now, Tashi-chan. Let's see those cooking skills that you brag about so much."
@@ -2240,6 +2241,7 @@ label FMG018:
     show Takamura happy
     HR "Ach... fine."
     HR "... And, I thought I told you not to call me that-"
+    show HR unique
     Takamura "Ah-dah-dah! Get in there!"
     hide HR
     hide Takamura
@@ -2652,7 +2654,7 @@ label FMG020:
     FMG "Y-You mean like a d-date?"
     MC "Well, I, uh, didn't mean it like that... b-but if you want to call it that. That's-That's cool with me... heh."
     show FMG aroused
-    FMG "{size=-6}Y...Yeah.(/size}"
+    FMG "{size=-6}Y...Yeah.{/size}"
     show FMG neutral
     FMG "Sure, Kei. I'd lov-like to join you for dinner."
     scene black with fade
@@ -2935,20 +2937,30 @@ label FMG021:
     show HR neutral
     with fade
     HR "Hotsure-san, did you actually help Mizutani-san?"
+    show HR unique
     MC "You know what, there was not only nothing I could do, but I felt like impeding the trainwreck would have just made me a casualty."
+    show HR neutral
     HR "Well, regardless, I'd think she'd have SOME knowledge on her own topic."
     HR "The emu war was in 1932 by Major G.P.W. Meredith, not \"Emmet Mel\"."
+    show HR unique
     MCT "...Huh?"
+    show HR neutral
     HR "I figured Matsumoto-chan gave up at some point, but I'd think you'd know better to just find facts on the internet."
+    show HR unique
     MC "We, uh, used the book in the library."
     MCT "\"Used\" being in massive quotations."
+    show HR neutral
     HR "Oh, yeah. The old one? Christ, I don't think anyone picked that up since I was a student."
+    show HR unique
     MC "..."
     MC "You drew dicks on page 25, didn't you?"
     HR "..."
     MC "..."
+    show HR neutral
     HR "...So, I think that with all the work she's put in, Mizutani-san earned an A, wouldn't you agree?"
+    show HR unique
     MC "O-OY, OY! What was that?!"
+    show HR neutral
     HR "Okay, look, my old librarian forgave me; Matsumoto-chan, however will NOT, and quite frankly I haven't had my coffee this morning. Dealing with her will give me an aneurysm, so I'm willing to give Mizutani-san any grade she wants."
     "And that's how Shiori-san and Mizutani-san got the same grade in our world history report."
     jump daymenu
@@ -4127,9 +4139,12 @@ label FMG027:
     MCT "Man history's dragging along today. Getting no sleep hasn't helped either, struggles of late-night studying I guess."
     show HR neutral with dissolve
     HR "I hope everyone is prepared for the test this Friday, this one will not be open note."
+    show HR unique
     MCT "Are you serious??? A three-day extension? I wasted all the time and now I'm going to forget it."
     MC "I thought it was supposed to be today, Tashi-sensei?"
+    show HR neutral
     HR "It was but I felt the class isn't quite ready for it yet, so I made the decision to push it back."
+    show HR unique
     MCT "C'mon bruh are you kidding me..."
     "And so class went on as boring as ever only now I was both annoyed and disappointed that I crammed for no reason..."
     MCT "This is what I get for doing it last minute."
@@ -8928,12 +8943,19 @@ label FMG053:
     "If my hair didn't give me away, I'm pretty sure I could've gotten away with it."
     show HR neutral with dissolve
     HR "Hotsure-san, I see you didn't turn in your essay. I gave you guys an extension as well. What happened?"
+    show HR unique
     MC "It's well... have you seen Mizutani-san recently?"
+    show HR neutral
     HR "I have. I fail to see how she would have affected your ability to do your homework."
+    show HR unique
     MC "You won't believe this but um... I... technically am little responsible for... uh... all of that."
+    show HR neutral
     HR "How so?"
+    show HR unique
     MC "I-I-I-I... I HELPED HER TRY THIS NEW ROUTINE! I was spending a lot of my time helping her get used to her new size. Because you know... we're um dating."
+    show HR neutral
     HR "Sigh... I'll give you three days to turn it into me. This is the last time I'm doing this for you."
+    show HR unique
     MC "You won't regret it, Tashi-sensei!"
     "I bowed and sprinted out of the room hurrying back to my room to actually start writing."
     scene Hallway with fade
@@ -12104,7 +12126,7 @@ label FMG067:
     scene black with fade
     pause 1
 
-    scene Airport Flip with fade
+    scene Okinawa Airport with fade
     "Thanks to Alice's help we got unloaded in record time. Before we set off for our next big adventure, we set our bags down to thank Alice for everything."
     if isEventCleared("FMGWG004"):
         show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
@@ -12173,7 +12195,7 @@ label FMG067:
         FMG "Ah crap, no. Give me three minutes."
     scene black with fade
     pause 0.5
-    scene Airport Flip with fade
+    scene Okinawa Airport with fade
     pause 0.5
     show FMG neutral with dissolve
     MC "Everything good with your parents?"
@@ -12835,7 +12857,7 @@ label FMG070:
     $setSize(5)
     $setTimeFlag("size5")
     $setFMGOutfit(OutfitEnum.NUDE)
-    "After everything that had happened yesterday, a good night's rest was what we all needed; and it was a great night's rest, fantastic even. {w}Until the air mattress popped and I was delegated to the couch."
+    "After everything that had happened yesterday, a good night's rest was what we all needed— and it was a great night's rest, fantastic even. {w}Until the air mattress popped and I was relegated to the couch."
     "The couch was... rough. It was one of those couches that looks incredibly comfy and then when you sit or lay down on it you immediately regret your life choices. Freaking terrible."
     "To make matters even worse when I finally started to doze off. I heard what sounded like a bomb going off in Akira's room."
     play sound Thud
@@ -12987,8 +13009,7 @@ label FMG070:
     MC "Get on your knees again, I'll try to pull from the back."
     show FMG neutral
     FMG "Okay."
-    play sound Thud
-    show FMG flex
+    show FMG flex with vpunch
     FMG "That is never going to stop being cool."
     show FMG neutral
     extend " You ready?"
@@ -13022,9 +13043,9 @@ label FMG070:
     pause .25
     show FMG angry
     FMG "Dude, these are even worse than the shirt! Cooome on, just a little more!"
-    pause .25
+    hide FMG with dissolve
     $setFMGOutfit(OutfitEnum.CASUAL)
-    show FMG neutral
+    show FMG neutral with dissolve
     FMG "Holy crap, finally dressed!"
     MC "I have to ask, what material Alice is using for her clothes. There isn't a single rip or tear."
     MC "Try not to flex too much though, we don't know how durable the fabric is and your pants look like they're gasping for air with how tight they are around your quads."
@@ -13202,6 +13223,7 @@ label FMG070:
 
 label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
     $setProgress("FMG", "FMG072")
+    $setFMGOutfit(OutfitEnum.CASUAL)
     scene Okinawa House Interior with fade
     play music Peaceful
     "With what happened yesterday, Akira slept on the family room floor, I hopped off the couch to keep her some company and so we could be just a little closer to each other."
@@ -13702,7 +13724,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         pause .25
         FMG "Here's the plan, Kei. We don't know how strong I am, so I'll get down on my knees and you can hop into my arm. I don't want to risk picking you up and accidentally crushing you."
         MC "{size=-6}Damn it{/size}... {w}I understand..."
-        play sound Thud
+        show dummy with vpunch
         MC "That is sooo cool."
         show FMG flex
         FMG "I know, right?!?! I can't wait to freak Chibuki out with it."
@@ -13724,7 +13746,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         MC "Nah, I'm good. My breakfast might come back up if you decide to sprint."
         scene black with fade
         pause 1
-        scene Airport Flip
+        scene Okinawa Airport
         show FMG neutral
         with fade
         play music DayByDay
@@ -13769,7 +13791,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         FMG "Let's roll."
         scene black with fade
         pause 1
-        scene Airport Flip
+        scene Okinawa Airport
         show FMG neutral at Transform(xzoom=-1), Position(xcenter=0.5, yalign=1.0)
         with fade
         "As we approached the airplane, I noticed that something seemed off about it..."
@@ -13808,6 +13830,7 @@ label FMG072:
     $setProgress("FMG", "FMG073")
     play music Schoolday
     scene Dorm Interior with fade
+    $setFMGOutfit(OutfitEnum.CASUAL)
     "The flight back was... okay. Alice didn't restock her ice cream stash in fear of us eating all of it, which I mean like fine, I get it, we might have eaten a little too much the first time."
     "I would've been under the impression that after getting that uh, {i}large{/i}, you'd be in the mood for a dairy treat every now and then... or every hour of the day if we're being honest."
     "I'm coping incredibly hard, but a man can dream, right?"
@@ -13858,7 +13881,6 @@ label FMG072:
     scene Dorm Exterior with fade
     "I made it over to her dorm to see a few workers hammering away at the door and a couple carrying various pieces of furniture with Akira standing to the side watching them work. These dudes weren't small by any means but Akira towered over them with ease."
     "She spotted me out of the corner of her eye and hurried down the stairs to greet me."
-    $setFMGOutfit(OutfitEnum.CASUAL)
     show FMG happy with dissolve
     FMG "Kei-kun!"
     MC "That's my name, don't wear it out. {w}Still wearing your outfit from Okinawa, I see."
@@ -13938,6 +13960,8 @@ label FMG072:
     hide Natsuko with dissolve
     MC "You think her face is stuck like that?"
     show FMG happy at altMove(0.5, 0.5)
+    pause 0.1
+    show FMG happy at Transform(xzoom=-1)
     FMG "Has to be."
     FMG "If you don't mind me asking Nurse Kiyomi could you tell us more about Nat's mom and why I'm here."
     Nurse "We called you here to take your measurements just like Okamoto-san. I received numerous reports about both of you girls. Like I said before, Okamoto-san beat the current record holder by quite a large margin."
@@ -14064,7 +14088,7 @@ label FMG072:
     FMG "I'm not playing either of those games with you again after you cheated."
     MC "Sorry, you suck at negotiating and rolling dice... sounds like a skill issue."
     FMG "I saw you take money out of the bank when you didn't even earn it!"
-    MC "Hm, maybe. A part of me thinks you're lying... {w}Look, what happened a few weeks ago doesn't matter. You, Shiori, and Nat lost and I won. We can talk this over, over your favorite movie back at my place."
+    MC "Hm, maybe. A part of me thinks you're lying... {w}Look, what happened a few weeks ago doesn't matter. You, Shiori, and Nat lost and I won. We can talk this over your favorite movie back at my place."
     show FMG angry-3
     FMG "Can I pick the snacks?"
     MC "Sure."
@@ -14293,7 +14317,7 @@ label FMG074:
     scene black with fade
     pause .5
 
-    scene Classroom
+    scene ClassroomAlt
     show Hageshi neutral
     with fade #Classroom alt optimal for Hageshi's classroom
     play music Peaceful
@@ -14874,7 +14898,7 @@ label FMG075:
     show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind Hageshi
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) behind Hageshi
     with dissolve
-    FMG "Hageshi-sensei! I'm glad you're here. We just ran out of quarters."
+    FMG "Hageshi-sensei! I'm glad you're here. We just ran out of tokens."
     Hageshi "Alright, let's see here, looks like a new high score of 2,730. Very nice Mitzutani-san."
     Natsuko "That's still not close to 5,000."
     FMG "Beats your 2,550."
@@ -14889,6 +14913,7 @@ label FMG075:
     FMG "Awesome! You're the best Hageshi-sensei!"
     "Akira had moved on to hot chocolate, but Natsuko was having none of it."
     hide FMG with dissolve
+    play music Memories
     Natsuko "What was supposed to be the prize for winning then?"
     Hageshi "Something something it's the friends we make along the way? I don't know— think of something inspirational someone else once told you if it makes you feel better."
     Hageshi "Look, you're both losers for not hitting 5,000, but you get free hot chocolate anyway. Anything can become a competition, Okamoto-san, but few things are worth the gray hairs."
@@ -15706,7 +15731,7 @@ label FMG078:
     show FMG angry
     FMG "Are you kidding me???"
     pause .5
-    MC "No. Do you know how much worm that is? Hard pass."
+    MC "No. Do you know how much work that is? Hard pass."
     FMG "I'm going to send you through the floor."
     MC "That would be very mean and I'd advise against that."
     jump daymenu

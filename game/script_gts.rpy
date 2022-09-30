@@ -25,6 +25,7 @@ label GTS001:
     MC "Yamazaki-san, right? Yeah, I'm okay. That dude just surprised me."
     GTS "It would seem so. How peculiar. I wonder what compelled him to act so brashly?"
     MC "Dunno. He's probably not available for interview."
+    show GTS neutral
     GTS "I suppose he wouldn't."
     GTS "Well now, what are you up to?"
     MC "Nothing much, just checking out what's on campus. How about you?"
@@ -2775,9 +2776,9 @@ label GTS022_nijou:
     jump GTS022_c2
 
 label GTS022_limerick:
-    MC "...who died and ascended to heaven.{w} But he cried, \"This is Hades!{w} There are no naughty ladies,\""
+    MC "...who died and ascended to heaven.{w} But he cried, \"This is Hades!{w} There are no naughty ladies,"
     show GTS surprised
-    extend " and the pubs are all shut by eleven.'"
+    extend " and the pubs are all shut by eleven.\""
     show GTS angry
     $setAffection("GTS", -1)
     GTS "Hotsure-san, need I remind you that we are in public?"
@@ -4250,12 +4251,17 @@ label GTS026:
     HR "...And if there are no other questions, remember there's a quiz on chapter 4 tomorrow."
     HR "And for whoever needs to hear this, any copy that comes back to me with glitter on it is getting a zero. Hope that's clear enough."
     HR "Alright, dismissed."
+    show HR unique
     "I slapped together my things and dumped them into my backpack as gracefully as I could manage, before standing to try and follow Naomi out the door."
     "As I did so, passing the head of the room, I caught Tashi-sensei glancing at me; I stopped."
     MC "..."
+    show HR neutral
     HR "Got a question, Hotsure?"
+    show HR unique
     MC "No, sensei."
+    show HR neutral
     HR "Fantastic. See you tomorrow."
+    show HR unique
     "His expression didn't change at all for the entire exchange. I bowed, and he nodded and returned to his paperwork."
 
     scene Hallway with fade
@@ -6001,7 +6007,7 @@ label GTS032:
     "Class had officially begun, but Tashi-sensei was still at his desk. His eyes were scanning over his lesson plan folder, silently pondering to himself what to cover today."
     BE "Hey, has anyone seen Naomi?"
     "Her voice broke the silence in the room, which then immediately fell silent once more. The air in the classroom froze. The punctuating tick of the clock was the only audible sound for several seconds."
-    show HR neutral at Position(xpos=0.15) with dissolve
+    show HR unique at Position(xpos=0.15) with dissolve
     "Tashi-sensei stood up from his desk at the corner of the room with a firm, confident look in his eyes, as if about to say something. I decided to address the lingering question before he began the lesson."
     MC "I... helped Yamazaki-san move out over the weekend. She's been transferred to the giant dorm."
     show FMG surprised at Position(xpos=0.30)
@@ -6011,34 +6017,45 @@ label GTS032:
     show AE neutral at Position(xpos=0.85)
     with dissolve
     "Mixed expressions of surprise, relief, and intrigue filled the room as I answered Honoka's question. Tashi-sensei seemed to be the only one that didn't visibly react at all."
+    show HR neutral
     HR "Ah, so that's what's happened, then. I'm certain that they'll have an appropriate lesson plan for her."
+    show HR unique
     MC "You don't exactly sound surprised, Tashi-sensei."
+    show HR neutral
     HR "I was informed ahead of time that Yamazaki-san's condition would mean that she wouldn't be staying with us. Since it all depended on her growth rate, no exact date was given."
     hide FMG
     hide WG
     hide PRG
     hide BE
     with dissolve
-
+    show HR unique
     AE "Is there any specific height threshold where the transfer is made?"
+    show HR neutral
     HR "The medical staff make the call as soon as a student begins brushing the ceiling. Even with our custom-built amenities, this campus is only equipped to deal with heights of 350cm and below. Beyond that, it becomes far too inconvenient to move around."
+    show HR unique
     AE "...I see. That's the cutoff point, then."
+    show HR neutral
     HR "More or less. I've seen students come and go many times before, often for that very reason. It's best to transfer them right away, to avoid any potential property damage."
+    show HR unique
     hide AE with dissolve
     show FMG sad with dissolve
     FMG "Does that mean Naomi's never coming back?"
     hide FMG with dissolve
+    show HR neutral
     HR "While there aren't any rules explicitly stating that she CANNOT ever enter the building again, it's extremely ill-advised for her to try."
     HR "Naomi is still free to walk around the outdoor areas of campus however she pleases, as long as she avoids property damage."
+    show HR unique
     show BE happy with dissolve
     BE "Well hey, that doesn't sound bad at all! She could even peek in through the window!"
     hide BE with dissolve
-    show HR neutral with dissolve
+    show HR neutral
     HR "Our class will be livestreamed to her via video call. She won't miss anything, and you'll still be able to talk to her outside of class."
+    show HR unique
     "A heavy sense of relief circulated throughout the rest of the room. I slowly saw the faces of all of my classmates return to their usual, collected selves."
     "It seemed that this wouldn't be as big of an adjustment as we had initially thought. Naomi wasn't even moving very far; she'd still be mere meters away, talking to us in a video call."
-    show HR neutral with dissolve
+    show HR neutral
     HR "If there are no further questions, I'd like to begin today's lesson plan."
+    show HR unique
     "Those who had left their seats returned to them as Tashi-sensei returned to the board. Despite the expanded bodies of my classmates, the room still felt spacious and empty without Naomi. Even so, my classes proceeded as usual."
     "After saying my goodbyes and packing up for the day, I knew where I'd be heading next."
 
@@ -10186,6 +10203,7 @@ label GTS046_c2:
     jump daymenu
 
 label GTS047:
+    $setProgress("GTS", "GTS049") #Change to 48 once it's been written
     scene Field with fade
     play music HigherEdu
     "No matter how many times I made the long walk to the giant dorms, the change in scale never ceased to put me off my footing, even if just a little."
@@ -10257,7 +10275,7 @@ label GTS047:
     GTS_S "I do apologize about its placement."
     MC "What do you mean?"
     GTS_S "Well, this spot has the best light for a persimmon tree. Yet... it hardly seems appropriate to sequester away such a thoughtful gift behind a shack in a pit of dirt."
-    MC "Well, for the time being there's nothing really to be done about the whole ‘dirt pit' part."
+    MC "Well, for the time being there's nothing really to be done about the whole \"dirt pit\" part."
     show GTS_S sad
     GTS_S "Indeed."
     MC "So, let's just be thankful it's found a home where it'll flourish. Okay?"
@@ -10275,7 +10293,7 @@ label GTS047:
     GTS "Although, I have wondered if the administration might hear a petition for further efforts."
     MC "Efforts to do what?"
     show GTS neutral
-    GTS "Well, I have also been contemplating the possibility of introducing some more greenery to these facilities as a whole. I know that I'm hardly the only one who‘s been rather put off by all this desolation."
+    GTS "Well, I have also been contemplating the possibility of introducing some more greenery to these facilities as a whole. I know that I'm hardly the only one who's been rather put off by all this desolation."
     menu:
         "Isn't that kind of futile? We're only going to be here another six months or so, and half of that will be winter.":
             GTS "In a certain light, yes. But our enjoyment here and now is not the point."
@@ -10312,7 +10330,7 @@ label GTS047:
     MC "So, similar to the courtyard on the main campus."
     show GTS neutral
     GTS "Exactly. While we may not get the luxury of a sidewalk, I should think most would prefer to tread on grass over sandy dirt."
-    MC "That'd definitely help with the whole, uh, ‘construction site' chic this place's got going on."
+    MC "That'd definitely help with the whole, uh, \"construction site\" chic this place's got going on."
     show GTS happy
     "Naomi chuckled."
     GTS "One can hope."
@@ -10374,7 +10392,7 @@ label GTS047:
     GTS "Part of me hopes that I never get used to this, while another part is telling me that I must. I'm not certain which I should listen to."
     menu:
         "You won't need to think about it all the time.":
-            MC "I think you shouldn't have to 'get used to it'. Sure, it'll change you, but it's not a part of who you are. You'll still be Yamazaki-san to everyone else... and Naomi-chan to me."
+            MC "I think you shouldn't have to \"get used to it\". Sure, it'll change you, but it's not a part of who you are. You'll still be Yamazaki-san to everyone else... and Naomi-chan to me."
             show GTS pondering
             "Naomi stood still for a few seconds as she slowly appeared more relieved."
             $setAffection("GTS", 2)
@@ -10395,7 +10413,7 @@ label GTS047:
             show GTS neutral
             GTS "No, no. Don't worry about it. You haven't done anything wrong. If anything, I feel like that's what I needed to hear."
             MC "Something you needed to hear?"
-            GTS "Exactly. I tell myself all the time about what I ‘should' do, or what a disciplined person ought to do. Left alone to one's own thoughts, though, we slowly become clouded with doubt."
+            GTS "Exactly. I tell myself all the time about what I \"should\" do, or what a disciplined person ought to do. Left alone to one's own thoughts, though, we slowly become clouded with doubt."
             MC "That's why we rely on the people close to us. To hear more opinions, and gather advice."
             GTS "Right. I need to come to terms with my growth. I'll need to lean on others for support, just as you said."
             MCT "I hope I didn't sound too harsh..."
@@ -10566,7 +10584,6 @@ label GTS049:
             GTS "Apparently our conditions here on this island are little understood, generally speaking."
             MC "Huh. Weird."
             GTS "Quite so."
-            show GTS neutral
     else:
         MC "Huh. Weird."
         GTS "Quite so."
@@ -10577,7 +10594,7 @@ label GTS049:
         MC "So aware I almost had a heart attack."
         show GTS embarrassed
         "She smiled a bit, though it was a rusty and strained smile."
-        show GTS neutral
+    show GTS neutral
     "She cleared her face with a nod and walked off toward the kitchen, while I clambered up the stairs to the couch."
     GTS "Pray tell, what is it that's giving you grief?"
     "I wiggled back into the warm, yielding cushions, unzipping my backpack."
@@ -10655,9 +10672,9 @@ label GTS049:
     "It never got old, basking in her ambient body heat for a moment."
     "Then, rather than let me down, she pressed me against her chest in a hug, turned to the side, and laid us down on the couch. The moment I took in the view of her looking up at me, her sleepy expression like starlight, I forgot all about the storm."
     MC "Heheh, not in the mood for meditation, are you?"
-    show GTS embarrassed
-    pause 0.25
-    show GTS sad
+    show GTS embarrassed with dissolve
+    pause 1
+    show GTS sad with dissolve
     "But rather than the coy reply I'd come to expect, she looked away for a second or two, her features wrinkling; in those wrinkles I saw her heart writhing."
     MC "Naomi-chan? What're you thinking about?"
     pause 0.5
@@ -10738,9 +10755,9 @@ label GTS049_c1_1:
     MC "I know.{w} I had an inkling going into it."
     MC "For you, it's a burden worth bearing."
     $setAffection("GTS", 10)
-    show GTS surprised
-    pause 0.5
-    show GTS happy with vpunch
+    show GTS surprised with dissolve
+    pause 1
+    show GTS happy with dissolve
     "The clouds of austerity broke with illuminating sunlight as she hugged me tight to her shoulder."
     GTS "There's still so much I don't know..."
     GTS "And I was so scared of how much I had to lose, but you..."
@@ -11082,7 +11099,7 @@ label GTS049_c2_1:
     GTS "{size=24}MmmMmmffff... hah!... hah!...{/size}"
     show GTS surprised with vpunch
     GTS "{size=36}Gah!{/size}"
-    if checkSkill("Athletics", ">", "8"):
+    if checkSkill("Athletics", ">", 8):
         "I got a split second's warning as her massive hips began to buck in the climactic throes of pleasure."
         "I withdrew my arm and hugged her thigh like a boa snake; for that handful of seconds, the room became a blur, my ponytail whipped one way and then the next twice per second, and I knew in my soul that I was at the mercy of the gods."
         "My head rattled once more as she came to a stop."
@@ -11175,7 +11192,7 @@ label GTS049_c2_2:
     "They were so... inviting. Huge, warm, sloshing, swaying, in a word, heavenly. My hands slid down to meet her palm-sized nipples. It was strange and wonderful, {i}feeling{/i} them harden and grow millimeter by millimeter as I waved them to and fro."
     "And so, after a moment more, I did the only sensible thing."
     scene black with fade
-    extend " I got in touch with my inner ostrich, knelt down and buried my head between them, down to my shoulders and then some."
+    "I got in touch with my inner ostrich, knelt down and buried my head between them, down to my shoulders and then some."
     MC "Mmmm... Ohmmngggodddd..."
     "I arched my back, sinking in deeper."
     "I felt the vibrations before I heard her voice."

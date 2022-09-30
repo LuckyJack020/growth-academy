@@ -2650,6 +2650,7 @@ label PRG012:
     with fade
     stop music
     HR "Hotsure-san. Good to see you."
+    show HR unique
     "All eyes went to me while I found my seat."
     hide HR neutral with dissolve
     show FMG neutral with dissolve
@@ -2664,14 +2665,21 @@ label PRG012:
     "Class went by as normal. I probably could have skipped the entire thing and felt perfectly comfortable the next day. It's not like I was learning rocket science or anything."
     show HR neutral with dissolve
     HR "Hotsure-san. May I speak with you, please?"
+    show HR unique
     "Class had just ended, and I was just about to head out, but I curved my path back to Tashi-sensei's desk."
     MC "Yes, Sensei?"
+    show HR neutral
     HR "I'm sure you already know what I'm going to say, right?"
+    show HR unique
     MC "Most likely, yes."
+    show HR neutral
     HR "Right, well. I'm sure you've heard all of the standard affairs before. All I'll say is, do your best to be here on time, alright? I don't ask for much in class, so the least you can do is show up on time for it."
     HR "You follow?"
+    show HR unique
     MC "Completely, Sensei. And, I'm sorry for my tardiness."
+    show HR neutral
     HR "I accept your apology, Hotsure-san. Just, don't let it happen again."
+    show HR unique
     MC "Yes, Sensei."
     hide HR with dissolve
     "I bowed to him deeply, and went to leave the room. It was around lunchtime, but I didn't feel overly hungry. Maybe I could catch a few minutes of shut-eye at my dorm before the next class."
@@ -3634,20 +3642,27 @@ label PRG015:
     MCT "Literally, what else could-"
     show HR neutral with dissolve
     HR "Hotsure-san!"
+    show HR unique
     MC "Hm?! Ah, yeah?"
+    show HR neutral
     HR "Could you enlighten us as to what the ceiling was painted with? As in, what medium?"
+    show HR unique
     if checkSkill("Art", ">", 2):
         MC "Ah..."
         MCT "Come on. You know this. Think."
         MC "It was... ah... paint on plaster."
         "Tashi-sensei's eyes went a degree wider, which was quite a bit in his case."
+        show HR neutral
         HR "Y...Yes, that's correct."
         MCT "Mental high fives all around."
         "I sat back in my chair and basked in my pride for a moment. It was exciting to know things, and it briefly got my head off of my abysmal morning."
     else:
         MC "Ah... the medium?"
+        show HR neutral
         HR "Such as oil paints, pencil, crayons, anything you would use to create something."
+        show HR unique
         MC "Oil? I think?"
+        show HR neutral
         HR "No."
         HR "The ceiling was painted with paint on plaster. Now, since plaster..."
         MCT "Blah blah, I get it. Geez."
@@ -6965,18 +6980,23 @@ label PRG021:
     "And when I got back to my-"
     show HR neutral with dissolve
     HR "Hotsure-san!"
+    show HR unique
     MC "Ehh?!"
     "Tashi-sensei stared at me, his icy gaze seemingly piercing into my soul itself."
+    show HR neutral
     HR "If you have time to day dream, you have time to listen, so eyes front!"
+    show HR unique
     MC "Y-Yes Sensei!"
     play music Schoolday
     "I focused on Tashi-sensei's lecture, though only on the outside."
     pause .5
     "My thoughts stayed right where they were."
+    show HR neutral
     HR "And at that point, the-"
     "The dismissal bell rang out overhead and drowned out Tashi-sensei."
     "I got up and started packing my books."
     HR "Okay, before you all go, remember the assignment for tomorrow! I expect solid work from each of you!"
+    show HR unique
     "Half the class didn't seem to pay attention as they were leaving."
     "I took a look around for Aida, but in the sea of students leaving the room, I lost the shorter, mousey girl."
     scene black with fade
@@ -7730,7 +7750,9 @@ label PRG023:
     "Finally, as he ran out of free board to write on, he set down the chalk and turned to us."
     show HR neutral with dissolve
     HR "Alright, everyone clear on all that?"
+    show HR unique
     "No one replied, but he glanced around regardless."
+    show HR neutral
     HR "Wonderful."
     pause .25
     HR "Now, I'll be assigning you all a research paper today. It is to be no less than 15 pages in length. However, you may work with a partner if you so choose."
@@ -10292,10 +10314,13 @@ label PRG028:
     HR "Inoue-san?"
     show BE surprised
     show PRG neutral at Transform(xzoom=-1)
+    show HR unique
     BE "Ah... yes, Sensei?"
+    show HR neutral
     HR "I understand that jokes are a popular component of a conversation, and I'm sure Kodama-san is enjoying your well thought out routine, but could you keep them to yourself until after class?"
     show BE sad
     show PRG worried
+    show HR unique
     pause .25
     BE "S...Sorry, Sensei."
     stop music
@@ -18483,6 +18508,7 @@ label PRG037:
     MC "Yeah. Thanks."
     hide RM with dissolve
     stop music fadeout 1.0
+    show PRG worried at altMove(0.5, 0.75)
     "Daichi nodded and headed out the door."
     pause .5
     if isEventCleared("MC003"):
@@ -20060,7 +20086,7 @@ label PRG039:
     show Takamura happy
     Takamura "Ah, that's a dangerous game, Hotsure-san."
     Takamura "The more empty your stomach, the faster that cart will fill."
-    MC "Hah, if only you knew, Sensei,"
+    MC "Hah, if only you knew, Sensei."
     show Takamura neutral
     Takamura "I do, Hotsure-san. I handle much of the shopping for the cooking club, and I've impulse purchased my fair share of candy bars and sweets during those trips."
     MC "..."
@@ -20085,7 +20111,7 @@ label PRG039:
     MC "Well, I guess I would say... it's a mixed situation."
     MC "I'm overjoyed to be in a relationship with her, and I'm sure she feels similar. But, I feel like sometimes she still feels a little-"
     Takamura "Pardon me, Hotsure-san. I don't mean to interrupt."
-    Takamura "However, I asked about you. Not Kodama-san. How are {i}YOU{/i}feeling about it all?"
+    Takamura "However, I asked about you. Not Kodama-san. How are {i}YOU{/i} feeling about it all?"
     MC "I..."
     MC "I feel... both happy and nervous."
     MC "Like I said, I love being in a relationship with her, and I think she's an incredible girl. However, the idea of me being a father... it's still a little crazy to wrap my head around."
@@ -20247,7 +20273,7 @@ label PRG040:
     "I set it down and looked at my desk, which was littered with... well, nothing at the moment."
     "The break had left me with hardly any actual work to do at my desk, so now it had sort of become my go-to dining spot."
     "I rubbed my eyes and took another bite of my toast."
-    "The ‘meal' did completely fit the mold of a poor man's breakfast."
+    "The \"meal\" did completely fit the mold of a poor man's breakfast."
     "... Though it was close to sunset."
     pause .25
     "For most of the day, I'd taken the time to clean up my dorm a bit."
@@ -20270,12 +20296,12 @@ label PRG040:
     MCT "Got it! A movie!"
     "Right away, my mind went to Aida. I knew that based on her schedule, she was likely more of a morning dove than a night owl, but I knew that no sane person could turn down a late night movie."
     "Especially her."
-    "Of course, the last time I'd seen her, we'd watched a movie as well, but this had more of an ‘official' feel."
+    "Of course, the last time I'd seen her, we'd watched a movie as well, but this had more of an \"official\" feel."
     "I took a few more bites of my late day brekkie and popped open my laptop, searching for the Seichou town theater."
     MCT "Okay..."
     MCT "Hm... the new Triassic Land movie is out. Wonder how Aida feels about action thrillers."
-    MCT "There's... oh geez... don't know if I'd make it through ‘The Lucidity of Lumis Ave.' Based on the reviews, anyhow."
-    MCT "And there's... {w}what the hell is ‘The Balloon?'"
+    MCT "There's... oh geez... don't know if I'd make it through \"The Lucidity of Lumis Ave.\" Based on the reviews, anyhow."
+    MCT "And there's... {w}what the hell is \"The Balloon?\""
     MCT "I swear, modern movies just don't hit the same as the old ones."
     "I glanced at the times."
     MCT "Hm. They all have showings tonight around nine-thirty."
@@ -20351,7 +20377,7 @@ label PRG040:
     PRG "I would always stop at the corner store every Friday after school and pick some movies out from the discount bin. I wouldn't do any research on them, or even read the back of the case. I would just pick three."
     show PRG neutral
     PRG "Then, I'd do my homework when I got home, and make dinner for myself, and for my grandparents if they needed."
-    PRG "Once I had the dishes done, I'd go into my room and shut the door. Then, I'd start to... ‘set the ambience,' a-as my grandma used to call it."
+    PRG "Once I had the dishes done, I'd go into my room and shut the door. Then, I'd start to... \"set the ambience,\" a-as my grandma used to call it."
     PRG "I'd shut the blinds and pull my curtains shut over them. I shut off the lights and would only turn on my dim lamp on my nightstand to add some presence."
     PRG "But, before I'd lay down, I..."
     pause .25
@@ -20374,7 +20400,7 @@ label PRG040:
     show PRG worried
     PRG "Like... um..."
     pause .5
-    PRG "H-Have you ever seen ‘Haley is Home?'"
+    PRG "H-Have you ever seen \"Haley is Home?\""
     MC "Um... hm... {w}don't think so. Is it good?"
     PRG "Yes... really good."
     PRG "It's an American movie about a girl who ran away from her family when she was around 19, and she returns a few months later."
@@ -20470,9 +20496,9 @@ label PRG040:
     PRG "W-What would you like to see?"
     MC "I'm really down for whatever. Which one looks best to you?"
     PRG "Well... Triassic Land VII sounds good. I really liked the other ones."
-    PRG "I... I've never heard of ‘The Lucidity of Lumis Ave,' but it looks like a horror movie."
+    PRG "I... I've never heard of \"The Lucidity of Lumis Ave,\" but it looks like a horror movie."
     show PRG worried
-    PRG "And I... I've never heard of ‘The Balloon' before."
+    PRG "And I... I've never heard of \"The Balloon\" before."
     MC "Hm..."
     show PRG neutral
     PRG "You pick."
@@ -20847,7 +20873,7 @@ label PRG040:
                     "I wiped my left hand off on my pant leg once or twice to make sure I didn't have salt on it or anything, and I reached over to her hand on the armrest, moving slowly so as not to startle her."
                     "In a moment of true gentlemanly action, my hand caught the bag of popcorn instead and tilted it sideways, sending it and quite a bit of the popcorn right into Aida's ever shrinking lap."
                     show PRG scared
-                    PRG "Ayh!"
+                    PRG "{size=+6}Ayh!{/size}"
                     "Aida jumped in her seat, sending some of the popcorn to the ground."
                     "Her gaze flew to her hand, then shot to me."
                     MC "{i}I-I'm sorry!{/i}"
@@ -20883,7 +20909,7 @@ label PRG040:
             "An ear splitting scream blew into the theater as the woman looked down, seeing her face in the misty reflection, her reflected skin ashy white, and her eyes pure alabaster, her jaw yanked open at an unnatural angle."
             "Her reflection's head turned around a full 180 degrees, and the woman trembled as her own head began to mirror it."
             "She tried to feel her face, but couldn't as she felt her own jaw break, the sound of bones crushing and splintering echoing around us."
-            show PRG worried at altMove(0.4, 0.7)
+            show PRG worried at altMove(0.4, 0.6)
             "I made sure not to react. I knew Aida was scooting closer to me, but I also didn't want to let on that I was also completely freaked."
             scene black with fade
             pause .5
@@ -20964,7 +20990,7 @@ label PRG040:
             "The bus soon pulled up, and we got on quick as we could."
 
         "The Balloon":
-            MC "Uhh... how about ‘The Balloon?'"
+            MC "Uhh... how about \"The Balloon?\""
             show PRG worried
             PRG "I... okay. I am a little curious about it."
             MC "You and me both."
@@ -21099,7 +21125,7 @@ label PRG040:
             PRG "Sometimes, purposely watching a bad movie can be fun."
             PRG "Then after, you can laugh at how ridiculous it was."
             MC "Huh. That's actually a really good point."
-            "The screen flashed red as the balloon appeared over an ocean and floated uninterrupted for a few minutes over an ocean."
+            "The screen flashed red as the balloon appeared over an ocean and floated uninterrupted for a few minutes."
             "It showed a cruise ship, and cut to a younger child standing on the boat deck, reaching up to the sky toward the balloon floating hundreds of miles out at sea, not for a moment realizing that the balloon itself was a murderous balloon."
             "I scoffed a bit as Aida laughed quietly beside me."
             "On-screen, the ship began to lean off to one side and capsized for no apparent reason as the balloon kept floating on, accompanied by a clear water drop sound effect as the ship slipped under."
@@ -21232,7 +21258,7 @@ label PRG040:
     scene black with fade
     pause 1
     $setTime(TimeEnum.NIGHT)
-    scene Campus Center
+    scene Dorm Exterior
     show PRG neutral
     with fade
     "The campus was eerily silent as we headed deeper in. The lights gave off that sort of hissing buzz sound overhead, and the sound of crickets echoed around us."
@@ -23142,6 +23168,7 @@ label PRG047:
     "Tashi-sensei walked in and laid his bag onto his desk."
     show HR neutral with dissolve
     HR "Okay, class. We've got a lot of material to cover today for this exam, so pay close attention."
+    show HR unique
     "I silently grabbed my bag and took out a notebook and pencil. I had no desire to be here, especially if note taking was involved. More than anything, I'd have rather been laying in bed."
 
     scene black with fade
@@ -29836,62 +29863,93 @@ label PRG063:
     "So, in order to save our grades, the two of us had done homework last night until late into the early morning hours, talking over speakerphone to avoid getting curfewed."
     "Unsurprisingly, I felt like death."
     scene Classroom
-    show HR neutral
+    show HR unique
     with fade
     "When I walked in, I was surprised to see Tashi-sensei already present, and jotting down notes at his desk."
+    show HR neutral
     HR "Hotsure-san, may I see you for a moment?"
+    show HR unique
     MC "Uh... yes, Sensei."
     "I laid my bag on top of my desk and walked over to his. Tashi-sensei finished writing something, then tucked his notebook away."
+    show HR neutral
     HR "Okay. I'm going to be as straightforward about this as possible. This is regarding Kodama-san's recent developments."
+    show HR unique
     MC "Ah, okay."
+    show HR neutral
     HR "I was informed yesterday of the results of her latest ultrasound. Quite a shock, hm?"
+    show HR unique
     if getFlag("PRG061_okay"):
         MC "For both myself and her, yes. Though, we both are ready to prepare ourselves all we can. We both realize what this means, and neither of us intends to give any less than our best."
+        show HR neutral
         HR "Good to hear that. Very good."
     else:
         MC "Yeah. I'm still a little rattled by the results, to be blunt. But, I know that I made a commitment, and I need to see it through."
+        show HR neutral
         HR "Good."
     HR "Anyway. I also noticed that Kodama-san was forced to sit near the back of the room because of her growth."
+    show HR unique
     MC "Yes?"
+    show HR neutral
     if getFlag("PRG060_sit"):
         HR "And, why did you join her back there?"
+        show HR unique
         "I knew that this would inevitably be a problem."
         MC "I felt horrible having her sitting all by herself in the back. I didn't move there to just chat with her all of class. I did it because I didn't want her feeling like an outcast."
+        show HR neutral
         HR "Hotsure-san, I do see your point, believe me. Kodama-san's factor is distinct when compared to the others. And, I can tell how hard she's trying to hold herself together, just from her personality alone."
         HR "However, having said that, it would be best for her and you to rejoin us at the front of the room."
+        show HR unique
         MC "I understand, Sensei, but how? She physically can't reach her desk without moving it beside her."
     else:
         HR "And, while I do see that this was a solution to her immediate problem, I think we need a more concrete solution."
+        show HR unique
         MC "I agree, Sensei, but what can be done?"
     "In response, Tashi-sensei nodded at Aida's old spot near where Alice usually sat. In the place of her old desk was a new, uniquely shaped desk."
     "The desk itself was physically attached to the chair, with two long wooden surfaces that jutted out and around it. It looked like they had taken a regular desk and sawed the top in half, mounting the two halves on either side."
     "In the middle, where the main writing surface usually was, was an enormous open space, with a metal bar holding the two pieces of wood together. The metal bar snaked back to the connection point on the chair, keeping the entire rig together."
+    show HR neutral
     HR "This was brought here this morning. A lot of students can get by with standard accommodations, or at the very least, a larger chair or something."
     HR "In more extreme cases, however, custom desks and furniture can be made."
+    show HR unique
     "Tashi-sensei got up from his chair and walked over to it, motioning me over."
     "He took hold of the two connected wooden pieces and lifted them. The writing surfaces rotated on the axis, allowing them to rotate up to a 90 degree angle."
+    show HR neutral
     HR "Using this, Kodama-san should be able to sit and write on either side comfortably, while also having enough space."
+    show HR unique
     "Tashi-sensei reached under the desk with one hand. I heard a gentle click as he took hold of the writing surface and pulled it out. The entire thing slid forward away from the seat, expanding the space in between."
     "He then reached his hand under the writing surface and undid something. The wooden pieces slid back to where they were."
+    show HR neutral
     HR "There. As you can see, it's fully adjustable based on however much space is required."
+    show HR unique
     "In addition to the unique desk shape and the sheer customizability, the entire thing was also wider than most other desks. The attention to detail and care put into the desk was astounding."
     MC "Wow. Yeah, I think this'll work out really well for her. But, why exactly are you telling me this, Sensei?"
+    show HR neutral
     if checkAffection("PRG", ">", 38):
         HR "Simple. You two are very close, yes?"
+        show HR unique
         MC "Yeah? We're dating and having kids together."
+        show HR neutral
         HR "Exactly. And, with this sort of a thing, many students have a hard time when they realize that they need special accommodations just to learn. To help alleviate this, it's best to have a trusted friend or someone close to help them come to terms with it."
+        show HR unique
         "That definitely made sense. Especially considering how Aida's growth could make her feel sometimes."
         MC "I see. Thank you, Sensei."
+        show HR neutral
         HR "Of course. You saw how it works, right? Would you be so kind as to help her get situated when she arrives?"
+        show HR unique
         MC "No problem."
         "Tashi-sensei nodded at me, then returned to his desk and retrieved his notes."
     else:
         HR "I've seen you spend quite a bit of time together. You two are fairly close, right?"
+        show HR unique
         MC "I'd say so, yes."
+        show HR neutral
         HR "Good. With this sort of a thing, many students have a hard time when they realize that they need special accommodations just to learn. To help alleviate this, it's best to have a trusted friend or someone close to help them come to terms with it."
+        show HR unique
         MC "So, I'm here to help her realize it's okay, basically?"
+        show HR neutral
         HR "Well, yes. If you want to be that black and white about it."
         HR "So, do me a favor and show her how it works when she shows up, okay?"
+        show HR unique
         MC "Can do."
         "Tashi-sensei nodded and returned to his desk."
     hide HR with dissolve
@@ -31239,13 +31297,17 @@ label PRG027Z:
     show FMG neutral with dissolve
     "Akira walked in at a casual pace, getting a wicked glare from Shiori as she passed by to her seat."
     hide FMG with dissolve
-    show HR neutral with dissolve
+    show HR unique with dissolve
     "Tashi-sensei walked in just as the bell rang, setting down his bag on his chair."
+    show HR neutral
     HR "Okay, so first off, I have to let you guys know that I don't have much to go over today, so we'll probably have a shorter class than usual. I'm sure none of you will be disappointed."
     scene black with fade
     pause 1
-    scene Classroom with fade
+    scene Classroom
+    show HR unique
+    with fade
     "Half an hour later, Tashi-sensei looked out to all of us."
+    show HR neutral
     HR "All right. That's all I've got. I'll see you all tomorrow."
     hide HR with dissolve
     "Tashi-sensei popped open his back and packed up, and was out the door in no time."
@@ -31321,17 +31383,24 @@ label PRG028Z:
     scene Classroom with fade
     "Doing a sort of jog-walk, I slid through the doorway of the classroom just as the bell rang. I hadn't realised that my train of thought had made me run so close to the wire."
     "Ignoring a dirty look from Shiori, I walked past her and into my seat."
-    show HR neutral with dissolve
+    show HR unique with dissolve
     "Tashi-sensei walked in a minute or so after me, setting his bag down on his desk."
+    show HR neutral
     HR "I trust you all enjoyed the extra time off from our last class?"
+    show HR unique
     "There were a handful of nods from the seated students."
+    show HR neutral
     HR "Good. We've got a lot of material to go over today, including a research paper that I'm going to be assigning."
     HR "Now, the paper can be on any topic of your choosing. The only requirements for it are that you have at least 15 pages of solid writing, and that you list your sources for your research."
     HR "The paper will be due ten days from now. And, you may work with a partner, if you would like."
+    show HR unique
     "I scanned my eyes across the room, looking for Honoka."
     "I hadn't noticed it before, but Honoka was nowhere to be seen. I could always ask her to be my partner later."
+    show HR neutral
     HR "That all make sense?"
+    show HR unique
     "No one responded."
+    show HR neutral
     HR "All right. I'll take that for an answer."
     hide HR with dissolve
     "Tashi-sensei turned around and started jotting down an outline for the day in the corner of the board."

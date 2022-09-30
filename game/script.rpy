@@ -39,6 +39,7 @@ init python:
         #name of place: (map used, x/y pixel position)
         'arcade': ("town", (1100,650)),
         'auditorium': ("school", (470,560)),
+        'businterior': ("town", (1100,650)),
         'cafeteria': ("school", (655,570)),
         'campuscenter': ("school", (570,390)),
         'classroom': ("school", (750,280)),
@@ -74,6 +75,7 @@ init python:
         'summer-guestbedroom': ("town", (570,620)),
         'supermarket': ("town", (1100,650)),
         'town': ("town", (1100,650)),
+        'tokyo': ("town", (1100,650)),
         'track': ("school", (570,165)),
         'unknown': ("school", (550, 550)),
         'woods': ("school", (460,120))
@@ -894,17 +896,19 @@ init python:
             if getVar('BETomboy') >= getVar('BEFeminine') + 1: #temporarily 1, to show outfit changes at all
                 setVar('BEMode', 'Tomboy')
 
-    def updateSP(event):
+    def updateSP():
+        global eCounter
         global spmax
         global spspent
-        if not "spmax" in globals():
+        if not "eCounter" in globals():
             spmax = 0
             spspent = 0
-        if not "sp" in eventlibrary[event]:
-            return
-        if eventlibrary[event]["sp"] <= spmax:
-            return
-        spmax = eventlibrary[event]["sp"]
+            eCounter = 0
+        if eCounter >= 4:
+            spmax += 1
+            eCounter = 0
+        else:
+            eCounter += 1
 
     class MapLine(renpy.Displayable):
         def __init__(self, **kwargs):
@@ -955,12 +959,13 @@ label start:
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
+        OkishoOutfit = OutfitEnum.DEFAULT
         SakuraOutfit = OutfitEnum.DEFAULT
-        KanamiOutfit = OutfitEnum.DEFAULT
         RyokoOutfit = OutfitEnum.DEFAULT
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
+        KanamiOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []
@@ -974,6 +979,7 @@ label start:
         hightlitmenuchoice = -1
         routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'WG': True, 'PRG': True}
         routelock = ""
+        eCounter = 0
         spmax = 0
         spspent = 0
 
@@ -1344,8 +1350,9 @@ label startevent:
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
+        KanamiOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
-        updateSP(activeevent)
+        updateSP()
         showQuickMenu = True
         renpy.block_rollback()
         save_name = eventlibrary[activeevent]["name"]

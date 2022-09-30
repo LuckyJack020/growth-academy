@@ -2495,7 +2495,7 @@ label BE019_c1_after:
     BE "But then we got to see Alien Festival the day it came out! There was nobody in the theater except for us."
     MC "Yeah. I think my mom didn't realize how much, uh, blood was going to be in the movie."
     show BE angry
-    BE "The movie was called \"Alien Festival\". What did she think they were going to come down and put up food carts and rides?"
+    BE "The movie was called \"Alien Festival\". What did she think they were going to do? Come down and put up food carts and rides?"
     MC "I can't answer that honestly."
     "Honoka laughed and I smiled back at her."
     MC "So, what brought this up, anyway? I mean it was fun, but it was such a long time ago."
@@ -2619,7 +2619,7 @@ label BE020_c1_1:
     MC "Sure. Should I, like, dress up or something?"
     "Honoka looked at the gift card."
     show BE shrug
-    BE "Hmm... I really don't know. This doesn't say there's a dress code or anything like that. So I guess the answer to that is 'It's optional'?"
+    BE "Hmm... I really don't know. This doesn't say there's a dress code or anything like that. So I guess the answer to that is \"It's optional\"?"
     MC "Okay. Well, why don't we just dress up then? Sounds like a nice change of pace, right?"
     show BE happy
     BE "Agreed! Alright, I'm going to go change. Let's meet back up at the bus stop. See you in a bit, Kei-chan!"
@@ -2712,7 +2712,7 @@ label BE020_c1_after:
     BE "Nope. Just got here a minute ago. Just waiting on you and the bus."
     MC "Good. Did you happen to find out what kind of restaurant it is?"
     show BE happy
-    BE "Yeah, actually. It's a sushi place. The gift card was worth 5,000 yen!"
+    BE "Yeah, actually. It's a sushi place. The gift card was worth 15,000 yen!"
     MC "Wow, that's really nice of her to do."
     BE "So I figure we can get some drinks, and then a few rolls. Maybe an order of edamame to go with it?"
     MC "Great! I haven't been to a nice sushi restaurant in a while. Shouldn't take too long to make it either."
@@ -2798,7 +2798,7 @@ label BE020_c1_after:
     BE "I don't care, Kei-chan. If it's what I need to do, I'll do it."
     MC "..."
     show BE worried
-    BE "I haven't stopped growing yet. So I might as well try it now, before I get big enough that archery becomes impossible, not just difficult."
+    BE "I haven't stopped growing yet. So I might as well try it now, before I get big enough that archery becomes {i}impossible{/i}, not just difficult."
     MC "You're right. Sorry, I didn't mean to try talk you out of it or anything."
     "Honoka sighed, and slumped back in her seat, a tiny thud on the table as her chest smacked into it."
     show BE sad
@@ -2896,7 +2896,11 @@ label BE020_c2_1:
     "The waitress took Honoka's gift card and my note, and closed the register after the bill was paid."
     Waitress "Thank you for dining with us! We hope to see you again."
     MC "We'll definitely be back. This place is too good to only eat at once."
-    "Honoka nodded, and we turned to leave, so we could head back to our bus stop. As we left the building, Honoka wrapped her arm in mine."
+    "Honoka nodded, and we turned to leave, so we could head back to our bus stop."
+    scene Town
+    show BE happy
+    with fade
+    "As we left the building, Honoka wrapped her arm in mine."
     BE "Thanks for covering the rest, Kei-chan. That was really nice of you."
     MC "Oh. It's no trouble. You paid most of it."
     show BE happy at center, Transform(xzoom=-1)
@@ -2926,6 +2930,9 @@ label BE020_c2_2:
     show BE happy
     BE "It was super tasty. I'd love to come back some time. Thank you!"
     MC "Yes, thanks very much."
+    scene Town
+    show BE happy
+    with fade
     "Honoka smiled as we walked out of the restaurant. She stretched her arms up in the sky and smiled as she cracked her back."
     show BE aroused
     BE "Ahh... That was a good meal."
@@ -2952,7 +2959,7 @@ label BE020_c2_2:
     "Honoka smirked coyly and wagged her finger."
     show BE disoriented
     BE "I bet you were thinking I'd do something naughty, didn't you, Kei-chan?"
-    MC "Er, um... maybe not 'thinking', but um..."
+    MC "Er, um... maybe not \"thinking\", but um..."
     BE "That's why I've gotta pace out the affection, Kei-chan! You're already enough of a perv. Gotta make sure you don't get too outta control or you'll end up like some lame harem protagonist."
     MC "Heh, okay. "
     "I rubbed the bridge of my nose. It was somewhat damp. I didn't see any lipstick on her, but had she put on some lip balm or something?"
@@ -4149,7 +4156,7 @@ label BE024_c2_2:
     show BE disoriented
     BE "{i}Oops.{/i} I spilled more. Can you help me out again, Kei-chan?"
     MC "Bwuh."
-    "The scoop was slowly drifting south. There were already rivulets of chocolate moving down the pale curves of her breasts, ready to stain her blouse at any moment."
+    "The scoop was slowly drifting south. There were already rivulets of chocolate moving down the pale curves of her breasts, ready to stain her t-shirt at any moment."
     MC "Muh."
     show BE unique
     BE "{i}Get in there.{/i}"
@@ -4505,6 +4512,7 @@ label BE025_c2_after:
 label BE026:
     #Setting: Field or Flowery Area
     $setProgress("BE", "BE027")
+    $setBEOutfit(OutfitEnum.CASUAL)
     scene Field
     show BE happy
     with fade
@@ -4818,8 +4826,8 @@ label BE027:
     "Usually, birds singing would be a sign of something good happening. But I didn't have anything planned, so I chalked it up to a coincidence."
     "Honoka's chest collided with my back, like two silk balloon missiles. That certainly could be considered something good happening to me, but it was such a regular occurrence by this point that it didn't feel \"exceptional\"."
     show BE happy with dissolve
-    BE "Heyyyy, Kei-chan. Wanna come clothes-shopping with me? I wanted to grab a new outfit since it was getting hotter out. I could use a second opinion!"
-    "Helping Honoka pick out a new outfit? Well, that could definitely be considered a nice turn of events."
+    BE "Heyyyy, Kei-chan. Wanna come clothes-shopping with me? I wanted to grab a new t-shirt since it was getting hotter out. I could use a second opinion!"
+    "Helping Honoka pick out a new t-shirt? Well, that could definitely be considered a nice turn of events."
     MC "Sure, I could help you out. I don't think I'd consider myself much of a fashion expert. But I can at least help make sure you pick out something that's not tacky."
     BE "That's all I need. Let's go now, I found this neat-looking store on the Internet that had a good variety of stuff."
     "I checked my pockets, making sure I had my wallet and ID on me. Seeing no reason I couldn't leave right then and there, I followed Honoka to the bus stop so we could travel into town."
@@ -8800,6 +8808,7 @@ label BE045:
     MCT "She's planning on crashing the swim club practice today after all. Here I thought she'd wait a longer before goin-"
     show HR neutral with dissolve
     HR "Hotsure. Repeat what I just said."
+    show HR unique
     MCT "Shit. Spaced out too long."
     MC "Of course, Sensei. You said-"
     play sound ClockTower
@@ -9405,7 +9414,7 @@ label BE047A:
     BE "Oh... you shouldn't have done that so late at night. Those types of games require doing homework before you even start swinging your axe."
     MC "You're telling me. Who even chooses to start their playthrough without any armor or weapons?"
     show BE shrug
-    BE "Hardcore fans of the series. Or Masochists.{w}Now that I think about it, there's a lot of overlap between the two of those types of people."
+    BE "Hardcore fans of the series. Or Masochists.{w} Now that I think about it, there's a lot of overlap between the two of those types of people."
     MCT "She's not wrong."
     MC "But yeah... didn't get as much sleep as I wanted to last night."
     show BE happy
@@ -9440,15 +9449,20 @@ label BE047A:
 
     stop music
     "Three losing rounds of Shiritori later, the bus finally stopped at our destination. But Honoka still wouldn't let me take in our surroundings."
+    show side BECell at Position(xcenter=0.1) onlayer overlay
     BE "Okay Kei-chan, we're here! Keep your eyes shut and take my hand. I'll lead you to where we have to go!"
     MCT "Heh, joke's on her, I've gotten pretty good at seeing through my hair so-"
+    show side BECell at Position(xcenter=0.1) onlayer overlay
     BE "And no peeking! Don't think I can't see where you're looking just because of that mop you have growing out of your head!"
     MC "...Damnit, fine. But I'm gonna be so mad at you if this is a prank."
+    show side BECell at Position(xcenter=0.1) onlayer overlay
     BE "Aww, Kei-chan. When have I ever lead you astray?~"
     MC "Don't tempt me to give you a list."
+    show side BECell at Position(xcenter=0.1) onlayer overlay
     BE "Nyehe!"
     "Closing my eyes, I let Honoka's soft, warm hand hold onto mine as she led me to wherever it was she wished for us to go."
     "My feet plopped against the wet ground as we walked ahead, and yet still I'd not known even the slightest bit of where we were, keeping true to my word until, finally..."
+    show side BECell at Position(xcenter=0.1) onlayer overlay
     BE "Okay! Open up, buttercup!"
     scene Waterpark
     show BE happy
@@ -9644,7 +9658,7 @@ label BE047A:
     BE "Give me food."
     MC "I think-"
     BE "Food me. Food now-"
-    MC "We can mabe start-"
+    MC "We can maybe start-"
     BE "Me a food needing a lot now-"
     MC "-please shut up-"
     BE "Pfff."
@@ -9732,7 +9746,7 @@ label BE047A:
     show Kanami happy
     Kanami "\"Honoka-chan and Keisuke-san\" it is then."
     BE "Hehe!"
-    Kanami "As I was saying, if I may be direct Honoka-chan...we've been roughly around the same size since we've met, but lately you've been outpacing me quite rapidly as of late."
+    Kanami "As I was saying, if I may be direct Honoka-chan...we've been roughly around the same size since we've met, but lately you've been outpacing me quite rapidly."
     pause .25
     show BE sad
     pause .5
@@ -9753,6 +9767,7 @@ label BE047A:
     BE "Exactly!"
     show BE embarrassed
     BE "And like, when your nips get {i}really{/i} sensitive from being up against your tight bra all day so you wanna rub them but like, you straight up just can't even reach!"
+    pause 0.75
     MCT "...wait, what?"
     Kanami "..."
     MC "..."
@@ -9760,7 +9775,7 @@ label BE047A:
     show BE sad
     BE "... Yeeeaaahhh, TMI. Sorry."
     Kanami "Actually...it's not that. But..."
-    pause .25
+    pause .5
     Kanami "I can still reach mine..."
     show BE worried
     pause .5
@@ -9784,10 +9799,15 @@ label BE047A:
     show BE happy
     BE "Swim!" (multiple=2)
     Kanami "-Rest for 30 minutes!" (multiple=2)
+    pause 0.5
     MC "Kanami-san...you know that the whole \"wait 30 minutes after eating to swim\" thing is a myth, right?"
     Kanami "Is it?"
     BE "The big sister in you really came out in full force, didn't it?"
     Kanami "Ach! H-Hey! I thought it was a real thing!"
+    jump daymenu
+
+label BE047B:
+    "This scene is not yet implemented."
     jump daymenu
 
 label BE048:
@@ -10074,7 +10094,7 @@ label BEGTS002:
     #night sky
     scene black with fade
     #BGM: To be decided
-    "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just passed the entrance to the GTS dorm, so the walk only took us a few minutes."
+    "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just past the entrance to the GTS dorm, so the walk only took us a few minutes."
     if not isEventCleared("GTS020"):
         "Naomi struggled to find the correct pace to her strides. Due to her immense height, she needed to stop in her tracks every time she outpaced us."
         "She swayed idly on her heels as she waited for Honoka and I to catch up. It looked like she clearly didn't intend to walk so fast. Her strides just naturally took her further."

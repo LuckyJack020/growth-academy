@@ -18,9 +18,9 @@ label global000:
     show black
     if debugenabled:
         menu:
-            "(DEBUG) Skip intro":
+            "(DEBUG) Skip Prologue":
                 jump daymenu
-            "View intro":
+            "View Prologue":
                 $save_name = "Prologue"
                 pass
 
@@ -843,6 +843,8 @@ label global000_part2:
     Tomoko "Yeah. Later."
     hide Tomoko with dissolve
     "My sister walked off and took a spot in the back row off to one side."
+
+label global000_sitmenu:
     MCT "Now... where should I sit...?"
     menu:
         "I should sit in the front where I can see.":
@@ -871,6 +873,9 @@ label global000_sit_c1:
             jump global000_sit_c1_1
         "Hi there, Nikumaru-san...":
             jump global000_sit_c1_2
+        "Maybe I should sit elsewhere?":
+            "I decided to look around just in case there were any other available spots left elsewhere."
+            jump global000_sitmenu
 
 label global000_sit_c2:
     "I decided to sit in the middle of the auditorium, where I could still hear the speeches without being so front-and-center."
@@ -893,6 +898,9 @@ label global000_sit_c2:
             jump global000_sit_c2_1
         "What was your previous school like, Yamazaki-san?":
             jump global000_sit_c2_2
+        "Maybe I should sit elsewhere?":
+            "I decided to look around just in case there were any other available spots left elsewhere."
+            jump global000_sitmenu
 
 label global000_sit_c3:
     "I decided to sit in the back, where I wouldn't have to worry about anyone seeing me."
@@ -906,6 +914,9 @@ label global000_sit_c3:
             jump global000_sit_c3_1
         "Seems kinda lonely back here, Kodama-san...":
             jump global000_sit_c3_2
+        "Maybe I should sit elsewhere?":
+            "I decided to look around just in case there were any other available spots left elsewhere."
+            jump global000_sitmenu
 
 
 label global000_sit_c1_1:
@@ -974,7 +985,7 @@ label global000_sit_c2_2:
     BE "Yeah, what was yours like, Yamazaki-san?"
     show GTS neutral
     GTS "Well, ah, it was...{w} pleasant, I suppose."
-    MC "'Pleasant'?"
+    MC "\"Pleasant\"?"
     GTS "That is, ah...{w} It was rather...{w} Mm...{w} My old schools were always very well organized and regimented."
     MC "...Not very fun, then?"
     show GTS happy
@@ -1045,7 +1056,7 @@ label global000_sit_after:
     "The ceremony continued, all dreadfully familiar and rote, but at the end there was something different. The principal settled the papers behind the podium and hesitated for a too-long moment."
     Principal "Thank you to each and every one of you for your attendance today. My name is Manabu Noguchi, and I'm the principal of this academy."
     Principal "The future is forever uncertain. But no matter what the future holds, years hence or any day now, one thing is important above all else."
-    Principal "'Nosce te Ipsum.' {w}Latin, \"To thine own self be true\". Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need."
+    Principal "\"Nosce te Ipsum.\" {w}Latin, \"To thine own self be true\". Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need."
     Principal "I'm sure you all have many questions as to why you're here. And, I assure you that the rest of the faculty and I will do our best to answer all of those for you."
     Principal "Now, each of you have been assigned a homeroom teacher. They will give you more information during class in a few minutes."
     Principal "Feel free to reach out to them should you need to. As is the same with every member of our faculty, they're here to help."
@@ -1130,7 +1141,7 @@ label global000_homeroom:
     "If not for the teacher's lectern at the front of the class, you'd be forgiven for thinking we were in a pen instead of a classroom."
     "Finally the bell rang, and at the last possible second one could enter and not be late, our homeroom teacher slid open the door and entered."
     show HR unique with dissolve
-    MCT "'Dour' is the first word that comes to mind... Guy looks like he's been middle-aged his entire life."
+    MCT "\"Dour\" is the first word that comes to mind... Guy looks like he's been middle-aged his entire life."
     "The man was tall, thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
     "{i}Kaeru Tashi{/i}"
     "Tashi-sensei dropped the chalk back on the tray, turned to us, and stepped forward, leaning against the lectern."
@@ -1166,7 +1177,9 @@ label global000_homeroom:
     "..."
     play music Busy
     HR "All right, go ahead, get it out now."
+    show HR unique
     "The nonchalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-sensei got into his bag and set his papers down on the lectern."
+    show HR neutral
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
     hide HR
@@ -1186,7 +1199,9 @@ label global000_homeroom:
     HR "Some have a more tender approach and prioritize your comfort throughout this process, which of course, there is nothing wrong with."
     HR "As for me, I see more value in focusing on self-acceptance."
     HR "If you and your peers can learn to accept yourselves and your growth, then in theory, you should be able to tackle a number of things that life will throw your way, no?"
+    show HR unique
     "Tashi-sensei scanned the room, taking in the fear and confusion, then shrugged."
+    show HR neutral
     HR "Anyways, that's my big first day speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
     scene black with dissolve
@@ -1300,14 +1315,18 @@ label MC002:
     show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     pause .25
     HR "Nikumaru-san?"
+    show HR unique
     WG "... 3500 BC."
+    show HR neutral
     HR "Not quite. Anyone else? Anyone?"
     hide WG
     show AE neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
     pause .25
     HR "Matsumoto-san?"
+    show HR unique
     AE "3520 BC."
+    show HR neutral
     HR "Correct."
     hide AE with dissolve
     pause .25
@@ -1315,7 +1334,9 @@ label MC002:
     show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Across the room, Naomi put her hand up."
     HR "Yes, Yamazaki-san?"
+    show HR unique
     GTS "This is when the migrating communities began to move into the more mountainous regions of Japan, correct?"
+    show HR neutral
     HR "That is correct, yes. The land was warming quite a bit during this time, and these groupings of people became much more sedentary in their lifestyles."
     hide GTS with dissolve
     pause .25
@@ -1430,17 +1451,24 @@ label MC002:
     MC "Excuse me, Tashi-sensei?"
     show HR neutral
     HR "Mm? Yes, Hotsure-san? Need something?"
+    show HR unique
     MC "Yes, Sensei. I was wondering if you had an idea where I could look for more information on the Jōmon period."
     MC "I'd try the internet, but I'd rather find information that I know is sound instead of flipping a coin for it online."
+    show HR neutral
     HR "Ah, understandable. Yes, information online can be rather dubious."
     HR "I do have a book on the topic that I've been using to brush up on the topic myself. You're free to borrow it, if you'd like. Of course, I expect to see it again on Monday."
+    show HR unique
     MC "That would be wonderful, Sensei. And thank you. I'll make sure to get it back to you on Monday."
+    show HR neutral
     HR "Fine then. I have it back in the faculty room."
     "Tashi took his bag and walked toward the door."
     pause .25
     HR "Come along. I'd rather not have to take extra time to run the book back here to you."
+    show HR unique
     MC "Ah... students are allowed in the faculty room, Sensei?"
+    show HR neutral
     HR "Alone? Far from it. However, I'm accompanying you, and it'll be a few minutes at most. It's no trouble."
+    show HR unique
     MC "Alright. Thank you, Sensei."
     "Tashi nodded and walked out the door, holding the door behind him so I could follow."
     scene Hallway with fade
@@ -1518,7 +1546,9 @@ label MC002:
     show HR annoyed at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "No privacy for him at all, Takamura-san?"
     show Takamura strict
+    show HR unique
     Takamura "Well, my apologies for assuring that our students are feeling alright."
+    show HR annoyed
     HR "All I'm saying is that you ought to keep your eyes on your own responsibilities. Not everyone needs the close talk treatment."
     Takamura "Maybe you'd be comfortable with that sort of approach if you'd had someone reach out to you in a similar way when you were younger."
     pause .25
@@ -1527,8 +1557,10 @@ label MC002:
     pause .25
     show HR annoyed
     HR "There's nothing wrong with presenting the facts."
+    show HR unique
     Takamura "No there isn't. But, those facts aren't exactly light on new ears, Tashi-chan."
     pause .25
+    show HR annoyed
     HR "So, let me ask you this, then. Why all of the fuss over this extra... fluff?"
     "Tashi waved one hand over Takamura's overstuffed binder."
     HR "Why worry so much over it?"
@@ -1583,8 +1615,8 @@ label MC002:
     show Takamura happy
     "I glanced over at Takamura, and she waved one hand with a small laugh."
     Takamura "And at the end there is our young pup. Yoshito Hageshi."
-    show Takamura neutral at altMove(0.5, 0.25)
-    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Takamura neutral at altMove(0.5, 0.75)
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Hageshi-sensei glanced up from his pile of papers."
     Takamura "How long have you been here now, Hageshi-san? Five years now?"
     pause .25
@@ -1601,12 +1633,12 @@ label MC002:
     show Takamura neutral
     "In addition, he was tall, and seemed to fill the entire room around him, especially compared to Takamura."
     Takamura "He's the academy's math teacher, so you'll probably see him sooner or later."
-    hide Takamura
-    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show Takamura neutral at altMove(0.5, 0.5)
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "Do yourself a favor and don't start any fights around campus."
     HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And, you don't want that."
-    hide HR
-    show Takamura neutral at Position(xcenter=0.25, yalign=1.0)
+    hide HR neutral with easeoutright
+    show Takamura neutral at altMove(0.5, 0.75)
     "Behind Hageshi-sensei, the two teachers by the water cooler left their positions and exited the room. As they left, I noticed the whistles around the neck of that one faculty member wearing an athletic outfit."
     if isEventCleared("BE003"):
         MCT "Huh. That's the same outfit that Honoka had on the other day."
@@ -1649,6 +1681,7 @@ label MC002:
     pause .5
     show HR annoyed
     HR "Have a good day, Hotsure-san."
+    show HR unique
     MC "Y-Yes. You as well, Sensei."
     Takamura "Lovely to meet you again, Hotsure-san."
     hide HR
@@ -1880,7 +1913,7 @@ label MC004:
     MCT "It's... actually really serene here. All things considered."
     "The academy was quiet, for the most part."
     "No city sounds. Not a lot of cars. Not even really that many people, save for the town and the academy."
-    "I glanced up at the sun, shimmering through a cover of clouds"
+    "I glanced up at the sun, shimmering through a cover of clouds."
     "One moved in the sky and broke, sifting apart and letting the sun shine down onto the courtyard outside, and my balcony."
     MCT "Hm. Maybe some time in the sunshine could help get me in the action-y mood."
     pause .5
@@ -1937,7 +1970,7 @@ label MC004:
                 "..."
                 MCT "Mizutani-san totally has at least five different workout playlists saved to her phone. Guaranteed."
             "I felt my thoughts drift away a bit as I turned up the volume a touch."
-            "The idea of going out and having fun tonight was really nice, and did sound like the ‘in' thing to do... but my bed was comfy, and this music was-"
+            "The idea of going out and having fun tonight was really nice, and did sound like the \"in\" thing to do... but my bed was comfy, and this music was-"
             scene Dorm Interior with vpunch
             stop music
             "I jerked up, my eyes jolting open as my ringtone blasted my eardrums multiple centimeters deeper into my skull, halting my music in the process."
@@ -2025,7 +2058,7 @@ label MC004:
             MomCell "It's the effort that counts."
             MomCell "Bye, Honey. Have a good night."
             MC "You too, Mom. Bye."
-            "I hung up the phone and glanced down at the screen as the ‘call ended' sat there for a moment."
+            "I hung up the phone and glanced down at the screen as the \"call ended\" sat there for a moment."
             "Talking to Mom...felt nice."
             "It was different from when I was at home. When I was here, it was nice to know that she was thinking of me and Tomo. Made me feel loved."
             "I grunted a bit and sat up on my bed."
@@ -2454,7 +2487,7 @@ label MC005:
     MCT "I legitimately dread the idea she can somehow read my mind and the scary part is that I wouldn't put it past her."
     MC "I see. Well, have a good time all the same."
     AE "Same to you, Hotsure-san."
-    hide AE with dissolve
+    hide AE with easeoutleft
     MCT "Preparing for class on a holiday? Of all things?"
     "I made sure she wasn't looking and shook my head as I walked toward the bus stop."
     MCT "Damn..."
@@ -2565,7 +2598,7 @@ label MC005:
     MCT "And Tomo was there, too. She loved the fire."
     "I smiled, reminiscing on running around with my childhood best friend and my sister while simultaneously taking breaks to watch the bonfire blaze brightly."
     "I glanced around a bit as I came back down to Earth."
-    show HR neutral with dissolve
+    show HR unique with dissolve
     #show Tsubasa neutral with dissolve
     #show Chiyo neutral with dissolve
     if isEventCleared("MC002") or isEventCleared("PRG011"):
@@ -2586,12 +2619,13 @@ label MC005:
     #show Tsubasa neutral with dissolve
     #show Chiyo neutral with dissolve
     HR "... deeper than that. It's representative of Japan, and every person who lives-"
+    show HR unique
     Tsubasa "Hotsure-san. Morning."
-    show HR annoyed
     "Tashi quickly turned his head and adjusted his collar a bit."
+    show HR annoyed
     HR "Ahrm... yes, hello Hotsure-san."
+    show HR unique
     "I bowed to both of them politely."
-    show HR neutral
     $setFlag("Meet_Chiyo")
     Chiyo "Hotsure-san? I don't believe we've met."
     Chiyo "A student of yours, dear?"
@@ -2600,16 +2634,20 @@ label MC005:
     MC "It's wonderful to meet you, Tsubasa-san."
     "I bowed to her as well as she did the same to me, giving me a gentle smile of greeting."
     MC "My apologies. I didn't mean to interrupt you, Sensei."
+    show HR neutral
     HR "It's not any trouble."
+    show HR unique
     Tsubasa "Kaeru-san was simply reiterating his passion for this holiday as a whole."
     Chiyo "You make it sound so childish, Michi-kun. The man has a passion for the past. When images and text might fail, the spoken word will last the test of time."
     #show Tsubasa annoyed
     Tsubasa "I understand darling, and meant no such thing. Go on, Kaeru."
     #show Tsubasa neutral
+    show HR neutral
     HR "I... didn't exactly have an ending in mind. All I was saying was simply that I believe that many people have lost their perception on how important this time of year is, and what it represents."
     HR "I believe it not only important to use the time for reflection, but also for taking in the historical significance of it all. Why we celebrate, and what it all means."
     HR "It's much more than just \"a topic to assign homework to.\""
     #show Tsubasa intrigued
+    show HR unique
     Tsubasa "I understand entirely. Times have changed immensely, and keeping a memory of the way things were is a sound idea."
     Tsubasa "Take this, for example. I remember, clear as day, the 1964 Summer Olympics in Tokyo."
     MC "You went to the Olympics, Tsubasa-sensei?"
@@ -3085,7 +3123,7 @@ label MC005_GTS:
     MC "I'd agree, yes."
     "We started down the sidewalk, the two of us working our way through crowds of people, and making our way toward the field outside of town."
     "I was also aware of Naomi now being just a stone's throw above my height, and the slight bit of awkwardness to her gait as we journeyed down the town's streets."
-    play music GTS
+    play music GTSAlt
     scene Flower Field with fade
     MC "Oh, whoa."
     "The fields of flowers stretched out in front of us in every direction. Every color and shade of the rainbow seemed to be present as we entered."
@@ -3753,7 +3791,7 @@ label MC005_RM:
     show Jineko neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     "As we waited, a few of the other students from around the campus showed up at the stop as well."
-    show Tako unique
+    show Tako unique at Transform(xzoom=-1)
     "Beside us, one of the girls whispered something to another, and the second girl burst into laughter."
     MCT "At least someone is having a grand ol' time."
     scene black with fade
@@ -3854,6 +3892,7 @@ label MC005_RM:
     with dissolve
     "A crowd of students stood nearby, also enjoying some of the food from the truck."
     "Among them, one of the girls held her food in one hand, and a bag with the logo of a nearby store on it."
+    show Jineko happy at altMove(0.5, 0.5) with None
     hide Sakura
     hide Tako
     with dissolve
@@ -3866,7 +3905,9 @@ label MC005_RM:
     MCT "... And outside the dorms."
     MCT "Huh. She sure gets around."
     "Two of the girls with her waved to her and headed off in different directions, while this girl stood for a bit, finishing off her food."
-    show RM distrustful at Position(xcenter=0.15, yalign=1.0) with dissolve
+    hide Jineko
+    show RM distrustful
+    with dissolve
     "My eyes went to Daichi, and I watched as his gaze stayed laser focused on this one girl, hardly even shifting to either of the other two."
     MCT "..."
     MCT "Don't tell me..."
@@ -3887,7 +3928,7 @@ label MC005_RM:
     show RM angry
     RM "Urgh!"
     RM "Stay here, okay? I'll explain everything later!"
-    hide RM with dissolve
+    hide RM with easeoutright
     "Daichi wormed his way between shoulders and faded into the crowd."
     MC "Ugh..."
     "I walked out of the crowd to get a bit of open air, inhaling deeply to quell the angry fizz in my stomach, which I wasn't quite sure if it was from fried food or Daichi's BS."
@@ -3896,7 +3937,7 @@ label MC005_RM:
     show dummy with vpunch
     MC "Ach?!"
     "I whipped around quickly to the voice behind me."
-    show Jineko neutral at altMove(0.5, 0.5)
+    show Jineko neutral with dissolve
     "Seeing her up close only made me now realize that Daichi's \"target\" was a few centimeters taller than I. I looked up at her, trying not to look like I'd just been shocked back into reality."
     Student "So, question."
     Student "What's with the lanky dude that's been hanging around with you?"
@@ -3929,8 +3970,8 @@ label MC005_RM:
     "Not seeing anything better to do, I started walking back down the block toward the bus stop. I'd had enough drama for one day."
     play music RM
     pause .5
-    show RM doubt with dissolve
     "... Of course, as I started back, I spotted Daichi turning the corner of a building in front of me."
+    show RM doubt with easeinright
     "He put one hand on it, and bent his neck down, his chest heaving up and down like broken bellows."
     "I sighed for probably the nine hundredth time and walked over to him."
     pause 1
@@ -3966,8 +4007,10 @@ label MC005_RM:
     MCT "He better have not broke into a facility for this..."
     show RM neutral
     RM "I'm trying to track down a pair of twins to learn more about them. I've found the first one... but I can't find the second for the life of me."
+    show RM concerned-2
     RM "Some... \"Hikari Watanabe\". I've found nothing."
     RM "I've checked literally every possible lead. Checking different classrooms and asking various students, but no one has heard of her."
+    show RM neutral
     RM "Most of them just told me to back off... which must mean there's something more."
     MCT "Does it though?"
     RM "I've been digging up all I can lately, and have still come up dry. So, I decided to follow the easiest lead."
@@ -4118,13 +4161,14 @@ label MC006:
     HR "Hmm? {w}Speaking of Hageshi-san..."
     play music RM
 
-    show HR at altMove(0.5, 0.25) with None
+    show HR unique at altMove(0.5, 0.25) with None
     show Hageshi neutral
     show RM concerned-2 at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     Hageshi "Look what I found crawling in the vents."
     "Hageshi-sensei was carrying Daichi by his collar, like he had pulled out a stray cat from a storm drain."
     Hageshi "Nice try Utagashi-san, but no one gets out of this."
+    show HR neutral
     HR "Thank you, Hageshi-san."
     hide RM with dissolve
     extend " Well, looks like the gang's all here. Let's get into what you'll be doing. I'll let Naoki-san give you the run-down."
@@ -4195,6 +4239,7 @@ label MC006_Team1:
     show HR neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
     HR "Good question, Nikumaru-san. Since the self-satisfaction of a job well done is a rather lack-luster reward, we decided to offer that the winning team will be taken off the class clean up rotation for the next month."
     show WG surprised-2
+    show HR unique
     WG "That is not a paltry incentive..."
     hide AE
     show FMG happy at Position(xcenter=0.2, yalign=1.0)
@@ -4410,6 +4455,7 @@ label MC006_Team1:
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
+    show HR unique
     Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
     "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
@@ -4485,13 +4531,15 @@ label MC006_Team1:
     RM "Even I don't know what is going on anymore."
     MC "Hey now, you may not like it, but this is what peak performance looks like... or at least peak peripheral vision."
     hide RM
-    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     #show Naoki with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
+    show HR neutral
     HR "I don't know if anyone likes to see that."
+    show HR unique
     MCT "I'm not going back to playing blind, at this point it's best if I just own it."
     hide HR
     hide Hageshi
@@ -4661,16 +4709,23 @@ label MC006_Team1:
     play music Peaceful
     show HR neutral at Position(xcenter=0.45, yalign=1.0) with dissolve
     HR "Looks like no one wins the prize then."
+    show HR unique
     All "Awww!"
     Hageshi "No whining now. You should be proud of yourselves. I have to admit, it was quite impressive to see everyone turn things around."
     Naoki "Hageshi-san is right. This started off as one of the worst games I'd seen, only to turn into one of the better ones in the second half."
+    show HR neutral
     HR "So in a way, you're all winners."
     show WG doubt at Position(xcenter=0.15, yalign=1.0) with dissolve
+    show HR unique
     WG "If no one won anything, it sounds like we're all losers."
+    show HR neutral
     HR "That's one way of looking at it certainly, but I would suggest looking on the positive side of things. {w}Look, I don't say this often, but I'm proud of how you all were able to turn things around for yourself."
+    show HR unique
     show AE happy at Position(xcenter=0.9, yalign=1.0) with dissolve
     AE "Thank you, Tashi-sensei."
+    show HR neutral
     HR "Don't mention it. {w}Like literally, {w}ever again."
+    show HR unique
     show FMG happy at Position(xcenter=0.3, yalign=1.0) behind HR with dissolve
     FMG "I think Tashi-sensei likes us!"
     show WG neutral
@@ -4678,7 +4733,9 @@ label MC006_Team1:
     GTS "My sincerest gratitude, Tashi-sensei."
     show PRG unique-happy at Position(xcenter=0.6, yalign=1.0) behind HR with dissolve
     PRG "W-We like you too Tashi-sensei..."
+    show HR neutral
     HR "{i}Ugggh{/i}.... please, no..."
+    show HR unique with None
     hide AE
     hide GTS
     hide WG
@@ -4689,6 +4746,7 @@ label MC006_Team1:
     with dissolve
     Naoki "I knew this guy was a softy at heart."
     Hageshi "You're not the only one, Aoi-san seems to think so too."
+    show HR neutral
     HR "Alright, we're done here. Class dismissed."
     hide HR
     hide Hageshi
@@ -4734,6 +4792,7 @@ label MC006_Team2:
     show HR neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
     HR "Good question, Nikumaru-san. Since the self-satisfaction of a job well done is a rather lack-luster reward, we decided to offer that the winning team will be taken off the class clean up rotation for the next month."
     show WG surprised-2
+    show HR unique
     WG "That is not a paltry incentive..."
     hide AE
     show FMG happy at Position(xcenter=0.2, yalign=1.0)
@@ -4980,6 +5039,7 @@ label MC006_Team2:
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
+    show HR unique
     Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
     "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
@@ -5054,13 +5114,15 @@ label MC006_Team2:
     RM "Even I don't know what is going on anymore."
     MC "Hey now, you may not like it, but this is what peak performance looks like... or at least peak peripheral vision."
     hide RM
-    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     #show Naoki with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
+    show HR neutral
     HR "I don't know if anyone likes to see that."
+    show HR unique
     MCT "I'm not going back to playing blind, at this point it's best if I just own it."
     hide HR
     hide Hageshi
@@ -5232,16 +5294,23 @@ label MC006_Team2:
     play music Peaceful
     show HR neutral at Position(xcenter=0.45, yalign=1.0) with dissolve
     HR "Looks like no one wins the prize then."
+    show HR unique
     All "Awww!"
     Hageshi "No whining now. You should be proud of yourselves. I have to admit, it was quite impressive to see everyone turn things around."
     Naoki "Hageshi-san is right. This started off as one of the worst games I'd seen, only to turn into one of the better ones in the second half."
+    show HR neutral
     HR "So in a way, you're all winners."
+    show HR unique
     show WG doubt at Position(xcenter=0.15, yalign=1.0) with dissolve
     WG "If no one won anything, it sounds like we're all losers."
+    show HR neutral
     HR "That's one way of looking at it certainly, but I would suggest looking on the positive side of things. {w}Look, I don't say this often, but I'm proud of how you all were able to turn things around for yourself."
+    show HR unique
     show AE happy at Position(xcenter=0.9, yalign=1.0) with dissolve
     AE "Thank you, Tashi-sensei."
+    show HR neutral
     HR "Don't mention it. {w}Like literally, {w}ever again."
+    show HR unique
     show FMG happy at Position(xcenter=0.3, yalign=1.0) behind HR with dissolve
     FMG "I think Tashi-sensei likes us!"
     show WG neutral
@@ -5249,7 +5318,9 @@ label MC006_Team2:
     GTS "My sincerest gratitude, Tashi-sensei."
     show PRG unique-happy at Position(xcenter=0.6, yalign=1.0) behind HR with dissolve
     PRG "W-We like you too Tashi-sensei..."
+    show HR neutral
     HR "{i}Ugggh{/i}.... please, no..."
+    show HR unique with None
     hide AE
     hide GTS
     hide WG
@@ -5260,6 +5331,7 @@ label MC006_Team2:
     #show Naoki with dissolve
     Naoki "I knew this guy was a softy at heart."
     Hageshi "You're not the only one, Aoi-san seems to think so too."
+    show HR neutral
     HR "Alright, we're done here. Class dismissed."
     hide HR
     hide Hageshi
@@ -5385,7 +5457,7 @@ label MC007:
     MC "W-Why do you even have these in the first place?"
     RM "You can never be too careful. Now then..."
     show RM smug
-    RM "Operation \"'Stakeout at the Bakeout\" starts now!"
+    RM "Operation \"Stakeout at the Bakeout\" starts now!"
     scene black with fade
     pause 1
 
@@ -5777,13 +5849,17 @@ label MC033:
     pause 1
     show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     HR "Alright, I'm feeling generous, so no new assignment since you have a quiz on the Azuchi-Momoyama period next class."
+    show HR unique
     show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     BE "Yes!"
     HR "Don't count on it in the future though."
+    show HR unique
     show BE angry
     BE "Boo!"
     show BE shrug
+    show HR neutral
     HR "I heard that."
+    show HR unique
     play sound ClockTower
     hide BE with dissolve
     "Finally, class was over. But I still needed to track down the rest of the teachers for Tomo."
@@ -5791,14 +5867,19 @@ label MC033:
     MC "I tried to find them this morning but they weren't around. Do you know where they might be?"
     show HR neutral at altMove(0.5, 0.5)
     HR "Who are you looking for?"
+    show HR unique
     if isEventCleared("MC009") or isEventCleared("PRG030"):
         MC "Takamura-sensei. I checked the cooking room before class this morning but I didn't find her there."
+        show HR neutral
         HR "Hmm, she was probably busy with what she's been working on to help with the school's counseling program."
         HR "You probably won't find her there now since it's the lunch period. Just follow me, we can probably find her in the faculty lounge."
     else:
         MC "Takamura-sensei. I didn't see her in her room before class this morning."
-        HR "Did you check the kitchen? She's usually there if she's not in her home room. Unless she's pulling double duty with helping the school counselor. "
+        show HR neutral
+        HR "Did you check the kitchen? She's usually there if she's not in her home room. Unless she's pulling double duty with helping the school counselor."
+        show HR unique
         MC "No, I didn't. I'll go check now."
+        show HR neutral
         HR "I'd hold off on that. It's lunch period now. Just follow me, we can probably find her in the faculty lounge."
     if isEventCleared("MC002"):
         HR "It wouldn't be the first time you got to step in there."
@@ -5810,13 +5891,15 @@ label MC033:
     "Giant 2" "And I'm 318 centimeters. You're tiny compared to me, so know your place and get out of my way."
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Takamura "Now now, boys, that's not necessary."
-    show HR neutral with dissolve
+    show HR unique with dissolve
     "Unfortunately, Takamura-sensei's polite warning was completely ignored by those two hot heads."
     "Giant 1" "You'll think I look pretty damn tall once I knock your ass to the floor!"
     "Giant 2" "Like your short little reach is going to let you land a punch on me."
     show Takamura strict
     Takamura "That's quite enough boys!"
+    show HR neutral
     HR "{size=-6}Ugh. She's about as threatening as a mouse. This is going no where.{/size}"
+    show HR unique
     "Giant 1" "Take a swing then if you're so confident."
     "Giant 2" "Is that an invitation?"
     stop music
@@ -5836,12 +5919,17 @@ label MC033:
     Takamura "I accept your apologies."
     show HR annoyed
     HR "Alright, get going you two. There's still half a day of classes. Go cool off somewhere else."
+    show HR unique
     show Takamura neutral
     "The two students scrammed in separate directions after that."
+    show HR neutral
     HR "Thanks for your help with that Hageshi-san."
+    show HR unique
     play music HigherEdu
     Hageshi "What did I do?"
+    show HR neutral
     HR "Heh. Like you don't know."
+    show HR unique
     Takamura "Would you like to join us for lunch in the faculty lounge, Hageshi-san?"
     Hageshi "I'll take you up on the offer another time. I was going to monitor the cafeteria today. I find it helps to remind the students every now and then that someone is watching."
     hide Hageshi with dissolve
@@ -5868,11 +5956,14 @@ label MC033:
     show Takamura at altMove(0.5, 0.75)
     show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     HR "All I can say is it's a good thing Hageshi-san showed up."
+    show HR unique
     Takamura "Yes, while I do appreciate his effectiveness in such manners, I don't understand why the students are so afraid of him. He's such a sweet and kind person. I've never known him to hurt a fly."
     #show Tsubasa neutral with dissolve
     Tsubasa "Beware the fury of a patient man, as the saying goes."
-    Takamura "I'm not sure I'd use the word ‘fury' to describe Hageshi-san. I've never even heard him raise his voice."
+    Takamura "I'm not sure I'd use the word \"fury\" to describe Hageshi-san. I've never even heard him raise his voice."
+    show HR neutral
     HR "Believe me Takamura-san, he's far from harmless."
+    show HR unique
     Tsubasa "The true strength of a strong man comes from his ability to contain his wrath, not his willingness to unleash it."
     Tsubasa "He has matured well since his time as a student at the academy."
     MC "You had Hageshi-sensei as a student, Tsubasa-sensei?"
@@ -5882,30 +5973,41 @@ label MC033:
         Tsubasa "Come for another visit have we?"
     Tsubasa "To answer your question, yes. Tashi-san was one of his teachers as well. It may seem like half a lifetime to you, Hotsure-san, but eight years is not a very long time to an old man like myself."
     MC "What was he like as a student, if you don't mind me asking?"
+    show HR neutral
     HR "Well for one, you wouldn't have recognized him back then. I can scarcely believe they were the same person myself."
+    show HR unique
     Tsubasa "Yes, he was quite the sight for sore eyes, as they say. Not just figuratively, but literally as well."
+    show HR neutral
     HR "He certainly stood out, and not in a good way. I'll never forget it. Fresh off the ferry, he had a black eye, a busted lip, and scraped up knuckles. He looked like trouble."
+    show HR unique
     Tsubasa "Or attracted trouble, as seemed to be the case. His unusually diminutive stature at 151cm made him an obvious target for harassment and ridicule, along with a physique that looked like his last meal had been weeks ago."
     show Takamura sad
     Takamura "Oh my! That seems hard to visualize, knowing him now."
     show Takamura neutral
     extend " It's hard to imagine him being smaller than me even. I suspect he was still a good student though, in spite of those things."
+    show HR neutral
     HR "When he first got here, he was very sullen and quiet. There was even a rumor amongst the students that he couldn't talk."
     HR "But he never had an issue with answering a question when called upon in class. Though I didn't know him to speak a word beyond that myself either."
+    show HR unique
     Tsubasa "In that regard, not as much has changed."
-    Takamura "He certainly fits the ‘strong silent' type."
+    Takamura "He certainly fits the \"strong silent\" type."
     MC "I take it he got picked on a lot?"
+    show HR neutral
     HR "As faculty we do our best to stop that from happening when we see it, but as far as what I could piece together from other students, yes, quite frequently too."
+    show HR unique
     Tsubasa "I suspect those who did pick on the poor young man were in for a nasty surprise however. His file indicated he was a nationally ranked judo athlete, even if it was in the under 55kg class."
     MC "So what happened later? Besides somehow growing over 40cm in less than a year?"
+    show HR neutral
     HR "I take you're interested in his ugly duckling story?"
+    show HR unique
     show Takamura strict
     Takamura "That doesn't seem like a nice way of putting it, Tashi-chan."
+    show HR neutral
     HR "And how else would you describe it? If only we could all be so lucky..."
     show Takamura neutral
+    show HR unique
     Tsubasa "Ah yes, Hageshi's growth factor. Rum thing really. He's certainly one of the more unique cases."
-    MC "He is? How so? I thought he was considered ‘small' for a muscle growth factor."
-
+    MC "He is? How so? I thought he was considered \"small\" for a muscle growth factor."
     if routelock == "WG" or routelock == "FMG":
         Tsubasa "While this may be true, keep in mind your perspective is quite skewed from what you've seen with Mizutani-san and Okamoto-san."
     else:
@@ -5932,17 +6034,25 @@ label MC033:
         MC "Huh, that is odd. Mitzutani-san eats a lot. Maybe not as much as Alice... but still a lot."
     else:
         MC "Huh, that is odd. Mitzutani-san eats a lot. Maybe not as much as Nikumaru-san... but still a lot."
+    show HR neutral
     HR "He's also known to have remarkably fast reflexes. Then again, he was, and still is, a trained fighter. Maybe that has something to do with it besides his growth."
+    show HR unique
     Tsubasa "It's a possibility I've considered as well."
     Tsubasa "Most peculiar of all though is his strength to bodyweight ratio."
     Tsubasa "Though not quite at the level of some of the past record breakers— and current for that matter— in terms of absolute strength, he was easily the strongest in his class, despite others being much larger."
     MC "Sounds like he's as scary as everyone thinks he is."
+    show HR neutral
     HR "Yes, which is why I like to impress the fact upon students to dissuade them from causing trouble."
+    show HR unique
     MC "Still though, some of those giant students are pretty big. Like those guys in the hall arguing earlier. Seems like even he would have trouble keeping them in line if they really wanted to press the issue."
+    show HR neutral
     HR "Heh. Trust me, he's dealt with much worse than those two."
+    show HR unique
     MC "Really? Like how big are we talking here?"
     Tsubasa "As Hageshi-san is fond of saying, \"The bigger they are, the harder they fall.\"."
+    show HR neutral
     HR "We've probably said too much already. You'd have to ask him sometime, he might tell you."
+    show HR unique
     Tsubasa "Hotsure-san, you do understand that we would not normally be at liberty to talk about another faculty member so freely when they are not present. We discuss these things for Aoi-san's benefit, as a colleague of Hageshi-san."
     Tsubasa "Not only that, but with the understanding that Hageshi-san wants his story and experience with his growth factor to be an inspiration and source of hope to students that struggle with theirs."
     Tsubasa "If you want to know more, I'd encourage you to talk with him yourself sometime."
@@ -6105,16 +6215,20 @@ label global005:
         AE "..."
         AE "You'll see."
     scene Classroom
-    show HR neutral
+    show HR unique
     with fade
     "When we got to Room 3-B, Tashi-sensei was standing at the front of the room. He nodded at us as we all came in."
+    show HR neutral
     HR "Alright, everyone. Today is Measuring Day for this class."
     HR "In layman's terms, it's the day when you'll all learn the nature of your specific factor."
     HR "You'll be taken privately into separate areas, and have the basics of your factor laid out for you."
     HR "From there, the rest of today will consist of measurements and such, to essentially give each of you a starting baseline."
+    show HR unique
     show WG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     WG "Baseline?"
+    show HR neutral
     HR "So, I'll be leading you all into the gym where everything will be occurring. Matsumoto-san, would you mind getting everyone together?"
+    show HR unique
     show AE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
     AE "Understood. Everyone, please form a line at the door, single file, please."
     scene black with fade
@@ -6293,6 +6407,7 @@ label global026:
     with dissolve
     show HR neutral with dissolve
     HR "Everyone to your seats, if you please. Just because someone has grown a few inches doesn't excuse unprofessionalism."
+    show HR unique
     "Going to my seat, I took one last glance back to Aida, who was trying to space herself the correct amount from her desk to accommodate her new belly."
     MCT "Who would've thought?"
     "I looked back once more to the demure, mousey girl. She was practically shaking in her seat as Nikumaru-san took the off glances at her belly."
@@ -6394,13 +6509,13 @@ label RM001:
     MCT "Another day of classes over..."
     "When I arrived back at my room, Daichi was already there, poking some device on his desk very intently with a soldering iron."
     MCT "What on earth is he up to?"
-    "Part of me wondered if he was going to burn the whole place down with that thing.It was definitely some kind of electronic piece he was working on."
+    "Part of me wondered if he was going to burn the whole place down with that thing. It was definitely some kind of electronic piece he was working on."
     "It was hard to tell what exactly it was from over here, beyond some kind of circuit board. I guess he looked like he knew what he was doing though."
     show RM neutral with dissolve
     RM "..."
     "By any reasonable measure, the guy seemed like an odd duck— and that's if I'm being polite about it."
     if isEventCleared("MC007") or isEventCleared("FMGWG001") or getFlag("MC005RM"):
-        "It didn't help that he'd already established a penchant for spying on people if he thought it might somehow help him ‘gather information', as he put it. To be honest, I didn't know that much about him beyond that."
+        "It didn't help that he'd already established a penchant for spying on people if he thought it might somehow help him \"gather information\", as he put it. To be honest, I didn't know that much about him beyond that."
     else:
         "Outside of our first encounter and the rather strange conversation where he basically asked me to be part of his personal spy network, I honestly hadn't gotten a chance to talk with him that much."
     "The better part of me thought I should probably keep it that way, but it was only going to be increasingly awkward to live with someone I barely knew or talked to. I decided it was best to try to break the ice."
@@ -6427,7 +6542,7 @@ label RM001:
         RM "Alright I guess."
         show RM smug
         extend " Apology accepted - I'll forgive your ignorance. If you're willing to take this seriously, I can enlighten you on a few things. Interested?"
-        MCT "Can't say I'm too excited about what he might mean by the word ‘enlighten', but I guess it wouldn't hurt to humor him for a bit if it will help smooth things over."
+        MCT "Can't say I'm too excited about what he might mean by the word \"enlighten\", but I guess it wouldn't hurt to humor him for a bit if it will help smooth things over."
         MC "Sounds good. So, what are you working on there?"
         show RM neutral
     else:
@@ -6459,11 +6574,11 @@ label RM001:
     RM "There has to be. I'm surprised you don't."
     MC "I mean it's certainly an unusual circumstance, but given what I've seen so far it seems to check out."
     RM "What did I tell you about just believing what you see?"
-    MC "Fair enough I suppose, but have you ever heard the expression ‘Sometimes a cigar is just a cigar'?"
+    MC "Fair enough I suppose, but have you ever heard the expression \"Sometimes a cigar is just a cigar\"?"
     show RM doubt
     RM "If you're satisfied with the way things seem to be, I'll leave you to it, but some of us require more evidence to be convinced."
-    MCT "I'm not sure you as a single person counts as ‘some of us' but whatever."
-    "I didn't really care for his not-so-subtle suggestion that I was some kind of simpleton, but I resisted the urge to be snarky and tried to get him off the topic of this supposed ‘grand conspiracy'."
+    MCT "I'm not sure you as a single person counts as \"some of us\" but whatever."
+    "I didn't really care for his not-so-subtle suggestion that I was some kind of simpleton, but I resisted the urge to be snarky and tried to get him off the topic of this supposed \"grand conspiracy\"."
     MC "This can't be the only thing you spend time on. I'm sure there's something you do for fun, right? Got any hobbies?"
     RM "Not really. Haven't had time lately. Been too busy trying to figure out what's going on here."
     MCT "You're killing me here dude."
@@ -6510,7 +6625,7 @@ label RM001:
             MC "Well, hey, why don't you show me your... Whatever it is."
             show RM doubt
             "He sighed and held up a lens, which was hiding behind some other components."
-            RM "It's a recording device"
+            RM "It's a recording device."
             MC "Yeah, that."
             "He paused for a moment."
             $setAffection("RM", 1)
@@ -6525,6 +6640,7 @@ label RM001:
             jump daymenu
         "Focus on your homework.":
             MC "Alright, well looks like you're busy. I'll leave you to it. Good talk."
+            show RM neutral
             RM "Okay, sounds good. Thanks for asking though. Since we'll be living together for the foreseeable future, we should probably talk more often."
             MC "For sure."
             RM "And let me know if you hear anything of interest, okay?"
@@ -6679,7 +6795,7 @@ label RM002_c2_after:
     show RM neutral
     RM "Anyway, I found what I was looking for."
     if getFlag("RM002_c1_2"):
-        MCT "'What I was looking for?' He said he was placing a camera... What's with the act?"
+        MCT "\"What I was looking for?\" He said he was placing a camera... What's with the act?"
         MCT "But he'll probably get upset if I don't play along."
     MC "Oh, good. Alright, I'll see you back at the dorm, then."
     RM "Yeah, sure. Talk to you later, man."
