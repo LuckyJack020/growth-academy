@@ -21366,9 +21366,9 @@ label WG074:
     WG "Come here."
     pause .2
     show Sakura happy at Position(xcenter=0.85, yalign=1.0) with easeinright
-    "Dinner is—"
+    Sakura "Dinner is—"
     show Sakura surprised
-    "Oh..."
+    Sakura "Oh..."
     "By the time Sakura came back in we were practically touching the backs of our throats with our tongues while my hands were roaming all over Alice's belly."
     show WG surprised
     WG "Oh my..."

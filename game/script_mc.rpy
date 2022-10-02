@@ -875,6 +875,9 @@ label global000_sit_c1:
             jump global000_sit_c1_2
         "Maybe I should sit elsewhere?":
             "I decided to look around just in case there were any other available spots left elsewhere."
+            hide AE
+            hide WG
+            with dissolve
             jump global000_sitmenu
 
 label global000_sit_c2:
@@ -900,6 +903,9 @@ label global000_sit_c2:
             jump global000_sit_c2_2
         "Maybe I should sit elsewhere?":
             "I decided to look around just in case there were any other available spots left elsewhere."
+            hide GTS
+            hide BE
+            with dissolve
             jump global000_sitmenu
 
 label global000_sit_c3:
@@ -916,6 +922,9 @@ label global000_sit_c3:
             jump global000_sit_c3_2
         "Maybe I should sit elsewhere?":
             "I decided to look around just in case there were any other available spots left elsewhere."
+            hide FMG
+            hide PRG
+            with dissolve
             jump global000_sitmenu
 
 

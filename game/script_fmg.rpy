@@ -2559,7 +2559,7 @@ label FMG019:
     MC "Yeah, but like... {w}What kind of stuff?"
     FMG "Meh, life stuff, I guess. Right now I just want to get school life behind me."
     MC "Why's that?"
-    FMG "I guess I'm just a little tired, mentally. I guess I'm just a little tired, mentally. Classes, these body changes... It's a lot to take in all at once. For me at least."
+    FMG "I guess I'm just a little tired, mentally. Classes, these body changes... It's a lot to take in all at once. For me at least."
     FMG "Don't get me wrong I want to be huge, haha. But I also want to pass all my classes and make new friends. A girl can only handle so much."
     MC "Hey, if it's any consolation... I think you're pretty big {i}and{/i} you have a big personality. Not many people have both."
     show FMG happy
