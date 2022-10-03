@@ -14875,7 +14875,7 @@ label FMG075:
     scene Arcade with fade
     "I played some rail shooters, some racers, even a couple of beat 'em ups. I would occasionally check in on Akira. I wanted to cheer her on but I could tell she needed to focus."
     MCT "Who would have thought so much was at stake over a stupid game of skee-ball?"
-    "Although at this point in my year here at Seicho, the idea of a high stakes skee-ball game didn't even rank in the top 100 list of weirdest things I'd seen."
+    "Although at this point in my year here at Seichou, the idea of a high stakes skee-ball game didn't even rank in the top 100 list of weirdest things I'd seen."
     "After a while I had exhausted all my usual options, but I did notice a cabinet for Wordly Fighters IV that gave me an idea."
     show Hageshi neutral with dissolve
     MC "Hey, Hageshi-sensei, you want to play me in some Wordly Fighters?"
@@ -15349,7 +15349,7 @@ label FMG076:
     show FMG upbeat
     FMG "Not as thick as yours since your head didn't crack open."
     show FMG happy
-    extend " You're damn tank Nat to walk that last throw off."
+    extend " You're a damn tank, Nat, to walk that last throw off."
     show Natsuko happy
     Natsuko "Thanks, I guess."
     show Natsuko neutral

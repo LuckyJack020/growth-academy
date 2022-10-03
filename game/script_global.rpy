@@ -829,6 +829,7 @@ image WG aroused = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/aroused.png
 image WG haughty = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/unique.png")
 image WG stern = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/stern.png")
 image WG doubt = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/doubt.png")
+image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering.png")
 image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.png")
 
 image side MC = "Graphics/MC/side.png"
