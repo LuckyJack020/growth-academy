@@ -14195,7 +14195,7 @@ label FMG073:
     show FMG angry-3
     FMG "I DON'T KNOW, OKAY!?"
     show FMG angry-2
-    FMG "I'm trying not to hurt you, you big horney idiot!"
+    FMG "I'm trying not to hurt you, you big horny idiot!"
     MC "..."
     "I genuinely didn't know what to say to that. That didn't sound like one of her usual insults we use to poke fun at each other. She was really pissed. It was pretty scary."
     show FMG sad
@@ -14754,7 +14754,7 @@ label FMG075:
     hide Natsuko
     show Hageshi neutral
     with dissolve
-    MC "Hageshi sensei, how long do bocce ball games usually last?"
+    MC "Hageshi-sensei, how long do bocce ball games usually last?"
     Hageshi "About 20 minutes."
     MC "How long have we been out here?"
     Hageshi "About three hours."
@@ -14930,7 +14930,7 @@ label FMG075:
     "Hageshi ordered an extra large hot chocolate each for the girls and a cup of tea for himself. I went for a medium hot chocolate with peppermint added to it."
     MC "{i}*Slurrrrp!*{/i} Ah! That's good stuff."
     show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    FMG "Thanks for the hot chocolate, Hageshi sensei."
+    FMG "Thanks for the hot chocolate, Hageshi-sensei."
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "I wouldn't order this for myself, but it is a nice treat."
     show Hageshi neutral with dissolve

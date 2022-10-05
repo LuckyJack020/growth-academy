@@ -6094,7 +6094,7 @@ label BE033:
     show BE happy
     BE "Yeah, from the Warblade game!"
     show AE angry
-    AE "I... believe you're mistaken. This character is Lord Judicator Septorum the IV."
+    AE "I... believe you're mistaken. This character is Lord Judicator Septorum IV."
     show BE neutral
     BE "Yeah yeah that's it. He's got the wicked chainsaw teeth, right?"
     show AE neutral

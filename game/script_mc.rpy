@@ -6683,7 +6683,7 @@ label RM002:
     RM "I need your help with something."
     MC "Daichi, I'm hungry. Can it wait until after lunch?"
     RM "No. This is important. It'll be simple, though."
-    RM "All I need you to do is keep watch. If anyone wants to come in here, let me know - just make noise or something, and stall them for a few seconds."
+    RM "All I need you to do is keep watch. If anyone wants to come in here, let me know - just make some noise or something, and stall them for a few seconds."
     jump RM002_choice
 
 label RM002_choice:
