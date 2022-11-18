@@ -490,6 +490,17 @@ init python:
     )
     ost.manualDefineList.append(theme_HmT)
 
+    theme_OvO = ost.soundtrack(
+        name = "Hatred",
+        path = "Audio/BGM/theme_natsuko.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Natsuko's Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_OvO)
+
     ## Base Template
     ######################################
 

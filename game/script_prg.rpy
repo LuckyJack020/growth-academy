@@ -9687,8 +9687,6 @@ label PRG026:
             jump daymenu
 
 label PRG027:
-    $setSize(3)
-    $setTimeFlag("size3")
     $setProgress("PRG", "PRG028")
     scene Dorm Exterior with fade
     play music Rain
@@ -12305,6 +12303,8 @@ label PRG029B:
     jump daymenu
 
 label PRG030:
+    $setSize(3)
+    $setTimeFlag("size3")
     $setProgress("PRG", "PRG031")
     scene Dorm Exterior with fade
     play music Rain

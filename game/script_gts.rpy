@@ -4111,6 +4111,7 @@ label GTS024_c1_2:
     jump daymenu
 
 label GTS025:
+    $setTimeFlag("XX25")
     $setProgress("GTS", "GTS026")
     $setTime(TimeEnum.EVE)
     scene Campus Center with fade
@@ -11412,6 +11413,190 @@ label GTS049_c3:
     jump daymenu
 
 label GTS050:
+    $setProgress("GTS", "GTS051")
+    $setSize(4)
+    $setTimeFlag("size4")
+    "I was shaken from the best sleep I'd had in years... {w}by the return of one of the most pernicious storms I'd ever seen..."
+    "The wind had come back with a bloody vengeance, pounding on the black walls alongside thunder that rattled my innards."
+    "If that wasn't enough, each boom was preceded by a flash of searing, ghostly white from the high windows; closing my eyes only showed me red light instead."
+    if getFlag("GTS049_embrace"):
+        $setGTSOutfit(OutfitEnum.NUDE)
+        MCT "Urgh... I'm grateful for what you did earlier, but now I just wanna sleep..."
+    else:
+        MCT "Urgh... I just wanna sleep, go away already..."
+        MCT "Hope Naomi's at least getting some decent shut eye..."
+    "Grunting and prodding my own sluggish muscles, I rolled over onto my side and peered back toward her serene, slumbering face."
+    "There was no such thing."
+    "What little detail I could make out in the deep darkness planted a swelling cold in my belly... her brow knitted and unknitted, her frown weakly gasping."
+    MCT "Is she having a bad dream?"
+    MCT "Does she have bad dreams often?"
+    MCT "She looks so scared..."
+    MCT "What's she dreaming about? Her family? The storm?{w} Me?"
+    "Then she jumped and drowned everything in her bloodcurdling scream."
+    GTS "{size=24}{i}Help me!{/i}{/size}"
+    "The only reason I wasn't struck deaf was that her spasm had thrown me under the blanket, tucked me down by her ribs. I scrambled back up as best I could on her bucking torso."
+    GTS "{size=24}K-Keisuke-kun? Where-w-where are you?{/size}"
+    MC "I'm here, I'm here! What's wrong!?"
+    "She almost sighed... but the sound was wet and shaky as it left her, like a stray in the autumn night rain."
+    GTS "Keisuke-kun..."
+    "Another sigh that became the faintest whimper; I could hear her choking back tears."
+    GTS "Mmng... you're... here... Th-thank heavens..."
+    MC "I'm here, Naomi, I'm here. You're gonna be alright, don't worry."
+    GTS "Thank you..."
+    "When she breathed out, I took the opportunity to climb back up onto her chest."
+    MC "What happened, Naomi-chan? You sound like you saw a ghost."
+    GTS "It... it was... ngh..."
+    "She took a few deep breaths as I rubbed my hand in circles on her ribs."
+    pause 0.75
+    GTS "I... I think I would like a cup of tea. W-would you... like me to pour a cup for you, Keisuke-kun?"
+    MC "Um... sure."
+    "Naomi folded the blankets off of her legs and I heard a cacophony of rustling from her rising out of bed. Then, she trod with slow, quiet steps to the bedroom door and flipped on the kitchen light on the other side."
+    MCT "..."
+    MCT "Something's up..."
+    MCT "What could shake her that bad?"
+    play sound Thunder
+    "Indeed, her shadow in the doorframe lingered right where it was for a moment or two more, hand clinging to the lightswitch."
+    "Whatever the disturbance was, she kept on walking into the kitchen. The cabinet, roused from nocturnal slumber, groaned open, and then came the bassy {i}clunk{/i} of Naomi setting her tea making kit down on the counter. I could hear it rattling."
+    "Another {i}clunk{/i} from her setting down her tea ‘cup'."
+    pause 0.75
+    "Silence blew in from the other room in the few moments after that; I began crawling towards the edge of the bed by the light pouring in from the doorway."
+    "Just at the edge, I jolted at the crash of something small and ceramic shattering on the ground."
+    GTS "{size=24}Aggh, God damn it!{/size}"
+    MC "Naomi-chan, are you okay?"
+    "A choked whimper was my only reply."
+    MC "I'm coming out!"
+    "I slid my legs down the edge of the mattress and began crossing the piebald concrete until I stood full in the light through the door."
+    scene Giant Dorm Interior with fade
+    "I winced and squinted as my eyes took a few seconds to adjust to the light."
+    play sound Thunder
+    "I needed a moment more to process what I saw there."
+    "Naomi stood there under the cold light, her face cupped and hidden in her hands, her trim stomach writhing under burdensome, trembling breaths, and her black hair hung low."
+    "I came closer."
+    show GTS_S surprised with dissolve
+    "The next thing I came to realize was that Naomi had grown. {w}Substantially."
+    if getFlag("GTS049_embrace"):
+        "I looked her up and down, almost without conscious thought. The first thing I met with was the realization that my view had shifted dramatically downward as I looked straight into her huge, pale knees."
+        "Farther up, and I saw that the countertop now stopped at her upper thighs rather than her trim crotch. Hardly thinking, I let my jaw drop."
+        "Every meter of her perfect, bare body had swelled with still greater mass, beauty and power."
+        "The modest tush I once knew was now a voluptuous ass that jutted out into the pale light."
+        "My eyes kept climbing up her; her teats had likewise grown noticeably beyond her original proportions, plumper, rounder, hanging lower and bulging out farther."
+        "They squished between her upheld arms, a truly insufficient cage for her new, burgeoning proportions."
+        "But her arms... down them each ran a single glassy rivulet, beyond the black veil of her hair. She wouldn't look at me."
+    else:
+        "My eye was immediately drawn to the way the slightly-taut outfit she was wearing last night now looked several sizes too small on her."
+        "Her proud, round breasts had exploded out of her suddenly-unbuttoned shirt, now draped over them like curtains in a mansion foyer, accented by her hanging bra straps. The ensemble didn't even reach her navel."
+        "I looked down a little further to see that the now-pronounced swell of her hips, too, had burst the confines of her skirt and had turned them into what was functionally a pleated blue loincloth."
+        "Looking ahead I saw the puddle and shattered remains of something."
+    GTS_S "I broke your teacup."
+    MC "...Don't worry about it, okay?"
+    GTS_S "Apologies, I'll prepare another cup."
+    "On the occasion she allowed me to see her tortured face, I saw her hair which was normally so well kept was disheveled, with loose strands falling across her face."
+    "I took a seat on the table as she set a cup of tea in front of me. She had tried to fix her frazzled hair, but her expression of concern and worry remained."
+    hide GTS_S
+    show GTS sad
+    GTS "I pray it's not too hot, I pulled it off a little early to try and keep it cool enough to drink."
+    MC "It's fine. Thanks."
+    show GTS sad
+    "She took a seat and sipped her tea but her expression remained unchanged."
+    MC "Do you want to talk?"
+    GTS "I'm..."
+    GTS "I'm not sure how to."
+    MC "What startled you in bed?"
+    GTS "It was a nightmare, a ghastly one."
+    MC "Well... well, how did it start? What was the first thing you saw?"
+    GTS "At first, I thought it was just a memory. I was back home... walking with Kazumi on the way we always took to fetch groceries."
+    menu:
+        "...You and your sister did that? Why not your mom?":
+            GTS "Mother had to attend to affairs of the home. Moreover, it was one way for us to learn responsibility."
+            MC "I see, okay. Um, sorry to interrupt."
+            $setAffection("GTS", 1)
+            GTS "No, no, it's fine. Thinking about that sort of thing helps to... ground me."
+            "She wrung her fist over her breast as she breathed in; I could hear her throat shudder as she breathed out."
+            GTS "Erm... where was I, then..."
+            MC "You were in the shopping district, right?"
+        "(Say nothing)":
+            "She paused, her eyes rolling over to dig up fading memories."
+    GTS "Ah... y-yes. We were walking along, and I think I caught myself growing taller. It was subtle at first, like only a head taller than my sister and then most people."
+    GTS "...But then, it came... faster and faster, and soon I could see over the two story buildings."
+    "She paused and sipped her tea."
+    GTS "For a few moments I was just frozen, and then I started growing again. Even though I couldn't see their eyes, I could tell everyone was watching me. I tried to shout... for help, to tell them to run, but I couldn't even utter a whisper."
+    GTS "Soon I was as tall as those office buildings in the city, yet it just wouldn't... wouldn't stop. I tried to run away, but I had grown so much that... every step, I destroyed houses, shops... schools. There was nowhere I could go."
+    GTS "I tripped on something, eventually... I couldn't tell what I was going to land on. There were so many... {w} That's when I awoke."
+    "I could see the tears welling up in her eyes moments before she collapsed onto the table."
+    "I stepped forward to pat her head as a realization struck me. At her size, what do gestures like that really mean, coming from someone like me?"
+    "I want to wrap her up in a hug and hold her close... but I can't.."
+    MCT "Can the best I can muster really only be head pats and caresses?"
+    GTS "Keisuke... do I ever scare you?"
+    MC "What? Of course not, you are the kindest person I know."
+    GTS "That's not what I mean. Am I physically scary? Like intimidating?"
+    MC "I..uh..I wouldn't say that. You are still you and people are gonna worry more about how you act with them."
+    GTS "I'd like to believe that, but... those faces. Those faces I saw in that horrible dream had nothing but fear and terror on them. Like I was a... a... monster."
+    "She bit her lips at that last word, and she wept anew. Once again the best I could try to do was pat her head."
+    MC "The last thing you are is a monster. You are still the Naomi people know you as and nothing's gonna change that."
+    pause 0.5
+    GTS "Thank you Keisuke, but I don't think you quite understand what I mean."
+    "She slowly stood up, allowing herself to loom over me."
+    "I guess I had gotten so used to my perspective that I had stopped considering just how much taller Naomi had become."
+    "In the dim lighting and deep darkness of the night she did look rather imposing. The occasional flashes of lightning backlighting her only added fuel to the fire."
+    MC "I... uh...I can sorta see what you mean better."
+    "She gently sat back down and buried her head in her hands."
+    GTS "...Will I live the rest of my life like this?"
+    "I felt an urge to reach out and give her my hand but something kept me from reaching her. There was the literal distance between us, but some other force wouldn't let me bring my arm up to her."
+    MC "Is this the first time this has happened?"
+    show GTS pondering
+    GTS "No, I had a similar dream my first night here. It wasn't as dramatic but still scared me terribly."
+    MC "What scared you so bad about it?"
+    GTS "I initially thought it was the feeling of being so tall, but after this I think it's something deeper."
+    MC "Like growing apart from people?"
+    GTS "I had not really considered that, but maybe a little."
+    show GTS neutral-2
+    GTS "Keisuke, have you thought about when your growth will end?"
+    MC "It was something I pondered when we were first diagnosed, but I think I got used to it after a while that it would continue its slow creeping growth."
+    MC "I guess I just started hoping it would stop one day and I'd notice it eventually. Is that what is scaring you?"
+    show GTS sad
+    GTS "The growths are slow, which makes it quite anxiety inducing. You don't know when it will finally stop."
+    hide GTS
+    show GTS_S neutral
+    with dissolve
+    "She stood up from the bed and slowly closed the bedroom door revealing several chalk marks on the wall. Each mark had a date on it showing a continuous steady daily growth."
+    GTS_S "I guess I'm more scared of when it may decide to cease... or if it doesn't cease."
+    GTS_S "Being taller than the average door was never something I could have imagined. Especially when I was often the shortest person in the room for most of my life."
+    show GTS_S neutral at Transform(xzoom=-1)
+    GTS_S "Of course now, I'm far taller than most of the other students living here in the quarry. I observed the wall of fame in the caverns and I am above many of the previous students already."
+    MC "Are you the tallest now?"
+    GTS_S "No, Akio is still taller than me.Though the margin has continued to shrink day by day."
+    MC "I think the margin may have shrunk again."
+    if getFlag("GTS049_embrace"):
+        show GTS_S surprised
+        GTS "Wh-what do you mean?"
+        MC "Ah... Look around you."
+        show GTS_S surprised at Transform(xzoom=1)
+        "She turned her head hither and thither as though pulled by chains; soon enough, comprehension dawned."
+        show GTS_S sad
+        GTS "I don't have any more clothes..."
+    else:
+        "Naomi looked blankly at me before looking down at her clothing. Registering for the first time the damage to her clothing. A single tear rolling down her cheek and splashing into her tea."
+    show GTS_S sad
+    GTS "And they fit me so well just yesterday."
+    "A silence filled the room, neither one of us daring to make a move on our tea as wispy steam curled from the cups."
+    "The sounds of the storm outside gradually faded away, while the silence between us remained. The steam from the tea had faded as well, both cups sitting cold and untouched."
+    MC "The worst of the storm seems to have passed us now. I think I may go back to my dorm if that's the case."
+    show GTS_S surprised
+    GTS "Oh? Are you sure that it's safe to go out there?"
+    MC "It's probably just muddy right now. I haven't heard any thunder in the past several minutes, so it should be clear."
+    show GTS_S neutral
+    GTS "Alright, just be careful please."
+    MC "I'll make sure to do so just for you."
+    "She gave me a weak smile for a moment before her face returned to one of worry."
+    "Climbing down from the table and grabbing my amenities, I headed out and towards the dorms."
+    MCT "All that growth in one night, that can't feel normal or remotely sane."
+    "I absentmindedly stroked my own hair as though to remind myself that what we were all experiencing was nothing near normal."
+    MCT "I do hope for her sake that this slows cause I'm not sure how much more she can endure."
+    "Staring up at the sky I spotted the full moon peek out for a moment. It's bright white light illuminating the ground for a moment, before slowly being snuffed out by more dark storm clouds."
+    "As I approached the school another round of thundering could be heard in the distance, as I tried not to think of what it meant."
+    jump daymenu
+
+label GTS051:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

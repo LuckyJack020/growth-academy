@@ -4628,6 +4628,7 @@ label AE024_c1_3:
     jump daymenu
 
 label AE025:
+    $setTimeFlag("XX25")
     $setProgress("AE", "AE026")
     scene Dorm Interior with fade
     play music Rain
@@ -20916,7 +20917,7 @@ label AE092:
     HR "..."
     Takamura "Okay, I did the best I could."
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
-    show HR neutral at wiggle_loop
+    show HR neutral at wiggle_loop(0.15)
     pause 0.7
     show HR unique at altMove(0,0.5)
     "As Tashi-sensei was about to speak, Takamura-sensei entered the room, breathing a sigh of exhaustion as Tashi-sensei stood up straight."
@@ -21079,7 +21080,7 @@ label AE093:
     AE "Haaah..."
     play music AE
     hide WG with dissolve
-    show AE angry-2 at wiggle_loop
+    show AE angry-2 at wiggle_loop(0.15)
     "Shiori began to squirm her way forward, each thrust of her hips causing her gigantic ass to jiggle as she did, causing the rest of us to look away in embarrassment."
     HR "Hey, uh... Matsumoto-san? You can come in now."
     show BE surprised-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -21216,7 +21217,7 @@ label AE093:
     AE "Mhm!"
     MC "3, 2, 1, PUSH!"
     "I barely felt like I did anything as, almost immediately, Akira gave a big shove as with a visible ripple along her ass—"
-    show AE sad at wiggle_loop
+    show AE sad at wiggle_loop(0.15)
     "Shiori was pushed forward into the room as Tashi-sensei, almost getting bowled over by Shiori's mass, did what he could to break her fall with his arms."
     show AE ahegao
     AE "Nggya!~"

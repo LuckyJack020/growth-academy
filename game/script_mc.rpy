@@ -5354,112 +5354,213 @@ label MC007:
     "..."
     RM "Hey, wake up!"
     MC "Wah?"
-    scene Library
-    show RM angry
-    with fade
+    scene Library with fade
+    MCT "Why am I in the library?"
+    MC "!"
+    MC "Aw crap! I must have fallen asleep while studying."
+    show RM neutral with dissolve
     play music RM
-    MC "...Oh right... library archives. Why am I here again?"
-    RM "For the fifth time, I need you to keep watch while I'm going over these documents, and you can't when you keep falling asleep!"
-    MC "What did you expect, you made me get up at four in the morning; I only got like six hours of sleep, what time is it anyways?"
-    RM "Around six in the morning."
-    MC "Oh I'm sorry, six hours and 36 minutes, in between the times you keep waking me up."
+    RM "That much is obvious."
+    MC "Hey, I've been studying hard. I deserve a break."
+    show RM doubt
+    RM "I'm sure that sounded more convincing in your head."
+    MC "Alright, fine. You're right. I probably only got a solid five minutes of studying before I conked out. {w}What are you doing here anyway?"
+    show RM happy
+    RM "I'm searching for information."
+    MC "I suppose the library would be the place for that. Trying to get a head start on the Yayoi Period paper for Tashi's class?"
+    show RM distrustful
+    RM "No. Not {i}school{/i} information. Information {i}about{/i} the school."
+    MC "You've lost me already. What are you talking about?"
     show RM neutral
-    RM "Sarcasm is the lowest form of wit."
-    MC "Oh, thank you for that piece of information, I'll be sure to put it in the file cabinet I keep under my bed next to those papers of yours."
-    RM "Look, is it too much to- Ah!"
-    "Daichi stopped himself as he grabbed an old but intact file. He wiped away years of dust off of it before reading its contents."
-    MC "Alright I'll bite, what is it?"
+    RM "I'm not interested in the library {i}per se{/i}, but the library archives. Students aren't normally allowed access unless supervised by the librarian, but she's going to go on her break soon."
+    MC "How do you know that? Did you canvas this place like you're going to pull off a bank heist?"
+    show RM sad
+    RM "..."
+    MCT "On second thought, I'm probably better off not knowing."
+    show RM neutral
+    MC "Nevermind."
+    RM "As I was saying. She's about to go on break. There's information in the archives I need to retrieve, information I'm sure the school doesn't want students to know."
+    RM "This is where you come in. I need a lookout for when she comes back."
+    menu:
+        "No thanks. I'm busy studying.":
+            show RM doubt
+            MC "No thanks. I'm busy studying."
+            RM "And how's that going for you?"
+            MC "Alright, fine. I'm bored to tears, I'm up for anything but more studying."
+
+        "Not like I have anything better to do.":
+            show RM happy
+            MC "Alright fine. Not like I have anything better to do."
+            $setAffection("RM", 1)
+            RM "Trust me, it'll help."
+    show RM neutral
+    "We walked towards the back of the library until we stopped at the threshold of a dimly lit room that seemed to be nothing but file cabinets."
+    "It was small— for this school anyway— accessed by what appeared to be the first normal sized door I had seen in this entire place."
+    MCT "Maybe Daichi is onto something here. This looks fishy {i}as hell{/i}."
+    show RM distrustful
+    RM "Alright, just pretend to cough or something if you spot the librarian coming back in."
+    MC "What are you looking for anyway?"
+    RM "I'll know it when I see it."
+    MC "Well that's reassuring."
+    show RM neutral
+    "I split my attention between eyeing the door and eyeing what Daichi was doing in the room."
+    "I had expected him to go haphazardly tearing through all the files he could get his hands on, but I began to be intrigued when I realized he seemed to actually have some idea what he was looking for."
+    pause .5
+    show RM smug
+    "Appearing to have found something, Daichi nodded and smirked, having finally settled on one of the cabinets to open. Pulling out a noticeably worn, but intact file, he wiped away the years of dust off of it before reading its contents."
+    MCT "Alright, now I'm curious."
+    MC "What did you find?"
     show RM happy
     RM "Something that may lead to a breakthrough. Give me a minute to read it."
     show RM neutral
-    RM "Alright, so most of these articles are dead ends, but this particular article is about the first record of growth. Apparently it was a female around her teens. Name: Chie Kazomazumi."
-    RM "She was about as average as average can be. However, around her eighteenth birthday in the 1970s, her breasts started to enlarge to an extreme size."
-    MCT "Huh, he might actually have found something worth a damn, assuming it's legit."
-    show RM smug
-    RM "This is a great lead. I need to follow up on it."
-    MC "Hey, congrats man..."
-    MC "...So can I go back to bed now?"
+    RM "Alright, so most of these articles are dead ends, but look here. This is an article by the investigative journalist D.A. Kusoreikā."
+    RM "{i}This{/i} particular article is about the first record of a growth factor. Apparently it was a female in her late teens. Name: Chie Kazomazumi."
+    MC "The first one huh?"
+    show RM doubt
+    RM "First {i}official{/i} one anyway."
+    MCT "Always the skeptic, this one."
+    MC "What does it say about her?"
     show RM neutral
-    RM "Fine, fine, I guess we earned a rest."
-    "With that, we started to walk out. Daichi wanted to make sure we could see anyone come in, so we left the door a crack open."
-    MCT "Wait... is the library open at this time? If not how did he... ah screw it, I'm too tired for this."
-    "We saw through the crack that there was someone facing away from the door and looking at the stairwell. Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
+    RM "Apparently, she was about as average as average can be. However, around her eighteenth birthday in the early 1980s, her breasts started to enlarge to an extreme size."
+    MCT "Huh, he might actually have found something worth a damn, assuming it's legit."
+    MC "How big we talking here?"
+    show RM doubt
+    RM "Seriously? Is that what you're wondering?"
+    MC "Just curious. These boobs literally made history after all."
+    if getHighestAffection() == "BE":
+        show RM neutral
+        RM "Bigger than Inoue-san is currently, if that's what you're wondering."
+        MCT "Man, wouldn't that be a sight... {w}Wait a second? Am I that easy to read?"
+        MC "Um, well..."
+        show RM smug
+        RM "Hmph, thought so. You're pretty easy to read for a guy whose hair covers half his face."
+        MC "Oh come on."
+        RM "Heh. This is a great lead. I need to follow up on it."
+    else:
+        show RM neutral
+        RM "Big enough then, apparently."
+        show RM smug
+        RM "Heh. This is a great lead. I need to follow up on it."
+    MC "Alright, well good luck with that."
+    show RM doubt
+    RM "Where are you going?"
+    show RM neutral
+    MC "I'm headed back to the room. I'm obviously wasting time here if I can't keep my eyes open. Might as well catch a nap and get some real rest instead of tweaking my neck from using a textbook as a pillow."
+    RM "Alright, I'll head back with you. I gotta start looking to see if I can find anything more online about this person."
+    "Unfortunately for me we didn't get too far before something tripped Daichi's suspicion. Apparently we weren't the only people in the library at this time."
+    "Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
     show RM angry
     RM "Keep it down, who is that?!"
     MC "How should I know!?"
-    RM "Well go check, I made you watch, else what am I paying you for?!"
+    RM "Well, go check! I made you the watch, what else am I paying you for?!"
     MC "I'm not being paid jack!"
     show RM smug
     RM "Not with that attitude you aren't. Now go check!"
     MC "Ugh, fine."
-    "Reluctantly, I sneaked towards the door, and to my surprise..."
-    scene Hallway
-    show FMG neutral
-    with fade
-    MC "It's Akira Mizutani, she's in the hallway near the stairway."
+    hide RM with dissolve
+    "Reluctantly, I sneaked around one of the bookshelves, and to my surprise..."
+    show FMG neutral with dissolve
+    MC "It's Akira Mizutani, why do you care if she catches us in the back?"
+    RM "The fewer questions people ask, the better."
     hide FMG with dissolve
     show RM angry with dissolve
-    RM "Why is she here?! It's around 6, and I've never seen her awake earlier than five minutes before class starts at the most."
-    MC "How should I know, I wouldn't be here if- wait... I think I see someone coming down the stairs."
-    RM "Oh god, move over!"
+    RM "Why is she here?!"
+    MC "Uh, because it's a school library and we have a big assignment coming up in one of our classes? {w}Besides, she's not the only one here."
+    RM "What? Who's with her? Move over, let me see!"
+    MCT "Just what else did he take from that file cabinet that's got him this paranoid?"
+    "Daichi moved to the side to get a look for himself."
     hide RM with dissolve
-    "Daichi moved to the side to get a look for himself. To both of our surprise the person who was coming down the stairs..."
-    show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1)
-    show WG neutral at Position(xpos=0.75)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
-    RM "Alice Nikumaru? She's without the assistance of Kodama-san. That alone raises more red flags."
-    MC "Be quiet, I think they're about to talk..."
-    WG "Alright Mizutani, what was so important that you had me wake up so early?"
-    FMG "Hey Alice, the reason I wanted to talk to you..."
-    show FMG sad
-    FMG "I wanna get to know you better!"
-    show WG surprised
-    WG "Um... sorry?"
-    FMG "I know we don't really see eye to eye, but I generally want to get along with you."
-    show WG neutral
-    WG "Well, I appreciate the desire. However, I fail to see much common ground between us."
-    FMG "That's the thing, you don't know. I really wanna give this a chance."
-    show WG sad
-    WG "...I'm still not seeing-"
+    "Noticing the two of them, Daichi's eyes darted across the room in suspicion, no doubt looking for others. He had tried to be slick about his little heist, but it was obvious to see he was pretty worried about being found out."
+    RM "Alice Nikumaru? Why's she here with Mizutani-san? And without the assistance of Kodama-san. That alone raises some red flags."
+    MC "Yeah, about your mental state. {w}What is so unusual about seeing our classmates around campus?"
+    RM "Shhh! Be quiet. I think they're about to talk..."
+    WG "Mizutani-san? I must say I didn't expect to run into you here of all places."
+    show FMG angry-2
+    FMG "What's that supposed to mean?"
     show FMG neutral
-    FMG "Tell you what, do you know Kazomazumi Bakery on Genki Street?"
+    WG "I just hadn't expected you to be so industrious to start working on the paper for Tashi-sensei's class ahead of time."
+    FMG "Eh, sorta. The gym was closed this morning because they were buffing the floors."
+    show FMG sad-2
+    extend " Why they had to pick chest day to do it, I'll never know."
+    show FMG neutral
+    FMG "I figured I might as well take the time to start something with the project while they finished, but I'm getting bored already."
+    show WG worried
+    WG "Admittedly I'm having trouble staying focused on the task at hand as well."
     show WG neutral
-    WG "I do. Why?"
-    FMG "If you're willing to get to know each other, I'll treat you to some cupcakes there."
-    show WG happy
-    WG "This does sound like it could be beneficial. I accept your invitation."
+    extend " There isn't exactly an urgency to this task given how far out the assignment is, and quite frankly I think I could use a snack to help me focus better."
     show FMG happy
-    FMG "Great! How does twelve sound?"
+    FMG "You and me both!"
+    show FMG flex
+    extend " Hey! That gives me an idea."
+    show FMG neutral
+    extend " Do you know Kazomazumi Bakery on Genki Street?"
+    show WG neutral-2
+    WG "I do. Why do you ask?"
+    FMG "Well, why don't we get out of here and head over there for some cupcakes? My treat."
+    show WG pondering
+    WG "Hmm, normally I'd be far too busy for such spurious changes to my schedule..."
     show WG haughty
-    WG "Well, they're rather small, I'd want a half-dozen at least, so that would-"
-    show FMG surprised
-    FMG "Wha? No, I mean twelve o'clock."
-    show WG surprised
-    WG "O-Oh um... *ahem*."
-    show WG neutral
-    WG "T-That is customarily during my study time, but I can fit you into my schedule. Until then, I bid you adieu."
+    extend " but I think I can spare the time to work this in today."
+    show WG happy-2
+    extend "Especially if cupcakes are involved."
     show FMG happy
-    FMG "Sweet, see you then."
+    FMG "That's what I figured."
+    show WG doubt
+    WG "What's that supposed to mean?"
+    show FMG neutral
+    FMG "Oh nothing..."
+    show FMG flex
+    extend " Come on, let's go."
     hide FMG
     hide WG
     with dissolve
-    "Once both of them were done, they went their own ways."
-    MC "Huh, that's something."
+    MC "Well there you go. Has your voyeuristic itch been scratched now?"
     show RM neutral with dissolve
-    RM "I'm sure you noticed something wrong with that conversation right?"
-    MC "...Kazomazumi Bakery."
+    RM "Not so fast."
+    MCT "Oh here we go..."
+    show RM doubt
+    RM "Don't tell me you didn't notice something peculiar mentioned in that conversation."
+    MC "What? The thing with Kazomazumi Bakery you mean?"
     show RM angry
     RM "EXACTLY! Why would those two meet up at that specific bakery that shares the same name as the article of the first record growth I found on the same day!?"
-    MC "...I-it might be a coincidence that they share the same name?"
-    show RM neutral
-    RM "...Well, how many Kazomazumi's do you know?"
-    MC "..."
-    MC "Alright, fine! It does sound kinda weird."
+    MC "...That it's a coincidence that they share the same name?"
+    if getFlag("MC005RM"):
+        show RM sad
+        MC "You know, like the last time when you sent us on a wild goose chase on a hunch about someone's last name that turned up nothing?"
+        MCT "In no small part because you were a giant chicken."
+        show RM doubt
+        RM "Being wrong once doesn't establish a pattern."
+        MC "Yeah, well, it sure establishes precedence."
+        show RM angry
+        RM "Not every lead is going to be a big break, but never following up on any is the fastest way to get nowhere."
+        show RM smug
+        extend " Besides, how many Kazomazumi's do you know?"
+    else:
+        show RM neutral
+        RM "...Well, how many Kazomazumi's do you know?"
+        MC "..."
+    MC "Alright, fine! It does seem like a strange coincidence, but so what?"
     show RM angry
-    RM "See! There's something going on, I think we should go to this meeting spot and witness what might be a breakthrough!"
-    "Normally, I would have thought about this... but it was too big of a coincidence to pass up."
-    MC "Alright, let's go."
+    RM "What do you mean, \"so what\"? {w}There's something going on, and this is the best way I can think of to follow up on this lead. We should follow them over there."
     show RM neutral
+    "Normally, I would have thought about this... but part of me did think this was a bit too convenient to just dismiss as coincidence."
+    MC "Still though, why do we have to follow them?"
+    if isEventCleared("MC001"):
+        show RM happy
+        RM "This is exactly the type of lead I told you about before you should be paying attention to in conversations. If you keep your senses sharp, you'll be able to pick up on things people don't even realize they're telling you."
+        MCT "You mean like with this conversation and your mental diagnosis?"
+        show RM distrustful
+        MC "I'm not really picking up the significance of this to be honest."
+        show RM doubt
+        RM "Look, I'll admit, it's not much of a thread, but something's there. I mean {i}I{/i} hadn't heard of this place before, maybe they know something I don't? It's worth checking out every viable lead."
+    else:
+        RM "I hadn't heard of this place before, maybe they know something I don't. It's worth checking out every viable lead."
+    show RM neutral
+    "Following, tailing, spying, whatever you wanted to call it, I wasn't exactly comfortable with the notion, but I thought it might be best for me to go with Daichi since I didn't trust him not to make a scene without me."
+    MC "Alright, let's go."
     RM "Alright, but first take this."
     "He handed me a baseball hat before putting one on himself."
     RM "We don't want those two to catch us spying on them."
@@ -5467,39 +5568,67 @@ label MC007:
     RM "You can never be too careful. Now then..."
     show RM smug
     RM "Operation \"Stakeout at the Bakeout\" starts now!"
+    MCT "Groan inducing puns aside, at this point I was just glad he didn't expect me to wear one of those pairs of glasses with the fake nose."
     scene black with fade
     pause 1
-
     scene Town with fade
-    play music HigherEdu
-    "A few hours later, we arrived at the town with five minutes till the meeting. We peeked around to see the bakery in question."
-    MC "Is that the place?"
-    show RM neutral with dissolve
-    RM "This is the only bakery on Genki Street, and the next closest bakery is nine blocks away on Enoshima Ave."
-    RM "Not to mention the obvious sign that reads \"Kazomazumi's Bakery.\""
-    MCT "Jeez. I was just being thorough."
-    MC "Hey, why are we hiding behind a pole?"
-    "...I forgot to mention we were peeking around a telephone pole."
-    RM "Do you see an open alley with a good view of the front?"
+    play music Peaceful
+    "It didn't take us too long to get into town, there were plenty of buses running this time of day."
+    if isEventCleared("MC005"):
+        "I had definitely been to this part of town before. I recognized the sign of that konbini store with the pharmacy across the street. That, and the smell of fresh baked goods in the air left little doubt this was the spot."
+        show RM neutral with dissolve
+        RM "Is this the place?"
+        MC "It has to be, it's the only bakery on this street, as far as I can tell."
+        RM "I suppose the obvious sign that reads \"Kazomazumi's Bakery.\" gives it away."
+    else:
+        MC "Is that the place?"
+        show RM neutral with dissolve
+        RM "It has to be, it's the only bakery on Genki Street, as far as I can tell."
+        RM "Not to mention the obvious sign that reads \"Kazomazumi's Bakery.\""
+    MC "The obvious has never stopped your skepticism before."
+    show RM angry
+    RM "Just be quiet for a second. This is a stakeout after all."
+    show RM doubt
+    MC "Is that why we're hiding behind a pole?"
+    RM "Well if you see an open alley with a good view of the front of the place, you let me know."
+    show RM neutral
     MC "...Fair point."
-    RM "Alright, we got five minutes before the meeting time, let's head in!"
-    scene Cafe
+    RM "Alright, the coast looks clear. I think we beat them to the punch. We'll be less likely to be spotted if we can get inside first. Let's head in!"
+    scene Bakery Entrance
     show RM neutral
     with fade
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
-    "It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
-    "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup."
-    "She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said \"Haruko\" pinned to the front."
-    Haruko "Hi, welcome to Kazomazumi Bakery! What can I get for you two?"
+    "It only had half a dozen tables and a counter with stools for seating. There was another table seated besides us, but beyond that the only other person I could see was the counter girl."
+    "The girl looked to be in her late twenties, early thirties maybe, mid-cut curly dark hazel hair, bright brown eyes, slightly chubby with big breasts, maybe an E-cup by my estimation, and I considered myself an expert on such estimates."
+    if getHighestAffection() == "BE":
+        "Then again, hanging out with Honoka so much had probably skewed my perspective on the matter."
+    "The girl wore a caramel-brown and cream-white patterned baker outfit. We approached the counter to get our order in, hopefully before Alice and Akira walked in."
+    Haruko "Hi, welcome to Kazomazumi Bakery! My name is Haruko, what can I get for you two?"
     MC "Yeah, hi! This is our first time here, what do you recommend?"
-    Haruko "Well, today we have a special on pies and the cupcakes."
+    Haruko "Well, today we have a special on pies and our cupcakes."
+    show RM concerned-2
+    RM "..."
+    "I had to assume Daichi was nervous about his motives for visiting the establishment being perceived somehow. At this point I realized it was up to me to play the part to act naturally."
     MC "We'll have the cherry pie please."
     Haruko "Sure!"
-    Haruko "So I'm guessing you two are students?"
-    MC "How did you know?"
-    Haruko "The outfit gives it away."
-    MC "Oh, right. So... I take it you know about the school then?"
-    Haruko "Yeah, my mom had a growth thing as well, but the school wasn't around back then. Best I've got is that it was there when I went there, ten years ago."
+    Haruko "So I'm guessing you two are students at Seichou Academy?"
+    show RM sad:
+        ease 1.5 xpos 0.45
+        xzoom -1
+        ease 1.5 xpos 0.55
+        xzoom 1
+        ease 1.5 xpos 0.45
+        xzoom -1
+        ease 1.5 xpos 0.55
+        xzoom 1
+        ease 0.75 xpos 0.5
+    RM "!"
+    MC "I guess the school outfit gave it away, huh."
+    Haruko "Well, that and I couldn't help but notice you look like you had a growth with your hair."
+    MC "Is it that obvious already?"
+    show RM neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=1)
+    Haruko "Maybe not to most people outside the island, but most people on the island are familiar with them. Many are even former students."
+    Haruko "My mom had a growth thing as well, but the school wasn't around back then. Best I've got is that it had been there a while before I went there, over fifteen years ago."
     if isEventCleared("MC002"):
         MC "Huh, didn't know the school was that old."
         Haruko "Oh, it's even older than that."
@@ -5507,151 +5636,226 @@ label MC007:
         MC "The biology teacher? He is, yeah."
         Haruko "Could you send the old geezer my regards? He was a great teacher!"
         MC "Will do."
+        "Couldn't say I particularly agreed with that assessment, but I figured the old geezer might want to know someone remembered him."
+        $setFlag("MC007_regards")
     else:
         MCT "Huh, didn't know the school was that old."
     Haruko "Anyways, here you guys go."
+    scene Bakery with fade
     "We paid the cashier in advance before we left, we took the pie, thanked her, and planned our next move."
     MC "So where should we sit?"
+    show RM doubt with dissolve
     RM "Hmm, we cannot risk them walking past us, that will give away our position."
-    RM "We'll sit at the edge of the counter on the stools. The lights are dim enough so at a distance they can't tell us apart from any other students, plus it's in the middle of the building."
-    "Once we finished talking about it, we took our seats on the middle stools and waited for the girls to come. I tucked my hair into my collar so as to not give myself away, though I left my bangs out to hide my face."
+    RM "Let's pick this table in the back corner. The lights are dim enough so at a distance they can't tell us apart from any other students."
+    #scene cafe seats
+    show RM neutral
+    #with fade
+    "We took our seats in the corner and did our best to keep our heads down. I tucked my hair into my collar so as to not give myself away. Though that probably wasn't necessary considering my bangs cover half my face anyway."
     MC "Hey, maybe you can ask the owners about this place?"
     show RM angry
     RM "Are you nuts!? I'm not going to show my hand right away! I'll keep coming as a regular, and calmly ask one or two questions, at the most, by the third visit."
     MC "Well, I'm just saying it wouldn't hu-"
     #*Door chime*
     RM "Zip it."
-    hide RM with dissolve
-    show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1)
-    show WG neutral at Position(xpos=0.75)
-    with dissolve
-    "Both Akira and Alice entered the building. They were a few feet away from us but enough to not recognize us."
+    scene Bakery Entrance
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    "Both Akira and Alice entered the building. They were a few meters away from us but not close enough to not recognize us."
     Haruko "Oh hey! Is it just you two?"
     FMG "Yes ma'am, just me and my friend here."
     Haruko "Well, what would you two like?"
-    FMG "Let's see, we'll have a box of cupcakes, please."
-    WG "I'll have coffee. Cream and sugar."
-    FMG "Yeah, me too."
+    FMG "Let's see... we'll have a box of cupcakes, please."
+    WG "And I'll have coffee too. Cream and sugar."
+    show FMG happy
+    FMG "Oh, that sounds good. Put me down for that too."
+    show WG surprised-2
     WG "Oh? You take your coffee sweet as well?"
-    FMG "Sure, so long as it's not that water downed sludge the school cafeteria serves that is."
+    show FMG neutral
+    FMG "Sure, so long as it's not that water downed sludge the school cafeteria serves."
     show WG happy
-    WG "I couldn't have said it better. Is it too much to ask for a nice cup of coffee to start the day off? With the budget the school has, you would think they could put some aside for an espresso machine."
-    FMG "Wouldn't be surprised, their chefs aren't exactly winning any awards for niceness."
-    WG "That is the truth. It's nice to meet someone who gets it, Mizutani-san."
-    FMG "Yeah, but you can just call me Akira, no need for formalities."
+    WG "Haha!"
+    show WG happy-2
+    extend " Exactly. I couldn't have said it better."
     show WG neutral
-    WG "Very well, now shall we take a seat?"
-    "They got their food and sat at the table behind us. Once there, Daichi did a zipping motion around his lips and slumped farther into the table; I followed suit and we listened in while pretending to read the menus."
-    WG "All right Akira, how are we doing this?"
-    FMG "I ask a question, and you ask a question."
-    WG "Seems almost like a game. Very well. You brought me here, you may begin."
-    FMG "First, what's your last name?"
-    WG "Nikumaru. For my question: how long have you not remembered my last name?"
-    FMG "Um... Since the beginning of school. I'm sorry it's just for the life of me I couldn't remember your last name."
-    WG "It's fine. I prefer going by my first name anyway."
-    FMG "Right, my next question is, have you ever gone to America?"
-    WG "Yes. My mother is from there and I did most of my schooling there."
-    FMG "That's cool!"
-    WG "Indeed. Where do you see yourself in five years?"
+    extend " Is it too much to ask for a nice cup of coffee to start the day off? With the budget the school has, you would think they could put some aside for an espresso machine."
+    FMG "Wouldn't be surprised, their chefs aren't exactly winning any awards for niceness."
+    WG "That is certainly the truth. I knew I couldn't be the only one that noticed that. It's nice to meet someone who gets it, Mizutani-san."
+    show FMG happy
+    FMG "Hehe, yeah. Hey, you can just call me Akira, no need for formalities."
+    show WG neutral
+    WG "Good to know. I have to agree. I've never cared for such conventions myself."
+    scene Bakery
+    show FMG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG happy at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    #scene cafe seats
+    WG "Now, where shall we take a seat?"
+    show FMG neutral
+    show WG neutral
+    "They got their food and sat at the table behind us, which was basically the worst spot possible if we didn't want to get found out."
+    "After they got seated, Daichi did a zipping motion around his lips and slumped farther into the table. I followed suit while we listened in while pretending to read the menus."
+    show WG haughty
+    WG "Alright Akira, so why did you invite me to come here with you?"
+    show WG neutral-2
+    show FMG sad-2
+    FMG "I don't know. I just wanted to get away from campus,"
+    show FMG neutral
+    extend " seemed like a good opportunity since we were both craving something sweet."
+    show FMG happy
+    extend " Plus, I figured it couldn't hurt to get to know one of my classmates."
+    FMG "We're all going to be stuck with each other for a while it seems, might as well try to get to know each other."
+    FMG "So, like, are you from America?"
+    show WG pondering
+    WG "Well, I was born in Japan, and I've lived most of my life here, but to answer your question— sort of, in a way. My mother is from there and I did most of my schooling there."
+    show WG neutral-2
+    WG "I've lived in both countries off and on growing up."
+    show FMG happy
+    FMG "That's cool! You speak like a native, so I wasn't sure if you were from there or not."
+    show WG happy
+    WG "I'm glad you noticed that, rather than just my appearance."
+    FMG "Heh, most people probably would think something similar about me, since I come from Okinawa."
+    show FMG neutral
+    show WG neutral-2
+    WG "Okinawa huh? I've heard it's beautiful there. I hope to visit one day."
+    FMG "You definitely should."
+    FMG "So was there anything you'd like to ask me?"
+    show WG pondering
+    WG "Well, I guess if I wanted to get to know someone, I'd have to ask, where do you see yourself in five years?"
     FMG "I dunno."
-    show WG surprised
+    show WG surprised-2
     WG "..."
     WG "T-that's it? You don't know?"
-    FMG "Well, how can any of us expect how the future will turn out? I like, think about the future as much as the next girl, but you gotta put in some room for the unknown."
-    show WG neutral
+    FMG "Well, how can any of us expect how the future will turn out? I like to think about the future as much as the next girl, but you gotta put in some room for the unknown."
+    show WG worried
     WG "I can understand that rationale, but leaving so much to chance..."
+    show WG pondering
     "Alice shook her head, flummoxed."
+    show WG neutral-2
+    WG "{i}Sigh{/i}, to each her own, I guess..."
     FMG "Now for this next question, I want you to be honest."
+    show FMG happy
     FMG "Is it true that Americans deep fry soda and junk food?"
+    show WG surprised-2
     WG "Wha-? Where did you hear that?"
+    show FMG neutral
     FMG "The Internet."
-    show WG sad
-    WG "...Just to be clear, I do not partake of that kind of food. But yes, some places deep fry soda, Tronkos, chocolate bars..."
+    show WG doubt
+    WG "...Just to be clear, I do not partake of that kind of food."
+    show WG neutral
+    extend " But yes, some places deep fry soda, Tronkos, chocolate bars..."
+    "I heard Akira sipping her coffee as she processed the idea of deep-fried candy."
     FMG "Huh. No offense, but Americans seem kinda weird."
     show WG neutral
     WG "It is a large country and there are many... eccentrics on the fringes."
-    "I heard Akira sipping her coffee as she processed the idea of deep-fried candy."
+    show WG doubt
+    extend " I've not partaken in any such... cuisine myself, if it can even be called that."
+    show WG neutral-2
     FMG "Man, the coffee is a hell of a lot better here than the stuff at school."
-    WG "Mmm, yes. Not my preferred choice, but it's one of the more palatable substitute brands I've had since coming here."
-    WG "Now, why did you pick cupcakes?"
+    WG "Mmm, yes. Not my preferred choice, but it's one of the more palatable brands I've had since coming here."
+    FMG "I take it you're used to the more fancy stuff?"
+    WG "\"Fancy\" is often overrated. There isn't often too much of a difference in quality between a top tier brand at ten times the price than a typical premium quality product that manages to live up to the hype— at least when it comes to coffee."
+    FMG "Hmm, good to know. I guess I should spring for an extra ten yen on a cup of coffee every now and then."
+    show WG haughty
+    WG "I'd highly recommend so."
+    show WG neutral
+    extend "Curious, if I may ask, why did you pick cupcakes?"
+    show FMG sad
     "Akira put down the cupcake she was eating and looked down at it before answering."
-    FMG "Whenever I was really down, my mom would always bake cupcakes. She would always do it all by hand, and it made it that much more tasty."
-    FMG "Even now, I always go eat a cupcake when I'm sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweeter."
-    WG "I had you pegged as the brash tomboy who didn't have a care."
-    WG "What do you have to be sad about, if it is not too personal?"
-    FMG "Sorry, I couldn't tell you, besides it's my turn."
-    FMG "Why did you agree to come join me?"
+    FMG "Growing up, whenever I was really down, my mom would always bake cupcakes. She would do it all by hand, and it made it that much more tasty."
+    show WG surprised-2
+    FMG "Even now, I still always go eat a cupcake when I'm sad."
+    show FMG neutral
+    extend " I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweeter."
+    show WG neutral-2
+    WG "We all could use a pick-me-up every now and then. That's something I've learned sweets are definitely good for."
+    FMG "For sure. {i}I guess it's my turn.{/i} Why did you agree to come join me?"
     show WG sad
     WG "I came to see..."
     show WG happy
     extend " If you were a fellow connoisseur of cupcakes."
     "It seemed like she wanted to say something else at first, but Akira didn't seem to notice."
+    show FMG happy
     FMG "Heh, yeah I am."
+    show FMG surprised-2
     FMG "Oh, it's almost 12:30, we should probably get going."
-    show WG neutral
-    WG "You go on ahead. I'll handle the check."
+    show FMG neutral
+    show WG surprised-2
+    WG "Oh you're right."
+    show WG neutral-2
+    extend "Well, in that case, go on ahead. I'll handle the check."
     show FMG surprised
     FMG "What? But I-"
     show WG happy
     WG "Please, this is nothing to me. Consider it a show of my enjoyment of this get-together."
     show FMG happy
-    FMG "All right, I hope we can do this again. Later."
-    WG "As do I. Pleasant travels, Mizutani-san."
+    FMG "All right, that's cool. I hope we can do this again."
+    WG "As do I. I'll see you later, Akira."
+    FMG "You too. Later"
     hide FMG with dissolve
-    show WG sad
-    WG "*Sigh* You had a potential sale there Nikumaru, until that personal matter cropped up."
-    show WG neutral
-    WG "No way to foresee that, though. Next time, keep the mood light."
+    show WG worried
+    WG "{i}Sigh{/i}. You had a potential sale there Nikumaru, until that personal matter cropped up..."
+    show WG pondering
+    WG "No way to foresee that though. Next time, keep the mood light."
     "After talking to herself, she paid the bill and left."
     hide WG with dissolve
-    show RM angry at center with dissolve
-    RM "Wait... That's it? We've been here for 20 minutes listening to girl talk, and they didn't say a single thing about the article, let alone this stupid bakery!?"
-    MC "Huh, maybe it really was just a coincidence."
+    show RM angry with dissolve
+    play music DayByDay
+    RM "Wait... That's it? We've been here for over 20 minutes listening to girl talk, and they didn't even mention a single thing about this Kazomazumi person, let alone this stupid bakery!?"
+    MC "I can't believe {i}I'm{/i} the one to say this, but would you keep your voice down? {w}I mean, look at where we are."
+    MC "Not to say \"I told you so\", but maybe it really was all just a coincidence."
     show RM sad
-    RM "B-but the timing was too perfect! How could-"
+    RM "B-But the timing was too perfect! How could-"
     UNKNOWN "Excuse me, but are you students at that academy?"
     MC "Um yes ma'am, we-"
     MCT "HOLY MILK JUGS!"
-    "She looked like she was in her 30s, but her aura felt like she was much older. Chestnut hair formed in a bun, dark brown eyes, very voluptuous with a bit of a belly, and her boobs... If I had to guess a bra size, I'd say a big triple M at LEAST!"
-    "She was dressed about the same as the cashier, but her name tag read Chie."
+    "From the back of the store I saw a figure emerge that had a chest beyond anything I'd ever seen before. If I had to guess a bra size, I'd say a big triple P— at LEAST!"
+    "Craning my neck slightly above chest height I could now see the woman, who looked to be middle aged, possibly older, I couldn't tell if it was longevity, good genes, or one hell of a skincare routine."
+    "I notice her chestnut hair formed in a bun, dark brown eyes, a very voluptuous figure with a bit of a belly. She was dressed about the same as the cashier, but with a different fit to it, for obvious reasons."
+    "There was no telling how old she actually was given the gravity defying perkiness her breasts possessed that put even the cashier lady's to shame."
     Haruko "Mom! Quit bugging the customers!"
     Chie "Oh hush dear, I just wanted to see how fellow growers were handling things."
     MCT "Fellow growers? Does that mean..."
     MC "You must be Chie Kazomazumi-san."
-    Chie "Why yes I am, and can I say you two look so cute, especially you mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
-    MC "Oh no, it just... a pain to deal with you know? A hat or hair gel can only do so much."
-    Chie "That is fair enough sweetie; lord knows I had trouble dealing with my chest when I was your age, but I managed to make do."
+    Chie "Why yes I am. I'm surprised you'd know. I didn't realize students were aware of the precedent of my particular case."
+    Chie "And can I say you two look so cute, especially you, mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
+    MC "Oh no, it's just... a pain to deal with you know? A hat or hair gel can only do so much."
+    Chie "That is fair enough, sweetie. Lord knows I had trouble dealing with my chest when I was your age, but I managed to make do."
     show RM neutral:
         ease 2 xpos 0.01
     "While I was talking to her, Daichi was trying to stealthily leave out the front door... Too bad everyone could see him. I felt like it was better just to ask and get it over with."
+    show RM concerned
     MC "Look, my roommate is too shy to ask, but are you really the first person to have a growth factor?"
     show RM angry at Transform(xzoom=-1):
         ease 0.5 xpos 0.3
     "Upon hearing me speak, he spun around as if to try and stop me, unfortunately for him he was cut off by Chie."
+    show RM doubt
     Chie "Well, I am the first person to actually be recognized as having tested positive for a growth factor..."
     Chie "...But I'm sure there were others that had growth factors long before I came around. Sorry, but I can't really tell you how it started."
     show RM sad
-    Chie "The school wasn't even finished when I got here, the only place that was totally furnished was some of the giant dorms."
-    "...If I had to describe Daichi's reaction... it would be pure despair. Like someone's only hope of salvation was stripped away from them by an evil goddess. I have never felt more sorry for him since I met him yet."
+    Chie "The school wasn't even finished when I got here. At the time it was the first major building in that part of the island after they closed the rock quarry."
+    "Daichi's reaction was obviously disappointed that Chie hadn't offered anything particularly insightful related to the nature of the growths from her experience."
+    show RM smug
+    "But a flicker of intrigue from his eyes made me suspect he had somehow managed to glean something from what she said."
+    show RM neutral
     Chie "But hey, it's not like everyone knows about that! Thanks for asking."
     MC "Well, thanks for the pie, we'll be sure to come back."
     Chie "Thanks for coming! You'll always be welcome here!"
-    "She gave me a wink before going to the back, her daughter looking like a mix between embarrassed and annoyed for the most part."
-    Haruko "Thanks for coming, and I'm sorry about my mom... {w}Please come again!"
+    Haruko "Thanks for coming. Please come again!"
     scene Town
     show RM neutral
     with fade
     "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he's trying to take things in stride."
-    RM "Well, I am disappointed this wasn't the big break I've been searching for, but it gives me an idea of how far this may actually go. Not to mention that last comment she made, about the giant dorms..."
+    RM "Well, I am disappointed this wasn't the big break I've been searching for, but it gives me an idea of how far this may actually go. Not to mention that last comment she made, about the rock quarry..."
     show RM happy
     RM "Plus, I got some pretty great pie out of it."
-    MC "Yeah, I'll see you later."
-    hide RM happy with dissolve
-    MCT "Well, this was an interesting day..."
-    "..."
-    MC "Wait... Was that lady hitting on me?"
-    "..."
-    MC "Nah..."
+    MC "See? It wasn't a total bust!"
+    show RM neutral
+    RM "...Really now?"
+    MC "The pun was unintentional."
+    show RM doubt
+    RM "That seems like too much of a coincidence to me..."
+    MCT "Ugh, this is never going to end."
     jump daymenu
 
 label MC011:

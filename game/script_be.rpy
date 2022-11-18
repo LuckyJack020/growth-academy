@@ -4246,6 +4246,7 @@ label BE024_c2_3:
     jump daymenu
 
 label BE025:
+    $setTimeFlag("XX25")
     $setProgress("BE", "BE026")
     $setBEOutfit(OutfitEnum.ATHLETIC)
     scene Field with fade
@@ -6599,7 +6600,7 @@ label BE035A:
     "Honoka and I placed our cutting boards down and got to work. She pulled over a few carrots and peppers and lined them up, while I started to shell the shrimp."
     MC "Why is it \"shelling\" the shrimp? Aren't I really \"de-shelling\" them?"
     BE "Ha. Yeah I don't know. One of those dumb quirks of language I guess."
-    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with easinleft
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
     "As Honoka and I worked, Kanami came up and observed for a moment."
     Kanami "Very nice, Hotsure-san. Please don't forget to check the intestinal tract on the back there. If you take a small knife, you can gently slice into the end and lift it up to pull it out."
     MC "Oh, right. Thanks. That wouldn't exactly taste good, would it?"

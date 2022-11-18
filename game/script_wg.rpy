@@ -4989,6 +4989,7 @@ label WG024_c3:
     jump daymenu
 
 label WG025:
+    $setTimeFlag("XX25")
     $setProgress("WG", "WG026")
     play music Peaceful
     scene Campus Center with fade
@@ -6665,6 +6666,7 @@ label WG031_c1_after:
     jump daymenu
 
 label WG032:
+    $setFlag("noFMGWG001")
     scene Classroom with fade
     play music Schoolday
     "I came to class thinking today would be no different than any other day, which in turn made me reflect on how quickly I had gotten used to... all this."
@@ -7724,6 +7726,7 @@ label WG036_c1_2:
 
 label WG037:
     $setProgress("WG", "WG038")
+    $setFlag("noFMGWG001")
     scene Dorm Interior with fade
     play music Peaceful
     "The day had come for my second date with Alice."
@@ -21187,9 +21190,9 @@ label WG074:
     with dissolve
     FMG "I still can't get over you drinking protein shakes. The taste is just... ew"
     show Natsuko neutral
-    Natsuko "Maybe if you drank them instead of that other junk you put into your body."
+    Natsuko "Maybe if you drank them instead of that other junk you put into your body—"
     show Natsuko flex
-    extend " You'd be as big as me."
+    extend " you'd be as big as me."
     FMG "Pfff, I don't need that garbage to surpass you. While you drink that, I have old reliable."
     show FMG neutral
     Natsuko "Chocolate milk is \"old reliable\"? What are you, 12?"
