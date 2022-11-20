@@ -7373,6 +7373,7 @@ label WG035:
     "I was momentarily taken aback by her dry tone."
     MC "I mean: Hello."
     WG "Hello."
+    show WG neutral-2
     "Her mood softened a bit, but she still looked on edge."
     WG "Sorry, as much as I would like to, I'm afraid I do not have time to stop and chat."
     MC "Oh..."
@@ -7381,7 +7382,9 @@ label WG035:
         "Alice stopped herself once she noticed my dejected tone."
         show WG neutral
         WG "My apologies for being a bit too curt, Keisuke, but I am pressed for time. Let's walk and talk."
-    "She made for the door. I followed a step behind."
+        "She made for the door. I followed a step behind."
+    else:
+        "Her response was quite abrupt, I could sense she felt pressed for time, so I attempted to follow her as she made her way out of the class."
 
     scene Hallway
     show WG neutral
@@ -7390,42 +7393,56 @@ label WG035:
     WG "Yes, it's tonight."
     if checkAffection("WG", ">=", 35):
         WG "You plan on coming, don't you?"
+        show WG happy-2
         MC "I wouldn't miss it for anything."
+        WG "Good, I was hoping you'd come."
     MC "That's why I caught you. I wanted to wish you luck."
+    show WG surprised-2
     MC "Or wait! No! I read somewhere wishing luck is bad luck, right? {w}What's the thing they say in America?"
     show WG happy
     WG "Break a leg?"
     MC "What? That sounds terrible."
     WG "I think it's supposed to be ironic, but thank you. Though I have never been one for concepts like \"luck\"."
+    show WG haughty
     WG "With adequate preparation, trusting in chance is unnecessary."
     MC "So you're not nervous?"
+    show WG happy-2
     "Alice laughed sharply."
     WG "What do I have to be nervous about?"
+    show WG haughty
     WG "I have performed for audiences before. Ones I expect will have been more critical than tonight's— that's for certain."
     MC "Hmm?"
     show WG neutral
     WG "My old school's prestige was not based on age or exclusivity."
     WG "It demanded more of its students than any other, even when it came to electives."
     WG "But this school treats education almost as a second-order concern."
+    show WG neutral-2
     WG "Creating a safe environment for us to come to terms with our growth is more important, and I doubt the administrators will judge too harshly our performance tonight."
     MC "Hadn't thought of it like that. I guess you have a point, though I disagree that our classes aren't challenging. Reason I ask is you seem a bit flustered."
     show WG doubt
-    WG "You're not entirely wrong. Despite my utter confidence our performance will more than exceed the expectation of tonight's audience, I still want to make sure my performance is up to my personal standards."
-    MC "I can see that. After all, we are our own worst critics most of the time. But anyway, is there anything I can do to help?"
+    WG "You're not entirely wrong. Despite my utter confidence our performance will more than exceed the expectation of tonight's audience, I still want to make sure {i}my{/i} performance is up to my personal standards."
     show WG neutral
+    MC "I can see that. After all, we are our own worst critics most of the time. But anyway, is there anything I can do to help?"
+    show WG surprised-2
     "She looked at me curiously. Perhaps I had sounded too eager. {w}But I really did want to help in some way."
+    show WG neutral
     WG "I appreciate the offer, but there is nothing for you to do."
     WG "As I said, preparation is better than hoping for luck."
+    show WG haughty
     WG "I have been training most of my life— not that tonight's set list is all that demanding. I had my hair and make-up done the other day, and my dress has been cleaned and ironed."
+    show WG doubt
     WG "And it is not as if I will be center stage, anyway..."
     show WG stern
     extend "{size=-4} unfortunately {/size}."
-    "This last bit she grumbled none too quietly."
-    "The issue between her and the music club president came back to me. Apparently, Alice wasn't ready to move on from her perceived slight."
+    "The last bit she grumbled none too quietly."
+    if isEventCleared("WG008A"):
+        "I imagine getting suspended from the club still left a lingering bad taste in her mouth over the whole experience."
+    else:
+        "The issue between her and the music club president came back to me. Apparently, Alice wasn't ready to move on from her perceived slight."
     MCT "Maybe I should say something to soothe her ego?"
     MC "At least you'll be on stage."
     show WG neutral
-    MC "And remember, if you can make your talent undeniable you're bound to get moved up to the lead singer."
+    MC "And remember, if you can make your talent undeniable you're bound to gain standing in the eyes of the rest of the music club."
     show WG neutral-2
     "It didn't seem to do the trick exactly, but she did nod."
     WG "The bigger picture, yes."
@@ -7442,8 +7459,8 @@ label WG035:
     play music MCGuitar
     "Leaving me with nothing to do."
     MCT "Hmm, this might be the first time Alice has ever not tried to delegate a job. I guess she's really trying to focus on the performance tonight."
-    "I honestly didn't know what I could have helped her with at this point, if anything I felt like I had just distracted her before her performance, but I hoped she appreciated my offer."
-    "Then again maybe I just came off as some kind of suck-up that fawns all over her no matter what."
+    "I honestly didn't know what I could have helped her with at this point. If anything, I felt like I had just distracted her before her performance, but I hoped she appreciated my offer."
+    "Then again, maybe I just came off as some kind of suck-up that fawns all over her no matter what."
     MCT "Man, why is this so hard? Like when you like someone, you're not supposed to show them you like them {i}too{/i} much."
     MCT "I don't like all these stupid made-up rules about dating... {w}I just like her."
     scene black with fade
@@ -7468,6 +7485,7 @@ label WG035:
     pause 0.5
 
     $setTime(TimeEnum.NIGHT)
+    $setWGOutfit(OutfitEnum.DRESS)
     scene Auditorium with fade
     "The concert wasn't a required activity, so I can't say I was surprised at how few people showed up."
     "Maybe a third of the auditorium was filled."
@@ -7494,7 +7512,9 @@ label WG035:
     show PRG neutral
     PRG "Y-You look nice this evening Hotsure-san."
     MC "I do? {w}Oh, uh, thanks. I was kind of worried that I overdressed for the occasion after seeing what other people were wearing."
+    show PRG excited
     PRG "I'm sure it will make Alice happy to see you dressed up for her concert. I think it shows you really care about her."
+    show PRG neutral
     pause 0.75
     PRG "You really like her, don't you Hotsure-san?"
     "My cheeks began to blush, in part because it was true, the other part because I worried how overly obvious it was if a wallflower like Aida thought enough about it to say something."
@@ -7508,8 +7528,19 @@ label WG035:
     MC "Heh, don't worry, my lips are sealed."
     hide PRG with dissolve
     "The lights grew dimmer as the curtain unraveled, revealing the assembled choir and orchestra."
-    play music AgnusDeiX
-    "I was practically jolted out of my seat by the bellowing intro. The harmony of the chorus was seamless. I was pleasantly surprised I wouldn't have to just feign interest for Alice's sake."
+    if getFlag("Meet_Mizawa"):
+        "A rather portly young lady walked across the stage, before taking a bow to the audience, as if she were representing the music club."
+        MC "Wait a second... Is that Okisho?"
+        show Okisho neutral with dissolve
+        MCT "DAMN! She got {i}fat{/i}! {w}So that's what her growth was."
+        play music AgnusDeiX
+        "Before I could ponder too much on the irony that the two polar opposites had so much in common, I was practically jolted out of my seat by the bellowing intro."
+        "What sounded like a cathedral style organ that filled the auditorium turned out to be a digital effect from Okisho's keyboard as her hands fluttered across the keys."
+        "On her cue, the chorus rang to life. The harmony was seamless. I was pleasantly surprised I wouldn't have to just feign interest for Alice's sake."
+        hide Okisho with dissolve
+    else:
+        play music AgnusDeiX
+        "I was practically jolted out of my seat by the bellowing intro. The harmony of the chorus was seamless. I was pleasantly surprised I wouldn't have to just feign interest for Alice's sake."
     pause 5
     scene black with fade
     pause 5
@@ -7519,23 +7550,75 @@ label WG035:
     "The concert lasted a little over an hour, mixing a couple classical-sounding tunes with a lot of modern hits redone for an orchestra and squad of singers."
     play music AngelsWeep
     "Eventually came the finale, where the soprano singers were really able to shine."
-    pause 5
-    show WG neutral-2 with dissolve
-    "From the audience Alice looked like one singer among several, but I concentrated all my attention on her."
-    "She really did have a splendid voice."
+    if getFlag("Meet_Mizawa"):
+        show WG neutral-2 at Position(xcenter=0.25, yalign=1.0)
+        show Okisho neutral at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        pause 5
+        "There were several other singers and an entire ensemble of musicians, but it was Alice and Okisho's powerful soprano voices that were the focal point of the performance."
+        "Alternating between perfect harmony with each other into point and counterpoint melodies— they both stole the show."
+        "Though unbeknownst to most of the audience, the irony wasn't lost on me how the two could blend their voices so seamlessly, while the two themselves were like oil and water."
+    else:
+        pause 5
+        show WG neutral-2 with dissolve
+        "From the audience Alice looked like one singer among several, but I concentrated all my attention on her."
+        "She really did have a splendid voice. The power of her voice and her perfect pitch cut through the rest of the choir. She might not have been centerstage, but performance-wise, she was clearly the star of the show."
     pause 5
     stop music fadeout 2.0
     scene black with fade
     pause .5
 
+    if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
+        scene Auditorium with fade
+        "After the concert I began to make my way outside from the auditorium, hoping to catch Alice before she retired to her dorm for the evening, but not before unexpectedly running into someone else."
+        show Okisho neutral with dissolve
+        Okisho "Glad to see you made it to the show."
+        "I could scarcely believe this was the same athletic built woman I met at the beginning of the year."
+        "Okisho's belly, though not as big as Alice's, was certainly big enough to prove distracting— to put it lightly, especially up close and personal now."
+        MC "I'm glad I made it as well. The club put on a great performance. You make a pretty convincing organist you know?"
+        Okisho "Ha!"
+        "Okisho's fat middle rippled subtly with her abrupt and booming laugh."
+        Okisho "Well since we weren't going to manage to fit one inside the auditorium I had to improvise somehow."
+        Okisho "That's why I like the keyboard, you can use the digital effects from it to fill in almost any gap in the instrumental repertoire."
+        MC "I'm more impressed you managed to sing so well while playing at the same time. You and Alice's voices together made for a fantastic duet— it was really the highlight of the show."
+        Okisho "Hmph..."
+        "Okisho let out a long sigh, a mix of exasperation and relief, before she continued."
+        Okisho "Even I have to admit as much. She's an undeniable talent, there's no question about that."
+        Okisho "And despite our differences, she was extremely professional this evening, which helped to make things go smoothly. I appreciated that."
+        MC "Does that mean things are thawing between you two?"
+        Okisho "I wouldn't go {i}that{/i} far. I just meant to say it was a welcome change from the usual."
+        MC "I see. {w}Well, if it means anything coming from me, she just takes a while to warm up to people."
+        Okisho "I've yet to see it, but I guess I'll take your word for it."
+        Okisho "Thanks for coming to the show. I know you came to see her, but the club put in a lot of work to be ready for the concert."
+        Okisho "I'm sure it was discouraging for a lot of the members to see a mostly empty auditorium, so I appreciate anyone that came out to show their support."
+        MC "No problem."
+        Okisho "I'll catch you later. I'm going to hit the sack. I'm exhausted from all the prep-work leading up to this shindig. I'll catch you later."
+        MC "Understandable, have a good night, Mizawa-san."
+        Okisho "Oh, and if you were looking to catch her, she walked outside backstage from the east exit towards the courtyard."
+        MC "Thanks. I'll try to catch up with her."
+        Okisho "You know, I used to wonder what a guy like you saw in a girl like her, but after seeing what grabs your attention— I think I've figured it out."
+        "Okisho's smile grew into a cheshire grin as she watched my cheeks turn beet red."
+        Okisho "I'll see you around Hostsure-san. Probably shouldn't keep her waiting now."
+        scene black with fade
+
     $setTime(TimeEnum.NIGHT)
     scene Campus Center with fade
     play music TwilightBright
-    "After the concert I met up with Alice outside the auditorium."
+    if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
+        "After getting a tip from Okisho as to where she had gone to, I frantically tried to catch up to Alice before she got back to her room after exiting the auditorium,"
+        show WG neutral-2 with dissolve
+        extend " only to find her quietly sitting by herself. Perhaps reflecting on tonight's performance."
+        show WG surprised-2
+        MC "Alice! Glad I caught you before it got too late."
+        show WG neutral-2
+        WG "I'm glad you managed to find me. I was hoping to catch you on your way back to the dorms as well."
+    else:
+        "After the concert I met up with Alice outside the auditorium."
     MC "You were great!"
     show WG neutral-2 with dissolve
     WG "Thank you. I am satisfied with my performance."
     MC "Just satisfied? Well, for what it's worth, I thought you were amazing! But I assume this doesn't compare to your old school though."
+    show WG sly
     "Alice smiled ruefully."
     show WG neutral
     WG "Well, there would usually be more people back then, for one"
@@ -7552,11 +7635,11 @@ label WG035:
     WG "Sort of. On one hand there is a sense of a burden lifted from my shoulders, knowing that I accomplished the task I had poured so many hours into preparing for."
     show WG neutral
     WG "On the other hand, there's always more that can be done to improve. Is it really worth celebrating if I continue to hone my skills only to look back at a future date and realize how this occasion will pale in comparison?"
-    MC "I suppose that's true to an extent, but if we're always looking toward the future it's easy to forget to live in the moment. I thought your performance was wonderful and you can't change my mind otherwise."
+    MC "I suppose that's true to an extent, but if we're always looking toward the future it's easy to forget to live in the moment. I thought your performance was wonderful— and you can't change my mind otherwise."
     show WG happy
     $setAffection("WG", 1)
     WG "I appreciate that..."
-    show WG neutral-2
+    show WG happy-2
     extend " I'm glad you came, Keisuke."
     "I had to admit, I was caught a bit off guard by the last thing she said."
     "I mean, I was pretty sure she liked me, but I didn't know for sure how much she liked me tagging along for the occasion."
@@ -7568,14 +7651,15 @@ label WG035:
     "Alice, for her part, did not immediately shove me to the ground and kick me in the stomach several times."
     show WG neutral
     "When I leaned back my initial thought was to apologize, but her expression wasn't one of anger or disgust, so I waited a moment to let her respond."
+    show WG surprised-2
     WG "..."
     "After a long second, she chuckled"
-    show WG happy
+    show WG happy-2
     $setAffection("WG", 1)
     WG "I cannot fault you for taking the initiative, Keisuke."
     WG "I guess Japan is more old-fashioned when it comes to dating, but..."
     WG "Well done in seizing the moment."
-    show WG neutral
+    show WG sly
     WG "But do not make a habit of forcing yourself on me."
     MC "No, ma'am."
     MCT "Best possible outcome? Probably."
@@ -7588,7 +7672,7 @@ label WG035:
     MCT "Fortune favors the bold, I guess."
     scene Dorm Exterior with fade
     "Trying to process what just happened, I took a long walk back to my dorm, with my mind awash in a haze of racing thoughts."
-    "Her body was as soft as I imagined. Even her lips..."
+    MCT "Her body was as soft as I imagined. Even her lips..."
     jump daymenu
 
 label WG036:
@@ -13012,22 +13096,23 @@ label WG053:
     $setSize(4)
     $setTimeFlag("size4")
     $setProgress("WG", "WG054")
-    "I have the tickets in hand when my phone buzzes from a text. It's from Alice."
+    "I had the tickets in hand when my phone buzzed from a text. It was from Alice."
     WGCell "Head over when you are presentable, I'm ready."
     play music WG
-    "I check myself over again since I'm dressing far more formally than I have on any of our previous dates. Straightening my tie, I head towards her dorm."
+    "Far more nervous than I probably should have been, I checked myself over again since I'm dressing far more formally than I have on any of our previous dates. Straightening my tie, I headed towards her dorm."
     $setTime(TimeEnum.EVE)
 
-    scene Dorm PRG with fade
-    "Aida greets me at the door, as I walk in I observe she's busy cooking. The aroma of meat wafts out filling my nose. If I didn't already have plans I might've stayed to have a taste."
-    show PRG neutral with dissolve
+    scene Dorm PRG
+    show PRG neutral
+    with fade
+    "Aida greeted me at the door. As I walked in, I observed she was busy cooking. The aroma of meat wafts out filling my nose. If I didn't already have plans I might've stayed to have a taste."
     PRG "Oh, good evening, Hotsure-san!  I'm assuming you're here for Alice?  She mentioned that you and her had plans for tonight."
     MC "Has she told you anything about what the plans are?"
     PRG "She said there wasn't much to tell.  She mentioned that you were really vague in your description."
     MC "All I told her was I wanted to treat her to something she enjoys."
     show PRG happy
     PRG "In that case, I'm sure she'll love it."
-    "As Aida returns to her cooking I approach Alice's room where I can hear the sound of music leaking through"
+    "As Aida returned to her cooking, I approached Alice's room where I could hear the sound of music leaking through"
 
     scene black with fade
     play music MoonlightSonata
@@ -13036,22 +13121,28 @@ label WG053:
 
     scene Dorm WG with fade
     $setWGOutfit(OutfitEnum.DRESS)
-    "Closing the door behind me I notice Alice standing in front of her makeup mirror putting on lipstick. Standing in front of me is Alice, wrapped in a floor-length dress. Out of all her outfits so far, this one was by far the one I think I liked the most."
+    "Closing the door behind me I notice Alice standing in front of her makeup mirror putting on lipstick."
     show WG neutral with dissolve
+    extend " Standing in front of me is Alice, wrapped in a floor-length dress. Out of all her outfits so far, this one was by far the one I think I liked the most."
+    "To be honest, if this wasn't Alice we were talking about, I could scarcely believe a woman of her size could have found such an exquisite and well-fitting dress."
+    "She had grown quite a bit most recently, far beyond anything I could have prepared myself for prior to coming to Seichou— far more beautiful in my eyes, if I were being honest."
+    "Though I had to wonder if she would believe that, even if I told her."
     WG "Do you recognize the piece playing Kei?"
-    if checkSkill("Art", ">", 4):
-         MC "It's Beethoven's Moonlight Sonata. At least one section of it, correct?"
-         show WG happy
-         WG "It is indeed, it's good to see the classics are still appreciated."
-         MC "It's a piece that I'm sure many recognize but few know the name of, most classical pieces are that way."
-
+    if checkSkill("Art", ">", 7):
+        MC "It's Beethoven's Moonlight Sonata. At least one section of it, correct?"
+        show WG happy
+        $setAffection("WG", 1)
+        WG "It is indeed, it's good to see the classics are still appreciated."
+        MC "It's a piece that I'm sure many recognize but few know the name of, most classical pieces are that way."
     else:
         MC "Sounds like a normal classical piece of music."
-        show WG angry
+        show WG stern
         WG "I do hope it would be a bit more than a normal classical piece, seeing as it's rather famous."
         MC "Sorry, suppose it just didn't ring any bells for me. It's not exactly within my avenue of musical interest."
     show WG neutral
-    WG "It's a wonderful song regardless, that deserves its own recognition. Though you aren't here to discuss my music choices are you. You've been rather vague with me on exactly what you are planning with me tonight. Care to layout your grand scheme?"
+    WG "It's a wonderful song regardless, that deserves its own recognition. Though you aren't here to discuss my music choices are you?"
+    show WG happy-2
+    WG "You've been rather vague with me on exactly what you are planning with me tonight. Care to layout your grand scheme?"
     menu:
         "Tell her the true plans":
             jump WG053_c1_1
@@ -13061,18 +13152,19 @@ label WG053:
             jump WG053_c1_3
 
 label WG053_c1_1:
-    MC "Well I guessed that since we've done restaurants for the last few dates, a change of pace would be nice."
+    MC "Well, I guessed that since we've done restaurants for the last few dates, a change of pace would be nice."
     show WG happy
     WG "Oh? Is that your plan mister?"
     MC "It's much more impressive once we get to the theater."
     $setAffection("WG", 1)
-    show WG surprised
-    WG "The theater, oh that's a very nice idea."
+    show WG surprised-2
+    WG "The theater? Oh, that's a very nice idea."
     show WG happy
     WG "I look forward to seeing what show you've decided would pique my interest."
     "To be honest I hadn't considered whether she'd ever seen this show before."
     MC "Well we'd better get going to make sure we can find our seats without much trouble."
-    "Alice gives me a smile that seemed to convey a sense of approval that I'd seen before, but this felt to be from a more genuine and heartfelt spot."
+    show WG happy-2
+    "Alice gave me a smile that seemed to convey a sense of approval that I'd seen before, but this felt to be from a more genuine and heartfelt spot."
 
     scene Theater Exterior with fade
     play music WG
@@ -13080,67 +13172,72 @@ label WG053_c1_1:
     show WG happy with dissolve
     "Seeing Alice in her dress was something I didn't know I needed, but seeing her now I'm not sure how I never imagined it before. Compared to her previous dress, this one stirred me in a new way I didn't know was possible."
     "Where her previous dress had been quite..."
-    show WG neutral
+    show WG neutral-2
     WG "Kei, the man at the ticket booth is calling you."
     MC "Oh, I guess I zoned out there."
-    "I give the man our tickets and mention that I'd called ahead for accommodations. He nods and assures me that our accommodations have been met before waving us in."
+    "I gave the man our tickets and mentioned that I'd called ahead for accommodations. He nods and assures me that our accommodations have been met before waving us in."
     jump WG053_c1_after
 
 label WG053_c1_2:
     MC "I hate to spoil surprises, it ruins all the fun and anticipation."
     show WG haughty
     WG "Then I guess I'll have to wait, which I normally hate to do. Though I think I'll make an exception this time."
-    "She gives me a smirk as we exit from the room."
+    show WG sly
+    "She gave me a smirk as we exited from the room."
 
     scene Theater Exterior
-    show WG surprised
+    show WG surprised-2
     with fade
     WG "Oh my! I was certainly not expecting this to be in consideration!"
     MC "Oh and why so?"
-    show WG sad
+    show WG worried
     WG "It's been a rather long time since I've been to an opera or play. I was beginning to think I'd never be able to go back due to, well, everything so far."
-    MC "Don't worry I've been careful this time to account for everything."
+    MC "Don't worry, I've been careful this time to account for everything."
     show WG haughty
     WG "Is that so?"
     MC "I've got this date handled so relax tonight."
     show WG neutral
-    WG "If you say so Mr. In Charge."
-    "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
+    WG "If you say so, Mr. In Charge."
+    "I stepped over and handed our tickets to the usher and informed him of my earlier call for accommodations. He assured me that my request had been properly handled and gestured for us to enter."
     jump WG053_c1_after
 
 label WG053_c1_3:
     $setFlag("WG053_c1_3")
     $setVar("BEP", getVar("BEP") + 1)
+    show WG doubt
     MC "There is a new seafood restaurant that recently opened in town, they have a dress code that's why I asked that you get dressed up for this occasion."
     $setAffection("WG", -1)
     show WG sad
     WG "Oh, that's very nice."
     MC "Is there a problem with that plan?"
-    WG "Well I was hoping we could maybe do something besides food, but I suppose if the reservations are made we shouldn't disappoint."
+    WG "Well, I was hoping we could maybe do something besides food, but I suppose if the reservations are made we shouldn't disappoint."
     "I feel bad for lying about something so simple but my certainty on what she wants is still rather blurry. So playing it safe this time might've been a bad call."
 
     scene Theater Interior
-    show WG surprised
+    show WG surprised-2
     with fade
     WG "Wait, is this where we were actually going?"
     MC "Yeah, I wanted to surprise you."
     show WG angry
     WG "Why would you lie about something so important to our plans?"
-    MC "Well this was supposed to be a surprise after all so I wanted to keep up the illusion till we got here."
+    MC "Well, this was supposed to be a surprise after all, so I wanted to keep up the illusion till we got here."
     WG "That's still a stupid reason. Did you assume I wouldn't enjoy anything that didn't involve food?"
     MC "No, not at all. I just used the restaurant excuse since our last couple of dates have been to restaurants."
-    WG "You should've just surprised me back at the dorm. I was expecting us to be doing something else till you said we were doing a dinner date again."
+    show WG stern
+    WG "It would have been enough of a surprise to have found out when we were leaving. I was expecting us to be doing something else till you said we were doing a dinner date again."
+    show WG doubt
     MC "I'm sorry, I didn't know that was your expectation going into this."
+    show WG sad
     WG "It wasn't just that Kei, I had fears you might be seeing me as this gluttonous person that was losing control. That's why I was a little disappointed when you said we were doing another restaurant."
     MC "I'd never think that about you! You are far more than something so shallow."
-    show WG sad
+    show WG worried
     WG "That's not how it came off, so much has been happening recently that just having that idea seemingly confirmed, struck a little too deep to be comfortable."
-    MC "Well as I've said time and time before, that is not how I see you at all. I probably can't understand everything you've been feeling recently but I'm still here regardless of your size."
-    if checkAffection("WG", ">=", 20):
+    MC "Well as I've said time and time before, that is not how I see you at all. I probably can't understand everything you've been feeling recently, but I'm still here regardless of your size."
+    if checkAffection("WG", ">=", 35):
         show WG haughty
         WG "If you truly mean that, then that's what I will expect from now on."
         MC "You have my word, Alice."
-        "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
+        "I stepped over and handed our tickets to the usher and informed him of my earlier call for accommodations. He assured me that my request had been properly handled and gestured for us to enter."
 
         scene Theater Interior
         show WG neutral
@@ -13150,38 +13247,45 @@ label WG053_c1_3:
         show WG haughty
         WG "What kind of accommodations do you mean?"
         MC "Making sure we have seats that fit each of our figures."
-        show WG surprised
+        show WG surprised-2
         WG "Oh, you went ahead and looked into something like that for us?"
         MC "Of course, I care for your comfort, so naturally I wanted to make sure you could enjoy this night without concerning yourself with those sorts of things."
         $setAffection("WG", 1)
         show WG happy
         WG "You always find a way to impress me, Kei."
         MC "And I'll never stop trying."
-        "As we enter the theater hall I spot a large couch near the front. Pointing it out to Alice I could tell she was happy to see my efforts had worked."
-        "She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
+        "As we entered the theater hall I spotted a large couch near the front. Pointing it out to Alice, I could tell she was happy to see my efforts had worked."
+        show WG pondering
+        "She looked over the couch for a moment, with a certain level of prudence, before gently seating herself."
+        show WG surprised-2
+        extend " Her cheeks flushed red as the couch gave a small groan as she eased herself down."
         MC "Everything okay for you?"
         show WG neutral
         WG "Yeah that was just surprising, that's all."
         MC "Just making sure everything was to your satisfaction."
-        "Alice gives me a smile as the lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
+        "Alice gave me a smile as the lights soon dimmed, the red curtains of the stage ascended as an organ roared to life with a deep bellowing sound."
         jump WG053_c2_after
     else:
         MC "Also everyone needs to eat so it shouldn't be taken as an insult. It's just a fact of life."
         pause 2
-        WG "Fine, I suppose I may have been a bit harsh, I guess this stuff has been getting to me a bit."
+        WG "{i}Sigh{/i}...{w} Fine, I suppose I may have been a bit harsh, I guess this stuff has been getting to me a bit."
         MC "You still want to continue tonight?"
         show WG neutral
         WG "Well I'd hate for all our efforts to go to waste tonight. So we may as well enjoy the show."
         MCT "Well this certainly was not how I imagined this night going at all."
-        "I gave our tickets to the man at the ticket booth and mentioned that I had called ahead for accommodations. He nods and says they've fulfilled the request."
+        "I gave our tickets to the man at the ticket booth and mentioned that I had called ahead for accommodations. He nodded and told me they'd fulfilled the request."
 
         scene Theater Interior
         show WG neutral
         with fade
-        "As we enter we can both see the large couch like chair in the front row. As we approach I notice Alice giving me a glance with a slight smirk on her lips."
-        "She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
-        MCT "That was kinda hot, but I better not approach that subject tonight."
-        "We both remain silent as the lights dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
+        "As we enter we can both see the large couch-like chair in the front row. As we approach I notice Alice giving me a glance with a slight smirk on her lips."
+        show WG neutral-2
+        extend " As we approached, I noticed Alice giving me a glance with a slight smirk on her lips."
+        "She looked over the couch for a moment, with a certain level of prudence, before gently seating herself."
+        show WG surprised-2
+        extend " Her cheeks flush red as the couch gives a small groan as she eases herself down."
+        MCT "That was kinda hot, but I better not broach that subject tonight."
+        "We both remained silent as the lights dimmed, the red curtains of the stage ascended as an organ roared to life with a deep bellowing sound."
         jump WG053_c2_after
 
 label WG053_c1_after:
@@ -13192,19 +13296,29 @@ label WG053_c1_after:
     MC "I had a feeling that you might not be able to use their normal seating, so I called ahead to see what they could accommodate."
     show WG sad
     WG "Oh. It sounds like a lot of effort to go through just for me."
-    MC "Well you shouldn't have to miss out on the things you enjoy. Adapt maybe, but not abandon them."
+    MC "Well, you shouldn't have to miss out on the things you enjoy. Adapt maybe, but not abandon them."
+    show WG worried
     WG "I suppose, but that still doesn't change the fact I'm far larger than most."
     MC "That doesn't change who you are underneath. You are still the confident girl I met all those months ago."
     show WG haughty
-    WG "I wonder when you picked up such a silver tongue? Though I doubt that the effort of guessing as to such would prove pointless."
-    "We shared a laugh, causing her body to bounce and roll in a rather satisfying way as we made our way to our seats. As we enter the hall I spot a large looking couch near the front. Pointing it out to Alice, I could tell she was happy to see what my effort was towards."
+    WG "Is that so? I have to wonder, when did you pick up such a silver tongue?"
+    show WG sly
+    MC "Are you implying that I haven't always had one since you've known me?"
+    show WG haughty
+    WG "It's not much of an implication if it's already obvious to everyone."
+    show WG happy
+    "We shared a laugh, causing her body to bounce and roll in a rather satisfying way as we made our way to our seats."
+    "As we entered the hall I spotted a large looking couch near the front. Pointing it out to Alice, I could tell she was happy to see what my effort was towards."
     MC "So is this good enough my dear?"
-    show WG neutral
+    show WG neutral-2
     WG "You've certainly gone beyond what I could ask of you."
     MC "It was nothing, you deserve to be treated well."
     show WG haughty
     WG "Certainly are proving to be quite the gentlemen aren't we?"
-    "Alice looks over the couch with a certain level of prudence before gently seating herself. Her cheeks flushing red as the couch gives a small groan as she eases herself down."
+    show WG pondering
+    "Alice looks over the couch with a certain level of prudence before gently seating herself."
+    show WG surprised-2
+    extend " Her cheeks flushing red as the couch gives a small groan as she eases herself down."
     menu:
         "Ask her about the reaction.":
             jump WG053_c2_1
@@ -13216,100 +13330,119 @@ label WG053_c2_1:
     MC "You ok?"
     show WG sad
     WG "Lately my experiences with furniture have been... inconsistent, to put it lightly. Waking up with a few broken bed slats doesn't make for a pleasant morning."
-    "She broke her bed, now that I would've loved to see happen. It was one thing to imagine it, but knowing it came true is another."
-    MC "Is that why you were very surprised by me deciding on this?"
+    MCT "She broke her bed...! {w}Now {i}that{/i} I would've loved to see happen. It's one thing to imagine it, but knowing it came true is another..."
+    MC "Is that why you were so surprised by me deciding on this?"
+    show WG worried
     WG "Honestly, yes. Even as much as I accept my size, there's always uncertainty when using furniture that isn't my own. I have no prior warning if it can hold me or I'll be sent falling to the floor in a minute."
     MC "I'm sure I can probably help in that matter. An extra pair of eyes never hurts to have around. Not to mention an extra pair of hands to catch you if you fall."
     show WG haughty
-    WG "Well I hope you intend to keep that promise because I'm certain my future at school will involve more than a few splintered chairs."
-    "Now that's something I will certainly have to see."
-    "The lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound. Taking my seat next to Alice, I soon feel her hand grip mine as the first scene begins."
+    WG "Well I hope you intend to keep that promise because whether or not I would prefer it, I'm certain my future at school will involve more than a few splintered chairs."
+    MCT "Now {i}that's{/i} something I will certainly have to see."
+    "The lights soon dimmed, the red curtains of the stage ascended as an organ roared to life with a deep bellowing sound. Taking my seat next to Alice, I soon felt her hand grip mine as the first scene began."
     jump WG053_c2_after
 
 label WG053_c2_2:
-    "She's probably embarrassed I had to hear that so I'd better not push it."
-    "The lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
+    show WG neutral
+    MCT "She's probably embarrassed I had to hear that so I'd better not push it."
+    "The lights soon dimmed, the red curtains of the stage ascended as an organ roared to life with a deep bellowing sound."
     jump WG053_c2_after
 
 label WG053_c2_after:
     scene black with fade
     pause 1
     scene Theater Interior with fade
-    "The play stops to allow everyone a brief intermission to use the restroom. Alice and I stand up from our seats to stretch out our stiff legs. We eventually wander over to a balcony overlooking the entrance."
+    "The play stopped to allow everyone a brief intermission. Alice and I stood up from our seats to stretch out our stiff legs. We eventually wandered over to a balcony overlooking the entrance."
+    show WG neutral-2 with dissolve
     MC "Have to say that mask-wearing guy, he is one strange dude."
-    show WG happy with dissolve
+    show WG happy
     WG "That is the point Kei, he's meant to be off-putting and slightly standoffish. He's a character we have to warm up to and gain empathy for."
     MC "Have you seen this play before?"
     WG "I did a while back with my parents. We visited some of my mother's family and my father got us tickets for the performance happening on Broadway. It was one of the first shows I saw, so seeing it again is very nice."
-    MC "Glad you enjoy it, I had a feeling you might enjoy since I remembered you mentioning a fondness for Opera and singing."
+    MC "Glad you are enjoying it, I had a feeling you might like it since I remembered you mentioning a fondness for Opera and singing."
+    show WG happy-2
+    WG "Glad to know you've been paying attention."
     show WG neutral
-    WG "Do you remember back when we first started here, I wanted to lead the music club?"
+    WG "Hmm, now that you brought it up... {w}Do you remember back when we first started here, I wanted to lead the music club?"
     menu:
-        "Of course, I remember you mentioned wanting to be a seated soprano.":
+        "Of course. You were quite insistent.":
             jump WG053_c3_1
-        "How could I forget, you did make quite a scene.":
+        "How could I forget? You did make quite a scene.":
             jump WG053_c3_2
-        "Vaguely. It was quite some time ago.":
+        "Vaguely... It was quite some time ago.":
             jump WG053_c3_3
 
 label WG053_c3_1:
     show WG happy
-    WG "I did, and well I still do, that's why I've been very critical about the matter. Though I suppose now in hindsight I may have been a tad overbearing."
+    MC "Of course. I remember it well in fact. You were quite instant that you were the natural pick for the position."
+    WG "This is true, and it's why I've still been very critical about the matter."
+    show WG pondering
+    extend " Though I suppose now in hindsight I may have been a tad overbearing."
+    show WG neutral-2
     MC "I think you just matured and dropped some of the brashness you had when you first arrived."
+    $setAffection("WG", 1)
+    show WG happy
+    WG "I appreciate such a vote of confidence."
     show WG neutral
-    WG "Perhaps, though despite my squabbles with the club president I still plan to see myself in a leading position in the club."
-    WG "That is a dream I plan to fulfill, regardless of whatever obstacles may lie ahead of me."
+    WG "Perhaps you are correct. Even in spite of my squabbles with Okisho, I still plan to see myself in a leading position in the club."
+    WG "That is a goal I am set on, regardless of whatever obstacles may lie ahead of me."
     MC "That does mean you need to have good relationships with your other club members, including Mizawa-san."
-    WG "I'm aware and I'm already working on plans to improve my standings among them. Like you said, patience is valuable in this matter and that is what my plan hinges on."
-    "Well she has certainly matured on this front, I hope that she's able to continue without falling back to her old habits."
-    "I notice the flow of people heading back into the theater and extend my hand out"
+    show WG pondering
+    WG "I'm aware, and I'm already working on plans to improve my standings among them. Like you said, patience is valuable in this matter and that is what my plan hinges on."
+    MCT "Well she has certainly matured on this front, I hope that she's able to continue without falling back to her old habits."
+    "Though she certainly had the patience to see through the payoff of a costly investment, she was not however one to suffer a lack of respect where she felt it was owed."
+    "Noticing the flow of people heading back into the theater, I realized the time for the occasion had finally arrived, and so I extended my hand out to hers."
+    show WG neutral-2
     MC "It would appear it's time to retake our seats. Shall we?"
     show WG haughty
     WG "Indeed we shall."
-
     scene black with fade
     jump WG053_c3_after
 
 label WG053_c3_2:
-    show WG angry
+    show WG stern
+    MC "Hehe. {w}How could I forget? You did make quite a scene."
     WG "I had hoped you might have overlooked that low point in my career."
     MC "Sorry for bringing that detail back up."
     show WG neutral
     WG "Regardless of how you remember that event, you can't deny I wasn't passionate."
     MC "I doubt a case disproving that idea could exist."
+    show WG haughty
     WG "It's that exact passion for singing that helps me stay in the music club. Seeing these beautiful plays helps remind me why I remain loyal to that idea."
     MC "Don't you need the help of the other club members as well?"
-    show WG haughty
-    WG "I have a plan for helping me return to their good graces."
-    "I consider asking further but decide against it knowing she won't explain her grand plan."
-    "Besides people are beginning to return to their seats so we should as well."
-    "I offer her my hand but she instead walks ahead. This date is not going as well as I hoped."
+    show WG pondering
+    WG "I have a plan for helping me work my way into their good graces."
+    "I considered asking further but decided against it, knowing she wasn't likely to explain her grand plan."
+    "Besides, people were beginning to return to their seats so we should as well."
+    if getFlag("WG053_c1_3"):
+        "I offered her my hand but she walked ahead of me instead. This date is not going as well as I hoped."
+    else:
+        show WG neutral-2
+        MC "It would appear it's time to retake our seats. Shall we?"
+        show WG haughty
+        WG "Indeed we shall."
     scene black with fade
     jump WG053_c3_after
 
 label WG053_c3_3:
     show WG neutral
-    WG "The details aren't important to the matter I'm addressing, what is important is that I wanted to be a part of that club a lot."
+    MC "Ehhh... vaguely. It was quite some time ago."
+    show WG worried
+    $setAffection("WG", -1)
+    WG "{i}Sigh{/i}... It does seem like ages ago in hindsight."
+    show WG neutral
+    extend " Regardless, the details aren't important to the matter I'm addressing, what is important is that I wanted to be a part of that club a lot."
+    show WG haughty
     WG "The passion I have for music helps me stay in the club. Seeing these beautiful plays helps remind me why I need to continue to commit to that idea. I want to prove that I'm as good as I say I am."
     MC "That's an impressive amount of dedication but won't you need the help of the other club members?"
-    show WG haughty
+    show WG pondering
     WG "I have a plan for helping me return to their good grace."
-    "I consider asking further but decide against it knowing she won't explain her grand plan."
-    "Besides people are beginning to return to their seats so we should as well."
-    "I offer her my hand but she instead walks ahead. This date is not going as well as I hoped."
+    "I considered asking further but decided against it knowing she wasn't likely to explain her grand plan."
+    "Besides, people were beginning to return to their seats so we should as well."
+    "I offered her my hand but she walked ahead of me instead. This date is not going as well as I hoped."
     scene black with fade
     jump WG053_c3_after
 
 label WG053_c3_after:
-    if getFlag("WG053_c1_3"):
-        scene Theater Interior with fade
-        "The play stops to allow everyone a brief intermission to get snacks and use the restroom. Alice and I stand up from our seats to stretch out our stiff legs."
-        MCT "I should probably keep quiet for now, I've already done enough damage tonight. Hopefully, I can still salvage this night and my relationship with Alice by doing so."
-        "A couple times Alice opens her mouth seemingly to try and say something, but closes it quickly."
-        show WG neutral with dissolve
-        WG "I'm gonna grab myself a snack from downstairs, I'll back before we reseat."
-        "I watch her disappear down the stairwell before returning to my thoughts."
-        "After a couple minutes we begin retaking our seats. Alice soon returns with a small bag of popcorn as the curtains open again to continue the show."
     if getFlag("WG053_c2_1"):
         $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
@@ -13319,19 +13452,61 @@ label WG053_c3_after:
         WG "Hey Kei, I want to thank you for tonight."
         MC "Oh it's no problem, I'm glad you've enjoyed yourself."
         WG "Well it's more than just that. This was the first time I saw how my new size is to others."
-        WG "As I said back in the theater, my experience with furniture lately has been quite varied. So trusting you to have made the right seating arrangements, made me feel, well helpless. This growth I feel has finally gotten beyond a manageable point."
-        MC "Oh I didn't realize you felt that way. I was just doing what I believed would make you feel appreciated and cared for. Are you mad at me?"
+        show WG worried
+        WG "As I said back in the theater, my experience with furniture lately has been quite varied. So trusting you to have made the right seating arrangements, made me feel, well helpless."
+        WG" This growth I feel has finally gotten beyond a manageable point."
+        MC "Oh. {w} I apologize then. I didn't realize you felt that way. I was just doing what I believed would make you feel appreciated and cared for. Are you mad at me?"
         show WG neutral
         WG "No, this is a confrontation I've been avoiding for a while now."
         MC "Is there some way I can help?"
-        WG "Well that there is something I've wanted to ask you about. As you know Aida is in no shape to be assisting me full time. I highly doubt I'm done growing but things are already becoming more difficult."
+        show WG worried
+        WG "Well... there is something I've wanted to ask you about."
+        MC "What's that? I'm here for you Alice, no matter what it is about."
+        WG "That is reassuring, but what I'm getting at is even though I have Chibuki to assist me, given that Aida is no longer in any shape to act as my assistant full time, I highly doubt I'm done growing but things are already becoming more difficult."
+        show WG sad
         WG "Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
         show WG haughty
-        WG "I have taken for granted my family's servants and Aida, but it is becoming clear that assistance will become not just a convenience for me but a necessity."
-        WG "The thought of being dependent like that troubles me, more so the fear that I would become a burden. Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
+        WG "I have taken for granted my family's servants, as well as Chibuki and Aida, but it is becoming clear that assistance will become not just a convenience for me— but a necessity."
+        show WG worried
+        WG "The thought of being dependent like that troubles me, more so the fear that I would become a burden."
+        show WG neutral-2
+        extend " Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
         MC "Of course, I'll help you if you need it. I am your boyfriend after all."
-        "She smiles and we hold hands all the way back to the school. Letting the music of the night close out our date."
-    jump daymenu
+        show WG happy-2
+        $setAffection("WG", 1)
+        WG "Then that's all I needed to hear."
+        "She smiled as we held hands all the way back to the school. Letting the music of the night close out our date."
+        jump daymenu
+
+    else:
+        $setTime(TimeEnum.NIGHTLIGHTS)
+        scene Town with fade
+        play music TwilightAmbient
+        "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
+        show WG neutral-2 with dissolve
+        WG "Hey Kei, I want to thank you for tonight."
+        MC "Oh it's no problem, I'm glad you've enjoyed yourself."
+        if getFlag("WG053_c1_3"):
+            MC "Sorry about not being forthright with the evening's plans. It wasn't the greatest idea for a surprise in hindsight."
+            show WG haughty
+            WG "I think we've already settled that matter, it's fine to put it behind us now."
+            show WG neutral
+            WG "I can't entirely fault you for wanting to keep things as a surprise. But I wanted to make a point to say I appreciated the effort you put into ensuring proper accommodations for me."
+            WG "It was quite a nice gesture, so thank you for that."
+            show WG pondering
+            "Alice looked lost in thought for a couple of seconds, like there was something else she wanted to say. But if she did, I didn't get the chance to find out."
+            "Instead we just held hands as we walked quietly back to the school. Letting the music of the night close out our date."
+            jump daymenu
+        else:
+            WG "Well, I wanted to make a point to say I really appreciated the extra effort you put into ensuring proper accommodations for me..."
+            show WG pondering
+            "Alice looked lost in thought for a couple of seconds, like there was something else she wanted to say."
+            show WG happy
+            WG "All together though it was a lovely evening. I do hope that this isn't our last theater outing."
+            MC "It certainly doesn't have to be. I'll keep that in mind for our future dates."
+            show WG happy-2
+            "She smiled as we held hands all the way back to the school. Letting the music of the night close out our date."
+            jump daymenu
 
 label WG003M:
     scene Music Classroom with fade
@@ -20079,21 +20254,18 @@ label WG070:
     show WG happy
     WG "Of course darling."
     play music BaroqueCoffeeHouse
+    show cg WG070 with dissolve
     "As the next song started Alice took my hands and we did our little waltz. It was fascinating watching her move herself with seemingly little effort despite her proportions. Though I could see by her smile that she was enjoying every moment of this."
     "In my defense, my relative lack of grace in comparison to hers was not entirely my fault. I was at the absolute limits of my reach to keep one hand on her hip and my other hand in hers as we stepped to-and-fro."
     "Alice for her part had to settle for reaching my elbow instead of my shoulder, as her generous bulk proved prohibitive for her reach, even more so than mine. Something that had become increasingly apparent as of late."
     "But tonight, in this moment, we were able to push aside that growing dilemma to the back of our minds as we embraced each other across the dance floor."
     "Despite my difficulties attempting to fully reach her, we managed to overcome it by embracing each other tightly. With each step I found myself sinking deeper and deeper into her soft, lucious middle. It was heavenly."
-    show WG surprised-2
     "I didn't think the material of her dress was thin if it could contain all of her, but I suppose squeezing each other this tight it was impossible for her to have not felt something at this point I had no control over."
-    show WG aroused
-    "We both blushed at the realization of what was happening,"
-    show WG neutral
-    extend " but were able to compose ourselves accordingly."
-    show WG happy
+    "We both blushed at the realization of what was happening, but were able to compose ourselves accordingly."
     "As we continued to waltz, it was apparent that Alice was the center of attention of the entire ballroom. However, with her full grace and bearing intact despite her growth, this time it was for the right reason."
     "If our performance got them to see beyond their initial stigma, I could not say for sure, but the looks of quiet bemusement were a welcome change from the disquieting shock we saw earlier."
     show WG neutral-2
+    hide cg with dissolve
     "After several minutes of dancing, and of me trying to avoid stepping on her feet, we decided to retire from the dance floor. We made our way over to a table along the wall where her father and some associates were sitting and chatting."
     "Attempting to be discreet, so as to not call attention to the matter, I moved an adjacent chair next to another when I pulled out a seat for Alice at the table."
     "It might have raised a few eyebrows at the table, but her comfort was far more important to me than the thoughts of strangers at this point, not to mention the potential for an incident without such precaution."
@@ -21446,21 +21618,62 @@ label WG075:
     WG "What do you mean?"
     "Alice was teaching me the ins and outs of investing— at her insistence— or at least was trying to. Honestly, this stuff was harder to wrap my head around than multivariate calc, but Alice seemed like she knew more than most professional stock brokers."
     "Calls, puts, straddles, iron condors— believe me, I knew what these words meant individually but when she started spouting off investment jargon I would start to get lost."
-    MC "So, if I understand this right, an option price is based on the volatility of a stock, more so than the actual underlying value of the stock itself?"
-    show WG neutral
-    WG "That is more or less correct. You seem to have ascertained the concept just fine. What are you confused about?"
-    MC "It just seems more like a risky gamble rather than an actual investment strategy. You're essentially placing a bet with 100 shares of a stock on whether it will move, rather than investing an amount of shares you can actually afford."
-    show WG haughty
-    WG "I'm honestly impressed, Keisuke. I'd dare say to venture that my investment acumen has started to rub off on you."
-    "At this point I was so lost I had to wonder if she was just humoring me out of pity."
-    MC "Um, are you sure about that? I feel like I don't understand much of anything."
-    show WG neutral
-    WG "The fact that you've correctly understood the risks of trading options tells me you already understand more about them than 90%% of people that trade options."
-    MC "Uhh, I have?"
-    WG "Suffice to say trading options without a clue as to what you are doing is a surefire way of wiping out your entire investment portfolio."
-    MC "So why do people do it?"
-    show WG neutral-2
-    WG "Well, there's plenty of nuance to it and I don't mean to discount the money that can be made in the derivatives market, but it's nothing you need to concern yourself with— at least for now I would say."
+    if checkSkill("Academics", "<=", 4):
+        "Honestly, I was starting to zone out at this point, but if I just stared at her blankly without saying anything she'd definitely notice I wasn't paying attention, which I was at least {i}trying{/i} to do."
+        MCT "Quick, say something! She'll think you're an idiot if you just stare blankly at her after telling her \"I don't get it\"."
+        MC "Well I mean... Why not just trade options all the time instead of the underlying stocks if you can use them to make outsized returns with leverage?"
+        show WG haughty
+        WG "That's an excellent investment strategy."
+        MCT "Nailed it."
+        show WG doubt
+        $setAffection("WG", -1)
+        WG "If the goal is to lose all of your money."
+        MCT "Damn. I should have known regurgitating a bunch of investment jargon wasn't going to do anything to impress her."
+        show WG haughty
+        WG "Sure, you will gain the \"option\", as it were, to purchase the stock at a cheaper rate to make an outsized return, but the price of that option is... well, already \"priced in\", as we say."
+        MC "What do you mean?"
+        show WG sly
+        WG "What novice investors just discovering the derivatives market don't understand is the fact that their ability to purchase an option is because someone, who's probably much smarter than them, is willing to sell it."
+        show WG haughty
+        MC "Such as yourself?"
+        WG "Let's just say I've had the privilege to teach more than a few overly-optimistic day traders the importance of risk management."
+        show WG neutral-2
+        WG "Which is why it's nothing you need to concern yourself with— especially since you're just starting to invest."
+    elif checkSkill("Academics", ">=", 7):
+        show WG sly
+        MC "This whole options trading thing seems too abstract to me. I mean, why not just buy the underlying security if you think it's going to go up, or short sell it if you think it is going to go down?"
+        MC "The price of the stock has to move quite a bit before you're ever going to make money on that option, and someone's probably figured out the price to nullify that return, or else why would they sell it in the first place?"
+        show WG happy-2
+        $setAffection("WG", 1)
+        WG "Oh tut-tut, Dear. Your response suggests you've managed to grasp the complexities of this topic pretty well, in such a short amount of time I might add. I'm honestly impressed."
+        show WG haughty
+        WG "I'd dare say to venture that my investment acumen has started to rub off on you."
+        show WG sly
+        MC "And here I thought I was the flatter in this relationship. I still don't think I understand it that well. Why do people use them?"
+        show WG neutral
+        WG "Well, you seem to understand them well enough to see the potential risks involved at least. To answer your question, they are traditionally used as an advanced investment strategy to hedge downside risk."
+        show WG sly
+        WG "But they can also be used by traders with a large appetite for risk in an attempt to make outsized returns with leverage."
+        show WG haughty
+        WG "As you might have guessed, the statistics show that this particular approach is a very poor, if not outright foolish, long-term investment strategy..."
+        show WG neutral
+        WG "So don't concern yourself too much about their use in your investment portfolio— at least for now."
+    else:
+        MC "So, if I understand this right, an option price is based on the volatility of a stock, more so than the actual underlying value of the stock itself?"
+        show WG neutral
+        WG "That is more or less correct. It's a significant component of it at least. You seem to have ascertained the concept just fine. What are you confused about?"
+        MC "It just seems more like a risky gamble rather than an actual investment strategy. You're essentially placing a bet with 100 shares of a stock on whether it will move, rather than investing an amount of shares you can actually afford."
+        show WG haughty
+        WG "I'm honestly impressed, Keisuke. I'd dare say to venture that my investment acumen has started to rub off on you."
+        "At this point I was so lost I had to wonder if she was just humoring me out of pity."
+        MC "Um, are you sure about that? I feel like I don't understand much of anything."
+        show WG neutral
+        WG "The fact that you've correctly understood the risks of trading options tells me you already understand more about them than 90%% of people that trade options."
+        MC "Uhh, I have?"
+        WG "Suffice to say trading options without a clue as to what you are doing is a surefire way of wiping out your entire investment portfolio."
+        MC "So why do people do it?"
+        show WG neutral-2
+        WG "Well, there's plenty of nuance to it and I don't mean to discount the money that can be made in the derivatives market, but it's nothing you need to concern yourself with— at least for now I would say."
     MC "Well that's a relief then. Why did we get so far into talking about this then?"
     show WG doubt
     WG "Because you asked me about it?"
@@ -21481,7 +21694,7 @@ label WG075:
     show WG neutral
     WG "Though I loathe hypocrisy as much as the next person, you have to understand that the tier of investing I'm at gives me access to things that are out of reach of most individuals: hedge funds, private equity, commercial real estate, and the like."
     MC "Like trading options?"
-    WG "That's a small part of it, yes. But even still, holding growth stocks for the long term should be the core investment strategy of any balanced portfolio."
+    WG "That's a small part of it, yes. But even still, holding value stocks with long term growth potential should be the core investment strategy of any balanced portfolio."
     MC "Wish they would have taught us this stuff in school. You know, something that might actually be useful to help make you money in life."
     MC "How did you learn so much about this stuff? I take it your father taught you."
     show WG happy

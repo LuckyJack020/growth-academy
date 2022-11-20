@@ -2170,6 +2170,7 @@ label MC004:
             MC "What gave you that idea?"
             Student "Do you stand on your balcony when you have major plans going on?"
             MC "Good point."
+            $setFlag("Meet_Genji")
             Student "Genji Nakayama. Fukuoka."
             MC "Ah..."
             MC "Keisuke Hotsure. Tokyo."

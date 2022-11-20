@@ -39,6 +39,7 @@ init python:
         #name of place: (map used, x/y pixel position)
         'arcade': ("town", (1100,650)),
         'auditorium': ("school", (470,560)),
+        'bakery': ("town", (1100,650)),
         'businterior': ("town", (1100,650)),
         'cafeteria': ("school", (655,570)),
         'campuscenter': ("school", (570,390)),
@@ -53,6 +54,7 @@ init python:
         'dormexterior': ("school", (860,375)),
         'dormhallway': ("school", (870,250)),
         'dorminterior': ("school", (880,380)),
+        'facultyroom': ("school", (880,380)),
         'festival': ("town", (1100,650)),
         'field': ("town", (1100,650)),
         'frozenbeach': ("town", (1100,650)),

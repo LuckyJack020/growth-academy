@@ -10120,10 +10120,17 @@ label FMG058:
     FMG "We all know who would have won that one anyway, thunderthighs."
     MCT "At least she's honest."
     MC "Regardless, there's one pose left. Most muscular!"
-    show FMG flex #flex-2
-    show Natsuko flex
+    show cg FMG058_pose1 with dissolve
+    pause 2
+    show cg FMG058_pose2 with dissolve
+    pause 2
+    show cg FMG058_pose3 with dissolve
+    pause 2
     "Akira and Nat both bent over and flexed all the muscles on their bodies, Visibly swelling outwards. This pose really hit home how massive these two were. It was breathtaking to say the least."
     MCT "Focus Kei, you have to pick a winner here."
+    show FMG flex #flex-2
+    show Natsuko flex
+    hide cg with dissolve
     menu:
         "Pick Akira":
             jump FMG058_c1_1
@@ -10556,7 +10563,7 @@ label FMG061:
     pause 1
     play sound Thud
     scene Dorm FMG with vpunch
-    MC "Wa! W-What happened! Oh nice, pillows. Wait..."
+    MC "Wa! W-What happened? Oh nice, pillows. Wait..."
     MC "You'll push me off the bed and make a landing zone but you can't give me an extra pillow? What's up with that?"
     play music FMG
     show FMG happy with dissolve
@@ -10616,7 +10623,7 @@ label FMG061:
     hide cg with dissolve
     #change outfit to dress?
     show FMG neutral with dissolve
-    FMG "I bet you'd {i}love{/i} that. Knowing how you are, I did buy some tight-fitting clothes at the store so I could rip out of them."
+    FMG "I bet you'd {i}love{/i} that. Knowing how you are, I bought some tight-fitting clothes at the store to rip out of them."
     show FMG aroused-2
     FMG "Just for you."
     MCT "Neuron activation."
@@ -10670,7 +10677,7 @@ label FMG061:
     FMG "Are you sure about that?"
     show FMG sad-2
     extend " I've been watching you sneak those bars out of the cafe..."
-    MC "I can explain that. Daichi will sometimes pop out of vents and usually, he hasn't eaten anything so I give him the bars to snack on as he does Daichi things around the school."
+    MC "I can explain that. Daichi will sometimes pop out of vents and usually, he hasn't eaten anything so I give him the bars to snack on as he does his Daichi things around the school."
     show FMG neutral
     FMG "..."
     MC "..."
@@ -10678,8 +10685,7 @@ label FMG061:
     MC "No, I'm serious. He crawls around the vents."
     FMG "I...I don't know what to say. What an odd dude."
     show FMG angry-2
-    extend " When is he going to get back to me about the bodyguard thingy! I've been waiting for months."
-    MC "Asking the wrong guy. Can you pass the chips?"
+    MC "You're telling me... {w}Pass the chips, please."
     show FMG neutral
     FMG "Sure."
     "I stared at the bag for a while collecting my thoughts before forming my sentence."
@@ -15950,9 +15956,588 @@ label FMG079:
     jump daymenu
 
 label FMG080:
+    $setProgress("FMG", "FMG081")
+    scene Gym with fade
+    $setFMGOutfit(OutfitEnum.GYM)
+    MC "Could you use any more weights?"
+    show FMG neutral with dissolve
+    FMG "It's only 18 plates."
+    MC "{i}Only{/i} is the keyword."
+    FMG "It would be less if the school decided to get me something more my size. It's so boring wanting to lift 900 kilograms and I have to go around collecting plates..."
+    MC "Think of it like a side quest in your favorite video game. Maybe there's a reward if you collect enough of them."
+    FMG "Is the reward an ice cream cone from the best boyfriend in the world?"
+    MC "Pfff, do I look like a charity?"
+    FMG "Wow, no wonder Tomo doesn't like you."
+    MC "All that matters is that I love myself, I don't need anyone else's love... {w}besides yours that is."
+    FMG "Yeah, that's what I thought, fool. I'd give you the tightest bear hug if I wasn't sweaty and gross."
+    MC "Bring it in, I could care less. If my girl wants a hug, she's getting one."
+    show FMG happy
+    FMG "My man!"
+    MC "I'm starting to have some difficulties wrapping my arms around you, quit spreading your lats."
+    show FMG neutral
+    FMG "I'm not trying to! If I was actually spreading my lats I would've ripped my top."
+    MC "I'm interested in seeing a demonstration."
+    FMG "When we get back to my dorm, I'll rip out of my clothes. It's been a bit and I miss that feeling of bursting out of tight clothes."
+    MC "Honestly, same."
+    FMG "Heh, I'm sure. {w}You ready to go? Did you finish everything?"
+    MC "This time I did, the mountain climbers have gotten easier. I increased my weight on the leg press by 25 kilograms."
+    show FMG flex
+    FMG "That's my Kei-kun."
+    show FMG happy
+    extend " You've improved so much, I'm so proud of you."
+    $setAffection("FMG", 2)
+    $setSkill("Athletics", 2)
+    FMG "I'll finish my set and we can get going, shouldn't take too long."
+    scene black with fade
+    pause 0.5
+
+    scene Lockers with fade
+    $setFMGOutfit(OutfitEnum.NUDE)
+    MC "I see you enjoy walking around naked more."
+    show FMG flex with dissolve
+    FMG "Uh, yeah. Flexing in the mirror naked is so much better."
+    show FMG neutral
+    FMG "Ever since Hageshi's training I've been so comfortable in my body even more than when I was smaller. I'm so much more confident in myself."
+    show FMG sad
+    FMG "I was terrified when this happened back home, I was terrified I might crush your tiny frail body..."
+    MCT "Did you seriously have to add the \"frail\" part?"
+    show FMG neutral
+    FMG "Thank you for being there for me, Keisuke."
+    MC "Sometimes I get this sharp pain in my back and I think it might be from carrying this relationship."
+    FMG "Uh-huh."
+    FMG "You want to hop in the shower with me? I could use an extra pair of hands~"
+    MC "You still can't reach your back, can you?"
+    show FMG angry
+    FMG "It's so annoying, dude! Ugh! I can lift a small car but I can't scratch my back!"
+    show FMG happy
+    FMG "OOOOH SHIT! THAT'S IT!"
+    MC "...Huh..."
+    FMG "I WANT TO LIFT A CAR!"
+    MC "Wait, what?"
+    FMG "A car! I haven't lifted a car yet!"
+    MC "Is that... safe?"
+    show FMG flex
+    FMG "Did I not just bench 900 kilograms?"
+    MC "That's... That's a fair point. {w}I'm still not too sure though Akira, I'm pretty sure the average weight of a car is like 1500 kilograms."
+    show FMG neutral
+    FMG "Come on Kei, I haven't been able to seriously test myself yet. Heck, the weights at the gym can't keep up with me. I could curl what I benched today with one arm if I wanted to."
+    MC "Liar. You can't curl that."
+    show FMG flex
+    FMG "I can't curl it now. I'll get there in no time."
+    show FMG happy
+    extend " For real though, I need to challenge myself. I want to see how strong I {i}really{/i} am."
+    MC "Don't get me wrong, I want to see it too. It's just... I-I don't know it's dangerous..."
+    if isEventCleared("FMGWG004"):
+        FMG "I'll be fine! If I can lift Alice, there's nothing that can stop me. Think about it."
+        MC "That's another good point..."
+        MC "But you never lifted Alice after she got... you know... fatter. And, she wasn't even close to the weight of a car when you lifted her... I think."
+        FMG "I'll call her, get her approval, lift her {i}again{/i}, and then we can lift a car she owns."
+        MC "She's not going to say yes again. Hell, we barely convinced her the first time."
+        show FMG sad
+        FMG "True..."
+        show FMG neutral
+        FMG "But for real, do you not want to watch me lift a freaking car over my head!!! Do you know how cool that sounds?"
+        MC "Okay, okay you've convinced me. Just be careful, please."
+        FMG "I always am."
+        MCT "Are you?"
+    else:
+        FMG "Kei, nothing's going to happen. Do you think I'm going to get hurt?"
+        show FMG flex
+        FMG "Look at me! I'm sturdier than a brick house. {size=-6}Could probably lift that same house{/size}."
+        show FMG neutral
+        FMG "I'll use proper form when I squat, I won't throw out my back... and... and I'll hug you after."
+        MC "You son of a bitch, I'm in."
+    MC "Do you have a car lined up that isn't going to involve you getting in trouble?"
+    show FMG sad
+    FMG "Uh... no."
+    show FMG angry
+    FMG "I just thought of this! How do you expect me to have something lined up already, you bozo!"
+    MC "You're terrible at this stuff... terrible."
+    FMG "I retract my shower invite, I didn't want your hands over my body anyway!"
+    MC "*gasp*"
+    show FMG aroused
+    FMG "I could never be serious about that, heh."
+    show FMG neutral
+    extend " After we shower, I'll think of something. I {i}will{/i} lift a car before the day is over."
+    MC "Yes ma'am."
+    FMG "And one more thing..."
+    show FMG aroused
+    FMG "My back is feeling sore, you're going to have to go nice and slow with your back rub. You wouldn't want me to hurt myself, would you?"
+    MCT "Please don't be a dream."
+    MC "The pants are already off, let's dance!"
+    scene black with fade
+    pause .5
+
+    scene Lockers with fade
+    "Akira's shower antics are some of the best things she does. Will she lift me up and suck the soul out of my body? Maybe she'll grab my hands and have me stroke her abs. The possibilities are endless. {w}Too bad none of those possibilities happened."
+    MC "I'm a little upset, I thought we'd do more... usually you're more aggressive when we shower together."
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    show FMG neutral with dissolve
+    FMG "I would've, but I wasn't kidding when I said my back was sore. However, after your back massage, I do feel a bit more loosened up."
+    FMG "Need to start incorporating more stretching again..."
+    MC "I assumed with your factor being your muscles you'd be immune to stiff muscles and all that jazz."
+    FMG "I feel like I am, haha. My back had to be a little sore after how hard I went these last few workouts."
+    show FMG sad
+    FMG "{size=-6}Almost ripped the lat pulldown out...{/size}"
+    MC "Ooooh yeah... you were into your workout that day."
+    FMG "Thankfully no one saw the dumbbells either. {w}Crushed the grips by accident."
+    show FMG neutral
+    FMG "The things I do for a good pump."
+    FMG "Putting cheap gym equipment aside, we should go find Hageshi-sensei. If there's anyone who can get me a car to lift it's him."
+    MC "Alice? The one with all the money, is not?"
+    FMG "Alice isn't going to buy a car just so I can have fun and besides Hageshi-sensei totally has connections."
+    MC "We'll see, I doubt someone like him has many friends at all. The dude seems like he barely gets out as it is."
+    FMG "Don't say that about him, I wouldn't be where I am now without his help. He can be stiff sometimes...{w}a lot of the time..."
+    FMG "Regardless, let's go find him, the later it gets the harder it's going to be."
+    MC "50 yen, he's at his desk watching old school karate movies eating unsalted walnuts and an absurdly big water bottle ."
+    FMG "That's oddly specific."
+    MC "I walk by his class a lot after hours..."
+    FMG "Are you creeping on Hageshi-sensei? I always knew you had a thing for dudes. I've been a cover-up this whole time."
+    MC "Nooooo, no, it's not like that at all. I... I just think he's hiding something, not anything crazy like a dead body, but something nonetheless."
+    show FMG happy
+    FMG "Your secret is safe with me."
+    MC "..."
+    scene black with fade
+    pause .5
+
+    scene Hallway with fade
+    "And there he was like I said. Laptop out on his desk, and leaned back in his office chair slowly eating some walnuts."
+    MC "What did I say? Look at him being all inconspicuous, he can't fool me."
+    show FMG sad with dissolve
+    FMG "I think Daichi is starting to get to you..."
+    show FMG neutral
+    FMG "Move over so I can open the door."
+    pause .5
+    MC "Hm, I see all it takes is two fingers to lift me now..."
+    show FMG flex
+    FMG "I could've lifted you with two fingers a while ago, I don't like to show off {i}all{/i} the time."
+    show FMG neutral
+    FMG "Here goes nothing..."
+    scene black with fade
+    pause .5
+    scene Classroom4
+    show Hageshi neutral
+    with fade
+    pause .5
+    show FMG happy at Position(xcenter=0.75, yalign=1.0) with easeinright
+    FMG "Hey Hageshi-sensei!"
+    Hageshi "Hmm?"
+    "Hageshi was lightning fast to shut his laptop before he gave us his full attention."
+    MCT "Hmmmmmmmm."
+    Hageshi "Oh. I wasn't expecting any visitors."
+    show FMG sad
+    FMG "{i}Blek!{/i} How can you eat those things, Hageshi-sensei?"
+    Hageshi "I like the taste, besides, they're good for you."
+    FMG "I will never understand how someone can be so cool and so lame at the same time."
+    Hageshi "Nice to see you too, Mitzutani-san. To what do I owe the pleasure of this visit?"
+    show FMG flex
+    FMG "I want to lift a car."
+    Hageshi "Straight to the point, I see."
+    show FMG neutral
+    FMG "Heh, yea, I was wondering if you'd be able to help."
+    Hageshi "{i}Sure{/i}, I've got nothing else going on."
+    show FMG happy
+    FMG "Hell yes!"
+    MCT "This guy..."
+    Hageshi "I think you misunderstood. By \"Sure\" I meant \"No\" and by  \"I've got nothing else going on.\" I meant  \"I'm busy\". Maybe we should start with a lesson in dramatic irony before we go lifting cars?"
+    show FMG angry-2
+    FMG "I know what sarcasm is Hageshi-sensei."
+    Hageshi "Oh good, I was worried I'd have to keep explaining my jokes."
+    show FMG neutral
+    FMG "Let's let me handle the jokes, Hageshi-sensei. Besides, don't give me that. You're full of it! We caught you red handed just wasting time watching karate movies on your laptop."
+    Hageshi "These are my open office hours. I got bored. It's not my fault most of the time no one shows up."
+    MC "{i}Hm{/i}, is it really though?"
+    FMG "That's because you're such a good teacher that you explain everything so well that no one has any questions."
+    "Hageshi-sensei gave an eye roll so hard that it made {i}my{/i} eyes strain just from watching it."
+    MC "Bruh..."
+    show FMG angry-3
+    FMG "Hey at least I'm trying. It's not like I see you doing anything to get me closer to lifting a car."
+    show FMG neutral
+    MC "Look, Hageshi-sensei, I know this isn't part of your usual office hours, but you do have a couple of students looking for help with something. It wouldn't be too big a deal if you had to take your office hours offsite for a bit right?"
+    "Taking a look around his otherwise empty classroom and out to the hall, Hageshi-sensei must have conceded the point."
+    Hageshi "Alright, fine. We can use my car. It's parked along the street just outside of campus. My office hours are almost done anyway, we can walk over there now if you're so eager."
+    MCT "I knew upping my speech skill would finally pay off!"
+    show FMG happy
+    FMG "Sweet! Let's go."
+    MCT "Wait a second... Nothing's ever this easy. Something's gotta be wrong. I wish I didn't have such a big perception penalty from all this hair in my face."
+    MC "Hold up, Hageshi-sensei, you're not even hesitating. Are you not worried that Akira might not be able to lift it?"
+    Hageshi "Are you?"
+    MC "Uh, yeah! I'm both excited and terrified at the same time. This is a car we're talking about."
+    Hageshi "Eh, she'll be fine... Probably."
+    MC "...Probably?"
+    Hageshi "You can't accomplish anything truly impressive without taking risks, Hotsure-san."
+    show FMG flex
+    FMG "Exactly. Thank you!"
+    Hageshi "You'll see, Hotsure-san. This will be a good lesson for both of you."
+    scene black with fade
+    pause 1
+
+    $setTime(TimeEnum.EVE)
+    scene School Front with fade
+    "With the sun starting to set, most all of the parking on the street had cleared out for the evening, with one particular exception that we all three walked up to before stopping."
+    MC "This... This is your car?"
+    "It was... it was something. A gray midsized sedan that was older than me or Akira, maybe not older than Hageshi though."
+    "It had rusty wheel wells and one of the front panels didn't match the rest of the body paint. That, and it had enough bird poop on it to suggest it hadn't been washed for more than a few months."
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Hageshi "Is there something wrong with it? Gets me from point A to point B just fine."
+    MC "I... guess. I figured you'd be rolling around with some style."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "I was thinking the same thing."
+    Hageshi "Hm, well in that case I'll take back my offer since my car isn't up to your guys' standards."
+    show FMG surprised-2
+    FMG "N-No need to be so hasty!"
+    show FMG happy
+    FMG "It's one of the coolest cars on campus... Isn't it, Kei-kun?"
+    MC "...Totally..."
+    Hageshi "That's what I thought. {w}Alright, have at it Mizutani-san. We don't have all day."
+    show FMG neutral
+    FMG "Oh, uh... right."
+    "Akira walked towards the side of the vehicle while stretching herself out."
+    pause .5
+    Hageshi "You don't need to flex..."
+    show FMG happy
+    FMG "I'm hyping myself up! Let me have this."
+    FMG "Okay, I'll start here to get under it and then move my hands to the center."
+    show FMG neutral
+    Hageshi "Don't tilt it from the side, you'll roll it over. Pick it up from the front to tilt it up, pop it onto your thighs, and then push it up until you can get your back under it."
+    FMG "Right, sounds good."
+    MC "How do you know so much about lifting cars Hageshi-sensei?"
+    Hageshi "Consider this a geometry lesson. She needs to pick up the front part first because the engine is the heaviest part. If she tried to pick it up from the middle or the back it would tip."
+    "Akira proceeded to pick the car up, taking the slack out of the shocks before the front tires began to rise off the ground."
+    "Just like Hageshi said, she propped the front bumper on her thigh before flipping her hand position so she could start to press it up."
+    Hageshi "Feeling heavy?"
+    show FMG happy
+    FMG "Not a chance. I got this!"
+    Hageshi "Good, because it's going to get a lot heavier."
+    "Akira proceeded to press up as she pushed the car forward, tilting the back bumper onto the ground. {w}This caused Hageshi to raise an eyebrow, probably regretting the decision to let Akira lift his car, but he didn't say anything."
+    Hageshi "Put your head down and load it onto your back."
+    show FMG angry-2
+    "Akira nodded, knowing what she had to do. In a swift motion, she ducked her head down, tilting the balance point of the car back across her traps as she positioned herself into a deep squat to fully get under it."
+    Hageshi "Alright, use the leg drive to pop it up."
+    show FMG angry
+    FMG "Come on! {i}Huut{/i}!"
+    "Akira's legs came to life in a surging swell of force as she straightened herself up like she was trying to jump to the moon."
+    "Finally reaching a standing position, the car practically floated off her shoulders as the momentum she generated carried it overhead."
+    "But not before slowly stalling just as she was about to lock it out."
+    MC "PUUUSH! YOU GOT THIS AKIRA!"
+    FMG "AAAAARRRRGGGHH!"
+    "Akira's body was practically quaking, desperately trying to stabilize herself as the entire weight of the car was left on just her arms to lock out those last few centimeters{w}— until she got it!"
+    show FMG flex
+    FMG "I DID IT!"
+    "Needless to say I was beside myself at the sight of seeing Akira beaming with the biggest smile I'd ever seen from her, standing arms up, with a freaking car overhead."
+    MC "Holy crap..."
+    Hageshi "Hm. Nice."
+    MC "What do you mean \"nice\"? How is that not the most amazing thing you've ever seen?"
+    Hageshi "What else did you expect to happen?"
+    MCT "I mean, he's not wrong, but what is wrong with this guy?"
+    FMG "{i}Dude{/i}! Are you getting a good look at this Kei-kun? I just lifted a freaking car! {w} Ooo! Kei, take a picture so I can send it to my parents!"
+    show FMG surprised-2
+    "Lost in her excitement Akira nearly lost balance with the car overhead, but with some extra effort she managed to keep it upright"
+    show FMG surprised
+    "{i}*RIIIIIIP*{/i}"
+    "... till she heard her clothes rip."
+    show FMG sad
+    FMG "Crap... I can't do anything fun with tight clothes... man. Now, I have to get another jacket..."
+    show FMG neutral
+    MC "Lifting the car was cool by itself, but this is officially the coolest thing I've ever seen now! I knew you were strong but {i}damn{/i}! This is a whole new level!"
+    Hageshi "Alright, you've had your fun. It's starting to get dark. Besides, it's a bit too cold out now to have you standing around outside with your clothes like that. Go ahead and set it down, {i}gently{/i}."
+    FMG "Right."
+    "Akira lowered the car down with her arms steadily until it rested across her traps, nice and gentle like Hageshi said."
+    show FMG surprised
+    "But she apparently forgot to account for the balance of the car's weight as she squatted down and it ended up tilting nose first into the pavement as it slid off her back."
+    MCT "Mission failed, successfully."
+    "Hageshi-sensei just stood there with a blank look on his face... like he always did. {w}But this time I had to imagine it was from being unable to process the shock of his ride getting jacked up from a student dropping it face first on the ground."
+    FMG "Hageshi-sensei... I am so {i}SO{/i} sorry!"
+    "Akira slowly walked herself out from under the car, but not before dropping the rear end as she got out from under it, busting the rear shocks in the process as the bumper sank to the ground after impact."
+    show FMG surprised-2
+    FMG "{i}Ooft{/i}! That ain't good."
+    show FMG sad
+    FMG "Please don't be mad, Hageshi-sensei."
+    Hageshi "Hm? {w}Oh, I don't care."
+    show FMG surprised-2
+    MC "What? She just totally busted up your ride!"
+    Hageshi "Honestly, what made you think I would drive a shitbox like this? I ride my bike to campus every day. You should both know that, you've seen me do that numerous times."
+    show FMG angry-3
+    MC "Bruh, you just let her jack up some rando's car?"
+    show FMG neutral
+    Hageshi "This car has been parked here illegally for the past three days, the school is getting it towed. I suspect it's been abandoned because it can't start and is worth less as scrap than the cost to get it towed to the junkyard."
+    show FMG sad
+    FMG "Well that's a relief."
+    MC "Dude, why didn't you just tell us it was a junker?"
+    show FMG neutral
+    Hageshi "I knew she'd be more careful if she thought it was important."
+    MCT "This guy is one devious MF'er."
+    FMG "Thanks, Hagashi-sensei. You're right, I probably would have been more reckless if I thought it was okay to toss around and drop like a piece of junk."
+    MC "If it wasn't a piece of junk before, it sure is now."
+    Hageshi "Well, no sense crying over spilled milk, or in this case, a dropped car. {w}Seems like every party is satisfied, so I'm going to head out."
+    show FMG happy
+    FMG "Thank you so much!!!"
+    Hageshi "Oh, and you should head to the tailor's to get that patched up."
+    FMG "Won't be a problem. Alice has this really weird chick that works for her clothing business that can fix it super quick."
+    Hageshi "As a teacher, I probably shouldn't say it, but I know exactly who you're talking about."
+    Hageshi "Alright, have fun. I'll see you two around."
+    hide Hageshi with dissolve
+    MC "He's crazy."
+    show FMG neutral at altMove(0.5, 0.5)
+    FMG "Oh yeah, for sure. {w}But did you not see HOW COOL I LOOKED!??!"
+    show FMG flex
+    FMG "I lifted a freaking car, holy shit. I'm fucking awesome, haha."
+    MC "You're equally as crazy as him."
+    show FMG neutral
+    FMG "Maybe, at least I'm your crazy. Your life would be so uneventful without me."
+    MC "Some might consider that a good thing, a lot of excitement is too much for most people."
+    FMG "We aren't most people. {w}Did you get any pictures of me being badass?"
+    MC "I got a few, I already sent them to your folks. So I'd expect your mom to call in a few after the panic attack your pictures are going to send her into."
+    FMG "She'll be fine, let's try to find Alice so she can have her little minion fix this for me. Now that this uniform is trashed I have an excuse to tear it apart when we get to my dorm."
+    show FMG aroused
+    FMG "And I'm feeling like we can go a few rounds tonight."
+    MC "Why do you make sex sound like boxing? That doesn't make me feel safe at all."
+    FMG "I wouldn't want you to."
+    MC "I'll unbutton my shirt myself this time."
+    show FMG angry
+    FMG "Killjoy."
+    jump daymenu
+
+label FMG081:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label FMGGTS001:
+    scene Bakery
+    show FMG neutral
+    with fade
+    play music FMG
+    FMG "That should be enough. I have something for you, Yamazaki-san, and me!"
+    MC "Okay, but what exactly is for Yamazaki-san and me? Cause over half this bag is mainly stuff you like."
+    FMG "Wrong. Yamazaki-san likes the same ones I do. Especially the ones with strawberries inside. All the glazed ones are yours, buuut, I'm going to steal one from you so don't eat them all."
+    MC "At least you're honest..."
+    MC "Also, what are we doing again today? You rarely skip the gym, this has to be super important."
+    show FMG happy
+    FMG "Yamazaki-san wanted help with her garden and I volunteered us both! It's going to be so much fun! I've been looking for a chance to hang out with her for a while."
+    FMG "I hear she's super into gardening. I'm hoping she can help me stop killing my houseplants all the time."
+    show FMG neutral
+    MC "I don't know. Doesn't sound too exciting to me, if I'm being honest."
+    FMG "Don't you want to get to know your classmates better?"
+    MC "Never said I didn't, I just wanted to know what had you so excited today. Yamazaki-san couldn't have asked for a better helper, haha."
+    show FMG flex
+    FMG "It was going to be leg day today, anyway."
+    MCT "Maybe this was a blessing in disguise."
+    show FMG neutral
+    FMG "Come on, I don't want to keep her waiting any longer."
+    MC "Lead the way."
+    scene black with fade
+    pause 1
+
+    scene Campus Center
+    show FMG neutral
+    with fade
+    FMG "Naomi said she'd meet us here, might as well pop a squat and wait. {w}You want one of your donuts? I'm going to eat one myself."
+    MC "Didn't even have to ask— throw it over."
+    MC "Mmmm, it's so flaky and fresh, I could die right now with no regrets."
+    FMG "Ugh, a coffee would've been perfect with these..."
+    pause 1
+    "Our foodgasm was put on hold when we spotted Naomi walking over with... Natsuko..."
+    MCT "I don't remember her being mentioned in the itinerary. Captain Killjoy is about to sink the whole ship and take the mood with her."
+    show FMG happy
+    FMG "Hey, Yamazaki-san! Long time no see."
+    show FMG happy at altMove(0.5, 0.25)
+    show GTS happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "Hello, Mizutani-san! Hello, Hotsure-san!"
+    MC "Hey, Yamazaki-san, hope you've been well."
+    show GTS neutral
+    GTS "Quite so, thank you for asking. Tending the garden keeps me busy, so I dearly appreciate your offering to help."
+    show GTS surprised
+    GTS "Oh dear, I nearly forgot to introduce my other friend-"
+    show GTS surprised at altMove(0.5, 0.6)
+    show Natsuko neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    Natsuko "Sadly, we've already met, Yamazaki-san."
+    show FMG neutral
+    FMG "I was hoping you'd be quiet the whole time so I could continue to ignore you, Nat."
+    Natsuko "It would be in your best interest to keep those comments to yourself if you don't want to end up eating dirt like the plants."
+    FMG "Oooooo, scaaaaary."
+    "I rolled my eyes and pulled Naomi to the side while the two continued to verbally assault each other."
+    show GTS sad at altMove(0.5, 0.5) with None
+    hide FMG
+    hide Natsuko
+    with dissolve
+    MC "Before you say anything, don't worry about it."
+    GTS "I had no idea they would act like this. I only want everyone to get along..."
+    MC "Yeaaaah, it's tough with these two. If it makes you feel better, I don't really know what to do either."
+    MC "I've kinda taken a ‘let them fight' attitude about it and you'd be surprised to know it works pretty well because now I get to ignore the problem!"
+    GTS "I-"
+    MC "Yeah, it's not the best... do you have any ideas of what we could do?"
+    show GTS pondering
+    GTS "Hm... maybe. I'd need some time to put something together."
+    MC "I'll take it. I'll see if I can keep the circus moving."
+    show GTS happy
+    GTS "Thank you, Hotsure-san."
+    show GTS neutral at altMove(0.5, 0.6) with None
+    show FMG angry at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    FMG "It's probably why you have no friends."
+    Natsuko "I bet you'd know what that's like."
+    MCT "Oh my god, this is exhausting."
+    MC "Ladies, while I'm sure Yamazaki-san and I want to listen to you two go at it all day we'd prefer to start walking towards the garden."
+    show FMG sad
+    show Natsuko disappointed
+    "Nat gathered her things, walking beside Naomi and ahead of Akira in her best attempt not to look at her, but I saw her gaze shift a few times."
+    show FMG at altMove(0.5, 0.5) with None
+    hide Natsuko
+    hide GTS
+    with dissolve
+    FMG "Sorry, Kei-kun."
+    MC "Don't sweat it. You guys are like oil and water. Maybe Naomi can turn you guys into a tea bag and... water? Ice and water?"
+    MC "Maybe something that actually works well together, I don't know."
+    show FMG neutral
+    FMG "Hopefully better than you and words."
+    MC "I should probably level my speech skill."
+    FMG "You definitely should. I don't know though, Nat's kind of an ass. Who knows how much Yamazaki-san can put up with?"
+    MCT "More than me that's for sure, I've been over you two and your bitch fits since day one..."
+    MC "Naomi has more patience than the three of us combined."
+    MCT "If there's anyone who can make you and Nat besties till the end, it's her... I hope."
+    scene black with fade
+    pause 0.5
+
+    scene School Planter
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.6, yalign=1.0)
+    show Natsuko disappointed at Position(xcenter=0.8, yalign=1.0)
+    with fade
+    "When we finally reached the garden, Naomi got to work instantly. The rest of us got to work too, taking brooms and sweeping the walkways that crisscrossed the garden."
+    "I stole glances at Natsuko and Naomi working side-by-side; they were a study of yin and yang, Natsuko, like a tiger with its claws, swept in swift, powerful arcs that kicked up visible plumes of dust and the occasional wrapper."
+    "Naomi, meanwhile, made slow, unintrusive strokes that eased the dirt off the path... though it was also pretty obvious she wasn't quite used to the way she had to hold a broom now."
+    show GTS neutral
+    GTS "Hotsure-san, would you and Mizutani-san mind grabbing some vases and getting them set up?"
+    MC "Sure."
+    MC "Akira, I'll toss you some of the vases and you can start filling them with dirt."
+    show FMG happy
+    show GTS unique
+    GTS "Thank you, you two! We ought to be done in no time."
+    FMG "Alright, Kei, pass me some."
+    show FMG flex
+    show GTS neutral
+    "Naomi bowed and set down the box, and Akira opened it, pulling out two glazed oak-brown Hagi vases. She winked at Natsuko as she passed by."
+    FMG "Better set those down, Imma need 'em in a second."
+    show GTS neutral at altMove(0.5, 0.5) with None
+    hide FMG
+    hide Natsuko
+    with dissolve
+    "I almost didn't notice her gradually sidling up to me, coincidentally sweeping in just the right pattern to converge with my path."
+    show GTS despaired-thought
+    "With her eyes down, she sighed a soft, wistful lament just within my earshot."
+    GTS "It's such a shame when two good people can't seem to see the good in each other."
+    MC "Suuuure. It's a little difficult to see the good in Nat... could be deep down inside her... very deep."
+    MC "Might need a Christmas miracle and we'd be able to see her heart grow three sizes."
+    show GTS neutral
+    GTS "I wouldn't be so quick to judge her, Hotsure-san. While she might not get along with Mizutani-san, Okamoto-san has been nothing but a pleasure to be around and I'm sure the others would say the same."
+    MC "Seems like we know two different Natsukos, Yamazaki-san. I get what you're saying though... I.... Hm, I guess I don't genuinely know the {i}other{/i} Nat."
+    GTS "She's sweet. She cares for her friends just like Mizutani-san does. The two are more alike than they'd like to admit."
+    MC "Huh, yeah... Them being competitive doesn't help. They'd sooner die in an attempt to one-up each other in shuffleboard."
+    GTS "Undoubtedly. Nevertheless, there is a point where competitiveness may sour into disharmony. Perhaps even enmity."
+    GTS "It is good to be content with the nature of things. I simply believe it would be kind, were the opportunity to arise, to nudge such persons toward a more illuminated perspective."
+    MCT "I am so lost..."
+    MC "Explain this like I'm five... please."
+    GTS "Oh, uh... I am suggesting we try to find common ground between the two to show them how alike they actually are so we can build on their relationship."
+    MC "Gotcha. Should've just said that the first time."
+    show GTS neutral
+    GTS "Ah... perhaps. My apologies."
+    MC "{i}cough{/i}... I'm going to go help Akira for a little bit..."
+    hide GTS with dissolve
+    MCT "Bruh, she confuses me so much with the way she speaks..."
+    pause 1
+    show FMG neutral with dissolve
+    FMG "Welcome back! Want to help your favorite person fill some vases?"
+    MC "Not really, no. However, I'll make an exception for you this one time. Lemme see one."
+    pause .5
+    show FMG surprised
+    FMG "Look! A kitten!"
+    "Seemly out of nowhere a chubby kitten strolled into Akira's path looking for snacks."
+    MC "Someone's been feeding him a little too much..."
+    show FMG neutral
+    FMG "He is quite a chucker. I'll give the little fatty a snack."
+    "Akira cleaned her hands and grabbed some of the pastry from the bag, giving tubby a little piece of it."
+    MC "Hey! That's from my donut."
+    FMG "You'll be fine, you don't need it that badly."
+    MCT "I need it more than him... {w}I'll get that piece back."
+    FMG "Are you seriously staring down the cat?"
+    MC "No..."
+    FMG "Uh-huh. You know, when I was little I'd give the cats in my hometown pieces of melonpan."
+    show FMG neutral at altMove(0.5, 0.25)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "Let me guess, they never came back?"
+    FMG "Oh, I'm sorry, did someone get sick of being ignored by everyone, and then that same person decided to inject themselves into a conversation that was perfectly fine without them?"
+    Natsuko "No."
+    Natsuko "Your stupid comments are beneath me."
+    MCT "I'm sure they are."
+    Natsuko "You should know like everyone else that yeast products are poisonous to cats."
+    FMG "Ah, so that's why you have no friends. While you were studying bread, everyone else was being social."
+    FMG "Oh, but I'm sure being the local bread expert is just as rewarding."
+    Natsuko "There is nothing stopping me from sending you to the nurse."
+    show FMG angry
+    FMG "Bring it."
+    show GTS angry with vpunch
+    GTS "Enough. Please. We are nearly finished, there is no reason to insult each other like this."
+    FMG "Hm... fine."
+    Natsuko "Whatever."
+    hide FMG
+    hide Natsuko
+    with dissolve
+    "The two amazons glared at each other with a fiery hatred and went their separate ways to finish what was left."
+    show GTS sad
+    MC "You okay?"
+    GTS "I don't know, Hotsure-san. I only want these two to see the good in each other. Perhaps we might need something more drastic than common ground..."
+    MC "We haven't tried anything yet, let's not start throwing away options right now."
+    MC "We'll figure something out I'm sure."
+    MC "On the bright side, at least with the two of them being overly competitive this went fast. {w}Look."
+    show Natsuko frustrated at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Natsuko's crimson hair whipped like a comet while she dashed between the pots and their destinations."
+    "I stared a little when she wasn't looking; it was like a relay race between an almost-blurry Natsuko and a bunch of inanimate objects, and she was damned sure taking home the gold."
+    show FMG angry-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Then, I felt a speck of cold, moist soil fly into my left cheek; I looked there to see Akira, brow furrowed with steel resolve, shoveling dirt at a dizzying and highly imprecise speed. Maybe half was actually going into the pot."
+    MCT "There is literally no win condition here..."
+    show Natsuko flex
+    show GTS surprised
+    "At last, the final {i}clack{/i}; Natsuko triumphantly slammed the last pot into place, to Naomi's momentary horror."
+    Natsuko "And that's how it's done."
+    show FMG flex
+    FMG "Yeah, if you want it done poorly. If you look over there, you'd see {i}real{/i} craftsmanship."
+    show Natsuko neutral
+    Natsuko "You consider shoveling dirt, craftsmanship? Hm, I guess with your lack of skills, it might as well be."
+    "Naomi was quick to insert herself to prevent it from getting any worse."
+    show GTS happy
+    GTS "It really is wonderful what becomes possible when we allow ourselves to see each other's strengths. {w}Wouldn't you agree?"
+    "At this, Akira and Natsuko, to Naomi's credit, looked at each other with a mutual and heartfelt confusion."
+    FMG "Uh, sure?"
+    Natsuko "I suppose..."
+    GTS "We should rendezvous at my dormitory! Some tea would be just the thing to help us unwind!"
+    Natsuko "Thanks for the offer, Yamazaki-san but if I have to be around Akira any longer I'm going to get sick."
+    FMG "Funny, that you mention that. I've been feeling queasy the entire time you've been here. In fact, I might relieve myself on your shoes."
+    "I could see Natsuko's jaw grinding and I instinctively took a step back."
+    Natsuko "Whatever. You can be a child on your own time, I'm leaving."
+    MCT "It never ends this shit..."
+    hide Natsuko with dissolve
+    FMG "Freaking bitch, you act like a child all the time too."
+    show GTS sad
+    GTS "I'm going to catch up with Okamoto-san and speak with her."
+    show GTS happy
+    extend " Thank you two for your help. Hopefully, we can do this again or perhaps have some tea next time under better circumstances."
+    show FMG happy
+    FMG "I'm always down."
+    show FMG neutral
+    FMG "Ah, don't forget your pastries, Yamazaki-san. You're going to need something to get that bitter taste out of your mouth after you finish talking with grumpy pants."
+    GTS "Thank you again, Mizutani-san. Take care, you two."
+    MC "You too, good luck."
+    hide GTS with dissolve
+    MC "So uh, can I have my donuts?"
+    FMG "..."
+    pause .5
+    show FMG sad at altMove(0.5, 0.5)
+    MC "You didn't..."
+    FMG "I got hungry while filling the vases."
+    MC "...You're paying for my dinner..."
+    jump daymenu
 
 label FMGWG001:
     "..."
