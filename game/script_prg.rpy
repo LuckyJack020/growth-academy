@@ -8305,7 +8305,7 @@ label PRG024:
         "Talk to Tomo":
             $setFlag("PRG024_Tomo")
             "I sighed."
-            play music MC
+            play music Tomoko
             pause .25
             "Tomo would have to do."
             MCT "She has ears at least. Let's hope she knows how to use 'em."
@@ -8328,7 +8328,10 @@ label PRG024:
             "The line went dead."
             MCT "... Shit, what dorm is she in?"
             scene Dorm Hallway with fade
-            "After my series of spam-texts, I finally got a room number out of her and found it quickly."
+            if isEventCleared("MC003") or isEventCleared("MC005"):
+                "I pulled out my phone and scrolled for a bit until I found her room number. Not too hard considering the load of one word answers."
+            else:
+                "After my series of spam-texts, I finally got a room number out of her and found it quickly."
             "I rapped my knuckles against the door and waited."
             pause 1
             show Tomoko neutral with dissolve
@@ -8344,8 +8347,10 @@ label PRG024:
             MC "Geez, ever hear of lightbulbs?"
             Tomoko "Ever hear of night vision?"
             MC "In fiction, yeah. Where that sort of thing exists."
+            show Tomoko annoyed
             Tomoko "Ugh... okay, what do you need?"
             MC "Well... okay, you can't tell anyone this. Not even your roommate."
+            show Tomoko neutral
             Tomoko "I won't. The less I say, the quieter things are for me."
             MC "Ah... okay? Look... I kind of have a thing for a girl."
             Tomoko "Honoka?"
@@ -8983,6 +8988,7 @@ label PRG025_Sex:
 label PRG026:
     $setPregnant()
     $setProgress("PRG", "PRG027")
+    $lockRoute("PRG")
     scene Bathroom with fade
     play music Sunset
     "{i}Snip snip... snip.{/i}"
@@ -8994,7 +9000,6 @@ label PRG026:
     "With so much going on in the day to day, taking a weekend to veg felt wonderful, and I felt much more rested and loose in return."
     "I'd caught up on a few TV shows, and played some games to chill out."
     "I hadn't been completely lazy, of course. I'd gotten some work done on the research paper, though not too much."
-    scene Dorm Interior with fade
     "I didn't want to blast through the whole thing and leave next to nothing for Aida to do."
     "Not that I was overly worried that I would work too hard or anything. I was quite sure that I could back down my effort levels if push came to shove."
     MCT "I'm just worried that Aida will be upset, and think that I think she's lazy or something."
@@ -9023,7 +9028,6 @@ label PRG026:
     "I took my bag from my bed and hurried out the door. There was no time to waste, especially if I wanted to catch her this morning."
     scene black with fade
     pause 1
-
     scene Hallway with fade
     "I ended up running early for once, as apparent by the hallway being far less crowded than it normally was."
     "I walked down the hall toward class, but before I entered, I took a few deep breaths, and felt my chest."
@@ -9064,12 +9068,9 @@ label PRG026:
     "Once she'd turned back around, Honoka entered the room, followed by Akira and Naomi."
     show WG neutral with dissolve
     "A few moments later, Alice walked in, followed by..."
-    show WG neutral:
-        linear 0.5 alpha 0.0
-    extend " no one."
     hide WG
+    extend " no one."
     "I waited patiently with my eyes glued to the door frame. But, the door didn't open. Not until Tashi-sensei opened the door and walked in, setting his bag and papers down on his desk."
-    show HR neutral with dissolve
     HR "Good morning everyone. I'd like to start off today with your research papers."
     HR "I know that they aren't due for awhile yet, but I hope you all have made some progress on them."
     "I was extremely glad to see more than a few students avert their eyes from him, or bury their faces into their notes."
@@ -9077,7 +9078,6 @@ label PRG026:
     MCT "Good. Lord knows I need that right now."
     scene black with fade
     pause .75
-
     scene Classroom with fade
     pause .25
     "For once, Tashi-sensei actually had kept it short. For the last bit of class, he allowed all of the students to meet up with their partners, if they chose to take one, and discuss their work."
@@ -9094,7 +9094,7 @@ label PRG026:
     AE "Nikumaru-san? A word, please."
     WG "Hm? I suppose. What can I do for you?"
     "Alice halted, looking off toward Shiori."
-    AE "As it were, I was wondering if you could inform me on where Kodama-san is?"
+    AE "As it were, I was wondering if you could inform me on where Kodoma-san is?"
     WG "At our dorm, if you must know. She's still under the weather."
     AE "Truly? You're certain she's ill?"
     WG "I don't claim to be a doctor, Matsumoto-san. But, she seems sick enough to me."
@@ -9141,16 +9141,13 @@ label PRG026:
     "Dumbfounded, I watched her leave."
     pause .75
     MCT "... What...?"
-    scene black with fade
-    pause 1
-
     scene Hallway with fade
     "I left the room as well, and saw Alice walking away from me."
     MCT "What the hell is going on?"
     pause .25
     MCT "Where's Aida? Why does everything feel so... so... different?"
     pause .5
-    MCT "We were fine before... we were fine... she was fine."
+    MCT "We were fine before... we were fine... she was fine"
     "I looked up at Alice's form walking away from me in the distance."
     "Every bit of confidence I'd had in asking Aida out, every bit of excitement was drained away. I watched Alice's blonde hair bob down the hall."
     "I held my stomach and leaned against the wall. I felt faint. I felt... hurt."
@@ -9196,11 +9193,9 @@ label PRG026:
     pause .75
     "I pushed it out of the way, and took one final deep breath."
     pause .25
-    play sound Knock
     "{i} Knock knock knock.{/i}"
     pause 1
     "I waited for around a minute, then knocked once more."
-    play sound Knock
     "..."
     "The door didn't move, but from behind it, I heard the quietest, almost entirely unnoticeable shuffling sound."
     pause .75
@@ -9211,7 +9206,7 @@ label PRG026:
     MC "Yeah. It's me. Alice... told me to stop by after class."
     MC "But I... I couldn't wait till after class."
     MC "Kodama-san... can I please come in?"
-    pause 1.5
+    pause 1.0
     stop music fadeout 1.0
     PRG "... Yes. But... please... {w}c-can you... {w}keep your eyes shut? F-For now?"
     MC "Uh... yeah. Sure."
@@ -9282,10 +9277,8 @@ label PRG026:
     "Aida's voice was wavering, her tone sounding thick and shaky."
     pause .75
     PRG "... Open your eyes, Hotsure-san."
-
-    scene Dorm PRG with fade
     "My eyes opened, and as my vision readjusted, I looked up."
-    show PRG sad with dissolve
+    show PRG sad
     pause 2
     MCT "... What the...?"
     "I stared at Aida."
@@ -9296,7 +9289,7 @@ label PRG026:
     PRG "... Y-You're g-g-going to... h-hate m-me..."
     MC "What? Kodama-san, what?"
     show PRG sad
-    PRG "{size=+6}You're gonna hate me!{/size}"
+    PRG "You're gonna hate me!"
     "Aida's eyes shut, and she burst into tears."
     "Rivers of teardrops ran down her cheeks as she sobbed and sat on her bed, grabbing her pillow and pressing her face into it."
     "I bolted up from my chair and right to her side."
@@ -9359,7 +9352,7 @@ label PRG026:
     MC "You don't mean..."
     show PRG sad
     "Aida burst into tears again and buried her head into her own hands."
-    PRG "{size=+6}It's all my fault! It's all my f-fault! I-I couldn't stop it, and it's all my fault!{/size}"
+    PRG "It's all my fault! It's all my f-fault! I-I couldn't stop it, and it's all my fault!"
     pause .75
     "I couldn't move. I couldn't even think."
     MC "It's... mine?"
@@ -9415,10 +9408,11 @@ label PRG026:
     PRG "But..."
     show PRG worried
     "Aida turned, and finally looked me in the eye."
-    PRG "... H-Hotsure-san... I-I-I... I'm so sorry..."
+    PRG "... H-Hotsure-san... I-I-I... I-I can never... I-I..."
+    PRG "I-I'm so... s-s-sorry..."
     show PRG sad-2
     PRG "I... I did something... really bad."
-    PRG "And now... I... I'm gonna have a baby."
+    PRG "And now... I... I'm going to have a baby."
     show PRG sad
     PRG "It's... It's all my fault..."
     pause 1
@@ -9428,7 +9422,6 @@ label PRG026:
     pause .5
     "I... {w}my kid existed. Inside of Aida."
     pause .75
-    "Everything had changed in a matter of a few days."
     MC "So... you were never sick?"
     "Aida shook her head."
     MC "And you... you... what happened after you left, exactly?"
@@ -9459,9 +9452,10 @@ label PRG026:
     PRG "Well..."
     PRG "... S-She... she's the only person who knows what my factor is... aside from you now."
     MC "Has she known all this time?"
-    pause 1
+    pause .5
     show PRG sad-2
-    PRG "... {w}Yes."
+    pause .75
+    PRG "... {w}Yes{/w}."
     MC "Oh... wow..."
     PRG "S-She wasn't upset with you at all. Or... s-she isn't."
     PRG "But..."
@@ -9479,12 +9473,14 @@ label PRG026:
     PRG "I... know that... this is all my fault."
     pause .5
     PRG "I... {w}I did this..."
-    PRG "So... if you don't... w-want this..."
+    PRG "And... if you don't... w-want this..."
     PRG "If you don't... w-want to... be here..."
-    pause 1
+    pause .5
     show PRG sad-2
+    pause .5
     PRG "... I'll understand."
-    PRG "... I-I'll understand if you don't want to... talk anymore. A-And if you don't want to see me again..."
+    PRG "... I'll understand if you don't want to... talk anymore. A-And if you don't want to see me again..."
+    PRG "And if... if that's the case, and you don't want to see me anymore, I-I won't... I won't hold it against you."
     pause .75
     "She lowered her head solemnly."
     pause .5
@@ -9506,185 +9502,56 @@ label PRG026:
     "At the same time... I'd be losing the majority of my free time. And, there would be financial hurdles, stress, and... well, baby stuff."
     MCT "I'm only 18. Can I really do all of that?"
     "I looked at Aida... and I looked at her belly."
-    menu:
-        "Be there for her.":
-            $lockRoute("PRG")
-            pause .5
-            "My eyes went back up to her face."
-            "I scooted forward on the bed, and instead of her grabbing and pulling me in, I went right beside her, wrapped my arms around her, and hugged her."
-            "I didn't say a word."
-            "... {w}Nor did she."
-            MC "I'm not going anywhere."
-            play music MC
-            MC "This isn't all your fault. So don't you say that. Don't you dare say that. Not again."
-            MC "It takes two of us. We both did this."
-            pause .5
-            MC "And... I'd be a pretty big coward if I ran away now."
-            MC "I'm right here with you. I promise."
-            show PRG flattered
-            "Aida looked up at me. Her eyes were wide, and, though she looked happy, she also seemed shocked."
-            MC "So... I guess we have a lot to learn... don't we?"
-            PRG "H-H-Hotsure-san? A-Are you... s-sure?"
-            MC "Yeah... yes I am."
-            "I put my hand on her cheek and wiped some moisture away, then looked into her eyes."
-            show PRG nervous
-            PRG "I-I-I'm so sorry. I-I lost c-control, a-and I... m-messed up. A-A-And-"
-            MC "Hey. No more of that. You hear me?"
-            show PRG worried
-            MC "I told you. I'm here for you. And, I'm here {i}with{/i} you."
-            pause .25
-            MC "So... {w}no blaming... okay?"
-            "I looked at her, and she looked back at me."
-            show PRG embarrassed
-            "Finally, she nodded."
-            PRG "... Okay."
-            PRG "T-Thank you. I..."
-            pause .5
-            show PRG neutral
-            pause .25
-            PRG "T-T-Thank you... H-Hotsure-san..."
-            "Aida laid her head on my chest again, this time not in tears. She seemed to be giving me more of a nuzzle."
-            MC "I promise. I'll... I'll do all I can."
-            MC "I'll... I'll be right beside you... a-and I'll try to be the best dad I can be."
-            MC "... Dad. That's... that's so..."
-            pause .25
-            PRG "... I-I know."
-            show PRG unique-happy
-            PRG "I-I-I... I'm gonna be a... mom."
-            "I nodded at her."
-            "I couldn't help it."
-            "The emotion driven choking feeling overtook my head once again, and I sniffled a bit."
-            show PRG neutral
-            MC "Hah... guess it's my turn for tears now too..."
-            "I sniffled and turned my head."
-            "This time, she followed my head, and reached her hand up, wiping my tears away for me."
-            "I looked down at her and smiled like an idiot."
-            MC "Y-You're not supposed to see me like this. I gotta– be tough."
-            PRG "... Everyone cries sometimes."
-            "She looked down and tried to pull her shirt down over her bump, but there was just not enough fabric to reach."
-            MC "... Can I... touch?"
-            show PRG unique-happy
-            PRG "... Y-Yeah."
-            "She reached down and pulled her shirt up a bit so her belly was out."
-            "My hand wobbled in the air like an airplane, and I gently... {w}gently... {w}felt her belly."
-            show PRG nervous
-            "She exhaled with my touch, but stayed as she was."
-            "Her skin was soft. Ungodly soft. Despite her sudden growth over the course of three days, she didn't have even one stretch mark."
-            "And, just like the rest of her, her belly was pale like evening moonlight."
-            MC "That's... that's really... real."
-            PRG "Y-Yeah..."
-            "I took my hand off, and she pulled her shirt back down."
-            PRG "I..."
-            pause .5
-            show PRG unique-happy
-            pause .5
-            $setAffection("PRG", 3)
-            PRG "T-Thank you... H-Hotsure-san. I..."
-            PRG "I-I don't even know what to say..."
-            "More tears came, but this time, a smile came with them."
-            MC "Hey... enough of that now. You're gonna flood the room with all those tears."
-            "I rubbed her cheek to wick away the moisture."
-            "I glanced at Aida's clock in the room for the time."
-            MCT "I have class soon, but I don't want to leave."
-            MCT "It would feel inappropriate."
-            pause .5
-            MC "I... would you want to work on our paper a little? For now?"
-            show PRG worried
-            PRG "B-But... afternoon class..."
-            MC "I... I'll just say I was sick too."
-            MC "Now. Can I get you anything before we get started?"
-            pause .25
-            PRG "..."
-            show PRG neutral
-            extend " W-Water, please."
-            MC "You got it."
-            hide PRG with dissolve
-            "I got up from the bed and walked across her room, and opened the door into the kitchen of her dorm."
-            show WG neutral with dissolve
-            "In the entryway, Alice was reaching to get one shoe on."
-            MC "Oh... Alice, hey..."
-            WG "Hello, Hotsure-san."
-            "She got her shoe on, then took her bag and opened the door."
-            show WG neutral-2
-            WG "Hotsure-san?"
-            MC "Y-Yeah?"
-            pause .5
-            show WG happy
-            pause 1
-            WG "... Well done."
-            "I smiled at her and nodded my thank you."
-            "The door shut behind her, and I filled two glasses, then walked back into Aida's room."
-            scene black with fade
-            "Aida and I worked on our paper for the rest of the afternoon. Since we were fairly far behind, we ran with my idea on Japanese baseball, and using Aida's fairly deep knowledge on the topic, we got an astounding amount of work done."
-            pause .5
-            "Though, even as we worked, my mind wasn't in the game."
-            "A lot had changed. I was going to be a dad, and I had a lot to learn along the way, most of which I was nervous for."
-            pause 1
-            "But... even still, my heart was in a sound place."
-            "This was right. This was what I had to do."
-            jump daymenu
-        "Leave.":
-            $disableRoute("PRG")
-            "My feelings caught in my throat."
-            "I liked Aida. A lot."
-            pause .5
-            "But... what did I know about kids?"
-            "I was a complete newbie. And, all I'd heard was horror stories online that talked about ten million diapers and insane time commitments."
-            "It was too much. It all was."
-            pause .25
-            "I was 18. I was just a kid."
-            MC "I..."
-            play music Bittersweet
-            pause .75
-            MC "... I can't, Kodama-san."
-            MC "I... I don't know the first thing about being a dad."
-            show PRG sad
-            "All of my feelings from that morning crushed and smashed in my chest."
-            "I felt like because of something so crazy, I'd just lost my chance with someone special."
-            "But... being a dad... it just was too much."
-            "Aida's head lowered. She looked down at herself."
-            "Tears began to fall again, landing on her shirt as she began trembling again."
-            pause .5
-            PRG "... I-I... I... I u-u-understand."
-            MC "I... I'm sorry, Kodama-san."
-            pause .25
-            MC "I... I am..."
-            PRG "C-C-Can..."
-            $setAffection("PRG", -30)
-            PRG "C-Can you... {w}p-please go?"
-            "I felt horrible. Everything was ruined. The girl I'd gotten to know so well, and who had become a good friend of mine... was gone."
-            MC "Right... I-I'm sorry."
-            hide PRG with dissolve
-            "I got up and took my bag, and walked silently to the door."
-            "As I shut it behind me, and walked to the entryway to shut the door, I halted."
-            "Alice stood in the kitchen, putting a textbook into her bag."
-            "Behind me as the door closed, a loud wail came from the room. The sound of heavy sobbing echoed through the wood of the door."
-            show WG angry with dissolve
-            MC "Alice... hi."
-            "Alice looked up at me."
-            "She walked past me and bumped me out of the way without a word."
-            $setAffection("WG", -30)
-            "She opened the door, and knocked my shoes out into the hallway with her foot."
-            pause .25
-            WG "Out."
-            "She pointed into the hall."
-            scene Dorm Hallway with fade
-            "I obeyed and walked into the hall."
-            "The door slammed behind me and almost smashed into my back."
-            "I looked back at it, and put my shoes back on without a word."
-            scene black with fade
-            pause 1.5
-            "I walked back to my dorm alone."
-            "When I got back, I took my shoes off and yanked the drapes closed, then fell into bed, pulling the covers over me."
-            "For the entire rest of the day, I didn't leave my bed."
-            "I skipped dinner that night."
-            "When Daichi came back for the night, I didn't say a word to him."
-            "I spent the night looking at the ceiling above me. I didn't sleep. The hours and all time faded away into nothing. I lost track of everything."
-            pause .5
-            "I did cry though. I did a lot of that."
-            "I didn't care if Daichi heard me. I didn't care about anything."
-            "My friend... the girl I liked... she was gone."
-            jump daymenu
+    MCT "..."
+    MCT "I need time. She's my friend. And... I... I can't rush this."
+    pause .75
+    MC "Can... can I think about it? Just... for today?"
+    MC "My... {w}my mind is a little... all over the place. And I need to... calm down a bit."
+    PRG "P-Please do. I-I..."
+    show PRG unique
+    PRG "..."
+    MC "I'll have an answer for you. I just... I need some time."
+    PRG "O-Of course. I..."
+    pause .25
+    show PRG sad
+    pause .25
+    PRG "{i}Sniff{/i}"
+    PRG "I-I'm... I'm s-so sorry, Hotsure-san..."
+    PRG "I-I never w-wanted t-things to... t-turn out like this..."
+    PRG "I'm so... so sorry..."
+    "Aida put her head in her hands, her body shaking once more."
+    "I had the feeling of your entire psyche being shaken, to the effect that I had begun to feel light-headed."
+    "I got up and looked back to Aida."
+    MC "I... I'll see you tomorrow, Kodama-san."
+    "Aida didn't respond, and simply nodded as I turned and left her room."
+    hide PRG with dissolve
+    pause .25
+    scene black with fade
+    pause 1
+    scene Dorm Interior with fade
+    pause .5
+    "My dorm was silent."
+    pause .5
+    "I walked in, set my bag on my bed, and sat, staring down at my feet."
+    MCT "..."
+    MCT "... {w}What... can I even do?"
+    MCT "I'm... I'm going to be a dad..."
+    pause .5
+    "I'd gotten a girl pregnant."
+    pause .75
+    "And, that girl was Aida. The girl who was arguably one of my closest friends on campus, and also the girl I had a massive crush on."
+    "My stomach was turned into knots. I felt an anxious gurgle from my middle, and shut my eyes, feeling tears prick them."
+    "I didn't even try to stop them, and let them roll down my cheeks, only to be caught up by my hair."
+    "I kicked my shoes off at the heel, and instead of putting them by the door, let them lay where they were on the floor, and peeled off my shirt, pants, and socks, throwing them to the floor."
+    "I got into bed and yanked the covers over my head."
+    scene black with fade
+    "My body shook as a gutteral sob heaved from me, and I yanked my pillow close and hugged it, feeling less and less like a man dealing with a problem and more like a scared little kid, confronted with something so huge that they couldn't help but cry."
+    "I wanted to talk to someone. Anyone."
+    "But... I couldn't."
+    "It was all so much."
+    "And no one would get it."
+    "I lay under my covers, until eventually, I managed to fall asleep for a short while, the warmth of my blankets pulling me into a restless slumber."
+    jump daymenu
 
 label PRG027:
     $setProgress("PRG", "PRG028")

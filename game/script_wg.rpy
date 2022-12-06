@@ -9555,7 +9555,7 @@ label WG042_afterpaint:
         WG "My my, you certainly took your time— oh."
         show WG surprised-2
         "To my surprise, Alice had not only finished all the beef Yakisoba. But had actually started working on the chicken one as well."
-        MCT "I guess she couldn't wait that long and found some chopsticks for herself."
+        MCT "I guess she couldn't wait that long."
         "She had done a number on the chicken one already. I would have had a hard time finishing one on an empty stomach. It was truly amazing to see just how much Alice could eat when she really enjoys a meal."
         "It did appear to be catching up to her though, that was clear. Alice was leaning backwards in her seat, taking slow, soft breaths. Something tells me even she wasn't prepared for how much she ate."
         MC "Ta-dah! What do you think, pretty cool huh?"
@@ -14231,22 +14231,25 @@ label WG056:
     show WG happy
     "I took her hand in mine as we walked around to the other side of the girl's dorm where Tomo's room was. Even her hands felt soft and puffy at this stage in her growth. Looking down I noticed the dimples where her knuckles should be as I gave her hand a gentle squeeze."
     MC "I should warn you Alice, Tomoko can be... well, a bit rough around the edges."
-    show WG neutral-2
+    show WG sly
     WG "Sounds like you two have a bit more in common than you care to admit."
     MC "Heh, fair enough, but I'm serious, Alice. She can be quite blunt at times. Just try not to get mad if she says something stupid."
+    show WG happy
     WG "Oh you're just being nervous. I'm sure she's fine."
     MC "I don't know if you understand. So picture all the stuff about me that annoys you."
     show WG neutral
     pause 1
     WG "Okay."
-    MC "Now take away my more redeeming qualities and that's all your left with. Times ten. That's Tomoko."
+    MC "Now take away my more redeeming qualities— and that's all your left with. Times ten. That's Tomoko."
     "Alice just stared at me, completely unphased by the point I was trying to drive home."
+    show WG sly
     WG "So, if I understand you correctly, what you're trying to say is, you two are exactly alike?"
-    "I couldn't help but slump my neck and shoulders in response to that. I expressed my disappointment in her assessment with an unamused and mopey glare."
+    "I couldn't help but slump my neck and shoulders in response to that. I expressed my disappointment in her assessment with an unamused, mopey glare."
     show WG haughty
     WG "Come now, don't pout. It takes the fun out of teasing you. Honestly, there's no need to make such a big deal out of this. Drama isn't exactly flattering on you Keisuke."
     MC "{i}Sigh{/i}, I know. You're right. I'll stop whining."
     MCT "Get it together, stay positive."
+    show WG happy-2
     MC "I hope you like her. I hope she likes you. Like you said, it'll be fine."
     MCT "Oh, what the hell am I even saying?"
     "Arriving at our destination, I knocked on Tomo's door."
@@ -14258,7 +14261,7 @@ label WG056:
     WG "Keisuke, did you even check to make sure she'd be in her room?"
     MC "I did. It just takes a while to wake a bear from hibernation."
     "After an embarrassingly long time, I heard the sounds of the door unlatching and beginning to open. True to her nocturnal nature, she only cracked the door open wide enough to see me."
-    show WG neutral at Position(xcenter=0.2, yalign=1.0)
+    show WG neutral-2 at Position(xcenter=0.2, yalign=1.0)
     show Tomoko neutral at Position(xcenter=0.8, yalign=1.0)
     with dissolve
     Tomoko "Wha? Oh, hey Kei. What do you want? You interrupted a perfectly good nap."
@@ -14271,10 +14274,13 @@ label WG056:
     MC "I don't {i}need{/i} anything from you. I just wanted to introduce you to someone I thought you should get to know."
     "I pushed on Tomo's door to open it wider with one hand, while gesturing towards Alice behind me with the other."
     MC "Tomoko — Alice. Alice  — Tomoko."
+    show WG happy
     WG "Nice to finally meet you, Tomoko."
+    show Tomoko surprised
+    show WG neutral-2
     "Not much of anything ever phased Tomo, but her wide–eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
     Tomoko "Uhhh, hi... it's... just Tomo, by the way."
-    Tomoko "{size=-6}Kei, she's huge! I knew you had a thing for bigger girls, but this is biiig! Even for you!{/size}"
+    Tomoko "{size=-6}Kei, she's huge! I knew you had a thing for bigger girls, but this is {i}biiig{/i}! Even for you!{/size}"
     "My initial reaction was one of bewilderment, because I was not quite sure at what point she would have learned that information, but then again, I can't say I didn't do my fair share of spying on her too when we were younger."
     "But my second reaction was pure cringe, as I knew for a fact Tomo did not whisper that quietly enough for Alice to have not heard that."
     show WG worried
@@ -14313,20 +14319,24 @@ label WG056:
     show WG neutral-2
     "I sat down on the couch and patted the seat next to me to invite Alice to sit down."
     "Alice waddled over, turning around to start to sit before Tomo spoke up."
+    show Tomoko surprised
     Tomoko "Wait! You're not going to break my couch are you?"
     show WG surprised
+    show Tomoko neutral
     WG "What?"
     MC "Tomo!"
     Tomoko "What? I like that couch. It's where I put my dirty clothes. I heard about a student with a weight gain factor who broke her bed and had to get a new one not that long ago."
     show WG stern
     WG "{size=-6}How did you know I...{/size}?"
     "Tomo's roommate sat on the student council and that blabbermouth tells her everything. It's why Tomo always knows about what's going on in the school, despite being a recluse who doesn't leave her room unless she has to."
+    show WG doubt
     MC "Your roommate Yuki has quite the reputation as a chatterbox. Perhaps you should be a bit more skeptical of the things she repeats from the rumor mill?"
     Tomoko "Oh, uh, I guess you're right. I mean the school is supposed to be built to prevent those kinds of things. Someone would have to be really heavy to break the furniture in a place that's built to handle that kind of thing."
     show WG worried
     "Even when dropping the matter, Tomo still managed to make things ten times more embarrassing for Alice."
     MC "Uh, right. Nothing to worry about!"
-    "I reached out and offered my hand to Alice to brace hers while I provided support against her back with my other arm to assist with a gentle descent on to the couch cushions."
+    show WG neutral
+    "I reached out and offered my hand to Alice to brace hers while I provided support against her back with my other arm to assist with a gentle descent onto the couch cushions."
     "{i}CREEEEK{/i}"
     show WG surprised
     "Alice and I gave each other a frightened look for a split second, but after silence hung in the air for a bit, we relaxed once we realized the couch was going to hold up."
@@ -14341,10 +14351,12 @@ label WG056:
     WG "Oh. I see... Well what do you like to do when you're not at school?"
     Tomoko "I go shopping if I really need something. Sometimes I go to the arcade. I don't know, there's not that much else to do on this island."
     "As verbose as Tomo was, her entire autobiography wouldn't have even filled two pages. Alice was quite the conversationalist, so I'm sure she found the prospect of extracting anything interesting out of Tomo just as excruciating as it was for me to listen to this."
-    WG "Uh-huh... Yes, um, fascinating. So, what was it like growing up with Keisuke?"
+    WG "Uh-huh... Yes, um, fascinating.{w} So, what was it like growing up with Keisuke?"
     Tomoko "Oh, well, we would always fight about everything because we were the same age and never wanted to share our stuff. He's always acting like the \"big brother\" even though he's not even an hour older than me."
     "I could only roll my eyes at the sheer ingratitude."
+    show WG happy
     WG "Is that so? That's rather sweet of you to look out for your little sister like that Keisuke."
+    show WG surprised-2
     MC "What can I say? I try, but as you can see, I can only do so much."
     Tomoko "Oh. Yes. My dear brother, where would I be if not for your guiding hand?"
     MC "If you're thinking it's some place better than this current pig-stye, I got news for ya."
@@ -14367,14 +14379,21 @@ label WG056:
     Tomoko "Aren't you like, really rich or something? Like {i}suuuper-rich{/i}?"
     MC "Tomo, it's not really a polite topic of conversation to bring up personal finances."
     Tomoko "What? You're the one asking me what I wanted to know. I don't see what the big deal is."
+    show WG neutral-2
     WG "It's alright Keisuke, I can handle this. Even though it is not the most proper of subject matter, it is something that I get asked about fairly often. We might as well get it out of the way."
-    WG "My father is indeed a very successful businessman, you have probably heard of the name Nikumaru before. He is the head of a major heavy industry conglomerate in Japan."
+    show WG haughty
+    WG "My father is indeed a very successful businessman, you have probably heard of the name Nikumaru before. He is the head of a major heavy industry conglomerate in Yokohama."
+    show WG neutral-2
     Tomoko "Nik-u-mar...u...!"
+    show WG surprised-2
     Tomoko "Holy shit! You must be loaded!"
+    show WG neutral
     WG "Um, well—"
     Tomoko "You really hit the jackpot with her Kei!"
     MC "Tomo, please, this isn't about money. I didn't come here to talk about her wealth. I wanted to introduce her to you because we've grown so close in our relationship, I thought it was past time you met her."
+    show WG surprised-2
     Tomoko "Do you have a yacht? Like one of those mega-yachts? Or a private jet even?"
+    show WG neutral-2
     WG "If you are curious to know, yes, my family does have those things."
     Tomoko "So, you're like, set for life then?"
     MC "Tomo..."
@@ -14384,6 +14403,7 @@ label WG056:
     WG "Is there anything else you were curious about? Like how we met?"
     Tomoko "Not really. You both go to the same school. Kei always had a thing for big girls, I can put the pieces together from there."
     WG "... I suppose you are right."
+    show WG neutral
     WG "Was there more you wanted to know about me, or us?"
     MC "—That wasn't about money."
     Tomoko "Yeah. What's it like being so big?"
@@ -14391,24 +14411,31 @@ label WG056:
     MC "..."
     "I could feel the color drain out of my face from the shock that she actually said that. Tomo had always been as blunt as a sledgehammer, but I would have thought even she knew better than this."
     Tomoko "I mean I've seen some giant students that were really tall, and obviously big, but you're like the biggest person I've seen that's a normal height here."
+    if getFlag("Meet_Mizawa"):
+        Tomoko "Like there's this girl in my class who's the class president, she's kind of tall, except not a giant, and I thought she got really big, but you're even bigger than she is."
+        MCT "Why do I get the feeling I know {i}exactly{/i} who she's talking about?"
     show WG sad
     WG "Oh. Umm, I guess you're right. I suppose I hadn't realized I stood out so much..."
     "Whatever color had drained out of my face before began to boil up red. Deep in my heart, I know Tomo didn't mean it like that, but seeing Alice looking so embarrassed and hurt by her careless words— I completely snapped!"
-    MC "Damn-it Tomoko! What the hell is wrong with you!?"
     show WG surprised
+    MC "Damn-it Tomoko! What the hell is wrong with you!?"
     Tomoko "What? I was just asking—"
     MC "Yeah, I know. Shut up! You've embarrassed the hell out of me and yourself. First, you barely drag your ass out of bed to greet us at the door."
     show WG worried
     MC "Then I have to scrape three layers of garbage off your couch just so we could sit and visit, only for you to show approximately zero interest in holding basic conversation unless you're asking about the most invasively private shit possible!"
     MC "For once, could you just take a hint and take something seriously? I {i}LOVE{/i} this woman. She's the most important thing I've got going on in my life. Excuse the hell out of me for wanting to include you with that."
     "Even Tomo's usually shameless and unflappable demeanor was shocked, if not a bit shamed, by my unexpected diatribe."
+    show Tomoko sad
     Tomoko "...Sorry."
     MC "Good. That's a start, but it isn't enough. We're going."
+    show WG surprised-2
     "I took Alice's hands to help her up off the couch. She had sunk in more than expected, so it took a decent amount of pulling to help give her a good boost."
     "At this point though I had so much rage power coursing through my muscles I felt like I could have lifted her off the ground."
+    show WG worried
     "Okay, that was a stretch, but I was still pretty mad at Tomo."
     "I got the door for Alice and followed her out as I left, slamming the door behind me."
     scene black with fade
+    pause 0.5
     $setTime(TimeEnum.DAY)
     scene Dorm Exterior
     show WG worried
@@ -14416,15 +14443,17 @@ label WG056:
     play music HigherEdu
     "We walked in silence for a little while. Alice was still looking sullen and dejected, while I was trying to take in some calm breaths to simmer myself back down to something closer to sanity."
     MC "Sorry about that."
-    WG "You don't need to apologise Keisuke. It's not like you can control her and what she does. Now I see why you were so nervous about introducing us."
-    "Prior to this, my sister's bafflingly uncouth mannerisms made me relish at the thought of getting to tell Alice \"I told you so!\" for once."
+    WG "You don't need to apologize, Keisuke. It's not like you can control her and what she does. Now I see why you were so nervous about introducing us."
+    "Prior to this, my sister's bafflingly uncouth mannerisms made me relish the thought of getting to tell Alice \"I told you so!\" for once."
     "But seeing the look on her face after that disaster— I didn't care anymore if I ever got the chance to say that."
-    MC "But I am sorry. I guess I could have tried to give her more of a heads up. {i}Sigh{/i}. I don't know."
-    MC "It's just, she's— aaaaargh! That's what it's like having a sibling. They annoy you to no end, but you love them anyway."
+    show WG neutral
+    MC "But I am sorry. I guess I could have tried to give her more of a heads up.{w} {i}Sigh{/i}. I don't know."
+    MC "It's just, she's— {i}aaaaargh{/i}! That's what it's like having a sibling. They annoy you to no end, but you love them anyway."
     show WG happy
     WG "Hmmm, that reminds me of someone I love."
     "Alice turned to face me, wrapping her arms behind my head, she pulled me down as she leaned in, giving me a kiss."
     MC "Oh? I'm glad you feel the same way."
+    show WG happy-2
     "We were forehead to forehead, still in our embrace. I had to lean in a lot with my back just to get in close as my body hugged the contour of her belly. Even I hadn't realized until now just how big it's been getting lately."
     "Alice's arms were heavy on my shoulders. They felt like soft pillows while at the same time they were crushing me like I was literally carrying the weight of the world on my shoulders."
     show WG aroused
@@ -14433,35 +14462,39 @@ label WG056:
     show WG happy
     WG "I know. And it's much appreciated. Don't ever think that I don't notice."
     "A wide stupid grin crawled across my face as I realized she might just be as crazy about me as I am about her."
-    show WG haughty
+    show WG sly
     WG "Hey now! Don't be getting a big head now over that. You've got some pretty high expectations to measure up to now."
     MC "Yes ma'am! Of course."
     show WG happy
     WG "Hehe. Oh what will I do with you Keisuke?"
     MC "Oh I don't know, enjoy another lovely evening together?"
+    show WG happy-2
     WG "Well, if you insist."
     "We walked back at a leisurely pace towards Alice's dorm. Laughing while we impishly pestered each other with where we were putting our hands all over each other."
     "The unpleasantries of the earlier meeting had seemingly vanished, but even so, as we approached Alice's room door it was still weighing on me in the back of my mind."
     "I didn't want to ruin the mood by broaching the subject again, but part of me knew I had to do something."
     MC "Hey, um, Alice. About Tomoko. I just wanted to say, the things that she said earlier, I know she didn't mean it like that. She's not an uncaring person, she just doesn't often say things the way she should."
-    show WG neutral
+    show WG pondering
     WG "Well, thinking back I might have overreacted a bit myself to some of the things she said. In some ways her honesty was refreshing."
+    show WG neutral
     WG "We invited her to ask what she wanted to, and she spoke what was on her mind. That kind of straightforwardness is pretty rare I've noticed, especially when everyone around me is too afraid to say anything about how fat I am."
     "Alice certainly didn't sugar coat it. It was true. Alice was fat. Not just kind of fat, at this point she was probably the fattest person I'd ever seen, well... in person anyway."
     "I know myself I'd danced around the word more times than I can recall, if only to help not cast the situation in a negative light for Alice's sake, despite my own proclivities."
     MC "I see. I hope I haven't come across that way. I just want to be supportive."
     show WG neutral-2
     WG "Oh you're fine Keisuke, I didn't mean you. Besides, I'm well aware of your preferences, and I know where your heart is at."
+    show WG worried
     WG "But it made me realize that if I'm ever going to learn to live with this, I'm going to have to be able to move past people's reactions to my size."
     "Alice was right. Honestly, I had always been surprised at how well she took her situation in stride."
+    show WG neutral
     "People who don't know her well misunderstand her as being vain and egotistical, but those kinds of people would have crumpled under the pressure of this kind of trial."
     "Alice was determined to not have her growth slow her down. Thinking about it now, I could definitely see how everyone around her constantly walking on eggshells was going to be counter productive towards that end."
     MC "I think that's the right attitude to have."
-    show WG neutral
+    show WG neutral-2
     WG "I think so too. Still though, I wish I would have moved past my initial reactions sooner to try to hit it off better with your sister."
     MCT "Hmmm, well no time like the present."
     MC "Hey, that gives me an idea. Give me a couple of minutes. I'll meet you back at your room in a bit."
-    show WG neutral
+    show WG surprised-2
     WG "Oh? Well, don't take too long now."
     show WG happy
     MC "No problem, I'll be right back."
@@ -14475,25 +14508,30 @@ label WG056:
     show Tomoko neutral with dissolve
     Tomoko "L-Look, I said I was sorry, okay? I didn't mean to upset your girlfriend."
     MC "Come with me."
+    show Tomoko surprised
     Tomoko "Huh? Where are we going?"
     MC "You'll see. We're going. Now."
     "I grabbed Tomo's arm and pulled her through her door as she shut it behind her."
     Tomoko "Hey! Where are you taking me? I didn't mean to make you so mad. I said I was sorry."
     MC "And I said sorry wasn't good enough. You're making up for it."
+    show Tomoko neutral
     Tomoko "Who are you, Dad now?"
     MC "Don't \"Dad\" me Tomo. Our parents aren't here, it's up to you to clean up your own mess."
     MC "Look, Alice isn't mad at you, and I'm slightly less pissed off now. So we're going to do a reset. I want you two to get off on the right foot, because you're going to be seeing a lot more of her."
+    show Tomoko distracted
     Tomoko "Well yeah, I doubt she's done growing."
+    show Tomoko neutral
     MC "Damn it Tomo! That right there is what I'm talking about. Just because you're right, doesn't mean you have to say it. Try it some time, like now would be nice."
     "By this point I had dragged her all the way back to Alice's dorm."
     MC "Look, I'm not asking you to change who you are, or act fake nice just for the sake of appearances."
     MC "But I need you to get in there and talk to my girlfriend like you two could be friends— aaand as a good little sister who would do anything to help her brother."
+    show Tomoko annoyed
     Tomoko "You're gonna owe me for this one."
     MC "Big time. Now get in there."
     stop music
     scene Dorm WG
     show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
-    show WG surprised at Position(xcenter=0.8, yalign=1.0)
+    show WG surprised-2 at Position(xcenter=0.8, yalign=1.0)
     with fade
     play music WG
     WG "Tomo, what a lovely surprise. I didn't expect I'd be seeing you again so soon."
@@ -14503,12 +14541,14 @@ label WG056:
     Tomoko "So, anyway, I wanted to say I was sorry about back there. I didn't mean to be rude. You seem kind of cool, I was just curious, that's all."
     WG "I see. That's perfectly fine. What were you curious about? I promise I won't get mad— whatever you want to know."
     Tomoko "Well, honestly, I wanted to know what it's like being so big."
-    "My eyes nearly jumped out of their sockets as I felt my heart stop for a split second."
     show WG surprised
+    "My eyes nearly jumped out of their sockets as I felt my heart stop for a split second."
+    show WG surprised-2
     Tomoko "I mean, it looks like it'd be hard. I can't even imagine. I-I was just wondering."
     show WG neutral-2
     WG "I certainly can't begrudge your sincerity. To answer your question, yes it can be challenging. Some things are definitely more difficult."
     WG "The facilities at the school accommodate about as well as can be expected, so I haven't gotten stuck or unable to get anywhere."
+    show WG neutral
     WG "Some of the more mundane aspects of life have presented additional challenges. It is admittedly difficult to find clothes that fit, and continue to fit."
     WG "My roommate and I have to help each other to get dressed in the morning because we can't quite reach everywhere ourselves."
     WG "New challenges emerge as I continue to grow, but they don't bother me as much because I have someone I can count on for help and support."
@@ -14518,22 +14558,28 @@ label WG056:
     show WG neutral
     WG "Thank you for asking Tomo. You're the only person besides Keisuke and my roommate who's ever genuinely asked to know more about me and my factor without trying to make fun of me."
     Tomoko "No problem. Huh, that kind of sucks people treat you that way."
+    show WG haughty
     WG "Well that's their problem— I refuse to make it mine any longer."
     "A still pause in the conversation hung in the air as Alice tilted her head, giving Tomo an up and down with her eyes."
+    show WG surprised-2
     WG "You poor thing. Your hair is just not cooperating is it?"
     Tomoko "What? Oh, yeah, it just kind of gets like that on its own. I can't really keep up with it anyway. It's whatever, I don't think about it too much."
     show WG neutral-2
     WG "If you wouldn't mind. I could help you with it."
+    show Tomoko surprised
     Tomoko "Uhhh..."
     "Tomo turned to look at me for some kind of reassurance, only to see me give her a double thumbs up and an overly enthusiastic grin."
+    show Tomoko neutral
     "Her dour stare told me \"I want off this ride\" but she was on the hook for this and couldn't do anything about it. I had zero sympathy."
     Tomoko "Suuure."
     show WG happy
     WG "Excellent. Now let's see here."
     "Alice proceeded to pull out one of her hair brushes from her vanity dresser and began to work it through that tangled rat's nest attached to Tomo's skull."
     "Work was not the correct word, because nothing about this was working. Tomo's head was being pulled around a lot more than the brush was through her hair."
+    show Tomoko surprised
     Tomoko "Ow! Don't- give me- brain- ach, damage!"
     MC "{size=-6}It's probably too late for that anyway.{/size}"
+    show Tomoko neutral
     Tomoko "I heard that."
     show WG doubt
     WG "Hmmm, well this just won't do."
@@ -14541,7 +14587,7 @@ label WG056:
     WG "Aha! I have just the solution!"
     show WG neutral
     "Alice began looking through the drawers in her vanity dresser."
-    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up. Ah, here it is. This is a leave–in dry conditioner."
+    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up.{w} Ah, here it is. This is a leave–in dry conditioner."
     "Alice proceeded to pump the foam into her hands and began to massage it into Tomo's hair."
     "Since we have the same factor, it was quite a lot of hair. The pump started to sputter, so I'm guessing she used all of what had been in the bottle."
     WG "There, now this can actually work."
@@ -14551,9 +14597,13 @@ label WG056:
     "For a brief moment I saw a kind of glee in Alice's face that I had not seen before. Sure it wasn't exactly the same, but for just a little while, as she played hair-stylist with Tomo, Alice got to feel like the big sister she always wished she could have been."
     WG "What do you think?"
     "Alice handed Tomo a mirror."
-    Tomoko "Whoa! I didn't realize it could look like this. Thanks! Although... I'm kind of sad it is not going to stay like this. It's going to get tangled and frizzy again."
+    show Tomoko happy
+    Tomoko "Whoa! I didn't realize it could look like this. Thanks!"
+    show Tomoko neutral
+    extend " Although... I'm kind of sad it is not going to stay like this. It's going to get tangled and frizzy again."
     WG "Well, you could always come see me when you need help with it again."
     $setAffection("TM", 1)
+    show Tomoko happy
     Tomoko "Thanks Alice... I think I will."
     jump daymenu
 
@@ -21112,7 +21162,6 @@ label WG073:
     WG "I ordered this winter uniform in several sizes above my current estimates at the time, planning on it lasting me the rest of the season— and it's already getting snug!"
     show WG worried
     "Part of me wanted to interject and get her to stop agonizing over this issue again, but I could tell she had a lot pent up that she needed to let out. So I just let her go."
-    show WG neutral-2
     WG "I was at the nurses' office two days ago for an evaluation. They had me get on the scale, as per usual. Not that I even want to know, but I figure there's no point in sticking my head in the sand just hoping that it will all go away."
     MC "What did it say, if you don't mind me asking?"
     show WG doubt
@@ -21127,6 +21176,9 @@ label WG073:
     show WG worried
     MCT "Yeah, I can't imagine she was exactly keen on congratulating her for being the fattest student they've ever seen."
     "I could scarcely believe it... {w}on second thought, looking at her again, how could I not? She was HUGE! Alice doubtlessly since had time to process this revelation, but the shock of the news was still fresh to me."
+    MCT "Wait a second, if that's never happened before, that means she's the fattest student they've ever seen... {w}Which given the scale of the students compared to normal people would mean... she's the fattest person {i}ever{/i}..."
+    MCT "! {w}{i}HOLY SHIT!{/i}"
+    "I was at a total loss of words in light of this recent revelation, but even though my mind was swirling, I knew I had to pull myself together to at least try to offer some words of comfort to her."
     MC "I guess I could imagine that weighing on your mind... {w}!"
     show WG doubt
     extend " Sorry, poor choice of words."
@@ -22078,7 +22130,7 @@ label WG004M:
     jump daymenu
 
 label WG076:
-    $setProgress("WG", "WG077")
+    $setProgress("WG", "WG078")
     scene Dorm Interior with fade
     play music Peaceful
     "I was sitting in my dorm, enjoying a bit of free time, finally making some time to play some games on my PC."
@@ -22476,6 +22528,460 @@ label WG076:
     jump daymenu
 
 label WG077:
+    "Future optional scene."
+    jump daymenu
+
+label WG078:
+    $setProgress("WG", "WG079")
+    play music Peaceful
+    scene Hallway
+    show WG doubt
+    with fade
+    WG "Why are we going this way?"
+    MC "Hm? Oh, uh well, I thought it would be a good way to walk through the buildings without having to go outside. It's pretty chilly out today."
+    show WG neutral
+    WG "It's not unseasonably cold for this time of year. I don't think it would be too much to brave the elements for such a brief period of time."
+    MC "Um, well it's not just that. We have to stop at the kitchen on the way. Sakura said she ran out of black vinegar and needed some for the dish she was planning on making for you tonight."
+    show WG surprised-2
+    WG "Really? I could have sworn there was still plenty left in the fridge when I looked this morning."
+    MC "Oh? Maybe it wasn't enough."
+    show WG doubt
+    WG "Why are we getting this now? Can't you just pick it up on our way back?"
+    MC "Yeah, but I'll probably forget. I don't want to take the chance and have your dish be ruined because I didn't get it to her when I said I would."
+    show WG haughty
+    WG "I'll be sure to remind you then."
+    show WG neutral
+    WG "Come on now, let's go. You're the one who wanted to go to the campus arcade for our date, since it was your turn to pick."
+    show WG sly
+    WG "I'm surprised you haven't dragged me by the arm across campus to beeline it there."
+    show WG neutral
+    extend " I know you've been wanting to take me there for a while."
+    MC "I'm surprised you were willing to go."
+    show WG happy-2
+    WG "I suppose it was inevitable I would acquiesce to your repeated requests."
+    MC "I know it might not be your cup of tea, but there's few other better activities on a cold winter day when the snow is just blowing and there isn't enough yet to make a snowman."
+    show WG neutral
+    WG "I see your point. An indoor activity would be best for this particular occasion. But let's not tarry and further like we have been doing. I'm already starting to get hungry. I'm assuming the arcade has some vending machines nearby?"
+    MC "Yup. Don't worry, I got the snacks covered for our date. And look, we're already at the kitchen, might as well go in and get it while we're here."
+    show WG doubt
+    WG "Alright, if it will save time later, I guess."
+    show WG neutral-2
+    pause 2
+    MC "Aren't you coming?"
+    show WG doubt
+    WG "What do you mean? Just go in there and get it. I don't need to go in."
+    MC "But I don't know where it is. I need an extra set of eyes to help me find it."
+    WG "You're hopeless, not helpless Dear. It's probably in one of the fridges or the pantry."
+    MC "Alright, but without proper work supervision there's no telling how much time I'll waste with inefficiency."
+    show WG stern
+    WG "Oh for crying out loud. Fine, I will help you find it if that means we'll stop wasting so much time."
+    scene black with fade
+    stop music fadeout 1.0
+    pause .5
+    WG "Why is the light off in here during the middle of the day?"
+    scene Cooking Classroom
+    show PRG excited at Position(xcenter=0.25, yalign=1.0)
+    show Sakura happy at Position(xcenter=0.75, yalign=1.0)
+    show BE happy at Position(xcenter=0.85, yalign=1.0)
+    show FMG happy at Position(xcenter=0.50, yalign=1.0)
+    show Tomoko happy at Position(xcenter=0.15, yalign=1.0)
+    with vpunch
+    All "{i}{b}SURPRISE!{/i}{/b}"
+    All "{b}HAPPY BIRTHDAY ALICE!{/b}"
+    hide FMG
+    hide BE
+    hide Tomoko
+    with dissolve
+    show WG surprised behind PRG
+    play music WGAlt
+    WG "What on earth!?"
+    show WG sly
+    WG "So that's why your excuses to get me to come here were so inane and convoluted."
+    MC "Um, I think what you really meant to say was \"deceptively clever\"."
+    WG "That is certainly a generous interpretation of the previous events, Dear."
+    show WG happy-2
+    extend " A bit more generous than I'm willing to grant anyway."
+    show WG surprised-2
+    WG "But I hadn't told anyone... How did you know?"
+    show PRG happy
+    MC "Aida told us. She had seen it from some of the forms you had filled out when she was working as your assistant at the beginning of the year. Once we found out, we knew we had to do something for you."
+    WG "I... I don't know what to say."
+    show WG happy
+    extend " That was very thoughtful of you Aida."
+    show PRG surprised
+    show WG surprised
+    "Alice attempted to embrace Aida, a response born of instinct rather than careful planning, as the two nearly spherical women just ended up bumping into their bellies, with Aida's sinking partially into Alice's."
+    show WG worried
+    show PRG embarrassed
+    WG "Oh..."
+    show WG neutral-2
+    show PRG neutral
+    "The two instead elected to exchange knowing smiles, acknowledging their mutual appreciation for each other was understood."
+    Sakura "Aida had a great idea and we pulled out all the stops this time."
+    show Sakura neutral
+    Sakura "Or cakes, as it were, because just one flavor wouldn't be as fun."
+    hide PRG with dissolve
+    show WG surprised-2
+    "Sakura directed our attention to a massive three tiered display with cupcakes of various colors."
+    "There were four different kinds: those that had white cake with pastel purple frosting, light pink cake with white frosting, white cake with cream colored frosting, and chocolate cake with chocolate frosting."
+    show WG surprised
+    show Sakura happy
+    Sakura "{i}TADA!{/i}"
+    "Each shelf was piled high to overflowing with plenty more on the kitchen counter that didn't quite fit with the rest of the display, which was designed to resemble a wedding cake in some sense."
+    show WG surprised-2
+    WG "I'm speechless ladies. It looks magnificent... and so many."
+    Sakura "Well, we knew we had would have quite a few guests so that's why we had to call in the big guns and get Tozakura-san to help us out."
+    show WG neutral-2
+    show BE smug at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Sakura surprised
+    BE "\"Big Guns\"? Really, Myoga-san?"
+    show Sakura nervous
+    Sakura "I didn't mean it like that, Inoue-san!"
+    hide BE with dissolve
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Sakura neutral
+    Sakura "I'm not sure if you two have met yet. Alice, this is Kanami Tozakura."
+    show Sakura happy
+    extend " She's the expert when it comes to scaling up recipes."
+    if isEventCleared("BE006"):
+        MCT "Ah, I remember Honoka's friend Kanami. She's certainly grown quite a bit since the last time I saw her though."
+    "{i}Big guns{/i} was right. They may not have been the zeppelins on Honoka's chest but these were some high caliber cannons in their own right."
+    show Sakura neutral
+    Kanami "Nice to meet you Nikumaru-san. I hope you don't mind me joining your party."
+    show WG neutral-2
+    WG "A pleasure, Tozakura-san. Let's suspend the formalities for the occasion. You can just call me Alice. It's nice to finally meet you, Kanami. I've heard such nice things from Aida and Sakura."
+    show WG haughty
+    WG "I must admit, I have some high standards for these cupcakes, considering you are the head of the cooking club and are working with such great talents as Aida and Sakura."
+    show WG neutral-2
+    Kanami "I was really just a helping hand for the most part. Though I do hope you'll enjoy the recipe I contributed."
+    show Sakura happy
+    Sakura "We all taste tested {i}way{/i} more than we should have. I know they aren't going to disappoint."
+    hide Kanami with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Sakura neutral
+    PRG "We should probably explain the flavors, Sakura-chan."
+    show Sakura happy
+    Sakura "Oh yeah, good idea. Let's start with yours first."
+    show PRG excited
+    PRG "Okay. I thought we should do something with a little more complex flavors since these were for you Alice, and it's a special occasion."
+    show PRG happy
+    PRG "These ones with the purple frosting are lavender vanilla. Not too much lavender that it tastes floraly, but enough to add some extra flavor notes to complement the sweet taste."
+    show WG happy
+    "Alice reached for one, eager to sample it for herself as Aida's description had no doubt stirred her already growing hunger."
+    show WG surprised-2
+    "The look on Alice's face was that of an instant and unprepared ecstasy. Clearly the flavor had managed to hit the mark."
+    WG "It's simply delectable, Aida."
+    show WG happy
+    extend " I agree, the extra floral notes of the lavender are subtle, but prevent the vanilla cake from becoming cloyingly sweet."
+    show PRG excited
+    PRG "I'm glad you like it."
+    "Turning my gaze to take in the rest of the sight of the display myself, by the time I had turned back Alice had already polished off that first cupcake, without so much as a crumb of evidence."
+    "It should be noted, these were not the tiny plaything desserts given to small children at their birthday, a good look up close revealed these cupcakes were the size of my fist. Bucket-cakes would have been a more fitting descriptor."
+    show PRG neutral
+    PRG "Next we have pink champagne cupcakes. It's another more complex twist on the simple vanilla."
+    show WG surprised-2
+    "Alice's eyes brightened up immediately as the taste hit her mouth, as if she were in a state of shock."
+    WG "This is certainly impressive! You can actually taste the champagne. Did you use real champagne to make it?"
+    show PRG excited
+    PRG "Yes. We got the idea from Takamura-sensei when we asked her for some way to incorporate French flavors into the cakes."
+    show WG haughty
+    WG "What a brilliant idea."
+    show WG happy
+    show PRG happy
+    extend " And a brilliant execution I might add ladies."
+    show WG surprised-2
+    show PRG neutral
+    WG "Although, I do hope you didn't front the cost of some bottles of upper tier champagne. I insist on reimbursing you if that's the case."
+    hide Sakura with dissolve
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG neutral
+    Chibuki "I had them business expense it under the travel and entertainment allocation. So it's a good thing you like it, because you already paid for it."
+    WG "Thank you for taking care of the matter then, as well as the advanced notice. It would have been an even bigger surprise than this party to see that show up on the expense report without knowing why."
+    Chibuki "Glad I'm off the hook then."
+    hide Chibuki with dissolve
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG excited
+    Sakura "These next ones are my favorite. Cheesecake with sweet cream frosting. We went through a {i}lot{/i} of cream cheese to make these things."
+    PRG "Mhm. The trick is to whip the batter so it stays light, and doesn't get too heavy from all the cream cheese used to make the flavor."
+    show WG happy
+    "Alice sampled the wares as she had done before, though showing considerably less restraint in her first bite as the previous."
+    show PRG happy
+    WG "Mmm, simply heavenly."
+    show WG happy-2
+    extend " Such an ingenious preparation. The flavor of cheesecake without the overly rich heaviness that is the main shortfall of the dessert."
+    show Sakura happy
+    Sakura "That's three-for-three so far."
+    show Sakura neutral
+    extend " Kanami, did you want to introduce yours?"
+    hide Sakura with dissolve
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral
+    show WG neutral-2
+    Kanami "Sure I can, Sakura. These are triple-chocolate cake cupcakes. The cake is chocolate with chocolate chips, with a milk chocolate frosting, topped with more chocolate chips. It's a favorite of my younger siblings."
+    Kanami "We made a more adult version of the recipe by adding some espresso to the mix to help amplify the more subtle bitter and roasted notes of the chocolate. I do hope you'll enjoy it."
+    "Alice certainly had more interest in the dessert after learning they had added espresso, being quite the coffee connoisseur herself. Though the more I thought about it, I suppose she was a connoisseur of most anything edible."
+    show WG haughty
+    WG "Mmm. Yes, this is quite the welcome change from the usual one note milk chocolate dessert, Kanami. It definitely intensifies the chocolate flavor but achieves a nice balance by not turning it into a mocha flavored dessert."
+    hide Kanami with dissolve
+    show Sakura happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG neutral
+    Sakura "Sounds like it was a success."
+    show WG happy
+    WG "Very much so ladies. Thank you for using your culinary talents to make this a memorable occasion. I have tasted some of the best desserts in the world, so I know how much care and attention went into crafting something so excellent."
+    show PRG happy
+    "Aida & Sakura" "You're welcome!"
+    hide PRG
+    hide Sakura
+    with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Uhh, guys, since Alice got to have the first ones, that means we can eat them now, right?"
+    show WG neutral-2
+    WG "Oh, pardon me Akira, I was so caught up in the sampling I didn't realize others were waiting to try it themselves."
+    FMG "Nah, it's cool, it's your birthday after all. You should get the first bite. I've just been eyeing those things ever since I got here and I'm dying to try them."
+    MC "You might want to get some before they're all gone, Akira. I know someone has been frothing at the mouth to get a hold of one of those triple chocolate cupcakes since she got here."
+    show BE angry at Position(xcenter=0.25, yalign=1.0) with dissolve
+    BE "I huf gno ideea whut ur talk'n bot Ki-chan."
+    MC "I can't imagine that was your first one either."
+    show BE embarrassed
+    BE "Mubae..."
+    show FMG surprised-2
+    show BE confused
+    FMG "What!?"
+    show FMG neutral
+    extend " Don't hog them all! Give me one of those."
+    show BE happy
+    BE "Never!"
+    show WG surprised-2
+    "Honoka snatched up two more with each hand before running off as Akira gave chase."
+    hide BE with dissolve
+    show FMG surprised-2
+    FMG "Come back here with those!"
+    hide FMG with dissolve
+    show WG happy
+    MC "There's still plenty more left on the table..."
+    "Alice likewise just shook her head."
+    WG "I can't say I understand those two myself."
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Tomoko "Hey Alice. Happy Birthday."
+    WG "Tomo! I'm so glad to see you came too!"
+    show Tomoko surprised
+    "Alice proceeded to scoop up Tomo from her side of her belly and into her arms for a big embrace as Tomo practically sunk into Alice's chest and belly to the point she was nearly swallowed up— much to Tomo's surprise."
+    "As Alice squeezed her tight, nearly sucking the life out of her in the process, I couldn't help but smile from seeing my girlfriend treat my little sister like her doll."
+    "Admittantly, though I enjoyed the more torturous aspect of seeing my sister practically getting smothered, it honestly did make me happy that they got along so well."
+    "Even if I did wonder what they would say about me behind my back when they were together."
+    show Tomoko annoyed
+    Tomoko "*{i}Gasp!{/i}* {w}Oof, easy there Alice."
+    show WG surprised-2
+    WG "Oh dear, I do apologize Tomo."
+    show Tomoko neutral
+    Tomoko "Don't worry. It's not that big a deal."
+    "Tomo looked around the room, obviously a bit uneasy with such a large group of other people she didn't know very well."
+    "But the fact that she thought enough of Alice to leave her room and risk interacting with more people spoke volumes of how much she cared about Alice."
+    Tomoko "Looks like the girls made some really nice desserts for you. Is it true like you said that these pink ones taste like champagne? I've never had it before so I wouldn't know."
+    WG "Hmm, well if you haven't had it before, it would be difficult to explain, but I guess I would say— sort of. It definitely adds more complexity to the dessert."
+    WG "You see, champagne is not sweet. Most varieties or styles would be considered dry."
+    WG "I don't recommend it as your first wine experience, lest you prematurely form an incorrect impression about the true variety that exists. I firmly believe there is something for everyone's taste with wine, you just have to find yours."
+    Tomoko "But how do you know that? Aren't you still too young to drink?"
+    show WG haughty
+    WG "Certainly not in every place I've traveled to, I'll say that much."
+    show WG neutral
+    Tomoko "That's cool I guess. I'll let you get back to your party. I just wanted to tell you that I'm glad I got to know you this year. You're way cooler and nicer than Kei's old girlfriend in highschool."
+    show WG haughty
+    WG "Is that so? I'm honestly rather curious to learn about this individual."
+    MCT "{i}Eep!{/i}"
+    show WG surprised-2
+    Tomoko "She was a bitch. That's about it."
+    MCT "For once, thank you Tomo."
+    show WG neutral-2
+    WG "Oh... I see."
+    MC "Exactly. An unfortunate part of life."
+    show WG doubt
+    extend " But moving on just leads to bigger and better things..."
+    show WG sly
+    extend " Err, um... no sense in dwelling on the past I mean."
+    WG "Smooth recovery there, Dear."
+    show WG aroused
+    "I reached across Alice's shoulder and pulled her in for a smooch on her cheek."
+    MC "I think I've managed to trade up since then."
+    show WG sly
+    WG "Glad at least one of us did then..."
+    MC "{i}Gasp!{/i} That's it. I'm taking this back then."
+    "I grabbed a napkin from the table and proceeded to attempt to remove my previous kiss from her cheek."
+    show WG surprised-2
+    WG "What are you doing? You can't take back a gift, especially on my birthday!"
+    MC "It's the only way you'll learn to appreciate it."
+    show WG sly
+    WG "Hehe. Stop that. Come here."
+    show WG happy-2
+    "Alice grabbed me by the lapels of my winter uniform and pulled me in for a big wet kiss on the lips. Embracing her as I gently held her head in my hands, my chest sank deep into her cleavage as I was forced to lean over her belly."
+    "I was slowly being engulfed in a waterbed cloud of softness that was her body. Even her cheeks felt heavenly soft, smooshing into mine as we embraced closer and closer... {w}Until someone had to go and ruin the moment that is."
+    show WG surprised-2
+    show Tomoko annoyed
+    Tomoko "{i}Ick{/i}. I know it's her birthday, but go play tonsil hockey back in your room."
+    show WG neutral
+    show Tomoko neutral
+    WG "Ahem. Your sister does have a point Dear. This isn't the venue for this particular activity."
+    Tomoko "Exactly. I'm going to grab another one of these pink cupcakes and try to find Honoka. It's been a while since I got to talk to her."
+    hide Tomoko with dissolve
+    show WG neutral-2
+    WG "Oh, it looks like Kokutan is here. I'm glad to see she's actually being social and not just hidden away in her room brooding on... well, whatever it is she seems to do in her spare time."
+    show Kokutan neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Kokutan "Hello Alice. Thanks for inviting me to your party."
+    WG "Um, well, it's a surprise party Kokutan, I didn't invite anyone, but I'm glad you were able to come nonetheless."
+    show WG surprised-2
+    Kokutan "Oh no! I've been tricked! {w}The prospect of free cake must have penetrated my mental defense and clouded my judgment. I should have known I didn't have the day off if I didn't check with you first. Please don't be mad!"
+    show Chibuki neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Chibuki "Would you stop acting like a nutter? You're caught up on the orders, and I already filed your supply restocks you requested. There's literally nothing for you to do today except come to this party and try to not embarrass your boss in the process."
+    show WG haughty
+    WG "Chibuki's right, it's fine Kokutan. Enjoy the party and the day off."
+    Kokutan "Oh! Right, it appears my premonition was correct after all then."
+    show WG neutral
+    WG "Kokutan, why don't you take one of the desserts to enjoy for yourself and see if you can find your roommate running around here somewhere. I'm sure she'd like to introduce you to some new people."
+    Kokutan "Oh yes, I should check up on her. I sensed a bad omen for her this morning, a vision of her getting chased by a hulking giant."
+    MC "That's oddly accurate..."
+    Kokutan "I'll pick one of these. It has a unique energy about it that I'm attracted to."
+    hide Kokutan with dissolve
+    Chibuki "In other words, you picked it because it's purple."
+    show WG sly
+    Chibuki "Why do I get the feeling I'm going to end up in the looney bin when {i}she's{/i} the crazy one?"
+    WG "Enjoying yourself Chibuki?"
+    show WG neutral
+    Chibuki "I'd say so, since Kodama-san handled all the planning for this. It's a nice break, especially now that I'm not stuck having to babysit Miss Moonchild. So, thanks for that."
+    show WG happy
+    WG "I think you have a soft spot for her."
+    Chibuki "Peh. The only soft spot is located somewhere on her head as far as I'm concerned. But she does do good work, I'll give her that much. I hate to admit it, but I think she's right, these vanilla lavender ones look amazing."
+    "Chubuki picked up the purple frosted cupcake, taking a moment to admire the immaculate piping work on the icing from the girls."
+    show WG sly
+    MC "It's like looking into a mirror isn't it?"
+    "Chibuki just stared at me like she wasn't going to hold an elevator door open for me before rolling her eyes. {w}Wasn't my best line, but I knew Alice was having a pretty hard time trying not to laugh."
+    show WG neutral
+    WG "Enjoy the rest of the evening off Chibuki."
+    Chibuki "Now it feels like a party."
+    hide Chibuki with dissolve
+    pause .2
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) behind WG with dissolve
+    Natsuko "I'm not really one for sweets but I did want to stop by to wish you happy birthday Alice. I can't imagine being able to find nice clothes at my size without the efforts you've put into your business."
+    show WG neutral-2
+    WG "I appreciate that Natsuko. I think comfort and fashion should be available to everyone, regardless of their particular proportions."
+    show WG haughty
+    WG "If you're not too keen on sweets, I would at least recommend you try the champagne vanilla cupcakes. The added complexity of the dry wine to the flavor profile should prove satisfactory to your sweet sensitive palate."
+    show WG neutral
+    "Natsuko eyed the pink cupcake topped with white frosting that Alice handed to her suspiciously. But she ultimately yielded by taking it into her hand to sample it for herself— if only to be polite."
+    "In a rare spark of genuine joy, I noticed Natsuko's eyes brighten, if only for a second."
+    Natsuko "You were right Alice. This is a very well balanced flavor. I don't normally allow myself to indulge in such extravagant desserts, but I'll allow an exception for the occasion and something as delicious as this."
+    WG "Please, Natsuko, this is a party. Don't feel so reserved. As much as you workout I'm sure you can afford to indulge on such an occasion."
+    Natsuko "Consistency is the key to training. Though I suppose I will allow myself another if I account for some extra laps around the track tomorrow."
+    show WG neutral-2
+    WG "See? There you go."
+    "Natsuko reluctantly took another cupcake from the banquet-esque display before taking her leave."
+    Natsuko "Enjoy your party Alice."
+    hide Natsuko with dissolve
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) behind WG
+    with dissolve
+    show WG neutral
+    MC "Back again I see? Did you let Akira try one of the triple chocolate cupcakes?"
+    show BE happy
+    show FMG angry-3
+    BE "Not a chance!"
+    FMG "I don't know how you managed to eat four of those things while you were running."
+    show BE angry
+    BE "What can I say? I have a gift."
+    show BE neutral
+    show WG neutral-2
+    WG "There's still plenty left ladies, you don't need to worry about running out..."
+    hide FMG
+    hide BE
+    show PRG embarrassed at Position(xcenter=0.25, yalign=1.0)
+    show Sakura surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Alice said that before turning around and drawing attention to Aida and Sakura, who between the two of them had managed to put quite a dent in the number of triple chocolate cupcakes, as well as some of the others."
+    show Sakura awkward
+    show PRG neutral
+    Sakura "Heh... Don't worry there's still plenty left, girls."
+    MCT "For now I guess, but not at this rate."
+    hide Sakura
+    hide PRG
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Gimmie gimmie gimmie!"
+    "Akira proceeded to start double fisting cupcakes almost indiscriminately as Aida and Sakura slowly stepped out of her way, likely trying to avoid getting caught up in the cupcake carnage."
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Natsuko "I can't believe you just gobble down that junk all the time."
+    FMG "Junk? Are your taste buds broken? These things are {i}amazing{/i}!"
+    Natsuko "You know what I meant. Myoga-san and Kodama-san are skilled at their craft. I know you take your training seriously, but I don't understand how you hope to grow stronger with no consideration to what you put into your body."
+    show FMG happy
+    FMG "Aw come on Nat! Don't be such a downer. We went hard on leg day today, this is perfect for that extra bit of recovery energy."
+    Natsuko "Emphasis on the {i}extra{/i} apparently. {w}I'll leave you to let your teeth fall out from your all sugar diet. I'm going to the cafeteria to get something that at least has some protein in it."
+    hide Natsuko with dissolve
+    show FMG neutral
+    FMG "I know she means well, but she isn't exactly the life of the party."
+    show FMG flex
+    extend " Now I can enjoy eating more cupcakes without the \"Fun Police\" to tell me why I shouldn't."
+    show BE aroused at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Honoka had apparently taken the brief time while Akira was distracted with Natsuko to scarf down even more chocolate cupcakes."
+    MC "You uh... you okay there Honoka?"
+    show BE surprised-2
+    BE "Huh? What do you mean, Kei-chan?"
+    MC "You looked like you were getting pretty into those chocolate cupcakes for a second there."
+    show BE embarrassed
+    BE "{i}Pssh{/i}! You butthead, it's not like that."
+    show BE aroused
+    MC "You're doing it again..."
+    show Sakura happy at Position(xcenter=0.85, yalign=1.0) with dissolve
+    Sakura "Heh. If only I could find a guy that looks at me the way Inoue-san looks at chocolate."
+    show BE embarrassed
+    show WG aroused
+    WG "I know I've managed to find one."
+    show WG neutral-2
+    BE "Oh come on, it's not {i}that{/i} bad."
+    hide Sakura with dissolve
+    "\"Not that bad\" was probably an understatement by any honest assessment. Now, mind you, I couldn't really tell because of how much her chest covered things up,"
+    "but I had to imagine Honoka was looking quite a bit softer around the middle given all the sweet treats I've seen her inhale just judging by the occasions I've been at with her this year alone."
+    MCT "At least Alice, Aida, and Sakura have an excuse..."
+    show Kanami neutral at Position(xcenter=0.15, yalign=1.0) behind BE with dissolve
+    show BE neutral
+    Kanami "I guess I hadn't realized how much of a chocolate lover you were Honoka. If you'd like, I could teach you my fudge brownie recipe sometime. It's easy enough that even my youngest brother can make it."
+    show BE happy
+    BE "That sounds awesome, Kanami."
+    show BE embarrassed
+    MC "Yeah, until she burns down your kitchen in the process. Are you sure you're up for the task of teaching Honoka how to bake?"
+    show BE angry
+    BE "Why do you have to go and be like that Kei-chan?"
+    MC "You mean acting as the voice of reason?"
+    show BE happy
+    BE "Yeah, that."
+    show BE shrug
+    extend " This is free chocolate we're talking about here."
+    show BE neutral
+    MC "Come to think of it, if you're going to show Honoka, would you mind if I tagged along Tozakura-san? It couldn't hurt to sharpen my baking skills a bit."
+    show WG haughty
+    WG "It certainly wouldn't."
+    Kanami "Sure, I'd love to help teach anyone that's interested in learning how to make something in the kitchen for themselves."
+    show WG neutral
+    "I'm sure Kanami would eventually eat those words after inviting Honoka into her kitchen, but not before Honoka could literally eat through the cupcakes like a chocolate addicted maniac. Though to be fair she did try some of the other flavors."
+    MC "Alright, sounds good. Just let me know when you're planning something."
+    Kanami "For sure, I'll look forward to it, Hotsure-san."
+    hide Kanami with dissolve
+    show BE aroused
+    MC "Geesh Honoka, go easy on those things."
+    show BE smug
+    BE "Hmmm... no."
+    show BE happy
+    BE "Come on Kei-chan, it's a party!"
+    show BE shrug
+    extend " Why not go a little overboard?"
+    MC "Fair enough, but don't say I didn't warn you."
+    show BE smug
+    BE "Yeah yeah, whatever."
+    hide BE with dissolve
+    show WG happy
+    "While some people were obviously enjoying themselves a bit too much, I was relieved to see Alice seemed to be having fun. Among friends, and on her birthday no less, she seemed much less conscientious of her indulgence."
+    "With her most recent changes, and the new frustrations that had come with it, I was glad to see her smiling and laughing once again as I watched her from across the room catch up with friends while she munched away on sublimely sweet treats."
+    show WG happy-2
+    "I still had one more surprise for her that I had been saving for the special occasion. Though I tried not to think about it while the party was still going on... {w}because I wasn't sure if she was going to like it."
+    jump daymenu
+
+label WG079:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

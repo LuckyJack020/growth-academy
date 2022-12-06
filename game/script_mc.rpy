@@ -1304,6 +1304,10 @@ label MC001:
 label MC002:
     scene Classroom with fade
     play music Schoolday
+    if not getFlag("Meet_Takamura"):
+        $setFlag("Meet_Takamura")
+    $setFlag("Meet_Hageshi")
+    $setFlag("Meet_Tsubasa")
     pause .25
     "The knowledge I'd picked up over my first week or so at the academy had been, for the most part, things completely outside of my scope."
     "The oversized doorways and halls, the remote campus and island, and the looming idea of our bodies morphing in ways that would have to be seen to believe were, in every way, the stuff of fiction."
@@ -1638,15 +1642,17 @@ label MC002:
     show Hageshi neutral
     Hageshi "..."
     pause .25
-    "My eyes immediately went to his bulging biceps and shoulders. The dude looked like he could legitimately throw a car."
+    "My eyes immediately went to his bulging biceps and shoulders. The dude was freaking ripped! Did he have like 1%% body fat or something?"
     show Takamura neutral
     "In addition, he was tall, and seemed to fill the entire room around him, especially compared to Takamura."
     Takamura "He's the academy's math teacher, so you'll probably see him sooner or later."
     show Takamura neutral at altMove(0.5, 0.5)
     show HR neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "Do yourself a favor and don't start any fights around campus."
-    HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And, you don't want that."
+    HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And trust me, you don't want that."
+    HR "By the time he was your age, he was already a nationally ranked judo champion."
     hide HR neutral with easeoutright
+    "I looked back at Hageshi-sensei, who somehow managed to look even more intimidating in light of that information. {w}He just gave a slight nod, confirming Tashi's story about him without saying anything for himself."
     show Takamura neutral at altMove(0.5, 0.75)
     "Behind Hageshi-sensei, the two teachers by the water cooler left their positions and exited the room. As they left, I noticed the whistles around the neck of that one faculty member wearing an athletic outfit."
     if isEventCleared("BE003"):
@@ -1699,7 +1705,7 @@ label MC002:
     "Tsubasa and Hageshi both nodded politely at me from where they sat as I left the room, shutting the door quietly behind me."
     scene HallwayStairs with fade
     "I was no more than 15 steps down the hall when I heard more banter from the faculty room behind me."
-    "I held the heavy book under my arm and went to immerse myself in ancient history."
+    "I held the heavy book under my arm and went off to immerse myself in ancient history."
     jump daymenu
 
 label MC003:
@@ -6111,9 +6117,9 @@ label MC033:
     "Giant 2" "Like your short little reach is going to let you land a punch on me."
     show Takamura strict
     Takamura "That's quite enough boys!"
-    show HR neutral
-    HR "{size=-6}Ugh. She's about as threatening as a mouse. This is going no where.{/size}"
     show HR unique
+    "Tashi-sensei for his part just rolled his eyes impatiently as Takamura-sensei's more stern tone failed to instill any sense of threat to the two bickering goliaths."
+    "I had to imagine he didn't want to undermine Takamura's efforts to handle the situation herself, but it was fairly obvious he was trying hard to hold his tongue... {w}At least, more so than usual in Tashi-sensei's case."
     "Giant 1" "Take a swing then if you're so confident."
     "Giant 2" "Is that an invitation?"
     stop music
@@ -6200,17 +6206,29 @@ label MC033:
     show Takamura neutral
     extend " It's hard to imagine him being smaller than me even. I suspect he was still a good student though, in spite of those things."
     show HR neutral
+    if isEventCleared("MC002"):
+        MC "Wait a second, I thought you told me he was a nationally ranked judo athlete by the time he graduated highschool."
+        HR "Yeah, in the under 55kg class. Doesn't quite send the same message to students, so I tend to leave that part of the story out."
+        HR "To hear him tell it, his parents enrolled him in martial arts classes from a young age because he got picked on so much."
     HR "When he first got here, he was very sullen and quiet. There was even a rumor amongst the students that he couldn't talk."
     HR "But he never had an issue with answering a question when called upon in class. Though I didn't know him to speak a word beyond that myself either."
     show HR unique
     Tsubasa "In that regard, not as much has changed."
     Takamura "He certainly fits the \"strong silent\" type."
-    MC "I take it he got picked on a lot?"
-    show HR neutral
-    HR "As faculty we do our best to stop that from happening when we see it, but as far as what I could piece together from other students, yes, quite frequently too."
+    if isEventCleared("MC002"):
+        MC "Sounds like he got picked on a lot, even here."
+        show HR neutral
+        HR "As faculty we do our best to stop that from happening when we see it, but as far as what I could piece together from other students, yes, quite frequently here as well."
+        HR "It seemed like every other day he had a fresh gash or bruise on his body. {w}Despite his training, he still just looked like a scrawny kid."
+        Takamura "Oh goodness! That sounds awful!"
+        HR "I'm sure it was, but he was a tough kid. He never once tattled on anyone or even complained about being hurt."
+    else:
+        MC "I take it he got picked on a lot?"
+        show HR neutral
+        HR "As faculty we do our best to stop that from happening when we see it, but as far as what I could piece together from other students, yes, quite frequently too."
     show HR unique
-    Tsubasa "I suspect those who did pick on the poor young man were in for a nasty surprise however. His file indicated he was a nationally ranked judo athlete, even if it was in the under 55kg class."
-    MC "So what happened later? Besides somehow growing over 40cm in less than a year?"
+    Tsubasa "Hmph. I never saw any such incident myself, but I suspect those who did pick on the poor young man were in for a nasty surprise once his factor started to manifest."
+    MC "Yeah what happened later? Besides somehow growing over 40cm in less than a year?"
     show HR neutral
     HR "I take you're interested in his ugly duckling story?"
     show HR unique
@@ -6228,7 +6246,7 @@ label MC033:
         Tsubasa "While this may be true, keep in mind your perspective is quite skewed from what you've seen with Mizutani-san."
     Tsubasa "Hageshi-san's case is still remarkable with regards to the degree in which his height and size have increased relative to his starting point, at least among those with muscle growth factors."
     Tsubasa "It's a peculiar thing really. Most growth factors follow a fairly predictable trajectory, even if the final degree of development is unknown."
-    Tsubasa "They obviously have common elements, or else there would not be discernibly distinct types, as we understand them today. But, every so often, some of them possess their own little idiosyncrasies."
+    Tsubasa "The different factors obviously have common elements, or else there would not be discernibly distinct types, as we understand them today. But, every so often, some of them possess their own little idiosyncrasies."
     if routelock == "WG" or routelock == "PRG":
         MC "You mean like how Nikumaru-san and Myoga-san look different, despite having the same factor?"
     elif routelock == "AE":
@@ -6252,11 +6270,14 @@ label MC033:
     HR "He's also known to have remarkably fast reflexes. Then again, he was, and still is, a trained fighter. Maybe that has something to do with it besides his growth."
     show HR unique
     Tsubasa "It's a possibility I've considered as well."
-    Tsubasa "Most peculiar of all though is his strength to bodyweight ratio."
-    Tsubasa "Though not quite at the level of some of the past record breakers— and current for that matter— in terms of absolute strength, he was easily the strongest in his class, despite others being much larger."
-    MC "Sounds like he's as scary as everyone thinks he is."
+    Tsubasa "Those are rather minor nuances of his condition by comparison though. THe most peculiar attribute of his is his unusual strength to bodyweight ratio."
+    Tsubasa "Though rather small in size across the growth distribution of those with muscle factors, his strength approaches the level of some of the past record breakers."
+    Tsubasa "I suppose in that regard I should come to expect these things. In all my years of studying the factors, just as we think a definitive pattern can be established, a new outlier like Hageshi-san seems to emerge."
+    Tsubasa "{size=-6}Not unlike this current crop of students this year...{/size}"
+    Tsubasa "It's fascinating, if not a bit disheartening at the same time."
+    MC "I hadn't realized he was such a special case."
     show HR neutral
-    HR "Yes, which is why I like to impress the fact upon students to dissuade them from causing trouble."
+    HR "Yes, which is why I like to impress that fact upon students to dissuade them from causing trouble."
     show HR unique
     MC "Still though, some of those giant students are pretty big. Like those guys in the hall arguing earlier. Seems like even he would have trouble keeping them in line if they really wanted to press the issue."
     show HR neutral
