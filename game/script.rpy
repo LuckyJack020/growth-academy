@@ -166,6 +166,7 @@ init python:
         FORMAL = "formal"
         GYM = "gym"
         SWIM = "swim"
+        SWIMCAP = "swimcap"
         SWIMSUIT = "swimsuit"
         COW = "cow"
         PAJAMAS = "pajamas"
@@ -813,7 +814,7 @@ init python:
 
     def setFMGOutfit(o):
         global FMGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             FMGOutfit = o
 
     def setGTSOutfit(o):
@@ -828,7 +829,7 @@ init python:
 
     def setWGOutfit(o):
         global WGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMCAP or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
             WGOutfit = o
 
     def setTakoOutfit(o):

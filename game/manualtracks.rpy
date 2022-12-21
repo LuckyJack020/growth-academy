@@ -501,6 +501,17 @@ init python:
     )
     ost.manualDefineList.append(theme_OvO)
 
+    theme_ClS = ost.soundtrack(
+        name = "Clear Skies",
+        path = "Audio/BGM/theme_clearskies.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Uplifting THeme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ClS)
+
     ## Base Template
     ######################################
 

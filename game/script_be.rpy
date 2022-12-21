@@ -634,13 +634,14 @@ label BE006:
     BE "Aw, she'll be fine! Look at you, still trying to be the responsible older brother."
     MC "It's my job."
     Takamura "Well, if it isn't {i}another{/i} Hotsure!"
-    if isEventCleared("MC002"):
+    if isEventCleared("MC002") or getFlag("Meet_Takamura"):
         "A familiar voice rung out behind me."
         show BE neutral at altMove(0.5, 0.75)
         show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
         MC "Oh, hello Takamura-sensei."
         Takamura "Good morning, Hotsure-san."
     else:
+        $setFlag("Meet_Takamura")
         "A slightly familiar voice rung out, but I can't really put my finger on it."
         show BE neutral at altMove(0.5, 0.75)
         show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
@@ -682,6 +683,8 @@ label BE006:
     show BE neutral
     "The woman... erm, student's face flushed red."
     Student "Don't worry. For some reason, this kind of thing happens to me all the time. I'm Kanami Tozakura. It's a pleasure to meet you, Hotsure-san."
+    if not getFlag("Meet_Kanami"):
+        $setFlag("Meet_Kanami")
     BE "Hey, Kanami-chan!"
     Kanami "Hello again, Inoue-san."
     "Kanami's eyes dart between Honoka and myself, choosing her words carefully."
@@ -3165,6 +3168,7 @@ label BE021_after:
     jump daymenu
 
 label BE022:
+    $setFlag("XX22")
     scene Cafeteria with fade
     play music Peaceful
     $setProgress("BE", "BE023")
@@ -6766,6 +6770,8 @@ label BE035B:
     if isEventCleared("MC006"):
         MCT "Huh, he looks sort of familiar."
         MCT "Ah! Right, that's Naoki-sensei. I remember him, he was helping run that handball game we played earlier in the school year."
+    else:
+        $setFlag("Meet_Naoki")
     Naoki "Okay. Here's the deal. I've got a wicked headache today, so I don't want to hear any bellyaching because it's gonna drive me crazy. Our next match is scheduled in two days, so spend this time brushing up on your catching and throwing."
     Naoki "We've got three batting stations reserved. So if you see one is empty, just go for it with your partner. Try not to hog it. Collect your balls when you're done. We don't wanna leave a mess anywhere."
     Naoki "Any questions? Good. Get out there, have fun."
@@ -7463,6 +7469,8 @@ label BE039:
     with dissolve
     BE "Yep. Well, I mean, what other guy would I bring in here?"
     MC "Ha. Yeah, um, I'm Keisuke Hotsure. Nice to meet you."
+    if not getFlag("Meet_Kokutan"):
+        $setFlag("Meet_Kokutan")
     "She was fairly short, nearly a foot smaller than Honoka. It felt embarrassing to look down so far in order to meet her gaze. It did make it more obvious to see that she wore colored contacts that made her eyes look bubblegum pink."
     UNKNOWN "Hmm..."
     "She took my hand and turned it around. Her fingers began to run along the lines on my palm. I looked over to Honoka for help."

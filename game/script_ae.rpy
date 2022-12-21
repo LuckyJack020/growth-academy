@@ -3802,6 +3802,7 @@ label AE021:
     jump daymenu
 
 label AE022:
+    $setFlag("XX22")
     $setProgress("AE", "AE023")
     scene Dorm Exterior with fade
     play music HigherEdu
@@ -7028,9 +7029,10 @@ label AE034:
     AE "Hm?"
     hide AE with dissolve
     show Ryoko neutral with dissolve
-    if isEventCleared("GTS011") or isEventCleared("GTS011b"):
+    if isEventCleared("GTS011") or isEventCleared("GTS011b") or getFlag("Meet_Ryoko"):
         "Ryoko-san rounded the corner, running at Mach speed with a determined look in her eyes."
     else:
+        $setFlag("Meet_Ryoko")
         "A girl rounded the corner, running at Mach speed with a determined look in her eyes."
     Ryoko "I'm gonna be late-I'm gonna be late-I'm-"
     hide Ryoko with dissolve

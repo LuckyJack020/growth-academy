@@ -1227,6 +1227,8 @@ label MC001:
     "After recent events, I'm not too sure who would have slept soundly all through the night. Well, maybe Tomo. I don't think she'd even wake up for a firestorm during an earthquake."
     "Since I was already awake, I decided to just get up and get ready for class. After getting dressed, I was ready to head out."
     "I cracked the door open to leave when I noticed a lanky, clammy hand slowly shoving the door back shut."
+    if not getFlag("RMRoute_Unlocked"):
+        $setFlag("RMRoute_Unlocked")
     play music RM
     show RM neutral with dissolve
     "Oh yeah, that guy. My roommate. I'm pretty sure he said his name was Daichi. How did I not notice him standing there before?"
@@ -2617,9 +2619,11 @@ label MC005:
     show HR unique with dissolve
     #show Tsubasa neutral with dissolve
     #show Chiyo neutral with dissolve
-    if isEventCleared("MC002") or isEventCleared("PRG011"):
+    if isEventCleared("MC002") or isEventCleared("PRG011") or getFlag("Meet_Tsubasa"):
         MCT "Oh! Tashi-sensei and Tsubasa-sensei!"
     else:
+        if not getFlag("Meet_Tsubasa"):
+            $setFlag("Meet_Tsubasa")
         MCT "Oh! Tashi-sensei and... that's Tsubasa-sensei... I think. The biology teacher, if I'm remembering right."
     MCT "And... who's that?"
     "Just as I started to walk toward them..."
@@ -3102,6 +3106,8 @@ label MC005:
             $setFlag("MC005TM")
             jump MC005_TM
         "Hang out with Daichi":
+            if not getFlag("RMRoute_Unlocked"):
+                $setFlag("RMRoute_Unlocked")
             $setFlag("MC005RM")
             jump MC005_RM
 
@@ -3202,6 +3208,7 @@ label MC005_GTS:
     GTS "Oh! E-Excuse us!"
     UNKNOWN "Hah, no trouble at all. Flowers are for enjoying, are they not?"
     GTS "Oh, most certainly. Are you the one who planted this Chocolate Cosmos?"
+    $setFlag("Meet_Florist")
     Ren "I am, indeed. My name is Ren Hirano. It's always nice to meet a fellow botanist. May I ask your name, miss?"
     show GTS embarrassed
     GTS "Ah... I am Naomi Yamazaki, sir. A pleasure to meet you. But... I don't believe I'd call myself a botanist. I'm simply a hobbyist."
@@ -4193,6 +4200,8 @@ label MC006:
     with dissolve
     play music Busy
     #show Naoki neutral with dissolve
+    if not getFlag("Meet_Naoki"):
+        $setFlag("Meet_Naoki")
     Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
     if isEventCleared("MC002"):
         MCT "That's the guy I saw in the faculty room with three whistles. I guess that explains why he has {i}a{/i} whistle— but not three."
@@ -5357,6 +5366,8 @@ label MC006_Team2:
     jump daymenu
 
 label MC007:
+    if not getFlag("RMRoute_Unlocked"):
+        $setFlag("RMRoute_Unlocked")
     scene black with fade
     "..."
     RM "Hey, wake up!"
@@ -5863,6 +5874,808 @@ label MC007:
     show RM doubt
     RM "That seems like too much of a coincidence to me..."
     MCT "Ugh, this is never going to end."
+    jump daymenu
+
+label MC009:
+    scene Dorm Interior with fade
+    play music MC
+    pause .5
+    "..."
+    "On my desk, my laptop screen shone in my eyes as the cursor blinked steadily."
+    MCT "I've never considered myself anything close to a prolific writer, and my time in Tashi-sensei's class has been slowly proving that to me."
+    "I usually spent more time watching that little cursor blink than anything, broken up by occasional clicks, trying to start a sentence that actually made sense, which was very quickly deleted."
+    "Idly, I clicked open a new tab and typed in the search bar."
+    "<What is that little blinking line for typing called?>"
+    pause .5
+    MCT "..."
+    MCT "Oh, a caret."
+    MCT "Cool."
+    "I closed out my new tab and went back to staring at my nearly blank paper on... well, it was supposed to be on the Kofun period, according to Tashi-sensei."
+    "At the moment, however, it bore more resemblance to some general facts put into rough sentences and some odds and ends thoughts."
+    "I had probably four or five tabs open to various sites on the topic, most of which looked like they'd been created around 2004."
+    MCT "Okay. Let's actually make some headway."
+    "I forced myself to click on one and scrolled a bit."
+    MCT "Hm... 300-538 AD. Okay."
+    "I went back to my word doc and typed in some Keisuke Hotsure shorthand."
+    MCT "And... the Kofun period was when politics essentially began in Japan. Cool... {w}I think."
+    MCT "... Wait, what?"
+    MCT "‘The name of the Kofun period originates from keyhole shaped burial mounds saved especially for the ruling class?'"
+    MCT "What the hell?"
+    "I typed it in regardless and rubbed my eyes under my front hair fringe."
+    if isEventCleared("MC007"):
+        MCT "Could Tashi-sensei just... not give us papers for once? Makes my damn brain hurt..."
+        MCT "We legit {i}just{/i} wrote about the Yayoi period. Like... maybe show a movie in class or something? On one of the TVs from the 90's."
+        MCT "If only. School was so much simpler way back when."
+    "This was all so much. Like, I didn't mind history, but this all seemed to bleed together so much. It was hard to keep it all straight."
+    if isEventCleared("MC008"):
+        "I scratched at my collar and twisted, my gaze falling on a pile of books at the end of my desk."
+        MCT "And I still have to study Biology yet, too. That carbohydrates exam can't be over with soon enough."
+    "In all likelihood, though, I was beating myself up a bit too much. I actually did have a fairly sizable amount written thus far, and I had enough notes for likely three to four more pages that I could hopefully pound out before studying."
+    "I rubbed my ear a bit as I got that weird high pitch ear ring thing, and got up from my chair, feeling my shirt stick to my back a little as I got up."
+    play music MCGuitar
+    "I peeled the fabric away from me and walked into the kitchen, rummaging through a cabinet for something to nibble on."
+    "..."
+    MCT "... Is that?"
+    "I stood still and listened closely."
+    MCT "A... guitar?"
+    MCT "Who..."
+    MCT "Well, whoever it is knows what they're doing."
+    if getFlag("MC004_balcony") or getFlag("Meet_Genji"):
+        MCT "It sounds close. Maybe Genji plays in his spare time, or his roommate or something?"
+    else:
+        MCT "It sounds close, though. Maybe a neighbor or something?"
+    "I walked back across the room as the music drew to a close, and looked dejectedly at my seat and desk."
+    MCT "..."
+    MCT "Maybe I should just get some lunch or something. I'm already up."
+    MCT "I miss the days when it was Mom's job to keep the fridge stocked. This is hellish."
+    "Much like my head during the early morning hours, my fridge was bare. I had a few condiments, a stick of butter, and an energy drink that I'd gotten... somewhere. No clue where."
+    "I pulled my head up and glanced at the clock. If I moved quickly, I could catch the bus and be in town in no time for the store."
+    ".. {w}Or I could just go to the cafeteria. It was still early enough."
+    MCT "Yeah. Cafeteria it is."
+    "I sat on my bed and pulled my shoes on, then adjusted my hair in the mirror in my bathroom."
+    MCT "No clue why I'm trying anymore. It really doesn't matter anyhow."
+    MCT "Maybe I should try dying it and see just how fast it actually grows based on that."
+    MCT "Do something wild. Like blue or something."
+    "Chuckling, I left my dorm, though not completely disregarding my hair dye experiment."
+    scene black with fade
+    pause .5
+
+    scene Dorm Exterior with fade
+    stop music fadeout 1.0
+    "As opposed to my quiet, and honestly, kind of stuffy dorm, the campus was bright and welcoming."
+    "A few birds flew by, tweeting and chirping away some sort of song together as they landed on the dorm buildings or into the treeline."
+    "The sun shone overhead, and a warm, comfy breeze wrapped around me like a blanket, congratulating me on my choice to strike out from my homework littered prison."
+    MCT "Good job, me. Job well done."
+    play music Rain
+    "I started walking away from the dorms and toward the ol' caf, shaking my head to let the breeze get under my underlayers of hair."
+    if not isEventCleared("global026") and not isEventCleared("PRG023"):
+        "Across the way, over at the women's dorms, I heard a door open and shut."
+        show PRG sad at Position(xcenter=0.75, yalign=1.0) with easeinright
+        pause .5
+        "Aida emerged and walked stiffly away from the dorms. Her shoulders were scrunched in a bit, her pace that of a speed-walk."
+        MC "Hey, Kodama-san."
+        show PRG surprised
+        pause .5
+        show PRG worried
+        pause .5
+        PRG "Ah, h-hello Hotsure-san."
+        MC "Hey! Sorry if I startled you."
+        PRG "I-It's okay..."
+        MC "How's your day going?"
+        PRG "Um... okay. Yours?"
+        MC "I'm doin' well. Just heading off for some lunch. I've been working on that paper from Tashi-sensei all morning."
+        PRG "Oh... right."
+        MC "What are you up to?"
+        PRG "I-I'm going to meet Tozakura-san in town to pick up some ingredients for the cooking club."
+        if isEventCleared("BE006") or getFlag("Meet_Kanami"):
+            MCT "Right. That's Kanami. That girl I met with Honoka a few weeks back."
+        MC "Nice. Got a competition coming up?"
+        PRG "Not... for a little while. Every week or so, the club takes an inventory of the ingredients. Then, either Takamura-sensei, or the students that volunteer will go to the supermarket to stock everything that's needed."
+        MC "Ah, I see. So, you and Tozakura-san are the delivery girls?"
+        PRG "Mhm."
+        MC "Nice."
+        scene Campus Center
+        show PRG worried
+        with fade
+        "As we walked into the center of campus, Aida glanced to the side, toward the academy's gates, and turned toward them."
+        MC "Well, I'll let you get your shopping done. It was good seeing you, Kodama-san. Give my best to the club."
+        show PRG neutral
+        PRG "I-I will."
+        PRG "I-It was nice seeing you too, Hotsure-san."
+        "I nodded and turned as Aida went off toward the gates, the sound of her footfalls fading on the path behind me."
+    elif isEventCleared("PRG023") and not isEventCleared("PRG025"):
+        "Across the way, over at the women's dorms, I heard a door open and shut."
+        show PRG sad at Position(xcenter=0.75, yalign=1.0) with easeinright
+        pause .5
+        "Aida emerged and walked stiffly away from the dorms. Her shoulders were scrunched in a bit, her pace that of a speed-walk."
+        MCT "Okay... there she is. Breathe."
+        MC "Kodama-san!"
+        show PRG surprised
+        pause .5
+        show PRG unique
+        PRG "Ah, h-h-hello H-Hotsure-san."
+        MC "Hey! Sorry if I startled you."
+        PRG "I-It's okay..."
+        MC "How are you feeling? I didn't expect to see you up and about so quickly."
+        PRG "I-I'm... o-okay, I guess..."
+        "I thought back to her doubling over in pain back in her dorm that day."
+        MC "That's good then. I'm glad to see you looking yourself again."
+        show PRG unsure
+        PRG "T-Thank you..."
+        pause 1
+        MC "So, where are you off to?"
+        PRG "Um... I-I'm... I'm g-going into town with Tozakura-san to stock up for the cooking club."
+        if isEventCleared("BE006") or getFlag("Meet_Kanami"):
+            MC "Right. Kanami. That girl I met with Honoka."
+        MC "Cool. I didn't think you guys would have a contest so soon after the last one."
+        PRG "I-It's just normal stocking."
+        MC "Ah."
+        scene Campus Center
+        show PRG unsure
+        with fade
+        "Aida and I walked into the center of campus, and I stole a side-glance at her."
+        "She was walking with her hands folded over her skirt, her form looking more like someone trying to hide in plain daylight."
+        PRG "I-I'm sorry, I-I... I should g-get to the bus stop. I-I don't want to keep Tozakura-san waiting."
+        MC "Of course. Have a good day, Kodama-san. Be well."
+        PRG "Y-You too, Hotsure-san."
+        "Aida turned and sped-walked, almost ran away from me toward the bus stop."
+        "I turned as well and headed off for the cafeteria, my feelings of hunger slightly tamed by the anxious stomach flutters that Aida's presence had flared up."
+    elif isEventCleared("global026"):
+        "Walking away from the dorms, I glanced across and over at the large fountain surrounded by benches."
+        show PRG unsure at Position(xcenter=0.25,yalign=1.0) with dissolve
+        pause .25
+        "Aida sat alone on one of the benches, her gaze transfixed on the ground in front of her."
+        "I didn't want to stare, but... the idea of Aida, of all girls, getting pregnant made it hard not to be curious."
+        "Yet, there she was. She sat silently on the bench all alone, her gaze slowly turning to the fountain in front of her."
+        menu:
+            "Try to talk to her":
+                $setFlag("MC009_PRGtalk")
+                MCT "She... does not look well at all. I should probably check in on her."
+                "I turned myself away from my food-based path and walked over to her, taking care to skirt around to one side to avoid jump-scaring her from behind."
+                MC "Hey, Kodama-san."
+                pause .25
+                show PRG worried
+                pause .75
+                show PRG unsure
+                PRG "H-Hello, H-Hotsure-san..."
+                "Aida's gaze only met mine for less than a second before she looked back down."
+                MC "I..."
+                "I glanced around just a bit, just to make sure that no one was around. I didn't want to make her feel anymore uncomfortable than she might already be."
+                MC "I was just heading to the cafeteria and saw you sitting by yourself."
+                MC "I wanted to make sure that everything was okay."
+                PRG "..."
+                PRG "I-I'm..."
+                PRG "..."
+                MC "Would you mind if I sat with you for a moment?"
+                PRG "... N-No... t-that's okay."
+                MC "You mean... you'd rather I didn't?"
+                PRG "N-No. I-I mean..."
+                PRG "I-I... mm... y-you can sit down."
+                MC "Oh, thank you."
+                "I sat down on the same bench, though not directly beside her and looked out as the fountain made its relaxing splashing sound."
+                "I glanced at her, and I watched her adjust herself on the bench beside me. Her pregnant belly hovered ever so slightly above her legs."
+                "She let out a small nose exhale and rubbed one arm."
+                MC "Are you... doing okay from class the other day?"
+                MC "I really don't want to seem like I'm trying to pry or anything. I just... I can imagine that... all of that was a little... tough."
+                pause .25
+                show PRG nervous
+                pause 1
+                PRG "... People stare now."
+                PRG "T-That... n-never used to happen."
+                PRG "I-I c-could walk anywhere, and no one would even look at me..."
+                PRG "But now... I-I'm the... the pregnant girl. A-And everyone knows."
+                PRG "I... I can't even go to the cafeteria without someone staring at me..."
+                PRG "T-The last few days have been..."
+                pause .25
+                show PRG unique
+                PRG "... I just wanted to go to the park in town for a walk today, so I could think."
+                PRG "B-But I accidentally locked my keys in my dorm..."
+                pause .25
+                PRG "So I-I'm... waiting for Alice to return and let me in."
+                "I nodded in understanding and crossed one leg over the other."
+                "Aida went to put her elbows on her knees and leaned forward. But, her belly getting in the way, she simply put her hands on it and looked down."
+                "From where I sat, I could see bags under her eyes, and that sort of purple undertone that comes with them."
+                MC "I see."
+                MC "You could always head off to the cooking club in the meantime, couldn't you? Isn't that your main extracurricular?"
+                PRG "I-It is... but I'm not active with them... right now."
+                PRG "I... I decided to... t-take a little bit of time off until I feel less..."
+                MC "Stressed?"
+                PRG "Mhm..."
+                pause .75
+                show PRG nervous
+                pause .5
+                PRG "... I miss it, though."
+                MC "It's a stress reliever for you, isn't it?"
+                PRG "I-It is. B-But, I know I need to take the time away."
+                PRG "I need to get used to... cooking like this. And moving around with this here..."
+                "She looked down at her belly. Unlike someone like Alice, Aida's belly had a bit more curve to it, and was more round, which I supposed was how a pregnant belly looked compared to a... well, a fat one."
+                MC "Yeah... you definitely do there. Don't wanna make a mistake in the kitchen, especially with a baby on board."
+                PRG "Mhm..."
+                PRG "I-I was... {i}mngh{/i}"
+                "Aida shut her eyes and shook her head."
+                show PRG sad-2
+                PRG "..."
+                PRG "T-Today is inventory day, most likely. S-So, I could've helped if I wanted to..."
+                MC "Inventory day is...?"
+                PRG "I-It's when the cooking club members look at what ingredients they need, and write it all down for someone to get from the store."
+                PRG "Sano-san, Tozakura-san, and Sakura are probably working on that right now, actually..."
+                MC "I see."
+                MC "And, you don't feel up to going?"
+                show PRG unique
+                PRG "... N-Not really."
+                MC "Well, you're more than welcome to join me for a bite in the cafeteria, if you'd like. I was just on my way there, myself."
+                PRG "Um... n-no thank you, Hotsure-san. B-But I do very much appreciate your invitation."
+                PRG "I... I think I'd just like to rest for today, though."
+                MC "Totally understandable."
+                pause .5
+                "I glanced at the fountain before us and got up. Then walked over and glanced in."
+                MC "Hm."
+                show PRG worried
+                PRG "Is... everything okay?"
+                MC "Oh, yeah. Just checking to see if anyone made any wishes here."
+                PRG "Like, throwing money into it?"
+                MC "Mhm."
+                PRG "I..."
+                show PRG nervous
+                pause .75
+                PRG "... N-Nevermind."
+                MC "Hm? What's up?"
+                PRG "N-Nothing. I was just... remembering this story..."
+                MC "Oh? Well, I'm down to hear it. I love a good story."
+                PRG "I... i-it's a little long..."
+                MC "I don't have to be anywhere."
+                show PRG worried
+                PRG "W-Weren't you going to have lunch?"
+                MC "Well... yes, but now I'm talking to you. Food can wait."
+                MC "C'mon. Let's hear it."
+                PRG "..."
+                PRG "... {w}When I was... six years old, I-I think... m-my mother and I used to go into town to go shopping."
+                PRG "And everytime we'd go, we'd pass by this fountain in the middle of town. I-It looked a little bit like this one..."
+                PRG "A-Anyway, I would always ask my mother for a coin to throw in, a-and she'd always tell me to shut my eyes, make my wish, then throw it in."
+                PRG "A-And, I-I'd always wish for the same thing. A matcha cookie."
+                PRG "After a few times, my mother noticed, a-and started bringing a matcha cookie wrapped up in her purse. T-Then, when I would shut my eyes, she'd put it down on the stone of the fountain, so I'd think my wish came true."
+                MC "Aw. Your mom sounds sweet."
+                show PRG unique-happy
+                PRG "S-She is..."
+                PRG "But once, I wished for a butter cookie instead, and she only had the matcha one in her purse."
+                MC "Did she not put one down then? Tell you the fountain was taking the day off or something?"
+                PRG "Um... n-no."
+                PRG "She put down the matcha cookie anyway, and blamed the fountain. She told me that the fountain wasn't listening."
+                PRG "S-So every time after that, I would make sure that I enunciated properly, and that I was speaking clearly."
+                PRG "She told me a few weeks later, b-but still."
+                PRG "I-I still like to throw a coin into the water sometimes."
+                MC "I can see that. There's something innocent to it."
+                MC "So, how do you like to relax? Are you a big fan of books or manga or anything?"
+                show PRG neutral
+                PRG "Um... I... well..."
+                UNKNOWN "Aida?"
+                show PRG worried at altMove(0.5, 0.25)
+                show WG neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+                PRG "H-Hello, Alice. T-Thank you for coming back so quickly."
+                show PRG unique
+                PRG "I-I'm sorry for being so careless."
+                WG "Don't fret, Aida. It's quite alright."
+                hide WG with easeoutright
+                "Alice kept on her way toward the dorms."
+                MC "Well, I'll let you be on your way, Kodama-san. Have a good day."
+                show PRG unique at altMove(0.5, 0.5)
+                PRG "T-Thank you, Hotsure-san."
+                $setAffection("PRG", 1)
+                pause .25
+                show PRG worried
+                pause .5
+                PRG "And... {w}t-thank you... {w}f-for sitting with me."
+                MC "Don't mention it, Kodama-san. I'll see you real soon."
+                hide PRG with dissolve
+                "I smiled at her as she turned to head back to her dorm, now having at least a bit more of a spring to her step."
+            "Leave her be":
+                $setFlag("MC009_PRGleave")
+                "I glanced once more over at Aida."
+                MCT "She... kind of looks like she wants to be left alone."
+                "I continued on away from the dorms, giving Aida her space."
+                "I could never say I truly understood how she felt, but it wasn't hard to empathize. She had a super wild factor compared to some of the others. I didn't blame her for being a little quiet."
+    elif lockRoute("PRG") and not isEventCleared("PRG028") and not isEventCleared("PRG0029"):
+        scene Dorm Entrance with fade
+        "I shook my head and glanced back, hearing one of the doors shut heavily behind me."
+        show PRG worried with dissolve
+        "I glanced back, seeing Aida leaving the women's dorms."
+        MC "Hey, Kodama-san!"
+        show PRG surprised
+        pause .5
+        show PRG neutral
+        pause .25
+        PRG "H-Hello, Hotsure-san."
+        MC "Hey! Did I startle you?"
+        PRG "Um... a bit. I-I guess... I-I'm not used to having my name called so loudly."
+        MC "Ah... my bad."
+        PRG "I-It's okay..."
+        MC "So, how goes your day today? Anything fun going on?"
+        PRG "Um... n-not really. I-I... w-was just going to go for a walk. I feel like I haven't been outside at all lately."
+        MC "Hah, yeah. I get that."
+        MC "The sun is refreshing, for sure. Feels like a nice reinvigoration for the soul."
+        PRG "Mhm. It's nice and warm today."
+        PRG "Um... w-what about you? W-What are you doing today?"
+        MC "Well, I was working on that Kofun paper for Tashi-sensei's class, and I decided to head out for some food."
+        show PRG worried
+        PRG "Oh."
+        pause .5
+        show PRG unique
+        pause .25
+        PRG "... I should work on that today."
+        MC "Yeah, well. At least there's no shortage on papers around here. The one that you and I are working on together plus this one. That's quite the surplus of reading material for him."
+        MC "But, anyway. I won't keep you from your walk. Have a good day, Kodama-san."
+        show PRG neutral
+        PRG "Y-You too, Hotsure-san."
+        hide PRG with dissolve
+        "Aida smiled at me, before she turned and walked down the path away from the dorms."
+        "Even as I watched her skirt swish behind her as she went along, it made me happy to know that, after everything lately, everything between us was intact and well."
+        "It gave me a nice, comfortable feeling in my chest."
+
+    scene black with fade
+    pause .5
+    scene Hallway with fade
+    "The hallways were... sparsely populated. Just enough where they didn't feel like horror movie adaptations of a school."
+    "I headed down the hall toward the cafeteria, the smell of... well, something hitting me in the schnozz."
+    if getHighestAffection() == "BE" and isEventCleared("BE022"):
+        MCT "It... would be a bit more fun having Honoka here for some break-time lunch. Make the halls a little more lively."
+        MCT "Though, that liveliness would turn into an inevitable conversation about aliens, or some sort of boob goblin or some such thing, and yeah. We'd be in the thick of it."
+        "My generic text ringtone chimed from my pocket and I slid my phone out, putting up the metaphorical area radar so I could text and walk at once."
+        BECell "Hey, Kei-chan! What's up??"
+        "..."
+        MCT "I swear someone is listening to my thoughts."
+        MCT "But hey, good timing."
+        MCCell "Hey! I'm just grabbing some lunch. Took a break from working on that paper for Tashi-sensei for a little while"
+        BECell "Oh. I meant to work on that too but I ran into some of the archery club peeps and decided to hang out with them."
+        MCT "Hm. I joined that whole thing so I could spend some time with her and give her some support, too."
+        MCCell "That sounds fun. Is that Haruhiro guy there?"
+        BECell "The guy with the elf ears?"
+        MCCell "Mhm"
+        BECell "He is, yeah. Why??"
+        MCCell "He's a little different, isn't he? And I say that knowing my roommate."
+        BECell "You're so mean!!"
+        MCCell "Shh. It's called being observant."
+        MCCell "Anyway I miss you and I'm looking forward to seeing you tomorrow after class!"
+        "I gazed down at my phone, waiting on her reply..."
+        "..."
+        MCT "And... there's an emoji blowing a kiss."
+        "Shaking my head, I smiled and continued down the hallway toward the cafeteria."
+    elif getHighestAffection() == "AE" and isEventCleared("AE022"):
+        "I brought my eyes around the hall, scanning like a sonar on a submarine."
+        MCT "Alright... no Minori and no Yuki. Perfect."
+        MCT "I guess, in a weird-ass way, that thing with Daichi actually worked, and Shiori kept her promise."
+        "I let out a gentle sigh of relief."
+        MCT "If I had to take one more day of dealing with those council goons riding my coattails, I was going to scream."
+        MCT "Such a relief."
+    elif getHighestAffection() == "GTS" and isEventCleared("GTS022"):
+        "As I walked, some sunlight glinted into my eyes, though not much actually made contact thanks to my helmet of flowing locks."
+        "I glanced out the window and shielded my eyes."
+        scene School Planter with fade
+        "Outside was the garden, and from the hallway, I could see Naomi moving about inside. I wasn't like, {i}right{/i} there, but I could still tell she was setting out a few different pots of... something."
+        if getFlag("MC005GTS"):
+            "I could also make out the flower we'd gotten from Ren Hirano during Golden Week, the one we planted together."
+            "She bent to add some water to it, then let it be."
+        else:
+            "I watched her place a pot back into its place, having received some water, and then going back to her business with the others."
+    elif getHighestAffection() == "FMG" and isEventCleared("FMG022"):
+        "Breaking up the silence, footsteps echoed from around the corner."
+        "I stood up straight, preparing myself should it be a teacher or someone whose opinion I cared about."
+        show FMG neutral with dissolve
+        pause .5
+        show FMG happy
+        pause .25
+        FMG "Ey! What's up, Kei-kun?"
+        "I let out my breath in a sigh of relief."
+        MC "Hey! Not too much. You look like you've been getting a sweat in."
+        FMG "Totally! I hit the track earlier for some endurance training. Got a good dozen or so laps in."
+        MC "Nice!"
+        MCT "... For you. My ass would be in the dirt after half a lap."
+        MC "So, what brings you in here, then?"
+        "Akira held up a bottle of water."
+        FMG "Gotta stay hydrated, Kei-kun."
+        MC "Hah, I suppose so."
+        FMG "But since you asked, what brings you to the halls?"
+        MC "Just grabbing lunch. I took a break from working on the Kofun period paper to get some thinking food."
+        FMG "The..."
+        show FMG surprised
+        FMG "Oh shit!"
+        FMG "I totally forgot about that damn paper!"
+        FMG "And I had other assignments to get done, and I was going to try to hit the track again later!"
+        FMG "Shit! Thanks, Kei-kun! I'll see you on a different day!"
+        hide FMG with dissolve
+        "Her last words were echoing down the hall as she nearly ran down it, away from me and toward the dorms."
+        MCT "Well... at least I'm not the only procrastinator."
+        "I shook my head, feeling slightly less alone as I walked for the cafeteria."
+    elif getHighestAffection() == "WG" and isEventCleared("WG020"):
+        "As I was alone, and really had nothing else critical to ponder, my mind went to the most recent, and most prominent conversation in recent memory."
+        MCT "More intimate possibilities with classmates."
+        MCT "What did Alice mean by that?"
+        MCT "Is she hinting at me just outright asking her on a date? Would she even say yes to that?"
+        MCT "Or is this one of those testing moments from her? Should I just keep it in mind for a while and ask her later?"
+        MCT "Urgh... whatever."
+        MCT "I'm too damn hungry to critically analyze right now."
+        "I kept pace down the hall and toward the cafeteria."
+    elif getHighestAffection() == "PRG" and isEventCleared("PRG027"):
+        MCT "..."
+        MCT "Going on a walk with Aida actually sounds really nice."
+        MCT "Though, I'd probably be begging for a drive-thru no more than a minute or two in. I'm starving."
+        "I rubbed my stomach and walked down the hall."
+    elif getHighestAffection() == "PRG" and not isEventCleared("global026") and not isEventCleared("PRG023"):
+        MCT "..."
+        MCT "I could have gone for some time in town. Especially with Aida."
+        MCT "If she can make grocery shopping a good time, then I think she's definitely something special."
+        MCT "Though, last I saw her, she'd had a bit of a rough day, so maybe it's for the best that I didn't try to weasel my way in."
+        "I continued on down the hall, silently running the events of that day in my head."
+    elif getHighestAffection() == "PRG" and isEventCleared("PRG023") and not isEventCleared("PRG025"):
+        "The walk to the cafeteria was loaded with other thoughts, however. And my mind kept being sucked back to Aida."
+        "Even today, she looked like a ghost. Her usual spark seemed restrained, yet she was forcing herself back into the world."
+        "And while we walked beside each other, I could have sworn that I'd heard her whimper or something."
+        MCT "Why the hell is she trying to go to town like that? She should be in bed resting, not trying to tough it out."
+        "I sighed. Hindsight thoughts did nothing but stress me out, and I trudged down the hall."
+    else:
+        pause .5
+        MCT "It's kind of wild."
+        MCT "Feels like almost no time has passed since Tomo and I first got here, but... so much has gone down."
+        "I remembered that first day, when I'd met Tashi-sensei for the first time, and seen his tongue in all its glory."
+        "Even Golden Week felt like it was a long time ago."
+        MCT "God... time is flying."
+        "I headed down the hall, hunger building with every step."
+    scene Cafeteria with fade
+    stop music fadeout 1.0
+    "The scent of food was in full force as I stepped in."
+    "I pictured my body being lifted by my nose and floated over by a low opacity ghostly scent hand and deposited by a meal of-"
+    show dummy with vpunch
+    UNKNOWN "Oh, excuse-"
+    show Takamura neutral with dissolve
+    if isEventCleared("MC002") or isEventCleared("BE006") or getFlag("Meet_Takamura"):
+        Takamura "Oh! Hotsure-san, pardon me!"
+        MC "Oh, no. I wasn't watching where I was going at all. That's my bad, Sensei."
+        Takamura "Well, we can mark it as a wash and start fresh then."
+        MC "Sounds good, Sensei."
+        "I smiled at her. Takamura always had a sort of familiar warmth to her. Like a family friend who you'd known since childhood."
+        "She had the understanding of someone close to you, but the maturity and warmth of someone far older."
+    else:
+        $setFlag("Meet_Takamura")
+        Takamura "Oh! Pardon me! Keisuke Hotsure, yes?"
+        MC "That's me. And no harm done, Sensei. I should open my eyes a bit too."
+        "I recognized her immediately as the teacher who had given me my gift bag and dorm key on my first day."
+        MCT "Takamura-sensei. Right."
+    play music HigherEdu
+    Takamura "Wonderful. Now, your timing is actually quite remarkable. Would you have a free moment?"
+    MC "Ah..."
+    "I focused my energy almost entirely on not letting my stomach growl in front of her."
+    MC "Yeah, of course."
+    Takamura "Thank you. Come along, then."
+    "She turned and headed back into the halls. I looked across and toward the trays of food on the tables."
+    MCT "Soon..."
+    pause .25
+    scene Hallway with fade
+    "I turned and followed her into the hall."
+    if isEventCleared("MC002") or isEventCleared("BE006") or isEventCleared("MC005"):
+        MC "Sensei? Could I ask you something?"
+        Takamura "Of course, Hotsure-san."
+        MC "I know that my sister is in your homeroom. This... isn't regarding something with her, is it?"
+        Takamura "Well... my, you've got some intuition, Hotsure-san. But, yes."
+        Takamura "I have some... well, concerns that I'd like to discuss with you."
+        MC "Of course."
+    else:
+        MC "Sensei?"
+        Takamura "Yes, Hotsure-san?"
+        MC "If I may... what is this regarding?"
+        Takamura "Well... you see, your sister, Tomoko, is in my homeroom."
+        Takamura "And recently, I've noticed some things that are a touch... concerning with her, and I was hoping that perhaps you could shed some light."
+        MC "Oh, yes... I can try my best."
+        Takamura "Then you have my thanks, Hotsure-san."
+    scene Classroom2 with fade
+    "Takamura and I turned from the hall into a classroom on the other side from good ol' classroom 3-B."
+    show Takamura neutral with dissolve
+    Takamura "Here we are."
+    "She shut the door behind us and stepped inside further, taking a seat at her desk."
+    "She nodded at the row by the window, and glanced to the far back corner."
+    Takamura "Your sister usually sits there, if you were curious."
+    Takamura "Now, the reason for my intrusion on your day is regarding... well, some traits in your sister that have me worried."
+    MC "I see..."
+    Takamura "I've noticed, not only in class, but in the few times I've seen her outside of classes, that she's quite the quiet girl, yes?"
+    MC "Very."
+    Takamura "Right. However, within classes, I've noted that she doesn't seem to initiate conversations with her classmates. In addition, she quite literally will refuse to take part in anything to do with a group of students."
+    Takamura "She tends to make her disapproval... quite clear, as well."
+    MCT "That'd be the Tomo I know."
+    Takamura "And, she outright refuses to speak in any public setting. I don't believe she's ever spoken in a way that the entire class would be able to hear her."
+    Takamura "Now, all of that to say that recently, I had overheard a group of students refer to her as a ‘specter,' and they had mentioned that she hardly ever leaves her dorm."
+    MC "That is... unfortunately quite true. She is quite the homebody."
+    Takamura "Which is quite alright. There is nothing wrong with someone enjoying their time at home."
+    Takamura "However, all of these stacked together leads me to believe that your sister is dealing with something quite intense, if I may be so blunt."
+    Takamura "Has she ever exhibited any signs of social anxiety that you may have noticed?"
+    MC "I..."
+    MC "Well, Tomo is the type to choose a night at home over something more engaging."
+    MC "Though, to be fair, it wasn't always that way."
+    "Takamura leaned forward in her seat, listening carefully."
+    MC "Far from it, actually. She used to be quite active. She had her own social circle, and she spent quite a bit of time with my close friend and I when we were kids."
+    MC "She still liked her time at home, and she always enjoyed more calming activities, like video games, movies, and whatever. But not to the extent she does now."
+    MC "I... I can't say that I really could tell you when she started to shift. It was gradual. Though, I do feel like something did happen at some point."
+    MC "I've had theories and the like, but I've never really spoken to her, or anyone about them."
+    MC "Most of the time, when it comes to anything emotional or sensitive, Tomo just shuts down the conversation entirely, either by diverting to a new topic, or flat out not responding."
+    "Takamura nodded, and jotted something down onto some paper."
+    MCT "She's... she really knows how to get to the heart of an issue. I don't think I've gone that in-depth on Tomo before."
+    Takamura "That's all good to know. Anything else that you can think of?"
+    MC "Well... I know she isn't a fan of her appearance."
+    MC "She thinks she's ‘way too short,' and she's not a fan of... well... her body. She thinks she has too many curves."
+    MC "I can't say if that has anything to do with having anxiety, though. That being said, it has been quite the touchy subject for her for some time."
+    Takamura "It could. Physical appearance, factor related or not, can weigh heavily on the mind's perception of oneself."
+    Takamura "As such, I can relate to her scrutiny of her own body."
+    MC "Well, at the very least here, you can feel comfortable with your factor. This is the place for it after all."
+    show Takamura flattered
+    Takamura "Ahhh..."
+    Takamura "W-Well, I..."
+    Takamura "{i}Ahem{/i}... I do hate to be frank, Hotsure-san, but I'm actually factorless."
+    Takamura "I'm all genetics... {w}and sweets, I'm afraid."
+    MC "Ah..."
+    MC "I... m-my apologies, Sensei. That was... untactful of me."
+    show Takamura reassuring
+    Takamura "Oh, no. It's quite alright, Hotsure-san. You aren't the first to assume as such, and you won't be the last."
+    show Takamura neutral
+    pause .5
+    Takamura "Now, that does finish off the questions I had for you. Thank you, Hotsure-san."
+    MC "Of course, Sensei, but if I may..."
+    MC "How would you... recommend addressing this... issue, I guess?"
+    Takamura "Well, for starters, I would do your best to not overthink the matter. Sometimes, putting forth too much of an effort will simply smother the problem, rather than solving it."
+    Takamura "I would recommend something quite simple. Just spend some time with her."
+    Takamura "That time doesn't have to be something over-inflated with grandeur either. Standing by her side when she could use some support and staying in regular contact are good starting points."
+    Takamura "If I were her, I'd feel quite comforted by someone close to me caring so much. And, I believe that each showing of that would bolster my connection to them."
+    MC "I see. Thank you, Sens-"
+    pause .25
+    "A loud voice echoed down the hall, that of a woman shouting something."
+    Takamura "Hrm... that's unusual."
+    Takamura "Apologies. Please go on, Hotsure-san."
+    MC "Ah... yes, thank you, Sensei."
+    Takamura "Of course. Now, does your sister have any hobbies? Things she enjoys?"
+    MC "Well, she..."
+    MCT "Movies and video games are hobbies, yes. But... they kind of feel like the same sort of vein."
+    MC "She hasn't really-"
+    if isEventCleared("PRG013") or getFlag("Meet_Sakura"):
+        pause .25
+        show dummy with vpunch
+        pause .25
+        show Takamura neutral at altMove(0.5, 0.25)
+        show Sakura frustrated at Position(xcenter=0.75, yalign=1.0) with easeinright
+        pause .5
+        "The door slammed open across the room, and in came Sakura, her arms covered in some sort of white powdery substance."
+        "Behind her, more shouting echoed in."
+        Sakura "Takamura-sensei, I'm really sorry for barging in, but I... urgh, they won't stop."
+        Takamura "Myoga-san, what are you referring to? Who won't stop?"
+        Sakura "Chisaka-san and Wada-san. They're nearly at each other's throats."
+        Sakura "Some argument over a date or something."
+        show Takamura sad
+        Takamura "I see."
+        Takamura "Hotsure-san, I'm very sorry, but you'll have to excuse me."
+        MC "Of course, Sensei."
+        show Takamura neutral
+        Takamura "Actually... you might as well join us. We can discuss this further on the way back."
+        MC "I... okay?"
+    else:
+        pause .25
+        show dummy with vpunch
+        pause .25
+        show Takamura neutral at altMove(0.5, 0.25)
+        show Sakura frustrated at Position(xcenter=0.75, yalign=1.0) with easeinright
+        pause .5
+        "The door slammed open across the room, and in came a girl with an apron on, her arms covered in some sort of white powdery substance."
+        "Behind her, more shouting echoed in."
+        Student "Takamura-sensei, I'm really sorry for barging in, but I... urgh, they won't stop."
+        Takamura "Myoga-san, what are you referring to? Who won't stop?"
+        Student "Chisaka-san and Wada-san. They're nearly at each other's throats."
+        Student "Some argument over a date or something."
+        Takamura "I see."
+        Takamura "Hotsure-san, I'm very sorry, but you'll have to excuse me."
+        MC "Of course, Sensei."
+        Takamura "Actually... you might as well join us. We can discuss this further on the way back."
+        MC "I... okay?"
+    "Takamura rose from her chair and walked swiftly to the door, heading out as I followed behind her."
+    scene black with fade
+    pause .5
+
+    scene Cooking Classroom with fade
+    if isEventCleared("PRG013") or getFlag("Meet_Sakura"):
+        "The two girl's escalating voices echoed down the hall, growing in volume as we grew closer and closer, to the point where I was legitimately surprised that someone wasn't filming them for the internet as I walked in with Takamura and Sakura."
+    else:
+        "The two girl's escalating voices echoed down the hall, growing in volume as we grew closer and closer, to the point where I was legitimately surprised that someone wasn't filming them for the internet as I walked in with Takamura and Myoga-san."
+    "The two girls stood in the middle of the room, nearly nose to nose with one another."
+    "One of them, clearly quite muscular, had one finger pointed directly at the other girl's face, literally screaming insults at her."
+    "While the other, taller than her by a head or two, was bent down a bit, matching the first girl in volume and insult harshness."
+    if isEventCleared("PRG013") or getFlag("Meet_Michiko"):
+        "Close by, a third girl, who I recognized as Michiko Sano, stood, trying to bring the two of them back down."
+    else:
+        "Close by, a third girl stood, trying to bring the two of them back down."
+    Student1 "Like he'd ever take a beanpole like you to a dance! He couldn't even reach your head for a kiss up on that stalk of a neck!"
+    Student2 "You're one to talk! It must be so comforting to put his hands on a girl's stone-firm hips! Ever the image of softness and grace, aren't you, Chisaka-san?"
+    Student1 "At least I know how to look out for my figure! I can see your gut flab from here, miss ‘perfect cinnamon pancakes!' Those breakfast desserts are going to your damn head and your ass!"
+    show Takamura strict with dissolve
+    Takamura "Girls."
+    stop music fadeout 1.0
+    pause .5
+    "Despite Takamura's voice going barely above her normal speaking tone, both girls went silent and turned to her."
+    Takamura "I think you both are well aware that there's no need for such volume. I believe half of the dorms could hear you."
+    Student1 "But she-"
+    Takamura "I will be hearing from both of you. However, not at the same time."
+    Takamura "Wada-san? If you would?"
+    Student2 "..."
+    "The taller girl blushed a bit, standing up to her full height."
+    Student2 "It's Takeda-san. I... I've had a crush on him for quite some time, and he's single now-"
+    Student1 "And likes me!"
+    Takamura "Chisaka-san. In time."
+    "Takamura glanced over to her, then back to Wada-san."
+    Student2 "He was dating another girl, but since they aren't together anymore, I was hoping to ask him to the Matsuri."
+    Takamura "I see."
+    Takamura "And, Chisaka-san? You were intending the same?"
+    Student1 "Well, yeah. I've had a thing for him longer than Wada-san has. Plus, he's talked to me more. I know he likes me more than her."
+    Takamura "Mmn."
+    show Takamura neutral
+    Takamura "Perhaps... have either of you considered asking Takeda-san how he feels?"
+    "A thick silence hung in the air as both girls glanced at each other, then down."
+    Takamura "Consider this. Are you even certain that he'll be attending the festival?"
+    Student2 "Who wouldn't?"
+    Takamura "He might have a previous engagement in mind."
+    Takamura "Either way, though I can understand the passion you both have, would it not make more sense to ask him directly and let him choose, rather than standing here bickering over it?"
+    Takamura "Because, if you're seeking his approval, I believe you need to actually have him here to get said approval."
+    Student1 "But-"
+    play music Rain
+    Takamura "I know. The pulls of affection can drive the heart mad."
+    Takamura "However, someone who can control those feelings and use them in a proper manner will achieve far greater success than someone trying to simply bash another over the head with their deep rooted attraction."
+    Student1 "I... I see."
+    Student2 "Yes. That... makes a lot of sense."
+    Student1 "Thank you, Sensei."
+    Takamura "Of course."
+    Takamura "Now, while I'm here, Sano-san. How stands the inventory? Managing alright, I hope?"
+    if isEventCleared("PRG013") or getFlag("Meet_Michiko"):
+        Michiko "Yes, Sensei."
+        if isEventCleared("PRG022") and not isEventCleared("global026") and not isEventCleared("PRG026"):
+            Michiko "Tozakura-san and Kodama-san are in town shopping right now."
+        elif isEventCleared("PRG026") or isEventCleared("global026"):
+            Michiko "Tozakura-san is in town shopping right now."
+        Takamura "I see. Wonderful, then."
+    else:
+        Student "Yes, Sensei."
+        if not isEventCleared("global026"):
+            Student "Tozakura-san and Kodama-san are in town shopping right now."
+        if isEventCleared("global026"):
+            Student "Tozakura-san is in town shopping right now."
+        Takamura "I see. Very good, then."
+    Takamura "Oh, Hotsure-san? This is Michiko Sano. The cooking club president."
+    if isEventCleared("PRG013") or getFlag("Meet_Michiko"):
+        Michiko "Oh, we've met, Sensei. Remember? On the day Kodama-san joined up?"
+        Takamura "Ah, of course. You're correct, Sano-san."
+    else:
+        MC "It's nice to meet you, Sano-san."
+        Michiko "Likewise."
+    Michiko "Now, as I was saying, Sensei, we're sticking to the bare essentials until the next competition comes up. That should leave us with enough for now."
+    Takamura "Yes. Best not to overdo it."
+    Michiko "Right. Thank you, Sensei."
+    Takamura "Yes. And thank you for keeping me in the loop. I'm quite certain you could keep the club afloat without my intervention."
+    Michiko "You're the cooking teacher, Sensei. We wouldn't get too far."
+    if isEventCleared("FMG018"):
+        MC "You're the cooking club teacher, Sensei?"
+        Takamura "You're surprised, Hotsure-san? I did have a cooking lesson with you once, you know."
+        MC "Well, yeah, but I would have assumed you were the school's counselor or something, and just so happened to have a penchant for cooking."
+    elif isEventCleared("BE006") or isEventCleared("PRG013"):
+        MC "I... honestly, you could've fooled me if I didn't know better."
+        MC "I totally would've thought of you as a school counselor, Sensei."
+    else:
+        MC "You're the cooking club teacher, Sensei? I could have sworn you were the school's counselor."
+    Takamura "Hah, you flatter me, Hotsure-san."
+    Takamura "But yes. Aside from being a homeroom teacher, I also supervise the cooking club and have some elective classes in cooking as well."
+    Takamura "However, I have no doubts that you all could run the club without me."
+    Michiko "You aren't leaving, are you, Sensei?!"
+    Takamura "Oh, no no. Not now, of course. Take it as me having a great deal of trust in you all."
+    Takamura "And my my, I seem to have once again forgotten my manners."
+    show Takamura neutral at altMove(0.5, 0.25)
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Takamura "Hotsure-san, you already know Sano-san. This is Sakura Myoga, Etsuko Chisaka, and Hotaru Wada."
+    if isEventCleared("PRG022"):
+        Sakura "Pleasure, Hotsure-san."
+        MC "Yeah, yeah. Nice to see you again, Myoga-san."
+        Takamura "My, Hotsure-san. Got friends in all places, haven't you?"
+        Sakura "Well, it's kind of by extension."
+        show Sakura happy
+        Sakura "He usually tends to spend more time chatting up my cooking partner than talking to me."
+        Etsuko "Can you blame him? Kodama-san's a gem, in case you haven't noticed. Girl has a smile that could attract any dude."
+        show Sakura neutral
+        Hotaru "Would you rather take Kodama-san to the festival instead, Chisaka-san? Seems like you've got quite the eye for her."
+        Etsuko "I-I was just saying!"
+        Hotaru "I know, I know. Kodama-san does have a special sort of charm to her. I heard her laugh once and just about melted."
+        Sakura "Melted?"
+        Hotaru "It's so joyous sounding! Like, it fills the entire room!"
+        if isEventCleared("PRG026"):
+            Michiko "Speaking of, when is she planning to return?"
+            Takamura "When she feels ready, Sano-san. She has some personal matters to take care of."
+            Michiko "I... of course."
+        else:
+            Michiko "Very true."
+    else:
+        $setFlag("Meet_Sakura")
+        $setFlag("Meet_Michiko")
+        "I bowed to each of them politely."
+        MC "Nice to meet you all."
+    Takamura "The cooking club is a bit different from other clubs, Hotsure-san."
+    Takamura "We have competitions, of course. But, the club as a whole is largely based on personal achievement over the competition results."
+    Takamura "I have no issue with the competitions, and I do look forward to the excitement of them. But, I do also see great value in the process of learning, and perfecting the art of cooking."
+    MC "That makes sense."
+    Michiko "Oh, Takamura-sensei? I did have a question on the rotation of the vegetables. Could we go over them once more?"
+    Takamura "Oh, yes yes, of course."
+    hide Takamura with dissolve
+    Sakura "So... to make sure I have this straight, you two were planning to tousle over Takeda-san, right?"
+    Hotaru "I actually intend to win, thank you."
+    Sakura "Ah... {w}you do know that he's planning to go to the festival with Koneko-san, right?"
+    "Hotaru & Etsuko" "WHAT?!"
+    Etsuko "The soccer club girl?!"
+    Sakura "Yeah? I heard it in the halls earlier. Koneko-san was talking to her friends about it."
+    Hotaru "But they broke up! It's been a few weeks since then!"
+    Sakura "Apparently they got back together then, because I heard that no more than a couple of hours ago."
+    Hotaru "That BITCH!"
+    Etsuko "For real! Screw her!"
+    Hotaru "Well, there goes my Matsuri plans. Guess I'm going stag now..."
+    Etsuko "I know! Stupid skank..."
+    "I glanced at Sakura, who rolled her eyes as the other two girls kept throwing around different expletives to describe this abhorrent ‘date stealer.'"
+    MC "So. Inventory day, huh?"
+    Sakura "Mhm. The most exciting day of days."
+    Sakura "Checking and double checking, you know."
+    MC "Right."
+    "Across the room, Takamura and Michiko headed back over, Michiko scribbling away on a clipboard, yet somehow being able to walk in a totally straight line."
+    show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Takamura "Girls? I thought we were through with this argument."
+    Sakura "Oh, they aren't fighting each other now, Sensei. They found out someone else is going with Takeda-san."
+    Takamura "Ah... I see."
+    "The two girls glanced over from their hate and trash-talk session."
+    Etsuko "Who are you taking to the festival, Sensei? Someone special?"
+    Takamura "Me? I... well..."
+    Takamura "I-I'm a bit too focused on my work at the moment for dating."
+    show Takamura happy
+    Takamura "Though, I have greatly missed the Matsuri. Such a wonderful time. Filled with such lively excitement in the air."
+    MC "You... missed them?"
+    Takamura "Oh, yes. I've spent the last decade or so in Europe, Hotsure-san."
+    Sakura "What are the festivals like there, Sensei? Compared to the Matsuri."
+    show Takamura neutral
+    Takamura "Well, firstly, no yukatas."
+    MC "That's different."
+    Takamura "Indeed. The parades also lack a sort of... vibrance. Far less colors than here, I'd certainly say."
+    Takamura "And, as a whole, it struck me that Europeans have quite the different approach to tradition than here in Japan."
+    Hotaru "Sounds a little dull to me..."
+    Takamura "Not even close, Wada-san. It's simply a matter of cultural differences. The European festivals have their own sort of charm to them, which while different from what we have here, still has the same feeling of celebration."
+    Takamura "Personally, I quite enjoyed The Fête des Lumières in Lyon, France."
+    Sakura "Sorry... what was that?"
+    Takamura "The Fête des Lumières. Or, the Festival of Light. It's a series of light shows and street performances over the course of a few days. It's quite the spectacle."
+    Takamura "Though, by far, my favorite aspect was the tradition of every house placing candles along the outsides of the windows."
+    Takamura "All together, they give off the most breathtaking lights at night. Truly unforgettable."
+    Takamura "It felt as though I was living in a fairy-tale. And to this day, I still remember that feeling of excitement. That sort of child-like wonder that comes when experiencing something new and spectacular."
+    Takamura "... {w}Ah... pardon my rambling."
+    Michiko "Is it true that you were a chef at a five star restaurant in Paris, Sensei?"
+    Takamura "Technically, Sano-san, restaurants only have a three star rating system there."
+    Takamura "One star is a very good restaurant. Two is a place that's ‘worth a detour'. And three is a truly special restaurant, and one well worth the trip."
+    MC "You... didn't really say no, Sensei. And, your knowledge on European restaurants is definitely something."
+    Takamura "Yes... thank you, Hotsure-san."
+    "As Sakura went on to ask Takamura about some vague french dish with lamb that I hadn't heard of, I glanced up at the clock on the wall."
+    MCT "Oh, geez... that took a bit."
+    MCT "Hope the caf' is still open..."
+    Takamura "-find that adding the garlic and rosemary to the slits on top yields a more vibrant flavor."
+    Sakura "I see."
+    MC "Well, I'd best be going. I have some lunch to have in the cafeteria."
+    Takamura "Oh, indeed you do. My apologies for keeping you, Hotsure-san. You must be famished."
+    Takamura "A shame, though. On a normal day, you could have taken home some of the leftovers from the club members. No food goes wasted here."
+    if isEventCleared("PRG022"):
+        Sakura "I'm sure he knows that, Sensei. He's tasted Kodama-san's cooking."
+        Takamura "Ah, yes. Then you know quite well."
+    MC "Very true."
+    MC "But anyways, it was wonderful meeting you all."
+    hide Sakura with dissolve
+    "I bowed to them all politely, and glanced to Takamura, who ushered me toward the door where we wouldn't be overheard."
+    show Takamura at altMove(0.5, 0.5)
+    Takamura "I do hope that you take our earlier conversation to heart, Hotsure-san. And please keep in mind what I told you."
+    MC "Of course, Sensei. Thank you for letting me know."
+    "I bowed to her politely."
+    Takamura "You're very welcome, Hotsure-san. I'm more than happy to do my job."
+    Takamura "Have a wonderful lunch, and a pleasant rest of your day."
+    MC "You as well, Sensei."
+    scene Hallway2 with fade
+    "I headed back out into the hall and down to the cafeteria."
+    "Any thoughts that I could have had about what she had said were drowned out by the sudden jab of hunger in my guts."
     jump daymenu
 
 label MC011:

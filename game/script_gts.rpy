@@ -1142,6 +1142,8 @@ label GTS011:
     MC "Uh... yeah, I am. Hello."
     show GTS happy at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
     GTS "Hotsure-san, this is Ryoko Tanaka. Tanaka-san, this is Keisuke Hotsure. Tanaka-san is my next-door neighbor who I met a couple days ago, so I invited her over for some tea as well. I hope that isn't a problem."
+    if not getFlag("Meet_Ryoko"):
+        $setFlag("Meet_Ryoko")
     MC "No, it's all right. It's nice to meet you, Tanaka-san."
     Ryoko "Likewise, come on, have a seat."
     show GTS neutral
@@ -1218,6 +1220,8 @@ label GTS011b:
     "The shout caught my attention as I turned to spot Tanaka rushing over with her camera in hand. The quirky girl smiling as she arrived back at us."
     show Ryoko neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     UNKNOWN "Hi there, I'm Ryoko Tanaka. Nice to meet you."
+    if not getFlag("Meet_Ryoko"):
+        $setFlag("Meet_Ryoko")
     MC "Nice to meet you too, I'm Keisuke Hotsure."
     Ryoko "Pleasure. Saw you talking to Yamazaki-san, you two friends?"
     if checkAffection("GTS", ">=", 2):
@@ -2682,6 +2686,7 @@ label GTS021_c1_after:
     jump daymenu
 
 label GTS022:
+    $setFlag("XX22")
     $setProgress("GTS", "GTS023")
     MCT "Huh boy, this isn't gonna look good."
     scene Library with fade
@@ -8714,12 +8719,13 @@ label GTS043:
     show GTS happy-2
     GTS "KYAAA!"
     "With a mighty roar, Naomi raised her arm. There was so much weight and winding force to her heavy, lumbering movements. Even a swift downward strike from her looked like it was moving in slow motion."
+    show cg GTS043_planks1 with vpunch
     "When her arm made a complete circle and sailed downward, her giant right hand cleaved through the stack of ten wooden squares like it was made of tissue paper."
     "The stack folded and buckled like an accordion, stray pieces of wood falling to the ground in sequence mere seconds later."
     "{i}CRACKLE!{/i}"
-    show FMG surprised
     "The shockwave from Naomi's arms was enough to send the sides of the board stand tumbling over, leaving everything in a pile of dust. While the stand itself remained intact, the impact of the stand falling over kicked up a massive cloud of sand from the field."
     "The stray bits of yellow dust clouded up near the earth, then faded as the cloud of sand disappeared."
+    hide cg with dissolve
     "{i}Fizzle...{/i}"
     "Once the cloud disappeared, Akira and I stood in awe at the display of power we had just witnessed. Naomi was still following through with her heavy strike, exhaling proudly."
     FMG "Yamazaki-san... that was AMAZING!"
@@ -11457,7 +11463,7 @@ label GTS050:
     play sound Thunder
     "Indeed, her shadow in the doorframe lingered right where it was for a moment or two more, hand clinging to the lightswitch."
     "Whatever the disturbance was, she kept on walking into the kitchen. The cabinet, roused from nocturnal slumber, groaned open, and then came the bassy {i}clunk{/i} of Naomi setting her tea making kit down on the counter. I could hear it rattling."
-    "Another {i}clunk{/i} from her setting down her tea ‘cup'."
+    "Another {i}clunk{/i} from her setting down her tea 'cup'."
     pause 0.75
     "Silence blew in from the other room in the few moments after that; I began crawling towards the edge of the bed by the light pouring in from the doorway."
     "Just at the edge, I jolted at the crash of something small and ceramic shattering on the ground."
@@ -11601,6 +11607,405 @@ label GTS051:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label GTSFMG001:
+    scene Campus Center
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    play music Busy
+    if isEventCleared("FMG016"):
+        Natsuko "Watch your step, Hotsure-san. Some idiot spilled something."
+    else:
+        UNKNOWN "Watch your step, Hotsure-san. Some idiot spilled something."
+    MC "Yep..."
+    "So there I was, dodging soup puddles with my arms wrapped around bundles of brooms and shovels, as we're wont to do in the more wayward days of our lives."
+    "I'd been lucky enough to be assigned to groundskeeping chores with the impenetrably serene Naomi Yamazaki. But then, just to be sure my karma was good and balanced, it was decided a third helper was needed, and the universe sent Natsuko Okamoto."
+    if not isEventCleared("FMG016"):
+        "She was apparently from a different homeroom, which was something of a relief. She had the build of a mob enforcer and a disposition to match."
+    else:
+        "I never ran into her much, but Natsuko's warm smile and sunny disposition hadn't changed a bit."
+    "She was in front with her unmoving arms clutching four bags of dirt over her shoulders, while Naomi was silent behind me cradling a stack of flowerpots atop a lacquered black kimono chest. Three laboring ants under the full, teasing mid-spring sun."
+    "Granted, of the three of us, I was the one closest to an ant."
+    "It's funny how life works."
+    if checkSkill("Athletics", ">", 3):
+        MC "We going to the campus garden or the front entrance first?"
+        Natsuko "Just the campus garden. Usui-san, Inoue-san, and Oyama-san got assigned the front entrance."
+        MC "Oh, okay."
+        show GTS sad
+        GTS "I am rather glad... these pots really are starting to weigh on me..."
+        MC "Want me to take some of those off your hands?"
+        show GTS embarrassed
+        GTS "Oh, no, it would scarce be worth the trouble since we're so close. You are very kind to offer, though."
+        MC "'Course."
+        $setAffection("GTS", 1)
+        jump GTSFMG001_c1
+    elif checkSkill("Athletics", ">", 0):
+        MC "We going to the campus garden or the front entrance first?"
+        Natsuko "Just the campus garden. Usui-san, Inoue-san, and Oyama-san got assigned the front entrance."
+        MC "Oh, okay."
+        show GTS sad
+        GTS "I am rather glad... these pots really are starting to weigh on me..."
+        MC "Well hey, not too much longer, right?"
+        show GTS neutral
+        GTS "Right you are, Hotsure-san. Moreover, this is a splendid opportunity to reflect on the ephemerality of the body, indeed, the corruption perennial with it."
+        Natsuko "Seems a little dramatic when you could just lift weights once in a while..."
+        jump GTSFMG001_c1
+    else:
+        MCT "{i}Uggghhhh{/i}, why did I agree to this..."
+        "I was also probably the closest to death."
+        MC "Hah... you know, mebbe we... {i}hagh{/i}... shoulda use the pushcart..."
+        Natsuko "Suck it up, Hotsure-san. It's too late for what-ifs. Besides I'm sure you don't want to walk all the way back to shed and grab it."
+        MC "No, nope, mm-mm."
+        Natsuko "I'll carry those if you can't do it anymore. We've wasted enough time as it is."
+        MC "Nah, mgood, thanks though."
+        "A cool bead of sweat trickled down from my salty, matted hair, trailing over my brow and settling on my eye; half my world turned foggy and distorted. And so it would remain, with no free hand to wipe it."
+        Natsuko "We're almost there. Surely, you can last a few more minutes."
+        MC "Ngkay."
+        jump GTSFMG001_c1
+
+label GTSFMG001_c1:
+    show FMG neutral at Position(xcenter=1.1, yalign=1.0)
+    "Our fellowship journeyed on across the vast green plain; with our hardy, stalwart redhead at the fore and our lanky sage keeping watch, no force could forestall us."
+    show FMG flex at Position(xcenter=1.1, yalign=1.0):
+        ease 0.5 xpos 0.5
+    show GTS surprised
+    FMG "Hey guys, whatcha doin'?"
+    "Except maybe a sufficiently buff jogger. Naomi's eyes went wide and she staggered trying not to let anything fall. Natsuko just turned around, rolling her eyes."
+    show FMG angry-3
+    "As Akira looked over our group, she noticed Natsuko and her gaze turned to stone."
+    if isEventCleared("FMG016"):
+        MCT "Oh no."
+    else:
+        MCT "What's with that look?..."
+    show FMG surprised
+    FMG "Ah... ah..."
+    FMG "ACHYOUSUCK!"
+    show FMG sad
+    FMG "Ah, 'scuse me, I'm allergic to bitches  who slap raw nori on their heads and call it a hairdo."
+    GTS "Er... bless you."
+    Natsuko "The next words out of your mouth better be an apology, Akira, or else the garden won't be the only thing having problems today."
+    show GTS neutral
+    show FMG neutral
+    FMG "Wow, that's so cool, Nat. I don't recall asking!"
+    FMG "You want some help with whatever it is you're doing, Yamazaki-san? I know bird's nest over here isn't the most helpful."
+    MCT "...Wait a minute..."
+    GTS "I suppose having an extra pair of hands couldn't hurt..."
+    show GTS happy at Transform(xzoom=-1)
+    FMG "'Course not! C'mon, gimme something to carry, I'll help you guys out."
+    menu:
+        "Speak up":
+            jump GTSFMG001_c1_1
+        "Remain silent":
+            jump GTSFMG001_c1_2
+
+label GTSFMG001_c1_1:
+    $setFlag("GTSFMG001_c1_1")
+    MC "Well, if you're offering... you wanna grab a couple of these shovels?"
+    FMG "Sure thing!"
+    jump GTSFMG001_c2
+
+label GTSFMG001_c1_2:
+    show GTS despaired-thought
+    GTS "Well, do you think you could relieve me of some of these flowerpots, please?"
+    show FMG neutral at Transform(xzoom=-1)
+    FMG "Sure!"
+    show GTS neutral with dissolve
+    show GTS neutral at Transform(yoffset=10) with move
+    "Naomi crouched down to allow Akira to grab the stacked flowerpots, and winced just slightly when she hefted them in each arm."
+    if getSkill("Athletics") > 3:
+        MCT "...Why didn't she want me to help?..."
+    GTS "Thank you very much, Mizutani-san."
+    FMG "You want me to get that box too?"
+    show GTS neutral
+    GTS "Thank you, but I would like to hold onto this one. It has a set of Hagi vases inside, a gift from a family friend in Yamaguchi."
+    FMG "Woah woah woah... you don't mean like someone descended from the Mōri clan?"
+    show GTS unique
+    GTS "As a matter of fact, I do! It is quite an honor, hence why I wish to personally see to their safety."
+    show FMG surprised
+    FMG "Daaamn, you got connections! That's like getting a private jet from the Wright brothers!"
+    show GTS embarrassed
+    GTS "It rather is. They were quite gracious to entrust them to our school. I hope they will make other students feel more at home as they go about their days."
+    jump GTSFMG001_c2
+
+label GTSFMG001_c2:
+    Natsuko "Yamazaki-san, Hotsure-san, are we about ready to move on?"
+    show FMG neutral at Transform(xzoom=1)
+    FMG "Aww, are you sad nobody wants to talk to you?"
+    Natsuko "Keep talking and I'll bury you with the flowers."
+    show GTS embarrassed at Transform(xzoom=-1)
+    FMG "It's always empty threats with you, Nat. How about you follow through with it for once?"
+    show GTS embarrassed at Transform(xzoom=1)
+    GTS "Perhaps we should continue on, yes."
+    "The two amazons exchanged searing glances before silently following the third's lead; Naomi kept her stoic gaze forward as we walked the rest of the way to the campus garden."
+    scene black with fade
+    pause 1
+
+    scene School Planter
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.5, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    if getFlag("GTSFMG001_c1_1"):
+        "Akira let the shovels thump onto the grass as I began handing out the brooms."
+    else:
+        "I passed out the brooms first, letting the shovels thump onto the grass."
+    FMG "Alright, let's get to work!"
+    Natsuko "There's only three brooms, Akira. You're gonna have to go."
+    show GTS despaired-thought
+    FMG "Crazy how I still didn't ask. If all you're gonna do is complain, maybe {i}you{/i} should go."
+    if getAffection("FMG") > 5:
+        $setFlag("GTSFMG001_natsupots")
+        MC "Okamoto-san, why don't you put out the vases and start filling them with dirt?"
+        show GTS unique
+        GTS "A splendid idea. We ought to be done in no time."
+        Natsuko "Fine. Pass me the vases."
+        show GTS neutral
+        "Naomi bowed and set down the box, and Natsuko sloughed off a couple bags of dirt and opened the chest, regarding no one in particular as she grabbed a couple glazed, oak-brown vases and set about her task."
+        hide Natsuko with dissolve
+        "The rest of us got to work too, taking brooms and sweeping the walkways that crisscrossed the garden."
+        "I stole glances at Akira and Naomi working side-by-side; they were a study of yin and yang. Akira, like a tiger with its claws, swept in swift, powerful arcs that kicked up visible plumes of dust and the occasional wrapper."
+        "Naomi, meanwhile, made slow, unintrusive strokes that eased the dirt off the path... though it was also pretty obvious she wasn't quite used to the way she had to hold a broom now. I saw her alter her course for a passing beetle."
+        hide FMG with dissolve
+    else:
+        MC "Mizutani-san, why don't you put out the vases and start filling them with dirt?"
+        show GTS unique
+        GTS "A splendid idea. We ought to be done in no time."
+        FMG "Alright, sure, pass me some."
+        show FMG flex
+        show GTS neutral
+        "Naomi bowed and set down the box, and Akira opened it, pulling out two glazed oak-brown Hagi vases. She winked at Natsuko as she passed by."
+        FMG "Better set those down, Imma need 'em in a second."
+        hide FMG with dissolve
+        "The rest of us got to work too, taking brooms and sweeping the walkways that crisscrossed the garden."
+        "I stole glances at Natsuko and Naomi working side-by-side; they were a study of yin and yang. Natsuko, like a tiger with its claws, swept in swift, powerful arcs that kicked up visible plumes of dust and the occasional wrapper."
+        "Naomi, meanwhile, made slow, unintrusive strokes that eased the dirt off the path... though it was also pretty obvious she wasn't quite used to the way she had to hold a broom now. I saw her alter her course for a passing beetle."
+        hide Natsuko with dissolve
+    show GTS neutral at altMove(0.5, 0.5)
+    "I almost didn't notice her gradually sidling up to me, coincidentally sweeping in just the right pattern to converge with my path."
+    show GTS despaired-thought
+    "With her eyes down, she sighed a soft, wistful lament just within my earshot."
+    GTS "It's such a shame when two good people can't seem to see the good in each other."
+    MC "...Huh? Are you talking to me?"
+    show GTS neutral
+    GTS "Ah, Hotsure-san. Well, I suppose I'm curious what you think about it."
+    MC "Oh... hm... well yeah, I agree."
+    MC "It's sort of the natural result with, uh, competitive types, though."
+    GTS "Undoubtedly. Nevertheless, there is a point where competitiveness may sour into disharmony. Perhaps even enmity."
+    GTS "It is good to be content with the nature of things. I simply believe it would be kind, were the opportunity to arise, to nudge such persons toward a more illuminated perspective."
+    MC "...Aight you lost me. What are we talking about?"
+    GTS "I would like to see if we could look for some common ground between Mizutani-san and Okamoto-san that they can't seem to recognize themselves. Then, perhaps, we can try and bring it up to them."
+    GTS "We'll hardly make friends out of them in an afternoon, but who knows... raindrops and time can dull the sharpest rocks."
+    menu:
+        "Ohhhh. Sure, let's do that.":
+            $setFlag("GTSFMG001_help")
+            GTS "I greatly appreciate it. I think we'd best stand back and observe for a while before we think of something specific."
+            MC "Got it."
+        "I dunno, I don't really wanna get between two girls who can each bench press a car.":
+            GTS "As you wish. I hope you will not be offended if I attempt it on my own regardless."
+            MC "Knock yourself out. I just wouldn't expect to make much progress today."
+            GTS "'Go into battle expecting to die.'"
+            MC "Uh... yes?"
+            MCT "God forbid those two come to blows, you just might."
+            "She nodded."
+            GTS "Thank you for listening."
+        "We should trick them into stepping in dog dookie.":
+            $setFlag("GTSFMG001_help")
+            show GTS surprised
+            GTS "Preci- wait, what? Hotsure-san, with all due respect, I fail to see how that would help matters."
+            MC "It would... uh... that way they have some kind of common... ground? It made sense in my head."
+            GTS "I... think a different tack may avail us better."
+            show GTS neutral
+            GTS "Perhaps we should simply observe them for a while and think of something later."
+            MC "Fair enough."
+    "Naomi, still looking down, curved her path once again away from mine."
+    hide GTS with dissolve
+    if getFlag("GTSFMG001_help"):
+        "I soon found the sidewalks were almost completely swept; it would be time to start placing the flower pots."
+        MCT "Alright, detective mode. I gotta figure out what makes these girls tick."
+        MCT "Hm..."
+        menu:
+            "The color red?":
+                MCT "Akira's always wearing red shirts under her uniform..."
+                MCT "And Natsuko's got her firetruck hair..."
+                MCT "Or is that her natural color? It could be... probably shouldn't come right out and ask her, though. The consequences could be deadly."
+                MCT "Maybe there's another way to bring it up..."
+                "I took a breath; it was time to light the fuse."
+                show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+                show FMG neutral at Position(xcenter=0.5, yalign=1.0)
+                show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+                with dissolve
+                MC "So... am I crazy, or would the school look better if they painted it, like, uh, red? Or something."
+                FMG "Kind of a random question, but I guess that'd be cool. Beats all this generic eggshell crap everywhere."
+                Natsuko "You can't just paint everything red, it'd be ugly as sin."
+                FMG "This is a {i}fantasy{/i} scenario Okamoto, keep up."
+                show GTS surprised
+                Natsuko "Why don't {i}you{/i} keep up with the chores you insisted on butting into?"
+                show GTS sad
+                show FMG angry
+                MCT "Well, that backfired literally instantly."
+            "The gym?":
+                MCT "Oh! Duh, they're both in the gym ten hours a day. Damn, I'm good."
+                "I took a breath; it was time to light the fuse."
+                show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+                show FMG neutral at Position(xcenter=0.5, yalign=1.0)
+                show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+                with dissolve
+                MC "So hey, after we're done here, I was thinking of hittin' the gym. Would either of you have some tips for me? I know you both are pretty serious about fitness."
+                show GTS happy
+                $setAffection("FMG", 1)
+                $setAffection("GTS", 1)
+                FMG "Sure! You looking to bulk up, get stronger, or what?"
+                Natsuko "I've seen Mizutani's technique, Hotsure-san. Save yourself a sprain and get your advice from someone else."
+                show Natsuko flex
+                extend " Like me."
+                show GTS pondering
+                show FMG angry
+                FMG "Oh shut up, I put in more hours than you by a longshot."
+                Natsuko "Ever heard the phrase \"quality over quantity\"?"
+                show FMG flex
+                FMG "Yeah, which is funny 'cuz you got neither."
+                show GTS sad
+                show Natsuko neutral
+                Natsuko "I've got more refinement in my pinky finger than you have in your whole body."
+            "I dunno, kittens?":
+                MCT "...I mean, I never met a girl who {i}hates{/i} kittens."
+                MCT "Is that sexist?{w} ...Nah, nah, kitties can't be sexist."
+                "I took a breath; it was time to light the fuse."
+                show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+                show FMG neutral at Position(xcenter=0.5, yalign=1.0)
+                show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+                with dissolve
+                MC "You know, whenever I'm sweeping the sidewalk, I find it always helps to think about cute little kittens."
+                show GTS pondering
+                FMG "Uh... cool?"
+                Natsuko "I guess that's fair. I like cats, too."
+                FMG "Yeah, they're pretty cute."
+                show GTS unique
+                $setAffection("GTS", 1)
+                MCT "Oh my God, is this actually working?"
+                GTS "They can be quite the adorable little creatures, can't they? One of my old friends would always give some of her food to the stray cats around our neighborhood."
+                show FMG happy
+                FMG "Hah, same. Sometimes I'd give strays around my hometown pieces of melonpan."
+                Natsuko "Let me guess, most of them didn't come back."
+                show FMG angry
+                FMG "What's that supposed to mean?"
+                Natsuko "Yeast products are poisonous to cats, not that I'd expect you to know what yeast is."
+                show GTS sad
+                show FMG happy
+                FMG "Hey, at least I know what having friends is. But I'm sure being the local bread expert is just as fulfilling."
+                MCT "Ah, yep, that's more like it."
+        show GTS neutral
+        GTS "Well, let's keep at the task at hand, shall we? We're nearly finished."
+        show FMG angry
+        "I saw Akira and Natsuko exchange glances that could've welded steel, and we all went back to work."
+        "The pots were almost a quarter of the way filled by the time the rest of us were done and began pitching in."
+        show GTS pondering
+        MCT "I gotta admit, if she hadn't told me, I'd have no idea she was up to something..."
+        show GTS neutral
+    else:
+        "I soon found the sidewalks were almost completely swept; it would be time to start placing the flower pots."
+        show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+        show FMG neutral at Position(xcenter=0.5, yalign=1.0)
+        show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
+        GTS "Crackerjack! We made short work of that, didn't we?"
+        Natsuko "At least {i}someone's{/i} pulling their weight."
+        FMG "Say again? I was too busy, y'know, working."
+        MCT "It's the ride that never ends."
+    if getFlag("GTSFMG001_natsupots"):
+        show GTS neutral
+        GTS "Okamoto-san, perhaps you could begin placing the pots that are already filled?"
+        Natsuko "Already on it."
+        "As the rest of us three together rapidly filled the remaining pots, Natsuko's crimson hair whipped like a comet while she dashed between the pots and their destinations."
+        "I stared a little when she wasn't looking; it was like a relay race between an almost-blurry Natsuko and a bunch of inanimate objects, and she was damned sure taking home the gold."
+        show FMG angry-2
+        "Then, I felt a speck of cold, moist soil fly into my left cheek; I looked there to see Akira, brow furrowed with steel resolve, shoveling dirt at a dizzying and highly imprecise speed. Maybe half was actually going into the pot."
+        MCT "There is literally no win condition here, can you two chill?"
+        show Natsuko flex
+        show GTS surprised
+        "At last, the final {i}clack{/i}; Natsuko triumphantly slammed the last pot into place, to Naomi's momentary horror."
+    else:
+        show GTS neutral
+        GTS "Mizutani-san, perhaps you could begin placing the pots that are already filled?"
+        show FMG upbeat
+        FMG "Way ahead of you."
+        "As the rest of us three together rapidly filled the remaining pots, Akira's burgundy ponytail whipped like a comet through the air while she dashed between the pots and their destinations."
+        show FMG angry
+        "I stared a little when she wasn't looking; it was like a relay race between an almost-blurry Akira and a bunch of inanimate objects, and she was damned sure taking home the gold."
+        "Then, I felt a speck of cold, moist soil fly into my left cheek; I looked there to see Natsuko, brow furrowed with steel resolve, shoveling dirt at a dizzying and highly imprecise speed. Maybe half was actually going into the pot."
+        MCT "There is literally no win condition here, can you two chill?"
+        show FMG flex
+        show GTS surprised
+        "At last, the final {i}clack{/i}; Akira victoriously slammed the final pot into place as Naomi looked on in momentary horror."
+    show FMG neutral
+    show Natsuko neutral
+    show GTS unique
+    GTS "My my, would you look at that! In a blink of the eye we've finished the job entirely."
+    FMG "Yep!"
+    Natsuko "Thank God."
+    if getFlag("GTSFMG001_help"):
+        MC "...{w}Oh! Uh, yeah, that's church."
+    GTS "Let us be thankful that we could come to see just what we can accomplish when we set aside our differences."
+    FMG "Yep!"
+    Natsuko "Sure, whatever."
+    if getFlag("GTSFMG001_help"):
+        MC "Go off, queen."
+    show GTS happy
+    GTS "It really is wonderful what becomes possible when we allow ourselves to see each other's strengths. {w}Wouldn't you agree?"
+    "At this, Akira and Natsuko, to Naomi's credit, looked at each other with a mutual and heartfelt confusion."
+    FMG "Yyyyyeah?"
+    Natsuko "I suppose that's true."
+    if getFlag("GTSFMG001_help"):
+        MC "I have literally never agreed with anything so strongly in my entire life ever."
+    show GTS neutral
+    GTS "After all, you kept us steadfastly on task, Okamoto-san..."
+    FMG "Hm..."
+    GTS "...While you, Mizutani-san, so generously offered your time and abundant energy simply to help us."
+    Natsuko "...Hmph."
+    "Naomi put a finger to her chin and stood up straight as a board, only accentuating her statuesque height and posture."
+    GTS "Oh, I have an idea! Why don't we all rendezvous at my dormitory? Some tea would be just the thing to help us all unwind."
+    "The response was swift and enthusiastic."
+    Natsuko "Thanks for offering, but you probably don't want Mizutani sweating all over your furniture."
+    FMG "Look who's talking, Drownedratsuko. But hey, don't sweat it, 'cuz I'm done dealing with you today anyway. You're welcome, by the way."
+    show GTS surprised
+    Natsuko "Sure, thanks for bumbling in and distracting everybody trying to actually work."
+    FMG "Ohhhhh, that was you trying? Oof, sorry, I had no idea."
+    "I could see Natsuko's jaw grinding and I instinctively took a step back."
+    Natsuko "Whatever. You can be a child on your own time, I'm leaving."
+    hide Natsuko with dissolve
+    show FMG angry-2
+    "Akira's face scrunched up without even a glance at either of us."
+    FMG "Pff... bumbling in... freaking jerk."
+    "She raised her phone to her face and scowled at whatever it showed her, before turning around without a word and resuming her jog, pounding her feet as though she were off to beat up the sun."
+    hide FMG with dissolve
+    pause 0.5
+    MC "Hm."
+    pause 0.5
+    show GTS pondering
+    GTS "Well, drat. That was rather a wash."
+    if getFlag("GTSFMG001_help"):
+        MC "Well, I'm glad we tried... but, that turned out about how I expected."
+    else:
+        MC "Well, uh... sorry that didn't work out the way you hoped."
+    GTS "Hmm... I fear I acted too rashly."
+    GTS "I acted only on surface information, and only with minimal planning. I shall have to get to know them better for the next time I have the chance to act."
+    "She turned aside, eyes still on me."
+    show GTS neutral
+    GTS "Shall we walk back to the dormitories together?"
+    "I nodded and simply began walking, shortly joined by Naomi to my side."
+    MC "So, 'the next time'... how much time do you think you'll devote to trying to patch things up between them?"
+    "Hands folded behind her back, she looked down at me and smiled."
+    show GTS happy
+    GTS "I wish to make use of every chance to do good that I am given."
+    "Not long after, I was smiling back."
+    MC "Heh. And... you think it'll work?"
+    show GTS neutral with dissolve
+    "She looked away, the faintest pink blooming in her cheeks, and then straightened herself forward."
+    pause 1
+    GTS "They're good people."
+    MC "Hm... yeah."
+    jump daymenu
 
 label GTSPRG001:
     scene School Planter with fade
