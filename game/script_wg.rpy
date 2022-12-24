@@ -3824,7 +3824,7 @@ label WG019:
         "She said she had everything planned out, but it ended up taking an hour to get everything just right."
         "After all that, I could definitely say I got a good workout in from having to do most of the work."
         $setSkill("Athletics", 1)
-        scene Dorm WG Flip with fade
+        scene Dorm WG at Transform(xzoom=-1) with fade
         "I couldn't tell you if the room looked better when it was done. It was fancier than anything I was used to, but I guess for Alice this was a step down from whatever mansion she had grown up in."
         "I was thinking of a way to politely excuse myself as Alice set out pictures and knick-knacks on her bookshelf, when suddenly I was blindsided by Aida."
         show PRG neutral at center with dissolve
@@ -5944,11 +5944,11 @@ label WG029:
                 WG "No, I don't get to the movies that much. What's it about?"
                 "Having found something not related to school or work to talk about, the rest of the walk to town went by quickly."
             "Ask about current market trends and investments." if checkSkill("Academics", ">=", 3):
-               MC "I've been hearing a lot in finance news about real estate being overvalued and tech futures are expected to rise. I'm sure you follow that stuff better than I do though."
-               WG "That is the current buzz, but it's seldom wise to just start de-vesting long term assets like real estate based on rumors of rumblings in the market."
-               WG "Tech stocks on the other hand tend to be fairly volatile and don't pay dividends."
-               WG "I see no issue with shifting some assets over to them while they're still on the upswing and dumping them after a few months."
-               "Having found something not related to school or work to talk about, the rest of the walk to town went by quickly."
+                MC "I've been hearing a lot in finance news about real estate being overvalued and tech futures are expected to rise. I'm sure you follow that stuff better than I do though."
+                WG "That is the current buzz, but it's seldom wise to just start de-vesting long term assets like real estate based on rumors of rumblings in the market."
+                WG "Tech stocks on the other hand tend to be fairly volatile and don't pay dividends."
+                WG "I see no issue with shifting some assets over to them while they're still on the upswing and dumping them after a few months."
+                "Having found something not related to school or work to talk about, the rest of the walk to town went by quickly."
 
     scene Town
     show WG neutral
@@ -7497,9 +7497,9 @@ label WG035:
         "I may not have been able to help her out on her big night, but the little extra effort I put into looking nice would at least show her I cared."
     "I gave myself a once over in the mirror."
     if getFlag("Haircut"):
-       "I only realized now just how much my hair growth had managed to wipe away all but the slightest trace that I got it trimmed up yesterday."
-       MCT "Well that's disappointing, especially after Alice told me how much she liked the way it looked."
-       "I couldn't exactly feel too sorry for myself in light of what Alice and others here had to endure, so I tried not to dwell on it too much and just brushed my hair a bit before heading out the door."
+        "I only realized now just how much my hair growth had managed to wipe away all but the slightest trace that I got it trimmed up yesterday."
+        MCT "Well that's disappointing, especially after Alice told me how much she liked the way it looked."
+        "I couldn't exactly feel too sorry for myself in light of what Alice and others here had to endure, so I tried not to dwell on it too much and just brushed my hair a bit before heading out the door."
     else:
         "Getting a good look at myself, I realized I looked more like a shaggy dog than anything. I was kicking myself for not going to the barber to get a trim the day before."
         "I took some time to brush my hair, so as to not look so mangy for the concert before heading out the door."
@@ -9183,7 +9183,7 @@ label WG041_C2_2:
         "Not a fan of hotdogs, I take it?":
             jump WG041_C1_HD1
         "I gotta agree with you, hot dogs really aren't all that fantastic.":
-           jump WG041_C2_HD1
+            jump WG041_C2_HD1
 
 label WG041_C1_HD1:
     MC "Not a fan of hotdogs, I take it?"
@@ -10564,8 +10564,8 @@ label WG045:
     show WG neutral
     WG "Well if you say you're fine then I believe you."
     if getFlag("WG034_c2_1") or getFlag("WG034_c2_2"):
-         WG "And you look so handsome in your suit, so I trust your ability to maintain appearances. Now come inside so I can tell you what to expect today."
-         jump WG045_art
+        WG "And you look so handsome in your suit, so I trust your ability to maintain appearances. Now come inside so I can tell you what to expect today."
+        jump WG045_art
     else:
         WG "Now come inside and change into your suit, you're going to look so handsome."
         jump WG045_suit
@@ -18899,7 +18899,7 @@ label WG065:
     "What was going on? These two were always like oil and water, but somehow cookies are the thing that they can brush aside their differences and agree on?"
     "Akira and Natsuko eyed each other suspiciously, each as confused as the other with this sudden turn of events."
     show PRG surprised
-    "{i}*DING*{i}!"
+    "{i}*DING*{/i}!"
     PRG "Oh, they're done!"
     show PRG neutral
     "Aida, with Sakura helping, proceeded to pull out as many sheets of cookies the two ovens could hold worth of some different type of cookie."
@@ -21354,9 +21354,9 @@ label WG074:
     HR "Don't forget your homework assignment on the Meji Era due next class. This is your last reminder. Three pages minimum, and I'll be docking for needless padding too."
     show HR unique
     if checkSkill("Academics", ">=", 5):
-       MCT "Luckily I've been keeping on top of my assignments and already got that one done."
+        MCT "Luckily I've been keeping on top of my assignments and already got that one done."
     else:
-       MCT "Crap. I haven't even started that stupid thing."
+        MCT "Crap. I haven't even started that stupid thing."
     play sound ClockTower
     hide HR with dissolve
     "Alright. Finally out of here."

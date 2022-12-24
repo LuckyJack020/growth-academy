@@ -4442,7 +4442,7 @@ label MC006_Team1:
     hide BE
     hide RM
     with dissolve
-    Naoki "Alright, the first half is done. Score is 1 to 1. {size=-6}Usually handball games have higher scores than this..."
+    Naoki "Alright, the first half is done. Score is 1 to 1. {size=-6}Usually handball games have higher scores than this...{/size}"
     show WG doubt at Position(xcenter=0.4, yalign=1.0) with dissolve
     WG "Would it kill you to pass the ball every now and then?"
     show FMG angry-3 at Position(xcenter=0.6, yalign=1.0) with dissolve
@@ -5025,7 +5025,7 @@ label MC006_Team2:
     hide BE
     hide RM
     with dissolve
-    Naoki "Alright, the first half is done. Score is 1 to 1. {size=-6}Usually handball games have higher scores than this..."
+    Naoki "Alright, the first half is done. Score is 1 to 1. {size=-6}Usually handball games have higher scores than this...{/size}"
     show WG doubt at Position(xcenter=0.4, yalign=1.0) with dissolve
     WG "Would it kill you to pass the ball every now and then?"
     show FMG angry-3 at Position(xcenter=0.6, yalign=1.0) with dissolve
@@ -5899,7 +5899,7 @@ label MC009:
     "I went back to my word doc and typed in some Keisuke Hotsure shorthand."
     MCT "And... the Kofun period was when politics essentially began in Japan. Cool... {w}I think."
     MCT "... Wait, what?"
-    MCT "‘The name of the Kofun period originates from keyhole shaped burial mounds saved especially for the ruling class?'"
+    MCT "'The name of the Kofun period originates from keyhole shaped burial mounds saved especially for the ruling class?'"
     MCT "What the hell?"
     "I typed it in regardless and rubbed my eyes under my front hair fringe."
     if isEventCleared("MC007"):
@@ -6380,7 +6380,7 @@ label MC009:
     Takamura "She tends to make her disapproval... quite clear, as well."
     MCT "That'd be the Tomo I know."
     Takamura "And, she outright refuses to speak in any public setting. I don't believe she's ever spoken in a way that the entire class would be able to hear her."
-    Takamura "Now, all of that to say that recently, I had overheard a group of students refer to her as a ‘specter,' and they had mentioned that she hardly ever leaves her dorm."
+    Takamura "Now, all of that to say that recently, I had overheard a group of students refer to her as a 'specter,' and they had mentioned that she hardly ever leaves her dorm."
     MC "That is... unfortunately quite true. She is quite the homebody."
     Takamura "Which is quite alright. There is nothing wrong with someone enjoying their time at home."
     Takamura "However, all of these stacked together leads me to believe that your sister is dealing with something quite intense, if I may be so blunt."
@@ -6398,7 +6398,7 @@ label MC009:
     MCT "She's... she really knows how to get to the heart of an issue. I don't think I've gone that in-depth on Tomo before."
     Takamura "That's all good to know. Anything else that you can think of?"
     MC "Well... I know she isn't a fan of her appearance."
-    MC "She thinks she's ‘way too short,' and she's not a fan of... well... her body. She thinks she has too many curves."
+    MC "She thinks she's 'way too short,' and she's not a fan of... well... her body. She thinks she has too many curves."
     MC "I can't say if that has anything to do with having anxiety, though. That being said, it has been quite the touchy subject for her for some time."
     Takamura "It could. Physical appearance, factor related or not, can weigh heavily on the mind's perception of oneself."
     Takamura "As such, I can relate to her scrutiny of her own body."
@@ -6487,7 +6487,7 @@ label MC009:
         "Close by, a third girl stood, trying to bring the two of them back down."
     Student1 "Like he'd ever take a beanpole like you to a dance! He couldn't even reach your head for a kiss up on that stalk of a neck!"
     Student2 "You're one to talk! It must be so comforting to put his hands on a girl's stone-firm hips! Ever the image of softness and grace, aren't you, Chisaka-san?"
-    Student1 "At least I know how to look out for my figure! I can see your gut flab from here, miss ‘perfect cinnamon pancakes!' Those breakfast desserts are going to your damn head and your ass!"
+    Student1 "At least I know how to look out for my figure! I can see your gut flab from here, miss 'perfect cinnamon pancakes!' Those breakfast desserts are going to your damn head and your ass!"
     show Takamura strict with dissolve
     Takamura "Girls."
     stop music fadeout 1.0
@@ -6613,7 +6613,7 @@ label MC009:
     Etsuko "For real! Screw her!"
     Hotaru "Well, there goes my Matsuri plans. Guess I'm going stag now..."
     Etsuko "I know! Stupid skank..."
-    "I glanced at Sakura, who rolled her eyes as the other two girls kept throwing around different expletives to describe this abhorrent ‘date stealer.'"
+    "I glanced at Sakura, who rolled her eyes as the other two girls kept throwing around different expletives to describe this abhorrent 'date stealer.'"
     MC "So. Inventory day, huh?"
     Sakura "Mhm. The most exciting day of days."
     Sakura "Checking and double checking, you know."
@@ -6648,7 +6648,7 @@ label MC009:
     Takamura "... {w}Ah... pardon my rambling."
     Michiko "Is it true that you were a chef at a five star restaurant in Paris, Sensei?"
     Takamura "Technically, Sano-san, restaurants only have a three star rating system there."
-    Takamura "One star is a very good restaurant. Two is a place that's ‘worth a detour'. And three is a truly special restaurant, and one well worth the trip."
+    Takamura "One star is a very good restaurant. Two is a place that's 'worth a detour'. And three is a truly special restaurant, and one well worth the trip."
     MC "You... didn't really say no, Sensei. And, your knowledge on European restaurants is definitely something."
     Takamura "Yes... thank you, Hotsure-san."
     "As Sakura went on to ask Takamura about some vague french dish with lamb that I hadn't heard of, I glanced up at the clock on the wall."
@@ -6777,7 +6777,7 @@ label MC011:
     "Fat Student" "Y-Yeah, j-just having a laugh... {size=-6}haah{/size}"
     Hageshi "Why don't we have a seat gentlemen?"
     "Hageshi tightened his grip on their shoulders, nearly crumpling them to the ground if he hadn't shoved them into seats in the process."
-    "Students" "{i}Giiaak! {w}{size=-6}Ow!{/i}{/size}"
+    "Students" "{i}Giiaak! {w}{size=-6}Ow!{/size}{/i}"
     Hageshi "Gentlemen, I didn't come here to tell you to stop what you were about to do, moreso to offer up a perspective that might make you... reconsider your current course of action."
     "Muscle Student" "S-Sure thing Hageshi-sensei... I've reconsidered. Can I go now?"
     Hageshi "No."
@@ -7374,181 +7374,701 @@ label global005:
 
 label global026:
     $setPregnant()
-    play sound AlarmClock
-    pause 1
-    scene Dorm Interior with fade
-    play music Rain
-    MCT "Urgh."
-    "Leaning forward in my bed, I shut off my alarm clock and stretched, feeling my back pop and crack as I reached for the ceiling."
-    MCT "God, I feel old."
-    "I gently twisted my neck to crack it, stopping when I felt a searing pain coming from my head. Trying not to yelp, I stopped twisting and felt around. Nothing was out of the ordinary up there. Puzzled, I looked down and silently cursed."
-    "My hair had grown so long that it had gotten caught in my armpit, and when I had tried to crack my neck, it started tugging away at my scalp. Wincing, I freed my hair and gave my neck another twist, this time accompanied by a satisfying pop."
-    "After a quick shower and a run of the brush through my junglesque hair, I threw on my uniform and headed out the door."
-
+    scene Dorm Hallway with fade
+    play music HigherEdu
+    "I walked out of my door and turned to lock it, shoving my key down into my pocket while also throwing my bag over my shoulder."
+    MCT "Dammit... the one day I mess up my alarm."
+    "I headed off, not needing to run, but also not able to take my usual pace all the way to class."
+    "I didn't think I was going to be late, but I had to speed up my routine that morning, resulting in a quick dressing and a complete disregard for my hair trim that morning."
+    scene Dorm Entrance with fade
+    MCT "I'm so trimming the hell out of my head when class is-"
+    Student1 "Hey! Watch yourself!"
+    MC "Ahp! Sorry!"
+    "I stepped off to the side, in my haste, almost plowing into a group of four students, all walking to class together."
+    "The four glanced at me, then continued on their way."
+    "I followed behind them to class. Near the front of the group, one girl was talking to the other three, two of which were guys, while the last was another girl."
+    Student1 "But anyway, I saw her this morning."
+    Student2 "No way. I'd think people would've known about something like that before now. Like... come on."
+    Student1 "That's just it. It came out of nowhere."
+    "I normally tried my hardest to not eavesdrop... but they were literally {i}right{/i} in front of me."
+    Student3 "So, wait. She just... walked out like that?"
+    Student1 "Yes! Her roommate was with her, of course. The roommate gave me a hell of a dirty look, too."
+    Student4 "Well, you were staring at her in the halls."
+    Student1 "What do you expect?! We've all been here for a bit now. And {i}no one{/i} has grown like that!"
+    Student1 "How could I not be curious?!"
+    "The group continued on ahead of me, the other three students seeming to lay into the first one a bit."
+    MCT "Huh... Wonder what they were talking about?"
     scene Campus Center with fade
-    "It was almost time for first period, yet there was hardly a single student on the path to the classrooms. Even the main courtyard was almost entirely empty."
-
+    "As the group hit the center of campus, they dispersed, all heading off in different directions as I continued on."
     scene Hallway with fade
-    play music Schoolday
-    "I soon found out why. The space around my usual morning classroom was congested with students, all trying to push through the door."
-    "I spotted an opening on the far side near the door and tried to snake my way through, but was instantly pushed out of the group."
-    MC "Hey, could I get through? Unlike the rest of this crowd, I actually have class here."
-    "One of the boys that pushed me turned around and sneered, an almost angry tone in his voice."
-    Student "Yeah right, pal. You're just looking to get in there and get a good look at her, aren't you?"
-    MC "Uh... who?"
-    Student "Pshhh, as if you don't know!"
-    "The boy turned around again and attempted to force his way through the growing crowd."
-    "Nearby him, I saw a small gap open in the sea of people and dove for it, somehow crawling my way into the room with all of my limbs intact."
-
-    scene Classroom
-    show BE surprised at Position(xcenter=0.25, yalign=1.0)
-    with fade
-    BE "Kei-chan! Are you alright?"
-    "Honoka plowed through the other students and helped me to my feet, dusting off the front of my uniform."
-    MC "I'm fine. What the hell is all of this?"
-    show BE neutral
-    BE "I don't even know! All of these students just showed up to see her. Who this mystery girl is, and why everyone wants to get a look at her, I have no idea."
-    "Next to the door, Shiori stood guard, helplessly barking orders and trying to control the horde of people."
-    show AE neutral-annoyed at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
-    AE "Everyone, disperse immediately."
-    hide AE with dissolve
-    "Over the roar of the crowd, the bell to signal that class would begin in one minute sounded. Students scattered in all directions, followed by Shiori hustling them along, leaving everyone in our classroom speechless."
-    AE "Please make your way to your respective classrooms {i}without{/i} running! The school thanks you for your cooperation."
-    show FMG angry at Position(xcenter=0.85, yalign=1.0) with dissolve
-    FMG "Dang, what the hell was that about?"
-    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    stop music
-    "Across the room, Alice sat at her desk, nonchalantly scribbling in a notebook. She lifted her eyes when the students had disappeared and leaned down next to her, whispering at what appeared to be the floor tiles."
-    "Crawling out from behind Alice's sizeable frame came..."
-    show PRG unique behind WG at Position(xcenter=0.75, yalign=1.0)
-    play music PRG
-    pause 0.5
-    show PRG unique at altMove(0.75, 0.5)
-    extend " Aida."
-    show FMG surprised
-    FMG "W-Whoa!"
-    BE "A-Ah... Hello, Kodama-san."
-    PRG "H-Hi everyone. S-Sorry for causing all the commotion."
-    hide FMG
-    hide BE
-    with dissolve
-    WG "It wasn't your doing. Don't blame yourself for something you couldn't control, Kodama-san."
-    PRG "I-I... Alright."
-    PRG "T-There's something all of you need to hear."
-    "She stopped and looked around at all of us, as if making sure we were all listening. Shiori emerged from the hallway, her expression changing the minute she saw Aida."
-    PRG "E-Everyone, I'm...{w} pregnant."
-    show BE surprised at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind PRG with vpunch
-    BE "Whoa! I mean... uhm... congrats, Kodama-san!"
-    show AE surprised at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind BE with dissolve
-    AE "Y-You're..."
-    "I stared at Aida in complete bewilderment. Aida, the most quiet and reserved person I'd ever met, was pregnant. What was even more amazing was how quickly she had grown."
-    "I had no way of knowing when... it happened, but she had barely a trace of a belly last week, and now here she was, looking as if she were eight or nine months pregnant."
-    PRG "This..."
-    "Aida stopped, as if she had a lump in her throat. Surprisingly, Alice gave her a reassuring pat on the arm."
-    WG "Best to tell them now, as long as you have their undivided attention."
-    PRG "This... is my growth factor."
-    "Everyone gaped at her in total shock, before Tashi-sensei entered the room."
-    hide BE
-    hide AE
-    hide WG
-    hide PRG
-    with dissolve
-    show HR neutral with dissolve
-    HR "Everyone to your seats, if you please. Just because someone has grown a few inches doesn't excuse unprofessionalism."
-    show HR unique
-    "Going to my seat, I took one last glance back to Aida, who was trying to space herself the correct amount from her desk to accommodate her new belly."
-    MCT "Who would've thought?"
-    "I looked back once more to the demure, mousey girl. She was practically shaking in her seat as Nikumaru-san took the off glances at her belly."
-    "Out of all of the girls in this classroom, I would have never expected that the small woman who'd never uttered so much as a peep would have ended up pregnant at such a young age."
-    "Regardless, I nodded and looked back to the front of the class as Tashi-sensei began his lecture."
-    "This isn't the first mind boggling thing to happen in this place, and based purely on the fact that Kodama-san's belly was as flat as a board just the night prior..."
-    "I doubt it will be the last."
-    jump daymenu
-
-label global026_BE:
-    scene Hallway with fade
-    "After class, I decided to avoid getting entangled in the Q&A that was surrounding Aida's desk, and made my way down the hall."
-    BE "HEEEEEYYY! KEI-CHAN!!"
-    "Honoka came running after me, both arms wrapped around her chest to avoid giving herself a black eye."
-    show BE happy with dissolve
-    BE "Trying to avoid the craziness in there?"
-    MC "Yeah, something like that. Crowds of people were never my thing."
-    show BE neutral
-    BE "I'm sure no one enjoys being smothered by people, especially not that many. But hey, Kodama-san, am I right?"
-    MC "What do you mean?"
-    show BE surprised
-    BE "I mean, look at her! She was gone for only a handful of days, and if we assume that she was actually diagnosed with the babies on the first day, that means that she grew that much in only two to three days!"
-    show BE shrug
-    BE "I mean, at the very least, we know what her factor is now."
-    MC "You've got a point there. But if getting pregnant was the key to get her growth factor moving, then maybe a tiny jumpstart like that is to be expected."
-    show BE neutral
-    BE "Uhh... not sure that tiny is the right word in this case, Kei-chan. But that's a good thought."
-    show BE surprised
-    BE "Ooh! Do you think she'd let me be Auntie Honoka! I'd be a good aunt, I know I would! I wonder if she has any sisters..."
-    MC "You could ask, but I'm not sure if now is the right time. She's probably dealing with a lot right now. Not to mention that her body changed so much in such a short period."
-    "Suddenly, the roar of the crowd died down from the room behind us. We spun around to see Aida leave the room first, followed by the rest of the class. Behind them, I could've sworn I caught a glimpse of Tashi-sensei shaking his head."
-    "All of the students broke apart from the crowd and went their separate ways, but Aida came directly towards us."
-    show BE happy at Position(xcenter=0.25, yalign=1.0) with dissolve
-    BE "Hey Kodama-san!"
-    show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
-    PRG "O-Oh... hey guys."
-    BE "Congrats, by the way. I'm sure you've already heard that a couple of times today."
-    show PRG neutral
-    PRG "Just a few times, but thank you, Inoue-san."
-    show BE neutral
-    BE "Did you come up with any names yet? How about like, like... something really cool, like..."
-    show PRG happy
-    PRG "No, not yet. I'm thinking I may just wait until they're actually born, and come up with something on the spot."
-    show BE surprised
-    BE "Wait... they?! As in, more than one?!"
-    show PRG unique
-    PRG "See... I really don't know how many I'm having. When I went to the infirmary the other day, they said it was too soon to tell, but they did say that me having more than one is quite likely. Of course, with how big I am already..."
-    show BE neutral
-    BE "Well, if you ever need an emergency babysitter, you know where to find me!"
-    show PRG neutral
-    PRG "I'll keep that in mind, thanks Inoue-san."
-    BE "You in, Kei-chan?"
-    MC "Uh... wha?"
-    BE "Kodama-san asked if you and I wanted to have lunch with her. Are you in?"
-    MC "Oh! Yeah, of course!"
-    jump daymenu
-
-label global026_FMG:
-    "The minute the bell rang, the whole class crowded around Aida's desk, asking her question after question with a congratulations thrown in here and there. Off to one side, Akira noticeably hung back, taking awkward glances at Aida."
-    MC "You alright?"
-    show FMG surprised with dissolve
-    FMG "Huh?! Oh... yeah. I'm good."
-    MC "You know, body language can say a lot about how a person is feeling, Akira."
-    show FMG sad
-    FMG "Look, I...{w} okay. Meet me in the cafeteria for lunch later. I'll fill you in."
-    MC "You got it."
-    hide FMG with dissolve
-    "Akira smiled weakly and spun around to leave. Even her pace, which was pretty much one step below a run, gave away her feelings."
-
+    "The halls were still filled with students as I entered, bringing a huge sense of relief as I saw that I still had some time."
+    MCT "..."
+    MCT "I should grab some water before class."
+    "I turned for the cafeteria and hurried along, knowing I had a bit of a hike."
     scene Cafeteria with fade
-    "After barely entering the cafeteria, I spotted Akira sitting at a table near the wall, unenthusiastically picking at a bowl of rice. I hurried through the line as quick as I could, and took the seat across from Akira."
-    MC "Yo, Akira!"
-    show FMG neutral
-    FMG "Oh, hey."
-    MC "Alright, I know you and I both aren't people that beat around the bush, so what's eating you?"
-    "Akira sighed before finally looking up at me."
-    show FMG sad
-    FMG "That obvious, huh?"
-    MC "Yeah, more than just a little."
-    show FMG neutral
-    FMG "Augh... alright. Pregnancy and childbirth just kind of freaks me out, alright?"
-    "I sat and politely listened, choosing the high road and not butting in until she had finished speaking."
-    FMG "It's just, the very idea of it gives me chills. Don't get me wrong, it's cool that Kodama-san is having kids and all that, and yeah, I'm happy for her. But at the same time... I don't think I could ever see myself going through that myself."
-    MC "Really? No kids?"
-    FMG "Maybe I'd adopt someday. But the idea of pushing something that big out of me is just crazy. And, if my stomach grew that huge, I couldn't lift like I do anymore."
-    FMG "I've heard of what pregnancy does to your body, and I don't want anything to do with that. The pain alone was a big turn off for me, but when I thought of how having a kid can mess up your body so much, it totally pushed me away from it."
-    FMG "And don't even think about mentioning the epidural shots. I've heard that some women still feel the pain from those even years after childbirth. Yeah, no thanks. Screw that."
-    "I hadn't even considered how a woman's body could change after childbirth, but what Akira said made sense. And, given her strong opinions on needles, no wonder she didn't want to have kids."
-    MC "I guess I've never thought about all that. As a guy, it isn't really something that comes up often."
-    FMG "Well, as a girl, the idea does pop into my head from time to time, and I shut it down any time it does."
-    FMG "But, thanks for asking, dude. Nice to know that someone's looking out for my feelings. You're like a... hairy guardian angel, or something."
-    MC "Heh. I'll add that to the list of aliases that I have."
-    "Akira began digging more heartily into her rice, and even though she had finished eating long before I did, she stayed and chatted with me until I had finished."
+    "When I got there, I put some yen into a machine and punched in the number for a bottle of water."
+    "Usually, I'd just fill one up at my dorm. But, with my mad morning preparations, I'd completely forgotten that part, and my mouth felt like a seared dry desert."
+    "Hearing the clunk of my bottle hitting the dispenser, I took it and unscrewed it, taking a long sip as I started walking."
+    scene Hallway with fade
+    "Reaching the hall once more, I passed more students heading to their classes."
+    stop music fadeout 1.0
+    Student1 "- some girl in 3-B."
+    Student2 "Seriously?"
+    "I turned my head, slowing down just a bit."
+    Student1 "I heard she was totally fine like two or three days ago. Then she just like blew up."
+    pause .5
+    MCT "What the hell?"
+    "I glanced back, seeing the two girls disappear down the hall together."
+    MCT "I... guess Shiori's ass has been getting a bit more plump lately."
+    MCT "The way they sounded though... almost makes it seem like something super drastic."
+    MCT "And it's something that appeared overnight. Did a girl grow to like five meters tall and sprout a third arm or something?"
+    play music Schoolday
+    "I continued down. However, as I kept going, the hall was growing quieter and quieter as I neared my classroom."
+    "As I walked to the door, a few students glanced my way as I entered."
+    MCT "... I didn't have a chance to wash these pants. I hope there's not a stain somewhere that I'm not seeing."
+    scene Classroom with fade
+    "I walked into class and sat immediately, getting my books out onto my desk."
+    "Compared to the halls, the classroom was quiet. Almost eerily so. Especially with everyone being there and seated prior to my arrival."
+    show AE neutral with dissolve
+    "Shiori sat in front of me, of course, jotting something into her notebook."
+    hide AE with dissolve
+    pause .25
+    show BE neutral with dissolve
+    pause .25
+    "Honoka sat in her usual place by the window, twirling a pencil between her fingers."
+    show BE happy
+    "She turned and met my gaze, giving me a warm, welcoming wave."
+    hide BE with dissolve
+    pause .25
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Akira sat between her and I, her hand deep in her bag as she rummaged around for something."
+    show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "In the back, Daichi sat jotting something down, taking a glance toward the front of the room, though I couldn't exactly tell what he was looking at."
+    "Whatever it was didn't really matter, but he would write something after every time he glanced up."
+    hide FMG
+    hide RM
+    with dissolve
+    pause .25
+    show GTS neutral with dissolve
+    pause .25
+    "Finally, my gaze went behind me."
+    MCT "It... is Naomi the one they're talking about?"
+    MCT "I haven't seen a ton of people with her specific factor around, I guess..."
+    if getHighestAffection() == ("GTS"):
+        MCT "Though... wouldn't I have noticed if she'd had a growth spurt recently? I see her damn near every day."
+    else:
+        "And, I couldn't tell her height just by looking at her now. With her sitting, it made it a little tough."
+        MCT "She looks... about the same... I think?"
+    "I thought this as she was literally the highest head in the room."
+    "And, based on that alone, she {i}did{/i} stick out a lot. Especially given how her height had essentially doubled since the day I'd first met her."
+    hide GTS with dissolve
+    pause .25
+    show HR unique with easeinright
+    "Tashi-sensei walked in just then, pulling my attention from Naomi and to the front."
+    show HR neutral
+    HR "Alright, everyone. We have a lot to cover today, so page 484. Quickly now. We're going into the Asuka period next."
+    if isEventCleared("MC009"):
+        HR "Also, a thank you to all of you who were quick to hand in your papers on the Kofun period."
+        HR "For those of you who haven't, the deadline is coming, so get on it."    
+    else:
+        HR "As a quick aside, the deadline for your papers on the Kofun period is coming up. Best to get a move on."
+        MCT "... Shoot, I need to work on that."    
+    "I turned to that page and stole a glance over at Naomi."
+    HR "Okay. As a brief summary, this period marks the rule of Emperor Kinmei, the first Japanese emperor whose exact reign can actually be verified."
+    HR "The first emperor, according to legends, was Jimmu, considered the founder of our imperial dynasty. Though, we don't have any conclusive evidence {i}when{/i} they ruled, nor if they existed beyond some ancient sources."
+    pause .5
+    scene black with fade
+    pause .5
+    scene Classroom
+    show HR neutral
+    with fade
+    HR "Alright. Now, make a note at the bottom. Tomorrow, we'll be picking up right where we left off, and it would be best to make sure your notes link up together."
+    play sound ClockTower
+    "I jotted down a reminder and shut my notebook right as the bell rang, pulling my bag onto my lap so I could unload everything into it easier."
+    hide HR with dissolve
+    pause 0.5
+    if getHighestAffection() == ("BE"):
+        show BE neutral with dissolve
+        "At the end of the aisle, Honoka waited patiently for me, sliding over to let Shiori pass, then walking down to me."
+        BE "Eesh. Snoozer of a lesson, huh?"
+        MC "Yeah, totally."
+        BE "Get some notes down?"
+        MC "A handful. Enough to get by."
+        BE "That's really all ya need."
+        "I rolled my eyes."
+        MC "Then, how much is that for you? How many is enough to get by?"
+        BE "Eh, depends on the topic."
+        show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        "Across from us, Naomi finished packing her bag and headed out of the room."
+        "I watched her leave, still keeping an eye on her."
+        hide GTS with easeoutright
+        show BE happy
+        BE "Got a thing for Yamazaki-san, Kei-chan? I know those legs are long, but I could've sworn you were a man of more top-focused tastes."
+        MC "Huh? No, no. I was just thinking about something."
+        show BE neutral
+        BE "Sup?"
+        MC "I... well, I was heading to class today, and I overheard some girls gossiping about some other girl. Some girl in our homeroom who apparently had some wicked growth overnight or something."
+        MC "I thought they may have been talking about Yamazaki-san, since she does tend to stick out a little."
+        show BE doubt
+        BE "Mm... no, I don't think that's who they were discussing."
+        MC "You... you know who it might be?"
+        BE "I... yeah."
+        BE "You missed the commotion earlier, Kei-chan."
+        MC "Commotion?"
+        BE "Mhm. Before class started, and before you came in."
+        MC "... Oops."
+        BE "Still... I don't think this is the right place to go over it, though."
+        "Honoka didn't make a move, but she turned her head a bit, and her eyes went over her shoulder."
+        hide BE 
+        show WG neutral
+        with dissolve
+        "Behind her and a few desks over, Alice was busy getting herself situated before heading out."
+        "And, in front of her, Aida sat with her bag on her desk, leaned toward herself."
+        show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        "The two watched Daichi get up and leave, and only then did Alice get up."
+        hide RM with easeoutright
+        "She made a motion to Aida and said something to her."
+        "Aida stood up behind Alice and moved her bag, pulling it over her shoulders."
+        pause .5
+        show PRG unsure at Position(xcenter=0.25, yalign=1.0) with easeinleft
+        pause .75
+        MCT "Holy..."
+        BE "Keisuke..."
+        BE "Don't make it so obvious."
+        pause .25
+        hide PRG
+        hide WG
+        with dissolve
+        "Alice and Aida walked out of the room together, the two standing quite close to each other."
+        show BE doubt with dissolve
+        MC "What the... what the hell happened to Kodama-san?!"
+        MC "I-I just saw her a few days ago, and that sure as hell wasn't there!"
+        BE "That's why everyone was quiet when you came in, Kei-chan."
+        BE "We were all... well... shocked."
+        MC "But wait... hold on a second."
+        MC "Is... is that kind of growth even possible? Like, coming out of nowhere like that?"
+        MC "That... almost looks like a weight gain factor. But... not."
+        MC "Can a weight gain factor even focus on one part of the body like that?"
+        BE "Ah... Kei-chan. I'm not an expert here either."
+        pause .25
+        stop music fadeout 1.0
+        BE "But... look."
+        BE "So, the reason everyone is talking is..."
+        pause .75
+        BE "... {w}Kodama-san is pregnant."
+        MC "..."
+        MC "Okay, now I know that you're messing with me."
+        BE "Kei-chan, I'm not. I {i}promise{/i} you that I'm not."
+        "I met Honoka's gaze."
+        show BE sad
+        pause .5
+        BE "... It's been all over the girl's dorms."
+        BE "Her factor is apparently somehow based around pregnancy."
+        MC "That can happen?"
+        MC "Also... who's the father, then?"
+        show BE doubt
+        BE "I... have no clue. No one knows."
+        play music Rain
+        MC "So... hold on, back up. How do people know that it's a pregnancy and not just weight gain?"
+        BE "Because one girl happened to be in the infirmary when Kodama-san went in to get her exam."
+        BE "She overheard Kodama-san mention the word \"hyperfertility\" to the nurse, apparently."
+        BE "That was yesterday afternoon, I think."
+        BE "And now, that girl went and blabbed to everyone, so now most of the women's dorms know about it."
+        MC "Geez..."
+        show BE sad
+        BE "Mhm... poor girl."
+        BE "I know I haven't really spent a ton of time with her, but I feel horrible for her."
+        BE "Like... every girl on campus is talking about her. And it's about something that's supposed to be really personal."
+        BE "She already keeps to herself a lot. I just... I can't imagine how she's feeling now."
+        MC "Yeah..."
+        MC "Still, I can't believe it. I didn't even know that a pregnancy factor was a thing."
+        show BE neutral
+        BE "Same here."
+        MC "So... how did the reveal go? Like... did she just come out and say it?"
+        BE "Kind of..."
+        BE "She walked in with Alice, of course. And, I think she was trying to cover herself up, but with her already being on the high end of a normal nine month pregnant girl's size, it really wasn't doing much."
+        BE "I was here a little early. Didn't sleep the best last night, so I took a little morning walk before class to help wake myself up. So, I think that only Yamazaki-san and I were here."
+        BE "Anyway, I made some conversation with her and Alice as they walked by. You know, just small talk stuff."
+        BE "And as she went to sit down, I saw her belly."
+        show BE sad
+        BE "I... I guess she and Alice saw me look down at it, because before I knew it, Alice told her that it was okay. That seemed to make Kodama-san feel a bit more at ease, and then she told me."
+        show BE neutral
+        BE "Of course, Yamazaki-san overheard and came over to congratulate her."
+        BE "Then Matsumoto-san came in and, of course, had to examine the commotion, so then Kodama-san told her."
+        BE "And finally Mizutani-san came in and heard, too."
+        MC "So that's... like three different instances of having to retread that same conversation in like five minutes?"
+        BE "Mhm."
+        MC "I... wow. I'm still stunned."
+        BE "I know."
+        MC "Like... her? Of all girls? She doesn't seem the type to even date much, let alone have sex."
+        BE "I know! That's part of what has me floored too."
+        pause .5
+        BE "But anyway. Wanna get some lunch? I didn't eat breakfast this morning."
+        MC "Do you ever?"
+        BE "Sometimes."
+        MC "Well, yeah. I'm down."
+        BE "Cool."
+        hide BE with dissolve
+        "I got up and slipped my bag on, and the two of us headed out toward the cafeteria."
+        jump daymenu
+
+    if getHighestAffection() == ("AE"):
+        show AE neutral with dissolve
+        "Ahead of me, Shiori had begun packing up her desk, and organizing it neatly into her bag as around us, the other students got up to leave."
+        "Eventually, most of the room had cleared out, save for Shiori, Alice, Aida, and I."
+        hide AE
+        show WG neutral
+        with dissolve
+        "Off to my left, Alice stood up and walked to Aida's desk, taking her bag for her."
+        pause .5
+        show PRG sad-2 at Position(xcenter=0.25, yalign=1.0) with easeinleft
+        MCT "What the..."
+        MCT "Holy shit!"
+        MCT "Kodama-san is the girl?"
+        hide WG
+        show AE neutral with dissolve
+        "Aida stood up from her desk, and turned to the side to get her bag over her shoulders. Deftly, Shiori had immediately placed down her bag and, gently, assisted Aida in getting her bag secured."
+        "Her enormous belly that now jutted off from her middle moved with her as she got her bag on and started forward with Alice, the fabric of her shirt shifting slightly with her body."
+        "I blinked a few times and watched Alice and Aida leave the room in a rather quick fashion."
+        hide PRG
+        with dissolve
+        show AE sad-2
+        "Quietly, I walked over to Shiori, who had her eyes trained on Aida the entire time."
+        MC "S-So uh... never a dull day, eh?"
+        AE "... Mm."
+        "Shiori looked on at Aida with concern in her eyes, an almost melancholy look overtaking her usually staunch visage."
+        MC "What... is going on with Kodama-san?"
+        pause .25
+        show AE neutral
+        pause .5
+        "However, my questioning immediately caused her normal, emotionless self to return."
+        AE "That's classified."
+        MC "Eh? I mean, I'd expect that response for anyone else but... I figured you'd tell me."
+        AE "Hotsure-san, this matter is one of the personal wellbeing of another student; I will not let it devolve into gossip. Unless I have Kodama-san's direct consent to discuss her situation, I will not divulge any further information."
+        MCT "Hmm... I really feel I need to know, hell, even for Shiori's sake, it may give me some insight into what's going on in her mind."
+        MCT "But... looking at her belly and Shiori's face... I think I know what's going on."
+        menu:
+            "She already told me she's pregnant.": 
+                MC "She's already told me that she's pregnant."
+                AE "..."
+                MC "So... I just want a bit more information, is all."
+                AE "... Fascinating."
+                stop music fadeout 1.0
+                show AE neutral-annoyed
+                "Her eyes locked on to me with a subtle look of hostile and icy disdain."
+                AE "She's told you she's pregnant, and you start the conversation by asking me what is going on with her as well as asking why I was so eager to look out for her?"
+                MC "A-..."
+                $setAffection("AE", -3)
+                AE "So she told you, rather than you figuring it out while talking to me and then using your guess in order to press me for more information, believing I wouldn't have anticipated it?"
+                MC "I... uh..."
+                MCT "DAMN she's good."
+                AE "This conversation is over."
+                MC "W-Wait, hold on. I'm sorry I just... I wanted to know."
+                show AE neutral
+                AE "... Then ask her yourself."
+                "Shiori let loose a sigh."
+                play music Schoolday
+                AE "... Regardless, Kodama-san has been blessed with a gift. And, I believe it is only right to help her through this difficult time as best we can."
+                jump global026_AE_end
+
+            "I just want to know if there's anything I can do to help.": 
+                MC "I just... want to know if there's anything I can do to help. I think I know what's going on so... I'll leave the conversation there. Instead, I want to focus on how I can support her as best as possible."
+                AE "..."
+                $setAffection("AE", 3)
+                AE "Hotsure-san, you have my sincerest gratitude for the sentiment. It will be difficult for our entire class, I'm sure, but..."
+                AE "Stay vigilant."
+                "She bowed gently, her skirt lifting up off of her gargantuan rump enough to compel her to pull it down. Despite this, she smiled."
+                show AE happy
+                AE "... Thank you."
+                show AE neutral
+                AE "In any case, Kodama-san has been blessed with a gift. And, I believe it is only right to help her through this difficult time as best we can."
+                jump global026_AE_end
+
+            "Assuming she's pregnant...":
+                MC "So... assuming that she's pregnant..."
+                show AE neutral-annoyed
+                AE "..."
+                MC "How did it happen? Well, I mean, I know how it happened, but I mean-"
+                AE "Hotsure-san."
+                "Almost immediately, the chill that overtook my spine and the seeming void of all sound completely shut down my line of questioning."
+                AE "As I said, questions in regards to such matters are strictly classified. I cannot and will not betray Kodama-san's trust in telling you or anyone else."
+                MC "Y-Y-Yes, ma'am. S-Sorry."
+                show AE neutral
+                AE "A change in behavior is the sincerest form of remorse. No need for an apology otherwise."
+                AE "Regardless, Kodama-san has been blessed with a gift. And, I believe it is only right to help her through this difficult time as best we can."
+                jump global026_AE_end
+
+    if getHighestAffection() == ("GTS"):
+        "After assembling my things as neatly as I could manage into my backpack, I rose from my desk and turned to sidle up to Naomi's, where she was taking her sweet time putting away her writing supplies."
+        if getFlag("GTS025_kiss"):
+            "Her cheek wrinkled as she turned her head to regard me with a warm smile."
+        else:
+            "Awaking shortly from her thoughts, she turned her head to regard me with a warm smile."
+        show GTS neutral with dissolve
+        GTS "Good afternoon, Hotsure-san. Quite the intriguing subject matter today, wasn't it?"
+        MC "Uh... hey. Quite the lesson today indeed."
+        show GTS happy
+        GTS "Oh, to live in those times! It must have felt as if an entire new world were opening up and spilling forth."
+        MC "Uh huh."
+        show GTS neutral
+        MC "So, uh, I think some people might have been talking about you."
+        show GTS surprised 
+        GTS "How do you mean? What did it concern, exactly?"
+        MC "When I was heading to class I overheard some people talking about some girl from our class. I guess somebody had a major growth spurt, like, overnight."
+        "The very second I said \"growth spurt\", Naomi's eyebrows shot up."
+        show GTS neutral
+        "But in a second she recollected herself."
+        GTS "How curious. I'm glad, if nothing else, that they had the decency to keep their gossip out of earshot."
+        if checkAffection("GTS", ">", 43):
+            "She glanced behind me and gave me the faintest nod, which I had to chew on for a second before returning it."
+            MC "So... did you?"
+            GTS "Well, it was nothing major overnight, but the other day as I was walking out of my dormitory, I was somewhat careless..."
+            "Behind me I heard the scrape of two desks being abandoned, followed by one lighter and one much, much heavier set of footsteps headed towards the door."
+            show GTS embarrassed at Transform(xzoom=-1)
+            GTS "I, erm, bumped my head on the doorframe. It happened again as I was going to lunch that day."
+            MC "Oh shi- shoot, I had no idea. Are you alright?"
+            GTS "I am perfectly fine, though one could see where one inclined to gossip might take notice."
+            "I heard the footsteps step out of the doorway and out of earshot, at which Naomi's polite smile turned upside down, and she sighed."
+            show GTS sad 
+            GTS "I appreciate your discretion."
+            GTS "However... I do not believe the rumors were about me."
+            pause 0.75
+            GTS "Apparently... Kodama-san is with child."
+            MC "Oh... {w}{i}oh{/i}."
+            MC "That poor girl, she's barely out of high school..."
+            GTS "Indeed. One can hardly imagine how she must be feeling."
+            show GTS embarrassed 
+        else:
+            "She glanced behind me and then gave me the faintest nod."
+            show GTS surprised 
+            extend " I registered her eyes going wide as I turned around to see what she was looking at."
+            hide GTS 
+            show WG neutral at Position(xcenter=0.75, yalign=1.0)
+            show PRG unique at Position(xcenter=0.5, yalign=1.0)
+            with dissolve 
+            "Filing out of the room in a conspicuously inconspicuous manner, Alice walked with Aida between her and the wall, the former's bulbous figure obscuring most of the former's from my sight. Aida was strangling the straps of her book bag."
+            "But when they got out the door, I had just enough of an angle to see that she was now sporting a taut, round bowling ball belly."
+            hide WG
+            hide PRG
+            with dissolve
+            "I tried to screw my jaw back on before I turned back to face Naomi."
+            show GTS angry with dissolve 
+            MC "That... wasn't there yesterday."
+            $setAffection("GTS", -3)
+            GTS "Please mind Kodama-san's feelings, Hotsure-san. She's facing down quite an ordeal."
+            MC "Sorry. {w}So... I take it that wasn't just Nikumaru-san rubbing off on her."
+            show GTS sad
+            GTS "No, apparently not. If what I've heard is to be believed... Kodama-san is with child."
+            pause 0.75
+            MC "She..." 
+            MC "{i}But she looks like she's already due.{/i}"
+            show GTS surprised 
+            GTS "{i}I know!{/i}"
+            show GTS embarrassed 
+        GTS "It's not all bad, of course. She'll be a wonderful mother, indubitably."
+        MC "Oh, absolutely, just... {w}man, I don't think any of us have been out of high school a year. Like, imagine getting pregnant this early in the year, so far away from her family."
+        GTS "Well..."
+        show GTS neutral
+        GTS "What's done is done. The best we can do now is to give her plenty of support and understanding."
+        GTS "Heaven knows she will want for both."
+        MC "Mm..."
+        MC "So... if that just happened {i}literally{/i} overnight..."
+        MC "Could that be her factor? {w}...Somehow?"
+        show GTS neutral at Transform(xzoom=-1)
+        GTS "It would seem so."
+        "She at last stood from her desk, looked out into the pale sunlight as her shadow blanketed me, and sighed."
+        show GTS neutral at Transform (xzoom=1)
+        "She spared one more dainty glance down at me over her shoulder."
+        GTS "Stiff upper lip, eh Hotsure-san?"
+        MC "Indeed."
+        jump daymenu
+
+    if getHighestAffection() == ("WG"):
+        "I glanced down at my desk and started getting myself packed up."
+        show WG neutral with dissolve
+        "Looking up, I spotted Alice... well, the tail end of her, leaving the room."
+        hide WG with dissolve
+        MCT "Welp, okay. Guess I'll see her later. I thought she said she'd have some deliveries for me."
+        "I finished packing my bag, then got up, glancing about as everyone else left."
+        scene Hallway with fade
+        "Walking into the hall, I glanced down it, seeing one head poking up above most of the rest."
+        MCT "I... think Naomi is about as tall as she was last time I saw her?"
+        scene black with fade
+        pause .5
+        scene Dorm Hallway with fade
+        "An hour or so later, I headed down the hall toward Alice's dorm."
+        "Now backpackless, I was keen to get my deliveries finished with, so I could spend less time running around and more time with Alice."
+        MCT "... Or maybe in my dorm in sweatpants. Never know. I could use a breather after this clustered mess of a day."
+        "I glanced up at the doors to make sure I had the right one, then knocked."
+        play sound Knock
+        pause .75
+        MCT "Hm."
+        play sound Knock
+        "I knocked once more, stepping back a bit."
+        pause .5
+        show WG neutral with easeinright
+        pause .25
+        WG "Good afternoon, Keisuke."
+        MC "Afternoon! You have some deliveries on deck, I assume?"
+        show WG surprised-2
+        "Apparently what I said must have jogged Alice's memory. She's usually the one reminding me, so this seemed odd."
+        show WG neutral
+        WG "Ah yes, indeed. I'll have them ready in a moment."
+        MC "I didn't get a chance to catch you after class, but I wanted to make sure I was staying on top of things."
+        WG "I appreciate the follow up, Keisuke."
+        scene Dorm WG
+        show WG neutral-2
+        with fade
+        "Alice held the door as I stepped in, leaving my shoes on and staying by the door while Alice dipped into her bedroom."
+        MC "How was your day today?"
+        WG "Quite ordinary, I'd say. Uneventful might be a more proper term."
+        MC "Ah. {w}Doing anything fun later to make up for that?"
+        "Alice wasted no time, and stepped back out, two boxes in her arms, while not bothering to answer my last question."
+        WG "I'll have two more for you in just a moment."
+        hide WG with dissolve
+        stop music fadeout 1.0
+        MCT "I guess this is just time for business then."
+        "I nodded and took those two, setting them down by my feet for a moment."
+        show PRG neutral with dissolve
+        pause .8
+        show PRG worried
+        pause 1
+        show PRG scared
+        pause .5
+        hide PRG with dissolve
+        MCT "..."
+        MCT "Did I just-"
+        show WG neutral with dissolve
+        WG "Here you are, Keisuke."
+        show WG haughty
+        WG "On the double, now. Wouldn't want to leave anyone waiting."
+        MC "Alice, hold on. Is Aida-"
+        show WG doubt
+        WG "She's sleeping at the moment."
+        pause .5
+        show WG surprised
+        PRG "Alice?"
+        pause .75
+        show WG surprised-2 at altMove(0.5, 0.25)
+        show PRG unique at Position(xcenter=0.75, yalign=1.0) with easeinright
+        pause .75
+        PRG "... It's okay."
+        show WG worried
+        WG "..."
+        PRG "H-Hi... Hotsure-san..."
+        MC "Ehm... hello, Kodama-san."
+        play music PRG
+        "My eyes stayed trained right on Aida's face, though I'd seen her body, not only in the moment prior, but also in my peripherals."
+        show WG neutral
+        WG "..."
+        PRG "... E-Everyone else knows by now. And... I-I'd rather if... I told you myself, then you hearing from a rumor."
+        show PRG nervous
+        PRG "... T-This is... my factor, Hotsure-san."
+        PRG "I... I have a..."
+        show PRG unsure
+        pause .5
+        PRG "... I-I have a... hyperfertility factor."
+        PRG "I... I-I'm... {w}pregnant."
+        MC "I... ah..."
+        MC "Well... congratulations, Kodama-san."
+        show PRG worried
+        PRG "T-Thank you..."
+        PRG "Alice has been... up until recently, the only person who knew my factor."
+        show PRG unique
+        PRG "A-As you can... imagine. M-My factor is... s-something a little... p-personal."
+        MC "Right."
+        show WG neutral-2
+        MC "Well, I'd say your trust was well placed."
+        WG "And, I appreciate your trust in me, Aida."
+        WG "However, unfortunately it's human nature to talk, and a few students have taken to gossiping about Aida's condition, as you may or may not have heard, Keisuke."
+        show PRG worried
+        PRG "I... I can't really blame them."
+        PRG "I just... {w}don't want to feel like the odd one out."
+        MC "I can understand that sentiment. People can be pretty inconsiderate sometimes... well, a lot of the time honestly."
+        PRG "That's... t-that's true."
+        PRG "Well, I... I'll let you two be. It was... n-nice seeing you, Hotsure-san."
+        MC "And you as well, Kodama-san. Always a pleasure."
+        pause .25
+        show PRG neutral
+        pause .5
+        "Aida smiled once more at me," 
+        hide PRG with dissolve
+        extend " then shuffled back into her room and closed the door."
+        show WG neutral at altMove(0.5, 0.5)
+        WG "I would appreciate your discretion in this matter, Keisuke."
+        show WG worried
+        WG "As I'm sure you can imagine, Aida has gone through... quite the torrent of emotions over the last few days."
+        show WG neutral
+        MC "Of course. And you can count on that. I make an effort to keep my conversations between only those I have to have them with."
+        show WG neutral-2
+        WG "Wonderful. Thank you very much."
+        stop music fadeout 1.0
+        show WG haughty
+        WG "And, on that note, those deliveries are liable to be late if you stay where you are."
+        "Alice stepped forward and handed me two more boxes."
+        MC "Ah... right. I'll get on it."
+        show WG happy
+        play music Schoolday
+        WG "Thank you, Keisuke."
+        "I stacked the boxes up and turned to leave."
+        MC "Have... mngh... a good rest of your day, Alice."
+        WG "And you as well."
+        scene Dorm Hallway with fade
+        "Alice helped me with the door once more as I stepped into the hall and adjusted the boxes in my hands."
+        "I didn't really know how to process what I just learned, but in an attempt to focus on the matter at hand, I checked the first label."
+        MCT "Okay... think I know where that is."
+        "I headed off in that direction, eager to lighten my load."
+        jump daymenu
+
+    if getHighestAffection() == ("FMG"):
+        show FMG neutral with dissolve
+        "As most students rose from their seats, Akira was up a full pace ahead of them, and turned toward me."
+        "She looked over as Shiori got up and left, then made her move toward me."
+        MC "You know you can just walk over, right? No need to plan like a chess player."
+        FMG "Have you even played chess?"
+        MC "I've dabbled."
+        FMG "Anyway, you hear the news?"
+        MC "Should I have? The only thing I've been hearing today as I walked the halls were a couple of students talking about some crazy growth a student had. I assumed it was Yamazaki-san."
+        FMG "Nah, it's Kodama-san."
+        MC "Ah... huh?"
+        MC "Yeah, no way. I saw her the other day and she looked just fine, maybe a little wider down below. Nothing out of the ordinary for this place at least."
+        "Saying nothing, Akira nodded over her shoulder and turned a bit, so she could face me and peek over at Aida."
+        hide FMG with dissolve
+        "Alice stood beside Aida's desk, the two chatting somewhat idly as Aida gathered her things into her bag."
+        pause .5
+        show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+        show WG neutral at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        pause .5
+        "Aida got her bag over her shoulders, turning in a way that I could see her... and the beach ball-esque belly she now had."
+        hide PRG
+        hide WG
+        with dissolve
+        pause .5
+        show FMG neutral with dissolve
+        MC "Well, I'll be."
+        FMG "Before I heard the news, I was under the assumption she had gotten really fat after hanging out with Alice all the time. {w}One of the times I like being wrong."
+        MC "So... that's not fat?"
+        FMG "..."
+        FMG "No. That would be baby, Kei-kun. Kodama-san has a preggo factor."
+        MC "Baby? As in..."
+        MC "... Oh. {i}Ohh...{/i}"
+        FMG "She's adorable though. I'm so happy for her."
+        MC "I... I'm at a loss for words." 
+        MC "That isn't who I expected at all. Or {i}what{/i} I expected at all."
+        show FMG happy
+        FMG "It's a lot to take in for her, I'm sure. I know she'll be a great mom though. She's a sweetheart."
+        show FMG neutral
+        FMG "And, she can cook. {i}Huge{/i} bonus."
+        MC "Are you sure weight gain isn't your factor? You're always going on and on about food."
+        show FMG angry
+        FMG "A high calorie intake is a part of my diet."
+        MC "Uh-huh, I bet it is."
+        jump daymenu
+
+    if getHighestAffection() == ("PRG"):
+        "I loaded up my bag, managing to cram everything in my usual unorganized fashion without too much trouble."
+        "Glancing up, I watched Honoka leave the room, followed by Akira, Naomi, Daichi, and finally, Shiori."
+        show WG neutral with dissolve
+        "Alice was standing beside Aida's desk, the two seeming to be deep in conversation about something as Aida packed her desk away into the bag that sat on her lap."
+        hide WG with dissolve
+        "I got up from my desk and threw my bag over, heading out into the hall."
+        scene Hallway with fade
+        pause .25
+        MCT "... So, who the hell was everyone talking about? I didn't notice anyone looking too massively different..."
+        "The halls were cleared out a bit, and I reached back to take a swig from my bottle."
+        MCT "Ach, crap. Time to refill."
+        "I changed directions from the courtyard and headed for the cafeteria instead."
+        scene Cafeteria with fade
+        "Walking in, I went to the drinking fountain and stuck my bottle into the stream of water, filling it mostly full once more and taking a long drink."
+        MCT "Alright. I'm going back to the dorm to chill. I need some TV or something after this weird-ass day."
+        scene Hallway with fade
+        stop  music fadeout 1.0
+        "I walked back into the hall and turned toward the courtyard, turning a corner into another hall."
+        "As I turned, I glanced down the hall."
+        show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        pause .75
+        show PRG unsure at Position(xcenter=0.75, yalign=1.0) with dissolve
+        pause .5
+        MCT "... What the hell?"
+        MCT "Where did... huh?!"
+        "I gaped, staring at the beach ball sized mound now erupting from Aida's abdomen as she and Alice turned to open the door, and I got a glimpse at it from the side."
+        hide WG
+        hide PRG
+        with dissolve
+        MCT "Oh my G-"
+        MCT "Kodama-san is the girl?!"
+        "Shaking the shock away, I took off down the hall, following the two girls."
+        scene Campus Center
+        show WG neutral at Position(xcenter=0.25, yalign=1.0)
+        show PRG unsure at Position(xcenter=0.75, yalign=1.0)
+        with fade
+        "Coming to the center of campus, Aida and Alice stopped."
+        hide WG neutral with easeoutleft
+        extend" The two exchanged words, then Alice broke off and headed toward the entrance to campus, while Aida turned and headed for the dorms."
+        "Without a second thought, I turned toward the dorms."
+        scene Dorm Exterior
+        show PRG unsure at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1)
+        with fade
+        "I didn't sprint ahead or anything. I definitely didn't want to startle Aida."
+        "Rather, as we got to the dorms, Aida walked silently toward the women's dorms, while I stopped, sure as hell not wanting it to look like I was following her home."
+        "Nearby, a small group of girls walked out and past her, the majority turning their heads to glance back as they went past."
+        Student1 "That's her..."
+        Student2 "Kumagai-san wasn't kidding..."
+        "I let the group pass, looking forward as Aida slowly glanced over her shoulder."
+        show PRG surprised at Transform(xzoom=1)
+        pause .75
+        show PRG scared at altMove(0.8, 0.5)
+        play music PRGDramatic
+        PRG "H-H-Hotsure-s-san?"
+        MC "Hey, Kodama-san..."
+        show PRG sad-2
+        PRG "..."
+        "She looked back at me, her face pale."
+        PRG "..."
+        PRG "... {w}You heard too?"
+        PRG "Everyone else has..."
+        MC "Hear what?"
+        PRG "..."
+        PRG "... {w}A-About me..."
+        MC "No... I was running late this morning, so I didn't really have time to talk to anyone."
+        PRG "..."
+        PRG "... I..."
+        pause .5
+        PRG "... I'm pregnant."
+        MC "What?! You..."
+        MC "Wait a minute... hold on."
+        MC "This... this..."
+        MC "Your... factor?"
+        "Aida looked down at herself and nodded."
+        PRG "It's... it's the rarest kind..."
+        PRG "My factor... causes me to..."
+        PRG "... I-I... I can get pregnant... r-really easily. And... my growth is based around that..."
+        MC "I..."
+        MC "Wow..."
+        PRG "..."
+        PRG "{i}Sniff{/i}"
+        pause .5
+        PRG "... C-Could I... t-talk to you... {w}a-another time, H-Hotsure-san?"
+        MC "Ah... o-of course. That's totally fine."
+        PRG "T-Thank you..."
+        "Aida turned and shuffled quickly through the door."
+        "As she turned, I could make out the telltale puffiness in her eyes, and a slight glint of tears in the sunlight."
+        "I turned away, glanced at the other students going about their business."
+        MCT "Aida's factor... that's possible?"
+        "I glanced down."
+        MCT "That's... so different from everyone else's..."
+        MCT "And the rarest factor."
+        "I took a slow breath and started on my way back to my dorm."
+        jump daymenu
+
+label global026_AE_end:
+    MC "How... did she get so big so fast?"
+    show AE neutral
+    AE "Metabolic and hydrostatic functions have been altered by her body to such a degree that it's caused extreme swelling. I don't think it's too unreasonable but... by how she looks, I have an idea of what is to come."
+    MC "What... is to come?"
+    AE "... Well, as I said, she's been blessed with a gift... if that's the case, it must be her birthday, if I may be so gauche to say."
+    AE "Many more soon enough, I reckon."
     jump daymenu
 
 label RM001:

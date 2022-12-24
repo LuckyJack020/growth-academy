@@ -7826,7 +7826,7 @@ label BE042:
     BE "I'd like to make an attempt at it, plus I thought you'd enjoy seeing me in something so skimpy."
     MC "Not to rain on your parade, but I think even if we found it, the poor garment would be beyond too small for you."
     show BE worried
-    BE "{i}sigh{/}"
+    BE "{i}sigh{/i}"
     show BE shrug
     BE "You're probably right, but that means I'd have to wear my school issued one to the beach, instead."
     MC "You were planning on going to the beach?"

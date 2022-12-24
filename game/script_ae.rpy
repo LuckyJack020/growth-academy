@@ -24584,36 +24584,43 @@ label AE100:
 label AE100G:
     $setProgress("AE", "AE101")
     play music MC
-    scene Tokyo with fade
     "7 Years Later"
+    scene Tokyo with fade
     UNKNOWN "Oooy, Hotsure-san!"
     MC "Hm?"
+    "I looked over from the floorplan of the building in front of me as the site manager walked over to greet me for the day."
+    "It was, originally, meant to just be staging, but from the sound of it the project has been moved up to the point that the approval was ready to go."
+    "I myself, however, was told the exterior facade was still up for discussion, and so I came bright eyed with my proposal in hand."
     Manager "Glad you're here! I got the firm to settle on the design, and the city is ready to go with approval once you sign off on it."
     MC "Excellent! I was thinking that one of the core design elements for it could be almost like a kinda Art Deco style which should really help for- they want it to be another shitty glass cube don't they?"
     Manager "The current plan from the upper brass is to go ahead with the design that... is in fact made of glass and uh..."
     MC "Is a cube?"
     Manager "... It is a 3D shape of a six sided persuasion, yes."
-    MC "Ga-pwak-ff-bah- what- dgh-... d-ch- {i}fuck{/i} was even the {i}point{/i} in me going to school for architecture if I can only do glass cubes."
+    "I was told wrong."
+    MC "Ga-pwak-ff-bah- what- dgh-... d-ch- *fuck* was even the *point* in me going to school for architecture if I can only do glass cubes."
+    "I dropped my plans on the desk as the site manager walked over and patted me on the back. The two of us go back to my days as a freshman in university, thankfully, so it at least gave me some room for levity."
     Manager "Haaah, Hotsure-san, you really gotta look out for that ambition. You're just starting off."
-    MC "Ehh, I getcha. Understood. Should I take these over to the contractor to get them confirmed?"
+    MC "Ehh, yeah, I gotcha. Still, the DA's office is a big deal! Should I take these over to the contractor to get them confirmed?"
+    "I went to move from my position, however I was stopped as a man walked over."
     Manager "No need. Hotsure-san, meet Urahara-san."
+    "I bowed as the head contractor walked over, a warm smile on his face as he bowed back."
     MC "Ah, good to meet you."
-    Contractor "Nice to meet you as well, man! So, you're the architect for this, eh?"
+    "Urahara-san" "Nice to meet you as well! So, you're the architect for this, eh?"
     MC "Apologies, sir, but I'm still going for my Kenchikushi. This is more of an interim program-"
-    Contractor "Ahhh, no need to be bogged down in semantics, son! And no need to be so formal, your boss and I go way back!"
+    "Urahara-san" "Ahhh, no need to be bogged down in semantics, son! And no need to be so formal, your boss and I go way back!"
     MC "A-Ah, I see. That is good to hear, sir."
-    Contractor "Gyehehe- Oh, hey, listen, I'm going to need you to go up and give a report to the DA about her office."
+    "Urahara-san" "Gyehehe- Oh, hey, listen, I'm going to need you to go up and give a report to the DA about her office."
     MC "Oh? The DA? I don't think I know who they are. I've been out of town for a while."
     Manager "Oooh... he doesn't know. Rest in peace, kid."
     MC "Eh? R-Rest in peace? Is he... dangerous?"
-    Contractor "She. The \"Raven Winged Seraph\". The dark shadow of the Public Prosecutors office. She rarely makes herself seen outside of court, but I hear people who {i}have{/i} seen her are too shocked to describe her and start speaking nonsense."
-    MC "\"Raven Winged Seraph\"?"
+    "Urahara-san" " She. The \"Raven Winged Seraph\". The dark shadow of the Public Prosecutors office. She rarely makes herself seen outside of court, but I hear people who {i}have{/i} seen her are too shocked to describe her and start speaking nonsense."
+    MC "Raven Winged Seraph?"
     Manager "Oh yeah. I've heard of 'er. They say she has the entire office under her thumb."
     MC "... You guys playing too much FF17 or something?"
-    Contractor "It's true!"
-    Contractor "This is only a rumor, but they say she was responsible for one of the largest internal corruption busts since Sakawa back in '92 within the first month in her position."
+    "Urahara-san" "It's true!"
+    "Urahara-san" "This is only a rumor, but they say she was responsible for one of the largest internal corruption busts since Sakawa back in '92 within the first month in her position."
     Manager "Whaaat? Bullshit! How?"
-    Contractor "It's true, don't you remember it on the news? Rumors say she's like a demon! I hear she has ties to the MoJ, too. That's one scary bitch."
+    "Urahara-san" "It's true, don't you remember it on the news? Rumors say she's like a demon! I hear she has ties to the MoJ, too. That's one scary bitch."
     MC "..."
     Manager "Oy, you alright, Hotsure-san?"
     MC "Um... have either of you seen her at all?"
@@ -24638,8 +24645,241 @@ label AE100G:
     MC "..."
     show AE happy
     AE "..."
+    MC "Aha... um..."
+    AE "Wow."
+    MC "Yeah! Um... ahah..."
+    AE "Hehe-"
+    MC "Holy shit, uh, h-hi!"
+    AE "Hotsure-san, um, hello!"
+    MC "Hello! Um... is this... are you?"
+    AE "Y-Yes, I'm the um... district prosecutor."
+    MC "Yeah! I mean... Oh! Speaking of!"
+    "With shaking, flustered hands, I reached down into my bag to pull out the documents for her."
+    MC "I was going to give you the current draft documents for the building redesign... um..."
+    "The two of us shared a moment of quiet as we looked each other in the eyes. Such a mysterious feeling of separation that seven years creates and yet..."
+    MC "Would you... like to talk about it over coffee?"
+    AE "... Absolutely."
     scene black with fade
-    "The End"
+    pause 1
+    scene Cafe
+    show AE neutral-annoyed
+    with fade
+    AE "Nonono, the probative value is not outweighed by its prejudicial nature whatsoever. If the defense attempts to claim that, I guarantee the objection will be denied."
+    "Shiori held her phone to her ear as she spoke with her associate on the other end. She had been taking calls like this the moment that she walked in, and yet I knew exactly why. Looking at the clock, I waited for it to hit 1:30 on the dot..."
+    show AE neutral
+    AE "Make sure to tell her. Indeed. Good luck."
+    "She hit the end call button almost immediately as the hand touched the exact second."
+    MCT "The more things change, the more things stay the same."
+    AE "Sorry about that."
+    MC "Oh, no big! I'm glad we could have this moment together. It's actually a little nostalgic."
+    show AE smile
+    AE "Ahaha, I'll say."
+    MC "If I can be honest, I've never been to this cafe before."
+    AE "I know, I usually just get something from the vending machine and go down to doc review. It's nice to actually go out to lunch every once in a while."
+    MC "Oooh come on. A place like this can be a regular spot! Y'know, if it weren't as pricey as I've heard eheheh. Good thing I got my bonus!"
+    show AE neutral
+    AE "That won't be necessary. I'll be paying."
+    MC "Nooo, noo-"
+    AE "I insist. I still owe you approximately 45600 yen from our time in Seichou together."
+    MC "..."
+    MCT "S-She kept tabs on how much money I spent on her?! FOR SEVEN YEARS?!"
+    "Seeing the look on my face, she smirked."
+    show AE smile
+    AE "Come now, did you really think I'd let any debt I owe go unpaid?"
+    MC "A-A gift isn't a debt! Why did you remember that of all things?!"
+    AE "... Because I was confident we'd meet again."
+    MC "Mng!"
+    "That smile. It instantly caused me to blush at her words."
+    MC "Y-Yeah, I had hoped to."
+    AE "So, what all have you been up to?"
+    MC "Oh, me? School. Literally nothing but school, more school, and on the job training for my kenchikushi. It's been going pretty well!"
+    AE "Oh?"
+    MC "Yeah! I studied down in Osaka. You'll never guess who ended up rooming with me."
+    show AE neutral
+    AE "Who?"
+    MC "Minori."
+    show AE surprised
+    AE "Really?"
+    MC "Yeah! Computer science, if I recall correctly. I actually asked if he knew any way I could get a hold of you; we spent a few hours browsing social media."
+    show AE neutral
+    AE "Ah... y-yeah, that was admittedly something I didn't keep up on when I was overseas. Not having a phone was one thing but... I never exactly kept up with computer trends either."
+    AE "There are admittedly many people I've wanted to catch up with. Yureno-san and Utagashi-san, for example."
+    MC "Well, to start, Tomo's working as a JSL translator, and she's damn good at it."
+    show AE smile
+    AE "That's amazing."
+    MC "I know, right? Daichi is super thrilled the two are still actively spending time together. I mean, I would have never expected her to find her calling helping others, eheh. Daichi is... well, Daichi. You know him. Mysterious as always, so I don't really know what he's up to."
+    show AE smile
+    AE "As expected. I haven't seen Yureno-san since she let me stay at her apartment in the interim between Seichou and my study abroad."
+    MC "Yeeep, we also went to the same university. Engineering, if I remember right. She crashed in my dorm pretty often; the three of us are still pretty close. She was way more interested in the party life, though."
+    show AE neutral
+    AE "Sounds... about right. Has she been finding work?"
+    MC "Dunno, she has a kid on the way."
+    show AE surprised
+    AE "..."
+    AE "I... I'm sorry, what?!"
+    MC "Yeeep. Same reaction here."
+    AE "But that's- I... how is she taking it?"
+    MC "She seems excited which... scares me."
+    AE "Yureno-san is pregnant... I... with whose child?!"
+    MC "We... dunno. She was extremely drunk and high."
+    AE "Oh my god. I figured she was attracted to..."
+    MC "Well, she is, she is... but... you know how she is with that kind of stuff."
+    show AE neutral-annoyed
+    AE "Ever irreverent? Naturally."
+    MCT "Besides that... I have a theory on what happened. Given Minori's appearance..."
+    AE "I need to find her and lecture her about correct parenting methods immediately."
+    MCT "Me and my goddamn mouth. I need to change the subject now!"
+    show AE neutral
+    AE "There is one person I did end up making contact with after returning to America, however. Hamikawa-san."
+    MC "Hamikawa? Hamikawa... I remember that name."
+    AE "She went to school with us. I knew her from childhood. We just so happened to be working on something that shared our common interests."
+    MC "What's she up to nowadays?"
+    AE "She works in the NCCHD. She's very good at her job, from what I hear."
+    MC "Nice! I'm sure that going through school without anyone you knew must have felt... y'know, isolating."
+    AE "A bit, but I wasn't there for too long. Besides, I quite enjoyed America."
+    MC "You gotta show me some pictures at some point! We could make a show out of it to each other about our schools."
+    show AE neutral-annoyed
+    AE "Uch, please no. I got soooo fat in college, you wouldn't believe."
+    MC "Hey, hey, don't go teasing me now!"
+    show AE neutral
+    AE "It's true. I absolutely blew up like a blimp in America, you should have seen me. I was the fattest girl in my sorority, rear aside. It was a miracle my sorority talked me into becoming a cheerleader, barely anything fit."
+    MCT "YEAH, KEEP MAKING ME REGRET NOT FOLLOWING YOU TO AMERICA WHY DON'T YOU?!"
+    MC "Cheerleader? You?"
+    AE "You'd be surprised to know I was a bit more peppy in college once I felt I was well away from my mothers influence. Still rather austere, but... much more open."
+    MC "Yeah, heheh... I don't suppose you did any cheering with a cane?"
+    "I brought it up primarily as a point of curiosity but... Shiori returned to a more neutral expression as she nodded."
+    AE "Well, like I said, I gained a lot of weight. Eventually I felt my ankle start to give out and I ended up developing a limp."
+    "She looked down at her cane and gave a solemn yet soft smile."
+    show AE happy
+    AE "This was... Professor Schultz's cane."
+    MC "... Ah."
+    show AE neutral
+    AE "Khm... well, I felt I would be doing it a disservice by putting it in such puffy hands, so I did what I could to slim down before coming home."
+    MC "Your ankle... the one you broke at Seichou?"
+    AE "That's correct. It seems like the worry that it wouldn't heal back correctly was completely warranted."
+    MC "God, that was so long ago."
+    show AE smile
+    AE "Mmm. Too long, in many ways."
+    MC "Well, you look like you've slimmed down quite a bit since."
+    show AE neutral-annoyed
+    AE "Dch- shut up."
+    MC "Heheheh."
+    show AE smile
+    AE "Mhmhm~"
+    MC "So uh... I gotta admit, I always trusted your ability but... how are you already the district attorney? Even I am just barely out of school."
+    show AE neutral
+    AE "Well, thankfully my career was severely helped by my studious nature. I got my degree before I could legally drink, in fact. Not that I do."
+    MC "You go- You got your law degree in only three years?!"
+    AE "Well, I was able to fasttrack myself by testing out of a majority of my undergrad. Never seen anything like it, the board said. Then I took the Yobi-Shiken and then the bar exam."
+    show AE smile
+    AE "I um... I got a perfect score."
+    "Though I never remembered her to be one to take pride in herself, she actually seemed to smile very softly as she said this."
+    MC "That's insane! So, I'm guessing that's been your focus then? Your work?"
+    show AE neutral
+    AE "Well, one of my top priorities outside of my work is eliminating bias incentives for conviction among the judicial office and the issue of forced or coerced confessions though unethical detainent practices."
+    AE "To this end, I have been assisting practicing attorneys as co-counsel in my free time and lobbying to the government. Though this has made me a... few enemies in the court, it has also given me a bit of a reputation."
+    MC "I... heard about that a little bit. 'The Raven Winged Seraph'?"
+    show AE neutral-annoyed
+    AE "Tssh, vanity. It makes me out to be some kind of angel of death."
+    MC "Weeeell... from what I hear, you were behind one of the biggest corruption busts in Tokyo's history."
+    show AE neutral
+    AE "... All I did was make an appeal for an inquest into a string of what appeared to be unethical practices and provided evidence. I did my duty and nothing more.."
+    AE "Regardless, that is essentially what I've been doing with my time."
+    MC "Heh, usually people learn how to paint or get into model building with their time. Seriously, that's unthinkable!"
+    show AE smile
+    "Shiori blushed as I let her know just how happy I was for her. With that said, there was one part of her life back when we were together on Seichou that never quite left me... something I remember well from when we were both in the city together."
+    MC "How are things going on the uh... personal front, I guess."
+    show AE neutral
+    AE "Personal front?"
+    MC "You know, like... involving your mom and... well, your... um..."
+    AE "... Mm."
+    "Her lack of verbal confirmation was my cue to drop the subject, hearing a bit of disappointment in her voice... however, she herself didn't seem to mind continuing."
+    AE "... I am... currently attempting to look into the situation further."
+    MC "Hm?"
+    "Shiori began to stir her tea as I looked at her in confusion."
+    MC "What do you mean?"
+    AE "As you could have probably guessed, if I were to take legal action against my mother, prosecuting her would be... a conflict of interest."
+    AE "As such I can't directly litigate any trial she may be brought to."
+    MC "Directly?"
+    show AE glasses
+    AE "... Directly."
+    "I wanted to ask more questions on her mother... but I felt it was best to move on to something lighter, and something I had been curious about since I first saw her again."
+    MC "So, do you have any kids?"
+    show AE neutral
+    AE "Ah, no, no."
+    MC "Would you like some?"
+    show AE surprised
+    AE "Wha-?"
+    show AE happy
+    MCT "Oh my fucking god that was the wrong wording."
+    AE "Ahaha!"
+    MC "Okay cool, you can tell I messed up on what I meant."
+    AE "I'm amazed at how little you've changed."
+    show AE smile
+    AE "But um..."
+    AE "Yes, I would like kids."
+    "My heart skipped a beat... partially because I feel like her response was directed."
+    MC "So, what about Shizu-chan?"
+    show AE surprised
+    AE "What?"
+    MC "I heard the name in your office. I was just wondering if she's like..."
+    show AE neutral
+    AE "Mm, my little sister. She is just turning seven. I've been helping raise her along with my uncle."
+    MC "Ahh I see."
+    MCT "She was right. All those years ago... Shiori was absolutely correct."
+    MC "So then..."
+    AE "... Mm."
+    MC "That's... heavy."
+    AE "... I've learned how to manage weight well."
+    MC "Y-Yeah... fair enough."
+    AE "..."
+    "I felt like there was something that slipped my mind... but..."
+    if checkSkill("Academics", ">", 20):
+        MC "... Shiori."
+        AE "Hm?"
+        MC "How did you get Shizu-chan away from your mother?"
+        AE "... I proved she was unfit to care for her, and as a result the NCCHD saw her withdrawal from my mother's care. My uncle and I look after her."
+        MC "Years ago... you were convinced that you had to stay to look after her, meaning you didn't feel anything would come of it without proving criminal activity on your mother's end."
+        MC "The only way you could have done that was either proving criminal activity on your mother's end... or... pulling some strings."
+        MC "Hamikawa-san... you got into contact with her so that you could..."
+        MC "Shiori... did you...?"
+        show AE glasses
+        AE "..."
+        AE "I protected my sister. Doing otherwise would violate my code of ethics."
+        AE "Don't you agree?"
+        MC "..."
+        "Taking my drink, I held it up towards her and nodded."
+        MC "Kanpai."
+        "Shiori was silent as I threw back my drink, but I could tell that she knew she had my approval."
+        "And speaking of approval..."
+    MC "Oh, my god, I completely forgot about the floor plans."
+    show AE surprised
+    AE "Ah! Apologies, it was careless of me to look over everything before the small talk."
+    "Reaching down, I grabbed the file in my messenger bag, rummaging around a bit as I looked down at it."
+    MC "Uh..."
+    "Quietly, I took my hand off of the file."
+    MC "You know what? I absolutely forgot it back at the office."
+    show AE neutral
+    AE "..."
+    MCT "You know exactly what I'm trying to say... I know you do."
+    show AE smile
+    AE "Well..."
+    AE "I suppose that just means we'll need to meet again."
+    MC "Excellent! So... same time tomorrow?"
+    "I stood up as I watched Shiori do the same. After a moment, she adjusted her tie and brushed off her lap. The two of us walked towards the door, Shiori leaving a tip on the table as she nodded gently."
+    AE "That sounds agreeable, yes."
+    MC "Sounds good! So then, um..."
+    "I held out my hand for her to shake as soon as we got out of the door."
+    scene Tokyo
+    show AE smile
+    with fade
+    MC "Tomorrow it is!"
+    AE "..."
+    MC "..."
+    "She grabbed it."
+    "And pulled me in."
+    scene black with fade
+    "THE END"
     jump daymenu
 
 label AE101:

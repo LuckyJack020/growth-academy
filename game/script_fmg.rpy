@@ -1251,7 +1251,7 @@ label FMG011:
         WG "Irritatingly. The weather report said nothing of showers, and... Look at me."
         FMG "Oh yeah, Kei said something about rain but I wasn't paying attention. At least you found shelter before it really got bad."
         show WG neutral
-        WG "{i}Sigh{i}. Any damage to my hair or clothing is bad enough, but I won't bemoan a fair sprinkling."
+        WG "{i}Sigh{/i}. Any damage to my hair or clothing is bad enough, but I won't bemoan a fair sprinkling."
         "Akira turned to Alice and pointed her thumb at the arcade game behind her."
         FMG "Well, wanna take your anger out on these zombies?"
         show WG doubt
@@ -5104,9 +5104,9 @@ label FMG033:
     show FMG angry at Position(xcenter=0.75, yanchor=1.0) with dissolve
     FMG "At least give me a reason. Would it kill you to not act like a selfish-"
     if checkAffection("WG", ">=", getAffection("FMG")):
-       jump FMG033_WG
+        jump FMG033_WG
     else:
-       jump FMG033_FMG
+        jump FMG033_FMG
 
 label FMG033_WG:
     "Akira was cut off when Alice noticed my arrival and turned to me."
@@ -5117,10 +5117,10 @@ label FMG033_WG:
     FMG "You won't even explain why, though."
     WG "Must I? Must I justify the decisions I make concerning my own property?"
     menu:
-       "You can at least give her a reason. Saying \"No\" just because comes across as rather petty.":
-           jump FMG033_WG_1
-       "If she said \"No\", Akira, you should just accept it. She doesn't have to give a reason.":
-           jump FMG033_WG_2
+        "You can at least give her a reason. Saying \"No\" just because comes across as rather petty.":
+            jump FMG033_WG_1
+        "If she said \"No\", Akira, you should just accept it. She doesn't have to give a reason.":
+            jump FMG033_WG_2
 
 label FMG033_WG_1:
     stop music
@@ -5179,18 +5179,18 @@ label FMG033_FMG:
     FMG "...if I could borrow a dress of hers for our date, and she won't even give me a reason why not!"
     WG "As if I'm going to help you out after insulting me like that."
     menu:
-       "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.":
-           jump FMG033_FMG_1
-       "Saying \"I don't wanna\" sounds childish.":
-           jump FMG033_FMG_2
+        "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.":
+            jump FMG033_FMG_1
+        "Saying \"I don't wanna\" sounds childish.":
+            jump FMG033_FMG_2
 
 label FMG033_FMG_1:
     if checkAffection("WG", ">=", 6):
         MC "Alice, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
     else:
-       MC "Alice-"
-       WG "Nikumaru-san. Let's observe propriety while we're in class."
-       MC "OK. Nikumaru-san, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
+        MC "Alice-"
+        WG "Nikumaru-san. Let's observe propriety while we're in class."
+        MC "OK. Nikumaru-san, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
 
     stop music
     "She exhaled slowly."
@@ -5239,10 +5239,10 @@ label FMG033_FMG_after:
     show FMG happy
     FMG "Yeah! Think of it like a test-drive."
     if checkAffection("WG", ">=", 6):
-       show WG happy
-       WG "Well-played, Keisuke."
+        show WG happy
+        WG "Well-played, Keisuke."
     else:
-       WG "Well-played, Hotsure-san."
+        WG "Well-played, Hotsure-san."
 
     show WG neutral
     WG "Very well. Consider this a free trial of the wares the Nikumaru Outlet Direct has for offer."

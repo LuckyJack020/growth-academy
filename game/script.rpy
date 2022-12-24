@@ -1,5 +1,5 @@
-default persistent.enable_notifications = 2
-default persistent.enable_nsfw = True
+default persistent.enable_notifications=2
+default persistent.enable_nsfw=True
 
 #Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
 #xcenter value (basically the same as what value between 0.00 and 1.00 along the x-axis) is passed as variable.
@@ -739,7 +739,7 @@ init python:
         return routelock
 
     def isNSFW():
-        return persistent.enable_nsfw
+        return enable_nsfw
 
     def setTimeFlag(flag):
         if flag not in timeflags:
@@ -1024,17 +1024,17 @@ screen daymenu():
                     xmaximum 250
                     ymaximum 40
                     if eventlibrary[c]["location"] in locationlist:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle Crop((0, 0, 250, 40), "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"]) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     else:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png", (0, 0, 250, 40)) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle Crop((0, 0, 250, 40), "Graphics/ui/icons/bgicon-missing.png") action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     hbox:
                         spacing -140
                         order_reverse True
                         if len(eventlibrary[c]["girls"]) == 0:
-                            add im.Crop("Graphics/ui/icons/charicon-missing.png", (0, 0, 184, 40))
+                            add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-missing.png")
                         else:
                             for g in eventlibrary[c]["girls"]:
-                                add im.Crop("Graphics/ui/icons/charicon-%s.png" % g, (0, 0, 184, 40))
+                                add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-%s.png" % g)
                         #FIXME this looks awful and breaks tables, needs harder adjustments
                         #fixed:
                         #    frame:

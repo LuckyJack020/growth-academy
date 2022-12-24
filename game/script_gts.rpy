@@ -11551,7 +11551,7 @@ label GTS050:
     MC "Is this the first time this has happened?"
     hide GTS_S
     hide GTS
-    show GTS pondering
+    show GTS pondering at Position(ycenter=0.35)
     GTS "No, I had a similar dream my first night here. It wasn't as dramatic but still scared me terribly."
     MC "What scared you so bad about it?"
     GTS "I initially thought it was the feeling of being so tall, but after this I think it's something deeper."
@@ -11604,6 +11604,220 @@ label GTS050:
     jump daymenu
 
 label GTS051:
+    $setProgress("GTS", "GTS052")
+    scene Giant Dorm Interior with fade
+    play music Peaceful
+    "It was a surprise for sure, but a welcome one when Tashi dismissed us early with the optimistic idea that we would be working on our report."
+    "Oh, that poor fool. His optimism would be tragically misplaced when procrastination was an option. Especially procrastination shaped like a tall elegant lady."
+    show GTS neutral at Position(ycenter=0.55) with dissolve
+    GTS "My love, is everything alright?"
+    MC "Oh, uh, yeah I'm fine. Just got lost in thought for a moment."
+    GTS "Ah, I see. Apologies for interrupting."
+    MC "It's cool, I was just thinking about what I was gonna do for the rest of the day. Tashi let us out to work on our report but it's not due for several more days."
+    GTS "The sooner you start, the sooner it is completed. And then you have time to work on other passions."
+    show GTS happy-2 at Position(ycenter=0.35)
+    GTS "And with longer assignments, it leaves more time to catch mistakes and make revisions."
+    menu:
+        "I never bothered with revisions, I normally catch my mistakes as I'm writing.":
+            jump GTS051_c1_1
+        "Being thorough is never a bad thing.":
+            jump GTS051_c1_2
+
+label GTS051_c1_1:
+    $setFlag("GTS051_c1_1")
+    show GTS surprised
+    GTS "Your confidence in your writing ability is admirable, but are you sure that's best?"
+    MC "I've found that my first thoughts normally pan out better than me second guessing myself."
+    GTS "Didn't you mention that on your last paper that you got marked off a lot for grammar?"
+    MC "A few times, but only some small details."
+    show GTS unique at Position(ycenter=0.55)
+    GTS "I can help you with the grammar if you want. The linguistic arts {i}are{/i} one of my stronger subjects."
+    MC "{i}*sigh*{/i}"
+    MC "I may take you up on that for this report. My last one didn't go so well, though that may have been because I wasn't too familiar with the Renaissance stuff."
+    show GTS neutral 
+    GTS "I'm no expert on the subject, but if you would like some company while studying I'm more than happy to accompany you."
+    jump GTS051_afterc1
+
+label GTS051_c1_2:
+    $setFlag("GTS051_c1_2")
+    GTS "A second pair of eyes can sometimes catch what you overlook."
+    MC "I could be a second pair of eyes for your stuff."
+    GTS "I would appreciate that."
+    jump GTS051_afterc1
+
+label GTS051_afterc1:
+    MC "Is there anything you wanted to do today since we have some time?"
+    GTS "Nothing particularly, though I wanted to adjust the plants outside as well as water them."
+    MC "Not sure how well I can help with that, but I'll sit by and watch."
+    GTS "That's fine Kei, it's nice just to have you around."
+    scene Giant Dorm Exterior
+    show GTS neutral at Position(ycenter=0.55)
+    with fade
+    "We stepped outside and I found myself a comfy spot to sit beside the building."
+    "Scanning the rocky, barren horizon, I began to grow curious."
+    MC "How many people do you think live here?"
+    GTS "I haven't done a proper count but over a dozen, at least I think. It's a rather small group."
+    MC "Are you the most recent one to move in?"
+    GTS "I think so, but they say that it's not uncommon for more people to move in as the semester goes on."
+    MC "I mean there are certainly some students that are nearing the ceiling I've noticed but none I can see moving here immediately."
+    GTS "I think the quarry has room for 30 people, so we have capacity to add more."
+    stop music fadeout 2.0
+    show GTS pondering at Position(ycenter=0.35)
+    "As we sat and chatted I could hear someone singing; looking around I could spot a figure walking down the road lugging a box with them."
+    UNKNOWN "She caught the Katy, and left me a mule to ride. The train pulled out, I swung on behind. Crazy 'bout that hard headed woman of mine..."
+    MC "Guess I spoke too soon."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "Her singing voice is pleasant."
+    play music Busy
+    show Jineko neutral at Position(xcenter=0.85, yalign=1.0) with dissolve
+    "The woman was built for how thin she was, and not just vertically. Dressed like she'd walked fresh out of the mines, she was hauling some sort of box while her feet kicked up what was to me a prodigious dust cloud." 
+    UNKNOWN "Afternoon folks, any idea where I can find dorm 18?"
+    GTS "Oh, it's next door."
+    "Naomi gestured to the buildings directly beside us."
+    UNKNOWN "Good, this box was getting heavy."
+    if getFlag("Meet_Jineko"):
+        UNKNOWN "Wait, didn't I meet you at the festival?"
+        MC "You were that girl Daichi was looking for, Jineko right?"
+        Jineko "The one and only."
+        "She set her box of stuff down and did a little stretch."
+        MC "Well you already know me. This is Naomi Yamazaki."
+    else:
+        $setFlag("Meet_Jineko")
+        Jineko "Well, I'm Jineko Watanabe, pleasure to be your neighbor."
+        "She set her box down and did a little stretching."
+        MC "I'm Keisuke Hotsure and this is Naomi Yamazaki."
+    show GTS happy 
+    GTS "Oh the pleasure is mine, it's nice to have a new face here."
+    Jineko "I take it that things move a little slowly down here."
+    GTS "They can, but a meditative pace is not the burden it may seem at first."
+    Jineko "Well, for my money, slow equals boring. I like some action in my life... Well, unless it's hauling something, but that's a whole other set of circumstances."
+    MCT "I hope she heard herself when she said that."
+    show GTS neutral 
+    GTS "...Well, everyone has their own pace in life." 
+    Jineko "Say, those are some fine plants you have there. Some real treats for the eyes."
+    GTS "Oh, thank you. I put a lot of time and effort into making them look their best."
+    Jineko "Have you considered getting yourself a small shelf so you don't need to lean down to water them?"
+    GTS "I would like one, but I doubt they make them tall enough."
+    Jineko "I could slap one together for you if you'd like."
+    GTS "That would be most kind, and I would gladly compensate for your labor."
+    Jineko "Don't sweat it, I love doing handy work in my spare time." 
+    MC "That could be handy around here."
+    Jineko "Why do you say that?"
+    MC "The quarry seems like a place ripe with things that could use some extra hands."
+    Jineko "I suppose that's a pretty good assessment, and that's something I can hopefully help with."
+    GTS "I don't suppose you would happen to know how to fix a minor pipe leak?"
+    Jineko "Matter of fact I do, you asking for a friend?"
+    GTS "No, I was just curious. I have one with my sink and wasn't sure how to fix it myself."
+    Jineko "I'd be happy to look at it once I'm settled in."
+    show GTS happy
+    GTS "Thank you very much."
+    show GTS neutral 
+    GTS "Er... If you don't mind me asking, is that a binder clip holding your bun up?"
+    Jineko "Oh that thing? Yeah I found it easier to locate a binder clip than a scrunchy so I just began using it daily."
+    GTS "That's... certainly resourceful."
+    Jineko "I hate to let stuff go to waste. Speaking of which, do you know where the storage vault is?"
+    show GTS pondering at Position(ycenter=0.35)
+    GTS "Storage vault?"
+    Jineko "Yeah, one of the school admins mentioned it was down here somewhere. I need to grab some wood and metal from there at some point."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "I can't recall seeing anything resembling a vault either out here or in the caverns."
+    Jineko "It's fine, I take it the government put it down here to keep it out of sight. Probably around a hidden bend or something."
+    MC "Did they give you a key or combo for it even if you found it?"
+    Jineko "They gave me a key. Hm, let me see here..."
+    "She reached into her pocket and pulled out a long chain that had a pair of keys attached to the end. The chain and keys looked a little bigger than my fingers, but in her hand they looked quite small."
+    Jineko "I'm gonna need to make another copy of this one. They said there used to be a bigger version available but it disappeared some time ago."
+    MC "I'm not sure how you lose track of something that big."
+    Jineko "I guess I'll find out. I feel like I'm the unofficial queen of misplacing things."
+    if checkAffection("BE", "<", 4):
+        MCT "I feel like Honoka might dispute that."
+    MC "I mean, I'm no clean freak myself, but I wonder why you say that?"
+    Jineko "Oh, when I'm building models I always seem to lose a little piece for a few days before it reappears. Thankfully I've gotten better, but it still happens."
+    GTS "You do modeling work?"
+    Jineko "Oh I love it. I've got the steady hands to make it work. I'm {i}mean{/i} with a pair of tweezers."
+    show GTS happy
+    GTS "It shows. Your eyebrows are immaculate."
+    Jineko "Certainly helps. And thanks for noticing, I was beginning to wonder how they came out."
+    GTS "If it's no trouble, perhaps you could help with mine? I normally used an arching tool but I... misplaced mine, unfortunately."
+    Jineko "No problem girl, I can get those things looking sharp in no time."
+    MCT "Can't say I ever expected to hear this conversation."
+    "She seemed to stifle a grin as she looked over at Naomi, then down at me."
+    Jineko "Now I gotta ask, are you two a thing?"
+    MC "Is it that obvious?"
+    Jineko "I mean {i}something's{/i} gotta be going on for anyone besides a giant to be down here."
+    "She kneeled down beside me and attempted to whisper."
+    Jineko "Nice catch, little guy."
+    show GTS pondering at Position(ycenter=0.35)
+    #(if possible a wink expression for Jineko in the future)
+    MCT "Not sure how to feel about being called that."
+    Jineko "Well, better get my stuff settled in cause I'd like to get to that vault before night time."
+    hide Jineko with dissolve
+    "She picked up her box of stuff and entered the adjacent building."
+    MC "She is certainly a character."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "She certainly is, but that's not a bad thing. Aren't a person's quirks the essence of their character?"
+    MC "Fair, fair. Did you notice that patch on her blazer?"
+    GTS "No, I must have overlooked it."
+    MC "That was the same design as the student council armband, wasn't it? Like Matsumoto-san wears..."
+    GTS "That's interesting indeed. I wonder if she's meant to be the representative for this area? I don't recall us having one at the current moment."
+    MC "Wonder how she interacts with them at school."
+    GTS "Good question... perhaps she speaks through the window."
+    MC "Guess that may be something to ask one of the other representatives if I remember."
+    stop music fadeout 2.0
+    GTS "By the way, what did you make of the way she addressed you a moment ago?"
+    MC "You mean the 'little guy' comment?"
+    GTS "Yes... that."
+    play music Sunset
+    menu:
+        "Honestly didn't care for it.":
+            jump GTS051_c2_1
+        "Not to jump to conclusions, but a little suspicious":
+            jump GTS051_c2_2
+
+label GTS051_c2_1:
+    "The usual hardness of her lips that came from her observing rudeness... didn't come so easy this time."
+    GTS "I should think not. How very familiar to act on a first meeting..."
+    MC "Yeah... She seems very sure of herself. I'll give her that. She's probably taking this whole thing instride a little {i}too{/i} well.."
+    GTS "That's rather astute. I'm inclined to agree with you."
+    jump GTS051_afterc2
+
+label GTS051_c2_2:
+    GTS "Oh? Do you mean to say you sense some surreptitiousness?"
+    MC "The wording sounds just a little bit like headgames, doesn't it?"
+    GTS "I cannot dispute that. My, my..."
+    MC "Well... maybe she's just awkward. We just met her."
+    GTS "Hm... yes, that's rather a more pleasant outlook. I look forward to becoming better acquainted."
+    $setAffection("GTS", 1)
+    jump GTS051_afterc2
+
+label GTS051_afterc2:
+    MC "She'll certainly be someone to keep an eye out for."
+    show GTS wink
+    GTS "I get the feeling she will make her presence known whether we ask her to or not."
+    MC "...Hey, by the way, you said you lost your arching tool? You could've told me, I can help you find it."
+    show GTS happy
+    GTS "Thank you, Keisuke-kun. However, I'm afraid that's not quite the whole story."
+    MCT "...I think I know how it ends, though."
+    MC "What happened to it?"
+    show GTS neutral
+    GTS "I did momentarily lose it, rather, I dropped it while using it..."
+    GTS "But as I stepped away to try and find it, I... well..."
+    MC "Oh."
+    MC "Bummer."
+    GTS "Bummer indeed."
+    "Despite myself, laughter crackled out of my closed mouth; Naomi crossed her arms and made a show of thumbing her nose at me."
+    GTS "Whatever is so funny, Keisuke-kun?"
+    MC "Just... you... kmphhh..."
+    show GTS happy
+    "This time, she joined me in cracking up a little. Even as her voice drowned the air more and more as she grew, her sweet, chirping laughter was still there, pure as ever."
+    MC "Guess that's what you'd call irony."
+    GTS "I... suppose so."
+    "Maybe involuntarily, her hand slid up her abdomen, easing it until it was still. I could actually hear her breath slowing as her face reclined back into understated contentment."
+    MC "I'm serious though... if you ever lose something again and you can't find it, gimme a call and I'm there."
+    "She nodded once, and pondered for a moment."
+    GTS "Thank you. I shall certainly bear that in mind."
+    jump daymenu
+
+label GTS052:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
