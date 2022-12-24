@@ -70,3 +70,4 @@ game/saves/persistent
 *.rpyc
 *.rpyb
 debug_log.txt
+game/.vscode

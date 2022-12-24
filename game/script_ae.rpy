@@ -3814,8 +3814,10 @@ label AE022:
     "I walked with confidence through the halls, enough so that I had a slight smirk on my face."
     "{i}Tap tap{/i}"
     "I passed by a pillar in the hall, and without stopping or turning around, I took two fingers up to my head and made an aloof salute."
-    "Yooo, Minori-san, good morning."
+    show Minori neutral with dissolve
+    MC "Yooo, Minori-san, good morning."
     Minori "E-eh?!"
+    hide Minori with dissolve
     "I turned a corner, and sure enough..."
     "{i}Tap tap{/i}"
     "I did a quick spin around a waiting Yuki-chan."

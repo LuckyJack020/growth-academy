@@ -7592,6 +7592,7 @@ label WG035:
 
     if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
         scene Auditorium with fade
+        play music Peaceful
         "After the concert I began to make my way outside from the auditorium, hoping to catch Alice before she retired to her dorm for the evening, but not before unexpectedly running into someone else."
         show Okisho neutral with dissolve
         Okisho "Glad to see you made it to the show."
@@ -7602,7 +7603,7 @@ label WG035:
         "Okisho's fat middle rippled subtly with her abrupt and booming laugh."
         Okisho "Well since we weren't going to manage to fit one inside the auditorium I had to improvise somehow."
         Okisho "That's why I like the keyboard, you can use the digital effects from it to fill in almost any gap in the instrumental repertoire."
-        MC "I'm more impressed you managed to sing so well while playing at the same time. You and Alice's voices together made for a fantastic duet— it was really the highlight of the show."
+        MC "I'm more impressed you managed to sing so well while playing at the same time. You and Alice, your voices together made for a fantastic duet— it was really the highlight of the show."
         Okisho "Hmph..."
         "Okisho let out a long sigh, a mix of exasperation and relief, before she continued."
         Okisho "Even I have to admit as much. She's an undeniable talent, there's no question about that."
@@ -19631,7 +19632,7 @@ label WG067:
     "She handed me the gift, which, if anything to go by, was quite thick— how fitting."
     MC "You know you didn't need to get me anything."
     WG "I don't want to hear it— just open it."
-    "Doing as she instructed, I tore the wrapping and bow off the object. It eventually revealed a maroon colored book titled {i}Great Stations From Around the World{i}."
+    "Doing as she instructed, I tore the wrapping and bow off the object. It eventually revealed a maroon colored book titled {i}Great Stations From Around the World{/i}."
     MC "Oh wow! I didn't think I'd see this thing again."
     show WG neutral
     WG "What do you mean?"
@@ -20566,11 +20567,11 @@ label WG071:
     "Having been given the go ahead, I was gonna go crazy. From the first time I laid eyes on her, I wanted nothing more than to give her overly-generous tummy a good rub."
     "Now that it had grown into a mountain of quivering flesh lying bare before me, I was practically foaming at the mouth."
     "Grabbing handfuls upon handfuls, I shook it back and forth, sending a tsunami of blubber surging through her belly, reverberating throughout the rest of her."
-    WG "{i}Mmmph! {w}Ohhh!{i}"
+    WG "{i}Mmmph! {w}Ohhh!{/i}"
     "I was really putting my arms into it— {w}I had to, it was so heavy and massive I needed to exert myself just to move around what I could grab onto. {w}As I pushed and pulled, the inertia of her boulder of lard slapped back onto my chest with each reverberation."
     "Each smack back into my chest felt like I was being tackled. I was getting pummled by her blubbler— and it was so fucking hot."
     show WG surprised
-    WG "{i}Ohh! {w}Ohhh! {w}Oh god yes!{i}"
+    WG "{i}Ohh! {w}Ohhh! {w}Oh god yes!{/i}"
     show WG aroused
     "Abandoning all pretense, Alice's eyes began to roll into the back of her head as she entered the throes of ecstasy. {w}But I wasn't about to let up."
     "Handfuls weren't going to cut it, I was going for armfuls at this point. Even fully outstretched, I could not maintain an adequate hold on the sheer girth of her flabby wrecking ball of a gut."
@@ -21191,7 +21192,7 @@ label WG073:
     WG "I was at the nurses' office two days ago for an evaluation. They had me get on the scale, as per usual. Not that I even want to know, but I figure there's no point in sticking my head in the sand just hoping that it will all go away."
     MC "What did it say, if you don't mind me asking?"
     show WG doubt
-    WG "{i}{b}Error{/i}{/b}. That's what it said. {w}I've completely maxed out the school's scale, which means even this place had not thought to accommodate someone of my size."
+    WG "{i}{b}Error{/b}{/i}. That's what it said. {w}I've completely maxed out the school's scale, which means even this place had not thought to accommodate someone of my size."
     show WG stern
     MCT "Holy shit! I've seen the scales they have in the office and they look pretty damn sturdy. That's just crazy to even think about."
     MC "What did the nurse say?"
@@ -21232,7 +21233,7 @@ label WG073:
     show WG stern
     pause 1
     show WG angry
-    WG "It's all because I'm so...{w}so...{w}{i}{b}FAT{/i}{b}! {w}It's consuming everything! Or at least it would if I wasn't already! {w}It's absurd! How is this even happening to me!?"
+    WG "It's all because I'm so...{w}so...{w}{i}{b}FAT{/b}{/i}! {w}It's consuming everything! Or at least it would if I wasn't already! {w}It's absurd! How is this even happening to me!?"
     show WG surprised-2
     MC "..."
     play music Memories
@@ -21406,6 +21407,8 @@ label WG074:
     "I wasn't ready to give up just yet, but I was certainly second guessing myself at this point."
     scene black with fade
     pause 1
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setNatsOutfit(OutfitEnum.GYM)
     scene Gym with fade
     play music MC
     "I made use of my afternoon off to go to the gym. I figured a solid workout would help do some good, help clear my head, or at least serve as a distraction."
@@ -21413,9 +21416,9 @@ label WG074:
         "I wouldn't consider myself to be a regular here exactly, but I knew who all the regulars were."
     else:
         "I definitely wasn't a regular at the gym, but I didn't need to be to know who I'd bump into here."
-    #show Hageshi neutral with dissolve
+    show Hageshi neutral with dissolve
     "Hageshi-sensei was over in the corner pounding on a speed bag so fast it sounded like a herd of galloping horses. He didn't even look like he was trying that hard. The guy didn't even bother to change out of his school clothes."
-    #hide Hageshi with dissolve
+    hide Hageshi with dissolve
     show FMG neutral at Position(xcenter=0.75, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
@@ -21434,11 +21437,11 @@ label WG074:
     with dissolve
     "Moving on to mind my own business, I did a circuit of between the treadmill, the bike, some machines, and free weights. I didn't have anything specific in mind other than to try to hit a total body workout."
     $setSkill("Athletics", 1)
-    "It worked well enough. I felt like I hit that sweet spot between feeling energized and worn out from a good workout. I threw my stuff in my gym back and proceeded to head out. On my way to the lockers I noticed Akira and Natsuko were finishing up too."
+    "It worked well enough. I felt like I hit that sweet spot between feeling energized and worn out from a good workout. I threw my stuff in my gym bag and proceeded to head out. On my way to the lockers I noticed Akira and Natsuko were finishing up too."
     show FMG neutral at Position(xcenter=0.75, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
-    FMG "I still can't get over you drinking protein shakes. The taste is just... ew"
+    FMG "I still can't get over you drinking protein shakes. The taste is just... ew."
     show Natsuko neutral
     Natsuko "Maybe if you drank them instead of that other junk you put into your body—"
     show Natsuko flex
@@ -21553,7 +21556,7 @@ label WG074:
     play music WGAlt
     WG "Let's reconsider that, dear."
     show WG neutral
-    extend " Sakura, I know it's rather short notice, but could you whip up something for Keisuke. He doesn't eat that much anyway."
+    extend " Sakura, I know it's rather short notice, but could you whip up something for Keisuke? He doesn't eat that much anyway."
     show Sakura happy
     Sakura "Sure thing. No problem."
     hide Sakura with easeoutright
@@ -22172,12 +22175,12 @@ label WG076:
     MCT "Oh it's Aida. I guess that solves that mystery. {w}Aida certainty isn't the pushy type, but something sounds a bit urgent in her tone."
     MC "Hey Aida. No problem. What's up?"
     PRGCell "Alice asked me to call you. Could you please come to our dorm as soon as you can?"
-    "The gears were starting to turn in my head. Why would Alice tell Aida to tell me this? I was starting to get worried"
+    "The gears were starting to turn in my head. Why would Alice tell Aida to tell me this? I was starting to get worried."
     MC "Is everything alright? Is Alice okay?"
     PRGCell "S-She's not hurt... or anything, but you really should come quick. It's hard to explain..."
     "This was sounding awfully fishy, but whatever it was, I had a feeling it wasn't good."
     MC "Tell her to hang tight, I'll be right over."
-    PRG "Thanks, Keisuke."
+    PRGCell "Thanks, Keisuke."
     "{i}*click*{/i}"
     scene Dorm Exterior with fade
     play music Winter
@@ -23351,7 +23354,7 @@ label WG078:
     show FMG happy at Position(xcenter=0.50, yalign=1.0)
     show Tomoko happy at Position(xcenter=0.15, yalign=1.0)
     with vpunch
-    All "{i}{b}SURPRISE!{/i}{/b}"
+    All "{i}{b}SURPRISE!{/b}{/i}"
     All "{b}HAPPY BIRTHDAY ALICE!{/b}"
     hide FMG
     hide BE
@@ -25878,7 +25881,7 @@ label WGFMG003:
     show FMG happy
     FMG "Totally! We'll have to try it again some other time."
     show WG haughty
-    WG "{size=-6}...Let us hope not.{/size-6}"
+    WG "{size=-6}...Let us hope not.{/size}"
     hide WG with dissolve
     show FMG neutral
     FMG "I should probably get going, and get dried off."

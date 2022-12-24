@@ -13277,7 +13277,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
     MC "Excuse me for being concerned. {w}I take it back. I hope you didn't pack anything now."
     FMG "Pfft! You just want to see me with less clothes."
     MC "That's just a side benefit of jinxing you."
-    "{i}bzzt... bzzt...{i}"
+    "{i}bzzt... bzzt...{/i}"
     FMG "I bet that's Alice. Probably to tell us not to be late."
     MC "It's her alright."
     if isEventCleared("FMGWG004"):
@@ -13326,7 +13326,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         MC "Why is that automatically your first assumption? The more likely possibility is that you just suck."
         FMG "If I find out you've been cheating, I'm going to have Alice sit on your head."
         MCT "Not that I think she would... but I'm going to let her win the next one just in case."
-        "{i}bzzt... bzzt...{i}"
+        "{i}bzzt... bzzt...{/i}"
         MC "Looks like you got a text."
         WGCell "<I'll be arriving in a couple of minutes.>"
         show FMG happy
@@ -13685,7 +13685,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         "Both of them were practically quaking in fear at the prospect of tackling this fifth bowl. They were eating slow, even by my standards, but to their credit, they both steadily whittled away at their bowls."
         show FMG sad
         show WG neutral
-        FMG "{size=-6}{i}Ughhhh!{/i} I don't think I'm gonna make it, Kei-kun.{/size-6}"
+        FMG "{size=-6}{i}Ughhhh!{/i} I don't think I'm gonna make it, Kei-kun.{/size}"
         MC "Oh come on, you have like two bites left and some broth, just slurp the rest down and you'll be finished."
         MCT "Hopefully not finished all over the carpet afterward either."
         show FMG happy
@@ -13819,7 +13819,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         show FMG angry-2
         FMG "Those don't count. You were cheating!"
         MC "S-A-L-T-Y."
-        "{i}bzzt... bzzt...{i}"
+        "{i}bzzt... bzzt...{/i}"
         MC "That has to be Alice... {w}Yep, it is. I'm surprised how fast time flew."
         show FMG neutral
         FMG "At least it means we're done playing these awful games."
@@ -17200,7 +17200,7 @@ label FMGWG001:
     FMG "Wouldn't be surprised, their chefs aren't exactly winning any awards for niceness."
     WG "That is certainly the truth. I knew I couldn't be the only one that noticed that."
     show WG neutral-2
-    extend "Are you getting anything Keisuke?"
+    extend " Are you getting anything Keisuke?"
     MC "I'll just take a regular coffee."
     Haruko "Sure thing!"
     show WG neutral
@@ -17290,7 +17290,7 @@ label FMGWG001:
     show FMG neutral
     extend " No sense in planning everything out when everything's already been turned on its head. I figure it's better to just ride this out first and see how things go."
     show WG neutral-2
-    WG "I suppose you do have a point"
+    WG "I suppose you do have a point."
     FMG "Now for this next question, I want you to be honest."
     show FMG happy
     FMG "Is it true that Americans deep fry soda and junk food?"
@@ -17371,8 +17371,9 @@ label FMGWG001:
     WG "It's no trouble. Pleasant travels, Akira."
     FMG "You too. Later"
     WG "I'll see you around as well, Keisuke."
-    hide FMG with dissolve
-    show WG worried
+    hide FMG
+    hide WG
+    with dissolve
     "I didn't really have anything as seemingly urgent as Akira or Alice, so I just took my time to finish the rest of my coffee."
     "{i}*Achoo*{/i}!"
     MC "?"

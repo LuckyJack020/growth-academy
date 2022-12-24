@@ -34,6 +34,7 @@ init python:
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
+    charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM']
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
@@ -205,7 +206,7 @@ init python:
         NONE, GIRL, ALL = range(3)
 
     #NONE: Not a priority. Other events available.
-    #GIRL: Priority. Other events featuring the first girls in the girllist are not available.
+    #GIRL: Priority. Other events featuring the first girls in the charlist are not available.
     #ALL: Priority. Other events not available, no matter who's in them.
 
     class ConditionEqualityEnum:
@@ -425,7 +426,7 @@ init python:
         opteventpool = []
         allPriority = getAllPriorityEvents()
         if not allPriority:
-            for g in girllist:
+            for g in charlist:
                 event, opt = getEventForGirl(g) #returns an event and a list of available optional events
                 if event != None:
                     eventchoices.append(event)
@@ -458,7 +459,7 @@ init python:
 
     #Other misc functions
     def setAffection(girl, val):
-        if not girl in girllist and not girl == "RM" and not girl == "TM":
+        if not girl in charlist:
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
@@ -473,13 +474,13 @@ init python:
         showNotification(img)
 
     def getAffection(girl):
-        if not girl in girllist and not girl == "RM" and not girl == "TM":
+        if not girl in charlist:
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
         return affection[girl]
 
     def checkAffection(girl, exp, checkVal):
-        if not girl in girllist and not girl == "RM" and not girl == "TM":
+        if not girl in charlist:
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         if exp == ">":

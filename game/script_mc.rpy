@@ -857,12 +857,14 @@ label global000_sitmenu:
 label global000_sit_c1:
     "I decided to sit in the front row, where the principal could see me. If I ever needed to speak with him, recognizing my face might make him better disposed toward me."
     MCT "This is a good seat... Got spaces on either side of me."
+    play sound Boing
     "{color=#FF69B4}*FLUMPH!*{/color}"
     MCT "!!"
     MCT "I... Is that..."
     show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     MCT "Shiori's butt is overflowing her seat and pushing against me...{w} I can't say anything about it with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
+    play sound Boing
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
     show WG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
@@ -5523,7 +5525,7 @@ label MC007:
     show WG haughty
     extend " but I think I can spare the time to work this in today."
     show WG happy-2
-    extend "Especially if cupcakes are involved."
+    extend " Especially if cupcakes are involved."
     show FMG happy
     FMG "That's what I figured."
     show WG doubt
@@ -5586,7 +5588,7 @@ label MC007:
     RM "You can never be too careful. Now then..."
     show RM smug
     RM "Operation \"Stakeout at the Bakeout\" starts now!"
-    MCT "Groan inducing puns aside, at this point I was just glad he didn't expect me to wear one of those pairs of glasses with the fake nose."
+    "Groan inducing puns aside, at this point I was just glad he didn't expect me to wear one of those pairs of glasses with the fake nose."
     scene black with fade
     pause 1
     scene Town with fade
@@ -5777,7 +5779,7 @@ label MC007:
     show WG haughty
     WG "I'd highly recommend so."
     show WG neutral
-    extend "Curious, if I may ask, why did you pick cupcakes?"
+    extend " Curious, if I may ask, why did you pick cupcakes?"
     show FMG sad
     "Akira put down the cupcake she was eating and looked down at it before answering."
     FMG "Growing up, whenever I was really down, my mom would always bake cupcakes. She would do it all by hand, and it made it that much more tasty."
@@ -5801,7 +5803,7 @@ label MC007:
     show WG surprised-2
     WG "Oh you're right."
     show WG neutral-2
-    extend "Well, in that case, go on ahead. I'll handle the check."
+    extend " Well, in that case, go on ahead. I'll handle the check."
     show FMG surprised
     FMG "What? But I-"
     show WG happy
@@ -5809,7 +5811,7 @@ label MC007:
     show FMG happy
     FMG "All right, that's cool. I hope we can do this again."
     WG "As do I. I'll see you later, Akira."
-    FMG "You too. Later"
+    FMG "You too. Later."
     hide FMG with dissolve
     show WG worried
     WG "{i}Sigh{/i}. You had a potential sale there Nikumaru, until that personal matter cropped up..."

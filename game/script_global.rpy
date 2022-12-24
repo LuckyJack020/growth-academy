@@ -1137,7 +1137,7 @@ define audio.Bell = "Audio/SFX/sfx_bell.mp3"
 define audio.ReleaseArrow = "Audio/SFX/sfw_releasearrow.wav"
 
 init 1 python:
-    eventlibrary['MC001'] = {"name": "Sharpening the Senses", "girls": ["MC", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.NOEVENT, "global005"]]}
+    eventlibrary['MC001'] = {"name": "Sharpening the Senses", "girls": ["MC", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
     eventlibrary['MC002'] = {"name": "Warmth of a Heart", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,                      "location": "facultyroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "MC001"]]}
     eventlibrary['MC003'] = {"name": "Will She Ever Grow up?", "girls": ["TM", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dormexterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "global005"]]}
     eventlibrary['MC004'] = {"name": "Summary", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "MC003"]]}
