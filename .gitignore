@@ -71,3 +71,4 @@ game/saves/persistent
 *.rpyb
 debug_log.txt
 game/.vscode
+game/.vscode/settings.json
