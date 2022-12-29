@@ -9284,9 +9284,10 @@ label PRG026:
     "Aida's voice was wavering, her tone sounding thick and shaky."
     pause .75
     PRG "... Open your eyes, Hotsure-san."
+    scene Dorm PRG with fade
     "My eyes opened, and as my vision readjusted, I looked up."
-    show PRG sad
-    pause 2
+    pause 1
+    show PRG sad with dissolve
     MCT "... What the...?"
     "I stared at Aida."
     MC "Wha- where... what... what happened?"
@@ -10112,12 +10113,13 @@ label PRG027:
             show GTS surprised at Position(xcenter=0.75, yalign=1.0) with easeinright
             GTS "My apologies, but what's the matter?"
             hide FMG
-            show BE surprised
+            show BE surprised at Position(xcenter=0.25, yalign=1.0)
             BE "I need answers!"
             hide GTS
             show WG angry at Position(xcenter=0.75, yalign=1.0)
             WG "Shh!"
-            show FMG surprised-2
+            hide BE
+            show FMG surprised-2 at Position(xcenter=0.25, yalign=1.0)
             FMG "So do I!"
             show PRG sad
             hide FMG
@@ -10157,7 +10159,6 @@ label PRG027:
             hide GTS
             hide FMG
             with dissolve
-            play sound Bell
             stop music fadeout 1.0
             "The bell rang out over the chaos, and everyone scrambled to their seats."
             show HR neutral with dissolve
@@ -10313,6 +10314,7 @@ label PRG027:
             BE "True."
             BE "Anyway. Night, Kei-chan. Sleep tight."
             MC "You too, Honoka."
+            hide BE with dissolve
             "The two of us parted ways, both of us heading off to our respective dorms."
             "And as I walked back, I thought about Aida, and what was coming our way."
             "And all things considered, I didn't feel... horrified."
@@ -21787,9 +21789,7 @@ label PRG041:
     "I turned to head back in and spotted a laundry hamper on the couch in the room between the two dorms, some towels and the like piled inside."
     "I walked to it and snagged a washcloth from among them, and ran water over it in the sink."
     "I wrung it out in the sink, then folded it over itself and walked back into Aida's room."
-    scene Dorm PRG
-    show PRG worried
-    with fade
+    show PRG worried with dissolve
     "Aida sat back up a bit as I came in, and held up the cloth."
     MC "Here. Hold still."
     "I sat back down beside her and placed the cloth on her forehead, under her hair that usually covered it."
@@ -22294,10 +22294,10 @@ label PRG042:
     scene black with fade
     play music Beach
     pause .25
-    scene Beach
-    show PRG surprised
-    with fade
-    pause .25
+    scene Beach with fade
+    pause .5
+    show PRG surprised with dissolve
+    pause .5
     PRG "Oh wow..."
     MC "Holy shit..."
     PRG "This is gorgeous..."
@@ -22365,7 +22365,7 @@ label PRG042:
     "... If not for the intense excitement to see Aida in a swimsuit."
     "I glanced over at everything she'd brought laid out on the towel."
     "Aside from her food, which was covered, she'd brought her sunscreen, a metal bottle of... something, her wallet, her phone, and some extra towels."
-    "My eyes fell on her phone. Her incredibly out of date phone."
+    "My eyes fell on her phone, her incredibly out-of-date phone."
     MCT "Funny. I know people who have panic attacks if their phone isn't pressed up against their thigh in their pocket."
     MCT "Yet Aida just leaves hers sitting here by me."
     MCT "Shows she trusts me, I suppose."
@@ -23023,7 +23023,7 @@ label PRG042_A:
     MC "I've got an extra shoulder, if you'd like a pillow."
     show PRG unique-happy
     pause .5
-    show PRG unique-happy with altMove(1.0, 0.65)
+    show PRG unique-happy at altMove(1.0, 0.65)
     "Aida looked to my shoulder, then adjusted herself a bit and laid her head down on my shoulder, shifting a bit until she was comfy."
     MC "There."
     PRG "..."
@@ -23705,6 +23705,7 @@ label PRG043:
     scene Town with fade
     play music BrightLights
     MC "Okay. We had burgers last time, so I think that's out."
+    show PRG neutral with dissolve
     PRG "I wouldn't mind going back there, but we can try something different, if you'd like."
     "I glanced around from the bus stop to see what else we had."
     "Truth be told, I was actually hungry for a burger again. But, I figured Aida would want to try something else. Eating at the same spot could get a little stale, even though it had been a little while since we'd last been there."

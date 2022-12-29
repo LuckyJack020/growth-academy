@@ -22159,7 +22159,7 @@ label WG004M:
     jump daymenu
 
 label WG076:
-    $setProgress("WG", "WG078")
+    $setProgress("WG", "WG077")
     scene Dorm Interior with fade
     play music Peaceful
     "I was sitting in my dorm, enjoying a bit of free time, finally making some time to play some games on my PC."
@@ -22821,7 +22821,7 @@ label WG077_Soup:
         show WG happy
         "I took Alice by her hand to guide her to a seat (okay, three seats) at the high top counter. Walking behind her, I carefully wrapped a cloth bib around her neck, knowing soup was a precarious dish for clothing with a chest as ample as hers."
         show WG neutral
-        "Picking up the soup spoon, Alice dug in for her first bite, a long string of Gruyère cheese attempting to keep itself tethered to the boil as she brought it to her lips."
+        "Picking up the soup spoon, Alice dug in for her first bite, a long string of Gruyère cheese attempting to keep itself tethered to the bowl as she brought it to her lips."
         show WG happy
         WG "Mmm. It's very good, Dear."
         show WG neutral
@@ -22850,7 +22850,7 @@ label WG077_Soup:
         jump daymenu
     else:
         $setFlag("WG077_Fail")
-        MC "Let's keep it simple sounds easy. I'll go with the French onion soup."
+        MC "Let's keep it simple. Soup sounds easy. I'll go with the French onion soup."
         show Takamura happy
         Takamura "It isn't the most complex recipe. As long as you don't burn the onions while cooking them down, there isn't too much else that can go wrong."
         MCT "Nice, easy-peasy. I can get something nice for Alice without having to break my back to do it."
@@ -22868,7 +22868,7 @@ label WG077_Soup:
         "She said it wasn't necessary to do that since the onions will completely break down by the time the dish is done cooking. But I found it wasn't that much harder to do it that way if you know what you're doing with a knife."
         MC "Alright, add some butter and a pinch of salt to get these sautéing first."
         MCT "Hmm, probably should add more butter, this is for Alice after all."
-        "The onions took a while to cook down so I hit them with a bit of balsamic vinegar to help quick the process."
+        "The onions took a while to cook down so I hit them with a bit of balsamic vinegar to help speed up the process."
         "Soon enough, they were golden brown and almost mushy like Takamura-sensei described."
         MC "Time to deglaze the fond off the bottom of the pot to get all that flavor back into the onions. Better turn off the burner before dropping in the sherry though just in case."
         "After that it was pretty simple to just add a liter of chicken stock and a liter of beef broth. This recipe was already pretty easy but getting to use homemade stock left over from other cooking club members felt like it was on cruise control at this point."
@@ -22896,7 +22896,7 @@ label WG077_Soup:
         show WG happy
         "I took Alice by her hand to guide her to a seat (okay, three seats) at the high top counter. Walking behind her, I carefully wrapped a cloth bib around her neck, knowing soup was a precarious dish for clothing with a chest as ample as hers."
         show WG neutral
-        "Picking up the soup spoon, Alice dug in for her first bite, a long string of Gruyère cheese attempting to keep itself tethered to the boil as she brought it to her lips."
+        "Picking up the soup spoon, Alice dug in for her first bite, a long string of Gruyère cheese attempting to keep itself tethered to the bowl as she brought it to her lips."
         show WG happy
         WG "Mmm. It's very good, Dear."
         show WG neutral
@@ -23188,7 +23188,7 @@ label WG077_Beef:
         MC "My pleasure."
         "I made an entire pot of stew that was more suitable as a meat pie filling in texture. This was not a light dish in any sense, and she went on to polish off the entirety of it. It was impressive honestly, but not as impressive as what came next."
         show WG neutral-2
-        WG "This made for an exquisite main course. This worked out well with it being Sakura's night off. I had braced myself for another one of their bland dinner offerings this evening, so this was such a welcome surprise."
+        WG "This made for an exquisite main course. This worked out well with it being Sakura's night off. I had braced myself for another one of the cafeteria's bland dinner offerings this evening, so this was such a welcome surprise."
         WG "I don't suppose you made dessert?"
         MCT "Egads woman! I'm only one man."
         MC "Uh, sorry. I guess I should have planned on allocating more time."
@@ -23218,7 +23218,7 @@ label WG077_Beef:
         "I felt bad for holding her up because she mentioned having a lot of papers to grade so I told her I could handle it. Besides, if I just made her do all the work Alice wasn't going to be impressed one bit with the effort put into this."
         "I wanted to show her I cared, and what better way to do that than with food? {w}Sure, I might be a little out of my comfort zone with this, but if the dish isn't a show stopper, she isn't going to be pleased."
         "Beef Bourguignon (still not sure if I was saying it properly) sounded like it was the best dish of the choices Takamura-sensei offered, and I only wanted to give Alice the best."
-        MCT "I mean I had to try, right?"
+        MCT "I mean I have to try, right?"
         MC "Alright here, says to cut the meat up into chunks, whatever that means. I guess the size isn't that important."
         MC "Okay, set that aside and get some bacon sizzling in the hot pan. Bacon makes everything taste better, that's just basic science."
         MC "Now it says to cook the beef? I thought it was going to cook in the liquid? Why would I cook it twice? {w}Whatever, I can work on cutting up the vegetables and get those going."
@@ -23329,7 +23329,7 @@ label WG078:
     WG "I suppose it was inevitable I would acquiesce to your repeated requests."
     MC "I know it might not be your cup of tea, but there's few other better activities on a cold winter day when the snow is just blowing and there isn't enough yet to make a snowman."
     show WG neutral
-    WG "I see your point. An indoor activity would be best for this particular occasion. But let's not tarry and further like we have been doing. I'm already starting to get hungry. I'm assuming the arcade has some vending machines nearby?"
+    WG "I see your point. An indoor activity would be best for this particular occasion. But let's not tarry any further like we have been doing. I'm already starting to get hungry. I'm assuming the arcade has some vending machines nearby?"
     MC "Yup. Don't worry, I got the snacks covered for our date. And look, we're already at the kitchen, might as well go in and get it while we're here."
     show WG doubt
     WG "Alright, if it will save time later, I guess."
@@ -23419,7 +23419,7 @@ label WG078:
     show WG neutral-2
     WG "A pleasure, Tozakura-san. Let's suspend the formalities for the occasion. You can just call me Alice. It's nice to finally meet you, Kanami. I've heard such nice things from Aida and Sakura."
     show WG haughty
-    WG "I must admit, I have some high standards for these cupcakes, considering you are the head of the cooking club and are working with such great talents as Aida and Sakura."
+    WG "I must admit, I have some high standards for these cupcakes, considering you are one of the standout members of the cooking club and are working with such great talents as Aida and Sakura."
     show WG neutral-2
     Kanami "I was really just a helping hand for the most part. Though I do hope you'll enjoy the recipe I contributed."
     show Sakura happy
@@ -23893,7 +23893,7 @@ label WG079:
     WG "I'd never had the dish since, but I still remember that feeling when something so special was made for me..."
     show WG sad
     WG "Not unlike today, now that I think about it."
-    "It was one of the things that made me melt for her. Despite being used to the finer things in life, and tough exterior that didn't always reflect the person I'd come to know so closely,"
+    "It was one of the things that made me melt for her. Despite being used to the finer things in life, and the tough exterior that didn't always reflect the person I'd come to know so closely,"
     "above all else, she genuinely appreciated the sincerity and effort of her friends and family."
     MC "Maybe I could make it for you sometime?"
     show WG haughty
@@ -23919,7 +23919,7 @@ label WG079:
     WG "What's that?"
     MC "I know you've expressed interest in me showing you some of my artistic talent. Well, here it is."
     play music Bittersweet
-    show cg WG079_drawing1 with fade
+    show cg WG079_drawing1 with dissolve
     pause 1
     MC "It's a drawing of you."
     WG "Oh my goodness Dear... {w}Is this from when we first met?"
@@ -23948,12 +23948,12 @@ label WG079:
         WG "What do you mean?"
         MC "That wasn't the only drawing of you I did."
         play music LoveC
-        show cg WG079_drawing2 with fade
+        show cg WG079_drawing2 with dissolve
         MC "Here."
         pause 2
         "Alice was seemingly at a loss for words. Her silence was agonizing. I was kicking myself for letting my better judgment slip in showing her this drawing, even though it had been the one I wanted to show her."
         "I felt just awful that I managed to ruin her birthday by reminding her all over again just how fat she's become. {w}Even if it only endeared her to me more."
-        WG "Keisuke... It's gorgeous! {w}You made {i}me{/i} look gorgeous! I look like loyalty in this drawing."
+        WG "Keisuke... It's gorgeous! {w}You made {i}me{/i} look gorgeous! I look like royalty in this drawing."
         WG "I heard you had a talent for drawing but I had no idea you were this skilled of an artist."
         #show WG sad
         WG "{i}Sniff... sniff...{/i}"
@@ -24001,7 +24001,7 @@ label WG079:
         "Taking Alice by the hand, I led her to her bed. Taking both hands, I helped her gently descend to sit on her mattress. Coming around to the other side of the bed. I then helped assist her in getting both of her legs up onto the mattress."
         show WG neutral-2
         "After removing her shoes, I made sure to stack up her pillows behind her so she could lean back, while still being propped up."
-        "Despite me being taller, I couldn't help but notice our sitting heights were quite different once I settled in next to her. The indentation in her bed she created from her sheer mass practically sucked me in towards her as I couldn't help but lean."
+        "Despite me being taller, I couldn't help but notice our sitting heights were quite different once I settled in next to her. The indentation in her bed she created from her sheer mass practically sucked me in towards her as I couldn't help but leanin."
         "It was perfect."
         MC "Comfy?"
         show WG happy

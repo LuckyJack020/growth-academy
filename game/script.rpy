@@ -34,7 +34,7 @@ init python:
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
-    charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM']
+    charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM', 'faculty']
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
