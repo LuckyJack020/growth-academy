@@ -69,6 +69,7 @@ init python:
         'nurseoffice': ("school", (590,590)),
         'okinawa': ("town", (1100,650)),
         'office': ("school", (590,590)),
+        'park': ("town", (1100,650)),
         'pool': ("school", (440,165)),
         'roof': ("school", (750,375)),
         'schoolfront': ("school", (570,620)),

@@ -15439,7 +15439,7 @@ label FMG077:
     scene black with fade
     pause 1
     scene Dorm FMG with fade
-    play music FMG
+    play music TwilightDusk
     $setFMGOutfit(OutfitEnum.NUDE)
     "I let myself in and made myself right at home. Well, as best as I could, that is. It certainly got easier the further away I got from Chibuki's side of the dorm."
     FMG "Kei-kun, is that you?"
@@ -15994,6 +15994,7 @@ label FMG079:
 label FMG080:
     $setProgress("FMG", "FMG081")
     scene Gym with fade
+    play music FMG
     $setFMGOutfit(OutfitEnum.GYM)
     MC "Could you use any more weights?"
     show FMG neutral with dissolve
@@ -16384,6 +16385,7 @@ label FMG081:
     pause .5
     $setTime(TimeEnum.EVE)
     scene Library with fade
+    $setFMGOutfit(OutfitEnum.DEFAULT)
     play music Natsuko
     "Don't tell Akira {w}but I went to go bother Nat. I made the executive decision to play it safe and asked her to play some chess with me... which worked a little too well."
     show Natsuko neutral with dissolve
@@ -16442,10 +16444,10 @@ label FMG081:
     MC "Maybe she's not all ice after all."
     scene black with fade
     pause .5
-    $setFMGOutfit(OutfitEnum.DEFAULT)
     scene Dorm Hallway
     show FMG neutral
     with fade
+    play music FMG
     FMG "Nat's going to loan me a dress? Natsuko? We're talking about the same person, right?"
     MC "Yea, I couldn't believe it either."
     FMG "I didn't have that on my bingo card..."
