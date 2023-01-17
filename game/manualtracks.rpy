@@ -506,11 +506,22 @@ init python:
         path = "Audio/BGM/theme_clearskies.ogg",
         priority = 2,
         author = "Post-Bop",
-        description = "Uplifting THeme",
+        description = "Uplifting Theme",
         cover_art = False,
         unlocked = True
     )
     ost.manualDefineList.append(theme_ClS)
+
+    theme_NbS = ost.soundtrack(
+        name = "Nembutsu",
+        path = "Audio/BGM/scene_nembutsu.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Morning Mist",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_NbS)
 
     ## Base Template
     ######################################

@@ -15860,7 +15860,7 @@ label FMG079:
     show FMG neutral
     FMG "Alright, alright. It's my fault anyway, got myself worked up."
     show FMG aroused
-    "She put me down, but not before she stuffed my face in my breasts and bounced her chest a few more times."
+    "She put me down, but not before she stuffed my face in her breasts and bounced her chest a few more times."
     MC "Horny today, aren't we?"
     show FMG neutral
     FMG "I'm sorry, I can't help myself. {w}I'm going to get dressed and I'll grab your stuff."
