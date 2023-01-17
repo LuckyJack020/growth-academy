@@ -9658,7 +9658,7 @@ label FMG056:
         Natsuko "I'll take that as a no."
     Natsuko "Hotsure-san, if you're serious about getting stronger, I'll invite you to train with someone who actually knows what they're doing."
     show FMG angry
-    Natsuko "I promise better results一 and more pleasant company."
+    Natsuko "I promise better results— and more pleasant company."
     FMG "As if you know more. You couldn't even do a lat spread before I came along."
     show FMG flex #flex-2
     FMG "But I can't blame you, not everyone can be good at everything."
@@ -9755,7 +9755,7 @@ label FMG056:
     play sound Crash
     MCT "Wait? What the hell just happened?"
     "It was almost too fast to see, but the results spoke for themselves."
-    "Sensing Akira had finally wore herself down一 taking advantage of her lapse in focus from fatigue一 in a split second, Natsuko rolled her wrist over the top of Akira's."
+    "Sensing Akira had finally wore herself down— taking advantage of her lapse in focus from fatigue— in a split second, Natsuko rolled her wrist over the top of Akira's."
     show FMG surprised
     "Whipping Akira's entire body in the opposite direction, she slammed Akira's hand down on the table so hard it put a dent in the steel table like someone took a sledge hammer to it for hours."
     show FMG angry
@@ -9789,7 +9789,7 @@ label FMG056:
     FMG "Whew, well I got my upper body workout in with all of that. They may not look like noodle arms but they sure feel like it now."
     MC "So we're done for the day?"
     FMG "I'm done for the day. You still have twelve sets of curls left to do before we get to doing dips and skull crushers."
-    MC "What are skull crushers anyway? Is that where you put my head between your thi一"
+    MC "What are skull crushers anyway? Is that where you put my head between your thi—"
     FMG "No! Stop asking about that!"
     MCT "One day..."
     $setSkill("Athletics", 2)
