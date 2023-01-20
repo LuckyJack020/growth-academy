@@ -17602,7 +17602,7 @@ label PRG035B_Call:
     show PRG neutral
     PRG "O-Okay, H-Himari."
     MomCell "Perfect. Now, where are you from, Kodama-san?"
-    PRG "Um... Aioi, originally. I moved to Himeji when I was seven."
+    PRG "Um... Himeji, originally. I moved to Aioi when I was seven."
     MomCell "That's such a nice area. I haven't been myself, but I've heard from a few friends how beautiful it is there."
     PRG "I-It is really pretty..."
     MomCell "Wonderful. So, how long have you two been together?"
@@ -23620,7 +23620,7 @@ label PRG042_B:
     jump daymenu
 
 label PRG043:
-    $setProgress("PRG", "PRG044")
+    $setProgress("PRG", "PRG043B")
     scene Dorm Exterior with fade
     play music Peaceful
     "I came into the early afternoon sun and exhaled a raspy breath, trying to wake myself up."
@@ -24131,7 +24131,7 @@ label PRG043:
     MC "You know, something that a boyfriend does for his girlfriend to make her all overflowey with happiness."
     MC "It makes a guy's heart feel good."
     show PRG blush-2
-    "Aida held my hand tighter, and sat right up against me until the bus pulled up, and all the way back to the dorms."
+    "Aida held my hand tighter, and sat right up against me until the bus pulled up, and all the way back to campus."
     scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
     stop music fadeout 0.5
     "The scene you just finished marks the current end of Aida's route."

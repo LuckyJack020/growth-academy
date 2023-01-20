@@ -11426,12 +11426,12 @@ label FMG064:
     with dissolve
     pause .5
     FMG "What are you thinking about?"
-    "Even at her size she somehow is able to sneak up on me."
+    "Even at her size, she's still somehow able to sneak up on me."
     MC "Ah!"
     MC "Can you stop doing that? How do you and Nat just appear out of thin air???"
     show FMG neutral with dissolve
     FMG "I grabbed some chips from the cabinet behind you. Hell, I even walked past you— not my fault you're lost in your thoughts."
-    MC "Before we continue, were those the last bag?"
+    MC "Before we continue, was that the last bag?"
     show FMG happy
     FMG "Yes. Would you like one?"
     MC "Uuuuuuh, yeaaaah."
@@ -11442,18 +11442,19 @@ label FMG064:
     MCT "{i}Relaxed{/i} she says as she benches a small car when she's with me."
     FMG "...With her, I can go harder. It's a great mix-up and it keeps the gym fresh for me."
     MC "That's awesome. I think I speak for everyone when I say it's great to see you two getting along."
-    FMG "She's... something— I'll say that, but she is good company. {w}It's funny, while we were doing our routine, this guy came up to us trying to hit on us. Real small dude, shorter than you. He definitely didn't have a muscle or height factor."
-    FMG "Nat and I were a little taken back at first. We keep to ourselves in the gym a majority of the time. Some random dude coming over to hit on us isn't on the list of things we want when working out, ruins our flow that type of thing."
-    MC "Yeah, I get that."
-    FMG " The whole thing just felt kinda weird... I guess that's what I'm trying to get at."
-    FMG "Anyway, it was pretty obvious this dude had no game. He started off by saying that and this is a direct quote, \"Muscles don't look manly on you, girls.\""
+    FMG "She's... something— I'll say that, but she is good company. {w}It's funny, while we were doing our routine, this guy came up to her and started shooting his shot. Real small dude, shorter than you. He definitely didn't have a muscle or height factor."
+    MC "Did she choke slam him?"
+    FMG "Nah, nothing like that. However, I am impressed with how well she kept her cool and {i}didn't{/i} fatality injury the poor dude at first."
+    MC "Ending that sentence with \"at first\" makes it sound like he most definitely did get choked slammed."
+    FMG "Yeaaa... about that."
+    FMG "It was pretty obvious this dude had no game. He started off by saying and this is a direct quote \"Muscles don't look manly on you, Red.\"" 
     show FMG angry-2
-    extend " Like wow, thanks, bozo."
+    extend " Like wow, bro you have such a way with words."
     show FMG angry-3
-    FMG "Imagine walking up to two massive women both of which are taller than you and could pop you like a pimple might I add. And you open with that???? The freaking nerve!"
-    MC "He's definitely got a pair that's for sure. What happened after he said that?"
+    FMG "Imagine walking up to someone as big {i}and{/i} mean as Nat and you decide that's your opener."
+    MC "He's definitely got a pair that's for sure. I'm under the assumption Nat unleashed her inner demon after that ice breaker?"
     show FMG neutral
-    FMG "Nat picked him up with one hand and threatened to crush him like a soda can. After she put him down he bolted out of the gym. If Nat is good at one thing, it's scaring people."
+    FMG "You bet, Nat picked him up with one hand and threatened to crush him like a soda can. After she put him down he bolted out of the gym. If Nat is good at one thing, it's scaring people."
     MC "Man, she does not care if she gets reported to the school board. She's tossing students like it's going out of style and she wonders why she has a hard time making friends."
     FMG "I agree, but this one time was warranted. {w}Screw that dude, I was ready to punt him across the gym if she didn't act so fast."
     MC "I'm kinda disappointed I wasn't there to witness this. Sakura was telling me how Nat dealt with another student picking on Aida."
@@ -16799,6 +16800,277 @@ label FMG081:
     jump daymenu
 
 label FMG082:
+    $setProgress("FMG", "FMG083")
+    scene Cafeteria with fade
+    play music DayByDay
+    "After the usual grueling workout, Akira and I headed to the cafe for a quick bite." 
+    "\"Quick\" was probably wishful thinking. Having skipped out on breakfast this morning this was going to be anything but."
+    show FMG neutral with dissolve
+    MC "I'll never understand why they {i}still{/i}, even after all my complaints, serve these small bags of chips."
+    FMG "You filed complaints to the school board over the chip bags?"
+    MC "Yes. {w}Akira, this is serious business."
+    FMG "I can tell, you only ever have that look when you need to be taken seriously."
+    MC "You aren't taking me seriously right now."
+    FMG "This is the hill you want to die on? The snack sized bag of chips."
+    MC "Yes."
+    MC "Think about it, who in their right mind... {w}give me a sec."
+    "To further prove my point, I dumped the bag out on my tray and spread the crisps out."
+    MC "See? This bag has about eight chips. I'll say it again if you didn't hear me. {i}Eight{/i}."
+    MC "Who eats seven chips and then eats one more and says they're satisfied? Not me, definitely not you."
+    FMG "Man, you are actually worked up about this."
+    MC "Uuuuuh, yeah? These are one serving size for an {i}adult{/i}. Blasphemy. No one goes \"Yeah, I don't need twenty more of these.\" You know what follows after I eat half a bag of the big bag of chips?"
+    FMG "What, Kei-kun?"
+    MC "The other half, Akira. The. Other. Half. My bloodline isn't weak."
+    pause 1
+    MC "I'm good now, I got out my frustrations."
+    FMG "Imagine if you were this passionate about— I don't know... literally anything else, hahaha."
+    MC "You think this is funny? Do I look like a clown to you?"
+    show FMG happy
+    FMG "I don't even have to think about that answer."
+    show FMG neutral
+    FMG "Wanna head back to my dorm? I want to cuddle."
+    pause .5
+    MC "What makes you think I want to put my arms around you?"
+    FMG "Because no other woman is ever going to appreciate you as much as I do and you should cherish our time together."
+    show FMG flex
+    MC "Ugh, I can't stand affection."
+    $setAffection("FMG", 3)
+    show FMG happy
+    FMG "That's too damn bad. You can't wrestle out of my grasp."
+    show FMG neutral
+    FMG "Oh my gosh, that gives me an idea! We should arm wrestle!"
+    MC "Are you trying to get me killed?"
+    FMG "No, no. Let me clarify, for you it's arm wrestling. For me, I get to sit and watch your struggle."
+    MC "Is this like... another form of torture? How do you expect me to win??"
+    show FMG flex
+    FMG "I don't, duh. I'm not handing out freebies. {w}Ooooooh, we'll make a deal. If you can get my arm halfway towards the table, I'll finally give you your wish of getting crushed by my thighs."
+    MCT "Finally. Those tree trunks against my head. Our battle will be legendary."
+    MC "I don't even care what you get if you win. I'll do anything, sign me the fuck up."
+    show FMG happy
+    FMG "Great!"
+    show FMG aroused
+    FMG "It'll be my little secret for now..."
+    show FMG neutral
+    FMG "Just know I'm not going to make this easy on you, Kei-kun. Time to show me that your time in the gym has been paying off. You only get one shot at this."
+    MC "I think I need more than one attempt to move you."
+    FMG "I'll give you twenty minutes, you can do anything as long as it's nothing crazy."
+    show FMG angry
+    extend " So don't bite my hand again!"
+    MC "You're still hung up over that? It's been like a week since it happened."
+    FMG "It was four days ago you bozo."
+    MC "Well, at least one of us keeps track of these unfortunate events."
+    show FMG neutral
+    FMG "I hate you."
+    MC "Yeah, well, get in line."
+    show FMG sad
+    FMG "Yikes."
+    show FMG neutral
+    FMG "Let's get back to my dorm, I want to humiliate you."
+    MC "Ew."
+    scene black with fade
+    pause 1
+
+    scene Dorm FMG
+    show FMG neutral
+    with fade
+    FMG "You remember the rules?"
+    MC "Yeah, yeah no hand biting. It was {i}one{/i} time when my life was in peril, trapped beneath your arms."
+    FMG "Wrong."
+    show FMG flex
+    extend " The safest place you could ever be is in my arms."
+    MC "Unless you're mad."
+    show FMG neutral
+    FMG "Debatable. {w}Before we start, I want you to promise me, you won't cry when you can't move me."
+    MC "Did you bury the memory of me flipping you in bed a couple of nights ago? I'm still feeling the repercussions of that."
+    FMG "No, I didn't bury it. You just won't be able to do anything like that again."
+    MC "You won't hear any complaints from me. That's a one and done for me."
+    show FMG flex
+    FMG "Enough talk, little man. I want my reward already."
+    MC "Give me a second, I need to stretch. Can't have myself pulling a muscle during this, time is too precious."
+    show FMG neutral
+    FMG "Take all the time you need, I'm not going anywhere."
+    MC "Down. You're going down. I'm one step ahead of you, Akira. My plan is foolproof, can't fail, won't fail."
+    show FMG happy
+    FMG "Big talk, Kei-kun, but can you back it up?"
+    MC "I'm ready when you are. Please don't be sad when I win, I don't want to feel bad, thanks."
+    show FMG neutral
+    FMG "Ooooh, the urge I have to send you through the floor when I win. Hope the nurse has enough ice packs."
+    MC "Put your arm on the table and quit flapping your gums."
+    "The amazon slammed her arm on the table with a grin across her face the entire motion."
+    "In a futile attempt to mimic her, I did the same thing. Grin and all. {w}Only difference is I hit that funny part of my elbow where it hurts but simultaneously causes uncontrollable laughing."
+    show FMG sad
+    FMG "You're crazy."
+    MC "Heh, crazy in love with you! {size=-6}Aaaaaaaaaaa{/size}..."
+    show FMG neutral
+    FMG "Save your cheesy lines for later. Give me your hand."
+    MC "Fine."
+    "At first, I wasn't going to try {i}too{/i} hard, however as my struggling continued and Akira's shit-eating grin got bigger... I grew saltier with every passing second."
+    "This wasn't about getting my head crushed like a melon. No, this was about sticking it to her, to show her I'm better."
+    MC "Rrrrrgggghhhh!"
+    show FMG happy
+    FMG "Oh, did we start? I couldn't tell, hahaha."
+    MCT "Keep laughing gorilla mitts, just you freaking wait."
+    MC "Aaaaaaaaaaaahhhhhh!"
+    show FMG neutral
+    FMG "Looking like you might pop a blood vessel, Kei-kun. Don't hurt yourself."
+    MC "Hmhmhm, I have an idea."
+    "My idea involved hopping onto the table, planting my feet on the edges, and pulling her arm with both hands."
+    show FMG flex
+    FMG "That's the best you got? It's like a gentle breeze. You should try pulling a little harder."
+    MCT "I'm going to slap that grin off your smug face and assert nothing but continuous unrelenting amounts of powerful dominance upon you."
+    show FMG aroused
+    FMG "And to think, I was so looking forward to wrapping my legs around your head."
+    MC "This is the game you want to play? Fine, I didn't want to do this. But you've left me no choice."
+    show FMG surprised 
+    FMG "Wait, you don't mean-"
+    MC "Your biggest weakness...{w}tickling."
+    MC "Give me your tricep, woman!"
+    show FMG angry
+    FMG "Don't touch me! Stay back!"
+    "Akira started awkwardly swatting at me with her other arm as I clumsily tried to keep my grip on her hand and effectively reposition myself into a prime tickling position."
+    MC "Should've kept your mouth shut... {w}Stop slapping me away!"
+    FMG "And you should keep those grumpy hands to yourself!"
+    MC "Don't move that arm or you lose, Akira!"
+    show FMG sad
+    FMG "You've lost your mind."
+    show FMG angry
+    extend "Doesn't mean I'll lose to you though!"
+    MC "Noooooooo!"
+    "She had pinned my free hand to the table and with that, the dreams I had of sweet release began to fade. Soon, my life would have no meaning..."
+    show FMG upbeat
+    FMG "You're all out of options, Kei-kun!"
+    MC "Not yet..."
+    pause .5
+    MC "Look! Uneven weights loaded on your bar!"
+    show FMG angry
+    FMG "Huh??? I told Chibuki not to touch the bench press!"
+    scene black with fade
+    MCT "Palms sweaty, knees weak, arms are heavy... I've only got one shot, I can't miss my chance."
+    scene Dorm FMG with fade
+    play music Rivalry
+    if checkSkill("Athletics", ">=", 30):
+        "With her attention diverted, I felt her hold loosen on my hand. One. Shot."
+        "I ripped it free, with god-like speed I gripped the back of my hand and with every ounce of strength in my body, pushed."
+        MC "AAAARRRRGGGGHHH!"
+        show FMG surprised with dissolve 
+        FMG "HOW?!?"
+        show FMG angry
+        FMG "You can't win! Not yet, I won't let you!"
+        "Anime main character energy coursing through my veins, that energy after the protagonist gets his ass kicked by the villain but suddenly remembers the power of friendship... or some other stupid crap. {w}With that by my side, I couldn't lose. Not now."
+        MC "DEATH. {w}BY. {w}SNUSNU."
+        FMG "HOW IS THIS POSSIBLE?!?!"
+        pause 1
+        MC "YES! I won! Ha...hahahahaha!"
+        show FMG sad
+        FMG "I can't believe it... the desire to have my thighs around your neck was too strong. Even stronger than me."
+        show FMG neutral
+        FMG "Heh, not really, you did only get halfway. I'd never let you pin me."
+        MC "I...I can't feel my hands."
+        FMG "You did look like you were about to explode during that whole ordeal. But congratulations, Kei-kun. You won fair and square."
+        MC "Can-Can we go to the nurse? I think I'm dying."
+        FMG "Sure thing, you goofball."
+        MC "Ha... {size=-6}I seriously can't feel my hands.{/size}"
+        scene black with fade
+        stop music fadeout 1.0
+        pause 1
+        $setTime(TimeEnum.EVE)
+
+        play music Sunset
+        scene Nurse Office with fade
+        Nurse "Keep it on ice and you'll be just fine. You need to be more careful, Hotsure-san."
+        MC "Heh, silly me. I'll do my best."
+        show FMG neutral with dissolve 
+        FMG "Thank you so much, Nurse Kiyomi. I tried to warn him to be more careful in the kitchen. Those bowls get quite heavy."
+        Nurse "Accidents happen, don't worry."
+        MC "...Heh... They sure do..."
+        show FMG flex
+        MCT "Keep flexing, you'll pull a muscle eventually and I'll be there to laugh at you."
+        Nurse "Now, if you could sign here, you'll be on your way. The ice packs are good for roughly two hours, keep them on for the full duration and wrapped in paper towels."
+        MC "Will do! Thank you again! {size=-6}Let's get out of here, I already feel like an idiot.{/size}"
+        show FMG neutral
+        FMG "{size=-6}Right behind you. {/size}"
+        scene black with fade
+        pause 1
+
+        scene Hallway
+        show FMG sad
+        with fade
+        FMG "A bowl falling on your hands? That's the best you could come up with?"
+        MC "Huh???? I had to think of something! Maybe if you didn't take such big ass steps with your big ass feet, I'd have more time to think of a better lie!"
+        show FMG angry
+        FMG "You could've just told her the truth, you bozo. Now, you look like an even bigger bozo with no thumbs."
+        MC "You're only mad 'cause you {i}lost{/i} to me in arm wrestling. That's what happens when you start slacking at the gym."
+        FMG "Okay, mister funny guy. We can have a real match when we get back to my room."
+        MC "I have crippled hands. You want to rematch a man who's already beaten? That's fucked up, I expected better from you, Akira."
+        show FMG flex
+        FMG "Coward."
+        MC "Carry this coward back, he's tired and frail."
+        show FMG neutral
+        FMG "Say please."
+        MC "...{w}Please"
+        FMG "Thank you. I also want the majority of the blanket tonight during our show."
+        MC "Might as well leave me to freeze on the floor then... the suffering never ends."
+        show FMG happy
+        FMG "I guess I can spread myself out on the couch and you can rest on my chest."
+        show FMG angry
+        extend " And you're wearing socks, I'm not having your cold feet touching my legs again."
+        MC "So demanding, jeez. Alright, I'll wear 'em." 
+        show FMG happy
+        FMG "Good. Now, we can go."
+        jump daymenu
+
+    else:
+        "With her attention diverted, I felt her hold loosen on my hand. One. Shot."
+        "Even with her loosened grip, I couldn't pull my hand free... I had to keep trying. This was my only opportunity to beat her."
+        MC "{size=-6}Cooooome on, I can do this!{/size}"
+        show FMG flex with dissolve
+        FMG "No, you can't. Nice try with that distraction though. It's over, Kei. Accept it so we can start cuddling."
+        MC "I'm not touching you with a six foot pole till I win! {size=-6}Us touching now doesn't count.{/size}"
+        show FMG neutral
+        FMG "Can you even lift something like that? {w}Oooh, you're still trying?"
+        MCT "I'll step on your foot later."
+        MC "AAAAAAAAAAA!!!!!"
+        FMG "Does the over the top screaming make you feel like you're doing something besides losing your voice?"
+        FMG "I wish I could take a picture of your face right now, it's so funny, hahaha."
+        "Then she proceeded to mimic my facial expressions, rubbing even more salt into the wound."
+        FMG "I heard if you keep your face like that it could freeze like that forever. We should test it out."
+        MC "I... I hate... you. Lemme win!"
+        show FMG flex
+        FMG "No freebies, I told you before. Tap out and this ends."
+        MC "I never quit, especially when faced with the impossible."
+        show FMG sad
+        FMG "Oh my god, what a load of bull."
+        show FMG neutral
+        stop music
+        extend " Alright, I'm over this."
+        MC "Hey, wait, I'm not done."
+        "And the game was over. She lifted me straight into the air, locking eyes with me as she held me by my hand."
+        play music DayByDay
+        MC "You know you technically lost."
+        show FMG neutral
+        FMG "Nope, your time was up, I set an alarm on my phone."
+        MC "Liar, liar pants for hire."
+        FMG "See for yourself."
+        pause 1
+        MC "Damn it."
+        FMG "I had it on vibrate, didn't want you to lose your focus."
+        show FMG aroused
+        FMG "Good effort though, it was cute. But, I want to chill on the couch, and this was eating into cuddle time."
+        MC "{i}Sigh...{/i}You win."
+        show FMG neutral
+        FMG "Awesome! I could use a warm shower after that, I worked up quite a sweat watching you lose. Wanna join me?"
+        MC "...Sure..."
+        FMG "Hey, I'll give you a straw so you can suck it up. You aren't allowed to be sad once my bra is off. If you don't have the biggest grin on your face with my boobs hanging out, you wait outside."
+        MC "May I request an ass slap?"
+        show FMG aroused
+        FMG "You may."
+        MC "Suddenly, I'm no longer sad."
+        show FMG happy
+        FMG "OH! Can you help me with my back too?"
+        MC "Suddenly, I'm sad again."
+        jump daymenu
+
+label FMG083:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

@@ -1056,6 +1056,7 @@ define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
 define audio.PRGMusicBox = "Audio/BGM/scene_PRGMusicBox.ogg" #Quiet Wandering (Music Box)
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg" #Small Moments
 define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg" #The Challenge
+define audio.PRGOverflow = "Audio/BGM/scene_PRGOverflow.ogg" #Overflow
 define audio.PRGAlt = "Audio/BGM/scene_PRG2.ogg" #Press On
 define audio.WG = "Audio/BGM/scene_WG.ogg" #Aristocratic Opulence
 define audio.WGAlt = "Audio/BGM/scene_WG2.ogg" #Elegant Antics
@@ -1429,7 +1430,8 @@ init 2 python:
     eventlibrary['FMG079'] = {"name": "The Aftermath", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dormFMG",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG080", "obsflags": [],               "conditions": []}
     eventlibrary['FMG080'] = {"name": "Light Work", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG081", "obsflags": [],               "conditions": []}
     eventlibrary['FMG081'] = {"name": "Date Night", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dormFMG",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG082", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG082'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE,         "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG082'] = {"name": "Results May Vary", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG083", "obsflags": [],               "conditions": []}    
+    eventlibrary['FMG083'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE,         "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
