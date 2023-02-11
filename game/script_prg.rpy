@@ -8884,6 +8884,7 @@ label PRG025_Sex:
     "I didn't slide in like I'd expected. It felt more like I was pressing up against something malleable."
     "I pushed a bit to see if I could adjust myself..."
     "... And popped right inside of her."
+    $ persistent.unlock_cgPRG025 = True
     show cg PRG025 with fade
     play music LoveB
     PRG "AAAAGH!"

@@ -2332,7 +2332,10 @@ label AE015:
     "As I walked into the office, I was greeted with an unbroken wall of black-iron filing cabinets, sitting there menacingly. And in the middle of two cabinets..."
     MC "..."
     MCT "S-Shiori-san?!"
-    show cg AE015 with dissolve
+    $ persistent.unlockcgAE015 = True
+    show cg AE015
+    show AE neutral-annoyed at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) behind cg
+    with dissolve
     "More specifically, the poor girl's rear and two legs stuck between the cabinets. She was lifted slightly off of the ground by the table, her thick thighs pitifully kicking in resistance."
     show dummy with hpunch
     MCT "O-Oh no! Shiori-san's stuck!"
@@ -2408,8 +2411,10 @@ label AE015_aftermenu:
     "I positioned my own legs in a way that would allow for greater force."
     MC "Three!"
     "With a quick tug, I pulled Shiori-san free from the cabinets. Once free, the two of us both collapsed to the floor, the force from dislodging her pushing us back."
+    show AE aroused-3 at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=1) behind cg
+    pause 0.1
+    show AE aroused-3 at altMove(0.5, 0.5) behind cg
     hide cg with dissolve
-    show AE aroused-3 at center with dissolve
     play music Schoolday
     AE "Nhg..."
     MC "Ayah... Y-you all right?"
@@ -4410,12 +4415,13 @@ label AE024:
     AE "Since I've been growing though, my thighs have been rubbing together... down there."
     show AE aroused
     AE "S-sometimes, I even go jogging because the vibrations... mmmnff~"
+    $ persistent.unlock_cgAE024 = True
     show cg AE024 with dissolve
     "Shiori-san made a small waddle to turn around in place, hoisted the sides of her skirt up, and bent over."
     "Her asscheeks were on full display in front of me, a pair of massive and supple pale spheres of flesh shielded only by a pair of dark blue panties."
     AE "I know why you've been spending time with me. This moment right here. So please... give me a good squeeze and I'll be yours forever~"
     "Shiori-san's mouth changed from biting her lip to her signature smirk, her lewd eyes obscured behind the glare from her glasses."
-    #show AE glasses
+    show AE glasses behind cg
     AE "Come on... let me feel the pleasure I've been craving for so long."
 
     menu:
@@ -4432,9 +4438,10 @@ label AE024_c1_1:
     MC "Shiori-chan..."
     "I stood up and stepped forward. My own legs trembling as well, not even attempting to hide my raging erection."
     MC "Well...I wouldn't want to keep a lady wanting."
+    $ persistent.unlock_cgAE024b = True
     show cg AE024b with dissolve
     "I reached out my hands and grabbed it."
-    #show AE aroused
+    show AE aroused behind cg
     AE "Ahnn~."
     "Shiori-chan tensed up as I grabbed a handful of her bare bottom. It was like ecstasy. It felt better than I could have imagined."
     "I laid my palms flat on both cheeks, taking in every inch of soft supple flesh, every inch of dimple as my mind began to go blank."
@@ -4444,23 +4451,27 @@ label AE024_c1_1:
     "It was time to go for the kill. I slid my hand under her panties, lightly teasing her as my open palm began to slowly travel down her crack."
     AE "Oh, yes, Hotsure-san."
     "Shiori-san took her own hand and removed mine from her panties. I stood there, letting her take the lead. She placed her foot at the bottom of my abdomen."
-    #show AE aroused-4
+    show AE aroused-4 behind cg
     AE "It feels."
-    #show AE embarrassed
+    show AE embarrassed behind cg
     AE "So."
-    #show AE aroused-3
+    show AE aroused-3 behind cg
     stop music
+    $ persistent.unlock_cgAE024c = True
     show cg AE024c
     $affectionDamage = int(math.ceil(getAffection("AE") * 0.3))
     $setAffection("AE", -1 * affectionDamage)
     $setFlag("AE024_grabbedass")
     AE "Good."
+    $ persistent.unlock_cgAE024d = True
     show cg AE024d
+    hide AE
     "With what felt like lightning speed and the strength of a baseball bat, Shiori-san kicked backwards, sending me flying a few feet back and causing me to land on my ass."
     MC "Gah!"
     "I coughed and sputtered a bit before opening one eye. Shiori-san stood over me with an imposing presence I'd never before experienced."
     show AE neutral-smug
-    hide cg with dissolve
+    hide cg
+    with dissolve
     play music Bittersweet
     AE "Ahh, it feels so good to have a question answered, doesn't it? \"Why does Keisuke want to date me?\" Another problem solved."
     MC "...Ah... B-I..."
@@ -4525,16 +4536,16 @@ label AE024_c1_2:
     MCT "If I'm wrong, then I could lose out completely though..."
     stop music
     MC "Shiori-san... no."
-    show AE embarrassed
+    show AE embarrassed behind cg
     AE "...Begging your pardon?"
     MC "I... I want something more from you than just pleasure."
-    show AE neutral
+    show AE neutral behind cg
     AE "..."
     MC "Yes, you did catch me looking at you inappropriately, and I will admit I find your body attractive, but to me your body isn't what I'm attracted to, it's you."
     AE "..."
     MC "I don't want a sex toy. I want you... I want you for who you are."
     "I sat there in silence for a moment, hands over my crotch as a show of restraint. Shiori-san looked at me incredulously, even with her ass on display right in front of me, I knew she saw that I was looking directly in her eyes."
-    show AE neutral-annoyed
+    show AE neutral-annoyed behind cg
     AE "...Why must you make everything so difficult?"
     hide cg with dissolve
     "Shiori-san straightened her back once more, dropping her skirt, and turned around to face me again."
@@ -4592,15 +4603,14 @@ label AE024_c1_3:
     MCT "Have I died?!"
     MCT "I can't... I..."
     MC "B-w-ch... I-ah... um..."
-    #show AE aroused
+    show AE aroused behind cg
     AE "S-such cute mouth movements!~ I wonder how that mouth would feel if I rubbed it against my-"
     MCT "!!!"
     MC "Ah! W-w-w-wah, bwha?!"
-    #show AE aroused-3
+    show AE aroused-3 behind cg
     AE "M-my..."
     MC "..."
     "I could do nothing but make a hoarse groaning. My chest tightening up as I exhaled, but failed to inhale."
-    #show AE neutral
     show cg AE024e with dissolve
     AE "...Hotsure-san?"
     "Shiori-san began snapping her fingers at me as I merely sat there dazed and confused."
@@ -11027,6 +11037,7 @@ label AE050:
     "As we kissed, I felt the warmth of her hand gently caress my face. I grabbed her waist and pulled her in even tighter as we started to rock back and forth together."
     "Now realizing the true reason why I'd been called to her room so late in the night, I decided to take a chance, as I grabbed two handfuls of that plump ass."
     #NSFW
+    hide AE with dissolve
     AE "MMMM!"
     MCT "Ah! W-Was I wrong to-?"
     AE "Mmm~"
@@ -11241,6 +11252,7 @@ label AE050_after2:
     AE "R-Right, um... felatio. I um... I r-r-read up a bit on it."
     AE "Hoookay, you can do this..."
     "She took a deep breath in, and after planting a few tiny kisses to the tip of my dick-"
+    $ persistent.unlock_cgAE050_bj1 = True
     show cg AE050_bj1 with dissolve
     AE "HHRGK!"
     MC "Ahn!"
@@ -11257,6 +11269,7 @@ label AE050_after2:
 label AE050_assertive3:
     "She balled up her fist around her thumb and took a few breaths to calm herself. With her other hand, she gently wrapped her hand around my shaft and placed the head in her mouth; slowly sliding down further and further as she bobbed her head."
     AE "{i}Mmph{/i} Mmmh~"
+    $ persistent.unlock_cgAE050_bj2 = True
     show cg AE050_bj2 with dissolve
     MC "Oh fuck... ahn..."
     "Grasping her hair, I guided her head on instinct, and pulled her in further."
@@ -11266,6 +11279,7 @@ label AE050_assertive3:
     AE "Mmph, mmph, mmph."
     "She increased her speed as best as she could, her head bobbing back and forth; rocking her whole body with her movements. Looking past her head, I noticed her immense booty as it quaked with every rhythmic movement of her head."
     MC "H-Haaahn~"
+    $ persistent.unlock_cgAE050_bj3 = True
     show cg AE050_bj3 with dissolve
     "This flipped the switch in me as I grunted and my muscles contracted. My balls seized up and tensed as a flood of my seed sprayed her mouth."
     "I saw her eyes widen as her cheeks puffed up with my load. She pulled her head away from my cock, and covered her lips with her hand."
@@ -11273,6 +11287,7 @@ label AE050_assertive3:
     jump AE050_after3
 
 label AE050_passive3:
+    $ persistent.unlock_cgAE050_sit1 = True
     show cg AE050_sit1 with dissolve
     "She then took a surprising turn when she ended up moving my body down a bit on the bed till I was laying down, she then hovered her gargantuan, jiggling ham-hocks over my face."
     "Given how big it was, both cheeks brushed my own as I began to turn bright red."
@@ -11281,6 +11296,7 @@ label AE050_passive3:
     MC "W-Well  it's, unexpected  but, just as long as it makes you comfortable."
     "She saw my warm smile and felt my warm words put her at ease as she wiggled her gargantuan hips and was about to sit on my face."
     AE "D-Dont worry, I'll try to be gentle."
+    $ persistent.unlock_cgAE050_sit2 = True
     show cg AE050_sit2 with dissolve
     "She slowly lowered herself down, her soft warm flesh engulfing my face with her two massive cheeks smushing it in-between."
     "She lowered a bit more and more until the whole weight of her ass was comfortably on my face, the warmth of my face seeming to make her shiver a bit."
@@ -11307,6 +11323,7 @@ label AE050_passive3:
 label AE050_after3:
     MC "Hah... Sorry, I guess it's been a while."
     AE "Mmmgn..."
+    $ persistent.unlock_cgAE050_bj4 = True
     show cg AE050_bj4 with dissolve
     "She seemed to cringe a bit at the bitterness of my cum, her cheeks making her seem reminiscent of a chipmunk. But as I was about to make a joking comment on it... that's when I heard her do it."
     AE "{i}GULP{/i}"
@@ -11386,11 +11403,13 @@ label AE050_after3:
         MC "I wonder... is your ass more or less sensitive than your pussy?"
         "The sight of her beautiful, jiggling butt cheeks begging for my touch caused my face to go hot and my hands to sweat."
         MC "You said it yourself. You've been feeling {i}extra{/i} sensitive back there, right?"
+        $ persistent.unlock_cgAE050_spank1 = True
         show cg AE050_spank1 with dissolve
         MC "Maybe it's high time we test that out.~"
         "I playfully gave her tush a little smack with my hand-"
         AE "HAAAH!"
         "And Shiori-chan's eyes widened as she let out a gasp."
+        $ persistent.unlock_cgAE050_spank2 = True
         show cg AE050_spank2 with dissolve
         MC "...Huh?"
         MC "Wait... you reacted the same way in the clocktower..."
@@ -11406,6 +11425,7 @@ label AE050_after3:
         "While what part of me that was still in conscious thought questioned if she should see someone about what she just said, the stiffness of my loins superseded that."
         MC "Mhmm~"
         "I took my middle finger and ran it gently, slowly, through the crack of her ass, sending signals of pleasure to her brain."
+        $ persistent.unlock_cgAE050_spank3 = True
         show cg AE050_spank3 with dissolve
         AE "Ho yes, yes-"
         "I reached the top of her ass and then raised my hand up."
@@ -11416,6 +11436,7 @@ label AE050_after3:
         "{i}Smack{/i}{w} {i}Smack{/i}{w} {i}Smack{/i}"
         "Between each few spanks, I gently rubbed her jiggling backside, soothing the area to make it more sensitive for the next hit."
         "{i}Smack{/i}"
+        $ persistent.unlock_cgAE050_spank4 = True
         show cg AE050_spank4 with dissolve
         AE "Uu-uu-uu-UU-UU-UU~!!"
         "Her eyes became pinned as I continued, and her breathing was ragged and erratic. Her vocalisations rose in pitch as her situational awareness dropped to zero."
@@ -11430,6 +11451,7 @@ label AE050_after3:
         AE "M-Mhm."
         MC "Alright, how's about you get on your knees, yeah?"
         AE "Y-Yeah."
+    $ persistent.unlock_cgAE050_behind1 = True
     show cg AE050_behind1
     "We positioned ourselves on the bed. I got a good look at her fat cheeks stuck in the air and put my hand on one, stroking my cock with my other hand."
     MC "Such a beautiful ass. Mmn~"
@@ -11446,11 +11468,13 @@ label AE050_after3:
     AE "Mhm..."
     "I felt myself press against the outer slopes of her gargantuan ass and nearly came right then from the sensation of being enveloped in such a warm embrace."
     "Taking an extra moment to steel my nerves, Shiori-chan clearly felt the hesitation in my progress and decided to push back into my waist, burying myself even deeper within her."
+    $ persistent.unlock_cgAE050_behind2 = True
     show cg AE050_behind2
     "Caught off-guard by her sudden forwardness, I pushed against her and felt my rigid cock press against her hole. Then, all at once, it entered."
     AE "Hooo-OOOOOOH!!!"
     "She began cumming as soon as I'd stuck my dick in, her tongue lolling out as a rich red took up most of her cheeks. Both the ones on her face, and the gigantic ones on her backside."
     AE "OOOOOOOHHHH~!"
+    $ persistent.unlock_cgAE050_behind3 = True
     show cg AE050_behind3
     "Her hands scratched at the sheets to try and keep herself upright, but soon the strength in her arms gave way as well."
     "She was left face-down, her butt wobbling all over like a broken bowl of pudding as I pounded into her, my entire body tensed up with strength I never knew I had."
@@ -11458,12 +11482,14 @@ label AE050_after3:
     AE "HAAAH, HAAH, AAAAGN!!!"
     "Settling into a slow rhythm of bouncing away and into her fleshy cushioning I could feel her tempo begin to increase as her body began to shudder from both the motion and her own skyrocketing arousal."
     "It was like she was caught in an endless orgasm, each thrust forcing her to an even greater state of climax."
+    $ persistent.unlock_cgAE050_behind4 = True
     show cg AE050_behind4
     "I started moving on instinct, stretching my arms around both cheeks as my tempo increased. The bed began to creak with every thrust as the movements of her massive body rocked the entire bed."
     "Her body went slack as she continued to feel the barrage from my throbbing manhood thrust into her meaty backside over and over again."
     MC "Haah! Ngh! S-Shiori-chan... I'm gonna c-c... Ah!"
     "I wasn't even sure she could hear or understand what I was saying, as she only responded with a few garbled moans. One last smack to her ass, and finally..."
     MC "Ha-Ha-Haah!"
+    $ persistent.unlock_cgAE050_behind5 = True
     show cg AE050_behind5
     "The dam broke. I grabbed her arms and pulled her back, pushing my cock as deep as I could into her ass as I thrusted my hips a few more times."
     "My chest against her back, our hearts beating like mad together, I began to hyperventilate as I grabbed her waist with one hand, the other grabbing her chest and pulling her in as I bounced our bodies up and down together."
@@ -11475,6 +11501,7 @@ label AE050_after3:
     "My energy completely spent, I slumped forward, grabbing her tight as I pulled her down with me."
     "I fell over to the side as my exhausted body went limp. I could feel her panting as I pulled my member from her cheeks. She did her best to maneuver herself over her own ass to look me in the eyes."
     AE "Ahhn... Aaaahn~"
+    $ persistent.unlock_cgAE050_behind6 = True
     show cg AE050_behind6
     AE "K-Keisuke-kun..."
     AE "I'm so happy... you were my first..."
@@ -12333,9 +12360,9 @@ label AE053_c1_after:
     scene black with fade
     pause 1
     scene Clothes Store with fade
-    $setAEOutfit(OutfitEnum.DEFAULT)
+    $setAEOutfit(OutfitEnum.CASUAL)
     play music Rain
-    "Eventually, we settled on something completely different. A grey turtleneck with a black long-skirt. Shiori looked great when she tried it on, and it even matched with her headband, as Alice pointed out."
+    "Eventually, we settled on something completely different. A black turtleneck with a black long-skirt. Shiori looked great when she tried it on, and it even matched with her headband, as Alice pointed out."
     Cashier "Alright, with the student discount, your total comes up to 18,197 yen, sir."
     "Shiori seemed to tense up a bit, looking at me for a moment for confirmation. She lowered her voice to a whisper."
     show AE sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
@@ -12690,6 +12717,7 @@ label AE054:
 
 label AE055:
     $setTime(TimeEnum.EVE)
+    $setAEOutfit(OutfitEnum.CASUAL)
     $setProgress("AE", "AE056")
     scene Hill Road
     show AE happy
@@ -14520,7 +14548,7 @@ label AE062:
     MCT "She's an adult. I trust her."
 
     scene Restaurant with fade
-    $setAEOutfit(OutfitEnum.CASUAL)
+    $setAEOutfit(OutfitEnum.DRESS)
     play music Busy
     Waitress "Welcome!"
     MC "Table for two, please. Booth, um... extra wide, if possible."
@@ -17175,6 +17203,7 @@ label AE074:
     AE "If you could."
     MC "Got it."
     "Putting one hand on her thigh and another on her back, I managed to flip her onto her stomach as she buried her face in the snow."
+    $ persistent.unlock_cgAE074_snow2 = True
     show cg AE074_snow2 with dissolve
     MC "Okay, now do it."
     "She listened as she began to make a snow angel face down, her rump wobbling up and down like a wave as the momentum of her fat thighs made her lower body wobble. After a moment, she stopped and waited for her backside to subside before grunting and standing up with help."
@@ -23444,7 +23473,8 @@ label AE098G:
 
 label AE098D:
     $setProgress("AE", "AE099D")
-    $setAEOutfit(OutfitEnum.EPILOGUEBAD)
+    if isNSFW():
+        $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     $setTime(TimeEnum.NIGHT)
     MCT "..."
     MCT "Man, can tonight get any more boring?"
@@ -23490,7 +23520,6 @@ label AE098D:
     "\"{i}BubbleBubble-Pop! Bubble-Pop! Bubble- Bubble- Pop!{/i}\""
     "The womans face was... familiar? Tan, and covered in makeup, but... familiar. On the monitor, it looked as though she was starting to blow a bubble, and as she did..."
     "The silhouettes ass began to inflate along with her... hair? The woman's face in the video had a look of shock and surprise as the bubble continued to inflate covering her face until..."
-    $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     show AE neutral
     "\"{i}POP{/i}\""
     "The video cut out and the sheet dropped, showing the woman before us... gigantic garbage barge ass and all."
@@ -23608,12 +23637,16 @@ label AE098D:
     AE "Yep. I'm the \"Booty Twerk\" girl."
     MC "\"Booty Twerk\" girl?"
     AE "Waaait for it."
+    $ persistent.unlock_cgAE098D_musicvideo1 = True
     show cg AE098D_musicvideo1 with fade
     "The video was, for a lack of a better term, annoying. A bunch of flashing lights, close ups of girls butts and butt shaped imagery. Around the half way mark of the video, however..."
+    $ persistent.unlock_cgAE098D_musicvideo2 = True
     show cg AE098D_musicvideo2 with dissolve
     "\"{i}Booty Twerk, Booty Twerk, Booty-Booty-Booty Twerk{/i}\""
+    $ persistent.unlock_cgAE098D_musicvideo3 = True
     show cg AE098D_musicvideo3 with dissolve
     "Her butt shaking side to side, Shiori was wearing a thong, a bra, a pair of stockings, and an unreasonably tall pair of heels as the vapid lyrics played over her bouncing her butt, hands out at the side. She looked exactly like she appeared before me now."
+    $ persistent.unlock_cgAE098D_musicvideo4 = True
     show cg AE098D_musicvideo4 with dissolve
     MC "Oh damn."
     AE "Mhm."

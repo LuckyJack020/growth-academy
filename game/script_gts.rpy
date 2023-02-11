@@ -9967,6 +9967,7 @@ label GTS046:
 label GTS046_c1_1:
     $setFlag("GTS046_peek")
     "I slowly craned my neck upwards and saw what truly lay hidden beneath her skirt."
+    $ persistent.unlock_cgGTS046_upskirt = True
     show cg GTS046_upskirt with dissolve
     "Up above me, almost gleaming in the darkness, was a pair of brilliant red silken panties, outlined in their center an obscure but distinctly plump ridge that I could only assume was the entrance I'd only dreamed of seeing."
     stop music fadeout 1.0
@@ -10069,6 +10070,7 @@ label GTS046_c1_1:
     GTS "Hmm... a little over a week ago or so."
     MC "I see..."
     "She lifted me up again once I'd gone halfway down her abdomen."
+    $ persistent.unlock_cgGTS046_hold2 = True
     show cg GTS046_hold2 with dissolve
     "And hugged me tight to her now-exposed chest. I sank in deep."
     MC "Mmm..."
@@ -10109,6 +10111,7 @@ label GTS046_c1_1:
     "As I was seconds from exploding she lifted me up again..."
     show GTS aroused with vpunch
     MC "G-Gah!..."
+    $ persistent.unlock_cgGTS046_hold3 = True
     show cg GTS046_hold3 with dissolve
     "And pressed my body into her face, slipping my dick in between her slick wet lips. She squeezed my backside a little, lapped her tongue on my tip, gasped a dreamy sigh that rolled up my chest."
     "And I burst."
@@ -11523,6 +11526,7 @@ label GTS050:
     GTS_S "Ah... y-yes. We were walking along, and I think I caught myself growing taller. It was subtle at first, like only a head taller than my sister and then most people."
     GTS_S "...But then, it came... faster and faster, and soon I could see over the two story buildings."
     "She paused and sipped her tea."
+    $ persistent.unlock_cgGTS050_nightmare1 = True
     show cg GTS050_nightmare1 with dissolve
     GTS_S "For a few moments I was just frozen, and then I started growing again. Even though I couldn't see their eyes, I could tell everyone was watching me. I tried to shout... for help, to tell them to run, but I couldn't even utter a whisper."
     GTS_S "Soon I was as tall as those office buildings in the city, yet it just wouldn't... wouldn't stop. I tried to run away, but I had grown so much that... every step, I destroyed houses, shops... schools. There was nowhere I could go."

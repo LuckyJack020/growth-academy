@@ -343,41 +343,93 @@ image Plane Interior = "Graphics/ui/bg/NYI.png"
 image daymenubg = "Graphics/ui/bg/archiveBG/menubg-day.png"
 
 image cg AE000 = "Graphics/ui/gallery/AE000.png"
-image cg AE015 = "Graphics/ui/gallery/AE015.png"
-image cg AE024 = "Graphics/ui/gallery/AE024.png"
-image cg AE024b = "Graphics/ui/gallery/AE024b.png"
-image cg AE024c = "Graphics/ui/gallery/AE024c.png"
-image cg AE024d = "Graphics/ui/gallery/AE024d.png"
+image cg AE015 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE015.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE024 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE024b = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024b.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE024c = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024c.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE024d = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024d.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg AE024e = "Graphics/ui/gallery/AE024e.png"
 image cg AE025 = "Graphics/ui/gallery/AE025.png"
-image cg AE050_bj1 = "Graphics/ui/gallery/AE050_bj1.png"
-image cg AE050_bj2 = "Graphics/ui/gallery/AE050_bj2.png"
-image cg AE050_bj3 = "Graphics/ui/gallery/AE050_bj3.png"
-image cg AE050_bj4 = "Graphics/ui/gallery/AE050_bj4.png"
-image cg AE050_sit1 = "Graphics/ui/gallery/AE050_sit1.png"
-image cg AE050_sit2 = "Graphics/ui/gallery/AE050_sit2.png"
-image cg AE050_spank1 = "Graphics/ui/gallery/AE050_spank1.png"
-image cg AE050_spank2 = "Graphics/ui/gallery/AE050_spank2.png"
-image cg AE050_spank3 = "Graphics/ui/gallery/AE050_spank3.png"
-image cg AE050_spank4 = "Graphics/ui/gallery/AE050_spank4.png"
-image cg AE050_behind1 = "Graphics/ui/gallery/AE050_behind1.png"
-image cg AE050_behind2 = "Graphics/ui/gallery/AE050_behind2.png"
-image cg AE050_behind3 = "Graphics/ui/gallery/AE050_behind3.png"
-image cg AE050_behind4 = "Graphics/ui/gallery/AE050_behind4.png"
-image cg AE050_behind5 = "Graphics/ui/gallery/AE050_behind5.png"
-image cg AE050_behind6 = "Graphics/ui/gallery/AE050_behind6.png"
+image cg AE050_bj1 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj1.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_bj2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_bj3 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj3.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_bj4 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj4.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_sit1 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_sit1.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_sit2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_sit2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_spank1 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank1.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_spank2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_spank3 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank3.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_spank4 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank4.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_behind1 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind1.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_behind2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_behind3 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind3.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_behind4 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind4.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_behind5 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind5.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE050_behind6 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind6.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg AE053_mirror1 = "Graphics/ui/gallery/AE053_mirror1.png"
 image cg AE053_mirror2 = "Graphics/ui/gallery/AE053_mirror2.png"
 image cg AE074_snow1 = "Graphics/ui/gallery/AE074_snow1.png"
-image cg AE074_snow2 = "Graphics/ui/gallery/AE074_snow2.png"
+image cg AE074_snow2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE074_snow2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg AE074_snow3 = "Graphics/ui/gallery/AE074_snow3.png"
 image cg AE092_tv1 = "Graphics/ui/gallery/AE092_tv1.png"
 image cg AE092_tv2 = "Graphics/ui/gallery/AE092_tv2.png"
 image cg AE092_tv3 = "Graphics/ui/gallery/AE092_tv3.png"
-image cg AE098D_musicvideo1 = "Graphics/ui/gallery/AE098D_musicvideo1.png"
-image cg AE098D_musicvideo2 = "Graphics/ui/gallery/AE098D_musicvideo2.png"
-image cg AE098D_musicvideo3 = "Graphics/ui/gallery/AE098D_musicvideo3.png"
-image cg AE098D_musicvideo4 = "Graphics/ui/gallery/AE098D_musicvideo4.png"
+image cg AE098D_musicvideo1 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo1.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE098D_musicvideo2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE098D_musicvideo3 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo3.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg AE098D_musicvideo4 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo4.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg AE098D_musicvideo5 = "Graphics/ui/gallery/AE098D_musicvideo5.png"
 
 image cg BE000 = "Graphics/ui/gallery/BE000.png"
@@ -390,8 +442,12 @@ image cg BE010_pov4 = "Graphics/ui/gallery/BE010_pov4.png"
 image cg BE010_pov5 = "Graphics/ui/gallery/BE010_pov5.png"
 image cg BE028 = "Graphics/ui/gallery/BE028.png"
 image cg BE028_fem = "Graphics/ui/gallery/BE028_fem.png"
-image cg BE031 = "Graphics/ui/gallery/BE031.png"
-image cg BE031b = "Graphics/ui/gallery/BE031b.png"
+image cg BE031 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/BE031.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg BE031b = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/BE031b.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg BE031c = "Graphics/ui/gallery/BE031c.png"
 image cg BE032 = "Graphics/ui/gallery/BE032.png"
 image cg BE043_movie1 = "Graphics/ui/gallery/BE043_movie1.png"
@@ -401,7 +457,9 @@ image cg BE043_movie2_fem = "Graphics/ui/gallery/BE043_movie2_fem.png"
 
 image cg FMG016 = "Graphics/ui/gallery/FMG016.png"
 image cg FMG041 = "Graphics/ui/gallery/FMG041.png"
-image cg FMG050 = "Graphics/ui/gallery/FMG050.png"
+image cg FMG050 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG050.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg FMG055 = "Graphics/ui/gallery/FMG055.png"
 image cg FMG056 = "Graphics/ui/gallery/FMG056.png"
 image cg FMG058 = "Graphics/ui/gallery/FMG058.png"
@@ -410,6 +468,9 @@ image cg FMG058_pose2 = "Graphics/ui/gallery/FMG058_pose2.png"
 image cg FMG058_pose3 = "Graphics/ui/gallery/FMG058_pose3.png"
 image cg FMG061 = "Graphics/ui/gallery/FMG061.png"
 image cg FMG067 = "Graphics/ui/gallery/FMG067.png"
+image cg FMG077 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.png"
@@ -418,14 +479,24 @@ image cg GTS035 = "Graphics/ui/gallery/GTS035.png"
 image cg GTS043_planks1 = "Graphics/ui/gallery/GTS043_planks1.png"
 image cg GTS044_stars1 = "Graphics/ui/gallery/GTS044_stars1.png"
 image cg GTS044_stars2 = "Graphics/ui/gallery/GTS044_stars2.png"
-image cg GTS046_upskirt = "Graphics/ui/gallery/GTS046_upskirt.png"
+image cg GTS046_upskirt = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_upskirt.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg GTS046_hold1 = "Graphics/ui/gallery/GTS046_hold1.png"
-image cg GTS046_hold2 = "Graphics/ui/gallery/GTS046_hold2.png"
-image cg GTS046_hold3 = "Graphics/ui/gallery/GTS046_hold3.png"
-image cg GTS050_nightmare1 = "Graphics/ui/gallery/GTS050_nightmare1.png"
+image cg GTS046_hold2 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_hold2.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg GTS046_hold3 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_hold3.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg GTS050_nightmare1 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS050_nightmare1.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 
 image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
-image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
+image cg PRG025 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/PRG025.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
 image cg PRG038_poster = "Graphics/ui/gallery/PRG038_poster.png"
 
@@ -438,7 +509,9 @@ image cg WG046 = "Graphics/ui/gallery/WG046.png"
 image cg WG047 = "Graphics/ui/gallery/WG047.png"
 image cg WG060S = "Graphics/ui/gallery/WG060S.png"
 image cg WG070 = "Graphics/ui/gallery/WG070.png"
-image cg WG071 = "Graphics/ui/gallery/WG071.png"
+image cg WG071 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG071.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.png"
 image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.png"
 
@@ -1090,8 +1163,9 @@ define audio.Nostalgia = "Audio/BGM/nostalgia.ogg"
 define audio.NostalgiaSax = "Audio/BGM/nostalgia_sax.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
+define audio.Reality = "Audio/BGM/reality.ogg"
 define audio.Rivalry = "Audio/BGM/rivalry.ogg"
-define audio.Requiem = "Audio/BGM/requiem.mp3"
+define audio.Requiem = "Audio/BGM/requiem.mp3" #Distant Questioning
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
@@ -1704,6 +1778,8 @@ init 2 python:
     eventlibrary['WGBE001'] = {"name": "So Bad It's Good", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.AND, [ConditionEnum.FLAG, "DormWG_Seen"], [ConditionEnum.NOEVENT, "WG044"]]]}
     eventlibrary['WGBE002'] = {"name": "Fashion Faux Pas", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "schoolexterior",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG035"], [ConditionEnum.NOEVENT, "WG044"]]]}
     eventlibrary['WGBE003'] = {"name": "It's a Miracle!", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dormWG",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WG062"]]}
+    eventlibrary['WGBE004A'] = {"name": "Beat 'Em Ups & Brownies", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dormWG",        "priority": PrioEnum.NONE,              "obsflags": ["size6"],            "conditions": [[ConditionEnum.EVENT, "WG079"]]}
+    eventlibrary['WGBE004B'] = {"name": "A Bad Batch", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "cookingclassroom",        "priority": PrioEnum.ALL,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGBE004A"]]}
     eventlibrary['WGFMG001'] = {"name": "Afraid of a Little Fun?", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                             "location": "gym",               "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "WG043"], [ConditionEnum.OR, [ConditionEnum.EVENT, "WG032"], [ConditionEnum.EVENT, "WG037"]]]]}
     eventlibrary['WGFMG002'] = {"name": "Tamer of Dragons", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                   "location": "dorminterior",     "priority": PrioEnum.NONE,              "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "WG043"]]}
     eventlibrary['WGFMG003'] = {"name": "An Immovable Object", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "schoolexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size5"],        "conditions": [[ConditionEnum.EVENT, "WG063"]]}

@@ -5887,6 +5887,7 @@ label BE031_c1_after:
     "Another button undid itself, and the pillows of flesh that tried to escape looked like someone had overfilled cake tins."
     "My mouth went dry thinking about what hid behind the fifth button, and the bra beneath. I begged my mind not to overthink it. I didn't want expectations, whether they be exceeded or not. I just wanted to see them."
     "Honoka let out the cutest groan as the last button was undone, and her shirt soon hit the floor afterwards. I was pretty sure I made a whimpering sound, like a puppy that saw a treat held just out of its reach."
+    $ persistent.unlock_cgBE031 = True
     show cg BE031 with dissolve
     BE "Well. This is it. Or, rather. These are them."
     "Honoka undid the clasp of her bra as quickly as she could. Rather than letting it fall, she carefully placed it aside, before standing up straight to let me get the best view of her breasts."
@@ -5920,6 +5921,7 @@ label BE031_c1_after:
     "When this began, I thought I could last for ages. I just wanted to let myself rest in Honoka's boobs eternally. But I underestimated how sensual it felt. I could sense the inevitable coming, and had to at least summon some strength to let her know."
     "I don't know how long it was when I finally had to pat on her boobs as fast as I could to let her know what was going on. But those minutes had been, without a doubt, marvelous."
     "I gulped as I heard Honoka's pants reach a fever pitch, and she kept building up speed as she returned her hands to the sides."
+    $ persistent.unlock_cgBE031b = True
     show cg BE031b with dissolve
     "With her vigor renewed, I stood no chance. As soon as the first sound of a grunt left my throat, Honoka squeezed her boobs as tightly together as she could, and I came all over the inside of her cleavage."
     "With how much there was, it was like trying to coat a barn with a few teaspoons of paint."

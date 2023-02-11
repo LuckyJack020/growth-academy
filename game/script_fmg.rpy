@@ -5540,10 +5540,10 @@ label FMG037:
     scene black with fade
     pause 2
 
-    scene Info Desk with fade
-    MCT "Out of all the places you could've chosen to be this is where you decided to get hungry."
+    scene Cafeteria with dissolve
+    MC "She couldn't just get in line and grab something from the lunch ladies??? Ugh, I hate that she hates social interaction."
     show FMG neutral with dissolve
-    FMG "So, what does she look like? Shouldn't be too hard to find her, right?"
+    FMG "Don't be so mean! Now, what does she look like? Shouldn't be too hard to find her, right?"
     MC "Trust me, you won't be able to miss her..."
     FMG "Why's that?"
     show FMG neutral at altMove(0.5, 0.25)
@@ -5563,9 +5563,6 @@ label FMG037:
     FMG "I did no such thing!"
     MC "Oooo yeah you did!"
     Tomoko "S-So... um... I'm kind of hungry. Can you get the snack?"
-    MCT "W- bruh at this point you would have just walked away. Geez, did she just want to mess with me?"
-    "I almost scoffed, but noticed Tomoko was visibly uncomfortable."
-    show FMG neutral
     MC "Well uh... Akira should be able to help us with that. She's the best in the uh... getting-snacks-unstuck business...?"
     show Tomoko distracted
     MC "Tomo?"
@@ -5573,7 +5570,6 @@ label FMG037:
     pause .5
     show Tomoko neutral
     Tomoko "What? My friend sent me a meme."
-    MC "What friends?!"
     FMG "Wow she {i}is{/i} like you."
     MC "I know... it's terrible. Horrifying, some might say."
     Tomoko "Y-Yeah, I guess... but uh... thanks. I know Kei isn't of much use with these things."
@@ -8346,11 +8342,13 @@ label FMG050:
     show FMG neutral
     FMG "...Right! No reason to worry about it."
     FMG "Well, no time like the present."
+    $ persistent.unlock_cgFMG050 = True
     show cg FMG050 with dissolve
     "Akira grabbed her clothes and headed towards the bathroom."
     MCT "Wow, her back is shredded. Heh, her butt got bigger too. Sweet."
-    hide FMG with dissolve
-    hide cg with dissolve
+    hide FMG
+    hide cg
+    with dissolve
     pause 1
     FMG "The skirt fits, it's definitely smaller than I would like. Luckily for you, you get to see more of my quads."
     MCT "Someone is looking out for me. Thank you."
@@ -15445,8 +15443,16 @@ label FMG077:
     "I let myself in and made myself right at home. Well, as best as I could, that is. It certainly got easier the further away I got from Chibuki's side of the dorm."
     FMG "Kei-kun, is that you?"
     MC "I think? Sometimes I forget my own name, I get confused easily."
+    $ persistent.unlock_cgFMG077 = True
+    if isNSFW():
+        show cg FMG077 with dissolve
+    else:
+        show FMG neutral with dissolve
     "I heard a door creak open as Akira walked out of the bathroom, her imposing figure filling nearly the entire doorway. She was wearing nothing but a hair tie to keep her ponytail together."
-    show FMG neutral with dissolve
+    if isNSFW():
+        hide cg
+        show FMG neutral
+        with dissolve
     MC "I see you're dressed for the occasion. Before you even say anything, I will undress myself."
     FMG "You're no fun. I'm only trying to set the mood!"
     MC "{i}Siiiiiigh{/i}... fine..."

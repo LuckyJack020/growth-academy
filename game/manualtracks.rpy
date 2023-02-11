@@ -534,6 +534,17 @@ init python:
     )
     ost.manualDefineList.append(theme_PoF)
 
+    theme_RlY = ost.soundtrack(
+        name = "Reality",
+        path = "Audio/BGM/reality.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Distant Questioning",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_RlY)
+
     ## Base Template
     ######################################
 

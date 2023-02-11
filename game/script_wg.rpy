@@ -1517,7 +1517,7 @@ label WG009:
             WG "Well, you shall know soon enough."
     scene Pool with fade
     $setFMGOutfit(OutfitEnum.SWIM)
-    $setWGOutfit(OutfitEnum.SWIM)
+    $setWGOutfit(OutfitEnum.SWIMCAP)
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
     show FMG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show WG happy at Position(xcenter=0.75, yalign=1.0)
@@ -19012,6 +19012,7 @@ label WG065:
     show FMG flex
     FMG "And I'm not talking about the cookies either."
     show Sakura neutral
+    show PRG blush
     "Aida blushed, but everyone else just rolled their eyes at that groaner of a punchline."
     FMG "I should be able to catch up to her easily."
     show Natsuko neutral at altMove(0.5, 0.15)
@@ -19137,6 +19138,7 @@ label WG065:
     show FMG neutral
     hide BE with dissolve
     FMG "Alright, alright. No sense in dishing it out if you can't take it yourself."
+    show WG pondering
     show FMG sad
     FMG "But, man! I was really hoping for some more of those Ooey Gooey Nutty Butter Bars."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -20735,6 +20737,7 @@ label WG071:
     "I could have slept here forever if air supply wouldn't have been a limiting factor."
     show WG doubt
     WG "Well you better get to work, because I can't see anything down there now."
+    $ persistent.unlock_cgWG071 = True
     show cg WG071 with dissolve
     "Not even a semblance of patience anymore, Alice lifted up her belly. I in turn pressed it up as best I could. With our combined efforts I managed to catch a glimpse of where I was— and where she was— and what I had to do to get there."
     "With a little bit of maneuvering— I was back in!"
@@ -20813,6 +20816,7 @@ label WG071:
 
 label WG072:
     $setProgress("WG", "WG073")
+    $setWGOutfit(OutfitEnum.DRESS)
     $setWGOutfit(OutfitEnum.NUDE)
     play music Peaceful
     scene Hotel Room with fade
@@ -22199,7 +22203,7 @@ label WG076:
     hide PRG with dissolve
     #scene WG-PRG bathroom with fade
     "Sensing a slight bit of desperation in Alice's call out, I immediately walked towards her voice and through the bathroom door."
-    show WG surprised-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show WG surprised-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     "Only to discover Alice, fully decked out in her birthday suit, completely soaked, sitting in her tub."
     MCT "Whoah..."
     "Needless to say, it was a lot to take in."
@@ -24906,6 +24910,991 @@ label WGBE003:
     "A more prudent and wise man would have said it was a gift, and that I didn't know."
     MC "Uh, I'm not sure. You'd have to ask Alice."
     "But I was not that man. Not today."
+    jump daymenu
+
+label WGBE004A:
+    scene Dorm Hallway with fade
+    "I was headed over to Alice's dorm to drop off my latest expense report. Could it have waited until tomorrow? Yes. But it was a good excuse in my mind to see Alice."
+    "Not that I needed a particular reason, I'm sure she'd be happy to see me all the same." 
+    "But in my experience she was far more amenable to unexpected interruptions when she was in the middle of business matters if the cause for the interruption was a business matter as well."
+    "These expense reports weren't anything to sneeze at either. You'd think being her boyfriend she'd cut me some slack on filling these things out, but if I didn't enter in everything correctly to a T, she'd hand it right back to me."
+    "Last time I whined about it she just told me \"If you think I'm a stickler about expense reports then you haven't had to deal with the NTA.\". {w}So I don't complain about filling them out anymore. {w}Out loud anyway."
+    scene Dorm WG with fade
+    play sound Knock
+    WG "Come in."
+    show WG neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    play music DayByDay
+    BE "Oh, and there was this one time Kei-chan and I were having a contest to see who could blow the biggest bubble."
+    MCT "{i}Ughh{/i}, not this story."
+    BE "Naturally he was losing, so he gets this bright idea to shove the rest of the pack of gum into his mouth."
+    show WG surprised-2
+    WG "Oh?" 
+    show WG sly
+    extend " I think I know where this is going...."
+    show BE smug
+    BE "Don't get me wrong, his idea worked, he blew a gigantic bubble— until it popped and glued itself all over his head and face!"
+    show WG happy
+    WG "Hehe." 
+    MC "It wasn't that funny."
+    show BE wink
+    BE "Of course it was!"
+    show BE happy
+    BE "So then he's running around blinded from the pink goo covering his eyes while he tries to claw it out of his hair, which only smashed it there."
+    show BE neutral
+    BE "His hair was pretty thick even back then, and by the time he gave up trying to get it out it was like sticky cement."
+    show WG surprised-2
+    WG "Wow."
+    show WG sly
+    extend " Sounds like a mess."
+    show BE happy
+    BE "Oh it was. It was so unsalvageable his mom had to buzz all his hair off— even his eyebrows."
+    show WG pondering
+    WG "I must say, Dear, I have a hard time trying to imagine you bald."
+    show BE neutral
+    BE "It wasn't his best look, I'll say that."
+    show WG surprised-2
+    WG "Did it all grow back in a few minutes?"
+    show WG neutral
+    MC "Not back then, though I wish it would have. I was stuck like that for a couple months before I started looking normal again."
+    show BE happy
+    BE "I thought he looked like an alien, but Tomo-chan started calling him Kei-clone, because he looked like some version of Kei that was grown in a vat."
+    MC "Supposedly the original is still out there somewhere."
+    show BE shrug
+    BE "Yup, unfortunately Alice, it looks like you're stuck with the cheap copy."
+    show WG neutral
+    show BE neutral
+    WG "How unfortunate."
+    show WG happy
+    extend " On second thought though, it is usually a better investment to buy low when you can."
+    MC "Why can't you tell any good stories about me to my girlfriend?"
+    show BE angry
+    BE "What do you mean? These are the good stories."
+    MC "tHeSe ArE tHe GoOd StOrIeS!"
+    show BE happy
+    WG "Well, I certainly have been enjoying them."
+    MC "Clearly that seems to be the case."
+    MC "Come to think of it though, I'm surprised to see you here, Honoka. Did you stop in for another fitting?"
+    show BE neutral
+    BE "Yeah, the girls have been growing like crazy lately. My current bra just isn't cutting it. Well, it's cutting into me, but it's not cutting {i}it{/i}— if you know what I mean."
+    MC "I'm sure that sounded a lot more clever in your head."
+    show BE embarrassed
+    BE "It really did."
+    show BE neutral
+    "I was glad to know she was getting an upgrade if her current one was ready to give out. If one of the bra wires in her zeppelin wranglers snapped, it would've probably taken an eye out."
+    MC "Find what you need I take it?"
+    show BE happy
+    BE "Yup, we're all set!"
+    show WG neutral
+    WG "Speaking of that, to what do we owe the pleasure of you dropping in Dear?"
+    MC "Ah, yes."
+    show BE neutral
+    "I pulled the printed spreadsheet form out from my back pocket and handed it to Alice."
+    MC "Last month's expense report, filled out properly and signed."
+    show WG happy
+    WG "Excellent. And your recipes?"
+    MC "..."
+    show WG doubt
+    WG "..."
+    MC "Uhhh... must have left those in my other pants pocket."
+    MCT "Shit. I hope I didn't wash that pair in the laundry."
+    show WG sly
+    WG "A thorough job as always Dear."
+    MC "I swear one of these days, I'll get it right."
+    show WG haughty
+    if getVar("BEP") < 8 or checkAffection("WG", ">=", 55):
+        WG "I'm sure you will."
+    else:
+        WG "Is that so? Well, I won't be holding my breath."
+    show WG sly
+    show BE smug
+    BE "Poor Kei-chan. He's the tragic character of his own story."
+    MC "Your stories anyway."
+    show WG neutral-2
+    show BE neutral
+    BE "Oh, they aren't all bad. Like there was this one time where Kei, Tomo, and I all got ice cream cones. Tomo's scoop fell off her cone, and before she was going to cry, Kei put his scoop into her cone."
+    show WG happy
+    MC "See? Was that so hard?"
+    WG "That was certainly kind of him."
+    show WG neutral-2
+    show BE smug
+    BE "I mean sort of. Afterwards he kept trying to steal a lick from my ice cream instead."
+    MC "Ahem. The story was over, no need to bore her with the drawn out epilogue."
+    show BE angry
+    BE "And then I ended up dropping my cone when he was chasing me."
+    show BE confused
+    MC "You left out the part where you dropped an empty cone, after you ate all the ice cream in one bite so I couldn't have any and then you got a brain freeze so bad you almost passed out."
+    show WG happy
+    show BE shrug
+    WG "{i}Pfft! HAHA!{/i} {w}Despite all of your tragic misadventures, they sure seem like a comedy to me."
+    show BE happy
+    MC "I am the jester of the queen's court it would seem."
+    show WG haughty
+    WG "That would appear to be so."
+    show WG neutral-2
+    BE "Ooo! What does that make me then?"
+    MC "My bad luck charm apparently."
+    show WG happy
+    WG "You can be a courtier. The position comes with unlimited refills of tea."
+    BE "Oh, I like. Top me off, please!"
+    "Honoka held out her cup for Alice to pour some hot tea from the pot." 
+    "The gesture ended up drawing my attention to what appeared to be a completely barren platter, save for a few crumbs. I'm sure at one point it had been heavily ladened with biscottis and tea biscuits." 
+    show WG neutral
+    show BE neutral
+    BE "Speaking of Tomo though, feels like it's been forever since the three of us got to hang out together. Think she'd be up for doing something?"
+    MC "You mean like now?"
+    show BE shrug
+    BE "Sure why not."
+    show BE neutral
+    MC "I got time, I don't know about Tomo, but I imagine we could probably pry her off her couch if it involved staying indoors and playing video games."
+    show BE happy
+    BE "Perfect! I got some new games I've been wanting to try out, but they are multiplayer and it just isn't the same playing by yourself."
+    show WG surprised-2
+    show BE surprised-2
+    BE "Oo! And these games are four-player. So Alice can come too."
+    MC "Nice. How about it Alice?"
+    show BE happy
+    show WG pondering
+    WG "Hmm..."
+    BE "Yeah, I don't even think you've seen my room."
+    MC "Spoiler— it's a mess."
+    show BE angry
+    BE "{i}Shhhh{/i}— Kei-chan!"
+    MC "What? I'm just helping set expectations. To be fair it's generally cleaner than Tomo's room."
+    show BE happy
+    BE "It's not much of a compliment, but I'll take it."
+    show WG neutral-2
+    WG "As much as I like to, I'm afraid I must set aside some time this afternoon to make sure I am caught up on my studies, and that is after my next appointment, which will soon be arriving."
+    show BE doubt
+    BE "Aww, no fun."
+    WG "It is regrettable, but I will try to rendezvous with you later if I happen to finish early. Do try to bring him back in one piece, Honoka."
+    show BE smug
+    BE "I'll try. But probably not very hard."
+    MC "Later Babe. Just give me a shout if you finish early. I'll stop by later if not."
+    WG "Have fun."
+    scene black with fade
+    stop music fadeout 1.0
+    pause 1
+    "Later on..."
+
+    scene Dorm BE
+    show BE surprised-2 at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    play music BE
+    BE "Look out! There's more of them!"
+    MC "Crap! I'm trapped on the other side of the screen. Help me out here so I don't get bodied."
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE neutral
+    Tomoko "The enemies are always spawning on the sides of the screen, what else did you think was going to happen?"
+    MC "Well, sometimes they drop from the sky. Besides, it's not my fault they keep moving backwards when I punch them. I have to keep up the combo or they'll get back up."
+    "We were playing a modern sequel to one of the classic beat 'em ups we used to play together when we were kids: Rage'n Streets." 
+    "Things were going well... or I should say just as well as they used to— which was to say, not very."
+    show BE confused
+    MC "Dammit, I died again."
+    show BE happy
+    Tomoko "Why are you so bad at this?"
+    MC "I'm not bad at this. Maybe if {i}someone{/i} would let me have one of the pizzas that spawn in every five screens I might not be so low on health all the time."
+    Tomoko "They would just go to waste when you die."
+    show BE smug
+    BE "She's got you there, Kei-chan."
+    MCT "Et tu, Honoka?"
+    MC "Whatever. We're almost to the third stage boss."
+    show BE surprised-2
+    BE "Wow, they are really starting to pile up on the screen. We should use our special."
+    MC "You mean the thing that drains a quarter of your health to use? No thanks."
+    show BE neutral
+    Tomoko "Beats dying. At this rate we'll take more damage fighting through them all one by one."
+    MC "{i}Arrgh{/i}, you're probably right. Let's just use it."
+    pause 1
+    show BE doubt
+    MC "And I'm dead again, DAMNIT!"
+    show BE smug
+    BE "That was fast."
+    MC "Oh come on. Why do these games always do that? They take the coolest ability in the game and make it completely dogshit worthless by giving it too high a cost to use."
+    Tomoko "Good thing I took the pizza instead."
+    show BE neutral
+    MC "I think what you meant to say was— if only I had given it to Kei we wouldn't have lost another life. You do realize we share lives across the three of us in this game?"
+    Tomoko "What!? We're going to get wiped out by this boss."
+    MC "Oh yes, it affects you, so now it's a problem."
+    show BE happy
+    BE "Relax, we got this for sure."
+    show BE surprised-2
+    "Honoka's optimism proved to be unfounded when the boss unleashed his mid-stage attack that had him jump all over the screen several times, draining all our health in the process."
+    Tomoko "How are we supposed to avoid that?"
+    MC "Back off attacking sooner, don't be so aggressive all the time."
+    show BE doubt
+    BE "But if we don't do enough damage to defeat him fast enough he'll rage into a frenzy."
+    MC "Well— I'm already dead."
+    show BE neutral
+    BE "Just spawn back in after he finishes that stupid bounce attack."
+    MC "I can't, we're out of lives."
+    show Tomoko annoyed
+    Tomoko "What!? {w}Now I'm dead and I can't respawn. You drained all our lives Kei!"
+    MC "I told you, I needed the pizza, but you took it anyway."
+    show Tomoko distracted
+    Tomoko "It was obviously a good investment. We had like twelve lives and I only died that one time."
+    MC "{b}{i}Because you kept taking the pizza!{/i}{/b}"
+    "At this point I was ready to tear my hair out in exasperation but I knew that would be quite the fruitless gesture by this point."
+    show BE sad
+    BE "Well, looks like that's it. I couldn't hold on either. {w}Dang, defeating him would have given us three extra lives."
+    show BE happy
+    BE "Wanna try again?"
+    show Tomoko neutral
+    Tomoko "Eh, I'm tired of this one. Got anything else?"
+    BE "Sure. Take a look at what I got, see if anything jumps out at you. We could always download something on the Pretendo eStore."
+    show BE neutral
+    BE "Oh, looks like I got a text from Kanami, I wonder if she'd want to join us. Most of these games can handle four players."
+    Tomoko "Kanami, she's that girl from the cooking club right? The one with the big boobs?"
+    "Just as she said that, she suddenly remembered who she was talking to."
+    Tomoko "Well... I mean, compared to most..."
+    BE "Yup, that's her. She's very sweet. You'd like her, I'm sure."
+    MC "You've seen her before, she was at Alice's party. She helped Aida and Sakura with the cupcakes, remember?"
+    Tomoko "Oh yeah, I remember seeing her there. I didn't get to talk to her though."
+    "I suspected she wouldn't have gone out of her way to talk to anyone she didn't already know."
+    show BE happy
+    BE "Speaking of that, she was wanting to know if I had some free time to meet her in the cooking classroom for her to show me how to make brownies."
+    MC "Come to think of it, I remember now she mentioned that at the party. She doesn't know what she's getting into if she's inviting you into her kitchen."
+    show BE wink
+    BE "Hey, if Kanami-chan says the recipe is impossible to mess up, I'll take her word for it."
+    MC "Nothing is impossible with you Honoka, I believe in you."
+    show BE angry
+    BE "You butthead!"
+    show BE seductive
+    extend  " Just for that I'm going to make some delicious brownies with Kanami and not share any with you."
+    MC "Oh thank goodness, you had me worried there."
+    show BE angry
+    BE "Oh shut up!"
+    show BE doubt
+    BE "As much as I'd like to though, we are kind of in the middle of all of this. It feels like it's been so long since I got to hang out with both of you at the same time, like old times. I don't wanna miss out on it, you know?"
+    BE "I'll just tell her I'm busy and see if I can get a rain check."
+    show BE confused
+    MC "Wait, don't do that, what if we tagged along too?"
+    show BE happy
+    BE "Really? That's a great idea! I'm sure she'd definitely be cool with that. She's used to making large batches anyway. Let me just text her back to make sure."
+    Tomoko "Eh, I don't know. This doesn't sound that fun."
+    "Truth be told, I didn't just make the suggestion to tag along to be supportive of Honoka. I figured it couldn't hurt to get a bit of baking skill under my belt, since I knew it could come in handy as something I could make for Alice."
+    if getFlag("WG077_Fail"):
+        "That and I needed a bit of redemption after my latest attempt to make something for her was such a giant flop."
+    else:
+        "Especially if she's going to expect a dessert course when I cook for her."
+    "I also figured it would be a good excuse to have Tomo develop some domestic skills. As her older brother, I did kind of worry about how well she was going to do on her own outside of school."
+    MC "Oh come on Tomo, what about brownies doesn't sound fun?"
+    BE "Sweet! She said the more the merrier. Let's go!"
+    Tomoko "...Okay then."
+    scene black with fade
+    pause .5
+
+    scene Cooking Classroom
+    show Kanami neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1)
+    show Tomoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show BE happy
+    with fade
+    Kanami "Looks like we have a crowd. I'm glad to see so many fellow students taking an interest in baking."
+    MC "Substitute \"interest in baking\" for \"obsession with chocolate\" and we might get closer to the reason why Honoka is here."
+    show BE angry
+    BE "I mean, he's not wrong."
+    show BE neutral
+    Kanami "Hehe. That's certainly fine. I don't think I'd get much help from my younger siblings in the kitchen if they didn't show an interest in the sweets themselves. It's the starting point for many of us in the kitchen."
+    BE "See Kei-chan, it's a good thing."
+    MC "It's something alright."
+    if not getFlag("TM_MeetsKanami"): 
+        $setFlag("TM_MeetsKanami")
+        Kanami "Oh, and pardon me, but I don't think we've been properly introduced."
+        BE "This is Kei-chan's sister, Tomoko Hotsure."
+        Tomoko "Hello..."
+        Kanami "Nice to meet you Hotsure-san. My name is Kanami Tozakura."
+        Tomoko "..."
+        BE "{size=-6}She's a little shy...{/size}"
+        Kanami "{size=-6}Ah, I see. Not so different from my little sister.{/size}"
+        Tomoko "...You can just call me Tomo, it's fine."
+        Kanami "If that's what you prefer, Tomo."
+    else:
+        Kanami "I believe it's been a while. Nice to see you again, Tomo."
+        Tomoko "Yeah, uh, nice to see you too..."
+    Kanami "So, this should be fun. The recipe is simple, but what I like about it is that such a small investment can create such a big reward. These fudge brownies are always a crowd pleaser."
+    MCT "Small investment for a big return, sounds like something Alice would be into."
+    Kanami "I'll give you a rundown of the recipe first and let you all watch while I make a batch so you'll know what to do. Then it'll be your turn."
+    Kanami "First we'll need to get all of our ingredients: butter, eggs, semi-sweet chocolate chips, sugar, flour, vanilla extract, salt, and chopped walnuts, but the walnuts are optional."
+    MCT "Chocolate flavored fat and sugar— got it!"
+    show BE doubt
+    BE "That seems like a lot of ingredients."
+    MC "What were you expecting? Chocolate, chocolate, and more chocolate?"
+    show BE angry 
+    BE "No..."
+    show BE shrug
+    BE "Okay, well, maybe a little more chocolate."
+    show BE neutral
+    Kanami "Hehe, well it may be a chocolate dessert, but the key is balance between the ingredients. Sometimes that takes a little restraint."
+    MCT "Restraint? Honoka is definitely going to mess this up then."
+    Kanami "If there wasn't any flour or eggs there would be nothing to bind up all the other sweet ingredients into a moist cake-like structure that gives it such a great texture."
+    Tomoko "If you say so..."
+    Kanami "It doesn't seem like much now, but trust me."
+    Kanami "While we have the oven heating up to 175 degrees, we're going to melt the butter and the chocolate in a saucepan on medium heat. Make sure to keep it stirring so the butter fat emulsifies the chocolate chips."
+    show BE happy
+    BE "Oo, that's looking good already."
+    MC "Easy there, it's too hot to lick the bowl already."
+    Kanami "Once we have that melted, we'll turn off the heat and fold in the sugar. No need to mix it hard, it will dissolve just fine if you keep it moving."
+    Kanami "I'm going to grease the baking sheet while it cools down. Make sure you don't forget this step, or you'll have a quarter of your brownies stuck to the pan."
+    show BE doubt
+    BE "This doesn't sound as simple as you made it out to be Kanami."
+    Kanami "It may seem like a lot all at once, but we're basically almost done at this point already."
+    Kanami "Now we beat in the eggs one at a time..."
+    Tomoko "Why not just add them all in at once?"
+    if getFlag("WG057_C2_1"):
+        MC "Aida told me that it helps temper the mixture— something about helping mix the protein and fat together."
+        Kanami "You've learned from the best, Hotsure-san. That's exactly why we need to go slow here with this step."
+    else:
+        MC "Yeah, I never understood that either."
+        Kanami "The eggs help to emulsify the fat, which helps to suspend all the ingredients together smoothly. Adding too much too fast will cause them to separate out. Which if that happens we'll have to start all over."
+        show BE surprised
+        BE "Yikes! That doesn't sound good."
+        Kanami "It's a pretty big mess when it does happen."
+        show BE neutral
+        BE "Does it ever happen to you, Kanami? I thought you were a pro at this."
+        Kanami "It still happens to the best of us."
+        show BE angry
+        MC "I bet it happens more frequently to the worst of us too."
+        "I said that as I looked directly at Honoka."
+        BE "You're so mean Kei-chan."
+        show BE seductive
+        MC "Oh you're so full of it! I'm not falling for those puppy-dog eyes."
+        show BE wink
+        "Honoka and I proceeded to exchange goofy faces with each other as Kanami continued with her brownie tutorial."
+    Kanami "Now we fold in the flour, salt, and vanilla extract."
+    Tomoko "What's with the vanilla? I thought these were chocolate brownies."
+    Kanami "Vanilla is like the salt and pepper of baking, it amplifies and complements sweetness. Chocolate often has other flavors added to it. In some cultures they add spices to it, but the most common flavor added is vanilla, ironically enough."
+    Tomoko "Huh..."
+    Kanami "Once the flour lumps are gone, we'll just sprinkle in the chopped nuts. I like to add these because they add a bit of texture and crunch to otherwise soft cake with a somewhat flakey crust."
+    Kanami "Pour it into the pan, scraping down the sides of the mixing bowl, and it's ready for the oven. Simple right?"
+    MC "Sounds good."
+    Tomoko "I think I got it."
+    show BE confused
+    BE "Uh... sure."
+    MC "Honoka, were you paying attention at all?"
+    show BE angry
+    BE "Of course I was! {w}You just watch, Kei-chan. I'm going to make some delicious brownies while yours will end up tasting like mud."
+    show BE surprised-2
+    MC "You probably should have taken notes like we did if that's your plan."
+    BE "What? Notes? This isn't class. That doesn't sound like any fun."
+    show BE shrug
+    MC "And don't tell me you didn't have a pen and a notepad hiding somewhere in that cleavage pocket dimension you keep everything in."
+    show BE seductive
+    BE "Maybe..."
+    show BE neutral
+    MC "\"Everyone has the desire to win, but few have the will to prepare.\", as Alice is fond of saying."
+    Tomoko "Since when is this a competition?"
+    MC "When someone threw down the gauntlet just now by insisting my brownies were going to taste like mud, while hers were by some miracle going to turn out amazing."
+    Tomoko "Eh, if you say so. Probably won't be too hard to beat Honoka's brownies."
+    BE "Not you too Tomo!"
+    Tomoko "What are you talking about? You're terrible in the kitchen, Honoka. I wouldn't even set foot in here with you if there wasn't a fire extinguisher three meters away."
+    BE "Oh come on, I'm not that bad! {w}When was the last time you cooked anything, Tomo?"
+    show Tomoko surprised
+    Tomoko "...{w}Well, I mean, it can't be that hard to just follow a recipe, right?"
+    show BE smug
+    BE "That's what I thought."
+    show Tomoko neutral
+    MC "Nothing is going to catch on fire... probably. Now, whether or not some people manage to produce something edible is still up for grabs."
+    show BE angry
+    BE "Yeah yeah. So what are we wagering on in this competition?"
+    show BE surprised-2
+    show Tomoko surprised #surprised-2?
+    MC "How about, the loser has to clean the winner's room?"
+    show BE smug
+    show Tomoko neutral
+    "Honoka & Tomoko" "Deal!"
+    "I had a feeling it would be an attractive offer since all three of us were too lazy to do it ourselves."
+    Kanami "Oh my! I didn't expect this to turn into a competition, but that certainly does make things more interesting." 
+    Kanami "One of the great things about this recipe is that it is very adaptable. There's a lot of leeway with little extras you can add to give it your own personal touch." 
+    Kanami "I chose walnuts because they are tried and true. They add that little something extra, but don't detract from the fudge brownie flavor, but that doesn't have to be the path someone else takes."
+    show BE smug
+    BE "See Kei-chan? I got this in the bag. No one knows sweets better than I do."
+    MC "Really now? Better than Kodama-san?"
+    show BE embarrassed
+    BE "Pshh! She's not here though."
+    show BE neutral
+    Kanami "I've set out the ingredients for the base recipe for each of you. You're free to check the pantry for any extra ingredients you think might complement the brownies."
+    Tomoko "Thanks..."
+    MC "That was nice of you Tozakura-san. You didn't have to."
+    Kanami "Whatever I can do to help. Just let me know when you're all done and we can get them going in the oven so they'll all be ready at the same time."
+    hide BE
+    hide Tomoko
+    hide Kanami
+    with dissolve
+    "Before starting mixing, I took a look to see what they had in the pantry where they kept the confectionery ingredients. {w}The selection was staggering. It was pretty overwhelming to be honest."
+    MCT "Hmm, let's see here. What sounds good? Or I guess, what makes sense?"
+    MC "Mint chips? I mean mint ice cream with chocolate chips is a classic, but does mint chips in chocolate work the same? I don't see why not."
+    MCT "Caramel candies... Now that sounds good. {w}Few things go together with chocolate than caramel, especially if you were making a sundae."
+    MCT "Then again if we're talking classic combinations you can't do much better than chocolate and marshmallow. {w}Maybe throw some peanuts in there too with the mini-marshmallows? But two extra ingredients might complicate things."
+    MCT "I don't know, this is a lot to decide."
+    MCT "I better make up my mind though, Tomo and Honoka have already started."
+    menu:
+        "Mint chocolate brownies":
+            $setFlag("WGBE004_Mint")
+            jump WGBE004A_Afterchoice
+        "Chocolate caramel brownies":
+            $setFlag("WGBE004_Caramel")
+            jump WGBE004A_Afterchoice
+        "Marshmallow peanut chocolate brownies":
+            $setFlag("WGBE004_Mashmallow")
+            jump WGBE004A_Afterchoice
+
+label WGBE004A_Afterchoice:
+    "Once I had decided on a course of action, there wasn't much more to it.{w}True to Kanami's word, the recipe itself was pretty straightforward. Certainly easier than the recipe I got from Takamura-sensei to make for Alice."
+    if getFlag("WG077_Fail"):
+        "Which was a good thing because I felt the need to redeem myself after my previous efforts in the kitchen had been a big flop."
+    "Luckily adding in the extra fixings didn't add any more complexity to the process, I just mixed them in after the batter was done."
+    "We all finished pouring ours into the baking pan around the same time. Looking at the brown batter in each pan, they all looked the same."
+    show Kanami neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1)
+    show Tomoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show BE neutral 
+    with dissolve
+    Kanami "Alright I'll just get these going in the oven for us."
+    pause 2
+    Kanami "And now we just wait 30 minutes."
+    show BE surprised-2
+    BE "30 minutes!? But I wanted chocolate like 20 minutes ago!"
+    Kanami "{size=-6}I should probably leave out the extra time needed for them to cool.{/size}"
+    MC "{size=-6}Yeah, that's probably a good idea...{/size}"
+    jump daymenu
+
+label WGBE004B:
+    scene Cooking Classroom with fade
+    play music BE
+    "We had a bit of time to kill while we waited for the brownies to get done."
+    show Tomoko distracted with dissolve
+    "Tomo was off in her own little world— no doubt playing some sort of stupid clicker game on her phone. {w}She's practically glued to that thing, I swear."
+    show BE happy
+    hide Tomoko
+    with dissolve
+    "Honoka and I filled the time catching up and sharing memes with each other on our phones."
+    "Every now and then I could get Alice to crack a smile when I shared one with her, but I saved the really stupid ones for Honoka, since I knew she'd get a kick out of them."
+    "If a meme was too weird or too meta, Alice would just give me a look like I should be shipped away to a mental institution. {w}And maybe she was right, but Honoka and I couldn't stop giggling at this dumb crap."
+    show BE happy
+    BE "Bwahaha! This one is hilarious!"
+    MC "Phht! HAHA! That is a good one. I can't believe people are still making those \"Over 10,000!\" memes."
+    BE "I know right. Oo, I should show Kanami."
+    show BE happy at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "I hadn't really noticed what Kanami was doing during our down time. When Honoka called her over, she seemed like she was preoccupied moving to and fro throughout the kitchen."
+    BE "Kanami-chan, you gotta see this."
+    Kanami "Okay. Let's see..."
+    Kanami "..."
+    BE "Huh..huh. It's funny right?"
+    Kanami "I'm not sure I get it, Inoue-san."
+    show BE shrug
+    BE "Seems like we got our work cut out for us Kei-chan. Kanami-chan has a lot of catching up to do."
+    MC "We should probably start her off with some funny cat videos."
+    show BE happy
+    BE "Good idea! {w}Here. Get a load of this heck'n chonker."
+    Kanami "Chonker?"
+    Kanami "Aww, that is cute."
+    BE "See? We got her hooked now!"
+    "{i}*DING*{/i}"
+    Kanami "Oh! That's the timer." 
+    BE "Finally! Brownie Time!"
+    Kanami "Easy there Inoue-chan, they still need to cool or else you might burn your tongue. Let's pull these out so they'll get cooling off."
+    show BE doubt
+    BE "Seriously? How much longer?"
+    Kanami "Just a few more minutes should be enough."
+    show BE sad
+    BE "A few minutes? But I needed my chocolate fix like two hours ago!"
+    MC "That timeline keeps slipping..."
+    hide Kanami
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    Tomoko "I think you'll manage to survive, Honoka."
+    show BE doubt
+    BE "I dunno about that..."
+    Kanami "Since this has turned into a competition, I figured we could use some judges. Some impartial judges preferably. So I called in the Seichou's resident dessert experts!"
+    hide Tomoko
+    hide BE
+    show WG haughty at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show PRG excited at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Expert panel was right. Aida had the baking skills and the chocolate craving herself to know what made a good dessert, and Alice's world class palette was unmatched among the student body."
+    "It was quite a bit overkill to bring them in for such a trifling contest, but I wasn't going to balk at the chance to score some brownie points with Alice— literal brownie points I might add."
+    "Speaking of Alice, I was certainly surprised to see her, given that she indicated she was preoccupied earlier when we said we were going to play video games." 
+    "But when Kanami told her there would be dessert, she magically made time to hang out. To be fair, she did say she'd come by if she finished early, so I decided to give her the benefit of doubt, but the irony certainly wasn't lost on me."
+    hide WG
+    hide PRG
+    show Tomoko sad
+    with dissolve
+    "As excited as I was to see our guest judges, Tomo seemed to have the opposite reaction. The color drained from her face and she started shaking nervously."
+    MC "{size=-6}Tomo, what's wrong?{/size}"
+    Tomoko "{size=-6}I didn't think we were going to have {i}real{/i} judges. I don't know how to bake, they're going to hate my brownies. This is {i}so{/i} embarrassing.{/size}"
+    MC "{size=-6}You know what would be worse than hating your brownies?{/size}"
+    Tomoko "{size=-6}Let me guess, lots of things?{/size}"
+    MC "{size=-6}That too. But what I was going to say, what would be worse is if they pretended to like them when they actually didn't. Fake friends don't just talk behind your back, they lie to your face.{/size}"
+    MC "{size=-6}Alice adores you, but she's honest enough to tell you if your brownie's suck. That's why she's a real friend, and I can vouch for Kodama-san too. This isn't highschool anymore, Tomo.{/size}"
+    show Tomoko neutral
+    Tomoko "{size=-6}Okay... you're right. It's not a big deal.{/size}"
+    show WG haughty at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show PRG excited at Position(xcenter=0.75, yalign=1.0)
+    hide Tomoko
+    with dissolve
+    BE "Dang, Kei's definitely got the advantage now."
+    if getFlag("WG077_Fail"):
+        WG "I wouldn't say that Honoka. Keisuke's culinary skills are less than enviable. Besides, we won't have to worry about any bias because it will be completely anonymous."
+        BE "Are you serious? Kei-chan, it sounds like you're just as bad as I am."
+        MC "Easy there, let's not go crazy."
+    else:
+        WG "I wouldn't say that Honoka. As much as I like to think of myself as an impartial judge, we won't have to worry about that because it will be completely anonymous."
+    show PRG neutral
+    PRG "That's right. We don't know who made which one, so be sure to keep it a secret until the end."
+    Kanami "Alright ladies, you'll be judging four different brownie dishes."
+    hide PRG 
+    hide WG
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE doubt at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    BE "Four? You're in on the contest too, Kanami?"
+    Kanami "Well, I wouldn't want to miss out on all the fun. I already had my batch ready to go, might as well join in."
+    show BE sad
+    BE "Aww, and here I thought for sure I was going to win."
+    MCT "That makes one of us then."
+    hide BE
+    hide Kanami
+    show WG neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Kanami took out a square metal spatula from one of the drawers and proceeded to cut two brownie pieces for Alice and Aida, starting with her own."
+    show WG doubt
+    "Alice was clearly taken aback by Kanami's rather paltry portions— that is to say, a normal sized brownie square."
+    show WG neutral
+    extend " But she didn't seem to mind that much, no doubt knowing there would be more to have after the sampling was complete."
+    Kanami "Here we have brownie A."
+    show WG pondering
+    "Aida and Alice both examined their squares intently, before taking a bite. I hadn't really accounted on them evaluating appearances."
+    WG "Hmm, interesting. A strong fudge flavor with nuts— walnuts it would seem."
+    PRG "Mhmm. The walnuts add a lot of texture, and the fudge isn't too strong either."
+    WG "Solid, well executed, but at the same time it is such a classic pairing it comes across as a bit plain."
+    PRG "I don't know if I would call it plain, but I think using roasted or salted walnuts instead would've added more flavor overall. As well as having more crunch."
+    show WG haughty
+    WG "Agreed. Overall a very strong entry."
+    show WG neutral
+    Kanami "Alright, next we have brownie B."
+    "This must have been Tomo's brownie. I hadn't really paid attention to what she added but hers appeared to have a much lighter brown color to it."
+    show WG pondering
+    WG "This has a much nuttier smell to it."
+    PRG "Like... {w}peanuts."
+    WG "Hmm, indeed that seems to be the case. Chocolate peanut butter."
+    show WG haughty
+    WG "The flavor combination is excellent. Probably could use a bit more salt to bring out the roasted notes of the peanut flavor."
+    show PRG happy
+    PRG "I really like the flavor too. But... I also think that it needs something that binds a little more."
+    show PRG worried
+    PRG "It's... it's a little crumbly."
+    show WG worried
+    WG "Yes, it is kind of falling apart." 
+    show WG neutral
+    show PRG neutral
+    extend " Very nice flavor, but a bit of a clunky execution."
+    "Didn't sound like Tomo's brownie would beat out Kanami's, but I was honestly proud she put in the thought and effort to make something that by all accounts turned out decent. Especially since she hadn't really wanted to come."
+    Kanami "Next we have brownie C."
+    "This must have been Honoka's... {w}Which somehow looked really good. It had a deep rich dark brown color to it. Which made me think she might have added some extra cocoa or espresso powder to it."
+    "I didn't realize Honoka had such a sophisticated intuition with chocolate. Her thought process with chocolate always just seemed to be \"more is gooder\". I was starting to sweat. I was never going to live it down if her brownies kicked my ass."
+    Kanami "Huh, that's... odd."
+    show WG surprised-2
+    show PRG worried
+    "Kanami was apparently struggling to cut through the brownies."
+    MCT "Let me guess, she forgot to grease the baking tray."
+    Kanami "Hmm, let's try something else..."
+    show WG doubt
+    show PRG sad-2
+    pause 0.5
+    show PRG unsure
+    WG "{size=-6}I can't say I'm looking forward to this one.{/size}"
+    PRG "..."
+    "After getting a sharp knife, then a spatula to scrape them out, and still leaving half a centimeter of it stuck to the tray, Kanami managed to serve a square to each of the spherical judges."
+    show WG worried
+    show PRG sad-2
+    "The look on their faces was a mix of extreme reluctance and regret."
+    WG "{i}*sniff... sniff*{/i}"
+    show WG doubt
+    WG "{size=-6}What on earth is this?{/size}"
+    WG "At first, I thought this might be roasted notes from coffee added to it, but the burnt smell is way too intense for that. This smells like burnt sugar... charred sugar to be exact."
+    show PRG worried
+    "Aida turned the brownie in her hand, examining it from each side."
+    PRG "It looks... colorful. Are there sprinkles mixed in?"
+    show WG worried
+    WG "That is a generous bit of optimism I'm afraid."
+    "Each taking dainty bites..."
+    show WG doubt
+    show PRG surprised
+    extend " Their instant recoiling from the taste said more than any verbal verdict was likely to convey."
+    hide PRG
+    hide WG 
+    show BE confused
+    with dissolve
+    MC "{size=-6}Honoka, what did you add to yours?{/size}"
+    show BE happy
+    BE "{size=-6}Gummy bears. Why?{/size}"
+    MCT "Oh, dear God..."
+    MC "{size=-6}You can't be serious...{/size}"
+    show BE shrug
+    BE "{size=-6}What? I thought it sounded good.{/size}"
+    MC "{size=-6}You do realize gummies melt at like 40 degrees, and we cooked these at 180.{/size}"
+    show BE surprised
+    BE "Oops."
+    "Needless to say, the final judgment played out more or less as I expected it would."
+    hide BE
+    show WG worried at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
+    show PRG worried at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    PRG "This one was... different..."
+    WG "\"Different\"... yes, well um, we'll just go with that."
+    WG "These brownies appeared to have crystalized."
+    PRG "Maybe the sugar wasn't quite combined with the batter?"
+    show WG neutral
+    WG "Unfortunately the end result is more of a burnt husk of a brownie than a dessert. It falls very short on flavor and composition."
+    show PRG neutral
+    PRG "Mhm... I think that adding too much to a recipe can be a little... much. Sometimes, something simple is just as good, if not better."
+    WG "Indeed."
+    Kanami "Alright, time for our last entry."
+    show WG doubt
+    WG "Um, Kanami, I hate to interrupt the flow, but could Aida and I please have a glass of water to cleanse our palettes?"
+    Kanami "Sure, that would be a good idea."
+    MC "I'm on it."
+    show WG happy 
+    WG "Thank you, Dear."
+    show WG neutral-2
+    WG "{i}Ahh{/i}. That's better." 
+    show WG haughty
+    extend " What do we have next?"
+    "At this point I realized I hadn't thought too much about how mine brownies looked after they came out of the oven. They didn't really look all that different, so I assumed they turned out right."
+    "But nevertheless, I was starting to get a little nervous at this point. Sure, the \"contest\" as it were was a bit silly, but a part of me was still eager for Alice's approval, all while knowing she would respect Aida's opinion as well."
+    if getFlag("WGBE004_Mint"):
+        PRG "This one is... something unique as well."
+        show WG pondering
+        WG "Is that mint I smell?"
+        PRG "I think so. The light green color dotted throughout the interior provides a nice color contrast as well."
+        show WG surprised-2
+        show PRG happy
+        "In contrast to Honoka's entry, when they both took a bite, their expressions seemed to be more of a genuine surprise than one of appalled horror."
+        PRG "Mmm... this one is different. But... not unpleasant."
+        show WG haughty
+        WG "I must agree, it is quite a nice palette cleanser to top off the samplings thus far."
+        PRG "The flavor is unique. But... it's nice."
+        show WG neutral-2
+        WG "True. Despite its complementary and bright flavor profile, it lacks the more decadent and assertive chocolate flavor a fudge brownie is supposed to have."
+        MCT "Hmm, seems like it was a hit, but not without its drawbacks. Still, I can't really complain."
+        PRG "This makes things harder to judge."
+        show WG neutral
+        WG "Yes, this certainly complicates matters."
+        show WG haughty 
+        extend " Please give us a moment to convene before delivering our final verdict."
+    elif getFlag("WGBE004_Caramel"):
+        PRG "This one appears to have something else mixed in."
+        show WG pondering
+        WG "Yes, and quite sticky as well. It appears to have caramel embedded in it."
+        PRG "Another classic pairing. It'll be nice and sweet."
+        show WG surprised-2
+        "In contrast to Honoka's entry, when they both took a bite, their expressions seemed to be satisfied that it was more in line with their expectations."
+        show PRG happy
+        PRG "Mmm, a little sticky, but also a bit gooey. The flavors play well with each other."
+        show WG neutral-2
+        WG "I agree. Texturally it's a little {i}too{/i} sticky, but provides a nice textural contrast. Although, that being said, it is a bit too chewy for what I would optimally enjoy from a bite of brownie."
+        PRG "It is not the easiest dessert to eat, but the flavor pairing is nice. Perhaps a looser caramel or one drizzled on top would have worked better?"
+        show WG haughty
+        WG "Excellent observation, that definitely would be a good starting point towards improving on this recipe."
+        MCT "Hmm, seems like it was a hit, but not without its drawbacks. Still, I can't really complain."
+        show PRG neutral
+        PRG "This makes things hard to judge."
+        show WG neutral
+        WG "Yes, this certainly complicates matters."
+        show WG haughty 
+        extend " Please give us a moment to convene before delivering our final verdict."
+    elif getFlag("WGBE004_Mashmallow"):
+        show PRG excited
+        PRG "Ooh... I like the color contrast with this."
+        show WG pondering
+        WG "I agree, the swirling of the white and dark brown together really amplifies the presentation."
+        PRG "I think it's marshmallow, another classic pairing with chocolate. The two should compliment each other really well."
+        show WG surprised-2
+        show PRG surprised
+        "In contrast to Honoka's entry, when they both took a bite, their expressions lit up with excitement."
+        show PRG happy
+        PRG "Mmm, a little gooey, but the addition of the peanuts provides a nice crunch."
+        show WG haughty
+        WG "I certainly agree. Without the addition of the peanuts I think this would become too soft and mushy from all of the marshmallow potentially collapsing the structure of the brownie but it appears to be just right."
+        PRG "Sweet and soft, rich and gooey, with that little bit of extra crunch and saltiness. This is a great version of the recipe."
+        show WG happy
+        WG "I will echo that sentiment as well. It strikes a good balance, one that could have been thrown off if too much of either was added.."
+        MCT "Hmm, seems like my brownies were a big hit. Maybe even better than Kanami's?"
+        if getFlag("WG077_Fail"):
+            "Which was nice, because I was in need of a bit of redemption after my foray into French cuisine had flopped."
+        show PRG neutral
+        PRG "This makes things hard to judge."
+        show WG neutral
+        WG "Yes, this certainly complicates matters."
+        show WG haughty 
+        extend " Please give us a moment to convene before delivering our final verdict."
+    hide PRG
+    hide WG
+    with dissolve
+    "Alice and Aida turned away while they whispered to each other. Part of me thought I might actually win this little wager." 
+    "But I had no real expectation of that since Kanami had been doing this longer than I had."
+    show PRG happy at Position(xcenter=0.75, yalign=1.0)
+    show WG haughty at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    WG "We have a verdict. And the winner is..."
+    
+    if getFlag("WGBE004_Mint") or getFlag("WGBE004_Caramel"):
+        show WG happy
+        show PRG excited
+        WG "Brownie A!"
+        hide PRG with dissolve
+        show BE shrug at Position(xcenter=0.75, yalign=1.0)
+        show Kanami neutral
+        with dissolve
+        BE "Well that figures."
+        Kanami "I'm glad the recipe was such a hit. It is admittedly a simple recipe, but I guess I've had quite a bit of practice."
+        show WG haughty
+        WG "A well deserved victory."
+        show WG surprised-2
+        PRG "Maybe... should the contestants try sampling them as well?"
+        show WG neutral
+        WG "Why yes... it would be a shame if everyone else didn't get to try."
+        MCT "Hehe, I might have to make a couple extra batches if Alice is worried there won't be enough left."
+        hide WG
+        show PRG neutral at Position(xcenter=0.25, yalign=1.0) behind Kanami
+        with dissolve
+        show BE sad
+        show Kanami neutral
+        BE "Aw man, I didn't win the prize. Guess I'll be cleaning your room then Kanami-chan."
+        PRG "Actually, Tozakura-san wanted a prize that could be shared, so we brought some vanilla ice cream to eat with the brownies."
+        Tomoko "Sweet! If Alice was paying for it, I bet it's the good stuff too."
+        MC "That would be a fair guess."
+        hide BE 
+        show WG neutral at Position(xcenter=0.8, yalign=1.0) behind Kanami
+        with dissolve
+        "Alice and Aida, with Kanami's help pulled out a couple of giant tubs from a rugged tout bag of what I recognized as a premium ice cream brand of French vanilla. {w}This was going to be good."
+        "Everyone took turns serving themselves up a serving of brownie and a scoop of ice cream (some electing for more generous servings than others), each one eventually getting a chance to try the others."
+        "Though Honoka's \"sticky icky\" charred brownies laid mysteriously untouched."
+        MCT "Well, it's not {i}that{/i} much of a mystery..."
+        if getFlag("WGBE004_Mint"):
+            hide PRG
+            hide WG
+            hide Kanami
+            show Tomoko neutral 
+            with dissolve
+            Tomoko "You did a pretty good job with your brownies, Kei. I figured you'd make something like this, since it's one of your favorites."
+            MC "Thanks for agreeing to tag along with Honoka and me. I know it wasn't exactly what we had planned on, but you did pretty well. Yours were good too."
+            $setAffection("TM", 1)
+            Tomoko "Thanks bro."
+            MC "Besides, I'm sure your boyfriend doesn't mind if you learned a few more domestic skills." 
+            show Tomoko annoyed
+            play sound Thud
+            "Tomo didn't even hesitate to punch me right in the shoulder."
+            Tomoko "{i}Ughh{/i}... He's not my boyfriend."
+            MC "But he's still in the picture right? Guess that first date went pretty well."
+            Tomoko "Now I'm starting to wish I would have stayed back in Honoka's room..."
+            MC "Maybe we could get Chibuki to teach you house cleaning—" 
+            MC "And then Alice could show you how to organize your closet."
+            Tomoko "I think this has been enough learning for an entire month."
+            MC "You remember we're at a school, right?"
+            Tomoko "Yeah yeah, whatever."
+            hide Tomoko with dissolve
+        elif getFlag("WGBE004_Caramel"):
+            hide PRG
+            hide WG
+            hide Kanami
+            show BE happy with dissolve
+            BE "Kei-chan, I'm really digging these caramel brownies."
+            $setAffection("BE", 1)
+            extend " {size=-6}Between you and me, I like these better than Kanami's. I mean hers are good, but who doesn't like caramel with chocolate?{/size}"
+            MC "Thanks. I figured sweet on top of sweet would be the best way to go about making a dessert."
+            BE "Mhmm! I couldn't agree more."
+            pause 1
+            show BE surprised-2
+            "After a brief pause, I noticed Honka's gaze drifted to the side as something else caught her attention."
+            BE "Oh dang! I better get another slice of it before Alice eats the rest."
+            hide BE with dissolve
+            MCT "Well, at least I was a winner in someone's book."
+        show WG happy-2 with dissolve
+        WG "Quite an impressive entry, Dear."
+        $setAffection("WG", 1)
+        show WG neutral
+        WG "Though it didn't quite measure up to Kanami's original, you showed some good culinary instinct with your flavor pairings."
+        MC "Well, I knew I didn't stand any chance, but I'm glad you liked what I made."
+        show WG haughty
+        WG "I don't know about any chance. You've shown quite a bit of growth in your culinary skills in this past year."
+        if getFlag("WG077_Fail"):
+            WG "The previous foray notwithstanding."
+        MC "So you think I have it in me to be a great chef someday?"
+        WG "No, not really. You're pretty far behind the curb if that's what you were aspiring to in life."
+        MC "My hopes and dreams... shattered. Like burnt crystallized gummy sugar in a sheet pan."
+        show WG happy
+        WG "Hehe, something like that, yes."
+        MC "I guess I'll have to keep practicing then."
+        show WG haughty
+        WG "Well, if you're going to do that, you're going to need a judge to provide critique and feedback so you'll know what you need to improve."
+        show WG doubt
+        MC "You're right, you think Aida would be up for helping me?"
+        "Alice was less amused by my joke than I had anticipated."
+        show WG sly
+        WG "Just for that, I'm going to stick you on sous chef duty for Sakura."
+        MC "Well just for that, I'm going to cut onions super uneven."
+        show WG surprised-2
+        WG "You wouldn't dare."
+        MC "Oh, I dare."
+        show WG aroused
+        WG "I guess I'll just have to stick you on dessert duty until you get the recipe down perfectly."
+        MC "That could be arranged..."
+        jump WGBE004B_After
+
+    elif getFlag("WGBE004_Mashmallow"):
+        show WG happy
+        show PRG excited
+        WG "Brownie D!"
+        hide PRG
+        show BE shrug at Position(xcenter=0.75, yalign=1.0)
+        show Kanami neutral
+        with dissolve
+        MC "Wait— what!?"
+        BE "Well that figures."
+        Tomoko "Huh? That's not what I was expecting."
+        Kanami "Very impressive Hotsure-san. Your version has given me some ideas that might make my recipe a little better. I can't wait to see what my younger siblings will think of it."
+        show WG haughty
+        WG "An unexpected, but well deserved victory."
+        show WG surprised-2
+        PRG "Maybe... the contestants should try the brownies as well?"
+        show WG neutral
+        WG "Why yes... it would be a shame if everyone else didn't get to try."
+        MCT "Hehe, I might have to make a couple extra batches if Alice is worried there won't be enough left."
+        show BE sad with None
+        hide Kanami
+        hide WG 
+        show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
+        BE "Aw man! Now I'm going to have to clean Kei-chan's stinky room."
+        MC "Well, if it's any consolation, it's going to be a lot easier than cleaning your own room."
+        show BE happy
+        BE "Heh. Probably."
+        PRG "Don't worry Inoue-san. As a consolation prize, Tozakura-san asked us to bring some vanilla ice cream to eat with the brownies."
+        show BE surprised
+        BE "No way! YES!"
+        Tomoko "Sweet! If Alice was paying for it, I bet it's the good stuff too."
+        MC "Even better."
+        show WG neutral at Position(xcenter=0.7, yalign=1.0)
+        hide BE
+        with dissolve
+        "Alice and Aida, with Kanami's help pulled out a couple of giant tubs from a rugged tout bag of what I recognized as a premium ice cream brand of French vanilla. {w}This was going to be good."
+        "Everyone took turns serving themselves up a serving of brownie and a scoop of ice cream (some electing for more generous servings than others), each one eventually getting a chance to try the others."
+        "Though Honoka's \"sticky icky\" charred brownies laid mysteriously untouched."
+        MCT "Well, it's not {i}that{/i} much of a mystery..."
+        show PRG happy
+        PRG "K-Keisuke, I was really impressed with your brownies. They... they were really good."
+        MC "Well, I've had a few good teachers that I've learned a thing or two from."
+        $setAffection("PRG", 1)
+        PRG "I'm... I'm glad that I... could have an influence on your culinary journey."
+        if getFlag("WG077_Fail"):
+            PRG "I know last time didn't work out, but try not to get too discouraged. If you can make desserts as good as these brownies, I know Alice will be very happy."
+            MC "Thanks Aida."
+            MCT "Sounds like I might have redeemed myself after all."
+        else:
+            PRG "From what I heard from Alice, you're turning into quite the chef."
+            MC "I figured it'd be a useful skill if you have a gourmand for a girlfriend."
+            PRG "Hehe, that is true. I know she appreciates it."  
+            PRG "I think I'm going to get another piece for myself before it's all gone. Great job again."
+        show WG happy-2 at altMove(0.5, 0.5)
+        hide PRG with dissolve
+        WG "Quite an impressive upset, Dear."
+        $setAffection("WG", 1)
+        MC "Oh come on, you make it sound like I didn't stand a chance."
+        show WG sly
+        WG "Did {i}you{/i} think you had any chance?"
+        MC "T-That's besides the point."
+        WG "Mhm, yes I see."
+        MC "I mean... I would have thought my girlfriend would have had a {i}little{/i} more confidence in me..."
+        show WG happy-2
+        WG "Oh you're hopeless."
+        show WG haughty
+        if getFlag("WG077_Fail"):
+            WG "Besides, rooting for you and instilling false confidence are quite different things, Dear. Your previous track record wouldn't have had me placing bets on you any time soon."
+            MC "Can't really argue with that."
+            show WG happy
+            WG "But this has been quite the comeback."
+            show WG neutral-2
+            WG "If you don't mind... I'd love it if you could bake these for me again sometime."
+            MC "Definitely. I'd love to."
+        else:
+            WG "Then again, perhaps my lack of confidence was misplaced."
+            show WG happy
+            extend " You have been on quite a roll so far with your previous efforts in the kitchen."
+            show WG doubt
+            MC "What was that again?"
+            show WG sly
+            "Alice was already shaking her head."
+            WG "Oh, not this again..."
+            MC "I think you just admitted to underestimating me."
+            WG "I mean really, it was probably just a fluke."
+            MC "A fluke?"
+            show WG haughty
+            WG "A statistical anomaly. I believe more samples will be required before a truly accurate judgment can be made." 
+            "My guilt-trip had backfired into being blackmailed into making more brownies. Guess I wasn't the only one underestimating the situation."
+            show WG happy
+            MC "I think that can be arranged."
+        jump WGBE004B_After
+
+label WGBE004B_After:
+    hide WG
+    show Tomoko neutral 
+    with dissolve
+    Tomoko "What are we going to do with Honoka's brownies? I don't think anyone is going to eat them."
+    show Tomoko neutral at altMove(0.5, 0.25)
+    show BE sad with dissolve
+    BE "Even {i}I{/i} don't want to eat them."
+    Tomoko "Let's just throw them away then."
+    show BE shrug
+    BE "Doesn't hurt my feelings. I'll do better next time."
+    show BE shrug at altMove(0.5, 0.75)
+    show Kanami neutral with dissolve
+    Kanami "I know they didn't turn out the best... but it would be a shame to let food go to waste. I'll just bring these to my roommate. She isn't very picky when it comes to food. She likes it when I bring back leftovers from the cooking club."
+    hide BE
+    show PRG embarrassed at Position(xcenter=0.75, yalign=1.0) behind Kanami
+    with dissolve
+    PRG "So that's why we don't usually have leftovers."
+    show Tomoko surprised
+    Tomoko "Who would eat {i}that{/i}?"
+    hide Tomoko
+    show WG doubt at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind Kanami
+    with dissolve
+    show PRG worried
+    Kanami "You'd understand if you knew her. Have you met Mizawa-san?"
+    WG "{size=-6}Unfortunately...{/size}"
+    hide PRG
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    Tomoko "Yeah, I have her in my homeroom class. She's alright I guess. {w}Kinda loud and bossy though."
+    Kanami "She can be a little much at times, but she's nice. I've never seen someone so appreciative of their food, even if it isn't the best dish."
+    WG "Well, she is certainly welcome to it."
+    Kanami "Well, I have to get going. I'll just take the dish with me then if that works for everyone."
+    Kanami "Now I just have to figure out how to clean this later..."
+    hide Kanami with dissolve
+    MC "I didn't realize those two were roommates."
+    show WG stern
+    hide Tomoko
+    show PRG unique at Position(xcenter=0.75, yalign=1.0)
+    WG "Who cares? I don't find the prospect of something going into the garbage or Okisho's mouth to be substantially different."
+    MCT "Yikes! Seems like Honoka's brownies managed to hit a sour note."
+    show WG neutral
+    hide PRG with dissolve
+    WG "Now that that mess has been taken care of, what should we do now?"
+    show Tomoko happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Tomoko "Well, we could use a fourth player for Rage'n Streets."
+    show WG surprised-2
+    WG "Raging what-now?"
+    hide Tomoko
+    show BE surprised-2 at Position(xcenter=0.75, yalign=1.0)
+    BE "Oh totally! If we had an extra player that would make things easier and Kei-chan wouldn't die so much."
+    MC "Hey now..."
+    WG "I'm not sure I follow."
+    Tomoko "Well, you'll find out, come on let's show Alice."
+    BE "Yeah, let's go back to my room."
+    show WG neutral-2
+    WG "Okay, I guess it couldn't hurt to try."
+    "Tomoko and Honoka" "YES!"
+    "I was glad to see Alice agreed to come along, but I had a strong suspicion we were going to have to explain why someone would want to eat a pizza they found lying on the street..."
     jump daymenu
 
 label WGFMG001:

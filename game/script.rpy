@@ -41,6 +41,7 @@ init python:
         'arcade': ("town", (1100,650)),
         'auditorium': ("school", (470,560)),
         'bakery': ("town", (1100,650)),
+        'ballroom': ("town", (1100,650)),
         'businterior': ("town", (1100,650)),
         'cafeteria': ("school", (655,570)),
         'campuscenter': ("school", (570,390)),
@@ -741,7 +742,45 @@ init python:
         return routelock
 
     def isNSFW():
-        return enable_nsfw
+        return persistent.enable_nsfw
+
+    def adjustNSFW():
+        global AEOutfit
+        global BEOutfit
+        global FMGOutfit
+        global GTSOutfit
+        global PRGOutfit
+        global WGOutfit
+        if (AEOutfit == OutfitEnum.NUDE or AEOutfit == OutfitEnum.EPILOGUEBAD) and not isNSFW():
+            AEOutfit = AEPrevOutfit
+        elif AENsfw and isNSFW():
+            AEOutfit = AENsfwOutfit
+
+        if BEOutfit == OutfitEnum.NUDE and not isNSFW():
+            BEOutfit = BEPrevOutfit
+        elif BENsfw and isNSFW():
+            BEOutfit = BENsfwOutfit
+
+        if FMGOutfit == OutfitEnum.NUDE and not isNSFW():
+            FMGOutfit = FMGPrevOutfit
+        elif FMGNsfw and isNSFW():
+            FMGOutfit = FMGNsfwOutfit
+
+        if GTSOutfit == OutfitEnum.NUDE and not isNSFW():
+            GTSOutfit = GTSPrevOutfit
+        elif GTSNsfw and isNSFW():
+            GTSOutfit = GTSNsfwOutfit
+
+        if PRGOutfit == OutfitEnum.NUDE and not isNSFW():
+            PRGOutfit = PRGPrevOutfit
+        elif PRGNsfw and isNSFW():
+            PRGOutfit = PRGNsfwOutfit
+
+        if WGOutfit == OutfitEnum.NUDE and not isNSFW():
+            WGOutfit = WGPrevOutfit
+        elif WGNsfw and isNSFW():
+            WGOutfit = WGNsfwOutfit
+
 
     def setTimeFlag(flag):
         if flag not in timeflags:
@@ -806,33 +845,93 @@ init python:
 
     def setAEOutfit(o):
         global AEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.EPILOGUEBAD or o == OutfitEnum.EPILOGUEGOOD or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.CASUAL:
+        global AEPrevOutfit
+        global AENsfwOutfit
+        global AENsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.EPILOGUEGOOD or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.CASUAL:
+            AENsfw = False
             AEOutfit = o
+        elif o == OutfitEnum.NUDE or o == OutfitEnum.EPILOGUEBAD:
+            AENsfw = True
+            AENsfwOutfit = o
+            if isNSFW():
+                AEPrevOutfit = AEOutfit
+                AEOutfit = o
 
     def setBEOutfit(o):
         global BEOutfit
+        global BEPrevOutfit
+        global BENsfwOutfit
+        global BENsfw
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+            BENsfw = False
             BEOutfit = o
+        elif o == OutfitEnum.NUDE:
+            BENsfw = True
+            BENsfwOutfit = o
+            if isNSFW():
+                BEPrevOutfit = BEOutfit
+                BEOutfit = o
 
     def setFMGOutfit(o):
         global FMGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        global FMGPrevOutfit
+        global FMGNsfwOutfit
+        global FMGNsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+            FMGNsfw = False
             FMGOutfit = o
+        elif o == OutfitEnum.NUDE:
+            FMGNsfw = True
+            FMGNsfwOutfit = o
+            if isNSFW():
+                FMGPrevOutfit = FMGOutfit
+                FMGOutfit = o
 
     def setGTSOutfit(o):
         global GTSOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.NUDE or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.WORK:
+        global GTSPrevOutfit
+        global GTSNsfwOutfit
+        global GTSNsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.WORK:
+            GTSNsfw = False
             GTSOutfit = o
+        elif o == OutfitEnum.NUDE:
+            GTSNsfw = True
+            GTSNsfwOutfit = o
+            if isNSFW():
+                GTSPrevOutfit = GTSOutfit
+                GTSOutfit = o
 
     def setPRGOutfit(o):
         global PRGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+        global PRGPrevOutfit
+        global PRGNsfwOutfit
+        global PRGNsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+            PRGNsfw = False
             PRGOutfit = o
+        elif o == OutfitEnum.NUDE:
+            PRGNsfw = True
+            PRGNsfwOutfit = o
+            if isNSFW():
+                PRGPrevOutfit = PRGOutfit
+                PRGOutfit = o
 
     def setWGOutfit(o):
         global WGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMCAP or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+        global WGPrevOutfit
+        global WGNsfwOutfit
+        global WGNsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMCAP or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+            WGNsfw = False
             WGOutfit = o
+        elif o == OutfitEnum.NUDE:
+            WGNsfw = True
+            WGNsfwOutfit = o
+            if isNSFW():
+                WGPrevOutfit = WGOutfit
+                WGOutfit = o
 
     def setTakoOutfit(o):
         global TakoOutfit
@@ -955,6 +1054,24 @@ label start:
         prgsize = 1
         minorsizes = {'Yuki': 1, 'Jineko': 1, 'Natsuko': 1, 'Okisho': 1, 'Kanami': 1, 'Tako': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
+        AEPrevOutfit = OutfitEnum.DEFAULT
+        AENsfwOutfit = OutfitEnum.DEFAULT
+        BEPrevOutfit = OutfitEnum.DEFAULT
+        BENsfwOutfit = OutfitEnum.DEFAULT
+        FMGPrevOutfit = OutfitEnum.DEFAULT
+        FMGNsfwOutfit = OutfitEnum.DEFAULT
+        GTSPrevOutfit = OutfitEnum.DEFAULT
+        GTSNsfwOutfit = OutfitEnum.DEFAULT
+        PRGPrevOutfit = OutfitEnum.DEFAULT
+        PRGNsfwOutfit = OutfitEnum.DEFAULT
+        WGPrevOutfit = OutfitEnum.DEFAULT
+        WGNsfwOutfit = OutfitEnum.DEFAULT
+        AENsfw = False
+        BENsfw = False
+        FMGNsfw = False
+        GTSNsfw = False
+        PRGNsfw = False
+        WGNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
         FMGOutfit = OutfitEnum.DEFAULT
@@ -993,6 +1110,41 @@ label start:
     jump global000
 
 label splashscreen:
+    python:
+        AEPrevOutfit = OutfitEnum.DEFAULT
+        AENsfwOutfit = OutfitEnum.DEFAULT
+        BEPrevOutfit = OutfitEnum.DEFAULT
+        BENsfwOutfit = OutfitEnum.DEFAULT
+        FMGPrevOutfit = OutfitEnum.DEFAULT
+        FMGNsfwOutfit = OutfitEnum.DEFAULT
+        GTSPrevOutfit = OutfitEnum.DEFAULT
+        GTSNsfwOutfit = OutfitEnum.DEFAULT
+        PRGPrevOutfit = OutfitEnum.DEFAULT
+        PRGNsfwOutfit = OutfitEnum.DEFAULT
+        WGPrevOutfit = OutfitEnum.DEFAULT
+        WGNsfwOutfit = OutfitEnum.DEFAULT
+        AENsfw = False
+        BENsfw = False
+        FMGNsfw = False
+        GTSNsfw = False
+        PRGNsfw = False
+        WGNsfw = False
+        AEOutfit = OutfitEnum.DEFAULT
+        BEOutfit = OutfitEnum.DEFAULT
+        FMGOutfit = OutfitEnum.DEFAULT
+        GTSOutfit = OutfitEnum.DEFAULT
+        PRGOutfit = OutfitEnum.DEFAULT
+        WGOutfit = OutfitEnum.DEFAULT
+        TakoOutfit = OutfitEnum.DEFAULT
+        TomoOutfit = OutfitEnum.DEFAULT
+        NatsOutfit = OutfitEnum.DEFAULT
+        OkishoOutfit = OutfitEnum.DEFAULT
+        SakuraOutfit = OutfitEnum.DEFAULT
+        RyokoOutfit = OutfitEnum.DEFAULT
+        JinekoOutfit = OutfitEnum.DEFAULT
+        DaitaroOutfit = OutfitEnum.DEFAULT
+        TakamuraOutfit = OutfitEnum.DEFAULT
+        KanamiOutfit = OutfitEnum.DEFAULT
     scene black
     with Pause(1)
     centered "The following represents a work in progress."

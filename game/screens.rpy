@@ -660,7 +660,7 @@ screen file_slots(title):
                 for page in range(1, 10):
                     textbutton "[page]" action FilePage(page)
 
-                textbutton _(">") action FilePageNext()
+                textbutton _(">") action FilePageNext(max=9)
 
 
 style page_label is gui_label
@@ -744,9 +744,9 @@ screen preferences():
 
                 vbox:
                     style_prefix "radio"
-                    label _("Enable NSFW Scenes")
-                    textbutton _("On") action SetField(persistent, "enable_nsfw", True)
-                    textbutton _("Off") action SetField(persistent, "enable_nsfw", False)
+                    label _("Enable NSFW Content")
+                    textbutton _("On") action [SetField(persistent, "enable_nsfw", True), Function(adjustNSFW)]
+                    textbutton _("Off") action [SetField(persistent, "enable_nsfw", False), Function(adjustNSFW)]
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
