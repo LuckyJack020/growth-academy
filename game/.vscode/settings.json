@@ -156,6 +156,30 @@
                 "settings": {
                     "foreground": "#0066cc"
                 }
+            },
+            {
+                "scope": "renpy.meta.color.olor=#f",
+                "settings": {
+                    "foreground": "olor=#f"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.\"knowin",
+                "settings": {
+                    "foreground": "\"knowin"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.. you c",
+                "settings": {
+                    "foreground": ". you c"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.ou can'",
+                "settings": {
+                    "foreground": "ou can'"
+                }
             }
         ]
     }

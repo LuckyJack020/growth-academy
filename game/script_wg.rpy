@@ -8378,6 +8378,8 @@ label WG038_FMG000:
     "It appeared the only maid working at the moment was foreign. Her accent would be a dead giveaway, if her blue eyes didn't already. They were a deeper blue than Alice's."
     "She looked familiar, but I didn't know her. Maybe I had seen her before?"
     WG "Nice to meet you, please call me Mistress Nikumaru."
+    if not getFlag("Meet_Chibuki"):
+        $setFlag("Meet_Chibuki")
     Chibuki "Of course Mistress Nikumaru, and you Sir?"
     MC "Keisuke. I guess you have to call me master or something for the job though right?"
     Chibuki "That is correct Master Keisuke."
@@ -9895,6 +9897,8 @@ label WG043:
     WG "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
     PRG "Thanks, Nikumaru-san. I'll do my best."
     WG "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
+    if not getFlag("Meet_Natsuko"):
+        $setFlag("Meet_Natsuko")
     show Natsuko neutral at Position(xcenter=0.30, yalign=1.0) with dissolve
     Natsuko "Hello Alice. Thank you for the invitation again. I'm always up for a new challenge. A contact sport where you need to swim and handle a ball sounds tough. I'm ready to show you what I can do!"
     "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
@@ -15545,6 +15549,8 @@ label WG059:
     Sakura "Oh right. Sorry, I forgot about that."
     show Sakura neutral
     Sakura "So who's this?"
+    if not getFlag("Meet_Sakura"):
+        $setFlag("Meet_Sakura")
     WG "This is my boyfriend, Keisuke Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
     MC "Nice to meet you Myoga-san. It's nice to finally put a face to the name."
     Sakura "Likewise. Kodama-chan and Alice have had nothing but good things to say about you."
@@ -21207,9 +21213,8 @@ label WG073:
     show WG worried
     MCT "Yeah, I can't imagine she was exactly keen on congratulating her for being the fattest student they've ever seen."
     "I could scarcely believe it... {w}on second thought, looking at her again, how could I not? She was HUGE! Alice doubtlessly since had time to process this revelation, but the shock of the news was still fresh to me."
-    MCT "Wait a second, if that's never happened before, that means she's the fattest student they've ever seen... {w}Which given the scale of the students compared to normal people would mean... she's the fattest person {i}ever{/i}..."
-    MCT "! {w}{i}HOLY SHIT!{/i}"
-    "I was at a total loss of words in light of this recent revelation, but even though my mind was swirling, I knew I had to pull myself together to at least try to offer some words of comfort to her."
+    MC "..."
+    "I was completely dumbfounded, and at a total loss for words."
     MC "I guess I could imagine that weighing on your mind... {w}!"
     show WG doubt
     extend " Sorry, poor choice of words."
@@ -22378,6 +22383,8 @@ label WG076:
         if getFlag("MC005RM"):
             Jineko "I think we have, although I suppose I could understand why you might not recognize me."
             MCT "So I wasn't just imagining things..."
+            if not getFlag("Meet_Jineko"):
+                $setFlag("Meet_Jineko")
         Jineko "The name's Jineko Watanabe, pleasure to meet you."
         MC "My pleasure as well, Watanabe-san. I was actually looking for a few things."
     Jineko "What do you have in mind?"
@@ -24437,7 +24444,7 @@ label WGBE002:
     MCT "...Well, she's got me there. {w}Wait a second..."
     "Maybe I was just tired, or the heat was melting my brain, or maybe a bit of both, but I only just now piece together what Honoka was wearing. {w}It was... {w}well, it was something, that's for sure."
     "She was wearing some kind of v-neck top... that her chest was straining into a scoop neck. {w}Which you'd think would be helping to show off her best assets, but it was ill-fitting— baggy in some parts and too tight elsewhere."
-    "Her chest was sticking out so much you could see part of her stomach above the waistline of her jeans, which is fine, but it didn't look like that was intentional."
+    "Her chest was sticking out so much you could see part of her stomach above the waistline of her jeans, (I mean, not from the front view, obviously) which is fine, but it didn't look like that was intentional."
     "I think she was going for some kind of spring vibe with yellow, but the color was a bit... I don't know... {w}off.{w} That and her jeans looked pretty worn out. I wasn't really digging it to be honest."
     "I mean I had been guilty of far worse fashion crimes, but it very much felt like something random she threw on because it still fit, and not much more thought put into it than that. {w}Even at that, \"fit\" was still questionable."
     MC "What's with that get-up?"
@@ -24498,11 +24505,13 @@ label WGBE002:
     show WG doubt
     WG "Honoka, what on earth are you wearing?"
     BE "What? Something the matter with what I'm wearing?"
-    show WG happy
+    show WG sly
     WG "{i}Pft{/i}... {size=-6}Hehe{/size}"
     "I could tell Alice was trying hard not to laugh, but was clearly having a hard time."
-    WG "Well... to start with... basically everything."
+    show WG neutral
+    WG "Well... to start with..."
     show BE surprised-2
+    extend " basically everything."
     show WG neutral
     WG "You poor dear, what sort of club mandated this as their uniform?"
     show BE doubt
@@ -24522,7 +24531,7 @@ label WGBE002:
     WG "I mean come now, it doesn't flatter your figure in the slightest. The colors clash with your hair and your eyes. You're obviously a pretty girl, but this just makes you look so unkempt and unlady-like."
     show BE worried
     BE "Hey! I put a lot of thought into this look— and I like it."
-    show WG haughty
+    show WG neutral
     WG "Well unfortunately, I don't think it's coming together like you had planned."
     show BE confused
     BE "Well I like it and that's good enough for me!"
@@ -24535,8 +24544,9 @@ label WGBE002:
     show WG haughty at altMove(0.5, 0.5)
     hide BE with dissolve
     WG "My word, I can't believe she selected that outfit for herself. Between you and me, I was holding back a bit. I wouldn't be caught dead in whatever that was."
-    MC "You call that holding back?!"
     show WG surprised-2
+    MC "You call that holding back?!"
+    show WG surprised
     extend " Cause it looked more like a dam breaking loose to me more than anything."
     MC "I think you really hurt her feelings, Alice."
     show WG worried
@@ -24554,6 +24564,7 @@ label WGBE002:
     MC "..."
     "Alice did have a point. I had the opportunity to say something to Honoka, and she would have been a lot more receptive if it came from me instead of someone else."
     "I thought I'd spare her feelings, but I was really just sparing my own. If I wasn't feeling like a good friend before, I certainly didn't now. {w}But I was going to fix that by fixing this mess."
+    show WG neutral
     MC "Alright! You're right. I could have handled it better. {w}But you could have too."
     show WG haughty
     WG "I sincerely doubt that. It takes a direct approach to cut through people's own blind spots."
@@ -24601,7 +24612,7 @@ label WGBE002:
     MC "Why did you change clothes? It's not like you're headed to bed or going to class."
     show BE sad
     BE "I didn't feel like wearing that anymore... pretty sure it's obvious why."
-    MC "Yeah, about that... that's why I'm here. I wanted to apologise for what Alice said earlier."
+    MC "Yeah, about that... that's why I'm here. I wanted to apologize for what Alice said earlier."
     show BE neutral
     BE "It's fine Kei-chan, I'm over it."
     "Something in her tone told me she wasn't as over it as she wanted me to believe."
@@ -24914,6 +24925,7 @@ label WGBE003:
 
 label WGBE004A:
     scene Dorm Hallway with fade
+    play music MCGuitar
     "I was headed over to Alice's dorm to drop off my latest expense report. Could it have waited until tomorrow? Yes. But it was a good excuse in my mind to see Alice."
     "Not that I needed a particular reason, I'm sure she'd be happy to see me all the same." 
     "But in my experience she was far more amenable to unexpected interruptions when she was in the middle of business matters if the cause for the interruption was a business matter as well."
@@ -25190,6 +25202,7 @@ label WGBE004A:
     show Tomoko neutral at Position(xcenter=0.8, yalign=1.0)
     show BE happy
     with fade
+    play music Peaceful
     Kanami "Looks like we have a crowd. I'm glad to see so many fellow students taking an interest in baking."
     MC "Substitute \"interest in baking\" for \"obsession with chocolate\" and we might get closer to the reason why Honoka is here."
     show BE angry
@@ -25360,7 +25373,7 @@ label WGBE004A_Afterchoice:
 
 label WGBE004B:
     scene Cooking Classroom with fade
-    play music BE
+    play music ClearSkies
     "We had a bit of time to kill while we waited for the brownies to get done."
     show Tomoko distracted with dissolve
     "Tomo was off in her own little world— no doubt playing some sort of stupid clicker game on her phone. {w}She's practically glued to that thing, I swear."
@@ -25411,6 +25424,7 @@ label WGBE004B:
     show WG haughty at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show PRG excited at Position(xcenter=0.75, yalign=1.0)
     with dissolve
+    play music WGAlt
     "Expert panel was right. Aida had the baking skills and the chocolate craving herself to know what made a good dessert, and Alice's world class palette was unmatched among the student body."
     "It was quite a bit overkill to bring them in for such a trifling contest, but I wasn't going to balk at the chance to score some brownie points with Alice— literal brownie points I might add."
     "Speaking of Alice, I was certainly surprised to see her, given that she indicated she was preoccupied earlier when we said we were going to play video games." 
@@ -25493,6 +25507,7 @@ label WGBE004B:
     Kanami "Next we have brownie C."
     "This must have been Honoka's... {w}Which somehow looked really good. It had a deep rich dark brown color to it. Which made me think she might have added some extra cocoa or espresso powder to it."
     "I didn't realize Honoka had such a sophisticated intuition with chocolate. Her thought process with chocolate always just seemed to be \"more is gooder\". I was starting to sweat. I was never going to live it down if her brownies kicked my ass."
+    play music WG
     Kanami "Huh, that's... odd."
     show WG surprised-2
     show PRG worried
@@ -25637,16 +25652,18 @@ label WGBE004B:
     show PRG happy at Position(xcenter=0.75, yalign=1.0)
     show WG haughty at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
     with dissolve
-    WG "We have a verdict. And the winner is..."
+    stop music fadeout 1.0
+    WG "We have a verdict."
     
     if getFlag("WGBE004_Mint") or getFlag("WGBE004_Caramel"):
         show WG happy
         show PRG excited
-        WG "Brownie A!"
+        WG "And the winner is... {w}Brownie A!"
         hide PRG with dissolve
         show BE shrug at Position(xcenter=0.75, yalign=1.0)
         show Kanami neutral
         with dissolve
+        play music Peaceful
         BE "Well that figures."
         Kanami "I'm glad the recipe was such a hit. It is admittedly a simple recipe, but I guess I've had quite a bit of practice."
         show WG haughty
@@ -25746,12 +25763,13 @@ label WGBE004B:
     elif getFlag("WGBE004_Mashmallow"):
         show WG happy
         show PRG excited
-        WG "Brownie D!"
+        WG "And the winner is... {w}Brownie D!"
         hide PRG
         show BE shrug at Position(xcenter=0.75, yalign=1.0)
         show Kanami neutral
         with dissolve
         MC "Wait— what!?"
+        play music Peaceful
         BE "Well that figures."
         Tomoko "Huh? That's not what I was expecting."
         Kanami "Very impressive Hotsure-san. Your version has given me some ideas that might make my recipe a little better. I can't wait to see what my younger siblings will think of it."
@@ -25841,6 +25859,7 @@ label WGBE004B_After:
     hide WG
     show Tomoko neutral 
     with dissolve
+    play music ClearSkies
     Tomoko "What are we going to do with Honoka's brownies? I don't think anyone is going to eat them."
     show Tomoko neutral at altMove(0.5, 0.25)
     show BE sad with dissolve
@@ -25893,6 +25912,8 @@ label WGBE004B_After:
     BE "Yeah, let's go back to my room."
     show WG neutral-2
     WG "Okay, I guess it couldn't hurt to try."
+    show Tomoko happy
+    show BE happy
     "Tomoko and Honoka" "YES!"
     "I was glad to see Alice agreed to come along, but I had a strong suspicion we were going to have to explain why someone would want to eat a pizza they found lying on the street..."
     jump daymenu
@@ -28301,6 +28322,8 @@ label WGGTS004:
     WG "I suppose that's the most {i}polite{/i} way to describe my physique."
     show WG neutral
     extend " What's your name? I don't think we've had the pleasure of meeting before."
+    if not getFlag("Meet_Jineko"):
+        $setFlag("Meet_Jineko")
     Jineko "Jineko Watanabe, pleasure to meet you."
     WG "What can I do for you?"
     Jineko "I heard from a few friends that you run a nice little side hustle selling more casual clothing options for the students."

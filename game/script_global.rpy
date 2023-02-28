@@ -159,8 +159,9 @@ image black = Solid((0, 0, 0, 255))
 #Campus
 image Art Classroom = DynamicImage("Graphics/ui/bg/artroom_[gametime].png")
 image Auditorium = DynamicImage("Graphics/ui/bg/archiveBG/auditorium_[gametime].png")
-image Baseball Field = "Graphics/ui/bg/NYI.png"
+image Auditorium Storage = DynamicImage("Graphics/ui/bg/archiveBG/auditoriumstorage_[gametime].png")
 image Bathroom = "Graphics/ui/bg/archiveBG/bathroom.png"
+image Biology Lab = DynamicImage("Graphics/ui/bg/biologylab_[gametime].png") #Biology Laboratory Classroom
 image Cafeteria = "Graphics/ui/bg/archiveBG/cafeteria.png"
 image Campus Center = DynamicImage("Graphics/ui/bg/archiveBG/campuscenter_[gametime].png")
 image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png") #Tashi-sensei's Homeroom Classroom
@@ -187,6 +188,7 @@ image Music Classroom = DynamicImage("Graphics/ui/bg/archiveBG/music_[gametime].
 image Nurse Office = DynamicImage("Graphics/ui/bg/archiveBG/nurseoffice_[gametime].png")
 image Office = DynamicImage("Graphics/ui/bg/archiveBG/office_[gametime].png")
 image Pool = DynamicImage("Graphics/ui/bg/archiveBG/schoolpool_[gametime].png")
+image Principal Office = DynamicImage("Graphics/ui/bg/archiveBG/principaloffice_[gametime].png")
 image Recreation = "Graphics/ui/bg/NYI.png"
 image Roof = DynamicImage("Graphics/ui/bg/roof_[gametime].png")
 image Roof Entrance = DynamicImage("Graphics/ui/bg/roofentrance_[gametime].png")
@@ -195,7 +197,7 @@ image Roof2 Fall = DynamicImage("Graphics/ui/bg/archiveBG/roof2fall_[gametime].p
 image School Exterior = DynamicImage("Graphics/ui/bg/archiveBG/schoolexterior_[gametime].png")
 image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].png")
 image School Inner = "Graphics/ui/bg/schoolinner.png"
-image School Planter = "Graphics/ui/bg/schoolplanter.png"
+image School Planter = "Graphics/ui/archiveBG/schoolplanter_[gametime].png"
 image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
 image Stage = DynamicImage("Graphics/ui/bg/archiveBG/stage_[gametime].png")
 image Student Government = DynamicImage("Graphics/ui/bg/archiveBG/studentgovernment_[gametime].png")
@@ -258,7 +260,7 @@ image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
 image Town = DynamicImage("Graphics/ui/bg/archiveBG/town_[gametime].png")
 image Town Docks = DynamicImage("Graphics/ui/bg/archiveBG/towndocks_[gametime].png")
-image Waterpark = DynamicImage("Graphics/ui/bg/archiveBG/waterpark.png")
+image Waterpark = DynamicImage("Graphics/ui/bg/archiveBG/waterpark_[gametime].png")
 image Waterpark Pool = DynamicImage("Graphics/ui/bg/archiveBG/waterparkpool_[gametime].png")
 
 #Satoyama Village
@@ -286,6 +288,7 @@ image Flower Clearing = DynamicImage("Graphics/ui/bg/archiveBG/flowerclearing_[g
 image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
 image Temple = DynamicImage("Graphics/ui/bg/archiveBG/temple_[gametime].png")
 image Temple Fall = DynamicImage("Graphics/ui/bg/archiveBG/templefall_[gametime].png")
+image View Point = DynamicImage("Graphics/ui/bg/archiveBG/viewpoint_[gametime].png")
 image Woods = DynamicImage("Graphics/ui/bg/archiveBG/woods_[gametime].png")
 image Frozen Beach = "Graphics/ui/bg/NYI.png"
 
@@ -948,6 +951,7 @@ image side YukiCell = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/side.
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
 
 image RM neutral = "Graphics/minor/RM/neutral.png"
+image RM neutral-2 = "Graphics/minor/RM/neutral-2.png"
 image RM angry = "Graphics/minor/RM/angry.png"
 image RM concerned = "Graphics/minor/RM/concerned.png"
 image RM concerned-2 = "Graphics/minor/RM/concerned-2.png"
@@ -964,8 +968,11 @@ image Yuki surprised = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/surp
 image Yuki gossip = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/gossip.png")
 
 image HR neutral = "Graphics/minor/faculty/HR/neutral.png"
-image HR annoyed = "Graphics/minor/faculty/HR/annoyed.png" #NYI
+image HR neutral-2 = "Graphics/minor/faculty/HR/neutral-2.png"
+image HR angry = "Graphics/minor/faculty/HR/angry.png"
+image HR annoyed = "Graphics/minor/faculty/HR/annoyed.png"
 image HR unique = "Graphics/minor/faculty/HR/unique.png"
+image HR unique-2 = "Graphics/minor/faculty/HR/unique-2.png"
 
 image Hageshi neutral = "Graphics/minor/faculty/hageshi/neutral.png"
 image Hageshi angry = "Graphics/minor/faculty/hageshi/angry.png"
@@ -1505,7 +1512,8 @@ init 2 python:
     eventlibrary['FMG080'] = {"name": "Light Work", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG081", "obsflags": [],               "conditions": []}
     eventlibrary['FMG081'] = {"name": "Date Night", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dormFMG",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG082", "obsflags": [],               "conditions": []}
     eventlibrary['FMG082'] = {"name": "Results May Vary", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG083", "obsflags": [],               "conditions": []}    
-    eventlibrary['FMG083'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE,         "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG083'] = {"name": "Kung Fu Kicking It", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG084", "obsflags": [],               "conditions": []}    
+    eventlibrary['FMG084'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE,         "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -1515,6 +1523,7 @@ init 2 python:
     eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG028"]]}
     eventlibrary['FMG078'] = {"name": "The Holy Grail of Revengeance", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                      "location": "arcade",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG076"]]}
     eventlibrary['FMGGTS001'] = {"name": "Down and Dirty", "girls": ["FMG", "GTS"], "type": EventTypeEnum.OPTIONAL,                         "location": "bakery",                     "priority": PrioEnum.NONE,              "obsflags": [],                                    "conditions": [[ConditionEnum.EVENT, "FMG023"]]}
+    eventlibrary['FMGGTS002'] = {"name": "Burger Buddies and Kei", "girls": ["FMG", "GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "gym",                     "priority": PrioEnum.NONE,              "obsflags": ["size3"],                            "conditions": [[ConditionEnum.EVENT, "FMGGTS001"]]}
     eventlibrary['FMGWG001'] = {"name": "Cupcakes or Bust", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                         "location": "library",                     "priority": PrioEnum.NONE,              "obsflags": ["noFMGWG001"],                     "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "WG015"], [ConditionEnum.AND, [ConditionEnum.EVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]]}
     eventlibrary['FMGWG002'] = {"name": "Built like a Gorilla", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                       "location": "hallway",                  "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG033"]]}
     eventlibrary['FMGWG003'] = {"name": "Horā Eiga", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                                   "location": "hallway",                  "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "FMGWG002"], [ConditionEnum.EVENT, "FMG038"]]]}

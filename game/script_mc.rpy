@@ -6333,8 +6333,7 @@ label MC009:
         MC "Oh, no. I wasn't watching where I was going at all. That's my bad, Sensei."
         Takamura "Well, we can mark it as a wash and start fresh then."
         MC "Sounds good, Sensei."
-        "I smiled at her. Takamura always had a sort of familiar warmth to her. Like a family friend who you'd known since childhood."
-        "She had the understanding of someone close to you, but the maturity and warmth of someone far older."
+        "Takamura-sensei smiled reassuringly at me."
     else:
         $setFlag("Meet_Takamura")
         Takamura "Oh! Pardon me! Keisuke Hotsure, yes?"
@@ -6620,6 +6619,11 @@ label MC009:
     Sakura "Mhm. The most exciting day of days."
     Sakura "Checking and double checking, you know."
     MC "Right."
+    MC "Oh, lucky to catch Takamura-sensei in the classroom when she was, huh? Saved you some searching."
+    Sakura "Ah, not really."
+    Sakura "I've worked with her long enough to know where she'll be when."
+    Sakura "She's involved in... well, a lot. But, even when she isn't available, she tries to make herself accessible in case of any problems or anything."
+    MC "Wow. Proactive on her end."
     "Across the room, Takamura and Michiko headed back over, Michiko scribbling away on a clipboard, yet somehow being able to walk in a totally straight line."
     show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Takamura "Girls? I thought we were through with this argument."
@@ -8231,6 +8235,8 @@ label RM001:
 
 label RM002:
     scene Hallway with fade
+    if not getFlag("Meet_Yuki"):
+        $setFlag("Meet_Yuki")
     "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
     "Out of the corner of my eye, inside another classroom, I noticed..."
     show RM neutral at Position (xcenter=0.95) with dissolve

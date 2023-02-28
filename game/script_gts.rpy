@@ -1871,6 +1871,8 @@ label GTS015:
     UNKNOWN "This is the new shooting schedule I managed to set up for you. We had to shift some things around as I couldn't secure proper locales yet."
     show Ryoko happy
     Ryoko "Wonderful! Thanks so much Tomoe-san. Oh, let me introduce you. Hotsure-san, Yamazaki-san, this is Minori Tomoe, my ever faithful assistant."
+    if not getFlag("Meet_Minori"):
+        $setFlag("Meet_Minori")
     MC "Hey there, nice to meet you."
     show GTS happy
     GTS "A pleasure to meet you."

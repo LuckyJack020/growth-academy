@@ -973,6 +973,8 @@ label FMG009:
     show FMG neutral
     FMG "Of course! This is my {i}friend{/i}, Keisuke Hotsure."
     Chibuki "Oh, this is that Keisuke kid you've been spending your time exercising with? Well then, allow me to introduce myself."
+    if not getFlag("Meet_Chibuki"):
+        $setFlag("Meet_Chibuki")
     Chibuki "The name's Chibuki Blackburne; weird last name in these parts, I know, but I was born and raised in Manchester, England after me mum moved from Japan."
     MC "Nice to meet you. So, how do you know Akira?"
     play music Tension
@@ -1952,6 +1954,8 @@ label FMG016:
     UNKNOWN "I get that a lot."
     MC "If you don't mind me asking are you new here? We've never seen you around campus before."
     UNKNOWN "If you really must know, I transferred here the other day. I came from a school in Fukuoka. The name is Natsuko Okamoto."
+    if not getFlag("Meet_Natsuko"):
+        $setFlag("Meet_Natsuko")
     MC "Nice to meet you Okamoto-san, I'm Keisuke Hotsure."
     "She shook my hand with a grip so tight I thought she might break it."
     show Natsuko happy
@@ -7660,6 +7664,8 @@ label FMG047:
     Sakura "Don't worry about her right now, Mizutani-san. She'll come around. Just give her a little time to cool off."
     show FMG neutral
     show Sakura happy
+    if not getFlag("Meet_Sakura"):
+        $setFlag("Meet_Sakura")
     Sakura "But where are my manners? I haven't introduced myself yet. I'm Sakura Myoga! Aida's cooking partner."
     show PRG happy
     show FMG happy
@@ -10318,6 +10324,8 @@ label FMG059:
     MC "Uh, Akira... who dis?"
     show FMG happy
     FMG "My bad, Kei. This is Yureno-san. Tako Yureno."
+    if not getFlag("Meet_Tako"):
+        $setFlag("Meet_Tako")
     MCT "Huh, she sure has some wide... hips. Heh, it would be funny if she was roommates with Shiori. Cause she has a big butt too."
     MCT "Did I just explain the joke to myself...? This is what it's come to, huh."
     MC "Nice to meet you, Yureno-san. I hope Akira has told you all the great things about me."
@@ -15448,7 +15456,7 @@ label FMG077:
         show cg FMG077 with dissolve
     else:
         show FMG neutral with dissolve
-    "I heard a door creak open as Akira walked out of the bathroom, her imposing figure filling nearly the entire doorway. She was wearing nothing but a hair tie to keep her ponytail together."
+    "I heard a door creak open as Akira walked out of the bathroom, her imposing figure nearly filling the entire doorway. She was wearing nothing but a hair tie to keep her ponytail together."
     if isNSFW():
         hide cg
         show FMG neutral
@@ -17077,6 +17085,262 @@ label FMG082:
         jump daymenu
 
 label FMG083:
+    $setProgress("FMG", "FMG084")
+    scene Gym with fade
+    play music WildBlur
+    $setFMGOutfit(OutfitEnum.GYM)
+    "There I was, crushing personal records. Curling ungodly amounts of weight without breaking a sweat. In fact, I guarantee the weights were sweating when they saw me approaching."
+    pause 2
+    show FMG neutral with dissolve
+    FMG "You need to chill, you're going to hurt yourself lifting that."
+    MC "Good, no pain no gain."
+    FMG "What got into you all of a sudden? You've never been this determined in the gym."
+    MC "I can't say. I'm in excruciating pain though and I have a feeling if I stop, I might fall over and die."
+    show FMG sad
+    FMG "Aaaaalright, I'm cutting you off."
+    show FMG neutral
+    extend " I'm not a fan of Gym Kei, he worries me more than Regular Kei."
+    MC "Kei is hurt by these statements and won't stand for it."
+    FMG "Eh, I'll give you a small kiss to make you forget."
+    pause .25
+    MC "It's like magic, I swear."
+    FMG "I have another surprise for you— you're going to love it."
+    MC "New socks!"
+    show FMG sad
+    FMG "What are you sixty? No!"
+    MC "Sounds like someone who hasn't had a fresh pair in a while."
+    show FMG neutral
+    FMG "I got new socks last week for your information... and they are adorable."
+    MC "Fuzzy?"
+    show FMG happy
+    FMG "Of course."
+    show FMG neutral
+    extend " Moving on from our sock discussion. I planned a movie night tonight for us!"
+    MC "Oh word! We haven't had one in a little bit."
+    FMG "And I invited your sister!"
+    MC "..."
+    MC "I'm sick. I got the flu... {w}Just now. The nurses said I can't be around anyone."
+    FMG "Yeah, you aren't getting out of this. I got the idea when she and I were raiding last night!"
+    MC "Raiding? Like the video game raiding? You've been gaming with Tomo... bro, since when???"
+    FMG "Yes, the video game raiding, and after we helped her in the cafe that day, you know that day where you got super embarrassed and stormed off in a fit."
+    FMG "I talked to her some more and found out she likes Neighborhoods of Dreadnaught."
+    MCT "What a stupid name..."
+    FMG "We've raided together every Wednesday after that."
+    MC "You've cheated on me..."
+    FMG "What...?"
+    MC "All those Wednesday nights where I asked to hang out and you said you were busy. You-You've been gaming with Tomo. You've probably been gaming with everybody! Nat, Alice, hell maybe even that guy in the gym with the gimpy leg..."
+    show FMG sad
+    FMG "It's true, I have been gaming with other people."
+    MC "I see it now, nothing is sacred in our relationship."
+    show FMG neutral
+    FMG "You showing up tonight or not?"
+    MC "Ugh, fine, whatever. We both know I got nothing else going on. {w}Can I ask why you've been hanging out with Tomo so much? Even if it is only online."
+    show FMG neutral
+    FMG "Hm, I guess... I guess she's like Tatsuya to me. I'd most likely do this kinda stuff with him if he was still here. Being able to be like a big sister to someone even though we're close in age is... {w}it's nice."
+    FMG "Everything Tatsuya did for me I can try and do for someone else like Tomo."
+    MC "I see..."
+    MC "I'm-I'm going to head to the showers, I think. My chest is hurting."
+    FMG "Kei, I'll carry you to the nurse if you're in pain."
+    MC "It's fine, I promise... just a result of the workout today or maybe cardiac arrest is kicking in, I don't know.{w} I'll get Tomo from her dorm tonight and meet you at your place."
+    FMG "Okay, and please don't die in the shower."
+    MC "I won't. I'll see you tonight. Love you."
+    show FMG happy
+    FMG "Love you too, doofus."
+    scene black with fade
+    pause .5
+
+    $setTime(TimeEnum.EVE)
+    scene Dorm Tomoko with fade
+    MC "This place is a mess. How do you live like this?"
+    show Tomoko neutral with dissolve
+    Tomoko "The lack of sunlight makes it easy."
+    MC "Are you sure you aren't like a demon or some type of eldrich creature?"
+    Tomoko "Yes."
+    MC "I don't believe you."
+    Tomoko "Okay, that's your choice."
+    MC "{size=-6}Such a conversationalist...{/size}"
+    MC "Are you excited for the movie?"
+    Tomoko "Yeah...I guess..."
+    MCT "Oh my god."
+    MC "Akira told me that you wanted to pick it out? So what did you pick?"
+    Tomoko "Why are you asking so many questions?"
+    MC "Why aren't you answering them?"
+    Tomoko "You can't answer a question with another question, Kei."
+    MC "I–Did... Did you not just do that???"
+    Tomoko "No."
+    MCT "I'm going to dolphin dive out the nearest window in a minute."
+    Tomoko "Are you going to answer my question?"
+    MC "..."
+    MC "I'm trying to be a better sibling, trying to get to know my sister better."
+    Tomoko "Seems pretty random. Do you need something from me? Did Mom yell at you again?"
+    MC "What? No! Look, it's not important right now. I just-I just figured we should do some sibling bonding... or something... I'm not too sure."
+    Tomoko "You're weird."
+    MC "Tomo... {w}{i}sigh{/i} Nevermind, let's just go."
+    scene black with fade
+    pause .5
+
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Dorm FMG with fade
+    MC "Ta-da!"
+    show Tomoko neutral with dissolve 
+    Tomoko "Do you let yourself into every dorm that isn't yours?"
+    MC "Akira said we could let ourselves in while she was out getting snacks and that's what I did. Are you satisfied with that answer?"
+    Tomoko "Akira was right, you do get salty fast."
+    MC "I...forget it."
+    "Much to my delight, Akira had come back just in time to save me from my intrusive thoughts."
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    show Tomoko neutral at altMove(0.5, 0.75)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft 
+    FMG "Aye, there are my favorite people!"
+    Tomoko "Woooow, Akira... you're... enormous..."
+    MCT "Maybe if you left your cave, you'd have known about this like six weeks ago."
+    show FMG happy
+    FMG "Heh, I know, it's pretty cool, isn't it? Not only am I one of the strongest people on campus, but I also get to call Kei short now."
+    MC "For the record, I {i}was{/i} taller than you."
+    show FMG flex
+    FMG "Was."
+    show FMG neutral
+    FMG "Onto more pressing matters. Movie time!"
+    FMG "What did you pick, Tomo?"
+    Tomoko "Here, take a look."
+    "I thought the size difference between Akira and I was crazy. But hot damn, if I used Tomo as a unit of measurement I think I'd need about four maybe five Tomos to equal Akira's upper body alone. {w}That's a {i}huge{/i} bitch."
+    FMG "Ooooo, Kung Fu Rush! This is practically a modern classic, it's been on my \"to watch\" list forever."
+    MC "Wow! You guys like that movie? It reviewed horribly, it's garbage."
+    Tomoko "Have you seen the movie before, Kei?"
+    MC "Well... no."
+    FMG "Glad that matter's settled then."
+    MC "Excuse me. nothing has been settled. I'm feeling very unsettled in fact that you're going to subject us to this cinematic train wreck. It got two stars from over three hundred critics."
+    FMG "You let others form your opinions for you all the time?"
+    MC "...Mayhaps."
+    FMG "Besides, that's part of the fun, Kei-kun. Even if it does suck we can still have fun watching it. Haven't heard of the expression, \"so bad it's good\"?"
+    MC "Yes. It's the basis of our entire relationship."
+    FMG "Glad to see we agree on something."
+    FMG "Now go sit on the couch and prepare yourself for one of the greatest films of our generation."
+    FMG "I'll get all the snacks, you guys get comfy."
+    Tomoko "I love your RGB lights, Akira. I want some of my own for my dorm but I have this problem of not wanting to leave my dorm."
+    FMG "The game store in town has a whole section dedicated to them. Tell me what color you want and next time Kei and I are in town, we can pick them up for you. I'll help you set them up too if I'm not too busy."
+    MCT "She's going to make me pay for them, I know it."
+    FMG "I also made sure to get everyone's favorite snack. {w}Here's yours, Tomo."
+    Tomoko "Thanks."
+    show FMG happy
+    FMG "Kei, I got three bags of gummy worms cause I'm going to be picking from your bag the whole time."
+    MC "I would expect nothing less. Toss 'em over, I promise I'll catch them this time."
+    show FMG neutral
+    FMG "Move your little tushy, Kei. I need some space."
+    MC "Ma'am, you have like a third of the couch available to you. How much more can you possibly need?"
+    FMG "Half at least— move a smidge to the right. I don't want to hit Tomo with my legs or anything."
+    pause .5
+    FMG "Perfect, thank you."
+    "With everyone settled and snacks passed out, we could finally hit play. I set my expectations low. This was set to be a stinker."
+    "\"Kung Fu Rush\" apparently wasn't a misnomer. Not even three seconds into the movie someone was getting their ass kicked."
+    "It was a bit hard to follow but I guess some yakuza types were shaking down this old man's ramen shop, shady loan shark stuff."
+    "While three guys were going to town on the old man, who I guess was the shop owner, the protagonist walks through the door, dropping the ingredients he was bringing in, and proceeds to go raging tiger on their asses."
+    FMG "Dang, this movie doesn't mess around."
+    MC "Entertaining for short attention spans I guess."
+    Tomoko "How does a ramen shop owner know kung fu so well?"
+    FMG "Quite, it's getting good!"
+    "The protagonist was tearing these guys apart piece by piece- head dodge to the left, round house kick to the guy's face. A blocked strike- immediately countered with a palm strike that shattered the thug's elbow."
+    FMG "Sweet! That's what I'm talking about!"
+    "Meanwhile the Big Boss and his even bigger guard were just standing there letting all this happen."
+    "Big Boss" "Sumasshu— kill him."
+    "Sumasshu was a massive dude, head, and shoulders above the protagonist. He had an ominous look to him, not the least of which was due to most of his face being hidden due to his long hairstyle."
+    MC "Hmm, this guy reminds me of someone."
+    Tomoko "I'll say. Why would anyone wear their hair like that?"
+    FMG "It's a common feature used in visual media to obscure a character's personality so we don't feel empathy with them. Seems to work here, that guy looks like a faceless monster."
+    MC "I'm feeling oddly attacked for some reason."
+    "The protagonist's punches bounced off the big dude, who grabbed him by the back of his head and then slammed him through a wooden countertop, and then kicked him in the chest, sending him through a three story window."
+    Tomoko "Man, he got jacked up."
+    MC "Since when was the scene on the third floor?"
+    FMG "That's a question that doesn't need an answer. Did you {i}see{/i} that? Bro got his shit caved in!"
+    MC "It is a bit refreshing to see the protagonist isn't untouchable, I'll give it that."
+    "The guy then falls out the window, cue the love interest screaming \"NOOO!\" as they grab her and take her away. She broke loose, only to have Sumasshu punch her so hard it knocked her out."
+    MC "{i}Pow!{/i} Right in the baby maker! Guy is brutal"
+    "They left with the girl and then burned the place down. The protagonist wakes up the next day because he conveniently managed to land on a bunch of mattresses that had been thrown out in the alley."
+    "The guy is understandably pissed and proceeded to go through the whole city kicking everyone's ass."
+    MC "Oh come on, he didn't even say a word and everyone in the bar is already trying to fight him as soon as he walks in."
+    FMG "It's a Yakuza bar."
+    Tomoko "How do you know that?"
+    FMG "Shut up! That's how."
+    MC "Damn, that was fast. He really laid waste to them."
+    FMG "I know right? The fight choreography in this movie is actually really good. I have no idea why it got such low reviews."
+    Tomoko "Maybe because there isn't much of a plot?"
+    FMG "{i}Again{/i}, I have no idea why it got such low reviews. {w}It's a kung fu movie. The less talking and more punching there is the better."
+    "After filling up emergency rooms all across the city, the movie reached the final showdown scene with the Big Dude."
+    FMG "Oo this is gonna be good— the revenge fight!"
+    MC "Let me guess, he uses his new found skills and overwhelming rage to magically beat the much stronger opponent?"
+    Tomoko "When did this movie start having a narrator?"
+    FMG "Exactly. Don't ruin the best part."
+    "To be fair it was a pretty tense scene. The guy and the Big Dude facing off. The plucky young hero vs. the faceless monster."
+    MCT "And now I made myself sad."
+    "Sumashu, or whatever his name was, fired off a flying kick that would have torn the guy's head off if he didn't duck out of the way, and hit a telephone poll instead, knocking it over in the process."
+    "Sparks flew everywhere and the whole street went dark."
+    FMG "That was so badass!"
+    MC "That is {i}so{/i} fake."
+    Tomoko "Of course it is, it's a movie, Kei. Do you think they'd really knock over a telephone pole?"
+    MC "Of course not, what do you take me for, some kind of idiot?"
+    pause 2
+    MC "What I mean is, don't you think that's a tad bit too unrealistic, even for this movie?"
+    FMG "I don't know, I bet I could do it. It looks like it'd hurt though."
+    MC "Yeah, but unrealistic is normal for you."
+    FMG "And seeing the unrealistic should be normal for you by now. Glad we could agree how awesome this movie is."
+    "Awesome was a bit of an exaggeration but admittedly the fighting in the movie was pretty cool."
+    "In contrast to the previous beat downs to every throwaway extra by the main character, the protagonist was getting his ass served on a silver platter by Big Dude, who brushed off all his punishing strikes like he was a brick wall."
+    "It honestly pulled you into the moment to root for the guy. All his cunning, strength, and technique were meaningless in the face of this unstoppable onslaught that was slowly toying with him, enjoying his torture."
+    MC "Oh he'll pull through... I hope."
+    FMG "Are you going to cry?"
+    MC "{i}Pshh!{/i} No..."
+    MCT "If this dude dies after all of this, I'm going to start bawling. They always kill off my favorite characters..."
+    "In a mirror image of the opening scene, Big Dude sent the guy flying with a dragon kick through a storefront window. His lifeless bloody body laid limp over the broken store display."
+    MC "What? That can't be how this ends!"
+    "Akira & Tomoko" "{i}Shhhhhh!{/i}"
+    MCT "What is this, a library?"
+    "Sumashu knelt over his body to deliver the final blow— {w}Only for the guy to spring to lift and stab him through the neck with a jagged glass shard."
+    MC "YES!"
+    FMG "Oh come on! Now I know why this movie only got two stars."
+    MC "What? The good guy wins. Everyone is happy."
+    FMG "That was {i}so{/i} cheap. What a letdown. He lost that fight, he didn't earn that victory at all."
+    Tomoko "To be fair he might have been tired from fighting half the city for 72 hours straight."
+    MC "Just goes to show you that a clever mind can triumph over brute strength."
+    FMG "That's not an encouraging life lesson then, considering you have neither."
+    MC "Just for that, no more back scratches."
+    Tomoko "I'll scratch your back Akira."
+    FMG "Thank you, Tomo."
+    MCT "I've overplayed my hand."
+    FMG "Oh wait, you're still here."
+    MC "You can't get rid of me that easily. Besides, there's something I wanted to check."
+    "The rest of the movie was pretty predictable. The protagonist reaches the chamber of the Yakuza boss, who at this point is pissing his pants in fear at the mere sight of the guy that took down Sumashu."
+    "He threw the guy out the window into a garbage truck, unties his girlfriend, they get all kissy-kissy, yada-yada. I was fast forwarding through by this point."
+    FMG "What are you doing?"
+    MC "Hmm, call it a hunch. I just wanted to check something."
+    "I kept fast forwarding until the end credits, and there it was."
+    pause 1
+    MC "No fucking way."
+    FMG "What?"
+    MC "Look here, under cast: Sumashu - {w}Yoshito Hageshi"
+    FMG "You gotta be shitting me!"
+    FMG "THAT'S SO COOL!"
+    Tomoko "Are you sure it's him?"
+    MC "Dude look."
+    "I skipped back to the first scene that had brighter lighting."
+    MC "Look at the way he hunches over and the way he just casually walks."
+    FMG "You're totally right, that's gotta be him!"
+    FMG "I wonder why he never said anything before?"
+    MC "No kidding. Man, if I was in a movie I'd be telling everyone I knew, even strangers on the street."
+    Tomoko "He didn't even have any speaking lines."
+    FMG "Still counts. He's a surprisingly good actor. I wouldn't have thought such a lamewad like Hageshi-sensei could play such a terrifying, soulless badass."
+    MC "What are you talking about? Have you ever made eye contact with the dude? There's plenty of terror to be found in his soulless stare. If anything, covering up his face made him less scary than in real life."
+    FMG "Oh man, we gotta ask him about the movie next time we see him. If I had his number I'd totally call him right now."
+    MC "I'm pretty sure that's exactly why he never gave you his number. Besides, if you ask him about it, he'll probably just say two words and then ask if you need anything else."
+    FMG "Hell no! I want details. We're gonna make Hageshi-sensei spill the beans."
+    MC "Sounds like a plan then. Maybe we'll get him to divulge more about his shady past."
+    FMG "What are you even talking about?"
+    MC "Nevermind, one thing at a time. Where's my bag of gummy worms?"
+    FMG "Hey, I told you what would happen to them. You snooze, you lose."
+    MC "You ate all three bags?!?! Do you have no self-control???"
+    FMG "When it comes to eating your snacks, no."
+    jump daymenu
+
+label FMG084:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -17315,6 +17579,299 @@ label FMGGTS001:
     MC "You didn't..."
     FMG "I got hungry while filling the vases."
     MC "...You're paying for my dinner..."
+    jump daymenu
+
+label FMGGTS002:
+    scene Gym with fade
+    play music LastBell
+    MC "I... I can't breathe. This is it, the end of my story... I'm-I'm dying."
+    show FMG sad with dissolve 
+    FMG "You hold a plank for a solid two minutes and your world starts crumbling..."
+    MC "Yeah! You understand me so well, Akira. You... {i}sniff{/i}... You get me. {w}Can I stop holding this now?"
+    show FMG neutral
+    FMG "Alright, fine. {w}You did great on your pull-ups today, so we can call it early. And by the way, your form was excellent. I almost shed a tear watching you pull your chin past the bar with the weighted vest on."
+    $setSkill("Athletics", 1)
+    $setAffection("FMG", 2)
+    MCT "Thank god she didn't see me remove some of the weights..."
+    MC "Wellll, I don't want to brag or anything."
+    FMG "Good, you don't have to!"
+    MC "Wait, no, I want to..."
+    FMG "Too bad, so sad. Maybe next time! {w}And you never responded to my text, are you coming tonight?"
+    MC "Heh, sorry. I was going to respond, I swear. Got caught up in some unfortunate circumstances last night and it slipped my mind."
+    FMG "You either fell asleep or were playing one of your computer games, I know you don't do much."
+    MC "I'm out, you want to give me attitude you can go alone. I'll be in my room having fun with my other cool friends."
+    show FMG happy
+    FMG "We're leaving at six."
+    MC "Fine."
+    MC "Must've left a good impression on Naomi if she wants to hang out with you again. Usually people can't stand you."
+    show FMG neutral
+    FMG "That's because I have you tagging along most of the time trashing my vibe."
+    MC "Hmmmm."
+    MC "Do you plan on wearing anything different for tonight?"
+    show FMG neutral
+    FMG "What's wrong with my regular outfit? It's cute."
+    MC "I'm not saying it isn't but maybe it's worth wearing something more formal? Naomi kinda gives off a very... I guess the term I'm looking for is... an old fashion aura?"
+    FMG "I think you're overthinking it. Like yeah, she talks and acts very proper but I don't get the feeling that'd she wear a kimono or anything."
+    MC "Aaah, but what if you're wrong?"
+    FMG "I'm not."
+    MC "You don't know that."
+    FMG "I do."
+    MC "How????"
+    show FMG angry
+    FMG "Because if you actually read the whole text instead of stopping at the first sentence you'd see that she picked a burger joint for us!"
+    MC "Bullshit, lemme check my phone."
+    pause 1
+    MC "This conversation never happened."
+    show FMG neutral
+    FMG "Mhm, you freaking bozo."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm Interior with fade
+    play music TwilightAmbient
+    MC "How do I look? Fancy, right?"
+    show FMG neutral with dissolve 
+    FMG "You are wearing the same exact thing you wear every day..."
+    MC "Ah, to the untrained eye it might look like that. However, these pants are {i}ironed{/i}."
+    show FMG sad
+    pause 1
+    MC "I know, I'd be speechless too."
+    show FMG neutral
+    FMG "You look good."
+    MC "When do I not? I got girls passing out in the halls when I walk by."
+    FMG "Probably from your lack of deodorant."
+    MC "It was for one day because the stick broke and I didn't have time to get a new one. I told you this."
+    FMG "Keep your arms down just in case. Can't be too safe, haha."
+    FMG "Do you need to do anything else or are you ready to go? I wanted us to walk with Naomi to the restaurant, don't want to keep her waiting."
+    MC "Yeah, I got everything. Devilish good looks, high charisma, and-"
+    FMG "I'm going to stop you right there, keep listing off things you don't have and we'll be here all night."
+    MC "Hm, okay. Good luck finding someone else that'd be willing to help you with math 'cause it ain't gonna be me."
+    FMG "You wouldn't do that to me, don't lie."
+    MC "We'll have this conversation after dinner. I am very upset with you at the moment."
+    show FMG sad
+    FMG "I'm sorry..."
+    MC "Good, you should be... {w}and those fake tears won't work on me. I'm no sucker."
+    show FMG happy
+    FMG "Yeah, you are. I'll get you back later, let's get moving."
+    scene black with dissolve
+    pause .5
+    scene Town with fade
+    play music BrightLights
+    "As we walked through the town, every once in a while I reached over and wrapped my hands around Akira's. Despite the size difference, it was so comforting. Though neither of us really knew what to say, we both enjoyed the peace."
+    "Naomi, meanwhile, walked alongside us silently, taking in her surroundings. This did not, however, stop others from taking in glances at her as she passed. Through the awkwardness, she attempted to keep a sense of candor."
+    $setGTSOutfit(OutfitEnum.CASUAL)
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    GTS "Did you iron your pants, Hotsure-san?"
+    MC "Why, yes, Yamazaki-san. I did. Thank you for noticing! I figured I should go all out for the evening."
+    show FMG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Don't believe him, Yamazaki-san. He didn't even button his shirt properly, I know he didn't iron his pants."
+    MC "What? I did not-"
+    pause.5
+    show FMG happy
+    show GTS embarrassed 
+    FMG "Ha, made you look. Oldest trick in the book, you fall for it every time."
+    MCT "You're going to be real sorry when you ask for salt."
+    show FMG neutral
+    MC "{i}cough{/i} Moving on from such trickery. How's the garden been, Yamazaki-san? Do you need any more help? I know a certain gym rat who'd love to provide some assistance."
+    show GTS happy
+    GTS "It's been much easier to handle after your help! For now, I should be able to manage it alone. It's quite kind of you to offer, though. I'll let you two know if I ever need an extra pair of hands or two."
+    show FMG flex
+    FMG "I'm always down for more lifting. I'm ready whenever you need me."
+    GTS "Thank you, Mizutani-san. Your enthusiasm is commendable!"
+    show FMG happy
+    FMG "You can count on me, heh."
+    MC "Sometimes you can count on me. Depends on the time of day, have to be feeling yard work, you know?"
+    GTS "And thank you too, Hotsure-san. You were a tremendous help."
+    MCT "Yeaah, that's right, validate my ego."
+    MC "I'm glad to be of service. I take great pride in my work."
+    show FMG neutral
+    FMG "So, Yamazaki-san, what else do you do besides gardening?"
+    MC "Oh, actually I know! I heard you make some absolutely killer tea! You have my number. Call me any time for tea, and I'll ditch Akira in a second."
+    show FMG angry
+    FMG "Hey!"
+    MC "Sorry, good tea is hard to come by, I have to take my chances as I see them."
+    show GTS neutral
+    GTS "Hmhm. My mother is quite the old hand at senchado, and I believe she taught me well. But rest assured it's nothing to get too worked up over."
+    MC "{size=-6}Akira, what's senchado?{/size}"
+    show FMG sad
+    FMG "{size=-6}For someone who said good tea is hard to come by, I figured you'd know.{/size}"
+    MC "{size=-6}No, I only said that to make you feel bad...{/size}"
+    show FMG neutral
+    FMG "{size=-6}You're an ass. Senchado is the preparation and drinking of tea... I think. I'm not super sure.{/size}"
+    MC "{size=-6}Good enough, I'll roll with it.{/size}"
+    MC "That's awesome, Yamazaki-san! I dabble in senchado myself from time to time."
+    show GTS happy
+    GTS "Oh my stars, you do?"
+    MC "No, I was making a poor attempt to share an interest, sorry. {w}Do you play any video games? Akira and I {i}actually{/i} dabble in that."
+    show GTS neutral
+    GTS "Unfortunately not, I've never had an interest in them."
+    MC "Until now! {w}Well, not 'right now' now but like 'another day' now. When Akira and I go to the arcade you can join us. I'm sure you'd enjoy it."
+    show FMG happy
+    FMG "I don't normally agree with Kei..."
+    MCT "You agree with me all the time, you loser."
+    FMG "That said, I think it's a great idea. The more the merrier, I always say."
+    MC "You've literally never said that once the entire time I've known you."
+    show FMG angry
+    FMG "No one asked you, shut up."
+    MC "See what I have to deal with on a daily basis. Terrible."
+    show GTS happy
+    GTS "Hmhm, you two are a match made in heaven." 
+    show FMG neutral
+    FMG "We're coming up at the restaurant, hope you guys are hungry. I know I am."
+    MC "And the sky is blue. Tell us something we don't know."
+    show GTS surprised
+    show FMG angry
+    FMG "You're going to regret this attitude next time we have leg day, bozo."
+    MC "I was joking, I swear."
+    scene Diner with fade
+    MC "{i}Sniiiiiiff{/i} Aaaah...{w}Do you guys smell that? Smells like heaven."
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "{i}Sniff{/i} Smells like someone didn't keep his arms down."
+    MC "Impossible. {size=-6}I smell like a middle school locker room, do not do this.{/size}"
+    FMG "{size=-6}I was kidding, haha. You should see that stupid look on your face.{/size}"
+    GTS "Is everything alright?"
+    MC "Fine. Everything is fine. {w}I'll go grab our table if you guys want to order."
+    FMG "I'm cool with it. What about you, Yamazaki-san?"
+    GTS "Sure!"
+    FMG "You want the same thing you always get, Kei?"
+    MC "Nah, could you get me the chicken salad, please? Trying to watch my figure."
+    FMG "Mhm, you got it."
+    MC "Thanks, fam."
+    hide FMG
+    hide GTS
+    with dissolve
+    MCT "Suckers, now I get the good seat."
+    pause 1
+    MC "This seat sucks... {w}and the table is a little sticky... accch... acccccch."
+    MC "Where are the wipes, I'm gonna die from all the bacteria."
+    scene black with fade
+    pause .5
+    scene Diner with fade
+    MC "There! A clean table... or as clean as it can be...."
+    pause .5
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "We're back!"
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    MC "I was starting to get nervous, I thought you guys got lost."
+    FMG "Nah, Yamazaki-san and I were talking in line and found out we both have a thing for history. We, uh, kind of got lost in our conversation about the Muromachi Period."
+    show GTS happy
+    GTS "A bit, yes. Mizutani-san has some most intriguing perspectives on Ashikaga Takauji establishing his government in Kyoto."
+    MC "Neat, glad you guys found some common ground. Make sure to steer conversations away from the gym as much as you can, Yamazaki-san. She'll go on for hours and hours."
+    show FMG flex
+    FMG "Sorry you can't hang with the best, Kei-kun."
+    show GTS surprised 
+    GTS "Oh dear, it seems we're out of napkins. I'll fetch us a few more."
+    show FMG neutral at altMove(0.5, 0.5)
+    hide GTS with dissolve
+    FMG "Her and Aida are my favorites, they're so sweet and kind. They deserve the world."
+    MC "You could learn a thing from them. You're very pushy when you get angy."
+    show FMG angry
+    FMG "I am not!"
+    MC "Ooookay."
+    "Our sassy argument was put on hold when a strange individual waltzed over to our table. His silk ascot bounced in time with his blonde perm as he caught his breath. After fixing his hair, he addressed us with an oily smile."
+    UNKNOWN "Hello, my friends, I'm sorry to interrupt your meal on this fine evening. My name is Kitao, and it pains me to report that my dear Yorkshire Terrier, Pedro, is unexpectedly bereft of one of his shoes."
+    "Kitao" "The pavement in this town is simply murder on my Pedro's little toe beans. Might I trouble you estimable fellows to help me find it?"
+    MC "I'm down."
+    FMG "W-What... Do you just offer to help anyone that walks up to your table?"
+    MC "Akira, if I had a yen for every time a man with a dog named Pedro asked me for help, I'd have two yen. Which isn't a lot but it's weird that it happened twice."
+    MC "And think about it, what if Kitao here has a reward like one of those ridiculous NPC quests in those extremely buggy RPGs you like."
+    MC "You could level up if you catch my drift."
+    FMG "No, I don't catch your drift. There isn't even a slight breeze."
+    FMG "Look... Kitao, is it?"
+    "Kitao" "Oh my, yes!"
+    FMG "I don't want to come off as rude, however, we're uh... busy trying to enjoy our meal."
+    "Kitao" "I promise you, madam, it won't take long! I know that silly shoe has to be around here somewhere!"
+    show FMG sad
+    FMG "{size=-6}Oh my god.{/size}"
+    show FMG neutral
+    FMG "I'm sure it won't... as I said, we're just trying to enjoy our meal and waiting for our friend to return. I'd prefer to be here when she gets back, I don't want to worry her."
+    "Kitao" "Please, miss! Kitao could use another pair of eyes! The shoe can't be far, surely!"
+    MC "Did you just refer to yourself in the third person?"
+    "Kitao" "No, sir... Kitao wouldn't dream of it."
+    MC "..."
+    MCT "I'm being gaslit now..."
+    MCT "Also, how long does it take to get some freaking napkins?"
+    FMG "Okay, Kitao, for the last time could you please leave us alone?"
+    "Kitao" "I beg of you miss, I'm on my knees."
+    MC "You're standing up, you liar."
+    pause 1
+    "Kitao" "Kitao is on his knees!"
+    show FMG sad
+    FMG "{size=-6}Should've offered to help him at this point, I didn't think he'd be this stubborn.{/size}"
+    show FMG neutral
+    FMG "Too bad I don't buckle under pressure. {w}Kitao, please- Ah! Yamazaki-san, you're back!"
+    "Kitao" "Hm?"
+    "Kitao whipped his head around to spot Naomi looking down at him with a smile and gentle wave."
+    show FMG neutral at altMove(0.5, 0.25)
+    show GTS happy at Position(xcenter=0.75, yalign=1.0) with easeinright
+    GTS "Good evening."
+    "Kitao" "AAAAAAA! L-Lady Hasshaku!"
+    "And he was gone within a blink of the eye, the handle of Pedro's leash flapping in the wind before vanishing out the door."
+    MC "Nice."
+    show GTS sad
+    GTS "I didn't mean to scare him..."
+    show FMG happy
+    FMG "Bah, don't worry about it! It was hilarious."
+    GTS "..."
+    FMG "You okay, Yamazaki-san? I hope I didn't offend you."
+    GTS "No, no, nothing like that... It's just..."
+    MC "Not a very big fan of your factor, I take it?"
+    GTS "...That would be an understatement."
+    show GTS sad at Transform(xzoom=-1)
+    GTS "There are some good things that come with it, like being able to reach higher, but I can't help but feel like a burden the more space I take up. It's so... unladylike."
+    show FMG surprised
+    FMG "HUH?!?!"
+    show FMG neutral
+    FMG "Unladylike? Says who? And before you even answer, who cares?"
+    FMG "Imagine all the awesome stuff you can do, Yamazaki-san!"
+    show GTS embarrassed at Transform(xzoom=1)
+    GTS "I fear my imagination fails me."
+    FMG "Well for starters, getting that guy to back off. That's a great one in my opinion."
+    "Akira noticed the sadness in Naomi's eyes and stopped herself from continuing, instead trying a more direct approach."
+    FMG "Naomi... I hope you don't mind me using your first name."
+    GTS "I do not..."
+    FMG "I'll admit I don't know much about you, yet. But I know and I want you to know you can't let this stuff, these factors, define you." 
+    "Being two meters taller doesn't change who you are, neither would twenty or thirty— or whatever number you want to use."
+    FMG "At the end of the day you're still... you. Now, will things get harder as these changes continue? Yeah, probably. Will it be easy? No, probably not. And that's a challenge we have to overcome."
+    FMG "Always remember, it could be worse. You could be like Rapunzel over there."
+    MCT "I won't hesitate to smack you across the face with my luscious locks."
+    FMG "When you get tall enough, you can step on the people that annoy you, that's a very nice bonus."
+    show GTS surprised
+    GTS "In what {i}possible{/i} regard is that 'very nice'?"
+    MC "I hate to say it, but I do agree with Akira. I should add that you don't need to get ‘over it' in a day or two. At the end of the day, you'll still be you, like Akira said before. That's what matters."
+    show FMG angry
+    FMG "What's wrong with agreeing with me???"
+    MC "Nothing, nothing. It was going to lead into a bad joke."
+    FMG "Hmmmmm..."
+    MC "{i}cough{/i} Anywaaays... {w}We're here if you need us, Naomi. You can count on us when you need to talk."
+    GTS "Thank you, both of you. I'm not sure I'll be able to overcome these hardships so quickly though."
+    show FMG neutral
+    FMG "That's fine, there isn't a time limit. Do what you feel comfortable doing at your own pace."
+    MC "{size=-6}Wish you had this mindset in the gym.{/size}"
+    FMG "Personally, I feel that's enough of our deep conversation. Our food is getting cold and I'm starving."
+    MC "Yes, we know. When are you not?"
+    pause .25
+    MC "Hey! Don't throw your fries at me."
+    show FMG angry
+    FMG "Keep talking and it's the chair next."
+    MC "Such an angry woman... {w}You aren't getting this fry back either!"
+    show FMG neutral
+    show GTS surprised
+    "All the while, Naomi's eyes widened as she chewed the second or third bite of her burger."
+    GTS "Heavens above..."
+    show GTS happy
+    GTS "This is delightful!"
+    MCT "Crisis averted."
+    MC "Now, I have to ask, when are we doing this again? Meeting up and continuing to grow our friendship."
+    show FMG sad
+    FMG "{size=-6}Why do you have to word everything so weirdly...{/size}"
+    show GTS neutral
+    GTS "I'm not too sure myself, I've been busy lately. I'll do my best to make time for the two of you. Each outing has been great fun."
+    MC "You're welcome, the party follows me everywhere I go."
+    FMG "{i}sigh{/i}... More like the circus."
     jump daymenu
 
 label FMGWG001:

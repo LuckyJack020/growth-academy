@@ -5992,6 +5992,8 @@ label AE029:
     AE "Hotsure-san?"
     MC "You two... it's just funny to me."
     Tako "Hm?"
+    if not getFlag("Meet_Tako"):
+        $setFlag("Meet_Tako")
     MC "Tako-san, it's nice to meet you."
     "I stood up straight, and bowed in respect. She looked at me in confusion for a second, before straightening her back and wiping her forehead."
     #if romance

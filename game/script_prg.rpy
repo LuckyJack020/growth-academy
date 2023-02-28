@@ -24136,7 +24136,7 @@ label PRG043:
     scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
     stop music fadeout 0.5
     "The scene you just finished marks the current end of Aida's route."
-    "Since 2021, Aida's route is receiving an extensive rewrites treatment, rebooting the story in a more focused direction."
+    "Since 2021, Aida's route is receiving an extensive rewrite treatment, rebooting the story in a more focused direction."
     "Everything playable after this last scene was written before the rewrites. Because of this, you may notice some plot holes and inconsistencies, which are intended to be fixed with future builds."
     "Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it."
     jump daymenu

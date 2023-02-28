@@ -5408,8 +5408,7 @@ label BE028_test_3:
 label BE029:
     $setProgress("BE", "BE030")
     play music Peaceful
-    #Setting: School. Science Room
-    scene Classroom
+    scene Biology Lab
     show BE doubt
     with fade
     BE "So, can you explain this to me one more time? Because I'm just not getting it."
@@ -6759,7 +6758,7 @@ label BE035A_nosauce:
 
 label BE035B:
     $setProgress("BE", "BE036")
-    scene Baseball Field with fade
+    scene School Exterior with fade
     play music BE
     $setBEOutfit(OutfitEnum.ATHLETIC)
     #SFX: General chatter
@@ -7264,7 +7263,7 @@ label BE038A:
 
 label BE038B:
     $setProgress("BE", "BE039")
-    scene Baseball Field with fade
+    scene School Exterior with fade
     play music Busy
     #SFX: General chatter
     $setBEOutfit(OutfitEnum.ATHLETIC)
@@ -7575,7 +7574,7 @@ label BE041A:
 label BE041B:
     $setProgress("BE", "BE042")
     $setBEOutfit(OutfitEnum.ATHLETIC)
-    scene Baseball Field with fade
+    scene School Exterior with fade
     play music BE
     pause 1.5
     play sound Whistle
