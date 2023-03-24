@@ -84,7 +84,7 @@ label global000:
     "Tomoko and I got up from our spots and shuffled in the crowd of students toward the center of the ferry."
 
     scene Dock with fade
-    play music Tomoko
+    play music ClearSkies
     "Leaving the ferry, I spotted a small dock with red pillars and a red roof. The whole thing looked new, as if it had been built literally moments before I stepped off the boat."
     "From there, I could look around and see the town nearby."
     MCT "That's comforting. Kinda feels like home."
@@ -776,7 +776,7 @@ label global000_RM_after:
     RM "Hmph. Just as I thought."
     MCT "What's this guy's deal?"
     show RM concerned-2
-    RM "Haven't you ever seen those people on the news?{w} The giants over ten feet tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
+    RM "Haven't you ever seen those people on the news?{w} The giants over 300 centimeters tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
     "Thinking back on it, I had seen some reports, starting when I was a little kid."
     "It wasn't often, but every now and then there'd be some picture or other of a giant-sized man or woman, always Japanese."
     MC "I... Yeah, I guess?"
@@ -1183,7 +1183,7 @@ label global000_homeroom:
     show WG angry with vpunch
     WG "Keep that thing away from me!"
     hide WG
-    show HR neutral
+    show HR neutral-2
     "..."
     "..."
     play music Busy
@@ -1210,10 +1210,10 @@ label global000_homeroom:
     HR "Some have a more tender approach and prioritize your comfort throughout this process, which of course, there is nothing wrong with."
     HR "As for me, I see more value in focusing on self-acceptance."
     HR "If you and your peers can learn to accept yourselves and your growth, then in theory, you should be able to tackle a number of things that life will throw your way, no?"
-    show HR unique
+    show HR unique-2
     "Tashi-sensei scanned the room, taking in the fear and confusion, then shrugged."
     show HR neutral
-    HR "Anyways, that's my big first day speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
+    HR "Anyways, that's my big first day speech. Don't expect more.{w} So, roll call. Matsumoto-san?"
 
     scene black with dissolve
     stop music fadeout 1.0
@@ -2564,7 +2564,7 @@ label MC005:
             MCT "Yamazaki-san would have a field day with this."
             $setSkill("Art", 1)
 
-    scene Town with fade
+    scene Town Bus with fade
     play music BrightLights
     #sfx crowd chatter
     MCT "Eesh. Crowded."
@@ -2576,6 +2576,7 @@ label MC005:
     else:
         MC "I guess... this way?"
     "I picked a direction and started off on a sort of reconnaissance walk. Not really having anywhere specific to go, but still taking everything in around me."
+    scene Town Shops with fade
     "One of the first places I saw across the street was a large, high end looking restaurant, made up in a traditional style, with lamps to accent its look."
     MCT "Don't know if I'll ever need to go there for anything, but hey, better to know of it than not. Maybe if my parents come to town... erm, island, I guess."
     "A few doors down from it was a large clothing store, and a burger restaurant alongside it."
@@ -2606,7 +2607,7 @@ label MC005:
     "I became the best of sheep and followed the crowd into the park."
 
     scene Park with fade
-    play music LastBell
+    play music DifferentPaths
     "The park, for its size, was about as crowded as I could've imagined it being."
     "Every bench along the walking paths was taken, and picnickers sat out on blankets, enjoying the sunshine with their meals."
     MCT "Wow... this is so much like home."
@@ -2637,7 +2638,7 @@ label MC005:
     "I listened and looked down for a moment."
     "This whole celebration reminded me of home, and of my parents."
     "The tale the speaker told was a familiar one, and though I still held respect for it, I had heard it many times before, so by the time it ended, I raised my head and continued onward to Tashi and Tsubasa."
-    show HR neutral with dissolve
+    show HR neutral-2 with dissolve
     #show Tsubasa neutral with dissolve
     #show Chiyo neutral with dissolve
     HR "... deeper than that. It's representative of Japan, and every person who lives-"
@@ -2649,6 +2650,7 @@ label MC005:
     show HR unique
     "I bowed to both of them politely."
     $setFlag("Meet_Chiyo")
+    show HR unique-2
     Chiyo "Hotsure-san? I don't believe we've met."
     Chiyo "A student of yours, dear?"
     Tsubasa "Not in my homeroom, no. This is Keisuke Hotsure, one of Kaeru's students."
@@ -2664,16 +2666,17 @@ label MC005:
     #show Tsubasa annoyed
     Tsubasa "I understand darling, and meant no such thing. Go on, Kaeru."
     #show Tsubasa neutral
-    show HR neutral
+    show HR neutral-2
     HR "I... didn't exactly have an ending in mind. All I was saying was simply that I believe that many people have lost their perception on how important this time of year is, and what it represents."
     HR "I believe it not only important to use the time for reflection, but also for taking in the historical significance of it all. Why we celebrate, and what it all means."
     HR "It's much more than just \"a topic to assign homework to.\""
     #show Tsubasa intrigued
-    show HR unique
+    show HR unique-2
     Tsubasa "I understand entirely. Times have changed immensely, and keeping a memory of the way things were is a sound idea."
     Tsubasa "Take this, for example. I remember, clear as day, the 1964 Summer Olympics in Tokyo."
     MC "You went to the Olympics, Tsubasa-sensei?"
     #show Tsubasa satisfied
+    show HR unique
     Tsubasa "I did, indeed. I was quite young at the time, however, my father took me to Tokyo and somehow managed to secure us two tickets through some wild stream of favors and I-owe-yous."
     MC "Wow..."
     Tsubasa "Quite right. It was an astounding sight to see. The first modern Olympics after World War II, and the first ones held in Asia."
@@ -3137,7 +3140,7 @@ label MC005_GTS:
     scene black with fade
     pause .5
     play music BrightLights
-    scene Town with fade
+    scene Town Street with fade
     "When Naomi and I got off the bus, I was surprised to see all of the decor and such for Greenery Day."
     "But I was more surprised to see the insanely large crowds going down the sidewalks in town."
     MC "Oh, wow. That's some crowd."
@@ -6031,7 +6034,7 @@ label MC009:
         "Yet, there she was. She sat silently on the bench all alone, her gaze slowly turning to the fountain in front of her."
         menu:
             "Try to talk to her":
-                $setFlag("MC009_PRGtalk")
+                $setFlag("MC009_PRGTalk")
                 MCT "She... does not look well at all. I should probably check in on her."
                 "I turned myself away from my food-based path and walked over to her, taking care to skirt around to one side to avoid jump-scaring her from behind."
                 MC "Hey, Kodama-san."
@@ -6729,7 +6732,7 @@ label MC011:
         MC "Oh? Is that so, like what?"
         show AE neutral-annoyed
         AE "There's been an uptick in student disciplinary matters."
-        show AE unique
+        show AE glasses
         extend " I'll spare you the details, but it has been rather distracting."
         show AE neutral
         MCT "Sounds like I'm not the only one feeling a bit strung out lately."
@@ -6831,6 +6834,1240 @@ label MC011:
     #hide Hageshi with dissolve
     "I didn't really know what to think of everything any more. Seeing people growing and changing in strange ways, myself included— what did it mean? How was this going to affect us? What were things going to be like after leaving this place?"
     "It was quite a bit to take in. I didn't have all the answers, but after listening to Hageshi-sensei, I at least felt better that my time here might help me find some."
+    jump daymenu
+
+label MC024:
+    scene Cafeteria with fade 
+    play music Schoolday
+    if routelock == "AE":
+        "As I sat and gazed at the jello in front of me, my reflection gazed back, moving slightly along with the jiggling surface of the dessert as I poked it with my spoon."
+        MC "Heh."
+        show AE neutral with dissolve
+        "I was about to look to Shiori with a grin and a sideways comment, however before I could even get a word in edgewise..."
+        show AE angry-2
+        AE "Not. A. Word."
+        MC "Whaaaat, you didn't even know what I was gonna say!"
+        show AE angry-3
+        AE "Some sort of asinine comment about my backside?"
+        MC "W-What? No! That would be rude and... uh..."
+        show AE neutral-annoyed
+        AE "... I have a feeling that you WERE thinking of making a comment, and then you would subsequently realize how I would react, and so you'd try to change the topic to save yourself."
+        MC "How do you already know me so well?"
+        AE "..."
+        MC "You were thinking of the same thing looking at that jello, weren't you?"
+        show AE aroused-3
+        AE "Quiet."
+        show AE neutral
+        "I chuckled at Shiori's bashfulness as I looked around the lunchroom. Though sparse, the students who were here seemed to be pretty glum; more so than usual."
+        MC "Sheesh, someone die?"
+        AE "Approximately 106 per minute."
+        MC "Ooookay, that's dark, but I mean why is everyone so down?"
+        AE "Ah. Anxiety most likely. There's a lot of talk about preparing for college already, and what the outside world will hold. Though the council has thought of ways to be reassuring to the student body, the worries have spread like wildfire."
+    else:
+        "As I finished my lunch, I sat and stared at the empty tray in awkward unease. Normally, I'd sit and listen in on the murmurs of other students, but the silence in the lunch hall was deafening."
+        "Quietly, I hummed to myself, accompanied by the buzzing of the lights above."
+        MCT "The hell is going on? Usually there's some kind of sound or action happening. The only time people are this quiet is when-"
+        "As I thought to myself, the silence was broken by the sound of heavy footfalls, along with the hearty sound of clapping with each step."
+        show AE neutral with dissolve
+        MCT "S-Speak of the devil."
+        AE "Hotsure-san."
+        MC "M-Matsumoto-san. Good afternoon."
+        MCT "Seriously, I figured her titanic tush would have at least made her less threatening! How can someone with such a big butt be so scary!?"
+        show AE glasses with vpunch
+        AE "I trust things are proceeding well for you today?"
+        show AE neutral
+        MC "Y-Yeah! It's a bootyful day out- b-beautiful day out!"
+        show AE neutral-eyebrow
+        "Matsumoto-san raised an eyebrow as she caught my slip, yet said nothing."
+        show AE neutral
+        AE "... Indeed. All the better to get your work done and enjoy it, if you have any."
+        MC "Ah. Nah, I'm uh... all sorted out, eheh."
+        AE "Then you're far ahead of your peers, it seems."
+        MC "Eh? Why do you say that?"
+        AE "This week has brought with it talks about preparing for life outside of the school. While many have dutifully taken everything in stride, others... prefer not to think about future responsibilities at this time."
+    MC "What about yourself?"
+    show AE neutral-annoyed
+    "Shiori bristled a bit at my question, but after clearing her throat, she shook her head."
+    show AE neutral
+    AE "... Nothing in particular. I'd originally believed that the application for the scholarship would be far more strenuous, however I was quickly disappointed."
+    MCT "That's a weird way to say relieved!"
+    MC "Sorry? Why do you say that?"
+    AE "A scholarship generally denotes a student of high achievement. If that is to be the case, then it would make logical sense for the minimum requirements of the scholarship to be rather difficult to reach."
+    MC "Well, it's based on grades, yes? Then, how low are you talking?"
+    AE "Firstly, there is a system to it. And, the deadline is coming soon, so don't dawdle if you're looking to apply."
+    AE "You'll need to take note of all of your grades and assign points to them, with an S grade being the highest, followed by A, B, and all the way down to D."
+    AE "There are four points awarded for S, three for A, and so on, down to the worst score of zero for a D."
+    MC "Right."
+    AE "After you calculate your total sum of points, you then divide it by the number of classes to determine your average grade overall."
+    AE "And, students who have managed to achieve a score of 3.2 or higher are eligible for the scholarship."
+    MC "I... see."
+    MCT "That's low, then? Doubt I even hit that. I wouldn't call myself the biggest brain in the class by a long shot. Especially compared to Alice, Aida, or Shiori."
+    pause .5
+    AE "With that in mind, are you considering applying?"
+    MC "Maybe. I'm not sure of my eligibility, to be honest with you."
+    AE "Hm. Bear in mind, expediency is the heart of efficiency."
+    MC "Urgh... right. Okay, where do I go to apply?"
+    AE "You can either request a paper document from the main office or print a copy from the school website. Take that to the secretariat near the principal's office, which itself is in the same wing as the school entrance."
+    MC "Sounds easy enough."
+    AE "In which case, I believe you should have what you need."
+    MC "Awesome. Thanks, Shiori. I'm gonna head back to do that now."
+    AE "That would be wise."
+    "I got up, picking up my tray to dump in the garbage."
+    UNKNOWN "Pardon me. Matsumoto-san?"
+    show Minori neutral at Position(xcenter=0.8, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.2, yalign=1.0)
+    with dissolve
+    if not routelock == "AE" or not getFlag("Meet_Minori"):
+        MCT "Ohh... this is one of the student council members I've seen with Matsumoto-san. Minori... Minori Tomoe. Yeah, that sounds right."
+        AE "Mm? Yes?"
+        Yuki "Couldgh you..."
+        pause .75
+        Yuki "Hgh... importanth sthtudenth..."
+    elif routelock == "AE":
+        "Yuki struggled to get out what she wanted to say, and Minori began to speak up on her behalf."
+        Minori "Um, I believe what she's trying to say-"
+        show AE pondering
+        AE "Hold a moment, Tomoe-chan."
+        "Only to be stopped by Shiori."
+        show AE sad
+        AE "Keep trying, Utagashi-chan."
+        "Yuki, who only a moment ago was clearly distressed at her inability to speak, suddenly was surprised at Shiori's response... before looking determined."
+        show AE neutral
+        AE "Breathe. Keep calm. Go slow. You've got this."
+        Yuki "Hoooh... Ohgkey... Couhgd... Couwd... yoo... hewp... wiff... importantph sthtudenth... counthil... wowk."
+        show AE smile
+        "Shiori smiled gently and nodded as Minori just looked on, just as shocked as I was."
+        AE "Do you feel comfortable telling me what kind of work?"
+        Yuki "... Mmph... Chompawe... ah nothes... tooo tscheshk... accuwashee."
+        show AE neutral
+        AE "Right. I'll make sure to make sure our accounts are accurate. For the recent club allocations, correct?"
+        "Yuki, elated that Shiori understood, smiled as best she could and nodded."
+        Yuki "Yuh!"
+        AE "Very well, then. Tomoe-chan, do you have them ready for comparison?"
+        "Minori was still dumbstruck, however, after a moment, she merely smiled and nodded."
+        Minori "Of course ma'am. Whenever you're ready."
+    else:
+        Yuki "Mghh... importanth... {w}sthhhhtudenthh..."
+        show AE pondering
+        "Shiori nodded solemnly, her expression falling a bit as she glanced to Minori."
+        Minori "What Yuki-san is trying to say is that we have important student council matters to attend to, Ma'am. Club allocations."
+        show AE neutral
+        AE "Very well, then. Tomoe-san, do we have our accounts ready for comparison?"
+        Minori "Of course ma'am. Whenever you're ready."
+    AE "Understood."
+    AE "Farewell, Hotsure-san. Best of luck."
+    MC "Thank you. Take care."
+    pause .5
+    MCT "Poor girl..."
+    hide AE
+    hide Minori
+    hide Yuki
+    with dissolve
+    "Turning, I dumped my tray then headed out into the hall, heading for the library."
+    scene black with fade
+    pause .25
+    play music LastBell
+
+    scene Library with fade
+    "Among the rest of the students, I was able to find myself a fine looking computer and sat down at it, clicking the mouse a few times, then typing in my login info."
+    "Now logged in, I was able to pull up the website and access the Academy's private pages and such, since everything was so tucked away from the public's eyes."
+    MCT "Okay... she said documents... {w}ah, there you are."
+    MCT "Form... okay. Looks like form B-1 is what I need."
+    "I printed it off and brought it to my computer, where I pulled out a pen from my bag and started marking numbers on lines and such."
+    pause .5
+    MCT "Right... that should cover it, then."
+    MCT "Actually... hold on. Do electives go on here too?"
+    "I moused over to the grades section of the website and punched in my info again."
+    MCT "Physical edu-"
+    MCT "I have an S in that?!"
+    MCT "We had one class of that, and Tashi-sensei said that was like, not a regular thing!"
+    if isEventCleared("MC006"):
+        MCT "Even with that, though, handball was still a good time. With Naoki-sensei and his band of merry whistles..."
+    if isEventCleared("FMG018"):
+        MCT "Oh, there's that elective in cooking with Takamura-sensei."
+        if getFlag("FMG018_FMG_CookingPartner"):
+            MCT "Explains the grade level, then. Having Shiori around made that fairly simple to ace."
+        elif getFlag("FMG018_GTS_CookingPartner"):
+            MCT "Well... the grades don't lie. That class was a rough one."
+        elif getFlag("FMG018_BE_CookingPartner"):
+            MCT "Hah... we did clutch that, though. Especially making that French dish."
+    "I penciled those grades in, then checked the others."
+    MCT "... S in math. That's four points."
+    MCT "History... {w}S."
+    MCT "So that's... four points. Nice."
+    MC "Biology is... an A."
+    MC "For economics and civics... B."
+    "I jotted all of these down as I went, until my list was full."
+    MCT "Okay... two for a B. Three for an A. Ach, that B drags me down a bit."
+    pause 1
+    MCT "Oh, wow. I actually qualify."
+    "I took my papers and got up, logging out from the computer mid-stand and heading to the door."
+    MCT "Okay. The main entrance is... that-a-way."
+    "Heading out, I hung a left in the hall and hurried off."
+    scene black with fade
+    pause .5
+    play music Schoolday
+
+    scene Gate Front with fade
+    "Walking into the main entryway, I stopped for just a moment."
+    MCT "This goes back a long time."
+    MCT "Akira moving those benches with Shiori at her throat."
+    MCT "Good times..."
+    "I glanced along one wall, and spotted the Principal's office."
+    MCT "Well, that's not the secretariat. Shiori did say it was nearby, though."
+    "I walked down a little further."
+    MCT "Ah, here we are."
+    "The door was marked \"Education and Student Support Department\". I headed in quickly."
+    scene Info Desk with fade
+    "I could make out the sound of a printer chugging along almost before I was inside, and I wasn't wrong."
+    "Two women sat at computers, with one more standing near a printer along the rear wall."
+    "None of them looked up as I entered, but by the looks of the three of them, they'd all likely been here long enough and seen things that made a guy with long hair look pretty run of the mill."
+    "I stepped up to the woman closest to me on her computer."
+    MC "Ehm... pardon me."
+    "The woman glanced up at me, her brown eyes dull behind her thick glasses."
+    "One eyebrow went up quizzically, yet with a degree of intensity, as if I were disturbing her life's work."
+    MC "I was... just wondering where I can drop off my scholarship application?"
+    "The woman glanced back at her computer screen and gestured with one hand toward the other woman on the computer."
+    MC "Ah... thank you."
+    "I stepped over to the other window, paper in hand."
+    MC "Pardon me, Ma'am. I would like to submit my form for the scholarship application?"
+    Secretary2 "Name?"
+    MC "Ah... Keisuke Hotsure."
+    Secretary2 "Class?"
+    MC "3-B."
+    "The secretary's eyebrows went up for just a moment as she clattered away on her keyboard."
+    "The secretary plunked a few more keys, then got up and went to a file cabinet, pulling out one drawer."
+    UNKNOWN "-tiring at the end of third semester."
+    UNKNOWN "Who was this?"
+    "I glanced over, seeing the woman by the printer now at the first secretary's desk, a cup of what I presumed to be coffee or tea in hand."
+    Secretary3 "One of the counselors. It was just a consideration, but that's the news."
+    Secretary1 "Hmph. Figures."
+    Secretary1 "Think I'd better get working on the job advertisement for MEXT then?"
+    Secretary3 "Hold off for now."
+    Secretary3 "Noguchi-san is planning to discuss things with the counselor first, just to set things in stone."
+    "The first secretary nodded and went about her business."
+    "I glanced around the room a bit. Aside from books, office supplies, and well... the more than cheerful secretaries, there wasn't much going on."
+    "The woman who had been helping me sat back at her computer, a folder in hand."
+    Secretary2 "Do you have the form for your application with you? Please ensure that it has your grades from the first semester."
+    MC "This would be it."
+    "I handed the sheet to her, to which she glanced down at it."
+    Secretary2 "..."
+    MC "Is... that's the right form, correct?"
+    Secretary2 "This is an attachment for the main document. This only lists your grades and the average. You'll still need to fill out a form for the actual application. Form A38."
+    MC "I... alright."
+    MC "Where can I get that from?"
+    Secretary2 "I can print it for you here. You'll need to sign it and notate this document on the main application to show it's an attachment."
+    "The woman turned to her computer and clicked some keys for a good minute or so."
+    pause .75
+    Secretary2 "Hm."
+    MC "Is... something wrong?"
+    Secretary2 "There seems to be an irregularity in your semester grade protocol that will prevent me from actually accepting your application for scholarship. Seems there is a missing signature from one of your teachers."
+    MC "Oh. Does it say which one?"
+    Secretary2 "Saemonsaburokouji-sensei."
+    MC "... Sorry, which one?"
+    Secretary2 "Saemonsaburokouji-sensei."
+    MC "I... don't know who that would be. I'm sorry."
+    Secretary2 "The grade comes from Naoki Saemonsaburokouji. From your physical exercise elective."
+    if isEventCleared("MC006") or isEventCleared("BE046"):
+        MC "Ohh... right. My fault."
+        MCT "Naoki-sensei. Of course."
+    else: 
+        MC "Ah... right. Okay."
+        MCT "... Who?"
+    MC "So, what can be done to solve the irregularity?"
+    Secretary2 "I'll do what I can to see if I can solve the problem from here. However, by the time requests pass through the proper links and all of the paperwork has reached where it ought to be, we'll likely be a good measure past the deadline for application."
+    MC "Well, is there anything I can do to help things go a little faster?"
+    Secretary2 "I'd recommend finding Saemonsaburokouji-sensei yourself and asking him for his signature. It will likely be quite a bit faster that way."
+    pause .5
+    MC "Hahh... alright."
+    MC "Do you happen to know where I could find him about now?"
+    Secretary2 "He's quite the busy man, but I'd imagine he's coaching a club at the moment."
+    Secretary2 "As for which one, I'm afraid I'm not sure. But, I am certain he's somewhere on campus."
+    MC "Alright. Well, thank you all the same."
+    Secretary2 "You're welcome."
+    scene Gate Front with fade
+    MC "Agh."
+    "I ran one hand through the back of my hair."
+    MCT "This is such a headache..."
+    MCT "Okay... where to start off?"
+    pause .5
+    MCT "The first logical place would be any and every place athletic. So, the track or possibly the pool."
+    MCT "There's always the faculty room too, though I doubt he'd be there. Especially if he's coaching stuff."
+    MCT "Auditorium is inside, though. May as well give that a once over first."
+    "I turned down the hall, keeping my paperwork literally clamped in my left hand."
+    scene Hallway with fade
+    MCT "Why can't they just like, call him and get his approval over the phone? Do an auditory signature or something."
+    pause .25
+    MCT "Yeah, right. That wouldn't fly on any legal document."
+    MCT "Feel like I barely know Sae... S..."
+    "I unfolded the paper in my hand."
+    pause .25
+    MCT "Sae.... {w}mon... {w}saburo... {w}kouji-sensei."
+    MCT "I feel like I've hardly met him."
+    if isEventCleared("MC006"):
+        MCT "Well, okay. There was the handball game after Golden Week."
+    if routelock == "BE":
+        MCT "I... think that he might coach the softball club, though. I don't even know where I'm pulling that from, but I feel like I heard that somewhere..."
+        MCT "One of Honoka's clubs maybe?"
+        "I sighed and pulled out my phone."
+        MCCell "<Hey! You happen to know where I can find Naoki-sensei??>"
+        pause 1
+        "A minute or so later, no response."
+        MCT "Well... gotta start somewhere."
+    if isEventCleared("MC002"):
+        MCT "He does wear a lot of whistles..."
+    if not isEventCleared("MC002") or not isEventCleared("MC006"):
+        MCT "I... think he was there for that handball game we had? Maybe?"
+        MCT "... What does he look like again?"
+    MCT "I just feel like I'm spitballing here."
+    MCT "Regardless, the auditorium is the best bet. I'm like halfway there now anyway."
+    if routelock == "PRG":
+        "{i}VMMMM!{/i}"
+        "I reached into my left-front pocket and yanked my phone out, unlocking it."
+        PRGCell "<Hi, Keisuke. I'm going to be watching the softball game in about half an hour if you'd like to join.>"
+        "I smirked to myself."
+        MCT "I think Aida is the only person I've ever met to use perfect punctuation in text messages."
+        MCCell "<Hey! Yeah for sure. Im running some errands for something right now but I can meet you there. I'll probably be a little late tho>"
+        PRGCell "<That's okay. I'll see you when you get there!>"
+        "I slipped my phone back into my pocket."
+        MCT "That's going to be nice."
+    pause .25
+    scene black with fade
+    pause .5
+
+    scene Auditorium with fade
+    pause .5
+    MC "..."
+    MCT "Where the hell is this guy?"
+    "I walked through the empty, almost cathedral-esque room, hearing nothing but my footsteps on the wooden flooring."
+    MCT "Wait, isn't the gym close to here, too?"
+    "I picked up my pace and headed out the door again, heading left."
+    scene Gym with fade
+    "The gym wasn't exactly... busy as I walked in. Definitely no one that bore any resemblance to a teacher or a coach."
+    "Down at one end, I spotted a flash of reddish brown hair."
+    play music FMG
+    show dummy with vpunch
+    "{i}CLANG!{/i}"
+    "I glanced down at the floor, praying that whatever this floor was built with wouldn't splinter under me."
+    $setFMGOutfit(OutfitEnum.GYM)
+    show FMG angry-2
+    "I glanced up as Akira pounded out one more rep."
+    show dummy with vpunch
+    "{i}CLANG!{/i}"
+    FMG "Agh!"
+    "Akira stood up and swung her arms at the shoulder, glanced over."
+    if routelock == "FMG":
+        show FMG flex
+        FMG "Kei-kun!"
+    else:
+        show FMG happy
+        FMG "Yo!"
+    "Akira waved a bit as I smiled and walked over."
+    if routelock == "FMG":
+        "I stole a glance down."
+        "Akira's sports bra and shorts clung to her body tightly as she walked over. That and her arms swinging as she walked nearly sent me over the edge right there."
+        MCT "... Especially with so little left to the imagination."
+    MC "Hey! What's going on?"
+    show FMG upbeat
+    FMG "Chest press, at the moment. From there... well, we'll see."
+    MC "Sweet. You wouldn't be able to help me find someone quick?"
+    show FMG neutral
+    FMG "Uh... depends, I guess. Who's the target?"
+    MC "Naoki-sensei."
+    FMG "Naomi?"
+    if routelock == "GTS":
+        show FMG happy
+        FMG "I... dude, she's like how tall now? You seriously can't find her? Also, I know she's mature and all, but Sensei?"
+        MC "I..."
+        MC "... No, I meant Naoki-sensei. The phys ed teacher." 
+    else:
+        FMG "Ah... pretty sure she's at the giants' dorms, dude. Maybe check there?"
+        MC "Oh, no no. I meant Naoki-sensei. The phys ed teacher."
+    show FMG neutral
+    MC "Naoki... Sae... ach, Sae... monsaburokouji."
+    show FMG surprised-2
+    FMG "I..."
+    FMG "Geez... that's a long-ass last name."
+    show FMG neutral
+    FMG "Well, it doesn't matter. What do you need him for?"
+    MC "I need his signature for that scholarship thing that the Academy is doing. There was some paperwork error with my files and now I have to go searching."
+    FMG "Hm. Yeah, no clue who that is."
+    if isEventCleared("MC006"):
+        MC "He was the coach when we all played handball that time?"
+        FMG "Ohh..."
+        FMG "Yeah, sorry. Still nothing."
+    if isEventCleared("MC002"):
+        MC "The teacher with... you know, the whistles?"
+        FMG "OH! That guy!"
+        FMG "Yeah, I did see him at the pool. I'm pretty sure Inoue-san was there too."
+        MC "Oh, seriously? That makes things easier! Thanks!"
+        FMG "No prob!"
+        FMG "Now, I've got things to press."
+    elif not isEventCleared("MC002"):
+        pause .75
+        FMG "Wait... hold on. Isn't that that guy with a ton of whistles around his neck?"
+        FMG "Because I know I saw that guy at the pool earlier."
+        if routelock == "BE":
+            MC "Awesome! Thanks! That was my next stop if he wasn't here anyway."
+            FMG "Sick! Hope you find him!"
+            FMG "For now, I've got things to pick up and put down."
+        else:
+            MC "Oh, seriously? Sweet! Thank you!"
+            FMG "No prob! Back to the grind for me, though."
+    if routelock == "FMG":
+        FMG "But, before I do."
+        "Akira stepped closer and leaned forward."
+        "I grinned and planted a kiss on her lips."
+        MC "You're killin' those plates. Don't let them catch their breath."
+        FMG "Never would!"
+        "Akira hurried back to the chest press, and began unloading the plates and moved to the next machine."
+        "I watched her for a moment, particularly as she wrenched the plates free of the machine and re-racked them, then headed out the door."
+    else:
+        MC "Sounds good. I'll see you later."
+        FMG "See ya, Kei-kun!"
+    scene black with fade
+    pause .5
+
+    scene Pool with fade
+    play music Peaceful
+    pause .75
+    MCT "I swear..."
+    "There was no coach or teacher or anyone of school staff at the pool, save for the fairly bored looking lifeguard watching from the chair."
+    if isEventCleared("WG043"):
+        MCT "Being here with a mission kind of sucks. I much preferred playing water polo with Alice and the other girls."
+    if routelock == "BE":
+        MCT "Huh... Honoka isn't here."
+        MCT "Damn. I could've sworn..."
+        "I pulled out my phone, glancing at my notifications and looking around with my hand behind my head like a lost tourist."
+        MCT "She could at least one word text me."
+    if isEventCleared("FMG032"):
+        MCT "Reminds me of hanging out with Akira and finding that cat with Chibuki."
+        MCT "What was his name? Chumley? Cher...ee?"
+        pause .5
+        MCT "Oh, Chumby. That was it."
+        MCT "... {w}Weird ass cat."
+    if not routelock == "WG" or not routelock == "BE" or not routelock == "FMG":
+        MCT "I really should check this place out more often. Reminds me of summer."
+    "I watched the few students there swimming laps, doing stretches, and so on."
+    MCT "Honestly, swimming is probably pretty great for muscle soreness and such. Especially with the proportions around here." 
+    $setWGOutfit(OutfitEnum.SWIM)
+    if routelock == "WG":
+        "One particular swimmer caught my attention. Moving gracefully through the water, despite her size, I realized now I should have expected to run into her this time of day."
+        show WG neutral with dissolve
+    else:
+        "I watched as one girl got out of the water. Most of her lower half was still in the water, belying her true size, but once I noticed her blond locks I realized it could only have been one person."
+        show WG neutral with dissolve
+    MCT "Oh!"
+    "I smiled at Alice and walked across the pool deck toward her, while simultaneously trying to avoid thinking about how sinful wearing street shoes next to a pool felt."
+    MC "Hey, Alice!"
+    if routelock == "WG":
+        WG "Good afternoon, Dear. I hadn't expected you to stop by the pool. Were you looking for me?"
+        "My gaze scanned over her as she pulled herself up from the pool, taking the steps at the corner of the pool. ."
+        "The thoughts and frustrations of paperwork and the like momentarily left me as I found myself thinking more... fun thoughts."
+        MC "I actually wandered in here by accident, but I suppose it wasn't a waste of time if I managed to run into you."
+        show WG happy
+        WG "Flatterer."
+        show WG sly
+        WG "Though I suppose I'll let it slide this time."
+        show WG neutral
+    else:
+        WG "Good day, Hotsure-san."
+    WG "You have the look of someone in search of something."
+    if routelock == "WG":
+        pause .25
+        show WG happy-2
+        WG "And, I'm assuming that something isn't a sneaky glance."
+        MC "I-I-"
+        show WG neutral
+        "Alice simply smiled and rested one hand on the railing of the pool."
+    MC "Well... you would be right, there."
+    MC "I'm running an errand so I can-"
+    MCT "Ugh... I've had to repeat this damned chain of events enough."
+    if routelock == "WG":
+        MC "I'm trying to track down Naoki-sensei. I need him to sign this paper work for a scholarship I'm applying for. I heard, but I don't know for sure, that he's the coach for the swimming club."
+    if routelock == "BE":
+        MC "I'm trying to track down Naoki-sensei. I remembered that he coached the swimming club from when I was here with Honoka, and figured I could find him here."
+    else:
+        MC "I'm trying to track down Naoki-sensei, and I'd heard he might be coaching the swimming club."
+    WG "Ah."
+    show WG neutral-2
+    WG "I'm afraid that I haven't seen anyone from the faculty here. And, as far as I know, the swim club doesn't meet today."
+    if routelock == "BE":
+        WG "I believe you'd be better off asking Honoka, especially if she's a member of said club."
+        MC "Yeah, I tried that. No answer."
+    else:
+        WG "I believe you'd be better off asking Honoka. If memory serves correct, she is a member of that club."
+    MCT "Is she, though? Her club status changes practically daily."
+    MC "Right. Thank you, Alice."
+    show WG neutral
+    WG "Of course. I'd also recommend asking the lifeguard as well. It couldn't hurt."
+    MC "Will do. Enjoy your swim."
+    if routelock == "WG":
+        "I stepped forward and leaned in for-"
+        WG "Ut-uh. Careful now, Dear."
+        "Alice took a measured step back. Just enough to get her front out of the way."
+        WG "After what you've likely already been through, it would be a shame to soak that paper up against me."
+        "I was suddenly well aware of the worth of the document in my hands, and the amount of legwork I'd already put in."
+        MC "Ach, right. Thank you."
+        WG "Of course."
+        WG "Save that for next time. However, I expect the same gusto."
+        MG "Will do there."
+    else:
+        WG "Thank you, Hotsure-san."
+    "I turned to the sound of Alice's body involuntarily splashing back into the water from her simple push off back into the pool, and walked to the lifeguard's chair."
+    MC "Pardon me."
+    "The lifeguard glanced over, and based on the dryness of his skin, clearly hadn't seen much in the ways of action that day."
+    MC "I was wondering if you could tell me where Naoki-sensei is?"
+    Lifeguard "He's not here right now. He did stop by earlier."
+    MC "Do you know where I could find him?"
+    Lifeguard "Try the track. I saw a few students training earlier. He's supposed to be supervising a club or two today, and I believe the track team is one of his, so that's likely where he'd be."
+    MC "Eesh. Busy guy."
+    pause .25
+    MC "Alright. Thank you very much."
+    "I bowed to the lifeguard and turned to walk back across the pool deck."
+    if routelock == "BE":
+        "{i}BMMMPH{/i}"
+        "I slipped my phone out."
+        BECell "<Hey, Kei-chan!! I'm so sorry, I was in the shower!! I dont know where Naoki-sensei is right now, though. I'm sorry!!>"
+        "I had to smile at the queen of the exclamation as I typed."
+        MCCell "<It's all good Honoka. Thank you anyway. I'm on some stupid scavenger hunt of a mission for this damn scholarship. Ill fill you in later.>"
+        BECell "<K! I'm going to study rn but I'll see you later!>"
+        MCCell "<See ya!>"
+        "I slipped my phone back into my pocket as I walked into the hall."
+    if routelock == "WG": 
+        "As I left, I glanced over at Alice backstroking her way across the pool."
+        "After taking a moment of admiration, I stepped out and back into the hall."
+    else:
+        "I stepped out the door and back into the hall."
+    scene black with fade
+    pause .5
+
+    scene Track with fade
+    play music Busy
+    pause .5
+    MCT "I was not counting on a scavenger hunt today."
+    MCT "And there's only a handful of students here. Doesn't really seem like club practice."
+    "I sighed, scanning the track."
+    "I didn't see anyone who bore any sort of resemblance to a teacher, much less a coach."
+    "Nearby, I spotted a guy stretching beside one of the bleachers and walked to him."
+    MC "Excuse me. You wouldn't happen to know where Naoki-sensei is, would you? Not around here, I'm assuming. I heard he was coaching out here today."
+    Student "I... hmm..."
+    Student "He is coaching our team, but he isn't with us today. I'd imagine he's coaching another club right now."
+    MC "I..."
+    MC "Right."
+    UNKNOWN "Takeda-san! You're up!"
+    Student "Try the auditorium. I think he has a club or two there."
+    MC "Ah... thanks."
+    Student "No problem. Later."
+    pause .75
+    MCT "For the love of-"
+    "I turned on my heel and sped-walked my way back to the main building."
+    MCT "I just came from there!"
+    scene Auditorium with fade
+    pause .25
+    MCT "Well, at least this is something new."
+    "I could hear the sound of a dribbling basketball from down the hall, and the sight of actual life here made me hopeful that Naoki-sensei would be somewhere associated with it."
+    if isEventCleared("BE016"):
+        "I did a quick once-over of the players, noting Sakie Iwata, the girl who I'd met back when Honoka played basketball, playing defense against a girl with rather plump thighs."
+        MCT "I wonder if Honoka ever got around to having that conversation with everyone?"
+        "I pondered this for a moment, and ran over my conversations with Honoka in my head."
+        MCT "Well... I'll ask her sometime."
+        "I walked along the edge of the gym toward the lone teacher I'd spotted in the room, leaning against one wall watching."
+    if routelock == "AE":
+        "I glanced over the players, noticing no one of note, save for a girl with rather large, jiggling thighs."
+        "My eyes tracked her as she dribbled the ball along."
+        MCT "Those shorts are a little... tight."
+        pause .5
+        "I blinked twice."
+        MCT "Shiori would quite literally strangle me with both hands if she caught me checking another girl out like that."
+    elif isEventCleared("GTS018"):
+        "I watched the players run back and forth down the court, only after a few passes did I spot Fumika Usui, the girl on a perpetual energy drink high, trying to shoot the ball over the head of a girl with... quite large feet."
+        "I glanced down."
+        MCT "The last time I saw her, her thighs were big. But now... those are huge. Especially compared to the rest of her."
+        "I sighed, remembering against my will how hurtful she'd been to Naomi with her basketball club offer."
+        "I resisted the urge to shake my head and walked along the edge of the gym, noticing a teacher up against one wall."
+    "Walking closer, I noticed the height of this teacher. Though he seemed to be on the more mild end, he was still a good meter taller than me. And, based on his age, he couldn't be much older than Takamura-sensei."
+    MCT "Was Naoki-sensei that tall? Did... he even have a factor?"
+    MCT "... Whatever, I'll find out soon enough."
+    pause .5
+    MC "Pardon me?"
+    Teacher "Mm? Yes?"
+    if isEventCleared("MC006") or isEventCleared("BE046") or getFlag("Meet_Naoki"): 
+        MC "Have you seen Naoki-sensei anywhere?"
+        Teacher "I... well, I saw him this morning, but not since. I would try the faculty room."
+        MC "Ah. Good idea, thank you."
+        Teacher "No prob."
+    else:
+        MC "You're Naoki-sensei, correct? I just need your signature for this scholarship form thing."
+        Teacher "Oh, I'm sorry. But, I'm not Naoki-sensei."
+        Sugiyama "The name is Sugiyama-sensei."
+        MC "Oh... oops. My apologies."
+        Sugiyama "No trouble at all. Not the first time that's happened. 'S' last names and all that."
+        Sugiyama "If you're looking for him, I'd maybe try the faculty room. If he isn't there, I'm sure someone might be able to point you in his direction."
+        MC "Right... good idea. Thank you."
+        Sugiyama "No prob."
+    "I headed back around and toward the door, timing my walk so all of the players were on the opposite side of the auditorium while I passed. I did not need a basketball to the melon today."
+    scene HallwayStairs with fade
+    MCT "I swear... to all things sacred..."
+    show HR unique with dissolve
+    MCT "... Goddammit."
+    show HR neutral
+    HR "Good afternoon, Hotsure-san."
+    show HR unique-2
+    MC "Hey, Tashi-sensei."
+    show HR neutral-2
+    HR "You look... well less than your best if I'm being honest."
+    show HR unique-2
+    MC "Eugh... you wouldn't happen to know where Naoki-sensei is, would you? I can't find him anywhere, and I need to get this scholarship thing signed by him."
+    "I held up the piece of paper to Tashi."
+    show HR neutral
+    HR "Mm. Well, he isn't in the faculty room. That much I can say."
+    show HR neutral-2
+    HR "Actually, unless I'm remembering incorrectly, he told me earlier that he's serving as the umpire for the softball game going on today. He's supervising two teams, so he wanted to get up close and personal to watch."
+    show HR unique
+    if routelock == "PRG":
+        pause 1
+        MCT "So I could have just gone to the game, spent a nice relaxing time with my girlfriend, and caught Naoki-sensei all at the same time?"
+        MCT "I swear to God... I swear to..."
+    MC "That helps a lot. Thank you, Sensei."
+    "I bowed to him graciously, of which I truly meant it, and hurried off down the hall, some spring springing its way back into my step."
+    scene School Exterior with fade
+    play music ClearSkies
+    "The baseball diamond was a bit of a walk from campus, but the breeze served to calm my nerves."
+    pause .5
+    "The distance, however... not so much."
+    "My feet were {i}screaming{/i} from the incredibly unnecessary cardio."
+    $setSkill("Athletics", 1)
+    "Based on the amount of treading and retreading of the school that I'd done, I was sure that I could pinpoint any and every tile of flooring in those buildings by now, and know them all by first and last name, plus birthday."
+    "I heard the crack of a bat, and watched a white sphere go flying up and away, followed by the smack of leather on ball."
+    UNKNOWN "OUUUUTTT!!"
+    MC "And there he is..."
+    MCT "... Fucking finally."
+    "I walked up to the diamond and glanced through the fencing around it."
+    if routelock == "PRG":
+        MCT "Well, I can't exactly head out there for his autograph right now."
+        MCT "In the meantime, though, where is my darling?"
+        "I turned toward the bleachers and glanced down toward the end."
+        "Given that this was an actual game, I suppose I had expected a bit more of a turn-out."
+        "As it was, I literally could count the amount of spectators on one hand."
+        "Though, I would quickly run out of fingers."
+        show PRG neutral with dissolve
+        "I smiled, noting that half of the spectators were... well, unborn."
+        show PRG happy
+        "Aida waved at me from the end of the bleachers, and I hobbled down in front."
+        MCT "At least I don't have to duck so I don't block people's view."
+        show PRG neutral
+        pause .5
+        PRG "You look tired."
+        MC "Eugh, you don't know the half of it."
+        if checkAffection("PRG", ">", 13):
+            PRG "C-Can I help?"
+            MC "I appreciate it, but don't-"
+            "My thought was immediately severed by Aida turning and kissing me on the cheek."
+            MC "I-I... well, that does feel better now."
+            show PRG blush-2
+        else:
+            PRG "I-I'm sorry..."
+            MC "Eh, it's alright. At least I'm sitting now."
+        MC "So, how's the game going?"
+        show PRG neutral
+        PRG "There was a home run a few innings ago. And someone stole second base the inning after."
+        MC "Well, I wish I hadn't missed that. Crowd go wild?"
+        PRG "Um... a few people cheered."
+        PRG "But... there isn't really too much of a crowd."
+        MC "Yeah, I noticed."
+        PRG "So... how has your day been?"
+        MC "Ah, I can tell you later. We have a game to watch, and I don't want to interrupt your viewing experience."
+        PRG "Oh, I-I don't mind."
+        PRG "I-I think that talking and having fun while watching is just as much fun as the game itself."
+        MC "Hm... alright."
+        MC "Well, basically I wanted to apply for that scholarship thing. You know the one, right?" 
+        PRG "Y-Yes. I-I applied for it too."
+        MC "So, when I went to apply, I still needed a signature from Naoki-sensei. And, the secretaries that were handling this whole thing in the main building told me that it would be faster if I went to get the signature myself."
+        MC "So, since right before you texted me, I've been running around campus trying to find him."
+        PRG "So... for the last two hours?"
+        MC "Mhm. Saw like probably half of the faculty in that time. But no Naoki-sensei."
+        show PRG worried
+        PRG "Oh..."
+        show PRG unique
+        PRG "I-It's a shame you didn't ask. I could have told you he was here earlier."
+        MC "Yeah... I really should've brought that up to you, come to think of it."
+        show PRG neutral
+        PRG "B-But, you're here now, right? You can get your signature, and then go turn it in right after."
+        MC "Yeah... weight off my mind, I'll say."
+        "I turned back to the diamond as she did, only then glancing at her."
+        "Her belly had long since filled her lap. In fact, she long ago passed up the size achievable by most women."
+        "Her baby belly jutted forward, with her breasts piled on top, in a way seeming to rest on top of Aida's belly."
+        "In fact, she seemed to be hitting a bit of a growth spurt, as her legs were now spread well apart, to let her belly rest between them instead of on them."
+        "Lastly, she had her back almost in the position of perfect posture. Were it not for being in public, I could have very well seen her leaning back into the next row of bleachers to give herself a back rest."
+        MC "Oh, where are my manners? How has your day been?"
+        PRG "I-It's been nice. After class, I went to my dorm and made some lunch, then did some laundry and came here."
+        MC "Awesome. I'm glad to hear it."
+        scene black with fade
+        pause .5
+        scene School Exterior with fade
+        "A little under an hour later, the game came to an end."
+        "The players bowed to each other, and made their way off of the diamond."
+        MC "Well, that was a good one, hm?"
+        show PRG excited with dissolve
+        PRG "Yeah! The double play in the eighth inning was really exciting!"
+        MC "Totally was!"
+        "I glanced over, seeing Naoki-sensei going over to congratulate the winning team."
+        MC "Well, time to get my autograph. At long last."
+        show PRG worried
+        "I got up, and beside me, Aida rose to her feet as well... though notably slower than me."
+        PRG "Hngh... mnh..."
+        show PRG neutral
+        PRG "I-I'll come with."
+        "I smiled at her, then pulled an about face to head toward Naoki-sensei."
+        "From what I could see, Naoki was a little over my height, with a fairly trim stature."
+        "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
+        Naoki "-tastic strategy. You all really turned that around at the end."
+        "I stopped close to the fence and waited for the players to clear out."
+        pause .5
+        MC "Excuse me? Say... mon-"
+        Naoki "Hagh..."
+        Naoki "Naoki-sensei, please."
+        MC "Right. My apologies."
+        MC "I was wondering if you could sign this for me? It's for my scholarship."
+        MC "I had gone to apply, and the secretaries had every signature for my classes save for yours, and they told me that I should come find you to help expedite the process."
+        Naoki "Oh. Oh, my-"
+        Naoki "I... I'm very sorry to have put you through all of this trouble. That's something I should have taken care of, not you."
+        Naoki "Yes, right away."
+        "Naoki-sensei patted his front pockets, then the pocket on his shirt."
+        Naoki "You wouldn't happen to have a pen on hand, would you?"
+        MC "... I didn't think to bring one."
+        PRG "I-I have one."
+        "Aida reached with her left hand up to her breast pocket, and with a bit of a stretch of her arm, managed to produce a pen, which she handed to Naoki."
+        Naoki "Thank you, Kodama-san."
+        PRG "Y-You're welcome, Sensei."
+        Naoki "Alright..."
+        "Naoki-sensei pulled one leg up and pressed the paper to it, using his thigh as a makeshift clipboard."
+        "He signed his name on the line, then halted before a short following line."
+        Naoki "{size=-6}Today's date... or... end of July for the due date?{/size}"
+        Naoki "{size=-6}Mn... today's. Best not to upset those harpies from the secretariat's nest.{/size}"
+        pause .5
+        Naoki "Right. Here you are."
+        "Naoki-sensei passed me my now completed form, and handed Aida her pen back."
+        MC "Thank you very much, Sensei."
+        Naoki "Yes. Is that everything you have for me?"
+        MC "I believe so, yes."
+        Naoki "Good. Then, I wish you both a pleasant day. I've a track team to monitor."
+        MC "You as well, Sensei."
+        "Aida and I both bowed to him, as he hurried off on his way."
+        PRG "Feel better?"
+        MC "You have no earthly idea."
+        PRG "Are you... going to go turn that in now, then?"
+        MC "You bet. I can't wait to not have to worry about this damn thing anymore."
+        PRG "W-Would you like me to walk with you to the administration office? I-I don't have any plans until later."
+        MC "Sounds like a plan. Let's move."
+        pause .25
+        scene black with fade
+        pause .5
+        scene Campus Center with fade
+        pause .25
+        MC "You know, I didn't know you were in one of his clubs."
+        show PRG worried with dissolve
+        PRG "Naoki-sensei?"
+        MC "Mhm. He knows your first name, but doesn't really seem to remember mine."
+        PRG "Ohh..."
+        PRG "A few weeks ago, I-I was having lunch in the cafeteria with Michiko and Sakura. I... I think it was a Saturday?"
+        PRG "A-Anyway, Michiko had to eat fast so she could get to the pool. She was going swimming with her roommate, if I remember correctly." 
+        PRG "She left in such a hurry though, that she forgot her cell phone at the table."
+        PRG "S-So, I offered to take it to the pool, and left it with Naoki-sensei."
+        MC "Aw. Well that was nice of you."
+        show PRG unique-happy
+        PRG "I-I just wanted to help."
+        scene Hallway
+        show PRG neutral
+        with fade
+        PRG "B-But anyways, while I was there, he... he asked me if I wanted to join the swimming club, not realizing I was already with the cooking club."
+        MC "Ahh. What did you tell him, then?"
+        PRG "I-I told him that... I couldn't. That I didn't want to give up cooking. He understood, of course."
+        PRG "B-But even still, he asked me if I would be interested in swimming sometime. Even if I'm not officially on the team, I could still use the pool."
+        PRG "I had heard of it already, but water aerobics are supposed to be really beneficial when you're pregnant."
+        MC "That does make sense, and I think I've heard of that too. Gonna give it a try?"
+        show PRG worried
+        PRG "I-I might. I'm... really not sure, though."
+        show PRG unique
+        PRG "I... I just want to make sure that I don't lose any mobility or anything as I grow..."
+        MC "It sounds like a smart idea, then. Let me know if you decide to go for it, and I could try it with you."
+        show PRG neutral
+        PRG "Are... are you pregnant too?"
+        MC "I... it's for moral support! I promise I don't have a uterus!"
+        show PRG excited
+        PRG "{i}Snrgh!{/i}"
+        "Aida covered her mouth with one hand to hold back a laugh."
+        scene Gate Front
+        show PRG neutral
+        with fade
+        MC "Kinda trippy being back here, huh?"
+        PRG "Mhm. Before I submitted my scholarship paperwork, I-I hadn't been here... since I first arrived."
+        MC "How much earlier did you get here before me that day?"
+        show PRG worried
+        PRG "Um... I got here that morning. I dropped off my suitcases in my dorm, then went with Alice to our homeroom."
+        MC "Feels like a lot has changed since then, huh?"
+        PRG "Yes..."
+        PRG "But... it hasn't been bad."
+        PRG "... Stressful sometimes, yes. But... not bad."
+        show PRG neutral
+        "As we stopped walking in the middle of the entry hall, Aida slipped one hand into mine, and I turned to face her head-on."
+        PRG "A lot of good has happened here, too."
+        MC "You can say that again, Sweetheart."
+        show PRG blush-2
+        PRG "Y-You should go turn in your scholarship forms."
+        MC "I know. I'll get this done, then maybe we could talk on the phone later tonight or something? After your plans, of course."
+        show PRG neutral
+        PRG "O-Okay."
+        MC "What are these mystery plans, by the way?"
+        PRG "A-Alice and I are making brownies and catching up. With her being gone, then us being away, then just... being busy, we haven't had much time to talk."
+        MC "Ahh, I ran into her earlier. Tell her I say hey."
+        MC "Anyway, text me when you're all set, and we can chat later."
+        PRG "'Kay."
+        "I smiled and glanced around, noticing only right then how close we were to the principal's office and the administrative wing."
+        show PRG aroused
+        "I took Aida's hand and pulled her back into the adjoining hall for just a moment."
+        "I came in close and wrapped my arms around her belly, then leaned in over her for a kiss."
+        "Aida craned her neck up, pushing back against me with her lips. The way our faces were shaped, Aida's jaw and chin seemed to interlock with mine, almost. As though our faces were the perfect shape for each other."
+        MCT "I have a feeling I'm going to have to start going from the side soon. I'm getting boxed out from the front."
+        pause .5
+        MCT "Not that I'm complaining."
+        "I pulled back just a bit from Aida and stood there, my arms still around her belly."
+        MC "I'll see you later, okay?"
+        show PRG blush-2
+        PRG "O-Okay. B-Bye."
+        "My hand received a welcome squeeze as I let go of our embrace, letting Aida head off down the hall."
+        hide PRG with dissolve
+        "I watched her walk away, noticing the ample shake that came from her backside as she made her way down the hall."
+        "Smiling like an award winner, I turned and walked across the entry hall."
+    else:
+        MCT "Well, I can't exactly head out there for his autograph right now."
+        "I walked to the bleachers and took a seat right in the front row."
+        MCT "These teams have to be made up of just students from here, right? So... is it just the same two teams constantly against each other?"
+        MCT "Can they like... trade players?"
+        "I watched the game go on as the player at bat let two balls fly over the plate, before swatting the third far out to left field."
+        MCT "Eesh... must be real easy to accidentally bean the batter."
+        "I glanced up as a girl who was clearly dealing with a breast factor came up to the plate next."
+        "She bent in a slightly awkward stance, but held up the bat."
+        "I leaned back in the empty bleachers, using the row behind me as an armrest/backrest, and glanced down a bit."
+        "The stands were empty. Well, nearly. Maybe a few meters away, a girl and guy sat, watching the game, the two hand in hand."
+        MCT "Huh. I guess other people find romance here as well."
+        "Down from them, a heavier set guy sat, a laptop on the bleacher beside him as he watched the game."
+        "A few more seats down, a more muscular girl sat, leaning forward intently watching."
+        "From behind this girl, however, a sort of... white sphere stuck out."
+        "From where I was, I couldn't tell if it was a boob or a ball, or... what exactly."
+        "The muscular girl leaned back in the way I was, her arms on the bleachers behind her."
+        pause .5
+        show PRG neutral with dissolve
+        pause .25
+        MCT "Oh, it's-"
+        if isEventCleared("PRG007"):
+            MCT "Kodama-san? What's-"
+            MCT "Oh, that's right. She's super into baseball. Almost forgot that."
+        else:
+            MCT "Wait, Kodama-san? What's she doing here?"
+        "I heard the crack of a bat as the next player shot a pop fly off the bat, and straight into right field, where it was caught easily."
+        "Aida followed the ball through the air with her eyes, watching the player pluck it from the air."
+        show PRG happy
+        "She was sitting straight up, with the hand I could see from my side resting on her skirt. She, along with one or two other people, applauded politely as the players changed sides."
+        MCT "God... she's huge."
+        MCT "Seeing her in class... yeah. I can see it there too."
+        MCT "But seeing her outside of the desks and aisles, sitting on a bench showing it all..."
+        MCT "And in a few months... she's going to be even bigger."
+        "Aida was focused hard on the game. She hadn't noticed me, or really anything going on outside of the baseball diamond."
+        MCT "I could go talk to her. It'd be a nice reprieve from zig-zagging around campus."
+        menu:
+            "Go talk to Aida.":
+                $setFlag("MC024_PRGTalk")
+                "I waited till the current batter managed to take a base off of balls, then headed across the walkway in front of the bleachers."
+                if checkAffection("PRG", ">", 4) or getFlag("MC009_PRGTalk"):
+                    show PRG neutral
+                    "As I drew closer, Aida glanced to her left."
+                    show PRG happy
+                    "She smiled at me, and waved politely."
+                else:
+                    show PRG neutral
+                    "As I drew closer, Aida glanced over."
+                    "She smiled up at me, as I sat down close by."
+                MC "Hey, Kodama-san!"
+                show PRG neutral
+                PRG "H-Hello, Hotsure-san."
+                if isEventCleared("PRG007"):
+                    MC "How's the game goin'?"
+                    PRG "I-It's a really close game. They're dead even."
+                    MC "Wow. Mind if I watch with you?"
+                    PRG "P-Please do."
+                else:
+                    pause .5
+                    MC "I uh..."
+                    MC "I'm... kind of surprised to see you here."
+                    show PRG unique-happy
+                    PRG "I-I... I really enjoy baseball."
+                    MC "Seriously? I never knew that."
+                    PRG "Mhm. I-It's my favorite sport."
+                    MC "Wow. Well, mind if I watch with you then? It's been awhile since I watched a game live."
+                    PRG "Y-You can, if you'd like."
+                show PRG neutral
+                "I smiled and turned forward, watching as the current batter swung at... nothing, the ball flying straight past and into the catcher's glove."
+                if isEventCleared("PRG007"):
+                    MC "Correct me if I'm wrong, but your favorite team is... the Koi, right?"
+                    PRG "Y-You remembered!"
+                    MC "Of course! So, are you into any other teams?"
+                else:
+                    MC "So, if I can ask, what is it that you enjoy so much about baseball? Like, what's your favorite part of it?"
+                    PRG "Um... that's a hard question."
+                    MC "Hm. Well, what's your favorite team, then?"
+                    PRG "The..."
+                    PRG "... The Kanagawa Koi."
+                    MC "Oh, cool. I... don't believe I've heard of them."
+                    PRG "T-They've been my favorite team since I was little."
+                    MC "That's so awesome. Are you into any other teams?"
+                PRG "Um... I don't follow any others like I do the Koi. B-But, I do enjoy the game no matter who's playing."
+                PRG "T-That probably sounds a little... stereotypical for me to say."
+                MC "No, not at all. I get that too."
+                PRG "Do you watch a lot of baseball?"
+                if isEventCleared("PRG007"):
+                    show PRG worried
+                    PRG "I-I may have asked you that when we talked before. I... I can't remember."
+                    MC "Hah, no worries."
+                MC "I have watched some in the past, yeah. Not really anything that I would call habitual, but I knew the basics."
+                show PRG neutral
+                PRG "That's really all you need to understand, though. Even with that, you can figure everything else out so easily."
+                "The two of us watched as the first baseman eased out from the base about a meter or so."
+                PRG "See that?"
+                MC "Hm? That guy stepping off of the base? Yeah."
+                MC "Think we should let someone know about that?"
+                PRG "Hm?"
+                MC "That's illegal in baseball, isn't it?"
+                PRG "Oh, no no. He's trying to steal second."
+                MC "Oh, {i}that's{/i} stealing! I guess I never paid attention to the player getting ready to steal. I always just assumed he ran straight from base to base. Like, I didn't know he could ease into it like that."
+                PRG "Mhm. Watch him."
+                "The player took a few more steps. Up on the mound, the pitcher eyed up the batter."
+                "Slowly..."
+                "The runner took off, sprinting to second and making it just as the ball sailed to the second baseman beside him."
+                show PRG happy
+                PRG "He got it!"
+                "Aida clapped her hands, which required her to reach over her breasts to actually bring her hands together... which in turn, landed her hands just under her face."
+                "The pitcher gazed forward again and threw, the batter smacking the ball far out to center field as the runner on second took third, then hauled ass to home plate, sailing across with less than half a second to spare."
+                show PRG excited
+                PRG "YES!"
+                "Aida applauded again, as a few other spectators, plus myself, joined her."
+                scene black with fade
+                pause .25
+
+                scene School Exterior
+                show PRG neutral
+                with fade
+                "About an hour later, the game closed out with both teams giving the classic ggs and so on."
+                "One of the teams had managed to swing the game {i}hard{/i} in their favor, leaving the other in the dust."
+                MC "That's what I call a game!"
+                show PRG excited
+                PRG "I-I know! That was a really intense final few innings!"
+                MC "What did you think of that home run for three runs at the end?"
+                PRG "T-That was my favorite part!"
+                "I smiled at her, then glanced over, noticing Naoki-sensei congratulating the winning team."
+                MC "Well, almost at my cue."
+                show PRG neutral
+                PRG "Uh... w-what?"
+                MC "Oh, duh. I probably should have mentioned what brought me out here."
+                MC "I'm applying for that scholarship thing, and I still need Naoki-sensei's signature. I was all over campus this afternoon looking for him."
+                PRG "O-Oh my..."
+                PRG "I... w-well, I think that the academy does a... really nice job with their financial aid. Not to mention their student social programs..."
+                MC "Did you apply for the scholarship as well?"
+                PRG "I-I did."
+                MC "I'm sure you were a shoo in, in that case."
+                PRG "I-I..."
+                MC "Well, anyway, I'd better go get that signature then turn this in."
+                PRG "A-Alright."
+                PRG "I-I had fun watching the game with you, Hotsure-san."
+                MC "Yeah! It was a great time!"
+                MC "Have a good rest of your day, Kodama-san. Don't get into too much trouble."
+                PRG "I-"
+                MC "I'm kidding."
+                show PRG blush-2
+                "Aida waved to me as I walked back down the bleachers, seeing my target finally in my sights." 
+                $setAffection("PRG", 1)
+
+            "Wait till after the game.":
+                $setFlag("MC024_Wait")
+                "I took a long glance over at her."
+                "Aida's eyes were about as close to literally being glued to the action as possible. She had her hands folded, watching another batter eye up the pitcher."
+                MCT "Nah. I'll wait till after the game."
+                hide PRG with dissolve
+                "I claimed a small section of unfilled bleacher for myself and sat. My feet were searing from the fevered tracking session around campus, and the breeze outside brought some traces of energy back to me."
+                scene black with fade
+                pause .5
+                scene School Exterior with fade
+                "Close to an hour later, the last batter struck out, and I glanced over at Naoki-sensei, who trotted across the diamond to congratulate the winning team."
+                "I sat back again."
+                MCT "I'll look like a real asshat if I just barge my way in. I've waited this long. A couple more minutes won't hurt."
+                "In front of me, a few other students walked out from the bleachers."
+                pause .5
+                show PRG neutral with dissolve
+                pause .25
+                "At the back, Aida waited for the main group to move out, then began making her way out."
+                show PRG surprised
+                PRG "H-Hotsure-san?"
+                MC "Hey, Kodama-san. Enjoy the game?"
+                if isEventCleared("PRG007"):
+                    show PRG neutral
+                    PRG "I-I... I did. What did you think of it?"
+                    MC "Oh, it was great! I haven't actually seen a baseball game in person for quite some time."
+                    PRG "M-Me either."
+                else:
+                    show PRG neutral
+                    PRG "I-I did. Um... I-I didn't know you liked baseball."
+                    MC "I wouldn't call myself the biggest sports nut ever, but I definitely don't mind watching a game live."
+                "Aida smiled as I stood up."
+                MC "Mngh... stiff."
+                PRG "H-Have you had a long day?"
+                MC "Hah. You have nooo idea."
+                PRG "W-What happened?"
+                MC "Well, you know that scholarship thing that's being offered for grades?"
+                PRG "Y-Yes."
+                MC "So, I decided to apply for it earlier today. But, when I went to administration to finalize everything, they told me they were missing a signature from one of my teachers. Specifically Naoki-sensei's. From that handball thing we did."
+                PRG "Oh... right."
+                MC "So yeah... I've made circles around the school today. Like, you name a place, I've been there."
+                PRG "T-That sounds..."
+                MC "Annoying?"
+                PRG "I... w-well, I didn't want to sound so negative, but... i-it does sound irritating."
+                MC "Yeah. I asked a ton of people, but no one could tell me where he was. Not until I found Tashi-sensei anyway."
+                MC "But anyway, I've complained enough. How has your day been today?"
+                PRG "I-It's been going okay. I... I..."
+                pause .5
+                show PRG embarrassed
+                pause .25
+                PRG "... I did some laundry."
+                show PRG neutral
+                PRG "T-That's... about it."
+                MC "... You're reminding me about my own laundry situation that I need to take care of."
+                show PRG happy
+                PRG "Ehehe!"
+                show PRG neutral
+                PRG "W-Well... I-I won't distract you anymore. I really hope that everything goes okay with your application, Hotsure-san."
+                MC "Thanks, Kodama-san. Have a good rest of your day, okay?"
+                PRG "S-Same to you."
+                "Aida smiled at me in her usual kind, sweet manner, and continued on her way."
+                hide PRG with dissolve
+                "I watched her for a moment as she left, more just taking in her form as she waddled away. Only then did I turn back to Naoki-sensei, hearing various metal bats clanging against the fencing."
+        MCT "This is it. All trials and tribulations end here."
+        "I stood up and hurried to him."
+        "From what I could see, Naoki was a little over my height, with a fairly trim stature."
+        "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
+        pause .5
+        MC "Pardon me. Say... mon-"
+        Naoki "Hahh... Naoki-sensei, please."
+        MC "Right. My apologies, Sensei."
+        MC "I was wondering if you could sign this for me? It's for my scholarship."
+        MC "I had gone to apply, and the secretaries had every signature for my classes save for yours, and they told me that I should come find you to help expedite the process."
+        Naoki "Oh. Oh, my-"
+        Naoki "I... I'm very sorry to have put you through all of this trouble. That's something I should have taken care of, not you."
+        Naoki "Yes, right away."
+        "Naoki-sensei patted his front pockets, then the pocket on his shirt."
+        Naoki "You wouldn't happen to have a pen on hand, would you?"
+        MC "... I didn't think to bring one."
+        Naoki "Urgh..."
+        "Naoki-sensei patted his pockets once more, as if a ballpoint would just appear there."
+        Naoki "Oh, there's one."
+        "Naoki-sensei walked past me to the bleachers and bent down, plucking a pen from the dirt and wiping it off on his pants."
+        Naoki "Right... I'm sure the owner won't mind helping another student."
+        "Naoki-sensei pulled one leg up and pressed the paper to it, using his thigh as a makeshift clipboard."
+        "He signed his name on the line, then halted before a short following line."
+        Naoki "Today's date... or... end of July for the due date?"
+        Naoki "Mn... today's. Best not to upset those harpies of secretaries..."
+        pause .5
+        Naoki "Right. Here you are."
+        "Naoki-sensei passed me my now completed form, and pocketed the pen."
+        MC "Thank you very much, Sensei."
+        Naoki "Yes. Is that everything you have for me?"
+        MC "I believe so, yes."
+        Naoki "Good. Then, I wish you a pleasant day. I've a track team to monitor."
+        MC "Thank you, Sensei. Same to you."
+        "I bowed to him as he hurried away. Wasting not a minute more, I practically sprinted for the administrative building, any pain in my feet well gone."
+        scene black with fade
+        pause .5
+        play music Schoolday
+        scene Gate Front with fade
+        MCT "Yes. YES."
+        MCT "Whatever deity happens to be listening, thank you thank you thank you."
+        "I hauled across the entrance hall and right for the administration offices."
+    scene Info Desk with fade
+    MCT "This is the most triumphant I will ever feel."
+    "I walked in, ready to slam my paperwork down on the counter and walk off into the sunset. Possibly ride, if given the opportunity."
+    "The three secretaries were in a cluster at the back of the room behind the desks, all whispering to each other, bearing more than a passing resemblance to gossiping students in the hallways."
+    "I stepped up to the desk I'd been helped at earlier, and craned my neck a bit."
+    Secretary1 "... Oh, you're doing Halloween parties?"
+    Secretary2 "Are you dressing up for it?"
+    Secretary1 "You kidding? Why? I have a career to uphold."
+    "I raised one hand up in a pseudo attention-getting move."
+    "The secretaries didn't make a single motion toward the desk, not even seeing me."
+    Secretary3 "I forget you've only been here a few months."
+    Secretary3 "The Academy does a few parties like those throughout the year. They're fairly popular."
+    Secretary2 "It's always fun! I love this time of year. The parties, pumpkin carving, all of it is wonderful. Though I do look forward to the pumpkins the most, I'd be remiss to say that I won't be admiring costumes."
+    MC "{i}MMG-CHM!{/i}"
+    "The three of them glanced over, the smiles on their faces falling to blank dissociation."
+    Secretary2 "If you can't see the sign on the desk, we're on break."
+    "I glanced at another counter, where a laminated sign was posted."
+    MCT "Oh, what the f-"
+    MC "How much longer?"
+    Secretary2 "As long as it takes. A break is a break."
+    MC "... Fine. Could I at least have form A38 to fill out while I'm waiting around?"
+    "The secretary raised one eyebrow and nodded to the sign, then turned back."
+    Secretary3 "I did hear that that Hitomi-san is planning her wedding this winter, too."
+    Secretary1 "She did not!"
+    Secretary3 "She did. Apparently, her fiance moved from the mainland to the town here and found himself a job and everything."
+    Secretary1 "My husband won't even do breakfast in bed for me..."
+    "I sighed, possibly a bit more audibly than I had planned, and sat in a chair in the corner, nearby a coffee table and some other chairs, clearly set up for waiting students."
+    $setTime(TimeEnum.EVE)
+    scene Info Desk with fade
+    play music LastBell
+    pause .75
+    Secretary1 "-Saw her the other day. She looked over the moon."
+    Secretary2 "I would be, too. A new home and marriage all at once is cause for celebration."
+    "The three secretaries glanced at the clock and stood up, all taking their positions."
+    "I waited about... three-ish seconds and stood up, walking back to the counter with a stiffness that I doubted hid my impatience."
+    MC "I have the grades all of my classes and all of the signatures that I need and I would like to apply for the scholarship... {w}please."
+    Secretary2 "Ah. Well, you don't have everything yet."
+    Secretary2 "Any and all changes to the grade protocol must be authorized by the principal."
+    pause 1
+    MCT "... Why wasn't I told this earlier today?"
+    MC "Alright... what's the procedure?"
+    Secretary2 "Our office collects all of the documents at the end of the day and sends them to reception at the principal's office, which the principal checks in the morning."
+    Secretary2 "We can take care of it for you tomorrow during our office hours, or, since you've already gotten Saemonsaburokouji-sensei's signature, you can talk to him yourself right now and get his authorization." 
+    "I glanced down at the paper."
+    pause .5
+    MCT "I've already done so much for this damned thing..."
+    MC "I'll get it myself."
+    pause .5
+    "I didn't even bother to wait for a reply."
+    scene Gate Front with fade
+    play music Sunset
+    pause .75
+    MCT "Okay... where was that?"
+    MCT "I just saw it like... two hours ago? Three?"
+    MCT "Agh... can't even keep track anymore."
+    "I walked along the outskirts, until I came upon a large door with a plaque. On it was the words \"Principal's office.\""
+    MCT "Least this part didn't take half the day."
+    "Normally, I would've at least knocked, but I was in no mood."
+    "Inside was an entry lobby, with a small desk with a woman seated at it, going through some paperwork. Behind her were some filing cabinets and a large wardrobe."
+    MC "Excuse me?"
+    Receptionist "Good afternoon. Here for the principal?"
+    MC "Yes, I am."
+    "I set my form down on the desk and slid it to her."
+    MC "I was going to apply for the scholarship today, and I... I mean my forms didn't have Sae... Naoki-sensei's signature, so I had to go find him and..."
+    MC "I... I'm sorry. Here's my form."
+    MC "I just need the principal to authorize it."
+    "I glanced up for a moment, following a shadow from the corner of my eye that seemed to move by the wardrobe."
+    MCT "God, I really am that tired."
+    Receptionist "Yes, of course. One moment, please."
+    "The receptionist got up and walked into the nearby double doors."
+    pause 1
+    show RM neutral with vpunch
+    RM "{size=-6}Gah! Hagh...{/size}"
+    RM "{size=-6}T-Thanks. I've been stuck with my leg up by my waist for the last half an hour.{/size}"
+    "Thanks to my advancing grogginess, I was hardly surprised to see Daichi wrestling himself from the inside of the wardrobe."
+    MC "{size=-6}... Yeah, I got nothing. I've had enough wildness today. Even though this takes the cake for that.{/size}"
+    pause .5
+    MC "{size=-6}Should I even ask?{/size}"
+    RM "{size=-6}Mm. Probably not.{/size}"
+    "I watched Daichi straighten up the wardrobe, then make his exit."
+    hide RM with dissolve
+    MCT "..."
+    MCT "I'm not even surprised anymore."
+    if isEventCleared("MC005"):
+        MCT "Somehow, slightly more elegant than the bush during Golden Week."
+    "I shook my head, and took a chair near the desk, and waited patiently."
+    pause .75
+    "A few minutes later, the receptionist emerged from the office."
+    Receptionist "The principal would like to speak with you, Hotsure-san."
+    "My stomach flipped just a touch as I stood."
+    MCT "Going into a principal's office never feels good..."
+    "I walked to the door and through it, noting another plaque by the door that read \"Manabu Noguchi, Seichou Academy Principal.\""
+    scene Principal Office with fade
+    "As the door shut behind me, I glanced forward into the room."
+    "Large windows let the waning sunlight into the room, as the principal sat behind the large desk in the room, jotting something down on a pad of paper."
+    "He looked about the same as he had at the assembly near my beginning at the academy. He had short gray hair, with some balding in the middle, and he wore a clean looking suit."
+    "I glanced at him, standing a couple of meters or so from his desk."
+    MCT "Weird. Now that I think of it, it's almost unusual for him to not have a growth factor himself..."
+    Principal "Feel free to have a seat. I'll be with you in just a moment."
+    "The principal waved absently at one of the chairs in the room, and I sat right away, keeping my paperwork on my lap."
+    pause .75
+    Principal "There we are..."
+    pause .25
+    Principal "My apologies. How may I help you?"
+    MC "Yes. My name is Keisuke Hotsure. I'm applying for the scholarship that's being offered and I was hoping you could authorize my paperwork for me."
+    "I set my files on the desk, to which the principal slid them over to himself and leafed through them."
+    Principal "I see."
+    Principal "How has your experience been here so far, Hotsure-san?"
+    MC "My... experience?"
+    MC "Well... you have a very nice office. And your receptionist is quite nice."
+    Principal "Oh, no no. I was referring to the academy as a whole."
+    MC "Oh... yeah."
+    MC "My apologies, Sensei. I... I've spent most of today chasing down a signature for this scholarship paperwork. I'm afraid I'm not the most alert mentally at the moment."
+    "The principal had set my paperwork down and was giving me his full attention."
+    "He nodded and smiled at me, his eyes warm and friendly despite his formal appearance."
+    Principal "Ah, I can understand. For something so simple, a signature can be quite the hassle."
+    MC "You've no clue, Sensei."
+    Principal "I think I just might."
+    Principal "However, in any case, has all been well with you? Acclimation going okay?"
+    MC "I... would say so, yes. Thank you for asking."
+    MC "The first few weeks were tough, I won't lie. But, I have been enjoying my time here."
+    Principal "I am glad to hear that. As I'm sure you're well aware, all the faculty are here to help, should you need any support."
+    Principal "However, the most important thing is acceptance, and being willing to take action yourself to assure your own well being."
+    Principal "We can give you the tools, but your hands are the ones who will use them."
+    Principal "Though, I'm sure you've heard the same from your homeroom teacher."
+    MC "Tashi-sensei did say something along those lines, yes."
+    Principal "I figured as such. I couldn't help but notice that you were in his homeroom."
+    Principal "Very knowledgeable man. Straightforward and to the point as well, though he's always been that way."
+    Principal "History was always his forte, as well. Even during his time here."
+    Principal "Speaking of, I have actually heard a bit about his class already."
+    MC "Oh? Well, I hope only good things."
+    Principal "Oh, of course. No need to fret."
+    Principal "Though, I have heard that there are only two male students in that particular homeroom."
+    MC "Tashi-sensei mentioned that?"
+    Principal "He did. Specifically, if I'm to use his phrasing, he mentioned a \"level-headed one\" and a... well, an \"eccentric one.\""
+    Principal "And you are... which?"
+    MC "I..."
+    Principal "Ahaha! Only rhetorical, Hotsure-san. As they say, \"{i}acta, non verba{/i}.\""
+    Principal "I had heard some good reports from Tashi-sensei about this level-headed one, so it's wonderful to finally associate a name to the face."
+    "Principal Noguchi gave me a smile and a nod, then flipped open my paperwork, and taking a pen to sign with."
+    "I glanced down at his desk. Far neater than what I would've expected from the administrator of the entire Academy, his desk was well organized and polished, much like that of a well worn businessman."
+    "Near one corner was a picture frame, showing Principal Noguchi kneeling down with a younger girl, likely no older than eight years old."
+    "Principal Noguchi was smiling proudly, the little girl clinging to him."
+    Principal "My granddaughter, Moriko-chan."
+    Principal "She lives with her parents off in Kobe."
+    Principal "Due to the hecticness of the Academy, I've only been able to see her two or three times a year. However, I do my best to make time."
+    Principal "She's just started elementary school this year, so of course, I get to hear all about her adventures there."
+    MC "You must be a proud grandfather, then."
+    Principal "Oh, of course! She's her grandfather's girl! The apple of my eye, if you will."
+    "Principal Noguchi placed a stamp beside the grade protocol, and handed my papers back to me."
+    Principal "Here you are. I do apologize for the wild nature of this whole matter, though I can't say I'm surprised by it."
+    Principal "This isn't the first time this sort of thing has taken place."
+    MC "No harm done, Sensei. Thank you very much."
+    Principal "You're quite welcome, Hotsure-san. Everything should be in order here now."
+    MC "Thank you, Sensei. And thank you for your time."
+    Principal "My pleasure. I'm glad to have met you."
+    MC "I'm glad as well."
+    "I stood up and bowed to him, then turned, my paperwork all but glued to my palm."
+    MC "Thank you very much for your time."
+    Secretary1 "You're welcome. Thank you!"
+    scene black with fade
+    pause .5
+    scene Info Desk with fade
+    pause .5
+    play music LastBell
+    MC "Here you are."
+    "I walked right up to the woman who had been helping me and set the paperwork down in front of her, ready to be rid of the infernal thing."
+    Secretary2 "Thank you."
+    "She clicked her nails against her keyboard, the prehistoric aged printer clunking to life and spitting out a sheet."
+    Secretary2 "Sign your name here, then specify here that form B-1 is added in as an attachment."
+    MC "Thank you."
+    "I gripped one of the pens tightly, and quickly jotted my name down on the first line."
+    pause .5
+    "A first line that clearly indicated \"Last Name.\""
+    MCT "..."
+    "I sighed, then looked back at my full name, written out on the first name line."
+    MC "... Do you have another form, please?"
     jump daymenu
 
 label MC033:
@@ -8257,13 +9494,12 @@ label RM002_choice:
     menu:
         "Sure.":
             jump RM002_c1_1
-        "What are you doing, exactly?" if not getFlag("RM002_c1_2"):
+        "What are you doing, exactly?":
             jump RM002_c1_2
         "This is a stupid idea.":
             jump RM002_c1_3
 
 label RM002_c1_1:
-    $setFlag("RM002_c1_1")
     MC "You're right, that does sound simple. Alright, go ahead."
     show RM happy
     $setAffection("RM", 1)
@@ -8271,7 +9507,6 @@ label RM002_c1_1:
     jump RM002_c1_after
 
 label RM002_c1_2:
-    $setFlag("RM002_c1_2")
     MC "What exactly are you doing in there?"
     "After scanning the hallway to make sure nobody was paying attention, he discreetly showed me a familiar circuit board from his bag."
     RM "I'm placing the camera I made earlier. It shouldn't take long."
@@ -8298,7 +9533,7 @@ label RM002_c1_after:
     UNKNOWN "Hey there! Can I get through?"
     MCT "Oh, great."
     menu:
-        "Let her in" if not getFlag("RM002_c1_1"):
+        "Let her in":
             jump RM002_c2_1
         "Signal Daichi":
             jump RM002_c2_2
@@ -8370,9 +9605,6 @@ label RM002_c2_after:
         MCT "..."
     show RM neutral
     RM "Anyway, I found what I was looking for."
-    if getFlag("RM002_c1_2"):
-        MCT "\"What I was looking for?\" He said he was placing a camera... What's with the act?"
-        MCT "But he'll probably get upset if I don't play along."
     MC "Oh, good. Alright, I'll see you back at the dorm, then."
     RM "Yeah, sure. Talk to you later, man."
     hide RM
@@ -8395,7 +9627,6 @@ label RM002_c2_after:
             jump RM002_c3_2
 
 label RM002_c3_1:
-    $setFlag("RM_Yuki_conspiracy")
     MC "I think so, yeah."
     show Yuki sad
     Yuki "I see."
@@ -8420,4 +9651,395 @@ label RM002_c3_2:
     Yuki "I'll see you around, ok?"
     hide Yuki with dissolve
     "She walked back to Daichi, with a slight spring in her step."
+    jump daymenu
+
+label RM003:
+    if checkAffection("RM", "<", 2):
+        scene Dorm Interior with fade
+        play music MC
+        "Coming back to my dorm after classes, it felt good to take a load off at the end of the day as I tossed my backpack at the foot of my bed and jumped on my bed, landing starfish style face up."
+        MC "{i}Ahhhh{/i}..."
+        MCT "That hits the spot."
+        "The warm sunbeams peaking through my glass balcony door beckoned me outside to enjoy the mild spring weather."
+        MCT "Not today I'm afraid."
+        "Breaking from the soft embrace of my mattress cushion, I got up to draw the blinds from my window to make sure the pesky light wasn't going to interfere with the quality snooze session I had planned."
+        MCT "Assuming Daichi doesn't interrupt it somehow either."
+        "I don't know why that thought entered my mind. Despite living with him and having classes with him, I hardly ever saw the guy. I assumed in his spare time he was always out doing reconnaissance on... well whatever it is that he does."
+        MCT "Odd fellow, that's for sure. I wonder what he's up to?"
+        "I had no real way of knowing, seeing as he was around, but looking over to his side of the room something odd stuck out to me."
+        MCT "What's this?"
+        "It appeared to be a bright neon green sticky-note attached to the back of his chair with today's date marked on it." 
+        MC "\"Suspicious activities - sea ferry dock - 16:30\""
+        MCT "What?"
+        "Were these some kind of plans of his? He wasn't exactly the type to leave a note telling me where he went. Quite frankly, I didn't need to know and he didn't need to tell me."
+        "I wanted to forget this whole notion and just crawl back into bed, but now I couldn't help but suspect he was the one getting into suspicious activity at the dock." 
+        "And if this was anything like his little listening device scheme, I had a feeling it would be a good idea to make sure he wasn't doing anything too drastic."
+        MCT "Crap, that only gives me 20 minutes to get over there. Hopefully I remember the way." 
+        scene Lake Road with fade
+        "I was relieved to find my memory allowed me to retrace my steps. Maybe that wasn't a good thing though because the only reason I knew this path was because I got lost the first time." 
+        "Even though I was in a hurry, I slowed down a bit to take in the view of the lake once I realized where I was at. I hadn't been here since the start of the school year when I ran into Honoka on that first day."
+        if getHighestAffection() == ("BE"):
+            "I'm glad I did, too. It was like we picked up right where we left off. She helped make the whole experience of moving to a new school not be so bad."
+        else:
+            "Starting something new that I didn't completely understand... and well, still don't, but it was a fortunate accident getting to run into a long lost friend once again. And I eventually did meet up with Tomo."
+            "I guess it just goes to show things will work out if you give them a chance. I try to keep that in mind while I'm here, but with all the odd things I've seen so far, that's easier said than done most days."
+        scene Dock with fade
+        "After my brief jog down memory lane (more literally than figuratively in this case) I eventually arrived at the dock. The first place Tomo and I arrived at on the island." 
+        "I recognised the red gate, just as large and imposing as the day I arrived. At the time it felt like it marked a point of no turning back." 
+        "Looking at it now with the ocean in front of me though, it felt more like a locked door to keep us from leaving."
+        stop music
+        MCT "{i}Ack!{/i} What the hell is that?"
+        "I had been lost in my thoughts as the memories rushed back to me, but that was interrupted as an annoying flash of light flickered in my eyes."
+        "I just dismissed it as some kind of errant reflection across the water but the repeated nature of it felt more like a signal than a fluke."
+        MCT "Wait a second..."
+        play music RM
+        show RM smug with dissolve
+        MCT "A signal huh?"
+        "There he was, sitting on one of the benches dockside \"reading\" a newspaper."
+        MC "You could have just called my name you know."
+        show RM doubt
+        RM "I suppose I should have if I had known you were going to just saunter over here in broad  daylight to blow our cover."
+        MC "Students walking about is a common sight on the island. Being the only person under 50 that still reads a newspaper sticks out."
+        show RM neutral
+        RM "Hmm, perhaps hiding in plain sight is the best option for the moment."
+        MC "What are you doing here?"
+        show RM distrustful
+        RM "I could ask you the same question."
+        MC "Oh, don't give that. You just tried to get my attention using your eyeglasses to blind me. I have to assume you were expecting me."
+        show RM smug
+        RM "And to think I thought you'd just sleep through the afternoon. I was curious to see if you'd manage to pick up the bread trail I left to come." 
+        $setAffection("RM", 1)
+        extend " You didn't disappoint."
+        jump RM003_After1
+    else:
+        "Coming back to my dorm after classes, it felt good to take a load off at the end of the day as I tossed my backpack at the foot of my bed and jumped on my bed, landing starfish style face down on my bed."
+        MC "{i}Ahhhh{/i}..."
+        MCT "That hits the spot."
+        scene black with fade
+        "I slowly began to drift off into a peaceful slumber as the pent up frustrations and boredom of a full day of classes began to melt away."
+        pause 1
+        RM "Are you seriously going to take a nap right now?"
+        MCT "... Huh?"
+        play music RM
+        scene Dorm Interior
+        show RM neutral
+        with fade
+        MC "It's as good a time as any."
+        show RM neutral-2
+        RM "Is that so?"
+        MC "Yes. Or at least it was. I'm feeling wide awake now, for {i}some{/i} reason. What are you doing here anyway?"
+        RM "I live here."
+        MC "Could have fooled me. You're hardly ever here."
+        RM "The amount of time you spend sleeping would make anyone seem absent."
+        show RM smug
+        RM "It's honestly impressive sometimes the things you manage to sleep through."
+        MCT "What does that mean? Just what the hell is he working on late at night in his room then?"
+        MC "Yes, well this vampire needs to retire to his cotton sheet coffin before he turns to dust. Nice catching up with you Daichi, good to know you're still alive."
+        show RM doubt
+        RM "Actually, before you slip back into your usual comatose slumber, I was wondering if you'd be up for going with me to follow up on something." 
+        show RM happy
+        extend " I think I got a promising lead, but I could use another set of eyes."
+        "The more sensible part of me thought I should dismiss this as more of his usual nonsense, but admittedly it did manage to spark a bit of intrigue with me."
+        "Though certainly not my first choice, curiosity ultimately prevailed, in no small part however to Daichi ruining my efforts to fall asleep in the first place."
+        MC "Alright, let's go."
+        show RM smug
+        RM "Perfect."
+        scene black with fade 
+        pause .5
+        scene Lake Road with fade
+        play music MC
+        MC "Where exactly are we going?"
+        show RM neutral-2
+        RM "You'll see."
+        "Daichi for his part wasn't much of a conversationalist. He seemed a bit on edge, which I attributed to him making sure we weren't being followed, for whatever reason that was relevant for." 
+        hide RM with dissolve
+        if getFlag("MC005RM") or isEventCleared("FMGWG001") or isEventCleared("MC007"):
+            "Part of me began to wonder if this was just another wild goose chase based on another one of his hairbrained theories, but it was too late to back out now."
+        "Without any real conversation, my mind began to be preoccupied by the scenery. Even though I had been here before, I still felt kind of lost. I hadn't actually navigated this part of the island by myself to know where I was going."
+        "I probably should have paid better attention at the time when I ran into Honoka and she led me back to campus, but I had been so bowled over by running into a long lost friend I hadn't bothered to drink in the scenery like I was now." 
+        if getHighestAffection() == ("BE"):
+            "I should invite her back here one of these days. We could do something fun by the riverside just like old times."
+        else:
+            "It reminded me of that sensation I felt then, starting something new that I didn't completely understand... and well, still don't. Hell, I don't even know what I'm doing here now."
+            "But I'm not so worried about that anymore. I still got time to figure things out. Though with all the odd things I've seen so far, that'll be easier said than done."
+        scene Dock with fade
+        "After a brief stroll down memory lane (more literally than figuratively in this case) we eventually arrived at the dock. The first place Tomo and I arrived at on the island." 
+        "I recognised the red gate, just as large and imposing as the day I arrived. At the time it felt like it marked a point of no turning back." 
+        "Looking at it now with the ocean in front of me though, it felt more like a locked door to keep us from leaving. It was a little unsettling to be honest."
+        show RM smug with dissolve
+        play music RM
+        jump RM003_After1
+
+label RM003_After1:
+    play music Beach
+    MC "So what's going on here, why this place?"
+    RM "You tell me. Take a look. Anything stick out to you?"
+    "Looking out across the pier, we were far from the only people here. Foot traffic was starting to pick up as people moved about to and fro." 
+    "It looked like people were getting tickets from a nearby kiosk while others who already had theirs in had lined up on the pier to begin boarding on the ferry that just docked."
+    "Despite the sudden hustle and bustle normally absent on this sparsely populated island, nothing seemed out of the ordinary to me."
+    MC "Not really, what do you see?"
+    RM "Not {i}what{/i}, but {i}who{/i}."
+    "Daichi's nod in the general direction helped me to zero in on what he had managed to pick out from the crowd. A young woman in a white nursing outfit with a surgical mask on."
+    MC "Wait a second, that's the school nurse."
+    show RM happy
+    RM "Exactly. Hitomi Kiyomi is her name."
+    MC "Oh yeah, I remember now. How could I forget? That shot hurt."
+    MC "What is she doing? It's a weekday. The ferry trip seems a bit too long for a daily commute."
+    show RM neutral-2
+    RM "Correct. Even though it's not that late, it's still the last one of the day."
+    "Not exactly the reaction I was expecting. Daichi was usually keen to jump on anything that could possibly be construed as a little too convenient."
+    MC "I take it you were expecting her to be here then?"
+    RM "Like clockwork."
+    if isEventCleared("FMGWG001") or isEventCleared("MC007"):
+        MC "Is this another stakeout? Between Kazomazumi-san and now Nurse Kiyomi I'm starting to think you got a thing for older women."
+        show RM angry
+        RM "Tch, shut up."
+        MC "Don't worry, your secret is safe with me."
+    elif getFlag("MC005RM"):
+        MC "Is this another stakeout? Honestly I didn't think you had a thing for older women after the last time."
+        show RM angry
+        RM "Tch, shut up."
+        MC "Don't worry, your secret is safe with me."
+    else:
+        MCT "At this point, I don't think I even want to know how long he's been tailing her to know her schedule this well."
+    MC "So what's the deal with her then and her schedule then if I'm supposed to ignore the stalker angle?"
+    show RM neutral
+    RM "Let's just say she's been a person of interest to me since the day they all had us measured and told us our factors."
+    MC "Why's that?"
+    show RM distrustful
+    RM "I have a sneaking suspicion she knows a lot more about the factors than she lets on. After so many years of observation, how could she not?"
+    MC "I thought you skipped out on measuring day? Matsumoto-san asked me where you were and I was just as clueless as she was."
+    show RM sad
+    RM "I was there. I planned to observe unseen, but I had severely underestimated Hageshi-sensei's auditory acuity."
+    "A sly smile crept across my face as I imagined Hageshi-sensei dragging Daichi by the ear up to the nurse's station."
+    show RM angry
+    RM "What's so funny?"
+    MC "Oh, nothing. {w}Go on, you were talking about how Nurse Kiyomi might know about the factors."
+    show RM neutral-2
+    RM "One of the people anyway."
+    MC "What? You have a list going or something?"
+    show RM neutral
+    RM "...Yes."
+    MC "Probably should have guessed that already."
+    RM "Nurse Kiyomi caught my attention for being a staff member as well as a former student."
+    MC "So? Tashi-sensei and Hageshi-sensei would have been former students too. Heck, plenty of other faculty and staff now that I think about it."
+    show RM neutral-2
+    RM "You didn't let me finish. Nurse Kiyomi is an interesting case in that she also has a sibling with a factor as well."
+    "Suddenly, I was much more curious about where Daichi was going with this."
+    RM "I was initially curious about her anyway. During the \"Measuring Day\", as they called it, I had attempted to ask her more about what growth my sister had been diagnosed with." 
+    show RM distrustful
+    RM "But she completely stonewalled me when I asked any questions, citing school policy."
+    if isEventCleared("MC003"):
+        show RM neutral
+        RM "A similar experience to what you had apparently."
+        MC "Yeah I wasn't too happy about it either."
+    else:
+        MC "Sounds pretty similar to what I had to deal with from her."
+    show RM doubt
+    RM "Considering her and my sister share the same factor, her adamant silence on the matter was all the more frustrating in retrospect. Having since learned she also has a sibling with a factor, I find it to be down right infuriating." 
+    MCT "So that's what his sister's factor was... {w}I thought she just went a bit too heavy on the lip gloss when I saw her."
+    MC "That is kind of shitty. You'd think she'd at least want to help out. Though I guess she could have gotten in trouble if she made an exception just because she felt sorry for either of us."
+    MC "I mean, to be fair it does seem like something people need time to process on their own."
+    show RM angry
+    RM "And who's to say that's the best way for everyone?" 
+    MC "You're not here because you hold a grudge towards her or something, right?"
+    show RM neutral-2
+    RM "I wouldn't go that far, but her evasiveness on the matter led me to believe she knew more than she let on." 
+    RM "So I did a bit of digging into her, which yielded some interesting peculiarities I would like to get to the bottom of."
+    MC "Like what?"
+    show RM smug
+    RM "Like here. She frequently leaves the island by ferry, mostly in the evening after her shift. It doesn't always match up with the days off on her schedule either. Sometimes she returns the next day."
+    RM "The natural question is, why does she leave the island so often?"
+    show RM doubt
+    MC "I don't know. She's a nurse. Maybe it's to get more medical supplies? Maybe it's easier to just pick them up on the Mainland?"
+    RM "That's what I would have thought, but all she takes with her is a small purse, both coming and going. You'd think if she was bringing supplies she'd at least have a case or a backpack to haul something."
+    show RM neutral
+    RM "Besides, Seichou Town has a hospital, she could just go there if she needed something like that."
+    MCT "As peculiar as that might be, this wasn't anything to go by as far as I was concerned."
+    if isEventCleared("MC003") or isEventCleared("FMGWG001") or isEventCleared("MC007"):
+        MCT "Which wasn't a surprise, given what his hunch led to last time."
+    menu:
+        "This doesn't seem to be leading anywhere.":
+            show RM concerned
+            MC "Look, you seem smart enough, and pretty resourceful, but you're way too eager to jump on loose threads, and obvious red herrings."
+            show RM distrustful
+            RM "All leads need to be followed up on or I risk having blindspots in my investigation."
+            MC "What investigation? You're stalking a person somehow hoping some magical insight is just going to drop out of the sky."
+            show RM doubt
+            RM "You're just impatient, these things take time."
+            MC "You're willing to scrounge for the slightest thread to connect your theories but you won't bother to do the most basic of investigative work, which is interviewing witnesses. Just go talk to her and ask. What's so hard about that?"
+            jump RM003_After2
+        "What are you hoping to find?":
+            "I figured I'd humor him to help get him to come to his senses, and he in turn seemed eager to fill me in."
+            $setAffection("RM", 1)
+            show RM happy
+            RM "I want to know what she knows. If she's not going to tell me, then I'm going to have her show me."
+            MC "Just because she didn't want to tell you about your sister's growth prior to having her tell you doesn't mean she's going to stonewall you about everything."
+            show RM doubt
+            RM "...I somehow doubt that."
+            MC "Or you just hadn't bothered to try. Let's just go talk to her."
+            jump RM003_After2
+
+label RM003_After2:
+    show RM angry
+    RM "What!? No! That'll blow our cover and jeopardize everything! {w}Hey wait, come back here—"
+    hide RM with dissolve
+    "I left Daichi behind as I walked across the dock boardwalk to catch her before she got in the boarding queue, much to his continued protests."
+    "At this point, I was getting impatient with Daichi's approach, which seemed to be \"If it's worth thinking over, it's worth overthinking.\"." 
+    "I figured it couldn't hurt to try the direct approach for once."
+    #show nurse with dissolve
+    play music Peaceful
+    MC "Kiyomi-san, nice to run into you this evening. Are you heading out on a trip?"
+    show RM concerned-2 with dissolve
+    Nurse "Oh! Nice to see you as well Hotsure-san, and Utagashi-san. I didn't expect to run into any students at the dock. Were you planning a trip to Wakkanai as well?"
+    show RM neutral
+    MC "Uh, maybe eventually, I guess. We just happened to take a walk around the area and noticed people gathering and came to see what all the commotion was. I didn't realize the ferry port was still active after it dropped us off."
+    Nurse "Oh, well it's quite active. It's the main form of transportation off the island, at least for this side of the island. There is another dock and a small airport on the other side, but those are mostly for commercial purposes, not for commuters."
+    Nurse "It's not uncommon for locals and academy staff to take a trip back to the mainland to see their families too. If your family ever comes to visit you they'll most likely come through here."
+    MC "Why am I just learning about this now?"
+    if getFlag("MC005RM") and getFlag("MC005_readbrochure"):
+        show RM smug
+        RM "Didn't you read the brochure?"
+        MCT "Heh, surprised he remembered that."
+        RM "Students have a week's worth of time they can leave the island and not attend classes with no questions asked."
+        Nurse "Utagashi-san is correct. We want to foster a supportive environment at the academy, and we understand that may also necessitate some time off to help collect oneself and recenter during a time of uncertainty and changes."
+    else:
+        Nurse "I'm surprised you hadn't. It isn't an intentional secret by any means. Students have a week's worth of time they can leave the island and not attend classes with no questions asked."
+        MC "Really?"
+        Nurse "We want to foster a supportive environment at the academy, and we understand that may also necessitate some time off to help collect oneself and recenter during a time of uncertainty and changes."
+    show RM neutral-2
+    MC "Good to know."
+    Nurse "I have to imagine it was stressful for you if you've been under the impression you've been stuck here for a while, but the academy is quite understanding and accommodating when it comes to things like family emergencies if you need to leave."
+    Nurse "You also don't need to take all your time off in an entire week for it to be honored. It's for you to use as you see fit. Just be sure to inform the administration and your homeroom teacher ahead of time."
+    MC "Gotcha. Well, I feel a bit better about being stuck on this rock, knowing there's a way back at least if need be."
+    show RM distrustful
+    "At this point Daichi was beginning to look irritated. For all my thinking of going for the \"direct approach\" I hadn't managed to probe into anything significant so far, which is probably why he was losing his patience."
+    "If I didn't extract something useful out of her soon, Daichi was probably going to pounce on her with a surprise interrogation."
+    MC "So, you're heading to Wakkanai?"
+    Nurse "Yes, I'm visiting my fiance who lives there. We try to see each other as often as possible, but it's difficult with our schedules and his current job."
+    MCT "Well that solves that mystery at least."
+    Nurse "Kiyomi works as a curator in the history museum at Wakkanai. He does great work, you should definitely visit next time you take a trip back to the Mainland."
+    MC "Not a bad idea, Wakkanai seemed like a nice place when we drove up here and my parents dropped us off."
+    "Needless to say I didn't plan on going out of my way to make a trip any time soon, but I figured if I could keep things casual it might continue to loosen her lips."
+    MC "Hey, if you're gone though, does that mean no one's at the nurse's station?"
+    show RM neutral
+    Nurse "Oh not to worry, the medical staff on campus rotate their shifts so that someone is always on duty. You never know when an emergency might come up, so we make sure we are prepared, just in case."
+    "She was certainly being helpful, but was hoping for a bit more insight about the school than that."
+    MCT "I've kept things cordial for long enough to seem natural, I should be able to slip in something nonchalant to get her to talk about her factor, since that's probably what Daichi really wants to know about— even if he is too chicken to ask."
+    play sound ClockTower
+    show RM doubt
+    Nurse "Oh! That's the call for boarding." 
+    "At this point the line was starting to move and she didn't really have a choice to stay and continue the conversation."
+    Nurse "I'm sure I'll see you two boys in a few days when I return. Enjoy the rest of your afternoon."
+    #hide nurse with dissolve
+    "As Nurse Kiyomi got swept up in the moving line onto the ferry, I couldn't help but think of the contrast between her staunch unwillingness to tell me anything about Tomo on Measuring Day, and her personable cordialness today." 
+    "Listening to her talk about him, she seemed genuinely happy she was going to see her fiance. Something I never expected in a million years, given the intrusive, if not completely problematic, nature of her factor."
+    "A factor, mind you, that was arguably equally shocking as Tashi-sensei's tongue. To think someone with a factor like that can still find true happiness after all..."
+    MCT "{i}Blek!{/i} {w}On second thought, let's stop thinking about that."
+    show RM sad
+    RM "{i}Sighhh{/i}. Well that was disappointing. {w}She seemed to have her guard down. You had her on a roll there for a bit, but still, I was hoping she would offer at least a little bit of information on her factor."
+    MC "Well, at least we figured out why she leaves the island so much."
+    show RM concerned
+    RM "I guess it ties up that loose thread, but it doesn't relate to anything with the school."
+    MCT "Color me surprised."
+    MC "If it's any consolation prize it seems like she's pretty happy in spite of her growth."
+    show RM concerned-2
+    RM "..."
+    "Daichi mulled over my words in silence. Perhaps I had a point, but not one he was so willing to accept."
+    show RM doubt
+    RM "Seems like a far cry from a normal life to still be tethered to this island, even if she goes back to the Mainland."
+    MC "What's normal anyway? Especially after what we've already seen. Seems like she found a way to move about in public without drawing attention to herself."
+    show RM neutral
+    RM "You mean the mask?"
+    MC "I mean it's pretty common to see people wear them in crowded areas or just any time during flu season. Given that she's a health care worker, no one would bat an eye at her wearing it all the time."
+    show RM neutral-2
+    RM "Now that you mention it, if I hadn't been aware of what was underneath it, I wouldn't have thought twice about how much it bulged out from her face."
+    MC "Maybe that's something that could work for Yuki? {w}If it comes to that I mean."
+    $setAffection("RM", 1)
+    show RM happy
+    RM "I appreciate the thought." 
+    show RM concerned-2
+    extend " But it's a bit naive to assume Yuki would accept just covering up herself to hide from the world. She's so talkative and loves to chat with people, just seems like something she'd find uncomfortable and restricting."
+    MCT "\"Talkative\" was an understatement based on what I heard from Tomo. \"Motor-mouth\" was the term Tomo used."
+    MC "I've heard from my sister she can be rather... umm... {i}verbose{/i}."
+    show RM neutral
+    RM "You don't need to dance around it, I'm quite aware of the impression she makes." 
+    MC "Has she always been like that?"
+    show RM sad
+    RM "I'm afraid so, for better or worse." 
+    show RM neutral-2
+    "Without any more to say on the matter, Daichi and I just stood there for a while, not saying much of anything while we watched the rest of the passengers board."
+    "There were more than a few passengers where it was apparent they had some kind of growth. One gentleman in particular was so tall most of the passengers didn't even come up to chest height on him."
+    if getHighestAffection() == ("GTS"):
+        "This person was at his full height (I mean I had to assume given his age) but Naomi was already just as tall as he was and the year seems like it's barely started." 
+        "Seeing him, I couldn't help but wonder just how much growing Naomi still had to go."
+    show RM doubt
+    play music RM
+    RM "Hm, that's curious..."
+    MC "What's that? Notice something else?"
+    "At this point, given the whole thing with his sister, I was feeling a bit more patient with him, even if I'd preferred to call it for the day and head home."
+    show RM smug
+    RM "Look at the dock station itself. Do you notice anything?"
+    MC "Not particularly, it looks like a fairly standard sea station, not all that different from what you might find on the Mainland at other dock stations."
+    MC "If I had to pick out something, I suppose the red color is an interesting touch. It's a nice contrast with the backdrop of the blue ocean." 
+    MC "Red being a symbol of protection and peace, while blue being a symbol of luck, which can have a soothing effect. If I had to guess, this was intended to invoke a wish for a safe journey for those coming in and going by sea."
+    "Daichi nodded in agreement."
+    RM "Yes, which is quite suspicious considering so many arrivals are coming into the unknown, or ending up living here forced to deal with the changes to their bodies. Doesn't really fit with this sense of \"soothing\"."
+    MC "You think there's some particular significance to it? It's most likely done for cultural and spiritual tradition reasons, which are commonly incorporated into architecture. You're stretching things a bit too far here I think."
+    show RM doubt
+    RM "Perhaps. {w}Perhaps not."
+    show RM happy
+    RM "Look at this roof over the pillars. Typical for shelter from rain and snow while people wait for the ferry to arrive. But, consider where we are."
+    MC "I'm not following."
+    show RM smug
+    RM "Think about it. This academy is intended for people with various growths that are well above normal, and that's just what the school has told us. All manner of things, from breasts bigger than our heads or people as tall as small trees!"
+    if isEventCleared("FMGWG001") or isEventCleared("MC007"):
+        "I hadn't seen anyone that tall, but he did have a point. Seeing the bakery owner that one day and the size of her chest was quite the shock. I hadn't seen anything like it outside of a hentai comic."
+        MCT "Was Honoka going to grow that big?"
+    MC "So they should have built this thing bigger or something? Seems big enough to me."
+    show RM neutral-2
+    RM "Big enough for us maybe, but the taller passenger that was boarding earlier made me think of something."
+    RM "I had heard some rumors about a so-called giant's dorms, a residential area for giants, hidden from normal view of the public."
+    show RM neutral
+    RM "But why isn't the existence of such giant people more well known if, as Nurse Kiyomi suggested, every student can leave the island when they see fit?"
+    "I wasn't that keen on forming a conclusion based purely on his assumptions stacked on top of assumptions, but it was curious nonetheless." 
+    "You would expect something like an entire community of giant people, beyond taller than what was considered to be humanly possible, would make international headlines."
+    MC "It does seem odd, but what does that have to do with the sea dock?"
+    show RM doubt
+    RM "Think about it. The dimensions of everything at the school are completely outsized compared to normal dimensions to accommodate the student population. If it weren't, then there's a risk some might not fit."
+    MC "Maybe this was built here before the school."
+    show RM distrustful
+    RM "Maybe it wasn't though, and was purposefully made this size."
+    MC "Purposefully not fitting students?"
+    show RM smug
+    RM "Exactly. What if this is an actual gateway, one that bars those that have grown too tall from leaving on the ferry?"
+    "Looking at the height of the gate's ceiling, the thought of someone standing tall enough for their head to touch the roof seemed surreal to imagine." 
+    "But if someone were in fact that big, how would they get on the passenger ferry, even if they did have to duck under to get through?"
+    "It was a mad jump in logic to pull such a conclusion based on a seemingly small architectural oversight, but it somehow managed to make enough sense to have a kernel of plausibility."
+    show RM happy
+    MC "I don't know if this has to do anything with it, but it could explain why the existence of these so-called giants aren't more widely known."
+    "I could feel my stomach rumbling, which led me to check my watch."
+    show RM neutral
+    MC "Ouch, it's getting kind of late. We should probably head back if we want to catch dinner at the cafeteria."
+    show RM distrustful
+    RM "Food can wait. I think we're onto something here."
+    MC "Yes, food can wait. It can wait while I walk back to campus before I eat it." 
+    RM "I'll catch up with you later."
+    MC "Oh come on, let's go. We've spent enough time out here already and I don't think we're going to learn anything new from the dock after today anyway."
+    if isEventCleared("MC002"):
+        MC "Why not just ask Tsubasa-sensei? He'd probably know something. He's been teaching at the school for a really long time. Heck, he might have been around before they built the thing."
+        show RM doubt
+        RM "Nothing about him suggests he takes notice of these kinds of things. He's always so disinterested in everything I doubt he'd even remember these kinds of small details, even if he was around at the time."
+        MC "Still though, might be worth a shot."
+    MC "Besides, you could always just ask Tashi-sensei about it when we have class with him. Although you might want to wait for a day when he's in a good mood."
+    show RM neutral
+    RM "You're probably right. He's not typically in the mood for conversation, but he would likely be pretty keen on the historical details of this place, being the history teacher and all and having lived here most of his life."
+    play music MCGuitar
+    scene Lake Road with fade
+    "I honestly didn't expect my reasoning to convince him to temporarily suspend his investigation, but it seemed to satisfy him for the moment."
+    scene Cafeteria 
+    show RM neutral
+    with fade
+    "We went back to campus and managed to get to the cafeteria before it closed. He spent most of the time jotting down notes in his little black book while muttering to himself." 
+    "In spite of the lack of conversation, I realized eating dinner in the cafeteria here with him was the first time we actually hung out together that didn't involve something to do with his investigations."
     jump daymenu

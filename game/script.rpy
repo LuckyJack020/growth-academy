@@ -1,5 +1,39 @@
 default persistent.enable_notifications=2
 default persistent.enable_nsfw=True
+default AEOutfit = OutfitEnum.DEFAULT
+default BEOutfit = OutfitEnum.DEFAULT
+default FMGOutfit = OutfitEnum.DEFAULT
+default GTSOutfit = OutfitEnum.DEFAULT
+default PRGOutfit = OutfitEnum.DEFAULT
+default WGOutfit = OutfitEnum.DEFAULT
+default TakoOutfit = OutfitEnum.DEFAULT
+default TomoOutfit = OutfitEnum.DEFAULT
+default NatsOutfit = OutfitEnum.DEFAULT
+default OkishoOutfit = OutfitEnum.DEFAULT
+default SakuraOutfit = OutfitEnum.DEFAULT
+default RyokoOutfit = OutfitEnum.DEFAULT
+default JinekoOutfit = OutfitEnum.DEFAULT
+default DaitaroOutfit = OutfitEnum.DEFAULT
+default TakamuraOutfit = OutfitEnum.DEFAULT
+default KanamiOutfit = OutfitEnum.DEFAULT
+default AENsfw = False
+default BENsfw = False
+default FMGNsfw = False
+default GTSNsfw = False
+default PRGNsfw = False
+default WGNsfw = False
+default AEPrevOutfit = OutfitEnum.DEFAULT
+default AENsfwOutfit = OutfitEnum.DEFAULT
+default BEPrevOutfit = OutfitEnum.DEFAULT
+default BENsfwOutfit = OutfitEnum.DEFAULT
+default FMGPrevOutfit = OutfitEnum.DEFAULT
+default FMGNsfwOutfit = OutfitEnum.DEFAULT
+default GTSPrevOutfit = OutfitEnum.DEFAULT
+default GTSNsfwOutfit = OutfitEnum.DEFAULT
+default PRGPrevOutfit = OutfitEnum.DEFAULT
+default PRGNsfwOutfit = OutfitEnum.DEFAULT
+default WGPrevOutfit = OutfitEnum.DEFAULT
+default WGNsfwOutfit = OutfitEnum.DEFAULT
 
 #Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
 #xcenter value (basically the same as what value between 0.00 and 1.00 along the x-axis) is passed as variable.
@@ -813,7 +847,7 @@ init python:
     def updateMinorSizes(newsize):
         global minorsizes, legalsizes
         legalsizes = {
-            "Yuki": [1, 3],
+            "Yuki": [1, 2, 3, 4, 5, 6],
             "Jineko": [1, 2, 3, 4, 5, 6],
             "Natsuko": [1, 2, 3, 4, 5, 6],
             "Okisho": [1, 2, 3, 4, 5, 6],
