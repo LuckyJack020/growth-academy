@@ -24535,7 +24535,7 @@ label PRG043B:
     show BE neutral
     BE "Is that why you think it might be awkward? Because you don't want to come onto her too hard and go gaga over something that might make her uncomfortable?"
     BE "Or, you don't want her to find out that you may or not be into a certain aspect of her that's more accentuated by her factor and/or her pregnancy?"
-    "The top of my ears were red hot."
+    "The tops of my ears were red hot."
     BE "Okay. How about this?"
     BE "You were into Kodama-san before she got pregnant, right?"
     MC "Y-Yes... I've always been into her."
@@ -24551,7 +24551,7 @@ label PRG043B:
     MC "Every hug, I can feel her pressing up against me!"
     MC "I feel us getting pushed further and further apart each time, and even though I know it's hard for her, there's a part of it that just... God, it drives me wild."
     show BE doubt
-    MC "But I can't tell her that!! How the hell could I?! \"Hey Babe! Yeah, hug me, I want to feel your belly bump against/into me. That gets me so damn horny!\" Yeah right!"
+    MC "But I can't tell her that!! How the hell could I?! \"Hey Babe! Yeah, hug me, I want to feel your belly bump into me. That gets me so damn horny!\" Yeah right!"
     MC "HOW can I tell her that I'm into how she looks now, when she herself seems so against it?!"
     MC "She'll think I'm some freak! Some horny miscreant who can't control his own dick!"
     MC "I...!"
@@ -24686,9 +24686,9 @@ label PRG044:
     MC "Alright, thanks ba-"
     pause .5
     MC "I-I mean, thank you."
-    PRG "N... No problem."
+    PRGCell "N... No problem."
     MC "I'll see you soon."
-    PRG "O-Okay... bye."
+    PRGCell "O-Okay... bye."
     "I hung up my phone and took a breath."
     "I wriggled my tongue in my mouth a bit, as if trying to jiggle away all of the awkward morning speech."
     MCT "Eugh... why did I..."

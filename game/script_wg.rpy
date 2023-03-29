@@ -24978,7 +24978,7 @@ label WG080_Afterchoice:
     Takamura "I hadn't really thought of it at the time, we were just working as hard as we could to make sure we could keep the lights on, and then overnight, once we got that star, it was a runaway success."
     show WG surprised-2
     WG "So you mean to tell me, you were at the helm of pulling \"Le Joyau Caché\" out of obscurity and into the world culinary stage?"
-    Takamura "I guess I hadn't really thought of it that way before, but earning a start certainly opens up new doors. Because of that, I got an offer to work as a chef at a two star restaurant, \"L'Atelier du Goût\"."
+    Takamura "I guess I hadn't really thought of it that way before, but earning a star certainly opens up new doors. Because of that, I got an offer to work as a chef at a two star restaurant, \"L'Atelier du Goût\"."
     show WG surprised
     WG "L'Atelier du Goût... you mean {i}the{/i} \"L'Atelier du Goût\"? One of the most prestigious restaurants in all of fine dining, at its flagship branch in the culinary capital of the world?"
     show WG surprised-2
@@ -25061,7 +25061,7 @@ label WG080_Afterchoice:
     WG "It would be a much better business strategy to just buy good companies with solid fundamentals and long term growth potential at a fair price, instead buying cheap, failing businesses and trying to fix them."
     show WG haughty
     WG "Once he realized that, he took all the money he saved over those years and started his holding company. The rest is history."
-    WG "He's one of the wealthiest men in Japan, with one of the largest companies in the world, not just country. It's one of the largest global players across the heavy industry, commercial fishing, and global logistics industries."
+    WG "He's one of the wealthiest men in Japan, with one of the largest companies in the world, not just the country. It's one of the largest global players across the heavy industry, commercial fishing, and global logistics industries."
     MC "That's kind of an eclectic mix."
     show WG neutral
     WG "Seemingly so on the surface. Diversification of investments is key to ensuring long term stability, but also, Father is adamant about only owning businesses if you understand the industry they operate in."
@@ -25423,7 +25423,7 @@ label WG081:
     MC "Mr. Fluffuls?"
     Vivian "When she was young, Alice would often host \"tea parties\" with her dolls and stuffed animals as guests." 
     Vivian "Her frequent companion and guest of honor was Mr. Fluffuls, a floppy-eared rabbit with long soft and shaggy fur. His ears would droop over his eyes. It was because he was shy— from what Alice explained to me."
-    "I turned to give Alice a look, part of me wondering if she was imagining me in a giant rabbit suite."
+    "I turned to give Alice a look, part of me wondering if she was imagining me in a giant rabbit suit."
     MC "Is that so?"
     show WG stern
     WG "Oh, really now. It's not {i}that{/i} much of a resemblance."
@@ -25438,10 +25438,9 @@ label WG081:
     Vivian "Alice was meticulous in her preparations for her \"guests\". Seeing her running too and fro in her princess hat making sure everything was in place was so adorable."
     MC "Princess hat?"
     WG "The proper term is a hennin."
-    show Vivian neutral
+    show Vivian happy
     Vivian "It is a cone shaped hat with a veil that drapes from the top. I would always joke that she was my little garden gnome when she would wear it, to which she would sternly correct me \"No Mother— I'm not a gnome, I'm a princess!\" Hahaha!"
     "At this point Alice was sinking into her chair(s), reflexively trying to hide. (At least I hope that's why, and not that they were about to give up on her.) But I was grinning ear to ear, taking it all in."
-    show Vivian happy
     Vivian "The hennin was a gift from her father on her birthday. He told her \"This is what princesses would wear, so I knew I had to get one for my little princess.\" " 
     Vivian "She would wear it every chance she had. Though we did insist she had to take it off at the table and not during public outings, else she really would have worn it everywhere."
     MC "Huh, seems like it would be a good look for you."
