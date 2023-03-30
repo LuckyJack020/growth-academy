@@ -9813,7 +9813,7 @@ label BE047:
 
 label BE048:
     $setProgress("BE", "BE049")
-    $setTime(TimeEnum.EVE)
+    $setTime(TimeEnum.DAY)
     $setBEOutfit(OutfitEnum.SWIMSUIT)
     scene Waterpark with fade
     play music Beach
@@ -9840,7 +9840,7 @@ label BE048:
     MCT "I wonder if it's getting to her."
     "I'd seen that dour look on Honoka's face a couple times today. Seemed like her chest was making a sporadic impact on her mood."
     "I can't remember a time Honoka forced herself to keep a happy face. Was that something she even did?"
-    "I'd always thought of her as a what-you-see-is-what-you-get kind of girl. It was part of what made her so easy to be with."
+    "I'd always thought of her as a what-you-see-is-what-you-get kind of girl."
     "Still...there was clearly a thought somewhere in that head of hers she was trying not to dwell on..."
     "Maybe she wasn't {i}forcing{/i} herself to be happy so much as fighting to stay that way."
     show BE neutral at Position(xcenter=0.75, yalign=1.0)
@@ -9864,7 +9864,7 @@ label BE048:
     MC "Hmm... In that case, maybe we should go back to the wave pool?"
     Kanami "You two looked like you were having fun when I saw you in there earlier. But, for me, right now, I wouldn't mind floating in that river that goes around the park."
     show BE happy
-    BE "Oh! That's a good idea! Let's take the lazy river around the park and we can figure out which rides to go on next!"
+    BE "Oh! That's a good idea! Let's take the lazy river around the park and we can figure out which rides to go on next."
     MC "Hmm. I get this funny feeling you're not gonna plan a thing and leave it to me."
     show BE neutral
     BE "Hush."
@@ -9878,7 +9878,7 @@ label BE048:
     BE "Any part of the river is the beginning!"
     Kanami "Huh...I suppose that explains why there are inner tubes all over the park— even in the trees!"
     MCT "Oh, I'm pretty sure those are the fine work of bored students..."
-    "Honoka, Kanami, and I each grabbed a tube. We dragged—or rolled—our tubes to the edge of the river. Light glistened off the surface of the water as it gently careened by."
+    "Honoka, Kanami, and I each grabbed a tube. We dragged—or rolled—our tubes to the edge of the river. Light glistened off the surface of the water as it careened by."
     Kanami "Now, we just...jump in?"
     MC "Yep. You put your butt in the middle of the tube and the current takes you away!"
     show BE smug
@@ -9911,18 +9911,18 @@ label BE048:
     Kanami "Ah. I feared I would have shared Honoka-chan's fate..."
     Kanami "I guess I'm not, uh...big enough for that."
     MC "Thankfully, for you."
-    "It was one thing to compare Kanami's beachball-boobs to Honoka's yoga balls. But to see Honoka capsize an inner tube that could hold Kanami without much trouble clearly spelled it out: Honoka's factor was next-level."
+    "It was one thing to compare Kanami's beachball-boobs to Honoka's yoga balls. But to see Honoka capsize an inner tube that could hold Kanami spelled it out: Honoka's factor was next-level."
     "We took hold of the rope by the paved shore so the current wouldn't sweep us away while we waited for Honoka."
     Kanami "What do you suppose she's up to?"
-    MCT "Before I could answer, Honoka reappeared, dragging two inner tubes."
+    "Before I could answer, Honoka reappeared, dragging two inner tubes."
     show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "Um, I might have an idea..."
-    MCT "She dropped the tubes in the river beside us."
+    "She dropped the tubes in the river beside us."
     BE "Hold this one still, I need to get into the other one."
     hide BE with dissolve
-    MCT "I held it. She arched her back and lowered her bust into the other tube, grunting."
+    "I held it. She arched her back and lowered her bust into the other tube, grunting."
     BE "{i}Mmph{/i} It's like doing a bench press...okay, pass me the other one."
-    MCT "Honoka climbed aboard the other tube on her stomach and braced her legs against the sides."
+    "Honoka climbed aboard the other tube on her stomach and braced her legs against the sides."
     show BE disoriented at Position(xcenter=0.75, yalign=1.0) with dissolve
     "With her arms splayed over her nestled bosoms in the front tube and her lower body held tight inside the back tube, Honoka was buoyant."
     BE "Oh yeah. It's tubin' time."
@@ -9930,7 +9930,7 @@ label BE048:
     MC "Th-there's no way you can stay afloat like that!"
     show BE wink
     BE "It's a little awkward, but it works!"
-    MCT "She pushed herself against the side of the river. Her front tube rubbed against mine as the current took it forth."
+    "She pushed herself against the side of the river. Her front tube rubbed against mine as the current took it forth."
     show BE neutral
     MC "...I guess it does..."
     Kanami "{i}*giggle*{/i}"
@@ -9938,7 +9938,7 @@ label BE048:
     "As we drifted down the river, my eyes wandered to Honoka's backside."
     "The swimsuit briefs were stretched thin. The seams dug into her butt cheeks."
     MCT "Is it me, or does Honoka's butt look kinda...plushy in that swimsuit?"
-    MCT "Don't think I remember it ever looking {i}that{/i} big before. {w}Then again, I guess my eyes are usually on her other, more prominent assets."
+    MCT "Don't think I remember it ever looking {i}that{/i} big before. {w}Then again, I guess my eyes are usually on her front-facing assets."
     Kanami "Keisuke-san, may I ask you a question?"
     MC "Uh, sure. What's up?"
     Kanami "I don't mean to be presumptuous. But I was noticing the length of your hair. Is that by choice?"
@@ -9962,7 +9962,7 @@ label BE048:
     MC "Don't encourage her."
     "Honoka and Kanami eyed my scalp and giggled."
     MC "H-hey! I mean it! No funny stuff with the 'do!"
-    BE "Psssh, don't be so boring, Kei-chan."
+    BE "Psssh, don't be boring, Kei-chan."
     MCT "What about not wanting to vandalize my head is boring?!"
     show BE angry
     BE "Oh, I wouldn't vandalize your head in a million years. Just the opposite."
@@ -9978,9 +9978,10 @@ label BE048:
     BE "Hey! C'mon..."
     Kanami "What's wrong, Hotsure-san?"
     MC "We could slip off that edge and fall to our deaths."
+    show BE confused
     BE "You wuss!"
     MC "Wuss?!"
-    show BE confused
+    show BE angry
     BE "It's a slide! Nothing bad ever happens on a slide."
     MC "Unless it's metal and it's the middle of summer, right?"
     show BE neutral
@@ -10002,6 +10003,7 @@ label BE048:
     Kanami "I'm surprised they have a ride so...terrifying. I figured this place would be safe for all ages."
     show BE wink
     BE "Well, they have to have something for thrill-seekers like us, right?! {w}Now come on! We're burning daylight!"
+    show BE neutral
     "Honoka abandoned her tubes, paddled to the nearest ladder and climbed out. She reached a hand out to Kanami-san, who followed."
     Kanami "Ah, thank you, Honoka-chan."
     BE "Hehe. No problem! Now then, I'm gonna share a little tip about these funnel slides..."
@@ -10065,10 +10067,10 @@ label BE048_C1_1:
     MC "Woah! Grab on, grab on!!!"
     BE "Can't!"
     "As our tube pitched back again, Honoka slid into the enclosure of her tube but neither of her hands gripped the handles. She was pressed in there by nothing but her jiggling bosom."
-    scene Waterpark with fade
-    "We cleared the covered part of the slide. The sight of Honoka there, arms and legs flailing, boobs bobbling, would've been hilarious if I hadn't been genuinely scared for her safety."
+    
+    "We cleared the covered part of the slide. The sight of Honoka there, arms and legs flailing, boobs bobbling, might've been hilarious if I hadn't been scared for her safety."
     "I extended a hand. She took it and we pulled together. She got some leverage against her boobs and pulled them, and her abdomen, out of the hole."
-    show BE happy with dissolve
+    show BE happy
     BE "Mmm! Thanks, Kei-chan..."
     MC "Woah woah! What're you..."
     show BE surprised with vpunch
@@ -10077,11 +10079,11 @@ label BE048_C1_1:
     "I was buried beneath a good 30 centimeters of boob. Her hands curled over mine as we gripped the handles on my end together."
     show BE surprised
     BE "Oh, Kei-chan, there's the edge!"
-    "Our unevenly weighted tube swung toward the edge, hastened by our combined weight. I was buried up to my neck in jiggling Honoka boob and screaming. My voice vibrated to the impact of Honoka's juddering chest."
+    "Our unevenly weighted tube swung toward the edge, hastened by our combined weight. I was buried up to my neck in jiggling Honoka boob, screaming. My voice vibrated to the impact of Honoka's juddering chest."
     MC "Uh-hu-hu-hu-hu-huh...!"
     show BE embarrassed at wiggle_loop(0.75)
     BE "Kei-chan, if we die now, I hope this is an acceptable end for you!"
-    hide BE with dissolve
+    show BE surprised-2 at altMove(0.5,0.5)
     "We went up, up up the lip of the slide..."
     "*{i}WHOOOSH{/i}*"
     "...and back down."
@@ -10090,7 +10092,9 @@ label BE048_C1_1:
     MC "Wh-what?"
     "By the time I had the presence of mind to process what Honoka had said, we were in darkness again, shooting down the last decline."
     "We collided into the pool below. Honoka shot off me..."
-    show BE surprised-2
+    scene Waterpark Pool with fade
+    stop music fadeout 1.0
+    show BE surprised-2 with dissolve
     extend "and tumbled over the side."
     BE "Eeeeeeeeee—{i}SPLASH{/i}"
     "I reached and caught Honoka's arm..."
@@ -10123,7 +10127,7 @@ label BE048_C1_2:
     BE "Wait, really? Are you sure?"
     Kanami "It's really alright, Keisuke-san. You and Honoka-chan can go together."
     "I wanted to ride with Honoka, but the two of them were bonding today. They needed a memory."
-    MC "Nah, it's cool. Besides, Kanami-san, you haven't been on one of these before. It makes sense for her to go with an inexperienced rider like you."
+    MC "Nah, it's cool. Besides, Kanami-san, you haven't been on one of these before. It's best for her to go with an inexperienced rider like you."
     "Honoka bounded over to give me a peck on the cheek."
     show BE neutral
     BE "Thanks for being a sweetheart, Kei-chan." 
@@ -10147,11 +10151,12 @@ label BE048_C1_2:
     scene black with fade
     MC "Oh, you dic-aaaaAAAAH!"
     "Water splattered over my head. I spun in darkness."
-    scene Waterpark with dissolve
     "When I came out to the light, I was going backwards."
     MC "Eeeeyaaaaah..."
     "I traveled up the lip of the funnel slide, twisted around again..."
     "The water jets whisked me down the drain. I careened into the pool below."
+    stop music fadeout 1.0
+    scene Waterpark Pool with fade
     "I climbed off my tube and stood in water three-feet deep, whipping my head around to find Kanami and Honoka."
     show BE sad at Position(xcenter=0.25, yalign=1.0)
     show Kanami neutral at Position(xcenter=0.75, yalign=1.0)
@@ -10165,8 +10170,7 @@ label BE048_C1_2:
     jump BE048_afterChoice1
 
 label BE048_afterChoice1:
-    stop music fadeout 1.0
-    play music SonataFMajor
+    play music ConcertinoTeleman fadein 1.0
     "Second Worker" "Miss, would you please get out of the way so we can get the raft out of here? Whatever your situation is, deal with it outside the pool."
     show BE doubt
     BE "No."
@@ -10185,13 +10189,18 @@ label BE048_afterChoice1:
     "Kanami was crouched over the edge of the pool, talking in low tones to Honoka. Honoka got out her locker key and handed it to Kanami. Kanami stood."
     Kanami "Hotsure-san, I'll be back as soon as I can. Try to keep people away."
     MC "I'll do my best."
+    hide Kanami with easeoutright
+    show BE sad at altMove(0.5, 0.25)
     "Kanami broke into a dash—as much of a dash as she could muster without jiggling herself out of balance. She held her chest down with one arm and held the locker key in the other."
     "I crouched down over Honoka and whispered."
     MC "You okay?"
     BE "I broke it, Kei-chan."
     MC "Broke what?"
+    show BE doubt
     BE "My swimsuit!"
+    show BE sad
     "I squinted at Honoka. Huge as her breasts were, the swimsuit held her, with only a bit bubbling up over the neckline."
+    pause 1.0
     MC "I...don't see a tear."
     show BE doubt
     BE "You're looking in the wrong place, Kei-chan."
@@ -10218,7 +10227,7 @@ label BE048_afterChoice1:
     MC "I'll keep you safe."
     BE "Thanks, Kei-chan."
     "I kept vigil over Honoka. Meanwhile, the water park employee called over some help and they kept incoming parties on the slide from getting too close."
-    "A few times, pedestrians passed too close. I stood between them and Honoka to discourage their stares."
+    "A few times, pedestrians veered in our direction. I stood between them and Honoka to discourage their stares."
     show BE doubt
     BE "How far from here are the locker rooms?"
     MC "Well...we're kinda on the other side of the park from them."
@@ -10232,9 +10241,10 @@ label BE048_afterChoice1:
     BE "Hrrrrrrrng!"
     "Honoka pounded her fist into the shallow water."
     BE "I'll never eat ice cream again. I'll throw all my snacks in the garbage. I'll eat nothing but rice and noodles and fish and zucchini,"
-    show BE surprised-2 at wiggle_loop(0.75)
+    show BE surprised-2 at wiggle_loop(0.25)
     BE "FOREVER"
     BE "{i}Just get me out of heeeeeeeeeeere...{/i}"
+    show BE sad at altMove(0.5, 0.25)
     show BE sad
     BE "I'm sorry, Kei-chan. Everyone's doing what they can to help and I'm being a brat."
     MC "Just hang in there. Won't be much longer."
@@ -10253,8 +10263,8 @@ label BE048_afterChoice1:
     show BE confused
     BE "Don't laugh, Kei-chan."
     show BE sad
-    MC "Hey! There she is."
-    show Kanami neutral
+    MC "Hey! There's Kanami."
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     "Kanami dashed up to us, Honoka's bag was over her shoulder."
     Kanami "How are we going to do this?"
     show BE doubt
@@ -10275,7 +10285,7 @@ label BE048_afterChoice1:
     "She got into her shorts, fast as a hummingbird."
     show BE neutral
     BE "Whew! Okay...life sucks a little less now."
-    stop music fadeout 2.0
+    stop music fadeout 1.0
     "Second Worker" "You folks done here?"
     MC "All done, sir. You can take the raft."
     BE "Thank you, mister. I really appreciate the help."
@@ -10373,8 +10383,10 @@ label BE048_afterChoice1:
     BE "I know I said I was going to eat sparingly for..."
     show BE doubt
     MC  "Ever?"
+    show BE sad
+    BE "Yeah..."
     show BE embarrassed
-    BE "Yeah...I'm thinking that could all start tomorrow, maybe."
+    extend "I'm thinking that could all start tomorrow, maybe."
     show BE neutral
     BE "Y'know that little café that's on our route, I think it's the last stop before we leave town...?"
     MC "Yeah, I know the one you're talking about. It's coming up."
@@ -10386,7 +10398,8 @@ label BE048_afterChoice1:
     show BE embarrassed
     BE "I want a cheesecake."
     MC "Oh, Honoka..."
-    MC "You've earned yourself a cheesecake today."
+    MC "You earned yourself a cheesecake today."
+    show BE neutral
     BE "Kei-chan, are you being the sweetest boyfriend in the world just now?"
     show BE wink
     BE "Or, are you being a perv who likes seeing my butt get fat?"
@@ -10422,6 +10435,7 @@ label BE049:
     show RM smug
     RM "Honestly, you looked like you needed the rest."
     MC "{i}sigh...{/i} Thanks. I'd better call Honoka back."
+    hide RM with dissolve
     BECell "Hey Kei-chan!"
     MC "Mmmmmn... hey"
     BECell "You sound tired. Did my calls wake you?"
@@ -10434,7 +10448,7 @@ label BE049:
     BECell "That's not necessarily a bad thing..."
     MC "... Wait, I know this tone. You have something on your mind."
     BECell "You remember that day in the summer all those years back when I slept over at your house,"
-    extend " and, we were going to sneak out at night when your parents went to bed?"
+    extend " and we were going to sneak out at night when your parents went to bed?"
     MC "Hmm. Maybe. Were we gonna go to the park to look at the stars?"
     BECell "Yes! But your folks were up late watching an old movie."
     BECell "And, I don't know what that movie was. Rom or Rin or Ran, or something? But, it went on foreeeeeever. They were in the living room past midnight."
@@ -10471,7 +10485,7 @@ label BE049:
     "I changed out of my school clothes and into shorts, a t-shirt and outdoor shoes. I got my backpack out from under my bed and filled it with basic supplies. Then I heated some frozen onigiri and ate it on my way out."
     "The temperature had dropped a notch in the evening, thankfully, but the air was still muggy. I would be sweating again soon."
     scene Dorm Exterior with fade
-    play music DayByDay
+    play music Sunset
     "A crinkling sound came from up the path."
     "I turned and immediately spotted a large grin suspended over a pair of wobbly spheroids."
     "Honoka wore a backpack, hiking shoes and cleavage for days."
@@ -10531,7 +10545,6 @@ label BE049:
     BE "Thanks, Kei-chan."
     BE "Let's head out."
     scene Woods with fade
-    play music Sunset
     "As we worked our way up the trail, the sun made a final appearance through the trees on the verge of the horizon."
     "Honoka looked serene in the calm of the woods. I kept quiet as long as I could. Whatever she was getting out of our little hike, I didn't want to interrupt it."
     "But after a while, I got curious."
@@ -10544,8 +10557,10 @@ label BE049:
     BE "Well, it wasn't the easiest time. Everything was different."
     BE "But, one thing I did have out there was lots of nature and woods to explore whenever my video games got a little boring."
     "I realized Honoka was panting under her breath. We came up next to a fallen tree and she stopped and wiped the sweat from her brow."
+    show BE sad
     BE "Whew! Mind if we sit and take a break here, Kei-chan? I need some water."
     MC "Of course. I could use a snack anyway."
+    show BE neutral
     BE "Thanks."
     show BE worried
     BE "They're feeling heavy lately. I guess it's a sign of a growth spurt?"
@@ -10582,7 +10597,7 @@ label BE049_C1_1:
     MC "Huh?"
     BE "You think you're taking pity on the poor girl with the giant boobs on a hike."
     BE "I asked for a break. I didn't say I wanted to turn back."
-    BE "You can come with me or walk home, but I'm going to see the stars, Kei-chan."
+    BE "You can come with me or walk home, but I'm going to see the stars."
     $setAffection("BE", -1)
     hide BE with dissolve
     "With that, Honoka stood and resumed the trek."
@@ -10611,7 +10626,7 @@ label BE049_C1_3:
     "I found a cluster of stones, one of which was a big, semi-flat slab, bigger than a dinner plate."
     "Perfect. I turned it over, brushed the dirt off it and returned to Honoka's spot, clutching the rock to my torso."
     MC "I challenge you to a race."
-    show BE confused
+    show BE doubt
     BE "A race? What are you talking about? And anyway, what do you want with that big rock?"
     MC "You're carrying your chest around, I'll carry this rock. We'll see who's faster."
     show BE surprised-2
@@ -10644,6 +10659,7 @@ label BE049_C1_3:
     BE "I can still run! I didn't think I could, with these huge things!"
     MC "{i}HUFF...{/i}uh huh...you sure can."
     show BE neutral
+    $setAffection("BE", 1)
     BE "Thanks, Kei-chan."
     jump BE049_C1_after
 
@@ -10660,12 +10676,13 @@ label BE049_C1_after:
     show BE surprised
     BE "Wow, Kei-chan! I've never seen so many stars in the sky..."
     MC "Yeah...seriously..."
+    show BE surprised-2
     "We wandered twenty or so paces from the trail and stopped."
     "The air was still warm but there was a ghost of a breeze up here in the hills that cooled our sweaty bodies under the sky."
     show BE happy
     BE "Help me. Over here."
     "Honoka took off her backpack, pulled handfuls of packaged snacks from it and filled my open arms. When there was nothing else in her pack, she took out a large picnic blanket and threw it across the grass."
-    "As I put the snacks in my own backpack to keep them safe, Honoka tossed her shoes aside, dropped to the blanket and starfished there. In the starlight she looked like a pair of domes with a diminutive head and limbs sticking out."
+    "I put the snacks in my own backpack to keep them safe. Honoka tossed her shoes aside, dropped to the blanket and starfished there. In the starlight she looked like a pair of domes with a diminutive head and limbs sticking out."
     show BE seductive
     BE "C'mon Kei-chan. Blanket isn't gonna warm itself."
     "I got out of my own shoes and scootched in as close as I could get without plowing into Honoka's right boob."
@@ -10704,7 +10721,7 @@ label BE049_C1_after:
     show BE neutral
     BE "But you roll with it."
     show BE worried
-    BE "The other day at the end of class, I was putting stuff into my book bag and I turned a little too quickly and bopped Matsumoto's hip with my boob as she was coming up the aisle."
+    BE "The other day at the end of class, I was putting stuff into my book bag and I turned a little too quickly and bopped Shiori-chan's hip with my boob as she was coming up the aisle."
     BE "And I said..."
     show BE shrug
     BE "\"Beep beep?\""
@@ -10714,11 +10731,11 @@ label BE049_C1_after:
     BE "But, I just thought it was funny...I mean, aren't a lot of us accident prone here lately?"
     show BE neutral
     MC "Aw."
-    MC "Y'know, of all people you could've bumped into, Matsumoto-san was the least likely to see the humor in it."
+    MC "Y'know, of all people you could've bumped into, Shiori-san was the least likely to see the humor in it."
     BE "Maybe. But still..."
     BE "I wish I could be closer friends with her."
-    BE "I bet Matsumoto-san has a fun side beneath that big, angry frown."
-    MC "I'd bet against a lot of people making friends with Matsumoto-san..."
+    BE "I bet she has a fun side beneath that big, angry frown."
+    MC "I'd bet against a lot of people making friends with Shiori-san..."
     MC "But...come to think of it, I'm not sure I'd bet against you..."
     MC "You make friends so easily these days. You make it look effortless."
     show BE doubt
@@ -10758,8 +10775,9 @@ label BE049_C1_after:
     show BE neutral
     BE "It doesn't matter how many friends I have, I still feel like that sometimes."
     "Honoka's eyes looked away into the glittered sky."
+    play music LoveC fadein 1.0
     MC "Honoka..."
-    play music LoveC
+    show BE doubt
     "She turned to face me. In the dim, blue starlight, she looked more tender and frightened than I'd ever seen her before."
     MC "That couldn't be less true."
     MC "You're the girl who walks into a room and the place feels warmer and brighter."
@@ -10788,8 +10806,8 @@ label BE049_C1_after:
     MC "Mmmn..."
     "It was nice. My stiffening erection pushed the elastic band of my boxers from my waist..."
     "Then, it hit me."
-    MC "Dammit."
     stop music
+    MC "Dammit."
     show BE seductive
     BE "Hmm? Is that a good \"dammit\" or bad \"dammit\"?"
     MC "My condoms are in my messenger bag."
@@ -10797,8 +10815,9 @@ label BE049_C1_after:
     MC "I didn't bring my messenger bag with me. I brought my backpack."
     show BE doubt
     BE "Oh...dammit!"
-    "Honoka propped her face on her elbows and gazed around searchingly."
+    "Honoka propped her chin on her elbows and gazed around, searching."
     BE "I wish I'd thought ahead too. I didn't bring protection either."
+    show BE neutral
     BE "Come to think of it, I wouldn't mind a quick shower to wash off all this bug spray before we...do anything."
     MC "Well, same for me, but what are we gonna {i}do{/i}?"
     MC "I mean...I can't imagine what Daichi would say if I asked him to leave his room in the middle of the night... Honestly, I can't even picture him dignifying the request with an answer."
@@ -10810,8 +10829,9 @@ label BE049_C1_after:
     MC "Uh... what do we say? We're exorcizing an angry spirit from the room or something?"
     BE "If she thought we were doing that, she'd just as likely insist on sticking around to help. No...we need to do something else."
     MC "Like what?"
-    show BE neutral
+    show BE shrug
     BE "I don't know. Reason with her?"
+    show BE neutral
     BE "Best we try, at least."
 
     scene black with fade
@@ -10833,6 +10853,7 @@ label BE049_C1_after:
     show BE shrug
     BE "I have no clue."
     BE "She wouldn't try to bust us for breaking curfew, that much I can say. That's not like her."
+    show BE neutral
     BE "Don't give up, Kei-chan. The night's not over."
 
     scene black with fade
@@ -10858,8 +10879,10 @@ label BE049_C1_after:
     BE "Prophet of the Greater Darkness?" 
     Kokutan "{i}PROPHET OF THE GREATER DARKNESS!{/i} {w}I told you, didn't I? The boy is cursed! A shadow looms over his path. Think again before you bind your fate to his!"
     Kokutan "Turn away! Turn away!"
+    show BE doubt
     BE "Look Kokutan, can we discuss this in the room and not out in the hall where everyone can hear us?"
     Kokutan "Eh...um...oh, alright."
+    show BE neutral
     Kokutan "But, heed my words, Keisuke-san. Whatever menace you try to visit upon Honoka-chan tonight, know she is under MY protection, for I cast a DARKER shadow."
     "Kokutan thrusted an accusatory finger in my direction."
     Kokutan "You've been warned, boy!"
@@ -10978,7 +11001,7 @@ label BE049_C1_after:
     show BE worried
     MC "Uh...something wrong?"
     BE "Kei-chan..."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show BE sad
     BE "Can I be honest with you?"
     MCT "Oh man, did me forgetting the condoms screw up the mood?"
@@ -10999,7 +11022,7 @@ label BE049_C1_after:
     MCT "Oh."
     "Can't lie. It was a tiny bit deflating to hear I wasn't Honoka's first boobjob."
     "But, it was nothing to be upset about. I knew it."
-    "Everyone's gotta start somewhere and to be honest. I wasn't a total blank slate myself."
+    "Everyone starts somewhere and to be honest. I wasn't a {i}total{/i} blank slate myself."
     BE "I mean...admittedly, my boobies were a lot smaller the last time I did it before I did it to you..."
     BE "But THIS is completely new to me."
     MC "But... how is this different?"
@@ -11011,7 +11034,8 @@ label BE049_C1_after:
     BE "I do. But..."
     show BE sad
     "That self conscious smile she'd given me a few minutes ago was a tell..."
-    "Sweet, flirty, fun Honoka, who had made countless sexual overtures to me these past few months was unsure of herself when it came to actual sex."
+    "Sweet, flirty, fun Honoka, who had made countless sexual overtures to me these past few months..."
+    extend "was unsure of herself when it came to actual sex."
     "To think, I had expected Honoka would take the lead."
     "She wasn't the only one in this room who was scared."
     "It's not like {i}I'd{/i} ever had intercourse."
@@ -11127,7 +11151,7 @@ label BE049_C2_3:
     jump BE049_C2_menu
 
 label BE049_C2_after:
-    "I tossed off my shirt and slipped out of my pants. The turn things took with Honoka feeling shy had watered down my full-mast erection. I was semi-hard."
+    "I tossed off my shirt and slipped out of my pants. The turn things took with Honoka had bent down my full-mast erection. I was semi-hard at best."
     "But anyhow, my boner was not the thing to worry about right now."
     "Honoka needed attention."
     scene black with fade
@@ -11157,7 +11181,7 @@ label BE049_C2_after:
     BE "... Is this revenge for all the times I've teased you?"
     MC "Hmmmm...I guess it's...not {i}NOT{/i} that."
     show BE embarrassed
-    play music Rain
+    play music Rain fadein 1.0
     BE "Oh no..."
     BE "What're you gonna do to me?!"
     MC "Why don't you lay down on the bed and find out?"
@@ -11167,112 +11191,154 @@ label BE049_C2_after:
     MC "Honoka..."
     MC "This is your time. Not mine."
     MC "Lay down whichever way feels comfortable to you."
-    hide BE with dissolve
+    show BE neutral
     "She got on the bed and laid on her stomach, arms astride her massive breasts, which pillowed beneath her."
     "With Honoka's naked back exposed, I could clearly make out the imprint of her bra that went along her back and out to her sides."
     "She'd been wearing that bra all day and into the night. It was obviously pretty sore..."
     "So, I kissed it."
+    show BE seductive
     BE "Mmm."
     "And licked it..."
+    show BE unique
     BE "Uhn... yeah, do that... that stupid bra's been digging into me."
     "As I licked and nuzzled her back, Honoka's body eased up."
     "I stroked her imprinted skin with my fingertip and kissed her some more."
+    show BE happy
     BE "Ohhh...you can do that all night, far as I'm concerned."
     MC "Maybe I will."
+    show BE aroused
     "She shuddered ever-so-slightly at that remark."
     "I took my time, but began to work my way down..."
+    show BE neutral
     "Honoka's weight gain, from a couple months of less physically rigorous club activities and an unabated habit of eating sweets had never been apparent, looking at her from the front."
-    MCT "I mean...let's be honest, Honoka's front was mostly boobs at this point..."
+    "I mean...let's be honest, Honoka's front was mostly boobs at this point..."
     "But, from behind, you could tell she'd packed some pounds into that tush."
     "It was still as shapely as in her soccer days, still smooth and lovely."
     "But, recently, it had filled and rounded out with a nice squishy layer of flesh."
     "And, honestly, I couldn't help myself. I tested it with a little pinch."
+    show BE aroused
     BE "Hee hee. Why you pinching my butt, huh? This revenge for the swimsuit you picked out?"
     MC "I dunno...let's see."
     "I flicked Honoka's right butt cheek with my finger and watched the supple mound of flesh jiggle."
+    show BE surprised-2
     BE "Eee!"
     MC "Nah, still nice and supple. Just bigger."
     "Honoka squealed in laughter. I kissed her in the place I flicked."
+    show BE smug
     BE "Mmmm... guess you don't mind it. Hehe!"
     "Slowly, I nuzzled and kissed Honoka down her thigh..."
     "Until I got to the spot behind her knee."
+    show BE surprised-2
     BE "Oooh! That's a sensitive spot..."
     MC "{i}Really now?{/i}"
     "And, I gave that \"sensitive spot\" a decent helping of tongue."
+    show BE unique
     BE "Oh! Oh god, that tickles!"
+    show BE embarrassed
     BE "Okay! Okay! No more of that. Lemme flip."
+    show BE neutral
     "Honoka turned on her back and her boobs flopped on top of her like massive pillows. At the foot of her bed, where I kneeled, I couldn't see her face. She was boobs, abdomen, torso, legs."
     "I kissed her groin. At first, her leg spasmed."
     MC "Everything alright?"
+    show BE seductive
     BE "Mhm. You can keep going!! Just...eh heh...just surprised to be touched down there, is all."
+    show BE neutral
     "Slower than ever now, I worked my way down her groin until I was at Honoka's clit."
     "I gave it a careful lick."
+    show BE doubt
     BE "Oooh... oh... !"
     MC "You want me to move somewhere else?"
+    show BE surprised-2
     BE "No! I mean...maybe soon. Not yet. Just...keep going slow like that..."
+    show BE unique
     "I'd never done oral on a girl before. But I once had a friend who told me, {i}\"it's like licking an ice cream cone. A really cold one. You don't want to freeze your tongue and get an ice cream headache, right? So, you have to work it a little at a time...\"{/i}"
     "There was just a hint of moistness inside the hood of Honoka's clit. I slowed my licking to an absolute crawl."
     "As I went, the moistness thickened into salty wetness."
     "From above the slope of her massive boob, I saw Honoka's hand go up and fan her face."
+    show BE worried
     BE "I'm hot, Kei-chan..."
     BE "And..."
     "Her breath heaved..."
+    show BE doubt
     BE "It's a lot down there right now..."
     MC "'Kay then..."
+    show BE aroused
     "I pulled myself up Honoka's body and set my hand on her left boob."
     "My hand was so tiny against this massive thing...so insignificant."
-    "Her nipple was two and half or so times thicker than my index finger. I stroked it between finger and thumb and gave it a little squeeze..."
+    "Her nipple was two or so times thicker than my index finger. I stroked it between finger and thumb and gave it a little squeeze..."
+    show BE surprised-2
     BE "Oh! Ohhhh..."
     "I locked my lips over it and sucked it."
+    show BE disoriented
     BE "Mmmm! Mmmm..."
+    show BE surprised-2
     "Honoka thrashed and kicked into the bed cushion as I squeezed that bulbous nipple between my lips. She didn't tell me to stop, so I continued."
     "When I released the nipple, it was tight and puckered. But meanwhile, the right nipple was slack."
     "So...I did the same thing on that side..."
+    show BE disoriented
     BE "Ohhh...Oh, Kei-chan! Mmmm..."
     "Then, I stretched out, put my arms around both Honoka's boobs and planted my face between them. I hugged them close."
+    show BE unique
     BE "{i}(gasp, gasp){/i}...they're so sensitive! They never felt like this before...!"
     "I rubbed them together and kissed up and down the huge, soft, pillowy mounds."
+    show BE neutral
     BE "Keisuke?"
     MC "Hmmm?"
-    BE "I think I'm...I think I'm ready for you."
+    BE "I think I'm..."
+    extend "I think I'm ready for you."
     MC "You {i}think?{/i}"
     MC "Well, that won't do..."
     "I stuck my entire face into Honoka's left boob and nuzzled it."
+    show BE seductive
     BE "Ohhh...mmmm...Kei-chan!"
+    show BE embarrassed
     BE "S-Stop teasing. Put the condom on and..."
     MC "Can't do it."
+    show BE doubt
     BE "W-why not?"
     MC "It's against the rules."
     "I straddled Honoka's torso, squished her boobs together playfully and worked my way up her neckline until I was right over her collar."
+    show BE surprised-2
     BE "Ohhh...oh that feels so...!"
+    show BE embarrassed
     BE "What was the magic word again...? Mmmm..."
     "She was gasping now. Beads of sweat gathered on her neck where my lips kissed her."
+    show BE smug
     BE "Bubbles..."
     MC "Mmm? What was that?"
+    show BE confused
     BE "Bubbles, bubbles! BUBBLES, Keisuke!! Stop torturing me and get inside!!"
     MC "Right on."
+    show BE smug
     "I got the condom from my backpack, took it out and slipped it on."
     "Cushioned against a pair of zeppelin boobs, I proceeded for entry..."
     "There was a bit of resistance at first so I did the same thing I'd done all night..."
     "I took it slow and just pushed a little bit... and a little bit more."
+    show BE unique
     BE "Aah! Oh!"
     "And with a heavy sigh, Honoka's body slackened and she opened up."
     "I was halfway in. I worked her in little thrusts, back and forth..."
     "I got most of the way in..."
+    show BE doubt
     BE "Kei-chan..."
     BE "I'm so close, I'm not gonna hold out long."
     BE "If I don't last, will that be okay?"
     MC "That's perfectly okay."
+    show BE neutral
     BE "Just, go easy on me. Like you have all night."
     "I slid my hips, back, forth, at a steady pace."
     "And, when that wasn't enough, I slowed down even further and didn't even try to push the rest of the way in."
+    show BE disoriented
     BE "Ahh... mmmm... like that."
     "And then, centimeter by centimeter, sank into Honoka in one very, very long thrust..."
+    show BE surprised
     BE "Oh... oh... OH... OHHH... oh god!"
     "Honoka's eyes glazed, her mouth parted in ecstasy. Sweat ran down her brow and down her neck."
     "She held me still by the shoulders as her body whipped about, hips bucking. Her whole body seized up."
+    show BE surprised-2 at wiggle_loop(0.75)
     BE "OH MY GOOOOOOOD... UHN!"
     "She bucked one more time and then went slack."
+    show BE aroused at altMove(0.5,0.5)
     BE "{i}Huff..huff..huff...{/i} Ah...okay. Your turn. Whatever you need now, I'm ready for it."
     "And with that, she let me in the rest of the way."
     "I gathered her breasts between my forearms and sank my face between them once more."
@@ -11280,19 +11346,25 @@ label BE049_C2_after:
     "My cock felt like a piece of white hot steel. Every little glance at Honoka's boobs, her glassy eyes, her panting mouth, made it harder."
     "I was close."
     "I thrusted, slowly and cautiously. Didn't want to lose it too soon."
+    show BE neutral
     "Honoka looked up at me, a note of curiosity on her face."
+    show BE seductive
     BE "Do you need some teasing yourself, Kei-chan?"
     MC "Mmm...n-no, I'm fine."
+    show BE happy
     BE "You don't look fine to me. By the look on your face, you seem like you have...so much...pressure down there..."
+    show BE wink
     BE "Don't you want to... {i}let it out?{/i}"
+    show BE disoriented
     "Honoka put her hands on the south slopes of her boob cushions and did something wicked."
     "She jiggled herself. Mountainous titty flesh undulated in waves..."
     "Her huge nipples quivered on an earthquake of rippling flesh."
     "Whatever control I had..."
     MC "Ohhh... Mmmmn!"
+    show BE neutral
     "...was gone." 
     "I face planted in her boobs as my hips thrust one more time. Honoka's eyes glassed over again and her mouth parted as she took in my erection to the hilt. I shot my load into the condom."
-    stop music fadeout 0.5
+    stop music fadeout 2.0
     "And collapsed."
     "Gosh... what a ride."
     "Honoka hugged me against her boobs and I slipped into a little oblivion."
@@ -11301,14 +11373,17 @@ label BE049_C2_after:
     BE "You doin' alright?"
     MC "Mmm..."
     MC "Mm-hmm. You?"
+    show BE smug
     BE "Couldn't be better."
+    show BE neutral
     BE "Thanks for working through all that."
     show BE embarrassed
     BE "I guess I'm not quite the sex goddess I'd like to be."
     MC "Well...you damn sure are to me."
+    show BE neutral
     show BE happy
     BE "Thanks, Kei-chan."
-    play music LoveMB
+    play music LoveMB fadein 1.0
     BE "I'm hotter than ever now."
     BE "Should we open the window?"
     MC "Sure..."
@@ -11325,14 +11400,18 @@ label BE049_C2_after:
     "But then..."
     show BE shrug
     BE "Kei-chan, I'm getting chilly..."
+    show BE unique
     BE "And, my nipples feel like ice!"
     show BE surprised
     BE "Wait a sec..."
+    show BE confused
     BE "This is a scheme to make my nipples hard, isn't it?"
     MC "They're so big and cute!"
+    show BE seductive
     "She giggled and tried to snatch the notebook away from me. I didn't let her."
     BE "Fine. If you wanna play it like that..."
     "Before I could see it coming, Honoka leapt and brought the full weight of her boobs down on me."
+    show BE happy
     BE "Now, your oven-warm body's gonna warm them up."
     BE "How do you like it, Kei-chan?!"
     "It was so late in the night and we should've been asleep long ago."
@@ -11470,6 +11549,7 @@ label BE050:
     BE "Morning, sleepyhead~"
     "I plastered a smile across my face and walked across the room toward Honoka."
     MC "Hey! How ya feelin'? I heard you moving around a bit before you left, but your bed was so comfy I—"
+    stop music fadeout 1.0
     BE "W-wait, Kei-chan." 
     "Honoka's voice rang through the empty room, freezing me in place."
     BE "I want to get this out of the way first."
@@ -11478,6 +11558,7 @@ label BE050:
     pause 1
     show BE sad with dissolve
     pause 1
+    play music BigChanges
     BE "I'm feeling huge, Kei-chan..."
     MCT "H-holy..."
     "My plastered grin melted off. My mouth went slack."
@@ -11551,7 +11632,7 @@ label BE050:
     pause .5
     "I couldn't sugarcoat it. Honoka wasn't wrong."
     "She was HUGE."
-    "But...even though her boobs drive me {i}wild{/i}... she has a point. And I can't value my own preferences more than her wellbeing."
+    "But...even though her boobs drive me {i}wild{/i}... she has a point. And I can't value my own preferences over her wellbeing."
     "Takamura nodded in what I assumed to be a reflective manner."
     Takamura "Inoue-san... Would you humor me? I'd like you to look down at your hand, if you would."
     BE "I... Sensei?"
@@ -11714,8 +11795,10 @@ label BE051:
     BE "Never had aspirations to be someone's pillow, but when I saw it last night, it kinda...melted my heart."
     "Honoka's voice was softening. At this point, it was almost a whisper."
     "The controller fell from her right hand. It slid down her boob and hit the rug."
+    show BE wink
     BE "Want some more pillow time, Kei-chan? I could use some more...sommore..."
     "She yawned and her head fell forward and sank into her own boob, propped against my lap."
+    hide BE with dissolve
     MCT "Good god. Her chest is big enough to be her {i}own{/i} pillow now."
     "I put an arm over Honoka and stroked her head. I could hear her breathe, so quietly, through her nose."
     "I was tired myself. I slumped further against the couch, blanketed by the largest boob I'd ever seen in my life."
@@ -11752,6 +11835,7 @@ label BE051:
     MC "My arm's just...numb."
     MC "And my head hurts from lying on that floor."
     show BE embarrassed
+    play music Peaceful fadein 1.5
     BE "Ohh. Whew!"
     show BE confused
     BE "Kokutan, you scared the bejesus out of me."
@@ -11781,7 +11865,6 @@ label BE051:
     BE "I'm fine, Kokutan. I just..."
     show BE angry
     BE "Leveled up."
-    play music Peaceful
     Kokutan "Might an Ebony Lord of Destruction offer some assistance? Dinner hour is nigh in the cafeteria. I could fetch provisions. A cup of ramen?"
     show BE neutral
     BE "Thanks, Kokutan. I {i}am{/i} hungry. But, actually, I'd like to go."
@@ -11814,7 +11897,7 @@ label BE051:
     BE "I'd just been through six weeks of late stage puberty."
     show BE shrug
     BE "Or maybe it was early growth factor effects? Hard to say."
-    BE "Point is, I suddenly I have that large chest."
+    BE "Point is, I suddenly I have a large chest."
     BE "And, on that day, I realize, I'm a bit different from everyone else."
     BE "At lunch hour, I step into the cafeteria. Everyone turns their head."
     show BE surprised
@@ -11932,7 +12015,7 @@ label BE051_c1_after:
     "Her boobs mooshed against the table like big fluffy pillows."
     show BE worried
     BE "Well, this won't work anymore. Maybe if I..."
-    "She slid her tray away from her and lifted her boobs onto the table table top. Her full chest covered more than half the table's width."
+    "She slid her tray away from her and lifted her boobs onto the table top. Her full chest covered more than half the table's width."
     show BE embarrassed
     BE "I can't even see my food anymore. How the heck do I do this...?"
     "She tried to reach around her bosom."
@@ -12041,6 +12124,7 @@ label BE051_c1_after:
     BE "Well, I'm still hungry and I'm going back for seconds."
     BE "Back in a bit, Kei-chan."
     hide BE with dissolve
+    stop music fadeout 2.0
     "I couldn't shake it: since this afternoon, I had this recurring sense something was off."
     "Every time sex came up in conversation, Honoka downplayed the topic, or joked about it in that off-the-cuff way she just did."
     "Maybe I wasn't a harem of \"pretty things\", fanning her with a big leaf, or whatever."
@@ -12164,7 +12248,7 @@ label BE051_c1_after:
     extend " wait a second, {i}I'm{/i} supposed to come this time. In front of somebody!"
     BE "How does that even work?"
     show BE embarrassed
-    BE "So, yeah...I'm not exactly the sex goddess I thought I'd be."
+    BE "So, yeah...I guess I was a little disappointed in myself."
     BE "The whole idea sounds ridiculous saying it out loud, but,"
     show BE sad
     BE "The only reason things worked out"
@@ -12237,7 +12321,7 @@ label BE051_c1_after:
     MC "Well, you did go through a lot of changes in 24 hours."
     show BE sad
     BE "Tell me about it."
-    scene Lake Road
+    scene Lake Road with fade
     show BE neutral
     with fade
     BE "Ah, the place we first met, Kei-chan."
@@ -12248,7 +12332,8 @@ label BE051_c1_after:
     BE "The moment I realized it was you, I knew my time here was going to be great."
     BE "I wasn't wrong."
     "I didn't say anything. I didn't need to. We looked at each other. She was so absolutely beautiful, standing there over the water, a gentle breeze whipping her hair."
-    play music LoveA
+    stop music fadeout 3.0
+    play music LoveA fadein 1.0
     BE "I need you to be sturdy for a minute. Can you?"
     MC "Of course."
     hide BE with dissolve
@@ -12256,11 +12341,15 @@ label BE051_c1_after:
     "Then, she leaned in and I felt the weight of that massive chest bump against me and weigh down on my shoulders and my whole body."
     MCT "Gosh, she's heavy..."
     extend " but, I can take it."
+    pause 1.0
     "Our mouths met. We stayed there, frozen in time a while."
+    pause 1.0
     "I loved her more than ever."
+    pause 2.0
     show BE smug
     BE "Heehee."
     MC "What's funny?"
+    stop music fadeout 2.0
     BE "I'm also glad you're not dead, Keisuke."
     jump daymenu
 
