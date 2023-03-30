@@ -4857,7 +4857,7 @@ label WG024_c1:
     MC "I've seen romance novels women like to read. That's like the basic premise of all of them but the man is like a pirate or a secret agent instead. It's not just a guy thing."
     WG "Fair enough, that may be the reason for \"some people\" but is that honestly yours?"
     MC "Uh, no. It's not that deep. I guess I just find certain... attributes... about her... attractive."
-    "Alice raised an eyebrow in response to my forthwrite admission."
+    "Alice raised an eyebrow in response to my forthright admission."
     show WG neutral
     WG "I see... Well, this has been most illuminating. I believe I understand a bit more as to how this list came to be."
     show WG sad
@@ -5151,7 +5151,7 @@ label WG025_c2:
     MC "I guess these things are kind of subjective, but if that's the case, then what's the harm in expressing an opinion?"
     show WG neutral
     WG "Hmm, I see."
-    "I could tell Alice was intrigued by my rather forthwrite admission."
+    "I could tell Alice was intrigued by my rather forthright admission."
     WG "Surely you don't think it's completely subjective if you've managed to form an opinion one way or another."
     MC "That's fair, but what someone finds attractive is not exactly within their control. Wouldn't life be easier if broccoli tasted better than chocolate?"
     WG "Are you saying you'd change your preferences for \"plump\" women if you could?"
@@ -21686,7 +21686,7 @@ label WG073:
     "But let's face it, there was no way to deny it: Alice was fat. {w}Not just fat, she was huge beyond huge by this point! To pretend otherwise would be to insult the intelligence of her and everyone in the same room."
     show WG neutral
     MC "You don't need to apologize, Alice. I know you weren't directing any of that to me. You have every right to be frustrated. Nothing about this is fair, or even makes sense."
-    MC "If anything, I appreciate you being so forthwrite about everything you've been going through lately. It must have been hard to put on a brave face in front of everyone at the meeting with all of this going on inside."
+    MC "If anything, I appreciate you being so forthright about everything you've been going through lately. It must have been hard to put on a brave face in front of everyone at the meeting with all of this going on inside."
     show WG sad
     MC "You're really good at that, you know? Sometimes a bit too good, if I'm being honest. You certainly had me fooled, and I think I know you pretty well by now."
     show WG worried
@@ -25283,10 +25283,10 @@ label WG081:
     extend " You've proven you know how to act like a gentleman, I know you'll do fine."
     play music WG
     scene Hotel Lobby
-    show WG neutral-2 at Position(xcenter=0.2, yalign=1.0)
+    show WG neutral-2 at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
     with fade
     "Alice and I walked into the hotel lobby. There were a few guests seated at the tables for brunch, but other than that it was mostly empty, which allowed for the steady clack of high heels echoing across the room to grab my attention."
-    show Vivian neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show Vivian neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     stop music fadeout 1.0
     "With blonde hair and the same shade of azure in her eyes, there was no doubt who she was."
     show Vivian surprised
@@ -25308,8 +25308,8 @@ label WG081:
     show WG happy
     # I love you too Mom
     WG "私はあなたもお母さんを愛しています" 
-    show WG neutral
     extend " We should probably go back to speaking Japanese so Keisuke can understand us."
+    show WG neutral at Transform(xzoom=1)
     play music WG
     Vivian "Oh, yes. So, this is the young man I've heard so much about."
     MC "All good things I hope. Nice to finally meet you, Mrs. Nikumaru."
