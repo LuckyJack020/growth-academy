@@ -2590,7 +2590,7 @@ label WG014:
     MC "Oh."
     MC "I was just thinking..."
     WG "..."
-    MC "It's been a couple weeks since we all got here. It's starting to feel like I'm used to this place."
+    MC "It's been over a month since we all got here. It's starting to feel like I'm used to this place."
     MC "At first I didn't try to get in touch with my friends from back home, because none of them probably know about this place or the whole \"factor\" thing."
     MC "But now that I've come to grips with it I can't think of a reason not to tell them."
     WG "Your factor concerns your hair, yes?"
@@ -15526,11 +15526,12 @@ label WG058:
     "One of them was giving orders. She must have been the director."
     if isEventCleared("WG011"):
         "I didn't know her name, but I recognized her from the film club when I went with Alice and Aida to the screening of that chick-flick movie Aida liked."
-    show WG neutral at Position(xcenter=0.2, yalign=1.0)
+    show WG neutral at Position(xcenter=0.3, yalign=1.0)
     show Ryoko camera at Position(xcenter=0.8, yalign=1.0)
     with dissolve
     Ryoko "Alright, action!"
-    "They were a good distance from us, but her director's cues were still audible to us. I don't know too much about cinematography,{w} but they were clearly going for the \"long lost lovers finally reunited\" vibe as the costumed actors raced across the field to embrace each other."
+    "They were a good distance from us, but her director's cues were still audible to us." 
+    "I don't know too much about cinematography,{w} but they were clearly going for the \"long lost lovers finally reunited\" vibe as the costumed actors raced across the field to embrace each other."
     MC "Looks like the film club is getting some footage. Not quite dinner and a movie, but lunch and a preview isn't too bad for a date, huh?"
     show WG stern
     WG "Tsk, they're interrupting our view of the mountain vista. Cinema is the lowest form of the visual arts. How much more cliché than this typological scene could they get?"
@@ -20568,7 +20569,7 @@ label WG069:
     WG "Yes, well... um..."
     Misaki "Oh! It must have been this new dress of yours."
     show WG neutral
-    extend " It looks magnificent! I'm always delighted to see others who share our predicament are able to find something for themselves that is uncompromisingly fabulous for themselves."
+    extend " It looks magnificent! I'm always delighted to see others who share our predicament are able to find something for themselves that is uncompromisingly fabulous."
     "I wasn't sure if Ms. Misaki had managed to fully recover from her earlier misstep, but she seemed sincere enough in her compliments."
     show WG haughty
     WG "Thank you Ms. Usuda, I had it custom designed for myself and I am quite proud of it. I appreciate a keen eye that would take notice of such things."
@@ -20585,7 +20586,7 @@ label WG069:
     Misaki "This island has so much untapped potential and has been overlooked for so long, bringing in prospective investors for development projects to such an event like this is simply genius. It's clear to see why he's been so successful."
     show WG haughty
     WG "True, if Father sees potential in something, others are keen to pay attention as well."
-    Misaki "It seems the apple does not fall far from the tree. I hear you are already quite entrepreneur in your own right as well."
+    Misaki "It seems the apple does not fall far from the tree. I hear you are already quite the entrepreneur in your own right as well."
     WG "This is true."
     show WG neutral
     Misaki "Marvelous, dear. I'd love to know more some time, but I am loath to detain you further. Please, I'm sure your father is eagerly awaiting your arrival."
@@ -20912,7 +20913,7 @@ label WG071:
     $setWGOutfit(OutfitEnum.NUDE)
     $setTime(TimeEnum.NIGHT)
     scene Hotel Room
-    show WG neutral #(boobs covered?)
+    show WG happy #(boobs covered?)
     with fade
     "There she was. The beauty beyond my wildest dreams. She looked magnificent, divine even. Her body was plush and inviting. Her smile was sheepish, obviously feeling more vulnerable than ever, but I could only just smile back."
     MC "Wow."
@@ -20940,7 +20941,7 @@ label WG071:
         WG "Oh my... Keisuke dear..."
         show WG aroused
         extend " I had my suspicions based on, well, incidental contact, shall we say."
-        show WG sly
+        show WG surprised-2
         WG "But even this is a bit more than I had suspected."
     "Looking down at myself, I was about as primed as I could be. It was even more than I expected to be honest. There was no hiding it, that's for sure."
     "But a smirk did creep across my face, knowing how hard it was to impress Alice, and that she was clearly impressed by what she saw."
@@ -21389,8 +21390,7 @@ label WG072:
     "I must have went out like a light as soon as my head hit the pillow. If I had to guess, it might have been from actually having room on the bed to fall asleep on was enough to slip me back into coma mode."
     play music WGAlt
     #long hair
-    #$setWGOutfit(OutfitEnum.CASUAL)
-    $setWGOutfit(OutfitEnum.DEFAULT) #Remove once casual outfit is ready
+    $setWGOutfit(OutfitEnum.CASUAL)
     show WG neutral with dissolve
     "My vision faded into view, seeing a cherub cheeked angel, I began to wonder if everything really had all been a dream after all..."
     MC "Wha?"
@@ -27331,6 +27331,7 @@ label WGBE004B_After:
     WG "{size=-6}Unfortunately...{/size}"
     hide PRG
     show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Tomoko "Yeah, I have her in my homeroom class. She's alright I guess. {w}Kinda loud and bossy though."
     Kanami "She can be a little much at times, but she's nice. I've never seen someone so appreciative of their food, even if it isn't the best dish."
     WG "Well, she is certainly welcome to it."
@@ -27341,6 +27342,7 @@ label WGBE004B_After:
     show WG stern
     hide Tomoko
     show PRG unique at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     WG "Who cares? I don't find the prospect of something going into the garbage or Okisho's mouth to be substantially different."
     MCT "Yikes! Seems like Honoka's brownies managed to hit a sour note."
     show WG neutral
@@ -27360,6 +27362,7 @@ label WGBE004B_After:
     show WG neutral-2
     WG "Okay, I guess it couldn't hurt to try."
     show Tomoko happy
+    with dissolve
     show BE happy
     "Tomoko and Honoka" "YES!"
     if isEventCleared("WG081"):
