@@ -9649,6 +9649,7 @@ label PRG027:
             play sound Knock
             "Drawing near to it, I knocked twice at it, only then taking one more deep breath."
             pause 1
+            $setPRGOutfit(OutfitEnum.PAJAMAS)
             show PRG worried with dissolve
             pause .75
             show PRG unsure
@@ -10344,6 +10345,7 @@ label PRG027:
             "Everything between Aida and I. The minute I knocked... it would be gone."
             "I sighed... and knocked."
             pause 2
+            $setPRGOutfit(OutfitEnum.PAJAMAS)
             show PRG worried with dissolve
             pause .5
             show PRG unsure
@@ -11318,6 +11320,7 @@ label PRG029:
     "But, their bodies... that was different."
     MCT "We're all... different."
     pause .5
+    $setPRGOutfit(OutfitEnum.PAJAMAS)
     show PRG scared with dissolve
     PRG "Bah... hah... H-Hotsure-san! I-I'm sorry!"
     "I stood up quickly."
@@ -16228,6 +16231,7 @@ label PRG035:
     MC "... Well. I guess... we should do this."
     PRG "... M-Mhm."
 
+    $setOutfit(OutfitEnum.PAJAMAS)
     scene Dorm PRG with fade
     pause .5
     "I walked into Aida's room, and the mood hit me once more."
@@ -17051,6 +17055,7 @@ label PRG035:
         jump daymenu
 
 label PRG035B:
+    $setPRGOutfit(OutfitEnum.PAJAMAS)
     $setProgress("PRG", "PRG036")
     if getFlag("PRG035_Aff10"):
         jump PRG035B_1
@@ -21663,6 +21668,7 @@ label PRG041:
     pause .75
     "There was a small noise from behind the door."
     pause .5
+    $setPRGOutfit(OutfitEnum.PAJAMAS)
     show PRG unsure with dissolve
     pause .75
     PRG "Hi."

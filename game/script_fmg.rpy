@@ -10665,9 +10665,8 @@ label FMG061:
     "She turned away from her closet and spread her lats showing off her massive frame."
     FMG "You can't tell me I don't look amazing in this. I should wear this stuff more often. I fill this out perfectly!"
     MC "I... I would agree. Have you considered ripping out of it? Sounds like a good idea to me."
-    $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setFMGOutfit(OutfitEnum.DRESS)
     hide cg with dissolve
-    #change outfit to dress?
     show FMG neutral with dissolve
     FMG "I bet you'd {i}love{/i} that. Knowing how you are, I bought some tight-fitting clothes at the store to rip out of them."
     show FMG aroused-2
@@ -17212,6 +17211,7 @@ label FMG083:
     FMG "Was."
     show FMG neutral
     FMG "Onto more pressing matters. Movie time!"
+    show FMG neutral at Transform(xzoom=-1)
     FMG "What did you pick, Tomo?"
     Tomoko "Here, take a look."
     "I thought the size difference between Akira and I was crazy. But hot damn, if I used Tomo as a unit of measurement I think I'd need about four maybe five Tomos to equal Akira's upper body alone. {w}That's a {i}huge{/i} bitch."
@@ -17219,6 +17219,7 @@ label FMG083:
     MC "Wow! You guys like that movie? It reviewed horribly, it's garbage."
     Tomoko "Have you seen the movie before, Kei?"
     MC "Well... no."
+    show FMG neutral at Transform(xzoom=-1)
     FMG "Glad that matter's settled then."
     MC "Excuse me. nothing has been settled. I'm feeling very unsettled in fact that you're going to subject us to this cinematic train wreck. It got two stars from over three hundred critics."
     FMG "You let others form your opinions for you all the time?"
