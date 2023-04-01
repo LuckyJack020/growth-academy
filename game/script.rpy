@@ -98,6 +98,7 @@ init python:
         'gym': ("school", (730,220)),
         'hallway': ("school", (745,375)),
         'hillroad': ("town", (1100,650)),
+        'lakeroad': ("school", (460,120)
         'library': ("school", (490,560)),
         'lockers': ("school", (730,220)),
         'musicclassroom': ("school", (740,490)),
@@ -117,6 +118,7 @@ init python:
         'tokyo': ("town", (1100,650)),
         'track': ("school", (570,165)),
         'unknown': ("school", (550, 550)),
+        'waterpark': ("town", (1100,650)),
         'woods': ("school", (460,120))
     }
     debugenabled = True

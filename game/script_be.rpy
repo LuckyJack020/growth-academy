@@ -7795,7 +7795,7 @@ label BE041B_c2_after:
 
 label BE042:
     $setProgress("BE", "BE043")
-    scene Hallway with fade
+    scene Dorm Hallway with fade
     play music DayByDay
     "When Honoka invited me over, I wasn't sure what to expect anymore. Granted I had learned by now that trying to guess what Honoka had planned was foolish."
     play sound Knock
@@ -11420,7 +11420,6 @@ label BE049_C2_after:
 
 label BE050:
     $setProgress("BE", "BE051")
-    $setSize(4)
     $setTimeFlag("size4")
     MCT "Screw off, sun. I'm not ready to get up..."
     "My body was exhausted after last night. I was roused from my slumber by the sound of running water and a loud..."
@@ -11477,9 +11476,9 @@ label BE050:
     "I rolled to the edge of the bed and found my phone on the floor beside it. As I picked it up, the phone vibrated, lighting up with Honoka's name."
     "I'd already missed a few texts."
     "There was a 4am text from Tomo. I scrolled past it because I had several very recent texts from Honoka:"
-    BECell "<Kei-chan. Sorry to leave you, but I had an emergency to deal with.>"
-    BECell "<I'm okay. Meet me at the nurse's office once you wake up.>"
-    BECell "<Also, brush your hair! Your bedhead was WILD when I left!>"
+    BECell"<Kei-chan. Sorry to leave you, but I had an emergency to deal with.>"
+    BECell"<I'm okay. Meet me at the nurse's office once you wake up.>"
+    BECell"<Also, brush your hair! Your bedhead was WILD when I left!>"
     MCT "W-what??"
     MCCell "<On my way.>"
     "I sent a quick reply to Honoka and combed my hair tidy with my fingers."
@@ -11508,6 +11507,7 @@ label BE050:
 
     scene Dorm Hallway with fade
     play music Rain
+    $setSize(4)
     "As I made my way to the nurse's office, my mind raced. What sort of emergency could drive Honoka to the nurse in the morning after she got out of bed?"
     "... Considering what we did last night ...well, who knows?"
     MCT "She was chipper enough over text to remind me to fix my hair, but... well, how {i}am{/i} I supposed to feel when the girl I had sex with last night has an \"emergency\" the next day?"

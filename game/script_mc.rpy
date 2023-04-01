@@ -2642,7 +2642,7 @@ label MC005:
     #show Tsubasa neutral with dissolve
     #show Chiyo neutral with dissolve
     HR "... deeper than that. It's representative of Japan, and every person who lives-"
-    show HR unique
+    show HR unique-2
     Tsubasa "Hotsure-san. Morning."
     "Tashi quickly turned his head and adjusted his collar a bit."
     show HR annoyed
@@ -2666,7 +2666,7 @@ label MC005:
     #show Tsubasa annoyed
     Tsubasa "I understand darling, and meant no such thing. Go on, Kaeru."
     #show Tsubasa neutral
-    show HR neutral-2
+    show HR neutral
     HR "I... didn't exactly have an ending in mind. All I was saying was simply that I believe that many people have lost their perception on how important this time of year is, and what it represents."
     HR "I believe it not only important to use the time for reflection, but also for taking in the historical significance of it all. Why we celebrate, and what it all means."
     HR "It's much more than just \"a topic to assign homework to.\""
@@ -2676,7 +2676,6 @@ label MC005:
     Tsubasa "Take this, for example. I remember, clear as day, the 1964 Summer Olympics in Tokyo."
     MC "You went to the Olympics, Tsubasa-sensei?"
     #show Tsubasa satisfied
-    show HR unique
     Tsubasa "I did, indeed. I was quite young at the time, however, my father took me to Tokyo and somehow managed to secure us two tickets through some wild stream of favors and I-owe-yous."
     MC "Wow..."
     Tsubasa "Quite right. It was an astounding sight to see. The first modern Olympics after World War II, and the first ones held in Asia."
@@ -6915,6 +6914,7 @@ label MC024:
     "I got up, picking up my tray to dump in the garbage."
     UNKNOWN "Pardon me. Matsumoto-san?"
     show Minori neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     show Yuki neutral at Position(xcenter=0.2, yalign=1.0)
     with dissolve
     if not routelock == "AE" or not getFlag("Meet_Minori"):
@@ -6923,7 +6923,7 @@ label MC024:
         Yuki "Couldgh you..."
         pause .75
         Yuki "Hgh... importanth sthtudenth..."
-    elif routelock == "AE":
+    if routelock == "AE":
         "Yuki struggled to get out what she wanted to say, and Minori began to speak up on her behalf."
         Minori "Um, I believe what she's trying to say-"
         show AE pondering
@@ -7151,6 +7151,7 @@ label MC024:
     "I glanced down at the floor, praying that whatever this floor was built with wouldn't splinter under me."
     $setFMGOutfit(OutfitEnum.GYM)
     show FMG angry-2
+    with dissolve
     "I glanced up as Akira pounded out one more rep."
     show dummy with vpunch
     "{i}CLANG!{/i}"
@@ -7297,7 +7298,7 @@ label MC024:
         MC "Yeah, I tried that. No answer."
     else:
         WG "I believe you'd be better off asking Honoka. If memory serves correct, she is a member of that club."
-    MCT "Is she, though? Her club status changes practically daily."
+        MCT "Is she, though? Her club status changes practically daily."
     MC "Right. Thank you, Alice."
     show WG neutral
     WG "Of course. I'd also recommend asking the lifeguard as well. It couldn't hurt."
@@ -7314,6 +7315,7 @@ label MC024:
         MG "Will do there."
     else:
         WG "Thank you, Hotsure-san."
+    hide WG
     "I turned to the sound of Alice's body involuntarily splashing back into the water from her simple push off back into the pool, and walked to the lifeguard's chair."
     MC "Pardon me."
     "The lifeguard glanced over, and based on the dryness of his skin, clearly hadn't seen much in the ways of action that day."
@@ -7785,6 +7787,8 @@ label MC024:
                 PRG "I-"
                 MC "I'm kidding."
                 show PRG blush-2
+                pause 1
+                hide PRG
                 "Aida waved to me as I walked back down the bleachers, seeing my target finally in my sights." 
                 $setAffection("PRG", 1)
 
@@ -7962,7 +7966,8 @@ label MC024:
     Receptionist "Yes, of course. One moment, please."
     "The receptionist got up and walked into the nearby double doors."
     pause 1
-    show RM neutral with vpunch
+    show RM neutral with moveinright
+    with vpunch
     RM "{size=-6}Gah! Hagh...{/size}"
     RM "{size=-6}T-Thanks. I've been stuck with my leg up by my waist for the last half an hour.{/size}"
     "Thanks to my advancing grogginess, I was hardly surprised to see Daichi wrestling himself from the inside of the wardrobe."
