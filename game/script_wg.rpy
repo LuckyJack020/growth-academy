@@ -10555,7 +10555,7 @@ label WG045:
     MC "See any one from the music club you know?"
     "Aside from her archnemesis, I honestly didn't have a very good sense of how well Alice knew the rest of the music club members."
     WG "I see a handful of them, most of the ones that take it more seriously. Figures the rest would just take it as a free night off. That's what you get for expecting so little of people." 
-    WG "I told Mizawa we should make attendance mandatory if we were going to make this an official club activity, but like the rest of my good ideas she deliberately ignores them."
+    WG "I told Mizawa-san we should make attendance mandatory if we were going to make this an official club activity, but like the rest of my good ideas she deliberately ignores them."
     "Realizing I brought up a topic that left a sour note, I tried to think of a way to change the subject, but it turned out that I didn't have to as the band started up."
     play music SummerSymphonyBall
     show WG neutral-2
@@ -10570,11 +10570,13 @@ label WG045:
     WG "You make it sound like it's unusual."
     MC "Well, it kind of is, at least with people our age." 
     MC "I mean, not that it's a bad thing."
+    show WG happy
     WG "Hehe, I understand what you mean. It's an unfortunately rare thing I've noticed, which is why I'm glad to have someone willing to come with me to this."
     MC "Oh, I don't mind. It's pretty nice actually."
     WG "Well that's good. I wouldn't want to just drag you along and not have you enjoy it at least somewhat."
     MCT "I would have came even if that was the case, but it's probably not the best thing that she knows that."
     MC "Well, it certainly was a great day for it."
+    show WG neutral-2
     WG "Certainly so, the weather was gorgeous. It's only going to get hotter from here I've heard."
     MC "Good think we're headed to the beach then."
     WG "I take it you're looking forward to our planned excursion?"
@@ -10624,7 +10626,7 @@ label WG045:
                 MC "Yes, this is true." 
                 "I said that only to realize I wasn't exactly helping my case here."
             else:
-                MC "Nice to finally meet you, Mizawa-san."
+                MC "Nice to see you again, Mizawa-san."
                 Okisho "Oh, I'm sure."
                 MCT "I suppose I could have tried to come off a little more sincere."
             Okisho "So you {i}don't{/i} work for her then?"
@@ -10729,9 +10731,11 @@ label WG045:
             "Okisho slapped her flabby gut to emphasize the point."
             show WG sly
             WG "Good. You do that. Maybe that'll finally plug your big mouth so neither of us will have to hear it."
+            show WG angry
             Okisho "Yeah whatever. I don't think you'd be even half as big as you are if you didn't enjoy stuffing that gut of yours like I do."
             "I could tell Alice wanted to deck her right across her face and that mocking cheshire grin of hers. Alice, for her part though, seemed keenly aware not to take what was offered. But make no mistake, she was out for blood in her own right."
             MC "Alright, alright. Let's get going. Thanks for recommending the concert Mizawa-san. Alice and I had a good time."
+            show WG pondering
             WG "Yes, speaking of that... {w}Most curious, I didn't see you at the concert. You know the one you instructed us to attend in lieu of music club practice? {w}Not that your presence was sorely missed..."
             Okisho "Guess you just missed me then."
             show WG haughty
@@ -10755,7 +10759,7 @@ label WG045:
             "Rocker 2" "Oh shit!"
             "Rocker 1" "Is that the chick? She looks pissed! I think she heard you dude!"
             Okisho "Get bent."
-            Rocker "Beats getting sat on— let's get out of here!"
+            "Rocker 2" "Beats getting sat on— let's get out of here!"
             "Caught red-handed (or perhaps more fittingly, her hand in the cookie jar if her doughy midsection was any indication). Okisho's previously cock-sure attitude had dwindled considerably."
             WG "Don't worry Mizawa-san, it'll be our little secret."
             Okisho "I've heard of musicians striking a deal with the devil, but I never imagined I'd have to so early in my career."
@@ -25193,7 +25197,7 @@ label WG080_Afterchoice:
 label WG081:
     $setProgress("WG", "WG082")
     play music DayByDay
-    scene Gate Front
+    scene School Front
     show WG neutral
     with fade
     MC "I'm kind of surprised your mom didn't want to meet us at the school first."

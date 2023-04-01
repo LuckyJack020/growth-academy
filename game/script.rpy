@@ -82,6 +82,7 @@ init python:
         'classroom': ("school", (750,280)),
         'clocktower': ("school", (570,500)),
         'cookingclassroom': ("school", (740,490)),
+        'dock': ("school", (1100,650)),
         'dormAE': ("school", (870,300)),
         'dormWG': ("school", (870,280)),
         'dormBE': ("school", (870,260)),
@@ -98,7 +99,7 @@ init python:
         'gym': ("school", (730,220)),
         'hallway': ("school", (745,375)),
         'hillroad': ("town", (1100,650)),
-        'lakeroad': ("school", (460,120)
+        'lakeroad': ("school", (460,120)),
         'library': ("school", (490,560)),
         'lockers': ("school", (730,220)),
         'musicclassroom': ("school", (740,490)),
