@@ -9963,7 +9963,7 @@ label BE048:
     "Honoka and Kanami eyed my scalp and giggled."
     MC "H-hey! I mean it! No funny stuff with the 'do!"
     BE "Psssh, don't be boring, Kei-chan."
-    MCT "What about not wanting to vandalize my head is boring?!"
+    MC "{size=6}What about not wanting to vandalize my head is boring?!{/size}"
     show BE angry
     BE "Oh, I wouldn't vandalize your head in a million years. Just the opposite."
     show BE neutral

@@ -17250,7 +17250,7 @@ label FMG083:
     FMG "Dang, this movie doesn't mess around."
     MC "Entertaining for short attention spans I guess."
     Tomoko "How does a ramen shop owner know kung fu so well?"
-    FMG "Quite, it's getting good!"
+    FMG "Quiet, it's getting good!"
     "The protagonist was tearing these guys apart piece by piece- head dodge to the left, round house kick to the guy's face. A blocked strike- immediately countered with a palm strike that shattered the thug's elbow."
     FMG "Sweet! That's what I'm talking about!"
     "Meanwhile the Big Boss and his even bigger guard were just standing there letting all this happen."
@@ -17558,7 +17558,7 @@ label FMG084:
     FMG "Enjoy your clothes while you got them. I want to go for a long time tonight and you don't get to tap out."
     MC "Can I have at least thirty or so minutes to digest?"
     show FMG neutral
-    FMG "Fine. As soon as thirty minutes hits, your mine for the rest of the night. No buts."
+    FMG "Fine. As soon as thirty minutes hits, you're mine for the rest of the night. No buts."
     MC "I'll record our show then...{w}and no hickeys this time or else I'm gonna titty twist you."
     show FMG angry
     FMG "Jokes on you! I'm into that!"
@@ -17568,6 +17568,7 @@ label FMG084:
 label FMG085:
     $setProgress("FMG", "FMG086")
     scene Hallway
+    play music FMG
     show Hageshi neutral
     with fade
     MC "Look at him... eating walnuts and chugging that comically big water bottle. What are you hiding, Hageshi???"
@@ -17802,6 +17803,7 @@ label FMG086:
     $setProgress("FMG", "FMG087")
     scene Gym with fade
     $setFMGOutfit(OutfitEnum.GYM)
+    play music FMG
     "There I was in awe watching Akira bench some absurd amount of weight I had been too lazy to add up. Judging by the bar bending like that you'd think the bar was made of rubber."
     MC "Are you ever afraid of like I don't know... dying. I'm no gym expert but the bars aren't supposed to bend like that."
     "The amazon racked the weights before lending forward with a grin across her face and her muscles pumping."
@@ -17991,7 +17993,7 @@ label FMG086:
     Dad "I thought that same thing for a while too... and then I got married."
     Mom "...{i}sigh{/i}..."
     MC "You've been waiting a long time to use that one haven't you?"
-    Dad "Every since we got here I've been thinking of jokes."
+    Dad "Ever since we got here I've been thinking of jokes."
     Mom "I'm happy to hear Keisuke has been treating you right."
     show FMG flex
     FMG "I'd set him straight if he wasn't, Oka-san."
