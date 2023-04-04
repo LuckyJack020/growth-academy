@@ -16133,6 +16133,7 @@ label PRG034:
 
 label PRG035:
     $setProgress("PRG", "PRG035B")
+    $setPRGOutfit(OutfitEnum.PAJAMAS)
     scene Dorm Interior with fade
     pause .75
     MC "... Mch."
@@ -16231,7 +16232,6 @@ label PRG035:
     MC "... Well. I guess... we should do this."
     PRG "... M-Mhm."
 
-    $setOutfit(OutfitEnum.PAJAMAS)
     scene Dorm PRG with fade
     pause .5
     "I walked into Aida's room, and the mood hit me once more."
