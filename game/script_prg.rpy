@@ -9102,7 +9102,7 @@ label PRG026:
     AE "Nikumaru-san? A word, please."
     WG "Hm? I suppose. What can I do for you?"
     "Alice halted, looking off toward Shiori."
-    AE "As it were, I was wondering if you could inform me on where Kodoma-san is?"
+    AE "As it were, I was wondering if you could inform me on where Kodama-san is?"
     WG "At our dorm, if you must know. She's still under the weather."
     AE "Truly? You're certain she's ill?"
     WG "I don't claim to be a doctor, Matsumoto-san. But, she seems sick enough to me."

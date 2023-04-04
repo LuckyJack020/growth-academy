@@ -99,6 +99,7 @@ init python:
         'gym': ("school", (730,220)),
         'hallway': ("school", (745,375)),
         'hillroad': ("town", (1100,650)),
+        'infodesk': ("school", (590,590)),
         'lakeroad': ("school", (460,120)),
         'library': ("school", (490,560)),
         'lockers': ("school", (730,220)),

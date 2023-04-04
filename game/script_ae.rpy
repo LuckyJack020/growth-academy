@@ -16555,7 +16555,7 @@ label AE071:
     AE "Ah, one moment, Keisuke."
     "As Shiori looked over towards Aida, who had dropped her books, I noticed as the blush which had been etched on her face all day had quickly faded as she assumed her usual professional demeanor."
     show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    AE "Kodoma-san, do you need any help?"
+    AE "Kodama-san, do you need any help?"
     show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Ah, t-thank you."
     "Of course, her \"usual professional demeanor\" is exactly what I wanted to talk to her about. As Shiori walked over to Aida, it gave me a moment to think to myself and process not only the wildness of this morning, but of Shiori's behavior in general recently."
@@ -20503,7 +20503,7 @@ label AE090:
     HR "So if anyone needs mental health breaks following the revelation, I should remind you that everyone is allowed a weeks vacation from class during the year."
     hide HR
     show PRG admire at Position(xcenter=0.25, yalign=1.0)
-    "Kodoma-san patted her belly as she cooed to the babies in her womb, no doubt coming soon,"
+    "Kodama-san patted her belly as she cooed to the babies in her womb, no doubt coming soon,"
     show WG neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     " and Nikumaru-san smiled upon being reminded of time out of class."
     hide PRG

@@ -11897,7 +11897,7 @@ label BE051:
     BE "I'd just been through six weeks of late stage puberty."
     show BE shrug
     BE "Or maybe it was early growth factor effects? Hard to say."
-    BE "Point is, I suddenly I have a large chest."
+    BE "Point is, suddenly I have a large chest."
     BE "And, on that day, I realize, I'm a bit different from everyone else."
     BE "At lunch hour, I step into the cafeteria. Everyone turns their head."
     show BE surprised

@@ -7286,7 +7286,7 @@ label MC024:
     MCT "Ugh... I've had to repeat this damned chain of events enough."
     if routelock == "WG":
         MC "I'm trying to track down Naoki-sensei. I need him to sign this paper work for a scholarship I'm applying for. I heard, but I don't know for sure, that he's the coach for the swimming club."
-    if routelock == "BE":
+    elif routelock == "BE":
         MC "I'm trying to track down Naoki-sensei. I remembered that he coached the swimming club from when I was here with Honoka, and figured I could find him here."
     else:
         MC "I'm trying to track down Naoki-sensei, and I'd heard he might be coaching the swimming club."
@@ -7312,7 +7312,7 @@ label MC024:
         MC "Ach, right. Thank you."
         WG "Of course."
         WG "Save that for next time. However, I expect the same gusto."
-        MG "Will do there."
+        MC "Will do there."
     else:
         WG "Thank you, Hotsure-san."
     hide WG
@@ -9923,7 +9923,7 @@ label RM003_After2:
     MC "So, you're heading to Wakkanai?"
     Nurse "Yes, I'm visiting my fiance who lives there. We try to see each other as often as possible, but it's difficult with our schedules and his current job."
     MCT "Well that solves that mystery at least."
-    Nurse "Kiyomi works as a curator in the history museum at Wakkanai. He does great work, you should definitely visit next time you take a trip back to the Mainland."
+    Nurse "My fiancé works as a curator in the history museum at Wakkanai. He does great work, you should definitely visit next time you take a trip back to the Mainland."
     MC "Not a bad idea, Wakkanai seemed like a nice place when we drove up here and my parents dropped us off."
     "Needless to say I didn't plan on going out of my way to make a trip any time soon, but I figured if I could keep things casual it might continue to loosen her lips."
     MC "Hey, if you're gone though, does that mean no one's at the nurse's station?"

@@ -5692,7 +5692,7 @@ label FMG038:
 
     scene Hallway with fade
     MCT "HAH! I CAN'T BELIEVE SHE RAN IN THE WRONG DIRECTION! THIS IS IN THE BAG!"
-    "It was simple. First one to the cooking club room got to ask Kodoma-san for first samples, meaning the best of the bunch went to the victor. I normally wouldn't think of racing Akira... until I realized she pointed in the wrong direction. I rounded the corner of the stairs, however..."
+    "It was simple. First one to the cooking club room got to ask Kodama-san for first samples, meaning the best of the bunch went to the victor. I normally wouldn't think of racing Akira... until I realized she pointed in the wrong direction. I rounded the corner of the stairs, however..."
     MCT "Almoooost! Almoooost!"
     show AE happy with dissolve
     AE "Bitte wart auf mich kleine Monika-"
