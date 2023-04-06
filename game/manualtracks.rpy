@@ -448,7 +448,7 @@ init python:
 
     theme_HoL = ost.soundtrack(
         name = "Winter Wonderland",
-        path = "Audio/BGM/scene_holiday.mp3",
+        path = "Audio/BGM/scene_holiday.ogg",
         priority = 3,
         author = "Post-Bop",
         description = "Snowy Holiday Theme",
