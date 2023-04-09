@@ -9659,64 +9659,9 @@ label RM002_c3_2:
     jump daymenu
 
 label RM003:
-    if checkAffection("RM", "<", 2):
+    if checkAffection("RM", ">=", 2):
         scene Dorm Interior with fade
         play music MC
-        "Coming back to my dorm after classes, it felt good to take a load off at the end of the day as I tossed my backpack at the foot of my bed and jumped on my bed, landing starfish style face up."
-        MC "{i}Ahhhh{/i}..."
-        MCT "That hits the spot."
-        "The warm sunbeams peaking through my glass balcony door beckoned me outside to enjoy the mild spring weather."
-        MCT "Not today I'm afraid."
-        "Breaking from the soft embrace of my mattress cushion, I got up to draw the blinds from my window to make sure the pesky light wasn't going to interfere with the quality snooze session I had planned."
-        MCT "Assuming Daichi doesn't interrupt it somehow either."
-        "I don't know why that thought entered my mind. Despite living with him and having classes with him, I hardly ever saw the guy. I assumed in his spare time he was always out doing reconnaissance on... well whatever it is that he does."
-        MCT "Odd fellow, that's for sure. I wonder what he's up to?"
-        "I had no real way of knowing, seeing as he was around, but looking over to his side of the room something odd stuck out to me."
-        MCT "What's this?"
-        "It appeared to be a bright neon green sticky-note attached to the back of his chair with today's date marked on it." 
-        MC "\"Suspicious activities - sea ferry dock - 16:30\""
-        MCT "What?"
-        "Were these some kind of plans of his? He wasn't exactly the type to leave a note telling me where he went. Quite frankly, I didn't need to know and he didn't need to tell me."
-        "I wanted to forget this whole notion and just crawl back into bed, but now I couldn't help but suspect he was the one getting into suspicious activity at the dock." 
-        "And if this was anything like his little listening device scheme, I had a feeling it would be a good idea to make sure he wasn't doing anything too drastic."
-        MCT "Crap, that only gives me 20 minutes to get over there. Hopefully I remember the way." 
-        scene Lake Road with fade
-        "I was relieved to find my memory allowed me to retrace my steps. Maybe that wasn't a good thing though because the only reason I knew this path was because I got lost the first time." 
-        "Even though I was in a hurry, I slowed down a bit to take in the view of the lake once I realized where I was at. I hadn't been here since the start of the school year when I ran into Honoka on that first day."
-        if getHighestAffection() == ("BE"):
-            "I'm glad I did, too. It was like we picked up right where we left off. She helped make the whole experience of moving to a new school not be so bad."
-        else:
-            "Starting something new that I didn't completely understand... and well, still don't, but it was a fortunate accident getting to run into a long lost friend once again. And I eventually did meet up with Tomo."
-            "I guess it just goes to show things will work out if you give them a chance. I try to keep that in mind while I'm here, but with all the odd things I've seen so far, that's easier said than done most days."
-        scene Dock with fade
-        "After my brief jog down memory lane (more literally than figuratively in this case) I eventually arrived at the dock. The first place Tomo and I arrived at on the island." 
-        "I recognised the red gate, just as large and imposing as the day I arrived. At the time it felt like it marked a point of no turning back." 
-        "Looking at it now with the ocean in front of me though, it felt more like a locked door to keep us from leaving."
-        stop music
-        MCT "{i}Ack!{/i} What the hell is that?"
-        "I had been lost in my thoughts as the memories rushed back to me, but that was interrupted as an annoying flash of light flickered in my eyes."
-        "I just dismissed it as some kind of errant reflection across the water but the repeated nature of it felt more like a signal than a fluke."
-        MCT "Wait a second..."
-        play music RM
-        show RM smug with dissolve
-        MCT "A signal huh?"
-        "There he was, sitting on one of the benches dockside \"reading\" a newspaper."
-        MC "You could have just called my name you know."
-        show RM doubt
-        RM "I suppose I should have if I had known you were going to just saunter over here in broad  daylight to blow our cover."
-        MC "Students walking about is a common sight on the island. Being the only person under 50 that still reads a newspaper sticks out."
-        show RM neutral
-        RM "Hmm, perhaps hiding in plain sight is the best option for the moment."
-        MC "What are you doing here?"
-        show RM distrustful
-        RM "I could ask you the same question."
-        MC "Oh, don't give that. You just tried to get my attention using your eyeglasses to blind me. I have to assume you were expecting me."
-        show RM smug
-        RM "And to think I thought you'd just sleep through the afternoon. I was curious to see if you'd manage to pick up the bread trail I left to come." 
-        $setAffection("RM", 1)
-        extend " You didn't disappoint."
-        jump RM003_After1
-    else:
         "Coming back to my dorm after classes, it felt good to take a load off at the end of the day as I tossed my backpack at the foot of my bed and jumped on my bed, landing starfish style face down on my bed."
         MC "{i}Ahhhh{/i}..."
         MCT "That hits the spot."
@@ -9774,7 +9719,64 @@ label RM003:
         show RM smug with dissolve
         play music RM
         jump RM003_After1
-
+    else:
+        scene Dorm Interior with fade
+        play music MC
+        "Coming back to my dorm after classes, it felt good to take a load off at the end of the day as I tossed my backpack at the foot of my bed and jumped on my bed, landing starfish style face up."
+        MC "{i}Ahhhh{/i}..."
+        MCT "That hits the spot."
+        "The warm sunbeams peaking through my glass balcony door beckoned me outside to enjoy the mild spring weather."
+        MCT "Not today I'm afraid."
+        "Breaking from the soft embrace of my mattress cushion, I got up to draw the blinds from my window to make sure the pesky light wasn't going to interfere with the quality snooze session I had planned."
+        MCT "Assuming Daichi doesn't interrupt it somehow either."
+        "I don't know why that thought entered my mind. Despite living with him and having classes with him, I hardly ever saw the guy. I assumed in his spare time he was always out doing reconnaissance on... well whatever it is that he does."
+        MCT "Odd fellow, that's for sure. I wonder what he's up to?"
+        "I had no real way of knowing, seeing as he was around, but looking over to his side of the room something odd stuck out to me."
+        MCT "What's this?"
+        "It appeared to be a bright neon green sticky-note attached to the back of his chair with today's date marked on it." 
+        MC "\"Suspicious activities - sea ferry dock - 16:30\""
+        MCT "What?"
+        "Were these some kind of plans of his? He wasn't exactly the type to leave a note telling me where he went. Quite frankly, I didn't need to know and he didn't need to tell me."
+        "I wanted to forget this whole notion and just crawl back into bed, but now I couldn't help but suspect he was the one getting into suspicious activity at the dock." 
+        "And if this was anything like his little listening device scheme, I had a feeling it would be a good idea to make sure he wasn't doing anything too drastic."
+        MCT "Crap, that only gives me 20 minutes to get over there. Hopefully I remember the way." 
+        scene Lake Road with fade
+        "I was relieved to find my memory allowed me to retrace my steps. Maybe that wasn't a good thing though because the only reason I knew this path was because I got lost the first time." 
+        "Even though I was in a hurry, I slowed down a bit to take in the view of the lake once I realized where I was at. I hadn't been here since the start of the school year when I ran into Honoka on that first day."
+        if getHighestAffection() == ("BE"):
+            "I'm glad I did, too. It was like we picked up right where we left off. She helped make the whole experience of moving to a new school not be so bad."
+        else:
+            "Starting something new that I didn't completely understand... and well, still don't, but it was a fortunate accident getting to run into a long lost friend once again. And I eventually did meet up with Tomo."
+            "I guess it just goes to show things will work out if you give them a chance. I try to keep that in mind while I'm here, but with all the odd things I've seen so far, that's easier said than done most days."
+        scene Dock with fade
+        "After my brief jog down memory lane (more literally than figuratively in this case) I eventually arrived at the dock. The first place Tomo and I arrived at on the island." 
+        "I recognised the red gate, just as large and imposing as the day I arrived. At the time it felt like it marked a point of no turning back." 
+        "Looking at it now with the ocean in front of me though, it felt more like a locked door to keep us from leaving."
+        stop music
+        MCT "{i}Ack!{/i} What the hell is that?"
+        "I had been lost in my thoughts as the memories rushed back to me, but that was interrupted as an annoying flash of light flickered in my eyes."
+        "I just dismissed it as some kind of errant reflection across the water but the repeated nature of it felt more like a signal than a fluke."
+        MCT "Wait a second..."
+        play music RM
+        show RM smug with dissolve
+        MCT "A signal huh?"
+        "There he was, sitting on one of the benches dockside \"reading\" a newspaper."
+        MC "You could have just called my name you know."
+        show RM doubt
+        RM "I suppose I should have if I had known you were going to just saunter over here in broad  daylight to blow our cover."
+        MC "Students walking about is a common sight on the island. Being the only person under 50 that still reads a newspaper sticks out."
+        show RM neutral
+        RM "Hmm, perhaps hiding in plain sight is the best option for the moment."
+        MC "What are you doing here?"
+        show RM distrustful
+        RM "I could ask you the same question."
+        MC "Oh, don't give that. You just tried to get my attention using your eyeglasses to blind me. I have to assume you were expecting me."
+        show RM smug
+        RM "And to think I thought you'd just sleep through the afternoon. I was curious to see if you'd manage to pick up the bread trail I left to come." 
+        $setAffection("RM", 1)
+        extend " You didn't disappoint."
+        jump RM003_After1
+        
 label RM003_After1:
     play music Beach
     MC "So what's going on here, why this place?"

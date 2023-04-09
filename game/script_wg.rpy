@@ -24692,13 +24692,13 @@ label WG080:
     show HR neutral-2
     with fade
     HR "Alright that's time. Pencils down."
-    if checkSkill("Academics", "<", 5):
+    if checkSkill("Academics", ">=", 5):
+        MCT "Well that was tougher than expected, but still manageable."
+        "Alice had told me to make sure I went to bed early and got a good night's sleep before the test. Seems that it paid off."
+    else:
         MCT "Dang. If only I had more time..."
         MCT "Oh who am I kidding? I wasn't going to get those questions right either."
         "Alice had told me to make sure I went to bed early to get a good night's sleep before the test, but I stayed up late cramming for it instead."
-    else:
-        MCT "Well that was tougher than expected, but still manageable."
-        "Alice had told me to make sure I went to bed early and got a good night's sleep before the test. Seems that it paid off."
     show HR neutral-2 at altMove(0.5, 0.75)
     show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Shiori rose from her seat and proceeded to collect the tests to hand over to Tashi-sensei, barely managing to navigate the space between the desks as she dragged that dump truck behind her."
@@ -24708,10 +24708,10 @@ label WG080:
     hide AE with dissolve
     HR "As for any of you who might not be feeling so confident in their test results today, let that serve as a reminder to keep up with your reading assignments."
     HR "And not to try to cram them all in the night before."
-    if checkSkill("Academics", "<", 5):
-        MCT "Is this guy reading my mind? I thought he just had a long tongue, not a third eye."
-    else:
+    if checkSkill("Academics", ">=", 5):
         MCT "Glad I learned that lesson early on in the year."
+    else:
+        MCT "Is this guy reading my mind? I thought he just had a long tongue, not a third eye."
     play sound ClockTower
     HR "And with that, class dismissed."
     hide HR
@@ -28807,7 +28807,26 @@ label WGFMG004A_C1:
     "Tourist2" "You talking to us?"
     show WG surprised-2
     MC "Yeah. I heard what you said about my girlfriend, and it was pretty fucking rude."
-    if checkSkill("Athletics", "<", 15):
+    if checkSkill("Athletics", ">=", 15):
+        show WG sly
+        Tourist2 "Alright, alright. Sorry man, I don't want any trouble."
+        Tourist1 "We didn't mean anything by it. We'll be going."
+        "The two of them walked away— obviously they weren't in a mood to start something over their careless comments."
+        $setAffection("WG", 1)
+        show WG haughty
+        WG "Well, it appears you sorted out that matter rather handily."
+        show WG doubt
+        WG "Though in the future Keisuke, you'd do well to keep in mind to not waste your energy chasing after every rude onlooker that makes a snide comment about me."
+        MC "Sorry. I guess I should have kept a level head about it."
+        show WG happy
+        WG "Though I will say, I do appreciate your protective instincts. Just learn to temper it a bit more, okay?"
+        MC "Will do."
+        WG "Now, come help me dry off so we can go back to our room and change. We're supposed to meet up with Akira in an hour or so and I want to be ready when she arrives."
+        show WG aroused
+        WG "But I think that still gives us a little bit of time to ourselves."
+        "Needless to say, I grabbed the rest of our things and picked up the pace to get back to our room."
+        jump daymenu
+    else:
         show WG doubt
         "Tourist2" "And what are you going to do about it little man?"
         MC "I uh..."
@@ -28826,25 +28845,6 @@ label WGFMG004A_C1:
         WG "The matter is behind us now. {w}Now help me dry off so we can go back to our room and change. We're supposed to meet up with Akira in an hour or so and I want to be ready when she arrives."
         "Luckily Alice didn't seem too angry with what I did."
         "Then again, the embarrassment of having to have your girlfriend bail you out of a fight you started was enough of a chastisement that I certainly didn't need any more to drive home the lesson."
-        jump daymenu
-    else:
-        show WG sly
-        Tourist2 "Alright, alright. Sorry man, I don't want any trouble."
-        Tourist1 "We didn't mean anything by it. We'll be going."
-        "The two of them walked away— obviously they weren't in a mood to start something over their careless comments."
-        $setAffection("WG", 1)
-        show WG haughty
-        WG "Well, it appears you sorted out that matter rather handily."
-        show WG doubt
-        WG "Though in the future Keisuke, you'd do well to keep in mind to not waste your energy chasing after every rude onlooker that makes a snide comment about me."
-        MC "Sorry. I guess I should have kept a level head about it."
-        show WG happy
-        WG "Though I will say, I do appreciate your protective instincts. Just learn to temper it a bit more, okay?"
-        MC "Will do."
-        WG "Now, come help me dry off so we can go back to our room and change. We're supposed to meet up with Akira in an hour or so and I want to be ready when she arrives."
-        show WG aroused
-        WG "But I think that still gives us a little bit of time to ourselves."
-        "Needless to say, I grabbed the rest of our things and picked up the pace to get back to our room."
         jump daymenu
 
 label WGFMG004A_C2:

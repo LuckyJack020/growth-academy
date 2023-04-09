@@ -545,6 +545,17 @@ init python:
     )
     ost.manualDefineList.append(theme_RlY)
 
+    theme_DfP = ost.soundtrack(
+        name = "Different Paths",
+        path = "Audio/BGM/differentpaths.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Branching Fates",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_DfP)
+
     ## Base Template
     ######################################
 
