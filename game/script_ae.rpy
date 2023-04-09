@@ -3316,7 +3316,7 @@ label AE019:
     MC "Hey, Shiori-san. The path I took... I don't regret it."
     AE "..."
     show AE happy
-    AE "That's good to hear, Keisuke san."
+    AE "That's good to hear, Keisuke-san."
     menu:
         "Because it lead me to you.":
             jump AE019_c1_1
