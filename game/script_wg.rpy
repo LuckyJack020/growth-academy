@@ -25097,11 +25097,38 @@ label WG080_Afterchoice:
     show WG surprised-2
     WG "I'm-I'm sure of it. I'm the presumptive heir of his industry empire after all. Why else would he have groomed me to become a business owner like himself?"
     show WG neutral
-    MCT "Hmm, that's kind of surprising. As much as she's fixated on rising to the top of the industry, I'm surprised it hasn't come up before. Then again, I didn't get the impression her dad ever intended to force it onto her."
-    MC "Maybe he hasn't said anything because he didn't want to crush you with the weight of that expectation."
-    "I said that only to think how now Alice would be crushing them under her weight instead."
-    show WG haughty
-    WG "Yes! That's likely it. Both Father and Mother have never been too pushy about these things, but have always tried to foster my interests when I've expressed them."
+    MCT "Hmm, that's kind of surprising. As much as she's fixated on rising to the top of the industry, I'm surprised it hasn't come up before."
+    menu:
+        "Maybe he doesn't want you to feel forced to take over for him.":
+            MC "Maybe he doesn't want you to feel forced to take over for him. Maybe he hasn't said anything because he didn't want to crush you with the weight of that expectation."
+            "I said that only to think how now Alice would be crushing them under her weight instead."
+            show WG haughty
+            WG "Yes! That's likely it. Both Father and Mother have never been too pushy about these things, but have always tried to foster my interests when I've expressed them."
+            jump WG080_Afterchoice2
+
+        "Maybe he doesn't want you to take over his business.":
+            show WG stern
+            $setAffection("WG", -1)    
+            MC "Maybe he doesn't want you to take over his business. I mean, most dads would be happy to have done well enough in life that their kids don't have to work."
+            WG "Nothing is more contemptible to Father than the \"idle rich\". Frittering away their predecessors' hard earned capital while they frivolously occupy themselves with tending goldfish and over–trimming their tiny tortured trees."
+            WG "I can't imagine how poorly it would reflect on Father's reputation if it was known that his daughter was just some spoiled, fat layabout. Just because I may look the part, doesn't mean I intend to act it out."
+            jump WG080_Afterchoice2
+
+        "Maybe he doesn't want you to take it as a given.":
+            show WG pondering
+            MC "Maybe he doesn't want you to take it as a given. You know, to keep you motivated and hungry for it?"
+            MCT "Hmm, maybe \"hungry\" wasn't the best word there…"
+            show WG happy
+            $setAffection("WG", 1) 
+            WG "Yes! I think you're right. That's very much something Father would do. A successful businessman like him has an endless supply of willing apprentices." 
+            show WG haughty
+            WG "Why should he just hand the reins over if I don't stack up to the competition?"
+            MC "I don't think you need to worry if that's the case." 
+            MCT "Considering she stacks up well in pretty much every dimension..."
+            WG "Besides, even if Father was willing to pass on someone more qualified, I'd set myself up for failure if it was seen by others as an act of pure nepotism."
+            jump WG080_Afterchoice2
+
+label WG080_Afterchoice2:
     show WG neutral
     Takamura "I see. Are you concerned about the possibility that your growth may cause extra  challenges on your way to accomplish your goal?"
     show WG sad
