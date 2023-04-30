@@ -76,7 +76,7 @@ screen galleryselect():
             action [SetVariable("activegal", "OTHER"), ShowMenu("gallery")]
             hovered SetVariable("hovergal", "OTHER")
             unhovered SetVariable("hovergal", "")
-        textbutton "Return" action ShowMenu("extras") xalign 0.5 yalign 0.5
+        textbutton "Return" action ShowMenu("extras") xalign 0.5 yalign 0.5 text_outlines [ (2, "#000000", 0, 0) ] text_size 30 text_color "#FFFFFF" text_hover_color "#b1b1b1"
         null
     if hovergal != "":
         frame:
@@ -106,11 +106,11 @@ screen gallery():
                 null
 
         if page > 0:
-            textbutton "Last" action SetScreenVariable("page", page - 1) xalign 0.5 yalign 0.5
+            textbutton "Last" action SetScreenVariable("page", page - 1) xalign 0.5 yalign 0.5 text_outlines [ (2, "#000000", 0, 0) ] text_size 30 text_color "#FFFFFF" text_hover_color "#b1b1b1"
         else:
             null
-        textbutton "Return" action ShowMenu("galleryselect") xalign 0.5 yalign 0.5
+        textbutton "Return" action ShowMenu("galleryselect") xalign 0.5 yalign 0.5 text_outlines [ (2, "#000000", 0, 0) ] text_size 30 text_color "#FFFFFF" text_hover_color "#b1b1b1"
         if page < (math.ceil(len(galImgList[activegal]) / 6)) - 1:
-            textbutton "Next" action SetScreenVariable("page", page + 1) xalign 0.5 yalign 0.5
+            textbutton "Next" action SetScreenVariable("page", page + 1) xalign 0.5 yalign 0.5 text_outlines [ (2, "#000000", 0, 0) ] text_size 30 text_color "#FFFFFF" text_hover_color "#b1b1b1"
         else:
             null

@@ -11035,7 +11035,7 @@ label BE049_C1_after:
     show BE sad
     "That self conscious smile she'd given me a few minutes ago was a tell..."
     "Sweet, flirty, fun Honoka, who had made countless sexual overtures to me these past few months..."
-    extend "was unsure of herself when it came to actual sex."
+    extend " was unsure of herself when it came to actual sex."
     "To think, I had expected Honoka would take the lead."
     "She wasn't the only one in this room who was scared."
     "It's not like {i}I'd{/i} ever had intercourse."

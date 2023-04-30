@@ -139,6 +139,7 @@ label GTS001_after:
 label GTS002:
     $setProgress("GTS", "GTS004")
     scene School Planter with fade
+    $setGTSOutfit(OutfitEnum.WORK)
     "All around in the garden was orange and yellow, peach pink and rose red."
     "I didn't normally find myself staring up at the clouds, but this was one spring evening that merited an exception as its light bathed the flowers in warmth. Yet the air was cool, even a little chilly, carried by the lackadaisical breeze."
     "I turned a corner and my silence was broken by a faint voice in the distance. When I looked around, because why not, I spied Naomi bowing deeply to a man whose face was as weathered as his dungarees; he smiled, nodded, and the two parted ways."
@@ -756,6 +757,7 @@ label GTS008:
     "I didn't call out her name, but I did walk around to see if she might be around the stairway entrance. Surprisingly, it wasn't Honoka I found, but Naomi."
     "She had laid out a blanket and was currently sipping on some tea as what looked like a miniature garden sat in front of her, taking up a small portion of rooftop."
     MC "What do we have here? A secret garden?"
+    $setGTSOutfit(OutfitEnum.WORK)
     show GTS neutral at center with dissolve
     GTS "Hm? Oh, hello Hotsure-san. Heh, no the gardener is well aware of this little plot."
     GTS "As a matter of fact, he helped set it up for me."
@@ -12232,6 +12234,7 @@ label GTSPRG001:
     play music Busy
     "As I was heading to the dorms after class I spotted Naomi and Aida down in the garden."
     MC "Hey girls."
+    $setGTSOutfit(OutfitEnum.WORK)
     show GTS neutral at Position(xpos=0.7, xanchor=1.0, yanchor=1.0)
     show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xanchor=1.0, yanchor=1.0)
     with dissolve
