@@ -7512,7 +7512,7 @@ label GTS039:
     GTS_S "Does that sound like something you'd be interested in, Kei-chan?"
     if isHighestSkill("Athletics"):
         MC "Absolutely! I'd feel right at home, since I already exercise a lot."
-        show GTS_S happy-2
+        show GTS_S happy
         GTS_S "I knew it'd be perfect for us. You're already so disciplined in your health, you'll be incredible at it."
     else:
         MC "It's not exactly my strong suit, but I'd be willing to give it a try."
