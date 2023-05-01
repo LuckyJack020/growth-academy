@@ -16975,6 +16975,7 @@ label FMG082:
     scene Dorm FMG with fade
     play music Rivalry
     if checkSkill("Athletics", ">=", 36):
+        $setFlag("FMG082_Win")
         "With her attention diverted, I felt her hold loosen on my hand. One. Shot."
         "I ripped it free, with god-like speed I gripped the back of my hand and with every ounce of strength in my body, pushed."
         MC "AAAARRRRGGGGHHH!"
@@ -17802,7 +17803,10 @@ label FMG085:
     jump daymenu
 
 label FMG086:
-    $setProgress("FMG", "FMG087")
+    if getFlag("FMG082_Win"):
+        $setProgress("FMG", "FMG087A")
+    else:
+        $setProgress("FMG", "FMG087B")
     scene Gym with fade
     $setFMGOutfit(OutfitEnum.GYM)
     play music FMG
@@ -17957,7 +17961,8 @@ label FMG086:
     Dad "Do you have any goals after you leave Seichou?"
     MC "Dad, come on."
     Dad "What? I'm curious."
-    FMG "It's fine, Kei. Hm, truth be told Otou-san, I'm not sure what I want to do after we graduate. Maybe become the world's strongest personal trainer, ha. {w}In all seriousness, I think I'd want a job where I could help people with my strength the most. A place where I could make a difference."
+    FMG "It's fine, Kei. Hm, truth be told Otou-san, I'm not sure what I want to do after we graduate. Maybe become the world's strongest personal trainer, ha."
+    FMG "In all seriousness, I think I'd want a job where I could help people with my strength the most. A place where I could make a difference."
     Dad "Hm, well, I think that's very noble of you. I'm glad I asked."
     FMG "Enough about me, I'd love to learn about you guys."
     MC "Mom, this is your chance to talk about your writing."
@@ -18059,7 +18064,7 @@ label FMG086:
     FMG "Ugh, whatever."
     jump daymenu
 
-label FMG087:
+label FMG087A:
     $setProgress("FMG", "FMG088")
     #(music here)
     scene Cafeteria
@@ -18339,6 +18344,200 @@ label FMG087:
     show FMG neutral
     FMG "Go take your shower before I {i}make{/i} us have round two."
     MC "Alright, I'm going, I'm going."
+    jump daymenu
+
+label FMG087B:
+    $setProgress("FMG", "FMG088")
+    play music ClearSkies
+    scene Supermarket with fade
+    MC "Man, this a long list... {w}Do we need all this for tonight? Seems a tad bit overkill."
+    show FMG happy with dissolve
+    FMG "Uh, yeah, we need every item on there. I won our bet and this is what I want."
+    MC "Is there some hidden meaning that I'm missing here? I just... I expected something like... I don't know, a bit hornier."
+    MC "Like, come on. This stuff is too normal. I mean hot chocolate powder, marshmallows, ice cream, various snacks... this doesn't add up."
+    show FMG neutral
+    FMG "I'm not hiding anything from you. If I wanted sex or anything sexual, I would've ripped your clothes off at my dorm."
+    MC "Hm... Fair point."
+    MC "Are we just cuddling and watching a movie then?"
+    FMG "Pretty much, yep. I do want to go to the arcade before it gets dark out, we haven't been there in a while and I miss it."
+    MC "So... you just wanted a regular old date?"
+    show FMG happy
+    FMG "Yeah, I did!"
+    MC "...{w} Would you want to go to a restaurant tonight instead? More fancy and formal, yeah?"
+    show FMG neutral
+    FMG "Naaah, I'm good. I originally wanted to stargaze like on our first date where you asked me out."
+    show FMG sad
+    FMG "Unfortunately, the weather decided against that..."
+    show FMG neutral
+    extend " What can you do? I'm not too hung up about it, haha. As long as I get to spend time with you, I'm happy."
+    MC "Do you want to try that on another night? I don't mind."
+    FMG "Maybe, the weather has been crummy lately. We can try after winter passes."
+    MC "I'll hold you to that."
+    FMG "I'd expect nothing less."
+    FMG "Did you get anything for yourself? I want to drop this stuff off and change my jacket... {w}{size=-6}It's starting to rip...{/size}"
+    MC "Mhm, I got a few snacks. But uh... why is your jacket ripping? When did that start happening?"
+    show FMG sad
+    FMG "I um... was flexing in the bathroom mirror... my lat spread was too much for the jacket."
+    MC "..."
+    MC "You've been hanging out with Nat too much."
+    show FMG happy
+    FMG "Heh... {w}oopsies"
+    MC "Let me see it. Turn around, I want to judge you."
+    show FMG neutral
+    FMG "No, you're going to make fun of me for it!"
+    MC "Rest assured, I'd do that regardless, now turn."
+    pause .5
+    MC "Eh, it doesn't look that bad, seems pretty small."
+    FMG "Is that so?"
+    "Akira proceeded to bring her shoulder blades together as her hands moved to the edges of her hips. In a rapid thrust, she locked her shoulders forward while her elbows flared out to her sides."
+    "Her shoulder blades began to slowly separate, wider and wider, revealing two giant slabs that looked like anacondas running up each side of her spine as the bands of steel-like cables that inserted up into her arms writhed to life."
+    "The fabric of her coat was stretched like a canvas to the point that it left nothing to the imagination."
+    "{i}*...riiip...*{/i}"
+    "Even less to the imagination now."
+    MC "Holy crap, bro, what da hell!?"
+    show FMG sad
+    FMG "See? I told you. Now I just made it worse."
+    MC "Well it looked pretty good to me."
+    FMG "Can we please check out and go now?"
+    MC "Um, yeah, we can go. But I'm making fun of you for this for the rest of the week."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    scene Arcade with fade
+    play music BrightLights
+    MC "Hot diggity dog this place is magnificent! It has been a minute since we've been here, we're always so busy cooped up in your stinky dorm room."
+    show FMG neutral with dissolve
+    FMG "You're the guy who doesn't want to leave and go out on dates."
+    MC "I'm sorry, do you have a problem with staying in and saving money while also cherishing the one you love most?"
+    FMG "You bozo, you know I don't. I just like getting to be girly at times, I loved how you looked at me when I wore that dress."
+    MC "I offered to go and do a fancier date and you shut me down."
+    FMG "Yeah, because I don't want that {i}today{/i}. I didn't say ever. {w}Surprise me with those sorts of dates! I get all bubbly inside seeing you with a nice button down."
+    FMG "We aren't here to talk about this now anyway. I want to play video games and kick your butt."
+    MC "Sign me up. Not for the kicking my butt part though, that's not happening."
+    MC "And um, we must pick a machine with wiggle room. As you know you take up a lot of room."
+    show FMG flex
+    FMG "You'll be fine, I'll keep my arms to my side."
+    MCT "I won't be fine."
+    show FMG happy
+    "Akira scanned the environment, lighting up like a Christmas tree when she finally spotted one of her favorites."
+    FMG "How about Karate Warriors 7?"
+    MC "Mhmmm, not a huge fan of it, but I'll play it since you want to. Don't pick your main this time... please. Last time was awful."
+    FMG "I'll think about it."
+    pause 1
+    "She didn't think about it... in fact, I bet the thought didn't even cross her mind because she locked in her main and handed me my ass on a silver platter fifteen different times."
+    MC "..."
+    MC "This game sucks. {i}You{/i} suck."
+    FMG "Hm... {w}No, I don't think I do. Judging by our games, it seems like it's a skill issue on your end."
+    show FMG flex
+    FMG "Want to lose again?"
+    MC "Pick a different game."
+    show FMG neutral
+    FMG "Would you be okay with Zombie Blasters? It's co-op... {w}and there isn't friendly fire in this one so I can't kill you."
+    MC "Thank god, I hate that you have to test for friendly fire in every single game we play."
+    FMG "We have to know!"
+    MC "You just like shooting me!"
+    show FMG happy
+    FMG "Nooooo."
+    show FMG neutral
+    FMG "We can talk about this later, preferably in a game where friendly fire is enabled."
+    MC "...When you're getting mauled by zombies don't ask for help 'cause I ain't helping. I'm watching you die from the sidelines."
+    FMG "I'm not giving you the rocket launcher."
+    MC "*Gasp*...How dare you?!? {w}That's always the best weapon."
+    FMG "Yeah, I bet you feel like an ass now, don't you?"
+    MC "Eh, nah... {w}Hey, wait... is this the game that starts you with the shotgun if you're player one?"
+    FMG "Yep. the very one."
+    MC "Interesting. {w}DIBS!"
+    show FMG angry
+    FMG "Not so fast! I'm player one."
+    "As usual, I was hoisted into the air against my will because someone was upset."
+    MC "Ma'am, I kindly request that you put me down so that I may take my rightful spot as player one."
+    show FMG neutral
+    FMG "Say you're player two and I'll consider putting you down."
+    MC "I'm not doing this with you."
+    FMG "Okay, I can hold you up all day."
+    MC "I won't cave."
+    FMG "Yeah, you will. You always do."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm FMG with fade
+    play music Peaceful
+    "She knows me too well because I did cave and I gave her player one but in my defense, I did it out of love and nothing else."
+    MC "What's the movie we're watching? I'm assuming you picked something good?"
+    show FMG neutral with dissolve
+    FMG "Heh, it's a rom com..."
+    MC "You like those?"
+    show FMG happy
+    FMG "Of course! I love them. Although, I do prefer just straight romance movies every now and then."
+    MC "Huh... didn't take you for the type."
+    show FMG neutral
+    FMG "I figured you weren't a fan of them. But since I won, I can finally get you to sit down and cuddle with me while we watch one!"
+    MC "I don't mind them, they can be corny at times, and the few that I have seen the jokes don't really land well."
+    MC "That being said, I trust your choice. You have good taste in movies... {w}most of the time."
+    FMG "All the time."
+    MC "Agree to disagree."
+    FMG "Heh, okay. {w}Before we get to the movie, I want to make ice cream sundaes and to get the other things ready for hot chocolate after."
+    FMG "And you have far too much clothing on for tonight."
+    MC "..."
+    MC "I thought we were watching a movie and weren't doing anything sexual."
+    show FMG happy
+    FMG "Cuddling with next to no clothing isn't anything sexual."
+    MC "I-I think it is."
+    show FMG angry
+    FMG "No one asked you!"
+    show FMG neutral
+    extend " And I just got this new lingerie set, you'll love it!"
+    MC "That's all you had to say. The pants are off."
+    FMG "I'll go get changed and when I get back, we'll start."
+    hide FMG with dissolve
+    MC "Can I pick at the vanilla while I wait?!"
+    FMG "I guess, but don't eat too much of it please!"
+    MC "Woo! Thank you!"
+    "There I was starting there in the kitchen in my tighty whities devouring a carton of ice cream waiting for my giant girlfriend to stroll back in... {w}living the dream."
+    #$setFMGOutfit(OutfitEnum.UNDERWEAR)
+    show FMG neutral with dissolve
+    FMG "Do you like it?"
+    MC "Mmm-... {w}Ecch... Ecccch...{w}ARRRRGH."
+    show FMG surprised
+    FMG "Holy crap, are you choking?!?!"
+    pause .5
+    MC "I-I'm good. Woah... damn. {w}I was taken back by {i}all{/i} of that. It looks fantastic on you, and it compliments your muscles perfectly."
+    show FMG flex
+    FMG "Everything does."
+    show FMG neutral
+    FMG "Pass me the scoop, it's time to construct my ice cream masterpiece."
+    MC "I'll grab the caramel drizzle and the gummy bears, what do you want on yours?"
+    FMG "Hm, give me the bananas, whipped cream, and the chocolate sprinkles... {w}Ooooh and the cookie crumbs."
+    MC "Got it."
+    pause 1
+    FMG "Thanks, Kei."
+    "She picked me up with her free arm and placed a kiss on my cheek, giggling to herself."
+    FMG "Love you."
+    MC "Love you too."
+    FMG "Alright! It's movie time. I'll turn off the rest of the lights. Can you grab the blanket?"
+    MC "Already on it."
+    show FMG happy
+    "Akira hopped on the couch, spreading her massive frame across it. She patted her hand on the cushion, beckoning for me to join her."
+    show FMG neutral
+    FMG "Come on, Kei-kun! I'm starting to get cold without you next to me!"
+    MC "I'd chalk that up to you being partially naked."
+    FMG "..."
+    show FMG angry
+    FMG "Stop being an ass and come cuddle with me!"
+    show FMG neutral
+    "I joined Akira on the couch tucking my head on her titty for premium head comfortability and maximum cuddle efficiency." 
+    "Having found a comfy \"pillow\", she proceeded to wrap her arms over the top of me, completely enveloping my upper half as she pulled my back tight up against the firm ridges of her abs."
+    "The sheer mass of her arms was enough to pin me to her without her even trying to squeeze. I wasn't moving anywhere anytime soon— and that was just fine with me."
+    FMG "Finally, we can get started."
+    "She tilted her head down resting hers on mine. I could only imagine how big her smile was as her date night came together."
+    FMG "Hey."
+    MC "What's up?"
+    FMG "I love you."
+    MC "Heh, I love you too, Akira. {w}{size=-6}Could you hit play? This menu theme is awful.{/size}"
+    show FMG aroused
+    FMG "Ha, yeah, sorry, I got distracted."
+    "She tightened her grip on me pulling me ever closer to her as I was enveloped by her warm embrace. I thought more and more about what I said as the intro to the movie started up." 
+    "In truth, losing memories of these days is something that I am scared of at times."
+    "But her tight and loving grasp.{w}These moments of happiness we share. {w}I know it's something I'll never forget."
     jump daymenu
 
 label FMG088:
