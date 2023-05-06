@@ -669,7 +669,6 @@ label global000_RM:
         "Keisuke Hotsure. I... think this is my room?":
             jump global000_RM_c2
         "Don't worry, sir. I'm from the government, just making an inspection!":
-            $setFlag("global000_RM_c3")
             jump global000_RM_c3
 
 label global000_RM_c1:
@@ -1091,7 +1090,9 @@ label global000_sit_after:
 
 
 label global000_aftersit_c1:
-    MC "I haven't seen him...{w} but he was acting kind of strangely this morning. No telling where he went off to."
+    $setFlag("global000_RMUnknown")
+    MC "I haven't seen him..."
+    MCT "He was acting kind of strangely this morning. No telling where he went off to."
     show AE neutral
     AE "Well... I certainly have no reason not to trust you, so that's that."
     hide AE with dissolve
@@ -1100,6 +1101,7 @@ label global000_aftersit_c1:
     jump global000_homeroom
 
 label global000_aftersit_c2:
+    $setFlag("global000_RMCover")
     MC "Well, he said he was going to make sure not to miss the ceremony..."
     show AE neutral
     AE "I've accounted for every student that came through this door. He wasn't one of them?"
@@ -1113,6 +1115,7 @@ label global000_aftersit_c2:
     jump global000_homeroom
 
 label global000_aftersit_c3:
+    $setFlag("global000_RMLeft")
     MC "He left the dorms pretty early, don't know where he was off to..."
     show AE neutral
     AE "Perhaps I need to pay him a visit, then, hm?"
@@ -1218,7 +1221,7 @@ label global000_homeroom:
     scene black with dissolve
     stop music fadeout 1.0
     "So I found myself at Seichou Academy, orientation behind me and a long, strange journey ahead."
-    "What was I supposed to do now, knowing what I do about the bodies of the student body?"
+    "What was I supposed to do, knowing what I did about the bodies of the student body?"
     jump daymenu
 
 label MC001:

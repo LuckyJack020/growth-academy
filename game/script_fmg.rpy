@@ -10182,6 +10182,7 @@ label FMG058:
             jump FMG058_c2_1
 
 label FMG058_c1_1:
+    $setFlag("FMG058_Akira")
     $setAffection("FMG", 1)
     MC "Akira wins."
     show FMG happy
@@ -10212,6 +10213,7 @@ label FMG058_c1_1:
     jump daymenu
 
 label FMG058_c2_1:
+    $setFlag("FMG058_Natsuko")
     MCT "Sorry Akira, but you told me to be fair."
     MC "Natsuko wins."
     show Natsuko smug
@@ -16973,6 +16975,7 @@ label FMG082:
     scene Dorm FMG with fade
     play music Rivalry
     if checkSkill("Athletics", ">=", 36):
+        $setFlag("FMG082_Win")
         "With her attention diverted, I felt her hold loosen on my hand. One. Shot."
         "I ripped it free, with god-like speed I gripped the back of my hand and with every ounce of strength in my body, pushed."
         MC "AAAARRRRGGGGHHH!"
@@ -17800,7 +17803,10 @@ label FMG085:
     jump daymenu
 
 label FMG086:
-    $setProgress("FMG", "FMG087")
+    if getFlag("FMG082_Win"):
+        $setProgress("FMG", "FMG087A")
+    else:
+        $setProgress("FMG", "FMG087B")
     scene Gym with fade
     $setFMGOutfit(OutfitEnum.GYM)
     play music FMG
@@ -17955,7 +17961,8 @@ label FMG086:
     Dad "Do you have any goals after you leave Seichou?"
     MC "Dad, come on."
     Dad "What? I'm curious."
-    FMG "It's fine, Kei. Hm, truth be told Otou-san, I'm not sure what I want to do after we graduate. Maybe become the world's strongest personal trainer, ha. {w}In all seriousness, I think I'd want a job where I could help people with my strength the most. A place where I could make a difference."
+    FMG "It's fine, Kei. Hm, truth be told Otou-san, I'm not sure what I want to do after we graduate. Maybe become the world's strongest personal trainer, ha."
+    FMG "In all seriousness, I think I'd want a job where I could help people with my strength the most. A place where I could make a difference."
     Dad "Hm, well, I think that's very noble of you. I'm glad I asked."
     FMG "Enough about me, I'd love to learn about you guys."
     MC "Mom, this is your chance to talk about your writing."
@@ -18057,7 +18064,762 @@ label FMG086:
     FMG "Ugh, whatever."
     jump daymenu
 
-label FMG087:
+label FMG087A:
+    $setProgress("FMG", "FMG088")
+    #(music here)
+    scene Cafeteria
+    show FMG neutral
+    with fade
+    MC "Today's the day, you know."
+    FMG "Hm? Seems like any regular old Tuesday to me."
+    MC "Nah, I'm redeeming my arm wrestling win. I want your legs around my neck before the sun sets."
+    show FMG sad
+    FMG "Ugh, whatever."
+    show FMG neutral
+    FMG "But I'm finishing my food first and then I have to pick something up from Nat."
+    MC "What are you getting from her?"
+    FMG "Something."
+    MC "And that something is...?"
+    FMG "Something."
+    MC "..."
+    MC "Don't do this."
+    FMG "Do what?"
+    MC "..."
+    FMG "How can I stop doing something if you don't tell me what it is I'm doing?"
+    MC "..."
+    MC "What are you getting from Nat?"
+    pause 1
+    FMG "Something."
+    MC "Alright, I'm over it."
+    FMG "Good. I was going to keep it up until you stopped harassing me. I think you'll like it, it's pretty cool."
+    MCT "Yeah, I bet it is..."
+    MC "Okay, so like what's the deal with your legs squeezing the life out of me?"
+    FMG "Kei... my dude, relax. Let a girl eat, I can't grow without calories, then I'll get what I need from Nat, and finally, I will wrap my quads around your head for five seconds."
+    MC "Five? {w}{i}Five?{/i}"
+    MC "I didn't nearly break my entire body for only five seconds. We go until I pass out, that's the only available option."
+    show FMG sad
+    FMG "What is {i}wrong{/i} with you?"
+    MC "I've waited for this moment for too long, I won't let you take this away from me. I better wake up in the nurse's office."
+    FMG "Maybe you're better suited for a mental ward..."
+    show FMG neutral
+    FMG "Okay, look, wait at my dorm. I shouldn't be long at Nat's. I won't keep you waiting for your reward... {w}Even though I could totally do without this."
+    MC "Hater."
+    FMG "Absolutely, someone has to hate your bad ideas."
+    FMG "I'm going to head over to Nat's. I'll text you when I'm on my way back."
+    MC "Great. Love you, don't take too long."
+    FMG "I won't, I promise. Love you too, goofball."
+    hide FMG with dissolve
+    pause 1
+    MC "Aaaand I miss her already... Man, being emotionally attached to someone is the freaking worst."
+    scene black with fade
+    pause 1
+    scene Dorm FMG with fade
+    MC "Hm, what do I do to kill time? Spin around in her gaming chair? {w}No, that's too predictable."
+    MC "Uuuuh, maybe I'll lift some of her weights? Ugh, but why would I want to workout when she isn't around? I have no one to impress... or annoy."
+    "{i}*Bzzzz-bzzzzzz*...{/i}"
+    MC "Oh hey— friends!"
+    FMGCell "On my way back!"
+    MC "Damn, it's only Akira..."
+    pause 1
+    "I was contemplating yet again if I should take a few spins in her chair until she swung the door open, nearly tearing it off its hinges."
+    FMG "Alright, I'm back!"
+    MC "Holy shit!"
+    show FMG neutral with dissolve
+    FMG "Man, you do jump high. You should take a few parkour classes."
+    MC "What is with you big muscly people and startling me? Please, my heart can't take much more of this."
+    FMG "You're fine. Also, you're in the wrong spot. {w}Let me get you situated."
+    MC "Huh, what are-"
+    "She grabbed my shirt with her massive hand and flung me towards the bed without a second thought."
+    MC "That was overly... aggressive but okay... {size=-6}Surprisingly hot though, I wouldn't mind doing that again.{/size}"
+    FMG "Phew, I was nervous I might have thrown you too hard."
+    MC "At least you hit the bed."
+    FMG "I know, I got lucky."
+    MC "..."
+    MC "Anyway! What's in the bag?"
+    show FMG happy
+    FMG "A surprise."
+    FMG "I'll be right back, make yourself comfortable."
+    hide FMG with dissolve
+    MC "Maybe there's a personality in there for you. Heh, that's hilarious. Cause you don't have one."
+    FMG "It's a good thing we share a sense of humor, 'cause otherwise, you wouldn't have one!"
+    MC "Oh my gosh, so witty and funny, hahaha. This is me pity laughing, 'cause it wasn't funny."
+    FMG "Keep talking and I won't let you touch my biceps for a week!"
+    MC "Ugh!"
+    FMG "Okay, close your eyes! No peeking!"
+    MC "What happens if I take a peek?"
+    FMG "I'm going to punch you in the face."
+    MC "Wow, that is violent."
+    scene black with fade
+    FMG "I'm serious, Kei. Don't look."
+    MC "I'm not!"
+    pause .5
+    MC "Can I look now?!?"
+    FMG "No! Give me a second, jeez."
+    MC "How about now?"
+    FMG "You can look."
+    #$setFMGOutfit(OutfitEnum.COSTUME)
+    scene Dorm FMG
+    show FMG flex
+    with fade
+    FMG "Looks good, doesn't it?"
+    MC "Hang on, I need to pick my jaw up off the ground. {w}Holy shit...those fishnets have to be squeezing your thighs."
+    show FMG neutral
+    FMG "Actually, they aren't {i}that{/i} tight. They were made for Nat's legs after all..."
+    show FMG sad
+    extend " {w}{size=-6}shit...{/size}"
+    MC "You said Nat... {w}YOU GOT THIS FROM NAT??!!?!?"
+    MC "Hahahahahaha, I'd call her and make fun of her for it but she'd rip me in half."
+    MC "Heh, so why does Nat even own something like that? Seems a little out of character."
+    show FMG happy
+    FMG "The ears were my idea. I think the outfit needed something to make it {i}pop{/i}, you know?"
+    show FMG neutral
+    FMG "But regarding the whole outfit... yeah... I don't know. I wasn't going to push her about it. I only told her we made a bet and then she mentioned this and... {w}here we are!"
+    MC "Uuuh, why did you tell her about our bet? Isn't it a little TMI?"
+    FMG "It was sorta on topic, she's been getting really and I mean {i}really{/i} annoyed by people asking about her legs. Some dudes showed her a video of a female bodybuilder crushing a watermelon between her legs."
+    FMG "And you can probably guess that they asked her to recreate the video but with a pumpkin instead."
+    MC "Hm, a couple of risk takers. Did she kill them?"
+    FMG "Nah, she just crushed the phone and walked away."
+    FMG "So, I shared how you keep asking me to wrap my legs around your neck."
+    MC "See that statement would've been true back when you weren't a giant. I'm pretty positive and I'm praying to god that your legs are now big enough to wrap around my whole body."
+    show FMG sad
+    FMG "..."
+    show FMG neutral
+    FMG "Moving on... {w}And I told her that I lost but how I still don't want to do it, haha. She offered to take my place in a heartbeat. I declined, obviously. You're mine— and no one else's."
+    MC "Yeah, you tell her!"
+    MC "Hm."
+    MC "The ears are a bit much, but it's not the end of the world. Are you... um... okay in the upper region?"
+    FMG "Hm? {w}Oh! My boobies? Yeah, it's compact up there for sure. I'm not crazy about it but it is what it is."
+    show FMG neutral 
+    FMG "Okay, enough talk. "
+    show FMG aroused
+    extend " Let's get this over with."
+    "The amazon walked over to me slowly, caressing her body as she made her way over."
+    FMG "I won't be gentle."
+    MCT "Oh, yeah, she's totally into this."
+    MC "You're totally into this, aren't you?"
+    FMG "I'm doing this for you. I {i}want{/i} you to enjoy every single second."
+    hide FMG with dissolve
+    "I prepared myself as she stood before me, reaching out and gliding her large, powerful hands across my skin. Tenderly, she smiled as she took her hands and lifted me up from the bed. Gently, she placed me on the ground."
+    "Sauntering over, she turned around and sat on the bed."
+    "*CRRRRK*"
+    "The bed creaked and groaned at her weight, barely able to handle her presence as she smiled. With a seductive, almost domineering look, she brought her legs around my chest as she pulled me in ever so slightly."
+    "They were cozy, inviting even, yet hard as stone; marble statues carved by the greatest of sculptors could only dream to compare." 
+    MC "This is the greatest day of my life!"
+    "Her thighs were hefty, like massive pillars of sand swept marble, which she controlled with unwavering diligence. Each crevasse and line in her legs caressed me— smothering, and yet sheltering me."
+    FMG "Don't get too excited, I haven't even started yet~"
+    "Steadily, her quads tightened as she only strengthened her hold on me. The sheer power she had, and with such minimal effort, was almost impossible to put into words."
+    FMG "More?"
+    MC "P-Please..."
+    "Like a breath, my plea escaped my lips, and she responded immediately, her gigantic legs slowly smothering me as they clenched deeper into my body and drove me further into her warmth."
+    FMG "Maybe this wasn't as bad as I thought, heh."
+    "Responding to her ferocity, I took a chance and placed my hands on her thighs, gently massaging them as I felt every single inch and ridge of her perfectly sculpted body. It was like a never-ending edifice of stone I felt I could get lost in."
+    "As I gingerly pet her supple skin, she cooed in delight."
+    MC "Mmmf..."
+    FMG "H-aah..."
+    "Throwing her head back slightly, she moaned softly as I continued, her hair falling loosely across her broad and mighty shoulders."
+    FMG "Aah, I love it when you touch me. My heart always races... D-Don't stop... t-touching my legs."
+    "The more she fell into the lustful wiles of the moment, the more she seemingly lost control over her body— her quads tightening further as she gently groaned in ecstasy."
+    FMG "{i}Hooo{/i}... Man, I might have to cut this short... I need you badly."
+    MC "G-Give me like two more minutes and t-then we can destroy your bed... again."
+    FMG "God, I didn't think this would turn me on so much. B-But squeezing your tiny body h-has... {w}Ugh, I just need more of you."
+    MCT "I should probably tap out 'cause she's definitely losing control... But holy shit what a way this would be to go!"
+    FMG "H-How are you doing down there? {w}Kei..."
+    MC "Um, I-I wouldn't s... say no to more suffocation."
+    FMG "Say no more~"
+    "She moaned even louder as her grip on me continued to strengthen; the coil of a python could only dream of being as tight as her legs."
+    FMG "Holy fuck, why is this so hot?!"
+    "Suddenly her thighs released their grip around my body. I could hear Akira breathing heavily."
+    show FMG sad with dissolve
+    FMG "I-I'm sorry, I have to stop. I'm losing myself and I-I don't want to hurt you."
+    MC "Hey, you're fine. If you'd feel more comfortable having sex we can. I'll grab a rubber."
+    FMG "Please, My-My urges are horrible right now."
+    show FMG angry
+    FMG "Hurry up, Kei! I'm putting the ocean to shame over here..."
+    MC "I'm searching, chill."
+    hide FMG with dissolve
+    FMG "I'm sorry Nat, I'll make it up to you."
+    "{i}*Riiiiiip*{/i}"
+    MC "Did you-"
+    "And she did, she had torn the bunny outfit to shreds... {w}Not the boots though, she threw those aside."
+    MC "Are you good? Maybe we shouldn't do this..."
+    $setFMGOutfit(OutfitEnum.NUDE)
+    show FMG angry
+    FMG "We are absolutely doing it, I've never been this bad before!"
+    "And with that, she picked me up and ripped my clothes to pieces."
+    MCT "One time. Please let me take off my clothes one time!"
+    show FMG aroused
+    FMG "Augh, finally you're naked. Let's go!"
+    MC "Oooookay..."
+    pause .5
+    FMG "You're taking too long!"
+    MC "I'm literally right here... next to the bed!"
+    "She clearly wasn't having it since she yet again picked me up with one hand and tossed me on her bed."
+    FMG "We are going until I'm tired."
+    MC "... I'm going to be here all day."
+    "Immediately, she pushed me downward, placing her hands by each one of my shoulders, her breasts pressing against me."
+    MC "It's like you're possessed... this isn't like you at all."
+    FMG "I-I don't know and I don't care... {w}I'm sorry for what might happen."
+    MC "Might?"
+    FMG "J-Just stop talking, grab my boobs and let me work my magic."
+    MC "Yes ma'am."
+    "Even with all this time we'd been dating, there was still so much trepidation and nervousness. If I can be honest, part of me still sensed a feeling of danger, even... and yet... maybe it was that danger that drove me even closer to her."
+    "With my heart thumping in my chest, I took in a deep breath... and put it in."
+    FMG "Kyah!~"
+    MC "Nngh."
+    "Akira bit her lip as she winced, her blush intensifying as she smiled."
+    FMG "Ooooh god, it-it always feels so... so good. Haah... You-You know, seeing you beneath me it... mngh! It gets me even more turned on!"
+    "She lowered her massive frame onto me to whisper in my ear. Her soft but firm breasts nearly covering my body."
+    FMG "{size=-6}I love how small your body is.{/size}"
+    MCT "A part of me {i}really{/i} wants to give her a thumbs up without saying anything."
+    MC "I-I try."
+    FMG "Ugh, you feel amazing!"
+    "The amazon placed her hand on the right half of the headboard, crushing it without a second thought as she continued to lose herself."
+    FMG "Oops~"
+    FMG "Heh, hopefully, you're stronger than the headboard."
+    MCT "I'm actually going to die."
+    "Her body continued to tremble as I could feel the climax of our passion coming. Her breathing intensified, her abdomen bucking against my chest like a piston as I kept caressing her body."
+    "Though she was quite formidable, there was no way I was going to back down."
+    FMG "NNNAH!~"
+    "*KRRK*"
+    "Though seeing as she just smashed the top of the drawer, my mind was almost screaming at me too."
+    MC "A-Akira..."
+    FMG "C-Cmon!~ K-K-Keep going, I-I feel l-like I'm gonna-a-aAAA!~"
+    "She suddenly pulled me into her as her arms grasped me into a crushing hug. I felt my back pop in multiple places as she held on for dear life, her body bucking and spasming as she orgasmed."
+    MC "Mmmf, that's right, let it all-"
+    "*BOOM*"
+    show dummy with vpunch
+    "Swiftly, she moved one of her arms up, suddenly punching the wall as fissures tore through it, a few chips of it falling to the ground as her fist remained embedded in it."
+    MC "O-Out..."
+    FMG "Haaah... nngh... s-sorry, I um... g-got really into it..."
+    MC "Holy shit..."
+    FMG "That... was... AWESOME!"
+    "She looked at me and closed her eyes, smiling broadly with a boyish chuckle. Followed by her flexing her powerful arms before she was hit with realization."
+    FMG "F-Fuck... I really hope that won't be a problem."
+    "Akira side eyed the large crack she made in the wall as she pursed her lips. Meanwhile, I just chuckled."
+    MC "W-Well... back adjustment aside... I haven't cum yet, which means I win!~"
+    FMG "Hah- W-What?!"
+    MC "Heh."
+    "Before I could finish, she once more wrapped her legs around me and, with a great deal of strength, squeezed."
+    MC "NNGH!~"
+    FMG "We-We aren't... finished yet..."
+    MCT "She's crazy..."
+    FMG "Do... me a favor and s-stay down."
+    "The amazon pinned me to the bed with her enormous hand while simultaneously gripping the unbroken half of the headboard with her other hand slowly turning it to dust."
+    FMG "Aaaah, it feels so good... b-being so strong."
+    "As the other half of the headboard gave out she orgasmed in sheer delight."
+    FMG "Ooooh, my g-god."
+    "As she climaxed the sheer force and pressure she suddenly applied to me from her quads had caused me, all at once, to let it all out with a torrent of force. Weakly, I collapsed and sunk further into the bed, panting as though I'd ran a marathon."
+    "Akira screamed in pleasure while falling to my side and sending out a shockwave across the room as she hit the bed."
+    show FMG aroused
+    FMG "God, every second was incredible. Nothing we do can ever top this..."
+    show FMG sad
+    FMG "But I need you to promise me that we won't do the thigh thing again. My dorm can't survive me being like this again. I don't know what came over me..."
+    MC "Uh, yeah... yeah, I think that's fair."
+    show FMG neutral
+    FMG "Are you okay? I didn't hurt you or anything?"
+    MC "No, I'm okay... maybe. It could be the adrenaline talking, my heart is racing right now, ha."
+    show FMG aroused
+    FMG "Yeah, mine too, heh."
+    MC "Sooooo, ummm, about your bed... and the big-ass crack in the wall."
+    show FMG flex
+    FMG "Impressed?"
+    MC "That's not the word I was looking for, but yeah it was hot."
+    show FMG neutral
+    FMG "I'll let the school know. Shouldn't take them too long to fix it."
+    MC "You don't think they'll ask what happened?"
+    FMG "Nah, I don't care. I'll make up some bullshit and we'll be fine."
+    FMG "You hungry? It's not even noon yet, could still get breakfast."
+    MC "I'm down, let's clean up here first, and then we'll head down."
+    show FMG aroused
+    FMG "Ooooh, round two in the shower?"
+    MC "..."
+    show FMG happy
+    FMG "I'm kidding... {w}Kinda..."
+    MC "..."
+    MC "I'm showering first."
+    "As I got up to head to the bathroom, I snuck in a quick titty squeeze."
+    show FMG aroused
+    FMG "Heeeey~"
+    FMG "Don't do that! You're going to get me wet again."
+    show FMG neutral
+    FMG "Go take your shower before I {i}make{/i} us have round two."
+    MC "Alright, I'm going, I'm going."
+    jump daymenu
+
+label FMG087B:
+    $setProgress("FMG", "FMG088")
+    play music ClearSkies
+    scene Supermarket with fade
+    MC "Man, this a long list... {w}Do we need all this for tonight? Seems a tad bit overkill."
+    show FMG happy with dissolve
+    FMG "Uh, yeah, we need every item on there. I won our bet and this is what I want."
+    MC "Is there some hidden meaning that I'm missing here? I just... I expected something like... I don't know, a bit hornier."
+    MC "Like, come on. This stuff is too normal. I mean hot chocolate powder, marshmallows, ice cream, various snacks... this doesn't add up."
+    show FMG neutral
+    FMG "I'm not hiding anything from you. If I wanted sex or anything sexual, I would've ripped your clothes off at my dorm."
+    MC "Hm... Fair point."
+    MC "Are we just cuddling and watching a movie then?"
+    FMG "Pretty much, yep. I do want to go to the arcade before it gets dark out, we haven't been there in a while and I miss it."
+    MC "So... you just wanted a regular old date?"
+    show FMG happy
+    FMG "Yeah, I did!"
+    MC "...{w} Would you want to go to a restaurant tonight instead? More fancy and formal, yeah?"
+    show FMG neutral
+    FMG "Naaah, I'm good. I originally wanted to stargaze like on our first date where you asked me out."
+    show FMG sad
+    FMG "Unfortunately, the weather decided against that..."
+    show FMG neutral
+    extend " What can you do? I'm not too hung up about it, haha. As long as I get to spend time with you, I'm happy."
+    MC "Do you want to try that on another night? I don't mind."
+    FMG "Maybe, the weather has been crummy lately. We can try after winter passes."
+    MC "I'll hold you to that."
+    FMG "I'd expect nothing less."
+    FMG "Did you get anything for yourself? I want to drop this stuff off and change my jacket... {w}{size=-6}It's starting to rip...{/size}"
+    MC "Mhm, I got a few snacks. But uh... why is your jacket ripping? When did that start happening?"
+    show FMG sad
+    FMG "I um... was flexing in the bathroom mirror... my lat spread was too much for the jacket."
+    MC "..."
+    MC "You've been hanging out with Nat too much."
+    show FMG happy
+    FMG "Heh... {w}oopsies"
+    MC "Let me see it. Turn around, I want to judge you."
+    show FMG neutral
+    FMG "No, you're going to make fun of me for it!"
+    MC "Rest assured, I'd do that regardless, now turn."
+    pause .5
+    MC "Eh, it doesn't look that bad, seems pretty small."
+    FMG "Is that so?"
+    "Akira proceeded to bring her shoulder blades together as her hands moved to the edges of her hips. In a rapid thrust, she locked her shoulders forward while her elbows flared out to her sides."
+    "Her shoulder blades began to slowly separate, wider and wider, revealing two giant slabs that looked like anacondas running up each side of her spine as the bands of steel-like cables that inserted up into her arms writhed to life."
+    "The fabric of her coat was stretched like a canvas to the point that it left nothing to the imagination."
+    "{i}*...riiip...*{/i}"
+    "Even less to the imagination now."
+    MC "Holy crap, bro, what da hell!?"
+    show FMG sad
+    FMG "See? I told you. Now I just made it worse."
+    MC "Well it looked pretty good to me."
+    FMG "Can we please check out and go now?"
+    MC "Um, yeah, we can go. But I'm making fun of you for this for the rest of the week."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    scene Arcade with fade
+    play music BrightLights
+    MC "Hot diggity dog this place is magnificent! It has been a minute since we've been here, we're always so busy cooped up in your stinky dorm room."
+    show FMG neutral with dissolve
+    FMG "You're the guy who doesn't want to leave and go out on dates."
+    MC "I'm sorry, do you have a problem with staying in and saving money while also cherishing the one you love most?"
+    FMG "You bozo, you know I don't. I just like getting to be girly at times, I loved how you looked at me when I wore that dress."
+    MC "I offered to go and do a fancier date and you shut me down."
+    FMG "Yeah, because I don't want that {i}today{/i}. I didn't say ever. {w}Surprise me with those sorts of dates! I get all bubbly inside seeing you with a nice button down."
+    FMG "We aren't here to talk about this now anyway. I want to play video games and kick your butt."
+    MC "Sign me up. Not for the kicking my butt part though, that's not happening."
+    MC "And um, we must pick a machine with wiggle room. As you know you take up a lot of room."
+    show FMG flex
+    FMG "You'll be fine, I'll keep my arms to my side."
+    MCT "I won't be fine."
+    show FMG happy
+    "Akira scanned the environment, lighting up like a Christmas tree when she finally spotted one of her favorites."
+    FMG "How about Karate Warriors 7?"
+    MC "Mhmmm, not a huge fan of it, but I'll play it since you want to. Don't pick your main this time... please. Last time was awful."
+    FMG "I'll think about it."
+    pause 1
+    "She didn't think about it... in fact, I bet the thought didn't even cross her mind because she locked in her main and handed me my ass on a silver platter fifteen different times."
+    MC "..."
+    MC "This game sucks. {i}You{/i} suck."
+    FMG "Hm... {w}No, I don't think I do. Judging by our games, it seems like it's a skill issue on your end."
+    show FMG flex
+    FMG "Want to lose again?"
+    MC "Pick a different game."
+    show FMG neutral
+    FMG "Would you be okay with Zombie Blasters? It's co-op... {w}and there isn't friendly fire in this one so I can't kill you."
+    MC "Thank god, I hate that you have to test for friendly fire in every single game we play."
+    FMG "We have to know!"
+    MC "You just like shooting me!"
+    show FMG happy
+    FMG "Nooooo."
+    show FMG neutral
+    FMG "We can talk about this later, preferably in a game where friendly fire is enabled."
+    MC "...When you're getting mauled by zombies don't ask for help 'cause I ain't helping. I'm watching you die from the sidelines."
+    FMG "I'm not giving you the rocket launcher."
+    MC "*Gasp*...How dare you?!? {w}That's always the best weapon."
+    FMG "Yeah, I bet you feel like an ass now, don't you?"
+    MC "Eh, nah... {w}Hey, wait... is this the game that starts you with the shotgun if you're player one?"
+    FMG "Yep. the very one."
+    MC "Interesting. {w}DIBS!"
+    show FMG angry
+    FMG "Not so fast! I'm player one."
+    "As usual, I was hoisted into the air against my will because someone was upset."
+    MC "Ma'am, I kindly request that you put me down so that I may take my rightful spot as player one."
+    show FMG neutral
+    FMG "Say you're player two and I'll consider putting you down."
+    MC "I'm not doing this with you."
+    FMG "Okay, I can hold you up all day."
+    MC "I won't cave."
+    FMG "Yeah, you will. You always do."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm FMG with fade
+    play music Peaceful
+    "She knows me too well because I did cave and I gave her player one but in my defense, I did it out of love and nothing else."
+    MC "What's the movie we're watching? I'm assuming you picked something good?"
+    show FMG neutral with dissolve
+    FMG "Heh, it's a rom com..."
+    MC "You like those?"
+    show FMG happy
+    FMG "Of course! I love them. Although, I do prefer just straight romance movies every now and then."
+    MC "Huh... didn't take you for the type."
+    show FMG neutral
+    FMG "I figured you weren't a fan of them. But since I won, I can finally get you to sit down and cuddle with me while we watch one!"
+    MC "I don't mind them, they can be corny at times, and the few that I have seen the jokes don't really land well."
+    MC "That being said, I trust your choice. You have good taste in movies... {w}most of the time."
+    FMG "All the time."
+    MC "Agree to disagree."
+    FMG "Heh, okay. {w}Before we get to the movie, I want to make ice cream sundaes and to get the other things ready for hot chocolate after."
+    FMG "And you have far too much clothing on for tonight."
+    MC "..."
+    MC "I thought we were watching a movie and weren't doing anything sexual."
+    show FMG happy
+    FMG "Cuddling with next to no clothing isn't anything sexual."
+    MC "I-I think it is."
+    show FMG angry
+    FMG "No one asked you!"
+    show FMG neutral
+    extend " And I just got this new lingerie set, you'll love it!"
+    MC "That's all you had to say. The pants are off."
+    FMG "I'll go get changed and when I get back, we'll start."
+    hide FMG with dissolve
+    MC "Can I pick at the vanilla while I wait?!"
+    FMG "I guess, but don't eat too much of it please!"
+    MC "Woo! Thank you!"
+    "There I was starting there in the kitchen in my tighty whities devouring a carton of ice cream waiting for my giant girlfriend to stroll back in... {w}living the dream."
+    #$setFMGOutfit(OutfitEnum.UNDERWEAR)
+    show FMG neutral with dissolve
+    FMG "Do you like it?"
+    MC "Mmm-... {w}Ecch... Ecccch...{w}ARRRRGH."
+    show FMG surprised
+    FMG "Holy crap, are you choking?!?!"
+    pause .5
+    MC "I-I'm good. Woah... damn. {w}I was taken back by {i}all{/i} of that. It looks fantastic on you, and it compliments your muscles perfectly."
+    show FMG flex
+    FMG "Everything does."
+    show FMG neutral
+    FMG "Pass me the scoop, it's time to construct my ice cream masterpiece."
+    MC "I'll grab the caramel drizzle and the gummy bears, what do you want on yours?"
+    FMG "Hm, give me the bananas, whipped cream, and the chocolate sprinkles... {w}Ooooh and the cookie crumbs."
+    MC "Got it."
+    pause 1
+    FMG "Thanks, Kei."
+    "She picked me up with her free arm and placed a kiss on my cheek, giggling to herself."
+    FMG "Love you."
+    MC "Love you too."
+    FMG "Alright! It's movie time. I'll turn off the rest of the lights. Can you grab the blanket?"
+    MC "Already on it."
+    show FMG happy
+    "Akira hopped on the couch, spreading her massive frame across it. She patted her hand on the cushion, beckoning for me to join her."
+    show FMG neutral
+    FMG "Come on, Kei-kun! I'm starting to get cold without you next to me!"
+    MC "I'd chalk that up to you being partially naked."
+    FMG "..."
+    show FMG angry
+    FMG "Stop being an ass and come cuddle with me!"
+    show FMG neutral
+    "I joined Akira on the couch tucking my head on her titty for premium head comfortability and maximum cuddle efficiency." 
+    "Having found a comfy \"pillow\", she proceeded to wrap her arms over the top of me, completely enveloping my upper half as she pulled my back tight up against the firm ridges of her abs."
+    "The sheer mass of her arms was enough to pin me to her without her even trying to squeeze. I wasn't moving anywhere anytime soon— and that was just fine with me."
+    FMG "Finally, we can get started."
+    "She tilted her head down resting hers on mine. I could only imagine how big her smile was as her date night came together."
+    FMG "Hey."
+    MC "What's up?"
+    FMG "I love you."
+    MC "Heh, I love you too, Akira. {w}{size=-6}Could you hit play? This menu theme is awful.{/size}"
+    show FMG aroused
+    FMG "Ha, yeah, sorry, I got distracted."
+    "She tightened her grip on me pulling me ever closer to her as I was enveloped by her warm embrace. I thought more and more about what I said as the intro to the movie started up." 
+    "In truth, losing memories of these days is something that I am scared of at times."
+    "But her tight and loving grasp.{w}These moments of happiness we share. {w}I know it's something I'll never forget."
+    jump daymenu
+
+label FMG088:
+    $setProgress("FMG", "FMG089")
+    scene Gym with fade
+    play music Peaceful
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setNatsOutfit(OutfitEnum.GYM)
+    "Akira and Nat were busy arguing about whatever form was right for whatever workout they were doing. {w}Again."
+    "If you couldn't tell, I wasn't paying much attention since I was taking a water break and staring out the window praying that I could be free of this prison they call a gym... {w}Until I was given an out."
+    MC "Oh, hey! It's snowing! What do you say we cut our workout short and have a good old fashioned snowball fight."
+    show Natsuko disappointed at Position(xcenter=0.25, yalign=1.0)
+    show FMG happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve 
+    FMG "Hell yes, we can! I want to make the biggest snow angel!"
+    Natsuko "No, no we can't. We aren't finished. We still have bicep curls, the dip station, and tricep extensions."
+    MC "Wow, you are truly a thief of joy. How do you not want to run out there and throw a snowball at Akira... {w}in the face?"
+    show FMG angry
+    FMG "Hey!"
+    MC "Okay... {w}gently, throwing it at her face."
+    show FMG happy
+    FMG "I am going to bury you once we get outside. You'll be finding snow in places you'd never expect."
+    show Natsuko neutral
+    Natsuko "You two aren't going anywhere till we're done."
+    show FMG neutral
+    FMG "Ah, come on, Nat. Lighten up, it's going to be fun. I've barely had any experience with snow! I lived in Okinawa my whole life,  it felt like it only snowed when the stars align!"
+    Natsuko "The snow will still be there when you're done here. Keep cutting your workouts short and you'll get sloppy and as long as I'm your workout partner, I won't let that happen."
+    FMG "This would be the first time... I think. {w}Please!!! It's for a good reason! I can't remember the last time I got to play in the snow! I need to make up for lost time!!"
+    MC "You'd be a villain for denying someone something like this."
+    Natsuko "Consider me a villain."
+    MC "What gets us out of here and out there? I'll do anything."
+    Natsuko "Finishing your workout."
+    MC "Give me something that I'd want to do."
+    FMG "{size=-6}Kei-kun, I'm going to pick you up and we're making a run for it. There's no way she can catch us.{/size}"
+    MCT "There's no way this works."
+    MC "{size=-6}She's left us no other options. I'm in.{/size}"
+    "Within seconds, Akira had me within her grasp and we were headed towards freedom... {w}Until we both realized Nat had picked Akira up off the ground and we weren't moving anywhere."
+    show FMG angry
+    FMG "Can you not?!?"
+    Natsuko "I made myself very clear. You want to go outside, you're finishing your routine."
+    FMG "Ugh, you're such a mom! Fine, jeez, whatever. We'll do the stupid workout! Now put us down!"
+    "Nat lowered Akira and me to the ground with the smuggest grin across her face."
+    show Natsuko smug
+    FMG "Come on, Kei. We're working out on {i}that{/i} side of the gym. Nat's starting to stink up this area."
+    show Natsuko neutral
+    Natsuko "Don't try anything, I'll be watching."
+    FMG "We got it, Captain Buzzkill!"
+    scene black with fade
+    pause .5
+    scene Lockers
+    show FMG sad
+    with fade
+    FMG "Those weights {i}still{/i} aren't enough... it's never enough reps for a good pump."
+    show FMG sad at altMove(0.5, 0.25)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve 
+    Natsuko "It seems we might have to turn towards using some of the larger weight gain students."
+    MC "That's a bit weird, don't you think?"
+    show FMG neutral
+    Natsuko "That was a joke, Hotsure-san. I don't plan on using them for my weights."
+    MC "It's hard to tell with you and that face you always have on."
+    Natsuko "Is that a problem?"
+    MC "{i}Sigh...{/i}No, it isn't. {w}Are we allowed to leave now? I'm trying to throw snowballs at random students."
+    Natsuko "After I do my flexing routine we can go, yes."
+    MC "{size=-6}Oh my lord.{/size}"
+    MC "Half of the time we're in the gym is spent with you two flexing in the mirrors..."
+    show FMG flex
+    FMG "I didn't think you'd have a problem with us showing off. Are you intimidated?"
+    show Natsuko flex
+    Natsuko "Can't say I blame you, Hotsure-san. You have the luxury of working out with the strongest people on campus."
+    MC "..."
+    MC "No, okay, look... it's hot, unfathomable amounts of hot. Now, having said that there's snow outside and I'm in here... {w}Which is not where the snow is."
+    show FMG neutral
+    FMG "Let me change and we can go."
+    Natsuko "I'll catch up after I'm done practicing my poses."
+    FMG "Don't go too hard, Nat. Last time you ripped your stockings when you flexed your quads. Don't need your gym clothes popping off."
+    show Natsuko disappointed 
+    Natsuko "It's not my fault these clothes can't contain my size..."
+    MCT "I miss all the good stuff, man. Why did no one call me to help???"
+    MC "Man..."
+    FMG "You okay?"
+    MC "Y...Yeah, let's get going."
+    scene black with fade
+    pause .5
+    $setFMGOutfit(OutfitEnum.WINTER)
+    $setNatsOutfit(OutfitEnum.WINTER)
+    scene Campus Center with fade
+    show FMG neutral
+    with fade
+    play music WinterVocal
+    FMG "How long till Nat joins us and sours the mood? I give her five seconds."
+    MC "I know we were giving her shit for not dropping her workout, but maybe she will have some fun with us. Maybe this is what she needs! You never know."
+    FMG "Yeah, you're right. It's hard to tell with her. I'm making a snow angel before she comes to kill the fun."
+    MC "Can I throw snowballs at you while you do it?"
+    show FMG sad
+    FMG "..."
+    MC "What? Is that a no?"
+    MC "Can you say something instead of looking disappointed? I get enough of that from my family."
+    show FMG neutral
+    FMG "Let me make one {i}big{/i} snow angel and then we can have a snowball fight."
+    MC "One. I want to make a snow fort as well, time is precious."
+    Natsuko "You two are kids."
+    MC "Well, well, well, look who decided to show up."
+    show FMG neutral at altMove(0.5, 0.25)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "I'm only here because I have nothing better to do."
+    FMG "You're a liar. You're here 'cause you want to spend time with your {i}friends{/i}."
+    Natsuko "Whatever..."
+    MC "Think fast, Nat!"
+    "I had crafted the perfect snowball, perfectly spherical, perfect size, perfect texture. The holy grail of snowballs. I launched at Nat with such dominating energy, not even she could withstand it."
+    Natsuko "..."
+    MC "..."
+    "The red-headed amazon raised an eyebrow at me, looking down at her abs where the snowball had landed. {w}Clearly upset that she had not thought fast."
+    Natsuko "This is stupid."
+    MC "Yeah, well, you're stupid."
+    Natsuko "Mmm."
+    MC "{i}*Cough*{/i} Akira, a little help here."
+    FMG "Nah, you're on your own with this. You should've known what you were getting yourself into with that idea."
+    FMG "Whatever Nat does to you, you had it coming."
+    MCT "You are useless."
+    MC "Hahahaha...{w}You're serious?"
+    FMG "Totally, I'm not going to let your cries of pain get in the way of my snow angels. I'll take your broken body to the nurse when I'm done."
+    MC "..."
+    MC "No hard feelings, Nat?"
+    "Before I could even blink, Natsuko had grabbed me by the collar, and with what felt like super speed, I was tossed into a snowbank head first."
+    show Natsuko smug
+    Natsuko "No hard feelings, Hotsure-san."
+    pause 1
+    MC "Not only was that not cool..."
+    FMG "You seem pretty cool being covered in all that snow."
+    MC "You... are... not helping."
+    FMG "{size=-6}And to think, I was going to give you a nice warm hug, but you had to ruin it by talking.{/size}"
+    show Natsuko flex
+    Natsuko "If you'd like to be thrown even deeper, Hotsure-san, I'll gladly grant your wish."
+    MC "???"
+    show Natsuko neutral
+    MC "No, I don't want that. What's up with you always throwing people? Why can't you be more like Akira and hug it out or just try to be less violent."
+    Natsuko "Hugging doesn't solve my problems. I don't hug people."
+    MC "You are a sad, strange amazon, and you have my pity."
+    FMG "Maybe you should try a different approach to your problems instead of being so direct."
+    Natsuko "I didn't come here for a life lesson."
+    MC "Alright, sure, no life lesson. Would you wanna build a snowman?~"
+    show Natsuko disappointed 
+    Natsuko "..."
+    Natsuko "Why did you sing it...?"
+    MC "I... don't know... {w}weird..."
+    MC "Okay, um what about building a fort with Akira and me? We can call it \"Fort Keisuke\" and you guys can be my bodyguards."
+    Natsuko "This is so incredibly childish..."
+    show Natsuko neutral
+    Natsuko "Is there {i}nothing{/i} else you two want to do?"
+    show FMG happy
+    FMG "Nope!"
+    MC "Hell no, I came out to spread my main character energy around campus by pelting as many students with snowballs as possible."
+    show Natsuko disappointed 
+    FMG "Nat it's going to be fun! You'll have fun, just give it a chance."
+    Natsuko "..."
+    Natsuko "Fine."
+    show FMG neutral
+    FMG "There it is."
+    show FMG flex
+    if getFlag("FMG058_Nat"):
+        FMG "I'll cut you a deal, Nat. I've been wanting a pose off rematch. So, if you do this I'll give you the chance to compete against me again and maybe I'll let you win."
+        show Natsuko flex
+        Natsuko "Hotsure-san had good taste last time and I'm sure his preference hasn't changed since. But I'll gladly accept."
+    else:
+        FMG "I'll even give you that flex off rematch you've been asking for. Just to keep us even."
+        show Natsuko flex
+        Natsuko "Now I'm interested."
+    show Natsuko neutral
+    Natsuko "Now then what are we doing first?"
+    show FMG happy
+    FMG "Snow angels, of course!"
+    MC "I'll make more snowballs and I'll judge you guys from a distance. Silent judgment is my favorite."
+    "Akira leaped backwards into the snow within seconds, giggling and waving her arms and legs frantically."
+    show FMG flex
+    FMG "Damn, that's one buff snow angel, heh."
+    show Natsuko disappointed 
+    "Natsuko, on the other hand, was not as willing."
+    show FMG happy
+    FMG "Your turn."
+    Natsuko "..."
+    MC "Don't be such a pussy, Nat!"
+    show Natsuko neutral
+    Natsuko "Don't make me-"
+    show FMG surprised
+    "I must have felt like taking a ride in the fast lane today with that near-perfect throw... {w}Right in the boob."
+    FMG "Ooooh no..."
+    "The silence was deafening, Natsuko stared at me contemplating whether to rip me in half or... rip me in half."
+    "Instead she exhaled, puffing her chest out while cracking her neck and knuckles."
+    show Natsuko smug
+    Natsuko "Have it your way, Hotsure-san."
+    MC "Wow, that's a big-"
+    play sound Thud
+    extend " OOF!"
+    "It was like getting hit by a car, the force from the snowball colliding with my chest knocked me straight to the ground."
+    show FMG happy
+    FMG "Yooo! Let's go, Nat! Nice throw!"
+    show Natsuko flex
+    MCT "Okay, two can play that game, Nat."
+    "I lobbed two more frozen bombs- nailing Akira in her stupid face as she laughed and, much to my displeasure, Nat had dodged the other."
+    show Natsuko smug
+    show FMG angry
+    FMG "You are so dead! I'm going to make you regret that throw."
+    MC "This was over before it started! I've already won! But I'll consider your unconditional surren-"
+    play sound Thud
+    show FMG happy
+    FMG "Suck it, hahaha."
+    Natsuko "Ha, deserved."
+    MCT "So that's how they want this to go down. I tried to play nice, but the kid gloves are coming off... {w}Oh, who am I kidding? I could probably put a rock in these and it wouldn't hurt them."
+    pause .5
+    MCT "Damn, that was a dark thought."
+    "Putting the intrusive thought behind me, I raised my head over my snow mount... {w}Only to be met with the amazons each holding a gigantic snowball above their heads."
+    show FMG flex
+    show Natsuko flex
+    MC "Oh what the fu-"
+    "And just like my grades the snowballs came down, shattering my body but most importantly my spirit."
+    FMG "And {i}that's{/i} how it's done!"
+    Natsuko "To think you even stood a chance against Akira and I, Hotsure-san. The thought alone is enough to make me laugh."
+    MC "Get me out! I'm stuck!"
+    "The amazons high-fived, laughing at their cheap victory over an innocent young man simply trying to enjoy himself."
+    show FMG happy
+    show Natsuko smug
+    Natsuko "I got him."
+    pause 1
+    Natsuko "There."
+    MC "You guys {i}suck{/i} and just know this isn't over. I will have my revenge."
+    FMG "Keep telling yourself that, little man."
+    Natsuko "We can't all be winners, Hotsure-san. {w}Heh, well, unless you're us of course."
+    MC "..."
+    Natsuko "I did have some fun after all, I wouldn't say no to another snowball fight."
+    show Natsuko flex
+    Natsuko "Especially if it means I can humiliate you again, Hotsure-san."
+    show Natsuko neutral
+    Natsuko "Having said that I could go for a hot shower, so I'll see myself out. Text me when you're free tomorrow, Akira. I want to beat my PR on the bench."
+    show FMG flex
+    FMG "Sure thing, I want to beat mine too!"
+    MC "Yeah, me three!"
+    FMG "Guess it's settled! We'll be there."
+    Natsuko "Till then, goodbye you two."
+    hide Natsuko with dissolve
+    show FMG flex at altMove(0.5, 0.5)
+    FMG "Now, that Nat's gone."
+    show FMG aroused
+    extend " I could use a warm shower and a warm pair of hands on my back."
+    MC "Yes because you can't reach it, I know. It must be hard not being able to keep your arms at your sides and on top of that looking like a total fool who can't scratch their back."
+    show FMG angry
+    FMG "How much do you bench again?"
+    MC "A realistic amount...?"
+    MC "What does that have to do with any of this???"
+    show FMG neutral
+    FMG "Nothing, I just felt like flexing on you. But for reals, I could go for a massage. Your girl is sore today."
+    MC "Fine. I'll massage your back if you pec bounce when we cuddle on the couch."
+    show FMG happy
+    FMG "Deal, I'll even flex my arms for you."
+    MC "Wonderful, now please carry me back, this loser is upset he lost."
+    FMG "Sure, Kei-kun."
+    MC "At least Nat had fun... for once."
+    show FMG neutral
+    FMG "True! {w}By the way, how did you know she wasn't going to kill you after that second snowball?"
+    MC "Oh, yeah... {w}I didn't. I said screw it and risked my life for a quick laugh."
+    MC "You would've protected me though, right?"
+    show FMG sad
+    FMG "..."
+    MC "Right???"
+    hide FMG with dissolve
+    "I peaked my head over Akira's gigantic shoulder to look back at the mess we had created... {w}Only to spot Natsuko walking back to the crime scene."
+    "She looked all around to make sure not a soul was around and watching. Thankfully, she didn't notice me looking due to Akira's large frame."
+    "The amazon leaped back into the snow after she saw the coast was clear and began to make a snow angel of her own, smiling the entire time."
+    MC "You can't fool me, I knew you were enjoying it the moment you joined us."
+    show FMG neutral with dissolve
+    FMG "Are you talking to yourself?"
+    MC "It's nothing, just thinking out loud. {w}Actually, on second thought, can you keep a secret?"
+    FMG "Uh, yeah, I guess, your secrets tend to suck balls though."
+    MC "..."
+    MC "You always find some way to make me regret including you in {i}anything{/i}..."
+    MC "That is a conversation for another day... just turn your head and look behind you."
+    show FMG happy
+    FMG "Heh, I freaking knew it. She loves hanging out with us— that faker!"
+    MC "You want to go harass her?"
+    FMG "Nah, not this time. I'll bug her at the gym tomorrow when she's her usual grumpy self."
+    jump daymenu
+
+label FMG089:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
