@@ -1612,8 +1612,8 @@ label WG010:
     WG "Not \"like\" a salesman. Actually be one."
     MC "Uhhh..."
     show WG happy
-    WG "It's child's play. All you have to do is distribute these catalogues I've made-"
-    "She handed me a box of tri-folded papers - more like brochures than catalogues - that she must have made on her computer."
+    WG "It's child's play. All you have to do is distribute these catalogs I've made-"
+    "She handed me a box of tri-folded papers - more like brochures than catalogs - that she must have made on her computer."
     "While they lacked the polish an experienced graphic designer would bring, they did get right to the point, emphasizing the low prices and breadth of available sizes for every body type."
     WG "-and talk up what a bargain this is. Be sure to emphasize the more prestigious name brands, and that other designer labels will be available in the future."
     show WG neutral
@@ -1662,7 +1662,7 @@ label WG010_accept:
     $setFlag("WG_working")
     show WG happy
     WG "We can discuss your salary and bonuses later. Right now I want you to take advantage of the period before classes."
-    WG "Get out there and distribute those catalogues. I want to see that box at least half-empty before the bell for first period rings."
+    WG "Get out there and distribute those catalogs. I want to see that box at least half-empty before the bell for first period rings."
     "Caught up in her energy and enthusiasm, I sped away to start hawking her services."
     "I tried to think of who would need new clothes. Like Alice, I hadn't noticed any real growth in anybody yet."
     "But maybe necessity wasn't the best avenue to take yet. Maybe there was someone who just wanted something nice and flattering for after school."
@@ -1675,41 +1675,53 @@ label WG010_accept:
             jump WG010_c3
 
 label WG010_c1:
-    $setFlag("WG010_shiori")
-    scene Hallway
-    show AE angry
-    with fade
-    "I found Shiori prowling the halls, eyes jumping around from student to student, as if she was looking for violations of the school dress code or something."
-    "For a second I thought this would be a good lean-in to my sales pitch, but when I saw her expression I scratched that idea."
-    "Something a little more subtle would be needed."
-    MC "Hey, Matsumoto-san. You sleep well?"
-    show AE neutral
-    AE "Hello Hotsure-san. To answer your question, I'd say about four hours at this point, however that's neither here nor there. Is there anything you need?"
-    MCT "I could respond with \"Actually, it's about what you need.\" Except she looks more serious than usual."
-    MC "Just making conversation. We are classmates, after all. We should be on friendly terms with one another."
-    AE "Ah, I see. Yes, well, while I'm all for interaction, but I'm preoccupied at the moment. Begging your pardon."
-    "She started to turn away, but I at least had to give her a \"catalogue\" to say I did my job."
-    "Gracelessly, I almost shoved one of them at her arm."
-    MC " Here. Something to check out at your leisure, when you have some free time."
-    show AE surprised
-    AE "Hm? What is... The Nikumaru Outlet Direct? Keisuke... is this what I think it is?"
-    "Something in her tone told me to tread carefully. But I, not exactly a cat burglar, couldn't do much except flail around."
-    MC "Well, it's... I'm not sure what you think it is. What do you..."
-    show AE angry
-    "She's glaring at me, and I see that playing coy wouldn't work even if I could do so properly."
-    MC "Alice... Nikumaru-san has created a direct-market business. She orders stuff from manufacturers and can sell them at a discount. Clothes, school supplies, stuff like that."
-    show AE angry
-    AE "Hotsure-san... You can't just... ngh... Where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
-    MC "She should be in the cafeteria..."
-    "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
-    hide AE with dissolve
-    "Shiori was already brushing past me, making a direct line for the cafeteria."
-    $setAffection("WG", -1)
-    "I looked down at the box of \"catalogues\" I was holding, wondering if I should keep handing them out or consider myself fired."
-    jump daymenu
+    if is EventCleared("WGGTS002"):
+        "Well, at least that's what I would have normally thought, but after seeing how displeased Shirori was to find out Alice started a business on campus, I'd just be rubbing it in her face if I came up to her with the offer."
+        "That and Alice already had tried to sell her on some of the items. If she couldn't thaw the Ice Queen enough to make a sale, I stood a snowball's chance in hell."
+        MCT "Alright, so scratch that."
+        menu:
+            "Aida. Alice had mentioned she doesn't have an extensive wardrobe.":
+                jump WG010_c2
+            "Honoka. Even if she hasn't grown, her needs already stretch most clothing shops.":
+                jump WG010_c3
+
+    else:
+        $setFlag("WG010_shiori")
+        scene Hallway
+        show AE angry
+        with fade
+        "I found Shiori prowling the halls, eyes jumping around from student to student, as if she was looking for violations of the school dress code or something."
+        "For a second I thought this would be a good lean-in to my sales pitch, but when I saw her expression I scratched that idea."
+        "Something a little more subtle would be needed."
+        MC "Hey, Matsumoto-san. You sleep well?"
+        show AE neutral
+        AE "Hello Hotsure-san. To answer your question, I'd say about four hours at this point, however that's neither here nor there. Is there anything you need?"
+        MCT "I could respond with \"Actually, it's about what you need.\" Except she looks more serious than usual."
+        MC "Just making conversation. We are classmates, after all. We should be on friendly terms with one another."
+        AE "Ah, I see. Yes, well, while I'm all for interaction, but I'm preoccupied at the moment. Begging your pardon."
+        "She started to turn away, but I at least had to give her a \"catalog\" to say I did my job."
+        "Gracelessly, I almost shoved one of them at her arm."
+        MC " Here. Something to check out at your leisure, when you have some free time."
+        show AE surprised
+        AE "Hm? What is... The Nikumaru Outlet Direct? Keisuke... is this what I think it is?"
+        "Something in her tone told me to tread carefully. But I, not exactly a cat burglar, couldn't do much except flail around."
+        MC "Well, it's... I'm not sure what you think it is. What do you..."
+        show AE angry
+        "She's glaring at me, and I see that playing coy wouldn't work even if I could do so properly."
+        MC "Alice... Nikumaru-san has created a direct-market business. She orders stuff from manufacturers and can sell them at a discount. Clothes, school supplies, stuff like that."
+        show AE angry
+        AE "Hotsure-san... You can't just... ngh... Where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
+        MC "She should be in the cafeteria..."
+        "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
+        hide AE with dissolve
+        "Shiori was already brushing past me, making a direct line for the cafeteria."
+        $setAffection("WG", -3)
+        "I looked down at the box of \"catalogs\" I was holding, wondering if I should keep handing them out or consider myself fired."
+        jump daymenu
 
 label WG010_c2:
     $setVar("BEP", getVar("BEP") + 1)
+    $setFlag("WG010_Aida")
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral at center with dissolve
@@ -1724,7 +1736,7 @@ label WG010_c2:
     "For a split-second I thought about suggesting she buy something in her own size, but her doe-eyed expression made her look like she was on the brink of tears and I shot that idea down."
     MC "No, it's... it's cute."
     MC "But when you're cooking you don't really want anything that can get stained or burnt, right?"
-    "I took out one of the \"catalogues\" and held it out."
+    "I took out one of the \"catalogs\" and held it out."
     MC "If you're interested in something a bit more form-fitting - for safety purposes - there's..."
     show PRG sad
     "I trailed off, because her expression had turned ashamed, lip bit and eyes downcast."
@@ -1743,7 +1755,13 @@ label WG010_c2:
         show PRG neutral
         PRG "Yes, th-thank you, Hotsure-san..."
     "As I walked away I wondered who was more embarrassed, me or her. She was doing a better job of putting a happy face on it, at least."
-    "My first stab at a sale and I whiffed it. But I still had time before class started, so the morning wasn't a complete waste. Yet."
+    MCT "Ugggghh... What was I thinking?"
+    "I wasn't. That was the answer."
+    MCT "Those two live together, not to mention Aida works for Alice."
+    $setAffection("WG", -5)
+    extend " I'm sure eventually something will get mentioned to Alice about this and she'll think I'm a complete idiot."
+    "My first stab at a sale and I whiffed it. {w}I guess that's what I get for being overly focused on what on an easy commission rather than the bigger picture." 
+    "No sense in beating myself up about it, I might still be able to redeem myself with a sale if I keep an eye out for mor prospects. But I still had time before class started, so the morning wasn't a complete waste. Yet."
     jump daymenu
 
 label WG010_c3:
@@ -25117,7 +25135,7 @@ label WG080_Afterchoice:
         "Maybe he doesn't want you to take it as a given.":
             show WG pondering
             MC "Maybe he doesn't want you to take it as a given. You know, to keep you motivated and hungry for it?"
-            MCT "Hmm, maybe \"hungry\" wasn't the best word there…"
+            MCT "Hmm, maybe \"hungry\" wasn't the best word there..."
             show WG happy
             $setAffection("WG", 1) 
             WG "Yes! I think you're right. That's very much something Father would do. A successful businessman like him has an endless supply of willing apprentices." 

@@ -8271,7 +8271,7 @@ label MC033:
     extend " It's hard to imagine him being smaller than me even. I suspect he was still a good student though, in spite of those things."
     show HR neutral
     if isEventCleared("MC002"):
-        MC "Wait a second, I thought you told me he was a nationally ranked judo athlete by the time he graduated highschool."
+        MC "Wait a second, I thought you told me he was a nationally ranked judo athlete by the time he graduated high school."
         HR "Yeah, in the under 55kg class. Doesn't quite send the same message to students, so I tend to leave that part of the story out."
         HR "To hear him tell it, his parents enrolled him in martial arts classes from a young age because he got picked on so much."
     HR "When he first got here, he was very sullen and quiet. There was even a rumor amongst the students that he couldn't talk."
@@ -9429,6 +9429,7 @@ label RM001:
     MCT "Well that died out pretty quickly."
     menu:
         "Ask him about the device.":
+            $setFlag("RM001_Device")
             MCT "Honestly, is it my job to keep this conversation going?"
             MC " Sooo, what about your project there? Do you like tinkering with stuff?"
             show RM neutral
@@ -9458,6 +9459,7 @@ label RM001:
             "But now I felt like I understood what was happening. Maybe he'd make a good teacher after all."
             jump daymenu
         "Focus on your homework.":
+            $setFlag("RM001_Study")
             MC "Alright, well looks like you're busy. I'll leave you to it. Good talk."
             show RM neutral
             RM "Okay, sounds good. Thanks for asking though. Since we'll be living together for the foreseeable future, we should probably talk more often."
@@ -9479,186 +9481,437 @@ label RM001:
 
 
 label RM002:
-    scene Hallway with fade
+    scene Cafeteria with fade
     if not getFlag("Meet_Yuki"):
         $setFlag("Meet_Yuki")
-    "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
-    "Out of the corner of my eye, inside another classroom, I noticed..."
-    show RM neutral at Position (xcenter=0.95) with dissolve
+        play music Peaceful
+        "I was sitting in the cafeteria picking at my food. Not that it was bad, but the monjayaki wasn't looking particularly appetizing and I just wasn't that hungry." 
+        "I was more so staring out the window wishing I could have had the chance to enjoy the nice warm weather more, instead of being stuck in classes all day. Part of me thought about taking a walk outside instead of sitting here trying to finish this thing."
+        "This place was still pretty new to me and nothing really felt all that familiar."
+
+    if not isEventCleared("MC003"):
+        "One would think that wouldn't be the case going to the same school as your sister, but even she was seemingly nowhere to be found."
+        MCT "I need to talk to her sooner or later. Might as well give her a shout."
+        MCCell "<Hey, how's things been going with you?>"
+        pause 1
+        "I waited a little bit for a response but gave up when I didn't get anything in response."
+        MCT "Lotta good that phone does when you never check your messages Tomo."
+        "By this point I would have at least tried to pop in for a visit, but I never even bothered to ask for her room number, so I had no idea how to find her. Not that I imagined it would've been hard to, yet here we are."
+        MCT "I worry about her sometimes."
+    else:
+        "The whole place, and this whole {i}scenario{/i} (for a lack of a better term) still wasn't sitting well with me. Probably not with anyone for that matter."
+        "Though if what Tashi-sensei said is true, with himself being the prime example, it sounded like Tomo and I were getting off easy with this hair growth thing." 
+        "She especially didn't need something that was going to make it harder to meet new people and make friends. As strange as this all was, part of me hoped this smaller school setting will be easier for her in that regard."
+        MCT "I guess I worry too much about her. She's an adult now. She can make her own choices— or at least learn to live with them."
+
+    UNKNOWN "Tehehe!"
+    "My train of thought was interrupted by the sound of obnoxious laughter between a group of students at the next table over that had been prattling on about all manner of inane gossip."
+    "I had no idea who these girls were, but I recognised the arm band on one of them to at least know she was one of the student council members."
+    Student1 "So, who's your pick? There's more than a few good ones to choose from here."
+    MCT "Hmm, already sizing up the guys at the school? Not that I'm particularly interested in any of them over there, but I'd be curious how I rank."
+    CMF "Isn't it obvious? It's easily Hageshi-sensei. He's tall, super buff, and those eyes... I could just stay lost forever in their gaze. Girl, you don't even know!"
+    Student1 "Hehe! Oh, believe me, I know. He's a total dreamboat!"
+    MCT "Yeesh. They're talking about the faculty. Girls in high school would do this too. {w}Hageshi I kind of understand, but some of these dudes are old enough to be their dads. What the hell is wrong with these chicks?"
+    Student1 "What about you Etsuko?"
+    Student2 "There's a certain someone I have in mind... he's a PE teacher."
+    Student1 "You mean Sugiyama-sensei?"
+    Student2 "I'm not sure, I've never heard his name. He has long hair that's tied in a bun, and a scruffy beard that's... oo! He's definitely my type for sure."
+    Student1 "That doesn't sound like Sugiyama-sensei. His hair is super short, like a buzz cut."
+    Student2 "You seem to know the who's who on campus Yuki-chan, you know who I'm talking about, right?"
+    CMF "Sorry, it's not really ringing a bell. Being on the student council is great for having my finger on the pulse of things, but it doesn't usually involve anything with the staff that run the sports and other physical activities."
+    CMF "But I'll see what I can dig up. I'm definitely curious if he's caught your eye already."
+    Student2 "Hey, easy now! He's my pick!"
+    "Girls" "TEHEHE!"
+    "At this point I was ready to tune it all out. I wasn't interested in their blithering nonsense, or at least I thought I wasn't until I heard the next little tidbit."
+    CMF "What about you Fumika-chan? Who's your pick?"
+    Student1 "Well, you already took my first pick with Hageshi-sensei, so I feel like I should pick another."
+    Student2 "Who do you have in mind? I want to know the juicy details."
+    Student1 "Well, it's a little embarrassing... Promise me you won't make fun of me?"
+    CMF "Promise. Now I gotta know. Who?"
+    Student2 "I'll try, but I ain't promising nothing. Come on, you gotta tell us now."
+    Student1 "Oh, might as well get it over with. I was thinking... {size=-6}Tashi-sensei{/size}..."
+    "Girls" "Eeeeehh?!"
+    Student1 "I know, I know. Don't get me wrong, his tongue is still like... super gross. But he's got this broody bad-boy vibe. {w}I kinda dig it."
+    Student1 "He just strikes me as someone who's deep and interesting, more than he lets on at least. If I were ten years older I'd certainly try to flirt the hell out of him, just to see how he'd react!"
+    "Girls" "TEHEHEHE!"
+    "If I wasn't planning on finishing my lunch before, I was certainly planning on losing it after learning anyone was getting warm between the legs after seeing that python flop out of Tashi-sensei's mouth."
+    MCT "That's it. I'm getting the hell out of here."
+    "I was gathering my tray so I could leave, but paused for a second after realizing the subject had changed to something slightly more interesting." 
+    Student1 "So how have you been managing with yours, Yuki-chan?"
+    "Daichi did say he wanted me to keep my ear to the ground when it came to information about the factors around the school." 
+    "I didn't feel particularly compelled to join in his hairbrained schemes, but I was curious enough myself to try to learn a bit more about them if the opportunity presented itself."
+    CMF "I've noticed it a little so far. What do you think? Do they look puffy to you?"
+    "The council member looked to be pointing at her lips. It was hard to tell, she was the one facing away from me."
+    Student1 "A little yeah. But it's nothing to worry about. It's nothing that a little make-up and lipstick can't cover up."
+    CMF "I hope so..."
+    Student1 "What apparently can't be covered up is my fat ass with a pair of jeans. I tried fitting into my favorite pair the other day."
+    Student1 "I huffed and I puffed and pulled and pulled, until finally after 20 minutes of struggling to get them over my thighs I finally managed to button them up— only for my butt to blow out the middle seam!" 
+    Student1 "I really liked that pair too..."
+    Student2 "That sucks, I'm sorry Fumika-chan."
+    Student1 "...I should have just given up when they wouldn't even pull over my thighs."
+    "Seemingly normal up top, this girl was, true to her word, quite a chunkster around her thighs, with a butt not so far behind to boot."
+    if getHighestAffection() == "AE" or getHighestAffection() == "WG":
+        "Needless to say, my interest was piqued." 
+    Student2 "My clothes haven't been fitting quite the same either."
+    Student1 "Yeah but you're looking tight in the right places." 
+    CMF "You're looking so toned, I'm jealous girl."
+    if getHighestAffection() == "FMG":
+        "The school uniforms weren't exactly the most revealing clothes in the world, but giving her a once over I noticed the girl did have some pretty toned arms on her. She looked like she spent a decent amount of time at the gym."
+    Student2 "I'm still not sure how I feel about it to be honest. I don't feel like anything I have really flatters my figure."
+    Student1 "I bet it feels good though right? To be in better shape I mean. {w}Think you'll try out for any of the sports clubs? We could always use a few more in the basketball club."
+    Student2 "I'm actually thinking of trying the cooking club. It's something I've always kind of been interested in. My grandma was such a good cook, but my mom sure wasn't, so I never got to learn how."
+    Student1 "I suppose that's fine too..."
+    Student2 "How would I go about joining? I'd been meaning to ask Takamura-sensei, but is there some kind of protocol I should follow? I figure you'd both know since you have her for homeroom class."
+    CMF "Takamura-sensei is super nice, I'm sure she'd love to talk to you about the club, but she'd probably just send you to the club president."
+    Student1 "Oh yeah, Sato-san, or something like that."
+    CMF "Close, Fumika-chan. Her name is Michiko Sano, she handles the matters related to the club applications, so you should go ask her."
+    Student2 "Thanks, I'll try to find her."
+    CMF "Bye Etsuko-chan!"
+    Student1 "Bye."
+    "By this point in my little investigation, I was starting to feel like a real private eye." 
+    "Seriously, like the real life kind where they sit in a car for five hours hoping to catch some fat dude with a back injury lifting something heavy so the insurance company that hired them can cancel the guy's disability policy."
+    MCT "I have to imagine this is what Daichi spends most of his free time doing."
+    "These girls were boring me to tears. Whatever courtesy I owed Daichi to \"investigate\" this matter I had paid in full by this point. It was just by mere chance I could still continue to hear their conversation since we got up to leave at the same time."
+    Student1 "So, got any plans for today?"
+    CMF "Nothing that exciting. I have hall monitor duty on the lower floors after lunch. My shift starts in about fifteen minutes, but that gives me a bit of time to drop off these forms to the council president's office."
+    "I couldn't help but notice the council member paused to take a long gulp, being noticeably unsettled after mention of the council president."
+    Student1 "Hm? What's a matter? {w}Oh, {i}Oh!{/i} {w}I take it you have to talk to the \"Specter\"?"
+    "The council member visibly frowned at the mention of that name."
+    CMF "No, it's not that. Why would you say that?"
+    Student1 "I don't know, she just seems like someone who's hard to talk to."
+    Student1 "Speaking of her, funny enough, I got assigned to be on a group project with her. We need to have the paper ready in a few days but I haven't even been able to get in touch with her to start." 
+    Student1 "Think you could let her know I've been trying to reach her?"
+    CMF "I'll be sure to pass along your message, but in the future, could you please not use that name?"
+    CMF "It's not her title or anything, it's just a rude nickname someone came up with for her. She's really not that bad." 
+    "Judging by the skeptical reaction of the other girl, she didn't seem to be buying that assessment."
+    CMF "Sure she has her own quirks and particular way of doing things, but so does everyone, and that's fine with me."
+    Student1 "Okay... Well, thanks for passing that along for me."
+    "Miss chunky thighs checked her phone more time had passed than she thought."
+    Student1 "Shoot! I gotta head out and get ready for club practice. I've been working on my three-point shots and I'm hoping to blow out the scoreboard tonight."
+    CMF "Sounds like more fun than blowing out your pants. Teehee!"
+    Student1 "Haha! You got that right. I'll catch you later!"
+    "The two girls split off from each other as they exited the cafeteria. I took a turn down a different hallway."
+    play music HigherEdu
+    scene School Inner with fade
+    "Looking out the window, the rest of the campus seemed to be enjoying the warmer spring weather. Students hanging out on the lawn with their books out or just chilling to some music on their ear buds."
+    "There appeared to be a lot of activity out on the track with people running back and forth. I had to assume the track team was in the middle of their practice."
+    MCT "Man, it's actually surprising how many clubs they have at this school. I don't remember there being this many back in high school, and my school had a lot more students."
+    "Then again, part of me supposed it wasn't too surprising though." 
+    "The school probably wanted to provide lots of opportunities for activities that could keep the students' minds occupied, instead of nothing to do but dwell on what was going to happen to them with their factors."
+    "Even I found myself feeling overwhelmed by the recent news from time to time, and I didn't have nearly as much to worry about what might go wrong compared to others."
+    MCT "Looks like most everyone else has found something to do with the afternoon. Wonder what I should do?"
+    if getSize() <= 2:
+        if isEventCleared("BE004"):
+            MCT "Maybe I could stop by the soccer field and see Honoka while she's at practice."
+        elif isEventCleared("AE004"):
+            MCT "Maybe I could pop into the office and see if Shiori-san could use a break? {w}On second thought, she'd probably ask me straightaway how my studying has been going." 
+            MCT "I should probably get working on that so I have a good answer to give her next time I run into her."
+        elif isEventCleared("FMG004"):
+            MCT "Maybe I should hit the gym. Don't want to start slacking on my fitness like most people do after high school. Might even run into Akira again while I'm there."
+            MCT "Ehh, but I'm tired already from the day. I don't have enough in the tank. Besides, I'd probably just embarrass myself in front of her." 
+        elif isEventCleared("GTS004"):
+            MCT "I should probably do the more diligent thing and get working on my homework and catch up on my study materials."
+            MCT "Though I wouldn't mind taking a stroll through the garden as a slight detour on my way back to my room. Maybe I'll see Yamazaki-san there."
+        elif isEventCleared("WG004") and not isEventCleared("WG006"):
+            "Seeing all these athletic clubs made me wonder what sort of club Alice might be part of. She didn't exactly strike me as the athletic type, so I had to wonder if there was anything available that would strike her fancy."
+        elif isEventCleared("WG006"):
+            "Thinking about all the club activities going on made me think about Alice and the music club. She hadn't exactly handled the news well about not being voted as the club president."
+            MCT "That does remind me, I should probably pick up practicing music again myself."
+        elif isEventCleared("PRG004") and not isEventCleared("PRG013"):
+            "Thinking about all the club activities going on made me think about if Kodama-san found any she found interesting. {w}She didn't strike me as the sports type, but surely they had other types of clubs."
+            "Then again, even if she was interested in joining a club, she probably has her hands full enough already assisting Alice."
+        else:
+            "Since it was a nice day outside, I thought about just taking a stroll across campus to get a little more familiar with the place before just heading back to my dorm." 
+            "I'd been procrastinating on my homework and study time, and I told myself I needed to at least get {i}something{/i} done on it tonight."
+    else:
+        "Since it was a nice day outside, I thought about just taking a stroll across campus to get a little more familiar with the place before just heading back to my dorm." 
+        "I'd been procrastinating on my homework and study time, and I told myself I needed to at least get {i}something{/i} done on it tonight."
+
+    scene Gate Front with fade
+    "I was about to head outside to the quad from the main campus building when I heard something odd."
+    MCT "..."
+    "Looking around and seeing nothing, I assumed it was just my imagination. Maybe someone left a window open and it was the wind blowing in. It was a nice day after all."
+    "I took a few more steps closer to the exit, the click of my shoes echoing through the empty entryway, but I quickly stopped when I realized something wasn't quite right."
+    MCT "Hm?"
+    "A brief flicker of movement out of the corner of my eye confirmed my suspicions: {w}I was being watched."
+    UNKNOWN "{size=-6}Psst! It's me.{/size}"
+    MC "Well that doesn't exactly tell me anything."
+    "Peaking around the pillar where I saw the movement from earlier revealed none other than who I should have suspected from the get-go."
     play music RM
-    pause 2
-    show RM angry
-    "He glared at me and made a beckoning motion."
-    "Resigned, I walked over to him and hissed..."
-    show RM neutral at center with move
-    MC "What?"
-    RM "I need your help with something."
-    MC "Daichi, I'm hungry. Can it wait until after lunch?"
-    RM "No. This is important. It'll be simple, though."
-    RM "All I need you to do is keep watch. If anyone wants to come in here, let me know - just make some noise or something, and stall them for a few seconds."
-    jump RM002_choice
-
-label RM002_choice:
-    menu:
-        "Sure.":
-            jump RM002_c1_1
-        "What are you doing, exactly?":
-            jump RM002_c1_2
-        "This is a stupid idea.":
-            jump RM002_c1_3
-
-label RM002_c1_1:
-    MC "You're right, that does sound simple. Alright, go ahead."
-    show RM happy
-    $setAffection("RM", 1)
-    RM "Thanks. I'll be quick."
-    jump RM002_c1_after
-
-label RM002_c1_2:
-    MC "What exactly are you doing in there?"
-    "After scanning the hallway to make sure nobody was paying attention, he discreetly showed me a familiar circuit board from his bag."
-    RM "I'm placing the camera I made earlier. It shouldn't take long."
-    MCT "I figured it would be something like that."
-    jump RM002_choice
-
-label RM002_c1_3:
-    MC "This is a stupid idea and you're going to get caught."
+    show RM neutral with dissolve
+    MC "Oh, it's you. What's going on? {w}...You weren't tailing me, were you?"
+    show RM neutral-2
+    RM "No, I've got a lead on something far more interesting."
+    "It should be noted that even after being found out, he was still hiding behind the pillar as we had our conversation."
+    MC "Gee thanks. Although I guess a guy who's hair is starting to get long isn't terribly interesting compared to other things going on here."
     show RM smug
-    RM "Your resistance to progress has been noted. I won't get caught as long as you do your job."
-    hide RM with dissolve
-    "Before I could protest, he headed into the classroom."
-    MC "Seriously..."
-    jump RM002_c1_after
-
-label RM002_c1_after:
-    stop music
-    scene black with fade
-    pause 2
-    scene Hallway with fade
-    "A few minutes of inconspicuous door blocking later, and the inevitable happened."
-    show Yuki neutral with dissolve
-    play music Busy
-    UNKNOWN "Hey there! Can I get through?"
-    MCT "Oh, great."
-    menu:
-        "Let her in":
-            jump RM002_c2_1
-        "Signal Daichi":
-            jump RM002_c2_2
-        "Make up a story":
-            jump RM002_c2_3
-
-label RM002_c2_1:
-    "I never agreed to play lookout for him. To be honest, I wasn't even really sure why I was still there..."
-    MC "Sure, go ahead."
-    show Yuki happy
-    UNKNOWN "Thanks!"
-    RM "Wait! Wait wait wait!"
-    show Yuki happy at Position (xcenter=0.25)
-    show RM angry at Position (xcenter=0.75)
-    with dissolve
-    pause .5
-    show RM happy
-    $setAffection("RM", -1)
-    "He gave me a brief glare before turning to the girl."
-    RM "Yuki-chan! How's your day been?"
-    show Yuki neutral
-    Yuki "Daichi-kun?!"
-    jump RM002_c2_after
-
-label RM002_c2_2:
-    "I leaned back against the door."
-    MC "Why? What's wrong?"
-    UNKNOWN "Oh, no big deal. I just left some books behind by accident."
-    MC "Your books? Where are they? I can go find them for you, if you want."
-    "While saying all this, I knocked on the door repeatedly. Judging by her lack of response, I don't think she noticed."
-    UNKNOWN "Oh, no worries. I can get them myself."
-    MC "What books, if you don't mind me asking?"
-    show Yuki sad
-    UNKNOWN "...Math? Why does it matter?"
-    "Before I could think of another way to stall her, Daichi came out of the room."
-    show Yuki neutral at Position (xcenter=0.25)
-    show RM neutral at Position (xcenter=0.75)
-    with dissolve
-    RM "Yuki-chan! What a pleasant surprise."
-    Yuki "Daichi-kun? What are you doing here?"
-    jump RM002_c2_after
-
-label RM002_c2_3:
-    MC "I wouldn't go in there. They're... de-roaching."
-    UNKNOWN "Roaches? In just the one classroom?"
-    MC "...{w} Yes."
-    show Yuki sad
-    UNKNOWN "...Hmm."
-    "Suddenly, the door opened."
-    show Yuki sad at Position (xcenter=0.25) with dissolve
-    show RM neutral at Position (xcenter=0.75) with dissolve
-    RM "Yuki-chan?"
-    Yuki "Daichi-kun? Are you... de-roaching?"
-    "Daichi gave me a confused glance before turning back to this Yuki girl."
-    RM "Yeah. Why, do you need something?"
-    jump RM002_c2_after
-
-label RM002_c2_after:
-    MC "Wait, you two know each other?"
-    RM "Oh. Right. Keisuke, this is my sister Yuki. Yuki-chan, this is my roommate Hotsure Keisuke."
-    show Yuki happy
-    Yuki "Nice to meet you! Daichi-kun's talked about you a lot."
-    MC "Good things, I hope."
-    RM "Haha... yeah."
-    if getFlag("RM_govagent"):
-        Yuki "Actually, he said you were a no good lying-"
-        show RM happy
-        RM "Nothing but good things to say about my pal Kei-kun."
-        MCT "..."
+    RM "Precisely. Besides, I can get a hair sample from you any time."
+    "The way he said it made me suspect he might have already collected one in my sleep."
+    MC "Alright, what's so interesting then?"
+    show RM doubt
+    RM "{size=-6}Shhhh. Keep it down. I'll explain, but for now we have to hide— quick!{/size}"
+    "Not that I was eager to play along with him, but I figure if he really was onto something just standing in plain sight talking to him would be kind of a dick move if it did end up blowing his cover."
+    "I ducked behind the pillar with him, but without a clue as to why I should."
+    MC "Okay, so what are you doing here?"
     show RM neutral
-    RM "Anyway, I found what I was looking for."
-    MC "Oh, good. Alright, I'll see you back at the dorm, then."
-    RM "Yeah, sure. Talk to you later, man."
-    hide RM
-    hide Yuki
-    with dissolve
-    stop music
-    "I began to walk down the hallway, but after a couple of seconds Yuki ran up to me."
-    show Yuki neutral with dissolve
-    Yuki "Hey... Hotsure-san."
-    MC "Huh? What's wrong?"
-    Yuki "Do you think that there's something weird happening at this school?"
-    MC "What do you mean?"
-    Yuki "Like... Do you think the staff are doing something strange to us?"
-    MCT "Oh, no. Has Daichi filled her head with his nonsense?"
-    MCT "Should I play along?"
-    menu:
-        "There's a conspiracy":
-            jump RM002_c3_1
-        "No conspiracy":
-            jump RM002_c3_2
-
-label RM002_c3_1:
-    MC "I think so, yeah."
-    show Yuki sad
-    Yuki "I see."
-    "She sighed, pulled out a notepad from her skirt pocket, and began writing something down."
-    Yuki "OK, thanks."
-    hide Yuki with dissolve
-    "She slowly walked back to Daichi."
-    MC "...Wait, what?"
-    MCT "What was that reaction about?"
-    jump daymenu
-
-label RM002_c3_2:
-    MC "No. I don't know who told you that, but it's ridiculous."
+    RM "I'm doing some surveillance work."
+    "Not that he would know, or that I would even want to explain, but by this point I already have my fill of \"surveillance work\" for the day."
+    MC "Surveillance on what?"
+    show RM neutral-2
+    RM "The Academy, of course. What else would it be?"
+    "I just sighed. He was being purposefully short on the details, but part of me was just glad to know he wasn't stalking one of the girls."
+    MC "Alright then, have you found anything interesting at least?"
+    "Daichi turned his eyes to the big clock on the wall."
+    show RM smug
+    RM "We'll see in a few minutes."
+    scene black with fade
+    pause .5
+    scene Gate Front with fade
+    "After what definitely felt like more than \"a few minutes\" I contemplated just leaving, and that was saying something since I wanted to use any excuse in the world to continue procrastinating on my homework."
+    "But before I could fully consider that notion we noticed two of the faculty staff ladies leaving one of the rooms. This was the one with the label \"Education and Student Support Department\"."
+    show RM distrustful with dissolve
+    "Daichi eyed them as they both disappeared down the hallway."
+    RM "Two down, one more to go."
+    MC "What are you even talking ab-"
+    show RM doubt
+    RM "Shhh!"
+    "Just then another one of the office workers trickled out of the room."
+    show RM happy
+    "A sly grin crept across Daichi's face."
+    RM "Jackpot."
+    MC "What's going on now?"
+    hide RM with dissolve
+    pause 1
+    MC "!"
+    "I turned my head only to realize my last question had not been directed at anyone, seeing as Daichi was gone."
+    "Looking all around, wondering how he could have just vanished, I then noticed he had somehow already made it across the entryway and was attempting to sneak into the empty room."
+    show RM smug at Position(xcenter=0.9, yalign=1.0) with dissolve
+    "At this point I didn't know what to do other than stare dumbfounded as to what was unfolding in front of my eyes." 
+    "On one hand I was impressed with how fast he managed to work, which then made me realize this couldn't have been the first time he's tried something like this." 
+    "On the other, I became increasingly aware of the possibility I had unknowingly made myself an accomplice to the crime of breaking and entering." 
+    MCT "Well, I mean, {i}technically{/i} I didn't help him. I just stumbled on to him while he was already going to do it. {w}And I most certainly didn't encourage him to break in anywhere, no siree."
+    hide RM with dissolve
+    MCT "..."
+    MCT "Goddamit, why of all people did I get stuck with the voyeuristic, paranoid, conspiracy nut for a roommate!"
+    UNKNOWN "Is everything okay?"
+    show Yuki neutral with vpunch
+    MC "{i}GAAAH!{/i}"
+    play music HallowedHalls
+    UNKNOWN "You don't look so good..."
+    MC "Bah? Wha?"
+    "After briefly recovering from my soul nearly leaving my body from the sudden startle, I turned to see the source of the voice behind me." 
+    MCT "Blazer, red sleeve band... wait a second, this is the same girl from earlier!"
+    MCT "Oh shit! That means she's from the student council. I'm 100%% going to get expelled if she figures out what's going on here."
+    MCT "But that's not going to happen! Stay calm Kei, STAY CALM!!!"
+    MC "Ahem. {w}Hello. Can I help you?"
+    CMF "Actually, I was wondering if I could help you. You look a bit... frazzled. Is everything alright?"
+    MC "Oh. That. Yeah. {w}I'm alright. Just been a long day you know? That and I guess I'm still not that used to this place."
+    "Not the real reason, but it wasn't exactly a lie either."
     show Yuki happy
-    Yuki "All right."
-    Yuki "For a minute there I was worried you were like my brother."
+    CMF "It's okay. I understand."
     show Yuki neutral
-    Yuki "Um... Please don't think too badly of him when he says stuff like that. I think he's just stressed out about what's going on."
-    MC "I think we all are, at least a little bit. I'm not holding it against him."
-    Yuki "Thanks. Don't be afraid to say no if he's making you do something weird. He might be mad for a little bit, but trust me - he gets over it fast."
-    show Yuki happy
-    Yuki "I'll see you around, ok?"
+    CMF "I've had a long day myself, and I still only just started my hall monitor shift."
+    CMF "My name is Yuki by the way. What's yours?"
+    MC "It's Keisuke... nice to meet you."
+    "I didn't exactly want to offer my last name. After all, she hadn't offered hers."
+    MCT "Crap! I should have just told her a made up name all together. I need to get her off my tail somehow."
+    MC "So uh, hall monitor duties eh? Notice anything suspicious?"
+    "Pure projection at its finest, but a suitable distraction nonetheless."
+    Yuki "Suspicious? Well not really. Most of it is just making sure people aren't running in the building or if they are lost, help them find where to go."
+    MC "Ah, I see."
+    Yuki "Is that why you're here?"
+    MC "What's that now?" 
+    show Yuki gossip
+    Yuki "You're lost aren't you- Why else would you be standing around the administration wing after all- So, this here is the administration wing if you haven't been to it before- which you probably haven't because they don't have classes over here-"
+    MC "Uh..."
+    Yuki "You must have got lost trying to take a shortcut through to the other side of the quad- It's an easy mistake to make- Ohmygosh you must be in a hurry then to get to club practice so that's why you took the shortcut-"
+    MC "Well..."
+    Yuki "Oo you're probably in the soccer club- their practice is just about to start so you're gonna want to go out these doors and loop back around to the lockers to go change- or maybe you want to head back and do that at your dorm-"
+    MCT "Geesh, does she ever stop talking? I'm feeling out of breath just listening to this chick."
+    if isEventCleared("MC003"):
+        MCT "Wait a second... is this Tomo's roommate she was talking about? The one that talks her ear off all the time? {w}I mean I can't imagine too many people that rise to this level, so maybe not."
+    Yuki "I know I had a real hard time deciding what club I was going to join-"
+    "Apparently we had changed subjects in the conversation and I hadn't noticed."
+    Yuki "At first I thought about joining the debate club-"
+    show Yuki neutral
+    MC "Pfft! Hehe."
+    Yuki "Hm? Is there something wrong?"
+    MC "What? Oh, nothing, I'm fine. Uh, continue..."
+    show Yuki gossip
+    Yuki "Oh yeah, so anyway I went back and forth on that for what seemed like forever and-"
+    MCT "...When I said continue, I didn't mean indefinitely."
+    "By this point my mind was reeling but I kept the same polite smile on my face from when she first started up."
+    Yuki "But I settled on the student council instead because I figured I could learn all sorts of stuff about administration by practice and learn something I could translate into a job- You see for a job I was thinking of getting into-"
+    MC "Uh huh."
+    MC "Uh huh."
+    MC "Uh huh."
+    MCT "That's it Kei, just smile and nod while pretending you still have active brainwaves and she'll eventually go away."
+    "It was a terrible plan, but one that was sure to defray suspicion of any involvement on my part with Daichi's illicit snooping. {w}At least that's what I thought."
+    MCT "Wait, what's that?"
+    "Out of the corner of my eye I noticed one of the clerical staff that had left the room earlier was coming back."
+    MCT "Oh shit!"
+    "I had been keeping an eye on the door the entire time and Daichi still hadn't come out. He probably needed more time, even though I had bought him plenty by standing here listening to motormouth blabbering on about everything under the sun."
+    "I didn't exactly feel like sticking my neck out for the guy on this any more than I already had. Then again, he is my roommate and I'll be stuck with him the entire year. I might not hear the end of it if I don't at least try something."
+    menu:
+        "Approach the staff member and stall her.":
+            jump RM002_C1_1
+        "Stay where you are.":
+            jump RM002_C2_1
+
+label RM002_C1_1:
+    $setFlag("RM002_Favor")
+    MCT "You owe me big time for this Daichi."
+    Yuki "But then sometimes I wonder what if I hand joined a different club- and then like I could be working something else that I might use in the future- I mean there's just so many-"
+    MCT "I'm going to be stuck here till the end of time if I keep waiting for a break in the conversation."
+    show Yuki surprised
+    MC "Shhhh. Shhh!"
+    "I put my arm out and my finger up towards her lips to signify I needed her to be quiet."
+    MC "Sorry— just one second!"
     hide Yuki with dissolve
-    "She walked back to Daichi, with a slight spring in her step."
+    MC "Uh, {size=+4}EXCUSE ME!{/size}"
+    MCT "I hope Daichi can hear this."
+    MC "Ma'am, excuse me. I'm a bit lost, I was wondering if you could tell me..."
+    "Not having thought through my lie enough to come up with an answer, I quickly looked around to see what I thought was supposed to be here."
+    MC "Uh... the Principal's Office?"
+    "The staff member gave me a confused look, like I was a particularly special kind of idiot."
+    Secretary1 "You're in luck, you've already found it."
+    "She pointed towards the door of the office next to the one Daichi had gone into earlier."
+    MCT "He broke into the office right by the Principal's Office? What the hell is wrong with this guy?"
+    "At this point I couldn't really tell if Daichi had brass balls or just a bunch of head trauma to pull a stunt like that."
+    MC "Thank you for your help!"
+    "I bowed in a slightly more dramatic fashion than I had planned, but my diversion had run its course as the staff member proceeded to walk back to her office and disappeared inside."
+    MCT "Well, at least I tried."
+    show Yuki neutral with dissolve
+    Yuki "I had a feeling you were lost- don't be afraid to ask you know- the Academy does have a confusing layout- I find myself still getting lost sometimes too- that reminds me of this story I read about the Tokyo Metro."
+    Yuki "Apparently the layout is so confusing even locals get routinely lost on them."
+    MC "Yeah, I uh, heard that before too."
+    Yuki "Really? I was skeptical at first but I guess it is true- have you ever gotten lost at a city metro station before?"
+    MC "Nope... can't say that I have... {w}Yup, we'll go with that..."
+    show Yuki happy
+    Yuki "Really? That's good- apparently it happens all-the-time and it's a really big problem for some-"
+    show Yuki surprised
+    extend " Daichi-kun?"
+    MC "?"
+    jump RM002_After_C1
+
+label RM002_C2_1:
+    "Watching the staff member walking back into the office, there wasn't really an opportunity for me to further stall the situation even if I wanted to. Seeing her disappear back into the office, his fate was sealed."
+    MCT "He made his bed, now he can lie in it. {w}I should probably leave so he doesn't have an opportunity to point fingers while I'm still around."
+    Yuki "It's crazy how often I help people with directions as a hall monitor- I don't blame people because the Academy's layout is like super confusing- I find myself still getting lost sometimes too- that reminds me of this story I read about the Tokyo Metro-"
+    MCT "On second thought, I have the perfect alibi with Miss Chatterbox here to verify I hadn't done anything this whole time."
+    "I tried listening for any commotion in the office, but my ability to discern subtle noises was being drowned out by the unrelenting auditory assault of Yuki's flapping gums."
+    Yuki "Apparently the layout is so confusing even locals get routinely lost on them- I mean that sounds really bad if people that take the train everyday still get switch around- why does it have to be confusing? trains can only go two directions-"
+    MCT "Since when did we start talking about the Tokyo Metro system? Thing's a nightmare, I got lost riding it more times than I cared to remember."
+    Yuki "I wish they had a train on this island- it'd be so much faster than taking the bus- but I guess there's not enough people here- I guess it's not that bad since we don't have to walk to get to town- oh my gosh could you imagine!"
+    MCT "Why is she still talking?"
+    show Yuki happy
+    "I was beginning to lose my patience over how she could be so oblivious about anyone wanting to continue this conversation, but looking at her smile and hearing the excitement in her voice, I realized she was just happy to have someone listen to her."
+    MC "Sorry, I didn't get that last part, could you repeat it?"
+    Yuki "Oh, sure. I guess I was going a little fast. What I was saying was-"
+    show Yuki surprised
+    extend " Daichi-kun?"
+    MC "Hm?"
+    jump RM002_After_C1
+
+label RM002_After_C1:
+    show Yuki surprised at altMove(0.5, 0.25)
+    show RM neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    play music Rain
+    "I turned around to see Daichi, opting for the \"hiding in plain sight\" approach rather than stealth after pulling off the heist."
+    "Seeing as he wasn't being escorted out of the building by security, Daichi must have managed to slip away undetected. {w}How, I have no idea, and I doubted he'd even tell me, but I was impressed." 
+    MCT "Wait a second... Daichi-kun? {w}How does she know him? I don't even see him talk to other people besides me. {w}Does the student government already have a file on him? He must already be rattling some cages."
+    show RM doubt
+    show Yuki neutral
+    RM "Yuki-chan."
+    Yuki "I know that look, just what are you up to Daichi-kun?"
+    MCT "Maybe the heat really is on him."
+    "Perhaps not without reason either. I noticed he was carrying the same audio device he built in his hand."
+    MCT "Wait, did he have that before he went into the office?"
+    if getFlag("RM001_Device"):
+        MCT "Shit! I really could get pegged as an accomplice in this whole thing since I helped him with that damn device. I should have known nothing good could have come of that thing."
+    show RM happy
+    RM "Nothing. Just, uh, taking a walk across campus trying to familiarize myself with the place."
+    MCT "Says the guy who's probably committed the blueprints to memory."
+    Yuki "I was suspicious before but now I'm certain you're hiding something."
+    show RM distrustful
+    RM "It's nothing. You don't need to worry about me."
+    Yuki "I'm tired of this Daichi-kun. I've put up with your shenanigans for a long time because I hoped some day you'd eventually let things go. I thought this new school could be a new start in a new place where you could leave things behind."
+    show RM sad
+    Yuki "How long are you going to keep up with all of this? You're always so paranoid and obsessed, you never make time for your friends or to hang out and have fun like a normal person. It's hurting you."
+    Yuki "Why do you keep doing this?"
+    show RM angry
+    RM "This time it's something different. You know {i}exactly{/i} why. This time it's even more important."
+    Yuki "But it's not just nothing is it? What were you doing just now? Tell me for real."
+    show RM concerned-2
+    "Daichi clutched the device closer to himself, but mulling it over he reluctantly decided to hand it over to Yuki."
+    "Yuki took the device from him, obviously upset once she realized what it was. She quickly looked around to make sure none of the staff were in sight before laying into him."
+    show RM concerned
+    Yuki "{size=-6}Is this what I think this is? What on earth is wrong with you? I can't understand how you could be so stupid. Do you know what would happen to you if you were caught with this? You could be expelled!{/size}"
+    show RM distrustful
+    RM "It's not what you think. {w}Look, there are a lot of suspicious things going on here. It's not just me either, anyone can see that. I've got to get to the bottom of this."
+    Yuki "Knowing you, it's exactly what I think. Did you ever stop to think what kind of position this puts me in as part of the student council? What would our father think if he caught you doing this?"
+    MC "Father? So this is-"
+    show RM neutral
+    RM "My sister, Yuki Utagashi. Yuki, this is my roommate Keisuke Hotsure."
+    show Yuki happy
+    "Yuki's expression suddenly perked up in contrast to the diatribe she had just laid into her brother with."
+    show RM smug
+    Yuki "Oh! Very pleased to meet you Hotsure-san. It's exciting to finally meet Tomoko-chan's brother. I mean I feel like we already kind of know each other since we've been talking for a while, but now it feels like we really met!"
+    hide RM with dissolve
+    if isEventCleared("MC003"):
+        MC "Uh, likewise, it's nice to-"
+    else:
+        MC "Oh, speaking of Tomo I was wonder-"
+    show Yuki neutral
+    show RM concerned at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Yuki "Not so fast! Get back here Daichi-kun." 
+    "Apparently Yuki was used to Daichi's Houdini bit because she didn't fall for the distraction."
+    Yuki "Just what are you hoping to accomplish with all of this anyway? How is this supposed to help anyone?"
+    show RM distrustful
+    RM "To answer your question, I think dad would absolutely understand it. {w}Sometimes people keep the truth behind closed doors." 
+    RM "If that means I have to get my hands dirty to get a hold of it, so be it. {w}But a truth brought to light always has major consequences for those that would try to hide it."
+    Yuki "What you're doing and how you're going about it is wrong."
+    show RM angry
+    RM "So I'm supposed to just politely ask people to turn over documents and divulge information that incriminates them in a cover-up? Turn a blind eye to deception because that's the more polite and decent thing to do?" 
+    show RM neutral-2
+    RM "Even you should know these things don't always fit into nice little boxes of \"right\" and \"wrong\". The truth is more nuanced than that. It always has been."
+    Yuki "Oh, don't pull this truth crusader crap with me. You know full well this isn't the kind of thing our father would approve of."
+    show RM doubt
+    Yuki "I'm taking this. You're going to go back to your room and consider where this behavior is leading and the path you're choosing to go down." 
+    Yuki "You're lucky I had hall monitor duties today and not someone else, or you would have landed yourself in big trouble. {w}You're welcome by the way."
+    show RM concerned-2
+    RM "..."
+    "Before walking away, Yuki turned her attention back to me."
+    Yuki "{i}Sigh{/i}. I have to ask Hotsure-san, since you are Daichi-kun's roommate, are you caught up in this stuff too? Does he have you going along with this conspiracy nonsense?"
+    MC "Huh? I was just passing by, I hadn't planned on being here in the first place."
+    if getFlag("RM002_Favor"):
+        $setAffection("RM", 1)
+        show RM smug
+        "Over Yuki's shoulder, Daichi gave me a knowing look."
+        if checkAffection("RM", ">", 2):
+            show RM neutral-2
+            RM "He's telling the truth Yuki-chan. It wasn't his fault, he was just passing by."
+    else:
+        show RM distrustful
+        "Over Yuki's shoulder, Daichi was eyeing me curiously. Probably wondering why I didn't just snitch on him instead."
+    show RM neutral
+    Yuki "Well, that's a relief. Please, look out for my brother. I can't keep an eye on him all the time."
+    MC "Sure, no problem."
+    MCT "As if I can keep him in my sight when he's standing next to me."
+    Yuki "Thanks, Hotsure-san. You seem like a decent guy, I trust you."
+    hide Yuki with dissolve
+    "Wasn't exactly how I planned on spending my time after classes. I guess it was a bit of an adventure, but not really a good one. By this point I was exhausted and just wanted to go back to my room and rest."
+    MC "Hey, you heading back to the dorm?"
+    show RM concerned-2 at altMove(0.5, 0.5)
+    "Daichi only nodded his head in return, and kept his head down as we started walking back."
+    MC "Uh, hey. You, um, what to talk about what happened back there?"
+    RM "No, not really."
+    MC "That's fine."
+    show RM concerned
+    RM "{size=-6}...the records... why were they incomplete?{/size}"
+    MC "Hm? Did you say something?"
+    show RM concerned-2
+    RM "Nah, it's nothing."
     jump daymenu
 
 label RM003:
