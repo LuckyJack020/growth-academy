@@ -18282,6 +18282,7 @@ label PRG036:
     "..."
     "I heard Aida and Sakura chatting a bit as they got set up, and as I dug into one of my nearly broken folders, due to the amount of tree shavings shoved into it."
     if checkAffection("PRG", ">", 13):
+        $setFlag("PRG036_lotion")
         Sakura "{size=-5}Oh, come on. Just ask him.{/size}"
         "A whisper came from Aida to Sakura, but I couldn't for the life of me make out a single specific word."
         Sakura "{size=-5}Come on.{/size}"
