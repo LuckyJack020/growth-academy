@@ -201,6 +201,7 @@ init python:
         CASUAL = "casual"
         CASUAL2 = "casual-2"
         COOKING = "cooking"
+        COSTUME = "costume"
         EPILOGUE = "epilogue"
         EPILOGUEBAD = "epilogue-bad"
         EPILOGUEGOOD = "epilogue-good"
@@ -917,7 +918,7 @@ init python:
         global FMGPrevOutfit
         global FMGNsfwOutfit
         global FMGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.WINTER:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.WINTER:
             FMGNsfw = False
             FMGOutfit = o
         elif o == OutfitEnum.NUDE:

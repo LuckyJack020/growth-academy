@@ -18159,7 +18159,7 @@ label FMG087A:
     FMG "No! Give me a second, jeez."
     MC "How about now?"
     FMG "You can look."
-    #$setFMGOutfit(OutfitEnum.COSTUME)
+    $setFMGOutfit(OutfitEnum.COSTUME)
     scene Dorm FMG
     show FMG flex
     with fade
