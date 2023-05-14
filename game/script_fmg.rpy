@@ -16922,9 +16922,11 @@ label FMG082:
     show FMG neutral
     FMG "Ooooh, the urge I have to send you through the floor when I win. Hope the nurse has enough ice packs."
     MC "Put your arm on the table and quit flapping your gums."
+    show cg FMG082 with dissolve
     "The amazon slammed her arm on the table with a grin across her face the entire motion."
     "In a futile attempt to mimic her, I did the same thing. Grin and all. {w}Only difference is I hit that funny part of my elbow where it hurts but simultaneously causes uncontrollable laughing."
     show FMG sad
+    hide cg with dissolve
     FMG "You're crazy."
     MC "Heh, crazy in love with you! {size=-6}Aaaaaaaaaaa{/size}..."
     show FMG neutral

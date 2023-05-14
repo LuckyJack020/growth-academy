@@ -495,6 +495,7 @@ image cg FMG067 = "Graphics/ui/gallery/FMG067.png"
 image cg FMG077 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.png",
     "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg FMG082 = "Graphics/ui/gallery/FMG082.png
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.png"

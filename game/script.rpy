@@ -947,7 +947,7 @@ init python:
         global PRGPrevOutfit
         global PRGNsfwOutfit
         global PRGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
             PRGNsfw = False
             PRGOutfit = o
         elif o == OutfitEnum.NUDE:
