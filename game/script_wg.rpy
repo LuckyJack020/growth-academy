@@ -12447,7 +12447,7 @@ label WG048_c2_2:
     WG "Precisely. Glad to know your palate has matured."
     show WG neutral-2
     WG "But to answer your question, I couldn't possibly begin to rank my favorite dishes. There's simply too many considerations to account for in what constitutes the perfect meal for the occasion."
-    WG "The ambiance, time of day, the seasons, pairing with drinks and h'orderves— what makes for the perfect dish can only truly be evaluated in the moment..."
+    WG "The ambiance, time of day, the seasons, pairing with drinks and hors d'oeuvres— what makes for the perfect dish can only truly be evaluated in the moment..."
     "Alice's thoughts had seemingly drifted from the present conversation as her mind swirled amidst some blissful realm of infinite culinary delights."
     MC "Uh... Alice?"
     show WG surprised
