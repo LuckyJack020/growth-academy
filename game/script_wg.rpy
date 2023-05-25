@@ -20431,7 +20431,7 @@ label WG068:
 label WG069:
     $setProgress("WG", "WG070")
     $setTime(TimeEnum.NIGHTLIGHTS)
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     scene Dorm Interior with fade
     play music Sunset
     MCT "I hope this tie is done correctly. Haven't tried to do this by myself since the 4th grade."
@@ -20629,7 +20629,7 @@ label WG069:
 label WG070:
     $setProgress("WG", "WG071")
     $setTime(TimeEnum.NIGHTLIGHTS)
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     scene Ballroom
     show WG neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1)
     with fade
@@ -20854,7 +20854,7 @@ label WG070:
 label WG071:
     $setProgress("WG", "WG072")
     $setTime(TimeEnum.NIGHTLIGHTS)
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     play music TwilightAmbient
     scene Ballroom
     show WG neutral-2
@@ -21278,7 +21278,7 @@ label WG071:
 
 label WG072:
     $setProgress("WG", "WG073")
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     $setWGOutfit(OutfitEnum.NUDE)
     play music Peaceful
     scene Hotel Room with fade

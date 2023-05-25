@@ -495,7 +495,7 @@ image cg FMG067 = "Graphics/ui/gallery/FMG067.png"
 image cg FMG077 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.png",
     "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg FMG082 = "Graphics/ui/gallery/FMG082.png
+image cg FMG082 = "Graphics/ui/gallery/FMG082.png"
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.png"
@@ -772,6 +772,21 @@ image BE embarrassed = Composite(
         None, Null()),
     (24, 0), ConditionSwitch(
         "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
+        None, Null())
+    )
+image BE embarrassed-2 = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
         "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
