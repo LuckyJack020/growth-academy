@@ -5692,7 +5692,8 @@ label FMG038:
 
     scene Hallway with fade
     MCT "HAH! I CAN'T BELIEVE SHE RAN IN THE WRONG DIRECTION! THIS IS IN THE BAG!"
-    "It was simple. First one to the cooking club room got to ask Kodama-san for first samples, meaning the best of the bunch went to the victor. I normally wouldn't think of racing Akira... until I realized she pointed in the wrong direction. I rounded the corner of the stairs, however..."
+    "It was simple. First one to the cooking club room got to ask Kodama-san for first samples, meaning the best of the bunch went to the victor. I normally wouldn't think of racing Akira... until I realized she pointed in the wrong direction."
+    "I rounded the corner of the stairs, however..."
     MCT "Almoooost! Almoooost!"
     show AE happy with dissolve
     AE "Bitte wart auf mich kleine Monika-"
@@ -5722,7 +5723,8 @@ label FMG038:
     show FMG surprised at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     FMG "Almooost- OH SHI-"
-    "Akira tripped on the final stair, and as she turned she fell directly onto the chair, which careened backwards before being slowed by Shiori's jacket on the ground. Once it came to a stop, Akira's head was softly cushioned by the tie, which prevented her from hitting her head on the wall."
+    "Akira tripped on the final stair, and as she turned she fell directly onto the chair, which careened backwards before being slowed by Shiori's jacket on the ground."
+    "Once it came to a stop, Akira's head was softly cushioned by the tie, which prevented her from hitting her head on the wall."
     show FMG happy
     FMG "Woah... haah... THAT WAS SICK! Wasn't it-"
     show FMG sad
@@ -5873,7 +5875,8 @@ label FMG038:
     FMG "You are no fun sometimes you know that?!"
     show FMG neutral
     FMG "Anyway let's get started...the kuchisake onna is the ghost of a woman who was brutally killed and came back seeking vengeance. Her name comes from the deep, bloody gash that runs across her face, leaving her smiling from ear to ear."
-    FMG "She appears before lonely travelers at nightfall covering her face with a cloth to hide her true appearance. She'll sneak up on her victims and ask them if they think she is beautiful \"Watashi, kirei?\" If they answer yes, she takes off her mask revealing her blood-dripping smile."
+    FMG "She appears before lonely travelers at nightfall covering her face with a cloth to hide her true appearance. She'll sneak up on her victims and ask them if they think she is beautiful \"Watashi, kirei?\""
+    FMG "If they answer yes, she takes off her mask revealing her blood-dripping smile."
     MC "Hold on, if this wasn't a ghost you could apply this to any woman. They always ask guys if we think they are beautiful and it usually ends poorly regardless of our answer. That's true horror."
     show FMG neutral
     FMG "Please save your comments till the tale is over, thank you."
@@ -20542,13 +20545,13 @@ label FMGWG004_choice:
     MCT "I'm a wizard with words. This shouldn't be too hard."
     menu:
         "Alice, she's not leaving till she's lifting you.":
-            jump FMGWG_C1_1
+            jump FMGWG004_C1_1
         "Maybe if I use big words. I can convince her..." if not getFlag("FMGWG004_C2"):
-            jump FMGWG_C2_1
+            jump FMGWG004_C2_1
         "Akira, I think we should let Alice be. We've bothered her enough." if not getFlag("FMGWG004_C3"):
-            jump FMGWG_C3_1
+            jump FMGWG004_C3_1
 
-label FMGWG_C1_1:
+label FMGWG004_C1_1:
     MC "Alice, hear me out for a second. I mean no disrespect to either of you. But both of you girls can be pretty stubborn. Akira knows."
     show FMG angry-3
     FMG "Hey!"
@@ -20567,7 +20570,7 @@ label FMGWG_C1_1:
     MC "We should stand back. Akira is going to need as much room as possible."
     jump FMGWG004_afterchoice
 
-label FMGWG_C2_1:
+label FMGWG004_C2_1:
     $setFlag("FMGWG004_C2")
     UNKNOWN "Listen, man, your speech isn't high enough. Level up some more. And please stop asking her to crush you with her thighs. People are starting to get uncomfortable."
     MCT "What the hell was that?!?! What do you mean level up? This isn't an RPG!"
@@ -20589,7 +20592,7 @@ label FMGWG_C2_1:
     hide BE
     jump FMGWG004_choice
 
-label FMGWG_C3_1:
+label FMGWG004_C3_1:
     $setFlag("FMGWG004_C3")
     MCT "Maybe some reverse psychology is what we need."
     MC "Akira, I think we should let Alice be. She's not up for this."
@@ -20691,4 +20694,216 @@ label FMGWG004_afterchoice:
     show WG neutral behind FMG, BE
     "Akira & Alice & Honoka" "You are."
     MC "{i}Sigh{/i}... fine."
+    jump daymenu
+
+label FMGWG006:
+    play music DayByDay
+    scene Dorm WG
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    FMG "You want it here, right?"
+    show WG neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    WG "Close, a tad more to the left please."
+    "Alice had asked Akira for her help in rearranging her room. Alice said she wanted a \"fresh look\" to it, and of course, Akira was happy to help if it meant she could lift something."
+    MC "I'm assuming Natsuko was busy so you got the second best, Alice?"
+    show FMG angry
+    FMG "I'm standing right here!"
+    show WG happy
+    WG "Ha, no, not at all." 
+    show WG neutral
+    extend " As much as I love Natsuko's company, her serious and intense demeanor can be a tad draining."
+    show FMG neutral
+    FMG "That's what does it for you? Try working out with her, she flexes after every single set."
+    show WG sly
+    MC "You literally do that exact same thing..."
+    show FMG flex
+    show WG doubt
+    FMG "Yeah, but I look {i}good{/i} doing it."
+    MC "..."
+    "Alice was practically rolling her eyes out of her sockets listening to us go back and forth."
+    show WG neutral
+    MC "Move the couch to the left already, damn. We'll die of old age by the time you adjust the bed."
+    show FMG neutral
+    FMG "Maybe if I had some {i}help{/i} this would go faster!"
+    MC "Let me think on that."
+    pause 1
+    show WG happy
+    MC "I thought about it... {w}No."
+    MC "And besides Alice and I wouldn't be of any help, we'd only slow you down. My version of helping you is words of encouragement from the sidelines. I can't risk throwing out my back."
+    FMG "Uh-huh, make me do all the hard work only so you can get the free lunch Alice promised us."
+    show WG surprised-2
+    MC "Alice promised us free lunch?"
+    WG "..."
+    show WG haughty
+    WG "I promised Akira free lunch."
+    MC "That doesn't seem very fair..."
+    show FMG angry
+    show WG neutral
+    FMG "I'm doing all the lifting and moving!"
+    MC "Yeah, yeah, we get it. Tell someone who cares."
+    FMG "..."
+    WG "Akira, if you must, throw the other less expensive couch, please. I'm quite fond of the color on that one."
+    show FMG neutral
+    FMG "Heh, I won't {w}Is this spot good or do you need it moved a bit more?"
+    show WG neutral-2
+    WG "Hm... {w}That will do. Thank you, Akira."
+    FMG "All that's left is the bed?"
+    show WG neutral
+    WG "Yes and after that we can go out for lunch."
+    show FMG happy
+    FMG "Hell yes, I'm so excited. I'm going to eat till I pass out."
+    scene black with fade
+    pause 1
+    scene Cafe with fade
+    MC "Akira, slow down... {w}The food isn't going anywhere."
+    show FMG happy with dissolve
+    FMG "Dude, it's sooooo freaking good."
+    MC "I couldn't tell, maybe it was the fifth serving you got that gave it away."
+    FMG "I'm ready for servings six and seven, keep them coming!"
+    MC "...Alice, no one will be mad if you cut her off. I know I won't be."
+    show FMG happy at altMove(0.5, 0.25)
+    show WG neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    WG "Regrettably, I've seen worse." 
+    MC "What do you mean you've seen worse? She almost bit me when I went to grab a piece of her chicken."
+    show WG worried
+    "Alice didn't say anything in response to my question at first. Instead, she gave a concerned frown as she looked down at her belly."
+    MCT "Oh... I guess she really has..."
+    WG "Unfortunately for me, I told her she could eat as much as she wants. I will hold up my end of the deal, though I will have to reconsider any such similar offers in the future."
+    show WG neutral
+    MC "Well, I'm keeping my hands on {i}this{/i} side of the table just in case."
+    show WG happy
+    WG "You should know better than to get between a woman and her food."
+    FMG "Thank you!"
+    MC "..."
+    show FMG neutral
+    FMG "Hey, Alice, there's been something I've been meaning to ask you."
+    show WG neutral
+    WG "Hm? And what might that be?"
+    FMG "You must be crazy strong to carry all that weight around, right? It's impressive."
+    MCT "Oh boy..."
+    show WG stern
+    WG "What's that supposed to mean?"
+    FMG "I didn't mean it in a bad way. I always found how you carried yourself while having a factor like that admirable. I know for a fact I wouldn't have the mental strength that you have to handle something like that."
+    FMG "It's freaking awesome."
+    show WG sad
+    WG "..."
+    MCT "Should I jump in and say something? I'm not sure if this is going well or not."
+    WG "Thank you, Akira. {w}I wish others shared your way of thinking."
+    FMG "You mean like those schmucks during the Okinawa trip?"
+    WG "It's... {w}it's most people..."
+    WG "Back in America I was a \"chubby girl\". But here... here, I've always just been fat. {w}Even before... well... all of {i}this{/i}." 
+    "Alice moved her hands to her belly for emphasis, sending a shockwave through her boulder of blubber that only drove the point home further."
+    WG "People only ever see me as fat."
+    show FMG sad
+    WG "It doesn't matter that I take pride in my appearance, take the time to do my hair, or wear fashionable clothes... {w}Everyone looks at me like I'm a fat slob."
+    WG "Nothing I do is ever good enough to convince people I'm more than some lazy beached whale."
+    show FMG surprised
+    MC "Damn... that's heavy."
+    show FMG angry
+    MC "!"
+    MC "Okay, you know I didn't mean it that way."
+    show FMG neutral
+    show WG worried
+    FMG "I'm sorry you have to deal with that Alice. {w}I really am, and I can't imagine the pain you hide behind your smile every day."
+    FMG "I have a confession to make, Kei and I... {w}Especially me. We haven't been the most supportive friends. There would be times when we would make fat jokes and we didn't think much of it."
+    show WG doubt
+    show FMG surprised
+    WG "I know. I'm fat, Akira— not deaf."
+    show FMG sad
+    "Those few words hit Akira square in the chest. She didn't wince nearly as hard when I accidentally dropped a weight plate on her foot as she did just now hearing that from Alice." 
+    FMG "I'm really sorry about all those times. With how you carried yourself, I thought you didn't care. That your factor was nothing more than this obstacle in your path that you had already conquered."
+    WG "That's what I tell myself. Most days I manage just fine, but some days I have a hard time believing it."
+    WG "I never gave too much thought to your jokes. I know neither of you carries the malice or disgust I hear whispered about me when I'm out in public. It's just... sometimes even I get tired of it coming from everywhere."
+    show FMG neutral
+    FMG "I'm sorry Alice. I hadn't even thought of how often you hear it from everyone... including us. Is there anything we can do to help?"
+    show WG sad
+    WG "You already are. I asked for your help rearranging my room because I've had some complications navigating my previous arrangement..." 
+    show WG worried
+    WG "Despite knowing the layout of my own room quite well, I found myself still bumping into everything."
+    show FMG happy
+    FMG "I'm happy to help you no matter what. That's what friends are for. {w}And I'm all for beating up anyone who insults you."
+    show WG happy
+    WG "I'm sure it won't ever have to come to that but I'll keep that in mind— ha!"
+    MC "So uh, I have a question. {w}Why didn't you tell us this sooner? And I don't want you to take that the wrong way. I... just feel like we're all pretty close with each other and we could be more open about this sort of stuff."
+    show WG neutral-2
+    WG "I should've been more forward with you two, I agree." 
+    show WG worried
+    WG "However, I kept telling myself if I did, I'd just be the stick in the mud that ruins your fun like I always am when you try to drag me along."
+    show FMG neutral
+    FMG "Awwww, Alice, that's not true. Come here."
+    "Akira got up from her side of the table, and wrapped her arms around Alice... erm, uh, {i}trying{/i} to wrap her arms around Alice I should say, but her belly was way too wide for even Akira's wingspan to manage that feat."
+    "Akira managed to recover with a bit of an awkward shuffle between her hands and Alice's various folds and was able to find a nice foothold to give her a firm side hug." 
+    "It wasn't perfect, but it was the best the two behemoths could manage with each other." 
+    MCT "Can always count on Akira to make someone feel better, heh."
+    show WG happy
+    WG "Thank you, Akira. It's nice to know I have some friends to lean on when going through this."
+    show FMG happy
+    FMG "You're welcome. Sometimes all you need is a hug."
+    show FMG neutral
+    show WG neutral
+    pause 1
+    show WG surprised-2
+    MC "So uh... {w}Can I order dessert?"
+    show WG doubt
+    FMG "..."
+    WG "..."
+    MC "..."
+    MC "Before you guys say anything! I was scared to ask, this is a really sweet heartfelt moment and I didn't want to mess up. Having said that, I've been wanting this chocolate cake since I saw it in the display when we got here."
+    MC "I can not contain my cravings any longer."
+    MCT "Come on... I know damn well I'm not the only one either."
+    show WG neutral
+    FMG "Alice?"
+    show WG pondering
+    WG "I won't say no to a slice of cake."
+    MCT "Phew, I thought Akira was gonna kick my butt."
+    scene black with fade
+    pause 1
+
+    $setTime(TimeEnum.EVE)
+    scene Roof
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.7, yalign=1.0)
+    with fade
+    "Akira wanted to show Alice one of her favorite spots where she'd go to clear her head when she was having a hard time."
+    show WG doubt
+    WG "The roof? Really?"
+    FMG "Uh... {w}Yeah!"
+    "In hindsight, Akira probably should have realized Alice wasn't going to be too thrilled with having to take the stairs. No small feat given the size of her belly, but to her credit, Alice managed."
+    FMG "It's my spot! I come here all the time when I want to be alone— or to get away from Kei."
+    MC "That's a damn lie. You cry as soon as I leave, I'm like your favorite teddy bear. Can't be without me."
+    FMG "I cried {i}once{/i}... I was very emotional that day..."
+    FMG "But, yeah, Alice, this is it. I brought you here cause I thought you'd like something like this. Barely anyone comes up here, it's the perfect escape from reality when you need a break."
+    show WG pondering
+    WG "Escape from reality... If I'm being honest, I do it far too often."
+    FMG "What do you mean? If anything I'd say you don't do it often enough. You always seem busy to me, focused on your work."
+    WG "That's just it— that is my escape. {w}My business, my work... it's something tangible, something I can control, something I can bend to my will." 
+    show WG worried
+    WG "And it brings me a sense of satisfaction, so I throw myself into it, hoping all of {i}this{/i} will just fade into the background..."
+    "Alice grabbed the sides of her belly, causing it to wobble in the process, driving home the point what {i}this{/i} meant."
+    WG "But it doesn't. Each day I wake up to another outfit that won't fit, a different piece of furniture I destroyed, or something else I can't even reach anymore."
+    FMG "I know that must really suck Alice, to have to deal with that every day, but you know what would be even worse?"
+    show WG neutral
+    WG "To be honest, I have a hard time imagining, but what are you getting at?"
+    show WG neutral-2
+    FMG "What I mean is, what would be even worse is having to go through all that and not having any friends you can call on."
+    FMG "You don't have to be able to reach everything or move your own furniture— you got me to do that!"
+    show WG worried
+    FMG "Seriously, if you ever need any help, just ask. You don't even need to give me free food to do it either."
+    MCT "I don't believe that for a second."
+    show WG neutral
+    FMG "I mean, how many times have you helped me out in a pinch when I needed something? I don't know anything about fixing clothes or getting new ones made, and I sure as hell didn't have my own jet to use when I needed to take a trip."
+    show WG worried
+    WG "{i}Sigh{/i}... I know that you're always willing to help." 
+    show WG neutral-2
+    extend " I shouldn't be so reluctant to ask for assistance, but sometimes it feels hard to ask... but I'm going to try to be better about it." 
+    show WG happy
+    WG "Thank you, Akira."
+    FMG "Hey, that's what friends are for. You help me do things I can't do and I help do things you can't do. We're the best dynamic duo at this school."
+    MCT "I thought {i}we{/i} were the dynamic duo..."
+    MC "I'm going to interrupt another touching moment... again. But... how are you feeling, Alice? It's a heavy weight off your shoulders, I'm sure."
+    MCT "God damn it, I did it again."
+    WG "It is, yes. This talk had to happen eventually. I'm most delighted, however, that I was able to have it with you two at the very least."
+    WG "If it's alright, I'd like for us to sit down and watch the sunset. It's been quite a long day if you ask me."
+    FMG "I'm down. How about you, Kei?"
+    MC "Uh, yeah, why not?"
     jump daymenu

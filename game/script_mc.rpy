@@ -1512,14 +1512,23 @@ label MC002:
     "In the middle were some desks pressed together to form a sort of \"mega-desk.\""
     play music Rain
     if isEventCleared("BE006"):
+        show Takamura neutral with dissolve
         "At it sat a familiar looking teacher, Takamura-sensei."
+        hide Takamura with dissolve
     else:
+        show Takamura neutral with dissolve
         "At it sat a familiar looking teacher, who upon further inspection, I recognized from when I'd first arrived on the island with Tomo."
+        hide Takamura with dissolve
     pause .25
+    show Tsubasa neutral with dissolve
     "Across from her was a man that I could only describe as a stereotypical professor type, with thick, black-rimmed glasses perched on his nose."
     "He held a newspaper in front of him, and was skimming through it with a bored look on his face."
+    hide Tsubasa with dissolve
     pause .25
+    show Hageshi neutral with dissolve
     "At the other end of the megadesk sat a guy who I swear, looked like he'd been at the gym for the last four years of his life. His shoulders bulged out against the fabric of his shirt as he made some notes on some papers."
+    hide Hageshi with dissolve
+    pause .25
     "All the way across the room stood two other teachers, who were literally standing around the water cooler."
     "One of them had not just one, but three whistles around his neck, and was chatting warmly with the other teacher."
     MCT "Who the hell's attention is he trying to get with those?"
@@ -1609,8 +1618,8 @@ label MC002:
     show Takamura happy
     Takamura "Tsubasa-sensei? Rest your eyes for a moment."
     "Across from us, the older teacher lowered his paper just enough to look over the top."
-    show Takamura neutral
-    #show Tsubasa neutral
+    show Takamura neutral at altMove(0.5, 0.25)
+    show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Tsubasa "Hm?"
     Takamura "We have a visitor, courtesy of Tashi-chan."
     HR "..."
@@ -1632,7 +1641,8 @@ label MC002:
     Tsubasa "I assume that your efforts are going into the recent Caverns project?"
     Takamura "They are, Sensei. I think you'll find it quite intriguing once our ideas take shape."
     "Tsubasa-sensei coughed twice, then flicked his paper a bit and turned the page."
-    show Takamura happy
+    show Takamura happy at altMove(0.5, 0.5)
+    hide Tsubasa with dissolve
     "I glanced over at Takamura, and she waved one hand with a small laugh."
     Takamura "And at the end there is our young pup. Yoshito Hageshi."
     show Takamura neutral at altMove(0.5, 0.75)
@@ -1674,14 +1684,13 @@ label MC002:
     pause .25
     Hageshi "I thought the whistle thing was a joke between students?"
     Takamura "Well, joke or not, he's a busy man."
-    #show Tsubasa annoyed
+    show Tsubasa annoyed with dissolve
     Tsubasa "Pardon? Are you saying that my-last-name-is-too-long-san is wearing whistles for every club he coaches?"
     hide Hageshi with dissolve
     Tsubasa "Ridiculous compensation."
-    pause .25
-    #hide Takamura
-    #hide Tsubasa
+    pause .2
     show Takamura neutral at altMove(0.5, 0.25)
+    hide Tsubasa with dissolve
     show HR neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "Alright, Hotsure-san. Here you are."
     show HR unique
@@ -2622,8 +2631,9 @@ label MC005:
     MCT "And Tomo was there, too. She loved the fire."
     "I smiled, reminiscing on running around with my childhood best friend and my sister while simultaneously taking breaks to watch the bonfire blaze brightly."
     "I glanced around a bit as I came back down to Earth."
-    show HR unique with dissolve
-    #show Tsubasa neutral with dissolve
+    show HR unique at Position(xcenter=0.25, yalign=1.0)
+    show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     #show Chiyo neutral with dissolve
     if isEventCleared("MC002") or isEventCleared("PRG011") or getFlag("Meet_Tsubasa"):
         MCT "Oh! Tashi-sensei and Tsubasa-sensei!"
@@ -2633,16 +2643,18 @@ label MC005:
         MCT "Oh! Tashi-sensei and... that's Tsubasa-sensei... I think. The biology teacher, if I'm remembering right."
     MCT "And... who's that?"
     "Just as I started to walk toward them..."
-    hide HR with dissolve
-    #hide Tsubasa with dissolve
+    hide HR
+    hide Tsubasa
+    with dissolve
     #hide Chiyo with dissolve
     "Speaker" "On this day, we remember the great Emperor Showa, and the period of shining peace that he granted us in his reign!"
     "A man came up to a microphone on one edge of the park and began to tell the story behind the Showa era, and Emperor Showa himself."
     "I listened and looked down for a moment."
     "This whole celebration reminded me of home, and of my parents."
     "The tale the speaker told was a familiar one, and though I still held respect for it, I had heard it many times before, so by the time it ended, I raised my head and continued onward to Tashi and Tsubasa."
-    show HR neutral-2 with dissolve
-    #show Tsubasa neutral with dissolve
+    show HR neutral-2 at Position(xcenter=0.25, yalign=1.0)
+    show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     #show Chiyo neutral with dissolve
     HR "... deeper than that. It's representative of Japan, and every person who lives-"
     show HR unique-2
@@ -2666,24 +2678,24 @@ label MC005:
     show HR unique
     Tsubasa "Kaeru-san was simply reiterating his passion for this holiday as a whole."
     Chiyo "You make it sound so childish, Michi-kun. The man has a passion for the past. When images and text might fail, the spoken word will last the test of time."
-    #show Tsubasa annoyed
+    show Tsubasa annoyed
     Tsubasa "I understand darling, and meant no such thing. Go on, Kaeru."
-    #show Tsubasa neutral
+    show Tsubasa neutral
     show HR neutral
     HR "I... didn't exactly have an ending in mind. All I was saying was simply that I believe that many people have lost their perception on how important this time of year is, and what it represents."
     HR "I believe it not only important to use the time for reflection, but also for taking in the historical significance of it all. Why we celebrate, and what it all means."
     HR "It's much more than just \"a topic to assign homework to.\""
-    #show Tsubasa intrigued
+    show Tsubasa intrigued
     show HR unique-2
     Tsubasa "I understand entirely. Times have changed immensely, and keeping a memory of the way things were is a sound idea."
     Tsubasa "Take this, for example. I remember, clear as day, the 1964 Summer Olympics in Tokyo."
     MC "You went to the Olympics, Tsubasa-sensei?"
-    #show Tsubasa satisfied
+    show Tsubasa satisfied
     Tsubasa "I did, indeed. I was quite young at the time, however, my father took me to Tokyo and somehow managed to secure us two tickets through some wild stream of favors and I-owe-yous."
     MC "Wow..."
     Tsubasa "Quite right. It was an astounding sight to see. The first modern Olympics after World War II, and the first ones held in Asia."
     Tsubasa "The pure energy of the crowd, the efforts of each athlete, it all felt done in celebration. It was... wonderful."
-    #show Tsubasa neutral
+    show Tsubasa neutral
     Chiyo "Hmph. Always a surefire way to turn you into a child again, dear."
     Chiyo "I followed it in newspapers myself as a child. Since my family lacked a TV, I couldn't watch along like I would have preferred. But all the same, it was a wonderful time indeed."
     Chiyo "However, going back to what you were saying, Michi-kun, times have changed quite a bit since we were young."
@@ -2707,8 +2719,9 @@ label MC005:
     "I bowed to her politely, and nodded at Tashi-sensei as I left the small circle."
     MCT "Eesh. Pressure times three. Damn."
     #hide Chiyo
-    #hide Tsubasa
-    hide HR with dissolve
+    hide HR
+    hide Tsubasa
+    with dissolve
     "I walked around the park for a little longer and admired the light decor for a bit."
     "It was kind of nice just milling about during this whole thing. Felt very... homey."
 
@@ -8242,7 +8255,7 @@ label MC033:
     HR "All I can say is it's a good thing Hageshi-san showed up."
     show HR unique
     Takamura "Yes, while I do appreciate his effectiveness in such manners, I don't understand why the students are so afraid of him. He's such a sweet and kind person. I've never known him to hurt a fly."
-    #show Tsubasa neutral with dissolve
+    show Tsubasa neutral with dissolve
     Tsubasa "Beware the fury of a patient man, as the saying goes."
     Takamura "I'm not sure I'd use the word \"fury\" to describe Hageshi-san. I've never even heard him raise his voice."
     show HR neutral
@@ -8375,6 +8388,8 @@ label MC033:
     MC "You do realize you wouldn't even stand a chance against Hageshi-sensei right?"
     "Giant 2" "Just who the hell are you and where do you think you get off telling me that?"
     MC "He's taken down much bigger guys than you with ease."
+    "At this point I was bluffing based off what I heard from Tsubasa-sensei and Tashi-sensei, but I could tell from earlier whatever he must have heard about Hageshi-sensei he believed too."
+    "Playing it up was my best bet to avoid being on the receiving end of a pounding after opening my mouth."
     "Giant 2" "Is that so? Color me skeptical."
     MC "You had your chance to express your skepticism, but you backed off like a little bitch when all he did was twitch his eyebrow at you. Just move on with your life dude, and stop talking shit to people."
     "Giant 2" "How about I just pound you into the ground right now. What are you going to do about it when Hageshi-sensei's nowhere in sight?"

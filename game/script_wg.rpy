@@ -1585,7 +1585,7 @@ label WG010:
     WG "Clothing, my dear boy."
     MCT "Dear boy? I'm not sure if she's being condescending or endearing at this point."
     show WG haughty
-    WG "It may have escaped your notice, being a guy and all– one apparently not particularly concerned with your own appearance, at that—"
+    WG "It may have escaped your notice, being a guy and all- one apparently not particularly concerned with your own appearance, at that—"
     WG "but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
     show WG happy at Position(xpos=0.3) with move
     WG "The school {i}does{/i} supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
@@ -1622,7 +1622,7 @@ label WG010:
     WG "But we already have most of our selection here at the school, ready to distribute to any interested buyer."
     WG "And if anyone wants to see our products in real life, you can tell them that I'm already wearing my first new set of clothing."
     WG "The school told me it would take as much as a week to get me a larger set of uniforms,"
-    WG "but I– going directly to the company that has the contract with this school– was able to get this comfortable and properly–fitting outfit before my old set became restrictive."
+    WG "but I- going directly to the company that has the contract with this school- was able to get this comfortable and properly-fitting outfit before my old set became restrictive."
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now-wider torso and rounder belly."
     show WG happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly."
@@ -1686,7 +1686,7 @@ label WG010_c1:
                 jump WG010_c3
 
     else:
-        $setFlag("WG010_shiori")
+        $setFlag("WG010_Shiori")
         scene Hallway
         show AE angry
         with fade
@@ -2000,7 +2000,7 @@ label WG011_c3:
     WG "Courtship is a challenge, the man is tested and tries to prove himself. And, if he is successful, he is rewarded with her love."
     MC "But the woman doesn't have to do anything? Doesn't she have to prove herself too?"
     WG "Women have their own trials in any relationship, but how often are we the pursuer?"
-    MC "A bit of a traditionalist, I take it? I guess I hadn't pegged you for the old–fashioned type, Alice."
+    MC "A bit of a traditionalist, I take it? I guess I hadn't pegged you for the old-fashioned type, Alice."
     show WG haughty
     WG "Au contraire. I've never met a woman in our generation more dedicated to conquering the world of business and smashing the glass ceiling than I am."
     WG "I'm simply a realist. Even with advances in women's equality it's considered customary for the man to initiate, to pursue, to \"win\" the woman's heart."
@@ -2160,7 +2160,7 @@ label WG012:
     WG "But we're in the midst of a crisis right now. Our very existence as this school's premiere clothing retailer is under attack."
     show WG neutral
     WG "Hence this meeting. We need to address this attack on free enterprise: Matsumoto-san asserts that it violates the school's rules and regulations for a student to run a business on campus."
-    if not getFlag("WG010_shiori"):
+    if not getFlag("WG010_Shiori"):
         MC "Wait, we're not allowed to be doing this? Then why are we having this meeting?"
         show WG haughty
         WG "Don't be so hasty to accept defeat, Keisuke. As in any competition, to win in business is not just to strive for success, but to reject failure."
@@ -4921,7 +4921,7 @@ label WG024_c2_2:
     MC "Well, I can't speak for others, but if I had to guess— it might not be physical."
     show WG surprised-2
     WG "Oh? How so then?"
-    MC "Well, personality–wise, you can be kind of abrasive."
+    MC "Well, personality-wise, you can be kind of abrasive."
     show WG doubt
     "She didn't say anything for a moment, but I could see her thinking over what I just said."
     MC "Now, don't get me wrong, your directness and self-confidence are strengths, but to some people that comes off as brash and arrogant."
@@ -4994,7 +4994,7 @@ label WG024_c2_2:
 label WG024_c3_2:
     MC "Alice, why are you pressing me about this? What is this really about?"
     show WG surprised-2
-    MC "Are you really this distraught over this kind of school boy past–time of ranking girls?"
+    MC "Are you really this distraught over this kind of school boy past-time of ranking girls?"
     show WG worried
     MC "You strike me as someone who's a bit more confident than to put any stock into this kind of stuff."
     show WG doubt
@@ -6837,7 +6837,7 @@ label WG032_WG_1:
     show WG happy
     extend " but shrewd nonetheless."
     MC "Hey, I'm just a delivery boy. {w}But I suppose I've picked up on a couple of things here or there from watching my boss."
-    WG "While your modesty is false, and your flattery over–obvious, you are genuinely kind.  {w}I'm sure Akira will be very happy with her new dress."
+    WG "While your modesty is false, and your flattery over-obvious, you are genuinely kind.  {w}I'm sure Akira will be very happy with her new dress."
     "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I held my tongue and found my seat."
     jump daymenu
 
@@ -7249,7 +7249,7 @@ label WG034_c1_3:
         "It was all fine. Perfectly fine."
         "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable, but not overdressed."
         MCT "But do I want to settle for \"presentable\"?"
-        MCT "Then again, being over–dressed could make me stick out in the wrong way."
+        MCT "Then again, being over-dressed could make me stick out in the wrong way."
         MCT "Ugh, I hate overthinking this stuff, but I want to make a good impression."
         menu:
             "I should check out the menswear store before making a choice.":
@@ -7277,7 +7277,7 @@ label WG034_c1_3:
         "If you wanted to blind someone with your extravagant taste, this wasn't the place to come to, but to the average person, one would come out looking sharp."
         "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable but not overdressed."
         MCT "But do I want to settle for \"presentable\"?"
-        MCT "Then again, being over–dressed could make me stick out in the wrong way."
+        MCT "Then again, being over-dressed could make me stick out in the wrong way."
         MCT "Ugh, I hate overthinking this stuff, but I want to make a good impression."
         menu:
             "I'm going back to the menswear store.":
@@ -8967,7 +8967,7 @@ label WG041:
     WG "Because formalities are wasted on such a low-class event, beating around the bush does little to increase its appeal."
     MC "Low-class event? Festivals and traveling amusements have been around for ages! Some of the highest kings and queens would have their own performances made just for them."
     show WG haughty
-    WG "That may be true, but that falls more in line with early theatre. I am doubtful the highest of nobles dined on cheap fried junk, while sitting in a tetanus–ridden thrill ride."
+    WG "That may be true, but that falls more in line with early theatre. I am doubtful the highest of nobles dined on cheap fried junk, while sitting in a tetanus-ridden thrill ride."
     MC "C'mon, this isn't just some two-bit traveling circus! This is a proper full-fledged carnival. Everything is up to code and 100%% safe. Plus, the food is nothing like you've tried before."
     show WG neutral-2
     WG "Far be it from me to tell people how to run their business,"
@@ -14751,7 +14751,7 @@ label WG056:
     WG "Nice to finally meet you, Tomoko."
     show Tomoko surprised
     show WG neutral-2
-    "Not much of anything ever phased Tomo, but her wide–eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
+    "Not much of anything ever phased Tomo, but her wide-eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
     Tomoko "Uhhh, hi... it's... just Tomo, by the way."
     Tomoko "{size=-6}Kei, she's huge! I knew you had a thing for bigger girls, but this is {i}biiig{/i}! Even for you!{/size}"
     "My initial reaction was one of bewilderment, because I was not quite sure at what point she would have learned that information, but then again, I can't say I didn't do my fair share of spying on her too when we were younger."
@@ -15060,7 +15060,7 @@ label WG056:
     WG "Aha! I have just the solution!"
     show WG neutral
     "Alice began looking through the drawers in her vanity dresser."
-    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up.{w} Ah, here it is. This is a leave–in dry conditioner."
+    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up.{w} Ah, here it is. This is a leave-in dry conditioner."
     "Alice proceeded to pump the foam into her hands and began to massage it into Tomo's hair."
     "Since we have the same factor, it was quite a lot of hair. The pump started to sputter, so I'm guessing she used all of what had been in the bottle."
     WG "There, now this can actually work."
@@ -15178,7 +15178,7 @@ label WG057_c1_1:
     MCT "Two whole sticks of butter? Alice is {i}really{/i} going to like this."
     PRG "Mix the sugar, flour, and milk in a bowl with a whisk. This is a good batter to start out with because it's very thin, so it's not hard to mix and you're not going to over mix it."
     MC "Seems easy enough, but what do you mean about over mixing? How is that possible?"
-    PRG "Oh, it's a really common mistake, actually. If you've ever had a cake–based dessert that came out with a chewy, leathery texture when it was supposed to be light and airy, that's what happened."
+    PRG "Oh, it's a really common mistake, actually. If you've ever had a cake-based dessert that came out with a chewy, leathery texture when it was supposed to be light and airy, that's what happened."
     MC "Ah, gotcha. That's probably one of the reasons why Alice isn't satisfied with the quality of the desserts at the cafeteria."
     PRG "Probably, yeah."
     PRG "Anyway, that looks good. Gently pour it into the butter in the dutch oven. You don't want to mix it, just let it settle on the butter."
@@ -15197,7 +15197,7 @@ label WG057_c1_1:
     "The pride I felt in my newly acquired skill quickly faded away when I looked around the kitchen at the absolute mess I somehow managed to make."
     "There was peach juice dripping off the counter, all along the drawers on to the floor, batter on the walls, and a sink full of bowls."
     MC "Apparently I'm much better at creating disasters than making dessert."
-    PRG "It's okay, Hotsure-san. Clean–up is part of cooking too. I can help you if you'd like."
+    PRG "It's okay, Hotsure-san. Clean-up is part of cooking too. I can help you if you'd like."
     "I would have had a guilty conscience if I dragged Aida into my mess. Besides, I should probably get used to it if I plan on doing this again. I highly doubt Alice would be up for doing the dishes, even if I did the cooking."
     MC "Nah, I got this. Don't worry about it. Just help show me where to put everything back."
 
@@ -15596,7 +15596,7 @@ label WG058_c1_1:
     MC "My Fairest Lady."
     show WG haughty
     WG "Oh? What's it about?"
-    MC "I'm surprised you aren't aware of it— it's one of those all–time classics. A wealthy linguist meets a lady whose manner of speaking is so uncultured and vulgar that it is almost unintelligible."
+    MC "I'm surprised you aren't aware of it— it's one of those all-time classics. A wealthy linguist meets a lady whose manner of speaking is so uncultured and vulgar that it is almost unintelligible."
     MC "He wagers his friend that he will be able to teach her proper speech and mannerisms such that she will be able to pass as a proper lady."
     show WG neutral-2
     WG "{size=-6}...I think I can relate to this character's motivation.{/size}"
@@ -16680,7 +16680,7 @@ label WG060:
     "I reached into my backpack which had a cooler I had packed with a little treat for Alice."
     MC "Before I came over, I stopped by to see Aida before cooking club practice. I asked if she had any desserts, and she gave me this."
     "I popped open the plastic food storage container I had in the cooler to reveal three generous pieces of tiramisu."
-    "It wasn't the most beautiful presentation, but I had managed to keep the custard–like whip from smearing all over the place in transit."
+    "It wasn't the most beautiful presentation, but I had managed to keep the custard-like whip from smearing all over the place in transit."
     show WG aroused
     WG "Keisuke, it smells heavenly!"
     show WG happy
@@ -17541,7 +17541,7 @@ label WG061:
     WG "There. That is six. That didn't seem too difficult after all."
     MC "See? Now you got the hang of it. Now, all it needs is pepper and shredded parmesan. Those are really just to taste, so add as much or as little as you want. You're the chef now."
     show WG haughty
-    WG "Well, it simply won't do to have our dish be under–seasoned now would it?"
+    WG "Well, it simply won't do to have our dish be under-seasoned now would it?"
     "I couldn't help but slightly raise my eyebrow at just how much Alice added of both. By the time she was done, it smelled quite pungent of pepper and the liquid itself could barely hold all of the finely shredded cheese."
     "It was quite a bit more than how Aida prepared it, but she did say you could add more than she did. Despite her lack of cooking skills, I didn't doubt Alice felt confident about how much seasoning her food should have."
     show WG neutral
@@ -17957,7 +17957,7 @@ label WG061S_C1_1:
     "Without much thought, I gently brought my pulsing manhood towards Alice's cavernous navel."
     show WG aroused
     "The very tip of my shaft made only the lightest contact, but it felt as if her abdomen was vibrating from the sudden stimulation."
-    WG "–{i}Geerrhh!?{/i}"
+    WG "-{i}Geerrhh!?{/i}"
     "Either from reflex or desire, Alice thrust herself forward. Slamming me backwards into the glass with such velocity I'm shocked I didn't cannonball through."
     "WHAM!"
     MC "{i}Guhh!{/i}"
@@ -20526,7 +20526,7 @@ label WG069:
     MC "You look magnificent!"
     show WG happy
     WG "Thank you Dear. Was worried that it may be a bit much."
-    MC "If this event is as big–time as you made it sound to be, I think you'll fit in fine."
+    MC "If this event is as big-time as you made it sound to be, I think you'll fit in fine."
     show WG happy at altMove(0.5, 0.25)
     show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     Chibuki "Go easy on the dress tonight. Not sure how well some of those stitches are gonna hold up under further pressure."
@@ -24547,7 +24547,7 @@ label WG079:
             show WG haughty
             WG "Even if I might regret it, would you be so kind as to serve me the last one?"
             MC "Certainly."
-            "The final cupcake, one of the cheesecake and sweet cream icing cupcakes. The richest and most decadent of the flavors to choose from. This one in particular had an over–generous application of frosting."
+            "The final cupcake, one of the cheesecake and sweet cream icing cupcakes. The richest and most decadent of the flavors to choose from. This one in particular had an over-generous application of frosting."
             show WG neutral
             "Carefully constructing a cupcake \"sandwich\" as it were, I then drifted it towards Alice's waiting maw."
             show WG surprised-2
@@ -25128,7 +25128,7 @@ label WG080_Afterchoice:
             show WG stern
             $setAffection("WG", -1)    
             MC "Maybe he doesn't want you to take over his business. I mean, most dads would be happy to have done well enough in life that their kids don't have to work."
-            WG "Nothing is more contemptible to Father than the \"idle rich\". Frittering away their predecessors' hard earned capital while they frivolously occupy themselves with tending goldfish and over–trimming their tiny tortured trees."
+            WG "Nothing is more contemptible to Father than the \"idle rich\". Frittering away their predecessors' hard earned capital while they frivolously occupy themselves with tending goldfish and over-trimming their tiny tortured trees."
             WG "I can't imagine how poorly it would reflect on Father's reputation if it was known that his daughter was just some spoiled, fat layabout. Just because I may look the part, doesn't mean I intend to act it out."
             jump WG080_Afterchoice2
 
@@ -25732,6 +25732,362 @@ label WG082:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label WGAE001:
+    scene Hallway2 with fade
+    play music Busy
+    "I had a little bit of time after classes I was using to trek across campus, keeping my eyes out for new prospective customers for Alice. My primary duty was to act as a delivery boy, but I stood to earn a little extra if I could generate more sales." 
+    "It wasn't the most dignified profession I'd admit, but it was about all a full time college student like me could hope for considering the flexible hours and the proximity to the campus, being actually on the campus as it were."
+    "The extra money from the commissions was nice, though to be honest, I was more interested in the good will it would gain with Alice than the extra pocket change it was going to get me."
+    if getFlag("WG010_Shiori") or getFlag("WG010_Aida"):
+        "I wasn't a natural salesman by any means, but I learned a few things about what does and doesn't work, especially after my catastrophic failure with my first sale attempt."
+    else:
+        "I wasn't a natural salesman by any means, but I picked up on some dos and don'ts as I got more experience." 
+        "Honoka turned out to be an easy sale, but that boost of confidence I got from an early success didn't prepare me that well for approaching perfect strangers with a purchase proposition."
+    "I did get some advice from Alice. Like not to just give up right away when people say no, but don't be pushy or pressuring either." 
+    "If they say they need time to think about it, let them go— just be sure to follow up with them so a potential sale doesn't slip."
+    "But ultimately, she told me it was up to me to find something that felt natural to me. \"People will see through an act because people don't care unless they think you care about them first.\""
+    "\"They want to see someone who can give a genuine endorsement of the product. Not a soulless shill who's desperate for a commission.\" She was right, and I think I came up with a system that works for me."
+    "I try to pay attention to the other students I come across and pick out the ones I think will be in a receptive mood for a wardrobe upgrade." 
+    "It's the little details: strained buttons, a waistband that's a bit too snug, belt loops with makeshift extra notches, etc."
+    "Someone's in an uncomfortable position, and you're there with a solution. Even if they say no— not a problem. They'll come around eventually, given how these growths work. It's no wonder Alice saw this as an opportunity to seize on."
+    "My most recent strategy was to hit up some of the more popular hangouts on campus where students would want to be wearing something more casual outside of class." 
+    "I was currently headed to the gym because I figured those who would frequent such a place were going to need some new activewear. {w}At least, that was my plan."
+    CMM "Mr. Hotsure-san, I'd like to speak with you."
+    "Overcoat, red armband, this guy must have been one of the student council members. I didn't know what he wanted other than I might have been running too fast for what the hall monitor deemed perfectly safe."
+    MC "Uh, sure. Do I know you?"
+    CMM "No, we haven't met before."
+    menu:
+        "Good, let's keep it that way.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 2)
+            "The council member furrowed his brow in indignation at my reply as I began to walk away, but quickly resumed his previous emotionless expression and flat tone."
+            CMM "I'm afraid that it's not that simple. I have an important matter to discuss with you."
+        "Aren't you going to introduce yourself then?":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 1)
+            CMM "That's not pertinent to the matter that I'm speaking with you for."
+            MCT "Boy this guy must be really fun at parties."
+
+    MC "Which is?"
+    CMM "I'm trying to learn a bit more about this clothing business that has recently been established on campus. Tell me, what is your role in the \"Nikumaru Outlet Direct\" company/organization?"
+    menu:
+        "Be honest with him.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") - 1)
+            MC "I'm the delivery boy. Orders come in and I deliver them to customers. I also canvas for new customer leads. Are you interested in some new duds for yourself? I got a catalog here if you want to take a look—"
+            CMM "That won't be necessary."
+            CMM "I appreciate your cordiality, but you've just implicated yourself and your involvement in a corruption scandal related to an unauthorized and illegal business operation."
+            MC "What!?"
+        "Feign ignorance.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 2)
+            MC "Nikumaru direct what now? Never heard of it, but I'm assuming it has something to do with Alice Nikumaru. I mean, we have some classes together but that's about the extent I know her."
+            CMM "Ah, I see. Deception comes naturally for you. This makes your complicity in the matter all the more clear."
+            MC "And what matter might that be?"
+        "Ask him what he wants.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 1)
+            MC "The fact you would even ask me that question without knowing me tells me you already know the answer. So what do you want from me?"
+            CMM "You're more clever than I gave you credit for by not offering anything that would implicate yourself. Nonetheless you seem to be aware that the walls are closing in on this little operation of yours."
+            MC "Come again?" 
+
+    CMM "I'll cut to the chase. You're a suspect in the bribery scandal surrounding the formation of the Nikumaru Outlet Direct corporation on campus."
+    CMM "We already have all the information we need to get you expelled from the school, but that can be reduced down to an academic probation and school service hours if you cooperate with us."
+    MC "!"
+    menu:
+        "Agree to cooperate.":
+            $setFlag("WGAE001_cooperate")
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") - 4)
+            MCT "Shit. Alice must have really stepped in it with this business thing. She has the money to land on her feet no matter what she does, but I don't have that luxury. If I get expelled from school my life is over."
+            MC "Alright, alright. I'll cooperate. Honestly I don't know a whole lot about what you're asking but I'll tell you what I can."
+            CMM "Excellent, I knew we would see eye to eye on this."
+            CMM "Now, about the matter of—"
+        "Just leave.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 1)
+            "I just rolled my eyes and turned around and walked away— much to the shock on his face."
+            "I wasn't in the mood for this bullshit. It was obvious to me he was just bluffing about all of this and trying to intimidate me when the entire time he couldn't stop me from just walking away from him."
+            CMM "Wait, you can't just walk away! I don't think you grasp the seriousness of your situati—"
+        "Tell him to piss off.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 2)
+            MC "Oh, drop the \"bad cop\" routine already and piss off! That red arm band isn't a badge, and you're about as intimidating as a titmouse." 
+            MC "If there was a real disciplinary matter I'd be hearing from the principal's office, not some dweeb with Napoleon complex."
+            CMM "And to think I was going to go easy on you. You're not in a position to be making enemies. I don't think you grasp the seriousness of your situati—"
+
+    show AE neutral with dissolve
+    play music AE
+    AE "What is going on here, Takahashi-san?"
+    "Appearing seemingly out of nowhere (causing me to jump up in surprise) Shiori stood with a hand on one of her wide, shelf-like hips as she gazed between the two of us."
+    CMM "Matsumoto-san."
+    "The other council member bowed when acknowledging Shiori's presence."
+    CMM "I took it upon myself to follow up on our investigation by interviewing one of the suspects."
+    if getFlag("WGAE001_cooperate"):
+        CMM "He's been surprisingly cooperative as well."
+    show AE neutral-annoyed
+    "Shiori crossed her arms and looked between the student council member and myself."
+    AE "May I ask on what grounds?"
+    show AE neutral
+    CMM "I um... on the grounds of the ongoing investigation into Nikumaru-san ma'am."
+    AE "That is a circumstance, not a basis of authority. I'll ask again with clarification: on what grounds are you investigating Hotsure-san. Whose orders specifically?"
+    show AE glasses-2
+    CMM "U-Uh... He... He was suspicious."
+    AE "... May I take this to mean you acted on your own accord without clearance?"
+    MCT "Man, he's getting the glare of death from her. Even I'm managing to feel sorry for this dude now."
+    show AE neutral
+    AE "You've overstepped your bounds with this, Takahashi-san. This could, at its furthest extent, be considered as intimidation of a fellow student."
+    show AE glasses-2
+    AE "I'm disappointed in your behavior, and do not condone your actions."
+    show AE neutral-annoyed
+    CMM "M-My sincerest apologies, Matsumoto-san. In my eagerness to follow through on this matter I made an oversight and lost the bigger picture in the process."
+    CMM "I'll take my leave then. It would be best if I focused my efforts elsewhere for now."
+    AE "I would be inclined to agree. That will be all."
+    "The council member turned around, but not before giving me a distrustful look before slinking away into the background."
+    show AE angry
+    AE "Mind. Your. Eyes."
+    "Shaken, he hastened his steps away as Shiori rebuked his attitude."
+    if not getFlag("WGAE001_cooperate"):
+        MCT "Yeah, that's right. Get out of here you little pissant."
+    show AE neutral
+    MC "Matsumoto-san, what is going on here? What's with this \"investigation\" around Alice and her business?"
+    AE "As, it seems, you're now party to the investigation proper, I suppose I can share information so long as it is kept in confidence. Our office is investigating a potential violation in school policy regarding commerce and trade practice."
+    MC "Violation of... Wait a second, is she in trouble? {w}You're not trying to get her expelled are you?"
+    AE "..." 
+    AE "I do not wish her to be expelled, but if that is deemed to be an appropriate punishment by the school, should she be found guilty of wrongdoing, then that is due to her choices, not the council's pursuit of corrective action."
+    menu:
+        "That seems awfully petty of you.":
+            if getFlag("WG010_Shiori") or isEventCleared("WGGTS002"):
+                MC "I know you haven't exactly been thrilled at the prospect of her starting a business on campus, and I'll admit, she's not the easiest person to get along with sometimes."
+                MC "But to go this far over a tiff between personalities seems awfully petty of you."
+            else:
+                MC "I know she's not the easiest person to get along with sometimes, but to go this far over a tiff between personalities seems awfully petty of you."
+            $setAffection("AE", -1)
+            AE "This is a matter of enforcing policy. Whatever disagreements there may have been between Nikumaru-san and I do not factor into my decision to pursue justice and ensure that everyone is accountable to the rules."
+            AE "I would be doing the same even if you had done the same."
+            MC "Can't exactly say I'm comforted by that notion."
+        "Can't you just look the other way on this?":
+            MC "This seems like an awful lot over not much of anything to me. Can't you just look the other way on this?"
+            $setAffection("AE", -3)
+            show AE angry
+            AE "..."
+            MCT "Yikes! I'm going to be in for it now."
+            AE "I do not make exceptions. Neither should you."
+        "This sounds pretty serious.":
+            $setAffection("AE", 1)
+            MC "Geez... this sounds pretty serious from how you talk about it."
+            AE "It very much so is. I'm glad you understand. With this in mind, if I can prevent Nikumaru-san from either utilizing the wrong channels or possibly causing bigger problems for herself, then I'll consider it worth it to pursue."
+            AE "As it so happens, if an opportunity to do things through the correct channels reveals itself, I'll accept it respectfully. If not... then I fear there may be no alternative in which punitive action does not occur."
+
+    if isEventCleared("WGGTS002"):
+        MC "So what exactly is she being investigated for? She gave you all the necessary paperwork. I thought everything was squared away."
+        AE "Quite the opposite, in fact. As it stands, the means by which she provided the paperwork was... questionable to say the least."
+        MC "So what does that mean?"
+    else: 
+        MC "So what exactly is she being investigated for?"
+    AE "She's being investigated by the student council for bribery."
+    MC "Bribery?"
+    "As much as I wanted to say \"Alice would never do that.\", the truth was I didn't know her well enough to know that for sure. If anything, it would fit the M.O. of a rich girl who always got everything she wanted."
+    if isEventCleared("WGGTS002"):
+        "Even I had to admit, the ease at which she produced the paperwork and managed to outmaneuver the student council did seem a bit convenient to me as well."
+    MC "What makes you suspect that?"
+    AE "Nikumaru-san indicated she had petitioned the school administration directly to obtain permission." 
+    AE "But upon inquiring about the matter to individual administrators, they all indicated they did not have any direct involvement in the matter, rather that it was a done deal already by the time they were notified."
+    MC "So you suspect they were bought off?"
+    AE "No. That alone isn't enough to implicate that. Instead, I would have to trace back the actions that would lead {i}to{/i} her petition outpacing the administration." 
+    AE "Which led me to suspect, could she, on the basis of some level of connection, be providing benefits to them?"
+    AE "Direct bribing would be unlikely due to the logistical challenges it would pose. To buy off one or two would potentially be possible, but not all of them." 
+    AE "I suspected that they may have been told to not question the matter, however, if the school had just so happened to receive a generous endowment from the Nikumaru Corporation."
+    MC "Is that what she did?"
+    AE "I cannot know this with certainty. This is an investigation, not a trial Hotsure-san." 
+    AE "I scoured the school's financial records of the current school year, but was not able to find any funding linked to one of her father's businesses or any recent cash windfalls that could reasonably be a cover for such."
+    MC "So you don't actually have any proof?"
+    AE "That is, in fact, what an investigation is for. I have no intention to accuse Nikumaru-san unjustly," 
+    AE "which is why it was not appropriate for Takahashi-san to have tried to coax you into incriminating yourself by implying more than the current evidence warranted."
+    MC "Have you tried asking Alice yourself?"
+    AE "I had planned to once I had evidence in hand, as I expect she will not be forthcoming with any information on the matter otherwise."
+    show AE neutral-annoyed
+    AE "Though I suspect that will no longer be necessary." 
+    show AE neutral-annoyed at altMove(0.5, 0.25)
+    show WG angry at Position(xcenter=0.75, yalign=1.0) with dissolve
+    play music WG
+    WG "{i}That{/i} would be an understatement."
+    MC "Alice! We were just talking about you."
+    show WG stern
+    WG "So I heard. I became curious as to what this was about when I overheard just now a conversation between two student council members about how questioning a certain Hotsure-san didn't go as planned."
+    show AE neutral
+    AE "So I can assume you are aware of the student council's investigation into your business?"
+    WG "You act as if I hadn't already suspected it myself. {w}You pride yourself on carrying out your duties with cold, unfeeling professionalism, but the cracks in your façade don't do a particularly good job of concealing your utter disdain for me."
+    AE "My apologies if I have given you that impression. I do not hold any personal animosity towards you."
+    show WG doubt
+    WG "Then what's the reason behind this investigation? I don't see anyone else's conduct being looked at under the microscope by the student council."
+    AE "To answer your question, no one is above the law, not even the wealthy and well connected. As to the second part of your statement, that would not be an accurate assumption."
+    show WG stern
+    "Alice rolled her eyes in exasperation."
+    WG "Oh {i}puh-leeze{/i}. Forgive me if I don't buy the whole \"letter of the law\" schtick. In my experience those kinds of people are the most easily bought." 
+    show AE neutral-eyebrow
+    AE "In your experience? I hope you're not saying bribery is a common practice for you?"
+    show WG haughty
+    WG "Quite the opposite. Father always warned me you could never trust people that can be bought off. They'll just turn on you when they find a higher bidder."
+    show WG neutral
+    WG "The far more important lesson he instilled in me though was that businesses run on trust— even more so than money. You won't have any customers or be able to attract any financers if they won't trust you with their money."
+    WG "The loss of reputation from a scandal can be far more damaging than the punishment and fines."
+    show AE neutral
+    AE "Hm. Your father sounds like a prudent man, indeed. I can respect his principles for sound business ethics."
+    show WG neutral-2
+    WG "Father was fond of saying there would be a lot less criminals if people understood how much money they could make honestly. He's living proof of it after all."
+    AE "May I ask, then, what was the method employed to expedite your proposition regarding your business?"
+    show WG haughty
+    WG "That's quite simple— they didn't have a say otherwise. They were merely informed it was already happening." 
+    show AE neutral-annoyed
+    AE "That is precisely my point of concern. What do you mean by \"they didn't have a say\"?"
+    WG "The school campus is built upon the remnants of an abandoned rock quarry. What nobody seemed to realize was that the area of the campus still fell within one of the island's designated industrial zones."
+    show WG sly
+    WG "In all the years of its existence, however long that might be, it had never been rezoned."
+    show AE neutral-eyebrow
+    AE "Now I see. And your business meets the classification of heavy industry?"
+    show WG haughty
+    WG "Of course. It's a textile processing facility that just so happens to sell factory-direct."
+    show AE neutral-annoyed
+    AE "And, naturally, you are stretching the definition industry to conceal what is obviously a commercial enterprise, thereby circumventing the bureaucratic channels necessary."
+    show WG neutral
+    WG "Relax. The commercial side of things is located off campus, in town, proper zoning and everything. Here's a business card."
+    show AE neutral-eyebrow
+    AE "Alice's Wishes Granted LLC?"
+    WG "It's a subsidiary of the Nikumaru Direct Outlet."
+    AE "I see. Quite forward thinking of you to secure a base of operations once the school campus has been rezoned."
+    show WG doubt
+    show AE happy
+    AE "I'll bring this to the attention of the local government so that they can rectify this error immediately."
+    WG "Hmph."
+    "Alice looked none-too-pleased with Shiori's response."
+    show AE neutral
+    play music Peaceful
+    "But despite her rather cold words, Shiori respectfully took the card and placed it in a business card holder in her jacket pouch." 
+    show WG stern
+    WG "Seems that it doesn't pay to play by the rules after all."
+    AE "My apologies Nikumaru-san, I should not have been so quick to impune illegal intent with regards to your business filings." 
+    show AE happy
+    AE "On the contrary you've proven yourself to have navigated the proper channels in a legal manner and have been surprisingly cooperative with my inquiries." 
+    show AE neutral
+    AE "Nonetheless, it's clear that this zoning classification is an oversight, rather than an intended designation of the campus grounds." 
+    AE "Since you've managed to secure an off campus site for your business, it seems that this matter has a clear resolution for all parties." 
+    show WG doubt
+    WG "If you say so..."
+    AE "Thank you for your cooperation. {w}Sorry to have taken so much of your time, and you as well Hotsure-san. If you'll excuse me I have to follow up on this matter with the rest of the student council."
+    "With that, Shiori nodded and walked away. Turning around, however, it was impossible for us not to see her fat, wobbling ass— her skirt barely covered half of it, after all." 
+    show WG happy at altMove(0.5, 0.5)
+    hide AE with easeoutleft
+    "Alice, in turn, gave a light chuckle mixed with a scoff at the sight. Though I had to wonder if she was somehow not aware how close she herself was to sharing the same predicament."
+    show WG haughty
+    WG "Hard to seem so high and mighty when her rump is exposed to the world, hm? If only she'd take my help, she'd be wearing a pair of sensible undergarments instead of a thong!"
+    MC "Hehe. You certainly have a point there."
+    MC "But still... This sucks. Does this mean you're going to have to run the business off campus now?"
+    show WG sly
+    WG "Heh, she wishes. What she doesn't realize is that the business zoning on the island was recently conducted and they aren't going to convene to redo anything until next year."
+    MC "How do you know that?"
+    show WG haughty
+    WG "You don't have to bribe people when you already have friends in high places." 
+    show WG neutral 
+    extend " One of my father's contacts, Misaki Usuda, is something of a leading citizen of the island, a mover and shaker in the island's chamber of commerce."
+    show WG sly
+    WG "She made me aware of the particular zoning situation of the school grounds and helped me file the paperwork, as well as ensure the timing of the zoning moratorium would align in my favor, should this exact scenario take place."
+    show WG neutral
+    "I knew Alice was a shrewd businesswoman who was always a step ahead of the competition, but this maneuver was like seven steps ahead of everybody."
+    "I was pleasantly surprised to realize I had underestimated her." 
+    show WG happy
+    MC "Huh, seems like you thought of everything then."
+    show WG sly
+    extend " Even to act surprised when Matsumoto-san said she was going to get the school rezoned."
+    show WG happy-2
+    WG "What can I say? I have a flair for the dramatic."
+    show WG neutral 
+    extend " If you met my mother you'd understand."
+    MC "I see."
+    MC "Well, I can't imagine Shiori is going to be too happy when she realizes you pulled a fast one on her."
+    show WG haughty
+    WG "Oh, let her do her worst. She already has by this point and won't be able to do much about it, if anything. Besides, she set this trap for herself as far as I'm concerned."
+    show WG neutral
+    WG "Honestly, these bureaucrat types with their endless rules and red tape think they are protecting people from \"evil\" corporations,"
+    WG "when all they're actually doing is barring businesses with less resources and connections from entering the market that would otherwise outcompete businesses that engage in anti-consumer practices."
+    show WG haughty
+    WG "They create an environment that favors the very cronyism they claim to be protecting against— most of the time on purpose I might add."
+    MC "Do you think Matsumoto-san is serving some hidden interest then?"
+    show WG neutral-2
+    WG "No, not unless you count her own naïve sense of moral altruism." 
+    WG "But I have a feeling, if her growth trajectory continues, she'll eventually come around to a more practical understanding of the matter that will ultimately win her over as a customer."
+    show WG neutral
+    WG "Even now I can't imagine she's able to find matching tops and bottoms for herself."
+    MC "Yeah, you're probably right about that."
+    pause 1
+    MC "So, I guess that takes care of that then."
+    WG "It would seem so. If nothing else it'll keep her off my back for quite a while."
+    if getVar("WGAE_ConF") < 1:
+        show WG haughty
+        WG "Though there is still the matter of what I overheard from the student council members chatting with each other."
+        show WG stern
+        $setAffection("WG", -2)
+        WG "He seemed to indicate you were quite compliant and ready to \"spill the beans\" before Shiori showed up. I can't imagine exactly what he meant by that, but I didn't take you for a snitch Keisuke."
+        MC "I mean... he basically threatened me with expulsion for being involved in the business. I didn't know what he wanted but I felt like I had to cooperate."
+        show WG angry
+        WG "{i}Think{/i} Keisuke. What could be more typical than a lowly peon letting the smallest bit of authority go to their head?" 
+        show WG stern
+        WG "Besides, even if I was engaged in illicit activity, what knowledge would you have possibly had that could have implicated you?" 
+        WG "I'd never ask you to cover for anything untoward but I'd at least expect you to not fold like a sheet when questioned about your involvement in the business." 
+        MC "Sorry. You're right. I panicked and I wasn't thinking."
+        show WG neutral
+        WG "It would serve you well to grow a stronger spine. Don't just roll over for people just because they ask you to— especially if you suspect they don't have your best interests in mind."
+        "At this point I knew defending myself any further was fruitless. I had to take this one from the chin and try to move on."
+        MC "Will do. I'll do better, I promise."
+        show WG neutral-2
+        WG "Good to know."
+        show WG neutral
+        "Alice handed me some paper slips."
+        WG "This is why I was looking for you. We've had a few more orders come in. I want you to pick them up from the mailroom and get them in the hands of the customers before dorm visitation hours end."
+        MC "I'm on it! I'll catch up with you later."
+        WG "Have a good evening Keisuke."
+        hide WG with dissolve
+        "Our conversation lit a fire under my ass to hop-to on these orders. I felt like I needed to do something if I was going to get out of the dog house with Alice after botching the so-called \"interrogation\"."
+    elif getVar("WGAE_ConF") > 4:
+        show WG haughty
+        WG "Though I thought I should mention what I overheard from the student council members chatting with each other."
+        show WG sly
+        WG "He seemed agitated that you gave him the runaround and were surprisingly flippant to a member of the student council."
+        MC "I mean... he was acting like a prick, so turnabout is fair play I'd say."
+        show WG neutral
+        WG "I'd normally be inclined to agree, but keep in mind your demeanor when you're representing the company." 
+        show WG doubt
+        WG "I have no doubts this whole issue with the inception of our operation has not left a good impression of the business in the minds of the student council." 
+        show WG stern
+        WG "We have an uphill battle to fight in order to gain a good reputation amongst the student body, and being unnecessarily rude to people that already have it in for the business isn't helpful." 
+        MC "I guess I wasn't really thinking about that... Sorry."
+        show WG haughty
+        WG  "I don't intend to chastise you for something I would have likely done myself, but I trust I've made my expectations clear with this conversation?"
+        MC "Crystal."
+        show WG happy
+        WG "Good to hear."
+        "Alice handed me some paper slips."
+        show WG neutral
+        WG "This is why I was looking for you. We've had a few more orders come in. I want you to pick them up from the mailroom and get them in the hands of the customers before dorm visitation hours end."
+        MC "Alright, I'll head down there right now. I'll catch up with you later."
+        WG "Have a good evening Keisuke."
+        hide WG with dissolve
+        "In retrospect I guess I didn't need to be such a dick to that guy, even if he deserved it." "Still though, I should have known the satisfaction of 1-upping that dweeb was going to be temporary, and now I've gone and just made things more difficult for me and Alice to draw in new customers."
+    else:
+        show WG haughty
+        WG "Though I thought I should mention what I overheard from the student council members chatting with each other."
+        show WG sly
+        WG "He seemed none too pleased that you gave him the runaround and left him nothing to work with."
+        MC "Well, he certainly talked a big game, but he certainly overplayed his hand, which turned out to be a bluff."
+        show WG haughty
+        $setAffection("WG", 1)
+        WG "Precisely. {w}Honestly, so typical of petty tyrants." 
+        show WG happy
+        WG "I'm glad to hear you stood your ground when faced with the threats of a bureaucratic regulator. You're showing quite a bit of promise as a businessman already."
+        MCT "That's certainly high praise coming from Alice."
+        MC "Thanks. That's good to hear, though I still have quite a bit more to learn."
+        show WG happy-2
+        WG "That's the right attitude."
+        "Alice handed me some paper slips."
+        WG "This is why I was looking for you. We've had a few more orders come in. I want you to pick them up from the mailroom and get them in the hands of the customers before dorm visitation hours end."
+        MC "Sounds good. I'll head down there right now. I'll catch up with you later."
+        WG "Have a good evening Keisuke."
+        hide WG with dissolve
+        "If I was being honest, I was pretty tempted to panic when questioned by that guy, but like Dad always told me \"The smallest dog barks the loudest\", and he was right."
+    jump daymenu
 
 label WGBE001:
     scene Classroom with fade
@@ -28245,7 +28601,7 @@ label WGFMG003:
     show WG doubt
     WG "Let you what? I don't think I understand... what exactly are you talking about?"
     FMG "Lift- like pick you up,{w} in the air,{w} off the ground."
-    WG "I'm aware of what that word means. I was hoping you'd clarify some non–literal context that was somehow less absurd of a proposition."
+    WG "I'm aware of what that word means. I was hoping you'd clarify some non-literal context that was somehow less absurd of a proposition."
     FMG "So that's a yes?"
     show WG stern
     WG "That's a no."
@@ -29770,7 +30126,7 @@ label WGGTS003:
     MC "What the hell was that back there with Naomi? I know you two never got off on the right foot but was all of that really necessary?"
     show WG stern
     WG "Tsk, fine. I suppose you are correct in that it was not my finest moment."
-    WG "But you don't understand Keisuke. In all my years attending private schools, visiting  luxury resorts and business conferences with my father— I've been dealing with these snooty old–money types my whole life."
+    WG "But you don't understand Keisuke. In all my years attending private schools, visiting  luxury resorts and business conferences with my father— I've been dealing with these snooty old-money types my whole life."
     WG "Always looking down on me and my family, because we don't dress the way they think we should, or act in the \"traditions of the ancestors\", whatever the hell that means."
     show WG sad
     WG "I'm..."

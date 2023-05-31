@@ -5760,7 +5760,7 @@ label BE031:
     BE "Sorry! Just a sec. Dang socks all over the place. Coming!"
     #[SFX- Door_Open]
     show BE neutral
-    show NoHairpinBE2
+    show NoHairpinBE
     with dissolve
     "A few seconds later, Honoka opened the door. We greeted each other, but as I looked at Honoka, something was different. I couldn't quite put my finger on it."
     MC "So, what's the plan for tonight?"

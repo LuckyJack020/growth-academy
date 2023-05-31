@@ -218,6 +218,7 @@ init python:
         SUMINT = "summer-interior"
         SUMINTSG = "summer-interior-sunglasses"
         TIRED = "tired"
+        TOPLESS = "topless"
         TRADITIONAL = "traditional"
         WINTER = "winter"
         WORK = "work"
@@ -796,7 +797,7 @@ init python:
         elif AENsfw and isNSFW():
             AEOutfit = AENsfwOutfit
 
-        if BEOutfit == OutfitEnum.NUDE and not isNSFW():
+        if (BEOutfit == OutfitEnum.NUDE or BEOutfit == OutfitEnum.TOPLESS) and not isNSFW():
             BEOutfit = BEPrevOutfit
         elif BENsfw and isNSFW():
             BEOutfit = BENsfwOutfit
@@ -906,7 +907,7 @@ init python:
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             BENsfw = False
             BEOutfit = o
-        elif o == OutfitEnum.NUDE:
+        elif o == OutfitEnum.NUDE or o == OutfitEnum.TOPLESS:
             BENsfw = True
             BENsfwOutfit = o
             if isNSFW():

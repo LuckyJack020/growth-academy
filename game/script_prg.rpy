@@ -2201,6 +2201,7 @@ label PRG011:
             "I highly doubted that the average student would be able to just pull that piece of knowledge out of their brain at the drop of a hat, and asking Alice outright would raise a few red flags."
             "Near the end of the hall, I spotted one of the teachers coming toward me. He had his eyes down, flipping through a large folder of papers."
             "I slowed to a speed walk before he noticed me."
+            show Tsubasa neutral with dissolve
             MC "Excuse me, Tsubasa-sensei?"
             "He glanced up lazily at me, peering over his thick glasses."
             Tsubasa "Hm? Can I help you with something?"
@@ -2211,6 +2212,7 @@ label PRG011:
             MC "Milliliters into... whatever the American equivalent is."
             Tsubasa "Right, that would be ounces, by the way. And, that is... twenty nine point five milliliters in an ounce. You can round up to thirty for simplicity."
             MC "Thank you, Sensei!"
+            hide Tsubasa with dissolve
             "I hurriedly bowed to him and turned back to the kitchen. I glanced back after a few seconds and watched him enter a classroom on the side of the hall."
             "I broke into a sprint for the kitchen."
             MCT "Thirty to one. Thirty to one. Thirty to one."

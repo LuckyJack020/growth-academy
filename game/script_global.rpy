@@ -585,276 +585,24 @@ image AE hatred = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hatred.png")
 image AE love = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/love.png")
 image AE rage = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/rage.png")
 
-image BE neutral = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE happy = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE sad = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE smug = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE surprised = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE surprised-2 = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE angry = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE aroused = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE unique = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE confused = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE disoriented = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disoriented.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disoriented.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE doubt = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE embarrassed = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE embarrassed-2 = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE seductive = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE shrug = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE wink = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/wink.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/wink.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
-image BE worried = Composite(
-    (513, 686),
-    (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.png"),
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.png"),
-        None, Null()),
-    (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null()),
-    (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
-        None, Null())
-    )
+image BE neutral = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png")
+image BE happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.png")
+image BE sad = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png")
+image BE smug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.png")
+image BE surprised = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.png")
+image BE surprised-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.png")
+image BE angry = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.png")
+image BE aroused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.png")
+image BE unique = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.png")
+image BE confused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.png")
+image BE disoriented = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disoriented.png")
+image BE doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.png")
+image BE embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png")
+image BE embarrassed-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.png")
+image BE seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.png")
+image BE shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.png")
+image BE wink = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/wink.png")
+image BE worried = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.png")
 
 image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/happy.png")
@@ -973,8 +721,7 @@ image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering
 image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.png")
 
 image side MC = "Graphics/MC/side.png"
-image side BECell = ConditionSwitch("getVar('BEMode') == 'Feminine'", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.png"),
-                                    "True", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.png"))
+image side BECell = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.png")
 image side WGCell = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/side.png")
 image side FMGCell = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/side.png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.png")
@@ -1022,10 +769,10 @@ image Takamura reassuring = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/re
 image Takamura sad = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/sad.png"
 image Takamura strict = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/strict.png"
 
-#image Tsubasa neutral = "Graphics/minor/faculty/tsubasa/neutral.png"
-#image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.png"
-#image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.png"
-#image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.png"
+image Tsubasa neutral = "Graphics/minor/faculty/tsubasa/neutral.png"
+image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.png"
+image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.png"
+image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.png"
 
 
 #legalsizes already updated, change images when bigger sprites exist
@@ -1160,8 +907,9 @@ image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.png"
 image HairpinGTS1 = "Graphics/GTS/1/overlays/hairpin-overlay.png"
 image FlowerPRG2 = "Graphics/PRG/2/overlays/flower-overlay.png"
 image WmHairpinBE2 = "Graphics/BE/2/overlays/hairpin-overlay.png"
-image NoHairpinBE2 = "Graphics/BE/2/overlays/nohairpin-overlay.png"
+image NoHairpinBE = "Graphics/BE/[globalsize]/overlays/nohairpin-overlay.png"
 image AthleticSoccerBE1 = "Graphics/BE/1/overlays/soccer-overlay.png"
+image AlternateOutfitBE = "Graphics/BE/[globalsize]/overlays/alternate-overlay.png"
 
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"
@@ -1579,12 +1327,16 @@ init 2 python:
     eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG028"]]}
     eventlibrary['FMG078'] = {"name": "The Holy Grail of Revengeance", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                      "location": "arcade",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG076"]]}
+    
     eventlibrary['FMGGTS001'] = {"name": "Down and Dirty", "girls": ["FMG", "GTS"], "type": EventTypeEnum.OPTIONAL,                         "location": "bakery",                     "priority": PrioEnum.NONE,              "obsflags": ["GTSFMG001"],                                    "conditions": [[ConditionEnum.EVENT, "FMG023"]]}
     eventlibrary['FMGGTS002'] = {"name": "Burger Buddies and Kei", "girls": ["FMG", "GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "gym",                     "priority": PrioEnum.NONE,              "obsflags": ["size3"],                            "conditions": [[ConditionEnum.EVENT, "FMGGTS001"]]}
+    
     eventlibrary['FMGWG001'] = {"name": "Cupcakes or Bust", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                         "location": "library",                     "priority": PrioEnum.NONE,              "obsflags": ["noFMGWG001"],                     "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "WG015"], [ConditionEnum.AND, [ConditionEnum.EVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]]}
     eventlibrary['FMGWG002'] = {"name": "Built like a Gorilla", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                       "location": "hallway",                  "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG033"]]}
     eventlibrary['FMGWG003'] = {"name": "Horā Eiga", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                                   "location": "hallway",                  "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "FMGWG002"], [ConditionEnum.EVENT, "FMG038"]]]}
     eventlibrary['FMGWG004'] = {"name": "An Unstoppable Force", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                        "location": "schoolexterior",           "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "FMGWG003"], [ConditionEnum.EVENT, "FMG064"]]]}
+    eventlibrary['FMGWG006'] = {"name": "Fat Woes", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                                 "location": "dormWG",                   "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.AND, [ConditionEnum.AND, [ConditionEnum.EVENT, "FMGWG004"], [ConditionEnum.EVENT, "FMGWG001"]], [ConditionEnum.EVENT, "FMG081"]]]}
+
 
     #Core
     eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 0,          "next": "GTS002", "obsflags": [],       "conditions": []}
@@ -1843,18 +1595,21 @@ init 2 python:
     eventlibrary['WG065'] = {"name": "A Hefty Heist", "girls": ["WG", "PRG", "BE", "FMG"], "type": EventTypeEnum.OPTIONAL,                                            "location": "dorminterior",            "priority": PrioEnum.NONE,              "obsflags": [],      "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG063"], [ConditionEnum.NOEVENT, "WG069"]]]}
     eventlibrary['WG004M'] = {"name": "To Play the Fool", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                             "location": "musicclassroom",    "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG003M"], [ConditionEnum.AND, [ConditionEnum.EVENT, "WG075"], [ConditionEnum.SKILL, "Art", ConditionEqualityEnum.GREATERTHANEQUALS, 14]]]]}
 
+    eventlibrary['WGAE001'] = {"name": "Butting Into Her Business", "girls": ["WG", "AE"], "type": EventTypeEnum.OPTIONAL,                                        "location": "hallway",        "priority": PrioEnum.NONE,              "obsflags": ["size3"],            "conditions": [[ConditionEnum.EVENT, "WG012"]]}
 
     eventlibrary['WGBE001'] = {"name": "So Bad It's Good", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.AND, [ConditionEnum.FLAG, "DormWG_Seen"], [ConditionEnum.NOEVENT, "WG044"]]]}
     eventlibrary['WGBE002'] = {"name": "Fashion Faux Pas", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "schoolexterior",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG035"], [ConditionEnum.NOEVENT, "WG044"]]]}
     eventlibrary['WGBE003'] = {"name": "It's a Miracle!", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dormWG",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WG062"]]}
     eventlibrary['WGBE004A'] = {"name": "Beat 'Em Ups & Brownies", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dormWG",        "priority": PrioEnum.NONE,              "obsflags": ["size6"],            "conditions": [[ConditionEnum.EVENT, "WG079"]]}
     eventlibrary['WGBE004B'] = {"name": "A Bad Batch", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "cookingclassroom",        "priority": PrioEnum.ALL,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGBE004A"]]}
+    
     eventlibrary['WGFMG001'] = {"name": "Afraid of a Little Fun?", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                             "location": "gym",               "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "WG043"], [ConditionEnum.OR, [ConditionEnum.EVENT, "WG032"], [ConditionEnum.EVENT, "WG037"]]]]}
     eventlibrary['WGFMG002'] = {"name": "Tamer of Dragons", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                   "location": "dorminterior",     "priority": PrioEnum.NONE,              "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "WG043"]]}
     eventlibrary['WGFMG003'] = {"name": "An Immovable Object", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "schoolexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size5"],        "conditions": [[ConditionEnum.EVENT, "WG063"]]}
     eventlibrary['WGFMG004A'] = {"name": "Tropical Getaway", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "WG079"], [ConditionEnum.AND, [ConditionEnum.FLAG, "WGFMG001_3"], [ConditionEnum.EVENT, "WG074"]]]]}
     eventlibrary['WGFMG004B'] = {"name": "Soba Shop Showdown", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "okinawa",     "priority": PrioEnum.ALL,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WGFMG004A"]]}
+    
     eventlibrary['WGGTS001'] = {"name": "Off to a Bad Start", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": ["size3"],            "conditions": [[ConditionEnum.EVENT, "WG005"]]}
-    eventlibrary['WGGTS002'] = {"name": "Aggressive Expansion", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                               "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": ["size3"],           "conditions": [[ConditionEnum.EVENT, "WG012"]]}
+    eventlibrary['WGGTS002'] = {"name": "Aggressive Expansion", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                               "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": ["size3"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG012"], [ConditionEnum.NOEVENT, "WGAE001"]]]}
     eventlibrary['WGGTS003'] = {"name": "Delivery Boy Debacle", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                               "location": "dormexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size4"],           "conditions": [[ConditionEnum.EVENT, "WG022"]]}
-    eventlibrary['WGGTS004'] = {"name": "A Growing Business", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                                                "location": "dormexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size5"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size4"], [ConditionEnum.EVENT, "WG054"]]]}
+    eventlibrary['WGGTS004'] = {"name": "A Growing Business", "girls": ["WG", "GTS"], "type": EventTypeEnum.OPTIONAL,                                                "location": "dormexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size5"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size4"], [ConditionEnum.EVENT, "WG054"]]]}
