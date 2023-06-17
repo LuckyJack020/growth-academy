@@ -2998,13 +2998,12 @@ label FMG022:
     $setFlag("XX22")
     $setProgress("FMG", "FMG023")
     scene Track with fade
-    play music Busy
-    "At last the pounding of my feet and the whistle of the wind ground to a halt."
+    play music Motivation
     if checkSkill("Athletics", ">", 3):
         "I had kept a solid pace running around the track with Akira, and even when I started to flag in the fifth lap I felt like it was... not as far back as the last time."
         "I couldn't actually see a difference, but I could just {i}feel{/i} the centimeters of progress I'd made."
+        "I'm {i}that{/i} good."
         $setSkill("Athletics", 1)
-        "It counts."
         show FMG happy with dissolve
         FMG "Whew, good run! You were really pushing it, Kei-kun!"
         "I nodded as I grabbed my water bottle, appreciating the transition from the hard track to the springy grass."
@@ -3017,24 +3016,28 @@ label FMG022:
         FMG "Ahhhhh..."
     else:
         "Akira had passed me once, maybe twice in the course of our run. To be honest, I lost count after it felt like my lungs caught fire."
-        "I trudged on, legs bending at a new angle with every step I took, Akira's blurry image some twenty meters ahead at the finish line. Her hands were on her hips, until she raised them to cup them around her mouth."
+        "I trudged on, legs bending at a new angle with every step I took, Akira's blurry image some twenty meters ahead at the finish line. Her hands were on her hips until she raised them to cup them around her mouth."
         show FMG angry with dissolve
         FMG "Let's go, let's go! You want the finish line, Kei, work for it!"
         "And so I did. In my own way."
         "If there's a word for stumbling and flopping your limbs forward like a brain damaged octopus, I don't know it. But that's roughly how I reached the finish line."
         $setSkill("Athletics", 1)
-        FMG "God, Kei, you're supposed to get better with practice! What'd you do, eat a whole thing of pasta right before our run?"
-        MC "You...{w} not supposed to do that?"
-        show FMG surprised
-        FMG "Oh.{w} My.{w} God."
-        "I picked up my water bottle and took a long draft."
-        MC "Ah, chill, I'm just joking. If I'd actually done that it would've come back up around lap two."
+        FMG "God, Kei, you're supposed to get better with practice!"
+        MC "Hey, in my defense... I would've been crawling last week. Now that's what I call improvement! {w}UP TOP!"
         show FMG neutral
-        FMG "Gross. But you're probably right."
-        MC "Still, yeah, I gotta work on my endurance. I'll just think about someday beating {i}you{/i} in a race."
+        FMG "..."
+        MC "..."
+        MC "W-When someone puts their hand up like this you're supposed to high-five them. {w}I... uh... don't see your hand moving."
+        FMG "Put your hand down, Kei."
+        MC "Alright! Maybe later! {size=6}Going to pretend that didn't crush my spirit...{/size}"
+        "I picked up my water bottle and took a long draft, disappointed that she had denied me a pristine high five."
+        MC "Next week, I won't be flopping around like that. I'll have a proper running form, I swear."
+        FMG "Uh-huh, you told me that last week."
+        MC "These things take time. My plan to kick your ass in a race can't happen if I end up injured from pushing myself too much."
         show FMG happy
-        FMG "Heh, better get working, Kei-kun, 'cause I'm not slowing down!"
-        MC "I'm counting on it."
+        FMG "Take all the time you need. It's only going to get harder the bigger I get, hehe."
+        MC "Well, I like a challenge!"
+        MCT "Yeah, it ain't happening."
     MC "So hey..."
     show FMG neutral
     FMG "Yeah?"
@@ -3045,25 +3048,27 @@ label FMG022:
     MC "We'll go out into the woods and climb one of the rocks or cliffs out there."
     MC "It'll be a nice change of scenery, and we can get to know the island a little bit. How 'bout it?"
     show FMG happy
-    FMG "Ooh!..."
+    FMG "Ooh...!"
     FMG "Yeah, sounds fun!"
     FMG "In fact, I'm gonna bring a stopwatch and we're gonna make it interesting! I wanna see if I stomp you as hard climbing as I do running."
-    MC "Funny, I was just thinking the same thing."
+    MC "Funny, I was just thinking the same thing!"
+    MCT "I was not."
     show FMG aroused
     FMG "Oh, you're on."
     MC "Forward, back, and side to side might be your domain, Akira, but up is {i}my{/i} kingdom. Get ready."
     FMG "Lotta talk, Kei-kun. Let's see what that does for you tomorrow."
-    "My shit-eating grin almost felt good as I nodded and said,"
+    "My shit-eating grin almost felt good as I nodded and said."
     MC "Meet you by the lake."
     show FMG neutral
     FMG "See you there."
     hide FMG with dissolve
     "We walked off the track and parted ways, Akira to her dorm and I towards town."
+    MCT "I talk a big game but I'm getting my ass handed to me without a doubt. {w}Meh, whatever, at least I can spend some time with her."
 
     scene Town with fade
-    MCT "I am absolutely, one hundred percent gonna get smoked tomorrow."
-    "But I didn't really regret putting on a show."
-    "It always makes me smile when she gets all hyped up for a competition. And win or lose, it was going to be nice trying something new with her."
+    MCT "Oh yeah, today's feeling like a fantastic day to lose... Man, I really have to start being more positive."
+    MCT "Maybe I'll win. {w}Yeah, that's much better. Great job me."
+    "It always makes me smile when she gets all hyped up for a competition. And win or lose, it's going to be nice trying something new with her."
     MCT "Now, gonna need a couple helmets, gloves, some bug spray..."
     stop music
 
@@ -3079,12 +3084,12 @@ label FMG022:
     MC "Hey!"
     FMG "Hey, what's up?"
     MC "Just stretching before we head out. I picked up some gear for us, too."
-    "With that I handed her her helmet and gloves and slipped on my own. Once her gloves were on, I passed the bug spray."
+    "With that, I handed her her helmet and gloves and slipped on my own. Once her gloves were on, I passed the bug spray."
     FMG "Oh, good idea. Thanks!"
-    MC "I thought it'd help. We wouldn't wanna incur the wrath of some vengeful bee."
+    MC "I thought it'd help. We wouldn't wanna incur the wrath of some vengeful insects."
     show FMG sad
-    FMG "Oh God no, that would freaking suuuuuuck."
-    "She rubbed her triceps at the very idea, as if to console them."
+    FMG "Oh god no, that would freaking suck. The last thing I'd want is to get bit by some mosquitos."
+    "She rubbed her triceps at the very idea as if to console them."
     show FMG neutral
     FMG "Not gonna lie though, it feels a little goofy walking into the woods wearing a bike helmet."
     MC "No different than if we were going to the gym. Besides, it's for safety in case one of us falls."
@@ -3105,44 +3110,51 @@ label FMG022:
     MC "...{w} Well, shall we?"
     show FMG happy
     "She slapped the ground."
-    FMG "Let's do it to it!"
+    FMG "Let's do it!"
 
     scene Woods with fade
     "We passed a brief walk on the hiking trails with some small talk draped over our casual survey of the woods. A sea of rustling green stretched out in every direction, its horizon broken up by a thousand towers of brown and tawny."
     show FMG neutral with dissolve
     FMG "Man, I don't know if I've even been out here since I moved in. It's so pretty!"
-    MC "Isn't it? Maybe I should come out here more often."
+    MC "Isn't it? Maybe we should come out here more often."
     FMG "Speaking of which, are we far from the spot?"
     MC "Oh, uh...{w} I didn't actually pick out a spot beforehand. I just thought it would be a nice idea."
-    show FMG angry
-    FMG "Do you mean we gotta {i}find{/i} a rock to climb on?"
+    show FMG happy
+    FMG "And it was! It's beautiful out here, we can enjoy the view as we search for a spot."
     if checkSkill("Academics", ">", 2):
-        MC "We're near a mountain. If we follow the terrain up, we'll find one. It won't take long."
-        FMG "Egh... if you say so. I've got other stuff I wanted to do today."
-        MC "I know, I know. Just trust me."
+        MC "We're near a mountain. If we follow the terrain up, we'll find one. It won't take long... I hope."
+        FMG "Don't sweat it, Kei. We can always count this as another leg day if we don't find a good rock. {size=-6}And I get to spend time with you.{/size}"
+        MCT "That sentence alone makes me want to vomit. {w}Ew... leg day... {w}again."
+        MC "Wait. {w}What did you say?"
+        show FMG surprised
+        FMG "Nothing! Just that the weather is great for rock climbing today... heh."
+        MC "Couldn't have picked a better day, haha."
     else:
-        MC "...Yeah."
-        FMG "Oh, for the love of..."
-        MC "There's probably a bunch out here, we're bound to find something eventually."
-        FMG "Eventually? Dude, you know I have a whole routine for the day."
-        MC "I'm sorry, but look, there's some hills right there. We can't be far off."
+        MC "Heh, I'm glad you think so! I was worried you might be... a little... annoyed since this isn't what we usually do."
+        FMG "What? No way, Kei! We get to be outside {i}and{/i} {size=-6}I get to spend time with you.{/size}"
+        MC "What?"
+        show FMG surprised
+        FMG "Nothing! Nothing! I just said I hope your water is um... cold..."
+        show FMG sad
+        MC "Of course, I invested in one of those fancy insulated water bottles. This baby is going to be cold for hours."
     show FMG neutral
+    MC "Okay... Where are the climbable rocks at? It's going to be sundown by the time we find one."
+    FMG "We'll find one, relax my guy."
+    MC "Right, sorry. I just don't want this to be all for nothing."
+    FMG "And it won't be! Let's keep looking."
     "She rolled her eyes... couldn't tell if it was at me or herself... and we started down the trail again. This time, we mostly just looked around."
     "The pebbles and roots under my shoes spurred me forward, past the regularly-placed benches, gradually up the land as the pale blue sky sunk lower all around us. Lower and lower..."
     "I turned my head at the drumming of a woodpecker off in the distance, hoping to spot its creator.{w} And I saw it."
     "A towering, wrinkled, gray old face peacefully asleep by a creek. It was crested with disheveled green and a few thick roots poked out from the veins of soil near the top."
     "I tapped Akira on the shoulder."
-    MC "Check it out."
+    MC "Check it out. {w}I found it!"
     show FMG neutral at Transform(xzoom=-1)
     FMG "Huh! That oughta do, let's try it."
     "She began jogging through the undergrowth with me in pursuit, stirring up a commotion of rustling and snapping."
-    MC "And hey, after we're done, we've got something to drink."
+    MC "Why must you run so fast? Some of us aren't built for this."
+    FMG "I'm not even running that fast! And besides, you're doing great at keeping up with me, don't sell yourself short."
     show FMG neutral at Transform(xzoom=1)
-    FMG "Naw, I'm good with my shake, thanks. Fish {i}poop{/i} in there."
-    if checkSkill("Academics", ">", 2):
-        FMG "Thought you'd know that there, Dr. Science."
-        MC "Oh, hush."
-    "Akira pulled her stopwatch from her pocket and looped the lanyard around her neck."
+    "As we arrived at the rock. Akira pulled her stopwatch from her pocket and looped the lanyard around her neck."
     FMG "To the top and back down, or just to the top?"
     MC "Just to the top's good."
     show FMG happy
@@ -3169,7 +3181,6 @@ label FMG022:
         "My fingers pierced the loose soil veneer and dug into the cold, solid rock just past, and the dirt came with me, on my fingers and knees and the tips of my shoes, as I pulled myself higher and higher up the cliff."
         "I chanced to look up, and saw Akira's smile replaced with a dubious frown."
     else:
-        "And that's when I learned that \"well begun is half done\" is an abhorrent, malicious lie."
         "Every meter I climbed was pain, tendon-wringing, lung-searing pain, sprinkled with dirt and drizzled with shortness of breath, all set in a bowl of tragic irony."
         "I think I was two meters off the ground and my arms were already beginning to shake; I think; I dared not look down."
         "But in my throes, I happened to look up and saw Akira... frowning down at me."
@@ -3187,16 +3198,16 @@ label FMG022:
     FMG "This looks really high from this angle..."
     FMG "Let's just call off the race thing. Take it slow and be careful, okay?"
     menu:
-        "Okay, if you say so.":
+        "Sure, no problem.":
             jump FMG022_c1_1
         "I am the mountain king!":
             jump FMG022_c1_2
 
 label FMG022_c1_1:
     show FMG neutral
-    FMG "Yeah... uh, thanks, I guess..."
+    FMG "Awesome, thank you."
     MC "Hmph... yep."
-    if checkSkill("Athletics", ">", 5):
+    if checkSkill("Athletics", ">", 14):
         $setAffection("FMG", 1)
         "I was definitely starting to feel it in my back and my chest, pulling myself upwards as I was, but I still had no real trouble to that point. Nevertheless, I gave every hold an obligatory wiggle before climbing it."
         "I guess, taking it slower made me better appreciate the breeze passing by as I got higher up, wicking away my budding sweat."
@@ -3205,16 +3216,16 @@ label FMG022_c1_1:
         MC "Whew...{w} quite a view."
         FMG "It is, huh?"
         MC "You, uh, wanna do another rep?"
-        FMG "...Let's climb back down. I think it's almost time for my run."
-        MC "Oh yeah! Guess we took a hot minute getting here...{w} sure, let's go back."
+        FMG "Nah, I think this is a good stopping point. Besides it's starting to get late, we should head back."
+        MC "Oh yeah! Guess we took a hot minute getting here...{w} Sure, let's go back."
         hide FMG with dissolve
-        "Gravity was for once a kindly mistress as we retraced our steps back down the slope; she hit the ground first and got a couple jumping jacks in before I touched down, too."
+        "Gravity was for once a kindly mistress as we retraced our steps back down the slope; she hit the ground first and got a couple of jumping jacks in before I touched down, too."
     else:
         "Luckily, I had the \"take it slow\" part downpat."
         "The slope mellowed out closer to the top, which meant my arms had a slightly easier time dragging my useless legs and chest up across the rocks."
         "As new scrapes and bruises formed on my body by the second, I craned my neck up to see how far I had yet to go."
         show FMG happy with dissolve
-        "Akira looked down at me, put on her most reassuring smile and gave me a stiff thumbs up."
+        "Akira looked down at me, put on her most reassuring smile, and gave me a stiff thumbs up."
         show FMG sad
         "At last I came within reach of the ledge and my soul reached out to the immortal earth for strength as I flopped my way up to solid ground."
         "My prayers were answered, and I rolled safely onto my back. The fires in my everything began to die down."
@@ -3223,16 +3234,13 @@ label FMG022_c1_1:
         FMG "You sure did it, Kei-kun."
         FMG "...Probably about time we go back, though. Don't suppose you wanna go again?"
         MC "Not... today. Limbs... jelly."
-        FMG "Okay, well... I'm gonna go back down, it looks like there's a slope around back that you can walk down. Meetcha at the bottom."
-        MC "Ngkay."
-        "I heard the earthy rustling of her climbing down while I rolled myself gradually to standing position."
-        "The rustling stopped by the time I got up; I prodded myself to get down the slope in a hurry, and one long, wobbly shuffle later, I met with her."
-    MC "Thanks for waiting up."
-    show FMG neutral
-    FMG "'Course. I need somebody to show me outta the sticks."
-    MC "Right this way, madame."
-    hide FMG with dissolve
-    "And so I did, after she gave my arm a good whack."
+        FMG "Here, let me help you up."
+        pause .5
+        MC "W-Whoa! {w}Thanks, I needed that."
+        FMG "Don't mention it. Come on, let's head back. I need somebody to show me outta here."
+        MC "Heh, right this way, madame."
+        hide FMG with dissolve
+        "And so I did after she gave my arm a good whack."
     "But there was something else I wanted to tell her, that took me the rest of our time on the trail to say."
 
     scene Lake Road
@@ -3242,41 +3250,44 @@ label FMG022_c1_1:
     FMG "Like I said, {i}push{/i} your limit, don't shoot past it. Because passing your limit in the gym might mean spraining your shoulder, but back there it might mean breaking your leg."
     MC "Eesh... I guess you're not wrong. I just didn't think of that."
     show FMG happy
-    FMG "Good thing you got me watching your back, then!"
-    MCT "But you went first... and you damn near sprinted up there..."
+    FMG "And that's why you have me around. Someone has to watch your back."
+    MC "Hey, wait a second... but what about you? You might as well have flown up there with how fast you were moving."
+    FMG "I know my limits, Kei."
     show FMG neutral
-    FMG "And, you know...{w} it wasn't a bad workout."
-    "I smiled."
-    MC "Glad you liked it."
+    FMG "And, you know...{w} it wasn't a bad workout. I had a lot of fun, we should do it again sometime."
+    MC "Agreed, it was a nice mix-up."
+    MC "Hey, wanna get a bite to eat?"
+    show FMG happy
+    FMG "Totally, I'm starving."
+
     hide FMG with dissolve
-    "I liked it, too."
     jump daymenu
 
 label FMG022_c1_2:
-    "And I started hauling ass like never ass had been hauled before or, to my knowledge, since."
+    MCT "Sorry, Akira. I'm in it to win it! {w}I only know one speed and it's fast. {w}I know she'll be impressed by this."
     show FMG surprised
     FMG "Hey! That's the opposite of slow!"
     if checkSkill("Athletics", ">", 5):
         "I began yanking myself up hard on every hold, even using one or two to leap up from. Higher and higher I climbed, ascending to the seat of my rocky throne."
         show FMG angry
         "At last I sprung over the ledge and bounced to a standing position."
-        MC "WOO! What'd I tell ya?{w} Alright, how'd I do?"
+        MC "WOO! What'd I tell ya? I'm fast as fuck!{w} Alright, how'd I do?"
         "She looked down at the stopwatch, unmoved."
-        FMG "58 seconds."
-        FMG "Oh look, I win. Shocker."
+        FMG "58 seconds..."
         MC "Disappointed?"
         $setAffection("FMG", -1)
-        FMG "Kei, I was serious. What if you missed a spot? This thing's like 15 meters high!"
+        FMG "Kei, I was serious. What if you missed a spot? This thing's like 15 meters high! I don't want you getting hurt."
+        show FMG sad
+        FMG "If I tell you to be careful, please listen to me."
         MC "I {i}did{/i} watch where I was going, you know, I was just trying to go fast, too."
-        FMG "Well, fine. What do I know?"
-        MC "You know how to give it your all. And so do I."
-        pause 1.5
-        show FMG neutral
-        "She shook her head."
-        FMG "That was so cheesy it hurt."
-        FMG "Anyway, it's getting close to time for my run. I vote we head back."
+        FMG "I know, dude. I just… {w}{i}sigh{/i}... Please, next time be careful."
+        MC "I promise, sorry."
+        show FMG happy
+        FMG "Thank you, I'm not trying to come off like an ass. I want you at your best without putting yourself in harm's way."
+        MC "You got it."
+        FMG "Anyway, it's getting close to the time for my run. I vote we head back."
         MC "Sure, yeah. And, uh, thanks for doing this with me."
-        FMG "Uh huh. No problem."
+        FMG "No problem, I enjoyed it quite a bit."
         hide FMG with dissolve
         "And we hoofed it back down the cliff and retraced our steps to the trail."
         scene Lake Road with fade
@@ -3286,11 +3297,10 @@ label FMG022_c1_2:
         jump daymenu
     else:
         show FMG surprised with vpunch
-        "Yep, nobody's gone nowhere faster than me."
         "The instant I summoned the energy to throw my arm up, my foot slipped and I frantically started trying to hug the rock face.{w} It... kind of... worked, as I avoided a freefall and instead slid straight down, the jutting rocks lifting my shirt and grinding like a dull cheese grater against my virgin underbelly."
         hide FMG with dissolve
         "The lukewarm impact when I hit the ground shot up my ass and into my skull. I collapsed onto my back, hearing nothing but my own spent groan."
-        "For a moment or two I laid there.{w} At last I rolled onto my arms and pushed myself up to a stand, and turned around to mount the rock once more. I may not be a rock climber, but I'm not a quitter either."
+        "For a moment or two, I laid there.{w} At last I rolled onto my arms and pushed myself up to a stand, and turned around to mount the rock once more. I may not be a rock climber, but I'm not a quitter either."
         "I reached my hand up,{w} just before I felt the warm tightness of Akira's hand grabbing mine from behind and effortlessly yanking me away."
         "There was nothing more in me; I just laid back while she dragged me at a brisk pace across the forest floor. Loose twigs and the occasional ant bored into the waistband of my shorts."
         "She got to the paved trail and stopped."
@@ -3305,11 +3315,6 @@ label FMG022_c1_2:
         FMG "That was like a kitten watching its parents being taken away... oh, man, I wasn't ready for this..."
         MC "Y'know what, maybe we should just get outta here and never speak of this again."
         FMG "We should do that, yeah."
-        scene Lake Road with fade
-        "And so we did."
-        "We made it back just in time to get ready for Akira's run, but we agreed it was better I sit that day out."
-        "I was carrying a thing or two I'd learned that day about boundaries."
-        "And I still needed to find the last ant in my shorts."
         jump daymenu
 
 label FMG023:
@@ -18825,6 +18830,259 @@ label FMG088:
     jump daymenu
 
 label FMG089:
+    $setProgress("FMG", "FMG090")
+    $setTime(TimeEnum.EVE)
+    $setFMGOutfit(OutfitEnum.WINTER)
+    $setFMGOutfit(OutfitEnum.NUDE)
+    scene Dorm FMG
+    show FMG neutral
+    with fade
+    play music FMG
+    FMG "Would you be okay if I benched you with one hand? I won't drop you."
+    MC "And what if you do drop me?"
+    FMG "You'll fall into the safety of my arms, of course."
+    MC "Ew."
+    FMG "I can throw you at the wall instead, if you'd like."
+    MC "Pass... {w}Hey, you seem bigger than usual... what's that about?"
+    FMG "I just have a pump, nothing crazy. I haven't had one like this in {i}forever{/i}."
+    show FMG aroused
+    FMG "How do I look?"
+    MC "Ummm... bigger than big? Don't know what word to use, to be honest with you."
+    show FMG flex
+    FMG "I'll take it!"
+    MC "Were you this big this morning?"
+    show FMG neutral
+    FMG "I... don't think so, no."
+    FMG "We did just come back from the gym after all. I finally got something out of workout for once, heh."
+    MC "Hm, yeah, that's probably it..."
+    show FMG happy
+    FMG "Sooooooo, you want to bang?"
+    if isEventCleared("FMG087A"):
+        MC "Did you not just get {i}another{/i} new bed aaaaaand did they not just repair the wall you shattered with your bare hands?"
+        show FMG flex
+        FMG "That sounds like me!"
+        show FMG neutral
+        Extend " And I'm ready to do it again!"
+        MC "You can't be serious..."
+        show FMG happy
+        FMG "I'm dead serious. Breaking that headboard got me going!"
+        show FMG neutral
+        FMG "Kei, I won't be {i}totally{/i} out of control this time."
+        MC "Ah, yes, consider me reassured and willing."
+        FMG "That sounded sarcastic."
+        MC "Noooo, I would never. {w}I'm kidding, I'll absolutely have sex again. Just promise me you'll be careful with your surroundings this time."
+        show FMG aroused
+        FMG "I'll do my best."
+    else:
+        MC "Uh, yeah, sure, I'm game. You getting bored of lifting me?"
+        show FMG neutral
+        FMG "Eh, I'm naked and you're close to me. You know how I am at this point."
+        MC "True! {w}Toss me on the bed if you'd be so kind."
+        FMG "Glady."
+    "Akira stood up, holding me in her arm— and then threw me towards her bed."
+    show FMG flex
+    FMG "Can I rip your clothes off?"
+    MC "I can't keep asking for new outfits, they started questioning me about what was happening."
+    show FMG sad
+    FMG "Ugh, man."
+    show FMG aroused
+    FMG "Well, start stripping. I don't have all day."
+    MCT "I can't believe that worked!"
+    pause 1
+    show FMG angry
+    FMG "Why does it take you freaking forever to unbutton your shirt???"
+    MC "There's a lot of buttons here? I have to pop out like... seven... sometimes eight if I button the collar."
+    FMG "Yeah, I don't care, I'm over waiting."
+    "{i}*Riiiiiip*{/i}"
+    MC "..."
+    show FMG happy
+    FMG "Much better! Now we can get down to business!"
+    MC "It would've taken me not even five seconds to get the last button..."
+    FMG "That's nice!"
+    "The amazon climbed onto the bed, her weight straining it immediately."
+    show FMG aroused
+    FMG "A new bed and it {i}still{/i} struggles to support me..."
+    MC "Yeah, you have been eating a lot more recently, I'm sure that hasn't been helping. {w}Ooooh, pass me a condom. I have them in the drawer to your left."
+    show FMG sad
+    FMG "You can kill a mood in an instant."
+    MC "I meant eating a lot in a good way."
+    show FMG neutral
+    FMG "Please stop talking and let me work. Oh, and save the condom, we won't need it {i}just{/i} yet."
+    MC "Uuuh, do we plan on playing charades? Why won't we- Ooooh my lawd."
+    hide FMG with dissolve
+    "With little pretense or attempts at coy foreplay, she lifted me up off of my feet, causing my legs to dangle off the ground as she imposed her figure over mine."
+    MC "H-Hey! I'm not a ragdoll you know!"
+    "Almost as though she was deafened to my protests, she pressed her hands into me as she began to gently nuzzle my stomach with her nose, bending down with a light kiss."
+    "Slowly, she lowered her head down as she made her way to my groin, her breath jolting my body as she panted lightly."
+    MC "W-Wait, Akira, you're not gonna-?"
+    "Without so much as even a little hesitation, she placed the head of my dick into her mouth."
+    MC "N-Ngh!"
+    FMG "Mmmmph... mmhg..."
+    "She swirled her tongue slowly as she kept her grip on me clenched in tight. Keeping me lifted, she began to bob her head up and down."
+    FMG "Glk-glk-gk- mmmfh..."
+    MC "Hooh-fuck... t-this feels so weird but... mmg... k-keep going."
+    "Taking a step back, she adjusted her stance in order to keep her hold onto me tight, despite my wriggling in pleasure. The amount of control she had over her body was insane."
+    MC "Haah- didn't expect this is what you had in mind for a workout, huh?"
+    FMG "Mmmf- mhmhm!~"
+    "Lifting her eyes to look at me, she gave me a cutesy smile before, slowly, I felt her begin to lift me."
+    MC "H-Huh? W-Woah, hey!"
+    "Adjusting her hands to place them around my waist, she kept bobbing her head back and forth as she craned her neck up further, lifting me up to where I was now a good few dozen centimeters off the ground."
+    MC "G-Geez, Akira-aah~"
+    "Not breaking her tempo, she kept going with even more ferocity, my entire body shuddering with ecstasy as I felt her throat twitch and glide along my shaft."
+    MC "A-Akira, slow d...down."
+    "My words fell on deaf ears as I ascended to even greater heights. Akira had lifted me above her head without losing pace."
+    FMG "Mmmmm.... mhmmm..."
+    "Her hold on me was firm, yet I couldn't help but feel that I could be dropped at any moment. Perhaps this sense of danger is what brought me closer and closer to the edge."
+    MC "N-Nnngh!"
+    "She took me right to the edge."
+    "And let me drop with the flick of her tongue"
+    MC "Haaah!"
+    "My body tensed as I felt my cock pulse with pressure, sending waves of pleasure through my body as I awkwardly bucked in the air uncontrollably, shooting my load down Akira's throat."
+    FMG "Mmph-! Pwegh-!"
+    "Pulling away, she pulled me out of her mouth with a loud {i}pop{/i}, licking her lips as she panted heavily."
+    FMG "Haah... hooh... h-holy shit..."
+    show FMG happy with dissolve
+    FMG "Now for round two!"
+    MC "I'm... drained... god damn."
+    show FMG neutral
+    FMG "Yeaaah, but you're still hard."
+    MC "Give me five minutes please, I feel like my soul has been sucked right out of my body."
+    FMG "Fiiiine."
+    "She ran her fingers down my chest, followed by her leaning down and pressing her chest on me, kissing me on the lips."
+    FMG "You're cute when you're exhausted."
+    MC "Y... Yeah, I get told that a lot."
+    MC "Hey, hug me quick."
+    FMG "You don't even have to ask, haha."
+    "Akira scooped up my lifeless body and embraced me within her arms with all her might, cracking my back and rejuvenating me at the same time."
+    FMG "Man, you're {i}really{/i} hard."
+    MC "Don't say anything about that."
+    MC "Okay... {w}I'm ready. Pass the condom."
+    FMG "Do you want to be on top this time?"
+    MC "Uuuuuuuh... Sure?"
+    "The imposing amazon picked me up, placing me on the side of the bed while she flipped over and shook the room as she changed position, thundering through the walls just from her arm brushing it."
+    "She turned to me, and gave nothing more than a simple, seductive smirk."
+    FMG "Well? I'm wet and waiting."
+    MC "Girl, relax. You cover the entire bed— give me some time to plan my attack."
+    pause .5
+    MC "Hm, alright. I got it."
+    show FMG aroused
+    FMG "What's the plan, little man?"
+    MC "None of your damn business, now spread your legs."
+    hide FMG with dissolve
+    FMG "I hope you're doing what I-I t...think.... Ooooo god."
+    FMG "T-T-That's your tongue... oooh fuck."
+    FMG "Fuccck, I need to break something. W-What are y-you doing down there???"
+    "Her fist came crashing down on her nightstand, shattering it to pieces in an instant as her hand, firm as stone, shook as she gasped in pleasure."
+    "{i}*Booooom*{/i}"
+    MCT "I should stop..."
+    FMG "D...Don't stop licking."
+    MCT "Nevermind."
+    FMG "Aaaa, go faster, come on!."
+    "As I began to increase the pace, Akira's moans grew more frequent and louder as my tongue swirled and prodded— every inch of her eager ladyhood being serviced by my tongue as my moans vibrated her pleasurably."
+    FMG "Oooooo, keep... keep going and start rubbing... m-my thighs."
+    MCT "So needy."
+    FMG "Aaaah, it... it's unreal."
+    FMG "{i}Uuuungh~{/i}"
+    FMG "I... I-I can't hold it anymore!"
+    "Akira spasmed with a jolt as she whimpered in ecstacy, her legs shaking as she came." 
+    MC "Aaah, man... {w}Some of it got in my hair..."
+    FMG "S-Sorry, Kei... I didn't think I was {i}that{/i} wet."
+    show FMG aroused
+    FMG "That was... amazing. You're going to be doing that a lot more often."
+    MCT "Aw man, what did I sign myself up for? My jaw is going to be sore all the time now."
+    show FMG neutral
+    FMG "Come here, Kei-kun. Someone earned himself a bear hug."
+    MC "Woo!"
+    FMG "Aaah, I love you, you know that? You're the best."
+    MC "Yeeeea, I am. I love you too, Akira."
+    show FMG aroused
+    FMG "After we cuddle for a bit... {w}I want round three."
+    MC "You must be joking? You nearly sucked the life out of me and you just unleashed a tsunami in the bed."
+    show FMG neutral
+    FMG "Sorry, Kei, today I'm feeling it. I'm just starting to sweat!."
+    MC "..."
+    FMG "You didn't put that condom on for nothing."
+    MC "I uh... completely forgot about it... {w}Got lost in the moment, heh."
+    FMG "Good thing, I didn't. {w}Now, I'm ready for more. How about you?"
+    MC "Uh, well eating you out didn't take much out of me so sure, I'll entertain your round three."
+    show FMG aroused
+    FMG "Wonderful."
+    FMG "Keep your head down, okay?"
+    MCT "I wonder if there's ever been a time during any of our sexual acts where my life hasn't been at risk."
+    "Akira was back on top with her hands at my sides, a smirk across her face, and her thighs pressing against mine."
+    hide FMG with dissolve
+    FMG "Can I put it in this time?"
+    MC "Yeah, as long as you don't have kung-fu grip and rip it off."
+    FMG "Keisuke..."
+    MC "Right, right the mood. Uuuuh... {w}Yeah, baby, work your magic."
+    pause 1
+    MC "How was that?"
+    FMG "I've decided these moments are infinitely better when you don't try to be spicy, haha."
+    FMG "You good to go?"
+    MC "Yeah, go for it."
+    "Akira grabbed my shaft, her breathing getting heavier as she slowly put it in. For as strong as she was, even she couldn't hold back her trepidation and almost sheepish anticipation."
+    FMG "Hhh-aaaah, god damn... I can't ever get enough of you."
+    MC "Mmm, y-yeah? That's great news!"
+    "As she rode me, she moved her hands towards the bedpost corners, and within seconds I heard them beginning to crack."
+    FMG "Heh, Guess I don't know my own strength~."
+    FMG "I don't want to break anything again— {w}just yet..."
+    "She threw her arms and head back, moaning louder with every passing second as she continued, her climax coming on harder and harder."
+    FMG "S-Start touching me, man. C-Come o-on. Caress my tits o-or my abs already. Something!"
+    MC "Aaah, y...you got it."
+    "I started at her hips and gently made my way up her body, her abs were like the mountain ridges that no man dared to brave, and yet I felt warm in her embrace. Her chest, in opposition, was firm yet soft."
+    "Every inch of her was perfection. It was enough to make a man play in traffic for a moment just to feel her."
+    FMG "F-Fuck, that's h-hot."
+    "The bed continued to struggle to support her movements as she picked up pace. Swaying back and forth in absolute pleasure."
+    FMG "Nggh- Oh fuck, man... I can feel the bed about to give out."
+    MC "D-D...Do you... god... do you want to stop?"
+    FMG "Hell, no.."
+    MC "It's just that it seems unsafe-."
+    FMG "S-Stop talking and grab my hips."
+    MCT "Worried about her safety? Yes. Does she care? No. Best boyfriend in the world and I get no recognition."
+    FMG "Your hands {i}still{/i} aren't on my hips."
+    MC "*cough*... M-My bad."
+    pause .5
+    FMG "Uuugh, f-finally..."
+    "I noticed Akira's arms reaching behind me... {w}Followed by the headboard cracking..."
+    MCT "Please don't break it. Please."
+    "Using barely any effort at all, she ripped out the headboard from its frame. Orgasming as she lifted it above her head."
+    FMG "Haaah, everything is so fragile nowadays."
+    MCT "She better not drop that on me."
+    "Akira tossed the headboard aside with a thud, chuckling to herself the whole time."
+    FMG "That was a nice little distraction. {w}Now back to it."
+    FMG "We won't go too much longer, Kei. I know you must be exhausted by now."
+    MC "I can't feel my legs but I've loved every second of this."
+    FMG "Wonderful, then you'll enjoy the ending."
+    "With her strong embrace, she pulled me in closer as we continued towards our climax. I felt her begin to tense as her breathing became more ragged, my own movements becoming more frenzied as I felt a jolt rush through my body."
+    FMG "Ohh!~"
+    "Forgetting her own strength, Akira continued to bounce up and down as the crushing pressure on my lower body mounted. I grunted as I found it impossible to push against her overwhelming presence, her heavy body squeezing me tightly."
+    MC "A-Ak-kira-!"
+    FMG "H-HAAAHN!~"
+    "She slammed down as I felt the surface from underneath me give way. With a loud crack, the bedframe almost seemed to splinter to pieces as the blast echoed through the room like a bomb."
+    "Akira landed down on me with force, pushing me in as far as I could go as I shot a heavy load deep into her as she panted; coming down from our high in the ruins of the shattered bed."
+    FMG "F-Fuck... wow... That was awesome!"
+    MC "That... was... crazy..."
+    FMG "Hehe... how are you doing?"
+    MC "I-I um... can't feel my legs."
+    FMG "Yeah... same~"
+    MCT "That wasn't supposed to be me flirting, I legitimately can't move my legs right now."
+    "Akira looked at me with a soft and gentle face which betrayed her hard, rugged exterior. I looked at her and chuckled as she leaned down and nuzzled her nose to mine."
+    show FMG neutral with dissolve
+    MC "Akira... can you carry me to the shower?"
+    FMG "That bad, huh?"
+    MC "It feels like my whole body shut down. {w}Maybe I'm dying."
+    show FMG aroused
+    FMG "You'll survive. {w}I'm impressed you're still in one piece after all that, heh."
+    "She walked back over to the shattered bed and picked me up into her arms, hugging me."
+    show FMG neutral
+    FMG "Can we sleep at your place tonight? If I call now they won't be able to get me a new bed till tomorrow."
+    MC "Sure, as long as you don't destroy it. Have they started to ask you questions? This is maybe like the fourth time you needed another new bed."
+    FMG "Oh, yeah, they have. I just tell them some random lie of how I'm still growing and the beds can't keep up."
+    MC "There is no way that works. Maybe they don't care?"
+    FMG "Maybe, who knows. {w}By the way when you're able to move again, I'd {i}love{/i} a massage if you're willing. Those tiny hands work wonders."
+    jump daymenu
+
+label FMG090:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

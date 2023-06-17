@@ -9418,7 +9418,7 @@ label WG042:
     "Alice slammed her money on the counter, receiving a small bucket of plastic rings in exchange. I could tell she had a bit of fire in her eyes, now determined to prove a point."
     "{i}Plink{/i}... {i}plink{/i}... {i}plink{/i}..."
     show WG doubt
-    "NOt that far into her attempt, Alice's initial confidence began to falter into minor frustration."
+    "Not that far into her attempt, Alice's initial confidence began to falter into minor frustration."
     WG "I see. So that must be it. There's so many of them it's distracting from choosing a single target. It just requires focus."
     "{i}Plink{/i}... {i}plink{/i}..."
     show WG stern
@@ -10492,9 +10492,14 @@ label WG044_c2_2:
     show WG happy
     "Pulling back she booped me on the nose before waddling back to her room."
     WG "I wonder if you'd respond that way to another girl with a predicament like mine. Like Sakura, perhaps?"
+    if getFlag("Meet_Sakura"):
+        MCT "Sakura... The girl from the cooking club? So that's what her factor was..."
     "As her door shut I had a million thoughts going through my head. The suddenness of her forwardness had shocked me on many levels and left me with many questions."
     "How much ogling did she see me doing? Would I have done the same with another weight gain girl? Was she inviting me to take things further?"
-    "But somehow out of all the questions swirling about, the one that fell from my mouth was."
+    if getFlag("Meet_Sakura"):
+        "Needless to say, there was a lot weighing on my mind— in more ways than one."
+    else:
+        "But somehow out of all the questions swirling about, the one that fell from my mouth was."
     MC "Who's Sakura?"
     jump daymenu
 
@@ -15124,7 +15129,10 @@ label WG057:
     play music Peaceful
     PRG "Alright, Hotsure-san, did you have anything specific in mind for Alice? I'd be happy to help you with anything, but if I'm being honest, I'm much more skilled at baking and sweets."
     PRG "If you're thinking of going with a more savory dish, Sakura would likely be better suited for that."
-    MCT "Just who is this Sakura person and why haven't I seen her before? Of all the people in this school, I should be the one who has his finger on the pulse about all the fat chicks here."
+    if getFlag("Meet_Sakura"):
+        MCT "Sakura… She was one of the cooking club members I had met before. Well, good to know if I plan on making something else in the future."
+    else: 
+        MCT "Just who is this Sakura person and why haven't I seen her before? Of all the people in this school, I should be the one who has his finger on the pulse about all the fat chicks here."
     MC "Well that works out because I was leaning more towards a dessert dish for Alice anyway."
     PRG "Great! What kind of dessert were you thinking of then?"
     menu:
@@ -15312,14 +15320,28 @@ label WG057_c1_after:
     MC "Thanks Kodama-san, it looks great! You're one heck of a teacher. I never would have thought I could make anything like this. Do you think you'd be up for teaching me some more stuff in the future?"
     show PRG happy
     PRG "You're welcome, Hotsure-san. I'd like that. I think it's so sweet of you to want to do this for Alice. If we plan ahead more next time, I can bring Sakura too. I've never seen someone who can work a grill better than her."
-    MCT "Why do I feel like everyone knows this person but me?"
-    MC "Uh, I'll be honest, you mentioned her before, and Alice did once too now that I think about it, but I don't know who Sakura is."
-    show PRG neutral
-    PRG "Oh, um, she's my cooking partner. We compete as a team in school competitions as part of the cooking club. She's got long brownish-reddish hair, brown eyes, and... um, well... she has a weight gain factor, like Alice."
-    PRG "B-But also kind of not like Alice... if that makes sense? They don't really look that much alike."
-    MCT "Hmmm, I'm guessing she's trying to say she doesn't have a belly as big as Alice's."
-    "Processing this a bit more, my mind began to swirl at a rather tantalizing prospect: a fat girl teaching me how to cook food for my fat girlfriend."
-    MCT "Man, I am {i}so{/i} down for that!"
+    if getFlag("Meet_Sakura") and isEventCleared("PRG013"):
+        MC "Oh, your cooking partner I met when you were at cooking club practice. How's that been working out?"
+        PRG "Great! I couldn't have asked for a better partner. She's not just skilled, but a good friend as well."
+        PRG "I'm sure you'll like her. She'd be happy to help teach you what she knows."
+        "Alice had mentioned that Sakura had a weight gain factor as well. As curious as I was at the possibility of learning to cook more. My mind immediately began to wonder how big she was by now compared to when I met her near the start of the year."
+        "Not that I was looking for other opportunities mind you, but the thought of a fat girl teaching me how to cook food for my fat girlfriend, who were both growing fatter as a consequence, was {i}hot as hell{/i}."
+        MCT "Man, I am {i}so{/i} down for that!" 
+    elif getFlag("Meet_Sakura"):
+        MC "Sure, sounds great. I met her once before, but only briefly. I just know she's a member of the cooking club."
+        PRG "I'm sure you'll like her. She's my cooking partner in the club. I couldn't ask for a better partner and friend. She'd be happy to help teach you what she knows."
+        "Alice had mentioned that Sakura had a weight gain factor as well. As curious as I was at the possibility of learning to cook more. My mind immediately began to wonder how big she was by now compared to when I met her near the start of the year."
+        "Not that I was looking for other opportunities mind you, but the thought of a fat girl teaching me how to cook food for my fat girlfriend, who were both growing fatter as a consequence, was {i}hot as hell{/i}."
+        MCT "Man, I am {i}so{/i} down for that!"
+    else:
+        MCT "Why do I feel like everyone knows this person but me?"
+        MC "Uh, I'll be honest, you mentioned her before, and Alice did once too now that I think about it, but I don't know who Sakura is."
+        show PRG neutral
+        PRG "Oh, um, she's my cooking partner. We compete as a team in school competitions as part of the cooking club. She's got long brownish-reddish hair, brown eyes, and... um, well... she has a weight gain factor, like Alice."
+        PRG "B-But also kind of not like Alice... if that makes sense? They don't really look that much alike."
+        MCT "Hmmm, I'm guessing she's trying to say she doesn't have a belly as big as Alice's."
+        "Processing this a bit more, my mind began to swirl at a rather tantalizing prospect: a fat girl teaching me how to cook food for my fat girlfriend."
+        MCT "Man, I am {i}so{/i} down for that!"
     "Filing that away for future reference, I moved back to the task at hand."
     MC "Alright, let me check and see if Alice is back at her dorm."
     Cell "<Alice, are you back at your room yet?>"
@@ -15906,7 +15928,10 @@ label WG059:
     MCCell "<Absolutely. What time and where?>"
     WGCell "<Just come by my room after class. We'll walk over together.>"
     MCCell "<Sounds good, I'll see you then.>"
-    "So I was finally going to meet this Sakura girl that everyone seemed to know except me."
+    if getFlag("Meet_Sakura"):
+        "So I was finally going to meet Sakura again. I couldn't help but wonder how much she had grown since our initial meeting earlier in the year."
+    else:
+        "So I was finally going to meet this Sakura girl that everyone seemed to know except me."
     "Several thoughts raced in my mind, but I quickly tried to ground myself before any of those less savory impulses could take hold."
     "I had seen a few other girls with a weight gain factor on campus here and there. Obviously, none of them had grabbed my attention quite like Alice, but..."
     "I'd be lying if I said they hadn't caught my eye a bit longer than they should have since I started dating Alice. I mean, I think I'm a pretty good boyfriend— I'm just not made of stone."
@@ -15981,30 +16006,56 @@ label WG059:
     show PRG happy at Position(xcenter=0.75, yalign=1.0) with move
     show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     WG "I hope you don't mind that I brought him along. I figured a passive observer wouldn't be too difficult to accommodate."
-    UNKNOWN "I'm cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
+    if getFlag("Meet_Sakura"):
+        Sakura "I'm cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
+    else:
+        UNKNOWN "I'm cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
     hide PRG with dissolve
     "Peering over one of the ranges in the center of the kitchen, I could make out the top part of what appeared to be a rather large posterior, with a surprising lack of coverage from her skirt."
     "I tried not to let my eyes bug out of my head too much, but I was pretty caught off guard by both the size and visible surface area of such a meaty set of cheeks out of nowhere."
-    "Having retrieved from the cabinet what looked to be a large, deep steel pan, the woman in question stood up straight."
+    if getFlag("Meet_Sakura"):
+        "Having retrieved from the cabinet what looked to be a large, deep steel pan, Sakura then stood up straight."
+    else:
+        "Having retrieved from the cabinet what looked to be a large, deep steel pan, the woman in question stood up straight."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    "So this was the elusive Sakura. Elusive is the right word, because I would have remembered seeing her if I had before."
-    "Long, dark auburn hair, big, soft brown eyes, a warm smile, with feminine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
-    "Simply put, Sakura was a knockout."
+    if getFlag("Meet_Sakura"):
+        "So this was the \"new\" Sakura. New and improved I had to say; the effects of her factor were readily noticeable compared to when I last saw her."
+        "This girl had some serious chunk on her, and in the right places. I considered myself more of a belly man, but even I had to admit, Sakura was a knockout."
+    else:
+        "So this was the elusive Sakura. Elusive is the right word, because I would have remembered seeing her if I had before."
+        "Long, dark auburn hair, big, soft brown eyes, a warm smile, with feminine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
+        "Simply put, Sakura was a knockout."
     "I mean she wasn't going to turn my head away from Alice any time soon, but I'd be a bad liar if I said she wasn't enough to make my eyes wander."
     Sakura "Thanks again for coming, Nikumaru-san."
     WG "Please, just call me Alice."
     show Sakura happy
     Sakura "Oh right. Sorry, I forgot about that."
     show Sakura neutral
-    Sakura "So who's this?"
+    if getFlag("Meet_Sakura"):
+        Sakura "Long time no see, stranger. It was Hotsure-san, right?"
+        MC "You got it. Nice to see you again Myoga-san."
+        WG "Oh, you two know each other?"
+        MC "Sort of. We met very briefly before."
+        Sakura "Yeah, it's been a while. Feels like I've known you for ages, though! Kodama-chan and Alice have had nothing but good things to say!"
+        MC "I could say the same for you as well, Myoga-san."
+        show Sakura happy
+        Sakura "Aww, well I'm glad to hear that."
+        Sakura "And whoa— that hair! Your factor, I'm guessing?" 
+        MCT "Is something wrong with it? Did I forget to brush it this morning?"
+        Sakura "He's pretty cute, Alice. Looks like you got quite the catch for yourself."
+        "She thinks I'm cute too? I could feel my cheeks getting a bit warm. I was starting to wonder if finally meeting Sakura was a good idea after all."
+    else:
+        Sakura "So who's this?"
+        WG "This is my boyfriend, Keisuke Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
+        MC "Nice to meet you Myoga-san. It's nice to finally put a face to the name."
+        Sakura "Likewise. Kodama-chan and Alice have had nothing but good things to say about you."
+        show Sakura happy
+        Sakura "And whoa— that hair! Your factor, I'm guessing?" 
+        MCT "Is something wrong with it? Did I forget to brush it this morning?"
+        Sakura "He's pretty cute, Alice. Looks like you got quite the catch for yourself."
+        "She thinks I'm cute too? I could feel my cheeks getting a bit warm. I was starting to wonder if finally meeting Sakura was a good idea after all."
     if not getFlag("Meet_Sakura"):
         $setFlag("Meet_Sakura")
-    WG "This is my boyfriend, Keisuke Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
-    MC "Nice to meet you Myoga-san. It's nice to finally put a face to the name."
-    Sakura "Likewise. Kodama-chan and Alice have had nothing but good things to say about you."
-    show Sakura happy
-    Sakura "He's pretty cute, Alice. Looks like you got quite the catch for yourself."
-    "She thinks I'm cute too? I could feel my cheeks getting a bit warm. I was starting to wonder if finally meeting Sakura was a good idea after all."
     show WG doubt
     WG "Thanks..."
     "Alice did not appear to be amused by Sakura's observation and my involuntary blushing. True to her composed nature though, she did not allow her visceral reaction to get the better of her, and brushed it aside."
@@ -16233,14 +16284,18 @@ label WG059S:
     MCT "It's funny thinking how some things never change about a person. Alice's pride in her business sense has never appeared to falter for a moment since her factor was told to her."
     show WG neutral-2
     WG "By the way, I hope you are ok if Aida brings her cooking partner by today. She mentioned that they may have extra left over from today's session."
-    MC "I don't mind, though I don't think I've ever met her partner."
-    show WG neutral
-    WG "I forgot that you mentioned you hadn't met Sakura yet. You two will get along fine I think."
+    if getFlag("Meet_Sakura"):
+        MC "I don't mind. I've actually met Sakura once before briefly, but it's been a while."
+        WG "She's a nice girl. I'm glad Aida has another friend she can lean on, given the challenge of her particular situation."
+    else:
+        MC "I don't mind, though I don't think I've ever met her partner."
+        show WG neutral
+        WG "I forgot that you mentioned you hadn't met Sakura yet. You two will get along fine I think."
     WG "Speaking of them coming over, can you make sure the tea on the stove is nearly ready?"
     MC "Sure."
     "Stepping over to check the kettle, my thoughts began to wander. I'd finally be meeting this elusive Sakura character. Someone who got along with not just Aida, but Alice as well, certainly must be special."
     "Then my mind recalled that Alice had mentioned that Sakura had a Weight Gain factor. Suddenly I was torn between fear and anticipation."
-    "How would I handle myself? With Honoka, I know Alice looked ready to call me out a few times, but with another Weight Gain girl what would she say? Would she get jealous if she perceived I was giving her too much attention?"
+    "How would I handle myself? With Honoka, I know Alice looked ready to call me out a few times, but with another Weight Gain girl what would she say?{w} Would she get jealous if she perceived I was giving her too much attention?"
     "The feeling of hot steam against my hand brought me back to reality. Popping the lid open, I could see the amber color was deep and consistent, meaning it was done. Sliding the kettle off the burner I prepared four cups."
     play sound Knock
     WG "That would be them I believe."
@@ -16254,9 +16309,15 @@ label WG059S:
     "As Alice stepped aside to let the gravid Aida through, I finally caught sight of Sakura. At first glance I assumed Alice must've been wrong on her factor."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Her hips and ass were quite large, more than matching some of the butt expansion girls. However, looking a little closer, I could see she had much more of a pronounced belly than say, Shiori, for instance."
-    Sakura "Oh, you must be Hotsure-san himself?"
-    MC "Indeed I am, it is a pleasure to meet you, Myoga-san."
+    if getFlag("Meet_Sakura"):
+        Sakura "Oh, hey Hotsure-san! Long time no-see."
+        MC "Nice to see you again, Myoga-san!"
+    else:
+        Sakura "Oh, you must be Hotsure-san himself?"
+        MC "Indeed I am, it is a pleasure to meet you, Myoga-san."
     Sakura "I see the comments from Aida about you are true. Polite indeed."
+    if not getFlag("Meet_Sakura"):
+        $setFlag("Meet_Sakura")
     MC "Must say, I'm glad to meet your expectations."
     WG "Glad to see your manners are still in good order."
     MCT "Did you really have to say it that way?"
@@ -25734,7 +25795,7 @@ label WG082:
     jump daymenu_noadvance
 
 label WGAE001:
-    scene Hallway2 with fade
+    scene HallwayStairs with fade
     play music Busy
     "I had a little bit of time after classes I was using to trek across campus, keeping my eyes out for new prospective customers for Alice. My primary duty was to act as a delivery boy, but I stood to earn a little extra if I could generate more sales." 
     "It wasn't the most dignified profession I'd admit, but it was about all a full time college student like me could hope for considering the flexible hours and the proximity to the campus, being actually on the campus as it were."
