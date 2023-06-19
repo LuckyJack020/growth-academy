@@ -15670,6 +15670,8 @@ label AE066:
 
     scene Campus Center with fade
     stop music
+    if not getFlag("Meet_Hamikawa"):
+        $setFlag("Meet_Hamikawa")
     Hamikawa "Oh, bite me! You think I give two shits?!"
     MC "Huh?"
     #hamikawa angry

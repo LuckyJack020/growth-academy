@@ -9818,6 +9818,7 @@ label PRG027:
             PRG "It's... fitting okay."
             PRG "Y-You can come in... i-if you'd like..."
             "I walked over to her door and stepped inside."
+            $setPRGOutfit(OutfitEnum.PAJAMAS)
             scene Dorm PRG
             show PRG unique
             with fade
@@ -15863,7 +15864,7 @@ label PRG034:
     hide Sakura
     with dissolve
     "I glance worriedly over at the other team."
-    show Kanami with dissolve
+    show Kanami neutral with dissolve
     "They had three bowls filled with rice, and they were adding what looked to be salmon, and a myriad of vegetables to the top."
     "A loud whistle struck my ears as Michiko went to the stove and removed a tea kettle from it."
     if isEventCleared("BE006"):
@@ -17001,7 +17002,7 @@ label PRG035:
 
             "Ask her to cuddle":
                 MC "Feel up to a pre-nap cuddle?"
-                show PRG-unique
+                show PRG unique
                 PRG "Y-Yes, please."
                 "I lifted the sheets just enough to create an opening, and Aida squeezed in next to me."
                 "My arms came around her, and I held her close to me, her head right under my jaw."

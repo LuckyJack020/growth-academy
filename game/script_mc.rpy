@@ -1457,7 +1457,7 @@ label MC002:
     show RM neutral with dissolve
     "Following the rest of the class, Daichi got up from his seat and walked near-silently out of the room."
     MCT "He even walks like he's got some sort of off-the-wall plan."
-    if getFlag("global000_RM_c3"):
+    if getFlag("RM_govagent"):
         MCT "Maybe I'd better remind him to look out for oncoming balconies..."
     else:
         MCT "Well, whatever he's on about is his problem."
@@ -5635,6 +5635,8 @@ label MC007:
     scene Bakery Entrance
     show RM neutral
     with fade
+    if not getFlag("VisitedBakery"):
+        $setFlag("VisitedBakery")
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
     "It only had half a dozen tables and a counter with stools for seating. There was another table seated besides us, but beyond that the only other person I could see was the counter girl."
     "The girl looked to be in her late twenties, early thirties maybe, mid-cut curly dark hazel hair, bright brown eyes, slightly chubby with big breasts, maybe an E-cup by my estimation, and I considered myself an expert on such estimates."
@@ -5667,7 +5669,7 @@ label MC007:
     show RM neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=1)
     Haruko "Maybe not to most people outside the island, but most people on the island are familiar with them. Many are even former students."
     Haruko "My mom had a growth thing as well, but the school wasn't around back then. Best I've got is that it had been there a while before I went there, over fifteen years ago."
-    if isEventCleared("MC002"):
+    if isEventCleared("MC002") or getFlag("Meet_Tsubasa"):
         MC "Huh, didn't know the school was that old."
         Haruko "Oh, it's even older than that."
         Haruko "By the way, is Tsubasa-sensei still around?"

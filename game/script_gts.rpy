@@ -2213,6 +2213,8 @@ label GTS018:
     GTS "I'm sorry, but I don't quite know what you mean."
     UNKNOWN "I mean that you're perfect! Like literally, you're just what we're looking for."
     "Naomi's lips hung parted, silent, her brow wringing. I couldn't blame her, as long as the girl's sudden approach remained a mystery. To my relief, she quickly continued."
+    if not getFlag("Meet_Fumika"):
+        $setFlag("Meet_Fumika")
     Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui, and I'm part of the basketball club! It's a real pleasure to meet you, miss...?"
     show GTS neutral
     GTS "Er... Naomi Yamazaki. A pleasure to meet you."
@@ -5687,7 +5689,7 @@ label GTS029_c1_3:
     GTS "Yes, but... I'd rather not talk about it now."
     "Naomi picked up her tray, standing high above me."
     show GTS neutral
-    GTS "I'm afraid I'm not feeling too hungry at the moment, so I'll take my leave. I'll see you later Hosture-San."
+    GTS "I'm afraid I'm not feeling too hungry at the moment, so I'll take my leave. I'll see you later Hotsure-San."
     "I merely watched her walk away, and pulled my tray back in front of me, picking at my food. I suppose I wasn't feeling particularly hungry at the moment either."
     jump daymenu
 

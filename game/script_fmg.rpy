@@ -2814,7 +2814,7 @@ label FMG020_c1_1:
     jump daymenu
 
 label FMG020_c1_2:
-    $setProgress("FMG", "FMG026")
+    $setProgress("FMG", "FMG020B")
     "I didn't say anything out of fear, fear of the unknown. By the time I did manage to say something, it was already too late."
     FMG "Well, this has been fun, Kei-kun, but I feel like I got a second wind. Later, dude!"
     MC "Wha-"
@@ -2822,6 +2822,157 @@ label FMG020_c1_2:
     "I didn't even so much as finish the first word before she left."
     MC "God damn it... Ugh, I should've just gone for it."
     MCT "Well, whatever I may have to say can wait, there's always next time, I guess."
+    jump daymenu
+
+label FMG020B:
+    $setProgress("FMG", "FMG021")
+    play music ClearSkies
+    scene Campus Center with fade
+    MC "God dammit, I freaking blew it last night. I was {i}this{/i} close to dating the girl of my dreams but nope... I let her just get up and leave..."
+    MC "Great job, Kei..."
+    MC "Aaaaaaaaa, I should've just told her! I'm never going to get another shot at this."
+    MC "Maybe I should try another route..."
+    FMG "Hey, Kei! You always talk out loud?"
+    MC "Huh?" 
+    show FMG neutral with dissolve
+    extend " Heh, hey, didn't see you there. The talking out loud thing is one of my many quirky traits..."
+    FMG "What were you talking about? You seemed frustrated."
+    MC "Y... Yeah, I am. I'm having a bit of a personal problem."
+    FMG "Maybe I can help, what's the problem?"
+    MC "..."
+    FMG "..."
+    pause 1
+    FMG "Are... are you going to say anything?"
+    MC "..."
+    show FMG sad
+    FMG "Dude, for real, what's the problem? I can't help if you stay silent."
+    MCT "I can't keep doing this."
+    MC "I... I... ugh, can we go somewhere more private?"
+    show FMG neutral
+    FMG "Everything okay? Did you pee your pants or something?"
+    MC "What? N-No!?!"
+    pause 1
+    MC "...No..."
+    FMG "Well that's good. {w}Ha, yeah, we can talk in private. Where did you have in mind?"
+    MC "Would my dorm be alright?"
+    show FMG happy
+    FMG "Sure! Lead the way, my man."
+    scene black with fade
+    pause 0.5
+    scene Dorm Interior
+    show FMG neutral
+    with fade
+    FMG "Alright! Doesn't get more private than your own room. So, what's been bugging you?"
+    MC "Do you ever regret not saying something important to someone important to you?"
+    FMG "Yeah, yeah I do."
+    MC "Really?"
+    FMG "Y-Yeah, of course. There's this uh... {w}guy w-who... runs the snack bar! He... He gives me extra bags of chips every now and then. Sometimes... I forget to say thank you."
+    MC "..."
+    FMG "*cough* But go on..."
+    MC "Like... Like you think it might change your life if you did the right thing?"
+    show FMG sad
+    FMG "{size=-6}I'm sorry snack bar guy...{/size}"
+    MC "...Are you for real?"
+    show FMG neutral
+    FMG "Sorry, sorry, I won't mention it again. I promise."
+    FMG "I get what you're saying though."
+    FMG "I've been feeling the same way recently with this one thing and I wish I could put the words together and just tell him."
+    MC "Him? You're talking to someone?"
+    show FMG surprised
+    FMG "Well... I... Well, ummmmm..."
+    show FMG sad
+    FMG "I don't think he likes me back... I'm scared I might ruin our friendship."
+    MC "Ah, I see."
+    MC "I'm literally in that same boat. I wish I told her but I fear it might be too late and my chance is gone."
+    show FMG neutral
+    FMG "For what it's worth, I think you should go and tell her. What's the worst that can happen? She says no?"
+    MC "Well... yeah. I mean that would really suck, but I guess it wouldn't be any worse than feeling like this."
+    FMG "You're a good looking guy, I'm sure you'll find someone even if she turns you down."
+    MC "Yeah, you're right. I'll do it right now!"
+    show FMG happy
+    FMG "Hell yeah, call her!"
+    MC "I think I will!"
+    pause 1
+    "*bzzzzz... bzzz*"
+    show FMG neutral
+    FMG "..."
+    MC "..."
+    MC "... Are you uh... going to get that?"
+    FMG "Y-Yeah..."
+    pause .5
+    FMG "Hello?"
+    MC "...Hi."
+    "Akira kept eye contact the entire time from answering the phone right up to hanging up."
+    FMG "..."
+    MC "..."
+    FMG "..."
+    MCT "She's staring at you, say something already you idiot!"
+    MC "...{w} Lovely weather today isn't it?"
+    FMG "...Yep..."
+    pause 1
+    FMG "So uh... that problem you were having with a girl... was me, yeah?"
+    MC "Y... Yeah."
+    MC "That problem you were having with a guy was me?"
+    show FMG aroused
+    FMG "Y-Yeah."
+    MC "*cough* Which means... you know, you like {i}like{/i} me."
+    show FMG neutral
+    FMG "I-I... Um... Uh... {w}It's like... ummmm."
+    FMG "Wait... so does that mean... you like {i}like{/i} me then?"
+    MC "You-You can't just put me on the spot like that."
+    MC "But uh... {w}maybe..."
+    show FMG angry
+    FMG "What do you mean maybe?"
+    MC "Why are you mad?!?!  You didn't even admit you like me! You only gave me a bunch of um's and uh's like you can't decide what to order!"
+    FMG "It's different for me!"
+    MC "No, it isn't!"
+    MC "Tell me you like {i}like{/i} me and I'll tell you that I like {i}like{/i} you!"
+    show FMG sad
+    FMG "..."
+    MC "..."
+    FMG "..."
+    MC "Are you going to say anything!?!"
+    show FMG angry
+    FMG "This is hard! Gimme a second!!! What if I say the wrong thing?"
+    MC "We literally discussed what we were going to say!"
+    FMG "I'm nervous, leave me alone! I've never had to do this before!"
+    FMG "Ugh, why do you have to be cute, funny, and nice?"
+    MCT "Ay."
+    show FMG sad
+    FMG "Breathe, Akira, breathe."
+    show FMG neutral
+    FMG "Okay... Okay, I'm ready."
+    FMG "I... like {i}like{/i} you... a lot."
+    MC "I knew it! I could see it in your eyes every time we hung out!"
+    show FMG angry
+    FMG "You freaking bullshitter! No, you couldn't! {w}Argh, whatever, tell me you like me already."
+    MC "I like {i}like{/i} you..."
+    FMG "And?"
+    MC "And what? What else do you need?"
+    show FMG happy
+    FMG "Say why you like me, duh."
+    MC "This seems like a red flag. I think I'm going to take it back before it's too late."
+    FMG "Nope, nah you can't, not how this works."
+    MC "Were you not freaking out moments ago about expressing your feelings and now you're suddenly pressuring me to do the same? That's messed up."
+    show FMG neutral
+    FMG "Yes."
+    MC "I... I think you're... cool."
+    show FMG angry
+    FMG "That's it?!?!"
+    MC "W-What?!? That's not enough? Can't we just high-five each other and call it?"
+    show FMG neutral
+    FMG "Are we allowed to do that? Does it work that way?"
+    MC "Works for me, if it works for you."
+    MC "How about it? Up high!"
+    FMG "Heh, you got it!"
+    show FMG aroused
+    FMG "So... um... {w}Should we go on a date now?"
+    MC "Uh... would a walk be okay? We can talk about um... stuff... I guess."
+    FMG "S-Sure, that sounds nice..."
+    MC "We're like a thing now, right?"
+    show FMG neutral
+    FMG "I think so, yeah."
+    MC "Cool."
     jump daymenu
 
 label FMG021:
@@ -3280,7 +3431,7 @@ label FMG022_c1_2:
         show FMG sad
         FMG "If I tell you to be careful, please listen to me."
         MC "I {i}did{/i} watch where I was going, you know, I was just trying to go fast, too."
-        FMG "I know, dude. I just… {w}{i}sigh{/i}... Please, next time be careful."
+        FMG "I know, dude. I just... {w}{i}sigh{/i}... Please, next time be careful."
         MC "I promise, sorry."
         show FMG happy
         FMG "Thank you, I'm not trying to come off like an ass. I want you at your best without putting yourself in harm's way."
@@ -3318,7 +3469,7 @@ label FMG022_c1_2:
         jump daymenu
 
 label FMG023:
-    $setProgress("FMG", "FMG026")
+    $setProgress("FMG", "FMG024")
     scene Town with fade
     play music BrightLights
     $setVar("FMG023bored", 5)
@@ -3802,6 +3953,183 @@ label FMG023_c2_after:
     "Or at least, that's what I thought at first. I walked away with a new respect for magic."
     jump daymenu
 
+label FMG024:
+    $setProgress("FMG", "FMG027")
+    play music Rain
+    scene Woods with fade
+    MCT "It was a mistake agreeing to go on a hike with Akira. My legs felt like I was walking through quicksand."
+    MCT "While I'm all for staying active and keeping in shape, everyone has their limits and I was reaching mine."
+    "The trail was way longer than I had originally thought. Unfortunately, while the view was nice, it wasn't enough to take my mind off the pain I was enduring."
+    MC "Akira how long have we been walking for? It feels like it's been hours! I can't keep this up much longer."
+    show FMG sad with dissolve
+    FMG "Kei-kun...it's been like twenty minutes."
+    MC "WHAT?!?! That's impossible, you gotta be joking?"
+    FMG "..."
+    FMG "No."
+    "Something seemed off with Akira even when she was disappointed in my athletic ability, the usual energy in her responses seemed drained."
+    menu:
+        "Ask Akira what's on her mind":
+            jump FMG024_c1_1
+        "Crack a joke to try and lighten the mood":
+            jump FMG024_c1_2
+
+label FMG024_c1_1:
+    MC "What's up? You seem off today."
+    show FMG sad
+    FMG "It's nothing man. Let's just keep going and enjoy the view."
+    MC "C'mon, you don't gotta lie to me like that..."
+    "She was taken back by my tone, stopping dead in her tracks."
+    MC "I'm not going anywhere until you tell me what's bothering you."
+    show FMG angry
+    FMG "Drop it."
+    MC "Not a chance."
+    MCT "What could be bothering her so much? She was fine in class the only day."
+    MCT "Hm, could it be..."
+    MC "It's Natsuko, isn't it?"
+    show FMG angry-2
+    FMG "YEAH, NO SHIT!"
+    "Akira was about to explode, her fists were clenched like hammers, ready to strike."
+    MC "Woooah, calm down, Akira. it's gonna be alright. Just take a deep breath."
+    show FMG angry-2
+    FMG "..."
+    show FMG angry
+    FMG "..."
+    MC "Better?"
+    show FMG sad
+    FMG "...Better."
+    FMG "Yeah...yeah I'm good. She just...uch."
+    "She collected herself slowly and lowered her shoulders with an exhale of relief."
+    FMG "Sorry for yelling at you, Kei. I didn't mean anything by it."
+    MC "Baaah, you're all good. Still, though, from now on if you have something on your mind that's bothering you just tell me, please. I want to help you."
+    MC "Don't forget that."
+    show FMG happy
+    $setAffection("FMG", 1)
+    FMG "Heh, thanks, Kei."
+    "Her voice seemed to trail off as she finished speaking as if something else was still bothering her, but I didn't want to push her anymore."
+    jump FMG024_c1_after
+
+label FMG024_c1_2:
+    MC "What do you give to a sick lemon?"
+    show FMG angry
+    FMG "..."
+    MC "Lemon aid!"
+    show FMG angry-2
+    $setAffection("FMG", -1)
+    FMG "..."
+    MCT "I have a feeling she's not in a \"pun\" kinda mood. Knew I should have gone with the crosswalk bit."
+    "She turned from me and walked back down the mountain."
+    MC "Akira, hold up."
+    "She stopped and let out a huge sigh of frustration."
+    show FMG angry
+    FMG "I'll tell ya if you don't make any more lame puns, deal?"
+    MC "Deal... for now..."
+    "She had a weak chuckle and leaned back on a tree."
+    show FMG sad
+    FMG "Haaah... Natsuko sucks, dude."
+    MC "C'mon, don't let her get to you."
+    MC "You don't gotta worry so much about stuff that happened in the past, right? Who says you even gotta deal with her anymore?"
+    jump FMG024_c1_after
+
+label FMG024_c1_after:
+    MC "Hey, I know just the thing to cheer you up. The arcade isn't very far from us, wanna go play a couple of rounds of StarDestroyer?"
+    show FMG happy
+    FMG "Y-Yeah, I'd love that."
+    scene black with fade
+    pause 1
+
+    scene Arcade with fade
+    play music BrightLights
+    "Luckily for us, the place wasn't packed like it usually was. Before I even entered the building  Akira hurried past me, sprinting over to StarDestroyer, tossed her coins in, and started playing without... me."
+    MC "Rude..."
+    MC "It helps if you wait for your opponent."
+    show FMG happy
+    FMG "Heh, my bad. I got carried away, this is one of my favorite games! Let me reset it and we can play."
+    pause 1
+    "She was beginning to come around... at the cost of my happiness this time. Buuuut, for now, I could live with it if it made her smile."
+    FMG "Hell yeah, a new high score! That's how it's done, suck it!"
+    MC "Ahhh, c'mon! You have to be kidding me... You hacked this damn thing, I swear! There is no way you scored over three million points!"
+    show FMG flex
+    FMG "Mhm, sounds like someone's jealous."
+    MC "Nah, I know you did something. You had to have cheated."
+    FMG "Okay, how about I make it up to you with a rematch then?"
+    MC "I was waiting for you to ask-"
+    pause 0.5
+    MC "Aaaaaaand I lost."
+    show FMG flex
+    FMG "Man, it does suck to suck, doesn't it Kei-kun? Two losses in a row and no end in sight, my guy!"
+    MC "I am... upset. This has to be rigged..."
+    show FMG neutral
+    FMG "Don't worry about it. Give me five, that was a lot of fun."
+    FMG "Come on, dude don't leave me hanging."
+    MC "Alright, alright you earned it."
+    play sound Thud
+    show dummy with hpunch
+    MC "Ow, that stung. Take it easy with the high fives. I think you almost broke my hand."
+    show FMG surprised
+    FMG "Sorry! I didn't think it would be that hard."
+    "To keep my mind off the pain I scouted the arcade for another chance at victory. Hope returned when I spotted an air hockey table across the room."
+    MCT "I got this in the bag. Air hockey is my jam. She doesn't stand a chance."
+    MC "How about some air hockey? Should be easy to pick up with your talents."
+    show FMG happy
+    FMG "I don't see why not."
+    show FMG flex
+    extend " But are you sure you can handle another loss?"
+    MC "Heh, you haven't seen me play air hockey. I'm a big deal back home. My sister loses every time."
+    show FMG neutral
+    FMG "Maybe she feels bad since you're bad at everything else."
+    MC "..."
+    MC "{i}sigh{/i}... Trust me, she wouldn't pass up an opportunity to rub something in my face if she could. Kind of like someone else I know."
+    FMG "If it's anything like StarDestroyer, I have nothing to be worried about."
+    MC "Keep talking, I'll wipe off that smirk quicker than you can lift a dumbbell."
+    show FMG flex
+    FMG "Let's see what you got, wise guy. I won't make this easy for you. Although, I might have to... you know, cause you suck."
+    MCT "It's curtains for you. Those pucks are going to fly right past you."
+    "We went back and forth for what seemed like an eternity before Akira slammed the puck in for the final point."
+    MCT "Maybe, I do suck... I have to call Tomo later."
+    UNKNOWN "I'm assuming you let her win, Hotsure-san? You were holding back, correct?"
+    MCT "Maybe if I turn around it won't be Natsuko."
+    show FMG angry-2
+    FMG "Ew, what are you doing here Natsuko?"
+    MCT "This is unfortunate... and I was just going to win the next round. This is the last thing I want to deal with today."
+    show FMG angry-2 at altMove(0.5, 0.75)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Natsuko "If you really must know, Akira. I come to the arcade to enjoy myself after my workouts. However, with you here, any enjoyment I might have found has been sucked away."
+    show Natsuko flirty
+    Natsuko "I didn't know you played video games Hotsure-san. I'd {i}love{/i} to play against you sometime~"
+    MC "Ooh, y-yeah sure. I'll get back to you around uh... never. But thanks for the offer."
+    show Natsuko flex
+    Natsuko "Give it some time and you'll see what you're missing out on."
+    MC "Like I said I'll get back to you. I'm trying to enjoy my time with my girlfriend. It would be super cool of you if you could leave us alone."
+    show Natsuko disappointed
+    Natsuko "Unfortunate. Choosing to waste your time with the likes of {i}her{/i}."
+    show Natsuko flex
+    extend " Wouldn't you prefer someone more mature? Someone stronger? Smarter? I could go on..."
+    MC "I would love it if you didn't."
+    show FMG angry-2
+    FMG "Don't you have anything better to do than ruin our date? Get out."
+    show Natsuko smug
+    Natsuko "Heh, it is time for my golfing lessons... I'll see you around, Hotsure-san. My offer is still on the table if you change your mind."
+    MC "Damn, leaving so soon?"
+    Natsuko "It's unfortunate, I know.  If only you came sooner, Hotsure-san, we could've spent more time together."
+    MC "Eeeeeehhhhhhh, I don't know."
+    hide Natsuko with dissolve
+    "Natsuko blew me a kiss and turned towards the door to leave."
+    show FMG angry at altMove(0.2, 0.5)
+    "Akira leaped towards me and ripped that sucker right out of the sky."
+    FMG "Of course someone like her plays golf. This just proves she has no good taste in anything. It makes me want to vomit at the thought of her stuck-up ass playing that snoozefest."
+    MC "Chill Akira, she's gone now, let's just continue with our match. I'm feeling lucky this time."
+    show FMG sad
+    FMG "Uuugh...yeah, right."
+    show FMG neutral
+    FMG "I'm not so sure about you feeling lucky. I would like the challenge though."
+    MCT "You're going to wish I played with Natsuko after this round."
+    scene black with fade
+    pause 0.5
+    MC "Dude, come on! What the hell is this bullshit?!?!"
+    FMG "I think you need a break, hahaha."
+    MC "No. I'll win the next round..."
+    jump daymenu
+
 label FMG025:
     $setTimeFlag("XX25")
     play music Schoolday
@@ -3986,186 +4314,6 @@ label FMG025:
     show FMG aroused-2
     FMG "No problem. I'm glad you enjoyed it."
     "She smiled then leaned into my chest to rest her head and shut her eyes."
-    jump daymenu
-
-label FMG024:
-    jump FMG026
-
-label FMG026: #change to FMG024, once FMG026 is fully written.
-    $setProgress("FMG", "FMG027")
-    play music Rain
-    scene Woods with fade
-    MCT "It was a mistake agreeing to go on a hike with Akira. My legs felt like I was walking through quicksand."
-    MCT "While I'm all for staying active and keeping in shape, everyone has their limits and I was reaching mine."
-    "The trail was way longer than I had originally thought. Unfortunately, while the view was nice, it wasn't enough to take my mind off the pain I was enduring."
-    MC "Akira how long have we been walking for? It feels like it's been hours! I can't keep this up much longer."
-    show FMG sad with dissolve
-    FMG "Kei-kun...it's been like twenty minutes."
-    MC "WHAT?!?! That's impossible, you gotta be joking?"
-    FMG "..."
-    FMG "No."
-    "Something seemed off with Akira even when she was disappointed in my athletic ability, the usual energy in her responses seemed drained."
-    menu:
-        "Ask Akira what's on her mind":
-            jump FMG026_c1_1
-        "Crack a joke to try and lighten the mood":
-            jump FMG026_c1_2
-
-label FMG026_c1_1:
-    MC "What's up? You seem off today."
-    show FMG sad
-    FMG "It's nothing man. Let's just keep going and enjoy the view."
-    MC "C'mon, you don't gotta lie to me like that..."
-    "She was taken back by my tone, stopping dead in her tracks."
-    MC "I'm not going anywhere until you tell me what's bothering you."
-    show FMG angry
-    FMG "Drop it."
-    MC "Not a chance."
-    MCT "What could be bothering her so much? She was fine in class the only day."
-    MCT "Hm, could it be..."
-    MC "It's Natsuko, isn't it?"
-    show FMG angry-2
-    FMG "YEAH, NO SHIT!"
-    "Akira was about to explode, her fists were clenched like hammers, ready to strike."
-    MC "Woooah, calm down, Akira. it's gonna be alright. Just take a deep breath."
-    show FMG angry-2
-    FMG "..."
-    show FMG angry
-    FMG "..."
-    MC "Better?"
-    show FMG sad
-    FMG "...Better."
-    FMG "Yeah...yeah I'm good. She just...uch."
-    "She collected herself slowly and lowered her shoulders with an exhale of relief."
-    FMG "Sorry for yelling at you, Kei. I didn't mean anything by it."
-    MC "Baaah, you're all good. Still, though, from now on if you have something on your mind that's bothering you just tell me, please. I want to help you."
-    MC "Don't forget that."
-    show FMG happy
-    $setAffection("FMG", 1)
-    FMG "Heh, thanks, Kei."
-    "Her voice seemed to trail off as she finished speaking as if something else was still bothering her, but I didn't want to push her anymore."
-    jump FMG026_c1_after
-
-label FMG026_c1_2:
-    MC "What do you give to a sick lemon?"
-    show FMG angry
-    FMG "..."
-    MC "Lemon aid!"
-    show FMG angry-2
-    $setAffection("FMG", -1)
-    FMG "..."
-    MCT "I have a feeling she's not in a \"pun\" kinda mood. Knew I should have gone with the crosswalk bit."
-    "She turned from me and walked back down the mountain."
-    MC "Akira, hold up."
-    "She stopped and let out a huge sigh of frustration."
-    show FMG angry
-    FMG "I'll tell ya if you don't make any more lame puns, deal?"
-    MC "Deal... for now..."
-    "She had a weak chuckle and leaned back on a tree."
-    show FMG sad
-    FMG "Haaah... Natsuko sucks, dude."
-    MC "C'mon, don't let her get to you."
-    MC "You don't gotta worry so much about stuff that happened in the past, right? Who says you even gotta deal with her anymore?"
-    jump FMG026_c1_after
-
-label FMG026_c1_after:
-    MC "Hey, I know just the thing to cheer you up. The arcade isn't very far from us, wanna go play a couple of rounds of StarDestroyer?"
-    show FMG happy
-    FMG "Y-Yeah, I'd love that."
-    scene black with fade
-    pause 1
-
-    scene Arcade with fade
-    play music BrightLights
-    "Luckily for us, the place wasn't packed like it usually was. Before I even entered the building  Akira hurried past me, sprinting over to StarDestroyer, tossed her coins in, and started playing without... me."
-    MC "Rude..."
-    MC "It helps if you wait for your opponent."
-    show FMG happy
-    FMG "Heh, my bad. I got carried away, this is one of my favorite games! Let me reset it and we can play."
-    pause 1
-    "She was beginning to come around... at the cost of my happiness this time. Buuuut, for now, I could live with it if it made her smile."
-    FMG "Hell yeah, a new high score! That's how it's done, suck it!"
-    MC "Ahhh, c'mon! You have to be kidding me... You hacked this damn thing, I swear! There is no way you scored over three million points!"
-    show FMG flex
-    FMG "Mhm, sounds like someone's jealous."
-    MC "Nah, I know you did something. You had to have cheated."
-    FMG "Okay, how about I make it up to you with a rematch then?"
-    MC "I was waiting for you to ask-"
-    pause 0.5
-    MC "Aaaaaaand I lost."
-    show FMG flex
-    FMG "Man, it does suck to suck, doesn't it Kei-kun? Two losses in a row and no end in sight, my guy!"
-    MC "I am... upset. This has to be rigged..."
-    show FMG neutral
-    FMG "Don't worry about it. Give me five, that was a lot of fun."
-    FMG "Come on, dude don't leave me hanging."
-    MC "Alright, alright you earned it."
-    play sound Thud
-    show dummy with hpunch
-    MC "Ow, that stung. Take it easy with the high fives. I think you almost broke my hand."
-    show FMG surprised
-    FMG "Sorry! I didn't think it would be that hard."
-    "To keep my mind off the pain I scouted the arcade for another chance at victory. Hope returned when I spotted an air hockey table across the room."
-    MCT "I got this in the bag. Air hockey is my jam. She doesn't stand a chance."
-    MC "How about some air hockey? Should be easy to pick up with your talents."
-    show FMG happy
-    FMG "I don't see why not."
-    show FMG flex
-    extend " But are you sure you can handle another loss?"
-    MC "Heh, you haven't seen me play air hockey. I'm a big deal back home. My sister loses every time."
-    show FMG neutral
-    FMG "Maybe she feels bad since you're bad at everything else."
-    MC "..."
-    MC "{i}sigh{/i}... Trust me, she wouldn't pass up an opportunity to rub something in my face if she could. Kind of like someone else I know."
-    FMG "If it's anything like StarDestroyer, I have nothing to be worried about."
-    MC "Keep talking, I'll wipe off that smirk quicker than you can lift a dumbbell."
-    show FMG flex
-    FMG "Let's see what you got, wise guy. I won't make this easy for you. Although, I might have to... you know, cause you suck."
-    MCT "It's curtains for you. Those pucks are going to fly right past you."
-    "We went back and forth for what seemed like an eternity before Akira slammed the puck in for the final point."
-    MCT "Maybe, I do suck... I have to call Tomo later."
-    UNKNOWN "I'm assuming you let her win, Hotsure-san? You were holding back, correct?"
-    MCT "Maybe if I turn around it won't be Natsuko."
-    show FMG angry-2
-    FMG "Ew, what are you doing here Natsuko?"
-    MCT "This is unfortunate... and I was just going to win the next round. This is the last thing I want to deal with today."
-    show FMG angry-2 at altMove(0.5, 0.75)
-    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    Natsuko "If you really must know, Akira. I come to the arcade to enjoy myself after my workouts. However, with you here, any enjoyment I might have found has been sucked away."
-    show Natsuko flirty
-    Natsuko "I didn't know you played video games Hotsure-san. I'd {i}love{/i} to play against you sometime~"
-    MC "Ooh, y-yeah sure. I'll get back to you around uh... never. But thanks for the offer."
-    show Natsuko flex
-    Natsuko "Give it some time and you'll see what you're missing out on."
-    MC "Like I said I'll get back to you. I'm trying to enjoy my time with my girlfriend. It would be super cool of you if you could leave us alone."
-    show Natsuko disappointed
-    Natsuko "Unfortunate. Choosing to waste your time with the likes of {i}her{/i}."
-    show Natsuko flex
-    extend " Wouldn't you prefer someone more mature? Someone stronger? Smarter? I could go on..."
-    MC "I would love it if you didn't."
-    show FMG angry-2
-    FMG "Don't you have anything better to do than ruin our date? Get out."
-    show Natsuko smug
-    Natsuko "Heh, it is time for my golfing lessons... I'll see you around, Hotsure-san. My offer is still on the table if you change your mind."
-    MC "Damn, leaving so soon?"
-    Natsuko "It's unfortunate, I know.  If only you came sooner, Hotsure-san, we could've spent more time together."
-    MC "Eeeeeehhhhhhh, I don't know."
-    hide Natsuko with dissolve
-    "Natsuko blew me a kiss and turned towards the door to leave."
-    show FMG angry at altMove(0.2, 0.5)
-    "Akira leaped towards me and ripped that sucker right out of the sky."
-    FMG "Of course someone like her plays golf. This just proves she has no good taste in anything. It makes me want to vomit at the thought of her stuck-up ass playing that snoozefest."
-    MC "Chill Akira, she's gone now, let's just continue with our match. I'm feeling lucky this time."
-    show FMG sad
-    FMG "Uuugh...yeah, right."
-    show FMG neutral
-    FMG "I'm not so sure about you feeling lucky. I would like the challenge though."
-    MCT "You're going to wish I played with Natsuko after this round."
-    scene black with fade
-    pause 0.5
-    MC "Dude, come on! What the hell is this bullshit?!?!"
-    FMG "I think you need a break, hahaha."
-    MC "No. I'll win the next round..."
     jump daymenu
 
 label FMG027:
@@ -19730,6 +19878,8 @@ label FMGWG001:
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show WG neutral at Position(xcenter=0.75, yalign=1.0)
     with fade
+    if not getFlag("VisitedBakery"):
+        $setFlag("VisitedBakery")
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
     "It only had half a dozen tables and a counter with stools for seating. The store was mostly empty aside from the table in the back corner that had one person in it."
     "The guy was wearing a hat and had his face so far buried in a newspaper I had to imagine he was trying to be left alone. Kinda odd, but I didn't pay him any mind."
@@ -19796,7 +19946,7 @@ label FMGWG001:
     show WG neutral
     show FMG neutral
     Haruko "My mom had a growth thing as well, not like any of yours, but the school wasn't around back then. Best I've got is that it had been there a while before I went there, over fifteen years ago."
-    if isEventCleared("MC002"):
+    if isEventCleared("MC002") or getFlag("Meet_Tsubasa"):
         MC "Huh, didn't know the school was that old."
         Haruko "Oh, it's even older than that."
         Haruko "By the way, is Tsubasa-sensei still around?"
