@@ -1905,45 +1905,65 @@ label BE015:
 
 label BE016:
     $setProgress("BE", "BE017")
-    scene Auditorium with fade
+    scene Hallway with fade
     play music Busy
     $setBEOutfit(OutfitEnum.ATHLETIC)
-    "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was a practice for the basketball club tonight. Would be good to give her encouragement."
+    "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was practice for the basketball club tonight in the Auditorium." 
+    MCT "Would be good to give her some encouragement. She won't be expecting to see me, either."
+    MC "Huh. Haven't been here since the assembly that first day. It's a little weird seeing it so empty..."
+    scene Auditorium with fade 
     "The basketball court was fairly typical, from what I remembered of my old school."
     "Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
-    "They also were more heavily-reinforced, which explained why they were permanent fixtures. Better seating for a constantly-growing school, I figured."
-    "Not everyone in the club was out on the court when I arrived. It looked like there were a dozen or so players, so with five players to a team they had enough for a full game and more."
-    "I decided to sit down next to one of the other players who was sitting."
+    "They also were more heavily-reinforced, which explained why they were permanent fixtures, bolted in place." 
+    MCT "Better seating for a constantly-growing school, I figure."
+    "Not everyone in the club was out on the court playing when I arrived. There were a dozen or so players, so with five players to a team they had enough for a full game and more."
+    "Honoka was out on the court practicing her jump shot."
+    MCT "Heh. she has more... aftershocks after she finishes her jump, compared to the rest of the team."
+    MCT "Also...I haven't seen Honoka in her gym clothes in a while but...that shirt's looking much tighter than it was a couple weeks ago..."
+    "Deciding to not stare from the entrance, I moved to sit down next to one of the other players who was sitting on the stands, wearing a jersey."
     MC "Hi. I'm Keisuke."
-    Sakie "Ah. Hello."
+    Sakie "Ah. Hello. Sakie."
     "She stuck out her hand to grab mine, where I took note of her sweatband."
     MC "Oh, neat. Dungeon Doom fan?"
     Sakie "Huh?"
-    "I pointed to her wristband, that had the game's trademark logo emblazoned on the side."
+    "I pointed to her wristband that had the game's trademark logo emblazoned on the side."
     MC "Dungeon Doom, the RPG?"
-    Sakie "Oh. Not mine. Borrowed it."
+    Sakie "Oh. Not mine, actually. I'm borrowing it."
     MC "Oh, sorry. So, you play basketball here?"
     Sakie "Yes."
     MC "Cool. How is it?"
     Sakie "Fun."
-    "It didn't take a genius like Matsumoto-san to realize that she wasn't one for conversation. I turned my attention to the basketball game in progress and watched for a while."
-    "I could tell Honoka enjoyed herself on the court. She always had a huge smile on her face even if she didn't have control of the ball. After watching for a while though, it became pretty clear that she was better at soccer. "
-    "I guess I shouldn't have judged so soon. She hadn't been doing basketball very long, but she'd been playing soccer since we were kids."
-    "Honoka made shots, and blocked well enough, but it didn't feel like it had the same spark I was used to seeing in her."
+    MCT "Jeez. Not much of a conversationalist, is she?"
+    "I turned my attention back to the basketball game in progress and watched for a while."
+    show BE neutral with dissolve
+    
+    "I could tell Honoka enjoyed herself on the court. She always had a huge smile on her face even if she didn't have control of the ball. After watching for a while though..."
+    show BE doubt 
+    extend " it became pretty clear that she was better at soccer."
+    "I guess I shouldn't have judged so soon. She hadn't been playing basketball very long, but she'd been playing soccer since we were kids."
+    "Honoka made shots, and blocked well enough, but it didn't feel like it had the same... {i}spark{/i} I was used to seeing in her."
     play sound Whistle
-    Coach "Inoue, Charanko, hit the bleachers. Kosuke, Iwata, you're up."
-    "The girl I sat next to carefully stood up, and stepped down to the ground. Her sneakers looked like they were twice my size. Honoka was able to come sit next to me, and the large-foot girl didn't say a word to either of us."
-    MC "Is she always like that?"
-    show BE neutral at center with dissolve
-    BE "Who, Sakie? Yeah she tends to be on the quiet side of things. You didn't say anything to upset her did you?"
+    Coach "Inoue, Usui, take five. Kosuke, Iwata, you're up."
+    "The girl I sat next to carefully stood up, and stepped down to the ground. Her sneakers looked like they were twice my size."
+    Sakie "Sure, Sugiyama-sensei."
+    MCT "Ah, Iwata must be her last name." 
+    "As she walked over to the stands, Honoka made eye contact with me, her previous downtrodden look replaced by a look of surprise."
+    show BE surprised
+    BE "Hey, Kei-chan! What are you doing here? I wasn't expecting to see you here!"
+    MC "Heya. Honestly, I wasn't expecting to be here either. But I was nearby and wanted to come check out your new club and show some support."
+    show BE embarrassed
+    BE "Aww~ Well, thanks for stopping by! I see you've met Iwata-san."
+    MC "Yeah. Is she always like that?"
+    show BE neutral
+    BE "Who, Iwata-san? Yeah... Sakie tends to be on the quiet side of things. You didn't say anything to upset her, did you?"
     MC "I was pretty sure I didn't. I just asked about her wristband."
     show BE happy
     BE "Oh, that was mine. She forgot hers today."
-    MC "Well, certainly was nice of you to lend her yours."
+    MC "Well, it certainly was nice of you to lend her yours."
     show BE neutral
     BE "Ah. yeah. That's what happened."
     MC "Are you saying she took it without asking?"
-    show BE angry
+    show BE shrug
     BE "I don't even think she realized what she did. She saw she had no wristband, saw one of mine and knew she needed one. Wasn't done out of any sense of maliciousness."
     MC "Weird. But, hey, glad to hear you're still into Dungeon Doom."
     show BE happy
@@ -1951,13 +1971,13 @@ label BE016:
     "I stared at Honoka, with a wide gaze, and my jaw slack."
     MC "You're kidding. 5 is easily the best one, how could you not have included that?"
     "Honoka thought for a minute, rubbing her chin before she smirked back at me."
-    show BE aroused
+    show BE seductive
     BE "Wait a minute. Wasn't 5 the game that had that scene where all the girls had to strip to their underwear?"
     MC "...Maybe."
     BE "Uh-huh. I'm sure you had a save point right before that scene and loaded it up every night."
-    MC "I. You. Um. Hey, basketball, right? How's that going?"
+    MC "Uhhh.... So hey, basketball, right? How's that going?"
     "Honoka was kind enough to ignore my pathetic attempt to change the subject."
-    show BE sad
+    show BE doubt
     BE "It's pretty fun. I'm not great at it yet though. But I hope with enough practice I'll get into it."
     MC "I'm sure you will. You pick up a lot of things pretty quickly."
     show BE neutral
@@ -1966,9 +1986,17 @@ label BE016:
     show BE happy
     BE "That's the plan. The people here are pretty nice too."
     MC "Even, uh..."
-    show BE angry
-    BE "Yeah, even Sakie. She's just a bit of a space cadet. But, she's a killer at free throws."
-    MC "I like hearing about all the people you get to meet in these clubs. One of these days I really should... do that."
+    show BE shrug
+    BE "Yeah, even Sakie. She's just... not the chattiest person out there. But, she's a killer at free throws."
+    MC "Speaking of that, I was wondering...half of the team's wearing jerseys, but you and Sakie are on the same team, right? Where's your jersey?"
+    show BE embarrassed
+    BE "See...I would have worn mine, but...I kind of outgrew the one they gave me when I joined."
+    show BE disoriented
+    BE "So... sorry, Kei-chan. No cleavage for you today~"
+    MC "Damn... guess that means I'm gonna have to keep stopping by until you get a new one, huh?"
+    show BE aroused
+    BE "Pffft, you perv."
+    MC "But anyway, I like hearing about all the people you get to meet in these clubs. One of these days I really should... do that."
     show BE happy
     BE "What, make friends?"
     MC "Join a club!"
@@ -1976,24 +2004,25 @@ label BE016:
     MC "Three tops."
     show BE neutral
     BE "Okay we'll say four and compromise. But yeah you totally need to join a club. How about this one? They've already been talking about getting Yamazaki-chan here."
-    MC "Huh. Yeah, she'd be a good fit. But, I'm not sure how aggressive she could be. Seems like you need to have some force behind your actions."
-    BE "Not always. You can be passive."
+    MC "Huh. Really? I mean... Yeah, she'd be a good fit, I guess... But, I'm not sure how aggressive she could be."
+    BE "Yeah, Usui-chan mentioned she's been meaning to ask Yamazaki-chan about joining the team."
+    BE "Also, you can be somewhat passive in basketball, you don't have to be aggressive all the time. But I agree, Basketball doesn't seem like it's her thing..."
     play sound Whistle
-    Coach "Get the lead out! I need to see hussle! Toss that ball like you're trying to take someone's head off!"
+    Sugiyama "Get the lead out! I need to see hussle! Toss that ball like you're trying to take someone's head off!"
     show BE angry
     BE "Okay, yeah, maybe she wouldn't be the best. But she would be great at dunking for sure."
     MC "Something less physical seems more her speed. And maybe mine as well. If the goal is to know people it'd be better to have a lot more downtime."
     BE "Yeah I guess. But downtime is boring. Uptime is the fun stuff. Being active is the best, so why do anything else?"
     MC "Well, I-"
     play sound Whistle
-    Coach "Alright, everyone. Line up, let's get some suicides going! Move your butts!"
+    Sugiyama "Alright, everyone. Line up, let's get some suicides going! Move your butts!"
     show BE happy
     BE "Whoops, gotta move. Catch you later, Kei-chan!"
     MC "Wait?! What the hell are suicides?!"
     BE "Oh they're much worse but I'll be fine."
     hide BE with dissolve
     "Honoka's face faltered from her smile as she said that, but she had no choice but to get back on the court and listen to her coach."
-    "I don't think the basketball club is for me."
+    MCT "I don't think the basketball club is for me."
     jump daymenu
 
 label BE017:
@@ -10546,9 +10575,9 @@ label BE049:
     BE "Let's head out."
     scene Woods with fade
     "As we worked our way up the trail, the sun made a final appearance through the trees on the verge of the horizon."
+    show cg BE049 with dissolve
     "Honoka looked serene in the calm of the woods. I kept quiet as long as I could. Whatever she was getting out of our little hike, I didn't want to interrupt it."
     "But after a while, I got curious."
-    show BE neutral with dissolve
     MC "Since when did you take such an interest in hikes and stargazing?"
     BE "I've always loved stars, Kei-chan. You know that."
     BE "But, hikes..."
@@ -10557,10 +10586,11 @@ label BE049:
     BE "Well, it wasn't the easiest time. Everything was different."
     BE "But, one thing I did have out there was lots of nature and woods to explore whenever my video games got a little boring."
     "I realized Honoka was panting under her breath. We came up next to a fallen tree and she stopped and wiped the sweat from her brow."
-    show BE sad
     BE "Whew! Mind if we sit and take a break here, Kei-chan? I need some water."
     MC "Of course. I could use a snack anyway."
+    hide cg
     show BE neutral
+    with dissolve
     BE "Thanks."
     show BE worried
     BE "They're feeling heavy lately. I guess it's a sign of a growth spurt?"

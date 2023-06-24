@@ -220,7 +220,7 @@ init python:
         TIRED = "tired"
         TOPLESS = "topless"
         TRADITIONAL = "traditional"
-        WINTER = "winter"
+        UNDERWEAR = "underwear"
         WORK = "work"
         NOHAT = "nohat"
 
@@ -919,7 +919,7 @@ init python:
         global FMGPrevOutfit
         global FMGNsfwOutfit
         global FMGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.WINTER:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL2 or o == OutfitEnum.UNDERWEAR:
             FMGNsfw = False
             FMGOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -986,7 +986,7 @@ init python:
 
     def setNatsOutfit(o):
         global NatsOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.WINTER:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL:
             NatsOutfit = o
 
     def setKanamiOutfit(o):

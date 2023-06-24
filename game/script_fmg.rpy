@@ -2741,6 +2741,7 @@ label FMG020:
             jump FMG020_c1_2
 
 label FMG020_c1_1:
+    $setFlag("FMG020_c1_1")
     MC "Okay, yeah, cool cool... so... when you really like something, you want to make it a part of your life, yeah?"
     show FMG neutral
     FMG "Well yeah, duh, why get into it if you ain't gonna put it in your life! That's what a regiment is, am I right?"
@@ -2814,6 +2815,7 @@ label FMG020_c1_1:
     jump daymenu
 
 label FMG020_c1_2:
+    $setFlag("FMG020_c1_2")
     $setProgress("FMG", "FMG020B")
     "I didn't say anything out of fear, fear of the unknown. By the time I did manage to say something, it was already too late."
     FMG "Well, this has been fun, Kei-kun, but I feel like I got a second wind. Later, dude!"
@@ -18651,7 +18653,7 @@ label FMG087B:
     FMG "I guess, but don't eat too much of it please!"
     MC "Woo! Thank you!"
     "There I was starting there in the kitchen in my tighty whities devouring a carton of ice cream waiting for my giant girlfriend to stroll back in... {w}living the dream."
-    #$setFMGOutfit(OutfitEnum.UNDERWEAR)
+    $setFMGOutfit(OutfitEnum.UNDERWEAR)
     show FMG neutral with dissolve
     FMG "Do you like it?"
     MC "Mmm-... {w}Ecch... Ecccch...{w}ARRRRGH."
@@ -18779,8 +18781,8 @@ label FMG088:
     MC "Y...Yeah, let's get going."
     scene black with fade
     pause .5
-    $setFMGOutfit(OutfitEnum.WINTER)
-    $setNatsOutfit(OutfitEnum.WINTER)
+    $setFMGOutfit(OutfitEnum.CASUAL2)
+    $setNatsOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     show FMG neutral
     with fade
@@ -18980,7 +18982,7 @@ label FMG088:
 label FMG089:
     $setProgress("FMG", "FMG090")
     $setTime(TimeEnum.EVE)
-    $setFMGOutfit(OutfitEnum.WINTER)
+    $setFMGOutfit(OutfitEnum.GYM)
     $setFMGOutfit(OutfitEnum.NUDE)
     scene Dorm FMG
     show FMG neutral

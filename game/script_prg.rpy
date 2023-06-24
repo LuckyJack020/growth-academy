@@ -6780,7 +6780,7 @@ label PRG020_c2_1:
         crop(0, 0, 1280, 720)
         size(1280,720)
         linear 20 crop(106, 35, 1072, 604)
-    extend "and kissed her."
+    extend " and kissed her."
 
     play music Love fadein 1.0
     pause 1
@@ -10993,15 +10993,15 @@ label PRG028:
         MC "Would..."
         pause .25
         MC "Would you be my girlfriend, Kodama-san?"
-    show PRG surprised
-    pause .75
-    show PRG scared
-    PRG "Ah...!"
+    show cg PRG028_bg
+    show PRG028_scared
+    with dissolve
+    $ persistent.unlock_cgPRG028a = True
     pause .5
-    PRG "{size=+6}M-M-ME?!{/size}"
-    PRG "{size=+6}Y-You... w-want to d-date... M-ME?!{/size}"
-    PRG "{size=+6}E-Even after w-what I... d-did to you?!{/size}"
-    PRG "{size=+6}Y-You would still want to... d-date me?!{/size}"
+    PRG "{size=+6}M-ME?!{/size}"
+    PRG "{size=+6}Y-You want to... d-date me?!{/size}"
+    PRG "{size=+6}E-Even after w-what I did to you?{/size}"
+    PRG "{size=+6}Y-You want me to be your... g-girlfriend?{/size}"
     MC "I could've said no. But I didn't... did I?"
     PRG "B-B-B-But-"
     pause .25
@@ -11024,7 +11024,9 @@ label PRG028:
         MC "But, with how you were feeling at that time, I didn't want to ask you then and add more onto your plate."
         MC "And then the other night, I talked with Honoka about it too. I told her all about how I was feeling."
     pause .25
-    show PRG unique
+    hide PRG028_scared
+    show PRG028_nervous
+    $ persistent.unlock_cgPRG028b = True
     PRG "... T-That... t-that explains a lot."
     MC "Ah... wait, what?"
     pause .25
@@ -11032,53 +11034,56 @@ label PRG028:
     PRG "I-Inoue-san sat down and... {w}s-she congratulated me about my... {w}our baby."
     PRG "I-I told her thank you, and then as we talked, she brought up the paper, and I told her we were working on ours this weekend."
     PRG "T-Then she..."
-    show PRG worried
     PRG "... S-She suggested... working on it today instead."
     MC "And you... just agreed?"
-    show PRG unique
     PRG "Well, s-she brought up that... it would be easier right after class, rather than doing it on the weekend. Since, as she put it, we would already be in the working mood."
     pause .25
     PRG "And, it sounded like a good idea."
     PRG "But... even still. I-I was... when she brought it up, I..."
-    show PRG sad-2
     PRG "I-I wanted to spend time with you today."
     pause 1
-    show PRG unique
-    pause .5
     PRG "... B-Because..."
     PRG "... I've had a crush on you for a really long time..."
-    show PRG unique-happy
+    show PRG028_blur behind PRG028_nervous:
+        alpha 0
+        pause 0.1
+        linear 5.0 alpha 1.0
+    show PRG028_nervous:
+        subpixel True
+        crop(0, 0, 1280, 720)
+        size(1280,720)
+        linear 5 crop(216, 96, 864, 486)
     PRG "I-I love spending time with you. You're so kind to me, and you make me feel... so cared for."
     pause .5
-    show PRG unique
     PRG "B-But..."
-    show PRG worried
     PRG "What if something goes wrong?"
     pause .5
-    PRG "Y-You're okay with... d-dating a... a..."
-    show PRG nervous
-    pause .5
-    extend "pregnant girl?"
+    PRG "Y-You're okay with... d-dating a... a... {w}pregnant girl?"
     pause .25
     MC "Hey, it's my baby in there, right?"
-    show PRG worried
     "Aida put both hands on her belly and nodded."
     MC "Then, I'm more than okay with it."
-    show PRG unique-happy
+    hide PRG028_nervous
+    show PRG028_neutral at Position(xcenter=0.49, ycenter=0.54), Transform(zoom=1.49)
+    $ persistent.unlock_cgPRG028c = True
     pause .5
     PRG "Really?"
     MC "Completely. I swear it."
-    pause .25
     MC "Kodama-san, nothing would make me happier."
     pause .5
     MC "So... would you like to date? Be official? Boyfriend and girlfriend?"
-    pause .5
-    show PRG unique-happy
+    hide PRG028_neutral
+    show PRG028_blush at Position(xcenter=0.49, ycenter=0.54), Transform(zoom=1.49)
+    $ persistent.unlock_cgPRG028d = True
     pause .75
     PRG "... I would love that."
     pause .3
     PRG "I would love more than anything to be your girlfriend."
-    pause .25
+    hide PRG028_blush
+    hide PRG028_blur
+    hide cg
+    show PRG blush-2
+    with dissolve
     "My heart soared in my chest as I, in pure bliss, got up and grabbed Aida under her arms, lifted her to her feet, pulled her in close and embraced her."
     "Aida nestled her head in my chest and wrapped her arms around me in return, her whole body lightly shaking against mine."
     PRG "..."

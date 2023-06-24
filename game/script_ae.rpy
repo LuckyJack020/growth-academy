@@ -3342,6 +3342,7 @@ label AE019_c1_2:
     jump daymenu
 
 label AE020:
+    $TimeFlag("XX20")
     scene Office with fade
     play music HigherEdu
     "As I walked into the office, I was greeted with Shiori-san, kneeling over in order to place some files in a cabinet, butt positioned directly in my line of sight. I looked to the side a moment, before moving over to her."

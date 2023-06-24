@@ -7964,7 +7964,7 @@ label WG037:
     WG "There's no excuse for dressing so shabbily."
     MC "Hm?"
     "I took another look at the pair of heavyset women. Sure their clothes were mundane, even by middle aged lady standards, but they didn't appear shabby to me."
-    MC "I don't know, isn't that just how mom's dress in general?"
+    MC "I don't know, isn't that just how moms dress in general?"
     "But even as I said that, I realized that wasn't really what was bothering her."
     "The women were both fatter than Alice was right now. A sign that further growth was possible."
     MCT "Do I say something? Or just try to change the subject?"
@@ -25793,6 +25793,310 @@ label WG081:
     MC "Yes ma'am. Will do."
     jump daymenu
 
+label WG082:
+    $setProgress("WG", "WG084")
+    $setTime(TimeEnum.EVE)
+    play music WGAlt
+    scene Dorm WG
+    show WG neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    WG "Okay, so, tell me what it is you want to do after you graduate?"
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Tomoko "Well... I think I want to be a JSL interpreter."
+    show WG neutral-2
+    WG "Oh? This is the first time I'm hearing about it. That is interesting, but I would have never known that from looking through your application."
+    Tomoko "Oh... I guess I probably should have put that somewhere."
+    "Earlier I had a conversation with Tomo asking her about what colleges she was applying to, and being a worse procrastinator than I was, it sounded like she hadn't done anything."
+    "I was trying to help her get started, but quickly realized that wasn't going to go anywhere if she wasn't going to listen to any of my advice. So I figured I'd try it with someone she would listen to."
+    WG "Okay, what kinds of programs are out there for you to apply for?"
+    Tomoko "Well, there kinda isn't any. It's not like there's a degree specifically for it. I was just going to apply to places that offered more advanced JSL courses since not every place has them. I'm lucky that they offered some here."
+    Tomoko "From what I understand even that's not needed, you just have to know enough to pass the accreditation exam, but it's like {i}super{/i} hard from what I heard. I don't know enough to pass it."
+    MC "I thought you said you were fluent? You don't seem to have an issue speaking with your roommate, or on her behalf, and oh boy can that girl talk."
+    show WG neutral
+    WG "Being conversant with a friend and being expected to perfectly interpret complex topics from a stranger in a public setting requires a different level of mastery."
+    Tomoko "See, she gets it."
+    MC "Hmm, I guess I hadn't thought about that."
+    WG "My father's company often employed sign language interpreters for large public events and public addresses, both in America and in Japan to accommodate the hearing impaired."
+    show Tomoko happy
+    Tomoko "Yeah, that stuff. I think I'd be good at it."
+    show Tomoko neutral
+    WG "That's fine if that's where your interests lie, but those types of gigs are infrequent at best."
+    WG "The better opportunities for steady work are going to come from hospitals and law firms that need to be able to communicate with people who otherwise can't hear or speak."
+    Tomoko "Oh... I dunno. That stuff sounds like it would be really bad if I screwed up." 
+    show WG haughty
+    WG "That's why it's important for them to have someone qualified." 
+    Tomoko "But I don't even know how to explain that stuff in Japanese, let alone JSL."
+    show WG neutral
+    WG "Well, sounds like you can add some courses on public health, social work, and law to your degree plan. I recommend you enroll in a BA program in linguistics."
+    show Tomoko happy
+    Tomoko "Huh... I hadn't thought about that before. I suppose that would be useful for an interpreter to understand."
+    MC "See? I knew we came to the right place."
+    show WG neutral-2
+    WG "Alright, now that the pieces are starting to fall into place, let's work on your application packet."
+    Tomoko "Sounds good."
+    show WG neutral
+    show Tomoko neutral
+    WG "Now, an application is like a resume. It's there to spell out the basics to see if you meet the requirements, but the specifics of why you want the job and why your skills and experience are relevant is fleshed out in the cover letter."
+    Tomoko "Okay. What's that? How do I make one?"
+    "Even if this was the same advice I would've given her, something about hearing it from Alice got through to her. Though to be fair, Alice is the expert on this kind of stuff."
+    WG "Typically you will want to introduce yourself, explain how you heard about the program, why you are interested in it, and why you will be successful." 
+    show WG haughty
+    WG "These colleges receive thousands and thousands of applications, if yours doesn't stand out in some way it will go straight into the bin, probably before any human eyes get a look at it."
+    Tomoko "Okay."
+    "Tomo took a couple of minutes to type out something on her laptop before turning it to Alice."
+    show WG surprised-2
+    Tomoko "How's that?"
+    show WG neutral
+    WG "Hmm, while being concise is a virtue, a cover letter is usually at least three fourths of a page you only have a handful of lines, Tomo. {w}A couple of things: you're going to want a letterhead and specifically mention the university."
+    show Tomoko annoyed
+    Tomoko "So I have to make a new one for each college?"
+    show WG haughty
+    WG "If you want it to stand out you will. You can have a skeleton that forms the basis of all of them, just be sure to name the right one you plan to send it to."
+    show Tomoko sad
+    Tomoko "This sounds like a lot of work."
+    show Tomoko distracted
+    WG "If the application sounds too daunting, then why are you applying for the program? Work and responsibilities don't get any easier as you get older, you just learn to be better at managing them."
+    show Tomoko neutral
+    show WG neutral
+    Tomoko "We're like the same age, Alice."
+    WG "I was just quoting my father. It was something he was fond of saying growing up if I ever complained about having too much schoolwork."
+    MC "Sage wisdom coming from probably the busiest guy in Japan."
+    show Tomoko distracted
+    Tomoko "I guess."
+    show Tomoko neutral
+    WG "Besides, you didn't even get to the part where you explain {i}why{/i} you want to get into that field."
+    Tomoko "Well, I want to be able to help people, like my roommate Yuki. When she started having trouble talking with her lips, no one could understand her. This girl loved to talk, sure maybe too much at times, but that was kind of her thing."
+    show WG neutral-2
+    show Tomoko sad
+    Tomoko "After a while, all she ever got was confused stares from her friends every time she spoke. Eventually she gave up trying altogether. It was like the spark in her eye had faded. She wasn't the same."
+    Tomoko "I mean, how could she be? It was like she was isolated from her friends, even though they were right next to her." 
+    show Tomoko happy
+    Tomoko "But when I would sign to her, I could see that spark return. It was like I threw her a lifeline when she could finally talk to another person again."
+    show WG surprised-2
+    show Tomoko surprised
+    WG "Oh my, that's a wonderfully inspiring story. You should definitely include that in your cover letter." 
+    show WG happy
+    extend " Admission offices eat that kind of stuff up."
+    show Tomoko neutral
+    Tomoko "Really? Seems kind of personal though..."
+    show WG neutral
+    MC "People relate to personal stories, Tomo. It's the best way to make your applicant feel unique and stand out." 
+    WG "Not only that, it gives them a glimpse into the type of person you are and what drives you, rather than just going through a list of positive qualities you want someone else to think you have. Besides, you don't have to use her actual name."
+    Tomoko "I guess that would let them know where I'm coming from."
+    show WG neutral-2
+    WG "Alright, seems like you have a good basis for the cover letter, and any essays they might ask you to write, if that comes up. Let's look through your application files."
+    show WG pondering
+    WG "Let's see here... {w}Hmmm."
+    show Tomoko annoyed
+    Tomoko "Oh great, what does \"Hmmm\" mean?"
+    MC "I tried to tell you."
+    show Tomoko neutral
+    Tomoko "Yeah, yeah. {w}What's wrong with it, Alice?"
+    show WG surprised-2
+    WG "Well... there isn't much of anything here. You don't have any extracurriculars, no work experience; it's just your course work, which they are going to know from your transcripts anyway."
+    Tomoko "I didn't have anything to put."
+    show WG neutral-2
+    WG "Oh come on, that's not true. You just said you talk with your roommate through signing. I assume from what you had mentioned you function as her {i}de facto{/i} interpreter." 
+    show WG haughty
+    WG "You can put all of those hours down as volunteer service hours with a special needs population."
+    show Tomoko surprised
+    Tomoko "...{w}I can?"
+    show WG neutral-2
+    show Tomoko neutral
+    MC "Oh, hadn't thought of that. That's a {i}really{/i} good idea. Probably hundreds of hours since you live with her. That would stand out compared to other applicants with a lot more extracurriculars."
+    Tomoko "But it's not really like a professional thing, she's my friend."
+    MC "It might as well be to the person reading the application. I mean, it is like volunteering. You didn't have to do that."
+    show WG happy
+    WG "Exactly. Besides, I'm sure your roommate would be happy to vouch for you."
+    Tomoko "Yeah, she would." 
+    WG "Excellent, that will be a strong addition to the application."
+    show WG pondering
+    WG "Okay, let's see here... Are there any professional societies you can join?"
+    Tomoko "There are, but the membership is kind of expensive."
+    show WG neutral
+    WG "I would recommend you do so. It shows your commitment and willingness to contribute to that field of study. Lots of times these professional societies provide opportunities for professional development."
+    WG "Think of it as an investment in yourself. I'm willing to help you cover the funds if it's going to stretch you too thin."
+    Tomoko "That's okay Alice. I can cover it, I just hadn't ever spent that much on something like this before. I guess I really should."
+    show WG doubt
+    MC "She wasn't talking about {i}giving{/i} you money Tomo, she was going to put you to work."
+    show Tomoko surprised
+    Tomoko "{size=-6}{i}...Eep!{/i}{/size}"
+    WG "Well, how else is she supposed to gain work experience between now and then? Besides, I'd be willing to write a nice letter of recommendation."
+    show WG haughty
+    MC "It's not a bad gig, if you're interested Tomo."
+    Tomoko "Uhh... umm... well..."
+    show WG sly
+    WG "Thanks, but no thanks, I take it?"
+    show Tomoko neutral
+    show WG neutral
+    Tomoko "Uh, yeah. That. {w}Don't get me wrong, Alice you've helped me out a lot, and I'm really grateful, but all of this has kind of made me realize I need to start doing these kinds of things for myself."
+    MCT "Did I just hear that? From {i}Tomo{/i}?"
+    show WG neutral-2
+    WG "I suppose you're right. We've gone over quite a bit. I guess at this point it would be best to give you the space needed to spread your wings. I'm happy to take a look at it a second time if you'd like to."
+    Tomoko "Thanks Alice, but I don't want to have to bother you about this again. I know you're really busy, I'll just ask Kei instead."
+    MC "Oh yeah, cause I got nothing going on."
+    show Tomoko happy
+    show WG happy-2
+    Tomoko "So what did you put in your application for extra-curriculars?"
+    MC "That's a very strange way of saying \"Goodbye and I'm leaving.\"."
+    Tomoko "I'll see you two later. Thanks again, Alice."
+    show WG neutral
+    WG "Goodnight, Tomo."
+    MC "Later."
+    hide Tomoko with dissolve
+    play music Sunset
+    MC "Thanks for walking her through that stuff. I tried to tell her what she should do, but she never listens to me."
+    show WG surprised-2 at altMove(0.5, 0.5)
+    WG "Why's that? I can't imagine anyone more willing to help put someone on the right path than her brother. Maybe your parents. Besides, you seem to know a decent amount about these things, especially with what I've taught you."
+    show WG neutral
+    MC "I don't know. You'd think. I guess it's one of those sibling things— something like you can't get it out of your head that the person you're used to arguing with is actually right about something."
+    WG "\"Familiarity breeds contempt?\" "
+    MC "Something like that anyway."
+    WG "It's fairly common in business. Employees at the ground level can often tell you what's working well and what isn't in a business, but are usually ignored." 
+    show WG sly
+    WG "Then they hire some outside consultant that tells them the exact same thing and upper management acts like it's golden nuggets of wisdom." 
+    show WG haughty
+    extend " Father often cited the phenomenon as one of the hallmarks of ineffective management."
+    show WG neutral-2
+    MC "Your dad is surprisingly down to earth for being such a bigshot. Why do you suppose people do that?"
+    WG "Because to accept the advice from a familiar source requires you to admit fault with your own reasoning, while hearing it from a stranger allows for an appeal to authority that doesn't come with that baggage."
+    MC "Hmm. Now it's starting to make sense..."
+    pause 1
+    show WG sly
+    WG "And {i}why{/i} are you looking at me like that?"
+    show WG haughty
+    MC "Oh, nothing. Just thinking of another example, that's all."
+    show WG sly
+    WG "I know {i}exactly{/i} what you're thinking, and I don't want to hear one word. I listen to you {i}all{/i} the time."
+    MC "Ehhhh... {w}Eh... {w}Sure."
+    show WG happy
+    WG "Oh, please! When was the last time I shot one of your ideas down?"
+    MC "You didn't like the shirt I picked out and made me change that time we had brunch with your mom."
+    show WG stern
+    WG "Clearly color coordination is out of your purview, I had to assume direct control."
+    show WG sly
+    MC "Haha! You certainly did. {w}I suppose your mom would have said something and it would have been embarrassing if you hadn't."
+    show WG haughty
+    WG "Oh, so you see the wisdom in it now? I knew you'd see it my way, eventually."
+    MC "I never doubt you when it comes to matters of taste. I just think it's fun to tease you because of your stubborn streak. I will say though you listen to me more than anyone..." 
+    show WG sly
+    extend " eventually that is."
+    "Alice just closed her eyes and shook her head."
+    show WG happy-2
+    WG "Sometimes I think you listen to me a little {i}too{/i} closely."
+    MC "Well, you are quite persuasive."
+    show WG neutral
+    WG "Speaking of that, let's take a look at your application package. Did you implement the suggestions I have?"
+    MC "Yup, it's all in there. Could use a once over for typos though if you don't mind."
+    "I unfolded my laptop and pulled up the sheets."
+    show WG pondering
+    WG "Looks like you've used the proper format, and it looks consistent, so that's good."
+    show WG sly
+    WG "Still no extra-curriculars listed..."
+    MC "A little late to change that."
+    show WG haughty
+    WG "But your work experience more than makes up for it I believe."
+    WG "My, my. \"Oversaw Global Sales and Logistics\"... You managed to squeeze all of that out of \"Delivery Boy\"?"
+    MC "Yeeeah, it's a bit of a stretch, for sure."
+    WG "Nonsense, it's perfect. {w}It's a great way of characterizing the skills and responsibilities of your duties to a prospective employer, or in this case, an admissions officer. I will certainly vouch for the veracity of it if they require a reference."
+    show WG happy
+    MC "What should I list your title as? \"Best Girlfriend Ever\"?"
+    WG "As much as I enjoy that title, it's probably best to leave that part out. \"Owner and CEO\" will do just fine."
+    MC "Okay, but I still like my job description better."
+    show WG neutral
+    WG "Have you decided where you wanted to apply?"
+    MC "Well there's a handful. I think my grades are good enough to get in where I wanted to most of them, but I had a few conservative picks too just in case. I'm hoping to get into the program they have at the university in Tokyo."
+    WG "Why's that?"
+    MC "Eh, you know. Close to family still, not too far from Yokohama..."
+    WG "I see. But is that your top pick?"
+    MC "Well, really my top pick is this private technical institute in Osaka. They have the best program in the country, but..."
+    show WG haughty
+    WG "But?..."
+    MC "I don't realistically think I'll get in if I apply. Besides, it's a little further away..."
+    show WG neutral
+    WG "I could have Father write you a letter of recommendation. His name carries weight. Assuming your application is in order, that should be enough to seal the deal."
+    MC "You think he'd do that for me? I mean, I only met the guy once."
+    show WG neutral-2
+    WG "Well, I would be the one to write it, he would just sign it with his seal and official letterhead, assuming he approves the contents after reviewing it."
+    MC "Is... Is that okay?"
+    show WG haughty
+    WG "It's common for executives to delegate those kinds of small details. Most don't even bother to look at such documents, but the ones that care about their reputation and what they are signing their name to will."
+    MC "It certainly couldn't hurt."
+    show WG neutral
+    play music Memories
+    MC "That reminds me, I don't think I ever got to ask... I mean I assumed, but... what are your plans after we're done here at Seicho?"
+    show WG neutral-2
+    WG "I've been accepted to Yalde, in their School of Business management. It's my Mother's alma mater. With how much she's contributed to their endowment over the years, there's no way I wouldn't have gotten in."
+    MC "..."
+    show WG happy
+    WG "But the admission's officer I spoke to said I was an outstanding candidate for the program all the same."
+    MC "Naturally..."
+    MC "So, um... that's in America, isn't it?" 
+    show WG neutral
+    WG "Relax Dear. I'm not hoping on a jet and moving halfway across the world any time soon. I'll be attending online. Let's face it, there's no way a campus full of buildings built in the 18th century is going to be accommodating to my \"unique\" proportions."
+    show WG haughty 
+    WG "Besides, the real education will be my work-study. I'll be doing quarterly rotations with the operational managers across my father's various business holdings, so I can get first hand experience at the floor level across the whole enterprise."
+    MC "Preparing to fill his shoes?"
+    show WG neutral-2
+    WG "That's still a ways off. More like learning to crawl before I attempt to climb a mountain."
+    show WG neutral
+    WG "Running a small business is quite small in scope compared to the skills needed to keep a multinational enterprise like the Nikumaru Holding Company running."
+    MC "Seems like you have enough business experience to me already, do you need the degree?"
+    WG "Probably not. But discussing this with father he and I agreed that even if the degree is nothing but a piece of paper backed by the opinion of armchair businessmen that couldn't hack it in the real corporate world,"
+    show WG haughty
+    WG "an executive with an MBA from a prestigious American university business school would inspire investor confidence, which will be sorely needed given the role image plays in investor confidence."
+    show WG stern
+    stop music fadeout 2.0
+    WG "Given that my image is more likely to inspire shareholders to hide their lunch, rather than hand over their hard earned yen, I need to do everything I can to look good on paper."
+    play music TwilightAmbient
+    show WG happy
+    MC "Aw, you look good in everything, Babe."
+    WG "Thank you, Dear."
+    show WG doubt
+    MC "Especially in nothing."
+    show WG sly
+    WG "I guess we know where your head is at."
+    MC "What were we talking about again?"
+    WG "..."
+    show WG happy-2
+    MC "Oh! College applications. How could I forget?"
+    WG "Oh, I can certainly imagine how..."
+    MC "Hehe."
+    show WG neutral
+    MC "But, yeah... So how's all that going to work? Sounds like you'll be really busy with school and work... And if I do end up going to school in Osaka..."
+    show WG happy-2
+    WG "You're not getting away that easily if that's what you're thinking."
+    show WG happy
+    WG "I hope you plan to be diligent with your studies so you have time on the weekends to catch a bullet train back to Yokohama."
+    WG "I could always character a plane for you too, if need be."
+    MC "That... That could work."
+    WG "Keisuke, Dear. I hope if you've learned anything about me by now, more so than that my time is valuable, is that I will always {i}make{/i} time for those who I value the most."
+    show WG aroused
+    "I reached out my hand for Alice's, placing my other one on top of hers. Even her hand was as plush as a downy pillow, my fingers running along the dimples that had long since hidden her knuckles, as I gave it a firm, yet gentle squeeze."
+    MC "Thanks. I needed that reminder. All this application stuff got me thinking. Thinking about how all of this is going to turn out for us in the long term."
+    show WG neutral-2
+    MC "Heh, it's funny, you know? When I first got here I was worried about the future, how everything was going to change, how I wished I could just go back home, leave the island and everything that lay ahead of me behind."
+    MC "And here it is almost a year later... and now I'm afraid to go back."
+    WG "They say that fear paralyzes a man and makes a coward to run, but compels a hero to astounding acts of courage."
+    stop music fadeout 1.0
+    MC "Hmm. Wise words. Is that another one of your father's sayings?"
+    show WG happy
+    play music Love
+    WG "No, it's what my mother taught me about finding a good man."
+    show WG aroused
+    "Alice took my hand, placing it on top of her belly, guiding me to rub it gently"
+    WG "I think any other man would have run away quite a long time ago when faced with all of this, but you run headlong into it." 
+    show WG neutral-2
+    WG "I know it's not just because you're attracted to my body. You help me with my shoes, you pull out my chairs, you go out of your way to make sure I'm comfortable. You don't even complain one bit, you're even delighted to do it for me." 
+    WG "It lets me know you're in it for the long haul."
+    show WG happy
+    WG "And because of that... I'm not afraid."
+    show WG aroused
+    MC "Aw, I love you Babe."
+    "I leaned in for a kiss, my chest gliding across her impossibly large squishy breasts as I sank into them in order to draw near, planting one on her soft pouty lips as her chubby cheeks brushed against mine."
+    "We held it there, a moment where time finally stopped{w}— if only for a little while."
+    jump daymenu
+
 label WG084:
     scene Music Classroom with fade
     play music MCGuitar
@@ -29107,7 +29411,7 @@ label WGFMG003:
     Natsuko "The more I think about it... it would be pretty impressive if you lifted it over your head— and then dropped it."
     show FMG happy
     FMG "I'd prefer to chuck it at you— with some luck it could fix that resting bitch face of yours. Anyways, how about that tree over there? Seems easy enough."
-    Natsuko "A tree that size weighs over a ton and has two stories worth of roots and soil stuck to it. Do you actually think you're going to pull out over 50 tons like a carrot?"
+    Natsuko "Do you have any idea how many tons upon tons a tree that size weighs, let alone how many more would be needed to snap off at its roots?"
     show FMG sad
     FMG "I guess I wasn't thinking about that..."
     show Natsuko annoyed

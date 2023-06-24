@@ -2558,6 +2558,7 @@ label GTS020_c1_1:
     jump daymenu
 
 label GTS020_c1_2:
+    $setFlag("GTS020_c1_2")
     MC "S-sure. Where would you like to go?"
     show GTS embarrassed
     GTS "I'm sorry Hotsure-san, that was too forward, I shouldn't have assumed-"
