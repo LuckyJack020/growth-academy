@@ -26665,11 +26665,12 @@ label PRG046:
     "After a moment, Aida smiled back, her gentle, doe-like expression slightly melting me inside."
     "I took our bags and wheeled them to the back of our car, where there was a rack for larger baggage. Putting ours up, I walked back to our row."
     MC "Alright. I'll slide in first."
+    show PRG worried with dissolve
     "Aida stepped into the aisle as I got myself in and sat."
     MC "Hm. Comfy seats. Almost forgot about that from the ride over."
     PRG "I-I didn't really remember the seats."
     "Aida moved in..."
-    show PRG surprised with easeinleft
+    show PRG surprised with dissolve
     stop music fadeout 2.0
     PRG "Oh!"
     "She turned. Moving in sideways made her bump her belly against the seat in front of us, so she turned, basically backing herself into the row... and giving me a view that I'd remember for years to come."
@@ -26687,6 +26688,7 @@ label PRG046:
     "This gave me just enough space to flip the armrest up between us."
     MC "Got it! Sit now."
     "Aida came back down and sat, her butt filling up her seat and spilling over into mine beside her... and directly into my side."
+    show PRG unsure with vpunch
     "Now seated, her belly jutted forward, leaving only about 30 centimeters of space between her belly and the seat in front of us."
     show PRG unique
     "Her boobs piled on top, leaving the rest of her looking like she was being overtaken by her belly and boobs."
@@ -26840,7 +26842,7 @@ label PRG046:
     "Smiling, I sat back and watched her eat."
     scene black with fade
     pause .75
-    scene NYI
+    scene Tokyo Train
     show PRG neutral
     with fade
     MCT "Hour two."
@@ -27037,14 +27039,15 @@ label PRG046:
     pause .75
     scene black with fade
     pause .5
-    scene NYI with fade
+    scene Tokyo Train with fade
     pause .25
+    scene black with fade
     jump daymenu
 
 label PRG047:
     $setProgress("PRG", "PRG048")
     $setTime(TimeEnum.DAY)
-    scene NYI with fade
+    scene Tokyo Train with fade
     MC "Mmn..."
     "I blinked, letting out a small yawn."
     "I glanced down, my head on something soft."
@@ -27100,7 +27103,7 @@ label PRG047:
     "I thought about home quite a bit, despite my life being focused on Seichou for the time being."
     "In the earliest days, I'd think about what my friends back home were up to. Now that we were out and free, what they were doing with their time."
     "But as time passed, my thoughts of them... started to fade."
-    "Not that I was forgetting them. But...they were there."
+    "Not that I was forgetting them. But... they were there."
     MCT "... And I'm here."
     "High school was so far away now. It was gone."
     "I'd heard from both my mom and dad that after high school, you start to lose touch with the friends you knew so well, and new ones start to take their place."
@@ -27730,7 +27733,8 @@ label PRG047:
     stop music fadeout 1.0
     scene black with fade
     pause 0.5
-    scene NYI with fade
+    $setTime(TimeEnum.NIGHT)
+    scene Tokyo Train with fade
     pause .5
     MC "Mm..."
     "I looked up."
@@ -27805,7 +27809,7 @@ label PRG047:
     MC "Got it."
     "I got up and offered Aida a hand."
     "We headed toward the front of the station, and went outside."
-    scene NYI with fade
+    #scene Tokyo(?) with fade
     "The sight of the city stretching out in front of us took my breath away."
     "It hadn't been that long since I'd been in and around that many people, but seeing so many tall buildings brought on a huge wave of nostalgia."
     show PRG insecure with dissolve
@@ -27853,8 +27857,8 @@ label PRG047:
     PRG "I-I think I can get it."
     PRG "C-Could you go first, Keisuke?"
     MC "I can."
+    hide PRG
     scene Car Interior
-    show PRG worried
     with fade
     "I got myself in first and slid over to the other side of the cab."
     "Aida sat down on the seat, then turned herself..."

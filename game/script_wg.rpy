@@ -28606,6 +28606,8 @@ label WGBE004B_After:
     with dissolve
     WG "Who cares? I don't find the prospect of something going into the garbage or Okisho's mouth to be substantially different."
     MCT "Yikes! Seems like Honoka's brownies managed to hit a sour note."
+    if isEventCleared("WG084"):
+        "I'd have thought things had cooled off a bit between Okisho and Alice since they managed to work out a deal, but I guess it's more of an uneasy truce than an actual alliance."
     show WG neutral
     hide PRG with dissolve
     WG "Now that that mess has been taken care of, what should we do now?"
