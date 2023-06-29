@@ -556,6 +556,17 @@ init python:
     )
     ost.manualDefineList.append(theme_DfP)
 
+    theme_MtV = ost.soundtrack(
+        name = "Motivation",
+        path = "Audio/BGM/motivation.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Rekindled Determination",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_MtV)
+
     ## Base Template
     ######################################
 

@@ -1585,7 +1585,7 @@ label WG010:
     WG "Clothing, my dear boy."
     MCT "Dear boy? I'm not sure if she's being condescending or endearing at this point."
     show WG haughty
-    WG "It may have escaped your notice, being a guy and all– one apparently not particularly concerned with your own appearance, at that—"
+    WG "It may have escaped your notice, being a guy and all- one apparently not particularly concerned with your own appearance, at that—"
     WG "but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
     show WG happy at Position(xpos=0.3) with move
     WG "The school {i}does{/i} supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
@@ -1622,7 +1622,7 @@ label WG010:
     WG "But we already have most of our selection here at the school, ready to distribute to any interested buyer."
     WG "And if anyone wants to see our products in real life, you can tell them that I'm already wearing my first new set of clothing."
     WG "The school told me it would take as much as a week to get me a larger set of uniforms,"
-    WG "but I– going directly to the company that has the contract with this school– was able to get this comfortable and properly–fitting outfit before my old set became restrictive."
+    WG "but I- going directly to the company that has the contract with this school- was able to get this comfortable and properly-fitting outfit before my old set became restrictive."
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now-wider torso and rounder belly."
     show WG happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly."
@@ -1675,17 +1675,18 @@ label WG010_accept:
             jump WG010_c3
 
 label WG010_c1:
-    if isEventCleared("WGGTS002"):
-        "Well, at least that's what I would have normally thought, but after seeing how displeased Shirori was t ofind out Alice started a business on campus, I'd just be rubbing it in her face if I came up to her with the offer."
-        "That and Alice had tried to sell her on some of the items. If she couldn't thaw the Ice Queen eought to make a sale, I stood a snowball's chance in hell."
-        MCT "Alirght, so scratch that."
+    if is EventCleared("WGGTS002"):
+        "Well, at least that's what I would have normally thought, but after seeing how displeased Shirori was to find out Alice started a business on campus, I'd just be rubbing it in her face if I came up to her with the offer."
+        "That and Alice already had tried to sell her on some of the items. If she couldn't thaw the Ice Queen enough to make a sale, I stood a snowball's chance in hell."
+        MCT "Alright, so scratch that."
         menu:
             "Aida. Alice had mentioned she doesn't have an extensive wardrobe.":
                 jump WG010_c2
-            "Honoka. Even if she hasn't grown, her needs already stretch most most clothing shops.":
+            "Honoka. Even if she hasn't grown, her needs already stretch most clothing shops.":
                 jump WG010_c3
+
     else:
-        $setFlag("WG010_shiori")
+        $setFlag("WG010_Shiori")
         scene Hallway
         show AE angry
         with fade
@@ -1714,12 +1715,13 @@ label WG010_c1:
         "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
         hide AE with dissolve
         "Shiori was already brushing past me, making a direct line for the cafeteria."
-        $setAffection("WG", -1)
+        $setAffection("WG", -3)
         "I looked down at the box of \"catalogs\" I was holding, wondering if I should keep handing them out or consider myself fired."
         jump daymenu
 
 label WG010_c2:
     $setVar("BEP", getVar("BEP") + 1)
+    $setFlag("WG010_Aida")
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral at center with dissolve
@@ -1753,14 +1755,13 @@ label WG010_c2:
         show PRG neutral
         PRG "Yes, th-thank you, Hotsure-san..."
     "As I walked away I wondered who was more embarrassed, me or her. She was doing a better job of putting a happy face on it, at least."
-    hide PRG with dissolve
     MCT "Ugggghh... What was I thinking?"
     "I wasn't. That was the answer."
     MCT "Those two live together, not to mention Aida works for Alice."
     $setAffection("WG", -5)
-    extend "I'm sure eventually something will get mentioned to Alice about this and she'll think I'm a complete idiot."
-    "My first stab at a sale and I whiffed it. {w}I guess that's what I get for being overly focused on an easy commission rather than the bigger picture."
-    "No sense in beating myself up about it, I might still be able to redeem myself with a sale if I keep an eye out for more prospects. I still had time before class started, so the morning wasn't a complete waste. Yet."
+    extend " I'm sure eventually something will get mentioned to Alice about this and she'll think I'm a complete idiot."
+    "My first stab at a sale and I whiffed it. {w}I guess that's what I get for being overly focused on what on an easy commission rather than the bigger picture." 
+    "No sense in beating myself up about it, I might still be able to redeem myself with a sale if I keep an eye out for mor prospects. But I still had time before class started, so the morning wasn't a complete waste. Yet."
     jump daymenu
 
 label WG010_c3:
@@ -1789,9 +1790,9 @@ label WG010_c3:
     "Black lace bras with the cups almost transparent, frilly edges rising from her cleavage like dolphins jumping out of the sea. White cotton cups pulled taut by two great mounds of flesh, the straps digging into her shoulders..."
     BE "..."
     MC "Ah!"
-    "I snapped my head downward to escape eye contact with her. Only then did I remember the box I was again holding in my hands. I took out one of the \"catalogs.\""
+    "I snapped my head downward to escape eye contact with her. Only then did I remember the box I was again holding in my hands. I took out one of the \"catalogues.\""
     MC "If you're looking for new clothing, there's a new service that just opened up. Really affordable clothes, some custom-made, direct from the manufacturer."
-    "Quizzically, she looked the \"catalog\" over."
+    "Quizzically, she looked the \"catalogue\" over."
     BE "Huh. Wow, there's a lot of stuff in here! Pretty neat, actually. Most of the time, once you get past a certain size, you can only get bras in boring colors, or things without patterns. It really takes the fun out of it."
     BE "But, they're saying here they can do more custom patterns? Prices seem okay too, all things considered. How'd you get your hands on this?"
     MC "Ali- Nikumaru-san hired me. She knows people in high places at all these companies, so she has an \"in,\" so to speak."
@@ -1801,7 +1802,7 @@ label WG010_c3:
     BE "Because it's like starting up an ice cream stand in the middle of a heat wave. She'll make a killing here if she can get everything authorized!"
     BE "You better be getting a cut of all of this if you're going to be helping her out. Don't let her take advantage of you."
     show BE surprised
-    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah, I could definitely see that. Was there a dominatrix getup in this catalog? That'd be something to see on her..."
+    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah, I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
     "Man, my imagination was getting a workout today."
     "I shook my head to clear my mind."
     MC "I am being compensated (though the specifics haven't been hammered out yet). I believe she even mentioned something about a commission."
@@ -1830,7 +1831,7 @@ label WG010_c3:
     "Even from the back I could see the extra bounce... in her step. I admired it for a moment, and then turned back to the matter at hand."
     hide BE with dissolve
     $setAffection("WG", 1)
-    "Landing a sale five minutes into my job was great, but I suspected Alice wouldn't ignore a still-full box of \"catalogs\" because of it."
+    "Landing a sale five minutes into my job was great, but I suspected Alice wouldn't ignore a still-full box of \"catalogues\" because of it."
     jump daymenu
 
 label WG010_decline:
@@ -1999,7 +2000,7 @@ label WG011_c3:
     WG "Courtship is a challenge, the man is tested and tries to prove himself. And, if he is successful, he is rewarded with her love."
     MC "But the woman doesn't have to do anything? Doesn't she have to prove herself too?"
     WG "Women have their own trials in any relationship, but how often are we the pursuer?"
-    MC "A bit of a traditionalist, I take it? I guess I hadn't pegged you for the old–fashioned type, Alice."
+    MC "A bit of a traditionalist, I take it? I guess I hadn't pegged you for the old-fashioned type, Alice."
     show WG haughty
     WG "Au contraire. I've never met a woman in our generation more dedicated to conquering the world of business and smashing the glass ceiling than I am."
     WG "I'm simply a realist. Even with advances in women's equality it's considered customary for the man to initiate, to pursue, to \"win\" the woman's heart."
@@ -2159,7 +2160,7 @@ label WG012:
     WG "But we're in the midst of a crisis right now. Our very existence as this school's premiere clothing retailer is under attack."
     show WG neutral
     WG "Hence this meeting. We need to address this attack on free enterprise: Matsumoto-san asserts that it violates the school's rules and regulations for a student to run a business on campus."
-    if not getFlag("WG010_shiori"):
+    if not getFlag("WG010_Shiori"):
         MC "Wait, we're not allowed to be doing this? Then why are we having this meeting?"
         show WG haughty
         WG "Don't be so hasty to accept defeat, Keisuke. As in any competition, to win in business is not just to strive for success, but to reject failure."
@@ -3959,6 +3960,7 @@ label WG019:
         jump daymenu
     else:
         $setVar("BEP", getVar("BEP") + 1)
+        $setFlag("WG019_BedFail")
         "I went to the head of the bed and bent my knees, while Alice and Aida went to the other side."
         MC "On three."
         MC "1... 2... 3-"
@@ -4920,7 +4922,7 @@ label WG024_c2_2:
     MC "Well, I can't speak for others, but if I had to guess— it might not be physical."
     show WG surprised-2
     WG "Oh? How so then?"
-    MC "Well, personality–wise, you can be kind of abrasive."
+    MC "Well, personality-wise, you can be kind of abrasive."
     show WG doubt
     "She didn't say anything for a moment, but I could see her thinking over what I just said."
     MC "Now, don't get me wrong, your directness and self-confidence are strengths, but to some people that comes off as brash and arrogant."
@@ -4993,7 +4995,7 @@ label WG024_c2_2:
 label WG024_c3_2:
     MC "Alice, why are you pressing me about this? What is this really about?"
     show WG surprised-2
-    MC "Are you really this distraught over this kind of school boy past–time of ranking girls?"
+    MC "Are you really this distraught over this kind of school boy past-time of ranking girls?"
     show WG worried
     MC "You strike me as someone who's a bit more confident than to put any stock into this kind of stuff."
     show WG doubt
@@ -6836,7 +6838,7 @@ label WG032_WG_1:
     show WG happy
     extend " but shrewd nonetheless."
     MC "Hey, I'm just a delivery boy. {w}But I suppose I've picked up on a couple of things here or there from watching my boss."
-    WG "While your modesty is false, and your flattery over–obvious, you are genuinely kind.  {w}I'm sure Akira will be very happy with her new dress."
+    WG "While your modesty is false, and your flattery over-obvious, you are genuinely kind.  {w}I'm sure Akira will be very happy with her new dress."
     "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I held my tongue and found my seat."
     jump daymenu
 
@@ -7248,7 +7250,7 @@ label WG034_c1_3:
         "It was all fine. Perfectly fine."
         "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable, but not overdressed."
         MCT "But do I want to settle for \"presentable\"?"
-        MCT "Then again, being over–dressed could make me stick out in the wrong way."
+        MCT "Then again, being over-dressed could make me stick out in the wrong way."
         MCT "Ugh, I hate overthinking this stuff, but I want to make a good impression."
         menu:
             "I should check out the menswear store before making a choice.":
@@ -7276,7 +7278,7 @@ label WG034_c1_3:
         "If you wanted to blind someone with your extravagant taste, this wasn't the place to come to, but to the average person, one would come out looking sharp."
         "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable but not overdressed."
         MCT "But do I want to settle for \"presentable\"?"
-        MCT "Then again, being over–dressed could make me stick out in the wrong way."
+        MCT "Then again, being over-dressed could make me stick out in the wrong way."
         MCT "Ugh, I hate overthinking this stuff, but I want to make a good impression."
         menu:
             "I'm going back to the menswear store.":
@@ -7886,6 +7888,7 @@ label WG037:
 
     #Time: Afternoon
     $setTime(TimeEnum.EVE)
+    $setWGOutfit(OutfitEnum.CASUAL)
     scene Gate Front with fade
     "I arrived at the school gate a few minutes before five."
     "Being a little early is better than being on time, and it gave me a chance to calm my nerves before Alice showed up."
@@ -7961,7 +7964,7 @@ label WG037:
     WG "There's no excuse for dressing so shabbily."
     MC "Hm?"
     "I took another look at the pair of heavyset women. Sure their clothes were mundane, even by middle aged lady standards, but they didn't appear shabby to me."
-    MC "I don't know, isn't that just how mom's dress in general?"
+    MC "I don't know, isn't that just how moms dress in general?"
     "But even as I said that, I realized that wasn't really what was bothering her."
     "The women were both fatter than Alice was right now. A sign that further growth was possible."
     MCT "Do I say something? Or just try to change the subject?"
@@ -8966,7 +8969,7 @@ label WG041:
     WG "Because formalities are wasted on such a low-class event, beating around the bush does little to increase its appeal."
     MC "Low-class event? Festivals and traveling amusements have been around for ages! Some of the highest kings and queens would have their own performances made just for them."
     show WG haughty
-    WG "That may be true, but that falls more in line with early theatre. I am doubtful the highest of nobles dined on cheap fried junk, while sitting in a tetanus–ridden thrill ride."
+    WG "That may be true, but that falls more in line with early theatre. I am doubtful the highest of nobles dined on cheap fried junk, while sitting in a tetanus-ridden thrill ride."
     MC "C'mon, this isn't just some two-bit traveling circus! This is a proper full-fledged carnival. Everything is up to code and 100%% safe. Plus, the food is nothing like you've tried before."
     show WG neutral-2
     WG "Far be it from me to tell people how to run their business,"
@@ -9417,7 +9420,7 @@ label WG042:
     "Alice slammed her money on the counter, receiving a small bucket of plastic rings in exchange. I could tell she had a bit of fire in her eyes, now determined to prove a point."
     "{i}Plink{/i}... {i}plink{/i}... {i}plink{/i}..."
     show WG doubt
-    "NOt that far into her attempt, Alice's initial confidence began to falter into minor frustration."
+    "Not that far into her attempt, Alice's initial confidence began to falter into minor frustration."
     WG "I see. So that must be it. There's so many of them it's distracting from choosing a single target. It just requires focus."
     "{i}Plink{/i}... {i}plink{/i}..."
     show WG stern
@@ -10491,9 +10494,14 @@ label WG044_c2_2:
     show WG happy
     "Pulling back she booped me on the nose before waddling back to her room."
     WG "I wonder if you'd respond that way to another girl with a predicament like mine. Like Sakura, perhaps?"
+    if getFlag("Meet_Sakura"):
+        MCT "Sakura... The girl from the cooking club? So that's what her factor was..."
     "As her door shut I had a million thoughts going through my head. The suddenness of her forwardness had shocked me on many levels and left me with many questions."
     "How much ogling did she see me doing? Would I have done the same with another weight gain girl? Was she inviting me to take things further?"
-    "But somehow out of all the questions swirling about, the one that fell from my mouth was."
+    if getFlag("Meet_Sakura"):
+        "Needless to say, there was a lot weighing on my mind— in more ways than one."
+    else:
+        "But somehow out of all the questions swirling about, the one that fell from my mouth was."
     MC "Who's Sakura?"
     jump daymenu
 
@@ -12446,7 +12454,7 @@ label WG048_c2_2:
     WG "Precisely. Glad to know your palate has matured."
     show WG neutral-2
     WG "But to answer your question, I couldn't possibly begin to rank my favorite dishes. There's simply too many considerations to account for in what constitutes the perfect meal for the occasion."
-    WG "The ambiance, time of day, the seasons, pairing with drinks and h'orderves— what makes for the perfect dish can only truly be evaluated in the moment..."
+    WG "The ambiance, time of day, the seasons, pairing with drinks and hors d'oeuvres— what makes for the perfect dish can only truly be evaluated in the moment..."
     "Alice's thoughts had seemingly drifted from the present conversation as her mind swirled amidst some blissful realm of infinite culinary delights."
     MC "Uh... Alice?"
     show WG surprised
@@ -14750,7 +14758,7 @@ label WG056:
     WG "Nice to finally meet you, Tomoko."
     show Tomoko surprised
     show WG neutral-2
-    "Not much of anything ever phased Tomo, but her wide–eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
+    "Not much of anything ever phased Tomo, but her wide-eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
     Tomoko "Uhhh, hi... it's... just Tomo, by the way."
     Tomoko "{size=-6}Kei, she's huge! I knew you had a thing for bigger girls, but this is {i}biiig{/i}! Even for you!{/size}"
     "My initial reaction was one of bewilderment, because I was not quite sure at what point she would have learned that information, but then again, I can't say I didn't do my fair share of spying on her too when we were younger."
@@ -15059,7 +15067,7 @@ label WG056:
     WG "Aha! I have just the solution!"
     show WG neutral
     "Alice began looking through the drawers in her vanity dresser."
-    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up.{w} Ah, here it is. This is a leave–in dry conditioner."
+    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up.{w} Ah, here it is. This is a leave-in dry conditioner."
     "Alice proceeded to pump the foam into her hands and began to massage it into Tomo's hair."
     "Since we have the same factor, it was quite a lot of hair. The pump started to sputter, so I'm guessing she used all of what had been in the bottle."
     WG "There, now this can actually work."
@@ -15123,7 +15131,10 @@ label WG057:
     play music Peaceful
     PRG "Alright, Hotsure-san, did you have anything specific in mind for Alice? I'd be happy to help you with anything, but if I'm being honest, I'm much more skilled at baking and sweets."
     PRG "If you're thinking of going with a more savory dish, Sakura would likely be better suited for that."
-    MCT "Just who is this Sakura person and why haven't I seen her before? Of all the people in this school, I should be the one who has his finger on the pulse about all the fat chicks here."
+    if getFlag("Meet_Sakura"):
+        MCT "Sakura... She was one of the cooking club members I had met before. Well, good to know if I plan on making something else in the future."
+    else: 
+        MCT "Just who is this Sakura person and why haven't I seen her before? Of all the people in this school, I should be the one who has his finger on the pulse about all the fat chicks here."
     MC "Well that works out because I was leaning more towards a dessert dish for Alice anyway."
     PRG "Great! What kind of dessert were you thinking of then?"
     menu:
@@ -15177,7 +15188,7 @@ label WG057_c1_1:
     MCT "Two whole sticks of butter? Alice is {i}really{/i} going to like this."
     PRG "Mix the sugar, flour, and milk in a bowl with a whisk. This is a good batter to start out with because it's very thin, so it's not hard to mix and you're not going to over mix it."
     MC "Seems easy enough, but what do you mean about over mixing? How is that possible?"
-    PRG "Oh, it's a really common mistake, actually. If you've ever had a cake–based dessert that came out with a chewy, leathery texture when it was supposed to be light and airy, that's what happened."
+    PRG "Oh, it's a really common mistake, actually. If you've ever had a cake-based dessert that came out with a chewy, leathery texture when it was supposed to be light and airy, that's what happened."
     MC "Ah, gotcha. That's probably one of the reasons why Alice isn't satisfied with the quality of the desserts at the cafeteria."
     PRG "Probably, yeah."
     PRG "Anyway, that looks good. Gently pour it into the butter in the dutch oven. You don't want to mix it, just let it settle on the butter."
@@ -15196,7 +15207,7 @@ label WG057_c1_1:
     "The pride I felt in my newly acquired skill quickly faded away when I looked around the kitchen at the absolute mess I somehow managed to make."
     "There was peach juice dripping off the counter, all along the drawers on to the floor, batter on the walls, and a sink full of bowls."
     MC "Apparently I'm much better at creating disasters than making dessert."
-    PRG "It's okay, Hotsure-san. Clean–up is part of cooking too. I can help you if you'd like."
+    PRG "It's okay, Hotsure-san. Clean-up is part of cooking too. I can help you if you'd like."
     "I would have had a guilty conscience if I dragged Aida into my mess. Besides, I should probably get used to it if I plan on doing this again. I highly doubt Alice would be up for doing the dishes, even if I did the cooking."
     MC "Nah, I got this. Don't worry about it. Just help show me where to put everything back."
 
@@ -15311,14 +15322,28 @@ label WG057_c1_after:
     MC "Thanks Kodama-san, it looks great! You're one heck of a teacher. I never would have thought I could make anything like this. Do you think you'd be up for teaching me some more stuff in the future?"
     show PRG happy
     PRG "You're welcome, Hotsure-san. I'd like that. I think it's so sweet of you to want to do this for Alice. If we plan ahead more next time, I can bring Sakura too. I've never seen someone who can work a grill better than her."
-    MCT "Why do I feel like everyone knows this person but me?"
-    MC "Uh, I'll be honest, you mentioned her before, and Alice did once too now that I think about it, but I don't know who Sakura is."
-    show PRG neutral
-    PRG "Oh, um, she's my cooking partner. We compete as a team in school competitions as part of the cooking club. She's got long brownish-reddish hair, brown eyes, and... um, well... she has a weight gain factor, like Alice."
-    PRG "B-But also kind of not like Alice... if that makes sense? They don't really look that much alike."
-    MCT "Hmmm, I'm guessing she's trying to say she doesn't have a belly as big as Alice's."
-    "Processing this a bit more, my mind began to swirl at a rather tantalizing prospect: a fat girl teaching me how to cook food for my fat girlfriend."
-    MCT "Man, I am {i}so{/i} down for that!"
+    if getFlag("Meet_Sakura") and isEventCleared("PRG013"):
+        MC "Oh, your cooking partner I met when you were at cooking club practice. How's that been working out?"
+        PRG "Great! I couldn't have asked for a better partner. She's not just skilled, but a good friend as well."
+        PRG "I'm sure you'll like her. She'd be happy to help teach you what she knows."
+        "Alice had mentioned that Sakura had a weight gain factor as well. As curious as I was at the possibility of learning to cook more. My mind immediately began to wonder how big she was by now compared to when I met her near the start of the year."
+        "Not that I was looking for other opportunities mind you, but the thought of a fat girl teaching me how to cook food for my fat girlfriend, who were both growing fatter as a consequence, was {i}hot as hell{/i}."
+        MCT "Man, I am {i}so{/i} down for that!" 
+    elif getFlag("Meet_Sakura"):
+        MC "Sure, sounds great. I met her once before, but only briefly. I just know she's a member of the cooking club."
+        PRG "I'm sure you'll like her. She's my cooking partner in the club. I couldn't ask for a better partner and friend. She'd be happy to help teach you what she knows."
+        "Alice had mentioned that Sakura had a weight gain factor as well. As curious as I was at the possibility of learning to cook more. My mind immediately began to wonder how big she was by now compared to when I met her near the start of the year."
+        "Not that I was looking for other opportunities mind you, but the thought of a fat girl teaching me how to cook food for my fat girlfriend, who were both growing fatter as a consequence, was {i}hot as hell{/i}."
+        MCT "Man, I am {i}so{/i} down for that!"
+    else:
+        MCT "Why do I feel like everyone knows this person but me?"
+        MC "Uh, I'll be honest, you mentioned her before, and Alice did once too now that I think about it, but I don't know who Sakura is."
+        show PRG neutral
+        PRG "Oh, um, she's my cooking partner. We compete as a team in school competitions as part of the cooking club. She's got long brownish-reddish hair, brown eyes, and... um, well... she has a weight gain factor, like Alice."
+        PRG "B-But also kind of not like Alice... if that makes sense? They don't really look that much alike."
+        MCT "Hmmm, I'm guessing she's trying to say she doesn't have a belly as big as Alice's."
+        "Processing this a bit more, my mind began to swirl at a rather tantalizing prospect: a fat girl teaching me how to cook food for my fat girlfriend."
+        MCT "Man, I am {i}so{/i} down for that!"
     "Filing that away for future reference, I moved back to the task at hand."
     MC "Alright, let me check and see if Alice is back at her dorm."
     Cell "<Alice, are you back at your room yet?>"
@@ -15595,7 +15620,7 @@ label WG058_c1_1:
     MC "My Fairest Lady."
     show WG haughty
     WG "Oh? What's it about?"
-    MC "I'm surprised you aren't aware of it— it's one of those all–time classics. A wealthy linguist meets a lady whose manner of speaking is so uncultured and vulgar that it is almost unintelligible."
+    MC "I'm surprised you aren't aware of it— it's one of those all-time classics. A wealthy linguist meets a lady whose manner of speaking is so uncultured and vulgar that it is almost unintelligible."
     MC "He wagers his friend that he will be able to teach her proper speech and mannerisms such that she will be able to pass as a proper lady."
     show WG neutral-2
     WG "{size=-6}...I think I can relate to this character's motivation.{/size}"
@@ -15905,7 +15930,10 @@ label WG059:
     MCCell "<Absolutely. What time and where?>"
     WGCell "<Just come by my room after class. We'll walk over together.>"
     MCCell "<Sounds good, I'll see you then.>"
-    "So I was finally going to meet this Sakura girl that everyone seemed to know except me."
+    if getFlag("Meet_Sakura"):
+        "So I was finally going to meet Sakura again. I couldn't help but wonder how much she had grown since our initial meeting earlier in the year."
+    else:
+        "So I was finally going to meet this Sakura girl that everyone seemed to know except me."
     "Several thoughts raced in my mind, but I quickly tried to ground myself before any of those less savory impulses could take hold."
     "I had seen a few other girls with a weight gain factor on campus here and there. Obviously, none of them had grabbed my attention quite like Alice, but..."
     "I'd be lying if I said they hadn't caught my eye a bit longer than they should have since I started dating Alice. I mean, I think I'm a pretty good boyfriend— I'm just not made of stone."
@@ -15980,30 +16008,56 @@ label WG059:
     show PRG happy at Position(xcenter=0.75, yalign=1.0) with move
     show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     WG "I hope you don't mind that I brought him along. I figured a passive observer wouldn't be too difficult to accommodate."
-    UNKNOWN "I'm cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
+    if getFlag("Meet_Sakura"):
+        Sakura "I'm cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
+    else:
+        UNKNOWN "I'm cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
     hide PRG with dissolve
     "Peering over one of the ranges in the center of the kitchen, I could make out the top part of what appeared to be a rather large posterior, with a surprising lack of coverage from her skirt."
     "I tried not to let my eyes bug out of my head too much, but I was pretty caught off guard by both the size and visible surface area of such a meaty set of cheeks out of nowhere."
-    "Having retrieved from the cabinet what looked to be a large, deep steel pan, the woman in question stood up straight."
+    if getFlag("Meet_Sakura"):
+        "Having retrieved from the cabinet what looked to be a large, deep steel pan, Sakura then stood up straight."
+    else:
+        "Having retrieved from the cabinet what looked to be a large, deep steel pan, the woman in question stood up straight."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    "So this was the elusive Sakura. Elusive is the right word, because I would have remembered seeing her if I had before."
-    "Long, dark auburn hair, big, soft brown eyes, a warm smile, with feminine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
-    "Simply put, Sakura was a knockout."
+    if getFlag("Meet_Sakura"):
+        "So this was the \"new\" Sakura. New and improved I had to say; the effects of her factor were readily noticeable compared to when I last saw her."
+        "This girl had some serious chunk on her, and in the right places. I considered myself more of a belly man, but even I had to admit, Sakura was a knockout."
+    else:
+        "So this was the elusive Sakura. Elusive is the right word, because I would have remembered seeing her if I had before."
+        "Long, dark auburn hair, big, soft brown eyes, a warm smile, with feminine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
+        "Simply put, Sakura was a knockout."
     "I mean she wasn't going to turn my head away from Alice any time soon, but I'd be a bad liar if I said she wasn't enough to make my eyes wander."
     Sakura "Thanks again for coming, Nikumaru-san."
     WG "Please, just call me Alice."
     show Sakura happy
     Sakura "Oh right. Sorry, I forgot about that."
     show Sakura neutral
-    Sakura "So who's this?"
+    if getFlag("Meet_Sakura"):
+        Sakura "Long time no see, stranger. It was Hotsure-san, right?"
+        MC "You got it. Nice to see you again Myoga-san."
+        WG "Oh, you two know each other?"
+        MC "Sort of. We met very briefly before."
+        Sakura "Yeah, it's been a while. Feels like I've known you for ages, though! Kodama-chan and Alice have had nothing but good things to say!"
+        MC "I could say the same for you as well, Myoga-san."
+        show Sakura happy
+        Sakura "Aww, well I'm glad to hear that."
+        Sakura "And whoa— that hair! Your factor, I'm guessing?" 
+        MCT "Is something wrong with it? Did I forget to brush it this morning?"
+        Sakura "He's pretty cute, Alice. Looks like you got quite the catch for yourself."
+        "She thinks I'm cute too? I could feel my cheeks getting a bit warm. I was starting to wonder if finally meeting Sakura was a good idea after all."
+    else:
+        Sakura "So who's this?"
+        WG "This is my boyfriend, Keisuke Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
+        MC "Nice to meet you Myoga-san. It's nice to finally put a face to the name."
+        Sakura "Likewise. Kodama-chan and Alice have had nothing but good things to say about you."
+        show Sakura happy
+        Sakura "And whoa— that hair! Your factor, I'm guessing?" 
+        MCT "Is something wrong with it? Did I forget to brush it this morning?"
+        Sakura "He's pretty cute, Alice. Looks like you got quite the catch for yourself."
+        "She thinks I'm cute too? I could feel my cheeks getting a bit warm. I was starting to wonder if finally meeting Sakura was a good idea after all."
     if not getFlag("Meet_Sakura"):
         $setFlag("Meet_Sakura")
-    WG "This is my boyfriend, Keisuke Hotsure. Keisuke, this is Aida's cooking partner, Sakura Myoga."
-    MC "Nice to meet you Myoga-san. It's nice to finally put a face to the name."
-    Sakura "Likewise. Kodama-chan and Alice have had nothing but good things to say about you."
-    show Sakura happy
-    Sakura "He's pretty cute, Alice. Looks like you got quite the catch for yourself."
-    "She thinks I'm cute too? I could feel my cheeks getting a bit warm. I was starting to wonder if finally meeting Sakura was a good idea after all."
     show WG doubt
     WG "Thanks..."
     "Alice did not appear to be amused by Sakura's observation and my involuntary blushing. True to her composed nature though, she did not allow her visceral reaction to get the better of her, and brushed it aside."
@@ -16232,14 +16286,18 @@ label WG059S:
     MCT "It's funny thinking how some things never change about a person. Alice's pride in her business sense has never appeared to falter for a moment since her factor was told to her."
     show WG neutral-2
     WG "By the way, I hope you are ok if Aida brings her cooking partner by today. She mentioned that they may have extra left over from today's session."
-    MC "I don't mind, though I don't think I've ever met her partner."
-    show WG neutral
-    WG "I forgot that you mentioned you hadn't met Sakura yet. You two will get along fine I think."
+    if getFlag("Meet_Sakura"):
+        MC "I don't mind. I've actually met Sakura once before briefly, but it's been a while."
+        WG "She's a nice girl. I'm glad Aida has another friend she can lean on, given the challenge of her particular situation."
+    else:
+        MC "I don't mind, though I don't think I've ever met her partner."
+        show WG neutral
+        WG "I forgot that you mentioned you hadn't met Sakura yet. You two will get along fine I think."
     WG "Speaking of them coming over, can you make sure the tea on the stove is nearly ready?"
     MC "Sure."
     "Stepping over to check the kettle, my thoughts began to wander. I'd finally be meeting this elusive Sakura character. Someone who got along with not just Aida, but Alice as well, certainly must be special."
     "Then my mind recalled that Alice had mentioned that Sakura had a Weight Gain factor. Suddenly I was torn between fear and anticipation."
-    "How would I handle myself? With Honoka, I know Alice looked ready to call me out a few times, but with another Weight Gain girl what would she say? Would she get jealous if she perceived I was giving her too much attention?"
+    "How would I handle myself? With Honoka, I know Alice looked ready to call me out a few times, but with another Weight Gain girl what would she say?{w} Would she get jealous if she perceived I was giving her too much attention?"
     "The feeling of hot steam against my hand brought me back to reality. Popping the lid open, I could see the amber color was deep and consistent, meaning it was done. Sliding the kettle off the burner I prepared four cups."
     play sound Knock
     WG "That would be them I believe."
@@ -16253,9 +16311,15 @@ label WG059S:
     "As Alice stepped aside to let the gravid Aida through, I finally caught sight of Sakura. At first glance I assumed Alice must've been wrong on her factor."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Her hips and ass were quite large, more than matching some of the butt expansion girls. However, looking a little closer, I could see she had much more of a pronounced belly than say, Shiori, for instance."
-    Sakura "Oh, you must be Hotsure-san himself?"
-    MC "Indeed I am, it is a pleasure to meet you, Myoga-san."
+    if getFlag("Meet_Sakura"):
+        Sakura "Oh, hey Hotsure-san! Long time no-see."
+        MC "Nice to see you again, Myoga-san!"
+    else:
+        Sakura "Oh, you must be Hotsure-san himself?"
+        MC "Indeed I am, it is a pleasure to meet you, Myoga-san."
     Sakura "I see the comments from Aida about you are true. Polite indeed."
+    if not getFlag("Meet_Sakura"):
+        $setFlag("Meet_Sakura")
     MC "Must say, I'm glad to meet your expectations."
     WG "Glad to see your manners are still in good order."
     MCT "Did you really have to say it that way?"
@@ -16679,7 +16743,7 @@ label WG060:
     "I reached into my backpack which had a cooler I had packed with a little treat for Alice."
     MC "Before I came over, I stopped by to see Aida before cooking club practice. I asked if she had any desserts, and she gave me this."
     "I popped open the plastic food storage container I had in the cooler to reveal three generous pieces of tiramisu."
-    "It wasn't the most beautiful presentation, but I had managed to keep the custard–like whip from smearing all over the place in transit."
+    "It wasn't the most beautiful presentation, but I had managed to keep the custard-like whip from smearing all over the place in transit."
     show WG aroused
     WG "Keisuke, it smells heavenly!"
     show WG happy
@@ -17540,7 +17604,7 @@ label WG061:
     WG "There. That is six. That didn't seem too difficult after all."
     MC "See? Now you got the hang of it. Now, all it needs is pepper and shredded parmesan. Those are really just to taste, so add as much or as little as you want. You're the chef now."
     show WG haughty
-    WG "Well, it simply won't do to have our dish be under–seasoned now would it?"
+    WG "Well, it simply won't do to have our dish be under-seasoned now would it?"
     "I couldn't help but slightly raise my eyebrow at just how much Alice added of both. By the time she was done, it smelled quite pungent of pepper and the liquid itself could barely hold all of the finely shredded cheese."
     "It was quite a bit more than how Aida prepared it, but she did say you could add more than she did. Despite her lack of cooking skills, I didn't doubt Alice felt confident about how much seasoning her food should have."
     show WG neutral
@@ -17956,7 +18020,7 @@ label WG061S_C1_1:
     "Without much thought, I gently brought my pulsing manhood towards Alice's cavernous navel."
     show WG aroused
     "The very tip of my shaft made only the lightest contact, but it felt as if her abdomen was vibrating from the sudden stimulation."
-    WG "–{i}Geerrhh!?{/i}"
+    WG "-{i}Geerrhh!?{/i}"
     "Either from reflex or desire, Alice thrust herself forward. Slamming me backwards into the glass with such velocity I'm shocked I didn't cannonball through."
     "WHAM!"
     MC "{i}Guhh!{/i}"
@@ -20430,7 +20494,7 @@ label WG068:
 label WG069:
     $setProgress("WG", "WG070")
     $setTime(TimeEnum.NIGHTLIGHTS)
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     scene Dorm Interior with fade
     play music Sunset
     MCT "I hope this tie is done correctly. Haven't tried to do this by myself since the 4th grade."
@@ -20525,7 +20589,7 @@ label WG069:
     MC "You look magnificent!"
     show WG happy
     WG "Thank you Dear. Was worried that it may be a bit much."
-    MC "If this event is as big–time as you made it sound to be, I think you'll fit in fine."
+    MC "If this event is as big-time as you made it sound to be, I think you'll fit in fine."
     show WG happy at altMove(0.5, 0.25)
     show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     Chibuki "Go easy on the dress tonight. Not sure how well some of those stitches are gonna hold up under further pressure."
@@ -20598,7 +20662,9 @@ label WG069:
     Misaki "The delight is all mine, Miss Nikumaru, I assure you."
     Misaki "And who is this strapping young man with you this evening?"
     WG "This is my boyfriend, Keisuke Hotsure."
-    Misaki "Nice to meet you Hotsure-san, my name is Misaki Usada. I am an associate of Miss Nikumaru's parents. We've connected over the years through various charity and philanthropy events across Japan."
+    if not getFlag("Meet_Misaki"):
+        $setFlag("Meet_Misaki")
+    Misaki "Nice to meet you Hotsure-san, my name is Misaki Usuda. I am an associate of Miss Nikumaru's parents. We've connected over the years through various charity and philanthropy events across Japan."
     MC "Pleasure to meet you Usuda-san."
     show WG neutral-2
     WG "Ms. Usuda has been a great point of contact during my stay on the island since I first arrived." 
@@ -20628,7 +20694,7 @@ label WG069:
 label WG070:
     $setProgress("WG", "WG071")
     $setTime(TimeEnum.NIGHTLIGHTS)
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     scene Ballroom
     show WG neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1)
     with fade
@@ -20853,7 +20919,7 @@ label WG070:
 label WG071:
     $setProgress("WG", "WG072")
     $setTime(TimeEnum.NIGHTLIGHTS)
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     play music TwilightAmbient
     scene Ballroom
     show WG neutral-2
@@ -21277,7 +21343,7 @@ label WG071:
 
 label WG072:
     $setProgress("WG", "WG073")
-    $setWGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     $setWGOutfit(OutfitEnum.NUDE)
     play music Peaceful
     scene Hotel Room with fade
@@ -24546,7 +24612,7 @@ label WG079:
             show WG haughty
             WG "Even if I might regret it, would you be so kind as to serve me the last one?"
             MC "Certainly."
-            "The final cupcake, one of the cheesecake and sweet cream icing cupcakes. The richest and most decadent of the flavors to choose from. This one in particular had an over–generous application of frosting."
+            "The final cupcake, one of the cheesecake and sweet cream icing cupcakes. The richest and most decadent of the flavors to choose from. This one in particular had an over-generous application of frosting."
             show WG neutral
             "Carefully constructing a cupcake \"sandwich\" as it were, I then drifted it towards Alice's waiting maw."
             show WG surprised-2
@@ -25127,14 +25193,14 @@ label WG080_Afterchoice:
             show WG stern
             $setAffection("WG", -1)    
             MC "Maybe he doesn't want you to take over his business. I mean, most dads would be happy to have done well enough in life that their kids don't have to work."
-            WG "Nothing is more contemptible to Father than the \"idle rich\". Frittering away their predecessors' hard earned capital while they frivolously occupy themselves with tending goldfish and over–trimming their tiny tortured trees."
+            WG "Nothing is more contemptible to Father than the \"idle rich\". Frittering away their predecessors' hard earned capital while they frivolously occupy themselves with tending goldfish and over-trimming their tiny tortured trees."
             WG "I can't imagine how poorly it would reflect on Father's reputation if it was known that his daughter was just some spoiled, fat layabout. Just because I may look the part, doesn't mean I intend to act it out."
             jump WG080_Afterchoice2
 
         "Maybe he doesn't want you to take it as a given.":
             show WG pondering
             MC "Maybe he doesn't want you to take it as a given. You know, to keep you motivated and hungry for it?"
-            MCT "Hmm, maybe \"hungry\" wasn't the best word there…"
+            MCT "Hmm, maybe \"hungry\" wasn't the best word there..."
             show WG happy
             $setAffection("WG", 1) 
             WG "Yes! I think you're right. That's very much something Father would do. A successful businessman like him has an endless supply of willing apprentices." 
@@ -25728,9 +25794,1121 @@ label WG081:
     jump daymenu
 
 label WG082:
+    $setProgress("WG", "WG084")
+    $setTime(TimeEnum.EVE)
+    play music WGAlt
+    scene Dorm WG
+    show WG neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    WG "Okay, so, tell me what it is you want to do after you graduate?"
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Tomoko "Well... I think I want to be a JSL interpreter."
+    show WG neutral-2
+    WG "Oh? This is the first time I'm hearing about it. That is interesting, but I would have never known that from looking through your application."
+    Tomoko "Oh... I guess I probably should have put that somewhere."
+    "Earlier I had a conversation with Tomo asking her about what colleges she was applying to, and being a worse procrastinator than I was, it sounded like she hadn't done anything."
+    "I was trying to help her get started, but quickly realized that wasn't going to go anywhere if she wasn't going to listen to any of my advice. So I figured I'd try it with someone she would listen to."
+    WG "Okay, what kinds of programs are out there for you to apply for?"
+    Tomoko "Well, there kinda isn't any. It's not like there's a degree specifically for it. I was just going to apply to places that offered more advanced JSL courses since not every place has them. I'm lucky that they offered some here."
+    Tomoko "From what I understand even that's not needed, you just have to know enough to pass the accreditation exam, but it's like {i}super{/i} hard from what I heard. I don't know enough to pass it."
+    MC "I thought you said you were fluent? You don't seem to have an issue speaking with your roommate, or on her behalf, and oh boy can that girl talk."
+    show WG neutral
+    WG "Being conversant with a friend and being expected to perfectly interpret complex topics from a stranger in a public setting requires a different level of mastery."
+    Tomoko "See, she gets it."
+    MC "Hmm, I guess I hadn't thought about that."
+    WG "My father's company often employed sign language interpreters for large public events and public addresses, both in America and in Japan to accommodate the hearing impaired."
+    show Tomoko happy
+    Tomoko "Yeah, that stuff. I think I'd be good at it."
+    show Tomoko neutral
+    WG "That's fine if that's where your interests lie, but those types of gigs are infrequent at best."
+    WG "The better opportunities for steady work are going to come from hospitals and law firms that need to be able to communicate with people who otherwise can't hear or speak."
+    Tomoko "Oh... I dunno. That stuff sounds like it would be really bad if I screwed up." 
+    show WG haughty
+    WG "That's why it's important for them to have someone qualified." 
+    Tomoko "But I don't even know how to explain that stuff in Japanese, let alone JSL."
+    show WG neutral
+    WG "Well, sounds like you can add some courses on public health, social work, and law to your degree plan. I recommend you enroll in a BA program in linguistics."
+    show Tomoko happy
+    Tomoko "Huh... I hadn't thought about that before. I suppose that would be useful for an interpreter to understand."
+    MC "See? I knew we came to the right place."
+    show WG neutral-2
+    WG "Alright, now that the pieces are starting to fall into place, let's work on your application packet."
+    Tomoko "Sounds good."
+    show WG neutral
+    show Tomoko neutral
+    WG "Now, an application is like a resume. It's there to spell out the basics to see if you meet the requirements, but the specifics of why you want the job and why your skills and experience are relevant is fleshed out in the cover letter."
+    Tomoko "Okay. What's that? How do I make one?"
+    "Even if this was the same advice I would've given her, something about hearing it from Alice got through to her. Though to be fair, Alice is the expert on this kind of stuff."
+    WG "Typically you will want to introduce yourself, explain how you heard about the program, why you are interested in it, and why you will be successful." 
+    show WG haughty
+    WG "These colleges receive thousands and thousands of applications, if yours doesn't stand out in some way it will go straight into the bin, probably before any human eyes get a look at it."
+    Tomoko "Okay."
+    "Tomo took a couple of minutes to type out something on her laptop before turning it to Alice."
+    show WG surprised-2
+    Tomoko "How's that?"
+    show WG neutral
+    WG "Hmm, while being concise is a virtue, a cover letter is usually at least three fourths of a page you only have a handful of lines, Tomo. {w}A couple of things: you're going to want a letterhead and specifically mention the university."
+    show Tomoko annoyed
+    Tomoko "So I have to make a new one for each college?"
+    show WG haughty
+    WG "If you want it to stand out you will. You can have a skeleton that forms the basis of all of them, just be sure to name the right one you plan to send it to."
+    show Tomoko sad
+    Tomoko "This sounds like a lot of work."
+    show Tomoko distracted
+    WG "If the application sounds too daunting, then why are you applying for the program? Work and responsibilities don't get any easier as you get older, you just learn to be better at managing them."
+    show Tomoko neutral
+    show WG neutral
+    Tomoko "We're like the same age, Alice."
+    WG "I was just quoting my father. It was something he was fond of saying growing up if I ever complained about having too much schoolwork."
+    MC "Sage wisdom coming from probably the busiest guy in Japan."
+    show Tomoko distracted
+    Tomoko "I guess."
+    show Tomoko neutral
+    WG "Besides, you didn't even get to the part where you explain {i}why{/i} you want to get into that field."
+    Tomoko "Well, I want to be able to help people, like my roommate Yuki. When she started having trouble talking with her lips, no one could understand her. This girl loved to talk, sure maybe too much at times, but that was kind of her thing."
+    show WG neutral-2
+    show Tomoko sad
+    Tomoko "After a while, all she ever got was confused stares from her friends every time she spoke. Eventually she gave up trying altogether. It was like the spark in her eye had faded. She wasn't the same."
+    Tomoko "I mean, how could she be? It was like she was isolated from her friends, even though they were right next to her." 
+    show Tomoko happy
+    Tomoko "But when I would sign to her, I could see that spark return. It was like I threw her a lifeline when she could finally talk to another person again."
+    show WG surprised-2
+    show Tomoko surprised
+    WG "Oh my, that's a wonderfully inspiring story. You should definitely include that in your cover letter." 
+    show WG happy
+    extend " Admission offices eat that kind of stuff up."
+    show Tomoko neutral
+    Tomoko "Really? Seems kind of personal though..."
+    show WG neutral
+    MC "People relate to personal stories, Tomo. It's the best way to make your applicant feel unique and stand out." 
+    WG "Not only that, it gives them a glimpse into the type of person you are and what drives you, rather than just going through a list of positive qualities you want someone else to think you have. Besides, you don't have to use her actual name."
+    Tomoko "I guess that would let them know where I'm coming from."
+    show WG neutral-2
+    WG "Alright, seems like you have a good basis for the cover letter, and any essays they might ask you to write, if that comes up. Let's look through your application files."
+    show WG pondering
+    WG "Let's see here... {w}Hmmm."
+    show Tomoko annoyed
+    Tomoko "Oh great, what does \"Hmmm\" mean?"
+    MC "I tried to tell you."
+    show Tomoko neutral
+    Tomoko "Yeah, yeah. {w}What's wrong with it, Alice?"
+    show WG surprised-2
+    WG "Well... there isn't much of anything here. You don't have any extracurriculars, no work experience; it's just your course work, which they are going to know from your transcripts anyway."
+    Tomoko "I didn't have anything to put."
+    show WG neutral-2
+    WG "Oh come on, that's not true. You just said you talk with your roommate through signing. I assume from what you had mentioned you function as her {i}de facto{/i} interpreter." 
+    show WG haughty
+    WG "You can put all of those hours down as volunteer service hours with a special needs population."
+    show Tomoko surprised
+    Tomoko "...{w}I can?"
+    show WG neutral-2
+    show Tomoko neutral
+    MC "Oh, hadn't thought of that. That's a {i}really{/i} good idea. Probably hundreds of hours since you live with her. That would stand out compared to other applicants with a lot more extracurriculars."
+    Tomoko "But it's not really like a professional thing, she's my friend."
+    MC "It might as well be to the person reading the application. I mean, it is like volunteering. You didn't have to do that."
+    show WG happy
+    WG "Exactly. Besides, I'm sure your roommate would be happy to vouch for you."
+    Tomoko "Yeah, she would." 
+    WG "Excellent, that will be a strong addition to the application."
+    show WG pondering
+    WG "Okay, let's see here... Are there any professional societies you can join?"
+    Tomoko "There are, but the membership is kind of expensive."
+    show WG neutral
+    WG "I would recommend you do so. It shows your commitment and willingness to contribute to that field of study. Lots of times these professional societies provide opportunities for professional development."
+    WG "Think of it as an investment in yourself. I'm willing to help you cover the funds if it's going to stretch you too thin."
+    Tomoko "That's okay Alice. I can cover it, I just hadn't ever spent that much on something like this before. I guess I really should."
+    show WG doubt
+    MC "She wasn't talking about {i}giving{/i} you money Tomo, she was going to put you to work."
+    show Tomoko surprised
+    Tomoko "{size=-6}{i}...Eep!{/i}{/size}"
+    WG "Well, how else is she supposed to gain work experience between now and then? Besides, I'd be willing to write a nice letter of recommendation."
+    show WG haughty
+    MC "It's not a bad gig, if you're interested Tomo."
+    Tomoko "Uhh... umm... well..."
+    show WG sly
+    WG "Thanks, but no thanks, I take it?"
+    show Tomoko neutral
+    show WG neutral
+    Tomoko "Uh, yeah. That. {w}Don't get me wrong, Alice you've helped me out a lot, and I'm really grateful, but all of this has kind of made me realize I need to start doing these kinds of things for myself."
+    MCT "Did I just hear that? From {i}Tomo{/i}?"
+    show WG neutral-2
+    WG "I suppose you're right. We've gone over quite a bit. I guess at this point it would be best to give you the space needed to spread your wings. I'm happy to take a look at it a second time if you'd like to."
+    Tomoko "Thanks Alice, but I don't want to have to bother you about this again. I know you're really busy, I'll just ask Kei instead."
+    MC "Oh yeah, cause I got nothing going on."
+    show Tomoko happy
+    show WG happy-2
+    Tomoko "So what did you put in your application for extra-curriculars?"
+    MC "That's a very strange way of saying \"Goodbye and I'm leaving.\"."
+    Tomoko "I'll see you two later. Thanks again, Alice."
+    show WG neutral
+    WG "Goodnight, Tomo."
+    MC "Later."
+    hide Tomoko with dissolve
+    play music Sunset
+    MC "Thanks for walking her through that stuff. I tried to tell her what she should do, but she never listens to me."
+    show WG surprised-2 at altMove(0.5, 0.5)
+    WG "Why's that? I can't imagine anyone more willing to help put someone on the right path than her brother. Maybe your parents. Besides, you seem to know a decent amount about these things, especially with what I've taught you."
+    show WG neutral
+    MC "I don't know. You'd think. I guess it's one of those sibling things— something like you can't get it out of your head that the person you're used to arguing with is actually right about something."
+    WG "\"Familiarity breeds contempt?\" "
+    MC "Something like that anyway."
+    WG "It's fairly common in business. Employees at the ground level can often tell you what's working well and what isn't in a business, but are usually ignored." 
+    show WG sly
+    WG "Then they hire some outside consultant that tells them the exact same thing and upper management acts like it's golden nuggets of wisdom." 
+    show WG haughty
+    extend " Father often cited the phenomenon as one of the hallmarks of ineffective management."
+    show WG neutral-2
+    MC "Your dad is surprisingly down to earth for being such a bigshot. Why do you suppose people do that?"
+    WG "Because to accept the advice from a familiar source requires you to admit fault with your own reasoning, while hearing it from a stranger allows for an appeal to authority that doesn't come with that baggage."
+    MC "Hmm. Now it's starting to make sense..."
+    pause 1
+    show WG sly
+    WG "And {i}why{/i} are you looking at me like that?"
+    show WG haughty
+    MC "Oh, nothing. Just thinking of another example, that's all."
+    show WG sly
+    WG "I know {i}exactly{/i} what you're thinking, and I don't want to hear one word. I listen to you {i}all{/i} the time."
+    MC "Ehhhh... {w}Eh... {w}Sure."
+    show WG happy
+    WG "Oh, please! When was the last time I shot one of your ideas down?"
+    MC "You didn't like the shirt I picked out and made me change that time we had brunch with your mom."
+    show WG stern
+    WG "Clearly color coordination is out of your purview, I had to assume direct control."
+    show WG sly
+    MC "Haha! You certainly did. {w}I suppose your mom would have said something and it would have been embarrassing if you hadn't."
+    show WG haughty
+    WG "Oh, so you see the wisdom in it now? I knew you'd see it my way, eventually."
+    MC "I never doubt you when it comes to matters of taste. I just think it's fun to tease you because of your stubborn streak. I will say though you listen to me more than anyone..." 
+    show WG sly
+    extend " eventually that is."
+    "Alice just closed her eyes and shook her head."
+    show WG happy-2
+    WG "Sometimes I think you listen to me a little {i}too{/i} closely."
+    MC "Well, you are quite persuasive."
+    show WG neutral
+    WG "Speaking of that, let's take a look at your application package. Did you implement the suggestions I have?"
+    MC "Yup, it's all in there. Could use a once over for typos though if you don't mind."
+    "I unfolded my laptop and pulled up the sheets."
+    show WG pondering
+    WG "Looks like you've used the proper format, and it looks consistent, so that's good."
+    show WG sly
+    WG "Still no extra-curriculars listed..."
+    MC "A little late to change that."
+    show WG haughty
+    WG "But your work experience more than makes up for it I believe."
+    WG "My, my. \"Oversaw Global Sales and Logistics\"... You managed to squeeze all of that out of \"Delivery Boy\"?"
+    MC "Yeeeah, it's a bit of a stretch, for sure."
+    WG "Nonsense, it's perfect. {w}It's a great way of characterizing the skills and responsibilities of your duties to a prospective employer, or in this case, an admissions officer. I will certainly vouch for the veracity of it if they require a reference."
+    show WG happy
+    MC "What should I list your title as? \"Best Girlfriend Ever\"?"
+    WG "As much as I enjoy that title, it's probably best to leave that part out. \"Owner and CEO\" will do just fine."
+    MC "Okay, but I still like my job description better."
+    show WG neutral
+    WG "Have you decided where you wanted to apply?"
+    MC "Well there's a handful. I think my grades are good enough to get in where I wanted to most of them, but I had a few conservative picks too just in case. I'm hoping to get into the program they have at the university in Tokyo."
+    WG "Why's that?"
+    MC "Eh, you know. Close to family still, not too far from Yokohama..."
+    WG "I see. But is that your top pick?"
+    MC "Well, really my top pick is this private technical institute in Osaka. They have the best program in the country, but..."
+    show WG haughty
+    WG "But?..."
+    MC "I don't realistically think I'll get in if I apply. Besides, it's a little further away..."
+    show WG neutral
+    WG "I could have Father write you a letter of recommendation. His name carries weight. Assuming your application is in order, that should be enough to seal the deal."
+    MC "You think he'd do that for me? I mean, I only met the guy once."
+    show WG neutral-2
+    WG "Well, I would be the one to write it, he would just sign it with his seal and official letterhead, assuming he approves the contents after reviewing it."
+    MC "Is... Is that okay?"
+    show WG haughty
+    WG "It's common for executives to delegate those kinds of small details. Most don't even bother to look at such documents, but the ones that care about their reputation and what they are signing their name to will."
+    MC "It certainly couldn't hurt."
+    show WG neutral
+    play music Memories
+    MC "That reminds me, I don't think I ever got to ask... I mean I assumed, but... what are your plans after we're done here at Seicho?"
+    show WG neutral-2
+    WG "I've been accepted to Yalde, in their School of Business management. It's my Mother's alma mater. With how much she's contributed to their endowment over the years, there's no way I wouldn't have gotten in."
+    MC "..."
+    show WG happy
+    WG "But the admission's officer I spoke to said I was an outstanding candidate for the program all the same."
+    MC "Naturally..."
+    MC "So, um... that's in America, isn't it?" 
+    show WG neutral
+    WG "Relax Dear. I'm not hoping on a jet and moving halfway across the world any time soon. I'll be attending online. Let's face it, there's no way a campus full of buildings built in the 18th century is going to be accommodating to my \"unique\" proportions."
+    show WG haughty 
+    WG "Besides, the real education will be my work-study. I'll be doing quarterly rotations with the operational managers across my father's various business holdings, so I can get first hand experience at the floor level across the whole enterprise."
+    MC "Preparing to fill his shoes?"
+    show WG neutral-2
+    WG "That's still a ways off. More like learning to crawl before I attempt to climb a mountain."
+    show WG neutral
+    WG "Running a small business is quite small in scope compared to the skills needed to keep a multinational enterprise like the Nikumaru Holding Company running."
+    MC "Seems like you have enough business experience to me already, do you need the degree?"
+    WG "Probably not. But discussing this with father he and I agreed that even if the degree is nothing but a piece of paper backed by the opinion of armchair businessmen that couldn't hack it in the real corporate world,"
+    show WG haughty
+    WG "an executive with an MBA from a prestigious American university business school would inspire investor confidence, which will be sorely needed given the role image plays in investor confidence."
+    show WG stern
+    stop music fadeout 2.0
+    WG "Given that my image is more likely to inspire shareholders to hide their lunch, rather than hand over their hard earned yen, I need to do everything I can to look good on paper."
+    play music TwilightAmbient
+    show WG happy
+    MC "Aw, you look good in everything, Babe."
+    WG "Thank you, Dear."
+    show WG doubt
+    MC "Especially in nothing."
+    show WG sly
+    WG "I guess we know where your head is at."
+    MC "What were we talking about again?"
+    WG "..."
+    show WG happy-2
+    MC "Oh! College applications. How could I forget?"
+    WG "Oh, I can certainly imagine how..."
+    MC "Hehe."
+    show WG neutral
+    MC "But, yeah... So how's all that going to work? Sounds like you'll be really busy with school and work... And if I do end up going to school in Osaka..."
+    show WG happy-2
+    WG "You're not getting away that easily if that's what you're thinking."
+    show WG happy
+    WG "I hope you plan to be diligent with your studies so you have time on the weekends to catch a bullet train back to Yokohama."
+    WG "I could always character a plane for you too, if need be."
+    MC "That... That could work."
+    WG "Keisuke, Dear. I hope if you've learned anything about me by now, more so than that my time is valuable, is that I will always {i}make{/i} time for those who I value the most."
+    show WG aroused
+    "I reached out my hand for Alice's, placing my other one on top of hers. Even her hand was as plush as a downy pillow, my fingers running along the dimples that had long since hidden her knuckles, as I gave it a firm, yet gentle squeeze."
+    MC "Thanks. I needed that reminder. All this application stuff got me thinking. Thinking about how all of this is going to turn out for us in the long term."
+    show WG neutral-2
+    MC "Heh, it's funny, you know? When I first got here I was worried about the future, how everything was going to change, how I wished I could just go back home, leave the island and everything that lay ahead of me behind."
+    MC "And here it is almost a year later... and now I'm afraid to go back."
+    WG "They say that fear paralyzes a man and makes a coward to run, but compels a hero to astounding acts of courage."
+    stop music fadeout 1.0
+    MC "Hmm. Wise words. Is that another one of your father's sayings?"
+    show WG happy
+    play music Love
+    WG "No, it's what my mother taught me about finding a good man."
+    show WG aroused
+    "Alice took my hand, placing it on top of her belly, guiding me to rub it gently"
+    WG "I think any other man would have run away quite a long time ago when faced with all of this, but you run headlong into it." 
+    show WG neutral-2
+    WG "I know it's not just because you're attracted to my body. You help me with my shoes, you pull out my chairs, you go out of your way to make sure I'm comfortable. You don't even complain one bit, you're even delighted to do it for me." 
+    WG "It lets me know you're in it for the long haul."
+    show WG happy
+    WG "And because of that... I'm not afraid."
+    show WG aroused
+    MC "Aw, I love you Babe."
+    "I leaned in for a kiss, my chest gliding across her impossibly large squishy breasts as I sank into them in order to draw near, planting one on her soft pouty lips as her chubby cheeks brushed against mine."
+    "We held it there, a moment where time finally stopped{w}— if only for a little while."
+    jump daymenu
+
+label WG084:
+    scene Music Classroom with fade
+    play music MCGuitar
+    "I was hanging out in one of the music practice rooms playing my guitar."
+    if isEventCleared("WG003M"):
+        "Alice seemed to enjoy it last time she heard me play. I guess that's part of why I thought to pick it up today." 
+        MCT "Gotta make sure I don't get rusty."
+    else:
+        "I was hoping at some point to get to play it for Alice— show her I wasn't just a one-trick pony. I had picked up guitar in high school, but had kind of let it fall by the wayside and I wanted to change that."
+    "It worked out nicely since it wasn't that far from the main room that the music club uses while I waited for Alice to finish up with the club's practice meeting for the day."
+    MCT "Speaking of that, they should be wrapping up right about now."
+    play sound Knock
+    show WG neutral-2 with dissolve
+    play music HigherEdu
+    "Alice gave a gentle wrap on the door before opening it to let herself in, not even attempting to negotiate the doorframe until the door had swung all the way open."
+    show WG happy 
+    MC "There she is. Just who I was hoping to see."
+    show WG happy-2
+    WG "Oh? Were you perhaps expecting another?"
+    "I stood up from my chair and set my guitar aside. I got up close and leaned over her belly, maybe holding onto a bit more of it than I needed to in the process of trying to maintain my balance as I gave her a nice long smooch on the lips."
+    show WG aroused
+    MC "Mmwha! {w}Not a chance."
+    WG "Mmm..."
+    show WG happy
+    WG "I didn't realize I was so sorely missed. It hasn't been that long since we last saw each other in class earlier today."
+    MC "Perhaps, but still too long in my book."
+    show WG happy-2
+    WG "That's what I like to hear."
+    show WG neutral
+    MC "How was club practice?"
+    show WG doubt
+    "Must not have gone that well given that her expression soured immediately just from broaching the subject." 
+    "Alice looked over her shoulder to see if anyone else happened to be still lingering in the hall from practice before closing the door behind her."
+    show WG stern
+    WG "It was as blasé as it always is. If our last concert was any indication, our current trajectory will ensure no one will come to see the final one."
+    "I had deliberately avoided broaching the subject of the music club with Alice for quite a while, since it usually dredged up a lot of bad blood and only seemed to kill the mood." 
+    "Honestly, I wasn't really thinking about my question in my attempt to ask her about her day."
+    show WG neutral-2
+    MC "Oh, well, I still plan to attend, if that means anything. You were magnificent at the first one."
+    WG "I appreciate the compliment, Dear, but I honestly wouldn't hold it against you if you didn't bother to."
+    "Not that I believed her for a second that she wouldn't expect to see me front and center in the audience of one of her concerts, but I could tell her dramatization of the situation was at least true in part."
+    MC "That bad, huh?"
+    show WG neutral
+    WG "I'm afraid so."
+    show WG sly
+    extend " Given the current status quo at least."
+    MCT "Oh, I know that look..."
+    MC "\"Current\" status quo?"
+    show WG haughty
+    WG "Yes, I've been waiting for my moment and I've realized the time for action is now, or else it will be too late. Now is the time to pull the trigger— I'm going to attempt to usurp leadership of the music club from Okisho."
+    MCT "Oh, shit."
+    "As much as I was willing to support Alice through anything, I wasn't exactly keen on the prospect of being mere meters away from ground zero of this drama bomb when it goes off."
+    MC "Are you sure that's a good idea? I mean if you don't succeed you're going to get kicked out for sure."
+    WG "That is the likely consequence of failure, but I have resolved myself to accept that risk. No investment is risk free, and those with greatest risks carry the biggest payoffs."
+    MC "That doesn't sound very characteristic of your approach to investing."
+    show WG happy
+    WG "It's nice to know you've been paying attention when I talk about finance."
+    show WG neutral
+    WG "But this is not some reckless decision built on mere hope and a hunch. It's a managed risk. I've steadily been gaining support among the more talented musicians in the club who have similar sentiments towards Okisho's leadership."
+    if isEventCleared("WG004M"):
+        MC "What if there was a way to make it risk free?"
+        WG "All investments carry some level of risk, Dear." 
+        show WG haughty
+        extend " Besides, what are you getting at?"
+        MC "Alright, fair enough, but let's just suppose for the sake of argument you could invest in a high yield money market account instead of in oil futures to get the same return."
+        show WG pondering
+        WG "I'm listening."
+        if getVar("BEP") < 8 or checkAffection("WG", ">=", 55):
+            MC "So, I had a conversation with Mizawa-san—"
+            show WG angry
+            WG "What!? When was this? Was she flirting with you again?"
+            show WG surprised-2
+            MC "Alice, relax. It's not like that. We all go to the same school, sometimes we bump into each other."
+            show WG neutral
+            WG "Sorry, continue."
+        else:
+            MC "So, I had a conversation with Mizawa-san—"
+            show WG surprised-2
+            WG "Oh?"
+            MC "Hm?"
+            show WG pondering
+            WG "Oh nothing... quite curious is all."
+            MC "It's not like that if that's what you're thinking."
+            show WG neutral
+            WG "Good to know."
+        MC "What I was saying is that I had a conversation with her and she indicated that her schedule has been more hectic and she's open to getting some more help with the leading music club."
+        show WG surprised-2
+        WG "Really? Well this is the first time I'm hearing about this. Why didn't she say anything sooner?"
+        MC "She wanted me to talk to you first. She didn't want to broach the subject with you unless you were ready to work out some kind of deal."
+        MC "I wanted to mention it sooner, but anytime our conversations broached the subject of the Mizawa-san or the music club you'd just get pissed off, so it never seemed like a good time."
+        show WG worried
+        WG "I guess I hadn't realized how much I let her get to me."
+        show WG angry
+        extend " {i}Argh!{/i} I can't believe she's been living in my head rent free for so long!"
+        show WG surprised-2
+        MC "You see?"
+        show WG stern
+        WG "Hm, point taken." 
+        show WG neutral-2
+        extend " But you should have known that if you think you have a solution, I'll listen to you— even if I am in a bad mood."
+        MC "So you won't accidentally vaporize me with your laser glare if I ask the wrong question when you're mad?"
+        WG "No..."
+        show WG pondering
+        extend " Then again, no investment is without some level of risk..."
+        MCT "Great, now I have to add vaporization to the list along with crushing and suffocation as hazards of having a super-fat girlfriend. {w}Still totally worth it."
+    else:
+        MC "Are you sure this is your best option?"
+        WG "Yes, and I've put a lot of thought into this. I've made up my mind."
+        MC "I guess what I mean is, have you considered other options?"
+        show WG doubt
+        WG "I don't see what other options there are." 
+        MC "Have you tried talking to her about this, like one on one? You don't have to overthrow her to get what you want, you're really just hoping to get a bit more say in what goes on in the music club."
+        show WG neutral
+        WG "That's technically true, but I can't imagine her conceding any ground so long as decision making power lies with her." 
+        MC "And maybe you're right. {w}But, just throwing this out there— you might get a little further if you level with someone rather than blindsiding them in front of an entire group of people, most of whom like her."
+        show WG stern
+        WG "I don't see what good that would do. She hasn't listened to anything I've suggested before."
+        MC "Babe, I love you and I got your back no matter what, but you and I both know there are more mature ways to handle this sort of thing."
+        show WG worried
+        WG "Sigh... You're right." 
+        show WG stern
+        extend " I despise her so much I was hoping to be able to humiliate her with a public confrontation, more so than attempting to navigate the situation with nuance."
+        show WG doubt
+        WG "To be honest, I'm not particularly optimistic about either approach."
+        MC "Well, you can always try the public confrontation if private negotiation fails. If she knows you have leverage over her with the support of the other key members, she might be keen on trying to avoid that kind of incident."
+        show WG pondering
+        WG "Hmm, that is true. I'm not foregoing the former by pursuing the latter." 
+        show WG sly
+        extend " Even she might listen to reason when she realizes I'm holding the cards."
+        MC "Exactly."
+    MC "So what do you say, Ms. Negotiator? Are you up for making the deal of the century?"
+    show WG haughty
+    WG "Oh don't be so dramatic, Dear. It's not like there's billions of yen on the line."
+    show WG surprised-2
+    MC "But that's just it, if we're talking money that's easy, but we're talking Mizawa-san. She doesn't exactly inspire a sense of calm and level headedness in you." 
+    show WG neutral
+    WG "I suppose I am underestimating the finesse required on my part for this. It certainly would not bode well for my future business dealings if I let myself get unraveled just because I have to deal with someone who is rude and obnoxious."
+    if isEventCleared("WG004M"):
+        show WG pondering
+        WG "Hmm. Now that I think about it, the fact that she's even considering extending such an offer suggests she's going to be negotiating from a position of weakness. I should be able to leverage that into some major concessions on her part." 
+    else:
+        show WG pondering
+        WG "Hmm. Then again I shouldn't have to worry about that too much. She'll be negotiating from a position of weakness once she learns I have the top musicians in my back pocket." 
+        WG "I should be able to leverage that into some major concessions on her part."
+    MC "I don't know about that. This is Mizawa-san we're talking about. I wouldn't put it past her to work against her own self interest just to get a one over on you if she feels insulted."
+    show WG doubt
+    WG "You do have a point. Even if she had nothing else, she always stands to gain some sense of satisfaction from knowing she can get under my skin. I'll have to tread lightly... initially anyway." 
+    show WG neutral
+    MC "See. Now you're thinking with a clear head. Sounds like you know what you have to do."
+    show WG haughty
+    WG "Indeed. {w}Think you could arrange the meeting on my behalf? There's a handful of open slots in my planner here you could offer her."
+    show WG surprised-2
+    MC "I'm just the delivery boy, ma'am."
+    show WG haughty
+    WG "Well then you'll be pleased to know you've just been promoted to courier." 
+    show WG happy
+    extend " I'm glad you could start right away. We like that kind of go-getter attitude here at Alice's Wishes Granted LLC."
+    MC "Hehe, okay. I can get right on it, but I thought we were going to get dinner?"
+    WG "And we still will. {w}You're pretty fast when you have a deadline— a typical skill of chronic procrastinators such as yourself."
+    MC "Is that so? Well, I'll have you know at my most recent performance evaluation I was given a promotion and told by my boss that I was a real \"go-getter\"."
+    show WG happy-2
+    "Alice just shook her head and rolled her eyes in dismay at the monster of her own making."
+    WG "Oh, for crying out loud. Must I always be made to regret giving you any sort of praise?"
+    MC "It's a risky investment for sure."
+    WG "Well I expect a big payout then. Now get going. Chop-chop now."
+    "I jumped into action, eager to show Alice she made the right choice with her promotion, even if it was only in ceremony." 
+    show WG aroused
+    extend " I dashed around her to head out the door, but not before stealing a kiss on her soft chubby cheek." 
+    MC "See you soon."
+    show WG neutral-2
+    WG "You can probably catch her before she heads back to her dorm." 
+    show WG stern
+    extend " Knowing her, she's probably stopped at every vending machine along the way to stuff her face with junk."
+    scene black with fade
+    pause .5
+    scene Music Classroom with fade
+    "Setting up the meeting with Okisho had been easy. True to Alice's prediction I caught her practically hollowing out one of the snack vending machines." 
+    "She was appreciative of the assistance retrieving her treats from the bottom flap of the machine, since she didn't have to bend down and deal with her bulging gut in the way. That put her in a good mood, which made sealing the deal easy."
+    if not isEventCleared("WG004M"):
+        "Turns out she was surprisingly receptive to the idea. From what she told me, she'd been a bit overwhelmed having to juggle club duties and her own practicing while still keeping her grades up."
+    play music WG
+    "Though now that the time to meet had come, I was skeptical things would still be smooth sailing from here on out."
+    show Okisho neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Okisho "So you came."
+    show WG sly at Position(xcenter=0.3, yalign=1.0) with dissolve
+    WG "Sorry to disappoint you if you were thinking otherwise."
+    MCT "Ah yes, things are already off to a great start..."
+    Okisho "Part of me does wonder what I was thinking to have agreed to this."
+    show WG haughty
+    WG "My time is precious. Are you interested in working out a deal, or am I wasting my time subjecting myself to your humorless quips and obnoxious laugh for an hour?"
+    show WG doubt
+    Okisho "HA! {w}You calling someone else humorless— that's rich."
+    WG "I'll take being humorless over being utterly tasteless like you any day of the week."
+    "By this point I was already fed up with these two major egos that were more interested in trying to jockey for position against each other than actually getting around to working out a deal." 
+    MC "Come on. Would you two knock it off?"
+    MC "You can berate and insult each other literally any other time, but this meeting was specifically made to work something out between you two. Something that's supposed to be for the benefit of the music club."
+    "Alice & Okisho" "Fine."
+    show WG haughty
+    WG "Let's just cut to the chase then. Keisuke tells me you're in need of a break from your duties as club president. If you no longer have the time to devote to fulfilling the position I'll be happy to fill the role in your place."
+    show WG stern
+    Okisho "Even I doubt that's the story your little lackey told you. You and I both know that's not what I fucking said. I said I could use some help, not that I was just going to hand you the keys to the kingdom and ride off into the sunset."
+    Okisho "I know you've been jealous of me since the beginning when I got voted the club president and {i}you{/i} didn't." 
+    Okisho "I figured you might be the one person motivated to step up to do more, but I'm not interested if you're just going to try to knock me off the pedestal." 
+    show WG sly
+    WG "You might not have a choice about that I'm afraid."
+    Okisho "... {w}Just what are you getting at?"
+    WG "If we were to hold a vote on the club president next meeting, I'm not so sure you'd still get to retain your title."
+    show WG haughty
+    WG "You see your policy of keeping things \"light and fun\" —your words, not mine— hasn't been as popular with all the members of the club as you might have suspected."
+    show WG doubt
+    Okisho "Oh, we both know that's bullshit. You're just projecting your own deluded opinion of my approach onto the rest of the group and think that's enough to make you come out on top."
+    Okisho "Name even one of them that would rather you take the helm."
+    show WG haughty
+    WG "Just one?"
+    WG "Ami, Monterio, Botan, Kentaro, Emiko... just to name a few. {w}You know, the ones that are actually good at their instruments who would rather be doing something more worth their time."
+    "I didn't really know any of those students, but Alice had mentioned them to me briefly before here and there. I had to figure they were pretty talented with their instruments if they stood out to Alice."
+    WG "You know. The ones you need in order to pull off a performance that stands a chance of sounding good."
+    "Okisho's cheshire grin turned into a sulking frown when she realized Alice wasn't bluffing."
+    show WG neutral
+    WG "Don't you think it might turn the opinion of other club members when they see their section leaders and standout players cast their votes differently?"
+    "Okisho closed her eyes and breathed in deep through her nose, reading herself to have to bite the bullet."
+    Okisho "Look... I get it. I really do. I know you've been beating this drum since the start. That I go easy on the club members when it comes to the arrangements of the songs I make that we do and how I lead the meetings."
+    show WG doubt
+    WG "Wait, {i}you{/i} made the arrangements yourself? For {i}all{/i} the instruments?"
+    Okisho "Yeah... Where else did you think they came from?" 
+    show WG surprised-2
+    WG "...{w}I just assumed you found them online somewhere."
+    Okisho "That might have been easier, but that's not how I roll. Think you might be seeing why this takes up so much of my time?"
+    show WG doubt
+    WG "I suppose... {w}Go on."
+    Okisho "As I was saying, it's easy for people like us who have a natural talent for these things to want to push it more. Sounds like Botan and the rest feel the same way too, but that's your side of things."
+    show WG neutral
+    Okisho "You guys don't hear the stories of the other students, the ones that have come up to me after practice telling me how they're finally having fun with music again."
+    Okisho "That they don't have to practice 20 plus hours a week just to keep up like they did with their previous music club when they were in highschool."
+    Okisho "I know what that's like. I grew up in a household where we were expected to eat, sleep, and breathe music. My parents expected all of us to be professional musicians when we grew up."
+    Okisho "I never had time for anything else, it was just practice, practice, practice. I nearly lost my joy of music in the process— the spark that drives me and the thing I value the most in life." 
+    Okisho "I refuse to do anything that might steal that from anyone."
+    show WG haughty
+    WG "Well if that is your approach, I'm here to tell you you're inadvertently stealing it from others in the process." 
+    show WG neutral
+    WG "Sure, doing things the easy way feels like a refreshing relief after a difficult experience, but true satisfaction comes from personal growth, and that requires chasing something beyond one's current capabilities."
+    Okisho "You think I don't understand that? It may just be a hobby for you but I {i}live{/i} for music. But I'm also aware that's not something I can expect from everyone just because it's convenient for me."
+    show WG doubt
+    WG "For someone that \"lives\" for music, you sure go out of your way to create a lifeless atmosphere at practice."
+    show WG angry
+    Okisho "Says the girl that would squeeze the joy out of anyone once she had the chance to crush them under her thumb for not meeting her expectations."
+    MCT "Ughh... This is going nowhere."
+    show WG neutral
+    MC "Alright, we're talking in circles here." 
+    MC "I'm not exactly Ichia by any means, so I'm not familiar with all the minutiae of issues with your musical squabbles, but it seems to be there's a mismatch between the casual and formally trained musicians in the club."
+    Okisho "Ichia?"
+    MC "He's a famous musician. Look, that's not important—"
+    Okisho "I know who he is. I'm just surprised you knew who he was."
+    MC "Well I heard about him from Alice, and her mom. He's like some baroque musician right?"
+    show WG happy
+    WG "That is correct, Dear. Glad to see you were paying attention."
+    show WG doubt
+    Okisho "I guess I should have figured you'd know who he is. His music caters to the boojee crowd after all. Can't blame a dude for going after his payday."
+    show WG haughty
+    WG "Quite frankly I'm surprised {i}you've{/i} heard of him. He's not exactly the most prolific performer. That and his musical style doesn't really strike me as your particular interest."
+    Okisho "You're too quick to underestimate me. I'm his biggest fan in fact."
+    show WG doubt
+    WG "I don't see what you stand to gain by pulling my leg about this."
+    Okisho "I'll have you know I've come to see him perform hundreds of times."
+    show WG sly
+    WG "{i}Pfft{/i}. Now I know you're lying. He only burst on the scene a few years ago and only does a couple dozen performances a year."
+    Okisho "Trust me, you end up going to a lot of musical performances in your lifetime when your brother is a musical prodigy."
+    show WG doubt
+    WG "...{w}You can't be serious..."
+    Okisho "I'm totally serious. Look, no bullshit. {w}Here."
+    "Okisho pulled out her phone and after clicking a few times on the screen turned it towards us to reveal a startlingly trim and athletic looking Okisho standing next to a tall, lanky man in a graduation gown."
+    show WG surprised
+    WG "You can't be serious!"
+    MC "What? Is that him?"
+    show WG surprised-2
+    WG "It is..."
+    Okisho "Told ya! {w}Big Bro is the best musician I've ever seen. He always told me I was the talented sibling but I knew he was just bullshitting me. He taught me how to play guitar, and pretty much everything I know about music theory."
+    show WG angry
+    WG "I can't believe this..."
+    Okisho "Well, sorry to burst your bubble."
+    show WG stern
+    pause 1.5
+    show WG worried
+    pause .5
+    WG "Mizawa-san... {w}I'm sorry."
+    MCT "WHAT!?"
+    Okisho "WHAT!?"
+    Okisho "That's about the last thing I ever expected to hear come out of your mouth. {w}Wait. Sorry about what?"
+    WG "This whole time I've doubted your musical credentials and considered you undeserving of being head of the music club. It was obvious to me that you had musical talent but I kept refusing to see it."
+    pause .7
+    WG "I refused to see it because I was blinded by jealousy when you were chosen above me."
+    Okisho "Whoa, hold up. I don't even know what's going on here. All of that just because Ichia is my brother?"
+    show WG neutral-2
+    WG "Well... yes. I can't imagine a better musical pedigree than receiving the same kind of tutelage than Ichia, who just might be the most talented classical musician of our generation."
+    WG "You even said he taught you."
+    show WG surprised-2
+    Okisho "Well, yeah, but he and I are nothing alike. I mean yeah, I like to think I know a thing or two about music too, but just because we're brother and sister wouldn't automatically mean we'd both be gifted musicians."
+    Okisho "Hell, I've known plenty of talented musicians who have siblings that can't even carry a tune."
+    show WG worried
+    WG "I suppose that's true too... {w}{i}Sigh{/i}... Even if he wasn't your brother, you still deserved more of a fair chance than I ever gave you."
+    Okisho "..."
+    Okisho "I'll be honest, I don't really know what to say. I never thought for a second we'd ever be having this conversation."
+    Okisho "You never exactly struck me as the kind that would ever own up to their mistakes. But I guess I was wrong about that. {w}Gee, now I feel kinda bad about all the shit I talked about you to everyone."
+    show WG doubt
+    WG "Like what?"
+    MC "Water under the bridge, I'm sure."
+    Okisho "Yeah. Look if it means anything I'm sorry too for all the times I went out of my way to give you a hard time and insult you. If I was as professional as I pretended to be about being the music club president, I wouldn't have been doing that."
+    show WG neutral
+    play music Rain
+    "The cutthroat tension in the room had dissipated down into a sheepish silence as both girls tried to wrap their heads around what just happened while reflecting on their past actions in light of it."
+    "It wasn't like they were both suddenly ready to hug it out and let by-gones be by-gones, but hitting the factory reset and starting over was about the best thing that could have happened here."
+    MCT "Sounds like it might be best to start from the beginning."
+    MC "Mizawa-san, you said you were in need of some help with the music club. Well, Alice might just have a solution to offer you. Why don't you tell us what you're hoping to get help with?"
+    Okisho "I'm realizing I bit off more than I could chew with everything I got going on." 
+    "Given the size of Okisho's cheshire grin as well as her waistline, the irony of her words wasn't lost on me."
+    Okisho "Between being my class' president, running the music club, writing music, trying to make time to hang with friends, and having to stuff my fat face all the time cause I'm starving— my grades are slipping."
+    Okisho "I wouldn't normally care, cause I never intended to go to college until I got the notice to come here, but music school is my backup if I don't manage to make it big as a professional musician in a few years."
+    show WG sly
+    MC "Seems like you got a head start in that regard."
+    Okisho "Tell me about it. Who would have ever thought it would be possible to get this fat in less than a year? And I'm not even the fattest one here!"
+    show WG stern
+    WG "Ahem..."
+    Okisho "Hehe."
+    show WG neutral
+    Okisho "Anyway, it won't be a good look if I go to apply to a real music school and I have to turn in a terrible first year transcript."
+    Okisho "I hope it doesn't come to that, but I'm not ignorant to how fickle a thing it can be to make it in the music biz."
+    Okisho "Well, that and I don't know what kind of reaction I'm going to get from crowds when they see my fatass waddle up on stage. But, like they say, those that can't do, teach, which is my plan if I don't make it."
+    show WG neutral-2
+    WG "So... You want me to run some of the music club meetings in your stead so you'll have more time to study?"
+    Okisho "More or less. Not just studying though, I need extra time to work on my own music. I make electronic music and release it online as a form of extra income, which I mostly spend on snacks. Big girl's gotta eat!"
+    show WG doubt
+    Okisho "I don't know about you, Nikumaru-san, (though I can guess) but I've been eating more than ever. Not all of us have a trust fund to help fuel our growing gut."
+    WG "I make my own money to fund my incidental expenditures, thank you very much."
+    show WG haughty
+    WG "As for helping with the music club practice, I'd be happy to lend my talents— provided there are some changes made."
+    show WG doubt
+    Okisho "Oh great, here it comes."
+    show WG stern
+    WG "I'm a businesswoman, not a charity case. Do you honestly expect me to do your job for you for nothing in return?"
+    Okisho "Like it's nothing to you. Come on, you get to be in charge and wear the big girl panties for once, isn't that what you wanted?"
+    WG "In practice, not in ceremony. I wanted to lead the club into doing bigger and better things. If you're asking me to help lead, then I'm going to lead, not function as your de facto babysitter." 
+    show WG sly
+    WG "I'm going to have us start working on new music for the concert."
+    Okisho "{i}I{/i} told you why I run things the way I do."
+    show WG haughty
+    WG "And {i}I'm{/i} telling you how I'm going to start doing things differently."
+    show WG angry
+    Okisho "Over my dead body!"
+    "The volume level between the two was steadily rising. Whatever bridge that had been building till now was already starting to crumble."
+    show WG doubt
+    MC "Easy, easy. We're here to work out a deal, not air past grievances. {w}Look, I know you explained yourself Mizawa-san, but you gotta give Alice a little something for her time and effort. Can't you just hear her out first?"
+    Okisho "Fine, I guess. Hit me with it."
+    show WG neutral
+    WG "Talking with the other music club students, we all wanted to play something that would be challenging as well as personally satisfying. Here's a list of what we each came up with."
+    "Alice pulled out a sheet of paper with the list from a professional business binder she had on her."
+    WG "Ami and Emiko both wanted to do a celtic folk song. Kentaro expressed interest in performing a big band style number, while Botan wanted to do something jazzy."
+    Okisho "I guess that makes sense coming from each of them. What about Monterio?"
+    WG "He said he wanted to do this song style called \"psychobilly\", I really didn't understand what he meant."
+    Okisho "Heh, figures he would, those songs have great basslines. Surprised you don't know of it, that genre is a throwback to American rockabilly music."
+    show WG doubt
+    WG "There's a lot of niche sub-genres in the musical scene in America, I can't keep track of them all."
+    show WG neutral
+    MC "He's the bass player, I take it?"
+    Okisho "Was our bass player. Still is I guess, but he's tall enough now to play the octobass like it's a regular one. It's pretty wild."
+    "I didn't even know what that instrument was, but I figured I'd eventually see it in the concert."
+    show WG haughty
+    WG "And lastly, I want us to do an opera performance. I think it would be a great way for me to test the limits of my vocal range and sustain."
+    show WG stern
+    Okisho "Well it wouldn't be an opera if there wasn't a fat lady to sing in it."
+    show WG doubt
+    Okisho "Look, honestly that all sounds really cool and I think they'd all do a good job individually, but not everyone likes that kind of music, music club members and the student body included." 
+    Okisho "It's going to take a lot of practice to get the rest of the club up to speed on these songs, especially because they're all so radically different types of music."
+    show WG angry
+    WG "Oh, heaven forbid you ask people to {i}try{/i}."
+    show WG stern
+    Okisho "Even taking that aside for a second, as a set list, this is just a mishmash of everything— there's no theme. It doesn't make any sense."
+    show WG doubt
+    Okisho "Look, I know none of us were happy with how few people came out to the last concert but I don't see how this is going to help things." 
+    "Okisho did kind of have a point, Alice's plan didn't exactly sound like it was going to pack the butts into the seats either."
+    show WG angry
+    WG "Uggh, it's not like it's any worse than the road you're taking us down."
+    show WG surprised-2
+    Okisho "Well, what exactly do you have in mind? What are we supposed to do, lock students into the auditorium and force them to listen to it?"
+    MCT "Wait a second..."
+    MC "Wait! That's it!"
+    show WG neutral
+    WG "I appreciate your enthusiasm, Dear, but I think kidnapping is a bit of a disproportionate response to the problem."
+    MC "No, no, not physically force them, but make it an offer they can't refuse."
+    Okisho "What are you talking about?"
+    MC "What I mean is, yes— the set list is eclectic and long, but that could be the point. {w}What if you could do a long form concert performance that students could attend for course credit?"
+    show WG pondering
+    MC "Think about it, we could work something out with the school with the help of the club sponsor. Students attend the concert, maybe they have to write an essay, but in exchange for that they get 1 hour of culture credits for the trimester."
+    show WG surprised-2
+    WG "Keisuke, that's a great idea!"
+    Okisho "It is pretty clever, assuming we can pull it off."
+    show WG pondering
+    WG "It doesn't seem at all unlikely though. The principal seemed frustrated with the lack of student participation at the last concert. I'm sure he'd be open to helping us bolster attendance."
+    show WG happy
+    Okisho "Ha! Sounds like this might be crazy enough to work."
+    Okisho "Alright. I'm in. As long as I get to do my song too."
+    show WG neutral
+    WG "What's that?"
+    Okisho "Something I've been working on writing since the start of the school year, would be a great debut to put it in the concert now that it's finished."
+    show WG sly
+    WG "Deal."
+    show WG surprised-2
+    Okisho "Don't be so quick to agree. If you want to see this come to fruition you're going to have to pull up your sleeves and really work with the rest of the students. In fact, all you probably will."
+    Okisho "I expect extra practice time if you seriously think you're going to have these ready on top of our current song selection by time the concert rolls around. This is a serious time commitment on your part."
+    show WG neutral-2
+    MC "Are you sure about this Alice? You are pretty busy as is."
+    WG "I can handle it. Chibuki and I have been grooming Kokutan to take on the day-to-day operations of the custom clothing business to free up my schedule more."
+    MC "Of all the horses to bet your business on..."
+    show WG neutral
+    WG "I know what you're thinking, but she's very detail oriented and focused when she's working on something she's interested in." 
+    WG "I would have preferred to hold off a little while longer on this transfer but she is ready."
+    show WG haughty
+    extend " You can trust my judgment on this."
+    MC "Then I'll take it to the bank."
+    Okisho "Sounds like you're serious about this then? Ready to put your money where your mouth is?"
+    WG "I am. I've been pushing to gain this opportunity since the start of the year. There'd be no use in complaining if I just balked at an offer to actually be able to do something about it. I'm a woman of my word."
+    show WG happy
+    Okisho "Sounds like we got a deal then. Congratulations, miss co-club president. We'll make the announcement at the start of the next club meeting."
+    show WG neutral
+    Okisho "And with that, I'm gonna hit the road. I'm starving. This meeting was way too long without something to eat, I really should have brought a snack."
+    MC "Take one for the road then."
+    "I pulled a meal replacement bar out of my pocket and tossed it to her. I try to keep them around for when Alice's stomach starts rumbling."
+    Okisho "Hey thanks! This outta tide me over for a couple of minutes."
+    hide Okisho with dissolve
+    show WG surprised-2 at altMove(0.5, 0.5)
+    WG "Well that was quite an unusual turn of events."
+    show WG neutral-2
+    MC "Seems like things turned out surprisingly well, all things considered. Then again I would have considered a brawl not breaking out between you two to be an unlikely success."
+    WG "I still don't like her, but maybe I can at least learn to respect her."
+    MC "That's fair. No one said you have to be best friends."
+    show WG happy
+    WG "Thanks for playing the mediator. You always seem to manage to help me to find my center."
+    MC "We're a team. I got your back."
+    show WG surprised 
+    "I said as I slinked up next to her to grab a handful of her over-voluptuous rear."
+    show WG aroused
+    WG "Mmm, it seems that you do."
+    show WG surprised-2
+    MC "And your front—"
+    show WG happy-2
+    MC "And your sides—"
+    WG "Alright Mr. Handsy."
+    MC "As a professional courier I have to make sure my merchandise is handled properly."
+    show WG aroused
+    WG "Well, in that case, perhaps you should conduct a more thorough inspection at the processing facility..."
+    MCT "I'm liking this promotion already."
+    jump daymenu
+
+label WG085:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label WGAE001:
+    scene HallwayStairs with fade
+    play music Busy
+    "I had a little bit of time after classes I was using to trek across campus, keeping my eyes out for new prospective customers for Alice. My primary duty was to act as a delivery boy, but I stood to earn a little extra if I could generate more sales." 
+    "It wasn't the most dignified profession I'd admit, but it was about all a full time college student like me could hope for considering the flexible hours and the proximity to the campus, being actually on the campus as it were."
+    "The extra money from the commissions was nice, though to be honest, I was more interested in the good will it would gain with Alice than the extra pocket change it was going to get me."
+    if getFlag("WG010_Shiori") or getFlag("WG010_Aida"):
+        "I wasn't a natural salesman by any means, but I learned a few things about what does and doesn't work, especially after my catastrophic failure with my first sale attempt."
+    else:
+        "I wasn't a natural salesman by any means, but I picked up on some dos and don'ts as I got more experience." 
+        "Honoka turned out to be an easy sale, but that boost of confidence I got from an early success didn't prepare me that well for approaching perfect strangers with a purchase proposition."
+    "I did get some advice from Alice. Like not to just give up right away when people say no, but don't be pushy or pressuring either." 
+    "If they say they need time to think about it, let them go— just be sure to follow up with them so a potential sale doesn't slip."
+    "But ultimately, she told me it was up to me to find something that felt natural to me. \"People will see through an act because people don't care unless they think you care about them first.\""
+    "\"They want to see someone who can give a genuine endorsement of the product. Not a soulless shill who's desperate for a commission.\" She was right, and I think I came up with a system that works for me."
+    "I try to pay attention to the other students I come across and pick out the ones I think will be in a receptive mood for a wardrobe upgrade." 
+    "It's the little details: strained buttons, a waistband that's a bit too snug, belt loops with makeshift extra notches, etc."
+    "Someone's in an uncomfortable position, and you're there with a solution. Even if they say no— not a problem. They'll come around eventually, given how these growths work. It's no wonder Alice saw this as an opportunity to seize on."
+    "My most recent strategy was to hit up some of the more popular hangouts on campus where students would want to be wearing something more casual outside of class." 
+    "I was currently headed to the gym because I figured those who would frequent such a place were going to need some new activewear. {w}At least, that was my plan."
+    CMM "Mr. Hotsure-san, I'd like to speak with you."
+    "Overcoat, red armband, this guy must have been one of the student council members. I didn't know what he wanted other than I might have been running too fast for what the hall monitor deemed perfectly safe."
+    MC "Uh, sure. Do I know you?"
+    CMM "No, we haven't met before."
+    menu:
+        "Good, let's keep it that way.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 2)
+            "The council member furrowed his brow in indignation at my reply as I began to walk away, but quickly resumed his previous emotionless expression and flat tone."
+            CMM "I'm afraid that it's not that simple. I have an important matter to discuss with you."
+        "Aren't you going to introduce yourself then?":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 1)
+            CMM "That's not pertinent to the matter that I'm speaking with you for."
+            MCT "Boy this guy must be really fun at parties."
+
+    MC "Which is?"
+    CMM "I'm trying to learn a bit more about this clothing business that has recently been established on campus. Tell me, what is your role in the \"Nikumaru Outlet Direct\" company/organization?"
+    menu:
+        "Be honest with him.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") - 1)
+            MC "I'm the delivery boy. Orders come in and I deliver them to customers. I also canvas for new customer leads. Are you interested in some new duds for yourself? I got a catalog here if you want to take a look—"
+            CMM "That won't be necessary."
+            CMM "I appreciate your cordiality, but you've just implicated yourself and your involvement in a corruption scandal related to an unauthorized and illegal business operation."
+            MC "What!?"
+        "Feign ignorance.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 2)
+            MC "Nikumaru direct what now? Never heard of it, but I'm assuming it has something to do with Alice Nikumaru. I mean, we have some classes together but that's about the extent I know her."
+            CMM "Ah, I see. Deception comes naturally for you. This makes your complicity in the matter all the more clear."
+            MC "And what matter might that be?"
+        "Ask him what he wants.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 1)
+            MC "The fact you would even ask me that question without knowing me tells me you already know the answer. So what do you want from me?"
+            CMM "You're more clever than I gave you credit for by not offering anything that would implicate yourself. Nonetheless you seem to be aware that the walls are closing in on this little operation of yours."
+            MC "Come again?" 
+
+    CMM "I'll cut to the chase. You're a suspect in the bribery scandal surrounding the formation of the Nikumaru Outlet Direct corporation on campus."
+    CMM "We already have all the information we need to get you expelled from the school, but that can be reduced down to an academic probation and school service hours if you cooperate with us."
+    MC "!"
+    menu:
+        "Agree to cooperate.":
+            $setFlag("WGAE001_cooperate")
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") - 4)
+            MCT "Shit. Alice must have really stepped in it with this business thing. She has the money to land on her feet no matter what she does, but I don't have that luxury. If I get expelled from school my life is over."
+            MC "Alright, alright. I'll cooperate. Honestly I don't know a whole lot about what you're asking but I'll tell you what I can."
+            CMM "Excellent, I knew we would see eye to eye on this."
+            CMM "Now, about the matter of—"
+        "Just leave.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 1)
+            "I just rolled my eyes and turned around and walked away— much to the shock on his face."
+            "I wasn't in the mood for this bullshit. It was obvious to me he was just bluffing about all of this and trying to intimidate me when the entire time he couldn't stop me from just walking away from him."
+            CMM "Wait, you can't just walk away! I don't think you grasp the seriousness of your situati—"
+        "Tell him to piss off.":
+            $setVar("WGAE_ConF", getVar("WGAE_ConF") + 2)
+            MC "Oh, drop the \"bad cop\" routine already and piss off! That red arm band isn't a badge, and you're about as intimidating as a titmouse." 
+            MC "If there was a real disciplinary matter I'd be hearing from the principal's office, not some dweeb with Napoleon complex."
+            CMM "And to think I was going to go easy on you. You're not in a position to be making enemies. I don't think you grasp the seriousness of your situati—"
+
+    show AE neutral with dissolve
+    play music AE
+    AE "What is going on here, Takahashi-san?"
+    "Appearing seemingly out of nowhere (causing me to jump up in surprise) Shiori stood with a hand on one of her wide, shelf-like hips as she gazed between the two of us."
+    CMM "Matsumoto-san."
+    "The other council member bowed when acknowledging Shiori's presence."
+    CMM "I took it upon myself to follow up on our investigation by interviewing one of the suspects."
+    if getFlag("WGAE001_cooperate"):
+        CMM "He's been surprisingly cooperative as well."
+    show AE neutral-annoyed
+    "Shiori crossed her arms and looked between the student council member and myself."
+    AE "May I ask on what grounds?"
+    show AE neutral
+    CMM "I um... on the grounds of the ongoing investigation into Nikumaru-san ma'am."
+    AE "That is a circumstance, not a basis of authority. I'll ask again with clarification: on what grounds are you investigating Hotsure-san. Whose orders specifically?"
+    show AE glasses-2
+    CMM "U-Uh... He... He was suspicious."
+    AE "... May I take this to mean you acted on your own accord without clearance?"
+    MCT "Man, he's getting the glare of death from her. Even I'm managing to feel sorry for this dude now."
+    show AE neutral
+    AE "You've overstepped your bounds with this, Takahashi-san. This could, at its furthest extent, be considered as intimidation of a fellow student."
+    show AE glasses-2
+    AE "I'm disappointed in your behavior, and do not condone your actions."
+    show AE neutral-annoyed
+    CMM "M-My sincerest apologies, Matsumoto-san. In my eagerness to follow through on this matter I made an oversight and lost the bigger picture in the process."
+    CMM "I'll take my leave then. It would be best if I focused my efforts elsewhere for now."
+    AE "I would be inclined to agree. That will be all."
+    "The council member turned around, but not before giving me a distrustful look before slinking away into the background."
+    show AE angry
+    AE "Mind. Your. Eyes."
+    "Shaken, he hastened his steps away as Shiori rebuked his attitude."
+    if not getFlag("WGAE001_cooperate"):
+        MCT "Yeah, that's right. Get out of here you little pissant."
+    show AE neutral
+    MC "Matsumoto-san, what is going on here? What's with this \"investigation\" around Alice and her business?"
+    AE "As, it seems, you're now party to the investigation proper, I suppose I can share information so long as it is kept in confidence. Our office is investigating a potential violation in school policy regarding commerce and trade practice."
+    MC "Violation of... Wait a second, is she in trouble? {w}You're not trying to get her expelled are you?"
+    AE "..." 
+    AE "I do not wish her to be expelled, but if that is deemed to be an appropriate punishment by the school, should she be found guilty of wrongdoing, then that is due to her choices, not the council's pursuit of corrective action."
+    menu:
+        "That seems awfully petty of you.":
+            if getFlag("WG010_Shiori") or isEventCleared("WGGTS002"):
+                MC "I know you haven't exactly been thrilled at the prospect of her starting a business on campus, and I'll admit, she's not the easiest person to get along with sometimes."
+                MC "But to go this far over a tiff between personalities seems awfully petty of you."
+            else:
+                MC "I know she's not the easiest person to get along with sometimes, but to go this far over a tiff between personalities seems awfully petty of you."
+            $setAffection("AE", -1)
+            AE "This is a matter of enforcing policy. Whatever disagreements there may have been between Nikumaru-san and I do not factor into my decision to pursue justice and ensure that everyone is accountable to the rules."
+            AE "I would be doing the same even if you had done the same."
+            MC "Can't exactly say I'm comforted by that notion."
+        "Can't you just look the other way on this?":
+            MC "This seems like an awful lot over not much of anything to me. Can't you just look the other way on this?"
+            $setAffection("AE", -3)
+            show AE angry
+            AE "..."
+            MCT "Yikes! I'm going to be in for it now."
+            AE "I do not make exceptions. Neither should you."
+        "This sounds pretty serious.":
+            $setAffection("AE", 1)
+            MC "Geez... this sounds pretty serious from how you talk about it."
+            AE "It very much so is. I'm glad you understand. With this in mind, if I can prevent Nikumaru-san from either utilizing the wrong channels or possibly causing bigger problems for herself, then I'll consider it worth it to pursue."
+            AE "As it so happens, if an opportunity to do things through the correct channels reveals itself, I'll accept it respectfully. If not... then I fear there may be no alternative in which punitive action does not occur."
+
+    if isEventCleared("WGGTS002"):
+        MC "So what exactly is she being investigated for? She gave you all the necessary paperwork. I thought everything was squared away."
+        AE "Quite the opposite, in fact. As it stands, the means by which she provided the paperwork was... questionable to say the least."
+        MC "So what does that mean?"
+    else: 
+        MC "So what exactly is she being investigated for?"
+    AE "She's being investigated by the student council for bribery."
+    MC "Bribery?"
+    "As much as I wanted to say \"Alice would never do that.\", the truth was I didn't know her well enough to know that for sure. If anything, it would fit the M.O. of a rich girl who always got everything she wanted."
+    if isEventCleared("WGGTS002"):
+        "Even I had to admit, the ease at which she produced the paperwork and managed to outmaneuver the student council did seem a bit convenient to me as well."
+    MC "What makes you suspect that?"
+    AE "Nikumaru-san indicated she had petitioned the school administration directly to obtain permission." 
+    AE "But upon inquiring about the matter to individual administrators, they all indicated they did not have any direct involvement in the matter, rather that it was a done deal already by the time they were notified."
+    MC "So you suspect they were bought off?"
+    AE "No. That alone isn't enough to implicate that. Instead, I would have to trace back the actions that would lead {i}to{/i} her petition outpacing the administration." 
+    AE "Which led me to suspect, could she, on the basis of some level of connection, be providing benefits to them?"
+    AE "Direct bribing would be unlikely due to the logistical challenges it would pose. To buy off one or two would potentially be possible, but not all of them." 
+    AE "I suspected that they may have been told to not question the matter, however, if the school had just so happened to receive a generous endowment from the Nikumaru Corporation."
+    MC "Is that what she did?"
+    AE "I cannot know this with certainty. This is an investigation, not a trial Hotsure-san." 
+    AE "I scoured the school's financial records of the current school year, but was not able to find any funding linked to one of her father's businesses or any recent cash windfalls that could reasonably be a cover for such."
+    MC "So you don't actually have any proof?"
+    AE "That is, in fact, what an investigation is for. I have no intention to accuse Nikumaru-san unjustly," 
+    AE "which is why it was not appropriate for Takahashi-san to have tried to coax you into incriminating yourself by implying more than the current evidence warranted."
+    MC "Have you tried asking Alice yourself?"
+    AE "I had planned to once I had evidence in hand, as I expect she will not be forthcoming with any information on the matter otherwise."
+    show AE neutral-annoyed
+    AE "Though I suspect that will no longer be necessary." 
+    show AE neutral-annoyed at altMove(0.5, 0.25)
+    show WG angry at Position(xcenter=0.75, yalign=1.0) with dissolve
+    play music WG
+    WG "{i}That{/i} would be an understatement."
+    MC "Alice! We were just talking about you."
+    show WG stern
+    WG "So I heard. I became curious as to what this was about when I overheard just now a conversation between two student council members about how questioning a certain Hotsure-san didn't go as planned."
+    show AE neutral
+    AE "So I can assume you are aware of the student council's investigation into your business?"
+    WG "You act as if I hadn't already suspected it myself. {w}You pride yourself on carrying out your duties with cold, unfeeling professionalism, but the cracks in your façade don't do a particularly good job of concealing your utter disdain for me."
+    AE "My apologies if I have given you that impression. I do not hold any personal animosity towards you."
+    show WG doubt
+    WG "Then what's the reason behind this investigation? I don't see anyone else's conduct being looked at under the microscope by the student council."
+    AE "To answer your question, no one is above the law, not even the wealthy and well connected. As to the second part of your statement, that would not be an accurate assumption."
+    show WG stern
+    "Alice rolled her eyes in exasperation."
+    WG "Oh {i}puh-leeze{/i}. Forgive me if I don't buy the whole \"letter of the law\" schtick. In my experience those kinds of people are the most easily bought." 
+    show AE neutral-eyebrow
+    AE "In your experience? I hope you're not saying bribery is a common practice for you?"
+    show WG haughty
+    WG "Quite the opposite. Father always warned me you could never trust people that can be bought off. They'll just turn on you when they find a higher bidder."
+    show WG neutral
+    WG "The far more important lesson he instilled in me though was that businesses run on trust— even more so than money. You won't have any customers or be able to attract any financers if they won't trust you with their money."
+    WG "The loss of reputation from a scandal can be far more damaging than the punishment and fines."
+    show AE neutral
+    AE "Hm. Your father sounds like a prudent man, indeed. I can respect his principles for sound business ethics."
+    show WG neutral-2
+    WG "Father was fond of saying there would be a lot less criminals if people understood how much money they could make honestly. He's living proof of it after all."
+    AE "May I ask, then, what was the method employed to expedite your proposition regarding your business?"
+    show WG haughty
+    WG "That's quite simple— they didn't have a say otherwise. They were merely informed it was already happening." 
+    show AE neutral-annoyed
+    AE "That is precisely my point of concern. What do you mean by \"they didn't have a say\"?"
+    WG "The school campus is built upon the remnants of an abandoned rock quarry. What nobody seemed to realize was that the area of the campus still fell within one of the island's designated industrial zones."
+    show WG sly
+    WG "In all the years of its existence, however long that might be, it had never been rezoned."
+    show AE neutral-eyebrow
+    AE "Now I see. And your business meets the classification of heavy industry?"
+    show WG haughty
+    WG "Of course. It's a textile processing facility that just so happens to sell factory-direct."
+    show AE neutral-annoyed
+    AE "And, naturally, you are stretching the definition industry to conceal what is obviously a commercial enterprise, thereby circumventing the bureaucratic channels necessary."
+    show WG neutral
+    WG "Relax. The commercial side of things is located off campus, in town, proper zoning and everything. Here's a business card."
+    show AE neutral-eyebrow
+    AE "Alice's Wishes Granted LLC?"
+    WG "It's a subsidiary of the Nikumaru Direct Outlet."
+    AE "I see. Quite forward thinking of you to secure a base of operations once the school campus has been rezoned."
+    show WG doubt
+    show AE happy
+    AE "I'll bring this to the attention of the local government so that they can rectify this error immediately."
+    WG "Hmph."
+    "Alice looked none-too-pleased with Shiori's response."
+    show AE neutral
+    play music Peaceful
+    "But despite her rather cold words, Shiori respectfully took the card and placed it in a business card holder in her jacket pouch." 
+    show WG stern
+    WG "Seems that it doesn't pay to play by the rules after all."
+    AE "My apologies Nikumaru-san, I should not have been so quick to impune illegal intent with regards to your business filings." 
+    show AE happy
+    AE "On the contrary you've proven yourself to have navigated the proper channels in a legal manner and have been surprisingly cooperative with my inquiries." 
+    show AE neutral
+    AE "Nonetheless, it's clear that this zoning classification is an oversight, rather than an intended designation of the campus grounds." 
+    AE "Since you've managed to secure an off campus site for your business, it seems that this matter has a clear resolution for all parties." 
+    show WG doubt
+    WG "If you say so..."
+    AE "Thank you for your cooperation. {w}Sorry to have taken so much of your time, and you as well Hotsure-san. If you'll excuse me I have to follow up on this matter with the rest of the student council."
+    "With that, Shiori nodded and walked away. Turning around, however, it was impossible for us not to see her fat, wobbling ass— her skirt barely covered half of it, after all." 
+    show WG happy at altMove(0.5, 0.5)
+    hide AE with easeoutleft
+    "Alice, in turn, gave a light chuckle mixed with a scoff at the sight. Though I had to wonder if she was somehow not aware how close she herself was to sharing the same predicament."
+    show WG haughty
+    WG "Hard to seem so high and mighty when her rump is exposed to the world, hm? If only she'd take my help, she'd be wearing a pair of sensible undergarments instead of a thong!"
+    MC "Hehe. You certainly have a point there."
+    MC "But still... This sucks. Does this mean you're going to have to run the business off campus now?"
+    show WG sly
+    WG "Heh, she wishes. What she doesn't realize is that the business zoning on the island was recently conducted and they aren't going to convene to redo anything until next year."
+    MC "How do you know that?"
+    show WG haughty
+    WG "You don't have to bribe people when you already have friends in high places." 
+    show WG neutral 
+    extend " One of my father's contacts, Misaki Usuda, is something of a leading citizen of the island, a mover and shaker in the island's chamber of commerce."
+    show WG sly
+    WG "She made me aware of the particular zoning situation of the school grounds and helped me file the paperwork, as well as ensure the timing of the zoning moratorium would align in my favor, should this exact scenario take place."
+    show WG neutral
+    "I knew Alice was a shrewd businesswoman who was always a step ahead of the competition, but this maneuver was like seven steps ahead of everybody."
+    "I was pleasantly surprised to realize I had underestimated her." 
+    show WG happy
+    MC "Huh, seems like you thought of everything then."
+    show WG sly
+    extend " Even to act surprised when Matsumoto-san said she was going to get the school rezoned."
+    show WG happy-2
+    WG "What can I say? I have a flair for the dramatic."
+    show WG neutral 
+    extend " If you met my mother you'd understand."
+    MC "I see."
+    MC "Well, I can't imagine Shiori is going to be too happy when she realizes you pulled a fast one on her."
+    show WG haughty
+    WG "Oh, let her do her worst. She already has by this point and won't be able to do much about it, if anything. Besides, she set this trap for herself as far as I'm concerned."
+    show WG neutral
+    WG "Honestly, these bureaucrat types with their endless rules and red tape think they are protecting people from \"evil\" corporations,"
+    WG "when all they're actually doing is barring businesses with less resources and connections from entering the market that would otherwise outcompete businesses that engage in anti-consumer practices."
+    show WG haughty
+    WG "They create an environment that favors the very cronyism they claim to be protecting against— most of the time on purpose I might add."
+    MC "Do you think Matsumoto-san is serving some hidden interest then?"
+    show WG neutral-2
+    WG "No, not unless you count her own naïve sense of moral altruism." 
+    WG "But I have a feeling, if her growth trajectory continues, she'll eventually come around to a more practical understanding of the matter that will ultimately win her over as a customer."
+    show WG neutral
+    WG "Even now I can't imagine she's able to find matching tops and bottoms for herself."
+    MC "Yeah, you're probably right about that."
+    pause 1
+    MC "So, I guess that takes care of that then."
+    WG "It would seem so. If nothing else it'll keep her off my back for quite a while."
+    if getVar("WGAE_ConF") < 1:
+        show WG haughty
+        WG "Though there is still the matter of what I overheard from the student council members chatting with each other."
+        show WG stern
+        $setAffection("WG", -2)
+        WG "He seemed to indicate you were quite compliant and ready to \"spill the beans\" before Shiori showed up. I can't imagine exactly what he meant by that, but I didn't take you for a snitch Keisuke."
+        MC "I mean... he basically threatened me with expulsion for being involved in the business. I didn't know what he wanted but I felt like I had to cooperate."
+        show WG angry
+        WG "{i}Think{/i} Keisuke. What could be more typical than a lowly peon letting the smallest bit of authority go to their head?" 
+        show WG stern
+        WG "Besides, even if I was engaged in illicit activity, what knowledge would you have possibly had that could have implicated you?" 
+        WG "I'd never ask you to cover for anything untoward but I'd at least expect you to not fold like a sheet when questioned about your involvement in the business." 
+        MC "Sorry. You're right. I panicked and I wasn't thinking."
+        show WG neutral
+        WG "It would serve you well to grow a stronger spine. Don't just roll over for people just because they ask you to— especially if you suspect they don't have your best interests in mind."
+        "At this point I knew defending myself any further was fruitless. I had to take this one from the chin and try to move on."
+        MC "Will do. I'll do better, I promise."
+        show WG neutral-2
+        WG "Good to know."
+        show WG neutral
+        "Alice handed me some paper slips."
+        WG "This is why I was looking for you. We've had a few more orders come in. I want you to pick them up from the mailroom and get them in the hands of the customers before dorm visitation hours end."
+        MC "I'm on it! I'll catch up with you later."
+        WG "Have a good evening Keisuke."
+        hide WG with dissolve
+        "Our conversation lit a fire under my ass to hop-to on these orders. I felt like I needed to do something if I was going to get out of the dog house with Alice after botching the so-called \"interrogation\"."
+    elif getVar("WGAE_ConF") > 4:
+        show WG haughty
+        WG "Though I thought I should mention what I overheard from the student council members chatting with each other."
+        show WG sly
+        WG "He seemed agitated that you gave him the runaround and were surprisingly flippant to a member of the student council."
+        MC "I mean... he was acting like a prick, so turnabout is fair play I'd say."
+        show WG neutral
+        WG "I'd normally be inclined to agree, but keep in mind your demeanor when you're representing the company." 
+        show WG doubt
+        WG "I have no doubts this whole issue with the inception of our operation has not left a good impression of the business in the minds of the student council." 
+        show WG stern
+        WG "We have an uphill battle to fight in order to gain a good reputation amongst the student body, and being unnecessarily rude to people that already have it in for the business isn't helpful." 
+        MC "I guess I wasn't really thinking about that... Sorry."
+        show WG haughty
+        WG  "I don't intend to chastise you for something I would have likely done myself, but I trust I've made my expectations clear with this conversation?"
+        MC "Crystal."
+        show WG happy
+        WG "Good to hear."
+        "Alice handed me some paper slips."
+        show WG neutral
+        WG "This is why I was looking for you. We've had a few more orders come in. I want you to pick them up from the mailroom and get them in the hands of the customers before dorm visitation hours end."
+        MC "Alright, I'll head down there right now. I'll catch up with you later."
+        WG "Have a good evening Keisuke."
+        hide WG with dissolve
+        "In retrospect I guess I didn't need to be such a dick to that guy, even if he deserved it." "Still though, I should have known the satisfaction of 1-upping that dweeb was going to be temporary, and now I've gone and just made things more difficult for me and Alice to draw in new customers."
+    else:
+        show WG haughty
+        WG "Though I thought I should mention what I overheard from the student council members chatting with each other."
+        show WG sly
+        WG "He seemed none too pleased that you gave him the runaround and left him nothing to work with."
+        MC "Well, he certainly talked a big game, but he certainly overplayed his hand, which turned out to be a bluff."
+        show WG haughty
+        $setAffection("WG", 1)
+        WG "Precisely. {w}Honestly, so typical of petty tyrants." 
+        show WG happy
+        WG "I'm glad to hear you stood your ground when faced with the threats of a bureaucratic regulator. You're showing quite a bit of promise as a businessman already."
+        MCT "That's certainly high praise coming from Alice."
+        MC "Thanks. That's good to hear, though I still have quite a bit more to learn."
+        show WG happy-2
+        WG "That's the right attitude."
+        "Alice handed me some paper slips."
+        WG "This is why I was looking for you. We've had a few more orders come in. I want you to pick them up from the mailroom and get them in the hands of the customers before dorm visitation hours end."
+        MC "Sounds good. I'll head down there right now. I'll catch up with you later."
+        WG "Have a good evening Keisuke."
+        hide WG with dissolve
+        "If I was being honest, I was pretty tempted to panic when questioned by that guy, but like Dad always told me \"The smallest dog barks the loudest\", and he was right."
+    jump daymenu
 
 label WGBE001:
     scene Classroom with fade
@@ -26432,7 +27610,7 @@ label WGBE004A:
     show BE wink
     BE "Of course it was!"
     show BE happy
-    BE "So then he's running around blinded from the pink goo covering his eyes while he tries to claw it out of his hair, which only smashed it there."
+    BE "So then he's running around blinded from the pink goo covering his eyes while he tries to claw it out of his hair, which only smashed it in there."
     show BE neutral
     BE "His hair was pretty thick even back then, and by the time he gave up trying to get it out it was like sticky cement."
     show WG surprised-2
@@ -26458,28 +27636,30 @@ label WGBE004A:
     show BE neutral
     WG "How unfortunate."
     show WG happy
-    extend " On second thought though, it is usually a better investment to buy low when you can."
+    extend " On second thought though, it is good business practice to realize cost savings whenever possible."
+    MC "You see? Old Kei was the prototype. This here is the upgrade."
+    show BE happy
+    BE "I don't know about that. Egghead Kei was funnier."
     MC "Why can't you tell any good stories about me to my girlfriend?"
     show BE angry
-    BE "What do you mean? These are the good stories."
+    BE "What do you mean? These {i}are{/i} the good stories."
     MC "tHeSe ArE tHe GoOd StOrIeS!"
     show BE happy
     WG "Well, I certainly have been enjoying them."
     MC "Clearly that seems to be the case."
-    if isEventCleared("WG081"):
-        show WG surprised-2
-        MC "Speaking of stories, I bet she'd like to hear the one about Mr. Fluffuls..."
-        show BE confused
-        BE "Mr. Fluffuls?"
-        show WG doubt
-        WG "It's not that interesting."
-        show BE smug
-        BE "I dunno, sounds pretty interesting to me."
-        show WG pondering
-        WG "I'm afraid you'll just have to leave it to your imagination."
-        show BE angry
-        BE "Aw, no fun!"
-        "As much as I wanted to, I figured there was no further use in backing Alice into a corner if she really didn't want to get into the whole Mr. Flufful kerfuffle."
+    show WG surprised-2
+    MC "Speaking of stories, I bet she'd like to hear the one about Mr. Fluffuls..."
+    show BE confused
+    BE "Mr. Fluffuls?"
+    show WG doubt
+    WG "It's not that interesting."
+    show BE smug
+    BE "I dunno, sounds pretty interesting to me."
+    show WG pondering
+    WG "I'm afraid you'll just have to leave it to your imagination."
+    show BE angry
+    BE "Aw, no fun!"
+    "As much as I wanted to, I figured there was no further use in backing Alice into a corner if she really didn't want to get into the whole Mr. Flufful kerfuffle."
     MC "Come to think of it though, I'm surprised to see you here, Honoka. Did you stop in for another fitting?"
     show BE neutral
     BE "Yeah, the girls have been growing like crazy lately. My current bra just isn't cutting it. Well, it's cutting into me, but it's not cutting {i}it{/i}— if you know what I mean."
@@ -26642,9 +27822,11 @@ label WGBE004A:
     MC "{b}{i}Because you kept taking the pizza!{/i}{/b}"
     "At this point I was ready to tear my hair out in exasperation but I knew that would be quite the fruitless gesture by this point."
     show BE sad
-    BE "Well, looks like that's it. I couldn't hold on either. {w}Dang, defeating him would have given us three extra lives."
-    show BE happy
-    BE "Wanna try again?"
+    BE "Well, looks like that's it. I couldn't hold on either. {w}Dangit, beating him would have given us three extra lives."
+    Tomoko "Too bad Alice wasn't here, we'd had gotten more to go around."
+    BE "I know, right?"
+    show BE neutral
+    BE "Oh well, wanna try again?"
     show Tomoko neutral
     Tomoko "Eh, I'm tired of this one. Got anything else?"
     BE "Sure. Take a look at what I got, see if anything jumps out at you. We could always download something on the Pretendo eStore."
@@ -27351,13 +28533,44 @@ label WGBE004B:
         jump WGBE004B_After
 
 label WGBE004B_After:
+    show BE happy at Position(xcenter=0.75, yalign=1.0) with easeinright
+    show WG neutral
+    play music ClearSkies
+    BE "Thanks again for the ice cream, Alice. It goes really well with the brownies."
+    WG "You're most welcome, Honoka. Consider it my treat for all of the effort everyone put into their dessert."
+    BE "Yeah... speaking of that... Sorry you had to eat burnt sugar. Gummies sounded like a nice idea at the time, but it didn't turn out so well."
+    show BE happy
+    BE "Kei-chan told me I should put them in there. So it's his fault really."
+    show BE angry
+    show WG happy
+    MC "I'd say you're a better baker than a liar but that wouldn't be saying a whole lot about either."
+    show BE neutral
+    WG "That's alright Honoka. Though I can't say I enjoyed them, I would be hard pressed to assume I could do any better myself."
+    show WG haughty 
+    WG "I'm quite content to leave that kind of work to the professionals."
+    show BE happy
+    BE "You're probably right, but it's fun to get your hands dirty sometimes."
+    show BE confused
+    MC "Not to mention the front of your shirt."
+    show BE happy
+    BE "Well I got two BIG excuses for that. Not sure what your excuse is for that spot on your shirt."
+    MC "What? Where?"
+    show BE smug with vpunch
+    BE "There!"
+    "Before I could look up, Honoka flicked my nose from the spot she pointed to on my shirt— realizing I fell for the oldest trick in the book."
+    show BE happy
+    show WG happy-2
+    "Honoka & Alice" "Hehehe!"
+    MC "Next time you make brownies I'm adding the gummies for real this time."
+    show BE smug
+    BE "As if I'd let you anywhere near my brownies after I followed your advice this time."
+    show BE shrug
+    MC "Why do I get the feeling that's the version of the story you're going to tell years later?"
     hide WG
     show Tomoko neutral 
     with dissolve
-    play music ClearSkies
     Tomoko "What are we going to do with Honoka's brownies? I don't think anyone is going to eat them."
     show Tomoko neutral at altMove(0.5, 0.25)
-    show BE sad with dissolve
     BE "Even {i}I{/i} don't want to eat them."
     Tomoko "Let's just throw them away then."
     show BE shrug
@@ -27413,13 +28626,52 @@ label WGBE004B_After:
     with dissolve
     show BE happy
     "Tomoko and Honoka" "YES!"
-    if isEventCleared("WG081"):
-        show WG surprised-2
-        BE "Oh, and you'll have to tell us about Mr. Fluffuls!"
-        Tomoko "Mr. Fluffuls?"
-        show WG neutral
-        WG "{i}Sigh{/i}... It's a long story."
-    "I was glad to see Alice agreed to come along, but I had a strong suspicion we were going to have to explain why someone would want to eat a pizza they found lying on the street..."
+    show WG surprised-2
+    BE "Oh, and you'll have to tell us about Mr. Fluffuls!"
+    Tomoko "Mr. Fluffuls?"
+    show WG neutral
+    WG "{i}Sigh{/i}... It's a long story."
+    scene black with fade
+    pause .5
+    show Dorm BE with fade
+    play music DayByDay
+    show Tomoko neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "Am I supposed to be doing something other than just mashing the buttons when I get close to an enemy?"
+    BE "Nope, you got it. That's about it. I mean, there are combos you can do but you have to unlock those."
+    MC "Yeah, best bet is to just make sure to keep the enemies on one side of your character and keep mashing until you get more moves."
+    show BE happy
+    BE "If only Kei-chan could follow his own advice."
+    MC "Yeah well, my score this run says otherwise." 
+    show WG surprised-2 
+    Tomoko "Alice, your character is low on health, you should take the pizza."
+    MC "What? My character is even lower. I should get the pizza!"
+    Tomoko "Yeah, but this is Alice's first time playing. You don't have that excuse."
+    BE "She's got you there, Kei-chan."
+    MC "I picked the tanky character to help take the hits for the group. I'm doing exactly what I'm supposed to!"
+    show WG doubt
+    WG "So let me get this straight. Eating a pizza left sitting out in the street on the dirty sidewalk is supposed to {i}restore{/i} health?"
+    show BE neutral
+    BE "It's best not to think about it to be honest."
+    show WG surprised-2
+    WG "I'll say. I'm not sure what four people could have done to have half the city want to violently assault them."
+    MC "Someone's daughter got kidnapped. That's about all I know. Now we have to fight through to the bad guy's lair."
+    show WG neutral
+    WG "If they know what direction they're supposed to be going, why didn't they just get into a car and drive there instead of walking across an entire city?"
+    MC "Would you want to take a cab in this city?"
+    WG "Point taken. {w}What's the money for? Seems like even the shabbiest dressed vagrant has a sack of gold coins falling out of his pocket."
+    Tomoko "You gotta build your experience and level up by buying upgrades, or else your character won't be ready for the bosses."
+    show WG doubt
+    WG "Why does my character have so little money then compared to the rest of you?"
+    Tomoko "Cause Kei is taking it all."
+    MC "Oh, you cannot be serious! I'm carrying the team this time, without taking any pizza either!"
+    show BE smug
+    BE "Yeah, Kei's been holding out on us."
+    show WG sly
+    WG "How typical..."
+    MCT "Oh great, now they even got Alice in on it. Who's idea was this?"
     jump daymenu
 
 label WGFMG001:
@@ -28159,7 +29411,7 @@ label WGFMG003:
     Natsuko "The more I think about it... it would be pretty impressive if you lifted it over your head— and then dropped it."
     show FMG happy
     FMG "I'd prefer to chuck it at you— with some luck it could fix that resting bitch face of yours. Anyways, how about that tree over there? Seems easy enough."
-    Natsuko "A tree that size weighs over a ton and has two stories worth of roots and soil stuck to it. Do you actually think you're going to pull out over 50 tons like a carrot?"
+    Natsuko "Do you have any idea how many tons upon tons a tree that size weighs, let alone how many more would be needed to snap off at its roots?"
     show FMG sad
     FMG "I guess I wasn't thinking about that..."
     show Natsuko annoyed
@@ -28244,7 +29496,7 @@ label WGFMG003:
     show WG doubt
     WG "Let you what? I don't think I understand... what exactly are you talking about?"
     FMG "Lift- like pick you up,{w} in the air,{w} off the ground."
-    WG "I'm aware of what that word means. I was hoping you'd clarify some non–literal context that was somehow less absurd of a proposition."
+    WG "I'm aware of what that word means. I was hoping you'd clarify some non-literal context that was somehow less absurd of a proposition."
     FMG "So that's a yes?"
     show WG stern
     WG "That's a no."
@@ -29425,6 +30677,311 @@ label WGFMG004B:
     WG "Besides, it will give Akira plenty more time to work off more of the tab that she owes."
     jump daymenu
 
+label WGFMG005:
+    scene Dorm WG with fade
+    play music WGAlt
+    MC "Over here then?"
+    show WG pondering with dissolve
+    WG "On second thought, how about over there?"
+    MC "Okay."
+    "I picked up the tea table and staggered with it as quickly as I could to the other side of the room. It was quite a bit heavier than it looked."
+    WG "Hmm, on second thought, I liked it better where you had it before."
+    MC "..."
+    show WG neutral
+    WG "What?"
+    MC "Are you suuure?"
+    show WG doubt
+    WG "No. Which is why we are trying it out. Furniture arrangement is easy on paper but it doesn't come together until you actually get to see it."
+    show WG happy
+    WG "Besides, don't tell me you're getting tired already."
+    "Alice asked me to come over to help her rearrange her living space, citing the need for a \"fresh look\" as she had done before closer to the beginning of the year. She said she needed a \"strong, strapping, handsome man\" to help her with the task." 
+    "I had a feeling the task was going to be far less sultry in nature than what her request had implied, but Alice was being quite picky, even for her exacting nature, and we hadn't even gotten to the big stuff yet."
+    MC "I'm not tired, but I think I will be if I have to move everything twice."
+    show WG neutral
+    WG "Well I've got some bad news for you, Dear. Most of this furniture has to be moved out of the way so we can move the couch and the bed to their destination first."
+    "By \"we\" can move the couch, she meant \"you\", meaning me. If that made any sense." 
+    "In contrast to the previous time I helped her rearrange the furniture in her room, Alice and Aida were not exactly in a position to be offering any assistance on account of both their midsections having ballooned beyond their reach months ago."
+    show WG neutral-2
+    WG "Speaking of that, now that you've cleared a path, let's get the bed moved over."
+    MC "I don't know Alice, this looks like more than a one man job..."
+    "Not that a normal bed would have been much of a challenge to move, but this was four post bed that Alice got reinforced after she broke her original frame. Everything about it looked \"heavy duty\", which it had to be, honestly."
+    show WG neutral
+    WG "I'm sure you'll be fine. You don't need to pick the whole thing up, you can just turn it one end at a time."
+    MC "Good idea."
+    if getFlag("WG019_BedFail"):
+        "After injuring myself the last time I tried helping with this, I was more than a little leery of how I was going to tackle this."
+    MCT "Lift with your legs, as they say..." 
+    "I bent over to pick the end of her bed— and HOLY CRAP this thing was heavy! No particle board in sight on this thing. This was made of some seriously stout hardwood, and I hadn't even grabbed the end with the headboard."
+    show WG surprised-2
+    MC "Uh, Alice, I don't think this is going to happen. This is too much. I think you need to call in the big guns."
+    show WG neutral
+    WG "No offense to Akira, but I was hoping not to have to invite the bull into the china shop, so to speak."
+    MC "I know what you're thinking, but from what she's told me she's gotten a lot better about that. Apparently she's done a lot of work with Hageshi-sensei to help control her strength better."
+    show WG doubt
+    WG "Are you willing to bet the cost of my furniture on that?"
+    MC "Hmmmm... maybe not. But I am willing to bet my back on it at least. Just offer to pay her in ice cream sandwiches or something, but tell her she won't get any if she breaks something."
+    show WG haughty
+    WG "I suppose that would prove a sufficient motivator for her to be more delicate. I'll give her a call."
+    "{i}...bzzzt...bzzzt...{/i}"
+    show WG neutral
+    FMGCell "Yo! What's up Alice?"
+    WG "I could use your help moving some furniture around my dorm. There's some free ice cream sandwiches in it for you if you're interested."
+    FMGCell "Oh, hell yeah! I'll be right over."
+    WG "See you soon."
+    FMGCell "{i}click{/i}"
+    MC "You didn't tell her the part about not breaking anything."
+    show WG sly
+    WG "She'll find that part out once she gets here."
+    scene black with fade
+    pause 1
+    play music WG
+    scene Dorm WG
+    show FMG angry at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.8, yalign=1.0)
+    with fade
+    FMG "PFFT! What do you mean I don't get paid if I bust up your furniture? What kind of amateur do you take me for?" 
+    show FMG happy
+    FMG "The Mitzutani Moving Company is staffed by professionals. Your furniture couldn't be in safer hands."
+    show WG haughty
+    WG "We'll just have to see about that then."
+    show FMG surprised-2
+    "Akira took a look around Alice's room and I suspect got a pretty decent idea all of a sudden just how much yen the total of everything in there was. Needless to say, it was staggering."
+    show FMG neutral
+    FMG "Okay, I guess a little caution couldn't hurt. What do you need moved first?"
+    show WG neutral
+    WG "The bed, I need you to move it to the opposite side of the room."
+    MC "Grab the headboard side since that's heavier and I'll get this one."
+    FMG "Ah, don't worry about it, I got this. It'll be quicker this way, trust me." 
+    MC "Are you sur—"
+    "Before I could even finish, Akira had already spread out her arms and grabbed under the bed by its sides, tilting it up and just walked it over, before setting it back down."
+    MC "Well that's one way to do it."
+    FMG "See, I told you I got this."
+    show WG neutral-2
+    WG "That's certainly an interesting approach. Though I would say, do try to be more careful with other people's furniture in the future, Akira. This bed is made of solid kingwood." 
+    show WG haughty
+    WG "Your standard out of the box furniture would collapse in on itself if you tried to carry it like that."
+    show FMG flex
+    FMG "And that's why I carried it like I did! Cause I totally knew it would hold..." 
+    show FMG neutral 
+    " I'm kidding, I'll be extra careful with the rest of your furniture. Don't want to lose out on free sweets, heheh." 
+    show WG doubt
+    "Needless to say, Alice was a bit skeptical of Akira's guarantee."
+    FMG "What's next?"
+    show WG neutral
+    WG "The bookcase. Keisuke can help you empty the shelves befor—"
+    show WG surprised
+    "Akira had stopped listening after \"bookcase\" and proceeded to lift it up off the ground just by pressing her palms into the sides. The thing was solid mahogany, and about as tall as she was, but she lifted it like it was a box of towels."
+    FMG "Where do you want it?"
+    show WG doubt
+    WG "Perhaps you could wait for me to tell you that before you start moving it."
+    FMG "I thought you were going to get to that part by the time I did."
+    show WG stern
+    WG "Oh for crying out— put it on that wall over there. And keep it tilted back so the books don't fall out."
+    FMG "I know, don't worry."
+    scene black with fade
+    pause .5
+    scene Dorm WG with fade
+    play music WGAlt
+    "Akira had made short work of the moving situation, like I suspected she would, without incident too, which I can't say I completely expected that part. There were just a few finishing touches left."
+    show WG neutral at Position(xcenter=0.8, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    WG "A little to the left please."
+    FMG "Okay."
+    WG "Hmm, on second thought move it back to where it was before."
+    FMG "Okaay..."
+    WG "A bit more to the right actually."
+    FMG "Is this what it was like for Kei before I got here? Make up your mind! I've scooted this thing like five times in twenty different directions and it's made no difference." 
+    show WG doubt
+    WG "Oh, stop whining. That was the last thing."
+    show FMG happy
+    FMG "Finally! About time. {w}I was starting to think there were no ice cream sandwiches and you just kept adding more stuff until I messed something up."
+    show WG neutral
+    WG "Please, I'm not some miserly cheapskate. I fully intended to pay you for your services. That was just the incentive to keep you diligent in your task."
+    FMG "Now you sound like Hageshi-sensei. That guy always pulls some trick on me like that."
+    show WG happy
+    WG "I had a feeling you'd let your guard down with the words \"free ice cream\"."
+    show FMG angry-3
+    FMG "I don't know how I feel about learning I'm this predictable."
+    MC "Here it is."
+    show FMG happy
+    FMG "All right! Thanks, Kei. Much appreciated."
+    show WG neutral-2
+    WG "It's a batch of slow churn of butter pecan I had Sakura make a couple of days ago. It takes a while to set up fully in the freezer."
+    FMG "Oh sweet, I knew you weren't going to hold out on me with the good stuff!"
+    FMG "! {w}Wud uh sec, I thud youd sid ther wud bee icecrweam sandwatches?"
+    show WG doubt
+    WG "Maybe you could have one if you waited two seconds before immediately stuffing your face."
+    show WG neutral
+    MC "They should be good to pull out of the oven. We were just warming up some triple chocolate chip cookies Aida had made a test batch of."
+    WG "I'm afraid these sandwiches don't come pre-assembled, but I'm sure you'll manage."
+    show FMG surprised-2
+    FMG "Holy moly! Those look amazing! {w} And they taste even better!"
+    show FMG happy
+    MC "{size=-6}Are you sure you don't want to try to save any for yourself Alice? At this rate she's going to tear through it all in a matter of minutes.{/size}"
+    show WG happy-2
+    WG "{size=-6}Oh, not to worry. As if I would offer up the entire stash for sacrifice. I've learned my lesson about offering to share food with Akira.{/size}"
+    MCT "I'm sure she has, considering Alice looks jipped out of getting enough food whenever she offers to share with just me."
+    FMG "Dude! That was soooo freaking good!"
+    MC "That was four liters of ice cream and an entire large sheet tray of cookies, and you're already finished?"
+    show WG neutral-2
+    WG "I mean... it's not completely out of the realm for a dessert course..."
+    MCT "I can't help but think there are some very skewed perspectives in this room."
+    show FMG neutral
+    FMG "Do you have any more?"
+    MC "Well, actually—"
+    show WG surprised
+    WG "No!" 
+    show WG neutral
+    extend " I mean, unfortunately you ate it all already."
+    show FMG sad-2
+    FMG "Bummer." 
+    show FMG flex 
+    extend " But it was totally worth it just to move some stuff around for you."
+    WG "I will admit your strength does come in handy, I'll have to see if I can make use of it more often."
+    show FMG neutral
+    FMG "Whenever you need me just let me know. I might have to increase my rates though, heh."
+    FMG "Hey! That reminds me, Alice, there's been something I've been meaning to ask you."
+    show WG surprised-2
+    WG "Oh? What might that be?"
+    FMG "You must be crazy strong from constantly carrying all that weight around all the time, right?"
+    stop music
+    MCT "Wow, she went there. I mean, not that I hadn't wondered that question myself on occasion, considering how she can still move with relative ease,  but... hoo boy..."
+    show WG doubt
+    WG "What's that supposed to mean?"
+    play music Rain
+    FMG "I mean, I didn't mean it in a bad way. It's super impressive. You must have like crazy strength endurance too to walk around carrying all that weight all day. You move pretty fast for someone who's so big."
+    show WG stern
+    WG "I haven't really cared to think about it, if I'm being honest."
+    FMG "Really? I bet you could totally max out the leg press machine in the gym with those gams."
+    show WG doubt
+    WG "Oh gee, I didn't realize there was such an amazing upside to all of this..."
+    show FMG sad-2
+    FMG "I just figured... like I know for me when things are tough, I try to focus on the positives. And that seemed to me like something that could be an upside to your factor. I mean, speaking for myself, being crazy strong is pretty cool."
+    WG "Tell me Akira, is there any other \"upside\" you see to this factor?"
+    show FMG surprised-2
+    FMG "Um... well... {w}uh... I got nothing."
+    "The only thing stronger than Akira's muscles was her infectious sense of enthusiasm, but even that couldn't manage to lift the mood in the room."
+    show FMG sad
+    FMG "Sorry Alice. I was trying to cheer you up. I didn't mean to make light of what you've had to go through."
+    show WG worried
+    WG "I appreciate your efforts, Akira. Normally I try to not let these things get to me, but today hasn't been an especially good day."
+    show WG sad
+    WG "The reason I asked you and Keisuke to come help me move my furniture was because I've finally had to face the fact that I've grown too fat to comfortably navigate my old room layout. I've grown so wide and round I kept bumping into everything."
+    show WG worried
+    WG "I thought I could get used to it, but it obviously didn't get any better. You've both been a big help today, and it's always fun when we get to hang out, but the reason why you're both here today hasn't been a happy reminder." 
+    show FMG sad-2
+    FMG "Man... That's heavy..."
+    show FMG surprised
+    FMG "I didn't mean it like that I swear! It's a common expression!"
+    show WG doubt
+    MC "..."
+    show FMG neutral
+    FMG "But uh, thank you for telling me, Alice. I know it wasn't easy to say any of that."
+    show WG worried
+    WG "Honestly, admitting it to myself is the hardest part." 
+    show WG neutral-2 
+    extend " Confiding in friends is often much easier I've found."  
+    MC "Alice... I'm sorry I didn't realize sooner." 
+    WG "It's okay, Dear. How could I have told you when I wasn't even ready to tell myself?"
+    show WG worried
+    WG "Sorry to dredge all that up now, Akira. I know that wasn't what you were asking for. {w}{i}Sigh{/i}... I've just had a lot on my mind lately, that's all."
+    FMG "You don't need to be sorry, Alice. I totally get it. It's not like you've had an easy time with how these things have turned out. If anything I'd say it's insane how quickly you bounce back from setbacks."
+    show WG neutral
+    WG "What do you mean?"
+    show WG surprised-2
+    FMG "I mean you're seriously tough! Like, I still wouldn't be over it if I got hit with the news you did at the beginning of the year about your factor." 
+    FMG "I'd have been devastated, but you walk around campus just as confident as the first day I met you."
+    show WG sad
+    WG "I can't say I still feel quite the same level of confidence as I did back then."
+    show WG surprised-2
+    FMG "Oh come on, why do you hold yourself to that? No one can all the time. We all come up against things that test our limits and make us feel small, but that's how we grow!"
+    show WG doubt
+    WG "..."
+    FMG "...As people." 
+    show FMG neutral
+    show WG neutral
+    FMG "Like take me for example. I thought I was growing pretty strong until I met Nat, and she really brought me down to earth. It feels like no matter what I do I can't manage to beat her, but she didn't make me give up, she made me want to be even better!"
+    show FMG happy
+    FMG "And now we're good friends! I swear one of these days I'm going to beat her at her own game, no matter how many times I lose!"
+    show WG doubt
+    WG "I'm not sure I'm ever going to become good friends with {i}this{/i} any time soon."
+    "Alice gave her belly a generous pat for emphasis, sending an undulating wave of blubber across her middle that reverberated to her sides and back while also jiggling her boobs as well."
+    show WG happy
+    FMG "I dunno, I mean, this guy over here seems to like it."
+    "It was beyond obvious at this point, but I still blushed beat red to hear Akira call me out like that."
+    show WG happy-2
+    WG "I guess it hasn't been an entire loss."
+    show WG worried
+    WG "It just gets frustrating, sometimes overwhelmingly so, it seems like every day I wake up to another outfit that won't fit, or another piece of furniture I knocked over, or something else I can't even reach anymore."
+    show WG surprised-2
+    FMG "I bet that does suck, but you know what would be even worse?"
+    WG "What do you mean?"
+    show WG surprised
+    show FMG surprised-2
+    MC "Having a meter long tongue?"
+    show FMG angry
+    FMG "Ew, what?! The one time I'm being serious, you have to make it all weird. {w}What is wrong with you?" 
+    show WG happy
+    WG "Hehehe."
+    show FMG neutral
+    show WG neutral
+    FMG "Okay, so maybe that, but what I was {i}trying{/i} to say, is what would be worse is having to deal with that kind of stuff everyday and not having a friend you can call on."
+    FMG "You don't have to move your own furniture, or reach the top shelf— you got me to do that!"
+    FMG "Just like I don't know the first thing about fixing clothes or proper dress sizing. I'd be walking around naked if it wasn't for your help."
+    show WG pondering
+    WG "I suppose that's true."
+    show WG neutral-2
+    if isEventCleared("WGFMG004A"):
+        FMG "And besides, it's not like I have my own private jet to fly me halfway across the country. Seriously, you've helped me out so much in ways that literally no one else could." 
+    play music Peaceful
+    FMG "You don't ever need to feel bad about the things you can't do. You do more for your friends than they could ever ask."
+    MC "Akira's right, Alice. We want to help when we can cause you've done so much for us as it is."
+    show WG worried
+    WG "I guess I hadn't thought about it like that before. Lately, I've felt like my increasing limitations have just been imposing a burden on others."
+    show FMG happy
+    FMG "Aww, don't ever think like that Alice. Come here."
+    "Akira opened her arms wide to come in for her signature amazonian bear hug, and wrapped her arms around Alice..."
+    show FMG surprised-2
+    show WG neutral-2
+    "Erm, uh, {i}trying{/i} to wrap her arms around Alice I should say, but her belly was way too wide for even Akira's wingspan to manage that feat."
+    show FMG neutral
+    MC "Let me get in on this."
+    show FMG happy
+    "Coming in from the other side, I reached around Alice to meet Akira's hands, wrapping her up nice and cozy between the two of us."
+    show WG happy
+    pause 1.5
+    WG "It's been a while since I've been able to feel like this... it feels... {w}{i}sigh{/i}... it feels nice."
+    FMG "I'll say. {w}Wow you're soft. I'm surprised Kei-kun doesn't cling onto you all the time. This is like lying on a luxury pillow."
+    MC "You're telling me."
+    show WG happy-2
+    show FMG surprised-2
+    WG "Oh trust me, he does it plenty. I can't keep his hands off me behind closed doors."
+    show FMG sad
+    FMG "I could've went my whole life without knowing that..."
+    show FMG neutral
+    show WG neutral-2
+    FMG "I guess on that note I should probably give you two lovebirds some alone time."
+    MC "Well... it's not that late, you still got time to hang out, Akira?"
+    show FMG happy
+    FMG "Totally! I'm free. {w}Hey! Let's go grab dinner. I heard there's this bbq place in town that's the bomb. They let you grill it yourself over hot coals."
+    MC "Dinner? After you just demolished all that ice cream?"
+    FMG "A girl's gotta get her protein."
+    show WG happy-2
+    WG "I certainly agree with that."
+    show WG sly
+    show FMG surprised-2
+    MC "Sounds good to me. Especially if Akira's paying."
+    FMG "On second thought, we could always rent a movie. That seems more in my price range." 
+    show WG happy-2
+    WG "Dinner {i}and{/i} a movie. What a great suggestion, Akira."
+    show FMG surprised
+    FMG "Wait! I didn't say that!"
+    MC "What a generous offer, Akira. Let's get head out now so we can beat the evening rush."
+    show FMG angry-3
+    FMG "I take it all back, you two are the worst!"
+    jump daymenu
+
 label WGGTS001:
     scene Classroom with fade
     play music Schoolday
@@ -29769,7 +31326,7 @@ label WGGTS003:
     MC "What the hell was that back there with Naomi? I know you two never got off on the right foot but was all of that really necessary?"
     show WG stern
     WG "Tsk, fine. I suppose you are correct in that it was not my finest moment."
-    WG "But you don't understand Keisuke. In all my years attending private schools, visiting  luxury resorts and business conferences with my father— I've been dealing with these snooty old–money types my whole life."
+    WG "But you don't understand Keisuke. In all my years attending private schools, visiting  luxury resorts and business conferences with my father— I've been dealing with these snooty old-money types my whole life."
     WG "Always looking down on me and my family, because we don't dress the way they think we should, or act in the \"traditions of the ancestors\", whatever the hell that means."
     show WG sad
     WG "I'm..."
