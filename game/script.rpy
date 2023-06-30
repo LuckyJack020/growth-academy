@@ -95,6 +95,7 @@ init python:
         'festival': ("town", (1100,650)),
         'field': ("town", (1100,650)),
         'frozenbeach': ("town", (1100,650)),
+        'gatefront': ("school", (570,390)),
         'giantdorminterior': ("town", (950,100)),
         'gym': ("school", (730,220)),
         'hallway': ("school", (745,375)),

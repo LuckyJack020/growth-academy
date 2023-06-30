@@ -5614,7 +5614,7 @@ label MC007:
     "Groan inducing puns aside, at this point I was just glad he didn't expect me to wear one of those pairs of glasses with the fake nose."
     scene black with fade
     pause 1
-    scene Town with fade
+    scene Town Shops with fade
     play music Peaceful
     "It didn't take us too long to get into town, there were plenty of buses running this time of day."
     if isEventCleared("MC005"):
@@ -5887,7 +5887,7 @@ label MC007:
     MC "Well, thanks for the pie, we'll be sure to come back."
     Chie "Thanks for coming! You'll always be welcome here!"
     Haruko "Thanks for coming. Please come again!"
-    scene Town
+    scene Town Shops
     show RM neutral
     with fade
     "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he's trying to take things in stride."
@@ -6041,6 +6041,7 @@ label MC008:
     play music BE
     UNKNOWN "... -Kei-chan, please?"
     "I looked up and to my left."
+    show BE happy with dissolve
     "Honoka was leaned over, and whispering something to Akira, before pressing a piece of paper into Akira's palm."
     if getHighestAffection() == ("BE"):
         "I let my gaze linger on Honoka's chest."
@@ -6049,9 +6050,15 @@ label MC008:
         "I gazed across the room, looking mainly at Honoka's swollen chest."
         MCT "I never notice in the moment... but God, those things have gotten bigger since we first caught up."
         MCT "She was big then, too. Man."
+    hide BE
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Akira turned and glanced back at Alice, whispering something to her."
     "Alice sighed, taking the paper from Akira."
+    hide FMG with dissolve
     "She glanced over to me, then underhanded the paper over and right onto my desk, landing right in the middle of my notebook."
+    hide WG with dissolve
     MCT "... Ooookay."
     "I unfolded the paper and glanced at the corner, where there was something written, going down vertically."
     MCT "... What the... hell?"
@@ -6063,9 +6070,12 @@ label MC008:
     "But, Honoka was busy taking notes, her paper pushed way out so she could see over her chest pillows."
     show BE wink
     "She glanced over after a moment, and grinned. She gestured with both arms, moving them back in toward herself, her chest bouncing rhythmically up and down."
+    show BE happy
     MCT "Open the mental channel, Honoka. I've got nothing here."
+    show AE neutral-eyebrow at Position(xcenter=0.8, yalign=1.0) with dissolve
     "I looked forward, where Shiori was glaring over at Honoka."
     MCT "Am I supposed to just guess? I don't know, pig latin?"
+    hide AE with dissolve
     MCT "Actually... is it a code? Like a cipher or something?"
     MCT "Would Honoka even know how to-"
     pause .5
@@ -6086,9 +6096,11 @@ label MC008:
     "Alice simply sighed."
     "She held her hand out and I passed it to her."
     "The note went forward to Akira, then back to Honoka."
+    show BE happy with dissolve
     "Honoka unfolded it, glanced down, then looked back over, beaming."
     $setAffection("BE", 1)
     "I grinned, thinking far back to the first time we'd done this."
+    hide BE with dissolve
     "We'd had the most boring teacher ever in third grade. So to pass the time, Honoka and I took up writing notes to each other."
     "Of course, we eventually were caught... {w}well, Honoka was."
     "Our teacher, Imai-sensei, had read Honoka's note out in front of class, embarrassing the hell out of her in class."
@@ -6096,10 +6108,12 @@ label MC008:
     "So, we went back to her house, and wrote up a fake language. Totally the idea that two rebellious eight year olds would cook up. Basically, writing out our notes in reverse, so if a teacher ever got ahold of it, they'd have no idea what we were saying."
     "This became our game in school for the rest of that school year."
     MCT "... Never got caught after that, but hey, coding was a lot of fun."
+    show Tsubasa neutral with dissolve
     "Waiting for a reply, I looked up to Tsubasa-sensei."
     Tsubasa "-ter they are absorbed, they therefore will..."
     MCT "Good lord..."
     "I caught up on the board, and was nearly at the end, when a folded piece of paper flapped down onto my desk again."
+    hide Tsubasa with dissolve
     show WG stern with dissolve
     "I looked to Alice, who gave me a sort of scowl before facing front again."
     hide WG with dissolve
@@ -6131,15 +6145,16 @@ label MC008:
     Tsubasa "{i}Ahem.{/i}"
     show GTS surprised
     "Both of us looked back down at our notes and continued writing."
+    show Tsubasa neutral at Transform(xzoom=-1)
+    pause 0.1
+    hide Tsubasa with easeoutright
     if isEventCleared("GTS026"):
         "Out of the corner of my eye, I caught her staring at my back for a curious moment before she continued."
     GTS "{size=+4}...Apologies, Hotsure-san. I did not imagine my voice should carry so much...{/size}"
     if isEventCleared("GTS004"):
         MCT "So it's not just me..."
     MC "No worries."
-    hide GTS
-    hide Tsubasa
-    with dissolve
+    hide GTS with dissolve
     "As I copied down more terms from the board, my mind wandered off of bread and carbs and more on how I now had to look up slightly to talk to Naomi, instead of straight on."
     if isEventCleared("MC007") or isEventCleared("RM004"):
         MCT "I wonder... those \"giants\" dorms. Will... will Yamazaki-san be sent there?"
@@ -6157,7 +6172,7 @@ label MC008:
     "I smiled to myself, as the note came back to me."
     "I looked up. Alice looked... noticeably uncomfortable."
     "I gave her a soft, thankful smile, glad that she was helping us have some fun."
-    "Unfolding the note, there was a new writing at the bottom of the paper. Fully uncoded and written in romaji."
+    "Unfolding the note, there was a new writing at the bottom of the paper. Fully uncoded and written in hiragana."
     "{i}What is this???{/i}"
     "I glanced up."
     "Akira was looking back at me. Seeing me notice her, she gestured with one hand, her head cocked."
@@ -6240,10 +6255,23 @@ label MC008:
         "She got it right in her hands, but the momentum of the toss carried the ball right out of her hands."
         "Honoka lunged for it, knowing the noise of paper hitting the floor would alert Tsubasa-sensei."
         play music Peaceful
+        show BE surprised at Position(xcenter=0.15, yalign=1.0)
+        show PRG surprised at Position(xcenter=0.26, yalign=1.0)
+        show FMG surprised at Position(xcenter=0.40, yalign=1.0) behind PRG
+        show WG surprised at Position(xcenter=0.60, yalign=1.0)
+        show AE surprised at Position(xcenter=0.75, yalign=1.0)
+        show GTS surprised at Position(xcenter=0.90, yalign=1.0) behind AE
+        with vpunch
         "{i}Brrrrrch-IIIIT!!{/i}"
         "Everyone in the class jolted as Honoka's chest bumped her desk, knocking her desk forward, and popping the paper right onto her desk."
+        hide PRG
+        hide FMG
+        hide WG
+        hide AE
+        hide GTS
         show BE surprised-2 at altMove(0.5, 0.25)
-        show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
     else:
         "I hurled the ball straight over Alice... and totally biffed it."
         "The ball curved to the side, and nailed Daichi right in the head."
@@ -6317,6 +6345,7 @@ label MC008:
     hide BE with dissolve
     show Tsubasa neutral at altMove(0.5, 0.5)
     Tsubasa "Afterwhich, the-"
+    play sound Bell
     "The bell chimed overhead."
     Tsubasa "Mgh? Yes, well. Prepare for a test on this material coming up."
     if getFlag("MC008_PayAttention"):
@@ -6363,7 +6392,7 @@ label MC008:
         Tsubasa "I have it with me. I've hung one up already, and I'll be pinning another up later today."
         pause .75
         Tsubasa "Yes, Dear. I know it's important."
-        if getFlag(Meet_Chiyo):
+        if getFlag("Meet_Chiyo"):
             MCT "Talking to his wife, most likely. Chiyo-san, if I remember right."
         "Tsubasa-sensei glanced up, rubbing his forehead."
         Tsubasa "Yes, I will. I have a student waiting for me, Dear. I'll see you tonight."
@@ -6996,7 +7025,7 @@ label MC009:
         show dummy with vpunch
         pause .25
         show Takamura neutral at altMove(0.5, 0.25)
-        show Sakura frustrated at Position(xcenter=0.75, yalign=1.0) with easeinright
+        show Sakura angry at Position(xcenter=0.75, yalign=1.0) with easeinright
         pause .5
         "The door slammed open across the room, and in came Sakura, her arms covered in some sort of white powdery substance."
         "Behind her, more shouting echoed in."
@@ -7016,7 +7045,7 @@ label MC009:
         show dummy with vpunch
         pause .25
         show Takamura neutral at altMove(0.5, 0.25)
-        show Sakura frustrated at Position(xcenter=0.75, yalign=1.0) with easeinright
+        show Sakura angry at Position(xcenter=0.75, yalign=1.0) with easeinright
         pause .5
         "The door slammed open across the room, and in came a girl with an apron on, her arms covered in some sort of white powdery substance."
         "Behind her, more shouting echoed in."

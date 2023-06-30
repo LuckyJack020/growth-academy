@@ -6377,7 +6377,7 @@ label FMG040:
     FMG "I-I'm okay. That was really close, I almost died."
     MC "You're ridiculous, hahaha."
     show FMG happy
-    FMG "You act like this all the time!."
+    FMG "You act like this all the time!"
     MC "Yeah, but it's funny when I do it."
     show FMG sad
     FMG "..."
@@ -6916,7 +6916,7 @@ label FMG042:
     MC "I beg to differ. A quick peek at the leaderboard shows me steamrolling the enemy team."
     "When I start trying I'm the type of dude who sound-whores every corner while following my gunfights up with a hint of drop shotting. Helps tilt the competition."
     "Angry Adolescent" "This little bitch running around with the Howa is starting to piss me off."
-    "That One Squeaker" "Dude, I know, he's so annoying... STOP DROP SHOTTING!."
+    "That One Squeaker" "Dude, I know, he's so annoying... STOP DROP SHOTTING!"
     MC "Heh, this dude is foaming at the mouth. You got a mic?"
     show FMG happy
     FMG "I'm glad you asked... Here ya go."
@@ -18452,9 +18452,11 @@ label FMG087A:
     MC "O-Out..."
     FMG "Haaah... nngh... s-sorry, I um... g-got really into it..."
     MC "Holy shit..."
+    show FMG flex
     FMG "That... was... AWESOME!"
     "She looked at me and closed her eyes, smiling broadly with a boyish chuckle. Followed by her flexing her powerful arms before she was hit with realization."
     FMG "F-Fuck... I really hope that won't be a problem."
+    show FMG aroused
     "Akira side eyed the large crack she made in the wall as she pursed her lips. Meanwhile, I just chuckled."
     MC "W-Well... back adjustment aside... I haven't cum yet, which means I win!~"
     FMG "Hah- W-What?!"
@@ -19012,7 +19014,7 @@ label FMG089:
         show FMG flex
         FMG "That sounds like me!"
         show FMG neutral
-        Extend " And I'm ready to do it again!"
+        extend " And I'm ready to do it again!"
         MC "You can't be serious..."
         show FMG happy
         FMG "I'm dead serious. Breaking that headboard got me going!"
@@ -19127,7 +19129,7 @@ label FMG089:
     MCT "I should stop..."
     FMG "D...Don't stop licking."
     MCT "Nevermind."
-    FMG "Aaaa, go faster, come on!."
+    FMG "Aaaa, go faster, come on!"
     "As I began to increase the pace, Akira's moans grew more frequent and louder as my tongue swirled and prodded— every inch of her eager ladyhood being serviced by my tongue as my moans vibrated her pleasurably."
     FMG "Oooooo, keep... keep going and start rubbing... m-my thighs."
     MCT "So needy."
@@ -19149,7 +19151,7 @@ label FMG089:
     FMG "After we cuddle for a bit... {w}I want round three."
     MC "You must be joking? You nearly sucked the life out of me and you just unleashed a tsunami in the bed."
     show FMG neutral
-    FMG "Sorry, Kei, today I'm feeling it. I'm just starting to sweat!."
+    FMG "Sorry, Kei, today I'm feeling it. I'm just starting to sweat!"
     MC "..."
     FMG "You didn't put that condom on for nothing."
     MC "I uh... completely forgot about it... {w}Got lost in the moment, heh."
@@ -19212,12 +19214,12 @@ label FMG089:
     "Akira landed down on me with force, pushing me in as far as I could go as I shot a heavy load deep into her as she panted; coming down from our high in the ruins of the shattered bed."
     FMG "F-Fuck... wow... That was awesome!"
     MC "That... was... crazy..."
+    show FMG neutral with dissolve
     FMG "Hehe... how are you doing?"
     MC "I-I um... can't feel my legs."
     FMG "Yeah... same~"
     MCT "That wasn't supposed to be me flirting, I legitimately can't move my legs right now."
     "Akira looked at me with a soft and gentle face which betrayed her hard, rugged exterior. I looked at her and chuckled as she leaned down and nuzzled her nose to mine."
-    show FMG neutral with dissolve
     MC "Akira... can you carry me to the shower?"
     FMG "That bad, huh?"
     MC "It feels like my whole body shut down. {w}Maybe I'm dying."
@@ -19853,7 +19855,7 @@ label FMGWG001:
     scene black with fade
     pause 1
 
-    scene Town with fade
+    scene Town Shops with fade
     play music BrightLights
     "It didn't take us too long to get into town, there were plenty of buses running this time of day. Our destination wasn't too far from the bus stop. Both Akira and Alice knew where to go so I just followed their lead."
     if isEventCleared("MC005"):
@@ -20184,7 +20186,7 @@ label FMGWG001:
     MC "Well, thanks for the pie, and the coffee. They were good. Our friends enjoyed the cupcakes as well.  I'm sure we'll be back."
     Chie "Thanks for coming! You'll always be welcome here!"
     Haruko "Please come again!"
-    scene Town
+    scene Town Shops
     show RM neutral
     with fade
     "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he managed to get over his initial disappointment. I guess it wasn't a total bust for him."
@@ -20227,7 +20229,7 @@ label FMGWG002:
     MC "Should we though? I'm thinking as a reward we should take it easy today. I'm talking like five push-ups and we call it a day."
     show FMG neutral
     FMG "Hmmm...Okay, I think that's fair."
-    MC "Really?!?!."
+    MC "Really?!?!"
     show FMG flex
     FMG "Pffff, who do you take me for? When we're done you'll be crawling out of the locker room."
     MCT "From now on, I'm going to stop talking."
@@ -21154,17 +21156,17 @@ label FMGWG006:
     FMG "..."
     WG "Akira, if you must, throw the other less expensive couch, please. I'm quite fond of the color on that one."
     show FMG neutral
-    FMG "Heh, I won't {w}Is this spot good or do you need it moved a bit more?"
+    FMG "Heh, I won't. {w}Is this spot good or do you need it moved a bit more?"
     show WG neutral-2
     WG "Hm... {w}That will do. Thank you, Akira."
     FMG "All that's left is the bed?"
     show WG neutral
-    WG "Yes and after that we can go out for lunch."
+    WG "Yes, and after that we can go out for lunch."
     show FMG happy
     FMG "Hell yes, I'm so excited. I'm going to eat till I pass out."
     scene black with fade
     pause 1
-    scene Cafe with fade
+    scene Diner with fade
     MC "Akira, slow down... {w}The food isn't going anywhere."
     show FMG happy with dissolve
     FMG "Dude, it's sooooo freaking good."
@@ -21178,8 +21180,8 @@ label FMGWG006:
     show WG worried
     "Alice didn't say anything in response to my question at first. Instead, she gave a concerned frown as she looked down at her belly."
     MCT "Oh... I guess she really has..."
-    WG "Unfortunately for me, I told her she could eat as much as she wants. I will hold up my end of the deal, though I will have to reconsider any such similar offers in the future."
     show WG neutral
+    WG "Unfortunately for me, I told her she could eat as much as she wants. I will hold up my end of the deal, though I will have to reconsider any such similar offers in the future."
     MC "Well, I'm keeping my hands on {i}this{/i} side of the table just in case."
     show WG happy
     WG "You should know better than to get between a woman and her food."
@@ -21190,12 +21192,14 @@ label FMGWG006:
     show WG neutral
     WG "Hm? And what might that be?"
     FMG "You must be crazy strong to carry all that weight around, right? It's impressive."
+    show WG doubt
     MCT "Oh boy..."
     show WG stern
     WG "What's that supposed to mean?"
     FMG "I didn't mean it in a bad way. I always found how you carried yourself while having a factor like that admirable. I know for a fact I wouldn't have the mental strength that you have to handle something like that."
     FMG "It's freaking awesome."
     show WG sad
+    play music Rain
     WG "..."
     MCT "Should I jump in and say something? I'm not sure if this is going well or not."
     WG "Thank you, Akira. {w}I wish others shared your way of thinking."
@@ -21222,6 +21226,7 @@ label FMGWG006:
     show FMG sad
     "Those few words hit Akira square in the chest. She didn't wince nearly as hard when I accidentally dropped a weight plate on her foot as she did just now hearing that from Alice." 
     FMG "I'm really sorry about all those times. With how you carried yourself, I thought you didn't care. That your factor was nothing more than this obstacle in your path that you had already conquered."
+    show WG worried
     WG "That's what I tell myself. Most days I manage just fine, but some days I have a hard time believing it."
     WG "I never gave too much thought to your jokes. I know neither of you carries the malice or disgust I hear whispered about me when I'm out in public. It's just... sometimes even I get tired of it coming from everywhere."
     show FMG neutral
@@ -21231,6 +21236,7 @@ label FMGWG006:
     show WG worried
     WG "Despite knowing the layout of my own room quite well, I found myself still bumping into everything."
     show FMG happy
+    play music Peaceful
     FMG "I'm happy to help you no matter what. That's what friends are for. {w}And I'm all for beating up anyone who insults you."
     show WG happy
     WG "I'm sure it won't ever have to come to that but I'll keep that in mind— ha!"
@@ -21242,10 +21248,11 @@ label FMGWG006:
     show FMG neutral
     FMG "Awwww, Alice, that's not true. Come here."
     "Akira got up from her side of the table, and wrapped her arms around Alice... erm, uh, {i}trying{/i} to wrap her arms around Alice I should say, but her belly was way too wide for even Akira's wingspan to manage that feat."
+    show WG neutral
     "Akira managed to recover with a bit of an awkward shuffle between her hands and Alice's various folds and was able to find a nice foothold to give her a firm side hug." 
     "It wasn't perfect, but it was the best the two behemoths could manage with each other." 
-    MCT "Can always count on Akira to make someone feel better, heh."
     show WG happy
+    MCT "Can always count on Akira to make someone feel better, heh."
     WG "Thank you, Akira. It's nice to know I have some friends to lean on when going through this."
     show FMG happy
     FMG "You're welcome. Sometimes all you need is a hug."
@@ -21270,6 +21277,7 @@ label FMGWG006:
     pause 1
 
     $setTime(TimeEnum.EVE)
+    play music Sunset
     scene Roof
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show WG neutral at Position(xcenter=0.7, yalign=1.0)

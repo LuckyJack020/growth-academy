@@ -1625,7 +1625,7 @@ label WG010:
     WG "but I- going directly to the company that has the contract with this school- was able to get this comfortable and properly-fitting outfit before my old set became restrictive."
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now-wider torso and rounder belly."
     show WG happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
-    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly."
+    "I actually hadn't noticed that she had gotten plumper. It hadn't been a month yet, and I wasn't expecting to see such changes so quickly."
     "Seeing it up close, I'd be lying if I said it didn't catch my... attention, shall we say."
     "Unless she had told me I wouldn't have noticed that this was a larger outfit— it fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
     show WG haughty at center, Transform(zoom=1.0)
@@ -1687,6 +1687,7 @@ label WG010_c1:
 
     else:
         $setFlag("WG010_Shiori")
+        play music AE
         scene Hallway
         show AE angry
         with fade
@@ -1722,6 +1723,7 @@ label WG010_c1:
 label WG010_c2:
     $setVar("BEP", getVar("BEP") + 1)
     $setFlag("WG010_Aida")
+    play music PRG
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral at center with dissolve
@@ -1765,6 +1767,7 @@ label WG010_c2:
     jump daymenu
 
 label WG010_c3:
+    play music BE
     scene Hallway with fade
     "I was trying to think of where I could find Honoka when I was suddenly tackled from behind, collapsing to the ground."
     play sound Thud
@@ -13944,7 +13947,6 @@ label WG053_c3_after:
         WG "That is reassuring, but what I'm getting at is even though I have Chibuki to assist me, given that Aida is no longer in any shape to act as my assistant full time, I highly doubt I'm done growing but things are already becoming more difficult."
         show WG sad
         WG "Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
-        show WG haughty
         WG "I have taken for granted my family's servants, as well as Chibuki and Aida, but it is becoming clear that assistance will become not just a convenience for me— but a necessity."
         show WG worried
         WG "The thought of being dependent like that troubles me, more so the fear that I would become a burden."
@@ -14720,7 +14722,7 @@ label WG056:
     show WG neutral
     pause 1
     WG "Okay."
-    MC "Now take away my more redeeming qualities— and that's all your left with. Times ten. That's Tomoko."
+    MC "Now take away my more redeeming qualities— and that's all you're left with. Times ten. That's Tomoko."
     "Alice just stared at me, completely unphased by the point I was trying to drive home."
     show WG sly
     WG "So, if I understand you correctly, what you're trying to say is, you two are exactly alike?"
@@ -18820,7 +18822,7 @@ label WG063:
     "Unlike Honoka, at least Natsuko was cooperative with the process. She was no stranger to getting sized up like this before."
     "She didn't need to be told to put her arms down, or arms up for the measurements as we went along."
     "Her chest was impressive enough, but it was a far cry from Alice's— or so I thought until I got the measuring tape all the way around her upper torso. All that extra back muscle made it pretty close."
-    WG "Pull the tape taught, Keisuke."
+    WG "Pull the tape taut, Keisuke."
     MC "Oh, uh, right!"
     "I tried my best to not get handsy by meeting the ends of the tape on the sides."
     "But when I reflexively jumped at Alice's command the back of my hand made pretty decent contact across her boob."
@@ -18902,7 +18904,7 @@ label WG063:
     show WG happy
     extend " Hehe."
     "The tape flopped across her backside, but I hiked it up across the small of her back, if anything could still be called small on her anymore."
-    "Spreading out my arms as wide as I could, I began to pull it taught across the sides of her belly."
+    "Spreading out my arms as wide as I could, I began to pull it taut across the sides of her belly."
     MC "..."
     "Only to realize the ends of the measuring tape were nowhere near meeting together."
     MCT "Are you freaking kidding me?"
@@ -20951,7 +20953,7 @@ label WG071:
     MC "Uhh, hi..."
     WG "Hi."
     show WG happy:
-        linear 0.5 ycenter 0.5 zoom 1
+        linear 0.5 ycenter 0.5 zoom 1 yalign 1.0
     "Her tone was happy and playful, almost giddy even. If I had to guess, she was as nervous and excited as I was."
     MC "I know we hadn't talked too much about this sort of thing... But it seems like we've both been thinking the same thing."
     show WG neutral-2
@@ -21057,7 +21059,7 @@ label WG071:
     WG "{size=-6}{i}Eehhn...mmph!{/i}{/size}"
     "Alice was clearly enjoying this even more than what I was doing before. More than a few times I grabbed ahold of her love handles and attempted to lift her titanic mass."
     "Handfuls upon handfuls of sheer lard, more than I could grasp, as I fondled and wobbled its girth."
-    "I was putting in serious effort to lift it up from her sides, but I only succeeded in drawing it taught from the pendulous apex of her mass, not even close to actually lifting it. I'd need to get under there to do that."
+    "I was putting in serious effort to lift it up from her sides, but I only succeeded in drawing it taut from the pendulous apex of her mass, not even close to actually lifting it. I'd need to get under there to do that."
     WG "{i}Ohh.. Keisuke{/i}! {i}Mmmgh{/i}... {w}please don't stop."
     "Alice's voice quivered with desire and further anticipation. Things were heating up, it was probably best to take this to the bed. I slowly but firmly guided her towards the bed, leading the bulk of her mass by her belly, gently nudging her along."
     show WG neutral-2
@@ -24335,7 +24337,7 @@ label WG079:
     play music Sunset
     "I walked with Alice back to her dorm, carrying a box with the remaining goodies leftover from the party. Though it was rather large, it was still paltry in comparison to the entire spread at the start of the party."
     show WG neutral-2
-    "Alice's belly was looking even plumper than usual, slightly taught from being engorged with the dozens and dozens of sweet mini-cakes she had partaken of the entire afternoon."
+    "Alice's belly was looking even plumper than usual, slightly taut from being engorged with the dozens and dozens of sweet mini-cakes she had partaken of the entire afternoon."
     "There were easily enough calories packed in that belly from just this afternoon that would have kept someone my size alive for an entire arctic winter."
     WG "That was such a lovely time. I shouldn't have underestimated Aida's efforts to go out of her way to be so generous."
     MC "I suppose you have your reasons Alice, but if you don't mind me asking, why did you keep it a secret? Why wouldn't your friends want to do something for your birthday? I mean, you could have told me at least."
@@ -25443,7 +25445,7 @@ label WG081:
     show WG doubt
     show Vivian surprised at Transform(xzoom=-1)
     "...Which turned out to have required three, much to the surprise of the staff, who were profusely apologetic that their preparations had fallen so short of expectations, promptly remedying their oversight." 
-    show Vivian neutral
+    show Vivian neutral at Transform(xzoom=1)
     "It was not the best start to the meal by any means. I could tell Alice was feeling a bit raddled from such an embarrassing spectacle, in front of her mother no less." 
     show WG neutral
     "That aside, she was able to compose herself and settle in for a much anticipated meal." 
@@ -25940,6 +25942,7 @@ label WG082:
     Tomoko "So what did you put in your application for extra-curriculars?"
     MC "That's a very strange way of saying \"Goodbye and I'm leaving.\"."
     Tomoko "I'll see you two later. Thanks again, Alice."
+    $setAffection("TM", 1)
     show WG neutral
     WG "Goodnight, Tomo."
     MC "Later."
@@ -26024,6 +26027,7 @@ label WG082:
     MC "It certainly couldn't hurt."
     show WG neutral
     play music Memories
+    pause 1
     MC "That reminds me, I don't think I ever got to ask... I mean I assumed, but... what are your plans after we're done here at Seicho?"
     show WG neutral-2
     WG "I've been accepted to Yalde, in their School of Business management. It's my Mother's alma mater. With how much she's contributed to their endowment over the years, there's no way I wouldn't have gotten in."
@@ -26042,9 +26046,9 @@ label WG082:
     show WG neutral
     WG "Running a small business is quite small in scope compared to the skills needed to keep a multinational enterprise like the Nikumaru Holding Company running."
     MC "Seems like you have enough business experience to me already, do you need the degree?"
-    WG "Probably not. But discussing this with father he and I agreed that even if the degree is nothing but a piece of paper backed by the opinion of armchair businessmen that couldn't hack it in the real corporate world,"
+    WG "Probably not. But discussing this with father, he and I agreed that even if the degree is nothing but a piece of paper backed by the opinion of armchair businessmen that couldn't hack it in the real corporate world."
     show WG haughty
-    WG "an executive with an MBA from a prestigious American university business school would inspire investor confidence, which will be sorely needed given the role image plays in investor confidence."
+    WG "An executive with an MBA from a prestigious American university business school would inspire investor confidence, which will be sorely needed given the role image plays in that regard."
     show WG stern
     stop music fadeout 2.0
     WG "Given that my image is more likely to inspire shareholders to hide their lunch, rather than hand over their hard earned yen, I need to do everything I can to look good on paper."
@@ -26073,6 +26077,7 @@ label WG082:
     WG "Keisuke, Dear. I hope if you've learned anything about me by now, more so than that my time is valuable, is that I will always {i}make{/i} time for those who I value the most."
     show WG aroused
     "I reached out my hand for Alice's, placing my other one on top of hers. Even her hand was as plush as a downy pillow, my fingers running along the dimples that had long since hidden her knuckles, as I gave it a firm, yet gentle squeeze."
+    show WG happy
     MC "Thanks. I needed that reminder. All this application stuff got me thinking. Thinking about how all of this is going to turn out for us in the long term."
     show WG neutral-2
     MC "Heh, it's funny, you know? When I first got here I was worried about the future, how everything was going to change, how I wished I could just go back home, leave the island and everything that lay ahead of me behind."
@@ -26094,10 +26099,11 @@ label WG082:
     show WG aroused
     MC "Aw, I love you Babe."
     "I leaned in for a kiss, my chest gliding across her impossibly large squishy breasts as I sank into them in order to draw near, planting one on her soft pouty lips as her chubby cheeks brushed against mine."
-    "We held it there, a moment where time finally stopped{w}— if only for a little while."
+    "And we held it there, a moment where time finally stopped{w}— if only for a little while."
     jump daymenu
 
 label WG084:
+    $setProgress("WG", "WG085")
     scene Music Classroom with fade
     play music MCGuitar
     "I was hanging out in one of the music practice rooms playing my guitar."
@@ -26216,7 +26222,7 @@ label WG084:
         WG "I don't see what good that would do. She hasn't listened to anything I've suggested before."
         MC "Babe, I love you and I got your back no matter what, but you and I both know there are more mature ways to handle this sort of thing."
         show WG worried
-        WG "Sigh... You're right." 
+        WG "{i}Sigh{/i}... You're right." 
         show WG stern
         extend " I despise her so much I was hoping to be able to humiliate her with a public confrontation, more so than attempting to navigate the situation with nuance."
         show WG doubt
@@ -26687,6 +26693,7 @@ label WGAE001:
             AE "..."
             MCT "Yikes! I'm going to be in for it now."
             AE "I do not make exceptions. Neither should you."
+            show AE neutral
         "This sounds pretty serious.":
             $setAffection("AE", 1)
             MC "Geez... this sounds pretty serious from how you talk about it."
@@ -26836,7 +26843,7 @@ label WGAE001:
     pause 1
     MC "So, I guess that takes care of that then."
     WG "It would seem so. If nothing else it'll keep her off my back for quite a while."
-    if getVar("WGAE_ConF") < 1:
+    if getFlag("WGAE001_cooperate"):
         show WG haughty
         WG "Though there is still the matter of what I overheard from the student council members chatting with each other."
         show WG stern
@@ -26886,7 +26893,8 @@ label WGAE001:
         MC "Alright, I'll head down there right now. I'll catch up with you later."
         WG "Have a good evening Keisuke."
         hide WG with dissolve
-        "In retrospect I guess I didn't need to be such a dick to that guy, even if he deserved it." "Still though, I should have known the satisfaction of 1-upping that dweeb was going to be temporary, and now I've gone and just made things more difficult for me and Alice to draw in new customers."
+        "In retrospect I guess I didn't need to be such a dick to that guy, even if he deserved it."
+        "Still though, I should have known the satisfaction of 1-upping that dweeb was going to be temporary, and now I've gone and just made things more difficult for me and Alice to draw in new customers."
     else:
         show WG haughty
         WG "Though I thought I should mention what I overheard from the student council members chatting with each other."
@@ -30603,9 +30611,9 @@ label WGFMG004B:
     "Alice sat back in her chair, or chairs as it were, because let's face it, there was no need to pretend one, or even two of these dinky chairs could handle all of her ass."
     "She perched her hands daintily on top of her belly, with a look of contentment on her face that invited me closer. {w}By this point in our relationship, I knew what was being asked without her having to say a word."
     show WG happy
-    "I reached out from my seat to place my hands on her overly taught belly, gently gliding them back and forth and in circles through her dress across the upper part of her vast dome where it was most taxed."
+    "I reached out from my seat to place my hands on her overly taut belly, gently gliding them back and forth and in circles through her dress across the upper part of her vast dome where it was most taxed."
     WG "Mmm. That feels nice."
-    "I could feel through the taught fabric that her belly, despite an impossibly thick layer of flab, was drum tight."
+    "I could feel through the taut fabric that her belly, despite an impossibly thick layer of flab, was drum tight."
     "It was impossibly soft and yielding at the very surface, but the internal pressure of its contents pushed back as much as something so plush could possibly allow."
     show WG aroused
     WG "You know just the right spot, don't you?"
@@ -30637,7 +30645,7 @@ label WGFMG004B:
         $setAffection("WG", -1)
         WG "I suppose that is somewhat of an upside."
     show WG neutral
-    "My hands continued to go to town on her big blubbery boulder of a belly. The contrast between the taught and flabby parts of her engorged middle was as hot as it was perplexing to my overstimulated mind."
+    "My hands continued to go to town on her big blubbery boulder of a belly. The contrast between the taut and flabby parts of her engorged middle was as hot as it was perplexing to my overstimulated mind."
     "Needless to say, it made focusing on conversation difficult, but not impossible."
     MC "I gotta admit though, I'm surprised you agreed to a contest."
     show WG worried
@@ -30701,7 +30709,7 @@ label WGFMG005:
     MC "I'm not tired, but I think I will be if I have to move everything twice."
     show WG neutral
     WG "Well I've got some bad news for you, Dear. Most of this furniture has to be moved out of the way so we can move the couch and the bed to their destination first."
-    "By \"we\" can move the couch, she meant \"you\", meaning me. If that made any sense." 
+    "By \"we\" can move the couch, she meant \"you\", meaning me. {w}If that made any sense." 
     "In contrast to the previous time I helped her rearrange the furniture in her room, Alice and Aida were not exactly in a position to be offering any assistance on account of both their midsections having ballooned beyond their reach months ago."
     show WG neutral-2
     WG "Speaking of that, now that you've cleared a path, let's get the bed moved over."
@@ -30739,7 +30747,7 @@ label WGFMG005:
     play music WG
     scene Dorm WG
     show FMG angry at Position(xcenter=0.25, yalign=1.0)
-    show WG neutral at Position(xcenter=0.8, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
     with fade
     FMG "PFFT! What do you mean I don't get paid if I bust up your furniture? What kind of amateur do you take me for?" 
     show FMG happy

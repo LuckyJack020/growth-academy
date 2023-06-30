@@ -25155,7 +25155,7 @@ label PRG045:
     "But... this one was what it was. Her parents knew that, not only did she have a factor, but she'd had to have sex to make it all play out."
     "Like... Aida's entire body was a walking billboard that told anyone paying attention that she'd had sex."
     "And to meet up with her parents, this fact very well known and a clear elephant in the room... {w}well, it was sure to be at least a little awkward."
-    "Especially knowing Aida. She didn't exactly have the \"swinger\"type of personality."
+    "Especially knowing Aida. She didn't exactly have the \"swinger\" type of personality."
     "I took hold of the door handle and stepped inside the girl's dorms."
     scene Dorm Hallway with fade
     "The dorms were quieter now. With many students still away for the last bits of summer break, the halls were empty corridors with only the occasional blare of a TV or a door opening or closing."
@@ -25268,6 +25268,7 @@ label PRG045:
             "I kept rubbing carefully, while also not minding where my hand was."
             MC "There..."
             PRG "T-The... other side? P-Please?"
+            show PRG blush-2 at Transform(xzoom=-1)
             "I got up and moved to the other side of her, getting to work."
             PRG "Ohhhhmmnnn... t-there. R-Right... mmmngg..."
             "As I kept rubbing, I was well aware of the butterflies flooding into my stomach."
@@ -25280,7 +25281,7 @@ label PRG045:
             PRG "Mmmn... mmmmmmnnn..."
             "One of her hands came away from the bed where she was holding herself, and up to her belly, resting right on top."
             MCT "Is she-"
-            play SFX knock
+            play sound Knock
             Sakura "Helloooo?"
             show PRG scared
             PRG "ACH!"
@@ -25362,7 +25363,7 @@ label PRG045:
             MC "Okay. Next is... K. card?"
             PRG "I-I have that."
             MC "Ah... okay. Next is-"
-            play SFX knock
+            play sound Knock
             Sakura "HELLOOOOO!!"
             show PRG surprised
             PRG "Oh! W-We can finish this later!"
@@ -25472,6 +25473,7 @@ label PRG045:
     BE "Oh, your bedroom is so clean! Looks nice!"
     BE "Hey, Kei-chan! What are we getting you for clothes? A nice three piece suit?"
     MC "Yeah right. Maybe a new pair of jeans or something."
+    show Sakura neutral at Transform(xzoom=-1)
     PRG "Inoue-san? This is Sakura Myoga. She's my cooking partner in the cooking club, and one of my best friends."
     BE "Hey! Nice to meet ya!"
     show Sakura happy
@@ -25510,6 +25512,7 @@ label PRG045:
     BE "Well, I could. But, it looked like something a grandma would wear."
     show PRG neutral
     PRG "You could get something today."
+    show BE neutral
     BE "Mm, nah. Today is your day, Kodama-san. I've got all the time in the world to go shopping."
     "We turned and made our way down the street."
     "This time, we didn't have to go far. The clothing store was only about a block down."
@@ -25586,16 +25589,17 @@ label PRG045:
     pause .5
     MCT "... 45 minutes."
     "I rubbed my legs to get blood flow back,"
-    show PRG scared at Position(xcenter=-0.2, yalign=1.0), Transform(xzoom=-1)
-    show Sakura happy at Position(xcenter=-0.1, yalign=1.0), Transform(xzoom=-1)
+    show PRG scared at Position(xcenter=-0.3, yalign=1.0), Transform(xzoom=-1)
+    show Sakura happy at Position(xcenter=-0.2, yalign=1.0), Transform(xzoom=-1)
     pause 0.1
-    show PRG scared at altMove(4.0, 1.2)
-    show Sakura happy at altMove(4.0, 1.35)
+    show PRG scared at Position(yalign=1.0), altMove(4.0, 1.2)
+    show Sakura happy at Position(yalign=1.0), altMove(4.0, 1.35)
     extend " just as Sakura marched Aida past me and into one of the walk-in closet sized fitting rooms."
     hide PRG
     hide Sakura
-    show BE happy with easeinleft
+    show BE happy at Position(yalign=1.0), Transform(xzoom=-1) with easeinleft
     "Honoka walked up to the door and knocked, a massive pile of clothes in a heap inside of a trendy looking basket slung over one of her arms."
+    "test"
     BE "In!"
     hide BE with easeoutright
     pause .5
@@ -25681,7 +25685,7 @@ label PRG045:
     Sakura "Okay... here, I'm just gonna..."
     Sakura "Mnngh... there!"
     Sakura "Wow... {w}your belly is really soft."
-    show Sakura neutral
+    show Sakura neutral with dissolve
     pause 1
     show Sakura happy
     Sakura "No sneaking in, now."
@@ -25890,7 +25894,7 @@ label PRG045:
     BE "Take that skirt and put it on. It should go over the belly, so it sits just under your boobs."
     "Honoka bent to help as Aida bent a little as well, just enough where I saw the slightest glint of her bare belly come into view."
     BE "Okay! Now, slip this on, Kodama-san. Arms up."
-    BE "Tie that in a knot under her boobs, then shift the rest up off of her belly."
+    BE "Okay! Deep breath!"
     "I heard Aida inhale deeply, followed by a loud swish of cotton."
     PRG "Mmh!"
     BE "And breathe out!"
@@ -26074,7 +26078,7 @@ label PRG045:
         MC "You..."
         "I glanced at her."
         MC "Good choice."
-        show PRG neutral-happy
+        show PRG unique-happy
         PRG "I-I hope you d-don't mind."
         MC "Not at all."
         PRG "I just... y-you started calling me something cute, so... I-I wanted a name for you too."
@@ -26104,7 +26108,7 @@ label PRG045:
         PRG "Mmmn~"
         "Aida's left hand went around my back, holding my side."
         "Only after we kissed for a moment did I find her right hand. I felt her soft touch on my hand around her back, clasping it."
-        "... Then, I felt her soft hand take hold... and slowly pull my hand back down, right onto her butt once more."
+        "... Then, I felt her hand take hold... and slowly pull my hand back down, right onto her butt once more."
         "I pulled my lips from Aida's and looked down into her eyes."
         "Her eyes opened, and she smiled at me. Then, she leaned back forward, kissing me again."
         "We stayed there for a moment. Aida kept her right hand on top of mine, holding my hand onto her butt."
