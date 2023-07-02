@@ -26037,7 +26037,7 @@ label WG082:
     MC "Naturally..."
     MC "So, um... that's in America, isn't it?" 
     show WG neutral
-    WG "Relax Dear. I'm not hoping on a jet and moving halfway across the world any time soon. I'll be attending online. Let's face it, there's no way a campus full of buildings built in the 18th century is going to be accommodating to my \"unique\" proportions."
+    WG "Relax Dear. I'm not hopping on a jet and moving halfway across the world any time soon. I'll be attending online. Let's face it, there's no way a campus full of buildings built in the 18th century is going to be accommodating to my \"unique\" proportions."
     show WG haughty 
     WG "Besides, the real education will be my work-study. I'll be doing quarterly rotations with the operational managers across my father's various business holdings, so I can get first hand experience at the floor level across the whole enterprise."
     MC "Preparing to fill his shoes?"
@@ -30773,7 +30773,7 @@ label WGFMG005:
     show FMG flex
     FMG "And that's why I carried it like I did! Cause I totally knew it would hold..." 
     show FMG neutral 
-    " I'm kidding, I'll be extra careful with the rest of your furniture. Don't want to lose out on free sweets, heheh." 
+    extend " I'm kidding, I'll be extra careful with the rest of your furniture. Don't want to lose out on free sweets, heheh." 
     show WG doubt
     "Needless to say, Alice was a bit skeptical of Akira's guarantee."
     FMG "What's next?"

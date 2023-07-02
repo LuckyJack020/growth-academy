@@ -5955,11 +5955,11 @@ label MC008:
         "Like that one time when Tashi-sensei took us for the handball game with Naoki-sensei and Hageshi-sensei."
         "It was... a little awkward. But hey, at least we had a good time."
     if isEventCleared("FMG018"):
-        if getflag ("FMG018_AE_CookingPartner"):
+        if getFlag("FMG018_AE_CookingPartner"):
             "Plus, when Tashi-sensei took us for that cooking lesson with Takamura-sensei. Cooking with Akira and Shiori was... interesting at least."
-        if getflag ("FMG018_GTS_CookingPartner"):
+        if getFlag("FMG018_GTS_CookingPartner"):
             "Plus, when Tashi-sensei took us for that cooking lesson with Takamura-sensei. Cooking with Akira and Naomi was fun."
-        if getflag ("FMG018_BE_CookingPartner"):
+        if getFlag("FMG018_BE_CookingPartner"):
             "Plus, when Tashi-sensei took us for that cooking lesson with Takamura-sensei. Cooking with Akira and Honoka was... interesting at least. Going full blown French cuisine in it."
     if isEventCleared("MC002") or getFlag("Meet_Hageshi"):
         "And math with Hageshi-sensei. He's not bad."
@@ -5986,7 +5986,7 @@ label MC008:
     elif isEventCleared("PRG020"):
         show PRG worried with dissolve
         "I glanced up and forward a bit, looking over at Aida jotting down notes quickly in front of me, her legs crossed politely."
-        if getflag ("PRG020_c1_1"):
+        if getFlag("PRG020_c1_1"):
             MCT "I wonder if she's thinking about our kiss."
             MCT "Still... even now, I can't believe it."
             "Aida kissed me."
@@ -5996,7 +5996,7 @@ label MC008:
             MCT "Like, Aida of all girls."
             "I looked up at her once more, and watched her hand move across the page as she wrote."
             hide PRG with dissolve
-        elif getflag ("PRG020_c1_2"):
+        elif getFlag("PRG020_c1_2"):
             "I thought about my time on the roof with her."     
             "I hoped she wasn't still mad about what I'd told Alice."
             "In retrospect... yeah, not a good call."
