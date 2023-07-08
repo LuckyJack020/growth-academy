@@ -22866,7 +22866,7 @@ label PRG042_A:
                     MCT "Nine... ten... elev-"
                     "I halted."
                     "My head had bumped into something... and so had my left hand."
-                    "I knew there was a rocky shore along one side of the beach, but there was no way I was {t}that{/i} far."
+                    "I knew there was a rocky shore along one side of the beach, but there was no way I was {i}that{/i} far."
                     "Plus... whatever I had hit was soft."
                     "I lifted my head out of the water and blinked the water away."
                     "The water had shallowed quite a bit, as I'd accidentally turned toward the shore."
