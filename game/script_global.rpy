@@ -849,6 +849,7 @@ image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura
 image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral.png")
 image Sakura neutral-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral-2.png")
 image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy.png")
+image Sakura happy-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy-2.png")
 image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/nervous.png")
 image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad.png")
 image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-2.png")
