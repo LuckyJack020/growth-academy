@@ -5974,7 +5974,7 @@ label MC008:
     if isEventCleared("AE020"):
         show AE neutral with dissolve
         "Right in front of me, Shiori, as always, was fully focused on the class, thoroughly noting down everything that came out of Tsubasa-sensei's mouth." 
-        if lockRoute("AE") and if not isEventCleared("AE025"):
+        if lockRoute("AE") and not isEventCleared("AE025"):
             MCT "Agh... just hope she says yes."
         hide AE with dissolve
     elif isEventCleared("BE020"):
