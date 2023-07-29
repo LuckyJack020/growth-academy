@@ -567,6 +567,17 @@ init python:
     )
     ost.manualDefineList.append(theme_MtV)
 
+    theme_StD = ost.soundtrack(
+        name = "Stardust",
+        path = "Audio/BGM/stardust.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Evening Serenity",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_StD)
+
     ## Base Template
     ######################################
 

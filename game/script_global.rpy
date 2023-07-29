@@ -988,6 +988,7 @@ define audio.Requiem = "Audio/BGM/requiem.mp3" #Distant Questioning
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
+define audio.Stardust = "Audio/BGM/stardust.ogg"
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/tension.ogg" #A Tense Moment
@@ -1049,7 +1050,7 @@ init 1 python:
     eventlibrary['MC034'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC033"]]}
 
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
-    eventlibrary['global010'] = {"name": "A Start of Something Big", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "classroom",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.FLAG, "XX09"]]}
+    eventlibrary['global010'] = {"name": "A Start of Something Big", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "classroom",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['global026'] = {"name": "Talk of the Town", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,             "location": "classroom",        "priority": PrioEnum.ALL,            "obsflags": [],          "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "XX25"], [ConditionEnum.NOROUTELOCK, "PRG"]]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.FLAG, "RMRoute_Unlocked"]]}
     eventlibrary['RM002'] = {"name": "Ties that Bind", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "gatefront",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}

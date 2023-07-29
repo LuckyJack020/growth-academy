@@ -9214,6 +9214,752 @@ label global005:
         MC "I... guess I'll find her later."
         jump daymenu
 
+label global010:
+    scene Classroom with fade
+    play music HigherEdu
+    MCT "{i}Ughh{/i}, why does school have to start so early?"
+    "I'd been here a little over a month and you'd think it'd gotten easier for me to drag my dead ass out of bed to show up on time." 
+    "Maybe someday it would be, but today was not that day."
+    MCT "Dammit. Why did I believe myself when I said \"Just one more battle\" playing Warring Dynasties last night?"
+    show HR unique with dissolve
+    "I laid my head on my desk hoping to catch a few more Z's as Tashi-sensei took attendance at the start of homeroom class."
+    show HR neutral
+    HR "Let's see... Inoue, Hotsure, Kodama, Matsumoto, Mizutani, Nikumaru, Utagashi, and Yamazaki... Looks like everyone's here."
+    HR "Couple of house cleaning items. Enjoy the time off for Golden Week, just don't forget to use that extra time to study and work on your assignments for your classes."
+    MCT "Aw crap. That reminds me, I really need to start studying for that one big test after the break."  
+    HR "Once you get back from the break, I have a special surprise for you all from Hageshi-sensei and coach Naoki. So look forward to that."
+    hide HR
+    show BE surprised-2
+    with dissolve
+    BE "Surprise!? I wonder what it is."
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    GTS "I am curious as well."
+    show FMG flex at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Sounds fun!"
+    show BE happy
+    with None
+    hide GTS
+    show WG haughty at Position(xcenter=0.25, yalign=1.0) with dissolve
+    with dissolve
+    WG "Oh, really? That wasn't your reaction to Hageshi-sensei's last \"surprise\" when he dropped a pop quiz on us."
+    show FMG surprised
+    FMG "Eck! You're right. I take it back. Sounds awful."
+    hide WG 
+    show HR neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    with dissolve
+    HR "Hehe, that sounds like him alright."
+    hide FMG with dissolve
+    show BE neutral
+    HR "Well, that takes care of announcements. Now that we have that out of the way, you're all free to go."
+    show HR unique
+    show BE confused
+    show AE surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    MC "!"  
+    BE "Huh?"
+    AE "What? Unless I'm wrong, I had assumed we had class today. Did something happen?"
+    show HR neutral
+    show AE neutral
+    HR "You are correct Matsumoto-san, there is nothing planned for homeroom today. Feel free to use it as a free study period, but I'm not going to require you to stay here."
+    HR "The staff and faculty are having a special assembly at this time, so I'll be leaving for that."
+    hide BE
+    show RM distrustful
+    with dissolve
+    RM "Special assembly?"
+    HR "We have it every year, it's mostly for new faculty and staff, but it's a worthwhile refresher for the senior faculty as well." 
+    hide AE
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "How come we didn't know about it?"
+    HR "It's about as much of a surprise to me as it is to you. Principal Noguchi moved it up suddenly this year, due to unforeseen circumstances."
+    hide FMG 
+    show PRG nervous at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    PRG "..."
+    show RM doubt
+    RM "What kind of unforeseen circumstances?"
+    HR "Don't worry, you'll see soon enough."
+    hide PRG with dissolve
+    MC "Tashi-sensei, no offense, but why did you have us come in just to dismiss us? Some of us could use the extra shut-eye."
+    hide RM with dissolve
+    show HR annoyed
+    HR "Something tells me Hotsure-san you'd {i}still{/i} be nodding off at your desk during history period even with the extra hour of sleep."
+    show HR unique-2
+    MC "..."
+    show FMG happy at Position(xcenter=0.75, yalign=1.0)
+    show BE happy
+    with dissolve
+    FMG "Hahaha!"
+    BE "Oo, he's got you there Kei-chan."
+    hide FMG
+    show WG doubt at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "Questionable usage of time aside, Hotsure-san's point is still well taken. Some of us would prefer to schedule accordingly to make efficient use of our free period for other pursuits."
+    show HR neutral
+    show BE neutral
+    show WG neutral
+    HR "Attendance at Seichou is mandatory. Just because it's free time doesn't mean it's a license to be truant." 
+    HR "As I mentioned, you're free to do as you wish, but you will be expected to be in your seat for first period when I return. I'll see you all in a bit."
+    hide HR 
+    hide WG
+    hide BE
+    with dissolve
+    pause 1
+    MC "So what should we do to kill time?"
+    show AE neutral with dissolve
+    AE "It would be wise to utilize the extra time for study."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    FMG "{i}Pfft!{/i} Hard pass. Tashi-sensei said we could do whatever we want." 
+    show FMG flex
+    extend " We should do something fun!"
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    BE "Yeah! Definitely. {w}Let's go outside. It's {i}sooo{/i} nice out! I can't stand being cooped up inside all day anyway."
+    hide FMG
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    GTS "Surrounding oneself with nature does help to calm the spirit and invigorate the mind."
+    BE "Exactly. See, Matsumoto-san?"
+    show AE neutral-eyebrow
+    AE "Hmm, it is a compelling proposition. Time spent outdoors is healthy for mental clarity, as well as vitamin D levels."
+    hide BE
+    show WG haughty at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    WG "Hmph, only if you remembered to put on a facial cream with SPF this morning, which I always do. The sun will wreak havoc on your complexion otherwise."
+    show WG doubt
+    show GTS despaired-thought
+    GTS "Alas, that the pursuit of beauty should come at the expense of all other virtues."
+    show GTS angry
+    show WG haughty
+    WG "Ha! If you want to age faster than you have to, that's your business. I've taken the necessary precautions, I'm fine with us going outside." 
+    hide AE
+    hide GTS
+    hide WG
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG insecure at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "What about you, Kodama-san?"
+    PRG "I... think it would be a nice break."
+    show BE happy
+    show PRG unique-happy
+    BE "Sweet!"
+    show PRG neutral
+    show BE confused
+    show RM neutral-2 with dissolve
+    RM "You guys can go ahead, I have other business to attend to."
+    show RM neutral
+    MC "Oh come on, you're the palest of all of us. You need it more than anyone.."
+    RM "Alright fine... but just this once."
+    scene black with fade
+    pause .5
+
+    scene Campus Center
+    show BE happy at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    play music ClearSkies
+    BE "See? I told you it was nice outside."
+    show GTS unique with dissolve
+    GTS "It is rather lovely to see the cherry blossom trees in full bloom this time of year."
+    show PRG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    PRG "It really is beautiful..."
+    hide GTS 
+    show WG doubt
+    with dissolve
+    WG "So what do we do now? Just sit around outside?"
+    hide PRG
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "Fine by me. Beats sitting around inside the classroom."
+    show BE smug
+    BE "That's just it, we don't have to do anything, let's just hang out. We've been here for over a month and I feel like we still don't all know each other that well."
+    hide FMG
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    AE "Hm... Very well. It would be more conducive to a better learning environment in the classroom if we all felt more familiar with each other."
+    MC "That is a good point. We're all here due strange circumstances, might as well do what we can to make the best of it."
+    hide WG 
+    show RM neutral-2
+    RM "Strange indeed..."
+    show BE happy
+    BE "Let's make a game out of it then. Someone asks a question, and we'll all go around and share our answer with the group."
+    MC "Sounds good."
+    hide RM with dissolve
+    BE "We'll start off with something easy. \"What's your favorite color?\""
+    show PRG insecure with dissolve
+    BE "What's yours Kodama-san?"
+    PRG "Um... purple."
+    BE "Oh, that makes sense. Just like your hair scrunchies."
+    show PRG unique-blush
+    PRG "Mhm."
+    hide AE
+    show PRG neutral
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    BE "What about yours, Yamazaki-san?"
+    GTS "Cornflower petals, doubtless. Hardly a more serene hue has been devised by nature."
+    show BE neutral
+    BE "What do those look like?"
+    hide PRG 
+    show AE neutral
+    with dissolve
+    AE "How to describe... perhaps a light indigo?" 
+    show GTS happy-2
+    GTS "That is correct, Matsumoto-san. That is the most common, but they can also come in other colors."
+    hide AE
+    show PRG admire
+    with dissolve
+    PRG "T-They must be beautiful..."
+    show PRG neutral
+    show WG haughty at Position(xcenter=0.65, yalign=1.0) behind GTS, PRG with dissolve
+    show GTS angry
+    WG "The color on them is nice, but I wouldn't consider it a particularly exceptional looking flower."
+    show GTS neutral
+    show BE happy
+    BE "I'll have to look it up and see for myself. What's your favorite then, Nikumaru-san?"
+    hide PRG
+    hide GTS
+    with dissolve
+    show WG neutral at altMove(0.5, 0.75)
+    WG "Oh mine? I'm far more concerned with how different colors complement each other, both in art and fashion, but if I had to pick just one color to stand on its own, I would say rose gold."
+    show BE confused
+    BE "That's a new one for me."
+    show FMG neutral with dissolve
+    FMG "Isn't that like two colors?"
+    show AE neutral at Position(xcenter=0.65, yalign=1.0) behind GTS, PRG with dissolve
+    AE "It's a color obtained from a specific mix of gold and copper." 
+    show WG neutral-2
+    WG "Yes, that's why it's commonly seen in high end jewelry. The best way to describe it would be pink gold, if that makes any sense."
+    hide AE with dissolve
+    show BE happy
+    BE "That sounds awesome actually!"
+    FMG "I don't know, I can't really picture it. Seems hard to imagine how those two colors could go together."
+    show WG haughty
+    WG "I'll have to show you one of my bracelets sometime then."
+    show BE smug
+    BE "Oo, nice!"
+    show BE neutral
+    BE "What about yours, Mizutani-san?"
+    show FMG happy
+    FMG "Easy, it's red."
+    show WG surprised-2
+    WG "Any particular reason why?"
+    show FMG neutral
+    FMG "Um, I guess it just reminds me of home."
+    show BE smug
+    BE "That's as good a reason as any. What about yours, Matsumoto-san?"
+    hide FMG
+    hide WG 
+    show AE admire
+    with dissolve
+    AE "...Blue." 
+    show AE neutral
+    show BE doubt
+    MC "Eh? What's with the hesitation?"
+    BE "Yeah, it's not meant to be a hard question, just whatever comes to your mind." 
+    AE "It's not a question I think about. I don't put particular importance on specific colors."
+    show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    RM "I mean, it's not a particularly important question."
+    MC "Maybe not, but it's for fun. What's yours then?"
+    RM "Grey."
+    FMG "{i}Boooring{/i}."
+    show BE confused
+    BE "Gray? Seems a bit drab to be honest."
+    MC "Seems on brand if we're being really honest."
+    show RM doubt
+    RM "So sue me, I don't like flashy things that stand out."
+    hide AE
+    show GTS neutral
+    with dissolve
+    GTS "Neutral tones can be just as pleasing to the eye in the right context."
+    show BE neutral
+    BE "I suppose that's true too. What's yours Kei-chan?"
+    MC "Uh, if I had to pick, I guess I'd say green."
+    hide RM with dissolve
+    BE "I knew it!"
+    MC "Did you now?"
+    show BE happy
+    BE "Mhmph."
+    MC "I guess so. What about yours, Honoka?"
+    show BE confused
+    BE "Don't you remember what I told you?"
+    MC "I remember it seems to change every other week."
+    show BE embarrassed
+    BE "Oh, it's not that that often."
+    MC "Well, what is it now?"
+    show BE happy
+    BE "Yellow! Just looking at it makes you feel happier, don't you think?"
+    GTS "Certainly, it is one of the colors associated with spring as the flowers begin to bloom."
+    BE "Exactly. See, Yamazaki-san gets it."
+    show BE confused
+    MC "Looks like we've all had a turn then. What else  were you thinking about asking?"
+    show BE embarrassed-2
+    BE "I don't know, help me out here, Kei-chan."
+    MC "Hmm, let me think."
+    show BE neutral
+    hide GTS with dissolve
+    menu:
+        "Where's a place you'd like to travel to?":
+            jump global010_travel
+        "What's your favorite word?":
+            jump global010_word
+        "What would you do with a billion yen?":
+            jump global010_money
+        "If you could have a superpower, what would it be?":
+            jump global010_power
+
+label global010_travel:
+    MC "Oh! {w}Where's a place you'd like to travel to that you've never been?"
+    show BE happy
+    BE "Oo, that's a good one!"
+    MC "Why don't you go first this time, Honoka?"
+    BE "Sure! {w}New York City! I feel like it would be really nice to see it for myself instead of always seeing it in movies."
+    show WG neutral with dissolve
+    WG "It's alright. Certainly worth at least one trip in a lifetime to see all the landmarks and cultural icons. I would certainly recommend getting tickets to a Broadway show when visiting."
+    show BE surprised-2
+    BE "So you've been there? That's so cool!"
+    WG "Oh yes, plenty of times."
+    show WG neutral
+    BE "I'd be curious to know more some time then. So what's yours, Nikumaru-san?"
+    show WG pondering
+    WG "I would like to go to Antarctica, during the summer of course— that way I could say I've been to all seven continents."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG neutral
+    FMG "Huh, I wouldn't have thought about that as a place to visit. Still sounds way too cold though."
+    BE "What's your place, Mizutani-san?"
+    show FMG happy
+    FMG "I always wanted a tour of Glen & Kerry's ice cream factory. It's someplace in the US, I'm not sure where, but I hear they give out free samples of all their flavors at the end of the tour." 
+    show BE smug
+    BE "Hmm, maybe I should change my answer."
+    show BE seductive
+    show FMG neutral
+    MC "You would."
+    hide WG
+    show AE neutral
+    with dissolve
+    AE "That is a curious, if not unconventional answer, but I suppose as good of a reason as any."
+    MC "What's your destination then, Matsumoto-san?"
+    show AE admire
+    AE "Italy." 
+    show BE surprised
+    BE "Ooo! Why's that? I would be worried about all the carbs going to my-" 
+    show BE neutral
+    show AE neutral
+    AE "I would like to visit Rome, as well as the Alps at some point. I'm fascinated by its history."
+    hide FMG
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    GTS "Snowy mountains would make for a serene setting."
+    hide AE
+    show PRG neutral
+    with dissolve
+    PRG "I-Is that where you'd want to go, Yamazaki-san?"
+    GTS "I think one can find the good in whatever place he seeks it. Though I do think I would be pleased to hike Nuuksio Park in Finland. My friends have told me wonderful things."
+    show GTS happy-2
+    GTS "What did you have in mind for your destination, Kodama-san?"
+    show GTS neutral
+    show PRG unique-blush
+    PRG "Um... I-I've never thought about it before. Maybe... somewhere in Europe? I'm not sure where specifically. There's so much to see."
+    hide GTS
+    show WG haughty at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    show PRG neutral
+    WG "Geneva, Budapest, Milan, Monaco, Barcelona— honestly there's a lot of places to recommend, but if you want the foremost cultural and culinary experience of Europe, I'd recommend Paris."
+    show PRG excited
+    PRG "I think I'd like that."
+    show PRG neutral
+    hide WG with dissolve
+    PRG "W-What about your choice, Utagashi-san?"
+    show RM neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    RM "I suppose if I had to pick some place, it would be Easter Island. It's an island in the South Pacific."
+    hide PRG
+    show AE neutral
+    with dissolve
+    AE "Ah yes, Rapa Nui. I take it you are interested in the Moai?"
+    show FMG neutral at Position(xcenter=0.65, yalign=1.0) behind RM, AE with dissolve
+    FMG "Moai? What's that?"
+    show RM smug
+    RM "It's famous for its large statues, called Moai. The sheer scale of them is said to be awe-inspiring and a mystery as to how they were constructed and moved given the technology of the island's inhabitants."
+    show BE happy
+    BE "Oh, that does sound neat. {w}And what about yours, Kei-chan?"
+    hide AE
+    hide FMG
+    with dissolve
+    MC "I don't know, probably Hawaii. It always looked like a cool place, if American movies are anything to go off of."
+    show WG neutral with dissolve
+    WG "It's certainly a worthwhile destination. I recommend hitting more than one island if you ever make the trip."
+    show BE surprised-2
+    BE "Oh man, now I'm thinking I might have to change my answer again!"
+    hide RM
+    hide WG
+    with dissolve
+    show BE neutral
+    jump global010_afterchoice
+
+label global010_word:
+    MC "Okay, this ought to be a fun one." 
+    MC "What's your favorite word?"
+    show BE smug
+    BE "Oo, I like."
+    MC "Why don't you go first this time, Honoka?"
+    BE "That's easy for me: onomatopoeia. It's kind of funny how there's such a big word for something as simple as sound y'know?"
+    show AE neutral
+    with dissolve
+    AE "It does seem to be overly complex for such a simple concept."
+    BE "What's your favorite word, Matsumoto-san?"
+    show AE admire
+    AE "Petrichor. Aside from being rather obscure of a concept, it also gives me... a bit of a nostalgic feeling."
+    show AE smile
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "Ah yes, the smell of rain on parched earth. Few things evoke such feelings of serenity with nature."
+    hide BE
+    show FMG neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    FMG "That's a new one for me. Never heard of it before, but it sounds fun to say."
+    show AE happy
+    AE "What do you have in mind for your answer, Mizutani-san?"
+    show FMG happy
+    FMG "Oh, that's easy: gym. {w}Not as fancy as \"petrichor\", but it's the only thing that comes to mind for me. It's basically my life, I'm not me without it."
+    hide AE
+    show WG doubt
+    with dissolve
+    show FMG neutral
+    WG "I would have expected a bit more thought being put into this question."
+    show GTS sad
+    show WG stern
+    GTS "Whether it is simple or complex, the significance of the word to the person is what is most important."
+    hide WG with dissolve
+    show GTS neutral
+    show FMG flex
+    FMG "Couldn't have said it better myself. {w}What's your favorite word then, Yamazaki-san?"
+    show FMG neutral
+    GTS "Interesting that Matsumoto-san mentioned it when describing hers. {w}I would say \"Nostalgia\". The word is charged with emotional {i}and{/i} philosophical meaning, such as is unmatched by any other I am able to conjure."
+    hide FMG
+    show PRG insecure
+    with dissolve
+    PRG "I-I like that one too, Yamazaki-san."
+    show GTS happy-2
+    GTS "Is that your favorite word as well, Kodama-san? Or do you have another in mind?"
+    show PRG unique-blush
+    PRG "Um... kindred. It... it has such an elegant sound to it."
+    hide GTS 
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "I would agree, a much more elegant way of expressing familiar bonds between people."
+    show PRG neutral
+    PRG "What about yours, Alice?"
+    show WG pondering
+    WG "\"Fungibility\". I always liked the sound of it."
+    show BE happy at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show WG neutral
+    BE "It does sound funny. It even has \"fun\" in the word. What does it mean?"
+    show WG neutral-2
+    show BE neutral
+    WG "It is a concept in finance and commerce to describe things that are freely interchangeable. It's usually used in relation to currency, which distinguishes it from bartered goods that are not typically able to be freely exchanged."
+    hide PRG
+    show FMG neutral
+    with dissolve
+    FMG "Sounds complicated."
+    show WG haughty
+    WG "Perhaps, but in more simple terms it's why people prefer to be paid in money, rather than something else."
+    show WG neutral
+    MC "Huh, hadn't thought of that before."
+    hide FMG with dissolve
+    show BE smug
+    BE "What about yours, Kei-chan?"
+    show BE neutral
+    MC "Umm, I guess I'd say \"penumbra\". It has a funny sound, but I picked it mostly because it was something that stuck with me in art class when learning to draw because it was important for understanding how shadows work."
+    WG "I didn't realize you were the artistic type."
+    show BE happy
+    BE "Oh yeah, Kei has a knack for drawing."
+    MC "I don't know if I'd go that far, just because my drawings look better than your stick figures."
+    hide WG with dissolve
+    show BE shrug
+    BE "Well unfortunately they haven't gotten much better."
+    MC "Color me shocked."
+    show BE neutral
+    show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    MC "What about you Daichi? You're the only one that hasn't gone yet."
+    show RM happy
+    RM "Labyrinthine. {w}It's a good word to describe how things are rarely as straightforward as they seem."
+    MC "Seems fitting."
+    show RM distrustful
+    RM "What do you mean?"
+    MC "Oh nothing. It's a good one too."
+    hide RM with dissolve
+    jump global010_afterchoice
+
+label global010_money:
+    MC "Oh! How about this? \"What would you do with a billion yen?\" "
+    MC "Why don't you go first this time, Honoka?"
+    show BE smug
+    BE "Honestly? I think I'd take my close friends and family out on a HUGE vacation somewhere nice!"
+    MC "I have to imagine there still would be a lot of money left over. It's a billion yen."
+    show BE happy
+    BE "Then I'd invite more friends— and make it longer! And not just nice, but like {i}super{/i} nice."
+    show FMG happy with dissolve
+    FMG "Yeah, like some place that serves unlimited ice cream for dessert."
+    BE "Is that what you'd spend the money on, Mizutani-san?"
+    FMG "Hehe, sorta. {w}I'd build the biggest and best gym in the world, with an ice cream machine and a {i}huge{/i} snack bar."
+    show BE neutral
+    show RM smug at Position(xcenter=0.75, yalign=1.0) with dissolve
+    RM "I thought people go to the gym to lose weight, not gain it back."
+    show FMG neutral
+    FMG "I know it doesn't make sense, you burn all calories and you gain them back immediately. But think of how cool it would be to get a chocolate shake or a granola bar after a hard workout! It's basically a reward."
+    hide RM
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "Might not be a successful fitness plan, but it does sound like a good business strategy."
+    FMG "What would you do with it then? I bet that's not even a drop in the bucket for you, Nikumaru-san."
+    show WG haughty
+    WG "Whether it is a billion yen or one hundred, my answer would still be the same: invest it. {w}Why settle on a billion when you could turn it into two billion in ten years?"
+    show WG pondering
+    WG "And that's just from parking it in an index fund and doing nothing with it. There's even much more potential for someone more interested in actively managing their investments."
+    hide FMG
+    hide WG
+    show GTS neutral 
+    with dissolve
+    GTS "Indeed. One can do much good with a bit of strategy and forethought."
+    BE "What would you do with it, Yamazaki-san?"
+    GTS "Well, some of my family's properties could do with certain improvements, and it would be some comfort to expand my family's reserve funds. I imagine the remainder could feed a number of the country's poor and hungry."
+    show AE admire at Position(xcenter=0.75, yalign=1.0) with dissolve
+    AE "That sounds like a wise use of the funds."
+    show GTS happy-2
+    GTS "Thank you, Matsumoto-san. Is that what you would do as well?"
+    AE "Similar in some ways, yes. It is quite a large sum to manage." 
+    show AE neutral
+    show GTS neutral
+    AE "I would create a diversified portfolio and allocate funds to living, goals, and charity."
+    AE "While being generous with funds and using them to better the lives of others is the most noble goal, it's also the most reckless without proper planning and long term investment. This would maximize the effect with patience."
+    MC "That actually sounds like a mix of Nikumaru-san and Yamazaki-san's answers."
+    show AE smile
+    AE "It would seem so. Both strategies have their own wisdom to them."
+    show AE happy
+    AE "What about your idea, Kodama-san? There's no need to be shy."
+    hide GTS
+    show PRG neutral
+    with dissolve
+    PRG "Um... I-I guess I would save it in case I needed it for something."
+    hide AE
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "It's not a bad idea to have at least have some portion of your financial assets remain liquid."
+    show PRG insecure
+    PRG "R-Right. {w}W-What about your idea for the money, Hotsure-san?"
+    MC "Not sure, honestly. Let's see... I guess I'd probably use it to pay for college, get a nice car, finally upgrade my PC..."
+    MC "Oo! And I'd get one of those super-expensive mattresses so I could just completely starfish on top of it while I lay down, and I wouldn't get sweaty cause it's air-jet cooled."
+    hide WG
+    hide PRG
+    show RM smug
+    with dissolve
+    RM "As much time as you spend sleeping, that's probably the most cost-effective investment idea shared so far."
+    show BE happy
+    BE "Hehe!"
+    MC "Yeah, yeah. So what's your big idea then?"
+    show RM neutral-2
+    show BE neutral
+    RM "I'd give it to non-profits that litigate civil rights and government corruption cases."
+    MC "Huh, that's interesting."
+    show AE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    AE "That is a noble cause, Utagashi-san."
+    RM "Well, it's not going to get done otherwise." 
+    hide AE
+    hide RM
+    with dissolve
+    jump global010_afterchoice
+
+label global010_power:
+    MC "Let's see, this sounds like a fun one: \"If you could have a superpower, what would it be?\""
+    show BE happy
+    BE "Oo! Oo!"
+    MC "Just {i}one{/i} superpower, not like a dozen at once either."
+    show BE confused
+    BE "{i}Aww!{/i} No fun!"
+    MC "I take it you had something in mind, Honoka?"
+    show BE happy
+    BE "Oh! That's easy! The ability to shoot fire from my hands!"
+    show FMG happy with dissolve
+    FMG "That sounds cool!"
+    show BE confused
+    BE "Oh wait, how about the ability to change size at will! ...But there's also super speed... or..."
+    MC "We might be here a while at this rate, why don't you take your turn now instead, Mizutani-san?"
+    show BE neutral
+    show FMG flex
+    FMG "Super durability! You know, like bullets bounce off me and that kind of stuff."
+    show WG surprised-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "I'd have thought you'd say super strength, since you're so active in the gym."
+    show WG neutral
+    show FMG neutral
+    FMG "Well I'm already pretty strong, but it still hurts when I drop a weight on my foot so I like the idea of that not being a problem ever again."
+    FMG "What power would you like to have Nikumaru-san? Super speed?"
+    show WG surprised-2
+    WG "What makes you think that?"
+    show WG stern
+    FMG "Well it usually comes with super metabolism... {w}Um, actually, it was just a random guess."
+    show WG pondering
+    WG "Well I guess that isn't too far off. I wouldn't mind the ability to slow or freeze time. The most common problem is there's only 24 hours in a day to get work done, it would be useful to have a few more."
+    hide FMG
+    show AE neutral-eyebrow
+    with dissolve
+    AE "That ability does sound like it would have a lot of practical uses."
+    MC "What about yours then Matsumoto-san? I take it you'd want something that would be useful in daily life?"
+    hide WG with dissolve
+    show AE glasses
+    AE "Foresight. It would allow me to correct mistakes before they happen..."
+    show AE neutral
+    MC "I suppose I would want that too if I dealt with paperwork all the time."
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "A fine idea. Even still, dealing with some predicaments may take more than foreknowledge."
+    AE "Your point is worth consideration, Yamazaki-san. What would you choose?"
+    show GTS pondering
+    GTS "Hmm... I suppose being able to read the thoughts of others would be useful in cultivating compassion and understanding."
+    show GTS surprised
+    MC "I don't know about that, Yamazaki-san. Some people I don't even want to know what's going on inside their head."
+    hide AE
+    show RM neutral-2
+    with dissolve
+    RM "Well I certainly would. I agree with Yamazaki-san, I'd choose telepathy."
+    MC "You don't exactly strike me as an empath."
+    show RM distrustful
+    RM "I'm not concerned about other people's feelings so much as what they know. If I could read their mind, then I'd know what they know, and more importantly, if they're lying. {w}It's a lot faster than trying to talk with them."
+    show BE smug
+    BE "That's kind of funny. Two people pick the same power for completely different reasons."
+    hide RM
+    show PRG neutral
+    GTS "What would you choose, Kodama-san? You haven't had your turn yet."
+    PRG "I-I think I would choose flight..."
+    show GTS happy-2
+    GTS "Like a bird soaring off into the sky."
+    show PRG excited
+    PRG "Y-Yes... I just think it would be fun... and I could go places I've always wanted to see..."
+    show BE happy
+    BE "That is a fun one. Hmm, maybe I should change my answer... then again shooting fire balls also sounds fun..."
+    MC "Oh, let's not get into this again."
+    show BE angry
+    BE "Okay, okay. What's yours then Kei-chan?"
+    show BE neutral
+    MC "Super speed."
+    show BE smug
+    BE "Is that so you won't be late all the time anymore?"
+    MC "...Maybe... {w}I mean, that and I wouldn't have to ride on the Tokyo metro ever again."
+    show BE surprised
+    BE "I hadn't thought about it that way. I'm {i}definitely{/i} changing my answer then!"
+    MC "See? It's a good one."
+    show BE neutral with None
+    hide PRG
+    hide GTS
+    with dissolve
+    jump global010_afterchoice 
+
+label global010_afterchoice:
+    play music DayByDay
+    BE "Okay, what would be another question we should ask?"
+    show AE neutral behind BE with dissolve
+    AE "In the interest of returning to class in a timely manner, I believe we should prepare to depart soon, Inoue-san."
+    show BE sad
+    BE "Dang it! I wish we had more time."
+    show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE neutral
+    FMG "Yeah, it was fun getting to hang out together with everyone."
+    show WG doubt at Position(xcenter=0.35, yalign=1.0) behind BE, AE with dissolve
+    WG "{size=-6}Well, I wouldn't say {i}everyone{/i}...{/size}"
+    show GTS neutral at Position(xcenter=0.9, yalign=1.0) with dissolve
+    show FMG happy behind GTS
+    GTS "I enjoyed all of us getting to know each other more."
+    show WG neutral
+    show PRG unique-happy at Position(xcenter=0.6, yalign=1.0) behind FMG with dissolve
+    show AE neutral behind PRG
+    PRG "I... I thought it was fun too."
+    MC "We'll have to do it again sometime then."
+    show AE admire
+    AE "I was skeptical, but it did prove to be a fruitful use of the free time period."
+    show BE happy
+    BE "Oo! Since we're all here out here together we should get a group picture."
+    show AE pondering
+    AE "I would prefer not- I- Mmng... fine. Let's be quick."
+    show BE smug
+    show AE neutral
+    BE "Hey, you! {w}Could you take a picture of us all real quick?"  
+    "Honoka grabbed one of the students passing by the campus center and handed him her phone."
+    Student "Uh, sure."
+    show BE happy at altMove(0.5, 0.88)
+    show GTS neutral at altMove(0.5, 0.28)
+    BE "Alright everyone line up."
+    show AE neutral at altMove(0.5, 0.73)
+    show WG neutral-2 at altMove(0.5, 0.45)
+    WG "Oh, Aida. With your height, you should be upfront so you can be seen. Here, stand in front of me right here."
+    show PRG insecure at altMove(0.5, 0.60)
+    PRG "O-Okay..."
+    BE "That's it, bring it in close."
+    show FMG happy at altMove(0.5, 0.15)
+    FMG "Should I flex?"
+    show FMG happy at Transform(xzoom=-1)
+    show GTS neutral at Transform(xzoom=-1)
+    GTS "I don't think that would do any harm, Mizutani-san."
+    RM "Do we really have to?"
+    MC "Oh just get over here."
+    show BE happy at Transform(xzoom=+1)
+    Student "Uh, okay. 3...2...1"
+    show FMG neutral
+    show GTS neutral
+    show WG haughty
+    show PRG unique
+    show AE neutral
+    show BE happy
+    "{i}Click!{/i}"
+    Student "Alright, here you go."
+    BE "Thanks!"
+    "The student walked off out of sight after handing the phone back to Honoka."
+    FMG "Let me see!"
+    show BE sad
+    show FMG neutral
+    BE "Shoot! I should have had him take a couple more."
+    MC "Are you serious!? The dude didn't even get me in frame!"
+    show PRG sad
+    PRG "W-Where is Utagashi-san?"
+    MC "What? Oh that weasel..."
+    show PRG neutral
+    show AE neutral-annoyed
+    show WG neutral
+    AE "We'll have to wait for another occasion. I'm afraid if we delay any longer we risk being tardy."
+    show AE neutral
+    show BE neutral
+    BE "Alright well, I'll send it to the group. Give me your numbers, and then when I send it, you'll all see everyone else's numbers. That way we can all keep in touch outside of class."
+    MC "That's a good idea."
+    FMG "Here's my number, Inoue-san."
+    GTS "This is my number, Inoue-san."
+    WG "Here's mine."
+    PRG "And here's mine."
+    MC "You already have mine. Unfortunately, I don't know Daichi's. Not even sure I'd be surprised if he didn't have a phone."
+    show BE happy
+    BE "Heh, that would be weird."
+    AE "Here is my number, Inoue-san. Unfortunately my phone cannot receive pictures."
+    show BE confused
+    BE "Oh, is it broken? That sucks."
+    show AE pondering
+    AE "No, it works fine... It's a few decades old, however."
+    show FMG 
+    FMG "Oh man, look at that dinosaur. My dad told me about those phones. I bet you could crack coconuts open with that thing."
+    show AE neutral-annoyed
+    show WG doubt
+    WG "Seriously?" 
+    show WG haughty
+    extend " At some point you're going to have to start living in the 21st century."
+    show WG angry
+    show GTS sad
+    show AE neutral
+    GTS "Not all people find value in the trappings of modern conveniences."
+    show BE neutral
+    BE "It's okay, I can send it to your school email instead."
+    show BE happy
+    BE "... And sent!"
+    show PRG happy
+    PRG "Th-Thank you, Inoue-san."
+    BE "No problem."
+    show AE neutral-annoyed
+    AE "Alright, without any further delay, let's return to Tashi-sensei's room."
+    scene black with fade
+    pause .5
+    scene Classroom with fade
+    "I don't think anyone, save for Matsumoto-san, was eager to get back to class, but it was a nice break. The whole atmosphere in the room felt a little lighter and a little more friendly."
+    "If nothing else, it helped us forget, at least for a little while longer, why we were here and what that meant for the future."
+    jump daymenu
+
 label global026:
     $setPregnant()
     scene Dorm Hallway with fade
