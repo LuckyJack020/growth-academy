@@ -16829,6 +16829,7 @@ label WG060S_LiePath:
     "My anxiety did not subside, but my curiosity was through the roof. I headed over right away."
     scene black with fade
     $setTime(TimeEnum.NIGHT)
+    $setWGOutfit(OutfitEnum.PAJAMAS)
     play sound Knock
     stop music
     "There was a moment of silence before I heard a muffled voice"
@@ -16989,6 +16990,7 @@ label WG060S_TruthPath:
     scene black with fade
     pause 1
     $setTime(TimeEnum.NIGHT)
+    $setWGOutfit(OutfitEnum.PAJAMAS)
     scene Dorm Hallway with fade
     "Making my way through the hallways was stressful. Even though I assumed I understood now what was happening, there was still a lingering fear that I had it all wrong and was gonna get dumped."
     "That and I was not sure how to explain this to someone like Shiori if I got caught."
@@ -17834,6 +17836,7 @@ label WG061:
 
 label WG061S:
     $setProgress("WG", "WG062")
+    $setWGOutfit(OutfitEnum.PAJAMAS)
     "That night I had one of the best dreams in my life. A land of softness was the best description for it. Mountains of pillows and clouds made of cotton candy."
     "The ground was a massive heated blanket. It was incredibly relaxing and I never wanted to leave."
     "That was till it growled at me."
