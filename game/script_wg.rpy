@@ -10188,26 +10188,32 @@ label WG044:
     scene Dorm WG with fade
     play music WG
     "It was an off day for the residents of Seichou Academy. Both the faculty and the students were given the day to unwind and destress."
-    "Many people liked to use this time to relax by themselves, away from others. This was a perfect opportunity for someone to have some alone time."
+    "Many people liked to use this time to relax by themselves, away from others. It was a perfect opportunity for someone to have some alone time."
     show WG neutral-2 with dissolve
     "Me? I had been prattling the whole afternoon away with one, Miss Nikumaru."
     WG "Would you care for some more Broken Orange Pekoe Fanning?"
     MC "You know you don't have to say it in full every time."
-    show WG surprised
+    show WG surprised-2
     "Alice pretended to look appalled as she poured another cup of tea."
-    show WG happy
-    "Her smug smile betraying the attempt at feigned hurt."
+    show WG happy-2
+    "Her smug smile betrayed an overly dramatic attempt at feigned hurt."
+    show WG haughty
     WG "Keisuke! I believe I have made it very clear before, not all tea blends are the same."
     MC "I know, I know. But honestly, growing up only exposed to green teas like sencha, it's hard to have such a refined palette like yours."
-    show WG neutral
+    show WG sly
     WG "Then I feel sorry for you, truly I do."
+    show WG surprised-2
     "Setting down the kettle after pouring another serving, Alice's eyes widened with a rather sudden idea."
-    show WG haughty
+    show WG pondering
     WG "Maybe there just so happens to be a way to improve your taste buds' senses."
     MC "Uh, what do you mean by that?"
+    show WG neutral
     WG "If you may, please close your eyes for just a second-I must go prepare something."
     MC "You're scaring me a bit here, Alice."
-    WG "Oh please, you needn't worry. I just happened upon a rather ingenious idea is all, and you are the perfect recipient for my theory."
+    show WG doubt
+    WG "Oh please, you needn't worry."
+    show WG haughty
+    extend "I just happened upon a rather ingenious idea is all— and you are the perfect recipient for my theory."
     MC "Was that an attempt at making me feel more on edge, or less on edge?"
     show WG stern
     WG "It was an attempt at explaining myself, now hurry up and close your eyes."
@@ -10229,9 +10235,9 @@ label WG044:
     MC "Uhhhh, I think you've lost me here. \"Confused\" doesn't even begin to describe how I feel right now."
     WG "You are quite the clever one Keisuke, I am sure that you can deduce what my plan is here."
     menu:
-        "You want me to identify tea?":
+        "You want me to identify the teas?":
             jump WG044_c1_1
-        "Do you want to do a drinking game?":
+        "You want to do a drinking game?":
             jump WG044_c1_2
         "You poisoned one of these cups, and I have to pick one?":
             jump WG044_c1_3
@@ -10243,10 +10249,10 @@ label WG044_c1_1:
     jump WG044_afterchoice_1
 
 label WG044_c1_2:
-    show WG doubt
+    show WG surprised-2
     WG "A drinking game with tea?"
     "Alice paused, contemplating what I said."
-    show WG neutral
+    show WG pondering
     WG "I shall think about your idea later, but that is not what I had planned for today."
     WG "Instead what I have devised is a plan to help you understand the various types of tea by taste alone."
     jump WG044_afterchoice_1
@@ -10254,6 +10260,7 @@ label WG044_c1_2:
 label WG044_c1_3:
     show WG surprised
     WG "...What?"
+    show WG surprised-2
     MC "I dunno, the way you laid the cups out just really has me worried is all."
     WG "My word, Keisuke- no, I do not plan to poison you!"
     show WG haughty
@@ -10267,6 +10274,8 @@ label WG044_afterchoice_1:
     show WG haughty
     WG "Well I suppose that would make it more sporting..."
     WG "Alright, listen closely, as I shan't repeat these hints."
+    show WG surprised-2
+    play sound Knock
     "Before Alice could start listing off her selections, a knock came from the door."
     MC "Were you expecting anyone else to be here around this time?"
     show WG doubt
@@ -10275,6 +10284,7 @@ label WG044_afterchoice_1:
     "Alice's eyes shot wide open as a realization hit her. She snapped back to face me, talking in a whispered tone."
     WG "Honoka!"
     MC "Honoka?"
+    show WG surprised-2
     WG "Last week, she came to me with a request for a new bra. The school-issued ones weren't fitting her needs appropriately."
     WG "At the time she came to me, I had my hands full with other projects. So, I told her to meet me at this time next week."
     MC "And this time being now?"
@@ -10288,6 +10298,7 @@ label WG044_afterchoice_1:
     show WG worried
     WG "My deepest apologies, Keisuke. But would you mind picking up the stray bits of cloth laying around?"
     MC "What, why?"
+    show WG surprised-2
     WG "Well simply look at this place, there are stray clothing articles and swatches everywhere! It's quite unbecoming of me to my customers."
     "Now that she mentioned it, the state of the room became obvious. There were several articles of clothing dotting the room; oddly enough, most of them didn't seem to be her style or size."
     MC "Have you been working on new design ideas recently?"
@@ -10326,14 +10337,15 @@ label WG044_c2_1:
     show BE neutral
     BE "Keisuke was right, y'know. Trust me, I'm aware that keeping on top of things can be difficult with a factor."
     WG "But this wasn't an issue with my condition interfering with my life..."
+    show WG worried
     WG "I was just enjoying myself so much, a bit caught in the moment. Maybe my sharpened instincts are starting to dull."
-    "While I was sure that I had made the right decision for Alice's sake; part of me still wondered what caused her to act like that..."
+    "While I was sure that I had made the right decision for Alice's sake, part of me still wondered what caused her to act like that..."
     jump daymenu
 
 label WG044_c2_2:
     $setAffection("WG", 1)
-    "Alice let out an ever so quiet sigh of relief before giving me a content smile."
     show WG happy
+    "Alice let out an ever so quiet sigh of relief before giving me a content smile."
     WG "Thank you, I promise I'll make it up to you."
     MC "Worry about that later, Honoka is still waiting out there."
     "Leaving my seat, I started to quickly snatch up the materials. The amount of obvious clutter was small, so my goal was to focus on that first."
@@ -10345,25 +10357,27 @@ label WG044_c2_2:
     "As the wardrobe opened, I was surprised to find it already packed to the brim. Like Alice had told me, I began to hastily stuff the interior."
     "A few bits of clothing were left before I realized that not all of it was going to fit. And no matter how hard I pushed, the wall of fabric refused to make space."
     "Without thinking, I decided to try and shove myself into the blockage. Maybe then it would free some room."
-    "Taking a small step back, I bravely leaped forward... This proved to be a major error in planning."
+    "Taking a small step back, I bravely leaped forward... {w}This proved to be a major error in planning."
     MC "MMMPH!"
     "The few loose areas in the pile would be my undoing; for as soon as my shoulder pushed forward, I found myself quickly sinking into the mass of clutter."
     show WG surprised
     WG "Oh dear!"
     "Upon hearing the commotion, Alice rushed over to check on me. Her cherubic face was awash with panic when she saw the state I was in."
+    show WG surprised-2
     WG "Kei, are you ok? Did you hurt yourself?"
     "Try as I may, the weight of all the clothing kept me down. It wasn't a bad sensation, it was rather cozy."
     MC "I'm fine, just a bit stuck is all... could you give me a hand?"
     show WG neutral-2
     WG "Of course, here."
     "Alice firmly grasped my one exposed hand and steadied herself to pull back. Her other hand gripping around my wrist as she found her footing."
+    show WG doubt
     WG "One, two, three!"
     "One would think that several hundred pounds of mass would provide more than enough leverage. But as it turns out, I had gotten myself trapped even deeper than we thought."
     MC "Ow ow ow ow OW! Stop, please!"
     "The sheer force being exerted on my shoulder joint was unbearable. A part of me thought Alice might rip my arm out of its socket if I didn't stop her."
     show WG angry
     WG "Damn it all... What to do, what to do?"
-    "Upon releasing me from almost certain removal, Alice quickly started to try for new ideas; but I knew that we didn't have much time left."
+    "Upon releasing me from almost certain removal, Alice quickly started to try for new ideas— but I knew that we didn't have much time left."
     MC "Alice, just shut the door."
     show WG doubt
     WG "I beg your pardon?"
@@ -10395,17 +10409,17 @@ label WG044_c2_2:
     show BE confused
     BE "Then why else would you be hiding inside there unless you were..."
     "She trailed off looking between me and Alice. It took both of us a moment before Alice blushed quite red."
-    WG "I can assure you that nothing of that sort of nature occurred."
+    WG "I... I can assure you that nothing of that sort of nature occurred."
     show WG neutral-2
-    WG "To be forward on the reason, Kei was over helping me earlier with picking out new patterns for the store. He attempted to help me clean up when you arrived but became lodged in the wardrobe."
+    WG "To be forward on the reason, Keisuke was over helping me earlier with picking out new patterns for the store. He attempted to help me clean up when you arrived but became lodged in the wardrobe."
     WG "He didn't want me to let you wait and asked to be left in there till our appointment had concluded."
-    MC "There was some tea in there but that's about it."
+    MC "There was some tea in there, but that's about it."
     show BE embarrassed
-    BE "Apologies for the insinuation, I do apologize if you took offense to that."
+    BE "Apologies for the insinuation, I'm sorry if you took offense to that."
     WG "You are fine dear, the situation does lend itself to that sort of thinking."
-    WG "Anyway, I suppose now with Kei here I could use the assistance with your request. Are you ok with Kei helping me measure you?"
+    WG "Anyway, I suppose now with Keisuke here I could use the assistance with your request. Are you ok with him helping me measure you?"
     show BE seductive
-    BE "I don't know if it's proper for a boy to see my bare chest as he will... but Kei-chan's a good boy, right?"
+    BE "I don't know if it's proper for a boy to see my bare chest... but Kei-chan's a good boy, right?"
     show WG happy
     WG "He most certainly is."
     "Alice reached into a purple polka-dotted bag beneath her desk and produced a measuring tape."
@@ -10415,47 +10429,58 @@ label WG044_c2_2:
     show BE happy
     BE "You certainly are a very lucky boy Kei-chan."
     show WG stern
-    "Looking over Honoka's shoulder I noticed Alice giving me a slight glare. Wait was she..."
+    "Looking over Honoka's shoulder I noticed Alice giving me a slight glare."
+    MCT "Wait is she..."
     "Before I could consider the possibility Honoka finished with her shirt revealing a very overtaxed black bra."
     show WG neutral
     WG "This does certainly look like a task for two people."
     show BE unique
+    show WG surprised-2
     BE "Hahh, I suppose my breasts are too big to be handled by one person."
+    show WG neutral
     WG "Could you please remove your bra as well Honoka?"
     "Honoka passed me another teasing glance as she reached back to undo the bra clasp."
-    show BE aroused
-    "I knew she was teasing me but this was getting to be a bit beyond that point. The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare and her still smiling."
-    WG "Now with that off, I can begin to get measurements. Kei would you stand in front so I can pass you the tape measure."
+    show BE seductive
+    "I knew she was teasing me, but this was getting to be a bit beyond that point."
+    hide BE with dissolve
+    $setBEOutfit(OutfitEnum.TOPLESS)
+    show BE with dissolve
+    "She turned around, her arms shoulders shifting up and down as she eased the straps down her arms.”
+    “The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare, while she was still smiling."
+    WG "Now with that off, I can begin to get measurements. Keisuke would you stand in front so I can pass you the tape measure?"
     "She passed me the end of the tape."
-    WG "Kei please pull this across the very front of her breasts so I can get her bust measurement."
+    show WG neutral-2
+    WG "Keisuke please pull this across the very front of her breasts so I can get her bust measurement."
     "At this point I was beginning to wonder whether Alice was doing this more as a test."
     "Carefully, I pulled the tape across Honoka's breasts, trying to avoid grazing her exposed areolas."
     "I tried to dart between looking down at her chest and Honoka's eyes to avoid staring for too long, lest I accidentally incur Alice's wrath."
-    show BE happy
+    show BE wink
     BE "Just like playing Operation."
     MC "I don't remember Operation being this big."
     BE "Does this happen often? You assisting her with other clients that is."
-    MC "No this is the first time I've helped with such a task. This fashion stuff is a bit out of my area of expertise so I feel like I'd be more hindrance than a help."
+    MC "No, this is the first time I've helped with such a task. This fashion stuff is a bit out of my area of expertise so I feel like I'd be more hindrance than a help."
     BE "Nonsense, you have a great sense of fashion. Remember when you went as a cowboy for Halloween that one time?"
     MC "We were 9 and that was a store-bought costume. Plus the pants were very baggy."
     show BE shrug
     BE "It was still a fashion statement."
     MC "It was a fashion crime is what that was."
     show BE neutral
-    "Alice let out a muffled chuckle as she finished the last measuring."
+    "Alice let out a muffled chuckle as she finished the last measurement."
     show WG haughty
     WG "Certainly sounds like a story you'll need to tell me at some point over tea Honoka. I'm quite interested in hearing about these childhood exploits."
     show BE happy
-    BE "Oh certainly, I have many I can share later."
+    BE "Oh certainly, I have {i}so{/i} many I can share later."
     show WG neutral
     WG "You are also good to redress now Honoka. This next part doesn't need you to be bare."
+    hide BE with dissolve
+    $setBEOutfit(OutfitEnum.DEFAULT)
     "As Honoka slung the bra back over her shoulders, Alice grabbed a thick black binder from beside her desk. Flipping the cover open revealed a massive catalog of designs complete with sample patches."
     WG "One thing I can't stand about the school-issued clothes is they are quite drab, with no character."
     show WG neutral-2
-    WG "Go ahead and look through and pick whatever suits your fancy. You ordered 3 so you can pick up to 3 if you so choose."
+    WG "Go ahead and look through and pick whatever suits your fancy. You ordered three so you can pick up to three if you so choose."
     show BE surprised-2
     "Honoka stared at the assortment before her with eagerness."
-    BE "I'm not sure 3 is enough, these are all great choices."
+    BE "I'm not sure three is enough, these are all great choices."
     WG "Take your time."
     "Honoka flipped through the pages for a few minutes while Alice and I continued to try and clean the earlier mess."
     show BE neutral
@@ -10464,48 +10489,65 @@ label WG044_c2_2:
     WG "Wonderful, what have you decided."
     show BE happy
     BE "Pink."
-    show WG surprised
+    show WG surprised-2
     WG "Uhh come again?"
     BE "A plain pink is fine. Maybe if it's possible some red roses on the nipple area."
-    WG "Is that for just one or all?"
+    WG "Is that for just one or all of them?"
     BE "All is fine, that way I don't have to worry too much about choosing."
     "I couldn't help but stifle a chuckle watching Alice trying to process the request. For once she truly looked baffled."
+    WG "You're sure now?"
+    BE "Yup, pretty sure."
+    show BE smug
     WG "I can certainly see if that's feasible. I will say that is quite the detail to add, I should maybe add that as a permanent option."
+    show BE happy
     MC "No harm in adding it to the catalog, might have others who want it to."
     show WG neutral
     WG "I'll put it under consideration, as from a marketing perspective you may be onto something."
-    BE "Thank you again for doing this for me. It was certainly an interesting and fun experience. Who knows maybe I'll come back for another sizing."
-    "Naturally Honoka is a little excited about her tits getting bigger even when they are three times the size of her head."
+    BE "Thank you again for doing this for me. It was certainly an interesting and fun experience."
+    show BE shrug
+    BE "Who knows? Maybe I'll come back for another sizing."
+    "Naturally, Honoka is a little excited about her tits getting bigger even when they are three times the size of her head."
+    show BE smug
     "Her outfit style may change, but her personality is as consistent as ever."
     show WG happy
     WG "It's been no trouble and I'm available if you may need any sort of adjustments or fittings."
+    show BE happy
     BE "You've got it! Have a great day."
-    "With a short exchange of bows, Alice saw Honoka out. I continued cleaning up in the bedroom, noticing the forlorned teacups and pot."
-    "Gathering them, I walked them out to the kitchen, setting them on the counter beside some other dishes waiting to be done."
+    "With a short exchange of bows, Alice saw Honoka out."
     hide BE with dissolve
+    show WG neutral
+    "I continued cleaning up in the bedroom, noticing the forlorn teacups and pot."
+    "Gathering them, I walked them out to the kitchen, setting them on the counter beside some other dishes waiting to be done."
     play music Bittersweet
     show WG haughty at Position(xalign=0.5, yalign=1.0) with dissolve
-    "Turning around I was surprised to see Alice standing right behind me. Her belly only a few inches from my own."
-    WG "I would like to thank you for the help today Kei. While I'm no stranger to dealing with large breasts, Honoka-chan's are truly on their own scale and more than I could properly work with."
-    MC "Oh it's nothing just..."
+    "Turning around I was surprised to see Alice standing right behind me. Her belly only a few centimeters from my own."
+    WG "I would like to thank you for the help today Kei. While I'm no stranger to dealing with large breasts, but Honoka-chan's are truly on their own scale and more than I could properly work with."
+    MC "Oh it's nothing, just..."
+    show WG sly
     "She gently pressed a finger against my lips, cutting me off."
     WG "Acknowledging this, I just want to be clear that I expect you to keep a slightly better composure if you want to assist me with her or similarly endowed clients again."
-    "She brings her finger down but does so rubbing it down my chest before pulling back."
-    WG "I just hope that if the moment ever comes, I expect you to give me the same sorta looks I saw you giving Honoka-chan. Do you understand?"
+    show WG aroused
+    "She brought her finger down but did so rubbing it down my chest before pulling back."
+    WG "I just hope that if the moment ever comes, I expect you to give me the same sorta looks I saw you giving Honoka-chan."
+    show WG haughty
+    extend "Do you understand?"
     "I just nodded my head slowly."
-    "She leaned forward and kissed me. Her body gently pressed me against the counter. The sensation was best  described as being encased in a pillow."
     show WG happy
+    "She leaned forward and kissed me. Her body gently pressed me against the counter. The sensation was best  described as being encased in a pillow."
     "Pulling back she booped me on the nose before waddling back to her room."
+    show WG pondering
     WG "I wonder if you'd respond that way to another girl with a predicament like mine. Like Sakura, perhaps?"
     if getFlag("Meet_Sakura"):
         MCT "Sakura... The girl from the cooking club? So that's what her factor was..."
+    hide WG with dissolve
     "As her door shut I had a million thoughts going through my head. The suddenness of her forwardness had shocked me on many levels and left me with many questions."
     "How much ogling did she see me doing? Would I have done the same with another weight gain girl? Was she inviting me to take things further?"
     if getFlag("Meet_Sakura"):
         "Needless to say, there was a lot weighing on my mind— in more ways than one."
     else:
+        "Needless to say, there was a lot weighing on my mind— in more ways than one."
         "But somehow out of all the questions swirling about, the one that fell from my mouth was."
-    MC "Who's Sakura?"
+        MC "Who's Sakura?"
     jump daymenu
 
 label WG045:
