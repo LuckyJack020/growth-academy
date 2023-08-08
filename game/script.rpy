@@ -982,7 +982,7 @@ init python:
 
     def setTomoOutfit(o):
         global TomoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.TRADITIONAL:
             TomoOutfit = o
 
     def setNatsOutfit(o):

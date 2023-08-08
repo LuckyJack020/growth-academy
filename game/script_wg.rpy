@@ -25458,17 +25458,17 @@ label WG081:
     "Alice's mom rushed to close the distance between them across the lobby— as fast as she reasonably could in heels, that was."
     WG "Hi Mom... {w}This... This is me."
     Vivian "Oh my dear, I had no idea- Well I knew from what I'd been told, but I didn't {i}know{/i}. I'm so sorry, I should have come to see you sooner."
-    # I feel so terrible for missing our summer getaway. It must have been so hard. I can only imagine. Why didn't you tell me?
-    Vivian "私は私たちの夏の休暇を逃すためにとてもひどい感じ。それはとても困難だったに違いありません。 私は想像することしかできません。 なぜ私に言わなかったのですか"
-    # I didn't want you to worry... I didn't want you to have to see me like this."
-    WG "心配させたくなかった... 私はあなたがこのように私を見ている必要はありませんでした"
+    # I feel so terrible for missing our summer getaway. It must have been so hard. I can only imagine. Why didn't you tell me? 私は私たちの夏の休暇を逃すためにとてもひどい感じ。それはとても困難だったに違いありません。 私は想像することしかできません。 なぜ私に言わなかったのですか
+    Vivian "Watashi wa watashitachi no natsu no kyūka o nogasu tame ni totemo hidoi kanji. Sore wa totemo konnandatta ni chigai arimasen. Watashi wa sōzō suru koto shika dekimasen. Naze watashi ni iwanakatta nodesu ka."
+    # I didn't want you to worry... I didn't want you to have to see me like this." 心配させたくなかった... 私はあなたがこのように私を見ている必要はありませんでした
+    WG "Shinpai sasetakunakatta ... watashi wa anata ga kono yō ni watashi o miteiru hitsuyō wa arimasendeshita."
     "At this point, I had no idea what they were saying. They were both talking far too fast for my rudimentary English skills to glean an iota, but even I could tell it was a much needed heart to heart for both of them."
     show Vivian happy
-    # Darling, nothing could ever make me not want to see you. Your father and I love you so much.
-    Vivian "ダーリン、何も私があなたに会いたくないようにすることはできませんでした。 あなたのお父さんと私はあなたをとても愛しています。"
+    # Darling, nothing could ever make me not want to see you. Your father and I love you so much. ダーリン、何も私があなたに会いたくないようにすることはできませんでした。 あなたのお父さんと私はあなたをとても愛しています。
+    Vivian "Dārin , nani mo watashi ga anata ni aitakunai yō ni suru koto wa dekimasendeshita. Anata no otōsan to watashi wa anata o totemo aishiteimasu."
     show WG happy
-    # I love you too Mom
-    WG "私はあなたもお母さんを愛しています" 
+    # I love you too Mom 私はあなたもお母さんを愛しています
+    WG "Watashi wa anata mo okāsan o aishiteimasu." 
     extend " We should probably go back to speaking Japanese so Keisuke can understand us."
     show WG neutral at Transform(xzoom=1)
     play music WG

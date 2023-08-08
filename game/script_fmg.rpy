@@ -14152,9 +14152,10 @@ label FMG072:
     show Natsuko flex
     Natsuko "Ha. Impressed? I can tell you are, Hotsure-san. You wanna feel?"
     MC "I'm... I'm good."
+    show cg FMG072 with dissolve
     "Akira, however, took her up on that offer..."
-    show FMG surprised
     FMG "Woooow, Nat, your biceps are huge. They have to be bigger than my face!"
+    hide cg with dissolve
     show Natsuko smug
     Natsuko "I'd expect nothing less since being declared the biggest muscle growth student... ever."
     show FMG angry

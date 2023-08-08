@@ -499,6 +499,7 @@ image cg FMG058_pose2 = "Graphics/ui/gallery/FMG058_pose2.png"
 image cg FMG058_pose3 = "Graphics/ui/gallery/FMG058_pose3.png"
 image cg FMG061 = "Graphics/ui/gallery/FMG061.png"
 image cg FMG067 = "Graphics/ui/gallery/FMG067.png"
+image cg FMG072 = "Graphics/ui/gallery/FMG072.png"
 image cg FMG077 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.png",
     "True", "Graphics/ui/gallery/nsfw-cg.png")
@@ -635,6 +636,7 @@ image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-2.
 image FMG angry-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-3.png")
 image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused.png")
 image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused-2.png")
+image FMG disappointed = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/disappointed.png")
 image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/flex.png")
 image FMG upbeat = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/upbeat.png")
 
@@ -795,6 +797,7 @@ image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.png"
 
 #legalsizes already updated, change images when bigger sprites exist
 image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/annoyed.png")
+image Tomoko defiant = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/defiant.png")
 image Tomoko distracted = Composite(
     (443, 651),
     (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted.png"),
@@ -811,11 +814,45 @@ image Tomoko distracted = Composite(
         "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
         None, Null()),
     )
+image Tomoko distracted-2 = Composite(
+	(443, 651),
+	(0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-2.png"),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+    	None, Null()),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+    	None, Null()),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+    	None, Null()),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+    	None, Null()),
+	)
+image Tomoko distracted-3 = Composite(
+	(443, 651),
+	(0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-3.png"),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+    	None, Null()),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+    	None, Null()),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+    	None, Null()),
+	(0, 0), ConditionSwitch(
+    	"getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+    	None, Null()),
+	)
 image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/neutral.png")
 image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/happy.png")
+image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/smile.png")
 image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/surprised.png")
 image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/sad.png")
 image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/unique.png")
+image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/worried.png")
 
 image Ryoko neutral = "Graphics/minor/ryoko/[RyokoOutfit]/neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko/[RyokoOutfit]/happy.png"
