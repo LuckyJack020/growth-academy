@@ -815,37 +815,37 @@ image Tomoko distracted = Composite(
         None, Null()),
     )
 image Tomoko distracted-2 = Composite(
-	(443, 651),
-	(0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-2.png"),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
-    	None, Null()),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
-    	None, Null()),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
-    	None, Null()),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
-    	None, Null()),
-	)
+    (443, 651),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-2.png"),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+        None, Null()),
+    )
 image Tomoko distracted-3 = Composite(
-	(443, 651),
-	(0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-3.png"),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
-    	None, Null()),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
-    	None, Null()),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
-    	None, Null()),
-	(0, 0), ConditionSwitch(
-    	"getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
-    	None, Null()),
-	)
+    (443, 651),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-3.png"),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+        None, Null()),
+    )
 image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/neutral.png")
 image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/happy.png")
 image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/smile.png")
@@ -999,6 +999,7 @@ define audio.CreepingPresence = "Audio/BGM/CreepingPresence.ogg"
 define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
 define audio.DifferentPaths = "Audio/BGM/differentpaths.ogg"
+define audio.DormLife = "Audio/BGM/scene_dorm.ogg"
 define audio.Festival = "Audio/BGM/scene_festival.ogg" #Dokkoi!
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)

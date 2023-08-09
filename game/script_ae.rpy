@@ -2332,7 +2332,7 @@ label AE015:
     "As I walked into the office, I was greeted with an unbroken wall of black-iron filing cabinets, sitting there menacingly. And in the middle of two cabinets..."
     MC "..."
     MCT "S-Shiori-san?!"
-    $ persistent.unlockcgAE015 = True
+    $ persistent.unlock_cgAE015 = True
     show cg AE015
     show AE neutral-annoyed at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) behind cg
     with dissolve

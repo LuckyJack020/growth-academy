@@ -578,6 +578,17 @@ init python:
     )
     ost.manualDefineList.append(theme_StD)
 
+    theme_DoL = ost.soundtrack(
+        name = "Dorm Life",
+        path = "Audio/BGM/scene_dorm.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Residence Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_DoL)
+
     ## Base Template
     ######################################
 
