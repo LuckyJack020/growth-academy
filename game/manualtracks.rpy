@@ -249,11 +249,11 @@ init python:
     ost.manualDefineList.append(SchoolDay)
 
     Tense = ost.soundtrack(
-        name = "Tension",
-        path = "Audio/BGM/tension.ogg",
+        name = "A Tense Moment",
+        path = "Audio/BGM/tensemoment.ogg",
         priority = 3,
         author = "Post-Bop",
-        description = "Conflicted Music",
+        description = "Heightening Stress",
         cover_art = False,
         unlocked = True
     )
@@ -588,6 +588,17 @@ init python:
         unlocked = True
     )
     ost.manualDefineList.append(theme_DoL)
+
+    theme_ArG = ost.soundtrack(
+        name = "Argue",
+        path = "Audio/BGM/tension.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Conflict Growing",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ArG)
 
     ## Base Template
     ######################################
