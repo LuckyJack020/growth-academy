@@ -1914,7 +1914,7 @@ label MC003:
 label MC004:
     $setTime(TimeEnum.EVE)
     scene Dorm Interior with fade
-    play music Schoolday
+    play music DormLife
     "In under five seconds, I had my shoes off, backpack flung onto my bed, and head jammed into the fridge."
     MCT "Gah... after class munchies. Always welcome, yet always ruining my dinner."
     "I retrieved an apple that had been there for... some time{w}, at least based on the rest of the slim pickings in the fridge. Without any other real prospects, I rinsed it in the sink, then took a bite of it."
@@ -2154,6 +2154,7 @@ label MC004:
                 "She waved at me vigorously as I returned the gesture, then let her go on her way."
                 hide FMG with dissolve
             elif getHighestAffection() == ("GTS"):
+                $setGTSOutfit(OutfitEnum.WORK)
                 show GTS neutral with dissolve
                 "I glanced toward the side away from the campus and spotted Naomi walking slowly, looking at the various bits of shrubbery and foliage in the terrace."
                 "Her eyes went up along the sides of the building and rested there, then went over, finally landing on me."

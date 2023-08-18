@@ -10445,8 +10445,8 @@ label WG044_c2_2:
     hide BE with dissolve
     $setBEOutfit(OutfitEnum.TOPLESS)
     show BE with dissolve
-    "She turned around, her arms shoulders shifting up and down as she eased the straps down her arms.”
-    “The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare, while she was still smiling."
+    "She turned around, her arms shoulders shifting up and down as she eased the straps down her arms."
+    "The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare, while she was still smiling."
     WG "Now with that off, I can begin to get measurements. Keisuke would you stand in front so I can pass you the tape measure?"
     "She passed me the end of the tape."
     show WG neutral-2
@@ -26601,6 +26601,432 @@ label WG084:
     jump daymenu
 
 label WG085:
+    $setProgress("WG", "WG086")
+    scene Lockers with fade
+    play music DormLife
+    "I always enjoy these days, especially since they've become harder to come by as Alice's busy schedule continued to fill up lately, much like her figure."
+    "This was a great time for these workouts, as it was a lull in the free period where not many people took advantage of the time to swim."
+    "My body wasn't exactly looking forward to another exhausting attempt at keeping up with Alice in the pool."
+    "But judging by the extra shuffling and maneuvering needed to get my swim trunks on, I could tell the other part of my body was looking forward to seeing her in her swimsuit."
+    scene Pool
+    show WG neutral-2
+    with fade
+    "And there she was{w}— in all her glory."
+    "Her dainty, elegant stride had become more difficult to maintain lately. {w}How could it not? Though clearly it was not impossible for her, even with her ample proportions."
+    "Her massive thighs slid not just past each other, but {i}around{/i} each other. {w}The extra motion of each step only exaggerated the feminine sasshay of her hips as they swayed to and fro with each step— a rippling wave in their own right." 
+    "The tight spandex of her swimsuit somehow managed to contain her imponderous belly."
+    "Though somewhat restraining its motions (unfortunately), the tightness of the fabric only served to amplify the quaking jiggle that sloshed through her unconstrained hips, wobbling down her thighs all the way to her feet." 
+    show WG happy
+    WG "What's with that look?"
+    MC "Oh, just admiring the scenery, that's all."
+    show WG happy-2
+    WG "Is that so?"
+    MC "It's quite the view."
+    show WG sly
+    WG "I'll say."
+    "I wasn't quite sure what she was getting at, until I looked down to realize my swim trunks were doing a lot more revealing than concealing."
+    MC "... Um..."
+    WG "Appears that a cold plunge might do you some good, hehe."
+    MC "Uhhh, yup. I suppose we should get started."
+    show WG neutral
+    WG "Indeed."
+    "We walked down to the other end of the pool. Rather than choosing to dive in, Alice preferred to step into the pool from the steps on the shallow end." 
+    "I never asked, but I assumed she was not confident in her jumping distance, or perhaps the splash zone she created if she were to attempt to dive in at her present size."
+    "With one hand on the rail and the other in mine, she descended the pool's stairs into the water, extending her chubby little feet with slow deliberate steps, each one a blind leap of faith for her."
+    WG "Thank you, Dear."
+    MC "You're most welcome."
+    show WG happy
+    "There it was. That light in her eyes when she hit the water, when the weight of her body left her, allowing her to move effortlessly."
+    WG "You better keep up."
+    if checkSkill("Athletics", ">=", 16):
+        MC "I just might. I've been practicing."
+        show WG sly
+        WG "We'll see about that."
+    else:
+        MC "I'll try."
+        show WG sly
+        WG "That's not very convincing."
+        MC "That's funny, I said the same thing last time when you said you'd go easy on me."
+    hide WG with dissolve
+    "Alice took off across the length of the pool in a freestyle stroke, leaving me in the dust, figuratively at least, as I scrambled to put on my goggles to start after her."
+    show WG sly with dissolve
+    WG "Don't tell me you're falling behind already."
+    "It was a mocking greeting that quite frankly I expected as she met me at the halfway mark after she had already turned around."
+    hide WG with dissolve
+    MCT "Okay, at least try not to get lapped dude. Pick up the pace."
+    pause 1
+    "After six laps I was ready to call it, but this was Alice's warm up routine."
+    show WG neutral with dissolve
+    WG "You don't seem to be drowning. That's a good sign. How are you feeling?"
+    MC "Wiped out. Can I get a breather?"
+    WG "I suppose so. I'm going to hit a few laps on the breaststroke."
+    MC "Okay, sounds good."
+    show WG happy
+    "Alice somersaulted and turned around underwater, shooting off in the opposite direction."
+    "Now, mind you, I really did need to rest, but the better part of me enjoyed the view of watching Alice swim. It was like nothing I had ever seen before."
+    "The buoyancy of her fat kept her ass almost entirely out of the water. It quaked and wobbled with each scissor thrust of her massive fat swollen thighs. But watching her underwater was an even greater sight."
+    "Freed from the confines of gravity, her belly was able to fully stick out in front of her, revealing just how large it truly was, all while the heavier medium of the water allowed for slow motion viewing of every ripple and jiggle of her blubber lined body."
+    show WG haughty
+    WG "Catch your second wind yet?"
+    MC "I suppose I have enough to go a few more rounds."
+    show WG neutral
+    WG "Let's work on your backstroke." 
+    show WG sly
+    extend " Try not to get lapped... twice."
+    MC "Hey what do you take me for?"
+    show WG happy
+    "I didn't get an answer because she was already off and my time was already starting to suffer as I admired the blue globe of her belly jutting out from the water as she cruised along."
+    MCT "Ugh, I hate the backstroke. I'm always worried I'm going to hit my head when I reach the end of the pool. Doesn't help that I can't see shit with all this hair either."
+    hide WG with dissolve
+    pause .8
+    "I tried my best, but unfortunately I did get lapped{w}... twice. {w}Like I said, it's not my best stroke."
+    show WG haughty with dissolve
+    WG "You're not keeping up, Dear."
+    if checkSkill("Athletics", ">=", 16):
+        MC "Alice, I gotta be honest, I've improved a lot since my near drowning experience at your beach house, but your pace is impossible."
+    else:
+        MC "I know, I'm sorry, but you have to admit, this is a pretty tough distance for casual swimmers."
+    show WG stern
+    WG "Oh come now, don't tell me you're getting tired already. I'm just getting started."
+    show WG doubt
+    MC "Alice, this already a lot more than what we would typically do on pool days, when we first started."
+    show WG worried
+    WG "Oh... {w}It seems what I suspected is happening after all."
+    MC "What do you mean?"
+    show WG neutral
+    WG "In a word: buoyancy."
+    show WG stern
+    WG "Apparently I've grown so fat that it would be impossible for me to drown. As a consequence I don't have to expend as much energy when swimming to keep myself high in the water."
+    MC "That's a good thing right? I mean you already were a natural swimmer."
+    show WG doubt
+    WG "I suppose if I'm going to be the size of a whale it would at least be nice to gain some of the advantages of being one."
+    show WG worried
+    WG "As a consequence I've noticed though that it's become increasingly more difficult to maintain the same intensity with my swimming exercises. I hadn't realized just how much extra distance I had been adding lately."
+    show WG neutral
+    MC "Have you thought about doing more long distance swimming then? Like those open ocean type races where they swim for dozens of kilometers?"
+    show WG pondering
+    WG "Hmm, that is an intriguing idea. I hadn't really considered the distances beyond the standard collegiate ones when I was training competitively." 
+    WG "They always struck me as a more fringe thing, not to mention unnecessarily dangerous— but if the threat of drowning or exhaustion isn't an issue..."
+    MC "See? Sounds like we could be onto something here."
+    show WG neutral
+    WG "Perhaps. It is intriguing. For now though I think I have enough on my plate without training for a swim marathon on top of it."
+    MCT "She's certainly no stranger to full plates."
+    MC "So what do you want to do now?"
+    play music ClearSkies
+    WG "How about some water polo practice?"
+    MC "Sure, I'll go grab the ball."
+    "I hopped up from the edge of the pool and walked over to the equipment closet. It took a moment to find it amongst the pool noodles and kickboards, but I managed to find the rubbery volleyball-looking thing without too much trouble."
+    show WG surprised-2
+    MC "Catch!"
+    show WG surprised
+    "I tossed the ball to Alice mid-jump back into the pool right next to her."
+    show WG haughty
+    WG "Just for that, I'm going to make you work extra hard."
+    MC "Is that—"
+    show WG sly
+    play sound Thud
+    MC "so..."
+    "Before I could even finish my smart-ass remark, Alice had already fired off a pass right upside my head."
+    MC "I guess we've already started then."
+    show WG haughty
+    WG "Try to keep up."
+    show WG happy
+    "Our \"water polo practice\" sessions were really just us passing the ball to each other as we moved up and down the length of the pool." 
+    "Sounds easy (if this was handball or basketball) but keeping yourself high enough in the water to use your arms to pass was a tall order— at least for me it was."
+    play sound Thud
+    show WG surprised-2
+    MC "Hey! I wasn't ready for that one."
+    show WG stern
+    WG "Honestly, you really could use a swim cap."
+    MC "It'd need to be the size of a garbage bag at this point."
+    WG "Well, we should at least do something about those bangs."
+    show WG sly
+    WG "I have a few spare headbands if you'd prefer."
+    MC "I'll take you up on that offer if I start running into walls."
+    show WG haughty
+    WG "Let's hope your echolocation skills improve then."
+    show WG happy
+    "What was supposed to be a game of catch was devolving into a game of fetch as I struggled to keep up with the movement up the field and the passes above water."
+    "Alice tossed out a particularly leading pass, no doubt encouraging me to burst forward to receive it. {w}But in my haste to catch it by over extending my arms, I carelessly allowed my mouth to open."
+    show WG surprised
+    stop music
+    MC "{i}Cough! {w}Hyk! {w}Kak! {w}Blak! {w}ACK{/i}!" 
+    WG "Oh my God! Keisuke!"
+    "Before I knew what was happening I felt a swell of water come up on me as I struggled for air, only to be swept up above it as I felt myself enveloped by something very soft and well padded."
+    WG "Breath! Breath! Get it all out!"
+    play sound Thud
+    pause .5
+    play sound Thud
+    "I felt hard thumps on my back, helping me to force the water out of my throat."
+    MC "{i}Blehd!{/i}"
+    show WG surprised-2
+    WG "Are you okay?"
+    play music Sunset
+    "Finally able to take pause of where I was, I realized my head was resting comfortably well above water between two very large floatation devices."
+    MC "Never felt better."
+    show WG sly
+    WG "You would say that, wouldn't you?"
+    show WG surprised-2
+    MC "Thanks for saving me... again."
+    show WG doubt
+    WG "I wouldn't be so thankful considering I got you into this mess in the first place."
+    show WG neutral
+    WG "Here. Hold on to me."
+    "I wrapped my arms as best I could, sinking into Alice's belly, feeling the warmth of it, in contrast to the surrounding cool water, as I rested from exhaustion with my head on her breasts."
+    WG "I think that's enough for the day. Let's get you out of the water."
+    "Though I was taller than her on land, I was barely eye to chin with her in the water. Standing tall from her own buoyancy, I had never felt so thoroughly dwarfed by her as I did clinging to her as my own personal floaty."
+    show WG worried
+    WG "I'm sorry I pushed things too hard, even after you told me it wasn't easy for you. I can understand if you don't want to keep doing this with me."
+    show WG surprised-2
+    MC "Oh, don't say that. The real question is, why would I ever want to do it without you?"
+    MC "If something goes wrong, I know you're there to save me."
+    show WG sad
+    WG "Th...Thank you, Dear. I.."
+    show WG happy
+    WG "It's a relief to hear you say that."
+    show WG neutral
+    WG "I think that's enough for the day— you look exhausted. You shouldn't be trying to swim after nearly drowning. Just keep holding on, I'll get you back to the shallow end."
+    "Suddenly, I felt myself being lifted up out of the water."
+    "I was unsure what was going on, until I realized Alice had leaned over backwards, leaving me above water, clinging to her belly like it was a lifeboat while she backstroked her way to the end of the pool."
+    "Even with my full weight directly on top of her, my body laid comfortably above the water. It was exactly as she had said, her body was an unsinkable vessel."
+    show WG happy
+    "Peaking over her breasts, I could see her smiling at me, even as she was mentally focusing on her strokes so as to keep herself steady. It was all the assurance I needed and more to know I was safe."
+    "Safe from everything."
+    "With my throat and lungs burned dry from my coughing fit, I wasn't in a position to make it through another lap. It was a relief to have her carry me through." 
+    "So much so I found myself starting to fall asleep on the warm buoyant cloud that ferried me across the calm waters."
+    show WG neutral-2
+    WG "Are you okay?"
+    "Alice let herself stand back up in the pool, allowing me to gently slide off her in the process."
+    MC "Throat's a little dry, but I'll be fine. Let's get you out of the pool."
+    "I walked up the steps in advance, extending a hand to hers to help her navigate the steps."
+    show WG happy
+    WG "Such a gentleman."
+    MC "Ah, mon chéri, the pleasure is all mine."
+    show WG happy-2
+    WG "Your pronunciation is getting better."
+    MC "I have a good teacher."
+    WG "Flatter."
+    MC "Guilty as charged."
+    show WG neutral-2
+    WG "You still have time to come over?"
+    MC "Of course. I have the rest of the evening."
+    show WG happy
+    WG "Good, I was hoping you would."
+    scene black with fade
+    pause .5
+    play music Stardust
+    $setWGOutfit(OutfitEnum.NUDE)
+    scene Dorm WG
+    show WG neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    WG "Could you grab the luffa, Dear?"
+    MC "Sure."
+    "Something I always looked forward to after our swimming sessions was the cleaning ritual that followed. Granted the lockers had showers in them, but let's face it: Alice needed a little extra help reaching every place."
+    "And I was just the man for the job."
+    show WG neutral-2
+    WG "Ahh, that feels nice. I've had a bit of an itch there for quite a while."
+    MC "Oh? Well I'm glad I could fix that."
+    show WG neutral
+    WG "One of the more minor inconveniences to be sure, but one not readily apparent with this condition, I've lost a fair amount of reach behind my back."
+    MC "Good thing I'm here to help."
+    "Using the sponge, with a gentle firmness I rubbed along her back with the exfoliating sponge. I could tell she enjoyed it quite a bit since her reach had long made this region of her body inaccessible to her."
+    "The sheer size and number of her back folds was astounding. The depth my hand depressed into her skin and the jiggling motion it sent through the rest was mesmerizing. The copious amount of fat under them forced her arms further up to her sides." 
+    "Her ass was a protruding shelf I had to lean over to fully reach her back. Her belly always stole the show, so it was always truly surprising to me just how wide her frame was when I got an up close look at her from behind."
+    show WG sly
+    WG "While you're back there, admiring the view I'm sure,"
+    show WG neutral-2
+    extend " would you mind shampooing my hair?"
+    MC "What was that now?"
+    show WG sly
+    WG "As {i}distractible{/i} as you are, I'm sure you heard me correctly."
+    MC "I kid, I kid."
+    show WG neutral
+    MC "Sure, let's see here..."
+    MC "Uhhh, which one?"
+    WG "The one that says \"Intensive Repair\". I always use it after a session in the pool."
+    MC "Right. Makes sense I guess."
+    "Honestly I didn't know what half of this shit was she had on the shelves in her shower. There were a lot of different soaps and shampoos (very expensive looking ones at that) all in these big pump style bottles."
+    MC "Is it really that much of a difference from one to another?" 
+    show WG haughty
+    WG "If you know of a better one, how about you buy it for me?"
+    MC "Touché." 
+    "I pumped some into my hands and got to work, massaging the lather into her hair before she took over. She didn't really need my help with the task itself, unlike scrubbing her back (and backside)."
+    "I was happy to admire her handiwork, watching the mass of flab that hung from her pillow-sized arms wiggle with every slight movement of her fingers as she raked them through her hair in small circles."
+    show WG neutral
+    WG "Ahh. Feels good to have that gross crinkly feeling out of my hair finally. Could you get me the conditioner next?"
+    MC "Which one is it?"
+    show WG stern
+    WG "It's right next to the shampoo bottle, same colors, same name, but conditioner instead of shampoo."
+    MC "Well that would make sense, {i}if{/i} there wasn't a dozen other ones that looked similar."
+    show WG haughty
+    WG "Oh you're being dramatic."
+    MC "How much of this stuff do you want? I can never tell how much to use with conditioners, they don't lather at all so a gob of it feels like nothing until you realize it's not rinsing out of your hair after the fifth attempt."
+    show WG sly
+    WG "One would have thought {i}you{/i} of all people should have a grasp of this by now."
+    WG "Three pumps will be enough for the amount of hair I have."
+    MC "Okay, I'll take your word for it then."
+    WG "It lathers a lot better if you don't have hard water."
+    MC "Well unfortunately for us this place was built on a rock quarry."
+    WG "Which is why it's worth paying a little extra for the things you use everyday."
+    pause 1
+    show WG happy
+    WG "There we go, nice and light."
+    show WG happy
+    MC "Wow, you're right, even I can see a difference from when you got out of the pool. Man, how much does that stuff cost?"
+    show WG neutral
+    WG "Far too much by any reasonable metric. The margins on luxury hair care and cosmetic products are some of the highest across any industry." 
+    show WG haughty
+    WG "But as Father is fond of saying \"If you want the best, you need to be willing to pay that premium.\"."
+    MC "Interesting. I took your father to be a bit more frugal for that."
+    show WG happy
+    WG "You'd be correct. That was his attitude about surgeons and lawyers. The other part of it was \"Don't pay for the best when average will do just fine.\" It was Mother who taught me to not skimp on skincare."
+    MC "Ahh, I see. It's all coming together."
+    show WG sly
+    WG "Is it now?"
+    MC "Eh, probably not. I don't think I'll ever have you figured out."
+    show WG happy-2
+    WG "Ha! Well, don't give up too soon, Dear."
+    MC "Don't count me out just yet. So is it my turn now?"
+    show WG neutral
+    WG "Not quite, I still need to use the hair mask."
+    show WG doubt
+    MC "A hair mask? Why would you want to cover it up?"
+    WG "Not like that, it's like a heavy-duty conditioner that's really thick. It's that big squeeze tube next to the intensive repair conditioner."
+    MC "You mean there's a third step to hair washing? This is getting out of hand."
+    WG "Oh please, it's not that many steps. Besides, you mean to tell me with your condition you've never thought to use a hair mask?"
+    MC "Well, I would if I knew what one was. {w}Actually, scratch that, I probably wouldn't have even if I did. I usually just use a 2-in-1 shampoo. It's much faster that way."
+    show WG stern
+    "Alice glared at me through the shower mirror like a disappointed mother."
+    MC "What?"
+    show WG sly
+    "Alice just shook her head."
+    WG "Oh, Keisuke. Some women would kill to have flawless hair like you and your sister's but you both treat it like some used ball of twine."
+    show WG neutral
+    WG "Expect to get the full treatment when it's your turn."
+    MC "\"The full treatment.\" I like the sound of that."
+    show WG aroused
+    WG "Let's not get ahead of ourselves now. There's still a little more left."
+    MC "Hehe. Alright, here's your hair mask, straight out of the tube. Man this stuff is thick. How am I supposed to get this through all of {i}this{/i}?"
+    show WG haughty
+    WG "Let me worry about that. And don't fret too much. It's not part of an everyday regiment, unless one were to dye their hair."
+    MC "Huh, learn something new everyday. Guess I need to buy three haircare products instead of one."
+    show WG neutral
+    WG "Only three? What about your hair oil serum? Or your hair lotion?"
+    MC "Now you're just making up stuff."
+    show WG doubt
+    pause 1
+    MC "You're serious?"
+    show WG sly
+    pause .5
+    MC "Whew. You had me going there."
+    show WG neutral
+    WG "Well a hair lotion is more for if you style your hair, but you might actually benefit from an oil serum for the ends of your hair..."
+    MC "You were serious. Man, this growth sucks." 
+    MC "I mean I knew it was annoying, but I didn't realize I'd have to become an amateur cosmetologist just to keep it in check."
+    show WG happy-2
+    WG "I think you mean {i}I{/i} have to become an amateur cosmetologist just to keep it in check."
+    show WG haughty
+    WG "Clearly you don't meet the minimum qualifications."
+    MC "Clearly. Though I would say you're overqualified."
+    show WG aroused
+    WG "True... But perhaps I'd be willing to take a cut in salary if the position came with a generous benefits package."
+    MC "Oh? I think that can be arranged..."
+    show WG surprised-2
+    "I reached around Alice, expending the full extent of my wingspan in the process to reach under her breast, each one considerably heavier than I remembered."
+    show WG aroused
+    WG "{i}Emphn{/i}!" 
+    "I leaned over her shoulder kissing her plush chubby cheek in the process. Firmly, but not too harsh, so as to not leave a mark, as I needed her breast like a thick, wet dough in my hands and between my fingers."
+    WG "{i}Ahhh{/i}! {w}Keisuke, that feels so... {i}mmm{/i}"
+    show WG surprised-2
+    WG "Oh!"
+    "It seemed that Alice couldn't help but notice the feeling of my manhood firmly pressed against her yielding soft backside, practically enveloping it in an indentation of flab as I squeezed her closer."
+    show WG sly
+    WG "We might have to turn this into a cold shower if things are going to keep heating up."
+    MC "Would that be such a bad thing?"
+    if getFlag("WG061S_Belly"):
+        show WG doubt
+        WG "That was a one time thing. Let's not push the issue further."
+        MC "What thing?"
+        show WG sly
+        WG "Exactly."
+    else:
+        show WG doubt 
+        WG "I would prefer we finish cleaning ourselves before we let things get messy."
+        MC "Okay, fair enough."
+        show WG sly
+        WG "Trust me, your patience will be rewarded."
+        MC "Oh? Is that so?"
+    show WG neutral
+    WG "On that note, let's not protract the task at hand longer than necessary. Let's get your hair squared away. But first..."
+    "Alice began to turn around, a slow and deliberate process given the space restrictions and her dimensions." 
+    "Granted her bathroom redesign since getting stuck in the tub had made things much more spacious, but I still had to back up to the edge of the shower in order to give her hips, and now her belly, the proper clearance."
+    show WG neutral-2 at Transform(xzoom=1)
+    WG "Would you mind?"
+    show WG happy
+    MC "I'd love to."
+    WG "I thought you might say that."
+    "Alice was long past being able to reach even the majority of her belly at this point. All that chub needed a sudsy rub— and I was up for the task."
+    show WG aroused
+    WG "{i}Mphft{/i}!"
+    "Alice's belly was as sensitive as it was sensual. I tried my best to be gentle, yet firm enough to be thorough as I scrubbed with my hands, knowing the luffa sponge was far too rough for the delicate detailed work needed here."
+    WG "Mmm... Make sure you get the full coverage."
+    MC "Yes ma'am!"
+    show WG sly
+    WG "As if I even needed to say anything."
+    show WG aroused
+    "Her flab was so thick it was almost dense, of course seeing how well she floated in the water that was clearly not the case, but I think it had more to do with just the sheer amount of weight being displaced as my hand sunk into her fat."
+    "Pressing my hand into her belly allowed me to sink in past wrist level before it failed to yield further. So much blubber, it was mind boggling. Even if I could reach in past my elbow, I still would have not reached the bottom of it."
+    WG "You're certainly taking your time."
+    MC "Right. Sorry about that."
+    WG "I never said that was a bad thing."
+    "Sliding to and fro in circles, I was greatly aided in the task by the slipperiness of the soap as my hands glided across her blubbery dome. It quivered and wiggled like a giant gelatin dessert with each stroke."
+    "Working my way down to the bottom rim of her belly it began to really quiver as looser bits smack against her thighs as they offered less resistance to my touch."
+    WG "I hate to ask, but do you think you could..."
+    MC "Say no more."
+    "I knew exactly what she meant. I needed to get \"under the hood\" so to speak. I dropped down to my knees and reached under her belly, with a soft scrunchy sponge."
+    show WG surprised
+    WG "!"
+    WG "I hope you know what you're doing down there."
+    show WG sly
+    MC "Oh, I know {i}exactly{/i} what I'm doing."
+    WG "If you say so..."
+    show WG neutral-2
+    MCT "I have no idea what the hell I'm doing. I can't see anything, and I as far as I know my arm is missing below the elbow at this point."
+    "The expanse between Alice's belly and her thighs, as well as her fupa, was like the Mariana trench: deep, dark, and crushing."
+    MCT "My arm isn't going to hold up under this pressure much longer."
+    WG "I think you got everything, Dear."
+    MC "Everything you say?"
+    show WG surprised
+    WG "{i}Heegh{/i}!"
+    "Alice gasped as my finger tips lightly grazed her fupa. I'm not sure how much water had made it under there before, but it was plenty wet to be sure."
+    show WG surprised-2
+    WG "Your thoroughness is much appreciated."
+    show WG haughty
+    WG "Now stop stalling, it's now time for your turn."
+    MC "Oh alright, fair enough."
+    WG "We'll get to that part soon enough, now pass me the one that says \"Ultra Moisturizing\". You haven't been keeping up with brushing your hair and we need to fix that."
+    "Alice proceeded to give me the \"full treatment\", though not the one I was hoping for." 
+    "I didn't really care for the whole hair mask thing she used, it made my hair feel heavy and kind of weird while it sat in there. But I couldn't argue with the result when it was all said and done and we dried off."
+    show WG happy
+    MC "Feeling better?"
+    WG "Very much so. I just can't imagine leaving my skin and hair feeling so crusty and dry straight out of the pool without a shower. That exfoliating soap does wonders. My skin feels revived."
+    show WG aroused
+    WG "In fact... How about you feel for yourself just how smooth it is."
+    show WG happy-2
+    "Alice took my hand and placed it on her belly, reaching out to guide the other there as well."
+    MC "It's... It's quite smooth. Silky even."
+    WG "That's good for that spot, but I'm thinking it might be a good idea for you to inspect all of your work."
+    MC "All of it?"
+    show WG aroused
+    WG "Every. Last. Spot."
+    MC "Say no more, though I strongly suspect you'll want to shower again before bed after a \"full inspection\"."
+    show WG sly
+    WG "What a terrible shame that would be."
+    MC "Oh yes. How terrible. Scandalous even."
+    WG "Indeed. {w}That's why I'm counting on it."
+    jump daymenu
+
+label WG086:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
