@@ -5459,7 +5459,7 @@ label FMG033_FMG_after:
     jump daymenu
 
 label FMG034:
-    $setProgress("FMG", "FMG037")
+    $setProgress("FMG", "FMG036")
     scene Hallway with fade
     play music Schoolday
     MCT "I swear if I have one more pop quiz today, I'm going to highly consider jumping out the nearest window. Science, I'm begging you. Please don't do this to me..."
@@ -5635,7 +5635,167 @@ label FMG034:
     jump daymenu
 
 label FMG035: #tmp
-    jump FMG037
+    jump FMG036
+
+label FMG036:
+    $setProgress("FMG", "FMG037")
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm FMG with fade
+    play music FMG
+    MC "These movies are soooo cheesy. How can you watch these?"
+    show FMG neutral with dissolve
+    FMG "Um... Excuse me? Kamilizard is iconic! I know you've seen the dudes dressed up as him around the mall and the dozens of people wearing t-shirts of him. {w}And you can't deny my plushie Kamilizard isn't the cutest thing on the planet."
+    MC "Eh, it's... okay."
+    FMG "Why do you lie so much, dude? I've seen you snuggle with it constantly."
+    MC "...Y-You must have me confused with someone else."
+    FMG "It's cute, I took some pictures of you when you weren't looking."
+    MC "And only you've seen them, yeah?"
+    show FMG happy
+    FMG "Heh, maybe."
+    MC "Akira, you could ruin my reputation around campus if those got out."
+    show FMG neutral
+    FMG "Pfff, you don't have a reputation worth ruining, relax Kei-kun."
+    MC "Shows how little you know of me. {w}Regardless of that, can we watch something else? I don't know how much more Kamilizard I can take."
+    FMG "How did you not enjoy Kamilizard vs Space Kamilizard?? That's one of the best films in the franchise."
+    MC "I was invested for roughly the first twenty minutes but when the Space Kamilizard showed up with that terrible design, I was over it. Like who approved that? It's horrible."
+    FMG "Dude, you can't be serious. The crystals coming out of his shoulders are badass! I mean, they even gave him freaking telekinesis!"
+    MC "I sleep."
+    FMG "Okay, Kei, what would you want to watch?"
+    MC "Teen Arachnid 2."
+    FMG "The one we've seen twenty times now?"
+    MC "The very one. You know, it's one of the best films ever made. That train scene is unrivaled."
+    FMG "It's okay. I got a little emotional when the passengers carried him over their heads after he saved them. I'll give it that at the very least."
+    MC "See?!? That's good filmmaking... invoking emotion in the viewer. It's... It's beautiful."
+    FMG "Meh."
+    MC "Meh? Meh????"
+    MC "You just don't appreciate good films, I see. You prefer no plot with a big monster destroying Tokyo for the third time in a week."
+    FMG "The only good thing to come out of the Teen Arachnid movies are the memes. Besides that, those movies are forgettable as can be."
+    MC "HUH?!? Pizza time is legendary. Legendary. {w}Here, I'll recreate the scene."
+    show FMG sad
+    FMG "You don't have to do that."
+    MC "Oh, but I do! I need you to be the secretary."
+    FMG "..."
+    MC "That energy is perfect. Keep that going."
+    show FMG neutral
+    FMG "Are you at least going to reenact the part where he's coming out of the janitor's closet?"
+    MC "Do you want me to?"
+    FMG "A little, I think you'd make it funnier than it was in the movie."
+    MC "Yeah, I would, wouldn't I? {w}Okay, I'll do it."
+    hide FMG with dissolve
+    "I hustled to the closet filled with all of their cleaning supplies, preparing myself for the opening act. A role of a lifetime."
+    FMG "How long are you going to take? This whole scene lasts two minutes."
+    MC "I'm getting into character! You wouldn't get it because you aren't an actor!"
+    FMG "Oh my god... {w}You don't even take the drama classes here."
+    MC "Not yet!"
+    FMG "Just hurry up, we don't have all day. I want to watch another movie."
+    MC "Relax, I'm almost ready."
+    pause 1
+    MC "...Okay, I'm ready. I've channeled my inner Bryan Beynolds."
+    pause .25
+    "I stumbled out of the closet knocking over the mop and broom right on cue."
+    MCT "Now this... this is acting."
+    "The awkwardness from Akira staring at me as I quietly fumbled with the cleaning supplies and my imaginary pizza boxes was what some would call an oscar winning performance."
+    show FMG sad
+    MCT "Acting... just another one of my many hidden talents it seems."
+    "I shoved the supplies back in the closet and slammed the door shut, followed by me collecting the delivery off the floor and headed towards the receptionist's desk."
+    MCT "Here it comes, my big moment. {w}Don't mess this up, Kei. You know the line like the back of your hand."
+    "Slamming the pizzas down on her desk a smile came across my face knowing I had yet another successful delivery."
+    pause .5
+    MC "Pizza Time."
+    MCT "Perfection."
+    "However, my happiness was short-lived as Akira turned her head towards the clock."
+    FMG "You're late... {w}I'm not paying for those."
+    "There I stood...defeated. Humiliated, knowing when I returned I'd be jobless. Everything I ever cared about... Gone."
+    MC "..."
+    show FMG neutral
+    FMG "Are... Are you actually upset?"
+    MC "I-I didn't make it in time."
+    FMG "{size=-6}Oh my god.{/size}"
+    MC "And that's what people in the industry call acting! {w}I must've had you on the brink of tears with my performance."
+    show FMG sad
+    FMG "You had me on the edge of my seat..."
+    MC "Heh, I know."
+    MC "I enjoyed that way more than I thought I would. I might actually sign up for those drama classes."
+    show FMG neutral
+    FMG "Please don't."
+    FMG "Now that you've discovered you're an actor, can we go back to watching the Kamilizard marathon? Kamilizard versus Mecha Kamilzard 3 should be starting soon."
+    MC "...Can I snuggle with plushie?"
+    show FMG happy
+    FMG "If you snuggle with me as well, I'll let you have the plushie."
+    MC "Deal. But first, let me pop more popcorn."
+    show FMG neutral
+    FMG "Let me do it, your popcorn to butter ratio is ass."
+    MC "No it isn't, what are you talking about?"
+    FMG "It is. You barely put any butter."
+    MC "I put like 60ml  in and you're going to tell me that's not enough."
+    FMG "Uh, yeah, dude. You gotta do at least 100, 125 is better. Don't tell me you go to the movies and skip over that golden shower of deliciousness."
+    MC "Weird way to describe the butter machine..."
+    FMG "I think I get it now. Your popcorn etiquette sucks so your taste in movies must suck too!"
+    MC "There is no correlation between how I like my popcorn and what movies I enjoy."
+    FMG "I don't know, man, you enjoyed that stinker \"The Average Teen Arachnid 2\"."
+    MC "Don't start this, I've argued on forums for days. TATA2 is underrated and unappreciated by the fanbase. Like okay, the plot is... passable at some points, but Drew Marfield is a fantastic Meter Marker."
+    FMG "It's okay, Grandpa, we can sit down, watch some Kamilizard and you can realize how painfully wrong you've been for years!"
+    MC "Grandpa? You love movies from before our time, Grandma. Get with the program. And besides, there is nothing cool about a giant radioactive lizard destroying a city."
+    FMG "Giant radioactive lizard destroying a city... {w}Sounds pretty cool to me."
+    FMG "Cooler than getting bit by a radioactive spider."
+    MC "Wrong. Can you swing from buildings? No, I didn't think so. {w}Can you climb walls? No, I didn't think so. Do you have the best rogues gallery in comic book history? No, you just have big muscles."
+    MC "In conclusion... You are lame and Teen Arachnid is not."
+    FMG "Last time I checked, he doesn't have atomic breath. {w}Checkmate."
+    MC "Hmm, I'll give you that, the atomic breath thing is pretty sweet. But that's all I'm giving you..."
+    FMG "TATA fans..."
+    MC "You do not... {w}Look, I'm not going to let you bait me into a rant over the films. Put your silly monster movie in before I change my mind and decide we're watching TATA2 or TA3."
+    show FMG sad
+    FMG "I'm not surprised at all that you enjoyed TA3..."
+    MC "I'm convinced you've watched these movies blindfolded, there's simply no way you can possibly say these things with such confidence."
+    show FMG neutral
+    FMG "TA3 was panned by critics?!?! Beachman was the only good part about it. Contagion was awful, he wasn't anything like he was in the comics or any other source of media."
+    MC "Show me reviews of your giant lizard movies right now."
+    FMG "Pfff, okay. {w}Here, read em and weep."
+    MC "Ha! Kamilzard versus Flyra... three out of five stars. {w}Ooooh, whadda we have here??? Kamilzard Saves The Earth... two and a half stars."
+    FMG "TATA1 and TATA2 both sit at one and a half stars... you know, in case you forgot."
+    MC "..."
+    MC "We aren't talking about them at the moment. That information is irrelevant."
+    FMG "Living in denial."
+    FMG "Okay, here, let's do something a bit more constructive with this. Why do you enjoy Teen Arachnid so much? We can use this as a time to learn more about each other than simply make jokes about the things we enjoy."
+    MC "Man, but that's fun..." 
+    MC "You make a good point though. {w}Uh, it's not anything super deep in my opinion. My dad was really and I mean {i}really{/i} into Teen Arachnid when he was a kid. He collected the comics, action figures, anything he could get his hands on."
+    MC "When he had me, he shared all of it with me. I would spend hours upon hours reading the comics, making up scenarios with the figures, and watching the cartoon reruns of the 90s show with him."
+    MC "I got my love of superheroes from him, especially Teen Arachnid."
+    FMG "You're adorable."
+    MC "Uh... what did I do?"
+    FMG "You were smiling the whole time. Seeing you happy and passionate over it, it was cute."
+    MC "O-Oh..."
+    MC "W-Well, what got you into Kamilizard? {w}It must be some story with how obsessed you are with him."
+    show FMG happy
+    FMG "Mine is pretty similar to yours actually. Just like my love for video games, I got my love for Kamilizard from my dad too." 
+    FMG "My dad wasn't much of a collector like yours was though. He mainly stuck to getting the DVDs if they were remastered in high definition."
+    FMG "But, man, those late nights during the summer... {w}We'd pop popcorn and watch movie after movie. We must've watched each one a million times, heh... the excitement never went away for me. I loved every second."
+    MC "I didn't know it meant so much to you, Akira."
+    show FMG neutral
+    FMG "Don't get all sappy with me, dude, haha."
+    MC "Heh, I see what you meant before though."
+    FMG "About what?"
+    MC "You were smiling the whole time."
+    show FMG happy
+    FMG "It's one of the few memories I..."
+    show FMG sad
+    FMG "I have left with..."
+    pause .5
+    MC "With?"
+    show FMG neutral
+    FMG "{i}sigh{/i} It's nothing, I'm just... thinking. No need to worry."
+    MC "If you say so. {w}You wanna watch another Kamilizard movie?"
+    show FMG happy
+    FMG "You mean it?!?"
+    MC "I mean it... Although I wouldn't mind having my favorite superhero as a follow-up..."
+    show FMG neutral
+    FMG "It's only fair. We're cuddling the rest of the night though, okay?"
+    MC "Don't squeeze the life out of me and we have a deal."
+    FMG "Booooo, somebody doesn't like hugs."
+    MC "Somebody likes to breathe, I'd like it to stay that way."
+    "Akira chuckled, rolled her eyes, and with her hands pressing gently against my back pushed me towards the couch."
+    FMG "I'll hug you as tightly as I want, bozo."
+    jump daymenu
 
 label FMG037:
     $setProgress("FMG", "FMG038")
@@ -16531,7 +16691,7 @@ label FMG081:
     pause .5
     MC "I'll allow it."
     pause .25
-    MC "Hey, ?"
+    MC "Hey."
     show FMG neutral
     FMG "What's up? Do you want me to slow down? I didn't think I was going {i}that{/i} fast."
     MC "No, not... {w}Actually, now that you mention it, yeah, could you slow down just a bit. That isn't what I was going to ask though, heh."

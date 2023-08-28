@@ -27027,6 +27027,515 @@ label WG085:
     jump daymenu
 
 label WG086:
+    $setProgress("WG", "WG087")
+    scene Dorm Hallway with dissolve
+    play music DormLife
+    "I came to pick up Alice for our planned date this afternoon."
+    play sound Knock
+    "It's often easiest to work around her busy schedule by hanging out in her room, or finding things to do on campus, but as nice as those things were, I felt we were overdue for a night on the town."
+    WG "Come in."
+    scene black with fade
+    pause .1
+    $setTime(TimeEnum.EVE)
+    scene Dorm WG
+    show WG neutral-2
+    with fade
+    WG "Hello, Dear."
+    show WG happy-2
+    WG "I take it you have something for me?"
+    show WG sly
+    MC "What? {w}Can't a guy awkwardly keep his hand behind his back without getting asked questions about it?"
+    show WG haughty
+    WG "I'm afraid not."
+    "Truth be told, I wasn't sure how well this gift was going to go over, but it was too late to back out it now."
+    show WG surprised-2
+    MC "Tada!"
+    WG "..."
+    MCT "Well, this is off to a great start."
+    WG "What is it?"
+    show WG neutral-2
+    MC "It's a back scratcher. You mentioned before you had an itch on your back for quite a while. Figured it wouldn't do to have you suffer needlessly."
+    WG "Ah, I see. That was very thoughtful of you, Dear."
+    MC "I take it you were expecting flowers?"
+    WG "Given your chosen means of concealment— yes."
+    MC "I know it's not the flashiest of gifts, but I was inspired by a quote I recently heard that was something along the lines of \"Don't pay for the best when average will do just fine\"."
+    show WG happy-2
+    WG "Words to live by."
+    show WG neutral
+    extend " Though I'll give you a little more credit than just that, Dear. A cheap plastic one could in theory do the job— this appears to be made of solid wood."
+    MC "Oh yeah, I made it in the shop. I started with a doll rod that I tapered out and then joined the head after I curved it with the woodturner. I used Yoshino cedar cause I thought you'd like the color, and gave it an oil finish."
+    show WG surprised-2
+    WG "You made this yourself?"
+    MC "Yeah."
+    show WG happy-2
+    WG "Seems a bit beyond the principle of when \"average will do just fine\". Since when were you so handy?"
+    MC "Oh, well I mean my dad was always pretty good with tools and stuff. I guess I kind of got it from him."
+    show WG haughty
+    WG "Hmm, interesting."
+    MC "Interesting good, or interesting bad?"
+    show WG aroused
+    WG "Let's just say if I need something fixed, now I know who to call."
+    show WG doubt
+    MC "Sounds like interesting bad."
+    show WG haughty
+    WG "It's too late to recork the bottle now I'm afraid."
+    MCT "I should have known this was going to give her more ideas. {w}Well, at least she didn't hate it."
+    show WG neutral
+    MC "Are you going to try it out?"
+    WG "I most certainly will,"
+    show WG sly
+    extend " but why would I rely on such a device when I have you here with me now?"
+    show WG happy
+    MC "Ah, yes. I probably should have thought about it a bit more before accidently engineering my own obsolescence." 
+    WG "Well, don't sell yourself short, you still have your other uses."
+    MC "Heh, well that's good to know then."
+    show WG aroused
+    "I reached behind her, curling my fingers slightly as I gently scratched across the surface of her back. Her wobbling flesh resulted in considerable motion across her back, far beyond the areas just where my hand grazed."
+    "I paid particularly close attention to the rounded edges of where her massive back folds met with each other, reasoning those to be the most difficult spots to reach."
+    WG "Mmmm, that hits the spot."
+    show WG happy
+    WG "I should ask you to do this more often."
+    MC "Oh? I'm certainly fine with that."
+    WG "Good to know. I suppose we shouldn't delay any further for our date?"
+    MC "Yes, we should probably get going to allow enough time before they close."
+    play music WinterVocal
+    scene School Front with fade
+    show WG neutral with dissolve
+    "I'm sure it wouldn't have phased Alice too much, given the robust layers of insulation she had, in addition to her winter coat. But I thought it best to not have us brave the windy winter weather on the way into town by foot."
+    
+    scene Bus Interior
+    show WG surprised
+    with fade
+    "The bus ride into town didn't exactly start our date off on the right foot. Her most recent changes in size made negotiating the seemingly spacious doors problematic." 
+    "It took a bit of maneuvering to get her hips past the sides of the doors, while her belly presented with some issues of its own negotiating the step up from the entrance."
+    "Thankfully the isles of the bus were pretty spacious where she could navigate reasonably well. Though I found it unfortunate I wasn't able to sit next to her, due to her taking up the entirety of the three seats on the one side of the bus herself."
+    show WG doubt
+    WG "I think in the future we'll be wanting to arrange some alternative means of transportation for any future town excursions."
+    MC "Noted. Sorry about this, Alice."
+    show WG neutral
+    WG "Don't worry too much about it. I should have been more cognisant of this issue myself, given the somewhat precarious nature of the last time we used the bus." 
+    scene Town Bus with fade
+    show WG neutral-2 with dissolve
+    "We arrived at our stop."
+    show WG surprised
+    extend " Getting Alice out of the bus was much easier than getting her in with the added assistance of the bus driver pushing as I helped pull."
+    show WG neutral
+    MC "Thanks."
+    "Bus Driver" "No problem. Take care now."
+    WG "I suppose that could have gone a lot worse."
+    "I assumed she meant it could have been more laborious, but as I thought about her statement more, I realized if she had tripped and fell forward onto me, I might have been flattened across the pavement."
+    MC "...Yes, for sure."
+    MCT "Yikes. I think we both need to start being more careful about these things."
+    "I tried to shake that notion from my mind. Alice is far more coordinated than her size would suggest, and we haven't really had an issue so far. Maybe a few close calls here and there, but her size was far beyond normal considerations by this point."
+    scene Town Shops
+    show WG pondering
+    with fade
+    WG "So where are you taking me?"
+
+    if isEventCleared("FMGWG001"):
+        MC "Kazomazumi bakery. Do you remember that place?"
+        show WG happy
+        $setAffection("WG", 1)
+        WG "Ah yes, the one where we met Akira at before we started dating. I had ordered some items from there since then but it has been a while. I had been interested in sampling more of their offerings, but hadn't made the time to do so."
+        show WG neutral
+        WG "Things have certainly changed since then."
+        show WG worried
+        extend " I doubt the owners would even recognize either of us."
+        show WG neutral
+        MC "All the more reason to get acquainted, I'd say. The people who run the shop are nice. The lady working the checkout counter is actually a former student at the Academy."
+        show WG surprised-2
+        WG "Really?"
+        show WG neutral
+        extend " I suppose I shouldn't be too surprised. That and the island itself is host to a high proportion of those who display some kind of growth." 
+        MC "True, but she doesn't have one, her mother who's the owner did, though one would be forgiven assuming so considering her, erm... {i}proportions{/i}."
+        show WG sly
+        WG "I'm sure that didn't escape your notice."
+        MC "What can I say? I have good taste in \"proportions\"."
+        "Alice just rolled her eyes as she shook her head."
+        WG "Apparently so."
+    elif isEventCleared("MC007"):
+        MC "Kazomazumi bakery. I assume you are familiar with it?"
+        show WG neutral
+        WG "Yes, I've been there on occasion. How did you know?"
+        MC "Umm, well... it's a popular spot."
+        MC "From what I've heard..."
+        MC "I've only been there once. It was pretty good."
+        WG "I met Akira there once for dessert. We got some cupcakes that I enjoyed quite a bit."
+        if isEventCleared("WGFMG003"):
+            MC "Seems like you've hit it off pretty well with her. Was that the start of it?"
+            WG "I suppose you could say so. It was the first time I really got to sit down and get to know her."
+            MC "Glad you enjoyed it. Looks like we're almost there."
+        else:
+            MC "Glad it was a hit then. Looks like we're almost there."
+    else: 
+        MC "Kazomazumi bakery. I hadn't been there before but I saw it had good reviews."
+        show WG neutral
+        WG "Ah yes, I've been there on occasion."
+        MC "Sounds like it's a popular spot."
+        WG "Judging by the quality of the food and the coffee there I can see why. I met Akira there once for dessert. We got some cupcakes that I enjoyed quite a bit."
+        MC "Glad it was a hit then, cause I didn't really have a backup plan. Looks like we're almost there."
+
+    scene Bakery Entrance with fade
+    play music Peaceful
+    "Luckily the entrance to the bakery proved more accommodating to its plumper patrons than the bus doors. A wise move considering the demographics of the island and the nature of their wares."
+    show WG neutral-2 with dissolve
+    MC "What would you like? My treat."
+    show WG neutral
+    WG "As much as I appreciate the gesture, Dear, I don't intend to strain your wallet with what it would take to satiate my increasingly unruly appetite as of late."
+    show WG happy
+    MC "Ah, well, don't worry too much about that. This is close to closing time, so everything that has to be sold fresh is going to be heavily discounted."
+    WG "I'm not sure what I'm more impressed with, your sense of timing and planning, or your frugal business acumen."
+    show WG happy-2
+    WG "Such a clever boy."
+    "Properly motivated was more like it. I may struggle to stay awake in Tsubasa-sensei's class while he goes on about the step of cell division, but you can best believe I'll pull an all nighter studying something if it helps keep my fat girlfriend well-fed."
+    MC "What can I say? I have my ways."
+    show WG pondering
+    MC "So what are you thinking about getting?"
+    WG "Well, I'd like to start savory, and then slowly work up to sweet."
+    MC "Sounds like a plan. We don't have to get it all in one order either. You can just see what you feel like after having one thing before deciding on the other."
+    "I said that knowing full well she was probably going to work her way through the full menu regardless."
+    WG "Hmm, that is a good point. Easier to decide that way as well. Besides, we can always get the rest to go if I decide on extras later."
+    if not getFlag("VisitedBakery"):
+        "A cashier greeted us at the counter, wearing a caramel-brown and cream-white patterned baker outfit. Her name tag said \"Haruko\"."
+        "She was an attractive lady, with a sizable bust that made me suspect she was one of the academy's former students."
+    Cashier "Hello. Can I help you find anything? Our baked goods are on special."
+    if getFlag("VisitedBakery"):
+        MCT "I recognize the cashier from the last time I was here. What was her name? Haru something?"
+        MCT "Oh yeah, it's right there on her nametag, Haruko."
+    WG "Yes, I'll have two rolls of the mentaiko furansupan, and two dozen of the kare pan."
+    Cashier "Would you like the furansupan sliced?"
+    show WG neutral
+    WG "Yes, please."
+    Cashier "Alright, I'll put that through the slicer and have these wrapped up for you—"
+    MC "We'll be eating in, if that's alright."
+    "Haruko briefly paused before turning towards Alice, no doubt feeling foolish for her initial assumption."
+    Cashier "Certainly, that's not a problem at all. We have plenty of seats available. Dine-in bread orders come with complementary rosemary olive oil and butter. I will get your order out to your table with them."
+    
+    scene Bakery with fade
+    "Alice and I walked over to the seating area. Even though most of the establishments were built with at least some attempt to accommodate the growths in mind, standard booth seating was a foregone conclusion."
+    show WG neutral-2 with dissolve
+    "Luckily we were able to find a table with a mixed seating arrangement of one booth seat facing out to a movable table with chairs on the other side for me, as she took up the entirety of the booth cushion herself, with some hip spillage to boot."
+    MCT "Good thing we didn't have to rely on these chairs, I don't think even {i}three{/i} of these things could hold her."
+    Cashier "Here you are. Let me know if you need anything else, or would like to order more."
+    MC "Thanks. Will do."
+    show WG happy
+    "No sooner had Haruko set down the bread on the table than Alice began reaching for the bread..." 
+    show WG doubt
+    extend " and coming up just short." 
+    "The combined forces of the table and belly had malevolently conspired to limit her reach. Sparing her the indignity of even having to ask, I made sure to push everything over to her side of the table for easy access."
+    show WG happy
+    WG "Mmm, it smells heavenly. It's been a while since I had fresh bread like this. I should have Sakura bake it more often. I'm sure Aida could teach her the recipe."
+    "\"Bread\" was a precarious concept, as it appeared to be merely the vessel by which to carry oil and butter to her hungry lips. I decided to take a slice for myself, knowing the opportunity to sample it was rapidly diminishing."
+    MC "This has some body to it. It's surprisingly chewy."
+    WG "High gluten content. Helps give it structure to stand up to holding sandwich toppings, even wet ones, as well as for dipping in oil."
+    MC "The oil goes really well with it too. Here, let me top off your dipping bowl."
+    show WG neutral-2
+    WG "Thank you, Dear. The oil adds a nice herbaceousness to it that complements the salty savoriness of the mentaiko, both which elevate the otherwise plain bread in their own ways. It's a flavor that you don't really see paired with bread outside of Japan."
+    MC "So they don't have this kind of bread in America?"
+    WG "You can find Italian bread in bakeries or fancy restaurants that this style is influenced by, but no one is selling anything paired with mentaiko in America."
+    MC "What kind do they have there instead?"
+    show WG doubt
+    WG "Unfortunately, most bread in America is this soft spongy stuff that's used for making sandwiches or toast, and isn't even very good for that either. It's bland and void of any sort of texture."
+    show WG neutral
+    WG "You'd have to go to a bakery shop like this one to even hope to find something decent."
+    MC "Huh, I didn't realize it was so unique."
+    show WG haughty
+    WG "Like I've said, you need to broaden your culinary horizons." 
+    show WG pondering
+    WG "It's quite astounding what falls under the umbrella of \"bread\". So many different baking methods, textures, proofing, all manner of different grains..."
+    "Honestly, I could listen to her talk about food forever. Her passion was infectious, and her depth of knowledge made the subject fascinating."
+    "Losing track of time, I reached to top off Alice's dipping bowl again when I realized the bottle was now empty, and so was her bread basket... {w}erm, baskets I should say."
+    WG "Ah, that was a good appetizer. I almost forgot about the kare pan, I hadn't even touched them yet."
+    MCT "Appetizer? Both those loaves were as long as my forearm, and I had one slice... {w}Dang! She's a champ."
+    show WG happy
+    WG "Oh, the curry filling on these is quite good."
+    MC "Would you like me to order something else?"
+    MCT "Something tells me two dozen kare pans aren't going to last that long."
+    show WG pondering
+    WG "I would like something a little sweeter, but not quite dessert. How about some of their milk bread?"
+    
+    scene Bakery Entrance with fade
+    "I walked back to the order counter. The place was mostly dead besides us two, save for the occasional walk-in that also thought to take advantage of the closing discount before leaving."
+    Cashier "Looking for something else?"
+    MC "Yeah, how about some of the milk bread."
+    Cashier "Would you like a whole loaf?"
+    MC "Let's go with two."
+    "I looked over my shoulder and noticed Alice was already down to her last few kare pan."
+    MC "Uh, actually make it three, if you got'm."
+    Cashier "I'm sorry, we only have two left. It is quite a popular item."
+    MC "Ah. Well, I'm sure there'll be plenty of other things we can still try."
+    Cashier "I'll get it sliced and sent to your table."
+    MC "Thanks."
+    scene Bakery
+    show WG neutral
+    with fade
+    "As I took my seat, I noticed Alice had managed to polish off the rest of the kare pan. Making me question if this closing time discount was going to stretch my wallet as far as I hoped."
+    MC "She'll be bringing out the milk bread soon. I think she needs to slice it."
+    WG "What did you get to go with it?"
+    MC "What do you mean?"
+    show WG surprised-2
+    Cashier "Here you are, two loaves of milk bread with complimentary condiments: strawberry yuzu jelly, white mulberry jam, and clotted cream."
+    WG "It looks delightful, thank you."
+    MC "Yes, thank you very much."
+    Cashier "You're welcome."
+    "Haruko shot me a wink before turning back to attend the register."
+    MCT "Looks like I have a culinary wingman pulling for me."
+    "Alice wasted no time getting down to business, smearing her slices with a thick spread one would expect from a trowel rather than a knife."
+    show WG happy
+    WG "MMMM! This milk bread is what the standard American sandwich bread {i}wishes{/i} it could be. It's soft, but silky rather than crumbly. Sweet, light, and airy— almost, but not quite dessert-like, perfect for jelly and jams."
+    show WG happy-2
+    WG "Oh, and you must try the clotted cream. I scarcely see it served anywhere outside the UK."
+    MC "What is it?"
+    WG "It's sort of like butter, but much better. The cream is cooked to allow the fat and solids to separate to the top instead of churning it."
+    MC "Man that is pretty good. I haven't had anything like it before."
+    show WG haughty
+    WG "You see?"
+    MC "Well, I wasn't going to doubt your judgment on buttery condiments."
+    show WG sly
+    WG "That sentence would have made a lot more sense if you had ended it after \"judgment\"."
+    MC "Is that so?"
+    show WG happy-2
+    WG "Naturally."
+    show WG neutral
+    MC "Ahh. Are you sure about that?"
+    show WG haughty
+    WG "You mean you aren't?" 
+    show WG surprised-2
+    MC "I seem to remember a certain someone who was none-too-keen on going to a carnival and ended up having a great time in spite of herself."
+    show WG sly
+    WG "Oh please, it's not like you dragged me kicking and screaming. I did eventually agree to go."
+    show WG happy
+    WG "And I'm glad I did."
+    show WG sly
+    MC "Naturally."
+    WG "Oh please, Kei, you're no better."
+    show WG haughty
+    WG "I distinctly remember a certain boy with a chronic case of a bad hair day whining that we were going to watch a musical."
+    MC "Oh you can't blame me for that, it had a terrible name. I mean, \"Greased\"? It sounds gross and it had {i}nothing{/i} to do with the movie."
+    show WG sly
+    WG "That didn't stop you from humming the songs nonstop the rest of the week."
+    MC "Well, they were pretty catchy. I'll give you that one, you were right."
+    show WG haughty
+    WG "Naturally."
+    show WG pondering
+    WG "That does remind me though, I think we're overdue for a movie date."
+    if isEventCleared("WGFMG001"):
+        MC "That is a good idea. They've always been fun, even that scary one we watched with Akira."
+        WG "True, it was a good experience, but one I'm not eager to revisit any time soon."
+    else:
+        MC "That is a good idea. They've always been fun, especially when the weather is crappy."
+    MC "I wonder what we should watch this time?"
+    show WG happy
+    WG "I have just the thing in mind."
+    MC "What is it?"
+    show WG haughty
+    WG "You'll just have to see."
+    MC "Probably something you think I'll hate."
+    WG "Fortunately we've just established that doesn't matter anyway."
+    MC "Hehe, apparently so. Speaking on matters of your judgment though, I was curious to get your take on a business idea I had."
+    show WG surprised-2
+    "Initially focused on slathering her next slice with jam, Alice's ears perked up at the mention of business matters."
+    show WG haughty
+    WG "Interesting. Sounds like you're beginning to think like an entrepreneur yourself."
+    show WG neutral
+    extend " What did you have in mind?"
+    MC "I was thinking about what you said the other day when we were showering— about the high margins on luxury hair care and cosmetic products." 
+    MC "If that's true of the industry, it sounds like a prime opportunity to undercut the competition by providing the same quality at a lower margin." 
+    MC "I mean, you seem to have a lot of experience with the product space, just made me think it'd be a good industry for you to get into. It wouldn't be hard for you to get the start-up capital either."
+    show WG happy
+    WG "I like where your head's at."
+    show WG neutral
+    extend " But it's a bit more complicated than that."
+    MC "Oh? Did I overlook something? Like is the market too saturated or something?"
+    WG "Luxury goods are a special type of commodity. They don't obey the usual supply and demand dynamics of other goods. The price itself is part of the prestige. Higher prices can actually create higher demand in the target customer base."
+    MC "Huh, that's odd. I mean it sort of makes sense... in like a counterintuitive way."
+    WG "Consumers aren't exactly the rational creatures economists envision with their models. Consider something like luxury watches. Who would even need such a thing in an age where your portable phone is your timepiece?"
+    WG "But that's not the point of the purchase is it? It's the status it conveys by showing you can afford it."
+    MC "That is true. Seems a bit frivolous when you put it that way. But you don't strike me as someone who buys shampoo because of the status it displays."
+    show WG happy-2
+    WG "You seemed to be fairly impressed with them."
+    show WG sly
+    MC "You got me there. I was on the fence after visiting the beachhouse and riding in your private jet, but those expensive shampoos really convinced me this was one classy lady I was with."
+    show WG haughty
+    WG "And all this time I thought you were easy to impress."
+    MC "What can I say? I'm a master thespian."
+    WG "Well, I'm glad at least {i}you{/i} managed to find your performance convincing."
+    show WG happy-2
+    WG "But, to your point, luxury consumables that are actually used for their intended purpose are heavily scrutinized by their users to deliver results. Dramatic results consumers are willing to pay a premium for." 
+    WG "An expected price premium that makes prestige consumers skeptical of lower price tiers claiming comparable quality."
+    MC "So if it's priced too cheap, it will deter the people that can afford it, while still being too expensive for regular consumers, and no one will buy it."
+    show WG happy
+    WG "Correct, more or less. There's a lot of intricacies attached to the reputation of the brand to consider as well, but you appear to have passed the Nikumaru crash course on the economics of luxury goods."
+    show WG sly
+    MC "Well it's easy to pay attention in class when you have a hot teacher."
+    show WG happy-2
+    WG "Given the nature of what holds your attention, I would be more inclined to cite it as evidence of your distractibility instead."
+    show WG sly
+    MC "Actually, I'm secretly a genius, I just haven't had the proper motivation to learn until now."
+    WG "That makes the \"master thespian\" story more believable by comparison."
+    MC "I would argue they aren't mutually exclusive."
+    show WG happy-2
+    WG "Hehe!"
+    WG "With each other— maybe. But unfortunately not with reality."
+    show WG sly
+    MC "Ah, but you see, I like being underestimated. You're playing right into my genius plan."
+    show WG haughty
+    WG "Is that so?"
+    show WG happy-2
+    WG "Well I hope this genius plan of yours includes dessert."
+    MC "Dessert?"
+    "I looked down at the table to see what once had been a fairly sizable spread of food was now a desiccated skeleton of empty serving vessels." 
+    MC "{size=-6}Whoah...{/size}"
+    "Hardly a crumb remained, the only real evidence that there was food on the table at one point was a few faint smatterings of red jelly on some of the plates."
+    show WG sly
+    MC "...Ah! Of course! Dessert. {w}I'm already two steps ahead of you... Or I guess I would be if I knew what you wanted to order."
+    show WG haughty
+    WG "I'll leave the decision in your more than capable hands," 
+    show WG sly
+    extend " given you genius intellect after all." 
+    scene Bakery Entrance with fade
+    "I walked back to the counter for another order. Haruko must have seen me waiting and emerged from the back of the shop."
+    Cashier "Would you like to make another order?"
+    MC "Yes, but I'm not quite sure what. Do you have any recommendations? We're thinking something a little sweeter this go round." 
+    Cashier "Sure, I can recommend some of our best sellers." 
+    Cashier "We have melonpan, which is a bread with a sweet cookie-like exterior, anmaki that are rolled cakes filled with sweet bean paste, and choco cornets— they're pastry dough spirals filled with chocolate."
+    MCT "Hmm, those all sound good, I'm sure she'd like all of them, but how much to give her? If I give too little, she'll be disappointed, but if I offer too much, would she feel self-conscious, or worse, insulted?"
+    MCT "I guess I could just order more, or take the rest to go."
+    MC "Uh, let's go with ten."
+    Cashier "Which one?"
+    MC "Oh, sorry. I meant ten of each."
+    "Haruko's eyes grew wide at the realization of my request, but was otherwise successful in concealing her shock."
+    Cashier "Oh. I see. Unfortunately we don't quite have that much of each of them, but I can put together an assortment based on what we still have left for the day."
+    MC "That'll work. How about a couple of coffees too, to go with it all?"
+    Cashier "Certainly, I'll get those right out to the table."
+    scene Bakery with fade
+    "I walked back to the table, somewhat relieved I had made a decent choice."
+    show WG neutral with dissolve
+    WG "What did you get?"
+    MC "You'll see soon enough. Only then you'll realize my true genius."
+    show WG sly
+    "Alice, rolled her eyes. Both parts tired of my charade and wondering how long I would keep this up."
+    show WG surprised-2
+    Cashier "Here are your pastries, along with your coffee. Cream and sugar as well. Please enjoy."
+    if getFlag("VisitedBakery"):
+        MC "Thank you, Kazomazumi-san."
+    else:
+        MC "Thank you."
+    show WG happy
+    WG "Coffee with sweets? Perhaps I underestimated your discretionary abilities after all."
+    MC "I thought about asking for decaf, but between the espresso and tea, you are quite the caffeine queen."
+    "Alice poured a generous amount of cream into her cup before dropping in three cubes of sugar."
+    WG "An unfortunate habit I picked up from my mother, but it's the perfect contrast when the palette becomes overloaded with sweetness."
+    show WG neutral
+    "Alice sifted through the packaged box of pastries, pulling out one of the melonpans. Its sugar crusted cross hatch pattern emerged as she drew it towards her mouth, taking a large bite in the process."
+    show WG happy-2
+    WG "Mmm. Sweet, but not too sweet."
+    "Sugar-encrusted bread, might as well have been oil coated fat from a calorie standpoint. Those melonpan buns were bigger than my entire hand and she made short work of it in a handful of bites."
+    show WG surprised-2
+    WG "Oh, anmaki. It's been a while since I had one. You don't really see people trying to make desserts with sweet bean paste outside of Asia."
+    MC "Really? What do they use instead?"
+    show WG neutral
+    WG "More sugar apparently. The level of sweetness expected of a dessert course varies quite a bit across cultures." 
+    WG "I personally prefer something sweeter for the final course, though I do think these types of semi-sweet confections have their place as a \"pre-dessert\" following the cheese course."
+    MC "Hmmm."
+    show WG happy-2
+    WG "What does \"Hmm\" mean?"
+    MC "Oh nothing, just thinking that we might be overdue for a cheese tasting, if you are so inclined."
+    show WG haughty
+    WG "I appreciate the idea, Dear, but why don't you let me handle that? Fine cheese is not in the same price range of pastries, even without consideration for the importation expense."
+    MC "I suppose my genius plot has finally been foiled."
+    WG "Don't be too sad, Dear. You've had a good run until now."
+    MC "Is that you admitting that I am in fact a genius?"
+    show WG sly
+    WG "I'm thinking about admitting you to an institution long before I admit to that notion."
+    MC "I'll admit, there is something about those azure eyes and blonde curls of yours that drives me crazy."
+    WG "You are a terrible flatter."
+    show WG happy-2
+    extend " But I love you anyway."
+    MC "I love you too, Babe. Don't ever forget it."
+    show WG happy
+    "I added a bit of cream and sugar to my coffee, not nearly as much as Alice did hers, but enough to round out the harsh bitter edge that comes with taking it straight black."
+    #CG here
+    "I twiddled with my spoon in the cup, far more agitation than necessary as I found myself fixated on Alice rather than the task at hand."
+    MCT "She's... She's so cute when she's like this."
+    "Everything about her was as tender and sweet as the sugary dough confections she was munching her way through. Her pudgy little fingers reached in for another pastry, sending it straight to her smiling lips."
+    "Her chubby, jowly cheeks that swelled with each bite framed a cherubic smile that was the rare, but unmistakable look of true contentment across her face."
+    "Gone was  the hard-nosed business woman concerned with the next deal to be made. Here, in this moment, she was just a girl enjoying the simple pleasures in life."
+    MCT "She needs more moments like this. She hasn't had the easiest time with everything going on. I just wish there was more I could do for her."
+    "As much as I wished I was able to do more, something about her smile made me wonder if maybe I had been able to do enough."
+    show WG surprised-2
+    "The sudden crinkling cacophony of wax paper from the pastry box snapped me from my distracted stupor, and apparently Alice's as well as she neared the bottom of the box."
+    WG "Oh, Dear. I almost forgot to ask, did you want one?"
+    MC "Uh, sure. I'll take a choco cornet. Those looked good."
+    show WG happy
+    WG "They most certainly are. I almost unwittingly ate the last one."
+    "Alice handed me the chocolate cream stuffed pastry. The flimsy movements of the box indicated it was noticeably lighter in her hands than when she first started."
+    MC "Hey, that is pretty good. Too bad they ran out."
+    WG "I certainly wouldn't mind more, but after twelve it might be best to allow room for more variety."
+    MCT "Twelve of just these? She's got to be slowing down by this point, right?"
+    MCT "Oh what am I saying. Underestimating her appetite is like underestimating her ambition— don't be on it."
+    show WG neutral-2
+    WG "Did you want anymore."
+    MC "Nah, I'm good. The question is, do {i}you{/i} want anymore?"
+    show WG happy
+    WG "I do think I could do with a little something sweeter."
+    "As if on cue, Haruko approached our table, likely noticing Alice had polished off the last of the order."
+    Cashier "I don't mean to rush you two, but we only have a few minutes until closing. Can I get you a box of something to go?"
+    WG "I'll take two dozen cupcakes please. It's been a while since I had them from here and they were delightful."
+    Cashier "They are one of our specialties. I do apologize though, we don't quite have enough left over at the end of the, but I could provide an assortment of cupcakes, scones and muffins."
+    show WG pondering
+    WG "I suppose a bit more variety would be a good thing."
+    show WG neutral-2
+    "Haruko loaded up a box of desserts. Judging by the heft of it when she handed it to me, it must have been packed to the brim." 
+    "The running total was a much steeper price than I had originally planned on, but not more than a typical date at a fancier restaurant."
+    Cashier "Thank you so much for coming. I appreciate not having to let the fresh goods go to waste. Please come visit us again."
+    MC "Definitely."
+    show WG happy-2
+    WG "Hopefully soon as well."
+    scene black with fade
+    pause .2
+    $setTime(TimeEnum.NIGHT)
+    scene Town Shops with fade
+    play music TwilightBright
+    "We stepped out into the cool winter night. The biting wind from earlier in the day had died down, creating a surprisingly pleasant evening for a winter stroll."
+    show WG neutral with dissolve
+    MC "Should we head back then?"
+    show WG pondering
+    WG "Hmm, we don't have to go back just yet."
+    "Whether Alice was hesitant to negotiate the bus doors with a tummy full of sweets, or didn't want to wait to have the remainder of her dessert, I wasn't about to pass on the opportunity to spend more time with her."
+    MC "I have an idea then. Let's go for a walk."
+    scene Park with fade
+    "In contrast to the crowd forming around the pavilion when we attended the concert here in the summer, the park was still, with only the two of us, save for an occasional walker along the lit trail that ran through it."
+    show WG neutral with dissolve
+    MC "Here, let's have a seat."
+    "I was careful to pick a double-wide bench with a middle support beam in it, in hopes of preventing any incident, but the wooden beams still let out a slight groan as the full weight of Alice's backside settled into the self padded seat."
+    MC "Here, enjoy the rest. Looks like she threw in some extra."
+    show WG surprised-2
+    WG "Ooo! They all look so delicious. I'm glad to see they didn't skimp on the frosting with these."
+    "I handed Alice the box and settled in next to her on the bench... {w}Well, {i}squeezed{/i} in was more like it. Despite it being a double sized bench, there was just barely enough room for me to sit with her."
+    show WG happy
+    #CG here
+    WG "{i}Mmm{/i}!"
+    "There it was again— that sweet, carefree smile emerging once again as she resumed stuffing more sweet treats into her mouth. It made me happy to see her so happy."
+    "Feeling a chill run through me as the winter wind kicked up again, I tucked in close to Alice, her body soft, warm and inviting."
+    "I snuggled up to her laying my head down on her belly, my own personal body pillow and heated blanket, all in one."
+    "So soft and yielding, even through her winter coat. It left some resistance as I laid the full weight of my head onto her, the contents of her full tummy pushing outward underneath her layers."
+    show WG haughty
+    WG "Comfy?"
+    MC "Very much so."
+    show WG happy
+    WG "Good. You deserve a rest after planning such a lovely evening."
+    MC "You're what makes it lovely, Babe."
+    show WG happy-2
+    WG "Perhaps you really are a genius— of flattery anyway."
+    show WG sly
+    MC "See? I told you."
+    WG "I'm going to regret admitting that later aren't I?"
+    MC "Oh yeah. You'll never live it down— that's for sure."
+    WG "You're lucky it feels nice to have your head there."
+    jump daymenu
+
+label WG087:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

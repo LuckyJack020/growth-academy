@@ -32,7 +32,7 @@ label AE001:
     MCT "Uaaah, she's absolutely chilling me to the bone!"
     AE "Researching questions I had that Tashi-sensei was unable to answer."
     MC "Ah, what about?"
-    AE "The nature of the Academy.{w} What is going on,{w} how long has this been happening,{w} what preventative measures there are,{w} what school records exist."
+    AE "The nature of the Academy.{w} What is going on,{w} how long has this been happening,{w} what preventative measures there are,{w} what school records exist?"
     AE "There are so many questions I have, and I plan to make sure they are all answered."
     MC "I see... That book has all that?"
     AE "Clearly not, why would a single book have all of the answers? I'm merely researching the questions that are the most relevant to me at this moment."
@@ -51,7 +51,7 @@ label AE001:
 
 label AE001_c1:
     MC "So... Shiori-san. How are you handling this?"
-    AE "...{w} I suppose... I just need to further my understanding of the situation. That's all. It's unlikely that my situation is anything to worry about, anyway."
+    AE "...{w} I suppose I only need to gain insight into my current situation, is all. The outcome will be what it will be regardless of my desires, but understanding it allows me to understand my own boundaries of what IS actionable on my end."
     MCT "That... didn't really answer my question."
     jump AE001_after
 
@@ -96,17 +96,19 @@ label AE002:
     play music HigherEdu
     "I walked around the hallways after class looking for Shiori-san, so far having no luck."
     "In class, she wouldn't acknowledge me when I whispered to her, and every time I tried to get close to her, she just got pulled aside by another student."
-    Student "-merging the committees into student council. I don't get it either man."
-    MC "Yo! Excuse me?"
-    Student "Huh? Oh, um, what's up?"
+    show Minori neutral with dissolve
+    Student "-merging the committees into student council. It will be difficult, but I believe I'm up to the task."
+    MC "Um, excuse me?"
+    Student "Hm? Oh! Hello, is there something you need?"
     MC "Are you a member of the student council?"
-    "He looked at me with a bit of suspicion before looking down at his jacket and holding his hands up."
-    Student "Uh... I mean, I- Yeah?"
+    "The brown haired student looked down to her jacket and armband, and then back to me."
+    Student "W-Well, um... I'd assume so, or else I'd be in violation of the dress code..."
     MC "Have you seen the president?"
     Student "Just got out from the first meeting, actually. She's in there."
-    "He pointed over candidly at the library door as the last few student council members slipped out."
-    MC "Library. Perfect, thanks man."
-    Student "Mm."
+    "She pointed over candidly at the library door as the last few student council members slipped out."
+    MC "Library. Perfect. Thank you so much, ma'am."
+    Student "My pleasure!"
+    hide Minori with dissolve
     "Walking over and opening the large ornate door, I held the book close under my arm."
 
     scene Library with fade
@@ -305,7 +307,6 @@ label AE003:
     MCT "Okay, so if Tashi-sensei wants us to do section three by tomorrow, then I can probably finish in about two or so at home, meaning that I can... Eh?"
     "As I reached the corner, I found an unexpected sight. The student from earlier, and his two friends talking somewhat loudly about something."
     "As I got closer, I was able to listen in on just what it was."
-    play music Tension
     Student3 "In front of Haruno-chan?"
     Student1 "She wasn't even a few feet away when she did it."
     Student2 "Shit, man, that's embarrassing."
@@ -709,7 +710,7 @@ label AE006:
     "As I opened up the notebook, a mix of shock and utter despair began to sink in, as I realized my Calculus homework was reduced to what could only be described as a Jackson Pollock wet dream."
     MC "Are you kidding me?! I spent hours trying to figure this out!"
     MCT "Dammit! This is bad. This needs to be done by tomorrow! This is the only notebook I have... uh, had, and the store is on the other side of campus. If I run over I-"
-    show AE neutral-eyebrow at center with dissolve
+    show AE neutral-eyebrow at center with vpunch
     AE "Hotsure-san?"
     MC "AGuaH!"
     MCT "Sh-Shiori-san?"
@@ -1485,6 +1486,8 @@ label AE010:
     jump daymenu
 
 label AE011:
+    $setSize(2)
+    $setTimeFlag("aftersize2")
     $setProgress("AE", "AE012")
     scene Hallway with fade
     play music Peaceful
@@ -2084,7 +2087,7 @@ label AE013:
     MC "U-um, hey!"
     show AE embarrassed
     AE "O-oh! Right, sorry, just let me..."
-    MCT "Pat, pat, pat."
+    "Pat, pat, pat."
     AE "There."
     MC "All right... Well, that was embarrassing."
     "I scratched the back of my head, chuckling to myself as Shiori-san continued her concerned gaze."
@@ -2671,7 +2674,7 @@ label AE016_after:
     show AE neutral
     AE "What's this one?"
     show AE neutral-annoyed
-    AE "\"Matsuro-san's breath is bad, please expel him.\""
+    AE "\"Tsureno-san's breath is bad, please expel him.\""
     "We sat in silence for a moment, a blank expression being the only accompaniment to my seething confusion."
     MC "O-oy! That one isn't a real request is it?!"
     show AE angry
@@ -2683,7 +2686,7 @@ label AE016_after:
     AE "No."
     MCT "I'm 70%% sure that's Mizutani-san's handwriting."
     show AE angry
-    AE "\"Satoru-sensei is-\" nggh."
+    AE "\"Sugiyama-sensei is-\" nggh."
     "And another."
     MC "Jeez... {w}what's with these dumb requests?!"
     show AE neutral-annoyed
@@ -2776,9 +2779,12 @@ label AE017:
     "Almost to answer my own question, I caught a glimpse of the spectacled girl looking at me over a small partition."
     MCT "Oh! Oh, she's here already."
     "I went to walk over to where Shiori-san sat, and when I turned the corner I saw her talking to a short girl with large pouty lips."
-    show AE neutral-annoyed at center with dissolve
+    show AE neutral-annoyed at Position(xcenter=0.25, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     AE "-and after that, I want you to tell her to get her forms in on time if she cares so much. Good? All right, good."
-    show AE angry
+    show AE angry at altMove(0.5, 0.5)
+    hide Yuki with dissolve
     "The girl walked in the other direction as I continued to walk over to where Shiori-san sat, her hands massaging the sides of her temples."
     MC "Hey, you came!"
     show AE neutral
@@ -2952,6 +2958,7 @@ label AE018:
     MC "Okay, cool. Where at?"
     AE "Follow me."
     "I did as Shiori-san said and followed behind as we climbed the stairs. Though it was subconsciously, I followed a bit closer than was necessary."
+    scene Roof Entrance with fade
     "I looked up the whole time at Shiori-san's tush as we climbed, eyes fixated on the side to side movements of her skirt with every wobble and bounce of her derriere."
     "We climbed for a bit more until we reached our destination."
     MC "Oh, you wanted to go to the roof?"
@@ -3696,15 +3703,18 @@ label AE021:
     "I stared at him for a minute, but he didn't pop his head back up. I gave up and just left."
     scene Campus Center with fade
     "My day continued along much of the same way. Every time I went to drink water, talk to students, or get something from a machine I would see someone out of the corner of my eye. Just staring at me and writing."
-    scene Hallway with fade
+    scene Hallway
+    show Yuki neutral at center
+    with fade
     MC "Raw wheat, raw rice waw- no wait. Rwa- no. Raw wheat, raw rice... raw..."
-    "I turned around and noticed, just around the corner, as Yuki-chan stared at me. She jumped for a moment before darting behind the wall."
+    "I turned around and noticed, just around the corner, as Yuki-san stared at me. She jumped for a moment before darting behind the wall."
+    hide Yuki with dissolve
     MC "...egg."
     MCT "H-oooookay. Now I'm starting to get fed up with this."
     "I walked over to the wall to see the girl with the rosy pink lips scribble on a notepad, squatting behind the wall. I watched on as she kept writing, only catching a few words here and there."
     "She pulled out some chapstick and began applying it before continuing to write."
     "{i}Scribble scribble scribble{/i}"
-    MC "Yuki-chan?"
+    MC "Yuki-san?"
     show Yuki neutral at center with dissolve
     Yuki "Eep!"
     MC "What are you doing? Why are you hiding?"
@@ -3717,7 +3727,7 @@ label AE021:
     Yuki "Goodbye!"
     MC "Wait, no you di-"
     hide Yuki with dissolve
-    "Yuki-chan turned around and began to shuffle away before I could catch up and ask what was going on."
+    "Yuki-san turned around and began to shuffle away before I could catch up and ask what was going on."
     MC "No, wait you..."
     RM "Psssst. Pssssst."
     MC "Eh?"
@@ -3826,11 +3836,11 @@ label AE022:
     hide Minori with dissolve
     "I turned a corner, and sure enough..."
     "{i}Tap tap{/i}"
-    "I did a quick spin around a waiting Yuki-chan."
+    "I did a quick spin around a waiting Yuki-san."
     show Yuki sad at center with dissolve
     Yuki "Eek!"
     MC "Paaardon me~"
-    "As I began to walk away, Yuki-chan decided to follow in suit silently."
+    "As I began to walk away, Yuki-san decided to follow in suit silently."
     MC "Something you need?"
     Yuki "Gh!"
     "The girl tensed up a bit and opened her mouth before speaking up."
@@ -3847,7 +3857,7 @@ label AE022:
     Yuki "E-eh? But-"
     "I began whistling to myself as I walked towards my class."
     Yuki "A-ah! Hey! That's disrespectful!"
-    "Yuki-chan caught up with me and began to walk alongside me."
+    "Yuki-san caught up with me and began to walk alongside me."
     Yuki "Heeey, what gives! You're acting all weird this morning."
     MC "You know how I usually act?"
     show Yuki sad
@@ -3884,7 +3894,7 @@ label AE022:
     show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "Good morning, Honoka!"
     show BE neutral
-    BE "Hey, Hotsure-san... Sooo, what's with the shades?"
+    BE "Hey, Kei-chan... Sooo, what's with the shades?"
     MC "Huh, oh, these? They-"
     show AE neutral-annoyed at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "Are against dress code, as well as disallowed in class."
@@ -4033,11 +4043,11 @@ label AE022:
     AE "I was not \"stalking\" you. I was merely studying Hotsure-san."
     RM "Studying?! Keisuke, this chick is bad news-"
     show AE neutral-smug
-    AE "So then you're Daichi Utagashi? I believe it's our first time meeting face to face."
+    AE "Ah yes, Utagashi-san."
     show RM neutral
     RM "Uh..."
     show AE glasses
-    AE "Mhm. Well. I'll be taking note of this encounter."
+    AE "Don't think I've forgotten your presence. I have a few words I wish to have with you."
     MC "W-we can iron out the details later."
     "Despite how crazy he is, I can't help but feel bad for the guy."
     MC "For now, why is the student council following me?"
@@ -5021,7 +5031,7 @@ label AE026:
     scene Classroom with fade
     HR "-Okay. Any questions? I'm leaving either way. See you tomorrow."
     "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
-    show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG sad-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "N-N-Nikumaru-san, are you sure you don't need me? I don't mind, really-"
     show WG neutral at Position(xpos=0.25) with dissolve
     WG "Yes, yes, Kodama-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
@@ -7124,47 +7134,47 @@ label AE034:
     AE "I have reason to believe... she may be privy to private information on students."
     MC "Private...?"
     MCT "She knows I've been getting advice from her."
-    "Tomoko, my sister, has always been there to give me advice when I wanted to know how things were. Always open to give me advice. I always wondered how she was so knowledgeable, even while just using video game facts."
+    "Tomo, my sister, has always been there to give me advice when I wanted to know how things were. Always open to give me advice. I always wondered how she was so knowledgeable, even while just using video game facts."
     AE "Please. Follow me."
 
-    scene Dorm Exterior
+    scene Dorm Hallway
     show AE neutral at Position(xcenter=0.25, yalign=1.0)
     with fade
     "We reached her room, and I walked up to knock on the door."
     play sound Knock
-    MC "Tomoko, it's me, Keisuke. Can we talk?"
+    MC "Tomo, it's me, Keisuke. Can we talk?"
     Tomoko "Mmhn... can we talk later? I'm almost at the second boss."
-    MC "T-Tomoko, please open up."
+    MC "T-Tomo, please open up."
     Tomoko "Auuuu~"
     "I heard the sound of footsteps and then the click of the door unlocking as she opened the door a crack."
     show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    Tomoko "Hm? Big bro?"
-    "Tomoko's hair reached down to her calves at this point, her silken ebony locks swaying with even the gentlest touch of the wind. Her bangs covered but one eye."
+    Tomoko "Hm? What's up, bro?"
+    "Tomo's hair reached down to her calves at this point, her silken ebony locks swaying with even the gentlest touch of the wind. Her bangs covered but one eye."
     MCT "Her depth perception must be terrible. I can't understand how anyone sees so easily with their hair in the way..."
-    MC "Hi, Tomoko. Me and my... friend wanted to talk."
+    MC "Hi, Tomo. Me and my... friend wanted to talk."
     AE "May we come in, please?"
     Tomoko "...Okay."
 
     scene Dorm Tomoko with fade
-    "She opened the door fully, and squinted as the light shone down into her room. This was hardly surprising, as a black blanket covered the window."
-    "The lights in her room were off, barring the bright intense light of the shmup's pause screen on her television."
+    "She opened the door fully, and squinted as the light shone down into her room."
+    "The lights in her room were off, barring the bright intense light of the shmup's pause screen on her laptop."
     "As we entered the room, she crawled up onto her bed, took her comforter and covered herself in it leaving only her hands, face, and long flowing bangs exposed. Shiori-chan and I stood, as I began."
     show AE neutral at Position(xcenter=0.25, yalign=1.0)
     show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
-    MC "Tomoko, do you know who this is?"
+    MC "Tomo, do you know who this is?"
     Tomoko "...Not really. Sorry."
     show AE neutral
     AE "No offense taken."
-    MC "T-this is Matsumoto Shiori. She's the school's Student Council President-"
+    MC "T-this is Shiori Matsumoto. She's the school's Student Council President-"
     Tomoko "Your girlfriend?"
     "I looked to Shiori-chan, who did nothing but nod to her."
     show AE neutral
     AE "Yes. I'm very close to your brother."
-    "Stepping forward, Shiori-chan gently sat on the bed after asking Tomoko if it was okay."
+    "Stepping forward, Shiori-chan gently sat on the bed after asking Tomo if it was okay."
     show AE happy
     AE "You were quick to point out my status as his girlfriend. Has he told you?"
-    "Tomoko shrugged, and looked up to me."
+    "Tomo shrugged, and looked up to me."
     Tomoko "I mean... I know a lot of stuff that happens."
     show AE neutral
     AE "Indeed. However, I find it strange that you know as much as you do about the social happenings about the school when you often stay indoors outside of class."
@@ -7175,7 +7185,7 @@ label AE034:
     AE "It's all right if you're in the \"Go Home\" club, I'm not mad. There are many students who are."
     Tomoko "Oh..."
     AE "You don't need to worry, you're not in trouble for anything, however I've heard a rumor that concerns me."
-    Tomoko "I-I didn't sell my panties to Kurosaki-san! That was a dumb rumor started by Izumi-chan!"
+    Tomoko "I-I didn't sell my panties to Kurosaki-san! That was a dumb rumor started by Fumika-san!"
     MC "Wait, what?!"
     "Before I could say anything more, Shiori-chan put a hand up to stop me from going any further."
     show AE neutral-annoyed
@@ -7183,9 +7193,9 @@ label AE034:
     show AE neutral
     AE "I've been hearing that you've been getting private information about the other students."
     Tomoko "..."
-    "Tomoko looked up at me in an accusatory manner. I tried to convey as best I could without words that I didn't tell her anything, and to not point out that I've been a benefactor of her knowledge."
+    "Tomo looked up at me in an accusatory manner. I tried to convey as best I could without words that I didn't tell her anything, and to not point out that I've been a benefactor of her knowledge."
     AE "And I just wanted to know if that's true."
-    "Tomoko began to sink deeper into her comforter, and started to avoid eye contact."
+    "Tomo began to sink deeper into her comforter, and started to avoid eye contact."
     AE "Is everything all right? You don't need to feel uncomfortable around me."
     MCT "To be fair, it's kind of a natural impulse."
     Tomoko "I guess I'm just thinking about stuff."
@@ -7195,12 +7205,12 @@ label AE034:
     show AE surprised
     AE "O-Oh."
     Tomoko "Did you get gum stuck on it too?"
-    MC "Aha! Ahaha! Tomoko, how's about you-"
+    MC "Aha! Ahaha! Tomo, how's about you-"
     show AE neutral
     AE "I'm not quite sure what you're trying to say..."
-    Tomoko "Well, when Keisuke and I were really little we got in trouble because our hair got caught up together in a big wad of chewing gum."
+    Tomoko "Well, when Kei and I were really little we got in trouble because our hair got caught up together in a big wad of chewing gum."
     Tomoko "Now, our hair is growing. If you have a really big butt, then you must have sat on a really big wad of gum."
-    "The room was silent. I looked at Tomoko the same way I always had when I found out she cleared my save files in games to fit her playthroughs. However, the silence was broken by a somewhat unexpected sound."
+    "The room was silent. I looked at Tomo the same way I always had when I found out she cleared my save files in games to fit her playthroughs. However, the silence was broken by a somewhat unexpected sound."
     show AE happy
     AE "Pfft... eheh..."
     MC "S-Shiori-chan?"
@@ -7214,10 +7224,10 @@ label AE034:
     Tomoko "...Yes."
     show AE neutral-annoyed
     AE "I see, then she's the one who's been leaking information."
-    MC "S-Shiori-chan, I doubt Tomoko meant to cause any harm. She's a good-"
+    MC "S-Shiori-chan, I doubt Tomo meant to cause any harm. She's a good-"
     AE "I'm not talking about her."
     MC "E-eh?"
-    "Almost instantaneously, Yuki-chan came bursting through the doors and began talking up a storm."
+    "Almost instantaneously, Yuki-san came bursting through the doors and began talking up a storm."
     hide AE
     hide Tomoko
     show Yuki neutral
@@ -7229,40 +7239,40 @@ label AE034:
     Yuki "Did you know that Yureno-chan got in trouble for-... erm..."
     show AE neutral-smug
     AE "No, please continue, Utagashi-san. Do go on."
-    "Yuki-chan began sweating as she licked her fat lips and smiled a nervous smile."
+    "Yuki-san began sweating as she licked her fat lips and smiled a nervous smile."
     Yuki "Shio-M-Ma'am!"
     show AE angry
     AE "Then I was right. A student council member releasing private information makes all too much sense. Natural it was you."
     Yuki "F-... Fo-..."
-    "Yuki-chan got on her hands and knees and put her head to the ground."
+    "Yuki-san got on her hands and knees and put her head to the ground."
     Yuki "FORGIVE ME MA'AM!"
     scene black with fade
     pause 1
     scene Dorm Tomoko with fade
-    "After a strict talking by Shiori-chan, Yuki-chan was able to keep her seat on the student council, but was no longer allowed anywhere near student files."
+    "After a strict talking by Shiori-chan, Yuki-san was able to keep her seat on the student council, but was no longer allowed anywhere near student files."
     show AE neutral at center with dissolve
     MC "Well, I guess that settles that."
     AE "Mm. Hopefully I won't be hearing any more personal information of students being shared."
     show AE neutral-annoyed
-    AE "Isn't that right, Yuki-chan?"
+    AE "Isn't that right, Yuki-san?"
     show Yuki neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
     Yuki "Eep! Y-yes ma'am!"
     AE "Good. Then, I hope you both have a good day."
     MC "Oh, real quick, before I go."
     AE "Hm?"
-    MC "Hey, Yuki-chan? What's Kurosaki-san's room number?"
+    MC "Hey, Yuki-san? What's Kurosaki-san's room number?"
     show AE angry
     AE "Hotsure-san, out, now."
     MC "Ghgn!"
     show Tomoko neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     Tomoko "Eek!"
-    "At the same time, Tomoko and I sprung up and ran out of the room to Shiori-chan. She looked at the two of us, before clearing her throat and bowing to Tomoko."
+    "At the same time, Tomo and I sprung up and ran out of the room to Shiori-chan. She looked at the two of us, before clearing her throat and bowing to Tomo."
     AE "N-not you."
     Tomoko "Oh. S-sorry."
     scene Dorm Exterior
     show AE neutral
     with fade
-    "The door closed behind Tomoko, and almost immediately I heard Yuki-chan begin chattering away about her day."
+    "The door closed behind Tomo, and almost immediately I heard Yuki-san begin chattering away about her day."
     MC "Phew. That's settled."
     AE "Indeed."
     MC "Got anything else you need?"
@@ -7410,7 +7420,7 @@ label AE035:
     AE "T-thank you."
     "As we dug in, we talked about our day as the birds chirped in the sky. I'd gotten through half of the cheese by the time Shiori-chan had finished the salmon, and minute by minute the contents of the tray slowly disappeared."
     "I stopped for a moment, and looked at her as the breeze gently blew her hair, as well as her skirt, exposing pale thigh flesh before she inevitably readjusted it. I chuckled to myself and looked out towards the campus."
-    MC "So... about Tomoko."
+    MC "So... about Tomo."
     show AE neutral
     AE "Hm?"
     "She gulped and then responded, looking at me solemnly."
@@ -8434,18 +8444,17 @@ label AE040:
     $setProgress("AE", "AE041")
     scene Dorm Exterior with fade
     play music Schoolday
-    "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomoko, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
+    "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomo, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
     show Yuki neutral at Position(xcenter=0.25, yanchor=1.0)
     show Tomoko neutral at Position(xcenter=0.75, yanchor=1.0)
     with dissolve
     Yuki "IT WAS CRAZY! And then, and then, Shiori-chan almost knocked over the cup with her butt, but caught it and was all like \"Who brought a drink to the meeting?\" and I was all like-"
     "Of course, the indication her meeting had ended came when Utagashi-san came in babbling about the new topic of the second."
     MC "O-okay, Okay, Utagashi-san, I think I'm good for now."
-    "Giving a coy chuckle, I nodded to Tomoko, still perched on the edge of her bed."
+    "Giving a coy chuckle, I nodded to Tomo, still perched on the edge of her bed."
     MC "I'll call mom and tell her you said hi, okay?"
     Tomoko "Okay."
     MC "Okay, and hey, you really should go out and socialize more."
-    #show Yuki neutral
     Yuki "Uhuh, uhuh! I actually heard that there are some really cute boys who took a liking to you, and-"
     Tomoko "Are you sure I don't have enough in my ear for a lifetime?"
     MC "Faaaair enough."
@@ -10448,14 +10457,14 @@ label AE048:
     "She vanished."
     "When I tried to talk to her after class, she nearly darted out, leaving me behind. I could swear that I saw her cover her face with her hand too."
     "After checking the office, her room, and the roof, I'd nearly given up until I noticed something strange when looking out the window."
-    "Yuki-chan was standing in the courtyard next to the clocktower entrance. Arms crossed, looking side to side every few seconds as if on the lookout."
+    "Yuki-san was standing in the courtyard next to the clocktower entrance. Arms crossed, looking side to side every few seconds as if on the lookout."
     MCT "Hell's going on out there?"
     MC "Hm..."
     "Part of my worry replaced by a heightened sense of curiosity, I exited the hallway and entered the courtyard."
 
     scene Campus Center with fade
     play music HigherEdu
-    MC "Oy! Yuki-chan, got a sec?"
+    MC "Oy! Yuki-san, got a sec?"
     show Yuki neutral with dissolve
     Yuki "Huh? Keithuke-than?"
     MC "Yeah, hey! I was wondering if-"
@@ -10465,14 +10474,14 @@ label AE048:
     MCT "Can't let anyone in? Isn't this place already off limits to regular students? Why the extra security?"
     MC "What about?"
     Yuki "Nuhn uv yow beethwaxf."
-    MCT "Yuki-chan's growth is getting pretty bad... I think I may have gotten two words out of that."
+    MCT "Yuki-san's growth is getting pretty bad... I think I may have gotten two words out of that."
     MC "Do you know?"
     Yuki "Ah..."
     MCT "Why would she and Yureno-san meet here? What's going on?"
-    MC "Yuki-chan... I'm worried about Shiori-chan. I just wanna talk- look, can you just let me in?"
+    MC "Yuki-san... I'm worried about Shiori-chan. I just wanna talk- look, can you just let me in?"
     Yuki "N-Nuh!"
     "She says no, but her giant lips can't possibly hide the sorrow on her face as I spoke. I step a bit closer."
-    MC "Yuki-chan, please. I'm her boyfriend. I'm worried about her, she hasn't even wanted to acknowledge me recently! You're the closest thing to a friend she has, don't you feel the same?"
+    MC "Yuki-san, please. I'm her boyfriend. I'm worried about her, she hasn't even wanted to acknowledge me recently! You're the closest thing to a friend she has, don't you feel the same?"
     Yuki "Nuugh..."
     Yuki "O'tay, o'tay, 'ou gawt me. Yeth, I am wowwied abowt huw. She'th been aktin weawwy stwange wecentwy. I'm wowwied."
     Yuki "...Hmm..."
@@ -10483,7 +10492,7 @@ label AE048:
     MCT "I... probably should have watched the wording."
     Yuki "Smawt-ath. Get in dewe, an' wet me kno wha'th goin awn."
     MC "Ota- Okay."
-    "Yuki-chan stepped out of the way, and I nodded humbly. I entered the clocktower once again, and began my ascent."
+    "Yuki-san stepped out of the way, and I nodded humbly. I entered the clocktower once again, and began my ascent."
 
     scene Clock Tower with fade
     "I silently climbed up the wooden stairwell, each step causing a minor creak which I did my best to minimize. As I ascended I heard the two bickering about something."
@@ -10517,7 +10526,7 @@ label AE048:
     Tako "Yo, isn't puffy lips supposed to be guarding the door?"
     show AE embarrassed
     AE "Sh-Show yourself! I'll have you know this area is off l-l-limits!"
-    MCT "Damnit. If I run out of the tower, Yuki-chan will for sure have to give me away..."
+    MCT "Damnit. If I run out of the tower, Yuki-san will for sure have to give me away..."
     "Realizing I'd been completely caught, I stood up and walked into the belfry proper."
     show AE surprised
     AE "K-Keisuke-kun? What are you-? Y-you're not supposed to be here!"
@@ -10627,7 +10636,7 @@ label AE048:
     MC "Weawwy-"
     MC "Ach- R-Really."
     show AE neutral at center with dissolve
-    "As we spoke, Shiori-chan walked out of the bell tower. She looked to Yuki-chan and pursed her lips."
+    "As we spoke, Shiori-chan walked out of the bell tower. She looked to Yuki-san and pursed her lips."
     Yuki "Eheh... no gawwd duty fwum nao awn?"
     hide RM
     AE "Correct."
@@ -10658,7 +10667,7 @@ label AE048:
     RM "Wait, you will?"
     MC "Yeah, you doin' anything right now?"
     Yuki "Wait, wait, wuh bowt me!? I wunnuh know too!"
-    RM "Ehh, Yuki-chan, I think this is something Keisuke wants to talk about privately. You're not exactly a private girl."
+    RM "Ehh, Yuki-san, I think this is something Keisuke wants to talk about privately. You're not exactly a private girl."
     Yuki "Ah-!... Eh... faiw point."
     MCT "He will without a doubt tell her everything later."
 
@@ -11746,14 +11755,14 @@ label AE052:
     "As I walked into the library, I was surprised to not only find it occupied, but occupied by a familiar face."
     show Tomoko neutral with dissolve
     MC "Hey, Tomo!"
-    Tomoko "Oh. Hi, big brother."
+    Tomoko "Oh. Hi, bro."
     "Tomo sat on a chair at a table, holding her hair (or as much as she could fit) in her arms. It was obvious that she hadn't even been making any attempts to cut it."
     MC "Look who got herself out of her room!"
     show Tomoko surprised
     Tomoko "Ehh! I come out of my room! Just, like, for classes and junk."
     MC "Why are you out here now?"
     show Tomoko neutral
-    Tomoko "I'm waiting out here for Yuki-chan."
+    Tomoko "I'm waiting out here for Yuki-san."
     MC "Yeah? Good-!"
     Tomoko "Yeah."
     MC "Good, good, ah, man, that's good."
@@ -11770,11 +11779,11 @@ label AE052:
     MC "Tired?"
     Tomoko "Lil bit."
     MC "Up studying?"
-    Tomoko "Nyeeeh... Monster Quest."
+    Tomoko "Nyeeeh... Wyrm's Pursuit."
     MC "Tomooo."
     show Tomoko surprised
     Tomoko "Hey! I'm doing good right now!"
-    MC "Uhuh. Hey, how's chemistry going?"
+    MC "Uhuh. Hey, how's biology going?"
     show Tomoko sad
     Tomoko "...It's going fine."
     MC "Tomo, you know my girlfriend has access to every student's record, right?"
@@ -11782,7 +11791,7 @@ label AE052:
     Tomoko "Mweeeeh~"
     MC "Tomooo, c'mon!"
     show Tomoko neutral
-    Tomoko "Chemistry is haaard!"
+    Tomoko "Biology is haaard!"
     MC "If you needed to-"
     "{i}Creak{/i}"
     "I stopped mid sentence to look to the door, saving Tomo from a a verbal lashing. As students piled out from the office, Shiori made her way out before turning back to the office."
@@ -11801,7 +11810,7 @@ label AE052:
     show AE smile
     AE "A bit. What all have you been up to today?"
     MC "Not much. I went back to my dorm for a bit, caught up with Tomo."
-    AE "Ah, yes, hello Tomo-Chan."
+    AE "Ah, yes, hello Tomo-chan."
     Tomoko "H-Hi."
     MCT "Oy, oy! How come it took me weeks to be called -chan, but she gets it within only meeting her twice?!"
     "Tomo sheepishly stepped back a bit, but with a small smile. Knowing her, I'm glad she's at least taken to Shiori a bit, even if she hasn't fully let her guard down."
@@ -11818,7 +11827,7 @@ label AE052:
     show AE smile
     AE "Do you want to go to the roof?"
     MC "Oh, uh, sure."
-    Tomoko "W-Wait, hold up. Where's Y-Yuki-chan?"
+    Tomoko "W-Wait, hold up. Where's Y-Yuki-san?"
     show AE neutral
     AE "She's still organizing in the room. Feel free to enter, simply be careful around the documents."
     Tomoko "Got it, m-m-ma'am."
@@ -11828,7 +11837,7 @@ label AE052:
     AE "Keisuke? The roof?"
     MC "Oh, yeah, um..."
     MC "I'll catch up with you later. Love you."
-    Tomoko "Love you too, Keisuke."
+    Tomoko "Love you too, Kei."
     hide AE with dissolve
     "Shiori took the lead as we exited the library and made our way through the halls."
     Tomoko "You guys are weird."
@@ -18867,7 +18876,7 @@ label AE081:
     BE "Sooo what's up?"
     MC "Feh, the usual. Not too much going on. How about you?"
     show BE wink
-    BE "I'm all good! I'm just chiling, not doing too much but gettin through classes! When Shi-chan is feeling better, could you see if she can help me out with my schoolwork?"
+    BE "I'm all good! I'm just chiling, not doing too much but gettin through classes! When Shiori-chan is feeling better, could you see if she can help me out with my schoolwork?"
     MC "When she's better? Ah, so you've noticed something's up."
     BE "Weeeell-"
     MC "Uh-oh."
@@ -20305,6 +20314,7 @@ label AE089:
     "I brushed some of the sleep from my eyes and yawned as I kept cooking, however it was a bit difficult as I didn't have the best sleep."
     "As much as I enjoy their company, and the warmth of Shiori's body is comforting, I kept being woken up intermittently throughout my rest."
     "Simply put, Yureno-chan snores like a muscle car revving up. Something I didn't feel I needed to tell her as she woke up, however."
+    $setTakoOutfit(OutfitEnum.NUDE)
     show AE neutral at altMove(0.5, 0.25)
     show Tako neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     #Tako should have a nude sprite of some sort
@@ -20349,7 +20359,7 @@ label AE089:
     Tako "A-Ah! Right, yeah, no big."
     MC "Um, if you two want, I made breakfa-"
     Tako "GRUBS ON!"
-    #Put on Tako's casual sprite here
+    $setTakoOutfit(OutfitEnum.CASUAL)
     "Throwing on a ragged, wrinkled shirt from her bedroom floor, Tako nearly barreled into the table with the full width of her massive hips as she pulled out her chair and sat down."
     Tako "Oy! C'mon and grab a bite, Shiorear. We're growin' girls after all."
     AE "I... I should be alright."
@@ -21033,7 +21043,7 @@ label AE093:
     PRG "Eep!"
     hide PRG
     show BE surprised-2 at Position(xcenter=0.25, yalign=1.0)
-    BE "W-Woah, hey, calm down Shi-chan..."
+    BE "W-Woah, hey, calm down Shiori-chan..."
     AE "..."
     MC "It'll be alright, just take it easy."
     show AE angry-2
@@ -21647,7 +21657,7 @@ label AE095:
     show Tomoko sad at Position(xcenter=0.8, yalign=1.0)
     with fade
     Tomoko "So... then what are we supposed to do?"
-    "As Tomo spoke, she made a few motions with her hands to Yuki-chan who nodded along before making a few signs back."
+    "As Tomo spoke, she made a few motions with her hands to Yuki-san who nodded along before making a few signs back."
     Tomoko "I guess, yeah."
     RM "What did she say? Sis, what are you saying?"
     $setAffection("TM", 1)
@@ -21682,7 +21692,7 @@ label AE095:
     show RM angry
     RM "Have you heard of the Kabukicho yakuza? And the disappearances of those girls- "
     Yuki "Nbp-ugh-ngh-!!"
-    Tomoko "Y-Yuki-chan, let's use our hands, remember?"
+    Tomoko "Y-Yuki-san, let's use our hands, remember?"
     "Yuki began furiously signing at Daichi."
     Tomoko "She said \"Now is not the time for this shit, Daichi.\""
     RM "It's not a conspiracy about the school okay! I'm just saying, maybe Shiori's mom-"
@@ -21806,6 +21816,7 @@ label AE095G:
     Tako "Ah!"
     show AE happy
     AE "..."
+    $setTakoOutfit(OutfitEnum.ALTERNATE)
     "Yureno-san blushed as Shiori let go, before taking off her cap and holding it in her hands."
     show Tako sad
     Tako "A-Aw geez... Shiori..."
@@ -22528,7 +22539,7 @@ label AE097G:
     "Ears red, I sat next to Shiori-chan, allotted two chairs to sit, as Mom began passing out plates, a bucket of fried chicken and containers of mashed potatoes sitting in the middle of the table."
     MCT "He didn't have to go to the oven at all."
     scene black with fade
-    "As dinner passed, Shiori-chan got to know my parents, and they got to know her. Tomoko-chan seemed somewhat distant at first, but as time went on she came around to having Shiori-chan here as well."
+    "As dinner passed, Shiori-chan got to know my parents, and they got to know her. Tomo seemed somewhat distant at first, but as time went on she came around to having Shiori-chan here as well."
     scene Tokyo Dining Room
     show AE neutral
     with fade
@@ -25630,10 +25641,10 @@ label AEBE004:
     BE "It's too dangerous and we would mess with the balance, right?"
     AE "Ah..."
     MC "It... sounds like you hit the nail on the head."
-    BE "Because Shi-chan hates fun, duh."
+    BE "Because Shiori-chan hates fun, duh."
     AE "..."
     "Shiori looked down at the ground as she seemed to be thinking things over in her head, analyzing what to say next, however... coming up with only a forlorn expression."
-    BE "A-Aw geez, Shi-chan, I didn't mean it like that. Like, hanging out with you is cool! I was just saying uh..."
+    BE "A-Aw geez, Shiori-chan, I didn't mean it like that. Like, hanging out with you is cool! I was just saying uh..."
     "Honoka looked to me with pleading eyes; she may have been frustrated, but if there was one thing she hated was making others feel bad. Still however, knowing how scary Shiori could be, I just raised up my hands and stepped back."
     MCT "Your funeral."
     BE "Uhh... m-maybe the three of us can just go to the dock and-"
@@ -26035,7 +26046,7 @@ label AEBE004:
     Magician "I think I know my three wishes, am I right? Anyways! That's all for tonight, folks! Come back tomorrow for even more, as I show the art of levitation!"
     "Though Honoka was stunned, I and the rest of the crowd applauded as the Magician walked backstage, music playing over the stereo. Honoka then, however, looked around fearfully."
     show BE surprised with vpunch
-    BE "H-Hold on, where is Shi-chan?"
+    BE "H-Hold on, where is Shiori-chan?"
     MC "Eh? I... dunno."
     show BE sad
     BE "Oh shit... oh shit, she's been stuffed into a genie bottle. Oh no, she's gonna be a carny!"
