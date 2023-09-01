@@ -25599,7 +25599,6 @@ label PRG045:
     hide Sakura
     show BE happy at Position(yalign=1.0), Transform(xzoom=-1) with easeinleft
     "Honoka walked up to the door and knocked, a massive pile of clothes in a heap inside of a trendy looking basket slung over one of her arms."
-    "test"
     BE "In!"
     hide BE with easeoutright
     pause .5
@@ -27049,7 +27048,7 @@ label PRG046:
     jump daymenu
 
 label PRG047:
-    $setProgress("PRG", "PRG048")
+    $setProgress("PRG", "PRG047B")
     $setTime(TimeEnum.DAY)
     scene Tokyo Train with fade
     MC "Mmn..."
@@ -27952,6 +27951,379 @@ label PRG047:
     "Since 2021, Aida's route is receiving an extensive rewrite treatment, rebooting the story in a more focused direction."
     "Everything playable after this last scene was written before the rewrites. Because of this, you may notice some plot holes and inconsistencies, which are intended to be fixed with future builds."
     "Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it."
+    jump daymenu
+
+label PRG047B:
+    $setProgress("PRG", "PRG048")
+    $setTime(TimeEnum.NIGHT)
+    play music DormLife
+    scene NYI
+    show PRG worried
+    with fade
+    #show Takara neutral with fade
+    "About fifteen minutes later, Aida's mom came into the living room. She held both a smaller bowl and a larger one, and handed Aida the bigger of the two, then sat down in the recliner."
+    Takara "Mmmghh..."
+    "I looked down into the bowl that Aida set between us."
+    "It was honest to goodness popcorn. None of that fake looking neon yellow microwave stuff. The puffs of white glistened in the comfortable lighting of the room, with specks of dark seasoning dusting them."
+    MC "Ooh. What sort of popcorn is this?"
+    show PRG neutral
+    PRG "Try some."
+    "I went in for a couple of pieces."
+    "Immediately, butter and salt blasted my mouth in just the right amounts. Not creamy enough to feel like I was eating a stick of butter, but also not salty enough to shrivel my tongue like a piece of dried meat."
+    "Then, a small jolt of spice. It wasn't a lot, and in fact, many people probably wouldn't have noticed it, but the light flavor cut through the sweet and salt, and brought it all together."
+    MC "Oh... mn... wow."
+    Takara "Do you like it, Hotsure-san?"
+    MC "Very much, yes. It's... what is that?"
+    PRG "Chili powder."
+    MC "On popcorn?"
+    Takara "Hahah! That's everyone's reaction at first!"
+    Takara "But, yes. It's chili powder."
+    Takara "This has been one of my favorite snacks ever since I was pregnant."
+    Takara "I wanted popcorn, but didn't have any butter."
+    Takara "So, I looked it up online and found this as an alternative. You're supposed to do it with oil in place of butter, but the butter and chili powder together work {i}so{/i} well."
+    MC "They really do. Man..."
+    "I sat back into the couch a little and took some more handfuls. I was ravenous."
+    Takara "So... tell me a bit about you, Hotsure-san. Where are you from?"
+    MC "Oh, I'm from Tokyo. Been there... well, most of my life."
+    Takara "I see. Do you have any siblings?"
+    MC "Yep. I have a twin sister. She's actually at the academy with Aida and I."
+    Takara "Oh! That's wonderful! It must be nice to have family so close! Especially in a new place."    
+    MC "It definitely was helpful, especially in the first few weeks. You know, getting to know everyone and so on."
+    MC "I actually doubly lucked out, because one of Aida and my classmates is an old friend of mine from years ago."
+    Takara "You're kidding!"
+    MC "Nope! We bumped into each other on the first day on the island, and reconnected."
+    Takara "Well, that's wonderful. So wonderful."
+    MC "It really is. She and Aida have actually gotten to be pretty good friends, too."
+    Takara "Aw. I'm happy for you, Sweetie."
+    Takara "And... your sister and friend. They both have... {w}ah... {w}they both have a... factor, as well?"
+    MC "They do, yes."
+    Takara "I see. Well, I do hope they're both handling them okay."
+    Takara "If I may... do you and your sister have the same factor, Hotsure-san?"
+    MC "We do, yes."
+    Takara "So, siblings will always have the same factor?"
+    MC "Not always. My roommate actually is factorless, but his sister does have a factor."
+    Takara "My... seems really complex."
+    Takara "Aida has told me a little bit, but still."
+    Takara "So, remind me, but what other factors are there aside from hair and hyperfertility?"
+    MC "Hm..."
+    MC "Well, one of the girls that Aida and I have in our class has a muscle growth factor. So, she was essentially just a girl who liked working out when I first met her. But now, she's got the physique of a well-trained bodybuilder."
+    Takara "Oh my word..."
+    Takara "And, it's just the students that have these...?"
+    MC "Not quite. There are some faculty that have them too, but not all. For instance, our homeroom teacher has a tongue growth factor."
+    Takara "A... sorry, come again?"
+    MC "A tongue growth factor. His tongue is down past his waist."
+    Takara "I... see."
+    Takara "Forgive me for sounding... well, morbidly curious, but... how exactly can he speak?"
+    MC "It's... I can't say I know how he pulls that off either, but he does."
+    MC "I believe he can somehow... roll it up? Like, kind of just retract it somehow?"
+    show PRG worried 
+    MC "Half of the things I've seen on the island I would've considered completely impossible had I not seen it myself. But, it's definitely real."
+    MC "As for others... well, there is a weight gain factor."
+    PRG "T-That's what my roommate has, Mom."
+    Takara "Oh, my. And it's... just how it sounds?"
+    PRG "Mhm."
+    Takara "My..."
+    MC "There's also Yamazaki-san."
+    MC "She has a height factor. So, essentially, she's growing taller and taller every day."
+    show PRG nervous
+    MC "She's actually had to start attending classes remotely, because she doesn't fit in the classroom anymore."
+    Takara "Oh..."
+    show PRG unsure
+    PRG "I... I always feel so... bad for her."
+    PRG "The rest of us get to go about the academy as normal, and live our lives. But not her."
+    PRG "And... I-I feel like I'd always be looking down to make sure I wouldn't step on something."
+    Takara "Yes. It must be so difficult..."
+    Takara "How... have you been handling it, Dear?"
+    show PRG worried
+    PRG "I... I've been doing... okay."
+    "I kept my hand out of the bowl and turned to Aida. In between the two of us, she looked down."
+    "Takara set aside her bowl as well and got up, joining us on the couch, taking the spot on the other side of Aida."
+    show PRG unique
+    PRG "Even on campus, I... I feel like I... stick out."
+    PRG "I'm... the only girl with this factor on campus. A-And... i-it isn't really a secret..."
+    Takara "Everyone knows?"
+    PRG "Everyone."
+    PRG "It..."
+    "I gently rested one hand in Aida's."
+    MC "I think she means... that her factor is one of the most ostracizing, among all of the others that already make everyone stand out."
+    MC "Like, there's the girl with the big boobs factor, the girl with the huge hip factor, and the girl with the pregnant belly factor."
+    Takara "Right... one of them stands out."
+    show PRG worried
+    PRG "There aren't that many students. And... it's obvious aside from that."
+    show PRG unique
+    PRG "My belly looks different than a... weight gain one."
+    PRG "I-I just feel like I walk around campus, and... I-I don't know."
+    Takara "You worry about judgment?"
+    PRG "Y-Yeah..."
+    PRG "And... a-around here... I-I think about how... different I look."
+    PRG "Even aside from my belly..."
+    show PRG worried
+    "Takara took her daughter's hand in hers."
+    Takara "So... you haven't been able to connect with anyone aside from Keisuke?"
+    show PRG unsure
+    PRG "W-Well... no. I have some other girls that I talk to, as well..."
+    Takara "Tell me about them."
+    show PRG worried
+    PRG "Um... I-I have... m-my cooking club partner, Sakura."
+    PRG "And, my roommate. And, Inoue-san. Keisuke's friend."
+    Takara "And you get along with them?"
+    PRG "Y-Yes..."
+    Takara "Then that's who you should focus on, Dear. Not random passersby."
+    Takara "Do any of your friends say anything negative about your looks or your factor? Or anything about you, for that matter?"
+    show PRG unsure
+    PRG "... N-No."
+    Takara "Hotsure-san? Anything from any of them?"
+    MC "Ah... actually, pretty much the opposite. Whenever that topic comes up, they tend to compliment Aida on how she looks."
+    Takara "And, do you think there's a reason why they do?"
+    MC "I would say so, yes. Because... well... Aida looks fantastic."
+    MC "And I'm not just saying that because I'm her boyfriend. Like, Aida is a very beautiful girl in general."
+    Takara "I'd have to agree."
+    Takara "And that's not just because I'm your mother, Dear. If you were butt-ugly, I'd let you know."
+    show PRG unique-happy
+    PRG "Aheheh..."
+    Takara "C'mere."
+    "Takara opened her arms, and Aida, after a moment, leaned sideways to hug her."
+    Takara "Have you been doing any stretching, Dear?"
+    show PRG worried
+    PRG "Um... n-not really."
+    Takara "I'd think about starting some. Doesn't have to be anything intense. Even just some lower back stretches would help."
+    Takara "Now... if I may, Dear... have you been having any back pain from your breasts?"
+    show PRG unique
+    PRG "Um... n-not a lot. I-I do get sore sometimes..."
+    Takara "Okay. Well, I would think about some stretches, then. Have your bras been fitting okay?"
+    PRG "Um... f-for the most part. I... with how much I've been growing, my bras usually don't fit me for long..."
+    Takara "How often do you go through them?"
+    show PRG nervous
+    PRG "Um... i-it depends. I've been through... nine so far?"
+    Takara "Oh my..."
+    Takara "Okay, Dear. I'll show you some later that you can do to help. They should help take some tension off."
+    show PRG worried
+    PRG "T-Thanks, Mom..."
+    Takara "Of course, Honey..."
+    pause 1
+    "Takara put one hand right on Aida's belly, near the front side."
+    "She rubbed very gently, keeping her touch gentle."
+    Takara "I still can't believe that... {w}that I'm... {w}I'm going to be a grandma..."
+    show PRG unique
+    PRG "You're... n-not mad?"
+    Takara "Mad? No, I never have been, Dear. Shocked? Well, at first, yes. Very much."
+    Takara "Especially due to... well... I suppose I never expected you to go off to school and find a boyfriend so quickly."
+    Takara "Not that you couldn't, of course. But, dating and boys were never something I ever heard you talk about."
+    PRG "I-I just... d-didn't know how to discuss it."
+    PRG "I... I just never really thought that boys ever wanted to talk to me, of all girls. Especially when other girls are so much more showy and ‘out there' than me."
+    PRG "I've always thought that I'm a little... plain."
+    show PRG worried
+    PRG "I... I don't really do a lot. Inside the house or in my dorm, I'm fine. But... going out and about..."
+    pause .5
+    MC "Well, as a guy, I can tell you that the super showy girls aren't always what guys are looking for."
+    MC "Showy girls might look like fun, and seem super bubbly and fun-loving, which in a lot of cases is true."
+    pause .75
+    MC "But, at the same time, girls who act like that also... {w}ah, how do I say this without sounding incredibly rude?"
+    Takara "No second guessing here, Hotsure-san. Feel free."
+    MC "Well... those types of girls might be fun. And, they might talk and laugh a lot and seem like the biggest presence in the room."
+    MC "But, when you have that sort of girl, it can be hard to feel like you can fully connect with them, and trust them."
+    MC "They can be so bubbly and all over the place, that when it comes time for the two of you to be alone together, or to have a quiet moment together, you can have your attention fully on her, but you might not get the same thing in return."
+    MC "At its root, it can be hard to feel like you're forming something meaningful."
+    MC "Being a little more quiet isn't bad. Not at all. It shows that you're careful of what you say, because you want to say the right thing."
+    show PRG unique-happy
+    MC "It shows you care, even without actually speaking."
+    pause 1
+    Takara "... I see why he won your heart, Dear."
+    PRG "Y-Yeah..."
+    "Aida smiled at me, but also stifled a yawn in the same breath."
+    MC "Now, why don't you go get ready for bed? I'm exhausted too, and I can tell you're ready to drop."
+    show PRG neutral
+    PRG "'Kay."
+    "I stood up and offered Aida my hand, helping her get up."
+    hide PRG with dissolve
+    "As she walked away and down the hall, her toiletry bag in hand, Takara watched her pregnant daughter."
+    Takara "Mm... I... Hotsure-san? I..."
+    Takara "I don't mean to put you on the spot, but I want to thank you for coming."
+    Takara "I know that this likely isn't the easiest thing for you to do, especially given the circumstances, but I'd like you to know that you're more than welcome here."
+    MC "Thank you very much. And... yeah, I'll admit that it is a little nerve-wracking."
+    MC "At the same time, though, I'm glad to finally meet you. And hopefully Aida's father too, should he be feeling up to it."
+    "I found myself glancing at the recliner across the room, only to snap back when Takara spoke."
+    Takara "Oh, I think he'll be up for it. I know how it likely looks from the outside, but... his condition has actually improved quite a bit."
+    Takara "Of course, I don't know what Aida has all told you."
+    MC "Well, she... she mentioned the incident, as well as some of the aftereffects that it's had."
+    MC "Before she and I called you that day to break the news, she explained most of it to me, just so I wouldn't be completely in the dark by anything that was said."
+    Takara "Right. That's smart."
+    Takara "So, you know then."
+    Takara "Yes... that incident did have quite the impact on our family."
+    MC "Aida's father... he..."
+    MCT "This talk is going into some personal territory. How much can I really say here without being too forward?"
+    Takara "He...?"
+    MC "If I can ask, how is he... feeling about all of this?"
+    Takara "He... it's complicated, Hotsure-san. And I'm not saying that in a ‘I don't want you to know' sort of way. I'm saying that because... well, it is."
+    Takara "Enmei... he's always felt-"
+    "From off down the hall, something clattered to the floor. A loud bump echoed through the door."
+    "Takara got up, walking to the door."
+    Takara "Honey? Everything okay?"
+    PRG "F-Fine..."
+    PRG "D-Dropped something."
+    Takara "Alright Dear. You let us know if you need help, okay?"
+    "Takara walked back over and sat down."
+    Takara "... I think we'd best wait until Aida is here with us, Hotsure-san. However, I do appreciate your asking."
+    Takara "I know how... horrible it must look. Everything that happened and my... decision making in the aftermath of all of that. But, I only did it to ensure Aida would have the best childhood that she could."
+    MC "Right."
+    MC "How... did you and your husband meet?"
+    Takara "Would you believe... at a Koi game?"
+    MC "I... well, knowing what I know from Aida, I would believe that."
+    Takara "Oh, it was so long ago now. I was 18, and he was 20. He was there with a few of his friends, and I was there with mine."
+    Takara "He was seated next to me, and he accidentally took a sip from my soda."
+    Takara "Enmei apologized right away, of course. And we ended up talking for the rest of the game."
+    Takara "I know it isn't the most exciting meeting, but it's how it happened."
+    Takara "We got married the next year. He didn't want to wait. Well... actually, that's a lie. Neither of us did."
+    Takara "Enmei was... mm, he had such a... spark to him, then."
+    Takara "Everything had to happen now. He was like a big kid. No patience. For instance, he wanted a new apartment for us, so he went out looking, and had a new place for us four hours later."
+    MC "You're kidding."
+    Takara "I wish I was, but it's all true."
+    Takara "He had this... pure excitement to him. The ability to suspend all disbelief and truly feel, just for a moment, that anything was possible."
+    Takara "And, shortly after we got married... Enmei started with the talk about having kids."
+    Takara "He wanted the traditional home life. Kids playing in the yard, a big family meal at the table, nights spent together as a family, all of it."
+    Takara "Originally, I thought I didn't want kids. I was scared, really. I didn't know if I'd make a good mother, myself."
+    Takara "I... I used to be a little... quiet myself. It was hard to tell myself then that I, at 19, would make a good mom."
+    Takara "But... after some time, I came around to the idea. And maybe about two months after we started trying... I got pregnant."
+    MC "Wow. Did you or him have any preferences in what you'd have?"
+    Takara "We... didn't really. Whatever we had, we would be happy with."
+    Takara "Of course, I think there is a part of him that would have loved to have a boy, but when we found out that we were going to have a little girl, he was... oh, he was overjoyed."
+    Takara "I'm not sure if Aida told you, but Enmei was a handyman in those days. So, he built a crib, and a chair for me to sit in to rock our baby to sleep. He helped me decorate her room, and get everything all ready for her."
+    Takara "Actually... you and Aida remind me a lot of Enmei and I in those days."
+    MC "Oh?"
+    Takara "Yes. I can't quite place my finger on it yet, but there is some-"
+    pause .5
+    $setPRGOutfit(OutfitEnum.PAJAMAS)
+    show PRG neutral with dissolve
+    pause .25
+    "Aida stepped out of the bathroom. Clad in her nightie, she walked over toward us, setting her toiletry bag down by her suitcase."
+    Takara "Sorry, Honey. Just rambling to your boyfriend about how your father and I met."
+    show PRG worried
+    PRG "Mom..."
+    MC "Oh, it's fine. It's fun to hear about."
+    PRG "Dad told Mom that he lost his phone number, so he asked if he could have hers instead."
+    MC "Breaking out the pickup lines? This is news to me."
+    Takara "I said it wasn't exciting. I never said it wasn't cheap."
+    "Takara got up from her seat and walked over to Aida, leaning over to give her a hug over her boobs and belly, just barely reaching."
+    Takara "Goodnight, Sweetheart. It's so {i}so{/i} good to see you."
+    Takara "I love you so much..."
+    PRG "N-Night, Mom..."
+    "Aida tried to hug her mom back, but at that angle, Aida couldn't reach her past just grazing her with her fingertips."
+    Takara "Goodnight, Hotsure-san. Sleep tight."
+    MC "You too!"
+    "Takara smiled one last time, and walked off down the hall."
+    #hide Takara with fade
+    pause .75
+    show PRG worried
+    pause .5
+    show PRG unique
+    pause .5
+    PRG "I-I'm sorry if... if she said anything embarrassing..."
+    PRG "She... c-can ramble sometimes."
+    MC "Oh, it's fine. She was just telling me a little about her and your dad's first meeting."
+    "Aida nodded a little and went to the air mattress, testing it with one foot."
+    PRG "I hope I don't pop this..."
+    MC "Well, if we have to, I can sleep on the couch. Or on the floor."
+    "Aida looked down at the air mattress. It definitely wasn't... big."
+    PRG "... I'm going to take up so much space."
+    MC "Hey."
+    show PRG worried
+    pause .5
+    MC "I love your pajamas."
+    PRG "I... y-you do?"
+    MC "I do."
+    "Aida took hold of the hem at the end of her nightie and pulled it out a little, almost in a curtsy."
+    "Her nightie just barely covered what it ought to. I had no doubts that, should she bend over, I'd be able to see... well, everything not covered by her panties."
+    "She had a literal canyon of cleavage, and the lack of a bra was wonderfully noticeable."
+    MC "I'm gonna go get ready too."
+    hide PRG with dissolve
+    "I went past her, down the hall and into the bathroom."
+    "The bathroom was... small. Go figure."
+    "Immediately, I pieced together where the sounds had come from."
+
+    scene NYI
+    show PRG worried
+    with fade
+    "Aida was getting herself laid down on the mattress, the thing making latex sounds as she adjusted."
+    "The lights were down already, with only one dim light on in the kitchen."
+    "She seemed to fill the entire thing as she laid down. I opened my suitcase and took my shirt off, pulling on a bedtime shirt and some shorts."
+    MC "Comfy?"
+    PRG "It's... really small."
+    PRG "A-Are you going to... be able to fit?"
+    MC "I... well, do you think it's a good idea to sleep in the same bed?"
+    MC "When your parents walk out tomorrow, won't they see that?"
+    MC "Like... I can take the couch, if you'd like. It's no problem."
+    show PRG unsure
+    pause .75
+    PRG "I-I don't care if they do."
+    PRG "... C-Could you sleep by me? Please?"
+    "I could tell this wasn't a sexy sort of ask. This was a comfort one."
+    MC "Of course I can."
+    show PRG worried
+    "I set my phone to charge at an outlet, and went to the side behind Aida, and laid down."
+    PRG "I-I can move over."
+    MC "Nope, got it."
+    "I turned in to face Aida's back, putting an arm over her."
+    "Though... I still had my entire ass off of the bed. I could get fully on... but that would require me to literally spoon Aida."
+    "Aida turned herself, flipping onto her back, then over, her belly resting heavily on me as she turned to face me... well as much as she could. Her belly sat pointed at a 45 degree angle, pointed on the diagonal and onto my middle."
+    "Aida looked at me, her eyes worried and full."
+    PRG "Is it okay if my belly rests on you?"
+    MC "Of course. But, wouldn't you be more comfortable facing the other way, so you aren't like jacking your belly up into the air?"
+    PRG "N-No..."
+    PRG "I... I like knowing that... you're right here."
+    MC "I'm not goin' anywhere..."
+    "I reached out and pulled Aida as close as I could."
+    show PRG embarrassed 
+    "Her belly pressed against me. Her boobs smushed up and filled the space between us."
+    PRG "Sorry..."
+    MC "No problem. Here."
+    show PRG worried
+    "I pulled the blanket up over us, only allowing our heads and necks free of it. Beneath our heads, Aida's boobs pushed the blanket up, creating a sort of wall of soft fabric."
+    "Though... the blanket was clearly meant for a normal sized person. Not a guy with a lot of hair and a girl with an enormously pregnant belly."
+    "Our feet and lower legs stuck out the bottom."
+    MC "Here... can you pull your legs up at all?"
+    PRG "A little."
+    "I felt Aida's milky thighs press against me."
+    "I pulled mine up as well, getting my legs under the blanket."
+    "In a perfect world, I would've nested my legs with Aida's, and sort of pretzeled them all together, hers in between mine and so on."
+    "But as we were, Aida's belly blocked any attempt of that. And I didn't want to try and accidentally knee her."
+    "I sighed, resting my head."
+    "The mattress was too small. The blanket was too small. I was in a totally new place, with absolutely no idea what was to come the next day."
+    "But... I did have Aida."
+    "She was right next to me."
+    PRG "Keisuke?"
+    MC "Yeah?"
+    PRG "..."
+    show PRG embarrassed
+    PRG "..."
+    PRG "Um... could we... try the other way?"
+    MC "Like... we were before? With you facing away?"
+    PRG "Mhm..."
+    "Aida turned over, yanking the blanket over with her belly, and flinging it off of me."
+    "She took hold of it and pulled it back over her and to me."
+    "Getting it back into position, I pulled my legs up."
+    "Now, though Aida's belly and boobs weren't pressing me anymore, I had a little more space."
+    MC "Better?"
+    PRG "Y-Yes."
+    MC "Are you good if I get a little bit closer?"
+    show PRG blush-2
+    PRG "... I'd love that."
+    "I scooted over in the mattress, and pressing in against Aida's back, put one arm over Aida's middle, laying one hand right on her belly."
+    "The other arm went under her pillow, supporting her head."
+    "Aida's butt pressed right into me. Right into my crotch."
+    PRG "That's much better..."
+    "I leaned over, and kissed Aida on the cheek."
+    MC "Night, Sweetheart."
+    PRG "..."
+    PRG "Night, Keisuke."
+    PRG "I..."
+    show PRG unique
+    pause .75
+    hide PRG with dissolve
+    pause .25
+    "Aida never finished."
+    "Within a minute, her breathing had slowed, and she was sleeping soundly."
+    MCT "Tired girlfriend..."
+    "I laid my head down and shut my eyes, letting sleep take me too."
     jump daymenu
 
 label PRG048:

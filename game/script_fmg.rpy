@@ -1114,7 +1114,7 @@ label FMG010_testpass:
     "Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
     FMG "Have a big hug for your troubles!"
     MC "Huh?"
-    "She swept me up in a big hug, and I held my breath. I'd expected a tight, bone-creaking hug from a bear but instead, the hug felt nice, gentle even. I wouldn't have minded staying like that for-"
+    "She swept me up in a big hug, and I held my breath. I'd expected a tight, bone-creaking hug from a bear but instead, the hug felt nice, gentle even."
     MCT "Heeey, this is kinda nice... I wouldn't have minded staying like this for-"
     show Chibuki neutral at Position(xcenter=1.1, yalign=1.0)
     pause 0.01
@@ -1978,7 +1978,7 @@ label FMG016:
     play music Rivalry
     show Natsuko neutral
     Natsuko "If you really must know, it's well...how do I put this nicely."
-    Natsuko "Pretty much everything about you is so...unladylike. Your unbuttoned shirt, that mop you call hair. You are a slob."
+    Natsuko "Pretty much everything about you is so...unladylike. Your dirty shirt, that mop you call hair. You are a slob."
     show FMG angry
     FMG "Have you looked in a mirror? I'm surprised you don't have birds living in that nest."
     "Natsuko ignoring Akira's comment continued to dig into her without hesitation."
@@ -2001,7 +2001,7 @@ label FMG016:
     MCT "I could see the steam coming out of Akira's ears, she was ready to burst."
     show Natsuko smug
     Natsuko "Someone's in a hurry to lose."
-    MC "Relax Akira. It might be best to just walk away...forget any of this ever happened."
+    MC "Relax Akira. It might be best just to walk away...forget any of this ever happened."
     show FMG angry
     FMG "Shut up Keisuke, I'm not in the mood."
     MCT "Oh she is pissed now."
@@ -5535,7 +5535,7 @@ label FMG034:
     FMG "Nope! You lost your chance!"
     FMG "Sooooo,{w} after she was done apologizing, she asked me if I met any of the new transfer students."
     show FMG angry-2
-    FMG "Obviously I told Chibuki about her and that crow's next she calls hair and guess what she told me."
+    FMG "Obviously I told Chibuki about her and that crow's nest she calls hair and guess what she told me."
     MC "I got this! Uuuuh... she sucks? She's... She's mean? Am I close??? I feel like I'm close."
     FMG "You aren't going to believe me but..."
     pause .5
@@ -9987,7 +9987,7 @@ label FMG056:
         Natsuko "I'll take that as a no."
     Natsuko "Hotsure-san, if you're serious about getting stronger, I'll invite you to train with someone who actually knows what they're doing."
     show FMG angry
-    Natsuko "I promise better results一 and more pleasant company."
+    Natsuko "I promise better results- and more pleasant company."
     FMG "As if you know more. You couldn't even do a lat spread before I came along."
     show FMG flex #flex-2
     FMG "But I can't blame you, not everyone can be good at everything."
@@ -10084,7 +10084,7 @@ label FMG056:
     play sound Crash
     MCT "Wait? What the hell just happened?"
     "It was almost too fast to see, but the results spoke for themselves."
-    "Sensing Akira had finally wore herself down一 taking advantage of her lapse in focus from fatigue一 in a split second, Natsuko rolled her wrist over the top of Akira's."
+    "Sensing Akira had finally wore herself down- taking advantage of her lapse in focus from fatigue- in a split second, Natsuko rolled her wrist over the top of Akira's."
     show FMG surprised
     "Whipping Akira's entire body in the opposite direction, she slammed Akira's hand down on the table so hard it put a dent in the steel table like someone took a sledge hammer to it for hours."
     show FMG angry
@@ -10118,7 +10118,7 @@ label FMG056:
     FMG "Whew, well I got my upper body workout in with all of that. They may not look like noodle arms but they sure feel like it now."
     MC "So we're done for the day?"
     FMG "I'm done for the day. You still have twelve sets of curls left to do before we get to doing dips and skull crushers."
-    MC "What are skull crushers anyway? Is that where you put my head between your thi一"
+    MC "What are skull crushers anyway? Is that where you put my head between your thi-"
     FMG "No! Stop asking about that!"
     MCT "One day..."
     $setSkill("Athletics", 2)
@@ -12995,7 +12995,7 @@ label FMG068:
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
     MC "We have a thing for watching sunsets. This is our third one if I can count."
     show FMG happy with dissolve
-    FMG "Actually, it's our second. But whose's counting?"
+    FMG "Actually, it's our second. But who's counting?"
     show FMG flex
     FMG "The answer is me, I'm counting. I will never forget these moments."
     show FMG neutral
@@ -19889,7 +19889,7 @@ label FMGGTS002:
     FMG "Naomi... I hope you don't mind me using your first name."
     GTS "I do not..."
     FMG "I'll admit I don't know much about you, yet. But I know and I want you to know you can't let this stuff, these factors, define you." 
-    "Being two meters taller doesn't change who you are, neither would twenty or thirty— or whatever number you want to use."
+    FMG "Being two meters taller doesn't change who you are, neither would twenty or thirty— or whatever number you want to use."
     FMG "At the end of the day you're still... you. Now, will things get harder as these changes continue? Yeah, probably. Will it be easy? No, probably not. And that's a challenge we have to overcome."
     FMG "Always remember, it could be worse. You could be like Rapunzel over there."
     MCT "I won't hesitate to smack you across the face with my luscious locks."

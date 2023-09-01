@@ -6170,6 +6170,7 @@ label MC008:
     MCT "I still remember when we got lost in the Shibuya tunnels."
     MCT "Mom was pissed."
     MCT "But, as I kept telling her, it's not my fault that Tokyo's metro lines are ungodly hard to traverse."
+    MCT "Honoka thought we were going to be captured and eaten by ghosts."
     "I smiled to myself, as the note came back to me."
     "I looked up. Alice looked... noticeably uncomfortable."
     "I gave her a soft, thankful smile, glad that she was helping us have some fun."
