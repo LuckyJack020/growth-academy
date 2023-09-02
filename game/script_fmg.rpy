@@ -3956,7 +3956,7 @@ label FMG023_c2_after:
     jump daymenu
 
 label FMG024:
-    $setProgress("FMG", "FMG027")
+    $setProgress("FMG", "FMG026")
     play music Rain
     scene Woods with fade
     MCT "It was a mistake agreeing to go on a hike with Akira. My legs felt like I was walking through quicksand."
@@ -4316,6 +4316,197 @@ label FMG025:
     show FMG aroused-2
     FMG "No problem. I'm glad you enjoyed it."
     "She smiled then leaned into my chest to rest her head and shut her eyes."
+    jump daymenu
+
+label FMG026:
+    $setProgress("FMG", "FMG027")
+    scene Mall with fade
+    play music BrightLights
+    MC "How long have we had a mall here? Why didn't anyone tell me about this? I'd never leave."
+    show FMG neutral with dissolve
+    FMG "How did you not know? It has \"Seichou Mall\" in big letters out in front."
+    MC "Okay, in my defense, it's behind a few buildings and down a street I never have to go down."
+    FMG "Come on, Kei-kun, do some exploring now and then. Live a little, my guy."
+    MC "My guy, do you know how many more steps I'd have to get in my day if I wanted to make the trek here? {w}Too many. Catch me walking back to my dorm and playing some video games."
+    show FMG happy
+    FMG "Heh, okay, whatever you say."
+    MC "So, where's this candy shop you wanted to go to?"
+    show FMG neutral
+    FMG "It's at the other end of the mall. Think you can survive the journey?"
+    MC "Maybe... maybe. {w}Do they have gummy worms?"
+    FMG "Mhm, any candy you could possibly imagine. I'm not leaving without two full bags."
+    MC "...You have to have some of the worst teeth ever."
+    FMG "Hey, I take good care of my teeth. I brush twice a day, I floss, and I use mouthwash."
+    MC "Impressive, you're just like everyone else."
+    FMG "I'd bet all the money in my wallet that you haven't flossed once in your entire life."
+    MC "I floss."
+    FMG "Do you?"
+    MC "Akira, I floss!"
+    FMG "Uh-huh."
+    FMG "{size=-6}You so don't floss.{/size}"
+    MC "What did you just mumble?"
+    FMG "I-I said there sure are a lot of people here today!"
+    MC "Suuure. Next time you lie to me I'm fighting you."
+    FMG "Bro, what? I'd kick your ass."
+    MC "Nah, you actually don't understand. I'd be like... bam, then I'd follow it up with a quick one-two combo in your face."
+    pause .5
+    MC "H-Hey! {w}{size=-6}Didn't have to pinch me so hard... {/size}"
+    FMG "Yeah, you'd fold faster than a poker player with a bad hand. Let's get going before you embarrass yourself more."
+    MC "You got me by surprise. It won't be that easy when we fight for real."
+    FMG "Whatever you say, tough guy."
+    MCT "When I put enough points into athletics, you're done. It's only a matter of time and proper stat distribution."
+    scene black with fade
+    pause .5
+    scene Mall Candyshop with fade
+    MC "Holy crap, this place is huge! It reminds me of that candy factory movie."
+    show FMG neutral with dissolve
+    FMG "The one with the fat kid who drinks from the chocolate river, falls in, and then gets stuck in the tube?"
+    MC "The very one. Heh, the song those orange guys sing is my favorite part... it's so catchy."
+    FMG "True, we should watch that tonight while snacking on our candy."
+    MC "Sure, why not."
+    "It definitely felt like we were in a world of pure imagination. It was a fat kid's dream and a diabetic's worst nightmare."
+    MC "Dairy duds?"
+    MC "What kinda name is dairy duds?"
+    FMG "Hey, don't knock it till you try it... {w}But don't try those, you're asking for your teeth to be yanked out."
+    FMG "Chocolate and caramel is a deadly duo."
+    MC "I'm getting them only because you told me not to."
+    FMG "You're a rebel, Kei."
+    MC "I know, I know, people dream they could be like me. I'm an inspiration to many."
+    FMG "Yeah, probably the blind and deaf. Can't imagine those with vision and hearing would be thoroughly impressed."
+    MC "Even if they could see me they'd be blinded and deafened by my facial features and angelic voice."
+    FMG "Uh-huh... you ready to pick your candy, noodle arms?"
+    MC "Fine, I will. {w}And for the record my arms aren't noodles."
+    FMG "Okay then, flex your arms for me. Let me see those biceps, man. Show me what you've been working towards."
+    show FMG flex
+    FMG "We can do a quick comparison."
+    MC "I'll take a rain check— It's candy time."
+    show FMG neutral
+    FMG "You're a coward."
+    MC "Yes. Yes, I am."
+    MC "And this coward wants that last jawbreaker."
+    show FMG angry
+    FMG "Slow down, cowboy."
+    MC "I am not a cowboy, but go on."
+    FMG "{i}I{/i} want that jawbreaker."
+    MC "...No? I saw it first so that means it's mine... and not yours."
+    MC "It's a pretty straightforward concept."
+    FMG "Wrong. I'm declaring this mall trip a date and now that I've made it a date you have to abide by the dating rules."
+    MC "That's not how this works, you don't just get to make something a date because you want to {i}steal{/i} what is rightfully mine."
+    FMG "Who said it was yours? I don't see it in your bag."
+    MC "Akira, I promise you, I will ruin this relationship if you ever try to take my jawbreaker from me. I will not hesitate."
+    FMG "Big words, Kei-kun. But can you back it up?"
+    MC "We are in a public place and you want to act like this... now???"
+    FMG "You bet your ass I do."
+    MC "Hm, so it's gonna be like that, huh?"
+    MC "You know what? Whatever, I'll be the bigger person, you can have the jawbreaker. I'll get those gummy fish and hard candies, there are plenty of them."
+    FMG "No."
+    MC "No? What do you mean no?"
+    FMG "You're getting the jawbreaker."
+    MC "I don't like your attitude missy. I'm getting what I want... and now I want the gummy fish and the hard candies that grandma keeps too many of."
+    FMG "..."
+    MC "Yeah, that's what I thought. You better enjoy that jawbreaker 'cause if you don't, I'll never go to the arcade with you again."
+    FMG "You would never."
+    MC "Try me."
+    show FMG neutral
+    FMG "Hm."
+    MC "You can stand there and hm all day, I'm getting my candy."
+    FMG "Hey! We're supposed to be walking together! I made this a date!"
+    MC "Fine, fine."
+    "We wandered around the candy store gleefully filling our bags. Well, I was filling the bags. Akira thought it would be cute if I did all the work."
+    MC "This is most definitely not a part of the \"dating rules\"."
+    show FMG happy
+    FMG "It is because I said it is."
+    MC "Maybe, I'd give you a pass but your taste in candy is downright dreadful."
+    show FMG angry
+    FMG "It is not!"
+    MC "Bro... you like candy corn. Everything after that doesn't matter. I know everything about you based on that alone."
+    FMG "There is {i}nothing{/i} wrong with candy corn."
+    MC "You'd realize there is if you had taste buds."
+    MC "Next you'll tell me you enjoy black licorice."
+    show FMG sad
+    FMG "..."
+    MC "No... No, you can't be real. Do you like any good candies???"
+    show FMG angry
+    FMG "Those are good candies! How about we start making fun of your candy choices, mister?!"
+    MC "There is nothing wrong with my choices."
+    FMG "Stop lying! I literally watched you scoop in tens of those strawberry candies every old person has but has no idea how they got them!" 
+    MC "Don't you dare insult those. They might as well be a gift from god with how delicious they are."
+    FMG "Okay, what about the sugar stixs? Or would you prefer to talk about the excessive amount of candy peanuts you have?"
+    MC "What's wrong with them???"
+    FMG "Dude, what???? Are you sane? Name one person who eats either of those candies and has any friends."
+    MC "Me. I have friends and a girlfriend."
+    FMG "Ain't gonna have one much longer with taste like that, {i}sheesh{/i}."
+    MC "Won't have me much longer either, you... licorice lover."
+    show FMG neutral
+    FMG "Kei, you suck on candy peanuts and sugar stixs. Please don't disrespect me, there are more people who like black licorice than the crap you put in your bag."
+    MC "Wrong."
+    MC "Pick your last bit of candy so we can check out and start heading back."
+    FMG "Aw, are you upset that I'm right?"
+    MC "But you aren't right. From this point forward, I can't trust you. Maybe you can redeem yourself with your last choice."
+    FMG "I could say the same to you. Don't mess up."
+    MC "I'm taking the assorted colored gummy fish."
+    FMG "What are you, twelve?"
+    MC "Says you, pick yours instead of stalling."
+    FMG "Hmmmm... {w}I'll take some of these chocolate bars."
+    MC "You are a coward. You took the safe choice."
+    FMG "Think what you want, Kei. I have good taste and you don't."
+    MC "That's it. We're settling this back at your dorm, we'll ask Chibuki who has the better taste in candy."
+    FMG "Fine by me."
+    scene black with fade
+    pause .5
+    play music FMG
+    scene Dorm FMG
+    show Chibuki neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    Chibuki "Why are you bothering me with this? I don't care."
+    MC "Just say it's me and we'll leave you alone. Promise."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Come on, Chibuki! I know you know the right answer."
+    Chibuki "Ugh, god... fine, if it gets you guys to piss off."
+    "Chibuki scanned through each of our candy piles, which resulted in something like going through the five stages of grief in a matter of seconds. I'd honestly never seen any emotion from her until now."
+    Chibuki "You both have some of the worst taste in candy I've ever seen. My day is measurably worse simply because I've been burdened with the knowledge of what you guys like."
+    MC "Damn."
+    pause .5
+    MC "She really said your candy is trash, Akira. That's tough."
+    show FMG angry
+    FMG "She said {i}both{/i} of ours suck... {w}But yours sucks more."
+    Chibuki "Can you guys go now? I was about to take my third nap."
+    show FMG neutral
+    FMG "Are you going to pick up your garbage after your nap?"
+    Chibuki "Maybe after my fourth one, I'll sleep on it."
+    FMG "It's never getting done, is it?"
+    Chibuki "Probably."
+    FMG "Yeah, I figured as much..."
+    MC "We'll get out of your hair, Chibuki. Thanks for, um... the honesty... I guess."
+    Chibuki "Yeah, no problem. I'm going to bed. Later."
+    hide Chibuki with dissolve
+    FMG "We're asking Alice."
+    MC "We aren't asking Alice."
+    show FMG happy at altMove(0.5, 0.5)
+    FMG "Scared she might agree with me?"
+    MC "Uh, no. She'd agree with me. We both know that."
+    FMG "Then let's go ask her."
+    MC "We can't go around asking everyone who has the better taste in candy."
+    show FMG neutral
+    FMG "Sure, we can. I'll do it with or without you. I need more validation."
+    MC "Alright, then we're asking Honoka after. I've known her since forever. She'll side with me."
+    show FMG angry
+    FMG "That's cheating!"
+    MC "It's like a free space on a bingo sheet, it's fair game."
+    FMG "Oh my god, it is not!"
+    Chibuki "Can you guys take it outside, please?"
+    show FMG neutral
+    FMG "We're going."
+    FMG "We'll deal with this after lunch."
+    MC "Fine with me. {w}It's your turn to buy lunch, by the way."
+    FMG "Then we're getting burgers."
+    MC "We did that the last time you bought lunch... and the time before that."
+    FMG "Fair. {w}What do you want then?"
+    MC "Oh, you're letting me pick? Ummm, soba? Is that good with you?"
+    FMG "I'll eat anything, dude. But that is one of my favorites... I'm am {i}so{/i} down for that."
+    FMG "If you're ever in Okinawa there's this killer soba shop you have to go to. Heh, maybe I'll take you there if you're lucky."
+    MC "Pinky promise. {w}And pinky promise that you're paying too, I can already tell that bill is going to be expensive."
+    FMG "Heh, fine."
     jump daymenu
 
 label FMG027:
@@ -13125,7 +13316,7 @@ label FMG069:
 
     #replace with Graveyard
     scene Park with fade
-    "I expected the car ride to be quiet and awkward and thankfully it wasn't. {w}The only awkward part was trying to squeeze Akira {i}in and out{/i} of her mom's car. I think we might've damaged the seat a{i}tiny{/i} bit trying to make it work."
+    "I expected the car ride to be quiet and awkward and thankfully it wasn't. {w}The only awkward part was trying to squeeze Akira {i}in and out{/i} of her mom's car. I think we might've damaged the seat a {i}tiny{/i} bit trying to make it work."
     MC "I'm sure it's fine. Let me work some Keisuke magic."
     "I reached in to slide the seat forward... {w}and took the seat adjuster with me."
     MC "Hmm, I'm no mechanic but this might be broken. Maybe."
