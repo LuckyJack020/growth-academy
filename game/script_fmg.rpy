@@ -1884,8 +1884,6 @@ label FMG016:
     FMG "Come on, we're burning daylight and we have to get to the track before it gets dark."
     FMG "I hope you're well-rested, you've looked beat these past couple of days. I figured you'd oversleep so I came to get you."
     MC "Thanks, and I wish, but I was up all night doing math instead— and I freaking hate math."
-    show FMG sad
-    FMG "Same... Once they added in the alphabet I was over it."
     show FMG happy
     FMG "I have just the thing to get us in the mood. You down for a race?"
     MC "You want to race ME? Can you even handle the embarrassment of losing?"
@@ -11125,7 +11123,7 @@ label FMG061:
     play music FMG
     show FMG happy with dissolve
     FMG "You take up a lot of space, so I had to move you."
-    MC "You are wider than the doors and {b}I{/b}take up a lot of space. I hope you stub your toe."
+    MC "You are wider than the doors {i}I{/i} take up a lot of space?!? The math ain't mathing, Akira!{w} I didn't want to say it but you've forced my hand... I hope you stub your toe... hard."
     show FMG surprised
     FMG "How dare you!"
     show FMG neutral
@@ -14534,7 +14532,7 @@ label FMG072:
     FMG "If you don't mind me asking Nurse Kiyomi could you tell us more about Nat's mom and why I'm here."
     Nurse "We called you here to take your measurements just like Okamoto-san. I received numerous reports about both of you girls. Like I said before, Okamoto-san beat the current record holder by quite a large margin."
     Nurse "Now having said that, I don't know much about Okamoto-san's mother, Yua, besides what I have on file. She was here long before me."
-    FMG "Could I take a look at it. It's not top secret or anything, yeah?"
+    FMG "Could I take a look at it? It's not top secret or anything, yeah?"
     Nurse "Sorry, but no. The most I can provide about Yua Okamoto is her measurements."
     FMG "Better than nothing, I guess. At least I can compare myself to her after all this is done."
     Nurse "Mhm...By the way, I'll order you a uniform for you with the proper adjustments when we've wrapped up here. It should be ready at the tailors by the time you get there."
@@ -14695,9 +14693,9 @@ label FMG073:
     show FMG neutral
     extend " Guess it's a good thing I stopped by."
     "I couldn't quite put my finger on it, but something seemed a bit off. But that didn't matter, she was going to be totally stoked when I showed her what I got her."
-    MC "Alright, it's been a while since we got some games in. I picked up a copy of Wordly Fighters V: The Arcade Edition. It got pretty good reviews and I heard it fixed all the crap they messed up in the series with IV."
+    MC "Alright, it's been a while since we got some games in. I picked up a copy of Worldly Fighters V: The Arcade Edition. It got pretty good reviews and I heard it fixed all the crap they messed up in the series with IV."
     show FMG happy
-    FMG "A new Wordly Fighter's game? I thought they just kept making remakes of II. Sign me up!"
+    FMG "A new Worldly Fighter's game? I thought they just kept making remakes of II. Sign me up!"
     MCT "Little does she know the combo system is completely different with this one. She isn't going to know shit. There's no way she can beat me!"
     MC "Oh, and while I was at the store I picked up something special for you."
     show FMG surprised-2
@@ -14752,7 +14750,7 @@ label FMG073:
     FMG "First, I nearly break your back, and then I completely destroy the gift you {i}just{/i} gave me..."
     show FMG sad-2
     FMG "Let's call it a day, Kei-kun."
-    MC "Wait! Since we can't play Wordly Fighters, that frees up our schedule for a little sexy time in bed, right?"
+    MC "Wait! Since we can't play Worldly Fighters, that frees up our schedule for a little sexy time in bed, right?"
     MCT "I don't care if you break that thing. Sleeping on the floor would be worth it."
     show FMG surprised
     FMG "NO!"
@@ -14797,7 +14795,6 @@ label FMG073:
     show FMG neutral
     FMG "Thanks Kei-kun. I could use a break."
     "Akira laid on my couch, her shins dangling past the sofa arm. She looked stiff like she was trying not to move. This wasn't the chill Akira I was used to, I could tell she wasn't in a good place."
-    MCT "I don't know how to help her, but I think I know who can."
     scene black with fade
     pause .5
 
@@ -15444,10 +15441,10 @@ label FMG075:
     "I played some rail shooters, some racers, even a couple of beat 'em ups. I would occasionally check in on Akira. I wanted to cheer her on but I could tell she needed to focus."
     MCT "Who would have thought so much was at stake over a stupid game of skee-ball?"
     "Although at this point in my year here at Seichou, the idea of a high stakes skee-ball game didn't even rank in the top 100 list of weirdest things I'd seen."
-    "After a while I had exhausted all my usual options, but I did notice a cabinet for Wordly Fighters IV that gave me an idea."
+    "After a while I had exhausted all my usual options, but I did notice a cabinet for Worldly Fighters IV that gave me an idea."
     show Hageshi neutral with dissolve
-    MC "Hey, Hageshi-sensei, you want to play me in some Wordly Fighters?"
-    Hageshi "Wordly Fighters? Been a long time since I heard that name. Sure, why not?"
+    MC "Hey, Hageshi-sensei, you want to play me in some Worldly Fighters?"
+    Hageshi "Worldly Fighters? Been a long time since I heard that name. Sure, why not?"
     MCT "This is all coming together."
     "I queued up the character select screen while Hageshi-sensei took his controller spot at the cabinet, hunching over to get a good look at the screen."
     Hageshi "Why did I have a feeling you'd pick {i}her{/i} for your character?"
@@ -16244,7 +16241,7 @@ label FMG078:
     MC "Okay, I'm back."
     show FMG angry with dissolve
     FMG "And with one chocolate bar! We better be splitting that."
-    MC "Huh, it seems right here in my notes that I won't be doing that."
+    MC "Huh, it says right here in my notes that I won't be doing that."
     FMG "Gimme that."
     MC "Wow, ripping a candy out of a poor defenseless man. You took my only food and now I'm going to starve..."
     MC "Good thing I got another one!"
@@ -18052,7 +18049,7 @@ label FMG084:
     MC "Huh, I thought you'd be bigger. You've probably been working out even harder when you go with Nat. I would've assumed that would play into your growth in some way."
     show FMG neutral
     FMG "As long as I see progress, I'm fine. It's been getting more and more difficult to find weights that are somewhat difficult for Nat and me." 
-    "She said she's going to speak with Hageshi and some other school faculty to see if they can do anything for us."
+    FMG "She said she's going to speak with Hageshi and some other school faculty to see if they can do anything for us."
     MC "Here's your dish. Let me know what you think."
     FMG "Thanks, it looks delicious."
     MC "I hope it tastes as good as it looks. But that's unfortunate to hear. I remember you said some of the machines weren't seriously doing anything for you. I'm sure the school can accommodate you two."
@@ -18119,7 +18116,7 @@ label FMG085:
     MC "Busy? What could you possibly be too busy with to turn down helping out a couple of students? You're a teacher, that's literally like your job..."
     Hageshi "Teaching is my job, Hotsure-san. In case I set a bad precedent the last time, you should know being an accessory to the destruction of property is something I normally try to avoid, which I can only assume is what you're interested in."
     FMG "Well, {i}normally{/i} that would be the case, but it's something different this time."
-    MC "Yeah, come on, Hageshi-sensei. I can tell your fake being busy. That test sheet you're \"working on\" doesn't even have any numbers on it. You're just making stuff up, hoping we'll go away."
+    MC "Yeah, come on, Hageshi-sensei. I can tell that you're faking being busy. That test sheet you're \"working on\" doesn't even have any numbers on it. You're just making stuff up, hoping we'll go away."
     Hageshi "You got the second part of that right at least. This is what discrete math problems look like."
     FMG "Yuck! Glad I didn't sign up for that course."
     MC "No kidding."
