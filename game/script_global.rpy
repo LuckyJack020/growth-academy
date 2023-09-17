@@ -46,6 +46,7 @@ define Nurse = Character('Nurse Kiyomi', color="#C0C0C0") #Lips
 define Nurse2 = Character('Nurse Kiyomi', color="#0099CC") # Nails
 define Lunch = Character('Lunchlady', color="#CC33FF")
 define Hageshi = Character('Hageshi-sensei', color="#C0C0C0")
+define Misuboro = Character('Misuboro', color="#0099CC")
 define Principal = Character('Principal Noguchi', color="#C0C0C0")
 define Sugiyama = Character('Sugiyama-sensei', color="#C0C0C0")
 define Takamura = Character('Takamura-sensei', color="#C0C0C0")
@@ -560,9 +561,14 @@ image cg WG070 = "Graphics/ui/gallery/WG070.png"
 image cg WG071 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG071.png",
     "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg WG072 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG072.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
+image cg WG076 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG076.png",
+    "True", "Graphics/ui/gallery/nsfw-cg.png")
 image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.png"
 image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.png"
-
 
 image cg MC000 = "Graphics/ui/gallery/MC000.png"
 image cg MC003 = "Graphics/ui/gallery/MC003.png"

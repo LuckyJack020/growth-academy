@@ -488,206 +488,221 @@ label FMG005:
     scene Hallway with fade
     play music Rain
     "As much as I didn't like the shot, I am glad this is all over. Well I have nothing better to-"
-    UNKNOWN "*sniff*"
-    "That's odd, it sounds like there's someone crying near the corner."
-    UNKNOWN "*sob*... Why did I have to get a shot... *sob*"
-    "As I walked closer to the corner, I saw the one person I did not expect to be crying... Akira Mizutani."
-    show FMG sad
-    FMG "...Hey..."
-    "She looked slightly annoyed and she had her left hand on the crook of her elbow... but I could tell there was some moisture still under her eyes."
-    menu:
-        "Are you okay?":
-            jump FMG005_c1
-        "Man shots suck.":
-            jump FMG005_c2
-
-label FMG005_c1:
-    $setAffection("FMG", -1)
-    MC "Are you okay?"
-    FMG "No, I just had a stupid needle jammed into my arm, which by the way was a waste of time."
-    MC "Okay... Well, what's your factor?"
-    stop music
-    "I did my best to try and act dumb for her sake but instead she took it the wrong way."
+    FMG "Ugh, I freaking hate needles! Why does it have to hurt so much... man..."
+    MCT "Huh? {w}Is that Akira?"
+    "I rounded the corner to continue my investigation of the outburst. As I came around I spotted Akira with her back to the wall rubbing her tricep."
+    show FMG sad with dissolve
+    MC "Is that some new pre workout stretch?"
     show FMG angry
-    FMG "MY MUSCLES!"
-    "I was taken back from her outburst, to which she grudgingly looked away."
-    FMG "Look, I'm not in the best of moods so just leave me alone for now, ok?"
-    "She proceeded to walk away from me. I figured it was best to leave her alone."
-    jump daymenu
-
-label FMG005_c2:
-    $setAffection("FMG", 1)
-    MC "Man, shots suck, am I right?"
-    "I felt that it was best to try to lighten her up, and it seems I was rewarded."
-    show FMG neutral
-    FMG "Heh, yeah they do, I'm guessing you heard all of that?"
-    MC "Um..."
-    FMG "It's fine, just don't go spreading what just happened, I kinda don't want to get a rep as a weakling."
-    MC "Fair enough."
-    MC "...So, will you be all right?"
+    MC "{i}Cough{/i}... bad joke, bad joke... But, uh... You just got your shot too, yeah?"
     show FMG sad
-    FMG "Well, it's not the growth that's affected me the most... It's the needles."
-    MC "Um, if I may, why do you hate needles so much?"
-    FMG "Well, I guess it's because when I was three, I was playing in the backyard when a rabid raccoon bit me on my foot... hard."
-    "She pulled off her right shoe, revealing a scar in the shape of a bite on her foot."
-    FMG "Yeah, so, the little bandit got me good. I consider myself lucky I didn't lose any toes."
-    MC "Oh god, looks like it was painful."
-    FMG "Yeah I guess it was, luckily I don't remember it happening... but I guess my body does."
-    "Akira had put her shoes back on before continuing."
-    FMG "My parents rushed me to the hospital, where they injected me with all kinds of needles."
-    MC "Ah, so that's why you don't like needles. Sorry to hear that, I'd probably be afraid of needles too if that happened to me."
-    FMG "Yeah, I think it's a combination of the bite and the needles that kinda F'd me up."
+    FMG "Unfortunately, yea..."
+    FMG "I told them I don't like needles... {i}Sigh...{/i} Then they told me that this was the only way to get accurate results."
+    MC "I can't stand them either, I've always hated them. That pinch... It's terrible."
     show FMG neutral
-    FMG "Just the sight alone makes me hyperventilate... but when it goes in is when I start getting pissed."
-    MC "Wow... I don't know what to say."
-    FMG "Don't worry about it, I mean it's not something I care for, but I usually feel better after talking about it... Well, once I calm down at least..."
-    show FMG sad
-    FMG "Otherwise I'd just get mad for no good reason."
-    MC "Well, at least it's over. Did you find out your factor?"
-    show FMG neutral
-    FMG "Oh, my factor is my muscles, kinda obvious in retrospect."
-    MC "Well yeah, you are kinda muscular."
+    FMG "Right?!?! They should be considered a form of torture. Oh well, glad it's done at least."
+    FMG "Hey! Are you free for the next hour or so?"
+    MC "Um, let me check my schedule. I'm not sure."
+    pause .5
+    MC "Hm... Yeah, I got another two hours before my next class."
+    FMG "Wanna join me for lunch? Beats sitting alone."
+    MC "S-Sure."
     show FMG happy
-    FMG "Well yeah, guess it's true that hindsight is twenty twenty then, huh?"
+    FMG "Sweet. They're serving ramen today."
+    MC "But is it \"real\" ramen or those cheap packs you can find at any gas station?"
+    show FMG neutral
+    FMG "{i}Pfff{/i}, I don't know or care, I'm hungry. I'm looking to beat my record of four bowls."
+    MC "Y-You can eat four bowls?"
+    FMG "Easily. Their bowls are pretty small."
+    MCT "For some reason, I don't believe you."
+    scene black with fade
+    pause 1
+    scene Cafeteria with fade
+    "I was right to not believe her, the bowls they gave us were massive! I'd need a whole other person for the broth alone... {w}Akira, however, was more than capable by herself."
+    MC "Wow, you are... really eating everything."
+    show FMG happy with dissolve
+    FMG "Dude, I haven't eaten anything in two hours. I was on death's door."
+    MC "..."
+    MC "Soooo... what's your factor?"
+    FMG "Hm?"
+    "She slurped down her ramen, cleaned her mouth, and let out a burp that didn't need to be as loud as it was."
+    FMG "Man, that always hits the spot. {w}So, what do you think my factor is, Kei?"
+    FMG "I can give you a hint if it's not too obvious."
+    MC "In my defense, I asked as an icebreaker because I have zero idea of what else to say and the awkwardness of just watching you eat is getting to me."
+    MC "But I'm going to go out on a limb here and say it's your muscles."
+    FMG "Phew, you were making me nervous for a second."
+    MC "Did they really need to take a shot then? You can tell just by looking at you."
+    FMG "Oh my god! That's what I said! I was contemplating faking a headache... {w} breaking my leg...{w} anything, honestly, to get me out of that situation."
+    FMG "I wanted to pretend to faint, but I figured they'd find out I was bullshitting right away."
+    MC "Heh, who knows? Maybe it would've worked."
+    FMG "And now we'll never know, haha."
+    FMG "Well, what's your factor? Are you going to get jacked like me? {w}Oooooh, is it your ears? You could be like that elephant with those huge floppy ears who can fly!"
+    MC "..."
+    MC "No, it's neither of those. It's my hair."
+    FMG "Hahahaha... {w}Wait... for real?"
+    MC "Yep."
+    FMG "Wow, that's lame as hell. It could be worse though, could be those students who are supposed to get {i}huuuge{/i} asses."
+    MC "Hair seems to be a relatively safe factor... I think."
+    MC "I won't have to deal with getting stuck in doors or being fat for the rest of my life no matter how hard I try to lose the weight."
+    MC "And I'm sure my hair won't get that long. My guess is it stops by my waist."
+    FMG "And what happens when it doesn't? Better start investing in a few hair nets and a couple of hair ties."
+    MC "It won't, I know it won't. I can't see myself dragging hair around longer than that."
+    MC "Hang on, let me flip the question on you. What happens when you get too buff?"
     show FMG flex
-    FMG "Well, at least I get to see these bad boys get bigger, huh? I don't know about you, but I'm looking forward to it."
+    FMG "I become the strongest person on the planet, duh."
     show FMG neutral
-    FMG "What about you Kei, what's your factor?"
-    MC "Yeah well, it's my hair."
-    show FMG happy
-    FMG "Ha, should have guessed. I'm amazed you can see as of now."
-    MC "H-Hey, it's not {i}that{/i} long!"
-    FMG "Nah, you're right, it'll get longer!"
-    "Akira burst into laughter, already forgetting the despair that entrapped her only minutes ago. Once she finished she looked back at me."
+    FMG "At least I would hope I'm the strongest person on the planet. That would be the coolest thing to ever happen to me."
+    FMG "Make sure you're around for my big moments. I'm gonna need you to take pictures of me being awesome!"
+    MC "Is it a paid position?"
+    FMG "It could be. I need to see your work first, haha."
+    MC "I can get you a couple of samples right now, actually."
+    FMG "Oh yeah? How so?"
+    MC "Uhh, I can take a few pictures of you running around the track? If you aren't up for running, I can take pictures of you doing like a bench press or whatever it is you gym folk do."
+    FMG "Hm, you know what? {w}I'll take you up on that offer... As long as you catch my good side."
+    $setAffection("FMG", 1)
+    show FMG aroused
+    FMG "Shouldn't be too hard though, I look great at any angle."
     show FMG neutral
-    FMG "All right, if it's all the same to you I'd rather be alone right now."
-    show FMG happy
-    FMG "But for what it's worth, thanks for the talk... I REALLY needed it."
-    hide FMG with dissolve
-    "With that she left, leaving me alone in the hallway."
-    MCT "Man, who would have thought someone as tough as Akira would have had such a deep fear from her childhood."
+    MC "I'm sure, I'm sure. When do you want to start?"
+    FMG "Lemme down another bowl and we can start after that."
+    MC "Are... Are you not worried that you might throw up after eating all of that?"
+    FMG "Meh, nothing bad has happened to me yet. I like to live a little dangerous."
+    MC "I'll make sure to keep my distance... just in case."
     jump daymenu
 
 label FMG006:
     scene Classroom with fade
-    play music Busy
-    "And so another day of classes ended, and for once I actually felt like working out today. I walked over to Akira's desk just as she got up, putting a paper ball behind her back once she saw me walking towards her... like I hadn't noticed."
+    play music DayByDay
+    "And so another day of classes ended, and for once, I actually felt like working out today." 
+    "I walked over to Akira's desk just as she got up, putting a paper ball behind her back once she saw me walking towards her... like I hadn't noticed."
     show FMG neutral with dissolve
-    FMG "Um, hey Kei, I was about to head your way, got anything planned for the next hour?"
-    MC "Not really, did you want to exercise more? Because I feel like it today."
+    MC "I saw that!"
+    FMG "Heh... saw what? I was just, um... um... scratching my back! {w}Yeah, that's what I was doing... heheh..." 
+    FMG "But moving past the paper ball— that I totally don't have behind my back— do you have anything planned for the next hour or so?"
+    MC "Not really, I was actually wondering if you wanted to go workout. Because I feel like it today... for once."
     show FMG happy
-    FMG "Oh! Yeah, I got time for you today. I got to get my workout stuff, so meet me in the athletics area in five, OK?"
+    FMG "Oh! Yeah, I got time for you today. I've got to get my workout stuff first though, so meet me in the gym in five, okay?"
     MC "All right, sounds good."
-    "She walked out the door... But not before not before throwing that ball at my head."
+    "She walked out the door... but not before pegging me in the head with that damn paper ball."
+    MC "Okay, I {i}definitely{/i} saw that!"
     hide FMG with dissolve
     FMG "Sorry, can't waste a good paper ball!"
-    MC "...Why does she keep doing that..."
+    MCT "Revenge is a dish best served cold... {w}your time will come."
     scene Gym with fade
-    "By the time I got to the athletics area, Akira was already doing her warm-up stretches by the weight sets."
+    "By the time I got to the gym, Akira was already doing her warm-up stretches by the weight sets."
     show FMG neutral with dissolve
-    FMG "Hey there! You know, I'm kinda surprised you came to me today instead of the other way around. But anyways, first order of business is the shakes."
-    MC "You look more happy about that than last time."
-    FMG "Thing is, you know I hate protein shakes, right?"
-    MC "Right."
+    FMG "Yooo, what's up, dude?!?"
+    MC "You seem more excited than usual."
     show FMG happy
-    FMG "Well, I've been experimenting with different drinks, and I found one that doesn't make me want to vomit to death."
+    FMG "As I should be! You came to me and asked{i}me{/i} to workout instead of me asking you."
+    FMG "It's exciting, I think you're seriously starting to enjoy this!"
+    MC "Heh, let's not get crazy now. I'm still testing the waters as they say and right now the water is lukewarm."
+    show FMG neutral
+    FMG "Oooo... Oooh, you remember how I told you I can't stand protein shakes, right? The consistency and all that."
+    MC "Yeah? What about it?"
+    show FMG happy
+    FMG "Well, I've been experimenting with different drinks, and I found one, besides chocolate milk I mean, that doesn't make me want to vomit to death."
     "She pulled out her shake cup from her bag in triumph."
     FMG "Behold, and be amazed!"
-    MC "Isn't that the same thing?"
-    show FMG angry
-    FMG "Shut up and let me have this moment."
-    show FMG happy
-    FMG "Milk protein coffee ice cream shake!"
+    MC "Uh... what am I supposed to behold and be amazed by? That just looks like a protein shake in a shaker cup."
     show FMG neutral
-    FMG "Basically I mixed coffee flavored ice cream with a bit of milk with the protein powder and the final result was this."
-    MC "Huh, you really like ice cream don't you?"
-    FMG "Yep, it's my third or fourth favorite thing ever!"
-    "She drank it in one go, with a little still inside."
+    FMG "To the untrained eye it might seem like that... {w}But it isn't!"
+    FMG "It's a special blend of coffee flavored ice cream with a bit of milk and then I finished it off with protein powder."
+    MC "...So... it's a protein shake... with extra ingredients. {w}You lied to me."
+    FMG "Yes."
+    MC "..."
+    MC "A-Anyway, I've noticed that you like ice cream. Like... a lot."
+    FMG "Uh, yes! I love ice cream. It's easily my third favorite thing ever."
+    "She proceeded to pop open her shake cup and down the concoction in one go."
     show FMG happy
-    FMG "Ahh, that tasted almost drinkable!"
+    FMG "Ahh...still tastes like crap."
+    show FMG neutral
+    FMG "That was my one and only test to see if I could make it drinkable and it failed. Unfortunate."
     show FMG flex
-    FMG "Hell yeah, let's do this!"
+    FMG "Time to get to work!"
     stop music
-    "Akira slammed the drink on a nearby table; however, she didn't realize until it was too late that she slammed it on the edge, causing it to fall down on the carpet and leave a stain."
+    "Akira slammed the drink on a nearby table; however, she didn't realize until it was too late that she slammed it on the edge, causing it to fall down on the carpet."
     show FMG angry
     FMG "...Oh come on!"
-    FMG "Great, now we gotta clean this before it stains..."
-    MC "Oh, well, all right."
+    MC "Welp, that's going to leave a stain."
+    show FMG sad
+    FMG "I'll go get the janitor, I'm just going to make a bigger mess without the proper cleaning supplies."
+    MC "Sounds like you have experience with this sort of thing."
+    FMG "Yeah... unfortunately. I wonder where the guy's office is, or closet I guess."
+    MC "Hey, you want me to come with you? We can make it an adventure!"
+    show FMG neutral
+    FMG "Sure! It shouldn't take too long."
     scene black with fade
+    "Much to Akira's dismay, we spent over an hour searching the school to find the janitor. In hindsight, it probably would've been easier if we just cleaned up the mess ourselves instead of wandering around the school like a couple of headless chickens."
     $setSkill("Athletics", 2)
-    "Much to Akira's dismay, we spent about the next hour cleaning the carpet. By the time we finished, Akira looked... upset?"
     scene Gym
     show FMG angry
     with fade
     play music Peaceful
-    FMG "Man this blows... Cleaning that carpet took over an hour, we don't even have time to work out."
-    MCT "I don't think I've seen her like this, the question is why though."
-    MC "Don't worry, we can exercise some other time."
+    FMG "Maaaan, this freaking blows... {w}All that time gone. Ugh, we don't even have enough time to work out."
+    MC "Hey, don't sweat it, seriously. These things happen, we can always work out some other time."
     show FMG sad
-    FMG "{i}Sigh{/i} Kei, that's not what I'm mostly bummed about, I wasted your time by helping me clean a mess I made when you could have done something more fun..."
-    MCT "Oh, she feels guilty for making me help her out..."
+    FMG "{i}Sigh{/i}... It's not that, Kei. I dragged you out here for a session and ended up wasting your time by making a mess..."
     menu:
-        "Buy her ice cream":
+        "Treat her to ice cream":
             jump FMG006_c1
         "Tell her it doesn't bother you":
             jump FMG006_c2
-        "Make your leave":
-            jump FMG006_c3
 
 label FMG006_c1:
-    $setAffection("FMG", 1)
-    MCT "Geez, I don't want her to feel bad just because I helped her, there's gotta be something I could... That's it!"
-    MC "You know what? Wait right there for a minute, okay?"
-    FMG "Huh, what are you doing?"
-    MC "Just a minute!"
-    scene black with fade
-    "It took a bit to get to the vending machines, but I got what I needed for Akira."
-    scene Gym
-    show FMG sad
-    with fade
-    MC "Here, I know you feel bad but I figured I could cheer you up with -"
-    show FMG happy
-    FMG "{i}GASP{/i} FREE ICE CREAM!? SWEET!"
-    "In a flash, Akira grabbed the ice cream and proceeded to consume it as quick as a five-year-old who just discovered ice cream."
-    MCT "It only took her thirty seconds to eat the entire ice cream bar... How did she not get a brain fre- ECK!"
-    "And she has wrapped me in a VERY tight hug."
-    FMG "Thank you so much! "
-    MC "Yo-u're... wel-come... bu-t c-can't breathe."
-    show FMG surprised
-    FMG "Oh!"
-    "She let go before she crushed my body to pieces."
+    $setAffection("FMG", 2)
+    MCT "Geez, I don't want her to feel bad over this. {w}I got it!"
+    MC "You wanna grab some ice cream? I know, the cafe's ice cream isn't anything fancy but I think you could use the pick me up."
+    FMG "Seriously? Today was such a bust..."
+    MC "Yeah, I'm serious! Are you trying to tell me you don't want any ice cream? {w}More for me, I guess."
     show FMG neutral
-    FMG "Sorry about that, I just felt like I should show you my appreciation."
-    MC "It's fine, I just wanted to let you know I'm not upset about it at all."
-    FMG "Well again, thanks for that, I really appreciate it."
-    "I looked at the time - it was almost 5 pm."
-    MC "I think it's time we head out."
-    FMG "Yeah, it's getting late, thanks again for everything."
+    FMG "Hey, hey, I didn't say I didn't want any! I just... just..."
+    MC "Just what? Akira, don't feel bad about what happened. The gym is going to be here tomorrow and the day after that."
+    FMG "Yeah, you're right... I was just {i}really{/i} looking forward to this today. It was going to be so much fun."
+    MC "We have two very different definitions of fun."
+    MC "But that's besides the point. Are you coming for ice cream or not?!!?"
+    show FMG happy
+    FMG "I would never turn down ice cream— especially if it's free."
+    pause .5
+    FMG "{i}Oooo{/i}, can I get the large waffle cone they have?"
+    MC "You can get whatever you want, haha."
+    MCT "Please don't get {i}everything{/i} you want... this is already going to be a big hit to my savings."
+    scene black with fade
+    pause 0.5
+    scene Cafeteria with fade 
+    "She ended up getting nearly every topping except for two of them... "
+    show FMG happy with dissolve
+    FMG "Thank you sooooo much, Kei! You're the best!"
+    MC "Are you sure you can finish that?!? That's a ton of ice cream..."
+    FMG "I did it the other day, I'm going to have to beat my record of four cones sometime soon. Maybe I'll do it when they have more chocolate."
+    MC "Do you turn everything into a competition even if it's only you participating? Hahaha."
+    show FMG neutral
+    FMG "Eeeeh, like eighty percent of the time. Depends on what I'm doing, you know? Plus it makes everything so much more fun! Gives me a goal to aim for."
+    FMG "Speaking of goals, do you have any?"
+    MC "I... I'm not sure. I kind of just go day by day at the moment. Go to class, think about doing homework... maybe do it, and go from there... I guess. Ooh, and to become an architect, can't forget that, haha."
+    FMG "I feel you on the homework part. {w}Oh, idea! Set some gym goals with me! Gives us something to work towards together."
+    FMG "Man, that's a good idea."
+    MC "I'll give that some thought, haha."
     jump daymenu
 
 label FMG006_c2:
-    MC "Um... Hey, don't worry about it, it had to be cleaned up, so..."
-    MCT "...Yeah, I have no idea what I'm doing, but at least she stopped looking sad."
+    MC "Hey, don't sweat it, Akira. We had to get cleaned up. Would you want to reschedule? I don't have much going on after classes are done."
+    show FMG neutral
+    FMG "Yeah, sure, that sounds great!"
     show FMG sad
-    FMG "Yeah I know, I'll find a way to make it up to you."
-    MC "Um... You don-"
-    show FMG angry
-    FMG "I swear, I will make up for my mistake and wasting your time!"
-    MC "Please-"
-    FMG "THIS I SWEAR!!!"
-    hide FMG with dissolve
-    MCT "...Aaannnd she is out of here..."
-    MC "Well it's out of my hands now, might as well go back to the dorms."
-    jump daymenu
-
-label FMG006_c3:
-    $setAffection("FMG", -1)
-    MCT "Um, this is awkward, so..."
-    MC "Look it's late, how about we do this later?"
-    FMG "{i}Sigh{/i} Fine, whatever..."
-    MC "Is everything okay? Are... are we good?"
-    FMG "Sure, whatever."
-    MCT "I think it's best just to leave her alone for now..."
+    extend " This is still going to bother me all day..."
+    MC "It's chill, I swear. I'm not annoyed or anything. {w}Hey! Think of our school adventure like a mini leg day! We did a decent mix of walking and jogging. That has to count for something, right?"
+    show FMG happy
+    FMG "Good point, good point."
+    show FMG flex
+    FMG "I'll make sure our next session is one you'll never forget! You'll be feeling it for days!"
+    MC "Uh... is it too much to ask that we work out like normal people?"
+    show FMG neutral
+    FMG "Oh, don't be such a sissy. You'll be just fine... {w}Maybe."
+    MC "What does that mean??? Maybe???"
+    FMG "Guess you'll find out the more you're with me, heh."
+    MCT "This... This is why I hate working out. She's going to kill me."
+    MCT "Well, at least she has her smile back. There's one good thing to come out of this."
     jump daymenu
 
 label FMG007:
@@ -17318,7 +17333,7 @@ label FMG081:
     show FMG neutral
     FMG "Captain killjoy is back at it."
     pause .5
-    MC "Captain killjoy needs to get out of this straight jacket and then he'll be the life of the party again."
+    MC "Captain killjoy needs to get out of this straitjacket and then he'll be the life of the party again."
     show FMG flex
     FMG "Would you like a ride back? I'm still a bit frisky after watching you get protective of me."
     show FMG aroused

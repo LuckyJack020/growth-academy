@@ -21396,6 +21396,8 @@ label WG072:
     scene Hotel Room with fade
     "Despite having the curtains closed, the light peering through the space between them and their outline was enough to wake me from my slumber."
     MCT "Was last night a dream?"
+    $ persistent.unlock_cgWG072 = True
+    show cg WG072 with dissolve
     "Suddenly coming to the realization that I was precariously close to falling off the edge of the bed, I instinctively clung tighter as I found myself lying aside Alice's soft, naked body."
     "A wave of calm washed over me and through my whole being as I was simultaneously relieved and excited to be reassured, it had in fact been real."
     "I laid my head back down on Alice's pillowy arm, literally more so than figuratively at this moment. It felt heavenly."
@@ -21404,9 +21406,11 @@ label WG072:
     "I could only surmise it was because her body's generous padding was so cushioning it was unable to crush me against the soft mattress we shared."
     "She looked so peaceful and content lying next to me. More relaxed and at ease with herself than I'd ever seen, if I was being honest."
     "I didn't know how I could, but seeing her like this now, I promised myself I'd do whatever I could to make sure she would feel this happy again, no matter how much more she would grow, or whatever the future held for us."
-    show WG happy with dissolve
     WG "*{i}Yaaawn{/i}*"
-    "Part of me wished she stayed asleep longer, just so I could enjoy looking at her contented sleepy smile longer, but I was so eager to talk to her, just to be with her again, I was happy she woke up so soon after I did."
+    "Part of me wished she stayed asleep a little longer, just so I could enjoy looking at her contented sleepy smile more, but I was so eager to talk to her, just to be with her again, I was happy she woke up so soon after I did."
+    hide cg
+    show WG happy
+    with dissolve
     MC "Hey."
     WG "Mmm. Good morning."
     "Alice was still so tired she didn't even put up a fuss about me just saying \"Hey\"."
@@ -22775,7 +22779,8 @@ label WG076:
     hide PRG with dissolve
     #scene WG-PRG bathroom with fade
     "Sensing a slight bit of desperation in Alice's call out, I immediately walked towards her voice and through the bathroom door."
-    show WG surprised-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    $ persistent.unlock_cgWG076 = True
+    show cg WG076 with dissolve
     "Only to discover Alice, fully decked out in her birthday suit, completely soaked, sitting in her tub."
     MCT "Whoah..."
     "Needless to say, it was a lot to take in."
@@ -22783,21 +22788,19 @@ label WG076:
         WG "Thank goodness you're here! I won't lie, Keisuke, I really need your help."
         MC "It'll be fine, Alice. That's why I'm here. What happened?"
     else:
-        show WG stern
         WG "Don't just stand there and gawk you idiot! I need your help!"
         MC "Right. Sorry. I'm here. What's going on?"
-    show WG worried
-    WG "I was planning on taking a nice relaxing bubble bath, as I have done plenty of times before, but I appear to have underestimated the dimensions of the tub's basin..."
-    show WG stern
-    extend " or at least {i}my{/i} dimensions."
-    show WG worried
+    WG "I was planning on taking a nice relaxing bubble bath, as I have done plenty of times before, but I appear to have underestimated the dimensions of the tub's basin... or at least {i}my{/i} dimensions."
     WG "Once I began to sit back into the tub I could feel it starting to get tight around my hips and thighs, but by then it was too late to stand back up."
     "Looking around, the sudsy wet floor of the bathroom corroborated her account of an abrupt descent."
     WG "I've been trying to get up for the better part of the last twenty minutes and I haven't been able to so much as even budge from this spot."
     "Alice was not overstating the situation in the least. She looked firmly wedged in the base of the tub, so much so I could see a blush of redness along her sides where her hips and thighs were wedged against, at least what wasn't hidden by her belly."
     "The prospect of Alice getting stuck was certainly not a foregone conclusion given her sheer size, but here of all places was quite unexpected."
     "The shower and tub was bigger and wider than most jacuzzi's— and yet her body had somehow managed to max it out."
-    show PRG worried at Position(xcenter=0.75, yalign=1.0) with dissolve
+    hide cg
+    show WG worried at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show PRG worried at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     WG "Thank goodness Aida was around or who knows how long I would have been stuck here by myself."
     show WG sad
     show PRG sad-2
@@ -22815,7 +22818,7 @@ label WG076:
     WG "Think you can help me up?"
     show PRG worried
     "That was certainly going to be a tall order. I didn't have the heart to tell Alice I didn't think I could contribute anything meaningful towards budging the bulk of her massive body, but it at least made sense to try."
-    MC "Alight, let me pull the plug and drain the tub here. Why don't we try to dry you off as best we can too so you don't get cold or your feet slip."
+    MC "Alright, why don't we try to dry you off as best we can so you don't get cold or your hands slip."
     show PRG neutral
     PRG "Here's a towel, Alice."
     show WG neutral-2
@@ -22830,7 +22833,7 @@ label WG076:
     WG "Now, if you would be so kind as to give me a hand."
     MC "Alright let's see here."
     show WG happy
-    "I stepped into the tub with what little room remained between the front wall and the faucet and her belly. The prospect of me being able to reach over her belly to grasp her hands was tenuous, to say the least."
+    "I stepped over in front of the tub to face her head on. The prospect of me being able to reach over her belly to grasp her hands was tenuous, to say the least."
     "Never mind the scant chance I could somehow summon enough strength to assist with lifting her while my back was almost completely extended over the top of her belly."
     "Though I will admit, having her naked boobs right up in my face in the process certainly served as enough motivation to try."
     MC "Ready? Hold on tight."
@@ -22883,7 +22886,7 @@ label WG076:
     Chibuki "We'll just call my roommate. Have you seen her lately? She's practically a giant now, on top of her muscles that have muscles. She'll pop Alice out of that tub in a jiffy with her gorilla mitts."
     show WG stern
     show PRG sad-2
-    WG "No! {w}This is beyond embarrassing, and as far as I'm concerned too many people already know about this— and that includes me!"
+    WG "No! {w}This is beyond embarrassing. As far as I'm concerned too many people already know about this— and that includes me!"
     show WG doubt
     Chibuki "Well what do you want us to do? Have skinnyboy and I pull on your arms while pregnant lady here pushes from behind?"
     show PRG unique
@@ -22959,17 +22962,27 @@ label WG076:
     Jineko "Sure thing. Let's see, that's probably over here with the support equipment. {w}Ah, here's one. Just be sure to bring it back when you're done with it."
     MC "No problem. I shouldn't need it for too long."
     Jineko "What else did you need?"
-    MC "Got any wood boards? I need like a 5 x 25 that's like 180 cm long."
-    Jineko "That's kinda specific, but we do have that width. I could cut you one that length on the bandsaw real quick."
+    MC "I need something solid, like a post beam. You got something that's like 15x15 and maybe 150 cm long?"
+    Jineko "Not the most common, but we do have that width. I could cut you one that length on the bandsaw real quick."
     MC "If you could, I'd appreciate it."
     Jineko "No problem. What do you need this stuff for anyway?"
     MC "It's best if I don't say, but it's nothing that's going to break the rules or get you into trouble."
     Jineko "Heh, I wouldn't care either way."
-    "Jineko effortlessly grabbed the 300cm plank with one hand and loaded it into the bandsaw. With just a few seconds of cutting it was already done."
+    "Jineko effortlessly grabbed the 300cm beam with one hand and loaded it into the bandsaw. With just a few seconds of cutting it was already done."
     Jineko "Here you go. Did you need anything else?"
-    MC "Actually, do you have any kind of foam padding?"
-    Jineko "Funny you should ask, there's some foam packaging lying around here somewhere that never got thrown away after they unpacked the equipment."
-    Jineko "Help yourself— I doubt anyone will care if it's gone."
+    MC "Actually, do you have any sort of heavy duty padding? Something soft, but still sturdy, like you use to ship fragile stuff that's really heavy."
+    Jineko "That's kinda specific, but we probably have something like that."
+    "Turning aside, Jineko yelled across the room to someone."
+    Jineko "Hey Misuboro-san, do we have any of that egg crate packing foam we could use? The really dense kind."
+    Misuboro "No! What the hell do you need that stuff for? That's for shipping equipment back to the manufacturer if it breaks, or {i}when{i} it breaks, given how you kids treat everything in this shop like it's magically indestructible and somehow free to replace."
+    Misuboro "Then again, what else should I expect when these kids treat their beds like trampolines here?"
+    if not getFlag("Meet_Misuboro"):
+        $setFlag("Meet_Misuboro")
+        "I didn't know the guy, but I'd seen him on campus here and there. He must be the maintenance technician and the shop manager at the school."
+    else:
+        "Sounded like Misuboro-san wasn't in a particularly good mood. Then again, what else is new?"
+    MC "Yikes. Didn't know I'd strike a nerve asking about packaging."
+    Jineko "Ah, don't worry about that, he's always cranky about something. Just take what you need. There's probably some lying around the big crates in the corner of the shop. He won't notice if any of it's missing."
     MC "Thanks for your help. I think I got what I need. This place is pretty cool, I should come here more often."
     Jineko "Have some other projects in mind, I take it?"
     MC "You could say that. {w}I don't want to be rude, but I've probably taken too long here already. I gotta get going. Thanks again for all your help, Watanabe-san."
@@ -23050,9 +23063,16 @@ label WG076:
         FMG "I think she has plenty of padding already, Keisuke."
         MCT "You call this helping?"
         MC "Let's assume a little more couldn't hurt then."
-    MC "Alright now. Akira, you're going to pull on the strap, pulling her up and forward, and I'm going to take this board here, with a nice bit of foam padding, and pry it under her like so."
-    "I maneuvered my way behind Alice to position the board under her ass, with the foam pad so it wouldn't hurt, that way I could use it as a fulcrum."
-    MC "So when you pull her up, I'll be pushing down, and together we'll lift her right up. Got it?"
+    MC "Alright now. Akira, you're going to pull on the strap, pulling her up and forward. I'm going to put this beam in front of the tub on the floor here, so you got something to put your feet against and you don't drag the tub forward in the process."
+    MC "It'd be pretty messy if you sheered off the drain pipe underneath it."
+    FMG "Right. Good thinking."
+    MC "I got this nice foam padding here to put on Alice's back so it won't hurt when I push from behind."
+    "I maneuvered my way behind Alice, wedging myself between her and the bathroom wall, like some kind of cramped leg press machine."
+    if checkSkill("Athletics", ">", 7):
+        "I wasn't exactly a stranger to that machine in the gym, but this was about to be the most I ever lifted on it."
+    else:
+        "It was at this point I realized it probably couldn't hurt to spend more time in the gym if I was going to effectively assist Alice when something like this arises again."
+    MC "Okay. So now when you pull her up, I'll be pushing out, and together we'll lift her right up, and pop her out. Got it?"
     FMG "Sounds good."
     show FMG flex
     FMG "Let's do this!"
@@ -23066,10 +23086,10 @@ label WG076:
     show WG doubt
     FMG "Holy shit this is way heavier than I thought it would be!"
     MC "Keep going!"
-    "My board was flexing so much I thought it might snap at any second while Akira was straining like she was trying to pull a tractor out of the mud."
+    "My legs were shaking as they were about to buckle while Akira was straining like she was trying to pull a tractor out of the mud."
     show WG angry
     FMG "{b}Come on{/b}!"
-    "Just when I thought the board was about to snap and Akira was about to throw out her back, Alice began to steadily rise up from the tub."
+    "Just when I thought my knee ligaments were going to snap and Akira was about to throw out her back, Alice began to steadily rise up from the tub."
     play sound Boing
     "Until she finally popped loose, which brought her to standing almost immediately thereafter."
     show WG surprised-2
@@ -23077,10 +23097,11 @@ label WG076:
     WG "{i}Oomph{/i}!"
     show FMG flex
     FMG "Alright! We did it!"
-    "Alice turned around and practically bowled me over with her belly with the tightest hug she could muster as she lunged towards me. Luckily, I held on before I could be bounced back."
+    "Alice turned around and practically bowled me over with her belly with the tightest hug she could muster as she lunged towards me, pinning me to the wall with all her sudsy softness in the process."
+    "I held on tight in return, though now realizing I was the one who was stuck."
     $setAffection("WG", 1)
     WG "Oh thankyou-thankyou-thankyou, Keisuke! I felt like I had been stuck here forever. I didn't know what I was going to do. I'm so glad to have you!"
-    "At this point I was practically suffocating between my head buried in her massive boobs that were bigger than my head, and a belly bulge that was practically crushing my ribcage— But I didn't mind it at all."
+    "At this point I was practically suffocating between my head buried in her massive boobs that were bigger than my head, and a belly bulge that was starting to crush my ribcage— But I didn't mind it at all."
     "She was soft, warm, and inviting as ever, and I'd do anything for her."
     show FMG angry-3
     FMG "Hey, I helped too you know."
