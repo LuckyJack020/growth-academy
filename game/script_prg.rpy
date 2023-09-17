@@ -5920,7 +5920,7 @@ label PRG019_c1_1:
     scene Town with fade
     "We talked a bit as we headed back, but for the most part, it was a quiet walk through town, glancing this way and that at various stores and so on."
 
-    scene Hill Road with fade
+    scene School Front with fade
     play music Peaceful
     "As we pulled up to Seichou's gates, I felt myself begin to come down from the high of the day's events to the relaxation of the afternoon."
     "Since it was Saturday, most students were likely off in town, working on homework, or doing club... stuff."
@@ -29257,7 +29257,7 @@ label PRG051_c1_FMG:
     jump PRG051_c1_after
 
 label PRG051_c1_after:
-    scene Hill Road with fade
+    scene School Front with fade
     $setPRGOutfit(OutfitEnum.DRESS)
     "Coming to the bus stop, I looked around for my date. The bus stop itself was deserted, with no bus in sight. I sat on the bench and picked a tiny chunk of dirt from my shoe."
     "I wasn't overly surprised that I'd arrived before Aida. After all, I only really had to put on my shirt and pants. Meanwhile, she had whatever girl type stuff she had to do to get ready for this."
@@ -29524,7 +29524,7 @@ label PRG051_c1_after:
     hide PRG with dissolve
     "I squeezed her hand as we headed for the bus stop."
 
-    scene Hill Road
+    scene School Front
     show PRG aroused
     with fade
     PRG "So, I was thinking. There's no class tomorrow, you know?"
@@ -30704,7 +30704,7 @@ label PRG055B:
     MC "Yeah... you too."
     "Slipping my card back into my wallet, then jamming it into my back pocket, I jogged lightly back to the bus stop."
 
-    scene Hill Road with fade
+    scene School Front with fade
     "The minute I stepped off the bus, I headed straight for the dorms. Knowing that Shiori was in town made me feel a little better about dashing through campus like a jogger with a caffeine problem."
 
     scene Dorm Exterior with fade
@@ -31263,7 +31263,7 @@ label PRG056A:
     "Two more transactions later, and the three of us were on our way back to the academy, each of our hands weighed down with groceries."
     "Fortunately enough, both my recipe and Sakura's didn't call for a huge variety of ingredients, so we both managed to fit all of our items into one or two bags."
     "Aida's selection wasn't so lucky, however, and had to be split amongst the three of us to haul back."
-    scene Hill Road
+    scene School Front
     show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG unique at Position(xcenter=0.75, yalign=1.0)
     with fade
