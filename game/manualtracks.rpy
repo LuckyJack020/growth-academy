@@ -600,6 +600,17 @@ init python:
     )
     ost.manualDefineList.append(theme_ArG)
 
+    theme_MsF = ost.soundtrack(
+        name = "The Misfit",
+        path = "Audio/BGM/scene_themisfit.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Okisho's Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_MsF)
+
     ## Base Template
     ######################################
 

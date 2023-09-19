@@ -1025,6 +1025,7 @@ define audio.LoveB = "Audio/BGM/love_B.ogg"
 define audio.LoveC = "Audio/BGM/love_C.ogg"
 define audio.LoveMB = "Audio/BGM/love_mb.ogg" #Music Box variant of Love
 define audio.Memories = "Audio/BGM/memories.mp3"
+define audio.Misfit = "Audio/BGM/scene_themisfit.ogg" #Okisho's Theme
 define audio.Motivation = "Audio/BGM/motivation.ogg"
 define audio.Natsuko = "Audio/BGM/theme_natsuko.ogg" #Hatred
 define audio.Nembutsu = "Audio/BGM/scene_nembutsu.ogg" #Morning Mist - altTitle
@@ -1658,7 +1659,9 @@ init 2 python:
     eventlibrary['WG084'] = {"name": "The Discordant Duo", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                 "location": "musicclassroom",      "priority": PrioEnum.NONE, "sp": 15,     "next": "WG085", "obsflags": [],                               "conditions": []}
     eventlibrary['WG085'] = {"name": "Fat Floats", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                 "location": "lockers",      "priority": PrioEnum.NONE, "sp": 15,     "next": "WG086", "obsflags": [],                               "conditions": []}
     eventlibrary['WG086'] = {"name": "Don't Fill Up On Bread", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                 "location": "dormWG",      "priority": PrioEnum.NONE, "sp": 15,     "next": "WG087", "obsflags": [],                               "conditions": []}
-    eventlibrary['WG087'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG087'] = {"name": "Placeholder", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                 "location": "dormWG",      "priority": PrioEnum.NONE, "sp": 15,     "next": "WG088", "obsflags": [],                               "conditions": []}
+    eventlibrary['WG088'] = {"name": "Music With A Side Of Donuts", "girls": ["WG"], "type": EventTypeEnum.CORE,                                     "location": "musicclassroom",      "priority": PrioEnum.NONE, "sp": 15,     "next": "WG089", "obsflags": [],                               "conditions": []}
+    eventlibrary['WG089'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['WG009'] = {"name": "Between a Soft and a Hard Place", "girls": ["WG", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WG008"]]}
