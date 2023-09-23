@@ -1244,7 +1244,10 @@ init 2 python:
     eventlibrary['BE050'] = {"name": "Onward and Outward", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "dormBE",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE051", "obsflags": [],                  "conditions": []}
     #BE size4
     eventlibrary['BE051'] = {"name": "Glad You're Not Dead", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "dormexterior",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE052", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE052'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE052'] = {"name": "Help Desk", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "classroom",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE053", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE053'] = {"name": "Pick a Card", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "dormexterior",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE054", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE054'] = {"name": "Unsinkable", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "pool",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE055", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE055'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}

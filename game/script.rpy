@@ -54,6 +54,11 @@ transform wiggle_loop(xSP):
     ease xSP xoffset 0
     repeat
 
+transform slowease(start, end, time):
+    subpixel True
+    start
+    easein time end
+    
 init python:
     preferences.set_volume("music", 0.65)
     preferences.set_volume("sound", 0.75)
