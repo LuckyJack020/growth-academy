@@ -6056,7 +6056,7 @@ label GTS032:
     hide FMG with dissolve
     show HR neutral
     HR "While there aren't any rules explicitly stating that she CANNOT ever enter the building again, it's extremely ill-advised for her to try."
-    HR "Naomi is still free to walk around the outdoor areas of campus however she pleases, as long as she avoids property damage."
+    HR "Yamazaki-san is still free to walk around the outdoor areas of campus however she pleases, as long as she avoids property damage."
     show HR unique
     show BE happy with dissolve
     BE "Well hey, that doesn't sound bad at all! She could even peek in through the window!"
@@ -7267,7 +7267,7 @@ label GTS037_c1_after:
     MC "What do the other giants do?"
     show GTS neutral
     GTS "You know, that is a good question. Most often, when I see the other giant students, they're either speaking amongst themselves, or just watching their classes on the projector screen."
-    "The few times I've seen the giants and faculty interact, they'd be sitting down while the medical staff run diagnostics on them."
+    GTS "The few times I've seen the giants and faculty interact, they'd be sitting down while the medical staff run diagnostics on them."
     MC "In that case, It's probably best to just stand at your full height when speaking. If you plan on being there for a longer amount of time, you can sit."
     GTS "That's reasonable. What about you, though? How would you like me to speak to you?"
     menu:
@@ -8065,7 +8065,7 @@ label GTS041:
     Akio "I am, indeed. Where'd you get my name from?"
     GTS "You were much taller than everyone at the dorms by a good margin, and I recall seeing a name on the record wall that was above everyone else's."
     Akio "I'm surprised that the record wall is still a tradition. From what I heard, the record wall was established by the class before me and only had about a dozen names or so."
-    "When I left and recorded my name on it, there was a certain surprise since I was a head taller than nearly everyone."
+    Akio "When I left and recorded my name on it, there was a certain surprise since I was a head taller than nearly everyone."
     Akio "I take it I'm still the record holder?"
     GTS "Indeed, a few have come close I recall but none have surpassed you."
     Akio "Interesting, surprising that someone hasn't grown past me."

@@ -22,6 +22,7 @@ default FMGNsfw = False
 default GTSNsfw = False
 default PRGNsfw = False
 default WGNsfw = False
+default TakoNsfw = False
 default AEPrevOutfit = OutfitEnum.DEFAULT
 default AENsfwOutfit = OutfitEnum.DEFAULT
 default BEPrevOutfit = OutfitEnum.DEFAULT
@@ -34,6 +35,7 @@ default PRGPrevOutfit = OutfitEnum.DEFAULT
 default PRGNsfwOutfit = OutfitEnum.DEFAULT
 default WGPrevOutfit = OutfitEnum.DEFAULT
 default WGNsfwOutfit = OutfitEnum.DEFAULT
+default TakoNsfwOutfit = OutfitEnum.DEFAULT
 
 #Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
 #xcenter value (basically the same as what value between 0.00 and 1.00 along the x-axis) is passed as variable.
@@ -228,7 +230,6 @@ init python:
         TRADITIONAL = "traditional"
         UNDERWEAR = "underwear"
         WORK = "work"
-        NOHAT = "nohat"
 
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, AND, OR, ROUTELOCK, NOROUTELOCK, VAR = range(12)
@@ -828,6 +829,11 @@ init python:
         elif WGNsfw and isNSFW():
             WGOutfit = WGNsfwOutfit
 
+        if TakoOutfit == OutfitEnum.NUDE and not isNSFW():
+            TakoOutfit = TakoPrevOutfit
+        elif TakoNsfw and isNSFW():
+            TakoOutfit = TakoNsfwOutfit
+
 
     def setTimeFlag(flag):
         if flag not in timeflags:
@@ -982,12 +988,21 @@ init python:
 
     def setTakoOutfit(o):
         global TakoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.NOHAT:
+        global TakoPrevOutfit
+        global TakoNsfwOutfit
+        global TakoNsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.ALTERNATE:
             TakoOutfit = o
+        elif o == OutfitEnum.NUDE:
+            TakoNsfw = True
+            TakoNsfwOutfit = o
+            if isNSFW():
+                TakoPrevOutfit = TakoOutfit
+                TakoOutfit = o
 
     def setTomoOutfit(o):
         global TomoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.TRADITIONAL:
             TomoOutfit = o
 
     def setNatsOutfit(o):
@@ -1113,12 +1128,15 @@ label start:
         PRGNsfwOutfit = OutfitEnum.DEFAULT
         WGPrevOutfit = OutfitEnum.DEFAULT
         WGNsfwOutfit = OutfitEnum.DEFAULT
+        TakoPrevOutfit = OutfitEnum.DEFAULT
+        TakoNsfwOutfit = OutfitEnum.DEFAULT
         AENsfw = False
         BENsfw = False
         FMGNsfw = False
         GTSNsfw = False
         PRGNsfw = False
         WGNsfw = False
+        TakoNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
         FMGOutfit = OutfitEnum.DEFAULT
@@ -1170,12 +1188,15 @@ label splashscreen:
         PRGNsfwOutfit = OutfitEnum.DEFAULT
         WGPrevOutfit = OutfitEnum.DEFAULT
         WGNsfwOutfit = OutfitEnum.DEFAULT
+        TakoPrevOutfit = OutfitEnum.DEFAULT
+        TakoNsfwOutfit = OutfitEnum.DEFAULT
         AENsfw = False
         BENsfw = False
         FMGNsfw = False
         GTSNsfw = False
         PRGNsfw = False
         WGNsfw = False
+        TakoNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
         FMGOutfit = OutfitEnum.DEFAULT

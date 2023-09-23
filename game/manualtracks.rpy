@@ -13,7 +13,7 @@ init python:
         author = "Post-Bop",
         description = "Shiori's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_AE.ogg")
+        unlocked = True #renpy.seen_audio("Audio/BGM/scene_AE.ogg")
     )
     ost.manualDefineList.append(theme_AE)
 
@@ -24,7 +24,7 @@ init python:
         author = "Post-Bop",
         description = "Honoka's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_BE.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_BE)
 
@@ -35,7 +35,7 @@ init python:
         author = "Post-Bop",
         description = "Naomi's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_GTS.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_GTS)
 
@@ -46,7 +46,7 @@ init python:
         author = "Post-Bop",
         description = "Akira's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_FMG.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_FMG)
 
@@ -57,7 +57,7 @@ init python:
         author = "Post-Bop",
         description = "Aida's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_PRG.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_PRG)
 
@@ -68,7 +68,7 @@ init python:
         author = "Post-Bop",
         description = "Alice's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_WG.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_WG)
 
@@ -79,7 +79,7 @@ init python:
         author = "Post-Bop",
         description = "Keisuke's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_MC.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_MC)
 
@@ -90,7 +90,7 @@ init python:
         author = "Post-Bop",
         description = "Map Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/menu_daymenu.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(daymenu)
 
@@ -101,7 +101,7 @@ init python:
         author = "Post-Bop",
         description = "Daichi's Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_RM.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(theme_RM)
 
@@ -112,7 +112,7 @@ init python:
         author = "Post-Bop",
         description = "Aida's Drama Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_PRGdrama.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(PRGDrama)
 
@@ -123,7 +123,7 @@ init python:
         author = "Post-Bop",
         description = "Aida's Challenge Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_PRGchallenge.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(PRGChallenge)
 
@@ -134,7 +134,7 @@ init python:
         author = "Post-Bop",
         description = "Bitter Mood Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_bittersweet.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(Bittersweet)
 
@@ -145,20 +145,20 @@ init python:
         author = "Post-Bop",
         description = "Bustlin' Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_busy.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(Busy)
 
-    Festival = ost.soundtrack(
+    FsL = ost.soundtrack(
         name = "Dokkoi!",
         path = "Audio/BGM/scene_festival.ogg",
         priority = 3,
         author = "Post-Bop",
         description = "Festival Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_festival.ogg")
+        unlocked = True
     )
-    ost.manualDefineList.append(Festival)
+    ost.manualDefineList.append(FsL)
 
     Higheredu = ost.soundtrack(
         name = "Higher Education",
@@ -167,7 +167,7 @@ init python:
         author = "Post-Bop",
         description = "Hallway Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_higheredu.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(Higheredu)
 
@@ -178,7 +178,7 @@ init python:
         author = "Post-Bop",
         description = "Reminiscing Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/memories.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(Memory)
 
@@ -189,7 +189,7 @@ init python:
         author = "Post-Bop",
         description = "Somber Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_rain.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(Rainy)
 
@@ -200,7 +200,7 @@ init python:
         author = "Post-Bop",
         description = "Resolved Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/requiem.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(Requi)
 
@@ -211,7 +211,7 @@ init python:
         author = "Post-Bop",
         description = "Main Menu Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/hallowedhalls.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(HallowHall)
 
@@ -222,7 +222,7 @@ init python:
         author = "Post-Bop",
         description = "Casual Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_daybyday.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(DayBy)
 
@@ -233,7 +233,7 @@ init python:
         author = "Post-Bop",
         description = "Soothing Music",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_sunset.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(SunSet)
 
@@ -244,16 +244,16 @@ init python:
         author = "Post-Bop",
         description = "Classroom Theme",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_schoolday.mp3")
+        unlocked = True
     )
     ost.manualDefineList.append(SchoolDay)
 
     Tense = ost.soundtrack(
-        name = "Tension",
-        path = "Audio/BGM/tension.ogg",
+        name = "A Tense Moment",
+        path = "Audio/BGM/tensemoment.ogg",
         priority = 3,
         author = "Post-Bop",
-        description = "Conflicted Music",
+        description = "Heightening Stress",
         cover_art = False,
         unlocked = True
     )
@@ -266,7 +266,7 @@ init python:
         author = "Post-Bop",
         description = "Twilight (Happy)",
         cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/twilightBright.ogg")
+        unlocked = True
     )
     ost.manualDefineList.append(TwiBright)
 
@@ -577,6 +577,39 @@ init python:
         unlocked = True
     )
     ost.manualDefineList.append(theme_StD)
+
+    theme_DoL = ost.soundtrack(
+        name = "Dorm Life",
+        path = "Audio/BGM/scene_dorm.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Residence Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_DoL)
+
+    theme_ArG = ost.soundtrack(
+        name = "Argue",
+        path = "Audio/BGM/tension.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Conflict Growing",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ArG)
+
+    theme_MsF = ost.soundtrack(
+        name = "The Misfit",
+        path = "Audio/BGM/scene_themisfit.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Okisho's Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_MsF)
 
     ## Base Template
     ######################################

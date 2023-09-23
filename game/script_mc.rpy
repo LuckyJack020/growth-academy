@@ -1914,7 +1914,7 @@ label MC003:
 label MC004:
     $setTime(TimeEnum.EVE)
     scene Dorm Interior with fade
-    play music Schoolday
+    play music DormLife
     "In under five seconds, I had my shoes off, backpack flung onto my bed, and head jammed into the fridge."
     MCT "Gah... after class munchies. Always welcome, yet always ruining my dinner."
     "I retrieved an apple that had been there for... some time{w}, at least based on the rest of the slim pickings in the fridge. Without any other real prospects, I rinsed it in the sink, then took a bite of it."
@@ -2154,6 +2154,7 @@ label MC004:
                 "She waved at me vigorously as I returned the gesture, then let her go on her way."
                 hide FMG with dissolve
             elif getHighestAffection() == ("GTS"):
+                $setGTSOutfit(OutfitEnum.WORK)
                 show GTS neutral with dissolve
                 "I glanced toward the side away from the campus and spotted Naomi walking slowly, looking at the various bits of shrubbery and foliage in the terrace."
                 "Her eyes went up along the sides of the building and rested there, then went over, finally landing on me."
@@ -6169,6 +6170,7 @@ label MC008:
     MCT "I still remember when we got lost in the Shibuya tunnels."
     MCT "Mom was pissed."
     MCT "But, as I kept telling her, it's not my fault that Tokyo's metro lines are ungodly hard to traverse."
+    MCT "Honoka thought we were going to be captured and eaten by ghosts."
     "I smiled to myself, as the note came back to me."
     "I looked up. Alice looked... noticeably uncomfortable."
     "I gave her a soft, thankful smile, glad that she was helping us have some fun."
@@ -9307,11 +9309,11 @@ label global010:
     MC "So what should we do to kill time?"
     show AE neutral with dissolve
     AE "It would be wise to utilize the extra time for study."
-    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "{i}Pfft!{/i} Hard pass. Tashi-sensei said we could do whatever we want." 
     show FMG flex
     extend " We should do something fun!"
-    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    show BE happy at Position(xcenter=0.25, yalign=1.0) with dissolve
     BE "Yeah! Definitely. {w}Let's go outside. It's {i}sooo{/i} nice out! I can't stand being cooped up inside all day anyway."
     hide FMG
     show GTS neutral at Position(xcenter=0.75, yalign=1.0)
@@ -9346,7 +9348,7 @@ label global010:
     show RM neutral-2 with dissolve
     RM "You guys can go ahead, I have other business to attend to."
     show RM neutral
-    MC "Oh come on, you're the palest of all of us. You need it more than anyone.."
+    MC "Oh come on, you're the palest of all of us. You need it more than anyone..."
     RM "Alright fine... but just this once."
     scene black with fade
     pause .5
@@ -9377,6 +9379,7 @@ label global010:
     MC "That is a good point. We're all here due strange circumstances, might as well do what we can to make the best of it."
     hide WG 
     show RM neutral-2
+    with dissolve
     RM "Strange indeed..."
     show BE happy
     BE "Let's make a game out of it then. Someone asks a question, and we'll all go around and share our answer with the group."
@@ -9821,6 +9824,7 @@ label global010_power:
     BE "That's kind of funny. Two people pick the same power for completely different reasons."
     hide RM
     show PRG neutral
+    with dissolve
     GTS "What would you choose, Kodama-san? You haven't had your turn yet."
     PRG "I-I think I would choose flight..."
     show GTS happy-2

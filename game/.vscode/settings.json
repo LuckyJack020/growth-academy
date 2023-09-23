@@ -164,5 +164,7 @@
                 }
             }
         ]
-    }
+    },
+    "renpy.warnOnUndefinedPersistents": false,
+    "renpy.watchFoldersForChanges": true
 }
