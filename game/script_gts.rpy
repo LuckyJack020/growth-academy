@@ -11829,9 +11829,9 @@ label GTS051_afterc2:
     jump daymenu
 
 label GTS052:
-	$setProgress("GTS", "GTS053")
-	scene Mountains with fade
-	play music GTSAlt fadein 2.0
+    $setProgress("GTS", "GTS053")
+    scene Mountains with fade
+    play music GTSAlt fadein 2.0
     show GTS_S neutral with dissolve 
     MC "A hike?"
     show GTS_S unique 
@@ -11928,28 +11928,29 @@ label GTS052:
     GTS "Hm…"
     GTS "Is it… difficult to walk near me?"
     menu:
-    "No, just good to be mindful.":
-    GTS "You're sure?"
-    MC "Completely."
-    MC "Being away from you is {i}much{/i} more difficult."
-    show GTS_S aroused with dissolve
-    GTS "I'm glad you feel that way. It's much too late to back out now."
-    MC "I couldn't if I wanted to, could I?"
-    if getFlag("GTS049_support"):
-    show GTS_S neutral 
-    GTS "You {i}don't{/i} want to."
-    "I couldn't conjure a response, so I turned my head back forward, my cheeks getting a little hot in the sultry forest floor."
-    show GTS_S unique 
-    GTS "Hmhmhm!"
-    "Well… not yet.":
-    GTS "…I see."
-    pause 1
-    GTS "What if, someday, it is? What will we do?"
-    "At the moment, I didn't really know."
-    MC "We find a way to go on, I guess."
-    show GTS_S neutral 
-    GTS "I imagine we shall."
-    $setAffection("GTS", 1)
+        "No, just good to be mindful.":
+            GTS "You're sure?"
+            MC "Completely."
+            MC "Being away from you is {i}much{/i} more difficult."
+            show GTS_S aroused with dissolve
+            GTS "I'm glad you feel that way. It's much too late to back out now."
+            MC "I couldn't if I wanted to, could I?"
+            if getFlag("GTS049_support"):
+                show GTS_S neutral 
+                GTS "You {i}don't{/i} want to."
+                "I couldn't conjure a response, so I turned my head back forward, my cheeks getting a little hot in the sultry forest floor."
+                MC "..."
+                show GTS_S unique 
+                GTS "Hmhmhm!"
+        "Well… not yet.":
+            GTS "…I see."
+            pause 1
+            GTS "What if, someday, it is? What will we do?"
+            "At the moment, I didn't really know."
+            MC "We find a way to go on, I guess."
+            show GTS_S neutral 
+            GTS "I imagine we shall."
+            $setAffection("GTS", 1)
     #merge choices here
     "We kept going for a while before another concern seeped into my head."
     MC "Naomi-chan?…"
@@ -12085,18 +12086,17 @@ label GTS052:
     GTS "And then, watching life go on."
     GTS "And watching the cycle begin anew."
     if getFlag("GTS049_embrace"): #if they had sex
-    pause 1
-    MC "Do you… think the trees… watched us fuck?"
-    show GTS_S unique 
-    "Naomi's high, resonant titter shattered the quiet air as she nearly doubled over."
-    "She tried to say something, but it got caught between her lips and her teeth in another shuddering laugh."
-    show GTS_S happy
-    GTS "L-{i}Language{/i}, mister!"
-    MC "Sorry. Do you think the trees watched us prepare tea?"
-    GTS "{i}Khm{/i}… likely not, we were inside."
-    MC "Ah, you got me there."
-    show GTS_S neutral 
-    else:
+        pause 1
+        MC "Do you… think the trees… watched us fuck?"
+        show GTS_S unique 
+        "Naomi's high, resonant titter shattered the quiet air as she nearly doubled over."
+        "She tried to say something, but it got caught between her lips and her teeth in another shuddering laugh."
+        show GTS_S happy
+        GTS "L-{i}Language{/i}, mister!"
+        MC "Sorry. Do you think the trees watched us prepare tea?"
+        GTS "{i}Khm{/i}… likely not, we were inside."
+        MC "Ah, you got me there."
+        show GTS_S neutral 
     MC "Did you ever envy them?"
     show GTS_S pondering 
     pause 0.75
@@ -12121,59 +12121,59 @@ label GTS052:
     MC "Yeah."
     "I stared down the hillside for a second."
     menu:
-    "Let's get closer":
-    GTS "I shall go first. I shouldn't like to trip and fall with you in front of me."
-    "I stepped to the side, extending my arm."
-    show GTS_S unique 
-    GTS "Ever the gentleman."
-    show GTS_S neutral 
-    "Naomi extended her hands out to either side, palms down, as though headpatting two Saint Bernards at once, and made a first tentative step down the slope."
-    "As expected, she was hardly in any danger of falling over. One foot hooked gracefully around the other, leaving nearly a straight line of flat divots in the grass as she descended."
-    "I noted how long it took before my eyeline was about level with hers. Surprised isn't the right word… brought back to reality, I suppose."
-    "Once she was about halfway down, I began following, literally, in her footsteps. At the bottom, she turned to crook her finger at me to come, before slipping in through the trees."
-    hide GTS_S with fade
-    "Let's roll down":
-    show GTS_S pondering 
-    GTS "Roll down?"
-    MC "Like on our sides."
-    pause 0.75
-    MC "C'mon, it'll be fun!"
-    GTS "It's rather a silly idea, isn't it?"
-    show GTS_S unique 
-    extend " Let's do it!"
-    "I reached over to slap the back of her calf."
-    MC "Yeah, YOLO!"
-    show GTS_S neutral 
-    GTS "Come again?"
-    MC "Oh, uh, it's like an expression. It stands for 'you only live once'."
-    GTS "I'm afraid I must disagree on theological grounds."
-    MC "Fair enough. Still wanna do it?"
-    GTS "I do. Allow me to go first."
-    hide GTS_S
-    show GTS neutral 
-    with fade
-    GTS "Mm…"
-    "Naomi lowered herself down on her stomach, her bent arms framing her boulder-like bust as if about to attempt a push-up. Her legs gave a couple languid kicks as she looked down the hill, assessing the landing."
-    "Satisfied, she pushed off."
-    show GTS surprised with vpunch 
-    GTS "Hwah!"
-    show GTS surprised with vpunch
-    "She plummeted, rolling like thunder, and for that second and a half I could've believed I was caught in a minor earthquake, the way her unfettered mass sent goosebumps through the skin of the earth, just like mine."
-    show GTS unique with vpunch 
-    "With one final shockwave up the hill and up my legs, she thrust out her arm to stop herself just short of crashing into a larch."
-    GTS "{size=36}Hahahaha!{/size} Oh, what a delight!"
-    show GTS neutral 
-    GTS "Your turn, my love! I'll catch you!"
-    MC "Coming!"
-    "I got on my stomach too, roughly in Naomi's direction, and I went a-tumbling."
-    "It flew by as a dream, a cacophony of wind and scrunching grass and blurs of green and yellow and blue, a smile, a bigger smile as my head rattled on the dirt."
-    show GTS happy
-    "The stop was smooth, apart from the sudden sinking in my stomach. I recollected myself and gradually perceived the upper boughs waving to and from me."
-    GTS "Look, you're flying!"
-    MC "Kheheheh, you dork."
-    "After swirling me around in the air a couple more times, Naomi set me down."
-    $setAffection("GTS", 1)
-    hide GTS
+        "Let's get closer":
+            GTS "I shall go first. I shouldn't like to trip and fall with you in front of me."
+            "I stepped to the side, extending my arm."
+            show GTS_S unique 
+            GTS "Ever the gentleman."
+            show GTS_S neutral 
+            "Naomi extended her hands out to either side, palms down, as though headpatting two Saint Bernards at once, and made a first tentative step down the slope."
+            "As expected, she was hardly in any danger of falling over. One foot hooked gracefully around the other, leaving nearly a straight line of flat divots in the grass as she descended."
+            "I noted how long it took before my eyeline was about level with hers. Surprised isn't the right word… brought back to reality, I suppose."
+            "Once she was about halfway down, I began following, literally, in her footsteps. At the bottom, she turned to crook her finger at me to come, before slipping in through the trees."
+            hide GTS_S with fade
+        "Let's roll down":
+            show GTS_S pondering 
+            GTS "Roll down?"
+            MC "Like on our sides."
+            pause 0.75
+            MC "C'mon, it'll be fun!"
+            GTS "It's rather a silly idea, isn't it?"
+            show GTS_S unique 
+            extend " Let's do it!"
+            "I reached over to slap the back of her calf."
+            MC "Yeah, YOLO!"
+            show GTS_S neutral 
+            GTS "Come again?"
+            MC "Oh, uh, it's like an expression. It stands for 'you only live once'."
+            GTS "I'm afraid I must disagree on theological grounds."
+            MC "Fair enough. Still wanna do it?"
+            GTS "I do. Allow me to go first."
+            hide GTS_S
+            show GTS neutral 
+            with fade
+            GTS "Mm…"
+            "Naomi lowered herself down on her stomach, her bent arms framing her boulder-like bust as if about to attempt a push-up. Her legs gave a couple languid kicks as she looked down the hill, assessing the landing."
+            "Satisfied, she pushed off."
+            show GTS surprised with vpunch 
+            GTS "Hwah!"
+            show GTS surprised with vpunch
+            "She plummeted, rolling like thunder, and for that second and a half I could've believed I was caught in a minor earthquake, the way her unfettered mass sent goosebumps through the skin of the earth, just like mine."
+            show GTS unique with vpunch 
+            "With one final shockwave up the hill and up my legs, she thrust out her arm to stop herself just short of crashing into a larch."
+            GTS "{size=36}Hahahaha!{/size} Oh, what a delight!"
+            show GTS neutral 
+            GTS "Your turn, my love! I'll catch you!"
+            MC "Coming!"
+            "I got on my stomach too, roughly in Naomi's direction, and I went a-tumbling."
+            "It flew by as a dream, a cacophony of wind and scrunching grass and blurs of green and yellow and blue, a smile, a bigger smile as my head rattled on the dirt."
+            show GTS happy
+            "The stop was smooth, apart from the sudden sinking in my stomach. I recollected myself and gradually perceived the upper boughs waving to and from me."
+            GTS "Look, you're flying!"
+            MC "Kheheheh, you dork."
+            "After swirling me around in the air a couple more times, Naomi set me down."
+            $setAffection("GTS", 1)
+            hide GTS
     show GTS_S neutral 
     with fade
     GTS "Well now, shall we see it from the inside?"
@@ -12231,7 +12231,7 @@ label GTS052:
     "Indeed, I picked up the sound again, a little louder, as I walked to the edge of the clearing, next to a thin corridor of younger trees."
     "In a moment I realized the noise was right above me; I looked up."
     MC "?…"
-    if isEventClear("BE021") or getFlag("Meet_Haruhiro"):
+    if isEventCleared("BE021") or getFlag("Meet_Haruhiro"):
         MC "…Haru… Haruhiro? What are you doing out here?"
         "Shakily clinging to a couple tree branches some seven meters above me was a familiar elephant-eared archer with his trusty longbow and a bandolier of various first aid supplies slung around his shoulder."
     else:
@@ -12263,7 +12263,7 @@ label GTS052:
     MCT "What the hell could I possibly do to help?"
     "My mind flew to the man in the tree."
     "He wasn't in the tree, however; he was on the ground in front of it, wincing and rubbing his arm."
-    if isEventClear("BE021") or 
+    if isEventCleared("BE021") or getFlag("Meet_Haruhiro"):
         MC "Haruhiro-san!"
         GTS "Who? Is someone else here?"
         Haruhiro "Affirmative!"
@@ -12273,12 +12273,12 @@ label GTS052:
     else: 
         MC "Who are you, anyway?"
         GTS "Who? Is someone else here?"
-        ??? "Affirmative! A-And acknowledged!"
+        UNKNOWN "Affirmative! A-And acknowledged!"
         MC "Some guy was up in the trees. I think he's another student."
         show GTS surprised 
         GTS "Heavens! Is he really?"
         "After staring in Naomi's direction for a second or two, agape, he sprung to his feet with surprising vigor."
-        ??? "I'm-"
+        UNKNOWN "I'm-"
         "He gave me a sharp bow that flung his other bow off his shoulder. After bending down to pick it up, he cleared his throat."
         Haruhiro "I'm Haruhiro Haganeya, president and company commander of the Seichou Academy Archery Club."
         $setFlag("Meet_Haruhiro")
@@ -12339,7 +12339,7 @@ label GTS052:
     Haruhiro "On the {i}bear{/i}? Are you crazy?"
     GTS "Do you wish to be a man who runs from his problems? Or do you wish to be a man who stands up and takes charge of what is his?"
     "I could see on his face that the question struck him through the heart."
-    Haruhiro "I… {size=6}Agh… dammit.{/size}"
+    Haruhiro "I… {size=9}Agh… dammit.{/size}"
     Haruhiro "…{w}Understood. Here, I have some antiseptic."
     GTS "Do you have any vulnerary materials?"
     Haruhiro "Yes, ma'am."
