@@ -12232,12 +12232,12 @@ label GTS052:
     "In a moment I realized the noise was right above me; I looked up."
     MC "?…"
     if isEventClear("BE021") or getFlag("Meet_Haruhiro"):
-    MC "…Haru… Haruhiro? What are you doing out here?"
-    "Shakily clinging to a couple tree branches some seven meters above me was a familiar elephant-eared archer with his trusty longbow and a bandolier of various first aid supplies slung around his shoulder."
+        MC "…Haru… Haruhiro? What are you doing out here?"
+        "Shakily clinging to a couple tree branches some seven meters above me was a familiar elephant-eared archer with his trusty longbow and a bandolier of various first aid supplies slung around his shoulder."
     else:
-    MC "…Do you, uh… need some help, dude?"
-    "Shakily clinging to a couple tree branches some seven meters above me was a young man with a longbow and… a bandolier of first aid supplies slung over his shoulder."
-    "His saucer-sized ears and the emblem on the breast of his button-up marked him as a fellow student."
+        MC "…Do you, uh… need some help, dude?"
+        "Shakily clinging to a couple tree branches some seven meters above me was a young man with a longbow and… a bandolier of first aid supplies slung over his shoulder."
+        "His saucer-sized ears and the emblem on the breast of his button-up marked him as a fellow student."
     "He immediately made the most violent shushing gesture I've ever seen, and frantically jabbed his finger back the way I came."
     MC "You… want me to leave you alone?"
     "I then heard rustling in the grass out among the younger trees, and looked over to see who it was."
