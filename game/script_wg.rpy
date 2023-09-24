@@ -27557,6 +27557,331 @@ label WG086:
     jump daymenu
 
 label WG087:
+    $setProgress("WG", "WG088")
+    play music Sunset
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Dorm Hallway with fade
+    "The time had come for our awaited movie night. Though earlier on when we first started dating this would have meant a trip to the movie theater, the more private and intimate setting of our rooms lent itself better to the \"other activities\" involved."
+    "...That was her reasoning anyway, though part of me I had reason to suspect Alice was leery of being able to fit in the movie theater seats. She had been quite conscious of such things after her incident with the bathtub." 
+    "Not to say her concerns were unfounded. Even with the island's facilities being accommodating to the dimensions of its residents, it was clear that Alice's unique proportions exceeded far beyond what most businesses would think to accommodate." 
+    MCT "Well, let's hope for tonight we can forget about all of that."
+    play sound Knock
+    pause .5
+    WG "Come in."
+    scene Dorm WG 
+    show WG neutral-2
+    with fade
+    WG "Hello, Dear."
+    show WG happy
+    pause 1.2
+    MC "What?"
+    WG "You're doing it again."
+    MC "Doing what?"
+    show WG sly
+    MC "Like said, can't a guy awkwardly keep his hand behind his back without getting asked questions about it?"
+    show WG happy-2
+    WG "The answer is still no, I'm afraid."
+    MC "Okay, well, this time I figured I should deliver on the goods."
+    show WG surprised
+    "I pulled my arm out from behind to reveal the bouquet I was concealing, an arrangement of white roses, lilies, and carnations with a splash of color from some indigo delphinium and hydrangeas."
+    WG "Keisuke, they're beautiful."
+    show WG happy
+    WG "That was so thoughtful of you. Such appropriate colors for the season as well." 
+    "I would have thought \"appropriate for the season\" would have meant dead flowers, but I guess that's why they have greenhouses for these things." 
+    WG "{i}Snifffff{/i}... Ahhh, they smell heavenly too. I simply must get them in a vase right away so they don't wilt."
+    hide WG with dissolve
+    "I was glad the flowers were such a hit, because I don't really know anything about flowers. Luckily for me the florist definitely knew her stuff though— all I did was ask her to pick out something seasonal."
+    show WG happy with dissolve
+    "Alice returned from her kitchen area with the flowers arranged in an elegant, and expensive looking vase that she set down on her tea table in her room."
+    WG "Thank you, Dear."
+    "Alice leaned in close with her lips pursed. Given the space between her and I and her belly, it was up to me to make up the remaining distance."
+    show WG aroused
+    MC "{i}Mmm-mwa{/i}. {w}Glad you liked them."
+    "Perhaps I was just distracted by Alice's beauty, as I am wont to do, or maybe it had been the sheer concealment capacity of her corpulent form, but I just now noticed Alice's room looked uncharacteristically out of sorts."
+    MC "Uh, what's with all the pillows everywhere?"
+    show WG surprised-2
+    WG "Oh, I almost forgot."
+    show WG neutral
+    WG "I meant to tell you as soon as you walked in, but I was distracted by your unusual antics—"
+    show WG happy-2
+    extend " even if I should come to expect them by now."
+    show WG neutral
+    WG "But there's been a change of plans to our movie night. I have asked Aida to join us. I hope you don't mind."
+    "Not that I mind Aida at all, but truth be told I had my mind on other things besides watching the movie while we \"watched\" the movie, that didn't lend itself to an audience."
+    show WG neutral-2
+    WG "I know what you're thinking, but she needs her rest, so I know she'll retire for the evening early, which will still give us plenty of time alone. When I was deciding on a movie to pick out I realized that Aida would love this one, so I wanted her to see it."
+    show WG worried
+    WG "Admittedly, I feel quite guilty for not spending more time with her as my schedule has gotten busier. She's my roommate and one of my closest friends here going through a very stressful and uncertain time in her life."
+    WG "I just don't want her to feel like she's alone."
+    show WG neutral-2
+    MC "No, you're right, that's important too. I think we all struggle with how to help Aida in her situation, but for now, probably the best thing we can do for her is just to be there for her as a friend." 
+    play music PRGDramatic
+    show WG neutral-2 at altMove(0.5, 0.7)
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    PRG "H-Hello, Keisuke.."
+    show PRG unsure
+    PRG "I... I hope I'm not intruding..."
+    MC "Not at all, Aida. No need to worry about that."
+    show PRG worried
+    show WG neutral
+    WG "Keisuke, would you be a dear and help Aida to her seat? Chibuki arranged some cushions and pillows on the floor next to the couch to make sure she had a comfortable spot to recline on."
+    MC "Certainly, not a problem."
+    show PRG embarrassed
+    "I moved behind Aida to help ease herself down, since there was no way I was able to assist from the front with her limited reach."
+    "This did mean that I had to be a bit careful to not brush up against her backside, but by ensuring that I reached well over everything, and bent myself properly, I managed to avoid that."
+    "With a little effort we were able to set her gently down onto the cushions and piles of pillows laid out just for her."
+    "Alice handed Aida her pregnancy pillow, one of those long wrap-around type deals that helps pregnant ladies lie down in positions that would otherwise be uncomfortable if left unsupported."
+    "It appeared to be quite a nice one that I assumed Alice had gotten for her."
+    "...It was also a few times larger than a normal one."
+    show WG happy
+    show PRG unique-happy
+    WG "Comfortable?"
+    PRG "Y-Yes. Thank you..."
+    WG "Well, let's make sure you stay warm. It is a chilly evening and the cold air can seep through the windows on nights like this."
+    "Alice unfurled one of her super soft giant blankets she had resting on the armrest of the couch and spread it over Aida, making sure she was nice and tucked in." 
+    show PRG insecure
+    PRG "Alice, thank you... I-I appreciate it, but you don't have to do all of this for me."
+    WG "Hush. I have Keisuke here to ensure my comfort. When was the last time you truly spoiled yourself?"
+    PRG "I... I don't really..."
+    show WG haughty
+    WG "Then that's settled. Tonight is the night for it."
+    show PRG unique-happy
+    MC "On that note, my time to shine?"
+    show WG happy-2
+    WG "If you insist..."
+    "Taking Alice by the hand, with my other hand behind her back, I helped guide her descent gently onto her large sofa." 
+    show WG surprised-2
+    "{i}Creeeeeaaak{/i}"
+    show PRG insecure
+    show WG doubt
+    "As gentle as could be expected anyway."
+    WG "That's odd, I don't remember the sofa making noise before. Perhaps the joints need waxing after being in this cold dry weather for so long."
+    MCT "Sure... let's go with that Alice."
+    show PRG worried
+    "Needless to say I wasn't quite convinced it was some dry jointing in the wood frame."
+    MC "{size=-6}Alice, are you sure it's safe? I mean, it's alright if—{/size}"
+    show WG stern
+    WG "{size=-6}Nonsense. This couch is made from old walnut. They don't make furniture stronger than this. I'd have to be double my size before it would even begin to bow.{/size}"
+    MC "{size=-6}Okay, if you say so, just wanted to make sure.{/size}"
+    show WG neutral
+    "Alice did have a point, the couch looked pretty damn sturdy. If a truck hit this thing, you'd need to get a new truck."
+    "But still, {i}double{/i} her size? Part of me had to wonder if she meant her current size, or the last size she remembered seeing on the scale."
+    show WG neutral-2
+    MC "Alright, let's get you tucked in too."
+    "I pulled her other blanket off its resting spot on the armrest and spread it out over her. These blankets she had were soft wool, woven together with a thick braid. I've heard this style called chunky knit before. A fitting description for its appearance and owner."
+    "These things were super soft, softer than I thought wool could be, and they probably weighed over five kilos each." 
+    "Though wide in area, I had to be exacting in my blanket placement to ensure Alice was fully covered as there was precious few square centimeters to spare when draping it across her voluptuous dimensions."
+    show WG happy
+    MC "There, nice and warm I take it?"
+    WG "Very much so."
+    MC "Anything else I could get you, before the movie starts?"
+    show WG pondering
+    WG "Well, since you mentioned it..."
+    show WG happy
+    WG "I could go for some hot chocolate."
+    MCT "As if I could say no to that face."
+    MC "No problem."
+    show WG surprised
+    WG "Oh, I'm forgetting myself here," 
+    show WG neutral
+    extend " would you like some as well Aida while Keisuke is still up?"
+    show PRG neutral
+    PRG "I-If it isn't a problem..."
+    MC "Not a problem at all. I'll get one for myself in fact. Three hot chocolates coming up."
+    "It took a while to get the water to boil on the range, so I made use of the time to microwave some popcorn (i.e. several bags full), both as a courtesy and as a hedge against a likely future request."
+    show WG neutral-2
+    MC "Alright ladies, that's one hot chocolate, and a bowl of popcorn for each."
+    "I handed each a rather sizable mug of hot chocolate into their hands, only to find no other reachable real estate for their popcorn." 
+    show PRG blush
+    "With a bit of quick thinking, I placed the punchbowl sized serving vessels on top of their bellies, which formed a surprisingly stable natural shelf. Neither seemed to mind, having long since become accustomed to the necessity of such measures."
+    show WG happy
+    WG "Thank you, Dear. Looks like we are ready to start."
+    MC "Alright, let me get situated here..."
+    show PRG worried
+    "Alice's sofa was a four seater by any normal metric, but its current resident occupied 3.5 of the available units. Tilting my hips a bit so I could slip in, I wedged myself between the armrest and the developing pudge of Alice's hip."
+    show WG doubt
+    "All the while Alice's mastercraft couch creaked like it was some kind of slapped together Swedish particle board." 
+    show WG happy-2
+    "But once I got settled, I had the best seat in the house, with the softest cushion to lay across, and a pillowy soft weighted blanket with Alice's fluffy arm across my shoulders."
+    WG "Comfy?"
+    MC "Completely."
+    MC "What is this movie again?"
+    WG "Oh yes, I don't think I've mentioned it to you yet. It's \"The Bridal Princess\"."
+    show PRG neutral
+    PRG "T-That sounds fun."
+    MC "Sounds girly."
+    show WG neutral
+    WG "Don't let the title fool you, it has something for everyone. It was one of my mother's favorite movies growing up when she would watch it with her siblings, and she shared it with me."
+    WG "That is saying quite a bit coming from Mother, who is quick to lament the steady decline of the medium of film since the golden age of cinema, but would hold this up as an example of what can be accomplished with a little care and artistic integrity."
+    MC "Alright, I'll take your word for it... for now."
+    show WG haughty
+    "Alice gave my head a gentle pat."
+    WG "We've already established your skepticism of my judgment is completely unfounded."
+    MC "Oh yes, how could I forget?"
+    show WG surprised-2
+    show PRG happy
+    PRG "{i}Eheheh...{/i} you two are funny together."
+    show WG neutral-2
+    show PRG neutral
+    "The movie started up. I thought it was supposed to be a medieval fantasy setting but it opened with a scene in a suburban house with a grandad reading a story to his sick grandson, who was whining about being read a story about a princess."
+    MCT "I can relate to this kid."
+    "It was one of those classic rom-com style openings. First the girl and the guy hate each other, then somehow they're madly in love."
+    MC "I don't get it, what made her suddenly like the dude? She always treated him like dirt."
+    WG "That's just it, when she finally realized she was wrong to do so and he'd been patient with her, it clicked with her his restraint was from his strength of character, rather than weakness."
+    MCT "Not sure I really buy the romantic lesson of letting the girl walk all over you until she stops, but the main characters needed to get together somehow. I've seen much worse, that's for sure."
+    show PRG unique
+    "Then it followed that they were set to marry, but the guy didn't have any money."
+    PRG "That's so sad. They love each other. Why is money so important?"
+    show WG neutral
+    WG "It especially was in those times. The husband was expected to pay a dower prior to marriage as a form of security if she were to become widowed."
+    WG "It more or less still stands to this day though. No self-respecting father is going to give away his daughter in marriage to a man who can't support her."
+    PRG "It just doesn't seem fair."
+    WG "Life isn't often about what's fair, but what you're willing to fight for."
+    MC "So in other words, the hero's journey?"
+    show WG happy-2
+    WG "Exactly."
+    show PRG worried
+    show WG neutral-2
+    "The guy goes off to make his fortune, promising he'll come back, but he dies. A rather grizzly death too, killed by pirates and all. Naturally, the girl is devastated, vowing to never love again."
+    PRG "I... thought you said this was a fun romance movie, Alice?"
+    WG "Patience, just a little bit more, you'll see. Sometimes a big payoff just needs a more of an upfront investment."
+    "Fast forward to the future and we see a prince making an announcement about his upcoming marriage, revealing the female protagonist as his bride to be."
+    MC "Well, she seemed to trade up. Good for her."
+    PRG "She doesn't love him..." 
+    "Shortly after, the Princess was kidnapped by bandits... only to be rescued by a mysterious stranger."
+    MCT "Gee, who could that be?"
+    show PRG nervous
+    PRG "I... kind of thought he would come back. It's common in these kinds of movies. But... that's still so heartwarming..."
+    WG "Like he told her, \"Death cannot stop true love.\""
+    "The hero dispatched the bandits to run away with the princess, only to be caught by the prince, who made no distinction between the hero and the bandits, who sought to have him executed on the spot."
+    "In exchange for not harming him, the princess agrees to return with the prince... who immediately breaks the promise by jailing and torchering the guy."
+    PRG "They were so close... just let them be happy..."
+    WG "He saved her, now she saved him. Sometimes just knowing the person you love is alright is enough, even if you can't be with each other."
+    show PRG insecure
+    PRG "Right..."
+    "Of course then after that the real plot twist was revealed that the prince was the one who hired the bandits to kidnap the princess so he could frame her death on the neighboring kingdom to start a war."
+    show PRG angry-2
+    PRG "I knew he was all pompous for a reason..."
+    MC "He did come off as kind of dick."
+    show PRG surprised
+    "In another twist, the bandits the hero defeated broke him out of jail, partly as a favor that he spared them and the other part of practicality, since they needed his help to defeat the prince and his guardsmen."
+    show PRG insecure
+    "Believing her love to be dead, tortured to death by the prince, she resolves to kill herself rather than marry an evil man."
+    show PRG surprised
+    "Storming the castle and a couple of swashbuckling sword fights later, the hero does manage to make it to her chambers in time to stop her from driving the dagger into her heart."
+    show PRG excited
+    "With the evil prince dispatched and his plans thwarted, the protagonists abscond with the princess in tow and ride off into the sunset. {w}\"THE END\" "
+    play music DormLife
+    show WG happy
+    WG "So what did you think?"
+    show PRG blush-2
+    PRG "It had such a classic romance feel. I loved it..."
+    WG "What about you, Keisuke?"
+    show WG neutral
+    MC "It was a little cliché in some parts, but it did have some decent action. Like the sword fight at the end felt pretty realistic." 
+    MC "It was a nice change of pace from the overly choreographed fights in modern movies where they throw in a bunch of back flips for no reason. You really got the sense that they thought their lives were on the line."
+    show WG haughty
+    WG "Agreed. The action should be a vehicle for the emotion of the characters, rather than a spectacle just for show."
+    show PRG neutral
+    PRG "What was your favorite part Alice?"
+    show WG pondering
+    WG "Me? I would agree with your assessment, I enjoy indulging the story's theme of love triumphing against impossible odds. Though I would say though I most enjoy the character arc of the main protagonist."
+    show WG happy
+    WG "He doesn't just beat his opponents into the ground with brute strength, but he uses his skill and wit to outmaneuver his enemies, all while being fair and chivalrous in battle, despite the underhanded tactics of the villains."
+    PRG "I really loved how it was told as a grandpa reading it to his grandchild. It was so wholesome seeing the young boy going from wanting to skip over the kissing parts to being totally invested in their love story."
+    PRG "I'm glad it wasn't too long though. I was already kind of tired. I... might go relax in my room before bed."
+    show WG neutral-2
+    WG "That's understandable. You certainly need your rest. Thank you for staying up to watch the movie with us."
+    PRG "You're welcome. T-Thank you for letting me watch with you. It's been a while since I got to do something fun like this."
+    show WG happy
+    WG "We'll have to do a girl's night in soon. We can invite Sakura and Kanami next time."
+    PRG "T-That sounds nice..."
+    show WG neutral
+    WG "Keisuke, would you be a dear again and help Aida up?"
+    show PRG flattered
+    MC "Not a problem."
+    "{i}creeeeaak{/i}"
+    "The couch let its protest be known from me shifting my weight to get off of it. I could only assume it was at an impending tipping point if my weight made any difference when added to Alice's."
+    MCT "I wonder how long that thing is going to last..."
+    MC "Alright Aida, let's get you sorted here."
+    "Rather than fruitlessly trying to reach over her belly or risk tugging on her shoulder sockets by pulling on her arms, I came up with a creative solution to wrap her pregnancy pillow around her back and lift under her arms using the crook of my elbows."
+    show WG surprised-2
+    MC "Okay, on three now. One... two... THREE!"
+    MC "{i}Ooft!{/i}"
+    "Aida might not have been nearly as heavy as Alice, but by any normal sense of size she was one massive mama by this point in her pregnancy. I was lucky to not throw my back out."
+    show WG neutral
+    show PRG unique
+    PRG "S-Sorry... K-Keisuke."
+    MC "No trouble... you're fine."
+    MCT "I wonder if Akira has any back exercises she can recommend if I'm going to keep having to help lift big bellies."
+    show PRG neutral
+    PRG "T-Thank you both."
+    PRG "I'll... be in the shower if you need me, Alice."
+    WG "Of course. I'll see you tomorrow."
+    PRG "Night."
+    hide PRG with dissolve
+    play music Memories
+    MC "I'm glad she was able to join us. She certainly enjoyed the movie. I got the feeling she was feeling a bit lonely like you said."
+    show WG neutral-2 at altMove(0.5, 0.5)
+    WG "She's a sweet girl, selfless to a fault. Honestly, I think she would have laid on a bed of straw throughout her entire pregnancy without so much a whimper rather than ask for a pregnancy pillow for herself."
+    show WG worried
+    WG "I think she doesn't want to interrupt me, but I'd prefer it if she did, rather than allowing me to get so caught up in my business that I nearly forget she's there."
+    MC "Sounds like you worry about her quite a bit."
+    show WG neutral
+    WG "I do. She's been put in a tough situation. But I do admire her as well. If she can keep her chin up and put on a smile through this whole ordeal, then I'm left without any excuses."
+    show WG worried
+    WG "Not to mention that... well... it isn't my place to say, but her family life prior to the academy was... {w}less than ideal."
+    WG "When I first heard of her condition, all I could think of was why of all the people something like that had to happen to her." 
+    show WG neutral
+    WG "But now I've come to realize of all the people it could have happened to, {i}if{/i} it had to, there is no one better suited to bear such a burden." 
+    show WG happy
+    extend " Just hearing her talk about it, she really loves her children. She's going to be a great mother." 
+    MC "Is that something you've ever thought about... for yourself?"
+    show WG pondering
+    WG "I hadn't really given it much thought before, but being around Aida has certainly made me ponder the issue from time to time. I do think I would eventually want children."
+    WG "Might be tricky to balance full time office life with being a parent, but like my grandma told me when I was older, \"You have your whole life to build a career, but you only have a handful of years to build a family.\" "
+    MC "Ever thought about how many you'd want?"
+    WG "More than one for sure, but beyond that I don't know for certain. I did not enjoy my experience as an only child." 
+    show WG sly
+    extend " Though seeing how you and Tomo bicker back and forth constantly, I have to wonder if I dodged a bullet."
+    show WG surprised-2
+    MC "Don't tell her I said it, cause I had to admit it, but I wouldn't trade her for anything."
+    show WG sly
+    MC "{i}Uggh{/i}, why did I do that? There's no way you're keeping that a secret."
+    WG "Oh, not a chance. But I'll at least wait for a good moment."
+    show WG happy
+    WG "I'm glad to hear that though. I remember when I was very young asking my mother for a little sister."
+    MC "What did she say?"
+    show WG pondering
+    WG "I don't remember to be honest. It was always a different answer as to why not. I never really understood until I was older. I got the impression father wanted more."
+    WG "From what I pieced together over the years, mother was a rising star in the broadway scene, but took time off to start a family." 
+    show WG neutral 
+    extend " Apparently when she had me she blew up, {i}big time{/i}."
+    WG "She always wanted to return to the stage but she was never able to lose the baby weight. Father never made an issue of it, but casting directors certainly did."
+    show WG neutral-2
+    WG "She's still involved in the broadway scene, but as a vocal coach, producer, or occasionally a director, though I can tell she still wishes she could be in the spotlight once again."
+    MC "Is that something that you've ever worried about?"
+    show WG neutral
+    WG "That I would blow up like a cow if I ever got pregnant?"
+    MC "Ehhh... hmmm... well..."
+    WG "I suppose that was something I was concerned about inheriting from my mother in the back of my mind before, but at this point being compared to a cow would involve me losing weight."
+    show WG pondering
+    WG "Then again, I guess I don't know how this factor would interact with such a condition. Honestly I can't imagine eating more and growing bigger than I already am..."
+    show WG doubt
+    WG "Now that I think about it, it's probably best not to think about it."
+    show WG sly
+    WG "Let's continue to be careful so we don't find out too soon."
+    MC "Gotcha."
+    show WG neutral
+    play music TwilightAmbient
+    MC "Want a refill on your hot chocolate before I head out?"
+    WG "I could use a refill if you're offering."
+    show WG aroused
+    WG "But you don't have to leave. It's quite frigid outside after all, wouldn't want you to catch a cold now..." 
+    MC "Oh, is that so? {w}Now that you mention it, I do feel a bit of a chill..."
+    show WG happy-2
+    WG "Well, I'll just have to make sure you stay warm tonight."
+    jump daymenu
 
 label WG088:
     $setProgress("WG", "WG089")
