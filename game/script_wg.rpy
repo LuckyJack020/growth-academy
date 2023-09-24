@@ -14678,28 +14678,24 @@ label WG055:
     MC "Never been better. Now lean back and make yourself comfortable."
     "Alice reclined backwards releasing the full weight of her torso back onto me. I felt like I sunk in quite a few centimeters into her soft, pillowy back fat before it finally yielded and began to push me up against the tree."
     MC "Oof."
+    show cg WG055 with dissolve
     "Though I felt like I was stuck between a rock and a soft place, I wouldn't have traded this for the finest satin sheets in the world."
     WG "If I'm too heavy, just say something and I'll—"
     MC "{size=-6}Shhhh...{/size}"
     "I whispered into Alice's ear."
     MC "{size=-6}I would never say that.{/size}"
-    show WG happy
     WG "I'm glad to hear that."
     "Now fully behind Alice, I was able to make a better attempt at reaching my arms around to the front of her belly. This was easier said than done, if not impossible."
     "I ran my hands along the outside edges of her belly, starting low at her love handles. I let my hands glide along the smooth surface as my hands sunk deeper and deeper as I moved further out in front of her."
-    show WG aroused
     WG "Mmmm..."
     "Her belly was so big now there was no way I could get my hands to the front of the widest part. I decided to move them upwards, but even then I couldn't get my arms to meet, even around the upper half of her belly."
     "I kept moving up to see if I could meet up somewhere closer to where it began to bulge out from her body."
     "Still no luck. I eventually was able to meet my hands, but by this point my hands were completely engulfed under her boobs. Not what I initially had planned, but this was good too!"
     "I continued to move up the contours of the sides towards the front of her breasts."
-    show WG neutral
     WG "Erhem. Not that I wouldn't mind Keisuke, but why don't we save that for a more private setting?"
     "Alice firmly grasped my hands and repositioned them lower, out onto the sides of her belly."
-    show WG happy
     WG "This, however, I don't care who sees. It feels too good."
     "I proceeded to rub my hands back and forth along her belly. Front to back at first, but then down lower into a circular motion."
-    show WG aroused
     WG "MMMMMM!"
     stop music
     MC "Oh, I guess the song ended. Did you want to head back—"

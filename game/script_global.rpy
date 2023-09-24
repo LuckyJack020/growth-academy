@@ -556,6 +556,7 @@ image cg WG039 = "Graphics/ui/gallery/WG039.png"
 image cg WG042 = "Graphics/ui/gallery/WG042.png"
 image cg WG046 = "Graphics/ui/gallery/WG046.png"
 image cg WG047 = "Graphics/ui/gallery/WG047.png"
+image cg WG055 = "Graphics/ui/gallery/WG055.png"
 image cg WG060S = "Graphics/ui/gallery/WG060S.png"
 image cg WG070 = "Graphics/ui/gallery/WG070.png"
 image cg WG071 = ConditionSwitch(
