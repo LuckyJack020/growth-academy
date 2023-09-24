@@ -10,7 +10,7 @@ init python:
     galImgList["FMG"] = [["FMG_Icon", "Sheepapp", 1050, "icon"], ["FMG016", "Sheepapp", 1050, "sfw"], ["FMG041", "Sheepapp", 1050, "sfw"], ["FMG050", "Sheepapp", 1050, "nsfw"], ["FMG055", "Sheepapp", 1050, "sfw"], ["FMG056", "Sheepapp", 1050, "sfw"], ["FMG058", "Sheepapp", 1050, "sfw"], ["FMG058_pose1", "Sheepapp", 1050, "sfw"], ["FMG058_pose2", "Sheepapp", 1050, "sfw"], ["FMG058_pose3", "Sheepapp", 1050, "sfw"], ["FMG061", "Sheepapp", 1050, "sfw"], ["FMG067", "Sheepapp", 1050, "sfw"], ["FMG072", "Sheepapp", 1050, "sfw"], ["FMG077", "Sheepapp", 1050, "nsfw"], ["FMG082", "Sheepapp", 1050, "sfw"]]
     galImgList["WG"] = [["WG_Icon", "Sheepapp", 1050, "icon"], ["WG000", "GoodNotGreat", 995, "sfw"], ["WG009", "GoodNotGreat", 995, "sfw"], ["WG039", "Radoon & Sparkcadia", 905, "sfw"], ["WG042", "MOLOT.CO", 1050, "sfw"], ["WG046", "GoodNotGreat", 995, "sfw"], ["WG047", "GoodNotGreat", 995, "sfw"], ["WG055", "MochiiStar", 1035, "sfw"], ["WG060S", "MOLOT.CO", 1050, "sfw"], ["WG070", "MochiiStar", 1035, "sfw"], ["WG071", "MochiiStar", 1035, "nsfw"], ["WG072", "Vitlut", 1100, "nsfw"], ["WG076", "Vitlut", 1100, "nsfw"], ["WG079_drawing1", "Oct-Oppai", 1045, "sfw"], ["WG079_drawing2", "Oct-Oppai", 1045, "sfw"]]
     galImgList["PRG"] = [["PRG_Icon", "Sheepapp", 1050, "icon"], ["PRG020", "Marrazan", 1055, "sfw"], ["PRG025", "Marrazan", 1055, "nsfw"], ["PRG028a", "Marrazan & Diant707", 905, "custom"], ["PRG028b", "Marrazan & Diant707", 905, "custom"], ["PRG028c", "Marrazan & Diant707", 905, "custom"], ["PRG028d", "Marrazan & Diant707", 905, "custom"], ["PRG038", "Marrazan", 1055, "sfw"], ["PRG038_poster", "GoodNotGreat", 995, "sfw"]]
-    galImgList["OTHER"] = [["MC000", "GoodNotGreat", 995, "sfw"], ["RM000", "GoodNotGreat", 995, "sfw"], ["RM000_escape1", "GoodNotGreat", 995, "sfw"], ["RM000_escape2", "GoodNotGreat", 995, "sfw"], ["RM000_escape3", "GoodNotGreat", 995, "sfw"], ["MC003", "GoodNotGreat", 995, "sfw"]]
+    galImgList["OTHER"] = [["MC000", "GoodNotGreat", 995, "sfw"], ["RM000", "GoodNotGreat", 995, "sfw"], ["RM000_escape1", "GoodNotGreat", 995, "sfw"], ["RM000_escape2", "GoodNotGreat", 995, "sfw"], ["RM000_escape3", "GoodNotGreat", 995, "sfw"], ["Global010", "3-B Class", 1100, "icon"], ["MC003", "GoodNotGreat", 995, "sfw"]]
 
     for g in girllist:
         galleries[g].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 266.67, 150, bilinear=True)
@@ -51,7 +51,14 @@ init python:
     galleries["OTHER"].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 266.67, 150, bilinear=True)
     galleries["OTHER"].transition = dissolve
     for i in galImgList["OTHER"]:
-        if i[3] == "sfw":
+        if i[3] == "icon":
+                galleries["OTHER"].button("cg " + i[0])
+                galleries["OTHER"].image(Composite(
+                    (1280,720),
+                    (0,0), "Graphics/ui/gallery/" + i[0] + ".png",
+                    (i[2],690), Text("Art by: " + i[1], bold=True, color="#000000", style='outlined_text')))
+                galleries["OTHER"].image("Graphics/ui/gallery/" + i[0] + ".png")
+        elif i[3] == "sfw":
             galleries["OTHER"].button("cg " + i[0])
             galleries["OTHER"].unlock("cg " + i[0])
             galleries["OTHER"].image(Composite(

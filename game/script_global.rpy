@@ -574,6 +574,8 @@ image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.png"
 image cg MC000 = "Graphics/ui/gallery/MC000.png"
 image cg MC003 = "Graphics/ui/gallery/MC003.png"
 
+image cg Global010 = "Graphics/ui/gallery/Global010.png"
+
 image cg RM000 = "Graphics/ui/gallery/RM000.png"
 image cg RM000_escape1 = "Graphics/ui/gallery/RM000_escape1.png"
 image cg RM000_escape2 = "Graphics/ui/gallery/RM000_escape2.png"
