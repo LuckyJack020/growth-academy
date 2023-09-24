@@ -28474,7 +28474,7 @@ label PRG048
     stop music fadeout 2.0
     "{i}Eergh-BRCH!{/i}"
     "The door outside opened and shut, echoing out."
-    ??? "Aida…?"
+    UNKNOWN "Aida…?"
     PRG "H-Hi, Dad…"
     pause 1
     PRG "H-H… {w}how are you? How are you feeling?"
@@ -28484,11 +28484,11 @@ label PRG048
     pause .75
     PRG "Dad…?"
     pause 1
-    ??? "... {w}Where is he?"
+    UNKNOWN "... {w}Where is he?"
     PRG "I-In the shower."
-    ??? "Hm…"
+    UNKNOWN "Hm…"
     Takara "Honey, it-"
-    ??? "Just…"
+    UNKNOWN "Just…"
     pause .75
     PRG "D-Dad… I wanted to come see you."
     PRG "Dad…?"
@@ -29478,13 +29478,6 @@ label PRG048
 	PRG "You always are to me…"
 	jump daymenu
 
-label PRG049:
-    $setProgress("PRG", "PRG050")
-    if getFlag("PRG048_c1_1"):
-        jump PRG049_c1_1
-    else:
-        jump PRG049_c1_2
-
 label PRG049
     $setProgress("PRG", "PRG050")
     $setTime(TimeEnum.DAY)
@@ -29516,26 +29509,26 @@ label PRG049
     MC "Someone's a little frisky today."
     show PRG blush-2
     if getFlag("PRG048_kiss")
-	"Aida leaned in and kissed me again, now craning over to the point of her boobs laying on top of me."
-	PRG "W-What's wrong with that?"
-	MC "Nothing. I'm not filing any complaints."
-	MC "Well… actually, yes I am. There was a bit more heat to the kisses last night. I'm going to need to see a bit more effort."
-	"With the arm closest, Aida took my shoulder and pulled me a bit, as I went with the motion and laid on my side."
-	"Aida scooted in on her back, keeping her belly and boobs pointed up."
-	"She kissed me deeply, just as the night prior, her head angling and pulling me closer as her tongue met mine."
-	PRG "Mmn~"
-	PRG "There… {w}better?"
-	MC "Much. Thank you."
-	"I laid closer to her as Aida shifted her arms, and something heavy spread across my chest."
-	"Looking down, Aida's right boob spilled over against my chest, her sideboob poking out from her pajamas." 
-    "Unsupported by a bra, Aida's boob had free reign to do as it naturally did."
-    show PRG blush
-    "Aida brought her arm back over and scooted her boob back up."
-    pause .5
-    PRG "This is the other reason I don't lay on my back that often."
-    "I smirked and kissed her cheek."
-    MC "Shut it. You're beautiful."
-    show PRG blush-2
+        "Aida leaned in and kissed me again, now craning over to the point of her boobs laying on top of me."
+        PRG "W-What's wrong with that?"
+        MC "Nothing. I'm not filing any complaints."
+        MC "Well… actually, yes I am. There was a bit more heat to the kisses last night. I'm going to need to see a bit more effort."
+        "With the arm closest, Aida took my shoulder and pulled me a bit, as I went with the motion and laid on my side."
+        "Aida scooted in on her back, keeping her belly and boobs pointed up."
+        "She kissed me deeply, just as the night prior, her head angling and pulling me closer as her tongue met mine."
+        PRG "Mmn~"
+        PRG "There… {w}better?"
+        MC "Much. Thank you."
+        "I laid closer to her as Aida shifted her arms, and something heavy spread across my chest."
+        "Looking down, Aida's right boob spilled over against my chest, her sideboob poking out from her pajamas." 
+        "Unsupported by a bra, Aida's boob had free reign to do as it naturally did."
+        show PRG blush
+        "Aida brought her arm back over and scooted her boob back up."
+        pause .5
+        PRG "This is the other reason I don't lay on my back that often."
+        "I smirked and kissed her cheek."
+        MC "Shut it. You're beautiful."
+        show PRG blush-2
     if getFlag("PRG048_boob")
     	"Aida blushed and leaned in a little."
         PRG "A-And you weren't last night?"
@@ -29859,9 +29852,9 @@ label PRG049
     if getFlag("PRG044_c1_1")
     	MC "Baby… you don't have to thank me. I wanted to do this for you."
     if getFlag("PRG044_c1_2")
-	MC "Babe… you don't have to thank me. I wanted to do this for you."
+	    MC "Babe… you don't have to thank me. I wanted to do this for you."
     if getFlag("PRG044_c1_2")
-	MC "Sweetie… you don't have to thank me. I wanted to do this for you."
+	    MC "Sweetie… you don't have to thank me. I wanted to do this for you."
     PRG "I know you did… a-and I want to do this for you."
     show PRG neutral
     "Aida walked slowly further into the store, looking up at all of the shelves."
@@ -29890,7 +29883,7 @@ label PRG049
     Cashier "H-Have a nice day."
     PRG "You too…"
     "Aida took my arm again and led me back out of the store."
-    ??? "{size=6}... Holy fuck. You see the size of those things?{/size}"
+    UNKNOWN "{size=6}... Holy fuck. You see the size of those things?{/size}"
     "As she stepped out the door, I glanced back to see all eyes on Aida, both on her belly, and on the jiggle that Aida now had going in the back."
     MC "Aida, you didn't have to do that…"
     "Aida simply took the bag and handed it to me, smiling gently."
@@ -30022,8 +30015,8 @@ label PRG049
     play music Quiet Wandering fadein 5.0
     hide PRG with fade
     "I undid my shoes and belt and stuck them in a bin, emptying what little was in my pockets and sending it onto the conveyor belt. I walked through the archway, relieved to not send any alarms off myself."
-    ??? "{size=-6}That's not a pregnancy. That's a litter.{/size}"
-    ??? "{size=-6}My mom got a nose job a few weeks ago. Maybe her doctor does reductions? She could use a couple dozen cup sizes off.{/size}"
+    UNKNOWN "{size=-6}That's not a pregnancy. That's a litter.{/size}"
+    UNKNOWN "{size=-6}My mom got a nose job a few weeks ago. Maybe her doctor does reductions? She could use a couple dozen cup sizes off.{/size}"
     "I whipped my head around to see two girls a few years older than Aida and I giggling to each other, maybe four or five people back."
     "I huffed and took my belongings, going over to the side and yanking my belt back through my pants."
     show PRG insecure
@@ -30159,16 +30152,16 @@ label PRG049
     "I looked forward, then behind us."
     "Being on the top level and a little earlier on, there were maybe ten people in total in eyesight, and that was counting a woman, plus the baby in one arm and the toddler holding her hand."
     menu:
-    "Go to your seats instead"
-	"I sighed."
-	"I hated seeing Aida uncomfortable. It just had a way of tearing into a person's soul."
-	show PRG worried
-	"I nodded and walked with Aida, who took my hand and started pulling me toward our seats."
-	play music Our Protagonist fadein 3.0
-	scene black screen with fade
-	pause .25
-	scene NYI with fade
-    "Get creative"
+    "Go to your seats instead":
+        "I sighed."
+        "I hated seeing Aida uncomfortable. It just had a way of tearing into a person's soul."
+        show PRG worried
+        "I nodded and walked with Aida, who took my hand and started pulling me toward our seats."
+        play music Our Protagonist fadein 3.0
+        scene black screen with fade
+        pause .25
+        scene NYI with fade
+    "Get creative":
     	"I looked to Aida, who took my hand and started pulling me toward the hallways that led to the seating."
         "I looked back to the souvenir shop."
         MCT "... Well, here goes."
@@ -30201,9 +30194,9 @@ label PRG049
         "Shutting my eyes I threw my head down with enough force to send every drop of blood into my brain."
         "Then, I tossed it back, throwing all of my hair back in a huge arc, completing the first headbang."
         "I whirled my head around in a pretend pirouette, picturing that one drummer from Revenged Thricefold."
-        ??? "Holy hair, Dude!"
+        UNKNOWN "Holy hair, Dude!"
         pause .25
-        ??? "My guy is out here living his best life!"
+        UNKNOWN "My guy is out here living his best life!"
         "I grinned to myself, absolutely wrecking my neck for my future elderly self, and bombed the down toss, feeling my hair sweep the floor for a moment."
         PRG "Keisuke! KEISUKE!"
         scene NYI with fade
@@ -30250,17 +30243,17 @@ label PRG049
     show PRG neutral
     PRG "J-Just for a minute."
     "I stretched out a little, people-watching a little and zoning out."
-    ??? "Mama? Mama?"
-    ??? "Yes, Honey. What is it?"
-    ??? "Why's that lady so big?"
+    UNKNOWN "Mama? Mama?"
+    UNKNOWN "Yes, Honey. What is it?"
+    UNKNOWN "Why's that lady so big?"
     show PRG worried
     "A chill ran both ways on my spine, and I glanced toward the sound."
     "That woman was walking by with her two children, the toddler boy pointing… directly at Aida."
-    ??? "Well, Honey. She's most likely going to be a mama soon. She's having a baby." 
-    ??? "Now, come on Dear."
+    UNKNOWN "Well, Honey. She's most likely going to be a mama soon. She's having a baby." 
+    UNKNOWN "Now, come on Dear."
     "The mother glanced up at us, mouthing a quick 'sorry' to us."
     "The little boy was apparently having none of that, however, and he broke free of his mother's grip, walking right over to us."
-    ??? "Oh, Jiru! You get back here!"
+    UNKNOWN "Oh, Jiru! You get back here!"
     "The boy came and stood right in front of Aida."
     Jiru "Hi!"
     PRG "H-Hi."
@@ -30268,20 +30261,20 @@ label PRG049
     show PRG neutral
     PRG "I-I…"
     PRG "Thank you…"
-    ??? "What's your name?"
+    Jiru "What's your name?"
     PRG "Aida. And what's yours?"
     Jiru "Jiru. Aida is a pretty name!"
     PRG "W-Well, um… thank you."
     PRG "You're a very nice boy, Jiru."
     PRG "But, I think your mom is looking for you."
     "The mother had managed to catch up to her son and came right over to us, the bags under her eyes more than a little apparent."
-    ??? "I am so, SO sorry! I came here with some friends from work and my sitter bailed on me!"
+    UNKNOWN "I am so, SO sorry! I came here with some friends from work and my sitter bailed on me!"
     MC "Oh, you're fine. No worries."
     Jiru "How old are you?"
     PRG "I'm 18. How old are you?"
     Jiru "Three!"
     Jiru "You having babies like Mom?"
-    ??? "Oh, Jiru, that's quite enough."
+    UNKNOWN "Oh, Jiru, that's quite enough."
     PRG "I-It's okay."
     PRG "I-I am, Jiru. I'm going to be a mama soon, too."
     Jiru "That why… um… That why your tummy is so big?"
@@ -30289,12 +30282,12 @@ label PRG049
     PRG "Y… Yes, that is why."
     Jiru "Oh."
     "Jiru looked up to his mom, who was blushing all shades of pink, red, and everything in between."
-    ??? "I am so sorry, again."
+    UNKNOWN "I am so sorry, again."
     show PRG neutral
     PRG "He's okay…"
-    ??? "Is this your first?"
+    UNKNOWN "Is this your first?"
     PRG "Mhm. I'm having quadruplets."
-    ??? "Four?! Oof… well, best of luck to you both."
+    UNKNOWN "Four?! Oof… well, best of luck to you both."
     MC "Thank you."
     Jiru "Bye, Aida!"
     PRG "Bye, Jiru. Enjoy the game."
