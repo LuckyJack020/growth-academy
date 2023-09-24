@@ -11829,6 +11829,619 @@ label GTS051_afterc2:
     jump daymenu
 
 label GTS052:
+	$setProgress("GTS", "GTS053")
+	scene Mountains with fade
+	play music GTSAlt fadein 2.0
+    show GTS_S neutral with dissolve 
+    MC "A hike?"
+    show GTS_S unique 
+    "Naomi chuckled, jostling me a little despite how she muffled it."
+    GTS "You say it as if it's so bizarre!"
+    GTS "Just look at the world around us!"
+    "Naomi shifted her arm to make me face to her right, so as to put on display a grand panorama of the mountains and the forests in their autumnal beauty."
+    "Unfortunately, almost all of it was blocked out by the swell of Naomi's immense, quivering bust a few centimeters from my face."
+    if getFlag("GTS049_embrace"):
+        MC "Quite a view indeed. So vast… and natural… and per… uh, pervasive."
+        show GTS_S embarrassed 
+        "She looked down at me with a puzzled expression that quickly grew red and contorted."
+        GTS "You could've told me."
+    else:
+        MC "I, uh, assume it's gorgeous."
+        show GTS_S embarrassed 
+        GTS "Ah. My apologies."
+    "She lifted me in the crook of her arm until I could see over her chest."
+    MC "Heheh… oh… woah…"
+    "The landscape blurred before my eyes, mountains watching over green fields alike dressed in lordly gold and crimson."
+    show GTS_S unique 
+    "I put my arm around Naomi's shoulder as I delighted in the sight."
+    MC "It's like flying on an airplane."
+    "She only chuckled and held me up higher, to just nuzzle my face against her cheek."
+    GTS "You know, I've never ridden on an airplane."
+    MC "I… uh, heh, actually haven't either."
+    show GTS_S unique 
+    GTS "Well, I've heard the sights are incomparable."
+    stop music fadeout 10.0
+    "Like the edge of a great, green mist, we began to pass through sparse trees as the path drew us into the forest; it was strange, floating through the speckled, leafy realm of the songbirds."
+    scene woods
+    show GTS_S neutral 
+    with fade
+    play music Nembutsu fadein 2.0
+    GTS "In truth, I had a few particular reasons for doing this."
+    MC "Oh?"
+    GTS "First, I've come to learn that there's a grove of Japanese larches near the hiking trail."
+    show GTS_S aroused
+    GTS "Have you ever seen a whole grove of Japanese larches in autumn, Keisuke-kun?"
+    MC "I… don't believe I have."
+    show GTS_S unique
+    GTS "Well, your deprivation ends today!"
+    "I chuckled and, not really thinking about it, reached up to rub my hand over her cheek."
+    MC "You're precious, Nacchan."
+    GTS "Mmm!…"
+    GTS "Thank you for bringing out the best in me."
+    show GTS_S neutral with dissolve 
+    GTS "So… the other reason I wanted you to come out here with me…"
+    extend " was that, should the need ever arise, I would like to practice walking safely around other people."
+    MC "Other people like me."
+    show GTS_S embarrassed 
+    "Her lips' edges pinched in on themselves as the cheeks around them bloomed with the faintest scarlet."
+    GTS "…Especially you."
+    MC "Ah, does this mean no more shoulder rides?"
+    show GTS_S surprised with hpunch
+    GTS "Perish the thought! I don't know that I'm quite ready to leave {i}that{/i} behind."
+    MC "Heh, good. In that case, it would be my pleasure and honor to aid you."
+    show GTS_S happy
+    GTS "Thank you, my love."
+    hide GTS_S
+    show GTS neutral 
+    with dissolve 
+    "She then eased herself into a proper, ladylike sitting position, and then gently lowered me to the ground."
+    "More and more, despite the gentle grace with which she did everything, even the lightest flits of her only-proportionally slender muscles sent shockwaves through me. It was like being caressed by an excavator."
+    "I stumbled just so out of her embrace and onto the dirt path, my shoe crunching on a leaf as red as a stormy day's sunset."
+    GTS "I want to try and match your pace, like we did before."
+    MC "Oh, okay."
+    pause 0.75
+    MC "Won't that be, erm… extremely slow?"
+    show GTS happy
+    GTS "Oh, it'll be fine! I'll be going just as fast as when we first met!"
+    "I smiled; I couldn't help it, whenever I got to see her like this."
+    "I could count the rays of light coming down from heaven, I felt the brotherhood in the birdsongs, and the warmth off her radiant face amidst the infinite forest horizon."
+    "It seemed to me that every little bit she grew made her even more a fixture wherever she roamed."
+    show GTS wink
+    GTS "Are you quite well? You seem positively transfixed by something."
+    MC "You are so… enchantingly beautiful."
+    show GTS happy
+    GTS "Hmhmhm, thank you."
+    MC "Hm… well then, shall I?"
+    GTS "Please."
+    hide GTS
+    show GTS_S neutral 
+    with dissolve 
+    "I started off, and after I had put a few meters between us, Naomi rose and followed after."
+    "Every minute or so, the slight {i}thumph{/i} from the topsoil deforming under her footsteps would get louder or quieter, speed up a little, slow down some more."
+    "I glanced over my shoulder; with her hands folded over her lap, Naomi was…"
+    "When I took in her whole body, my brain registered her as tip-toeing at a glacial pace across the forest floor; even the sound of the effortless pulverization of so many leaves at once blended together into a single, sandy but unabrasive rasp."
+    "But when I focused on just one colossal leg thrusting through the air, with toes en pointe to pierce the very face of the earth, I was once again today slapped in the face with the vastness of her speed and power, even under such thorough restraint."
+    GTS "How am I doing, my sunshine?"
+    MC "Excellent, so far."
+    MC "That said, we may want to take some of the… circumstantial aspects of your movement into account from now on."
+    show GTS_S pondering 
+    GTS "Hm…"
+    GTS "Is it… difficult to walk near me?"
+    menu:
+    "No, just good to be mindful.":
+    GTS "You're sure?"
+    MC "Completely."
+    MC "Being away from you is {i}much{/i} more difficult."
+    show GTS_S aroused with dissolve
+    GTS "I'm glad you feel that way. It's much too late to back out now."
+    MC "I couldn't if I wanted to, could I?"
+    if getFlag("GTS049_support"):
+    show GTS_S neutral 
+    GTS "You {i}don't{/i} want to."
+    "I couldn't conjure a response, so I turned my head back forward, my cheeks getting a little hot in the sultry forest floor."
+    show GTS_S unique 
+    GTS "Hmhmhm!"
+    "Well… not yet.":
+    GTS "…I see."
+    pause 1
+    GTS "What if, someday, it is? What will we do?"
+    "At the moment, I didn't really know."
+    MC "We find a way to go on, I guess."
+    show GTS_S neutral 
+    GTS "I imagine we shall."
+    $setAffection("GTS", 1)
+    #merge choices here
+    "We kept going for a while before another concern seeped into my head."
+    MC "Naomi-chan?…"
+    pause 0.5
+    GTS "Yes?"
+    pause 1
+    MC "Do you ever regret what we've become?"
+    show GTS_S sad
+    GTS "Hm?…"
+    pause 0.5
+    show GTS_S neutral 
+    GTS "Well… to yearn for a path long past is folly."
+    if getSkill("Art") > 5:
+        MC "To err is human." 
+    else:
+        MC "So, you don't?"
+    #merge choices here
+    "Save for her footfalls, she was quiet for a moment."
+    pause 0.75
+    GTS "…I am thankful for the virtues that have been instilled in me. Even still, my lot in life entails certain bonds and responsibilities that I cannot duly honor while adhering to the precepts."
+    MC "Bonds and responsibilities like what?"
+    GTS "Well, chiefly, to help maintain my family's station. Our primary enterprise is in managing property and land holdings."
+    show GTS_S surprised 
+    GTS "I do admit, as long as our household has been around, it adds up to a rather intimidating figure, even divided between Kazumi and me."
+    MC "How long {i}has{/i} your family been around, exactly?"
+    show GTS_S happy
+    GTS "We were founded in 871 A.D. as retainers of the Ōuchi clan."
+    MC "{i}Oh{/i}.{w} So like {i}old{/i} old."
+    show GTS_S unique 
+    GTS "Indeed."
+    MC "It's kinda cute that you know the exact number off the top of your head."
+    GTS "Erm… thank you. I do try."
+    show GTS_S neutral 
+    "Not really thinking about it, I stepped around a thick tree branch that had fallen on the path."
+    MC "So… where do I fit into your bonds and responsibilities?"
+    GTS "Well…"
+    show GTS_S neutral with vpunch
+    "I jumped as something exploded behind me; a volley of wood chips bounced off my back and bit into my hair."
+    show GTS_S surprised with vpunch 
+    GTS "Goodness gracious! Are you alright?"
+    MC "Y-yeah? Was that you?"
+    GTS "I… I was so absorbed in thought, I stepped on that tree branch without even realizing it."
+    "I turned around, patting the back of my ponytail; Naomi, fingers pinching the hem of her skirt, was gingerly withdrawing her foot from the middle of the tree branch, which had been shattered to powder."
+    "Her face was red as a stormy morning."
+    "She stepped over the broken halves of the branch after a beat and looked down at me, her expression indiscernible."
+    show GTS_S pondering 
+    GTS "Keisuke-kun? Erm… shall we proceed?" 
+    MC "…Can you do that again?"
+    GTS "You want me to step on a tree branch?"
+    MC "…{w}You don't have to if you don't want to."
+    pause 0.75
+    if getFlag("GTS049_embrace"):
+        show GTS_S aroused with dissolve 
+    else:
+        show GTS_S neutral with dissolve 
+    GTS "Well… if it pleases you, my love."
+    "Another rumble in the woods as she stepped back; her raised, bowing skirt framed her dainty footwork, one leg circling behind the other; how effortlessly she commanded those two mighty columns of alabaster."
+    "Shoe en pointe, she raised her front shin up over one half of the branch, and perched it atop the jagged bark."
+    "There was something more than accommodation in the smile she flashed me as she released her full weight onto the groaning timber."
+    show GTS_S happy 
+    GTS "Hmph!"
+    "And then she pressed. The log turned oblong, a cluster of pale, deep fractures ripped into the side…"
+    show GTS_S happy with vpunch
+    "And the thing cracked and burst, shattered into a rain of slivers as long as my forearm, while her untoned calf quivered from hitting bare soil."
+    "A {i}crack{/i} that I could feel echoed through the trees, muddling among the rustles and squawks and hoofbeats of fleeing animals. As though foretelling a spirit, the scent of sawdust suddenly flooded over me."
+    show GTS_S neutral 
+    GTS "I'll be sparing the other half. The beetles and centipedes could use a habitat."
+    MC "Uhh…"
+    "One swift sweep of her leg sent the remaining shards flying off the trail into the ferns and trees, kicking up a tall plume of dust with it. The ground trembled poignantly as she took two steps toward me."
+    show GTS_S wink
+    GTS "I trust I won't have to worry about you looking privily at other girls, Keisuke-kun."
+    MC "No ma'am, not a chance."
+    show GTS_S unique 
+    GTS "As expected."
+    "After a second of rather mindlessly watching the cloud of dust and pulverized lumber twinkling down in the beams of sunlight behind her, I turned around and kept walking."
+    MC "So, uh… you were saying earlier?…"
+    show GTS_S neutral
+    GTS "Mmm…"
+    "She puffed out a sigh."
+    GTS "Please don't misunderstand me, but to carry on a family affair, I will eventually need a family. I will need a husband."
+    MC "…"
+    MC "Am I husband material?"
+    GTS "I think you are."
+    GTS "My father, at the very least, doesn't disagree out of hand."
+    MC "Is that… {w}why he approved in the first place? Like, us dating?"
+    GTS "Most likely, yes."
+    "My eyes opened a little wider, if only for Naomi's sudden candidness. The deep forest was growing a little brighter, a little warmer."
+    MC "Heh… I almost wonder how I cleared the bar that early."
+    GTS "Hmhm… I don't."
+    pause 0.25
+    GTS "You're so abundant in kindness and understanding, all the time. Goodness is perennial in you like no one I've ever met."
+    GTS "If tomorrow you were spirited away from me…"
+    pause 0.5
+    GTS "Well, I would count these the best days of my life."
+    MC "Well… I'm not going anywhere, blossom."
+    "She didn't respond for a second."
+    show GTS_S happy with vpunch 
+    MC "Gwuh-!"
+    "Until I felt a set of impossibly huge fingers wrap around my middle from behind. The G force as she pulled me up and behind to her face pressed my neck against my shoulder and whipped my ponytail around over {i}my{/i} face."
+    "Gently she flipped my hair out of the way with her fingertip, and gave me the softest, warmest peck on the forehead with her lower lip."
+    show GTS_S embarrassed 
+    "Her face soured as she withdrew."
+    GTS "Erm, would you kindly pull your hair off my lip? I am… unsure I can muster the delicacy required."
+    MC "Yeah."
+    MC "And on the subject of, uh, delicacy, you may wanna take it a little slower next time you pick someone up, Nacchan." 
+    show GTS_S surprised 
+    GTS "Ah! Of course, I'm sorry."
+    "Once I'd extracted the stray tresses, she eased down on one knee and then the other, and set me down."
+    "Her eyes fixed behind me just as she was about to stand."
+    show GTS_S neutral 
+    GTS "Hm?…"
+    show GTS_S happy 
+    GTS "Look, Keisuke-kun!"
+    "I turned and, just from this angle, saw a sliver of gold shine in the midst of the bark, squinting from the radiance of it."
+    MC "Is that… the larch grove?"
+    show GTS_S neutral 
+    GTS "So it is. Let's get closer, shall we?"
+    "We stepped off the trail together… more or less… and while she was worming her way through the tree branches, breaking as few as she could, I traipsed through the grassy underbrush until my shoes kissed the edge of a dropoff, down a hill."
+    "Beyond was a saffron abyss, a mountain valley cloudy with the autumnal canopies of the larches receiving the bountiful sunlight and most generously reciprocating it."
+    show GTS_S unique
+    MC "…Woah…"
+    "I was struck, too, by their antiquity. Some of them dwarfed even my towering girlfriend several times over. The very tops fluttered just faintly in a breeze I could now feel on my cheek."
+    show GTS_S neutral 
+    GTS "There was a valley much like this one on Mount Hiei."
+    GTS "My grandmother would take me there some weekends to practice sitting meditation, and sometimes we would chat a while with monks, from the nearby temples."
+    MC "I can see why."
+    GTS "Indeed."
+    pause 0.5
+    "A stronger gust rolled down the mountain, shaking a rustling sigh from the forest all around."
+    pause 0.5
+    GTS "One can hardly imagine everything these trees have witnessed."
+    GTS "Some of them could be over a hundred years old… a hundred years standing up here, watching all the striving, the tumult, the sorrow."
+    GTS "And then, watching life go on."
+    GTS "And watching the cycle begin anew."
+    if getFlag("GTS049_embrace"): #if they had sex
+    pause 1
+    MC "Do you… think the trees… watched us fuck?"
+    show GTS_S unique 
+    "Naomi's high, resonant titter shattered the quiet air as she nearly doubled over."
+    "She tried to say something, but it got caught between her lips and her teeth in another shuddering laugh."
+    show GTS_S happy
+    GTS "L-{i}Language{/i}, mister!"
+    MC "Sorry. Do you think the trees watched us prepare tea?"
+    GTS "{i}Khm{/i}… likely not, we were inside."
+    MC "Ah, you got me there."
+    show GTS_S neutral 
+    else:
+    MC "Did you ever envy them?"
+    show GTS_S pondering 
+    pause 0.75
+    GTS "The trees?"
+    show GTS_S surprised 
+    GTS "Ah, the monks."
+    MC "Yeah."
+    show GTS_S neutral 
+    GTS "As much as the next five-year-old girl, I'd wager. Even dreaming of becoming a boddhisattva one day, I was… not quite ready, spiritually, to jump into that life of interminable chores and doldrums."
+    GTS "Now that I'm older, well… I imagine there are worse ways to live life."
+    MC "I imagine so. Personally I think I'll stick to my life of sin, though. I've gone too far to turn back now."
+    "Naomi smirked."
+    show GTS_S pondering 
+    GTS "Hmm…"
+    GTS "Pray tell, are your parents religious in particular?"
+    MC "My dad owes his soul to Kazoku Mart, if that counts."
+    show GTS_S neutral 
+    GTS "Hmhm, that wasn't quite what I meant."
+    MC "Well, definitely not like yours. You can probably tell Tomo-chan and I were not raised in a monastery."
+    MC "We'd visit shrines every so often, but I never got the impression my mom and dad were that passionate about it."
+    GTS "I see. I imagine most families are something like that."
+    MC "Yeah."
+    "I stared down the hillside for a second."
+    menu:
+    "Let's get closer":
+    GTS "I shall go first. I shouldn't like to trip and fall with you in front of me."
+    "I stepped to the side, extending my arm."
+    show GTS_S unique 
+    GTS "Ever the gentleman."
+    show GTS_S neutral 
+    "Naomi extended her hands out to either side, palms down, as though headpatting two Saint Bernards at once, and made a first tentative step down the slope."
+    "As expected, she was hardly in any danger of falling over. One foot hooked gracefully around the other, leaving nearly a straight line of flat divots in the grass as she descended."
+    "I noted how long it took before my eyeline was about level with hers. Surprised isn't the right word… brought back to reality, I suppose."
+    "Once she was about halfway down, I began following, literally, in her footsteps. At the bottom, she turned to crook her finger at me to come, before slipping in through the trees."
+    hide GTS_S with fade
+    "Let's roll down":
+    show GTS_S pondering 
+    GTS "Roll down?"
+    MC "Like on our sides."
+    pause 0.75
+    MC "C'mon, it'll be fun!"
+    GTS "It's rather a silly idea, isn't it?"
+    show GTS_S unique 
+    extend " Let's do it!"
+    "I reached over to slap the back of her calf."
+    MC "Yeah, YOLO!"
+    show GTS_S neutral 
+    GTS "Come again?"
+    MC "Oh, uh, it's like an expression. It stands for 'you only live once'."
+    GTS "I'm afraid I must disagree on theological grounds."
+    MC "Fair enough. Still wanna do it?"
+    GTS "I do. Allow me to go first."
+    hide GTS_S
+    show GTS neutral 
+    with fade
+    GTS "Mm…"
+    "Naomi lowered herself down on her stomach, her bent arms framing her boulder-like bust as if about to attempt a push-up. Her legs gave a couple languid kicks as she looked down the hill, assessing the landing."
+    "Satisfied, she pushed off."
+    show GTS surprised with vpunch 
+    GTS "Hwah!"
+    show GTS surprised with vpunch
+    "She plummeted, rolling like thunder, and for that second and a half I could've believed I was caught in a minor earthquake, the way her unfettered mass sent goosebumps through the skin of the earth, just like mine."
+    show GTS unique with vpunch 
+    "With one final shockwave up the hill and up my legs, she thrust out her arm to stop herself just short of crashing into a larch."
+    GTS "{size=36}Hahahaha!{/size} Oh, what a delight!"
+    show GTS neutral 
+    GTS "Your turn, my love! I'll catch you!"
+    MC "Coming!"
+    "I got on my stomach too, roughly in Naomi's direction, and I went a-tumbling."
+    "It flew by as a dream, a cacophony of wind and scrunching grass and blurs of green and yellow and blue, a smile, a bigger smile as my head rattled on the dirt."
+    show GTS happy
+    "The stop was smooth, apart from the sudden sinking in my stomach. I recollected myself and gradually perceived the upper boughs waving to and from me."
+    GTS "Look, you're flying!"
+    MC "Kheheheh, you dork."
+    "After swirling me around in the air a couple more times, Naomi set me down."
+    $setAffection("GTS", 1)
+    hide GTS
+    show GTS_S neutral 
+    with fade
+    GTS "Well now, shall we see it from the inside?"
+    MC "Capital idea, old sport."
+    "Naomi chuckled and squeezed her body in between the carrot—leaf—like trunks of the larches."
+    "I followed her, keeping up pretty well on account of her tender wrestling with all the sticks and branches about her face, and found myself in a small otherworld, divine in its warmth, its quiet, its radiance."
+    show GTS_S unique 
+    "Fortunately, the trees grew taller towards the center of the grove, granting even Naomi a little reprieve."
+    GTS "Keisuke-kun? You seem rather befuddled."
+    MC "I… guess I've never really seen anything like this before."
+    GTS "I suppose I haven't either, after a fashion."
+    show GTS_S embarrassed 
+    GTS "As vast as Mount Hiei's groves seemed when I was a child, now they feel rather more… personal."
+    MC "…Probably just about everything does."
+    GTS "Not untrue."
+    show GTS_S neutral 
+    GTS "Ah, it looks as though there's a clearing ahead. Let's sit and appreciate these environs a while, shall we?"
+    "I looked, and there it was: a patch of bare grass around a small cluster of rock stupas, themselves encircling six jizo statues, robbed by the elements of their wrappings. All of it was awash in sunrays."
+    show GTS_S embarrassed 
+    "Naomi crouched under the lower boughs at the edge of the clearing, and then tiptoed more slowly than I'd ever seen her move before."
+    "It was like she was in slow motion, from cat-stepping up close… but not too close… to the little old memorial, to ever-so-gently lowering herself down into half-lotus position."
+    hide GTS_S
+    show GTS sad 
+    with fade
+    "I sat down next to her."
+    GTS "Mm… poor things. We shall have to return someday soon with baby blankets."
+    show GTS pondering 
+    GTS "Or hats."
+    MC "Yeah… we should."
+    stop music fadeout 7.0
+    pause 0.5
+    show GTS neutral with dissolve 
+    "After a moment, she breathed out and shut her eyes; I joined her."
+    scene black with fade
+    pause 3
+    "{i}creaaaaak{/i}"
+    pause 2
+    "{i}creak{/i}"
+    pause 3
+    "{i}creaaaaaaaak{/i}"
+    MC "…What's that sound?"
+    scene woods
+    show GTS neutral 
+    with fade
+    show GTS pondering 
+    GTS "Hm? What sound?"
+    MC "Like a tree branch bending. You don't hear that?"
+    GTS "I… don't."
+    hide GTS
+    show GTS_S pondering 
+    with fade
+    "I stood up and looked around, at first perceiving nothing out of the ordinary. Naomi got on one knee and stood as well."
+    MC "I think it came from over there."
+    hide GTS_S with dissolve 
+    "Indeed, I picked up the sound again, a little louder, as I walked to the edge of the clearing, next to a thin corridor of younger trees."
+    "In a moment I realized the noise was right above me; I looked up."
+    MC "?…"
+    if isEventClear("BE021") or getFlag("Meet_Haruhiro"):
+    MC "…Haru… Haruhiro? What are you doing out here?"
+    "Shakily clinging to a couple tree branches some seven meters above me was a familiar elephant-eared archer with his trusty longbow and a bandolier of various first aid supplies slung around his shoulder."
+    else:
+    MC "…Do you, uh… need some help, dude?"
+    "Shakily clinging to a couple tree branches some seven meters above me was a young man with a longbow and… a bandolier of first aid supplies slung over his shoulder."
+    "His saucer-sized ears and the emblem on the breast of his button-up marked him as a fellow student."
+    "He immediately made the most violent shushing gesture I've ever seen, and frantically jabbed his finger back the way I came."
+    MC "You… want me to leave you alone?"
+    "I then heard rustling in the grass out among the younger trees, and looked over to see who it was."
+    "Just under it, I also heard a low, bestial grumble. Out from behind a tree plodded a grizzly bear as high as my shoulder."
+    "It turned its head to look directly at me, its wet black nose pulsating."
+    MC "Uh… Naomi?…"
+    "It grumbled louder and began trotting towards me, then broke into a charge."
+    MC "{i}Naomi!{/i}"
+    "She didn't answer. {w}As I turned to run, I staggered at the sight of Naomi diving through the air, sailing past me like a runaway freight car. Her arms were outstretched and grasping, her huge, white eyes and clenched teeth a mask of ghastly fury."
+    "The four-hundred-kilogram beast faltered at the sight, too, and began to turn just as Naomi was about to hit the dirt."
+    "{i}THOOM{/i}"
+    "My legs unsteady as they already were, the impact put me hard on my ass. I sucked in a breath while listening to Naomi's grunts of effort and the bear's distressed baying, and jumped to my feet."
+    show GTS angry
+    "Wrestling with the beast, Naomi tried to roll onto her back, leaning her hips against a young larch, her weight snapping its trunks one by one, each one a thunderclap. Wood chips rained down on me, again."
+    "The dust began to settle with Naomi holding the grizzly up in the air; it flailed but was completely pinned in her hands."
+    GTS "{size=36}I've got him!{/size}"
+    GTS "{size=36}Keisuke, are you alright?{/size}"
+    MC "Holy shit!"
+    GTS "{size=36}Keisuke!{/size}"
+    MC "Y-Yeah! I'm fine!"
+    GTS "Oh, thank the stars!"
+    MC "Do you…"
+    MCT "What the hell could I possibly do to help?"
+    "My mind flew to the man in the tree."
+    "He wasn't in the tree, however; he was on the ground in front of it, wincing and rubbing his arm."
+    if isEventClear("BE021") or 
+        MC "Haruhiro-san!"
+        GTS "Who? Is someone else here?"
+        Haruhiro "Affirmative!"
+        MC "It's the president of the archery club, he was up in the trees for some reason."
+        "After staring in Naomi's direction for a second or two, agape, he sprung to his feet with surprising vigor."
+        "I was about to ask him again what he was doing when Naomi cut in."
+    else: 
+        MC "Who are you, anyway?"
+        GTS "Who? Is someone else here?"
+        ??? "Affirmative! A-And acknowledged!"
+        MC "Some guy was up in the trees. I think he's another student."
+        show GTS surprised 
+        GTS "Heavens! Is he really?"
+        "After staring in Naomi's direction for a second or two, agape, he sprung to his feet with surprising vigor."
+        ??? "I'm-"
+        "He gave me a sharp bow that flung his other bow off his shoulder. After bending down to pick it up, he cleared his throat."
+        Haruhiro "I'm Haruhiro Haganeya, president and company commander of the Seichou Academy Archery Club."
+        $setFlag("Meet_Haruhiro")
+        MC "Alright then. Can I ask you what you were doing in that tree?"
+        "Naomi cut in before he could answer."
+    show GTS surprised 
+    GTS "There's an arrow in its posterior!"
+    MC "An arrow?"
+    GTS "Yes. Heavens, what a dreadful sensation…"
+    MC "…"
+    "I thought over the facts as I let the veins in my neck gradually stop throbbing."
+    MC "You know who shot that bear, Haruhiro-san?"
+    "He chewed his lips for a second."
+    Haruhiro "At eleven hundred hours I was conducting periodic one-man shooting drills approximately one-point-five klicks from the trail when at least one ursine belligerent entered my perimeter."
+    show GTS neutral 
+    GTS "Shhhh… easy now, you're alright…"
+    "I glanced over to see Naomi petting the bear's belly with her fingers. Somehow, it did seem to be relaxing a little."
+    Haruhiro "Then, uh, once contact was established, pursuant to R.O.E. I took position and readied my weapon."
+    "He looked away from me."
+    Haruhiro "At that point, the known ursine belligerent initiated a rearward withdrawal.{w}.. however, a failure of morale caused a misfire of my weapon, which struck the K.U.B. mid-withdrawal."
+    show GTS pondering 
+    Haruhiro "Upon being hit, the K.U.B. reversed its withdrawal and advanced on my position. I then elected to conduct a tactical retreat and regroup at an elevated position."
+    if getSkill("Academics") > 7:
+        pause 0.5
+        MC "You know bears can climb, right?"
+        pause 0.5
+        Haruhiro "Aforementioned failure of morale may also have caused a deficit of field applications of information."
+        pause 0.5
+        MC "Jesus…"
+    else:
+        pause 0.5
+        MC "Alright, I'm gonna need a translation for whatever the hell you just said."
+        Haruhiro "I got scared and I shot it in the ass, okay?"
+    show GTS angry
+    "Naomi sat up, her brow furrowed as she regarded Haruhiro. As though feeling it, he bowed deeply."
+    Haruhiro "Please accept my sincere apologies if I put you in harm's way."
+    "'If'. And then there was fire in my throat." 
+    MC "No {i}shit{/i} you did, I was two seconds from getting mauled by a goddamn bear!"
+    MC "Were you just gonna sit and hide!?"
+    Haruhiro "I-"
+    GTS "Peace, Keisuke-kun."
+    "Carefully adjusting her grip on the bear, Naomi got into a sitting position."
+    GTS "Look at me, Haruhiro-san."
+    "He obeyed, without hesitation."
+    if getVar("GTS_selfhood") > 5:
+        GTS "I must impress upon you the gravity of the situation. There is no honor in pressing a fight you cannot win."
+        GTS "If you thought this creature a threat, then you ought to have fled without needlessly spilling blood and putting innocent people in danger."
+        GTS "Do you understand, Haruhiro-san?"
+    else:
+        GTS "From the sounds of it, you very well knew this bear had no ill intent toward you until it was attacked. Leaving it in peace would have spared my boyfriend's safety {i}and{/i} your dignity."
+        GTS "In that light, the shadow of some illusion of personal glory were a small price to pay."
+        GTS "Wouldn't you agree, Haruhiro-san?"
+    Haruhiro "Y-Yes, ma'am."
+    MCT "I feel a little better."
+    show GTS neutral 
+    GTS "Very good."
+    GTS "Now, if you would atone for this lapse of judgment, I think a fine first step would be to use some of those supplies you've got around your shoulder to help treat the wound."
+    Haruhiro "On the {i}bear{/i}? Are you crazy?"
+    GTS "Do you wish to be a man who runs from his problems? Or do you wish to be a man who stands up and takes charge of what is his?"
+    "I could see on his face that the question struck him through the heart."
+    Haruhiro "I… {size=6}Agh… dammit.{/size}"
+    Haruhiro "…{w}Understood. Here, I have some antiseptic."
+    GTS "Do you have any vulnerary materials?"
+    Haruhiro "Yes, ma'am."
+    GTS "Very good. Please smear a generous dab of it over the site once you've applied the antiseptic."
+    Haruhiro "Yes ma'am."
+    "Holding down its back legs, Naomi lowered the bear to Haruhiro's level. He slunk towards the hulking creature's backside, the bottle vibrating in his hand."
+    "He gulped and put his free hand on the arrowshaft."
+    GTS "Shhhhhh…"
+    show GTS surprised with vpunch 
+    "The howl when he yanked it out nearly sent him tumbling, and even Naomi jumped, but thank God she didn't let go."
+    "She kept on murmuring gentle platitudes as Haruhiro frantically squirted antiseptic on the wound, pouring down its leg mixed with trickling blood, and then slapped a gob of pale yellow goop on the spot."
+    "Seeing some blood about to drip onto her leg, Naomi winced, looked away, and held her captive out over the grass."
+    "A few minutes more, and it had quieted down enough to talk again."
+    Haruhiro "So… is the objective complete?"
+    show GTS neutral 
+    GTS "I suppose it is. Moreover, perhaps it would be best if you chose another site in which to conduct your drills."
+    Haruhiro "I will… consider rectifying operational procedure."
+    Haruhiro "Requesting dismissal, ma'am."
+    GTS "Keisuke-kun, are you satisfied?"
+    MC "Yeah, I suppose so."
+    "She nodded."
+    GTS "You may take your leave."
+    Haruhiro "Yes ma'am!"
+    "With that, he bowed and started jogging back to the trail."
+    play music GTS
+    "I waited until he was most definitely out of the grove."
+    MC "I almost died because of {i}that{/i}. Isn't life funny?"
+    show GTS angry
+    GTS "What a pompous applejack. If he had truly…"
+    "She closed her eyes, and gulped."
+    GTS "Thank heavens we were here together, and not some other poor, hapless soul."
+    show GTS neutral 
+    GTS "Though I must admit, that your first instinct upon seeing a bear charging at you was to warn me was quite commendable. I don't know how many would stand their ground under the circumstances."
+    MC "I mean, {i}your{/i} first instinct was to tackle it."
+    GTS "I could hardly stand by and watch, now could I?"
+    GTS "After all, courage is one of the most esteemed virtues for us Yamazaki."
+    MC "I imagine it helps that it's like the size of a shiba inu to you now."
+    show GTS embarrassed 
+    GTS "I suppose my strategy would otherwise have been rather unsound."
+    MC "And by the way… how did you get that guy to just… do what you say?"
+    show GTS neutral 
+    GTS "Elementary."
+    GTS "At the heart of social harmony is mutual compassion and understanding."
+    GTS "Recognize the wants, needs, and merits of your fellow man, and often he will reciprocate in kind."
+    $setSkill("Academics", 1)
+    MC "…Huh."
+    if getSkill("Academics") > 8:
+        MC "So, how did you know what {i}he{/i} wanted?"
+        GTS "As is often the case, simply listen and he will tell you."
+        MC "Heh, I guess so."
+        MC "Did I ever tell you I'm glad you're on my side?"
+        show GTS happy
+        GTS "You don't need to, my love."
+    show GTS neutral 
+    "She looked down; the bear had more or less calmed down, its fury reduced to the occasional bassy whimper."
+    GTS "Speaking of which, it appears this poor fellow is ready to be let go."
+    GTS "I'll walk a fair distance away and then release him."
+    show GTS pondering 
+    GTS "I hope the vulnerary doesn't wash off."
+    MC "Hopefully not, but I dunno what else we can do for him."
+    GTS "Nothing for it but to pray for good will to prevail, I suppose."
+    hide GTS
+    show GTS_S neutral 
+    with fade
+    "Thus she arose and, with the same graciously glacial steps she'd gotten here with, walked to the edge of the clearing."
+    hide GTS_S with dissolve 
+    "I can't be sure, but I thought I saw the bear turn its head around her shoulder to give me one plaintive parting glance."
+    "When she was out of earshot, I let out a long sigh, longer than I knew was in me."
+    "I looked around the grove; all the legion of the golden leaves waving in the afternoon sunlight had begun to look more like the wriggling boundaries of a dreamscape."
+    "Before I could contemplate too much on why, I registered Naomi coming back my way."
+    MC "All taken care of?"
+    "She nodded, and casually looked to the side, back toward the little jizo shrine."
+    show GTS_S surprised 
+    extend " Her hand floated up to her mouth."
+    MC "Nacchan?"
+    "I turned my head."
+    MC "Oh..."
+    "The statues lay on their sides, sprayed over with dirt and grass. The stupas were crumbled into a loose, ruinous ring of stones."
+    hide GTS_S
+    show GTS sad
+    with fade
+    "She got down on her hands and knees after stepping softly up to the shrine; she reached out, faltered, then pushed each of the statues up with her fingertip, one by one."
+    "She sighed, and then pinched some of the larger stones between her fingers."
+    "It slipped, clattering on the bones of its brothers. She pinched it again.{w} And again.{w} Five times.{w} Ten."
+    MC "Naomi-chan…"
+    pause 0.75
+    show GTS sad-2
+    "She bowed her forehead to the ground."
+    GTS "Please forgive me, little ones. I did not… have it within me to act for the greater good."
+    GTS "I promise I will make this right."
+    "And she looked up, and kept on trying to stack the stones."
+    "Amid the silence, apart from that clattering like a languid clock, I stepped, too, knelt down, and started stacking the rocks around the little jizo statues."
+    pause 0.75
+    show GTS neutral with dissolve 
+    "She was still for a while, until she started trying to slide the larger stones atop each other for me; it worked."
+    pause 0.5
+    GTS "You're so brave."
+    "I smiled a little."
+    MC "If you need me to be, I will be."
+    jump daymenu
+
+label GTS053:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
