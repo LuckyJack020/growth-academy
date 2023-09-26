@@ -3512,6 +3512,7 @@ label AE020_c1_1:
     jump daymenu
 
 label AE020_c1_2:
+    $setFlag("AE020_c1_2") #LockRoute for Dating was chosen
     MC "Shiori-san..."
     "I stood straight, though my knees felt like they were betraying me, and I bowed with the ferocity of a hammer coming down on an iron nail."
     play music Romance

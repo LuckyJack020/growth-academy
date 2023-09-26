@@ -9463,9 +9463,9 @@ label FMG053:
     FMG "Don't worry about me, I only felt a slight tickle, these babies are like steel!"
     "She lifted up her shirt to flex her abs but quickly put it back down when she remembered we were still in the hallway."
     show FMG happy
-    FMG "Heh, whoops. Got a little too into for a second."
+    FMG "Heh, whoops. Got a little too into it for a second."
     show FMG neutral
-    extend " Seriously though, do you want to go to nurse real quick? I want to make sure you don't have a concussion or anything serious."
+    extend " Seriously though, do you want to go to the nurse real quick? I want to make sure you don't have a concussion or anything serious."
     MC "I feel fine now. But, yeah, that's probably a good idea."
     FMG "You want me to carry you?"
     MC "Nah, I should be fine to walk, thanks though."

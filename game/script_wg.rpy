@@ -14507,6 +14507,7 @@ label WG055:
     MC "Hey— what are you doing here? I thought you said you'd be busy."
     show WG doubt
     WG "I go out of my way to drop by and spend time with you and all you have to say in return is \"What are you doing here?\" Am I interrupting something important?"
+    show WG sly
     "Alice was being playfully coy in her tone and faux expression, but I could tell she was trying to get a point across too."
     MC "No, not at all. You're right, that's not the best way to express my thoughts properly. Sorry about that. Let's try this again."
     MC "Ahem— Why Alice, what a lovely surprise that such beauty deigns to grace my presence! Pray tell what circumstance allowed for such a serendipitous rendezvous?"
@@ -14533,10 +14534,11 @@ label WG055:
     "Wanting to change the subject and move on from here, I stood up from my position leaning back against the tree."
     "As I leaned over to dust myself off from sitting on the ground, I must have bumped the play button on my phone."
     play music KnowMyself
+    show WG surprised-2
     "With the earbuds no longer connected, it started broadcasting the song I was listening to for anyone passing by to hear."
     "♪...Love is just a game...♪"
     "♪...If I'm having fun then it's okay...♪"
-    "As much as I liked the song, though loath to admit it, even I had to confess the electronic drums and jazzy discotheque sound of 80s J-pop was painfully outdated by current music standards."
+    "As much as I liked the song, though loath to admit it, even I had to confess the electronic drums and jazzy discotheque sound of 80s J\uFEFF-\uFEFFpop was painfully outdated by current music standards."
     "I felt myself wince, as I knew Alice wasn't going to let me off the hook, given her strict preference for high art and classical music."
     show WG happy
     WG "Pffft, hahaha! Keisuke, what on earth are you listening to?"
@@ -14957,7 +14959,7 @@ label WG056:
     scene black with fade
     pause 0.5
     $setTime(TimeEnum.DAY)
-    scene Dorm Exterior
+    scene Dorm Hallway
     show WG worried
     with fade
     play music HigherEdu
@@ -15051,7 +15053,7 @@ label WG056:
     stop music
     scene Dorm WG
     show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
-    show WG surprised-2 at Position(xcenter=0.8, yalign=1.0)
+    show WG surprised-2 at Position(xcenter=0.7, yalign=1.0)
     with fade
     play music WG
     WG "Tomo, what a lovely surprise. I didn't expect I'd be seeing you again so soon."
@@ -21390,7 +21392,6 @@ label WG072:
     $setWGOutfit(OutfitEnum.NUDE)
     play music Peaceful
     scene Hotel Room with fade
-    "Despite having the curtains closed, the light peering through the space between them and their outline was enough to wake me from my slumber."
     MCT "Was last night a dream?"
     $ persistent.unlock_cgWG072 = True
     show cg WG072 with dissolve
@@ -22917,7 +22918,7 @@ label WG076:
     show WG surprised-2
     MC "Don't worry, it will only be for a little bit."
     Chibuki "What? Where are you going?"
-    MC "Like I said, I got an idea. I just need to get some supplies. This isn't going to be that simple— I don't want Akira accidentally pulling her arms off trying to lift her out."
+    MC "Like I said, I got an idea. I just need to get some supplies. This isn't going to be that simple— I don't want Akira accidently pulling your arms off trying to lift you out."
     show WG neutral-2
     WG "If that's the case, then I appreciate the consideration."
     show PRG neutral
@@ -22970,7 +22971,7 @@ label WG076:
     Jineko "That's kinda specific, but we probably have something like that."
     "Turning aside, Jineko yelled across the room to someone."
     Jineko "Hey Misuboro-san, do we have any of that egg crate packing foam we could use? The really dense kind."
-    Misuboro "No! What the hell do you need that stuff for? That's for shipping equipment back to the manufacturer if it breaks, or {i}when{i} it breaks, given how you kids treat everything in this shop like it's magically indestructible and somehow free to replace."
+    Misuboro "No! What the hell do you need that stuff for? That's for shipping equipment back to the manufacturer if it breaks, or {i}when{/i} it breaks, given how you kids treat everything in this shop like it's magically indestructible and somehow free to replace."
     Misuboro "Then again, what else should I expect when these kids treat their beds like trampolines here?"
     if not getFlag("Meet_Misuboro"):
         $setFlag("Meet_Misuboro")
@@ -27578,7 +27579,7 @@ label WG087:
     WG "You're doing it again."
     MC "Doing what?"
     show WG sly
-    MC "Like said, can't a guy awkwardly keep his hand behind his back without getting asked questions about it?"
+    MC "Like I said, can't a guy awkwardly keep his hand behind his back without getting asked questions about it?"
     show WG happy-2
     WG "The answer is still no, I'm afraid."
     MC "Okay, well, this time I figured I should deliver on the goods."
@@ -27655,7 +27656,7 @@ label WG087:
     show PRG insecure
     show WG doubt
     "As gentle as could be expected anyway."
-    WG "That's odd, I don't remember the sofa making noise before. Perhaps the joints need waxing after being in this cold dry weather for so long."
+    WG "That's odd, I don't remember the sofa making noise before. Perhaps the joints need waxing after being in this cold dry weather for so long?"
     MCT "Sure... let's go with that Alice."
     show PRG worried
     "Needless to say I wasn't quite convinced it was some dry jointing in the wood frame."
@@ -27754,7 +27755,7 @@ label WG087:
     PRG "I... kind of thought he would come back. It's common in these kinds of movies. But... that's still so heartwarming..."
     WG "Like he told her, \"Death cannot stop true love.\""
     "The hero dispatched the bandits to run away with the princess, only to be caught by the prince, who made no distinction between the hero and the bandits, who sought to have him executed on the spot."
-    "In exchange for not harming him, the princess agrees to return with the prince... who immediately breaks the promise by jailing and torchering the guy."
+    "In exchange for not harming him, the princess agrees to return with the prince... who unbeknownst to her, immediately breaks the promise by jailing and torchering the guy."
     PRG "They were so close... just let them be happy..."
     WG "He saved her, now she saved him. Sometimes just knowing the person you love is alright is enough, even if you can't be with each other."
     show PRG insecure
@@ -27845,7 +27846,7 @@ label WG087:
     show WG sly
     extend " Though seeing how you and Tomo bicker back and forth constantly, I have to wonder if I dodged a bullet."
     show WG surprised-2
-    MC "Don't tell her I said it, cause I had to admit it, but I wouldn't trade her for anything."
+    MC "Don't tell her I said it, cause I hate to admit it, but I wouldn't trade her for anything."
     show WG sly
     MC "{i}Uggh{/i}, why did I do that? There's no way you're keeping that a secret."
     WG "Oh, not a chance. But I'll at least wait for a good moment."
@@ -27969,7 +27970,7 @@ label WG088:
     show WG sly
     WG "Yes, quite the mystery indeed."
     show WG pondering
-    WG "Perhaps we could do a cross-over meeting with the music club and the cooking club, get them to cater the practice. I'm sure they'd be up for the practice."
+    WG "Perhaps we could do a cross-over meeting with the music club and the cooking club, get them to cater the practice session. I'm sure they'd be up for the practice."
     if isEventCleared("MC009") or getFlag("Meet_Michiko"):
         MC "I could talk with Aida and Sakura to reach out to Sano-san to see if she could get a group together for that."
     elif isEventCleared("WGBE004B"):
@@ -27996,6 +27997,7 @@ label WG088:
     Okisho "Seems like that should take care of it then."
     show WG doubt
     WG "{i}Should{/i} being the keyword. It won't be if people don't know about it."
+    show WG neutral
     MC "I bet we could ask the homeroom teachers to make an announcement about it and the optional extra course credit."
     if getFlag("Meet_Hageshi") and getFlag("Meet_Tsubasa"):
         MC "I wouldn't mind reaching out to them, since I know most of them."
@@ -28045,7 +28047,7 @@ label WG088:
     MC "I actually had something."
     Okisho "What's on your mind, Shaggy?"
     show WG neutral
-    MC "It actually was about another concert, the one with your brother, Itchia"
+    MC "It actually was about another concert, the one with your brother, Itchia."
     Okisho "What about him?"
     MC "Well, I was just wondering—"
     Okisho "OH! I get it. You want tickets to one of his shows to impress your girlfriend? I guess I could try to swing it with him, but I can't promise anything. I can't get you plane tickets back to the mainland though, you're on your own with that."
@@ -28145,7 +28147,7 @@ label WG088:
     WG "Not that I particularly enjoyed the task or ever looked forward to it, mind you, but it's another daily reminder of how things have changed." 
     WG "I've always been used to having the aid of servants to assist with the more mundane tasks of life... just never really to this extent." 
     show WG sad
-    WG "{i}Sigh{i}... all of this has made me realize it's been a luxury to accept help as a convenience— but it's an inconvenience to accept it out of necessity."
+    WG "{i}Sigh{/i}... all of this has made me realize it's been a luxury to accept help as a convenience— but it's an inconvenience to accept it out of necessity."
     show WG neutral
     WG "I suppose I shouldn't complain though. There isn't a practical distinction between the two outcomes."
     MC "No, I get you. That makes total sense. It's an unfair situation and you have every right to feel that way." 
@@ -31971,7 +31973,7 @@ label WGFMG004B:
     show FMG angry-3
     FMG "What!?"
     show WG neutral
-    WG "Don't get me wrong, it's certainly world class cuisine in its own right, but I don't think it's fair to compare it to a 12,000 yen lunch at a five star restaurant in Singapore."
+    WG "Don't get me wrong, it's certainly world class cuisine in its own right, but I don't think it's fair to compare it to a 12,000 yen lunch at a three star restaurant in Singapore."
     show FMG surprised
     FMG "12,000 yen! For soba! Who has that kind of cash?"
     WG "..."
