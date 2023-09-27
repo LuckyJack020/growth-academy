@@ -7531,7 +7531,7 @@ label FMG044:
     show FMG neutral
     FMG "It's fine, Kei~ I think it's a good idea that we stopped, though... I was really starting to get into it but I think the custodians will be here any moment..."
     MCT "So she was playing dumb!"
-    #show CG scene4_02.png
+    #show CG scene4_02.webp
     FMG "Think of it as a little taste of what you can expect for next time. A taste for *me* at least!"
     #hide cg
     show FMG flex

@@ -163,825 +163,825 @@ define Woman = Character('Woman', color="#C0C0C0")
 #Scenes
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
-image NYI = "Graphics/ui/bg/NYI.png"
+image NYI = "Graphics/ui/bg/NYI.webp"
 
 #Campus
-image Admin Hallway = "Graphics/ui/bg/hallway.png"
-image Art Classroom = DynamicImage("Graphics/ui/bg/artroom_[gametime].png")
-image Auditorium = DynamicImage("Graphics/ui/bg/archiveBG/auditorium_[gametime].png")
-image Auditorium Storage = DynamicImage("Graphics/ui/bg/archiveBG/auditoriumstorage_[gametime].png")
-image Bathroom = "Graphics/ui/bg/archiveBG/bathroom.png"
-image Biology Lab = DynamicImage("Graphics/ui/bg/archiveBG/biologylab_[gametime].png") #Biology Laboratory Classroom
-image Cafeteria = "Graphics/ui/bg/archiveBG/cafeteria.png"
-image Campus Center = DynamicImage("Graphics/ui/bg/archiveBG/campuscenter_[gametime].png")
-image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png") #Tashi-sensei's Homeroom Classroom
-image ClassroomAlt = DynamicImage("Graphics/ui/bg/classroom_alt_[gametime].png") #Tashi-sensei's Homeroom Classroom - Alternate View
-image Classroom2 = DynamicImage("Graphics/ui/bg/archiveBG/classroom_2_[gametime].png") #Takamura-sensei's Homeroom Classroom
-image Classroom3 = DynamicImage("Graphics/ui/bg/classroom_3_[gametime].png") #Tsubasa-sensei's Homeroom Classroom
-image Classroom4 = DynamicImage("Graphics/ui/bg/archiveBG/classroom_4_[gametime].png") #Hageshi-sensei's Homeroom Classroom
-image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].png")
-image Computer Room = DynamicImage("Graphics/ui/bg/computerroom_[gametime].png")
-image Cooking Classroom = "Graphics/ui/bg/cooking.png"
-image Faculty Room = DynamicImage("Graphics/ui/bg/archiveBG/facultyroom_[gametime].png")
-image Gate Front = "Graphics/ui/bg/gatefront.png"
-image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].png")
-image Hallway = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway1_[gametime].png")
-image Hallway2 = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway2_[gametime].png")
-image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].png") #Hallway3
-image Hospital Room = "Graphics/ui/bg/NYI.png"
-image Info Desk = DynamicImage("Graphics/ui/bg/archiveBG/infodesk_[gametime].png")
-image Library = DynamicImage("Graphics/ui/bg/archiveBG/library_[gametime].png")
-image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].png")
-image Lockers Showers = "Graphics/ui/bg/archiveBG/lockers_showers.png"
-image Music Classroom = DynamicImage("Graphics/ui/bg/archiveBG/music_[gametime].png")
-image Nurse Office = DynamicImage("Graphics/ui/bg/archiveBG/nurseoffice_[gametime].png")
-image Office = DynamicImage("Graphics/ui/bg/archiveBG/office_[gametime].png")
-image Pool = DynamicImage("Graphics/ui/bg/archiveBG/schoolpool_[gametime].png")
-image Principal Office = DynamicImage("Graphics/ui/bg/archiveBG/principaloffice_[gametime].png")
-image Recreation = "Graphics/ui/bg/NYI.png"
-image Roof = DynamicImage("Graphics/ui/bg/roof_[gametime].png")
-image Roof Entrance = DynamicImage("Graphics/ui/bg/roofentrance_[gametime].png")
-image Roof2 = DynamicImage("Graphics/ui/bg/archiveBG/roof2_[gametime].png")
-image Roof2 Fall = DynamicImage("Graphics/ui/bg/archiveBG/roof2fall_[gametime].png")
-image School Exterior = DynamicImage("Graphics/ui/bg/archiveBG/schoolexterior_[gametime].png")
-image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].png")
-image School Inner = "Graphics/ui/bg/schoolinner.png"
-image School Planter = "Graphics/ui/bg/archiveBG/schoolplanter_[gametime].png"
-image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
-image Stage = DynamicImage("Graphics/ui/bg/archiveBG/stage_[gametime].png")
-image Student Government = DynamicImage("Graphics/ui/bg/archiveBG/studentgovernment_[gametime].png")
-image Track = DynamicImage("Graphics/ui/bg/archiveBG/track_[gametime].png")
-image Workshop = "Graphics/ui/bg/NYI.png"
+image Admin Hallway = "Graphics/ui/bg/hallway.webp"
+image Art Classroom = DynamicImage("Graphics/ui/bg/artroom_[gametime].webp")
+image Auditorium = DynamicImage("Graphics/ui/bg/archiveBG/auditorium_[gametime].webp")
+image Auditorium Storage = DynamicImage("Graphics/ui/bg/archiveBG/auditoriumstorage_[gametime].webp")
+image Bathroom = "Graphics/ui/bg/archiveBG/bathroom.webp"
+image Biology Lab = DynamicImage("Graphics/ui/bg/archiveBG/biologylab_[gametime].webp") #Biology Laboratory Classroom
+image Cafeteria = "Graphics/ui/bg/archiveBG/cafeteria.webp"
+image Campus Center = DynamicImage("Graphics/ui/bg/archiveBG/campuscenter_[gametime].webp")
+image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].webp") #Tashi-sensei's Homeroom Classroom
+image ClassroomAlt = DynamicImage("Graphics/ui/bg/classroom_alt_[gametime].webp") #Tashi-sensei's Homeroom Classroom - Alternate View
+image Classroom2 = DynamicImage("Graphics/ui/bg/archiveBG/classroom_2_[gametime].webp") #Takamura-sensei's Homeroom Classroom
+image Classroom3 = DynamicImage("Graphics/ui/bg/classroom_3_[gametime].webp") #Tsubasa-sensei's Homeroom Classroom
+image Classroom4 = DynamicImage("Graphics/ui/bg/archiveBG/classroom_4_[gametime].webp") #Hageshi-sensei's Homeroom Classroom
+image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].webp")
+image Computer Room = DynamicImage("Graphics/ui/bg/computerroom_[gametime].webp")
+image Cooking Classroom = "Graphics/ui/bg/cooking.webp"
+image Faculty Room = DynamicImage("Graphics/ui/bg/archiveBG/facultyroom_[gametime].webp")
+image Gate Front = "Graphics/ui/bg/gatefront.webp"
+image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].webp")
+image Hallway = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway1_[gametime].webp")
+image Hallway2 = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway2_[gametime].webp")
+image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].webp") #Hallway3
+image Hospital Room = "Graphics/ui/bg/NYI.webp"
+image Info Desk = DynamicImage("Graphics/ui/bg/archiveBG/infodesk_[gametime].webp")
+image Library = DynamicImage("Graphics/ui/bg/archiveBG/library_[gametime].webp")
+image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].webp")
+image Lockers Showers = "Graphics/ui/bg/archiveBG/lockers_showers.webp"
+image Music Classroom = DynamicImage("Graphics/ui/bg/archiveBG/music_[gametime].webp")
+image Nurse Office = DynamicImage("Graphics/ui/bg/archiveBG/nurseoffice_[gametime].webp")
+image Office = DynamicImage("Graphics/ui/bg/archiveBG/office_[gametime].webp")
+image Pool = DynamicImage("Graphics/ui/bg/archiveBG/schoolpool_[gametime].webp")
+image Principal Office = DynamicImage("Graphics/ui/bg/archiveBG/principaloffice_[gametime].webp")
+image Recreation = "Graphics/ui/bg/NYI.webp"
+image Roof = DynamicImage("Graphics/ui/bg/roof_[gametime].webp")
+image Roof Entrance = DynamicImage("Graphics/ui/bg/roofentrance_[gametime].webp")
+image Roof2 = DynamicImage("Graphics/ui/bg/archiveBG/roof2_[gametime].webp")
+image Roof2 Fall = DynamicImage("Graphics/ui/bg/archiveBG/roof2fall_[gametime].webp")
+image School Exterior = DynamicImage("Graphics/ui/bg/archiveBG/schoolexterior_[gametime].webp")
+image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].webp")
+image School Inner = "Graphics/ui/bg/schoolinner.webp"
+image School Planter = "Graphics/ui/bg/archiveBG/schoolplanter_[gametime].webp"
+image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].webp")
+image Stage = DynamicImage("Graphics/ui/bg/archiveBG/stage_[gametime].webp")
+image Student Government = DynamicImage("Graphics/ui/bg/archiveBG/studentgovernment_[gametime].webp")
+image Track = DynamicImage("Graphics/ui/bg/archiveBG/track_[gametime].webp")
+image Workshop = "Graphics/ui/bg/NYI.webp"
 
 #Dorms
-image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
-image Dorm Entrance = DynamicImage("Graphics/ui/bg/archiveBG/dormentrance_[gametime].png")
-image Dorm Entrance Fall = DynamicImage("Graphics/ui/bg/archiveBG/dormentrancefall_[gametime].png")
-image Dorm Hallway = "Graphics/ui/bg/archiveBG/dormhallway.png"
-image Dorm Interior = DynamicImage("Graphics/ui/bg/archiveBG/dorminterior_[gametime].png")
-image Dorm AE = DynamicImage("Graphics/ui/bg/archiveBG/AEdorm_[gametime].png")
-image Dorm BE = DynamicImage("Graphics/ui/bg/archiveBG/BEdorm_[gametime].png")
-image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
-image Dorm GTS = DynamicImage("Graphics/ui/bg/archiveBG/GTSdorm_[gametime].png")
-image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
-image Dorm WG = DynamicImage("Graphics/ui/bg/archiveBG/WGDorm_[gametime].png")
-image Dorm Tomoko = DynamicImage("Graphics/ui/bg/TMDorm_[gametime].png")
+image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].webp")
+image Dorm Entrance = DynamicImage("Graphics/ui/bg/archiveBG/dormentrance_[gametime].webp")
+image Dorm Entrance Fall = DynamicImage("Graphics/ui/bg/archiveBG/dormentrancefall_[gametime].webp")
+image Dorm Hallway = "Graphics/ui/bg/archiveBG/dormhallway.webp"
+image Dorm Interior = DynamicImage("Graphics/ui/bg/archiveBG/dorminterior_[gametime].webp")
+image Dorm AE = DynamicImage("Graphics/ui/bg/archiveBG/AEdorm_[gametime].webp")
+image Dorm BE = DynamicImage("Graphics/ui/bg/archiveBG/BEdorm_[gametime].webp")
+image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].webp")
+image Dorm GTS = DynamicImage("Graphics/ui/bg/archiveBG/GTSdorm_[gametime].webp")
+image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].webp")
+image Dorm WG = DynamicImage("Graphics/ui/bg/archiveBG/WGDorm_[gametime].webp")
+image Dorm Tomoko = DynamicImage("Graphics/ui/bg/TMDorm_[gametime].webp")
 
 #Giants Facilities
-image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].png")
-image Courtyard GTS = "Graphics/ui/bg/NYI.png"
-image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].png")
-image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].png")
+image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].webp")
+image Courtyard GTS = "Graphics/ui/bg/NYI.webp"
+image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].webp")
+image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].webp")
 
 #Seichou Town
-image Arcade = DynamicImage("Graphics/ui/bg/archiveBG/arcade_[gametime].png")
-image Art Gallery = "Graphics/ui/bg/NYI.png"
-image Bakery = DynamicImage("Graphics/ui/bg/archiveBG/bakery_[gametime].png")
-image Bakery Entrance = DynamicImage("Graphics/ui/bg/archiveBG/bakeryentrance_[gametime].png")
-image Ballroom = DynamicImage("Graphics/ui/bg/archiveBG/ballroom_[gametime].png")
-image Cafe = DynamicImage("Graphics/ui/bg/archiveBG/cafe_[gametime].png")
-image Cafe Seats = DynamicImage("Graphics/ui/bg/archiveBG/cafe_seats_[gametime].png")
-image Clothes Store = "Graphics/ui/bg/archiveBG/clothesstore.png"
-image Disco Club = DynamicImage("Graphics/ui/bg/archiveBG/discoclub_[gametime].png")
-image Diner = "Graphics/ui/bg/archiveBG/burgerrestaurant.png"
-image Festival = DynamicImage("Graphics/ui/bg/archiveBG/festival_[gametime].png")
-image Festive Tent = "Graphics/ui/bg/NYI.png"
-image Flower Field = DynamicImage("Graphics/ui/bg/archiveBG/flowerfield_[gametime].png")
-image Game Store = "Graphics/ui/bg/archiveBG/gamestore.png"
-image Hotel Exterior = DynamicImage("Graphics/ui/bg/archiveBG/hotelexterior_[gametime].png")
-image Hotel Room = DynamicImage("Graphics/ui/bg/archiveBG/hotelroom_[gametime].png")
-image Hotel Desk = DynamicImage("Graphics/ui/bg/archiveBG/hoteldesk.png")
-image Hotel Elevator = DynamicImage("Graphics/ui/bg/archiveBG/hotelelevator.png")
-image Hotel Lobby = DynamicImage("Graphics/ui/bg/archiveBG/hotellobby_[gametime].png")
-image Hotel Lounge = DynamicImage("Graphics/ui/bg/archiveBG/hotellounge_[gametime].png")
-image Mall = "Graphics/ui/bg/archiveBG/mall.png"
-image Mall Candyshop = "Graphics/ui/bg/archiveBG/mall_candyshop.png"
-image Movie Theater = "Graphics/ui/bg/archiveBG/movietheater.png"
-image Movie Theater Lights = "Graphics/ui/bg/archiveBG/movietheater_lights.png"
-image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheaterext_[gametime].png")
-image Park = DynamicImage("Graphics/ui/bg/archiveBG/park_[gametime].png")
-image Pharmacy = DynamicImage("Graphics/ui/bg/archiveBG/pharmacy_[gametime].png")
-image Restaurant = "Graphics/ui/bg/restaurant.png"
-image Store = DynamicImage("Graphics/ui/bg/store_[gametime].png")
-image Supermarket = DynamicImage("Graphics/ui/bg/archiveBG/supermarket_[gametime].png")
-image Sushi Restaurant = "Graphics/ui/bg/archiveBG/sushirestaurant.png"
-image Sushi Restaurant Seats = "Graphics/ui/bg/archiveBG/sushirestaurant_seats.png"
-image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime].png")
-image Theater Interior = "Graphics/ui/bg/theater-interior.png"
-image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
-image Town = DynamicImage("Graphics/ui/bg/archiveBG/town_[gametime].png")
-image Town Alley = DynamicImage("Graphics/ui/bg/archiveBG/townalley_[gametime].png")
-image Town Bus = DynamicImage("Graphics/ui/bg/archiveBG/townbus_[gametime].png")
+image Arcade = DynamicImage("Graphics/ui/bg/archiveBG/arcade_[gametime].webp")
+image Art Gallery = "Graphics/ui/bg/NYI.webp"
+image Bakery = DynamicImage("Graphics/ui/bg/archiveBG/bakery_[gametime].webp")
+image Bakery Entrance = DynamicImage("Graphics/ui/bg/archiveBG/bakeryentrance_[gametime].webp")
+image Ballroom = DynamicImage("Graphics/ui/bg/archiveBG/ballroom_[gametime].webp")
+image Cafe = DynamicImage("Graphics/ui/bg/archiveBG/cafe_[gametime].webp")
+image Cafe Seats = DynamicImage("Graphics/ui/bg/archiveBG/cafe_seats_[gametime].webp")
+image Clothes Store = "Graphics/ui/bg/archiveBG/clothesstore.webp"
+image Disco Club = DynamicImage("Graphics/ui/bg/archiveBG/discoclub_[gametime].webp")
+image Diner = "Graphics/ui/bg/archiveBG/burgerrestaurant.webp"
+image Festival = DynamicImage("Graphics/ui/bg/archiveBG/festival_[gametime].webp")
+image Festive Tent = "Graphics/ui/bg/NYI.webp"
+image Flower Field = DynamicImage("Graphics/ui/bg/archiveBG/flowerfield_[gametime].webp")
+image Game Store = "Graphics/ui/bg/archiveBG/gamestore.webp"
+image Hotel Exterior = DynamicImage("Graphics/ui/bg/archiveBG/hotelexterior_[gametime].webp")
+image Hotel Room = DynamicImage("Graphics/ui/bg/archiveBG/hotelroom_[gametime].webp")
+image Hotel Desk = DynamicImage("Graphics/ui/bg/archiveBG/hoteldesk.webp")
+image Hotel Elevator = DynamicImage("Graphics/ui/bg/archiveBG/hotelelevator.webp")
+image Hotel Lobby = DynamicImage("Graphics/ui/bg/archiveBG/hotellobby_[gametime].webp")
+image Hotel Lounge = DynamicImage("Graphics/ui/bg/archiveBG/hotellounge_[gametime].webp")
+image Mall = "Graphics/ui/bg/archiveBG/mall.webp"
+image Mall Candyshop = "Graphics/ui/bg/archiveBG/mall_candyshop.webp"
+image Movie Theater = "Graphics/ui/bg/archiveBG/movietheater.webp"
+image Movie Theater Lights = "Graphics/ui/bg/archiveBG/movietheater_lights.webp"
+image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheaterext_[gametime].webp")
+image Park = DynamicImage("Graphics/ui/bg/archiveBG/park_[gametime].webp")
+image Pharmacy = DynamicImage("Graphics/ui/bg/archiveBG/pharmacy_[gametime].webp")
+image Restaurant = "Graphics/ui/bg/restaurant.webp"
+image Store = DynamicImage("Graphics/ui/bg/store_[gametime].webp")
+image Supermarket = DynamicImage("Graphics/ui/bg/archiveBG/supermarket_[gametime].webp")
+image Sushi Restaurant = "Graphics/ui/bg/archiveBG/sushirestaurant.webp"
+image Sushi Restaurant Seats = "Graphics/ui/bg/archiveBG/sushirestaurant_seats.webp"
+image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime].webp")
+image Theater Interior = "Graphics/ui/bg/theater-interior.webp"
+image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.webp"
+image Town = DynamicImage("Graphics/ui/bg/archiveBG/town_[gametime].webp")
+image Town Alley = DynamicImage("Graphics/ui/bg/archiveBG/townalley_[gametime].webp")
+image Town Bus = DynamicImage("Graphics/ui/bg/archiveBG/townbus_[gametime].webp")
 image Town Docks = DynamicImage("Graphics/ui/bg/archiveBG/towndocks_[gametime].jpg")
-image Town Shops = DynamicImage("Graphics/ui/bg/archiveBG/townshops_[gametime].png")
-image Town Street = DynamicImage("Graphics/ui/bg/archiveBG/townstreet_[gametime].png")
-image Waterpark = DynamicImage("Graphics/ui/bg/archiveBG/waterpark_[gametime].png")
-image Waterpark Pool = DynamicImage("Graphics/ui/bg/archiveBG/waterparkpool_[gametime].png")
+image Town Shops = DynamicImage("Graphics/ui/bg/archiveBG/townshops_[gametime].webp")
+image Town Street = DynamicImage("Graphics/ui/bg/archiveBG/townstreet_[gametime].webp")
+image Waterpark = DynamicImage("Graphics/ui/bg/archiveBG/waterpark_[gametime].webp")
+image Waterpark Pool = DynamicImage("Graphics/ui/bg/archiveBG/waterparkpool_[gametime].webp")
 
 #Satoyama Village
-image Ryokan Onsen = DynamicImage("Graphics/ui/bg/archiveBG/ryokanonsen_[gametime].png")
-image Ryokan Onsen Steamed = DynamicImage("Graphics/ui/bg/archiveBG/ryokanonsen_steamed_[gametime].png")
-image Ryokan Bathroom = DynamicImage("Graphics/ui/bg/archiveBG/ryokanbathroom_[gametime].png")
-image Ryokan Exterior = DynamicImage("Graphics/ui/bg/archiveBG/ryokanexterior_[gametime].png")
-image Ryokan Room = DynamicImage("Graphics/ui/bg/archiveBG/ryokanroom_[gametime].png")
+image Ryokan Onsen = DynamicImage("Graphics/ui/bg/archiveBG/ryokanonsen_[gametime].webp")
+image Ryokan Onsen Steamed = DynamicImage("Graphics/ui/bg/archiveBG/ryokanonsen_steamed_[gametime].webp")
+image Ryokan Bathroom = DynamicImage("Graphics/ui/bg/archiveBG/ryokanbathroom_[gametime].webp")
+image Ryokan Exterior = DynamicImage("Graphics/ui/bg/archiveBG/ryokanexterior_[gametime].webp")
+image Ryokan Room = DynamicImage("Graphics/ui/bg/archiveBG/ryokanroom_[gametime].webp")
 
 #Beachside Village
-image Beach = DynamicImage("Graphics/ui/bg/archiveBG/beach_[gametime].png")
-image Frozen Beach = "Graphics/ui/bg/archiveBG/beach_frozen.png"
+image Beach = DynamicImage("Graphics/ui/bg/archiveBG/beach_[gametime].webp")
+image Frozen Beach = "Graphics/ui/bg/archiveBG/beach_frozen.webp"
 
 #Giants Town
-image Giants Town = "Graphics/ui/bg/NYI.png"
-image Giants Town Store = "Graphics/ui/bg/NYI.png"
+image Giants Town = "Graphics/ui/bg/NYI.webp"
+image Giants Town Store = "Graphics/ui/bg/NYI.webp"
 
 #Mountains
-image Mountains = DynamicImage("Graphics/ui/bg/archiveBG/mountains_[gametime].png")
-image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.png"
-image Mountains Torii Gate = "Graphics/ui/bg/mountains_gate.png"
+image Mountains = DynamicImage("Graphics/ui/bg/archiveBG/mountains_[gametime].webp")
+image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.webp"
+image Mountains Torii Gate = "Graphics/ui/bg/mountains_gate.webp"
 
 #Island
-image Dock = "Graphics/ui/bg/dock_[gametime].png"
-image Field = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].png")
-image Field Winter = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].png") #TBI
-image Flower Clearing = DynamicImage("Graphics/ui/bg/archiveBG/flowerclearing_[gametime].png")
-image Hill Road = DynamicImage("Graphics/ui/bg/archiveBG/hillroad_[gametime].png")
-image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
-image Night Sky = "Graphics/ui/bg/archiveBG/night_sky.png"
-image Temple = DynamicImage("Graphics/ui/bg/archiveBG/temple_[gametime].png")
-image Temple Fall = DynamicImage("Graphics/ui/bg/archiveBG/templefall_[gametime].png")
-image View Point = DynamicImage("Graphics/ui/bg/archiveBG/viewpoint_[gametime].png")
-image Woods = DynamicImage("Graphics/ui/bg/archiveBG/woods_[gametime].png")
-image Woods Winter = "Graphics/ui/bg/archiveBG/woods_winter.png"
+image Dock = "Graphics/ui/bg/dock_[gametime].webp"
+image Field = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].webp")
+image Field Winter = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].webp") #TBI
+image Flower Clearing = DynamicImage("Graphics/ui/bg/archiveBG/flowerclearing_[gametime].webp")
+image Hill Road = DynamicImage("Graphics/ui/bg/archiveBG/hillroad_[gametime].webp")
+image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].webp")
+image Night Sky = "Graphics/ui/bg/archiveBG/night_sky.webp"
+image Temple = DynamicImage("Graphics/ui/bg/archiveBG/temple_[gametime].webp")
+image Temple Fall = DynamicImage("Graphics/ui/bg/archiveBG/templefall_[gametime].webp")
+image View Point = DynamicImage("Graphics/ui/bg/archiveBG/viewpoint_[gametime].webp")
+image Woods = DynamicImage("Graphics/ui/bg/archiveBG/woods_[gametime].webp")
+image Woods Winter = "Graphics/ui/bg/archiveBG/woods_winter.webp"
 
 #Alice’s Summer Estate
-image RV Interior = "Graphics/ui/bg/WG_summer_rv.png"
-image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
-image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
-image Summer Beach = DynamicImage("Graphics/ui/bg/WG_summer_beach_[gametime].png")
-image Summer Beach Closed = "Graphics/ui/bg/WG_summer_beach_closed.png"
-image Summer Beach Ocean = "Graphics/ui/bg/WG_summer_beach_ocean.png"
-image Summer Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_bedroom_[gametime].png")
-image Summer Dining Room = "Graphics/ui/bg/WG_summer_diningroom.png"
-image Summer Guest Bathroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bathroom_[gametime].png")
-image Summer Guest Bathroom Steamed = DynamicImage("Graphics/ui/bg/WG_summer_guest_bathroom_steamed_[gametime].png")
-image Summer Guest Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bedroom_[gametime].png")
-image Summer Hallway = "Graphics/ui/bg/WG_summer_hallway.png"
-image Summer House Back = "Graphics/ui/bg/WG_summer_houseback.png"
-image Summer House Entrance = "Graphics/ui/bg/WG_summer_entrance.png"
-image Summer House Front = "Graphics/ui/bg/WG_summer_housefront.png"
-image Summer Living Room = "Graphics/ui/bg/WG_summer_livingroom.png"
+image RV Interior = "Graphics/ui/bg/WG_summer_rv.webp"
+image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].webp")
+image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].webp")
+image Summer Beach = DynamicImage("Graphics/ui/bg/WG_summer_beach_[gametime].webp")
+image Summer Beach Closed = "Graphics/ui/bg/WG_summer_beach_closed.webp"
+image Summer Beach Ocean = "Graphics/ui/bg/WG_summer_beach_ocean.webp"
+image Summer Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_bedroom_[gametime].webp")
+image Summer Dining Room = "Graphics/ui/bg/WG_summer_diningroom.webp"
+image Summer Guest Bathroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bathroom_[gametime].webp")
+image Summer Guest Bathroom Steamed = DynamicImage("Graphics/ui/bg/WG_summer_guest_bathroom_steamed_[gametime].webp")
+image Summer Guest Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bedroom_[gametime].webp")
+image Summer Hallway = "Graphics/ui/bg/WG_summer_hallway.webp"
+image Summer House Back = "Graphics/ui/bg/WG_summer_houseback.webp"
+image Summer House Entrance = "Graphics/ui/bg/WG_summer_entrance.webp"
+image Summer House Front = "Graphics/ui/bg/WG_summer_housefront.webp"
+image Summer Living Room = "Graphics/ui/bg/WG_summer_livingroom.webp"
 
 #Okinawa - FMG Arc
-image Okinawa Airport = "Graphics/ui/bg/archiveBG/okinawa_airport.png"
-image Okinawa Beach = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_beach_[gametime].png")
-image Okinawa Bedroom = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_bedroom_[gametime].png")
-image Okinawa Cottage = "Graphics/ui/bg/archiveBG/okinawa_cottage.png"
-image Okinawa House Exterior = DynamicImage("Graphics/ui/bg/okinawa_houseexterior_[gametime].png")
-image Okinawa House Interior = DynamicImage("Graphics/ui/bg/okinawa_houseinterior_[gametime].png")
-image Okinawa House Hallway = DynamicImage("Graphics/ui/bg/okinawa_househallway_[gametime].png")
-image Okinawa Island = "Graphics/ui/bg/archiveBG/okinawa_island.png"
-image Okinawa Market = "Graphics/ui/bg/archiveBG/okinawa_market.png"
-image Okinawa Ocean = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_ocean_[gametime].png")
+image Okinawa Airport = "Graphics/ui/bg/archiveBG/okinawa_airport.webp"
+image Okinawa Beach = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_beach_[gametime].webp")
+image Okinawa Bedroom = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_bedroom_[gametime].webp")
+image Okinawa Cottage = "Graphics/ui/bg/archiveBG/okinawa_cottage.webp"
+image Okinawa House Exterior = DynamicImage("Graphics/ui/bg/okinawa_houseexterior_[gametime].webp")
+image Okinawa House Interior = DynamicImage("Graphics/ui/bg/okinawa_houseinterior_[gametime].webp")
+image Okinawa House Hallway = DynamicImage("Graphics/ui/bg/okinawa_househallway_[gametime].webp")
+image Okinawa Island = "Graphics/ui/bg/archiveBG/okinawa_island.webp"
+image Okinawa Market = "Graphics/ui/bg/archiveBG/okinawa_market.webp"
+image Okinawa Ocean = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_ocean_[gametime].webp")
 
 #Other - Tokyo
-image Tokyo = DynamicImage("Graphics/ui/bg/tokyo_streets_[gametime].png")
-image Tokyo Abandoned Building = "Graphics/ui/bg/NYI.png"
-image Tokyo Club = "Graphics/ui/bg/NYI.png"
-image Tokyo House Exterior = DynamicImage("Graphics/ui/bg/tokyo_houseexterior_[gametime].png")
-image Tokyo Dining Room = "Graphics/ui/bg/NYI.png"
-image Tokyo MC Apartment = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_mcapartment_[gametime].png")
-image Tokyo Station = DynamicImage("Graphics/ui/bg/tokyo_station_[gametime].png")
-image Tokyo Train = DynamicImage("Graphics/ui/bg/tokyo_train_[gametime].png")
-image Tokyo Office = "Graphics/ui/bg/NYI.png"
+image Tokyo = DynamicImage("Graphics/ui/bg/tokyo_streets_[gametime].webp")
+image Tokyo Abandoned Building = "Graphics/ui/bg/NYI.webp"
+image Tokyo Club = "Graphics/ui/bg/NYI.webp"
+image Tokyo House Exterior = DynamicImage("Graphics/ui/bg/tokyo_houseexterior_[gametime].webp")
+image Tokyo Dining Room = "Graphics/ui/bg/NYI.webp"
+image Tokyo MC Apartment = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_mcapartment_[gametime].webp")
+image Tokyo Station = DynamicImage("Graphics/ui/bg/tokyo_station_[gametime].webp")
+image Tokyo Train = DynamicImage("Graphics/ui/bg/tokyo_train_[gametime].webp")
+image Tokyo Office = "Graphics/ui/bg/NYI.webp"
 
 #Other - Kagoshima
-image Kagoshima Aquarium = DynamicImage("Graphics/ui/bg/archiveBG/kagoshima_aquarium_[gametime].png")
+image Kagoshima Aquarium = DynamicImage("Graphics/ui/bg/archiveBG/kagoshima_aquarium_[gametime].webp")
 
 #Other - Kanagawa
-image Kanagawa Street = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_street_[gametime].png")
-image Kanagawa Alley = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_alley_[gametime].png")
-image Kanagawa Station = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_station_[gametime].png")
+image Kanagawa Street = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_street_[gametime].webp")
+image Kanagawa Alley = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_alley_[gametime].webp")
+image Kanagawa Station = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_station_[gametime].webp")
 
 #General
-image Airport = "Graphics/ui/bg/NYI.png"
-image Car Interior = DynamicImage("Graphics/ui/bg/archiveBG/carinterior_[gametime].png")
-image Bus Interior = DynamicImage("Graphics/ui/bg/archiveBG/businterior_[gametime].png")
-image Ferry = DynamicImage("Graphics/ui/bg/ferry_[gametime].png")
-image Plane Interior = "Graphics/ui/bg/NYI.png"
+image Airport = "Graphics/ui/bg/NYI.webp"
+image Car Interior = DynamicImage("Graphics/ui/bg/archiveBG/carinterior_[gametime].webp")
+image Bus Interior = DynamicImage("Graphics/ui/bg/archiveBG/businterior_[gametime].webp")
+image Ferry = DynamicImage("Graphics/ui/bg/ferry_[gametime].webp")
+image Plane Interior = "Graphics/ui/bg/NYI.webp"
 
 #CG + Images
-image daymenubg = "Graphics/ui/bg/archiveBG/menubg-day.png"
+image daymenubg = "Graphics/ui/bg/archiveBG/menubg-day.webp"
 
-image cg AE000 = "Graphics/ui/gallery/AE000.png"
+image cg AE000 = "Graphics/ui/gallery/AE000.webp"
 image cg AE015 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE015.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE015.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE024 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE024b = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024b.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024b.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE024c = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024c.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024c.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE024d = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024d.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg AE024e = "Graphics/ui/gallery/AE024e.png"
-image cg AE025 = "Graphics/ui/gallery/AE025.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE024d.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg AE024e = "Graphics/ui/gallery/AE024e.webp"
+image cg AE025 = "Graphics/ui/gallery/AE025.webp"
 image cg AE050_bj1 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj1.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj1.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_bj2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_bj3 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj3.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj3.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_bj4 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj4.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_bj4.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_sit1 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_sit1.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_sit1.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_sit2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_sit2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_sit2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_spank1 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank1.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank1.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_spank2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_spank3 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank3.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank3.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_spank4 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank4.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_spank4.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_behind1 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind1.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind1.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_behind2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_behind3 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind3.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind3.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_behind4 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind4.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind4.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_behind5 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind5.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind5.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE050_behind6 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind6.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg AE053_mirror1 = "Graphics/ui/gallery/AE053_mirror1.png"
-image cg AE053_mirror2 = "Graphics/ui/gallery/AE053_mirror2.png"
-image cg AE074_snow1 = "Graphics/ui/gallery/AE074_snow1.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE050_behind6.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg AE053_mirror1 = "Graphics/ui/gallery/AE053_mirror1.webp"
+image cg AE053_mirror2 = "Graphics/ui/gallery/AE053_mirror2.webp"
+image cg AE074_snow1 = "Graphics/ui/gallery/AE074_snow1.webp"
 image cg AE074_snow2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE074_snow2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg AE074_snow3 = "Graphics/ui/gallery/AE074_snow3.png"
-image cg AE092_tv1 = "Graphics/ui/gallery/AE092_tv1.png"
-image cg AE092_tv2 = "Graphics/ui/gallery/AE092_tv2.png"
-image cg AE092_tv3 = "Graphics/ui/gallery/AE092_tv3.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE074_snow2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg AE074_snow3 = "Graphics/ui/gallery/AE074_snow3.webp"
+image cg AE092_tv1 = "Graphics/ui/gallery/AE092_tv1.webp"
+image cg AE092_tv2 = "Graphics/ui/gallery/AE092_tv2.webp"
+image cg AE092_tv3 = "Graphics/ui/gallery/AE092_tv3.webp"
 image cg AE098D_musicvideo1 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo1.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo1.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE098D_musicvideo2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE098D_musicvideo3 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo3.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo3.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg AE098D_musicvideo4 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo4.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg AE098D_musicvideo5 = "Graphics/ui/gallery/AE098D_musicvideo5.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/AE098D_musicvideo4.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg AE098D_musicvideo5 = "Graphics/ui/gallery/AE098D_musicvideo5.webp"
 
-image cg BE000 = "Graphics/ui/gallery/BE000.png"
-image cg BE000b = "Graphics/ui/gallery/BE000b.png"
-image cg BE001 = "Graphics/ui/gallery/BE001.png"
-image cg BE010_pov1 = "Graphics/ui/gallery/BE010_pov1.png"
-image cg BE010_pov2 = "Graphics/ui/gallery/BE010_pov2.png"
-image cg BE010_pov3 = "Graphics/ui/gallery/BE010_pov3.png"
-image cg BE010_pov4 = "Graphics/ui/gallery/BE010_pov4.png"
-image cg BE010_pov5 = "Graphics/ui/gallery/BE010_pov5.png"
-image cg BE020_date1 = "Graphics/ui/gallery/BE020_date1.png"
-image cg BE020_date2 = "Graphics/ui/gallery/BE020_date2.png"
-image cg BE020_date3 = "Graphics/ui/gallery/BE020_date3.png"
-image cg BE020_date4 = "Graphics/ui/gallery/BE020_date4.png"
-image cg BE020_date5 = "Graphics/ui/gallery/BE020_date5.png"
-image cg BE020_date6 = "Graphics/ui/gallery/BE020_date6.png"
-image cg BE020_date7 = "Graphics/ui/gallery/BE020_date7.png"
-image cg BE028 = "Graphics/ui/gallery/BE028.png"
-image cg BE028_fem = "Graphics/ui/gallery/BE028_fem.png"
+image cg BE000 = "Graphics/ui/gallery/BE000.webp"
+image cg BE000b = "Graphics/ui/gallery/BE000b.webp"
+image cg BE001 = "Graphics/ui/gallery/BE001.webp"
+image cg BE010_pov1 = "Graphics/ui/gallery/BE010_pov1.webp"
+image cg BE010_pov2 = "Graphics/ui/gallery/BE010_pov2.webp"
+image cg BE010_pov3 = "Graphics/ui/gallery/BE010_pov3.webp"
+image cg BE010_pov4 = "Graphics/ui/gallery/BE010_pov4.webp"
+image cg BE010_pov5 = "Graphics/ui/gallery/BE010_pov5.webp"
+image cg BE020_date1 = "Graphics/ui/gallery/BE020_date1.webp"
+image cg BE020_date2 = "Graphics/ui/gallery/BE020_date2.webp"
+image cg BE020_date3 = "Graphics/ui/gallery/BE020_date3.webp"
+image cg BE020_date4 = "Graphics/ui/gallery/BE020_date4.webp"
+image cg BE020_date5 = "Graphics/ui/gallery/BE020_date5.webp"
+image cg BE020_date6 = "Graphics/ui/gallery/BE020_date6.webp"
+image cg BE020_date7 = "Graphics/ui/gallery/BE020_date7.webp"
+image cg BE028 = "Graphics/ui/gallery/BE028.webp"
+image cg BE028_fem = "Graphics/ui/gallery/BE028_fem.webp"
 image cg BE031 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/BE031.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/BE031.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg BE031b = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/BE031b.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg BE031c = "Graphics/ui/gallery/BE031c.png"
-image cg BE032 = "Graphics/ui/gallery/BE032.png"
-image cg BE043_movie1 = "Graphics/ui/gallery/BE043_movie1.png"
-image cg BE043_movie2 = "Graphics/ui/gallery/BE043_movie2.png"
-image cg BE043_movie1_fem = "Graphics/ui/gallery/BE043_movie1_fem.png"
-image cg BE043_movie2_fem = "Graphics/ui/gallery/BE043_movie2_fem.png"
-image cg BE049 = "Graphics/ui/gallery/BE049.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/BE031b.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg BE031c = "Graphics/ui/gallery/BE031c.webp"
+image cg BE032 = "Graphics/ui/gallery/BE032.webp"
+image cg BE043_movie1 = "Graphics/ui/gallery/BE043_movie1.webp"
+image cg BE043_movie2 = "Graphics/ui/gallery/BE043_movie2.webp"
+image cg BE043_movie1_fem = "Graphics/ui/gallery/BE043_movie1_fem.webp"
+image cg BE043_movie2_fem = "Graphics/ui/gallery/BE043_movie2_fem.webp"
+image cg BE049 = "Graphics/ui/gallery/BE049.webp"
 
-image cg FMG016 = "Graphics/ui/gallery/FMG016.png"
-image cg FMG041 = "Graphics/ui/gallery/FMG041.png"
+image cg FMG016 = "Graphics/ui/gallery/FMG016.webp"
+image cg FMG041 = "Graphics/ui/gallery/FMG041.webp"
 image cg FMG050 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG050.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg FMG055 = "Graphics/ui/gallery/FMG055.png"
-image cg FMG056 = "Graphics/ui/gallery/FMG056.png"
-image cg FMG058 = "Graphics/ui/gallery/FMG058.png"
-image cg FMG058_pose1 = "Graphics/ui/gallery/FMG058_pose1.png"
-image cg FMG058_pose2 = "Graphics/ui/gallery/FMG058_pose2.png"
-image cg FMG058_pose3 = "Graphics/ui/gallery/FMG058_pose3.png"
-image cg FMG061 = "Graphics/ui/gallery/FMG061.png"
-image cg FMG067 = "Graphics/ui/gallery/FMG067.png"
-image cg FMG072 = "Graphics/ui/gallery/FMG072.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG050.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg FMG055 = "Graphics/ui/gallery/FMG055.webp"
+image cg FMG056 = "Graphics/ui/gallery/FMG056.webp"
+image cg FMG058 = "Graphics/ui/gallery/FMG058.webp"
+image cg FMG058_pose1 = "Graphics/ui/gallery/FMG058_pose1.webp"
+image cg FMG058_pose2 = "Graphics/ui/gallery/FMG058_pose2.webp"
+image cg FMG058_pose3 = "Graphics/ui/gallery/FMG058_pose3.webp"
+image cg FMG061 = "Graphics/ui/gallery/FMG061.webp"
+image cg FMG067 = "Graphics/ui/gallery/FMG067.webp"
+image cg FMG072 = "Graphics/ui/gallery/FMG072.webp"
 image cg FMG077 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg FMG082 = "Graphics/ui/gallery/FMG082.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg FMG082 = "Graphics/ui/gallery/FMG082.webp"
 
-image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
-image cg GTS024 = "Graphics/ui/gallery/GTS024.png"
-image cg GTS025 = "Graphics/ui/gallery/GTS025.png"
-image cg GTS035 = "Graphics/ui/gallery/GTS035.png"
-image cg GTS043_planks1 = "Graphics/ui/gallery/GTS043_planks1.png"
-image cg GTS044_stars1 = "Graphics/ui/gallery/GTS044_stars1.png"
-image cg GTS044_stars2 = "Graphics/ui/gallery/GTS044_stars2.png"
+image cg GTS000 = "Graphics/ui/gallery/GTS000.webp"
+image cg GTS024 = "Graphics/ui/gallery/GTS024.webp"
+image cg GTS025 = "Graphics/ui/gallery/GTS025.webp"
+image cg GTS035 = "Graphics/ui/gallery/GTS035.webp"
+image cg GTS043_planks1 = "Graphics/ui/gallery/GTS043_planks1.webp"
+image cg GTS044_stars1 = "Graphics/ui/gallery/GTS044_stars1.webp"
+image cg GTS044_stars2 = "Graphics/ui/gallery/GTS044_stars2.webp"
 image cg GTS046_upskirt = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_upskirt.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg GTS046_hold1 = "Graphics/ui/gallery/GTS046_hold1.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_upskirt.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg GTS046_hold1 = "Graphics/ui/gallery/GTS046_hold1.webp"
 image cg GTS046_hold2 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_hold2.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_hold2.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg GTS046_hold3 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_hold3.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS046_hold3.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg GTS050_nightmare1 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS050_nightmare1.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/GTS050_nightmare1.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 
-image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
+image cg PRG020 = "Graphics/ui/gallery/PRG020.webp"
 image cg PRG025 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/PRG025.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg PRG028a = "Graphics/ui/gallery/PRG028a.png"
-image cg PRG028b = "Graphics/ui/gallery/PRG028b.png"
-image cg PRG028c = "Graphics/ui/gallery/PRG028c.png"
-image cg PRG028d = "Graphics/ui/gallery/PRG028d.png"
-image PRG028_scared = "Graphics/ui/gallery/PRG028_scared.png"
-image PRG028_neutral = "Graphics/ui/gallery/PRG028_neutral.png"
-image PRG028_nervous = "Graphics/ui/gallery/PRG028_nervous.png"
-image PRG028_blush = "Graphics/ui/gallery/PRG028_blush.png"
-image cg PRG028_bg = "Graphics/ui/gallery/PRG028_bg.png"
-image PRG028_blur = "Graphics/ui/gallery/PRG028_blur.png"
-image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
-image cg PRG038_poster = "Graphics/ui/gallery/PRG038_poster.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/PRG025.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg PRG028a = "Graphics/ui/gallery/PRG028a.webp"
+image cg PRG028b = "Graphics/ui/gallery/PRG028b.webp"
+image cg PRG028c = "Graphics/ui/gallery/PRG028c.webp"
+image cg PRG028d = "Graphics/ui/gallery/PRG028d.webp"
+image PRG028_scared = "Graphics/ui/gallery/PRG028_scared.webp"
+image PRG028_neutral = "Graphics/ui/gallery/PRG028_neutral.webp"
+image PRG028_nervous = "Graphics/ui/gallery/PRG028_nervous.webp"
+image PRG028_blush = "Graphics/ui/gallery/PRG028_blush.webp"
+image cg PRG028_bg = "Graphics/ui/gallery/PRG028_bg.webp"
+image PRG028_blur = "Graphics/ui/gallery/PRG028_blur.webp"
+image cg PRG038 = "Graphics/ui/gallery/PRG038.webp"
+image cg PRG038_poster = "Graphics/ui/gallery/PRG038_poster.webp"
 
-image cg WG000 = "Graphics/ui/gallery/WG000.png"
-image cg WG009 = "Graphics/ui/gallery/WG009.png"
-image cg WG010 = "Graphics/ui/gallery/WG010.png"
-image cg WG039 = "Graphics/ui/gallery/WG039.png"
-image cg WG042 = "Graphics/ui/gallery/WG042.png"
-image cg WG046 = "Graphics/ui/gallery/WG046.png"
-image cg WG047 = "Graphics/ui/gallery/WG047.png"
-image cg WG055 = "Graphics/ui/gallery/WG055.png"
-image cg WG060S = "Graphics/ui/gallery/WG060S.png"
-image cg WG070 = "Graphics/ui/gallery/WG070.png"
+image cg WG000 = "Graphics/ui/gallery/WG000.webp"
+image cg WG009 = "Graphics/ui/gallery/WG009.webp"
+image cg WG010 = "Graphics/ui/gallery/WG010.webp"
+image cg WG039 = "Graphics/ui/gallery/WG039.webp"
+image cg WG042 = "Graphics/ui/gallery/WG042.webp"
+image cg WG046 = "Graphics/ui/gallery/WG046.webp"
+image cg WG047 = "Graphics/ui/gallery/WG047.webp"
+image cg WG055 = "Graphics/ui/gallery/WG055.webp"
+image cg WG060S = "Graphics/ui/gallery/WG060S.webp"
+image cg WG070 = "Graphics/ui/gallery/WG070.webp"
 image cg WG071 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG071.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG071.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG072 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG072.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG072.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG076 = ConditionSwitch(
-    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG076.png",
-    "True", "Graphics/ui/gallery/nsfw-cg.png")
-image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.png"
-image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.png"
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG076.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.webp"
+image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.webp"
 
-image cg MC000 = "Graphics/ui/gallery/MC000.png"
-image cg MC003 = "Graphics/ui/gallery/MC003.png"
+image cg MC000 = "Graphics/ui/gallery/MC000.webp"
+image cg MC003 = "Graphics/ui/gallery/MC003.webp"
 
-image cg Global010 = "Graphics/ui/gallery/Global010.png"
+image cg Global010 = "Graphics/ui/gallery/Global010.webp"
 
-image cg RM000 = "Graphics/ui/gallery/RM000.png"
-image cg RM000_escape1 = "Graphics/ui/gallery/RM000_escape1.png"
-image cg RM000_escape2 = "Graphics/ui/gallery/RM000_escape2.png"
-image cg RM000_escape3 = "Graphics/ui/gallery/RM000_escape3.png"
+image cg RM000 = "Graphics/ui/gallery/RM000.webp"
+image cg RM000_escape1 = "Graphics/ui/gallery/RM000_escape1.webp"
+image cg RM000_escape2 = "Graphics/ui/gallery/RM000_escape2.webp"
+image cg RM000_escape3 = "Graphics/ui/gallery/RM000_escape3.webp"
 
 #Character sprites
-image AE neutral = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral.png")
-image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-annoyed.png")
-image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-eyebrow.png")
-image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-noglasses.png")
-image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-smug.png")
-image AE happy = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy.png")
-image AE smile = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy-2.png")
-image AE pondering = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/pondering.png")
-image AE sad = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.png")
-image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad-2.png")
-image AE frown = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.png")
-image AE surprised = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised.png")
-image AE surprised-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised-2.png")
-image AE admire = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/admire.png")
-image AE angry = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry.png")
-image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-2.png")
-image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-3.png")
-image AE angry-4 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-4.png")
-image AE aroused = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused.png")
-image AE back = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/behind.png")
-image AE embarrassed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/embarrassed.png")
-image AE aroused-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-2.png")
-image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-3.png")
-image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-4.png")
-image AE glasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique.png")
-image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique-2.png")
-image AE glasses-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique-3.png")
-image AE ass = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.png")
-image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.png")
-image AE afraid = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/afraid.png")
-image AE ahegao = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ahegao.png")
-image AE hatred = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hatred.png")
-image AE love = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/love.png")
-image AE rage = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/rage.png")
+image AE neutral = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral.webp")
+image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-annoyed.webp")
+image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-eyebrow.webp")
+image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-noglasses.webp")
+image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-smug.webp")
+image AE happy = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy.webp")
+image AE smile = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy-2.webp")
+image AE pondering = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/pondering.webp")
+image AE sad = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.webp")
+image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad-2.webp")
+image AE frown = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.webp")
+image AE surprised = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised.webp")
+image AE surprised-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised-2.webp")
+image AE admire = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/admire.webp")
+image AE angry = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry.webp")
+image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-2.webp")
+image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-3.webp")
+image AE angry-4 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-4.webp")
+image AE aroused = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused.webp")
+image AE back = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/behind.webp")
+image AE embarrassed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/embarrassed.webp")
+image AE aroused-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-2.webp")
+image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-3.webp")
+image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-4.webp")
+image AE glasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique.webp")
+image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique-2.webp")
+image AE glasses-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique-3.webp")
+image AE ass = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.webp")
+image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.webp")
+image AE afraid = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/afraid.webp")
+image AE ahegao = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ahegao.webp")
+image AE hatred = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hatred.webp")
+image AE love = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/love.webp")
+image AE rage = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/rage.webp")
 
-image BE neutral = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png")
-image BE happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.png")
-image BE sad = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png")
-image BE smug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.png")
-image BE surprised = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.png")
-image BE surprised-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.png")
-image BE angry = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.png")
-image BE aroused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.png")
-image BE unique = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.png")
-image BE confused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.png")
-image BE disoriented = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disoriented.png")
-image BE doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.png")
-image BE embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png")
-image BE embarrassed-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.png")
-image BE seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.png")
-image BE shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.png")
-image BE unamused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unamused.png")
-image BE wink = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/wink.png")
-image BE worried = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.png")
+image BE neutral = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.webp")
+image BE happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.webp")
+image BE sad = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.webp")
+image BE smug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/smug.webp")
+image BE surprised = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.webp")
+image BE surprised-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.webp")
+image BE angry = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.webp")
+image BE aroused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.webp")
+image BE unique = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.webp")
+image BE confused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.webp")
+image BE disoriented = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disoriented.webp")
+image BE doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.webp")
+image BE embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.webp")
+image BE embarrassed-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.webp")
+image BE seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.webp")
+image BE shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.webp")
+image BE unamused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unamused.webp")
+image BE wink = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/wink.webp")
+image BE worried = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.webp")
 
-image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/neutral.png")
-image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/happy.png")
-image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad.png")
-image FMG sad-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-2.png")
-image FMG sad-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-3.png")
-image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.png")
-image FMG surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised-2.png")
-image FMG confused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.png")
-image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry.png")
-image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-2.png")
-image FMG angry-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-3.png")
-image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused.png")
-image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused-2.png")
-image FMG disappointed = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/disappointed.png")
-image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/flex.png")
-image FMG upbeat = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/upbeat.png")
+image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/neutral.webp")
+image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/happy.webp")
+image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad.webp")
+image FMG sad-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-2.webp")
+image FMG sad-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-3.webp")
+image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.webp")
+image FMG surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised-2.webp")
+image FMG confused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.webp")
+image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry.webp")
+image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-2.webp")
+image FMG angry-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-3.webp")
+image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused.webp")
+image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused-2.webp")
+image FMG disappointed = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/disappointed.webp")
+image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/flex.webp")
+image FMG upbeat = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/upbeat.webp")
 
-image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/neutral.png")
-image GTS neutral-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/neutral-2.png")
-image GTS happy = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/happy.png")
-image GTS happy-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/happy-2.png")
-image GTS sad = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/sad.png")
-image GTS sad-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/sad-2.png")
-image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/surprised.png")
-image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/angry.png")
-image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/aroused.png")
-image GTS embarrassed = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.png")
-image GTS shy = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.png")
-image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.png")
-image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/wink.png")
-image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/unique.png")
-image GTS unique-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/unique-2.png")
-image GTS despaired-thought = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/despaired-thought.png")
-image GTS pondering = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/pondering.png")
+image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/neutral.webp")
+image GTS neutral-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/neutral-2.webp")
+image GTS happy = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/happy.webp")
+image GTS happy-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/happy-2.webp")
+image GTS sad = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/sad.webp")
+image GTS sad-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/sad-2.webp")
+image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/surprised.webp")
+image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/angry.webp")
+image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/aroused.webp")
+image GTS embarrassed = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.webp")
+image GTS shy = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.webp")
+image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.webp")
+image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/wink.webp")
+image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/unique.webp")
+image GTS unique-2 = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/unique-2.webp")
+image GTS despaired-thought = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/despaired-thought.webp")
+image GTS pondering = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/pondering.webp")
 
-image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/neutral.png")
-image GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/neutral-2.png")
-image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/happy.png")
-image GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/happy-2.png")
-image GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/sad.png")
-image GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/sad-2.png")
-image GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/surprised.png")
-image GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/angry.png")
-image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/aroused.png")
-image GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/embarrassed.png")
-image GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/embarrassed.png")
-image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.png")
-image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/wink.png")
-image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/unique.png")
-image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/unique-2.png")
-image GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/despaired-thought.png")
-image GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/pondering.png")
+image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/neutral.webp")
+image GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/neutral-2.webp")
+image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/happy.webp")
+image GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/happy-2.webp")
+image GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/sad.webp")
+image GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/sad-2.webp")
+image GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/surprised.webp")
+image GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/angry.webp")
+image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/aroused.webp")
+image GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/embarrassed.webp")
+image GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/embarrassed.webp")
+image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/embarrassed.webp")
+image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/wink.webp")
+image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/unique.webp")
+image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/unique-2.webp")
+image GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/despaired-thought.webp")
+image GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/pondering.webp")
 
-image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.png")
-image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.png") #nyi
-image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side/happy.png")
-image side GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/happy.png") #nyi
-image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side/sad.png")
-image side GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/sad-2.png")
-image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side/surprised.png")
-image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side/angry.png")
-image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side/aroused.png")
-image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.png")
-image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.png")
-image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.png")
-image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side/wink.png")
-image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side/unique.png")
-image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/unique-2.png")
-image side GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side/despaired-thought.png")
-image side GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/side/pondering.png")
+image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.webp")
+image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.webp") #nyi
+image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side/happy.webp")
+image side GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/happy.webp") #nyi
+image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side/sad.webp")
+image side GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/sad-2.webp")
+image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side/surprised.webp")
+image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side/angry.webp")
+image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side/aroused.webp")
+image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.webp")
+image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.webp")
+image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.webp")
+image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side/wink.webp")
+image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side/unique.webp")
+image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/unique-2.webp")
+image side GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side/despaired-thought.webp")
+image side GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/side/pondering.webp")
 
-image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/neutral.png")
-image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/happy.png")
-image PRG excited = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/excited.png")
-image PRG sad = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/sad.png")
-image PRG surprised = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/surprised.png")
-image PRG angry = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/angry.png")
-image PRG aroused = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/aroused.png")
-image PRG blush = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/blush.png")
-image PRG blush-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/blush-2.png")
-image PRG flattered = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/flattered.png")
-image PRG unique = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique.png")
-image PRG unique-happy = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique-happy.png")
-image PRG unique-blush = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique-blush.png")
-image PRG worried = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/worried.png")
-image PRG sad-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/sad-2.png")
-image PRG lactate = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/lactate.png")
-image PRG lactate2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/lactate2.png")
-image PRG admire = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/admire.png")
-image PRG admire-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/admire-2.png")
-image PRG doubt = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/doubt.png")
-image PRG insecure = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/insecure.png")
-image PRG unsure = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unsure.png")
-image PRG nervous = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/nervous.png")
-image PRG satisfied = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/satisfied.png")
-image PRG angry-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/angry-2.png")
-image PRG scared = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/scared.png")
-image PRG grope = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/grope.png")
-image PRG grope-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/grope-2.png")
-image PRG embarrassed = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/embarrassed.png")
+image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/neutral.webp")
+image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/happy.webp")
+image PRG excited = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/excited.webp")
+image PRG sad = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/sad.webp")
+image PRG surprised = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/surprised.webp")
+image PRG angry = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/angry.webp")
+image PRG aroused = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/aroused.webp")
+image PRG blush = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/blush.webp")
+image PRG blush-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/blush-2.webp")
+image PRG flattered = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/flattered.webp")
+image PRG unique = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique.webp")
+image PRG unique-happy = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique-happy.webp")
+image PRG unique-blush = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unique-blush.webp")
+image PRG worried = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/worried.webp")
+image PRG sad-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/sad-2.webp")
+image PRG lactate = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/lactate.webp")
+image PRG lactate2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/lactate2.webp")
+image PRG admire = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/admire.webp")
+image PRG admire-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/admire-2.webp")
+image PRG doubt = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/doubt.webp")
+image PRG insecure = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/insecure.webp")
+image PRG unsure = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/unsure.webp")
+image PRG nervous = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/nervous.webp")
+image PRG satisfied = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/satisfied.webp")
+image PRG angry-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/angry-2.webp")
+image PRG scared = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/scared.webp")
+image PRG grope = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/grope.webp")
+image PRG grope-2 = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/grope-2.webp")
+image PRG embarrassed = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/embarrassed.webp")
 
-image WG neutral = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral.png")
-image WG neutral-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral-2.png")
-image WG happy = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/happy.png")
-image WG happy-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/happy-2.png")
-image WG sad = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/sad.png")
-image WG sly = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/sly.png")
-image WG surprised = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/surprised.png")
-image WG surprised-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/surprised-2.png")
-image WG angry = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/angry.png")
-image WG aroused = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/aroused.png")
-image WG haughty = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/unique.png")
-image WG stern = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/stern.png")
-image WG doubt = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/doubt.png")
-image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering.png")
-image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.png")
+image WG neutral = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral.webp")
+image WG neutral-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/neutral-2.webp")
+image WG happy = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/happy.webp")
+image WG happy-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/happy-2.webp")
+image WG sad = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/sad.webp")
+image WG sly = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/sly.webp")
+image WG surprised = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/surprised.webp")
+image WG surprised-2 = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/surprised-2.webp")
+image WG angry = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/angry.webp")
+image WG aroused = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/aroused.webp")
+image WG haughty = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/unique.webp")
+image WG stern = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/stern.webp")
+image WG doubt = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/doubt.webp")
+image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering.webp")
+image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.webp")
 
-image side MC = "Graphics/MC/side.png"
-image side BECell = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.png")
-image side WGCell = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/side.png")
-image side FMGCell = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/side.png")
-image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.png")
-image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.png")
-image side TomoCell = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/side.png")
-image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/side.png")
-image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.png")
-image side YukiCell = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/side.png")
+image side MC = "Graphics/MC/side.webp"
+image side BECell = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.webp")
+image side WGCell = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/side.webp")
+image side FMGCell = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/side.webp")
+image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.webp")
+image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.webp")
+image side TomoCell = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/side.webp")
+image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/side.webp")
+image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.webp")
+image side YukiCell = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/side.webp")
 
 #Minor characters
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
 
-image RM neutral = "Graphics/minor/RM/neutral.png"
-image RM neutral-2 = "Graphics/minor/RM/neutral-2.png"
-image RM angry = "Graphics/minor/RM/angry.png"
-image RM concerned = "Graphics/minor/RM/concerned.png"
-image RM concerned-2 = "Graphics/minor/RM/concerned-2.png"
-image RM distrustful = "Graphics/minor/RM/distrustful.png"
-image RM doubt = "Graphics/minor/RM/doubt.png"
-image RM happy = "Graphics/minor/RM/happy.png"
-image RM sad = "Graphics/minor/RM/sad.png"
-image RM smug = "Graphics/minor/RM/smug.png"
+image RM neutral = "Graphics/minor/RM/neutral.webp"
+image RM neutral-2 = "Graphics/minor/RM/neutral-2.webp"
+image RM angry = "Graphics/minor/RM/angry.webp"
+image RM concerned = "Graphics/minor/RM/concerned.webp"
+image RM concerned-2 = "Graphics/minor/RM/concerned-2.webp"
+image RM distrustful = "Graphics/minor/RM/distrustful.webp"
+image RM doubt = "Graphics/minor/RM/doubt.webp"
+image RM happy = "Graphics/minor/RM/happy.webp"
+image RM sad = "Graphics/minor/RM/sad.webp"
+image RM smug = "Graphics/minor/RM/smug.webp"
 
-image Yuki neutral = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/neutral.png")
-image Yuki happy = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/happy.png")
-image Yuki sad = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/sad.png")
-image Yuki surprised = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/surprised.png")
-image Yuki gossip = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/gossip.png")
+image Yuki neutral = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/neutral.webp")
+image Yuki happy = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/happy.webp")
+image Yuki sad = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/sad.webp")
+image Yuki surprised = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/surprised.webp")
+image Yuki gossip = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/gossip.webp")
 
-image HR neutral = "Graphics/minor/faculty/HR/neutral.png"
-image HR neutral-2 = "Graphics/minor/faculty/HR/neutral-2.png"
-image HR angry = "Graphics/minor/faculty/HR/angry.png"
-image HR annoyed = "Graphics/minor/faculty/HR/annoyed.png"
-image HR unique = "Graphics/minor/faculty/HR/unique.png"
-image HR unique-2 = "Graphics/minor/faculty/HR/unique-2.png"
+image HR neutral = "Graphics/minor/faculty/HR/neutral.webp"
+image HR neutral-2 = "Graphics/minor/faculty/HR/neutral-2.webp"
+image HR angry = "Graphics/minor/faculty/HR/angry.webp"
+image HR annoyed = "Graphics/minor/faculty/HR/annoyed.webp"
+image HR unique = "Graphics/minor/faculty/HR/unique.webp"
+image HR unique-2 = "Graphics/minor/faculty/HR/unique-2.webp"
 
-image Hageshi neutral = "Graphics/minor/faculty/hageshi/neutral.png"
-image Hageshi angry = "Graphics/minor/faculty/hageshi/angry.png"
-image Hageshi satisfied = "Graphics/minor/faculty/hageshi/satisfied.png"
+image Hageshi neutral = "Graphics/minor/faculty/hageshi/neutral.webp"
+image Hageshi angry = "Graphics/minor/faculty/hageshi/angry.webp"
+image Hageshi satisfied = "Graphics/minor/faculty/hageshi/satisfied.webp"
 
-image Takamura neutral = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/neutral.png"
-image Takamura flattered = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/flattered.png"
-image Takamura happy = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/happy.png"
-image Takamura reassuring = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/reassuring.png"
-image Takamura sad = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/sad.png"
-image Takamura strict = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/strict.png"
+image Takamura neutral = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/neutral.webp"
+image Takamura flattered = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/flattered.webp"
+image Takamura happy = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/happy.webp"
+image Takamura reassuring = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/reassuring.webp"
+image Takamura sad = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/sad.webp"
+image Takamura strict = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/strict.webp"
 
-image Tsubasa neutral = "Graphics/minor/faculty/tsubasa/neutral.png"
-image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.png"
-image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.png"
-image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.png"
+image Tsubasa neutral = "Graphics/minor/faculty/tsubasa/neutral.webp"
+image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.webp"
+image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.webp"
+image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.webp"
 
 
 #legalsizes already updated, change images when bigger sprites exist
-image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/annoyed.png")
-image Tomoko defiant = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/defiant.png")
+image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/annoyed.webp")
+image Tomoko defiant = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/defiant.webp")
 image Tomoko distracted = Composite(
     (443, 651),
-    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted.png"),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted.webp"),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.webp",
         None, Null()),
     )
 image Tomoko distracted-2 = Composite(
     (443, 651),
-    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-2.png"),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-2.webp"),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.webp",
         None, Null()),
     )
 image Tomoko distracted-3 = Composite(
     (443, 651),
-    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-3.png"),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted-3.webp"),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.png",
+        "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.png",
+        "getAffection('TM') <= 10 and getAffection('TM') >= 6", "Graphics/minor/tomoko/overlays/emoji2.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.png",
+        "getAffection('TM') <= 15 and getAffection('TM') >= 11", "Graphics/minor/tomoko/overlays/emoji3.webp",
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.png",
+        "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.webp",
         None, Null()),
     )
-image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/neutral.png")
-image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/happy.png")
-image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/smile.png")
-image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/surprised.png")
-image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/sad.png")
-image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/unique.png")
-image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/worried.png")
+image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/neutral.webp")
+image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/happy.webp")
+image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/smile.webp")
+image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/surprised.webp")
+image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/sad.webp")
+image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/unique.webp")
+image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/worried.webp")
 
-image Ryoko neutral = "Graphics/minor/ryoko/[RyokoOutfit]/neutral.png"
-image Ryoko happy = "Graphics/minor/ryoko/[RyokoOutfit]/happy.png"
-image Ryoko annoyed = "Graphics/minor/ryoko/[RyokoOutfit]/annoyed.png"
-image Ryoko camera = "Graphics/minor/ryoko/[RyokoOutfit]/camera.png"
-image Ryoko surprised = "Graphics/minor/ryoko/[RyokoOutfit]/surprised.png"
-image Ryoko tongue = "Graphics/minor/ryoko/[RyokoOutfit]/unique.png"
-image Ryoko confused = "Graphics/minor/ryoko/[RyokoOutfit]/confused.png"
-image Ryoko embarrassed = "Graphics/minor/ryoko/[RyokoOutfit]/embarrassed.png"
+image Ryoko neutral = "Graphics/minor/ryoko/[RyokoOutfit]/neutral.webp"
+image Ryoko happy = "Graphics/minor/ryoko/[RyokoOutfit]/happy.webp"
+image Ryoko annoyed = "Graphics/minor/ryoko/[RyokoOutfit]/annoyed.webp"
+image Ryoko camera = "Graphics/minor/ryoko/[RyokoOutfit]/camera.webp"
+image Ryoko surprised = "Graphics/minor/ryoko/[RyokoOutfit]/surprised.webp"
+image Ryoko tongue = "Graphics/minor/ryoko/[RyokoOutfit]/unique.webp"
+image Ryoko confused = "Graphics/minor/ryoko/[RyokoOutfit]/confused.webp"
+image Ryoko embarrassed = "Graphics/minor/ryoko/[RyokoOutfit]/embarrassed.webp"
 
-image Chibuki neutral = "Graphics/minor/chibuki/neutral.png"
+image Chibuki neutral = "Graphics/minor/chibuki/neutral.webp"
 
-image Kanami neutral = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/neutral.png"
-image Kanami angry = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/angry.png"
-image Kanami embarrassed = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/embarrassed.png"
-image Kanami happy = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/happy.png"
-image Kanami sad = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/sad.png"
-image Kanami surprised = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/surprised.png"
+image Kanami neutral = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/neutral.webp"
+image Kanami angry = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/angry.webp"
+image Kanami embarrassed = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/embarrassed.webp"
+image Kanami happy = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/happy.webp"
+image Kanami sad = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/sad.webp"
+image Kanami surprised = "Graphics/minor/kanami/[minorsizes[Kanami]]/[KanamiOutfit]/surprised.webp"
 
-image Kokutan neutral = "Graphics/minor/kokutan/neutral.png"
+image Kokutan neutral = "Graphics/minor/kokutan/neutral.webp"
 
-image Minori neutral = "Graphics/minor/minori/neutral.png"
-image Minori happy = "Graphics/minor/minori/happy.png"
-image Minori embarrassed = "Graphics/minor/minori/embarrassed.png"
-image Minori sad = "Graphics/minor/minori/sad.png"
+image Minori neutral = "Graphics/minor/minori/neutral.webp"
+image Minori happy = "Graphics/minor/minori/happy.webp"
+image Minori embarrassed = "Graphics/minor/minori/embarrassed.webp"
+image Minori sad = "Graphics/minor/minori/sad.webp"
 
-image Sakura angry = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/angry.png")
-image Sakura awkward = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/awkward.png")
-image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/deadpan.png")
-image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/frustrated.png")
-image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral.png")
-image Sakura neutral-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral-2.png")
-image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy.png")
-image Sakura happy-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy-2.png")
-image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/nervous.png")
-image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad.png")
-image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-2.png")
-image Sakura sad-3 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-3.png")
-image Sakura surprised = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/surprised.png")
+image Sakura angry = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/angry.webp")
+image Sakura awkward = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/awkward.webp")
+image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/deadpan.webp")
+image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/frustrated.webp")
+image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral.webp")
+image Sakura neutral-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/neutral-2.webp")
+image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy.webp")
+image Sakura happy-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/happy-2.webp")
+image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/nervous.webp")
+image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad.webp")
+image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-2.webp")
+image Sakura sad-3 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/sad-3.webp")
+image Sakura surprised = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/[SakuraOutfit]/surprised.webp")
 
-image Natsuko neutral = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/neutral.png")
-image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/annoyed.png")
-image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/disappointed.png")
-image Natsuko smug = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/smug.png")
-image Natsuko flex = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flex.png")
-image Natsuko frustrated = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/frustrated.png")
-image Natsuko happy = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/happy.png")
-image Natsuko flirty = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flirty.png")
-image Natsuko aroused = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/aroused.png")
+image Natsuko neutral = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/neutral.webp")
+image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/annoyed.webp")
+image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/disappointed.webp")
+image Natsuko smug = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/smug.webp")
+image Natsuko flex = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flex.webp")
+image Natsuko frustrated = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/frustrated.webp")
+image Natsuko happy = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/happy.webp")
+image Natsuko flirty = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flirty.webp")
+image Natsuko aroused = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/aroused.webp")
 
-image Tako neutral = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/neutral.png"
-image Tako angry = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/angry.png"
-image Tako excited = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/excited.png"
-image Tako happy = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/happy.png"
-image Tako unique = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/unique.png"
-image Tako sad = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/sad.png"
-image Tako confused = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/confused.png"
+image Tako neutral = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/neutral.webp"
+image Tako angry = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/angry.webp"
+image Tako excited = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/excited.webp"
+image Tako happy = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/happy.webp"
+image Tako unique = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/unique.webp"
+image Tako sad = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/sad.webp"
+image Tako confused = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/confused.webp"
 
-image Midori neutral = "Graphics/minor/parents/midori/neutral.png"
-image Midori happy = "Graphics/minor/parents/midori/happy.png"
-image Midori nervous = "Graphics/minor/parents/midori/nervous.png"
-image Midori pout = "Graphics/minor/parents/midori/pout.png"
-image Midori sad = "Graphics/minor/parents/midori/sad.png"
-image Midori surprised = "Graphics/minor/parents/midori/surprised.png"
-image Midori unique = "Graphics/minor/parents/midori/unique.png"
+image Midori neutral = "Graphics/minor/parents/midori/neutral.webp"
+image Midori happy = "Graphics/minor/parents/midori/happy.webp"
+image Midori nervous = "Graphics/minor/parents/midori/nervous.webp"
+image Midori pout = "Graphics/minor/parents/midori/pout.webp"
+image Midori sad = "Graphics/minor/parents/midori/sad.webp"
+image Midori surprised = "Graphics/minor/parents/midori/surprised.webp"
+image Midori unique = "Graphics/minor/parents/midori/unique.webp"
 
-image Okisho neutral = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/neutral.png"
-image Okisho neutral-2 = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/neutral-2.png"
-image Okisho angry = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/angry.png"
-image Okisho happy = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/happy.png"
-image Okisho sad = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/sad.png"
-image Okisho surprised = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/surprised.png"
-image Okisho unique = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/unique.png"
+image Okisho neutral = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/neutral.webp"
+image Okisho neutral-2 = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/neutral-2.webp"
+image Okisho angry = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/angry.webp"
+image Okisho happy = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/happy.webp"
+image Okisho sad = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/sad.webp"
+image Okisho surprised = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/surprised.webp"
+image Okisho unique = "Graphics/minor/okisho/[minorsizes[Okisho]]/[OkishoOutfit]/unique.webp"
 
-image Yuko neutral = "Graphics/minor/parents/yuko/neutral.png"
-image Yuko angry = "Graphics/minor/parents/yuko/angry.png"
-image Yuko happy = "Graphics/minor/parents/yuko/happy.png"
-image Yuko shrug = "Graphics/minor/parents/yuko/shrug.png"
-image Yuko smug = "Graphics/minor/parents/yuko/smug.png"
-image Yuko surprised = "Graphics/minor/parents/yuko/surprised.png"
-image Yuko unique = "Graphics/minor/parents/yuko/unique.png"
+image Yuko neutral = "Graphics/minor/parents/yuko/neutral.webp"
+image Yuko angry = "Graphics/minor/parents/yuko/angry.webp"
+image Yuko happy = "Graphics/minor/parents/yuko/happy.webp"
+image Yuko shrug = "Graphics/minor/parents/yuko/shrug.webp"
+image Yuko smug = "Graphics/minor/parents/yuko/smug.webp"
+image Yuko surprised = "Graphics/minor/parents/yuko/surprised.webp"
+image Yuko unique = "Graphics/minor/parents/yuko/unique.webp"
 
-image Akihiro neutral = "Graphics/minor/parents/akihiro/neutral.png"
-image Miko neutral = "Graphics/minor/parents/miko/neutral.png"
+image Akihiro neutral = "Graphics/minor/parents/akihiro/neutral.webp"
+image Miko neutral = "Graphics/minor/parents/miko/neutral.webp"
 
-image Minami neutral = "Graphics/minor/parents/minami/neutral.png"
-image Minami annoyed = "Graphics/minor/parents/minami/annoyed.png"
-image Minami dark = "Graphics/minor/parents/minami/dark.png"
-image Minami happy = "Graphics/minor/parents/minami/happy.png"
-image Minami unique = "Graphics/minor/parents/minami/unique.png"
+image Minami neutral = "Graphics/minor/parents/minami/neutral.webp"
+image Minami annoyed = "Graphics/minor/parents/minami/annoyed.webp"
+image Minami dark = "Graphics/minor/parents/minami/dark.webp"
+image Minami happy = "Graphics/minor/parents/minami/happy.webp"
+image Minami unique = "Graphics/minor/parents/minami/unique.webp"
 
-image Jineko neutral = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/neutral.png"
-image Jineko angry = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/angry.png"
-image Jineko happy = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/happy.png"
-image Jineko sad = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/sad.png"
-image Jineko surprised = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/surprised.png"
-image Jineko unique = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/unique.png"
+image Jineko neutral = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/neutral.webp"
+image Jineko angry = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/angry.webp"
+image Jineko happy = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/happy.webp"
+image Jineko sad = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/sad.webp"
+image Jineko surprised = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/surprised.webp"
+image Jineko unique = "Graphics/minor/jineko/[minorsizes[Jineko]]/[JinekoOutfit]/unique.webp"
 
-image Daitaro neutral = "Graphics/minor/parents/daitaro/neutral.png"
-image Vivian neutral = "Graphics/minor/parents/vivian/neutral.png"
-image Vivian happy = "Graphics/minor/parents/vivian/happy.png"
-image Vivian surprised = "Graphics/minor/parents/vivian/surprised.png"
+image Daitaro neutral = "Graphics/minor/parents/daitaro/neutral.webp"
+image Vivian neutral = "Graphics/minor/parents/vivian/neutral.webp"
+image Vivian happy = "Graphics/minor/parents/vivian/happy.webp"
+image Vivian surprised = "Graphics/minor/parents/vivian/surprised.webp"
 
 
 image dummy = "Graphics/ui/dummy.png"
 
 #Overlays
-image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.png"
-image HairpinGTS1 = "Graphics/GTS/1/overlays/hairpin-overlay.png"
-image FlowerPRG2 = "Graphics/PRG/2/overlays/flower-overlay.png"
-image GumAE6EP = "Graphics/AE/6/overlays/gum.png"
-image WmHairpinBE2 = "Graphics/BE/2/overlays/hairpin-overlay.png"
-image NoHairpinBE = "Graphics/BE/[globalsize]/overlays/nohairpin-overlay.png"
-image AthleticSoccerBE1 = "Graphics/BE/1/overlays/soccer-overlay.png"
-image AlternateOutfitBE = "Graphics/BE/[globalsize]/overlays/alternate-overlay.png"
+image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.webp"
+image HairpinGTS1 = "Graphics/GTS/1/overlays/hairpin-overlay.webp"
+image FlowerPRG2 = "Graphics/PRG/2/overlays/flower-overlay.webp"
+image GumAE6EP = "Graphics/AE/6/overlays/gum.webp"
+image WmHairpinBE2 = "Graphics/BE/2/overlays/hairpin-overlay.webp"
+image NoHairpinBE = "Graphics/BE/[globalsize]/overlays/nohairpin-overlay.webp"
+image AthleticSoccerBE1 = "Graphics/BE/1/overlays/soccer-overlay.webp"
+image AlternateOutfitBE = "Graphics/BE/[globalsize]/overlays/alternate-overlay.webp"
 
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"

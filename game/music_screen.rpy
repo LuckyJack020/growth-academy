@@ -66,7 +66,7 @@ image playPauseButton = DynamicDisplayable(ost.auto_play_pause_button)
 screen music_room():
 
     tag menu
-    add "Graphics/ui/bg/archiveBG/music_eve.png"
+    add "Graphics/ui/bg/archiveBG/music_eve.webp"
 
     default bar_val = ost.AdjustableAudioPositionValue()
 
@@ -126,13 +126,13 @@ screen music_room():
             style "music_room_control_options"
 
             imagebutton:
-                idle At("Graphics/ui/icons/backward.png", imagebutton_scale)
+                idle At("Graphics/ui/icons/backward.webp", imagebutton_scale)
                 action [SensitiveIf(renpy.music.is_playing(channel='music_room')), Function(ost.current_music_backward)]
 
             add "playPauseButton" at imagebutton_scale
 
             imagebutton:
-                idle At("Graphics/ui/icons/forward.png", imagebutton_scale)
+                idle At("Graphics/ui/icons/forward.webp", imagebutton_scale)
                 action [SensitiveIf(renpy.music.is_playing(channel='music_room')), Function(ost.current_music_forward)]
 
         hbox:
@@ -140,23 +140,23 @@ screen music_room():
             style "music_room_setting_options"
 
             imagebutton:
-                idle At(ConditionSwitch("ost.organizeAZ", "Graphics/ui/icons/A-ZOn.png", "True", "Graphics/ui/icons/A-Z.png"), imagebutton_scale)
+                idle At(ConditionSwitch("ost.organizeAZ", "Graphics/ui/icons/A-ZOn.webp", "True", "Graphics/ui/icons/A-Z.webp"), imagebutton_scale)
                 action [ToggleVariable("ost.organizeAZ", False, True), Function(ost.resort)]
 
             imagebutton:
-                idle At(ConditionSwitch("ost.organizePriority", "Graphics/ui/icons/priorityOn.png", "True", "Graphics/ui/icons/priority.png"), imagebutton_scale)
+                idle At(ConditionSwitch("ost.organizePriority", "Graphics/ui/icons/priorityOn.webp", "True", "Graphics/ui/icons/priority.webp"), imagebutton_scale)
                 action [ToggleVariable("ost.organizePriority", False, True), Function(ost.resort)]
 
             imagebutton:
-                idle At(ConditionSwitch("ost.loopSong", "Graphics/ui/icons/replayOn.png", "True", "Graphics/ui/icons/replay.png"), imagebutton_scale)
+                idle At(ConditionSwitch("ost.loopSong", "Graphics/ui/icons/replayOn.webp", "True", "Graphics/ui/icons/replay.webp"), imagebutton_scale)
                 action [ToggleVariable("ost.loopSong", False, True)]
 
             imagebutton:
-                idle At(ConditionSwitch("ost.randomSong", "Graphics/ui/icons/shuffleOn.png", "True", "Graphics/ui/icons/shuffle.png"), imagebutton_scale)
+                idle At(ConditionSwitch("ost.randomSong", "Graphics/ui/icons/shuffleOn.webp", "True", "Graphics/ui/icons/shuffle.webp"), imagebutton_scale)
                 action [ToggleVariable("ost.randomSong", False, True)]
 
             imagebutton:
-                idle At("Graphics/ui/icons/refreshList.png", imagebutton_scale)
+                idle At("Graphics/ui/icons/refreshList.webp", imagebutton_scale)
                 action [Function(ost.refresh_list)]
 
         bar:
@@ -169,7 +169,7 @@ screen music_room():
 
         imagebutton:
             style "music_room_volume_options"
-            idle At(ConditionSwitch("preferences.get_volume(\"music_room_mixer\") == 0.0", "Graphics/ui/icons/volume.png", "True", "Graphics/ui/icons/volumeOn.png"), imagebutton_scale)
+            idle At(ConditionSwitch("preferences.get_volume(\"music_room_mixer\") == 0.0", "Graphics/ui/icons/volume.webp", "True", "Graphics/ui/icons/volumeOn.webp"), imagebutton_scale)
             action [Function(ost.mute_player)]
 
         add "readablePos"
@@ -203,7 +203,7 @@ style music_room_duration_text is gui_text
 style music_room_frame:
     yfill True
 
-    background "Graphics/ui/bg/archiveBG/music_eve.png"
+    background "Graphics/ui/bg/archiveBG/music_eve.webp"
     foreground "gui/overlay/game_menu.png"
 
 style music_room_button is default:

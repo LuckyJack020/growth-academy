@@ -516,9 +516,9 @@ init python:
         #if affection[girl] < 0:
         #    affection[girl] = 0
         if val > 0:
-            img = "Graphics/ui/notification/" + girl + "-up.png"
+            img = "Graphics/ui/notification/" + girl + "-up.webp"
         elif val < 0:
-            img = "Graphics/ui/notification/" + girl + "-down.png"
+            img = "Graphics/ui/notification/" + girl + "-down.webp"
         else:
             return
         showNotification(img)
@@ -568,11 +568,11 @@ init python:
                 return False
         else:
             if checkResult:
-                img = "Graphics/ui/notification/" + girl + "-win.png"
+                img = "Graphics/ui/notification/" + girl + "-win.webp"
                 showNotification(img)
                 return True
             else:
-                img = "Graphics/ui/notification/" + girl + "-fail.png"
+                img = "Graphics/ui/notification/" + girl + "-fail.webp"
                 showNotification(img)
                 return False
 
@@ -669,9 +669,9 @@ init python:
         else:
             skills[s] += val
             if val >= 0:
-                img = "Graphics/ui/notification/" + s + "-up.png"
+                img = "Graphics/ui/notification/" + s + "-up.webp"
             else:
-                img = "Graphics/ui/notification/" + s + "-down.png"
+                img = "Graphics/ui/notification/" + s + "-down.webp"
             showNotification(img)
             return skills[s]
 
@@ -681,9 +681,9 @@ init python:
         else:
             skills[s] += val
             if val >= 0:
-                img = "Graphics/ui/notification/" + s + "-up.png"
+                img = "Graphics/ui/notification/" + s + "-up.webp"
             else:
-                img = "Graphics/ui/notification/" + s + "-down.png"
+                img = "Graphics/ui/notification/" + s + "-down.webp"
             showNotification(img)
 
     def setSizeDebug(mod):
@@ -742,11 +742,11 @@ init python:
                 return False
         else:
             if checkResult:
-                img = "Graphics/ui/notification/" + s + "-win.png"
+                img = "Graphics/ui/notification/" + s + "-win.webp"
                 showNotification(img)
                 return True
             else:
-                img = "Graphics/ui/notification/" + s + "-fail.png"
+                img = "Graphics/ui/notification/" + s + "-fail.webp"
                 showNotification(img)
                 return False
 
@@ -1092,9 +1092,9 @@ init python:
 
             #blit icon image on end
             #if len(eventlibrary[highlitevent]["girls"]) == 0:
-            #    img = im.FactorScale("Graphics/ui/icons/minor-icon.png", .25)
+            #    img = im.FactorScale("Graphics/ui/icons/minor-icon.webp", .25)
             #else:
-            #    img = im.FactorScale("Graphics/ui/icons/%s-icon.png" % eventlibrary[highlitevent]["girls"][0], .25)
+            #    img = im.FactorScale("Graphics/ui/icons/%s-icon.webp" % eventlibrary[highlitevent]["girls"][0], .25)
             #child_render = renpy.render(img, 25, 25, st, at)
             #iconend = (end[0] - 12, end[1] - 12)
             #render.blit(child_render, iconend)
@@ -1229,7 +1229,7 @@ screen choicetimer():
     timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('choicetimer'), Jump(timer_jump)])
 
 screen daymenu():
-    add "Graphics/ui/map/map_school.png"
+    add "Graphics/ui/map/map_school.webp"
 
     #event choice sidebar
     grid 1 8:
@@ -1246,17 +1246,17 @@ screen daymenu():
                     xmaximum 250
                     ymaximum 40
                     if eventlibrary[c]["location"] in locationlist:
-                        imagebutton idle Crop((0, 0, 250, 40), "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"]) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle Crop((0, 0, 250, 40), "Graphics/ui/icons/bgicon-%s.webp" % eventlibrary[c]["location"]) action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     else:
-                        imagebutton idle Crop((0, 0, 250, 40), "Graphics/ui/icons/bgicon-missing.png") action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle Crop((0, 0, 250, 40), "Graphics/ui/icons/bgicon-missing.webp") action [SetVariable("activeevent", c), SetVariable("eventname", eventlibrary[c]["name"]), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     hbox:
                         spacing -140
                         order_reverse True
                         if len(eventlibrary[c]["girls"]) == 0:
-                            add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-missing.png")
+                            add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-missing.webp")
                         else:
                             for g in eventlibrary[c]["girls"]:
-                                add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-%s.png" % g)
+                                add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-%s.webp" % g)
                         #FIXME this looks awful and breaks tables, needs harder adjustments
                         #fixed:
                         #    frame:
@@ -1271,9 +1271,9 @@ screen daymenu():
     if "spmax" in globals():
         text "Free Periods: " + str(spmax - spspent) xalign 0.05 yalign 0.845 color Color((0, 0, 0))
         if spmax > spspent:
-            imagebutton idle "Graphics/ui/map/athletics.png" xalign 0.05 yalign 0.95 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-            imagebutton idle "Graphics/ui/map/art.png" xalign 0.15 yalign 0.95 action [SetVariable("activeevent", "Art"), Jump("train")]
-            imagebutton idle "Graphics/ui/map/academics.png" xalign 0.25 yalign 0.95 action [SetVariable("activeevent", "Academics"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/athletics.webp" xalign 0.05 yalign 0.95 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/art.webp" xalign 0.15 yalign 0.95 action [SetVariable("activeevent", "Art"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/academics.webp" xalign 0.25 yalign 0.95 action [SetVariable("activeevent", "Academics"), Jump("train")]
 
     #scene title
     if highlitevent != "":

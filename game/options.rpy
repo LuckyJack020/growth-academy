@@ -211,8 +211,10 @@ init python:
     # Put images into the images archive.
     build.classify("game/Graphics/ui/bg/archiveBG/**.jpg", "images")
     build.classify("game/Graphics/ui/bg/archiveBG/**.png", "images")
+    build.classify("game/Graphics/ui/bg/archiveBG/**.webp", "images")
     build.classify("game/Graphics/ui/gallery/**.jpg", "images")
     build.classify("game/Graphics/ui/gallery/**.png", "images")
+    build.classify("game/Graphics/ui/gallery/**.webp", "images")
 
     # Put audio into the audio archive.
     #build.classify("game/Audio/BGM/**.mp3", "audio")

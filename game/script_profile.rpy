@@ -175,12 +175,12 @@ init python:
 
     def getProfileString(key):
         if profiles[key]["pimgdates"] == None:
-            return "Graphics/ui/profiles/" + key + "-pimg.png"
+            return "Graphics/ui/profiles/" + key + "-pimg.webp"
         else:
             i = len(profiles[key]["pimgdates"])
             for d in profiles[key]["pimgdates"]:
                 if gametime > datelibrary[d]:
-                    return "Graphics/ui/profiles/" + key + "-pimg-" + str(i) + ".png"
+                    return "Graphics/ui/profiles/" + key + "-pimg-" + str(i) + ".webp"
                 i -= 1
 
 label profileselect:
@@ -199,10 +199,10 @@ screen profileselect():
                 $pv = profiles[pk]
                 button action [SetVariable("activeprofile", pk), Jump("profileview")]:
                     hbox:
-                        image "Graphics/ui/profiles/" + pk + "-picon.png"
+                        image "Graphics/ui/profiles/" + pk + "-picon.webp"
                         text pv["name"] yalign .5
                         if pv["affection"] != None:
-                            image "Graphics/ui/profiles/heartsmall.png"
+                            image "Graphics/ui/profiles/heartsmall.webp"
 
     hbox:
         yalign .9
