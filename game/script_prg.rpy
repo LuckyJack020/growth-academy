@@ -9818,7 +9818,7 @@ label PRG027:
             PRG "It's... fitting okay."
             PRG "Y-You can come in... i-if you'd like..."
             "I walked over to her door and stepped inside."
-            $setPRGOutfit(OutfitEnum.PAJAMAS)
+            $setPRGOutfit(OutfitEnum.DEFAULT)
             scene Dorm PRG
             show PRG unique
             with fade
@@ -10260,7 +10260,7 @@ label PRG027:
                 MC "She might know how I feel, but I didn't talk to her directly about it yet."
                 BE "So that's why-"
                 show BE surprised
-                BE "Oh my gosh! And I almost... gave it all away in class that day!"
+                BE "Oh my gosh! And I almost... gave it all away in class!"
                 show BE surprised-2
                 BE "Kei-chan, I am so SO sorry! I-I had no idea!"
                 MC "It's alright. I'm sorry that I cut you off."
@@ -29093,7 +29093,9 @@ label PRG048:
     PRG "I... I just do."
     pause 1
     PRG "Here... my mom wants to talk to you."
-    scene NYI with fade
+    scene NYI
+    show PRG worried
+    with fade
     "After a moment of collecting myself, I walked with Aida back into the living room, where I could see into the kitchen."
     "Takara was at the sink, arms deep in soapy water."
     Takara "Hotsure-san, I'm sorry... I sort of jumped the gun a little..."
@@ -29115,7 +29117,7 @@ label PRG048:
     "I ran soap and water in the sink and started washing the plates, putting them in the small drying rack."
     "After I cleared out my current load, I headed back to the table to get some more."
     "I glanced over to the couch... and a smile crept onto my face. A soft, gentle smile."
-    show PRG blush-2
+    show PRG blush-2 with dissolve
     "Aida was seated on the couch, and Takara was right next to her."
     "Takara was rubbing Aida's belly... and she was crying, with a huge smile on her face."
     "Aida looked her mom in the eye as Takara pulled her into a little hug, holding her daughter tight."
@@ -29123,7 +29125,7 @@ label PRG048:
     "I kept going on the dishes, all the while glancing over the counter and back into the living room where Aida and Takara were."
     pause 1
     "After about ten minutes, I hung up my dish towel and dried off my prune-hands."
-    show PRG unique-happy
+    show PRG unique-happy with dissolve
     "Aida and Takara were still in the living room, seated beside each other."
     Takara "Oh, pardon us, Hotsure-san. Just having a little... mother/daughter time."
     MC "Of course. Don't let me interrupt."
@@ -29235,13 +29237,13 @@ label PRG048:
     "The credits rolled on the third movie as I shut off the TV and Aida and I lay in the darkness together, the only sound being our soft breathing."
     pause 1.5
     PRG "... Keisuke?"
-    MC "Yeah?"
+    "Keisuke" "Yeah?"
     PRG "I'm... I'm so excited for tomorrow."
     PRG "Thank you... thank you so much for all of this..."
-    MC "You're welcome. I'd do it all again, too."
+    "Keisuke" "You're welcome. I'd do it all again, too."
     "I felt Aida move, then felt her lips press against my ear."
     PRG "Oops, u-um... w-where's your lips?"
-    MC "Here... a little to the left."
+    "Keisuke" "Here... a little to the left."
     "Aida searched around for a moment, then found her mark, her lips going to mine."
     "I felt her more plump bottom lip seat between mine. Her head turned sideways, her hand going to my jaw and rubbing it."
     "I wrapped my arms around her, holding her in place as she kissed me deeply."
@@ -29250,17 +29252,17 @@ label PRG048:
     PRG "Mmn... mmnnn~"
     "Aida's tongue started off timid and light, just as she was. But, as the seconds passed, her boldness grew."
     "I pulled my lips from hers for a moment."
-    MC "You don't have to be scared... it's okay."
+    "Keisuke" "You don't have to be scared... it's okay."
     PRG "I-I just don't want to be too forward..."
-    play music DayByDay fadein 5.0 #we don't have General Music 4...but I'll use 3 here for now
-    MC "Don't worry. Do what you feel like you want to do..."
+    play music Love fadein 5.0 #we don't have General Music 4...but I'll use 3 here for now
+    "Keisuke" "Don't worry. Do what you feel like you want to do..."
     $setFlag("PRG048_kiss")
     "Aida's body shifted, and her mouth came back to mine."
     "Her tongue came out with a force, meeting mine again and twisting with it between us like two dancers in the heat of competition."
     "I felt Aida's hand go down, finding my shirt and going up onto my chest."
     "Her hand went up, running along my chest and sending bolts of excitement down and around my body."
     "I brought my hands around her again, holding her a little higher and feeling her belly rub most of my lower body."
-    if checkAffection("PRG", "<", 26):
+    if checkAffection("PRG", "<", 22):
         "Aida's lips pulled from mine."
         "I could make out her breathing. Heavy and deep."
         PRG "Come here... lay your head down."
@@ -29268,7 +29270,7 @@ label PRG048:
         "Because of the mattress, I had to curl up my legs even further, but I would have broken them off if it meant I could stay like this even longer."
         "Aida gently rubbed my head, her right arm over my back."
         PRG "I can't wait for tomorrow..."
-        MC "Me either... sleep well."
+        "Keisuke" "Me either... sleep well."
         jump daymenu
     else:
         $setFlag("PRG048_boob")
@@ -29282,11 +29284,11 @@ label PRG048:
         "I felt down, the top of the nightie, then down..."
         "Aida took my hand further down... guiding it right onto her breast."
         if getFlag("PRG044_c1_1"):
-            MC "Hahh... B-Baby..."
+            "Keisuke" "Hahh... B-Baby..."
         elif getFlag("PRG044_c1_2"):
-            MC "Hahh... B-Babe..."
+            "Keisuke" "Hahh... B-Babe..."
         elif getFlag("PRG044_c1_2"):
-            MC "Hahh... S-Sweetie..."   
+            "Keisuke" "Hahh... S-Sweetie..."   
         PRG "... It's okay."
         PRG "... You can feel them."
         "Aida let go of my wrist, leaving my hand where it was."
@@ -29294,10 +29296,10 @@ label PRG048:
         "Her boobs felt soft... so unbelievably soft and plushy. Through her nightie, I could feel Aida trembling ever so slightly under my touch."
         "I moved my hands under them and lifted them."
         PRG "Do... d-do you like them?"
-        MC "God... y-yeah..."
-        MC "They're so heavy..."
+        "Keisuke" "God... y-yeah..."
+        "Keisuke" "They're so heavy..."
         PRG "T-They've gotten a lot bigger lately... a-and heavier..."
-        MC "Are they sensitive?"
+        "Keisuke" "Are they sensitive?"
         PRG "... V-Very."
         "I worked my hands back up toward the top of them, where they sloped down a little. Without a bra on, Aida's boobs hung heavily, the weight of them making them rest on her belly."
         "I found where her nightie started, and went down her cleavage, taking my hands right onto her skin."
@@ -29305,19 +29307,19 @@ label PRG048:
         "I moved them back onto her breasts, and now down on her skin, I could feel a sort of raised portion. It was hard to tell in the dark, but the raised area was large."
         "I brought my hands to the bottom of her breasts again, pushing them up and in under my hands."
         PRG "A-Agh... mmn... K-K-Keisuke~"
-        MC "God, these things are huge..."
+        "Keisuke" "God, these things are huge..."
         PRG "I-I know. D-Do you like... big boobs?"
-        MC "I..."
+        "Keisuke" "I..."
         pause .5
-        MC "... Yeah. Yeah, I do."
+        "Keisuke" "... Yeah. Yeah, I do."
         PRG "T-This big?"
-        MC "Yes. This big, and even bigger if it goes there..."
-        MC "I... kind of figured you would have noticed by now."
+        "Keisuke" "Yes. This big, and even bigger if it goes there..."
+        "Keisuke" "I... kind of figured you would have noticed by now."
         PRG "I... kind of have. I've seen you looking at them a lot."
         PRG "But... it's okay..."
         PRG "I-I don't mind if you look... {w}or touch."
         "Steeling myself, I pushed them up from the bottom, pressing harder and pushing my hands and fingers into her soft tit-flesh."
-        MC "Do you like when I rub them?"
+        "Keisuke" "Do you like when I rub them?"
         PRG "Mmn... y-yeah."
         PRG "H-Here... sit behind me."
         "By now, my body was starting to have its own response to this."
@@ -29329,13 +29331,13 @@ label PRG048:
         "Aida laid back into me, her head going on my shoulder as I kept my arms around her, squeezing her boobs back and forth."
         MCT "The weight of these things... holy shit. How does she even walk?"
         PRG "Ohhh... K-Keisuke..."
-        "Aida's breath was speeding up faster and faster. My dick was pressing right between her ass cheeks now. With no jeans or anything of thicker material to stop it, it jutted right between, the thin fabric of boxers and gym shorts doing precious little."
-        MC "God... such huge boobs on such an innocent girl..."
+        "Aida's breathing was speeding up faster and faster. My dick was pressing right between her ass cheeks now. With no jeans or anything of thicker material to stop it, it jutted right between, the thin fabric of boxers and gym shorts doing precious little."
+        "Keisuke" "God... such huge boobs on such an innocent girl..."
         PRG "T-They get bigger every day..."
-        MC "Hahh... hmngh... I want to watch them grow..."
+        "Keisuke" "Hahh... hmngh... I want to watch them grow..."
         PRG "I... I... mmmn..."
         PRG "I-I want you to watch me grow..."
-        if checkAffection("PRG", "<", 39):
+        if checkAffection("PRG", "<", 30):
             "I kept rubbing like this, pulling them up and down with force."
             "They were so massive, I could feel her soft tit-flesh roll over and around my fingers as I squeezed into them."
             "Eventually, Aida shifted a bit, patting the pillow."
@@ -29345,11 +29347,11 @@ label PRG048:
             "I followed her hand and brought my head down, right under her shoulder by her collar."
             "I wrapped my arms around Aida, one going under her pillow and the other going over her, under her boobs... well, boob. I couldn't really make it that far over her."
             PRG "I can't wait..."
-            MC "Same here..."
+            "Keisuke" "Same here..."
             PRG "We should sleep, though... I don't want to be tired tomorrow."
             "I nodded on her. She gently shifted me and kissed my forehead."
             PRG "Goodnight, Baby..."
-            MC "Night..."
+            "Keisuke" "Night..."
             "I cuddled back up to her, listening to her breathing soften out."
             "This was it. This was bliss."
             "I couldn't ask for more."
@@ -29363,17 +29365,17 @@ label PRG048:
             "Aida was doing her rocking forward thing again."
             "I moved my hands down to her belly, holding onto her like she was a bucking bull as she rubbed back and forth."
             PRG "I-I can feel it..."
-            MC "S-Shit, you... I'm sorry..."
+            "Keisuke" "S-Shit, you... I'm sorry..."
             "Aida moved forward, adjusting again."
             PRG "K-Keisuke... c-can you turn on a light? J-Just one lamp?"
             "While really wanting to resist getting up, I did so anyway, and fumbled over to a table, turning on a light."
             scene NYI
             show PRG neutral
             with fade
-            MC "Do we have to worry about your parents coming in and seeing us?"
+            "Keisuke" "Do we have to worry about your parents coming in and seeing us?"
             PRG "M-My parents sleep with a fan on. I doubt we'll wake them up."
             "Aida's eyes went down to my shorts... and the tentpole I had sticking out of the front, making the fabric hang down."
-            MC "S-Sorry..."
+            "Keisuke" "S-Sorry..."
             PRG "No... i-it's okay."
             PRG "Come here..."
             "I came back over and sat beside Aida."
@@ -29384,9 +29386,9 @@ label PRG048:
             "I quickly got up and moved to the other side, giving Aida a little nudge to help her shift over to the other side."
             show PRG neutral
             "Aida lay on her back as I covered us back up. She smiled at me as I brushed some hair out of her face."
-            MC "I've gotten pretty used to brushing hair out of my eyes."
+            "Keisuke" "I've gotten pretty used to brushing hair out of my eyes."
             PRG "I... I'm sure..."
-            MC "Aren't you... not supposed to lay on your back when you're pregnant?"
+            "Keisuke" "Aren't you... not supposed to lay on your back when you're pregnant?"
             PRG "J-Just not for long periods of time. I-I can for a little while."
             "Aida brought her right hand under the blankets. She went to my chest and followed it down, eventually going on top of my shorts and right over my dick."
             show PRG blush-2
@@ -29395,12 +29397,12 @@ label PRG048:
             "I was about to say some cheesy line about Aida giving me this reaction, but I was cut off by Aida moving back to the top and slipping her hand down my shorts."
             "She came down to my dick again."
             PRG "It's... {w}t-throbbing."
-            MC "Uh... y-yeah."
+            "Keisuke" "Uh... y-yeah."
             PRG "I've never... um... d-done this before."
             "Aida's hand wrapped around me, and she started rubbing up and down my dick."
             "She seemingly knew the exact right pressure for this, and didn't vice grip my dick in her hand. But, she also knew how to squeeze at the right pressure."
             PRG "Like... this?"
-            MC "Augh... mmnh... y-yeah. J-Just like that..."
+            "Keisuke" "Augh... mmnh... y-yeah. J-Just like that..."
             "Her first finger was right under the head, and on each trip up, the edge of her finger brushed the underside, sending waves of pleasure through my dick."
             pause 1
             "... And I was wishing with every fiber of my being that I'd had the foresight to pregame and jerk off before this."
@@ -29431,7 +29433,7 @@ label PRG048:
                     "I imagined Aida washing one of her bras... those massive bras."
                     "I looked back to her and her boobs, both of them bouncing on her chest, the two mounds bouncing while Aida looked down at my crotch, her mouth slightly agape."
                     MCT "Those... giant tits..."
-            MC "A-Aida, I'm gonna..."
+            "Keisuke" "A-Aida, I'm gonna..."
             "Aida picked up speed a little, pumping harder."
             "She moved over the best she could, and leaned into me, kissing my cheek and down my jaw, onto my neck."
             "WIth her smallest finger, she rubbed my balls just a little."
@@ -29441,19 +29443,19 @@ label PRG048:
             "My dick kept throbbing in her hand as she slowed down, then finally stopped."
             "She gave my dick one last rub, then withdrew her hand."
             PRG "Was that... good?"
-            MC "Hahh... wow."
-            MC "Y-Yeah... sorry that was kind of fast..."
+            "Keisuke" "Hahh... wow."
+            "Keisuke" "Y-Yeah... sorry that was kind of fast..."
             PRG "N-No... i-it's okay."
             "Aida wriggled to the edge of the air mattress and started working her legs under herself."
             PRG "I-I'm gonna go... wash my hand. Do you need anything?"
-            MC "Well... I'm gonna have to change my boxers now."
+            "Keisuke" "Well... I'm gonna have to change my boxers now."
             show PRG blush-2
             "She tried to get up without using her right hand, but came back down hard."
             show PRG unsure
             "All of the air rushed up in the mattress and bumped my side up, nearly sending me springing off."
             "I went over to Aida's side, and got myself up."
             "Then, I went to her left side, and knelt down, wrapping her left arm over my shoulders and putting one arm around her back."
-            MC "Here, let's get you up."
+            "Keisuke" "Here, let's get you up."
             "I lifted with her... and felt why this was so hard."
             pause .75
             "... Aida weighed a ton."
@@ -29465,17 +29467,17 @@ label PRG048:
             "I went behind the couch and slipped my shorts off, then boxers, then pulled my shorts back up."
             "I balled up my boxers and stuffed them into the plastic bag I'd brought for dirty clothes, and laid down just as Aida came back, shut off the light, and eased herself down on the mattress."
             scene black with fade
-            MC "Come here, you."
+            "Keisuke" "Come here, you."
             "Aida scooched over in the bed and came right to my side."
-            MC "Kiss."
+            "Keisuke" "Kiss."
             "Aida leaned up into me, her huge body rubbing me all over as her lips met mine."
             "She pressed in, her arms going around my head and pulling me into her."
             "We pulled apart, and Aida bumped her head into my neck."
-            MC "Excited?"
+            "Keisuke" "Excited?"
             PRG "Mhm... I-I hope I can sleep tonight..."
-            MC "Just focus on relaxing... don't think about exciting things."
+            "Keisuke" "Just focus on relaxing... don't think about exciting things."
             PRG "So... d-don't think about you?"
-            MC "I'm exciting?"
+            "Keisuke" "I'm exciting?"
             PRG "... I think that's a word you could use."
             "Aida kissed me on the jaw again, nuzzling me again."
             PRG "You always are to me..."
@@ -29534,7 +29536,7 @@ label PRG049:
         show PRG blush-2
     if getFlag("PRG048_boob"):
         "Aida blushed and leaned in a little."
-        PRG "A-And you weren't last night?"
+        PRG "A-And you weren't frisky last night?"
         MC "I mean... you gave me permission."
         "Aida came in for a kiss on the cheek again."
         "Turning onto her side, Aida's boobs went with her and rested beside her on the sheets."
@@ -29888,6 +29890,9 @@ label PRG049:
     "Aida took my arm again and led me back out of the store."
     UNKNOWN "{size=-6}... Holy fuck. You see the size of those things?{/size}"
     "As she stepped out the door, I glanced back to see all eyes on Aida, both on her belly, and on the jiggle that Aida now had going in the back."
+    scene NYI
+    show PRG neutral
+    with fade
     MC "Aida, you didn't have to do that..."
     "Aida simply took the bag and handed it to me, smiling gently."
     PRG "Can we go sit down?"
@@ -30002,8 +30007,8 @@ label PRG049:
     "Aida turned and went to step through the detector."
     stop music fadeout 5.0
     Attendant "Oh, Ma'am? You'll have to remove your shoes as well."
-    PRG "O-Oh, um..."
     show PRG unique
+    PRG "O-Oh, um..."
     "Aida turned to me."
     PRG "K-Keisuke...?"
     MC "I'm on it."
@@ -30051,7 +30056,7 @@ label PRG049:
     PRG "Do you know if the box seat tickets come with food?"
     MC "Um... let's see."
     "I fished my ticket out of my pocket and looked it over."
-    MC "{i}Luxury Suite Box Seat Ticket. Top floor... ahh... da-da-da... catering included. Yep! Sounds like we get food."
+    MC "{i}Luxury Suite Box Seat Ticket. Top floor... ahh... da-da-da... catering included.{/i} Yep! Sounds like we get food."
     PRG "Wow..."
     MC "Want to walk a little? Still early."
     PRG "Can we?"
@@ -30088,6 +30093,7 @@ label PRG049:
     "I glared at them, turning a bit toward them, before Aida pulled my arm."
     PRG "Keisuke, no. I-It's okay..."
     "I sighed, but held my tongue as we passed by."
+    show PRG insecure at altMove(0.5, 0.5)
     "After a short trip up the elevator, we found ourselves on the third floor, close by where our seats were."
     show PRG worried
     pause .5
