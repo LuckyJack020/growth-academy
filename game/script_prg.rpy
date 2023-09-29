@@ -30428,7 +30428,7 @@ label PRG049:
     pause .75
     PRG "... Okay."
     "I smiled at her and looked down at the menu."
-    MC "I think I might have the wagyu over rice with some mushrooms."
+    MC "I think I might have the wagyu over rice."
     show PRG neutral
     PRG "I... I wonder how their wagyu comes."
     MC "You mean like if it's raw or not?"
@@ -30461,9 +30461,7 @@ label PRG049:
     "Server" "Perfect... and your entree, Sir?"
     MC "The wagyu, please."
     "Server" "Over rice with mushrooms?"
-    MC "Yes, please."
-    "Server" "And what mushroom would you like? We currently have shiitake, eryngii, and matsutake for a bit of spice."
-    MC "I'll do matsutake, please."
+    MC "Just the rice, thank you."
     "Server" "Wonderful. And for dessert?"
     MC "Mm... dango, please."
     "Server" "Perfect. And to drink?"
