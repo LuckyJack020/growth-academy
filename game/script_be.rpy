@@ -12385,7 +12385,7 @@ label BE051_c1_after:
 
 label BE052:
     $setProgress("BE", "BE053")
-    scene Classroom with fade
+    scene Hallway with fade
     play music Rain
     "I was ready to be back in class. The last few days had been a journey and, although a lot of good had come of it, I was hankering for a return to normalcy and routine."
     "I'd been hoping to catch Honoka on the way there, but there was no sign of her."
@@ -12502,6 +12502,10 @@ label BE052_after:
     BE "Well, class is about to start. We'd better get to our desks."
     show BE doubt
     BE "{i}Eee...ahhh...nnng...{/i}"
+    scene Classroom
+    show BE doubt
+    with fade
+    pause 0.5
     show BE at slowease(center, offscreenleft, 3.0)
     "Honoka shuffled off towards her desk, drawing the eyes of a few of our classmates."
     MCT "Oof. That doesn't look very comfortable..."
@@ -12600,7 +12604,7 @@ label BE052_after:
     show BE neutral
     BE "Thank you, Sensei."
     HR "You're welcome."
-    pause .2
+    pause .75
     HR "Hotsure."
     MCT "Aw, shit."
     MC "Yes, Sensei?"
@@ -12629,7 +12633,7 @@ label BE052_after:
     MC "Of course."
     "I wrapped my arms across Honoka's torso the best I could, gently embracing her, taking care not to squeeze too tightly. Her pliable masses enveloped across my body. In a way, it felt like I was getting a bonus hug on top of a hug."
     show BE wink
-    BE "Hehe, feeling better, already!"
+    BE "Hehe, feeling better already!"
     MC "You're not the only one."
     jump daymenu
 
@@ -12725,7 +12729,7 @@ label BE053:
     show BE disoriented
     BE "Y-yeah. I didn't leave my room. It's in here some-"
     "{i}*vrrrrrrrrrrrrrm*{/i}"
-    BE "-where!"
+    BE "-WHERE!"
     "Honoka and I searched around the room and listened for her phone. The call ended, so I dialed again."
     BE "{size=-6}Oh come on, you dumm—{/size}"
     show BE surprised-2
@@ -12834,7 +12838,7 @@ label BE053:
     BE "I love you."
     BE "You know that, right?"
     MC "..." 
-    pause.2
+    pause .2
     MC "Even if I'm a terrible person?"
     BE "Kei-chan... you're not a terrible person. Everyone has a preference."
     show BE unique
@@ -12920,6 +12924,10 @@ label BE053:
     BE "Honestly, I was able to fit so many that I don't remember..."
     MC "Great..."
     scene black with fade
+    pause 0.5
+    scene Dorm BE
+    show BE shrug
+    with fade
     MC "Here's a can of soda..."
     show BE happy
     BE "Oh hey! Perfect, I was getting pretty thirsty!"
@@ -12927,18 +12935,29 @@ label BE053:
     BE "Mmm... I think I can feel at least one other can of juice in there."
     MC "What do you mean \"at least one\"...?"
     scene black with fade
+    pause 0.5
+    scene Dorm BE
+    show BE neutral
+    with fade
     MC "...Really?"
     show BE shrug
     BE "What?"
     "Grasping my arm around the handle, I removed a handheld clothing iron from Honoka's seemingly bottomless cleavage, presenting it to her."
     BE "Hey, my shirts wrinkle easily! You'll never know when you might need one!"
     scene black with fade
+    pause 0.5
+    scene Dorm BE
+    show BE shrug
+    with fade
     MC "This makes seven cans of soda..."
     show BE neutral
     BE "You haven't found the can of juice yet either."
     MC "There's still more???"
     scene black with fade
+    pause 0.5
+    scene Dorm BE
     show BE happy
+    with fade
     MC "Wha- Seriously??? I was looking for my handheld console everywhere! When did you even take this?"
     BE "Remember that time I came over to read some manga a few months ago?"
     MC "..."
@@ -12963,7 +12982,7 @@ label BE053:
     MC "Sounds good to me. There's a ramen shop in town I've been hearing good things about. Here, lemme look up the address."
     pause 1
     MC "..."
-    show BE smug
+    show BE wink
     MC "Wait. Where's {i}my{/i} phone?"
     jump daymenu
 

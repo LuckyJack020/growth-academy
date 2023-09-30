@@ -3491,7 +3491,7 @@ label FMG023:
     show FMG happy with dissolve
     "Akira slowed her stride just slightly to turn and smile at me, framed by her ponytail that swayed in the brushing breeze."
     FMG "I did, Kei-kun!"
-    FMG "{i}It's a surprise {/i}."
+    FMG "{i}It's a surprise{/i}."
     MCT "But that's not what I want to hear!"
     menu:
         "Is there a new arcade?":
@@ -3602,7 +3602,7 @@ label FMG023_c2:
     pause 1
     "Against my better judgment, I looked around and noticed we had progressed maybe half a meter down the line."
     show FMG neutral
-    "We both stared ahead into the swelling silence of the dreamland around us, bathed in the glow of the sunlight of the high windows. I was about to get sucked into dreamland for real when a familiar tower of raven-black passed us by amid the sunny glow."
+    "We both stared ahead into the swelling silence of the dreamland around us, bathed in the glow of the sunlight of the high windows. I was about to get sucked into dreamland for real when a familiar tower of raven-black hair passed us by amid the sunny glow."
     show FMG neutral at altMove(0.5, 0.25)
     show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "Hey! How are you, Yamazaki-san?"
@@ -4319,7 +4319,7 @@ label FMG026:
     MC "I'm getting them only because you told me not to."
     FMG "You're a rebel, Kei."
     MC "I know, I know, people dream they could be like me. I'm an inspiration to many."
-    FMG "Yeah, probably the blind and deaf. Can't imagine those with vision and hearing would be thoroughly impressed."
+    FMG "Yeah, probably the blind and deaf. Can't imagine those with vision and hearing would be thoroughly impressed either."
     MC "Even if they could see me they'd be blinded and deafened by my facial features and angelic voice."
     FMG "Uh-huh... you ready to pick your candy, noodle arms?"
     MC "Fine, I will. {w}And for the record my arms aren't noodles."

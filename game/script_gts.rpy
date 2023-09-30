@@ -11920,7 +11920,7 @@ label GTS052:
     "Every minute or so, the slight {i}thumph{/i} from the topsoil deforming under her footsteps would get louder or quieter, speed up a little, slow down some more."
     "I glanced over my shoulder; with her hands folded over her lap, Naomi was..."
     "When I took in her whole body, my brain registered her as tip-toeing at a glacial pace across the forest floor; even the sound of the effortless pulverization of so many leaves at once blended together into a single, sandy but unabrasive rasp."
-    "But when I focused on just one colossal leg thrusting through the air, with toes en pointe to pierce the very face of the earth, I was once again today slapped in the face with the vastness of her speed and power, even under such thorough restraint."
+    "But when I focused on just one colossal leg thrusting through the air, with toes en pointe to pierce the very face of the earth, I was once again totally slapped in the face with the vastness of her speed and power, even under such thorough restraint."
     GTS "How am I doing, my sunshine?"
     MC "Excellent, so far."
     MC "That said, we may want to take some of the... circumstantial aspects of your movement into account from now on."
@@ -12214,9 +12214,8 @@ label GTS052:
     "{i}creaaaaaaaak{/i}"
     MC "...What's that sound?"
     scene Woods
-    show GTS neutral 
-    with fade
     show GTS pondering 
+    with fade
     GTS "Hm? What sound?"
     MC "Like a tree branch bending. You don't hear that?"
     GTS "I... don't."
@@ -12409,8 +12408,9 @@ label GTS052:
     "I looked around the grove; all the legion of the golden leaves waving in the afternoon sunlight had begun to look more like the wriggling boundaries of a dreamscape."
     "Before I could contemplate too much on why, I registered Naomi coming back my way."
     MC "All taken care of?"
+    show GTS_S neutral with dissolve
     "She nodded, and casually looked to the side, back toward the little jizo shrine."
-    show GTS_S surprised with dissolve
+    show GTS_S surprised
     extend " Her hand floated up to her mouth."
     MC "Nacchan?"
     "I turned my head."
