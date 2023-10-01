@@ -1087,6 +1087,7 @@ define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 define audio.Bell = "Audio/SFX/sfx_bell.mp3"
 define audio.ReleaseArrow = "Audio/SFX/sfw_releasearrow.wav"
+define audio.Vibrate = "Audio/SFX/sfx_vibrate.ogg"
 
 init 1 python:
     eventlibrary['MC001'] = {"name": "Sharpening the Senses", "girls": ["MC", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}

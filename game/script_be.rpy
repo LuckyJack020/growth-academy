@@ -12406,7 +12406,7 @@ label BE052:
     BE "I'm... erm... trying not to move very fast today."
     extend " Because..."
     "Honoka came up next to me and whispered this next thing in my ear:"
-    BE "It's Girl's Day for me."
+    BE "{size=-6}It's... Girl's Day for me.{/size}"
     MC "Huh?"
     show BE confused
     BE "There's a train parked on my gut, {i}okay{/i}?!"
@@ -12450,7 +12450,7 @@ label BE052_c1:
     show BE doubt
     BE "And, yeah, my body would probably feel a lot better if I flop down on my couch."
     BE "But right now, I need the confidence boost more than I need to be comfy."
-    BE "It's my emotional state I'm worried about."
+    BE "I'm just tired of feeling sorry for myself, y'know?"
     BE "I hope you'll understand."
     $setAffection("BE", -1)
     jump BE052_after
@@ -12461,6 +12461,12 @@ label BE052_c2:
     show BE neutral
     BE "Aww, you're a sweetheart, Kei-chan."
     BE "The only thing I can think of is, walk a little slower for me so I can keep up and chat."
+    show BE surpsised-2
+    MC "Hmm... I'll consider it."
+    show BE smug
+    BE "Gee, glad I didn't ask for more."
+    MC "Hehe. Sure, not a problem, but that isn't asking a whole lot. Is something else I can do?"
+    show BE neutral
     BE "If I think of anything else, I'll let you know."
     jump BE052_after
 
@@ -12490,11 +12496,12 @@ label BE052_c4:
     show BE surprised-2
     BE "Oh! Nonono. I'm not going back there today."
     show BE confused
-    BE "It's just some breast sensitivity from a menstrual cycle, Kei-chan. Yeah, it's worse than usual, but I'm still functioning."
+    BE "It's just some breast sensitivity from a menstrual cycle, Kei-chan. Yeah, it's worse than usual, but I'm still functional."
     BE "I don't need you scaring me about it, Kei-chan."
     show BE sad
     BE "I'm already scared enough, as it is."
     $setAffection("BE", -1)
+    MC "Sorry, you're right. Don't need to be adding fuel to the fire."
     jump BE052_after
 
 label BE052_after:
@@ -12502,11 +12509,9 @@ label BE052_after:
     BE "Well, class is about to start. We'd better get to our desks."
     show BE doubt
     BE "{i}Eee...ahhh...nnng...{/i}"
-    scene Classroom
-    show BE doubt
-    with fade
     pause 0.5
     show BE at slowease(center, offscreenleft, 3.0)
+    scene Classroom with fade
     "Honoka shuffled off towards her desk, drawing the eyes of a few of our classmates."
     MCT "Oof. That doesn't look very comfortable..."
     show AE sad-2 with dissolve
@@ -12514,7 +12519,6 @@ label BE052_after:
     MC "Yeah... She's been having a rough morning. She says she's okay, but... you know."
     AE "Yes, I understand. A lot of us could. Just... be there for her. That's something I find very helpful in times like these."
     "The sudden sound of a desk scraping across the floor filled the classroom."
-    show BE worried
     BE "Sss! Ouchie..."
     MC "And that's my cue. Excuse me, Matsumoto-san."
     AE "By all means."
@@ -12583,7 +12587,7 @@ label BE052_after:
     show BE sad
     BE "Y-Yes, Sensei?"
     HR "Here. We keep one of these in every classroom, just in case..."
-    "Tashi-sensei rummaged through his desk moving many objects out of the way. He eventually retrieved a desktop book stand with collapsible legs."
+    "Tashi-sensei rummaged through the classroom storage cabinet moving many objects out of the way, eventually finding a collapsible side table."
     HR "For today, you can use this for your note taking. However, I'll need to see you and Hotsure after class." 
     MCT "Dammit."
     BE "...Okay."
@@ -12597,7 +12601,7 @@ label BE052_after:
     show HR neutral at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     "After the period, and the rest of our classmates shuffled out of the classroom, Honoka and I lagged behind to speak to Tashi-sensei."
-    HR "Now then. I won't take much of your time. I only wanted to remind you two of something.."
+    HR "Now then. I won't take much of your time. I only wanted to remind you two of something..."
     HR "Remember. The faculty is here to help you. {i}All{/i} of you."
     HR "If you require a different setup for your desk, Inoue-san, that is something entirely doable. In fact, you aren't the only one who might benefit from that in this class."
     HR "With that said, Inoue-san, I'll see what I can do to get you a stand with an arm that swivels around. You'll be able to clamp it onto your desk. At least until we figure out a more long-term solution for you." 
@@ -12667,10 +12671,10 @@ label BE053:
     MCCell "<Hey, you busy? Wanted to talk about something.>"
     "Before even stepping outside, my phone pinged."
     BECell "<Perfect timing! I wanted to show you something. Come on over! Kokutan stepped out, so it'll be just us! :)>"
-    MCCell "I'll be over in a sec. Want me to pick up anything?"
-    BECell "Hmm... I think I've got everything we need! I might need an extra pair of eyes and hands to find some things though. ;)"
+    MCCell "<I'll be over in a sec. Want me to pick up anything?>"
+    BECell "<Hmm... I think I've got everything we need! I might need an extra pair of eyes and hands to find some things though. ;)>"
     MCT "Well, it seems like she's feeling a little better."
-    MCCell "Cool. See you in a few."
+    MCCell "<Cool. See you in a few.>"
     MCT "What kind of things could she be needing to find? Maybe it's...nah. I'll just see what's going on."
     "Steeling my heart, I turned and started towards Honoka's dorm."
     scene black with fade
@@ -12714,28 +12718,35 @@ label BE053:
     BE "I'll do my best!"
     MCT "\"Do my best?\""
     MC "Good enough. Alright, dialing."
+    stop music fadeout 1.0
     "I sent the phone call and closed my eyes, so I could focus a bit more on listening."
-    "{i}*vrrrrrrrrrm....vrrrrrrrrrrm*{/i}"
-    show BE surprised
+    pause 1.0
+    play sound Vibrate
+    show BE surprised at center, Shake(None, 2.0, dist=2)
     BE "EEP!"
     MC "Shhh! I can hear it!"
-    "{i}*vrrrrrrrrrm....vrrrrrrrrrrm*{/i}"
-    show BE aroused
+    play sound Vibrate
+    show BE aroused at center, Shake(None, 2.0, dist=3)
     BE "S-so c-can I...!"
     BE "{size=-6}Please hurry and find it... I can't keep my voice- {/size}"
-    "{i}*vrrrrrrrrrm....vrrrrrrrrrrm*{/i}"
+    play sound Vibrate
+    show BE aroused at center, Shake(None, 2.0, dist=4)
     BE "Hya~!"
     MC "Hmm...well it sounds relatively nearby, so it's in the room at least."
-    show BE disoriented
-    BE "Y-yeah. I didn't leave my room. It's in here some-"
-    "{i}*vrrrrrrrrrrrrrm*{/i}"
-    BE "-WHERE!"
+        BE "Y-yeah. I didn't leave my room. It's in here some-"
+    play sound Vibrate
+    show BE disoriented at center, Shake(None, 2.0, dist=5)
+    extend "WHERE!"
     "Honoka and I searched around the room and listened for her phone. The call ended, so I dialed again."
+    play music BE fadein 5.0
     BE "{size=-6}Oh come on, you dumm—{/size}"
-    show BE surprised-2
+    play sound Vibrate
+    show BE surprised-2 at center, Shake(None, 2.0, dist=5)
     BE "—EEE...!"
     MC "God, it always sounds like it's right nearby. Where the hell did you put this thing?"
-    "{i}*vrrrrrrrrrm....vrrrrrrrrrTAPTAPTAPTAP*{/i}"
+    play sound Vibrate
+    show BE surprised-2 at center, Shake(None, 2.0, dist=3)
+    "{i}*TAPTAPTAPTAP*{/i}"
     MC "What the... what was that? Sounds like it's tapping against metal?"
     "As we were speaking Honoka arched her back and stretched her arms above her head, thrusting her ballistics outward."
     show BE wink
@@ -12743,11 +12754,17 @@ label BE053:
     MC "...You mean the one that looks the same as all the other ones?"
     show BE unique
     BE "You think so? Maybe you should take a closer look..."
-    "{i}*vrrrrrrrrrTAPTAPTAPTAP....vrrrrrrrrrrm*{/i}"
+    play sound Vibrate
+    show BE unique at center, Shake(None, 2.0, dist=2)
+    "{i}*TAPTAPTAPTAP*{/i}"
+    play sound Vibrate
+    show BE unique at center, Shake(None, 2.0, dist=5)
     BE "Preferably quickly...!"
     MC "Alright, alright. No need to rush me. I wouldn't even have to be looking for this if you'd just stop losing everything..."
     "I leaned closer to Honoka, focusing more on the open collar of her uniform instead of the...{i}largely{/i}...occupied rest of the shirt."
-    "{i}*vrrrrrrrrrm....VRRRRRRRRTAPTAPTAPTAP*{/i}"
+    play sound Vibrate
+    show BE unique at center, Shake(None, 2.0, dist=7)
+    "{i}*TAPTAPTAPTAP*{/i}"
     MCT "Ah. I see what's going on here now. Duh, Kei."
     "As my phone continued to ring, I saw Honoka's shirt, and by extension her breasts, subtly ripple at the same time."
     MCT "She's got one of the largest 'pockets' on campus. Why wouldn't you check there first..."
@@ -12866,7 +12883,7 @@ label BE053:
     BE "Thank YOU for being honest with me, Kei-chan."
     hide BE with dissolve
     "Honoka embraced me again as I wrapped my arms around her the best I could when..."
-    "{i}*vrrrrrrrrrrrrrm*{/i}"
+    play sound Vibrate
     BE "Pya-!"
     MC "...Pya?"
     show BE surprised with dissolve
