@@ -12461,7 +12461,7 @@ label BE052_c2:
     show BE neutral
     BE "Aww, you're a sweetheart, Kei-chan."
     BE "The only thing I can think of is, walk a little slower for me so I can keep up and chat."
-    show BE surpsised-2
+    show BE surprised-2
     MC "Hmm... I'll consider it."
     show BE smug
     BE "Gee, glad I didn't ask for more."
@@ -12509,8 +12509,8 @@ label BE052_after:
     BE "Well, class is about to start. We'd better get to our desks."
     show BE doubt
     BE "{i}Eee...ahhh...nnng...{/i}"
-    pause 0.5
     show BE at slowease(center, offscreenleft, 3.0)
+    pause 0.5
     scene Classroom with fade
     "Honoka shuffled off towards her desk, drawing the eyes of a few of our classmates."
     MCT "Oof. That doesn't look very comfortable..."
@@ -12733,7 +12733,7 @@ label BE053:
     show BE aroused at center, Shake(None, 2.0, dist=4)
     BE "Hya~!"
     MC "Hmm...well it sounds relatively nearby, so it's in the room at least."
-        BE "Y-yeah. I didn't leave my room. It's in here some-"
+    BE "Y-yeah. I didn't leave my room. It's in here some-"
     play sound Vibrate
     show BE disoriented at center, Shake(None, 2.0, dist=5)
     extend "WHERE!"
