@@ -83,7 +83,7 @@ class soundtrack:
         self.description = description
         #path to the cover art image
         if cover_art == False:
-            self.cover_art = "Graphics/ui/icons/nocover.png"
+            self.cover_art = "Graphics/ui/icons/nocover.webp"
         else:
             self.cover_art = cover_art
         self.unlocked = unlocked
@@ -244,9 +244,9 @@ def auto_play_pause_button(st, at):
         return Text("", size=23), 0.0
 
     if music.is_playing(channel='music_room'):
-        d = displayBehavior.ImageButton("Graphics/ui/icons/pause.png", action=current_music_pause)
+        d = displayBehavior.ImageButton("Graphics/ui/icons/pause.webp", action=current_music_pause)
     else:
-        d = displayBehavior.ImageButton("Graphics/ui/icons/play.png", action=current_music_play)
+        d = displayBehavior.ImageButton("Graphics/ui/icons/play.webp", action=current_music_play)
     return d, 0.20
 
 def rpa_mapping_detection(style_name, st, at):
@@ -432,13 +432,13 @@ def def_song(title, artist, path, priority, sec, altAlbum, y, album, comment, ex
         artist = "Unknown Artist"
     if altAlbum is None:
         description = "Non-Metadata " + str(ext.replace(".", "")).upper() + " File"
-        altAlbum = "Graphics/ui/icons/nocover.png"
+        altAlbum = "Graphics/ui/icons/nocover.webp"
     else:
         altAlbum = "Graphics/ui/covers/"+altAlbum
         try:
             renpy.exports.image_size(altAlbum)
         except:
-            altAlbum = "Graphics/ui/icons/nocover.png"
+            altAlbum = "Graphics/ui/icons/nocover.webp"
     if album is not None:
         if comment is not None:
             description = album + '\n' + comment
