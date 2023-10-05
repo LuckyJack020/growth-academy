@@ -3586,7 +3586,7 @@ label FMG023_c2:
     FMG "Yeah, like that!"
     FMG "I actually got to know him a little bit once I started going alone. The guy was like, super nice, even when there was a big line."
     FMG "(Much like today...)"
-    MC "Wait a second... {w}You mean thee Mr. Minei?"
+    MC "Wait a second... {w}You mean {i}the{/i} Mr. Minei?"
     FMG "Yes sir!"
     MC "Wow, impressive... very impressive."
     FMG "I'm telling you, Kei-kun, when this mochi touches your lips..."
