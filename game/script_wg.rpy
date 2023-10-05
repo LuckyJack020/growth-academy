@@ -1675,7 +1675,7 @@ label WG010_accept:
             jump WG010_c3
 
 label WG010_c1:
-    if is EventCleared("WGGTS002"):
+    if isEventCleared("WGGTS002"):
         "Well, at least that's what I would have normally thought, but after seeing how displeased Shirori was to find out Alice started a business on campus, I'd just be rubbing it in her face if I came up to her with the offer."
         "That and Alice already had tried to sell her on some of the items. If she couldn't thaw the Ice Queen enough to make a sale, I stood a snowball's chance in hell."
         MCT "Alright, so scratch that."
@@ -26954,7 +26954,7 @@ label WG085:
     "I reached around Alice, expending the full extent of my wingspan in the process to reach under her breast, each one considerably heavier than I remembered."
     show WG aroused
     WG "{i}Emphn{/i}!" 
-    "I leaned over her shoulder kissing her plush chubby cheek in the process. Firmly, but not too harsh, so as to not leave a mark, as I needed her breast like a thick, wet dough in my hands and between my fingers."
+    "I leaned over her shoulder kissing her plush chubby cheek in the process. Firmly, but not too harsh, so as to not leave a mark, as I kneaded her breast like a thick, wet dough in my hands and between my fingers."
     WG "{i}Ahhh{/i}! {w}Keisuke, that feels so... {i}mmm{/i}"
     show WG surprised-2
     WG "Oh!"
