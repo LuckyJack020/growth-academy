@@ -1046,6 +1046,7 @@ define audio.Stardust = "Audio/BGM/stardust.ogg"
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/tensemoment.ogg" #A Tense Moment
+define audio.TheAnswer = "Audio/BGM/the_answer.ogg"
 define audio.Tomoko = "Audio/BGM/scene_tomoko.ogg" #Finding Purpose
 define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
 define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"

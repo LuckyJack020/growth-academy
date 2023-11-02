@@ -611,6 +611,17 @@ init python:
     )
     ost.manualDefineList.append(theme_MsF)
 
+    theme_TaN = ost.soundtrack(
+        name = "The Answer",
+        path = "Audio/BGM/the_answer.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Investigation Deepens",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_TaN)
+
     ## Base Template
     ######################################
 
