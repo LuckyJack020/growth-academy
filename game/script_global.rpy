@@ -616,6 +616,7 @@ image AE ahegao = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ahegao.webp"
 image AE hatred = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hatred.webp")
 image AE love = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/love.webp")
 image AE rage = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/rage.webp")
+image AE unique = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique.webp")
 
 image BE neutral = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.webp")
 image BE happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.webp")
@@ -1243,6 +1244,7 @@ init 2 python:
     eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                       "location": "office",          "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                        "location": "office",           "priority": PrioEnum.NONE, "sp": 2,     "obsflags": ["aftersize2"],                     "conditions": [[ConditionEnum.TIMEFLAG, "size2"], [ConditionEnum.FLAG, "AE006_helpinginoffice"]]}
 
+    eventlibrary['AEBE001'] = {"name": "Fl*shlight", "girls": ["AE", "BE"], "type": EventTypeEnum.OPTIONALCORE,                        "location": "campuscenter",           "priority": PrioEnum.NONE, "sp": 4,     "obsflags": ["aftersize1"],                     "conditions": []}
     eventlibrary['AEBE004'] = {"name": "Kâtibim", "girls": ["AE", "BE"], "type": EventTypeEnum.OPTIONALCORE,                        "location": "festival",           "priority": PrioEnum.NONE, "sp": 4,     "obsflags": ["size5"],                     "conditions": [[ConditionEnum.EVENT, "AE050"]]}
 
 
