@@ -45,6 +45,9 @@ default TakoNsfwOutfit = OutfitEnum.DEFAULT
 transform altMove (xSp, xCen):
     linear xSp xcenter xCen
 
+transform altFall(ySp):
+    easeout ySp yoffset 720
+
 transform wiggle_loop(xSP):
     easein xSP xoffset 20
     easeout xSP xoffset 0

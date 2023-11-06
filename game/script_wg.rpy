@@ -519,7 +519,7 @@ label WG004_C1_2:
     $setAffection("WG", -1)
     WG "You clearly don't know much of anything about investments then."
     show WG stern
-    WG "People that are financially ignorant seem to think all investments magically return two to four‑fold no matter what."
+    WG "People that are financially ignorant seem to think all investments magically return two to four-fold no matter what."
     show WG haughty
     WG "The average market growth is historically 7%% year over year. Even the best financial minds at the biggest hedge funds struggle to eek out a few percentage points above the market average."
     WG "This past year wasn't even a very good one for the market. So, I'd say I'm doing just fine."
@@ -14636,7 +14636,7 @@ label WG055:
     "She had to do a bit of maneuvering to turn herself around and check to see if she was going to land close enough to be against the tree to lean back, while leaving enough room for her ass to fit between."
     play sound Thud
     "{i}THUD{/i}"
-    "She managed well enough, but even so, I still felt a noticeable shockwave from her butt free‑falling to the ground with those last few centimeters."
+    "She managed well enough, but even so, I still felt a noticeable shockwave from her butt free-falling to the ground with those last few centimeters."
     show WG neutral
     WG "{i}Sigh{/i}... this place does offer some wonderful scenery. Makes me almost regret not coming here so often."
     "I scooted in closer to Alice, bringing my arm behind her back, cupping the back part of her love handles on the opposite side, while I squooshed into the side of her hips."
@@ -16220,7 +16220,7 @@ label WG059:
     "Like, these things were massive, not Shiori massive mind you; hers were more of a mind breaking extreme."
     "Sakara was pear shaped, so much so that it made it difficult to tell if she had an ass/hip factor or her actual weight gain factor."
     "Regardless, one thing that was apparent— her clothes were not keeping up with her growth."
-    "I could very visibly see where her meaty thighs met up with the swell of her ass (and more than a couple of centimeters above) before her all‑too‑inadequate skirt left at least a sliver to the imagination."
+    "I could very visibly see where her meaty thighs met up with the swell of her ass (and more than a couple of centimeters above) before her all-too-inadequate skirt left at least a sliver to the imagination."
     "I chose to focus on the dirty sudsy water, as I could feel the flush in my cheeks again. I honestly didn't expect this to be such a trial, but it was more so I didn't want Alice to get the wrong impression."
     "I'd be lying if I said Sakura didn't catch my eye. But I knew myself well enough to know I like'm big— like {i}really{/i} {b}BIG{/b}."
     "As enticing as her shapely form was, why settle for a snack when I had a seven course meal in front of me? I mean, Alice's belly alone was probably bigger than Sakura, and Sakura didn't have much of a belly..."
@@ -16251,7 +16251,7 @@ label WG059:
     show Sakura neutral
     Sakura "So... What do you think?"
     show WG neutral
-    "Before Alice replied to Sakura's question, she carved herself another bite. Likely double‑checking her initial judgment before delivering a definitive verdict."
+    "Before Alice replied to Sakura's question, she carved herself another bite. Likely double-checking her initial judgment before delivering a definitive verdict."
     WG "It's quite excellent ladies. The meat is tender, the vegetables are seared but not burnt, the pastry is flaky and more than satisfactory given that you didn't have time to make it from scratch."
     WG "But I must say, I think you could have made more of the pan sauce, and you need to more aggressively season the beef."
     WG "Since it is wrapped up with other ingredients I think the seasoning became too diffuse and I did not get enough pepper to fully complement the beef tenderloin."
@@ -17545,7 +17545,7 @@ label WG061:
     MC "Alright, now wash your hands and come join me over here. We'll start making the pasta."
     show WG neutral
     WG "Sounds good."
-    "Checking the recipe, I placed the called‑for amount of flour out on the counter and created a little well for the eggs. I'd never made fresh pasta dough myself, but it didn't look too difficult, just time consuming."
+    "Checking the recipe, I placed the called-for amount of flour out on the counter and created a little well for the eggs. I'd never made fresh pasta dough myself, but it didn't look too difficult, just time consuming."
     "Aida told me a pasta dough used basically one egg per person, so I cracked open six into the flour crater I made, knowing two wasn't going to be enough for me and Alice."
     "Not that six would either, but I wasn't sure I had enough eggs for what I needed for the rest of the recipe if I was actually going to attempt to satisfy her appetite— assuming that was even possible."
     show WG worried
@@ -28180,10 +28180,614 @@ label WG088:
     pause 1.5
     show WG angry
     WG "Oh, that {i}BITCH{/i}! {w}That stupid pig took the last box of donuts!"
-    "I guess it was a bit naive to hope that Alice and Okisho would somehow become fast‑friends after working through the music club stuff. {w}But maybe they'd settle for fat‑frenemies."
+    "I guess it was a bit naive to hope that Alice and Okisho would somehow become fast-friends after working through the music club stuff. {w}But maybe they'd settle for fat-frenemies."
     jump daymenu
 
 label WG089:
+    $setProgress("WG", "WG090")
+    scene Dorm Hallway with fade
+    $setTime(TimeEnum.EVE)
+    play music DormLife
+    "Recent thoughts had been weighing on my mind. Figuratively that is, about Alice's more literal issues at hand."
+    "During our most recent movie night with Aida, Alice's couch sounded like it was on its last leg. And that was saying something since it had six, not just the usual four of a regular sized couch."
+    "Alice brushed it off as the joints being dry, causing them to creak, which as I found out is a real thing with old furniture, but still... I wasn't quite convinced."
+    "Hoping to avoid a future disaster, I came up with an idea for a little surprise for Alice."
+    play sound Knock
+    Chibuki "Who are you and what do you want?"
+    show Chibuki neutral with dissolve
+    MC "Nice to see you too, Chibuki."
+    Chibuki "I don't have you on the schedule for an appointment with Alice."
+    MC "Do I really need one? It's supposed to be a surprise."
+    Chibuki "That explains the box and the duffle bag then. Though I would have thought you'd have learned by now that a woman who likes to plan every minute of her day hates surprises."
+    MC "Yeah, well, maybe I need a good wingman to help me smooth things over."
+    Chibuki "Well, you're on your own then, I'm heading out. I'll be back later to do some cleaning. She just finished dinner so she should be in a good mood."
+    MC "Alright, later."
+    WG "Chibuki? Who's there?"
+
+    scene Dorm WG 
+    show Sakura neutral 
+    with fade
+    Sakura "Hello, Hotsure-san, nice to see you this evening."
+    MC "Nice to see you as well, Myoga-san. I take it your shift is over?"
+    show Sakura happy
+    Sakura "Yup, if you want to call it that. Hehe."
+    MC "Smells good in here."
+    show Sakura neutral
+    Sakura "Thanks. I put on quite the spread, if I do say so myself. I made Alice a handful of iron steaks with chimichurri sauce, potatoes au gratin, fried brussel sprouts, and a couple dozen bread rolls."
+    show Sakura happy
+    Sakura "Another addition to the clean plate club!"
+    "I couldn't help but wonder if anything Sakura made for Alice didn't make the \"clean plate club\"."
+    MC "Sounds like the real steakhouse experience."
+    show Sakura happy-2
+    Sakura "Mhm. It's good practice for when I open up my own restaurant some day."
+    show Sakura frustrated
+    Sakura "Though I did make a bit of a mess with all the dishes... I feel sorry for Chibuki."
+    MCT "Don't be. I don't."
+    show Sakura neutral
+    Sakura "Oh, I probably shouldn't hold you up any longer." 
+    show Sakura happy
+    Sakura "I'm sure Alice will be happy to see you."
+    MC "No problem. Goodnight Myoga-san."
+    hide Sakura with dissolve
+    play music WG
+    MC "Special delivery for one Alice Nikumaru."
+    show WG happy with dissolve
+    WG "A special delivery you say?"
+    "The flimsy thin wall box in my hands could barely contain the heft of its contents, requiring firm support from my hands underneath it."
+    MC "Sakura mentioned that you just had dinner. It must have been good timing because I didn't hear her mention a dessert course."
+    show WG surprised-2
+    "I popped open the top flap of the box, to reveal the devilish confection contained therein."
+    WG "Is that..."
+    MC "Yup, not just chocolate, but a devil's food cake. Five layers as well, or so I've been told. I didn't get to see it being made."
+    WG "Where did you get it?"
+    show WG neutral-2
+    MC "I actually asked Kanami about getting something for you and she mentioned that cooking club members are always looking for more practice. They just usually don't want to make a bunch of stuff that they aren't going to be able to eat."
+    MCT "...Probably worried they'd get fat, now that I think about it."
+    MC "So she got me in touch with Chisaka-san and this was the recipe she wanted to make. Well, she originally just said chocolate cake, but I made the recommendation to do something a bit more fancy and she was up to the challenge."
+    show WG surprised-2
+    WG "It looks delicious, Dear."
+    show WG neutral
+    WG "...I'd love to try some, " 
+    show WG worried
+    extend " but I feel positively stuffed from the meal Sakura just made. I don't know if I have any room left."
+    "By this point, I was extremely skeptical of that claim. We've both been wrong about that more often than either of us ever being right."
+    if isEventCleared("WG060S") and isEventCleared("WG060S"):
+        "I'll never forget that night when she challenged herself to push her limits. It was done with the pretense of my enjoyment, but I could tell she enjoyed it too."
+        if getFlag("WG060S_Greedy"):
+            "Well, until I took things too far at the end there..."
+        "That wasn't the only time either. It wasn't that long ago that she had that soba eating contest against Akira."
+        "To say Akira has a big appetite would be an understatement, but even without all the extra food Alice ate, she still trounced her by eating two extra bowls."
+        "So given her prestigious track record, I was skeptical of her claims of being full."
+    elif isEventCleared("WG060S"):
+        "I'll never forget that night when she challenged herself to push her limits. It was done with the pretense of my enjoyment, but I could tell she enjoyed it too."
+        if getFlag("WG060S_Greedy"):
+            "That is, until I took things too far..."
+            "But needless to say, I was skeptical of her claims of being full."
+        else:
+            "So needless to say, I was skeptical of her claims of being full."
+    elif isEventCleared("WG060S"):
+        "I mean, it wasn't that long ago that she had that soba eating contest against Akira. To say Akira has a big appetite would be an understatement, but even without all the extra food Alice ate, she still trounced her by eating two extra bowls."
+        "So needless to say, I was skeptical of her claims of being full."
+    MC "Are you sure? You know what they say... There's always room for dessert."
+    show WG pondering
+    "Having unboxed it in its entirety, the smooth, glistening  chocolate frosting had captured Alice's attention."
+    show WG aroused
+    WG "Well... I suppose one small slice couldn't hurt..."
+    MC "Exactly. Come, sit. Let's get you situated."
+    "By this point with her growth, getting Alice seated comfortably took a bit of coordination. I moved her usual three chairs together to provide the breadth of support she needed, and guided her well padded descent down onto them with my hand extended to hers."
+    "I retrieved a cloth napkin to put down the front of her shirt, along with a serving plate and fork from the kitchen as well as a knife to cut it. Since scooting her chairs closer to the table involved complex logistics, I would just push the table closer to her instead."
+    MC "One {i}small{/i} slice for mademoiselle."
+    "In truth the slice I carved was not terribly small, closer to an eighth of the cake, which I considered small for Alice's standards. I probably should have carved a smaller piece, but I didn't have the patience for the pretext, given that I knew she would inevitably want more anyway."
+    show WG surprised-2
+    WG "Oh, it looks so moist."
+    "Indeed it did. This devil's food cake was not a standard chocolate cake. The density of it was something between a cake and fudge, with a much higher cocoa content than the typical dessert, making it much more attuned with Alice's discerning palate."
+    show WG aroused
+    WG "{i}Mmmm{/i}! It's magnificent."
+    "If there's one piece of dating advice I remember from my dad, it's that chocolate makes everything easier."
+    "And an easy distraction is what I needed."
+    "While Alice was preoccupied with the cake, I proceeded to get to work on her couch while she was facing away."
+    hide WG with dissolve
+    WG "What are you doing back there, Dear?"
+    MC "Trying to fix this creaky couch of yours. I got some waxed shims for any small gaps that might have formed from the wood drying out."
+    WG "Well that was certainly thoughtful of you. I take it that's what your bag was for?"
+    MC "Yup, I brought some tools from the fabrication shop Misuboro-san let me borrow."
+    "I did actually have some shims that could be used for that purpose, but I did not suspect that was needed. What I actually had in my bag was some additional support beams to place under the weak points of the couch."
+    MCT "Nice, perfect fit and color match. Misuboro-san knows his stuff."
+    "{size=-6}{i}*creeeeaak*{/i}{/size}"
+    MCT "Huh, maybe this thing does need some shimming after all."
+    "I cut a series of blocks that wedged perfectly under the base frame of Alice's couch. Misuboro helped me match the wood staining of them perfectly so they would blend in without notice unless someone actually thought to take a good look at the feet."
+    WG "Mmm! I must say the five layers greatly improves the mouthfeel on the palate. A much better ratio of cake to frosting than the standard two or three."
+    MCT "Sounds like she's steadily working her way through the cake still. I don't know how much more time it will buy me. Let's pull them all out here."
+    MCT "Let's see. Yup, it's all here: four 45 degree angle boards for the corners, two long beams to run between the center leg gaps."
+    MCT "This thing will be twice as solid by the time I'm done putting these in."
+    "{size=-3}{i}*creeeeaak*{/i}{/size}"
+    MCT "That seems a bit louder than before. What's with this thing?"
+    MCT "...{w}Whatever, I don't hear it anymore, let's just slide the last one into place. It should stop making noise when I'm done messing with it."
+    MC "Alright that should fix your creaking couch..."
+    show WG worried with dissolve
+    MC "Alice, what's the matter?"
+    WG "I... I ate the whole cake."
+    "{i}*Creeeeaak*{/i}"
+    MCT "Wait a second... That wasn't the couch making that sound..."
+    WG "I don't feel so good. I should have saved it for later."
+    "{i}*CREEEEAAK*{/i}"
+    pause 1
+    show WG surprised
+    "{i}PING!{/i}"
+    "A single button burst off of Alice's uniform, shooting across the room leaving a small dent in the drywall before bouncing onto the floor."
+    "{i}{size=-3}tick{/size} {size=-6}tick{/size} {size=-9}tick{/size}{/i}"
+    show WG surprised-2
+    WG "Well that's not the most welcome outcome, but I must say, I feel much better with the release of that pressure. I guess I have been overdue for another size up for my uniform. I'll have to get Kokutan to move up my order."
+    show WG neutral
+    WG "In the meantime, I'll have to get her to sew this button back on. Though I guess I should just do it myself. It's such a small job and we've been swamped with new orders lately."
+    MCT "Looks like it was just the stretching fabric on her shirt that was making that sound. I guess that's what we were hearing when we were sitting on her couch then? Hmm. Well, I guess I did all of that back there for nothing."
+    show WG surprised
+    stop music fadeout .5
+    "{size=+4}{i}*CRK CRK CRAK CRAK CRAAAAAK*{/i}{/size}"
+    show WG surprised at altFall(0.25)
+    "{size=+8}{i}*BOOOOOOM*{/i}{/size}" with vpunch
+    #CG here
+    #$setWGOutfit(OutfitEnum.TORN)
+    show WG surprised with dissolve
+    "In a split second, the legs of Alice's chairs snapped out from under her like they were matchsticks, sending her entire mass into a free fall that shook the dust from the ceiling when she finally landed, along with the foundation."
+    "The shockwave from the impact caused the remaining buttons on the bottom half of her top to bust open from the surge of quaking fat jostling through her."
+    "This, on top of the bounce off her backside, rocketed her body backward, leaving her lying on her back, like a turtle stuck on the back of its shell."
+    play music Sunset
+    MC "Oh my God! Alice, are you alright!?"
+    pause 2
+    "Alice laid there unresponsive, her face frozen with a look of overwhelming shock and fear. {w}She just laid there, utterly mortified."
+    WG "No... no... this isn't happening. This shouldn't be possible..."
+    MCT "Man, those chairs were damn stout, and to think, three of them at once..."
+    "My mind was racing for all the wrong reasons at the moment, I needed to snap myself out of it to help her."
+    MC "Alice, here. Let's get you up. I don't want you to get a splinter."
+    "Due to her massive backside forcing her hips upward from the hard floor, she was extended back quite a bit, so just giving her a hand proved not enough {i}oomph{/i} to get her upright."
+    "Alice still being in a state of dumbfounded shock wasn't exactly helping efforts either."
+    show WG surprised-2
+    "I was able to assist her with sitting upright after squeezing both my hands under the rolls that covered her shoulder blades and lifting up. I can't imagine how much extra weight her body had to contend with to do a situp, even with me offering hundreds of kilos of assistance."
+    "We finally got her upright with some clever maneuvering by rolling her onto her belly to free her legs out from under her, then bracing against me and the remaining chair to get her standing again."
+    MCT "Whew. I feel like I just did a powerlifting meet."
+    show WG sad
+    "Alice looked down at the busted mess of wreckage on the floor as tears began to well up in her eyes."
+    WG "{i}sniff.... sniff...{/i}"
+    WG "They're ruined..."
+    "Alice could no longer attempt to hold back her sobbing."
+    WG "I destroyed them... like some kind of fat hippo that just tramples everything in its path."
+    WG "I've gotten so fat... I've become a walking disaster... Even when sitting! {w}I can't even get up off the floor... without it taking nearly five minutes... with help. {w}Like a helpless beached whale!"
+    MC "Alice, don't. Don't do this to yourself."
+    "Alice was in need of some serious comforting, now more than ever. I reached out my arms to hold her tight—"
+    pause .5
+    MCT "?"
+    "Only to get pushed away."
+    #play music argue
+    show WG angry
+    WG "I can't believe I allowed myself to get so complacent about this. How did I ever allow myself to think even for a moment this wasn't the most ruinous event of my entire life?"
+    MC "Alice... they're just chairs. They can easily be replaced."
+    WG "TO {i}YOU{/i} THEY'RE JUST CHAIRS!"
+    WG "Those chairs were family heirlooms from my mother's side! They're over a hundred years old! {w}They can't be replaced!" 
+    WG "I told Mother I didn't need to bring them with me, but she insisted, since I loved them so much and said I should have something to remind me of home. {w}HOW WAS I SUPPOSED TO KNOW I'D GET SO FAT I'D SMASH THEM TO SMITHEREENS!?"
+    MC "Alice, I'm sorry. I didn't realize they were so important. It's going to be alright. We can try to get them fixed."
+    WG "God damn it Keisuke! Stop it! Stop trying to fix everything!"
+    show WG stern
+    WG "Everything's falling apart around me and the only thing you ever offer is to put a band-aid over a crack in the dam."
+    show WG angry
+    WG "In case you hadn't noticed, constantly shoving food in front of my fat face all the time doesn't help me with my problems."
+    MC "Alice, I... I didn't mean to-"
+    WG "SHUT UP! {w}I don't believe that for one damn second— You hear me!?"
+    show WG stern
+    WG "I'm already fatter than any other person on the planet, beyond what should be conceivably possible! {w}Meanwhile, nothing makes you happier than to just keep fattening me up even more, like some kind of prized sow!"
+    MC "..."
+    WG "And people look at us and think {i}I'm{/i} the greedy one."
+    show WG haughty
+    WG "Tell me Keisuke, how fat should I get?" 
+    show WG angry
+    extend " If I filled this whole {i}fucking{/i} room with fat would the thought finally enter your mind that the last thing I need is another cake!?"
+    pause 1
+    show WG stern
+    WG "Somehow I even doubt that."
+    MC "...I...I'm sorry, Alice. I just wanted to help you."
+    WG "Well, take a look at that catastrophe on the floor, and see how much you're \"helping\"."
+    WG "You're always trying to fix everything for me, but you can't fix this problem that I have— and as far as I'm concerned that means you can't fix anything!"
+    MC "{i}Sigh{/i}... I don't know what to say, Alice. I'm...I'm trying my best."
+    show WG sad
+    WG "And I wish that were good enough Keisuke, but the truth is, it isn't."
+    pause 2
+    WG "You should go now."
+    pause 1
+    WG "Just leave it. Chibuki will be by soon to clean things up."
+    hide WG with dissolve
+    stop music fadeout 1.0
+    "Alice walked into her bathroom, shutting the door behind her. Leaving me standing there alone in her room."
+    MCT "...{w}What just happened?"
+    pause 1
+    MCT "{i}Poof!{/i} Just like that, it's all gone?"
+    "I looked around the empty room, dumbfounded, while a cold silence hung in the air. {w}Only now noticing the wilted flowers left in the vase next to the empty desert platter."
+    pause 2 
+    play music Requiem
+    show Chibuki neutral with dissolve
+    Chibuki "Alright, I'm back to finish cleaning. Did you feel that earthquake just now... {w}!"
+    Chibuki "What in the blazes happened here!?"
+    MC "{size=-6}Uggh...{/size}. I'll give you one guess."
+    Chibuki "You serious, mate? {w}I suppose it was just a matter of time. I mean, you've {i}seen{/i} the size of her, right?"
+    MC "It... It was kind of a big {i}to do{/i}. She's... She's not very happy right now."
+    Chibuki "God, I bet not. She really did like those chairs."
+    "At this point it took all my energy just not to break down right then and there in front of her."
+    Chibuki "Oh... I guess she {i}really{/i} wasn't happy... {w}I'm sorry, Kei. {w}I'll get this cleaned up. It's not a problem."
+    "As much as I just wanted to walk out of the door with my head down in shame, it didn't feel right to stiff Chibuki with the mess I helped to create."
+    MC "No, it's okay. I'll help you with it. It wouldn't be fair to add this to you."
+    Chibuki "I appreciate it, mate. Here, I'll get a box."
+    $setTime(TimeEnum.NIGHT)
+    scene black with fade
+
+    "Chibuki and I ended up tossing the busted chairs into a box that we threw into the dumpster behind the dorms. {w}It felt wrong. Something only a few minutes ago that was considered priceless, now tossed out as useless junk."
+    scene Dorm Interior with fade
+    "After that, I walked back to my room and laid on my bed, my mind swirling as I tried to process everything that just happened."
+    MC "Man, Alice was really pissed. I guess she had been keeping a lot of frustration bottled up inside and it finally blew up. I'm sure she's frustrated about feeling helpless to stop the process... but still. The things she said really hurt."
+    MCT "Maybe that's because they're true?"
+    MC "Oh, come on! That's bullshit. I've done everything I can think of to make her feel more comfortable throughout this whole ordeal."
+    MCT "By feeding her until she explodes? {w}You know she's not going to turn down any food you put in front of her. If you hadn't brought her that stupid fucking cake she would have been content with being full from her dinner and this never would have happened."
+    MC "That was going to happen at some point anyway, whether I gave her an extra cake or not. She's still growing."
+    MCT "And on the fast track thanks to you. Maybe it was just one extra cake, but how many extra pies, donuts, brownies, and bowls of ice cream have you shoved in her face along the way?"
+    MCT "Admit it! You'd like nothing more if she just got fatter and fatter— just like she said."
+    MC "That's not true. I don't want her to be miserable."
+    MCT "But you do wish she was fatter, right?"
+    MC "So what if I do? She's beautiful, even more so with each extra kilo."
+    MCT "Is that what she would say about herself?"
+    MC "Well, no..."
+    MCT "So you've been sabotaging her on purpose then?"
+    MC "NO! I wouldn't do that!"
+    MCT "Then why is she so pissed at you?"
+    MC "...{w}Because I failed. {w}I couldn't offer her any help that ever made a difference."
+    MC "God, what did she ever see in a loser like me?"
+    pause 2
+    "I laid there in silence, numb from the emotional rollercoaster of the past couple hours. Attempting to collect my thoughts into a single coherent thought but it all just jumbled together in an incoherent mess."
+    MC "{i}*Huff*{/i}!"
+    "I attempted to blow away the hair from my eyes, tired of having it flop in my face to the point that I couldn't even see the ceiling. {w}But it did no good."
+    MC "{i}{size=+4}*Huff*{/size}{/i}!"
+    "I blew harder this time, which finally worked. {w}Only to have it flop down right into my eyeballs."
+    MC "GOD DAMNIT CAN'T THIS SHIT STOP FOR ONE FUCKING HOUR JUST ONCE SO I CAN FUCKING THINK OF SOMETHING ELSE!?"
+    $setTime(TimeEnum.NIGHTLIGHTS)
+
+    scene Dorm Interior
+    show RM doubt
+    with fade
+    play music Memories
+    RM "Something the matter?"
+    MC "{i}Ack{/i}! {w}How long have you been here?"
+    show RM neutral
+    RM "Hours, I was sleeping."
+    MC "Since when do you go to bed at a normal time?"
+    show RM neutral-2
+    RM "I will on occasion if I don't sleep the night before."
+    MC "Well, I guess that story adds up."
+    RM "What's the deal? Having issues with the Heiress again I gather?"
+    MC "Don't call her— Okay, whatever. Yes, Alice. It's about her."
+    show RM neutral
+    RM "What about her specifically?"
+    MC "{i}Uggh{/i}, where do I even start?"
+    MC "{i}Sigh{/i}... Have you ever felt like you've poured your heart and soul into something and you realize you have nothing to show for it?"
+    show RM concerned-2
+    RM "Yeah. I know the feeling. It happens a lot if I'm being honest."
+    "In retrospect, my rhetorical question wasn't that well considered for my audience."
+    MC "Oh, I suppose that would be true. I hadn't really thought about that since you seemed so undeterred about everything."
+    RM "Truth is a hard thing to find. I never expected it to fall on my doorstep."
+    MC "Ever get the feeling that you should give up, or that you're just wasting your time on a dead end?"
+    show RM happy
+    RM "Dead ends aren't always a waste of time. They're just a temporary detour that you have to explore before you can rule them out. Besides, it's not a one way street and you can always come back to the crossroads and explore another route." 
+    show RM doubt
+    RM "If you're asking when someone should give up, that doesn't have anything to do with how drawn out or frustrating the process is, it's about whether or not what you're working towards still matters."
+    show RM smug
+    RM "And I work on things that matter to me, whether or not they mean anything to anyone else."
+    MC "And what if you never find what you're looking for?"
+    show RM happy
+    RM "Then I'll just have to settle for the fact that the cost of my wasted effort was far less than living with the fact I did nothing when I had the chance to try and do something."
+    MCT "Maybe this guy isn't as crazy as I thought after all."
+    MC "Hmm, I guess I hadn't thought about it like that before. {w}Thanks for the chat, man."
+    RM "No problem."
+    show RM neutral-2
+    RM "But if you don't mind, I would like to try to get some sleep, if you could keep it quiet for a few more hours."
+    MC "Yeah, sure. Sorry about that."
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm Interior
+    with fade
+    "I laid back in bed, thinking about everything all over again. My mind was still addled, but this time a lot clearer than it was before."
+    "The things she said, and what she did in that moment... I'm not a perfect boyfriend, I know that for sure— but that wasn't fair."
+    "She certainly got the shit end of the stick with these growths, but that doesn't mean she needs to take that out on me."
+    MC "I've done everything I could think of to make things better for her, and it's still not good enough."
+    MCT "A sane person would give up about now."
+    MC "Given how long this conversation with myself has gone on, clearly that doesn't apply here."
+    MCT "So what are you going to do?"
+    MC "Prove her wrong."
+    MCT "But she's usually right."
+    MC "But not all the time. {w}Just because I can't fix everything, doesn't mean I can't fix anything."
+    jump daymenu
+
+label WG090:
+    $setProgress("WG", "WG091")
+    scene Workshop
+    show Jineko neutral
+    with fade
+    play music Winter
+    Misuboro "What in the hell did you bring into my shop, boy?"
+    Jineko "It looks like it got run over by a steam roller."
+    Misuboro "Where did you find this? You drag it out of a dumpster or something?"
+    MC "Umm, well..."
+    MC "Let's just say there was an accident."
+    Misuboro "With what? Dynamite? This thing looks blasted to smithereens. What are you kids doing in your rooms?"
+    MC "I know it's hard to believe, but this was a result of ordinary use... with an individual of extraordinary proportions."
+    Misuboro "Wouldn't be the first time some student's fat ass smashed a piece of furniture around here. Guess that's why I have a job."
+    MC "Do you think you can fix it?"
+    Misuboro "Kid, I don't even know what it is. I spend my days repairing furniture, not solving jigsaw puzzles."
+    Jineko "Looks like it was a set of three chairs. An unusual number for a set. Is there supposed to be a fourth one?"
+    Misuboro "Ah, looks like you're right, Watanabe-san. You have more imagination than me, that's for sure."
+    MC "It's three chairs, they're identical."
+    Jineko "Ain't that a shame. They look like they should've been rock-solid, whoever built these must've been an old hand." 
+    Misuboro "Hmm, yes the tree used to make these must have been quite old. Can't find this kind of timber anymore. What a shame."
+    MC "There must be something you can do at least, right?"
+    Misuboro "Kid, I ain't gonna lie to you, this dilapidated collection of parts belongs in a dumpster, or wherever you found it."
+    MC "I know, but it has sentimental value."
+    Misuboro "Ahh, everyone says that about their worthless junk."
+    MC "I know they're in rough shape, but you had to have seen something like this before in all your years working here, Misuboro-san."
+    Misuboro "I'm a fabricator, not a miracle worker."
+    MC "I know, but I could really use a miracle here honestly."
+    "Misuboro reached up to his lip to pinch the cigarette hanging from his lip, giving it a long drag before flicking it to the shop floor and snuffing it out with his foot."
+    Misuboro "Yeah, well, we all could."
+    "And with that, Misuboro-san just walked away, no longer interested in continuing the conversation."
+    show Jineko sad
+    "My heart sank, and my stomach dropped. I felt like I just got punched in the gut. The one person I thought could maybe help me and it was such a lost cause he couldn't even be bothered to try. {w}I had failed again."
+    Jineko "..."
+    show Jineko happy
+    Jineko "So, you're saying you can't fix it?"
+    Misuboro "Hm?"
+    Jineko "I guess it's just too hard, even for a master carpenter like you, Misuboro-san."
+    Misuboro "Wait a minute."
+    Jineko "I mean you {i}are{/i} getting up in years. Eventually you'll have to retire when this job gets too much for you."
+    Misuboro "Oi-oi, I never said I {i}couldn't{/i} fix it. I can fix anything! Even this hunk of junk!"
+    Jineko "But you just told Hotsure-san that you can't fix it..."
+    Misuboro "Did I say that? No. Maybe you need to lean in more so you can hear better with your ears all the way up there, missy."
+    Jineko "So does that mean you'll fix it then?"
+    Misuboro "Yes! I'll fix your damn hunk of junk. {w}Ungrateful little shits. A master carpenter like me should be making dining chairs for the Imperial Family, but instead I'm stuck in this shop performing autopsies on furniture all day."
+    "Jineko shot me a wink out of the corner of my eye."
+    Jineko "{size=-6}Seems like there's some spark left in the old man after all.{/size}"
+    MC "Thanks for your help Misuboro. It means a lot to me."
+    "Misuboro-san, resigned to his commitment, pulled out another cigarette from his front pocket and gave it a lit before taking another long drag."
+    Misuboro "I can't promise anything. We'll be lucky if we can salvage a single chair out of this mishmash of scrapped garbage."
+    MC "I'd be more than happy with that. Anything would be a win compared to walking away with nothing."
+    Misuboro "I hope you're looking to get your hands dirty on this too. You can't just drop off a load of junk on someone's doorstep and tell them it's their problem now before walking away."
+    MC "Sure, I'd be happy to help. I'd be grateful for anything you're willing to teach me."
+    Jineko "I can help with the upholstery. That looks to be in pretty good condition still."
+    Misuboro "Alright, let's see what we can salvage. We'll have to redo all the jointing, that's for sure. If we're lucky there might be enough of something left in here to make something that at least resembles a chair."
+
+    scene Classroom with fade
+    play music HallowedHalls
+    "I hadn't heard anything from Alice in a couple of days. I was starting to get worried, but I figured she needed some time to herself to cool off." 
+    "I was counting on finally being able to see her in class, hoping a more neutral environment would facilitate smoothing things over, hopefully breaking the ice and getting back on track." 
+    "But she wasn't in class, which made me really start to worry."
+    show HR neutral with dissolve
+    HR "This will be the last major test of the semester before the final, so make sure to study. There isn't much of an opportunity to improve your grades after this if you're on the border of a better one."
+    MCT "Shit."
+    "I really should have been paying better attention in Tashi's class since the test was coming up, but my mind was obviously elsewhere."
+    HR "After this test we'll be moving on to the later part of the Shōwa period, but the final will be comprehensive. So don't cram all at once and forget what you learned for this one."
+    play sound Bell
+    HR "Alright, that's all I have. You're free to go."
+    hide HR with dissolve
+    show BE doubt with dissolve
+    BE "Hey, you feeling okay, Kei-chan? You don't look so good. Is everything alright?"
+    MC "{i}Sigh{/i}... No, not really, Honoka. Alice and I got into a really big fight before the weekend. She's been going through a lot and everything just went wrong all at once." 
+    MC "I didn't have the words to say to make things better."
+    MC "In fact, I probably just made things worse. I don't know what else I can do and now I'm really worried about us."
+    show BE surprised-2
+    BE "Oh, Kei-chan, I'm so sorry. No wonder you're so bummed."
+    show BE confused
+    BE "Want me to talk to her? Maybe I can help smooth things over with a little bit of girl talk. Sometimes that helps."
+    show BE sad at altMove(0.5, 0.75)
+    show PRG worried at Position(xcenter=0.25, yalign=1.0) with dissolve
+    PRG "I-I've been worried about Alice too. She told me about what happened... and she hasn't left her room since the incident with the chairs."
+    PRG "I was... really worried, so I asked Takamura-sensei if she could visit her."
+    MCT "This is worse than I thought."
+    "Before I was worried that she was still mad, now I was worried that she was depressed. None of this was good news."
+    MC "Thanks Aida. It sounds like she needs help. Unfortunately, right now I'm not really in a position to offer any."
+    PRG "P-Please don't say that, Hotsure-san. You're the one that helps her more than anyone. I know she isn't the best with expressing her true feelings, but if I know Alice, it's that she refuses help when she needs it the most."
+    show PRG unique
+    show BE neutral
+    PRG "I don't know how long it will take for her to come around— just promise me that you won't give up on her."
+    show PRG unique
+    MC "I won't. Thanks, Aida. I really mean it. I'll just have to wait and see."
+    BE "Sounds like she still needs some space, but my offer still stands, Kei-chan."
+    MC "Thanks Honoka. We'll see if it comes to that."
+    hide BE
+    hide PRG
+    with dissolve
+    pause 1
+    show HR neutral with dissolve
+    HR "Hotsure-san, can I speak with you briefly before you head to your next class?"
+    MC "Sure, Tashi-sensei. Uh, if it was about me not paying attention in class today, I'm sorry. I've... I've just had a lot on my mind. I'll try to do better."
+    HR "Well, that's what I wanted to talk to you about, but I didn't call you over to berate you."
+    HR "Nikumaru-san was excused from class today, citing that she was not able to be in presentable condition with a properly fitting uniform."
+    HR "It is not an uncommon occurrence, and one that I have little reason to doubt, given the severity of her condition; however, as faculty we are cognizant that there is often more going on in the background than just what we are told."
+    HR "Your despondent state in class today confirms my suspicions."
+    show HR unique
+    MC "She's... Well, she's been having some difficulties with her growth lately. Like a {i}lot{/i} lately. {w}More than usual I mean."
+    show HR neutral
+    HR "I can imagine. She's certainly had to endure one of the more difficult paths."
+    HR "Look, I know I don't come across as the most sympathetic at times, especially compared to some of the other faculty members, but we're all here because we want to help."
+    HR "But I'll tell you what I know. {w}Some people have it harder than others with their growth, and as important as it is to support people going through a tumultuous time of change in their life, at the end of the day, everyone has to learn to come to terms with it themselves."
+    HR "That's not something other people can do for them, and it's something I learned myself far too late."
+    HR "So try not to get too discouraged, Hotsure-san. It may seem like it, but the weight of the world doesn't rest entirely on your shoulders, so don't try to carry it."
+    show HR unique
+    MC "Thanks, Tashi-sensei."
+    show HR neutral
+    HR "Don't mention it. Have a good afternoon, Hotsure-san."
+    scene Hallway with fade
+    play music Memories
+    "Walking back from class, I thought about what Tashi-sensei said, what everyone else I talked to said for that matter. It was a lot to take in and I still wasn't sure what I should do, or even if there was something I could do for that matter."
+    "I'd been doing what I thought I was supposed to do for so long, only to find out that it was wrong. I didn't even trust my own judgment anymore."
+    "I tried to clear my head, hoping to process everything I just heard, and be as honest as I could with myself... {w}and all I really came to the conclusion was is that I missed Alice."
+    scene black with fade
+    pause 2
+    scene Dorm Interior with fade
+    "After classes I went back to my room and laid on top of my bed. It was a dreary winter day outside my dorm window, on top of feeling down already I just didn't feel like doing shit. So I just laid there. {w}Thinking."
+    "Thinking about all the things I wanted to tell her. Thinking about what I could say to make things right, assuming it wasn't too late to do so... {w}And mostly just hoping I'd get to see her again at all."
+    stop music fadeout 1.0
+    play sound Knock
+    MC "!?"
+    MCT "I wonder who that is? Well, it's not like Daichi ever has any guests..."
+    "I jumped off my bed to rush to the door. Hopefully optimistic, even if it was a long shot..."
+    show WG worried with dissolve
+    play music Bittersweet
+    "It really was her! {w}I had hoped for this moment for so long, all the things I wanted to tell her... But seeing her here now— I forgot all of it."
+    MC "Hey."
+    WG "Hello, Keisuke. Can I come in?"
+    MC "Sure. Yeah, come in."
+    WG "I came here to apologize... for the things I said... during my outburst the other day."
+    WG "I said some things in the heat of the moment that were hurtful... things that I didn't mean."
+    show WG sad
+    WG "{i}sniff.... sniff...{/i}"
+    WG "And what's worse... I said them, knowing they were hurtful... knowing they weren't true... {w}In a useless hope that I could somehow deflect everything happening to me onto you... so I wouldn't have to confront it."
+    WG "{i}sniff.... ehhahh...sniff...{/i}"
+    "Alice could barely eke out her words at this point as she began to sob uncontrollably."
+    WG "You... were just trying to help... You're always trying to help me. {w}I saw what you did... to my couch... So I wouldn't break it..."
+    WG "After I blamed you... for {i}me{/i} breaking those chairs. {w}Keisuke, I felt...so... so awful. I'm... I'm embarrassed by how ungrateful I was... {w}f-for everything."
+    "At this point even I couldn't stop crying. I was just so happy to have her back. I closed the distance between us, to wrap myself around her as best I could, giving her a gentle kiss on her forehead."
+    MC "{i}Shhh{/i}, it's okay. {w}I'm just glad you're back here with me... {w}You really scared the shit out of me you know? {w}...I was worried you'd hate me forever after that."
+    WG "I'm so sorry, Dear... {w}I should have taken it all back right then and there... But I was too stubborn!"
+    MC "But you're here now, and that's what counts."
+    pause 2
+    "We stood there holding each other for what must have been over a minute. The sobs and sniffles dying down from the happy reunion, as we calmed down with a mutual sense of relief."
+    show WG neutral-2
+    play music Peaceful
+    MC "Alice, I'm glad you've told me how you feel about everything. I have a few things I need to say too."
+    show WG worried
+    WG "Of course, Dear. I'm sure you do."
+    MC "I feel like I need to be as honest as possible with you. No more dancing around anything anymore. Some of the things you said, well they hurt..."
+    show WG surprised-2
+    extend " but they hurt because they were partially true."
+    WG "What do you mean?"
+    MC "I adore your body. I know I've expressed my preferences before, but it's sexy as hell how fat you are. {w}I've been mesmerized, blown away seeing how much you've grown over the course of this year." 
+    MC "It drives me absolutely wild. It's the hottest thing I've ever seen. The more you grow, the more beautiful you've become."
+    MC "I love watching you eat... and eat and eat. {w}I love how your body jiggles, how soft it feels on my skin, how heavy it is when you lean against me and how it causes the floor to shake when you walk by..."
+    MC "I don't feel like I've been able to be honest with you about just how much I love every curve, dimple, and bulge of your body because I know it's made things so much harder for you... something that you live with all the time you wish could go away."
+    MC "{i}Sigh{/i}...I never wanted any of it to be at your expense."
+    MC "You were right. I am greedy. I want a girlfriend who's beautiful and fat, and I wish it didn't make her life hard or feel miserable about it."
+    MC "It's more than I have any right to ask for, but that's how I honestly feel."
+    WG "..."
+    MCT "Please don't hate me forever."
+    WG "Keisuke... I guess I always knew, but I never expected you to be so forthright with your desires..."
+    show WG neutral-2
+    WG "I can't say I understand it..."
+    show WG happy
+    WG "But I'm hoping I can learn."
+    MC "Well, I'm willing to help teach you."
+    show WG happy-2
+    WG "Of that, I have no doubt."
+    show WG pondering
+    WG "All of this has made me realize it's time for me to finally learn to feel comfortable in my skin."
+    show WG sad
+    WG "I've never really had that luxury before, having always been the chubby girl in school growing up."
+    show WG neutral
+    WG "But now I realize I have to leave the insecurities of that little girl behind, and become a confident woman that's unperturbed by the jeers of the crowd."
+    show WG neutral 
+    WG "It's not like I have a chance to ever be thin to change things anyway."
+    MC "No use in sinking money into a failing investment?"
+    show WG happy-2
+    WG "I think it's safe to say that particular stock has been delisted from the exchange."
+    show WG pondering
+    WG "That being said, I recognize this isn't going to be a simple switch to flip. It's going to take some time and patience on my part."
+    show WG stern
+    extend " Two things I hate the most."
+    show WG happy
+    MC "Well, might as well start getting some practice in now."
+    "I hopped up to take a seat on my bed, padding the mattress next to me to beckon her over."
+    MC "Let's start getting you comfortable."
+    "Alice walked over and took a seat on my bed—"
+    show WG surprised
+    "{i}*CRACK*{/i}*"
+    MC "{i}Oh shiiiit!{/i}"
+    "Alice's weight snapped the bed right in the middle before she could even bear the full weight of her ass on the mattress, sending me rolling on top of her as it collapsed inward."
+    MCT "Shit, I hadn't even thought about it! My bed is not reinforced like hers."
+    show WG stern
+    WG "You can't be serious! This is ridiculous!" 
+    MC "Hehe...HAHAHA!"
+    show WG angry
+    WG "Why are you laughing!? This is serious! I just destroyed your bed!"
+    show WG surprised-2
+    MC "Alice, who cares? It's just a bed. It can be thrown out and replaced. I don't even need it, I can just put the mattress on the floor."
+    MC "I don't care if you come in and break my bed every time you see me. The fact that you came here to see me means more to me than my bed."
+    show WG happy
+    WG "Well that's saying something then, coming from you Mr. Sleepyhead."
+    "Alice tousled my hair, laughing as she did so."
+    MC "Besides, I don't need a bed. Laying on top of you like this is far more comfortable anyway."
+    show WG haughty
+    WG "You do look quite content there."
+    show WG happy
+    MC "Maybe it'll take a while for you to feel comfortable in your own skin. We'll keep working on it. But what I can say for sure, is I'm feeling quite comfortable {i}on{/i} your skin right now."
+    show WG sly
+    WG "I suppose that's close enough for now." 
+    "{i}*Bzzt*...*Bzzt*{/i}"
+    MC "Oh! Sorry, Babe, I gotta take this, I was expecting this one."
+    show WG neutral
+    WG "Oh?"
+    FMGCell "<The eagle has landed>"
+    MCT "???"
+    MCCell "<What does that mean?>"
+    FMGCell "<I delivered your thing>"
+    MCCell "<Then say that>"
+    FMGCell "<idk, I thought I was supposed to keep it a secret. So I used a code>"
+    MCCell "<It's too secret if I don't even know what the hell you're talking about>"
+    FMGCell "<Do you want me to take it back then?>"
+    MCCell "<NO! We'll be there soon. Thanks again>"
+    FMGCell "<Np>"
+    MC "Alright, looks like your package has arrived. Let's go see."
+    show WG surprised-2
+    WG "{i}My{/i} package? What do you mean?"
+    MC "It's a surprise."
+    show WG neutral
+    WG "Given the state of your bed and my chairs, I think I've had quite enough surprises lately."
+    MC "Well, one more couldn't hurt."
+    stop music fadeout 1.0
+    scene Dorm WG with fade
+    play music Love
+    "Walking into Alice's room, I saw it had arrived in pristine condition. It turned out even better than I imagined."
+    show WG surprised with dissolve
+    WG "Oh my goodness, Keisuke..."
+    show WG sad
+    WG "It's...It's beautiful."
+    "It turned out we were only able to save one of Alice's three chairs... {w}but by turning three chairs into one seat that could actually fit her. We had to redo the joints, shorten the legs, and fuse the bottom and back as well as re-seem the upholstery."
+    "It was more of a parlor bench than a chair at this point, but it looked great. Misuboro-san and Watanabe-san did an amazing job."
+    WG "You..."
+    show WG happy
+    $setAffection("WG", 1)
+    WG "You really can fix everything, can't you Dear?"
+    MC "Not everything. But I can get a chair or two fixed, at least. Maybe sometimes that's enough."
+    "I reach with my hand to wipe the tears pooling in Alice's eyes, drawing my hand behind her neck to embrace her for a long overdue kiss."
+    show WG aroused
+    pause 2
+    "And for that moment, time stood still. {w}Reunited at last after having been driven apart. More determined than ever to never let go."
+    MC "Now, let's get you comfortable. For real this time."
+    show WG surprised-2
+    "I pulled the seat closer to the tea table and gave the seat cushion a little dust off."
+    MC "Luckily it arrived just in time for tea."
+    show WG doubt
+    WG "You can't be serious, Dear. It's just going to snap again under my weight."
+    show WG surprised-2
+    MC "Not true. It's only wood on the outside, we molded the wood around a solid frame of tempered steel. Misuboro-san said this thing would hold up even if it got run over by a tank."
+    show WG neutral-2
+    WG "Well that's reassuring. However, I don't think I'll want to test that theory."
+    MCT "Either way, I think we're about to."
+    show WG happy-2
+    MC "Your seat awaits, mademoiselle."
+    "The smile on Alice's face was priceless."
+    show WG doubt
+    "She was a little hesitant at first,"
+    show WG happy
+    extend " but was quite content once she realized it didn't creak or groan as she sat down."
+    show WG surprised-2
+    WG "Oh my. It's surprisingly comfortable."
+    show WG happy
+    "As the seat bore the weight of her body, Alice for her part looked as if a weight had been lifted off her shoulders."
+    "It was the look of true contentment I had been hoping to see— not one from the indulgence of sweet treats, or the distraction of simple pleasures, but a true sense of peace with herself, knowing she was loved and cared for every step of the way."
+    jump daymenu
+
+label WG091:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -32812,7 +33416,7 @@ label WGGTS002:
     AE "I believe I understand this, yes."
     show WG neutral
     WG "Don't tell me you yourself wouldn't be interested in something more accommodating for your... unique proportions in that department. Hmm?"
-    WG "Don't you want something a bit more comfortable and cute? Made just for you, instead of some one‑size‑fits‑most plain ol' granny panties?"
+    WG "Don't you want something a bit more comfortable and cute? Made just for you, instead of some one-size-fits-most plain ol' granny panties?"
     MCT "I hope for Alice's sake she can back up her words with her material sourcing. It's going to take a lot of silk to cover that ass."
     show AE neutral-eyebrow
     AE "I believe that I am not a suitable clientele for your business. If you keep things on the up and up, then there will be no issue."
