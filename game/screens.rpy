@@ -295,7 +295,8 @@ screen scene_name():
         frame:
             xalign 1.0
             yalign 1.0
-            text eventname
+            text eventname:
+                alt ""
 
 init python:
     config.overlay_screens.append("scene_name")
