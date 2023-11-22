@@ -5394,6 +5394,7 @@ label MC006_Team2:
 label MC007:
     if not getFlag("RMRoute_Unlocked"):
         $setFlag("RMRoute_Unlocked")
+    $setFlag("noFMGWG001")
     scene black with fade
     "..."
     RM "Hey, wake up!"

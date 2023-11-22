@@ -20067,6 +20067,7 @@ label FMGGTS002:
     jump daymenu
 
 label FMGWG001:
+    $setFlag("noMC007")
     "..."
     FMG "Hey, wake up, dude!"
     MC "Wah?"

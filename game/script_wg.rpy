@@ -6732,7 +6732,6 @@ label WG031_c1_after:
     jump daymenu
 
 label WG032:
-    $setFlag("noFMGWG001")
     scene Classroom with fade
     play music Schoolday
     "I came to class thinking today would be no different than any other day, which in turn made me reflect on how quickly I had gotten used to... all this."
@@ -7877,7 +7876,6 @@ label WG036_c1_2:
 
 label WG037:
     $setProgress("WG", "WG038")
-    $setFlag("noFMGWG001")
     scene Dorm Interior with fade
     play music Peaceful
     "The day had come for my second date with Alice."
