@@ -913,7 +913,7 @@ label FMG008:
     hide FMG with dissolve
     play music Schoolday
     "In contrast to Akira's fast track back to her dorm, I could barely manage a snail's pace without shaking in my knees."
-    MCT "Ut oh... I'm in trouble."
+    MCT "Uh oh... I'm in trouble."
     "I began the slow walk back to my dorm, each step carefully chosen so I didn't randomly crumple on the pavement."
     MCT "Now I know how grandma must feel."
     "On second thought, grandma could run circles around me at this point."

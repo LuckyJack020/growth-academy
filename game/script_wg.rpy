@@ -1497,7 +1497,7 @@ label WG009:
     show PRG neutral at Position(xcenter=0.45, yalign=1.0) behind WG with dissolve
     PRG "I... I could, maybe..."
     show FMG neutral
-    FMG "Yeah, sure. But Keisuke, don't you think this is a forgone conclusion?"
+    FMG "Yeah, sure. But Keisuke, don't you think this is a foregone conclusion?"
     MC "Well..."
     hide PRG with dissolve
     menu:
@@ -16841,7 +16841,7 @@ label WG060:
     show WG haughty
     WG "That was a nice appetizer, but I fear an inadequate amount of sustenance will only serve to arouse my appetite, rather than bed it back down."
     WG "I propose we go out to dinner this evening and that it would be best if we left now."
-    "I couldn't help but raise an eyebrow in response to this sudden change in disposition, but having forgone my own dinner in order to procure the dessert, I had no objections to her proposal."
+    "I couldn't help but raise an eyebrow in response to this sudden change in disposition, but having foregone my own dinner in order to procure the dessert, I had no objections to her proposal."
     MC "I would agree. No time like the present."
     jump daymenu
 
