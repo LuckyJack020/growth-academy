@@ -24549,10 +24549,10 @@ label WG079:
         "I felt just awful that I managed to ruin her birthday by reminding her all over again just how fat she's become. {w}Even if it only endeared her to me more."
         WG "Keisuke... It's gorgeous! {w}You made {i}me{/i} look gorgeous! I look like royalty in this drawing."
         WG "I heard you had a talent for drawing but I had no idea you were this skilled of an artist."
-        #show WG sad
+        show WG sad
         WG "{i}Sniff... sniff...{/i}"
         "Alice was nearly in tears at this point, which had me worried. {w}Perhaps the \"realistic\" portrayal had not been the right choice for the occasion after all..."
-        #show WG happy
+        show WG happy
         WG "Is this how you really see me?"
         MC "You mean as the most beautiful woman I've ever seen?"
         hide cg
