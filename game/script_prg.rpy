@@ -1155,7 +1155,7 @@ label PRG006_c1_1:
     jump PRG006_c1_after
 
 label PRG006_c1_after:
-    scene Dorm Exterior
+    scene Dorm Hallway
     show PRG neutral at Position(xcenter=0.25, yalign=1.0)
     with fade
     "We finally arrived at the women's dorms. Beside me, Aida was huffing from the load, her face red from the strenuous effort. I knocked on the door for her, and Alice answered after a short wait."
@@ -11047,12 +11047,12 @@ label PRG028:
     show PRG028_blur behind PRG028_nervous:
         alpha 0
         pause 0.1
-        linear 5.0 alpha 1.0
+        linear 2.0 alpha 1.0
     show PRG028_nervous:
         subpixel True
         crop(0, 0, 1280, 720)
         size(1280,720)
-        linear 5 crop(216, 96, 864, 486)
+        linear 2 crop(216, 96, 864, 486)
     PRG "I-I love spending time with you. You're so kind to me, and you make me feel... so cared for."
     pause .5
     PRG "B-But..."
@@ -30778,110 +30778,653 @@ label PRG049:
 
 label PRG050:
     $setProgress("PRG", "PRG051")
-    scene Dorm Interior with fade
-    play music Schoolday
-    if getFlag("PRG048_c1_1"):
-        "I shook awake as my alarm practically blasted my eardrums. I leaned over and after sleepily swatting a few things off of my nightstand, managed to turn off my alarm."
-        "I turned over next to me. Aida was gone and in her place was a small scrap piece of paper."
-        Note "I'm gonna win!"
-        "Beside the writing on the paper was a small pair of lips drawn into a kissing shape. I smiled, imagining what was coming my way tonight."
-    else:
-        "I jolted upright at the sound of my alarm. Leaning over, I swatted at my phone a few times before I managed to hit the volume button."
-        "I laid my head back against my pillow and inhaled deeply, thinking back to last night."
-        "What had begun as a rollercoaster of an experience had turned into the promise of an amazing night tonight. And, speaking of rollercoasters, I sure as hell hoped that Aida could handle a good ride."
-    "I stood up and pulled the blinds open. The storm last night had gone, leaving a bright, sunny day in its place."
-    "I checked my phone for the time."
-    MCT "All right. I've got one hour until class. Just enough time to shower."
-    "I grabbed some clean clothes from my closet, then stopped. If I wanted to impress Aida more tonight, maybe it would be best to wait and shower before she came over."
-    "Of course, how was I to know that she would be coming over to my place? Maybe she had something else in mind entirely. Perhaps she'd want to get dinner first or something."
-    "I was starting to think letting her win wasn't the best idea when it came to planning all of this out."
-    MCT "Eh. I can always shower again."
-    "About half an hour and one shower later, I walked out of my dorm room, feeling more refreshed than I had in quite a while."
-    "After talking all of this out with Aida, my entire body just felt lighter and more at ease. In addition to that, I knew I had something special coming tonight, which made me feel even better."
-
-    scene School Planter with fade
-    "I didn't want to be too early, lest Aida run behind, so I took a few minutes to stop in the garden and breeze over my notes quickly."
-    "I felt really good on everything, but if this would help me get a better grade, and ensure that Aida would beat me to class, then I'd definitely call it a win."
-    "By the time I'd reached the end of my notes, I had around ten minutes to get to class. I zipped my notebook back into my bag and started for the classroom."
-
-    scene Classroom with fade
-    "As I entered, I noticed how easy it was to tell who had been studying and who hadn't."
-    show AE neutral with dissolve
-    "Shiori sat in her usual spot, skimming over notes lightly. Her desk was in its usual state of orderliness, and she had one notebook in front of her."
-    hide AE with dissolve
-    show FMG surprised with dissolve
-    "Akira, meanwhile, had loose papers scattered all over her desk, some of which were incredibly mangled. She was tearing through them at light speed, trying to take in as much information as she could in five minutes."
-    hide FMG with dissolve
-    "Of course, the main attraction for me wasn't in who was studying harder."
-    show PRG neutral with dissolve
-    "Aida sat in her spot, with no papers on her desk. She winked at me as I met her gaze."
-    hide PRG with dissolve
-    "The bell rang right as my butt hit the seat, and Tashi-sensei was on his feet. He traveled down each aisle of desks and passed us our exam sheets."
-    show HR neutral with dissolve
-    HR "Please return these to me once you're finished. Remember to take it slow, guys. No need to rush."
-    HR "Also, expect a bit of a curveball with some of these questions."
-    hide HR with dissolve
-    "Tashi-sensei sat back down behind his desk and we all set in."
-    "Thankfully, the first page seemed almost entirely familiar, with some simple fill in the blank questions. I could tell by the rustling of paper that most of the class seemed to be on par with me."
-    "The second page expanded a little more, with a map of the United States. I went through and labeled each state with relative ease, disregarding that I probably messed up a few of the east coast ones."
-    "The third page really raised the ceiling of difficulty, with two longer essay questions. I was never a groundbreaking writer or anything, but I still managed to meet the expectations of the questions, and answered them thoroughly."
-    "As I breezed through the fourth page, I noticed how little the other students were flipping pages now. Now, I had myself in the standard student's conundrum."
-    "Was I just doing really well, or was I putting in all wrong answers and just thinking I was doing well?"
-    menu:
-        "Go back and review the first three pages.":
-            jump PRG050_c1_1
-        "Keep going."if checkSkill("Academics", ">=", 5):
-            "Ignoring the nagging in my stomach, I pressed on. It was probably best to stick to my guns on my answers, and not second guess my original answers."
-            jump PRG050_c1_after
-
-label PRG050_c1_1:
-    "Sighing, I flipped back to page one and skimmed over my answers. I felt good about the first page so I moved onto the second and stared blankly at the intimidating map."
-    MCT "Okay. Nevada is the one with the weird slant on the left side, right? And, Mississippi looks like a boot. Minnesota was the one with two pieces by the great lakes."
-    "I penciled in my replacement answers and scrubbed out the old ones with my eraser."
-    "Moving onto the third page, I reread my essays and changed a few words here and there."
-    "Then, I found myself back at the fourth page, but still didn't feel much better about my answers."
-    "As I was about to turn back to the second page and rearrange some of the states again, Shiori rose from her desk and walked to the front of the room, setting her exam on Tashi-sensei's desk."
-    MCT "Shit! She's done already? All right, you're fine. You're fine. Just keep moving."
-    jump PRG050_c1_after
-
-label PRG050_c1_after:
-    "I moved onto the fifth page and breezed through it. Most of those questions were cultural things, which I knew pretty well."
-    "I flipped onto the sixth, and thankfully last page and stared at the last question."
-    "\"Name the four most popular sports in America.\""
-    "Without thinking, I wrote baseball immediately."
-    MCT "Basketball is fairly popular there, I think. And I'm guessing football is too."
-    "I wrote those two in, but got stumped on the last one."
-    MCT "I don't think golf is super popular there, and Canada is usually the country that comes to mind when hockey is brought up, so it probably isn't that."
-    "After racking my brain for a solid five minutes, I still hadn't thought of anything and just wrote volleyball for my last one."
-    "Satisfied with myself, I got up and laid my paper on Tashi-sensei's desk."
-    show PRG unique with dissolve
-    "As I walked back to my desk, I noticed Aida writing feverishly under one of the essay questions."
-    "Sitting down, I thought back to the night before. Maybe if we would've just talked on the phone, she would've had more time to study and wouldn't have had to rush to finish."
-    hide PRG with dissolve
-    "I was about to curse myself for taking up too much of her time, when Aida got up from her desk and laid her paper on Tashi-sensei's desk."
-    "I released a relieved sigh, happy that she'd finished on time, and that I wouldn't be the cause of her getting a bad grade."
-    "Just before I could let myself fall into a daydream, the bell rang."
-    HR "Anyone who hasn't finished, leave your exams with me. Unfortunately for you, any questions left blank will be marked incorrect, as I'm sure you could figure out."
-    "One or two students laid the papers in front of Tashi-sensei with dejected looks on their faces. Everyone else scrambled for the door, excited to get out and lead the rest of their day on with no test anxiety hanging over their heads."
-    UNKNOWN "Ahem."
-    show PRG neutral with dissolve
-    "I turned toward the source of the throat clearing sound."
-    PRG "Um, I believe I won our contest?"
-    MC "You did. So, that means the night is ours with you at the helm."
-    PRG "Yeah, it is."
-    PRG "Well, lets both go back to our dorms and get ready. Then, we can meet by the bus stop at around five-thirty?"
-    MC "Sounds great."
-    show PRG happy
-    PRG "Perfect!"
+    $setTime(TimeEnum.EVE)
+    $setPRGOutfit(OutfitEnum.CASUAL)
+    play music TwilightAmbient fadein 2.0
+    scene Car Interior with fade
+    "The night time after-game traffic had been absolutely wicked, which in retrospect, I totally should have expected."
+    "The first 45-ish minutes had been wall to wall, with us barely moving for a good majority of that time."
+    "But now, over an hour after first getting in the taxi, we finally were getting to the quieter sides of the city."
+    "As the driver turned down the street to Aida's parent's, I tapped my leg a couple of times to wake it back up."
+    MC "Aida… we're here."
+    PRG "Mmn…"
+    "Aida rubbed her eyes and looked out the window."
+    "I reached into my wallet and handed the driver some yen… of which I was seriously going to need a job when I got back to campus, and opened the door, walking to Aida's side and getting hers for her."
+    "She twisted in the seat, pointing her belly in as she backed out."
+    scene NYI with fade #scene apartment exterior
+    "The door of the taxi jerked open as her butt forced it back, her belly and boobs being towed out by the rest of her."
+    show PRG neutral with fade
+    PRG "T-Thank you, Sir."
+    Driver "You're welcome. Have a good evening, you two."
+    "I shut the door behind Aida, and took the hand of the sleepy girl, leading her into the cramped hallway."
+    scene Kanagawa Alley with fade
+    MC "So. How are you feeling post-game?"
+    show PRG blush-2
+    PRG "... It was one of the best experiences of my life."
+    PRG "I'm… it was a dream come true."
+    if getFlag("PRG044_c1_1"):
+        MC "I'm so glad to hear that, Baby."
+    if getFlag("PRG044_c1_2"):
+        MC "I'm so glad to hear that, Babe."
+    if getFlag("PRG044_c1_3"):
+        MC "I'm so glad to hear that, Sweetie."
+    MC "Ready to get some sleep, then?"
     show PRG neutral
-    PRG "Oh, and one more thing."
-    "Aida walked close to me and craned her neck up to my ear."
-    PRG "No telling anyone about what happens tonight, okay?"
-    MC "You've got my word. Tonight, it'll be as if no one else exists, save for you and me."
-    show PRG aroused
-    PRG "I love your way with words."
-    hide PRG with dissolve
-    "Aida kissed me on the cheek and walked happily out of the room. I followed behind her, curious of what she had in store for us."
+    PRG "Mmhm… I don't know why I'm so tired…"
+    MC "Lots of tasty food, excitement, and carting around a mommy body all day. It's a recipe for sleep."
+    PRG "Mhm…"
+    MC "We should hit the hay early, though. Gotta be up early for the shinkansen."
+    "Aida nodded, wriggling her way down the hall. Her belly brushed the sides of the hall once again, though the sound was even heavier and more full."
+    "Not being able to turn to the side, Aida raised her fist and knocked on her parent's door."
+    stop music fadeout 1.0
+    pause 2
+    PRG "... I'll text her. She might be asleep."
+    show PRG worried 
+    PRG "Um… could you get my phone out of my wallet, Keisuke? I… I can't bend that way in here."
+    "I unclasped her wallet and slipped her phone out."
+    MC "Here you are."
+    show PRG neutral
+    PRG "Thank you."
+    "Aida opened her texts and sent a short message over."
+    pause 2
+    #show Takara neutral with fade
+    pause .5
+    play music DormLife fadein 1.0
+    Takara "Hey, guys. You both look wiped out."
+    show PRG happy
+    PRG "It was so fun, Mom!"
+    Takara "Well, come in and sit down. Tell me all about it."
+    scene NYI with fade #Kodama living room
+    "I bent and unlaced Aida's boots so she could kick them off, as I got my own shoes and walked into the apartment behind Aida, taking a seat on the couch as Aida's mom took the recliner."
+    Takara "Tell me everything. How were the seats?"
+    PRG "We were way up on top! We could see everything!"
+    "Aida took her camera from her wallet and turned the screen to her mother."
+    Takara "Those seats are so perfect! You can see the entire diamond!"
+    Takara "What was the score?"
+    PRG "They won, Mom! On a grand slam!"
+    Takara "You're kidding!"
+    show PRG excited
+    PRG "They did!"
+    Takara "Who was at bat?"
+    PRG "Toshi Hachisuki."
+    Takara "That must have been a marvel to see. He is their power hitter, after all."
+    show PRG neutral
+    PRG "He hit the dome."
+    Takara "He didn't."
+    show PRG excited
+    PRG "Both Keisuke and I heard it!"
+    MC "Seconded."
+    Takara "That NEVER happens! I've only seen maybe four dome hits since I was little."
+    MC "It's that rare?"
+    show PRG neutral
+    Takara "It's unbelievably rare, Hotsure-san. The Koi usually are known for a pretty decent defensive game. Not for their offensive. So, only four times… well, five now in my lifetime. That's a very special occasion."
+    Takara "No jokes about my age now, you two."
+    "I chose a simple head shake as Aida giggled beside me."
+    Takara "Did you get any of your cards signed, Dear?"
+    show PRG surprised
+    PRG "Oh! No, I forgot. But, it doesn't matter!"
+    show PRG neutral
+    "Aida took out the decorative box and took the top off, pulling out the signed ball."
+    Takara "WHAT?!"
+    Takara "Is that… the entire team?!"
+    show PRG excited
+    PRG "Yes! They gave a signed ball away to one lucky box!"
+    Takara "Oh my God! That's amazing, Sweetie!"
+    Takara "May I see it?"
+    show PRG neutral 
+    "Aida nodded, as Takara got up and took it from her, using a small piece of tissue from the box to hold it."
+    Takara "Look at this…"
+    Takara "When you display this, make sure it's out of direct sunlight. It'll fade the signatures."
+    Takara "I'd probably hold it with gloves or something protective, too. Don't want the oil from your hands to degrade them." 
+    PRG "Okay, Mom."
+    Takara "This is historic…"
+    Takara "A signed ball from a game won on a grand slam, and with a dome hit… this is really special."
+    Takara "Is there a certificate of authenticity?"
+    PRG "I… don't know. I didn't see one."
+    Takara "It's probably in the bottom of the box. Usually they tuck them out of the way to not take away from the actual signed piece."
+    "Takara set the ball down in the box."
+    Takara "I'm so glad you had-"
+    stop music
+    UNKNOWN "What's the commotion for?"
+    show PRG embarrassed
+    pause 1
+    #show Enmei neutral with fade
+    pause 1
+    PRG "I-I got a signed ball, Dad…"
+    "Aida turned the box toward the taller, thinner man shuffling into the room."
+    "Takara got out of the recliner straight away, and stepped off to the side as Aida's father walked slowly to the chair and sat with a grunt."
+    Enmei "You had a good time?"
+    PRG "Mhm."
+    Enmei "That's great. Now, let's see that ball."
+    "Aida handed the box to Takara, who lifted it out with the tissue and handed it to Aida's dad."
+    Enmei "Mm… wow. This is definitely something special…"
+    Enmei "You'll have to take good care of this, Aida."
+    PRG "I-I will…"
+    pause 1
+    Enmei "And… you must be Keisuke Hotsure."
+    MC "I am, Kodama-san. It's very nice to meet you."
+    "I stood and bowed politely to him, then sat back down beside Aida."
+    "Her father made no move, and simply watched as I sat."
+    Takara "Aida was just telling me about the game, Dear."
+    show PRG worried
+    PRG "T-They won off of a grand slam."
+    Enmei "Hm. Figures. One of their power hitters, no doubt."
+    Enmei "Was it Anno?"
+    PRG "No. Toshi Hachisuki."
+    Enmei "Mm. He's on one of his last years, most likely. Good that he got the spotlight for a bit."
+    "As Aida spoke with her father, I took in the sight of the man."
+    "The man in the chair was… almost like a recollection of the man I'd seen in Aida's photo."
+    "His once built, muscular body, had been brought down to a skinny rail of a man. His hair, once a jet black fauxhawk, had grown out, as had his stubble, both of which now were a more ashy gray tone."
+    "His clothes almost seemed too baggy for him. His sweatpants hogged out around his legs, and his thermal shirt hung off of him."
+    "What I had expected to be a man in a wheelchair was instead a man who simply looked… unsteady. Tired."
+    play music Rain fadein 1.0
+    "His eyes, clearly having once held a bright, vibrant spark, had faded with time. Now, they simply looked spent. As though the fire within had been reduced to a smolder."
+    show PRG neutral
+    PRG "We even got food. The box seats have a special kitchen all to themselves where they do four course meals. It was… I've never tasted anything like it."
+    Takara "That's so wonderful. I'm so happy for you both…"
+    Takara "And, what did you think, Hotsure-san?"
+    show PRG blush-2
+    MC "Well… I never expected Aida to get so into it."
+    Takara "Like cheering really loud and getting way too invested into the game? I do that all the time."
+    Takara "Granted, it's been a while since I've actually watched a game. But at one time… right, Honey?"
+    "Takara put her hand on Aida's father's shoulder."
+    Takara "What time do you leave tomorrow?"
+    show PRG neutral
+    PRG "At six."
+    Takara "Well, at least you can sleep all you want once you're on board."
+    PRG "Mhm…"
+    Takara "How comfortable is it for you, Dear? On the train?"
+    show PRG worried
+    PRG "It's… doable. But, not what I would call comfortable."
+    show PRG unique
+    PRG "My… stomach was almost pressed up against the seat in front of me for the whole trip."
+    PRG "And, things like eating and drinking are a little hard. I have to use Keisuke's tray table."
+    Takara "Right… sitting is okay, though?"
+    PRG "Apart from feeling like I'm taking up all of the space…"
+    MC "I told you not to worry about that…"
+    PRG "Well, when I'm spilling over into your side, i-it's hard not to…"
+    "Aida put both hands on the sides of her belly, as if testing how much give it had."
+    Takara "All the same… we should let you two sleep. You'll have a long day tomorrow."
+    show PRG neutral
+    PRG "I… think I might shower before bed."
+    Takara "Alright, Dear. That'll be easier than having to pack up wet bottles tomorrow, too."
+    "Takara offered Aida's dad a hand, but he refused it, putting both hands on his armrests and pushing himself up."
+    Enmei "Hmn… mmgh…"
+    MC "It was great meeting you, Kodama-san."
+    Enmei "Mm…"
+    #hide Enmei with fade
+    "Aida's dad shuffled out of the room and back down the hall."
+    "I stood and offered Aida a hand, pulling her up and going to her suitcase, taking out her nightie for her."
+    PRG "Thanks, Baby…"
+    Takara "Oh, Dear? Would it be alright with you if I went with you and Hotsure-san to the station tomorrow?"
+    PRG "That's okay."
+    Takara "Thank you, Dear. I just… I'd love to see you off this time."
+    PRG "Okay, Mom..."
+    hide PRG with fade
+    "Aida waddled down the hall to the wet room."
+    Takara "Well, I'll see you in the morning, Hotsure-san. Sleep well."
+    MC "Same to you."
+    "Aida's mom smiled sweetly and walked down the hall, closing the door into her bedroom."
+    "I sat back on the couch for a moment, then got up and started picking up our odds and ends from around the living room." 
+    "We didn't have a ton laying about, but getting things like phone chargers and keys all in one place always made me feel better before leaving somewhere."
+    "I got my suitcase mostly packed, and laid it by Aida's, then dipped into the bathroom to change clothes and brush my teeth."
+    scene black with fade
+    pause .25
+    scene NYI with fade #Kodama living room
+    "Coming out of the bathroom, I shut off the light in the kitchen and sat back on the couch, the lamp in the living room illuminating the room with a soft, cozy glow."
+    stop music fadeout 1.0
+    "Down the hall, I heard a door open and shut."
+    MC "I've got my stuff all packed up. I can help you get yours all ready if you want."
+    pause 1
+    #show Enmei neutral with fade
+    pause .5
+    MC "Oh, I… I'm sorry. I thought you were Aida."
+    Enmei "... {w}I'd like to speak with you."
+    MC "I… alright."
+    Enmei "Alone."
+    "I rose up from the couch, as he nodded back toward the bedroom, shuffling back down the hall."
+    "I let him set the pace and followed him. Takara held the door for him, and then for me as well."
+    "She placed a hand on my shoulder as I passed by, her face down and bearing much resemblance to her daughter."
+    #scene enmei bedroom with fade
+    "Takara let herself out, closing the door and leaving me in the room with Aida's father."
+    "Whatever I had expected of this secret room was… not quite what I had expected from its secrecy."
+    "It was a normal bedroom. Beside the bed was an oxygen tank, with some hoses coming from it."
+    "The accompanying nightstand was littered with different pill bottles and supplement containers."
+    "The shades were drawn in a way that looked as though they hadn't been opened in years, a lamp in the corner being the main illumination for the room."
+    "A TV sat on mute on the dresser, an evening news program silently going."
+    "Off to one side was another door leading into another bathroom, with a small closet open."
+    "The bed itself was a mess of blankets and sheets, made on one side, but torn about on the side closest to the oxygen tank and pill bottles."
+    "Off in one corner was a normal kitchen chair, with some light exercise equipment around it."
+    "Aida's dad shuffled slowly to the bed and sat."
+    Enmei "Take the chair. You can push some of that to the side."
+    "I lifted the chair from the equipment and brought it to face where Aida's dad sat."
+    "Sitting down, and now about a little over a meter away from him, I looked him in the eyes."
+    pause 3
+    "For at least a minute, neither of us spoke. Aida's father looked at me."
+    "His gaze was steady and firm, with that tired look seeping into his eyes, too."
+    "His eyes bore the numbness that came from multiple bad throws of the die."
+    Enmei "What are your intentions?"
+    MC "My intentions?"
+    Enmei "With my daughter. What are your intentions with her?"
+    MC "... I want to… be with her. And to be there for her."
+    Enmei "You… feel that's what's best for her, then?"
+    MC "Well… I guess… I can't say I know exactly what's best for her. But… I know that I'm happy with her, and I hope she feels the same."
+    Enmei "Do you have her wellbeing in mind?"
+    MC "Of course I do."
+    Enmei "Mm…"
+    Enmei "Well… I'm not the sort to question a man's convictions."
+    Enmei "However, you'll forgive my harshness in saying that I don't believe that you've considered what's best for Aida."
+    MC "I'm… sorry?"
+    Enmei "I don't believe that you have fully considered my daughter's wellbeing."
+    MC "I didn't mean-"
+    Enmei "Let me finish."
+    Enmei "I wake up yesterday and walk out to see my daughter laying with her arms around you."
+    Enmei "Last I saw her, she was perfectly fine. Perfectly normal. And now, I walk out and see her belly… blown up like a yoga ball. Not only pregnant, but well past any normal pregnancy."
+    Enmei "My daughter… would not go off and do that."
+    Enmei "She doesn't think about dating, or boys. Much less… sex."
+    MC "Kodama-san, with all due respect, I'm not sure what you're-"
+    "I halted as I saw Aida's father's eyes sharpen, his gaze fixed on me."
+    play music Reality
+    Enmei "What… did you do to her?"
+    MC "I-I didn't do anything!"
+    Enmei "Really? You didn't do anything?"
+    Enmei "Then, outside of a miracle, explain to me how my daughter wound up pregnant with triplets if you didn't do anything!"
+    MC "I-I…"
+    Enmei "You fed her false promises until she started to fall for you, then you used that as an opportunity to get into her pants."
+    Enmei "You baited her, didn't you?"
+    MC "I would never do that!"
+    Enmei "..."
+    Enmei "Hotsure-san, Aida is my daughter. And, I know my daughter. She is not the type to go flaunting herself around, throwing herself at men."
+    Enmei "So, tell me then. If you didn't bait her in, then how did she end up pregnant?"
+    MC "We… well… w-we had sex."
+    Enmei "That part I've been able to figure out."
+    Enmei "I've also been able to figure out that you took advantage of her."
+    MC "It was consensual! We both wanted it!"
+    Enmei "After you spouted lie after lie to her to get her to that point!"
+    MC "I didn't lie to get her to sleep with me!"
+    pause 1.5
+    Enmei "God, you are so full of shit…"
+    Enmei "What's the plan when those kids come? Just planning to pull a career out of your ass?"
+    Enmei "How about housing? Have an apartment lined up already?"
+    MC "I'm… I'm figuring all of that out…"
+    Enmei "Sure. You're figuring it out."
+    Enmei "'Figuring it out' is what you say right when the test comes back."
+    Enmei "You're a few months in now. That excuse doesn't fly anymore."
+    MC "I…"
+    pause 2
+    Enmei "You're not ready to be a dad."
+    MC "What gives you the right to call me ready or not?!"
+    MC "What do you even know about our situation?!"
+    Enmei "YOU KNOCKED UP MY DAUGHTER! THAT'S WHAT I KNOW!"
+    Enmei "I've done all of this before! I've helped my wife when she was pregnant, and I raised Aida from when she was an infant! You don't know the first thing about babies!"
+    "Aida's father brought his fist down on his nightstand, clattering the multiple pill bottles to their sides."
+    Enmei "My daughter is GONE because of you! Her life is over! All because of you!"
+    Enmei "Can you see her having a career at her size?!"
+    Enmei "Do you realize what she's dealing with? Have you paid any attention?"
+    Enmei "LOOK at her! Her breasts are nearly twice the size of her head! How is she supposed to even hold a baby at that size?!"
+    MC "I've been there every step of the way! Of course I know what she's dealing with!"
+    MC "And she gets along just fine now!"
+    Enmei "Right. She gets along just fine NOW."
+    Enmei "Pregnancy lasts for nine months, in case you may have forgotten."
+    Enmei "You really think this is as big as she'll get?"
+    MC "She'll find a way…"
+    MC "Things can be made to accommodate her. The Academy has ways to help her. The cooking club is proof of that."
+    Enmei "Those things cost money. Money that neither she nor you have."
+    Enmei "And as for her cooking, try to imagine her chopping vegetables when she can't reach in front of her for anything."
+    Enmei "Accommodations or not, Aida will not be able to cook with just one hand on either side of her."
+    Enmei "She can't exactly get up and go for a run now, can she? Try to picture that down the road."
+    Enmei "As she loses her ability to simply reach forward, her hobbies will be stripped from her."
+    pause 1
+    Enmei "She is changed forever. She'll never be the same girl she was. All because of you not being able to keep it in your pants. Even after you're gone, Aida will never be who she was ever again."
+    MC "After I'm gone? You think I'd leave her?"
+    Enmei "I don't think you are. I know you are."
+    Enmei "I forbid you from seeing my daughter ever again."
+    MC "You can't do that! She's an adult, for God's sake! She can make her own choices!"
+    Enmei "She is still my daughter."
+    Enmei "You will be leaving here tonight. I don't care where you go, or what you do, but you are not to see my daughter again."
+    Enmei "You have ruined my daughter's life. You can leave if you want, and you could start over somewhere else. Even aside from the kids, Aida's factor is stuck with her for life."
+    MC "I didn't give your daughter her growth factor."
+    Enmei "But you ignited it. You started all of this up. If you wouldn't have been so close to her, then she would have been fine."
+    stop music fadeout 1.0
+    Enmei "It's because of you that she's in this situation, and that she looks the way she does! She looks like a town whore!"
+    pause 1
+    MC "... Don't you dare call her that."
+    Enmei "..."
+    MC "Aida has flourished at the academy. She has friends, and clubs she's involved in, and new hobbies."
+    Enmei "All of which she had here."
+    MC "Here? What, in the one time she's been to this apartment before? She had hobbies here? Like what?"
+    Enmei "Don't you twist my words. You know what I mean."
+    MC "I do know. I know the whole story."
+    MC "She wanted to stay with you, and be there for you, and you and your wife thought it would be best to just shovel her off to the next person in line."
+    Enmei "That is not how it happened!"
+    MC "Then tell me how it happened! Because as far as I've heard, you two just shoved her off into another home and drowned out her pleas to come back!"
+    Enmei "Don't you DARE try and insinuate that!"
+    MC "Call it insinuating if you want. I've heard enough from Aida herself. And, I don't think your own daughter needs to fake her feelings."
+    Enmei "There is far more to what happened than that."
+    MC "Then tell me! Because I've seen jack shit else!"
+    Enmei "You have no right to tell me how to run my family."
+    MC "Must be a real strong family if your daughter starts shaking before telling you something difficult. Must be real strong if she gets so nervous that she can barely speak."
+    MC "You're telling me that I don't know the first thing about parenting, but I'm sure rule number one isn't 'make your daughter feel like a monster.'"
+    Enmei "..."
+    Enmei "Get out of my home. Now."
+    Enmei "I want you on that train tonight. I don't care if it stops halfway with you on it. This fling between you two is over."
+    MC "Fine. But I'll be on that island waiting for Aida to come back. I'll be there for her… and I won't call her a whore when I see her."
+    pause 1
+    Enmei "... Get the fuck out of my home."
+    "The door to the room opened. Hard."
+    pause 1
+    show PRG angry-2 with fade
+    pause .5
+    Enmei "Aida. This is not your conversation. Out."
+    show PRG sad-2
+    PRG "This is my conversation! It's about me!"
+    Enmei "Aida, I will not tell you again. Out."
+    show PRG angry-2
+    PRG "No, Dad!"
+    play music PRGOverflow fadein 1.0
+    "Aida hurried over to me, taking my hand in hers."
+    Enmei "He's pulling you away from us. He's brainwashing you… can't you see that?"
+    Enmei "Those feelings he says he feels… all bullshit."
+    Enmei "All of that. He said it all just so he could have sex with you."
+    show PRG sad-2
+    PRG "They are not bullshit!"
+    PRG "He's supporting me, and he's been there for me every day!"
+    Enmei "He's corrupting you! Look what he's already done!"
+    show PRG unsure
+    PRG "It's… m-my factor."
+    Enmei "That he caused…"
+    Enmei "Aida, you don't have to blame yourself. You didn't do this…"
+    Enmei "We'll get you to a doctor. We'll figure this out. He doesn't have to control you if you don't let him."
+    show PRG unique
+    PRG "He isn't… controlling me."
+    Enmei "Aida, look at yourself and tell me that what happened here is completely okay. Tell me that."
+    PRG "..."
+    pause 1
+    Enmei "Aida… it's okay. It's okay, Honey…"
+    Enmei "We'll get you help. We'll-"
+    show PRG sad
+    PRG "Stop saying that!"
+    Enmei "Aida, this is ridiculous."
+    Enmei "Take a minute, okay. Look at your belly."
+    show PRG nervous
+    "Aida glanced down, craning over her breasts."
+    Enmei "Are you really prepared for that?"
+    Enmei "Do you have a place to live set up? How about a career for Hotsure-san? Do you have transportation figured out?"
+    Enmei "What about clothes for them? Bottles, powder, diapers, cribs? You'll need more than one crib, you know."
+    Enmei "What about child care? Like a babysitter? Have you thought of that?"
+    pause 2
+    Enmei "... You're not ready, Aida. You know that."
+    Enmei "Your mother and I can help. A lot better than this… long haired pantywaist can." 
+    show PRG sad-2
+    PRG "D-Don't call him that."
+    Enmei "Aida, you're testing my patience…"
+    show PRG angry
+    PRG "Good! I don't care!" 
+    Enmei "Young lady!" with hpunch
+    show PRG sad-2 #at center Shake(None, 0.50, dist=1) remove hash once SFX is recorded
+    "Enmei stood up with a start, his hand once again pounding the nightstand."
+    Enmei "If you stay with him, you will be throwing your entire life in the trash!"
+    Enmei "You won't have any yen to your name!"
+    Enmei "Do you want that?! Do you WANT to end up on the streets?!"
+    pause 1
+    Enmei "Aida… this isn't okay. This whole mess that you've gotten yourself into isn't…"
+    Enmei "Takara?"
+    "I turned and looked toward the door."
+    "Takara stepped into the room, looking down and away from her husband."
+    Enmei "Go get Hotsure-san's suitcase and pack it. Show him out."
+    "Enmei walked around Aida, reaching down and taking my wrist."
+    Enmei "Out."
+    show PRG sad-2
+    "Enmei halted, as in a flash, Aida reached down and grabbed his wrist."
+    PRG "Let go of him!"
+    menu:
+        "Let Aida Fight":
+            pause 1
+            show PRG angry-2
+            PRG "I am okay! Let go of him!"
+            "Aida yanked her father's arm, pulling his grip off of my wrist."
+            PRG "I'm my own woman! Not yours! Not Keisuke's! Me! Aida Kodama!"
+            Enmei "That is eno-"
+            show PRG angry
+            PRG "No! I'm saying no!"
+            PRG "I don't care if you get mad at me! Or if you kick me out!"
+            Enmei "You're not leaving with him."
+            Enmei "After this… business with that academy is done, you'll be staying here with your mother and I. We'll find a new apartment for us, and we'll teach you how to raise your kids. You need our help, Aida."
+            PRG "I don't need help from you!"
+            Enmei "Aida, this is ridiculous."
+            Enmei "You're 18. You don't know the first thing about babies or how to care for one."
+            PRG "How do you know what I know?! We've barely seen each other in the last ten years!"
+            PRG "And what did you know when Mom got pregnant? Did you know everything about babies when she had me?"
+            Enmei "No, but it was just you. That's different. Your mother didn't have multiple."
+            show PRG worried
+            PRG "So?! So what if I'm having three?! Keisuke is here to help me, and the Academy is going to help me too!"
+            Enmei "... There are way more than three in there."
+            show PRG insecure
+            PRG "We had an ultrasound… t-there's three."
+            Enmei "If you're this big now, at only a few months in, there is no way you're having only three."
+            PRG "W-We had an ultrasound-"
+            Enmei "So have another one!!"
+            show PRG worried
+            PRG "Why is it only now that you want to offer help? Why can you hear me now when you couldn't for years?!"
+            Enmei "Aida, we wanted to give you-"
+            show PRG angry-2
+            PRG "You pushed me away!"
+            Enmei "It was for your own good!"
+            PRG "It was good for me to lose contact with you?!"
+            Enmei "Young lady, you-"
+            Enmei "You know what, fine. Fine. Maybe if your mother and I had been closer to you, you wouldn't have ended up with a fuzzy twig like this guy."
+            show PRG angry
+            PRG "Don't you dare talk about Keisuke like that! You don't know a thing about him besides what you've heard secondhand!"
+            PRG "Did you know he has a twin sister? Or that he wants to be an architect?!"
+            PRG "Did you know that he accepts me for who I am, and isn't disgusted by my growth factor?"
+            Enmei "Clearly not. He at least found you attractive enough to work his way into your sheets."
+            PRG "{i}I{/i} was the one who asked if he wanted to have sex! Not him!"
+            PRG "I went to his dorm! I brought it up!"
+            PRG "It was me! I'm pregnant because of my own choices!"
+            PRG "It was consensual… but it was my idea first…"
+            Enmei "Aida, you don't have to cover for him…"
+            PRG "I'm telling the truth! Listen to me just one time!"
+            PRG "Keisuke has been there for me! He's made me feel cared for!"
+            PRG "And, he makes me feel SAFE! I feel SAFE when I'm with him! He doesn't just treat me like a coat and put me away when he's done with me!"
+            Enmei "Aida-"
+            PRG "Where have you both been?!"
+            $setFlag("PRG050_Aida")
+            pause 2
+        "Protect Aida":
+            pause 1
+            MC "She is okay."
+            PRG "Keisuke, let me-"
+            MC "No. This isn't right."
+            show PRG unsure
+            "I yanked my arm out of Enmei's grasp."
+            MC "She doesn't need to justify herself to you or to anyone."
+            MC "Aida is her own person. She's her own woman."
+            MC "She doesn't need to answer to you, or to your wife, or to anyone."
+            MC "And she especially doesn't need to listen to you putting her down!"
+            "I clutched Aida's hand tighter, staring Enmei down."
+            MC "If either of us don't know how to raise a kid, I think that you've given us an example of what not to do."
+            show PRG worried
+            PRG "Keisuke, stop…"
+            MC "You can say all that shit you want, I don't care."
+            MC "But you have no right to try and control your daughter!"
+            show PRG angry
+            PRG "Keisuke! Stop it!"
+            $setFlag("PRG050_Kei")
+    "Enmei went silent. He glanced off to the side."
+    "Takara stood in the doorway, a tissue up to her face. Tears ran down as she sniffled."
+    show PRG unique
+    PRG "... I was… scared to come home. B-Because… I was worried what you would think…"
+    PRG "But… I-I wanted to see you, too."
+    PRG "I… I missed you, Dad…"
+    pause 2
+    PRG "F-Fathers are there for their daughters…"
+    Enmei "And I wanted to be…"
+    PRG "..."
+    show PRG sad-2
+    PRG "What stopped you…?"
+    Enmei "Aida-"
+    show PRG sad-2
+    PRG "W-What stopped you from being there, Dad?!"
+    PRG "I asked every time I saw you if I could come home! And every time, you and Mom just told me that it wasn't the right time, or that it would be too much of a shift for me."
+    PRG "I thought every time 'I'm probably old enough now' or 'I'm probably big enough now!'"
+    PRG "But, I never was! I was never old enough or big enough!"
+    Enmei "We did that because we wanted what was best for you. And, a life away from dealing with your father being in pain seemed like the best choice at the time."
+    PRG "You didn't want me!"
+    PRG "I found someone who makes me feel like I'm better than I ever could be! I found someone who makes me smile every day!"
+    PRG "Why can't you just be happy for me?!"
+    Enmei "Because you took your entire life and threw it away!"
+    PRG "Because what I had before was so amazing?!"
+    "Enmei bolted up from the bed, throwing his hands up and turning, walking across the room to his window."
+    "He put his hand to the wall, leaning into it with a deep sigh."
+    pause .5
+    Enmei "I didn't raise you to be this way. My decisions… I regret them every day now…"
+    Enmei "... I never thought… that the decisions I made then would still be felt now."
+    Enmei "And I never thought that I'd… have to trade out my daughter for some self-pitied whore."
+    stop music
+    show PRG surprised
+    Takara "ENMEI KODAMA!"
+    pause .75
+    show PRG sad-2
+    pause .5
+    show PRG sad
+    pause .25
+    PRG "... {i}H-Hngh.{/i}"
+    "Aida's head lowered. Heavy sobs came from her as she started to tremble."
+    Enmei "Takara. Get him out of here. Now."
+    "Enmei stepped to Aida and gently put his hand on her arm."
+    Enmei "It's okay…"
+    pause 1
+    "Aida yanked her arm away, her head going up with her eyes filled with tears, her cheeks and face a deep scarlet."
+    show PRG angry
+    PRG "You {i}didn't{/i} raise me!"
+    PRG "Y-You're not my father anymore!"
+    "Aida looked at her father, her tears raining down her cheeks as she stepped away from him."
+    pause 1
+    show PRG sad-2
+    pause 1
+    PRG "... {w}I-I hate you."
+    pause .5
+    hide PRG with easeoutleft
+    "Aida ran out of the room as fast as she could go, Takara backing up and into the bathroom as Aida forced her out of the hall."
+    "I left the room in silence, not glancing back at Aida's father as I passed Takara."
+    #scene Kodama living room
+    Takara "Aida, please!"
+    show PRG unsure with fade
+    "Aida waddled into the living room and took the baseball box from the counter, throwing open her bag and placing it inside."
+    "She gathered what little stuff she had laying around, then pushed past me, going to the bathroom as the door to her parents bedroom slammed."
+    "Takara moved out of the bathroom and into the hall."
+    "Aida cleared all of our stuff out of the bathroom, stuffing it into her toiletry bag and moving to the wet room, doing the same with our shampoo and conditioner."
+    "As she stepped out, Takara followed her, taking Aida by the wrist."
+    Takara "Aida… p-please, h-honey… we love you. W-We can talk this out…"
+    show PRG sad-2
+    "Aida yanked her arm away from Takara, looking down before meeting her mother's teary eyes."
+    PRG "... N-No. We can't."
+    Takara "We can. We can, honey… w-we just need to take a moment. Just… t-take a deep breath. Your father was out of line, I agree with you. I'll talk to him and we can-"
+    "She reached out, her arms going out for a hug… before both hands were smacked away."
+    "Aida's eyes filled with tears, not blurring, but razor sharp and flooded with emotion."
+    show PRG angry-2
+    "She opened her mouth… and closed it, then turned and stormed into the living room, going back to her packing."
+    "I watched as Aida threw her toiletry bag into her suitcase and zipped it up, taking her wallet."
+    Takara "H-Honey… {w}p-please…"
+    "I slipped my shoes on, grabbing Aida's boots and kneeling to help her, but Aida pushed right past me, taking my arm and pulling me along with her, stepping out into the hallway in just her tights."
+    #scene apartment hallway with fade
+    "Aida pulled me out then yanked the door shut hard enough to rattle the walls all around it."
+    "She reached back behind her, taking my hand and pulling me down the hall, her belly still scraping the walls."
+    scene Kanagawa Alley with fade
+    show PRG unsure
+    "Outside, Aida walked to the end of the block by the main road. I held out my hand for a taxi as one pulled past, doing a U turn to pick us up."
+    Driver "Where to?"
+    PRG "The downtown shinkansen station."
+    Driver "It's only a few hours till midnight. The shinkansen will close-"
+    show PRG sad-2
+    PRG "J-Just take us there, please."
+    "I opened the door for Aida as she jammed herself in, not even waiting for help."
+    "The cab heaved and squeaked from Aida's force, the front seat jerking forward as her giant belly wrenched it up."
+    hide PRG with fade
+    Driver "Jesus! Watch where you're swinging that thing!"
+    "I opened the trunk and put our bags inside, shutting it and walking around to the other side, getting in."
+    scene Car Interior with fade
+    "The seat in front of Aida's was shoved forward."
+    "Aida was seated back in her seat, looking out the window."
+    "I stayed in my spot, opting not to take her hand or disrupt her."
+    "As the car pulled away, I turned a little and glanced back over my shoulder."
+    "Takara stood outside on the sidewalk, watching the car pull away."
+    "She stepped forward as the taxi drove off, following it down the sidewalk for a moment, before her head went down and she turned, walking back."
+    "I looked over."
+    "Aida was simply staring out the window."
+    "As the taxi pulled out into the main roads, I looked out the window, up into the sky."
+    scene black with fade
+    pause .25
+    scene Kanagawa Station with fade
+    "As we pulled up to the shinkansen station, I got out of the cab as Aida swung her door open."
+    "Paying the driver, I offered Aida a hand as she pushed her butt out."
+    "Aida let my hand be, pulling herself up and taking her suitcase from me."
+    show PRG worried with fade
+    pause 1
+    MC "It'll close in two hours…"
+    PRG "..."
+    "Aida's phone rang, as she clicked it to vibrate."
+    show PRG insecure
+    PRG "... Come on."
+    play music TwilightDusk fadein 3.0
+    "Aida waddled silently along the sidewalk, with me beside her, until we came to a modest, yet brightly lit hotel."
+    MC "Aida… I don't think we can swing a hotel room right now…"
+    "Aida sighed softly and waddled inside."
+    scene NYI with fade #hotel
+    "The lobby was empty. Completely empty. The two of us walked and waddled down toward the desk, stopping before the counter and looking up at one of the two girls behind it."
+    PRG "... Could we get a room for one night, please?"
+    Receptionist "Ah… certainly, Kyaku-san. Two beds?"
+    PRG "One bed is okay…"
+    Receptionist "Certainly. We'll just need a card to put on file."
+    show PRG worried
+    "Aida took a small inhale. She took out her wallet and pulled out… a credit card." 
+    "She handed it to the receptionist, sighing softly."
+    Receptionist "Thank you. Here is your room key."
+    Receptionist "You'll be in room 707. The elevator is behind you."
+    "She handed Aida her card back, and Aida turned with me, waddling to the elevator and pushing the button."
+    "As we stood there, listening to the hum of the elevator lowering to collect us, I turned my head just enough that I could peer through my hair and glance back at the counter."
+    "The two girls were leaned over the counter, looking to be wrapped up in their work."
+    "Then… one glanced up at us. Then the other."
+    "... {w}One of them raised a cellphone, pointing it at us, the phone shifting a bit in her hand as she snapped a photo."
+    scene black with fade
+    pause .25
+    scene NYI with fade #scene hotel room with fade
+    "I held the door for Aida as she waddled into our smaller hotel room."
+    "Inside was a bed, smaller than Aida's at Seichou, but much larger than the air mattress."
+    MC "Aida… I… I'm sorry."
+    MC "I'm so sorry…"
+    show PRG insecure
+    PRG "... It wasn't your fault."
+    MC "But…"
+    PRG "N-Not now, Keisuke… please, not now…"
+    pause 1
+    MC "How did… that card?"
+    show PRG nervous
+    PRG "..."
+    PRG "... It's an… emergency credit card that… {w}Alice gave me."
+    PRG "She gave it to me when I first got pregnant, in case I might need it for anything in a pinch."
+    PRG "I… told her I'd never use it…"
+    "I set my suitcase and Aida's boots down, then looked at Aida as she sat on the bed."
+    "I looked down. Her tights were torn through on her feet."
+    MC "Are you… going to shower or anything?"
+    PRG "... Yeah."
+    "Aida wordlessly tried to get up, but came back down onto the bed again. I gave her my hand and pulled."
+    "Without a word, Aida went to her bag and took out her toiletry bag, taking it and waddling into the bathroom."
+    hide PRG with fade
+    stop music fadeout 1.0
+    "I got myself undressed to my boxers and simply just laid down in bed."
+    "{i}Bbmmm… bbmmmm{/i}"
+    MCT "Aida's phone…"
+    MCT "How many times have they tried to call?"
+    "I didn't look. That was Aida's property, and it wasn't my place."
+    scene black with fade
+    "Instead, I just laid down in bed and shut my eyes."
+    pause .25
+    "I was vaguely aware of Aida getting out of the shower and drying off in the other room."
+    "I heard the door open and shut."
+    pause .75
+    "I felt her lay down beside me, her big body pressing mine."
+    "And after a few minutes in the dark… I felt Aida turn over, her breathing shaky and hard."
     jump daymenu
 
 label PRG051:

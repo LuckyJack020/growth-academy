@@ -16,7 +16,9 @@ define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTSCell")
 define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
+define PRG2 = Character('Aida', color="#FF3399") #normal speaking voice
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
+define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #hidden picture
 define WG = Character('Alice', color="#CC33FF")
 define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
 
@@ -56,6 +58,7 @@ define Tsubasa = Character('Tsubasa-sensei', color="#C0C0C0")
 define Akihiro = Character('Akihiro', color="#C0C0C0") #Naomi’s Father
 define Dad = Character('Dad', color="#C0C0C0") #Keisuke’s Father
 define DadCell = Character('Dad', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Father Cell
+define Enmei = Character('Enmei', color="#C0C0C0") #Aida's Father
 define Daitaro = Character('Daitaro', color="#C0C0C0") #Alice’s Father
 define Kazumi = Character('Kazumi', color="#C0C0C0") #Naomi’s Sister
 define Midori = Character('Midori', color="#C0C0C0") #Akira’s Father
