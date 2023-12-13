@@ -149,6 +149,7 @@ define Referee = Character('Referee', color="#C0C0C0")
 define Secretary1 = Character('Secretary 1', color="#C0C0C0")
 define Secretary2 = Character('Secretary 2', color="#C0C0C0")
 define Secretary3 = Character('Secretary 3', color="#C0C0C0")
+define Stewardess = Character("Stewardess", color="C0C0C0")
 define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
@@ -1551,8 +1552,9 @@ init 2 python:
     eventlibrary['PRG048'] = {"name": "The Kodama Life", "girls": ["PRG"], "type": EventTypeEnum.CORE,                              "location": "town",         "priority": PrioEnum.NONE, "sp": 11,     "next": "PRG049", "obsflags": [],       "conditions": []}
     eventlibrary['PRG049'] = {"name": "Out of the Park", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "town",      "priority": PrioEnum.NONE, "sp": 11,     "next": "PRG050", "obsflags": [],       "conditions": []}
     eventlibrary['PRG050'] = {"name": "Her Voice", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "town",      "priority": PrioEnum.ALL, "sp": 11,     "next": "PRG051", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG051'] = {"name": "Dinner and Chill", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG052", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG052'] = {"name": "Icebreaker", "girls": ["PRG"], "type": EventTypeEnum.CORE,                               "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG053", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG051'] = {"name": "Derail", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "town",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG051B", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG051B'] = {"name": "Time Will Tell", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG052", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG052'] = {"name": "Shattered", "girls": ["PRG"], "type": EventTypeEnum.CORE,                               "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG053", "obsflags": [],       "conditions": []}
     eventlibrary['PRG053'] = {"name": "Sugar and Rainbows", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "dormPRG",           "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG054", "obsflags": [],       "conditions": []}
     eventlibrary['PRG054'] = {"name": "Down to the Wire", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG055A", "obsflags": [],      "conditions": []}
     eventlibrary['PRG055A'] = {"name": "Back to the Basics", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG056A", "obsflags": [],      "conditions": []}
