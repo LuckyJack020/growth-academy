@@ -10442,7 +10442,7 @@ label WG044_c2_2:
     "I knew she was teasing me, but this was getting to be a bit beyond that point."
     hide BE with dissolve
     $setBEOutfit(OutfitEnum.TOPLESS)
-    show BE with dissolve
+    show BE happy with dissolve
     "She turned around, her arms shoulders shifting up and down as she eased the straps down her arms."
     "The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare, while she was still smiling."
     WG "Now with that off, I can begin to get measurements. Keisuke would you stand in front so I can pass you the tape measure?"
@@ -26163,6 +26163,632 @@ label WG082:
     "And we held it there, a moment where time finally stopped{w}— if only for a little while."
     jump daymenu
 
+label WG083:
+    play music DormLife
+    scene Dorm Interior with fade
+    "I was relaxing in my room, proud of myself that I had actually managed to get enough done on my assignments to play some games." 
+    "I was hoping to use the occasion to chip away at my backlog of purchased, but yet to play entries in that ever-growing list." 
+    "{i}bzzt…bzzt…bzzt{/i}"
+    MCT "Hmm, I wonder if that's Tomo? Maybe she'd be up for playing something..."
+    if checkAffection("TM", ">", 6):
+        MCT "I mean if I {i}could{/i} get her to do anything, it'd be video games."
+        MCT "On second thought, this is a call, not a text. Either Tomo is dying or that means it's-"
+    else: 
+        MCT "Oh, who am I kidding? It's a call, not a text— definitely not Tomo."
+    MC "Hey Alice. What's going on? I figured you'd be busy. Something come up?"
+    WGCell "Hello Keisuke. I hope I didn't catch you in the middle of something."
+    MC "Nothing I can't do later. Whatcha need?" 
+    WGCell "Would it be possible for me to come to your room for a bit?"
+    MC "Sure, no problem." 
+    MCT "Wait second… {w}She's literally {i}never{/i} asked this before."
+    MC "Uh, can I ask what prompted this question?"
+    WGCell "I've had an issue with the bathroom sink not draining correctly for a while. The maintenance tech, Misuboro-san came by to fix it, but it turned into a bigger job than he originally estimated." 
+    WGCell "The bathroom is a mess with parts and tools everywhere and it's making a lot of noise, so I'd rather not stick around."
+    MC "Sure, come on over."
+    WGCell "Wonderful, I'll be right there."
+    MCT "Well, I guess that throws a wrench into my gaming plans. {w}Unless…"
+    MCT "Oh, crap! What did I just agree to? {w}This place is a mess! I gotta clean this dump before she gets here."
+    "I frantically scrambled to snatch up all the dirty clothes lying around to stuff them into my laundry hamper… which was already full."
+    MCT "Past Kei— that guy is always fucking me over with how lazy he is."
+    MCT "Alright, no need to panic, she doesn't move that fast. I can stuff these down in here and maybe have some time to sweep-"
+    play sound Knock
+    MCT "You've got to be kidding me! How is this happening?"
+    scene Dorm Hallway with fade
+    show WG neutral with dissolve
+    MC "Alice, you made it… in like 30 seconds."
+    show WG happy
+    WG "I happened to already be on my way. Wouldn't want to keep you waiting."
+    show WG sly
+    MC "That's very considerate of you. I mean, the anticipation {i}was{/i} killing me."
+    "Alice rolled her eyes, unaware that I was only being partially facetious."
+    show WG neutral-2
+    WG "I do apologize for the suddenness of my request, though I imagine you wouldn't mind seeing me today."
+    show WG happy
+    MC "Always my pleasure, mademoiselle."
+    pause 1.5
+    show WG sly
+    WG "Well, aren't you going to invite me in?"
+    "The better part of me wanted to say \"No\", but at this point the jig was up and I just needed to roll with it."
+    MC "Oh yes, that part. Right this way."
+    scene Dorm Interior with fade
+    show WG doubt with dissolve
+    "Alice stepped into the room, looking around the common space taking in the sights (and probably smells) as she did, with a rather unenthusiastic look on her face."
+    MC "Um, something the matter?"
+    show WG pondering
+    WG "I believe this is my first time visiting your room, and well, I'm not too sure what I was expecting."
+    MC "If it's any consolation most of this mess is Daichi's."
+    WG "That would certainly explain the mess of papers around here."
+    show RM angry at Position(xcenter=0.875, yalign=1.0)
+    show WG surprised-2
+    RM "That doesn't explain the mess on your side of the room."
+    show RM neutral
+    MC "Where did you come from?"
+    MCT "Ugh, figures he'd actually be here when I need to throw him under the bus."
+    show RM neutral-2
+    RM "I live here, thank you for noticing. Besides, it's not a \"mess\". It's just my filing system. I'll have you know I know {i}exactly{/i} where everything is."
+    show WG doubt
+    WG "Well that would make you the only one then that could make heads or tails of this {i}chaos{/i}."
+    show RM smug
+    RM "Exactly. See? Working as intended."
+    show WG sly
+    WG "I'm sure."
+    show WG stern
+    RM "What brings you here, Nikumaru-san?"
+    WG "Isn't it obvious? I'm here to see Keisuke."
+    "Alice's tone wasn't particularly warm, which was understandable since she didn't exactly have a high opinion of him after the \"measuring\" incident earlier in the year."
+    show WG doubt
+    show RM sad at altMove(0.1, 0.9)
+    "Though it didn't help that he was acting even more unusual than usual."
+    show RM sad at altMove(0.1, 0.925)
+    show RM sad at altMove(0.1, 0.95)
+    WG "{size=-6}What is he doing?{/size}"
+    MC "{size=-6}I… I don't know{/size}"
+    show RM sad at altMove(0.1, 0.975)
+    "Daichi was attempting to be sneaky about something, which only served to call more attention to… well, whatever it was that he was doing."
+    RM "Well, it was nice to see you. Wish I could stay and visit a little more but I have to go back to my room to study..."
+    show RM sad at altMove(0.1, 1.0)
+    "At this point it was obvious he was hiding something behind his back, being careful to only show his front."
+    MCT "Probably something related to one of his secret projects he didn't want out in the open for someone to see."
+    show RM sad at altMove(0.1, 1.1)
+    RM "Uh… Gotta run!"
+    hide RM
+    show WG surprised-2
+    WG "I see he is still quite… eccentric. And quite quick apparently. {w}Was a bit rude of him to take the apples with him."
+    MC "Hm?"
+    "I don't know how I missed it before, but I looked down at the coffee table and saw the bowl of apples was now missing from it."
+    show WG stern
+    WG "He could have at least offered me one, {i}attempting{/i} to be a gracious host."
+    MC "Maybe he was hungry… or afraid they might disappear."
+    if checkAffection("WG", ">=", 50):
+        show WG sly
+        WG "Are you trying to imply something?"
+        MC "All I'm implying is that I know your snacking habits."
+        "Though not thrilled with how I ascertained the situation I could tell she reluctantly conceded the point as she impatiently waited while I fished through the cupboards of the kitchenette until I found what I was looking for."
+        show WG surprised-2
+        MC "Here, catch!"
+        "I tossed Alice one of the meal replacement bars I keep on hand. Hoping it might satisfy her… for a few minutes at least."
+        WG "I'm not sure how I feel about being so predictably placated."
+        show WG stern
+        MC "Want a couple more? I got plenty."
+        WG "You're not helping your case here, Dear."
+        show WG neutral-2
+        MC "Relax Babe. I know you need to eat, and I'd be happy to get you anything."
+        WG "Well it's always reassuring to hear that."
+        show WG pondering
+        WG "Maybe bring the box, just in case I might want a few more…"
+        MCT "Usually \"might\" implies something less than a 100%% chance, Alice."
+    else:
+        show WG angry
+        WG "Are you trying to imply something?"
+        MC "All I'm implying is that I know your snacking habits."
+        "I could feel a cold glare over my shoulder as I fished through the cupboards of the kitchenette until I found what I was looking for."
+        show WG surprised-2
+        MC "Here, catch!"
+        "I tossed Alice one of the meal replacement bars I keep on hand. Hoping it might satisfy her… for a few minutes at least."
+        show WG stern
+        WG "Do you really believe I can be so easily placated by just tossing food at me?"
+        MC "Want a couple more? I got plenty."
+        WG "I'm not going to say no… but that wasn't what I was talking about."
+        MC "I got some new fudge brownie flavored ones. I haven't tried them but they smell good."
+        show WG doubt
+        WG "Oh, for crying out loud! Just give me the box."
+        MCT "Efficiency is the best policy."
+    show WG neutral
+    "I guided Alice back through the entrance to my room, hoping that I could manage to interest her in a couple of games I thought she wouldn't mind."
+    show WG doubt
+    "Though as we entered, the first problem appeared."
+    "The sound of grunting was what alerted me to Alice, slowly attempting to squeeze her way through the doorway into the room." 
+    MCT "Hmm, this could be a problem."
+    "What seemed like a smart way to make use of the extra space between the extra wide door and the wall proved to be very restrictive to my voluptuous guest when it did not swing open all the way."
+    MC "Oh. Hold on, Alice. Let me move some stuff."
+    "I pulled out my laundry basket and some other stuff from behind the door so it could swing open all the way, which only proved to be just enough clearance for her hips to slide past."
+    MCT "Man… she's even starting to outgrow this place."
+    MC "There you go. Sorry about that. I hadn't really thought about that kind of stuff before you got here."
+    show WG neutral
+    WG "I hadn't either, at least not at school. In retrospect it might have been prudent to allow you more time to prepare for my visit."
+    MC "Nah, it's fine. I'm glad you came to visit."
+    "Though true, I was glad she was here, the incident with the door made me comb through the room with my eyes to see if there were any other \"wide load\" restrictions I may had inadvertently set up with my living space arrangement."
+    MCT "Let's see here… Well, she's certainly not going to fit in my gaming chair, even if there were two of them for that matter. {w}I'm not confident the bed is going to hold up either…"
+    show WG neutral-2
+    MC "Ah, here we go. These should be comfortable."
+    "I grabbed a couple of bean bag chairs I had laying around and laid them down for her."
+    show WG sly
+    MC "Nothing but the finest for you, Babe." 
+    WG "Not exactly fine furniture, but I appreciate not having to sit on the floor."
+    "With a steadiness that belied her size, she gently sat down on the plush bags, like a queen perched on her padded throne— in more than one sense to say the least." 
+    "Now fully settled, the two seats nearly disappeared under her impossibly wide rump."
+    MCT "I hope the stitching on those is made of steel thread…"
+    WG "So what would you suggest us doing?"
+    MC "I was curious if you'd want to play some video games. That's really all I have in regards to entertainment for two people."
+    WG "If that's what you'd like to do, I wouldn't be opposed to the notion, but unfortunately without my custom desk and keyboard setup back in my room, my ability to use a keyboard and mouse is rather restricted."
+    MC "This is true, I haven't forgotten. But that won't be a problem here. These games don't use a keyboard and mouse, you can just as easily plug in a GameStation controller. It should be more comfortable to use anyway."
+    "I handed her one of the black controllers and pulled up on my game library. Alice looked over the controller trying to figure out what all the buttons and joysticks were meant to do."
+    MC "Any idea what kind of games you'd want to try? I have a pretty wide selection to pick from."
+    WG "Not sure, though I don't think I'd be up for one of those shooter games."
+    MC "Ah, fair enough. Luckily I wasn't counting on that. I do have a few I think might strike your fancy, and one I'm pretty sure would be right up your alley."
+
+    menu:
+        "Bullet Hell Roguelike":
+            jump BulletHell_W083
+        "Deckbuilder Fighter":
+            jump Deckbuilder_WG083
+        "Kart Racing Game":
+            jump Racing_WG083
+
+label BulletHell_W083:
+    MC "Okay, I know you said you didn't want to play a shooter game, but this isn't really the same thing as a first person shooter or a rail shooter like they have in the arcade. It's an isometric top down view."
+    WG "Okay… What does that mean?"
+    MC "Eh, it's probably easier just to show you. This one's called Nosferatu Endurers."
+    WG "A vampire game? Is it supposed to be scary?"
+    MC "Nah, it's not that serious. First you'll want to pick your character. They all have their own combination of stats but it doesn't really affect too much other than your starting items."
+    WG "I guess I'll pick the snow lady with the staff."
+    MC "That's a decent pick. The staff creates magic attacks that swirl around her. I'll pick the guy with the whip."
+    "MAP START!"
+    "The new-retro soundtrack kicked in as the floating ghosts began to slowly swarm towards us."
+    show WG doubt
+    WG "Keisuke, how old is this game?"
+    MC "I don't remember the exact date, but I think it came out a couple of years ago."
+    WG "Well then why does it look like it's older than we are?"
+    MC "Oh, they did that intentionally, trying to channel the nostalgia of early games in the genre."
+    WG "Looks more like budget cuts to me."
+    WG "We've only just started and I can already tell my thumb is going to get tired from having to keep pressing the button to fire the attack."
+    MC "Oh you don't have to press anything to get the character to fire. Just keep moving and don't let the enemies touch you."
+    WG "You don't even have to time your attacks or aim them? What are you really doing then? It doesn't sound like much of a game."
+    show WG neutral
+    MC "Well, some weapons attack based on how you move but it's all about building the right combination of weapons that work together to gain bonuses that keep you from dying as the enemies get tougher."
+    WG "Sounds rather passive for something that's supposed to be interactive entertainment."
+    MC "Well there's some strategy to it. Like with your staff, you're going to want to try to pick up items that increase projectile speed and reduce cooldown."
+    MC "I on the other hand am going to want to focus on area of effect size and projectile number upgrades."
+    WG "I think I understand."
+    show WG surprised-2
+    MC "Alice, watch out!"
+    show WG angry
+    WG "Oh come on! I barely touched that thing. I'm already dead?"
+    show WG stern
+    MC "Oh, I probably should have mentioned that, your character doesn't have a lot of health."
+    WG "But you've been constantly running into enemies!"
+    MC "Yeah but I picked up a regeneration item."
+    "GAME OVER"
+    show WG sly
+    WG "Didn't seem like it did you much good."
+    show WG surprised-2
+    MC "Oh, that wasn't too bad. See? We got an achievement for lasting more than 10 minutes on a stage."
+    show WG doubt
+    WG "Doesn't seem like much of an achievement to me."
+    MC "Well it's a roguelike, you're supposed to lose. The only way you really \"win\" is by doing a little better each time."
+    show WG angry
+    $setAffection("WG", -1)
+    WG "You mean this whole thing was impossible from the start?"
+    show WG doubt
+    MC "I mean with our current characters' stats, yes, but that's why we gotta keep playing."
+    pause 1.2
+    show WG stern
+    WG "Let's not and say we didn't."
+    show WG neutral
+    MC "Okay, not your cup of tea. Understandable."
+    MCT "Probably should have seen that coming in retrospect."
+    MC "But I'm pretty sure you're going to like this one."
+    jump Cooking_WG083
+
+label Deckbuilder_WG083:
+    MC "Okay, this one is a little different. I know fighting games aren't your thing, but rather than playing as two dudes beating each other up with their fist, we'll be playing as magic summoners using spells and minions to defeat each other."
+    WG "Sounds interesting."
+    MC "Now this type of game is what's known as a deckbuilder. Each card represents an item, spell, summon, effect, or mana." 
+    MC "The idea is to build a balanced deck around offensive power, mana efficiency, and crowd control that also takes advantage of your summoner's passive."
+    WG "Crowd control?"
+    MC "Any sort of spell or ability that can restrict movement or actions against your opponent."
+    WG "I see, and what do you mean by \"passive\"?"
+    MC "Innate special attributes of your summoner. They are always active and you don't have to do anything to activate them, hence the term, \"passive\"."
+    WG "Okay, that makes sense."
+    MC "Which character do you want?"
+    WG "I'll go with the mage. Seems like she has a good range of abilities."
+    MC "Okay, good choice. I'll pick the shaman."
+    MCT "That ought to give her a good handicap. This summoner class sucks now after the latest balance patch."
+    WG "What do the numbers mean on the cards?"
+    MC "Bottom left one is their health, bottom right is their damage, the number in the top right is the energy it takes to summon them, and the symbol in the top left is the type of damage they deal."
+    WG "That answers that then. But why do I have so many of these water elemental spells? How am I supposed to create a balanced set of abilities when it's nearly all I can choose from?"
+    MC "Oh, you'll want a lot of those. They're basically cannon fodder to shield your summoner. Your summoner can only be attacked when there are no other minions on the field. About a fourth of your cards should be for manna."
+    WG "Noted. I think I got it then."
+    MC "Alright, let's fire up a round."
+    "BATTLE!"
+    "The faux medieval European music kicked in as I started first with my turn."
+    MC "Okay, I'm going to set up some of these warding totems and this rock elemental. And that's all I can do. Your turn."
+    WG "What's this?"
+    MC "You get extra manna since you got to go second."
+    show WG pondering
+    WG "Hmm, interesting. Let's see here…"
+    show WG stern
+    MC "Really, {i}four{/i} water elementals?"
+    WG "I told you, that's about the only spell this character had!"
+    show WG neutral
+    MC "To be honest I'm more impressed than anything."
+    WG "Not like I had much of a choice since you can only play from the cards drawn before the rest are shuffled back in the deck."
+    MC "Alright, now my turn to attack. I'll put this earth ward up and use the rock elemental to damage one of your water elements and then quicksand to immobilize another."
+    MC "Your turn."
+    WG "Looks like all I managed to draw were these mana cards and this spell. I guess I'll just order these things to attack and cast blizzard."
+    "BOOM {w}BANG {w}CRASH!"
+    MCT "Oh my fucking hell… I forgot that earth ward doesn't provide any protection against water attacks!"
+    MC "Ouch… I didn't expect to get my side of the board cleared out so soon. But luckily my passive refunds manna from those so I can summon my ultimate…"
+    MCT "You've got to be fucking kidding me."
+    show WG sly
+    WG "You're ultimate what?"
+    MC "... {w}I can't field new minions when blizzard is active. {w}So I guess it's your turn."
+    show WG pondering
+    WG "So soon? Let's see. I'll cast ice shard, arcane lightening, and looks like my water elementals get to attack."
+    show WG surprised-2
+    "VICTORY!"
+    MCT "Do they actually playtest this OP bullshit?"
+    show WG sly
+    WG "Well that seemed rather quick."
+    MC "You're telling me. Want to go again? I'll make it more interesting next time by playing a different character. A {i}real{/i} character this time."
+    $setAffection("WG", 1)
+    show WG haughty
+    WG "Is that so? Was there something particularly imaginary about the one you were playing before?"
+    show WG sly
+    MC "I was going easy on you by picking a weak one. Clearly that was a mistake."
+    WG "Clearly. But why should I grant you a rematch? I don't really see what's in it for me. I think I'd rather prefer to hold on to my win streak over you, thank you very much."
+    "It was time for me to finally roll my eyes instead."
+    show WG haughty
+    WG "It's not very dramatic Dear when your bangs drape down so low."
+    MC "Guess I gotta get the neck involved more. How's this?"
+    show WG sly
+    WG "No you're just over–acting. I'm not very sold on your level of exasperation."
+    show WG surprised-2
+    MC "I guess I don't have a flair for the dramatic, unlike {i}someone{/i} I know."
+    show WG stern
+    WG "Rude."
+    MC "Man, I'm really getting upstaged here."
+    show WG sly
+    WG "I'd tell you to stick to video games instead of theater but you don't appear to be having much luck with that either today." 
+    MC "Is that so? {w}I do declare, I will not have my honor tarnished by a boast born of beginner's luck. I demand a summoner duel for my honor."
+    show WG happy-2
+    WG "Not exactly Shakesperian, but there seemed to be at least some passion in that delivery."
+    MC "So you want to play again?"
+    show WG neutral
+    WG "If it's all the same to you, I think I'd rather hold on to my win streak a little longer."
+    MC "Hehe, okay, but you owe me a rematch when they drop the next balance patch."
+    MCT "On second thought, that's a terrible deal, they'll probably make it worse."
+    MC "This one though I think you're {i}really{/i} going to like."
+    jump Cooking_WG083
+
+label Racing_WG083:
+    MC "Actually, you'll need a different controller for this one since it's on a different system. Let me see here… Ah! Here it is."
+    MC "Okay, this one is a racing game, but it's not a serious one like where you're racing real cars and have to gear shift. It's go-kart racing with Pretendo characters."
+    WG "I see. Even I recognize some of these characters. Others… not so much."
+    MC "You can pick whichever you want. It's not a big deal either way but they all have different weights, speed, and acceleration."
+    show WG doubt
+    WG "What do you mean by weight?"
+    MC "Well if a heavier character runs into a bigger one it will knock them out of the way. Downside is that heavier characters have lower acceleration."
+    show WG neutral
+    WG "I'll just pick this one then."
+    MC "Oh? How very fitting…"
+    show WG sly
+    WG "What's that supposed to mean?"
+    show WG surprised-2
+    MC "Figures you'd pick one of the princesses."
+    show WG doubt
+    WG "I don't know what you're getting at, she's just one of the few actually normal looking characters in this eclectic ensemble. Honestly, it makes more sense than you picking some goofy looking turtle as a character in a racing game of all things."
+    MC "Sure… Whatever you say… "
+    show WG surprised-2
+    extend " Your majesty."
+    show WG sly
+    "Alice gave my shoulder a firm shove, tilting me sideways, but I sprung right back. Though if she would have given me a hip check with a similar amount of effort behind it I'm sure I would have been sent flying."
+    WG "That's \"Empress\" to you."
+    MC "Hehe. We'll see if you can take the crown then."
+    "Hanging from a fishing pole from the cloud turtle guy, the traffic light lit up one by one."
+    "Red… Yellow… GO!"
+    show WG surprised-2
+    WG "How are you moving so fast?"
+    MC "If you time your start right you get a speed bonus."
+    show WG doubt
+    WG "Oh, now you tell me."
+    show WG neutral
+    MC "You'll want to run these boxes over to get items. They do all different things but mostly either make you faster or slow down the other racers on the track."
+    show WG surprised-2
+    WG "What just happened to my character?"
+    MC "That would be one of the items. Looks like one of the computer races hit you with a green shell."
+    show WG doubt
+    WG "A shell, as in a turtle shell? I'd say I'm starting to notice a theme here but it still doesn't make a lot of sense." 
+    show WG neutral
+    WG " What do the red ones do?"
+    MC "Those are heat seekers. They'll target the closest racer."
+    show WG surprised-2
+    "BOOOM!"
+    show WG sly
+    "Alice launched a red shell at one of the computer opponents, causing it to wipe out as she passed it."
+    WG "I'm starting to see why people like this."
+    MC "Not to say that the racing part isn't important, but yeah, screwing over your opponents with the items is the best part about the game."
+    show WG surprised-2
+    WG "A banana peel? What do those do?"
+    show WG neutral
+    MC "Oh those suck, just try to drop them in the middle of the track and hope someone hits them."
+    MC "Alright that's the first lap, down we have two more on this track."
+    show WG doubt
+    WG "Do go-karts handle this poorly in real life? I feel like I'm all over the track."
+    show WG surprised
+    MC "Alice, you gotta let off the gas sometime and use the break going into turns, just like my dad taught me with real driving. It slows you down a little, but not nearly as much as running into the wall, or going off the track."
+    show WG neutral-2
+    WG "I'm sure you can imagine, but I'm not the most experienced driver."
+    MC "Looks like you're getting the hang of it though."
+    show WG doubt
+    WG "I'm in last place."
+    MC "Yes, but you're catching up, at least you're not going to get lapped."
+    WG "How reassuring."
+    show WG neutral
+    MC "Eh, don't worry about it, even though it's on the final lap there's a chance to catch up depending on the items you get."
+    "By this point I was firmly in the lead, rounding the last corner to the finish line. Part of me thought I probably should have held back and not left her in the dust."
+    WG "What's this blue shell do?"
+    MC "Uhhh, the {i}what{/i} shell?"
+    "{i}VROOOM{/i}"
+    MCT "Aaand that's why I should have hung back more."
+    "The blue shell did what a blue shell does best— fuck up every single racer in its path until it blew up on the leader, which happened to be me."
+    show WG happy-2
+    WG "{i}Ooo{/i}, I like this item."
+    "Luckily I was so far ahead I could still take first. I just needed to use the speed burst I'd bee saving right after I regained control to hold the lead-"
+    MC "What!? A banana peel? Where the hell did that come from?"
+    "{i}vroom {w}vroom {w}vroom vroom vroom{/i}"
+    "One by one every other racer passed me as I spun out off the track and ended up facing backwards."
+    "{i}vroom{/i}"
+    "Only to eventually get passed by Alice at the last second before the finished line."
+    show WG happy
+    WG "Well I guess you were right, Kei. Sticking with it paid off. I didn't get last place."
+    MC "{size=-6}Stupid bullshit blue shell…{/size}"
+    show WG haughty
+    WG "Now, seeing as I have seized the crown, my first decree as Empress is to appoint you as royal jester."
+    show WG happy-2
+    WG "It's a great honor, seeing as I only accept the most experienced appointees to positions within my court."
+    show WG neutral
+    MC "Not to prematurely trample your visions of empire, but I don't think seventh place is enough to seize any title. {w}You're just a lowly commoner I'm afraid."
+    show WG haughty
+    WG "Is that so? Well if that's the case, that must make you a chimney sweep then."
+    show WG happy-2
+    WG "I think you'd make a good one, you wouldn't even need to use a brush, you could just slide down headfirst."
+    MC "Do I get one of those sweet looking hats they wear?"
+    WG "Naturally."
+    MC "And break out randomly into song and dance numbers?"
+    show WG sly
+    WG "Let's hope not."
+    show WG neutral
+    MC "Hehe. Want to do another track?"
+    $setAffection("WG", 1)
+    WG "Well, that was fun, but I wouldn't mind trying something else."
+    MC "You're in luck then. I got one I think you're {i}really{/i} going to like."
+    jump Cooking_WG083
+
+label Cooking_WG083:
+    MC "It's a cooking game."
+    show WG surprised-2
+    WG "How do you make a game out of that?"
+    MC "Well, they have cooking competitions don't they? Like the ones Aida and Sakura do."
+    show WG pondering
+    WG "I suppose in that respect you could make a game out of anything, but still, it seems like a rather mundane thing to build a game around."
+    MC "True, it's not the grand adventure that involves saving the world like most games, but think about it this way: what if you could capture all the reward and excitement of cooking, with none of the time and effort?"
+    WG "Hmm…"
+    show WG happy
+    WG "I do like the sound of that."
+    MC "Without having to do the dishes."
+    show WG happy-2
+    WG "Even better. I'm sold."
+    MCT "Almost {i}too{/i} easy."
+    show WG sly
+    WG "Though I would point out the main satisfaction of cooking would be the end result of sampling your creation."
+    MC "I don't think video games are at that stage of realism just yet, but I promise we'll go get dinner after we're done with this."
+    show WG surprised
+    "{i}grumbleeeer{/i}"
+    MC "Speaking of dinner, you want a little something to tide you over until then?"
+    show WG neutral-2
+    WG "It would be appreciated if you don't mind."
+    MCT "Looks like she made short work of that box of meal replacement bars already."
+    scene Dorm Interior with fade
+    pause 1
+    show WG neutral with dissolve
+    MC "Okay, I got some string cheese, a couple of candy bars, a bag of roasted peanuts and I managed to steal back a couple of apples from Daichi. Not exactly a feast of the ages I'm afraid."
+    show WG happy
+    WG "It's a bit eclectic, but appreciated all the same."
+    if checkAffection("WG", ">=", 50):
+        MC "Alright, let me grab my controller here and get situated…"
+        MCT "Hmm, that does look awfully comfy..."
+        play sound Thud
+        show WG surprised-2
+        WG "Oh!"
+        show WG sly
+        WG "Just what do you think you're doing?"
+        MC "Grabbing the best seat in the house."
+        WG "By using my belly as a recliner?"
+        MC "Exactly. It even comes with two oversized pillows if I get sleepy."
+        show WG happy 
+        WG "You are something else my dear boy."
+        "It was true, the best seat in the house by far. I couldn't imagine anything more comfortable than to lay back and sink into the blubbery goodness of her belly."
+        "It wiggled and wobbled as I shifted side to side, molding around the edges of my shoulders as I sunk in."
+        show WG happy-2
+        WG "Getting comfortable down there?"
+        MC "Absolutely. Now let's fire this up!"
+        "We went through the character select screen, a random assortment of goofy and cute looking cartoon characters in chef uniforms."
+        show WG sly
+        WG "Did you pick the rabbit on purpose?"
+        MC "I have no idea what you mean…"
+        "I said as I entered my player name."
+        show WG doubt
+        WG "Okay, that's a bit too on the nose, Dear."
+        MC "I don't know what you're talking about. Hehe."
+        show WG neutral
+        MC "Going with the cat chef I see?"
+        WG "What? She looks cute. I like soft fluffy things."
+        show WG sly
+        MC "Me too!"
+        WG "I'm not sure we're talking about the same things, Dear."
+        show WG neutral
+        MC "Alright, first map. Making salads. We gotta chop veggies and put them on a plate before sending them to the service counter."
+        WG "Seems simple enough."
+        MC "We pull the ingredients from the labeled boxes with the pictures and bring them to the cutting board. We gotta work fast to get enough orders finished before the stage ends."
+        "{i}Chop chop chop chop chop!{/i}"
+        MC "Order up!"
+        show WG sly
+        WG "Honestly, do you have to call out the orders?"
+        MC "I believe the proper response is \"Yes Chef!\"."
+        "Alice shook her head, or at least I'm assuming that was the motion sending a small ripple through her belly across my back."
+        WG "You really are something else, Kei."
+        "STAGE COMPLETE!"
+        show WG doubt
+        WG "Only one out of three stars?"
+        MC "Guess we were supposed to have got more orders done."
+        show WG neutral
+        WG "We did spend a lot of time running around. It probably would have been better to have each of us stay on one side of the counter to not have to run around."
+        MC "Hmm, you're probably right. Let's try that this next level. Looks like we're making a cake this time."
+        show WG pondering
+        WG "Why is this next kitchen in the middle of the road?"
+        MC "I dunno, guess they gotta change up the scenery to keep it fresh."
+        show WG surprised-2
+        WG "Kei, look out!"
+        MC "Oof! Looks like Mr. Fluffuls got flattened."
+        show WG neutral
+        WG "I guess that answers why the road is there. That is a significant time penalty."
+        MC "Yup we'll have to watch it."
+        WG "Okay, I'll man the mixer, you just keep feeding me the ingredients and I'll give you the plates to send to the counter. Look at when the traffic lights turn green for when the cars come."
+        MC "Right."
+        show WG sly
+        WG "Don't you mean \"Yes Chef\"?"
+        MC "Oh, you're playing with fire missy."
+        show WG neutral
+        "STAGE COMPLETE!"
+        MC "Nice, three out of three this time."
+        show WG haughty
+        WG "See? It's all about proper configuration management."
+        "I originally thought the game's cooking theme would be enough to grab the attention of her inner gourmand to at least be curious enough to give it a chance."
+        "But once Alice began to see it as a workflow management simulator, things finally clicked for her and we were off to the races. No matter how crazy the levels got."
+        show WG stern
+        WG "Alright, we can't access all the necessary work stations when wind causes our hot air balloons to drift apart, so the next wind change I need you to grab as many ingredients as you can and toss them to me."
+        MC "On it!"
+        show WG neutral
+        WG "I'm going to get the water boiling in these pots while I start chopping up the vegetables. Start working on the side dishes when the bridge connects back again." 
+        WG "As soon as the pot boils, dump the rice in or we'll miss the opening when we can drop off the dishes at the order station the next time the wind changes."
+        "I had to chuckle. Alice was totally into it. There was something funny about the no-nonsense business woman not hesitating in the slightest when uttering even the craziest nonsensical statements."
+        "STAGE COMPLETE!"
+        show WG happy
+        MC "Another three out of three. You're really good at this Alice."
+        WG "What can I say? We make a pretty good team."
+        WG "Want to do the bonus stage?"
+        MC "Sure, we can. Do you want to get dinner first? We've been playing for a while."
+        show WG pondering
+        WG "I suppose you're right. That last snack is starting to wear off…"
+        $setAffection("WG", 1)
+        show WG happy-2
+        WG "But one more level couldn't hurt."
+        jump daymenu
+    else:
+        MC "Alright, let me grab my controller here and get situated…"
+        MCT "Hmm, that does look awfully comfy..."
+        play sound thud
+        show WG doubt
+        WG "Hm?"
+        WG "Kei, what are you doing?"
+        MC "Grabbing the best seat in the house."
+        WG "For you perhaps, but  it would be more comfortable for me if you didn't use my belly as a recliner."
+        MC "Oh, sorry."
+        MCT "Dang. Was worth a shot."
+        "I settled for taking my old seat next to her on the floor."
+        show WG neutral
+        MC "Alright, let's fire this up!"
+        "We went through the character select screen, a random assortment of goofy and cute looking cartoon characters in chef uniforms."
+        show WG surprised-2
+        WG "A frog?"
+        MC "Well the hope is that a beautiful princess might give me a kiss to turn me into a prince."
+        show WG sly
+        WG "You might be waiting a while then, Dear."
+        show WG neutral
+        MC "Going with the cat chef I see?"
+        WG "What? She looks cute. I like soft fluffy things."
+        show WG doubt
+        MC "Me too!"
+        WG "I'm not sure we're talking about the same things, Dear."
+        show WG neutral
+        MC "Alright, first map. Making salads. We gotta chop veggies and put them on a plate before sending them to the service counter."
+        WG "Seems simple enough."
+        MC "We pull the ingredients from the labeled boxes with the pictures and bring them to the cutting board. We gotta work fast to get enough orders finished before the stage ends."
+        "{i}Chop chop chop chop chop!{/i}"
+        MC "Order up!"
+        show WG doubt
+        WG "Honestly, do you have to call out the orders?"
+        MC "I mean I don't {i}have{/i} to."
+        show WG neutral
+        "Alice shook her head."
+        WG "You are something else, Kei."
+        "STAGE COMPLETE!"
+        show WG stern
+        WG "Only one out of three stars?"
+        MC "Guess we were supposed to have got more orders done."
+        show WG neutral
+        WG "We wasted too much time running around. We would have been better off having each of us stay on one side of the counter to not have to run around."
+        MC "Hmm, that does make more sense. We'll have to try to do more of that. Looks like we're making a cake this time."
+        show WG doubt
+        WG "Why is this next kitchen in the middle of the road?"
+        MC "I dunno, guess they gotta change up the scenery to keep it fresh."
+        show WG surprised-2
+        WG "Kei, look out!"
+        MC "Oof! Looks like Mr. Frog got flattened."
+        show WG doubt
+        WG "That costs a significant time penalty, we don't want to have that happen again."
+        MC "Yup we'll have to watch it."
+        WG "Okay, I'll man the mixer, you just keep feeding me the ingredients and I'll give you the plates to send to the counter."
+        show WG stern
+        MC "Oops!"
+        WG "Pay attention, Dear. Look at when the traffic lights turn green for when the cars come."
+        MC "Oh yeah. I should have seen that before."
+        show WG doubt
+        WG "We're not gonna make it, I'll just run the last order over myself."
+        show WG surprised-2
+        "{i}Splat!{/i}"
+        MC "That's one flat cat. Hehe."
+        "STAGE COMPLETE!"
+        MC "Hmm, only out of three still. At least it's good enough to move onto the next level."
+        show WG neutral
+        WG "If I'm going to invest my time into something, I would prefer it to be something that requires a bit more than \"good enough\"."
+        MC "Right. It's more fun if we get it right."
+        "I originally thought the game's cooking theme would be enough to grab the attention of her inner gourmand to at least be curious enough to give it a chance."
+        "But once Alice began to see it as a workflow management simulator, her meticulous nature took over and sucked the fun out of the experience."
+        show WG stern
+        WG "Okay, as soon as the pot boils, dump the rice in or we'll miss the opening when we can drop off the dishes at the order station the next time the gears turn."
+        MC "Got it!"
+        show WG surprised-2
+        WG "Kei, don't reach over to this side of the kitchen when I'm over here!"
+        MC "What? I'm trying to get us caught up on orders."
+        "As soon as the words left my mouth, the stage shifted, shoving both our characters onto the other side of the counter, locking us out of access to the order station while the clock ran down."
+        show WG angry
+        WG "That's why!"
+        "MISSION FAILED"
+        show WG stern
+        $setAffection("WG", -1)
+        WG "Honestly Kei, I wish you would listen to me better."
+        show WG neutral
+        MC "Sorry. The game is new to me too. We'll get the hang of it with a bit more practice."
+        MC "Oh, hey! Want to do the bonus stage?"
+        WG "Perhaps another time. We've been playing for a while and I'm getting hungry. Can we just go to dinner?"
+        MC "Yeah that sounds good."
+        scene Cafeteria with fade
+        "I was a bit disappointed that I didn't really have any games that grabbed Alice's attention. I was hoping this could slowly become a shared interest of ours, but it wasn't the end of the world if it wasn't." 
+        "There were still plenty of other things we enjoyed doing while spending our time together."
+        jump daymenu
+
 label WG084:
     $setProgress("WG", "WG085")
     scene Music Classroom with fade
@@ -28786,6 +29412,510 @@ label WG090:
     jump daymenu
 
 label WG091:
+    $setProgress("WG", "WG092")
+    $setWGOutfit(OutfitEnum.Casual2)
+    play music Peaceful
+    scene Dorm Exterior with fade
+    "I had been looking forward to this day all week. With the drama of the recent events, now thankfully well behind us, I was in need of a true weekend to recharge my batteries, since the last one wasn't exactly the most restful experience."
+    "Still though, things turned out alright, all things considered, and we had grown closer as a result."
+    MCT "Ah, shoot! That's not good."
+    "I had looked down to check my phone, only to realize I was running behind despite my best laid plans."
+    MCT "Better pick up the pace. Don't want to keep her waiting."
+    scene School Front with fade
+    show WG neutral with dissolve
+    WG "In a hurry?"
+    MC "You could say that. Hi!"
+    "I leaned in for a big smooch on her chubby cheek. It was soft and warm on my lips, in contrast to the dry cool air, all the while feeling my body smoosh into her layers of softness under the padding of her coat."
+    show WG happy
+    WG "Well, hello there yourself."
+    WG "Punctual as always."
+    show WG sly
+    extend " Though judging by your panting, I would be reluctant to attribute that to proper planning on your part."
+    MC "I have… {i}*huff*{/i}...no idea…{i}*whew*{/i}...what would make you…{i}*ooo*{/i}...think that."
+    show WG haughty
+    WG "Call it a hunch."
+    show WG happy
+    WG "Though I would be remiss if I didn't acknowledge the effort to stick with the schedule."
+    show WG sly
+    WG "Especially considering you'd probably still be asleep this time of day on a weekend if not for me."
+    MC "Oh, give me a little credit. It's one o'clock… I would have at least been {i}thinking{/i} about getting out of bed by now."
+    show WG happy-2
+    WG "Well, luckily for you, you have a girlfriend who's keen on coaxing more potential out of you than sleeping half the day away."
+    MC "Speaking of half the day, what do you have planned?"
+    WG "You'll just have to wait and see."
+    show WG haughty
+    WG "Come now, we shouldn't tarry any further if we're going to make our appointment on time."
+    MC "Appointment?"
+    scene Lake Road with fade
+    MC "So where we going now?"
+    show WG haughty with dissolve
+    WG "Quite impatient aren't we. Don't you want to be surprised?"
+    show WG sly
+    MC "Sorry, I've been hanging around someone who's a bad influence when it comes to these things."
+    WG "I can't imagine who you'd be talking about, since you spend most of your time with me."
+    MC "It's a total mystery for sure."
+    show WG neutral
+    WG "It's only a few kilometers from campus, we'll be there soon enough."
+    "Truth be told it was a nice break to get off campus for a walk like this with Alice. The weather was cool, but clear, far from the frigid winds and cloud cover of the winter months. The spring thaw was definitely around the corner."
+    "We both walked along, holding hands as we went, even if that meant there wasn't enough sidewalk for me, it wasn't like there were ever that many cars going down this road."
+    "Neither of us had been particularly chatty during the long walk, which was fine, but still… I wanted to make sure things were still alright."
+    MC "So… how have you been feeling?"
+    MCT "I feel like I've been asking her that a lot lately. But still, I want to make sure I'm not overlooking anything."
+    show WG neutral-2
+    WG "Honestly, I'm feeling much better… about, well— just about everything. Things aren't perfect, but I realize there's always going to be a workaround."
+    WG "I feel like I've said similar things in the past, and then let circumstance get to me all over again, but this… this feels different. I feel ready."
+    show WG happy-2
+    WG "Ready to face whatever else gets thrown at me."
+    MC "You almost sound eager."
+    show WG haughty
+    WG "I certainly would hope things do not get any worse, but I would be lying if I didn't admit to some sense of pride for having overcome something like this. Not that it won't be a daily struggle going forward, but to move forward unbroken…"
+    show WG neutral
+    WG "Well, even I underestimated myself in coming this far."
+    show WG sly
+    MC "Underestimating Alice Nikumaru— seems like a pretty big mistake."
+    show WG haughty
+    WG "I should hope so."
+    show WG neutral-2
+    WG "But it's really thanks to you. Even when everything crumbles around me, you've been the solid pillar I could lean on."
+    "As much as I appreciated Alice's words, I don't think I'd be able to keep standing if Alice really did try to lean against me."
+    MC "A man's only as mighty as the muse that inspires him."
+    show WG happy-2
+    WG "Your silver tongue will take you far in life, Dear."
+    show WG neutral-2
+    WG "But I am serious. I wanted to make a point of how much I appreciate all you do for me, which is the point of today's excursion."
+    MC "Oh? Is that why we're going off campus? Honestly Alice, you didn't have to go out of your way for something like this. I'm perfectly happy just to sit and have afternoon tea with you."
+    show WG haughty
+    WG "I didn't have to, but I wanted to."
+    show WG sly
+    WG "And today we're doing what I want."
+    MC "...Wait, shouldn't this be what I want then?"
+    show WG haughty
+    WG "Oh it is— it's just that I know better."
+    "Though somewhat bewildered by her logic, I knew I was in no position to argue."
+    MCT "Something tells me this is going to be good."
+    scene Ryokan Exterior with fade
+    play music Festival
+    MC "Ohh, this place. What's it called again?"
+    show WG neutral
+    WG "Satoyama village. It's a quaint little town at the foot of the mountains not far from the Academy."
+    MC "Reminds me of the small towns you'd see in Nagano."
+    WG "It definitely has a more traditional feel to it. From what I understand it's more of a bedroom community for retirees and is home to a fair amount of the faculty at school due to its proximity."
+    show WG pondering
+    WG "There's a lot of neat little shops I'd love to check out. I've heard there's a delightful  kushikatsu stand not far from here."
+    MC "Do you want to stop there? We can look around for it. I'm sure it won't take long once we smell the oil frying."
+    WG "Tempting… as much as I'd love to, we'll have to do that later if we're going to keep our appointment."
+    MC "How are we looking on time?"
+    show WG haughty
+    WG "Perfectly punctual."
+    show WG happy
+    extend " And I intend to keep it that way."
+    show WG pondering
+    WG "Though I am regretting not building in more time to stop and explore the village, but seeing it in person I'm sure we'll be back."
+    show WG neutral
+    WG "After all, I doubt there's another place like this who's buildings and paths make an effort to accommodate those with growths. Honestly I wish I had known this place existed when my mother came to visit."
+    MC "Maybe your parents could take a day trip for you when they come for the concert."
+    show WG happy 
+    WG "That's a great idea. I know Father could always stand to take more time off. Even he would be reluctant to turn down a visit to an onsen."
+    MC "So that's what you have planned for this little appointment of ours?"
+    show WG sly
+    WG "Only a small part of it. I wouldn't want to spoil the {i}real{/i} surprise."
+    show WG happy-2
+    WG "And here we are."
+    scene black with fade
+    pause .5
+    play music DayByDay
+    scene Ryokan Room with fade
+    "I had attempted to slide open the exterior door to the ryokan for Alice, but no sooner had I touched the door than two staff members flung them fully open for us, whisking us off to our private room."
+    show WG neutral
+    Manager "Ah, Miss Nikumaru, you and your companion are most honored guests. Misaki-san has arranged everything. Please let me know what I can do to enhance any point of your experience today."
+    Manager "For now, I will give you some time for you both to settle into your room. Our most experienced and skillful masseuses will be arriving shortly for your in-room service."
+    MC "Ah, so that's what the appointment was? This is a nice surprise, a massage does sound good."
+    show WG happy-2
+    WG "Yes, but like I said before, it's only a small part of it."
+    MC "Hmm, this keeps getting more interesting then."
+    "I finally paused to take a look around at our accommodations. Wide open and spacious. Luckily, Alice was able to make arrangements for something that could comfortably accommodate her unique dimensions, a rarity in most establishments."
+    MC "This suite is quite roomy. Pretty cool that we got the place all to ourselves."
+    show WG haughty
+    WG "\"Roomy\" is definitely the word. This suite is intended to be for larger parties utilizing the onsen, but the cost for the extra space was well worth it."
+    MC "Seems like a nice place to get unplugged from the outside world for a little while."
+    WG "True. {w}Personally, if I'm being honest, I find the decor to be rather outdated, but I don't feel the need to be overly critical, since the more traditional trappings are part of the novelty of the experience."
+    show WG neutral
+    WG "Besides we won't be staying here all evening anyway."
+    show WG surprised-2
+    MC "Oh? So there really are more surprises in store."
+    show WG haughty
+    WG "I'm afraid I've already said too much."
+    show WG sly
+    WG "Stop trying to trick me."
+    MC "Oh yes, that one was totally on me."
+    WG "Well you are quite devious."
+    MC "Is that so?"
+    "I moved in close to Alice, firmly seizing the sides of her belly as I pulled her in, our eyes locked as her belly began to slowly envelope me."
+    show WG aroused
+    WG "Quite so. Dastardly even. Taking advantage of an innocent maiden's gracious gestures of hospitality."
+    MC "Oh, something tells me you aren't as innocent as you lead on my dead maiden…"
+    "I leaned in, eager to taste those soft pouty lips…"
+    play sound Knock
+    show WG surprised-2
+    MC "Oh yeah… the \"appointment.\" "
+    Masseuse1 "Hello, we're here for your scheduled massage."
+    show WG neutral
+    WG "Please come in."
+    "Sliding the door open, two women walked into our room who's stark difference in height and build were in such contrast it was almost comical."
+    "Walking in first was a rather petite woman, who's diminutive height reminded me of Kokutan, though their similarities soon ended when comparing just how well endowed this masseuse was."
+    Masseuse2 "My name is Mei, and this is Emi."
+    "Following her through the door, carrying two massage tables under her arms was a massively muscular woman that I only stood about nose height to." 
+    "She wasn't a slouch in the chest department herself either, but it seemed overshadowed by the fact it was framed by a set of wide shoulders and a lat spread that somewhat kept them in proportion."
+    Masseuse1 "Hello."
+    "Given their unusual and obvious physical features, I had to assume they were former attendees of the Academy."
+    Masseuse2 "Emi is going to get these tables set up while you two…"
+    pause 1
+    Masseuse2 "While you two…"
+    pause 1
+    show WG doubt
+    WG "?"
+    MC "?"
+    Masseuse2 "Um… Please excuse me. I have to step out real quick."
+    "Mei (at least I think I remembered her name) whispered something to the tall muscle lady before exiting the room."
+    pause .5
+    "Mei retired shortly, along with the manager."
+    Manager "I must apologize, Miss Nikumaru, it has come to our attention that we are unable to safely accommodate your massage appointment."
+    show WG doubt 
+    WG "What do you mean?"
+    Manager "It appears that the massage tables we have on hand are… structurally inadequate to accommodate… your unique needs, shall we say."
+    WG "Well can't you just have me lay on the floor."
+    Masseuse2 "Perhaps… but we would not want you to be uncomfortable. I do not think I can safely maneuver myself over your body without the positioning advantages a table can provide."
+    show WG worried
+    WG "{i}Sigh{/i}... I should have known I was too fat for this."
+    Manager "My sincerest apologies, Miss Nikumaru. We pride ourselves on being able to accommodate the island's residents. I am greatly ashamed that our facilities are not fully accommodating to your needs."
+    Manager "I will have a more robust massage table commissioned to make sure you and future guests' needs are met." 
+    Manager "Your appointment will be fully refunded and will receive an additional complementary massage once we are able to accommodate our services to your needs."
+    MC "Well, I guess we'll just have to save it for another time."
+    show WG stern
+    WG "You mean {i}I'll{/i} save it for another time. Just because they cannot accommodate me, doesn't mean your massage appointment is canceled."
+    MC "But Alice, I don't want to do it if you're going to be left out. We can just do this some other time."
+    WG "Keisuke, forgoing an experience out of some misplaced sense of solidarity may be a sweet gesture, but ultimately accomplishes nothing." 
+    WG "I booked this spa visit as my gift to you, and you are not going to refuse it on the basis of pity. Do I make myself clear?"
+    MC "I mean yeah, but still I-"
+    WG "No buts. I'm more than capable of occupying myself while you have some time just for you."
+    show WG neutral
+    WG "In fact, I'm starting to feel quite peckish. Now's the perfect opportunity for me to go search for that kushikatsu stand nearby here."
+    Masseuse1 "Oh that place is amazing. It's just two and a half blocks west of here." 
+    show WG haughty
+    WG "Excellent. Then it's decided. Don't worry, we'll rendezvous when your massage is finished."
+    Manager "Very good. Happy resolution. Thank you for your understanding, Miss Nikumaru."
+    "The manager and Mei sheepily exited the room, closing the door behind them."
+    Manager "{size=-6}Oi, oi. This is not good… Misaki-san is not going to be happy when she hears this...{/size}"
+    show WG neutral-2
+    WG "I will be back to check in with you once your appointment is done. Don't worry about me and try to enjoy yourself."
+    "Alice leaned in for a kiss before proceeding out the door herself."
+    MC "{i}Muah{/i}!"
+    MC "Okay, I'll try. See you soon."
+    Masseuse1 "Allow me to get the door."
+    hide WG with dissolve
+    Masseuse1 "Alright, let's get things ready."
+    "In one quick action that seemed effortless, Emi flipped up the massage table and folded out its legs, planting it firmly on the floor. No small feat considering how sturdy it looked." 
+    "Sturdy as it was, I had to agree with the assessment that one, or even two together, would not likely have been sturdy enough to hold Alice."
+    Masseuse1 "I will step out for a bit while you disrobe. You don't need to disrobe completely if you don't feel comfortable with that, but we are professionals here. Please lay face down on the table once you are ready."
+    "It didn't take long for me to get out of my clothes and onto the table. I kept my underwear on just to make sure everything was tucked into place." 
+    "I didn't feel that great about doing this just by myself. Alice was used to getting treated to this kind of thing on the regular and I'm sure it had been quite a long time for her since she got to enjoy something like it."
+    "I had to imagine she was more disappointed than she led on, but her insistence on the matter was clear. {w}Still though, I wanted to make it up to her somehow."
+    play sound Knock
+    Masseuse1 "Are you ready, sir?"
+    MC "Yes, please come in."
+    Masseuse1 "Alright, let's get you started here."
+    "I couldn't really see what was going on, but I heard her rubbing her hands together before feeling some light pressure pushing into me up and down my legs before moving into long strokes."
+    "A welcome surprise, since judging by her appearance alone I was expecting her to crush me."
+    Masseuse1 "Have you had a proper massage before?"
+    MC "Uh, not really. I mean not like a real one by a professional."
+    Masseuse1 "Ah, okay. I'll go easy on you then."
+    "Emi had a rather raspy voice. It was a little gruff, but soothing in its own way. Her hands moved from pushing into my legs to long strokes going up my leg."
+    Masseuse1 "Sorry about what happened with your lady friend. Mei's a great masseuse, but she needs to make sure the base is steady and the client can lie in a comfortable position to do her thing."
+    MC "Is it different than what you do?"
+    Masseuse1 "Yeah, she does the whole thing where she stands on top of you and applies the pressure with her feet. {w} Hehe. Trust me, you don't want {i}me{/i} doing that."
+    MCT "Oh, thank God!"
+    MC "Um, maybe this is going to sound kind of strange, but could you explain to me what you are doing as you go along? I'd be curious to learn."
+    Masseuse1 "You interested in becoming a masseuse yourself?"
+    MC "Well, maybe not full time, but it seems like a useful skill."
+    Masseuse1 "Ah, I gotcha. I'm sure your lady friend will appreciate the effort."
+    Masseuse1 "The first thing I'm doing is applying some light pressure and stretch to the tissue, just to get the blood flowing." 
+    Masseuse1 "Then after I've applied the oil I start rubbing in strokes. I move my hands in both directions, but only apply the pressure in one direction."
+    Masseuse1 "Always go from the peripheral towards the heart, that's the direction of the circulation in your veins that your muscles help pump." 
+    Masseuse1 "This whole time I'm feeling for knots, problem areas I'm going to have to go in and dig apart as I knead the muscle. Like this spot on your calf."
+    MC "What spot?"
+    MC "!"
+    MCT "...My mouth does not work and I must scream."
+    Masseuse1 "Oo, that's a nasty one, haha!"
+    MCT "Did she stick my leg in a bear trap or something? What the hell is going on down there?"
+    "Suddenly the pain began to reside and the tension in my calf melted away."
+    MC "{i}Whew… hoo…{/i} How did you do that?"
+    Masseuse1 "Haha, feels good doesn't it?"
+    MC "I mean, eventually yeah."
+    Masseuse1 "Well buckle up buddy. You're stuck with me for two full hours, and if that's what your calves are like, your scapula muscles are going to be in worse shape."
+    scene Ryokan Room with fade
+    pause .5
+    "The massage continued on in what felt like an eternity that also was over before I knew it."
+    "Sure, there was a lot of pain involved, (I nearly pissed myself when she rolled out my IT band) but by the end of it I felt like I had been molded into a warm pile of relaxed puddy."
+    "During the whole time we struck up quite a bit of conversation and I tried to pick up and retain as much as I could."
+    MC "So you were a student at the Academy I take it?"
+    Masseuse1 "Yeah back in the day. That was a long time ago. I forgot when it started, but it hadn't been that long. I was the first person on record to have… well whatever you call this."
+    "Emi gave a quick flex of her bicep to drive the point home."
+    MC "The first?"
+    Masseuse1 "Well that they know of anyway. Was kind of cool for a while. Got a lot of stares. It made doing physical work a lot easier, but after a while I got tired of all the attention and settled down here."
+    Masseuse1 "Being a masseuse is a great career for me. Get to work with my hands all day and it doesn't wear me out. Poor Mei's hands and wrists are shot from all the years she's done it, but she can hold her own."
+    MC "Thanks again for all the tips."
+    Masseuse1 "No problem. Sorry about your lady friend again. We all appreciate she didn't make a big scene about it, when she really could have. But maybe you can give her a backrub in the onsen to try to make up for it."
+    MC "Hopefully, I'll give it a shot."
+    Masseuse1 "Here, take this then." 
+    "Emi tossed me a tube of something from her pouch, looked like it hadn't been opened."
+    Masseuse1 "It's a silicon based lubricant. Works well if a person is already wet. We use it sometimes when clients just come out of the onsen instead of the massage oil."
+    MC "Right, good call."
+    play sound Knock
+    "Just as we were wrapping up there was a knock on the door before the other masseuse came."
+    Masseuse2 "Hotsure-san, I hope you enjoyed your massage. We will clean up everything here. Miss Nikumaru requests your company in the private onsen. Here is your key." 
+    Masseuse2 "It is at the end of this corridor, the onsen entrance marked 1-A. Please take one of these robes for entering and exiting the onsen. Enjoy the rest of your stay."
+    MC "Will do."
+    scene black with fade
+    pause .5
+    show Ryokan Onsen with fade #steam overlay
+    play music TwilightBright
+    $setWGOutfit(OutfitEnum.NUDE)
+    "I walked into the Onsen, thick steam hung in the air obscuring my view."
+    WG "Keisuke? Is that you?"
+    MC "Yes."
+    WG "Come join me, Dear. The water is lovely."
+    "The crisp late winter air made me feel somewhat hesitant to shed my robe, but whatever hesitancy I had proved trivial due to the promise of a hot bath with an even hotter babe."
+    show Ryokan Onsen with dissolve #remove steam overlay
+    "Stepping closer to the water's edge, the steam parted."
+    show WG happy
+    "Revealing her round form in full view, baring it all in the open air. A look of pure contentment and relaxation was apparent on her face as she comfortably lounged against the edge of the spring."
+    WG "Glad you could…"
+    show WG surprised-2
+    extend " Oh, my!"
+    MC "Hm?"
+    MC "!"
+    "Apparently I wasn't the only one \"baring it all\", the sight of taking in the sheer enormity of her opulently plush and pampered physique had brought my flag to full mast."
+    show WG happy-2
+    WG "I was going to ask if you missed me, but I think I got my answer."
+    WG "Now, join me."
+    "I slipped into the water, its warmth enveloping me immediately. It was almost too hot, but within seconds its soothing effects were apparent. It felt amazing."
+    "Not quite as amazing as Alice's soft skin however, and I was determined to feel as much as I could. I waded across the pool and tucked myself firmly into her soft embrace, resting my head on her breasts."
+    show WG aroused
+    WG "Mmm, I missed you too."
+    "This… this was paradise. With my muscles loosened from the massage, fully relaxed, I felt like I was melting into a waterbed of warm belly fat. It was a regal bed at that, far larger than what any one man would need, and it was all mine." 
+    "I could feel the rise and fall of her breathing, along with her heartbeat through her chest as I sank deeper into her slippery soft blubber. I wouldn't mind staying here forever, if I didn't need to come up for air, lest I accidentally smother myself with boob fat."
+    MC "Ahh, I needed that."
+    show WG happy-2
+    WG "Is that so? Well, I've long since given up on questioning your enjoyment of my ample figure, but I must admit it does feel good to feel needed. You certainly could use the rest."
+    MC "How was your day trip into town?"
+    show WG neutral
+    WG "It was quite enjoyable. There were lots of little shops with traditional crafts that were worth exploring. One shop had a particularly lovely tea set that caught my eye that I ordered to be sent to the school to add to my collection."
+    MC "Oh? We'll have to give it a try when we get back. Did you find the kushikatsu stand?"
+    show WG doubt
+    WG "Oh, don't remind me."
+    MC "What? Wasn't that great?"
+    show WG neutral
+    WG "No, it was quite magnificent. I thoroughly enjoyed it…"
+    show WG doubt
+    extend " Until they ran out."
+    MC "Ran out? As in ran out of food? Before the dinner rush hour?"
+    pause .8
+    "I suddenly realized my incredulity was neither warranted nor helpful given what obviously transpired."
+    MC "Uh, well at least it was good, I guess."
+    show WG neutral
+    WG "True. Unlike many similar shops, you could tell they used fresh oil, as the flavors were not muddled. I would also commend them for not neglecting to season their fried dishes properly."
+    WG "You'd think it would be universal, but most places somehow don't seem to understand the basic need for more salt in order for it to cut through the extra oil."
+    show WG neutral-2
+    WG "But enough about that. How was your massage?"
+    MC "It was great! I'd never really gotten a proper full body massage before."
+    show WG surprised-2
+    WG "You hadn't?"
+    show WG neutral
+    WG "Oh, Keisuke, Dear, I wish I had known you were so far overdue for one. I'd had arranged it much sooner."
+    MC "Now, don't get me wrong, it hurt like hell in some parts, but the end result was worth it. I feel like my muscles got a new lease on life."
+    show WG happy
+    WG "Excellent. Well I'm glad you were able to enjoy it."
+    show WG pondering
+    WG "Hopefully they can sort out their set-up here soon. I'm feeling overdue for one myself."
+    MC "Well, perhaps we can arrange something sooner than you think."
+    show WG surprised-2
+    WG "What do you mean?"
+    MC "Well, I was thinking I could take a crack at it and give you one myself. I asked the masseuse for a rundown of the basics and she gave me this massaging gel that works on wet skin. What do you say?"
+    show WG happy
+    WG "That's incredibly considerate of you Keisuke."
+    show WG aroused
+    extend " I could definitely go for a back rub."
+    MC "Say no more."
+    "I went back to where I had dropped it near the pool's edge during the \"surprise reveal\" just now. I squeezed a good sized gob of it in my hand, making a gross slurping sound as it the remainder sucked back into the tube."
+    "It felt like cold hand sanitizer until I rubbed it in my hands and almost smacked my face when they slid past each other."
+    MCT "Damn. This stuff is like aerospace grade lubricant."
+    show WG happy
+    MC "Alright, let's give this a shot."
+    "Alice turned around for me, a view that exposed her many back rolls. "
+    "Come to think of it, rolls wasn't the word for it, these were whole loaves. A tiered stack of cascading fat, supported by her robust love handles— and there was a whole lot to love."
+    MCT "Okay, let's see here."
+    "I started with her neck and shoulders applying some light pressure to get the blood flowing, just like the masseuse said… but it was easier said than done, I was sliding all over the place."
+    MCT "Huh… turns out lubed up blubber isn't the most stable surface. I can see why the other masseuse had her reservations."
+    "I tried to locate her muscles, the trapezius specifically— if you could even refer to part of her form as muscle." 
+    "I mean I knew it was in there somewhere, but even kneading them with my entire hand there was no discernible tone, just a seemingly endless wellspring of flab."
+    show WG doubt
+    WG "Um, Keisuke, I know sometimes a \"light touch\" is required, but you can push a little harder."
+    show WG neutral
+    MC "Right, okay. Let me apply a bit more pressure."
+    "Truth be told I thought I was applying enough pressure. I was wrist deep into her back fat searching for knots and had yet to come across a solid surface."
+    MCT "Alright, maybe if I put my elbows into it."
+    show WG surprised
+    "{i}*SPLAT*{/i}"
+    "{i}*WUB*{/i}"
+    "Though smart idea in theory, the elbow strategy resulted in my arm sliding off her back flub causing me to face plant into her back bulges."
+    show WG surprised-2
+    WG "What was that?"
+    MC "Don't mind me, just getting a closer look."
+    "By this point I was just grasping at straws, rubbing to and fro anyway I could as I tried to navigate the dramatic changes in topography as her fat smooshed and sloshed about with each touch, rippling across her back with each movement of my hand."
+    "I reached under her arms, rubbing in counter clockwise circles. I knew there could be a lot of tension here, but instead of finding her lats, I was wrestling with two of the largest fat rolls on her upper back."
+    "Each one was the size of a Christmas ham, forming a perch that her flabby arms rested on. She was so fat her arms couldn't lay straight down, they hadn't for a long time, being pushed outward by her massive swells of back fat."
+    "Everything about her, so plumped and swelled with fat…"
+    MCT "Wait a second, is she?"
+    "I wasn't sure about it at first, I had my suspicious this morning, but after getting an up close look it was unmistakable— {w}She'd been getting fatter."
+    "My girlfriend, the fattest girl in the school, in the world, {i}in history{/i}{w} was still getting fatter."
+    show WG doubt
+    WG "Uh, Keisuke, I appreciate the \"extra\" attention to that one spot, but maybe we can move on to another spot that needs attention."
+    show WG aroused
+    "Alice reached back with her dainty pudgy fingers and guided my hands to her chest… or what I could reach of it."
+    MCT "Ah yes, the side boob massage, something I actually am an expert in."
+    "To describe her bosom as heaving would be an understatement. I was heaving with my arms and back just to lift them. Luckily, the lubricant made sliding under and up on top of them."
+    "They sloshed back and forth, smacking into each other as I wobbled them between my hands, as I attempted to see what I was doing from behind with my cheek resting on her pillowy shoulders."
+    show WG sly
+    WG "I think it's time for me to turn over."
+    "Alice turned around, facing me this time, guiding my hands up to her massive jugs to pick up where I left off."
+    MCT "On second thought, not jugs, these things are \"tanks\"."
+    "Alice's boobs were heavy, hell everything about her was heavy, but you wouldn't expect boobs to be difficult to press into the air." 
+    show WG aroused
+    "An all the more impossible task as they slid off my hands, causing them to smack against her fat belly with a heavy landing, sending shockwaves through her chest and down her engorged dome."
+    "I could feel each ripple and jostle of fat move through her down to me as my manhood was pressed against her belly, entirely engulfed in her fat, like the rest of me."
+    WG "{i}Ohh, Kei… Don't stop… This is all for you, remember?"
+    show WG surprised
+    "I didn't hesitate, having been given the go ahead I full on mawed those fat tiddies. Caressing them with my lips and my tongue as a let them smack me in the face like wrecking balls made of gelatin." 
+    show WG aroused 
+    WG "{i}Emph! Ooo!{/i}"
+    "Teasing her by kneading her pert nipples between my fingers, I went for it, latching on like I had just crawled across a desert without a drink in days, I sucked her fat teet."
+    WG "OhhhHHhh! Kei… Mmph!"
+    "I wrapped my tongue around her nipple, pumping on it like I needed it to survive, my entire face submerged up to my ears in tit fat. It was suffocating in the best sense possible."
+    show WG surprised-2
+    MC "Ah! {i}Whoo{/i}..."
+    WG "Finished already?"
+    MC "No… {i}Whew{/i}… Just needed to come up for air."
+    show WG happy-2
+    WG "Given your propensity for letting yourself drown, might I suggest you draw your attention a little lower…"
+    "Alice grabbed the sides of her belly and did a little sashay of her hips to further drive home the point."
+    show WG happy-2
+    WG "This is all yours, Keisuke. {i}Ever. Square. Centimeter."
+    MC "What can I say? I'm a lucky man."
+    WG "You better believe it."
+    show WG happy
+    "There it was in all its glory, the motherlode, a sealed vault containing the lion's share of her countless fattening feasts that fueled her body's insatiable growth to the point that it dominated her wide frame."
+    "Despite the water not even being chest high, I had to dip my head below the water just to reach with my arm to get under it."
+    "Emerging from the surface, I took a deep breath and braced myself to lift it…"
+    "Only to the whole mass effortlessly in my hands."
+    MCT "Huh?"
+    WG "Hehe, that tickles."
+    show WG surprised-2
+    MC "...The water."
+    WG "What about it?"
+    MC "You're not heavy in the water."
+    show WG sly
+    WG "That is how physics works, yes."
+    MC "Which means I can do {i}this{/i}"
+    show WG surprised
+    "I shook Alice's belly up and down like I was airing out a rug. It rippled and wobbled sending waves all across the pool as her fat rolls slapped into each other."
+    show WG happy
+    WG "Hey stop that! That tickles!"
+    show WG surprised-2
+    MC "{i}Don't{/i} stop that? Whatever you say."
+    show WG sly
+    WG "I know you heard me!"
+    "Up and down, side to side, her belly wobbled back and forth to the point it was beyond my control at this point. I just hung on for the ride like I was strapped to a beach ball in a bouncy castle."
+    show WG aroused
+    "As much as I was enjoying playing with her massive mound of fat, I could tell from the flush on her cheeks she must have been enjoying it just about as much as I was."
+    WG "Dear… this is nice and all, but I think it's my turn."
+    MC "Your turn? But I thought-"
+    show WG sly
+    WG "My turn to give you a massage that is."
+    MC "Oh. {i}Ohh{/}."
+    WG "Hand me that stuff."
+    MC "Here you go."
+    "I turned around, showing Alice my back. I wasn't sure how she was going to reach but if she wanted to massage me with her boobs I wasn't going to complain."
+    show WG doubt
+    WG "Um, no. Turn around."
+    MC "Huh?"
+    show WG sly
+    WG "Sit here."
+    "Alice pointed to one of the smooth stone ledges near the edge of the pool."
+    "{i}*SCURLP*{/i}"
+    "Alice squeezed out a big gob of the lube and wasted no time slathering up my rod."
+    MC "{i}Oh, God!{/i}"
+    "She stroked me up and down my shaft. I could feel every ridge and dimple of her puffy hands tightening around my cock— {i}fuuuck{/i} even her fingers were fat. I didn't even think a fat hand job was possible."
+    MC "Easy, Alice! I can't hold on forever like this."
+    show WG doubt
+    WG "Well I need to make sure you're fully covered."
+    show WG stern
+    WG "We're not going to make the same mistake the first time we tried this in the shower."
+    MC "Ugh, yeah, that didn't go so well. So how we doing this?"
+    show WG sly
+    WG "Like you said, I'm lighter in the water. I wouldn't normally entertain this in bed because it would crush you, but I've been curious to give it a try."
+    MC "What's that?"
+    WG "Lean back so we have more of the water column to work with."
+    MC "Okay."
+    MCT "My body is ready."
+    "Alice turned around and bent over spreading her thigh fat from the outside where she could reach, revealing her engorged mound with its pink slit surrounded by a set of generously padded lips."
+    MCT "Oh yeah, she's definitely gotten fatter."
+    "Alice backed up, guiding herself down slowly as I felt my member slide past her fat rolls, and with a few slight adjustments of my hips, into the slot."
+    show WG aroused
+    MC "Are we in?"
+    WG "Oh, yes! We certainly are."
+    "Alice proceeded to raise herself up— only to have her ass descend into freefall on top of my cock!"
+    MC "Oomph!"
+    MCT "My body was not ready."
+    "Alice's fat ass crashed on top of my hips, smothering me up to my chest. It was heavy, crushingly so, but with the buoyancy of her being partially submerged, it wasn't lethal."
+    "I reached up and around to grab the top of her hips, giving myself some kind of handle, and hopefully a bit of control."
+    show WG surprised-2
+    MC "So you wanted to try a little reverse cowgirl action, huh?"
+    show WG doubt
+    WG "Ugh. Why do these things have to have such weird names?"
+    show WG sly
+    WG "Oh who cares? If that's what you want to call it, stud. It's for you remember? {w}Now fuck me as hard as you want."
+    "And we were off to the races. Alice bobbed her ass up and down slamming the rest of my torso down into the water each time as she slid up and down dick." 
+    "I hung on to her hips for dear life as I bucked and gyrated with each thrust, slamming deeper into her each time."
+    show WG aroused
+    "There was so much fat to get through between my groin and her pussy. I was so deep into her that her thigh folds were wrapped around my balls." 
+    WG "Mmph… {i}Huff{/i}... {i}hooo{/i}"
+    "She was hungry for it. Each backwards thrust of her hips she got me to sink deeper. Deeper, until her ass was up to my face and my shaft finally hit the spot."
+    WG "{size=-6}Ahh{/size} {size=-3}Ahh{/size} Ahh {size=+3}Ahh{/size} {size=+6}Ahh{/size}"
+    show WG surprised
+    WG "Mmmmph… AHHHHHHHAAAHH!"
+    MCT "Holy fuck that was so loud! Everyone in the goddam ryokan must have heard that!"
+    "Feeling the gyrations emanating from her hips, causing her crushing ass to shake me like an earthquake as her lips tightened around my cock— I finally gave up the ghost and dumped a massive wad inside her as her sealed lips sucked me dry."
+    MC "UHHhhHHH… Ahhh…"
+    show WG aroused
+    "Alice dismounted once I went slack." 
+    show WG happy
+    extend " Floating along in the onsen like a giant beach ball in a pool, smiling at me the whole time."
+    WG "Feeling refreshed?"
+    MC "I think it's safe to say today has been the most \"refreshed\" I've ever felt."
+    WG "Well I'm glad you think so, but there's still more to go."
+    MC "More?"
+    show WG happy-2
+    WG "Like I said before, this is only a small part of it."
+    MC "Are you sure about that? Seems like that'd be the big part."
+    WG "Well the night is still young. There's still the manner of our dinner reservations."
+    MC "Dinner you say? I guess we better get cleaned up then."
+    show WG pondering 
+    WG "True…"
+    show WG sly
+    extend "But I think we still have time to fool around a little while longer."
+    jump daymenu
+
+label WG092:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

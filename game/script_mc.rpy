@@ -9967,6 +9967,7 @@ label global010_afterchoice:
 
 label global026:
     $setPregnant()
+    $disableRoute("PRG")#may need to remove when the "not the father" route is written
     scene Dorm Hallway with fade
     play music HigherEdu
     "I walked out of my door and turned to lock it, shoving my key down into my pocket while also throwing my bag over my shoulder."

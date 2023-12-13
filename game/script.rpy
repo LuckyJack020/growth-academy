@@ -63,7 +63,22 @@ transform slowease(start, end, time):
     subpixel True
     start
     easein time end
-    
+
+transform pacing(xSP):
+    easein xSP xoffset -200
+    xzoom -1.0
+    easein xSP xoffset 200
+    xzoom 1.0
+    easein xSP xoffset -100
+    xzoom -1.0
+    easein xSP xoffset 50
+    xzoom 1.0
+    easein xSP xoffset -100
+    xzoom -1.0
+    easein xSP xoffset 50
+    xzoom 1.0
+    repeat
+
 init python:
     preferences.set_volume("music", 0.65)
     preferences.set_volume("sound", 0.75)
