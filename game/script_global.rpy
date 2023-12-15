@@ -1504,6 +1504,8 @@ init 2 python:
 
     eventlibrary['GTSPRG001'] = {"name": "A Blooming Opportunity", "girls": ["GTS", "PRG"], "type": EventTypeEnum.OPTIONAL,"location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "GTS013"], [ConditionEnum.EVENT, "PRG013"]]]}
 
+    eventlibrary['GTSWG001'] = {"name": "A Study in Scarlet", "girls": ["GTS", "WG", "PRG"], "type": EventTypeEnum.OPTIONAL,"location": "classroom",    "priority": PrioEnum.NONE,                   "obsflags": ["size3"],                         "conditions": [[ConditionEnum.EVENT, "GTS013"]]}
+
     #Core
     eventlibrary['PRG001'] = {"name": "Overtime", "girls": ["PRG"], "type": EventTypeEnum.CORE,                          "location": "classroom",         "priority": PrioEnum.NONE, "sp": 0,     "next": "PRG002", "obsflags": [],       "conditions": []}
     eventlibrary['PRG002'] = {"name": "A Girl in Gray", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                     "location": "hallway",           "priority": PrioEnum.NONE, "sp": 0,     "next": "PRG003", "obsflags": [],       "conditions": []}

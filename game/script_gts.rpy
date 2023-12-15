@@ -12930,3 +12930,170 @@ label GTSPRG001_c1_after:
     MC "Take care girls."
     Girls "Bye, Hotsure-san."
     jump daymenu
+
+label GTSWG001:
+    scene Classroom with fade
+    play music Schoolday
+    "Class was almost done for the day, yet I was decidedly not looking forward to the ending."
+    MCT "I probably should've studied more for this…"
+    MCT "Alright, last question…"
+    MCT "…"
+    MCT "I don't know these words."
+    MCT "On second thought I {i}definitely{/i} should've studied."
+    play sound Bell
+    MCT "Crud. Not even five minutes to make something up."
+    show HR neutral with dissolve
+    HR "Alright, time's up. Hand in your quizzes on my desk on your way out of class."
+    show HR unique
+    "A collective whiney \"Awwwww!\" from the class sparked in me some bittersweet reassurance."
+    show HR neutral
+    HR "And no complaining. Two days is plenty of time to prepare for a quiz. You have only yourself to blame if you failed to study properly."
+    show HR unique
+    "I was in no position to argue, but he could have at least conceded it was way harder than a normal person would expect a quiz to be."
+    "I dropped my quiz off on Tashi-sensei's desk on my way out of class."
+    scene Hallway with fade
+    MC "Fare ye well, GPA, I hardly knew ye."
+    "Some of the students were still hanging around outside the classroom. Judging by their dejected looks,"
+    show BE sad at Position(xcenter=0.2, yalign=1.0) with dissolve
+    extend " most of them must have done about as well as I did."
+    show FMG sad at Position(xcenter=0.8, yalign=1.0) with dissolve
+    "Not that I gained anything from the misery of others, but admittedly I did feel a bit better knowing I wasn't the only one that bombed that quiz."
+    hide BE
+    hide FMG
+    with dissolve
+    show GTS happy with dissolve
+    "However, one face stood out among the dour and disappointed expressions."
+    MC "Hey, Yamazaki-san. You don't look particularly depressed. I take it you did pretty well?"
+    GTS "Good afternoon, Hotsure-san. You deem rightly. I feel particularly satisfied with my performance."
+    show GTS neutral
+    GTS "It was certainly a challenging quiz, but I was diligent in my preparation and now I enjoy the fruit thereof. How do you feel about your results?"
+    MC "Could have… been better."
+    MCT "Could have been a lot better, honestly."
+    GTS "Indeed? My apologies, I hope I haven't let you down as your study partner. Perhaps we ought to meet a bit more often."
+    MC "Well…"
+    WG "This is {i}unacceptable{/i}!"
+    show GTS surprised at Position(xcenter=0.2, yalign=1.0)
+    show WG angry at Position(xalign=0.5, yalign=1.0), Transform(xzoom=-1)
+    show PRG scared at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    "We looked over to see Alice staring down Aida while making sharp chopping gestures; the latter looked even smaller than usual with her stiff deer-in-the-headlights expression."
+    WG "First I find that my shirt was not properly pressed this morning, only to then realize you accidentally shrunk it in the wash."
+    WG "Now I learn, only moments ago, that you failed to write in the upcoming quiz, along with the appropriate study allotment for it, into my schedule this week."
+    show GTS angry at Transform(xzoom=-1)
+    GTS "{i}Must{/i} you berate Kodama-san so, Nikumaru-san? She had to take the same quiz you did. Your own due preparations surely cannot be her responsibility."
+    show WG stern
+    WG "Oh? Tell me then, Yamazaki-san, if she is entrusted with keeping my schedule, would that not then fall under her responsibilities?"  
+    show WG haughty
+    WG "Not that it is any of your business as to what tasks are to be delegated to {i}my{/i} assistant, anyway. Now if you don't mind, this matter doesn't concern you."
+    show WG stern
+    WG "As I was saying, before being interrupted, your recent performance has not been keeping up with my expectations."
+    show PRG sad
+    PRG "I-I'm really sorry Alice!"
+    WG "\"Sorry\" does not undo the damage caused by poor performance."
+    GTS "The only poor performance here is foisting {i}basic{/i} executive function on your whipping boy and haranguing her over the natural results."
+    MCT "Oooooooh, this is getting a little heated."
+    show WG angry
+    WG "Speaking of {i}basic{/i} executive functions. Why don't you just mind your own business? Aida is well compensated for her time and efforts. If you were paying for her services, perhaps I would appeal to you about the matter."
+    WG "But since {i}I{/i} am paying for her services, I am well within my rights to express my level of satisfaction with the services rendered, as I see fit."
+    PRG "I-It won't happen again. I-I'll do better."
+    show WG haughty
+    WG "I'm sure you will."
+    GTS "Taking advantage of a fellow student like this is far beyond even what I would have ever expected, even from someone who makes their entitlement so readily apparent to everyone around them."
+    show WG doubt
+    WG "Spare me the theatrics of whatever sense of concern you're attempting to project, because I'm not buying it." 
+    WG "As if I should have to hear it from {i}you{/i} of all people. {w}You accuse {i}me{/i} of being entitled, while at the same time thinking I ought to grovel for your approval as to what I choose to do with my own money and efforts."
+    show WG haughty
+    WG "I don't have to explain myself to you. No one is taken advantage of in a mutually agreed upon business relationship."
+    show WG stern
+    WG "I don't question how you choose to manage your own wealth. Perhaps you could extend me the same courtesy?"
+    GTS "\"Courtesy\", {i}indeed{/i}. Very well, I shall take my leave. Good afternoon, Nikumaru-san."
+    show GTS neutral
+    GTS "Take care, Hotsure-san, Kodama-san. I believe I shall retire to the gardens."
+    hide GTS with dissolve
+    menu:
+        "Follow Naomi":
+            stop music fadeout 5.0
+            "I thought about just going back to my dorm after the bitter exchange ended, but instead found myself following behind Naomi."
+            scene HallwayStairs 
+            show GTS neutral 
+            with fade
+            play music HigherEdu
+            "It wasn't hard— she was going slow, little regarding her surroundings. Nevertheless, as she turned to go out the door to the garden at the bottom of the ramp, her eye drifted to me and she turned."
+            show GTS surprised at Transform(xzoom=-1)
+            GTS "Oh, hello again. Did you wish to discuss something?"
+            MC "Just to ask if you're alright."
+            show GTS neutral 
+            GTS "I am, thank you. I do apologize for making a bit of a scene."
+            MC "I don't know if you did, I was just surprised. I've never seen you have any kind of conflict with anyone. Or express anger at all, for that matter."
+            GTS "Well, I'm glad to have made such a good impression up to this point."
+            MC "…Oh no, my impression of you hasn't diminished. You were right to stand up for Kodama-san like that."
+            $setAffection("GTS", 1)
+            GTS "Thank you. It's rather a weakness of mine, but I cannot idly suffer a bully to walk all over an innocent person."
+            MC "Is that really a weakness?"
+            show GTS embarrassed 
+            GTS "After a fashion. Sometimes, to offer a more wholesome perspective is just what a person needs to examine themselves and fortify themselves morally."
+            GTS "Sometimes, it is not."
+            MC "Ah, right… somebody's gonna lose face."
+            show GTS neutral 
+            GTS "Correct. Right conduct is at times obscure, and not always without cost."
+            MCT "She needs to be either a philosopher or a talk show host."
+            MC "So… you really think she's a bully?"
+            GTS "I do not believe that monetary compensation makes abuse impossible as Nikumaru-san seems to."
+            show GTS angry
+            GTS "At least, I pray she sincerely believes that."
+            if isEventCleared("GTSFMG001"):
+                MC "Does that mean it once again falls to you to fix your classmates' relationships?"
+                show GTS embarrassed 
+                "Her eyes went wide as if I'd patted her on her pearly cheek, too."
+                show GTS neutral 
+                GTS "Talk may be proverbially 'cheap', Hotsure-san, but it also has a tremendous capacity to effect change."
+                MC "True enough, Yamazaki-san. If you need help with… that, you know where to find me."
+                GTS "Kind of you to offer. For today, however, I should not keep you any longer."
+            else:
+                MC "Maybe she does. I don't think most people who act that way do it for no reason."
+                show GTS neutral 
+                GTS "That is a fine and generous perspective, Hotsure-san."
+                GTS "Regardless, I should think that enough rumination for today. I ought not keep you any longer."
+            pause 0.75
+            show GTS surprised 
+            GTS "Ah! Did you wish to spend some time this afternoon studying together?"
+            MC "Oh… yes, actually. I need to get to town to buy some shampoo, but can we meet in about two hours?"
+            show GTS neutral 
+            GTS "Of course. See you again soon, Hotsure-san."
+            "She bowed and resumed passing through the door, leaving me with my thoughts."
+            hide GTS with fade
+            MCT "It's almost as surprising as seeing her genuinely mad to see how quickly she switches it off."
+            MCT "It's like swallowing poison and expecting the other person to die… I bet that's what she'd say."
+            MC "Hm."
+            "I brought up the bus schedule on my phone and made my way to the entrance, my clarity of thought fading with the afternoon."
+            jump daymenu
+        "Stay behind":
+            $setFlag("GTSWG001_stay")
+            show WG neutral at Position(xcenter=0.2, yalign=1.0) with move
+            WG "As I was saying, before being interrupted {i}repeatedly{/i}, I am sure you will do better, Aida. I understand you are new to this role and do not have the years of professional experience of my usual assistants."
+            WG "It is to be expected there will be some snafus during the initial onboarding; however, I expect them to be increasingly infrequent and smaller in magnitude." 
+            PRG "R-Right, understood Alice."
+            WG "That being said, apart from today's uncharacteristic lapse, your performance thus far has been keeping with my expectations. I have no doubts you are the right person for the job.."
+            show PRG neutral
+            PRG "T-Thank you, Alice."
+            show WG haughty
+            WG "This incident however has brought to my attention that there is much for you to learn and that I need to be more diligent in cultivating your skills."
+            WG "Now, with all of that being said, there is no need to dwell on this incident further. Let us proceed with our scheduled afternoon tea."
+            show PRG excited
+            PRG "Y-Yes, that sounds fun."
+            show WG doubt 
+            "It appeared I caught Alice's attention as she half-turned to face me, nakedly annoyed."
+            WG "And do {i}you{/i} have something to say now?"
+            MC "Uh, no, not really."
+            show WG haughty
+            WG "Splendid. Goodbye, Hotsure-san."
+            MC "See you later."
+            show WG neutral 
+            "I replayed the whole encounter in my head as I walked away."
+            hide WG
+            hide PRG
+            with dissolve
+            MCT "Hm… afternoon tea? That was unexpected."
+            MCT "Unlike her and Naomi together. I didn't think they'd get along, but sheesh."
+            MCT "Well… guess I'd better start hitting the books again…"
+            jump daymenu
