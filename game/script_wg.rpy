@@ -25369,6 +25369,7 @@ label WG080_Afterchoice2:
 
 label WG081:
     $setProgress("WG", "WG082")
+    $setWGOutfit(OutfitEnum.CASUAL2)
     play music DayByDay
     scene School Front
     show WG neutral
@@ -25460,6 +25461,7 @@ label WG081:
     extend " You've proven you know how to act like a gentleman, I know you'll do fine."
     play music WG
     scene Hotel Lobby
+    $setWGOutfit(OutfitEnum.CASUAL)
     show WG neutral-2 at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1)
     with fade
     "Alice and I walked into the hotel lobby. There were a few guests seated at the tables for brunch, but other than that it was mostly empty, which allowed for the steady clack of high heels echoing across the room to grab my attention."
@@ -27671,6 +27673,7 @@ label WG085:
 
 label WG086:
     $setProgress("WG", "WG087")
+    $setWGOutfit(OutfitEnum.CASUAL)
     scene Dorm Hallway with dissolve
     play music DormLife
     "I came to pick up Alice for our planned date this afternoon."
@@ -27747,6 +27750,7 @@ label WG086:
     "I'm sure it wouldn't have phased Alice too much, given the robust layers of insulation she had, in addition to her winter coat. But I thought it best to not have us brave the windy winter weather on the way into town by foot."
     
     scene Bus Interior
+    $setWGOutfit(OutfitEnum.CASUAL)
     show WG surprised
     with fade
     "The bus ride into town didn't exactly start our date off on the right foot. Her most recent changes in size made negotiating the seemingly spacious doors problematic." 
@@ -27819,6 +27823,7 @@ label WG086:
         MC "Glad it was a hit then, cause I didn't really have a backup plan. Looks like we're almost there."
 
     scene Bakery Entrance with fade
+    $setWGOutfit(OutfitEnum.CASUAL)
     play music Peaceful
     "Luckily the entrance to the bakery proved more accommodating to its plumper patrons than the bus doors. A wise move considering the demographics of the island and the nature of their wares."
     show WG neutral-2 with dissolve
@@ -28142,6 +28147,7 @@ label WG086:
     pause .2
     $setTime(TimeEnum.NIGHT)
     scene Town Shops with fade
+    $setWGOutfit(OutfitEnum.CASUAL2)
     play music TwilightBright
     "We stepped out into the cool winter night. The biting wind from earlier in the day had died down, creating a surprisingly pleasant evening for a winter stroll."
     show WG neutral with dissolve
@@ -29413,7 +29419,7 @@ label WG090:
 
 label WG091:
     $setProgress("WG", "WG092")
-    $setWGOutfit(OutfitEnum.Casual2)
+    $setWGOutfit(OutfitEnum.CASUAL2)
     play music Peaceful
     scene Dorm Exterior with fade
     "I had been looking forward to this day all week. With the drama of the recent events, now thankfully well behind us, I was in need of a true weekend to recharge my batteries, since the last one wasn't exactly the most restful experience."
@@ -29523,6 +29529,7 @@ label WG091:
     WG "And here we are."
     scene black with fade
     pause .5
+    $setWGOutfit(OutfitEnum.CASUAL)
     play music DayByDay
     scene Ryokan Room with fade
     "I had attempted to slide open the exterior door to the ryokan for Alice, but no sooner had I touched the door than two staff members flung them fully open for us, whisking us off to our private room."
@@ -29890,9 +29897,9 @@ label WG091:
     "There was so much fat to get through between my groin and her pussy. I was so deep into her that her thigh folds were wrapped around my balls." 
     WG "Mmph… {i}Huff{/i}... {i}hooo{/i}"
     "She was hungry for it. Each backwards thrust of her hips she got me to sink deeper. Deeper, until her ass was up to my face and my shaft finally hit the spot."
-    WG "{size=-6}Ahh{/size} {size=-3}Ahh{/size} Ahh {size=+3}Ahh{/size} {size=+6}Ahh{/size}"
+    WG "{size=-6}Ahh{/size}{w} {size=-3}Ahh{/size}{w} Ahh {w}{size=+3}Ahh{/size} {w}{size=+6}Ahh{/size}"
     show WG surprised
-    WG "Mmmmph… AHHHHHHHAAAHH!"
+    WG "Mmmmph… {size=+20}AHHHHHHHAAAHH!{/size}"
     MCT "Holy fuck that was so loud! Everyone in the goddam ryokan must have heard that!"
     "Feeling the gyrations emanating from her hips, causing her crushing ass to shake me like an earthquake as her lips tightened around my cock— I finally gave up the ghost and dumped a massive wad inside her as her sealed lips sucked me dry."
     MC "UHHhhHHH… Ahhh…"
