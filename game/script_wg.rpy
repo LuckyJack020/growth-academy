@@ -29790,7 +29790,7 @@ label WG091:
     show WG aroused
     "Alice reached back with her dainty pudgy fingers and guided my hands to her chest… or what I could reach of it."
     MCT "Ah yes, the side boob massage, something I actually am an expert in."
-    "To describe her bosom as heaving would be an understatement. I was heaving with my arms and back just to lift them. Luckily, the lubricant made sliding under and up on top of them."
+    "To describe her bosom as heaving would be an understatement. I was heaving with my arms and back just to lift them. Luckily, the lubricant made sliding under and up on top of them effortless despite their crushing weight."
     "They sloshed back and forth, smacking into each other as I wobbled them between my hands, as I attempted to see what I was doing from behind with my cheek resting on her pillowy shoulders."
     show WG sly
     WG "I think it's time for me to turn over."
