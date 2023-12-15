@@ -2862,8 +2862,10 @@ label MC005:
     "{i}CSSH! CSSSSH!{/i}"
     MC "..."
     "I reached down and turned the door knob, pushing the door in."
+    scene black with fade
+    $setTime(TimeEnum.NIGHT)
+    pause 0.2
     scene Dorm Tomoko with fade
-    #$setTime(TimeEnum.NIGHT)
     "Behind the door was a sea of pitch black dark. Amidst it, the only light was a square shaped laptop light bouncing up onto one wall."
     "Based on what I could see, blackout curtains were yanked shut over the window, along with what appeared to be a sweatshirt flung up on the curtain rod."
     $setTomoOutfit(OutfitEnum.CASUAL)
@@ -2891,7 +2893,7 @@ label MC005:
     Tomoko "Yes, Dad."
     MC "Egh..."
     "I walked over to her blinds and threw them open."
-    #$setTime(TimeEnum.DAY)
+    $setTime(TimeEnum.DAY)
     MC "There."
     Tomoko "Uuugh..."
     MC "Come on, Sis. You could use some sun."
@@ -7424,6 +7426,1378 @@ label MC011:
     "It was quite a bit to take in. I didn't have all the answers, but after listening to Hageshi-sensei, I at least felt better that my time here might help me find some."
     jump daymenu
 
+label MC013:
+    scene Dorm Exterior with fade 
+    play music MC
+    pause 1
+    "I tapped my fingers against the page of my book, trying to do something that at least stimulated my brain a little."
+    "The text sure as hell wasn't cutting it."
+    "Skimming to the end, I turned the page to the next and started in."
+    "History was my last final that I had to bash my way through."
+    "All of the others had come and gone, and while not exactly a pleasant experience, I hadn't wanted to tear my hair out during the test taking process... well, at least for the most part."
+    "Biology with Tsubasa was cut and dry. Simple. Exactly what had been in class. No more, no less."
+    "Math was... fine. I mean, it was math. I was good at it, but still. Not exactly a massive excitement draw."
+    "But, Hageshi-sensei wasn't a bad teacher by any means, so it made it way more tolerable than having to learn from someone who didn't bother explaining anything."
+    "Economy and civics, though... yeah. Total dumpster fire."
+    "I'd made it through, but I'd gone back to my dorm and taken the fattest nap of my life after, then woke up feeling like I'd lost a brain cell or two during the process."
+    "Thankfully, I hadn't had any physical fitness type classes, so I didn't have to go through any of that nonsense."
+    "I set my book down, looking at the fountain in front of me."
+    MCT "40 days... more or less."
+    MCT "All that time as a free man. No studying, no classes..."
+    "I stretched my back, holding my book as my arms shuddered from the pull."
+    MCT "Last one is in an hour. After that, all the free time I could ask for."
+    "I looked back down, referencing my notebook and looking back to the text."
+    MCT "Alright. Jōmon, then Yayoi, then Kofun."
+    MCT "Jōmon, Yayoi, Kofun. Jōmon, Yayoi, Kofun... got it."
+    "I looked back at my book, seeing a side note about the name Yayoi coming from the name of the archeological sites in Tokyo where pottery from the age was discovered in the late 19th century."
+    MCT "Huh. Always thought the name of the district came from the name of the historical period. That's fun."
+    MCT "Did I go there at some point?"
+    MCT "Maybe on one of those boring-ass field trips with Imai-sensei or something."
+    MCT "... That wouldn't shock me, to be honest."
+    "I turned the page once more."
+    MCT "Alright... Nara Prefecture. Or, Yamato Province, during that time."
+    if routelock == "BE":
+        scene black with fade
+        UNKNOWN "Guess boobs~"
+        UNKNOWN "I-I mean, guess who... ugh..."
+        MC "Is the factor affecting your tongue too?"
+        UNKNOWN "My tongue slipped. You can't tell me you've never messed up a joke."
+        MC "No. Never have. Comedic genius over here."
+        scene Dorm Exterior
+        show BE neutral
+        show NoHairpinBE
+        with fade
+        "Honoka pulled back, her plush boobs pulling away from my back, neck, and well, most of my reachable upper body."
+        MC "Hey, I wasn't done guessing yet."
+        show BE disoriented
+        BE "I mean... want me to put them back?"
+        MC "If you're offering. I could use the support."
+        "Honoka walked around and sat on the bench, kissing me on the cheek."
+        show BE happy
+        BE "Whatcha working on?"
+        MC "Cramming for the exam, which I'm shocked to not see you doing."
+        BE "I read a little last night."
+        BE "That does explain your slow responses today, though."
+        MC "Well, you can have my phone and text yourself back, if you'd like."
+        show BE seductive
+        BE "Ooh. That's a big step, Kei-chan. Letting someone have your phone is opening up all of your secrets to them."
+        MC "Well, I think putting your boobs on someone's neck is a big step too."
+        show BE embarrassed
+        BE "Ehehe... true~"
+        show BE happy
+        BE "I'm going to head to class. Wanna walk with me?"
+        MC "Yeah, I may as well. I'm not sure how much more I can read of this for now."
+        "I slipped all of my books into my bag and zipped it, then got up and took Honoka's hand."
+        MC "There."
+        "The two of us started toward the main buildings, hand in hand."
+    elif checkAffection("BE", ">", 6) and not routelock == "BE":
+        MCT "Beginning in-"
+        show dummy with hpunch
+        MCT "AGH?!"
+        BE "Oops~"
+        show BE happy 
+        "I sat back after being bumped from the back, looking backwards."
+        MC "Well, that's one way to say good morning. Suddenly. Boobs."
+        BE "Ehehe... cramming for the exam?"
+        MC "Mhm. Just taking a quick glance."
+        show BE shrug
+        BE "Total snoozers?"
+        MC "... Yep."
+        BE "Well, I'm heading to class. You coming?"
+        MC "Yeah, I may as well. My head's full."
+        "I stood up and re-packed my bag, then started off with Honoka."
+    elif checkAffection("BE", "<=", 6) and not routelock == "BE":
+        MCT "Beginning in the..."
+        "A large shadow, with two roundish oblong shapes on it, loomed up over my book."
+        MCT "... Weird looking cloud."
+        "I sat up-"
+        show dummy with hpunch
+        pause .5
+        show BE surprised
+        MC "Oh, shit! I'm sorry, Honoka!"
+        show BE surprised
+        BE "N-No! I'm sorry!"
+        show BE neutral
+        BE "I-I was going to lean over and cover your eyes. Doing the whole 'guess who' thing, you know?"
+        show BE sad
+        BE "But then I stopped because it was probably going to be awkward."
+        BE "Then, you sat up and... it got awkward anyway."
+        show BE worried
+        BE "Don't worry about the bump. That... that's been happening a lot lately."
+        MC "So, we're even then?"
+        show BE neutral
+        BE "Yeah. Guess so."
+        $setAffection("BE", 1)
+        BE "Studying for the exam?"
+        MC "Mhm. It's about as exciting as it sounds."
+        BE "Well, I'm just heading over to class. Feel ready?"
+        MC "Mm... yeah, about as much as I can."
+        "I packed my bag and stood up."
+        MC "Let's roll."
+        "The two of us set off toward class."
+    scene Campus Center
+    show BE shrug
+    show NoHairpinBE
+    with fade
+    play music ClearSkies
+    MC "Hey. Question for you."
+    BE "What's up?"
+    MC "About the Yayoi period-"
+    show BE angry
+    BE "Uhh... Kei-chan? I'm... not really the biggest history buff. I'm not sure how much help I'll be here."
+    MC "No, no. Not about the history itself."
+    MC "I was reading about the origins of the name, and its ties to the district in Tokyo."
+    MC "Apparently the period was named after some archeological sites found during that time."
+    MC "I have this weird feeling that I went to the sites once. Did we do that back in Imai-sensei's class?"
+    show BE neutral
+    BE "I... think we did, actually. That sounds familiar."
+    BE "Wasn't that the one where Hina-chan was scratched by Admiral Sniffsnoot?"
+    MC "Yeah, that's right. God, that goes back..."
+    MC "There was that museum at the Bunkyō ward with all those exhibits."
+    MC "It was-"
+    show BE shrug
+    BE "Ungodly boring?"
+    MC "Uh... yeah, definitely."
+    show BE happy
+    BE "Imai-sensei organized that trip, Kei-chan. What did you expect?"
+    MC "True!"
+    "Honoka snickered beside me as I laughed along with her, turning to look over at her."
+    if routelock == "BE":
+        "My eyes traveled from her legs up her body, passing over her massive chest and up to her face. She looked up a little, her bright eyes dancing in the sun."
+        MCT "Lucky guy, over here. Very lucky."
+        MCT "Cute girlfriend. Summer break on the horizon. I'm set."
+    else:
+        "My eyes traveled from her legs up her body, halting on her massive chest."
+        MCT "Something's... different."
+        MCT "She's... probably just bigger again."
+        MCT "Kind of wild that that's something I can just blow off now."
+        MCT "But damn... she's massive now. And I thought she was big when we first met up again. Shit..."
+    show BE sad
+    BE "I wonder how he's doing..."
+    MC "Imai-sensei? Probably his usual. Just taking it day by day."
+    show BE happy
+    BE "I meant Admiral Sniffsnoot, dummy."
+    BE "That cat was always wild."
+    BE "I don't even want to think about Imai-sensei. He made us read our notes out loud!"
+    MC "Hey, our secret code came out of that. Don't diss it."
+    show BE angry
+    BE "I can diss as I please."
+    show BE neutral
+    BE "And more like 'our gibberish,' to be honest."
+    MC "In any case, I've seen that cat hanging around the vending machines back home."
+    BE "Isn't he like twenty by now?"
+    MC "Maybe not that old, but he hangs out there when I stop to grab my favorite tea."
+    show BE embarrassed
+    BE "Ooh~"
+    BE "Kei-chan has a favorite teeeeeaaa~"
+    BE "From his favorite vending machine too~"
+    MC "It's good tea. Try it sometime."
+    "By now, we saw the gates ahead of us and stepped through."
+    MC "... I just wish this exam was over already."
+    show BE neutral
+    BE "It's like ripping off a bandage, Kei-chan. It'll be over soon."
+    BE "Whatcha got planned for summer?"
+    if getFlag("global000_library"):
+        show BE angry
+        BE "Hrm... gonna waste it in the library?"
+        MC "I'm... surprised you remembered that. But, no plans yet."
+    if getFlag("global000_beach"):
+        show BE happy
+        BE "Gonna check out the beach at all?"
+        MC "Huh... good memory."
+        MC "That'd be fun. I'll be honest, I haven't really thought about it much."
+        BE "Apparently there's a beachside village. I heard a few other girls talking about it. A lot of students go there in their spare time."
+        MC "Good to know..."
+        if routelock == "BE":
+            MCT "I'd love to take her there sometime."
+    if getFlag("global000_museum"):
+        show BE neutral
+        BE "Gonna look for a museum?"
+        MC "Haha. Sure. I'm shocked you remembered that, by the way."
+        MC "Really though, I don't have any plans figured out yet."
+    "I reached out to get the door, turning to Honoka."
+    if routelock == "BE":
+        BE "Well, I know what you {i}should{/i} be planning to do with your free time."
+        MC "And what's that?"
+        show BE embarrassed
+        BE "Spend it with meee~"
+        MC "Sorry, no PDA on academy grounds, Ma'am."
+        "I put my hand on Honoka's back, shoving her through the door."
+        show BE surprised-2
+        BE "Wha-ah! Hey! HEY!"
+        BE "That's no way to treat a lady!"
+        scene Gate Front
+        show BE neutral
+        show NoHairpinBE        
+        with fade
+        "I smiled as I followed her inside, taking her hand again."
+        MC "You know I'm planning to hang out with you, oh my fair lady."
+        show BE happy
+        BE "... Damn right."
+    else:
+        show BE happy
+        BE "Thanks, Kei-chan. Such a gentleman."
+        "Honoka stepped through as I followed her in."
+    scene HallwayStairs with fade
+    stop music fadeout 1.0
+    "We stepped inside, turning down the main hall."
+    play music Schoolday fadein 2.0
+    show BE neutral
+    show NoHairpinBE
+    with dissolve
+    if routelock == "BE":
+        BE "For real, though... are you planning to stay on the island for break?"
+        MC "I'm going to, yeah."
+        MC "I wouldn't want to miss all of the time I could be spending with you."
+        show BE sad
+        BE "Are... are you sure, Kei-chan?"
+        BE "I wouldn't want to... y'know... take time away that you could spend with your family."
+        MC "I actually already talked to them about it. It's all good."
+        MC "I couldn't imagine spending the break away from you. Plus, Tomo is sticking around too."
+        show BE embarrassed-2
+        BE "Aw... Kei-chan..."
+        "Honoka let go of my hand and slid under my arm, putting it around her shoulders and nudging into my side."
+        BE "You're the bestest."
+    if routelock == "GTS":
+        MC "I have been thinking though. I'm probably going to stick around the island. I'd love to spend some time with Naomi."
+        show BE happy
+        BE "That's sweet, Kei-chan. I'd... imagine that traveling with her would present some challenges."
+        MC "Yeah... probably."
+        MC "Even still, she just has a way of making me smile. It wouldn't feel right leaving her alone here all summer."
+        MC "Besides, Tomo is hanging out too."
+        BE "Ahh. Okay."
+        show BE neutral
+        BE "Do you think that Yamazaki-san will be taking the exam remotely?"
+        MC "Well, I'm not fully up to date on her dorms, but she wasn't for the other exams."
+        BE "It's alright that you don't know, Kei-chan."
+        show BE wink
+        BE "All those butterflies and love in the air~"
+        BE "Having your head in the clouds is a common thing."
+        MC "You're..."
+        MC "... Yeah, I got nothing. I'm too brain-fried from studying to think of a witty comeback."
+        show BE happy
+        BE "I am really happy for you guys, though. You make a sweet couple."
+        MC "Thanks, Honoka."
+        MC "What are your plans, by the way?"
+        show BE neutral
+        BE "I'm gonna stay on the island too."
+        BE "I thought about going home, but... nah."
+        BE "In any case, you and I will probably run into each other at some point."
+        MC "Or, you'll run into me."
+        show BE wink
+        BE "... More like bounce."
+        "I shook my head and kept walking."
+    if routelock == "AE":
+        MC "Actually, I have been thinking that I'm going to stick around the island for break. Spend a little time with Shiori-chan. Besides, Tomo is sticking around anyway."
+        show BE neutral
+        BE "How... are things going with Matsumoto-san, Kei-chan?"
+        MC "Well... it's weird."
+        MC "Despite how reserved and official she makes our relationship feel.... I can't help but get the feeling there's a level of intimacy behind it I've never really experienced before. In a way, even the most subtle interactions feel like big moments."
+        show BE wink
+        BE "Well, I know one side of her that you have to like. And that side isn't too hard to notice~"
+        "I snickered, shaking my head."
+        MC "What are your plans, by the way?"
+        show BE neutral
+        BE "I'm gonna stay on the island too."
+        BE "I thought about going home, but... nah."
+        BE "In any case, you and I will probably run into each other at some point."
+        MC "Or, you'll run into me."
+        show BE wink
+        BE "... More like bounce."
+        "I shook my head and kept walking."
+    if routelock == "FMG":
+        MC "I have been thinking that I might spend the time on the island instead of heading home. Hang out with Akira for a while."
+        MC "Besides, Tomo is staying too."
+        show BE neutral
+        BE "How are things going with her? Mizutani-san, I mean."
+        BE "I... don't really know her all that well, to be honest. But she seems nice. Especially from those 'icebreakers' that we did."
+        MC "Ahh... Akira is just fun. She's a good time."
+        MC "I wouldn't miss that time for anything."
+        show BE happy
+        BE "I'm happy to hear that, Kei-chan. I hope things go well."
+        MC "Thanks, Honoka."
+        MC "What are your plans, by the way?"
+        show BE neutral
+        BE "I'm gonna stay on the island too."
+        BE "I thought about going home, but... nah."
+        BE "In any case, you and I will probably run into each other at some point."
+        MC "Or, you'll run into me."
+        show BE wink
+        BE "... More like bounce."
+        "I shook my head and kept walking."
+    if routelock == "PRG":
+        MC "I have been thinking that I'll probably stay on the island for break. Hang out with Aida."
+        MC "Plus, Tomo's gonna be here too."
+        show BE neutral
+        BE "How is everything going with Kodama-san?"
+        MC "Well, we're still getting our ducks in a row. Especially after everything that's happened."
+        MC "But, I do know that... I'm the happiest man on Earth whenever I'm with her, and I wouldn't trade that for the world."
+        show BE embarrassed
+        BE "Ohh... that's so sweet, Kei-chan...!"
+        show BE happy
+        BE "Kodama-san is such a sweetheart. I'm sure she feels so grateful that you've been by her side for all of this."
+        BE "And... I'm proud of you for being there too, you know? Stepping up."
+        MC "Thanks, Honoka."
+        MC "What are your plans, by the way?"
+        show BE neutral
+        BE "I'm gonna stay on the island too."
+        BE "I thought about going home, but... nah."
+        BE "In any case, you and I will probably run into each other at some point."
+        MC "Or, you'll run into me."
+        show BE wink
+        BE "... More like bounce."
+        "I shook my head and kept walking."
+    if routelock == "WG":
+        MC "I have been thinking, actually. I'm probably going to stay for break. Spend some time with Alice."
+        MC "Plus, Tomo is staying behind too."
+        show BE neutral
+        BE "How are things going with Alice?"
+        MC "Well... it took some time, not gonna lie."
+        MC "But, there've been some... developments."
+        show BE surprised
+        BE "DEVELOPMENTS?!"
+        BE "Oooh! Put your favorite tea on! I have to hear this!"
+        MC "I... urgh..."
+        MC "Well... to keep it simple, going to the music club's concert was a very good choice."
+        show BE embarrassed
+        BE "Oooh..."
+        show BE happy
+        BE "Well... I'm happy for you, Kei-chan. I hope things keep coming together like they are."
+        MC "Thanks, Honoka."
+        MC "What are your plans, by the way?"
+        show BE neutral
+        BE "I'm gonna stay on the island too."
+        BE "I thought about going home, but... nah."
+        BE "In any case, you and I will probably run into each other at some point."
+        MC "Or, you'll run into me."
+        show BE wink
+        BE "... More like bounce."
+        "I shook my head and kept walking."
+    scene Hallway
+    show BE wink
+    show NoHairpinBE
+    with fade
+    "The two of us had crossed through the halls and stopped in front of room 3-B."
+    "In the middle of the hall was Shiori, along with two other girls."
+    hide NoHairpinBE
+    hide BE
+    with dissolve
+    show AE neutral at Position(xcenter=0.25, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.5, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    if getFlag("Meet_Yuki") or routelock == "AE":
+        "I recognized one of them as Yuki-san, Daichi's sister."
+    else:
+        "One of the girls was rather short, and seemed to be constantly animated, moving about slightly as she spoke with Shiori."
+        "She had shoulder length brown hair, and... rather large lips."
+        "... And she really seemed to enjoy talking."
+    if getFlag("Meet_Minori") or routelock == "AE" or routelock == "GTS":
+        "Beside her, I looked over to Minori-san, standing quietly beside the other two."
+    else:
+        "Beside her was another girl with a clipboard, light brown hair, and glasses."
+        "Glancing down, I saw that her skirt was... quite long for the summer time."
+        MCT "Parents must be pretty formal or something."
+    hide AE
+    hide Yuki
+    hide Minori
+    with dissolve
+    show BE neutral
+    show NoHairpinBE
+    with dissolve
+    "Honoka and I passed them and walked down toward the classroom itself."
+    pause 1
+    hide NoHairpinBE
+    hide BE
+    with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.5, yalign=1.0)
+    show PRG unsure at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Off to one side of the hall, Akira and Alice stood, talking quietly amongst each other."
+    "On the other side, Aida sat on the floor, her textbook in her hands."
+    "Aida tugged her shirt down a little, the fabric bunching at the top of her belly. She straightened it, only for the fabric to pull up again as she brought her book up."
+    "She ran her hand down her belly, pulling the fabric taut once more."
+    hide FMG
+    hide WG
+    hide PRG
+    with dissolve
+    "I glanced around."
+    "Class 3-B was all present and accounted for, save for two."
+    "Daichi was missing, likely off doing... Daichi stuff."
+    "And, Naomi was nowhere to be seen."
+    show BE surprised
+    show NoHairpinBE
+    with dissolve
+    BE "Oh! Shoot!"
+    BE "I forgot, I have to run somewhere quick, Kei-chan!"
+    BE "I'll see you in the exam!"
+    MC "W-Wait, hold on a sec! Is everything okay?"
+    show BE neutral
+    BE "Yeah. Everything is fine."
+    show BE sad
+    BE "I... It's kind of embarrassing, but... I lost my lucky hairpin."
+    BE "I've been looking everywhere for it, but... no luck."
+    BE "I still have to check the cooking club kitchen, so I was going to go check quickly."
+    MC "I knew something was different about you today."
+    if routelock == "BE":
+        show BE wink
+        BE "I knew what you were really looking at~"
+        show BE neutral
+        BE "That doesn't matter though. I'm just gonna go look quickly."
+        MC "Good call. Especially with us having been there yesterday."
+    else:
+        MC "But wait, why in the cooking club kitchen?"
+        BE "Well... I left the archery club recently, and I joined the cooking club in its place."
+        BE "I was practicing a little bit yesterday, so I think I probably just dropped it somewhere."
+        show BE happy
+        BE "But yeah, once I get a bit of practice under my belt, I'll be your girl when it comes to desserts."
+        if routelock == "PRG":
+            MCT "Might be next to impossible to replace Aida in the kitchen, but she can give it a shot."
+            MC "Sounds good. Good luck with the search."
+    hide NoHairpinBE
+    hide BE
+    with dissolve
+    "Honoka nodded and headed off down the hall towards the kitchen."
+    MCT "Wonder if she'll last longer in this club than the others..."
+    if routelock == "GTS":
+        "I took out my phone and scrolled to Naomi's number, tapping the call icon."
+        pause 2
+        GTSCell "Hello?"
+        MC "Hey! It's me. How's your morning?"
+        GTSCell "It has been fair. I trust you're ready for the exam?"
+        MC "About as ready as I can be."
+        MC "I was just wondering. Are you going to be coming, or will you be taking yours remotely?"
+        GTSCell "Mm... well."
+        GTSCell "Hotsure-san, are you willing to keep a secret? And not tell a soul?"
+        MC "I... yeah, of course."
+        GTScell "I have your word?"
+        MC "Of course. What's up?"
+        GTSCell "I've already taken my exam."
+        GTSCell "Here in the Caverns, we all gathered where we normally view, erm... \"live streams\" of our classes, and we took our exam there, with a staff member serving as proctor, of course."
+        MC "I see."
+        GTSCell "I was asked to not mention anything so as not to leak any answers to questions and such. I'm sure you understand."
+        MC "I do. You have my word."
+        GTSCell "Thank you."        
+        MC "If I may, though... was it hard?"
+        GTSCell "All I'll say is do not let preconceptions cloud your mind."
+        MC "I... huh?"
+        GTSCell "Good luck, Hotsure-san."
+        MC "Ah... thank you?"
+        "The line went dead as I took my phone down, looking at the screen."
+        MC "Well... alright."
+
+label MC013_menu:
+    if getVar("MC013_Split") < 2:
+        "I looked around to the other girls in the hall."
+        MC "There's... still time until the exam, I suppose."
+        menu:
+            "Help Honoka" if not getFlag("MC013_BE"):
+                $setFlag("MC013_BE")
+                $setVar("MC013_Split", getVar("MC013_Split") + 1)
+                jump MC013_BE
+            "Talk with Shiori" if not getFlag("MC013_AE"):
+                $setFlag("MC013_AE")
+                $setVar("MC013_Split", getVar("MC013_Split") + 1)
+                jump MC013_AE
+            "Talk with Alice and Akira" if not getFlag("MC013_WGFMG"):
+                $setFlag("MC013_WGFMG")
+                $setVar("MC013_Split", getVar("MC013_Split") + 1)
+                jump MC013_WGFMG
+            "Talk with Aida" if not getFlag("MC013_PRG"):
+                $setFlag("MC013_PRG")
+                $setVar("MC013_Split", getVar("MC013_Split") + 1)
+                jump MC013_PRG
+            "Focus on Studying" if not getFlag("MC013_Study"):
+                $setFlag("MC013_Study")
+                $setVar("MC013_Split", getVar("MC013_Split") + 1)
+                jump MC013_Study
+    else:
+        jump MC013_aftermenu
+
+label MC013_BE:
+    "I looked down the hall."
+    MCT "... Think I got time."
+    "I took my phone out and check it."
+    MCT "Yeah... if I hurry."
+    "I hurried down the hall, heading around the corner and down toward the cooking club kitchen, easily able to spot it from the light being on."
+    play music BE
+    scene Cooking Classroom
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show NoHairpinBE at Position(xcenter=0.25, yalign=1.0)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    "Walking in, my eyes immediately landed on Honoka... well, her rear end anyway."
+    "She was bent over, looking inside of a cabinet."
+    if routelock == "BE":
+        "Kanami stood at the next station, checking through various drawers."
+    else:
+        "At the next station, another girl stood with a cooking club apron on, checking drawers along the counter."
+        "I quickly noticed how... similar these two seemed to be."
+        pause .5
+        "... In at least two ways."
+        "However, Honoka's similarities stuck out more... mainly due to her similarities being larger."
+    "I walked in, heading toward the counter."
+    MC "Find anything, Honoka?"
+    BE "Oh, nothing yet, Kei-chan. Still going."
+    MC "Gotcha."
+    if routelock == "BE":
+        MC "Good morning, Tozakura-san. Nice to see you."
+        Kanami "Same to you, Hotsure-san."
+    else:
+        MC "Pardon me, Sensei. I didn't mean to intrude if you two were discussing something."
+        MC "Just thought I'd help my friend find her hairpin."
+        UNKNOWN "Eheheh!"
+        BE "Kei-chan..."
+        MC "Hm?"
+        BE "She isn't a teacher. She's wearing our uniform."
+        MC "She's..."
+        show BE happy
+        BE "Kanami Tozakura. Cooking club member."
+        MC "I... ah, crap."
+        MC "I'm sorry, Tozakura-san."
+        if isEventCleared("BE006") or getFlag("Meet_Kanami"):
+            BE "You made {i}literally{/i} the exact same mistake last time you met her."
+            MC "Rub it in. Kei-chan has a bad memory, I get it."
+            Kanami "It's okay. It's okay."
+            Kanami "That mistake is made... quite often, for some reason."
+            MC "Huh... alright."
+        else:
+            Kanami "It's okay. It's okay."
+            Kanami "That mistake is made... quite often, for some reason."
+            MC "Huh... alright."
+            $setFlag("Meet_Kanami")
+    MC "Do you have exams today as well?"
+    Kanami "I do. Economy and Civics in... a little under four hours from now."
+    Kanami "Cooking has always been relaxing for me, so I was relieved to see the kitchen available during finals."
+    MC "Eesh. Good luck. Economy and Civics is... definitely a tough one to chew. I got mine out of the way already, though."
+    Kanami "Would you happen to have any advice for me?"
+    MC "Honestly? What Sensei said before the exam."
+    MC "Everyone has a few questions from that big list, and they're different for every student."
+    MC "Mine were related to finances and macroeconomy."
+    show BE angry
+    BE "Mine were about the National Diet and some boring legislation stuff."
+    Kanami "Mm..."
+    MC "I'm just glad it's only for one semester."
+    Kanami "Right..."
+    Kanami "Anyway... did you find it, Inoue-san?"
+    "Honoka pushed herself up with one arm on the counter. Her chest rose and fell from the effort."
+    BE "Hahh... hmgh..."
+    BE "Not yet."
+    show BE neutral
+    pause .5
+    BE "It'll be alright, Kanami-san."
+    BE "I'm sure you've got yourself all studied up for it. And, that's really the best you can do for it."
+    Kanami "... Perhaps."
+    Kanami "You didn't find it under the counter?"
+    show BE angry
+    BE "No. But, I did find some dust bunnies under the stations."
+    MC "Is it open under there?"
+    show BE worried
+    BE "Just a sliver. It's tight... especially for me. Can't really lay flat enough..."
+    Kanami "I suppose I won't be much help either down there. I'll check by the refrigerator."
+    MC "Alright. Lemme take a look."
+    "I laid down on my front, taking my phone out and shining it under the stations."
+    MC "Alright..."
+    MC "Oop. Think I got it."
+    show BE surprised
+    BE "Really?!"
+    MC "Yep! Here, hold this."
+    "I handed my phone up to Honoka and really dug my hand back, just flicking the edge and making the clip slide closer where I could grab it."
+    "I pulled back out, shaking off my hand and handing the clip to her."
+    show BE happy
+    BE "That's it!"
+    BE "Thank you, Kei-chan! Thank you!"
+    "Honoka took a piece of paper towel and wet it in the sink, wiping down the clip on all sides."
+    show BE embarrassed-2
+    BE "My mom gave me this clip as a part of a set right before I came here, so it means a lot to me."
+    Kanami "That's... very sweet, Inoue-san."
+    Kanami "I understand that feeling well."
+    "Kanami brushed her necklace forward, showing the prominent windmill shape."
+    Kanami "It was from my younger siblings. They all pooled together their allowances and purchased it as a gift."
+    Kanami "I wear it every day."
+    show BE happy
+    BE "That's sweet. I'm sure they miss their big sister."
+    "Kanami nodded and turned back to the stovetop."
+    MC "We'd best head off, Tozakura-san. Nice seeing you."
+    Kanami "You as well, Hotsure-san. Goodbye."
+    hide Kanami with dissolve
+    "I walked with Honoka back to the door."
+    show BE neutral at altMove(0.5, 0.5)
+    show NoHairpinBE at altMove(0.5, 0.5)
+    if routelock == "BE":
+        "I glanced over to her, as she was examining her clip."
+        MC "May I?"
+        show BE neutral
+        BE "May you... what?"
+        "I reached out for the clip, which Honoka handed to me."
+        MC "Turn a bit."
+        show BE embarrassed
+        BE "Eheh... Kei-chan~"
+        "I smiled and reached up to her head, taking the piece of hair and gently clipping it into place."
+        hide NoHairpinBE
+        MC "There we are."
+        show BE happy
+        BE "Thank you."
+        "She felt the clip, as if for reassurance, then glanced back."
+    else:
+        "I looked over as Honoka went to clip her hair back into place."
+        hide NoHairpinBE
+        "Honoka glanced back, then to me."
+        show BE neutral
+    BE "I think I might stick around here for a bit."
+    "She nodded with her head back toward Kanami."
+    BE "She kind of looks like she needs a friend."
+    MC "You want me to hang out too?"
+    BE "Nah. It's okay, Kei-chan. I appreciate it, but why don't you head back?"
+    BE "I can handle this."
+    MC "Alright. I'll see you there."
+    scene Hallway with fade
+    "I turned and headed back down the hall."
+    jump MC013_menu
+
+label MC013_AE:    
+    "I turned toward Shiori, walking back down the hall a little."
+    play music AE
+    show AE neutral at Position(xcenter=0.25, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.5, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    AE "-have had the forms turned in. It is not that difficult to be on time."
+    if routelock == "AE":
+        Yuki "He's coming over, ma'am! Your ship-mate."
+        show AE surprised
+        AE "My wh-"
+        Yuki "I shipped you two from the first time you mentioned him. And I was right!"
+        show AE neutral
+        AE "Utagashi-san, I'll remind you to be wary of gossip. Remember last time with your roommate?"
+        MC "Pardon me. I hope I'm not interrupting anything."
+        AE "It's alright, Hotsure-san."
+        Yuki "I'm sorry, ma'am. I'll try to conduct myself better in the future..."
+        "Shiori nodded in a pleasant sort of way."
+        MC "Hello Utagashi-san, Tomoe-san. It's nice to see you both again."
+        Minori "You as well, Hotsure-san."
+    else:
+        MC "Pardon me, Matsumoto-san. I hope I'm not interrupting anything."
+        AE "You're... ahem. It's quite alright, Hotsure-san."
+        AE "Oh, excuse me. This is Yuki Utagashi and Minori Tomoe. They're members of the student council, as well."
+        MC "It's wonderful to meet you both. My apologies for the interruption."
+        if getFlag("Meet_Yuki"):
+            Yuki "It's okay! We've already met! You're the roommate of my brother, after all!"
+            Yuki "And, you're the brother of my roommate, too! So double association!"
+            MC "I... guess so, yeah."        
+            Yuki "I hope you have a good day, Hotsure-san! And I hope my brother behaves well for you!"
+            MCT "... I'm surprised she's as chatty as she is. Especially with... those."
+            MC "Well, I think Daichi is doing okay. At least to my knowledge. We don't see each other {i}that{/i} often."
+            MC "He's... kind of got his own schedule going."
+            if getFlag("RMRoute_Unlocked"):
+                MCT "Not the time to mention that he's had my help once or twice."
+        else:
+            $setFlag("Meet_Yuki")
+            Yuki "It's nice to finally meet you, too! It's about time that I actually meet my brother's roommate!"
+            Yuki "Daichi has told me a lot about you."
+            MC "Well... hopefully all good."
+            Yuki "All good things!"
+            Yuki "Your sister told me some about you as well! She's my roommate too, in case you didn't know."
+            Yuki "She hasn't told me a lot, but she's said a little bit!"
+            MC "Of course." 
+        if getFlag("Meet_Minori") or routelock == "GTS":
+            "I turned to Minori."
+            MC "Oh, we've met."
+            MC "How is the work going with Ryoko-san?"
+            Minori "Well, my duties with the student council have been overlapping quite a bit with Ryoko-san's schedule, so work has been few and far between with her."
+            Yuki "I heard that Tanaka-san is going to be working on a project with Izumi-chan!"
+            Yuki "I can't wait to see it!"
+            Yuki "Matsumoto-san, why didn't you take their offer to participate?"
+            Yuki "You could memorize the lines so easily! And you'd look so elegant on camera!"
+            show AE aroused-4
+            AE "I... Utagashi-san..."
+            show AE neutral
+            AE "Anyways..."
+        else:
+            $setFlag("Meet_Minori") 
+            MC "It's nice to meet you."
+    Yuki "But anyways. I think that Blackburne-san should-"
+    Yuki "Ach... oop..."
+    "Yuki's eyes went wide, as she looked over to me."
+    AE "It's alright, Utagashi-san. I don't mind."
+    Yuki "I... I was just going to say that I think Blackburne-san should be a little more cooperative."
+    Yuki "She told me that she won't comply with the requirements and that you should... um... 'bugger off.' Whatever that means."
+    Minori "It's western slang, I believe."
+    Minori "Blackburne-san was born in the United Kingdom. That's apparently a common phrase there."
+    Yuki "Oh!"
+    if isEventCleared("FMG009"):
+        MC "I know her. And, if memory serves me properly, she's from Manchester, England."
+        AE "That's correct. Her mother is from Japan, and she has family on the mainland."
+    else:
+        AE "Indeed. Blackburne-san is from Manchester, in the northwestern part of England."
+        AE "Her mother is from Japan, and she does have family on the mainland."
+    Yuki "Ugh... my head is spinning. I'll have to figure out more on my own."
+    show AE angry-4 
+    AE "Utagashi-san..."
+    Yuki "A-Anyway, I tried to be assertive, but... Art-head kind of just blew me off."
+    Yuki "I tried to let her know too that she isn't following the Academy's code of dress either."
+    show AE angry
+    Yuki "Her stockings are practically shredded, and she is in desperate need of a new bra, because her nipples stick out like they could poke someone's eye out!"
+    Minori "Utagashi-san, that is her-"
+    Yuki "But, it turns out that her nipples are actually her growth factor!"
+    Yuki "Then I started thinking about what must happen when it gets cold out! Or, if she gets kind of frisky."
+    Yuki "Like, it must be really bad, then..."
+    pause 2.5
+    Yuki "... Anyway, she got really mad then, and accused the council of 'body-shaming students with factors.' And she told me that it wasn't her fault that her nipples are so big."
+    Yuki "I... kind of just gave up then."
+    AE "Uta-"
+    Yuki "Oh! I need to be going! I have my biology final soon!"
+    Yuki "Good luck on your exams, everyone!"
+    show Yuki neutral at altMove(0.3, 0.85)
+    pause 0.3
+    hide Yuki with dissolve
+    AE "Utagashi-san. No running in the-"
+    show AE neutral
+    AE "Hahh..."
+    MC "Well, I'd best be on my way as well. Thank you for the chat."
+    show AE pondering
+    AE "Best of luck on your exam, Hotsure-san."
+    "I headed back away from them down the hall again."
+    AE "Thank you for offering to sign up for the elective with Utagashi-san, by the way. I'm quite pleased with your decision."
+    Minori "Utagashi-san is my friend. Same with Ryoko-san. It was a no-brainer."
+    scene Hallway with fade
+    jump MC013_menu
+
+label MC013_WGFMG:    
+    play music WG
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "I walked over toward Alice and Akira."
+    "Akira leaned up against one wall, as Alice stood more toward the middle."
+    WG "To be honest, I was rather surprised to see it come together so well. Especially from such a small academy... Well, relatively speaking of course." 
+    show WG stern
+    extend " But still, it should have been much better."
+    if routelock == "WG":
+        MC "The concert?"
+        show WG happy-2
+        WG "Precisely."
+        MC "It was pretty cool to see. Especially your performance, Alice. Quite the showstopper."
+        if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
+            MC "Even Mizawa-san acknowledged your skills to me afterwards."
+            show WG haughty
+            WG "Yes, well, even a broken clock is right twice a day I suppose."
+            show WG neutral-2
+            WG "But thank you, Keisuke, I'm glad you enjoyed it."
+        else:
+            MCT "Got a kiss at the end, too. Worth going just for that."
+            WG "Thank you, Keisuke. I'm glad you enjoyed."
+        $setAffection("WG", 1)
+        MC "Anyways. Didn't mean to interrupt. Just wanted to pop over and say hey."
+        WG "You're quite alright, Keisuke."
+        FMG "Study your ass off last night, Kei?"
+        MC "More or less. You?"
+        show FMG disappointed
+        FMG "Eh... let's not talk about that."
+        show FMG neutral
+        FMG "But anyway, full house for the show, Alice?"
+        show WG doubt
+        WG "No. And that's just the thing. Only about a third of the auditorium was filled. I was sure there would be more. Especially after all those fliers I had to help put up."
+        show WG pondering
+        WG "Come to think of it... there was someone missing who I had assumed would be present."
+        show WG stern
+        WG "{i}Ahem.{/i}"
+        show FMG surprised-2
+        FMG "Hey look, I had something come up. It needed my attention right then."
+        show WG doubt
+        WG "... Regardless, I had hoped for more."
+    elif routelock == "FMG":
+        FMG "Hey, Dude. Brain full?"
+        MC "Sure, let's go with that. Good morning, Alice."
+        WG "Good morning, Keisuke."
+        MC "I'm sorry. I didn't mean to interrupt you guys. Just wanted to pop over. Say hey."
+        FMG "You never said \"hey.\""
+        MC "Hey-"
+        show FMG happy
+        FMG "See, there you go."
+        "I shook my head."
+        WG "But, anyways. Akira and I were just discussing the concert that the music club put on, Keisuke."
+        MC "Oh, seriously?"
+        WG "Yes."
+        show FMG neutral
+        FMG "Lady over here soloed for it."
+        MC "Wow. Did it go well?"
+        show WG haughty
+        WG "I was satisfied with my performance, yes."
+        MC "Awesome. I'm surprised I didn't hear about this. I feel like a concert here would be big time news."
+        show WG doubt
+        WG "That's just it. The auditorium was only about a third of the way full."
+        WG "Attendance was... laughable."
+        show WG stern
+        WG "I don't blame you at all, Keisuke. However, one of you here could have done their due diligence and informed their better half of the concert. Perhaps made a bit of a date of it?"
+        show FMG surprised-2
+        FMG "I-"
+        show WG doubt
+        FMG "L-Look! I... had something come up with my roommate! She left something on the stove too long!"
+        FMG "Kei-kun came over to help me clean up! The thing blew up all over the kitchen!"
+        MC "That's true, Alice. Should've seen the amount of dish soap we blew through."
+        show WG sly
+        WG "My. Well, I hope your kitchen wasn't too tarnished, Akira."
+        show FMG flex
+        FMG "It was fine. Kei came in clutch."
+        show WG pondering
+        WG "Yes, well. I'd best brush up on my studies, as well. I'd planned to read through with Aida, but of course I ended up chatting."
+        show FMG neutral
+        "As Alice bent to grab her bag, Akira mouthed a 'thank you' to me over Alice's bent over back. I smiled and gave her a nod."
+        $setAffection("FMG", 1)
+    else:
+        FMG "Oh, hey dude. How's your morning?"
+        MC "Not bad. It's exam day. So, nothing super stellar."
+        FMG "True."
+        MC "I'm sorry, didn't mean to interrupt you guys. Just wanted to say hey."
+        WG "It's alright, Keisuke. I was just discussing the music club concert with Akira."
+        MC "Music club concert?"
+        WG "Yes."
+        show WG neutral-2
+        WG "It was a rather large event for us. Our first concert."
+        MC "I see. Did you perform a piece, then?"
+        show WG haughty
+        WG "A solo, actually. I felt quite good about my performance,"
+        show WG doubt 
+        extend " but the attendance was... laughable."
+        WG "We only filled a third of the auditorium."
+        FMG "Oof."
+        show WG stern
+        WG "Says the girl who knew about it but still didn't show."
+        show FMG sad
+        FMG "Look, I..."
+        FMG "The roommate left something on the stove and it boiled over. I had to clean up the place."
+        WG "Sure."
+        MC "Well, I'm sorry I wasn't there, Alice. I'll be up front, this is my first time hearing about it."
+        show WG neutral
+        WG "I do appreciate the honesty, Keisuke. Thank you."
+        $setAffection("WG", 1)
+    show WG neutral
+    WG "Having said all of that, the principal was quite upset by the attendance as well."
+    show WG doubt
+    WG "I personally feel that the music club president made quite a few mistakes leading up to this. If the promotion had been handled properly, it could have been a massive turnout."
+    if routelock == "WG":
+        MC "Some people just don't know how to ask for help I guess."
+        show WG happy-2
+        WG "Yes, exactly!"
+    show WG haughty
+    WG "One of the {i}many{/i} examples of why electing her was a mistake."
+    FMG "You could have done it better, you're saying?"
+    WG "... Yes, I am."
+    FMG "I get that. I'm having a similar thing with another girl who's been giving me a real headache."
+    if routelock == "FMG":
+        MC "You mean Natsuko?"
+        show FMG angry
+        FMG "Yeah. Her."
+    show FMG disappointed
+    FMG "She's just... a brat."
+    FMG "It's almost like she purposely tries to be a pain in the ass, just to get a rise out of me or something."
+    WG "I could say the same in my case."
+    MC "Well, gives you all the more motivation to outdo them, yeah?"
+    show FMG neutral
+    FMG "See... Kei-kun gets it."
+    show WG happy-2
+    WG "Simple, but sometimes simple is what's best. Good form, Keisuke."
+    MC "Sometimes I have a moment or two. Good luck on the exam, you two."
+    WG "Same to you."
+    scene Hallway with fade
+    jump MC013_menu
+
+label MC013_PRG:    
+    play music PRG
+    show PRG unsure with dissolve
+    "I glanced across the hall at Aida."
+    "She had her book beside her, and was going between sitting with her legs on her side, and trying to negotiate sitting cross-legged."
+    "Her belly luckily sat low enough that it blocked any possible up-skirts."
+    "I walked over to her."
+    if routelock == "PRG":
+        MC "Hey."
+        show PRG worried
+        MC "Is it... safe to be sitting on the ground like that?"
+        PRG "It feels okay. I-I just wanted to sit and rest, and... t-there aren't any benches or anything in the hall, so... this seemed like the best option."
+        MC "Gotcha."
+        MC "Mind if I join you?"
+        PRG "I-If you want..."
+        "I sat down beside her on the ground."
+        MC "... How are you feeling?"
+        PRG "... I'm okay, Keisuke."
+        PRG "How are you?"
+        MC "I'm... a little rattled, yet. I talked to my dad last night."
+        PRG "H-How did it go?"
+        MC "Well... he doesn't think we're insane."
+        MC "He's sort of at a point of 'it's our situation to handle.' Which honestly, seems pretty good."
+        show PRG unsure
+        PRG "Okay..."
+        MC "... I'm proud of you."
+        show PRG worried
+        PRG "I'm... I'm proud of you too."
+        PRG "Did you find enough time to study last night?"
+        MC "I mean, I had to. Couldn't just blow it off since we had stuff going on."
+        PRG "Right."
+        show PRG unique
+        PRG "I've been up since four..."
+        MC "Jesus..."
+        show PRG neutral
+        PRG "I-I'm going to go take a nap right after this."
+        MC "Good."
+        MC "Well, I'll let you study. I just wanted to check in."
+        PRG "Okay."
+        "As I went to get up, Aida tugged on my arm."
+        PRG "Hey..."
+        MC "Hm?"
+        "Aida waved me back down with one hand, so I leaned down, turning my head so my ear was closer to her mouth."
+        pause .5
+        show PRG blush-2
+        "I felt my face flush hot as Aida kissed my cheek, holding for a moment before pulling her head back."
+        PRG "T-Thank you for checking in..."
+        "I smiled sheepishly and went to stand up, glancing over across the hall."
+        if getVar("MC013_Split") >= 2:
+            show FMG happy at Position(xcenter=0.25, yalign=1.0)
+            show WG happy at Position(xcenter=0.75, yalign=1.0)
+            show PRG embarrassed
+            FMG "Oooh. Bro just got a kiss~"
+            "Alice smiled at me knowingly as I got up."
+        scene Hallway with fade
+        jump MC013_menu
+    else:
+        MC "Hey, Kodama-san. Morning."
+        show PRG worried
+        PRG "Oh... g-good morning, Hotsure-san."
+        MC "You mind if I sit by you?"
+        PRG "I-I don't mind. Go ahead..."
+        MC "Thank you."
+        "I sat down nearby her, taking my bag off."
+        "I glanced over."
+        "Aida was adjusting her shirt, feeling underneath to make sure that it was tucked into her skirt."
+        "She adjusted the band of her skirt, lining the buttons up."
+        "Then, she went up her belly, making sure they were straight."
+        MC "I don't mean to pry, but... is it okay for you to be sitting on the ground... in your condition?"
+        show PRG insecure
+        PRG "I-I just needed to rest... and there aren't any benches in the hall, s-so this was the best I could do."
+        MC "Ah. Gotcha."
+        MC "How did your studying go?"
+        show PRG worried
+        PRG "F-Fine."
+        MC "Stay up late studying? I know I was up for a while."
+        PRG "Not too late."
+        MC "Cool."
+        MCT "... Well, alright."
+        "Aida held her book in her right hand. Her left, the one closest to me, was gently rubbing the front of her belly as she read."
+        MC "How are you... feeling? Like, with everything?"
+        PRG "..."
+        pause .25
+        show PRG unique
+        pause .5
+        PRG "It's been... d-difficult, Hotsure-san."
+        PRG "I..."
+        PRG "I-I got so big so fast... I-I'm bigger than most women at nine months..."
+        PRG "I've been... b-bumping into things a lot, and... just trying to get used to the feeling of my... my belly being so big."
+        MC "Right..."
+        show PRG worried
+        PRG "I-I did have my first ultrasound recently, though..."
+        MC "You did?"
+        PRG "Mhm... I went with one of my friends..."
+        MC "That must have been really cool. Getting to see your baby."
+        show PRG nervous
+        PRG "Actually... {w}I'm having three."
+        MC "Triplets? Wow..."
+        PRG "Mhm..."
+        MC "So... does your factor like... affect them at all?"
+        show PRG unsure
+        PRG "..."
+        PRG "So... m-my factor..."
+        PRG "It... it causes my belly to grow... really big."
+        PRG "It's why I... went from having a mostly flat stomach to being... well, like this..."
+        MC "So... your belly is the main part of it?"
+        PRG "Mhm... b-but it... it can affect other... p-parts, too."
+        MC "Got it..."
+        MC "Thank you for telling me. You didn't have to if you didn't feel comfortable."
+        show PRG worried
+        PRG "It... it's okay, Hotsure-san."
+        PRG "I... I can't... h-hide it forever. And... I-I'm sure word would have gotten out eventually..."
+        MC "Well, I think you're very brave in all of this."
+        show PRG neutral
+        PRG "T-Thank you, Hotsure-san."
+        MC "No problem. I'll leave you to it."
+        scene Hallway with fade
+        jump MC013_menu
+
+label MC013_Study:
+    play music LastBell
+    "Taking a place on the ground near Aida, I pulled out my book and flipped it open."
+    MCT "Alright... Asuka period... {w}there you are."
+    "I looked over Emperor Kinmei, reading down."
+    MCT "The first emperor with a verifiable reign period."
+    MCT "Kind of would think they would have tracked that a little better, but eh, whatever."
+    pause 2
+    "Five or so minutes later, I shut the book."
+    MCT "Yeah, that's all I got."
+    $setSkill("Academics", 1)
+    scene Hallway with fade
+    jump MC013_menu
+
+label MC013_aftermenu:
+    play music LastBell
+    show HR neutral at Position(xcenter=0.25, yalign=1.0)
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Glancing up at the sound of footsteps, I watched Tashi-sensei come around the corner, closely followed by Takamura-sensei."
+    Takamura "Just think about it, okay Tashi-chan? It could really benefit her, and I think it might help some other students, too."
+    "Tashi's brow furrowed."
+    show HR annoyed
+    HR "I told you. Talk to the principal. He has the contact for the JSL specialist."
+    show HR unique-2
+    Takamura "Noguchi-san already tried to reach out, but there was some hiccup in the process, and he can't actually come to the island until the third semester at the earliest."
+    Takamura "So, either we find someone else, or we just... wait."
+    show HR unique
+    Takamura "Tashi-chan."
+    "Takamura grabbed Tashi's arm, tugging him to a halt."
+    Takamura "... She's going to need this. And, there's another girl who likely will too."
+    "Hitomi-san and Noguchi-san both agree. Nurses have been tracking their growth, and even they're amazed by how fast they're both progressing."
+    show HR neutral
+    HR "Look... Takamura-san, I understand. Okay, I do."
+    HR "I get the problems that can come from something of that nature, and JSL likely would help."
+    HR "But, I'm not the right choice for the job."
+    show HR unique
+    show Takamura reassuring
+    Takamura "I understand what you're saying, but I insist that you are."
+    show Takamura neutral
+    Takamura "Noguchi-san told me your reasoning, but I still see you as the optimal choice."
+    Takamura "You know the language already. You had to use it yourself. You're certified in it, for goodness sake."
+    Takamura "And, you've been here long enough to know what these people are going through. You know their struggles... even if you don't think you do."
+    show HR neutral-2
+    HR "Well, I'm glad that Manabu-san went and blabbed to you about all of that."
+    show HR unique-2
+    Takamura "I..."
+    Takamura "Listen, there are five students interested already."
+    show HR neutral-2
+    HR "Five?"
+    show HR unique
+    Takamura "Yes. The two I mentioned already, plus the roommate of one of them. Then, a student in my homeroom, and one student council member volunteered."
+    Takamura "I also tried to convince the brother of one of the students, plus the roommate of another to join in. But, I haven't heard back yet."
+    if getFlag("Meet_Yuki") or routelock == "AE":
+        MCT "... Is that Yuki girl one of those that signed up?"
+        MCT "If that's right... then Daichi would be the brother."
+        MCT "And the roommate... that couldn't be Tomo."
+        MCT "No way in hell. Way too much work for her."
+    else:
+        MCT "Is one of those girls Tomo's roommate? The lip girl?"
+        MCT "It's possible, I guess."
+        MCT "Was she the one talking with Shiori?"
+        MCT "And... a roommate..."
+        MCT "Nah... that's not her then. Tomo would never."
+    show HR neutral
+    HR "Students resign from classes all the time. That list isn't finalized."
+    show HR unique
+    Takamura "So when it is, is that a 'yes?'"
+    show HR neutral
+    HR "It's an 'I'll think about it.'"
+    show HR unique
+    Takamura "Well, whenever you make up your mind..."
+    "Takamura unfolded a small piece of scrap paper in her hands, handing it to him."
+    Takamura "My number. Let me know."
+    "Takamura headed down the hall, toward us."
+    Takamura "Good morning, Kodama-san."
+    PRG "G-Good morning, Sensei."
+    show Takamura neutral at altMove(0.5, 0.85)
+    pause 0.5
+    hide Takamura with dissolve
+    stop music fadeout 1.0
+    show HR neutral
+    HR "... Alright. Let's head in, guys."
+    scene Classroom with fade
+    play music Schoolday
+    "I walked to my seat along with the others, sitting down without a word."
+    "As I set my bag down, I looked back at Naomi's empty seat, taking in how weird it was to not have her behind me."
+    "I took out a pen, setting it on my desk and sitting down."
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "To my side and front, both Alice and Shiori were ready and waiting for the exam, their pens out and clicked."
+    hide WG
+    hide AE
+    with dissolve
+    show FMG happy with dissolve
+    "Looking toward her, Akira smiled at me cheesily, flashing a thumbs up."
+    hide FMG with dissolve
+    show PRG neutral with dissolve
+    "Near the front, though I couldn't see her face, I could see Aida picking at the clip on her pen, her thumb flicking it back a bit."
+    hide PRG with dissolve
+    show BE happy with dissolve
+    "Across the room, Honoka had her bag in her lap and was digging for something, most likely a pen."
+    "As she tried to peer in, her boobs got in the way, and she had taken to just digging in blindly."
+    hide BE with dissolve
+    show RM smug with dissolve
+    "Behind her, Daichi was-"
+    MCT "Wait... where the hell did he come from?"
+    if getFlag("RMRoute_Unlocked"):
+        MCT "... He didn't crawl his ass through a window, did he?"
+        "I sighed. It didn't even surprise me anymore."
+    if isEventCleared("RM005"):
+        MCT "Maybe he was clearing shit off of his board. I'll have to ask him later."
+    hide RM with dissolve
+    show HR neutral with dissolve
+    HR "You have an hour."
+    HR "Once you're finished, get up, bring your exam to me, and leave."
+    show HR neutral-2
+    HR "I would not recommend cheating."
+    HR "Anyone with cheat sheets, or sneaking your phone out to look up answers on Wigglepedia will receive an automatic F."
+    show HR unique
+    "Tashi walked to each desk, setting an exam down on each, then went back to the front and clicked a timer on his phone."
+    show HR neutral
+    HR "You may begin."
+    $setVar("MC013_Score", 0)
+    hide HR with dissolve
+    play music DifferentPaths
+    "I turned the paper over, looking down."
+    "In what year did the middle Jōmon period begin?"
+    menu:
+        "3,520 BC":
+            $setVar("MC013_Score", getVar("MC013_Score") + 1)
+            "I checked 3520 BC and moved on."
+        "250 AD":
+            "I checked 250 AD and moved on."
+        "1185 AD":
+            "I checked 1185 AD and moved on."
+        "1600 AD":
+            "I checked 1600 AD and moved on."
+    show HR unique with dissolve
+    "I glanced up at Tashi-sensei."
+    "He had the paper from Takamura in one hand, staring at it."
+    "Rolling his eyes, he tossed it to the corner of his desk as I glanced back down."
+    hide HR with dissolve
+    pause 1
+    "Which prefecture was known as Yamato province?"
+    "I checked \"Nara Prefecture.\""
+    MCT "Look at the big brain lad over here."
+    scene black with fade
+    pause .25
+    scene Classroom with fade
+    "I glanced up at the paper. I'd made some good headway already."
+    "Yayoi period is named after:"
+    menu:
+        "Island":
+            "I checked Island, glancing at the next question."
+        "Civil War":
+            "I checked Civil War, glancing at the next question."
+        "Province":
+            "I checked Province, glancing at the next question."
+        "Archeological sites in Tokyo":
+            $setVar("MC013_Score", getVar("MC013_Score") + 1)
+            "I checked the last answer, glancing at the next question."
+    show HR unique with dissolve
+    "I stole another glance up at Tashi-sensei."
+    "He was looking down at his phone on the desk, rubbing the back of his head as he flicked his fingernail a little."
+    hide HR with dissolve
+    show AE neutral with dissolve
+    "In front of me, the chair squeaked as Shiori rose up from her desk."
+    if routelock == "AE":
+        "I took a moment to admire Shiori's jiggling rear as she set her paper down, then bowed and left the classroom quickly."
+    hide AE with easeoutleft
+    "The name of the Kofun period originates from:"
+    menu:
+        "Pottery":
+            "I checked Pottery."
+        "Burial Mounds":
+            $setVar("MC013_Score", getVar("MC013_Score") + 1)
+            "I checked Burial Mounds."
+        "Shrines":
+            "I checked Shrines."
+        "Clan's Name":
+            "I checked Clan's Name."
+    if routelock == "GTS":
+        "I didn't want to move my head and make Tashi-sensei think I was cheating, but I thought about Naomi being seated behind me... and how much I missed just the idea of her being there."
+        MCT "Stiff upper lip. It's what she'd want right now."
+        "I let out a small sigh, getting back to it."
+    if routelock == "AE":
+        "I eyed forward, still mildly amazed at how quickly Shiori had finished."
+        MCT "Not that surprising, of course. It's Shiori."
+    if routelock == "PRG":
+        show PRG neutral with dissolve
+        "I peered to the front, where Aida was seated straight up in her seat, one hand on her belly as she wrote with the other."
+        "I smiled gently."
+        MCT "Can't wait to spend all summer with her..."
+        hide PRG with dissolve
+    if routelock == "FMG":
+        show FMG neutral with dissolve
+        "I glanced forward a bit, looking at Akira seated behind Aida."
+        "I smiled. Just a few more questions till a summer full of time with her."
+        hide FMG with dissolve
+    if routelock == "WG":
+        show WG pondering with dissolve
+        "I looked sideways over at Alice, thinking about how excited I was for summer, which I hoped would prove more opportunities to  get to know her better... outside of work that is..."
+        MCT "Hmm, getting to spend all that time with her. All of it..."
+        hide WG with dissolve
+    if routelock == "BE":
+        show BE neutral with dissolve
+        "I smiled, glancing over at Honoka out of the corner of my eye."
+        MCT "All summer with her..."
+        hide BE with dissolve
+    show WG neutral with dissolve
+    "Beside me, Alice stood up and walked her paper to the front, bowing to Tashi-sensei."
+    if routelock == "WG":
+        MCT "... God, she looks better almost every day."
+    hide WG with easeoutleft
+    "Who is the first historically verifiable Japanese monarch?"
+    menu:
+        "Emperor Jimmu":
+            "I made my final choice."
+        "Emperor Sujin":
+            "I made my final choice."
+        "Emperor Kinmei":
+            $setFlag("MC013_Kinmei")
+            $setVar("MC013_Score", getVar("MC013_Score") + 1)
+            "I made my final choice."
+        "Emperor Meiji":
+            "I made my final choice."
+    show HR unique with dissolve
+    "At the front, Tashi-sensei was slowly typing something into his phone, shaking his head slightly, the scrap paper on the desk in front of him."
+    hide HR with dissolve
+    show FMG neutral with dissolve
+    "Akira got up next, setting her paper on Tashi-sensei's desk. Like the others, she bowed, then left."
+    hide FMG with easeoutleft
+    "Glancing down, I looked toward the next-"
+    MCT "Oh... I'm done."
+    if getVar("MC013_Score") == 4:
+        $setFlag("MC013_Perfect")
+    "I glanced forward, getting up from my desk and taking my bag."
+    show PRG insecure with dissolve
+    "Before I got to the front, Aida wriggled in her desk and got up slowly. She walked to Tashi-sensei's desk and set her exam down, bowing slowly then leaving ahead of me."
+    hide PRG with dissolve
+    "I followed suit and set mine down, bowing and leaving."
+    show RM neutral-2 with dissolve
+    "Daichi stood right behind me, scaring me half out of my wits as he set his exam down."
+    "I shot him a slightly suspicious look, then stepped out into the hall as Daichi gave me a look in return."
+    play music Schoolday
+    scene Hallway
+    show FMG angry at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    FMG "Okay! Who was the right answer for the emperor question? I swear it was Jimmu. He was the first one."
+    show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "Not the first {i}historically verifiable{/i} one."
+    show WG neutral
+    show AE neutral with dissolve
+    AE "Yes. Jimmu is a mythological figure and literally the first. Logic would point to Kinmei being the correct choice."
+    show FMG neutral 
+    hide WG with dissolve 
+    show PRG worried at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Alright, alright. Kodama-san, and the two boys. What did you guys put?"
+    PRG "For...?"
+    FMG "The emperor question."
+    hide PRG with dissolve
+    show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    RM "It's Sujin. Obviously."
+    AE "That does not fit the question, Utagashi-san. Scholars believe it's possible that he may have existed, but not definitively. Emperor Kinmei is the one who is widely known as historically verified."
+    hide FMG with dissolve
+    show WG pondering at Position(xcenter=0.25, yalign=1.0) with dissolve
+    WG "Wasn't he widely accepted as existing, but his reigns weren't documented?"
+    RM "Agh. You're splitting hairs. You have no idea whether it's referring to the date of their tenure or confirmed existence."
+    if getFlag("MC013_Kinmei"):
+        MC "I chose Kinmei, as well."
+    else:
+        MC "It's alright, Mizutani-san. Pretty sure I botched that one too."
+    hide AE
+    hide WG
+    with dissolve
+    show FMG neutral
+    show PRG worried at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    FMG "What did you choose, Kodama-san?"
+    PRG "Um... Kinmei."
+    hide PRG with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0) with fade
+    FMG "Inoue-san! Who did you pick for the emperor question?"
+    show BE shrug
+    BE "I had no idea. I just picked Meiji."
+    show BE happy
+    BE "Thanks for the talk earlier though, Kei-chan. Your little history quiz about the Yayoi period and the dig site got me some guaranteed points for sure."
+    MC "Hah. Welcome."
+    scene Hallway
+    show RM neutral
+    with dissolve
+    "Off to one side, Daichi sat looking at a bulletin board stuck on the wall."
+    MC "What're you looking at, Specs?"
+    RM "... Don't call me that."
+    RM "Notice anything interesting here?"
+    "I glanced at the board."
+    "In between notices of lost items, club meetings, and events in town and the like was a large group of fliers."
+    "For summer work, please consult the Early Bird convenience store in Satoyama Village, located near Seichou Academy. Contact Chiyo Tsubasa with any questions or concerns you may have."
+    if getFlag("Meet_Chiyo"):
+        MCT "Wait, isn't that Tsubasa-sensei's wife?"
+    else:
+        MCT "Huh... wonder if this person is related to Tsubasa-sensei..."
+    MC "What about it? It's a summer job, right?"
+    RM "Yes. Interesting way to learn more about the Academy and the factors, no?"
+    MC "Sure. Or it's a summer job."
+    hide RM with dissolve
+    "I took one of the fliers and slid it into my bag. The extra money could be nice."
+    MC "You gonna apply?"
+    pause .5
+    MCT "And he's gone."
+    MCT "Why do I even try anymore?"
+    if routelock == "GTS":
+        "I took my phone out."
+        MCCell "Hey! Just finished!"
+        "There was a short pause."
+        GTSCell "Wonderful! I'm at my dormitory, do tell me all about it."
+        MCCell "Be there soon!"
+        "I put my phone into my pocket, and headed off down the hall, finally rid of the burden of classes... for a few weeks anyhow."
+    if routelock == "AE":
+        "I walked back over to Shiori."
+        show AE neutral with dissolve
+        MC "On our way then, Shiori-chan?"
+        AE "Yes. Let's."
+        "The two of us headed down the hall, off to things that... weren't class."
+        hide AE with dissolve
+    if routelock == "PRG":
+        show PRG worried at Position(xcenter=0.25, yalign=1.0)
+        show WG neutral at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        "I headed over toward Aida, who was talking to Alice."
+        MC "Wanna head out, Aida?"
+        show PRG neutral
+        PRG "Y-Yes. I'm ready."
+        "I smiled and nodded at Alice."
+        MC "May I?"
+        show WG happy 
+        WG "By all means."
+        hide WG with dissolve
+        "I walked down the hall with Aida, ready to start our break together."
+    if routelock == "FMG":
+        show FMG neutral with dissolve
+        "I looked over to Akira."
+        MC "Ready to roll?"
+        show FMG happy
+        FMG "I've been ready. Where've you been?"
+        "I shrugged and walked down the hall with her, more than ready to get away from anything to do with schoolwork."
+    if routelock == "WG":
+        show WG neutral at Position(xcenter=0.25, yalign=1.0)
+        show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        "I walked over to Alice."
+        MC "Ready to get going?"
+        show WG happy 
+        WG "Indeed, I am."
+        MC "Sounds good."
+        MC "I'll have your roommate back on time tonight, Kodama-san."
+        show PRG unique-happy
+        PRG "Eheheh..."
+        show PRG happy
+        PRG "M-Make sure that you do."
+        hide PRG with dissolve
+        "Alice and I headed down the hall together, more than ready to just relax for a bit."
+    if routelock == "BE":
+        "I turned to Honoka."
+        show BE neutral with dissolve
+        MC "Ready to head out?"
+        BE "God, yeah."
+        MC "Let's go, then."
+        BE "Wanna grab lunch in town? Celebrate a little?"
+        MC "Oh, hell yeah."
+        "The two of us headed down the hall, more than ready for some lunch to wash down all that test taking energy."
+    jump daymenu
+
 label MC024:
     scene Cafeteria with fade 
     play music Schoolday
@@ -7582,8 +8956,12 @@ label MC024:
             MCT "Hah... we did clutch that, though. Especially making that French dish."
     "I penciled those grades in, then checked the others."
     MCT "... S in math. That's four points."
-    MCT "History... {w}S."
-    MCT "So that's... four points. Nice."
+    if getFlag("MC013_Perfect"):
+        MCT "History... {w}S."
+        MCT "So that's... four points. Nice."
+    else:
+        MCT "History... {w}A."
+        MCT "Dammit. Knew I missed one of those."
     MC "Biology is... an A."
     MC "For economics and civics... B."
     "I jotted all of these down as I went, until my list was full."
@@ -7699,11 +9077,10 @@ label MC024:
         MCT "Well, okay. There was the handball game after Golden Week."
     if routelock == "BE":
         MCT "I... think that he might coach the softball club, though. I don't even know where I'm pulling that from, but I feel like I heard that somewhere..."
-        MCT "One of Honoka's clubs maybe?"
-        "I sighed and pulled out my phone."
-        MCCell "<Hey! You happen to know where I can find Naoki-sensei??>"
+        "And he was coaching swimming club. Poor Honoka."
+        "I sighed and pulled out my phone. I looked at it and decided to hide it back to my pocket."
+        "Hmm, maybe I won't disturb her, she already has enough on her plate as it is."
         pause 1
-        "A minute or so later, no response."
         MCT "Well... gotta start somewhere."
     if isEventCleared("MC002"):
         MCT "He does wear a lot of whistles..."
@@ -7828,10 +9205,8 @@ label MC024:
     if isEventCleared("WG043"):
         MCT "Being here with a mission kind of sucks. I much preferred playing water polo with Alice and the other girls."
     if routelock == "BE":
-        MCT "Huh... Honoka isn't here."
-        MCT "Damn. I could've sworn..."
-        "I pulled out my phone, glancing at my notifications and looking around with my hand behind my head like a lost tourist."
-        MCT "She could at least one word text me."
+        "Just being back there reminded me of the incident with Honoka..."
+        "Swallowing my feelings, I looked around."
     if isEventCleared("FMG032"):
         MCT "Reminds me of hanging out with Akira and finding that cat with Chibuki."
         MCT "What was his name? Chumley? Cher...ee?"
@@ -7878,7 +9253,7 @@ label MC024:
     if routelock == "WG":
         MC "I'm trying to track down Naoki-sensei. I need him to sign this paper work for a scholarship I'm applying for. I heard, but I don't know for sure, that he's the coach for the swimming club."
     elif routelock == "BE":
-        MC "I'm trying to track down Naoki-sensei. I remembered that he coached the swimming club from when I was here with Honoka, and figured I could find him here."
+        MC "I'm trying to track down Naoki-sensei. He coached the swimming club from when I was here with Honoka, and figured I could find him here."
     else:
         MC "I'm trying to track down Naoki-sensei, and I'd heard he might be coaching the swimming club."
     WG "Ah."
@@ -7886,10 +9261,13 @@ label MC024:
     WG "I'm afraid that I haven't seen anyone from the faculty here. And, as far as I know, the swim club doesn't meet today."
     if routelock == "BE":
         WG "I believe you'd be better off asking Honoka, especially if she's a member of said club."
-        MC "Yeah, I tried that. No answer."
+        MC "Yeah... not anymore."
+        WG "Well, I can't say I'm surprised, considering her... many clubs."
+        MC "It isn't like that, she... nevermind."
     else:
         WG "I believe you'd be better off asking Honoka. If memory serves correct, she is a member of that club."
         MCT "Is she, though? Her club status changes practically daily."
+
     MC "Right. Thank you, Alice."
     show WG neutral
     WG "Of course. I'd also recommend asking the lifeguard as well. It couldn't hurt."
@@ -7921,10 +9299,9 @@ label MC024:
     if routelock == "BE":
         "{i}BMMMPH{/i}"
         "I slipped my phone out."
-        BECell "<Hey, Kei-chan!! I'm so sorry, I was in the shower!! I dont know where Naoki-sensei is right now, though. I'm sorry!!>"
-        "I had to smile at the queen of the exclamation as I typed."
-        MCCell "<It's all good Honoka. Thank you anyway. I'm on some stupid scavenger hunt of a mission for this damn scholarship. Ill fill you in later.>"
-        BECell "<K! I'm going to study rn but I'll see you later!>"
+        BECell "<Hey, Kei-chan. You were quiet for so long, I figured I'd just text you.>"
+        MCCell "<It's all good Honoka. Thank you anyway. I'm on some stupid fetch quest for this damn scholarship, as my sister would say. I'll fill you in later.>"
+        BECell "<Alright!>"
         MCCell "<See ya!>"
         "I slipped my phone back into my pocket as I walked into the hall."
     if routelock == "WG": 

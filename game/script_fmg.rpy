@@ -5597,6 +5597,7 @@ label FMG033_FMG_after:
     jump daymenu
 
 label FMG034:
+    $setFlag("XX35") #Move this to FMG035 when it is written.
     $setProgress("FMG", "FMG036")
     scene Hallway with fade
     play music Schoolday

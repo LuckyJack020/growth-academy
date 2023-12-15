@@ -17064,6 +17064,7 @@ label PRG035:
 
 label PRG035B:
     $setPRGOutfit(OutfitEnum.PAJAMAS)
+    $setFlag("XX35")
     $setProgress("PRG", "PRG036")
     if getFlag("PRG035_Aff10"):
         jump PRG035B_1

@@ -7423,6 +7423,7 @@ label WG034_c1_after:
         jump daymenu
 
 label WG035:
+    $setFlag("XX35")
     $setProgress("WG", "WG036")
     $setTime(TimeEnum.EVE)
     scene Classroom with fade

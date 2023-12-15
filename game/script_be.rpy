@@ -6585,6 +6585,7 @@ label BE034_end:
     jump daymenu
 
 label BE035A:
+    $setFlag("XX35")
     $setProgress("BE", "BE036")
     scene Cooking Classroom with fade
     #general chatter sfx
@@ -6780,6 +6781,7 @@ label BE035A_nosauce:
     jump daymenu
 
 label BE035B:
+    $setFlag("XX35")
     $setProgress("BE", "BE036")
     scene School Exterior with fade
     play music BE

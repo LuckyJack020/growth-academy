@@ -6385,6 +6385,7 @@ label GTS034_c1_3:
 
 label GTS035:
     $lockRoute("GTS")
+    $setFlag("XX35")
     $setProgress("GTS", "GTS036")
     scene Dorm Interior with fade
     play music Peaceful
@@ -12935,9 +12936,9 @@ label GTSWG001:
     scene Classroom with fade
     play music Schoolday
     "Class was almost done for the day, yet I was decidedly not looking forward to the ending."
-    MCT "I probably should've studied more for this…"
-    MCT "Alright, last question…"
-    MCT "…"
+    MCT "I probably should've studied more for this..."
+    MCT "Alright, last question..."
+    MCT "..."
     MCT "I don't know these words."
     MCT "On second thought I {i}definitely{/i} should've studied."
     play sound Bell
@@ -12967,10 +12968,10 @@ label GTSWG001:
     GTS "Good afternoon, Hotsure-san. You deem rightly. I feel particularly satisfied with my performance."
     show GTS neutral
     GTS "It was certainly a challenging quiz, but I was diligent in my preparation and now I enjoy the fruit thereof. How do you feel about your results?"
-    MC "Could have… been better."
+    MC "Could have... been better."
     MCT "Could have been a lot better, honestly."
     GTS "Indeed? My apologies, I hope I haven't let you down as your study partner. Perhaps we ought to meet a bit more often."
-    MC "Well…"
+    MC "Well..."
     WG "This is {i}unacceptable{/i}!"
     show GTS surprised at Position(xcenter=0.2, yalign=1.0)
     show WG angry at Position(xalign=0.5, yalign=1.0), Transform(xzoom=-1)
@@ -13026,18 +13027,18 @@ label GTSWG001:
             GTS "I am, thank you. I do apologize for making a bit of a scene."
             MC "I don't know if you did, I was just surprised. I've never seen you have any kind of conflict with anyone. Or express anger at all, for that matter."
             GTS "Well, I'm glad to have made such a good impression up to this point."
-            MC "…Oh no, my impression of you hasn't diminished. You were right to stand up for Kodama-san like that."
+            MC "...Oh no, my impression of you hasn't diminished. You were right to stand up for Kodama-san like that."
             $setAffection("GTS", 1)
             GTS "Thank you. It's rather a weakness of mine, but I cannot idly suffer a bully to walk all over an innocent person."
             MC "Is that really a weakness?"
             show GTS embarrassed 
             GTS "After a fashion. Sometimes, to offer a more wholesome perspective is just what a person needs to examine themselves and fortify themselves morally."
             GTS "Sometimes, it is not."
-            MC "Ah, right… somebody's gonna lose face."
+            MC "Ah, right... somebody's gonna lose face."
             show GTS neutral 
             GTS "Correct. Right conduct is at times obscure, and not always without cost."
             MCT "She needs to be either a philosopher or a talk show host."
-            MC "So… you really think she's a bully?"
+            MC "So... you really think she's a bully?"
             GTS "I do not believe that monetary compensation makes abuse impossible as Nikumaru-san seems to."
             show GTS angry
             GTS "At least, I pray she sincerely believes that."
@@ -13047,7 +13048,7 @@ label GTSWG001:
                 "Her eyes went wide as if I'd patted her on her pearly cheek, too."
                 show GTS neutral 
                 GTS "Talk may be proverbially 'cheap', Hotsure-san, but it also has a tremendous capacity to effect change."
-                MC "True enough, Yamazaki-san. If you need help with… that, you know where to find me."
+                MC "True enough, Yamazaki-san. If you need help with... that, you know where to find me."
                 GTS "Kind of you to offer. For today, however, I should not keep you any longer."
             else:
                 MC "Maybe she does. I don't think most people who act that way do it for no reason."
@@ -13057,13 +13058,13 @@ label GTSWG001:
             pause 0.75
             show GTS surprised 
             GTS "Ah! Did you wish to spend some time this afternoon studying together?"
-            MC "Oh… yes, actually. I need to get to town to buy some shampoo, but can we meet in about two hours?"
+            MC "Oh... yes, actually. I need to get to town to buy some shampoo, but can we meet in about two hours?"
             show GTS neutral 
             GTS "Of course. See you again soon, Hotsure-san."
             "She bowed and resumed passing through the door, leaving me with my thoughts."
             hide GTS with fade
             MCT "It's almost as surprising as seeing her genuinely mad to see how quickly she switches it off."
-            MCT "It's like swallowing poison and expecting the other person to die… I bet that's what she'd say."
+            MCT "It's like swallowing poison and expecting the other person to die... I bet that's what she'd say."
             MC "Hm."
             "I brought up the bus schedule on my phone and made my way to the entrance, my clarity of thought fading with the afternoon."
             jump daymenu
@@ -13093,7 +13094,7 @@ label GTSWG001:
             hide WG
             hide PRG
             with dissolve
-            MCT "Hm… afternoon tea? That was unexpected."
+            MCT "Hm... afternoon tea? That was unexpected."
             MCT "Unlike her and Naomi together. I didn't think they'd get along, but sheesh."
-            MCT "Well… guess I'd better start hitting the books again…"
+            MCT "Well... guess I'd better start hitting the books again..."
             jump daymenu

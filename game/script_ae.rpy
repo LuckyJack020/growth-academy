@@ -7285,6 +7285,7 @@ label AE034:
     jump daymenu
 
 label AE035:
+    $setFlag("XX35")
     $setProgress("AE", "AE036")
     scene Campus Center with fade
     play music Peaceful
