@@ -7457,7 +7457,7 @@ label MC013:
     "I turned the page once more."
     MCT "Alright... Nara Prefecture. Or, Yamato Province, during that time."
     if routelock == "BE":
-        scene black with fade
+        scene black
         UNKNOWN "Guess boobs~"
         UNKNOWN "I-I mean, guess who... ugh..."
         MC "Is the factor affecting your tongue too?"
@@ -7806,7 +7806,6 @@ label MC013:
     show NoHairpinBE
     with dissolve
     "Honoka and I passed them and walked down toward the classroom itself."
-    pause 1
     hide NoHairpinBE
     hide BE
     with dissolve

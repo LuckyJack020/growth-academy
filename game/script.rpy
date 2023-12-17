@@ -1438,6 +1438,7 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "BE", -1)
             text str(affection["BE"])
             textbutton "+" action Function(setAffection, "BE", 1)
+            textbutton "{u}Lock Route{/u}" action Function(lockRoute, "BE")
         text getProgress("BE")
 
         text "GTS"
@@ -1445,6 +1446,7 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "GTS", -1)
             text str(affection["GTS"])
             textbutton "+" action Function(setAffection, "GTS", 1)
+            textbutton "{u}Lock Route{/u}" action Function(lockRoute, "GTS")
         text getProgress("GTS")
 
         text "AE"
@@ -1452,6 +1454,7 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "AE", -1)
             text str(affection["AE"])
             textbutton "+" action Function(setAffection, "AE", 1)
+            textbutton "{u}Lock Route{/u}" action Function(lockRoute, "AE")
         text getProgress("AE")
 
         text "FMG"
@@ -1459,6 +1462,7 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "FMG", -1)
             text str(affection["FMG"])
             textbutton "+" action Function(setAffection, "FMG", 1)
+            textbutton "{u}Lock Route{/u}" action Function(lockRoute, "FMG")
         text getProgress("FMG")
 
         text "WG"
@@ -1466,6 +1470,7 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "WG", -1)
             text str(affection["WG"])
             textbutton "+" action Function(setAffection, "WG", 1)
+            textbutton "{u}Lock Route{/u}" action Function(lockRoute, "WG")
         text getProgress("WG")
 
         text "PRG"
@@ -1473,6 +1478,7 @@ screen debugmenu():
             textbutton "-" action Function(setAffection, "PRG", -1)
             text str(affection["PRG"])
             textbutton "+" action Function(setAffection, "PRG", 1)
+            textbutton "{u}Lock Route{/u}" action Function(lockRoute, "PRG")
         text getProgress("PRG")
 
         text "RM"

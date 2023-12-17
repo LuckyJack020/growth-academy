@@ -33410,9 +33410,9 @@ label WGFMG004A:
     hide WG with dissolve
     "Having put the final touches on my sunscreen coverage, I was just about to get into the water."
     "Turning back toward the ocean, I stopped to admire the scenery once again, when I couldn't help but overhear a conversation from some nearby fellow tourists."
-    "Tourist1" "Oh look honey, it's a dewgong floating in the water! We're lucky to see them. I heard it's rare for them to come in this far into the bay."
-    "Tourist2" "Are you sure that's a dewgong?"
-    "Tourist1" "What else could be that big floating in the water?"
+    "Tourist 1" "Oh look honey, it's a dewgong floating in the water! We're lucky to see them. I heard it's rare for them to come in this far into the bay."
+    "Tourist 2" "Are you sure that's a dewgong?"
+    "Tourist 1" "What else could be that big floating in the water?"
     MCT "Uhh... Let's just forget I heard that."
     pause .3
     "I waded out into the water to meet Alice,"
@@ -33458,10 +33458,10 @@ label WGFMG004A:
     "After a while, we had our share of the sand and swimming, finally deciding to come back to shore and dry off."
     "The beach wasn't particularly packed, likely because it was an exclusive resort of some kind, but that didn't mean there weren't other people around to serve as onlookers once we got out of the water."
     show WG doubt
-    "Tourist2" "Yeesh. I came here to see the sea turtles, not go whale watching."
+    "Tourist 2" "Yeesh. I came here to see the sea turtles, not go whale watching."
     show WG stern
-    "Tourist1" "Oh my god! How is it even possible for someone to be that fat? Her rolls have rolls! How could someone let themselves eat so much?"
-    "Tourist2" "I don't know either, but I sure as hell don't want to look at it any longer. Let's head back to our room while marine rescue pushes her back into the ocean."
+    "Tourist 1" "Oh my god! How is it even possible for someone to be that fat? Her rolls have rolls! How could someone let themselves eat so much?"
+    "Tourist 2" "I don't know either, but I sure as hell don't want to look at it any longer. Let's head back to our room while marine rescue pushes her back into the ocean."
     show WG doubt
     "I know Alice wasn't one to just fly off the handle with every little slight, and from what she had told me before she was more than used to the verbal barbs of onlookers and gossips that looked down on her for her weight."
     "But even still, it bugged me even if she didn't want to show that it bothered her. It just didn't feel right. I thought I needed to speak up and say something."
@@ -33477,14 +33477,14 @@ label WGFMG004A_C1:
     MCT "That's it. I can't take it. I'm going to give those assholes a piece of my mind."
     show WG surprised
     MC "Hey you two!"
-    "Tourist1" "Huh?"
-    "Tourist2" "You talking to us?"
+    "Tourist 1" "Huh?"
+    "Tourist 2" "You talking to us?"
     show WG surprised-2
     MC "Yeah. I heard what you said about my girlfriend, and it was pretty fucking rude."
     if checkSkill("Athletics", ">=", 15):
         show WG sly
-        Tourist2 "Alright, alright. Sorry man, I don't want any trouble."
-        Tourist1 "We didn't mean anything by it. We'll be going."
+        "Tourist 2" "Alright, alright. Sorry man, I don't want any trouble."
+        "Tourist 1" "We didn't mean anything by it. We'll be going."
         "The two of them walked away— obviously they weren't in a mood to start something over their careless comments."
         $setAffection("WG", 1)
         show WG haughty
@@ -33502,13 +33502,13 @@ label WGFMG004A_C1:
         jump daymenu
     else:
         show WG doubt
-        "Tourist2" "And what are you going to do about it little man?"
+        "Tourist 2" "And what are you going to do about it little man?"
         MC "I uh..."
         MCT "Shit. I hadn't really thought this through."
         show WG angry
         WG "Maybe {i}I'll{/i} just sit on you. How would you like that?"
-        "Tourist2" "Okay, okay... yikes! Look, we're sorry. Please, don't hurt us. We'll leave you alone."
-        "Tourist1" "Let's get out of here!"
+        "Tourist 2" "Okay, okay... yikes! Look, we're sorry. Please, don't hurt us. We'll leave you alone."
+        "Tourist 1" "Let's get out of here!"
         show WG stern
         "The two of them ran off, obviously afraid Alice might make good on her threat."
         MC "Sorry. {w}I got mad when I heard what they said about you."
@@ -33524,18 +33524,18 @@ label WGFMG004A_C1:
 label WGFMG004A_C2:
     MCT "I'm not going to let this stand. I've got to say something."
     MC "Excuse me, sir, ma'am?"
-    "Tourist1" "Pardon?"
-    "Tourist2" "Are you talking to us?"
+    "Tourist 1" "Pardon?"
+    "Tourist 2" "Are you talking to us?"
     MC "Yes. You see, I couldn't help but overhear your comments about that lady over there."
-    "Tourist1" "You mean the one who's beyond morbidly obese?"
-    "Tourist2" "Yeah, what about it? You her boyfriend or something?"
+    "Tourist 1" "You mean the one who's beyond morbidly obese?"
+    "Tourist 2" "Yeah, what about it? You her boyfriend or something?"
     "At this point I was practically gritting my teeth so as to not go completely ballistic, but I managed to keep my cool."
     MC "As a matter of fact— I am. {w}Have you considered, if as you say, that she seems to be larger than what is considered possible, wouldn't you think that's far more likely due to a medical condition than something she has control over?"
-    "Tourist1" "I... I didn't consider that, no."
-    "Tourist2" "I take it that's the case then?"
+    "Tourist 1" "I... I didn't consider that, no."
+    "Tourist 2" "I take it that's the case then?"
     MC "I'm afraid so."
-    "Tourist1" "Ohh... {w}Look, we're very sorry. It's obvious now that you've pointed that out."
-    "Tourist2" "Please excuse our ignorance. We'll be going now. Enjoy the rest of your trip."
+    "Tourist 1" "Ohh... {w}Look, we're very sorry. It's obvious now that you've pointed that out."
+    "Tourist 2" "Please excuse our ignorance. We'll be going now. Enjoy the rest of your trip."
     show WG surprised-2
     $setAffection("WG", 2)
     pause .3
