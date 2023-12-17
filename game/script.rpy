@@ -48,6 +48,9 @@ transform altMove (xSp, xCen):
 transform altFall(ySp):
     easeout ySp yoffset 720
 
+transform altRise(ySp):
+    easein ySp yoffset 0
+
 transform wiggle_loop(xSP):
     easein xSP xoffset 20
     easeout xSP xoffset 0

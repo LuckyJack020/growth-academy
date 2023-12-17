@@ -26225,6 +26225,7 @@ label WG083:
     show WG surprised-2
     RM "That doesn't explain the mess on your side of the room."
     show RM neutral
+    play music RM
     MC "Where did you come from?"
     MCT "Ugh, figures he'd actually be here when I need to throw him under the bus."
     show RM neutral-2
@@ -26255,6 +26256,7 @@ label WG083:
     show RM sad at altMove(0.1, 1.1)
     RM "Uh… Gotta run!"
     hide RM
+    play music DormLife
     show WG surprised-2
     WG "I see he is still quite… eccentric. And quite quick apparently. {w}Was a bit rude of him to take the apples with him."
     MC "Hm?"
@@ -26300,7 +26302,7 @@ label WG083:
     "I guided Alice back through the entrance to my room, hoping that I could manage to interest her in a couple of games I thought she wouldn't mind."
     show WG doubt
     "Though as we entered, the first problem appeared."
-    "The sound of grunting was what alerted me to Alice, slowly attempting to squeeze her way through the doorway into the room." 
+    "The sound of grunting was what alerted me to Alice slowly attempting to squeeze her way through the doorway into the room." 
     MCT "Hmm, this could be a problem."
     "What seemed like a smart way to make use of the extra space between the extra wide door and the wall proved to be very restrictive to my voluptuous guest when it did not swing open all the way."
     MC "Oh. Hold on, Alice. Let me move some stuff."
@@ -26323,8 +26325,10 @@ label WG083:
     MCT "I hope the stitching on those is made of steel thread…"
     WG "So what would you suggest us doing?"
     MC "I was curious if you'd want to play some video games. That's really all I have in regards to entertainment for two people."
+    show WG neutral
     WG "If that's what you'd like to do, I wouldn't be opposed to the notion, but unfortunately without my custom desk and keyboard setup back in my room, my ability to use a keyboard and mouse is rather restricted."
     MC "This is true, I haven't forgotten. But that won't be a problem here. These games don't use a keyboard and mouse, you can just as easily plug in a GameStation controller. It should be more comfortable to use anyway."
+    show WG pondering
     "I handed her one of the black controllers and pulled up on my game library. Alice looked over the controller trying to figure out what all the buttons and joysticks were meant to do."
     MC "Any idea what kind of games you'd want to try? I have a pretty wide selection to pick from."
     WG "Not sure, though I don't think I'd be up for one of those shooter games."
@@ -26394,6 +26398,7 @@ label BulletHell_W083:
     jump Cooking_WG083
 
 label Deckbuilder_WG083:
+    play music Motivation
     MC "Okay, this one is a little different. I know fighting games aren't your thing, but rather than playing as two dudes beating each other up with their fist, we'll be playing as magic summoners using spells and minions to defeat each other."
     WG "Sounds interesting."
     MC "Now this type of game is what's known as a deckbuilder. Each card represents an item, spell, summon, effect, or mana." 
@@ -26404,6 +26409,7 @@ label Deckbuilder_WG083:
     MC "Innate special attributes of your summoner. They are always active and you don't have to do anything to activate them, hence the term, \"passive\"."
     WG "Okay, that makes sense."
     MC "Which character do you want?"
+    show WG neutral
     WG "I'll go with the mage. Seems like she has a good range of abilities."
     MC "Okay, good choice. I'll pick the shaman."
     MCT "That ought to give her a good handicap. This summoner class sucks now after the latest balance patch."
@@ -26475,6 +26481,7 @@ label Deckbuilder_WG083:
     jump Cooking_WG083
 
 label Racing_WG083:
+    play music Motivation
     MC "Actually, you'll need a different controller for this one since it's on a different system. Let me see here… Ah! Here it is."
     MC "Okay, this one is a racing game, but it's not a serious one like where you're racing real cars and have to gear shift. It's go-kart racing with Pretendo characters."
     WG "I see. Even I recognize some of these characters. Others… not so much."
@@ -26509,7 +26516,7 @@ label Racing_WG083:
     MC "You'll want to run these boxes over to get items. They do all different things but mostly either make you faster or slow down the other racers on the track."
     show WG surprised-2
     WG "What just happened to my character?"
-    MC "That would be one of the items. Looks like one of the computer races hit you with a green shell."
+    MC "That would be one of the items. Looks like one of the computer racers hit you with a green shell."
     show WG doubt
     WG "A shell, as in a turtle shell? I'd say I'm starting to notice a theme here but it still doesn't make a lot of sense." 
     show WG neutral
@@ -26528,7 +26535,7 @@ label Racing_WG083:
     MC "Alright that's the first lap, down we have two more on this track."
     show WG doubt
     WG "Do go-karts handle this poorly in real life? I feel like I'm all over the track."
-    show WG surprised
+    show WG surprised-2
     MC "Alice, you gotta let off the gas sometime and use the break going into turns, just like my dad taught me with real driving. It slows you down a little, but not nearly as much as running into the wall, or going off the track."
     show WG neutral-2
     WG "I'm sure you can imagine, but I'm not the most experienced driver."
@@ -26547,12 +26554,12 @@ label Racing_WG083:
     "The blue shell did what a blue shell does best— fuck up every single racer in its path until it blew up on the leader, which happened to be me."
     show WG happy-2
     WG "{i}Ooo{/i}, I like this item."
-    "Luckily I was so far ahead I could still take first. I just needed to use the speed burst I'd bee saving right after I regained control to hold the lead-"
+    "Luckily I was so far ahead I could still take first. I just needed to use the speed burst I'd been saving right after I regained control to hold the lead-"
     MC "What!? A banana peel? Where the hell did that come from?"
     "{i}vroom {w}vroom {w}vroom vroom vroom{/i}"
     "One by one every other racer passed me as I spun out off the track and ended up facing backwards."
     "{i}vroom{/i}"
-    "Only to eventually get passed by Alice at the last second before the finished line."
+    "Only to eventually get passed by Alice at the last second before the finish line."
     show WG happy
     WG "Well I guess you were right, Kei. Sticking with it paid off. I didn't get last place."
     MC "{size=-6}Stupid bullshit blue shell…{/size}"
@@ -26701,7 +26708,7 @@ label Cooking_WG083:
     else:
         MC "Alright, let me grab my controller here and get situated…"
         MCT "Hmm, that does look awfully comfy..."
-        play sound thud
+        play sound Thud
         show WG doubt
         WG "Hm?"
         WG "Kei, what are you doing?"
@@ -28844,7 +28851,7 @@ label WG089:
     Sakura "Yup, if you want to call it that. Hehe."
     MC "Smells good in here."
     show Sakura neutral
-    Sakura "Thanks. I put on quite the spread, if I do say so myself. I made Alice a handful of iron steaks with chimichurri sauce, potatoes au gratin, fried brussel sprouts, and a couple dozen bread rolls."
+    Sakura "Thanks. I put on quite the spread, if I do say so myself. I made Alice a handful of flat iron steaks with chimichurri sauce, potatoes au gratin, fried brussel sprouts, and a couple dozen bread rolls."
     show Sakura happy
     Sakura "Another addition to the clean plate club!"
     "I couldn't help but wonder if anything Sakura made for Alice didn't make the \"clean plate club\"."
@@ -28908,7 +28915,8 @@ label WG089:
     "By this point with her growth, getting Alice seated comfortably took a bit of coordination. I moved her usual three chairs together to provide the breadth of support she needed, and guided her well padded descent down onto them with my hand extended to hers."
     "I retrieved a cloth napkin to put down the front of her shirt, along with a serving plate and fork from the kitchen as well as a knife to cut it. Since scooting her chairs closer to the table involved complex logistics, I would just push the table closer to her instead."
     MC "One {i}small{/i} slice for mademoiselle."
-    "In truth the slice I carved was not terribly small, closer to an eighth of the cake, which I considered small for Alice's standards. I probably should have carved a smaller piece, but I didn't have the patience for the pretext, given that I knew she would inevitably want more anyway."
+    "In truth the slice I carved was not terribly small, closer to an eighth of the cake, which I considered small for Alice's standards."
+    "I probably should have carved a smaller piece, but I didn't have the patience for the pretext, given that I knew she would inevitably want more anyway."
     show WG surprised-2
     WG "Oh, it looks so moist."
     "Indeed it did. This devil's food cake was not a standard chocolate cake. The density of it was something between a cake and fudge, with a much higher cocoa content than the typical dessert, making it much more attuned with Alice's discerning palate."
@@ -28973,8 +28981,9 @@ label WG089:
     MC "Alice, here. Let's get you up. I don't want you to get a splinter."
     "Due to her massive backside forcing her hips upward from the hard floor, she was extended back quite a bit, so just giving her a hand proved not enough {i}oomph{/i} to get her upright."
     "Alice still being in a state of dumbfounded shock wasn't exactly helping efforts either."
-    show WG surprised-2
-    "I was able to assist her with sitting upright after squeezing both my hands under the rolls that covered her shoulder blades and lifting up. I can't imagine how much extra weight her body had to contend with to do a situp, even with me offering hundreds of kilos of assistance."
+    show WG surprised-2 at altRise(3.0)
+    "I was able to assist her with sitting upright after squeezing both my hands under the rolls that covered her shoulder blades and lifting up."
+    "I can't imagine how much extra weight her body had to contend with to do a situp, even with me offering hundreds of kilos of assistance."
     "We finally got her upright with some clever maneuvering by rolling her onto her belly to free her legs out from under her, then bracing against me and the remaining chair to get her standing again."
     MCT "Whew. I feel like I just did a powerlifting meet."
     show WG sad
@@ -28989,7 +28998,7 @@ label WG089:
     pause .5
     MCT "?"
     "Only to get pushed away."
-    #play music argue
+    play music Tension
     show WG angry
     WG "I can't believe I allowed myself to get so complacent about this. How did I ever allow myself to think even for a moment this wasn't the most ruinous event of my entire life?"
     MC "Alice... they're just chairs. They can easily be replaced."
