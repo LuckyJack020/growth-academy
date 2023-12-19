@@ -30784,7 +30784,7 @@ label PRG050:
     MC "Aida… we're here."
     PRG "Mmn…"
     "Aida rubbed her eyes and looked out the window."
-    "I reached into my wallet and handed the driver some yen… of which I was seriously going to need a job when I got back to campus, and opened the door, walking to Aida's side and getting hers for her."
+    "I reached into my wallet and handed the driver some yen... and quickly realized I was seriously going to need a job when I got back to campus. I opened my door, walking to Aida's side and getting hers for her."
     "She twisted in the seat, pointing her belly in as she backed out."
     scene NYI with fade #scene apartment exterior
     "The door of the taxi jerked open as her butt forced it back, her belly and boobs being towed out by the rest of her."
@@ -30794,7 +30794,7 @@ label PRG050:
     "I shut the door behind Aida, and took the hand of the sleepy girl, leading her into the cramped hallway."
     scene Kanagawa Alley with fade
     MC "So. How are you feeling post-game?"
-    show PRG blush-2
+    show PRG blush-2 with dissolve
     PRG "... It was one of the best experiences of my life."
     PRG "I'm… it was a dream come true."
     if getFlag("PRG044_c1_1"):
@@ -30812,6 +30812,7 @@ label PRG050:
     "Aida nodded, wriggling her way down the hall. Her belly brushed the sides of the hall once again, though the sound was even heavier and more full."
     "Not being able to turn to the side, Aida raised her fist and knocked on her parent's door."
     stop music fadeout 1.0
+    play sound Knock
     pause 2
     PRG "... I'll text her. She might be asleep."
     show PRG worried 
@@ -30826,10 +30827,11 @@ label PRG050:
     pause .5
     play music DormLife fadein 1.0
     Takara "Hey, guys. You both look wiped out."
-    show PRG happy
+    show PRG happy at slowease(center, offscreenleft, 1.5)
     PRG "It was so fun, Mom!"
     Takara "Well, come in and sit down. Tell me all about it."
     scene NYI with fade #Kodama living room
+    show PRG happy at slowease(offscreenright, center, 1.5)
     "I bent and unlaced Aida's boots so she could kick them off, as I got my own shoes and walked into the apartment behind Aida, taking a seat on the couch as Aida's mom took the recliner."
     Takara "Tell me everything. How were the seats?"
     PRG "We were way up on top! We could see everything!"
@@ -30845,7 +30847,7 @@ label PRG050:
     Takara "That must have been a marvel to see. He is their power hitter, after all."
     show PRG neutral
     PRG "He hit the dome."
-    Takara "He didn't."
+    Takara "{i}He didn't.{/i}"
     show PRG excited
     PRG "Both Keisuke and I heard it!"
     MC "Seconded."
@@ -31034,7 +31036,7 @@ label PRG050:
     MC "We… well… w-we had sex."
     Enmei "That part I've been able to figure out."
     Enmei "I've also been able to figure out that you took advantage of her."
-    MC "It was consensual! We both wanted it!"
+    MC "I-It was consensual. We... We both... wanted to..."
     Enmei "After you spouted lie after lie to her to get her to that point!"
     MC "I didn't lie to get her to sleep with me!"
     pause 1.5
@@ -31047,7 +31049,7 @@ label PRG050:
     Enmei "You're a few months in now. That excuse doesn't fly anymore."
     MC "I…"
     pause 2
-    Enmei "You're not ready to be a dad."
+    Enmei "You're not ready to be a father."
     MC "What gives you the right to call me ready or not?!"
     MC "What do you even know about our situation?!"
     Enmei "YOU KNOCKED UP MY DAUGHTER! THAT'S WHAT I KNOW!"
@@ -31068,7 +31070,7 @@ label PRG050:
     Enmei "And as for her cooking, try to imagine her chopping vegetables when she can't reach in front of her for anything."
     Enmei "Accommodations or not, Aida will not be able to cook with just one hand on either side of her."
     Enmei "She can't exactly get up and go for a run now, can she? Try to picture that down the road."
-    Enmei "As she loses her ability to simply reach forward, her hobbies will be stripped from her."
+    Enmei "As she loses her ability to simply reach forward, her hobbies will be stripped from her, piece by piece."
     pause 1
     Enmei "She is changed forever. She'll never be the same girl she was. All because of you not being able to keep it in your pants. Even after you're gone, Aida will never be who she was ever again."
     MC "After I'm gone? You think I'd leave her?"
@@ -31101,29 +31103,29 @@ label PRG050:
     MC "Must be a real strong family if your daughter starts shaking before telling you something difficult. Must be real strong if she gets so nervous that she can barely speak."
     MC "You're telling me that I don't know the first thing about parenting, but I'm sure rule number one isn't 'make your daughter feel like a monster.'"
     Enmei "..."
-    Enmei "Get out of my home. Now."
+    Enmei "Get out of my home. {b}Now.{/b}"
     Enmei "I want you on that train tonight. I don't care if it stops halfway with you on it. This fling between you two is over."
     MC "Fine. But I'll be on that island waiting for Aida to come back. I'll be there for her… and I won't call her a whore when I see her."
     pause 1
     Enmei "... Get the fuck out of my home."
     "The door to the room opened. Hard."
     pause 1
-    show PRG angry-2 with fade
+    show PRG angry-2 with dissolve
     pause .5
     Enmei "Aida. This is not your conversation. Out."
     show PRG sad-2
-    PRG "This is my conversation! It's about me!"
+    PRG2 "This is my conversation! It's about me!"
     Enmei "Aida, I will not tell you again. Out."
     show PRG angry-2
-    PRG "No, Dad!"
+    PRG2 "No, Dad!"
     play music PRGOverflow fadein 1.0
     "Aida hurried over to me, taking my hand in hers."
     Enmei "He's pulling you away from us. He's brainwashing you… can't you see that?"
     Enmei "Those feelings he says he feels… all bullshit."
     Enmei "All of that. He said it all just so he could have sex with you."
     show PRG sad-2
-    PRG "They are not bullshit!"
-    PRG "He's supporting me, and he's been there for me every day!"
+    PRG2 "They are not bullshit!"
+    PRG2 "He's supporting me, and he's been there for me every day!"
     Enmei "He's corrupting you! Look what he's already done!"
     show PRG unsure
     PRG "It's… m-my factor."
@@ -31138,7 +31140,7 @@ label PRG050:
     Enmei "Aida… it's okay. It's okay, Honey…"
     Enmei "We'll get you help. We'll-"
     show PRG sad
-    PRG "Stop saying that!"
+    PRG2 "Stop saying that!"
     Enmei "Aida, this is ridiculous."
     Enmei "Take a minute, okay. Look at your belly."
     show PRG nervous
@@ -31154,12 +31156,12 @@ label PRG050:
     PRG "D-Don't call him that."
     Enmei "Aida, you're testing my patience…"
     show PRG angry
-    PRG "Good! I don't care!" 
+    PRG2 "Good! I don't care!" 
     Enmei "Young lady!" with hpunch
     show PRG sad-2 #at center Shake(None, 0.50, dist=1) remove hash once SFX is recorded
     "Enmei stood up with a start, his hand once again pounding the nightstand."
     Enmei "If you stay with him, you will be throwing your entire life in the trash!"
-    Enmei "You won't have any yen to your name!"
+    Enmei "You won't have a single yen to your name!"
     Enmei "Do you want that?! Do you WANT to end up on the streets?!"
     pause 1
     Enmei "Aida… this isn't okay. This whole mess that you've gotten yourself into isn't…"
@@ -31171,28 +31173,29 @@ label PRG050:
     Enmei "Out."
     show PRG sad-2
     "Enmei halted, as in a flash, Aida reached down and grabbed his wrist."
-    PRG "Let go of him!"
+    show PRG angry
+    PRG2 "Let go of him!"
     menu:
         "Let Aida Fight":
             pause 1
             show PRG angry-2
-            PRG "I am okay! Let go of him!"
+            PRG2 "I am okay! Let go of him!"
             "Aida yanked her father's arm, pulling his grip off of my wrist."
-            PRG "I'm my own woman! Not yours! Not Keisuke's! Me! Aida Kodama!"
+            PRG2 "I'm my own woman! Not yours! Not Keisuke's! Me! Aida Kodama!"
             Enmei "That is eno-"
             show PRG angry
-            PRG "No! I'm saying no!"
-            PRG "I don't care if you get mad at me! Or if you kick me out!"
+            PRG2 "No! I'm saying no!"
+            PRG2 "I don't care if you get mad at me! Or if you kick me out!"
             Enmei "You're not leaving with him."
             Enmei "After this… business with that academy is done, you'll be staying here with your mother and I. We'll find a new apartment for us, and we'll teach you how to raise your kids. You need our help, Aida."
-            PRG "I don't need help from you!"
+            PRG2 "I don't need help from you!"
             Enmei "Aida, this is ridiculous."
             Enmei "You're 18. You don't know the first thing about babies or how to care for one."
-            PRG "How do you know what I know?! We've barely seen each other in the last ten years!"
-            PRG "And what did you know when Mom got pregnant? Did you know everything about babies when she had me?"
+            PRG2 "How do you know what I know?! We've barely seen each other in the last ten years!"
+            PRG2 "And what did you know when Mom got pregnant? Did you know everything about babies when she had me?"
             Enmei "No, but it was just you. That's different. Your mother didn't have multiple."
             show PRG worried
-            PRG "So?! So what if I'm having three?! Keisuke is here to help me, and the Academy is going to help me too!"
+            PRG2 "So?! So what if I'm having three?! Keisuke is here to help me, and the Academy is going to help me too!"
             Enmei "... There are way more than three in there."
             show PRG insecure
             PRG "We had an ultrasound… t-there's three."
@@ -31200,34 +31203,37 @@ label PRG050:
             PRG "W-We had an ultrasound-"
             Enmei "So have another one!!"
             show PRG worried
-            PRG "Why is it only now that you want to offer help? Why can you hear me now when you couldn't for years?!"
+            PRG2 "Why is it only now that you want to offer help? Why can you hear me now when you couldn't for years?!"
             Enmei "Aida, we wanted to give you-"
             show PRG angry-2
-            PRG "You pushed me away!"
+            PRG2 "You pushed me away!"
             Enmei "It was for your own good!"
-            PRG "It was good for me to lose contact with you?!"
+            PRG2 "It was good for me to lose contact with you?!"
             Enmei "Young lady, you-"
             Enmei "You know what, fine. Fine. Maybe if your mother and I had been closer to you, you wouldn't have ended up with a fuzzy twig like this guy."
             show PRG angry
-            PRG "Don't you dare talk about Keisuke like that! You don't know a thing about him besides what you've heard secondhand!"
-            PRG "Did you know he has a twin sister? Or that he wants to be an architect?!"
-            PRG "Did you know that he accepts me for who I am, and isn't disgusted by my growth factor?"
+            PRG2 "Don't you {b}dare{/b} talk about Keisuke like that! You don't know a thing about him besides what you've heard secondhand!"
+            PRG2 "Did you know he has a twin sister? Or that he wants to be an architect?!"
+            PRG2 "Did you know that he accepts me for who I am, and isn't disgusted by my growth factor?"
             Enmei "Clearly not. He at least found you attractive enough to work his way into your sheets."
-            PRG "{i}I{/i} was the one who asked if he wanted to have sex! Not him!"
-            PRG "I went to his dorm! I brought it up!"
-            PRG "It was me! I'm pregnant because of my own choices!"
-            PRG "It was consensual… but it was my idea first…"
+            PRG2 "{i}I{/i} was the one who asked if he wanted to have sex! Not him!"
+            PRG2 "I went to his dorm! I brought it up!"
+            PRG2 "It was me! I'm pregnant because of my own choices!"
+            show PRG worried
+            PRG2 "It was consensual… but it was my idea first…"
             Enmei "Aida, you don't have to cover for him…"
-            PRG "I'm telling the truth! Listen to me just one time!"
-            PRG "Keisuke has been there for me! He's made me feel cared for!"
-            PRG "And, he makes me feel SAFE! I feel SAFE when I'm with him! He doesn't just treat me like a coat and put me away when he's done with me!"
+            show PRG angry
+            PRG2 "I'm telling the truth! Listen to me just one time!"
+            PRG2 "Keisuke has been there for me! He's made me feel cared for!"
+            PRG2 "And, he makes me feel SAFE! I feel SAFE when I'm with him! He doesn't just treat me like a coat and put me away when he's done with me!"
             Enmei "Aida-"
-            PRG "Where have you both been?!"
+            PRG2 "Where have you both been?!"
             $setFlag("PRG050_Aida")
             pause 2
         "Protect Aida":
             pause 1
             MC "She is okay."
+            show PRG sad-2
             PRG "Keisuke, let me-"
             MC "No. This isn't right."
             show PRG unsure
@@ -31243,8 +31249,9 @@ label PRG050:
             MC "You can say all that shit you want, I don't care."
             MC "But you have no right to try and control your daughter!"
             show PRG angry
-            PRG "Keisuke! Stop it!"
+            PRG2 "Keisuke! Stop it!"
             $setFlag("PRG050_Kei")
+    show PRG worried
     "Enmei went silent. He glanced off to the side."
     "Takara stood in the doorway, a tissue up to her face. Tears ran down as she sniffled."
     show PRG unique
@@ -31258,17 +31265,17 @@ label PRG050:
     show PRG sad-2
     PRG "What stopped you…?"
     Enmei "Aida-"
-    show PRG sad-2
-    PRG "W-What stopped you from being there, Dad?!"
-    PRG "I asked every time I saw you if I could come home! And every time, you and Mom just told me that it wasn't the right time, or that it would be too much of a shift for me."
-    PRG "I thought every time 'I'm probably old enough now' or 'I'm probably big enough now!'"
-    PRG "But, I never was! I was never old enough or big enough!"
+    show PRG unsure
+    PRG2 "W-What stopped you from being there, Dad?!"
+    PRG2 "I asked every time I saw you if I could come home! And every time, you and Mom just told me that it wasn't the right time, or that it would be too much of a shift for me."
+    PRG2 "I thought every time 'I'm probably old enough now' or 'I'm probably big enough now!'"
+    PRG2 "But, I never was! I was never old enough or big enough!"
     Enmei "We did that because we wanted what was best for you. And, a life away from dealing with your father being in pain seemed like the best choice at the time."
-    PRG "You didn't want me!"
-    PRG "I found someone who makes me feel like I'm better than I ever could be! I found someone who makes me smile every day!"
-    PRG "Why can't you just be happy for me?!"
+    PRG2 "You didn't want me!"
+    PRG2 "I found someone who makes me feel like I'm better than I ever could be! I found someone who makes me smile every day!"
+    PRG2 "Why can't you just be happy for me?!"
     Enmei "Because you took your entire life and threw it away!"
-    PRG "Because what I had before was so amazing?!"
+    PRG2 "Because what I had before was so amazing?!"
     "Enmei bolted up from the bed, throwing his hands up and turning, walking across the room to his window."
     "He put his hand to the wall, leaning into it with a deep sigh."
     pause .5
@@ -31290,9 +31297,13 @@ label PRG050:
     Enmei "It's okay…"
     pause 1
     "Aida yanked her arm away, her head going up with her eyes filled with tears, her cheeks and face a deep scarlet."
+    show PRG angry-2
+    PRG "S-Shut up…"
+    Enmei "What did you-"
     show PRG angry
-    PRG "You {i}didn't{/i} raise me!"
-    PRG "Y-You're not my father anymore!"
+    PRG2 "I said shut up!"
+    PRG2 "You {i}didn't{/i} raise me!"
+    PRG2 "Y-You're not my father anymore!"
     "Aida looked at her father, her tears raining down her cheeks as she stepped away from him."
     pause 1
     show PRG sad-2
@@ -31304,7 +31315,7 @@ label PRG050:
     "I left the room in silence, not glancing back at Aida's father as I passed Takara."
     #scene Kodama living room
     Takara "Aida, please!"
-    show PRG unsure with fade
+    show PRG unsure with dissolve #recheck once bg finished
     "Aida waddled into the living room and took the baseball box from the counter, throwing open her bag and placing it inside."
     "She gathered what little stuff she had laying around, then pushed past me, going to the bathroom as the door to her parents bedroom slammed."
     "Takara moved out of the bathroom and into the hall."
@@ -31323,8 +31334,9 @@ label PRG050:
     Takara "H-Honey… {w}p-please…"
     "I slipped my shoes on, grabbing Aida's boots and kneeling to help her, but Aida pushed right past me, taking my arm and pulling me along with her, stepping out into the hallway in just her tights."
     #scene apartment hallway with fade
-    "Aida pulled me out then yanked the door shut hard enough to rattle the walls all around it."
+    "Aida waited for me and our suitcases to clear the door, then yanked the door shut hard enough to rattle the walls all around it."
     "She reached back behind her, taking my hand and pulling me down the hall, her belly still scraping the walls."
+    $setTime(TimeEnum.NIGHTLIGHTS)
     scene Kanagawa Alley with fade
     show PRG unsure
     "Outside, Aida walked to the end of the block by the main road. I held out my hand for a taxi as one pulled past, doing a U turn to pick us up."
@@ -31335,9 +31347,10 @@ label PRG050:
     PRG "J-Just take us there, please."
     "I opened the door for Aida as she jammed herself in, not even waiting for help."
     "The cab heaved and squeaked from Aida's force, the front seat jerking forward as her giant belly wrenched it up."
-    hide PRG with fade
+    hide PRG with dissolve
     Driver "Jesus! Watch where you're swinging that thing!"
     "I opened the trunk and put our bags inside, shutting it and walking around to the other side, getting in."
+    $setTime(TimeEnum.NIGHT)
     scene Car Interior with fade
     "The seat in front of Aida's was shoved forward."
     "Aida was seated back in her seat, looking out the window."
@@ -31388,7 +31401,7 @@ label PRG050:
     "Inside was a bed, smaller than Aida's at Seichou, but much larger than the air mattress."
     MC "Aida… I… I'm sorry."
     MC "I'm so sorry…"
-    show PRG insecure
+    show PRG insecure with dissolve
     PRG "... It wasn't your fault."
     MC "But…"
     PRG "N-Not now, Keisuke… please, not now…"
@@ -31401,13 +31414,14 @@ label PRG050:
     PRG "I… told her I'd never use it…"
     "I set my suitcase and Aida's boots down, then looked at Aida as she sat on the bed."
     "I looked down. Her tights were torn through on her feet."
-    MC "Are you… going to shower or anything?"
+    MC "Do you… want to shower or anything?"
     PRG "... Yeah."
     "Aida wordlessly tried to get up, but came back down onto the bed again. I gave her my hand and pulled."
     "Without a word, Aida went to her bag and took out her toiletry bag, taking it and waddling into the bathroom."
     hide PRG with fade
     stop music fadeout 1.0
     "I got myself undressed to my boxers and simply just laid down in bed."
+    play sound Vibrate
     "{i}Bbmmm… bbmmmm{/i}"
     MCT "Aida's phone…"
     MCT "How many times have they tried to call?"
@@ -31481,7 +31495,7 @@ label PRG051:
     "I took a piece of hair out from my eyebrows, rubbing my eyes and looking back out the window."
     "It was hard to tell how far we were, and due to the cloud cover, I couldn't tell where the sun was."
     "I reached forward and sipped my juice, looking down."
-    show PRG unsure
+    show PRG unsure with dissolve
     "Aida lay on my chest still, her eyes half-open and staring down."
     "I adjusted a little, pulling my arm up."
     MC "Hey… want a little breakfast?"
@@ -31505,7 +31519,7 @@ label PRG051:
     scene black with fade
     $setTime(TimeEnum.NIGHT)
     scene School Front with fade
-    show PRG worried with fade
+    show PRG worried with dissolve
     play music TwilightDusk fadein 1.0
     "Coming up the path from the dock, Aida and I looked up to see the academy in front of us, the soft lights of nighttime lighting the campus."
     scene Campus Center with fade
@@ -31519,7 +31533,6 @@ label PRG051:
     "I followed Aida along and into the girl's dorm. Just as it was after a short date, after this long one, I'd be walking Aida home."
     "I wheeled my suitcase up alongside hers, walking beside her."
     pause .75
-    scene Dorm Hallway with fade
     "We stopped in front of Aida's dorm as she took out her keys, unlocking the door."
     show PRG unsure 
     PRG "I'm… I'm going to go take a shower."
@@ -31539,6 +31552,7 @@ label PRG051:
     "Aida turned and waddled into her bathroom, shutting the door."
     "I turned and walked back into the adjoining room of her dorm."
     pause .5
+    scene NYI #inbetween Alice and Aida's rooms
     show WG surprised with dissolve
     pause .5
     MCT "... Holy."
@@ -31666,11 +31680,11 @@ label PRG051:
     pause .5
     scene Classroom with fade
     pause .25
-    show HR neutral at Position(xcenter=0.30, yalign=1.0)
+    show HR neutral at Position(xcenter=0.30, yalign=1.0) with dissolve
     HR "Alright. You all put in a lot of work today, so no homework tonight. Have a good rest of your day."
     "Dismissing us early, Honoka and Akira were out the door milliseconds later."
     HR "Oh. Nikumaru-san and Hotsure-san? I'd like a word, if you would."
-    show WG neutral at Position(xcenter=0.70, yalign=1.0)
+    show WG neutral at Position(xcenter=0.70, yalign=1.0) with dissolve
     "I glanced at Alice, and rose from my seat as she followed me to Tashi-sensei."
     "Shiori and Daichi left the room quickly, with Shiori glancing our way as she left."
     pause 2
@@ -31718,7 +31732,7 @@ label PRG051:
     "I glanced over Alice's shoulder."
     show WG happy at altMove(0.5, 0.3)
     pause .75
-    show PRG worried at Position(xcenter=0.7, yalign=1.0)
+    show PRG worried at Position(xcenter=0.7, yalign=1.0) with dissolve
     pause .5
     MC "Oh. Aida's here. Behind you, Alice."
     "I half-stood and waved with one arm as Alice turned to glance behind her, her gut bumping her tray in front of her."
@@ -31777,7 +31791,6 @@ label PRG051:
     PRG "Did I miss anything in class?"
     MC "Tashi-sensei was rolling. No homework, but you'll probably have to catch up on reading and stuff."
     PRG "... Mm."
-    hide PRG with dissolve
     scene black with fade
     pause .5
     scene Classroom with fade
@@ -31947,7 +31960,7 @@ label PRG051:
 label PRG051B:
     $setProgress("PRG", "PRG052")
     play music DormLife
-    scene DormInterior with fade
+    scene Dorm Interior with fade
     "My eyes were all crusty. I reached up to wipe them."
     "Flipping in bed, I took my phone from the nightstand and checked the time."
     "Five in the morning."
@@ -31963,6 +31976,7 @@ label PRG051B:
     pause 2
     MCT "... Why the hell isn't this working?"
     "I sat up in bed, yanking the sheets and blankets off in frustration."
+    scene Bathroom with fade
     "I stumbled into the bathroom, reaching for my scissors."
     "My hair was longer again. This time past my shoulders and down onto my mid back."
     "I brought the scissors to the usual spot, starting to snip about."
@@ -32118,7 +32132,6 @@ label PRG051B:
     WG "To class then?"
     MC "I think so."
     stop music fadeout 1.0
-    hide WG with fade
     scene black with fade 
     pause .25
     scene Classroom with fade
@@ -32142,8 +32155,6 @@ label PRG051B:
     show PRG sad-2 at slowease(offscreenright, offscreenleft, 3.5)
     pause .5
     "Tashi-sensei didn't say anything, but he watched Aida enter and waddle slowly to her seat, sitting down in the front row, right in the center where she always was."
-    hide HR with dissolve
-    hide PRG
     scene black with fade
     pause .5 
     scene Classroom with fade
@@ -32171,6 +32182,7 @@ label PRG051B:
     scene black with fade
     pause .25 
     scene Cafeteria with fade
+    play music DormLife
     "I didn't feel up to eating, so I got a tea from a vending machine and sat down at a side table, sipping away and feeling the bite of caffeine nip at me."
     "I scrolled through my phone a bit, trying to take my mind off of the obvious by looking over new games that had released that I could order."
     "I stopped midway down, looking at the cover of The Tale of Lidia: The Midnight Dutchess."
@@ -32203,6 +32215,7 @@ label PRG051B:
     "I headed down the hall, going away from the cafeteria and the exit to the courtyard."
     scene Hallway2 with fade
     "I don't know why I even went that way, but I found myself walking toward the cooking club's kitchen."
+    stop music fadeout 1.0
     "From far away, I could see a white piece of paper stuck to the door."
     "Closing the distance, I looked up."
     "{i}Next competition is a week from Tuesday!{/i}"
