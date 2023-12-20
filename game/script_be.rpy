@@ -13312,7 +13312,7 @@ label BE055:
     Hageshi "... and once you carry that over from your previous equation, you have your final answer here."
     play sound Bell
     Hageshi "Perfect timing. Your assignment is to complete all the odd questions on pages 255-257."
-    MCT "Ugh… Why doesn't he ever assign problems that have answers in the back of the book?."
+    MCT "Ugh… Why doesn't he ever assign problems that have answers in the back of the book?"
     Hageshi "And remember: if you get stumped on a problem, you can always work through one of the even ones that has the answer in the back of the book."
     MC "Gee, thanks Hageshi-sensei, you shouldn't have."
     Hageshi "You're right. I go too easy on you kids. I promise the next assignment will be a more appropriate difficulty level."
@@ -13428,7 +13428,9 @@ label BE055:
     Naoki "Mhmm. And… stay alert, Hotsure-san."
     "Naoki-sensei nodded as I bowed my head. As I stepped into the first aid room, I heard him blow one of his whistles. The sounds of splashing in the pool died down in response."
     scene NYI with fade #first aid room
+    stop music fadeout 2.0
     pause 1
+    play music LastBell fadein 1.0
     "Sitting at the small desk to the side of the room, I placed my textbook and took out my pen and notebook to resume working on Hageshi-sensei's assignment."
     MCT "This assignment doesn't help Hageshi-sensei beat my suspicion he is a secret sadist…"
     "Honoka's voice suddenly drifted in. I glanced around and spotted a vent connected directly to Naoki's office."
@@ -13448,7 +13450,7 @@ label BE055_C1:
     BE "{size=-3}But… I want to be part of the group…"
     Naoki "{size=-6}By isolating yourself as far as you can from the majority of the students?{/size}"
     BE "{size=-3}I'm just trying to be considerate, because of how… {i}big{/i} I am.{/size}"
-    MCT "She sounded… bitter? About her size? I knew she'd had some frustrations recently, but…"
+    MCT "She sounds… bitter? About her size? I knew she'd had some frustrations recently, but…"
     Naoki "{size=-6}Which is commendable. However, did you notice, Nibui-san and Shido-san had to bring their laps to a halt and maneuver around you? Their pace was disrupted and they felt the need to restart.{/size}"
     BE "I can get faster! {size=-3}I just need to practice more…{/size}"
     Naoki "{size=-6}...Inoue-san, this isn't about your times. This isn't a competitive club. The times are just a goal. Almost everyone's time goes down here, except for some of the muscle growth and hand or feet growth students, and even then, it's a coin flip. I'm sorry, Inoue-san. You aren't going to get any faster.{/size}"
@@ -13456,7 +13458,8 @@ label BE055_C1:
     Naoki "{size=-6}But the fact is, your time has only gone down since you joined. At best, you'd plateau at your current best time, but will likely continue to slow down from here{/size}." 
     Naoki "{size=-6}I'm not saying you can't or shouldn't swim. In fact, I encourage you to continue. It's one of the best physical activities anyone can do.{/size}"
     BE "{size=-6}I j-just… can't do it du-during club…?{/size}"
-    MCT "{b}!!!{/b}"
+    stop music fadeout 1.0
+    MC "{b}!!!{/b}"
     "In the years that I've known Honoka, I don't think I've ever heard her sound so… defeated. Not even the day she found out she was moving away. Never."
     BE "{size=-3}I-is it because I've been so flaky? I p-promise, I won't jump clubs anymore!{/size}"
     Naoki "{size=-6}Inoue-san, you and I both know that this has nothing to do with you changing clubs. I bounce around even more than you do. You are far from the first student who needed to experiment to find the right fit.{/size}"
@@ -13467,13 +13470,14 @@ label BE055_C1:
     Naoki "{size=-6}—AND we also have to take each factor into account. Your type of growth factor is one of the most incompatible with swimming. You've already grown well beyond the point at which most such students move on.{/size}"
     BE "…"
     Naoki "{size=-6}... You've been dealt an unfair hand.  It's not your fault. But the fact is, if you keep trying as hard as you do, you are not only likely to hurt yourself, you may accidentally hurt someone else.{/size}" 
-    Naoki "{size=-6}As I said: you can still use the pool, and if you'd like, I can help develop a workout regime that you can still maintain with your factor.{/size}"
+    Naoki "{size=-6}As I said: you can still use the pool, and if you'd like, I can help develop a workout regimen that you can still maintain with your factor.{/size}"
     BE "…"
     Naoki "{size=-6}...I'm sorry, Inoue-san. It isn't an easy pill to swallow. I'll give you some time to collect yourself. Hotsure-san is next door, would you like me to send him in?{/size}"
     BE "…"
     Naoki "{size=-6}Alright.{/size}"
     pause 2
     #show Naoki neutral
+    play sound Knock
     "Naoki stood in the doorway and lightly tapped on the frame."
     Naoki "Hotsure-san. As a member of faculty, I {i}should{/i} reprimand you for eavesdropping on a private conversation."
     MC "{size=-3}{w}Sorry, sensei.{/size}"
@@ -13481,10 +13485,11 @@ label BE055_C1:
     "I feebly nodded my head, and put my things in my bag. Naoki-sensei put his hand on my shoulder, and walked toward the boys locker room."
     Naoki "{i}*Haaaaah….*{/i}{size=-3} It never gets easier being the bearer of bad news, either.{/size}"
     scene Coach Office with dissolve
-    show BE sad #upset
+    play music Requiem fadein 2.5
+    show BE sad with dissolve #upset
     "Honoka sat on one of the chairs, an expressionless look on her face. Her eyes didn't move at all. They just went on staring straight ahead. The tears flowing down her face confirmed what I already knew."
     "I sat next to her, not bothering to position myself away from her chest as it trembled slightly. I reached out and lightly grasped her hand. After a moment, she squeezed it. Hard."
-    pause .5
+    pause 2.5
     "I didn't let go."
     jump daymenu
 
@@ -13509,8 +13514,11 @@ label BE055_C2:
     "I looked up from my position on the ground next to the changing room – a student with large hands was leaning out the door, gesturing behind her with her thumb."
     Student "Hotsure-san, I'm guessing? You should… you should go inside. I'm the last one out, I'll, uh, keep watch out here, in case anyone else comes by."
     "I slowly picked myself up and went inside."
+    stop music fadeout 1.0
+    pause 1.0
     scene Lockers Showers with fade
     show BE sad #crying
+    play music Requiem fadein 2.5
     "Heading inside, I heard one of the showers running. Inside sat Honoka, her eyes puffy… and vacant."
     BE "... I'm done with swimming club."
     MC "...I'm sorry, Honoka. I don't know what to say…"
@@ -13575,7 +13583,8 @@ label BE056:
     MCT "But then again, she wouldn't ask for help with Honoka for no reason. Better check on her."
     stop music
     $setTime(TimeEnum.EVE)
-    scene black
+    scene black with fade
+    pause 2.5
     play sound Knock
     scene Dorm BE with fade
     show Kokutan neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1) with dissolve

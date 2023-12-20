@@ -32484,6 +32484,7 @@ label PRG052:
     "Plus, I hadn't felt like writing. Or really doing anything."
     "I had met the minimum requirement, but I really had just run on autopilot the whole time."
     "I sat back, resigning myself from any sense of notetaking and watching Tashi-sensei going through topics on the board."
+    show HR with dissolve
     "As happened many times, though, the bell rang in the middle of his thought, cutting him off."
     play sound Bell 
     HR "Make sure to go over your notes on the Heian period. It'll be on the next exam."
@@ -32535,8 +32536,9 @@ label PRG052:
     "Every step felt like a walk through fire. I wanted to get to the end, but I didn't want to step forward."
     "I wanted to fix things. I wanted to keep the flame Aida and I had burning strong."
     "I walked down the hall, stopping at Aida and Alice's."
-    pause 2
+    pause 1.5
     play sound Knock
+    pause .5
     show WG surprised with hpunch
     "Before I could even take my fist away, Alice burst out the door, staring at me."
     "I shook my head, the sight of Alice's heavy body in front of me."
@@ -32576,7 +32578,7 @@ label PRG052:
     scene Campus Center with fade
     "We went into the middle of campus, the two of us looking this way and that."
     "The idea of finding Aida just sitting behind a bush, though far-fetched, did seem valid in my mind then."
-    show WG surprised-2
+    show WG surprised-2 with dissolve
     MC "Did she say anything to you before you got into the shower? Anything hinting at all?"
     WG "No, nothing. I told her I was going to shower, and she said okay."
     MC "Mmgh… dammit…"
@@ -32594,8 +32596,8 @@ label PRG052:
     show BE surprised-2
     BE "Missing?! Wha- how? Why?"
     MC "Look, we'll… it doesn't matter. Can you help us find her?"
-    show BE surprised-2 at altMove(1.5, 0.2), Transform(xzoom=-1) with dissolve
-    show WG worried at Position(xcenter=0.7, yalign=1.0) with easeinright
+    show BE surprised-2 at altMove(0.5, 0.8)
+    show WG worried at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1) with easeinleft
     WG "Please, Honoka…"
     show BE unamused
     BE "Y-Yeah, of course!"
@@ -32606,7 +32608,7 @@ label PRG052:
     BE "Okay. First, we should check any of her usual spots. I'm assuming you guys have checked her dorm, and I definitely didn't see her in the cafeteria."
     MC "We did. Let's try the classroom."
     "Honoka hurried along with me, the two of us making quite the better pace than Alice was."
-    "I tried the door as we reached it, pushing inward."
+    "I tried pulling the door as we reached it."
     MC "Locked…"
     show BE sad
     BE "You don't think… she would have gotten in and locked herself in, do you?"
@@ -32715,18 +32717,20 @@ label PRG052:
             scene black with fade
             pause .25
             scene Library with fade
-            "Quietly, Honoka pushed open the door to the library, stepping inside with Alice behind her and me trailing the two girls."
+            "Quietly, Honoka slid the door to the library open, stepping inside with Alice behind her and me trailing the two girls."
             "A few students sat at different tables, with some at computers. The three of us spread out, with me going down the aisles of books."
             "I don't know why I even tried to look through the books, as if Aida would be hiding in the shelves, but I still did."
             "I didn't have much for logic anymore… I was ready to try anything."
             "I came to the end, as Honoka finished walking around the tables and Alice checked by the counter."
+            show BE surprised-2 at Position(xcenter=0.8, yalign=1.0) with dissolve
+            show WG worried at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1) with dissolve
             MC "Anything?"
             WG "Nothing…"
             MC "Dammit…"
             "I sat down at a table, running my hands through my hair."
             MC "Mmgh… I should have gotten there sooner to talk to her. None of this shit would have happened."
             WG "You did nothing wrong, Hotsure-san… I shouldn't have pushed her so hard."
-            show BE confused with dissolve
+            show BE confused
             BE "Guys."
             BE "Argue about who's in the wrong later."
             show BE doubt
@@ -32763,7 +32767,7 @@ label PRG052_Roof:
     "The sun was dipping further, the light fading as we hurried along."
     $setTime(TimeEnum.NIGHT)    
     scene HallwayStairs with fade
-    show WG doubt  at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show WG doubt  at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1) with dissolve
     show BE doubt  at Position(xcenter=0.75, yalign=1.0) with dissolve
     "We came to the steps, and I ran up them, taking them two at a time and turning."
     "Alice was taking very slow, steady steps up, having to do the step up then pull the back foot up onto the same step thing, moving slower as a result."
@@ -32795,8 +32799,6 @@ label PRG052_Roof:
     show PRG worried 
     pause .5
     show PRG unique
-    pause 1
-    show PRG worried
     MC "Aida!"
     "I hurried to her, as in the distance, I heard the door swing open and shut again."
     BE "Kei-chan!! Where are you?!"
@@ -32818,8 +32820,8 @@ label PRG052_Roof:
     play music PRGOverflow fadein 3.0
     pause 1
     show PRG sad at altMove(0.2, 0.375)
-    PRG "Waaaahhh-hnnnn-hn-hn!!"
-    PRG "Aaaaaahh-hnnhghhh-"
+    PRG2 "Waaaahhh-hnnnn-hn-hn!!"
+    PRG2 "Aaaaaahh-hnnhghhh-"
     "Aida's body convulsed as she burst into tears, throwing her head down into her arms."
     "Aida's cry plowed into my chest and dug into my heart."
     "She lifted her head, tears cascading down her cheeks as her mouth opened, and she let out another loud wail, her lip quivering as she went into another tremble."
@@ -32907,7 +32909,8 @@ label PRG052_Roof:
     show BE unamused
     BE "Okay, okay… coming back to that in a second… why hasn't he wanted to be around you?"
     show WG worried
-    WG "Honoka… Aida's father has lifelong carbon monoxide poisoning. Aida went to live with her grandparents at an early age, because her parents viewed it as an easier upbringing for her than watching her father suffer."
+    WG "Honoka… Aida's father suffers lifelong effects from serious carbon monoxide poisoning." 
+    WG "Aida went to live with her grandparents at an early age, because her parents viewed it as an easier upbringing for her than watching her father suffer."
     WG "But… even after he had recovered a reasonable amount, they stayed distant, even though Aida very much wanted to come home."
     WG "She was living with her grandparents up until coming here."
     "I looked down at Aida, making sure she wasn't uncomfortable with Alice saying all of this."
@@ -32921,8 +32924,8 @@ label PRG052_Roof:
     PRG "But… I-I didn't mean it…"
     PRG "I… I-I…"
     show PRG sad
-    PRG "{i}Hngh-hn-hn-hn… hgh-hgh-hgh-!"
-    PRG "I-I-I d-didn't m-mean it!!"
+    PRG2 "{i}Hngh-hn-hn-hn… hgh-hgh-hgh-!"
+    PRG2 "I-I-I d-didn't m-mean it!!"
     "Aida's breathing sped up, her body shaking again as more tears burst from her."
     show WG surprised-2
     show BE sad
@@ -32961,6 +32964,7 @@ label PRG052_Roof:
     PRG "No."
     BE "C'mon. Yes you do, Honey..."
     show BE happy
+    show WG happy-2
     BE "You said \"it's perfect.\" Those were your exact words."
     PRG "So…?"
     BE "So? Kodama-san, you looked like a social media icon in the store that day."
@@ -32987,7 +32991,6 @@ label PRG052_Roof:
     BE "Kodama-san, if you only do that and {i}still{/i} manage to look the way you do, I'm afraid of what you'd look like fully decked out in makeup!"
     show BE happy
     BE "You're a natural beauty! People would kill for that!"
-    show WG happy-2
     WG "She does have a point, Aida."
     show PRG worried
     "Aida looked up at me."
@@ -33027,12 +33030,12 @@ label PRG052_Roof:
     PRG "..."
     PRG "... {w}P-Please don't go away."
     show PRG unsure
-    PRG "P-Please…"
-    PRG "... P-Please don't leave me, too."
+    PRG2 "P-Please…"
+    PRG2 "... P-Please don't leave me, too."
     show PRG sad-2
-    PRG "I-I-I… I-I… {i}h-hngh…{/i}"
-    PRG "I-I can't… l-lose you too…"
-    PRG "P-Please don't go…"
+    PRG2 "I-I-I… I-I… {i}h-hngh…{/i}"
+    PRG2 "I-I can't… l-lose you too…"
+    PRG2 "P-Please don't go…"
     "It all came out."
     "All of the anxious thoughts. The worries."
     "All of it."
@@ -33296,7 +33299,7 @@ label PRG052_Roof:
     pause 2
     show BE neutral
     BE "Remember back home? After we'd been playing all day?"
-    BE "And wee'd just sit there and gaze at the stars sometimes."
+    BE "And we'd just sit there and gaze at the stars sometimes."
     MC "We couldn't see them half the time with the city lights."
     show BE happy
     BE "Well, you know what I mean. Remember when we'd take the time to just… take it all in?"
