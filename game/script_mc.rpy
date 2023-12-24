@@ -2875,7 +2875,7 @@ label MC005:
     MC "Headphones are out again, Tomo."
     "... Nothing."
     MC "TOMO! HEADPHONES!"
-    show Tomoko surprised with vpunch
+    show Tomoko surprised at center, Shake(None, 0.5, dist=10) with vpunch
     Tomoko "AGH!"
     "Tomo yelped and turned around, her eyes wide."
     MC "Whoa, whoa. Sorry, sis. Didn't mean to scare you."
@@ -2895,6 +2895,7 @@ label MC005:
     "I walked over to her blinds and threw them open."
     $setTime(TimeEnum.DAY)
     MC "There."
+    show Tomoko neutral at Transform(xzoom=-1)
     Tomoko "Uuugh..."
     MC "Come on, Sis. You could use some sun."
     show Tomoko annoyed
@@ -8205,6 +8206,7 @@ label MC013_WGFMG:
         show FMG surprised-2
         FMG "Hey look, I had something come up. It needed my attention right then."
         show WG doubt
+        show FMG neutral
         WG "... Regardless, I had hoped for more."
     elif routelock == "FMG":
         FMG "Hey, Dude. Brain full?"
@@ -8494,14 +8496,17 @@ label MC013_aftermenu:
     HR "It's an 'I'll think about it.'"
     show HR unique
     Takamura "Well, whenever you make up your mind..."
+    show Takamura at altMove(1.0, 0.475)
     "Takamura unfolded a small piece of scrap paper in her hands, handing it to him."
     Takamura "My number. Let me know."
+    show Takamura at Transform(xzoom=-1)
+    show Takamura at altMove(1.0, 0.75)
+    pause 1
     "Takamura headed down the hall, toward us."
     Takamura "Good morning, Kodama-san."
     PRG "G-Good morning, Sensei."
-    show Takamura neutral at altMove(0.5, 0.85)
+    show Takamura at altMove(3.5, 3.0)
     pause 0.5
-    hide Takamura with dissolve
     stop music fadeout 1.0
     show HR neutral
     HR "... Alright. Let's head in, guys."
@@ -8564,6 +8569,7 @@ label MC013_aftermenu:
     show HR unique with dissolve
     "I glanced up at Tashi-sensei."
     "He had the paper from Takamura in one hand, staring at it."
+    show HR annoyed
     "Rolling his eyes, he tossed it to the corner of his desk as I glanced back down."
     hide HR with dissolve
     pause 1
@@ -8593,7 +8599,7 @@ label MC013_aftermenu:
     "In front of me, the chair squeaked as Shiori rose up from her desk."
     if routelock == "AE":
         "I took a moment to admire Shiori's jiggling rear as she set her paper down, then bowed and left the classroom quickly."
-    hide AE with easeoutleft
+    show AE at slowease(center, offscreenleft, 1.0)
     "The name of the Kofun period originates from:"
     menu:
         "Pottery":
@@ -8627,7 +8633,6 @@ label MC013_aftermenu:
         show WG pondering with dissolve
         "I looked sideways over at Alice, thinking about how excited I was for summer, which I hoped would prove more opportunities to  get to know her better... outside of work that is..."
         MCT "Hmm, getting to spend all that time with her. All of it..."
-        hide WG with dissolve
     if routelock == "BE":
         show BE neutral with dissolve
         "I smiled, glancing over at Honoka out of the corner of my eye."
@@ -8637,7 +8642,7 @@ label MC013_aftermenu:
     "Beside me, Alice stood up and walked her paper to the front, bowing to Tashi-sensei."
     if routelock == "WG":
         MCT "... God, she looks better almost every day."
-    hide WG with easeoutleft
+    show WG at slowease(center, offscreenleft, 1.0)
     "Who is the first historically verifiable Japanese monarch?"
     menu:
         "Emperor Jimmu":
@@ -8655,11 +8660,12 @@ label MC013_aftermenu:
     hide HR with dissolve
     show FMG neutral with dissolve
     "Akira got up next, setting her paper on Tashi-sensei's desk. Like the others, she bowed, then left."
-    hide FMG with easeoutleft
+    show FMG at slowease(center, offscreenleft, 1.0)
     "Glancing down, I looked toward the next-"
     MCT "Oh... I'm done."
     if getVar("MC013_Score") == 4:
         $setFlag("MC013_Perfect")
+        $setSkill("Academics", 1)
     "I glanced forward, getting up from my desk and taking my bag."
     show PRG insecure with dissolve
     "Before I got to the front, Aida wriggled in her desk and got up slowly. She walked to Tashi-sensei's desk and set her exam down, bowing slowly then leaving ahead of me."
@@ -8705,7 +8711,7 @@ label MC013_aftermenu:
     FMG "What did you choose, Kodama-san?"
     PRG "Um... Kinmei."
     hide PRG with dissolve
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with fade
+    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     FMG "Inoue-san! Who did you pick for the emperor question?"
     show BE shrug
     BE "I had no idea. I just picked Meiji."

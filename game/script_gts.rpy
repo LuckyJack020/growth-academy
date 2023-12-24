@@ -13074,7 +13074,7 @@ label GTSWG001:
             WG "As I was saying, before being interrupted {i}repeatedly{/i}, I am sure you will do better, Aida. I understand you are new to this role and do not have the years of professional experience of my usual assistants."
             WG "It is to be expected there will be some snafus during the initial onboarding; however, I expect them to be increasingly infrequent and smaller in magnitude." 
             PRG "R-Right, understood Alice."
-            WG "That being said, apart from today's uncharacteristic lapse, your performance thus far has been keeping with my expectations. I have no doubts you are the right person for the job.."
+            WG "That being said, apart from today's uncharacteristic lapse, your performance thus far has been keeping with my expectations. I have no doubts you are the right person for the job."
             show PRG neutral
             PRG "T-Thank you, Alice."
             show WG haughty

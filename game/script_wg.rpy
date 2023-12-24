@@ -27754,6 +27754,7 @@ label WG086:
     MC "Yes, we should probably get going to allow enough time before they close."
     play music WinterVocal
     scene School Front with fade
+    $setWGOutfit(OutfitEnum.CASUAL2)    
     show WG neutral with dissolve
     "I'm sure it wouldn't have phased Alice too much, given the robust layers of insulation she had, in addition to her winter coat. But I thought it best to not have us brave the windy winter weather on the way into town by foot."
     
@@ -29336,15 +29337,16 @@ label WG090:
     extend " Two things I hate the most."
     show WG happy
     MC "Well, might as well start getting some practice in now."
-    "I hopped up to take a seat on my bed, padding the mattress next to me to beckon her over."
+    "I hopped up to take a seat on my bed, patting the mattress next to me to beckon her over."
     MC "Let's start getting you comfortable."
     "Alice walked over and took a seat on my bed—"
-    show WG surprised
+    show WG surprised at altFall(0.25)
     "{i}*CRACK*{/i}*"
     MC "{i}Oh shiiiit!{/i}"
+    hide WG
     "Alice's weight snapped the bed right in the middle before she could even bear the full weight of her ass on the mattress, sending me rolling on top of her as it collapsed inward."
     MCT "Shit, I hadn't even thought about it! My bed is not reinforced like hers."
-    show WG stern
+    show WG stern with dissolve
     WG "You can't be serious! This is ridiculous!" 
     MC "Hehe...HAHAHA!"
     show WG angry
@@ -29512,7 +29514,7 @@ label WG091:
     scene Ryokan Exterior with fade
     play music Festival
     MC "Ohh, this place. What's it called again?"
-    show WG neutral
+    show WG neutral with dissolve
     WG "Satoyama village. It's a quaint little town at the foot of the mountains not far from the Academy."
     MC "Reminds me of the small towns you'd see in Nagano."
     WG "It definitely has a more traditional feel to it. From what I understand it's more of a bedroom community for retirees and is home to a fair amount of the faculty at school due to its proximity."
@@ -29570,7 +29572,7 @@ label WG091:
     "I moved in close to Alice, firmly seizing the sides of her belly as I pulled her in, our eyes locked as her belly began to slowly envelope me."
     show WG aroused
     WG "Quite so. Dastardly even. Taking advantage of an innocent maiden's gracious gestures of hospitality."
-    MC "Oh, something tells me you aren't as innocent as you lead on my dead maiden…"
+    MC "Oh, something tells me you aren't as innocent as you lead on my dear maiden…"
     "I leaned in, eager to taste those soft pouty lips…"
     play sound Knock
     show WG surprised-2
@@ -29595,7 +29597,7 @@ label WG091:
     Masseuse2 "Um… Please excuse me. I have to step out real quick."
     "Mei (at least I think I remembered her name) whispered something to the tall muscle lady before exiting the room."
     pause .5
-    "Mei retired shortly, along with the manager."
+    "Mei returned shortly, along with the manager."
     Manager "I must apologize, Miss Nikumaru, it has come to our attention that we are unable to safely accommodate your massage appointment."
     show WG doubt 
     WG "What do you mean?"
@@ -29690,7 +29692,7 @@ label WG091:
     play sound Knock
     "Just as we were wrapping up there was a knock on the door before the other masseuse came."
     Masseuse2 "Hotsure-san, I hope you enjoyed your massage. We will clean up everything here. Miss Nikumaru requests your company in the private onsen. Here is your key." 
-    Masseuse2 "It is at the end of this corridor, the onsen entrance marked 1-A. Please take one of these robes for entering and exiting the onsen. Enjoy the rest of your stay."
+    Masseuse2 "It is at the end of this corridor, the onsen entrance marked 1-A. Please take one of these robes before entering and exiting the onsen. Enjoy the rest of your stay."
     MC "Will do."
     scene black with fade
     pause .5
@@ -29704,7 +29706,7 @@ label WG091:
     "The crisp late winter air made me feel somewhat hesitant to shed my robe, but whatever hesitancy I had proved trivial due to the promise of a hot bath with an even hotter babe."
     show Ryokan Onsen with dissolve #remove steam overlay
     "Stepping closer to the water's edge, the steam parted."
-    show WG happy
+    show WG happy with dissolve
     "Revealing her round form in full view, baring it all in the open air. A look of pure contentment and relaxation was apparent on her face as she comfortably lounged against the edge of the spring."
     WG "Glad you could…"
     show WG surprised-2
@@ -29763,7 +29765,7 @@ label WG091:
     show WG aroused
     extend " I could definitely go for a back rub."
     MC "Say no more."
-    "I went back to where I had dropped it near the pool's edge during the \"surprise reveal\" just now. I squeezed a good sized gob of it in my hand, making a gross slurping sound as it the remainder sucked back into the tube."
+    "I went back to where I had dropped it near the pool's edge during the \"surprise reveal\" just now. I squeezed a good sized gob of it in my hand, making a gross slurping sound as the remainder of it sucked back into the tube."
     "It felt like cold hand sanitizer until I rubbed it in my hands and almost smacked my face when they slid past each other."
     MCT "Damn. This stuff is like aerospace grade lubricant."
     show WG happy
@@ -29788,6 +29790,7 @@ label WG091:
     show WG surprised-2
     WG "What was that?"
     MC "Don't mind me, just getting a closer look."
+    show WG neutral-2
     "By this point I was just grasping at straws, rubbing to and fro anyway I could as I tried to navigate the dramatic changes in topography as her fat smooshed and sloshed about with each touch, rippling across her back with each movement of my hand."
     "I reached under her arms, rubbing in counter clockwise circles. I knew there could be a lot of tension here, but instead of finding her lats, I was wrestling with two of the largest fat rolls on her upper back."
     "Each one was the size of a Christmas ham, forming a perch that her flabby arms rested on. She was so fat her arms couldn't lay straight down, they hadn't for a long time, being pushed outward by her massive swells of back fat."
@@ -29826,14 +29829,14 @@ label WG091:
     WG "Given your propensity for letting yourself drown, might I suggest you draw your attention a little lower…"
     "Alice grabbed the sides of her belly and did a little sashay of her hips to further drive home the point."
     show WG happy-2
-    WG "This is all yours, Keisuke. {i}Ever. Square. Centimeter."
+    WG "This is all yours, Keisuke. {i}Every. Square. Centimeter."
     MC "What can I say? I'm a lucky man."
     WG "You better believe it."
     show WG happy
     "There it was in all its glory, the motherlode, a sealed vault containing the lion's share of her countless fattening feasts that fueled her body's insatiable growth to the point that it dominated her wide frame."
-    "Despite the water not even being chest high, I had to dip my head below the water just to reach with my arm to get under it."
+    "Despite the water not even being chest high, I had to dip my head below the water just to reach with my arms to get under it."
     "Emerging from the surface, I took a deep breath and braced myself to lift it…"
-    "Only to the whole mass effortlessly in my hands."
+    "Only to lift the whole mass effortlessly in my hands."
     MCT "Huh?"
     WG "Hehe, that tickles."
     show WG surprised-2
@@ -29851,7 +29854,7 @@ label WG091:
     MC "{i}Don't{/i} stop that? Whatever you say."
     show WG sly
     WG "I know you heard me!"
-    "Up and down, side to side, her belly wobbled back and forth to the point it was beyond my control at this point. I just hung on for the ride like I was strapped to a beach ball in a bouncy castle."
+    "Up and down, side to side, her belly wobbled back and forth to the point it was beyond my control. I just hung on for the ride like I was strapped to a beach ball in a bouncy castle."
     show WG aroused
     "As much as I was enjoying playing with her massive mound of fat, I could tell from the flush on her cheeks she must have been enjoying it just about as much as I was."
     WG "Dear… this is nice and all, but I think it's my turn."
