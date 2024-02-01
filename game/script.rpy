@@ -1,4 +1,4 @@
-define config.interpolate_exprs = "fallback"
+#define config.interpolate_exprs = "fallback" #Add back in if interpolation ever fails again
 default persistent.enable_notifications=2
 default persistent.enable_nsfw=True
 default AEOutfit = OutfitEnum.DEFAULT
