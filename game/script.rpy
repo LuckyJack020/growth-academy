@@ -1,3 +1,4 @@
+define config.interpolate_exprs = "fallback"
 default persistent.enable_notifications=2
 default persistent.enable_nsfw=True
 default AEOutfit = OutfitEnum.DEFAULT
