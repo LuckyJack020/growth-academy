@@ -125,7 +125,7 @@ label FMG002:
     FMG "This one forum I found said to try drawing out the historical figures. One, I can't draw, and two, that would require a little too much work."
     MC "If you need help trying things out let me know. I'll do my best to make time."
     FMG "I wouldn't worry about it. But I do appreciate the offer."
-    "Akira pulled out her phone to check the time. maybe I'm just that good at guessing, but given the sad look she had on her face, it was time for her to go."
+    "Akira pulled out her phone to check the time. Maybe I was just that good at guessing, but given the sad look she had on her face, it was time for her to go."
     show FMG sad
     FMG "Man..."
     show FMG neutral
@@ -2229,7 +2229,7 @@ label FMG018:
     FMG "Wha... Oh, good morning, Keisuke. I had this dream where I was the queen of Italy and there was..."
     show FMG sad
     FMG "...Uh, where's the rest of the class? Don't tell me it's Sunday and I walked to class without checking again."
-    MC "No, the class is going to the cooking classroom to do test our culinary skills."
+    MC "No, the class is going to the cooking classroom to test our culinary skills."
     show FMG neutral
     FMG "Oh, that's cool..."
     show FMG surprised
@@ -3932,7 +3932,7 @@ label FMG024_c1_1:
     show FMG angry
     FMG "Drop it."
     MC "Not a chance."
-    MCT "What could be bothering her so much? She was fine in class the only day."
+    MCT "What could be bothering her so much? She was fine in class the other day."
     MCT "Hm, could it be..."
     MC "It's Natsuko, isn't it?"
     show FMG angry-2
@@ -5299,7 +5299,7 @@ label FMG032:
 
     scene Campus Center with fade
     $setFMGOutfit(OutfitEnum.DEFAULT)
-    "After our fin in the pool, we changed in the locker room and made our way to the cafeteria across campus."
+    "After our swim in the pool, we changed in the locker room and made our way to the cafeteria across campus."
     show FMG sad with dissolve
     FMG "I'll do it in record time... What record were you going for, exactly? Fastest drowning time?!"
     MC "Hang on now, that leg cramp almost killed me! If it wasn't for my incredible plot armor, you'd be without a boyfriend."
@@ -8528,8 +8528,8 @@ label FMG048:
     FMG "I'm joking! Don't make that face."
     show FMG neutral
     FMG "Kei-kun, we need our girl time. Can you wait in the hall?"
-    MC "What... I can't listen in?"
-    "Akira & Natsuko" "Yes."
+    MC "What... can't I listen in?"
+    "Akira & Natsuko" "No."
     show FMG happy
     FMG "We won't be long, don't worry!"
 
@@ -8743,6 +8743,7 @@ label FMG050:
     $setProgress("FMG", "FMG051")
     $setSize(4)
     $setTimeFlag("size4")
+    $setFMGOutfit(OutfitEnum.NUDE)
     scene Dorm FMG with fade
     play music FMG
     "Yesterday... Yesterday was something else. Sharing that special moment with Akira was unreal. I never would've thought in a million years that's how my first time would've gone. Fortunately, the surprises didn't stop there."
@@ -8943,7 +8944,8 @@ label FMG050:
     FMG "You're serious?"
     MC "Yes?"
     FMG "Hm, sure, why not. This could be fun and lets us bond some more. Have you looked up anything diet-related, like which ones you'd like to try? Actually, why do you even want to do a diet?"
-    MC "I'm not too sure myself, I'm not in terrible shape as it is. Maybe I want to start taking our workouts more seriously and I think a diet would help me build some muscle? Not too sure how it all works. What I do know is I want to be able to keep with you as best I can."
+    MC "I'm not too sure myself, I'm not in terrible shape as it is. Maybe I want to start taking our workouts more seriously and I think a diet would help me build some muscle? Not too sure how it all works."
+    MC "What I do know is I want to be able to keep up with you as best I can."
     show FMG happy
     FMG "I'm impressed. That's freaking awesome to hear from you. When we get back to my dorm we can work something out. After we meet up with Alice tomorrow, we can step up our workout routines. This is gonna be sick!"
     FMG "Oh! I got a fantastic idea. You'll love this."
@@ -10020,7 +10022,7 @@ label FMG055:
     FMG "Right, sorry, my bad. Let me go grab it."
     hide FMG with dissolve
     pause 1
-    $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setFMGOutfit(OutfitEnum.DRESS)
     show FMG neutral with dissolve #(sundress)
     FMG "Bam!"
     MC "First off, holy shit, you look amazing! Second, I have a question. How did you get a sundress to fit you? There is no way the school is providing you with something {i}that{/i} nice."
@@ -12030,7 +12032,7 @@ label FMG064:
     Natsuko "Yes. I am."
     FMG "Yeah, I'm all set."
     show FMG flex
-    extend  " You'll love this one me, Kei."
+    extend  " You'll love this on me, Kei."
     scene black with fade
     pause 1
 
@@ -14276,7 +14278,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         MC "Don't touch me, you fiend."
         show FMG happy
         FMG "Scared?"
-        MC "Hardly. I'd dropped you like a sack of potatoes."
+        MC "Hardly. I'd drop you like a sack of potatoes."
         "She bent down and gently kissed me on the cheek."
         MC "That's it??? Come back."
         "She bent down again and I planted my lips on hers."
@@ -17034,7 +17036,7 @@ label FMG081:
     FMG "{size=-6}I hope she's able to find peace after all this time.{/size}"
     MC "Hm? You saying something?"
     show FMG neutral
-    FMG "Nothing, I'm just rumbling out loud. The restaurant should be around the corner."
+    FMG "Nothing, I'm just mumbling out loud. The restaurant should be around the corner."
     MC "Noice. Soooooooo where are we eating? The only thing you've said is it being some fancy pants restaurant."
     FMG "Naaah, I was kidding. We're going to Lunar Burger, you know, the place where you asked me out."
     MC "...We got dressed up for... for a burger joint?"
@@ -19691,7 +19693,7 @@ label FMGGTS001:
     "Seemly out of nowhere a chubby kitten strolled into Akira's path looking for snacks."
     MC "Someone's been feeding him a little too much..."
     show FMG neutral
-    FMG "He is quite a chucker. I'll give the little fatty a snack."
+    FMG "He is quite a chunker. I'll give the little fatty a snack."
     "Akira cleaned her hands and grabbed some of the pastry from the bag, giving tubby a little piece of it."
     MC "Hey! That's from my donut."
     FMG "You'll be fine, you don't need it that badly."

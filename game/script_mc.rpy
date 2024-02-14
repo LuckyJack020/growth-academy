@@ -61,7 +61,7 @@ label global000:
     show Tomoko neutral
     "I scoffed and looked back at the island."
     show Tomoko distracted
-    "A fairly decent sized cluster of buildings jutted out from the trees, which parted around them to form a homey looking town."
+    "A fairly decent sized cluster of buildings jutted out from the trees, which parted around them to form a homey-looking town."
     "And, since that was all I could see from here, I figured that the school had to be nestled in with those buildings."
     MCT "Not like they'd just stick it out in the boonies."
     pause .5
@@ -97,7 +97,7 @@ label global000:
     Student1 "Wait, you didn't apply either?"
     pause .75
     MCT "... Weird."
-    "I waited in line for a few minutes before reaching the building line at the end of the dock, where I was handed a small welcome gift bag by a warm looking woman with raven black hair."
+    "I waited in line for a few minutes before reaching the building line at the end of the dock, where I was handed a small welcome gift bag by a warm-looking woman with raven black hair."
     show Takamura neutral with dissolve
     "On her chest hung a bright nametag that read \"Aoi Takamura\"."
     show Takamura neutral at altMove(0.5, 0.75)
@@ -202,7 +202,7 @@ label global000:
     "I bit my bottom lip and put my hands into my pockets, shrugging off her question."
     MC "Because you never forget the girl who kicks your ass in a Beetle Fighting Tournament-"
     show BE surprised
-    BE "OH. MY.-"
+    BE "OH. MY-"
     MC "What's good, Hon-"
     BE "Keisuke?! Keisuke Hotsure!?"
     MC "Took you long enough!"
@@ -1044,6 +1044,7 @@ label global000_sit_c3_2:
     MCT "Geez. It's like she's never spoken before."
     pause .25
     MC "So... nervous about starting at a new school?"
+    show PRG worried
     PRG "A little...{w} yeah."
     MC "I can relate to that. It is definitely different."
     PRG "Yeah..."
@@ -1300,7 +1301,7 @@ label MC001:
     "Daichi had walked back to his side of the room, already completely engrossed with typing away at his laptop, oblivious to my presence after having just cornered me for an impromptu interrogation."
     "Not bothering to wait for a response, I just headed out the door."
     scene Dorm Hallway with fade
-    "Daichi was certainly... eccentric, to put it lightly. As off-putting as our initial interactions had been, I decided not to judge him too harshly for it. We've all been thrust into something no one could have really prepared for."
+    "Daichi was certainly... eccentric, to put it lightly. As off-putting as our initial interactions had been, I decided not to judge him too harshly for it. We'd all been thrust into something no one could have really prepared for."
     "People cope with the stress of the unknown in different ways and I didn't know the guy well enough to know if that was his true personality, or if he just needed some time to wind back down."
     "I wasn't holding out for the latter any time soon though."
     scene Dorm Exterior with fade
@@ -1322,7 +1323,7 @@ label MC002:
     "And, the more I thought about it, the more I was wondering if I'd fallen into some wicked fever dream."
     "Even in this fever dream realm, however, I still sat in class."
     "Apparently, classes were the same no matter where I was, same sort of subjects and all."
-    "I rubbed my eyes a bit. That post lunch haze had set in like a bird in a nest, and the effects of my bowl of zaru soba had more than shown themselves."
+    "I rubbed my eyes a bit. That post-lunch haze had set in like a bird in a nest, and the effects of my bowl of zaru soba had more than shown themselves."
     show HR neutral with dissolve
     pause .25
     HR "... created from bone, shells, antlers, and..."
@@ -1498,7 +1499,7 @@ label MC002:
     pause .5
     "Walking with Tashi-sensei felt like being a remora on a shark."
     pause .25
-    "... A very tired looking shark."
+    "... A very tired-looking shark."
     "Tashi and I walked silently down the hall together, neither of us saying a word."
     scene Hallway2 with fade
     "We passed clubrooms, other classrooms, and students as we went down the halls."
@@ -1667,7 +1668,7 @@ label MC002:
     show HR neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     HR "Do yourself a favor and don't start any fights around campus."
     HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And trust me, you don't want that."
-    HR "By the time he was your age, he was already a nationally ranked judo champion."
+    HR "By the time he was your age, he was already a nationally-ranked judo champion."
     hide HR neutral with easeoutright
     "I looked back at Hageshi-sensei, who somehow managed to look even more intimidating in light of that information. {w}He just gave a slight nod, confirming Tashi's story about him without saying anything for himself."
     show Takamura neutral at altMove(0.5, 0.75)
@@ -2467,7 +2468,7 @@ label MC005:
         RM "Ah... alright?"
         hide RM with dissolve
     else:
-        MCT "That's... a decent sized supermarket for such a small island."
+        MCT "That's... a decent-sized supermarket for such a small island."
         MCT "Oh God... burgers..."
         MCT "And a..."
         MCT "... That's an arcade."
@@ -6186,7 +6187,7 @@ label MC008:
     "Right next to her question, I drew a small emoji of a man shrugging, then looked to Honoka's code."
     BECell "<nice! and how's Tomo-chan doing?>"
     BECell "<she's still not leaving her room, right?>"
-    if not isEventCleared("MC003") or not isEventCleared("MC005"):
+    if not isEventCleared("MC003") and not isEventCleared("MC005"):
         MCCell "<unfortunately not. her roommate has been trying to get her out though>"
         MCCell "<speaking of, how is your roommate?>"
     if isEventCleared("MC003") or isEventCleared("MC005"):
@@ -7871,7 +7872,7 @@ label MC013:
         GTSCell "Mm... well."
         GTSCell "Hotsure-san, are you willing to keep a secret? And not tell a soul?"
         MC "I... yeah, of course."
-        GTScell "I have your word?"
+        GTSCell "I have your word?"
         MC "Of course. What's up?"
         GTSCell "I've already taken my exam."
         GTSCell "Here in the Caverns, we all gathered where we normally view, erm... \"live streams\" of our classes, and we took our exam there, with a staff member serving as proctor, of course."
@@ -8455,7 +8456,7 @@ label MC013_aftermenu:
     Takamura "Tashi-chan."
     "Takamura grabbed Tashi's arm, tugging him to a halt."
     Takamura "... She's going to need this. And, there's another girl who likely will too."
-    "Hitomi-san and Noguchi-san both agree. Nurses have been tracking their growth, and even they're amazed by how fast they're both progressing."
+    Takamura "Hitomi-san and Noguchi-san both agree. Nurses have been tracking their growth, and even they're amazed by how fast they're both progressing."
     show HR neutral
     HR "Look... Takamura-san, I understand. Okay, I do."
     HR "I get the problems that can come from something of that nature, and JSL likely would help."
@@ -12057,7 +12058,7 @@ label RM001:
     "It was hard to tell what exactly it was from over here, beyond some kind of circuit board. I guess he looked like he knew what he was doing though."
     show RM neutral with dissolve
     RM "..."
-    "By any reasonable measure, the guy seemed like an odd duck— and that's if I'm being polite about it."
+    "By any reasonable measure, the guy seemed like an odd duck— and that's if I was being polite about it."
     if isEventCleared("MC007") or isEventCleared("FMGWG001") or getFlag("MC005RM"):
         "It didn't help that he'd already established a penchant for spying on people if he thought it might somehow help him \"gather information\", as he put it. To be honest, I didn't know that much about him beyond that."
     else:
@@ -12102,7 +12103,7 @@ label RM001:
     MC "Are you sure about that?"
     show RM distrustful
     RM "Why? Are you going to rat me out?"
-    MC "No. I'm not a rat. Just as long as it's nothing pervy okay?"
+    MC "No. I'm not a rat. Just as long as it's nothing pervy, okay?"
     show RM angry
     RM "I'm not some kind of voyeuristic creep, if that's what you're implying."
     MC "I'm not saying you are, I'm just telling you what it looks like."

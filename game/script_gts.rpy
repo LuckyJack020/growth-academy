@@ -5428,7 +5428,7 @@ label GTS028S_c3a:
     jump daymenu
 
 label GTS028T:
-    $setProgress("GTS", "GTS030")
+    $setProgress("GTS", "GTS029")
     scene Movie Theater with fade
     play music Peaceful
     "I scanned the various posters that decorated the inside of the theater, wondering what might be good. Naomi leaned down slightly to get a closer look at the posters as well."

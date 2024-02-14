@@ -517,6 +517,7 @@ image cg FMG077 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg FMG082 = "Graphics/ui/gallery/FMG082.webp"
+image cg FMG087A = "Graphics/ui/gallery/FMG087A.webp"
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.webp"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.webp"
@@ -779,11 +780,13 @@ image side YukiCell = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/sid
 image RM neutral = "Graphics/minor/RM/neutral.webp"
 image RM neutral-2 = "Graphics/minor/RM/neutral-2.webp"
 image RM angry = "Graphics/minor/RM/angry.webp"
+image RM angry-2 = "Graphics/minor/RM/angry-2.webp"
 image RM concerned = "Graphics/minor/RM/concerned.webp"
 image RM concerned-2 = "Graphics/minor/RM/concerned-2.webp"
 image RM distrustful = "Graphics/minor/RM/distrustful.webp"
 image RM doubt = "Graphics/minor/RM/doubt.webp"
 image RM happy = "Graphics/minor/RM/happy.webp"
+image RM happy-2 = "Graphics/minor/RM/happy-2.webp"
 image RM sad = "Graphics/minor/RM/sad.webp"
 image RM smug = "Graphics/minor/RM/smug.webp"
 

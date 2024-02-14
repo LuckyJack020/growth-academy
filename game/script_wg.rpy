@@ -15462,7 +15462,7 @@ label WG057_c1_after:
     else:
         WG "It's so sweet and gooey."
     "My plan to surprise Alice had been working better than I thought possible. Judging by the flush in her cheeks, she was enjoying this on an entirely other level that I hadn't anticipated."
-    WG "{i}Whew{/i}... Perhaps it has simply been too long since I've had a proper desert given the uninspired selection available at the cafeteria."
+    WG "{i}Whew{/i}... Perhaps it has simply been too long since I've had a proper dessert given the uninspired selection available at the cafeteria."
     show WG happy
     WG "This was such a refreshing change of pace for my palate. I must say, your dish has been an unqualified success, Keisuke. Most impressive for a first time as well."
     "Leaning back in her chair with her hand on top of her belly and a satisfied smile on her face, Alice motioned for me to come closer."
@@ -26183,7 +26183,7 @@ label WG083:
     MC "Nothing I can't do later. Whatcha need?" 
     WGCell "Would it be possible for me to come to your room for a bit?"
     MC "Sure, no problem." 
-    MCT "Wait second... {w}She's literally {i}never{/i} asked this before."
+    MCT "Wait a second... {w}She's literally {i}never{/i} asked this before."
     MC "Uh, can I ask what prompted this question?"
     WGCell "I've had an issue with the bathroom sink not draining correctly for a while. The maintenance tech, Misuboro-san came by to fix it, but it turned into a bigger job than he originally estimated." 
     WGCell "The bathroom is a mess with parts and tools everywhere and it's making a lot of noise, so I'd rather not stick around."
@@ -26246,7 +26246,7 @@ label WG083:
     show RM sad at altMove(0.1, 0.925)
     show RM sad at altMove(0.1, 0.95)
     WG "{size=-6}What is he doing?{/size}"
-    MC "{size=-6}I... I don't know{/size}"
+    MC "{size=-6}I... I don't know.{/size}"
     show RM sad at altMove(0.1, 0.975)
     "Daichi was attempting to be sneaky about something, which only served to call more attention to... well, whatever it was that he was doing."
     RM "Well, it was nice to see you. Wish I could stay and visit a little more but I have to go back to my room to study..."
@@ -26416,14 +26416,14 @@ label Deckbuilder_WG083:
     WG "What do the numbers mean on the cards?"
     MC "Bottom left one is their health, bottom right is their damage, the number in the top right is the energy it takes to summon them, and the symbol in the top left is the type of damage they deal."
     WG "That answers that then. But why do I have so many of these water elemental spells? How am I supposed to create a balanced set of abilities when it's nearly all I can choose from?"
-    MC "Oh, you'll want a lot of those. They're basically cannon fodder to shield your summoner. Your summoner can only be attacked when there are no other minions on the field. About a fourth of your cards should be for manna."
+    MC "Oh, you'll want a lot of those. They're basically cannon fodder to shield your summoner. Your summoner can only be attacked when there are no other minions on the field. About a fourth of your cards should be for mana."
     WG "Noted. I think I got it then."
     MC "Alright, let's fire up a round."
     "BATTLE!"
     "The faux medieval European music kicked in as I started first with my turn."
     MC "Okay, I'm going to set up some of these warding totems and this rock elemental. And that's all I can do. Your turn."
     WG "What's this?"
-    MC "You get extra manna since you got to go second."
+    MC "You get extra mana since you got to go second."
     show WG pondering
     WG "Hmm, interesting. Let's see here..."
     show WG stern
@@ -26437,13 +26437,13 @@ label Deckbuilder_WG083:
     WG "Looks like all I managed to draw were these mana cards and this spell. I guess I'll just order these things to attack and cast blizzard."
     "BOOM {w}BANG {w}CRASH!"
     MCT "Oh my fucking hell... I forgot that earth ward doesn't provide any protection against water attacks!"
-    MC "Ouch... I didn't expect to get my side of the board cleared out so soon. But luckily my passive refunds manna from those so I can summon my ultimate..."
+    MC "Ouch... I didn't expect to get my side of the board cleared out so soon. But luckily my passive refunds mana from those so I can summon my ultimate..."
     MCT "You've got to be fucking kidding me."
     show WG sly
-    WG "You're ultimate what?"
+    WG "Your ultimate what?"
     MC "... {w}I can't field new minions when blizzard is active. {w}So I guess it's your turn."
     show WG pondering
-    WG "So soon? Let's see. I'll cast ice shard, arcane lightening, and looks like my water elementals get to attack."
+    WG "So soon? Let's see. I'll cast ice shard, arcane lightning, and looks like my water elementals get to attack."
     show WG surprised-2
     "VICTORY!"
     MCT "Do they actually playtest this OP bullshit?"
@@ -27266,7 +27266,7 @@ label WG085:
     with fade
     "And there she was{w}— in all her glory."
     "Her dainty, elegant stride had become more difficult to maintain lately. {w}How could it not? Though clearly it was not impossible for her, even with her ample proportions."
-    "Her massive thighs slid not just past each other, but {i}around{/i} each other. {w}The extra motion of each step only exaggerated the feminine sasshay of her hips as they swayed to and fro with each step— a rippling wave in their own right." 
+    "Her massive thighs slid not just past each other, but {i}around{/i} each other. {w}The extra motion of each step only exaggerated the feminine sashay of her hips as they swayed to and fro with each step— a rippling wave in their own right." 
     "The tight spandex of her swimsuit somehow managed to contain her imponderous belly."
     "Though somewhat restraining its motions (unfortunately), the tightness of the fabric only served to amplify the quaking jiggle that sloshed through her unconstrained hips, wobbling down her thighs all the way to her feet." 
     show WG happy
@@ -28890,7 +28890,7 @@ label WG089:
     show WG worried
     extend " but I feel positively stuffed from the meal Sakura just made. I don't know if I have any room left."
     "By this point, I was extremely skeptical of that claim. We've both been wrong about that more often than either of us ever being right."
-    if isEventCleared("WG060S") and isEventCleared("WG060S"):
+    if isEventCleared("WG060S") and isEventCleared("WGFMG004B"):
         "I'll never forget that night when she challenged herself to push her limits. It was done with the pretense of my enjoyment, but I could tell she enjoyed it too."
         if getFlag("WG060S_Greedy"):
             "Well, until I took things too far at the end there..."
@@ -28904,7 +28904,7 @@ label WG089:
             "But needless to say, I was skeptical of her claims of being full."
         else:
             "So needless to say, I was skeptical of her claims of being full."
-    elif isEventCleared("WG060S"):
+    elif isEventCleared("WGFMG004B"):
         "I mean, it wasn't that long ago that she had that soba eating contest against Akira. To say Akira has a big appetite would be an understatement, but even without all the extra food Alice ate, she still trounced her by eating two extra bowls."
         "So needless to say, I was skeptical of her claims of being full."
     MC "Are you sure? You know what they say... There's always room for dessert."
@@ -29041,7 +29041,7 @@ label WG089:
     MCT "...{w}What just happened?"
     pause 1
     MCT "{i}Poof!{/i} Just like that, it's all gone?"
-    "I looked around the empty room, dumbfounded, while a cold silence hung in the air. {w}Only now noticing the wilted flowers left in the vase next to the empty desert platter."
+    "I looked around the empty room, dumbfounded, while a cold silence hung in the air. {w}Only now noticing the wilted flowers left in the vase next to the empty dessert platter."
     pause 2 
     play music Requiem
     show Chibuki neutral with dissolve
@@ -29983,7 +29983,7 @@ label WG091:
     show WG aroused
     "An all the more impossible task as they slid off my hands, causing them to smack against her fat belly with a heavy landing, sending shockwaves through her chest and down her engorged dome."
     "I could feel each ripple and jostle of fat move through her down to me as my manhood was pressed against her belly, entirely engulfed in her fat, like the rest of me."
-    WG "{i}Ohh, Kei... Don't stop... This is all for you, remember?"
+    WG "{i}Ohh, Kei... Don't stop... This is all for you, remember?{/i}"
     show WG surprised
     "I didn't hesitate, having been given the go ahead I full on mawed those fat tiddies. Caressing them with my lips and my tongue as a let them smack me in the face like wrecking balls made of gelatin." 
     show WG aroused 
@@ -29999,7 +29999,7 @@ label WG091:
     WG "Given your propensity for letting yourself drown, might I suggest you draw your attention a little lower..."
     "Alice grabbed the sides of her belly and did a little sashay of her hips to further drive home the point."
     show WG happy-2
-    WG "This is all yours, Keisuke. {i}Every. Square. Centimeter."
+    WG "This is all yours, Keisuke. {i}Every. Square. Centimeter.{/i}"
     MC "What can I say? I'm a lucky man."
     WG "You better believe it."
     show WG happy
@@ -30031,7 +30031,7 @@ label WG091:
     MC "Your turn? But I thought-"
     show WG sly
     WG "My turn to give you a massage that is."
-    MC "Oh. {i}Ohh{/}."
+    MC "Oh. {i}Ohh{/i}."
     WG "Hand me that stuff."
     MC "Here you go."
     "I turned around, showing Alice my back. I wasn't sure how she was going to reach but if she wanted to massage me with her boobs I wasn't going to complain."
