@@ -27286,11 +27286,11 @@ label PRG047:
     PRG "Y-Yes. Could I please have an ekiben? And... a bag of chips?"
     Stewardess "Of course. Something to drink, as well?"
     PRG "Y-Yes. A bottle of water, please."
-    StewardesS "Of course."
+    Stewardess "Of course."
     "As the stewardess reached into her cart for an ekiben, Aida suddenly glanced at the cart."
     show PRG blush
     PRG "Oh, a-and if possible, would you have an ekiben without anything raw in it?"
-    StewardesS "I only have cold ones here, but I'd be more than happy to go to the dining car and bring one for you."
+    Stewardess "I only have cold ones here, but I'd be more than happy to go to the dining car and bring one for you."
     PRG "Y-You don't have to go to all that trouble! I-I can do it!"
     "The stewardess came up with a bag of chips in her hand and a bottle of water, and handed both to Aida. She gave Aida a reassuring smile."
     Stewardess "It's no trouble for me at all, Dear. Now, is there a certain type you'd like?"
