@@ -11474,7 +11474,7 @@ label GTS050:
     play sound Thunder
     "Indeed, her shadow in the doorframe lingered right where it was for a moment or two more, hand clinging to the lightswitch."
     "Whatever the disturbance was, she kept on walking into the kitchen. The cabinet, roused from nocturnal slumber, groaned open, and then came the bassy {i}clunk{/i} of Naomi setting her tea making kit down on the counter. I could hear it rattling."
-    "Another {i}clunk{/i} from her setting down her tea 'cup'."
+    "Another {i}clunk{/i} from her setting down her tea \"cup\"."
     pause 0.75
     "Silence blew in from the other room in the few moments after that; I began crawling towards the edge of the bed by the light pouring in from the doorway."
     "Just at the edge, I jolted at the crash of something small and ceramic shattering on the ground."
@@ -11776,7 +11776,7 @@ label GTS051_afterc1:
     MC "Guess that may be something to ask one of the other representatives if I remember."
     stop music fadeout 2.0
     GTS "By the way, what did you make of the way she addressed you a moment ago?"
-    MC "You mean the 'little guy' comment?"
+    MC "You mean the \"little guy\" comment?"
     GTS "Yes... that."
     play music Sunset
     menu:
@@ -12144,7 +12144,7 @@ label GTS052:
             MC "Yeah, YOLO!"
             show GTS_S neutral 
             GTS "Come again?"
-            MC "Oh, uh, it's like an expression. It stands for 'you only live once'."
+            MC "Oh, uh, it's like an expression. It stands for \"you only live once\"."
             GTS "I'm afraid I must disagree on theological grounds."
             MC "Fair enough. Still wanna do it?"
             GTS "I do. Allow me to go first."
@@ -12831,7 +12831,7 @@ label GTSFMG001_c2:
     show GTS neutral
     GTS "Shall we walk back to the dormitories together?"
     "I nodded and simply began walking, shortly joined by Naomi to my side."
-    MC "So, 'the next time'... how much time do you think you'll devote to trying to patch things up between them?"
+    MC "So, \"the next time\"... how much time do you think you'll devote to trying to patch things up between them?"
     "Hands folded behind her back, she looked down at me and smiled."
     show GTS happy
     GTS "I wish to make use of every chance to do good that I am given."
@@ -13047,7 +13047,7 @@ label GTSWG001:
                 show GTS embarrassed 
                 "Her eyes went wide as if I'd patted her on her pearly cheek, too."
                 show GTS neutral 
-                GTS "Talk may be proverbially 'cheap', Hotsure-san, but it also has a tremendous capacity to effect change."
+                GTS "Talk may be proverbially \"cheap\", Hotsure-san, but it also has a tremendous capacity to effect change."
                 MC "True enough, Yamazaki-san. If you need help with... that, you know where to find me."
                 GTS "Kind of you to offer. For today, however, I should not keep you any longer."
             else:

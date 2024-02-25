@@ -11941,7 +11941,7 @@ label BE051:
     show BE shrug
     BE "I mean, I got used to it. I'm the big-chested girl. It's one of my things."
     show BE embarrassed
-    BE "But, I'm not the 'big-chested girl' anymore."
+    BE "But, I'm not the \"big-chested girl\" anymore."
     BE "I'm the supersize boob queen on campus. Seriously, I probably sport a bigger chest than anyone here now."
     show BE sad
     BE "And, I've got that same feeling I had that day in school."
@@ -12769,7 +12769,7 @@ label BE053:
     "{i}*TAPTAPTAPTAP*{/i}"
     MCT "Ah. I see what's going on here now. Duh, Kei."
     "As my phone continued to ring, I saw Honoka's shirt, and by extension her breasts, subtly ripple at the same time."
-    MCT "She's got one of the largest 'pockets' on campus. Why wouldn't you check there first..."
+    MCT "She's got one of the largest \"pockets\" on campus. Why wouldn't you check there first..."
     "I looked up at Honoka's face, and she averted her gaze from mine."
     show BE disoriented
     MC "...I think I found it."

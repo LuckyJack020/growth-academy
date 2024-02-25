@@ -11178,7 +11178,7 @@ label PRG028:
     show PRG excited
     PRG "We're dating!"
     BE "AWWWWWW! YOU GUYS!!"
-    "Honoka jumped up and down happily and did a sort of 'I succeeded at my secret mission' dance."
+    "Honoka jumped up and down happily and did a sort of \"I succeeded at my secret mission\" dance."
     pause .25
     BE "I knew it would work! I knew it! I knew it! I knew it!"
     show PRG neutral
@@ -22310,7 +22310,7 @@ label PRG042:
     with fade
     "About 45 minutes later, the bus came to a halt."
     "Outside, a small village was clustered around the road, with a handful of buildings built along the seaside."
-    "The two of us got up and headed out from the bus, walking through the village together and following the signs that read 'beach.'"
+    "The two of us got up and headed out from the bus, walking through the village together and following the signs that read \"Beach\"."
     scene black with fade
     play music Beach
     pause .25
@@ -22337,7 +22337,7 @@ label PRG042:
     pause .5
     scene Beach with fade
     pause .25
-    MCT "Okay, yeah. So the 'wait an hour after eating' thing is total BS. Good to know."
+    MCT "Okay, yeah. So the \"wait an hour after eating\" thing is total BS. Good to know."
     "I headed out, wearing my shirt yet, but having my swimming trunks on the bottom, holding my shoes and socks in one arm."
     "The sand was incredibly warm and soft, like a blanket that was just heated in the dryer."
     show PRG neutral with dissolve
@@ -22422,7 +22422,7 @@ label PRG042_A:
     "And, something I hadn't really gotten to see a lot of before, Aida actually had a body. Not just boobs and a belly."
     "She had wide hips, which though I could make that out in her usual attire, her swimsuit showed them off in every way."
     "Her hips led into soft, thick thighs, which based on their delicate look, almost seemed to be made out of clouds."
-    "Then, of course, there was her belly, which stuck out just as it always did. But now, free of her clothing, it seemed to demand all attention. As if to let the world know 'hey, this girl is carrying babies.'"
+    "Then, of course, there was her belly, which stuck out just as it always did. But now, free of her clothing, it seemed to demand all attention. As if to let the world know, \"Hey, this girl is carrying babies.\""
     show PRG unsure
     PRG "..."
     PRG "... I feel... {w}a little embarrassed."
@@ -22537,10 +22537,10 @@ label PRG042_A:
     show PRG worried
     PRG "{i}Mmp.{/i}"
     "I couldn't help but grin as Aida swallowed more of the chips and dip, and I suddenly realized fully why she enjoyed this. It felt really nice to see someone you cared about enjoying what you made for them."
-    "And not just the 'I know you made this for me, so I'll be nice and fake enjoyment' thing. Like, truly enjoying it."
+    "And not just the \"I know you made this for me, so I'll be nice and fake enjoyment\" thing. Like, truly enjoying it."
     show PRG neutral
     PRG "Y-Yes?"
-    MC "Do you like swimming? Or are you more of a 'lounge on the beach' kind of girl?"
+    MC "Do you like swimming? Or are you more of a \"lounge on the beach\" kind of girl?"
     show PRG unique-happy
     PRG "... I love swimming."
     PRG "I-It's been a while, but I've always felt really comfortable in the water."
@@ -22920,7 +22920,7 @@ label PRG042_A:
                     show PRG neutral
                     PRG "If you remember, I had two points before. Now, if we both get a point, that means I win the whole thing."
                     MC "Oh, you cheater!"
-                    PRG "I didn't cheat! I said 'if I kiss you on the cheek, I win!'"
+                    PRG "I didn't cheat! I said, \"If I kiss you on the cheek, I win!\""
                     MC "Yeah, but that doesn't count if I picked you up first!"
                     PRG "... Who said that?"
                     MC "I-"
@@ -23068,7 +23068,7 @@ label PRG042_B:
     "And, something I hadn't really gotten to see a lot of before, Aida actually had a body. Not just boobs and a belly."
     "She had wide hips, which though I could make that out in her usual attire, her swimsuit showed them off in every way."
     "Her hips led into soft, thick thighs, which based on their delicate look, almost seemed to be made out of clouds."
-    "Then, of course, there was her belly, which stuck out just as it always did. But now, it seemed to demand all attention. As if to let the world know 'hey, this girl is carrying babies.'"
+    "Then, of course, there was her belly, which stuck out just as it always did. But now, it seemed to demand all attention. As if to let the world know, \"Hey, this girl is carrying babies.\""
     show PRG unsure
     PRG "..."
     PRG "... I feel... {w}a little embarrassed."
@@ -23175,10 +23175,10 @@ label PRG042_B:
     show PRG worried
     PRG "{i}Mmp.{/i}"
     "I couldn't help but grin as Aida swallowed more of the chips and dip, and I suddenly realized fully why she enjoyed this. It felt really nice to see someone you cared about enjoying what you made for them."
-    "And not just the 'I know you made this for me, so I'll be nice and fake enjoyment' thing. Like, truly enjoying it."
+    "And not just the \"I know you made this for me, so I'll be nice and fake enjoyment\" thing. Like, truly enjoying it."
     show PRG neutral
     PRG "Y-Yes?"
-    MC "Do you like swimming? Or are you more of a 'lounge on the beach' kind of girl?"
+    MC "Do you like swimming? Or are you more of a \"lounge on the beach\" kind of girl?"
     show PRG unique-happy
     PRG "... I love swimming."
     PRG "I-It's been a while, but I've always felt really comfortable in the water."
@@ -23519,7 +23519,7 @@ label PRG042_B:
                     show PRG neutral
                     PRG "If you remember, I had two points before. Now, if we both get a point, that means I win the whole thing."
                     MC "Oh, you cheater!"
-                    PRG "I didn't cheat! I said 'if I kiss you on the cheek, I win!'"
+                    PRG "I didn't cheat! I said, \"If I kiss you on the cheek, I win!\""
                     MC "Yeah, but that doesn't count if I picked you up first!"
                     PRG "... Who said that?"
                     MC "I-"
@@ -24039,7 +24039,7 @@ label PRG043:
     "I went right to my email."
     pause .5
     "I scrolled down a bit."
-    "Finding one email with the subject of 'WINNER,' I clicked immediately, then scrolled down."
+    "Finding one email with the subject of \"WINNER\", I clicked immediately, then scrolled down."
     MCT "..."
     MCT "No way."
     MCT "No way in hell."
@@ -28119,7 +28119,7 @@ label PRG047B:
     Takara "Especially due to... well... I suppose I never expected you to go off to school and find a boyfriend so quickly."
     Takara "Not that you couldn't, of course. But, dating and boys were never something I ever heard you talk about."
     PRG "I-I just... d-didn't know how to discuss it."
-    PRG "I... I just never really thought that boys ever wanted to talk to me, of all girls. Especially when other girls are so much more showy and 'out there' than me."
+    PRG "I... I just never really thought that boys ever wanted to talk to me, of all girls. Especially when other girls are so much more showy and \"out there\" than me."
     PRG "I've always thought that I'm a little... plain."
     show PRG worried
     PRG "I... I don't really do a lot. Inside the house or in my dorm, I'm fine. But... going out and about..."
@@ -28163,7 +28163,7 @@ label PRG047B:
     MCT "This talk is going into some personal territory. How much can I really say here without being too forward?"
     Takara "He...?"
     MC "If I can ask, how is he... feeling about all of this?"
-    Takara "He... it's complicated, Hotsure-san. And I'm not saying that in a 'I don't want you to know' sort of way. I'm saying that because... well, it is."
+    Takara "He... it's complicated, Hotsure-san. And I'm not saying that in a \"I don't want you to know\" sort of way. I'm saying that because... well, it is."
     Takara "Enmei... he's always felt-"
     "From off down the hall, something clattered to the floor. A loud bump echoed through the door."
     "Takara got up, walking to the door."
@@ -29014,7 +29014,7 @@ label PRG048:
     MC "Right..."
     Takara "Well... with all due respect to you both, worrying about that is foolish."
     Takara "Because... if you spend your entire life worrying about what everyone thinks of what you say, then all your life would be is analysis."
-    Takara "Sometimes, you have to just say 'alright, I'm doing it.'"
+    Takara "Sometimes, you have to just say, \"Alright, I'm doing it.\""
     MC "I'll... I'll keep that in mind."
     scene black with fade
     pause .5
@@ -29044,13 +29044,13 @@ label PRG048:
     show PRG worried
     Takara "Pull out your phone once, Hotsure-san. Open up your notes app."
     "Confused, I did as she asked and pulled out my phone, opening it up."
-    Takara "Open a new note and make a heading for 'baby plans.'"
+    Takara "Open a new note and make a heading for \"baby plans\"."
     Takara "I'll help you jot down a few things to keep in mind."
     MC "Alright..."
     MC "Ready."
     Takara "Alright. First off, finding a place to live. That's obviously important."
     Takara "Once you get into your new place, you'll have to get it all ready. That means cribs, clothes, bottles, and furniture for the nursery."
-    Takara "Write down 'rocking chair' specifically, Hotsure-san. Those are absolute game changers."
+    Takara "Write down \"rocking chair\" specifically, Hotsure-san. Those are absolute game changers."
     Takara "Now, one thing to remember, Hotsure-san, is that you'll likely be doing a lot of the moving of heavy things yourself."
     Takara "Aida, you'll find pretty quickly into the second half of your pregnancy that you're going to be slowing down {i}a lot.{/i} Lifting things will get harder, and even walking will start to feel like a chore."
     Takara "And, I'm just speaking for a normal pregnancy, of course."
@@ -29140,7 +29140,7 @@ label PRG048:
     MC "Of course. Don't let me interrupt."
     "I walked around the couch and sat on Aida's other side. She scooted right to my side, and held my hand."
     "I glanced at her, then above the TV, where some pictures were hanging. Two of them stuck out as family photos, showing what appeared to be Aida as a child, with her mom and dad together, both lumped together into one of those multi-photo picture frames."
-    "One of these two photos was more polite and posed, with the three smiling, but looking far more 'put together.'"
+    "One of these two photos was more polite and posed, with the three smiling, but looking far more \"put together\"."
     "By contrast, the one beside it was far more loose, with Aida's father having both arms wrapped around her, and Takara leaning over the two, embracing Aida's father around the neck."
     "Aida herself was mid-giggle in this photo, with her dad tickling her on her abdomen."
     "Aida's father looked so open and happy, his face young and spry." 
@@ -29155,7 +29155,7 @@ label PRG048:
     Takara "Your father made it all better, though. He did the condiments thing with a bandage to make you feel better."
     MC "Condiments thing?"
     Takara "It was a... I guess you could call it a joke. Enmei had this little joke that he used to do whenever Aida would trip and fall, or cut her finger or something."
-    Takara "Whenever this happened, of course, Aida would usually be crying. So, Enmei would take her and sit her on the couch. Then, he'd always ask 'what hurts' and Aida would point to it."
+    Takara "Whenever this happened, of course, Aida would usually be crying. So, Enmei would take her and sit her on the couch. Then, he'd always ask, \"What hurts?\" and Aida would point to it."
     Takara "Then, he'd take out a bandage and whatever else he'd need, and he'd do this... voice. He'd pretend he was a chef, and he'd start to act like he was dressing up Aida's injury as though it were a meal."
     Takara "First, a little bit of butter!! Aaaand a little bit of salt! Aaaaaaaaand a little bit of pepper!!"
     Takara "By the time he finished, Aida would usually be laughing so hard that she'd forget that she got hurt entirely. And she'd just go run off and play again."
@@ -29201,14 +29201,14 @@ label PRG048:
     MC "Oh my God, that's awesome."
     Takara "I'd forgotten that..."
     PRG "After a while, we had to find new spots, so we photocopied it, and cut out more of them, in case they got ruined."
-    PRG "We started putting them in the shower, taped to the blades of the ceiling fan, in the laundry hamper. All over the place. But, only one of them could be 'in play' at any one time."
+    PRG "We started putting them in the shower, taped to the blades of the ceiling fan, in the laundry hamper. All over the place. But, only one of them could be \"in play\" at any one time."
     MC "Ahh, got it. That's such like... pure fun."
     PRG "I know..."
     PRG "That's how it was. We'd always play like that."
     show PRG unique-happy
     PRG "But he never took it too far. He always made sure to highlight the small moments, too."
     PRG "When we'd watch movies, he always made space on the couch for me to sit next to him. And he'd get us a snack and open two sodas for us." 
-    PRG "Then, when we'd sit together, he'd say 'Always remember to make time for this, Aida. Never forget to take time for the little things.'"
+    PRG "Then, when we'd sit together, he'd say, \"Always remember to make time for this, Aida. Never forget to take time for the little things.\""
     PRG "And I'd snuggle up to him, and cover us up with a blanket. Usually I'd end up falling asleep, so he or Mom would carry me to bed, and kiss me goodnight."
     Takara "You always fell asleep during movies, Honey. It was so cute. You'd always try so so hard to make it through, but then your head would start to fall off to the side, and your eyes would start to close."
     "Aida nodded beside me, looking above the TV at all of the pictures."
@@ -29559,7 +29559,7 @@ label PRG049:
         "And I obviously wasn't the only one to notice. The entire time we'd been outside the day before, I'd seen some of the gazes Aida got. Mostly from men, but quite a few women would stare outright at Aida too."
         "Most of the eyes went to her belly, of course, as it demanded all attention no matter what room it was in. But, her boobs got some eyes as well."
         "I had to imagine how Takara felt."
-        "Takara, who before coming to the island, I would have referred to as 'busty,' had to have been in total shock."
+        "Takara, who before coming to the island, I would have referred to as \"busty\", had to have been in total shock."
         MCT "Walking up to a train, and seeing her daughter walk out with a rack that dwarfed her own after having seen her at a completely normal size less than a year before. It had to have floored her."
         MCT "And I still can't believe that, last night, I had my hands all over those things..."
         "I looked back up."
@@ -29881,7 +29881,7 @@ label PRG049:
     PRG "Isn't this the game you were telling me about? The Tale of Lidia?"
     MC "Oh! You mean the game about the world ending in a week?"
     PRG "Mhm."
-    MC "Well, it's in the same series as that one. The one I was talking about was Faela's Hood. This one is 'The Midnight Dutchess.'"
+    MC "Well, it's in the same series as that one. The one I was talking about was Faela's Hood. This one is \"The Midnight Dutchess\"."
     PRG "Do you have this one already?"
     MC "No. It just came out like a month ago."
     "Aida took the game and waddled across the store to the cashier, and put it on the counter."
@@ -30270,7 +30270,7 @@ label PRG049:
     "That woman was walking by with her two children, the toddler boy pointing... directly at Aida."
     UNKNOWN "Well, Honey. She's most likely going to be a mama soon. She's having a baby." 
     UNKNOWN "Now, come on Dear."
-    "The mother glanced up at us, mouthing a quick 'sorry' to us."
+    "The mother glanced up at us, mouthing a quick \"sorry\" to us."
     "The little boy was apparently having none of that, however, and he broke free of his mother's grip, walking right over to us."
     UNKNOWN "Oh, Jiru! You get back here!"
     "The boy came and stood right in front of Aida."
@@ -30395,7 +30395,7 @@ label PRG049:
     show PRG worried
     PRG "There aren't any prices on here either. M-Maybe since a lot of the people who usually have these seats don't mind spending a little?"
     MC "No idea."
-    "I looked on the counter where there was a small button labeled 'server.'"
+    "I looked on the counter where there was a small button labeled \"Server\"."
     MC "I guess we press that when we're ready to order. Did you want to eat now, Aida?"
     PRG "I..."
     show PRG nervous
@@ -31109,7 +31109,7 @@ label PRG050:
     MC "Then tell me! Because I've seen jack shit else!"
     Enmei "You have no right to tell me how to run my family."
     MC "Must be a real strong family if your daughter starts shaking before telling you something difficult. Must be real strong if she gets so nervous that she can barely speak."
-    MC "You're telling me that I don't know the first thing about parenting, but I'm sure rule number one isn't 'make your daughter feel like a monster.'"
+    MC "You're telling me that I don't know the first thing about parenting, but I'm sure rule number one isn't, \"Make your daughter feel like a monster\"."
     Enmei "..."
     Enmei "Get out of my home. {b}Now.{/b}"
     Enmei "I want you on that train tonight. I don't care if it stops halfway with you on it. This fling between you two is over."
@@ -31276,7 +31276,7 @@ label PRG050:
     show PRG unsure
     PRG2 "W-What stopped you from being there, Dad?!"
     PRG2 "I asked every time I saw you if I could come home! And every time, you and Mom just told me that it wasn't the right time, or that it would be too much of a shift for me."
-    PRG2 "I thought every time 'I'm probably old enough now' or 'I'm probably big enough now!'"
+    PRG2 "I thought every time \"I'm probably old enough now\" or \"I'm probably big enough now!\""
     PRG2 "But, I never was! I was never old enough or big enough!"
     Enmei "We did that because we wanted what was best for you. And, a life away from dealing with your father being in pain seemed like the best choice at the time."
     PRG2 "You didn't want me!"
@@ -33359,7 +33359,7 @@ label PRG052_Roof:
     MC "It makes seeing her sad all the worse."
     show BE sad
     BE "It does... but I can tell that she wants to get better, Kei-chan."
-    BE "She has that conviction, you know? Like the... what do they call it, the 'fire in the eyes' look."
+    BE "She has that conviction, you know? Like the... what do they call it, the \"fire in the eyes\" look."
     "I sighed and looked up at the stars."
     MC "It... hurts. Seeing her cry."
     MC "Like... it makes my chest hurt."

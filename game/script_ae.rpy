@@ -25191,7 +25191,7 @@ label AE100G:
     show AE neutral
     AE "Well, one of my top priorities outside of my work is eliminating bias incentives for conviction among the judicial office and the issue of forced or coerced confessions though unethical detainent practices."
     AE "To this end, I have been assisting practicing attorneys as co-counsel in my free time and lobbying to the government. Though this has made me a... few enemies in the court, it has also given me a bit of a reputation."
-    MC "I... heard about that a little bit. 'The Raven Winged Seraph'?"
+    MC "I... heard about that a little bit. \"The Raven Winged Seraph\"?"
     show AE neutral-annoyed
     AE "Tssh, vanity. It makes me out to be some kind of angel of death."
     MC "Weeeell... from what I hear, you were behind one of the biggest corruption busts in Tokyo's history."

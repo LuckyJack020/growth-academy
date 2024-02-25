@@ -6976,7 +6976,7 @@ label MC009:
     Takamura "She tends to make her disapproval... quite clear, as well."
     MCT "That'd be the Tomo I know."
     Takamura "And, she outright refuses to speak in any public setting. I don't believe she's ever spoken in a way that the entire class would be able to hear her."
-    Takamura "Now, all of that to say that recently, I had overheard a group of students refer to her as a 'specter,' and they had mentioned that she hardly ever leaves her dorm."
+    Takamura "Now, all of that to say that recently, I had overheard a group of students refer to her as a \"specter\", and they had mentioned that she hardly ever leaves her dorm."
     MC "That is... unfortunately quite true. She is quite the homebody."
     Takamura "Which is quite alright. There is nothing wrong with someone enjoying their time at home."
     Takamura "However, all of these stacked together leads me to believe that your sister is dealing with something quite intense, if I may be so blunt."
@@ -6994,7 +6994,7 @@ label MC009:
     MCT "She's... she really knows how to get to the heart of an issue. I don't think I've gone that in-depth on Tomo before."
     Takamura "That's all good to know. Anything else that you can think of?"
     MC "Well... I know she isn't a fan of her appearance."
-    MC "She thinks she's 'way too short,' and she's not a fan of... well... her body. She thinks she has too many curves."
+    MC "She thinks she's \"way too short\", and she's not a fan of... well... her body. She thinks she has too many curves."
     MC "I can't say if that has anything to do with having anxiety, though. That being said, it has been quite the touchy subject for her for some time."
     Takamura "It could. Physical appearance, factor related or not, can weigh heavily on the mind's perception of oneself."
     Takamura "As such, I can relate to her scrutiny of her own body."
@@ -7083,7 +7083,7 @@ label MC009:
         "Close by, a third girl stood, trying to bring the two of them back down."
     Student1 "Like he'd ever take a beanpole like you to a dance! He couldn't even reach your head for a kiss up on that stalk of a neck!"
     Student2 "You're one to talk! It must be so comforting to put his hands on a girl's stone-firm hips! Ever the image of softness and grace, aren't you, Chisaka-san?"
-    Student1 "At least I know how to look out for my figure! I can see your gut flab from here, miss 'perfect cinnamon pancakes!' Those breakfast desserts are going to your damn head and your ass!"
+    Student1 "At least I know how to look out for my figure! I can see your gut flab from here, miss \"perfect cinnamon pancakes\"! Those breakfast desserts are going to your damn head and your ass!"
     show Takamura strict with dissolve
     Takamura "Girls."
     stop music fadeout 1.0
@@ -7209,7 +7209,7 @@ label MC009:
     Etsuko "For real! Screw her!"
     Hotaru "Well, there goes my Matsuri plans. Guess I'm going stag now..."
     Etsuko "I know! Stupid skank..."
-    "I glanced at Sakura, who rolled her eyes as the other two girls kept throwing around different expletives to describe this abhorrent 'date stealer.'"
+    "I glanced at Sakura, who rolled her eyes as the other two girls kept throwing around different expletives to describe this abhorrent \"date stealer\"."
     MC "So. Inventory day, huh?"
     Sakura "Mhm. The most exciting day of days."
     Sakura "Checking and double checking, you know."
@@ -7249,7 +7249,7 @@ label MC009:
     Takamura "... {w}Ah... pardon my rambling."
     Michiko "Is it true that you were a chef at a five star restaurant in Paris, Sensei?"
     Takamura "Technically, Sano-san, restaurants only have a three star rating system there."
-    Takamura "One star is a very good restaurant. Two is a place that's 'worth a detour'. And three is a truly special restaurant, and one well worth the trip."
+    Takamura "One star is a very good restaurant. Two is a place that's \"worth a detour\". And three is a truly special restaurant, and one well worth the trip."
     MC "You... didn't really say no, Sensei. And, your knowledge on European restaurants is definitely something."
     Takamura "Yes... thank you, Hotsure-san."
     "As Sakura went on to ask Takamura about some vague french dish with lamb that I hadn't heard of, I glanced up at the clock on the wall."
@@ -7520,7 +7520,7 @@ label MC013:
         show BE surprised
         BE "N-No! I'm sorry!"
         show BE neutral
-        BE "I-I was going to lean over and cover your eyes. Doing the whole 'guess who' thing, you know?"
+        BE "I-I was going to lean over and cover your eyes. Doing the whole \"guess who\" thing, you know?"
         show BE sad
         BE "But then I stopped because it was probably going to be awkward."
         BE "Then, you sat up and... it got awkward anyway."
@@ -7585,7 +7585,7 @@ label MC013:
     show BE angry
     BE "I can diss as I please."
     show BE neutral
-    BE "And more like 'our gibberish,' to be honest."
+    BE "And more like \"our gibberish\", to be honest."
     MC "In any case, I've seen that cat hanging around the vending machines back home."
     BE "Isn't he like twenty by now?"
     MC "Maybe not that old, but he hangs out there when I stop to grab my favorite tea."
@@ -7712,7 +7712,7 @@ label MC013:
         MC "Besides, Tomo is staying too."
         show BE neutral
         BE "How are things going with her? Mizutani-san, I mean."
-        BE "I... don't really know her all that well, to be honest. But she seems nice. Especially from those 'icebreakers' that we did."
+        BE "I... don't really know her all that well, to be honest. But she seems nice. Especially from those \"icebreakers\" that we did."
         MC "Ahh... Akira is just fun. She's a good time."
         MC "I wouldn't miss that time for anything."
         show BE happy
@@ -8123,7 +8123,7 @@ label MC013_AE:
     "Yuki's eyes went wide, as she looked over to me."
     AE "It's alright, Utagashi-san. I don't mind."
     Yuki "I... I was just going to say that I think Blackburne-san should be a little more cooperative."
-    Yuki "She told me that she won't comply with the requirements and that you should... um... 'bugger off.' Whatever that means."
+    Yuki "She told me that she won't comply with the requirements and that you should... um... \"bugger off\". Whatever that means."
     Minori "It's western slang, I believe."
     Minori "Blackburne-san was born in the United Kingdom. That's apparently a common phrase there."
     Yuki "Oh!"
@@ -8145,7 +8145,7 @@ label MC013_AE:
     Yuki "Then I started thinking about what must happen when it gets cold out! Or, if she gets kind of frisky."
     Yuki "Like, it must be really bad, then..."
     pause 2.5
-    Yuki "... Anyway, she got really mad then, and accused the council of 'body-shaming students with factors.' And she told me that it wasn't her fault that her nipples are so big."
+    Yuki "... Anyway, she got really mad then, and accused the council of \"body-shaming students with factors\". And she told me that it wasn't her fault that her nipples are so big."
     Yuki "I... kind of just gave up then."
     AE "Uta-"
     Yuki "Oh! I need to be going! I have my biology final soon!"
@@ -8246,7 +8246,7 @@ label MC013_WGFMG:
         show WG pondering
         WG "Yes, well. I'd best brush up on my studies, as well. I'd planned to read through with Aida, but of course I ended up chatting."
         show FMG neutral
-        "As Alice bent to grab her bag, Akira mouthed a 'thank you' to me over Alice's bent over back. I smiled and gave her a nod."
+        "As Alice bent to grab her bag, Akira mouthed a \"thank you\" to me over Alice's bent over back. I smiled and gave her a nod."
         $setAffection("FMG", 1)
     else:
         FMG "Oh, hey dude. How's your morning?"
@@ -8328,7 +8328,7 @@ label MC013_PRG:
         MC "I'm... a little rattled, yet. I talked to my dad last night."
         PRG "H-How did it go?"
         MC "Well... he doesn't think we're insane."
-        MC "He's sort of at a point of 'it's our situation to handle.' Which honestly, seems pretty good."
+        MC "He's sort of at a point of \"it's our situation to handle\". Which honestly, seems pretty good."
         show PRG unsure
         PRG "Okay..."
         MC "... I'm proud of you."
@@ -8492,9 +8492,9 @@ label MC013_aftermenu:
     show HR neutral
     HR "Students resign from classes all the time. That list isn't finalized."
     show HR unique
-    Takamura "So when it is, is that a 'yes?'"
+    Takamura "So when it is, is that a \"yes\"?"
     show HR neutral
-    HR "It's an 'I'll think about it.'"
+    HR "It's an \"I'll think about it.\""
     show HR unique
     Takamura "Well, whenever you make up your mind..."
     show Takamura at altMove(1.0, 0.475)
@@ -9378,7 +9378,7 @@ label MC024:
         Teacher "Oh, I'm sorry. But, I'm not Naoki-sensei."
         Sugiyama "The name is Sugiyama-sensei."
         MC "Oh... oops. My apologies."
-        Sugiyama "No trouble at all. Not the first time that's happened. 'S' last names and all that."
+        Sugiyama "No trouble at all. Not the first time that's happened. \"S\" last names and all that."
         Sugiyama "If you're looking for him, I'd maybe try the faculty room. If he isn't there, I'm sure someone might be able to point you in his direction."
         MC "Right... good idea. Thank you."
         Sugiyama "No prob."
@@ -13031,4 +13031,583 @@ label RM003_After2:
     with fade
     "We went back to campus and managed to get to the cafeteria before it closed. He spent most of the time jotting down notes in his little black book while muttering to himself." 
     "In spite of the lack of conversation, I realized eating dinner in the cafeteria here with him was the first time we actually hung out together that didn't involve something to do with his investigations."
+    jump daymenu
+
+label RM004:
+    scene Classroom
+    show HR neutral
+    with fade
+    play music Schoolday
+    HR "Alright, looks like we managed to cover everything I had planned out for the day. No additional assignments today, just remember to keep up with your assigned readings." 
+
+    if isEventCleared("MC009") or isEventCleared("global026"):
+        HR "And don't forget about your paper assignment on the Asuka period due next week.{w} Make sure you're making steady progress on it. I expect 15 pages, {i}minimum{/i}— you won't be pulling a miracle all nighter on this one."
+    elif isEventCleared("MC007") or isEventCleared("FMG001"):
+        HR "And don't forget about your paper assignment on the Kofun period due next week.{w} Make sure you're making steady progress on it. I expect 15 pages, {i}minimum{/i}— you won't be pulling a miracle all nighter on this one."
+    else:
+        HR "And don't forget about your paper assignment on the Yayoi period due next week.{w} Make sure you're making steady progress on it. I expect 15 pages, {i}minimum{/i}— you won't be pulling a miracle all nighter on this one."
+        MCT "We'll see about that Tashi-sensei."
+
+    play sound Bell
+    HR "Alright, class dismissed."
+    hide HR with dissolve
+    "Not that I was looking forward to writing that paper, but I was at least relieved Tashi gave us a break to give us some breathing room on the assignment."
+    if getHighestAffection() == ("AE"):
+        "I packed up my stuff, hoping to catch Shiori in the hall..." 
+    if getHighestAffection() == ("WG"):
+        "I packed up my stuff, hoping to catch Alice in the hall..." 
+    if getHighestAffection() == ("PRG"):
+        "I packed up my stuff, hoping to catch Aida in the hall..." 
+    if getHighestAffection() == ("GTS"):
+        "I packed up my stuff, hoping to catch Naomi in the hall..." 
+    if getHighestAffection() == ("FMG"):
+        "I packed up my stuff, hoping to catch Akira in the hall..." 
+    else:
+        "I packed up my stuff, hoping to catch Honoka in the hall..." 
+    show RM neutral-2 with dissolve
+    "...when I found my path blocked by a bespectacled pasty figure I had recently become all too familiar with."
+    play music RM
+    MC "Uh...You need something?"
+    show RM happy-2
+    RM "Tashi-sensei's in a good mood. You should ask him about the dock. We gotta follow up with our leads, remember?"
+    MC "First of all, I don't know what would make you think he's in a \"good mood\". The guy looks like fun is a foreign concept to him."
+    show RM smug
+    RM "He didn't give us any extra reading assignments today. He normally has no qualms about piling those on. That's got to count for something." 
+    MC "Alright, you may be on to something there, I'll give you that I guess, but to my second point, why should {i}I{/i} ask him? You're the one that wants to know so badly."
+    show RM concerned-2
+    RM "Let's just say I've had a few close calls before with Tashi-sensei on my information seeking excursions. He's more observant than his disinterested demeanor would suggest. He might raise an eyebrow if I broach the subject."
+    show RM happy-2
+    RM "But if you mention it, it will likely avert any suspicion."
+    menu:
+        "Fine, I'll ask him.":
+            jump RM004_C1_1
+
+        "You ask him.":
+            jump RM004_C1_2
+
+label RM004_C1_1:
+    $setFlag("RM004_Ask")
+    MC "Alright. Fine, I'll ask him."
+    $setAffection("RM", 1)
+    "Part of me wanted to ask what he was doing that almost got him caught, but the better part of me told me I was better off not knowing."
+    show RM neutral at altMove(0.5, 0.25)
+    show HR unique at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "We walked up to the teacher's desk. Tashi-sensei was busying himself with packing up his lecture materials in his bag for the next class, looking up only once he realized we were both hanging around after everyone else left."
+    show HR neutral
+    HR "Oh, did you have some questions about the current assignment, Hotsure-san?"
+    show HR unique
+    MC "Uh, no, at least not for now."
+    MCT "That's it, play it cool. Don't let him know you haven't done a damn thing on that paper yet."
+    MC "It's not about class, but I do have a history question for you."
+    show HR neutral
+    HR "Interesting. And what might that be?"
+    show HR unique
+    MC "I was curious about the red gate at the dock where the students came in from the ferry. It seemed out of place compared to the rest of the architecture on the island, and much older than the other surrounding structures."
+    MC "I'd have to imagine it was there when you were a student as well. Do you know if there was any special purpose to it?"
+    show HR neutral
+    HR "Well, I can tell you it was there when I attended the Academy, but I never took a personal interest in it to learn more about it."
+    jump RM004_C1_after
+
+label RM004_C1_2:
+    $setFlag("RM004_MakeHimAsk")
+    show RM distrustful
+    MC "No, you ask him."
+    $setAffection("RM", -1)
+    "Daichi was clearly not happy I wasn't willing to go along with his plan, but this whole thing was his idea. As far as I was concerned, this was his investigation and I'm just a bystander."
+    RM "Fine. I'll do it."
+    show RM neutral-2 at altMove(0.5, 0.25)
+    show HR unique at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "We walked up to the teacher's desk. Tashi-sensei was busying himself with packing up his lecture materials in his bag for the next class, looking up only once he realized we were both still hanging around after everyone else left."
+    show HR neutral
+    HR "Oh, did you have some questions about the current assignment, Utagashi-san?"
+    show HR unique
+    show RM concerned-2
+    RM "Um, well, no... It's not about class, but I did have a history question for you."
+    show HR neutral-2
+    HR "I see. If you're looking to extract something from me that will inadvertently facilitate your snooping around the facilities, I'm afraid you'll find I'm not as naive as most of the staff here."  
+    show RM sad
+    show HR unique-2
+    RM "Ah, yes, well... um... Actually, I was curious about the red gate at the dock where the students came in from the ferry."
+    show HR neutral-2
+    HR "What about it?"
+    show RM doubt
+    show RM unique-2
+    RM "It seemed out of place compared to the rest of the architecture on the island, and much older than the other surrounding structures. I assume it was there when you were a student as well. Do you know if there was any special purpose to it?"
+    show HR neutral
+    show RM neutral
+    HR "Hmm, I guess I didn't expect you to ask about something like that, but there's not much to tell, I'm afraid. {w}I can tell you it was there when I attended the Academy, but I never took a personal interest in it to learn more about it."
+    jump RM004_C1_after
+
+label RM004_C1_after:
+    play music Schoolday
+    HR "As much as I enjoy history, I'm afraid I'm not well versed with this island's past. It never really interested me all that much either I'm afraid." 
+    HR "From what I understand, the island itself has been uninhabited, or at least without any permanent settlements, up until around the Meiji period. So there isn't much history to tell as far as I'm concerned."
+    show RM concerned-2
+    show HR unique
+    "Daichi was clearly crestfallen that yet another one of his leads had dried up right before his eyes." 
+    "I wasn't normally sympathetic about his self-inflicted mishaps leading to nothing but disappointment, but I figured I should at least try to salvage the situation, assuming I could."
+    MC "Oh, I see. Well, we just figured since we'll be stuck here for a while it might be of some benefit to learn more about the island. Take in the culture, you know?"
+    show HR neutral
+    show RM neutral
+    HR "Not a bad idea, Hotsure-san. I admit, having lived here so long I probably should take a bit more interest in the subject myself." 
+    HR "If you really want to learn more about the history of the island and the school, you're better off asking Noguchi-san or Tsubasa-sensei, as both of them have resided on the island much longer than me."
+    show HR unique
+    MC "Okay, I guess we can just ask them. Do you know where to find them?"
+    show HR neutral
+    HR "At this hour, Noguchi-san is likely in his office in the administration center."
+    if getFlag("RM002_Favor"):
+        "A lump in my throat formed as I tried to gulp it down, remembering how close of a call we had the last time going over there when I had to create a diversion for Daichi's unauthorized entry."
+        MCT "Yeah, let's not go there."
+    HR "Tsubasa-sensei is probably still in his home classroom. It's in the left wing on the second floor. I'm sure you've been by there at some point by now."
+    MC "Got it. Thanks, Tashi-sensei."
+
+    scene Hallway
+    show RM neutral
+    with fade
+    MC "Alright, what next then?"
+    if getFlag("RM002_Favor"):
+        MC "Considering how smoothly the last operation went, I'd prefer we {i}not{/i} revisit the principal's office."
+        show RM distrustful
+        RM "I don't know what you're talking about. Everything went perfectly fine..."
+        show RM concerned
+        extend " with the exception of my sister showing up."
+        show RM neutral-2
+        RM "Even so, I would agree. I doubt he'd tell us much of anything even if he knew."
+        RM "Though I'm not that optimistic about Tsubasa-sensei either. The guy seems so disinterested and lost in his ramblings that I'm skeptical if he would even remember his earlier years here."
+    else:
+        MC "The administration office is kind of out of the way, why don't we just try to catch Tsubasa-sensei first?"
+        show RM neutral-2
+        RM "We might as well just skip Principle Noguchi-sensei entirely. I doubt he'd tell us much of anything— even if he knew." 
+        RM "Though I'm not that optimistic about Tsubasa-sensei either. The guy seems so disinterested and lost in his ramblings that I'm skeptical if he would even remember his earlier years here."
+    MC "Don't be so sure. That could be an asset. With how much he likes to ramble on, I'm sure he'd let {i}something{/i} spill— intentional or not."
+    RM "Good point. Plus, Tsubasa-sensei has been here far longer and he's a lot more familiar with us, so he wouldn't be as suspicious."
+    MC "Okay, well if you're worried about it being suspicious we could wait until our next biology class with him and ask him after class."
+    show RM angry
+    RM "What? No! When you get a lead, you gotta move while the trail is hot!"
+    MC "We literally waited days until Tashi-sensei was in a \"good mood\" to follow up with the last one."
+    show RM smug
+    RM "Exactly. We have to make up for our lost ground!"
+    "Seeing how this conversation was leading nowhere (except to Tsubasa-sensei's classroom) I decided to ultimately save myself some time and just roll with it."
+    MC "Well, I guess we could squeeze in a quick visit before the break period is over and we have to get back to 3-B for Hageshi's math class."
+    show RM happy
+    RM "Right, sounds like a plan."
+
+    scene Admin Hallway
+    show RM neutral
+    with fade
+    MC "Looks like we should be about in the right spot, but I'm not sure which one it is."
+    show RM doubt
+    RM "We don't have time to search every room in this hallway before getting back to class. We took too long getting over here. I told you we should have ran."
+    MC "I don't think that's a particularly good idea, given your penchant for running afoul of hall monitors."
+    show RM angry-2
+    RM "I'll have you know most of the time I do a pretty good job of eluding them."
+    MC "Yeah, yeah. Assuming a vent hatch is nearby, right?"
+    show RM angry
+    RM "{i}Err{/i}! We don't have time for this!"
+    if getFlag("Meet_Ryoko"):
+        MC "Fine, we'll just ask somebody."
+        show RM angry at altMove(0.5, 0.25)
+        show Ryoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        MCT "Hey, I recognise her. Maybe she knows?"
+        show RM doubt
+        RM "You there! Do you know where Tsubasa-sensei's classroom is?"
+        show Ryoko confused
+        "The red haired girl looked up from a book she was reading, seemingly unsure if Daichi was actually talking to her."
+        Ryoko "Huh?"
+        RM "Yes, you. Don't you know where his classroom is?"
+        Ryoko "As a matter of fact I do."
+        RM "...Well? Are you going to tell us then?"
+        show Ryoko tongue
+        show RM angry
+        Ryoko "Nah."
+        show Ryoko neutral
+        MCT "Quite the devil with the ladies, aren't we Daichi?"
+        show RM distrustful
+        MC "Sorry about him, Tanaka-san. He's just got his undies in a twist because we're in a hurry. Would you happen to know where Tsubasa-sensei's homeroom is?"
+        Ryoko "Hey, Hotsure-san. {w}Yeah, I can help you. It's down that way, just before the end of the hall."
+        show RM doubt
+        MC "See, was that so hard?"
+        show Ryoko neutral
+        Ryoko "Yeah, say please next time."
+        RM "Yeah, yeah. I'll think about it."
+        MC "Thanks, Tanaka-san."
+        Ryoko "Yeah, no biggie."
+        "Ryoko went back to her previous posture with her back on the way and browsing through her book. It said something about cinematography on the front and looked like one that came from the library."
+        if isEventCleared("GTS011") or isEventCleared("GTS011B"):
+            MCT "Hmm, I wonder if Ryoko is still working on her movie project she mentioned a while back."
+            RM "Come on, let's get going."
+    else:
+        show RM doubt
+        RM "You there! Do you know where Tsubasa-sensei's classroom is?"
+        show RM doubt at altMove(0.5, 0.25)
+        show Ryoko confused at Position(xcenter=0.75, yalign=1.0) with dissolve
+        "The red haired girl looked up from a book she was reading, seemingly unsure if Daichi was actually talking to her."
+        Student "Huh?"
+        RM "Yes, you. Don't you know where his classroom is?"
+        Student "As a matter of fact I do."
+        RM "...Well? Are you going to tell us then?"
+        show Ryoko tongue
+        show RM angry
+        Student "Nah."
+        show Ryoko neutral
+        MCT "Quite the devil with the ladies, aren't we Daichi?"
+        show RM distrustful
+        MC "Forgive my socially awkward associate. We're in a hurry, but that's still not an excuse to be rude. If it's not any trouble, could you help point us to where Tsubasa-sensei's homeroom is?"
+        Student "Sure. It's down that way, just before the end of the hall."
+        show RM doubt
+        RM "See, was that so hard?"
+        show Ryoko annoyed
+        Student "Yeah, whatever."
+        show Ryoko neutral
+        MC "Thanks."
+        Student "No biggie."
+        "The girl went back to her previous posture with her back on the way and browsing through her book. It said something about cinematography on the front and looked like one that came from the library."
+        MCT "I'm surprised I hadn't noticed her before, she certainly stands out with that hair."
+        RM "Come on, let's get going."
+
+    scene HallwayStairs with fade
+    MCT "Looks like this is it."
+    show Jineko neutral at Position(xcenter=0.25, yalign=1.0)
+    show Tako neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "I figured we were in the right spot once I saw two students walking out of the room as we approached."
+    Student1 "I knew Tsubasa wouldn't buy that excuse. So much for your \"perfect plan\". We're going to have to come up with something else for the next homeroom class."
+    show Tako confused
+    Student2 "Hey! Don't give me that. How was I supposed to know the old geezer would bother to check our story? I'd never seen someone so checked out about their work— or life in general."
+    show Tako angry
+    Student2 "Figures he'd suddenly care about {i}this{/i} of all things..."
+    if getFlag("MC005RM"):
+        MC "{size=-6}Hey, would you look at that? What a coincidence, that girl you like so much is here. Is that why you wanted us to rush over here?{/size}"
+        pause 1.5
+        MC "?"
+        MCT "Wait... Where did he go? I could have sworn he was right next to me just a second ago."
+        "Surprisingly—though unsurprising now that I think about it—he vanished on me."
+        Student1 "Maybe we should ask Tozakura-san to help us out?"
+        show Tako unique
+        Student2 "{i}Pffftt!{i} HAHAHA! Yeah right!" 
+        show Tako confused
+        extend " \"Little Miss Uptight\" isn't going to help us with jack shit. If anything she'd probably give us a stern lecture about \"showing more maturity\"."
+        show Tako excited
+        Student2 "Don't worry though, I have a certain idea in mind how we might be able to pull this off."
+        Student1 "Heh. \"A certain idea\". No offense, but it sounds a lot less certain than your previous \"perfect plan\"."
+        show Tako neutral
+        Student2 "Don't tell me you aren't curious."
+        Student1 "Oh, I'm plenty curious, I'm just starting to think I should be concerned..."
+        hide Jineko
+        hide Tako
+        with dissolve
+        MCT "Huh, I wonder what those two are up to. {w}Oh well, none of my business I guess. If it's a big enough deal I'm sure word will get around campus soon enough."
+        show RM neutral-2
+        RM "Alright, let's head in."
+        MC "{i}Gah{/i}! {w}Where did you come from?"
+        RM "I've been here the whole time."
+        MC "Just because you've somehow mastered the ability to phase in and out of reality doesn't mean you have the ability to plant false memories into my brain. Where were you just now?"
+        show RM angry-2
+        RM "I have no idea what you are referring to."
+        MC "I get it, I get it. Still nervous around your secret crush? Look, I know she said you aren't her type, but girls like it when you're direct about your intentions. You should try to talk to her."
+        show RM concerned
+        RM "I... uh... ermm..."
+        show RM angry-2
+        RM "Look, for the last time, I was following a case— not trying to ask her out. So shut up, and let's go talk to Tsubasa-sensei."
+        MC "Just saying, even with me as your wingman you're gonna have to learn to fly solo eventually."
+        show RM angry
+        RM "Shut up! Shut up!"
+    else:
+        "Not that I'm usually the one trying to play detective, but I was rather curious about their conversation. Luckily they weren't paying any attention to either of us."
+        MC "{size=-6}What do you think they're up to?{/size}"
+        pause 1.5
+        MC "?"
+        MCT "Wait... Where did he go? I could have sworn he was right next to me just a second ago."
+        "Surprisingly, (though unsurprising in retrospect) he vanished on me."
+        Student1 "Maybe we should ask Tozakura-san to help us out?"
+        show Tako unique
+        Student2 "{i}Pffftt!{/i} HAHAHA! Yeah right!"
+        show Tako confused
+        extend " \"Little Miss Uptight\" isn't going to help us with jack shit. If anything she'd probably give us a stern lecture about \"showing more maturity\"."
+        show Tako excited
+        Student2 "Don't worry though, I have a certain idea in mind how we might be able to pull this off."
+        Student1 "Heh. \"A certain idea\". No offense, but it sounds a lot less certain than your previous \"perfect plan\"."
+        show Tako neutral
+        Student2 "Don't tell me you aren't curious."
+        Student1 "Oh, I'm plenty curious, I'm just starting to think I should be concerned..."
+        hide Jineko
+        hide Tako
+        with dissolve
+        MCT "Odd. Well, none of my business I guess. {w}I wonder what got him so spooked that he pulled a Houdini again? Unless he had a reason he didn't want to be noticed..."
+        if getFlag("RM_govagent"):
+            "Though given the drastic measures he's willing to take when he thinks the wrong people are onto him, (like his emergency document dump when I joked I was a government agent) it's probably more surprising he doesn't do it more often."
+    show RM neutral-2 with dissolve
+    RM "Alright, let's head in."
+    MC "{i}Gah{/i}! {w}Where did you come from?"
+    RM "I've been here the whole time."
+    MC "At this point I'm starting to think you might be a figment of my imagination and everyone is just humoring me by pretending you're there."
+    RM "Well you have a poor imagination then if you can't even imagine yourself as the main protagonist in this mystery novel."
+    MC "Yes, well your lack of screen time is not exactly bolstering your status as \"lead detective\". Why did you suddenly dip when we're right here? Do you know those girls or something?"
+    show RM sad
+    RM "Ugh... it's a long story, don't ask. Let's go."
+    "The fact that he said \"don't ask\" made me all the more curious, but I had a feeling I wasn't going to get any answers if I did."
+
+    scene Classroom3 with fade
+    play music HigherEdu
+    "Stepping into Tsubasa-sensei's classroom almost felt like stepping back in time."
+    MCT "Is this an older part of the building or something?"
+    if isEventCleared("MC002"):
+        "It wouldn't have surprised me if that was the case, from what Takamura-sensei had mentioned before, Tsubasa-sensei had been here longer than anyone."
+    else:
+        "It wouldn't have surprised me if that was the case, from what Tashi-sensei had mentioned before, Tsubasa-sensei had been here longer than anyone."
+    show Tsubasa neutral at Position(xcenter=0.25, yalign=1.0)
+    show RM neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Tsubasa-sensei for his part hadn't even noticed us enter his classroom, not even bothering to look up as he sifted through a stack of papers on his desk that appeared to be assignments he was grading." 
+    "He eventually acknowledged our presence once he noticed us from the corner of his eye after approaching his desk."
+
+    if isEventCleared("MC005"):
+        "Tsubasa-sensei looked up, recognizing me immediately."
+        Tsubasa "Ah, Hotsure-san, the bright fellow who made such a memorable impression on Chiyo during the festivities on Shōwa Day."
+        MCT "Chiyo? {w}Oh yeah! That must be his wife's name."
+        MC "Ah yes, I'm glad that I was able to make such a good impression. Please give my regards to your wife, I hope she is doing well." 
+        Tsubasa "Nice of you to ask, she is doing fine. That is at least when she's not on my case about posting this flier for a summer help position at her store on the school's bulletin board."
+        Tsubasa "{i}Sigh{/i}... But that's neither here nor there, I'm sure I'll remember to do it this afternoon. To what do I owe the pleasure of this visit? I don't recall you visiting my classroom before."
+        MC "Well, since you seem busy I don't want to take up too much of your time Tsubasa-sensei, but we were wondering if we could get your insight with regards to a certain mystery we're trying to figure out."
+    elif getFlag("Meet_Tsubasa") and not isEventCleared("MC005"):
+        "Looking up at me, and then to Daichi, then back at me, all without saying a word, I began to wonder if he remembered who we were. His gaze on me intensified, whereupon his expression changed with a sudden realization."
+        Tsubasa "Ah, yes, Hotsure-san, how can I help you?"
+        MC "Sorry to bother you Tsubasa-sensei, but we were wondering if we could get your insight with regards to a certain mystery we're trying to figure out."
+    else:
+        $setFlag("Meet_Tsubasa")
+        show RM neutral-2
+        RM "Hello Tsubasa-sensei, I hope we aren't interrupting anything."
+        Tsubasa "Hm? Ah yes, I see. You are both Kaeru-san's students in 3-B. Daichi Utagashi- factorless, and Keisuke Hotsure- hyper-productive hair follicles."
+        show RM doubt
+        "Daichi appeared surprised that Tsubasa had remembered the details of our student files. Perhaps he's sharper than his languid demeanor suggests."
+        RM "Yes, you appear to have remembered. Anyway, I had a question for you." 
+        show RM neutral-2
+        RM "Hotsure-san and I noticed something unusual that we were hoping to get more insight on. We were told you might be able to help due to the knowledge from your long tenure at the Academy."
+        Tsubasa "Perhaps. It depends on the nature of the information you seek."
+        RM "We're trying to follow up on some leads regarding a peculiar mystery we discovered on the island."
+    Tsubasa "A mystery you say?"
+    "Tsubasa-sensei raised an eyebrow and his ears perked up at the mention of the word. It was probably the most animated I'd ever seen him."
+    Tsubasa "Concerning what, might I ask?"
+    MC "Utagashi-san and I visited the dock recently. We didn't really think much of it the first time when we arrived on the island, but this time around we noticed something peculiar about the large gate at the dock."
+    Tsubasa "Is that so?"
+    show RM happy-2
+    "Tsubasa-sensei stroked the tuft of his goatee as he mulled over what I just said. Daichi tried not to show it but appeared to be hopeful we had touched on something pertinent in his mind."
+    show RM neutral 
+    Tsubasa "Interesting. Tell me, what did you find so peculiar about it?"
+    MC "It just seemed so out of place. It's obviously a modern construction, but made to look old. And it's painted this odd red color like they were going for some torii gate but not really."
+    Tsubasa "Is that all you noticed?"
+    show RM neutral-2
+    RM "The height seems to have an unusual cut off point. Too tall to be a normal gate, too short to be a grand monument. Given that it is the passage on and off the island, we suspect it to function as a limiter of sorts."
+    Tsubasa "I'm not sure I follow."
+    show RM doubt
+    RM "A limiter of who is allowed to come and go— and who isn't. {w}If these so-called giant students grow as tall as the rumors say, it would be widely known outside of the island. They would simply be unavoidable."
+    RM "But if they aren't allowed to leave... then maybe some things start to make sense."
+    "Tsubasa-sensei lifted his eyebrows, the first genuine look of surprise I'd ever seen from him, even as subdued as it was."
+    Tsubasa "I must say, that's quite an astute level of observation to make that connection."
+    show RM smug
+    RM "So it's true?"
+    show RM concerned-2
+    Tsubasa "Unfortunately, the two different matters are unrelated. Its architecture is more so a design flaw rather than a feature."
+    show RM neutral
+    Tsubasa "You see, its builders had little to no knowledge about the extent and severity of the growths, particularly those with the gigantism factor."
+    Tsubasa "One could hardly blame them for such a lack of foresight though. At the time, everything about the phenomenon was new, uncertain, and untested. We were venturing into uncharted territories."
+    show RM neutral-2
+    RM "So you were around during its construction?"
+    Tsubasa "Not quite, but not long after. When the dock was built the academy wasn't here yet. The only place active was the giant's facility located within the old quarry."
+    Tsubasa "There were settlements that were built alongside its development as people hired to work on the project were settled down on the island." 
+    Tsubasa "Originally, the dock was just used by residents of Satoyama village, as it's the fastest and closest way to get to the mainland. Due to the nature of the program here, academy students rarely utilize the service."
+    MC "What about the unusual color? Is there any particular significance behind it?"
+    show RM doubt
+    Tsubasa "That would be where your conjecture was largely accurate. Red was chosen for the same reason it's always chosen in traditional architecture— rooted in spiritual beliefs to ward against evil spirits, sickness, and the like."
+    RM "Isn't that unusual too though? It doesn't look to be as old as you are suggesting."
+    Tsubasa "Ah yes, I suppose it would stick out in that regard, but the simple explanation is that it is well maintained by Satoyama's residents, the majority of whom enjoy cultivating the old traditions."
+    Tsubasa "If you ever take the time to visit Satoyama village, which I recommend you do so at some point during your time here, and if you do, you will readily understand that to be the case." 
+    Tsubasa "It could best be described as a little slice of Nagano tucked away in the mountains." 
+    RM "Hmm, sounds like it would be worth checking out..."
+    Tsubasa "The most popular time to visit would be when it hosts a fireworks show during the local Obon festival in late summer."
+    show RM neutral
+    RM "But back to something you mentioned earlier Tsubasa-sensei: the giant's facility. {w}We keep hearing mention about this place, but we still don't know what it is— or I guess, what it's supposed to be." 
+    MC "I'm not sure what you find so mysterious about that part. Going by the name alone, I don't think I'm going out on a limb here by guessing it's some kind of home for giants."
+    show RM angry-2
+    RM "I'm aware of what those two words mean, but \"home\" is not the first thing that came to my mind."
+    show RM neutral
+    Tsubasa "Ah, I see. Yes, the Giant's dorm. I don't suppose either of you would be familiar with it as it doesn't directly concern either of you and your purpose here."
+    if getHighestAffection() == ("GTS"):
+        MCT "Given how much Naomi has been growing, something tells me that it does."
+    Tsubasa "You see, students with the gigantism factor are frequently measured and their height is constantly being evaluated." 
+    Tsubasa "This is because the facilities here can prove inadequate to accommodate those with the factor, despite being spaciously quite accommodating to the vast majority of students."
+    show RM doubt
+    RM "Inadequate how? This place is built like a carnival funhouse. I could walk through the doors on stilts and still not hit my head."
+    "Daichi's absurd point managed to get a light chuckle out of Tsubasa-sensei."
+    show RM neutral-2
+    Tsubasa "{i}Hmp{/i}. Yes, your point is well taken. You see, student's with said factor are not immediately moved to a new place after their diagnosis."
+    Tsubasa "The mere fact you may become a giant in the future doesn't mean you can't stay on campus, which was built with the idea of supporting people with various heights in mind."
+    Tsubasa "But everything has its limits, including these facilities. Any students who reach the height threshold of three and a half meters are moved out to more fitting accommodations in the so-called \"Giant's Dorm\"."
+    show RM doubt
+    MC "Over three meters!? That really is gigantic."
+    Tsubasa "Comparatively so to your or I, but still quite far from the more extreme cases."
+    MC "So will all of the students with a height factor eventually be moved there?" 
+    Tsubasa "No, in fact quite the opposite. Despite the moniker, most people with the gigantism factor do not actually achieve heights that one might associate with the term \"giant\"."
+    RM "Most... meaning some do?"
+    Tsubasa "Correct. You see, all of the growths display some degree of variance." 
+    show RM distrustful
+    RM "What do you mean by \"variance\" with the factors?"
+    Tsubasa "If you are struggling to wrap your head around the idea of variance, I highly recommend you take one of the statistics courses offered by Hageshi-san so you can better understand distributions."
+    show RM neutral
+    RM "I'll consider it."
+    Tsubasa "Yes, well as I was saying, the growths vary in their degree of severity." 
+    Tsubasa "On the low end they would be difficult to distinguish from the more exceptional cases in the general population... say four or five standard distributions from the mean."
+    Tsubasa "Hence cases like Sugiyama-sensei, who's height is exceptional relative to the general population, but not beyond the 350 centimeter threshold."
+    MC "I don't think I've met him."
+    show RM doubt
+    RM "He's the coach for the basketball club."
+    MCT "Of all the people to be knowledgeable of that fact, Daichi would've been the last on my list."
+    RM "You'd know him if you'd seen him before. His proportions are nothing less than extraordinary. The idea that someone as tall as him would be considered on the \"low end\" is absurd."
+    Tsubasa "Sending video via electromagnetic waves up into space and back down via orbiting satellites above the earth to be received by your cell phone gizmo would have been an absurd notion a hundred years ago."
+    Tsubasa "That is the beauty and also unfortunate nature of empirical observation, the truth of any matter is indifferent to our ability to make sense of it."
+    show RM distrustful
+    RM "So I'm learning..."
+    MC "So if that's on the low end, what would be the high end?" 
+    show RM angry-2
+    RM "Yes, what's the tallest a student has ever grown to?"
+    Tsubasa "It's not my place to divulge information from students' case files, even if they have passed through long ago. Though I'm sure you'll find no shortage of rumor and discussion of such topics from the students and island residents."
+    show RM happy-2
+    RM "{size=-6}Should make it easy enough...{/size}"
+    Tsubasa "What's that you say? I'm afraid you'll have to speak up. My hearing is not what it used to be."
+    show RM smug
+    RM "Oh, yes. Sorry about that. So where are these \"Giant Facilities\" located? I haven't seen any on campus."
+    Tsubasa "Right, it's not likely you would have. They are not located on the campus proper {i}per se{/i} but rather somewhat of a distance north of the main campus grounds." 
+    show RM neutral-2
+    Tsubasa "They are just beyond the park spot behind campus known as Chūkan Point. One could describe it as charming with a pinch of eerie."
+    MC "That sounds unnerving to be honest."
+    Tsubasa "It's all a matter of perspective, much more in the literal sense. You see, the benches, viewing telescopes, and other fixtures were built with giants in mind, so they're far larger than they look, creating a curious feeling of dissonance." 
+    Tsubasa "I highly recommend you take the time to visit if you haven't yet already. The grounds keepers and student volunteers do immaculate work in maintaining it."
+    show RM doubt
+    RM "Yes, yes, I'm sure it's quite the scenic view. But you were saying the dorms are further past it?"
+    Tsubasa "Ah yes, the quarry. The facilities themselves are only intended for a small number of students that get transferred there at their own pace, as no one reaches the height threshold at the same time."
+    Tsubasa "There are about 30 or so dorms scattered all around the pit. Though typically only 15-20 of them will ever get utilized in a given year."
+    MC "Why are they scattered about? Wouldn't you want the students to be near each other?" 
+    show RM neutral
+    Tsubasa "Ideally yes, but more practical considerations prevail in this matter. The individual dorms themselves were repurposed hangars from when it was an active mining operation."
+    Tsubasa "However it's not just a smattering of makeshift housing." 
+    Tsubasa "Most students are likely unaware of this, but the facilities host an equally impressive underground complex within the quarry, where students are able to remotely attend their courses."
+    Tsubasa "Hence why most of the facilities' residents refer to it as \"The Caverns\". The mega caverns within the abandoned mine are so vast and enormous in height, students don't need to worry about outgrowing them."
+    show RM neutral-2
+    RM "Have any come close?"
+    Tsubasa "Hmp, ha! If you had seen them for yourself you would understand the absurdity of your question. {w}No. No living giant attending Seichou Academy since its inception has ever even remotely come close."
+    if isEventCleared("MC002"):
+        MCT "Caverns... I remember hearing the name mentioned before, but I couldn't quite remember where. This must have been what it meant."
+    Tsubasa "Despite the large space, the more distant and somewhat isolated location helps to foster a more tight-knit sense of community among its residents."
+    Tsubasa "Quite understandable given that they all share the same experience, which can be alienating in its particular way— even more so than most growths, unfortunately."
+    if getFlag("MC007_regards") and not getFlag("MC008_RegardsPassed"):
+        MCT "Hopefully Daichi's satisfied with how this lead turned out." 
+        $setFlag("RM004_RegardsPassed")
+        MCT "So far Tsubasa-sensei certainly had a lot more to say than Kazomazumi-san when we met her at the bakery. All she really knew about them was that the rock quarry was here before the school."
+        MC "Oh wait, that reminds me. I almost forgot to mention it."
+        show RM neutral
+        MC "We ran into one of your former students, Tsubasa-sensei. Haruko Kazomazumi, she said to give her regards to you."
+        Tsubasa "Ahh, young Kazomazumi— no matter how many students I meet, I doubt I could ever forget that name." 
+        Tsubasa "And not just the distinct name itself, but more specifically her relation as the daughter of Chie Kazomazumi, the first confirmed diagnosed factor holder."
+        MC "Did she have her mother's factor?"
+        MCT "Could have fooled me if she didn't."
+        Tsubasa "Haruko herself was factorless, but at the time we were enrolling children of known factor holders into the Academy without any screening, reasoning inheritance to be the most likely link as to who will manifest a factor."
+        Tsubasa "However, Haruko, along with other second generation students, demonstrated this assumption was false. Another seemingly obvious hypothesis that turned out to be a dead end."
+        Tsubasa "That's not to say we didn't continue to monitor second generation students for some time afterwards." 
+        Tsubasa "This was done sometimes through a random sampling system, or at the request of their parents— particularly if their physical features suggested something unusual."
+        Tsubasa "But as I said, in the end no definitive relationship with genetic inheritance has been established. Despite my best efforts to find a correlation or association, it still seems to be a complete lottery."
+        Tsubasa "Sometimes nothing happens, while other times offspring will have slightly exaggerated body shapes, while not having a growth factor as we know them." 
+        show RM angry-2
+        RM "But isn't that still a form of a growth?"
+        Tsubasa "Not quite. {w}Exaggerated features, yes, but not stupendously beyond the bounds of the general population and not manifesting in any further growth post puberty."
+        MCT "I suppose that explains Haruko's unique proportions."
+        show RM neutral-2
+        RM "So have any factor holders ever had the same factor as their parents?"
+        Tsubasa "Yes, that is possible. It has been observed before, which is why it is difficult to entirely abandon the notion that there could still be a link."
+        Tsubasa "But as I said, it is seemingly random without relation, as still other times offspring will manifest completely different factors than their parents."
+        MC "Geez... this is all very confusing."
+        Tsubasa "Good to know I'm not the only one who thinks so then."
+        MCT "Didn't really expect to get stuck on a long tangent like that, but then again, this is Tsubasa we're talking with here."
+    "I was trying to process everything I just heard: giants taller than three and a half meter ceilings, hangar bays for dorms, caverns for classrooms..."
+    MCT "How does this place manage to keep getting weirder?"
+    "I couldn't help but wonder if Tsubasa-sensei was pulling our leg, like a senile old grandpa who enjoys regaling his grandchildren about his impossibly exaggerated and anachronistic exploits, testing if we're dumb enough to believe any of it..."
+    pause 1
+    "The notion didn't linger in my mind for long though. I didn't know him that well, but from what I did know Tsubasa himself did not strike me as possessing the whimsy to craft such a strange tale whole cloth."
+    "Nor did he have the sense of humor, if one at all, to derive enjoyment from such a ruse. If he truly was off his rocker he wouldn't be as sharp on his course material, and the administration would have turned him out."
+    "I was reluctant to accept it, but-"
+    show RM angry-2
+    RM "Wait a second here! You said the quarry facilities only houses 30 people, right?" 
+    Tsubasa "Yes. You appear to have paid attention, what about it?"
+    show RM distrustful
+    RM "What happens to all the other students over the years that became giants? Aren't there {i}more{/i} after all these years?"
+    Tsubasa "I'm not sure I follow, isn't it obvio-"
+    show RM angry-2
+    RM "{i}Where{/i} do they go? How does this work?"
+    show RM angry
+    RM "WHAT IS THE REASON BEHIND THE GROWTH FACTORS?"
+    pause 1
+    "Despite Daichi's increasingly manic state, Tsubasa remained unperturbed, chuckling to himself rather than being alarmed."
+    Tsubasa "Hmp. Young lad, you're asking the wrong questions."
+    show RM sad
+    RM "Wha? What do you mean?"
+    "I was thankful to see Tsubasa-sensei's question caught him off guard. He was at a 12 and now he was back down to a more tepid 6 on the nutso scale, which was lower than average for him— especially in detective mode."
+    Tsubasa "Simple, I'm telling you what I know, and what I've learned: You can't hope to get the right answers if you don't know what to ask in the first place."
+    show RM concerned
+    RM "But... That's... Not..."
+    play music Peaceful
+    Tsubasa "It would seem however we're out of time for discussion. There's nary three minutes left until the bell and I would not want to cause you to be tardy for your next class. Quite the interesting topic of discussion though, gentlemen." 
+    Tsubasa "I will say, it was quite astute of you both to notice the conundrum of the dock. I enjoy ruminating on the past, as I am wont to do in my old age. Thank you for the conversation."
+    show RM angry
+    RM "Wait!"
+    MC "Come on let's go, we're going to be late. Thanks, Tsubasa-sensei."
+
+    scene Admin Hallway
+    show RM distrustful
+    with fade
+    RM "He obviously knows more than he's willing to tell."
+    MC "No shit? What gave you that idea?"
+    show RM angry-2
+    RM "Shut up. I want to know what he knows."
+    MC "I don't know why you're so dissatisfied. As far as witness interviews go he basically sang like a canary."
+    show RM distrustful
+    RM "Except the last part."
+    MC "His response was rather odd, but at the same time he didn't seem opposed to telling you more. Perhaps he wants you to think about it more than just blindly grasping at straws?"
+    show RM neutral-2
+    RM "You're probably right. We got him to talk about the dock because we noticed something that even he hadn't thought of." 
+    show RM happy
+    RM "If I could pique his interest with my own insights, or confront him with evidence, perhaps he might be willing to divulge a bit more."
+    MC "Not a bad idea. Couldn't hurt at least."
+    MC "Seems like this expedition was actually successful for once. So there's that."
+    show RM happy-2
+    RM "Yes, even if it wasn't as satisfying as I'd hope, we did manage to chase down the leads we had."
+    "Part of me didn't want to ask, but my morbid fascination ultimately won out."
+    MC "So what's next?"
+    show RM smug
+    RM "What else? We follow the new leads."
+    show RM neutral-2
+    RM "Plenty of stuff still doesn't add up. These Giant's Dorms, or \"Caverns\" or whatever they call this place. How the hell did they manage to build such a complex on this island without making it public?"
+    if isEventCleared("FMGWG001") or isEventCleared("MC007"):
+        MC "Come to think of it, that must have been what the bakery owner was referring to about what was here before the academy."
+        RM "Exactly. She's probably lived here most of her life and even she doesn't know much about it."
+        MC "So? She doesn't strike me as a geologist. What makes you think she should know more about the place? Seems like it would be easy for a normal person to overlook."
+    else: 
+        MC "It's a pretty isolated island, even if it were, few would likely care."
+    show RM angry-2
+    RM "Not something this big, if it actually is like what Tsubasa said. This smells like a government cover-up. Think about it, a member of the National Diet being the founder just reeks of suspicion."
+    if not getFlag("MC005RM") or not getFlag("MC005_readbrochure"):
+        MC "Wait, what do you mean? Where did he mention that?"
+        RM "I was following up on some leads during Golden Week, you missed out."
+        MCT "So he says..."
+        RM "The Academy was formed by a former member of the Diet. His name isn't as known as it was back in the day, but yeah, you get the idea."
+        MC "That's an interesting breakthrough."
+        show RM smug
+        RM "Exactly. More things are starting to fall into place."
+        show RM neutral-2
+    else:
+        MCT "Ah yes, that old staple, where all roads lead to apparently."
+        show RM neutral-2
+    "By this point Daichi was dialing back up to his usual 8 on the scale and I was hoping to get to Hageshi-sensei's class before I got sucked into the singularity."
+    "Still though, he did have a point. These caverns would have to be a massive undertaking to build." 
+    "As curious as the notion might be, I wasn't going to concern myself with it too much at the moment. I figured I'd be getting to the bottom of it soon enough when Daichi drags me on another one of his \"investigations\"."
+    "At least it was rewarding to finally get some answers after mostly only finding red herrings up until now, even if those answers were outlandish and strange in their own right."
+    "This was when I began to wonder if we were following leads... or falling down a rabbit hole."
     jump daymenu

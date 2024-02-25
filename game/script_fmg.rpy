@@ -17069,7 +17069,7 @@ label FMG081:
     MC "You're a coward."
     "We walked over to the hostess at the desk who was {i}quite{/i} surprised about Akira's size."
     Hostess "H-How can I help... you guys?"
-    FMG "I called earlier this morning for a reservation. It should be under ‘Akira Mizutani'."
+    FMG "I called earlier this morning for a reservation. It should be under \"Akira Mizutani\"."
     Hostess "...Ah! It's right here. If you two could follow me."
     "As we walked through the restaurant it was full of wandering (or questioning, if that's what you were going for) eyes from factor-less and factor patrons alike."
     MC "Drawing quite the crowd."
@@ -17216,7 +17216,7 @@ label FMG081:
     MC "I'm sure you're used to spending your Friday nights like that. Drunk and lonely."
     "Schmuck" "Got quite the mouth on you, bud. I'd be careful with who you're talking to."
     MC "I'm not your bud, pal. I'll say it one more time since I didn't make myself clear. Go. Away. Stop bugging my girlfriend with the game you don't have."
-    "Schmuck" "Whatever, I wasn't interested anyway. Take some lessons from your ‘girl' and hit the gym."
+    "Schmuck" "Whatever, I wasn't interested anyway. Take some lessons from your \"girl\" and hit the gym."
     MC "Thanks for the advice I didn't ask for. Hurry up and leave, I don't want to keep repeating myself."
     "Schmuck" "Tch, whateves."
     pause .25
@@ -17229,7 +17229,7 @@ label FMG081:
     MC "I know you can take care of yourself... Ugh, that stuff just pisses me off."
     show FMG neutral
     FMG "Better you than me in this case. Before you showed up he kept making comments about my body... made me so uncomfortable."
-    FMG "‘Damn, girl, how often do you go to the gym? You have bigger arms than all my bros."
+    FMG "\"Damn, girl, how often do you go to the gym? You have bigger arms than all my bros.\""
     MC "Quite the icebreaker."
     FMG "I know! Took every ounce of self-control I had to not rip the table up and smash it over his head."
     MC "I knew I should've taken my time, I could've walked out to you treating this dude like a ragdoll."
@@ -17858,7 +17858,7 @@ label FMG084:
     PRG "T-Try this. Open your hand and relax it. Then, push with one finger right here."
     "Aida pressed one finger into the space between her thumb and the base of her palm."
     PRG "This is what raw meat feels like."
-    "Next, she put her first finger to her thumb in an ‘ok' sign shape."
+    "Next, she put her first finger to her thumb in an \"ok\" sign shape."
     PRG "Now press. Feel how it's tighter?"
     MC "Mhm."
     PRG "That's what a rare steak will feel like."
@@ -18668,10 +18668,12 @@ label FMG087A:
     MC "This is the greatest day of my life!"
     "Her thighs were hefty, like massive pillars of sand swept marble, which she controlled with unwavering diligence. Each crevasse and line in her legs caressed me— smothering, and yet sheltering me."
     FMG "Don't get too excited, I haven't even started yet~"
+    show cg FMG087A with dissolve
     "Steadily, her quads tightened as she only strengthened her hold on me. The sheer power she had, and with such minimal effort, was almost impossible to put into words."
     FMG "More?"
     MC "P-Please..."
     "Like a breath, my plea escaped my lips, and she responded immediately, her gigantic legs slowly smothering me as they clenched deeper into my body and drove me further into her warmth."
+    hide cg with dissolve
     FMG "Maybe this wasn't as bad as I thought, heh."
     "Responding to her ferocity, I took a chance and placed my hands on her thighs, gently massaging them as I felt every single inch and ridge of her perfectly sculpted body. It was like a never-ending edifice of stone I felt I could get lost in."
     "As I gingerly pet her supple skin, she cooed in delight."
@@ -19536,6 +19538,822 @@ label FMG089:
     jump daymenu
 
 label FMG090:
+    $setProgress("FMG", "FMG091")
+    $setTime(TimeEnum.NIGHT)
+    #$setFMGOutfit(OutfitEnum.NUDE)
+    scene Dorm Interior with fade
+    play music TwilightBright 
+    if not getFlag("Meet_Kokutan"):
+        $setFlag("Meet_Kokutan")
+    "There comes a point in a man's life where he has to start reevaluating his life choices. For me that point came today when my bed, which was already struggling to support Akira and her fatass... broke."
+    "She slept right through it because of course she did. Me? Nope, I stared at my ceiling in disappointment since I now get the pleasure to call maintenance tomorrow morning."
+    "I tried my best to fall back asleep, but Akira kept moving around taking up more and more space. I didn't have the energy to fight back after our bed shenanigans. I only craved shuteye."
+    MCT "Ugh, screw this. I'm taking Daichi's bed. He can be mad whenever he decides to stop sneaking around late at night."
+    pause 1
+    MCT "Ah, perfect. Now, I can sleep in peace. I'll give her a piece of mind when I'm recharged."
+    MCT "Taking up all the space in {i}my{/i} bed. I won't tolerate such disrespect... {w}And yeah I guess she did destroy it too."
+    MCT "She'll get an earful tomorrow, I'll make her feel bad for sure."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.DAY)
+    scene Bathroom with fade
+    "I felt like I was having a hangover, I was so out of it. I stumbled out of bed walking past Akira snoring loud enough to wake the whole floor."
+    MC "I'd pinch your nose if I wasn't about to collapse on the floor."
+    "You know those glasses they make you wear in those health classes that show what it's like to be intoxicated? That's how badly my head was spinning."
+    MC "God, it was literally just sex. Why is the world spinning?"
+    "As I shambled into the bathroom, I was beginning to get myself together... slowly. I splashed some cold water on my face hoping that might give me some relief."
+    MC "Ah, that feels sooo much better. Still dizzy but it's not nearly as bad."
+    FMG "Kei? Where are you?"
+    MC "I'm in the bathroom. Everything okay?"
+    FMG "Ummmm, yes and no."
+    MC "Uh, yes and no?"
+    FMG "Just come out of the bathroom, please."
+    MC "Coming."
+    scene Dorm Interior with fade
+    MC "What's... up..."
+    MC "Holy..."
+    "As Akira rose out of the destroyed bed, I was able to get a full view of her sheer enormity. It seemed as though she had now utterly towered over me, with her body taking up even more space than I had ever imagined possible for her."
+    show FMG surprised with dissolve
+    FMG "Why are you so small?!? What happened!?"
+    "The amazon frantically scanned the room noticing how everything was child-size to her."
+    FMG "Kei, everything is {i}really{/i} small. You. Your desk. The couch...."
+    MC "Hey, hey, calm down. Look at me. You need to stay calm, we don't know what you're capable of right now."
+    MC "Focus, breathe... in and out."
+    show FMG sad
+    FMG "R-Right, have to breathe and remember what Hageshi-sensei taught me."
+    "She closed her eyes and took quick shallow breaths, still visibly shaken about what was happening."
+    pause 1
+    show FMG neutral
+    FMG "Okay, Okay... I'm okay. I think I'm good."
+    MC "Are you sure?"
+    FMG "Yes."
+    MC "Hm..."
+    FMG "What? Do I have something on my face? I mean, assuming you see it from down there?"
+    "Though she smugly teased me, I could tell she knew exactly what caused my shock. She placed her hands on her hips, her large, bulky arms having grown even greater in their mass."
+    MC "Yeah, you're good..."
+    show FMG happy
+    FMG "Told ya."
+    MC "God, I can't get over your... everything. It's like your quad muscles have muscles and those muscles have muscles. Everything is so defined... and big."
+    show FMG flex
+    FMG "Don't stare too long. Although, I won't blame you if you can't look away. There's a lot more of me to look at now, heh."
+    show FMG aroused
+    FMG "Take all the time you need."
+    "The amazon spun around throwing out various poses to show off her new size, giggling to herself with every new pose."
+    show FMG flex
+    FMG "Oh, man! My lat spread is unreal!!! That's going to be a shirt destroyer."
+    FMG "Fuck yeah! This is awesome!!! I'm enormous, haha."
+    MC "I'm going to be a mood killer and I'm sorry for that... but what's the clothes situation looking like?"
+    show FMG aroused
+    FMG "I'm not worried about that right now. I want to do some comparisons. Your girl wants to see how big she is."
+    MC "Ugh, fine. Not like we've done this every single time you get bigger."
+    show FMG happy
+    FMG "Because it's fun!!!"
+    show FMG neutral
+    extend " Okie, first thing, stand next to me."
+    MC "This good?"
+    FMG "Mhm."
+    FMG "Let's go! You barely reach my boobs."
+    show FMG aroused
+    FMG "How big do my quads look down?"
+    MC "Uh... I can't say. They look thicker than stone pillars. Hell, your legs are probably more durable too."
+    "Akira placed her hands on her breasts, lifting them up to reveal her chiseled eight-pack. Letting out a soft moan from the pleasure of feeling herself, her grip reflexively tightened in response." 
+    FMG "Ooooh... didn't expect them to be so sensitive."
+    FMG "How about my abs?"
+    MC "Ummmm, a weird way for me to describe it, but you know how people use whetstones to sharpen swords?"
+    show FMG neutral
+    FMG "Yeah?"
+    MC "You could probably sharpen a sword on your abs. Wait, does that even make sense...?  {w}Whatever, that's what I'm going with."
+    show FMG happy
+    FMG "Good enough for me."
+    MC "Cool. Are we finished? Can we address the clothes probably now?"
+    show FMG neutral
+    FMG "Fine but we're doing more of this later."
+    MC "..."
+    FMG "Don't make that face! I see how hard you are."
+    MC "..."
+    MC "You could do something as simple as hug me, and it would shoot up. This means nothing."
+    MC "Th-This isn't about me. Just see if your thong and bra can still cover some of you up then we can get Alice on the phone and get this fixed."
+    FMG "Ugh, okay. Fine."
+    "Akira slid her thong on barely getting it past her quads but it at least gave her decent coverage. Unfortunately, the bra wasn't doing much of anything." 
+    FMG "Yeah, this barely covers half my chest... {w}At least the thong fits, heh. Pass me my phone. I'll call her now."
+    MC "You won't crush it?"
+    FMG "I can't make that promise."
+    MC "I'll call her, it's just easier. Lower risk."
+    FMG "Lower risk? Ha! What if you say something that makes her mad and she decides to not help?"
+    MC "Oh, because you're {i}soooo{/i} good at talking to her without making a fat joke... please. I thought amateur hour was over."
+    if isEventCleared("FMGWG006"):
+        FMG "I'm a better person now, I don't make those types of jokes anymore. We both know better now."
+        MC "I'm still not going to give you it."
+    FMG "Either I take my phone or you give it to me."
+    show FMG angry
+    extend " And you don't want me to take it."
+    MC "It's cringy as hell listening to you trying to sound scary. Watch out everyone, Akira might not hug me for ten minutes. {w}Here, call her but if you so much as even think about making a fat joke, you lose your calling Alice privileges."
+    show FMG neutral
+    FMG "Hush. it's ringing. {w}And I do sound scary... thank you very much!"
+    MCT "Somewhere in another universe she and Nat aren't close friends and my life is better off because of it."
+    pause .5
+    FMG "Hey, Alice! {w}Good morning to you too!"
+    FMG "I have a small problem that I was wondering if you'd be able to help me with."
+    FMG "Y-Yeah... Can you send Chibuki? {w}Oh! And we're at Kei's dorm this time."
+    FMG "Great, thank you. Talk to you soon. Bye."
+    MC "We good?"
+    FMG "All set, she's going to finish up a few things at her place and head over."
+    MC "Sweet. I'm going to finish freshening up. Care to join me? You can check yourself out in the mirror."
+    show FMG flex
+    FMG "Oh, yeah, I'm in."
+
+    scene Bathroom with fade
+    "The day had only just begun and Akira was already running into problems. Problems with one of her greatest enemies... {w}doors."
+    show FMG angry with dissolve
+    FMG "This isn't funny!"
+    MC "You're right it's not funny. {w}Pfff, who am I kidding... {w}It's even funnier because this is the second time it's happened, hahahaha."
+    pause .5
+    MC "Okay, I'll stop, I'm being a bad boyfriend. Turn to your side and try sucking in your gut or something, you don't have to bend down or anything. You'll be fine as long as you take it slow."
+    "And because she decided to relax and listen to me, she got through with little resistance."
+    show FMG sad
+    FMG "I'm going to have to do this with every door, aren't I?"
+    MC "Haha, I hope so."
+    show FMG angry
+    FMG "Just give me my toothbrush, little man."
+    MC "Here."
+    pause .5
+    #play sound snap
+    show FMG sad
+    FMG "I broke it..."
+    MC "Heh, like my bed."
+    show FMG angry
+    FMG "Where is the emotional support?!?! I'm naked, probably double my size from yesterday, breaking things— and you're laughing."
+    MC "Yeah, that sounds about right."
+    show FMG neutral
+    FMG "I hate you."
+    MC "Flex in the mirror already. I have to brush my teeth and you're distracting me."
+    $ persistent.unlock_cgFMG090 = True
+    show cg FMG090 with dissolve
+    show FMG flex
+    FMG "Heheh, you look even smaller in the mirror. Maybe I'm still growing."
+    MC "You see that thing you're still doing?"
+    FMG "Looking big and sexy?"
+    hide cg with dissolve
+    MC "No, not that. The other thing, you just did it."
+    show FMG neutral
+    FMG "What? What else am I doing?"
+    MC "Talking... too much. You should stop."
+    FMG "..."
+    MC "Yes, that's perfect! Thank you, keep doing that." 
+    show FMG sad
+    MC "Hey, don't look so glum, you can keep flexing and admiring your new size."
+    play sound Knock
+    "{i}*knock-knock*{/i}"
+    MC "Oh, that might be Chibuki."
+    show FMG happy
+    FMG "Wait. {i}I{/i} want to answer the door. Chibuki has the best reactions when she sees I've grown."
+    MC "Fair point. Go right ahead."
+
+    scene Dorm Interior
+    show FMG happy
+    with fade
+    FMG "Should I be flexing? Should I try to look intimidating and like stare her down?"
+    MC "Is being over 30 centimeters taller, the width of a tank, and almost fully naked not enough?"
+    FMG "Yes. {w}But I could make it so much cooler!"
+    play sound Knock
+    "{i}*knock-knock-knock*{/i}"
+    Chibuki "Can you two talk less and open the damn door??? I'm already in a bad mood."
+    show FMG sad
+    FMG "Man, both of you guys are no fun."
+    show FMG neutral
+    "Akira, still holding onto some of her excitement, crushed the doorknob and just barely kept herself in check to prevent the door from ripping out of its hinges."
+    show FMG neutral at altMove(0.5, 0.25)
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Chibuki "..."
+    show FMG happy
+    FMG "Surprise!"
+    Chibuki "..."
+    pause 1
+    show FMG neutral
+    FMG "{i}*Cough*{/i} I'll do it again."
+    show FMG flex
+    FMG "Surprise!!!"
+    Chibuki "..."
+    MC "Maybe try it a third time, Akira. I think it's starting to work!"
+    "Chibuki didn't blink or speak, she kept her eyes zeroed in on Akira's face completely unimpressed."
+    pause 1
+    Chibuki "I hate this job."
+    show FMG angry
+    FMG "That's it?!? Nothing about {i}me{/i}???"
+    Chibuki "What was Kei's reaction?"
+    MC "I was shocked... one might say— flabbergasted."
+    Chibuki "There, you have my reaction too."
+    FMG "You don't care! I was banking on you freaking out like before."
+    Chibuki "Akira, I'm so salty right now, I can't care about anything."
+    show FMG neutral
+    FMG "What's the problem? Is everything okay?"
+    Chibuki "No. {w}Alice is having her own wardrobe issues herself so she can't make it... and you know what that means?"
+    FMG "Should I?"
+    Chibuki "You will now. Kokutan is coming in Alice's place..."
+    show FMG sad
+    FMG "...Are you joking?"
+    Chibuki "I wish I was..."
+    MC "You guys are being too hard on her. Surely, she isn't that bad."
+    Chibuki "...{w}He hasn't met her yet?"
+    FMG "He's been lucky up until now."
+    Chibuki "Have you seen the \"King of the Sphere\" movies?"
+    MC "I've seen clips from the films but I haven't watched them in their entirety."
+    Chibuki "You know that weird dude who crawls around on all fours and talks out loud speaking nonsense?"
+    MC "Oh yeah, Bollum."
+    Chibuki "She talks like that."
+    MC "Does she do the hissing thing too?"
+    Chibuki "At the moment, no. I wouldn't put it past her though."
+    FMG "I don't want her walking around me taking my measurements... especially when I'm {i}this{/i} exposed."
+    Chibuki "Can you not wrap a towel around your tits?"
+    MC "Oh, yeah, duh. Let me go grab mine."
+    pause 1
+    MC "Alright, try it."
+    FMG "This covers your whole body?"
+    MC "You know what I hate? People who act like they've always been tall. Yeah, I'm talking about you, muscle tits."
+    show FMG angry
+    FMG "You were barely taller than me when we started dating!"
+    Chibuki "Can you try the towel on sometime today? I got here as fast as I could to warn you guys and you're wasting time that could be used to prepare."
+    FMG "He always does this! He's jealous of how awesome I am!"
+    MC "Untrue."
+    Chibuki "Don't care, didn't ask. Towel, wrap it."
+    show FMG sad
+    Chibuki "..."
+    Chibuki "Your back is too broad... isn't it?"
+    FMG "Yes..."
+    MC "Hahahaha... {w}Hahahhahaha."
+    show FMG angry
+    pause .5
+    play sound Thud
+    MC "H-Hey! You don't have to throw it so hard... damn."
+    Chibuki "Enough. Kokutan is going to be here any minute and Akira's titties are still out flapping in the wind."
+    MC "She's going to have to suck it up. We have no other options."
+    show FMG sad
+    FMG "Ugh, fine. Chibuki please do as much work as you can. I don't want her anywhere near me."
+    Chibuki "I never thought I'd see the day when we agree on something. You can count on me."
+    MC "The more you guys talk about her the more interested I get to meet her. I'm so excited to be so disappointed!"
+    show FMG neutral
+    FMG "Yeah, just wait..."
+    "Suddenly, the door swung open. Standing in the doorway was a girl who must be Kokutan. She stood there for a second in a strange dramatic pose before speaking."
+    show Kokutan neutral with dissolve
+    Kokutan "I have... arrived! It is I... {w}Kokutan, the Ebony Lord of Destruction, Master of A Thousand Demons, Emperor of the New World!"
+    MC "..."
+    FMG "..."
+    Chibuki "{i}Sigh{/i} I should've said no to this..."
+    MC "Uh... {size=-6}Do we play along?{/size}"
+    Chibuki "{size=-6}If you want my help, no{/size}."
+    FMG "{size=-6}I will actually break every bone in your body if you start talking like that.{/size}"
+    MC "Okay... noted."
+    Kokutan "Aaaah, I see a great beast before me in need of my services."
+    MC "...Oh yeah, she's a beast alright."
+    FMG "I {i}will{/i} get you back for this."
+    MC "I know and I'm going to cherish every single second of this."
+    Chibuki "Kokutan, this is the client Alice told us about. Akira needs our help getting measurements for her uniform."
+    Kokutan "Yes, yes, she's like that mean fiery haired one who threatened to kick me after my work was complete."
+    MC "Haaaa, yep that sounds like Nat."
+    FMG "I wouldn't compare myself to the \"fiery haired one\". I'm much more likable."
+    MC "Riiiight..."
+    Chibuki "I can handle most of the work if you want to sit this one out, Kokutan."
+    Kokutan "I think not, Akira will be my greatest challenge to conquer yet."
+    show FMG happy
+    FMG "Hey, she's making me sound like a cool boss fight."
+    MC "...{w}You are such a loser..."
+    show FMG angry
+    FMG "No one is talking to you, mop head!"
+    MC "Built like a brick house, but you're about as soft as a sponge. {w}Pathetic."
+    "Kokutan paid little attention to us arguing and was instead more focused on observing Akira's new size." 
+    FMG "Woah! Hey! Don't start poking my quads!"
+    MC "Yeah, only I can do that!"
+    show FMG sad
+    FMG "..."
+    Chibuki "Every second that passes proves I don't get paid enough for this."
+    Kokutan "I must know what I'm against if you wish for my work to be at its best. There is much power in this body. This will require my full attention."
+    show FMG neutral
+    FMG "Thank you. I'm glad {i}someone{/i} acknowledges my size."
+    Chibuki "Keep crying about it. Kei can stroke your ego after we're done."
+    Chibuki "Now put your arms out and spread your quads apart. I want to finish this as fast as possible."
+    FMG "Is that good?"
+    Chibuki "It's... passable. {w}Kokutan, your um... small enough to get through Akira's quads with the tape. {w}Here."
+    Chibuki "Just pass it around to me and we're good to go."
+    "Kokutan did as she was asked... making some seriously strange sounds as she went around Akira's legs."
+    "I could feel it in Akira's eyes the extreme discomfort she was in having this little gremlin crawl around her."
+    Kokutan "Ah, done."
+    Chibuki "Cool, thanks. {w}Arms up, Akira. Kokutan, you have your stool?"
+    Kokutan "Of course, of course."
+    "Kokutan hopped up on her work stoll and got right back to work now being able to properly measure Akira's arms and neck."
+    show FMG neutral
+    FMG "You guys know how cool it is to be so big that someone has to get a stool to measure you? It's pretty cool."
+    Chibuki "Yes, Akira... we know... {w}And stop moving your arms! You do this every time!"
+    show FMG happy
+    FMG "I have a fever and the only prescription is flexing my arms!"
+    MC "Wow... that was terrible. Please never say that again."
+    Chibuki "...Fine. God, why can't you be obsessed with something that isn't your body?"
+    show FMG flex
+    FMG "You'd understand if you had arms like {i}these{/i}. Come on, I know you want to touch them."
+    Chibuki "No, no I don't. {i}I{/i} don't even want to be here."
+    Kokutan "There is immense power radiating from these arms..."
+    "Kokutan moved towards Akira, hesitating slightly, as though waiting for permission."
+    show FMG sad
+    FMG "Uh... no. No, touchy."
+    MC "Ah, come on, don't be like that!"
+    show FMG angry
+    FMG "{size=-6}Shut up! If you keep this up, you won't get any action for the rest of your life.{/size}"
+    MC "Uh-huh."
+    Chibuki "Arms down."
+    show FMG neutral
+    FMG "Soooo? How big am I? Give me the numbers!"
+    show FMG flex
+    FMG "Hundred and ten centimeter biceps?"
+    Chibuki "Let me see. {w}Hm, yep... just like I thought... {w}it's a number."
+    show FMG angry
+    FMG "Just can't let me enjoy my new size, can you torpedo nips?"
+    MC "Keep it up Chibuki, outstanding move. Tell her she's small next."
+    Chibuki "Pass. {w}Spread your lats for me, Akira. I'll make sure this is an outfit you can flex and {i}not{/i} rip no matter how hard you try."
+    show FMG neutral
+    FMG "Thanks, Chibuki!"
+    Chibuki "Don't mention it... seriously {w}That should be the last measurement we need, we'll try to have this for you before the day ends."
+    show FMG flex
+    FMG "Can I please get my measurements? I have to know!"
+    Chibuki "Take whatever numbers you got from the nurse the last time and make it bigger than that."
+    show FMG angry
+    FMG "That doesn't tell me anything!"
+    MC "No, no... she has a point."
+    Chibuki "Thank you, Kei. {w}Alright, Kokutan, we're done here."
+    Kokutan "I'm very pleased with today, it has been most helpful in honing my skills."
+    Chibuki "Yeah... I'm sure it has... {w}Try not to break anything else Akira... for once. At least it's not our dorm this time. I'll be back later with the outfit when it's done."
+    show FMG happy
+    FMG "Thank you! You're the best!"
+    Chibuki "Uh-huh. See you guys in a few hours."
+    hide Chibuki
+    hide Kokutan
+    with dissolve
+    show FMG neutral at altMove(0.5, 0.5)
+    FMG "Soooo, you wanna do anything?"
+    MC "Such as?"
+    FMG "Movies while you rest your head on my boobs and rub my quads?"
+    MC "Uh... yeah. We need to clean up this mess first though and we're not sitting on any furniture."
+    FMG "But I want to break something!"
+    MC "Do it in your dorm, not mine. Chibuki stopped caring... somewhat. I'm not dealing with Daichi."
+    show FMG sad
+    FMG "Fine... {w}No one ever lets me have any fun when I get bigger..."
+    jump daymenu
+
+label FMG091:
+    $setProgress("FMG", "FMG092")
+    scene Cafeteria with fade
+    play music FMG
+    MC "How do you like the new outfit? Is it too tight? Too loose?"
+    show FMG neutral with dissolve
+    FMG "You asked me these same questions when I got the outfits from them. It's barely been a day, my man."
+    MC "And you {i}still{/i} haven't formed an opinion? God damn, how long do you need? {w}Ah, wait, I get it. It's a woman thing, isn't it? You need about a month before you {i}really{/i} know how you feel."
+    FMG "It's not that deep, Kei."
+    FMG "It's the exact same thing I wore before but bigger. I liked the outfit then and I still like it now."
+    show FMG flex
+    FMG "I'm simple, if I can flex my arms without my clothes ripping it passes. Especially with cannons like this."
+    MC "Heh. You still going to the gym today?"
+    show FMG happy
+    FMG "Absolutely! I want to rip one of the machines right off of the foundation!"
+    show FMG neutral
+    FMG "I'm joking... of course."
+    MC "Mhm, I believe you. I have to run into town and grab a few things for Tomo. When I finish that, I'll meet you at the gym."
+    FMG "Awww, but I wanted to show off for you! Don't take too long, I need my gym buddy."
+    MC "I won't be long. Pinky promise."
+    MC "Damn, you got some grippers now. Heh, my what big hands you have! {w}Aaah, that's funny. Alright, I'll see you in a bit. Love you."
+    show FMG happy
+    FMG "Love you too."
+    scene Gym with fade
+    MCT "I need to start charging Tomo for my services, a hefty inconvenience should. Working for free just isn't cutting it anymore. Ah, I'll worry about it later, where's Akira?"
+    FMG "More weight guys!"
+    "Muscle Dude" "This is all we could find."
+    FMG "Alright, let's try it."
+    "Despite not seeing her, hearing her voice led me towards the back of the gym where I proceeded to navigate through the rows and rows of machines until I realized something was very off..."
+    MC "What the hell is going on here?" 
+    "A clearing finally opened up between the machines where I could see Akira pumping out rep after rep on the leg press machine— that was nothing new."
+    "What was new was that all four loading bars on the leg press were filled up with 50 and 25kg plates all the way to end, barely held on by some bungee cords." 
+    "Four other guys from the gym decked out in full-weight vests laid on top of the machine to add even more weight as she pumped each rep so hard she nearly bucked them all off." 
+    MC "Oh my god... if anyone asks I don't know her."
+    "In what I'm going to call a bad judgment call, I walked over to get some answers and potentially save these guys from what I live with daily."
+    show FMG flex with dissolve
+    FMG "Hey! What's up, Kei? Finished helping Tomo?"
+    MC "Uh, yeah... I did. Hey, and I don't mean to sound rude but... why do you have other students acting as weights?"
+    show FMG neutral
+    FMG "What's wrong with it? Bodybuilders do it all the time! Maybe with smaller and fewer people but they still do it."
+    MC "H-How much weight is this?"
+    FMG "Uh... maaaaybe it's 4000kgs including the guys. I ran out of weights, and these fellas offered to help me out."
+    "Muscle Dude" "I think that's it, it doesn't look like there are any more weights in the gym. Sorry, Mizutan-san."
+    FMG "Aw that sucks. Thanks for helping guys."
+    FMG "Damn. I hoped to hit 5000kg since this isn't much of a challenge."
+    MC "Did you say 5000kgs?? {w}H-How do you even...?"
+    MC "You know what, I don't care. It's impressive as shit and I'm sure you're as happy as can be."
+    show FMG happy
+    FMG "Ooooh, yeah I am! And I've barely even started my routine for today. The tricep extension isn't ready for an even bigger Akira."
+    MC "I can confidently say that no one has ever been ready for a bigger Akira. I know my back hasn't been."
+    show FMG neutral
+    FMG "You want to do your pull-ups with the weighted vest while I hit the tricep extension? We can call it when I'm finished with that."
+    MC "R-Really?"
+    FMG "Surprising, I know. But I want to speak with Hageshi-sensei about the weights again, and see what options are available if any at this point."
+    MC "Poor guy, you're going to drive him to quit teaching altogether. {w}I wanted to do that."
+    FMG "You don't try to hide it. {w}Hey, before you leave to do your workout, I want a hug and a kiss."
+    "Without responding, I walked around Akira scanning her up and down for any hints of sweat."
+    MC "Well, you don't appear to be sweaty and gross. I'll grant you the hug and kiss."
+    FMG "You're so... odd."
+    MC "Indeed. Now, quickly, wrap your muscly arms around me before I get tired of waiting."
+    "Smiling, the amazon leaned down wrapping her gigantic arms around me before lifting up into the air, her chest pressing against my face."
+    MC "God, I love your boobs."
+    show FMG aroused
+    FMG "I was bouncing my pecs in the bathroom earlier, I think I was starting to turn myself on, heheh."
+    pause .5
+    show FMG neutral
+    FMG "{size=-6}And save those comments for when we're in private, Kei. You know how easy it is to get me going now.{/size}"
+    MC "I can't help it, I'm just so irresistible. But I understand, I'll go do my pull-ups."
+    FMG "I'll be watching, I expect you to do every rep since we're cutting it short today."
+    show FMG flex
+    FMG "That being said, I won't mind if you need to stop, stare and admire your {i}massive{/i} girlfriend."
+    MC "I'm good, looking at you hurts my eyes."
+    show FMG neutral
+    FMG "You're such a freaking bullshitter, oh my god. {w}Take the vest and think about how much you hurt my feelings."
+    MC "No."
+    "I grabbed the vest from her, exchanged one more hug, and went on my way to tackle my pull-ups with extreme dominant energy radiating from my body."
+    hide FMG with dissolve
+    "Even though I've complained a {i}lot{/i} in the past and a sprinkle of bitching now and then, I am grateful for Akira's gym addiction. It's helped keep me in shape and it's helped us strengthen our relationship. We wouldn't be this close without it."
+    "Guarantee without her help, I'd be passing out on the third flight of stairs. {w}Now if that happens she can carry me."
+    "Of course, my mental praising was ruined by Akira being herself..."
+    FMG "Son of a bitch! Come on, man, are these machines made of plastic?!?"
+    "I wanted to ignore her and continue my workout— buuut I knew if I didn't do the \"right\" thing she'd hound me for it later. I hopped down, threw off the vest, quickly cleaned the area (gym etiquette is important after all), and ran over to her."
+    show FMG angry with dissolve
+    MC "Woah, woah, are you- oh..."
+    "Thankfully, Akira hadn't torn the machine out of the ground like she had wanted... she only crushed the grips like some cheap putty."
+    MC "Damn... you really love breaking stuff that isn't yours, huh? Crazy."
+    FMG "I didn't mean to! Ugh, I was so focused I didn't realize it until I went to change the weight."
+    show FMG sad
+    FMG "Damn it... I didn't mean to..."
+    MC "Hey, relax a little. It happens."
+    show FMG angry
+    FMG "No, Kei, these things don't \"just happen\"!"
+    MC "..."
+    pause 1
+    show FMG sad
+    FMG "I'm-I'm sorry, I shouldn't be taking my frustration out on you."
+    MC "It's okay, you don't have to apologize. Talk to me."
+    "The amazon looked down at me, sighing as she slid down the seat of one of the other arm machines."
+    FMG "It's never enough for me anymore... even before I was {i}this{/i} size. I could maybe get something out of a workout at my previous size, but now it's not fun anymore..."
+    FMG "I mean I tried doing more reps, but it's like a light jog, not a real workout. There's no challenge, it's {i}too{/i} easy."
+    MC "Sounds like a nice problem to have if you ask me."
+    FMG "I would have thought too, Kei, but it's not... It sucks. {w}The gym is who I am, it's what makes me... me. I love it almost as much as I love you."
+    FMG "Like yeah, it's cool to have to use people as extra weight... {i}sigh{/i} even that wasn't hard. It's... boring."
+    FMG "I've gotten so strong, it's... I don't know... it all feels pointless now. Yeah, being able to bend steel or whatever {i}is{/i} awesome."
+    FMG "After that I-I have no idea what else I can do... At this rate, even that will get boring after a while too."
+    MC "I'm sorry you feel that way. I do, and I'll be hundred percent with you, Akira. In this situation, I got nothing. Do you want to go talk to Hageshi-sensei?"
+    show FMG neutral
+    FMG "The same guy you just said you hoped to get him to quit teaching?"
+    MC "Well yeah, but just not before he stops being useful for stuff like this."  
+    MC "Come on, I'm sure he knows exactly what to say. I mean he's been through something similar like this, after all. {size=-6}Though maybe not this time...{/size} But he's usually got an answer for everything."
+    FMG "Yeah, yeah, that sounds like a great idea."
+    MC "Here, hold my hand."
+    scene black with fade
+    pause 1
+
+    scene Hallway with fade
+    MC "How are you holding up?"
+    show FMG neutral with dissolve
+    FMG "Better, holding your hand helped calm me down. Thanks for caring."
+    MC "We're a team, Akira. {w}Now, do you want to walk in first or should I? Ooooh, he hasn't seen you at this size yet! Rip off the door!"
+    show FMG happy
+    FMG "Let me go first, he's going to spit his water out when he sees me."
+    MC "Uh, yeah... totally."
+    scene Classroom4
+    show FMG neutral
+    with fade
+    FMG "Hageshi-sensei, we need your help!"
+    "Akira walked in to find Hageshi sitting at his desk grading papers, with his water bottle off to the side, while classical music was quietly playing from his laptop— further confirming my suspicions that the guy was some kind of serial killer."
+    show FMG neutral at altMove(0.5, 0.25)
+    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0) with dissolve 
+    Hageshi "Hm? {w}Help? You know the best teachers teach students to help themselves. So whatever your problem is, I'm sure you can handle it just fine."
+    MC "Every time I come here, you make me wish I didn't. And before you give some witty response back, Akira needs your help with the weights... again."
+    Hageshi "She doesn't look like she needs my help with weights. {w}Is this one of those things that's really about you, but you're afraid to ask?"
+    MC "N-No?! What is with you!?"
+    FMG "That's it!? Come on Hageshi-sensei. I thought your eyes would bug out of your head when you saw me like this!"
+    Hageshi "Your physique is quite impressive, Mizutani-san. It might even be... {w}well, that's not important now."
+    Hageshi "I'm assuming this concerns the gym equipment issue you keep whining to me about?"
+    MC "Yes, that thing."
+    FMG "{i}Pleeease{/i}, Hageshi-sensei. I know I've been bugging you a lot, but this is important."
+    Hageshi "Well, lucky for you, I've already had something prepared for this."
+    MC "Uh... How...?"
+    show FMG neutral
+    FMG "He's just {i}that{/i} good, Kei."
+    Hageshi "While I am {i}that{/i} good, Okamoto-san had come to me earlier with this same dilemma. It was only a matter of time before you two showed up and asked me for help."
+    MC "Well, here we are. What's the plan?"
+    Hageshi "I don't have one."
+    MC "..."
+    show FMG sad
+    FMG "..."
+    Hageshi "I'm joking, of course, I have a plan."
+    MC "You and Nat both suck when it comes to any attempt at humor..."
+    Hageshi "Perhaps your sense of humor is bad?"
+    show FMG neutral
+    FMG "Oof. How does that make you feel, Kei?"
+    MC "Just tell us the plan, Hageshi-sensei. My self-esteem is too low for this back and forth."
+    Hageshi "I'm not sure I believe that. If anything, your demeanor suggests you suffer from overconfidence, rather than a lack of it, but perhaps that is another one of your poor attempts at humor, Hotsure-san."
+    MC "..."
+    FMG "Wow. You got schooled on jokes from the least funny person in the whole school, Kei." 
+    show FMG happy
+    extend " On second thought, make that the {i}second{/i} least funny person in the school." 
+    MCT "I always hate coming here..." 
+    show FMG neutral
+    Hageshi "Well anyway, I pulled a couple of strings and got you guys a nice hole in the ground."
+    MC "..."
+    MC "Alright, Akira, I was wrong... we'll find someone else. Hageshi-sensei has lost it."
+    FMG "Don't be rash, Kei-kun. Let's hear him out."
+    MC "{i}Uuuuugh{/i}... {w}You have ten seconds to convince me this isn't the world's worst prank."
+    Hageshi "I only need five. {w}Here, I have some pictures on my laptop."
+    "Hageshi spun his laptop around and showed us an assortment of pictures of the... hole in the ground."
+    MC "This... This is a rock quarry. {w}{i}This{/i} is what you pulled a couple of strings for? Some rocks?"
+    Hageshi "That is correct."
+    MC "Oh my god..."
+    show FMG happy
+    FMG "Yooo, this is sick! Look, at the size of some of these boulders!"
+    Hageshi "Someone appreciates it, I see. I'll admit it takes a little creativity to visualize the potential, but I would have thought an aspiring architect would have more of a vision to see the potential in a space."
+    show FMG neutral
+    MC "Your mom never hugged you as a child, did she?"
+    Hageshi "She did, however, I fail to see how that's relevant to the topic at hand. Are you projecting?"
+    MC "..."
+    MC "Can we go see the rock quarry or not?"
+    show FMG happy
+    FMG "Yeah, can we?!?! I {i}need{/i} to see it in person! Maybe throw a couple of rocks around for fun."
+    Hageshi "Not today, I'll take you guys to look at it in person later this week. It's restricted access, but given the circumstances, I thought it would be appropriate to grant an exception."
+    show FMG neutral
+    FMG "Man... I can't wait! {w}I'll be holding you to that, Hageshi-sensei."
+    Hageshi "Be my guest. {w}Now that that is settled, you two will leave me alone for the day?"
+    MC "I don't even want to be here."
+    FMG "Yeah, we'll get out of your hair. Thank you for helping again, Hageshi-sensei."
+    Hageshi "Don't mention it. {w}Ah, I just remembered. You'll be taking part in the Strength Pentathlon, Mizutani-san?"
+    FMG "The what?"
+    MC "The Strength Pentathlon. Do you listen?"
+    show FMG angry
+    FMG "I'll pinch your arm, mister."
+    show FMG neutral
+    Hageshi "Save that for when you're out of my classroom. The Strength Pentathlon is a contest the school hosts at the end of the year for the muscle growth students." 
+    Hageshi "Well, technically any student can aspire to be in it, but no one who doesn't possess the growth has qualified for it. It's one of the more popular campus events throughout the year, and it draws in quite the crowd."
+    MC "Did you compete in it?"
+    Hageshi "I did, and I won."
+    MC "Of course, you did."
+    Hageshi "I was the lightest person to ever win it too, the guy that everyone thought was going to run away with it ended up coming in dead last."
+    show FMG flex
+    FMG "This sounds like my type of contest. Where do I sign up?"
+    Hageshi "I have the sign-up right here."
+    pause .5
+    show FMG neutral
+    FMG "Hey, Nat's the only person who signed up. What gives?"
+    MC "Pff, like anyone with common sense, would want to compete against Nat of all people. They'd have more fun jumping in front of cars."
+    show FMG angry
+    MC "!"
+    MC "But not you Akira, you'll kick her butt!"
+    show FMG neutral
+    FMG "Thank you."
+    MCT "Bullet dodged."
+    Hageshi "Normally you have to qualify for the contest based on your gym total. Usually, there are several competitors at the contest, but students don't qualify if their total is less than 50%% of the top qualifying athlete."
+    Hageshi "This is to prevent injury since there are some direct competition events, but it also saves some people from embarrassment."
+    MC "Why are you looking at me? Like I'd want to take part in something as goofy as this."
+    Hageshi "Based on your known totals, there's no one else that's going to qualify to compete with Okamoto-san. So are you in?"
+    show FMG happy
+    FMG "Sign me up! I'll crush every record, no problem. Nat doesn't stand a chance."
+    MC "You haven't seen her in days. What if she's bigger than you and {i}you{/i} stand no chance?"
+    show FMG angry
+    FMG "Stop ruining my hype, Kei! I'm going to win this!"
+    Hageshi "Put your signature here, Mizutani-san and you're all set."
+    show FMG happy
+    FMG "Done! Thanks, Hageshi-sensei."
+    Hageshi "No problem. {w}Now you guys have been here longer than you need to be. Leave me alone."
+    MC "Don't get your panties in a twist, we're going."
+    FMG "Thank you so much for everything, Hageshi-sensei! You're the best!"
+    Hageshi "I know, I know. You're very welcome."
+    scene Hallway
+    show FMG neutral
+    with fade
+    FMG "You know this means— I'm going to have to train even harder now, right? I'm winning this thing. I'm not taking second place to Nat anymore."
+    MC "Well, given how we've moved past weights to boulders. I'll be cheering you on from the sidelines."
+    FMG "That's my man!"
+    jump daymenu
+
+label FMG092:
+    $setProgress("FMG", "FMG093")
+    play music BrightLights
+    scene Cafe with fade
+    "Nat had invited Akira and me out to coffee to chat about the upcoming Strength Pentathlon. A part of me felt that maybe it might be a good old normal conversation." 
+    "The other part of me thought this might devolve into the worst catfight the school has ever seen."
+    MC "How many strawberry shortcakes are you going to order?! Nat isn't even here yet."
+    show FMG neutral with dissolve
+    FMG "As many as I freaking want, dude. These babies are delicious!"
+    "Maybe that second part won't happen since Akira might lapse into a food coma..."
+    MC "...Must be nice not having to worry about what you eat all the time..."
+    FMG "As many cheat meals as I want and I'm never at risk of losing my eight-pack."
+    show FMG flex
+    extend " Living the dream."
+    show FMG neutral
+    FMG "For real though, I'm going to stop after that one. Twelve might have been pushing it."
+    MC "Oh, really? I was thinking that after you scarfed down the fifth one in two bites."
+    FMG "I'm not talking to you about this. You're jealous that you put on weight when you eat like crap and I don't. Stay mad."
+    MC "..."
+    MC "Is Nat coming or not? She invited us to talk about the pentathlon and she's taking her sweet ass time."
+    FMG "She's on her way, she literally just texted me. Relax, my man."
+    MC "If you say so. {w}Oh, I meant to ask, do you know if she's bigger? We haven't seen her in days."
+    FMG "She said she's having problems fitting through doors cause she's too wide and that her thighs have been rubbing together. Chub rub is the {i}worst{/i}."
+    MC "Ch- chub rub?"
+    FMG "Yeah, when your thighs keep rubbing together. Technically, it's not chub rub for us but I'm not saying muscle rub, doesn't hit the same."
+    MC "Do... Do you have chub rub?"
+    FMG "Before not so much, at this size though, yeah. Sucks, but it is what it is." 
+    show FMG happy
+    FMG "I wanna see how big she is. Could you imagine if she's smaller than me? Oh my god, I'd cry. {w}I could finally call her short!"
+    MC "What is the obsession with you and making fun of short people? You were once so low to the ground you'd get blown away by a gust of wind."
+    show FMG neutral
+    FMG "Incorrect, we were practically the same height and I don't make fun of {i}all{/i} the short people. It's mainly you and Chibuki."
+    FMG "In Nat's case, she's always been taller than me. It would be nice to look down at her for a change. I always wanted to be the biggest and this might finally be my moment!"
+    MC "Maybe it is, but hey, no matter what... you're the biggest muscle girl in my heart."
+    show FMG happy
+    FMG "That's my man!"
+    show FMG neutral
+    extend " Oh, just got a text from Nat. She said she'll be here any second. She's around the corner."
+    MC "Thought at the rate she was going, she was never going to show up."
+    "Sure enough, the red-haired amazon entered the cafe with her resting bitch face on, looking as aggravated as ever."
+    "Natsuko was {i}huge{/i}; she dwarfed every person she walked past. Her body like a hard and rugged tree, her red hair like the autumn maple, Natsuko's mere presence felt as though she was casting shade down on all around her."
+    "Her rugged and rippling muscles looked as though they were forged in a sweltering heat befitting of the \"Summer Child\" as she looked at me with an imperious smirk. In a way, she seemed to instinctively flex at my gaze, her biceps large and powerful to behold."
+    "Her thighs, meanwhile, had grown even larger since I'd seen her last, like marble pillars chiseled with artistic precision and efficiency."
+    show FMG neutral at altMove(0.5, 0.75)
+    show Natsuko flex at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Natsuko "Impressed, Hotsure-san? How about you, Akira?"
+    show FMG happy
+    FMG "You look great, Nat! You fill out every centimeter of that jacket perfectly."
+    Natsuko "Heh, I'm equally amazed at the size you've put on. Our training together has certainly proven effective."
+    MC "Get a room, damn. We can go to the gym and talk if you two want to go gaga over your bodies."
+    show Natsuko neutral
+    show FMG neutral
+    Natsuko "Hmph."
+    FMG "Such a lame-o."
+    MC "I'm keeping us on track. Nat invited us for coffee and to talk about the Strength Pentathlon."
+    MC "Wait, do you even like coffee, Nat?"
+    Natsuko "No."
+    MC "..."
+    MC "Then why are we here and not someplace you would actually want to be?"
+    Natsuko "Is this not what people do when they want to hang out?"
+    FMG "It's fine, Nat, don't worry about it. {w}Come on, sit."
+    "There was barely enough room for the two amazons to fit together in the booth and it was {i}hilarious{/i}."
+    MC "Hold on, before we start, lemme take a picture. I never want to forget this moment."
+    pause .25
+    MC "Look at that! Two buff besties sharing a booth together shoulder to shoulder cause they're too big."
+    show FMG sad
+    show Natsuko disappointed
+    MC "Ah, don't be like that!"
+    show FMG neutral
+    FMG "Nat, I'll go sit with Kei. I thought we would've been able to sit comfortably."
+    pause 1
+    show Natsuko neutral
+    FMG "There, now everyone is happy."
+    MC "I was until you started hitting me with your thighs!"
+    show FMG angry
+    FMG "I can't do anything about it! Get a straw and suck it up!"
+    MC "I'm going to sit here and sulk now, I'm mad."
+    Natsuko "Are you two done? I didn't come here to subject myself to your bickering."
+    MC "Life of the party as always, Nat."
+    show FMG neutral
+    FMG "Sorry, Nat. You wanted to talk about the contest? So, what's up?"
+    Natsuko "Hageshi-sensei told me that you didn't even know about the Strength Pentathlon until a few days ago. I figured since you are my only competition I'd fill you in on the events taking place this year."
+    MC "Really? I'm surprised you wouldn't try to keep her in the dark if you're hoping to win so bad."
+    Natsuko "I want a challenge, Hotsure-san. I've trained myself to the bone every day since I got here to be the best."
+    FMG "You thought I was going to go easy on you? Nat, you're going to be begging for mercy after the first event. I won't even break a sweat."
+    Natsuko "Good, I don't want to be disappointed. You do that enough when we work out together."
+    MC "Get got, she said you {i}suck{/i}."
+    FMG "Shush. {w}Okay, run me through the events."
+    Natsuko "There are a total of five events this year... The stone throw, elephant bar deadlift, tug-o-war, arm hold, and mas wrestling."
+    MC "I have a question."
+    Natsuko "Are you going to ask what mas wrestling is?"
+    MC "...Maybe..."
+    Natsuko "It's a traditional test of strength from Yakutia. Akira and I will sit down against each other in an attempt to pull a stick from the other's grip or pull the other to their side."
+    MC "Hageshi-sensei picked this didn't he?"
+    Natsuko "He did."
+    show FMG happy
+    FMG "Oooooh, I'm so totally going to make you eat shit at tug-o-war."
+    show Natsuko smug
+    Natsuko "Truth be told, Akira, I don't expect you to win any of these. Like I said, I've trained myself for this. I'm prepared. You... are not."
+    show FMG neutral
+    FMG "Keep telling yourself that. {w}Let's head to the school locker rooms, I want to take your measurements and compare."
+    Natsuko "Do you finally think you're bigger than me?"
+    show FMG flex
+    FMG "I {i}know{/i} I'm bigger. Now it's time to prove it."
+    MC "Can I order some cake first? This is going to take all day knowing you two."
+    show FMG neutral
+    show Natsuko neutral
+    Natsuko "Fine, but make it quick."
+    FMG "Get me a piece too, please!"
+    MC "Haven't you had enough already?"
+    show FMG angry
+    FMG "Get me a piece!"
+    MC "God, alright, jeez... chill."
+    scene black with fade
+    pause 1
+
+    scene Lockers with fade
+    play music FMG
+    $setFMGOutfit(OutfitEnum.GYM)
+    MC "We've barely been here for ten minutes and both of you are already flexing in front of the mirrors..."
+    show FMG flex at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko flex at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "I've told you time and time again, Kei. With bodies like ours, you {i}need{/i} to show off."
+    MC "...{w}It's only the three of us..."
+    Natsuko "We don't need anyone else."
+    MC "...What...? {w}You know, whatever, I hate these conversations. You guys are weird."
+    MC "Are we doing this measuring garbage or not?"
+    FMG "After Nat and I hit our most muscular!"
+    MC "!{i} Oh my... god."
+    FMG "Bet you've never seen traps like this, Kei-kun!"
+    MC "...Nope... can't say I have..."
+    Natsuko "Ha, I can feel my top struggling to contain me."
+    MC "..."
+    pause 1
+    show FMG neutral
+    FMG "Okay, now we're done."
+    MC "This whole ordeal would've been done 30 minutes ago if you guys didn't.... aaa... I don't care... I don't care."
+    show Natsuko smug
+    Natsuko "Sorry, Hotsure-san. It's addicting."
+    show FMG happy
+    FMG "True!"
+    show FMG neutral
+    MC "Ah, god damn it. I didn't grab the tape measure from Hageshi-sensei."
+    show Natsuko neutral
+    Natsuko "I have three in my bag, take it out of there."
+    MC "Why do you carry not one but three tape measures on you? Who needs three tape measures?"
+    Natsuko "It's none of your business. Get one, you're wasting my time."
+    MC "You... You..."
+    MC "Here, you guys measure yourselves, I'm playing on my phone."
+    FMG "Uh-huh, you just want to watch us."
+    MC "You got me. {size=-6}I'm not missing my daily missions and logins.{/size}"
+    FMG "You wanna go first, Nat?"
+    Natsuko "It makes no difference to me. We should go to the nurse's office after this for more \"official\" numbers."
+    FMG "Agreed. {w}Now, give me your biggest double bicep."
+    show Natsuko flex
+    MC "...Is there a reason you're posed like that?"
+    show Natsuko neutral
+    Natsuko "Excuse me for trying to have some fun, Hotsure-san."
+    MC "Didn't know you knew what that was, heh."
+    FMG "Ignore him for now, let me see those arms, girl!"
+    show Natsuko flex
+    MCT "If only I was given more choices to prevent this..."
+    show FMG happy
+    FMG "Pheeeew, one hundred centimeters. Talk about power, haha."
+    show Natsuko smug
+    Natsuko "I've been waiting for triple digits on my arms for far too long."
+    show Natsuko neutral
+    Natsuko "Give me the tape."
+    show FMG neutral
+    FMG "You don't want me to take all your measurements first?"
+    Natsuko "No."
+    Natsuko "Flex."
+    show FMG flex
+    FMG "Big enough for you?"
+    Natsuko "Hm... I thought I would've had more time."
+    show FMG neutral
+    FMG "What are you on about, Nat?"
+    Natsuko "You've finally surpassed me in size. Your arms are one hundred and ten centimeters... {w}I'm impressed."
+    FMG "Really!? You're for real right? {w}You're not joking!"
+    Natsuko "I was waiting for either of you to say something at the cafe. I noticed as soon as I saw you. Not like it was hard to miss."
+    FMG "I didn't have any measurements to go off of. It's hard to just assume with how massive we are."
+    MC "I uh... wasn't really paying attention. You guys started looking the same size a few months back, but I didn't think much of it."
+    show FMG happy
+    FMG "Man, I've been waiting for this moment. Finally, {i}I{/i} get to be the biggest! In your face!"
+    show Natsuko smug
+    Natsuko "Heh, I'm still taller."
+    FMG "Barely."
+    Natsuko "Besides, we still have to measure our thighs. That's going to be a close one."
+    show Natsuko neutral
+    Natsuko "We'll head to the nurse shortly, she'll have to update the records."
+    show FMG neutral
+    FMG "Maaaan, I thought you'd be more upset over this."
+    Natsuko "Hardly, I knew the gap was closing when you returned from your trip. I thought this could happen, but didn't think it would happen before the contest."
+    show Natsuko smug
+    Natsuko "Make a mental note of this, Akira. Your size over me doesn't mean you'll beat me. Size doesn't guarantee strength."
+    show Natsuko neutral
+    extend "I expect you to be at your best, Akira. Because I will be."
+    show FMG happy
+    FMG "I'd expect nothing less from you, Nat. This time, you'll be eating my dust."
+    MC "Ladies, ladies, calm down, there's no reason to fight over me."
+    show FMG neutral
+    Natsuko "We weren't."
+    FMG "Yeah, we were trashing each other for the Pentathlon, Kei."
+    MC "Would you believe I wasn't paying attention to any of this either?"
+    Natsuko "Yes, I would."
+    MC "Can always count on you to be on top of things. That's why we keep you around, Natsuko. The best of the best."
+    Natsuko "Mhm."
+    MC "How far are you guys into measuring yourselves anyhow?"
+    FMG "We only did our biceps, we got distracted trashing each other about the Pentathlon."
+    MC "We're going to be here all day, aren't we?"
+    show Natsuko flex
+    show FMG flex
+    FMG "At least you can stare at us all day."
+    Natsuko "You don't even have to ask if you want to feel our muscles, Hotsure-san."
+    MC "..."
+    MC "You guys are lucky I finished my dailies, give me the tape measure."
+    jump daymenu
+
+label FMG093:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -19601,7 +20419,7 @@ label FMGGTS001:
     MC "Before you say anything, don't worry about it."
     GTS "I had no idea they would act like this. I only want everyone to get along..."
     MC "Yeaaaah, it's tough with these two. If it makes you feel better, I don't really know what to do either."
-    MC "I've kinda taken a ‘let them fight' attitude about it and you'd be surprised to know it works pretty well because now I get to ignore the problem!"
+    MC "I've kinda taken a \"let them fight\" attitude about it and you'd be surprised to know it works pretty well because now I get to ignore the problem!"
     GTS "I-"
     MC "Yeah, it's not the best... do you have any ideas of what we could do?"
     show GTS pondering
@@ -19901,7 +20719,7 @@ label FMGGTS002:
     MC "No, I was making a poor attempt to share an interest, sorry. {w}Do you play any video games? Akira and I {i}actually{/i} dabble in that."
     show GTS neutral
     GTS "Unfortunately not, I've never had an interest in them."
-    MC "Until now! {w}Well, not 'right now' now but like 'another day' now. When Akira and I go to the arcade you can join us. I'm sure you'd enjoy it."
+    MC "Until now! {w}Well, not \"right now\" now but like \"another day\" now. When Akira and I go to the arcade you can join us. I'm sure you'd enjoy it."
     show FMG happy
     FMG "I don't normally agree with Kei..."
     MCT "You agree with me all the time, you loser."
@@ -20035,8 +20853,8 @@ label FMGGTS002:
     MCT "I won't hesitate to smack you across the face with my luscious locks."
     FMG "When you get tall enough, you can step on the people that annoy you, that's a very nice bonus."
     show GTS surprised
-    GTS "In what {i}possible{/i} regard is that 'very nice'?"
-    MC "I hate to say it, but I do agree with Akira. I should add that you don't need to get ‘over it' in a day or two. At the end of the day, you'll still be you, like Akira said before. That's what matters."
+    GTS "In what {i}possible{/i} regard is that \"very nice\"?"
+    MC "I hate to say it, but I do agree with Akira. I should add that you don't need to \"get over it\" in a day or two. At the end of the day, you'll still be you, like Akira said before. That's what matters."
     show FMG angry
     FMG "What's wrong with agreeing with me???"
     MC "Nothing, nothing. It was going to lead into a bad joke."

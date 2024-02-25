@@ -516,8 +516,12 @@ image cg FMG072 = "Graphics/ui/gallery/FMG072.webp"
 image cg FMG077 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG077.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg FMG080 = "Graphics/ui/gallery/FMG080.webp"
 image cg FMG082 = "Graphics/ui/gallery/FMG082.webp"
 image cg FMG087A = "Graphics/ui/gallery/FMG087A.webp"
+image cg FMG090 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG090.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.webp"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.webp"
@@ -578,6 +582,7 @@ image cg WG076 = ConditionSwitch(
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.webp"
 image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.webp"
+image cg WG085 = "Graphics/ui/gallery/WG085.webp"
 
 image cg MC000 = "Graphics/ui/gallery/MC000.webp"
 image cg MC003 = "Graphics/ui/gallery/MC003.webp"
@@ -1125,6 +1130,7 @@ init 1 python:
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.FLAG, "RMRoute_Unlocked"]]}
     eventlibrary['RM002'] = {"name": "Ties that Bind", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "gatefront",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}
     eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}
+    eventlibrary['RM004'] = {"name": "Voices of the Past", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "classroom",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM003"], [ConditionEnum.FLAG, "XX15"]]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1421,7 +1427,10 @@ init 2 python:
     eventlibrary['FMG087B'] = {"name": "Cuddles With Ice Cream and Cocoa", "girls": ["FMG"], "type": EventTypeEnum.CORE,                      "location": "town",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG088", "obsflags": [],               "conditions": []}    
     eventlibrary['FMG088'] = {"name": "Snow Fun", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG089", "obsflags": [],               "conditions": []}    
     eventlibrary['FMG089'] = {"name": "Protein Overload", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG090", "obsflags": [],               "conditions": []}    
-    eventlibrary['FMG090'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE,         "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG090'] = {"name": "The Big Leagues", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG091", "obsflags": [],               "conditions": []}    
+    eventlibrary['FMG091'] = {"name": "Imagine Being Too Strong", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG092", "obsflags": [],               "conditions": []}    
+    eventlibrary['FMG092'] = {"name": "Taller But Not Quite Bigger", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "town",               "priority": PrioEnum.NONE, "sp": 17,     "next": "FMG093", "obsflags": [],               "conditions": []}    
+    eventlibrary['FMG093'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",               "priority": PrioEnum.NONE,         "next": "", "obsflags": [],               "conditions": []}
 
     #Optional
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
