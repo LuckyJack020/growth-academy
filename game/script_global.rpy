@@ -583,6 +583,9 @@ image cg WG076 = ConditionSwitch(
 image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.webp"
 image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.webp"
 image cg WG085 = "Graphics/ui/gallery/WG085.webp"
+image cg WG091 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG091.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 
 image cg MC000 = "Graphics/ui/gallery/MC000.webp"
 image cg MC003 = "Graphics/ui/gallery/MC003.webp"
