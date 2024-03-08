@@ -17625,6 +17625,8 @@ label FMG083:
 
     $setTime(TimeEnum.EVE)
     scene Dorm Tomoko with fade
+    if not getFlag("TM_VisitedDorm"):
+        $setFlag("TM_VisitedDorm")
     MC "This place is a mess. How do you live like this?"
     show Tomoko neutral with dissolve
     Tomoko "The lack of sunlight makes it easy."

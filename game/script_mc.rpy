@@ -2867,6 +2867,8 @@ label MC005:
     $setTime(TimeEnum.NIGHT)
     pause 0.2
     scene Dorm Tomoko with fade
+    if not getFlag("TM_VisitedDorm"):
+        $setFlag("TM_VisitedDorm")
     "Behind the door was a sea of pitch black dark. Amidst it, the only light was a square shaped laptop light bouncing up onto one wall."
     "Based on what I could see, blackout curtains were yanked shut over the window, along with what appeared to be a sweatshirt flung up on the curtain rod."
     $setTomoOutfit(OutfitEnum.CASUAL)

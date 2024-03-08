@@ -8337,7 +8337,7 @@ label PRG024:
             "The line went dead."
             MCT "... Shit, what dorm is she in?"
             scene Dorm Hallway with fade
-            if isEventCleared("MC003") or isEventCleared("MC005"):
+            if isEventCleared("MC003") or isEventCleared("MC005") or getFlag("TM_VisitedDorm"):
                 "I pulled out my phone and scrolled for a bit until I found her room number. Not too hard considering the load of one word answers."
             else:
                 "After my series of spam-texts, I finally got a room number out of her and found it quickly."
@@ -8352,6 +8352,8 @@ label PRG024:
             scene Dorm Tomoko
             show Tomoko neutral
             with fade
+            if not getFlag("TM_VisitedDorm"):
+                $setFlag("TM_VisitedDorm")
             "Tomo's room was dark enough that a vampire would likely have had a problem with it."
             MC "Geez, ever hear of lightbulbs?"
             Tomoko "Ever hear of night vision?"

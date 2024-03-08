@@ -14816,6 +14816,8 @@ label WG056:
     show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
     show WG surprised at Position(xcenter=0.8, yalign=1.0)
     with fade
+    if not getFlag("TM_VisitedDorm"):
+        $setFlag("TM_VisitedDorm")
     play music Rain
     WG "Oh my."
     "Tomoko's room looked like a bomb had gone off. It would have been easier to set the whole thing ablaze and start new than to tackle this clean-up project."

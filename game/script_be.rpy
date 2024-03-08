@@ -8970,6 +8970,8 @@ label BE045:
     show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
     show BE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with fade
+    if not getFlag("TM_VisitedDorm"):
+        $setFlag("TM_VisitedDorm")
     "Tomo nodded as we walked into her room. There were, naturally, clothes and convenience store box lunch boxes abound."
     MC "Well, you were right on the phone...your room's...clean-ish. {w}Emphasis on the -ish."
     show Tomoko annoyed

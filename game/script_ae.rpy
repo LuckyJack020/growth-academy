@@ -7157,6 +7157,8 @@ label AE034:
     Tomoko "...Okay."
 
     scene Dorm Tomoko with fade
+    if not getFlag("TM_VisitedDorm"):
+        $setFlag("TM_VisitedDorm")
     "She opened the door fully, and squinted as the light shone down into her room."
     "The lights in her room were off, barring the bright intense light of the shmup's pause screen on her laptop."
     "As we entered the room, she crawled up onto her bed, took her comforter and covered herself in it leaving only her hands, face, and long flowing bangs exposed. Shiori-chan and I stood, as I began."

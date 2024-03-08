@@ -9399,6 +9399,8 @@ label GTS045:
     $setProgress("GTS", "GTS046")
     scene Dorm Hallway with fade
     play music Peaceful
+    if not getFlag("TM_VisitedDorm"):
+        $setFlag("TM_VisitedDorm")
     "I listened to the ringing of clashing blades and cries of dying men from the other side of the door."
     "And once it quieted down for a moment, I knocked."
     play sound Knock
