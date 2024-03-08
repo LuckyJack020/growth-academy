@@ -8010,6 +8010,7 @@ label MC013_BE:
     "I pulled back out, shaking off my hand and handing the clip to her."
     show BE happy
     BE "That's it!"
+    $setAffection("BE", 1)
     BE "Thank you, Kei-chan! Thank you!"
     "Honoka took a piece of paper towel and wet it in the sink, wiping down the clip on all sides."
     show BE embarrassed-2
@@ -8354,6 +8355,7 @@ label MC013_PRG:
         pause .5
         show PRG blush-2
         "I felt my face flush hot as Aida kissed my cheek, holding for a moment before pulling her head back."
+        $setAffection("PRG", 1)
         PRG "T-Thank you for checking in..."
         "I smiled sheepishly and went to stand up, glancing over across the hall."
         if getVar("MC013_Split") >= 2:
@@ -8422,6 +8424,7 @@ label MC013_PRG:
         PRG "I... I can't... h-hide it forever. And... I-I'm sure word would have gotten out eventually..."
         MC "Well, I think you're very brave in all of this."
         show PRG neutral
+        $setAffection("PRG", 1)
         PRG "T-Thank you, Hotsure-san."
         MC "No problem. I'll leave you to it."
         scene Hallway with fade
