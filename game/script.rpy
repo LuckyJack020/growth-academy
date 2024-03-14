@@ -36,6 +36,7 @@ default PRGPrevOutfit = OutfitEnum.DEFAULT
 default PRGNsfwOutfit = OutfitEnum.DEFAULT
 default WGPrevOutfit = OutfitEnum.DEFAULT
 default WGNsfwOutfit = OutfitEnum.DEFAULT
+default NatsNsfwOutfit = OutfitEnum.DEFAULT
 default TakoNsfwOutfit = OutfitEnum.DEFAULT
 
 #Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
@@ -850,12 +851,16 @@ init python:
             WGOutfit = WGPrevOutfit
         elif WGNsfw and isNSFW():
             WGOutfit = WGNsfwOutfit
+        
+        if NatsOutfit == OutfitEnum.NUDE and not isNSFW():
+            NatsOutfit = NatsPrevOutfit
+        elif NatsNsfw and isNSFW():
+            NatsOutfit = NatsNsfwOutfit
 
         if TakoOutfit == OutfitEnum.NUDE and not isNSFW():
             TakoOutfit = TakoPrevOutfit
         elif TakoNsfw and isNSFW():
             TakoOutfit = TakoNsfwOutfit
-
 
     def setTimeFlag(flag):
         if flag not in timeflags:
@@ -1029,8 +1034,18 @@ init python:
 
     def setNatsOutfit(o):
         global NatsOutfit
+        global NatsPrevOutfit
+        global NatsNsfwOutfit
+        global NatsOutfit
+        global NatsNsfw
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL:
             NatsOutfit = o
+        elif o == OutfitEnum.NUDE:
+            NatsNsfw = True
+            NatsNsfwOutfit = o
+            if isNSFW():
+                NatsPrevOutfit = NatsOutfit
+                NatsOutfit = o
 
     def setKanamiOutfit(o):
         global KanamiOutfit
@@ -1192,6 +1207,8 @@ label start:
         PRGNsfwOutfit = OutfitEnum.DEFAULT
         WGPrevOutfit = OutfitEnum.DEFAULT
         WGNsfwOutfit = OutfitEnum.DEFAULT
+        NatsPrevOutfit = OutfitEnum.DEFAULT
+        NatsNsfwOutfit = OutfitEnum.DEFAULT
         TakoPrevOutfit = OutfitEnum.DEFAULT
         TakoNsfwOutfit = OutfitEnum.DEFAULT
         AENsfw = False
@@ -1200,6 +1217,7 @@ label start:
         GTSNsfw = False
         PRGNsfw = False
         WGNsfw = False
+        NatsNsfw = False
         TakoNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
@@ -1252,6 +1270,8 @@ label splashscreen:
         PRGNsfwOutfit = OutfitEnum.DEFAULT
         WGPrevOutfit = OutfitEnum.DEFAULT
         WGNsfwOutfit = OutfitEnum.DEFAULT
+        NatsPrevOutfit = OutfitEnum.DEFAULT
+        NatsNsfwOutfit = OutfitEnum.DEFAULT
         TakoPrevOutfit = OutfitEnum.DEFAULT
         TakoNsfwOutfit = OutfitEnum.DEFAULT
         AENsfw = False
@@ -1260,6 +1280,7 @@ label splashscreen:
         GTSNsfw = False
         PRGNsfw = False
         WGNsfw = False
+        NatsNsfw = False
         TakoNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
