@@ -16479,10 +16479,13 @@ label FMG080:
     play music FMG
     $setFMGOutfit(OutfitEnum.GYM)
     MC "Could you use any more weights?"
-    show FMG neutral with dissolve
-    FMG "It's only 18 plates."
+    show cg FMG080 with dissolve
+    FMG "It's only eight plates."
     MC "{i}Only{/i} is the keyword."
-    FMG "It would be less if the school decided to get me something more my size. It's so boring wanting to lift 900 kilograms and I have to go around collecting plates..."
+    FMG "It would be less if the school decided to get me something more my size. It's so boring wanting to lift 900 kilograms and I have to go around collecting plates this big..."
+    hide cg
+    show FMG neutral
+    with dissolve
     MC "Think of it like a side quest in your favorite video game. Maybe there's a reward if you collect enough of them."
     FMG "Is the reward an ice cream cone from the best boyfriend in the world?"
     MC "Pfff, do I look like a charity?"

@@ -7289,13 +7289,15 @@ label MC011:
         show BE neutral with dissolve
         MC "Yo, Honoka, mind if I sit here?"
         show BE happy
-        BE "Of course, Kei-chan. You don't have to ask you know?"
+        BE "Of course, Kei-chan. You don't have to ask, you know?"
         MC "Heh, good to know."
         BE "How are you doing?"
         MC "Could be better."
         show BE doubt
         BE "Same, to be honest."
-        "Today had been a particularly stressful day of classes, and it wasn't even halfway over. It was still early in the semester, but just late enough when classes were starting to drop notice of their first big test."
+        "Today had been a particularly stressful day of classes, and it wasn't even halfway over. Adding on to that stress, it was that time in the semester when final exams were slowly looming on the horizon."
+        if checkSkill("Academics", "<=", 3):
+            MCT "{i}Shiiit{/i}, I'm going to have to ace most of those finals to hold a decent GPA."
         show BE neutral
         "That was normal school stuff, but what wasn't normal was the very noticeable transformation that was taking place across much of the student body at school."
         "By now it was pretty clear what was going on with everyone."
@@ -7330,7 +7332,9 @@ label MC011:
         extend " I'll spare you the details, but it has been rather distracting."
         show AE neutral
         MCT "Sounds like I'm not the only one feeling a bit strung out lately."
-        "Today had been a particularly stressful day of classes, and it wasn't even halfway over. It was still early in the semester, but just late enough when classes were starting to drop notice of their first big test."
+        "Today had been a particularly stressful day of classes, and it wasn't even halfway over. Adding on to that stress, it was that time in the semester when final exams were slowly looming on the horizon."
+        if checkSkill("Academics", "<=", 3):
+            MCT "{i}Shiiit{/i}, I'm going to have to ace most of those finals to hold a decent GPA."
         "That was normal school stuff, but what wasn't normal was the very noticeable transformation that was taking place across much of the student body at school."
         "By now it was pretty clear what was going on with everyone."
         extend " Some, seemed to be enjoying it,"
@@ -13059,13 +13063,13 @@ label RM004:
     "Not that I was looking forward to writing that paper, but I was at least relieved Tashi gave us a break to give us some breathing room on the assignment."
     if getHighestAffection() == ("AE"):
         "I packed up my stuff, hoping to catch Shiori in the hall..." 
-    if getHighestAffection() == ("WG"):
+    elif getHighestAffection() == ("WG"):
         "I packed up my stuff, hoping to catch Alice in the hall..." 
-    if getHighestAffection() == ("PRG"):
+    elif getHighestAffection() == ("PRG"):
         "I packed up my stuff, hoping to catch Aida in the hall..." 
-    if getHighestAffection() == ("GTS"):
+    elif getHighestAffection() == ("GTS"):
         "I packed up my stuff, hoping to catch Naomi in the hall..." 
-    if getHighestAffection() == ("FMG"):
+    elif getHighestAffection() == ("FMG"):
         "I packed up my stuff, hoping to catch Akira in the hall..." 
     else:
         "I packed up my stuff, hoping to catch Honoka in the hall..." 
@@ -13615,4 +13619,622 @@ label RM004_C1_after:
     "As curious as the notion might be, I wasn't going to concern myself with it too much at the moment. I figured I'd be getting to the bottom of it soon enough when Daichi drags me on another one of his \"investigations\"."
     "At least it was rewarding to finally get some answers after mostly only finding red herrings up until now, even if those answers were outlandish and strange in their own right."
     "This was when I began to wonder if we were following leads... or falling down a rabbit hole."
+    jump daymenu
+
+label RM005:
+    $setTime(TimeEnum.EVE)
+    scene Dorm Interior with fade
+    play music DormLife
+    "The orange glow of the setting sun began to peer through the window, which only now made me realize how much time had passed."
+    $setSkill("Academics", 1)
+    "For once I had actually been utilizing my time to study. Whether it was some new found sense of diligence or a desperate realization that I was screwing myself over if I kept putting it off, I couldn't really say either way."
+    if getFlag("MC008_TakeItEasy"):
+        "I really should have been paying attention in Tsubasa's class, but his dry lecture style made that all but impossible."
+        if getHighestAffection() == ("BE"):
+            "Luckily I was able to ask Honoka for her notes... though after looking through them I realized I probably should have asked someone else."
+        if getHighestAffection() == ("AE"):
+            "Luckily I was able to ask Shiori for her notes. They were so much more detailed than what I usually write down, it made me think I should do this more often. Though I doubt she'd be too happy with me if I did that."
+        if getHighestAffection() == ("FMG"):
+            "Luckily I was able to ask Akira for her notes... though after looking through them I realized I probably should have asked someone else."
+        if getHighestAffection() == ("WG"):
+            "Luckily I was able to ask Alice for her notes, even though she told me not to make a habit of it."
+            "I better not push my luck with her, she certainly has no trouble telling people no."
+        if getHighestAffection() == ("PRG"):
+            "Luckily I was able to ask Aida for her notes. They were so much more detailed than what I usually write down, it made me think I should do this more often." 
+            "But I wasn't going to do that, she's got enough on her plate and I didn't want to add any more to it than I already had."
+        if getHighestAffection() == ("GTS"):
+            "Luckily I was able to ask Naomi for her notes, even though she admonished me to be more diligent with my studies. I agreed with her sentiment and made a point to be more diligent in the future." 
+        else:
+            "Luckily I was able to ask Honoka for her notes... though after looking through them I realized I probably should have asked someone else." 
+            MCT "Well, that's about all I can take for now."
+    else:
+        "But one thing was for sure— by this point, I needed a break."
+    "I turned my attention to the balcony window."
+    MC "Figures I'd end up choosing one of the nicest days of the year so far to stay cooped up in my room studying."
+    "I walked out onto the balcony to take in the sunset. The heat of the day was noticeably reduced by this point, giving it that perfect temperate late spring weather topped off with a nice breeze blowing through my hair."
+    MC "{i}Pefth{/i}! Ack!"
+    "Well, it was nice, until it started blowing my hair into my mouth."
+    MC "Stupid hair..."
+    "My view from the balcony allowed for a nice glimpse of the hustle and bustle of the campus courtyard in the early evening rush." 
+    "Students going to and fro coming back from a trip to the town, coming back from club practice, or heading to the cafeteria."
+    MCT "I should come out here more often. Probably not going to have a view like this in my next dorm, or even in an apartment."
+    "Suddenly I found my thoughts interrupted by an interjection of melodic whistling. I turned to look around to find a little friend singing his heart out on the neighbors balcony."
+    if isEventCleared("AE018"):
+        "I recognized the ruby red throat on the brown-grayish body as a Siberian Rubythroat, like the one Shiori pointed out to me when we were on the roof together."
+        MCT "I wonder what she's doing now? {w}Knowing her probably studying, even though she doesn't need to."
+    else:
+        "I'd never seen a bird that looked like it before: brown grayish body with ruby red throat markings. It could certainly carry a tune." 
+        MCT "I wonder if it was native to the island? I'll have to remember to look it up sometime to find out what it is."
+    if getFlag("MC004_balcony"):
+        MCT "This does remind me, last time I was out here I had a little chat with my neighbor... Genji was his name? {w}Pretty sure anyway."
+        MCT "Wonder what he's up to. Seemed like a cool dude."
+        "Looking over at his balcony door and seeing it closed with the lights off, I figured he probably wasn't there."
+        MCT "Oh well, I'm sure I'll run into him again eventually."
+    MC "Alright, enough distractions, suppose I better get back to it-"
+    stop music
+    show RM neutral
+    show dummy with vpunch
+    MC "{i}GAH{/i}!"
+    play music RM
+    MC "What the hell? Were you standing behind me the whole time?"
+    RM "No. I was about to shut the balcony door until I realized you were out there."
+    MCT "Oddly enough, this has to be the most normal way he's ever actually greeted me."
+    MC "Yeah well, no offense, but you look like you could use some fresh air."
+    RM "Personally, I prefer privacy."
+    MC "I'm not sure how many window eavesdroppers you're going to get while we're on the second floor."
+    show RM angry-2
+    RM "{i}Any{/i} is too many." 
+    show RM neutral-2
+    extend " Here, there's something I wanted to show you."
+    "Considering the unnecessary level of caution he wanted to take with this, I was reluctant at first to follow him back to his desk. {w}But thinking further, {i}everything{/i} Daichi does involves an unnecessary level of caution."
+    RM "I've been working on something and I think it's time I let you in on it."
+    "If Daichi had told me this only a couple of weeks after first meeting him, I probably would have ran for the hills, but as wary as I was about his schemes, by this point I was in deep enough that my curiosity wouldn't allow me to refuse."
+    MC "What exactly is \"it\"?"
+    show RM happy
+    RM "I'll get to that. The reason why I wanted to show you is because I've realized you've been quite helpful with my investigative efforts. Each time you've been involved I've been able to move on my leads much more effectively."
+    show RM concerned
+    RM "Well, that and the fact you're the only person I've met here that gives my ideas any consideration..." 
+    MCT "Even that's a stretch, but I suppose we'll go with it for now."
+    show RM neutral
+    MC "I'm not entirely sure what you mean though. I know we've looked at a few things here and there, but I don't feel like I've done any major \"investigating\"."
+    show RM smug
+    RM "Not quite, you appear to be underestimating yourself."
+    if getFlag("global000_RMUnknown") or getFlag("global000_RMCover"):
+        show RM happy
+        RM "Like that time you covered for me at the opening ceremony when Matsumoto-san was looking for me. I appreciated the cover. It helped me get an early start generating some leads around this place."
+        MC "How did you even find out about that? And what were you doing anyway?"
+        show RM neutral-2
+        RM "It came up in conversation when Matsumoto-san eventually did catch up with me. As for the other question, let's just say I was mapping out my observation network."
+        MC "You mean you were figuring out where the vents lead?"
+        show RM distrustful
+        RM "I... {w}I have no idea what you're talking about."
+        MC "Sure..."
+        show RM happy
+        RM "Anyway, it was a pretty solid favor, especially considering we had just met."
+    else:
+        show RM happy
+        RM "Like that time you covered for me at the opening ceremony when Matsumoto-san was looking for me."
+        MC "Well I didn't really, I had no idea where you went after you left, so I just said that."
+        RM "True, but you didn't give her anything specific enough to act on. No more details than she had to know, which was clever in its own way, even when you weren't in the loop. It bought me time."
+        show RM neutral
+        MC "Bought you time for what?"
+        RM "Don't worry about it. There's a few other things I wanted to mention."
+    if getFlag("RM001_Device"):
+        show RM happy-2
+        RM "Remember when you helped me with building the device?"
+        show RM neutral-2
+        MC "I'm not so sure that I should have in retrospect. Then again, I suppose it was naïve of me to think you somehow {i}weren't{/i} going to use a listening device to eavesdrop on something you probably shouldn't."
+        RM "All part of the process. I was going to obtain that information anyway, whether or not it's within the so-called \"letter of the law\". I merely chose to take the path of efficiency. Which brings me to the other part of that."
+        RM "Besides, it's not exactly what you probably think it is. It'll make more sense in time."
+        MCT "{i}Any{/i} sense would be a big step forward in that regard."
+    show RM happy
+    RM "I appreciate that you didn't rat on me to my sister when she tried to take the device. You could have easily told her everything you knew about it up till that point when she questioned you but you clammed up good when it counted."
+    MC "You're welcome, I guess. Though to be fair, spilling the beans or a tacit denial would probably only have drawn more attention to me."
+    show RM smug
+    RM "Exactly. Some of the more astute students and faculty have an inkling of what I've been up to, but as far as they're all aware, your nose is clean. It's an asset we can use."
+    MCT "Probably not for long. I've already started to get my hands dirty with this stuff."
+    MC "You lucked out that it was her that caught you and not someone else."
+    show RM happy-2
+    RM "Maybe, maybe not. Another hall monitor would have had quite the tizzy if they were to piece it together, that's true. However, Yuki only managed to because she already had her own suspicions about what I was up to." 
+    RM "Besides, it's not as bad as she thinks. We aren't doing anything illegal."
+    MCT "{i}Yet{/i}, anyway. As curious as I am, something tells me I do need to be careful with how far he's willing to take this."
+    if getFlag("RM002_Favor"):
+        show RM smug
+        RM "Speaking of that incident, you certainly proved you were capable of thinking on your feet to provide a distraction. I didn't ask you to do that, but you recognized the stakes of the situation and took the initiative."
+        MC "I felt all but forced to do something. You were about to get in big trouble if you were caught snooping."
+        RM "That was quite likely too, but the ensuing ruckus let me know how much time I had and allowed for a long enough distraction I was able to exit the office undetected. Ultimately, it paid off."
+    if getFlag("MC005RM"):
+        show RM doubt
+        RM "Of course, not everything pans out. That's just the nature of the game. I'd be lying if I said I wasn't still disappointed that our side adventure into the whereabouts of Hikari Watanabe came up dry."
+        MC "You could always try asking someone."
+        show RM doubt
+        RM "Yes, yes. Believe me, I have. No one knows who this person is. At this point I have to assume it's just some error in the record books since someone would have to have left some kind of paper trail if they were enrolled here." 
+        show RM neutral-2
+        RM "The point I was making is that I appreciated you were willing to come. It was a lot of leg work and you stuck with it, even if the lead was more tenuous than I had initially estimated."
+    show RM neutral
+    RM "I have to admit, your lack of apprehension regarding social interactions has been quite helpful. Things I would have concerned myself with arousing too much suspicion with my approach you were able to diffuse instantly."
+    MC "It's called talking to people. You should try it sometime."
+    RM "Isn't that what we're doing now?"
+    MC "Look at you, learning already." 
+    if getFlag("MC005RM"):
+        MC "With enough practice you might even have the confidence to ask out that girl you like."
+    show RM angry
+    RM "Will you shut up about that? We're not talking about that anymore."
+    MCT "Fine, stay single for the rest of your life then for all I care."
+    show RM doubt
+    RM "Anyway, as I was saying, when following Nurse Kiyomi, I didn't see the avenue to question her without arousing suspicion that I had been tailing her, but you were able to get her to talk without her suspecting anything."
+    MC "It's simple, you express interest in a person and they'll respond to you in kind."
+    show RM neutral-2
+    RM "I'll try to keep that in mind. In the end, it gave us some key information about where the staff and faculty go, as well as how to obtain access off the island."
+    if isEventCleared("MC007") or isEventCleared("FMGWG001"):
+        RM "Similarly, you were able to generate a key lead by striking up a conversation with Chie Kazomazumi and confirm she was the first document case, which gave us some useful information to bring up with Tsubasa-sensei."
+    if getFlag("RM004_Ask"):
+        show RM happy
+        RM "You helped generate a lead by getting Tashi-sensei to talk about who would know about the history of the island, which led us to Tsubasa-sensei."
+    show RM happy-2
+    RM "And you being present for when we talked to Tsubasa-sensei was even more helpful than I thought it would be. You were able to help keep things conversational and got him to elaborate on all sorts of topics related to the school."
+    show RM concerned-2
+    RM "I realize now if it was just me grilling him with question after question he would have likely become defensive and less chatty."
+    MC "Well, he didn't seem too perturbed when you ramped up into full interrogation mode at the end there, but I imagine he would have gotten tired of that schtick pretty quickly."
+    show RM happy 
+    RM "I'll try to tread lighter next time we talk to him. Ideally by then we'll have more to go on to get him to open up."
+    if isEventCleared("AE022"):
+        MC "Treading lightly might be the better course of action in general, or you'll likely attract the attention of the student council."
+        RM "Seems like you've managed to do that all on your own."
+        MC "That matter's been taken care of. I got Shiori to un-sic her goons."
+        show RM neutral-2
+        RM "Yes, well it was still a nice distraction that allowed me to pull their files. Should make evading them a lot easier now that I know their numbers and have some inkling of their proclivities."  
+    if getFlag("RM_govagent"):
+        show RM distrustful    
+        RM "All of this to say you've done quite a lot to gain my trust, even after posing as a government agent."
+        MC "How was I supposed to know you would take it so seriously? Let alone almost yeeting yourself off the damn balcony."
+        show RM doubt
+        RM "I suppose you couldn't have known at the time, but I hope with our recent investigations you've developed at least some appreciation for the potential sensitivity of the information I've been looking into."
+        MCT "He does appear to be right about {i}some{/i} level of government involvement, I'll give him that, but nothing as far as I can tell that justifies his constant level of paranoia."
+        MCT "I still don't understand why he wanted to fly the coop when I said I was a government agent. I know he's trying to snoop where he shouldn't as of late, but he hadn't even been there a full day when that happened."
+    MC "So what's all this about then?"
+    show RM neutral-2
+    RM "I've been thinking and come to the realization that I should let you in on the investigation in a more official capacity, rather than the occasional auxiliary capacity you've been involved with up till this point."
+    show RM doubt
+    RM "Admittedly I was a bit skeptical, seeing as you don't show the same level of conviction to the cause like I do, nevertheless it's obvious that your thought process and temperament are complementary to mine in quite an effective way."
+    RM "A Watson to my Sherlock so to speak."
+    MC "So {i}that's{/i} what you wanted to talk to me about? Asking me to be your sidekick?"
+    show RM smug
+    RM "Precisely." 
+    show RM happy-2
+    extend " You've done a lot of good work in the short time we've known each other and I think you'd be even more effective if we made this arrangement more official."
+    MC "I suppose you were intending this to be more flattering, but really? Your {i}sidekick{/i}?"
+    show RM neutral-2
+    RM "Yes, well everyone thinks of themselves as the main character of their story, but unfortunately that simply isn't the case."
+    MC "Gotta say, you're not exactly selling this position."
+    show RM angry-2
+    RM "Okay fine, I'll let you be the lead detective when you start taking point on dumpster dives, tailing suspects, and week long stakeouts."
+    MC "Sidekick will do just fine."
+    show RM smug
+    RM "That's what I thought."
+    show RM neutral-2
+    RM "So with that out of the way I can finally get to what I wanted to show you. {w}But you have to promise me you will never speak about it to anyone. And I really mean {i}never{/i} and {i}anyone{/i}."
+    if checkAffection("RM", "<=", 4):
+        "The level of seriousness in Daichi's tone made me hesitant to just accept his offer to divulge whatever this secret was. The guy had shown himself to be extremely zealous about getting to the bottom of what was going on in this place."
+        "Whether or not there really {i}was{/i} something here, I wasn't so convinced at this point, but I had no doubts based on what I'd see so far that he certainly would be willing to resort to illegal activity if it helped his investigation."
+        "I knew I was risking getting dragged into something bad with this whole thing, but at the same time it was obvious from the beginning just how weird this whole situation was."
+        "This strange new reality I had been forced to accept left everyone with a lot of questions, and not many answers. Maybe this was a way I could find some for myself?"
+    else:
+        "The level of seriousness in Daichi's tone suggested this was of greater importance than his typical schemes. I knew the guy had his eccentricities, but he seemed a lot more focused than usual and I felt I had to take this seriously."
+        "Whether or not there really {i}was{/i} something here, I didn't know for sure, but I was starting to suspect there was."
+        "The whole situation was strange and I had some questions of my own. As reluctant as I was to admit it, his dedication couldn't be denied. Daichi was likely my best chance at getting some answers for myself."
+    show RM happy
+    MC "Alright, I'm not promising that I'll be jumping on board just yet, but you can show me and I promise I won't tell anyone. That being said, it better not be some kidnapping plot or something really dangerous."
+    if checkAffection("RM", "<=", 3):
+        show RM distrustful
+        RM "I fail to see why that clarification was necessary, but you have a deal nonetheless."
+    else:
+        RM "Deal."
+    $setAffection("RM", 1)
+    show RM happy-2
+    "Daichi extended his hand towards me and we sealed the deal with a shake."
+    show RM neutral-2
+    RM "It's over here."
+    "I followed Daichi over to his side of the dorm. He proceeded to pull out his bed from the wall slightly, then reaching down between the space, he pulled out a large rectangular board that was covered by a cloth."
+    MC "What is that?"
+    RM "I'm getting to that. Here."
+    "Daichi walked it over to his desk, setting it down before removing the cloth that had concealed it."
+    play music TheAnswer
+    show RM happy-2
+    MC "...?{w} ...!"
+    MC "What the..."
+    "I could scarcely make sense of what was laid out before me. I mean I recognized what it was from TV shows and movies, but never thought I'd see one in real life."
+    "The board was a jumbled mess of pinned newspaper clippings, attached documents, and handwritten sticky notes." 
+    "It looked like something straight out of one of those cop shows. Now whether it was more like the leads board in the station or the one in the serial killer's home, I honestly couldn't say."
+    MC "What is this?"
+    RM "The state of my investigation so far."
+    MCT "Hate to break it to you bud, but it looks to be in a pretty rough state if that's the case."
+    "I had a difficult time reading his handwriting, but as I looked through it in more detail it was clear that an impressive amount of work went into it."
+    "In the center of the board there was large bold text that read \"GROWTH FACTORS\" along with plenty of accessory buzzwords and question marks around it." 
+    MCT "Hmm... \"genetic?\", \"chemical?\", \"mass hypnosis?\", \"mutation?\", \"government experiment?!\", the list went on."
+    "Some were stranger than others, while others I found quite bizarre to the point I wasn't really comfortable to even bring up."
+    if isEventCleared("MC007") or isEventCleared("FMGWG001"):
+        "I was beginning to glaze over with information overload until a couple of the names on the board jumped out at me \"Chie Kazomazumi\" and \"D.A. Kusoreikā\"." 
+        MC "Chie Kazomazumi. She was the nice older lady we ran into at the bakery that you got a lead on for being the first factor holder."
+        show RM neutral-2
+        RM "Yes, that's her." 
+        "It would have been hard to forget seeing her when she introduced herself."
+        "The extent of how well-endowed she was up top was a complete system shock, something I had only previously experienced from seeing Tashi-sensei and Nurse Kiyomi when they revealed their factors." 
+        MC "D.A. Kusoreikā... sounds familiar, but I can't quite place where I've heard the name before."
+        RM "It's the alias of the investigative journalist who wrote the article on Kazomazumi-san. I suspect the person would be a good lead themselves, since they were investigating this already."
+        show RM neutral
+        RM "However, my attempts to contact them have come up empty so far."
+    else:
+        "There were various lists of names scattered in different sections, I'm assuming they were leads or person's of interest."
+        MC " \"Chie Kazomazumi\"... \"D.A. Kusoreikā\"— some of these don't even look like real names."
+        show RM neutral
+        RM "I assure you they're real. Chie Kazomazumi was the first confirmed factor holder: gigantomastia. She actually lives on the island. D.A. Kusoreikā is also real, but I doubt that is their real name."
+        RM "He, or possibly she, was an investigative reporter looking into the phenomenon of the growths."
+        MC "I guess that would make them both persons of interest then."
+        RM "Quite so."
+        $setFlag("RM005_Kazomazumi")
+    "I noticed a cutout of a map pinned to the board. It must have been ripped out from the brochure we got from Takamura-sensei on arrival to the island." 
+    "There was the Seichou Academy campus and the trail to the dock where we last met Nurse Kiyomi."
+    if getFlag("MC005_readbrochure") and getFlag("MC005RM"):
+        show RM angry-2
+        MC "I thought you tossed out the brochure since it was all \"propaganda and nonsense\"."
+        RM "Oh, shut up. I wasn't that far off to be honest, there's plenty of stuff here on the island they didn't bother to include, for whatever reason... it's still very fishy if you ask me."
+        MCT "Well I didn't, but even still he does seem to have a point. Look at all these places."
+        show RM neutral
+    else:
+        MCT "He's been working on this for a while... and saving everything it looks like."
+    "Besides the town of Seichou on the other side of the island, there were a couple other areas filled in on the map that weren't marked in the original."
+    "One was a small town not too far from campus called Satoyama Village. It looked like it was situated on a trail leading towards the Kikaiyama Mountains— whatever those were." 
+    if getFlag("MC005_readbrochure"):
+        MCT "Hmm, that place sounds familiar, but not this other one."
+    "The other was \"Beachside Village\" located on the sound edge of the island."
+    MCT "Sounds interesting. I wonder why these weren't on the maps they handed out?"
+    "Other things were marked by sticky notes. Some kind of shrine somewhere in the north, what looked like a small island off the coast called \"Ime Jima\"." 
+    MCT "I haven't heard anything about these places, even after being here a couple of months."
+    "The most odd thing that stuck out to me was something about a radio tower somewhere on the northeast side of the island."
+    show RM doubt
+    MC "What's that?"
+    RM "It's something that piqued my interest shortly after I got here. Have you ever seen a blinking red light in the distance at night from campus?" 
+    MC "No, can't say I have."
+    show RM neutral
+    RM "You can sometimes see it looking towards the west on a clear night. It's from an old radio tower but as far as I've been able to tell from official records it should be decommissioned and abandoned." 
+    show RM distrustful
+    RM "The local radio station is in the town of Seichou, nowhere near this place. It shouldn't even have power."
+    MC "Maybe it's one of those weather stations?"
+    RM "Doesn't really make sense. Typically you'd want to put those on the mountains if the goal is to study weather patterns, and there's plenty on this island, but not on that part of it."
+    RM "As far as I know there's no real road or path to that part of the island either. I plan to make an expedition out there before the end of summer."
+    show RM doubt
+    MC "Sounds peculiar, but do you think it has anything to do with the growths?"
+    RM "I don't know for sure, but I'm certain that this place is under heavy government surveillance. It's very possible that it could be part of that whole apparatus." 
+    MC "If that's the case, I'm surprised you haven't gone there to check it out already."
+    show RM angry-2
+    RM "Are you seeing this thing? {w}The big board that's in front of you? {w}You might have noticed I have my hands full with the stuff going on at campus— some of which is time sensitive." 
+    show RM neutral-2
+    RM "Besides, it's not like it's going anywhere. Like I mentioned, you can't just take the bus there. The trip will require some logistics and more time than I can spare at the moment."
+    MCT "Interesting. I would have expected him to immediately jump on anything that seemed fishy. Seems like he's more organized and patient about this whole ordeal than I gave him credit for."
+    MC "Guess we'll revisit that later."
+    "Scanning the map more closely I recognized the place Tsubasa-sensei was telling us about before, Chūkan Point, just north of the academy between the main campus and the Giant's Dorms."
+    "This particular part of the map had the most notes of all. Daichi must have been busy updating it after our chat with Tsubasa-sensei."
+    if isEventCleared("MC008"):
+        "Which was funny considering he never seemed all too keen on taking notes during his class."
+    MCT "Let's see here... \"Caverns- existed before the academy\"... I already knew that. {w}...\"A hotel in Seichou Town originally used as worker housing for the quarry\"— now that I didn't know." 
+    MC "Hmm... \"gate leading to quarry is protected by password\", that's odd. Did you already try to go there or something?"
+    show RM neutral
+    RM "Yes, that same evening after we talked to Tsubasa-sensei. I was hoping to move on the lead as fast as I could, but there's no way in without the password."
+    MC "I'm surprised you didn't just try to climb over the fence."
+    show RM doubt
+    RM "The thought occurred to me, but it's an exceptionally high fence... naturally. A quick escape, if necessary, would be out of the question." 
+    RM "The land around the gate is also flat and largely barren. I would be easy to spot, especially doing something so conspicuous."
+    show RM neutral
+    "Daichi had seemingly put a lot of effort into this lead already in a short amount of time. That and the sticky note with big letters written on it \"Where are other giants?!\" next to the Giant's Dorm made me suspect this was his next major project."
+    "There was a name he had screwed on the board near the giant's dorm: Saburō Tokei."
+    if getFlag("MC005RM") or getFlag("MC005_readbrochure"):
+        MCT "That's the government official who was the founder of the academy Daichi had brought up before."
+        MC "Have you managed to learn anything more about him?"
+    else: 
+        MC "Who's that guy?" 
+        RM "Saburō Tokei, he was a former government official decades ago, but he's noteworthy in that he was instrumental in the initial formation of the academy. You could say he's its founder."
+        MC "Interesting."
+        MCT "I imagine this guy's government ties only further feeds into Daichi's speculation about what goes on in this place."
+        MC "I suspect you've been looking into him then?"
+    show RM distrustful
+    RM "As a matter of fact, I have. His political connections... it all seems too fishy to me. I haven't really found anything too substantial though, except for a couple of articles that mentioned his passing quite a few years ago."
+    RM "Data on him outside of being on the National Diet and his work during that time are sparse. He appears to have been a pretty private person."
+    MC "Huh. Maybe he just didn't want the spotlight?"
+    RM "An unlikely attribute for a public official. I think it's far more likely he had something to hide. Got his records scrubbed perhaps. Why else would it be so hard to find information on a person in one of the highest public offices?"
+    MC "Guess I don't have an answer for that. Maybe you are on to something."
+    "Obscure leads and connections weren't the only lists he had generated. There was an entire list devoted to the school faculty and staff. None of them I would consider to be suspicious personally."
+    show RM neutral-2
+    MC "You keeping tabs on all the faculty or something?"
+    RM "Not all, just most. Even if they aren't in on anything they still likely have more knowledge than we do, plus a lot of personal experience with past students." 
+    show RM happy
+    RM "If we can get them talking like we did with Tsubasa-sensei, we'll easily generate a lot more leads. It's just a matter of figuring out what they're willing to talk about and what it might take to gain their trust. {w}Or barring that, following them."
+    show RM neutral-2
+    MC "Seems you took the latter approach with Kiyomi-san."
+    RM "Since I don't have a factor, I don't report for regular examinations to her office like the rest of you. Kind of hard to find an opening to work off naturally."
+    MC "Fair point."
+    MC "Let's see... who all is on this list?"
+    jump RM005_Faculty
+
+label RM005_Faculty:
+    menu:
+        "Manabu Noguchi" if not getFlag("RM005_Noguchi"):
+            $setFlag("RM005_Noguchi")
+            MCT "\"Manabu Noguchi - principal, frequently uses latin in his vocabulary, government influence?\""
+            MCT "Hmm, seems like a bit of a thin thread to me. Though it wouldn't be out of the question to assume he has some connections in the government to get his position."
+            jump RM005_Faculty 
+
+        "Michi Tsubasa" if not getFlag("RM005_Tsubasa"):
+            $setFlag("RM005_Tsubasa")
+            MCT "\"Michi Tsubasa - biology teacher, knows more than he initially showed, wife owns \"Early Bird\" store.\""
+            if isEventCleared("MC005"):
+                MCT "He must have gleaned that bit of information about his wife from when we last talked to Tsubasa-sensei. I don't think he's ever met her." 
+            else:
+                MCT "How does he know about his wife? I've never met her. This guy's been snooping around even more than I thought."
+            jump RM005_Faculty 
+
+        "Kaeru Tashi" if not getFlag("RM005_Tashi"):
+            $setFlag("RM005_Tashi")
+            MCT "Well, here's an obvious one: \"Kaeru Tashi - history teacher, 3-B homeroom teacher, tongue growth factor.\""
+            MCT "Heh, I sometimes forget the guy actually has a first name."
+            MC "I'm honestly surprised you didn't have more on Tashi-sensei. You see the guy almost everyday after all."
+            show RM neutral
+            RM "Looks like you were paying attention to the notes then. I'm disappointed with what I could find on him too."
+            RM "All I really know is that he is a former student that never left the island after graduation. He lives in one of the dormitories for staff members on campus."
+            MC "I guess I hadn't thought about teachers living on campus, but I suppose that makes sense. There's not that much around this part of the island so it would make sense to provide some housing for them."
+            MC "Especially if it's just part-time housing and they return to their houses on the weekends somewhere else on the island or even the mainland."
+            show RM neutral-2
+            RM "That seems to be the case for some of them, like Kiyomi-san, but as far as I can tell Tashi-sensei lives on campus full time."
+            MC "That might explain his rather dour disposition. I suppose a growth like his doesn't exactly do wonders for your social life. I feel bad for the guy when you stop and think about it."
+            RM "True, but I also think he knows more than he's willing to talk about."
+            jump RM005_Faculty
+
+        "Aoi Takamura" if not getFlag("RM005_Takamura"):
+            $setFlag("RM005_Takamura")
+            MCT "Another obvious choice: \"Aoi Takamura - cooking teacher, Yuki-chan's homeroom teacher, hourglass factor?! hips growth factor?\""
+            MCT "Hourglass factor? Is that even a thing?"
+            if isEventCleared("MC009"):
+                MC "Your info on Takamura-sensei, I talked to her and she says she's factorless, \"genetics and sweets\" in her words."
+                show RM doubt
+                RM "I find that rather hard to believe. Her proportions are more exaggerated than that would suggest."
+                MC "Well you can always just walk up to her and ask her why her ass is so big. I'm sure that will go over well."
+                show RM distrustful
+                RM "Alright, I'll take your word for it, for now. I still think there's something else to it. Her being here with proportions like that... it's too much of a coincidence if you ask me."
+                show RM neutral-2
+                "Apparently he believed me enough to amend his notes as he scribbled down a few extra lines by her entry on the list."
+                $setFlag("RMBoard_Takamura")
+            else:
+                MCT "Regardless, with proportions like that, the lady's definitely got something going on down there."
+                if isEventCleared("BE006"):
+                    MC "I heard that she studied culinary school in Paris, if that gives you anything to go off of."
+                    show RM neutral
+                    RM "Hmm, I did hear a rumor from Yuki about her being a chef at a \"five star restaurant\", perhaps there's some truth to it after all." 
+                    RM "I just assumed it was the run-of-the-mill baseless rubbish you pick up from chatter since five star restaurants don't exist."
+                    if checkSkill("Academics", "<=", 3) and not isEventCleared("MC009"):
+                        show RM doubt                        
+                        MC "They don't?"
+                        RM "No, three stars is the highest, it's not like how they rate hotels."
+                        show RM neutral-2
+            jump RM005_Faculty
+
+        "Jiro Sugiyama" if not getFlag("RM005_Sugiyama"):
+            $setFlag("RM005_Sugiyama")
+            MCT "\"Jiro Sugiyama - physical education teacher, heigh factor- giant?\""
+            if isEventCleared("MC006"):
+                MC "Wait a second, I thought the PE teacher had a different name. The one who ran the handball game we did? He wasn't a giant."
+                show RM neutral
+                RM "That's a different teacher, you're thinking of Naoki-sensei."
+                RM "I didn't find anything terribly noteworthy about him when I was observing him."
+                RM "He's so busy running around all day coaching clubs that his whole schedule was easily accounted for. It allowed me to rule out anything suspicious so I crossed him off my list." 
+                MC "I guess I'm surprised there are things that actually {i}don't{/i} make you suspicious."
+                RM "Like the saying goes: sometimes a cigar is just a cigar."
+                show RM neutral-2
+            else:
+                MCT "Hmm, not much there. Already knew that from our conversation with Tsubasa."
+                show RM neutral-2
+            jump RM005_Faculty
+
+        "Yoshito Hageshi" if not getFlag("RM005_Hageshi"):
+            $setFlag("RM005_Hageshi")
+            MCT "\"Yoshito Hageshi - math teacher, muscle growth factor, students are afraid of him. Suspicious rumors on a campus. Are they true?\""
+            MCT "Suspicious rumors? What is he talking about? Just looking at the guy is enough to figure out he could stuff you in a locker if you stepped out of line."
+            if isEventCleared("MC011"):
+                MCT "Those two meatheads fighting in the cafeteria found out the hard way."
+            if isEventCleared("MC006"):
+                show RM doubt
+                MC "Hageshi-sensei... hey remember that time he dragged you by the shirt collar into the gym for trying to skip out?"
+                show RM angry-2
+                RM "YES, and I'd prefer not to."
+                show RM concerned
+                RM "That was a frustrating setback, Hageshi-sensei is now definitely aware I'm up to something. And I thought I was being extra stealthy."
+                show RM doubt
+                extend " Don't let his bored and disinterested expression fool you— he's got eyes like a hawk."
+                MC "He must be if he managed to catch you in one of your disappearing acts."
+                show RM angry-2
+                RM "Yeah, well I'm still going to get to the bottom of those rumors." 
+                show RM neutral-2
+            jump RM005_Faculty
+
+        "Hitomi Kiyomi" if not getFlag("RM005_Kiyomi"):
+            $setFlag("RM005_Kiyomi")
+            MCT "Alright here... \"Hitomi Kiyomi - head nurse, same factor as Yuki-chan, mysterious trips off island - visiting fiance in Wakkanai.\" I was there for that one."
+            MCT " \"Hanami Kiyomi - nurse from the medical wing. Onychauxis?\" "
+            MC "Wait, wait. There are {i}two{/i} nurse Kiyomi's?"
+            show RM smug
+            RM "Twin sisters. Though they aren't that hard to tell apart if you were to ever catch them side-by-side. They have different factors." 
+            MC "Okay, good to know, hadn't pieced that one together yet. {w}What the hell is onychauxis?"
+            show RM concerned-2
+            RM "I'm not sure if the medical term onychauxis applies in the strict sense, but she has unusually long fingernails," 
+            show RM neutral-2
+            extend " so long in fact I am certain they are a growth rather than a willful fashion choice."
+            jump RM005_Faculty
+
+        "Mukashi Misuboro" if not getFlag("RM005_Misuboro"):
+            $setFlag("RM005_Misuboro")
+            MCT "Now who is this? \"Mukashi Misuboro- campus maintenance tech and shop teacher. Chain smoker, always angry.\""
+            MC "Misuboro... never seen him before. I suppose they need someone who knows how to fix things given how custom everything seems to be in these facilities."
+            show RM neutral
+            RM "Yes, that part makes sense."
+            MC "What's so suspicious about him then?"
+            show RM doubt
+            RM "Everything I've heard about him suggests he's a highly skilled carpenter and fabricator. Like he can knock out a chair worth more than 100,000 yen in his sleep. That kind of thing."
+            RM "It doesn't make sense why someone like that would be stuck working that kind of job in this backwater place." 
+            MC "I guess that is a bit odd, but it doesn't strike me as suspicious."
+            show RM neutral-2
+            jump RM005_Faculty
+
+        "Shinju Gurīsu" if not getFlag("RM005_Gurīsu"):
+            $setFlag("RM005_Gurīsu")
+            MCT "Alright, last on the list...\"Shinju Gurīsu - lunch lady, former owner of a restaurant in Wakkanai.\""
+            MCT "Former restaurant owner, eh? Guess that's why the grub is pretty decent here."
+            if isEventCleared("WG002"):
+                MCT "Even if Alice doesn't seem to think so."
+            show RM doubt
+            MC "Really? The lunch lady? Something tells me she's not in on any grand conspiracy. What'd she do to get on this list? Mix up your lunch order?"
+            show RM happy-2
+            RM "Even seemingly innocuous details can lead to big discoveries. In her case I find it odd that someone with no connections to this place would suddenly pack up and move here from the mainland to work at the school."
+            "As planned out and meticulous as all this was, if even the lunch lady was on his radar I had to wonder how far he was going to get in his investigation if he was willing to jump down a rabbit hole for any and every small hunch."
+            show RM neutral-2
+            jump RM005_Faculty
+
+        "Move on":
+            jump RM005_AfterFaculty
+
+label RM005_AfterFaculty:
+    if isEventCleared("AE022"):
+        "The faculty list wasn't the only one he had going on. I hadn't thought about it in a while, but it looks like I had a hand in making this one."
+        menu:
+            "Shiori Matsumoto (Kaichou), Yuki Utagashi (The Blizzard), Minori Tomoe (The Wall of Fate)":
+                jump RM005_AfterCouncil_AE
+            "Jineko Watanabe (Gearhead), Mio Yoritaka (The Messenger of the Gods), Kazuya Endou (Mr. Eraser)":
+                jump RM005_AfterCouncil_AE
+            "Masashi Norinaga (Maybe Man), Oda Takahashi (Shogun Oda), Kane Yokubari (The Immortal Mountain Wizard of Cash)":
+                jump RM005_AfterCouncil_AE
+            "Touma Tsureno (The Bog), Reina Mori (The Forest Guardian Kami), Itachi Kudo (The Rabid Weasel)":
+                jump RM005_AfterCouncil_AE
+            "Goro Saito (Iron Fist Goro), Izumi Hasegawa (Firework Hasegawa)":
+                jump RM005_AfterCouncil_AE
+            "Move on":
+                jump RM005_AfterCouncil_AE
+
+    else:
+        MC "Now what is this list?"
+        menu:
+            "Shiori Matsumoto (Kaichou), Yuki Utagashi (The Blizzard), Minori Tomoe (The Wall of Fate)":
+                jump RM005_AfterCouncil_AE
+            "Jineko Watanabe (Gearhead), Mio Yoritaka (The Messenger of the Gods), Kazuya Endou (Mr. Eraser)":
+                jump RM005_AfterCouncil_AE
+            "Masashi Norinaga (Maybe Man), Oda Takahashi (Shogun Oda), Kane Yokubari (The Immortal Mountain Wizard of Cash)":
+                jump RM005_AfterCouncil_AE
+            "Touma Tsureno (The Bog), Reina Mori (The Forest Guardian Kami), Itachi Kudo (The Rabid Weasel)":
+                jump RM005_AfterCouncil_AE
+            "Goro Saito (Iron Fist Goro), Izumi Hasegawa (Firework Hasegawa)":
+                jump RM005_AfterCouncil_AE
+            "Move on":
+                jump RM005_AfterCouncil
+
+label RM005_AfterCouncil_AE:
+    MC "You have the whole student council on here too?"
+    show RM smug
+    RM "You sound surprised. What did you think I did with that file you helped me retrieve?"
+    MC "I guess I am glad you closed the window after all. I don't want {i}anyone{/i} hearing that, in fact it never happened. I'll vouch for you as a master safecracker for all I care if I have to."
+    jump RM005_AfterCouncil
+
+label RM005_AfterCouncil:
+    MC "Are these code names or something?"
+    show RM distrustful
+    RM "It's a list of the fourteen student council members. {w}I think they are on to me, it's only fair that I return the favor."
+    MC "I'm sure Matsumoto-san would be pissed if she knew you had this, but lucky for you I'm not a rat."
+    show RM happy-2
+    RM "I figured as much. I wouldn't be showing this to you if I thought you were."
+    "Aside from Shiori and his sister Yuki I didn't really recognise any others."
+    if getFlag("MC005RM"):
+        MCT "Though that Watanabe name did sound familiar."
+    show RM neutral
+    RM "Most of them aren't of any note, just goons following orders as far as I'm concerned, too low on the totem pole to know anything of interest. But a couple stick out to me as especially worth trying to avoid, aside from obviously Matsumoto-san."
+    RM "Goro Saito, aka \"Iron Fist Goro\". He's got a muscle growth factor. Looks tough, not the typical pencil pusher pushover."
+    RM "And then there's Oka Takahashi, aka \"Shogun Oda\", he has an obsession about military-like routines. Very letter of the law, but at the same time also willing to overstep his authority."
+    if isEventCleared("WGAE001"):
+        MC "Yeah, I've run into him before. He fancies himself a tough guy and a smooth operator, but he's just a tool."
+        RM "Sounds like our assessments agree then."
+    show RM neutral-2
+    RM "Last one is Reina Mori, aka \"The Forest Guardian Kami\", she monitors the wildlife, woods, and mountains around the academy. Not a direct threat, but a set of eyes to be wary about when investigating the area surrounding the campus."
+    MC "How did your sister get the name \"The Blizzard\"?"
+    show RM concerned-2
+    RM "I have to assume it's not a very flattering way of describing how overwhelming her long-winded and unbreaking manner of speech is."
+    show RM neutral
+    MC "Ah yes, that would make sense."
+    MC "Well apparently they call my sister \"The Specter\" on account of the fact she so rarely appears it's doubtful she's a real person."
+    show RM doubt
+    RM "It's the odd details sometimes, but people always seem to find the thing that sticks."
+    MCT "Well, sometimes it's the obvious details, \"Captain Weirdo\"."
+    pause 1
+    MCT "...Shit! {w}What do people call me then?"
+    show RM neutral-2
+    RM "Hm?"
+    MC "Oh, it's nothing."
+    "At this point my eyes had pretty well picked over the rest of the board, aside from some bizarre and seemingly out of place things I didn't even feel like touching on— that was until I saw something that sent ice through my veins."
+    pause 1
+    MC "Seriously dude?"
+    show RM neutral
+    RM "What?"
+    "There I was on the board, along with my sister, under a header that said \"Siblings with Growth Factors\"."
+    show RM doubt
+    MC "You watching me too? Dude, I'm telling you right now, if I catch you stalking my sister-"
+    show RM distrustful
+    RM "It's not like that. I'm just hoping to find some parallels between the cases. You have to admit it's definitely a phenomenon worth investigating." 
+    if getFlag("RM004_RegardsPassed"):
+        show RM happy
+        RM "You heard what Tsubasa-sensei said, there doesn't appear to be a genetic link, and with so few examples of siblings with growth factors, it would be foolish to overlook the opportunity to make some observations."
+        MC "Alright, I see your point. Like you said, it's not like we're the only ones. {w}Have you found anything interesting?"
+    elif getFlag("MC008_RegardsPassed"):
+        MC "Well you're better off not even bothering. Tsubasa-sensei told me the data they have on students doesn't establish a genetic link. Chie Kazomazumi's daughter didn't have one and the theory basically started to fall apart from there."
+        show RM sad
+        RM "Well that is discouraging."
+        show RM neutral
+        RM "Are you sure she was factorless?"
+        MC "I know what you mean, but that's what Tsubasa-sensei said."
+        RM "Alright, fine, but that doesn't mean there isn't a link between siblings or parents that grew up in a similar environment."
+        MC "Have you found anything interesting?"
+    else:
+        "If it was anyone else, I wouldn't have given them the benefit of the doubt, but given how much effort he's put into this whole thing, I knew Tomo wasn't his focus so I decided to just drop it."
+        MC "Alright, I see your point. Like you said, it's not like we're the only ones. {w}Have you found anything interesting?"
+    show RM concerned
+    RM "Nothing so far, like Tsubasa-sensei said, it seems to be a complete lottery. I'm factorless while Yuki has one. Nurse Kiyomi and her sister have different ones, I was looking into another case but it turned out to be a flop."
+    show RM doubt
+    RM "Yours is obviously the most interesting because you two share the same growth factor."
+    MC "I take it that's not common?"
+    show RM neutral
+    RM "Based on what I know, if I had to guess, probably."
+    MC "Really?"
+    "I hadn't really thought too much about Tomo and I sharing the same factor before, I was just relieved to find out she didn't get one of the more difficult ones to deal with." 
+    "I made a mental note to follow up on this with Tsubasa-sensei the next time I got a chance to talk with him about this stuff."
+    show RM neutral-2
+    RM "At this point, I can only assume. {w}From what I can gather, my case is the most common."
+    RM "There are decent number of factorless students on campus, usually because of their sibling or close relative who ends up with a growth factor."
+    MC "Tsubasa-sensei did mention some parents who are factor holders request to send their kids here."
+    RM "True, I hadn't really considered looking into that until you mentioned it." 
+    RM "Most people coming in don't have any knowledge of the growths or why they are here, but a factorless student that seems familiar with them might have some insights that I've overlooked."
+    if getFlag("MC005RM"):
+        "There was another notable name on the sibling factors list, \"Hikari Watanabe\" but it was crossed out."
+    play music Peaceful
+    "By this point I was mentally tapped out. I took a step back and gave the board one last look over."
+    "So many names, places, and possible leads... I always wondered what he did all the time when he was gone."
+    MCT "Well, I guess I got my answer."
+    "A staggering amount of effort had gone into this little project of his. In one sense it was admirable, in another sense it was unsettling how overly dedicated he is to his pursuits. Even if I didn't want to know, I had to ask."
+    MC "So what now?"
+    show RM happy
+    RM "That next part is up to you. I don't want to force you into anything you aren't up for. This is going to require some commitment. I'm sure this is all a lot to take in, but if you're still interested, I could really use some help."
+    RM "Just give it some thought, I'll reach out when something comes up that I need a second set of eyes on."
+    "Part of me was still reluctant to involve myself in this whole enterprise at any level, but ultimately I felt more motivated to help him, as I realized I could help provide a more restrained perspective that could help keep him out of trouble."
+    "That, and I wanted to get to the bottom of all of this myself."
+    show RM happy-2
+    RM "On that note, I've been keeping an eye out for another way to get into the Giant's Dorms and do a little bit of reconnaissance, hopefully generate some more leads in the process."
+    RM "I don't have a fully fledged out plan yet, but I'll let you know when I do. I got some other side gigs I've been looking into as well that I haven't been able to follow up on yet."
+    RM "If any of that interests you, you know where to find me."
+    hide RM with dissolve
+    MC "Actually, we live together and I don't even know where to find you most of the time."
+    pause 1
+    MC "..."
+    MC "See? This is exactly what I'm talking about."
     jump daymenu

@@ -217,6 +217,7 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        ypos 370
         for i in items:
             if "(disabled)" in i.caption:
                 textbutton i.caption.replace("(disabled)", "") action None

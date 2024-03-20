@@ -27441,15 +27441,16 @@ label WG085:
     WG "It's a relief to hear you say that."
     show WG neutral
     WG "I think that's enough for the day— you look exhausted. You shouldn't be trying to swim after nearly drowning. Just keep holding on, I'll get you back to the shallow end."
+    show cg WG085 with dissolve
     "Suddenly, I felt myself being lifted up out of the water."
     "I was unsure what was going on, until I realized Alice had leaned over backwards, leaving me above water, clinging to her belly like it was a lifeboat while she backstroked her way to the end of the pool."
     "Even with my full weight directly on top of her, my body laid comfortably above the water. It was exactly as she had said, her body was an unsinkable vessel."
-    show WG happy
     "Peaking over her breasts, I could see her smiling at me, even as she was mentally focusing on her strokes so as to keep herself steady. It was all the assurance I needed and more to know I was safe."
     "Safe from everything."
     "With my throat and lungs burned dry from my coughing fit, I wasn't in a position to make it through another lap. It was a relief to have her carry me through." 
     "So much so I found myself starting to fall asleep on the warm buoyant cloud that ferried me across the calm waters."
     show WG neutral-2
+    hide cg with dissolve
     WG "Are you okay?"
     "Alice let herself stand back up in the pool, allowing me to gently slide off her in the process."
     MC "Throat's a little dry, but I'll be fine. Let's get you out of the pool."
@@ -29958,17 +29959,17 @@ label WG091:
     show WG surprised
     "{i}*SPLAT*{/i}"
     "{i}*WUB*{/i}"
-    "Though smart idea in theory, the elbow strategy resulted in my arm sliding off her back flub causing me to face plant into her back bulges."
+    "Though a smart idea in theory, the elbow strategy resulted in my arm sliding off her back flub causing me to face plant into her back bulges."
     show WG surprised-2
     WG "What was that?"
     MC "Don't mind me, just getting a closer look."
     show WG neutral-2
-    "By this point I was just grasping at straws, rubbing to and fro anyway I could as I tried to navigate the dramatic changes in topography as her fat smooshed and sloshed about with each touch, rippling across her back with each movement of my hand."
+    "By this point I was just grasping at straws, rubbing to and fro any way I could as I tried to navigate the dramatic changes in topography as her fat smooshed and sloshed about with each touch, rippling across her back with each movement of my hand."
     "I reached under her arms, rubbing in counter clockwise circles. I knew there could be a lot of tension here, but instead of finding her lats, I was wrestling with two of the largest fat rolls on her upper back."
     "Each one was the size of a full ham, forming a perch that her flabby arms rested on. She was so fat her arms couldn't lay straight down, they hadn't for a long time, being pushed outward by her massive swells of back fat."
     "Everything about her, so plumped and swelled with fat..."
     MCT "Wait a second, is she?"
-    "I wasn't sure about it at first, I had my suspicious this morning, but after getting an up close look it was unmistakable— {w}She'd been getting fatter."
+    "I wasn't sure about it at first, I had my suspicions this morning, but after getting an up close look it was unmistakable— {w}She'd been getting fatter."
     "My girlfriend, the fattest girl in the school, in the world, {i}in history{/i}{w} was still getting fatter."
     show WG doubt
     WG "Uh, Keisuke, I appreciate the \"extra\" attention to that one spot, but maybe we can move on to another spot that needs attention."
@@ -29987,7 +29988,7 @@ label WG091:
     "I could feel each ripple and jostle of fat move through her down to me as my manhood was pressed against her belly, entirely engulfed in her fat, like the rest of me."
     WG "{i}Ohh, Kei... Don't stop... This is all for you, remember?{/i}"
     show WG surprised
-    "I didn't hesitate, having been given the go ahead I full on mawed those fat tiddies. Caressing them with my lips and my tongue as a let them smack me in the face like wrecking balls made of gelatin." 
+    "I didn't hesitate, having been given the go ahead I full-on mawed those fat tiddies. Caressing them with my lips and my tongue as I let them smack me in the face like wrecking balls made of gelatin." 
     show WG aroused 
     WG "{i}Emph! Ooo!{/i}"
     "Teasing her by kneading her pert nipples between my fingers, I went for it, latching on like I had just crawled across a desert without a drink in days, I sucked her fat teet."
@@ -30019,7 +30020,7 @@ label WG091:
     WG "That is how physics works, yes."
     MC "Which means I can do {i}this{/i}"
     show WG surprised
-    "I shook Alice's belly up and down like I was airing out a rug. It rippled and wobbled sending waves all across the pool as her fat rolls slapped into each other."
+    "I shook Alice's belly up and down like I was airing out a rug. It rippled and wobbled, sending waves all across the pool as her fat rolls slapped into each other."
     show WG happy
     WG "Hey stop that! That tickles!"
     show WG surprised-2
@@ -30076,6 +30077,8 @@ label WG091:
     WG "Ugh. Why do these things have to have such weird names?"
     show WG sly
     WG "Oh who cares? If that's what you want to call it, stud. It's for you remember? {w}Now fuck me as hard as you want."
+    $ persistent.unlock_cgWG091 = True
+    show cg WG091 with dissolve
     "And we were off to the races. Alice bobbed her ass up and down slamming the rest of my torso down into the water each time as she slid up and down dick." 
     "I hung on to her hips for dear life as I bucked and gyrated with each thrust, slamming deeper into her each time."
     show WG aroused
@@ -30089,6 +30092,7 @@ label WG091:
     "Feeling the gyrations emanating from her hips, causing her crushing ass to shake me like an earthquake as her lips tightened around my cock— I finally gave up the ghost and dumped a massive wad inside her as her sealed lips sucked me dry."
     MC "UHHhhHHH... Ahhh..."
     show WG aroused
+    hide cg with dissolve
     "Alice dismounted once I went slack." 
     show WG happy
     extend " Floating along in the onsen like a giant beach ball in a pool, smiling at me the whole time."

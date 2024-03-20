@@ -822,6 +822,8 @@ init python:
         global GTSOutfit
         global PRGOutfit
         global WGOutfit
+        global NatsOutfit
+        global TakoOutfit
         if (AEOutfit == OutfitEnum.NUDE or AEOutfit == OutfitEnum.EPILOGUEBAD) and not isNSFW():
             AEOutfit = AEPrevOutfit
         elif AENsfw and isNSFW():

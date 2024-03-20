@@ -261,6 +261,7 @@ image Hotel Desk = DynamicImage("Graphics/ui/bg/archiveBG/hoteldesk.webp")
 image Hotel Elevator = DynamicImage("Graphics/ui/bg/archiveBG/hotelelevator.webp")
 image Hotel Lobby = DynamicImage("Graphics/ui/bg/archiveBG/hotellobby_[gametime].webp")
 image Hotel Lounge = DynamicImage("Graphics/ui/bg/archiveBG/hotellounge_[gametime].webp")
+image Hotel Restaurant = "Graphics/ui/bg/archiveBG/hotelrestaurant.webp"
 image Mall = "Graphics/ui/bg/archiveBG/mall.webp"
 image Mall Candyshop = "Graphics/ui/bg/archiveBG/mall_candyshop.webp"
 image Movie Theater = "Graphics/ui/bg/archiveBG/movietheater.webp"
@@ -273,6 +274,8 @@ image Store = DynamicImage("Graphics/ui/bg/store_[gametime].webp")
 image Supermarket = DynamicImage("Graphics/ui/bg/archiveBG/supermarket_[gametime].webp")
 image Sushi Restaurant = "Graphics/ui/bg/archiveBG/sushirestaurant.webp"
 image Sushi Restaurant Seats = "Graphics/ui/bg/archiveBG/sushirestaurant_seats.webp"
+image Theater Concert = "Graphics/ui/bg/archiveBG/theater-concert.webp"
+image Theater Concert Spotlight = "Graphics/ui/bg/archiveBG/theater-concert-spotlight.webp"
 image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime].webp")
 image Theater Interior = "Graphics/ui/bg/theater-interior.webp"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.webp"
@@ -352,10 +355,15 @@ image Okinawa Ocean = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_ocean_[game
 #Other - Tokyo
 image Tokyo = DynamicImage("Graphics/ui/bg/tokyo_streets_[gametime].webp")
 image Tokyo Abandoned Building = "Graphics/ui/bg/NYI.webp"
-image Tokyo Club = "Graphics/ui/bg/NYI.webp"
+image Tokyo Club = "Graphics/ui/bg/archiveBG/tokyo_club.webp"
+image Tokyo Club Alt = "Graphics/ui/bg/archiveBG/tokyo_club2.webp"
+image Tokyo Club Interior = "Graphics/ui/bg/archiveBG/tokyo_clubinterior.webp"
+image Tokyo Club Stage = "Graphics/ui/bg/archiveBG/tokyo_clubstage.webp"
+image Tokyo Club Stage Alt = "Graphics/ui/bg/archiveBG/tokyo_clubstage2.webp"
 image Tokyo House Exterior = DynamicImage("Graphics/ui/bg/tokyo_houseexterior_[gametime].webp")
 image Tokyo Dining Room = "Graphics/ui/bg/NYI.webp"
 image Tokyo MC Apartment = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_mcapartment_[gametime].webp")
+image Tokyo Restaurant = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_restaurant.webp")
 image Tokyo Station = DynamicImage("Graphics/ui/bg/tokyo_station_[gametime].webp")
 image Tokyo Train = DynamicImage("Graphics/ui/bg/tokyo_train_[gametime].webp")
 image Tokyo Office = "Graphics/ui/bg/NYI.webp"
@@ -366,6 +374,9 @@ image Kagoshima Aquarium = DynamicImage("Graphics/ui/bg/archiveBG/kagoshima_aqua
 #Other - Kanagawa
 image Kanagawa Street = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_street_[gametime].webp")
 image Kanagawa Alley = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_alley_[gametime].webp")
+image Kanagawa Game Store = "Graphics/ui/bg/archiveBG/kanagawa_gamestore.webp"
+image Kanagawa Supermarket Exterior = "Graphics/ui/bg/archiveBG/kanagawa_supermarketexterior.webp"
+image Kanagawa Supermarket Interior = "Graphics/ui/bg/archiveBG/kanagawa_supermarketinterior.webp"
 image Kanagawa Station = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_station_[gametime].webp")
 
 #General
@@ -599,6 +610,7 @@ image cg RM000_escape3 = "Graphics/ui/gallery/RM000_escape3.webp"
 
 #Character sprites
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral.webp")
+image AE neutral-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-2.webp")
 image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-annoyed.webp")
 image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-eyebrow.webp")
 image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-noglasses.webp")
@@ -632,7 +644,6 @@ image AE ahegao = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ahegao.webp"
 image AE hatred = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hatred.webp")
 image AE love = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/love.webp")
 image AE rage = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/rage.webp")
-image AE unique = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique.webp")
 
 image BE neutral = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.webp")
 image BE happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.webp")
@@ -644,10 +655,12 @@ image BE angry = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.webp")
 image BE aroused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.webp")
 image BE unique = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.webp")
 image BE confused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.webp")
+image BE crying = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/crying.webp")
 image BE disoriented = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disoriented.webp")
 image BE doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.webp")
 image BE embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.webp")
 image BE embarrassed-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.webp")
+image BE furious = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/furious.webp")
 image BE seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.webp")
 image BE shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.webp")
 image BE unamused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unamused.webp")
@@ -772,6 +785,7 @@ image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering
 image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.webp")
 
 image side MC = "Graphics/MC/side.webp"
+image side AECell = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/side.webp") #mainly used only in 098-D
 image side BECell = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.webp")
 image side WGCell = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/side.webp")
 image side FMGCell = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/side.webp")
@@ -995,7 +1009,7 @@ image dummy = "Graphics/ui/dummy.png"
 image FerryTomo1 = "Graphics/minor/tomoko/overlays/table-overlay.webp"
 image HairpinGTS1 = "Graphics/GTS/1/overlays/hairpin-overlay.webp"
 image FlowerPRG2 = "Graphics/PRG/2/overlays/flower-overlay.webp"
-image GumAE6EP = "Graphics/AE/6/overlays/gum.webp"
+image GumAE6EP = "Graphics/AE/6/overlays/gum-overlay.webp"
 image WmHairpinBE2 = "Graphics/BE/2/overlays/hairpin-overlay.webp"
 image NoHairpinBE = "Graphics/BE/[globalsize]/overlays/nohairpin-overlay.webp"
 image AthleticSoccerBE1 = "Graphics/BE/1/overlays/soccer-overlay.webp"
@@ -1134,6 +1148,7 @@ init 1 python:
     eventlibrary['RM002'] = {"name": "Ties that Bind", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "gatefront",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}
     eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}
     eventlibrary['RM004'] = {"name": "Voices of the Past", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "classroom",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM003"], [ConditionEnum.FLAG, "XX15"]]]}
+    eventlibrary['RM005'] = {"name": "Milestone", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM004"], [ConditionEnum.FLAG, "XX20"]]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1580,8 +1595,8 @@ init 2 python:
     eventlibrary['PRG051'] = {"name": "Derail", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "town",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG051B", "obsflags": [],       "conditions": []}
     eventlibrary['PRG051B'] = {"name": "Time Will Tell", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG052", "obsflags": [],       "conditions": []}
     eventlibrary['PRG052'] = {"name": "Shattered", "girls": ["PRG"], "type": EventTypeEnum.CORE,                               "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG053", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG053'] = {"name": "Sugar and Rainbows", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "dormPRG",           "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG054", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG054'] = {"name": "Down to the Wire", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG055A", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG053'] = {"name": "A Beautiful Morning", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "dorminterior",           "priority": PrioEnum.ALL, "sp": 12,     "next": "PRG054", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG054'] = {"name": "One Heart", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG055A", "obsflags": [],      "conditions": []}
     eventlibrary['PRG055A'] = {"name": "Back to the Basics", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG056A", "obsflags": [],      "conditions": []}
     eventlibrary['PRG055B'] = {"name": "Snowballing", "girls": ["PRG", "AE"], "type": EventTypeEnum.CORE,                       "location": "town",              "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG056B", "obsflags": [],      "conditions": []}
     eventlibrary['PRG055C'] = {"name": "Successful Failure", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG056C", "obsflags": [],      "conditions": []}
