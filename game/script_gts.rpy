@@ -6940,6 +6940,8 @@ label GTS036_c1_2:
 label GTS036_c2:
     scene Chukan Point with fade
     play music GTS
+    if not getFlag("VisitedChukanPoint"):
+        $setFlag("VisitedChukanPoint")
     "As I approached the small park area, I couldn't help but be in awe how Naomi was nearly as tall... or taller... than the trees around her. Granted, many were cherry blossoms, but it was still a considerable line to cross."
     MC "Yamazaki-san!"
     show GTS despaired-thought with dissolve

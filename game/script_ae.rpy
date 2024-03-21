@@ -24565,12 +24565,13 @@ label AE099D:
     $setSize(6)
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     scene Tokyo MC Apartment
-    show AE neutral
+    show AE neutral-eyebrow
     with fade
     "Shiori sat at the side of my bed, her gigantic behind taking up its entire span as it was squeezed tightly by her bedazzling thong."
     MC "A-Ah..."
     AE "Sleep well?"
     MC "Eheh, I'm amazed I did."
+    show AE neutral
     AE "Yeah?"
     MC "First time in a long time."
     AE "... Mm."
@@ -24581,82 +24582,109 @@ label AE099D:
     AE "Mhm. I'm surprised you didn't notice the other night."
     MC "Yeah, I just uh..."
     MC "Weren't... those your mentor's glasses?"
+    show AE neutral-2
     AE "..."
     AE "They were, yeah."
     MC "..."
     AE "..."
     "Looking at her face, it was clear this line of thinking was making her rather uncomfortable... and yet I couldn't help but be a bit curious."
     MC "Gotta say, you look... nothing like how I would have imagined. It's pretty wild, eheh."
+    show AE neutral-eyebrow
     AE "Y-Yeah?"
     MC "Yeah. It is pretty wild."
     AE "... Mm..."
     MCT "Shit, I remember that being something she was sensitive on back in the day..."
     MC "H-Hey, sorry if that was rude-"
+    show AE sad
     AE "Oh! No, not at all, um..."
     "Quietly, she pursed her lips as she looked around."
     AE "Hold up, lemme grab some gum. Then I can explain a bit more."
     MC "Huh? Oh, okay, sure."
+    show AE neutral-2
     "Shiori stood up and reached for her purse, myself standing to put on my pants. Grabbing her pack, it looked more like an old-time cigarette case, gold and expensive. But when she opened it up, inside were several rows of bubblegum."
+    show AE neutral
     AE "Chewing gum always helps me take the edge off."
     "She talked about it like it was a drug. I guess, considering her line of work, it was a good thing that this was her vice of choice. Shiori skillfully unwrapped the stick and put its folded piece of foil back into the case."
     "The faintest hint of her tongue escaped her lips before she closed her eyes and popped the piece of gum into her mouth. Her teeth gnashed down on it and she quickly covered her lips as she chewed."
+    show AE happy
     "Even then, I saw a smile return, and grow, the more she chewed."
     AE "Mmm. I haven't bothered to look into why bubblegum flavor is so ubiquitous. But it is delicious."
     "As she chewed the gum further I watched her cheek bulge out from time to time as she worked the thick mass of pink, rubbery candy back and forth. She held out her finger, telling me to pause for just a moment."
+    show AE glasses
+    show GumAE6EP with dissolve
     "Shiori took a deep inhale through her nose and began to exhale. Gum was wrapped around her tongue as she blew, so air flowed right into the membrane as it grew and stretched into a rounded shape. She took several more exhales and her bubble grew bigger."
     "Soon the bubble was big enough that it covered her nose and chin, and almost hit her eyes. Shiori took one more inhale and let it out in a forceful puff of air, until the bubble popped."
-    "*Fssss* *Pop*"
+    "*Fssss*"
+    hide GumAE6EP
+    "*Pop*"
+    show AE happy
     "Her thighs clenched together, which meant that her glorious backside wobbled with pride as goosebumps ran down her body."
     MCT "All of that... from blowing a bubble?"
+    show AE aroused-3
     "Shiori pursed her lips into an O shape and stuck her fingertip into her mouth. After a few seconds she pulled it out, with a tiny piece of gum stuck to the nail."
     "Shiori pulled the finger out and more gum came with it, so she curled her hand over and over to entwine her finger in the pink sticky stuff."
     "The way her gaze lingered and dulled the longer she wrapped that strand of gum around a fingernail almost as long as the finger itself... it was like watching her pulling out her intellect and feeling giddy at its removal."
     "Once her finger had been thoroughly entombed in gum, she stared off into the distance for a little while. I waved my hand in front of her and didn't get any reaction. Eventually she returned the gum to her mouth and let out a sigh of utter bliss."
+    show AE love
     "I wasn't sure whether to feel proud or ashamed that she looked exactly as ecstatic as when we fucked the night before. With eyes like I'd never seen before, Shiori looked to me with a smile."
     AE "Ehehe! Like, omigawd! That felt soooo good!"
+    show AE smile
     "Shiori giggled vapidly as she chewed the gum. Her eyes were now bright and wide, but they still seemed unfocused somehow. She sat down on my bed and I could hear the springs beg for mercy. I let my gaze linger so I could watch everything jiggle."
     MC "Y-You alright?"
     AE "Yep!~"
+    show AE happy
     "Shiori, after a moments pause, took out her cellphone and began to tap at the screen as I adjusted my pants. With a wry wink, she flipped the device around in her hand before winking and snapping a picture."
     MC "Huh?"
     "I instinctively looked up towards her as she fluffed her hair with her hand gingerly. Then, charismatically, she looked over to me and smiled with a bit of an apologetic yet cutesy look."
     AE "Ehehe, sorry about that sweetie, just getting a good pic in!~"
     MC "N-No worries."
     "It was weird. It really did feel less like I was reconnecting with an old fling and more like I was with a celebrity."
+    show AE embarrassed
     "I finally sat down next to Shiori, causing her to bite her lip as I brushed against her thigh. She smiled and pushed her elbows together in a way that made her obviously-fake tits leap up at me."
     MC "Heh, I'll be honest... those were the last things I expected to see on seeing you again."
+    show AE happy
     AE "Oh? Those?"
     MC "Y-Yeah."
+    show AE smile
     AE "Thooose...?~"
     MC "U-Um..."
     AE "Massive titties?"
     MC "Eheh, yeah."
+    show AE love
     "With a giggle, she placed her hands on her breasts as she bumped them together."
     MC "Do those... hurt your back?"
+    show AE happy
     AE "Oh, you shouldn't worry about that."
     AE "I'm used to getting my back blown out~"
+    show AE aroused
     "Shiori then pulled both hands back and happily smacked her own jiggly backside a couple of times. With a wry smile, I began to rub her behind as well."
     MC "Eheh, damn I missed this."
     AE "Oooh?~"
     MC "Yeah."
     "Yet despite how much I was enjoying just grabbing a handful of the girl I used to know... my heart wouldn't stop thumping. Quietly, I leaned in towards her face with trepidation."
+    show AE aroused-2
     AE "Oh?"
     MC "I... missed this too."
     "And I leaned in for a kiss."
     "As our lips collided, Shiori and I began making out on my bed. Though my back started to ache a bit from having to crane myself over her massive hips, the way her tongue glided across mine was far too much for me to care."
     "Gingerly, while keeping one hand on her soft, supple ass, I reached up and began to pet her blonde, bulbous, butt shaped hair as I smiled."
+    show AE love
     AE "Ehehehe!~"
     MC "Mmm~"
     MCT "This..."
     MCT "This doesn't feel like just \"client\" making out."
     "After a while we pulled away and, almost like a dog, she tilted her head and smiled with the most innocent look I've ever seen. One which I thought impossible for Shiori of all people to make."
+    show AE neutral-smug
     AE "Sooo, was that good?"
     MC "... Yeah."
+    show AE neutral
     AE "Alright! In which case, I think I'm headed out."
     MC "H-Huh?"
     AE "Yep! Gotta head back to momma M. I don't want her thinking I got lost on accident like the ditzy bimbo I am!"
     MC "A-Ah... right... well um... I-I'm always here so..."
+    show AE happy
     AE "Yep, yep! I might not be in town often sooo... see ya around cutie!~"
+    show AE smile
     "With that, she sat up, as giddy and bouncy as she was last night, and walked her way over towards the door; a bounce and wobble in her walk the entire way."
     "But..."
     MC "Shiori, wait."
@@ -24664,12 +24692,15 @@ label AE099D:
     "I wasn't ready to say goodbye just yet..."
     "I wasn't sure if I was even saying goodbye to her."
     MC "Do... you wanna go out and get something to eat? Like, tonight?"
+    show AE neutral-eyebrow
     AE "..."
     "Something was surprising about her expression. For moment, it was one of shock and confusion, but it was then almost completely overtaken by a more cutesy questioning face as she put a finger to her pouty lips in thought."
+    show AE smile
     AE "Hmmm... weeeell... I really dunno if I can unless I get the okay from momma M."
     MCT "Momma M... fuck, that must be how she... well, \"she\" refers to her mother. That's fucked but... I'm not the one in control here."
     MCT "It would hurt if she asked me to pay for us to meet again... but if I have to, I will."
     AE "..."
+    show AE happy
     AE "Sure thing! Just make sure to pick somewhere that's like, totally yummy, okay?"
     "With that, my heart lightened and I breathed a sigh of relief."
     MC "How about Dorushia?"
@@ -24677,12 +24708,14 @@ label AE099D:
     MC "Awesome! Yeah, cool, cool. I uh... am really looking forward to it?"
     AE "Eheh, same here!"
     MC "Oh! I'll walk you out."
+    show AE smile
     AE "Aww, you're so sweet!"
     "As we walked out, I kept a close eye on Shiori as we walked down the hall."
     play sound Boing
     "*Bwoing* *Bwoing* *Bwoing*"
     "A very close eye."
     "As we made it to the elevator, I made my way in first, pressing the button to go down."
+    show AE happy
     AE "Oo! I know! I'll, like, totally go in butt first so that I don't get all stuck!"
     MC "Wait, I figured we would one at a ti-"
     "And yet before I could finish, Shiori pushed one of her gigantic asscheeks into the elevator, and then with a grunt, the other; completely filling it with badonkadonk."
@@ -24696,46 +24729,63 @@ label AE099D:
     "With little regard for decorum or getting caught, I unzipped my pants. Immediately, I felt the warmth of her gigantic booty against my member as I began to try and discreetly begin humping. Shiori gasped as she turned around and smiled."
     AE "Oh. Em. Gee! Kei you little horndog!"
     MC "Mmf, fuck."
+    show AE aroused-4
     "I felt embarrassed doing this and yet... as she bent over more and began to shake her ass from side to side, it just felt so unbelievably good."
     AE "Ehehe!~"
     AE "Ooo, I should try twerking! Wanna see my booty bounce?~"
+    show AE aroused-3
     "Before I could respond, Shiori bent down further, pushing me more and more between her cheeks as she began to bounce them, slamming that big fat badonkadonk into me as the elevator creaked."
     "The sheer weight of them felt as though they would crush me, and yet it was so orgasmic."
     "But speaking of sheer weight..."
+    show AE embarrassed
+    show dummy with vpunch
     "*KRRRRK* *Wrrrrr*"
     MCT "That's... not a good sign."
     AE "... M-Mm."
     "It seemed like even in her vapid state, she was still a bit embarrassed that her fat ass caused the elevator to glitch out. Shifting my body and zipping up, the doors opened as Shiori moved forward, once more getting her fat ass stuck."
+    show AE angry-2
     AE "Hmmmph! Kei baby, your elevator is mean."
     MC "Eheh, don't worry. Lemme give you a push."
     "Placing my hands once more on her massive cheeks and my groin in the center, I used my strength to push her out."
     scene Hotel Lobby
-    show AE neutral
+    show AE aroused-3
     with fade
     "With a bit of a ridiculous, exaggerated squeal, Shiori wobbled a bit on her tall heels as she stumbled out of the elevator, puffing up her hair with her hands as she did; two massive wobbling buttcheeks bouncing too and fro as she stabilized herself."
     AE "Hoo! That always feels sooo hawt."
     MC "Mmmhm, I bet."
+    show AE happy
     AE "Oh! Here's my number, by the by!~"
     "After taking a card from the club she worked at, she pulled a pen from the small metal basket on the receptionist's table."
     MCT "Ah... she's the ditz and yet I was so lost in my feelings and/or horniness that I hadn't even considered how I'd contact her. She's pretty quick, even in her current... uh... state."
+    show AE angry-2
     AE "Um, like, how do you spell \"Booty\"?"
     MC "U-Uuhhh... in English? I'm a bit rusty myself but..."
     MCT "She can't be serious, right? It was like her IQ just tanked as soon as she started chewing that gum."
     "As though reading my mind, Shiori blew another bubble, moaning gently as it popped. It was like she was getting dumber and dumber every pop."
     MC "Um... b-o-o-t-y."
+    show AE smile
     AE "Ahh, okay! How do I like, make it big?"
     MC "B-Big?"
     AE "Yeah, like in a text when you click on the uppy point arrow."
     MC "C-Capital letters?"
     AE "Oh yeah! You're like, sooo smart! Who taught you that english?"
+    show AE love
     MC "... You did."
+    show AE sad
     AE "... A-Ah... um..."
+    show AE glasses
+    show GumAE6EP with dissolve
     "Shiori's cutesy persona dropped for a moment as she looked down at her handwriting and sighed. Then, as she blew a bubble from her gum, she perked up again before finishing."
+    hide GumAE6EP
+    pause .5
+    show AE smile
     AE "Here ya go!"
     "I took the card and gave it a look."
     "Wobbelz d'Azz; Ur perzonal BOOTY call ;P"
     MC "Eheh, nice."
+    show AE happy
     AE "Mhm! Bye-bye, Kei-kun!~"
+    hide AE with dissolve
     "It had been a while since anyone called me that. Even when we were dating, Shiori would never. As much as I missed her when she wasn't acting like herself, there was almost a free spirited cutesy charm to Shiori... or, Wobbelz that I found so refreshing."
     "As Shiori left the building, I turned around to head back to the elevator..."
     MC "..."
@@ -24746,16 +24796,18 @@ label AE099D:
     Receptionist "... Wow..."
     scene black with fade
     pause 1
-    scene Restaurant with fade
+    scene Tokyo Restaurant with fade
     "I sat there, kind of nervous as I looked around. What would Shiori wear? Would she get stares? Would the owners call us out and boot us? Was the receptionist from earlier staring at Shiori's ass? Why was she blushing? Is that why she said she'd be quiet?"
     "All these thoughts rushed through my head as, after a moment, I heard the door to the restaurant open. With a sigh I turned around and..."
-    show AE neutral
+    show AE neutral with dissolve
     AE "Ah, there you are. Good afternoon, Hotsure-san."
     show dummy with vpunch
     MCT "W-W-W-W-WHAT?!"
+    play music ClearSkies
     MC "Uhhh, h-hey, Shiori. Are you... um..."
     "I looked her up and down as my jaw hung open, choking on my own words. She really was just going to show up wearing the same outfit from earlier?"
     "Admittedly, I'd hoped to see her in some other outfit than what I had seen her in before. This look was almost kind of... too fabricated."
+    show AE happy
     AE "Apologies for my tardiness. My set had gone on a bit long."
     "As she spoke, my heart almost fluttered a bit. Hearing that officious and almost overly formal tone of voice... it was as bittersweet as it was alluring. As though, despite her almost comically outlandish appearance, it was still her."
     MC "Oh yeah? I'm uh... guessing you didn't have much time to change?"
@@ -24778,38 +24830,52 @@ label AE099D:
     MCT "What, do I just ask if she doesn't wear them any more because she doesn't feel it's right?"
     MCT "Nah. I have more tact than that."
     MC "Well, hey, you look good either way. Nice to see more of your pretty face, eh?"
+    show AE neutral-smug
     AE "Aha! You still know how to flirt, I see."
+    show AE happy
     AE "I like that."
     MC "Eheh, w-well, uh, either way, good to hear you're taking care of your eyesight. I was actually worried about how mine will be soon enough, haha."
+    show AE neutral
     AE "Oh? Why? I figured your beautiful green eyes would be perfectly sharp considering they're usually guarded so often."
     MC "Actually nah, uh... did you hear there is supposed to be a big solar eclipse tomorrow?"
+    show AE neutral-eyebrow
     AE "Oh really?"
     MC "Eheh, yeah, yeah. Exciting week all around! I mean, meeting you again!"
+    show AE happy
     AE "Truly. I'm glad to have... seen you again."
     MC "How about you? How was your week?"
+    show AE neutral-smug
     AE "Well, work has been rather exciting this week. Last night a patron apparently ejaculated a gallon of his own seed into his pants and just left them there in the bathroom."
     MC "GHK-!"
     "I almost choked on my water as I tried to hold back laughter. Shiori chuckled as well looking at my face."
     MC "Oh holy fuck, I wasn't expecting that."
+    show AE neutral-annoyed
     AE "L-Language."
     MCT "You are the LAST person to be concerned about modesty right now."
     MC "Well damn, that's impressive."
+    show AE neutral
     AE "Bah, nothing impressive about it."
     MC "I'd say making an entire room of men nut themselves is a pretty big feat."
     AE "Tssh, not an *entire* room. Juuust the ones who get *reeeeally* into it."
     "Perhaps it was because the lack of patrons, maybe it was because no-one was seemingly paying attention, but I decided to be a bit daring as I spoke to her in a hushed tone."
     MC "How'd you do that, by the way?"
+    show AE neutral-eyebrow
     AE "Hm?"
     MC "It felt like you were playing my dick like a symphony, eheh."
+    show AE happy
     AE "Ah, if you'd believe it, a lot of research went into that performance; I made it myself."
     AE "It uses basic triggers and sound profiles which I associate with the feeling of build up, and use that throughout the dance. The music and lights are designed to be rhythmic, which can make people focus on their heartbeat and naturally that affects blood flow to-"
     MC "Pff hahahah!~"
+    show AE neutral-eyebrow
     AE "Eh?"
     MC "You really haven't changed a bit, have you?"
+    show AE embarrassed
     AE "... Hm."
     "Shiori looked off to the side as I said that, almost avoiding my eye contact."
+    show AE happy
     AE "Heh, actually... y'know it's kind of funny."
     MC "Hm?"
+    show AE neutral-2
     AE "When we uh... well, when you were my first, back then, I also told myself you'd be my last."
     AE "Kind of laughable to think about now, eh?"
     MC "Heh... yeah..."
@@ -24817,34 +24883,43 @@ label AE099D:
     MC "..."
     MC "Well... what changed?"
     AE "..."
+    show AE neutral
     AE "Pssh..."
     "Shiori then, rather tersely, brought her hands up to her round, firm breasts and clacked her nails against them."
+    show AE aroused-2
     AE "You think these paid for themselves?"
     MC "M-Mm, right..."
     "I wanted to come back with a bit of a quip but... even I would admit, talking to her and having her say that was... extremely awkward."
+    show AE neutral
     AE "J-Jokes aside, um... it was for pleasure reasons on my end. The monetary aspect is more of my mothers business."
     AE "I would say I'm rather well off. That is, I am not financially independent, however I do have at least some say in a portion of the money I make."
     AE "Aside from that, a pretty big chunk of the money I make goes to my little sister. We don't-"
     MC "I'm sorry, hold up, what?"
     AE "Ah. Yeah... we really haven't spoken in a long time."
     MC "You have a sister?"
-    AE "Mhm. She just turned 7 a week or two ago."
+    AE "Mhm. She just turned 6 recently."
+    show AE sad
     AE "I uh... I don't see her."
     MC "You don't?"
+    show AE neutral
     AE "No, no. She lives with my uncle. I... ensured that one of the prerequisites for working with my mother when I found out was that Shizu-chan would be kept as far away from our world as possible."
     AE "Aside from the moral reprehensibility of such a situation... I would prefer if the stories she's told about me are of a doting and protective sister rather than the reality of... well..."
     AE "I simply hope my fame is never given enough exposure to dictate such a thing. But we do not dictate our legacies; they are always curated by our actions and the tales told about us. That's something I've accepted for quite some time."
     MC "... Mm. I get what you mean."
     "That sounded a lot like Shiori for sure. At the same time it made me wonder, what else didn't I know about her? And how much of that gap in my knowledge had been around since we met back in Seichou?"
     MC "Well... if I can be honest, I don't think that like... when you get like... you were earlier um... it would count towards that."
+    show AE neutral-eyebrow
     AE "... May I ask what you mean?"
     "I sat there, stumbling on my words a bit as I was unsure how to really put my thoughts out in the open."
     MC "I dunno..."
+    show AE neutral
     AE "..."
     MC "I don't know who I had sex with last night, to be honest."
+    show AE neutral-smug
     AE "Well... your own personal bimbo slut for the night. That is to say; me."
     MC "Is it you? I mean, last time I saw you, you wouldn't say that of yourself... right?"
     MC "I mean, c'mon, you can't reasonably say this is what you wanted for yourself, right?"
+    show AE neutral
     AE "... May I propose an allegory for your consideration?"
     AE "How does one take a studious, uptight, dour girl like I once was, and turn her into something... outrageous? How does one turn a woman into a silicone filled parody of femininity?"
     AE "The answer is: slowly. A bit here and there, making her dumber, sluttier, hornier... and she tries to fight it. She's in denial about how good it feels, puffing up her persona like a bubble."
@@ -24853,6 +24928,7 @@ label AE099D:
     MC "..."
     AE " I suppose the answer is... maybe... maybe it was. Maybe all that time I spent keeping my hair straight and my blouse buttoned was to just make the change all the more extreme when it finally happened."
     AE "Every year, every month, every day I resisted the path that could be laid out for me would just show how strong that force was when it finally overwhelmed me. When it finally did..."
+    show AE embarrassed
     AE "Well, let's just say there's a reason why I am so giddy when my bubble pops."
     MC "... It's your fetish?"
     AE "..."
@@ -24864,7 +24940,9 @@ label AE099D:
     AE "..."
     "She seemed uncomfortable... as though she'd been pinned with a dagger..."
     MC "S-Sorry, that was... fucked of me to ask. I shouldn't have-"
+    show AE neutral-2
     AE "No, no, not at all..."
+    show AE embarrassed
     AE "Um..."
     AE "Yes. Often. When I do... well..."
     AE "That's when I prefer to um... just let the bubble pop."
@@ -24892,6 +24970,7 @@ label AE099D:
     MC "The reflection...?"
     MCT "How is anyone that attentive? Even after all these years, she has a mind like a steel trap."
     MC "Eheh... thanks."
+    show AE happy
     AE "No problem."
     MC "Well... see you around."
     AE "... Thank you."
@@ -25408,6 +25487,7 @@ label AE100D:
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     "Wobbelz 'd Azz"
     MCT "Search."
+    play music DayByDay
     "Within a few moments, multiple options came up as I looked through her repertoire. Adult films, news articles, everything. However, I scrolled through with purpose, trying to find what I was looking for."
     MCT "There it is. Her insta."
     MCT "I've been looking for this for a while by searching for her real name, but nothing came up. In a way, that squares with what she had said yesterday."
@@ -25419,29 +25499,36 @@ label AE100D:
     "It was just her. Looking nervous as she posed in a pretty pink dress, blowing a bubble."
     MC "..."
     "I save the image in both my photo gallery and in my mind. I wanted to keep that thought of her. After all..."
+    play sound Knock
     "*Knock* *Knock*"
     "I wanted to think of it when I tell her how I feel in a bit."
     "Standing up from my bed, I walked over to the door. Opening and closing my sweating hands, I cleared my throat as I opened the door."
-    show AE neutral with dissolve
+    show AE happy with dissolve
     extend " Shiori stood, a knowing yet slightly bemused smile on her face."
     MC "Hey!"
     AE "Hey indeed. You certainly wasted no time in using my number."
     MC "Eheh, yeah, I was just excited to um... see you is all. Come on in!"
     "Shiori waddled in, squeezing her butt through as best she could as she thrust her massive hips continuously to get it unstuck."
+    show AE angry-2
     AE "Ah, here we are."
     MC "Yeah, sorry; I should definitely get some stuff worked on. This building isn't exactly Factor Friendly, if you know what I mean."
+    show AE happy
     AE "Ahaha, yeah, I understand. I've had to deal with these sorts of things for a while."
     MC "Right, I get ya."
+    show AE neutral
     AE "Mhm."
     MC "Uh..."
     "There was a bit of awkward silence as I was unsure what to say next. I wasn't sure how to continue the topic, after all... doing something like this was the last thing I ever thought I'd do. Shiori, however, noticed this as she spoke first."
     AE "U-Um..."
     MC "Hm?"
+    show AE smile
     "I looked to Shiori as she merely sighed. With a plain, matter-of-fact look, she just smiled and shook her head."
+    show AE happy
     AE "If you'd prefer... we can just get to what you want. N-Not that I have a problem with us spending time together just... um... I can understand that this is a bit awkward."
     MC "Oh! Yeah, no um... I guess... this is a big deal, so..."
     AE "Mhm. I never thought this is how things would turn out but... here we are. I can understand a slight feeling of um... shame."
     MC "Right, and that's something I'm absolutely willing to shoulder..."
+    show AE neutral
     AE "Yes. As per my... unique assets, my rates are rather high."
     MC "I- Huh?"
     AE "Right. So... even if this isn't what you had expected, I have to let you know that I still need to bring home some cash to my mother. However... I'm willing to just include everything for you..."
@@ -25450,39 +25537,49 @@ label AE100D:
     MC "... Shiori..."
     MCT "She... really has the wrong idea here."
     MCT "Yet even so... she's shaking a bit. Is it because this isn't us making love but..."
+    show AE embarrassed
     AE "Hah... it's odd... why am I hesitating? With you of all people?"
+    show AE neutral
     AE "I suppose we can figure these things out after I'm done. For now, I believe I have an ample enough solution to... quell this hesitation."
     "After a moment, she reached into her purse to grab her gum container, just for me to pipe up."
     MC "A-Actually, um..."
+    show AE neutral-eyebrow
     AE "Hm?"
     MC "Could you, uh... not take a piece of gum?"
     "Shiori's eyes widened a bit in surprise. It seemed she hadn't expected that response of all things."
     AE "Oh? That's... interesting. Most people want me to be a bit more ditzy and carefree when I do my work... however, I suppose that it makes sense you'd possibly want a more mature edge."
+    show AE neutral-2
     "As she spoke, she looked me in the eyes. That shared glance between us... told her everything."
     MC "..."
+    show AE embarrassed
     AE "..."
     AE "A-Ah... ahah..."
     AE "Well... I suppose that explains it."
     AE "I had a feeling this wasn't going to be going exactly as you had said over the phone."
     MC "I'm sorry for tricking you."
+    show AE happy
     AE "No need to be. You were certainly very cordial with me the entire time, now weren't you?"
     MC "Well, what can I say, when I wanna see a gal, I always do my best to know what makes her comfortable."
     AE "Like waiting outside of the club I work at with flowers and then going home embarrassed when you were told I wasn't working today?"
     MC "Eh... y-yeah, eheh... what can I say, I thought some flowers would look good near the stage when you were doing your set."
     AE "You must really like that place, huh?"
     MC "What can I say? Best club in Tokyo."
+    show AE sad
     AE "Pssh. Well, I wouldn't get too comfy, my contract here is over in a week. Afterwards, I'm out."
     MC "Huh? Out?"
     AE "Mhm."
     "There was almost a chill in her speech as she nodded to me, avoiding eye contact as she confirmed her departure."
     MC "Ah... well uh... where are you going?"
     AE "..."
+    show AE neutral
     AE "I dunno. My mom decides that."
     AE "She wants to start pumping collagen into my lips, so there's that."
     MC "Ah..."
     AE "..."
+    show AE sad
     AE "How much do I have to change before you no longer recognize me?"
     MC "Huh?"
+    show AE angry-3
     AE "What I mean is... what would it take for you to just forget about Shiori?"
     AE "How much do I have to change myself to finally be rid of that... old me."
     MC "What? Shiori..."
@@ -25491,21 +25588,26 @@ label AE100D:
     AE "It's this agitating feeling of wanting release... hm... yet in a way... perhaps I've become accustomed to the swelling... the pressure. I suppose that scares me most of all."
     AE "If I can't even let that part of me pop... can't it just float away?"
     MC "... I've always thought you too grounded for that."
+    show AE neutral-2
     AE "Heh, clever wordplay. The fact remains, however... the longer I hold on to this uptight, stickler class president within... I will never feel like I can live without at least some level of shame or embarrassment."
     AE "As much as I like being humiliated... as much as it turns me on to be degraded and treated like a dumb slut... why do I feel like I'm not me?"
     AE "If this was always my destiny... why do I feel betrayed by myself."
     MC "..."
     MC "I'm not going to say I agree."
+    show AE neutral-eyebrow
     AE "Hm?"
     MC "With either assessment. I don't agree that this was your destiny... or that you betrayed yourself."
     MC "When you blow that bubble... when your bubble pops... you become someone else, right?"
+    show AE neutral-2
     AE "... You are correct. In order to quell that voice, a big part of my training to become who I was always meant to be involved the foundation of an... identity that I can use to dissociate my actions from. The hypnosis sessions were VERY in depth."
     MC "Your mother forced you to-?"
     AE "No."
     MC "..."
+    show AE angry-3
     AE "I did it myself. I wanted to."
     AE "I asked for it."
     MC "..."
+    show AE sad
     AE "After graduation... I cracked. Perfect grades or no, I knew I couldn't follow my ambitions any further. I knew that in the end, the part of me that was so... wanting would keep wanting more and more."
     AE "So, naturally, I went to my mother and just... gave in. I let her know that what she wanted for me was right, and that there was no point in trying. I had no-one... so... I wanted to at least have her."
     MC "She was all too happy to oblige, I assume."
@@ -25518,9 +25620,11 @@ label AE100D:
     AE "Of course. She did when I left... but after laying he eyes on me she said there was no way... and she let me know I my personality didn't match what she needed. I was too boring." 
     MCT "What's going on? From everything she told me... this shouldn't be how this goes down. Shiori had a chance to escape... why?"
     MC "Weren't you relieved?"
+    show AE sad
     AE "... I was heartbroken. I had resolved to give up, but... she wouldn't let me. I objected."
     AE "I let her know that I had spent so long fearing what would happen if I fell down this path, and for her to just... to just try and keep me from my destiny?! No... I would never accept it."
     MC "What... what did she do?"
+    show AE neutral-2
     AE "She... looked confused. She probed me. I remember exactly what she said: \"Well? Out with it. In what way do you feel yourself gravitating towards \"that life\"\"?"
     MC "..."
     AE "So... I told her everything. I let her know what we did that night... I let her know I um... that I have a bimbo fetish... she immediately cut me off and said that was obvious. That just having a fetish isn't enough."
@@ -25534,13 +25638,16 @@ label AE100D:
     AE "Whenever I would ask about our conversation, she would just sandbag it... until eventually, she would, casually, bring up sex related topics. Why I was interested in what I was, what I liked about men... all sorts of things."
     AE "Sometimes, when I would answer, she would chide me, but other times... she would be understanding. In fact... she would sometimes laugh. But not to insult me... it was almost like a playful laugh. One I hadn't heard since I was a girl..."
     MC "What... was she to you?"
+    show AE sad
     AE "... She was... she is... someone in my life I needed. She... she picked me up when I was at my lowest point... she made me feel... special."
     MC "... Like I did?"
     AE "... Where were you?"
     MC "Ngh..."
+    show AE embarrassed
     AE "A-Ah! I'm so sorry, I didn't mean for that to come across as hostile! I just meant... well... y-yes, after I um... drove you away... I didn't have anyone. Just a void... a void she filled."
     "I rolled my shoulders a bit and sighed, the same question she posed being one which ran through my mind for years."
     MC "Yeah."
+    show AE neutral-2
     AE "... As things progress, and months go by, she began to spend money on me. For the first time in so many years, she spent money to care for me."
     AE "She buys me, Shiori, a new phone, sets me up with her in an apartment... I-I really underestimated just how much she had..."
     AE "That was the first year... the first year was just me living on my own... with her visiting. I was so lonely... and yet I've always been that way. Never able to make many friends... and being too ashamed to try."
@@ -25572,22 +25679,28 @@ label AE100D:
     AE "But... I can't say I hate it."
     MC "Hm... I can't really say I ever expected that from you at first."
     AE "How could you not? I figured I'd always been one to take things to extremes."
+    show AE sad
     AE "Ultimately, it's not up to me. I'm just a puppet for destiny."
+    show AE aroused
     "With sensual emphasis, keeping her eyes locked on mine, she bent over a bit as she gave me a lust filled gaze and placed her hands on her gargantuan wobble wagon."
     AE "A horny little bimbo fuck puppet~"
     MC "... I didn't know puppets could blush."
+    show AE angry-2
     AE "..."
     AE "Like I said, I can't say I hate it."
     AE "Perhaps I'll end up with big silicone boulders on my chest I'll have to lug around like my ass?"
+    show AE aroused-4
     "Shiori pressed her chest up against me. The firmness was so strange knowing firsthand how soft the rest of her was. But after experiencing what they were capable of, I stiffened up regardless."
     AE "Just huge, monstrous melons that nobody will ever believe are natural. Tits you can see from across the street as being huge. So firm that it's like a drum stuffed with implants." 
     "She dragged her boobs down my front, and towards my crotch. A faint smile grew on her face as she backed away, slowly, as if her invisible bust was inching out before her."
     AE "Breasts so utterly ridiculous that you can't even see my face behind them. I'd need a guide-dog to lead me around, and tables to rest them on at all times. I've gone around for years with a heavy ass, but my back can only take so much."
     "As she talk, I couldn't deny that her sensual tone of breath had caught me off guard, and even aroused me a bit... but... I was determined."
     MC "Well, if it's any consolation, I'll be there every step of the way."
+    show AE angry-2
     AE "... What?"
     MC "If you end up with giant fake tits, I'll help ya lift 'em. If you end up with huge lips I'll be there to kiss them. If your ass gets so big you can hardly walk? Guess who'll be there to help you waddle?"
     MC "To me... trying to destroy who you are... I could never be okay with that. Deep down... I don't feel you are either."
+    show AE embarrassed
     AE "...Mng..."
     MC "If I remember anything from your philosophies... you cannot separate the action from the actor,  so to speak. To me, you are just as much Shiori as you are ‘Wobbelz', and no level of dissociation can spit that."
     MC "I was going to tell you earlier that... I want the real you... the other side of you."
@@ -25613,10 +25726,12 @@ label AE100D:
     MC "It's fine. I felt the same way..."
     MC "But... I made it out fine. As for you?"
     MC "You graduated from purgatory and were thrust straight into hell."
+    show AE neutral
     AE "..."
     MC "So..."
     "Quietly, I reached out a hand to Shiori as she looked to it, and then at me."
     MC "Let's reclaim our heaven."
+    play music Love
     AE "..."
     "She sat there in silence. Ridiculous as she looked... as sensual as she looked... nothing could mask her pain."
     "Yet there was something I saw twinkle in her eyes."
@@ -25663,12 +25778,16 @@ label AE100D:
     "Getting on my knees, I reached her heels, slowly taking them off one after another. Then, I reached up and rolled down her fishnet stockings. Looking up at her, I moved forward and reached for her hands, which she stretched out to me."
     "I held the ends of her gloves and slowly slipped them off, her bracelets falling to the ground. As she moved further back on to the bed, I reached up and removed the clasp on her necklace... before then untying her bra."
     "As I removed the bedazzled cloth from her chest, it was as though her large, taught breasts had not an inch of movement. Looking at her, baring herself, I stood up... and glanced down at her thong."
+    show AE happy
     "I looked up to her eyes and nodded questioningly. She nodded back gently with a smile."
     "I stood up and, spreading my arms as far as I could, grabbed the cloth which stretched itself across both of her massive cheeks. She lifted her legs as I rolled it down, my hand brushing against her butt as I reached back and unwedged it from between her cheeks."
+    show AE embarrassed
     "As it slid past her ankles and fell to the floor, I let my pants finally fall to the ground, pulling off my shoes and socks with my feet. For a moment, I almost felt like asking of she was ready..."
     "But we both knew the answer as we gazed at each other, everything bare; nothing between us. I knelt down, positioning myself on top of her as I looked her in the eyes. Reaching up, she pulled off my ponytail as she let my hair fall freely."
     "She gave a gentle smile as she nodded... and then... I thrust in."
+    show AE aroused-3
     AE "Nngh!~"
+    show AE aroused
     MC "Mmmf!"
     "As soon as I entered, it was like a shock ran through our bodies. The soft, supple skin of her heavy thighs quivered as I began to thrust slowly."
     "In and out, we moved our hips together in unison... yet the entire time, said not a word. Our expressions said more than enough. She winced and bit her lip, closing her eyes as she reached up and wrapped her arms behind my back."
@@ -25679,9 +25798,12 @@ label AE100D:
     "As we kept going, though, it became clear that in reality, the two of us here was all there needed to be as we locked eyes, never once breaking."
     "The tempo was reaching its fever pitch as we both held on tight, waiting for it to happen..."
     "And then..."
+    show AE aroused-3
     AE "AHN!~"
+    show AE aroused
     "Our bodies seized up as we came together, the tightness in my groin finally subsiding as I quivered, pumping load after load into Shiori as I filled her with my love. I collapsed onto her as we both kept panting."
     MC "Mmmn..."
+    show AE love
     AE "Haaah..."
     "Not a word was shared between us as we made love, and yet from the smiles on our faces, we were the happiest we've ever been. I collapsed to the side as she turned to meet me. Holding my hands, she nuzzled her head onto mine as we moved our knees in close."
     "As we lie quietly next to each other, I could feel that, in a way, this was unavoidable."

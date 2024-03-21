@@ -34918,14 +34918,17 @@ label WGGTS003:
 label WGGTS004:
     scene Dorm Exterior with fade
     play music DayByDay
+    if not getFlag("VisitedChukanPoint"):
+        $setFlag("VisitedChukanPoint")
     "The forecast had predicted sunny skies but I guess the weatherman was off today as the clouds had begun to set in shortly after lunch."
     "Surprisingly, despite the less than ideal weather Alice had insisted on going for a walk around the school grounds."
     show WG neutral with dissolve
     MC "Where are we going again?"
     WG "Oh nowhere in particular, just wanted to check out the rest of the campus. We've been here for quite a few months but I have yet to check out all the places around here."
     MC "What about that small area towards the Giant's dorms?"
+    #needs different callbacks once MC scene is in place
     WG "Can't say I'm familiar with that place."
-    MC "I think it was called Chūkan Point. It's the place with the large Japanese maple on a small island."
+    MC "I think it was called Chūkan Point. It's the place with the large cherry blossom tree on a small island."
     show WG neutral-2
     WG "Hmm, interesting. Sounds like a serene place for one to ease their mind. Do you know the way?"
     MC "Vaguely, I've seen it from the classroom window before."
@@ -34936,6 +34939,8 @@ label WGGTS004:
     scene Chukan Point
     show WG neutral
     with fade
+    if not getFlag("VisitedChukanPoint"):
+        $setFlag("VisitedChukanPoint")
     "As we walked towards the area, I noticed a large woman approaching from the other direction."
     show WG neutral at altMove(0.5, 0.75)
     show Jineko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
