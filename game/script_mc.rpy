@@ -2635,8 +2635,8 @@ label MC005:
     "I glanced around a bit as I came back down to Earth."
     show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0)
+    show Chiyo neutral
     with dissolve
-    #show Chiyo neutral with dissolve
     if isEventCleared("MC002") or isEventCleared("PRG011") or getFlag("Meet_Tsubasa"):
         MCT "Oh! Tashi-sensei and Tsubasa-sensei!"
     else:
@@ -2647,8 +2647,8 @@ label MC005:
     "Just as I started to walk toward them..."
     hide HR
     hide Tsubasa
+    hide Chiyo
     with dissolve
-    #hide Chiyo with dissolve
     "Speaker" "On this day, we remember the great Emperor Showa, and the period of shining peace that he granted us in his reign!"
     "A man came up to a microphone on one edge of the park and began to tell the story behind the Showa era, and Emperor Showa himself."
     "I listened and looked down for a moment."
@@ -2656,8 +2656,8 @@ label MC005:
     "The tale the speaker told was a familiar one, and though I still held respect for it, I had heard it many times before, so by the time it ended, I raised my head and continued onward to Tashi and Tsubasa."
     show HR neutral-2 at Position(xcenter=0.25, yalign=1.0)
     show Tsubasa neutral at Position(xcenter=0.75, yalign=1.0)
+    show Chiyo neutral
     with dissolve
-    #show Chiyo neutral with dissolve
     HR "... deeper than that. It's representative of Japan, and every person who lives-"
     show HR unique-2
     Tsubasa "Hotsure-san. Morning."
@@ -2720,7 +2720,7 @@ label MC005:
     MC "You as well, Tsubasa-san."
     "I bowed to her politely, and nodded at Tashi-sensei as I left the small circle."
     MCT "Eesh. Pressure times three. Damn."
-    #hide Chiyo
+    hide Chiyo
     hide HR
     hide Tsubasa
     with dissolve
@@ -9667,7 +9667,7 @@ label MC024:
             "Go talk to Aida.":
                 $setFlag("MC024_PRGTalk")
                 "I waited till the current batter managed to take a base off of balls, then headed across the walkway in front of the bleachers."
-                if checkAffection("PRG", ">", 4) or getFlag("MC009_PRGTalk"):
+                if checkAffection("PRG", ">", 4) or getFlag("MC009_PRGTalk") or getFlag("MC013_PRG"):
                     show PRG neutral
                     "As I drew closer, Aida glanced to her left."
                     show PRG happy
@@ -12057,6 +12057,271 @@ label global026_AE_end:
     AE "Many more soon enough, I reckon."
     jump daymenu
 
+label global032:
+    scene Hallway with fade
+    play music Peaceful
+    "I glanced ahead and walked past a few students chatting in the hall, doing my best to not make it look like I was staring."
+    "Two rather heavy-set girls stood milling around, somewhat oblivious to the fact that they were holding up traffic as I veered around them."
+    scene Classroom
+    show AE neutral
+    with fade
+    "I slipped into my classroom and walked down the aisle, parking myself behind Shiori and taking my seat."
+    hide AE with dissolve
+    "I'd woken up early this morning. After a trim and shower combo, I found myself with enough time to take it easy on the walk to class."
+    "Of course, me being me, some dawdling had taken place, but you win some and lose some."
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Alice and Aida stepped into the room, proceeding to move towards their seats,"
+    hide WG
+    hide PRG
+    with dissolve
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    extend " followed by Honoka and Akira."
+    hide BE
+    hide FMG
+    with dissolve
+    show RM neutral-2 with dissolve
+    "Daichi slipped in behind Akira, getting a mildly perturbed look from the girl."
+    hide RM with dissolve
+    "I unpacked my bag onto my desk, getting notebooks in places and pencils at the ready and such."
+    show HR unique with dissolve
+    "Tashi entered at the front, setting his bag beside his desk."
+    show HR neutral
+    HR "Matsumoto-san? If you would?"
+    show HR unique at altMove(0.5, 0.25)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    AE "Yes, Sensei."
+    hide HR with dissolve
+    AE "Stand."
+    pause 1
+    AE "And bow."
+    "The class bowed as was standard."
+    "As my head went down, despite my hair giving me the ultimate sunglasses shield, I tried with every fiber of my being to keep my eyes off of the pale globes in front of me."
+    MCT "... It's just right there."
+    MCT "Like... her skirt pulls up every time."
+    MCT "And she was big before. Like... what is a poor lad to do?"
+    "The temptation rush soon ended as I sat back down, adjusting a wayward hair from snagging my eyelid."
+    hide AE with dissolve
+    MCT "Alright. Brush aside the awkward. We're good."
+    "I glanced forward at Tashi-sensei as he sat down at his desk for a moment."
+    show PRG worried with dissolve
+    "My gaze fell on Aida, who was seated right in front of him."
+    if routelock == "PRG":
+        MCT "I might have to try and get Aida to make some more lamb chops sometime. Never would've thought they'd be so tasty."
+    else:
+        "Aida sat quietly, looking up at Tashi-sensei. One hand rubbed the side of her belly idly, her fingers going in little circles."
+        MCT "Hope she's not letting all the stress get to her."
+    hide PRG with dissolve
+    "I turned forward again, my glance inevitably coming across Shiori next."
+    show AE neutral with dissolve
+    if routelock == "AE":
+        MCT "My dear virtuoso of the keys. Another little hidden talent of hers."
+        MCT "What was that teacher's name that she mentioned? Some German name, right? Hans Schultz, maybe?"
+    else:
+        MCT "Laser focus as always, Captain Matsumoto-san."
+        MCT "Pssh, like I can tell that from the back of her head."
+    hide AE with dissolve
+    "A small, almost inaudible tap came from across the room as I glanced over."
+    show FMG neutral with dissolve
+    "Akira dropped a pencil lightly, bouncing the eraser on the desk and letting it bounce up where she caught it again."
+    if routelock == "FMG":
+        "A whimper from my calves made me throw one leg over the other and rub away for a second."
+        MCT "I feel like I'm 50 after that damn race."
+    else:
+        MCT "How is it that she seems so energetic even when she's bored off her ass?"
+    hide FMG with dissolve
+    "Behind Akira, a swish of gold dragged my eyes away and over to Alice."
+    show WG stern with dissolve
+    "Leaned over, Alice was setting her bag down, letting out a small grunt as she turned."
+    if routelock == "WG":
+        MCT "... She wasn't kidding about having a hard time bending."
+        MCT "Well, hopefully her concert will help take her mind off of things. Big deal for her."
+    hide WG with dissolve
+    "Far across the room, Honoka looked ahead in a rather tired sort of fashion."
+    show BE happy with dissolve
+    "Her boobs lay heavily on her desk, as if commanding the attention of every glance in her direction."
+    if routelock == "BE":
+        "I smiled like a total idiot."
+        MCT "... Nothing beats getting to see those things live and in the flesh. Glorious."
+    else:
+        MCT "She's lucky the desks are so huge here."
+    hide BE with dissolve
+    "I looked back and away."
+    show RM neutral with dissolve
+    "Daichi glanced around the room almost as much as I was doing. He looked to the front, then side to side, then eventually out the window and back again."
+    MCT "He's like a hawk lost in his thoughts. A very attentive, distracted hawk."
+    if isEventCleared("RM004") or isEventCleared("MC007") or getFlag("MC005RM"):
+        MCT "Well... I have an inkling on what he's got brewing up there."
+    else:
+        MCT "Hell... I see the dude more in class than I do in our dorm."
+    "Daichi glanced at me, then behind me, leading me to turn as well."
+    hide RM with dissolve
+    stop music
+    pause 1
+    MCT "Huh... no Yamazaki-san."
+    MCT "And she was gone yesterday, too."
+    MCT "Hope she's not sick or something."
+    if routelock == "AE":
+        "{i}Eerk-grk{/i}"
+        "My head whipped forward to Shiori."
+        show AE neutral with dissolve
+        MC "Something wrong?"
+        AE "Tashi-sensei will explain everything in a minute."
+        hide AE with dissolve
+        MC "... Everything?"
+        "I looked forward finally, as Tashi-sensei stood and walked to the middle of the room."
+    else:
+        "{i}Eerk-grk{/i}"
+        MCT "The hell?"
+        "I glanced up, and seeing nothing out of the ordinary, glanced forward."
+        show AE neutral with dissolve
+        MC "Ah... yes?"
+        AE "I assume you're searching for Yamazaki-san?"
+        MC "I... well, I was a touch curious."
+        AE "... Yamazaki-san is no longer able to attend class in person."
+        MC "Wait, what?"
+        MC "How do you-"
+        AE "Tashi-sensei will explain."
+        hide AE with dissolve
+        pause .5
+        MCT "Was she looking at me that whole time?"
+        MCT "At least it wasn't over the bowing thing..."
+    show HR neutral with dissolve
+    HR "Alright. I have a handful of announcements this morning, however, I'd like to begin with the most pressing bit, which I assume some of you may have already caught wind of."
+    stop music fadeout 2.0
+    HR "Yamazaki-san will no longer be joining us for class."
+    hide HR
+    pause 1
+    #we don't have any surprised sprites for RM, replacing with concerned-2
+    show RM concerned-2 at Position(xcenter=0.15, yalign=1.0)
+    show BE surprised at Position(xcenter=0.26, yalign=1.0)
+    show PRG surprised at Position(xcenter=0.40, yalign=1.0) behind BE
+    show FMG surprised at Position(xcenter=0.60, yalign=1.0)
+    show WG surprised at Position(xcenter=0.75, yalign=1.0)
+    show AE neutral at Position(xcenter=0.90, yalign=1.0) behind WG
+    with vpunch
+    FMG "What?!"
+    BE "Did she like... leave the island or something?"
+    play music GTS fadein 2.0
+    "Daichi's gaze suddenly shot to Tashi-sensei."
+    if getFlag("RMRoute_Unlocked"):
+        MCT "He would perk up at that."
+    "Alice, Aida, and Akira all looked floored, showing various levels of shock and disbelief."
+    hide RM
+    hide BE
+    hide PRG
+    hide FMG
+    hide WG
+    hide AE
+    with dissolve
+    show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    MC "Is she okay, Sensei?"
+    HR "Yes, yes. Yamazaki-san is fine, everyone. And she is still here on the island."
+    HR "Yamazaki-san has been transferred to a different campus, and will no longer be attending classes in person."
+    show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "Other... campus?"
+    if isEventCleared("RM004"):
+        MCT "That has to be the giant's dorms."
+        show RM unique with dissolve
+        MCT "Seems like he's at the same conclusion."
+        show RM neutral
+        MCT "Which would mean that she's above three meters. Or... {w} three and a half?"
+        MCT "Ach, whatever."
+        hide RM with dissolve
+    RM "So, she's at the giant's facilities. Interesting."
+    HR "This is nothing that demands concern. It is standard protocol for students who have the height growth factor."
+    HR "Once a student with that factor reaches a certain threshold, which is three and a half meters, that student is transferred to a campus within a large quarry. The \"Giant's Facilities\", as it's normally called."
+    HR "You all might know it as the \"Giant's Dorms\"."
+    hide WG with dissolve
+    MC "Standard protocol?"
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    AE "Seichou Academy's Students Policies, Rules and Regulations handbook. Chapter 7, Protocol 4, Page 78."
+    MC "... We have a handbook for rules and regulations?"
+    if routelock == "AE":
+        AE "... I knew that wasn't your rule book."
+        MC "I..."
+    pause .25
+    show AE neutral-eyebrow
+    pause .5
+    hide AE with dissolve
+    show PRG worried at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Aida slowly raised her hand after a second."
+    HR "Yes, Kodama-san?"
+    PRG "D-Does that mean... that we won't be able to see Yamazaki-san anymore?"
+    BE "Yeah, are we able to visit her at her dorm?"
+    HR "Inoue-san... a hand-raise, please."
+    HR "But, yes. You may see her all you'd like."
+    HR "She and all of the other students there are still allowed onto the main campus. However, due to their factors, many of them will not be able to actually enter buildings."
+    HR "The giant's facilities are prepared for this, and are able to host students significantly above our threshold here."
+    if not isEventCleared("RM004"):
+        RM "How far above the threshold are we talking?"
+        "Tashi-sensei scratched the back of his head."
+        HR "I don't know the exact height off-hand."
+        HR "However, no student has ever outgrown it."
+    hide PRG with dissolve
+    HR "Now, as for her housing, Yamazaki-san was also relocated to a new dorm within the facilities there."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Akira's hand shot up."
+    HR "Yes, Mizutani-san? Go ahead."
+    FMG "How is she gonna be studying, then? Do they have their own teachers and classes over there?"
+    HR "Not quite. There are no official teachers there."
+    HR "The academy has assigned proctors who supervise the students and also assist teachers."
+    HR "Students in the giant's dorms are still a part of the same classes as you, and sign up for the same courses."
+    HR "The only difference is that they attend their classes remotely in classrooms over in their facilities."
+    hide FMG with dissolve
+    HR "If you'll all take a look behind you on the wall..."
+    "Everyone turned all at once to see a fairly high-end camera mounted to the wall, the unflinching lens staring forward at the front of the room."
+    HR "That camera projects to the giant's classroom. So, in essence, Yamazaki-san is still here. Just not... {i}here.{/i}"
+    "A few members of the class looked up at it for a moment longer. Of the two, Daichi cocked his head as he stared at it."
+    show PRG unsure at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Up front, Aida turned back to Tashi-sensei, her head going down, rubbing one shoulder."
+    "Tashi-sensei looked to her, then to everyone else."
+    HR "Now, I should clarify. This device does not actually record anything. It only sends a live-feed for them to watch."
+    HR "As well, the camera is focused directly onto me and the board. None of you will be visible in the frame."
+    hide PRG with dissolve
+    "Behind me, Daichi muttered... something unintelligible."
+    "Alice raised her hand, to which Tashi-sensei nodded at her."
+    if isEventCleared("WGGTS001") or isEventCleared("GTSWG001") or isEventCleared("WGGTS002"):
+        MCT "She's probably got some good thoughts on this."
+        MCT "I mean, maybe it'll be good for those two to have some space."
+        MCT "Still not counting on any uptick in friendship for those two though."
+    else:
+        MCT "... This'll be interesting. Fire and ice, those two."
+    WG "If the giant students are taking their classes remotely, wouldn't that give them a rather large opportunity to avoid doing any work and just slack off?"
+    HR "That is a very good question, Nikumaru-san."
+    HR "However, the odds of that happening are quite slim."
+    HR "Proctors oversee their classes and also monitor attendance."
+    HR "As well, giant students have to log in to the system in order to use it. So, I'll be able to see who's logged in and viewing the lesson."
+    HR "Any more questions?"
+    pause 1
+    HR "Right. Now, I would encourage all of you to keep in contact with Yamazaki-san."
+    HR "As everyone in this room rightly knows firsthand, a big change like this can be a lot all at once. And I'm sure she would appreciate the interaction."
+    HR "Moving on, a few more things here."
+    HR "I have your final exam schedules printed off. You may take them from my desk when you all leave today."
+    HR "You also can find them on the academy's intranet website after you log in."
+    HR "Lastly, you will all be signing up for your courses for the second semester very soon. Some of the courses will be mandatory, however there are electives that you may choose from as you see fit."
+    HR "Now, any final questions?"
+    pause 1
+    HR "Alright. That was all I had for you this morning, so take the rest of the time for yourself until the bell."
+    hide HR with dissolve
+    "Immediately, Shiori rose up and walked to Tashi-sensei's desk."
+    "I went right for my bag and started pulling out my homework for Tsubasa-sensei's class."
+    MCT "No time better than the present."
+    "I spread out a bit and set into it."
+    MCT "I wonder if Yamazaki-san is, like, in her own room by herself for this. Like, if she's watching this now, is she by herself since she's the only one of the giants in our homeroom."
+    if isEventCleared("RM006"):
+        MCT "I know Daichi is looking to find out."
+        show RM smug with dissolve
+        "I glanced over my shoulder."
+        "Daichi sat in his desk, a small, but knowing smile on his face."
+        MCT "... This won't be a big conversation later."
+        MCT "Agh, who am I kidding?"
+    "I tried to focus on my homework. Something that should have been done last night, to be fair."
+    jump daymenu
+
 label RM001:
     scene Dorm Interior with fade
     play music Schoolday
@@ -12958,7 +13223,7 @@ label RM003_After2:
     RM "I appreciate the thought." 
     show RM concerned-2
     extend " But it's a bit naive to assume Yuki would accept just covering up herself to hide from the world. She's so talkative and loves to chat with people, just seems like something she'd find uncomfortable and restricting."
-    MCT "\"Talkative\" was an understatement based on what I heard from Tomo. \"Motor-mouth\" was the term Tomo used."
+    MCT "\"Talkative\" was an understatement. \"Motor-mouth\" was the term Tomo used, and having experienced being cornered myself by one of her unrelenting verbal onslaughts, I could see why the name stuck."
     MC "I've heard from my sister she can be rather... umm... {i}verbose{/i}."
     show RM neutral
     RM "You don't need to dance around it, I'm quite aware of the impression she makes." 

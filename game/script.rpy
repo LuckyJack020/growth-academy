@@ -1,4 +1,5 @@
 #define config.interpolate_exprs = "fallback" #Add back in if interpolation ever fails again
+define config.mixed_position = False #Needed to keep Shaker working, as Position types were conflicting with math operands.
 default persistent.enable_notifications=2
 default persistent.enable_nsfw=True
 default AEOutfit = OutfitEnum.DEFAULT
@@ -110,6 +111,8 @@ init python:
         'cafeteria': ("school", (655,570)),
         'campuscenter': ("school", (570,390)),
         'classroom': ("school", (750,280)),
+        'classroom_2': ("school", (750,280)),
+        'classroom_3': ("school", (750,280)),
         'clocktower': ("school", (570,500)),
         'cookingclassroom': ("school", (740,490)),
         'dock': ("school", (1100,650)),
@@ -158,10 +161,6 @@ init python:
     debuginput = ""
 
     import math
-
-
-
-
 
     class Shaker(object):       #This is Python code to implement a feature to shake the screen around at random, not just in one direction like with the punch commands
 

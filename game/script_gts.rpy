@@ -5698,6 +5698,7 @@ label GTS030:
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("GTS", "GTS031")
+    $setTimeFlag("noGTS030")
     scene Dorm Interior with fade
     "I awoke to my alarm reminding me to go over to Naomi's dorm to grab the notes from last week's lecture that I let her borrow."
     RM "Are you gonna turn that thing off, or do I have to?"

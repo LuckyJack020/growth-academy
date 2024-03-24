@@ -5273,6 +5273,7 @@ label FMG031:
 
 label FMG032:
     $setProgress("FMG", "FMG033")
+    $setFlag("XX32")
     scene Pool with fade
     $setFMGOutfit(OutfitEnum.SWIM)
     play music Busy
@@ -19543,6 +19544,8 @@ label FMG089:
     jump daymenu
 
 label FMG090:
+    $setSize(6)
+    $setTimeFlag("size6")
     $setProgress("FMG", "FMG091")
     $setTime(TimeEnum.NIGHT)
     #$setFMGOutfit(OutfitEnum.NUDE)
@@ -20140,7 +20143,7 @@ label FMG091:
     jump daymenu
 
 label FMG092:
-    $setProgress("FMG", "FMG093")
+    $setProgress("FMG", "FMG093A")
     play music BrightLights
     scene Cafe with fade
     "Nat had invited Akira and me out to coffee to chat about the upcoming Strength Pentathlon. A part of me felt that maybe it might be a good old normal conversation." 
@@ -20358,7 +20361,499 @@ label FMG092:
     MC "You guys are lucky I finished my dailies, give me the tape measure."
     jump daymenu
 
-label FMG093:
+label FMG093A:
+    $setProgress("FMG", "FMG093B")
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setNatsOutfit(OutfitEnum.GYM)
+    scene Lockers with fade
+    play music Busy
+    "The day of the contest had finally come. Akira and Nat had just finished with their warm ups in the gym and were taking a breather before the contest."
+    show FMG flex with dissolve
+    "Well, that would have been the wise thing to do, but Akira was so amped up with anticipation she was practically bouncing off the walls."
+    MC "So... you think you're ready for this?"
+    FMG "You better believe it, Kei-kun! I've never been this pumped about anything before." 
+    MC "Anything not involving ice cream I'm assuming."
+    show FMG neutral
+    FMG "Well, yeah, but still."
+    show FMG happy
+    extend " I'm completely {i}STOKED!{/i}"
+    show FMG flex
+    FMG "I'm finally going to get the chance to take this {i}bod{/i} for a spin without having to hold back."
+    MC "Sounds frightening."
+    MCT "And arousing."
+    show FMG neutral
+    FMG "Nah, Hageshi-sensei said it was fine if the implements got damaged so we could go wild."
+    MCT "Now I'm starting to get excited."
+    MC "You think you got this? I mean, Nat's not going to go down without a fight, that's for sure."
+    show FMG angry-2
+    FMG "That's why I gotta go all out! If I slip up just a little bit I know she's going to punish me for it. For the first time ever, I got the size advantage on her." 
+    MC "Do you think that means you're stronger too?"
+    show FMG happy
+    FMG "That's what we're going to find out today!"
+    MC "And I'll be cheering you on the whole way."
+    show FMG neutral
+    FMG "Thanks Kei-kun, I know you will."
+    FMG "Looks like it's getting close to starting, let's go find Hageshi-sensei."
+    hide FMG with dissolve
+    "It didn't take us too long to find Hageshi-sensei when we found him talking with Nat."
+    show Hageshi neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    Hageshi "Are you ready, Okamoto-san?"
+    show Natsuko annoyed at Position(xcenter=0.8, yalign=1.0) with dissolve
+    Natsuko "You always told me that was a useless question. The real question is, \"Have you prepared?\"."
+    Hageshi "Glad to know you listen to at least {i}some{/i} things I've told you over the past year."
+    show Natsuko neutral
+    Hageshi "I have no doubt you've prepared yourself physically. What I meant to ask was how you are feeling? This is the day you've been waiting for, after all."
+    show Natsuko smug
+    Natsuko "I'm ready to put this matter to rest. Once I win— and I {i}will{/i} win— I won't have her shadow hanging over me. I'll be able to forget about her, knowing I didn't waste my talents like she did, by doing everything better."
+    show Natsuko annoyed
+    Hageshi "Is that all? How petty and disappointing. {w}You know Okamoto-san, resentment and anger might be enough to push you to victory today, but it won't do you any good if you hope to succeed at anything else in life."
+    show Natsuko frustrated
+    Natsuko "You {i}know{/i} how important this is to me. I've been training all year for this— and waited all my life for it."
+    Hageshi "Then you're going to have to dig deeper than that if you hope to win. You're not the odds on favorite anymore going into this contest, it's dead even."
+    Hageshi "So you'd better show me, and yourself, something really special out there if you plan on winning this thing."
+    show Natsuko smug
+    Natsuko "Then I'm glad you'll be there to witness it."
+    Hageshi "We shall see then."
+    show FMG neutral with dissolve
+    show Natsuko neutral
+    Hageshi "Good, Mizutani-san is here. Looks like it's getting to be about that time. Let's start walking over."
+    hide Hageshi with dissolve
+    FMG "Good luck today Nat. Let's give them a show!"
+    show Natsuko annoyed
+    "Natsuko's face turned to an even deeper scowl than her usual default."
+    Natsuko "This isn't training, Akira. It's a contest and I'm your opponent. If you want to even have a chance at winning I suggest you keep that in mind."
+    FMG "Aw, come on Nat, don't be like that. This is going to be {i}fun{/i}!"
+    Natsuko "Everything's a game to you isn't it? {w}Whatever. If having \"fun\" makes you feel better about losing, that's your business I guess."
+    show Natsuko neutral
+    show FMG happy
+    FMG "Hey! I never said I plan on losing. This time is going to be {i}very{/i} different from our previous contests."
+    show FMG surprised-2
+    show Natsuko annoyed
+    Natsuko "I'm not interested in listening to your stupid comebacks. We're finally settling this once and for all. I've gone easy on you in the past, but I'm not holding anything back today— and you're not going to like it."
+    "Natsuko had a temper at the best of times, but the way said that last bit sucked the air out of the room and made the hair on my neck stand up."
+    MCT "Man, what's gotten into her? She's really pissed."
+    show FMG angry
+    FMG "Yeah well you're-"
+    hide Natsuko with dissolve
+    show FMG angry-3
+    FMG "Hey! {w}You can't just walk away while we're trash talking!"
+
+    scene Campus Center
+    show Natsuko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Hageshi neutral at Position(xcenter=0.2, yalign=1.0)
+    show FMG neutral
+    with fade
+    FMG "Man, couldn't ask for a better day, the weather's perfect! No rain, not too hot, not too cool."
+    Natsuko "..."
+    Hageshi "..."
+    pause 1
+    MC "Yup, might even have to ditch my jacket if it keeps warming up."
+    FMG "I heard a {i}ton{/i} of people are going to be there for this thing! Finally, I'll get to show everyone what I can do, not just you three."
+    Natsuko "..."
+    Hageshi "..."
+    pause 1
+    MC "Oh, for sure. You're going to blow them all away. They ain't seen {i}nothing{/i} like this before, I guarantee it."
+    pause 2
+    FMG "Oh, and after I finish, I'm totally getting a big bowl of-"
+    Hageshi "Mizutani-san."
+    Hageshi "I suggest you try to forgo present distractions and focus more on the task at hand. This is going to be a heavy and difficult contest— even for you. The events, and the implements are dangerous."
+    show FMG surprised-2
+    Hageshi "By entering into this contest, you are risking serious injury. Give the events the attention and respect they deserve, or you may find yourself being carried off the field before you're able to finish."
+    FMG "Y-Yes, Hageshi-sensei."
+    show FMG neutral
+    Hageshi "Now, when we get there, hang out by the sidelines until you're called. There's still a bit of set up left and we'll go over the rules before the event starts."
+    Hageshi "Use that time to get your last minute warm ups in and some chalk on your hands."
+
+    scene Track with fade
+    play music Motivation
+    Announcer "Ladies and Gentlemen, welcome to the biggest spectacle of the year at Seichou Academy, the annual Strength Pentathlon."
+    Announcer "I am your MC for the occasion, Genji Nakayama."
+    Announcer "It looks like our athletes have arrived, please give them a warm welcome- show them who you're rooting for!"
+    "Crowd" "{i}*APPLAUSE*{/i}"
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "Let's go Akira! You got this!"
+    PRG "I hope no one get's hurt."
+    hide BE
+    hide PRG
+    with dissolve
+    show WG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "Akira doesn't have the best track record against Natsuko. I wonder if she can change that today?"
+    AE "Neither outcome appears certain, all that is left is to judge the results."
+    hide AE
+    hide WG 
+    with dissolve
+    Announcer "And we're just about to start. I'm going to hand it over to our on the ground commentator, Goro Saito, to hear from the contest organizer and head ref."
+    Announcer2 "That's right Genji I'm here to get the rundown from the master himself- every lady's secret crush- former Strength Pentathlon Champion- the Sentinel of Seichou in the flesh- Hageshi-sensei!"
+    show Hageshi neutral with dissolve
+    "Crowd" "Hageshi-sensei!"
+    Girls "He's so dreamy!"
+    Girls "Look at those arms! He's such a hunk!"
+    Announcer2 "Hageshi-sensei, for those that don't know, tell us what we're in for today."
+    Hageshi "The Strength Pentathlon is a time honored tradition at Seichou Academy that dates back to the first few years of its founding." 
+    Hageshi "It is an opportunity to celebrate the prodigious athletic ability of those who's factor has granted them incredible strength by encouraging those granted this rare trait to strive and achieve their true potential."
+    Hageshi "As fun as it is for spectators, for the athletes, it is a grueling test of strength and mental fortitude. They do not know what the events will be, save for a couple weeks leading up to the contest."
+    Hageshi "This is so they cannot specialize in the events— they just need to show up strong. {w}It is a grueling contest designed to test the absolute limits in these athletes that frankly haven't ever had the chance to test their limits before."
+    Announcer2 "Sounds exciting. I can't wait. I think everyone is excited to see two school record breakers going head to head."
+    Hageshi "It's certainly been an usual year, and we have two exceptional athletes that are well matched for each other. Even though there are only two competitors, it is likely to be the best match in the history of the event."
+    Hageshi "In anticipation of some record breaking performances, I enlisted the help of the chief of maintenance and shop manager of the school, Misuboro-san, to create all new custom implements to accommodate the event."
+    Announcer2 "Sounds awesome. Can you give us an overview of the first event?"
+    Hageshi "The first event will be the Mammoth Bar deadlift. It does not just refer to the barbell's unusually large size, it is specialty steel for heavy loads that provides high tensile strength at the expense of stiffness."
+    Hageshi "If the competitors do not account for the whip of the bar, it will cause all sorts of problems for them. A steady and controlled assent is needed, while pulling with everything you got."
+    Announcer2 "Very interesting, sounds like there's some strategy involved."
+    Hageshi "In a competition like this when you have to last for the long haul, there's always strategy. You have to know when to push it past your limits, and when to save it for later to leave some left in the tank for the next event."
+    Announcer2 "And it looks like the assistants have just about finished setting up the platforms for the lifters."
+    "The \"set up\" as it were for the event was perplexing. It looked like a barbell running through two medium sized dumpsters where the loading sleeves would normally be. Plenty of stones and sandbags were on standby for loading."
+    MCT "Looks like they ran out of weights to use..."
+    hide Hageshi with dissolve
+    Announcer2 "Hold on to your seats, we'll be starting momentarily as Hageshi-sensei has one last final overview of the rules with the competitors."
+    show Hageshi neutral at Position(xcenter=0.2, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.8, yalign=1.0)
+    show FMG neutral
+    with dissolve
+    Hageshi "Alright, a brief recap of the rules. No sumo stance, no lifting straps— not that I expect either of those to be an issue. Hitching is allowed, but the lift only counts at full lockout with legs straight, hips locked, and head up." 
+    Hageshi "Wait for my down signal. If you drop the bar that is a \"no lift\". More weight is added to the bins with each rep. It's going to get heavy really fast— even for you two." 
+    Hageshi "You have one minute to make a successful lift from the moment the new weight is loaded. So pace yourself if you can." 
+    Hageshi "If there is a tie for weight lifted, first place will be awarded to who did it faster. If somehow that is also a tie, it will be decided based on body weight."
+    Hageshi "That's everything. Are we clear?"
+    "Natsuko & Akira" "Yes, Hageshi-sensei."
+    Hageshi "Alright, head out to the platforms to take your grip on the bar."
+    Hageshi "Hotsure-san, I don't mind if you want to come down to the pit between events to help fetch them some refreshments, but for your safety I want you to stay in the stands during the events."
+    MC "Oh come on! So I'm just the waterboy?"
+    Hageshi "Well, you could be... {i}nothing{/i}. Does that work better for you?"
+    MC "Okay, okay. Good enough, I guess."
+    hide Hageshi
+    hide Natsuko
+    with dissolve
+    show FMG happy
+    FMG "One last kiss for good luck, Kei-kun?"
+    MC "Not that you need it, but I'mma gonna give you one anyway."
+    FMG "Aw, so generous."
+    MC "Show them what you can do now that you don't have to hold back."
+    show FMG flex
+    FMG "Oh, they don't even {i}know{/i}. The world ain't ready for it."
+    hide FMG with dissolve
+    "I walked back over the bleachers. When picking out a spot to sit by, I recognized someone I hadn't seen in a while."
+    show Yuko neutral with dissolve
+    MC "Oh, hey Mizutani-san. Akira said you were planning on making it out here for the contest, glad you could be here."
+    Yuko "I'm glad I could make the trip as well. It's a bit of a trip, but Akira said she had a friend that could help out with the arrangements, so I took her up on the offer."
+    MC "Ah, I see. {w}Well, cool. That was nice of Alice then. {w}Are you excited for the contest?"
+    Yuko "Sort of, I mean I really am, but more nervous than anything. I know Akira was excited for it. I can't remember the last time she was this excited about anything!"
+    MC "How about the last time she had ice cream?"
+    Yuko "I mean, excluding that."
+    MC "Yeah I know, she's pretty pumped for it. Look, they're walking up on the platform now."
+    Yuko "GOOD LUCK SWEETIE!"
+    show Yuko neutral at altMove(0.5, 0.25)
+    show Yua neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    "Yuko's comments caught the ear of one of the spectators in the stands behind us. Though not as big as Akira or Nat, she was an extremely muscular woman in her own right." 
+    "She must have been one of the former students living on the island that came to check out the contest."
+    "Muscle Woman" "Is that your daughter?"
+    Yuko "Yes. The one with the auburn hair and the shorts."
+    "Muscle Woman" "Ah, she looks strong. It will be a great contest, I'm sure. I heard both of the competitors are record breakers this year. That's the first time that's ever happened."
+    MC "Ah, I take it you've watched these contests before?"
+    "Muscle Woman" "Besides the one I was in, no. This year is the first I've been back to the island in a long time."
+    MC "Well you picked a good day for it. {w}Oh, nice. Looks like they're gonna start."
+    hide Yua
+    hide Yuko
+    with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    play music Natsuko
+    Hageshi "Athletes. Take your grip."
+    "Akira and Nat wrapped their hands around the bar, each doing their own subtle adjustments to their hips and feet placement before locking into the deadlift position."
+    "The loading bins were massive, even standing on a platform the bar came up to just a few centimeters below their knees, not the conventional bar height, but one more suited for Amazonian heights."
+    "Just one look at the bar and these two behemoths, and you could tell we were about to see some serious fucking weights lifted her today."
+    Hageshi "Bar starts at 1500 kilos. Athletes ready?"
+    "Both Akira and Nat gave Hageshi a nod."
+    play sound Whistle
+    Hageshi "LIFT!"
+    show FMG angry
+    "The two colossi jumped to life as their backs began to straighten out. The bar began to bend, curving more and more as the tension on the bar increased before even lifting the implements clear from the ground."
+    "Despite the explosiveness off the floor, Nat's barbell assent was smooth and steady all the way up."
+    show Natsuko smug
+    Announcer "Okamoto-san making it look easy!"
+    show FMG surprised
+    "Akira's not so much."
+    "In contrast to Nat, she rocketed the bar up so fast the flexing of the bar whipped it up and into her, sending her flying backwards— and flat on her ass."
+    show Natsuko neutral
+    Hageshi "Down."
+    Hageshi "No lift."
+    Yuko "Oh no! I hope she's alright."
+    show FMG surprised-2
+    "Muscle Woman" "Don't worry, the height of the bar can't crush her if she drops it, so that's good."
+    MC "Yeah, she'll be fine. She just got a little too excited, that's all."
+    Announcer "Uh oh, a little bit of a slip up for Mizutani-san."
+    Announcer2 "This bar is a completely different beast."
+    Announcer "It certainly is, let's see how she recovers."
+    show FMG neutral
+    "Akira quickly got back on her feet and regrouped. Not having to wait for a signal, she gripped the bar and tore into it, this time managing to keep it steady."
+    show FMG surprised-2
+    "Steady being a relative term."
+    Hageshi "Down. Good lift."
+    Hageshi "Down."
+    show FMG neutral
+    "Akira managed to recover, but by this point she was already behind Natsuko by 1 rep. The assistants, most of them muscle growth students themselves, tossed an extra 250kg of stone and sandbags for the next rep."
+    MCT "{i}Damn{/i},  that's more than my PR just being tossed on the bar for more reps." 
+    show Natsuko smug
+    Announcer "And that's three!"
+    extend " And four! Now five! This fiery red-head is on fire!"
+    Announcer2 "You're certainly right there Genji, she looks unstoppable! At this rate, it's going to be tough for Mizutani-san to keep up. She's looking mighty shaky with those pulls."
+    Announcer "I wouldn't count her out just yet, Goro. She's not slowing down and she looks determined to catch back up."
+    show FMG surprised-2
+    "Akira caught up to rep number five, the bar wiggling all over the place as she locked it out."
+    Hageshi "Down."
+    "Only to have Nat hit her sixth rep, smooth as butter."
+    Hageshi "Down."
+    show Natsuko neutral
+    show FMG neutral
+    MC "Man, Akira looks to be struggling with this one. I thought she'd have Nat on this for sure, but Nat's cranking out reps like a machine, each one looks the same."
+    hide Natsuko
+    hide FMG
+    show Yua neutral at Position(xcenter=0.25, yalign=1.0)
+    show Yuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Muscle Woman" "She's a clever one. She knows how to use the bar. The mammoth bar can allow you to lift more weight— if you know how to use it." 
+    Yuko "What do you mean?"
+    "Muscle Woman" "The force curve on it is all wonky. You have to drive with your feet to take the slack out of the bar." 
+    "Muscle Woman" "And then summon the rest of your explosiveness to get the implement off the ground, only to control the pace of the ascent to prevent it from wobbling."
+    MC "I knew Hageshi would put his sadistic twist on this thing somehow."
+    "Muscle Woman" "Don't worry, I think your friend is starting to get the hang of it."
+    Yuko "I hope so."
+    hide Yua
+    hide Yuko
+    show FMG angry-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    "Akira collected herself while the brawny assistants dropped the boulders into the bin for the next rep. Akira knew she was falling behind— she was having none of it."
+    MC "Come on Akira..."
+    Announcer "And that's six for Mizutani-san!"
+    Announcer2 "That one looked a lot smoother than the past few we've seen."
+    Announcer "That's right, at these weights you can't afford to waste any energy."
+    show Natsuko smug at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Akira was looking good, but right after that Nat pulled her next rep."
+    show Natsuko neutral 
+    MC "That one looked a little slower for Nat at the lockout."
+    Yuko "At over 3000 kilos, are you surprised?"
+    MC "With all I've seen with those two I don't know what could surprise me at this point."
+    show FMG neutral
+    "Akira moved right into her next rep behind Nat. It wasn't quick like the first few, but Akira made a nice transition from back to hip drive after getting it past the knees."
+    Announcer "Uh oh. Looks like Mizutani-san is starting to hit her stride. Think she can catch up?"
+    Announcer2 "Hard to say how much they have left in the tank at this point, but if that last rep is any indication of how much she has left, Okamoto-san ought to be worried."
+    "Nat for her part was unphased, she was focused on her form, which at this point was starting to break down under the pressure of the tremendous weight she had to lift."
+    "A swift surge of motion from her hips let all the slack out of the bar at once for a slow but steady rise above her knees... that appeared to be stalling out."
+    "Quickly pivoting, Nat let the bar rest on her massive thighs as she readjusted her torso to allow her to pull it back into her with her hips, grinding it up her legs to finally get the lockout."
+    Announcer "Can you believe it folks! 3,500 kilos! You won't see anything like this anywhere!"
+    show FMG angry-2
+    MC "Alright Akira, it's your turn, come on!"
+    "Matching Nat's explosiveness, Akira got all the slack out of the bar, giving it a slow and steady rise, stalling slightly, but managed with a slight hip hitch for the lockout."
+    Announcer "Unbelievable, Mizutani-san made that look easy!"
+    Announcer2 "Well, as easy as 3,500 kilos could be."
+    show FMG neutral
+    Announcer "That is true, we'll have to see if the competitors have anything left in them. Keep in mind folks the weight goes up with each rep and 250 kilos is not a small jump."
+    show Natsuko annoyed
+    "The bellowing thunder of the boulders being loaded into the loading bins rumbled through the air as Nat geared up for her next rep. Closing her eyes, she had a serene look on her face I hadn't seen from her before."
+    play music Rivalry
+    pause .5
+    "Only to watch the most primal fury become unleashed when she opened them."
+    "Muscle Woman" "Oh, she wants this one. I can tell."
+    "Nat gripped the bar, her forearms surging to life as the steel cables running across her wrist became taught. She pulled the bar so hard it looked like she was trying to snap it."
+    "The bend in the bar by this point was crazy. Already past her knees and the ends of the implement hadn't fully even left the ground, and it didn't want to move a centimeter more." 
+    Natsuko "UGH!"
+    Natsuko "HUT!"
+    Natsuko "{i}HEEUUT!{/i}"
+    "Centimeter by centimeter, Nat folded her torso, grinding the bar into her thighs to prevent the bar from sliding down, digging in for another hip thrust to work her way closer and closer toward lockout."
+    Announcer "Come on folks! Make some noise for her! She's so close!"
+    "For the first time in the event, Nat was shaking like a palm tree in a typhoon. She was at her limit for sure— but she wasn't about to give up. Nat was {i}so{/i} close, she dipped down for one last attempt to lock it out."
+    "As the bar began to raise the last few centimeters of her lockout, blood started to drip out of Natsuko's noise."
+    "Pulling hard and harder, as her whole body quivered, it began to gush as it flowed across her lips, smiling for the first time all day as she reached lockout."
+    Hageshi "Down."
+    show Natsuko happy
+    "Faster than a snap of the fingers Nat followed the bar down to the ground, not wanting to lose her grip and DQ the lift." 
+    show Natsuko flex
+    "She stood up, pumping her fist in the air, a mix of cheers and shock from the crowd from the triumph of the moment and its unsightly consequences across her face."
+    show Natsuko flirty
+    "Her celebration was cut short as the color left her face, and her legs buckled underneath her."
+    hide Natsuko 
+    hide FMG
+    with dissolve
+    "Crowd" "{i}*GASP!*{/i}"
+    show Yua neutral at Position(xcenter=0.25, yalign=1.0)
+    show Yuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Muscle Woman" "OH NO!"
+    "I'd never seen anyone move so fast as Hageshi-sensei did to catch Nat before she hit the ground. {w}Easing her down, he pulled something from his pocket."
+    Yuko "What's that?"
+    "Muscle Woman" "Smelling salts. That should wake her up... I hope."
+    hide Yua
+    hide Yuko
+    show Natsuko annoyed
+    with dissolve
+    "Nat sprang back to life shaking her head with a disgusted look on her face with the salts up to her nose. The crowd roared to life with relief that she was okay, while Hageshi gave the nod to Akira to continue."
+    hide Natsuko 
+    show FMG neutral
+    with dissolve
+    Announcer "And she's alright folks! But now it's Mitzutani's turn again."
+    Announcer2 "After seeing what that weight did to Okamoto-san do you think she's worried the same will happen to her?"
+    Announcer "I know I would, but as it is, she'll lose the event if stops here."
+    show FMG angry-3
+    "Akira steadied herself after letting out a sigh of relief. Gripping the bar, she sunk her hips down to then fire them back up, picking the slack out of the bar. Akira also hit the wall from where the implement left the ground, but managed to slowly work through it."
+    show FMG neutral
+    "Stalling slightly, she was able to finish the pull with one last shaky hitch."
+    Announcer "And that makes nine!"
+    show FMG happy
+    "The crowd cheered seeing Akira match Nat for reps."
+    MC "I knew she could keep up."
+    Announcer2 "And with that Mizutani-san matches Okamoto-san for reps, but that's not enough to tie it up."
+    Announcer "That's right, Goro. Having completed her reps slower, she'll have to do another one to come out on top."
+    Announcer2 "But the question is, does she have another rep left in her?"
+    Announcer "Well that's what we're here to see!"
+    show FMG sad
+    "Akira stood in front of the bar with her head down and eyes closed, listening for the banging of the boulders tumbling into the bins beside her."
+    show FMG angry
+    "With one last deep breath, she grabbed hold of the bar and let it {i}rip{i}, driving through the floor of the platform with all her might, yanking the bar as it flexed like a rubber hose."
+    "The bar began to rise steadily, even though the weight itself was anything but steady as it shook up and down with Akira struggling to maintain control."
+    Yuko "Come on Akira, give it your all!"
+    show FMG angry-2
+    "Akira shifted her hips down resting the bar on her thighs to go in for another pull."
+    MC "That's it Akira, you got this! Keep pulling, don't stop!"
+    "At this point, progress was painful. Akira was pulling and hitching with all her might, three different times at this point, only to barely gain a couple centimeters in height each time."
+    MCT "{i}Shit.{/i} She's beginning to stall."
+    MC "DON'T STOP AKIRA, NOW'S THE TIME TO GO {i}ALL OUT{/i}!"
+    "I don't know how she could have, with the roar of the crowd reaching a fever pitch by this point, but she must have heard me, because it was like a switch was flipped behind her eyes, reminding her why she came here today."
+    show FMG angry
+    MC "PULL PULL PULL!"
+    Yuko "PULL PULL PULL!"
+    "Crowd" "PULL PULL PULL!"
+    show FMG surprised-2
+    "The bar was shaking all over the place, its motion coursing through Akira like she was a tuning fork as she held on for dear life, but she wasn't about to give up."
+    MCT "Just one last pull..."
+    show FMG angry
+    "Akira cocked her head back, looking up to the sky, and with one last thrust of her hips, they managed to move forward, locking her legs and torso into a straight line."
+    Hageshi "Down!"
+    show FMG flex
+    "Crowd" "WHOOOO!"
+    Yuko "She did it!"
+    MC "FUCK YEAH!"
+    Yuko "?"
+    MC "Oh, sorry, Mrs. Mizutani-san."
+    Yuko "Hehe, that's alright."
+    "Muscle Woman" "She did a great job."
+    show FMG happy
+    Announcer "And with that we have a winner! 4,000 kilos CAN YOU BELIEVE IT?"
+    Announcer2 "I wouldn't if I hadn't seen it myself... But hold on there, it looks like Mizutani-san is calling for more weight."
+    Announcer "I don't know if that's the wisest choice given the struggle we saw on that last rep but she's certainly living up to the spirit of the competition."
+    MC "Heh, figures. I should have known she couldn't resist. Well, no sense in leaving any doubt."
+    show FMG flex
+    "Akira raised her arms out wide above her head, motioning with her hands to have the crowd amp up the hype, as the assistants loaded the weight."
+    "Crowd" "AKIRA AKIRA AKIRA!"
+    Announcer "And she's going for it!"
+    show FMG neutral
+    "Riding the hype of the crowd, Akira, completely amped up, swooped down into position and {i}attacked{/i} the bar with a ferocity that was well above the previous rep."
+    "Taking the slack out of the bar immediately, it only seemed to bend and bend, looking precariously close to snapping. Pulling with all her might, daylight began to emerge between the loading bigs and the ground as she got air under the implement."
+    show FMG surprised-2
+    FMG "{i}Uht! Heht! AHH!{/i}"
+    "Akira pulled with all her might until her face was beat red... but this time with nothing to show for it."
+    show FMG sad-2
+    FMG "{i}Ugh{/i}."
+    show FMG neutral
+    "Realizing there was nothing left to pull from the well, Akira set the bar down and motioned with her hands she was done."
+    Hageshi "No lift. Competitor is finished. The winner is Mizutani-san!"
+    "Crowd" "{i}*Cheers*{/}"
+    Announcer "Wow! What a performance from Mizutani-san!" 
+    Announcer2 "What a sight! Though one has to wonder if that extra attempt is going to come back to haunt her as the competition moves forward into the later stages."
+    Announcer "We'll have to see— but what a great spectacle for the crowd! Both competitors gave it their all, and that's what we came to see."
+    scene black with fade
+    pause .5
+    scene Track with fade
+    play music Peaceful
+    "Using my backstage access as the waterboy, I slipped my way down to the platform as Akira was stepping off."
+    show FMG neutral with dissolve
+    MC "You did great, Akira! I knew you could do it! Not a doubt in my mind!"
+    FMG "Is that so? Something tells me you had your doubts if you needed to tell me that."
+    MC "Well, things looked a little shaky at first, but I knew you weren't going to give up with everything on the line."
+    show FMG happy
+    FMG "To be honest I don't think I could have done it without you there to cheer me on, reminding me that it's finally okay to let loose now— and man does it feel good. It's like the training wheels are off and I can finally fly."
+    MC "I'll say, that shit looked {i}heavy{/i}. I thought that bar was going to snap!"
+    MC "Speaking of that though, are you sure it was a good idea to go for that last rep?"
+    show FMG flex
+    FMG "Like you said, now's the time to go {i}all out{/i}. I didn't want to walk off the platform with any doubts in my mind about what I could have done if I left it all out on the table."
+    show FMG neutral
+    FMG "Hopefully Hageshi-sensei will let us use the equipment after the contest. I'm sure I could pull that weight if I didn't have to do all those reps beforehand."
+    MC "That would be cool to see. Ready for the next event?"
+    FMG "That is if Nat's ready. I was pretty worried about her when I saw her go down. Knowing her, she'll bounce back, but still. I hope she's alright."
+    MC "Hageshi's got her cooling off in the field tent for event staff, let's go check on her."
+    scene black with fade
+    pause .5
+    #scene tent with fade
+    scene Track with fade
+    show Yua neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko annoyed at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    play music Rain
+    Natsuko "Who told you to come here today?"
+    "Muscle Woman" "Well, I know you told me a different day, but when I found out the event was today I just assumed you got the date mixed up."
+    Natsuko "Well I didn't. {w}This is {i}my{/i} day, the culmination of everything I've worked for and hoped to achieve. I don't need you here to be a distraction."
+    "Muscle Woman" "I'm sorry, Natsuko... {i}Sigh{/i}... I'll try to stay out of your way. {w}It's just that when I saw you pass out on the deadlift platform I was scared that you were seriously hurt-" 
+    "Muscle Woman" "There's a lot of things that could go wrong when the weights are so heavy... I just wanted to see... I just needed to know you were going to be okay."
+    Natsuko "I'll be fine. I don't need you to worry about me. I can handle myself. Stop trying to hover over me. If you want to sit and watch the event I guess I can't stop you, but just leave me alone and stay out of my way."
+    "Muscle Woman" "{i}Sigh{/i}...If...If that's what you want. {w}I'm just relieved to see you're okay."
+    hide Yua with dissolve
+    "In contrast to the beaming look of triumph on Akira's face just now, the muscular woman I met just moments ago walked past with one that was utterly downtrodden and defeated."
+    show Hageshi neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    show Natsuko frustrated
+    Hageshi "{i}Sigh...{/i} You know, most kids would {i}want{/i} to have their parents show up to their sporting events."
+    Natsuko "Yeah, and I do too... But he's not here."
+    Hageshi "Well, I hate to break it to you Okamoto-san, but you are all out of choices in that regard."
+    show Natsuko annoyed
+    Natsuko "{i}Pft{/i}, don't remind me."
+    Hageshi "As a matter of fact I will, since you seem to have forgotten she's your mother. {w}You may not like the one you were given, but you'll only ever have one. So show some goddamn respect." 
+    show Natsuko disappointed
+    Natsuko "..."
+    Hageshi "Since you seem to be back to your usual self, for better or worse, it looks like you're good to go for the next event." 
+    show Natsuko neutral
+    Natsuko "I'm not going to embarrass myself this time."
+    Hageshi "{i}Sigh{/i}... You're too quick to learn the wrong lesson, Okamoto-san. It's not such a big deal, it wouldn't be a heavy deadlift if you don't feel at least a little woozy afterward." 
+    Hageshi "You got a few extra minutes before the next event. Get some water."
+    Hageshi "Oh. Speaking of water, look who's here."
+    show FMG neutral with dissolve
+    MC "Nice to see you too Higashi-sensei."
+    Hageshi "Give me one of those."
+    MC "What? These are for the girls. Besides, I know you got that ridiculously large jug you haul around school somewhere."
+    Hageshi "Even I know better than to carry that thing around in public."
+    MC "Well, that's more than I gave you credit for to be honest. Okay, but only if you ask nicely."
+    hide Hageshi with dissolve
+    MC "Oh, come on! Is that too much to ask?"
+    MC "... {w}!"
+    MC "God damnit, how many did he take from my tote bag without me noticing?"
+    FMG "How you feeling, Nat?"
+    Natsuko "I'm perfectly fine, unnecessary distractions aside."
+    show FMG happy
+    FMG "You were awesome out there on the deadlift Nat! That performance was awe inspiring."
+    MC "It was metal as all hell too."
+    Natsuko "Thanks, I guess. But at the end of the day it wasn't good enough. I thought I could edge you out, but I knew my height was going to be a disadvantage with that event."
+    Natsuko "Savor the moment, because you're not going to have an advantage like that going into the next events."
+    FMG "Glad you're okay Nat. Everyone was worried when they saw you go down."
+    show Natsuko annoyed
+    Natsuko "I suggest you worry about yourself."
+    hide Natsuko with dissolve
+    MC "Good talk Nat. {w}At least she took a couple of water bottles for herself."
+    show FMG sad-2
+    FMG "Kei, that woman we saw talking with Nat..."
+    MC "I know, I can't believe I didn't realize who she was sooner! I was sitting next to her in the stands, she seemed to know an awful lot about her. That and the hair..."
+    show FMG sad
+    FMG "This sucks, I was really looking forward to meeting her, but the whole situation didn't exactly make for a good lead-in. I feel bad for her... for both of them really. {w}I wonder what Nat's deal is with her, she seemed so sweet." 
+    show FMG neutral
+    MC "I know you like to try to help Nat, but it's probably not the best time to try to step in the middle of any family drama."
+    FMG "Yeah, you're right. But hopefully someday I can talk to her about it."
+    MC "Don't worry, there'll be plenty of time for that before the year is done. Just focus on what's ahead of you right now."
+    show FMG happy
+    FMG "Mmhmm. You're right, Kei-kun. Time to get my head back in the game. Nat's not going to go down without a fight. She's not used to losing, so she's going to be hungry going into this next event." 
+    jump daymenu
+
+label FMG093B:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -20893,7 +21388,7 @@ label FMGGTS002:
     jump daymenu
 
 label FMGWG001:
-    $setFlag("noMC007")
+    $setTimeFlag("noMC007")
     "..."
     FMG "Hey, wake up, dude!"
     MC "Wah?"

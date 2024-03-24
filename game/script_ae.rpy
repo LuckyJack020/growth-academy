@@ -6586,6 +6586,7 @@ label AE031:
 
 label AE032:
     $setProgress("AE", "AE033")
+    $setFlag("XX32")
     scene Campus Center with fade
     "I sat on the bench under the shade of a dogwood tree, watching the blue, cloud-laden sky as I awaited Shiori-chan."
     "I tossed a peach up and down as I waited; blowing stray locks of hair up before they fell back down onto my face. I sat forward and looked around. Even though we only agreed on meeting here after class, it was never specified when."

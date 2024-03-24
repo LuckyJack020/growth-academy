@@ -5981,6 +5981,7 @@ label BE032:
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("BE", "BE033")
+    $setFlag("XX32")
     scene Classroom with fade
     "I didn't get to sleep right away the previous night. How could I? Even an hour after Honoka's boobjob, I felt flushed and excited. We didn't know what to do with ourselves."
     "Honoka took some time to clean up, as did I. Then we spent a bit more time together, watching television. It wasn't awkward, per se, but we kept looking back at each other the whole time."
@@ -13314,12 +13315,12 @@ label BE055:
     Hageshi "... and once you carry that over from your previous equation, you have your final answer here."
     play sound Bell
     Hageshi "Perfect timing. Your assignment is to complete all the odd questions on pages 255-257."
-    MCT "Ugh… Why doesn't he ever assign problems that have answers in the back of the book?"
+    MCT "Ugh... Why doesn't he ever assign problems that have answers in the back of the book?"
     Hageshi "And remember: if you get stumped on a problem, you can always work through one of the even ones that has the answer in the back of the book."
     MC "Gee, thanks Hageshi-sensei, you shouldn't have."
     Hageshi "You're right. I go too easy on you kids. I promise the next assignment will be a more appropriate difficulty level."
     "The entire class, even Shiori, groaned in response."
-    MCT "Shit… even Shiori doesn't enjoy logarithmic functions."
+    MCT "Shit... even Shiori doesn't enjoy logarithmic functions."
     FMG "Dude! Shut up!"
     hide Hageshi with dissolve
     pause .5 
@@ -13327,22 +13328,22 @@ label BE055:
     BE "Kei-chan,"
     MC "You don't have to tell me, I thought the same thing. \"How did we get to the point where we deal with letters more than we deal with numbers?\" "
     show BE shrug
-    BE "Not quite what I was gonna say…"
+    BE "Not quite what I was gonna say..."
     show BE neutral
     extend "But you're right! Where'd all the numbers go today?"
-    MC "And, don't even get me started on rational expressions…"
+    MC "And, don't even get me started on rational expressions..."
     show BE sad at center, Shake(None, .5, dist=1)
-    BE "Brrr… Literally gave me a chill up my spine with that one…"
-    MC "Heh. Sorry. Anyway, if it wasn't about that… what's up?"
+    BE "Brrr... Literally gave me a chill up my spine with that one..."
+    MC "Heh. Sorry. Anyway, if it wasn't about that... what's up?"
     show BE doubt
     BE "Would you mind coming with me to practice today? Y'know, to unveil what we worked on with Alice?"
-    MC "You have to ask? Of course I'll go. But… Why the sudden formality? Nervous?"
+    MC "You have to ask? Of course I'll go. But... Why the sudden formality? Nervous?"
     "Honoka nodded."
-    BE "I practiced a few more times since Alice showed me that new style. I'm starting to get the hang of it now. But…"
+    BE "I practiced a few more times since Alice showed me that new style. I'm starting to get the hang of it now. But..."
     MC "You're worried it won't be enough?"
     BE "I {i}know{/i} it isn't. Normally, your times should improve the more you practice. "
     show BE worried
-    extend "But \"normally\" doesn't apply to my situation. It'll just… help."
+    extend "But \"normally\" doesn't apply to my situation. It'll just... help."
     MC "Say no more. I'll be right there watching you put in 110%% like you always do."
     show BE happy
     BE "You're the best, Kei-chan!"
@@ -13352,7 +13353,7 @@ label BE055:
     MC "Sorry, Sensei. We're heading out."
     Hageshi "And I should add, if you {i}really{/i} want to do some math that is more letters than numbers you should sign up for my discrete math course next semester." 
     show BE sad
-    MC_BE "Ughhh… Why…"
+    MC_BE "Ughhh... Why..."
     scene black with dissolve
     pause 1
     scene Pool with fade
@@ -13366,10 +13367,10 @@ label BE055:
     BE "Hey, Kei-chan!"
     show BE worried
     pause .5
-    BE "I hope I haven't grown {i}too{/i} much since last practice…"
+    BE "I hope I haven't grown {i}too{/i} much since last practice..."
     MC "Hey, come on. You haven't grown so much in the last few days that you'd have to change things up again, right?"
     show BE doubt
-    BE "Yeah… I was okay at first, but now… I don't know. I'm having a hard time getting out of my head lately…"
+    BE "Yeah... I was okay at first, but now... I don't know. I'm having a hard time getting out of my head lately..."
     pause .25
     show BE neutral
     pause .5
@@ -13391,7 +13392,7 @@ label BE055:
     "I set my book down and gave Honoka a hug and kiss on the cheek."
     MC "For good luck. Not that you need it, of course."
     show BE embarrassed
-    BE "Aww… Thanks Kei-chan. {w}Seriously."
+    BE "Aww... Thanks Kei-chan. {w}Seriously."
     hide BE with dissolve
     "Honoka waved and headed over to the pool. At first, it seemed like she was going to jump in like usual, but she stopped herself, as the lanes were now filling up with other members of the club." 
     "She went around to the far side, where a ramp sloped into the shallow side. She waded over to the first lane, which only had two other swimmers in it."
@@ -13402,44 +13403,44 @@ label BE055:
     scene black with fade
     pause 2
     scene Pool with fade
-    MCT "I should've planned this a bit better…"
+    MCT "I should've planned this a bit better..."
     pause 1
-    "The last 20 minutes felt like an hour. I had gotten through a decent chunk…"
+    "The last 20 minutes felt like an hour. I had gotten through a decent chunk..."
     extend " of the first question. But by now, my neck was killing me. I put down my schoolwork and cracked my neck, breathing a sigh of relief."
     Naoki "You're going to give yourself neck strain at this rate. You may as well use the desk in the office."
-    MC "Gah! Sorry Sa…Naoki-sensei. I didn't notice you were there."
+    MC "Gah! Sorry Sa...Naoki-sensei. I didn't notice you were there."
     #show Naoki neutral
     Naoki "No problem at all. Though, two things. One, instead of cracking your neck, it's better to do stretches. Chin tucks are easy, just pull your head back like you're trying to give yourself a double chin while keeping your head level." 
     Naoki "Hold for five seconds, then relax, repeating as often as you like. You can also put your palms on your forehead, then try to push your head forward with your neck while pushing back with your hands."
-    MC "Oh… I'll have to give those a try then, my neck gets stiff pretty frequently from, uh… all the studying I do."
+    MC "Oh... I'll have to give those a try then, my neck gets stiff pretty frequently from, uh... all the studying I do."
     Naoki "I'm sure. Though I suppose the added weight of your hair, and the inertia you're compensating for as you move, also have an impact."
-    MC "My uh… My hair, sir?"
+    MC "My uh... My hair, sir?"
     Naoki "Indeed. It's certainly not debilitating, but that doesn't change that it is, in fact, having an impact on your daily life. Hair isn't particularly heavy per strand, but when you have a lot of it, at your length, it adds up quick. Especially when it gets wet."
     MC "Oh, yeah, I guess I haven't really thought about it much."
     Naoki "That's understandable. It's not a factor that would make that a big difference on the whole, especially when you compare it to that of some of your classmates."
-    Naoki "But it's important to take your well-being seriously. For those with factors… well, some may adjust to it easily, even enthusiastically, like Mizutani-san has."
+    Naoki "But it's important to take your well-being seriously. For those with factors... well, some may adjust to it easily, even enthusiastically, like Mizutani-san has."
     Naoki "And while others with factors can experience significant debilitation, the ones that tend to struggle the most are the ones that fall somewhere in between." 
-    Naoki "Those cases things change {i}just{/i} slowly enough that you can't find a good rhythm, or you suddenly pass a threshold and you have to change how you carry yourself…"
+    Naoki "Those cases things change {i}just{/i} slowly enough that you can't find a good rhythm, or you suddenly pass a threshold and you have to change how you carry yourself..."
     Naoki "I don't have a factor myself, but I've seen many students come and go, with just as many and varied factors." 
     Naoki "I try my best to give them tools and advice so they may continue to accommodate themselves, but it isn't easy. Everyone's experience of their factor is ultimately unique. It's part of the reason I'm so busy."
     pause 1
     "Naoki-sensei took off his cap, smoothed back his hair, readjusted his tie and put it back on."
     Naoki "That brings me to the next thing. Contrary to what I mentioned earlier, I actually planned to use my office today. I'll be meeting with some of the students." 
-    Naoki "Could I ask you to relocate yourself, either to the bleachers or perhaps the neighboring first aid room…?"
+    Naoki "Could I ask you to relocate yourself, either to the bleachers or perhaps the neighboring first aid room...?"
     MC "Ah, well, I would like to try and get some more work done. I'll take you up on the first aid room. Thank you, sensei."
-    Naoki "Mhmm. And… stay alert, Hotsure-san."
+    Naoki "Mhmm. And... stay alert, Hotsure-san."
     "Naoki-sensei nodded as I bowed my head. As I stepped into the first aid room, I heard him blow one of his whistles. The sounds of splashing in the pool died down in response."
     scene NYI with fade #first aid room
     stop music fadeout 2.0
     pause 1
     play music LastBell fadein 1.0
     "Sitting at the small desk to the side of the room, I placed my textbook and took out my pen and notebook to resume working on Hageshi-sensei's assignment."
-    MCT "This assignment doesn't help Hageshi-sensei beat my suspicion he is a secret sadist…"
+    MCT "This assignment doesn't help Hageshi-sensei beat my suspicion he is a secret sadist..."
     "Honoka's voice suddenly drifted in. I glanced around and spotted a vent connected directly to Naoki's office."
-    BE "{size=-6}...ice, er, Nikumaru-san showed me. I'm still getting used to it, but I've already improved!{/size} {size=-3}Well, not my time, not yet, but I can do the stroke properly, so I think with just some more practice…{/size}"
-    "I was torn. I didn't want to eavesdrop, especially when Naoki-sensei asked me to clear out.  But, this was {i}Honoka{/i} talking…"
+    BE "{size=-6}...ice, er, Nikumaru-san showed me. I'm still getting used to it, but I've already improved!{/size} {size=-3}Well, not my time, not yet, but I can do the stroke properly, so I think with just some more practice...{/size}"
+    "I was torn. I didn't want to eavesdrop, especially when Naoki-sensei asked me to clear out.  But, this was {i}Honoka{/i} talking..."
     Naoki "{size=-6}The point of the survival stroke is that it's very energy efficient— not fast. Which means, you aren't getting the same amount of exercise or burning as many calories.{/size}"
-    MCT "I don't like where this is going…  Maybe I should go…"
+    MCT "I don't like where this is going...  Maybe I should go..."
     menu:
         "Stay.":
             jump BE055_C1
@@ -13449,33 +13450,33 @@ label BE055:
 label BE055_C1:
     "This didn't sound like it was going well. While a part of me knew that I had no business eavesdropping, the louder part of me said I had to be here, for Honoka."
     Naoki "{size=-6}Knowing how much energy you have, that's longer than we have for club time. We can make reservations, and you can even go before or after, like Nikumaru-san does.{/size}"
-    BE "{size=-3}But… I want to be part of the group…"
+    BE "{size=-3}But... I want to be part of the group..."
     Naoki "{size=-6}By isolating yourself as far as you can from the majority of the students?{/size}"
-    BE "{size=-3}I'm just trying to be considerate, because of how… {i}big{/i} I am.{/size}"
-    MCT "She sounds… bitter? About her size? I knew she'd had some frustrations recently, but…"
+    BE "{size=-3}I'm just trying to be considerate, because of how... {i}big{/i} I am.{/size}"
+    MCT "She sounds... bitter? About her size? I knew she'd had some frustrations recently, but..."
     Naoki "{size=-6}Which is commendable. However, did you notice, Nibui-san and Shido-san had to bring their laps to a halt and maneuver around you? Their pace was disrupted and they felt the need to restart.{/size}"
-    BE "I can get faster! {size=-3}I just need to practice more…{/size}"
+    BE "I can get faster! {size=-3}I just need to practice more...{/size}"
     Naoki "{size=-6}...Inoue-san, this isn't about your times. This isn't a competitive club. The times are just a goal. Almost everyone's time goes down here, except for some of the muscle growth and hand or feet growth students, and even then, it's a coin flip. I'm sorry, Inoue-san. You aren't going to get any faster.{/size}"
     Naoki "{size=-6}Your factor hasn't slowed down at all. It is likely to keep progressing. I can't say how much more, or over what length of time— no one knows for sure.{/size}" 
     Naoki "{size=-6}But the fact is, your time has only gone down since you joined. At best, you'd plateau at your current best time, but will likely continue to slow down from here{/size}." 
     Naoki "{size=-6}I'm not saying you can't or shouldn't swim. In fact, I encourage you to continue. It's one of the best physical activities anyone can do.{/size}"
-    BE "{size=-6}I j-just… can't do it du-during club…?{/size}"
+    BE "{size=-6}I j-just... can't do it du-during club...?{/size}"
     stop music fadeout 1.0
     MC "{b}!!!{/b}"
-    "In the years that I've known Honoka, I don't think I've ever heard her sound so… defeated. Not even the day she found out she was moving away. Never."
+    "In the years that I've known Honoka, I don't think I've ever heard her sound so... defeated. Not even the day she found out she was moving away. Never."
     BE "{size=-3}I-is it because I've been so flaky? I p-promise, I won't jump clubs anymore!{/size}"
     Naoki "{size=-6}Inoue-san, you and I both know that this has nothing to do with you changing clubs. I bounce around even more than you do. You are far from the first student who needed to experiment to find the right fit.{/size}"
     BE "{size=-3}But that's the thing! You haven't seen how hard I've been trying!{/size}"
-    Naoki "{size=-6}… Yes, I have. I saw it in the soccer club when you did extra laps. I saw it in basketball club when you did extra drills after cleanup, experimenting with your footing." 
+    Naoki "{size=-6}... Yes, I have. I saw it in the soccer club when you did extra laps. I saw it in basketball club when you did extra drills after cleanup, experimenting with your footing." 
     Naoki "{size=-6}And I've seen many other students who have tried just as hard, and maybe, at times, harder. But with these factors, we have to take your safety into consideration—{/size}"
     BE "But—!!"
     Naoki "{size=-6}—AND we also have to take each factor into account. Your type of growth factor is one of the most incompatible with swimming. You've already grown well beyond the point at which most such students move on.{/size}"
-    BE "…"
+    BE "..."
     Naoki "{size=-6}... You've been dealt an unfair hand.  It's not your fault. But the fact is, if you keep trying as hard as you do, you are not only likely to hurt yourself, you may accidentally hurt someone else.{/size}" 
     Naoki "{size=-6}As I said: you can still use the pool, and if you'd like, I can help develop a workout regimen that you can still maintain with your factor.{/size}"
-    BE "…"
+    BE "..."
     Naoki "{size=-6}...I'm sorry, Inoue-san. It isn't an easy pill to swallow. I'll give you some time to collect yourself. Hotsure-san is next door, would you like me to send him in?{/size}"
-    BE "…"
+    BE "..."
     Naoki "{size=-6}Alright.{/size}"
     pause 2
     #show Naoki neutral
@@ -13485,7 +13486,7 @@ label BE055_C1:
     MC "{size=-3}{w}Sorry, sensei.{/size}"
     Naoki "However, given your relationship to Inoue-san, I don't see how I could expect anything else. Take the time you need. The others I need to speak with are boys. We can talk in the changing room."
     "I feebly nodded my head, and put my things in my bag. Naoki-sensei put his hand on my shoulder, and walked toward the boys locker room."
-    Naoki "{i}*Haaaaah….*{/i}{size=-3} It never gets easier being the bearer of bad news, either.{/size}"
+    Naoki "{i}*Haaaaah....*{/i}{size=-3} It never gets easier being the bearer of bad news, either.{/size}"
     scene Coach Office with dissolve
     play music Requiem fadein 2.5
     show BE sad with dissolve #upset
@@ -13512,25 +13513,25 @@ label BE055_C2:
     $setTime(TimeEnum.EVE)
     scene Pool with fade
     "It had been a few hours at this point. I'd texted Honoka to see if she was okay. The message had been marked as read, but she hadn't responded yet."
-    Student "Uhmm…"
+    Student "Uhmm..."
     "I looked up from my position on the ground next to the changing room – a student with large hands was leaning out the door, gesturing behind her with her thumb."
-    Student "Hotsure-san, I'm guessing? You should… you should go inside. I'm the last one out, I'll, uh, keep watch out here, in case anyone else comes by."
+    Student "Hotsure-san, I'm guessing? You should... you should go inside. I'm the last one out, I'll, uh, keep watch out here, in case anyone else comes by."
     "I slowly picked myself up and went inside."
     stop music fadeout 1.0
     pause 1.0
     scene Lockers Showers with fade
     show BE sad #crying
     play music Requiem fadein 2.5
-    "Heading inside, I heard one of the showers running. Inside sat Honoka, her eyes puffy… and vacant."
+    "Heading inside, I heard one of the showers running. Inside sat Honoka, her eyes puffy... and vacant."
     BE "... I'm done with swimming club."
-    MC "...I'm sorry, Honoka. I don't know what to say…"
+    MC "...I'm sorry, Honoka. I don't know what to say..."
     BE "..."
     MC "They're closing up. Let's head on back. We can hang out, if you like? Get something to eat?"
     BE "..."
     MC "...Not ready to leave yet?"
     "Honoka almost imperceptibly shook her head."
     pause .5
-    MC "Okay, then let's do this…"
+    MC "Okay, then let's do this..."
     "I took off my shoes and socks, and set them next to my bag, along with my phone and the rest of the contents in my pockets."
     pause 1
     MCT "Christ that's cold!"
@@ -13549,8 +13550,8 @@ label BE056:
     "I still spent as much time with Honoka as I ever did, but lately, she would go quiet for long stretches."
     "For a lot of people, that sort of thing would be nothing out of the ordinary. But, Honoka wasn't {i}most people{/i}."
     "If no one else spoke, Honoka was usually the one to fill the empty space with a joke, or a friendly remark."
-    "In all the time I'd known her, at Seichou or as a kid, I'd never seen her so…quiet."
-    "Sure, she still smiled. She still expressed kindness and gratitude. It's just…"
+    "In all the time I'd known her, at Seichou or as a kid, I'd never seen her so...quiet."
+    "Sure, she still smiled. She still expressed kindness and gratitude. It's just..."
     "Since things fell through at swimming club, there was something different in her eyes."
     "Call it desperation, I guess."
     MCT "Well, that's odd. I didn't see Honoka at lunch. And, I haven't heard from her today. I wonder what she's—"
@@ -13562,25 +13563,25 @@ label BE056:
     Kokutan "You must listen to me, "
     extend "I've tried everything."
     Kokutan "I even made a blood sacrifice to the goddess of mercy."
-    MC "Uh…look, Kokutan, I'm not in the m—"
+    MC "Uh...look, Kokutan, I'm not in the m—"
     Kokutan "Okay, fine. Not a {i}literal{/i} blood sacrifice, but—"
     MC "{i}Kokutan, what's happening?! Is Honoka okay???{/i}"
     Kokutan "She is in sound health, if that's what you mean."
-    Kokutan "But… "
+    Kokutan "But... "
     extend "her spirit is fading."
     MC "You mean, she's sad."
     Kokutan "Among other things."
     Kokutan "And, even with the strength of ten thousand demons, I cannot help her."
     MC "What's the situation?"
     Kokutan "I-I need {i}your{/i} help, Keisuke-san."
-    Kokutan "This may be difficult to believe, but… "
+    Kokutan "This may be difficult to believe, but... "
     extend "I might have overestimated my abilities."
     Kokutan "And, I suppose it's time for me to admit that even the most steadfast warrior needs allies to win the day."
-    MC "So… "
+    MC "So... "
     extend "you're asking me to come over and try to cheer Honoka up?"
-    Kokutan "I realize, I'm asking a tremendous favor I may never be able to repay, but…"
+    Kokutan "I realize, I'm asking a tremendous favor I may never be able to repay, but..."
     Kokutan "Honoka-chan is too important! We can't lose her, Keisuke-san!"
-    MC "Okay, sure. Let's go…"
+    MC "Okay, sure. Let's go..."
     MCT "Yeesh. Kokutan's really hamming it up today."
     MCT "But then again, she wouldn't ask for help with Honoka for no reason. Better check on her."
     stop music
@@ -13593,20 +13594,20 @@ label BE056:
     show BE neutral at Position(xcenter=0.65, yalign=1.0), pacing(2.0), with dissolve
     BE "Oh, hi Kei-chan. Hi Kokutan."
     BE "How're you?"
-    MC "Uh…I'm fine. What's going on here?"
+    MC "Uh...I'm fine. What's going on here?"
     MC "Why are you pacing around the room?"
     show BE doubt
     BE "Nothing. I'm just thinking."
     MC "About what, exactly?"
     BE "Not much."
-    BE "Just… "
+    BE "Just... "
     show BE happy
     extend "lamenting the downfall of my career as a ballerina."
     MC "..."
     MC "What?"
     show BE unamused
     BE "I said—"
-    MC "No, I heard you, it's just…"
+    MC "No, I heard you, it's just..."
     Kokutan "It's been like this all day."
     MC "Since when did you want to be a ballerina?"
     BE "I didn't."
@@ -13659,7 +13660,7 @@ label BE056:
     BE "Hey, Kokutan?"
     Kokutan "Yes, Honoka-chan?"
     BE "How many pounds did I gain since last week when we checked the scale the other day?"
-    Kokutan "Um…"
+    Kokutan "Um..."
     Kokutan "Was it two kilos?"
     show BE happy
     BE "Two kilos! A HUGE gain."
@@ -13690,7 +13691,7 @@ label BE056:
     BE "Just lamenting the loss of my career as a professional diver."
     MC "Not this!"
     Kokutan "It never ends, Keisuke-san."
-    Kokutan "This morning it was rope dancer, then it was Go-Go skater, then it was tight-rope walker…"
+    Kokutan "This morning it was rope dancer, then it was Go-Go skater, then it was tight-rope walker..."
     show BE embarrassed
     BE "I guess I could be a stripper, but do you think that pole would actually hold me?"
     MC "Honoka, {i}please.{/i}"
@@ -13704,7 +13705,7 @@ label BE056:
     extend "I want to do {i}something{/i}!"
     BE "I'm losing all my options, Kei-chan! They're slipping through my fingers like sand!!!"
     show BE sad
-    BE "I-I…"
+    BE "I-I..."
     show BE worried
     #show BE crying
     BE "I can't stand it anymore."
@@ -13717,10 +13718,10 @@ label BE056:
     show BE sad at Transform(xzoom=-1.0)
     BE "I'm sorry Kei-chan. Kokutan, I'm really sorry."
     BE "I'm being absolutely horrible to both of you."
-    BE "I just…I don't know what to do."
+    BE "I just...I don't know what to do."
     pause 1.5
-    MC "Uh…"
-    MC "Look…"
+    MC "Uh..."
+    MC "Look..."
     MC "Let's get you out of this dorm."
     show BE doubt
     BE "I don't really want to go anywhere."
@@ -13728,11 +13729,11 @@ label BE056:
     BE "I don't have the energy for it."
     MC "You had enough energy to spend this day pacing around your room."
     BE "I don't feel like it."
-    MC "Well… "
+    MC "Well... "
     extend "I can't {i}make{/i} you go anywhere."
     MC "But, wouldn't it be nice to see something besides the four walls of this room?"
     MC "The Honoka I know would be {i}desperate{/i} to get out."
-    MC "And…I have a feeling she's still in there, somewhere."
+    MC "And...I have a feeling she's still in there, somewhere."
     show BE unamused at Transform(xzoom=1.0)
     BE "Hmph. Can I still fit through the door?"
     MC "..."
@@ -13746,16 +13747,16 @@ label BE056:
     BE "Where are we going?"
     MC "I don't know"
     extend ", I hadn't gotten that far yet."
-    Kokutan "Um…"
+    Kokutan "Um..."
     Kokutan "Sometimes, when I need to recalibrate my synchrony to the Greater Darkness "
     extend "{size=-6}...or do some embroidering,{/size} "
     extend "I take the bus to town and spend a few hours in the café."
-    Kokutan "Perhaps…perhaps the two of you could calibrate your synchrony there too."
+    Kokutan "Perhaps...perhaps the two of you could calibrate your synchrony there too."
     MC "Uh, "
     extend "that's honestly a good idea."
     MC "Yeah. Let's get off campus. While there's still daylight."
     show BE unamused
-    BE "W-well…"
+    BE "W-well..."
     pause 1.0
     show BE sad
     BE "Alright."
@@ -13765,7 +13766,7 @@ label BE056:
     show BE doubt
     BE "As ready as I'm likely to be, at least."
     MC "Good enough. Thanks for the idea, Kokutan."
-    Kokutan "Well…uh…"
+    Kokutan "Well...uh..."
     Kokutan "{i}Ahem{/i}. The Ebony Lord of Destruction has her reasons."
     Kokutan "Have fun!"
     hide Kokutan with dissolve
@@ -13797,7 +13798,7 @@ label BE056:
     BE "Now, this is what I call a beverage."
     MC "Want to have a seat over here?"
     show BE neutral
-    BE "Oh, sure. Here, wanna hold my drink for me, Kei-chan? I need to slide in…"
+    BE "Oh, sure. Here, wanna hold my drink for me, Kei-chan? I need to slide in..."
     scene Cafe Seats with fade
     show TableBE
     show Table behind TableBE
@@ -13815,7 +13816,7 @@ label BE056:
     BE "I-it's not like me at all."
     show BE doubt
     BE "I'm sorry, Kei-chan."
-    MC "Well…y'know…"
+    MC "Well...y'know..."
     MC "You don't always have to be in a good mood around me."
     show BE sad
     BE "I guess not. But still."
@@ -13825,7 +13826,7 @@ label BE056:
     BE "I'd like to think I wouldn't try to argue with my friends or people I love when I'm having a bad day."
     MC "Kokutan and I knew you were having a bad day."
     MC "We were just worried for you."
-    MC "{i}Ahem.{/i} Uh…Honoka, there's something I wanted to say."
+    MC "{i}Ahem.{/i} Uh...Honoka, there's something I wanted to say."
     hide TableBEWorried
     show TableBE
     show BE doubt
@@ -13860,28 +13861,28 @@ label BE056_c1_1:
     pause 1.0
     BE "Kei-chan,"
     BE "I appreciate the encouragement. I really do."
-    BE "But, the truth is… "
+    BE "But, the truth is... "
     extend "and, maybe I'm only realizing this just now, "
     extend "swimming club isn't for me."
     show BE doubt
     BE "If it were, Naoki-sensei's words wouldn't stop me from doing it."
     BE "I'd still be going."
-    BE "But, even before my boobs got out of control, my club activities just…lacked something."
+    BE "But, even before my boobs got out of control, my club activities just...lacked something."
     show BE unamused
     BE "I don't know how, but I think my priorities are changing."
-    BE "Don't get me wrong. I {i}like{/i} to swim. I like to run around and kick a soccer ball…"
+    BE "Don't get me wrong. I {i}like{/i} to swim. I like to run around and kick a soccer ball..."
     show BE sad
     BE "But, my heart's just not in it."
     BE "I loved competitive sports when I was fifteen."
     BE "But, I think that's over for me now."
     BE "I'm just making things worse by pushing myself to keep going to these clubs."
     show BE doubt
-    BE "I got upset today because I'm very, VERY scared that whatever it is I'm {i}supposed{/i} to do… "
+    BE "I got upset today because I'm very, VERY scared that whatever it is I'm {i}supposed{/i} to do... "
     extend "I won't be able to do it."
     BE "I don't know what that is—I wish I did!"
     BE "But, it isn't swimming, Kei-chan."
     $setAffection("BE", -1)
-    MC "Oh…I see."
+    MC "Oh...I see."
     MC "I'm sorry. I guess I didn't understand."
     show BE sad
     BE "It's-it's alright."
@@ -13898,11 +13899,11 @@ label BE056_c1_2:
     MC "If you're sad, you can be sad around me. It's okay."
     MC "Please don't be ashamed about it."
     show BE unamused
-    BE "Yeah, but…"
+    BE "Yeah, but..."
     show BE worried
     hide TableBE
     show TableBEWorried
-    BE "Well…"
+    BE "Well..."
     extend "I guess I was pretty twisted up inside today."
     hide TableBEWorried
     show TableBE
@@ -13910,7 +13911,7 @@ label BE056_c1_2:
     BE "Maybe you have a point."
     show BE doubt
     BE "But, Kei-chan, everyone expects me to be happy-go-lucky."
-    BE "Because…I guess because I usually am."
+    BE "Because...I guess because I usually am."
     BE "But, I'm not now."
     MC "You don't have to do what everyone expects, Honoka."
     MC "I-I feel like you {i}trying{/i} to be positive is making things worse."
@@ -13937,7 +13938,7 @@ label BE056_c1_2:
     show BE unamused
     BE "Maybe not spectacular."
     show BE neutral
-    BE "But…that's okay."
+    BE "But...that's okay."
     BE "I'm sure I'll come around somehow."
     show BE embarrassed
     BE "Maybe when my boobs finish this crazy growth."
@@ -13972,7 +13973,7 @@ label BE056_c1_3:
     show BE embarrassed-2
     BE "Which is kind of embarrassing, because I don't actually know what I'm supposed to do with my life that's going to make {i}me{/i} happy."
     show BE sad
-    BE "And, uh… "
+    BE "And, uh... "
     extend "it's kind of distressing that, whatever it is, humongous boobies are going to have to fit into it somehow."
     MC "I get that."
     MC "But, Honoka, "
@@ -14002,7 +14003,7 @@ label BE056_c1_3:
     MC "But, I know you'll do it this time too."
     MC "Yeah, things are tough now, and the future's uncertain."
     MC "But you have to keep trying. Even if there are disappointments."
-    BE "Th-that's…"
+    BE "Th-that's..."
     hide TableBE
     show TableBEWorried
     show BE worried
