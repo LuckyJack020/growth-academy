@@ -30080,7 +30080,7 @@ label WG091:
     WG "Oh who cares? If that's what you want to call it, stud. It's for you remember? {w}Now fuck me as hard as you want."
     $ persistent.unlock_cgWG091 = True
     show cg WG091 with dissolve
-    "And we were off to the races. Alice bobbed her ass up and down slamming the rest of my torso down into the water each time as she slid up and down dick." 
+    "And we were off to the races. Alice bobbed her ass up and down slamming the rest of my torso down into the water each time as she slid up and down my dick." 
     "I hung on to her hips for dear life as I bucked and gyrated with each thrust, slamming deeper into her each time."
     show WG aroused
     "There was so much fat to get through between my groin and her pussy. I was so deep into her that her thigh folds were wrapped around my balls." 
@@ -30114,7 +30114,8 @@ label WG091:
 
 label WG092:
     $setProgress("WG", "WG093")
-    $setFMGOutfit(OutfitEnum.DRESS)
+    $setWGOutfit(OutfitEnum.CASUAL)
+    #$setWGOutfit(OutfitEnum.DRESS) Reenable this when the Dress sprites are ready
     $setTime(TimeEnum.EVE)
     play music Sunset
     scene Ryokan Room with fade
@@ -30201,7 +30202,7 @@ label WG092:
     MC "Hehe, well I think one ball is enough to last me a little while longer."
     MC "I have to ask, is there a particular significance to picking this location?"
     show WG neutral
-    WG "You didn't get to see it from the ballroom or the time we met with my mother, but the restaurant on the top two floors of the hotel is the finest dining establishment on the entire island."
+    WG "You didn't get to see it from the ballroom or the time we met with my mother, but the restaurant on the top floor of the hotel is the finest dining establishment on the entire island."
     WG "It may not rank among the finest establishments in the world, at least yet, but Ms. Usuda is diligently working towards building the restaurant's reputation so that it will one day earn a star. I believe she is on track to succeed."
     MC "Wow, sounds swanky."
     show WG happy
@@ -30217,6 +30218,7 @@ label WG092:
     show WG haughty
     WG "Now you're starting to catch on."
     scene black with fade
+    $setTime(TimeEnum.EVE)
     pause .5
     play music WG
     scene Hotel Lobby 
@@ -30269,6 +30271,7 @@ label WG092:
     "Having gotten to know the real Alice this past year, beyond the superficial conceptions and my first impression of her, sometimes I'd forget just how lofty her station in society truly is."
     "She snaps her fingers and people trip over themselves to make sure she gets what she wants. It's crazy really— amazing actually."
     "And tonight, she was pulling out all the stops just for me."
+    show WG neutral
     MCT "I don't think I'll ever get used to this, but I love every minute of it."
     "Before I could give it much thought, the head waiter accompanied by other staff came and delivered our drinks along with the table bread."
     Waiter "Here is your bread, Miss Nikumaru I will have the oysters out shortly. Have you decided on the wine selection for the evening?"
@@ -30387,7 +30390,7 @@ label WG092:
     WG "Perhaps it's time you get used to how it's supposed to be prepared?"
     MC "Can't say I'm in a position to argue with that. Growing up, my dad never pulled anything off the grill that wasn't already in the process of becoming charcoal. How's yours?"
     show WG aroused
-    WG "It's exquisite. Filet is my favorite cut. One could easily argue there are more flavorful cuts, but the tenderness makes for a much better texture and dining experience without having to contend with any chew or stringy bits."
+    WG "It's exquisite. Filet is my favorite cut. One could easily argue there are more flavorful cuts, but the tenderness makes for a much better texture and dining experience without having to contend with any chewy or stringy bits."
     MCT "I have to imagine when you eat as much as Alice does you have to factor in jaw stamina."
     show WG surprised-2
     WG "Have you tried the malbec yet?"
@@ -30457,7 +30460,7 @@ label WG092:
     WG "Quite excellent, for the most part. The roquefort is not particularly special but I am satisfied with the quality of it as a whole."
     MC "I hope it tastes better than it looks... or smells. Seriously, some of those look gross, Alice."
     show WG happy
-    WG "I will grant you the unctuous odor can admittedly be a bit off-putting, but when combined with the other flavor notes present in the cheese it helps to create a complexity of savory flavors not common in other food types."
+    WG "I will grant you the unctuous odor can admittedly be a bit off-putting, but when combined with the other flavor notes present in the cheese, it helps to create a complexity of savory flavors not common in other food types."
     MC "I'll have to take your word for it."
     show WG haughty
     WG "For now, I'll allow it."
@@ -30482,7 +30485,7 @@ label WG092:
     "As if summoned by a psychic relay, the server emerged to deliver."
     Waiter "Your dessert has arrived, our specialty cheesecake. As decadent as it is delightful."
     show WG surprised-2
-    "Even while trying to gently set it down, I felt the thud its weight reverberate through the table. This wasn't a \"serving\" or even a slice, it was a whole goddamn cake!"
+    "Even while trying to gently set it down, I felt the thud of its weight reverberate through the table. This wasn't a \"serving\" or even a slice, it was a whole goddamn cake!"
     Waiter "Allow me to get you started mademoiselle."
     "This thing was probably over 40 centimeters in diameter. Before I could truly take in the sight of this monster, the server proceeded to cut a slice that was at least a fifth of the cake itself— easily over a kilogram in weight in its own right."
     WG "It looks delightful."
@@ -30496,7 +30499,7 @@ label WG092:
     show WG neutral
     WG "You seem skeptical."
     MC "Well I can't decide if they baked chocolate sauce into it or burnt the hell out of this thing."
-    WG "It's a basque burnt cheesecake. It's supposed to look like that."
+    WG "It's a Basque burnt cheesecake. It's supposed to look like that."
     MC "Oh. Well, I suppose that would explain why you didn't have them send it back."
     MCT "Or maybe not at the rate she's been going tonight."
     show WG neutral-2
@@ -30539,6 +30542,7 @@ label WG092:
     Waiter "Ah, yes. Certainly."
     MCT "I take back what I said earlier— we're going to need a bigger {i}table{/i}."
     scene black with fade
+    $setTime(TimeEnum.NIGHT)
     pause .5
     scene Hotel Room with fade
     play music LoveA
@@ -30629,7 +30633,7 @@ label WG092:
     WG "{i}Aaaah! Aaaah! AAHH!{/i}"
     "Alice's body went limp, the turbulent waves of jiggling flesh finally calming, causing me to sink down even further into the soft water bed that was her belly."
     play music LoveC
-    MC "How was that."
+    MC "How was that?"
     WG "Wonderful."
     show WG happy
     WG "Though I suppose it's only fair now that you get your turn."

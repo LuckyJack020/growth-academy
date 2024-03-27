@@ -23775,6 +23775,9 @@ label AE098D:
     MC "Heh, you move fast, huh? Okay, we can head back."
     show AE aroused-2
     "As I held out my hand, she took it with an almost sensual, girlish movement of her arm which lifted her breasts up. After that, we exited out of the back door."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
     
     scene Hotel Lobby with fade
     play music TwilightDusk

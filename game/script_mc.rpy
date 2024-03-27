@@ -14023,9 +14023,9 @@ label RM005:
     MC "Look at you, learning already." 
     if getFlag("MC005RM"):
         MC "With enough practice you might even have the confidence to ask out that girl you like."
-    show RM angry
-    RM "Will you shut up about that? We're not talking about that anymore."
-    MCT "Fine, stay single for the rest of your life then for all I care."
+        show RM angry
+        RM "Will you shut up about that? We're not talking about that anymore."
+        MCT "Fine, stay single for the rest of your life then for all I care."
     show RM doubt
     RM "Anyway, as I was saying, when following Nurse Kiyomi, I didn't see the avenue to question her without arousing suspicion that I had been tailing her, but you were able to get her to talk without her suspecting anything."
     MC "It's simple, you express interest in a person and they'll respond to you in kind."
@@ -14181,7 +14181,7 @@ label RM005:
     "Scanning the map more closely I recognized the place Tsubasa-sensei was telling us about before, Chūkan Point, just north of the academy between the main campus and the Giant's Dorms."
     "This particular part of the map had the most notes of all. Daichi must have been busy updating it after our chat with Tsubasa-sensei."
     if isEventCleared("MC008"):
-        "Which was funny considering he never seemed all too keen on taking notes during his class."
+        "Which was funny considering he never seemed all too keen on taking notes during class."
     MCT "Let's see here... \"Caverns- existed before the academy\"... I already knew that. {w}...\"A hotel in Seichou Town originally used as worker housing for the quarry\"— now that I didn't know." 
     MC "Hmm... \"gate leading to quarry is protected by password\", that's odd. Did you already try to go there or something?"
     show RM neutral
@@ -14301,7 +14301,7 @@ label RM005_Faculty:
 
         "Yoshito Hageshi" if not getFlag("RM005_Hageshi"):
             $setFlag("RM005_Hageshi")
-            MCT "\"Yoshito Hageshi - math teacher, muscle growth factor, students are afraid of him. Suspicious rumors on a campus. Are they true?\""
+            MCT "\"Yoshito Hageshi - math teacher, muscle growth factor, students are afraid of him. Suspicious rumors on campus. Are they true?\""
             MCT "Suspicious rumors? What is he talking about? Just looking at the guy is enough to figure out he could stuff you in a locker if you stepped out of line."
             if isEventCleared("MC011"):
                 MCT "Those two meatheads fighting in the cafeteria found out the hard way."
@@ -14363,39 +14363,28 @@ label RM005_Faculty:
             jump RM005_Faculty
 
         "Move on":
+            if isEventCleared("AE022"):
+                "The faculty list wasn't the only one he had going on. I hadn't thought about it in a while, but it looks like I had a hand in making this one."
+            else:
+                MC "Now what is this list?"
             jump RM005_AfterFaculty
 
 label RM005_AfterFaculty:
-    if isEventCleared("AE022"):
-        "The faculty list wasn't the only one he had going on. I hadn't thought about it in a while, but it looks like I had a hand in making this one."
-        menu:
-            "Shiori Matsumoto (Kaichou), Yuki Utagashi (The Blizzard), Minori Tomoe (The Wall of Fate)":
+    menu:
+        "Shiori Matsumoto (Kaichou), Yuki Utagashi (The Blizzard), Minori Tomoe (The Wall of Fate)":
+            jump RM005_AfterFaculty
+        "Jineko Watanabe (Gearhead), Mio Yoritaka (The Messenger of the Gods), Kazuya Endou (Mr. Eraser)":
+            jump RM005_AfterFaculty
+        "Masashi Norinaga (Maybe Man), Oda Takahashi (Shogun Oda), Kane Yokubari (The Immortal Mountain Wizard of Cash)":
+            jump RM005_AfterFaculty
+        "Touma Tsureno (The Bog), Reina Mori (The Forest Guardian Kami), Itachi Kudo (The Rabid Weasel)":
+            jump RM005_AfterFaculty
+        "Goro Saito (Iron Fist Goro), Izumi Hasegawa (Firework Hasegawa)":
+            jump RM005_AfterFaculty
+        "Move on":
+            if isEventCleared("AE022"):
                 jump RM005_AfterCouncil_AE
-            "Jineko Watanabe (Gearhead), Mio Yoritaka (The Messenger of the Gods), Kazuya Endou (Mr. Eraser)":
-                jump RM005_AfterCouncil_AE
-            "Masashi Norinaga (Maybe Man), Oda Takahashi (Shogun Oda), Kane Yokubari (The Immortal Mountain Wizard of Cash)":
-                jump RM005_AfterCouncil_AE
-            "Touma Tsureno (The Bog), Reina Mori (The Forest Guardian Kami), Itachi Kudo (The Rabid Weasel)":
-                jump RM005_AfterCouncil_AE
-            "Goro Saito (Iron Fist Goro), Izumi Hasegawa (Firework Hasegawa)":
-                jump RM005_AfterCouncil_AE
-            "Move on":
-                jump RM005_AfterCouncil_AE
-
-    else:
-        MC "Now what is this list?"
-        menu:
-            "Shiori Matsumoto (Kaichou), Yuki Utagashi (The Blizzard), Minori Tomoe (The Wall of Fate)":
-                jump RM005_AfterCouncil_AE
-            "Jineko Watanabe (Gearhead), Mio Yoritaka (The Messenger of the Gods), Kazuya Endou (Mr. Eraser)":
-                jump RM005_AfterCouncil_AE
-            "Masashi Norinaga (Maybe Man), Oda Takahashi (Shogun Oda), Kane Yokubari (The Immortal Mountain Wizard of Cash)":
-                jump RM005_AfterCouncil_AE
-            "Touma Tsureno (The Bog), Reina Mori (The Forest Guardian Kami), Itachi Kudo (The Rabid Weasel)":
-                jump RM005_AfterCouncil_AE
-            "Goro Saito (Iron Fist Goro), Izumi Hasegawa (Firework Hasegawa)":
-                jump RM005_AfterCouncil_AE
-            "Move on":
+            else:
                 jump RM005_AfterCouncil
 
 label RM005_AfterCouncil_AE:
