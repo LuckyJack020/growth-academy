@@ -13405,7 +13405,7 @@ label RM004_C1_2:
     show HR neutral-2
     HR "What about it?"
     show RM doubt
-    show RM unique-2
+    show HR unique-2
     RM "It seemed out of place compared to the rest of the architecture on the island, and much older than the other surrounding structures. I assume it was there when you were a student as well. Do you know if there was any special purpose to it?"
     show HR neutral
     show RM neutral
@@ -13489,6 +13489,7 @@ label RM004_C1_after:
         "The red haired girl looked up from a book she was reading, seemingly unsure if Daichi was actually talking to her."
         Ryoko "Huh?"
         RM "Yes, you. Don't you know where his classroom is?"
+        show Ryoko neutral
         Ryoko "As a matter of fact I do."
         RM "...Well? Are you going to tell us then?"
         show Ryoko tongue
@@ -13518,6 +13519,7 @@ label RM004_C1_after:
         "The red haired girl looked up from a book she was reading, seemingly unsure if Daichi was actually talking to her."
         Student "Huh?"
         RM "Yes, you. Don't you know where his classroom is?"
+        show Ryoko neutral
         Student "As a matter of fact I do."
         RM "...Well? Are you going to tell us then?"
         show Ryoko tongue

@@ -33939,8 +33939,8 @@ label PRG054:
     "Aida turned right away."
     "She didn't go to her seat."
     "She came right toward me instead."
-    show PRG neutral at altMove(0.5, 0.75)
-    show AE neutral with dissolve
+    show PRG neutral at altMove(0.5, 0.25)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "Good morning, Kodama-san. I'm relieved to see that you're feeling better."
     PRG "T-Thank you, Matsumoto-san. Good morning."
     hide AE with dissolve
@@ -34054,7 +34054,7 @@ label PRG054:
 
     scene Hallway
     show PRG worried at Position(xcenter=0.25, yalign=1.0)
-    show BE sad at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
     with fade
     "Honoka walked on one side of the hall, with me on the other, Aida in between us."
     "I reached over and took Aida's hand, clasping it."
@@ -34116,6 +34116,7 @@ label PRG054:
     scene Dorm Hallway with fade
     "By the time I reached my door, I went for the handle and glanced down."
     "My hand was shaking ever so slightly."
+    scene Dorm Interior with fade
     "I opened it and walked in."
     "I threw my backpack onto my bed, looking over to the box of chocolates on my desk, and the pile of blankets and pillows."
     MC "Agh... I thought things were going to be okay..."
@@ -34139,6 +34140,7 @@ label PRG054:
     "I yanked myself up, whipping my head around."
     MC "You could knock or some shit!"
     RM "... Sorry."
+    hide RM with dissolve
     "Daichi dropped his bag and grabbed a change of clothes, disappearing into the bathroom without so much as another word."
     MC "... And now I pissed him off too."
     "I got up from the bed, walked to the door and yanked my shoes on, then left."
@@ -34198,7 +34200,7 @@ label PRG054:
     show PRG scared
     PRG2 "T-There you are!"
     MC "I... huh?"
-    play music PRGMusicBox fadein 5.0
+    play music PRG fadein 5.0
     PRG2 "I-I was so worried!"
     "Aida hurried down the path, her bag bouncing on her shoulder as she came to my side... and gave me one of her side-hugs."
     MC "Hold on... what's going on?"
@@ -34443,7 +34445,7 @@ label PRG054:
     MC "... You're right. It did."
     PRG "And... t-the same goes for our babies. Our... {w}children."
     PRG "I would never let him say one bad thing about them..."
-    play music PRGMusicBox fadein 3.0
+    play music PRG fadein 3.0
     show PRG worried
     PRG "..."
     PRG "That night, after you won the tickets... I was talking to Alice about the Koi game and everything."
@@ -34812,6 +34814,7 @@ label PRG055:
     MC "Perfect."
     scene Dorm PRG with fade
     "Walking in, I set my backpack down on the floor by Aida's bed and walked back into the kitchen with her."
+    show PRG neutral with dissolve
     MC "So, what is the special pan for?"
     PRG "It's a cast iron pan."
     MC "Ohh. Aren't those supposed to be harder to use?"
@@ -35279,7 +35282,7 @@ label PRG055:
     PRG "Um... hm..."
     "Aida moved her hands up above her boobs, the controller right in front of her face."
     PRG "..."
-    PRG "She moved her arms down again, going past her boobs where her arms and hands hit her belly."
+    "She moved her arms down again, going past her boobs where her arms and hands hit her belly."
     show PRG worried
     PRG "... I can't hold it like I used to."
     "Aida hiked her arms up under her boobs a little, and held the controller there, moving her thumbs around."
@@ -35335,7 +35338,8 @@ label PRG055:
     MC "Yeah?"
     PRG "Could you..." 
     show PRG blush-2
-    extend " sit behind me?"
+    PRG "Could you... sit behind me?"
+    "test"
     MC "Like... with my legs around you?"
     PRG "Mhm..."
     "I adjusted on the floor, shimmying behind Aida."
@@ -35648,7 +35652,7 @@ label PRG055:
     show PRG blush-2
     PRG "..."
     PRG "You don't mind helping me do things?"
-    play music PRGMusicBox fadein 2.0
+    play music PRG fadein 2.0
     PRG "Like, if I can't reach something, or if I knock something over?"
     MC "Well... like we said before, I don't want to, like, make you a sex idol or something."
     MC "But... that does partially play into the fetish stuff. Seeing you struggling with your body sometimes, watching you working around it. It... feeds into that feeling."

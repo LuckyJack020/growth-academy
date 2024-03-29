@@ -17291,7 +17291,7 @@ label WG060S_Accept:
     "Even as turgidly round as it was from all that food, the sheer softness of her thick layers of fat still quivered at the slightest touch."
     show WG aroused
     MC "I bet you feel so much better now, think about all the room you freed up!"
-    "Alice's face was beat red. So many new feelings must have been weighing on her mind as well as her body. My eyes were drawn to the tightening shirt she wore under the robe."
+    "Alice's face was beet red. So many new feelings must have been weighing on her mind as well as her body. My eyes were drawn to the tightening shirt she wore under the robe."
     WG "I wouldn't disagree that it does feel better..."
     "Despite it being custom made, even the most form fitting of attire wouldn't be able to handle such a binge. Small pockets of fat oozed out of the areas between the buttons."
     MCT "I wonder how long before her continued indulgence puts this little number out to pasture."
@@ -28970,9 +28970,7 @@ label WG089:
     "{size=+4}{i}*CRK CRK CRAK CRAK CRAAAAAK*{/i}{/size}"
     show WG surprised at altFall(0.25)
     "{size=+8}{i}*BOOOOOOM*{/i}{/size}" with vpunch
-    #CG here
-    #$setWGOutfit(OutfitEnum.TORN)
-    show WG surprised with dissolve
+    show cg WG089 with dissolve
     "In a split second, the legs of Alice's chairs snapped out from under her like they were matchsticks, sending her entire mass into a free fall that shook the dust from the ceiling when she finally landed, along with the foundation."
     "The shockwave from the impact caused the remaining buttons on the bottom half of her top to bust open from the surge of quaking fat jostling through her."
     "This, on top of the bounce off her backside, rocketed her body backward, leaving her lying on her back, like a turtle stuck on the back of its shell."
@@ -28986,6 +28984,7 @@ label WG089:
     MC "Alice, here. Let's get you up. I don't want you to get a splinter."
     "Due to her massive backside forcing her hips upward from the hard floor, she was extended back quite a bit, so just giving her a hand proved not enough {i}oomph{/i} to get her upright."
     "Alice still being in a state of dumbfounded shock wasn't exactly helping efforts either."
+    hide cg with fade
     show WG surprised-2 at altRise(3.0)
     "I was able to assist her with sitting upright after squeezing both my hands under the rolls that covered her shoulder blades and lifting up."
     "I can't imagine how much extra weight her body had to contend with to do a situp, even with me offering hundreds of kilos of assistance."
@@ -30680,7 +30679,7 @@ label WG093:
     WG "If that's all it takes to keep you motivated, I suppose I shouldn't look a gift horse in the mouth, though I do have to question your negotiation skills."
     MC "Well, to be fair, it's not just that, my contract stipulates frequent tummy rub allowances."
     show WG happy-2
-    "Alice playfully slapped my hand away, but not before I managed to squeeze in a few good rubs across her delectably full post-breakfast belly."
+    "Alice playfully slapped my hand away, but not before I managed to squeeze in a few good rubs across her delectably full post\uFEFF-\uFEFFbreakfast belly."
     WG "Hehe. You are so distracting, you know that?"
     show WG sly
     WG "I know it must be difficult Dear, but try to keep your hands to yourself for a few minutes. Otherwise we're going to be late."
@@ -30754,7 +30753,7 @@ label WG093:
     "She certainly had a point, no use in complaining about what you can't change or aren't willing to yourself."
     play music Schoolday
     scene Classroom4
-    show WG neutral at Position(xcenter=1.0, yalign=1.0)
+    show WG neutral at Position(xcenter=0.99, yalign=1.0)
     with fade
     "We made our way to the entrance to Hageshi-sensei's classroom."
     show WG surprised-2
@@ -30815,16 +30814,19 @@ label WG093:
     "But she cited one of her dad's favorite quotes about \"lies, damn lies, and statistics\"— you need to understand the information better than the people who are trying to manipulate you with it."
     Hageshi "Looks like we're all situated, let's get started."
     "For my part, it didn't relate that strongly to architecture, but being a math class, it was well within my wheelhouse and I felt like I was learning some interesting stuff."
-    Hageshi "Pull out your textbooks and turn to Appendix III in the back. You're going to want to keep it handy for easy reference to the t distribution table."
+    Hageshi "Pull out your textbooks and turn to Appendix III in the back. You're going to want to keep it handy for easy reference to the t\uFEFF-\uFEFFdistribution table."
     scene black with fade
     pause .5
-    scene Classroom4 with fade
+    scene Classroom4
+    show Hageshi neutral
+    with fade
     play music HigherEdu
     Hageshi "Alright, if I want to know if the percent change from baseline in this data set is significant, what would I use?"
     Student2 "A t-test."
     Hageshi "Yes, that is the theme of today's lesson. But how about we get more specific and you tell me {i}which{/i} one we use?"
     Student2 "Uh, a student's t test?"
     Hageshi "Apparently someone was hearing the lesson, but not listening."
+    hide Hageshi with dissolve
     show WG neutral with dissolve
     WG "You would want to use a one sample t test."
     Hageshi "Why's that?"
@@ -30848,7 +30850,7 @@ label WG093:
     Hageshi "Remember, you only get credit for showing your work {i}if{/i} it's legible."
     "With the sound of the bell, the rest of the students started to file out."
     play music Peaceful
-    show WG neutral-2
+    show WG neutral-2 at altMove(0.5, 0.5)
     "Exchanging a knowing glance, we both reasoned it would be better to let the other students exit before attempting our own egress, in light of the earlier obstruction issue."
     MC "Ready?"
     WG "I think so."
@@ -31021,7 +31023,7 @@ label WG093:
     WG "I just worry I'm asking too much of you."
     show WG neutral
     WG "It was nice of you to help step in with assisting me more often to give Chibuki some needed off hours, but I don't want our time together to feel like a chore for you."
-    MC "You don't have to worry at all. I love taking care of you Alice. What prince doesn't enjoy pampering his princess."
+    MC "You don't have to worry at all. I love taking care of you Alice. What prince doesn't enjoy pampering his princess?"
     show WG happy-2
     WG "I must say, I always thought my prince would ride up on a white horse one of these days, but you've certainly proven to be my knight in shining armor."
     MC "I guess I'll have to take equestrian lessons some day to fully seal the deal."
@@ -35399,7 +35401,7 @@ label WGFMG005:
     "Alice gave her belly a generous pat for emphasis, sending an undulating wave of blubber across her middle that reverberated to her sides and back while also jiggling her boobs as well."
     show WG happy
     FMG "I dunno, I mean, this guy over here seems to like it."
-    "It was beyond obvious at this point, but I still blushed beat red to hear Akira call me out like that."
+    "It was beyond obvious at this point, but I still blushed beet red to hear Akira call me out like that."
     show WG happy-2
     WG "I guess it hasn't been an entire loss."
     show WG worried

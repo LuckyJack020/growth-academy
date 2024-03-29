@@ -14055,7 +14055,8 @@ label BEGTS001:
 
     scene Roof with fade
     "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
-    "It looked very different at sunset, however. Usually, the sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
+    "It looked very different at sunset, however. Usually, the sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the sun wasn't even visible."
+    "It had disappeared behind the trees and buildings surrounding the campus."
     show BE happy with dissolve
     "Honoka was there to greet me when I arrived."
     BE "Hey, Kei-chan! Glad you could make it!"
