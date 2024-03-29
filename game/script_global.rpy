@@ -597,6 +597,7 @@ image cg WG076 = ConditionSwitch(
 image cg WG079_drawing1 = "Graphics/ui/gallery/WG079_drawing1.webp"
 image cg WG079_drawing2 = "Graphics/ui/gallery/WG079_drawing2.webp"
 image cg WG085 = "Graphics/ui/gallery/WG085.webp"
+image cg WG089 = "Graphics/ui/gallery/WG089.webp"
 image cg WG091 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG091.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
@@ -1153,7 +1154,7 @@ init 1 python:
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['global010'] = {"name": "A Start of Something Big", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "campuscenter",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['global026'] = {"name": "Talk of the Town", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,             "location": "classroom",        "priority": PrioEnum.ALL,            "obsflags": [],          "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "XX25"], [ConditionEnum.NOROUTELOCK, "PRG"]]]}
-    eventlibrary['global032'] = {"name": "The Departure", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "hallway",        "priority": PrioEnum.ALL,            "obsflags": ["noGTS030"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.FLAG, "XX32"]]]}
+    eventlibrary['global032'] = {"name": "The Departure", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "classroom",        "priority": PrioEnum.ALL,            "obsflags": ["noGTS030"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.FLAG, "XX32"]]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.FLAG, "RMRoute_Unlocked"]]}
     eventlibrary['RM002'] = {"name": "Ties that Bind", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "gatefront",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}
     eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}

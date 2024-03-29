@@ -12206,6 +12206,7 @@ label global032:
     FMG "What?!"
     BE "Did she like... leave the island or something?"
     play music GTS fadein 2.0
+    show RM distrustful
     "Daichi's gaze suddenly shot to Tashi-sensei."
     if getFlag("RMRoute_Unlocked"):
         MCT "He would perk up at that."
@@ -12217,25 +12218,29 @@ label global032:
     hide WG
     hide AE
     with dissolve
-    show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show HR unique at Position(xcenter=0.25, yalign=1.0) with dissolve
     MC "Is she okay, Sensei?"
+    show HR neutral
     HR "Yes, yes. Yamazaki-san is fine, everyone. And she is still here on the island."
     HR "Yamazaki-san has been transferred to a different campus, and will no longer be attending classes in person."
+    show HR unique
     show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "Other... campus?"
+    hide WG with dissolve
     if isEventCleared("RM004"):
         MCT "That has to be the giant's dorms."
-        show RM unique with dissolve
+        show RM smug at Position(xcenter=0.75, yalign=1.0) with dissolve
         MCT "Seems like he's at the same conclusion."
         show RM neutral
         MCT "Which would mean that she's above three meters. Or... {w} three and a half?"
         MCT "Ach, whatever."
         hide RM with dissolve
     RM "So, she's at the giant's facilities. Interesting."
+    show HR neutral
     HR "This is nothing that demands concern. It is standard protocol for students who have the height growth factor."
     HR "Once a student with that factor reaches a certain threshold, which is three and a half meters, that student is transferred to a campus within a large quarry. The \"Giant's Facilities\", as it's normally called."
     HR "You all might know it as the \"Giant's Dorms\"."
-    hide WG with dissolve
+    show HR unique
     MC "Standard protocol?"
     show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "Seichou Academy's Students Policies, Rules and Regulations handbook. Chapter 7, Protocol 4, Page 78."
@@ -12249,24 +12254,34 @@ label global032:
     hide AE with dissolve
     show PRG worried at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Aida slowly raised her hand after a second."
+    show HR neutral
     HR "Yes, Kodama-san?"
+    show HR unique
     PRG "D-Does that mean... that we won't be able to see Yamazaki-san anymore?"
+    show BE sad at Position(xcenter=0.55, yalign=1.0) with dissolve
     BE "Yeah, are we able to visit her at her dorm?"
+    show HR neutral
     HR "Inoue-san... a hand-raise, please."
     HR "But, yes. You may see her all you'd like."
     HR "She and all of the other students there are still allowed onto the main campus. However, due to their factors, many of them will not be able to actually enter buildings."
     HR "The giant's facilities are prepared for this, and are able to host students significantly above our threshold here."
     if not isEventCleared("RM004"):
+        show HR unique
         RM "How far above the threshold are we talking?"
         "Tashi-sensei scratched the back of his head."
+        show HR neutral
         HR "I don't know the exact height off-hand."
         HR "However, no student has ever outgrown it."
-    hide PRG with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     HR "Now, as for her housing, Yamazaki-san was also relocated to a new dorm within the facilities there."
     show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Akira's hand shot up."
     HR "Yes, Mizutani-san? Go ahead."
+    show HR unique
     FMG "How is she gonna be studying, then? Do they have their own teachers and classes over there?"
+    show HR neutral
     HR "Not quite. There are no official teachers there."
     HR "The academy has assigned proctors who supervise the students and also assist teachers."
     HR "Students in the giant's dorms are still a part of the same classes as you, and sign up for the same courses."
@@ -12284,17 +12299,21 @@ label global032:
     hide PRG with dissolve
     "Behind me, Daichi muttered... something unintelligible."
     "Alice raised her hand, to which Tashi-sensei nodded at her."
+    show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
     if isEventCleared("WGGTS001") or isEventCleared("GTSWG001") or isEventCleared("WGGTS002"):
         MCT "She's probably got some good thoughts on this."
         MCT "I mean, maybe it'll be good for those two to have some space."
         MCT "Still not counting on any uptick in friendship for those two though."
     else:
         MCT "... This'll be interesting. Fire and ice, those two."
+    show HR unique
     WG "If the giant students are taking their classes remotely, wouldn't that give them a rather large opportunity to avoid doing any work and just slack off?"
+    show HR neutral
     HR "That is a very good question, Nikumaru-san."
     HR "However, the odds of that happening are quite slim."
     HR "Proctors oversee their classes and also monitor attendance."
     HR "As well, giant students have to log in to the system in order to use it. So, I'll be able to see who's logged in and viewing the lesson."
+    hide WG with dissolve
     HR "Any more questions?"
     pause 1
     HR "Right. Now, I would encourage all of you to keep in contact with Yamazaki-san."
@@ -13541,7 +13560,7 @@ label RM004_C1_after:
         MCT "I'm surprised I hadn't noticed her before, she certainly stands out with that hair."
         RM "Come on, let's get going."
 
-    scene HallwayStairs with fade
+    scene Admin Hallway with fade
     MCT "Looks like this is it."
     show Jineko neutral at Position(xcenter=0.25, yalign=1.0)
     show Tako neutral at Position(xcenter=0.75, yalign=1.0)
@@ -14286,7 +14305,7 @@ label RM005_Faculty:
 
         "Jiro Sugiyama" if not getFlag("RM005_Sugiyama"):
             $setFlag("RM005_Sugiyama")
-            MCT "\"Jiro Sugiyama - physical education teacher, heigh factor- giant?\""
+            MCT "\"Jiro Sugiyama - physical education teacher, height factor- giant?\""
             if isEventCleared("MC006"):
                 MC "Wait a second, I thought the PE teacher had a different name. The one who ran the handball game we did? He wasn't a giant."
                 show RM neutral

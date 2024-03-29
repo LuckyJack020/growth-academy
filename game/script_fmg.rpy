@@ -19548,7 +19548,7 @@ label FMG090:
     $setTimeFlag("size6")
     $setProgress("FMG", "FMG091")
     $setTime(TimeEnum.NIGHT)
-    #$setFMGOutfit(OutfitEnum.NUDE)
+    $setFMGOutfit(OutfitEnum.NUDE)
     scene Dorm Interior with fade
     play music TwilightBright 
     if not getFlag("Meet_Kokutan"):
@@ -19657,7 +19657,7 @@ label FMG090:
     extend " And you don't want me to take it."
     MC "It's cringy as hell listening to you trying to sound scary. Watch out everyone, Akira might not hug me for ten minutes. {w}Here, call her but if you so much as even think about making a fat joke, you lose your calling Alice privileges."
     show FMG neutral
-    FMG "Hush. it's ringing. {w}And I do sound scary... thank you very much!"
+    FMG "Hush. It's ringing. {w}And I do sound scary... thank you very much!"
     MCT "Somewhere in another universe she and Nat aren't close friends and my life is better off because of it."
     pause .5
     FMG "Hey, Alice! {w}Good morning to you too!"
@@ -19730,8 +19730,11 @@ label FMG090:
     FMG "Man, both of you guys are no fun."
     show FMG neutral
     "Akira, still holding onto some of her excitement, crushed the doorknob and just barely kept herself in check to prevent the door from ripping out of its hinges."
+    show FMG neutral at Transform(xzoom=-1)
+    pause 0.1
     show FMG neutral at altMove(0.5, 0.25)
     show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    play music DormLife
     Chibuki "..."
     show FMG happy
     FMG "Surprise!"
@@ -19847,7 +19850,7 @@ label FMG090:
     Kokutan "Ah, done."
     Chibuki "Cool, thanks. {w}Arms up, Akira. Kokutan, you have your stool?"
     Kokutan "Of course, of course."
-    "Kokutan hopped up on her work stoll and got right back to work now being able to properly measure Akira's arms and neck."
+    "Kokutan hopped up on her work stool and got right back to work now being able to properly measure Akira's arms and neck."
     show FMG neutral
     FMG "You guys know how cool it is to be so big that someone has to get a stool to measure you? It's pretty cool."
     Chibuki "Yes, Akira... we know... {w}And stop moving your arms! You do this every time!"
@@ -19953,7 +19956,7 @@ label FMG091:
     MC "Did you say 5000kgs?? {w}H-How do you even...?"
     MC "You know what, I don't care. It's impressive as shit and I'm sure you're as happy as can be."
     show FMG happy
-    FMG "Ooooh, yeah I am! And I've barely even started my routine for today. The tricep extension isn't ready for an even bigger Akira."
+    FMG "Ooooh, yeah I am! And I've barely even started my routine for today. The tricep extension machine isn't ready for an even bigger Akira."
     MC "I can confidently say that no one has ever been ready for a bigger Akira. I know my back hasn't been."
     show FMG neutral
     FMG "You want to do your pull-ups with the weighted vest while I hit the tricep extension? We can call it when I'm finished with that."
@@ -20021,6 +20024,7 @@ label FMG091:
     pause 1
 
     scene Hallway with fade
+    play music Peaceful
     MC "How are you holding up?"
     show FMG neutral with dissolve
     FMG "Better, holding your hand helped calm me down. Thanks for caring."
@@ -20033,8 +20037,8 @@ label FMG091:
     with fade
     FMG "Hageshi-sensei, we need your help!"
     "Akira walked in to find Hageshi sitting at his desk grading papers, with his water bottle off to the side, while classical music was quietly playing from his laptop— further confirming my suspicions that the guy was some kind of serial killer."
-    show FMG neutral at altMove(0.5, 0.25)
-    show Hageshi neutral at Position(xcenter=0.75, yalign=1.0) with dissolve 
+    show FMG neutral at altMove(0.5, 0.75)
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0) with dissolve 
     Hageshi "Hm? {w}Help? You know the best teachers teach students to help themselves. So whatever your problem is, I'm sure you can handle it just fine."
     MC "Every time I come here, you make me wish I didn't. And before you give some witty response back, Akira needs your help with the weights... again."
     Hageshi "She doesn't look like she needs my help with weights. {w}Is this one of those things that's really about you, but you're afraid to ask?"
@@ -20090,7 +20094,7 @@ label FMG091:
     Hageshi "Not today, I'll take you guys to look at it in person later this week. It's restricted access, but given the circumstances, I thought it would be appropriate to grant an exception."
     show FMG neutral
     FMG "Man... I can't wait! {w}I'll be holding you to that, Hageshi-sensei."
-    Hageshi "Be my guest. {w}Now that that is settled, you two will leave me alone for the day?"
+    Hageshi "Be my guest. {w}Now that that is settled, will you two leave me alone for the day?"
     MC "I don't even want to be here."
     FMG "Yeah, we'll get out of your hair. Thank you for helping again, Hageshi-sensei."
     Hageshi "Don't mention it. {w}Ah, I just remembered. You'll be taking part in the Strength Pentathlon, Mizutani-san?"
@@ -20103,7 +20107,7 @@ label FMG091:
     Hageshi "Well, technically any student can aspire to be in it, but no one who doesn't possess the growth has qualified for it. It's one of the more popular campus events throughout the year, and it draws in quite the crowd."
     MC "Did you compete in it?"
     Hageshi "I did, and I won."
-    MC "Of course, you did."
+    MC "Of course you did."
     Hageshi "I was the lightest person to ever win it too, the guy that everyone thought was going to run away with it ended up coming in dead last."
     show FMG flex
     FMG "This sounds like my type of contest. Where do I sign up?"
@@ -20339,7 +20343,7 @@ label FMG092:
     show Natsuko smug
     Natsuko "Make a mental note of this, Akira. Your size over me doesn't mean you'll beat me. Size doesn't guarantee strength."
     show Natsuko neutral
-    extend "I expect you to be at your best, Akira. Because I will be."
+    extend " I expect you to be at your best, Akira. Because I will be."
     show FMG happy
     FMG "I'd expect nothing less from you, Nat. This time, you'll be eating my dust."
     MC "Ladies, ladies, calm down, there's no reason to fight over me."

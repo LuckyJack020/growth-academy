@@ -14205,7 +14205,7 @@ label BEGTS001:
     jump daymenu
 
 label BEGTS002:
-    $setTime(TimeEnum.EVE) #night?
+    $setTime(TimeEnum.NIGHT)
     scene Dorm Exterior with fade
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
@@ -14309,9 +14309,7 @@ label BEGTS002:
     show BE neutral
     BE "Right behind ya!"
 
-    #night sky
-    scene black with fade
-    #BGM: To be decided
+    scene Night Sky with fade
     "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just past the entrance to the GTS dorm, so the walk only took us a few minutes."
     if not isEventCleared("GTS020"):
         "Naomi struggled to find the correct pace to her strides. Due to her immense height, she needed to stop in her tracks every time she outpaced us."
@@ -14405,7 +14403,7 @@ label BEGTS002:
     GTS "Sounds good to me. Are you ready to go, Hotsure-san?"
     MC "Right behind you."
 
-    scene Dorm Exterior with fade
+    scene Giant Dorm Exterior with fade
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
     show GTS neutral-2 at Position(xcenter=0.8, yalign=1.0)
     show BE neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0)

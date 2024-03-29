@@ -1711,7 +1711,7 @@ label trainathletics:
     jump daymenu
 
 label trainart:
-    scene Library with fade
+    scene Dorm Interior with fade
     $tmp = renpy.random.randint(1, 2)
     if tmp == 1:
         "I spent some time doodling."
