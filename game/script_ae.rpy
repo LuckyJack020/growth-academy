@@ -7356,7 +7356,7 @@ label AE035:
         MC "Hm?"
         show AE happy
         AE "..."
-        AE "As expected of Hotsure Keisuke. How much of your plan worked out to the letter?"
+        AE "As expected of Keisuke Hotsure. How much of your plan worked out to the letter?"
         MC "I'm not quite sure what you mean?"
         show AE surprised
         AE "You expected to leave me here with the food, and yet you have spare chopsticks?"
@@ -23511,7 +23511,7 @@ label AE098D:
     Coworker "Oy, Hotsure-san, check it out."
     MC "Hm?"
     Coworker "Over at the titty bar."
-    "They pointed over towards the main strip of the backroad to a building covered in lights, including two spotlights outside illuminating the gentlemans club \"Exotica\""
+    "They pointed over towards the main strip of the backroad to a building covered in lights, including two spotlights outside illuminating the gentlemans club \"Exotica\"."
     Coworker "They got a Nikku show goin on tonight."
     MC "Nikku show?"
     Coworker "Yeaaaah, yeah. Dances and shit by fat chicks and girls with them big uh... shit what are they called? Growth things. You got one, yeah?"
@@ -23549,7 +23549,6 @@ label AE098D:
     "The womans face was... familiar? Tan, and covered in makeup, but... familiar. On the monitor, it looked as though she was starting to blow a bubble, and as she did..."
     show side AECell at Position(xcenter=0.1) onlayer overlay
     "The silhouettes ass began to inflate along with her... hair? The woman's face in the video had a look of shock and surprise as the bubble continued to inflate covering her face until..."
-    show AE neutral
     "\"{i}POP{/i}\""
     scene Tokyo Club Stage Alt
     show AE neutral
@@ -23639,10 +23638,11 @@ label AE098D:
     "With that, I got up and sat at one of the tables off to the side. The booths were wide, owing to the clientele and talent the bar used, leading to me sitting at the very edge as I watched the club slowly empty out."
     "After a few minutes though, it felt like I myself may be on the verge of getting kicked out."
     "Untill..."
-    AE "Keisuke...? Hotsure Keisuke?"
+    AE "Keisuke...? Keisuke Hotsure?"
     show AE surprised with dissolve
     "There she was."
     MC "Heeey, Matsumoto-san!"
+    show AE happy
     "Trotting over, she bent down as I went to stand up, leading to us colliding for a somewhat awkward hug."
     MC "I-It's been forever since I've seen you!"
     show AE neutral
@@ -23779,7 +23779,7 @@ label AE098D:
     pause .5
     $setTime(TimeEnum.EVE)
     
-    scene Hotel Lobby with fade
+    scene Hotel Desk with fade
     play music TwilightDusk
     pause .5
     show AE aroused-2 with dissolve
@@ -24568,9 +24568,10 @@ label AE099D:
     pause 1
     $setSize(6)
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
+    play music Sunset
     scene Tokyo MC Apartment
     show AE neutral-eyebrow
-    with fade
+    with punch
     "Shiori sat at the side of my bed, her gigantic behind taking up its entire span as it was squeezed tightly by her bedazzling thong."
     MC "A-Ah..."
     AE "Sleep well?"
@@ -24792,6 +24793,7 @@ label AE099D:
     hide AE with dissolve
     "It had been a while since anyone called me that. Even when we were dating, Shiori would never. As much as I missed her when she wasn't acting like herself, there was almost a free spirited cutesy charm to Shiori... or, Wobbelz that I found so refreshing."
     "As Shiori left the building, I turned around to head back to the elevator..."
+    scene Hotel Desk with fade
     MC "..."
     Receptionist "..."
     MC "Sorry. Friend from school."
@@ -24955,7 +24957,7 @@ label AE099D:
     scene black with fade
     "We ate quietly for the most part, breaking up the silence with small talk here and there, before eventually it was time for me to head home. Shiori, however, was the one to offer walking with me back."
     "We didn't even say anything on the walk there... just kind of existed next to each other."
-    scene Hotel Lobby
+    scene Hotel Desk
     show AE neutral
     with fade
     "However, we ran into a slight problem; a placard was placed on the receptionist's desk which said \"Be back shortly\"."
@@ -25491,7 +25493,7 @@ label AE100D:
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     "Wobbelz 'd Azz"
     MCT "Search."
-    play music DayByDay
+    play music Sunset
     "Within a few moments, multiple options came up as I looked through her repertoire. Adult films, news articles, everything. However, I scrolled through with purpose, trying to find what I was looking for."
     MCT "There it is. Her insta."
     MCT "I've been looking for this for a while by searching for her real name, but nothing came up. In a way, that squares with what she had said yesterday."
@@ -25553,6 +25555,7 @@ label AE100D:
     "Shiori's eyes widened a bit in surprise. It seemed she hadn't expected that response of all things."
     AE "Oh? That's... interesting. Most people want me to be a bit more ditzy and carefree when I do my work... however, I suppose that it makes sense you'd possibly want a more mature edge."
     show AE neutral-2
+    stop music fadeout 2.0
     "As she spoke, she looked me in the eyes. That shared glance between us... told her everything."
     MC "..."
     show AE embarrassed

@@ -30112,7 +30112,7 @@ label WG091:
     jump daymenu
 
 label WG092:
-    $setProgress("WG", "WG093")
+    $setProgress("WG", "WG094")
     $setWGOutfit(OutfitEnum.CASUAL)
     #$setWGOutfit(OutfitEnum.DRESS) Reenable this when the Dress sprites are ready
     $setTime(TimeEnum.EVE)
