@@ -179,7 +179,7 @@ label PRG001:
     show WG neutral
     "Alice arched a brow at my comment, but didn't say anything as she cut a generous slice from the middle, as if she was cutting a fine piece of meat, and popped it in her mouth. I couldn't believe she was actually using silverware to eat a bun."
     "After she swallowed she took a sip of water, swishing it around in her mouth."
-    WG "Initial thoughts are... mixed.  There's a strong immediate taste up front. The filling however, has a disappointing glue-like texture. It sticks to the roof of my mouth rather than coating my pallette."
+    WG "Initial thoughts are... mixed.  There's a strong immediate taste upfront. The filling however, has a disappointing glue-like texture. It sticks to the roof of my mouth rather than coating my pallette."
     WG "The pastry was not fluffy in the slightest, as if it had been smashed. The backend flavor diminishes quickly."
     WG "Final verdict: substandard, but not entirely unpleasant."
     "I looked over and saw Aida studiously taking notes on a notepad."
@@ -1775,7 +1775,7 @@ label PRG009:
         PRG "I... It's one of those things that... um... even though I really enjoy them, I-I don't really like talking about them in a professional way."
         PRG "It's... just for me."
         PRG "Sorry if that seems weird..."
-        MC "Oh, not at all! Not at all! I totally get it. Can I be up front for a second? Like, one hundred percent open?"
+        MC "Oh, not at all! Not at all! I totally get it. Can I be upfront for a second? Like, one hundred percent open?"
         show PRG neutral
         PRG "Um, sure?"
         MC "I think it's really cool that you like baseball so much. Cooking too."
@@ -3837,7 +3837,7 @@ label PRG015:
     stop music fadeout 1.0
     "I found myself trudging around the halls, deep in thought."
     "Alice's talk, though mildly rough and harsh at first, had done something."
-    "It had lit the hell fires of vesuvius under my butt, and I felt invigorated by motivation."
+    "It had lit the hell fires of Vesuvius under my butt, and I felt invigorated by motivation."
     play music MC
     "I was going to make things with Aida happen, no matter what it took."
     "Alice had had a point back there. Opportunity only came to those who made it happen."
@@ -3897,7 +3897,7 @@ label PRG016:
     "I started off down toward the main buildings. It was a little cloudy out, but the inner sunshine I felt emanating from my chest cavity lit up my whole perspective."
     "This was my time. And, I was going to take it by the balls."
     scene Campus Center with fade
-    "Everything felt right. I had a small spring in my step today. Compared to the average walk to class, I felt like I was floating, coasting around on a breeze of confidence and self fulfilment."
+    "Everything felt right. I had a small spring in my step today. Compared to the average walk to class, I felt like I was floating, coasting around on a breeze of confidence and self-fulfilment."
     scene Hallway with fade
     "The feeling carried through into the halls."
     "I didn't know what to expect today, whether it would be all flair and spectacle, or maybe a more simple approach."
@@ -3963,12 +3963,12 @@ label PRG016:
     MC "She seems fairly confident in that, Kodama-san. I think you guys will have this in the bag."
     PRG "M-Maybe... I guess you never know."
     hide Sakura with dissolve
-    "A loud bell rang out twice in succession, echoing from the judge's table."
+    "A loud bell rang out twice in succession, echoing from the judges' table."
     MC "What's with the bell?"
     show PRG neutral at center
     PRG "It's our five minute warning."
     MC "Ah."
-    "I glanced at the judges table. That same group of students were taking the chairs behind the table."
+    "I glanced at the judges' table. That same group of students were taking the chairs behind the table."
     MC "The judges aren't here yet? You'd think they'd want to be on time for the first competition of the year."
     PRG "Oh, they are. That's them at the table."
     MC "Wait... they're students?"
@@ -3987,7 +3987,10 @@ label PRG016:
     hide PRG with dissolve
     "I hurried back across the room to the group of chairs, taking one in the middle."
     show Natsuko neutral with dissolve
-    "As I sat back and got comfortable, I noticed a girl with messy, red hair sitting at the end of the middle row, a few seats away from me."
+    if not getFlag("Meet_Natsuko"):
+        "As I sat back and got comfortable, I noticed a girl with messy, red hair sitting at the end of the middle row, a few seats away from me."
+    else:
+        "As I sat back and got comfortable, I noticed Natsuko sitting at the end of the middle row, a few seats away from me."
     hide Natsuko with dissolve
     show Ryoko neutral with dissolve
     "She leaned forward as the head judge came forward to the middle of the room."
@@ -5502,7 +5505,7 @@ label PRG019_c1_1:
     show PRG worried at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
-    "Aida reached into the steamer with a pair of tongs and gently pulled out each dumpling, setting them on a large plate. She handed them off to Sakura who added a touch of garnish before bringing them to the awaiting judge's table."
+    "Aida reached into the steamer with a pair of tongs and gently pulled out each dumpling, setting them on a large plate. She handed them off to Sakura who added a touch of garnish before bringing them to the awaiting judges' table."
     stop music
     "Their opponents handed the judges their offering of sukiyaki. Tasting was started and the judges' faces remained blank and ambiguous."
     "Unlike the last competition, I couldn't see anything that led me to their thoughts."
@@ -6225,7 +6228,7 @@ label PRG020:
     MC "I see."
     MC "Well, when you say that she's not acting like herself, what exactly are you referring to?"
     WG "Mm... quite a few things, to be blunt."
-    WG "Such as this. Generally, she will make us breakfast in the morning, while I go over matters for the business and get myself prepared for the day."
+    WG "Such as this: Generally, she will make us breakfast in the morning, while I go over matters for the business and get myself prepared for the day."
     WG "However, yesterday, she completely overslept and we had to skip the morning meal altogether, which was entirely unlike her."
     WG "And then there was the day before, she returned late from her practice with Myoga-san, and she had forgotten to bring us food from the cafeteria."
     WG "So, we took the evening off from work and went to the cafeteria to eat, instead."
@@ -6423,8 +6426,11 @@ label PRG020_c1_after:
     show Sakura happy at Position(xcenter=0.15, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.35, yalign=1.0)
     with dissolve
-    "I spotted Sakura and that other redhead from the cooking competition chatting with a few other girls in a group."
-    MCT "Dang. That girl is seriously tall."
+    if not getFlag("Meet_Natsuko"):
+        "I spotted Sakura and that other redhead from the cooking competition chatting with a few other girls in a group."
+        MCT "Dang. That girl is seriously tall."
+    else:
+        "I spotted Sakura and Natsuko from the cooking competition chatting with a few other girls in a group."
 
     scene Hallway with fade
     MCT "Yeah... too many people."
@@ -6970,7 +6976,7 @@ label PRG021:
     AE "And bow!"
     hide AE with dissolve
     "I bowed with everyone else, then sat back down heavily in my seat."
-    "However, instead of my mind picking up the ol' mental pencil to get ready for another day of fun and learning with Tashi-sensei, my thoughts immediately careened off the beaten path to the new territory."
+    "However, instead of my mind picking up the ol' mental pencil to get ready for another day of fun and learning with Tashi-sensei, my thoughts immediately careened off the beaten path into new territory."
     if getFlag("PRG020_c1_1"):
         pause .5
         "I'd kissed Aida."
@@ -6992,7 +6998,7 @@ label PRG021:
     MC "Ehh?!"
     "Tashi-sensei stared at me, his icy gaze seemingly piercing into my soul itself."
     show HR neutral
-    HR "If you have time to day dream, you have time to listen, so eyes front!"
+    HR "If you have time to daydream, you have time to listen, so eyes front!"
     show HR unique
     MC "Y-Yes Sensei!"
     play music Schoolday
@@ -7345,7 +7351,7 @@ label PRG021:
     PRG "Um... t-thank you again, Hotsure-san. F-For trying my food."
     MC "Hey, it's no problem. Never has been, never will be."
     PRG "D-Don't you get sick of tasting my food all of the time?"
-    MC "Kodama-san, I'm a guy. We never turn down free food, especially if said free food happens to be five star meal quality."
+    MC "Kodama-san, I'm a guy. We never turn down free food, especially if said free food happens to be five-star meal quality."
     show PRG unique-happy
     PRG "M-My food isn't quite at that level..."
     MC "Well it's pretty darn close."
@@ -7916,7 +7922,7 @@ label PRG023:
     "I was shocked."
     "I hadn't even thought that she'd noticed how she was acting that day. But, here she was, looking like she was about to have a panic attack over our last exchange."
     MC "Kodama-san... I really appreciate it."
-    MC "I'll be up front, I was convinced that I'd done something wrong."
+    MC "I'll be upfront, I was convinced that I'd done something wrong."
     MC "I thought that I had messed something up, or said something stupid, so, I'm... well, I'm relieved."
     MC "But, you don't have to feel bad about it, Kodama-san. No hard feelings here."
     show PRG sad-2
@@ -8614,7 +8620,7 @@ label PRG025:
     else:
         MCT "I'm kissing Aida. I'm kissing Aida."
         MCT "Holy shit, I'm kissing Aida."
-        "I hadn't expected us to kiss, but the occasional day dream had worked its way through my head."
+        "I hadn't expected us to kiss, but the occasional daydream had worked its way through my head."
         "In those dreams, our kiss was pure, and filled with adoration and emotion."
         "This one had emotion, for sure."
         "However, instead of the pure, white haze of an angelic kiss, this one was different."
@@ -15854,7 +15860,7 @@ label PRG034:
     "{i}CLANG!{/i}"
     pause .5
     "Aida quickly backpedaled away from the stove as the pot of rice slid off of the burner and off of the stove, the whole thing falling and dumping out onto the floor."
-    "Takamura stood up from her seat at the judge's table, a look of concern drawn across her face."
+    "Takamura stood up from her seat at the judges' table, a look of concern drawn across her face."
     show PRG unique
     pause .5
     "The whole room was quiet. Even the competing team stopped for a moment to look over at the commotion."
@@ -26808,7 +26814,7 @@ label PRG046:
         MC "Here you go, Baby. All for you."
     elif getFlag("PRG044_c1_2"):
         MC "Here you go, Babe. All for you."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "Here you go, Sweetie. All for you."
     show PRG admire-2
     "Aida looked down at the bento as if I'd just handed her a plate of diamonds."
@@ -26824,7 +26830,7 @@ label PRG046:
         MC "You're welcome, Baby."
     elif getFlag("PRG044_c1_2"):
         MC "You're welcome, Babe."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "You're welcome, Sweetie."
     "I let go of her and moved back. Though, \"moving back\" was more me just picking my chopsticks back up. No matter where I went in my seat, Aida's hip and thigh were still pressed up against my leg."
     "Aida slid her bento over closer to her..."
@@ -26849,7 +26855,7 @@ label PRG046:
         MC "Go ahead, Baby."
     elif getFlag("PRG044_c1_2"):
         MC "Go ahead, Babe."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "Go ahead, Sweetie."
     "Aida took her chopsticks and immediately went for some chicken."
     PRG "T-Thank you."
@@ -27223,7 +27229,7 @@ label PRG047:
                 MC "Hey... morning, Baby."
             elif getFlag("PRG044_c1_2"):
                 MC "Hey... morning, Babe."
-            elif getFlag("PRG044_c1_2"):
+            elif getFlag("PRG044_c1_3"):
                 MC "Hey... morning, Sweetie."
             PRG "Mmn... morning."
             "Aida glanced forward, craning her neck to see over her own bulk, to get a view of my hand."
@@ -29001,7 +29007,7 @@ label PRG048:
         MC "This is unbelievable. I see where you get it from, Baby."
     elif getFlag("PRG044_c1_2"):
         MC "This is unbelievable. I see where you get it from, Babe."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "This is unbelievable. I see where you get it from, Sweetie."
     MC "Er... ah, Aida. Sorry."
     Takara "Oh, why are you sorry, Hotsure-san? There's nothing wrong with a cute nickname."
@@ -29295,7 +29301,7 @@ label PRG048:
             "Keisuke" "Hahh... B-Baby..."
         elif getFlag("PRG044_c1_2"):
             "Keisuke" "Hahh... B-Babe..."
-        elif getFlag("PRG044_c1_2"):
+        elif getFlag("PRG044_c1_3"):
             "Keisuke" "Hahh... S-Sweetie..."   
         PRG "... It's okay."
         PRG "... You can feel them."
@@ -29866,7 +29872,7 @@ label PRG049:
         MC "Baby... you don't have to thank me. I wanted to do this for you."
     elif getFlag("PRG044_c1_2"):
         MC "Babe... you don't have to thank me. I wanted to do this for you."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "Sweetie... you don't have to thank me. I wanted to do this for you."
     PRG "I know you did... a-and I want to do this for you."
     show PRG neutral
@@ -30429,7 +30435,7 @@ label PRG049:
         MC "It's okay, Baby. We should enjoy ourselves. First baseball game in person and all."
     elif getFlag("PRG044_c1_2"):
         MC "It's okay, Babe. We should enjoy ourselves. First baseball game in person and all."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "It's okay, Sweetie. We should enjoy ourselves. First baseball game in person and all."
     pause .5
     show PRG blush-2
@@ -33610,7 +33616,7 @@ label PRG053:
     "It wasn't to call her plain. Not at all. But in truth, what about her had stood out to me?"
     "It was easy to say that her body was the draw, that was simple. Any guy could say that they fell for a girl by checking out her boobs or her ass."
     "And, if that really were the case, then at least half of those other girls would have been contenders too."
-    "Was it the road less traveled idea? The idea that some people might go for what's up front instead of what's maybe not so showy on the surface?"
+    "Was it the road less traveled idea? The idea that some people might go for what's upfront instead of what's maybe not so showy on the surface?"
     "No. I don't think so. It was clear from just a look at Aida that she was cute, not to mention some of her more... large characteristics."
     "Back then, her chest was on par with Honoka's, which was massively impressive for a girl her size."
     "Then what? What drew me in?"
@@ -33951,7 +33957,7 @@ label PRG054:
         MC "Hi, Baby..."
     elif getFlag("PRG044_c1_2"):
         MC "Hi, Babe..."
-    elif getFlag("PRG044_c1_2"):
+    elif getFlag("PRG044_c1_3"):
         MC "Hi, Sweetheart..."
     MC "Have a good morning?"
     show PRG worried
@@ -33990,7 +33996,7 @@ label PRG054:
     MC "Ah..."
     MC "... Those things are addicting, by the way."
     show WG surprised-2
-    WG "Addicting? ...Well Irm not so sure I would precisely use that word," 
+    WG "Addicting? ...Well I'm not so sure I would precisely use that word," 
     show WG pondering
     extend " but then again, Aida's gratitude for Honoka was not the sole determining factor in her decision to make a second batch."
     MC "Hm. I see."
@@ -34774,7 +34780,7 @@ label PRG055:
         MC "Hey, Baby. What's up?"
     if getFlag("PRG044_c1_2"):
         MC "Hey, Babe. What's up?"
-    if getFlag("PRG044_c1_2"):
+    if getFlag("PRG044_c1_3"):
         MC "Hey, Sweetie. What's up?"
     PRG "Hi, Baby."
     PRG "I'm at the cooking club kitchen right now. I went to borrow a pan for today."
@@ -35031,7 +35037,7 @@ label PRG055:
         MC "Sorry about that, Baby. I ran into Takamura-sensei in the hallway."
     if getFlag("PRG044_c1_2"):
         MC "Sorry about that, Babe. I ran into Takamura-sensei in the hallway."
-    if getFlag("PRG044_c1_2"):
+    if getFlag("PRG044_c1_3"):
         MC "Sorry about that, Sweetie. I ran into Takamura-sensei in the hallway."
     PRG "In the dorms?"
     MC "Yeah. Weird, right?"
@@ -35137,7 +35143,7 @@ label PRG055:
         MC "You're welcome, Baby. You eat up."
     if getFlag("PRG044_c1_2"):
         MC "You're welcome, Babe. You eat up."
-    if getFlag("PRG044_c1_2"):
+    if getFlag("PRG044_c1_3"):
         MC "You're welcome, Sweetie. You eat up."
     "Aida kept shoveling load after load of crispy hash browns into her mouth, only stopping for sips of water."
     "After a few minutes, Aida set her plate off to the side by the sink and sighed. She put her hands on her belly again and smiled."
@@ -35339,7 +35345,6 @@ label PRG055:
     PRG "Could you..." 
     show PRG blush-2
     PRG "Could you... sit behind me?"
-    "test"
     MC "Like... with my legs around you?"
     PRG "Mhm..."
     "I adjusted on the floor, shimmying behind Aida."

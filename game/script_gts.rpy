@@ -2591,7 +2591,7 @@ label GTS020_c1_2:
     show GTS happy
     GTS "Yes... you're right, Hotsure-san. Sorry, I got a little carried away there. I just... well, didn't think this would be how this turned out."
     MC "Trust me, you caught me by surprise, too. And here I thought these cookies would be the only surprise tonight. Speaking of which, I can't finish all these cookies by myself. Come on, try out some of your handiwork."
-    "I raised a cookie up to her, her cheeks still a shade of crimson as she nodded and took it. We continued our conversation, shifting to more causal topics, but the mood was much happier."
+    "I raised a cookie up to her, her cheeks still a shade of crimson as she nodded and took it. We continued our conversation, shifting to more casual topics, but the mood was much happier."
     "Naomi smiled a little wider than usual, and I noticed her shift her body a little so it was slightly closer to mine."
     "We talked so long that we lost track of time, but that was okay since every moment felt better than the last."
     jump daymenu
@@ -2957,7 +2957,7 @@ label GTS022_scribe:
     show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with dissolve
     "I joined them in its spotted shadow; up close I could see a single branch hanging just by Naomi's head."
-    GTS "I hope you approve the spot."
+    GTS "I hope you approve of the spot."
     "I nodded with consideration."
     MC "It's lovely."
     AE "Now then, this gives us a few minutes for you to contemplate your themes and composition. Hotsure-san, as I understand you took the initiative in organizing this session, the first stanza falls to you. We will alternate from there."
@@ -3027,7 +3027,7 @@ label GTS022_scribe:
     AE "Right."
     "She labored in silence at revising her stanza, fingers strumming, teeth on her lips."
     show GTS neutral with dissolve
-    GTS "Let us sit down one day and, see our selves in a tea cup."
+    GTS "Let us sit down one day and, see ourselves in a tea cup."
     MCT "Not a twinge of enjoyment on her face that time, either."
     MCT "She was obviously really looking forward to this, but now I don't know if this is what she really wanted."
     MCT "Could it be partly my fault? I know I'm probably not throwing out the best material to work with..."
@@ -10220,7 +10220,7 @@ label GTS046_c2:
         "I tried to laugh it off, but her widening smile told me she could see my blush."
     show GTS neutral
     GTS "Well now, let's see if we can't fortify your notes a tad."
-    "I nodded and set my notebook and my lap, with my pencil poised; she eased herself down beside me, and scooted closer, and a little closer, with her hands folded over her knees."
+    "I nodded and set my notebook in my lap, with my pencil poised; she eased herself down beside me, and scooted closer, and a little closer, with her hands folded over her knees."
     "We promptly got to work, sharing a laugh or two every so often wherever conversation carried us; all the while the warm scent of gooey, chocolatey cookies floated into my chest."
     "The anticipation was killing me."
     jump daymenu

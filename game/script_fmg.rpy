@@ -2183,7 +2183,7 @@ label FMG017_c1_2:
     "As much as I wanted to, I wasn't going to lose sleep if I didn't pick it up."
     show FMG happy
     $setAffection("FMG", 1)
-    FMG "Phew, thanks Kei-Kun. No telling what would have happened if you picked up that plushie."
+    FMG "Phew, thanks Kei-kun. No telling what would have happened if you picked up that plushie."
     MCT "Probably nothing. I should've messed with the \"supernatural\". Next time, bear... next time."
     show FMG happy at altMove(1.5, 0.25)
     "With my decision made, I left the bear on the ground where it sat, however just when we thought it was over, we heard someone and..."
@@ -2223,7 +2223,7 @@ label FMG018:
     "Except Akira... who was sleeping on her desk... again."
     MC "Akira wake up, we gotta go."
     FMG "Ugh... Get your hands off my pizza Reginald... I'm the pizza queen..."
-    MCT "Geez What kind of dreams does she have? Wait, I'm getting distracted."
+    MCT "Geez! What kind of dreams does she have? Wait, I'm getting distracted."
     MC "Akira, wake up!"
     show FMG neutral with dissolve
     FMG "Wha... Oh, good morning, Keisuke. I had this dream where I was the queen of Italy and there was..."
@@ -2571,7 +2571,7 @@ label FMG019:
     "After getting my hair situation in order, it didn't take me long to find Akira."
     "Laying on the ground with a popsicle stick dangling out of her mouth. Akira turned her head to see me walking toward her. She held up an errant peace sign, her large biceps bulging slightly as she did."
     show FMG neutral with dissolve
-    FMG "Yo, Kei-Kun."
+    FMG "Yo, Kei-kun."
     MC "Hey, I was wondering where you been, and here I find you catching some rays."
     FMG "Heh. Yeah, been here since after class."
     MC "I could tell. What are you doing up here anyway?"
@@ -2632,7 +2632,7 @@ label FMG019:
     show FMG flex
     FMG "They wouldn't stand a chance against these arms, hahaha."
     show FMG neutral
-    FMG "Thanks, Kei-Kun. I-I needed this."
+    FMG "Thanks, Kei-kun. I-I needed this."
     "Akira smiled, turning her head back towards the sunset."
     FMG "I love this spot, it has such a great view of the sunset."
     FMG "But I think it's better with friends."
@@ -2662,7 +2662,7 @@ label FMG020:
     MC "Probably better off going to a burger joint or something to play it safe... {w}Wow, I haven't had a burger since I left Tokyo... could try that new burger place."
     "My train of thought was interrupted when I spotted an all too familiar workout partner jogging towards me."
     show FMG neutral
-    FMG "Hey, Kei-Kun, what's up?"
+    FMG "Hey, Kei-kun, what's up?"
     MC "Nothing much, just thinking about what my dinner plans are. I'm trying to avoid going to the cafeteria again."
     show FMG sad
     FMG "You too? I'm only going because it's close. Man, I wish they'd mixed up the meals once in a while. I can only tolerate chicken for so long."
@@ -2731,7 +2731,7 @@ label FMG020:
     FMG "I am a growing girl after all, heheheh."
     show FMG neutral
     FMG "But yeah, I've pushed myself on today during my routine and I worked up a killer appetite. Figured I better go big or go home."
-    MC "Huh, glad to see you're still keeping up the regime."
+    MC "Huh, glad to see you're still keeping up the regimen."
     show FMG sad
     FMG "Yeah, yeah... hmmm."
     MC "Something up?"
@@ -2757,7 +2757,7 @@ label FMG020_c1_1:
     $setFlag("FMG020_c1_1")
     MC "Okay, yeah, cool cool... so... when you really like something, you want to make it a part of your life, yeah?"
     show FMG neutral
-    FMG "Well yeah, duh, why get into it if you ain't gonna put it in your life! That's what a regiment is, am I right?"
+    FMG "Well yeah, duh, why get into it if you ain't gonna put it in your life! That's what a regimen is, am I right?"
     "With a sly chuckle, Akira took a swig of her milkshake as I began to bounce my leg with anxious enthusiasm."
     MCT "Do it, you little bitch! Come on!"
     MC "Well... um... so, have you ever... have you ever had a relationship like that?"
@@ -2821,7 +2821,7 @@ label FMG020_c1_1:
     "Sure enough, the stars were in clear, full view for anyone watching the sky on this starry night. With the stars came the company of the moon, full and shining bright on this beautiful night."
     MC "Wow. It sure is beautiful."
     show FMG aroused
-    FMG "Yeah, I'm just glad I can spend it with you, Kei-Kun."
+    FMG "Yeah, I'm just glad I can spend it with you, Kei-kun."
     MC "Me too."
     "I'm glad I was able to muster the courage to ask her. That feeling you get when someone you're into is actually interested in you as well... it's surreal."
     "We both sat there for a while, spending time together as the light of a billion distant stars glittered in the sky and the moon gleamed with beauty."
@@ -3007,7 +3007,7 @@ label FMG021:
     show AE embarrassed
     AE "Ghn... You know what? Never mind. We'll go over the first portion again."
     show FMG neutral
-    FMG "All right, I'll start so it's fair. The great emu war..."
+    FMG "All right, I'll start so it's fair. The Great Emu War..."
     show FMG sad
     FMG "I still can't get over that this seriously happened... it sounds like some cheesy B movie."
     show AE neutral
@@ -3032,7 +3032,7 @@ label FMG021:
     MCT "Meh, either way, I'm not doing anything."
     MC "Oh, well I'm not really doing anything, I can help if you want."
     show FMG happy
-    FMG "Aww sweet, thanks, man! Now read this book, fair warning someone-who was totally not me out of boredom-drew weiners on page 13. "
+    FMG "Aww sweet, thanks, man! Now read this book, fair warning someone - who was totally not me out of boredom - drew weiners on page 13. "
     MC "Umm... Thanks?"
     MCT "Page 14 might catch a peepee or two, no promises."
     show AE angry
@@ -3085,7 +3085,7 @@ label FMG021:
     play music Schoolday
     FMG "...And then! As the Americans ran across the great desert in their 1969 Brimstone muscle cars, they shot down the great emu mech robot thing piloted by sergeant general lieutenant Emmet Mel and he died in the explosion!"
     FMG "Killing all the emus in the process! And so, the city of New Zealand, Australia was renamed to Melbourne! And then everyone ate emu burgers!"
-    FMG "And that's how the great emu war happened!"
+    FMG "And that's how the Great Emu War happened!"
     hide FMG with dissolve
     show AE neutral with dissolve
     AE "..."
@@ -3139,7 +3139,7 @@ label FMG021:
     show FMG happy at Position(xcenter=0.25, yanchor=1.0)
     show AE neutral at Position(xcenter=0.75, yanchor=1.0)
     with fade
-    FMG "Guys guess what! I got an A+ on my report!"
+    FMG "Guys, guess what?! I got an A+ on my report!"
     AE "What report? I never-wait, what?!"
     FMG "Oh don't worry Shiori, I told Tashi all about how you and Kei helped me-"
     MC "Honestly, I liked it. Our version is way better than what actually happened. Think about it, Shiori."
@@ -3852,11 +3852,11 @@ label FMG023_c2_after:
     MC "Mm, nah, how about strawberry?"
     Miura "Ah, classic! That'll be 300 too, if you please."
     "I laid down a thousand note, took my change, and then as Miura-san retrieved our orders he spoke up."
-    FMG "You know, I used to visit your guys stand back in Okinawa when I was a little girl! It was my favorite place on earth, haha."
+    FMG "You know, I used to visit your guys stand back in Okinawa when I was a little girl! It was my favorite place on Earth, haha."
     FMG "I can't wait to bite into this, the memories are going to start pouring back."
     Miura "I don't mean to pry but are you Akira Mizutani?"
     FMG "Uh, yeah. Why do you ask?"
-    Miura "Well, I had a hunch at first, but your story and order confirmed my suspension. Minei-sama says hello and he hopes you're doing okay and that you'll visit him soon."
+    Miura "Well, I had a hunch at first, but your story and order confirmed my suspicion. Minei-sama says hello and he hopes you're doing okay and that you'll visit him soon."
     show FMG happy
     "Akira simply melted. She sank into her shoes just a little bit, the tension I couldn't even see melting away in a word. She grinned and tried to say something; it took her a couple of tries through soft, involuntary little chuckles."
     FMG "Tell him I said the same, please."
@@ -4088,7 +4088,7 @@ label FMG025:
     MCT "When I began slowly opening my eyes, I was met by Akira staring down at me."
     MC "Holy crap! Akira, you nearly gave me a heart attack!"
     show FMG happy with dissolve
-    FMG "My bad Kei-Kun. I saw you relaxing and thought I'd see what you're up to."
+    FMG "My bad Kei-kun. I saw you relaxing and thought I'd see what you're up to."
     FMG "So, whaddya doin out here so early?"
     MC "I was taking laps around the track. I wanted to beat my record, and it was going pretty well."
     show FMG neutral
@@ -16639,7 +16639,7 @@ label FMG080:
     scene black with fade
     pause .5
     scene Classroom4
-    show Hageshi neutral
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0)
     with fade
     pause .5
     show FMG happy at Position(xcenter=0.75, yalign=1.0) with easeinright
@@ -20502,7 +20502,7 @@ label FMG093A:
     Hageshi "As fun as it is for spectators, for the athletes, it is a grueling test of strength and mental fortitude. They do not know what the events will be, save for a couple weeks leading up to the contest."
     Hageshi "This is so they cannot specialize in the events— they just need to show up strong. {w}It is a grueling contest designed to test the absolute limits in these athletes that frankly haven't ever had the chance to test their limits before."
     Announcer2 "Sounds exciting. I can't wait. I think everyone is excited to see two school record breakers going head to head."
-    Hageshi "It's certainly been an usual year, and we have two exceptional athletes that are well matched for each other. Even though there are only two competitors, it is likely to be the best match in the history of the event."
+    Hageshi "It's certainly been an unusual year, and we have two exceptional athletes that are well matched for each other. Even though there are only two competitors, it is likely to be the best match in the history of the event."
     Hageshi "In anticipation of some record breaking performances, I enlisted the help of the chief of maintenance and shop manager of the school, Misuboro-san, to create all new custom implements to accommodate the event."
     Announcer2 "Sounds awesome. Can you give us an overview of the first event?"
     Hageshi "The first event will be the Mammoth Bar deadlift. It does not just refer to the barbell's unusually large size, it is specialty steel for heavy loads that provides high tensile strength at the expense of stiffness."
@@ -21063,7 +21063,7 @@ label FMGGTS001:
     show FMG flex
     FMG "Yeah, if you want it done poorly. If you look over there, you'd see {i}real{/i} craftsmanship."
     show Natsuko neutral
-    Natsuko "You consider shoveling dirt, craftsmanship? Hm, I guess with your lack of skills, it might as well be."
+    Natsuko "You consider shoveling dirt craftsmanship? Hm, I guess with your lack of skills, it might as well be."
     "Naomi was quick to insert herself to prevent it from getting any worse."
     show GTS happy
     GTS "It really is wonderful what becomes possible when we allow ourselves to see each other's strengths. {w}Wouldn't you agree?"
@@ -21071,8 +21071,8 @@ label FMGGTS001:
     FMG "Uh, sure?"
     Natsuko "I suppose..."
     GTS "We should rendezvous at my dormitory! Some tea would be just the thing to help us unwind!"
-    Natsuko "Thanks for the offer, Yamazaki-san but if I have to be around Akira any longer I'm going to get sick."
-    FMG "Funny, that you mention that. I've been feeling queasy the entire time you've been here. In fact, I might relieve myself on your shoes."
+    Natsuko "Thanks for the offer, Yamazaki-san, but if I have to be around Akira any longer I'm going to get sick."
+    FMG "Funny that you mention that. I've been feeling queasy the entire time you've been here. In fact, I might relieve myself on your shoes."
     "I could see Natsuko's jaw grinding and I instinctively took a step back."
     Natsuko "Whatever. You can be a child on your own time, I'm leaving."
     MCT "It never ends this shit..."
@@ -21209,7 +21209,7 @@ label FMGGTS002:
     FMG "Hey!"
     MC "Sorry, good tea is hard to come by, I have to take my chances as I see them."
     show GTS neutral
-    GTS "Hmhm. My mother is quite the old hand at senchado, and I believe she taught me well. But rest assured it's nothing to get too worked up over."
+    GTS "Hmhm. My mother is quite the old hand at senchado, and I believe she's taught me well. But rest assured it's nothing to get too worked up over."
     MC "{size=-6}Akira, what's senchado?{/size}"
     show FMG sad
     FMG "{size=-6}For someone who said good tea is hard to come by, I figured you'd know.{/size}"
@@ -21294,7 +21294,7 @@ label FMGGTS002:
     MC "I'm down."
     FMG "W-What... Do you just offer to help anyone that walks up to your table?"
     MC "Akira, if I had a yen for every time a man with a dog named Pedro asked me for help, I'd have two yen. Which isn't a lot but it's weird that it happened twice."
-    MC "And think about it, what if Kitao here has a reward like one of those ridiculous NPC quests in those extremely buggy RPGs you like."
+    MC "And think about it: What if Kitao here has a reward like one of those ridiculous NPC quests in those extremely buggy RPGs you like?"
     MC "You could level up if you catch my drift."
     FMG "No, I don't catch your drift. There isn't even a slight breeze."
     FMG "Look... Kitao, is it?"

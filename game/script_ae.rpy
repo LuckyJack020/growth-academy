@@ -3037,7 +3037,7 @@ label AE018:
     show AE neutral-annoyed
     AE "Tch-it has nothing to do with faith, it's about an unproven field of psychoanalysis."
     show AE angry
-    AE "Don't conflagrate faith with pseudoscience."
+    AE "Don't conflate faith with pseudoscience."
     MC "..."
     MCT "I struggled to bring back the entire memory of my dream, but only one piece of it sprang forth."
     show AE sad-2
@@ -18343,7 +18343,7 @@ label AE079:
     AE "Hm."
     AE "..."
     show AE surprised
-    AE "Oh my god, I better find those keys; replacements are 10 dollars and I absolutely cannot afford to-"
+    AE "Oh my god, I better find those keys; replacements are 1500 yen and I absolutely cannot afford to-"
     MC "I got you covered if you need me to-"
     AE "To get a repla- no, no, Keisuke you will not be doing that-"
     MC "It's all good! I totally can-"

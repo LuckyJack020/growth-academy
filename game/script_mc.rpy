@@ -13631,16 +13631,16 @@ label RM004_C1_after:
         MCT "Odd. Well, none of my business I guess. {w}I wonder what got him so spooked that he pulled a Houdini again? Unless he had a reason he didn't want to be noticed..."
         if getFlag("RM_govagent"):
             "Though given the drastic measures he's willing to take when he thinks the wrong people are onto him, (like his emergency document dump when I joked I was a government agent) it's probably more surprising he doesn't do it more often."
-    show RM neutral-2 with dissolve
-    RM "Alright, let's head in."
-    MC "{i}Gah{/i}! {w}Where did you come from?"
-    RM "I've been here the whole time."
-    MC "At this point I'm starting to think you might be a figment of my imagination and everyone is just humoring me by pretending you're there."
-    RM "Well you have a poor imagination then if you can't even imagine yourself as the main protagonist in this mystery novel."
-    MC "Yes, well your lack of screen time is not exactly bolstering your status as \"lead detective\". Why did you suddenly dip when we're right here? Do you know those girls or something?"
-    show RM sad
-    RM "Ugh... it's a long story, don't ask. Let's go."
-    "The fact that he said \"don't ask\" made me all the more curious, but I had a feeling I wasn't going to get any answers if I did."
+        show RM neutral-2 with dissolve
+        RM "Alright, let's head in."
+        MC "{i}Gah{/i}! {w}Where did you come from?"
+        RM "I've been here the whole time."
+        MC "At this point I'm starting to think you might be a figment of my imagination and everyone is just humoring me by pretending you're there."
+        RM "Well you have a poor imagination then if you can't even imagine yourself as the main protagonist in this mystery novel."
+        MC "Yes, well your lack of screen time is not exactly bolstering your status as \"lead detective\". Why did you suddenly dip when we're right here? Do you know those girls or something?"
+        show RM sad
+        RM "Ugh... it's a long story, don't ask. Let's go."
+        "The fact that he said \"don't ask\" made me all the more curious, but I had a feeling I wasn't going to get any answers if I did."
 
     scene Classroom3 with fade
     play music HigherEdu
@@ -14053,7 +14053,7 @@ label RM005:
     show RM neutral-2
     RM "I'll try to keep that in mind. In the end, it gave us some key information about where the staff and faculty go, as well as how to obtain access off the island."
     if isEventCleared("MC007") or isEventCleared("FMGWG001"):
-        RM "Similarly, you were able to generate a key lead by striking up a conversation with Chie Kazomazumi and confirm she was the first document case, which gave us some useful information to bring up with Tsubasa-sensei."
+        RM "Similarly, you were able to generate a key lead by striking up a conversation with Chie Kazomazumi and confirm she was the first documented case, which gave us some useful information to bring up with Tsubasa-sensei."
     if getFlag("RM004_Ask"):
         show RM happy
         RM "You helped generate a lead by getting Tashi-sensei to talk about who would know about the history of the island, which led us to Tsubasa-sensei."
@@ -14246,7 +14246,7 @@ label RM005_Faculty:
     menu:
         "Manabu Noguchi" if not getFlag("RM005_Noguchi"):
             $setFlag("RM005_Noguchi")
-            MCT "\"Manabu Noguchi - principal, frequently uses latin in his vocabulary, government influence?\""
+            MCT "\"Manabu Noguchi - principal, frequently uses Latin in his vocabulary, government influence?\""
             MCT "Hmm, seems like a bit of a thin thread to me. Though it wouldn't be out of the question to assume he has some connections in the government to get his position."
             jump RM005_Faculty 
 

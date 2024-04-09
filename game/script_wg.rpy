@@ -492,7 +492,7 @@ label WG004_C3_1:
 label WG004_afterchoice1:
     show WG neutral
     MC "It sounds like this stuff keeps you pretty busy then."
-    WG "Yes, this is true. You have to keep on top of investments if you want them to work for you. Short term assets in particular require a lot of monitoring."
+    WG "Yes, this is true. You have to keep on top of investments if you want them to work for you. Short-term assets in particular require a lot of monitoring."
     WG "I've been reviewing my portfolio's performance in order to trim the fat. Upon review it's apparent that some of these assets were not pulling their weight as initially speculated."
     show WG worried
     WG "These energy sector investments in particular were a bust."
@@ -4042,7 +4042,7 @@ label WG020:
     show WG neutral
     WG "On that note, next on our agenda is the coming sales period."
     WG "This will cover the next month and a half, with our primary focus being summer clothing and accessories."
-    WG " The weather is warming up, so expect a rise in demand for tank tops, sundresses, and sunglasses."
+    WG "The weather is warming up, so expect a rise in demand for tank tops, sundresses, and sunglasses."
     WG "With an emphasis on style."
     "Alice certainly seemed to have her finger on the pulse of things, but I had no idea why she was telling me all of this. I'm just the delivery boy."
     "Though, I guess it helps to be clued in."
@@ -4710,9 +4710,9 @@ label WG023:
     WG "As you said, life doesn't try to accommodate our plans, so it's on us to make our plans work."
     MC "And you don't think that gets too rigid?"
     WG "Not at all. I've lived by this for years, and it's served me well."
-    "After hitting the snooze button three times this morning, I couldn't help but feel a bit behind the curb from listening to Alice talk about how she prioritizes her minute-to-minute schedule."
+    "After hitting the snooze button three times this morning, I couldn't help but feel a bit behind the curve from listening to Alice talk about how she prioritizes her minute-to-minute schedule."
     show WG haughty
-    WG "Then again, I do have the benefit of knowing where I'm going in life. It makes it easier to think long-term and, working backwards, in the short term."
+    WG "Then again, I do have the benefit of knowing where I'm going in life. It makes it easier to think long-term and, working backwards, in the short-term."
     show WG happy
     WG "But anyone can be determined and focused if they put a little effort in."
     MCT "She obviously doesn't know my sister."
@@ -30112,7 +30112,7 @@ label WG091:
     jump daymenu
 
 label WG092:
-    $setProgress("WG", "WG094")
+    $setProgress("WG", "WG093")
     $setWGOutfit(OutfitEnum.CASUAL)
     #$setWGOutfit(OutfitEnum.DRESS) Reenable this when the Dress sprites are ready
     $setTime(TimeEnum.EVE)
@@ -30574,7 +30574,7 @@ label WG092:
     extend " but I love food, Keisuke."
     WG "Even before all of this happened, I've always enjoyed it, more than most. I didn't exactly sport a lithe figure to begin with when you first met me," 
     show WG sly
-    " which in retrospect I'm sure didn't escape your notice."
+    extend " which in retrospect I'm sure didn't escape your notice."
     show WG doubt
     MC "Are you sure about that? I'll have you know I was utterly smitten by your forceful personality and charm."
     show WG sly
@@ -31404,7 +31404,7 @@ label WGBE001:
     scene Classroom with fade
     play music Schoolday
     "I got to class early today."
-    "I wasn't fully awake yet- hell, I was about to fall asleep sitting at my desk - but out of nowhere an electronic jingle shook me awake."
+    "I wasn't fully awake yet - hell, I was about to fall asleep sitting at my desk - but out of nowhere an electronic jingle shook me awake."
     #[SFX: Simple electronic melody]
     "It took me a second to realize that even with just five notes I knew that tune."
     "And it took me another second to realize what it was."
@@ -31443,7 +31443,7 @@ label WGBE001:
     BE "So sue me, I was curious."
     show BE happy
     BE "But anyway, someone else did a cover of the song, and they made the cheesiest, most over-the-top video of romantic cliches to go with it."
-    MC "And then other people made their own videos, or they took movie clips. Completely inappropriate stuff, like someone mourning a dead person or a slow pan over a cemetary."
+    MC "And then other people made their own videos, or they took movie clips. Completely inappropriate stuff, like someone mourning a dead person or a slow pan over a cemetery."
     BE "All with the sappy song playing over it."
     WG "A parody of a parody then?"
     MC "Exactly, only it got even worse."
@@ -32906,7 +32906,7 @@ label WGBE004B:
         if getFlag("WG077_Fail"):
             WG "The previous foray notwithstanding."
         MC "So you think I have it in me to be a great chef someday?"
-        WG "No, not really. You're pretty far behind the curb if that's what you were aspiring to in life."
+        WG "No, not really. You're pretty far behind the curve if that's what you were aspiring to in life."
         MC "My hopes and dreams... shattered. Like burnt crystallized gummy sugar in a sheet pan."
         show WG happy
         WG "Hehe, something like that, yes."
