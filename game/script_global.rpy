@@ -1074,6 +1074,7 @@ define audio.LoveC = "Audio/BGM/love_C.ogg"
 define audio.LoveMB = "Audio/BGM/love_mb.ogg" #Music Box variant of Love
 define audio.Memories = "Audio/BGM/memories.mp3"
 define audio.Misfit = "Audio/BGM/scene_themisfit.ogg" #Okisho's Theme
+define audio.MomentTime = "Audio/BGM/MomentTime.ogg" #A Moment in Time
 define audio.Motivation = "Audio/BGM/motivation.ogg"
 define audio.Natsuko = "Audio/BGM/theme_natsuko.ogg" #Hatred
 define audio.Nembutsu = "Audio/BGM/scene_nembutsu.ogg" #Morning Mist - altTitle

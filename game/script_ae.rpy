@@ -22948,7 +22948,7 @@ label AE098G:
     AE "As for heating... we just made do. Electricity worked, thankfully enough."
     "As she spoke, the fluorescent lights down the hall in the doorway to the left of us flickered and buzzed erratically before stabilizing."
     AE "Most of the time."
-    "The more and more we climbed, the more sweat I saw accumulated on Shiori's brow as her face went plaid. Undoubtedly, her new size would have made this climb more difficult now, but I doubted that was why."
+    "The more and more we climbed, the more sweat I saw accumulated on Shiori's brow as her face went pallid. Undoubtedly, her new size would have made this climb more difficult now, but I doubted that was why."
     AE "We're here."
     "My legs were a bit wobbly. I wasn't sure if it was because of the climb, because the building felt like it was swaying as I could hear the wind whip around the facade, or because of my nerves."
     MC "You ready?"
@@ -23591,7 +23591,7 @@ label AE098D:
     "As Shiori turned around and put her hands on her knees, she pushed her butt out to the room as the music picked up."
     show dummy with vpunch
     "\"{i}Let me see you pop-pop-pop-pop-{/i}\""
-    "As the beat bounced through the building, so did Shiori's booty to the rhythm; the lights flashed every time she did. It was such an experience, all of the rhythm and cadence going together at once I couldn't help but feel like my heartbeat was synching up..."
+    "As the beat bounced through the building, so did Shiori's booty to the rhythm; the lights flashed every time she did. It was such an experience, all of the rhythm and cadence going together at once I couldn't help but feel like my heartbeat was syncing up..."
     show dummy with vpunch
     "\"{i}-pop-pop-pop-pop-{/i}\""
     "As was the pulse from the bulge in my pants. From the physical reactions of my coworkers, it seemed they were in the same boat."
@@ -24527,11 +24527,11 @@ label AE099G:
     AE "Nnngh!"
     "I kept up the pace, almost ready to cum as Shiori let go of my hands and bent forward, pushing her booty up slightly as she used her arms as a lever to piston herself on top of me."
     "As she bounced up and down on top of me, I gave it my all to bear the weight of her gigantic body as she did. For her part, she did everything in her power to keep up her strength in her arms as she gripped tightly to the sheets."
-    "Our motions were almost in perfect synch as the pressure built and built..."
+    "Our motions were almost in perfect sync as the pressure built and built..."
     "And then..."
     show dummy with vpunch
     "Climax"
-    "There was no thunderous shout, to calling out in pleasure however..."
+    "There was no thunderous shout, no calling out in pleasure however..."
     "As our lips were well intwined..."
     "She collapsed onto me, our naked bodies almost sticking together from the heat as I weakly began to stroke her silky hair."
     "This moment."
@@ -24571,7 +24571,7 @@ label AE099D:
     play music Sunset
     scene Tokyo MC Apartment
     show AE neutral-eyebrow
-    with punch
+    with vpunch
     "Shiori sat at the side of my bed, her gigantic behind taking up its entire span as it was squeezed tightly by her bedazzling thong."
     MC "A-Ah..."
     AE "Sleep well?"

@@ -622,6 +622,17 @@ init python:
     )
     ost.manualDefineList.append(theme_TaN)
 
+    theme_MiT = ost.soundtrack(
+        name = "A Moment in Time",
+        path = "Audio/BGM/MomentTime.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Romance in Sync",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_MiT)
+
     ## Base Template
     ######################################
 

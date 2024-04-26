@@ -868,7 +868,7 @@ label global000_sit_c1:
     MCT "Oh no!"
     show WG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     MCT "Alice! She's taking up all of her seat and half of mine! What do I do??"
-    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" #with Shake((0, 0, 0, 0), 0.75, dist=20)
+    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!"
     menu:
         "So, Matsumoto-san...":
             jump global000_sit_c1_1
@@ -2878,7 +2878,7 @@ label MC005:
     MC "Headphones are out again, Tomo."
     "... Nothing."
     MC "TOMO! HEADPHONES!"
-    show Tomoko surprised at center, Shake(None, 0.5, dist=10) with vpunch
+    show Tomoko surprised at center, shake2(.04, 5) with vpunch
     Tomoko "AGH!"
     "Tomo yelped and turned around, her eyes wide."
     MC "Whoa, whoa. Sorry, sis. Didn't mean to scare you."

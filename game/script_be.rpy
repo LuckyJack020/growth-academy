@@ -12727,30 +12727,30 @@ label BE053:
     "I sent the phone call and closed my eyes, so I could focus a bit more on listening."
     pause 1.0
     play sound Vibrate
-    show BE surprised at center, Shake(None, 2.0, dist=2)
+    show BE surprised at center, shake2(.04, 5)
     BE "EEP!"
     MC "Shhh! I can hear it!"
     play sound Vibrate
-    show BE aroused at center, Shake(None, 2.0, dist=3)
+    show BE aroused at center, shake2(.04, 5)
     BE "S-so c-can I...!"
     BE "{size=-6}Please hurry and find it... I can't keep my voice- {/size}"
     play sound Vibrate
-    show BE aroused at center, Shake(None, 2.0, dist=4)
+    show BE aroused at center, shake2(.04, 5)
     BE "Hya~!"
     MC "Hmm...well it sounds relatively nearby, so it's in the room at least."
     BE "Y-yeah. I didn't leave my room. It's in here some-"
     play sound Vibrate
-    show BE disoriented at center, Shake(None, 2.0, dist=5)
+    show BE disoriented at center, shake2(.04, 5)
     extend "WHERE!"
     "Honoka and I searched around the room and listened for her phone. The call ended, so I dialed again."
     play music BE fadein 5.0
     BE "{size=-6}Oh come on, you dumm—{/size}"
     play sound Vibrate
-    show BE surprised-2 at center, Shake(None, 2.0, dist=5)
+    show BE surprised-2 at center, shake2(.04, 5)
     BE "—EEE...!"
     MC "God, it always sounds like it's right nearby. Where the hell did you put this thing?"
     play sound Vibrate
-    show BE surprised-2 at center, Shake(None, 2.0, dist=3)
+    show BE surprised-2 at center, shake2(.04, 5)
     "{i}*TAPTAPTAPTAP*{/i}"
     MC "What the... what was that? Sounds like it's tapping against metal?"
     "As we were speaking Honoka arched her back and stretched her arms above her head, thrusting her ballistics outward."
@@ -12760,15 +12760,15 @@ label BE053:
     show BE unique
     BE "You think so? Maybe you should take a closer look..."
     play sound Vibrate
-    show BE unique at center, Shake(None, 2.0, dist=2)
+    show BE unique at center, shake2(.04, 5)
     "{i}*TAPTAPTAPTAP*{/i}"
     play sound Vibrate
-    show BE unique at center, Shake(None, 2.0, dist=5)
+    show BE unique at center, shake2(.04, 5)
     BE "Preferably quickly...!"
     MC "Alright, alright. No need to rush me. I wouldn't even have to be looking for this if you'd just stop losing everything..."
     "I leaned closer to Honoka, focusing more on the open collar of her uniform instead of the...{i}largely{/i}...occupied rest of the shirt."
     play sound Vibrate
-    show BE unique at center, Shake(None, 2.0, dist=7)
+    show BE unique at center, shake2(.04, 5)
     "{i}*TAPTAPTAPTAP*{/i}"
     MCT "Ah. I see what's going on here now. Duh, Kei."
     "As my phone continued to ring, I saw Honoka's shirt, and by extension her breasts, subtly ripple at the same time."
@@ -13332,7 +13332,7 @@ label BE055:
     show BE neutral
     extend "But you're right! Where'd all the numbers go today?"
     MC "And, don't even get me started on rational expressions..."
-    show BE sad at center, Shake(None, .5, dist=1)
+    show BE sad at center, shake2(.03, 2)
     BE "Brrr... Literally gave me a chill up my spine with that one..."
     MC "Heh. Sorry. Anyway, if it wasn't about that... what's up?"
     show BE doubt

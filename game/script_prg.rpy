@@ -3978,7 +3978,10 @@ label PRG016:
     hide PRG with dissolve
     "I watched the judges take their seats. I thought I recognized one or two of them from around the school, but I wasn't really sure."
     show Ryoko neutral with dissolve
-    "One of them, a spunky looking girl, stood up and walked out from the table."
+    if not getFlag("Meet_Ryoko"):
+        "One of them, a spunky looking girl, stood up and walked out from the table."
+    else:
+        "I could see Ryoko among them, as she stood up and walked out from the table."
     Ryoko "Okay! If all spectators could please find their seats, we'll get this underway!"
     hide Ryoko with dissolve
     show PRG neutral with dissolve
@@ -31171,7 +31174,7 @@ label PRG050:
     show PRG angry
     PRG2 "Good! I don't care!" 
     Enmei "Young lady!" with hpunch
-    show PRG sad-2 #at center, quickShake(0.5, 1) remove hash once SFX is recorded
+    show PRG sad-2 #at center, shake2(.04, 5) remove hash once SFX is recorded
     "Enmei stood up with a start, his hand once again pounding the nightstand."
     Enmei "If you stay with him, you will be throwing your entire life in the trash!"
     Enmei "You won't have a single yen to your name!"
