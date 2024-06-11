@@ -22547,7 +22547,10 @@ label WG004M:
     play music Peaceful
     MCT "Speak of the devil..."
     show Okisho neutral with dissolve
-    MCT "Erm, well... the {i}actual{/i} devil apparently— if you were to take Alice's word."
+    if isEventCleared("WG084"):
+        MCT "Erm, well... the {i}actual{/i} devil apparently— if you were to take Alice's word. {w}Hopefully things are improving on that front though."
+    else:
+        MCT "Erm, well... the {i}actual{/i} devil apparently— if you were to take Alice's word."
     MC "Mizawa-san?"
     MCT "{i}Dang{/i}, look at that gut. You'd think I'd have lost all sense of scale hanging around Alice, for so long, (not to mention Aida) but even a blind man could sense the gravitational field that mass of blubber was giving off."
     if getFlag("WG008_C1_M1") or getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
@@ -22566,21 +22569,27 @@ label WG004M:
     Okisho "I see and hear you hanging out in the practice rooms. I come to the music room regularly to work on club business, or if I just need a room to myself to help write out a song."
     MC "Wait, you write your own songs?"
     Okisho "Isn't that what musicians do?"
-    MC "I mean, I practice a lot and I haven't thought to try writing any songs. That sounds impressive to me."
+    if isEventCleared("WG084"):
+        MC "I guess that makes sense since you do a lot of arrangements for the music club. Still though, it seems impressive to me. I mean, I practice a lot and I haven't thought to try writing any songs."
+    else:
+        MC "I mean, I practice a lot and I haven't thought to try writing any songs. That sounds impressive to me."
     Okisho "I'll spare you a mini-lecture on music theory you seem to be walking into. I was just curious about this peculiar boy who's so diligent with his practicing, yet has never thought to join the music club."
     MC "Are you trying to recruit me?"
-    Okisho "Perhaps, we could always use more. It's never too late after all."
-    if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
-        Okisho "Maybe you could help Miss Must-get-her-way see reason if you were more involved."
-        MC "Oh come on, she's gotten better... {size=-4}Hasn't she?{/size}"
-        Okisho "I guess... if I had to say."
-    elif getFlag("WG008_C1_M1"):
-        Okisho "Then again, it might make more headaches for me if you're just going to dote on Nikumaru-san and echo her incessant talking points about what I'm doing wrong."
-        MC "Oh come on, she's gotten better... {size=-4}Hasn't she?{/size}"
-        Okisho "I guess... if I had to say."
+    if isEventCleared("WG084"):
+        Okisho "Ha! I wish. Lucky for you though it's a little too late in the year to get you integrated into the  fold. We're really pushing hard, we don't have time to teach someone just jumping in."
     else:
-        MC "It seems a bit late to jump in now. Besides, I have a job on the side that keeps me pretty occupied."
-        Okisho "If you'd rather spend your time being an errand boy I suppose that's your business."
+        Okisho "Perhaps, we could always use more. It's never too late after all."
+        if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
+            Okisho "Maybe you could help Miss Must-get-her-way see reason if you were more involved."
+            MC "Oh come on, she's gotten better... {size=-4}Hasn't she?{/size}"
+            Okisho "I guess... if I had to say."
+        elif getFlag("WG008_C1_M1"):
+            Okisho "Then again, it might make more headaches for me if you're just going to dote on Nikumaru-san and echo her incessant talking points about what I'm doing wrong."
+            MC "Oh come on, she's gotten better... {size=-4}Hasn't she?{/size}"
+            Okisho "I guess... if I had to say."
+        else:
+            MC "It seems a bit late to jump in now. Besides, I have a job on the side that keeps me pretty occupied."
+            Okisho "If you'd rather spend your time being an errand boy I suppose that's your business."
     Okisho "I just found it interesting that someone would go to such lengths to learn an instrument just to impress someone like her. Seems like a waste of time to me— I can't imagine anything that would impress her."
     MCT "Is it that obvious? I barely know this person, how does she have it figured out so easily? I know she has her own hang-ups with Alice, but am I that much of a boot-licker?"
     MC "What makes you think I do it for her and not because I like to?"
@@ -22601,27 +22610,50 @@ label WG004M:
     Okisho "Still though, it is kind of sweet— even if it is kind of pathetic."
     MC "Don't hold back on account of me now, Mizawa-san."
     Okisho "Oh, chill out, I'm just teasing you. Honestly, it's nice to see a guy go out of his way to involve himself in his girlfriend's interests. Even if this is Nikumaru-san we're talking about."
-    "At this point, quite frankly I was getting tired of all her subtle put-downs about Alice."
-    MC "What's your beef with her? I mean seriously, after all this time? You're both into music, you're both straight-to-the-point, no-nonsense, and you even share the same factor."
-    Okisho "Hey, listen—"
-    MC "No, you listen. Think about it. You two should have hit it off as friends, but you both let your egos get in the way."
-    MC "Look, I understand you got off on the wrong foot, but if you two could both grow up even half as much as you've grown out, maybe you could bury the hatchet?"
-    Okisho "..."
-    MC "Sorry, that was probably a bit too far."
-    Okisho "{b}Bwahaha!{/b} {w}I have to admit, that last part was pretty clever. {w}And stop dancing around it already, it's pretty obvious we're both really freaking fat."
-    "Okisho smacked her doughy belly for emphasis, sending a blubbery undulating shockwave across it and back in the process."
-    Okisho "Hmph. That aside, I guess I see where you're coming from, but she just... {i}Arrgh!{/i} I don't know, she really gets under my skin, ya know?"
-    MC "Is that because you know in the back of your mind, she has a point?"
-    "Okisho's miffed frustration turned to dagger eyes. Clearly I had hit a sore spot, but I wasn't backing down now. At this point the worst thing she could do was sit on me, and that would've been a hell of a way to go."
-    MC "Look, I'm not going to sit here and tell you she's the easiest person to get along with. I'm just saying maybe look past a bad first impression, and give her a fair shot again. You might find you have more in common than you think."
-    Okisho "I don't know dude, you and I seem to be talking about two different people when it comes to her."
-    MC "Two different people, or a side of her you refuse to see? {w}Take my word for it. She really does want what's best for the music club. Just hear her out for a change and let her help you."
-    Okisho "Alright fine. Things have been getting more hectic for me lately and I could use the help. But if things are going to change for the better, you need to work your magic on her, whatever it is you do."
-    Okisho "If I extend an olive branch and all I get is her typical condescending attitude I'm kicking her out of the club and I'm going to sit on your head— is that clear?"
-    MCT "Don't threaten me with a good time."
-    MC "Crystal. It's been a pleasure doing business with you Mizawa-san."
-    Okisho "Now I'm starting to see why she likes you so much. {w}Alright, keep practicing Hotsure-san. Remember to stay loose, don't be so stiff with your playing."
-    Okisho "And I'll be waiting for Nikumaru-san and I to have a little chat once you've had a chance to talk to her. {w}I'll see you around."
+    if isEventCleared("WG084"):
+        MC "What, you jealous or something?"
+        "Okisho's expression sly expression indicated she took my comment much more seriously than I anticipated."
+        Okisho "Maybe I am?"
+        Okisho "You gotta admit, I'm a little starved for choice when it comes to finding a guy who's into music that doesn't mind being seen with a whale."
+        MC "You don't look starved for anything if I'm being honest."
+        Okisho "{b}Bwahaha!{/b} {w}You're pretty funny too. Damn, Nikumaru-san has all the luck."
+        MC "Thanks, I guess. How's practice been with Alice?"
+        Okisho "Things have been going a lot better. I suppose I have you to thank for that. If architecture doesn't work out for you maybe you should try to become a hostage negotiator."
+        MC "What can I say? I'm a man of many talents, just not music evidently."
+        Okisho "Aww, chin up {i}little{/i} boy. Did the fat lady's mean words hurt your feelings?"
+        MC "We can't all be as good as Ichia."
+        Okisho "HA! Don't I know it! {w}But you can be better than yourself."
+        Okisho "Here, play a few chords for me."
+        "I started to play a few keys, when Okisho reached out a fat hand to shove me in the elbow."
+        MC "Hey! What's the big deal?"
+        Okisho "Your elbows, they're stiff. They shouldn't be tense like that. They should move if I push on them."
+        MC "Oh, I see."
+        $setSkill("Art", 1)
+        Okisho "See you're playing better already."
+        MC "Thanks."
+        Okisho "There you go! I'm going to get going. Keep practicing Hotsure-san, and remember to stay loose!"
+    else:
+        "At this point, quite frankly I was getting tired of all her subtle put-downs about Alice."
+        MC "What's your beef with her? I mean seriously, after all this time? You're both into music, you're both straight-to-the-point, no-nonsense, and you even share the same factor."
+        Okisho "Hey, listen—"
+        MC "No, you listen. Think about it. You two should have hit it off as friends, but you both let your egos get in the way."
+        MC "Look, I understand you got off on the wrong foot, but if you two could both grow up even half as much as you've grown out, maybe you could bury the hatchet?"
+        Okisho "..."
+        MC "Sorry, that was probably a bit too far."
+        Okisho "{b}Bwahaha!{/b} {w}I have to admit, that last part was pretty clever. {w}And stop dancing around it already, it's pretty obvious we're both really freaking fat."
+        "Okisho smacked her doughy belly for emphasis, sending a blubbery undulating shockwave across it and back in the process."
+        Okisho "Hmph. That aside, I guess I see where you're coming from, but she just... {i}Arrgh!{/i} I don't know, she really gets under my skin, ya know?"
+        MC "Is that because you know in the back of your mind, she has a point?"
+        "Okisho's miffed frustration turned to dagger eyes. Clearly I had hit a sore spot, but I wasn't backing down now. At this point the worst thing she could do was sit on me, and that would've been a hell of a way to go."
+        MC "Look, I'm not going to sit here and tell you she's the easiest person to get along with. I'm just saying maybe look past a bad first impression, and give her a fair shot again. You might find you have more in common than you think."
+        Okisho "I don't know dude, you and I seem to be talking about two different people when it comes to her."
+        MC "Two different people, or a side of her you refuse to see? {w}Take my word for it. She really does want what's best for the music club. Just hear her out for a change and let her help you."
+        Okisho "Alright fine. Things have been getting more hectic for me lately and I could use the help. But if things are going to change for the better, you need to work your magic on her, whatever it is you do."
+        Okisho "If I extend an olive branch and all I get is her typical condescending attitude I'm kicking her out of the club and I'm going to sit on your head— is that clear?"
+        MCT "Don't threaten me with a good time."
+        MC "Crystal. It's been a pleasure doing business with you Mizawa-san."
+        Okisho "Now I'm starting to see why she likes you so much. {w}Alright, keep practicing Hotsure-san. Remember to stay loose, don't be so stiff with your playing."
+        Okisho "And I'll be waiting for Nikumaru-san and I to have a little chat once you've had a chance to talk to her. {w}I'll see you around."
     hide Okisho with dissolve
     MCT "Well that was about the last person I expected to see."
     "But on second thought, that was kind of dumb. I'm in a music practice room, and she's the leader of the music club. I guess it's not exactly a coincidence."
@@ -22643,18 +22675,24 @@ label WG004M:
     show WG angry
     extend " She just irks me so much, I wouldn't put it past her to try something just to get under my skin."
     show WG stern
-    #extend " Especially after that time we ran into her at the park."
+    extend " Especially after that time we ran into her at the park."
     MCT "These two really do live in each other's heads rent free."
     show WG neutral
     MC "Don't worry, I can handle her just fine."
-    if getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
+    if isEventCleared("WG084"):
+        MC "And you can too. You've proven that you can both work together if you really try."
+        show WG stern
+        WG "Effort and desire are two very different things, Dear."
+        MC "Fair enough. Just a thought is all..."
+    elif getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1"):
         MC "She's not as bad as you make her out to be, you know that? I've talked with her before, she's kind of a chill person and she knows a lot about music."
     else:
         MC "I know she's a bit cavalier, maybe even obnoxious at times, but she's not as bad as you make her out to be. She knows a lot about music too."
-    show WG doubt
-    WG "What's your point?"
-    "Clearly Alice was not amused by the proposition I was trying to entertain. It was probably best to save my negotiation skills for another time, when she was in a better mood."
-    MC "Just a thought is all..."
+    if not isEventCleared("WG084"):
+        show WG doubt
+        WG "What's your point?"
+        "Clearly Alice was not amused by the proposition I was trying to entertain. It was probably best to save my negotiation skills for another time, when she was in a better mood."
+        MC "Just a thought is all..."
     show WG neutral
     MC "So, with all that aside, would you be interested in a private performance, mademoiselle?"
     show WG surprised-2

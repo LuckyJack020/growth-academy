@@ -720,7 +720,7 @@ label BE006:
     show BE shrug
     BE "I think it was for moral support? She's sort of the de-facto girls counselor on campus."
     show BE neutral
-    BE "Again, there was a lot more girl–talk about things we'd be experiencing in the future. But she talked to us in a really...friendly way about it. Not so technical like the nurse."
+    BE "Again, there was a lot more girl-talk about things we'd be experiencing in the future. But she talked to us in a really...friendly way about it. Not so technical like the nurse."
     BE "And Takamura-sensei's really cool. Like, did you know she went to culinary school in Paris?"
     MCT "Huh. The only advice I got from the nurse was to \"get some scissors\"."
     MC "Wow... that's really cool. Sounds like they really do want to help us. That's a bit of a relief, honestly."
@@ -12564,7 +12564,7 @@ label BE052_after:
     MC "..."
     "Honoka's breasts took up the entire surface of her desk. Not even a pen could rest on the desktop."
     MC "What's your plan here? Not only would writing on yourself be super uncomfortable, but you could get ink on your uniform shirt too."
-    show BE confused
+    show BE furious
     "Honoka {i}glared{/i} at me."
     BE "Keisuke. Don't you think I know that? What choice do I have? I have to cut my losses somewhere. A damn ink-stained uniform shirt is the least of my problems right now, don't you think?"
     MCT "She has a point. Me shooting down any solution she comes up with isn't helping."
@@ -13489,8 +13489,8 @@ label BE055_C1:
     Naoki "{i}*Haaaaah....*{/i}{size=-3} It never gets easier being the bearer of bad news, either.{/size}"
     scene Coach Office with dissolve
     play music Requiem fadein 2.5
-    show BE sad with dissolve #upset
-    "Honoka sat on one of the chairs, an expressionless look on her face. Her eyes didn't move at all. They just went on staring straight ahead. The tears flowing down her face confirmed what I already knew."
+    show BE crying with dissolve
+    "Honoka sat on one of the chairs, an expressionless look on her face. Once she confirmed it was me entering the room, the tears flowing down her face confirmed what I already knew."
     "I sat next to her, not bothering to position myself away from her chest as it trembled slightly. I reached out and lightly grasped her hand. After a moment, she squeezed it. Hard."
     pause 2.5
     "I didn't let go."
@@ -13514,7 +13514,7 @@ label BE055_C2:
     scene Pool with fade
     "It had been a few hours at this point. I'd texted Honoka to see if she was okay. The message had been marked as read, but she hadn't responded yet."
     Student "Uhmm..."
-    "I looked up from my position on the ground next to the changing room – a student with large hands was leaning out the door, gesturing behind her with her thumb."
+    "I looked up from my position on the ground next to the changing room - a student with large hands was leaning out the door, gesturing behind her with her thumb."
     Student "Hotsure-san, I'm guessing? You should... you should go inside. I'm the last one out, I'll, uh, keep watch out here, in case anyone else comes by."
     "I slowly picked myself up and went inside."
     stop music fadeout 1.0

@@ -1116,6 +1116,7 @@ define audio.InvitationCastleBall = "Audio/BGM/InvitationCastle_Doug.mp3"
 define audio.BaroqueCoffeeHouse = "Audio/BGM/BaroqueCoffee_Doug.mp3"
 define audio.SonataFMajor = "Audio/BGM/Sonata_AllegroF.mp3"
 define audio.SummerSymphonyBall = "Audio/BGM/SummerSymphonyBall_Cubworth.mp3"
+define audio.HarpsichordFugue = "Audio/BGM/HarpsichordFugue.ogg"
 
 define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
@@ -1533,7 +1534,8 @@ init 2 python:
     eventlibrary['GTS050'] = {"name": "In the Dead of the Night", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS051", "obsflags": [],       "conditions": []}
     eventlibrary['GTS051'] = {"name": "She Caught the Katy", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS052", "obsflags": [],       "conditions": []}
     eventlibrary['GTS052'] = {"name": "Madwebagaasin", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS053", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS053'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
+    eventlibrary['GTS053'] = {"name": "Adiós a Jamaica", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS054", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS054'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
 
     #Optional
     eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "cafeteria",        "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS001"]]}

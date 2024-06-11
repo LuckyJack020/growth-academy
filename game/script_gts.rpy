@@ -11567,8 +11567,7 @@ label GTS050:
     "I felt an urge to reach out and give her my hand but something kept me from reaching her. There was the literal distance between us, but some other force wouldn't let me bring my arm up to her."
     MC "Is this the first time this has happened?"
     hide GTS_S
-    hide GTS
-    show GTS pondering at Position(ycenter=0.35)
+    show GTS pondering at Position(ycenter=0.35) #Remember this value for size 4 laying down GTS sprites.
     GTS "No, I had a similar dream my first night here. It wasn't as dramatic but still scared me terribly."
     MC "What scared you so bad about it?"
     GTS "I initially thought it was the feeling of being so tall, but after this I think it's something deeper."
@@ -11626,7 +11625,7 @@ label GTS051:
     play music Peaceful
     "It was a surprise for sure, but a welcome one when Tashi dismissed us early with the optimistic idea that we would be working on our report."
     "Oh, that poor fool. His optimism would be tragically misplaced when procrastination was an option. Especially procrastination shaped like a tall elegant lady."
-    show GTS neutral at Position(ycenter=0.55) with dissolve
+    show GTS neutral at Position(ycenter=0.55) with dissolve #Remember this value for size 4 seated GTS sprites.
     GTS "My love, is everything alright?"
     MC "Oh, uh, yeah I'm fine. Just got lost in thought for a moment."
     GTS "Ah, I see. Apologies for interrupting."
@@ -12446,6 +12445,712 @@ label GTS052:
     jump daymenu
 
 label GTS053:
+    $setProgress("GTS", "GTS054")
+    show Giant Dorm Exterior with fade
+    play music ClearSkies
+    "The afternoon sun sat high and mighty above me, casting a mirage-like shimmer on everything in sight. Despite the calendar, summer seemed to have just one more day left in it."
+    "And the parched, barren soil of the giants' dorms left little shade for me as I stood outside."
+    MCT "I hope she's doing okay..."
+    "As if in answer, the great door eased open; like porcelain under a little too much heat, I could see a hairline fracture in her composure... just not what I'd been thinking of."
+    show GTS_S neutral with dissolve
+    GTS_S "Hello there, Keisuke-kun."
+    show GTS_S surprised
+    GTS_S "My stars, it's simply infernal out today."
+    MC "We better enjoy it while we can, the weatherman says this is gonna be the last hot day of the year."
+    show GTS_S sad
+    GTS_S "One wonders if it's always so hot so far north in autumn..."
+    show GTS_S neutral
+    GTS_S "Well, such as it is, I'd wager a dip in the ocean would feel like bliss."
+    "An image of Naomi, sopping wet in a skimpy swimsuit with steam rolling off her, flashed in my head."
+    MC "Indeed it would, blossom."
+    MC "By the way, where's your swimsuit?"
+    "Her cheeks flushed pink."
+    GTS_S "Under my clothes."
+    MC "Convenient!"
+    MC "Alright then, shall we head over?"
+    show GTS_S neutral at Transform(xzoom=-1)
+    GTS_S "Do you have water?"
+    "I lifted the jug."
+    GTS_S "Sunblock?"
+    "I lifted my backpack."
+    GTS_S "Towels?"
+    "I shook the backpack."
+    GTS_S "First aid supplies?"
+    MC "Don't have that. If I get bitten by a shark you'll have to be my personal ambulance."
+    GTS_S "Kindly do not joke about such a thing."
+    MC "I dunno, maybe I just look tasty."
+    pause 2
+    MC "Sorry."
+    GTS_S "It's alright."
+    show GTS_S neutral at Transform(xzoom=1)
+    GTS_S "I also have a standard size first aid kit in my bag."
+    MC "In that case, are we {i}now{/i} ready to go?"
+    GTS_S "I believe we are."
+    hide GTS_S
+    show GTS neutral at Position(ycenter=0.55)
+    with dissolve
+    "She took a knee and lowered her hand for me to climb aboard her shoulder."
+    "After getting on and savoring the breeze down my back as we rose into the sky, we were on our merry way to the coast."
+    stop music fadeout 3.0
+    play music Beach
+
+    scene Beach
+    show GTS_S neutral 
+    with fade
+    "Off the crests of the tumbling waves came sailing a scent of salt."
+    "Like yin and yang, I watched from overhead the deep blue sea and the bright, pale sand fade into each other in perpetuity."
+    "From my perch atop Naomi's forearm, with honking gulls flitting to and fro across our eyelines, the effect was as an aerial shot of a faraway beach resort."
+    MC "It feels like forever since I've been to the beach. I think the last time was on a family vacation, just before I started high school."
+    GTS "We once spent Golden Week at a little vacation house of ours on Tsushima."
+    show GTS_S happy
+    GTS_S "All the lilacs brushing against the edges of the white sand, it was like a painting in motion. Just to look upon divinity such as that enriches the soul, don't you think?"
+    MC "I do, I do."
+    "I rubbed the back of her shoulder and she chuckled."
+    MC "Hm, looks like there's some people already out here."
+    GTS_S "Ah, so there are. Other students?"
+    MC "...It looks that way."
+    "We got closer. Familiarity sparked in my brain at the sight of the figure wading in the shallows, playing catch with another girl and an overinflated beachball, while bouncing two more between her shoulders."
+    MC "Heeey! Honoka!"
+    show GTS_S surprised
+    GTS_S "{size=-2}Heavens, is that her?{/size}"
+    MC "{size=-6}We've all gone through changes, haven't we?{/size}"
+    GTS_S "{size=-2}...That's fair.{/size}"
+    "Honoka let the ball bounce onto the lapping water as she turned around. She peered out at us, craning her neck, and then waved her arm like a rainbow across the blue."
+    BE "Heeeya Kei-chan!"
+    BE "See you brought a friend, too! Or in this case... A friend brought {i}you{/i}, hehe! Come on over, the water's fine!"
+    show GTS_S unique 
+    GTS_S "Her high spirits certainly are infectious."
+    "Naomi stepped out onto the expanse of the beach and then set me down."
+    hide GTS_S
+    show GTS neutral at Position(ycenter=0.55)
+    with dissolve
+    MC "Not that I'm not glad to see her, but I didn't think anyone else would be out here now that summer's over."
+    BE "Hey! You guys put on sunblock yet?"
+    "I cupped my hands to my mouth."
+    MC "{size=+6}Not yet!{/size}"
+    BE "Aaaaaalright! We'll be over here not looking, then! You two behave!"
+    "After collecting the ball and giving us what I'm fairly sure was a wink, she turned around and continued bouncing it with her upstretched arms."
+    "Her agility surprised me, despite the conjunction of the seawater and her increasingly endowed physique."
+    if isEventCleared("BEGTS004"):
+        GTS "I'm rather glad to see her, too. Even if we can't be alone, Honoka-chan makes for fine company."
+    else:
+        GTS "Well, that is... accommodating of her."
+    MC "Honoka's pretty cool."
+    MC "Well, anyway..."
+    "I unzipped my backpack."
+    MC "One bottle for me..."
+    MC "One, {w}two, {w}three for you."
+    "I took out a spare towel and laid it flat on the sand. Each of Naomi's bottles, I opened the cap and planted it upside-down on the towel."
+    MC "You still wanna apply your own, right?"
+    show GTS happy
+    "She nodded briskly."
+    "I unbuttoned and doffed my shirt, then squirted a blob of the pale, chilly goop on my bicep."
+    show GTS neutral
+    GTS "Say, on second thought, why don't you squirt some onto the rest of your body as well?"
+    MC "Uh... sure, if you want."
+    show GTS aroused at Position(ycenter=0.35)
+    GTS "Thank you."
+    "Maybe it was the sunblock, but I got a sudden chill at the thought of Honoka secretly watching us, seeing us as we were... I couldn't place why."
+    show GTS happy at Position(ycenter=0.55)
+    "Once I'd done as Naomi said, she leaned forward on her elbows and scooted forward until her extended finger brushed against my abs."
+    "The warm pad of her pale finger swirled the chilly cream round and round, shortly coating the front and sides of my torso."
+    "The veiled strength of her strokes, in harmony with the two-headed rampage of hot and cold across my skin, caused a fluttery feeling to well in the depths of my trunk."
+    "As she continued, there on the sunny beach, I felt the feeling begin to sink deeper."
+    "I quickly flexed all my extremities at once."
+    if checkSkill("Athletics", ">", 4):
+        show GTS pondering at Position(ycenter=0.35)
+        GTS "You've tensed up all of a sudden, my love. Are you well?"
+        MC "Yep, just stretching. Don't wanna cramp in the water, right?"
+        show GTS happy at Position(ycenter=0.55)
+        GTS "Indeed!"
+    else:
+        "Fortunately... except for my pride... Naomi didn't seem to notice."
+    "She closed her thumb and pointer into a tight ring and coated my arms and legs, too."
+    "And then, placing one finger on the front of my right shoulder and one on my left, she slowly squeezed them together, twisting my torso and forcing me to turn until my back was to her."
+    hide GTS with dissolve
+    MC "Mmph!"
+    "I saw Honoka turning her head away as I spun. Naomi spread the sunblock over my back and then gently tapped twice between my shoulderblades."
+    GTS "There you are, my love."
+    MC "T-Thanks, Nacchan."
+    GTS "Ah, but one more thing. Would you kindly stay facing away a moment?"
+    MC "\'Course."
+    "I heard a sound like a flag convulsing in a typhoon, preceding flecks of sand bouncing off my back."
+    "Then came the distinct drumbeat of saucer-sized buttons one by one coming undone. Another bassy rush of vast expanses of fabric being folded by an old hand."
+    GTS "Ah... hm."
+    GTS "Alright, Keisuke. What do you think?"
+    "Breathing out, I turned."
+    $setGTSOutfit(OutfitEnum.SWIMSUIT)
+    show GTS happy at Position(ycenter=0.55) with dissolve
+    pause 0.5
+    MC "...Woah."
+    show GTS unique
+    GTS "Hmhmhm. Brevity is the soul of wit."
+    MC "Kssh..."
+    MC "Yeah, that pretty well sums it up. \"Woah\"."
+    "Naomi turned up the brim of her hat and gingerly plucked a bottle of sunblock between her fingers. Pointing it towards her belly button, she squeezed out half the bottle in a single sputtering squirt."
+    show GTS embarrassed with vpunch
+    GTS "Ooh, it's cold..."
+    show GTS neutral
+    "I smirked, and she repeated the process on her chest, crumpling the bottle like a rubber ducky under a wrecking ball."
+    "With a thoughtful expression, she spread the sunblock into two wings covering her shoulders."
+    "That done, she began to gingerly spread the remainder over the yoga-ball hilltops of her chest in soft, Impressionist strokes. Even still, they quivered in an off-kilter rhythm against their restraints."
+    "Restraints that seemed more inadequate the longer I looked, the more places I noticed her just slightly overflowing, the more I noticed them creak with every gentle jostle."
+    "I pulled my muscles so tight it was uncomfortable."
+    MC "And to think you bought a few sizes up."
+    show GTS embarrassed
+    "She puffed out of her nose."
+    GTS "I ought not to complain in Inoue-san's presence."
+    "She finished up her chest and then covered her belly and back in much less delicate swipes."
+    show GTS neutral
+    "So went her arms and legs, too, after she stood."
+    show GTS happy
+    GTS "Now then, let's go for a swim."
+    "She, of course, led the way, clearing the ten-some meters to the water in a few strides. The sand was slow-roasting my feet and shifted with every step, but at least it naturally absorbed most of the impact of her footsteps."
+    show GTS embarrassed
+    "The first few she took into the water sounded like a full-on cannonball each; she promptly switched to sliding her feet."
+    stop music fadeout 3.0
+    play music BE
+    "At that signal, Honoka turned, smiled, and waded over to greet us."
+    show GTS neutral at altMove(0.5, 0.75) with None
+    $setBEOutfit(OutfitEnum.SWIMSUIT)
+    $setKanamiOutfit(OutfitEnum.SWIMSUIT)
+    show BE happy at Transform(xzoom=-1), Position(xcenter=0.3, yalign=1.0)
+    show Kanami neutral at Transform(xzoom=-1), Position(xcenter=0.15, yalign=1.0) behind BE
+    with easeinleft
+    BE "Hey guys! Come out to enjoy Christmas in September too, huh?"
+    GTS "Quite the little miracle, isn't it?"
+    MCT "Ooh, it's actually pretty warm..."
+    "My abs tensed up momentarily at the water lapping up against them, only to relax more deeply than I had in a while as I caught up with the two of them and it welled up around my chest."
+    if getFlag("Meet_Kanami"):
+        "Honoka's swim partner came closer; a glance at the long black hair floating in her wake... among other traits... shortly told me it was Kanami."
+        MC "Hey, Honoka. Hey, Tozakura-san. I see you're in charge of wrangling Honoka today. My condolences."
+        BE "Excuse you, I'm {i}delightful{/i}."
+        show BE angry
+        BE "Does your girlfriend know you treat your friends this way?"
+        MC "Yes she does, and she chooses me anyway. Tell 'em, sunshine."
+        GTS "I have given up hope of fixing him."
+        MC "See? True love."
+        show BE happy
+        "Honoka snorted."
+        show BE neutral at Transform(xzoom=1)
+        BE "Oh hey, you haven't met Yamazaki yet, have you?"
+        Kanami "Not formally.. Although, I have seen her around campus."
+        BE "Well, Kanami, this is Naomi Yamazaki."
+        show BE neutral at Transform(xzoom=-1)
+        BE "Yamazaki, Kanami Tozakura."
+        Kanami and GTS "Charmed."
+        "They even bowed in unison."
+        MCT "This is more surreal than I imagined."
+    else:
+        "Honoka's swim partner came closer; apart from the obvious similarities to my old pal, I was immediately struck by her long black hair, graceful bearing, and even-tempered mien."
+        "Seeing this girl right next to Honoka and Naomi was... trippy."
+        MC "Hey, Honoka. Made a new friend?"
+        BE "Yeah! We met in cooking club and I won her over {i}instantly{/i}. Naturally."
+        "Kanami chuckled."
+        Kanami "That's really not far off. She's quite the card."
+        BE "Heheh. Anyway..."
+        "She made a show of clearing her throat."
+        show BE neutral at Transform(xzoom=1)
+        BE "Kanami-chan, this is my old buddy Keisuke Hotsure. I told you about him, right? And over there's his shorty, Naomi Yamazaki."
+        show GTS embarrassed
+        show BE neutral at Transform(xzoom=-1)
+        BE "Kei-chan, Yamazaki, Kanami Tozakura."
+        show GTS neutral
+        GTS "A pleasure to meet you, Tozakura-san."
+        MC "Yeah. Any friend of Honoka's is a friend of mine."
+        Kanami "It's nice to meet you two as well."
+        $setFlag("Meet_Kanami")
+    MC "So how've you been, Honoka? It's been a while since we could just talk."
+    BE "Yeah, I've been okay. Trying new things, expanding my horizons."
+    menu:
+        "Oh, you can do that at will now?":
+            $setAffection("BE", 1)
+            $setAffection("GTS", -1)
+            show BE happy
+            "Honoka smirked."
+            BE "Just one of my many talents."
+            GTS "Say, have you ever considered tai chi? I've found it a very gentle and relaxing way to fortify one's balance."
+        "Does that include swim club?":
+            MC "You two were kinda killing it with that beachball before we got in."
+            show BE happy
+            BE "Heh, were we? I've been trying it out as a way to help my balance."
+            show GTS happy
+            GTS "It's certainly paying dividends."
+            show GTS neutral
+            GTS "Have you ever tried tai chi? I have found it to be tremendously helpful to that very end."
+    show BE neutral
+    BE "Nah, I haven't. Maybe I'll check it out?"
+    show BE shrug
+    BE "I feel like if I'm gonna move, I wanna {i}move{/i}, y'know?"
+    GTS "Ah, fair enough."
+    MC "Speaking of vigorous activity, have you gotten Yarns of Suspiria yet?"
+    show BE happy
+    BE "{i}Ooh{/i}, yes! I picked it up a couple weeks ago, it's {i}soooo{/i} cash."
+    show BE sad
+    BE "{size=-4}At least until I got stuck on the stupid Elvir Calarca boss fight...{/size}"
+    MC "..."
+    MC "Wait, you fight Elvir?"
+    show GTS pondering at Position(ycenter=0.35)
+    show BE surprised with vpunch
+    BE "Bro, have you not gotten to the part where they reveal he's the leader of the Black Thirteen?"
+    MC "{i}Pfwuh... I guess not!{/i} Bruh!"
+    BE "It's at the end of chapter three, dude!"
+    show Kanami neutral at Transform(xzoom=1)
+    MC "I... I haven't had much chance to sit down and play."
+    show BE happy
+    BE "Too busy having a life?"
+    MC "Overrated, honestly. I'd rather be fighting monsters with my sickass twin swords."
+    show Kanami neutral at Transform(xzoom=-1)
+    show GTS sad
+    show BE neutral
+    BE "Well tell me you at {i}least{/i} unlocked S-Fusions."
+    MC "Oh, yeah, for sure. The damage on Sudit's fusion is {i}nuts{/i}, dude."
+    show GTS neutral at Position(ycenter=0.55)
+    show BE happy
+    BE "Ohhh, buddy, you ain't seen nothin' yet. Just wait until you see what Norua can do. Just wait."
+    MC "...Who?"
+    show BE shrug
+    "She sighed, shaking her head."
+    show BE happy
+    "As I waded and conferred with General Inoue on tactics and stratagems for a little bit longer, I noticed Naomi glancing over her shoulder at something on the beach."
+    Kanami "Hm?"
+    Kanami "Yamazaki-san, is tha-"
+    Jineko "{size=+4}CANNONBA-{/size}"
+    show GTS neutral at Transform(xzoom=-1)
+    show BE surprised
+    GTS "{size=+6}{i}Kindly refrain, Watanabe-san.{/i}{/size}"
+    "I whipped my head around as fast as the waterlogged carpet on my head would allow. At the water's edge, Jineko was frozen in mid-sprint, still wobbling on her foot."
+    "Looking at the potential energy brimming in the boisterous woman's car-sized body, I got the chilly sensation that I'd just been spared from a localized mass extinction event."
+    Jineko "Oh, I see, you got some smallfries with you."
+    Kanami "Some... what?"
+    Jineko "All good! I'll just head over there the normal, boring way, I guess."
+    "She strutted over in what was obviously a new swimsuit, each step kicking up... not quite as much water as Naomi, but enough to thoroughly hydrate us lower-altitude folks. We shielded our faces."
+    show Jineko neutral at center
+    show GTS at Transform(xzoom=1)
+    with dissolve
+    Jineko "Shoot, how about this weather, huh? I don't mind this at all, myself."
+    "She snapped the straps of her top like a pair of suspenders."
+    Jineko "Great minds think alike, I guess. Whatch'all talking about?"
+    GTS "Keisuke-kun was just catching up with his old friend, Inoue-san."
+    GTS "Ah, and this estimable lady is Tozakura-san."
+    Jineko "Pleasure! I'm Jineko Watanabe."
+    Jineko "And now that we're all introduced, let's get to swimming, eh? I wanna see how deep I can dive!"
+    Jineko "Ooh, Yamazaki-san, wanna join me?"
+    GTS "I will certainly keep an eye out for you, but for my part I've rather taken to wading here in the shallows."
+    show Jineko neutral at Transform(xzoom=-1)
+    Jineko "Wading? Oh c'mon girl, your belly button ain't even wet! You might as well be sitting in the pond over at Chūkan."
+    show BE confused
+    GTS "Nevertheless, it's quite relaxing. Are you certain you wouldn't care to join us?"
+    Jineko "Maybe later. Anyone wants to come with me, you're more than welcome."
+    hide Jineko with dissolve
+    GTS "Ah, but if any of you three would like to swim further out, by all means, don't let me stop you."
+    show BE neutral
+    BE "Actually, Yamazaki-san, you can like, carry regular-size people on your arm, right?"
+    show GTS pondering at Position(ycenter=0.35)
+    GTS "Erm... yes, I suppose that's correct."
+    BE "So you could probably support one of us on your shoulder for a second, too."
+    GTS "...Plausibly, I imagine."
+    show BE happy
+    BE "Ooh, then can you take us out to the deep part and let us cannonball off your shoulder?"
+    show GTS surprised
+    GTS "Mm... "
+    "Her eyes passed over me as she chewed on the question."
+    GTS "...If you wish. As long as there are no rocks or coral or currents, I suppose that would be safe."
+    show BE neutral at Transform(xzoom=1)
+    BE "{size=+4}Hey Watanabe-san? Is there any rocks, coral, or currents over there?{/size}"
+    Jineko "Mm... nope! Not even a little!"
+    show BE happy at Transform(xzoom=-1)
+    BE "Sounds like we're all clear!"
+    show GTS embarrassed at Position(ycenter=0.55)
+    GTS "Ah, well then..."
+    GTS "That is, of course, presuming we would all indeed like to do this."
+    MC "Sounds fun!"
+    show BE happy
+    Kanami "I'm not certain I'll participate, but maybe. I'll come with you."
+    GTS "Capital."
+    hide GTS
+    show GTS_S neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Naomi arose and slowly... for her... paddled abreast of us while we waded closer to Jineko."
+    show Jineko neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    "I kicked my toe off the last dollop of sand below me before the white faded into wavering, muddy-blue obscurity, and I floated, all while the shimmering murk rose higher and higher up Naomi's thighs."
+    hide GTS_S
+    show GTS neutral at Position(xcenter=0.75, ycenter=0.55) behind Jineko
+    with dissolve
+    "I shortly realized I was staring and tried to smoothly turn my view back forward as we continued into deeper waters."
+    "We reunited with Jineko where the water was just above Naomi's navel. The redhead put one hand on her hip and flexed the other arm in a hook for us."
+    Jineko "Just about ten meters, by the way. Gawd, this whole 'growing insanely tall' thing is dandy."
+    Kanami "...You can tell that at a glance?"
+    Jineko "I do a lot of measuring. Ya get used to eyeballing it."
+    BE "Cool, cool. Hey Kei-chan, mind if I go first?"
+    MC "Knock yourself out. Except, like, don't actually."
+    show BE happy
+    BE "Heheh, watch and learn."
+    "She swam over in front of Naomi, who set her hand down in the water to scoop her up."
+    show GTS surprised at Position(ycenter=0.35)
+    "Honoka gave the thumbs up and Naomi gingerly lifted her up into the air, like a robin egg tumbled from its nest. With Naomi's hand pressed as flush to her shoulder as I supposed she could manage, Honoka turned around and assessed the situation."
+    show BE neutral
+    "She pointed her arms out in front of her, hands flat."
+    show BE embarrassed
+    "And she leapt."
+    BE "CANNONBALL!"
+    show BE embarrassed at altFall(0.25)
+    show GTS embarrassed at Position(ycenter=0.55)
+    show Kanami surprised
+    "The undersides of her chest hit the water more like a wrecking ball; the shockwave pushed me backwards half a meter and even the giantesses got a facefull of sea spray."
+    "I had to say, her form was impressive."
+    GTS "Thppt..."
+    Kanami "Eugh, salty!"
+    Jineko "{size=-2}Lucky sunuva gun...{/size}"
+    show BE happy at altRise(0.5)
+    "Honoka breached the surface again crowned in gleaming droplets, which she shook off with a radiant grin."
+    BE "Woo!"
+    BE "Hurry up and jump so I can go again, Kei-chan!"
+    MC "Don't have to tell me twice. Get that cherry picker ready, Nacchan."
+    GTS "{i}Ara ara{/i}. Perhaps I've found my calling."
+    show GTS neutral
+    "I swam closer until my belly slid aground on her waiting palm. After she'd ever-so-gently raised me up out of the sea to her shoulder height, roughly equal to my height off the surface, I stood up on my wet, trembling feet."
+    "Like a newborn calf, I adjusted my stance to the contours of Naomi's hand and shoulder in little twists and nudges."
+    MC "Whoo..."
+    GTS "Next up is Keisuke Hotsure. He'll be attempting a double twisting four flying two and a half of the combo tucking pike- high degree of difficulty."
+    MC "Kssh, aren't you hilarious."
+    show GTS unique
+    GTS "Hmhmhm!"
+    MC "Ngh! Easy blossom, it's a little slippery up here..."
+    show GTS embarrassed
+    GTS "Sorry."
+    "Nevertheless at ease, I took a probing step forward, then one more."
+    "One breath of salty air filled my lungs wide and deep."
+    MC "Hya!"
+    show GTS surprised at Position(ycenter=0.35)
+    show BE surprised
+    show Kanami surprised
+    "My foot slipped, I veered sideways and plunged headfirst."
+    scene black
+    play music Beach volume 0.5
+    pause 0.5
+    BE "Ten!"
+    Jineko "Three!"
+    "While I was free to the seaside breeze from the waist down... or rather, up..."
+    "...My head, chest, and arms were quite thoroughly wedged in a hot, damp crevice between, judging by feel, a bedsheet and two massively oversized water balloons covered in fine velvet."
+    "Some of my hair was in my mouth."
+    MC "Pthf..."
+    GTS "Keisuke-kun? Are you quite alright?"
+    "With my hands pinned closed, I began working my elbows against the plush walls of my sultry prison."
+    MC "Yeah, I'm..."
+    if checkSkill("Athletics", ">", 6):
+        "I brought my legs together for balance and then positioned my elbows to push off the firm valley at the center of Naomi's chest."
+        "I teetered my legs back and, with a grunt, swung them forward while thrusting out with my elbows, vaulting back into the open air."
+        play music Beach volume 1.0
+        scene Beach
+        show Kanami surprised at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
+        show BE surprised at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1)
+        show Jineko happy at Position(xcenter=0.6, yalign=1.0)
+        show GTS surprised at Position(xcenter=0.8, ycenter=0.55) behind Jineko
+        with vpunch
+        "Naomi's hands flew to clap against her bust as I caught the hem of her top in my hands."
+        "Finally, as I felt my grip slipping from the tremors, I kicked off the taut fabric and joined my hands together over my head, savoring the lashing of the wind against my face that anticipated the everywhere chill of the dive."
+        "I opened my eyes, savored the azure abyss through my curtain of bubbles."
+        "Full sensation came crashing back to me as I resurfaced and blew the seawater off my lips."
+        $setAffection("BE", 1)
+        show BE happy
+        show Jineko happy
+        show Kanami happy
+        BE "Okaaay, nice save!"
+        Jineko "Not too shabby, shortcake!"
+        show GTS embarrassed
+        GTS "Yes, good show."
+    else:
+        "After a good, long moment of flapping impotently on the walls of wet skin, I relented."
+        MC "...I'm stuck."
+        "My body jolted from the contact with Nsomi's abdomen as she chuckled. Then came the smooth sensation of her finger wrapping around my shins and plucking me, turnip-like, out of her top."
+        play music Beach volume 1.0
+        scene Beach
+        show Kanami surprised at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
+        show BE happy at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1)
+        show Jineko happy at Position(xcenter=0.6, yalign=1.0)
+        show GTS embarrassed at Position(xcenter=0.8, ycenter=0.55) behind Jineko
+        with fade
+        "In the sunlight I thought my face was going to burst into flames."
+        MC "Sorry. I, uh, slipped."
+        show BE shrug 
+        BE "Uh-huh. 'Slipped'."
+        Kanami "{size=-6}Goodness, it's so long. How does he wash it?{/size}"
+        show BE neutral
+        show GTS neutral
+        GTS "No harm done."
+        "Naomi put me right-side-up before she continued."
+        GTS "Now, suppose that rather than jumping, I were to just... toss you in. Like a springboard, as it were."
+        GTS "What do you say to that?"
+        BE "Ooh, do it!"
+        MCT "Whatever will save me face at this point."
+        MC "Sure!"
+        GTS "Very good, then. Hold fast, dearest."
+        "Naomi deposited me in her cupped hand and I scooted myself around until I was facing away from her. She put her other hand under me, too, and slowly I started to {i}whoosh{/i} up and down."
+        GTS "And a one, and a two, and a..."
+        "A stiff thrust of her arms sent me arcing up into the sky, and as my hair began to trace my downward trajectory behind me, I tucked me knees to my chest and prepared for impact."     
+        "I crashed, I sunk, I chilled, I took in the azure abyss around me through a curtain of bubbles."
+        "Despite some distant urge to just keep floating there, I raised my arms and swam back up."
+        "Not quite finding the right words as I emerged among a throng of onlookers, I spat away the seawater on my lips."
+    MC "Well, Tozakura-san, do you wanna go?"
+    "She put a finger to her chin... as a token, I surmised."
+    Kanami "I think I'll have to decline."
+    show BE happy
+    show GTS embarrassed
+    BE "Sounds like it's my turn again!"
+    "I was content to sit by and watch Honoka climb into Naomi's waiting hand... was it so unsteady before?..."
+    show GTS neutral
+    "...And strike a pose in mid-air as she was tossed, like a used wrapper, into the deep blue."
+    show BE embarrassed
+    show GTS happy
+    stop music fadeout 8.0
+    "So I floated there, sharing in the company of my friend and my lover, the old world and the new, hot and cool and all of it shimmering in the sun... it was a nice dream."
+    show GTS neutral
+    show BE neutral
+    with dissolve
+    "We continued swimming and developing novel applications for gigantism for a couple hours longer, and when it was time for all of us to dry off, we trudged, strode, and paced back ashore."
+    play music Sunset
+    show GTS pondering at Position(ycenter=0.35)
+    GTS "Oh? What's that contraption yonder?"
+    show BE confused
+    show Jineko happy
+    MCT "Contraption?..."
+    "We got closer and I saw some sort of boxy machine sitting on an {i}exceptionally{/i} large towel."
+    "A little closer, and I saw it was some home-welded chimera of a toaster, a lawnmower engine, and a portable gas grill, bound together with angular copper viscera with dramatically oversized buttons and valves sticking off one side."
+    MC "It... looks like it may once have been a grill?"
+    Jineko "Still is! But now, it's {i}improved{/i}. I'll show ya after we towel off."
+    show BE neutral
+    BE "Does it, like, flip the meat for you?"
+    "For the first time I remember seeing, Jineko's eyebrows rose and she rubbed her jaw."
+    show Jineko surprised
+    Jineko "No it doesn't, but I'm gonna write that down."
+    show Jineko neutral
+    Jineko "Tangentially, do any of you folks like salmon?"
+    "We gave general assent, not that Jineko waited for it before she produced a plastic cooler bound in rope, setting it beside her open source grill and grabbing a giant-sized towel."
+    Kanami "So... in what ways have you improved this grill, precisely?"
+    Jineko "Well, I reckon I don't need to tell you how, as awesome as they can be, factors can be a real nuisance when it comes to little everyday stuff like grilling, or changing drill bits, or lighting off fireworks."
+    GTS "..."
+    Kanami "I see."
+    "Honoka nodded sagely."
+    BE "Totally."
+    Jineko "Well, this here's my little foray into reworking everyday items to be more accessible for us enlarged types."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "Quite a noble endeavor, Watanabe-san!"
+    Jineko "Well, thanks!"
+    show Jineko happy
+    Jineko "Plus there's some modifications from when I was messing with it in high school, put some mustard on 'er if you catch my drift."
+    MCT "I am... intrigued."
+    "I walked back to the edge of the dry sand and began the two-fisted work of wringing out my hair as the girls resumed toweling off."
+    "Once we were all as grapes upon the paper towel, Jineko popped the ropes off her cooler with flits of her fingers and beckoned us all to her side with barely-contained zeal."
+    Jineko "Now, because this {i}is{/i} a prototype, I'm gonna need an assistant for this first part. Mister Hotsure, would you do the honors and inject the ignition fuel packet that's in this here cooler?"
+    MC "I'd be, uh, honored?..."
+    "I popped the lid and there atop a few plastic baggies full of marinating salmon filets sat a single packet of pow tarts, silver foil glaring in the late afternoon sun."
+    show GTS pondering at Position(ycenter=0.35)
+    "Blueberry flavor. I swallowed my judgment."
+    "Taking and opening it, I slid the toaster out from under the grill... the rails stuck and stuttered just a little... injected the 'fuel', and slid the 'ignition unit' back into place."
+    Kanami "{size=-6}Quite the complex mechanism...{/size}"
+    Jineko "Thank you kindly! Now scooch and I'll take care of the rest."
+    "I scooched and Jineko set to work turning valves, yanking a pullcord, and pressing on a particle board footpad which I would've guessed was built this morning."
+    "The device began to hum lowly."
+    Jineko "Now let's all pray for a successful field test, because God ain't gonna hear us after this crazy ole sumbitch fires up."
+    Jineko "Three! {w}Two! {w}One!{w}IIIIIIgnition!"
+    show Jineko happy
+    show GTS surprised 
+    show Kanami surprised
+    show BE surprised
+    with vpunch
+    "With a bang the grill spewed screaming hellfire four meters into the sky."
+    MC "{i}Woah!{/i}"
+    GTS "Goodness gracious!"
+    show BE happy
+    BE "Cooool!"
+    MC "{i}Is it supposed to do that?{/i}"
+    "She didn't respond. With the pillar of sunset-orange flames roaring curses to heaven before me, maybe she just didn't hear me."
+    show GTS pondering
+    GTS "Are you quite sure it's safe, Watanabe-san?"
+    Jineko "{size=+6}Whadja say?{/size}"
+    show GTS surprised
+    GTS "{size=+6}Are you quite sure it's {i}safe{/i}, Watanabe-san?{/size}"
+    Jineko "{size=+6}Ohhhhh!{/size}"
+    Jineko "{size=+6}Well it oughta be, I'm just about thirty revisions deep!{/size}"
+    MCT "That {i}is{/i} kinda badass though..."
+    show BE neutral
+    show Kanami neutral
+    "Finally, the fire receded to a low rumble in which a human being could conceivably grill food. I could see that the charcoal briquettes had caught and were giving off a scent with just the faintest hint of blueberry."
+    "Naomi and I shot each other a glance at just the same time- then I saw her stiffen her lips against a grin just like I was."
+    Jineko "Alright, everybody take a load off and Chef Jineko's gonna whip us up some supper."
+
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    "So it went, and the sun began to burn low with the fire."
+    scene Beach
+    show BE neutral at Transform(xzoom=-1), Position(xcenter=0.35, yalign=1.0)
+    show Kanami neutral at Transform(xzoom=-1), Position(xcenter=0.15, yalign=1.0) behind BE
+    show Jineko neutral at Position(xcenter=0.6, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.8, ycenter=0.5) behind Jineko
+    with dissolve
+    BE "Mm, this is pretty good, Watanabe-san."
+    Kanami "It's certainly novel. The faint fruitiness coming through the smoke works surprisingly well."
+    MC "Yeah, I like it."
+    show GTS aroused at Position(ycenter=0.35)
+    GTS "You may count that high praise indeed, Watanabe-san. Keisuke-kun is no slouch with the grill himself."
+    show GTS neutral at Position(ycenter=0.55)
+    Jineko "Ooh, is that right?"
+    MC "Pssh... I'm no expert either. You pick up a thing or two when your dad assigns you to be the dedicated hot dog flipper at age seven. That's all."
+    show BE happy
+    BE "It's true, Kei-chan's an artiste when it comes to handling hot dogs. I've seen him do four at once!"
+    MC "You're too kind, really I just do it for love of the craft."
+    Jineko "Heh, that's kinda sweet."
+    MC "Yeah, can't fault him for trying."
+    MC "..."
+    MC "Speaking of which, Watanabe-san, not to look a gift horse in the mouth, but it occurs to me you just happened to bring along plates, cutlery, and napkins for, uh... several people. To the beach."
+    show BE neutral
+    Jineko "Ya got me, shortcake. I wanted to test out my new upgrades to the ole' smoke wagon with an impartial audience, {i}and{/i} I figured I wouldn't be alone in wanting to hit the beach one last time this year."
+    MC "I see, I see. It seems it worked like a dream, are you happy with it?"
+    "Her pale orange hair flailed as she nodded hard."
+    Jineko "There's definitely tweaks to be made, but thus far I'd chalk it up as a {i}rousing{/i} success."
+    Jineko "Thank you all for helping me get this far with it."
+    BE "Yer welgumb."
+    GTS "And thank you, Watanabe-san. This has been rather a delightful excursion."
+    show GTS unique
+    GTS "Hmhm... rousing is a good word, too."
+    "Jineko grinned and shot Naomi a wink."
+    show GTS neutral
+    pause 0.5
+    "We each continued pecking at our plates to the sound of a warm breeze rolling off the waves."
+    "I looked up- Naomi had a pair of Jineko's tongs tucked between two fingers and her thumb. Careful as she was picking up each filet, in the chewing between I saw another kind of rumination, in eyes cast adrift on the ocean."
+    "As the rest of us were mostly finishing up, Naomi swallowed her last one and set the plate down."
+    GTS "Say, Tozakura-san?"
+    Kanami "Yes?"
+    GTS "What has been your favorite memory from this year so far?"
+    "Kanami's gaze floated skyward as she rested her cheek on her palm."
+    Kanami "Hm... it's hard to name one in particular. Would it be unfair if I said 'everything'?"
+    Kanami "There have been so many new experiences... some rather outlandish ones too, if I may be frank."
+    Kanami "Nevertheless, I think my life is richer for it."
+    show GTS unique
+    GTS "And your character as well, I'd wager."
+    "Kanami chuckled."
+    Kanami "That would be one way to put it."
+    GTS "Hmhm. Commendable."
+    show GTS neutral
+    GTS "And Inoue-san, what about you?"
+    BE "My favorite memory?"
+    GTS "Your very favorite memory from this year."
+    pause 0.5
+    show BE shrug
+    BE "Mm..."
+    if checkAffection("BE", ">", 4):
+        "I could tell she meant to play casual, but Honoka rather intently stared at the embers fading away in the grill."
+        "A twinge in my throat turned my face away from her until she came to an answer."
+    else:
+        "Honoka patted the sand at either side of her as she pondered."
+    show BE happy 
+    BE "Well for starters, watching Watanabe-san open a portal to hell inside a camping grill is gonna stick with me."
+    show GTS unique
+    show Kanami happy
+    show Jineko happy
+    MC "Heh..."
+    GTS "Hmhmhmhm!"
+    "Jineko mimed doffing her hat and taking a bow."
+    show Kanami neutral
+    show GTS neutral
+    show Jineko neutral
+    show BE neutral 
+    BE "Well, I dunno, a lot's happened so far."
+    show BE happy
+    BE "Buuuuut I'm definitely happy for all the friends I've made here. I wanna stay in touch even after we leave."
+    show GTS embarrassed
+    show Kanami happy at Transform(xzoom=-1)
+    "Kanami turned to face Honoka warmly."
+    Kanami "I think we will."
+    show GTS neutral
+    if isEventCleared("BEGTS004"):
+        GTS "As do I."
+    GTS "I think that's quite a lovely sentiment, Inoue-san."
+    "Jineko was already looking Naomi in the eye when it was her turn to answer."
+    GTS "What about you, Watanabe-san?"
+    Jineko "Oh there's several and I don't think I could narrow it down to one. Everyday has been a blast this year, especially today."
+    GTS "Well, what would you say, my love?"
+    MC "Oh, mine? Mmmm..."
+    MC "Well... if I had to pick one, I'd say..."
+    if getFlag("GTS044_meet"):
+        extend " that one Wednesday night in July, with the supermoon."
+        show GTS unique
+        show BE aroused
+        BE "{i}Ohhhhhh?{/i}"
+        MC "Uh, h-heh, not like... that."
+        MC "We just sat out by the lake near Chūkan Point and watched the moon, did a little drawing and stuff, took a nap under the stars."
+        MC "God, it was beautiful out there, and so peaceful."
+        MC "Your soul needs some of that from time to time."
+        show Kanami happy
+        show BE happy
+        Kanami "I see why that would stick with you. That would be positively delightful."
+        BE "Yeah, sounds nice."
+        GTS "Hmhmhm, quite a happy occasion for one so small, was it not?"
+    else:
+        extend " that Tuesday evening last May, drinking tea, waiting for the other guys next to your little rooftop garden..."
+    show GTS embarrassed
+    MC "...And you asked to kiss me."
+    show BE confused
+    Kanami "How sweet."
+    "Honoka, however, was looking at my skeleton."
+    show BE shrug 
+    BE "Aaaand you said yes, right?"
+    if getFlag("GTS025_kiss"):
+        MC "Actually I jumped off the roof and died."
+        MC "Bro, how am I gonna say no to {i}that{/i}? I had a literal fairy tale princess putting the moves on me."
+        show GTS unique
+        show BE embarrassed
+        BE "Yeah, yeah!"
+        GTS "Putting {i}the moves{/i} on you? You make me sound so crass!"
+        MC "Oh, right, this is Yamazaki-san we're talking about. Everything was executed with utmost care and taste."
+    else:
+        MC "..."
+        extend "Uh..."
+        BE "Ohmigod. Don't tell me..."
+        Jineko "You said {i}NO!?{/i}"
+        show GTS embarrassed
+        MC "I dunno, {i}at that moment{/i}, it didn't feel like the right move, alright?"
+        show BE embarrassed
+        BE "Here's a tip. When you're standing in a flower garden alone with her, whatever she tells you to do is the right move, alright? Write that down."
+        Kanami "It was at sunset too, wasn't it?"
+        show BE shrug
+        BE "Dummy..."
+        "Honoka shook her head."
+        MC "Hey, it worked out so far, right?"
+        Kanami "I'm sure all is forgiven, but I would not assume all is forgotten."
+        show GTS unique
+        GTS "On the contrary, I count honesty and introspection over one's feelings as commendable traits."
+        MC "H-heh..."
+    show BE neutral
+    show Kanami neutral
+    MC "So, what about you, Nacchan?"
+    show GTS embarrassed 
+    GTS "Hmhm, well, if I may indulge..."
+    GTS "It's difficult to pick only one. The two that come to mind would be..."
+    GTS "Introducing you to my family..."
+    show GTS happy
+    GTS "...And giving you my bonsai tree."
+    Jineko "That's specific. Was it an heirloom or something?"
+    MC "It's still doing okay, if you were wondering."
+    show GTS happy
+    GTS "As expected!"
+    BE "You still take care of the flowers on the roof, right? That's you?"
+    MC "Uh, yep! I learn from the best."
+    show BE happy
+    BE "Well, no wonder you've got no time for Yarns! That's a full-time job!"
+    show GTS neutral
+    Kanami "Your hard work really shows. It's one of my favorite spots on campus."
+    Jineko "Maybe a little bougie from what I remember, but I can't but respect the commitment."
+    MC "Well, I'm glad you enjoy it. We {i}will{/i} have to get together again sometime for co-op though, Honoka."
+    BE "Yeah, we should."
+    MC "Yeah."
+    "I took one final bite of salmon as I gazed listlessly over the ocean, its rustling waves licked with sanguine orange. Wind had whisked away some of the heat, and with it some of the chargrilled flavor."
+    "I looked around our little impromptu circle, too, and we were all in the same place. Naomi gave me a beatific smile before looking away."
+    MCT "Here's to you, Samsara. You're not so bad after all."
+    jump daymenu
+
+label GTS054:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
