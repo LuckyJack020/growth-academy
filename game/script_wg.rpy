@@ -13367,8 +13367,8 @@ label WG051:
     PRG "I think I'm going to head in. I'd like to lie down for a while, if that's okay."
     WG "Think nothing of it. Please go ahead Aida, we'll catch up to you."
     "Not thinking much of it at first, I was standing behind Alice when I noticed her bending over to get her beach towel."
+    show cg WG051 with dissolve
     "{i}RIIIIP{/i}"
-    show WG surprised
     WG "..."
     MC "...!"
     "My head would have snapped to attention from the sound, if my gaze hadn't already been transfixed on the sight unfolding before me."
@@ -13376,7 +13376,8 @@ label WG051:
     "It was certainly loud enough for me to hear, but Aida was far enough away she likely didn't have any idea what just happened."
     "She was standing in front of both of us, so she didn't see. I on the other hand got quite a good look at a lot more skin on Alice's backside than the bottom part of her swimsuit intended to reveal."
     "This was not a little tear- only the edge of the fabric on the other side of the rip was hanging on for dear life where the bottom had split slightly off center, revealing nearly the entire middle of her backside."
-    "Part of me wanted to stop to drink in the sight of Alice's fully exposed cheeks of her giant, plump ass. At this point however, between Alice's shocked, embarrassed expression, and the stupefied look on my face, Aida was going to realize something was up if I didn't think of something fast."
+    "Part of me wanted to stop to drink in the sight of Alice's fully exposed cheeks of her giant, plump ass."
+    "At this point however, between Alice's shocked, embarrassed expression, and the stupefied look on my face, Aida was going to realize something was up if I didn't think of something fast."
     menu:
         "Pretend nothing happened.":
             jump WG051_c1
@@ -13384,8 +13385,8 @@ label WG051:
             jump WG051_c2
 
 label WG051_c1:
-    show PRG worried
     PRG "Something wrong?? You both look a little flushed.. Did you lose something in the water?"
+    hide cg with dissolve
     MC "What?! No, I don't think so."
     "I padded my swim trunk pockets in a feigned show of assurance."
     MC "Nope, everything is fine!"
@@ -13420,8 +13421,8 @@ label WG051_c1:
     jump daymenu
 
 label WG051_c2:
-    show PRG worried
     PRG "Is everything alright? You both look like something is wrong. Did you lose something in the water?"
+    hide cg with dissolve
     "I continued to run my beach towel through my hair as I took a couple of steps towards Aida, blocking her line of sight to Alice."
     MC "Oh, uh. It's nothing. I thought I lost my... uh, sandal. But I found it."
     PRG "I didn't think you wore any sandals today, Hotsure-san."
@@ -17530,8 +17531,9 @@ label WG061:
     "But I figured if anything was going to convince her to go along with something she wasn't too keen on, the best bet would be something that somehow involved food."
     "After all, it got her to go to the carnival with me. This was an easy sell by comparison. I was genuinely curious to see how she'd do with actually making a recipe herself."
     "Based on our previous conversations, on a scale of \"Five Star Chef\" to \"Can make instant ramen\", I don't think Alice has ever had to use a microwave before."
+    MCT "Okay, better tie my hair back or things are going to start getting messy real quick in here."
     show WG neutral with dissolve
-    "I heard the door swing open and looked up to see Alice had arrived. Right on time, per usual."
+    "Just when I finished that task, I heard the door swing open and looked up to see Alice had arrived. Right on time, per usual."
     MC "Alice, glad you made it. I think I have everything all ready to go."
     show WG haughty
     "Alice was keenly scanning the kitchen prep counter to assess the ingredients and kitchenware. I could tell she was rather intrigued by the assortment I had laid out."
@@ -17690,27 +17692,26 @@ label WG061:
     MC "My sister tells me that all the time. You two really do get along well then. Speaking of heating up ahead of time, we should get a pot starting to heat so it'll be ready to boil the pasta."
     show WG neutral
     MC "I'll get that ready, just keep the meat moving in the pan so it doesn't stick and burn up. Here, I'll get you something that should help with that."
-    "Fumbling around though some of the cabinets I managed to find Alice a cooking apron. Most of the cooking club members had their own but I knew they had some spares. I made sure to grab the largest size they had."
+    "Fumbling around through some of the cabinets I managed to find Alice a cooking apron. Most of the cooking club members had their own but I knew they had some spares. I made sure to grab the largest size they had."
+    show cg WG061 with dissolve
     MC "Alright, try this out. We don't want pork grease splattering on your shirt now."
-    show WG neutral-2
     "I looped the top opening over Alice's head and helped drape it down across her protruding middle. Coming around the back to help tie it off I realized I only had a few centimeters of overlap to work with."
     MCT "Shit! Are you kidding me?"
     "Alice really had been getting big recently. I mean she had been since I met her, but I meant BIG, even for this place. The fact that this apron, which resembled a picnic cloth, didn't adequately wrap her was evidence of that."
     MCT "Time to get creative."
     MC "Hmm, looks like we could get a better fit."
     "Trying not to hesitate so as to not elicit any protest from Alice, I seized the initiative and proceeded to stretch the apron out to gain some extra slack, getting a little handsy in the process."
-    show WG surprised-2
     "Reaching around her front, I proceeded to stretch the fabric down across the top of her boobs and tuck it in slightly under, cupping more than a handful in the process."
     WG "Keisuke, what on earth—"
     MC "Just trying to get a good fit so you'll be comfortable."
     "I proceeded to smooth out the wrinkles in the fabric across the top of her belly, sinking my hand into the doughy mound as I brushed my hand downwards until I simply couldn't reach further."
-    show WG aroused
     WG "Easy there. That spot is a bit sensitive."
     "I proceeded to move my hands outward, smoothing out the fabric out to her sides, slightly digging into her jiggly love handles in the process."
     WG "Mmmph!"
     "Keeping the fabric taut, I pulled the drawstrings together in the back, securing quite a few more centimeters of string to work with to easily tie it off."
     MC "There you go. Perfect fit."
     show WG happy
+    hide cg with dissolve
     WG "Excellent. I appreciate your -ahem- thoroughness in securing a proper fitting."
     show WG neutral
     "Knowing that a grease stain on her shirt might sour her mood about the whole experience, I thought the extra effort was necessary."
@@ -31073,6 +31074,147 @@ label WG093:
     MC "Alright. Now, let's get you into your pajamas."
     show WG sly
     WG "Now I'm starting to see why you enjoy helping me so much."
+    jump daymenu
+
+label WG005M:
+    scene Music Classroom with fade
+    play music SonataFMajor
+    "I didn't have much going on this afternoon since Alice said she was going to be busy. Noticing the music room was open on the schedule I took the opportunity to get some practice in."
+    "I thought about what Okisho said the last time I ran into her when practicing, that I didn't really have a talent for this type of thing."
+    "If I had heard that when I first started playing, it probably would have made me want to throw in the towel before I even got started, but after coming this far, it was almost like a badge of honor."
+    "Like my dad would tell Tomo about her math grades, \"Just because it doesn't come as easy to you as your brother doesn't mean you're off the hook for learning it.\" " 
+    "By that same logic, just because I wasn't ever going to be as good as Itchia, doesn't give me the excuse for giving up, or sounding like crap."
+    "It might have taken me twice as much work to not even get half as far, but that didn't mean it wasn't worth doing. {w}And as far as I was concerned, if something brought a smile to Alice's face, it was definitely worth doing."
+    show WG happy-2 with dissolve
+    MCT "Speaking of that..."
+    stop music fadeout 2.0
+    MC "Oh, hey Alice. Didn't see you there."
+    play music HigherEdu
+    MC "I thought you said you were tied up this afternoon."
+    show WG haughty
+    if isEventCleared("WG099"):
+        WG "I still am. I am scheduled to meet Okisho here for one last practice on her song. There were a few things she wanted to try out in order to tweak it."
+        WG "I didn't really want to but she said she needed my voice, so I decided to make an exception and indulge her."
+        show WG sly
+        MC "Like you told me before, \"Flattery will get you far in life.\". Apparently it's not just me."
+        show WG pondering
+        WG "Hmm, now that you say that, I suppose I should have seen through her ruse in that regard."
+        MC "Well, shoot. I didn't think the room was already booked. I didn't see anyone had it reserved on the sign up sheet."
+    else:
+        WG "I still am. I am scheduled to meet Okisho here for one of our extra practices in preparation for the concert here."
+        MC "Oh, I'm sorry. I didn't think the room was already booked. I didn't see anyone had it reserved on the sign up sheet."
+    show WG doubt
+    WG "I guess that means Okisho forgot to book it. For the life of me I can't understand how someone who can write arrangements for an entire orchestra lacks the most basic organization skills."
+    show WG happy-2
+    MC "Sounds like good business experience with managing creatives."
+    show WG sly
+    WG "Good for my resume perhaps, but much less so for my personal sanity."
+    show WG surprised-2
+    MC "Hey, while you're here, could I interest you in another private concert?"
+    show WG happy
+    WG "Well, if you're offering..."
+    show WG pondering
+    extend " I am a little early so it shouldn't overlap with our meeting."
+    show WG happy
+    MC "Great. Take a seat and get comfortable. I'll go get it."
+    show WG surprised-2
+    WG "What do you mean? Where are you going? The piano is right there."
+    MC "Ah, but I have something else in mind."
+    show WG doubt
+    WG "What do you mean...?"
+    "I walked to the back corner of the room and there it was waiting for me, its contents concealed by a black dust cloth."
+    MCT "Right where I left you..."
+    show WG surprised
+    "In one fell swoop, I pulled off the cloth to reveal the surprise."
+    show WG surprised-2
+    WG "You can't be serious..."
+    show WG sly
+    MC "Oh, mon cheri, but I am."
+    WG "You mean to tell me, you really can play that?"
+    MC "I think so, but I'll let you be the judge."
+    MCT "Showtime..."
+    play music HarpsichordFugue
+    show WG surprised-2
+    pause 10
+    show WG happy
+    WG "I can't believe this..."
+    pause 18
+    show WG happy-2
+    WG "Tehehe!"
+    "Alice was giddy with glee."
+    WG "Oh my god, Keisuke! You really are playing the harpsichord!"
+    show WG sly
+    WG "I can't believe you managed to keep this a secret for so long, it must have taken you ages to practice this!"
+    "I gave her a shrug as I proceeded to keep playing. Truth be told, I had been working my ass off trying to learn this thing. It did not have the same action on it as a piano, but at least the basic principles were still there."
+    pause 5
+    MCT "That's it, stay nice and loose, keep your count."
+    pause 10
+    show WG sly
+    WG "This is unbelievable."
+    show WG happy-2
+    WG "I always wanted a baroque musician for a boyfriend."
+    "I couldn't help but feel the pride swelling in my chest hearing that from Alice. {w}I might not have been in the same league as Itchia, but I proved to myself I could at least play the same game."
+    pause 8
+    stop music fadeout 2.0
+    pause 2
+    show WG surprised-2
+    MC "How was that?"
+    $setSkill("Art", 1)
+    $setAffection("WG", 3)
+    "Alice gave a standing ovation."
+    show WG happy
+    WG "Bravo, Keisuke."
+    MC "I'm glad you enjoyed it. I mean, it's a pretty far cry from an Itchia concert, but I guess it wasn't half bad."
+    play music Bittersweet
+    show WG sad
+    WG "{i}sniff{/i}...{i}sniff{/i}..."
+    MCT "?"
+    MC "Alice, what's wrong?"
+    WG "It's just that... I can't believe you'd go to such great lengths... all that practice... it must have taken you forever... just for me."
+    show WG worried
+    WG "Keisuke, Dear, I know I talk about Itchia being one of my favorite musicians, but I never intended that to put some kind of expectation you had to live up to just to impress me."
+    show WG happy
+    WG "You've already won my heart, ten times over by now— you know that, don't you?"
+    "In the back of my mind I knew it, but it was a relief to hear. Alice's expectations were... extraordinary to say the least. To know that I measured up, even in some way, was more than I had expected."
+    MC "Only ten times? I think I got a few more in me."
+    show WG aroused
+    "I leaned into her side, wrapping my arm around her as best I could. A futile effort to be sure, but let me sink into her belly enough to reach behind her head with my other arm to embrace her for a deep long kiss on the lips."
+    WG "Mmmm..."
+    "Slowly being enveloped in the soft warm flesh of her enormous body, embracing my whole being as we embraced each other, it only served to reaffirm what I already knew: {w}I'd do anything for this woman."
+    show WG surprised at altMove(0.5, 0.25)
+    show Okisho neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    play music Peaceful
+    Okisho "I didn't realize this was going to be {i}that{/i} kind of practice session."
+    show WG stern
+    WG "{i}Ahem{/i}. Do you ever knock?"
+    Okisho "It's the music room, not your shower. What do you expect?"
+    WG "You're late."
+    Okisho "What can I say? I'm not as fast as I once was now that I gotta haul {i}this thing{/i} around everywhere I go."
+    "Okisho gave her fat gut a couple of firm slaps just to drive home the point."
+    WG "You won't get any sympathy from me in that regard I'm afraid."
+    Okisho "Yeah yeah, I almost forgot, you're the only one that excuse doesn't work on."
+    show WG surprised-2
+    Okisho "I take it Shaggy's concertino was a hit?"
+    WG "How did you know?"
+    Okisho "Well, I figured that's why he had asked if we had a harpsichord on campus. I knew there was one in storage somewhere when I first got here."
+    show WG sly
+    WG "I suppose I have you to thank as well then."
+    Okisho "You could say that."
+    show WG haughty
+    WG "Yes, I suppose I could..."
+    show WG happy
+    WG "Anyway, Dear, that was truly delightful. I trust you are still able to join me for dinner after this practice session?"
+    MC "I wouldn't miss it for anything."
+    show WG aroused
+    WG "Excellent. I do hope to show just how much I appreciate your efforts."
+    show WG doubt
+    Okisho "I think I'm going to lose my dinner if I have to think about that."
+    show WG stern
+    WG "It would be the only meal you've lost in a long time judging by the looks of you."
+    Okisho "If I've lost any then apparently {i}you've{/i} managed to find them!"
+    show WG angry
+    WG "What did you just say!?"
+    MCT "{i}Ugh{/i}, I knew I should have brought donuts..."
     jump daymenu
 
 label WG094:

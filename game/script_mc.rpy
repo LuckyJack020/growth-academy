@@ -2112,6 +2112,9 @@ label MC004:
             "A white shirt and some blue shorts hung over the railing and flapped in the breeze."
             MCT "I've been here for... at least a few weeks, and it's just striking me now that I have neighbors."
             "I'd never met the students on either side of my dorm, though I was sure that Daichi likely knew their home address, legal first and last names, blood type, favorite colors, and name of the first person they kissed."
+            MCT "Hmm... {w}come to think of it, do I even know where he's from?"
+            if isEventCleared("AE004"):
+                MCT "Not Cobrastan, that's for sure."
             "I glanced back at the clothes hanging from the railing."
             if checkSkill("Athletics", ">", 3):
                 MCT "Seems like the dude takes his fitness seriously. Those are athletic clothes."
@@ -2554,6 +2557,7 @@ label MC005:
             MCT "Would've been nicer if I'd read it before now, but hey, hindsight."
             "I found the section where I'd left off and picked up by the academy."
             MCT "Hm... I didn't know the school was founded by a member of the National Diet."
+            MCT "Saburō Tokei... never heard of him before."
             pause .5
             MCT "Hold up..."
             if isEventCleared("FMG011"):
@@ -3856,7 +3860,7 @@ label MC005_RM:
     RM "You know something interesting I learned the other day?"
     MC "I can only imagine."
     show RM happy
-    RM "The academy was founded by a member of the Diet."
+    RM "The academy was founded by Saburō Tokei, a member of the Diet."
     if getFlag("MC005_readbrochure"):
         MC "You just learned that now?"
         show RM doubt
@@ -7418,7 +7422,7 @@ label MC011:
         Hageshi "One too few know, sadly. You're all adults now. It's high time you all realized how the decisions you make today will have lasting effects throughout the rest of your life."
     Hageshi "This school is here to help you with those decisions, at least in so far as how they relate to your growth, but anything can be a life lesson if you let it."
     MC "Hmm, that's good advice, Hageshi-sensei. I'll try to keep that in mind."
-    Hageshi "Good to hear. {w}I wanted to ask, have you given any thought to signing up for my discrete mathematics course next semester? You're one of the better students, I think you'd enjoy it."
+    Hageshi "Good to hear. {w}I wanted to ask, have you given any thought to signing up for my elective math course on probability next semester? You're one of the better math students, I think you'd enjoy it."
     MC "Ummm, I'll have to think about it more, Hageshi-sensei."
     Hageshi "You can say no, it's fine. You're an adult now, make your own decisions. Besides, if you're here, that means you have a lot of other more important things going on that are weighing on your mind."
     Hageshi "I know hair growth probably doesn't seem like much compared to what a lot of other people are going through, but I know it's not without its own issues."
@@ -7429,7 +7433,7 @@ label MC011:
     MCT "I'm not sure I'm in a position to help anyone, but okay..."
     MC "Sounds good. Thanks Hageshi-sensei."
     Hageshi "I'll see you in class later, Hotsure-san."
-    #hide Hageshi with dissolve
+    hide Hageshi with dissolve
     "I didn't really know what to think of everything any more. Seeing people growing and changing in strange ways, myself included— what did it mean? How was this going to affect us? What were things going to be like after leaving this place?"
     "It was quite a bit to take in. I didn't have all the answers, but after listening to Hageshi-sensei, I at least felt better that my time here might help me find some."
     jump daymenu
@@ -13753,6 +13757,15 @@ label RM004_C1_after:
     Tsubasa "Yes, well as I was saying, the growths vary in their degree of severity." 
     Tsubasa "On the low end they would be difficult to distinguish from the more exceptional cases in the general population... say four or five standard distributions from the mean."
     Tsubasa "Hence cases like Sugiyama-sensei, who's height is exceptional relative to the general population, but not beyond the 350 centimeter threshold."
+    if isEventCleared("BE016"):
+        MC "I've seen him before. He's the coach for the basketball club."
+        MC "The guy was so tall I bet he could dunk from just standing. To think that he could actually be considered on the \”low end\” of his type of growth is actually insane."
+    else:
+        MC "I don't think I've met him."
+        show RM doubt
+        RM "He's the coach for the basketball club."
+        MCT "Of all the people to be knowledgeable of that fact, Daichi would've been the last on my list."
+        RM "You'd know him if you'd seen him before. His proportions are nothing less than extraordinary. The idea that someone as tall as him would be considered on the \"low end\" is absurd."
     MC "I don't think I've met him."
     show RM doubt
     RM "He's the coach for the basketball club."
@@ -14213,8 +14226,11 @@ label RM005:
     RM "The land around the gate is also flat and largely barren. I would be easy to spot, especially doing something so conspicuous."
     show RM neutral
     "Daichi had seemingly put a lot of effort into this lead already in a short amount of time. That and the sticky note with big letters written on it \"Where are other giants?!\" next to the Giant's Dorm made me suspect this was his next major project."
-    "There was a name he had screwed on the board near the giant's dorm: Saburō Tokei."
-    if getFlag("MC005RM") or getFlag("MC005_readbrochure"):
+    "There was a name he had pinned on the board near the giant's dorm: Saburō Tokei."
+    if getFlag("MC005_readbrochure"): 
+        MCT "That's the government official who was the founder of the academy I read about in the brochure. Maybe he finally got around to reading it?"  
+        MC "That guy. He's the founder of this place. Figures you'd be curious about him. Learn anything of interest?"
+    elif getFlag("MC005RM"): 
         MCT "That's the government official who was the founder of the academy Daichi had brought up before."
         MC "Have you managed to learn anything more about him?"
     else: 
@@ -14306,7 +14322,10 @@ label RM005_Faculty:
         "Jiro Sugiyama" if not getFlag("RM005_Sugiyama"):
             $setFlag("RM005_Sugiyama")
             MCT "\"Jiro Sugiyama - physical education teacher, height factor- giant?\""
-            if isEventCleared("MC006"):
+            if isEventCleared("BE016"):
+                MCT "Honoka's basketball club coach. Not much more additional information here than what Tsubasa mentioned about him."
+                MCT "Still can't believe he's considered small compared to other students with the \"Gigantism Factor\", as Tsubasa-sensei called it."
+            elif isEventCleared("MC006"):
                 MC "Wait a second, I thought the PE teacher had a different name. The one who ran the handball game we did? He wasn't a giant."
                 show RM neutral
                 RM "That's a different teacher, you're thinking of Naoki-sensei."

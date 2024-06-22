@@ -1944,6 +1944,9 @@ label BE016:
     "Honoka made shots, and blocked well enough, but it didn't feel like it had the same... {i}spark{/i} I was used to seeing in her."
     play sound Whistle
     Coach "Inoue, Usui, take five. Kosuke, Iwata, you're up."
+    if isEventCleared("RM004"):
+        MCT "I looked over at the tall coach and remembered Tsubasa-sensei mentioned that he had a height factor." 
+        MCT "If I didn't already know, I definitely wouldn't have thought of him as {i}technically{/i} being a giant. He's noticeably tall, but nothing out of the ordinary."
     "The girl I sat next to carefully stood up, and stepped down to the ground. Her sneakers looked like they were twice my size."
     Sakie "Sure, Sugiyama-sensei."
     MCT "Ah, Iwata must be her last name." 
