@@ -61,6 +61,8 @@ define Dad = Character('Dad', color="#C0C0C0") #Keisuke’s Father
 define DadCell = Character('Dad', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Father Cell
 define Enmei = Character('Enmei', color="#C0C0C0") #Aida's Father
 define Daitaro = Character('Daitaro', color="#C0C0C0") #Alice’s Father
+define Fujio = Character('Fujio', color="#C0C0C0") #Honoka's Father
+define FujioCell = Character('Fujio', color="#C0C0C0") #Honoka's Father
 define Kazumi = Character('Kazumi', color="#C0C0C0") #Naomi’s Sister
 define Midori = Character('Midori', color="#C0C0C0") #Akira’s Father
 define Miko = Character('Miko', color="#C0C0C0") #Naomi’s Mother
@@ -1362,7 +1364,9 @@ init 2 python:
     eventlibrary['BE054'] = {"name": "Unsinkable", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "pool",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE055", "obsflags": [],                  "conditions": []}
     eventlibrary['BE055'] = {"name": "Don't Let Go", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "pool",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE056", "obsflags": [],                  "conditions": []}
     eventlibrary['BE056'] = {"name": "Cramped", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "town",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE057", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE057'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE057'] = {"name": "Bouncing Back", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "town",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE058", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE058'] = {"name": "Pair-esthesia", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "town",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE059", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE059'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}

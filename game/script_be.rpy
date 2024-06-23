@@ -14031,6 +14031,760 @@ label BE056_c1_after:
     jump daymenu
 
 label BE057:
+    $setProgress ("BE", "BE058")
+    $setTime(TimeEnum.DAY)
+    scene Dorm BE with fade
+    show BE neutral with dissolve
+    "After last week's meltdown, Honoka realized she needed a distraction."
+    "Something besides her factor to hold her attention."
+    "We decided to play every video game either of us owned"
+    "When one game got old, we picked up another."
+    "Honoka still wasn't her usual, vivacious self. I had no idea when {i}that{/i} Honoka would be back."
+    "But in any case, she wasn't miserable. We avoided discussing the future much."
+    "And, in the throes of a good virtual feud, I was sure Honoka's spirit could make a comeback."
+    MC "H-hey!"
+    MC "Stop it! Lemme…"
+    show BE smug
+    BE "Heh heh."
+    MC "Oh c'mon! I don't even have a—"
+    "{i}Player 2 is down!{/i}"
+    "{i}Game Over{/i}"
+    show BE aroused
+    BE "Oh yeah. She's done it again."
+    MC "{i}Sigh{/i}"
+    MC "You're the worst to play fighting games against. Y'know that?"
+    MC "From start to end, it's just nonstop combos."
+    MC "EVERY "
+    extend "TIME."
+    show BE seductive
+    BE "Oh, you betcha."
+    MC "And, how do you remember them? You said you hadn't played this game in a {i}year{/i}."
+    show BE wink
+    BE "It's not me that remembers, Kei-chan, it's my fingers."
+    show BE surprised-2
+    BE "I see you coming in,  my heart quickens…"
+    show BE happy
+    BE "And then, suddenly! I know what to do:"
+    BE "Up, down, up, down, B, A, A, R…"
+    BE "And then, {i}bam{/i}—you're finished."
+    MC "Are we talking about fighting games, or sex?"
+    show BE surprised
+    BE "Kei-chan!"
+    show BE unamused
+    BE "How could you imply such a thing!"
+    show BE aroused
+    BE "The combo to finish you off {i}that{/i} way is far simpler."
+    show BE disoriented
+    BE "It goes, one…two…"
+    #play sfx bounce
+    show BE unique
+    BE "{i}Squeeze{/i}."
+    MC "You're just trying to distract me now."
+    show BE shrug
+    BE "Aw, but you make it so easy."
+    MC "Y'know, "
+    extend "it's been a while since you joked about your boobs."
+    BE "Well, playing a couple fighting game matches is a welcome reminder that they have their uses."
+    MC "So, what should we play now?"
+    show BE doubt
+    BE "Aw, you don't want me to whip your butt in Omega Force Championship again?"
+    MC "No."
+    show BE neutral
+    BE "Fine. Let's play one of yours."
+    MC "Okay. How about…"
+
+label BE057_c1:
+    menu:
+        "Crystal Garden—a farming simulator":
+            jump BE057_c1_1
+        "The Spirit Eater—a real-time combat RPG":
+            jump BE057_c1_2
+        "The Ship From Beyond—a murder mystery-solving thriller":
+            jump BE057_c1_3
+
+label BE057_c1_1:
+    MC "this one?"
+    show BE surprised-2
+    BE "Oh."
+    show BE doubt
+    BE "Crystal Garden?"
+    MC "Yeah. You've played farming sims before, right?"
+    show BE embarrassed
+    BE "Eh. I tried."
+    show BE neutral
+    BE "But, I'll give it another shot. Haven't played this one."
+    MC "Okay, so, you've got your house, your yard, your character."
+    MC "Now, you just need to go into town and buy some seeds."
+    BE "On my way…"
+    BE "Oh hey, let's talk to this girl. She could be my friend!"
+    MC "Not much point right talking to Erisu right now. You don't have any gifts for her."
+    show BE doubt
+    BE "Why do I need gifts?"
+    MC "It's how you make friends in this game."
+    show BE happy
+    BE "But, I don't need gifts to be anybody's friend."
+    MC "These are just the game mechanics. You build up your farm and then you can build a social life."
+    show BE doubt
+    BE "Aren't there dialogue options?"
+    MC "Sometimes. But you need to make connections first."
+    MC "And for that, you need to give gifts."
+    show BE sad
+    BE "Aw. Okay."
+    MC "Once you grow some crops, the game gets way more interesting. So, why don't you get some pepper seeds and…maybe lettuce…"
+    show BE neutral
+    "Forty minutes passed…"
+    MC "Oh hey, look! It rained yesterday and now your pepper plants are overproducing."
+    MC "This is a huge win. You'll probably double your savings now."
+    show BE happy
+    BE "Cool! So, I can give Erisu a gift now?"
+    MC "Oh, well, for {i}Erisu's{/i} gift you'll want to grow tulips. You'll need to wait until summer to do that."
+    show BE surprised-2
+    BE "W-what?"
+    MC "Hey, don't sweat it! You're making excellent progress. After next month, you'll have half the town in your pocket."
+    show BE embarrassed
+    BE "Heh! I don't feel like I'm accomplishing anything."
+    MC "But, you are. Look at that farm. See how productive you are now?"
+    show BE doubt
+    BE "No…?"
+    MC "..."
+    BE "..."
+    show BE angry
+    BE "I'm sorry, Kei-chan. I don't think this is my kind of game."
+    show BE neutral
+    BE "Feels like I'm just making a number go up."
+    MC "Well…yeah, but…"
+    MC "I-I guess that's one way of putting it."
+    BE "I don't dislike it, or anything. I'm just kinda waiting for an actual {i}game{/i} to happen."
+    MC "..."
+    MC "This {i}is{/i} the game."
+    show BE embarrassed
+    BE "Yeah, I'm kinda getting that now."
+    show BE neutral
+    MC "Okay. Farming Sims: not for you. Fair enough."
+    jump BE057_c1_after
+
+label BE057_c1_2:
+    $setFlag("BE057_c1_2")
+    MC "Okay, hear me out:"
+    MC "Spirit Eater."
+    show BE surprised-2
+    BE "No way!"
+    BE "I heard that game was like…impossible!"
+    BE "I have a gamer friend who described playing it as like pushing a boulder up a huge mountain."
+    show BE disoriented
+    BE "And I already have two of those attached to me."
+    show BE embarrassed
+    BE "I don't know if I'm looking for a third."
+    MC "Well…"
+    show BE neutral
+    MC "Okay, it's not easy. I admit."
+    MC "But, if you're good at combat—which you are, and you know how to equip and buff your character in all the right ways—which I do—Spirit Eater actually becomes very playable."
+    MC "It's a bit of a steep learning curve at the start."
+    BE "Huh."
+    show BE shrug
+    BE "Alright. Let's give it a shot."
+    show BE doubt
+    BE "But you'd {i}better{/i} walk me through the stat boosting, Kei-chan. I don't have the patience to figure all that out on my own today."
+    MC "No problem."
+    show BE neutral
+    BE "'Kay, let's go."
+    MC "First thing: character creation."
+    show BE happy
+    BE "Heh heh."
+    MC "What's so funny?"
+    BE "I can't make my character's boobs anywhere {i}near{/i} as big as mine."
+    show BE unamused
+    BE "I feel unrepresented, Kei-chan."
+    MC "Maybe you should write a letter to the developers."
+    show BE shrug
+    BE "Oh, I will. I {i}insist{/i} on being able to give my character yoga ball boobs."
+    show BE angry
+    BE "It's realism, after all."
+    show BE neutral
+    "Honoka created her character. We watched the intro and she played through the opening tutorial."
+    MC "Okay, let's go outside now."
+    show BE surprised-2
+    BE "Ooh! Look at that big guy in armor."
+    show BE neutral
+    BE "I wanna hit him."
+    "{i}SMASH. 'Uuuuuuuuhn.'{/i}"
+    show BE surprised-2
+    BE "N-no way!"
+    BE "He killed me so quickly!"
+    MC "Heh…yeah, that's how things start out."
+    show BE confused
+    BE "I want a rematch."
+    MC "Well, you just respawned. If you {i}really{/i} wanted to face him again, you could. But—"
+    show BE neutral
+    BE "Let's gooo!"
+    MC "Wait, listen!"
+    MC "He's going to keep kicking your butt. Let him wait. Turn east. See that little outpost?"
+    show BE doubt
+    BE "Yeah…"
+    MC "You can upgrade your weapon and even get some light armor. That'll help you survive a hit or two longer."
+    BE "But, I wanna fight him. He's a jerk."
+    MC "Don't give him the privilege just yet."
+    show BE neutral
+    BE "Aw, alright. Going to the outpost."
+    MC "Okay, you're all equipped now. Before you fight him, let's take a trip to those woods over there."
+    show BE doubt
+    BE "Aw, but I wanna fight that guy…"
+    MC "There's a fast level up waiting for you if you face the troopers here first. Once you get that, I think you'll have enough skill gauge to use your special move twice."
+    show BE surprised-2
+    BE "Ohhh."
+    show BE neutral
+    BE "I'm sold. Off to the woods."
+    show BE happy
+    BE "Ha HA! These guys are way easier than the armored dude."
+    show BE surprised-2
+    BE "And there's my level up!"
+    show BE neutral
+    BE "Good plan, Kei-chan."
+    show BE doubt
+    BE "Can I fight the armored man now?"
+    MC "Go give it a shot."
+    "{i}Whump. Smash. 'Aaaaaah.'{/i}"
+    show BE sad
+    BE "Aw. He killed me anyway."
+    MC "Well, your timing is good, but you're standing right in his swing path after you hit him."
+    show BE surprised-2
+    BE "That {i}matters{/i} in this game?"
+    MC "Yeah. You can't just dodge. You need to actually dodge out of the way."
+    show BE happy
+    BE "Well, this is interesting."
+    BE "Alright. I'm gonna face him again."
+    "{i}CLASH{/i}"
+    BE "HA! Got him from behind."
+    show BE surprised-2
+    BE "Oh no, oh no! Gotta get out of the—"
+    "{i}SMASH. 'Aaaaaaaaaah.'{/i}"
+    show BE confused
+    BE "Darn it! Stupid jerk."
+    MC "Maybe you need to—"
+    show BE happy
+    BE "No. I can beat him now. Watch me."
+    MC "..."
+    MC "Woah! Great dodge!!"
+    show BE neutral
+    BE "You ain't seen nothing yet. Watch THIS."
+    "It was as if Honoka had been playing the game for months."
+    "Her form was excellent. She dazed the enemy with her special attack and spammed him with head attacks."
+    "And then, she evaded when he tried to punish her for it."
+    "{i}SMASH{/i}"
+    show BE confused
+    BE "Ow."
+    MC "It's not over yet though. You've got one more heal."
+    show BE neutral
+    BE "Yep."
+    "Clash. Smash."
+    "Wump."
+    show BE happy
+    BE "I WIN!!!"
+    MC "You did it."
+    show BE neutral
+    BE "I like this game, Kei-chan! It's so satisfying!"
+    $setAffection("BE", 1)
+    jump BE057_c1_after
+
+label BE057_c1_3:
+    MC "Okay, hear me out on this game."
+    MC "You're investigating a cargo ship that went missing."
+    MC "And, when it came back, everyone aboard was dead."
+    MC "And, you have to construct the whole story of what happened."
+    MC "There are clues."
+    MC "And, some of the dead left ghosts behind that can give you information."
+    show BE surprised-2
+    BE "Oooooh."
+    show BE neutral
+    BE "Alright. Boot it up."
+    MC "Okay, so, you're the detective. See that body over there on the deck?"
+    BE "Yeah."
+    MC "Go check it out."
+    MC "Okay, so here's where we gather clues. Check his pockets."
+    show BE doubt
+    BE "Okay…"
+    MC "Alright. He's got an ID, a racketball toy, a whiskey bottle."
+    MC "Turn the body over now. Let's see if we can figure out how he died."
+    BE "..."
+    BE "Mmm. Kei-chan?"
+    MC "Uh, yeah?"
+    BE "I don't know if I want to continue."
+    MC "I swear, it gets interesting soon. Let's—"
+    BE "I-I'm not sure a ship full of dead bodies is what I want to be thinking about today..."
+    MC "Oh."
+    MC "Um…"
+    MC "I didn't think you had a problem with violent games. The gore in this one isn't even that extreme."
+    show BE embarrassed
+    BE "Yeah, but in other violent games, {i}I'm{/i} the one doing the killing."
+    show BE neutral
+    BE "Don't ask me why, but that makes all the difference to me."
+    MC "I swear, this is a good game!"
+    BE "I believe you. I just…"
+    BE "Games where something creepy is going on and I can't even {i}fight{/i} it…I-I have to be in the right mood for that sort of thing."
+    $setAffection("BE", -1)
+    MC "Uh…yeah, sorry."
+    jump BE057_c1_after
+
+label BE057_c1_after:
+    "{i}BZZZZZT. BZZZZZZT{/i}"
+    show BE happy
+    BE "Oh, hey!"
+    show BE neutral
+    BE "It's my dad."
+    MC "O-Oh. I can come back later if you want. Y'know, if you want some privacy."
+    BE "Nah, you can stay. It shouldn't take too long anyway. Here, I'll even put it on speakerphone so you can speak to him too."
+    MC "But I haven't—"
+    "Before I could get a chance to reply, Honoka answered her phone call."
+    MCT "—spoken to him for over a decade…!"
+    BE "{i}*Ahem*{/i}"
+    show BE unamused
+    BE "{i}This is Inoue, may I ask who's speaking?{/i}"
+    FujioCell "{i}This is Inoue. May I speak to Miss Inoue, please?{/i}"
+    BE "..."
+    FujioCell "... *snrk*"
+    show BE happy
+    BE "Hehe, gotcha again, Papa!"
+    FujioCell "Gah-hahaha! C'mon, girl, what was that? An impression of me? I don't sound like that!"
+    "Honoka and her father shared a laugh together."
+    MCT "Man… He sounds just like how I remember."
+    BE "Ahhh, anyway! Hi, Papa! What's up?"
+    FujioCell "Oh, you know. Just getting off work. Missed my favorite daughter and wanted to hear her voice!"
+    show BE embarrassed-2
+    BE "Aww, Papa… I miss you too!"
+    FujioCell "Studying hard?"
+    "Honoka glanced down at the controller in her hands and the paused video game on the TV."
+    BE "Uhh, yep! You just caught me in the middle of…studying!"
+    FujioCell "Uh-huh. And I'm the next Prime Minister."
+    show BE happy
+    BE "Really? Then, I'm the next Prime Minister's Daughter!"
+    FujioCell "... Video games?"
+    show BE shrug
+    BE "Video games."
+    FujioCell "Of course, of course… As long as your grades are above water..."
+    show BE angry
+    BE "Papa…"
+    FujioCell "Yeah, yeah. \"I'm your father, not your student.\" But, I still care!"
+    MC "Pff…"
+    FujioCell "Ah. You have someone over? Is that…"
+    show BE neutral
+    BE "Yup, it's him. My boyfriend."
+    MCT "Shiiiit…"
+    FujioCell "Aha, finally caught 'im! The mystery guy who's name you refuse to tell me!"
+    "My eyes shot open wide. I leaned over to whisper into Honoka's ear."
+    MC "{size=-6}He doesn't know?!{/size}"
+    pause 1
+    show BE wink
+    pause 1
+    "Apparently, all those times Honoka told her parents she had a boyfriend, she neglected to mention her boyfriend was someone they knew…"
+    show BE angry
+    BE "You're the one with the bad timing, Papa. You always call after he leaves!"
+    FujioCell "Well, not anymore! May I speak with him?"
+    show BE neutral
+    BE "You've been on speakerphone the whole time, Papa! He can hear you."
+    "Honoka placed her phone on the couch between us, and rapidly motioned at me to speak."
+    MCT "Deep breaths, Hotsure. Here we go."
+    MC "Ah, hello?"
+    "Compared to his joking and unserious vibe with his daughter, Honoka's father's tone of voice shifted into a more professional tone after he heard my voice."
+    FujioCell "Hello, this is Inoue. Fujio Inoue, Honoka's father. May I ask who's speaking, please?"
+    show BE embarrassed
+    MC "Hello, sir. My name's Keisuke. Er… Honoka's boyfriend."
+    FujioCell "First and last name, son. I meet a lot of people in my line of work."
+    MC "Uh… Keisuke Hotsure, sir."
+    pause 1.5
+    "The line went silent. My heart started to pound so hard in my chest, I could hear it in my ears."
+    FujioCell "Hotsure…"
+    extend "Hmm…mmm… Keisuke Hotsure… I've heard that name before…"
+    "After audibly racking his brain, he spoke again."
+    FujioCell "What's your father's name, son?"
+    MC "Ryuta. And my mother's name is Himari, if it helps."
+    pause 1
+    FujioCell "...Eh…? Ah-haha..!" 
+    FujioCell "Gaaaah-hahaha! KEISUKE-CHAN!!"
+    "All my nerves melted away after hearing his voice call me \"Keisuke-chan\" again."
+    show BE happy
+    BE "Yup, Papa. It's the same Kei-chan from back then! I wanted it to be a surprise."
+    FujioCell "Gaaahaha! Long time, Keisuke-chan! How long's it been? 10 years? Happy new year, son! Times…10!"
+    MC "Heh, yeah it's been a long time, sir! It's good to hear from you again."
+    FujioCell "I'm doing well, son. Even better now! Ahh, I never would have guessed… I haven't spoken to you since the family and I moved to Kagoshima! How's the family?"
+    MC "We're all doing well, sir! Mom and Dad are still doing well, and Tomo's here at the school, as well."
+    FujioCell "EHH??? Little Tomoko-chan's there too?! Ahh! TomoHono's together again, too!"
+    show BE surprised
+    BE "Oh! That reminds me!"
+    show BE happy
+    BE "Hey Papa, was it \"TomoHono\" or \"HonoTomo\"? Neither of us could remember!"
+    FujioCell "I'll be honest, I switched them around all the time! It was always so funny whenever your name would go second, Honoka. You would bang your little arms on my leg saying you wanted to go first!"
+    MC "Oh yeah! I remember! And whenever Tomo was second—"
+    FujioCell "She would puff her little chubby cheeks out and pout! Gaaaahaha!"
+    BE "Haha, aww! Really? Papa…"
+    MC "Aw, man… Good times, Fujio-san."
+    FujioCell "Ah-ah! Remember, I don't like being called Fujio-san. Pop quiz! What do I always ask my students to call me?"
+    MC "Mmm…"
+    if isEventCleared("MC008"):
+        extend " Oh yeah! Mister Fujio! Because you teach English!"
+        FujioCell "Ha-hah! That's correct! 100 marks!"
+    else:
+        extend " Mister Fujio. Honestly, it's been so long that I don't remember why though…"
+        FujioCell "Ahhh, you're almost there! Remember, it's because I'm an English teacher. I'll give you 90 marks for that!"
+        MC "Oh…! That explains all the English vocabulary trivia you knew."
+
+
+    BE "Anyway, Papa… Kei-chan and I were in the middle of an intense game when you called, so do you mind if I call you back later?"
+    FujioCell "Of course! I'm about to hop on the train anyway, so I gotta get off the phone. Ahh, it's so good to hear from you again, Keisuke-chan. I can't wait to tell Maegami-san. She'll be over the moon!"
+    MC "Same to you, Mr. Fujio. Tell Maegami-san I say hello, okay?"
+    FujioCell "Absolutely! You give my regards to Ryuta and Himari as well! Hope to hear from you soon, son!"
+    BE "Bye, Papa! Talk to you later tonight!"
+    Fujio "You two be good now!"
+    "{i}Click{/i}"
+    pause 1.25
+    MC "Phew… Y'know… a warning would have been nice."
+    show BE shrug
+    BE "Yeah, probably. But this was so much better don't you think? You heard how happy he was!"
+    MC "I was fully expecting him to tear me apart, to be honest."
+    show BE wink
+    BE "Oh, he was going to. He told me over the phone last time we spoke. But I knew he would totally ease up once he learned your name. He's a big softy!"
+    MC "Anyway, it was nice to speak to him again. I'm glad he doesn't think I'm a total jerk or anything."
+    BE "Pfff, nah. I tell my folks how good you are to me all the time! I just conveniently left out your name, hehe."
+    MC "Well, thanks for that. Maybe after I'm finished kicking your ass in the next game, I'll call up my parents back at my dorm."
+    show BE smug
+    BE "Big words, Kei-chan. But let's see if you can actually back them up?"
+    MC "Sounds good to me."
+
+    show BE neutral
+    BE "Alright. Where were we?"
+    if getFlag("BE057_c1_2"):
+        MC "Did you want to play more Spirit Eater? You seemed to be having fun with it."
+        show BE surprised-2
+        BE "Oh, you bet I do!"
+        show BE embarrassed-2
+        BE "I think my thumbs need a rest, though. I could use something more rhythmic."
+        show BE confused
+        BE "Don't get me wrong though. I'll be playing Spirit Eater again SOON."
+        MC "Cool. In that case…"
+    MC "It's your turn to pick the next game."
+    show BE neutral
+    BE "I challenge you to {i}Clown Royal Rush II{/i}."
+    MC "Oh. THAT game."
+    BE "Uh huh."
+    MC "Racing, bombs and sadistic mayhem…"
+    MC "Lemme guess: you're good at this one."
+    show BE happy
+    BE "Uh HUH."
+    MC "And you fully expect to cream me."
+    show BE seductive
+    BE "Aw. Would I really do that, Kei-chan~?"
+    MC "Fine. Let's do it."
+    show BE happy
+    BE "Yay."
+    "{i}On your marks.{/i}"
+    "{i}5…4…3…{/i}"
+    "{i}GO!{/i}"
+    "{i}VROOOOOOOM{/i}"
+    show BE neutral
+    BE "Nice seeing you. Bye!"
+    "Honoka's clownmobile shoved me to the side and she sped off."
+    "I was lagging behind hard."
+    "For about…"
+    extend "eight seconds."
+    "{i}Waaa-BOOM{/i}"
+    show BE surprised-2
+    BE "W-what was that?!"
+    show BE surprised
+    BE "Oh my gosh!"
+    BE "AAAAAH"
+    BE "You spun me into fifth place!!!"
+    show BE confused
+    BE "Get back here!"
+    "{i}BOOM{/i}"
+    show BE surprised-2
+    BE "How do you keep dodging my bombs?!"
+    MC "I…"
+    MC "Might've played this game all summer last year."
+    BE "WHAT?!"
+    show BE confused
+    BE "Okay, it's ON."
+    "{i}VROOOOOOOOOO…{/i}"
+    show BE happy
+    BE "Ha HA."
+    "{i}BA-BOOM—BOOM!!!{/i}"
+    show BE surprised-2
+    BE "Wha—! Where'd that attack come from, was that YOU?!"
+    MC "I took the catapult shortcut."
+    BE "That's a {i}thing{/i}?!"
+    show BE confused
+    BE "Aw, man. Back in fourth place!"
+    "Lap 1 ended and I took the catapult shortcut again on the second round."
+    BE "You jerk! How do you even land like that?"
+    MC "Heh. I practiced it a million times."
+    BE "No fair, you hustled me! I didn't know you were this good at {i}Clown Royal{/i}!"
+    MC "Eh. You win some, you lose some."
+    MC "By the way, you pulverized me in like, twenty games before this one."
+    show BE unamused
+    BE "But, I'm {i}supposed{/i} to! I'm the video game girl."
+    BE "I'm the one who wins!!"
+    MC "Heh. Not this time."
+    show BE happy
+    BE "Heh. Well,"
+    show BE neutral
+    extend " we'll see about that."
+    "With the controller still in her hand, Honoka stood."
+    hide BE with easeoutleft
+    "And, went behind me."
+    MC "Where you going?"
+    BE "Absolutely nowhere."
+    BE "But, YOU…"
+    "My eyes were glued to the screen, but just behind me, I heard Honoka doing something with her shirt."
+    show BE happy
+    BE "Are going on a time out."
+    scene black with wipedown
+    MC "Hey! Aaaah!!!"
+    "Now I couldn't see anything!"
+    "And, there was naught but soft, warm flesh, three-sixty degrees around my head."
+    MC "Mmph! Nng!!"
+    BE "Now, you just stay in there, nice and safe."
+    BE "I "
+    extend "am going to win."
+    jump daymenu
+
+label BE058:
+    $setProgress("BE", "BE059")
+    scene Dorm BE
+    play music BE
+    show BE happy
+    BE "Phew! All saddled in. Thanks for the extra pair of hands, Kei-chan."
+    "Honoka sent me an early morning SOS text since Kokutan wasn't around for… whatever reason. Turns out, when you can't reach completely in front of, let alone around you, a little help in the morning goes a long way."
+    MC "Hey, anytime. You can always call on me for help uh… saddling in. If your roommate's not around."
+    show BE neutral
+    BE "Hmm… You were awfully proactive. Maybe I should hire you full time!"
+    MC "Oh, don't be so sure about that, Miss. I doubt you could afford me."
+    show BE sad
+    BE "Dang. How much is Alice paying you?"
+    show BE surprised
+    BE "Unless…" 
+    show BE unique
+    extend " you mean something else?"
+    MC "Oh but I do, madam. I demand nothing less than a kiss AND a squeeze for my premium services."
+    BE "Oho? You drive a hard bargain, but I think I might just be able to…"
+    "Honoka leaned over, taking my arm and guiding it under her bra, right to her huge, yet still perky nipple, and with both bands, squeezed my arm, as I squeezed her."
+    BE "...afford such a service."
+    show BE happy
+    BE "Hehehe!"
+    "Just as quickly, she pulled my arm out from her bra and fixed her shirt, leaving me in a daze."
+    "And hard."
+    BE "So! How did things go with the 'rents?"
+    MC "Uh… oh, yeah. I chatted with my folks after getting back yesterday. Honestly, they asked more about Tomo and how she's holding up, considering she never calls them…"
+    BE "Heh, you sound a little jealous."
+    MC "Meh. Not really. I'm just the more responsible twin. So, they don't worry about me as much."
+    show BE shrug
+    BE "Pfff. {i}You? Responsible?{/i} That's a good one."
+    MC "Hey now. I'm plenty responsible!"
+    show BE wink
+    BE "Uh huh. {i}Suuure.{/i}."
+    MC "By the way, which of us is the math tutor?"
+    BE "That doesn't count. You're just a nerd~"
+    MC "Ah, whatever…" 
+    "Honoka looked at her breasts and frowned."
+    MC "Something wrong?"
+    show BE worried
+    BE "Mm… the girls feel a little weird." 
+    MC "Oh, shit. Did I do something wrong?"
+    show BE surprised-2
+    BE "No! Nothing like that. It's more like… hmm. They…"
+    show BE sad
+    BE "How do I describe this..."
+    MC "Try me."
+    show BE unamused
+    BE "Okay, I know it's gonna sound weird, but they feel… "
+    extend "{i}prickly{/i}? Like when your foot falls asleep." 
+    MC "Huh. Pins and needles, but in the boob?"
+    show BE angry
+    BE "Yeah. But it's not like… painful? It's just… I dunno, weird!"
+    MC "Not to sound like a broken record, but should we get you checked out?"
+    MC "I mean, it's totally up to you, but…"
+    show BE neutral
+    BE "I mean… it's not like I'm in pain or anything."
+    show BE embarrassed-2
+    BE "{i}Ahhh…{/i} Okay. I think we're in the clear. The feeling's passing."
+    MC "Alright. Just, let me know if it comes back again."
+    show BE happy
+    BE "Mhm! I will. Anyway, like I was saying…"
+    "Honoka idly rubbed the outer curve of her breast as she breezed past me, bounding out her room and down the hallway."
+    scene black with fade
+    pause 1
+    stop music
+    play music HigherEdu
+    scene Classroom with fade
+    show BE surprised
+    BE "Mmnh!"
+    MC "{size=-6}Still feeling… ah, prickly?{/size}"
+    "Not wanting to draw attention before class began, I leaned over to Honoka and asked quietly."
+    show BE sad
+    BE "{size=-6}Yeah, it just suddenly came back when I sat down.{/size}"
+    MC "{size=-6}Can you lift yourself up a bit, maybe you pinched the bottom or the sides? Do you need help adjusting your straps?{/size}"
+    show BE neutral
+    BE "{size=-6}Nah, I'm good now, think it was just the jostle as they got settled.{/size}"
+    show BE angry
+    BE "And here I was, hoping my new extra padding was good for something."
+    "Honoka patted her hips, which to her credit, {i}were{/i} looking… {w}plusher."
+    hide BE with dissolve
+    pause .5
+    show WG happy-2 at Position(xcenter=0.2, yalign=1.0) with dissolve
+    pause .5
+    show PRG happy at Position(xcenter=0.5, yalign=1.0) with dissolve
+    pause .5
+    show AE neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    pause 1
+    hide WG with dissolve
+    hide PRG with dissolve
+    hide AE with dissolve
+    pause .25
+    show BE angry
+    extend "… not to say others in the class didn't have her beat down there."
+    MC "{size=-6}Alright, just… take it slow today?{/size}"
+    show BE unamused
+    BE "Yeah, yeah. I hear ya."
+    hide BE with dissolve
+    "Unfortunately, whatever was going on with Honoka didn't seem to care if she was taking things slow."
+    pause .5 
+    show BE surprised-2
+    "Every now and then, throughout the period, she whimpered and muttered to herself. More than once, I saw her jolt upright in her chair, like someone had just pinched her."
+    scene Classroom with fade
+    show Hageshi neutral at Position(xcenter=0.2, yalign=1.0)
+    Hageshi "Inoue-san, if you could come up to the board and solve this equation, I'll postpone the quiz I have planned."
+    show BE sad at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1.0)
+    BE "Err… yes, sensei."
+    show BE worried at slowease(center, right, 3.0)
+    "Honoka stood slowly and walked almost without lifting her legs, all the way to the front, and turned herself to the side so she could reach the board without pressing her chest into it."
+    MCT "C'mon Honoka, we went over this. You can do it!"
+    show BE worried
+    pause .5
+    show BE neutral
+    "Honoka stared blankly at the equation on the board. Then, I could almost see the gears click as her face lit up. She started working through the problem, her tempo increasing as she got toward the end."
+    MCT "Noo! You forgot to √−1 after simplifying that last step! Go back, go back!"
+    "As if she could hear my psychic screams of anguish at the thought of taking that quiz, I saw Honoka's eyes go wide. She reached forward to erase her last few strokes−"
+    #play sfx bounce
+    pause .5
+    stop music
+    extend " and mashed her chest right into the chalkboard."
+    show BE surprised at altFall(0.25)
+    BE "{size=-6}AAAHN-MMPH…{/size}"
+    "Honoka cried out as she crumpled to her knees, her chest dragging down against the chalkboard and smearing most of the equation, and some notes below it besides."
+    show Hageshi at altMove(0.5, 0.75)
+    "Faster than I could react, Hageshi moved to where she was and hoisted her back to her feet."
+    show Hageshi at altMove(0.5, 0.5)
+    show BE sad at altRise(1.0)
+    Hageshi "While you were on the right track, it seems some additional study time is needed. Everyone, please use the rest of the time for self-study."
+    "The class collectively exhaled, though I think most for a different reason than I did. As quickly as I was able, I threw my books into my bag and bolted to the front of the classroom."
+    MC "Hageshi-sensei, would it be all right if—"
+    Hageshi "Yes, Hotsure-san. Please take your time. Inoue-san could use some stability."
+    "I bowed quickly, then took Honoka's hand."
+    hide Hageshi with dissolve
+    show BE sad at altMove(0.5, 0.5)
+    menu:
+        "Take Honoka to the nurse's office.":
+            MC "{size=-6}Honoka, we're going to the nurse's office. Please, we can't put this off any more.{/size}"
+            show BE doubt
+            BE "Hah…hah… O-okay. Just don't go too fast, okay?"
+        "Ask how Honoka is doing.":
+            MC "{size=-6}Are you okay, Honoka? Are you hurt? We can go to your dorm if you need to lay down, whatever you need."
+            BE "{size=-6}I-I'm fine. Just startled… and embarrassed. Let's… let's just go straight to the nurse. Please."
+            MC "{size=-6}Got it. {w}I'll stick with you until you tell me not to.{/size}"
+    "I squeezed Honoka's hand once, and walked with her out of the classroom and headed to the nurse's office."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+    scene Nurse Office with fade
+    play music Rain 
+    pause 1
+    "The trip to the nurse's was uneventful, though for the trip there Honoka insisted on walking behind me with her chest firmly pressed against my back, doing her best to match my pace and minimize her… jostling."
+    "I could tell she was doing her best not to make any sounds. But the fact I {i}could{/i} tell  was itself worrying."
+    pause .5
+    show BE sad with dissolve
+    BE "I just don't get it, Kiyomi-san; I've had sore and sensitive breasts before, but it's usually only right around the start of my… time of the month…"
+    "Honoka trailed off, glancing in my direction."
+    MC "Don't worry. Keep talking like I'm not even here."
+    "Honoka nodded."
+    show BE neutral
+    BE "Right.{w} But, never anything like this. It's like… electric tingles? Sometimes they last for a while but aren't that bad, but when they come back, it's like getting zapped!" 
+    show BE shrug
+    BE "It's not like it hurts − I can't begin to describe how many times I've banged up the girls, even before coming to Seichou. I {i}know{/i} what that feels like. I guess it's like I'm constantly getting startled, like when someone pokes you in the ribs."
+    show BE doubt
+    BE "Ugh…! Sorry, I'm not sure if any of that made sense… I feel like I'm talking in circles and wasting everyone's time…"
+    Nurse "Inoue−san, while you have nothing to worry about, coming in and asking is {i}never{/i}silly, or a waste of time. That's what we're here for."
+    Nurse "What you've described isn't as abnormal as you seem to think." 
+    Nurse "You'll be fine with plenty of good rest. Take some painkillers if the sensations become painful, and watch your salt and caffeine intake. I would also appreciate it if you check in with us, should the pain worsen or persist beyond a few days."
+    show BE unamused
+    BE "Wait… that's it? Really?"
+    MC "Are you sure?"
+    "I couldn't see the nurse's face behind her mask, but I could hear the smile in her voice that was reflected in her eyes as she gently patted Honoka's hand." 
+    Nurse "Really, really."
+    show BE worried
+    BE "So then, what's going on with me?"
+    Nurse "Hmmm. The easiest way to put it, is you're growing a bit faster than your nervous system. Or at least, you {i}were.{/i}" 
+    Nurse "Now, your brain is catching up to your body. It's building those new nerves and pathways. You're sensitive because these are, in a medical sense, {i}new{/i} sensations."
+    "As the nurse finished explaining, I couldn't help but loudly exhale and slump back in my chair."
+    MC "Phew… what a relief…"
+    stop music
+    play music BE
+    show BE happy
+    BE "See Kei-chan, I told you I was fine!"
+    MC "Well, excuuuuuse me for being worried after you collapsed to your knees in the front of class! I was really worried..."
+    show BE doubt
+    BE "Uggggh… don't remind me…"
+    Nurse "Hotsure-san was right to have you come in and check with us. Besides, it's good for us to be up to date with your measurements. You do often sleep in past your routine appointments, Inoue-san."
+    show BE wink
+    BE "Well, maybe I'm… a growing girl who needs her beauty sleep?"
+    MC "Ha. Oh, I mean, ha. Ha. Ha."
+    Nurse "Well, it so happens, I had a cancellation in my schedule today. So, if you like, your next appointment could be later today in the afternoon."
+    "I still couldn't see the nurse's face, but she exuded a palpable aura that screamed /'You better not miss it this time.'/"
+    show BE sad
+    BE "Geh."
+    hide BE with dissolve
+    Nurse "And Hotsure-san, I'd also advise you to trust Inoue-san's judgment a little more. Despite the changes she's going through, she knows her body better than anyone." 
+    MCT "Geh."
+    Nurse "Caution is well and good, and I completely understand that everything may seem, well, more than a bit uncertain lately. But it's also worth practicing a bit of temperance."
+    MC "Ah… yes. Sorry, Kiyomi-san."
+    Nurse "I'm not the one who needs an apology, Hotsure-san."
+    MC "Right."
+    pause .5
+    show BE unamused
+    MC "Sorry, Honoka. I didn't mean to be a mother hen or anything. I just… I guess I just wanted to make sure you're happy and healthy. But that's no excuse for trying to tell you what to do − I apologize."
+    BE "..."
+    pause .5
+    show BE smug
+    BE "So what I'm hearing is, 'I'm sorry, Queen Honoka, you were right and I was wrong. Why {i}of course{/i} I'll treat you to a triple fudge sundae, anything for you my love, light of my life?'"
+    "Honoka burst into laughter, her chest jostling as if today's events never happened."
+    MCT "In hindsight, I really {i}do{/i} feel silly. Honoka never said she was in pain and she bounced right back up until the end. Just like she always does—that's who she is."
+    MCT "Even if she's just putting on a face… who am I not to return that kind of energy? It's Honoka, for crying out loud."
+    MC "Listen you…"
+    Nurse "All right, you two. I have a few more appointments to get to today, don't stick around too long."
+    MC "Of course. Thank you again, Sensei."
+    Nurse "Not a problem at all. Oh, and Inoue-san?"
+    show BE happy
+    BE "Hmm?"
+    Nurse "Chocolate has caffeine. Not much, depending on the type, but you'd best try moderating your intake for a few days to be safe."
+    show BE surprised
+    BE "WHAT?! Nooooo!"
+    pause .5
+    MC "All right Drama Queen Honoka, let's see if Kanami-san or Aida-san can spare a moment, maybe whip you up a caffeine-free treat. Or, I'd be happy to treat you to the finest chips available in my cupboard. Your call."
+    show BE sad
+    BE "...but my triple chocolate sundae…"
+    pause .5
+    show BE shrug
+    BE "Oh well. Sure, I'll take you up on that offer!"
+    pause .5
+    show BE happy
+    BE "Race ya!"
+    show BE happy at slowease (center, offscreenleft, 0.5)
+    MCT "Yeah… she's okay if that's all it takes after being denied chocolate."
+    pause .5 
+    MC "Wait. Shit."
+    scene Hallway with dissolve
+    pause 1
+    scene Hallway at Transform(xzoom=-1) with dissolve
+    MC "{i}...which offer?{/i}"
+jump daymenu
+
+label BE059:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
