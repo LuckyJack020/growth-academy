@@ -31218,6 +31218,871 @@ label WG005M:
     jump daymenu
 
 label WG094:
+    $setProgress("WG", "WG095")
+    scene View Point with fade
+    play music Beach
+    MC "Ahh, what a nice day."
+    "I found myself taking in the view of the ocean from the scenic overlook at the base of the island's lighthouse, not far from the beach." 
+    "The cool breeze was a nice contrast with the warm sun, but it would have been a bit too much if I didn't have my jacket on."
+    "But I wasn't here just to admire the scenery, I was acting as a spotter for Alice as she did her long-distance swimming training. {w}It wasn't exactly easy to keep track of where you where at when you're spanning kilometers of open ocean."
+    "Not that she needed it for safety purposes, since she was so buoyant it was impossible for her to drown, but ocean currents weren't known for their predictability and even experienced swimmers can get caught in a riptide."
+    Local "Oh, are you watching for whales?" 
+    MC "Hm?"
+    "Noticing I wasn't alone, I turned around as I lowered my binoculars, chuckling as I realized what it must have looked like."
+    MC "Hehe, well... I guess you could say that."
+    Local "Now's a good time of the year to see them."
+    MC "Ah, good to know. I'll be keeping an eye out."
+    Local "The weather is clear today so you'll have a good chance of seeing at least one."
+    MC "Heh, that is the hope."
+    Local "Well, I gotta get going. Good luck, have a nice day."
+    MC "Thanks, you too."
+    "I couldn't help but smile, reflecting on the interaction that just took place."
+    MCT "Oh the irony. I don't think I'll be telling Alice about that one..."
+    "Raising up my binoculars again I scanned the horizon for her blue swimsuit and blonde locks poking out of the water."
+    MCT "There she is."
+    "The tiny blue and blonde dot in the distance belied her actual size, which could sink some of the smaller vessels on the seaside dock."
+    MCT "Looks like she's already past the buoy marker. Damn, she's getting fast. I thought it would take her all morning to hit 10 kilometers."
+    "Pulling out a small pocket mirror I proceeded to catch the reflection of the sun, sending out a flashing signal to catch her attention."
+    MCT "Looks like she noticed it."
+    "Having got the signal, Alice began heading into shore. I headed down to the beach to meet her."
+    scene black with fade
+    pause .5
+    $setWGOutfit(OutfitEnum.SWIM)
+    scene Beach
+    show WG happy
+    with fade
+    "Luckily I managed to get down to the beach to greet her just as she was coming out of the water."
+    MC "That's a new personal best. You just clocked 10 kilometers in under four hours. That's a crazy pace for open ocean swimming!"
+    WG "It is quite exhilarating to find myself improving so fast. In all my years of competitive swimming I never thought I'd find myself training for the long-distance categories, let alone thriving in it."
+    "One look at Alice would not inspire the association of \"elite athlete\", but her long distance swimming training was proving she had the makings of one."
+    MC "How was the water?"
+    show WG neutral
+    WG "A bit chilly, but not too bad."
+    " \"A bit chilly\" was the understatement of the century coming from Alice. There were more than a few reasons I didn't join Alice for her ocean swimming excursions."
+    "Even if I could keep up with her, I would have succumbed to hypothermia in mere minutes out in the early spring waters of the Sea of Japan." 
+    "Luckily for Alice, her generous layers of natural insulation made her impervious to the near-arctic temperatures." 
+    show WG surprised-2
+    "{i}*Bergulegruuul{/i}..."
+    "Not to say her \"insulation\" didn't require routine maintenance..."
+    MC "Hungry?"
+    show WG neutral-2
+    WG "Quite so, apparently."
+    MC "Want to get the usual?"
+    show WG happy-2
+    WG "I thought you'd never ask."
+    scene Beach
+    show WG neutral
+    with fade
+    "There was a dockside seafood restaurant that had quickly become our favorite spot for Alice to fuel up after her long distance ocean excursions. It was nice because the dockside seating meant Alice didn't have to change out of her swimsuit."
+    "Of course that wouldn't have mattered though if the food wasn't good. The fish was fresh and the service was topnotch, in no small part to a certain someone who was their favorite customer."
+    MC "How's the kaisendon?"
+    WG "Extremely fresh. They don't skimp on the salmon roe here either, which I like."
+    "Alice was making steady progress on her massive seafood bowl of kaisendon, a mere appetizer in light of the vast spread of cooked and sashimi style mix of bream and yellowtail platters set before her."
+    WG "How's your shio ramen?"
+    MC "Salty, but good. I don't know what they used to make the fish cake in this thing, and maybe I don't want to, but whatever it is, it's much better than any seafood ramen I've had elsewhere."
+    show WG haughty
+    WG "Sounds delightful, I think I'll order a bowl for myself then."
+    show WG neutral-2
+    MC "You were pretty incredible out there on the water this morning, just how far do you think you could go?"
+    WG "Thank you, Dear. I honestly think I had a couple more kilometers in me, but I don't want to push it too far too fast. I'm still getting used to this new found ability."
+    MC "Well, you've made pretty fast progress, do you have a goal in mind?"
+    show WG pondering
+    WG "I've decided that eventually I'd like to swim the English channel. It'll take some work but I think it's realistic given what I've been able to do so far."
+    show WG happy-2
+    MC "That's a pretty short list of people who've pulled that off, but I have no reason to doubt you'll get there if you're committed to it. Like you always say, \"A Nikumaru doesn't go back on their word.\" "
+    WG "I didn't think it would take much to get your vote of confidence. Still though, I have my work cut out for me."
+    show WG worried
+    WG "The main limiting factor seems to be my appetite after spending a few hours in the water. My body is used to much more frequent meals."
+    show WG doubt
+    WG "Though I'm not sure why. I have enough calories stored to last the rest of my life if I had to, but my stomach seems to think I have seconds to live."
+    "Whether it was a humorous exaggeration or the practical reality of her situation, the stacks of empty bowls and plates along with platters of whole fish stripped to the bone suggested the latter more than the former." 
+    show WG neutral
+    MC "I figured you'll be busy, but what were your plans for the evening?"
+    WG "Mostly catching up on business orders with Kokutan. She's been doing a good job lately but I still like to make sure I'm keeping tabs on supply inventory and cashflow. She isn't the greatest on keeping up with the logistics side of the orders."
+    WG "That, and I need to make sure I'm allocating enough time for studying."
+    MC "Want me to come over in the evening for a study session?"
+    show WG sly
+    WG "I'm not sure how much \"studying\" will get done if you were to come over."
+    MC "I have no idea what you might be insinuating..."
+    show WG haughty
+    WG "You sir, are a terrible liar."
+    show WG neutral-2
+    WG "Besides, I already have you booked for a study session later in the week for Hageshi-sensei's test."
+    show WG happy-2
+    extend " With extra time allocated for \"distractions\"."
+    MC "Well I guess that works out. I need to get to bed at a decent time tonight since my parents are coming in early tomorrow morning."
+    WG "I'm looking forward to meeting them. I just recently got back to your mother with my notes on her draft story, so I'm sure we'll have lots to talk about."
+    MC "She was really thankful for all the feedback too." 
+    MC "She told me she apologizes that she hasn't gotten back to you about it yet, there was just so much you provided she said she hadn't gotten a chance to wade through all of it yet to give a proper reply."
+    show WG worried
+    WG "I hope it didn't come across as too much. I certainly didn't intend for it to be nitpicky," 
+    show WG neutral
+    extend " there was just so much I wanted to say and honestly I think this could very well be her best book yet."
+    MC "Well that's good to know. She's always worried how her latest book will measure up to her fans." 
+    Waiter "Apologies if I am interrupting, I just wanted to check to see if you would like to order more."
+    "As the waiter was talking, two other staff members came to bus the stacks upon stacks of plates that had piled up." 
+    "The sheer scale of the spectacle would have left a normal person to wonder what else there could even be left to order, but the staff here had become quite familiar by this point with fulfilling her repeated orders."
+    show WG pondering
+    WG "Hmm, some dessert would be nice."
+    Waiter "Would you like the usual?"
+    show WG happy
+    WG "Yes, that does sound nice."
+    Waiter "Gotcha, two of everything then. I'll get those right out for you."
+    MC "Thanks again for offering to take my parents out for their visit."
+    WG "It's nothing, Dear. I'm sure the trip here was costly enough for them, and it's one less thing for them to worry about while traveling."
+    MC "So what are you going to do when we get back?"
+    WG "First things first, I'm washing my hair. I'm not sure what it is about salt water that completely fries hair."
+    show WG surprised-2
+    MC "Tell me about it."
+    show WG sly
+    WG "True, I suppose you would know better than anyone."
+    MC "I don't suppose I could offer my assistance with the matter then?"
+    WG "Chibuki is scheduled for assistant duties this afternoon."
+    show WG aroused
+    MC "Yes, but I'm thinking you might want the \"personal touch\" when showering off."
+    show WG sly
+    WG "This isn't exactly what I meant when discussing \"showing initiative\" in your latest performance review."
+    MC "What can I say? Good management always provides the right incentive."
+    show WG haughty
+    WG "I pride myself on nurturing talent, but now I'm starting to think I'm {i}too{/i} good at it after seeing your negotiation skills grow so much."
+    MC "I'm sure Chibuki wouldn't mind having to clock in later. I can call her and let her know now."
+    show WG happy-2
+    WG "Oh, don't worry, I already accounted in the schedule for you volunteering to take her early timeslot."
+    show WG sly
+    MC "...{w}Sounds like I still have a lot to learn about negotiation..."
+    scene black with fade
+    pause 0.5
+    play music DormLife
+    $setWGOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL)
+    pause .5
+
+    scene Dorm Interior with fade
+    if not getFlag("MCDorm_ParentsVisit"):
+        $setFlag("MCDorm_ParentsVisit")
+    MC "Well, here's where I live. It's nothing fancy but it's served its purpose."
+    Dad "Gee son, I would have thought you'd clean up a bit more if you knew your mother and I were going to be visiting."
+    MC "Hey, it's clean{w}-ish."
+    MC "I bet you it's way cleaner than Tomo's room."
+    show Tomoko surprised with dissolve
+    "Tomo suddenly looked like she had just remembered something she had forgotten."
+    Tomoko "{size=-6}{i}Eeep!{/size}"
+    Dad "Yes, well that wouldn't surprise me."
+    show Tomoko neutral
+    Mom "Oh it's not so bad. Look, he has his laundry all folded and put away at least, though you should have your bed made by this time in the afternoon."
+    MC "That's just a product of frequent use."
+    Mom "And you could use a bit of dusting..."
+    "As aggravating as their nitpicks were, I wasn't in a position to turn down their help sprucing things up around the room."
+    show Tomoko neutral at altMove(0.5, 0.25)
+    show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    if not getFlag("RM_MeetMC Parents"):
+        $setFlag("RM_MeetMC Parents")
+    "Unbeknownst to me, Daichi had crawled out from his corner of the dorm to see what was going on."
+    Mom "Oh, hello there."
+    MCT "Oh yeah, I forgot he might be around."
+    show RM distrustful
+    Mom "You must be-"
+    hide RM with dissolve
+    Mom "Hm?"
+    if checkAffection("RM", ">=", 8):
+        MC "Uh, don't mind him, he's just a bit shy..."
+        MCT "Yeah... we'll call it that."
+        MC "Daichi, it's alright to come out. They're with me and Tomo. This is my mom and dad."
+        show RM neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        RM "Sorry, I saw strangers rummaging through Kei's stuff, I assumed it was some kind of administrative search."
+        Dad "Haha! No, that's not the case. You must be Keisuke's roommate." 
+        Mom "Keisuke tells us you get into all sorts of adventures around the school and the island."
+        show RM distrustful
+        RM "{size=-6}You didn't tell them about the chart did you?{/size=-6}"
+        MC "{size=-6}What? No. I kept everything as vague as possible. They don't know anything.{/size=-6}"
+        RM "{size=-6}Good.{/size}"
+        show RM happy
+        RM "{i}Ahem{/i}. Yes, well we're only here for a year so I figured why not make the most of it and make sure we fully explore the campus as well as the island."
+        Mom "Well it's certainly nice that Keisuke has made a friend so he's not stuck in his room all day playing video games." 
+        MCT "Hey now, {i}I'm{/i} not the anti-social nerd of this duo here."
+        RM "Well, it was nice meeting you, but I have to get back to my studies. Finals coming up and all..."
+        show RM doubt
+        "Daichi proceeded to back away towards his room. Thinking himself to be stealthy, he awkwardly picked up a small stack of papers and a notepad he had out on the coffee table before finally slinking back into his bedroom"
+        hide RM with dissolve
+        MCT "Well, that went pretty well... considering I expected it to go a lot worse."
+        Dad "He seems like a nice fellow. A little odd though."
+        MCT "Oh, you have {i}no{/i} idea."  
+        Mom "Does he have one of the factors? I didn't notice anything in particular about his appearance."
+        MC "No, but his sister does. You might get to meet her when we head over to Tomo's dorm."
+        Tomoko "Yeah, she's my roommate. The one that has trouble talking because of her lips."
+        Mom "Oh yes, poor dear. Fortunately though, from the sound of it you'll be able to translate for us when we meet her."
+        Tomoko "Yes, but be careful what you wish for..."
+    else:
+        MC "Oh, uh, don't mind him. He mostly just keeps to himself."
+        Mom "You never mention your roommate much, do you ever talk with him?"
+        MC "Yeah, sometimes. We share a lot of the same classes. He's just not around that often."
+        Dad "What do you mean? He lives here."
+        MC "I find myself asking the very same question."
+        Mom "Does he have... you know... one of the factors?"
+        MC "Not unless you count paranoia."
+        Dad "There didn't seem to be anything unusual about him. {w}Well, aside from a little social awkwardness I suppose."
+        MCT "That's a laugh. For being one of the few people that actually looks normal around here, he's certainly the strangest person I've met in this whole place."
+        MC "Alright, I finished dusting my desk. I'll empty the waste basket and then we can head to Tomo's room."
+    scene black with fade
+    pause .5
+
+    play music ClearSkies
+    scene Dorm Tomoko with fade
+    "Surprise, surprise— Tomo's room was a dump. We spent a good chunk of time, in what felt like hours, to clean it all up to Mom and Dad's satisfaction." 
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve 
+    "And then on top of that, once Yuki realized she had a captive audience that hadn't heard all her gossip before, she went on and on as Tomo worked hard to keep up."
+    "Though to her credit, it seemed like having to sign everything out made Yuki more careful with her words... even if it did make the whole ordeal longer."
+    scene Dorm Exterior with fade
+    MC "Alright, let's get going. That took {i}way{/i} too long. I don't want to be late meeting Alice at the restaurant for dinner."
+    show Tomoko neutral with dissolve
+    Tomoko "Oh, it didn't take that long."
+    MC "It definitely did. And I don't want to hear anything about my room being messy after having to deep-clean that hazard zone back there."
+    Dad "I'll give you that one, son."
+    Mom "Yuki-chan seemed like a nice girl. A bit of a chatterbox... especially considering her speech difficulties. {w}I must admit, I'm still pretty shocked to have seen the extent of her predicament."
+    Tomoko "Her case is on the extreme end. I was told normally it doesn't get that bad."
+    MC "Yeah Tomo and I lucked out with the hair factor thing. I mean, it's not great, but things could be a lot worse." 
+    "In a stroke of luck, I was fortunate I was paying attention as we were walking through campus that I didn't miss her as she was walking in a different direction."
+    show Tomoko neutral at altMove(0.5, 0.25)
+    show BE confused at Position(xcenter=0.75, yalign=1.0) with dissolve
+    MC "YO! Honoka! Over here!"
+    show BE happy
+    "Once she realized who was calling for her, Honoka came up to us right away."
+    MC "Hey! Glad we ran into you out here."
+    if isEventCleared("MC004"):
+        MC "See, Mom and Dad? I told you she was here. Of all the places to run into her again, right?"
+    else:
+        MC "Mom, Dad, you remember Honoka, right?"
+    "Mom & Dad" "!"
+    show BE embarrassed-2
+    "Mom & Dad" "Honoka-chan!?"
+    show BE happy
+    BE "The very same!"
+    Dad "Sorry we didn't recognise you, Honoka-chan... it's just been so long..."
+    show BE embarrassed-2
+    Mom "Yes... You've {i}grown{/i} so much since we last saw you."
+    MCT "Oi, oi. That's a bit too on the nose, Mom."
+    "To be fair she had grown quite a bit since {i}I'd{/i} last seen her. I can't imagine how surprised Mom and Dad were."
+    show BE embarrassed
+    BE "Yes, well I suppose I've grown a bit... mmm, {i}taller{/i} since back then..."
+    MCT "Yeah, sure Honoka, we'll go with that."
+    show BE neutral
+    Mom "Well it doesn't seem that long to us older folk. I remember you just like the little girl who ran around the neighborhood with Tomoko and Keisuke. It's so good to see you again."
+    Dad "It was quite surprising to learn that Keisuke and Moko-chan had found an old friend when coming here."
+    show BE wink
+    BE "Moko-chan?"
+    show BE smug
+    extend " Haha. I can't believe I forgot about that one."
+    Tomoko "Oh, great Dad. Now you got her saying that too."
+    Dad "You mean she didn't already?"
+    show BE happy
+    show Tomoko annoyed
+    BE "No, but I will now!"
+    Dad "Haha, just like when you were kids."
+    show Tomoko neutral
+    Mom "Quite frankly we were very relieved to know they had someone they knew. It was such a sudden and unusual circumstance that had us worried, but when we learned you were there with them, it made us feel relieved."
+    show BE happy
+    BE "I know what you mean. I was so psyched when I finally realized it was Kei-chan that I ran into on the trail back to the Academy."
+    show BE neutral
+    BE "It hasn't been the easiest time here, but having Tomo-chan and Kei-chan around have definitely made it better!"
+    Mom "Well we're glad to hear that. {w}It's been ages though! What have you been up to these past years?"
+    Dad "Yeah, how are your parents?"
+    show BE happy
+    BE "Well..."
+    scene black with fade
+    pause .5
+
+    scene Dorm Exterior
+    show BE happy
+    with fade
+    Mom "Oh, it's been so lovely catching up with you Honoka-chan. I don't want to hold you up any longer."
+    Dad "Thanks for stopping to chat, don't be a stranger now! Make sure you stay in touch with Moko-chan and Keisuke after here."
+    BE "Oh, I will for sure. It was nice catching up with you Mr. and Mrs. Hotsure. I'll have Kei text you my parents' cell numbers so you can keep in touch with them too."
+    Mom "That would be great. Thanks Honoka-chan. Have a good evening."
+    BE "You too."
+    MC "Later, Honoka."
+    hide BE with dissolve
+    MCT "Well, that took longer than I thought it would. Better text Alice that we're running behind..."
+    "As much as I knew Alice was a stickler for a schedule, I didn't mind the momentary delay, as I was definitely hoping Mom and Dad would get a chance to see Honoka during their visit to the school."
+    Dad "So... Honoka-chan... {w}she certainly has changed quite a bit since we last saw her."
+    show Tomoko neutral with dissolve
+    Tomoko "I don't know, she seems like the same Honoka to me."
+    MCT "You never were one to read the subtext of a situation, Tomo."
+    Mom "Yes, it was, um... rather surprising to see her after all this time... with her particular condition nonetheless..."
+    Mom "Is her case... typical of those with growths of that kind?"
+    Tomoko "No. She's quite a bit bigger than her friend Kanami— and that's saying something if you'd ever seen her."
+    MC "Yeah, Honoka's \"condition\" is considered an extreme case. The school record from what she told us."
+    Tomoko "Yeah, it doesn't get any bigger than that."
+    Mom "I see. {w}Poor dear, I can't imagine it's comfortable having them that size."
+    Tomoko "I don't even want to imagine."
+    MC "Funny enough, our growths are considered an \"extreme case\" as well. The length of our hair and the speed of its regrowth are particularly aggressive."
+    Dad "Well, at least that means you won't go bald. Believe me, I wouldn't mind that predicament."
+    MC "I suppose that's one upside I hadn't thought of."
+    scene Campus Center with fade
+    Mom "Oh, the sakura tree looks magnificent this time of year. This is such a beautiful campus."
+    Dad "Yeah it seems like they went all-out with the accommodations at the facilities here. Everything looks well maintained and very spacious. Seems like they spared no expense to make sure the students are comfortable here."
+    MC "Yeah, I suppose I can't complain in that regard. Come to think of it, it's been about the best it could have been, all things considered." 
+    MC "It hasn't been the easiest transition to get used to, but I guess they figured to help students out they could remove any potential roadblocks by providing some nice amenities."  
+    MC "Honestly, and I would have never in a million years thought I'd say this after I got off the ferry on the first day, but I think I'll genuinely miss this place after we're gone. {w}What about you, Tomo?"
+    show Tomoko neutral with dissolve
+    Tomoko "I suppose. I mean, I gotta admit, it's been loads better than highschool ever was."
+    MC "Well, looks like we're running behind, but we still got time to catch the next bus without too much delay."
+    Mom "Oh, I hope we don't make a bad impression by running late."
+    MC "Nah, it's okay. I gave her a head's up we were caught up chatting with Honoka. She was fine. She's looking forward to seeing you two."
+    Dad "Well, let's not keep her waiting."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+
+    scene Bus Interior with fade
+    "Luckily we managed to catch the next bus into town, but it was a busy time of day so we couldn't find seats for us all together, which left me stuck with Tomo."
+    if checkAffection("TM", ">=", 8):
+        "Which wasn't a bad thing mind you. Gave us an opportunity to chat and catch up on stuff that she might not have wanted to tell Mom and Dad."
+    show Tomoko neutral with dissolve
+    MC "I hope everything goes well tonight."
+    show Tomoko distracted
+    Tomoko "I don't see why it wouldn't. Most parents would be super-stoked their son is dating someone who's mega-rich."
+    MC "True. I suppose even if they don't hit it off the greatest, there's always that."
+    Tomoko "I don't know why you'd be worried. Alice is pretty good at making conversation. Sure, she can come off as kind of snooty sometimes, but she knows how to be charming."
+    MC "I guess you're right. There isn't really anything to worry about. {w}I guess I just don't know how well they're prepared for..."
+    "Words began to elude me as I struggled to recall my past conversations on the matter at hand."
+    MC "Say, Tomo, how much have you told Mom and Dad about Alice's factor?"
+    Tomoko "I don't know."
+    MC "What do you mean? \"I don't know?\" {w}You're not one to hold back on that kind of stuff."
+    show Tomoko neutral
+    Tomoko "I don't know— I don't keep track of everything we talk about. I have a hard enough time remembering what I did two weeks ago. You expect me to remember something like this?"
+    MC "Come on, you've got to remember something." 
+    Tomoko "I doubt it ever came up. Whenever I'd mention her it was just about the stuff she was helping me with. For not having met her, Mom really seems to like her."
+    MC "Ohhh..."
+    show Tomoko surprised
+    Tomoko "You mean you haven't told them?"
+    show Tomoko neutral
+    MC "You know Mom, she's too polite to straight up ask about something like that. Dad's only ever asked about what I'm doing with her if I mention our plans. Both of them just seemed content with the fact I even had a girlfriend."
+    Tomoko "And a real one at that."
+    MC "Yeah, and you still owe me from that bet that she wasn't real."
+    show Tomoko annoyed
+    Tomoko "I told you I'll get you the money... eventually." 
+    show Tomoko distracted
+    extend " Besides, it's not like you don't know where I live."
+    MC "I can get you a job working for Alice washing dishes. I'm sure Sakura and Chibuki would welcome some assistance."
+    Tomoko "Let me think about that... {w}no."
+    MC "If you don't pay up soon, you won't have a choice."
+    show Tomoko annoyed
+    Tomoko "Fine. Whatever." 
+    show Tomoko neutral
+    extend " I can't believe you remembered that stupid bet, but never thought to mention to Mom or Dad about Alice's growth factor."
+    MC "Yup... This'll be a doozy."
+    MCT "If they thought Honoka was big... Well, they ain't seen nothing yet."
+    scene black with fade
+    pause .5
+    scene Cafe with fade
+    play music Peaceful
+    Dad "I'm excited about dinner tonight. From what you said this is the best place in town for a steak."
+    show Tomoko neutral with dissolve
+    Tomoko "I mean, I thought it was pretty good when Alice took me here last."
+    MCT "And just when the hell was that? How did I not know about this?"
+    Mom "It was certainly nice of Alice to offer to pay, but I don't want to impose..."
+    MC "Don't even think about offering to pay, Mom. If Alice says she's got it covered, it's already a done deal."
+    MCT "Honestly I wouldn't be surprised if she already had an ongoing tab here."
+    Mom "Okay, but just this once."
+    "Alice had originally offered to foot the bill for a much more extravagant affair at Usuda-san's restaurant, but I thought that would be a bit overwhelming for Mom and Dad, making them even more reluctant to accept her offer."
+    MCT "Looks like I made the right call."
+    Dad "Do we have a reservation?"
+    MC "Alice should already have a table. Let's go in and find her."
+    show Tomoko at altMove(0.5, 0.25)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "It didn't take too long to spot her, the lone woman in the establishment occupying the majority of a family sized booth by herself was having the table cleared by a small group of bussers."
+    "No doubt a small \"snack\" to tide her over in light of our momentary delay."
+    Mom "Oh my goodness!"
+    Dad "Honey, try not to stare."
+    Mom "Oh you're right, but that poor young woman... is she one of the \"extreme\" cases of a growth factor?" 
+    MC "Umm..."
+    Tomoko "Mom, Dad... {w}That's Alice."
+    "Mom & Dad" "!"
+    "I wasn't quite sure how to describe watching the precise second where my parent's minds broke as the color drained from their faces and their expression went blank,{w} but the word \"dumbstruck\" came to mind."
+    Mom "Oh {w}my {w}God."
+    Dad "Whoa..."
+    MC "..."
+    Tomoko "Mom, Dad— come on. Don't be like that. {w}It's not her fault. Besides, she's really nice. Give her a chance."
+    Mom "You're right Tomoko, I'm sorry. It's just... It's just a lot to take in."
+    MCT "Not sure that's the best choice of words, but she isn't wrong..."
+    Dad "Sorry, Kei. I mean, you're mother and I had our suspicions about your preferences in dates, but we didn't think it extended {i}this{/i} far..."
+    "I probably should have been embarrassed that my parents had been clued into this particular revelation, but at this point there was nothing left to do but to own up to it. I couldn't deny it, nor did I want to." 
+    show WG happy
+    MC "Alice, we're here. Sorry we were running late."
+    WG "Oh that's not a problem. I was able to keep myself occupied."
+    "Given how entrenched, for lack of a better term, Alice was in her seated position in the booth, it was clear that we would be forgoing the standard standing meet and greet formalities."
+    "Tomo and I each took our seats next to Alice, while Mom and Dad sat on the opposite side of the table next to each other."
+    MCT "Ahh, best seat in the house."
+    "After all that cleaning back at Tomo's room I was ready to take a nap on my favorite body pillow."
+    "But that would have to wait, unfortunately."
+    show WG neutral
+    MC "Mom, Dad, this is Alice."
+    Mom "Yes... It's so nice to finally put a face to the name... or the um, voice it would seem."
+    Dad "Yes, um... Nice to meet you... Alice."
+    show WG worried
+    "Alice could take most anything in stride, but she wasn't oblivious to the temperature of the room and the reason for their distracted introductions."
+    show WG happy
+    "But she hadn't come this far to let distractions get in her way." 
+    WG "I'm so glad to finally get to meet you. Keisuke has had the opportunities to meet both of my parents, I wasn't sure when I would get the chance to meet his."
+    Dad "Oh yeah, Keisuke mentioned getting to meet Nikumaru-san at the ball. Hard to believe our son is rubbing elbows with members of Japan's high society."
+    MC "The ball was a fun occasion, and an interesting experience to be sure. I hadn't ever been to something that fancy."
+    MC "Funny you mention Alice's dad, we'll be seeing him pretty soon at an upcoming concert here."
+    Mom "Oh? He's coming out to this island again?"
+    WG "My mother got us all tickets to see Ichia in concert. He has a show booked at the local theater coming up soon."
+    Dad "Ichia? I'm not familiar."
+    Mom "He's a famous classical musician."
+    Dad "Ah, that would explain it then." 
+    Mom "Well, that sounds quite exclusive. I don't know too much about the man, but I hear it's difficult to get into to see one of his shows."
+    WG "It certainly can be, but I would highly recommend the experience if you have an opportunity the next time he is in Tokyo."
+    Mom "That would certainly be lovely if I could ever manage to get some tickets."
+    show WG haughty
+    WG "Well, if you're interested, I'll see what I can do."
+    show WG neutral
+    Dad "So, what's good here? I can't seem to make up my mind."
+    WG "Well, my personal recommendation would be the filet mignon. However, if you want something outside of the usual fair with a bit more texture, the flat iron is a good option." 
+    WG "If you don't feel like beef, the blue-fin tuna and swordfish steaks are great cuts too."  
+    WG "However, if you want the real steakhouse experience, I recommend going straight to the rib cap steak. {w}Don't be afraid to order the wagyu either."
+    show WG doubt
+    Dad "{i}Oof{/i}, not with that price I'm afraid."
+    MC "Dad, I told you, Alice said she's covering the tab tonight. You can get whatever you want."
+    Dad "I know, I know... but this is quite a lot."
+    show WG haughty
+    WG "I'm afraid I must insist. I assure you I understand how much a meal at an establishment like this runs, and I simply won't have anyone ordering anything less than {i}exactly{/i} what they want."
+    Tomoko "Yeah, Dad, it would be rude to turn down her hospitality."
+    Dad "Alright, you don't have to twist my wrist. The wagyu rib cap for me then... {w}and a bottle of sake!"
+    show WG sly
+    WG "That's what I like to hear."
+    show WG neutral-2
+    Mom "I think I'll go for the filet."
+    Tomoko "I'll just get the beef ramen bowl."
+    MC "I'll do the swordfish. I haven't had it before and I'm curious to try it."
+    show WG happy
+    WG "Excellent. Hopefully the waiter comes by soon."
+    Mom "Which one are you getting, Alice?"
+    show WG surprised-2
+    WG "Which one?"
+    Mom "Of your recommendations? Which one did you decide on?"
+    show WG sad
+    show Tomoko surprised
+    WG "Umm, well... {w}all of them..."
+    "You could hear a pin drop as the atmosphere of the table was suddenly sucked out of the room. An uncomfortable stillness now filled the air, punctuated only by the occasional clink of glasses from other nearby tables." 
+    "Mom for her part was frozen in her seat, overwhelmed by the realization of the social landmine she had just stepped on."
+    "It was only a few seconds, but it felt like forever— until I realized it didn't need to."
+    show Tomoko happy
+    show WG neutral
+    MC "Well, if we're all going to order exactly what we want, why don't we order a round of appetizers too? {w}I want the Takoyaki."
+    Tomoko "I wanna get the hanami dango."
+    Dad "Oh yeah, the tempura shrimp sounds good too."
+    Mom "I think I'll have a glass of wine..."
+    Waiter "Are we ready to order?"
+    show WG happy
+    WG "I think so."
+    scene black with fade
+    pause .5
+
+    play music Sunset
+    scene Cafe
+    show Tomoko happy at Position(xcenter=0.25, yalign=1.0)
+    show WG happy at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    "With some good food, and more than a few drinks, Mom and Dad were well past their bumpy introduction and initial impression of Alice."
+    show WG happy
+    Mom "Oh, I knew I shouldn't have added that character! I had drafted a resolution to her subplot, but I tossed it when I realized it would take half a chapter to resolve and did nothing to move the main plot forward."
+    show WG pondering
+    WG "I mean, it's not that I don't like the character or where her subplot was going, it just felt like you forgot about her."
+    Mom "Oh trust me, I remembered. I was hoping the reader would forget since apparently my editor did."
+    show WG happy-2
+    Mom "She's quite the sharp one, Keisuke."
+    MC "Don't I know it."
+    Dad "Yeah, what was it you were saying before about retail displays? I feel like I should have been taking notes."
+    show WG neutral-2
+    WG "I'll have Keisuke send you the article I was reading in a business journal. The article itself is more broadly about store layout design and how more intuitive layouts, like say a grid, don't necessarily maximize foot traffic in the store."
+    Dad "That'd be great! If I can bump up the store sales to our quota levels, I'll be getting a nice bonus this year."
+    WG "It certainly couldn't hurt."
+    show Tomoko sad
+    Tomoko "Ughhh... I think I ate too much."
+    show Tomoko happy
+    show WG happy
+    Tomoko "But it was {i}sooo{/i} good!"
+    Mom "Yes, thank you for a lovely evening, Alice. The food, not to mention the wine, was exquisite."
+    Dad "It was certainly the best meal I've ever had in... well— ever!"
+    Mom "I'll admit, I didn't know what to expect when I learned our Keisuke was dating a famous heiress, but I was delighted to see you are every bit as quick-witted and charming as Keisuke's been telling us."
+    show WG happy-2
+    WG "Oh, is that so?" 
+    show WG sly
+    WG "I suppose he's not without his own charms too."
+    show WG happy
+    "Alice reached out her hand to take mine, her soft skin and well padded palm felt like a silk cushion."
+    WG "He's been such a big help to me throughout my time at the Academy. It hasn't been the easiest of times, but whenever I've found myself faltering, Keisuke's been my pillar of support I can always lean on."
+    show Tomoko neutral
+    show WG doubt
+    Tomoko "{size=-6}I don't know about that Alice, he doesn't look that strong.{/size}"
+    MC "{size=-6}Oh, would you shut up?{/size}"
+    Tomoko "{size=-6}What? I'm just looking out for you, that sounds dangerous.{/size}"
+    WG "{i}Ahem{/i}..."
+    show WG neutral
+    WG "As I was saying..."
+    show WG happy
+    WG "I feel really grateful to have him. I invited you here tonight so I could express my appreciation for raising such a well mannered, patient, and considerate gentleman that I'm proud to have as my boyfriend."
+    Dad "I don't think any words could make a parent feel more proud."
+    MC "I know, right? I mean, 1 out of 2 isn't too bad."
+    show Tomoko distracted
+    Tomoko "{i}Har har{/i}, very funny."
+    Mom "Oh sush, Keisuke. And just when she was boasting about your manners..."
+    show WG sly
+    WG "He's still a work in progress."
+    show WG happy
+    Mom "Well, he takes after his father after all."
+    "I wasn't really sure what to expect when my parents got to meet Alice, but judging by how well they hit it off by the end of the evening, she was every bit the woman they had hoped for for me— and so much more."
+    jump daymenu
+
+label WG095:
+    $setProgress("WG", "WG096")
+    scene Dorm WG with fade
+    play music Stardust
+    $setTime(TimeEnum.EVE)
+    $setWGOutfit(OutfitEnum.DRESS)
+    MC "Alright, just a few more adjustments... Alright looks like we got it tied up back here."
+    show WG happy with dissolve
+    WG "How do I look?"
+    MC "Stunning, as always."
+    WG "You always say that when I show off a new outfit."
+    MC "Should I say something different?"
+    show WG sly
+    WG "No."
+    show WG neutral at altMove(0.5, 0.2)
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Chibuki "Looks like we got you sorted. The fit on this one seems pretty good, didn't skimp on the amount of fabric needed for the job it would seem."
+    Chibuki "Still though, just because it isn't too tight doesn't mean it's loose. I wouldn't recommend running in it."
+    show WG doubt
+    WG "I wasn't planning on it."
+    Chibuki "I wasn't betting on it myself either."
+    show WG happy
+    WG "It's perfect for the occasion. Kokutan executed my design specifications exactly."
+    Chibuki "Speaking of the occasion, you said this is for a concert? I gotta admit, I've never been to any concert where people dressed like this."
+    MC "It's a classical music concert."
+    show WG haughty
+    WG "Baroque actually,"  
+    show WG pondering
+    " though I don't think he necessarily confines himself to a particular time period."
+    show WG neutral
+    Chibuki "Ah, yes. I should have figured it was one of those high society affairs. It's not really my style." 
+    show WG sly
+    WG "You and I certainly have different concepts of what constitutes \"style\"."
+    show WG doubt
+    Chibuki "True, I suppose I wouldn't have purposefully cut holes in these pantihose if my thighs kept accomplishing that task on their own."
+    show WG sly
+    WG "That's probably one of your least anomalous fashion choices to be honest."
+    Chibuki "Yeah, yeah. Well get going already. I'm looking forward to having the night off."
+    show WG neutral-2
+    WG "Catching up on your painting?"
+    Chibuki "Yes, I'm still trying to build out my portfolio. Might come in handy for some of these art schools I'm on the waiting list for."
+    WG "Well good luck. We'll be off."
+    scene School Front
+    show WG neutral
+    with fade
+    "We waited outside for the chauffeur to come pick us up."
+    show WG happy
+    "Alice for her part was practically brimming with anticipation."
+    "Truth be told, I wasn't particularly looking forward to this event." 
+    "Classical music wasn't exactly my thing, but I didn't mind it. {w}In fact, due to Alice I had begun to develop an appreciation for it, though still not nearly to the extent of hers."
+    "No, the real reason I wasn't looking forward to this was due to Ichia himself." 
+    "Every time the subject of him or his music would be broached, Alice was quick to sing his praises— an unusual exception to her otherwise measured, if not reluctant, attitude towards doling out praise."
+    "That in itself wouldn't be worth raising an eyebrow, but I took particular exception considering the man was the full package: tall, handsome, artistically talented, successful, ambitious... I could go on." 
+    show WG happy-2
+    "By now I knew Alice's type— and he checked all the boxes."
+    "Now, I had no reason to doubt Alice's affection towards me, especially after hearing her boast to my parents. {w}But still..." 
+    "In the back of my mind I was keenly aware that Alice wasn't one to settle when it came to the things she really wanted, and as rich as she was, she no doubt had her share of willing suitors, even if they didn't share my preferences."
+    "Whether my anxieties about her ditching me for someone better had any basis in reality or not, even if this guy was better than me in every conceivable way, I knew I could at least rest easy knowing one thing—" 
+    "In Alice's eyes, the prospect of having Okisho as a sister-in-law was probably the {i}least{/i} attractive attribute any man could possibly possess."
+    MCT "Hehe, advantage: Keisuke."
+    show WG surprised-2
+    WG "Looks like he's about to pull up."
+    scene black with fade 
+    pause .5
+
+    scene Theater Concert
+    show WG neutral
+    with fade
+    play music WG
+    "We arrived at the concert hall. Judging by the fancy dresses and suits, it looked to be a who's who of the island. I wondered if Usada-san would be in attendance, but I didn't see her."
+    show WG neutral at altMove(0.5, 0.2)
+    show Vivian neutral at Position(xcenter=0.6, yalign=1.0)
+    show Daitaro neutral at Position(xcenter=0.85, yalign=1.0) behind Vivian
+    with dissolve
+    "Speaking of the who's who of the occasion..."
+    show WG surprised-2
+    WG "Father! Mother!"
+    show WG neutral
+    "Alice waved to them across the lobby, getting their attention."
+    "Hearing her voice, Vivian and Daitaro drew their attention over to us. Both seemed to raise an eyebrow at the sight of their daughter's current state."
+    "I had no reason to think Alice was not forthcoming about her more recent changes, but understandably, seeing them in person was another thing altogether."
+    "In contrast to my parents, whatever shock the two might have experienced, they seemed to recover quickly."
+    Vivian "Darling, so lovely to see you again."
+    Daitaro "My little princess, it's been too long."
+    show WG sly
+    WG "Oh, Father, not now..."
+    show WG happy
+    "Neither individually being adequate to the task, both her mom and dad wrapped themselves around Alice as best they could for a hug."
+    "Admittedly, both of them initially struck me as rather aloof, but it was pretty evident to me now that they really cared for their daughter, and certainly understanding of what she had been going through this past year."
+    Vivian "And I see you've brought this strapping young man with you this evening. {w}Nice to see you again, Hotsure-san."
+    MC "Nice to see you as well, Mrs. Nikumaru."
+    Daitaro "Good to see you, Hotsure-san."
+    "Alice's dad extended his hand, giving me a near bone crushing handshake in the process."
+    MC "Glad you could both make it out to the island again."
+    Daitaro "Business will always keep you busy. It's about making time for what you find important."
+    MC "Good advice." 
+    Vivian "Darling, that dress of yours is magnificent. Was this one of your designs?"
+    show WG haughty
+    WG "It certainly is. My seamstress, Kokutan, was able to follow my specifications exactly in order to bring my vision to life."
+    show WG happy
+    Vivian "Marvelous. Simply marvelous. I knew it was a wise decision to have you shadow our seamstresses at such a young age. You always did have an eye for quality and a knack for design."
+    Vivian "Now look at you, a world class fashion designer."
+    show WG sly
+    WG "Really now, I don't know if I would go that far, Mother."
+    Vivian "Oh hush, I simply must show your dress to Usuda-san. The poor dear could use some style assistance, and more than a few pointers about flattering her figure."
+    hide WG 
+    hide Vivian
+    with dissolve
+    show Daitaro neutral at altMove(0.5, 0.5)
+    "Alice and her mom faded into the crowd of socialites, which left me alone with the big man himself."
+    Daitaro "Horsure-san, indulge me, if you will. From your observation, is Alice still growing?"
+    MC "Oh, umm, well... I think she's been leveling off? I mean, that's what I've noticed anyway. From what I've seen at school and from what the faculty have said, most students have stopped by now."
+    "To be honest, I wasn't entirely sure myself. At this point even a couple of dozen extra kilos wouldn't have been a perceptible difference on her enormous frame."
+    "It might not have been the most accurate answer, but I thought it better to be on the more assuring side rather than to speculate the worse to a doting father."
+    Daitaro "I see. Let's hope so. At least she still seems happy and healthy. From what I understand you've been helping her with her swimming training?"
+    MC "That's probably a more generous description than what's warranted. I really just function as her spotter so she doesn't go adrift in the open ocean."
+    Daitaro "That's reassuring. It's good to see she can still enjoy many of her same hobbies she had growing up. {w}I was very concerned with how restrictive the consequences of her unique condition would prove."
+    Daitaro "But despite the inevitable limitations it might impose, I am relieved to see her happy. {w}As I understand, you are in no small part to thank for that."
+    MC "I do what I can sir."
+    Daitaro "What one can do is of little consequence if one is not capable. {w}From what I have learned from Alice, you've certainly managed to navigate her and yourself through some trying circumstances."
+    Daitaro "For that, you have my eternal gratitude."
+    MC "Thanks... {w}I guess I hadn't thought about it that much, it's just what I knew I needed to do. She means the word to me, and I'd do anything for her." 
+    "Alice's dad placed a firm, heavy hand on my shoulder."
+    Daitaro "You're a good man, Hotsure-san. {w}Sometimes, that's all that's needed."
+    "In light of the setting and the venue headliner, his words were more assuring than even he had probably intended."
+    MC "Thank you, sir."
+    MC "I suppose we should find Alice and Mrs. Nikumaru, since the show is about to start. From what Alice tells me about the guy, we're in for a treat."
+    Daitaro "It would seem so. In all honesty this isn't my preferred type of venue. I may be a man of means now but I certainly didn't grow up accustomed to these kinds of surroundings."
+    Daitaro "But it makes my little girl smile, and that's enough for me."
+    MC "I think I know what you mean."
+    scene black with fade
+    pause .5
+
+    scene Theater Concert
+    show WG neutral
+    with fade
+    "We began to take our seats as the show was about to start. From the looks of it, Alice's mom secured some great seats with a clear view of the stage. I'd never sat in the balcony before."
+    "Things were shaping up to be a nice relaxing evening."
+    show WG doubt at altMove(0.5, 0.2)
+    show Okisho neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    MCT "Perhaps I spoke too soon."
+    WG "Okisho... I guess I shouldn't be surprised to find you in attendance, but what exactly are you doing {i}here{/i}?"
+    Okisho "This is my seat. My brother said he got me one of the best seats in the house... {w}Ughhh... which would naturally mean you'd be about the only person that could afford one next to it."
+    show Vivian neutral at Position(xcenter=0.6, yalign=1.0) with dissolve
+    Vivian "Darling, is this one of your friends from school?"
+    WG "Well, no, not real-"
+    Vivian "Marvelous, what is your name, young lady?"
+    Okisho "Okisho. My brother is Ichia, he got me this seat."
+    Vivian "Oh, my! I heard Ichia comes from a line of talented musicians, I'm sure you are no exception."
+    Okisho "True, I can't say I'm on the same level that big-bro is, but I like to think I can hold my own."
+    Vivian "Lovely. Being quite the music lover herself, I'm sure you and Alice have a lot of mutual interests. I'm also relieved to see she has someone else she can relate to with her same condition."
+    Okisho "Umm, yeah... sure."
+    show WG neutral
+    Vivian "I hope it's not a nuisance, as I'm sure you hear it all the time, but we are such big fans of your brother." 
+    Vivian "Believe me, I've seen lots of talent in my life as a musical performer and most professionals I've worked with don't even possess a fraction of his talent."
+    Okisho "Heh, nah, it's okay. I don't really get tired of hearing it. Big Bro is the best. If anything he's underrated. I've never seen anyone pick up a new instrument faster than him, and he's a master of improvisation."
+    WG "I've heard that he largely improvises all of his performances, so that each one is unique."
+    Okisho "Ha! That's the story I suppose. It is true that he intends each performance to be unique. But the truth is closer to the fact that he gets bored playing the same thing."
+    Okisho "That's part of why he likes baroque music so much. The music of the period was written rather plain with the intent for the musician to add their own flourishes and expression as they saw fit."
+    Okisho "That's why his concerts are so interesting too. He comes up with the set list on the spot. It's whatever he feels like playing, but he's not going to feel like playing something for an audience unless he's already honed it to a T."
+    Vivian "Sounds like a true professional, though I could only assume so given the flawless nature of his performances."
+    show WG neutral at altMove(0.5, 0.5) with None
+    hide Vivian
+    hide Okisho
+    with dissolve
+    MCT "Ugh, just when I was about to forget about this whole deal, I end up sitting smack dab in the middle of a fanclub meeting for this guy."
+    scene Theater Concert Spotlight
+    show WG neutral
+    with dissolve
+    stop music fadeout 1.5
+    WG "Oh! Looks like it's about to start."
+    "The lights dimmed and the spotlight hit the stage. Applause from the crowd swelled as the shadowy figure emerged from behind the stage curtain."
+    "A tall wiry man wearing a suit came into the light, sporting a pair of visor sunglasses as he gently swept a long cane across the stage in front of him."
+    MCT "Wait a second... {w}He's blind!?"
+    "Needless to say I felt like a pretty big douche for harboring so much petty jealousy against a blind guy."
+    MCT "Well, if nothing else, I guess that's one thing I can do better than him."
+    "I thought that, only to find myself once again having to brush away the bangs in front of my eyes."
+    MCT "Looks like I'm not even winning that contest by much either."
+    "Seating himself, he picked up the cello that was waiting for him on stage. And taking one deep breath, he kicked off one of the best musical performances I had ever seen in my life."
+    play music SoloCelloPassion
+    pause 5
+    "He was one of those musicians that played with his whole body, the ferocity and passion in his movements was evident, and all of it came out in his sound."
+    show WG surprised-2
+    "Alice for her part seemed absolutely transfixed by his performance."
+    "And now I could understand why. It was like viewing a classical painting, an exquisite work of art."
+    "I felt rather foolish for having thought she came here hoping to ogle at some eye candy who made me look like a bum by comparison. I should have known better."
+    "I decided it was because I was so protective of her that I wouldn't allow anything to come between us, so I had to be on guard."
+    "Which was certainly a stretch, but it was a little easier story for me to swallow than having to admit I had been a total idiot this whole time."
+    stop music fadeout 2
+    scene black with fade 
+    pause .5
+
+    scene Theater Concert Spotlight with fade
+    pause 2
+    play music Bourree
+    "The concert had been going for hours and was starting to wind down. After taking the audience on a musical {i}tour de force{i}, we were able to start to relax with a soothing piano piece."
+    "It was a testament to his abilities to craft a performance, we all needed a break after the emotional whirlwind his music provoked."
+    "He certainly proved his reputation as one of the best classical guitarists on the planet, and I didn't even know it was possible to play the lute that fast."
+    "The guy was practically a jukebox cyborg. He would pick up one new instrument after the other, playing in a completely different tempo, key, and tuning from the previous piece he just did."
+    show WG happy with dissolve
+    "By this point I was right there riding the Ichia hype train along with Alice." 
+    stop music fadeout 2.0
+    "At this point in the show, a different, slightly smaller piano-like instrument was rolled out on the stage for him."
+    MCT "Looks like we're at the finale."
+    show WG surprised
+    WG "{size=-6}Oh! He's going to do it! This is my favorite part!{/size}"
+    if isEventCleared("WG005M"):
+        MCT "Heh. Of course it is."
+    else:
+        MCT "Oh? I'll have to take note of this then."
+        MC "{size=-6}What is it?{/size}"
+        show WG happy
+        WG "{size=-6}It's a harpsichord. {w}Though it's antiquated in light of modern pianos, the romance of its tonality is simply unmatched.{/size}"
+    play music BaroqueLetter
+    "Just a few notes in, it was easy to understand why it was one of Alice's favorite instruments. It had an old world and otherworldly tone at the same time." 
+    "Listening to it, I think I finally understood what Alice had been talking about all this time with her love of classical music. In the hands of a master like Ichia, the music didn't sound old, but rather timeless, transcendent even."
+    show WG happy-2
+    MCT "No wonder she has such passion for this."
+    stop music fadeout 2.0
+    pause 1.5
+
+    scene Theater Concert
+    show WG surprised at Position(xcenter=0.2, yalign=1.0)
+    show Okisho neutral at Position(xcenter=0.8, yalign=1.0)
+    show Vivian neutral at Position(xcenter=0.6, yalign=1.0)
+    with fade
+    "Crowd" "{i}*APPLAUSE!*{/i}"
+    play music Peaceful
+    "Ichia got a standing ovation for what had to have been a solid two minutes."
+    MC "That was amazing!"
+    WG "It was magnificent! Utterly brilliant!"
+    Vivian "Absolutely marvelous!"
+    show WG sly
+    Okisho "Heh, you're damn right. Big Bro is the best at what he does."
+    show WG neutral-2
+    Vivian "It certainly was the performance of a lifetime. Your brother is a national treasure."
+    show WG surprised
+    Okisho "I wouldn't be one to disagree. Would you like to meet him?"
+    "Alice & Vivian" "Absolutely!"
+    Okisho "I figured you would. Give it a bit for the crowd to filter out and I'll wave you backstage."
+    scene black with fade
+    pause .5
+
+    scene Theater Concert
+    show WG surprised at Position(xcenter=0.2, yalign=1.0)
+    show Okisho neutral at Position(xcenter=0.8, yalign=1.0)
+    show Vivian neutral at Position(xcenter=0.6, yalign=1.0)
+    with fade
+    Okisho "Hey, you can come on back."
+    Okisho "Ichiro, you have some fans that would like to meet you."
+    "Here he was, the man of the hour himself. Larger than life on stage, and just as much so in person— the guy was chin to eye with Alice's dad, who was an imposing figure in his own right."
+    "In contrast to his nearly spherical sister, the man was practically a pole. Up close you could see his long spindly fingers, which no doubt helped him reach any note he wanted, be that on the keyboard or fretboard."
+    "Ichia" "Is this your friend from school?"
+    Okisho "Well, no, not real-"
+    show WG surprised-2
+    WG "Such a pleasure to meet you!"
+    "Ichia" "Oh, the pleasure is mine." 
+    show WG doubt
+    extend " Okisho tells me you're my biggest fan."
+    show WG angry
+    Okisho "{size=-6}Hehe{/size}..."
+    WG "Yes... how {i}considerate{/i} of her to mention that."
+    show WG neutral
+    Vivian "We love your work, mister... Ichia? Your performance was simply superlative. I have seen you perform on a couple of occasions before and even this exceeded my expectations."
+    "Ichia" "Ah, you must be the mother of her friend. Thank you for your kind words, though I felt I had to pull out the stops since I knew my little sister would be in the audience. I knew I'd never live it down if she ever caught me making a mistake."
+    Okisho "I haven't yet. But there's always next time!"
+    WG "Ichia, my mother and I wanted to ask you if you ever have plans to release an album. I know nothing quite compares to your live performances, but it would be so lovely to be able to listen to your music anywhere."
+    Vivian "I can only imagine the number of accolades you'd receive. You would handily win the best classical instrumental solo performance category, of that I have no doubt."
+    "Ichia" "Ah, yes. I do hope to one day make an album, I just haven't been able to negotiate contract terms with a record label that I am agreeable to. I may be blind, but I am not ignorant of the value of my talents."
+    show WG haughty
+    WG "I see. It sounds like you're just waiting for the right offer."
+    show WG doubt
+    Okisho "Hey, hey. I know that look. Hands off the merchandise. First things first, I already got Big Bro here tapped to produce my first album."
+    show WG sly
+    "Ichia" "I told you, get yourself a band and me a plane ticket and I'll do it."
+    Okisho "Yeah, yeah. I'm working on it."
+    hide Okisho
+    show Daitaro neutral at Position(xcenter=0.85, yalign=1.0) behind Vivian
+    with dissolve
+    show WG neutral-2
+    Daitaro "Mister Ichia, would you and your sister like to join us for an after-party at the hotel?"
+    "Ichia" "Thank you for your offer sir, but it's been quite some time since me and my little sis were together. I would like to catch up with her by ourselves while I'm still in town, if that is alright."
+    Daitaro "Certainly. Enjoy your evening together. Hopefully it will not be the last time you get to meet us all."
+    Vivian "So lovely to have met you and your sister. I look forward to attending another one of your performances."
+    WG "Thank you for introducing us, Okisho. I never thought I'd get to meet my favorite musician on this tiny island."
+    show WG happy-2
+    WG "And I'm looking forward to your planned album, when that day comes."
+    "Ichia" "Hehe, I do as well. Hopefully sooner rather than later. Nice to meet you all."
+    scene black with fade
+    pause .5
+
+    scene Hotel Restaurant with fade
+    play music WGAlt
+    "Back at the hotel, champagne bottles were popped, and the drinks were flowing— not to mention the gossip."
+    show Vivian neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG sly at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    Vivian "You mean, {i}she{/i} was the Mizawa-san you told me about?"
+    show WG doubt
+    WG "Yes, the very same."
+    Vivian "I can't believe I didn't pick up on that..."
+    hide WG 
+    hide Vivian
+    show Daitaro neutral
+    with dissolve
+    Daitaro "Mr. Hotsure-san, care to join me in a drink of scotch?"
+    MC "Uh, sure. I'll give it a try. Dad loves this stuff. I've always been curious to try."
+    Daitaro "Cheers."
+    MCT "!"
+    MC "{i}*Cough* *Cough* {w} {size=-6}Holy shit{/size}{/i}..."
+    Daitaro "You okay there, Hotsure-san?"
+    "Daitaro raised a concerned eyebrow at me. Whether it was a look of genuine concern or personal amusement— I couldn't tell."
+    Daitaro "What's the verdict?"
+    MCT "It tastes like dirt and fire at the same time and I think I lost my voice."
+    MC "Uhh, I think I'll just stick with the sherry."
+    Daitaro "Haha. More for me then."
+    "Daitaro and I walked back to the table from the bar, catching the tail end of the previous conversation."
+    show WG neutral at Position(xcenter=0.8, yalign=1.0) behind Daitaro
+    show Vivian neutral at Position(xcenter=0.2, yalign=1.0) behind Daitaro
+    with dissolve
+    Vivian "Well, I suppose it was for the best I didn't know."
+    show WG doubt
+    Vivian "She didn't seem as grating and uncouth as you described."
+    WG "I can assure that's only because you saw her at a venue where you're not allowed to talk or eat during the performance."
+    MC "Oh, don't let her fool you Mrs. Nikumaru. I think she's starting to grow on Alice."
+    WG "I can't imagine her growing on anyone, but she's certainly been growing out of her clothes. {w}She walks around dressed like an overstuffed pig." 
+    show WG stern
+    WG "I even offered to give her a free refit for her uniform just so {i}I{/i} wouldn't have to look at the dilapidated state of her current one."
+    show WG neutral
+    WG "At least she had the sense to order a dress from me for the occasion."
+    Vivian "Don't be so quick to let her get under your skin, Darling. Besides, it seems like you've been able to extract some good out of her. Sounds like the production for your concert is going well."
+    show WG pondering
+    WG "I suppose it has been rewarding to harvest her talents,"
+    show WG doubt
+    extend " even if it feels like herding cats most days."
+    show WG haughty
+    Vivian "Sounds like you have the makings of a great Broadway producer."
+    show WG sly
+    Daitaro "I wonder where she would have gotten that from?"
+    "That's right, there was still one more concert left for the year. Ichia would be a hard act to follow,"
+    show WG happy-2 
+    extend " but I had my eyes set on an even bigger star."
+    jump daymenu
+
+label WG096:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
