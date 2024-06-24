@@ -143,6 +143,7 @@ define Judge = Character('Judge', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Lifeguard = Character('Lifeguard', color="#C0C0C0")
 define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define Local = Character('Local', color="#C0C0C0")
 define Magician = Character('Magician', color="#C0C0C0")
 define Manager = Character('Manager', color="#C0C0C0")
 define Masseuse1 = Character('Masseuse 1', color="#C0C0C0")
@@ -1746,7 +1747,9 @@ init 2 python:
     eventlibrary['WG092'] = {"name": "Dinner and a Show", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "town",          "priority": PrioEnum.ALL,     "next": "WG093", "obsflags": [],                                     "conditions": []}
     #WG size6
     eventlibrary['WG093'] = {"name": "Larger Than Life", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "dormWG",          "priority": PrioEnum.NONE,     "next": "WG094", "obsflags": [],                                     "conditions": []}
-    eventlibrary['WG094'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG094'] = {"name": "A Big Impression", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "viewpoint",          "priority": PrioEnum.NONE,     "next": "WG095", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG095'] = {"name": "The Better Man", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "dormWG",          "priority": PrioEnum.NONE,     "next": "WG096", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG096'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['WG009'] = {"name": "Between a Soft and a Hard Place", "girls": ["WG", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WG008"]]}
