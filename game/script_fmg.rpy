@@ -20318,9 +20318,10 @@ label FMG092:
     show FMG neutral
     FMG "You don't want me to take all your measurements first?"
     Natsuko "No."
+    show cg FMG092 with dissolve
     Natsuko "Flex."
-    show FMG flex
     FMG "Big enough for you?"
+    hide cg with dissolve
     Natsuko "Hm... I thought I would've had more time."
     show FMG neutral
     FMG "What are you on about, Nat?"
