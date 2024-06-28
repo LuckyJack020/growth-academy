@@ -31380,10 +31380,10 @@ label WG094:
     "Unbeknownst to me, Daichi had crawled out from his corner of the dorm to see what was going on."
     Mom "Oh, hello there."
     MCT "Oh yeah, I forgot he might be around."
-    show RM distrustful
+    show RM distrustful at slowease(0.75, offscreenright, 3)    
     Mom "You must be-"
-    hide RM with dissolve
     Mom "Hm?"
+    hide RM
     if checkAffection("RM", ">=", 8):
         MC "Uh, don't mind him, he's just a bit shy..."
         MCT "Yeah... we'll call it that."
@@ -31438,7 +31438,7 @@ label WG094:
     MC "Alright, let's get going. That took {i}way{/i} too long. I don't want to be late meeting Alice at the restaurant for dinner."
     show Tomoko neutral with dissolve
     Tomoko "Oh, it didn't take that long."
-    MC "It definitely did. And I don't want to hear anything about my room being messy after having to deep-clean that hazard zone back there."
+    MC "It definitely did. And I don't want to hear anything about my room being messy after having to deep-clean that hazmat zone back there."
     Dad "I'll give you that one, son."
     Mom "Yuki-chan seemed like a nice girl. A bit of a chatterbox... especially considering her speech difficulties. {w}I must admit, I'm still pretty shocked to have seen the extent of her predicament."
     Tomoko "Her case is on the extreme end. I was told normally it doesn't get that bad."
@@ -31590,8 +31590,8 @@ label WG094:
     MCT "Looks like I made the right call."
     Dad "Do we have a reservation?"
     MC "Alice should already have a table. Let's go in and find her."
-    show Tomoko at altMove(0.5, 0.25)
-    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Tomoko at altMove(0.15, 0.175)
+    show WG neutral at Position(xcenter=0.65, yalign=1.0) with dissolve
     "It didn't take too long to spot her, the lone woman in the establishment occupying the majority of a family sized booth by herself was having the table cleared by a small group of bussers."
     "No doubt a small \"snack\" to tide her over in light of our momentary delay."
     Mom "Oh my goodness!"
@@ -31684,8 +31684,8 @@ label WG094:
 
     play music Sunset
     scene Cafe
-    show Tomoko happy at Position(xcenter=0.25, yalign=1.0)
-    show WG happy at Position(xcenter=0.75, yalign=1.0)
+    show Tomoko happy at Position(xcenter=0.15, yalign=1.0)
+    show WG happy at Position(xcenter=0.65, yalign=1.0)
     with fade
     "With some good food, and more than a few drinks, Mom and Dad were well past their bumpy introduction and initial impression of Alice."
     show WG happy
@@ -31752,8 +31752,8 @@ label WG095:
     MC "Should I say something different?"
     show WG sly
     WG "No."
-    show WG neutral at altMove(0.5, 0.2)
-    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG neutral at altMove(0.35, 0.35)
+    show Chibuki neutral at Position(xcenter=0.85, yalign=1.0) with dissolve
     Chibuki "Looks like we got you sorted. The fit on this one seems pretty good, didn't skimp on the amount of fabric needed for the job it would seem."
     Chibuki "Still though, just because it isn't too tight doesn't mean it's loose. I wouldn't recommend running in it."
     show WG doubt
@@ -31766,7 +31766,7 @@ label WG095:
     show WG haughty
     WG "Baroque actually,"  
     show WG pondering
-    " though I don't think he necessarily confines himself to a particular time period."
+    extend " though I don't think he necessarily confines himself to a particular time period."
     show WG neutral
     Chibuki "Ah, yes. I should have figured it was one of those high society affairs. It's not really my style." 
     show WG sly
@@ -31794,7 +31794,7 @@ label WG095:
     show WG happy-2
     "By now I knew Alice's type— and he checked all the boxes."
     "Now, I had no reason to doubt Alice's affection towards me, especially after hearing her boast to my parents. {w}But still..." 
-    "In the back of my mind I was keenly aware that Alice wasn't one to settle when it came to the things she really wanted, and as rich as she was, she no doubt had her share of willing suitors, even if they didn't share my preferences."
+    "In the back of my mind I was keenly aware that Alice wasn't one to settle when it came to the things she really wanted, and as rich as she was, she no doubt would have her share of willing suitors, even if they didn't share my preferences."
     "Whether my anxieties about her ditching me for someone better had any basis in reality or not, even if this guy was better than me in every conceivable way, I knew I could at least rest easy knowing one thing—" 
     "In Alice's eyes, the prospect of having Okisho as a sister-in-law was probably the {i}least{/i} attractive attribute any man could possibly possess."
     MCT "Hehe, advantage: Keisuke."
@@ -31952,6 +31952,7 @@ label WG095:
         show WG happy
         WG "{size=-6}It's a harpsichord. {w}Though it's antiquated in light of modern pianos, the romance of its tonality is simply unmatched.{/size}"
     play music BaroqueLetter
+    show WG surprised-2
     "Just a few notes in, it was easy to understand why it was one of Alice's favorite instruments. It had an old world and otherworldly tone at the same time." 
     "Listening to it, I think I finally understood what Alice had been talking about all this time with her love of classical music. In the hands of a master like Ichia, the music didn't sound old, but rather timeless, transcendent even."
     show WG happy-2
@@ -32002,7 +32003,7 @@ label WG095:
     WG "Yes... how {i}considerate{/i} of her to mention that."
     show WG neutral
     Vivian "We love your work, mister... Ichia? Your performance was simply superlative. I have seen you perform on a couple of occasions before and even this exceeded my expectations."
-    "Ichia" "Ah, you must be the mother of her friend. Thank you for your kind words, though I felt I had to pull out the stops since I knew my little sister would be in the audience. I knew I'd never live it down if she ever caught me making a mistake."
+    "Ichia" "Ah, you must be the mother of her friend. Thank you for your kind words, though I felt I had to pull out all the stops since I knew my little sister would be in the audience. I knew I'd never live it down if she ever caught me making a mistake."
     Okisho "I haven't yet. But there's always next time!"
     WG "Ichia, my mother and I wanted to ask you if you ever have plans to release an album. I know nothing quite compares to your live performances, but it would be so lovely to be able to listen to your music anywhere."
     Vivian "I can only imagine the number of accolades you'd receive. You would handily win the best classical instrumental solo performance category, of that I have no doubt."

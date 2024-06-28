@@ -35759,7 +35759,6 @@ label PRG055:
 
 label PRG056:
     $setProgress("PRG", "PRG057")
-    play music Rain fadein 2.0
     $setTime(TimeEnum.DAY)
     PRG "Baby..."
     pause 2
@@ -35767,6 +35766,7 @@ label PRG056:
     "A pair of lips pressed right above my eyes, holding there for a moment."
     PRG "It's time to get up, Baby. We have to get going..."
     scene Dorm PRG
+    play music Rain fadein 2.0    
     show PRG neutral
     with fade
     MC "Mmn..."
@@ -35917,8 +35917,8 @@ label PRG056:
     show PRG neutral
     with fade
     "Aida walked in ahead of me, going to her desk and sitting down. I went with her, taking a minor detour to the front of the room."
-    show PRG neutral at altMove(0.5, 0.25)
-    show BE sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at altMove(0.5, 0.75)
+    show BE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
     "To my complete bewilderment, Honoka sat in her seat already, her and Shiori being the only two there at the moment."
     "Her boobs resting on her desk, Honoka sat back in her seat, her arms under her chest and over her middle."
     MC "What got you out of bed so early?"
@@ -36000,15 +36000,15 @@ label PRG056:
     "Aida chuckled slightly in her throat."
     "The two of us walked toward the kitchen, the lights off in the distance."
     show PRG neutral
-    MC "Should we just take the pan back to the kitchen right away? Or should we let Takamura-sensei know first? Just so she doesn't notice or something."
+    MC "Should we just take the pan back to the kitchen right away? Or should we let Takamura-sensei know first? Just in case she doesn't notice or something."
     PRG "We should probably let her know. She's always busy with so much."
     "Aida doubled back with me, turning toward Takamura's classroom, thankfully right in the same hallway."
     scene Classroom2
     show PRG neutral
     with fade
     PRG "E-Excuse me? Sensei?"
-    show PRG neutral at altMove(0.5, 0.25)
-    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at altMove(0.5, 0.75)
+    show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     pause .5
     PRG "I have the frying pan I borrowed yesterday. W-Would you like me to take it back to the kitchen right away?"
     Takamura "Of course, Kodama-san."
@@ -36200,7 +36200,7 @@ label PRG056:
     $setTime(TimeEnum.NIGHT)
     scene Dorm Interior with fade
     "Later that night, I sat cross-legged on my bed, playing games quietly."
-    "Pillow behind my back, I leaned against the wall, the coolness chilling my bare back."
+    "With a pillow on the small of my back, I leaned against the wall, the coolness chilling the rest my bare back."
     "I paused my game, glancing at my drawn curtains."
     "For once, Daichi was asleep early."
     "After a moment, I took my phone off of my bed and went into my texts."
@@ -36243,12 +36243,6 @@ label PRG056:
     BE "You too. Night."
     pause 1
     "I hung up the phone and unpaused my game."
-    scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
-    stop music fadeout 0.5
-    "The scene you just finished marks the current end of Aida's route."
-    "Since 2021, Aida's route is receiving an extensive rewrite treatment, rebooting the story in a more focused direction."
-    "Everything playable after this last scene was written before the rewrites. Because of this, you may notice some plot holes and inconsistencies, which are intended to be fixed with future builds."
-    "Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it."
     jump daymenu
 
 label PRG057:
@@ -36312,7 +36306,7 @@ label PRG057:
     "Aida adjusted a little, glancing down."
     "Her hands had been on it most of the time we had been talking."
     PRG "We... We have a competition next week."
-    PRG "... I don't know if we'll be ready for it though. We might have to just... pass."
+    PRG "... I don't know if we'll be ready for it though. We might have to just pass."
     MC "I guess it never occurred to me that you could just not compete."
     PRG "Most of us do compete. But, there are a few who don't, and just come to practice."
     PRG "There's a few new people too, now."
@@ -36372,7 +36366,7 @@ label PRG057:
     with fade
     PRG "M-Maybe you should go take a nap. Especially if you're coming to practice tonight."
     MC "How late do you think that'll run till?"
-    PRG "I don't know. After dinner, so we'd probably start around seven. Maybe... until like nine or ten?"
+    PRG "I don't know. After dinner, so we'd probably start around nineteen. Maybe... until like twenty-one or twenty-two?"
     MC "That might be a good play then."
     MC "What are you planning to do for the time being?"
     show PRG worried
@@ -36742,7 +36736,8 @@ label PRG057:
     "Aida licked her lips, and leaned..."
     pause .25
     stop music
-    #play SFX door knock
+    play sound Knock
+    pause .1
     show PRG scared 
     PRG "Ah-!"
     MC "Shit!"
@@ -36823,16 +36818,16 @@ label PRG057:
     MC "Well, wanna grab some dinner before practice?"
     PRG "Yes, please."
     MC "Perfect."
+    pause .5
+    if getFlag("PRG044_c1_1"):
+        MC "Uh... {w}Baby?"
+    elif getFlag("PRG044_c1_2"):
+        MC "Uh... {w}Babe?"
+    elif getFlag("PRG044_c1_3"):
+        MC "Uh... {w}Sweetie?"
+    PRG "Y-Yes?"
+    "I glanced down."
     if getFlag("PRG57_nakedbed"):
-        pause .5
-        if getFlag("PRG044_c1_1"):
-            MC "Uh... {w}Baby?"
-        elif getFlag("PRG044_c1_2"):
-            MC "Uh... {w}Babe?"
-        elif getFlag("PRG044_c1_3"):
-            MC "Uh... {w}Sweetie?"
-        PRG "Y-Yes?"
-        "I glanced down."
         "Aida's clothes lay strewn across the floor by the bed, alongside mine... perfectly in view of the door."
         show PRG embarrassed
         PRG "... Oops."
@@ -36847,14 +36842,6 @@ label PRG057:
         show PRG happy
         PRG "Eheheh!"
     else:
-        if getFlag("PRG044_c1_1"):
-            MC "Uh... {w}Baby?"
-        elif getFlag("PRG044_c1_2"):
-            MC "Uh... {w}Babe?"
-        elif getFlag("PRG044_c1_3"):
-            MC "Uh... {w}Sweetie?"
-        PRG "Y-Yes?"
-        "I glanced down."
         show PRG embarrassed
         "My clothes lay across the floor, right by the bed... and right in view of the door."
         MC "... Woops."
@@ -36864,6 +36851,12 @@ label PRG057:
         MC "... {w}Look, I'm trying here, okay?"
         show PRG happy
         PRG "Eheheheh!"
+    scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
+    stop music fadeout 0.5
+    "The scene you just finished marks the current end of Aida's route."
+    "Since 2021, Aida's route is receiving an extensive rewrite treatment, rebooting the story in a more focused direction."
+    "Everything playable after this last scene was written before the rewrites. Because of this, you may notice some plot holes and inconsistencies, which are intended to be fixed with future builds."
+    "Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it."
     jump daymenu
 
 label PRG057B:
