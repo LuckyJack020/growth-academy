@@ -14035,9 +14035,10 @@ label BE057:
     $setTime(TimeEnum.DAY)
     scene Dorm BE with fade
     show BE neutral with dissolve
+    play music DayByDay
     "After last week's meltdown, Honoka realized she needed a distraction."
     "Something besides her factor to hold her attention."
-    "We decided to play every video game either of us owned"
+    "We decided to play every video game either of us owned."
     "When one game got old, we picked up another."
     "Honoka still wasn't her usual, vivacious self. I had no idea when {i}that{/i} Honoka would be back."
     "But in any case, she wasn't miserable. We avoided discussing the future much."
@@ -14076,7 +14077,7 @@ label BE057:
     BE "The combo to finish you off {i}that{/i} way is far simpler."
     show BE disoriented
     BE "It goes, one…two…"
-    #play sfx bounce
+    play sound Boing
     show BE unique
     BE "{i}Squeeze{/i}."
     MC "You're just trying to distract me now."
@@ -14103,7 +14104,7 @@ label BE057_c1:
             jump BE057_c1_3
 
 label BE057_c1_1:
-    MC "this one?"
+    MC "...this one?"
     show BE surprised-2
     BE "Oh."
     show BE doubt
@@ -14141,15 +14142,14 @@ label BE057_c1_1:
     show BE surprised-2
     BE "W-what?"
     MC "Hey, don't sweat it! You're making excellent progress. After next month, you'll have half the town in your pocket."
-    show BE embarrassed
-    BE "Heh! I don't feel like I'm accomplishing anything."
+    BE "Eh... But I don't feel like I'm accomplishing anything..."
     MC "But, you are. Look at that farm. See how productive you are now?"
     show BE doubt
-    BE "No…?"
+    BE "No...?"
     MC "..."
     BE "..."
     show BE angry
-    BE "I'm sorry, Kei-chan. I don't think this is my kind of game."
+    BE "Sorry, Kei-chan. I don't think this is my kind of game."
     show BE neutral
     BE "Feels like I'm just making a number go up."
     MC "Well…yeah, but…"
@@ -14173,7 +14173,7 @@ label BE057_c1_2:
     BE "I have a gamer friend who described playing it as like pushing a boulder up a huge mountain."
     show BE disoriented
     BE "And I already have two of those attached to me."
-    show BE embarrassed
+    show BE shrug
     BE "I don't know if I'm looking for a third."
     MC "Well…"
     show BE neutral
@@ -14331,6 +14331,8 @@ label BE057_c1_after:
     BE "Oh, hey!"
     show BE neutral
     BE "It's my dad."
+    pause 1
+    stop music
     MC "O-Oh. I can come back later if you want. Y'know, if you want some privacy."
     BE "Nah, you can stay. It shouldn't take too long anyway. Here, I'll even put it on speakerphone so you can speak to him too."
     MC "But I haven't—"
@@ -14342,6 +14344,7 @@ label BE057_c1_after:
     FujioCell "{i}This is Inoue. May I speak to Miss Inoue, please?{/i}"
     BE "..."
     FujioCell "... *snrk*"
+    play music BE
     show BE happy
     BE "Hehe, gotcha again, Papa!"
     FujioCell "Gah-hahaha! C'mon, girl, what was that? An impression of me? I don't sound like that!"
@@ -14390,6 +14393,7 @@ label BE057_c1_after:
     MC "Hello, sir. My name's Keisuke. Er… Honoka's boyfriend."
     FujioCell "First and last name, son. I meet a lot of people in my line of work."
     MC "Uh… Keisuke Hotsure, sir."
+    stop music
     pause 1.5
     "The line went silent. My heart started to pound so hard in my chest, I could hear it in my ears."
     FujioCell "Hotsure…"
@@ -14398,14 +14402,15 @@ label BE057_c1_after:
     FujioCell "What's your father's name, son?"
     MC "Ryuta. And my mother's name is Himari, if it helps."
     pause 1
+    play music BE
     FujioCell "...Eh…? Ah-haha..!" 
     FujioCell "Gaaaah-hahaha! KEISUKE-CHAN!!"
     "All my nerves melted away after hearing his voice call me \"Keisuke-chan\" again."
     show BE happy
     BE "Yup, Papa. It's the same Kei-chan from back then! I wanted it to be a surprise."
-    FujioCell "Gaaahaha! Long time, Keisuke-chan! How long's it been? 10 years? Happy new year, son! Times…10!"
+    FujioCell "Gaaahaha! Long time, Keisuke-chan! How long's it been? 10 years? {w}Happy new year, son! Times…{w}10!"
     MC "Heh, yeah it's been a long time, sir! It's good to hear from you again."
-    FujioCell "I'm doing well, son. Even better now! Ahh, I never would have guessed… I haven't spoken to you since the family and I moved to Kagoshima! How's the family?"
+    FujioCell "I'm doing well, son. Even better now! Ahh, I never would have guessed… I haven't spoken to you since the family and I moved to Kagoshima! How's your family?"
     MC "We're all doing well, sir! Mom and Dad are still doing well, and Tomo's here at the school, as well."
     FujioCell "EHH??? Little Tomoko-chan's there too?! Ahh! TomoHono's together again, too!"
     show BE surprised
@@ -14541,14 +14546,14 @@ label BE057_c1_after:
     "And, there was naught but soft, warm flesh, three-sixty degrees around my head."
     MC "Mmph! Nng!!"
     BE "Now, you just stay in there, nice and safe."
-    BE "I "
+    BE "{i}I{/i} "
     extend "am going to win."
     jump daymenu
 
 label BE058:
     $setProgress("BE", "BE059")
     scene Dorm BE
-    play music BE
+    play music DormLife
     show BE happy
     BE "Phew! All saddled in. Thanks for the extra pair of hands, Kei-chan."
     "Honoka sent me an early morning SOS text since Kokutan wasn't around for… whatever reason. Turns out, when you can't reach completely in front of, let alone around you, a little help in the morning goes a long way."
@@ -14581,10 +14586,10 @@ label BE058:
     BE "Uh huh. {i}Suuure.{/i}."
     MC "By the way, which of us is the math tutor?"
     BE "That doesn't count. You're just a nerd~"
-    MC "Ah, whatever…" 
+    MC "Ah, whatever…"
+    show BE worried 
     "Honoka looked at her breasts and frowned."
     MC "Something wrong?"
-    show BE worried
     BE "Mm… the girls feel a little weird." 
     MC "Oh, shit. Did I do something wrong?"
     show BE surprised-2
@@ -14660,8 +14665,9 @@ label BE058:
     show BE neutral
     "Honoka stared blankly at the equation on the board. Then, I could almost see the gears click as her face lit up. She started working through the problem, her tempo increasing as she got toward the end."
     MCT "Noo! You forgot to √−1 after simplifying that last step! Go back, go back!"
+    show BE surprised
     "As if she could hear my psychic screams of anguish at the thought of taking that quiz, I saw Honoka's eyes go wide. She reached forward to erase her last few strokes−"
-    #play sfx bounce
+    play sound Boing
     pause .5
     stop music
     extend " and mashed her chest right into the chalkboard."
@@ -14705,11 +14711,11 @@ label BE058:
     "Honoka nodded."
     show BE neutral
     BE "Right.{w} But, never anything like this. It's like… electric tingles? Sometimes they last for a while but aren't that bad, but when they come back, it's like getting zapped!" 
-    show BE shrug
+    show BE worried
     BE "It's not like it hurts − I can't begin to describe how many times I've banged up the girls, even before coming to Seichou. I {i}know{/i} what that feels like. I guess it's like I'm constantly getting startled, like when someone pokes you in the ribs."
     show BE doubt
     BE "Ugh…! Sorry, I'm not sure if any of that made sense… I feel like I'm talking in circles and wasting everyone's time…"
-    Nurse "Inoue−san, while you have nothing to worry about, coming in and asking is {i}never{/i}silly, or a waste of time. That's what we're here for."
+    Nurse "Inoue−san, while you have nothing to worry about, coming in and asking is {i}never{/i} silly, or a waste of time. That's what we're here for."
     Nurse "What you've described isn't as abnormal as you seem to think." 
     Nurse "You'll be fine with plenty of good rest. Take some painkillers if the sensations become painful, and watch your salt and caffeine intake. I would also appreciate it if you check in with us, should the pain worsen or persist beyond a few days."
     show BE unamused
