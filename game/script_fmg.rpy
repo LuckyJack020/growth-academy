@@ -20936,10 +20936,11 @@ label FMG093B:
     Hageshi "AND GO!"
     play music Natsuko
     show FMG surprised
+    hide Hageshi with dissolve
     "Nat snapped to life, digging her feet into the board and whipping her whole torso backwards in an explosion of force so rapid it caught Akira unaware." 
     "It sent her flying over the board on Nat's side, nearly slamming her face onto the ground in the process."
     play sound Whistle
-    "The first round was over in an instant." 
+    "The first round was over in an instant."
     Hageshi "Point, Okamoto-san."
     MCT "Shit. Nat definitely still has some fight left in her."
     Announcer "And a fast pull from Okamoto-san to secure the first round. It's not just about brute strength folks, you gotta have the speed and finesse to keep ahead."
@@ -20953,10 +20954,12 @@ label FMG093B:
     Hageshi "Athletes, return to the starting positions."
     show FMG neutral
     show Natsuko neutral
+    show Hageshi neutral with dissolve
     "Hageshi-sensei wrangled the both of them back to the center on either side of the board. Akira had a spark back in her eyes that was missing at the start of the previous round. Nat was in trouble."
     Yuko "Come on sweetie! You can do this!"
     play sound Whistle
     Hageshi "AND GO!"
+    hide Hageshi with dissolve
     "Nat's biceps and traps swelled up in an instant, going from zero to a 110%% in the blink of an eye. The sudden surge of sheer force yanked the stick over to her side of the bar—" 
     show FMG upbeat
     " only to be stopped after just a few centimeters."
@@ -20987,10 +20990,12 @@ label FMG093B:
     Natsuko "We'll see about that. I won't make the same mistake again."
     show Natsuko neutral
     show FMG neutral
+    show Hageshi with dissolve
     Hageshi "Athletes ready."
     "Hageshi-sensei wasn't giving either of them much of a break, bringing them right back to the center, stick in hand."
     play sound Whistle
     Hageshi "AND GO!"
+    hide Hageshi with dissolve
     "Natsuko fired off even faster than before— but Akira was ready for her just like last time."
     show Natsuko annoyed
     "Sensing her time was running out before her fellow behemoth overwhelmed her, she did something I would have never thought of."
@@ -21004,7 +21009,6 @@ label FMG093B:
     "Which caused Akira to lose her footing, slamming the side of her hip into the dividing board and losing the grip on the stick to Nat."
     play sound Whistle
     hide Natsuko
-    hide Hageshi
     hide FMG
     show Yuko neutral at Position(xcenter=0.2, yalign=1.0)
     with dissolve
@@ -21022,8 +21026,7 @@ label FMG093B:
     with dissolve
     "Akira was clearly frustrated by this point. Nat on the other hand seemed to be relishing how things were going."
     MCT "Focus that anger Akira, if you lose this round you'll lose the event."
-    show Hageshi neutral
-    with dissolve
+    show Hageshi neutral with dissolve
     Hageshi "Reset. Take your positions."
     show Natsuko neutral
     "The starting setup was not going well. The frustration with each other was plain on their faces as each of the Amazons tried to grapple, wring, pull, and twist the bar away from each other at the starting position."
@@ -21033,6 +21036,7 @@ label FMG093B:
     "Recognizing beating the other had to entail not losing the match, both managed to simmer down enough to reach a neutral position that Hageshi gave the go ahead for."
     play sound Whistle
     Hageshi "AND GO!"
+    hide Hageshi with dissolve
     "Nat fired off the blocks from the get go— only to nearly give herself whiplash when the full might of Akira's pull snapped back."
     "Wasting no time deploying her lateral movement strategy, Nat tried to fast walk it along the board, but this time Akira was moving right along with her."
     MC "That's it! Follow her, and finish her off!"
@@ -21051,6 +21055,8 @@ label FMG093B:
     MC "Shit!"
     play sound Thud
     "The side of Akira's knee slammed into the board as her footing slipped."
+    play sound Whistle
+    show Hageshi neutral with dissolve
     Hageshi "Point- Okamoto-san." 
     play music Motivation
     Hageshi "Match. Okamoto-san 3 points, Mizutani 1."
@@ -21064,7 +21070,7 @@ label FMG093B:
     "Using my waterboy access privileges I walked my way down to the sidelines. I could tell Akira was super bummed about how the event went down."
     MC "Oh man, you had her ass, Akira! That was bullshit."
     show FMG sad-2
-    FMG "No, she had my ass, I just didn't know it."
+    FMG "No, she had {i}my{/i} ass, I just didn't know it."
     show FMG neutral
     FMG "It's not like she cheated or anything. She won fair and square. If I was stronger or faster I could have pressed my advantage when I had it, but she was strong enough that I wasn't able to. No sense in crying about it now."
     show FMG angry
@@ -21140,7 +21146,7 @@ label FMG093B:
     play music Rivalry
     "Akira walked up to the stone, tilting it on one side and then the other to get it under her fingers, before hoisting it straight up into her lap and then flipping it up to her right shoulder."
     "The stone itself was a mix of smooth corners and points, as well as sheared flat surfaces and domed out sides, not to mention it was so large I wouldn't have been able to wrap my arms around it to pick it up even if I had the strength."
-    "Despite the odd shape and the massive weight, it didn't give Akira any trouble lifting it, but throwing it was going to be a different story" 
+    "Despite the odd shape and the massive weight, it didn't give Akira any trouble lifting it, but throwing it was going to be a different story." 
     "It was almost comically large compared to her head that she had to tilt out of the way just to make room for it on her shoulder."
     show FMG angry
     MCT "Come on Akira, you got this!"
@@ -21241,12 +21247,14 @@ label FMG093B:
     show Hageshi neutral with dissolve
     Hageshi "329 cm."
     "Crowd" "{i}Whooo!{/i}"
-    Announcer "Another big jump ahead for Mizutani-san! Over twenty centimeters above Okamoto-san's best attempt!"
+    Announcer "Another big jump ahead for Mizutani-san! Over ten centimeters above Okamoto-san's best attempt!"
     show Natsuko annoyed at Position(xcenter=0.8, yalign=1.0) behind Hageshi with dissolve
     Announcer2 "One has to wonder if she can make the adjustments needed to overcome this deficit on her last attempt."
     FMG "Come on, Nat, don't tell me 316 is all you got."
     Natsuko "Shut up. You act like you're meters ahead. I'll make things interesting for you if that's what you want."
-    hide FMG with dissolve
+    hide FMG
+    hide Hageshi
+    with dissolve
     "Nat tackled the rock, flipping it up to her shoulder with relative ease,"
     show Natsuko frustrated 
     extend " only this time she looked unsteady, and flustered."
@@ -21264,7 +21272,7 @@ label FMG093B:
     show Natsuko neutral
     "With both arms half extended and partially resting the rock on her head, Nat looked solid. With a new found determination, she began barreling down the running lane, sprinting like a javelin thrower on the approach."
     Natsuko "ERRAUGHHHH!"
-    "With a scream from the pit of her stomach, with a full on explosion of the steel cables of her calves and the swell of her massive thighs driving the last puss off her sprint, Nat launched the rock like she was setting a volleyball over the net."
+    "With a scream from the pit of her stomach, with a full on explosion of the steel cables of her calves and the swell of her massive thighs driving the last push off her sprint, Nat launched the rock like she was setting a volleyball over the net."
     "Crowd" "{i}Whooo!{/i}"
     Announcer "Look at that height! Could this have the distance!?"
     play sound Thud

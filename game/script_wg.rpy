@@ -28729,7 +28729,7 @@ label WG088:
     MC "I actually had something."
     Okisho "What's on your mind, Shaggy?"
     show WG neutral
-    MC "It actually was about another concert, the one with your brother, Itchia."
+    MC "It actually was about another concert, the one with your brother, Ichia."
     Okisho "What about him?"
     MC "Well, I was just wondering—"
     Okisho "OH! I get it. You want tickets to one of his shows to impress your girlfriend? I guess I could try to swing it with him, but I can't promise anything. I can't get you plane tickets back to the mainland though, you're on your own with that."
@@ -31083,7 +31083,7 @@ label WG005M:
     "I thought about what Okisho said the last time I ran into her when practicing, that I didn't really have a talent for this type of thing."
     "If I had heard that when I first started playing, it probably would have made me want to throw in the towel before I even got started, but after coming this far, it was almost like a badge of honor."
     "Like my dad would tell Tomo about her math grades, \"Just because it doesn't come as easy to you as your brother doesn't mean you're off the hook for learning it.\" " 
-    "By that same logic, just because I wasn't ever going to be as good as Itchia, doesn't give me the excuse for giving up, or sounding like crap."
+    "By that same logic, just because I wasn't ever going to be as good as Ichia, doesn't give me the excuse for giving up, or sounding like crap."
     "It might have taken me twice as much work to not even get half as far, but that didn't mean it wasn't worth doing. {w}And as far as I was concerned, if something brought a smile to Alice's face, it was definitely worth doing."
     show WG happy-2 with dissolve
     MCT "Speaking of that..."
@@ -31142,8 +31142,9 @@ label WG005M:
     show WG happy-2
     WG "Tehehe!"
     "Alice was giddy with glee."
+    show WG surprised-2
     WG "Oh my god, Keisuke! You really are playing the harpsichord!"
-    show WG sly
+    show WG happy-2
     WG "I can't believe you managed to keep this a secret for so long, it must have taken you ages to practice this!"
     "I gave her a shrug as I proceeded to keep playing. Truth be told, I had been working my ass off trying to learn this thing. It did not have the same action on it as a piano, but at least the basic principles were still there."
     pause 5
@@ -31153,7 +31154,7 @@ label WG005M:
     WG "This is unbelievable."
     show WG happy-2
     WG "I always wanted a baroque musician for a boyfriend."
-    "I couldn't help but feel the pride swelling in my chest hearing that from Alice. {w}I might not have been in the same league as Itchia, but I proved to myself I could at least play the same game."
+    "I couldn't help but feel the pride swelling in my chest hearing that from Alice. {w}I might not have been in the same league as Ichia, but I proved to myself I could at least play the same game."
     pause 8
     stop music fadeout 2.0
     pause 2
@@ -31164,7 +31165,7 @@ label WG005M:
     "Alice gave a standing ovation."
     show WG happy
     WG "Bravo, Keisuke."
-    MC "I'm glad you enjoyed it. I mean, it's a pretty far cry from an Itchia concert, but I guess it wasn't half bad."
+    MC "I'm glad you enjoyed it. I mean, it's a pretty far cry from an Ichia concert, but I guess it wasn't half bad."
     play music Bittersweet
     show WG sad
     WG "{i}sniff{/i}...{i}sniff{/i}..."
@@ -31172,7 +31173,7 @@ label WG005M:
     MC "Alice, what's wrong?"
     WG "It's just that... I can't believe you'd go to such great lengths... all that practice... it must have taken you forever... just for me."
     show WG worried
-    WG "Keisuke, Dear, I know I talk about Itchia being one of my favorite musicians, but I never intended that to put some kind of expectation you had to live up to just to impress me."
+    WG "Keisuke, Dear, I know I talk about Ichia being one of my favorite musicians, but I never intended that to put some kind of expectation you had to live up to just to impress me."
     show WG happy
     WG "You've already won my heart, ten times over by now— you know that, don't you?"
     "In the back of my mind I knew it, but it was a relief to hear. Alice's expectations were... extraordinary to say the least. To know that I measured up, even in some way, was more than I had expected."
