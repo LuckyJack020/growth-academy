@@ -7444,7 +7444,7 @@ label MC012:
     "There's always a weird atmosphere whenever the end of the semester is coming. Like you're reaching a new checkpoint in life, but not one you can ever go back to. Something you look forward to, but also kinda dread."
     "Especially in a school like this, given what progressing means here."
     "Looking over at the camera on the wall, Naomi's only connection to our room at this point, I couldn't help but feel it was like an ever present reminder of the consequences of what's happening to us... but I knew I shouldn't dwell on it for too long."
-    if routelock == "GTS":
+    if routelock == "GTS" or isEventCleared("GTS032"):
         "I smile at the camera, giving a small wave. Even if I can't see her, nor she can't see me... feeling Naomi's presence is really comforting"
     else:
         MCT "Is Yamazaki-san even watching? I mean... to be honest, I wouldn't mind just hanging out in my room and chilling instead of learning about... uh..."
@@ -7457,7 +7457,7 @@ label MC012:
     HR "Yes, Mizutani-san."
     show HR unique
     FMG "Soo, uh... did they have blue pottery? Because I heard that they couldn't really see blue back then."
-    show HR neutral with dissolve
+    show HR unique-2 with dissolve
     "Though I thought it would have elected a groan of exasperation, Tashi-sensei instead crossed his arms and nodded."
     hide FMG with dissolve
     HR "Hmm... that's a part of a larger topic on how different cultures name colors. For example, let's take a relatively local prefecture, Aomori. \"Blue Forest\"'. Have you ever seen a forest that's blue? Would this mean that \"blue\" and \"green\" would be considered the same?"
@@ -7479,7 +7479,8 @@ label MC012:
     show HR unique
     AE "Yes, sir. Stand."
     hide HR with dissolve
-    "As the entire class stood to bow, there was an air of wistful excitement and trepidation lingering in the room. Our first semester of the school year, come and gone like petals in the spring. As everyone began to leave class, I picked up my things and began to walk out."
+    "As the entire class stood to bow, there was an air of wistful excitement and trepidation lingering in the room. Our first semester of the school year, come and gone like petals in the spring."
+    "As everyone began to leave class, I picked up my things and began to walk out."
     hide AE with dissolve
 
     scene Hallway
@@ -7492,18 +7493,22 @@ label MC012:
     "Wrapping her arms around me, or at least as best as she could, Honoka then stepped back as I turned around."
     BE "Our first semester's almost over! Aren't you excited?!"
     MC "I'd be a lot more excited if I had any amount of confidence in these upcoming tests. I kind of went into them assuming they'd be like highschool, but these exams are no joke..."
+    show BE angry
     BE "Baaah, it'll be fine! It's not like we {i}have{/i} to do good here— it's just a prep school before college after all!"
     show BE wink
-    "At least this is what I like to tell myself"
+    "At least this is what I like to tell myself."
     pause .5
     show BE happy
     MCT "T-That's the worst possible mindset to have! This girl is seriously unforgivable!"
     show BE happy at altMove(0.5, 0.25)
     show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "However you wish to see this school, putting in anything but your best effort is unacceptable, Inoue-san."
-    show AE neutral with vpunch
+    show AE neutral
+    show BE surprised-2
+    with vpunch
     MC "Gwah-!"
     BE "EEK!"
+    show BE confused
     BE "Geeez, Shiori-chan, how come you keep scaring us?!"
     if routelock == "AE":
         AE "Make no mistake, it's not exactly an intention of mine. Sneaking around isn't exactly my forte given that the... sounds I make as I walk alert others to my presence."
@@ -7513,8 +7518,10 @@ label MC012:
         show AE neutral
     else:
         AE "I've... just been standing here the whole time."
+        show BE embarrassed-2
         BE "Well, say something next time, so we know you're there."
         AE "I never left..."
+    show BE happy
     BE "Anyway. I'm looking forward to the end of this semester, cause that means {i}Summer break!{/i}"
     MC "I take it you have some grand plans then?"
     if routelock == "BE":
@@ -7535,7 +7542,10 @@ label MC012:
     BE "We both know he likes me a lot more than he likes you."
     MC "W-We do?"
     show BE happy
-    BE "Ha! I totally had you going. Who knows for sure? Matsumoto is obviously the favorite of the class. That's not even a question."
+    BE "Ha! I totally had you going."
+    show BE shrug
+    extend " Who knows for sure? Matsumoto is obviously the favorite of the class. That's not even a question."
+    show BE neutral
     MCT "More like favorite of the ass..."
     show AE neutral-eyebrow
     AE "..."
@@ -7554,9 +7564,15 @@ label MC012:
     show WG haughty
     WG "Now what makes you so sure someone else wouldn't be his favorite?"
     MC "Are you suggesting you're first in line?"
+    show BE wink
+    show PRG insecure
     BE "Yeah, first in show..."
+    show PRG nervous
+    show BE doubt
     WG "Ohohohoho~!"
     show WG neutral
+    show PRG neutral
+    show BE neutral
     WG "Relax, Inoue-san, it's just me being playful..."
     show WG sly
     WG "Which is why I'll let that little comment slide."
@@ -7566,24 +7582,32 @@ label MC012:
     extend " {size=-6}even if I can't imagine why{/size}..."
     show WG neutral
     WG "More importantly, however, now that we're well and truly starting our break, I'm going to have PLENTY of time to build my business and focus on efforts which have tangible value. The same goes for Kodama-san here as well!"
+    show PRG unique-blush
     if routelock == "PRG":
         PRG "I'm... planning to spend time with Keisuke."
         show FMG happy behind PRG, AE with dissolve
         FMG "God, you guys are too damn cute."
         show FMG neutral
     else:
+        show PRG unique
         PRG "I-I'm... I'm just planning to practice my cooking..."
         PRG "I-I may as well make the best of my time."
         MC "I mean, business building and cheffing aside, what else are you gonna do?"
         PRG "Um... I haven't thought past that yet."
+    show PRG neutral
     if routelock == "WG":
         "I hadn't really thought about it until now, but if Alice is going to be focusing her efforts on her business, I had to imagine that was going to involve me, at least to some extent."
         MCT "Man, it may be a part time gig, but I'm starting to think I could use a vacation..."
+    show BE confused
+    show PRG worried
     BE "Wow, really? Am I the ONLY one who is excited for this break?!"
     show WG stern
     WG "I just explained that I was!"
+    show BE angry
     BE "I mean... ugh, faaaair, just..."
     show WG neutral
+    show BE happy
+    show PRG neutral
     BE "I guess the question is... what are {i}WE{/i} going to do? Y'know... together!"
     FMG "Interesting you bring that up!"
     MC "Ah! When did you get here, Mizutani-san?"
@@ -7598,46 +7622,68 @@ label MC012:
     else:
         FMG "Your girl here has been doing a couple of travels into town with Chibuki, and I happened upon a neat little store! One which sells rare, unique games the likes of which are rarely seen in this part of the world."
     MCT "She's trying way too hard to be cool right now..."
+    show BE confused
     BE "Oh? Unique games? Like... board games?"
     FMG "Yep!"
+    show BE surprised-2
     BE "I didn't know you were into board games, Mizutani-san!"
     show FMG happy
-    FMG "Ehehe, well, uh... I dabble." 
+    FMG "Ehehe, well, uh... I dabble."
+    show AE neutral-eyebrow
+    show PRG insecure
     FMG "That's besides the point, though! One of 'em had these cool little figures and badass shaped dice. Tell me... have you ladies ever heard of a game called \"Gnomes and Giants\"?"
     AE "If you'd believe it; I do know of it, yes."
     show FMG disappointed
-    FMG "Well, since none of you know about this mysterious game- {w}Ehhhhhhh?"
+    FMG "Well, since none of you know about this mysterious game-"
+    show FMG surprised
+    extend " {w}Ehhhhhhh?"
+    show AE smile
+    show PRG neutral
     AE "I've played a highly truncated version of it with an old friend. I know how to play, however. While relatively small, it has a presence in Japan as well."
-    show FMG neutral
+    show FMG disappointed
+    show AE neutral-annoyed
     FMG "...{size=-6}You're killing me, bubble butt...{/size}"
     show FMG happy
     FMG "Well, since only {i}one{/i} of you know about this mysterious game, allow me to tell you about how it works!"
+    show AE neutral
     MCT "S-She's really trying way too hard to be cool!"
     show WG doubt
+    show PRG worried
     WG "I know how it works. It's not as popular in the west as she would have you believe. The game has a reputation as being only for socially awkward nerds with no social skills that play in their parents' basement."
-    show FMG neutral
+    show FMG angry-3
     FMG "Hey! Don't knock it until you've tried it. You guys are ruining my moment..."
     WG "As if that's a convincing argument." 
     show WG sly
     WG "People say the same thing about durian fruit. I'd be willing to bet you're not likely to give something a taste that smells like rotten onions and sweaty gym socks just because someone shoved it in your face and said \"try it\"."
     show WG neutral
     show FMG upbeat
+    show PRG neutral
     FMG "You kidding me? It's a game where imagination and creativity are put on display! Where the roll of the dice decides the next move, and where every action counts towards furthering a grand story! Ain't that right, Shiori?"
+    show AE neutral-eyebrow
     AE "... It's a mite more complex than that, but yes, that's the basic idea."
     show FMG neutral
+    show AE neutral-annoyed
     FMG "If I wanted it to sound as lame as possible, I would've asked you to present it, heheheh."
+    show FMG happy
+    show AE neutral
     FMG "You gotta be a bit more enthusiastic if you ever wanna take a shot at being... the \"GAME MASTER!\""
     GTSCell "Game master?"
-    show FMG happy
+    show FMG flex
+    show PRG surprised
     FMG "THE GAME MASTER!"
-    if routelock == "GTS":
+    show PRG neutral
+    if routelock == "GTS" or isEventCleared("GTS032"):
         MC "Yamazaki-san?"
         "Surprised, I turned to Honoka, who held up her phone. I looked to her and smiled as she nodded back; we were both on the same page, it seemed."
     else:
         MC "W-Wait, was that Naomi-?"
         "I looked around for a moment, only to see Honoka holding up her cellphone with the speaker function on, looking to me with a smile."
+    show BE shrug
+    show PRG excited
     BE "What? If we're gonna do this, we're gonna do it right and make sure we all can have some fun!"
     GTSCell "Hello? Can you all hear me?"
+    show BE happy
+    show PRG neutral
     BE "Yep! Loud and clear!"
     MC "Hi, Yamazaki-san."
     GTSCell "Hello! Was there something you needed?"
@@ -7650,11 +7696,14 @@ label MC012:
     show WG doubt
     WG "A hypothetical {i}idea{/i} of a game."
     show BE happy
-    BE "A hypothetical idea of a game, and I think I speak for everyone when I say; you're invited to come!"
+    BE "A hypothetical idea of a game, and I think I speak for everyone when I say— you're invited to come!"
+    show PRG worried
+    WG "{size=-6}Speak for yourself...{/size}"
     show WG neutral-2
     show BE doubt
+    show PRG neutral
     "Honoka looked around with a somewhat pleading look. Being honest, she was dead on the money in a sense; after Yamazaki-san moved to the Giant's Dorms, it feels almost like she's no longer even here."
-    "It seems she may have felt the same way, as where she would normally decline about three or so times before agreeing..."
+    "It seems Naomi may have felt the same way, as where she would normally decline about three or so times before agreeing..."
     show BE neutral
     GTSCell "Ah! I see, I see. In which case, surely you wouldn't mind if I observed? It would be most efficacious to cultivating a sense of companionship amongst my peers and betters."
     BE "Aw, Yamazaki-san, are you saying you feel lonely?"
@@ -7668,19 +7717,28 @@ label MC012:
     FMG "Uhh... I think?"
     GTSCell "Aha! In which case, my training may be of great use and value to your GM-ing!"
     show FMG happy
+    show AE admire
     FMG "Nice! In which case, Akira Mizutani's super sick, mega awesome GnG game is a go!"
     show BE happy
+    show PRG excited
     BE "Wooo!"
     MC "Alright then, I guess we'll follow your lead. You can be the uh... Game Master."
     show BE neutral
     show FMG sad
+    show AE neutral-eyebrow
+    show PRG neutral
     FMG "..."
     FMG "Eheh, well uh... there's a slight issue in that like... I dunno how to play the game and dunno what it looks like."
     MCT "Dch- THEN WHY DO THE WHOLE SALES PITCH?!"
+    show FMG neutral
     FMG "Shiori said she knows how to play, though! She can be our GM!"
+    show AE neutral
+    show BE confused
     AE "Unfortunately, I find it highly likely that I wouldn't make for a good GM given this is everyone's first time."
     GTSCell "Oh? Why is that?"
+    show PRG insecure
     AE "... I fear my penchant for the rules may be an impediment for everyone's enjoyment."
+    show BE neutral
     BE "... For the first time, I completely understand what you mean and agree."
     if routelock == "AE":
         MCT "Can't help but agree there..."
@@ -7689,9 +7747,11 @@ label MC012:
         MCT "Oh come on, you know it's true."
         show AE neutral
     show FMG disappointed
+    show PRG worried
     "With a sigh, Akira hung her head in disappointment. It seemed as though the hope of playing the game ended before it even started..."
     "Unless some cool guy wanted to come in and be the hero, impressing all of the girls with his bravery and daring. Who could ever, though?"
     show FMG neutral
+    show PRG neutral
     MC "Okay, well if you don't feel up for it Matsumoto-san, I wouldn't mind taking a stab at it."
     show BE confused
     show WG surprised-2
@@ -7721,18 +7781,22 @@ label MC012:
     show WG neutral
     show BE neutral
     show AE neutral
+    show PRG insecure
     FMG "Pack it up, everyone. We're doomed. My man thinks he can GM after hearing a sales pitch. The other day, I saw him put his hands out because he was mixing up his lefts and rights. How can we possibly trust someone who is directionally challenged?"  
     AE "Hotsure-san, I sincerely hope you understand what it is you're saying. The position you're wanting to take is one which requires a lot of planning, study, and knowledge on rule sets and conventions." 
+    show AE neutral-eyebrow
     AE "The same goes for being a player, as a matter of fact."
     show WG haughty
+    show AE neutral
     WG "Precisely why I have no intentions of joining. Why put in so much effort into something which has no value outside of wasting my time?"
     show WG surprised-2
     show FMG upbeat
+    show PRG worried
     FMG "Sooo, in other words, you don't wanna try because it takes effort?"
     show WG angry
     FMG "Nooot really surprised."
     show WG stern
-    WG "Oh please, like the effort you put into studying makes you a paragon of industriousness to look down on my work ethic."
+    WG "Oh please, like the effort you put into studying makes you a paragon of industriousness to look down on {i}my{/i} work ethic."
     show WG haughty
     WG "I'll have you know I have no qualms about putting in the full force of my efforts behind anything so long as it's a worthwhile pursuit! A Nikumaru never settles for less!"
     show FMG neutral
@@ -7740,6 +7804,7 @@ label MC012:
     show WG stern
     WG "{i}Uch{/i}! You want to see effort? Fine! I'll play your stupid game— and make you look like an amateur  in the process!"
     MCT "O-Oy, wasn't that too easy?!"
+    show PRG neutral
     MC "Well, if you're gonna join too, then it sounds like we all need to take some time to brush up on the rules and plan things out."
     AE "Mm. I'll help wherever I can, and can provide my own rulebook if anyone has any questions."
     show WG neutral

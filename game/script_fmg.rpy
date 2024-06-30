@@ -21372,7 +21372,7 @@ label FMG093C:
     MC "Well if you wither up and collapse due to dehydration you can blame him."
     FMG "I'm not counting on that— toss me one of those."
     MC "Here, take more than one. The sun's starting to get warmer."
-    MC "How about you, Nat? You need a few more."
+    MC "How about you, Nat? You need a few more?"
     Natsuko "I will take three."
     MC "Okay, here you go. How are you feeling?"
     Natsuko "I asked for water, not meaningless chatter."
@@ -21397,7 +21397,7 @@ label FMG093C:
     Announcer "And we're just about to get started with the next event. I bet you are all wondering what those giant hammers are for, well I can tell you they aren't for smashing— that would be letting our competitors off easy."
     Announcer "To find out Hageshi-sensei's sinister plan, we'll send it over fieldside to Goro."
     Announcer2 "Thanks, Genji. Hageshi-sensei, what can you tell us about the next event, the Hammer Hold?"
-    Hageshi "This one is the lightest even of the competition, but arguably the most brutal. A \"hammer\" will be loaded to 180 kilos, which may sound heavy to most people in the audience, but is pretty light for our competitors."
+    Hageshi "This one is the lightest event of the competition, but arguably the most brutal. A \"hammer\" will be loaded to 180 kilos, which may sound heavy to most people in the audience, but is pretty light for our competitors."
     Hageshi "The problem for them will be that weight gets a whole lot heavier when they have to hold it out at arms length, and then keep it up there for as long as possible."
     Announcer2 "Sounds tough."
     Hageshi "It's as much a matter of mental toughness as it is physical. The best bet is for the athletes to distract themselves, retreat into their mind and find that happy place where the distractions can't break through."
@@ -21418,7 +21418,7 @@ label FMG093C:
     "It took two assistants each to help get them into position by pressing it up to their head height. Akira and Nat both had a firm grip of the handle below the head, one hand over the other." 
     Hageshi "Competitors ready!"
     play sound Whistle
-    play music Tension
+    play music Argue
     extend " Start!"
     "The assistants dropped their support and dispersed off the platform. Nat and Akira for their part though hadn't even flinched when the full weight came down on their extended arms." 
     show Natsuko neutral
@@ -21478,7 +21478,7 @@ label FMG093C:
     "The hammer hit the field with a thud that could be felt through the ground up into the stands, as Nat collapsed to her knees."
     "Nat however didn't bother to pick her head back up, seeing clearly that Akira was still standing with her hammer." 
     Announcer "And Mizutani-san's done it! She's tied up the series! We're going to the fifth event!"
-    show FMG sad
+    show FMG disappointed
     hide Natsuko with dissolve
     play music Sunset
     "Before Genji could even finish, Akira dropped her hammer as her arms went limp and her whole body began to fall backwards."
@@ -21671,8 +21671,9 @@ label FMG093C:
     Hageshi "Athletes ready!"
     play sound Whistle
     Hageshi "Go!"
+    hide Hageshi with dissolve
     play music Rivalry
-    "Akira and Nats muscles practically bulged right out of their gym clothes as the force of the other hit their bodies. Each one was pulling against an unmoving wall, all while trying to knock it down."
+    "Akira and Nat's muscles practically bulged right out of their gym clothes as the force of the other hit their bodies. Each one was pulling against an unmoving wall, all while trying to knock it down."
     show Natsuko frustrated
     "Anticipating the stalemate of the first start, Nat began to use quick footwork as she stepped to the side, no doubt hoping to cause Akira's footing to stumble."
     show FMG angry-3
@@ -21706,8 +21707,9 @@ label FMG093C:
     stop music fadeout 1.0
     "Until she broke the midline."
     play music Motivation
-    show FMG surprised 
+    show FMG surprised
     show Natsuko disappointed
+    show Hageshi neutral with dissolve
     Hageshi "Match, Mizutani-san."
     "Crowd" "{i}Whoooo!{/i}" 
     Announcer "And there you have it folks, Mizutani takes the Tug-of-War match, and with it the series!"
@@ -21765,6 +21767,7 @@ label FMG093C:
 label FMG094:
     $setProgress("FMG", "FMG095")
     scene Woods with fade
+    play music ClearSkies
     "After the strength pentathlon, Akira was so sore the next day she could barely move. Of course that didn't stop her from wanting to get back into the gym." 
     "Hageshi-sensei told me to make sure she actually rests, but after only a few days off she was chomping at the bit to get back into it." 
     "Having tasted what she was capable of with her new size, she was eager to push it to new limits— and I knew I wasn't going to be able to stop her." 
@@ -21866,10 +21869,14 @@ label FMG094:
     MC "Aren't you worried you might ruin your uniform like you did when you lifted the car?"
     FMG "Gives you something to get excited for. Imagine... my clothes ripping apart as my muscles get pumped as I \"struggle\". Man, you couldn't ask for a better show."
     MC "...Proceed..."
+    play music Rivalry
+    show FMG angry
     "Standing tall for thousands of years... {w}maybe... {w}It could be ten years... I don't know anything about trees... makes it sound cooler though..."
     "its oak hardened by the centuries and its bark made solid by countless storms and ceaseless sun, the tree size and density were grand..." 
-    "But it could not  compare to Akira as she stood before it with a boundless energy she could hardly contain— that was the site to behold."
+    "But it could not compare to Akira as she stood before it with a boundless energy she could hardly contain— that was the site to behold."
+    show FMG neutral
     "Standing before it, her waist eclipsed the tree by a good few centimeters, blocking one's view from the back, but offering up a more tantalizing show of raw physical force instead."
+    show FMG angry
     "Her muscles tensed in anticipation at the tree, in a sense it appeared as though she was feeling she may have her work cut out for her."
     "This prospect of going up against a tall, titanic structure of nature however only widened her grin, and her mighty stance."
     pause 1
@@ -21885,13 +21892,17 @@ label FMG094:
     MCT "I'm talking about your top, pleeease rip it off. {w}Good work on the tree though, fantastic effort." 
     FMG "H-NNGH!"
     "*CRACK* *CRRRRK*"
+    show FMG angry-2
     "Finally, with a tremendous pull, the tree is uprooted; dirt and earth falling from its bottom as it's hoisted from the ground. This, however, was only the second most amazing sight to behold as I looked on."
+    show FMG flex
     "Akira's top had utterly ripped apart, leaving only her bra which itself was under a great deal of strain. Each carved facet of her form rippled with power and might as her amazonian physique was on full display."
     MCT "The lord is testing me..."
+    show FMG aroused-2
     "With a smirk, she looked back to me and gave a wry wink before giggling."
     FMG "Heh~"
     "Tossing the tree like a javelin overhead. I could only watch on in amazement as it crashed a few meters ahead, beads of sweat running down Akira's body as she seemed to become increasingly more giddy."
     show FMG happy
+    play music Peaceful
     FMG "Oooooh maaan, did you see me?!?!? How freaking cool was I? On second thought, don't answer that. I was fucking awesome!"
     FMG "I have to do it again... I {i}need{/i} to do it again. I need a bigger tree now."
     MC "Uh, do you want to return to campus and get another outfit? You're showing a lot of skin."
@@ -21904,13 +21915,15 @@ label FMG094:
     FMG "You're getting worked up over nothing, Kei-kun."
     show FMG flex
     extend " Tore out of my uniform again, have a great pump, looking massive and you're worried about me getting ticks or a few splinters."
+    show FMG aroused
     FMG "Wanna feel? I knnnnow you do. My bicep is {i}really{/i} hard right now."
     MCT "Must resist... the... urge..."
     MC "{w}No. {w}You're... {w}dirty."
+    show FMG disappointed
     MC "After you clean yourself up though, I'll start touching your body, no question."
     show FMG neutral
     FMG "Pfff, your loss."
-    show FMG aroused
+    show FMG aroused-2
     extend " My bra is {i}sooo{/i} tight and I can feel my skirt about to burst."
     MC "..."
     pause .5
@@ -21926,7 +21939,9 @@ label FMG094:
     MC "That's quite big. {w}You sure?"
     FMG "Of course, I'm sure. In fact, I'm {i}so{/i} confident that this is going to be even easier."
     MC "Ooooooh, okay, okay, big woman on campus, I see."
-    "With a smirk, Akira turned to the tree to size it up. After a moment, however, she hesitates, thinking to herself before adjusting her stance."
+    show FMG happy
+    play music Motivation
+    "With a smirk, Akira turned to the tree to size it up. After a moment, however, she hesitated, thinking to herself before adjusting her stance."
     FMG "Juuuust gonna need to try a new approach."
     "Akira wrapped her arms around the tree in a great bear hug, her biceps stiffening as she pulled it in tight."
     FMG "Hngh..."
@@ -21937,7 +21952,8 @@ label FMG094:
     "Akira seemed to stiffen at its resistance, readjusting her feet as though to account for the unplanned challenge. She closed her eyes, and began to mutter under her breath..."
     FMG "Come on..."
     FMG "HNG-!"
-    "*KRRRRRK*""Before with a mighty heft, she lifted the tree out from the ground. With a great deal of vigor, her arms bulged as her hold on the tree only increased with force unmatched by even the most powerful of machines."
+    "*KRRRRRK*"
+    "Before with a mighty heft, she lifted the tree out from the ground. With a great deal of vigor, her arms bulged as her hold on the tree only increased with force unmatched by even the most powerful of machines."
     "*KRK*"
     "Perhaps... a bit too powerful, as the tree began to crack in half around her arms completely."
     MC "Hey, Akira, you might want to loosen your grip on it..."
@@ -21946,6 +21962,7 @@ label FMG094:
     play sound Thud #(maybe we have something louder for a tree????)
     MC "Hm, well, that could've been worse. Could've been me."
     show FMG angry
+    play music DayByDay
     FMG "Aw, what the hell! That's it? I thought it would've taken more effort."
     MC "..."
     MC "Ma'am, you snapped a tree in half with your bare hands. And you have the gall to say that's it?"

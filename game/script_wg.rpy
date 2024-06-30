@@ -30152,8 +30152,7 @@ label WG091:
 
 label WG092:
     $setProgress("WG", "WG093")
-    $setWGOutfit(OutfitEnum.CASUAL)
-    #$setWGOutfit(OutfitEnum.DRESS) Reenable this when the Dress sprites are ready
+    $setWGOutfit(OutfitEnum.DRESS)
     $setTime(TimeEnum.EVE)
     play music Sunset
     scene Ryokan Room with fade
@@ -31919,14 +31918,17 @@ label WG095:
     MCT "Looks like I'm not even winning that contest by much either."
     "Seating himself, he picked up the cello that was waiting for him on stage. And taking one deep breath, he kicked off one of the best musical performances I had ever seen in my life."
     play music SoloCelloPassion
-    pause 5
+    pause 7
     "He was one of those musicians that played with his whole body, the ferocity and passion in his movements was evident, and all of it came out in his sound."
     show WG surprised-2
+    pause 5
     "Alice for her part seemed absolutely transfixed by his performance."
     "And now I could understand why. It was like viewing a classical painting, an exquisite work of art."
+    pause 4
     "I felt rather foolish for having thought she came here hoping to ogle at some eye candy who made me look like a bum by comparison. I should have known better."
     "I decided it was because I was so protective of her that I wouldn't allow anything to come between us, so I had to be on guard."
     "Which was certainly a stretch, but it was a little easier story for me to swallow than having to admit I had been a total idiot this whole time."
+    pause 10
     stop music fadeout 2
     scene black with fade 
     pause .5
@@ -31934,7 +31936,7 @@ label WG095:
     scene Theater Concert Spotlight with fade
     pause 2
     play music Bourree
-    "The concert had been going for hours and was starting to wind down. After taking the audience on a musical {i}tour de force{i}, we were able to start to relax with a soothing piano piece."
+    "The concert had been going for hours and was starting to wind down. After taking the audience on a musical {i}tour de force{/i}, we were able to start to relax with a soothing piano piece."
     "It was a testament to his abilities to craft a performance, we all needed a break after the emotional whirlwind his music provoked."
     "He certainly proved his reputation as one of the best classical guitarists on the planet, and I didn't even know it was possible to play the lute that fast."
     "The guy was practically a jukebox cyborg. He would pick up one new instrument after the other, playing in a completely different tempo, key, and tuning from the previous piece he just did."
@@ -31953,11 +31955,12 @@ label WG095:
         show WG happy
         WG "{size=-6}It's a harpsichord. {w}Though it's antiquated in light of modern pianos, the romance of its tonality is simply unmatched.{/size}"
     play music BaroqueLetter
-    show WG surprised-2
+    pause 3
     "Just a few notes in, it was easy to understand why it was one of Alice's favorite instruments. It had an old world and otherworldly tone at the same time." 
     "Listening to it, I think I finally understood what Alice had been talking about all this time with her love of classical music. In the hands of a master like Ichia, the music didn't sound old, but rather timeless, transcendent even."
     show WG happy-2
     MCT "No wonder she has such passion for this."
+    pause 5
     stop music fadeout 2.0
     pause 1.5
 
