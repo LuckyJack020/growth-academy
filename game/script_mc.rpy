@@ -7496,7 +7496,7 @@ label MC012:
     show BE angry
     BE "Baaah, it'll be fine! It's not like we {i}have{/i} to do good here— it's just a prep school before college after all!"
     show BE wink
-    "At least this is what I like to tell myself."
+    extend " At least this is what I like to tell myself."
     pause .5
     show BE happy
     MCT "T-That's the worst possible mindset to have! This girl is seriously unforgivable!"
@@ -7536,7 +7536,8 @@ label MC012:
     BE "I wonder what Tashi-sensei is gonna do without us!"
     MC "Finally get a good night's sleep?"
     BE "He's a teacher. We both know that's not possible."
-    BE "True, I guess Tashi-sensei is a bit of a lost cause. I don't know what would make him happy. I've never seen him smile."
+    MC "True, I guess. Tashi-sensei is a bit of a lost cause"
+    BE "I don't know what would make him happy. I've never seen him smile."
     MC "Maybe because when you see him, that means you're there."
     show BE wink
     BE "We both know he likes me a lot more than he likes you."

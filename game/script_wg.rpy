@@ -30183,7 +30183,7 @@ label WG092:
     MC "Well it's a disproportionate sample you see. Remember in Hageshi's class where he talked about random sampling?"
     show WG haughty
     WG "I remember, which is why I have many conversations with your sister to draw upon for my \"sampling\"."
-    MC "...Oh to be a fly on the wall with those conversions."
+    MC "...Oh to be a fly on the wall with those conversations."
     MCT "Honestly I'd probably die of embarrassment."
     show WG happy-2
     WG "It's much more good things than you're probably thinking."
@@ -30193,12 +30193,12 @@ label WG092:
     show WG doubt
     MC "I thought this whole conversation was about me giving myself too much credit." 
     show WG haughty
-    WG "You're right Dear, I fully concede your point."
+    WG "You're right, Dear, I fully concede your point."
     MCT "The one time I win an argument with Alice only to clown myself in the process."
     show WG neutral-2
     MC "I did mean what I said about the dress. It's quite elegant. I may not know much about fashion, but it's obvious to anyone that you do."
     show WG happy
-    WG "Well thank you, Dear. I'm glad to hear you say that. I came up with the design myself along with Kokutan assistance."
+    WG "Well thank you, Dear. I'm glad to hear you say that. I came up with the design myself along with Kokutan's assistance."
     show WG neutral-2
     WG "It hasn't been easy finding something that flatters my figure these days, but it's a challenge I'm willing to accept."
     MC "Well your efforts have paid off."
@@ -30279,7 +30279,7 @@ label WG092:
     MCT "I think it's safe to say my seat will have the best view with as much cleavage as that dress of hers is showing."
     "We didn't have long to take in the atmosphere of the place before we were greeted by one of the wait staff."
     show WG neutral
-    Waiter "Greetings Miss Nikumaru, and her honored guest. My name is Yuto Hakatu. I am the maître d'hôtel of this establishment. I will see to it personally that your dining experience this evening is nothing less than exquisite."
+    Waiter "Greetings, Miss Nikumaru, and her honored guest. My name is Yuto Hakatu. I am the maître d'hôtel of this establishment. I will see to it personally that your dining experience this evening is nothing less than exquisite."
     Waiter "Allow me to direct you to your seats."
     "We were directed to a table near one of the windows towards the back. Given the meticulous planning so far, I was certain Alice had chosen it herself." 
     "Whether it was for the view, the more private setting, or the proximity to the kitchen, I didn't know for sure, but I suspected all three."
