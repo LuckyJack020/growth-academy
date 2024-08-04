@@ -18652,7 +18652,7 @@ label PRG037:
         MC "I... I kind of have something going on, Tomo. I'm sorry."
         Tomoko "Oh."
     MC "..."
-    if getFlag("MC005_TM"):
+    if getFlag("MC005TM"):
         MCT "I... did say she could come see me whenever."
         MCT "But... now?! Of all times? Seriously?"
         MCT "Dammit..."
@@ -18925,7 +18925,7 @@ label PRG037:
     "Under the table, I felt a gentle squeeze on my hand from beside me, and looked at Aida, where I received a reassuring look."
     MC "R-Right. Thanks."
     Tomoko "Mhm."
-    if getFlag("MC005_TM") and getFlag("MC005_TMPreg"):
+    if getFlag("MC005TM") and getFlag("MC005TM_PRG"):
         Tomoko "And, look Kei. I know I said that one day you will meet a thick girl who you'll want to have kids with, but I didn't expect you to actually do that so soon."
         MC "Good God, Tomo."
     pause .5
@@ -18967,7 +18967,7 @@ label PRG037:
     PRG "I... u-um..."
     PRG "... I-I thought he was handsome. And really nice."
     Tomoko "Uh..."
-    if getFlag("MC005_TM"):
+    if getFlag("MC005TM"):
         MCT "Hell yes! Told her I got the looks!"
     Tomoko "..."
     show PRG neutral
@@ -35758,6 +35758,7 @@ label PRG055:
     jump daymenu
 
 label PRG056:
+    $setFlag("XX56")
     $setProgress("PRG", "PRG057")
     $setTime(TimeEnum.DAY)
     PRG "Baby..."

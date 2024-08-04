@@ -1351,7 +1351,23 @@ label MC002:
     HR "Correct."
     hide AE with dissolve
     pause .25
+    show HR unique
+    pause .25
+    show HR neutral
+    HR "Utagashi-san."
+    show RM concerned-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Daichi looked like he was lost in thoughts, thinking about something far away from this classroom".
+    show HR neutral-2
+    HR "Utagashi-san."
+    show RM neutral
+    "Daichi looked at Tashi-sensei."
+    HR "Do you know what Jōmon period is known for?"
+    RM "Pottery?"
+    show HR neutral
+    HR "Correct."
+    hide RM with dissolve
     HR "This time period saw the rise of pottery vessels and figurines, as well as jewelry."
+    pause .25
     show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Across the room, Naomi put her hand up."
     HR "Yes, Yamazaki-san?"
@@ -1369,7 +1385,7 @@ label MC002:
     if isEventCleared("BE001"):
         show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         pause .25
-        "I glanced over to Honoka's desk."
+        "I glanced over to Honoka's desk, past Akira."
         "Surprisingly, she was actually jotting down some notes and not... I don't know, looking out the window or something?"
         MCT "Seems like she's learned to be more productive since our childhood days."
         if getFlag("global000_sitBE"):
@@ -1387,7 +1403,7 @@ label MC002:
         hide AE with dissolve
     elif isEventCleared("FMG001"):
         pause .25
-        "I glanced over toward Akira's desk."
+        "I glanced beside me at Akira's desk."
         show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         "To her credit, Akira did have her notebook out on her desk. But from what I could see, she seemed to have more scribbles and the occasional doodle than anything else."
         MCT "Well... guess she'll figure it out."
@@ -1397,7 +1413,8 @@ label MC002:
     elif isEventCleared("GTS001"):
         show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         pause .25
-        "Across the room, Naomi jotted down more notes and looked up expectantly at the front of the room."
+        "I turned my head just enough where I could glance backwards through my hair"
+        "Naomi jotted down more notes and looked up expectantly at the front of the room."
         MCT "Based on her question, she seems to already have a grasp on this stuff pretty well."
         MCT "Maybe she comes from a background riddled with history buffs and the like."
         if getFlag("global000_sitGTS"):
@@ -1406,20 +1423,29 @@ label MC002:
     elif isEventCleared("WG001"):
         show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         pause .25
-        "I glanced over at Alice as she jotted down some notes."
+        "I glanced behind Akira, over to Alice as she jotted down some notes."
         MCT "Geez, after that shut down from Tashi-sensei, I'm surprised Alice isn't giving him a death glare or something."
         MCT "... Though, that could easily happen down the line."
         hide WG with dissolve
     elif isEventCleared("PRG001"):
         pause .25
-        "I glanced across the room."
+        "I glanced ahead, right in front of Tashi-sensei's desk."
         show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         pause .25
-        "Aida sat quietly nearby Alice, writing quickly."
+        "Aida sat quietly, her hand moving like lightning across her paper."
         MCT "Huh. By the looks of her paper, she's almost writing... too much."
         if getFlag("global000_sitPRG"):
             MCT "... Guess she really wants to have all of her bases covered."
         hide PRG with dissolve
+    elif isEventCleared("MC001"):
+        pause .25
+        "I glanced over toward the left side of the classroom."
+        show RM neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        MCT "After our conversation the other day, the dude just gets weirder and weirder."
+        if isEventCleared("RM001"):
+            MCT "Well... at least I got a chance to learn something about him."
+            MCT "That's something at least."
+        hide RM with dissolve
     pause .25
     "Overhead, the bell rang out over the masses."
     show HR neutral
@@ -1452,8 +1478,10 @@ label MC002:
         hide WG with dissolve
     elif isEventCleared("PRG001"):
         show PRG sad with dissolve
-        "As I slipped my notebook into my bag, I looked over and saw Aida slipping her notebook away and into her bag. From where I sat, I couldn't really make much out, especially with the glare of the window, but she got up and hurried off and out of the room."
+        "As I slipped my notebook into my bag, I looked over and saw Aida slipping her notebook away and into her bag. From where I sat, I couldn't really make much out, but she got up and hurried off and out of the room."
         hide PRG with dissolve
+    else:
+        "As the bell rang, everyone started packing and leaving the classroom. I slipped my notebook into my bag and rose from my seat."
     pause .25
     show RM neutral with dissolve
     "Following the rest of the class, Daichi got up from his seat and walked near-silently out of the room."
@@ -7534,8 +7562,8 @@ label MC012:
     BE "It's all the planning I need. Though now that I think about it..."
     show BE happy
     BE "I wonder what Tashi-sensei is gonna do without us!"
-    MC "Finally get a good night's sleep?"
-    BE "He's a teacher. We both know that's not possible."
+    AE "Finally get a good night's sleep?"
+    MC "He's a teacher. We both know that's not possible."
     MC "True, I guess. Tashi-sensei is a bit of a lost cause"
     BE "I don't know what would make him happy. I've never seen him smile."
     MC "Maybe because when you see him, that means you're there."
