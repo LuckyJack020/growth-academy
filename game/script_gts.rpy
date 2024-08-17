@@ -5141,7 +5141,7 @@ label GTS028S_c2_1:
 label GTS028S_c2_2:
     Ryoko "Alright, that makes it easy. What about you, Yamazaki-san?"
     $setFlag("GTS028S_noask")
-    jump GTS028s_c2_3
+    jump GTS028S_c2_3
 
 label GTS028S_c2_3:
     if not getFlag("GTS028S_noask"):

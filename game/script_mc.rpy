@@ -9159,6 +9159,14 @@ label MC013_aftermenu:
     show BE happy
     BE "Thanks for the talk earlier though, Kei-chan. Your little history quiz about the Yayoi period and the dig site got me some guaranteed points for sure."
     MC "Hah. Welcome."
+    if isEventCleared("MC012") and not isEventCleared("MC012B"):
+        FMG "Sooo, how's setting everything up going; Mr. Game Master, sir?"
+        MC "Heeey, I'm doing my best!"
+        BE "Yeah! I bet Kei-chan is cooking up something really fun for all of us!"
+        MC "You know it."
+        MCT "Oh god, I literally have been procrastinating so hard I don't even have a name for a setting or anything yet."
+        MCT "Still, as long as I can just take some time and figure out the mechanics, everything will flow from that…"
+        MCT "I hope."
     scene Hallway
     show RM neutral
     with dissolve

@@ -31859,7 +31859,7 @@ label WG095:
     MC "I do what I can sir."
     Daitaro "What one can do is of little consequence if one is not capable. {w}From what I have learned from Alice, you've certainly managed to navigate her and yourself through some trying circumstances."
     Daitaro "For that, you have my eternal gratitude."
-    MC "Thanks... {w}I guess I hadn't thought about it that much, it's just what I knew I needed to do. She means the word to me, and I'd do anything for her." 
+    MC "Thanks... {w}I guess I hadn't thought about it that much, it's just what I knew I needed to do. She means the world to me, and I'd do anything for her." 
     "Alice's dad placed a firm, heavy hand on my shoulder."
     Daitaro "You're a good man, Hotsure-san. {w}Sometimes, that's all that's needed."
     "In light of the setting and the venue headliner, his words were more assuring than even he had probably intended."
