@@ -1069,6 +1069,7 @@ define audio.DormLife = "Audio/BGM/scene_dorm.ogg"
 define audio.Festival = "Audio/BGM/scene_festival.ogg" #Dokkoi!
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
+define audio.HigherEduC = "Audio/BGM/scene_highereduC.ogg" #Higher Education Claviola Variant
 define audio.Holiday = "Audio/BGM/scene_holiday.ogg" #Winter Wonderland
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
 define audio.FullKnowMyself = "Audio/BGM/knowmyself_full.mp3" #Know Myself (full song)

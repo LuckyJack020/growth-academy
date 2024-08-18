@@ -633,6 +633,17 @@ init python:
     )
     ost.manualDefineList.append(theme_MiT)
 
+    theme_HeC = ost.soundtrack(
+        name = "Higher Education (Claviola)",
+        path = "Audio/BGM/scene_highereduC.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Hallway Variant",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_HeC)
+
     ## Base Template
     ######################################
 
