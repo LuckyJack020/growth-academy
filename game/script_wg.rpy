@@ -10039,7 +10039,7 @@ label WG043:
     hide BE with dissolve
     "This gave us possession as the fielders had to get to the other side. I signaled for Honoka to pass the ball to me, while Natsuko and Akira were already locking horns in the middle of the defender side."
     "This of course attracted Alice's attention. In any other context, her soft body coming aggressively for my ball would be a good thing, but the steely determination in her eyes told me she was going to eat me alive if I didn't get rid of this ball right now."
-    "I lobbed up a pass to Natsuko, hoping to exploit the height advantage Natusko had over Akira, which let her catch the ball, even with Akira practically trying to climb over her."
+    "I lobbed up a pass to Natsuko, hoping to exploit the height advantage Natsuko had over Akira, which let her catch the ball, even with Akira practically trying to climb over her."
     "In the brief window created by Akira failing to swipe the ball from her, Natsuko sent a screamer pitch straight into the goal."
     show PRG scared with dissolve
     "Aida's \"block\" was more of a panicked defense of her face than any real attempt to stop the ball. I couldn't blame her either."
@@ -32451,6 +32451,9 @@ label WGAE001:
     jump daymenu
 
 label WGBE001:
+    $setVar("WGBE", getVar("WGBE") + 1)
+    if getVar("WGBE") >= 2 and not getFlag("WGBE2"):
+        $setFlag("WGBE2")
     scene Classroom with fade
     play music Schoolday
     "I got to class early today."
@@ -32609,6 +32612,9 @@ label WGBE001:
     jump daymenu
 
 label WGBE002:
+    $setVar("WGBE", getVar("WGBE") + 1)
+    if getVar("WGBE") >= 2 and not getFlag("WGBE2"):
+        $setFlag("WGBE2")
     $setBEOutfit(OutfitEnum.CASUAL)
     scene School Exterior with fade
     play music Schoolday
@@ -32852,6 +32858,9 @@ label WGBE002:
     jump daymenu
 
 label WGBE003:
+    $setVar("WGBE", getVar("WGBE") + 1)
+    if getVar("WGBE") >= 2 and not getFlag("WGBE2"):
+        $setFlag("WGBE2")
     scene Dorm WG
     show WG neutral
     with fade
@@ -33121,6 +33130,9 @@ label WGBE003:
     jump daymenu
 
 label WGBE004A:
+    $setVar("WGBE", getVar("WGBE") + 1)
+    if getVar("WGBE") >= 2 and not getFlag("WGBE2"):
+        $setFlag("WGBE2")
     scene Dorm Hallway with fade
     play music MCGuitar
     "I was headed over to Alice's dorm to drop off my latest expense report. Could it have waited until tomorrow? Yes. But it was a good excuse in my mind to see Alice."
@@ -34214,6 +34226,583 @@ label WGBE004B_After:
     show WG sly
     WG "How typical..."
     MCT "Oh great, now they even got Alice in on it. Who's idea was this?"
+    jump daymenu
+
+label WGBE005:
+    play music BE
+    scene Cafeteria with fade
+    "Alice was busy tonight so I found myself getting dinner at the cafeteria by myself."
+    "It would have been nice to see her, but I had to get some studying done and I know she did too."
+    show BE neutral with dissolve
+    MCT "Looks like I won't have to eat dinner alone after all."
+    "Spotting Honoka from across the dining hall, I walked over to sit with her."
+    show BE sad 
+    extend " But when I got closer, I noticed something didn't seem quite right."
+    MC "Hey."
+    BE "Hey, Kei-chan."
+    MC "Is everything all right?"
+    show BE confused
+    BE "Huh?"
+    show BE doubt
+    extend " Yeah, things are okay."
+    MC "Mind if I sit here?"
+    show BE embarrassed
+    BE "Of course you can sit here." 
+    "I set my tray down and pulled up a chair. Despite her own words, Honoka didn't seem her usual bubbly self."
+    menu:
+        "Ask her what's on her mind.":
+            jump WGBE001_c1_1
+        "Tell her a joke to cheer her up.":
+            jump WGBE001_c1_2
+
+label WGBE001_c1_1:
+    show BE confused
+    MC "Something on your mind?"
+    show BE neutral
+    BE "Oh, don't worry too much about it, Kei-chan. I just got back from visiting Yamazaki-chan's dorm."
+    jump WGBE001_After_c1
+
+label WGBE001_c1_2:
+    show BE confused
+    MC "Hey, you wanna know something funny I saw today?"
+    BE "What was it?"
+    show BE angry
+    MC "Your face."
+    BE "{i}Pfffft{/i}"
+    show BE happy
+    BE "Hehe, you butthead. That was {i}so{/i} lame."
+    MC "I'm surprised you walked right into it."
+    show BE neutral
+    BE "You wanna know something I saw today that was funny?"
+    MC "Let me guess... {i}my{/i} face?"
+    show BE smug
+    BE "No, only half it— but that was enough."
+    MC "I suppose I walked into that one too."
+    BE "Yeah you did. I still don't know how you see at all with that mop of hair all over the place."
+    MC "Alice says I remind her of an Old English sheepdog."
+    show BE happy
+    BE "HAHA! I can {i}definitely{/i} see the resemblance."
+    MC "Huh? What do you mean? It's a remark on my alertness and acute senses."
+    show BE confused
+    BE "Uh, Kei-chan, have you ever {i}seen{/i} a picture of one of those dogs?"
+    MC "Come to think of it, not that I recall. No biggie, I'll just pull out the phone and give it the ol' image search..."
+    show BE embarrassed
+    MC "{i}Tch{/i}-goddamnit."
+    BE "{i}Pfffft{/i} BWAHAHA!"
+    $setAffection("BE", 1)
+    BE "Oh my god, Kei-chan. That's like, the funniest thing I've heard all week!"
+    show BE neutral
+    BE "Phew! I definitely needed that. I just got back from visiting Yamazaki-chan's dorm."
+    $setFlag("WGBE005_sheepdog")
+    jump WGBE001_After_c1
+
+label WGBE001_After_c1:
+    MC "How's she doing?"
+    "Truth be told, I had been wanting to visit her one of these days just to say hi, but part of me wondered if she would even want me to, given bad blood between her and Alice." 
+    "Not that I thought she'd hold that against {i}me{/i}, but still..."
+    show BE sad
+    BE "Honestly, she's been pretty lonely. {w}Kinda hard to do anything or go anywhere when you've outgrown it all." 
+    MC "Yeah, I know what you mean. Unfortunately, there seems to be a lot of that going on around here."
+    BE "She usually just spends time outside, tending her plants in her garden or going through a stroll in the woods, but the past winter had put a damper on all of that, still hasn't warmed up that much either."
+    BE "I tried to cheer her up, not sure if I succeeded or not."
+    show BE neutral
+    MC "I'm sure it did more good than you think. You're a good friend, Honoka. A better one than me, that's for sure. I'd been meaning to go visit her in the Giant's Dorm, but I hadn't got the chance yet."
+    show BE doubt
+    MC "What with all... {w}Well, you know how it goes with those two."
+    BE "Yeah... That whole deal."
+    show BE neutral
+    BE "You wanna come with me next time I visit her?"
+    MC "Sure, I'd like that. I've actually never been to her dorm before."
+    show BE happy
+    BE "I'm sure she'll appreciate you stopping by."
+    BE "On a related note, wanna see something cool?"
+    "I didn't notice it before until Honoka picked it up from the seat next to her and plopped what looked to be some kind of ornate piece of clothing onto the table."
+    MC "What is it?"
+    BE "It's a yukata. It was Naomi's, but she outgrew it, obviously."
+    MCT "Understatement of the century there Honoka."
+    "By the look of it on the table, I couldn't quite envision exactly how it would look on either of them, but it appeared to be a navy blue and black weave pattern, with a splash of sakura blossoms on a black backdrop of the belly band."
+    "The basic pattern seemed rather fitting for Naomi's modest sensibilities, which incidentally meshed well with Honoka's no frills sense of fashion." 
+    show BE sad
+    BE "I never had a nice one like this, but I always wanted one."
+    show BE doubt
+    BE "I didn't mean anything by mentioning it to her, but once I did she insisted I take it."
+    BE "I felt bad because I could tell she really loved it, like she had a lot of good memories attached to it, but she insisted so much I felt like it would be worse if I didn't take it."
+    show BE confused
+    MC "Maybe she didn't want it anymore because of how much it reminded her of the past."
+    show BE sad
+    BE "Aw man, you're probably right. I didn't even think about that."
+    BE "Man, this whole thing has been a real downer."
+    MC "Sorry."
+    show BE neutral
+    BE "It's okay, Kei-chan. All the more reason to take good care of it for Naomi!"
+    show BE surprised-2
+    MC "So are you going to wear it?"
+    show BE angry
+    BE "Ha ha. Very funny, Kei-chan."
+    show BE unique
+    BE "In case you didn't notice, there's two major obstacles in the way of that ever happening."
+    show BE wink
+    MC "Oh, I noticed. You probably would have poked my eye out with those things by now if I hadn't."
+    show BE confused
+    MC "Just have Alice get Kokutan to tailor it so it will fit you."
+    show BE doubt
+    BE "Uh, Kei-chan, not that I doubt Kokutan's skills with a needle and thread, but I think this involves more than just a few restitched seams."
+    show BE neutral
+    MC "I know what you're thinking, but I've seen Alice and Kokutan come up with some pretty crazy stuff to accommodate other students. I'd be willing to bet money Alice could source some extra fabric that would be an exact match."
+    show BE smug
+    BE "How much you willing to bet?"
+    show BE angry
+    MC "Normally I'd be all too happy to take your money, but given how much extra fabric is going to be needed to dock those zeppelins, I'll let you hold on to it."
+    show BE shrug
+    BE "Eh, that's fair." 
+    show BE smug
+    BE "So when can I get in?"
+    MC "What? Why are you asking me? Just go on Alice's website and book an appointment, or text Chibuki."
+    BE "Yeah, but her schedule is {i}so{/i} backed up. I know because I recently had to get fitted for a new bra. No way I'm getting in this week."
+    BE "You got the inside track. Help a girl out here."
+    MC "Look, I'd like to help but I'm not her schedule manager."
+    show BE seductive
+    pause 1
+    MC "Don't look at me like that."
+    BE "{i}Pweeeze{/i}, Kei-chan."
+    MCT "Ughhh, anything but the pouty-please."
+    show BE smug
+    MC "Alright, fine. Alice had a cancellation tomorrow afternoon. I was hoping to back-fill that with a tea break with her, but I can let her know to expect you to come by."
+    show BE wink
+    BE "See? I knew I could count on you."
+    show BE smug
+    BE "Look at you. The man with connections."
+    MC "Just make sure to be on time. I'm not well connected enough to have that overlooked."
+    show BE embarrassed
+    BE "I don't know why you'd even bother to mention that, Kei-chan."
+    show BE embarrassed-2
+    MC "Call it a hunch... drawn from a wealth of historic data."
+    show BE confused
+    BE "Hey, you don't think she'd have a problem if she knew it was from Naomi-chan, do you?"
+    show BE neutral
+    MC "I wouldn't worry about it. Even though they don't get along, she's not one to hold a grudge by proxy."
+    pause 1
+    show BE smug
+    MC "But just to be safe— don't mention where you got it from."
+    scene black with fade
+    pause .5
+
+    play music WG
+    show Dorm WG
+    show WG pondering at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    WG "Hmm..." 
+    show BE confused
+    show WG doubt
+    WG "Where exactly did you get this yukata, Honoka?"
+    show BE embarrassed
+    BE "Oh, you know, just something I picked up before coming here."
+    show BE happy
+    extend " Seems like a shame to let it go to waste, ya know?"
+    show BE neutral
+    BE "Why do you ask?"
+    show WG pondering
+    WG "It's just a bit odd to me. Despite its rather basic pattern, it's quite evident that the stitching and material are of top quality, which suggest this one was rather pricey when it was originally made..." 
+    WG "Which was quite a few years ago judging by the ware." 
+    WG "The colors are nice enough, but woefully outdated and they don't flatter you, if I may say."
+    show BE confused
+    WG "It's almost as if it wasn't made for you at all..."
+    show BE embarrassed
+    BE "Well, I never had the greatest eye for fashion."
+    MC "That's for sure."
+    show BE angry
+    BE "Shush! Quiet you!"
+    show WG sly
+    WG "And then there's the matter of the name \"Yamazaki\" embroidered on the inner lining." 
+    show BE embarrassed
+    BE "Hehe... Yes, well... That's uhhh... Quite the coincidence, isn't it?"
+    MCT "Damn, I should have known she was going to figure it out sooner or later. {w}Though I didn't think it'd be {i}this{/i} soon."
+    show BE neutral
+    show WG neutral
+    WG "Relax." 
+    show WG haughty
+    extend " What do I care if two friends want to scavenge their closets for clothes?"
+    WG "I've given Aida plenty of articles of clothing I've outgrown."
+    show WG doubt
+    WG "But those had fit her at the time." 
+    show WG stern
+    extend " Why did Naomi give you something that doesn't even fit you?"
+    show BE doubt
+    show WG neutral
+    BE "It was special to her. I know she wishes she could still wear it. And I'm sure there's a lot of happy memories she has attached to it, which is why she wanted me to have it." 
+    BE "But I don't want to just stuff it in a drawer and never look at it again, y'know?." 
+    show BE sad
+    BE "Naomi's so gigantic now, I don't know how, or {i}if{/i} she'll ever be able to leave the island, and who knows when I'm ever going to get back here to see her again after we're done with school here?"
+    show WG doubt
+    BE "I really want something to remember her by, and I don't think there's a better way than getting to wear the yukata she gave me."
+    "Alice, for her part, didn't seem particularly moved by the story behind the yukata." 
+    "I shot Alice a side glare out of the corner of my eye, "
+    show WG stern
+    extend "With her returning an equally unamused look."
+    MC "I'm sure Alice is flattered you're trusting her with something that holds such sentimental value." 
+    show WG neutral
+    WG "{i}Sigh{/i}... Fine. It shouldn't be a problem to get this fitted for you. What do you think, Kokutan?"
+    show Kokutan neutral with dissolve
+    Kokutan "I think we can make it work— assuming Alice can find enough fabric."
+    show BE neutral
+    BE "Are you about done down there? How many different ways do you need to measure boobs?"
+    Kokutan "Don't rush an artist at her craft. In case you hadn't noticed, it's kind of hard to see under the twilight of twin moons. I don't think anyone has ever made a yukata with {i}these{/i} kind of contours to consider." 
+    Kokutan "It will only be possible if I have all the necessary measurements. I need to make sure it's going to turn out right. So stop squirming."
+    show BE angry
+    BE "Alright, alright."
+    show BE embarrassed
+    BE "Just try to be more gentle."
+    show BE disoriented
+    extend " The girls are kind of sensitive."
+    show BE neutral
+    show WG neutral-2
+    WG "As Kokutan alluded to, the issue isn't in the design or execution, but rather finding matching fabrics for something so antiquated."
+    show BE surprised
+    BE "That doesn't sound good."
+    show WG haughty
+    WG "Don't worry about it. I don't anticipate it being an impossibility. I have my connections."
+    BE "It won't be too expensive, will it?"
+    show BE embarrassed
+    show WG neutral-2
+    BE "This was kind of a spur of the moment thing that happened. I didn't really have a big budget saved up for this thing."
+    WG "It is a bit unusual to see high quality materials like this being used to create something with such a basic pattern, but I have a pretty good idea of what it should cost. I don't anticipate it being outside your usual price range."
+    show BE shrug
+    BE "Whew. That's a relief."
+    MC "Well, seems that all worked out."
+    show BE worried
+    pause 1.5
+    MC "Hm? {w}What's a matter Honoka? Looks like you're going to get your yukata after all."
+    BE "Nothing... It's just that..."
+    BE "Now that I think about it, I'll have a yukata, but now Naomi doesn't."
+    show BE doubt
+    BE "I mean, she hasn't had one that fit for quite a while, but still... it doesn't seem right."
+    show WG haughty
+    WG "Yes, well, these things happen it would seem. Especially around here."
+    show BE sad
+    BE "Say, Alice... I know this probably isn't your cup of tea..."
+    show WG surprised-2
+    show BE neutral
+    BE "But could you make a yukata for Naomi?"
+    show WG doubt
+    "Alice looked over at my direction. I shrugged my shoulders to convey my complete uninvolvement in this suggestion— but also to suggest \"why not?\"."
+    WG "{i}Ughh{/i}... Fine. I suppose."
+    Kokutan "{i}Yes!{/i} Sounds like a fun challenge."
+    WG "That it will be... What is she measuring these days?"
+    show BE confused
+    BE "Um, well... I'm not exactly sure."
+    show WG neutral
+    WG "A photo with her next to something with a reference height should suffice. Preferably from different angles."
+    show BE happy
+    BE "Oh, sure. I got plenty of pictures on my phone. Here ya go!"
+    Kokutan "Let me see!"
+    show WG pondering
+    WG "Hmm... Keisuke, be a Dear and hand me my calculator, please."
+    MC "Sure thing. Here you go."
+    WG "Thank you, Dear. Let's see here."
+    "Alice punched some keys on her calculator with her pudgy digits before waddling over to her adjustable office desk. After some clacking of keys, the printer hummed to life, spitting out a fresh invoice."
+    show WG neutral
+    WG "Here is your invoice. This is an ambitious project so I want the payment upfront."
+    BE "Sure, no problem. Let's see here..."
+    show BE surprised
+    BE "Oh my God!"
+    BE "Alice, this is crazy! Who here has that kind of money!?"
+    show WG doubt
+    show BE wink
+    BE "Um, well... You know what I mean."
+    "I took a look and was shocked at the sticker price as well, but then again, I don't know what else I should have expected."
+    show BE confused
+    show WG stern
+    WG "The amount of fabric we're talking about to make something that would fit her is closer to a mattress than a dress. The fabric itself is not cheap either. Throw in shipping and labor on top of that too."
+    show BE worried
+    WG "It's all detailed in the invoice. My price is more than reasonable."
+    BE "Yeah... I suppose you're right."
+    show WG haughty
+    WG "Besides, Yamazaki-san is of means herself. I'm sure she can open up the family coffers to spring for a new yukata."
+    show BE doubt
+    BE "I mean, maybe... But that's not going to work! {w}She wouldn't splurge on anything like this for herself."
+    show BE sad
+    WG "Well that's her problem then. I won't bother to make it mine unless I'm compensated to do so."
+    Kokutan "Aww. I was looking forward to doing that one."
+    show WG neutral
+    WG "It seems your appointment time slot is about to end. I'll get those materials ordered for your new fitting. Hopefully it won't take too long, we'll just have to see how quickly we can get the fabric in."
+    show BE worried
+    WG "Let me know if you work something out with your other potential order. But, all the same, I'm not going to plan on it."
+    BE "Yeah... Okay."
+    BE "Thanks, Alice."
+    show BE neutral
+    BE "Thanks, Kei-chan for letting me take your spot."
+    MC "No problem, it worked out."
+    BE "You coming back to the dorm, Kokutan?"
+    Kokutan "Yeah, just finished jotting down all these measurements. I'll head out with you."
+    hide BE 
+    hide Kokutan
+    with dissolve
+    pause 1
+    MC "Tough sell, huh?"
+    show WG haughty at altMove(0.5, 0.5)
+    WG "Reality can be tough. Such is life. My offer was perfectly reasonable."
+    show WG surprised-2
+    MC "I mean Honoka trying to sell you on the idea."
+    show WG stern
+    WG "And what would be so unreasonable about my reluctance?"
+    MC "I didn't mean to imply it was. Just making the observation..."
+    show WG haughty
+    WG "I'm actually proud of myself for resisting the urge to slap on a mark-up, in light of the intended recipient."
+    show WG doubt
+    MC "Oh, come on, Alice. I don't really believe that. Grudge aside, that kind of pettiness seems beneath you."
+    show WG sly
+    WG "You give me too much credit..."
+    show WG haughty
+    WG "As far as I'm concerned this silly little feud can be stopped if she would just apologize and afford me the respect I deserve."
+    WG "Until then, I have no particular obligation or desire to go out of my way to help her. She can wear a burlap sack for all I care. If she doesn't want to do business with me, then I don't have business with her."
+    MC "{i}Sigh{/i}... Well, thanks for making the time for Honoka, and at least taking the proposition seriously. Who knows, maybe she'll find a way to get the money for it?"
+    show WG neutral
+    WG "As to the first part, she should be thanking you."
+    show WG happy-2
+    WG "Though I appreciate your increasing acumen for business development, I don't think you should be giving our time away so easily."
+    MC "I know, I know. But she was giving me this look-"
+    show WG haughty
+    WG "My Dear Boy, I'm sure Honoka will still be your friend even if you tell her no sometimes."
+    MCT "Easy for her to say... Those puppy-dogs eyes have {i}no{/} effect on Alice. I wish I knew her secret."
+    show WG doubt
+    WG "As to your second point— I doubt it. There's no better reality check than an invoice that's due." 
+    MC "I think you're underestimating Honoka. I know she's not exactly one to stick with things, having jumped through a dozen different clubs this year, but I wouldn't be surprised if she sticks with this."
+    show WG haughty
+    WG "Is that so? If that's what you think..." 
+    show WG sly
+    WG "But for my money, I'll believe it when I see it."
+    scene black with fade
+    pause .5
+
+    play music Rain
+    scene Campus Center
+    show BE sad
+    with fade
+    "I caught up with Honoka the next day in the morning before classes. She was still looking down in the dumps."
+    "As I suspected, this wasn't something she was going to let go."
+    MC "Hey."
+    BE "Hey, Kei-chan."
+    MC "Still thinking about the yukata?"
+    BE "Yeah."
+    show BE worried
+    BE "It's just so frustrating. I just wish I could do something for Naomi. Poor girl has had her whole world turned upside down by her growth."
+    BE "Her old life was stripped away from her. I thought if I could give her that yukata it might just let her feel like she has a part of it back."
+    show BE doubt
+    BE "But I got nothing, Kei. I can't afford that! I can barely swing a fraction of it."
+    MC "Hmmm... {w}Maybe that's it?"
+    show BE confused
+    BE "What do you mean?"
+    MC "Well, it may be too expensive for {i}one{/i} person, but what if we all chipped in?"
+    MC "Look, I got about 10k I can throw in. I know it's not much but if we ask around with all her friends maybe we can get there."
+    show BE surprised
+    BE "That's a great idea, Kei-chan!"
+    show BE happy
+    BE "People remember how kind Naomi is, I'm sure everyone would like to pitch in!"
+    MCT "Well, everyone except {i}one{/i} person that is."
+    BE "Alright! After class, let's start tracking down all her friends."
+    hide BE with dissolve
+    "And thus began our quest."
+    scene black with fade
+
+    play music Schoolday
+    pause .5
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setNatsOutfit(OutfitEnum.GYM)
+    scene Gym
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral
+    with fade
+    MC "So that's what we're trying to do."
+    BE "Yup, that's the gist of it. Think you're up for helping out?"
+    Natsuko "Hm. That does sound like a nice gift for Yamazaki-san. I think you're right. She's too selfless to ask for something like that herself."
+    FMG "Yeah, girl needs to learn to splurge on herself every now and then."
+    show Natsuko annoyed
+    Natsuko "I'd much prefer if her reserved and quiet nature rubbed off on you rather than the other way around."
+    show FMG happy
+    FMG "You're just jealous Yamazaki-san prefers hanging out with me rather than you and your radiant RBF energy."
+    show Natsuko smug
+    Natsuko "Do you even have any extra money saved to contribute? Or did you spend it all on ice cream and computer games you hate playing again?"
+    show FMG neutral
+    show Natsuko neutral
+    FMG "I never said I hated them. They just piss me off a lot."
+    Natsuko "So what's the difference?"
+    MC "You'd be surprised."
+    show BE shrug
+    BE "It's true."
+    show FMG happy
+    FMG "Thank you!"
+    show FMG neutral
+    FMG "See? I told you."
+    Natsuko "I don't care about your stupid hobbies or how you waste your money." 
+    Natsuko "Here you go, Inoue-san. It's not a lot, but it's more than you're going to get out of Akira." 
+    show FMG angry-2
+    FMG "Hey! I got money to give them. I can throw down just as hard as you any time. Here!"
+    show FMG neutral
+    BE "Thank you both so much! This is great!"
+    BE "At this rate. We're going to get it all in no time!"
+    MC "I don't think we've established a statistical trend yet, but it's at least a good start."
+    BE "Later you two! Thanks again."
+    hide BE with dissolve
+    MC "There she goes again. I don't think she even knows where to find Tanaka-san."
+    show Natsuko smug
+    Natsuko "I'm impressed you managed to save that much. Quite uncharacteristic of you."
+    show FMG happy
+    FMG "Told you not to underestimate me!"
+    Natsuko "Let me guess, if they'd have gotten here even an hour later, that'd all be gone."
+    show FMG sad
+    FMG "Ugh, don't remind me. My ice cream fund has been wiped out again— only this time there's no ice cream to show for it."
+    scene black with fade
+    pause .5
+
+    scene HallwayStairs
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show Ryoko neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    Ryoko "A new yukata for Naomi?"
+    show Ryoko happy
+    Ryoko "That's a great idea! She's going to love that for sure!"
+    show BE happy
+    BE "My thoughts exactly."
+    show Ryoko confused
+    Ryoko "How are you going to get one that big though? I don't even think the clothing shop in the Giant's Town sells that kind of stuff."
+    MC "We got connections."
+    show Ryoko neutral
+    Ryoko "Who? Nikumaru-san?"
+    MC "The very same."
+    Ryoko "I haven't had to use her service, but I've seen some impressive stuff other students got from her."
+    Ryoko "Still though, this seems a few steps further than that."
+    show BE smug
+    BE "I'm sure Kokutan is up for the task."
+    show Ryoko confused
+    Ryoko "Who's that?"
+    MC "Her seamstress."
+    BE "And my roommate. She's a pro."
+    MCT "She's a lot of things..."
+    BE "With her and Alice working on it I'm sure they can nail it!"
+    show Ryoko neutral
+    Ryoko "Well, if you say so, then I'm in. Hope this is enough to count for something."
+    Ryoko "Poor girl could use something that reminds her of home— in a good way for once."
+    show BE happy
+    BE "For sure! Thank you so much!"
+    hide Ryoko with dissolve
+    MC "Looks like we're making good progress so far."
+    BE "Yup, one more crossed off the list."
+    scene black with fade
+    pause .5
+
+    scene Music Classroom
+    show Okisho neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show BE doubt at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    Okisho "A yukata? Sounds kind of lame to me."
+    MC "Well, it's a gift for her, not you Mizawa-san."
+    show BE neutral
+    Okisho "Yeah, yeah. I get it. It does seem like something she'd go for. She was really into that traditional stuff, like my parents."
+    Okisho "But I do miss my old roommate. She was just a tiny thing when I first met her." 
+    Okisho "Now both of us have practically outgrown this place. HA!"
+    MC "So are you in?"
+    Okisho "Yeah, I'm in. If it's for Yamazaki-san. But if I'm giving up my snack funds for this, tell Nikumaru-san it better be the best damn yukata she's ever seen."
+    MC "Will do."
+    Okisho "That does remind me that I should waddle my fatass down to her hanger again and pay her a visit. She always did like to listen to me play my biwa."
+    show BE happy
+    BE "I'm sure she'd like that."
+    Okisho "Alright, I gotta get ready for music club practice. You know where the door is."
+    hide Okisho with dissolve
+    BE "That was easier than I thought. Didn't think she'd be keen on giving Alice any money."
+    MC "They may not like each other, but they respect their respective talents."
+    show BE happy at altMove(0.5, 0.5)
+    BE "Well it certainly makes it a lot easier given how much of an impression Naomi has left on everyone."
+    MC "Looks like we got a few more."
+    MCT "I'm not sure about the next two though..."
+    scene black with fade
+    pause .5
+
+    scene Hallway2 with fade
+    "Not that I doubted their sincerity or willingness to help, but I always got the impression from our interactions over the past year that both of them were of rather modest means... and even that was probably putting it generously."
+    show AE neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG excited at Position(xcenter=0.75, yalign=1.0)
+    show BE happy
+    with dissolve
+    PRG "A new yukata for Yamazaki-san? That sounds wonderful! I'm sure she'd love it."
+    AE "Something to remind her of home... hm... I suppose that can work well for some people, yes. At least a token from her hometown to ease the blow of her condition."
+    BE "Exactly!"
+    show BE neutral
+    show PRG worried
+    BE "So, you're both in then?"
+    show PRG unsure
+    show AE pondering
+    show BE confused
+    "Aida & Shiori" "..."
+    MC "Um, Honoka, maybe financial support isn't the only contribution to do something nice for Naomi."
+    show BE surprised-2
+    BE "But how else are we gonna-"
+    show BE confused
+    MC "{i}Ahem{/i}..."
+    MCT "Man, Honoka's gunning so hard on this she's not reading the room."
+    show BE embarrassed
+    BE "I mean, that's a real good idea, Kei-chan."
+    show BE happy
+    BE "So anyway, that's our plan."
+    show BE wink
+    BE "Be sure to keep it a secret, okay?"
+    show AE sad
+    AE "I'm afraid I don't have much to offer."
+    show AE sad-2
+    AE "It's not much, but please accept my contribution."
+    show BE surprised-2
+    show AE neutral
+    BE "Thank you Matsumoto-san. I hope I didn't imply we were asking for a lot. Any little bit helps."
+    show BE neutral
+    AE "It is a worthy cause. I would like to help, even if I have little to offer."
+    MC "Much appreciated."
+    show BE confused
+    show PRG neutral
+    PRG "I-I have some money saved up from working for Alice. I know it's not much but I'd like Yamazaki-san to have it."
+    PRG "I-I think we all know what it feels like to have our world turned upside since coming here."
+    MCT "That would be the understatement of the century coming from Aida."
+    show BE surprised-2
+    BE "Gosh you two, I don't know what to say. Thank you so much!"
+    AE "It's certainly well deserved."
+    show PRG excited
+    PRG "I'm sure she'll love it."
+    scene black with fade
+    pause .5
+
+    scene Dorm Exterior
+    show BE neutral
+    with fade
+    MC "Looks like we're getting close to the end of our list. We've really been pounding the pavement this week. Looks like the next person on our list is a bit further off the beaten path."
+    show BE smug
+    BE "Is this what it's like tracking down people as a delivery boy for Alice?"
+    MC "More or less. But at least it forced me to know my way around campus really well." 
+    scene black with fade
+    pause .5
+
+    scene Giant Dorm Exterior
+    show Jineko neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    Jineko "So, a yukata for Yamazaki-san?"
+    Jineko "You sure she wouldn't want something more practical like a chair or even a raincoat?"
+    BE "That's just it, Naomi-chan is always super-practical and self-denying. This is supposed to be something just for her."
+    show BE smug
+    BE "She's not the type to splurge on herself, which is why I think we should help her out this time!"
+    Jineko "Heh, knowing her, you're probably right."
+    Jineko "I try to get her to chill out and loosen up, but that girl has a lonesome aire to her that she just can't seem to shake— and I don't blame her at all."
+    Jineko "Like they say, it's lonely at the top."
+    show BE surprised-2
+    Jineko "Here, take this. Misuboro-san pays me for some of the hours I put in at the shop. It's a nice way of making some money."
+    Jineko "Though to hear him talk, I should be paying him for all the hours I rack up on his equipment."
+    Jineko "He's an ornery old curmudgeon, but he does care— even if he'd never admit it in a million years."
+    show BE happy
+    MC "Thanks Watanabe-san."
+    Jineko "Don't mention it. I hope it cheers her up."
+    BE "I know it will!"
+    hide Jineko with dissolve
+    BE "See? Have a little faith, Kei-chan. This is going to work out perfect— I just know it!"
+    "I could hardly believe it myself, but I was starting to share Honoka's optimism."
     jump daymenu
 
 label WGFMG001:
@@ -36525,6 +37114,9 @@ label WGFMG005:
     jump daymenu
 
 label WGGTS001:
+    $setVar("WGGTS", getVar("WGGTS") + 1)
+    if getVar("WGGTS") >= 2 and not getFlag("WGGTS2"):
+        $setFlag("WGGTS2")
     scene Classroom with fade
     play music Schoolday
     "Class was almost done for the day, but for once I wasn't looking forward to it ending. I really need more time for this quiz I probably should have studied for."
@@ -36609,6 +37201,9 @@ label WGGTS001:
     jump daymenu
 
 label WGGTS002:
+    $setVar("WGGTS", getVar("WGGTS") + 1)
+    if getVar("WGGTS") >= 2 and not getFlag("WGGTS2"):
+        $setFlag("WGGTS2")
     scene Hallway with fade
     play music Schoolday
     "This morning's classes had dragged more than usual. Then again I didn't exactly go to bed early the night before."
@@ -36742,6 +37337,9 @@ label WGGTS002:
     jump daymenu
 
 label WGGTS003:
+    $setVar("WGGTS", getVar("WGGTS") + 1)
+    if getVar("WGGTS") >= 2 and not getFlag("WGGTS2"):
+        $setFlag("WGGTS2")
     scene Dorm Exterior with fade
     play music Busy
     "Alice's business was starting to pick up. I'll admit I was skeptical at first, but intrigued enough to go along with the idea to make some extra money."
@@ -36892,6 +37490,9 @@ label WGGTS003:
     jump daymenu
 
 label WGGTS004:
+    $setVar("WGGTS", getVar("WGGTS") + 1)
+    if getVar("WGGTS") >= 2 and not getFlag("WGGTS2"):
+        $setFlag("WGGTS2")
     scene Dorm Exterior with fade
     play music DayByDay
     if not getFlag("VisitedChukanPoint"):
@@ -37075,4 +37676,500 @@ label WGGTS004:
     show WG haughty
     WG "We certainly do, but I can assure you I won't be making the first move. She instigated this, she can conclude it."
     MCT "Of all the mole hills to fight over... or boulders to push up a mountain"
+    jump daymenu
+
+label WGGTS005:
+    play music DayByDay
+    scene Dorm Interior
+    show BE neutral
+    with fade
+    MC "Alright, I think I've gone through my whole list by this point."
+    MC "I was able to guilt Daichi into donating a bit, but not without him sending me on another wild goose chase."
+    show BE smug
+    BE "Nice! Way to take one for the team."
+    show BE neutral
+    MC "Other than that I talked to a few more people, but that didn't yield too much. How about you?"
+    show BE shrug
+    BE "Same, more or less."
+    show BE doubt
+    BE "I talked to some of the girls I knew from my old clubs and a few other people that'd know her, but didn't come up with too much more either."
+    show BE smug
+    BE "But hey, we've been at this for over a week. We probably got this wrapped up by now."
+    show BE confused
+    MC "I'm not so sure about that. Let's count it up."
+    show BE neutral
+    BE "A few thousand here..."
+    MC "That's about fifteen thousand here..."
+    BE "Alright, a few more stacks of ten thousand."
+    MC "Okay, there's a handful more here."
+    show BE happy
+    BE "So, how we looking?"
+    show BE doubt
+    MC "Shit..."
+    show BE unamused
+    BE "That doesn't sound good..."
+    MC "We're nowhere near what Alice quoted us! {w}Maybe, {i}maybe{/i} this is enough to cover the materials, but this isn't even {i}half{/i}."
+    show BE surprised
+    BE "What!?"
+    show BE doubt
+    BE "No... But this was for Naomi..."
+    show BE furious
+    BE "This sucks Kei! It's so STUPID!"
+    BE "Why do we even have to scrounge up all this money? If Alice wasn't such a big fat meanie she could just pay for all of it herself!"
+    show BE surprised
+    MC "Oi, oi. That's a little harsh don't you think?"
+    BE "Oops! {w}Sorry, Kei-chan. You know I didn't mean it like {i}that{/i}."
+    show BE angry
+    BE "But still, I don't see why it's such a big deal for her to cover it."
+    show BE unamused
+    MC "Probably because she doesn't want to."
+    BE "Well, yeah, but why can't she just get over that stuff with Naomi?"
+    MC "Probably because she doesn't want to."
+    show BE doubt
+    BE "I'm being serious here, Kei-chan!"
+    MC "I know, believe me I do, but she can be stubborn. Hell, they both can be it would seem. But at the end of the day, neither one of us can tell her what to spend her money on, or make her if she doesn't want to."
+    MC "Trust me, there's a lot of things Alice could make go away with her magic money wand, but do you really want to be friends with someone who thinks that way about everything?"
+    show BE seductive
+    BE "I mean, it'd kinda be handy right about now..."
+    show BE angry
+    MC "Honoka!"
+    show BE shrug
+    BE "I know, I'm just saying. Maybe this one time couldn't hurt."
+    show BE worried
+    MC "Maybe you're right. But for perspective, we've gone from doubting Alice would even agree to alter the yukata you got from Naomi, to hoping she'll just pay for a new one for her in a pretty short amount of time."
+    MC "It's not the most realistic of expectations."
+    BE "You're right... I'm just feeling really defeated here, Kei-chan." 
+    BE "This was the only thing I could really think of that I could give that she could take with her to show how much I appreciated our friendship... and I couldn't even do that {i}one{/i} thing."
+    show BE doubt
+    MC "Hey, don't give up just yet. We got a decent chunk of it. This should at least be enough for Alice to get it ordered. We could try to work out some kind of payment schedule for it, she's managed to work that out with some people before."
+    show BE shrug
+    BE "Couldn't hurt to try."
+    show BE neutral
+    BE "Alice said my refit would be ready tomorrow. Think you can come with me and help me work out a deal with her?"
+    MC "Sure. No problem."
+    BE "Thanks, Kei-chan."
+    scene black with fade
+    pause .5
+
+    play music WGAlt
+    scene Dorm WG
+    show BE surprised-2 at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    WG "How's the fit?"
+    BE "I love it! It feels amazing— and it looks gorgeous!"
+    show BE happy
+    BE "Now I got something I'll always be able to remember her by— that I don't have to stuff away in the corner of my closet forever."
+    BE "I can't wait for an occasion to show it off!"
+    show WG happy
+    BE "Thanks, Alice!"
+    show WG haughty
+    WG "You're most certainly welcome."
+    show Kokutan neutral with dissolve
+    show BE smug
+    BE "I suppose Kokutan helped too."
+    Kokutan "Hey!"
+    show BE embarrassed
+    Kokutan "Don't come crying to me next time you break a bra strap!"
+    show BE smug
+    BE "Just kidding. I think you really outdid yourself with this one."
+    Kokutan "That's more like it!"
+    MCT "Well, if nothing else, at least this part went off without a hitch."
+    hide Kokutan with dissolve
+    show BE neutral
+    show WG neutral
+    MC "While we're on the subject of yukatas, we did want to talk to you about the other order we had planned."
+    WG "Oh? Is that so? {w}Did you manage to come up with the money?"
+    show WG doubt
+    show BE doubt
+    MC "Yes... well, um... sort of."
+    BE "This is all we came up with."
+    "Honoka handed Alice the wad of cash, though judging by the look on her face, this fat stack of cash was down right anemic in comparison to expectations."
+    MC "I know it's not everything, but we were thinking this could be enough to get started as we worked out a payment plan."
+    show WG stern
+    WG "I'm afraid you've over-extended your credit already, Dear. It is certainly admirable the lengths you go to help your friends, but you can't keep stepping in every time this kind of thing comes up."
+    show BE worried
+    show WG doubt
+    BE "She's right Kei-chan, you've helped me plenty enough."
+    show BE doubt
+    BE "You don't happen to need another assistant, do you Alice?"
+    WG "As much as I could use an extra dishwasher to help out Chibuki and Sakura, I think I need to recruit someone with a better frontal reach, unfortunately Honoka."
+    MCT "Oh not to worry, I'm sure Tomo will come crawling to her eventually the next time she blows her money right before the next big game release drops."
+    if isEventCleared("MC014"):
+        MCT "Even if it turns out to be a complete flop. Oh man, that'd be even sweeter now that I think about it, hehe. She'd be so mad."
+        show WG sly
+        WG "What's so funny?"
+        MC "Oh, nothing..."
+    show BE worried
+    BE "Sigh... {w}Sounds like this idea was a big bust."
+    "I had to stifle a chuckle, considering the source of that line. {w}Any other time Honoka would have been the first to laugh along with something like that, but this was a pretty dour note to go out on."
+    show WG haughty
+    WG "Well, there's no sense in speculating. Let's count out how much you actually have."
+    MCT "Oh, come on, Alice. Don't rub it in her face."
+    show WG pondering
+    WG "Let's see here..."
+    WG "Shipping, materials, design... Looks like we managed to net out on the MOQ..."
+    show WG neutral
+    show BE confused
+    WG "Okay, you're good to go. You can pick up your order now if you'd like."
+    BE "..."
+    MC "Huh?"
+    WG "The order is ready. I'm surprised you didn't notice the massive folded stack on the \"orders filled\" pile when you came in."
+    MC "That's {i}one{/i} order?"
+    show WG doubt
+    WG "I told you it was going to be like making a mattress."
+    show BE surprised
+    BE "You really did it!"
+    show BE surprised-2
+    BE "{i}Ohmygod{/i}, Alice! Thank you so much."
+    show WG surprised
+    "Honoka rushed over to Alice to give her a hug—"
+    play sound Boing
+    show BE embarrassed
+    "Only to bounce right off of her as the two top heavy titans collided with a big squish."
+    show WG happy-2
+    BE "Heh, hope you don't mind if I settle for a side hug."
+    show Kokutan neutral with dissolve
+    Kokutan "What's going on?"
+    BE "Kokutan! Come here!"
+    Kokutan "{size=-6}{i}Mmmph... mmmph!{/i}{/size}"
+    MC "Uh, I think you might need to let her up for some air."
+    show BE surprised-2
+    BE "Oh! Sorry, Kokutan."
+    show BE embarrassed-2
+    BE "Guess I got carried away."
+    show BE angry
+    Kokutan "Suffocation is an odd way of expressing gratitude, Inoue-san."
+    BE "Sorry."
+    show BE unique
+    BE "Sometimes I forget that I might poke an eye out with these girls."
+    MC "Or collapse a windpipe apparently."
+    show BE neutral
+    show WG surprised-2
+    MC "How did you already get this done, Alice? I thought you were waiting on the money to order materials."
+    show WG pondering
+    WG "Well, the minimum order quantity of the cloth I needed to purchase for Honoka's refitting turned out to be quite a bit more than I originally estimated."
+    WG "I decided to eat the loss of the material cost on Honoka's yukata, but the price break I ended up getting on a per unit basis brought the total cost down considerably for Naomi's yukata."
+    show WG haughty
+    WG "Luckily for you, we were able to make up for the difference with the amount you were able to scrounge. So it's yours to do what you please with."
+    MCT "That math doesn't add up... but I'm not going to argue with her about it."
+    show BE happy
+    BE "{i}Yesss!{/i}"
+    BE "See, Kei-chan? It all worked out."
+    MC "Looks like it did."
+    BE "Let's get it over to her right now!"
+    MC "How are we supposed to carry that thing over to her dorm?"
+    show BE shrug
+    show WG sly
+    BE "I hear this business does deliveries."
+    scene black with fade
+    pause .5
+
+    play music GTSAlt
+    scene Giant Dorm Exterior
+    show BE neutral
+    with fade
+    MC "This thing is {i}heavy{/i}."
+    BE "Hey, no whining. You're lucky you don't have to carry {i}these{/i} things around all the time."
+    "I felt strapped down like a dromedary hauling this thing on my back. My legs were getting tired by this point, it wasn't exactly a short jog over to the Giant's Dorm."
+    "Not like I could complain to Honoka about the matter, but the straps were getting uncomfortable too."
+    BE "Alright, she's gotta be in. Let's knock."
+    play sound Knock
+    GTS "Oh, a visitor? Who is it?"
+    show BE smug
+    BE "Special delivery!"
+    GTS "Oh, come in, Inoue-san."
+    scene Giant Dorm Interior
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    BE "I brought a guest. Hope you don't mind, Yamazaki-chan."
+    GTS "Not at all. A pleasure to see you again, Hotsure-san."
+    "It had been a while since I had seen Naomi up close. To say she was a towering figure would be an understatement, and too literal at the same time." 
+    "The sight and scale of her was surreal, like I was a bystander in a giant monster flick, but her gentle demeanor and soothing tone quickly dissipated any sense of unease I had felt with my initial reaction to her size."
+    MC "Nice to see you as well, Yamazaki-san. I was hoping to give you a visit here one of these days."
+    show GTS sad-2
+    GTS "I appreciate that. It is regrettable we haven't gotten to spend as much time together this year. I fear I have given undue weight to some unfortunate circumstances and been too reluctant to extend my courtesy to you as well."
+    show BE happy
+    show GTS neutral
+    BE "Well, you're both here now, and that's what counts!"
+    show BE smug
+    BE "We got something for ya!"
+    show GTS pondering
+    GTS "Oh? Is that what you were carrying in, Hotsure-san?"
+    show BE happy
+    BE "It sure is! Show her, Kei-chan!"
+    show GTS pondering
+    GTS "Is that...?"
+    show GTS surprised
+    BE "It's a brand new Yukata! I couldn't let you just give your old one away to leave you without one of your own."
+    show GTS unique
+    GTS "Heavens, Inoue-san. I'm very flattered. The pattern looks just like my old one I gave you."
+    show BE smug
+    BE "Yup, that was the plan— but this one fits! Go ahead and try it on!"
+    show GTS neutral
+    GTS "I would like that very much."
+    "Having unloaded the massive pack off my back, Naomi, in a show of grace that belied her giant form, daintily proceeded to unfold the highly compressed payload that I labored to trek across campus."
+    show GTS unique
+    GTS "It certainly appears to be my size."
+    BE "I'm sure it is, don't be shy Yamazaki-chan! Put it on."
+    show GTS unique-2
+    "The smile on Naomi's face was infectious as she slipped her arms into the sleeves and cinched it around her waist, revealing a perfect fit!"
+    GTS "By Jove, it is perfect! Even the colors match! Thank you so much Inoue-san!"
+    show BE happy
+    BE "You're welcome Yamazaki-chan. Look, now we can be twinsies!"
+    GTS "Hmhm, so it would seem. How wonderful!"
+    show GTS pondering
+    GTS "But how did you manage to obtain such an item in an appropriate size?"
+    GTS "I was not aware Mt. Fuji Outfitters sold such items."
+    show BE happy
+    BE "It doesn't. That's why we had to custom order it."
+    GTS "Oh? I was not aware they provided custom orders."
+    BE "They don't. At least as far as we know— But we got connections!"
+    GTS "Connections?"
+    show BE shrug
+    BE "Don't worry about it."
+    GTS "Pray pardon my hesitance, Inoue-san, but it rather concerns me how much something like this must have cost, even just for the materials."
+    show BE smug
+    BE "Not to worry— Kei-chan and I got a great deal on it."
+    show GTS neutral
+    GTS "I see. So you helped as well, Hotsure-san?"
+    MC "You could say that. But everyone pitched in."
+    show BE happy
+    BE "Oh yeah, we got a card signed from everyone that pitched in to help with it."
+    show GTS happy
+    "Honoka pulled out the folded card from her backpack. Unfurled, it was the size of a poster board, which seemed like a regular card in Naomi's hands."
+    MCT "Good thing the campus has a print shop."
+    "Naomi sat quietly as she carefully read through the card and signed well wishes," 
+    extend " her eyes growing moist... as her expression changed to sorrow."
+    show BE doubt
+    BE "?"
+    show GTS sad
+    GTS "I am ever so touched by the generosity of so many, but I'm afraid I cannot accept this gift."
+    show BE confused
+    BE "What?"
+    show GTS sad-2
+    GTS "Mizawa-san's note here, \"Nikumaru-san better make you the best yukata you've ever seen.\""
+    MCT "Aw, damnit. Okisho and her big fat mouth..."
+    show GTS sad
+    GTS "I do apologize for burdening you, Honoka, with the weight of my sorrows over having outgrown my yukata and the memories it held to me."
+    GTS "I should have known it would spark your compassionate nature and desire to include me in everything. I had no idea you would take it to such lengths to allow yourself to be taken advantage of by someone so greedy."
+    show GTS sad-2
+    GTS "And now I have allowed everyone else to get dragged in as well."
+    show BE surprised-2
+    "Keisuke & Honoka" "Hey!"
+    show GTS surprised
+    show BE doubt
+    BE "No! That's not it at all! I did this because I wanted to. We all pitched in because we wanted to. And {i}we{/i} all had to do it because we all know you'd never do something nice for yourself like this."
+    show GTS sad
+    show BE sad
+    BE "You're selfless to a fault. It's okay to ask for things for yourself Yamazaki-chan— nice things too for that matter."
+    GTS "Sigh... I appreciate our friendship Inoue-san, and that friendship doesn't require material goods."
+    show BE unamused
+    BE "Required and wanting to are two different things. Can't a girl just do something nice for her friend?"
+    show GTS sad-2
+    GTS "I see. Your heart is in the right place, I just know that Nikumaru-san's is not."
+    show GTS pondering
+    show BE neutral
+    BE "I told you, we got a good deal on this. She cut us a break from what she originally quoted us on. Turns out it was cheaper to make than she thought."
+    show BE confused
+    MC "Actually, I think she ate the cost on this one."
+    BE "What do you mean? I thought she said the cloth was cheaper than she thought it would be?"
+    MC "That's what she said, but there's no way the math adds up on that."
+    MC "At most, all we fronted was the shipping and the bulk of the material cost. That leaves the design work, labor, and delivery costs all on her."
+    MC "So really she was the biggest contributor to the funding of this project. More than all of us combined."
+    show BE sad
+    BE "Aw, man. Now I really feel bad for calling her a big fat meanie."
+    show BE smug
+    BE "She's a softy."
+    MC "I don't know if she'd think that description was much better, Honoka."
+    show BE wink
+    BE "Oh, right..."
+    show BE confused
+    BE "But why ask for the money if she was just going to pay for it?"
+    MC "You'd have to ask her, but my guess is she just wanted to see if you were serious or not."
+    show GTS sad-2
+    "Naomi blinked down at the yukata a moment or two, uncharacteristically stammering."
+    show GTS neutral
+    GTS "...My apologies to you Inoue-san, and Hotsure-san. It appears I have misjudged the situation entirely."
+    show GTS happy
+    show BE happy
+    GTS "I gladly accept this gift, and I will cherish it always. I will be able to reflect back on this time with fondness from the friends I had made during my time here every time I wear it."
+    show GTS neutral
+    GTS "It will likely take me some time, but I wish to thank each and everyone personally who contributed to this gift."
+    show GTS neutral-2
+    GTS "If it is not too much trouble... could the both of you help me to arrange to speak with Nikumaru-san?"
+    show GTS sad
+    GTS "I don't know if she would accept my invitation to meet if I were the one to extend it..."
+    MC "True, I certainly wouldn't give any guarantees."
+    show GTS neutral
+    show BE smug
+    BE "But don't worry, we'll take care of it!"
+    scene black with fade
+    pause .5
+
+    play music Peaceful
+    scene Chukan Point
+    show WG pondering
+    with fade
+    WG "A picnic you say?"
+    MC "Yup. Honoka was so happy you let her off easy on the yukata order that she wanted to do something nice for you."
+    show WG doubt
+    WG "So it had to be something related to food?"
+    show WG sly
+    MC "I never said she was the most creative person I know."
+    show WG neutral
+    WG "Well, I can't say it's an unwelcome gesture. It's a nice spring day and I am feeling quite peckish."
+    show WG neutral at altMove(0.5, 0.75)
+    show BE happy at Position(xcenter=0.25, yalign=1.0) with easeinleft
+    BE "Hey! There's the guest of honor."
+    show WG sly
+    MC "I got her here in one piece."
+    WG "Honestly, Honoka, I appreciate extending the invitation to an outing, but you've paid in full for both your orders. I don't want you to feel a sense of obligation of debt just because you felt you got a good deal from me."
+    show BE shrug
+    BE "Oh, {i}pisha{/i}."
+    show BE happy
+    BE "I definitely owe you one."
+    show WG happy-2
+    WG "Suite yourself."
+    show WG surprised-2
+    WG "But where is the food?"
+    show WG doubt
+    show BE neutral
+    WG "And what is that sound?"
+    MC "What sound?"
+    WG "If you can't hear it already, I'm sure you've felt it through the ground by now..."
+    MC "Oh yeah... that sound."
+    MC "Must be the wind..."
+    show WG stern
+    WG "The wind? {w}I hope for {i}both{/i} our sakes your factor doesn't extend to your ear hairs."
+    show BE embarrassed 
+    BE "{i}Eww{/i}! Haha!"
+    show BE happy
+    "The rhythmic rumbles of footfalls drew closer and closer until she inevitably came into view."
+    hide BE
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    show WG doubt
+    WG "{i}Sigh{/i}... of all the scenic spots to have a picnic it needed to be near those dorms..."
+    GTS "Good day, Inoue-san, Hotsure-san... as well as to you, Nikumaru-san."
+    show WG neutral
+    WG "Charmed, I'm sure."
+    show WG haughty
+    WG "I suppose you have business elsewhere and are just passing through?"
+    show WG surprised-2
+    show GTS neutral-2
+    GTS "Actually, Nikumaru-san, I specifically came here to speak with you."
+    show WG doubt
+    WG "Oh, wonderful..."
+    show GTS sad
+    GTS "I know we haven't gotten along... even at the best of times."
+    show GTS neutral-2
+    GTS "But I wanted to thank you for the role you played in bringing forth Honoka's gift. It is something truly special to me. The fine craftsmanship in addition to faithfully replicating the pattern of the original..."
+    show GTS neutral
+    GTS "That takes a special talent, as well as care and attention. Something I did not expect from you... and now I see that I should have."
+    WG "It was a business transaction and nothing more. I'm glad you were satisfied with the product, but there's no need for such sentimentality."
+    GTS "If that is what you wish it to be, it is well. But I also wish to express my gratitude for your generosity in bearing most of the cost."
+    WG "I don't know what you mean..."
+    show WG surprised
+    MC "Oh, come on Alice. There's no way you got {i}that{/i} good of a deal on the cost per volume of the fabric."
+    show WG stern
+    WG "Okay, fine. Part of me was curious to test the limits of Kokutan's talents. It was the perfect final test."
+    show WG haughty
+    WG "And I'm proud to say she exceeded even my expectations."
+    hide GTS
+    show BE smug at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    show WG doubt
+    BE "But you wouldn't have accepted the order if you didn't already know she could pull it off."
+    hide BE
+    show GTS pondering at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    GTS "I cannot help but be curious about your true motivations, but it is not my business if you would rather not share. Whatever your reasons may be, Nikumaru-san, I wanted to be sure to thank you."
+    show WG sad
+    WG "{i}Sigh{/i}... If you must know..."
+    show GTS surprised
+    WG "I know what it's like to outgrow a dress that holds a special meaning..."
+    WG "A memory that you wish you could hold onto forever, and relive every time you put it on... only to cruelly be forced to move past it, never to have that experience again."
+    show WG neutral
+    WG "I know what it's like, and for all our differences Yamazaki-san, I didn't think you deserved to feel that way forever." 
+    show GTS sad
+    GTS "I see. Thank you Nikumaru-san."
+    GTS "I must apologize. I see now that I misjudged you."
+    GTS "I refused to see it because I did not give due consideration to your perspective, but it's clear to me now that you are indeed a caring person."
+    show GTS neutral
+    GTS "Our feud has been pointless, a waste of time and emotional energy. Let us put away our enmity from this day on."
+    show WG doubt
+    WG "Hmm... Well, I don't know what to say. I never really envisioned us having this conversation."
+    show WG neutral
+    WG "Though I suppose if you want to move past this trifling matter, then I have no reason to hold onto it either."
+    show WG haughty
+    extend " And we can leave it at that."
+    show WG happy
+    show GTS happy
+    GTS "I would very much like that."
+    play music ClearSkies
+    hide WG
+    hide GTS
+    show BE happy
+    with dissolve
+    BE "{i}YES{/i}!"
+    show BE smug
+    BE "See? We did it, Kei-chan."
+    MC "Well, technically they did it, but I suppose we had a hand in it."
+    show BE shrug
+    BE "Good enough for me."
+    show BE confused
+    show WG doubt at Position(xcenter=0.75, yalign=1.0) behind BE with dissolve
+    WG "{i}Ahem{/i}... Not to put a damper on the festivities, as it were, but I thought there was going to be food?"
+    show GTS pondering at Position(xcenter=0.25, yalign=1.0) behind BE with dissolve
+    GTS "I was under that impression as well. It is getting close to dinner time."
+    show BE embarrassed-2
+    BE "Did you honestly want something I'd make?"
+    show BE angry
+    MC "I think we all know the answer to that."
+    show BE smug
+    BE "Me too. Way ahead of you."
+    hide WG
+    hide GTS 
+    hide BE
+    show Jineko neutral 
+    with dissolve
+    Jineko "Here's the kettle."
+    show FMG flex at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "And we brought the wood."
+    show FMG surprised-2
+    Natsuko "Give me that lighter. There's no way I'm trusting you with the fire."
+    show FMG sad
+    FMG "Aw, come on. You're no fun."
+    hide FMG
+    hide Natsuko
+    hide Jineko
+    show PRG excited at Position(xcenter=0.25, yalign=1.0)
+    show AE smile at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    PRG "I brought noodles and the veggies from the cooking club pantry."
+    AE "There were some leftover funds for club activities to allocate for organized social gatherings, so we made a trip to the grocery store for the rest."
+    hide PRG
+    hide AE
+    show Okisho neutral at Position(xcenter=0.25, yalign=1.0)
+    show Ryoko neutral
+    show Kokutan neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    Ryoko "Someone needed to bring the serving bowls. Got'm right here!"
+    Okisho "Don't you have any bigger ones?"
+    Kokutan "Don't forget the spices!"
+    hide Ryoko
+    hide Okisho
+    hide Kokutan
+    show BE happy
+    show WG surprised-2 at Position(xcenter=0.75, yalign=1.0) behind BE
+    show GTS happy at Position(xcenter=0.25, yalign=1.0) behind BE
+    with dissolve
+    BE "It's a hotpot party!"
+    show WG happy
+    "I'd like to think some good food and being surrounded by some good friends, along with a new sense of mutual understanding, was the beginning of a beautiful friendship, but that was probably asking a bit much."
+    "But when it was all said and done, I think we were all willing to settle for a grudge buried and a full stomach— and sometimes that's good enough."
     jump daymenu

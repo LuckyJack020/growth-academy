@@ -644,6 +644,28 @@ init python:
     )
     ost.manualDefineList.append(theme_HeC)
 
+    theme_ReU = ost.soundtrack(
+        name = "Revvin' Up",
+        path = "Audio/BGM/RevvinUp.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Feeling Pumped",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ReU)
+
+    theme_OmF = ost.soundtrack(
+        name = "Get Outta My Face",
+        path = "Audio/BGM/OuttaMyFace.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Confrontational",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_OmF)
+
     ## Base Template
     ######################################
 

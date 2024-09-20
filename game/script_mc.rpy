@@ -1356,7 +1356,7 @@ label MC002:
     show HR neutral
     HR "Utagashi-san."
     show RM concerned-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
-    "Daichi looked like he was lost in thoughts, thinking about something far away from this classroom".
+    "Daichi looked like he was lost in thoughts, thinking about something far away from this classroom."
     show HR neutral-2
     HR "Utagashi-san."
     show RM neutral
