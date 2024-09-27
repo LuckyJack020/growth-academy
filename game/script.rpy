@@ -672,7 +672,6 @@ init python:
         if globalsize > 6:
             globalsize = 6
         prgsize = globalsize
-        #updateMinorSizes() #change after backwards compatibility is broken
 
     def getSkill(s):
         if s not in skills.keys():
@@ -845,31 +844,6 @@ init python:
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
-        #updateMinorSizes(newsize) #change after backwards compatibility is broken
-
-    def updateMinorSizes(newsize):
-        global minorsizes, legalsizes
-        legalsizes = {
-            "Yuki": [1, 2, 3, 4, 5, 6],
-            "Jineko": [1, 2, 3, 4, 5, 6],
-            "Natsuko": [1, 2, 3, 4, 5, 6],
-            "Okisho": [1, 2, 3, 4, 5, 6],
-            "Kanami": [1, 2, 3, 4, 5, 6],
-            "Tako": [1, 2, 3, 4, 5, 6],
-            "Tomoko": [1, 2, 3, 4, 5, 6],
-            "Sakura": [1, 2, 3, 4, 5, 6]
-        }
-
-        try: #backwards compatibility, remove later
-            if instanceof(minorsizes, int):
-                minorsizes = {}
-        except NameError:
-            minorsizes = {}
-        for k in legalsizes.keys():
-            if k not in minorsizes: #backwards compatibility, remove much later (when we stop adding minor characters)
-                minorsizes[k] = legalsizes[k][-1]
-            if newsize in legalsizes[k]:
-                minorsizes[k] = newsize
 
     def getTime():
         global gametime
@@ -1150,7 +1124,6 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Jineko': 1, 'Natsuko': 1, 'Okisho': 1, 'Kanami': 1, 'Tako': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         AEPrevOutfit = OutfitEnum.DEFAULT
         AENsfwOutfit = OutfitEnum.DEFAULT
@@ -1608,7 +1581,6 @@ label startevent:
     scene black with dissolve
     pause .5
     python:
-        updateMinorSizes(globalsize)
         highlitevent = ""
         gametime = TimeEnum.DAY
         AEOutfit = OutfitEnum.DEFAULT

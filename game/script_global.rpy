@@ -801,10 +801,10 @@ image side WGCell = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/side.webp"
 image side FMGCell = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/side.webp")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.webp")
 image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.webp")
-image side TomoCell = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/side.webp")
+image side TomoCell = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/side.webp")
 image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/side.webp")
 image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.webp")
-image side YukiCell = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/side.webp")
+image side YukiCell = DynamicImage("Graphics/minor/yuki/[globalsize]/side.webp")
 
 #Minor characters
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
@@ -822,11 +822,11 @@ image RM happy-2 = "Graphics/minor/RM/happy-2.webp"
 image RM sad = "Graphics/minor/RM/sad.webp"
 image RM smug = "Graphics/minor/RM/smug.webp"
 
-image Yuki neutral = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/neutral.webp")
-image Yuki happy = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/happy.webp")
-image Yuki sad = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/sad.webp")
-image Yuki surprised = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/surprised.webp")
-image Yuki gossip = DynamicImage("Graphics/minor/yuki/[minorsizes['Yuki']]/gossip.webp")
+image Yuki neutral = DynamicImage("Graphics/minor/yuki/[globalsize]/neutral.webp")
+image Yuki happy = DynamicImage("Graphics/minor/yuki/[globalsize]/happy.webp")
+image Yuki sad = DynamicImage("Graphics/minor/yuki/[globalsize]/sad.webp")
+image Yuki surprised = DynamicImage("Graphics/minor/yuki/[globalsize]/surprised.webp")
+image Yuki gossip = DynamicImage("Graphics/minor/yuki/[globalsize]/gossip.webp")
 
 image HR neutral = "Graphics/minor/faculty/HR/neutral.webp"
 image HR neutral-2 = "Graphics/minor/faculty/HR/neutral-2.webp"
@@ -854,11 +854,11 @@ image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.webp"
 image Chiyo neutral = "Graphics/minor/other/chiyo/neutral.webp"
 
 #legalsizes already updated, change images when bigger sprites exist
-image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/annoyed.webp")
-image Tomoko defiant = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/defiant.webp")
+image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/annoyed.webp")
+image Tomoko defiant = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/defiant.webp")
 image Tomoko distracted = Composite(
     (443, 651),
-    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/distracted.webp"),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/distracted.webp"),
     (0, 0), ConditionSwitch(
         "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.webp",
         None, Null()),
@@ -874,7 +874,7 @@ image Tomoko distracted = Composite(
     )
 image Tomoko distracted-2 = Composite(
     (443, 651),
-    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/distracted-2.webp"),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/distracted-2.webp"),
     (0, 0), ConditionSwitch(
         "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.webp",
         None, Null()),
@@ -890,7 +890,7 @@ image Tomoko distracted-2 = Composite(
     )
 image Tomoko distracted-3 = Composite(
     (443, 651),
-    (0, 0), DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/distracted-3.webp"),
+    (0, 0), DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/distracted-3.webp"),
     (0, 0), ConditionSwitch(
         "getAffection('TM') <= 5", "Graphics/minor/tomoko/overlays/emoji1.webp",
         None, Null()),
@@ -904,13 +904,13 @@ image Tomoko distracted-3 = Composite(
         "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.webp",
         None, Null()),
     )
-image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/neutral.webp")
-image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/happy.webp")
-image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/smile.webp")
-image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/surprised.webp")
-image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/sad.webp")
-image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/unique.webp")
-image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[minorsizes['Tomoko']]/[TomoOutfit]/worried.webp")
+image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/neutral.webp")
+image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/happy.webp")
+image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/smile.webp")
+image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/surprised.webp")
+image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/sad.webp")
+image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/unique.webp")
+image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/worried.webp")
 
 image Ryoko neutral = "Graphics/minor/ryoko/[RyokoOutfit]/neutral.webp"
 image Ryoko happy = "Graphics/minor/ryoko/[RyokoOutfit]/happy.webp"
@@ -923,12 +923,12 @@ image Ryoko embarrassed = "Graphics/minor/ryoko/[RyokoOutfit]/embarrassed.webp"
 
 image Chibuki neutral = "Graphics/minor/chibuki/neutral.webp"
 
-image Kanami neutral = "Graphics/minor/kanami/[minorsizes['Kanami']]/[KanamiOutfit]/neutral.webp"
-image Kanami angry = "Graphics/minor/kanami/[minorsizes['Kanami']]/[KanamiOutfit]/angry.webp"
-image Kanami embarrassed = "Graphics/minor/kanami/[minorsizes['Kanami']]/[KanamiOutfit]/embarrassed.webp"
-image Kanami happy = "Graphics/minor/kanami/[minorsizes['Kanami']]/[KanamiOutfit]/happy.webp"
-image Kanami sad = "Graphics/minor/kanami/[minorsizes['Kanami']]/[KanamiOutfit]/sad.webp"
-image Kanami surprised = "Graphics/minor/kanami/[minorsizes['Kanami']]/[KanamiOutfit]/surprised.webp"
+image Kanami neutral = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/neutral.webp"
+image Kanami angry = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/angry.webp"
+image Kanami embarrassed = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/embarrassed.webp"
+image Kanami happy = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/happy.webp"
+image Kanami sad = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/sad.webp"
+image Kanami surprised = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/surprised.webp"
 
 image Kokutan neutral = "Graphics/minor/kokutan/neutral.webp"
 
@@ -937,37 +937,37 @@ image Minori happy = "Graphics/minor/minori/happy.webp"
 image Minori embarrassed = "Graphics/minor/minori/embarrassed.webp"
 image Minori sad = "Graphics/minor/minori/sad.webp"
 
-image Sakura angry = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/angry.webp")
-image Sakura awkward = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/awkward.webp")
-image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/deadpan.webp")
-image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/frustrated.webp")
-image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/neutral.webp")
-image Sakura neutral-2 = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/neutral-2.webp")
-image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/happy.webp")
-image Sakura happy-2 = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/happy-2.webp")
-image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/nervous.webp")
-image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/sad.webp")
-image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/sad-2.webp")
-image Sakura sad-3 = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/sad-3.webp")
-image Sakura surprised = DynamicImage("Graphics/minor/sakura/[minorsizes['Sakura']]/[SakuraOutfit]/surprised.webp")
+image Sakura angry = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/angry.webp")
+image Sakura awkward = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/awkward.webp")
+image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/deadpan.webp")
+image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/frustrated.webp")
+image Sakura neutral = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/neutral.webp")
+image Sakura neutral-2 = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/neutral-2.webp")
+image Sakura happy = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/happy.webp")
+image Sakura happy-2 = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/happy-2.webp")
+image Sakura nervous = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/nervous.webp")
+image Sakura sad = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/sad.webp")
+image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/sad-2.webp")
+image Sakura sad-3 = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/sad-3.webp")
+image Sakura surprised = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/surprised.webp")
 
-image Natsuko neutral = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/neutral.webp")
-image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/annoyed.webp")
-image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/disappointed.webp")
-image Natsuko smug = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/smug.webp")
-image Natsuko flex = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/flex.webp")
-image Natsuko frustrated = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/frustrated.webp")
-image Natsuko happy = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/happy.webp")
-image Natsuko flirty = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/flirty.webp")
-image Natsuko aroused = DynamicImage("Graphics/minor/natsuko/[minorsizes['Natsuko']]/[NatsOutfit]/aroused.webp")
+image Natsuko neutral = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/neutral.webp")
+image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/annoyed.webp")
+image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/disappointed.webp")
+image Natsuko smug = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/smug.webp")
+image Natsuko flex = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/flex.webp")
+image Natsuko frustrated = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/frustrated.webp")
+image Natsuko happy = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/happy.webp")
+image Natsuko flirty = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/flirty.webp")
+image Natsuko aroused = DynamicImage("Graphics/minor/natsuko/[globalsize]/[NatsOutfit]/aroused.webp")
 
-image Tako neutral = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/neutral.webp"
-image Tako angry = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/angry.webp"
-image Tako excited = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/excited.webp"
-image Tako happy = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/happy.webp"
-image Tako unique = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/unique.webp"
-image Tako sad = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/sad.webp"
-image Tako confused = "Graphics/minor/tako/[minorsizes['Tako']]/[TakoOutfit]/confused.webp"
+image Tako neutral = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/neutral.webp"
+image Tako angry = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/angry.webp"
+image Tako excited = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/excited.webp"
+image Tako happy = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/happy.webp"
+image Tako unique = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/unique.webp"
+image Tako sad = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/sad.webp"
+image Tako confused = "Graphics/minor/tako/[globalsize]/[TakoOutfit]/confused.webp"
 
 image Midori neutral = "Graphics/minor/parents/midori/neutral.webp"
 image Midori happy = "Graphics/minor/parents/midori/happy.webp"
@@ -977,13 +977,13 @@ image Midori sad = "Graphics/minor/parents/midori/sad.webp"
 image Midori surprised = "Graphics/minor/parents/midori/surprised.webp"
 image Midori unique = "Graphics/minor/parents/midori/unique.webp"
 
-image Okisho neutral = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/neutral.webp"
-image Okisho neutral-2 = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/neutral-2.webp"
-image Okisho angry = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/angry.webp"
-image Okisho happy = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/happy.webp"
-image Okisho sad = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/sad.webp"
-image Okisho surprised = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/surprised.webp"
-image Okisho unique = "Graphics/minor/okisho/[minorsizes['Okisho']]/[OkishoOutfit]/unique.webp"
+image Okisho neutral = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/neutral.webp"
+image Okisho neutral-2 = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/neutral-2.webp"
+image Okisho angry = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/angry.webp"
+image Okisho happy = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/happy.webp"
+image Okisho sad = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/sad.webp"
+image Okisho surprised = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/surprised.webp"
+image Okisho unique = "Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/unique.webp"
 
 image Yuko neutral = "Graphics/minor/parents/yuko/neutral.webp"
 image Yuko angry = "Graphics/minor/parents/yuko/angry.webp"
@@ -1007,12 +1007,12 @@ image Minami dark = "Graphics/minor/parents/minami/dark.webp"
 image Minami happy = "Graphics/minor/parents/minami/happy.webp"
 image Minami unique = "Graphics/minor/parents/minami/unique.webp"
 
-image Jineko neutral = "Graphics/minor/jineko/[minorsizes['Jineko']]/[JinekoOutfit]/neutral.webp"
-image Jineko angry = "Graphics/minor/jineko/[minorsizes['Jineko']]/[JinekoOutfit]/angry.webp"
-image Jineko happy = "Graphics/minor/jineko/[minorsizes['Jineko']]/[JinekoOutfit]/happy.webp"
-image Jineko sad = "Graphics/minor/jineko/[minorsizes['Jineko']]/[JinekoOutfit]/sad.webp"
-image Jineko surprised = "Graphics/minor/jineko/[minorsizes['Jineko']]/[JinekoOutfit]/surprised.webp"
-image Jineko unique = "Graphics/minor/jineko/[minorsizes['Jineko']]/[JinekoOutfit]/unique.webp"
+image Jineko neutral = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/neutral.webp"
+image Jineko angry = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/angry.webp"
+image Jineko happy = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/happy.webp"
+image Jineko sad = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/sad.webp"
+image Jineko surprised = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/surprised.webp"
+image Jineko unique = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/unique.webp"
 
 image Daitaro neutral = "Graphics/minor/parents/daitaro/neutral.webp"
 image Vivian neutral = "Graphics/minor/parents/vivian/neutral.webp"
@@ -1635,7 +1635,7 @@ init 2 python:
     eventlibrary['PRG056'] = {"name": "Substitutions", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dormPRG",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG057", "obsflags": [],      "conditions": []} 
     eventlibrary['PRG057'] = {"name": "Down for a Nap", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG057B", "obsflags": [],      "conditions": []}
     eventlibrary['PRG057B'] = {"name": "Crunchtime", "girls": ["PRG"], "type": EventTypeEnum.CORE,                     "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG058", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG058'] = {"name": "Girls Gone Fertile", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG059", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG058'] = {"name": "Fallen Angel", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "classroom",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG059", "obsflags": [],       "conditions": []}
     eventlibrary['PRG059'] = {"name": "Riding the Hormonal Rollercoaster", "girls": ["PRG"], "type": EventTypeEnum.CORE,        "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 14,    "next": "PRG060", "obsflags": [],       "conditions": []}
     #PRG size5
     eventlibrary['PRG060'] = {"name": "True or False", "girls": ["PRG"], "type": EventTypeEnum.CORE,                            "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 14,    "next": "PRG061", "obsflags": [],       "conditions": []}
@@ -1752,7 +1752,8 @@ init 2 python:
     eventlibrary['WG093'] = {"name": "Larger Than Life", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "dormWG",          "priority": PrioEnum.NONE,     "next": "WG094", "obsflags": [],                                     "conditions": []}
     eventlibrary['WG094'] = {"name": "A Big Impression", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "summer-beach",          "priority": PrioEnum.NONE,     "next": "WG095", "obsflags": [],                                     "conditions": []}
     eventlibrary['WG095'] = {"name": "The Better Man", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "dormWG",          "priority": PrioEnum.NONE,     "next": "WG096", "obsflags": [],                                     "conditions": []}
-    eventlibrary['WG096'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG096'] = {"name": "Expanding Her Empire", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "classroom",          "priority": PrioEnum.NONE,     "next": "WG097", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG097'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['WG009'] = {"name": "Between a Soft and a Hard Place", "girls": ["WG", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WG008"]]}

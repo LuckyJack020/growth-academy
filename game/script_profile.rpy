@@ -220,7 +220,7 @@ label profileview:
 screen profileview():
     hbox:
         vbox:
-            image im.Crop(getProfileString(activeprofile), (50, 0, 300, 400))
+            image crop(getProfileString(activeprofile), (50, 0, 300, 400))
             text "Name:" + profiles[activeprofile]["name"]
             text "DOB: " + profiles[activeprofile]["DOB"]
             hbox:
