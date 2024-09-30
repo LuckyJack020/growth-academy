@@ -36871,7 +36871,7 @@ label PRG057B:
     PRG "Mhm..."
     "Aida looked into the machine."
     show PRG neutral
-    PRG "Even still, I do miss caffeine a little sometimes when I'm really tired."
+    PRG "I do miss caffeine a little, especially when I'm really tired."
     "I glanced down at my own can, the one I usually got. Right on the front, it showed exactly how much caffeine was in it, while Aida's was very blatantly caffeine-free."
     MC "Yeah. Guess I never really thought about how prevalent it is in my life."
     MC "I can't see you pounding energy drinks to finish homework assignments in the middle of the night, though."
@@ -37005,7 +37005,7 @@ label PRG057B:
             PRG "M-Maybe someday."
             $setAffection("PRG", 2)
     pause .5
-    show PRG neutral at altMove(0.5, 0.25)
+    show PRG neutral at altMove(0.5, 0.25, xzoom=-1)
     show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Kanami "Good evening, Kodama-san."
     Kanami "Oh, and Hotsure-san. Hello."
@@ -37476,7 +37476,7 @@ label PRG057B:
         PRG "... {w}Y-You noticed?"
         MC "Well, I... I've seen you adjusting your bra a few times the last couple days."
         MC "And you seem very... ginger with it."
-        MC "I didn't mean to be like awkward about it."
+        MC "I didn't mean to be like, awkward about it."
         PRG "N-No, it's okay."
         show PRG unsure
         PRG "I-I don't know why, but..."
@@ -37519,7 +37519,7 @@ label PRG058:
     "The bell chimed just as Akira sat."
     show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     HR "Alright..."
-    "Tashi glanced over toward the windows, at Honoka's empty seat."
+    "Tashi glanced over toward the windows, at Honoka's empty seat, right as the girl herself appeared and raced to her desk."
     HR "Matsumoto-san?"
     show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "Yes, Sensei."
@@ -37572,7 +37572,8 @@ label PRG058:
     FMG "That snap. You heard that too, right?"
     MC "Uh... yeah. I figured someone just broke a pencil or something."
     "Aida was leaning forward, as though trying to hold herself. She had her bag in one hand and her arm around her front, over her chest."
-    FMG "Huh. Well, maybe. Sounded like a bone cracking or something, so I wasn't sure. Came from right in front of me too."
+    FMG "Huh. Well, maybe. Sounded like someone cracking their vertebrae or something, so I wasn't sure. Came from right in front of me too."
+    show PRG unsure
     MC "I don't think someone's ever broken a finger or something from taking notes."
     show FMG happy 
     FMG "Dude, you ever see your girlfriend's notebook? She takes a lot of them. If anyone could, it'd be her."
@@ -37789,6 +37790,7 @@ label PRG058:
     scene black with fade
     pause .5
     scene Nurse Office with fade
+    stop music fadeout 2.0
     "I walked into the infirmary and right up to the counter."
     MC "Excuse me?"
     "The nurse behind the counter looked up, her large lips curving into a smile."
@@ -37815,7 +37817,6 @@ label PRG058:
     PRG "I-I-I'm still in the tub."
     Nurse "Kodama-san? May I come in?"
     PRG "Y-Yes."
-    stop music fadeout 2.0
     "Nurse Kiyomi opened the door slowly, and gave me a gentle, yet firm glance."
     "I nodded, stepping back from the door as it shut and sitting down on Aida's bed, wringing my hands in each other."
     pause 1
@@ -37987,6 +37988,7 @@ label PRG058:
     hide PRG with dissolve
     "I squeezed Aida's hand and got up, heading out into the entryway."
     scene black with fade
+    stop music fadeout 2.0    
     pause .5
     scene Dorm Hallway with fade
     "I adjusted my arms around the bundle of food, shifting the containers inside as I awkwardly carried them down the hall."
@@ -37994,8 +37996,8 @@ label PRG058:
     MCT "Aida's meal, my meal, and Aida's add-on meal. Got it."
     MCT "Glad I hit the end of lunch period. No lines."
     "I turned to the door and went to knock, but tried the door handle first."
+    scene Dorm PRG with fade    
     "The door opened easily, and I pushed it open with my butt, shifting the boxes in my hands as I headed into Aida's room."
-    stop music fadeout 2.0
     "The bed was now vacant, an open box in the spot Aida had been in."
     Nurse "- and here. There we are. Getting them centered is the tricky part."
     PRG "Should I start on the lowest setting?"
