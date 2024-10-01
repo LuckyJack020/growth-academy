@@ -32091,7 +32091,7 @@ label WG095:
 label WG096:
     $setProgress("WG", "WG097")
     play music Schoolday
-    scene Classroom3
+    scene Classroom4
     show Hageshi neutral
     with fade
     Hageshi "Alright, like I've always said, you can use statistics to uncover new insights and make objective decisions about data, but that doesn't mean anything if you don't have the sense in your head to properly interpret what you're seeing."
@@ -32150,7 +32150,7 @@ label WG096:
     scene black with fade
     pause .5
     play music HigherEdu
-    scene Hallway
+    scene School Inner
     show WG surprised-2
     with fade
     MC "Looks like the machine is out."
@@ -32174,21 +32174,29 @@ label WG096:
     AE "I thought I heard your voice, Nikumaru-san."
     show WG sly
     WG "Is that so? I'll try to keep the noise down then. We can't have anyone disturbing the peace of our most sacred hallways."
+    show AE neutral-eyebrow
     AE "I did not intend to greet you in order to admonish you, if that's what you're implying."
     show WG haughty
     WG "Is that so? Well now, consider me intrigued."
+    show AE neutral
     AE "As you are aware, the student council has expressed adamant opposition to the establishment of your business on campus. The fact that you've managed to continue to operate in a legally gray area has been a continued source of consternation throughout the year."
     WG "Yes, yes. I'm well aware. That's old business. So unless you have some new business I would prefer to wrap up this conversation rather than let it drag on."
+    show AE glasses-2
     AE "Understandable. I will keep it brief. Though despite our justified objections," 
     show WG surprised-2
+    show AE neutral
     AE "The council does wish to formally acknowledge the contribution of your clothing business as a service to the Academy that has helped to promote the general well being of the student body during such a critical and turbulent stage of students' lives."
-    AE "Though the school supplies the necessary clothing elements for attendance and appearing presentable in public, it is worth acknowledging the option for custom clothing served to provide a source of comfort, and an outlet for personal expression unmet by the standard provision." 
+    AE "Though the school supplies the necessary clothing elements for attendance and appearing presentable in public,"
+    AE "it is worth acknowledging the option for custom clothing served to provide a source of comfort, and an outlet for personal expression unmet by the standard provision." 
     "I couldn't believe what I was hearing... {w}Alice for her part was at a loss for words herself."
-    Minori "Yeah, people had lots of good things to say about your shop! We did what we could to see if there was anything more sinister going on but... everyone was pretty positive about the work you're doing.. After that, well... I guess you could say we took a second look at everything..."
+    Minori "Yeah, people had lots of good things to say about your shop! We did what we could to see if there was anything more sinister going on but..."
+    Minori "Everyone was pretty positive about the work you're doing.. After that, well... I guess you could say we took a second look at everything..."
     "Yuki looked like she wanted to say something as well, but unfortunately without someone around to interpret her signing she seemed to have foregone the attempt— she extended her arms out to Alice instead."
     show WG surprised
+    show AE smile
     AE "As a result of these commendations from your peers... I wish to present  a placard acknowledging your contributions to the school this past year."
     show WG surprised-2
+    show AE neutral
     WG "Why thank you... I'm not sure what to say."
     show WG neutral
     WG "Quite frankly I never envisioned having this conversation with the student council... at any point really."
@@ -32211,39 +32219,54 @@ label WG096:
     WG "Expanding the home economic course offerings beyond cooking to tailoring as well. Most students will need custom clothing for the rest of their lives. It makes sense to give students the opportunity to learn the skills to provide for themselves in that regard."
     AE "It's quite an excellent addition that I'm happy to know will serve future students."
     show WG neutral
-    AE "With that said, on behalf of the student council, thank you for your contributions to the Academy and its future. That concludes the council's business on this matter."
-    AE "Minori-san, Utigashi-san, you are dismissed for now."
+    show AE admire
+    AE "With that said, on behalf of the student council, thank you for your contributions to the Academy and its future."
+    show AE neutral
+    AE "That concludes the council's business on this matter."
+    AE "Tomoe-san, Utagashi-san, you are dismissed for now."
     Minori "Yes, ma'am!"
     Yuki "Mhm!"
     hide Minori
     hide Yuki
     with dissolve
     pause .5
+    show WG neutral at Transform(xzoom=-1)
+    pause 0.1
     show WG neutral at altMove(0.5, 0.25)
     AE "Well... I think that should be everything, but on a more personal note, Nikumaru-san, I wish to apologize for my less than charitable disposition towards you over the past year."
     play music AE
+    show AE pondering
     AE "Nikumaru-san... hm... I don't suppose you mind if I drop the formalities.."
     show WG pondering
     WG "... I suppose there's no issue in that."
     show WG doubt
-    AE "Alice. If I can be honest, when I met you I didn't have any level of trust in you. From the talk of effective management and supervising... I saw the idea of corporatism and privilege superseding basic human decency. I had no faith in the idea that you cared about anyone."
+    show AE neutral
+    AE "Alice. If I can be honest, when I met you I didn't have any level of trust in you. From the talk of effective management and supervising..."
+    AE "I saw the idea of corporatism and privilege superseding basic human decency. I had no faith in the idea that you cared about anyone."
     show WG haughty
     WG "I gathered as such..."
     show WG surprised-2
-    AE "... But people aren't ideas. No-one is. My own anxieties, preconceptions and... experiences blinded me to the human person you are. I saw labels and an image of what you \"should\" be by my careless notions instead of who you are. For that... I'm ashamed."
+    show AE sad
+    AE "... But people aren't ideas. No-one is. My own anxieties, preconceptions and... experiences blinded me to the human person you are."
+    AE "I saw labels and an image of what you \"should\" be by my careless notions instead of who you are. For that... I'm ashamed."
+    show AE neutral
     AE "I honestly can say... I wish I got to know you better this past year."
+    show AE admire
     AE "I thank you for helping refine that part of myself, and want to let you know..."
     show WG happy
+    show AE smile
     AE "I consider you a good person."
     WG "Thank you, Shiori." 
     show WG sly
     extend " You're not so bad yourself when it comes time to cut through the red tape."
     show WG worried
+    show AE neutral
     WG "For what it's worth, I suppose I should apologize myself. I know we haven't seen eye to eye on most things, but do regret the times I went out of my way to be more difficult than what was necessary."
     show WG sad
     WG "I mistook you for another suit, content with the pleasure of exerting power over others through petty rules and technicalities."
     show WG neutral
     WG "But I realize now you are just an orderly person who wants the best for others. Even if we don't agree on everything, even I recognize that someone who sticks to their principles deserves respect."
+    show AE happy
     AE "I appreciate the kind words. Have a nice rest of the day Nikumaru-san. Hotsure-san."
     hide AE with dissolve
     play music Peaceful
@@ -32251,7 +32274,7 @@ label WG096:
     show WG neutral-2 at altMove(0.5, 0.5)
     MC "Huh, well that was about the last thing I expected."
     if isEventCleared("WGGTS005"):
-        WG "Perhaps, but stranger things than that have happened recently if you recall"
+        WG "Perhaps, but stranger things than that have happened recently if you recall."
         MC "That's certainly true."
     else:
         WG "Perhaps... though I would say it's the {i}second{/i} least likely thing I'd suspect."
@@ -32283,7 +32306,8 @@ label WG096:
     scene Dorm Exterior
     show WG happy-2
     with fade
-    "With classes over for the day, I escorted Alice back to her dorm as part of my usual schedule of personal assistant/boyfriend duties. The two seemed to be blending together as of late. Not that I minded. She was a special lady that needed special attention— and I was happy to give it."
+    "With classes over for the day, I escorted Alice back to her dorm as part of my usual schedule of personal assistant/boyfriend duties. The two seemed to be blending together as of late."
+    "Not that I minded. She was a special lady that needed special attention— and I was happy to give it."
     MC "So, you're not going to close up shop after you're done here?"
     WG "I fully intended to when I first started the venture, but with all the systems in place, it would seem like a waste to just walk away from it."
     MC "Does that mean you're going to stay on the island to run it?"
@@ -32389,7 +32413,7 @@ label WG096:
     WG "Just because a skill doesn't come naturally to you doesn't mean it can't be cultivated, and you've been keeping up with inventory stock and orders just fine for the past few weeks. I wouldn't even consider offering you the job if I didn't think you were ready."
     show WG neutral-2
     Kokutan "Well, if you think I'm ready, then you would know better than I would..."
-    "I had always known Kokutan to be kind of whacky, sometimes easily irritable, but rarely to be taken seriously with her over the top theatrics. Which is why I was surprised to see her genuinely tearing up."
+    "I had always known Kokutan to be kind of whacky, sometimes easily irritable, but rarely to be taken seriously with her over-the-top theatrics. Which is why I was surprised to see her genuinely tearing up."
     show WG surprised-2
     Kokutan "...{i}Sniff{/i}... There's nothing I'd want to do more. Thank you so much, Alice!"
     show WG surprised
@@ -32399,8 +32423,9 @@ label WG096:
     show WG haughty
     WG "Truthfully, the business wouldn't have been as successful without you. You've earned it."
     show WG happy
-    Kokutan "Honestly I don't think I'm going to find a better opportunity. Who else is going to get the chance to work on designing clothes with such unique dimensions? I'll finally have a chance to implement all the designs I've been working on. And I'll get to teach the future students too!" 
-    Kokutan "Um... this position pays more too right?"
+    Kokutan "Honestly, I don't think I'm going to find a better opportunity. Who else is going to get the chance to work on designing clothes with such unique dimensions?"
+    Kokutan "I'll finally have a chance to implement all the designs I've been working on. And I'll get to teach the future students too!" 
+    Kokutan "Um... this position pays more too, right?"
     show WG haughty
     WG "Substantially."
     Kokutan "YES!"
@@ -32887,7 +32912,7 @@ label WGBE001:
     MC "{i}Pfft!{/i} You would."
     show BE angry
     BE "Don't judge."
-    MC "But will— harshly, in fact."
+    MC "But I will— harshly, in fact."
     show BE happy
     BE "Whatever. I know you enjoyed it back then as much as I did."
     MC "Well you got me there. Hehe, there was that one video with the frog jumping onto a window sill, and it doesn't quite make it."
@@ -34717,7 +34742,7 @@ label WGBE001_c1_2:
 
 label WGBE001_After_c1:
     MC "How's she doing?"
-    "Truth be told, I had been wanting to visit her one of these days just to say hi, but part of me wondered if she would even want me to, given bad blood between her and Alice." 
+    "Truth be told, I had been wanting to visit her one of these days just to say hi, but part of me wondered if she would even want me to, given the bad blood between her and Alice." 
     "Not that I thought she'd hold that against {i}me{/i}, but still..."
     show BE sad
     BE "Honestly, she's been pretty lonely. {w}Kinda hard to do anything or go anywhere when you've outgrown it all." 
@@ -34850,7 +34875,7 @@ label WGBE001_After_c1:
     show BE doubt
     show WG neutral
     BE "It was special to her. I know she wishes she could still wear it. And I'm sure there's a lot of happy memories she has attached to it, which is why she wanted me to have it." 
-    BE "But I don't want to just stuff it in a drawer and never look at it again, y'know?." 
+    BE "But I don't want to just stuff it in a drawer and never look at it again, y'know?" 
     show BE sad
     BE "Naomi's so gigantic now, I don't know how, or {i}if{/i} she'll ever be able to leave the island, and who knows when I'm ever going to get back here to see her again after we're done with school here?"
     show WG doubt
@@ -34858,11 +34883,11 @@ label WGBE001_After_c1:
     "Alice, for her part, didn't seem particularly moved by the story behind the yukata." 
     "I shot Alice a side glare out of the corner of my eye, "
     show WG stern
-    extend "With her returning an equally unamused look."
+    extend "with her returning an equally unamused look."
     MC "I'm sure Alice is flattered you're trusting her with something that holds such sentimental value." 
     show WG neutral
     WG "{i}Sigh{/i}... Fine. It shouldn't be a problem to get this fitted for you. What do you think, Kokutan?"
-    show Kokutan neutral with dissolve
+    show Kokutan neutral at Transform(xzoom=-1) with dissolve
     Kokutan "I think we can make it work— assuming Alice can find enough fabric."
     show BE neutral
     BE "Are you about done down there? How many different ways do you need to measure boobs?"
@@ -35057,8 +35082,10 @@ label WGBE001_After_c1:
     Natsuko "I don't care about your stupid hobbies or how you waste your money." 
     Natsuko "Here you go, Inoue-san. It's not a lot, but it's more than you're going to get out of Akira." 
     show FMG angry-2
+    show BE neutral
     FMG "Hey! I got money to give them. I can throw down just as hard as you any time. Here!"
     show FMG neutral
+    show BE happy
     BE "Thank you both so much! This is great!"
     BE "At this rate. We're going to get it all in no time!"
     MC "I don't think we've established a statistical trend yet, but it's at least a good start."
@@ -35076,7 +35103,7 @@ label WGBE001_After_c1:
     pause .5
 
     scene HallwayStairs
-    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show Ryoko neutral at Position(xcenter=0.75, yalign=1.0)
     with fade
     Ryoko "A new yukata for Naomi?"
@@ -38195,7 +38222,7 @@ label WGGTS005:
     Kokutan "That's more like it!"
     MCT "Well, if nothing else, at least this part went off without a hitch."
     hide Kokutan with dissolve
-    show BE neutral
+    show BE neutral at Transform(xzoom=-1)
     show WG neutral
     MC "While we're on the subject of yukatas, we did want to talk to you about the other order we had planned."
     WG "Oh? Is that so? {w}Did you manage to come up with the money?"
