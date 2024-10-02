@@ -32114,7 +32114,7 @@ label WG096:
     Hageshi "This brings us to our lesson today— analysis of covariance, or ANCOVA for short..."
     scene black with fade
     pause .5
-    scene Classroom3 with fade
+    scene Classroom4 with fade
     "By the time Hageshi-sensei's lecture was done, I felt like my brain was full and starting to spill over, but luckily I had managed to keep up."
     show Hageshi neutral with dissolve
     Hageshi "Alright, that's enough for today. Homework is the odd numbered problems on pages 480-482, plus 72, 76, 77, and 93 on 484-485."
@@ -34887,7 +34887,7 @@ label WGBE001_After_c1:
     MC "I'm sure Alice is flattered you're trusting her with something that holds such sentimental value." 
     show WG neutral
     WG "{i}Sigh{/i}... Fine. It shouldn't be a problem to get this fitted for you. What do you think, Kokutan?"
-    show Kokutan neutral at Transform(xzoom=-1) with dissolve
+    show Kokutan neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     Kokutan "I think we can make it work— assuming Alice can find enough fabric."
     show BE neutral
     BE "Are you about done down there? How many different ways do you need to measure boobs?"
