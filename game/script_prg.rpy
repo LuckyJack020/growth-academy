@@ -37005,7 +37005,9 @@ label PRG057B:
             PRG "M-Maybe someday."
             $setAffection("PRG", 2)
     pause .5
-    show PRG neutral at altMove(0.5, 0.25, xzoom=-1)
+    show PRG neutral at Transform(xzoom=-1)
+    pause 0.1
+    show PRG neutral at altMove(0.5, 0.25)
     show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Kanami "Good evening, Kodama-san."
     Kanami "Oh, and Hotsure-san. Hello."

@@ -32438,7 +32438,7 @@ label WG096:
     with dissolve
     "Not waiting for someone to open the door or bothering to announce her entry, Chibuki marched herself right into the room."
     Chibuki "Alice. We need to talk."
-    "In contrast to her usual blasé expression, Chibuki seemed genuinely concerned, if not someone upset as she walked up to Alice clutching a piece of paper in her hand."
+    "In contrast to her usual blasé expression, Chibuki seemed genuinely concerned, if not somewhat upset as she walked up to Alice clutching a piece of paper in her hand."
     show WG surprised-2
     Chibuki "What is this? Did you have something to do with {i}this{/i}?"
     WG "I don't know what you're talking about, Chibuki."
@@ -38477,7 +38477,7 @@ label WGGTS005:
     show BE happy
     BE "I definitely owe you one."
     show WG happy-2
-    WG "Suite yourself."
+    WG "Suit yourself."
     show WG surprised-2
     WG "But where is the food?"
     show WG doubt

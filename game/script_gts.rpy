@@ -12638,7 +12638,7 @@ label GTS053:
         BE "Well, Kanami, this is Naomi Yamazaki."
         show BE neutral at Transform(xzoom=-1)
         BE "Yamazaki, Kanami Tozakura."
-        Kanami and GTS "Charmed."
+        "Kanami & Naomi" "Charmed."
         "They even bowed in unison."
         MCT "This is more surreal than I imagined."
     else:
