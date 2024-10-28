@@ -14201,11 +14201,6 @@ label RM004_C1_after:
         RM "He's the coach for the basketball club."
         MCT "Of all the people to be knowledgeable of that fact, Daichi would've been the last on my list."
         RM "You'd know him if you'd seen him before. His proportions are nothing less than extraordinary. The idea that someone as tall as him would be considered on the \"low end\" is absurd."
-    MC "I don't think I've met him."
-    show RM doubt
-    RM "He's the coach for the basketball club."
-    MCT "Of all the people to be knowledgeable of that fact, Daichi would've been the last on my list."
-    RM "You'd know him if you'd seen him before. His proportions are nothing less than extraordinary. The idea that someone as tall as him would be considered on the \"low end\" is absurd."
     Tsubasa "Sending video via electromagnetic waves up into space and back down via orbiting satellites above the earth to be received by your cell phone gizmo would have been an absurd notion a hundred years ago."
     Tsubasa "That is the beauty and also unfortunate nature of empirical observation, the truth of any matter is indifferent to our ability to make sense of it."
     show RM distrustful
