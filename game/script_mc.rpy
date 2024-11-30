@@ -14642,20 +14642,19 @@ label RM005:
     RM "Besides, it's not like it's going anywhere. Like I mentioned, you can't just take the bus there. The trip will require some logistics and more time than I can spare at the moment."
     MCT "Interesting. I would have expected him to immediately jump on anything that seemed fishy. Seems like he's more organized and patient about this whole ordeal than I gave him credit for."
     MC "Guess we'll revisit that later."
-    "Scanning the map more closely I recognized the place Tsubasa-sensei was telling us about before, Chūkan Point, just north of the academy between the main campus and the Giant's Dorms."
+    "Scanning the map more closely I recognized the place Tsubasa-sensei was telling us about before, Chūkan Point, just northeast of the academy between the main campus and the Giant's Dorms."
     "This particular part of the map had the most notes of all. Daichi must have been busy updating it after our chat with Tsubasa-sensei."
     if isEventCleared("MC008"):
         "Which was funny considering he never seemed all too keen on taking notes during class."
     MCT "Let's see here... \"Caverns- existed before the academy\"... I already knew that. {w}...\"A hotel in Seichou Town originally used as worker housing for the quarry\"— now that I didn't know." 
-    MC "Hmm... \"gate leading to quarry is protected by password\", that's odd. Did you already try to go there or something?"
+    MC "Hmm... \"quarry is access restricted… need password?\", that sounds odd. Did you already try to go there or something?"
     show RM neutral
-    RM "Yes, that same evening after we talked to Tsubasa-sensei. I was hoping to move on the lead as fast as I could, but there's no way in without the password."
-    MC "I'm surprised you didn't just try to climb over the fence."
-    show RM doubt
-    RM "The thought occurred to me, but it's an exceptionally high fence... naturally. A quick escape, if necessary, would be out of the question." 
-    RM "The land around the gate is also flat and largely barren. I would be easy to spot, especially doing something so conspicuous."
+    RM "Not yet, but I've made plans to. That same evening after we talked to Tsubasa-sensei I did a little digging. Apparently it's not open to everyone on campus, but I'm not sure how difficult it is to get in. It's fenced off, I know that much."
+    MC "Well, if all else fails, I suppose we could just climb over it."
+    show RM doubt 
+    RM "Being that it's in a quarry, the land around it is going to be flat and largely barren. It would be easy to spot someone doing something so conspicuous, unless of course one were to do it at night…"
     show RM neutral
-    "Daichi had seemingly put a lot of effort into this lead already in a short amount of time. That and the sticky note with big letters written on it \"Where are other giants?!\" next to the Giant's Dorm made me suspect this was his next major project."
+    "Daichi had seemingly put a lot of thought into this lead already in a short amount of time. That and the sticky note with big letters written on it \"Where are other giants?!\" next to the Giant's Dorm made me suspect this was his next major project."
     "There was a name he had pinned on the board near the giant's dorm: Saburō Tokei."
     if getFlag("MC005_readbrochure"): 
         MCT "That's the government official who was the founder of the academy I read about in the brochure. Maybe he finally got around to reading it?"  

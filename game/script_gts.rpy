@@ -461,87 +461,128 @@ label GTS004_after:
 
 label GTS005:
     $setTimeFlag("aftertest")
-    "I wandered about the campus for quite some time after visiting the nurse, the news of my particular condition having left me with a feeling of uncertainty."
-    "As I walked, my hand would occasionally reach up to touch the tip of my bangs as I wondered just how quickly they might change."
+    "I wandered about the campus for quite some time after visiting nurse Kiyomi. I wasn't half as convinced of systemic malice as my roommate expressed..."
+    "Yet a little more hard data didn't make the scenario feel any less kafkaesque."
+    if isEventCleared("MC003"):
+        MCT "At least I know Tomo's in the same boat as me. Better this weird shit happens to her hair than any other body parts."
+    else:
+        "Taking out my phone, I stared at my text channel with the goblin who shared my parents, and rubbed my temples in the silence."
+        MCT "Ugh... I know you never respond to my texts, but this is really {i}not the time{/i}, Tomo..."
+        MCT "...I don't even know her dorm number."
+        MCT "I hope she doesn't end up with something, like, weird."
+        MCT "Like a big python tongue or... giant ears? Can that happen?"
+        MCT "At least she doesn't get out often enough for anyone to notice if she does..."
+        "As I walked, my hand would occasionally reach up to touch the tip of my bangs as I wondered just how quickly the change was to come."
     scene School Planter with fade
-    play music Peaceful
-    "As I stepped past the double doors and into the garden, my eyes shut from the blast of sunlight that I was exposed to. After a few seconds my eyes readjusted and I saw Naomi's form kneeling in front of a patch of flowers."
-    "Calmly walking over, my footsteps on the path nevertheless alerted her to my presence, and she looked back at me and gave a soft wave."
+    play music Peaceful fadein 1.0
+    "As I stepped past the double doors and into the garden, my eyes shut against the sudden blast of sunlight. After a few seconds my eyes readjusted and I saw Naomi's dainty form kneeling before a patch of pink roses."
+    "Calmly walking over, my footsteps on the path nevertheless alerted her to my presence, and she looked back at me and gave a warm nod."
+    "Standing in her presence, a thin, spicy-sweet aroma enwreathed me, a gentle and platonic florality that poured syrupy nostalgia into my core."
+    $setGTSOutfit(OutfitEnum.WORK)
     show GTS neutral at center with dissolve
-    GTS "Hello there, Hotsure-san."
-    MC "Hey Yamazaki-san. How are you doing?"
-    "She stood up and dusted off her legs before turning her full attention to me."
-    GTS "I'm doing well. I came here to do some reflecting and thinking. I feel rather inattentive though, I somehow had missed this small patch of botan flowers here."
-    "I looked past her to see the pink plants in the flower patch behind her."
-    MC "\"Botans\", huh? I thought they were roses, honestly."
-    "She gave me a soft smile, but shook her head slightly."
-    GTS "It is a common mistake, they do have a somewhat similar appearance so I can see how you'd make that assumption. One way to tell the difference is that botans have a lot more petals, and because of that are a bit puffier-looking."
-    GTS "I like to think of them as wedding gowns personally, the petals being the ends of the gown that swirl towards the middle, which is the bride."
-    MC "That's quite the romantic way to look at it."
-    "Naomi's cheeks reddened a bit as she tried to move past that statement."
-    show GTS embarrassed
-    GTS "Apologies, I didn't ask how you were doing? I can never seem to stop talking about flowers with you, it seems."
+    GTS "Good afternoon, Hotsure-san."
+    MC "Uh, hey, Yamazaki-san. How are you doing?"
+    "Naomi stood up and dusted off her legs before turning her full attention to me."
+    "She looked like she'd just stepped out of the cover of one of my mom's magazines- a green canvas apron tastefully teased her visibly bespoke blouse and skirt combo, while a ribbon-wrapped straw hat maintained her ladylike pallor."
+    GTS "I'm well, thank you. I came here to indulge a bit of reflection and presently noted that these peonies were in need of attention."
+    "I looked past her at the pink plants in the flower patch behind her."
+    MC "Peonies, huh? I thought they were roses."
+    "She gave me a warm smile, but shook her head softly."
+    GTS "They are difficult to distinguish at a glance. One marked difference is that peonies appear puffier, due to their comparative abundance of petals."
+    show GTS unique
+    GTS "To me, they bring to mind a bride in her gown. Wouldn't you agree?"
+    "Just for the brightness of the thought, I smiled. Seeing her handiwork, I caught a glimpse of Naomi's pearly whites, too."
+    MC "Mm... I could see it. That's quite the romantic way to look at it."
+    GTS "Romance seems to follow the business of flowers, does it not?"
+    show GTS neutral 
+    GTS "Ah, but apologies, I have failed to ask how you have been. I can never seem to cease blathering about my own interests with you."
     menu:
-        "Hey, you have a passion for it, I can't fault you for that.":
+        "Hey, can't fault you for having a passion in life.":
             jump GTS005_c1
         "I'm doing okay, thinking about the results from the test.":
             jump GTS005_c2
 
 label GTS005_c1:
-    $setAffection("GTS", 2)
+    $setAffection("GTS", 1)
     $setFlag("GTS008_flowers")
-    MC "Hey, you have a passion for it, I can't fault you for that."
+    GTS "You're too kind. Nevertheless, I should scorn myself mightily to have annoyed you or appeared disinterested."
+    menu:
+        "Heh, you worry too much. It's fine to talk about what you like, that's what friends do.":
+            GTS "A good point well made. Thank you again, Hotsure-san."
+        "If you wished to appear interested, Yamazaki-san, you have thoroughly succeeded.":
+            if getAffection("GTS") > 5:
+                $setAffection("GTS", 1)
+                show GTS embarrassed 
+                GTS "Ara ara. Very droll, Hotsure-san."
+                MCT "Whyyyy did I just say that..."
+                MCT "...She doesn't look offended, though..."
+            else:
+                $setAffection("GTS", -1)
+                GTS "Very droll, Hotsure-san."
+                MCT "Ouch. She's not biting."
+    MC "Anyway, what else can you tell me about peonies?"
     show GTS neutral
-    GTS "Thank you, I just don't wish to come off as annoying or disinterested in talking about you."
-    MC "Heh, you worry too much about that. It's fine to talk about what you like, that's what friends do."
-    show GTS embarrassed
-    GTS "I... I see. Thank you again."
-    MC "What else can you tell me about botans?"
-    show GTS neutral
-    GTS "Well, I know that their name in other countries is peony and that they symbolize having bravery and courage. Besides looking rather lovely they are commonly used in some herbal medicines, which makes them a somewhat commonly-cultivated flower."
+    GTS "Well, apart from the merit of their humble beauty, they were used in classical Chinese cuisine as a sweetening agent. In traditional medicine, too, an infusion of the roots was used to treat convulsions."
     MC "That's pretty cool actually, both cute and helpful."
-    "She smiled in return."
     show GTS happy
-    GTS "Yes, very much so I would say. That's a nice way to see it."
+    "She smiled in return."
+    GTS "Yes, very much so. Nature abounds with such things."
     jump GTS005_after
 
 label GTS005_c2:
-    MC "I'm doing okay, thinking about the results from the test."
-    GTS "Yes... I would think quite a few students are thinking about that. I assume that's why the campus is a bit quieter than normal."
-    MC "Yeah, I think a lot of people are trying to come to terms with what's going to happen to them. I'm not really sure how I feel about my condition though, it's rather strange if I say so."
-    GTS "Strange in what way?"
-    MC "Well I'm basically going to be able to pretend I'm some spooky long haired ghost girl every couple of weeks and scare people."
-    "I rose my arms in a zombie like pose and made a rattling noise in my throat which caused her to flinch just slightly."
-    show GTS sad
-    GTS "I... hope you do not plan on actually doing that."
-    MC "Heh... Not a fan of horror movies then, huh? Well don't worry, I'm mostly teasing, I wouldn't actually do that.{w} Well okay, maybe on Halloween."
-    GTS "..."
-    MC "Basically though, my hair is going to grow a lot and rather quickly too. So, I had better learn how to cut my own hair, or else I'll be spending a ton of money just so people can see me."
-    show GTS neutral
-    GTS "Oh my, yes, I can see how that'd be an issue. Not to mention caring and maintaining it."
-    MC "Yeah... that's a lot of hair products I'm going to have to learn about. But hey, at least I can cosplay any character I want now since I'll always have the right amount of hair for it."
-    "I said with a grin, trying to be positive which in turn made her giggle and nod her head in agreement."
-    GTS "Yes, that is one plus. Not to mention you'll be able to change your style to whatever suits you, letting you accessorize more ways than others would be able to."
-    "I showed her my smile which made her smile back as she seemed to enjoy my positive outlook at the news of my condition."
+    GTS "I see. You do not suffer uncertainty alone, I'd wager. The campus is quieter than usual."
+    MC "Yeah, I think a lot of people are trying to come to terms with what's going to happen to them. I'm not really sure how I feel about my condition though, it's rather... strange."
+    GTS "In what way?"
+    MC "Basically, my hair is going to grow a lot and rather quickly too. So, I had better learn how to cut my own hair, or else I'll be spending a ton of money just so I can see."
+    show GTS surprised
+    GTS "Oh my, yes, I see your dilemma. You've rather got a white elephant atop your head."
+    MC "Yeahhhh... it's a lot of upkeep for my signature hairdo of \'wet soba\'."
+    show GTS neutral 
+    GTS "Well, take heart, Hotsure-san. Do I surmise incorrectly that you harbor artistic passions? There's a veritable host of styles you could experiment with, granted such a plentiful canvas."
+    MC "Hm... you got me there. The possibilities are endless."
+    show GTS happy
+    "She chuckled warmly; as little as I'd known her, she certainly had a talent for lifting spirits."
     jump GTS005_after
 
 label GTS005_after:
     MC "So, what did you hear from the nurse?"
-    "The happy mood on Naomi's face seemed to have left with those words as she looked back at the floors for a moment then looked back at me."
-    show GTS sad
-    GTS "Well, my condition is rather unique. That's not to say the others aren't as well, I don't want to minimize the problems others may have. It's just, I don't really see many with what they say I have."
-    MC "Is it bad?"
-    GTS "I don't believe so. At least, I don't know and am not sure how one would tell. My results showed that I'll start growing taller over the course of the year."
-    MC "Really? Yeah, that is a tricky one. Do they know how much?"
-    GTS "No. There are estimates but one can never be truly certain."
-    MC "Well I think you'll be okay, after all that's what this school is here for. To help anybody with any issues, right?"
-    show GTS neutral
-    "This did bring a small smile back to her as she looked back up at me."
-    GTS "Yes, you're right. Thank you, Hotsure-san. It does help knowing that I will have help with this."
-    MC "Yep! And I'm here to help you, too! So, don't hesitate to ask for anything, or rant more about your flowers."
-    "I gave her a teasing smirk as she gave back a playful pout, but did smile."
-    show GTS embarrassed
-    GTS "I don't rant about flowers... not that much, anyway."
+    show GTS neutral 
+    "The happy humor on Naomi's face withdrew to a more characteristically tempered mine. She silently regarded the peonies a moment before she looked back to me."
+    GTS "I don't know if it was what I expected to hear after so much cloak and dagger. Apparently, I am due to grow taller over the course of the year."
+    MC "...Oh. That's not that bad."
+    GTS "Not at all. I should hope the condition does not proceed to render me unsightly, but as I understand it I could have fared well worse."
+    "I suddenly envisioned Naomi looking me straight in the eyes as she extolled the virtues of flowers, which led to a vision of her inclining her neck down to look at me, thence to her..."
+    "As the scent of peonies rushed again into my lungs, I felt an unfamiliar buzz under my jaw, down my arms."
+    show GTS despaired-thought at Transform(xzoom=-1)
+    GTS "Begging your pardon, Hotsure-san. Are you in pain? Your hand..."
+    "I looked down and I realized I was flexing it as far as my fingers would go."
+    "l gave it a light shake to dispel the buzzing."
+    MC "Just a nervous tic. It flares up on occasion, no reason in particular."
+    show GTS neutral at Transform(xzoom=1)
+    GTS "I see. I note that you favor canned matcha beverages."
+    GTS "Pray, have you ever considered employing tea as a remedy? Valerian root, lavender, or lemon balm would serve you best."
+    MC "Thanks, maybe I'll try that."
+    MC "Anyway..."
+    MC "I think there could actually be quite a few advantages to gaining a few dozen centimeters up top."
+    show GTS embarrassed 
+    GTS "A few dozen?..."
+    MC "Yeah! You never have to worry about who sits in front of you at the movies, you can reach any shelf you want..."
+    MC "You won't need me to pull you out of any planters. Eh? Eh?"
+    show GTS embarrassed with vpunch
+    "I gave her a teasing smirk as she looked, for a moment, gobsmacked. But she did, then, smile."
+    GTS "Apt points, Hotsure-san, even if I must disagree with the {i}presentation{/i} of them."
+    MC "Maybe I need more practice."
+    MC "Well, even if it's not rescuing you from a flower patch, I want you to know you can ask me for help with whatever, whenever."
+    show GTS surprised 
+    MC "I think I'll be glad just to have a little of your company."
+    pause 0.5
+    show GTS unique
+    GTS "How very kind of you to say. I only lament that I did not think to offer the same in return."
+    show GTS wink
+    GTS "For matters mathematical or otherwise."
+    show GTS unique 
+    GTS "But now, consider the offer extended."
+    MC "And gladly accepted."
     "We both had a small chuckle as we spent a bit more time just talking in the garden."
     jump daymenu
 

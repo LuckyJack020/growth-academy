@@ -666,6 +666,28 @@ init python:
     )
     ost.manualDefineList.append(theme_OmF)
 
+    theme_RmI = ost.soundtrack(
+        name = "The Investigator",
+        path = "Audio/BGM/TheInvestigator.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Daichi's Alt Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_RmI)
+
+    theme_ChS = ost.soundtrack(
+        name = "Changing Seasons",
+        path = "Audio/BGM/ChangingSeasons.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Contemplation",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ChS)
+
     ## Base Template
     ######################################
 

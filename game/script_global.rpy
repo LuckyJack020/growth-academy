@@ -515,6 +515,7 @@ image cg BE043_movie1_fem = "Graphics/ui/gallery/BE043_movie1_fem.webp"
 image cg BE043_movie2_fem = "Graphics/ui/gallery/BE043_movie2_fem.webp"
 image cg BE049 = "Graphics/ui/gallery/BE049.webp"
 
+image cg FMG001 = "Graphics/ui/gallery/FMG001.webp"
 image cg FMG016 = "Graphics/ui/gallery/FMG016.webp"
 image cg FMG041 = "Graphics/ui/gallery/FMG041.webp"
 image cg FMG050 = ConditionSwitch(
@@ -607,6 +608,7 @@ image cg WG089 = "Graphics/ui/gallery/WG089.webp"
 image cg WG091 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG091.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
+image cg WG093 = "Graphics/ui/gallery/WG093.webp"
 
 image cg MC000 = "Graphics/ui/gallery/MC000.webp"
 image cg MC003 = "Graphics/ui/gallery/MC003.webp"
@@ -791,6 +793,8 @@ image WG aroused = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/aroused.web
 image WG haughty = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/unique.webp")
 image WG stern = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/stern.webp")
 image WG doubt = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/doubt.webp")
+image WG bored = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/bored.webp")
+image WG coy = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/coy.webp")
 image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering.webp")
 image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.webp")
 
@@ -1042,6 +1046,7 @@ define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
 define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
 define audio.GTSAlt = "Audio/BGM/scene_GTS2.ogg" #Hidden Meadow (Taishogoto Ver.)
 define audio.RM = "Audio/BGM/scene_RM.ogg"
+define audio.RMInvestigate = "Audio/BGM/TheInvestigator.ogg" #Alt Daichi Theme
 define audio.MC = "Audio/BGM/scene_MC.ogg" #Our Protagonist
 define audio.MCGuitar = "Audio/BGM/scene_MCguitar.ogg"
 define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
@@ -1058,6 +1063,7 @@ define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
 define audio.BigChanges = "Audio/BGM/scene_uncategorized2.mp3"
 define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
 define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
+define audio.ChangingSeasons = "Audio/BGM/ChangingSeasons.ogg" #Contemplation Theme
 define audio.Chase = "Audio/BGM/Chase.ogg"
 define audio.ClearSkies = "Audio/BGM/theme_clearskies.ogg"
 define audio.Country = "Audio/BGM/scene_country.ogg" #Country Theme
@@ -1561,7 +1567,7 @@ init 2 python:
     eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS001"]]}
     eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS001"]]}
 
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "sp": 1,          "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['GTS005'] = {"name": "Rhymes and Reasons", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "sp": 1,          "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['GTS010'] = {"name": "A Head Above the Class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 2,          "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
 
     eventlibrary['GTSFMG001'] = {"name": "If You Meet the Buddha...", "girls": ["GTS", "FMG"], "type": EventTypeEnum.OPTIONAL, "location": "campuscenter",    "priority": PrioEnum.NONE,                "obsflags": ["size3", "FMGGTS001"],               "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "FMG016"], [ConditionEnum.EVENT, "GTS010"]]]}

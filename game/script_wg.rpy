@@ -30773,23 +30773,23 @@ label WG093:
     "Alice was right, the inside of this thing was not ritzy or glamorous. It was more fitting for a warehouse than a school, with its dented metal walls and scuff marks everywhere, though all to be expected from a working freight elevator."
     show WG happy
     MC "After you, my lady."
-    #scene Elevator with fade
+    show cg WG093 with fade
     "Truth be told, letting Alice go first was more of a necessity than a nominal gesture of chivalry. Despite its seemingly spacious interior, space ran out pretty quick once Alice was all the way in."
-    show WG neutral
     "I needed to be near the front of the door to operate the panel, as Alice's belly would not allow her to reach."
     MC "Going up."
     "The pulley system and gears of the elevator slowly hummed to life. It was much noisier than your typical foot traffic elevator, and the sounds it made didn't exactly inspire a lot of confidence in its longevity."   
     "I remember picking up the key for her from Misuboro-san. He strictly told me not to allow anyone else in addition to her and one of her assistants to ride."
     "At the time I thought he was just making sure we didn't abuse it, but given the sounds that this thing was making I was starting to think he had more practical considerations in mind." 
     "{i}*DING*{/i}"
-    scene Hallway2
-    show WG neutral-2
-    with fade
     WG "It appears we've still managed to make good time."
     MC "Yeah, but no thanks to this creaky hunk of junk."
     show WG haughty
     WG "Perhaps, but unless you intend to build a better one I suggest we allot more time in our schedules for it."
     "She certainly had a point, no use in complaining about what you can't change or aren't willing to yourself."
+    hide cg
+    scene black
+    with fade
+    pause .5
     play music Schoolday
     scene Classroom4
     show WG neutral at Position(xcenter=0.99, yalign=1.0)

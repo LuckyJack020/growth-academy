@@ -35605,6 +35605,7 @@ label PRG055:
             show PRG blush-2
             "Aida blushed and glanced down."
             PRG "I didn't know that you liked that... {w}I'm growing."
+            $setFlag("Sub")
         "Dominant":
             MC "I'm dominant."
             show PRG blush
@@ -35618,6 +35619,7 @@ label PRG055:
             MC "Well... {w}today's hangout is going a little different than I imagined it going."
             PRG "I-I know..."
             PRG "I didn't know that you liked that... {w}I'm growing."
+            $setFlag("Dom")
         "Switch":
             MC "I... think I'm more of a switch. I kind of like both."
             show PRG blush-2
@@ -35634,6 +35636,7 @@ label PRG055:
             show PRG blush-2
             PRG "I-I am, too."
             PRG "I didn't know that you liked that... {w}I'm growing."
+            $setFlag("Switch")
     stop music fadeout 1.0
     "My face immediately flushed white."
     pause 1
