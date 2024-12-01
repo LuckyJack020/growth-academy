@@ -9165,7 +9165,7 @@ label MC013_aftermenu:
         BE "Yeah! I bet Kei-chan is cooking up something really fun for all of us!"
         MC "You know it."
         MCT "Oh god, I literally have been procrastinating so hard I don't even have a name for a setting or anything yet."
-        MCT "Still, as long as I can just take some time and figure out the mechanics, everything will flow from that…"
+        MCT "Still, as long as I can just take some time and figure out the mechanics, everything will flow from that..."
         MCT "I hope."
     scene Hallway
     show RM neutral
@@ -10838,7 +10838,228 @@ label MC033:
     "I knew Hageshi-sensei was a tough customer from having him in class. But now I understand a bit more why the other students were so terrified of him if they were caught causing trouble."
     jump daymenu
 
-label MC034:
+label MC041:
+    scene Cafeteria with fade
+    play music Schoolday
+    "I don't know what it was, but for whatever reason the cafeteria was packed today. {w}Maybe it was because they were serving fried rice. It was definitely one of Gurīsu-san's better dishes."
+    "Looking around though, the more I thought about it, the more I realized it might not have been due to an unusually large number of students, but rather that the ones present were unusually large themselves."
+    "It certainly was quite a different scene compared to the start of the year, that was for sure."
+    show Tako neutral at Position(xcenter=0.25, yalign=1.0) with dissolve 
+    "You had students with asses that took up two seats."
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    extend " Some even three{w}... possibly more."
+    hide Tako
+    hide AE
+    with dissolve
+    "There were students whose waists came up to other student's heads." 
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Some that looked like they had just walked off the stage of a bodybuilding competition, " 
+    show Okisho neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    extend " and others that looked like they'd been hitting the buffet every day for the past year."
+    hide Natsuko
+    hide Okisho
+    with dissolve
+    MCT "No wonder things are starting to feel cramped in here."
+    show Hageshi neutral with dissolve
+    if isEventCleared("MC011"):
+        "And of course there was Hageshi-sensei. Doing his usual rounds of lunch hall monitoring. Not surprising considering the fight I saw that broke out earlier in the year, and who knows how many others since."
+    else:
+        "I noticed Hageshi-sensei out of the corner of my eye, making the rounds. Not a surprising sight, considering I heard he had to break up a rather nasty fight that took place here earlier in the year."
+        "With as crowded as this place was starting to feel, I could see how tensions would be on edge for some."
+    Student1 "Yo! Hageshi-sensei!"
+    Hageshi "Hm?"
+    "A strikingly muscular student shouted out to get his attention as he approached him. He was definitely one of the bigger muscle growth students on campus."
+    if routelock == "FMG":
+        "Not so big compared to Akira or Nat, mind you. He was downright anemic in comparison to either, but still cut an imposing figure compared to me and most of the other students."
+    elif getFlag("Meet_Natsuko"):
+        "Not so big compared to Akira or Natsuko, mind you. He was downright anemic in comparison to either, but still cut an imposing figure compared to me and most of the other students."
+    else:
+        "Not so big compared to Akira, or her gym buddy mind you. He was downright anemic in comparison to them, but still cut an imposing figure compared to most of the student body nonetheless."
+    Student1 "Hey, let me see something here..."
+    "The student proceeded to place his hand on top of his head with his fingers straight and move them towards Hageshi-sensei's forehead."
+    Student1 "Aw, darn! I thought I was finally taller than you."
+    Student2 "Dude. I told you, no way."
+    Student1 "Oh, come on. It's like two or three centimeters at most. Plus, I'm a lot bigger than him now."
+    "Hageshi-sensei wasn't small by any means, but I wager this student had a good 20-30 kg on the man by looking at the guy."
+    Hageshi "True, your growth would certainly be considered toward the higher end of the spectrum, particularly among past male students."
+    Student2 "Does that mean he's stronger than you, Hageshi-sensei?"
+    Hageshi "Hm, perhaps. I suppose it's possible."
+    Student1 "Aw, come on, no need to rub it in his face."
+    "Judging by the student's expression and his tone, I got the feeling he was more than happy to do so."
+    Student2 "You should arm wrestle him. I bet you could take him now."
+    Student1 "I don't know dude, I don't want to hurt the old man."
+    "If Hageshi-sensei took issue with the student's quip about his age, he didn't show it. The guy certainly wasn't over the hill by any means, but I'd be lying if he didn't seem old to us."
+    Hageshi "If that's what you want. After all, it's only natural to be eager to test the limits of your new-found strength."
+    Student1 "Wait-"
+    play music Motivation
+    Student2 "Sweet! Let's go! You heard the man. Square up!"
+    "Hageshi-sensei and the muscle student each pulled out a chair on opposite sides of a nearby table, one of the few that wasn't full."
+    "Their respective expressions concerning what was about to happen couldn't have been further apart." 
+    "The muscle growth student looked like he'd just been tossed into a pit of wolves, all the while Hageshi-sensei looked like he had been standing in the line at the post office for too long."
+    "Which admittedly wasn't too different than how he normally looked."
+    Student3 "Hey, what's going on over there?"
+    "By this point the incident had managed to capture the attention of the whole cafeteria. Most everyone seemed to be turned around, leaning over, standing up, or some combination of the three to get a good look."
+    "They locked arms, their right hands wrapping around the base of their thumbs with their elbows planted on the table."
+    Student2 "Alright... {w}3... 2... 1... GO!"
+    "If he hadn't been holding on so firmly, I think the student would have jumped out of his seat as a sudden jolt ran through him. His arm twitched, surging with force as his formidably sized bicep swelled."
+    "Hageshi for his part hadn't moved at all, not even a trace of mild exertion crossed his face."
+    "Which couldn't be said for the unfortunate student. His complexion grew increasingly red, to the point I had to wonder if he remembered to breathe." 
+    "The bulging vein on his forehead suggested he was locked into the fight of his life. {w}Unfortunately for him, the fact that the rest of his body started to shake like a tree in a storm told everyone he was losing that fight."
+    "I wouldn't call it a smile, but I couldn't help but notice Hageshi-sensei's lips turned up ever so slightly past their usual flat configuration before he slammed the guy's hand on the table faster than I could blink."
+    stop music
+    play sound Thud
+    hide Hageshi
+    show Tako unique at Position(xcenter=0.25, yalign=1.0)
+    show AE admire at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    play music Peaceful
+    pause .1
+    "Crowd" "{i}AHAHAHA!{/i}"
+    "The whole cafeteria burst out laughing at the shockingly pathetic display we had all just witnessed. It had to be the most anti-climatic thing we'd all seen in a long time." 
+    MCT "You know it's bad when even Shiori chuckles. I honestly feel bad for the guy now."
+    hide Tako
+    hide AE
+    show Hageshi neutral
+    with dissolve
+    Student2 "Dude, that was so pathetic! You never stood a chance."
+    Student1 "Oh, come on! He cheated!"
+    Student2 "What!? How? We all saw the whole thing."
+    Student1 "Well... He was squeezing my hand really hard— it hurt okay!"
+    Student2 "Are you even listening to yourself? God, you are such a sissy. You're lucky he didn't break your arm." 
+    Hageshi "Don't get too discouraged now. You're always welcome to challenge me again."
+    Student1 "I don't know about that anymore..."
+    Hageshi "I'll see you guys at judo practice."
+    "The muscle student walked off, with his buddies making fun of him the whole way down as they exited out of the cafeteria." 
+    "It was tempting to feel bad for him, but I guess that's what you get for trying to pick on someone \"smaller\" than you."
+    MC "I'm surprised you made it look so easy, Hageshi-sensei. He was a lot bigger than you."
+    if isEventCleared("MC033"):
+        "Though maybe I shouldn't have been so surprised given what Tsubasa-sensei mentioned about his factor before."
+    Hageshi "Sometimes we all could use a reminder that we aren't the biggest fish in the pond."
+    MCT "Knowing you, it seems to be your favorite life-lesson."
+    if isEventCleared("RM003G"):
+        MCT "Hmm. Maybe that's where some of the rumors came from."
+    play music DormLife
+    MC "Seems like you have a habit of \"reminding\" students of that fact."
+    "Hageshi paused, somewhat perplexed at my remark."
+    Hageshi "What makes you say that?"
+    MC "Just some rumors is all."
+    "Hageshi-sensei's expression didn't change, but his eye movements suggested he was being evasive."
+    Hageshi "Yes, well, bored people do have a habit of making up stuff in order to try to make their lives seem more interesting than they really are."
+    MC "But are they true? {w}I heard you used to beat the {i}shit{/i} out of people when you were a student here."
+    Hageshi "Hmm, what a silly notion. That's the kind of thing that could get a student expelled..."
+    MC "No offense, Hageshi-sensei, but that doesn't exactly sound like a denial of anything."
+    Hageshi "I didn't realize I was a person of interest in an investigation."
+    MC "Oh, come on, Hageshi-sensei. You gotta give me something. I'm dying to know the juicy details!" 
+    MC "Everyone's got that one person that just annoys the hell out of them that they wish they could just {i}{b}BAM!{/i}/{b} right in the face, and I doubt you're the exception."
+    Hageshi "What else is there to know? I was a small skinny kid that got beat up a lot."
+    MC "Yeah, but you didn't stay that way. I bet things changed once your factor started kicking in."
+    Hageshi "You'd think that, but it wasn't so simple." 
+    Hageshi "Just because I could fight back didn't stop everyone from wanting a piece of me still. No doubt trying to salvage their egos once their former punching bag suddenly punched back harder."
+    MC "Sounds like they had a hard time accepting things had changed."
+    Hageshi "That's the thing with insecure people. They always need someone to stay small so they feel big."
+    Hageshi "Or conversely, more often as is the case with the growths, as long as someone else is bigger, they can fool themselves into thinking they're still small. Either way, it's an attempt to escape the reality of their situation."
+
+    if routelock == "FMG":
+        if isEventCleared("FMG092"):
+            "I understood what he meant, but Akira had the opposite problem— always comparing herself to Nat and coming up short. {w}But with their recent changes now it's Nat's turn to be jealous." 
+            "Now that I think about it, they probably would have enjoyed their factors a lot more if they weren't suffering from constantly comparing themselves to each other."
+        else:
+            "I understood what he meant, but Akira had the opposite problem— always comparing herself to Nat and coming up short."
+            "As much as she's enjoyed growing huge, now that I think about it, she probably would have enjoyed it a lot more if she wasn't constantly comparing herself to Nat in the back of her mind."
+    elif routelock == "BE":
+        "That was definitely the case for Honoka. At the beginning of the year a lot of girls were jealous of her \"assets\" so to speak, but once she started to really take off other girls with her factor were grateful there's was less severe."
+        "I could tell going from being admired to dumbfounding and ultimately to pitied had been a drag on her otherwise bubbly outlook on life. It certainly hadn't been easy on her."
+    elif routelock == "GTS":
+        "I definitely noticed that with the giant students, most of them enjoyed being a bit taller, but when it was time for them to get shipped off to the giant's dorm, things didn't seem so fun anymore and their world got a lot more lonely."
+        "Naomi was more of a myth than a real person to most of the students by now. One could be forgiven for clinging to comparisons if it helped them cope with such an alienating and isolating condition."  
+    elif routelock == "PRG":
+        "Aida didn't have any peers here that shared her condition, but what Hageshi-sensei said applied to her more than anyone. I could hear the hushed whispers in the halls and the cafeteria. Every goddamn day— they never stopped."
+        "No matter how much a student hated their growth, they all felt lucky they weren't her. You'd think that would inspire a little empathy, but all she ever got was pity and scorn from everyone except her close friends."
+    elif routelock == "AE":
+        "That was obvious with Shiori. Most girls might want the extra attention of having a bit of junk in the trunk, but not so big as to be the literal butt of every joke."
+        "Doubly so, given her position as the head of the student council. It was an excuse in people's minds to bring her down a peg, especially given her strict and formal nature."
+    elif routelock == "WG":
+        "Alice obviously came to mind with Hageshi-sensei's comparison. No one had it worse than Alice in that regard, except for Aida, but for entirely different reasons." 
+        "No matter how big a student was, everyone of them could look at Alice and say \"At least I'm not {i}that{/i} fat!\" Many of them did, and not as quietly as they thought."
+        "Alice was the hardest working person I knew, yet even in a place surrounded by people who knew she had no control of her situation, she was still mocked as a fat, lazy glutton."
+    else:
+        "That was definitely the case for Honoka. At the beginning of the year a lot of girls were jealous of her \"assets\" so to speak, but once she started to really take off other girls with her factor were grateful there's was less severe."
+
+    MC "Yeah, I can see that..."
+    MC "You'd think they'd learn after a while though. Did you ever end up getting revenge on the guys that used to beat you up?"
+    Hageshi "I never had to really. I always felt like the point was made when they agreed to tap out. Besides, the best revenge was seeing how jealous they were of all the attention I got from our fellow co-eds."
+    Hageshi "Who knew that being over 190cm and having a six pack could open so many doors for a person?"
+    MC "It's not that hard to imagine, Hageshi-sensei..."
+    Hageshi "That being said though, I did have to teach at least one guy a lesson about picking on people smaller than him."
+    MC "Oh yeah?"
+    Hageshi "Yes."
+    pause 2
+    MC "..."
+    MC "Oh come on! Don't leave me hanging here. Spill the beans, man!"
+    Hageshi "Hmm, I suppose enough time has passed that any secrecy no longer serves a purpose."
+    Hageshi "To set the stage for you, no one liked the guy— at least that I knew of. He was a pretty big jerk, literally and figuratively since he was a little over six meters tall."
+    MC "!"
+    "I nearly spit out my fried rice."
+    MC "{i}Six{/i}! {w}You mean to tell me you beat up a guy over {i}six meters{/i} tall?"
+    Hageshi "What does that have to do with anything? Whether he was tall or short didn't mean he deserved it any more or any less." 
+    Hageshi "We all got tired of him harassing girls and threatening to punt people clear across campus if they dared to talk back to him." 
+    MC "Sounds like he deserved it, but you do realize most people hesitate picking a fight with a guy three times their height, right? Like how does that even work?"
+    Hageshi "I don't know what you mean. Same as any other person. You kick them in the shin, they take the weight off that leg. You kick them behind their knee, they fall over." 
+    Hageshi "Maybe they flail around in pain, so you grab them in a full body arm bar. Once you got them there they'll agree to anything you tell them to do." 
+    Hageshi "In my experience, even the most unreasonable person can be coaxed into behaving if it means avoiding a broken arm or separated shoulder."
+    MCT "So that's the source of the rumors. Why do I get the feeling all of that happened just as fast as he described it?" 
+    if isEventCleared("MC033"):
+        MCT "No wonder those two giant students that one time were so afraid of him. Even they knew they didn't stand a chance."
+    else:
+        MCT "I guess that would explain why everyone's afraid of him..."
+
+    MC "Yikes. I take it he didn't give you any trouble after that?"
+    Hageshi "Never said a word to me after that."
+    MC "Didn't you get in trouble though?"
+    Hageshi "Funny you should mention that. Apparently there was never any witness that could corroborate the events to the faculty, which is pretty odd considering half the student body was present at the time."
+    MC "Heh. How convenient."
+    Hageshi "That's not to say I wasn't lucky." 
+    Hageshi "I'm not going to pretend that Tashi-sensei and Tsubasa-sensei were as blind to the matter as they led on, but I suppose that just goes to show they saw the value in my little \"lesson\" as well."
+    MC "I guess those old dudes have a sense of humor to them after all. Good to know."
+    play music MC
+    MC "...But now that I think about it, why are you telling me all of this, Hageshi-sensei? You're not exactly known for being an open book."
+    Hageshi "I just thought you'd find it to be a useful illustration as part of a bigger picture."
+    Hageshi "Think about your time spent here, Hotsure-san. Many students grow to sizes they never even imagined, but their hearts grow small, unwilling to accept what has already happened."
+    Hageshi "More than anything, this place and the experience is to help you grow as a person throughout this trying time in your life."
+    Hageshi "All of you here can't stop your body's growth, but you do have a choice to allow yourself to grow as a person through any stage of life."
+    if routelock == "FMG":
+        "Even though Akira didn't struggle with her factor like most, it still wasn't without its difficulties. In a roundabout way, the unusual circumstance forced her to come to terms with her brother's death."
+        "I was particularly proud of her for that. She was a constant source of positive energy and self-confidence. I would have never known the battle she was fighting within the whole time if I hadn't become so close to her this past year." 
+    elif routelock == "BE":
+        "Honoka was excited about her growth at first, always willing to fault her boobs to draw my gaze, but when it started to interfere with her ability to be active in the clubs she was interested in, I could see her spirit start to dim."
+        "Of course you could never keep Honoka down, and I was grateful to see her forge a new path forward that made her happy and brought back the bubbly ball of energy that I fell in love with when we first met."
+    elif routelock == "GTS":
+        "Naomi's condition certainly hadn't presented her with an easy path. Isolated from her family, and even civilization for that matter as she steadily outgrew the trappings normal life."
+        "Still though, in spite of these difficulties, Naomi was able to find peace with herself and her unusual life circumstance, bearing it with grace and poise— as she did with all things. It was what I admired most about her."  
+    elif routelock == "PRG":
+        "No one had to grow more as a person in such a short amount of time as Aida. Going from a college freshman to a mother of 13 in less than a year was a tall order for anyone."
+        "In spite of this, I couldn't think of anyone better suited to be a mother, let alone even imagined a better mother for my children." 
+        "Whatever the future held for us and our growing family, I knew at this point I wouldn't have traded it for anything."
+    elif routelock == "AE":
+        "Shiori wasn't a stranger to having to grow up fast, given the unfortunate circumstances of her past. Her growth was a constant source of unwanted attention and an over-cumbersome impediment."
+        "But it was nothing in comparison to her wit and determination to uphold her principles. It was going to take a lot more than that to stop her from realizing her potential." 
+    elif routelock == "WG":
+        "No one was more determined than Alice to not let her growth slow her down or interfere with her ambitions. She had all the excuse in the world to just give up and retreat into a life of obscurity and idle comforts."
+        "Instead of giving up, it made her all the more determined to forge her destined path as a businesswoman." 
+        "Willing to bear the jeers and scorn of the masses, who look down at her for her size, because she is unwilling to accept that she was destined for anything less than greatness."
+        "It almost made me wonder if it was ultimately for the best— without some kind of obstacle in her way, everything she set her mind to would be all {i}too{/i} easy for her to accomplish."
+    else:
+        "Honoka was excited about her growth at first, always willing to fault her boobs to draw my gaze, but when it started to interfere with her ability to be active in the clubs she was interested in, I could see her spirit start to dim."
+        "Of course you could never keep Honoka down, and I was grateful to see her forge a new path forward that made her happy and brought back the bubbly ball of energy that sparked our friendship when we first met."
+    
+    Hageshi "You might not be able to stop your hair from growing, but what you choose to take away from here is up to you. And I hope it's something more than a new hairstyle."
+    hide Hageshi with dissolve
+    "Hageshi-sensei left me to my now cold fried rice. Though I wouldn't have even known what to say in response to his last remark if he had stayed."
+    "Walking into this strange new world of giant and disorientating proportions was like popping a cork that couldn't fit back in the bottle. I was never going to be the same. {w}{i}We{/i} were never going to be the same."
+    "When I first got here and learned that I was going to change, I was convinced it was going to be for the worst. But now that I had been here for almost a year, I was pretty certain when it's all said and done— it was for the better."
+    jump daymenu
+
+label MC042:
     "This marks the current end of the Keisuke-centric scenes."
     "More are planned for a later release. Until then, feel free to explore the main routes."
     jump daymenu
@@ -10846,7 +11067,7 @@ label MC034:
 label global005:
     $setTimeFlag("testday2")
     scene Dorm Interior with fade
-    play music Schoolday
+    play music DormLife
     pause .5
     play sound AlarmClock
     pause .5
@@ -10857,6 +11078,8 @@ label global005:
     "I sat up in bed and looked around."
     MC "Huh?"
     MC "The heck is he?"
+    if isEventCleared("MC001"):
+        MCT "God... odd dude."
     "I put my elbows on my knees and rubbed my eyes."
     "Today, instead of normal classes, was something that Tashi-sensei had called \"Measuring Day.\""
     MCT "What exactly are we measuring anyway? Height or something?"
@@ -10874,10 +11097,33 @@ label global005:
     MCT "God..."
     scene Dorm Interior with fade
     "I walked back into my room and got uniformed up, then headed promptly outside, trying my damndest to keep my fears internalized."
+    "I glanced back for a moment."
+    MCT "... Still not here."
+    MCT "Ach, nevermind."
+    scene black with fade
+    pause .5
+    scene Dorm Exterior with fade
+    MCT "Alright... I can tell this route is going to become part of the daily grind."
+    "I started along the path, towards campus."
 
     scene Hallway with fade
-    play music Busy
+    play music Schoolday
     "As I made my way inside the classroom building, I glanced down the hall."
+    show GTS neutral at Position(xcenter=0.15, yalign=1.0)
+    show BE happy at Position(xcenter=0.26, yalign=1.0)
+    show PRG insecure at Position(xcenter=0.40, yalign=1.0) behind BE
+    show FMG flex at Position(xcenter=0.60, yalign=1.0)
+    show WG neutral-2 at Position(xcenter=0.75, yalign=1.0)
+    show AE neutral at Position(xcenter=0.90, yalign=1.0) behind WG
+    with dissolve
+    pause 1
+    hide GTS
+    hide BE
+    hide PRG
+    hide FMG
+    hide WG
+    hide AE
+    with dissolve
     "Up ahead were most of my classmates, all seeming to be waiting, much like I was."
     if getHighestAffection() == "BE":
         show BE neutral with dissolve
@@ -10886,6 +11132,7 @@ label global005:
         BE "Still getting used to how big this campus is! I've been spending some time walking around each night and I still haven't seen it all!"
         MC "Wow, I haven't been around much either..."
         BE "Maybe we can go exploring together sometime!"
+        hide BE with dissolve
     elif getHighestAffection() == "WG":
         show WG neutral with dissolve
         WG "Hotsure-san."
@@ -10896,17 +11143,24 @@ label global005:
         MC "As well as anyone I suppose..."
         show WG haughty
         WG "Good to hear. Some find adherence to a routine to be restrictive, but I find the gains in productivity from an optimized schedule to be far more freeing than leaving idle time for its own sake."
+        hide WG with dissolve
     elif getHighestAffection() == "GTS":
-        "I noticed Naomi walking next to me as we made our way to class. Like, noticeably close."
-        show GTS neutral with dissolve
-        GTS "..."
-        MC "Hey there, Yamazaki-san.."
-        GTS "Oh, h-hello."
+        "I walked up behind Naomi and heard some faint muttering."
+        show GTS neutral at Transform(xzoom=-1) with dissolve
+        GTS "{size=-8}-mida Buddha. I take re-{/size}"
+        MC "Hey there, Yamazaki-san."
+        show GTS surprised
+        GTS "Ah!"
+        show GTS neutral at Transform(xzoom=1)
+        GTS "Oh, good morning."
         MC "..."
         GTS "..."
         MC "Nice day we're having, yeah?"
-        GTS "...Yes."
-        MCT "Boy, she's not much for conversation today... but she seems happy."
+        GTS "...Why, yes it is. I believe I spotted a Japanese cormorant flying over the lake. That was a treat."
+        MC "Cool."
+        MC "I, uh, didn't see it."
+        GTS "...It was nothing spectacular."
+        hide GTS with dissolve
     elif getHighestAffection() == "FMG":
         show FMG neutral with dissolve
         FMG "Keisuke! How ya doin'?"
@@ -10918,14 +11172,18 @@ label global005:
         MC "Does that make a difference?"
         FMG "Sure! Morning and evening workouts can go harder than normal because you're being naturally cooled by the cold air!"
         MCT "I boggled to think what a \"harder\" workout was for Akira, seeing how hard she already pushed herself..."
+        hide FMG with dissolve
     elif getHighestAffection() == "PRG":
         show PRG neutral with dissolve
-        PRG "H-Hello, H-Hotsure-san...!"
+        PRG "H-Hello, Hotsure-san..."
         MC "Oh, hi Kodama-san."
-        PRG "H-Having a good morning?"
-        MC "Yeah, I'd say so. Pretty typical day. You?"
-        PRG "Y-Yes. I-It's g-good for me too."
-        MC "That's good to hear."
+        MC "Having a good morning?"
+        PRG "Y-Yes... it's okay..."
+        MC "Glad to hear it."
+        PRG "H-How's yours?"
+        MC "Not bad."
+        PRG "T-That's good."
+        hide PRG with dissolve
     elif getHighestAffection() == "AE":
         show AE neutral with dissolve
         AE "Hotsure-san."
@@ -10938,10 +11196,20 @@ label global005:
         MC "So, what exactly is Measuring Day all about, anyway?"
         AE "..."
         AE "You'll see."
+        hide AE with dissolve
+    else:
+        MCT "Well..."
+        MCT "Shiori probably knows what the deal is with all of this, but..."
+        MCT "Ah, I'll just wait on Tashi-sensei. Get the straightest answer."
+        pause .5
+        show HR neutral with dissolve
+        "The door opened, and Tashi-sensei stepped out."
+        HR "Everyone inside, if you all would be so kind."
     scene Classroom
     show HR unique
     with fade
-    "When we got to Room 3-B, Tashi-sensei was standing at the front of the room. He nodded at us as we all came in."
+    play music DifferentPaths
+    "Tashi-sensei stood by the door as we all entered, closing the door behind him as he stepped to the front of the room."
     show HR neutral
     HR "Alright, everyone. Today is Measuring Day for this class."
     HR "In layman's terms, it's the day when you'll all learn the nature of your specific factor."
@@ -10951,7 +11219,7 @@ label global005:
     show WG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     WG "Baseline?"
     show HR neutral
-    HR "So, I'll be leading you all into the gym where everything will be occurring. Matsumoto-san, would you mind getting everyone together?"
+    HR "So, I'll be leading you all into the auditorium where everything will be occurring. Matsumoto-san, would you mind getting everyone together?"
     show HR unique
     show AE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
     AE "Understood. Everyone, please form a line at the door, single file, please."
@@ -10964,9 +11232,16 @@ label global005:
     "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
     show HR neutral with dissolve
     HR "Alright. Class 3-B over by this wall. Alphabetically, please."
+    HR "And... where's Utagashi-san?"
+    if isEventCleared("RM001"):
+        MCT "Maybe it has something to do with that... thing he was building."
+        MCT "I don't know."
+        "Somewhere behind me, I felt a near-physical needle-like stare at the back of my neck."
+        "Turning my head just enough, Shiori broke contact and looked back out at the room."
+        MCT "This better not blow back on me..."
     hide HR with dissolve
     show BE neutral with dissolve
-    "I lined up by the wall near the front of the line, and due to the nature of the alphabet, Honoka was right behind me."
+    "I lined up by the wall near the front of the line, and due to the nature of the alphabet, Honoka was right in front of me, with Aida behind."
     BE "Nervous, Kei-chan?"
     MC "Ahh... maybe a bit? Helps that everyone here is in the same boat, though."
     hide BE with dissolve
@@ -10978,6 +11253,7 @@ label global005:
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
+    #show Nurse neutral with dissolve
     Nurse "Hello, Hotsure-san, please have a seat."
     Nurse "My name is Hitomi Kiyomi. Or, as I usually go by, Nurse Kiyomi."
     "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp."
@@ -14647,12 +14923,12 @@ label RM005:
     if isEventCleared("MC008"):
         "Which was funny considering he never seemed all too keen on taking notes during class."
     MCT "Let's see here... \"Caverns- existed before the academy\"... I already knew that. {w}...\"A hotel in Seichou Town originally used as worker housing for the quarry\"— now that I didn't know." 
-    MC "Hmm... \"quarry is access restricted… need password?\", that sounds odd. Did you already try to go there or something?"
+    MC "Hmm... \"quarry is access restricted... need password?\", that sounds odd. Did you already try to go there or something?"
     show RM neutral
     RM "Not yet, but I've made plans to. That same evening after we talked to Tsubasa-sensei I did a little digging. Apparently it's not open to everyone on campus, but I'm not sure how difficult it is to get in. It's fenced off, I know that much."
     MC "Well, if all else fails, I suppose we could just climb over it."
     show RM doubt 
-    RM "Being that it's in a quarry, the land around it is going to be flat and largely barren. It would be easy to spot someone doing something so conspicuous, unless of course one were to do it at night…"
+    RM "Being that it's in a quarry, the land around it is going to be flat and largely barren. It would be easy to spot someone doing something so conspicuous, unless of course one were to do it at night..."
     show RM neutral
     "Daichi had seemingly put a lot of thought into this lead already in a short amount of time. That and the sticky note with big letters written on it \"Where are other giants?!\" next to the Giant's Dorm made me suspect this was his next major project."
     "There was a name he had pinned on the board near the giant's dorm: Saburō Tokei."

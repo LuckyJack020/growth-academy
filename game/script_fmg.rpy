@@ -21989,6 +21989,273 @@ label FMG095:
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
 
+label FMGD001:
+    scene Lockers with fade
+    play music FMG
+    $setFMGOutfit(OutfitEnum.NUDE)
+    show FMG flex with dissolve
+    FMG "The best part about constantly getting bigger is I'll always look better every time I flex in the mirror."
+    FMG "Argh! {w}God, I love this."
+    MC "Don't you think you'll ever get bored of... all that?"
+    FMG "Pff, fat chance!"
+    "The amazon continued her flexing montage, throwing out various poses from a lat spread to a side chest and even the occasional most muscular."
+    FMG "Come on, Kei, I'm standing here right in front of you butt naked and flexing and you {i}still{/i} aren't feeling me up."
+    MC "Akira, we're in the locker room..."
+    FMG "And? It's empty right now, no one is going to be here for another hour at least." 
+    FMG "Grab my biceps, squeeze my boobs, give me something, dude! I know you want toooo, I'm particularly irresistible."
+    MC "I'll touch your arms, I'll save squeezing your boobies for later."
+    show FMG happy
+    FMG "That's what I'm talking about!"
+    "Akira got down on one knee, proudly flexing her arms with a huge grin across her face."
+    MC "Uh, are we still going to Satoyama Village with Nat today?"
+    show FMG neutral
+    FMG "Oh shit, thanks for reminding me, I thought it was tomorrow. I'll text her to let her know we're still on for today."
+    FMG "Can't wait to relax in their hot springs and rest my muscles."
+    MC "Fun fact, I've never been to one."
+    FMG "Really? How come?"
+    MC "I uh... I guess I just never saw the point in them. Like it's just some hot water surrounded by some rocks."
+    FMG "Okay, yeah but counterpoint... {w}I'm going to be naked... and wet."
+    MC "You're naked every other day, that's nothing special. I see your titties swinging around all the time."
+    FMG "Heh, guilty as charged."
+    FMG "Okay, after you rub my abs, we can get our stuff and meet up with Nat."
+    MC "What if I don't want to rub your abs?"
+    show FMG aroused
+    FMG "Please? For me?"
+    MC "Alright, pull your tits up."
+    FMG "You're the best, you know that?"
+    "I could only roll my eyes and laugh because, well, I did know."
+    scene black with fade
+    pause 0.5
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    scene Ryokan Exterior
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    MC "Wow, nice place. Very... old fashioned."
+    FMG "For real."
+    Natsuko "Keep your eyes forward, we're almost there. I don't need you two getting distracted."
+    MC "You even suck the fun out of walking, that's crazy."
+    Natsuko "Keep up that attitude, Hotsure-san, and you can stay outside."
+    FMG "So, what's the reason for inviting us out here, Nat?"
+    Natsuko "I've been impressed with how much you've been pushing yourself in our recent workouts and I wanted to reward your efforts."
+    MC "That means you're paying for this?!!?"
+    Natsuko "For Akira and myself, yes."
+    MC "It just ain't right."
+    Natsuko "That was a joke, Hotsure-san. I will cover everything today. Both of you have earned a proper day of rest and relaxation."
+    show Natsuko flex
+    Natsuko "I could use it myself considering my growth recently, heh. I've been wanting to burst out of my uniform for days now."
+    FMG "Tell me about it. There isn't anything as satisfying as tearing out of them with a quick double bicep."
+    show Natsuko neutral
+    Natsuko "I prefer a lat spread myself. Something about ripping it from the back makes the feeling so much better."
+    MC "Yeah, I just wear my clothes like a normal person."
+    Natsuko "..."
+    FMG "..."
+    MC "And I get looked at like {i}I'm{/i} crazy. You guys have problems."
+    FMG "If they let us in the changing room together, I'll give you a show, Kei-kun."
+    show FMG aroused
+    FMG "Just make sure you're not standing too close..."
+    MC "That brings up a question I wanted to ask. Did we get a private room or something?"
+    show FMG neutral
+    Natsuko "Yes, I got a reservation a few days ago. I don't plan on being naked around strangers."
+    show Natsuko flex
+    Natsuko "I wouldn't want them to feel bad when they're comparing themselves to me at the very least."
+    MC "..."
+    show Natsuko neutral
+    MC "You could've just said yes, I didn't need backstory. {w}And before you make some snide comment, that was a joke. {w}Sorta."
+    MC "Also, back up a second. {w}Akira, you're okay with her exposing herself when I'm around."
+    FMG "Can't handle two naked amazons, Kei-kun? Hahaha, you'll be fine, just keep your eyes on me if it becomes too much for you."
+    MC "I mean can't she just use a towel or something on her lady parts?"
+    Natsuko "Hotsure-san, if seeing my breasts worries you this much, you can sit out. Quit acting like a child."
+    MC "Always so aggressive and emotionally disconnected."
+    Natsuko "I fail to see a problem. Going off the stories Akira has told me, I assumed you'd be over the moon."
+    show Natsuko smug
+    Natsuko "Not everyone can be as lucky as you to be surrounded by the biggest muscle growth students on campus constantly, much less bath in a hot spring with them."
+    show Natsuko flex
+    Natsuko "Think of what you'll see that others could only dream of."
+    show FMG neutral
+    FMG "She's right..."
+    show FMG flex
+    FMG "It's a once in a lifetime experience."
+    MC "You guys are waaay too into this. This can not be healthy."
+    scene black with fade
+    pause .5
+    scene Ryokan Bathroom with fade
+    MC "So... uh, about that show, you mentioned before... is it still happening?"
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "You packed extra clothes, right?"
+    Natsuko "I did."
+    FMG "Heh, do you think he's earned it?"
+    show Natsuko smug
+    Natsuko "Well, he's had an attitude here and there... but I suppose."
+    pause 0.8
+    $setFMGOutfit(OutfitEnum.NUDE)
+    $setNatsOutfit(OutfitEnum.NUDE)
+    show FMG flex at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko flex at Position(xcenter=0.75, yalign=1.0)
+    with vpunch
+    "Suddenly, with a heavy grunt, Natsuko seemed to tense up before..."
+    "*SHRRRRRP*"
+    "Her clothes effectively exploded off of her person, becoming nothing more than tatters which fell to the ground. Natsuko began to position herself in a lat spread as she looked down at me."
+    Natsuko "He can have a little taste."
+    "With a smug, knowing smile, Akira winked as she followed suit, flexing her biceps as she bit her lip."
+    "{i}*KR-RRRRP*{/i}"
+    "One by one, the seams on Akira's tight uniform began to rip and tear, fabric falling off of her as, soon, her clothes followed suit."
+    "{i}*SHHHRP*{/i}"
+    FMG "As a treat~"
+    "Facing each other, they both let out a little giggle before Akira looked down at her panties."
+    FMG "Oops, looks like we missed a spot."
+    Natsuko "We can't skip leg day now, can we?"
+    "The two embraced each other as they hooked their thumbs on one another's panties."
+    FMG "Care spotting me?"
+    Natsuko "I thought you'd never ask~"
+    "The two began to pull down their panties as they bent forward, pressing their faces together as their lips locked in a passionate kiss."
+    FMG "Mmph~"
+    Natsuko "Mmm..."
+    "As their panties dropped, they stood straight and continued making out, caressing each other as Akira lightly bucked her hips against Natsuko's groin." 
+    "Natsuko, in turn, smacked Akira's ass with both hands; an impact which could shatter mountains as Akira jumped a bit."
+    FMG "MM!"
+    "Pulling away, Akira looked at Natsuko with a wry smile knowable only to the muses."
+    FMG "You freaking perv."
+    Natsuko "Oh-"
+    "Natsuko smiled as her body tensed, her rippling muscles hardening as she let out a small grunt."
+    FMG "Huh-? Eep!"
+    "And lifted Akira up, slamming her against the wall. Their heaving breasts slightly jiggled as they pressed together, their softness contrasting the wall behind Akira as it shattered with a heavy crack."
+    Natsuko "You have {i}no{/i} idea."
+    "Natsuko pressed her lips into the pinned Akira's own as she continued to press her." 
+    "Akira, meanwhile, lifted her legs as she felt the pressure, her face going red as Natsuko's hair as Natsuko continued to toy with Akira's more submissive side."
+    MCT "What. The. Fuck."
+    "With a resonant thud, Natsuko grunted as she held Akira with one arm and slammed the other into the wall, causing it to fracture further as the edifice quaked." 
+    "Akira, meanwhile, seemed as though the stimulation was causing her entire being to enter a state of euphoria."
+    FMG "M-MMMMNHN!~"
+    "After a moment, Natsuko let up as she broke her lip lock with Akira with a loud pop, almost as though to coyly emulate what she'd done to Akira's mind."
+    "Akira slid down the wall with an orgasmic look on her face before getting up and looking at me."
+    MCT "I can't believe there is this much sexual tension between these two, but oh boy, I sure am freaking here for it!"
+    show Natsuko aroused
+    Natsuko "That was a nice warmup, I think."
+    show FMG aroused
+    FMG "Heheheh, Kei looks like he's seen a ghost."
+    MC "I-I-I... I..."
+    Natsuko "Heh, don't worry, Hotsure-san... {w}That was just the beginning."
+    MCT "Say something you idiot!"
+    MC "T-T-That was the hottest thing I've ever seen in my entire life."
+    FMG "And it's only going to get better. We should head to the hot spring if you're ready, Kei-kun."
+    MC "Y...Yeah."
+    FMG "I'd stay behind us, wouldn't want to miss out on the view."
+    MC "R-Right."
+    Natsuko "Don't get too distracted back there, Hotsure-san."
+    scene black with fade
+    pause 0.5
+    scene Ryokan Onsen Steamed
+    show Natsuko aroused at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    Natsuko "Mmm, now this sets the mood perfectly."
+    show FMG aroused at Position(xcenter=0.25, yalign=1.0) with dissolve
+    FMG "Wanna sit between us, Kei?"
+    MC "Yes. A million times, yes. You didn't even need to ask."
+    "When I tell you that I sprinted to the hot spring, I {i}sprinted{/i}. Nothing could stop me from enjoying every second of this."
+    FMG "Mmm! Don't get so handsy now, Nat. We haven't even stepped in the hot spring yet."
+    Natsuko "Heh, my mistake. Seeing you like this has gotten me excited. I haven't been this turned on in a {i}long{/i} time."
+    FMG "I can tell~"
+    "Akira grasped one of Nat's breasts and kissed her neck, meanwhile moving her other hand around her body starting from her abs all the way down to her quads."
+    Natsuko "You don't want to get me going, Akira. Because when I start... {w}I won't stop."
+    MCT "Please, God, start. Please."
+    FMG "Heh, I won't. We shouldn't keep Kei waiting any longer though. Shall we?"
+    "Natsuko to my left and Akira to my right, the amazons lowered themselves into the hot spring, their breasts pushing against my face as they entered."
+    MCT "I'm in heaven. I've died and gone to heaven. My life is complete."
+    FMG "Having fun, Kei-kun?"
+    MC "I never want to leave."
+    FMG "Hehehe, we can stay as long as you want."
+    MCT "Why couldn't they act like this from the start?!?! I could've witnessed this months ago. But it's infinitely hotter with them being this big."
+    MC "Hey... uh... what would it take for you guys to do more of that stuff you did in the building?"
+    Natsuko "All you have to do is ask."
+    FMG "I've been waiting for round two with you."
+    Natsuko "Good."
+    FMG "You might want to get out, Kei-kun. It's going to get dangerous."
+    MC "Don't have to tell me twice."
+    "I bounced out of the spring and grabbed a towel nearly slipping on the way to the towel rack."
+    MCT "Phew, that could've ended poorly."
+    "I turned back around to find Akira with her back to the rocks, flexing her biceps as Nat explored her body."
+    FMG "Mmmnhn~!"
+    "Natsuko gently slid her fingers across Akira's soft, wanting labia as she leaned down and nibbled a bit on the lobe of the amazon's ear."
+    Natsuko "So, ready to get dominated again in round two?"
+    FMG "..."
+    FMG "As if."
+    "Suddenly, and with a great deal of force, Akira turned around before pushing Natsuko into the adjacent wall."
+    Natsuko "NNGH!"
+    Natsuko "Mmmf, oh you fu- mmph!~"
+    "Pressing her lips into the redhead's, Akira planted her knee between Natsuko's legs and used her dexterity to hold up and apply pressure to Natsuko, who blushed with a fiery intensity."
+    FMG "Mmmph~"
+    "Akira kept up the pressure, placing her hand on a support beam, which almost immediately began to splinter and crack at her all consuming might."
+    Natsuko "Nnn~ M-MMGH!"
+    "Not to be outdone, however, Natsuko's body tensed once more; her body becoming hard as stone as she playfully fought back against Akira's might..." 
+    "With her definition of play resulting in the annihilation of the wall behind her and the shattering of stone under their feet."
+    FMG "Mm-MWAH! Ahahaha!~"
+    "Delighting in the thrill of a challenge, Akira grappled with Natsuko as the force of each other might caused the two's muscles to bulge, steam rising from their bodies to create a misty haze about them as they began to heat up."
+    "Unclear just if my eyes were playing tricks on me, I could swear I saw some of the small stones on the ground begin to lift into the air a bit as they both grunted and gritted their teeth in a wash of both competitive spirit and joy."
+    show FMG aroused
+    show Natsuko aroused
+    FMG "Could you grab us a couple of towels, little man? One just won't be enough for us."
+    Natsuko "We can share~"
+    "Nat said as she planted a kiss on Akira's neck and slid one hand towards her clit."
+    FMG "Mmmmm, you're touchy today."
+    MCT "Why can't I have a photographic memory, holy shit."
+    Natsuko "What can I say, it's hard to control myself around you. You're the only person who can handle me after all. I wouldn't want to break Hotsure-san."
+    FMG "Heh, at least he can enjoy the show."
+    MC "I got the towels!"
+    MCT "Ooooh man, I need them to destroy this place. Make a man's dream come true!"
+    MC "Here you guys- OOH SHIT!"
+    "I tripped over my own feet... {w}I had sent myself flying due to my excitement..."
+    "BAM!"
+    "I collided head first with Akira's abs and my world started going dark."
+    scene black with fade
+    MCT "Is this how I die? Death by eight pack? I wanted to get crushed between their boobs before suffocation kicked in... and now... now that's never going to happen..."
+    pause 3
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm Interior with vpunch
+    MC "NO! NO, DON'T LEAVE ME! COME BACK!"
+    show FMG surprised with dissolve
+    FMG "AH!"
+    "My scream had startled Akira so badly that the amazon had fallen out of bed with a thud probably waking up the whole building from the sound."
+    play sound Crash
+    show FMG angry
+    FMG "What is wrong with you?!?!"
+    MC "No... No... None of it was real... {w}This can't be happening."
+    MC "Akira, punch me in the face. You need to punch me in the face. Right. Now."
+    FMG "As much as I'd like to do that at this very moment, I won't."
+    FMG "What are you even talking about? You're covered in sweat and freaking out."
+    show FMG sad
+    FMG "Did you have a bad dream?"
+    MC "No, no, not even close. It was the greatest dream I've ever had. But I woke up before it finished. I have to get back. You need to knock me out. That's the only way."
+    show FMG neutral
+    FMG "I'd break every bone in your body if I flicked you. I'm not doing that, so stop asking."
+    FMG "And now, since I'm wide awake, you can tell me all about your dream."
+    MC "I... I can't."
+    FMG "Why? It was the greatest dream you've ever had. It must've been exciting!"
+    MC "It was! B-But I can't tell you."
+    show FMG angry
+    FMG "Did you cheat on me?!?"
+    MC "No! No! No! I wouldn't even think of doing that awake much less asleep. Why do you jump to conclusions like that?"
+    show FMG neutral
+    FMG "Because you aren't telling me anything!"
+    FMG "I got it! {w}You had a dream about me and I was huge like a giant! And... And I was lifting buildings and Nat was super tiny! Man, I need to have a dream like that, that sounds freaking badass."
+    MC "Uh, you were in the dream but you weren't a giant."
+    show FMG happy
+    FMG "That's all you had to say, man. As long as I'm there, I must've been the reason for it being so great. Even in your head, I'm the best thing that's happened to you. {w}Damn, I'm cool."
+    MC "Mhm, agreed. Totally."
+    show FMG neutral
+    FMG "Freaking dope! Oh, I was also having a dream about us, actually...you know before you screamed and woke {i}me{/i} up."
+    MC "Yeah? What was it about?"
+    FMG "We were having a picnic and star gazing. Ah, man, it was so cool! I might have dreamed myself a bit bigger but that's not important, hahaha."
+    MC "Heh, when the weather gets better we should make a plan to do that."
+    FMG "For sure. {w}Alright, I will try to get some more sleep. So no more screaming, okay?"
+    FMG "And to ensure you have no bad dreams, we'll snuggle. I'll keep my man safe."
+    MC "Haha, thanks Akira. I can always count on you."
+    show FMG happy
+    FMG "Love you, Kei, heh."
+    jump daymenu
+
 label FMGGTS001:
     scene Bakery
     show FMG neutral

@@ -258,99 +258,197 @@ label GTS002_after:
     jump daymenu
 
 label GTS003:
-    scene Cafeteria with fade
+    scene Hallway with fade
     play music Schoolday
-    "The morning found itself to be quite the chaotic time, as many students rushed down the corridors to make it to the cafeteria in time to beat the breakfast rush."
-    "When I finally arrived to the cafeteria, I saw that it was surprisingly calmer than what was transpiring throughout the hallways. I got in line behind a few other students who were getting their breakfast."
-    "I will admit I was rather surprised by what I saw. There were trays upon trays of warm food prepared for us, a lot of which looked just heavenly to the eyes and assuredly tasted as wonderful."
-    "Not wishing to hold up the line though, I quickly grabbed what I felt would be a decent quick breakfast, getting some steamed rice, a rolled omelette, and a small bowl of miso soup. I thanked the cooks before searching for a place to sit."
-    "There were a good amount of unfamiliar faces among those sitting at various tables, but one face was rather familiar. Sitting down with a slight smile, I spoke to my neighbor."
+    "En route to the cafeteria at breakfast, I espied Naomi chatting with a taller, more robust woman a few paces ahead of me."
+    show GTS neutral at Position(xcenter=0.3, yalign=1.0)
+    show Okisho neutral at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
+    GTS "Croquettes, is it? If I am not mistaken, you shall be well pleased."
+    Okisho "Yeah, I heard they were good here. Honestly, if it's food, I'm good with it. {w}Oo! Looks like they have cinnamon buns, I could go for a couple of those too. "
+    show GTS embarrassed 
+    GTS "Heavens, I don't know that my constitution would be equal to the prospect..."
+    Okisho "Heh, well, I'm not looking to sit through hours of classes on an empty stomach. How about you?"
+    show GTS neutral 
+    GTS "A bit of rice and egg would be well with me. It is a shame that hot sencha is not on offer. A spot of tea would be just the thing for a number of students, I wager."
+    show Okisho happy
+    Okisho "For all I've ever seen you eat I would've assumed you subsisted off dewdrops and the energy of the universe."
+    show GTS happy
+    GTS "Hm hm hm! Some without the benefit of your good society might regard such commentary as rather biting, Mizawa-san..."
+    show Okisho happy
+    show GTS happy
+    with vpunch
+    "Just outside the entrance to the cafeteria proper, a short but wide girl in front of me suddenly skittered on something and her phone flew out of her hand."
+    FemStudent1 "Crap!"
+    if checkSkill("Athletics", ">", 2):
+        "Seeing a clear path, I lunged forward and pinched it between my fingers in mid-air."
+        MC "That was close! Here you go."
+        FemStudent1 "Woah... thanks. Uh, sorry about that."
+        MC "You're good."
+    else:
+        "It bounced off the wall and skipped and rolled over half a meter from my feet. Its owner wheeled around, chubby hands clenched to her chest, as I bent down to pick it up."
+        MC "Woof, sorry. Looks like it took a beating."
+        FemStudent1 "It was like that before. Thanks."
+        MC "Any time."
+        "I held out the spiderwebbed device with a shallow bow for her to receive; she plucked it from my hands and wheeled back around, stuffing it in her pocket."
+    "I looked forward again and just barely caught Naomi's hair whirling about her shoulders, as though she just turned her head forward."   
+    scene Cafeteria with fade
+    stop music fadeout 5.0
+    "Losing sight of them upon entering the cafeteria proper, I went to fetch some rice, a rolled omelet, and some miso soup for my breakfast."
+    "My mind was made up long before my little eavesdropping session. Really. Swear on my grandma's soul."
+    "Where outside forces compelled me was when I went to a nearby vending machine to look for a bottle of sencha."
+    "I found it, and then I found Naomi, now sitting by herself for whatever reason. I... took a breath, while I was still outside her notice, and sat down in front of her."
+    play music Peaceful
     show GTS neutral
     show HairpinGTS1
     with dissolve
-    MC "Hey there, Yamazaki-san. Nice to see someone I know here."
-    GTS "Good morning, Hotsure-san. I hope you're having a pleasant day so far."
-    "Her hands gently repositioned her utensils and napkin in an extremely orderly fashion before wiping her hands off with a moist towelette. She then looked at me, as if to give me a hint, until I realized what I'd forgotten."
+    MC "Morning, Yamazaki-san. Nice to see a familiar face."
+    GTS "Good morning, Hotsure-san. I hope you are well."
+    "She repositioned her utensils and napkin in smooth, calligraphic swipes of her fingers before wiping her hands off with a moist towelette. She then looked at me, as if to give me a hint, until I realized what I'd forgotten."
     MC "Oh! Uh, itadakimasu."
     show GTS happy
     GTS "Itadakimasu."
-    MC "Yeah it's been a pretty good morning so far, I managed to wake early so it gave me just the right amount of time to fully wake up, which is a pretty good start of the day in my opinion."
-    MC "Thankfully since I woke up so early it allowed me to shower without feeling rushed."
-    "She gave a small smile in response before picking up her chopsticks. Her hand softly slid her hair back as she picked up some cooked vegetables to eat."
-    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had six white petals in a sort of star configuration."
+    MC "Yeah, it's been a pretty good morning so far. I actually woke up early, which gave me time to, uh... actually wake up before I came down. That's a pretty big win for me."
+    show GTS neutral 
+    "She offered a slight smile in response."
+    GTS "Commendable, Hotsure-san. May it become a most profitable habit for you."
+    "She picked up a small clump of rice by the edges of her chopsticks, just so. As she chewed, offering barely a hint that her jaw was moving at all, I noted a pearlescent white hairpin in her bangs- it was in the shape of a six-petaled flower."
     MC "How was the start of your day, if you don't mind me asking?"
-    "Naomi perked up slightly as I asked my question, taking her napkin to delicately wipe her lips and properly placing it back in place before answering."
+    "Naomi perked up slightly as I asked my question, taking her napkin to delicately wipe her lips and properly setting it back in place before answering."
+    GTS "Myself? Well, much as you, I woke up rather earlier than strictly needed."
+    GTS "I set my things in order, wrote out a plan for the day, partook of morning meditations, and came here."
+    MC "Meditations, eh? You're spiritual?"
+    GTS "That would be fair to say. It's something of a family tradition."
+    MCT "{i}That{/i} answers some of my questions."
+    "She took another morsel of rice, and I nudged the bottle of sencha her way."
+    MC "Thirsty?"
+    "She regarded the gift with no particular expression, and yet I could see it actually devaluing by the millisecond. She turned to me with a polite smile."
+    GTS "Very kind of you, Hotsure-san. Thank you."
+    MC "...Sorry I couldn't get it hot."
+    show GTS unique
+    GTS "Hmhmhm, that is nothing to trouble yourself over. I shall enjoy it regardless."
+    MC "If I could hazard a guess, you normally prefer your sencha in a chawan, don't you?"
+    show GTS embarrassed 
+    GTS "My mother would tell you that calling this tea at all ought to carry at least six months in the penitentiary."
     show GTS neutral
-    GTS "Myself? Well, I woke up rather early as well, and took the time to properly make my bed."
-    GTS "I then showered and prepared myself for the rest of the day. Things like properly combing my hair, getting everything organized, and planning out my schedule for the day."
-    GTS "I think it's good to take the time in the morning to plan the day, it allows you to optimize the time you spend as well as get your brain working early on in the day."
-    MC "I can see that, yeah. Gets the juices flowing and your mind ready for more work."
-    "She gave me another small smile as she learned that I agreed with her before she went back to have another piece of her meal."
-    "This time I noticed how she used her chopsticks to take an almost perfectly rectangular piece out of some of her grilled fish, and then carefully took some steamed rice and place it atop before eating both."
-    "Her movements seemed so precise and slightly rigid that it was slightly captivating as I never seen someone eat so strictly."
+    GTS "I myself am of a more liberal mind, though I do put faith in the intangible benefits of preparing tea by hand."
+    MC "Heh, well, I think I prefer your stance."
+    MC "I heard you talking with that girl with the really big hair, and I just thought... well, it's hard to be far from home, isn't it?"
+    GTS "Would you hear a bit of counsel in exchange for this gracious gift, Hotsure-san?"
+    MC "Uh... sure!"
+    GTS "It has often been my private observation that the most mollient practice for one suddenly divested of his everyday comforts is to accept his componency in the very moment of his situation..."
+    GTS "...And to direct his deeds in accord."
+    if checkSkill("Academics", ">", 0):
+        MC "Mm. I see the sense in that. How would you suggest to apply it in our case?"
+    else:
+        MC "I got like thirty percent of that."
+        show GTS embarrassed 
+        GTS "To be more concise, the best thing you can do in an unfamiliar situation is to put aside your prior attachments and adapt."
+        MC "Oh... okay, yeah, that makes sense. How exactly would you apply that to our case, though?"
+        show GTS neutral 
+    GTS "Getting to know people would be as good a start as any. We're all in the same proverbial boat, after all."
+    MC "Or we were."
+    "She chuckled."
+    MCT "Hm... is that an invitation?"
+    "She unscrewed the cap on the bottle and took the slightest sip, which she again swallowed with no particular reaction. None she cared to display, anyway."
+    MC "..."
+    GTS "..."
     menu:
-        "That's a cute hairclip, though I'm not sure what type of flower that is. Do you know what kind is it?":
+        "Your hairclip's cute. What kind of flower is it?":
             jump GTS003_c1
-        "I mean no offense, but you have a very interesting way of eating.":
+        "You have kind of an interesting way of eating.":
             jump GTS003_c2
 
 label GTS003_c1:
-    $setAffection("GTS", 2)
-    $setSkill("Art", 1)
+    $setAffection("GTS", 1)
     $setFlag("GTS008_flowers")
     show GTS embarrassed at Transform(xzoom=-1)
     show HairpinGTS1 at Transform(xzoom=-1)
     "For the briefest of moments I could see Naomi's cheeks flash a slight crimson in what I assumed was embarrassment as her hand went to touch the accessory."
-    "She looked away for a second, but returned her eyes back to mine and retrieved that small smile she had before."
     show GTS embarrassed at Transform(xzoom=1)
     show HairpinGTS1 at Transform(xzoom=1)
-    GTS "Oh, why thank you so much. It's just a little something I decided to add to the rest of my attire for today. I have a bit of a collection of them, various species and things of that nature."
+    GTS "Oh, why thank you so much. It's just a little something I hoped would spruce up my attire a tad. I have a bit of a collection of them, various species and things of that nature."
     MC "Well, I think it suits you rather well."
-    GTS "Thank you..."
+    GTS "How kind if you..."
     show GTS neutral
-    GTS "As for your question, this flower is a Jasmine, which tends to confuse some people, since they happen to look slightly generic."
-    MC "I will admit, it does look like what most people picture as a flower in their heads."
-    GTS "Well, Jasmine does come in other forms, like the Grand Duke of Tuscany variant, which almost resembles a white rose, to those that look much like the one in my hair."
-    GTS "China even uses it as an ingredient for their teas."
-    MC "Really? Which one?"
+    GTS "As for your question, this flower is a jasmine. It's rather ironic. For many, it is their mental archetype of a flower, yet fewer than one might expect could name it out of hand."
+    MC "It does look kinda generic, doesn't it?"
+    show GTS happy-2
+    GTS "Oh, I must disagree on that count, Hotsure-san. Jasmine does come in other equally beautiful forms, like the Grand Duke of Tuscany cultivar, which almost resembles a white rose."
+    GTS "In China, they even use it as an ingredient for tea."
+    MC "Really? What kind?"
     GTS "...Jasmine tea."
     MC "Oh... I guess I should have put that together."
     "I scratched the back of my head, feeling a little silly now, but she didn't seem to mind my mental trip, simply answering me as if it were any other question."
-    GTS "They're known to symbolize friendliness and gracefulness."
-    MC "Seems like it suits you rather well, then."
-    "This caused her blush to return once more, as her eye contact finally broke to look at her food."
+    show GTS neutral
+    GTS "Moreover, in ikebana, they- "
+    show GTS embarrassed 
+    extend "Ah. Mm."
+    "I chuckled, which I think eased her awkward expression a little."
+    MC "It's okay. Please continue."
+    GTS "...They are known to symbolize friendliness and gracefulness."
+    $setSkill("Art", 1)
+    MC "Well now, how perfectly germaine."
+    "Her blush, which had begun to fade, flared hotter still and she looked down at her food without another word."
+    show GTS neutral 
     jump GTS003_after
 
 label GTS003_c2:
-    $setAffection("GTS", -1)
-    "Her body stiffened up slightly as I brought mention towards her table etiquette, and she looked me in the eyes."
-    show GTS embarrassed
-    GTS "How... do you mean?"
-    MC "I just mean that the way you conduct yourself, it's very precise but also very formal."
-    show GTS neutral
-    GTS "Well it was how I was raised. It's important for one to keep proper posture and etiquette when eating. You don't want to come off as unintentionally rude, after all."
-    MC "Heh, well you don't have to worry so much about being so formal around me. You can relax."
-    GTS "I see, I'll keep that in mind, though it's okay, I would like to move past the subject."
-    MC "Heh... yeah, okay. Sorry about that."
-    GTS "It's fine."
+    GTS "The idea is to cultivate mindfulness and appreciation for the meal."
+    MC "Isn't that the point of saying 'itadakimasu'?"
+    GTS "Words without action are as a palanquin without bearers."
+    MC "But do you {i}need{/i} action to govern how you think and feel?"
+    show GTS neutral at Transform(xzoom=-1)
+    show HairpinGTS1 at Transform(xzoom=-1)
+    GTS "It is useful to do so."
+    GTS "In any case, I only speak to how I was raised. It is also conducive to maintaining good posture and dining etiquette."
+    GTS "I did not mean to suggest I should be the example for your own manner."
+    MC "Oh, I was just curious. You don't have to worry so much about being so formal around me, you know. You can relax."
+    $setAffection("GTS", -2)
+    show GTS neutral at Transform(xzoom=1)
+    show HairpinGTS1 at Transform(xzoom=1)
+    GTS "I see. Thank you, Hotsure-san."
+    "I sensed a finality in her words and only nodded in reply."
     jump GTS003_after
 
 label GTS003_after:
-    "We ate for a few moments in silence after that. It was rather nice to have someone to eat with, even if we weren't having much of a conversation at the time. As we finished I had decided to ask Naomi something."
+    "We ate for a few moments in silence. It was nice to have someone to eat with, even if we weren't having much of a conversation at the time. As we finished, I decided to ask Naomi something."
     MC "So, is there any particular subject you're looking forward to this year?"
-    GTS "I think science should be rather fun this year, how about yourself?"
-    MC "I'm not too sure yet, but I can tell you already that I'm dreading the thought of math."
-    GTS "Not much for math?"
-    MC "I'm horrible at math, but maybe this year I'll get lucky."
-    "She gave me a small nod and smile as she stood up from the table, collecting her tray."
-    GTS "I wish you good luck then, Hotsure-san."
-    MC "Why thank you ma'am, and I wish you luck with science."
-    "She gave a small bow and walked off as I gathered all my things."
+    GTS "I was happy to see the academy offers electives in accounting and rhetoric."
+    show GTS happy
+    GTS "But in truth, I'm {i}really{/i} looking forward to collegiate literature and history classes. I adore both subjects, and the prospect of studying them in greater depth is terribly exciting."
+    GTS "What about you, Hotsure-san?"
+    show GTS neutral 
+    MC "Math will probably be good for me. I tend to do well."
+    GTS "Such an aptitude often attends an even temper and a sharp intellect."
+    MC "Heh. 'Often' being the key word. I'm the exception to a few rules."
+    show GTS aroused
+    "She simply rested her chin on her palm and gave me a smile of faux pity."
+    GTS "So, if I may be so bold, there is something else that {i}truly{/i} compels you."
+    MC "Mm."
+    MC "I don't know if there is."
+    show GTS neutral 
+    GTS "Oh?"
+    MC "N-Not like... I just can't quite match up what moves me with the programs available. That's a- oh shit, is that the time?"
+    show GTS surprised at Transform(xzoom=-1)
+    show HairpinGTS1 at Transform(xzoom=-1)
+    "Her eyes widened and shot up towards a clock on the wall, as I registered how many people had already left."
+    GTS "Oh, bother. Let us resume some other time."
+    show GTS neutral at Transform(xzoom=1)
+    show HairpinGTS1 at Transform(xzoom=1)
+    GTS "And do mind your language, Hotsure-san, you wouldn't want to offer the wrong impression."
+    hide GTS
+    hide HairpinGTS1
+    with dissolve
+    "She rose and placed her hands in her lap and bowed, then collected her utensils and walked away. Once again I stared at the back of her head a moment longer than was proper."
+    MCT "No, I wouldn't."
+    pause 0.5
+    MCT "Fuck, I'm gonna be late..."
     jump daymenu
 
 label GTS004:
     $setTimeFlag("testday")
-    $setProgress("GTS", "GTS006")
+    $setProgress("GTS", "GTS005")
     scene Library with fade
     play music Peaceful
     "The afternoon sun trickled, glowing, through the library's large and numerous windows, and through the gaps in my bangs."
@@ -460,6 +558,7 @@ label GTS004_after:
     jump daymenu
 
 label GTS005:
+    $setProgress("GTS", "GTS006")
     $setTimeFlag("aftertest")
     "I wandered about the campus for quite some time after visiting nurse Kiyomi. I wasn't half as convinced of systemic malice as my roommate expressed..."
     "Yet a little more hard data didn't make the scenario feel any less kafkaesque."
@@ -590,77 +689,124 @@ label GTS006:
     $setProgress("GTS", "GTS007")
     scene School Front with fade
     play music Busy
-    "There was quite a calming mood to the start of the school day as I wandered near the entrance. Something caught my eye, though, as I saw what appeared to be a small gathering of students near the front gate."
-    "Curious, I wandered over, hearing some excited voices and sounds of affection. The reason for this became clear rather quickly, as it seemed a stray Shiba Inu puppy had wandered onto campus."
-    Student1 "It's so adorable!"
-    Student2 "D'aww! Look at his little paws!"
-    "The crowd grew every couple of seconds as more people wanted to see what the commotion was all about. As I kept watching, I saw a familiar figure kneel next to the excited puppy and begin petting it."
-    "Naomi held a warm smile on her face as her hand massaged the puppy's ears and even rolled him over to rub his belly. This caused the entire crowd to gush over the cuteness and I couldn't resist a smirk."
-    "A little time passed before the dog's owner finally showed up and thanked everyone for finding their dog before taking it back home."
-    "As the crowd dispersed, I saw Naomi walk by and notice me. Flashing her trademark smile, she gave me a small wave of her hand."
-    show GTS happy at center with dissolve
-    GTS "Hello Hotsure-san, did you see the adorable Shiba Inu that had wandered onto campus?"
-    MC "Yeah, I did! Well, I saw the crowd first, and had to see what was up."
-    GTS "It was such a cute puppy, and very well behaved. Didn't you think so?"
+    "The morning was clear and bright as a diamond, and I felt just the same. Passing through the front gate, I saw a small, murmuring crowd of students encircling something on the ground. Most were crouched."
+    "Curious, I wandered over and noted the unanimous twinge of affection in their voices. And behold, I saw the object of their adoration: a Shiba Inu puppy, a golden cloud of fuzz topped with three black dots and a curling tail."
+    Student1 "He's adorable!"
+    Student2 "Aaaaughhhhbwabawook at his widdwe paws!"
+    "The crowd slowly grew around me and I couldn't help but smile; that, too, grew as I saw a familiar face kneel down by the pup."
+    show GTS happy with dissolve
+    "Naomi's palms danced across his tummy and swished through his ears, to the wild tune of the little fellow flopping and swimming through the air, groaning and flapping his tail like a hummingbird's wings. The whole crowd gushed."
+    UNKNOWN "{i}Pedro! Oh, Pedro!{/i} Oh please, kami of precious wee puppers, return my Pedro to me!"
+    show GTS surprised 
+    "I turned my head to see a twenty-something man leaning by the gate post, a look of weary despair pressed between his droopy blonde perm and his drenched plum velour tracksuit."
+    "His eyes fell on the puppy and he was healed instantly."
+    UNKNOWN "{i}Pedro!{/i} Oh, thank goodness gracious! Thank you all for keeping him safe! Oh, everyone loves you, Pedro!"
+    "Seeing the puppy suddenly become laser-focused on the newcomer, Naomi took the hint, scooping up Pedro and standing. The other students cleared a path between her and the owner."
+    "She gingerly handed him over and the man, a little less gingerly, hugged the pup to his chest."
+    "After tying the intact part of a snapped leash to the collar, the man dug out his wallet and extracted some bills."
+    "Then, he got on one knee before her, cast his gaze down to the ground and held the money out to Naomi.{w}I think it was about 500 yen."
+    UNKNOWN "It's not much, but please, please accept this small \”thank you\”."
+    GTS "That shall not be necessary, sir. A pleasant morning to both of you."
+    UNKNOWN "Pleeease?"
+    GTS "I apologize, but I cannot accept."
+    UNKNOWN "Pleeeeeease?"
+    GTS "I am quite certain, sir. Dare I say, the money would be better put to a new leash."
+    UNKNOWN "I would feel much better..."
+    show GTS unique 
+    GTS "Acts of kindness are their own reward, sir. I insist."
+    "Looking up, sheepish and a little deflated, he stood and bowed."
+    UNKNOWN "Thanks again."
+    "And as mysteriously as he arrived, he left."
+    show GTS neutral 
+    "As the crowd dispersed, Naomi walked by and looked my way. We exchanged a gentle smile and a shallow bow."
+    GTS "Good morning, Hotsure-san. Pray, did you catch a glimpse of that adorable little Shiba Inu?"
+    MC "Yeah, I did! Well, I saw the crowd first, and I had to see what was up."
+    GTS "Heavens, but he was cute, and quite well-behaved for being so young. Didn't you think so?"
     menu:
-        "Kind of, but I'm mostly into cats myself.":
-            jump GTS006_c1
-        "Yeah, he was extremely cute!":
-            jump GTS006_c2
+        "He was cute. Personally, I prefer cats.":
+            GTS "I could see the appeal. Cats do not bark, for one thing."
+            MC "Yeah, and dogs have their loyalty and... trainability going for them. I just like the peace and quiet that comes with a cat. And I dunno... there's just something about a lil' ball of fuzz purring and mewing..."
+            show GTS unique-2
+            "Naomi tried to suppress a giggle as she nodded, and my cheeks warmed against the cool breeze."
+            show GTS happy-2 
+            GTS "Pardon me, Hotsure-san. I don't mean to laugh, I simply find that a most endearing sentiment."
+            "I looked to the ground as I rubbed the back of my head."
+            MC "What can I say, little fluffy things just get to me."
 
-label GTS006_c1:
-    MC "Kind of, but I'm mostly into cats myself."
-    show GTS neutral
-    GTS "I see, well, cats are rather adorable too. Though I always enjoyed the companionship of a dog."
-    MC "Yeah, I hear a lot of people are a big fan of how loyal dogs can be. Personally, I enjoy the peace and quiet a cat offers. Plus, they're so cute!"
-    "Naomi gave a little giggle and covered her mouth at that last bit but nodded her head."
-    show GTS happy
-    GTS "Sorry, I didn't mean to laugh, it's just rather cute hearing that."
-    "My cheeks felt a little warm as I rubbed the back of my head."
-    MC "What can I say, little cute fluffy things just get to me."
-    jump GTS006_after
+        "He so was. I wish I could've pet him, too.":
+            show GTS happy
+            GTS "Indeed, he was. Did you get a chance to play with him prior?"
+            MC "Nah, I just got here. The crowd was too big. I was a {i}little{/i} tempted to barge through them, but I didn't wanna make a scene."
+            "This made Naomi chuckle softly and nod."
+            GTS "A fair concern, though I don't think many would begrudge you the sentiment."
+            MC "Yeah... man, I wish I had a dog like that."
+            show GTS neutral
+            GTS "Oh? Have you never owned one?"
+            MC "Nah, our place was always a bit too small for something like a dog, at least the ones my parents like. Probably for the best anyway, none of us really had both the time and the inclination to take proper care of one."
 
-label GTS006_c2:
-    $setAffection("GTS", 1)
-    $setFlag("GTS006_c2")
-    MC "Yeah, he was extremely cute!"
-    show GTS happy
-    GTS "Indeed, he was. Did you get a chance to play with him?"
-    MC "Not really, too big of a crowd and I don't think it'd be wise to make a scene by barging through everyone to pet him."
-    "This made Naomi giggle softly and nod."
-    GTS "That's very true, but I don't think many people would hold it against you with such an adorable puppy on the other side."
-    MC "Yeah... man I wish I had a dog like that."
-    show GTS neutral
-    GTS "Oh? Never owned a pet before?"
-    MC "Nah, our place was always a bit too small for something like a dog, at least the ones my parents like. Plus, we were all mostly too busy to begin with, so it probably was for the best."
-    jump GTS006_after
+        "I dunno how well behaved he was. It almost looked like that leash had been chewed off, didn't it?":
+            $setFlag("GTS006_c3")
+            show GTS unique-2
+            GTS "So it did. Perhaps Pedro is a mite spoiled."
+            MC "Maybe he felt his owner was cramping his style. I don't know if I could blame him."
+            show GTS wink
+            GTS "It's not very nice to talk behind the poor fellow's back."
+            MC "Not until he towels off, anyway."
+            show GTS unique
+            GTS "Mhm!"
+            show GTS embarrassed 
+            extend "- {i}Khm{/i}. Let us change the subject, shall we?"
+            MC "Sure, sure, sorry."
 
-label GTS006_after:
     MC "So what about you? Have you ever had a pet?"
     show GTS neutral
     GTS "Yes actually, we have a Hokkaido dog back home."
-    MC "Whoa, seriously!? Aren't those extremely rare?"
-    GTS "I've never heard that, but I suppose they could be. I always thought they were rather common, since SoftBank uses one as a mascot."
-    MC "I don't know, I've always heard they were really rare, even in Japan. Your family must be loaded!"
+    MC "Whuh- for real? Aren't those like {i}really{/i} rare?"
+    GTS "I've never heard that, but I suppose they could be. I always thought they were rather common, since SuaveBank uses one as a mascot."
+    MC "I don't know, I've always heard they were really rare, even in Japan. Your family must be loaded."
     show GTS embarrassed at Position(xcenter=0.4, yalign=1.0)
-    "There was the faintest hint of a blush on Naomi's face as she broke eye contact and looked to the side for a second, before returning her attention."
+    "There was the faintest hint of a blush on Naomi's face as she looked to the side for a second, before returning her attention."
     GTS "My father always said he picked that breed because the Hokkaido has the three characteristics he looks for in people: bravery, loyalty, and intelligence."
-    GTS "I can say he was right about that description, because she's probably been one of the most loyal dogs I've met."
-    MC "She? So it's a girl."
+    GTS "I can say he was right about that description, because she's been one of the most loyal dogs I have met."
+    MC "She, eh?"
     show GTS neutral
-    GTS "Oh yes! Sorry, yes she's a girl. Her name is Kimiko and she has wonderfully white fur. She's been with the family for about five years now."
+    GTS "Ah, yes, it's a girl. Her name is Kimiko and she has the loveliest snow-white coat. She's been with my family for about five years now."
     MC "I see, that's pretty cool. I bet you can't wait to see them again."
-    GTS "Yes, I do miss her a bit more than I thought, but I plan on heading home this weekend, so I'll be seeing her soon enough."
-    MC "That's good to hear. Hmm, I wonder if I can plan a trip back home at some point too."
-    GTS "Small breaks from school can do the mind a lot of good."
-    MC "Yeah, especially with what we will be dealing with here over time. Yeah, maybe I'll pay home a visit sometime soon."
-    "I got a small, understanding nod from Naomi, then an equally small, yet warm, smile."
-    GTS "If you'll pardon me Hotsure-san. I believe we're already close to being late for class. It might be best to start heading to our home room."
-    "I quickly looked at my watch and then chuckled."
-    MC "Oh yeah... heh, I kind of lost track of time. Yeah let's get going. Maybe if I'm lucky I'll get a chance to see that puppy again someday."
-    GTS "Maybe."
-    "With a small giggle from Naomi, we began walking to class together."
+    GTS "A bit, yes. I take some comfort that my little sister Kazumi will see to her care."
+    MC "That's good to hear. I don't suppose your family would bring him up here for a visit?"
+    GTS "Perhaps. They might visit for New Years."
+    GTS "Well then, Hotsure-san, I suppose we should head to this morning's lecture now."
+    MC "Oh yeah, we should..."
+    "Just then, I caught a small object on the ground out of the corner of my eye, where the puppy had been holding court."
+    menu:
+        "Investigate":
+            jump GTS006_c1
+        "Continue on your way":
+            jump GTS006_c2
+    
+label GTS006_c1:
+    MC "Wait a second... what's that?"
+    show GTS surprised at Transform(xzoom=-1)
+    GTS "Hm?"
+    "I walked over and knelt down... it was a slipper-like shoe, sized for, if I had to guess, a tiny dog."
+    MC "It looks like... that dog lost one of his shoes."
+    GTS "Oh, my. I noticed he was wearing... shoes... but I didn't notice one missing."
+    MC "Mm. I suppose the owner will want it back, eh? I better try and find him."
+    show GTS embarrassed
+    MC "If I end up being late to class..."
+    show GTS neutral 
+    GTS "I shall make your excuses to Tsubasa-sensei, Hotsure-san."
+    MC "Thanks, Yamazaki-san."
+    $setAffection("GTS", 1)
+    hide GTS with dissolve 
+    "She bowed and we parted ways."
     jump daymenu
+
+label GTS006_c2:
+    GTS "Would you like to walk together?"
+    MC "Yes, let's."
+    jump daymenu
+
 
 label GTS007:
     $setProgress("GTS", "GTS008")
