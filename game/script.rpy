@@ -38,6 +38,9 @@ default WGPrevOutfit = OutfitEnum.DEFAULT
 default WGNsfwOutfit = OutfitEnum.DEFAULT
 default NatsNsfwOutfit = OutfitEnum.DEFAULT
 default TakoNsfwOutfit = OutfitEnum.DEFAULT
+define dis1 = { "master" : Dissolve(1.0) }
+define mov1 = { "master" : MoveTransition(1.0)}
+define mov3 = { "master" : MoveTransition(3.0)}
 
 #Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
 #xcenter value (basically the same as what value between 0.00 and 1.00 along the x-axis) is passed as variable.
@@ -135,6 +138,7 @@ init python:
         'festival': ("town", (1100,650)),
         'field': ("town", (1100,650)),
         'frozenbeach': ("town", (1100,650)),
+        'gamestore': ("town", (1100, 650)),
         'gatefront': ("school", (570,390)),
         'giantdorminterior': ("town", (950,100)),
         'gym': ("school", (730,220)),

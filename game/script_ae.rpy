@@ -7674,6 +7674,7 @@ label AE036:
     jump daymenu
 
 label AE037:
+    $setFlag("XX37")
     $setProgress("AE", "AE038")
     $setTime(TimeEnum.EVE)
     scene School Front with fade

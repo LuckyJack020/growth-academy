@@ -134,6 +134,8 @@ define DJ = Character('DJ', color="#C0C0C0")
 define Driver = Character('Driver', color="#C0C0C0")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
+define Giant1 = Character('Giant 1', color="#C0C0C0")
+define Giant2 = Character('Giant 2', color="#C0C0C0")
 define Girls = Character('Girls', color="#ffffff")
 define Guard = Character('Guard', color="#C0C0C0")
 define Hostess = Character('Hostess', color="#C0C0C0")
@@ -244,6 +246,8 @@ image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].webp")
 image Courtyard GTS = "Graphics/ui/bg/NYI.webp"
 image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].webp")
 image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].webp")
+image Giant Dorm Quarry = "Graphics/ui/bg/GTSDorm_quarry_rocks.webp"
+image Giants Gate = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].webp")
 
 #Seichou Town
 image Arcade = DynamicImage("Graphics/ui/bg/archiveBG/arcade_[gametime].webp")
@@ -578,7 +582,14 @@ image cg PRG028_bg = "Graphics/ui/gallery/PRG028_bg.webp"
 image PRG028_blur = "Graphics/ui/gallery/PRG028_blur.webp"
 image cg PRG038 = "Graphics/ui/gallery/PRG038.webp"
 image cg PRG038_poster = "Graphics/ui/gallery/PRG038_poster.webp"
+image cg PRG045 = "Graphics/ui/gallery/PRG045.webp"
 image cg PRG052 = "Graphics/ui/gallery/PRG052.webp"
+image cg PRG054_forest = "Graphics/ui/gallery/PRG054_forest.webp"
+image PRG054_forestBlur = "Graphics/ui/gallery/PRG054_forestBlur.webp"
+image PRG054_Aida = "Graphics/ui/gallery/PRG054_Aida.webp"
+image cg PRG054All = "Graphics/ui/gallery/PRG054All.webp"
+image cg PRG061_back = "Graphics/ui/gallery/PRG061_back.webp"
+image cg PRG061_front = "Graphics/ui/gallery/PRG061_front.webp"
 
 image cg WG000 = "Graphics/ui/gallery/WG000.webp"
 image cg WG009 = "Graphics/ui/gallery/WG009.webp"
@@ -917,6 +928,7 @@ image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutf
 image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/worried.webp")
 
 image Ryoko neutral = "Graphics/minor/ryoko/[RyokoOutfit]/neutral.webp"
+image Ryoko neutral-2 = "Graphics/minor/ryoko/[RyokoOutfit]/neutral-2.webp"
 image Ryoko happy = "Graphics/minor/ryoko/[RyokoOutfit]/happy.webp"
 image Ryoko annoyed = "Graphics/minor/ryoko/[RyokoOutfit]/annoyed.webp"
 image Ryoko camera = "Graphics/minor/ryoko/[RyokoOutfit]/camera.webp"
@@ -1045,7 +1057,7 @@ define audio.BE = "Audio/BGM/scene_BE.ogg"
 define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
 define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
 define audio.GTSAlt = "Audio/BGM/scene_GTS2.ogg" #Hidden Meadow (Taishogoto Ver.)
-define audio.RM = "Audio/BGM/scene_RM.ogg"
+define audio.RM = "Audio/BGM/scene_RM.ogg" #K. Tera
 define audio.RMInvestigate = "Audio/BGM/TheInvestigator.ogg" #Alt Daichi Theme
 define audio.MC = "Audio/BGM/scene_MC.ogg" #Our Protagonist
 define audio.MCGuitar = "Audio/BGM/scene_MCguitar.ogg"
@@ -1059,17 +1071,17 @@ define audio.WG = "Audio/BGM/scene_WG.ogg" #Aristocratic Opulence
 define audio.WGAlt = "Audio/BGM/scene_WG2.ogg" #Elegant Antics
 define audio.Argue = "Audio/BGM/tension.ogg" #Argument
 define audio.Beach = "Audio/BGM/scene_beach.ogg" #Sea Breeze
-define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
+define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH - Hobby Atelier Carrot Wine
 define audio.BigChanges = "Audio/BGM/scene_uncategorized2.mp3"
 define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
-define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
+define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH - Pierrot Lunaire
 define audio.ChangingSeasons = "Audio/BGM/ChangingSeasons.ogg" #Contemplation Theme
 define audio.Chase = "Audio/BGM/Chase.ogg"
 define audio.ClearSkies = "Audio/BGM/theme_clearskies.ogg"
 define audio.Country = "Audio/BGM/scene_country.ogg" #Country Theme
 define audio.CreepingPresence = "Audio/BGM/CreepingPresence.ogg"
 define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
-define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
+define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH - Yoshiki Ara
 define audio.DifferentPaths = "Audio/BGM/differentpaths.ogg"
 define audio.DormLife = "Audio/BGM/scene_dorm.ogg"
 define audio.Festival = "Audio/BGM/scene_festival.ogg" #Dokkoi!
@@ -1077,8 +1089,8 @@ define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.HigherEduC = "Audio/BGM/scene_highereduC.ogg" #Higher Education Claviola Variant
 define audio.Holiday = "Audio/BGM/scene_holiday.ogg" #Winter Wonderland
-define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
-define audio.FullKnowMyself = "Audio/BGM/knowmyself_full.mp3" #Know Myself (full song)
+define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop) by Patrick Patrikios
+define audio.FullKnowMyself = "Audio/BGM/knowmyself_full.mp3" #Know Myself (full song) by Patrick Patrikios
 define audio.LastBell = "Audio/BGM/general4.ogg" #Last Bell
 define audio.Love = "Audio/BGM/love.ogg"
 define audio.LoveA = "Audio/BGM/love_A.ogg"
@@ -1095,13 +1107,13 @@ define audio.Nostalgia = "Audio/BGM/nostalgia.ogg"
 define audio.NostalgiaSax = "Audio/BGM/nostalgia_sax.ogg"
 define audio.OuttaMyFace = "Audio/BGM/OuttaMyFace.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
-define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
+define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH - Hobby Atelier Carrot Wine
 define audio.Reality = "Audio/BGM/reality.ogg"
 define audio.RevvinUp = "Audio/BGM/RevvinUp.ogg"
 define audio.Rivalry = "Audio/BGM/rivalry.ogg"
 define audio.Requiem = "Audio/BGM/requiem.mp3" #Distant Questioning
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
-define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
+define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH - Yoshiki Ara
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Stardust = "Audio/BGM/stardust.ogg"
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
@@ -1117,24 +1129,29 @@ define audio.WildBlur = "Audio/BGM/scene_uncategorized1.mp3" #Wild Blur
 define audio.Winter = "Audio/BGM/scene_winter.ogg" #Solstice Night
 define audio.WinterVocal = "Audio/BGM/scene_wintervocal.ogg"
 
-define audio.BrandenburgNo4 = "Audio/BGM/brandenburgno4.mp3"
-define audio.Gymnopedie = "Audio/BGM/gymnopedie.mp3"
-define audio.Pastorale = "Audio/BGM/Pastorale.ogg"
-define audio.SimpleSonata = "Audio/BGM/SimpleSonata.ogg"
-define audio.MinuetG = "Audio/BGM/MinuetG.ogg"
-define audio.MoonlightSonata = "Audio/BGM/moonlightsonata.mp3"
-define audio.AgnusDeiX = "Audio/BGM/agnusdeix.mp3"
-define audio.AngelsWeep = "Audio/BGM/angelsweep.mp3"
-define audio.BachGavottes = "Audio/BGM/Bach_Gavottes.mp3"
-define audio.ConcertinoTeleman = "Audio/BGM/Concertino_Teleman.mp3"
-define audio.InvitationCastleBall = "Audio/BGM/InvitationCastle_Doug.mp3"
-define audio.BaroqueCoffeeHouse = "Audio/BGM/BaroqueCoffee_Doug.mp3"
+define audio.BrandenburgNo4 = "Audio/BGM/brandenburgno4.mp3" #Kevin MacLeod
+define audio.Gymnopedie = "Audio/BGM/gymnopedie.mp3" #Erik Satie
+define audio.Pastorale = "Audio/BGM/Pastorale.ogg" #Joel Cummins
+define audio.SimpleSonata = "Audio/BGM/SimpleSonata.ogg" #Sir Cubworth
+define audio.MinuetG = "Audio/BGM/MinuetG.ogg" #Tullio Forlenza
+define audio.MoonlightSonata = "Audio/BGM/moonlightsonata.mp3" #Beethoven
+define audio.AgnusDeiX = "Audio/BGM/agnusdeix.mp3" #Kevin MacLeod
+define audio.AngelsWeep = "Audio/BGM/angelsweep.mp3" #Audionautix
+define audio.BachGavottes = "Audio/BGM/Bach_Gavottes.mp3" #Johann Sebastian Bach
+define audio.ConcertinoTeleman = "Audio/BGM/Concertino_Teleman.mp3" #Georg Philipp Telemann
+define audio.InvitationCastleBall = "Audio/BGM/InvitationCastle_Doug.mp3" #Doug Maxwell
+define audio.BaroqueCoffeeHouse = "Audio/BGM/BaroqueCoffee_Doug.mp3" #Doug Maxwell
 define audio.SonataFMajor = "Audio/BGM/Sonata_AllegroF.mp3"
-define audio.SummerSymphonyBall = "Audio/BGM/SummerSymphonyBall_Cubworth.mp3"
-define audio.HarpsichordFugue = "Audio/BGM/HarpsichordFugue.ogg"
-define audio.BaroqueLetter = "Audio/BGM/BaroqueLetter.ogg"
-define audio.Bourree = "Audio/BGM/Bourree.ogg"
-define audio.SoloCelloPassion = "Audio/BGM/SoloCelloPassion.ogg"
+define audio.SummerSymphonyBall = "Audio/BGM/SummerSymphonyBall_Cubworth.mp3" #Sir Cubworth
+define audio.HarpsichordFugue = "Audio/BGM/HarpsichordFugue.ogg" #Sir Cubworth
+define audio.BaroqueLetter = "Audio/BGM/BaroqueLetter.ogg" #Aaron Kenny
+define audio.BaroqueLetter2 = "Audio/BGM/BaroqueLetter2.ogg" #Aaron Kenny
+define audio.Bourree = "Audio/BGM/Bourree.ogg" #Joel Cummins
+define audio.SoloCelloPassion = "Audio/BGM/SoloCelloPassion.ogg" #Doug Maxwell
+define audio.Zephyrs = "Audio/BGM/Zephyrs.ogg" #To the Zephyrs, by Philipp Gottlieb Anton Sr.
+define audio.Fiddles = "Audio/BGM/Fiddles.ogg" #Fiddles McGinty by Kevin MacLeod
+define audio.SlowDance = "Audio/BGM/1940SlowDance.ogg" #Doug Maxwell
+define audio.SwingBadaBing = "Audio/BGM/SingSwing.ogg" #Doug Maxwell
 
 define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
@@ -1168,6 +1185,7 @@ init 1 python:
     eventlibrary['MC011'] = {"name": "Put Up a Fight", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,                           "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
     eventlibrary['MC012'] = {"name": "GnG", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "global032"], [ConditionEnum.EVENT, "GTS032"]]]}
     eventlibrary['MC013'] = {"name": "Finals", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "classroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.FLAG, "XX35"]]}
+    eventlibrary['MC014'] = {"name": "The Line", "girls": ["TM"], "type": EventTypeEnum.OPTIONAL,                           "location": "gamestore",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.FLAG, "XX37"]]}
     eventlibrary['MC024'] = {"name": "The Scholarship", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "infodesk",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],     "conditions": [[ConditionEnum.FLAG, "XX56"]]}
     eventlibrary['MC033'] = {"name": "The Sentinel of Seichou", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,                   "location": "facultyroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX80"],     "conditions": [[ConditionEnum.FLAG, "XX73"]]}
     eventlibrary['MC041'] = {"name": "Not So Big Afterall", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,             "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.TIMEFLAG, "size6"]]}
@@ -1182,6 +1200,7 @@ init 1 python:
     eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}
     eventlibrary['RM004'] = {"name": "Voices of the Past", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "classroom_3",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM003"], [ConditionEnum.FLAG, "XX15"]]]}
     eventlibrary['RM005'] = {"name": "Milestone", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM004"], [ConditionEnum.TIMEFLAG, "XX20"]]]}
+    eventlibrary['RM006'] = {"name": "The Gate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1563,7 +1582,9 @@ init 2 python:
     eventlibrary['GTS051'] = {"name": "She Caught the Katy", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS052", "obsflags": [],       "conditions": []}
     eventlibrary['GTS052'] = {"name": "Madwebagaasin", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS053", "obsflags": [],       "conditions": []}
     eventlibrary['GTS053'] = {"name": "Adiós a Jamaica", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "giantdorminterior",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS054", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS054'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
+    eventlibrary['GTS054'] = {"name": "His Good Opinion", "girls": ["GTS"], "type": EventTypeEnum.CORE,     "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS055", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS055'] = {"name": "Sasameyuki", "girls": ["GTS"], "type": EventTypeEnum.CORE,           "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS056", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS056'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
 
     #Optional
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
@@ -1645,7 +1666,7 @@ init 2 python:
     eventlibrary['PRG057'] = {"name": "Down for a Nap", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG057B", "obsflags": [],      "conditions": []}
     eventlibrary['PRG057B'] = {"name": "Crunchtime", "girls": ["PRG"], "type": EventTypeEnum.CORE,                     "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG058", "obsflags": [],       "conditions": []}
     eventlibrary['PRG058'] = {"name": "Fallen Angel", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "classroom",      "priority": PrioEnum.NONE, "sp": 13,    "next": "PRG059", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG059'] = {"name": "Riding the Hormonal Rollercoaster", "girls": ["PRG"], "type": EventTypeEnum.CORE,        "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 14,    "next": "PRG060", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG059'] = {"name": "Girl Time", "girls": ["PRG"], "type": EventTypeEnum.CORE,                     "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 14,    "next": "PRG060", "obsflags": [],       "conditions": []}
     #PRG size5
     eventlibrary['PRG060'] = {"name": "True or False", "girls": ["PRG"], "type": EventTypeEnum.CORE,                            "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 14,    "next": "PRG061", "obsflags": [],       "conditions": []}
     eventlibrary['PRG061'] = {"name": "Freshly Baked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                            "location": "nurseoffice",       "priority": PrioEnum.NONE, "sp": 14,    "next": "PRG062", "obsflags": [],       "conditions": []}

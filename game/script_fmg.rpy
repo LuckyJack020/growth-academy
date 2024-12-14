@@ -13,12 +13,14 @@ label FMG001:
     "It was definitely a woman, but I couldn't make out a face just yet."
     UNKNOWN "...12... 13..."
     MC "Man, this place is {i}too{/i} big."
+    show cg FMG001 with dissolve
     "I must have looked around for twenty or so minutes before I finally found Akira counting out her bench press reps."
     "From what I could guess, she was too focused on her workout to notice me walking towards her, or that she assumed it was just someone who was working out as well."
-    show FMG angry with dissolve
     FMG "14... 15... 16!"
-    "Akira then proceeded to put the weights back on the bar and moved off the bench press; it was only when she looked up and saw me watching her."
+    hide cg
     show FMG neutral
+    with dissolve
+    "Akira then proceeded to put the weights back on the bar and moved off the bench press; it was only when she looked up and saw me watching her."
     FMG "Well hey there...{w} Um, your name was Keisuke, right?"
     MC "Yeah, it is haha. Don't wear it out..."
     MCT "Fantastic start. Flawless."
@@ -5938,6 +5940,7 @@ label FMG036:
     jump daymenu
 
 label FMG037:
+    $setFlag("XX37")
     $setProgress("FMG", "FMG038")
     scene Gym with dissolve
     play music DayByDay

@@ -7171,6 +7171,7 @@ label BE036_after:
     jump daymenu
 
 label BE037:
+    $setFlag("XX37")
     if getFlag("BE_COOKING"):
         $setProgress("BE", "BE038A")
     elif getFlag("BE_SOFTBALL"):

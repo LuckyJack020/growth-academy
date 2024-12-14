@@ -9252,6 +9252,1037 @@ label MC013_aftermenu:
         "The two of us headed down the hall, more than ready for some lunch to wash down all that test taking energy."
     jump daymenu
 
+label MC014:
+    scene Dorm Interior with fade 
+    play music ChangingSeasons fadein 2.0
+    pause 1
+    MCT "Breezy. Perfect."
+    "I slid open my door a little further, stepping out onto the balcony and shaking my head, getting the gusts of Saturday morning wind to flow through and dry my wet head."
+    "Leaning against the railing, I took out my phone and unlocked it, double checking my calendar."
+    MCT "Yep. That'd have been embarrassing."
+    MCT "'Hey Dad! Happy birthday!'"
+    pause 1
+    MCT "'Wait, your birthday was yesterday? My bad.'"
+    "I glanced out to the dorm entryways, shaking my head again and projecting the drops of water down to the lawn below."
+    MCT "So... his 40th birthday was like three years ago. Or... four?"
+    MCT "Why am I thinking about that anyway? He'll just be happy I called. Not like he's a kid and I have to acknowledge the exact number."
+    MCT "Well, if I want to make him feel old, that'd be the way to do it."
+    "I went to my keypad and dialed, Dad's number being one of the very few that I actually had memorized."
+    pause 2
+    DadCell "Hello?"
+    MC "Hey. Happy birthday."
+    DadCell "Hey, Buddy. Thanks."
+    DadCell "How's your summer starting off?"
+    MC "Eh, it's summer. Just trying to enjoy the break."
+    DadCell "Ha. That's a good way of saying that you're doing nothing."
+    MC "I mean... what would you do?"
+    DadCell "Touché."
+    MC "How's work?"
+    DadCell "Ahh... it's always something."
+    DadCell "This construction crew has been working down the street. Shut the entire thing down, including the parking lot nearby."
+    MC "So you've been having to park somewhere else?"
+    DadCell "Yep. And everyone else to boot."
+    DadCell "It's not that big of a deal, but when a man gets used to something, he likes to stick to it."
+    MC "I feel that."
+    DadCell "And of course, every customer has to inform us how annoying the construction is."
+    DadCell "It's the same five conversations every day, I swear."
+    "I glanced off to the opposite balcony beside mine, seeing the door slid open."
+    if getFlag("Meet_Genji"):
+        "Genji's lower half emerged, followed by the rest of him, fitted with a pair of wireless headphones."
+        MCT "... Those are the new SyerManics. I could go for a pair of those."
+        "He carted a mop outside, dumping it onto the balcony and scrubbing along the edge, working his way inward."
+        "His head bobbed rhythmically, the soft sounds of fingers tapping on the mop handle."
+        "Genji raised his head, meeting my gaze, and raised a hand with a few fingers up in greeting."
+        "I nodded my head up and raised a hand as well."
+        "Genji smirked and started brushing back and forth in rhythm, putting his entire body into whatever beat he was listening to."
+        "I smirked and shook my head, having to break my line of sight so I didn't bust up on the phone with Dad."
+    else:
+        "The lower half of my neighbor appeared, followed by the rest of him, a gleaming pair of brushed silver headphones on his head."
+        MCT "... Those are the new SyerManics. I could go for a pair of those."
+        "The other student glanced up as he pulled a mop out onto the balcony with him, looking over at me."
+        "Nodding his head up in greeting, I nodded back with a waved hand, as he started mopping off the balcony."
+        MCT "Pretty sure I've seen him around the halls before."
+        "I caught the sound of him beating his fingers against the mop handle as he scrubbed, his head bobbing just a little in tandem."
+        MCT "Seems like a nice enough dude."
+    "I blinked."
+    DadCell "- said to me, \"then why do you still have the sign up if you're out of the product?\" And I told her, \"it'll be back in stock on Monday. We just sold out today.\" "
+    MC "Retail, huh?"
+    DadCell "Yeah. But, it's work. People depend on us."
+    MCT "There's that dedication again."
+    MCT " \"With time, you'll get it, Keisuke.\" Like ancient proverbs."
+    DadCell "And her kid started dumping his soda onto the floor. Right in front of the register."
+    MC "Er... why did he dump it? Just being a kid?"
+    DadCell "He was hot and didn't want to walk back to where his mom parked. At least, that's what he started crying about."
+    MC "Ah."
+    DadCell "But yeah. It should be wrapping up early next week. Then all this crap can go back to normal."
+    MC "That'll be nice. How's Mom, by the way?"
+    DadCell "Ah, I'd hand the phone off to her, but she's on with her publisher right now."
+    MC "Is she in the writing stage for the next book yet?"
+    if checkAffection("TM", ">=", 5) or (getFlag("MC005TM") and getFlag("MC010TM")):
+        "{i}DING!!{/i}"
+        "My phone pulsed in my hand, as I quickly checked the screen. Ignoring the text for the moment, I brought my phone back down."
+        DadCell "- has it outlined, and she's been pitching it. At least, as far as I know."
+    else:
+        DadCell "Somewhat. She has it outlined, and she's been pitching it. At least, as far as I know."
+    MC "It's a sequel, right? Like, to the last one?"
+    DadCell "Mhm. Anything else about it is anyone's guess. She won't even tell her husband about it. Cruel, right?"
+    MC "Horrific."
+    MC "But hey, all the romance fans will be psyched to hear about it."
+    DadCell "Oh yeah. She's got a whole entourage of people chomping at the bit."
+    MC "I'm sure."
+    if routelock == "PRG":
+        DadCell "So, how are you and the girl doing, by the way?"
+        MC "Well... still a little shook up, for sure."
+        DadCell "Freaked out?"
+        MC "... Yeah, a little."
+        DadCell "Understandable."
+        pause 1
+        "Both my dad and I went quiet for a moment."
+        DadCell "How are her parents with all this?"
+        MC "Her... mom was understanding. I don't know if she fully grasps it, but she was really calm, after a bit."
+        MC "Her dad... well, I don't really know."
+        DadCell "Did you talk to them?"
+        MC "Her mom, yeah."
+        DadCell "And her dad?"
+        MC "Not... directly. He's got quite a few health problems, so Aida's mom passed it onto him."
+        DadCell "Ah."
+        pause 1
+        DadCell "Keisuke, I..."
+        DadCell "Look. I'm... still not happy about this whole thing."
+        DadCell "I mean, you heading off and leaving Tokyo for school, then almost immediately calling your mother and I and telling us that you got a girl pregnant is... well, it really didn't sit well."
+        MC "I-I know, Dad. I-"
+        DadCell "Hold on, Keisuke."
+        DadCell "I know you, Kid."
+        DadCell "I know that screaming at you or throwing out \"what-ifs\" isn't going to help anything. I'm not looking to blame anybody, and neither is your mother."
+        DadCell "What's most important now is for you to take responsibility for your actions."
+        DadCell "You took on all of this, and I expect you to uphold it."
+        DadCell "You aren't a kid anymore, Keisuke. Time to be a man."
+        DadCell "I know you can do it, Keisuke. I've got faith in you, despite my... feelings about it."
+        MC "Thanks, Dad. I won't let you down."
+        DadCell "I'm sure you won't."
+        DadCell "Now, you said her name was Aida, right?"
+        MC "Mhm."
+        DadCell "Well, I'll have to meet her sometime."
+    pause 1
+    DadCell "But anyway, I've got a question for you, Buddy. Little favor for your old man, and for your mother, too."
+    MC "What's up?"
+    DadCell "Could you check on Moko-chan for me?"
+    DadCell "Her homeroom teacher called us recently and informed us of a few... concerning things."
+    if getFlag("Meet_Takamura"):
+        MCT "I wonder what Takamura may have noticed. Of all the teachers, seems like she'd be the one to take the most personal notice."
+    DadCell "She had told us that Moko-chan hasn't been leaving her dorm much, and that she barely interacts with anyone."
+    if isEventCleared("MC009"):
+        MC "Yeah... that's kind of what I figured. Her homeroom teacher talked to me too recently."
+        DadCell "So she has been isolating?"
+        MC "Yeah. Quite a bit."
+        DadCell "Hmm... I saw the signs myself, of course. But I guess I hoped it was just a phase. I still am hoping, to be frank."
+        MC "Have you tried calling her directly?"
+        DadCell "I did. Tried to kind of lead into it, but... well, you know how she responds to any sort of question."
+        MC "Right..."
+    else:
+        MC "Yeah... that's pretty on the head."
+        DadCell "So she has been isolating?"
+        MC "Yeah. Quite a bit."
+        DadCell "Hmm... I saw the signs myself, of course. But I guess I hoped it was just a phase. I still am hoping, to be frank."
+        MC "Have you tried calling her directly?"
+        DadCell "I did. Tried to kind of lead into it, but... well, you know how she responds to any sort of question."
+        MC "Right..."
+    MC "But yeah, I'll meet up with her and see what I can do. It's been a bit since we've met up anyhow."
+    DadCell "Thank you, slugger. I knew you'd understand."
+    DadCell "I am just getting to the store, though, so I have to let you go."
+    if routelock == "PRG":
+        DadCell "But, remember what I told you, Keisuke."
+        DadCell "It might seem like it's gonna be a while before the big day, but you'll be a father before you know it."
+        DadCell "And, you're gonna have to step up into that role. Not only for your kids, but also for their mother."
+        MC "Yeah... I know, Dad. I've been thinking about it."
+        DadCell "Good. I'm glad to hear it."
+    DadCell "Thanks for the call, Keisuke. I appreciate it."
+    MC "No problem. Love you."
+    DadCell "Love you too, Buddy. Have a good day."
+    MC "You too. Bye."
+    if checkAffection("TM", ">=", 5) or (getFlag("MC005TM") and getFlag("MC010TM")):
+        "I hung up the phone and pulled the notifications up, showing the text."
+        TomokoCell "Hey bro. Up for a sidequest?"
+        MCT "Of all the insane timings-"
+        MCCell "I'm down. What's the occasion?"
+        TomokoCell "Wanna go to town?"
+        MCCell "Sure. I'll meet you over at your place."
+        "I glanced down at my phone."
+        MCT "She never wants to do anything besides sit around."
+        MCT "What's she got planned?"
+        "I slipped my phone into my pocket and glanced over, seeing my friendly neighborhood neighbor had finished his mopping and headed back inside."
+        "I followed his lead and headed back in."
+    else:
+        "I hung up the phone and went into my texts, scrolling down into Tomo's thread."
+        MCT "Should I call her instead? Be more direct?"
+        MCT "Nah, she won't pick up. Texting is easier."
+        MCCell "Hey. Got any plans today? Feel like hanging out?"
+        "I glanced over at the other balcony while I waited, noting the emptiness and now-cleaned floor."
+        MCCell "Guess I'll follow suit."
+        "I stepped inside as my phone buzzed."
+        TomokoCell "I'm gonna go run errands. Wanna side quest??"
+        MCCell "Sidequest? And you doing errands?"
+        TomokoCell "Meet me at my place if you want"
+        MCCell "Alright. I'll be there in a minute"
+        MCT "Errands? Her?"
+        "I shook my head."
+        MCT "Least she seems chatty. Dad'll be happy about that."
+    scene black with fade
+    pause .25
+    scene Dorm Hallway with fade
+    play music ClearSkies
+    if getFlag("TM_VisitedDorm"):
+        "I headed down the hall, walking right up to Tomo's door and knocking."
+    else:
+        MCT "Okay..."
+        MCT "Where the hell does my sister live?"
+        "I looked down the massive hall of doors, the hall seeming more intimidating due to how tall it was."
+        "I took out my phone and pulled up the search bar in my conversation with Tomo."
+        MCT "Moments where Kei should have hung out with his sister more. Part 124."
+        "I found the number and went to the door... which was at least six doors off from where I'd been, and knocked."
+    pause 1
+    Tomoko "I'll be out in a second."
+    if isEventCleared("MC005"):
+        MCT "Least she heard me knock this time."
+    "I leaned against the wall, crossing my arms and rubbing my eyes."
+    "A voice seemed to echo from the wall behind me. Not Tomo's either."
+    MCT "That's... loud. Sounds like someone smacking something, too."
+    Tomoko "- brother. Don't freak out over it."
+    "I stood up straight, glancing down the hall toward the door."
+    $setRyokoOutfit(OutfitEnum.CASUAL)
+    show Ryoko neutral with dissolve
+    if routelock == "GTS":
+        MC "Oh, hey Ryoko."
+        show Ryoko happy
+        Ryoko "Hey Keisuke!"
+        show Ryoko neutral
+        "Luckily for the hair covering, my glance at her tongue was completely safe."
+        Ryoko "What's up?"
+        MC "Just waiting on my sister."
+        show Ryoko surprised
+        Ryoko "The babble queen is your sister?!"
+        if getFlag("Meet_Yuki"):
+            MC "Oh, no. Not Utagashi-san. Her roommate."
+            Ryoko "Huh... never actually met her roommate."
+            Ryoko "Kind of weird considering how Utagashi-san is. She's off the walls most of the time."
+            MC "Yeah... I'm aware."
+            MC "The two are somewhat opposites."
+        else:
+            MC "Ah... I'm not sure we've got the same girl in mind."
+            MC "My sis has a lot of nicknames, but not that one."
+            show Ryoko confused
+            Ryoko "Oh, I meant Yuki-san! Student council, talks a lot, ring any bells?"
+            MC "Nope. My sister is Tomoko. I'm guessing this Yuki-san person is her roommate."
+            show Ryoko neutral
+            Ryoko "Could be, but I didn't know that Yuki-san even had a roommate."
+            "I shrugged."
+            MCT "Guess that explains the weird sounds."
+        pause 1.5
+        show Ryoko neutral
+        MC "So."
+        MC "What are you up to today?"
+        Ryoko "On my way to see Yamazaki-san."
+        MC "Oh, good! I'm sure she'll be excited."
+        MC "Could you let her know that I'll stop over after I'm done running some errands?"
+        show Ryoko happy
+        Ryoko "Sure thing!"
+        "I smiled and nodded as she continued on her way off down the hall."
+    elif getFlag("Meet_Ryoko") and not routelock == "GTS":
+        MC "Oh, hey Tanaka-san!"
+        show Ryoko neutral
+        Ryoko "Hey. How are you?"
+        MC "Good! And you?"
+        Ryoko "Not bad."
+        MCT "... Yeah, it's definitely bigger. Or longer. However that works."
+        show Ryoko annoyed
+        Ryoko "What are you up to?"
+        MC "Do I look up to something?"
+        Ryoko "Well, a guy just hanging in the halls of the women's dorms isn't usually too common."
+        MC "Good point. Just waiting for my sister."
+        show Ryoko surprised
+        Ryoko "The... babble queen is your sister?"
+        MC "Babble queen?"
+        if getFlag("Meet_Yuki"):
+            MC "Oh, no. Not Utagashi-san. Her roommate."
+            Ryoko "Huh... never actually met her roommate."
+            Ryoko "Kind of weird considering how Utagashi-san is. She's off the walls most of the time."
+            MC "Yeah... I'm aware."
+            MC "The two are somewhat opposites."
+        else:
+            MC "Ah... I'm not sure we've got the same girl in mind."
+            MC "My sis has a lot of nicknames, but not that one."
+            show Ryoko confused
+            Ryoko "Oh, I meant Yuki-san. Student council, talks a lot, ring any bells?"
+            MC "Nope. My sister is Tomoko. I'm guessing this Yuki-san person is her roommate."
+            Ryoko "Could be, but I didn't know that Yuki-san even had a roommate."
+            "I shrugged."
+            MCT "Guess that explains the weird sounds."
+        show Ryoko neutral
+        Ryoko "Guess you learn something every day, hm?"
+        MC "Seems like it, yeah."
+        Ryoko "But, I'm off to meet up with a friend, so I'll have to catch up with you later."
+        MC "For sure. Have a good day."
+        "Ryoko gave me a nod and kept on her way down the hall."
+    else:
+        "A girl passed down the middle of the hall, glancing over at me, then glanced at Tomo's door."
+        if isEventCleared("RM004") and not isEventCleared("RM007"):
+            MCT "I've seen her somewhere... no clue where though."
+        show Ryoko happy
+        Student "Hm. Good choice for a date. The babble queen will make sure there's not a bit of silence."
+        "The girl's tongue seemed to loll out of her mouth as she spoke, though it seemed controlled to a degree."
+        MCT "Definitely in Tashi-sensei's neck of the woods, but not nearly to that degree."
+        MCT "Funny... I would've been completely floored by something like that before coming here."
+        MC "Sorry... babble queen?"
+        show Ryoko tongue
+        Student "Yeah. She's a little annoying, but as they say, 'de gustibus non est disputandum.'"
+        Student "Either way, good luck."
+        show Ryoko neutral
+        MC "Wait... hold up a sec."
+        MC "I'm waiting for my sister. And last I checked, 'Babble Queen' wasn't one of her nicknames."
+        if getFlag("Meet_Yuki"):
+            show Ryoko surprised
+            Student "So, not Yuki-san, then?"
+            MC "Oh, no. Not Utagashi-san. Her roommate."
+            Student "Hm... never knew she had a roommate."
+            MC "Yeah..."
+            MC "The two are somewhat opposites."
+            Student "I see. Guess that explains why I've never met her."
+        else:
+            show Ryoko confused
+            Student "So, just to check, your sister isn't Yuki-san?"
+            MC "Nope. My sister is Tomoko. I'm guessing this Yuki-san person is her roommate."
+            Student "Could be, but I didn't know that Yuki-san even had a roommate."
+            "I shrugged."
+            MCT "Guess the loud voice fits, then."
+        show Ryoko embarrassed
+        Student "Anyway, I've gotta be on my way. Sorry about the mix-up."
+        MC "No worries. See ya."
+    hide Ryoko with dissolve
+    MCT "... Never a quiet day around here."
+    "I took my phone from my pocket and unlocked it."
+    play music Tomoko
+    Tomoko "Hey."
+    $setTomoOutfit(OutfitEnum.CASUAL)
+    show Tomoko neutral with dissolve
+    "... And right back into the pocket."
+    "Tomo gave me a sort of look, as if waiting for something."
+    MC "Hey."
+    "I nodded toward the dorm entrance. Tomo shut the door and locked it, stepping quickly to catch up, her hand over the messenger bag slung over her shoulder."
+    scene Dorm Exterior
+    show Tomoko neutral
+    with fade
+    MCT "Her hair almost looks edited onto her. Like it doesn't belong to someone that short."
+    "Tomo picked at the side of one finger with another, then brought her hand up to her face and smelled it for a second."
+    MC "So..."
+    Tomoko "So what?"
+    MC "What's this \"sidequest\" thing?"
+    Tomoko "Oh."
+    if getFlag("MC010TM"):
+        Tomoko "Remember that Wyrm's Pursuit game we talked about? The one that got delayed a lot?"
+        MC "Yeah? From the festival?"
+        Tomoko "Mhm. It's finally being released."
+        MC "Cool. Gonna download it?"
+        Tomoko "Nah. I want a physical copy. So, that's where I'm going. Downtown."
+        MC "Huh. Not to damper your plans, but aren't digital copies usually cheaper?"
+        Tomoko "Not always. And I filled up my Pretendo's harddrive."
+        MC "Ahh."
+    else:
+        Tomoko "You've probably seen ads for the new Wyrm's Pursuit game that's coming out, right?"
+        Tomoko "I've been waiting for it, but it got delayed like four times."
+        Tomoko "So yeah. It's finally out, and I want to go get a physical copy."
+        Tomoko "The drive on my Pretendo is full, and having a physical version helps save space."
+        MC "Gotcha."
+    scene Campus Center
+    show Tomoko neutral
+    with fade
+    MC "So, I'm basically on an escort quest?"
+    Tomoko "... Yeah, pretty much."
+    MC "Hah. Well, that sucks for me. Escort quests always suck."
+    Tomoko "Not the worst, though. Random fetch quests suck harder."
+    MC "That's your opinion, then."
+    Tomoko "That's fact, bro. Deal with it."
+    Tomoko "Like, I was playing one of the Ancient Text's games the other day, and I got to that sidequest where you have to find the fish scales."
+    MC "The 12 scales from that uber rare fish?"
+    Tomoko "Mhm. So first, the fish spawned in murky water, so I had to go digging blind."
+    Tomoko "And, the spawn rate for them is terrible. Literally every fish I found wasn't the right one."
+    MC "So you dropped it and moved on, I'm guessing? There's tons of other sidequests in that game."
+    Tomoko "Pff, no."
+    Tomoko "I gave up after an hour and console-commanded them into my inventory."
+    MC "You would. Dirty cheater."
+    Tomoko "I'm not going to sit there and waste my time on some dumbass quest just because some developer was feeling especially sadistic. And, I don't want that on my quest log either."
+    show Tomoko smile
+    Tomoko "This was the solution. Which worked very well."
+    "I shook my head and laughed."
+    play music DayByDay
+    scene School Front
+    show Tomoko neutral
+    with fade
+    "A small group of people was already surrounding the bus stop as Tomo and I came up to it."
+    "The two of us waited alongside it, as I glanced down at her."
+    "She glanced over at the crowd, tucking her hands into her overall's pockets."
+    MC "Do you know where the game store is in town?"
+    Tomoko "Near the bus stop by some other shops."
+    "Tomo shifted on her heels a little, doing a gentle rocking motion."
+    "I glanced back to the crowd beside us."
+    MCT "Wyrm's Pursuit does always have those wild Saturday launches."
+    MCT "Checks out on both fronts, I guess."
+    Student1 "- told me that people used to skip work and classes just to go pick this thing up. Then, they'd bail on the whole week just to grind it like crazy."
+    Student2 "Your dad said that?"
+    Student1 "Well, he was alive in the 80's. He'd know."
+    Student1 "But yeah, story goes that the government had to come in and ask the devs to move their releases to the weekend."
+    Student2 "You're full of shit."
+    Student1 "My dad told me himself!"
+    MCT "If that's true, that's hilarious."
+    MCT "But, the games do always launch on Saturday's so maybe?"
+    "I looked back at the two other guys still accusing each other of who was full of it."
+    "With a quiet hiss, the bus slowly pulled up and lowered on one side, the doors swinging open."
+    "Tomo and I stepped in ahead of the group, being closer to the door, and took a seat up front."
+    scene Bus Interior
+    show Tomoko distracted
+    with fade
+    "Tomo immediately took her phone out and pulled up some sort of puzzle game, leaning against the window and starting in."
+    "I glanced over at her, and deciding it wasn't the worst idea, slid my phone out and pulled up my internet browser."
+    hide Tomoko with dissolve
+    MCT "Boring day. Hm."
+    if getFlag("MC005_browseweb"):
+        "I scrolled through a few articles, the pages seeming about as boring as staring at the search bar."
+        MCT "All this crap is the same. I'd kill for something with a bit of weird."
+        MCT "Always a great time-killer for long rides."
+        if getFlag("MC005GTS"):
+            MCT "I mean, the thing I read about plants got me in more with Naomi. There's a purpose to my madness."
+    "I scrolled down through my article on how to build expensive furniture to sell for a few million gold in some MMO that I'd noodled with a few times, and scrolled into one of those mid-text ads."
+    MCT "Wyrm's Pursuit XIII: The Reckoning! Available Now!"
+    MCT "Fancy boxart. Damn."
+    "I clicked the X at the top corner of the ad."
+    "My browser flickered for a second, as the window minimized and pulled up the homepage for the game."
+    MCT "Son of a-"
+    "On-screen, a middle aged guy wearing grayish robes appeared. He had a full-ish beard, with small circular glasses. Under his picture, the title \"Jorunal the Scribe\" appeared."
+    "I closed the window out and pulled my original one back up, taking the time to adjust myself in my seat, glancing around."
+    if routelock == "PRG":
+        "Glancing back at my phone, I minimized my browser and pulled up my texts."
+        MCCell "<Hey. How's your day??>"
+        show Tomoko distracted with dissolve
+        "I glanced over at Tomo, who was still clicking away on her puzzle game."
+        "Behind her, tall trees and a few hills popped up here and there."
+        hide Tomoko with dissolve
+        PRGCell "<It's going well. Alice and I are just making lunch. Then we're going to have a movie day.>"
+        MCCell "<Ooh. What are you watching?>"
+        PRGCell "<Giggantic. That movie about a ship that hits an underwater reef and starts to sink. And there's the two couples who meet and all kind of swap off in relationships.>"
+        MCCell "<Huh. Sounds interesting.>"
+        MCT "Definitely a chick flick."
+        MCCell "<Well I'll leave you guys to it. Don't wanna interrupt>"
+        MCCell "<I hope you guys have a great time though!!>"
+        PRGCell "<We will! What are you up to?>"
+        MCCell "<Out running some errands with my sister. Just bumming around town>"
+        PRGCell "<Sounds fun. Say hi to her for me.>"
+        MCCell "<I will! I'll see you soon>"
+        "There was a short pause. Maybe a minute or two."
+        PRGCell "<Okay!>"
+        "I smiled, pulling back up my internet browser."
+    if routelock == "WG":
+        "I rested my head back a bit, letting my thoughts drift."
+        "The date I'd had with Alice recently was all that I could think of."
+        MCT "Should I give her a call or shoot her a text? Got the time, after all."
+        "I looked back down at my phone, sort of fading out as I mulled it over."
+        MCT "No. Don't wanna be needy. I'll hit her up later today. {w}Besides, she's probably doing something with Aida today anyway."
+    if routelock == "FMG":
+        "I glanced back at Tomo, then down at my phone again."
+        MCT "Least I can pencil out the \"Meet Akira\" checkbox."
+        MCT "Probably not how I would have chosen for them to meet, but hey, snacks are about the most \"Akira\" thing out there. It fits."
+    if routelock == "BE":
+        MCT "Wonder what Honoka is up to. This seems like her sort of gig."
+        "I glanced down at my phone again and kept scrolling, clicking on another tab."
+        "I stopped just as I nearly swiped away a notification and clicked it."
+        BECell "<Miss you!!>"
+        "I smiled. Superhuman timing as always."
+        MCCell "<Hey. Miss you too!>"
+        "I looked at the island flying by out the window."
+        MCT "Still wild we met back up here."
+        BECell "<What are you up to??>"
+        MCCell "<Heading to the game store with Tomo>"
+        BECell "<Ooh!! Wyrms Pursuit?>"
+        MCCell "<You know it>"
+        BECell "<Say hi to Tomo for me! Give her my best!>"
+        MCCell "<Will do. I'll stop by after I get back>"
+        BECell "<K!>"
+        MC "Girlfriend says hi, by the way."
+        Tomoko "Hm. Nice one."
+        MC "It's true, you jerk. Her name is Ho-"
+        MC "And she's gone."
+        "I watched her zone out on her puzzle game again, as I laid my head back in my seat."
+    if routelock == "GTS":
+        MCT "Right after this, it's over to Naomi's."
+        MCT "She's probably with Ryoko right now, though. Probably not a good time for a text."
+        "I went back to scrolling, giving a bit of thought to how I'd spend my later afternoon with my lady friend."
+    if routelock == "AE":
+        "My mind went back to Shiori."
+        "She always seemed to have something behind the surface to discover and yet... I couldn't help but feel at times I wasn't sure if me trying to dig further is being helpful or making her uncomfortable."
+        "Still, I could tell that all this is very new to her; I should be careful but... just be glad that we're sharing these experiences together."
+    else:
+        show Tomoko distracted with dissolve
+        "I glanced over at Tomo, who was still clicking away on her puzzle game."
+        "Behind her, tall trees and a few hills popped up here and there."
+        
+    "After a short while, I stashed my phone again and took to looking out the window, watching the town eventually come into view."
+    scene Town Bus
+    show Tomoko worried
+    with fade
+    "I followed Tomo off the bus and onto the sidewalk."
+    "She had her phone in one hand and the other one over the flap of her messenger bag, as she glanced back at me."
+    Tomoko "Um... the store is this way."
+    MC "... 'Kay?"
+    "I walked after her, Tomo's walk bearing a slight resemblance to Tashi-sensei when he was all worked up."
+    play music MomentTime
+    scene Game Store
+    show Tomoko worried
+    with fade
+    "A small, electric bell rang overhead as Tomo opened the door, not bothering to hold it for me as I followed her in."
+    MC "Seems like the place to be."
+    "A line at least 30 some people long snaked around the store, stopping only a few paces from the door."
+    "Tomo walked to the end as I followed."
+    "Craning her neck, Tomo looked forward in the line. Her shoulders fell a little, and she looked around at the line crossing back across the store, rubbing one arm lightly."
+    MC "Any pre-order rewards for this one?"
+    Tomoko "No. That's why I didn't bother."
+    MC "Ah."
+    MC "Should see if you can still log into an online beta or something. Sometimes, you can pull some cool extras from that."
+    Tomoko "They never did one."
+    Tomoko "Not sure if that's a reason to worry, but the delays already don't seem promising."
+    MC "Oh..."
+    MC "So... how have things been for you lately?"
+    Tomoko "Fine."
+    MC "How did finals go?"
+    Tomoko "Fine, bro. God..."
+    MC "Did you pass?"
+    Tomoko "I think so..."
+    MC "Gotcha. Well, a good gut feeling is usually a good sign."
+    show Tomoko distracted
+    Tomoko "Mm."
+    MCT "Maybe games? That always seems to perk her up."
+    if routelock == "FMG":
+        MC "Been playing anything besides Ancient Texts?"    
+        Tomoko "I did some raids in Neighborhoods of Dreadnaught the other day."
+    elif routelock == "BE":
+        MC "Been playing anything besides Ancient Texts?"
+        Tomoko "I played Far Skies for awhile yesterday."
+    elif routelock == "GTS":
+        MC "Been playing anything besides Ancient Texts?"
+        Tomoko "..."
+        Tomoko "I tried Magiria Knight 2. Purely out of boredom."
+        "I couldn't repress a victorious grin."
+        MC "Aaaand?"
+        show Tomoko neutral
+        Tomoko "It doesn't suck, mostly."
+        MC "I know that's code for \"the dopest shit ever\". The combat with the sword and the robot arm was smooth as butter and the setpieces ruled."
+        Tomoko "It's okay. The part with the frog ninjas on top of Nascia Castle is some bullshit for only the second area in the game, though."
+        MC "It... Yeah. It gets better though. Stick it out, you'll be glad you did."
+        Tomoko "Mm. Maybe."
+    elif routelock == "WG":
+        if isEventCleared("WG017"):
+            MC "Been playing anything besides Ancient Texts?"
+            Tomoko "I did play a few hours of Rail Barons. I picked it up not that long ago when it was on sale for 75%% off."
+            MCT "Heh, that's funny. That's the one I recommended to Alice."
+            MC "Doesn't sound like the kind of thing you normally play."
+            show Tomoko neutral
+            Tomoko "Eh, it's a popular franchise, plus at 75%% off it was barely anything to pick it up. Figured I might as well."
+            MC "So what's the verdict?"
+            show Tomoko annoyed
+            Tomoko "I was having fun with it, but after losing to a hostile takeover for the third time after only a couple hours into a campaign I think it's safe to say I'm over it. I uninstalled it from my game library."
+            MC "Sounds like you got the full Rail Barons experience."
+        else:
+            MC "Been playing anything besides Ancient Texts?"
+            Tomoko "I did play a few hours of Rail Barons. I picked it up not that long ago when it was on sale for 75%% off."
+            MCT "Hmm, a tycoon simulator. That sounds like something Alice might be into. I wonder if she'd give video games a chance if she had something more business-like to sink her teeth into."
+            MC "I remember those games. Doesn't sound like the kind of thing you normally play though."
+            show Tomoko neutral
+            Tomoko "Eh, it's a popular franchise, plus at 75%% off it was barely anything to pick it up. Figured I might as well."
+            MC "So what's the verdict?"
+            show Tomoko annoyed
+            Tomoko "I was having fun with it, but after losing to a hostile takeover for the third time after only a couple hours into a campaign I think it's safe to say I'm over it. I uninstalled it from my game library."
+            MC "Sounds like you got the full Rail Barons experience."
+    elif routelock == "PRG":
+        MC "Been playing anything besides Ancient Texts?"
+        Tomoko "Well, Distant Bay in Apocalypse 6."
+        show Tomoko neutral
+        Tomoko "We... just talked about this, Bro. With Kodama-san?"
+        MC "Yeah, I know, I know. I just wasn't sure if there was anything else."
+        Tomoko "Nah. I've been trying to fill my house up in Apocalypse 6 with clipboards."
+        MC "... Why?"
+        Tomoko "I mean, why not? It's dumb, but nothing says \"satisfaction\" like coming home to a few meter high pile of clipboards."
+        MC "I mean, whatever does it for ya."
+    elif routelock == "AE":
+        MC "Been playing anything besides Ancient Texts?"    
+        Tomoko "I dunno, I've been getting into some western RTS games recently."
+        MC "Oh yeah? What are you looking at?"
+        Tomoko "An old game called Warblade 40000: Sunrise of Conquest."
+        MC "Ah."
+        if isEventCleared("AE039"):
+            show Tomoko neutral
+            Tomoko "... You \"Ah\". as if you know what I'm talking about."
+            MC "Only tangentially."
+            MCT "Shiori spent almost two hours screaming about how Crusade of Darkness being followed up by Stormsoul was a tragedy saved only by her favorite army being put in the game."
+    else:
+        MC "Been playing anything besides Ancient Texts?"
+        Tomoko "Eh."
+    show Tomoko neutral
+    MC "... Alright."
+    pause 1
+    show Tomoko distracted
+    "I sighed, and glanced at one of the large, cardboard standees nearby. This one had a name at the bottom, like all the others."
+    MCT "Huh. Jorunal the Scribe. It's a pleasure, Sir. I'm a huge fan of your work."
+    MCT "'Join the Razemites and save the world.'"
+    MC "Hey, Tomo."
+    show Tomoko neutral
+    MC "What's the deal with this dude? I've seen him all over."
+    Tomoko "He's from the game. Been all over marketing lately for it. He's supposed to be one of your storyline companions."
+    MC "Are the Razemites an in-game faction or something?"
+    Tomoko "Mhm."
+    Tomoko "The second trailer that came out makes it sound like you're the leader of them."
+    MC "Cool."
+    MC "Same thing for the other standees?"
+    Tomoko "Probably."
+    MC "I see."
+    "I looked down at her, waiting for another response, but she just looked down at the ground."
+    show Tomoko worried
+    "I shook my head and glanced around behind us, where a few more people had entered."
+    Student1 "When do you start?"
+    Student2 "Day after tomorrow. I wanted to start today, but they gave me a couple of days."
+    Student2 "Figure I may as well make some extra cash while I can. School doesn't cover everything."
+    Student1 "True."
+    MCT "Ol' pocketbook has been a little lighter with having a girlfriend and all now. These guys might have the right idea."
+    if routelock == "WG":
+        MCT "Then again calling Alice my \"girlfriend\" is probably jumping the gun. Still though, a girl like her isn't going to settle for a guy that doesn't plan for success."
+    Student2 "You apply anywhere?"
+    Student1 "Yeah. I tried that convenience store in Satoyama and at that clothing store in the beach village."
+    Student2 "Hear anything back?"
+    Student1 "Nah. I was going to try that flower shop too, but... eh. Not my thing."
+    if isEventCleared("MC013"):
+        MCT "Is that the same place I got that flier for? The convenience store?"
+    if getFlag("MC005GTS") or getFlag("Meet_Florist"):
+        MCT "And the flower shop? What was that dude's name?"
+        MCT "Hirano-san? His place?"
+        MCT "Nah. What are the odds of that? There has to be at least a dozen flower shops on this island."
+    "I shook my head, and glanced back at Tomo."
+    "She hadn't seemed to have minded my momentary journey into Lala Land. She had her hand in her pocket, and her other hand over her bag still."
+    "The hand over her bag was playing with the button, snapping it and unsnapping it with a finger."
+    MC "Any of your classmates heading home for break?"
+    MC "I noticed a lot of people seem to be sticking around. Probably kind of hard to head back now after all of this."
+    show Tomoko neutral
+    Tomoko "I don't know about everyone. Yuki's staying."
+    Tomoko "You probably heard that in the hall, though."
+    MC "Yeah, I... got that memo."
+    "I smirked and brushed my hair back a little."
+    MC "How have you guys been doing?"
+    MC "I remember you having some... choice words in regards to her."
+    Tomoko "She... mm..."
+    Tomoko "She's okay."
+    Tomoko "She can be a lot, though."
+    Tomoko "And her interest in gossip is only rivaled by her bigass lips."
+    Tomoko "She's nice, though. She doesn't have, like, bad intentions or anything."
+    Tomoko "She just talks... and talks. About students, and really anything."
+    MC "Anything specific stick out?"
+    Tomoko "Eh... I stopped paying attention awhile ago."
+    Tomoko "Some of the things she says are actually kind of funny, though. Like Mr. Eraser."
+    MC "Huh?"
+    Tomoko "Yeah. Some dude in the student council."
+    Tomoko "There's apparently two versions of where the name came from. One is how he likes to chew on erasers a lot."
+    Tomoko "The other is that he erases his board of notes before anyone else can copy them. I like that one better. It pisses off everyone else in the council."
+    if getFlag("MC008_TakeItEasy"):
+        MCT "I know the feeling..."
+    Tomoko "And-"
+    "Tomo looked like she was about to go on, but then glanced forward and went silent, looking down."
+    MC "And?"
+    show Tomoko worried
+    Tomoko "Nothing."
+    "A laugh echoed out from the crowd, and Tomo glanced up, searching about."
+    MC "Know anyone else staying besides Yuki?"
+    show Tomoko neutral
+    Tomoko "No."
+    Tomoko "I think Izumi-san is staying, but I don't know."
+    "I looked up at this."
+    MCT "Hm. Almost halfway already."
+    if getFlag("Meet_Mizawa") and not routelock == "WG":
+        Tomoko "I think that Mizawa-san is staying, too. But I don't know for sure."
+        MC "She's in your class?"
+        Tomoko "You know her?"
+        MC "Ah... yeah."
+        MC "Well, kind of stumbled across her. We aren't like lifelong best friends or anything."
+        Tomoko "Yeah, she's in my class."
+    if getFlag("Meet_Mizawa") and routelock == "WG":
+        Tomoko "I think that Mizawa-san is staying, too. But I don't know for sure."
+        MC "She's in your class?"
+        Tomoko "How do you know her?"
+        MC "I kind of just stumbled upon her. We aren't super tight or anything. One of my friends is in the same club as her."
+        Tomoko "Sure."
+        Tomoko "Kind of suss, bro."
+        Tomoko "Is this friend your girlfriend?"
+        MC "Well, um. Hmm... I mean, sorta..."
+        Tomoko "Geesh, I might have believed you if you sounded at all convincing. No need to lie about it, bro."
+        Tomoko "If you want a girlfriend so bad maybe you should ask Mizawa-san out, she seems like your type."
+        MCT "Oh, God. Don't tell Alice that."
+        MC "I'll take my chances with my totally-real-sort-of-girlfriend for now."
+        Tomoko "Whatever you say, bro."
+    if not routelock == "WG" and not getFlag("Meet_Mizawa"):
+        Tomoko "I think that Mizawa-san is staying, too. I don't know for sure."
+    Tomoko "Oh yeah... Fumika is staying, too."
+    show Tomoko annoyed
+    "Tomo rolled her eyes, while also shaking her head a little."
+    if routelock == "AE":
+        MC "Fumika?"
+        MC "Oh... that girl. Right."
+        MC "You okay?"
+        show Tomoko neutral
+        Tomoko "I'm fine."
+        Tomoko "Just... thinking about that stupid rumor that she started."
+        MC "You mean..."
+        Tomoko "The one about my underwear."
+        Tomoko "I don't even know why she started spreading that. It's not true, obviously."
+        Tomoko "But... yeah. I don't like her. And she doesn't like me either."
+        MC "How did it start again?"
+        Tomoko "Just after we worked together on a project for Economics and Civics."
+        Tomoko "It's not like I've done anything to fan the flames or anything. I've just been ignoring her and the rumor."
+        Tomoko "It's... not a big deal. It'll blow over."
+        show Tomoko worried
+        Tomoko "I just..."
+        "Tomo looked down."
+        Tomoko "... I hope you know that it isn't true. I'd never do something like that."
+        MC "I trust you, Tomo. But, I do think you should try and confront Fumika about it. Get everything aired out."
+        Tomoko "It's her problem. She's the one with the stick up her ass about me. Surprised she can fit the stick past her thunder thighs."
+        if isEventCleared("GTS018"):
+            MCT "Isn't she the same girl who tried to recruit Naomi for basketball just because of how tall she was?"
+            MCT "Says a lot, I suppose."
+    if getFlag("Meet_Fumika") or isEventCleared("RM002"):
+        MC "The name rings a bell, I think."
+        Tomoko "She hangs out with Yuki, sometimes. Plays a lot of basketball."
+        MC "Ah. Her."
+        if isEventCleared("GTS018"):
+            MCT "The girl who tried to get Naomi onto the basketball team just because of her height."
+            MCT "Real charmer, that one."
+        MC "You good?"
+        show Tomoko neutral
+        Tomoko "Fine. It's nothing."
+        Tomoko "Fumika and I just really don't get along."
+        Tomoko "She likes to spread rumors about me."
+        Tomoko "They aren't anything, like, bad... and I don't really know what keeps her going with them since I usually just ignore her."
+        Tomoko "But... yeah. Got partnered up for a project in Economics and Civics one time. After that, that's all she's talked about."
+        Tomoko "It isn't a big deal though."
+        MC "I trust you."
+        MC "But, I do think you should try to squash this whole beef thing with her. Get it out of the way, you know?"
+        Tomoko "Hm. She's the one with the problem. Not me."
+    else:
+        MC "You good?"
+        show Tomoko neutral
+        Tomoko "I'm fine."
+        Tomoko "Just... she's this bitch in my class."
+        Tomoko "She's friends with Yuki, which, to be honest, I have no idea why Yuki hangs out with her..."
+        show Tomoko annoyed
+        Tomoko "And, I just don't like her. She started spreading rumors about me after we worked on this project in Economics and Civics together."
+        show Tomoko neutral
+        Tomoko "I just blow them off. Doesn't really affect me at all."
+        MC "I get ya."
+        MC "Still, I'd probably try and get all of that figured out with her."
+        Tomoko "I'm not the one with the problem, bro."
+        MC "Right."
+    "I glanced forward."
+    MCT "Huh. Only like three people left."
+    MC "If it helps, I hate Economics and Civics too."
+    MC "I'm just glad we won't have it next semester. I couldn't figure it out from the get-go."
+    MC "Even Tashi-sensei's essays didn't give me a migraine like that."
+    show Tomoko surprised
+    Tomoko "Who?"
+    MC "Uh... my homeroom teacher? Tashi-sensei?"
+    MC "Teaches history? Looks tired all the time? Long tongue?"
+    show Tomoko neutral
+    Tomoko "Oh! Akaname-sensei!"
+    Tomoko "That's what people in our class call him."
+    Tomoko "Heh... Takamura-sensei loses her mind when someone says it."
+    if isEventCleared("BE001") or checkSkill("Art", ">=", 7):
+        MC "Heheh... yeah, I've seen that yōkai. Not too far off."
+        show Tomoko smile
+        "Tomo smirked beside me."
+    else:
+        MC "Sorry... what does it mean?"
+        Tomoko "Because he looks like Akaname. That yōkai with the long tongue?"
+        Tomoko "Someone in class said it once, and it stuck around."
+        MC "I see why."
+        show Tomoko smile
+        "I smirked and chuckled lightly, as Tomo finally cracked a smile."
+    Cashier "May I help you?"
+    show Tomoko worried
+    Tomoko "U-Um..."
+    "Tomo's hand zipped right to her bag again, and she played with one of the flaps."
+    Tomoko "C-Could I have... Wyrm's Pursuit, please?"
+    Cashier "For sure. GC6, zSphere2, Pretendo, or PC?"
+    Tomoko "P-Pretendo, please."
+    "The cashier nodded and produced a copy from behind the counter. Tomo set the money on the counter, as the cashier gave her a receipt."
+    "Tomo slipped the game and the receipt into her bag, shutting the flap quickly."
+    Tomoko "T-Thanks..."
+    Cashier "You're welcome. Enjoy."
+    Tomoko "T-Thanks. You t-"
+    Tomoko "Mnn..."
+    "Tomo turned to me, and headed for the door, as I followed."
+    play music BrightLights
+    scene Town Shops
+    show Tomoko neutral
+    with fade
+    MC "You hungry at all?"
+    MC "Kind of early for lunch. Wanna hit a bakery or something? It's on me."
+    Tomoko "Well, if you're paying, I'm not turning it down."
+    if getFlag("VisitedBakery"):
+        MC "Sweet. I know a place."
+        "I turned and motioned Tomo to follow, leading her down to Kazomazumi's bakery."
+    else:
+        MC "Alright... let's see."
+        "I glanced down the road across from us, following the signs on the buildings, then the ones on our side."
+        MC "Kazomazumi's bakery. Hm."
+        if not getFlag("VisitedBakery"):
+            $setFlag("VisitedBakery")
+    scene Bakery Entrance
+    show Tomoko neutral
+    with fade
+    MC "Nice and quiet in here."
+    Tomoko "Yeah."
+    "I glanced at the few tables with people sitting, and at the counter, where a middle-aged woman stood, jotting something on a piece of paper."
+    if isEventCleared("MC007") or isEventCleared("FMGWG001"):
+        "I smiled, seeing the owner again."
+        MCT "Kind of funny. She looked colossal the first time I saw her."
+        MCT "Now, though, she almost looks kind of... small."
+        MCT "At least, I think Honoka is bigger. Like... much bigger."
+        MCT "Wild."
+    else:
+        "The nametag \"Chie\" was pinned on her shirt... right on the slope of her huge breasts, which were covered by a button-down shirt, clearly sized properly for her."
+        "Her breasts filled the space between her arms, torso, and counter, but she clearly had the technique for writing down, and glanced up at us."
+    Chie "Thank you for stopping in. What can I get started for you?"
+    MC "Tomo? What are you thinking?"
+    Tomoko "W-Wha..."
+    MC "What would you like?"
+    Tomoko "Melon pan."
+    show Tomoko annoyed
+    "Tomo's eyes went wide and she sort of waved her hands in front of her, as if to dissuade any idea that she had that in mind."
+    show Tomoko worried
+    MCT "Way to go, slugger."
+    Tomoko "Um... c-could I have a crepe and a latte?"
+    "Chie flashed a small, friendly smile at Tomo."
+    Chie "Of course."
+    show Tomoko neutral
+    MC "And could I have a slice of apple custard bread and a tea?"
+    Chie "Sure thing, Hun."
+    "She typed a few keys on the near-ancient register, the sound being that of someone who had spent much time clacking away at it."
+    Chie "670, please."
+    "I stuck the yen on the counter and smiled at her as she gave me some change."
+    MC "Could you grab us a table, Tomo? I'll wait on our stuff."
+    "Tomo nodded and hurried off behind me."
+    hide Tomoko with dissolve
+    if getFlag("MC008_RegardsPassed") or getFlag("RM004_RegardsPassed"):
+        MC "Is Haruko-san around?"
+        Chie "Oh, she's in Okinawa with some friends for summer break."
+        if routelock == "FMG":
+            MC "Huh, small world. That's where my girlfriend is from."
+            Chie "Okinawa? How lovely."
+        Chie "I do miss her quite a bit, but I'm glad she's enjoying herself. Luckily, I've been keeping up around here."
+    if (isEventCleared("MC007") or isEventCleared("FMGWG001")) and not (getFlag("MC008_RegardsPassed") or not getFlag("RM004_RegardsPassed")):
+        MC "Where's your usual cashier up front?"
+        Chie "Oh, Haruko?"
+        Chie "She's in Okinawa right now with some friends."
+        if routelock == "FMG":
+            MC "Huh, small world. That's where my girlfriend is from."
+            Chie "Okinawa? How lovely."
+        Chie "I do miss her quite a bit, but I'm glad she's enjoying herself. Luckily, I've been keeping up around here."
+    else:
+        Chie "How is your summer break going? Been adjusting to the academy alright?"
+        MC "I'm... surprised you could tell I was from there."
+        Chie "My daughter went there about ten years ago. I know the look."
+        Chie "Not to mention... I've also got a growth factor, as you probably could figure out."
+        "Still mid-latte making, Chie nodded down and bumped her chest with her arm, since her hands were full."
+        Chie "I've been on the island for decades now. Lots of the students and faculty come here."
+        MC "Huh. I never knew it's been around for so long."
+        Chie "It has. Never went myself, though. I got diagnosed when only the Giant's Dorms were around."
+        Chie "But eventually, Saburō Tokei founded the academy, and construction got going."
+        MC "Wow..."
+        if isEventCleared("RM005"):
+            MCT "Yep, Tokei was at the top of Daichi's like... conspiracy board thing."
+    Chie "And here you are. Latte, tea, crepe, and apple custard bread."
+    MC "Thank you very much."
+    Chie "You're welcome, Hun. Enjoy."
+    "I smiled and gave her a polite nod as I took the plates and cups, walking my way back toward where Tomo had headed."
+    MCT "Really could have two tripped this..."
+    MCT "It's fine... think I got it."
+    show Tomoko distracted with dissolve
+    "I spotted Tomo and made my way over, leaning down so she could grab her cup from me, then unloading the rest of my haul onto the table."
+    show Tomoko neutral
+    "Tomoko wasted no time digging into hers as I sipped my tea."
+    MC "How's it?"
+    Tomoko "Mmn... good."
+    if not isEventCleared("MC007") or not isEventCleared("FMGWG001"):
+        UNKNOWN"{i}Psst...{/i}"
+        pause 1
+        UNKNOWN"{i}PSST!{/i}"
+        "From a nearby table, I noticed someone sitting with an... almost comically large newspaper in front of them, blocking their face."
+        MC "Hahh..."
+        MC "Tomo, can you give me a few?"
+        Tomoko "Sure?"
+        show Tomoko distracted
+        "I stood up as Tomo took her phone out, and walked over to the table, tugging the paper down on one side."
+        hide Tomoko with dissolve
+        play music RMInvestigate
+        show RM neutral with dissolve
+        MC "Need help with the puzzles?"
+        show RM angry
+        RM "Ach! Do you know nothing about reconnaissance?!"
+        MC "I usually skip those missions in my games. What do you want?"
+        show RM neutral
+        "Daichi whipped his head around and jammed his hand into his pocket, taking out a piece of paper and shoving it at me."
+        MC "A clipping from a paper?"
+        "I glanced down at it."
+        MC "Oh shit... this is her?"
+        "I looked back at the woman behind the counter."
+        "I read the headline again. \"Seichou's first confirmed growth factor!\" "
+        MC "Her? Seriously?"
+        MC "I just talked to her for a bit. She's super nice."
+        RM "I know."
+        RM "I was listening in, but the damn coffee machine was too loud."
+        MC "That's called an espresso maker, by the way."
+        RM "Just... listen."
+        RM "Did she say anything important?"
+        MC "Depends on what the word means to you."
+        RM "You-! Rrghh..."
+        RM "You KNOW what it means."
+        MC "Dude, I get it. Take a breath."
+        $setFlag("MC014_Kazomazumi")
+        MC "She told me about how her daughter went to the academy about ten years ago. She mentioned that she's been on the island for several decades herself, and when she first got to the island, the academy wasn't even built yet."
+        MC "Only the Giant's Dorms were here."
+        if isEventCleared("RM005") and not isEventCleared("RM010"):
+            RM "Mmn... another lead about that place."
+            MC "Seems like it."
+        else:
+            RM "Mn... another lead about that place."
+            MC "No clue what you're talking about."
+        MC "Is that all, then?"
+        RM "Yeah, thank you."
+        RM "I'm surprised, but you managed to bring good results."
+        MC "... Thanks?"
+        $setAffection("RM", 1)
+        if not getFlag("RMRoute_Unlocked"):
+            $setFlag("RMRoute_Unlocked")
+        RM "I've been working on this for weeks."
+        MC "Working on something that could have been accomplished by just... asking?"
+        MC "It's not that hard."
+        show RM distrustful
+        MC "I have to get back to my sister though. I'll see you later tonight."
+        hide RM with dissolve
+        play music Tomoko
+        if routelock == "PRG" and not getFlag("MC010RM"): 
+            "I walked back to the table and sat down as Tomo glanced up."
+            show Tomoko neutral with dissolve
+            Tomoko "That guy looks familiar."
+            MC "My roommate. You guys just met. Remember with Aida?"
+            Tomoko "Oh."
+        if routelock == "PRG" and getFlag("MC010RM"):
+            "I walked back to the table and sat."
+            show Tomoko annoyed with dissolve
+            Tomoko "It's him."
+            "I glanced back over as Daichi adjusted his paper."
+            MCT "She remembers him, then..."
+        if not routelock == "PRG" and getFlag("MC010RM"):
+            "I walked back to the table and sat."
+            show Tomoko annoyed with dissolve
+            Tomoko "It's him."
+            "I glanced back over as Daichi adjusted his paper."
+            MCT "She remembers him, then..."
+        if not routelock == "PRG" and not getFlag ("MC010RM"):
+            "I walked back over to the table and sat as Tomo looked up."
+            show Tomoko neutral with dissolve
+            Tomoko "Who's that?"
+            MC "Roommate."
+            Tomoko "Oh."
+            Tomoko "I've heard about him from Yuki."
+            MC "Yeah..."
+        "I took one more look over and saw the table was now empty, looking clean, as though no one had sat there all day."
+        MCT "How the hell does he do that?"
+    show Tomoko neutral
+    "Tomo took a sip of her latte and looked up."
+    if routelock == "PRG":
+        Tomoko "How's your girlfriend doing, by the way?"
+        MC "She's doing okay. You know, feels like a huge ass rollercoaster, but she's alright."
+        MC "I'm happy with her, though. She's something special."
+        Tomoko "That's good."
+        Tomoko "Still can't see myself as an aunt, though."
+        Tomoko "Auntie Tomo? Aunt Tomo? Like... that sounds weird."
+        Tomoko "I mean... I also can't imagine what it must feel like to be pregnant like... now. So, yeah."
+    if routelock == "FMG":
+        MC "So you met Akira."
+        Tomoko "Yeah..."
+        pause .5
+        MCT "That's all?"
+    MC "You talk to Dad at all today?"
+    Tomoko "For a bit."
+    Tomoko "I sent him a birthday meme."
+    MC "Just a standard meme? Couldn't even give it a little personal touch?"
+    Tomoko "I did, for your information. I customized it. He likes his dad-jokes, so I leaned into it."
+    "Tomo glanced around and sighed."
+    show Tomoko worried
+    Tomoko "There's... something else though."
+    Tomoko "I've been meaning to tell you."
+    MC "What's that?"
+    Tomoko "Um..."
+    show Tomoko neutral
+    Tomoko "Right before finals, Takamura-sensei took me aside one day and told me about how Yuki is going to be at risk for having a hard time speaking, because of her factor."
+    Tomoko "She told me that the Academy has a special sign language elective with a program specifically for students like her."
+    Tomoko "She asked me if I wanted to sign up, since she said people who are close to Yuki should probably know JSL, just to be safe."
+    if isEventCleared("MC013"):
+        MCT "I knew she was talking about Tomo."
+    MC "So... I take it you signed up?"
+    Tomoko "I did..."
+    Tomoko "Yuki is more often than not, a little overwhelming and frustrating, but she does love to talk."
+    Tomoko "And the idea of her losing her ability to speak like that is kind of... scary. I mean, for her I guess. As much as I'd probably appreciate the peace and quiet for a change, I'd be more than a little worried how she'd deal with that."
+    MC "How's she handling it?"
+    Tomoko "She kind of has been blowing it off."
+    Tomoko "She thinks it's just a small inconvenience, and that it won't stop her. I mean, she could be right."
+    MC "True."
+    show Tomoko worried
+    Tomoko "... But what if not, though?"
+    scene black with fade
+    pause .25
+    scene Bakery
+    show Tomoko neutral
+    with fade
+    "Soon enough, Tomo and I both finished our food and drinks."
+    show Tomoko worried
+    "Tomo sat, her shoulders in, staring at her empty plate."
+    MC "Hey. She's gonna be okay."
+    MC "The elective is probably just a precaution. It doesn't mean anything will surely happen."
+    MC "You can always use it as a way to learn something new, right?"
+    show Tomoko neutral
+    Tomoko "I... I don't know. It is what it is, I guess."
+    "Tomo got up, as did I. I collected our plates and mugs and brought them to the counter for Chie, who waved at us as we left."
+    scene Town Shops
+    show Tomoko neutral
+    with fade
+    play music DayByDay
+    MC "Wanna head back to campus?"
+    Tomoko "Yeah... I think so."
+    Tomoko "Thanks for coming along. And good job on your sidequest."
+    $setAffection("TM", 1)
+    MC "No reward or anything?"
+    if isEventCleared("MC003"):
+        "Tomoko fished around in her bag and pulled out... strawberry-flavored pocky. She placed it in my hand and nodded."
+        Tomoko "There you go."
+        MC "This is just some pocky you got from a vending machine..."
+        show Tomoko smile    
+        Tomoko "Yes, it is."
+        pause 1
+        "I shrugged and tucked the pocky into my pocket as she and I walked back to the bus stop."
+    else:
+        "Tomoko fished around in her bag and pulled out... a stick of gum. She placed it in my hand and nodded."
+        show Tomoko smile
+        Tomoko "It's cinnamon."
+        MC "Gee. Just what I always wanted."
+        "I popped the gum in my mouth as she and I walked back to the bus stop."
+    "Wasn't the most interesting side quest, I'll say that much, but at least Tomo didn't randomly wander into traffic and try to fight random people on the street, so in that regard it was probably the easiest escort quest I ever had to do."
+    "At least it got her out of her dorm. She didn't exactly seem that comfortable in the game store, so I don't know if she would have gone through with  it if I wasn't there."
+    MCT "Well, mission accomplished, Dad."
+    "Wasn't much, but I at least felt better about the fact if I could be there for the times she wanted to get out but felt overwhelmed, it might eventually help her feel more comfortable doing it herself."
+    jump daymenu
+
 label MC024:
     scene Cafeteria with fade 
     play music Schoolday
@@ -15236,4 +16267,417 @@ label RM005_AfterCouncil:
     pause 1
     MC "..."
     MC "See? This is exactly what I'm talking about."
+    jump daymenu
+
+label RM006:
+    scene Dorm Exterior with fade
+    play music ClearSkies
+    MC "Do you even know where this place is?"
+    show RM distrustful with dissolve
+    RM "Of course I know where it is..."
+    MC "That doesn't sound terribly convincing."
+    show RM angry-2
+    RM "..."
+    show RM distrustful
+    RM "Knowing the precise location is not that important."
+    show RM neutral-2
+    RM "According to my sources we just need to follow the path that leads off from the northeast side of campus."
+    if isEventCleared("GTS030"):
+        MCT "Something tells me we're going to get lost if I don't take the lead."
+    else:
+        MCT "Something tells me we're going to get lost."
+    scene black with fade
+    pause .2
+    scene Chukan Point with fade
+    if not getFlag("VisitedChukanPoint"):
+        $setFlag("VisitedChukanPoint")
+    if isEventCleared("GTS030"):
+        $setFlag("RM006_CompletedGTS030")
+        "For someone who likes to scout things out, Daichi didn't seem to have a particularly good sense of direction. Luckily I had been down this path at least a few times by now."
+        RM "Are you sure we're headed in the right direction?"
+        MC "Positive, look at the landscape here. This is obviously maintained by the school."
+        "That it did. The landscaping in this place was immaculate. It was honestly a really beautiful space, but I had to wonder how many students knew about it since there didn't seem to be anyone walking through besides us."
+        "As pretty as it was, the place itself was admittedly a bit odd. The large benches and viewing telescopes gave the illusion that things were much closer than they actually were." 
+        "If one didn't understand its purpose, being so close to the Giant's Dorms, one could easily find themselves feeling eerily out of place with the askew architecture of the park's features."
+        MC "Why are you so interested in this Giant's Dorm location anyway?" 
+        show RM neutral-2 with dissolve
+        RM "Is there something about giant people being sequestered to an off-site location on a remote island that doesn't strike you as unusual?"
+        MCT "Perhaps it was the first time I visited."
+        MC "I'm not saying that, I'm just saying I can't imagine you're going to find much information about the school's past by snooping around what are supposed to be dorms for current students."
+        show RM neutral
+        RM "Are you implying you have any better leads?"
+        MCT "Yeah, a path that leads back to my bed and an afternoon nap."
+        show RM doubt
+        RM "In case you haven't noticed, there's something up with this school, and these so-called \"Giants Dorms\" is probably the oddest thing I've gotten wind of since I've been here."
+        "I didn't rightly know what to believe about this place myself, but I didn't notice anything personally of note that would be of interest here when I visited Naomi."
+        MCT "Well, on the bright side, at least it's a nice day."
+    else:
+        MC "Are you sure we're headed in the right direction?"
+        show RM smug with dissolve
+        RM "We've got to be. The landscape here shows this is obviously maintained by the school."
+        show RM neutral
+        MC "I don't know about that, this place looks more like a public park than anything."
+        "That it did. The landscaping in this place was immaculate. It was honestly a really beautiful space, but I had to wonder how many students knew about it since there didn't seem to be anyone walking through besides us."
+        MCT "Hmm... That's odd."
+        "On second look though, despite its beauty there was something off... {w}It took me a bit to put my finger on it, but as we walked further into the park I began to realize my perspective was all wrong."
+        "The unusually large benches and viewing telescopes gave the illusion that things were much closer than they actually were. It all seemed so oddly out of place and askew in an otherwise pristine landscape that it felt kind of eerie."
+        MCT "Just where the hell are we?"
+        show RM doubt
+        MC "Why are you so interested in this Giant's Dorm location anyway?" 
+        RM "Is there something about giant people being sequestered to an off-site location on a remote island that doesn't strike you as unusual?"
+        MC "I'm not saying that, I'm just saying I can't imagine you're going to find much information about the school's past by snooping around what are supposed to be dorms for current students."
+        show RM neutral
+        RM "Are you implying you have any better leads?"
+        MCT "Yeah, a path that leads back to my bed and an afternoon nap."
+        show RM doubt
+        RM "In case you haven't noticed, there's something up with this school, and these so-called \"Giants Dorms\" is probably the oddest thing I've gotten wind of since I've been here."
+        "I didn't rightly know what to believe about this place myself, but not knowing what we were looking for and wandering around just hoping to find something felt like the blind leading the blind here."
+        show RM neutral
+        MCT "Well, at least it's a nice day."
+    hide RM with dissolve
+    "There was hardly a cloud in the sky. I could actually see the clocktower at the front of the campus from here, hard to miss it with those old world style verdigris copper tiles."
+    "In the other direction, it looked like there was in fact some other students from the campus doing something far back in the park."
+    if isEventCleared("GTS023"):
+        "Various props and equipment were scattered around. I wondered if this was another one of Tanaka-san's short film projects."
+    else:
+        "Various props and equipment were scattered around. Was it theater group practice? Or maybe the film club did more than just host movie screenings?"
+    show RM angry-2 with dissolve
+    RM "{i}Ahem{/i}..."
+    MC "?"
+    show RM doubt
+    RM "And what's your assessment of the matter?"
+    show RM distrustful
+    MC "Hm? {w}Oh. {w}Sorry... I guess I wasn't paying attention. I got distracted by the view. What were you saying?"
+    show RM doubt
+    RM "{i}Sigh{/i}... As I was saying..."
+    RM "In reference to your earlier question, I want to confirm if this decommissioned rock quarry does in fact not house any other giants besides students from this year."
+    show RM neutral-2
+    MC "You don't trust Tsubasa's word?"
+    RM "He's the one who insinuated I need to look for the answers myself. Besides, something about his story doesn't add up."
+    RM "Tsubasa-sensei indicated that the quarry has about 30 dorms and at typical capacity they don't even use half of them. Those logistics don't make sense."
+    show RM distrustful
+    RM "How long has this place been around and how many students present with this so-called \"Gigantism factor\" as he calls it, and you mean to tell me they just shuffle them out? It begs the question, where else could they be?"
+    MC "I don't know. They're only here for a year like we are, right? I guess they go back to the Mainland."
+    show RM doubt
+    RM "If that's the case, how could they leave? Would they even fit into the ferry?"
+    MC "Maybe they use special ships?"
+    RM "Perhaps, but why haven't we heard about them before? I certainly didn't see any at the dock, and I was scoping out the place for quite a few days prior to when you showed up."
+    show RM neutral
+    RM "Besides, you're telling me someone that needs special housing because they can't fit into a custom high ceiling dormitory is just going to find a nice comfy flat back on the Mainland?"
+    MCT "Hmm, he certainly has a point there."
+    show RM doubt
+    RM "It all points to them being {i}somewhere{/i} on the island. But where? {w}I've never seen any giants in Seichou Town and there are plenty of people with growth factors there."
+    RM "You'll run across the whole gamut in town and around the school, but I've never seen anyone over three and a half meters tall." 
+    show RM neutral-2
+    RM "Which based on the old man's account, is the height at which the students are transferred into these Giant's Facilities, or Caverns, or whatever they're called."
+    if isEventCleared("GTS030") or isEventCleared("global032"):
+        "I wasn't sure why he seemed so skeptical of Tsubasa's claims. I mean we all had to find out about Naomi being transferred to the Giant's dorm when she reached that height."
+        "I guess he's just more preoccupied with where these other giants might be."
+    elif isEventCleared("MC002") and not isEventCleared("GTS030"):
+        MCT "Caverns... That sounds familiar. {w}Is that what Takamura and Tsubasa-sensei were discussing that time in the teacher's lounge?"
+        MCT "Maybe there is more going on at this place after all..."
+    else:
+        "I wasn't sure why he seemed so skeptical of Tsubasa's claims. Sure, it seemed incredible at the time, but it would be rather odd for someone like Tsubasa to state something so plainly if it was so easily falsifiable."
+    MC "Maybe it's just a rare occurrence? 3.5 meters is a hell of height."
+    show RM neutral
+    RM "Not unlikely, but couldn't be that uncommon if the school felt that 30 dorms would suffice, as opposed to only a handful."
+    show RM smug
+    RM "Which gets back to the other reason these \"Caverns\" have piqued my interest. Several major leads I've been pursuing about Seichou Academy seem to circle back to this place in some shape or form— even if tangentially."
+    RM "It's way too convenient. It can't be a coincidence."
+    if isEventCleared("MC007"):
+        "Daichi's tone and conviction sounded convincing, however this was the same guy that sent us on a wild goose chase across town to trail Akira and Alice based solely on the fact that they named dropped Kazomazumi Bakery."
+        "If that didn't constitute a coincidence, then I don't know what would."
+        "Still though, to his credit, this time did seem a bit different. His point about the apparent absence of these supposed \"giants\" seemed reason enough to check things out."
+    elif isEventCleared("FMGWG001"):
+        "Daichi's tone and conviction sounded convincing..."
+        "However this was the same guy that decided to tail his classmates across town for half the afternoon based solely on the fact Kazomazumi Bakery was name dropped in our conversation."
+        "If that didn't constitute a coincidence, then I don't know what would."
+        "Still though, to his credit, this time did seem a bit different. His point about the apparent absence of these supposed \"giants\" seemed reason enough to check things out."
+    else:
+        "Not that Daichi needed help stringing together threads that didn't have any obvious connection,  (to the sane anyway) but his point about the apparent absence of these supposed \"giants\" seemed reason enough to check things out."
+    "For my money I felt like I was going crazy." 
+    "Nothing about this conversation would have been something I seriously entertained even as little as a few months ago, but here we were discussing the logistics of giant people riding on ferries."
+    "And yet, I was going to go crazier if I didn't get any answers for myself." 
+    MCT "I still can't wrap my head around how this place even works. Students twice their initial height, living in dorms reminiscing mini-hangers, all while studying in a complex located deep inside a rock quarry?"
+    MCT "How's that even possible? It has to be impossible, right?"
+    "That's what the sane part of my brain was asking anyway, but I've more or less come to accept that since I got to this island my whole perception of \"impossible\" was constantly being challenged and redefined."
+    "So in that sense, this was just another day at school."
+
+    scene Giants Gate 
+    show RM neutral 
+    with fade
+    play music RMInvestigate
+    MC "Looks like we're here."
+    "In contrast to the beautiful scenery of the park we just walked through, the grounds outside the quarry were completely barren and uninviting. Doubly so considering we found ourselves barred from entry at the gate."
+    "The gate itself was an imposing sight. This wasn't a typical chain linked fence. It was definitely built with deterrence in mind." 
+    "The top part of it had those outward facing anti-climbing bars and sprawled the entire perimeter. Climbing over wasn't going to be a realistic work around." 
+    "The only way in seemed to be via access from the unusually large number pad."
+    show RM angry-2
+    RM "Figures they had to have some kind of restricted access to this place. All the more suspicious if you ask me..." 
+    MCT "Why do I get the feeling if the gate was flung wide open he'd find that suspicious too?"
+    RM "We can't really see much of anything from here, the steep drop off of the quarry walls blocks the sight of anything. Seems like that was done on purpose, assuming the dorms really are down there..." 
+    show RM neutral
+    RM "Looks like we can't just do a normal stakeout. We're going to have to find a way past this gate." 
+    if isEventCleared("GTS030"):
+        MCT "I might be underestimating his spying skills, but it sounds like he doesn't know the code. It was given to me in confidence, and knowing his purpose here, it would be a breach of trust to just give it to him..."
+        show RM neutral-2  
+        MC "Hmm, looks like we don't have the code... Oh well, guess we have to turn back."
+    else:
+        show RM neutral-2  
+        MC "You mean we hiked all the way out here just to run into a dead end?"
+    RM "Not so fast. This thing can't be too hard to crack. Look at this thing. It's an old system, certainly not encrypted. I bet the PIN on this thing is four digits at most."
+    show RM smug
+    MC "What are you? Some kind of expert on security systems?"
+    RM "Like they say, knowledge can open doors for you."
+    MCT "Why did I even ask?"
+    show RM neutral
+    RM "With these old analog systems you can usually narrow things down by looking at the wear on the buttons. It's not exact, but 24 options is a lot less than 10,000."
+    MC "So we're just going to brute force the password on this thing?"
+    show RM doubt
+    RM "I wouldn't be opposed to doing so, but I can't be certain it won't just lock us out after a few failed attempts. Besides, look up there."
+    "Looking up near the top of the gate I noticed what Daichi was talking about, a security camera. It was one of those old CCTV style ones with the blinking red light, which matched with the dinosaur tech number pad."
+    MC "So what? Let's just take a look."
+    "I took a step closer only to feel my whole body get yanked backwards by my collar."
+    show RM angry
+    RM "Are you insane? You'll blow this whole operation if we're caught snooping around on camera!"
+    show RM angry-2
+    "The irony of having my sanity questioned by this guy of all people was not lost on me."
+    MC "What are you talking about? We're students at the school. We're the least suspicious people to be snooping around. No one would think anything of it."
+    RM "We can't know that for sure. Think about it. If you consider that Seichou Academy's founder has ties to the Japanese Diet, government influence is almost certain, and that includes government surveillance."
+    show RM neutral-2
+    RM "They wouldn't build this gate unless they have something to hide."
+    MC "Maybe they just built it to provide some privacy to the dorm residents?"
+    show RM distrustful
+    RM "Tck! Things are never that simple. Nothing in this place is ever as it seems."
+    MC "There's this thing called Occam's razor, ever heard of it?"
+    show RM doubt
+    RM "Shhh! You hear that?"
+    "Pausing for a brief moment, I could hear voices engaged in idle conversation coming from a distance. Likely other students." 
+    RM "Looks like we're about to get company. Quick! Get behind those shrubs!"
+    show RM happy-2
+    RM "We're going to have to do a good old stakeout."
+    show RM neutral
+    MC "I thought you just said it looks like we can't do a normal stakeout?"
+    RM "Yes, well that was then and this is now. We have to act on new developments in a case whenever they arise." 
+    show RM angry-2
+    extend " Now get in there!"
+    show RM neutral-2
+    pause 2
+    "The voices could still be heard coming from far off, but still no one had emerged in sight yet."
+    MC "..."
+    MC "Are you sure someone is coming over? How long are we going to sit here?"
+    RM "It should be apparent by now that observation is one of the most frequent tasks of investigators. Sometimes you can be waiting all day just for a few seconds worth of events to confirm a lead."
+    MC "Sounds riveting."
+    show RM neutral
+    RM "Yes well, I assure you complaining about the length of time it takes doesn't make it go any faster."
+    show RM smug
+    RM "Speaking from experience, it's by far the most consistent method of gathering information on a lead."
+    show RM sad
+    MC "You mean like that time I found you ducking behind the pillar near the principal's office to find out when was the best time to break in?"
+    show RM angry-2
+    RM "I wasn't \"ducking\", I was observing. {w}I seem to recall notifying you of my presence before you even suspected anything, which should be taken as a testament to my stealthiness in these very situations."
+    MCT "Stealthiness I'll grant you, along with a generous portion of paranoia."
+    show RM doubt
+    MC "I still don't understand what we're supposed to be waiting for. Is something going to happen?"
+    RM "{i}Shhh/{i}! That's exactly what we're trying to find out. Didn't your parents teach you \"Patience is a virtue\" ?"
+    MC "Perhaps, but forgive me if  \"Let's spy on people instead of bothering to ask them anything\" doesn't strike me as the most patient approach."
+    RM "Interviewing eyewitnesses is only worth it {i}if{/i} they don't blow your cover. We don't know that yet so we'll just have to sit tight."
+    if isEventCleared("GTS030"):
+        MCT "I should spare myself all of this and just enter in the code, but at this point I'm starting to think it will be more entertaining to put him through his self-imposed paces."
+    else:
+        MCT "Ah yes, the waiting game... {w}The worst of all games."
+    show RM neutral-2
+    "With all the time left in the world it seemed and nothing going on, my mind turned to a particular curiosity that I never got any closure on."
+    MC "What exactly were you doing there that one time?"
+    RM "Huh? You'll have to be more specific. Where?"
+    show RM doubt
+    MC "Ugh, you know {i}exactly{/i} where I'm talking about. {w}That time you broke into the room next to the principal's office while I got stuck trying to distract your sister."
+    show RM happy-2
+    RM "Heh. Investigating of course."
+    MC "Fine. If you don't want to say what it was, you don't need to, but I thought we were supposed to be partners in this whole investigation thing."
+    show RM concerned-2
+    RM "Hm. Yes, well I suppose—"
+    show RM sad
+    RM "!"
+    "Daichi cut himself off mid-sentence, his eyes growing wide from what seemed to be a sudden realization."
+    RM "{size=-6}Why hadn't I thought of that earlier? This all makes perfect sense now...{/size}"
+    MC "Huh?"
+    show RM neutral
+    "Whatever supposed epiphany might have been swirling in Daichi's addled mind would have to continue to remain a mystery as we were interrupted by the approach of our intended mark."
+    "Two strikingly tall males wearing Seichou Academy uniforms were approaching the gate. I wasn't in a position to accurately measure them with a ruler, but by all visual estimates they seemed feasibly over 350cm."
+    "Judging by their line of conversation, they were indeed the source of the approaching voices we heard earlier that prompted Daichi's instinct to hide."
+    hide RM with dissolve
+    Giant1 "Fuuuck, this Bataan death march just to get back to our dorms is getting old. It's such a waste of time."
+    Giant2 "Hey, 'snot so bad, is it Kajiwara-san? 'Slike I always say, home is where the heart is and school is where the smart is."
+    "They were a study in contrast, between the shorter giant's machine-gun Osaka accent and the taller's sleepy northern cadence."
+    Giant1 "{i}Haaahn{/i}... yeah, yeah, Uno-san, real cute. You gotta admit we got stuck with a commute from hell, though."
+    Giant2 "I dunno. I think it's pretty nice Yasuhara-san comes to us to proctor our tests. It's like having an emotional support buddy that we all share, like a nice silk napkin at a fancy restaurant."
+    Giant1 "{size=-6}You know all about that, dontcha...{/size}"
+    "I didn't know them, but I had seen both of them before on campus a couple of times. Obviously they stuck out as being quite tall. Looks like they got transferred to the Giant's dorm recently."
+    show RM happy
+    RM "{size=-6}Gou Kajiwara and Junsei Uno... interesting.{/size}"
+    MC "{size=-6}How do you know their names? {w}Wait, don't tell me. You read their file or something?{/size}"
+    show RM neutral
+    RM "{size=-6}Okay, so I won't tell you.{/size}"
+    MC "{size=-6}In that case, I think I've heard enough.{/size}"
+    show RM doubt
+    RM "{size=-6}{i}Shh{/i}, try to catch what keys they are punching in on the number pad.{/size}"
+    $setFlag("Meet_Gou")
+    "Gou" "'Course this can't be easy either...."
+    "Junsei" "Hey, no biggie, Kajiwara-san. Just give it four lil' boops on the snoots, lil' smooch to show you care and it'll be open like sesame."
+    "Gou" "Thanks Uno-sensei, I know how to press a button."
+    show RM neutral-2
+    RM "{size=-6}Did you catch what it was?{/size}"
+    MC "{size=-6}Uh, one of the numbers appeared to be a \"4\". It was likely the second or third number. That's all I got though.{/size}"
+    RM "{size=-6}I know I saw \"1\" was the last one. Not much to go off of but it does narrow things down quite a bit.{/size}"
+    show RM concerned
+    RM "{size=-6}We could wait until after they get in and try to enter a few possible variations. Downside is that the system may lock us out after a few tries. Maybe we just wait for a few more students to come through?{/size}"
+    show RM happy-2
+    RM "{size=-6}On second thought— we could try something else.{/size}"
+    MC "{size=-6}Like what?{/size}"
+    RM "{size=-6}It's risky, but it just might work...{/size}"
+    MCT "That doesn't sound good."
+    show RM smug
+    RM "{size=-6}I got an idea, just follow my lead.{/size}"
+    MCT "This {i}really{/i} doesn't sound good."
+    "It appeared that our stakeout was over as Daichi emerged from the bushes while I followed suit."
+    RM "{size=-6}Just let me do the talking here.{/size}"
+    show RM happy
+    RM "Oi! Hello there! I was wondering if you two could help me with something?"
+    "Junsei" "Hm?"
+    "Gou" "Go on ahead, Uno-san. I'll take care of this. Don't want to keep Yasuhara-san waiting."
+    "Gou" "What do you need?"
+    RM "We were hoping to visit a friend from our homeroom that just transferred. She doesn't know we're coming. I'm sure you know how being transferred to a new place can be a difficult process."
+    RM "We wanted to show our support with a surprise visit. You know, let her know we're thinking about her."
+    MCT "This is your grand idea, Daichi? Attempting to smooth-talk yourself through the situation as the dude who goes out of his way to avoid conversation whenever possible?" 
+    "Gou" "Ahh, I see. That's really thoughtful of you."
+    "I didn't know Kajiwara-san, so I wasn't in a position to tell if his tone was sincere or sarcastic in response to Daichi's questionable acting skills."
+    "Gou" "Who are you looking to visit? I was one of the first students transferred here, so I pretty much know everybody here."
+    if isEventCleared("global032") or isEventCleared("GTS030"):
+        MCT "At least he has an easy answer at the ready with Naomi's transfer so he won't blow his cover."
+    "Daichi paused for a brief second, seemingly mulling over the possibilities before landing on an answer."
+    show RM happy-2
+    RM "Watanabe-san. Hikari Watanabe."
+    if getFlag("MC005RM"):
+        "I couldn't tell if there was an audible {i}slap{/i} sound from my palm meeting my forehead, but if that wasn't the case, I certainly was thinking it really hard."
+        MCT "You gotta be fucking kidding me dude."
+    else:
+        MCT "Who the hell is that? Did he just pull some name out of his ass? The guy specifically said he knows everyone living there!"
+    "Gou" "Watanabe-san, that right?"
+    RM "Yes, I met her on the first day and really hit it off. We've been friends ever since."
+    "A long wide grin crawled across the giant's face."
+    show RM doubt
+    "Gou" "Oh, that's funny. You had me going there for a sec. But see, funny story, there's no Hikari Watanabe here."
+    show RM sad
+    "Gou" "'Cuz, y'know, I would {i}know{/i}, Einstein. There's barely a goddamn handful of us here in this dirt pit. Where'd you even get that name, slick? That tall chick on the student council?"
+    "Gou" "Last time I saw her, she wasn't even close to whatever height threshold it is to get shunted off here."
+    show RM concerned
+    RM "Umm, well... Have you checked lately?"
+    show RM concerned
+    "Gou" "You know, I thought you were full of shit, but part of me was hoping that you were at least a little sincere. When I got transferred to this place, no one from my homeroom bothered to visit {i}me{/i}."
+    "Gou" "Nope! Nobody gave a shit, not even my so-called friends. Instead I was just left in this fuckin' pit to be forgotten while everyone else just moved on."
+    "Gou" "Oh, but coming down here trying to play me for a rube with your half-assed story, that's a {i}real{/i} fuckin' class act."
+    show RM sad
+    RM "W-Wait! It's not like that. I think there's been a mix-up. The council member is Hikari's twin sister."
+    "Gou" "{i}Oh! Oh really? Well that changes everything!{/i} {w}How about you break into a rubber dick store and go fuck yourself, pencilneck. I ain't buying it."
+    "He quickly punched the keys again before he walked through the gate and shut it behind him."
+    "Gou" "I don't know what the hell you're up to snooping around here, but I suggest you go back to the campus for the \"normies\" and stay there."
+    "Kajiwara-san walked away, but kept looking back as he did so, doubtless to make sure we didn't try to mess with the keypad or something else to attempt to get in."
+    MC "Welp, so much for that..."
+    show RM doubt
+    RM "{i}Tck!{/i} {w}{i}Arrgh!{/i} I can't believe this..."
+    show RM concerned-2
+    if getFlag("MC005RM") and (isEventCleared("global032") or isEventCleared("GTS030")):
+        MC "Dude, I thought you let the Hikari Watanabe thing go. We talked about this. Honestly, if even you can't find anything on this mystery girl then I think it's fair to say she doesn't exist. Just let it go man."
+        RM "..."
+        "In contrast to his usual defensiveness of his hairbrained schemes, Daichi didn't seem to have anything to say in response."
+        MC "Why didn't you just mention Yamazaki-san instead? That would have been a sure-fire ticket in, since he'd know her."
+        show RM concerned
+        RM "{i}Uggh{/i}..."
+        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        show RM concerned-2
+        RM "You're right... I messed up. It wasn't the right call. {w}{i}Sigh{/i}... I was hoping to wrap up two leads at the same time. If I couldn't find her, then it made sense she'd be here. I was certain of it... but she wasn't."
+        MCT "I'll say."
+        "Part of me wanted to say a lot more, just to drive the point home, but seeing the utterly defeated look in his eyes, the better part of my judgment reasoned that it would just be unnecessarily grinding salt into an open wound."
+    elif getFlag("MC005RM"):
+        MC "Dude, I thought you let the Hikari Watanabe thing go. We talked about this. Honestly, if even you can't find anything on this mystery girl then I think it's fair to say she doesn't exist. Just let it go man."
+        RM "..."
+        "In contrast to his usual defensiveness of his hairbrained schemes, Daichi didn't seem to have anything to say in response."
+        RM "Uggh..."
+        show RM concerned
+        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        show RM concerned-2
+        RM "You're right... I messed up. It wasn't the right call. {w}{i}Sigh{/i}... I was hoping to wrap up two leads at the same time. If I couldn't find her, then it made sense she'd be here. I was certain of it... but she wasn't."
+        MCT "Just what is his obsession with this mystery girl? I get the feeling there's something he's not telling me. I don't know why else he'd continue to waste time on this red herring."
+    elif isEventCleared("GTS030") or isEventCleared("global032"):
+        MC "Who the hell is Hikari Watanabe? Did you just make up that name hoping the {i}one guy{/i} who supposedly knew everyone wouldn't have any questions about it?"
+        MC "Why didn't you just mention Yamazaki-san instead? That would have been a sure-fire ticket in, since he'd know her."
+        RM "Uggh..."
+        show RM concerned
+        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        show RM concerned-2
+        RM "It's a long story. {w}I was trying to learn more about students with factors, specifically siblings with factors to find any possible correlation that could help with learning more about Yuki-chan's growth factor."
+        RM "I stumbled upon data about two siblings named Watanabe but one of the records was incomplete. {w}Something seemed fishy about that, so I suspected it could be an important lead someone was trying to conceal." 
+        show RM doubt
+        RM "I made a point to get to the bottom of it. I looked everywhere, asked a bunch of different people— but no one seemed to know who she was. The only lead I had was her twin sister, who is on the council."
+        MC "So you asked all these people but you didn't ask her supposed sister?"
+        show RM sad
+        RM "I tried tailing her in hopes of acquiring more info on the lead, but it led to a rather embarrassing situation when she caught me in the act on a stakeout in town during Golden Week."
+        show RM concerned
+        RM "{i}Sigh{/i}... In retrospect, it all seems to be a bizarre coincidence as I haven't managed to dig up anything about her, but in the moment I had a hunch that it could have been because she'd been in the Giant's Dorms the whole time."
+        RM "It was a seemingly perfect fit for why such a promising lead had so many dead ends: \"The sister was in another castle.\" so to speak."
+        "I had been confused at first but it all made sense now. Despite his usual overly cautious and paranoid approach to secrecy, he flubbed it in a mad fit of desperation in hopes of getting a clue for one of his key leads."
+        show RM concerned
+        "Not his finest moment, but one that revealed more of a human side to him I wasn't as well acquainted with."
+    else:
+        MC "What the hell was that, dude? Did you just make up that name hoping the {i}one guy{/i} who supposedly knew everyone wouldn't have any questions about it?"
+        RM "Uggh..."
+        show RM concerned
+        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        show RM concerned-2
+        RM "It's a long story. {w}I was trying to learn more about students with factors, specifically siblings with factors to find any possible correlation that could help with learning more about Yuki-chan's growth factor."
+        RM "I stumbled upon data about two siblings named Watanabe but one of the records was incomplete. {w}Something seemed fishy about that, so I suspected it could be an important lead someone was trying to conceal."
+        show RM doubt 
+        RM "I made a point to get to the bottom of it. I looked everywhere, asked a bunch of different people— but no one seemed to know who she was. The only lead I had was her twin sister, who is on the council."
+        MC "So you asked all these people but you didn't ask her supposed sister?"
+        show RM sad
+        RM "I tried tailing her in hopes of acquiring more info on the lead, but it led to a rather embarrassing situation when she caught me in the act on a stakeout in town during Golden Week."
+        show RM concerned
+        RM "{i}Sigh{/i}... In retrospect, it all seems to be a bizarre coincidence as I haven't managed to dig up anything about her, but in the moment I had a hunch that it could have been because she'd been in the Giant's Dorms the whole time."
+        RM "It was a seemingly perfect fit for why such a promising lead had so many dead ends: \"The sister was in another castle.\" so to speak."
+        "I had been confused at first but it all made sense now. Despite his usual overly cautious and paranoid approach to secrecy, he flubbed it in a mad fit of desperation in hopes of getting a clue for one of his key leads."
+        show RM concerned
+        "Not his finest moment, but one that revealed more of a human side to him I wasn't as well acquainted with."
+    scene black with fade
+    pause .5
+    scene Chukan Point
+    show RM concerned
+    with fade
+    play music Rain
+    "Having dusted ourselves off after the debacle at the gate, we proceeded to walk back to campus. The pleasant scenery was at least some level of comfort in light of having to return empty-handed."
+    show RM neutral-2
+    "Despite looking pretty down just a few minutes ago, I could already see the gears turning behind Daichi's eyes."
+    MC "So what's the plan now?"
+    RM "Not exactly sure. We seem to be stuck for now. But when the giant student was closing the gate, I did manage to confirm that \"4\" was indeed the second number. So we have two of the four numbers."
+    show RM neutral
+    RM "That still leaves a lot of possible combinations though, but at least it is manageable."
+    MC "Do you think they change the passwords over time?"
+    show RM sad
+    RM "I don't know, but that does put another wrinkle into things, and suggests a bit of urgency to come to a resolution soon."
+    show RM neutral-2
+    MC "Well, it's not like we don't have plenty of other leads to chase down. Your board is still looking pretty full."
+    RM "True, new opportunities can open up as more info about this place gets revealed." 
+    show RM happy-2
+    RM " For one, I'd like to take a trip into town to look at a hotel that was supposedly built early in the island's history around the same time the rock quarry was in commission."
+    RM "It's a long shot, but there might be a connection."
+    MC "Hmm, sounds rather tenuous, but at the same time, it certainly couldn't hurt."
+    show RM smug
+    RM "My thoughts exactly."
+    if isEventCleared("GTS030"):
+        hide RM with dissolve
+        "I had hoped to surprise him with my knowledge of the Giant's Dorms, having visited there previously, but given how things went down today, I decided that was best saved for another time."
+        "Kajiwara-san seemed pretty upset, and I wasn't exactly interested in pissing off someone over three meters tall catching us snooping around. Better to wait it out." 
+        "Hopefully the next time I visit Naomi without Daichi around I'll be able to disassociate myself if I do end up getting spotted by him." 
+        "Besides, it would be best to talk with Naomi first about potentially sharing the password, as I wouldn't want to do anything that might betray her confidence."
+    "As far as investigations go, this was another dead end, but hopefully that just meant we were overdue for a breakthrough in our investigation."
     jump daymenu

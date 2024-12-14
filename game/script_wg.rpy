@@ -7877,6 +7877,7 @@ label WG036_c1_2:
     jump daymenu
 
 label WG037:
+    $setFlag("XX37")
     $setProgress("WG", "WG038")
     scene Dorm Interior with fade
     play music Peaceful
@@ -15615,8 +15616,13 @@ label WG058:
     "That was to be expected, what I didn't expect was to see we had some company. They were a ways off in the distance, but they were definitely students from the school."
     "Judging by the equipment some of them were carrying and the costumes worn by a couple of them, it must have been members of the film club. Looks like they thought to make use of the scenic backdrop here today."
     "One of them was giving orders. She must have been the director."
-    if isEventCleared("WG011"):
+    if getFlag("Meet_Ryoko") and isEventCleared("WG011"):
+        "I recognised Ryoko out of the group. I met her in passing before but I think I first saw her when I went with Alice and Aida to the screening of that chick-flick movie Aida liked that the film club put on." 
+    elif getFlag("Meet_Ryoko") and not isEventCleared("WG011"):
+        "I recognised Ryoko out of the group. I met her in passing before but didn't know her all that well. She was involved in the film club, I knew that much."
+    elif isEventCleared("WG011"):
         "I didn't know her name, but I recognized her from the film club when I went with Alice and Aida to the screening of that chick-flick movie Aida liked."
+    $setRyokoOutfit(OutfitEnum.CASUAL)
     show WG neutral at Position(xcenter=0.3, yalign=1.0)
     show Ryoko camera at Position(xcenter=0.8, yalign=1.0)
     with dissolve
@@ -15756,27 +15762,46 @@ label WG058_c1_after:
     Ryoko "I'll catch up with you guys tomorrow."
     show Ryoko happy
     "She waved with a wide arc, using her whole arm as she greeted us with an eager smile on her face."
-    Ryoko "Hi!"
-    MC "Hello. I've seen you around the academy before, but I don't think we've met. I'm Keisuke Hotsure and this is Alice Nikumaru."
-    show WG neutral-2
-    WG "Hello."
-    Ryoko "My name is Ryoko Tanaka! Yeah, I've seen both of you around the academy before, but I never got the chance to say hi and introduce myself."
-    if not getFlag("Meet_Ryoko"):
-        $setFlag("Meet_Ryoko")
-    if isEventCleared("WG011"):
-        Ryoko "Oh yeah, I remember now! I saw both of you with another girl at one of our screenings. Did you enjoy the movie?"
-        show WG neutral
-        WG "Not really to be honest."
-        MC "It was alright."
-        show Ryoko annoyed
-        Ryoko "Oh."
-        MC "But our friend Aida loved it. It was one of her favorites."
-        show Ryoko happy
-        Ryoko "Well, I'm glad to hear that then! I'm a member of the film club at the academy. I guess you could see us filming from here earlier."
+    if getFlag("Meet_Ryoko"):
+        Ryoko "Hey, Hotsure-san!"
+        MC "Hey, Ryoko. Long time no see."
+        show WG pondering
+        "Alice for her part seemed to recognise her, but was clearly having trouble placing the face with the name."
+        MC "I'm not sure if you two have met before. This is Alice Nikumaru."
+        show WG neutral-2
+        WG "Hello."
+        Ryoko "My name is Ryoko Tanaka! Yeah, I've seen you around the academy before, but I never got the chance to say hi and introduce myself."
+        if isEventCleared("WG011"):
+            Ryoko "Oh yeah, I remember now! I saw both of you with another girl at one of our screenings. Did you enjoy the movie?"
+            show WG neutral
+            WG "Not really to be honest."
+            MC "It was alright."
+            show Ryoko annoyed
+            Ryoko "Oh."
+            MC "But our friend Aida loved it. It was one of her favorites."
+            show Ryoko happy
+            Ryoko "Well, I'm glad to hear that then! I'm a member of the film club at the academy. I guess you could see us filming from here earlier."
     else:
-        Ryoko "I'm one of the film club members. I guess you probably figured that out since you could see us filming from here earlier."
+        MC "Hello. I've seen you around the academy before, but I don't think we've met. I'm Keisuke Hotsure and this is Alice Nikumaru."
+        show WG neutral-2
+        WG "Hello."
+        Ryoko "My name is Ryoko Tanaka! Yeah, I've seen both of you around the academy before, but I never got the chance to say hi and introduce myself."
+        if isEventCleared("WG011"):
+            Ryoko "Oh yeah, I remember now! I saw both of you with another girl at one of our screenings. Did you enjoy the movie?"
+            show WG neutral
+            WG "Not really to be honest."
+            MC "It was alright."
+            show Ryoko annoyed
+            Ryoko "Oh."
+            MC "But our friend Aida loved it. It was one of her favorites."
+            show Ryoko happy
+            Ryoko "Well, I'm glad to hear that then! I'm a member of the film club at the academy. I guess you could see us filming from here earlier."
+        else:
+            Ryoko "I'm one of the film club members. I guess you probably figured that out since you could see us filming from here earlier."
     show WG stern
     WG "Yes. We certainly could."
+    if not getFlag("Meet_Ryoko"):
+        $setFlag("Meet_Ryoko")
     MC "Seems like a nice day to get some outdoor footage."
     Ryoko "Oh, like you wouldn't believe! The lighting and atmosphere were perfect."
     MC "Two long lost lovers reunited. I take it you're filming some kind of drama?"
