@@ -349,7 +349,7 @@ label global000_GTS:
     scene black with dissolve
     play music GTS
     "As we entered the school grounds, I couldn't help but notice how big everything was."
-    scene School Planter with dissolve
+    scene School Building Side with dissolve
     "What looked to be normal-sized buildings turned out to be a trick of perspective."
     "As Honoka and I walked and walked, the school seemed to grow before my eyes."
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized at Seichou Academy."
@@ -2226,7 +2226,7 @@ label MC004:
             Student "Do you stand on your balcony when you have major plans going on?"
             MC "Good point."
             $setFlag("Meet_Genji")
-            Student "Genji Nakayama. Fukuoka."
+            Student "Genji Nakayama. Beppu."
             MC "Ah..."
             MC "Keisuke Hotsure. Tokyo."
             MC "Nice to meet you."

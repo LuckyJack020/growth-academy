@@ -39101,6 +39101,3934 @@ label PRG059_belly_b:
     MCT "Yeah... that's going to happen."
     "I took a deep breath."
     MCT "Aida and I will have it handled."
+    jump daymenu
+
+label PRG060:
+    $setProgress("PRG", "PRG061")
+    play music MC fadein 2.0
+    scene Dorm Interior with fade
+    "The soft bite of tea tingled my throat as it ran down."
+    "I set the can back on my desk, sighing softly, and getting up from my chair, glanced down at my bed."
+    "I ran my hand over my dressiest, dark jeans, a v-neck shirt and button down, and shoes. They were closer to dress shoes than street ones, but they would be a welcome change to the standard uniform ones."
+    MCT "Should I go for the white shirt?"
+    MCT "Nah. Seems like I'm always wearing white. Let's mix it up."
+    "I adjusted the dark gray button down on the bed, making sure it wasn't folded weird."
+    pause .25
+    show RM neutral with dissolve
+    RM "Hey."
+    MC "Sup?"
+    "Daichi came in, and in a way that almost made him seem like just another guy, threw his backpack on his bed."
+    "He unzipped one of the smaller zippers and took out a small notebook, setting it on his desk, only then glancing over at me."
+    RM "Got something going on?"
+    MC "Date night tonight. I'll probably be back tomorrow."
+    RM "Sure."
+    hide RM with dissolve
+    "Daichi tossed a few more things onto his desk and crossed the room, heading into the bathroom."
+    play sound PhoneVibrate
+    "I nearly flung across my bed to my phone on the charger, picking it up a little faster than I'd meant to."
+    MCT "About time. I-"
+    MCT "Oh... Mom."
+    MC "Hello?"
+    MomCell "Hey, Honey."
+    MC "Hey. How are you?"
+    MomCell "Doing well."
+    MomCell "I've been on quite the run of writing sessions for the new book release, and figured I'd check in. I never hear from you these days, so I wanted to look and make sure you were still alive."
+    MC "Heh, yeah. I'm still here."
+    MC "How's Dad?"
+    MomCell "He's well. At the store again, as usual."
+    MC "I figured."
+    MC "So, anything up?"
+    MomCell "No, not particularly. I just wanted to call and hear your voice."
+    MomCell "It might be hard for you to understand, but when a mother has both of her babies move out of the house at the same time, it can be a hard adjustment for her."
+    MomCell "Not... to downplay the adjustment for you or Tomoko, Dear."
+    MC "Oh, no. I get what you mean."
+    MC "Think all of us have been going through that adjustment feeling."
+    MC "And, I'm sorry that it couldn't have gone an easier way."
+    MomCell "It's far from your fault, Dear. Far far from that."
+    MomCell "You and Tomoko didn't choose this whole growth factor thing."
+    MomCell "How has that been going?"
+    MC "Well, if you can imagine it, I trimmed my hair this morning. Right to where it was last time you saw me. So like, over the eyes, and a little under the jaw in the back."
+    MC "And, as of right now, it's..."
+    "I glanced back. Now late afternoon, my hair was well past my ass and down by my thighs."
+    MC "A little past my butt."
+    MomCell "Dear, that's insane."
+    MomCell "Like... that isn't natural. It's hard to even fathom."
+    MC "You'd be shocked, Mom. You really would. The things here are... past imagination."
+    MomCell "And how is your girlfriend?"
+    MC "She's doing..."
+    MC "Well... Mom, can I ask you something?"
+    MomCell "Mhm?"
+    MC "When you and dad found out that you were pregnant with Tomo and I, how did Grandpa react?"
+    MomCell "Oh, Honey..."
+    MomCell "Well, given your... situation, I don't mind telling you."
+    MomCell "It wasn't ideal, that I will say."
+    MomCell "Your grandfather was... let's say he was a little overwhelmed by it all."
+    MomCell "I did tell him and your grandmother shortly after your father and I first found out, but it was still quite a shock, mainly well, because no one was expecting twins."
+    MomCell "Though, overtime, he grew more and more excited by the whole thing. Especially when I started to show."
+    MomCell "He always wanted to be a grandpa, and he came around pretty quickly."
+    MC "Got it..."
+    MomCell "Why do you ask?"
+    MC "Just..."
+    MC "Aida and I went to a Koi game in Kanagawa a few weeks ago, and we stayed by her parents."
+    MC "She'd told her mom and dad beforehand, but this was their first time seeing her."
+    MomCell "Didn't go well?"
+    MC "Well, her mom took it well. Her dad kind of... well, he lost it."
+    MC "He started shouting at me, then at Aida. He started blaming me for all of the things that were happening to her, and he tried to ban us from seeing each other."
+    MomCell "My goodness..."
+    MomCell "What did she do?"
+    MC "Stood up to him."
+    MC "He said some really nasty stuff to her, and Aida, like, pulled me out of the room and packed us up, then we just left. We ended up staying in a hotel."
+    MC "But, anyways. The whole incident kind of messed Aida up for a little while. She's starting to do better now, though. But, it was hard to watch."
+    MomCell "I see..."
+    MomCell "And you were asking about grandpa as a sort of comparison?"
+    MC "Yeah."
+    MomCell "Well, you have to remember, Keisuke."
+    MomCell "Fathers tend to form a very deep, protective type bond with their daughters."
+    MomCell "So, no matter how old Kodama-san gets, in her father's eyes, she'll still always be his baby girl. He remembers all the times when she was little, and when he was like a superhero in her eyes."
+    MomCell "Your father has the same sort of thing with Tomoko."
+    MomCell "Now, imagine for a second. What do you picture Dad doing if Tomoko came home for a holiday and announced suddenly that she was pregnant?"
+    MC "... Right. Not to mention that, on top of that, Aida's factor makes her way bigger than any other pregnant lady."
+    MomCell "Exactly."
+    MomCell "See what I mean?"
+    MomCell "I'm not saying that he couldn't have chosen his words better."
+    MomCell "But, remember that he was once in your spot, Dear. He was the guy watching the most important person in his life grow another soon to be important person in his life."
+    MomCell "And, to add onto it, is Kodama-san an only child?"
+    MC "Mhm."
+    MomCell "Then it's an even deeper bond."
+    MC "Right. I didn't really... consider it that way, I guess."    
+    MomCell "How was the game, by the way?"
+    MC "Oh, fantastic. They won on a grand slam. The other team forfeited."
+    MomCell "... Was this about two weeks ago?"
+    MC "Uhh... about there, yeah."
+    MomCell "Dear, your father was watching that game on TV. You two were there?"
+    MC "Yeah. Up in one of the box seat rooms."
+    MomCell "How in the world did you two afford those tickets?!"
+    MC "I won them. Submitted my name into a radio contest."
+    MomCell "Wow. That's wonderful. Lucky."
+    MomCell "Do you happen to have a picture of you guys together, by the way? I've heard so much about Kodama-san, but I still haven't seen a picture of her or anything."
+    MC "Yeah, hold on. Think I've got a few."
+    "I opened my phone's gallery and scrolled for a moment until I came to the pictures from the game. I selected the selfie of Aida kissing me on the cheek, and the picture of Aida and I outside of the box seats."
+    MC "Alright. Just sent them."
+    MomCell "Okay. Think I-"
+    pause .5
+    MomCell "Oh..."
+    MomCell "I... mn."
+    MC "Mom?"
+    MomCell "... Wow."
+    MC "I... I know, Mom."
+    MomCell "Y-Your hair, Sweetheart. It's so long."
+    MC "I... Yeah, I didn't cut it for a few days. Figured I'd let it grow to help Aida feel like she wasn't the only one sticking out."
+    MomCell "A few days?!"
+    MomCell "I mean, that's very sweet of you. But... a few days. Wow..."
+    MomCell "I'm sure that meant a lot to her though."
+    MomCell "She still looks... I mean."
+    MC "What?"
+    MomCell "I was going to say that she still looks like any other pregnant girl."
+    MomCell "But... only like the extremely rare ones who have like seven or eight at a time."
+    MomCell "Hard to believe she only has three in there."
+    MC "Y-Yeah... She's big."
+    MomCell "But, my. {w}She's darling. She looks like such a sweet, kind girl."
+    MC "She is. You'll love her when you meet face to face."
+    MomCell "How does she handle... carrying all of that around?"
+    MC "Well, she doesn't seem too over encumbered or anything. She bumps things on occasion, but can't really blame her for that."
+    MC "There almost seems to be something with the factors that help with health and such."
+    MomCell "Right. I can imagine. Any other woman that size would be in bed almost exclusively."
+    MomCell "I'm glad to hear that though."
+    MC "We're actually going out tonight. Having a date night."
+    MomCell "Aww. That's awesome, Honey."
+    MomCell "I'm sure she's so excited."
+    if isEventCleared("MC004"): 
+        MC "Yeah. Her roommate and-"
+        MC "Oh, Mom. You're not gonna believe this."
+        MomCell "Hm?"
+        MC "Honoka Inoue is here."
+        MomCell "Honoka Inoue? Like... the girl who used to hang out with you and Tomoko all the time?"
+        MC "Yeah! She's on the island too! She's in the same class as Aida and I."
+        MomCell "Wow! It's been ages since you all used to hang out. How is she now?"
+        MC "She's still Honoka, that's for sure."
+        MC "She and Aida are actually getting to be really good friends."
+    else:
+        MC "Mhm. Honoka and Aida's roommate are helping her get all ready."
+        MC "Honoka and her are actually getting to be really good friends."
+    MomCell "That's great! I'm sure Kodama-san enjoys having her around."
+    MomCell "Is... Honoka growing too, then?"
+    MC "Uh, yeah. Yes she is."
+    MomCell "I see."
+    MomCell "Well, I hope you'll be there for her, same as you've been for Kodama-san. I'm sure she could use the support."
+    MC "I've been doing my best. So has Aida too."
+    MomCell "That's great to hear. It probably helps to have a group of you all going through the same sorts of things."
+    MomCell "But, I should let you get ready for your date. I hope you have an amazing time."
+    MC "I hope so too. I love you."
+    MomCell "I love you too, Honey. Have fun tonight. And say hi to Kodama-san for me."
+    MC "I will. Bye."
+    MomCell "Bye, Honey."
+    "I set my phone back down."
+    "Glancing out the window, I saw the women's dorms across the courtyard, many of the blinds pulled shut."
+    "I didn't know exactly where Aida's was in the building relative to where mine was, but I could imagine her, Alice, and Honoka all hanging out together."
+    "I checked the time once more."
+    stop music fadeout 2.0
+    MCT "Little after 17:00."
+    MCT "What now?"
+    "I looked back at my clothes. To help keep them fresh and clean, I was wearing just a pair of gym shorts and a t-shirt. I'd showered earlier, and trimmed my hair, so I'd be good until well into the night, hopefully."
+    "I brushed my hand to my back, adjusting my hair."
+    MCT "... It's this long already?"
+    "I got up, opened my phone camera, turning it to selfie mode and stared."
+    "My hair had already reached my shoulders."
+    MCT "I just cut this..."
+    "I ran my hand through it."
+    MCT "Holy shit..."
+    "My heart rate sped up just a little."
+    "I put some of it in my hand, looking down at it."
+    "I watched for over a minute."
+    MCT "... As if I could actually see it growing."
+    "I glanced back at my phone screen and looked at the top of the screen, where a text notification sat."
+    play music DormLife fadein 2.0
+    BECell "Hey!! How long do you need yet??"
+    "I felt my chest flutter a little as my heart bolted back up."
+    MCCell "I can be ready whenever"
+    BECell "Okay!! We're almost done! Head over whenever!!"
+    BECell "And get ready! She's a hottie!!"
+    "I took a deep breath and picked up my pants, taking down my shorts."
+    MCT "Here goes. Game time."
+    "I got my pants on and did up the belt, then slipped on my socks, followed by my v-neck, and button down."
+    MCT "Shirt last. Always."
+    "I got my shoes on, and took my wallet, keys, and phone, and put them into the right pockets."
+    "Lastly, I took a hair tie and wrapped it around part of my wallet."
+    MCT "Pays to keep an eating hair tie around nowadays."
+    "I checked myself in the mirror."
+    MCT "Fly is zipped. Belt is tight."
+    MCT "Looks good, I think..."
+    "I went to the door, opening it and heading out into the hall, locking up behind me."
+    scene Dorm Hallway with dissolve
+    "I headed down, walking a bit quicker than normal, likely nothing to do with my still faster than average heart rate."
+    scene Dorm Entrance with dissolve
+    "The air was perfect outside. Light and dry. Hardly a touch of humidity, which while weird, was welcome."
+    scene Dorm Exterior with dissolve
+    MCT "Okay... butterflies, butterflies, butterflies..."
+    "I didn't know why I was nervous. I'd hung out with Aida so many times."
+    "But... this one was different. We were getting dressed up and going out."
+    "Not to mention... after."
+    "Walking across the middle grounds, I walked up to the door-"
+    show FMG neutral with dissolve
+    "And stepped back as Akira half-ran out of it."    
+    FMG "Oops! Sorry dude!"
+    MC "You're... good. Got places to be?"
+    FMG "Yep! I love running the track in the cool weather!"
+    "Akira glanced down."
+    show FMG happy
+    FMG "Could ask you the same question! Hot date tonight?"
+    MC "Yep. Kodama-san and I are heading out to the restaurant at the hotel downtown."
+    FMG "Ooh! Fancy!"
+    FMG "Bro's going all out!"
+    "I smirked and shook my head."
+    MC "I've gotta get in there though. Gotta pick up my date."
+    FMG "Don't let me hold you up. See you guys later!"
+    hide FMG with dissolve
+    "I opened the door as Akira jogged off."
+    scene Dorm Hallway with fade
+    "My dress shoes made a sort of different clomp sound as I walked down the hall."
+    "It cemented home the idea that this felt different. This was a new, more special walk."
+    "Not a walk home, or a walk before a long class day. This was a pleasure walk. A walk toward fun, freedom, and bliss."
+    "The door seemed further down the hall than ever. As nice as the walk felt, I wanted to just sprint down the hall and throw the door open. Dash right in and claim my date."
+    "But, I couldn't. Both through being hall monitored and also the threat of sweating in my nice clothes."
+    "Soon enough though, I was in front of the door."
+    "It was quiet. Almost eerily so. My heart seemed to race even faster."
+    "I raised my fist, knocking three times."
+    MCT "Was that too fast of a knock? Or too many?"
+    MCT "Maybe I should have just knocked once?"
+    MCT "Or called first? Yeah, I should have called. Honoka though, not Aida."
+    MCT "Maybe a text would have been better? Less up-front?"
+    MCT "But, what if she didn't see it? What if she-"
+    show WG neutral with dissolve
+    WG "Good evening, Hotsure-san."
+    MC "Good evening, Alice."
+    WG "Please, come in."
+    "She held the door as best she could, and let me take it as I walked into the room between her dorm and Aida's."
+    "Off to the left hand side, loud pop music echoed out from Aida's closed door, punctuated by a loud giggle from someone."
+    WG "It shouldn't be much longer."
+    "I glanced around. On the couch was a large suitcase, zipped shut, with another smaller bag beside it."
+    WG "Once those two are set, you'll be taken back out into the hallway."
+    MC "Huh?"
+    WG "For the reveal."
+    MC "Ah... going all out for this, huh?"
+    show WG pondering
+    WG "I'm... admittedly a bit less enthused by the theatrics."
+    show WG haughty
+    WG "However, Honoka thought it would be fun, and Aida seemed thrilled by the idea, so I'm more than willing to go along."
+    show WG neutral-2
+    MC "Ah."
+    MC "Doesn't surprise me, I guess."
+    MC "Honoka would be the one to get all hyped over the theatrics."
+    MC "How did dress shopping go, by the way? Find something good?"
+    show WG sly
+    WG "... Oh, did we."
+    show WG haughty
+    WG "I am not at liberty to discuss it, however. I shall leave that up to your judgment."
+    show WG happy-2
+    WG "Keep in mind... I do know a thing or two about style."
+    "Alice stepped back, as if to walk to Aida's door before stopping and turning back, as if just remembering something."
+    show WG neutral
+    WG "I've already told Aida, but I'm actually rather familiar with the owner of the hotel and restaurant."
+    MC "Oh, seriously?"
+    WG "Indeed. Now, which restaurant will you be dining at?"
+    show WG doubt
+    MC "Uh... there's more than one?"
+    show WG neutral
+    WG "There are two. One nearby the lobby, and another upstairs. The one upstairs is the more upscale, while the lobby restaurant is more commonplace, but still business casual— at minimum."
+    show WG happy
+    MC "Well... on a night like tonight, I think the upscale one is the only option."
+    WG "Well spoken, Hotsure-san."
+    show WG haughty
+    WG "I'm assuming that you wouldn't have made reservations, then?"
+    MC "... Didn't do that either, no."
+    WG "Right."
+    show WG neutral
+    WG "I'll give the owner a call and let her know that you two will be coming tonight. Mention that you're associates of mine when you get there."
+    MC "Will do. Thank you so much, Alice. For both this and for helping Aida get ready."
+    show WG neutral-2
+    WG "It's been hardly a stress, Keisuke. Fashion is a passion of mine, you know."
+    show WG neutral
+    WG "Now, pardon me."
+    "Alice turned and walked over to Aida's door, knocking on it twice."
+    WG "He's here."
+    BE "Be out in a sec! Have him go into the hall!"
+    show WG doubt
+    WG "You heard her. Out."
+    "I turned and opened the door, but apparently not quick enough as Alice's hand pressed against my back and pushed me gently, yet firmly out the door."
+    show WG sly
+    "Alice smiled coyly and shut the door."
+    hide WG with dissolve
+    "Everything was silent again... {w}save for my quick-paced heartbeat thumping in my ears."
+    "My stomach felt empty but full all at the same time, the nerves near the front of my gut almost tied into knots."
+    scene black with dissolve
+    MCT "There's only a few walls between us."
+    MCT "I just want to see her. Just... now."
+    scene Dorm Hallway with dissolve
+    "The door clicking in front of me jolted my eyes open, and I stared."
+    show BE neutral with dissolve
+    BE "Ooh. You look nice, Kei-chan. I like your button down."
+    MC "Thanks. Having fun?"
+    show BE aroused
+    BE "Heh heh... only a little. Turn around."
+    hide BE with dissolve
+    "I smirked and turned, facing the wall on the other side of the door."
+    BE "Close your eyes."
+    MC "My back is already-"
+    stop music fadeout 2.0
+    BE "Close 'em, Kei-chan!"
+    MC "Fine. Fine."
+    scene black with dissolve
+    MC "Alright. Closed."
+    BE "'Kay."
+    "I heard steps, and felt a brush of fabric on my side as a hand came over, lifting my hair up from my face."
+    BE "Closed. Good."
+    BE "Alright. Just stay there."
+    "Quicker footsteps went away, as the door shut again."
+    "More silence."
+    "I took a breath, one hand in my pocket fiddling with a little piece of fabric stuck to the seam."
+    "Inhale again."
+    play sound DoorOpen
+    pause .5
+    "Soft footsteps came closer."
+    "A hand touched my arm, making me jump."
+    PRG "Baby?"
+    BE "Turn around, Kei-chan."
+    WG "And open your eyes."
+    $setPRGOutfit(OutfitEnum.DRESS)
+    scene Dorm Hallway with dissolve
+    play music PRGAlt fadein 2.0
+    pause .5
+    show PRG neutral with dissolve
+    pause 2
+    MC "I..."
+    MC "W-Whoa..."
+    show PRG blush-2
+    PRG "Y-Yeah?"
+    MC "Yeah, I..."
+    "Aida adjusted a little, glancing down."
+    show PRG embarrassed
+    PRG "Is it too much?"
+    MC "N-No. Not at all. I just... wasn't expecting it."
+    show BE wink at Position(xcenter=0.25, yalign=1.0) behind PRG
+    show WG happy at Position(xcenter=0.75, yalign=1.0) behind PRG
+    with dissolve
+    BE "I told her. If she's got them, flaunt them."
+    show WG sly
+    WG "You assume that's what he's staring at."
+    show BE angry
+    BE "I mean-"
+    show BE happy
+    "Honoka shook her head and walked over to Aida, putting a hand on her side."
+    BE "Do the thing, Aida."
+    show PRG blush-2
+    "Aida did a spin, twirling the dress out around her. Her hair flew out from behind, coming to rest perfectly behind her back as it had been."
+    show WG happy
+    WG "Beautiful. You're all ready."
+    PRG "T-Thanks, guys."
+    show BE neutral
+    BE "You're welcome, Hon. I had a great time."
+    WG "Enjoy your evening together."
+    WG "Now, I've got to be off to Mizutani-san's."
+    hide WG with dissolve
+    show BE confused
+    BE "And I should..."
+    show BE shrug
+    BE "Well, I got nothing going on, but I should let you guys get going."
+    show BE happy
+    BE "Have fun!"
+    show PRG neutral
+    PRG "W-We will. Thanks, Honoka."
+    show BE surprised-2
+    BE "Oh! I have to pack up my makeup brushes and stuff. You mind me being in your room without you there?"
+    show BE neutral
+    PRG "T-That's fine. Just close the doors when you leave."
+    BE "Got it. See you both!"
+    hide BE with dissolve
+    pause .75
+    show PRG blush-2
+    pause .5
+    show PRG unique-happy
+    pause .75
+    PRG "... You like it?"
+    if getFlag("PRG044_c1_1"):
+        MC "Baby... you have no idea."
+    if getFlag("PRG044_c1_2"):
+        MC "Babe... you have no idea."
+    if getFlag("PRG044_c1_3"):
+        MC "Sweetie... you have no idea."
+    "Aida reached over and took my hand."
+    show PRG neutral
+    PRG "Ready to go?"
+    MC "Yeah... c'mon."
+    "I led her down the hall, and opened the door."
+    scene Dorm Exterior with fade
+    "The warm, late afternoon light shone across campus."
+    show PRG neutral with dissolve
+    stop music fadeout 2.0
+    "Aida seemed to glow in the warm light, her dress shining, her hair shimmering in the rays."
+    "Light wind blew her locks about, as she walked beside me, her hand still firmly in mine."
+    "She had her wallet on a strap around her arm, which bounced rhythmically against her side."
+    PRG "Baby?"
+    MC "Yes?"
+    show PRG blush-2
+    PRG "Before we go to the restaurant, could we stop somewhere?"
+    MC "Of course. Where's that?"
+    PRG "H-Have you heard of Chūkan Point?"
+    play music Sunset fadein 2.0
+    if getFlag("VisitedChukanPoint"):
+        MC "Yeah, actually. I've been there."
+        show PRG neutral
+        PRG "Y-You have?"
+        if isEventCleared("RM006"): 
+            MC "Mhm. I..."
+            MC "Well, I was more dragged there by Daichi. He was checking out the giant's dorms, so we passed through it."
+            show PRG worried
+            PRG "Checking them out?"
+            MC "Ugh, yeah. Long story."
+            PRG "Well, that... i-it doesn't matter."
+        else:
+            MC "Mhm. Why?"
+    else:
+        MC "Uhh... no, actually."
+        show PRG neutral
+        PRG "It's a beautiful park."
+    "Aida took her wallet-purse thing and opened it, taking out her camera."
+    PRG "I was... wondering if we could take a picture together at the park."
+    show PRG blush
+    PRG "I know it's out of the way, but... would you mind?"
+    MC "Not at all. Let's go find it."
+    show PRG neutral
+    "I led Aida through campus, and out toward the road."
+    MC "Down... this way?"
+    PRG "I think so."
+    #if isEventCleared("PRGGTS"):
+        #PRG "I know the giant's dorms are that way."
+    #else: Tab complete if-else over one
+    if getFlag("VisitedChukanPoint"):
+        PRG "I've only been there once."
+        show PRG blush
+        PRG "I... didn't quite expect everything to be so big."
+        MC "Yeah. Giant's dorms are nearby, so I guess it's probably a popular hangout spot."
+    else:
+        show PRG worried
+        PRG "J-Just so you know, a lot of the fixtures and things are... really big. And not in the way the academy is."
+        MC "Huh. Wonder why."
+        MC "Oh, giant's dorms are probably nearby."
+        PRG "Mhm. They're kind of close."
+    "We took another turn, heading northeast and up into the hills."
+    MC "Mmgh... doing okay uphill?"
+    show PRG neutral
+    PRG "Mhm. I'm okay."
+    "I glanced down... and saw Aida was wearing small, dainty looking flats."
+    MC "Ended up not going with the heels?"
+    show PRG worried
+    PRG "N-No."
+    PRG "I-I didn't think it would be that bad. And, I got them on okay."
+    PRG "... Then I stood up and ended up almost tipping over."
+    MC "Ah... yeah. Don't want that."
+    MC "Better safe than sorry."
+    show PRG neutral
+    PRG "Yeah. Plus, these are a lot more comfortable."
+    MC "I'm sure. Lot of pressure on the balls of your feet."
+    scene Chukan Point
+    show PRG neutral
+    with fade
+    if getFlag("VisitedChukanPoint"):
+        MC "Pretty, isn't it?"
+        PRG "Yeah... it's gorgeous. Look at the trees."
+    else:
+        MC "Oh, whoa..."
+        PRG "Isn't it pretty? Look at the trees..."
+    "I gaped, looking over at the enormous, blooming trees."
+    MC "This'll be perfect for a picture."
+    PRG "Let's go next to that path. The lighting will be better there, and we can have the trees in the background."
+    "Aida took my hand and led me along, over a bridge and to the path."
+    show PRG worried
+    "She took her camera out and turned it on."
+    MC "Do you have specific settings for sunset on there?"
+    PRG "Um... kind of? There's an automatic setting for sunset."
+    PRG "I... don't know how to manually adjust anything. Or what like... the number with the decimal point in it means."
+    PRG "I just keep everything on auto."
+    "I watched her setting up her camera, and smiled, rubbing her arm."
+    MC "Hey."
+    MC "You look beautiful, by the way."
+    show PRG blush-2
+    PRG "U-Uhm..."
+    PRG "T-Thank you, Baby."
+    "Aida looked down, then up at my shirt, and to my face."
+    PRG "Y-You look very... h-handsome."
+    MC "Thanks. I'd have tried to do something fancy with my hair, but when it grows faster than I can style it, I get a little limited."
+    show PRG neutral
+    PRG "N-No. I like it this way."
+    "Aida turned her camera around."
+    PRG "Smile."
+    "She shifted me a bit until the sun was shining right onto our faces, and clicked."
+    show PRG worried
+    PRG "Oh... darn. Left the flash on."
+    "She held it back up and clicked again."
+    "She took a few, then looked down at the screen."
+    show PRG unsure
+    PRG "Ohh... I don't like any of them."
+    MC "Why? I think they look nice."
+    PRG "Y-You do. But... my jaw looks weird in this one."
+    PRG "And my smile looks bad here."
+    PRG "And this one has my hair in my eyes."
+    if getFlag("PRG044_c1_1"):
+        MC "Baby, I think they all look very nice."
+    if getFlag("PRG044_c1_2"):
+        MC "Babe, I think they all look very nice."
+    if getFlag("PRG044_c1_3"):
+        MC "Sweetie, I think they all look very nice."
+    show PRG worried
+    "Aida closed the gallery and held it up once more. She brushed her hair away and leaned into me."
+    "Bringing it back down, she looked again."
+    PRG "That one's a little better."
+    PRG "Maybe I can set the camera on something. I want to get one further away."
+    #if PRGGTS arc was not played
+    "Somewhere behind us and through the trees, a sound hit my ear."
+    "It was faint, but steadily growing louder."
+    "First something like a slapping crunch, like a paper being thrown into a bin. Then, it was similar to a high heel, but far deeper in pitch."
+    show PRG scared
+    "Finally, it grew even louder, and turned to a thudding, heavy sound."
+    MC "What is that?"
+    PRG "I-I don't-"
+    UNKNOWN "Excuse me."
+    show PRG worried
+    "Aida and I both drew attention to the voice... which came from a pair of legs."
+    show GTS_S neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    MC "Yamazaki-san?!"
+    GTS_S "Yes? How may-"
+    show PRG surprised
+    GTS_S "Oh my! Hotsure-san? And... Kodama-san!"
+    GTS_S "My! Good evening! It's been so long!"
+    show PRG neutral
+    "Naomi walked closer to us, her steps matching the picture of our mystery sound."
+    "She looked down at us, a bright smile spread across her face as she lowered herself, sitting down beside the path."
+    show PRG neutral at Transform(xzoom=-1)
+    pause 0.1
+    show PRG neutral at altMove(0.5, 0.25) with None
+    hide GTS_S
+    show GTS happy at Position(xcenter=0.7, ycenter=0.55)
+    with dissolve
+    GTS "You both look wonderful. Off on a getaway tonight?"
+    PRG "Y-Yes. Keisuke is taking me out for dinner in town."
+    GTS "How perfectly lovely."
+    GTS "And speaking of... Kodama-san."
+    GTS "You look absolutely stunning. My word..."
+    show PRG flattered
+    GTS "Has all been going well?"
+    PRG "I-I think so. I've got another appointment coming up, but last I checked, everyone is healthy."
+    show PRG unique-happy
+    PRG "I'm having triplets."
+    GTS "Ohh... three little angels. How perfect."
+    PRG "T-Thank you."
+    MC "How have you been, Yamazaki-san? Adjusting well?"
+    show GTS neutral
+    GTS "So much as I am able, yes."
+    GTS "The first handful of weeks were... a superlative exercise in patience and acceptance."
+    GTS "... Not that it was always an easy one, however."
+    show PRG neutral
+    PRG "I-I... I can imagine."
+    GTS "I of course am not the only one dealing with struggles. We ought to mind the circumstances of our fellows in all things."
+    show GTS embarrassed 
+    GTS "Oh, but listen to me go on and on. I shouldn't hold you two up."
+    MC "Actually, Yamazaki-san. Would you be open to helping us with something?"
+    GTS "It would be my pleasure. What can I do?"
+    MC "Could I have your camera?"
+    show PRG worried
+    "Aida nodded and handed it to me. I walked forward and held it up to Naomi."
+    MC "Would you be able to take our picture? We want it a little further away, but it's a little hard without a tripod or anything."
+    show GTS sad-2 at Position(ycenter=0.35)
+    GTS "I..."
+    GTS "Well. I would be honored to. However..."
+    "Naomi held up one finger, and the camera between two of her fingers on the other hand."
+    GTS "I tend to struggle with pressing standard sized buttons these days."
+    show PRG neutral
+    "Aida let out a small exhale."
+    MC "Oh! Hold on."
+    MC "Aida, that has a timer on it, right?"
+    PRG "Mhm."
+    "I ran up to Naomi again, and took the camera from her, going into a menu and finding the timer option, setting it for ten seconds."
+    MC "Perfect."
+    "I clicked the button."
+    MC "Now just hold it."
+    show GTS neutral-2
+    "I ran back and got into position beside Aida."
+    show PRG blush-2
+    "Naomi held her arm down to about our head level, and the camera clicked."
+    "She turned the camera around and held it out to us so we could see."
+    show PRG neutral
+    PRG "C-Could we do one more? I-I was squinting into the sun..."
+    MC "Do you mind, Yamazaki-san?"
+    GTS "Not at all. I'm more than happy to lend a hand."
+    "I ran back up and pressed the button again, handing it back to her and running back."
+    #play SFX Camera click
+    MC "There we go."
+    "Naomi turned it back again."
+    MC "That one better?"
+    PRG "Y-Yes. Thank you, Yamazaki-san."
+    GTS "You're very welcome."
+    GTS "However, may we do another?"
+    show PRG embarrassed
+    PRG "Um... o-okay?"
+    GTS "There's just a pose I think might look quite flattering."
+    MC "Alright. What do you have in mind?"
+    GTS "Kodama-san, turn towards Hotsure-san a touch. Just to give a more intimate feel."
+    show PRG worried
+    "Aida shuffled a bit on the spot and pivoted in."
+    GTS "Alright. Now, put your hand on top of your middle. Right hand."
+    "Aida put one hand on her belly, glancing down."
+    GTS "Right. Now, Hotsure-san. When you run back in, you put your left hand on Kodama-san's bump as well. Near her hand."
+    show PRG neutral
+    "I smiled and put my hand right by Aida's."
+    "Aida seemed to tremble just a bit as my hand rested on her."
+    GTS "Perfect. And arm around her, Hotsure-san. Then, Kodama-san, lean into him a little if you please."
+    show PRG blush-2
+    "I put my arm around her shoulders, as Aida's head lowered toward my chest."
+    GTS "Yes. That's so beautiful..."
+    "I ran back over and pressed the button, then doubled back and got into position."
+    "Naomi held it still as it clicked, then looked at the screen."
+    GTS "There... see for yourselves."
+    "Naomi held it down."
+    PRG "Ohh... Baby, I love it."
+    MC "Same here."
+    show GTS aroused at Position(ycenter=0.55)
+    GTS "Now... one more."
+    show PRG neutral
+    GTS "Same position, but instead of looking at me, look at each other."
+    "Aida and I stepped back and took the same poses."
+    "Aida turned her head and looked up at me, as I looked down to meet her."
+    GTS "Good. Now, Kodama-san. Take your hand from your belly and bring it to Hotsure-san's cheek."
+    show PRG blush-2
+    "Aida did so, slowly bringing it up and just to the bottom half of my face."
+    GTS "Onto the side away from me. So the camera can still see his face."
+    PRG "Here?"
+    GTS "Beautiful."
+    "Naomi adjusted her fingers just a little, but sighed, as she seemed to try and press the top button to take the photo herself."
+    "I walked over and pressed it, then ran back, and quickly recomposed myself."
+    GTS "There."
+    show GTS neutral-2 at Position(ycenter=0.35)
+    "Naomi turned the camera over once more."
+    show PRG surprised
+    PRG "Oh wow..."
+    MC "Yeah. You should do this for a living, Yamazaki-san."
+    GTS "Well, I could achieve some rather unique angles, I suppose."
+    GTS "But, no. Though I appreciate the praise."
+    show PRG unique-happy
+    PRG "Could we... try one more?"
+    PRG "J-Just stand there, Keisuke. I'll do the rest."
+    "Aida stood in position as I hit the button once more and ran back."
+    "As I faced the camera, Aida leaned into me, putting one hand around my shoulders to bring me in, and another on my opposite cheek, as she pulled my head closer, and pressed her lips right onto my cheek."
+    GTS "Oh, my... that's so darling."
+    show PRG neutral
+    "She turned the camera around, showing Aida and I again."
+    PRG "That's perfect. Thank you so much, Yamazaki-san."
+    GTS "You're more than welcome. Thank you. It's so rare that I see others from the academy nowadays."
+    "Naomi handed Aida her camera back."
+    show PRG embarrassed
+    PRG "Oh, Baby-"
+    MC "Huh?"
+    show GTS unique at Position(ycenter=0.55)
+    "Naomi covered her mouth politely, looking down at me."
+    PRG "I... I-I forgot that I have lipstick on."
+    "She reached into her bag, taking out a small pack of tissues, and wrenched my neck back to her, rubbing my face."
+    show PRG worried
+    MC "A-Ach! T-That's-!"
+    PRG "Hold still."
+    "Aida rubbed away firmly, the tissue moving in a circle."
+    MC "Y-You're like polishing my face!"
+    PRG "Hold on! It's almost off!"
+    PRG "Mgh..."
+    PRG "There. All gone."
+    "I rubbed my face as Aida freed me, shaking my head and chuckling."
+    show GTS happy
+    GTS "You two are such a perfect pair. It warms my heart."
+    show PRG neutral
+    show GTS neutral
+    GTS "However, I should let you get moving."
+    PRG "Okay."
+    PRG "I-It was so nice getting to see you again, Yamazaki-san."
+    GTS "And the very same to both of you."
+    GTS "If you would like, you both are more than welcome to come visit sometime."
+    PRG "I-I'd like that. Keisuke?"
+    MC "Yeah, me too."
+    PRG "Maybe I could try baking something for you? I've never made something on a larger scale."
+    GTS "That would be lovely, Kodama-san. Whatever wouldn't be any trouble."
+    hide GTS with dissolve
+    "Naomi stood back up and bowed low, then continued on her way."
+    show PRG worried
+    "Aida and I watched her leave, the sound of her footsteps echoing long after she'd disappeared."
+    PRG "... It must be lonely."
+    MC "Hm?"
+    PRG "Living like that."
+    MC "I mean... she's got the others with her factor at her dorm."
+    show PRG unique
+    PRG "I-I know, but..."
+    PRG "Mmn... {w}I... I shouldn't be thinking about that now."
+    show PRG neutral
+    PRG "We're on our date."
+    MC "True. We are."
+    MC "But still. I wouldn't be opposed to dropping by to see her sometime if you'd like to."
+    PRG "O-Okay."
+    "Aida took my hand again and the two of us walked down the path, back toward the bus stop."
+    if not getFlag("VisitedChukanPoint"):
+        $setFlag("VisitedChukanPoint")
+    stop music fadeout 2.0
+    scene black with fade
+    pause .5
+    #Tab everything above this for the if PRGGTS arc
+    scene Town with fade
+    MC "Alright... let's see."
+    MC "The hotel should be... like near some suburbs?"
+    show PRG worried with dissolve
+    PRG "Do you think we're too early?"
+    MC "I... don't think so."
+    PRG "And... did you make reservations?"
+    MC "Taken care of."
+    MC "Alice called ahead and let the owner know we'd be coming. Apparently they're acquainted."
+    play music MC fadein 2.0
+    "I turned us away from the usual main drag of downtown and headed the other way, toward more of a residential area."
+    MC "There it is."
+    scene Hotel Exterior
+    show PRG surprised
+    with fade
+    PRG "Oh... oh wow..."
+    MC "Yeah..."
+    MC "This place looks... vintage. Much older than the other buildings."
+    PRG "It's so big..."
+    show PRG worried
+    PRG "A-Are you sure we're dressed up enough for this place, Baby?"
+    show PRG unique
+    PRG "M-Maybe we should go somewhere else..."
+    MC "No, no. I said we were going here and having a fancy date dinner, and this is where we'll be going."
+    MC "And, Alice called in a favor for us. Can't no-show and make Alice look bad, could we?"
+    show PRG worried
+    PRG "No. That'd be rude..."
+    MC "Right."
+    MC "And, if it makes you feel better, I think Alice probably would have said something if we weren't dressed up enough."
+    MC "Can you really see her staying quiet about something like that?"
+    show PRG blush-2
+    PRG "..."
+    PRG "... I-It's funny how right you can be sometimes."
+    "I smiled and rubbed her hand."
+    MC "Now, hold on."
+    MC "We can't be walking in there like this."
+    show PRG worried
+    PRG "Huh? B-But you just said we look fine."
+    MC "We do look fine. However, we need to enter properly."
+    "I let go of Aida's hand, and pushed my arm and elbow out instead."
+    show PRG blush-2
+    "Getting just what I was going for, Aida nestled her arm in mine, as I cinched it closer."
+    MC "There we are."
+    if getFlag("Dom"):
+        MC "And then, I lead."
+        PRG "... I like when you lead."
+    elif getFlag("Sub"):
+        PRG "And then... you lead me in?"
+        MC "I... y-yeah."
+    else:
+        "I smiled and walked Aida up the stairs at the front and into the hotel."
+    scene Hotel Lobby
+    show PRG blush-2
+    with fade
+    MC "We should be all set at the restaurant upstairs."
+    show PRG neutral
+    PRG "I didn't know there were two till Alice told me."
+    MC "Me either, to be honest."
+    scene Hotel Elevator with fade
+    "Inlaid into the wall nearby were two large elevators. I led Aida to them and pressed the button, to which the shimmering, metal doors rolled smoothly open, leading into the spacious elevator."
+    MC "And... floor two. Here we are."
+    "I pressed the button as the elevator started to climb."
+    "The doors opened shortly, leading into a landing, with a large set of ornate doors. Nearby stood an older lady, her arms politely over her middle."
+    if getFlag("Meet_Misaki"):
+        MC "Good evening, Usuda-san."
+        Misaki "Ah, Hotsure-san. Hello."
+        Misaki "That explains my interesting call from Alice. Of course."
+        Misaki "Which would make you Aida Kodama, yes?"
+        PRG "Y-Yes, Ma'am."
+        Misaki "Wonderful. I've heard much about you, Dear. I was asked to ensure that you two have a night to remember."
+    else:
+        $setFlag("Meet_Misaki")
+        MCT "Could use a few less coats of makeup..."
+        "The woman brightened as we exited and walked to her."
+        UNKNOWN "Good evening, Sir and Madam."
+        "I smiled at the woman, noting her rather bloated chest."
+        MCT "Maybe she was a former student..."
+        MC "Good evening. We're here for dinner, please. We're associates of Alice Nikumaru. I believe she called ahead."
+        UNKNOWN "Ah, you're Alice's friends! Of course!"
+        Misaki "My name is Misaki Usuda, the owner of this hotel and restaurant."
+        MC "A pleasure, Usuda-san."
+        PRG "Y-Yes. I-It's v-very nice to meet you."
+        Misaki "And you must be Aida Kodama. Alice's roommate?"
+        PRG "Y-Yes, Ma'am."
+        Misaki "Wonderful. I've heard much about you, Dear. I was asked to ensure that you two have a night to remember."
+        Misaki "And what is your gentleman suitor's name?"
+        PRG "T-This is Keisuke Hotsure. My boyfriend."
+        Misaki "The pleasure is all mine."
+    Misaki "Now. May I show you to your table?"
+    MC "Please."
+    "Misaki bowed, and opened the door, holding it for us."
+    scene Hotel Restaurant
+    show PRG surprised
+    with fade
+    "Misaki led us past table after table."
+    "Everything was spread out far enough where every table felt like a small island with others far off in the distance."
+    "Aida's eyes were nearly out of her head as she looked at table after table, set as if expecting royalty itself to walk in the door."
+    "Compared to our other stops, or even anywhere else I'd ever been, this place was on a completely different level."
+    "The room itself was big enough to allow very roomy spacing. The whole place felt more like a hall than a small eatery."
+    "Misaki led us to a table near the center of the room. Immediately, I noticed a few slight differences from our seats versus the bulk of the others."
+    "One chair was standard, while the other was slightly raised up, if only by a handful of centimeters."
+    "The reason became obvious after a moment of comparison. The table itself was a little higher."
+    Misaki "I'll have you here, Kodama-san."
+    show PRG neutral
+    "Misaki gestured to the standard chair. Aida went to it and reached out... before I stepped in and pulled the seat out for her."
+    PRG "T-Thank you..."
+    "Aida scooted in, and I bumped the chair up to the back of her knees as she sat. Giving her chair a small push, I patted her shoulder then crossed and sat in the higher chair."
+    Misaki "I hope you both find these seats to your liking?"
+    PRG "Yes. Thank you."
+    Misaki "You're very welcome. Now, let me get you two some water and some menus."
+    "As Misaki swept off to the other side of the room, Aida adjusted her chair a little."
+    show PRG blush-2
+    PRG "T-They raised the table for me."
+    MC "I thought so. I was wondering."
+    PRG "My belly fits right under. I don't press up against the table."
+    MC "Feels nice?"
+    PRG "So nice..."
+    PRG "This place is so fancy, Baby..."
+    MC "I know... it's insane."
+    show PRG neutral
+    "I smiled at her and admired her in the candlelight."
+    "The warm glint of the fire dancing in her eyes..."
+    "The soft glow of her chocolate brown hair..."
+    show PRG blush-2
+    PRG "... W-What are you looking at?" 
+    MC "Oh, you know. You."
+    show PRG unique-happy
+    PRG "Stop it..."
+    MC "Hey. You look amazing."
+    PRG "Thank you."
+    "She adjusted a bit, her boobs literally sitting on the table."
+    "Those billowing mounds of breasts pushing up from her dress, illuminated by the wick of the candle."
+    "It was perfect. They were perfect. She was perfect."
+    "I glanced up as a server came over, setting two menus down in front of us, and an elegantly curved water pitcher."
+    MC "Thank you so much."
+    PRG "Y-Yes. Thank you."
+    "I glanced down at the menu, looking over appetizers, and the load of main courses."
+    show PRG worried
+    PRG "Baby?"
+    MC "Hm?"
+    PRG "... H-How are... we going to afford this?"
+    MC "I've got it covered."
+    PRG "How?"
+    MC "I've got it figured out."
+    PRG "You're... sure?"
+    MC "Yes."
+    MC "Tonight's our night to have fun, Aida. To let loose. Let all the stress go and just have fun."
+    PRG "..."
+    show PRG neutral
+    PRG "Okay."
+    MCT "... Really don't have it figured out, to be honest."
+    MCT "Eh, maybe I can wash some dishes in the cafeteria for the lunch ladies. Make a bit."
+    MCT "For now, it's on the card."
+    MC "Now, I don't want you holding back in terms of cost. Regardless of what you say, I'm getting an appetizer, meal, and desert."
+    show PRG blush-2
+    PRG "... What if I'm not hungry?"
+    MC "Then I guess I'm just piling it all in."
+    PRG "Heh... y-your belly still won't be bigger than mine."
+    MC "Won't be cuter, either."
+    show PRG flattered
+    PRG "M-My belly is... cute?"
+    MC "I mean, yeah. The rest of you is too, of course. But..."
+    MC "It's like what we talked about yesterday. Some guys are boob guys, some are butt guys."
+    MC "And I'm a belly guy."
+    show PRG unique-happy
+    PRG "U-Um..."
+    PRG "Mm... f-f-for the appetizer, I... I kind of want to try a crab cake."
+    MC "Big fan of those?"
+    show PRG neutral
+    PRG "I've only had one once. It was okay, but I've heard that the ones at fancy restaurants are always better."
+    MC "I don't doubt it."
+    PRG "Are you okay with that for an appetizer?"
+    MC "Yeah, whatever sounds good. Now... what do I want for an appetizer?"
+    show PRG worried
+    PRG "You... don't want to share?"
+    MC "I mean, I'm not opposed, but I want you to have your crabcake all for yourself. I'll find something else for me."
+    PRG "That's two appetizers, Baby. That's expensive."
+    MC "And?"
+    MC "Date night."
+    MC "And I'm not having you go home hungry."
+    show PRG blush-2
+    PRG "... You spoil me so much sometimes."
+    MC "So? I've gotta dote on my girlfriend sometimes."
+    MC "What are you thinking for your actual meal?"
+    PRG "Um..."
+    show PRG surprised
+    PRG "Oh! I wanna try chicken gnocchi- no, nevermind."
+    show PRG blush-2
+    PRG "I-I found something else."
+    MC "Ahahah!!"
+    MC "I've never seen you go like, 'indecisive girl' with food before!"
+    show PRG excited
+    PRG "S-Sometimes it's hard to pick!"
+    show PRG neutral
+    PRG "I-I want to get the... um... I-I don't know how to say this..."
+    show PRG worried
+    PRG "Per-og... Pier-oh..."
+    "Aida turned her menu around."
+    PRG "This one."
+    MC "Huh... that sounds really tasty."
+    show PRG neutral
+    PRG "Takamura-sensei was telling us about them in cooking club. They're from Europe. It's like a dumpling with meat or other fillings."
+    PRG "Pierogi! That's how she said it!"
+    MC "Fancy name."
+    PRG "I think she said they're from Poland."
+    MC "Hm."
+    MC "This is so out there... but there's this video online of a guy playing a first person shooter video game. Like, recording his screen and game audio. And there's this guy, like, screaming in Polish about someone being a jug."
+    show PRG worried
+    PRG "Why a jug?"
+    MC "I have no idea. But it's hysterical."
+    "I glanced up as a thin man in a pristine looking button down shirt and tie came over to us, setting out two napkins for us."
+    show PRG neutral 
+    Waiter "Good evening. My name is Yuto Hakatu."
+    Waiter "I've received word that you're Alice Nikumaru's associates. As such, I will personally ensure that your experience tonight is nothing but our very best."
+    MC "Thank you very much."
+    Waiter "What can I start you with for your first course?"
+    PRG "Um... could I have a crab cake, please?"
+    Waiter "Of course... and an excellent choice."
+    Waiter "I will warn you, however. Our crab cakes are quite large compared to what you may have had before."
+    PRG "T-That's okay."
+    Waiter "Wonderful. For your first course, Sir?"
+    MC "I think... I'll actually do the fritto misto, please."
+    Waiter "Very good, Sir. I will have those out soon, as well as some bread for you both, with our house-made bone marrow butter."
+    MC "Perfect."
+    MC "Actually, one moment. Could you also bring out some normal butter, too?"
+    MC "My girlfriend is pregnant, and I just want to make sure she can eat it."
+    show PRG unique-happy
+    Waiter "Oh, but of course, Sir. No trouble at all."
+    "I followed him with my eyes as he walked briskly back to the kitchen, his back straight as a board."
+    PRG "Keisuke?"
+    MC "Huh?"
+    PRG "... That was really sweet. With the butter."
+    MC "I just wanted to make sure you could have some bread, too."
+    PRG "It was just really sweet. I-It made me feel... looked after."
+    show PRG worried
+    PRG "But, actually... could you look up something on your phone for me?"
+    MC "Like, on the internet?"
+    PRG "Mhm..."
+    show PRG unique
+    PRG "I-I'd do it myself, but my internet on my phone hasn't been working well lately."
+    MC "This just happened recently?"
+    PRG "Well... it was always really slow. But recently, it just won't let me search anything."
+    "I took out my phone and pulled up my internet browser."
+    menu:
+        "Search for Aida":
+            MC "What should I look up?"
+            show PRG worried
+            PRG "Can pregnant women eat bone marrow butter?"
+            "I started typing and clicked enter."
+            MC "Alright..."
+            MC "According to the first link, it's completely safe, but you shouldn't eat too much, since it can cause... ah, weight gain."
+            show PRG neutral
+            PRG "Oh, okay. Thank you, Baby."
+            $setAffection("PRG", 1)
+        "Let Aida borrow your phone":
+            "I checked my tabs and history, just to be safe."
+            MC "Just borrow mine, Baby."
+            show PRG worried
+            PRG "Y-You don't... mind?"
+            MC "No, not at all. Go for it."
+            "I handed my phone across the table."
+            show PRG neutral
+            PRG "T-Thank you, Baby."
+            MC "'Course!"
+            pause .75
+            PRG "Um... okay."
+            PRG "It should be fine for me to eat."
+            "She handed my phone back."
+            PRG "T-Thank you."
+            $setAffection("PRG", 2)
+    "Hakatu-san appeared from the back, and set a decadent basket of bread down onto the table, as well as a small plate with two round disks on it, each one a sort of brownish cream color."
+    "Beside that, he placed a small tray of packaged butter cups."
+    Waiter "Here you are. Please enjoy, and I'll have your first course out momentarily."
+    PRG "T-Thank you so much."
+    MC "Yes, thank you."
+    "Hakatu-san bowed and shuffled off quickly."
+    MC "So."
+    MC "You have to tell me how your girl's shopping trip and getting ready adventure went."
+    PRG "Well... we went to town right away. And we went into a few different stores."
+    PRG "Alice picked out I think... four dresses? And this is the one I liked best."
+    PRG "Honoka liked this other one that was floor-length, with like... flowers sewn into it and stuff. I... I didn't like it, though."
+    PRG "Then we went shopping for tights..."
+    MC "Huh."
+    PRG "What?"
+    MC "I guess I always thought tights were kind of a 'one size fits all' thing."
+    PRG "Kind of."
+    show PRG worried
+    PRG "... Until you get bigger. Then, you need special ones."
+    MC "Ah."
+    PRG "Then, we got dinner, and-"
+    "We were interrupted by Hakatu-san coming back with a large, expertly balanced tray."
+    "A large plate was placed down before Aida, with a crab cake about the size of a good-sized burger on it."
+    "Before me, a large array of various vegetables and fish was set out, all covered in savory smelling herbs and spices."
+    show PRG neutral
+    Waiter "Your chopsticks, Ma'am?"
+    PRG "T-Thank you."
+    Waiter "And you, Sir."
+    MC "Thank you."
+    "Another bow, and Hakatu-san was off."
+    show PRG blush
+    PRG "T-This is huge..."
+    "Aida spread her fingers out and put her hand in the air above it."
+    show PRG surprised
+    PRG "It's bigger than my hands..."
+    MC "This all smells like heaven..."
+    show PRG neutral
+    "I took a small bit of what looked to be octopus and bit down."
+    MC "Ohmmgh... mmmn..."
+    "Aida took a ladylike bit of crab cake and brought it to her lips."
+    PRG "Mmn! Mm... oh..."
+    show PRG blush-2
+    PRG "This is... unbelievable..."
+    "Aida went back in for another bit, and another while the second bite was still in her mouth."
+    "Our conversation wasted away into occasional exclamations of how amazing the first course was, only broken by sips of water and polite wipes of the napkin."
+    PRG "Baby, look at this..."
+    "Aida held up a massive chunk of crab in her chopsticks."
+    show PRG neutral
+    PRG "It's like a ball..."
+    "She brought it to her mouth and took a bite, which mostly made it into her mouth."
+    "The rest of the crab took a downward turn... right in between her boobs."
+    show PRG embarrassed
+    PRG "Oop..."
+    "Aida set her chopsticks down silently, and glanced down, reaching in with two fingers and plucking out the crab, setting it on her plate."
+    "She licked her first finger lightly, and dabbed her right breast, the flesh rebounding back with force."
+    show PRG blush
+    PRG "Sorry..."
+    MC "Heh, no worries."
+    MC "Does that... happen often?"
+    show PRG neutral
+    PRG "... When I'm eating at my dorm, it happens all the time. Since I'm usually not wearing my uniform."
+    "Aida went back in for more crab cake, as I kept up with my appetizer."
+    "Before I was even half done with mine, Aida was soon, picking the last bits of crab from her plate. She took a piece of bread, started to spread the bone marrow butter onto it, and smelled it."
+    show PRG worried
+    PRG "It just smells like butter..."
+    MC "I mean, it is butter."
+    show PRG blush-2
+    PRG "I..."
+    PRG "I know that, you butt."
+    pause .75
+    PRG "Mn..."
+    show PRG neutral
+    PRG "B-Baby, this is really good."
+    "She dug into her piece, finishing it before I was even able to reach for one."
+    "In an instant, Hakatu-san was back. He took Aida's plate and gave us a nod."
+    Waiter "First courses going well?"
+    MC "Very. Thank you."
+    Waiter "Of course. Shall we move on to the main course?"
+    MC "Yes, please. I should be wrapped up by the time it gets here."
+    "Hakatu-san nodded to Aida, arms behind his back."
+    PRG "C-Could I have the pierogi, please?"
+    Waiter "Excellent choice, Ma'am. And you, Sir?"
+    MC "I... think I'll actually do a steak. The ribeye, please."
+    Waiter "How would you like it prepared?"
+    MC "Medium-rare, please."
+    Waiter "Sounds good. I'll have those out in a moment."
+    "He nodded and swept off to the kitchen once more."
+    PRG "Mmn..."
+    PRG "I-It feels so nice to be able to fit my belly under the table."
+    MC "I'm sure it does."
+    "I glanced over at her empty side of the table, and the third piece of bread she was currently buttering."
+    MC "Here. Have some of mine."
+    show PRG worried
+    "I took a small plate and offloaded some fish and vegetables onto it, and slid it over to Aida."
+    PRG "You... you don't like it?"
+    MC "No. No, I do. Just wanted to share."
+    MC "Especially with you not having anything besides bread right now."
+    show PRG neutral
+    PRG "... T-Thank you, Baby."
+    "Aida took the plate and smelled it, then took a piece for herself."
+    PRG "Mmn... this is really good, too. It's savory."
+    "I nodded and finished what I had left, as Aida cleaned off her plate."
+    "I took some bread and butter for myself, spread it out, then took a bite."
+    MC "Oh wow... this is better than butter."
+    PRG "I know."
+    "Timed to perfection, Hakatu-san set another basket of bread down, complete with another disk of butter."
+    PRG "Thank you."
+    Waiter "You're most welcome, Ma'am. Our bread and butter is quite the crowd pleaser."
+    "I nodded and took more bread as he headed back, then took a sip of water."
+    show PRG unique-happy
+    PRG "So... when we're done here, do you want to go back to your dorm to change, then come over?"
+    MC "Sounds good to me."
+    PRG "O-Okay..."
+    "It could have been imagination, but I could have sworn that Aida moved her arms ever so slightly to push her boobs up and forward a little, bumping the table with them. Though, it could have just been an accident."
+    show PRG scared
+    "She shifted... as the entire table jolted, rattling dishes and making our waters ripple."
+    PRG "S-Sorry!"
+    MC "It's okay. What was that?"
+    show PRG unique
+    PRG "B-Bumped my belly..."
+    "Aida turned and looked around the restaurant."
+    "We'd been so early that there were maybe only one or two other couples here, all clearly not from the academy."
+    MC "No one saw."
+    show PRG nervous
+    PRG "..."
+    MC "We belong here just as much as anyone else does..."
+    PRG "... I know."
+    PRG "I just... I'm not used to such a nice place."
+    MC "I'm not either, to be fair."
+    MC "My family is more of the 'eating pizza on a weekend and watching TV' type."
+    PRG "Mm... my grandparents never really liked ordering food."
+    PRG "We always cooked at home, or very rarely would go out somewhere when we could afford it."
+    pause .5
+    show PRG unique
+    pause 1
+    PRG "... I miss them."
+    MC "I'm sorry. I'm sure you do."
+    "I caught myself before the question could pass my lips."
+    MCT "Now's not the time for that."
+    show PRG unsure
+    PRG "I-I'm sorry, Baby..."
+    PRG "I didn't mean to... drag things down."
+    MC "No. No, you didn't."
+    MC "We're having a fun night. No worries here."
+    show PRG worried
+    PRG "... Y-You're right."
+    show PRG neutral
+    "Timed perfectly, Hakatu-san returned, carrying our main courses, which he dispersed for us."
+    MC "Thank you."
+    Waiter "You're very welcome, Sir. Enjoy."
+    PRG "This smells so good..."
+    MC "I know..."
+    show PRG blush-2
+    PRG "Oh. I..."
+    PRG "... I almost made Honoka faint earlier."
+    MC "Oh God, what happened?"
+    show PRG neutral
+    PRG "S-She was straightening my hair this afternoon, and I wanted a snack. So, I got up and went into the kitchen, and came back in with a spoonful of mustard."
+    if getFlag("PRG044_c1_1"):
+        MC "B-Baby, that's not a snack!"
+    if getFlag("PRG044_c1_2"):
+        MC "B-Babe, that's not a snack!"
+    if getFlag("PRG044_c1_3"):
+        MC "S-Sweetie, that's not a snack!"
+    PRG "I-It is."
+    PRG "Honoka asked me what it was, and I told her and stuck the entire spoon in my mouth."
+    PRG "She started gagging and acting like I just ate like... rotten meat or something."
+    MC "That's so funny."
+    MC "I'll need to see this live in person, so please invite her over so she can witness this once more."
+    show PRG happy
+    PRG "Ehahahah!"
+    show PRG excited
+    PRG "That's so mean, Baby!"
+    MC "Excuse me! I'm not the one who ate a spoonful of mustard as a midday snack!"
+    PRG "I like it!"
+    "I started laughing as I cut into my steak, the warm juices gently leaking out onto my plate."
+    MC "... It feels good."
+    MC "To laugh like that. You know?"
+    show PRG unique
+    PRG "Yeah. It... it feels like we've been dealing with so much for so long now."
+    MC "Yeah. Now we get to release. Have fun. Go nuts."
+    show PRG unique-happy
+    PRG "Y... Yeah... go nuts."
+    PRG "Hm..."
+    MC "I haven't had a steak in so long..."
+    show PRG neutral
+    PRG "I-It looks good."
+    "Aida picked up a dumpling from her plate and chewed slowly."
+    PRG "Mmn..."
+    PRG "Mm, I wanna make these sometime."
+    MC "I'd be down. Been a bit since I got to play taste tester."
+    PRG "Y-You just did with Tozakura-san and I."
+    MC "Never defined how long 'a bit' was. In this case, it's been too long."
+    "Aida smiled and looked out the window, another pierogi in her mouth."
+    "The way she had her head turned, the fire dancing across her face and jaw."
+    "It was dark enough to feel her warmth burning across the table from me, but light enough that I had to hold in my searing lust."
+    "I knew what she'd told me the day before."
+    "And I wanted so badly to ask for a to-go container."
+    scene black with fade
+    pause .5
+    scene Hotel Restaurant
+    show PRG neutral
+    with fade
+    "About 20 minutes later, I was about halfway done with my steak. Aida had long since finished her pierogi, and what was left of my appetizer, and was finishing off the bread."
+    Waiter "Well. Lastly, we have our desserts. Though, it looks like you might not make it that far."
+    MC "Hah... love to."
+    Waiter "I'll box something up for you. What would you like?"
+    MC "Mmn..."
+    if getFlag("PRG044_c1_1"):
+        MC "What would you like, Baby?"
+    if getFlag("PRG044_c1_2"):
+        MC "What would you like, Babe?"
+    if getFlag("PRG044_c1_3"):
+        MC "What would you like, Sweetie?"
+    MC "I'll take mine home, and you can have yours here, if you're still hungry."
+    show PRG worried
+    PRG "I-I... I'll take mine home too. I don't want to hold you up, Baby."
+    MC "No, no. Please. Get something."
+    "Aida looked at the desert menu, then back at Hakatu-san."
+    show PRG neutral
+    PRG "I-I'll have a slice of the strawberry cheesecake, please. To go."
+    Waiter "Well, it seems your lady has made the decision for you. Your choice, Sir?"
+    MC "Ahh... I'll do the molten chocolate lava cake, please."
+    MC "Actually... two slices of the cheesecake, please."
+    show PRG worried
+    Waiter "Yes sir. One moment."
+    "Hakatu-san picked up my plate, as well as Aida's, and disappeared again."
+    PRG "W-Why did you get two cheesecakes?"
+    MC "Same reason you took yours to go."
+    PRG "I-I didn't want you to wait on me..."
+    MC "And I wanted you to feel satisfied."
+    "A moment later, the server returned with a bag, three takeout containers inside."
+    Waiter "Here you are, Sir. And you can take care of the bill with me whenever you're set."
+    "I nodded and took out my wallet, taking out my card and opening the bill."
+    MCT "Ouch... big-time ouch."
+    MCT "... Wait, what is... 'associate discount?'"
+    MC "Sorry? What is this discount on here for?"
+    Waiter "From the owner. She knew you both were friends of Miss Nikumaru, and wanted to show her appreciation."
+    MC "Well, is she still available? I'd like to thank her personally."
+    show PRG neutral
+    PRG "M-Me too."
+    Waiter "Ah, she's unfortunately in a dinner meeting on the first floor. I will definitely pass it on for you, however."
+    MC "Please do. Thank you."
+    "I handed him the bill with my card and nodded as he bowed and took it off to the back."
+    MCT "Well... that helps."
+    "Only being gone for a moment, Hakatu-san was back quickly, and handed me my card and a receipt."
+    MC "Thank you so much."
+    PRG "Yes. Thank you."
+    Waiter "You're very welcome."
+    "Aida pushed her chair back a little, as I got up. I stretched a little. I felt like I'd eaten half the food in the Seichou kitchen."
+    Waiter "Oh, allow me, Ma'am."
+    show PRG blush
+    "Hakatu-san went behind Aida's chair and gently pulled, clearly not moving Aida as much as he had imagined he would."
+    "Aida pushed up heavily, rising to her feet."
+    PRG "T-Thank you..."
+    show PRG neutral
+    Waiter "You're quite welcome, Ma'am. Have a good night, both of you. Thank you for dining with us."
+    MC "Same to you."
+    "I took Aida's arm again, and walked with her through the restaurant."
+    stop music fadeout 2.0
+    scene black with fade
+    pause .5
+    scene Hotel Exterior
+    show PRG neutral
+    with fade
+    MC "Ugh. Haven't eaten that much in ages."
+    PRG "It was so good..."
+    "I checked my watch. We'd been in there for a little over two hours."
+    "The night was crisp and quiet."
+    play music TwilightAmbient fadein 2.0
+    "I started to walk... but was held back by the arm held in mine not moving."
+    show PRG blush-2
+    PRG "Baby."
+    MC "Yeah?"
+    PRG "... Thank you so much for dinner. I had such an amazing time."
+    "Aida came up next to me and planted a kiss on my cheek."
+    show PRG neutral
+    "I blushed, and turned my head, leaving Aida's lips just barely away from mine."
+    show PRG blush-2
+    MC "... Hi, there."
+    PRG "Hi..."
+    MC "So... want me to stay over tonight?"
+    "Aida turned my head again, pushing my hair away from the side of my head."
+    PRG "... Yes."
+    "I took her arm again and started walking. Right to the bus stop."
+    scene black with fade
+    pause .5
+    scene Campus Center with fade
+    pause .5
+    show PRG neutral with dissolve
+    pause 2
+    show PRG aroused
+    pause 1
+    scene Dorm Exterior with fade
+    pause .5
+    show PRG aroused with dissolve
+    pause 2
+    show PRG blush-2
+    pause 1
+    MC "... I'm going to change quick."
+    MC "Then, I'll be back."
+    PRG "Okay. I'll... um..."
+    PRG "I-I'll... m-meet you at my dorm."
+    "I smiled, bringing her hand to my lips and kissing the back of her hand."
+    hide PRG with dissolve
+    "Letting go, I turned and headed, faster than I think I'd ever gone, back to the men's dorms."
+    jump daymenu
+
+label PRG061:
+    $setProgress("PRG", "PRG062")
+    scene Dorm Interior with fade
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    play sound DoorOpen
+    pause 2
+    play sound DoorShut
+    pause .25
+    "My shoes came off almost before I could even process it."
+    "My heart was in my throat, the fullness of dinner now mostly worn away."
+    "In its place... {w}a searing, white-hot butterfly. One butterfly, jolting my stomach into a froth."
+    "My dorm was quiet and still, though inside, the room felt loud as a bumper to bumper traffic jam."
+    "I undid my belt and my pants, throwing my good jeans to the side and taking a pair of sweatpants, pulling them up."
+    "The shirt joined the rest of my clothes on the floor, replaced by a t-shirt and sweatshirt overtop of that."
+    MCT "..."
+    MCT "When's the last time I... jacked it?"
+    MCT "It's been awhile. God, it used to be every night..."
+    MCT "Stress will do that, I guess..."
+    "I felt a throb below the beltline, and dug deep, forcing all deeper thought out of my head."
+    MCT "Breathe..."
+    "I checked my clock."
+    MCT "Almost 21:30. I should hurry."
+    "I threw an extra pair of gym shorts into my bag, along with a pair of jeans, and some boxers, then made a quick trip into the bathroom for my trimming scissors, toothbrush and paste, and my hairbrush."
+    MCT "Wait, I should-"
+    "I stopped, blinking."
+    MCT "... Don't have to worry about condoms."
+    "I couldn't help but smirk."
+    MCT "Alright."
+    scene Dorm Hallway with fade
+    "I opened my door and walked out, closing it and locking it."
+    play music TwilightDusk fadein 2.0
+    play sound MaleStepAway
+    pause 1
+    show Dorm Exterior with fade
+    "The air chilled my face right away, wind blasting my hair like a flag."
+    "I walked out the door and toward the women's dorms."
+    "I glanced over, off in the distance, at the taller main class buildings, then over to the trees around it."
+    pause .75
+    scene Dorm Hallway with fade
+    "I stepped in, the door closing and seeming to echo down the hall all the way down."
+    "The tall ceilings and wide walkway did little to stifle the sound as my footsteps echoed with it."
+    "Anticipation bounded with every step. Each one felt like I was being bounced back into the next footfall."
+    "I adjusted my bag over my shoulder."
+    "My stomach was now harbouring a full colony of butterflies, all spinning about and doing circles."
+    "I felt lightheaded in a way, but clearer than a bell in another."
+    "And, somewhere deep down... I had a few, deeply sinful ideas."
+    pause .5
+    MCT "Sometimes, I wish this walk was like a minute longer."
+    "I raised my fist."
+    play sound KnockEcho
+    pause 2
+    $setPRGOutfit(OutfitEnum.DRESS)
+    show PRG neutral with dissolve
+    pause .5
+    show PRG blush
+    PRG "H-Hi."
+    MC "Hey. Surprised you're not changed yet."
+    PRG "I-I..."
+    PRG "... I-I was cleaning."
+    MC "Ahh."
+    "I glanced around the main room as I closed the door behind me."
+    "Light shone from Aida's room, illuminating a path for me as I kicked off my shoes."
+    scene Dorm PRG
+    show PRG blush
+    with fade
+    MC "Alice is gone?"
+    show PRG worried
+    PRG "M-Mhm. She's with Mizutani-san."
+    MC "Cool... didn't really know they were that close."
+    PRG "T-They are. In... some sort of way."
+    "I nodded, and looked over to the desk."
+    "Aida's movie case sat open on it, the DVDs shining in the light."
+    MC "Thinking a movie tonight?"
+    PRG "Mhm..."
+    show PRG blush
+    PRG "I-I'm going to... g-get changed."
+    PRG "P-Pick out whichever you'd like, a-and we'll watch."
+    hide PRG with dissolve
+    MC "... Alright?"
+    "I glanced over the case, turning the page as Aida rustled behind me."
+    pause .5
+    PRG "Ohp!"
+    "I whipped around."
+    show PRG scared with dissolve
+    "Aida was on the ground, her hand against her bathroom door frame."
+    "Panting, Aida lifted one leg to pick herself up."
+    if getFlag("PRG044_c1_1"):
+        MC "Baby?! Are you okay?!"
+    if getFlag("PRG044_c1_2"):
+        MC "Babe?! Are you okay?!"
+    if getFlag("PRG044_c1_3"):
+        MC "Sweetie?! Are you okay?!"
+    "I bolted across the room and put my arm under hers, my body leaning against her shoulder as I lifted."
+    PRG "I-I'm okay... j-just tripped."
+    MC "You sure? Did you hit anything?"
+    show PRG neutral
+    PRG "I-I'm okay, Baby. P-Promise."
+    MC "Okay..."
+    MC "Get changed. Then, we can relax."
+    PRG "O-Okay..."
+    hide PRG with dissolve
+    "Aida walked into the bathroom, closing the door behind her."
+    "I walked back over to the desk, flipping to the next page of the case."
+    MCT "'The Sparkling?' Huh. I know Aida's mentioned she likes horror movies. Not sure about that tonight, though."
+    MCT "Mm... 'Chatter of the Ewes.' Another horror classic."
+    MCT "Huh."
+    "I picked up one disk and glanced at it."
+    MCT "'Gary Roccer.' I... well, she likes superhero movies, so I guess the Gary Roccer movies aren't too far off."
+    MCT "She's got all ten of them, too."
+    "I slid out one disk and glanced at the back."
+    MCT "My... so many scratches."
+    "I slid it back in and looked down."
+    MCT "'Degenerate of Abanan' was always the best movie. Maybe that's the play."
+    "I pulled the disk out and set it down carefully, then kept going."
+    MCT "Mm... I need something kind of sensual."
+    "I flicked a few more pages ahead, then started in."
+    MCT "Oh yeah. This'll work."
+    "I slid a desk out."
+    MCT "Never met a girl who didn't like 'The Sticky Note.'"
+    "I turned and looked around Aida's room."
+    "In one corner was Aida's laundry hamper, which was looking a touch full."
+    "Beside me, by the bed, was Aida's backpack, the clips on it holding it closed."
+    MCT "One of these days, I'm going to get Aida a new bag."
+    "I walked over to her bed."
+    MCT "Guess she's ready for me to share her bed again. Got... a ton more pillows."
+    "Heading back to the desk, I closed the case and set the disks over by the TV."
+    MCT "Mm... no, not this one."
+    "I took 'The Sticky Note' back over to the case and replaced it."
+    MCT "Mega sad ending. I don't think I want to get Aida crying tonight."
+    "I flipped through a few more."
+    MCT "Mmnn... God, I'm indecisive."
+    "I flipped a few more pages."
+    MCT "Oh yeah. That's it."
+    "I pulled out a dark red, purple, and black disk."
+    MCT "'Violet Rider.'"
+    MCT "I remember Mom loved this movie for a while."
+    MCT "Ten murders hit a small village, all from a Dire Wolf, who can turn into a human every day except for Sunday."
+    MCT "The lead woman has to find out who the wolf is in town, between like three different love interests."
+    MCT "Kind of spooky too, if I remember right."
+    stop music fadeout 2.0
+    "I shut my eyes and remembered the old cover of the movie. The girl in her purple overcoat sprinting through a snowy village, the shadow of a wolf on the snowy ground behind her."
+    MCT "Yeah. This is it."
+    "I set the movie beside the case."
+    play sound DoorOpen
+    pause 1
+    play sound AidaCowWalk
+    pause 1
+    MC "That you, Honey?"
+    PRG "M-Mhm..."
+    MC "What's that-"
+    $setPRGOutfit(OutfitEnum.COW)
+    show PRG embarrassed with dissolve
+    MC "W-Wha-"
+    play music PRGAlt fadein 2.0
+    pause .5
+    if getFlag("PRG044_c1_1"):
+        MC "B-Baby?"
+    if getFlag("PRG044_c1_2"):
+        MC "B-Babe?"
+    if getFlag("PRG044_c1_3"):
+        MC "S-Sweetie?"
+    "Aida walked slowly to me, and took my hand off of the DVD case, resting it on top of the desk, with hers on top of mine."
+    show PRG neutral
+    PRG "I-I was thinking..."
+    show PRG blush-2
+    PRG "L-Let's... skip the movies for now."
+    MC "W-What-"
+    PRG "Shh..."
+    "Aida put one finger to my lips."
+    "She reached down and took my hand, leading me over to the bed, and down to sit on it."
+    "Aida went back to her desk, and lifted the case, taking an envelope from underneath it, which she pushed into my hand."
+    "As I watched her walk back and forth, my eyes covered her entire body."
+    "Her bottoms were tight to her skin, the thong deep between her asscheeks."
+    "The top seemed to be painted on, barely holding her breasts inside, the ring in between the two straining the fabric."
+    "Below, her thighs bulged over the tops of her leggings, the pudge rubbing against itself as she blushed, then slowly eased herself onto the floor, sitting seiza style."
+    MC "What do I-"
+    show PRG neutral
+    PRG "O-Open it..."
+    "I looked from her, back to the envelope, and flipped it over."
+    MCT "'To whom it may concern?'"
+    "Turning it back over, I dug my thumb into the edge, tearing the opening and slipping out a piece of paper, folded neatly."
+    "I opened the paper, glancing down at it."
+    "'To whom it may concern, we would like to formally congratulate you on your purchase of your own genuine Kodama-grade breeding cow!'"
+    MC "Wha-"
+    show PRG blush-2
+    "Aida simply smiled up at me, her cheeks fully red."
+    "I glanced back down at the paper."
+    "'Please ensure you fully read this document, as by signing, you knowingly take on all responsibilities and stipulations contained within."
+    "'This specific cow has been bred, as you can see by her large, swollen belly and plump, round udders.'"
+    "'She will produce many healthy young, provided she's given proper care.'"
+    "'Before continuing on, please check the box stating that you consent to ownership of this lovely Kodama-grade breeding cow, and that you accept your status as her owner.'"
+    "'In addition, by checking the box, you also agree to love and care for your Kodama-grade breeding cow."
+    "I looked under, where a small box was placed. My eyes followed to the side, seeing another small line of text."
+    "The stopping safe word is 'Mochi.' And the slowing down word is 'Dango.'"
+    "I looked down at Aida, still sitting quietly on the floor, looking up at me."
+    MC "Just to check... roleplay?"
+    show PRG blush-2
+    pause 1
+    "Aida nodded."
+    MC "And you're into this?"
+    "Aida nodded faster this time."
+    MC "And... what does a 'slowing down' word mean?"
+    show PRG neutral
+    PRG "Like... if you want to keep going, but you want things to be less intense."
+    "I looked over to the desk, then to Aida."
+    MC "... If you get uncomfortable, you'll say the word? Promise?"
+    PRG "I-I promise. But... I might pretend that I'm uncomfortable. I'll say the word if I want to stop or slow down."
+    PRG "A-And... you say the words too if you need to."
+    PRG "I-I want this to be fun, Keisuke..."
+    MC "Alright."
+    MC "... Well, I would sign this. However, I don't have a pencil."
+    show PRG surprised
+    "Very quickly, Aida leaned forward and, using her bed, managed to pick herself up."
+    "She hurried to her desk and took a pencil from her cup, and brought it over, handing it to me."
+    MC "Thank you."
+    "I placed a large checkmark in the box, and looked down."
+    show PRG happy
+    pause .5
+    "Aida very quickly put her hands on the bed and lowered back down, shifting back into seiza as she sat back on the floor."
+    "I looked down at the paper again, and kept going."
+    "'Now, it is recommended to examine your new cow, to make sure she's to your standards.'"
+    "I set the letter down on the bed."
+    MC "Alright. We need to examine you."
+    show PRG neutral
+    "Aida very quickly shuffled back to the bed, using her hands to help her back up. Slowly, of course."
+    MC "Over by the wall."
+    MC "Actually, no. Here."
+    "I took Aida's hand, and led her over to the bathroom door again."
+    MC "Now, go back in there. And walk out, then do a little pose for me."
+    hide PRG with dissolve
+    "I walked back to the bed, and turned to face Aida's mirror, and the wall."
+    MC "Alright."
+    pause 1
+    show cg PRG061_front with dissolve
+    play sound AidaCowWalk
+    pause 4
+    "I walked forward, looking down and around Aida's body."
+    MC "I see."
+    MC "Turn, please."
+    pause 1
+    show cg PRG061_back
+    with dissolve
+    pause 3
+    MC "Mm... {w}excellent."
+    "I walked forward and crouched down, rubbing my hand along Aida's calf, then up onto her thick thigh."
+    MC "Such strong legs."
+    PRG "... Mmp."
+    MC "Turn."
+    "Aida looked at me, then down at herself."
+    if getFlag("Dom"):
+        "I brought my hand to Aida's face, putting it firmly on her cheek."
+        MC "I said 'turn.'"
+    "Aida quickly turned back around, looking up into my eyes."
+    if getFlag("Dom"):
+        "I brought my hand to her belly, laying it down firmly."
+        MC "My. And you are definitely pregnant."
+    if getFlag("Sub"):
+        "I laid my hand gently on her belly."
+        MC "I... I hope that your belly doesn't feel too tight."
+    if getFlag("Switch"):
+        "I rested my hand on her belly."
+        MC "And you are definitely pregnant."
+    show cg PRG061_front
+    with dissolve
+    "I smiled, gently patting her middle, then looked up from there."
+    MC "And my, my. Such big udders."
+    MC "I think I've chosen the right cow. All of the best ones have very big udders."
+    PRG "... I-I have very big udders."
+    hide cg
+    show PRG blush-2
+    with dissolve
+    "I stepped back, taking the paper again."
+    MC "Let's see."
+    MC "'You will need to milk her frequently. As you can see by the size of her udders, she produces many liters of extremely rich, nutritious milk.'"
+    MC "'You'll also find that her hooves simply can't make the movements on her own, so you will need to do all of the milking yourself.'"
+    "I looked down at Aida's hands, which she now had balled into loose fists."
+    MC "'Ensure that your Kodama-grade breeding cow is well fed. Make sure to keep an eye on her, as she can be a touch mischievous.'"
+    MC "'Do not be afraid to punish your breeding cow if she misbehaves. She is a gentle soul, but she needs to know right from wrong. So, do not be afraid to be rough with her, and teach her what's acceptable and what isn't.'"
+    "I smiled at the letter."
+    MC "'And lastly. Remember to breed her.'"
+    MC "'Please hand this letter to your breeding cow when you are finished.'"
+    "I folded the letter back up, and handed it to Aida."
+    pause 1
+    show PRG neutral
+    pause .75
+    show PRG happy
+    PRG "I-I'm so excited to be owned by you now!"
+    show PRG aroused
+    stop music fadeout 2.0
+    PRG "I know I probably wasn't cheap, b-but I hope we can have lots of fun together!"
+    "I smiled, as Aida stepped forward from the wall."
+    "She set the letter down on the desk, looked up at me... and cocked her head curiously to the side."
+    play music DormLife fadein 2.0 #update with new music when we get it
+    if getFlag("Dom"):
+        show PRG neutral
+        PRG "W-What should we do now, Master?"
+        MC "Firstly, come here and sit down."
+        PRG "Um... on the bed, or on the floor?"
+        MC "Floor."
+        show PRG worried
+        "Aida nodded and crouched down by the bed again, putting her hands on it."
+        MC "Ah, ah."
+        "I put one hand on her arm."
+        MC "You can get down without help."
+        show PRG unsure
+        PRG "B-But, Master..."
+        "Aida put both hands on her belly, looking up at me."
+        PRG "M-My belly is too big. I-I'll fall..."
+        MC "Well, then you'll need to find another way to get down."
+        "Aida looked back, and as she crouched down, managed to move her legs so she could essentially fall back onto them."
+        show PRG worried
+        "She stayed upright, coming to rest in seiza again."
+        MC "There..."
+        MC "Now. You want to be a good cow, don't you?"
+        PRG "Y-Yes, Master. I-I want to be a very good cow."
+        MC "Then, what do you think you could do to earn that title? What are some good cow things?"
+        show PRG embarrassed
+        PRG "U-Um..."
+        PRG "I-I could... undress you after such a long day?"
+        MC "That would be a good start."
+        show PRG neutral
+        "Aida went to put her hands on the bed, then looked up at me."
+        "I simply shook my head."
+        show PRG worried
+        MC "You need to learn to do things with your belly in the way."
+        PRG "I-I'm sorry..."
+        MC "You need to learn to work with your belly."
+        PRG "I-I do..."
+        MC "Say it."
+        PRG "Say-"
+        MC "Say it. Say 'I need to learn to work with my belly.'"
+        show PRG unsure
+        PRG "I-I need to learn to work with my belly..."
+        MC "Good. And that also ties into your walking."
+        MC "Cow-girls don't walk. They waddle. They make room for their bellies..."
+        PRG "R-Right..."
+        show PRG neutral
+        PRG "I-I'll make room for my belly."
+        MC "Hm. I didn't even need to tell you to say it. Good girl."
+        "Aida shifted and moved back, then leaned forward, her belly resting on the ground."
+        "She managed to get her legs under herself and lift up, awkwardly standing, before nearly losing her balance."
+        show PRG excited
+        PRG "I-I did it!"
+        "I smiled, and nodded."
+        MC "Now. Undressing, please."
+        show PRG neutral
+        "Aida nodded and waddled forward to me, reaching down and starting to pull off my sweatshirt."
+        "She got it off of my arms, then over my head, and set it down on the floor beside the bed in a heap."
+        "Next, she started on my shirt, setting that in the pile as well."
+        PRG "M-Master? C-Could you stand up? So I can do your pants?"
+        MC "I suppose."
+        "I stood up, as Aida undid my sweatpants."
+        "Of course, by now, I was rock hard, and in sweatpants, this was quite apparent."
+        "Aida carefully moved my erection around the waistband, and pulled my pants down, setting them in the pile. I lifted my foot, so she could remove my socks, which she set in the pile."
+        PRG "I-Is that better, Master?"
+        MC "Yes. However."
+        "I reached forward, grabbing a handful of Aida's asscheek."
+        show PRG scared
+        MC "I did NOT ask for my clothes to be thrown onto the floor in a pile."
+        MC "Fold them. Right now."
+        show PRG unsure
+        PRG "Y-Yes."
+        MC "Yes, what?"
+        PRG "Y-Yes, Master."
+        "Aida quickly crouched down as best she could, reaching down and picking up my clothes, setting them on her bed."
+        "She took my shirt and folded it neatly on her belly, then set it on the bed, followed by my sweatshirt, pants, and socks."
+        show PRG neutral
+        "She lay them neatly on top of each other, then picked them up and held them out to me."
+        PRG "H-Here you go, Master."
+        MC "On the desk. Out of the way."
+        PRG "Y-Yes, Master."
+        "Aida waddled to her desk and put my clothes on them, then came back over."
+        show PRG unique
+        PRG "M-Master? I'm sorry about your clothes."
+        MC "You should have thought about that before you threw them to the floor like they were garbage."
+        "Aida turned and looked over at the folded pile on her desk."
+        MC "Hey. Eyes on me."
+        show PRG worried
+        "Aida quickly turned and looked right at me."
+        MC "Now. You've earned yourself a spanking. One for each piece of clothing."
+        PRG "Mmp!"
+        MC "Down on the bed. Put your hooves on it and bend over."
+        "Aida got as close to her bed as she could, bending forward and putting her 'hooves' on the blanket. She spread her legs, her belly showing through the middle as she craned her neck up, looking back."
+        "I stood beside her, rubbing her left buttcheek gently."
+        MC "Remember. You earned this."
+        "I wound back, and smacked Aida's rear. Right on the left cheek."
+        show PRG scared
+        PRG "MMN!"
+        "Leaning over, I took part of Aida's blanket and held it up to her face."
+        MC "Open your mouth."
+        "Aida opened right away, allowing me to push part of her blanket in."
+        MC "Close."
+        show PRG worried
+        "Aida held her blanket there, as I went back."
+        MC "Again."
+        "I smacked my hand down again, this time fully open-palmed."
+        show PRG scared
+        PRG "MMMNN!!"
+        "Again... and again."
+        "Aida shifted, inching her 'hooves' back on the bed so she could stand."
+        MC "Excuse me?"
+        "Aida let the blanket out of her mouth, looking back."
+        show PRG surprised
+        PRG "Y-You said one for every piece of clothing, M-Master!"
+        MC "I did say that."
+        "I walked over to the pile and held up the shirt."
+        MC "One."
+        "Then the sweatshirt and pants."
+        MC "Two and three."
+        "Then lastly, the socks, which I unfolded and held up both."
+        show PRG scared
+        MC "... Four and five."
+        show PRG unsure
+        "I walked back over."
+        MC "Did my cow never learn how to count?"
+        show PRG unique
+        PRG "... N-No."
+        MC "Get that blanket back into your mouth."
+        MC "Right now."
+        "Aida took that section of blanket again and forced it into her mouth, holding it there again."
+        MC "You are not listening well, Dear. Not at all."
+        MC "This is not how a proper breeding cow should act."
+        "Aida looked down... her eyes glinting onto my erection in my boxers."
+        MC "Eyes on me."
+        show PRG worried
+        "I took Aida's jaw in my hand and brought her face to look up at mine."
+        MC "Now. I'm willing to give you another chance. This is your first day with me."
+        MC "However, you need to learn how things work around here."
+        MC "I am the master. And you are the cow."
+        MC "Understood?"
+        "Aida nodded vigorously."
+        MC "Good."
+        MC "Now, I'm going to take this blanket out of your mouth. And when I do, I would like you to hear a full apology. Are we understanding?"
+        "Aida nodded again, as I reached out and took the blanket from her mouth."
+        PRG "I-I'm very sorry about your clothes, Master. A-And about not waiting to receive all of my spankings."
+        show PRG unsure
+        PRG "A-And for removing my blanket."
+        PRG "I-I'll try hard to be the best cow I can be. I promise."
+        "I looked down at her, and smiled, reaching to her head and rubbing right by the cow ear on her headband."
+        MC "What a good cow~"
+        show PRG happy
+        "Aida smiled, and leaned into my scratches, closing her eyes."
+        MC "Now. I would like to know something."
+        MC "Were you always a breeding cow?"
+        show PRG worried
+        PRG "... N-No."
+        MC "What were you before?"
+        PRG "Just a girl. I-I was skinny, and... n-not pregnant."
+        MC "Well, what happened?"
+        show PRG unique
+        PRG "I... I started to grow."
+        PRG "My udders started to get bigger, and my backside got wider."
+        PRG "I-I started eating more."
+        PRG "Then, I... I got pregnant."
+        PRG "My udders started to make milk, I-I started thinking about breeding a lot, and-"
+        pause 1
+        MC "... And?"
+        PRG "... And I started... to moo."
+        MC "I see."
+        MC "Now tell me. What does a breeding cow do? What are some things she needs to do to be the best?"
+        show PRG worried
+        PRG "Um..."
+        PRG "W-We're supposed to... try and be pregnant as much as we can."
+        PRG "Our... our breeding parts are supposed to always be used."
+        MC "And what makes the best breeding cows?"
+        PRG "Um... h-having the biggest belly."
+        show PRG neutral
+        PRG "A-All breeding cows need to have big bellies. We have a lot of babies, so we need room..."
+        MC "And you do have a very big belly..."
+        "I trailed my hand to her neck, taking her cowbell in hand."
+        MC "And you have your bell on."
+        "I shook it just a bit, hearing the gentle ring."
+        MC "Good. Every good cow needs a bell."
+        MC "Otherwise, I might lose you. And that wouldn't be good. Not at all."
+        MC "Now, what are some other things you could do? To prove that you're a good cow?"
+        show PRG unique
+        PRG "Um..."
+        PRG "M-Master?"
+        MC "Yes?"
+        show PRG neutral
+        PRG "... Is it almost breeding time?"
+        MC "..."
+        MC "Did I say that it is?"
+        show PRG worried
+        PRG "N-No, but-"
+        MC "Did I say that it is?"
+        show PRG unique
+        PRG "... No."
+        show PRG lactate
+        "I grabbed Aida's butt, grabbing quite a bit more than a handful."
+        MC "I will tell you when it's your breeding time. Got it?"
+        PRG "Y-Yes, Master."
+        "I spanked Aida's butt. Hard."
+        MC "Got it?"
+        show PRG surprised
+        PRG "Y-Yes, Master!"
+        MC "Good."
+        MC "Not to mention... you're already pregnant. What would breeding you now accomplish?"
+        PRG "N-No, Master! N-No!"
+        PRG "I-I need my breeding!"
+        "I walked up to her, putting a hand right on her belly."
+        show PRG sad-2
+        MC "Such a full, giant belly already. Look at you... sitting here, your giant belly already packed, asking for more breedings."
+        MC "Since you seem to be having a hard time understanding who is in charge, I'm going to teach you how to be a proper breeding cow."
+        "I walked behind Aida, reaching around."
+        "I placed my hands under each breast, holding them."
+        MC "I'm going to say a sentence. And for each one I say, I would like you to repeat it."
+        MC "If you say it properly, then we move onto the next one. But, if you slip up, you will be punished until you get it right. Are we understanding?"
+        show PRG unsure
+        PRG "Mhm..."
+        MC "Alright. Here we go."
+        MC "I am a breeding cow."
+        show PRG worried
+        PRG "... I am a breeding cow."
+        MC "And these... are my udders."
+        PRG "And these... are my udders."
+        MC "My udders are very big."
+        show PRG unsure
+        PRG "M-My udders are very big."
+        MC "Nothing makes me happier than when Master plays with my udders."
+        PRG "N-Nothing makes me happier than when Master plays with my udders."
+        MC "My udders must always be full."
+        PRG "My udders should-"
+        MC "Should?"
+        show PRG scared
+        "I grabbed Aida's boob hard, and squeezed."
+        PRG "MMM!!"
+        MC "Again."
+        PRG "M-My udders MUST always be full!"
+        MC "Good girl... that was very good. Now, one more."
+        MC "My head is empty. And my udders are full."
+        PRG "My head is empty. And my udders are full."
+        show PRG neutral
+        "I let go of Aida's chest, and smiled, leaning in and kissing her neck, right under her collar."
+        MC "... A couple more."
+        MC "I am a breeding cow. And this is my belly."
+        PRG "I-I am a breeding cow. And this... i-is my belly."
+        MC "My belly is where I keep all of my babies."
+        PRG "My belly is where I keep all of my babies."
+        MC "I must always have a big belly."
+        show PRG unique-happy
+        PRG "... I must... a-always have a big belly."
+        MC "Alright."
+        MC "Now, it's time for a little test."
+        MC "I know that your udders are full, and it's just so hard to think with full udders, isn't it?"
+        show PRG unique
+        PRG "M-My udders are really full. I-It's hard to use my brain when my udders are full..."
+        MC "Ohhh... I know, Honey."
+        MC "It's just so hard to think when you have full udders."
+        MC "But... you shouldn't be thinking anyway."
+        MC "You're a breeding cow. And you need to be focused on breeding."
+        show PRG worried
+        PRG "Y-Yes, Master."
+        MC "I would like to hear it back. Let me know that you really understand it."
+        PRG "I-I need to be focused on my breeding."
+        show PRG neutral
+        PRG "... A-And no thinking."
+        MC "Good girl."
+        MC "Sit down. On your bed."
+        "Aida waddled over and sat, her bed creaking ever so slightly."
+        MC "Now, I will be right back. You are to stay right here until I get back."
+        PRG "Y-Yes, Master..."
+        "I walked to the door, then looked back."
+        MC "Stay."
+        PRG "Yes, Master."
+        hide PRG with dissolve
+        "I opened the door and walked out into the kitchen." 
+        "I found a large popcorn bowl in one of the cabinets, then turned and headed back in."
+        show PRG neutral with dissolve
+        "Aida sat just where I'd left her."
+        MC "Good girl."
+        show PRG happy
+        "I set the bowl down on the floor, in front of the bed."
+        show PRG neutral
+        MC "Alright. It's time for M. I. L. K. I. N. G."
+        MC "Do you know what that spells, Dear? Can you figure it out?"
+        show PRG worried
+        PRG "Um..."
+        pause 1
+        PRG "I-I don't know. I... I can't spell very well..."
+        MC "That spells 'milking.'"
+        show PRG neutral
+        PRG "T-Time for milking?"
+        MC "Yes, Honey. It is time for milking. I know you love your milkies."
+        show PRG happy
+        PRG "I love my... m-milkies~"
+        "I stood in front of her, the bowl on the floor."
+        show PRG scared
+        PRG "Are you... going to milk me into the bowl?"
+        MC "I will take care of that."
+        MC "You need to stay quiet now. You're being milked."
+        show PRG worried
+        PRG "Yes, Master..."
+        MC "Put your hooves on your udders. Right now."
+        show PRG nervous
+        PRG "M-Master. I-I don't know how to milk myself."
+        MC "I did not say 'start milking yourself.' I said 'put your hooves on your udders.'"
+        "I put my hand under Aida's jaw."
+        MC "Eyes on me."
+        show PRG worried
+        MC "Good cows listen."
+        PRG "I-I'm a good listener..."
+        MC "Not from what I see."
+        show PRG surprised
+        PRG "I-I'm a good listener! I listen good!"
+        show PRG grope-2
+        "Aida quickly put her hands on her boobs."
+        MC "On the sides."
+        MC "There."
+        MC "Now, I would like you to push your udders. Push them together."
+        show PRG worried
+        PRG "M-Master... t-they're full."
+        MC "So?"
+        "I leaned onto Aida's bed beside her, turning her head so she was looking right at me."
+        MC "Either you will push them together, or I will."
+        MC "Which will it be?"
+        show PRG unsure
+        PRG "B-But... I'll leak if I push them."
+        MC "That's funny."
+        MC "I don't recall asking what would happen. I gave you an order."
+        "Aida turned her head."
+        PRG "No."
+        MC "No?"
+        show PRG angry-2
+        "Aida turned back to face me... and blew a raspberry right at me."
+        MC "... I don't believe I heard you properly."
+        MC "You push your udders together right now, or I-"
+        "Aida blew another raspberry at me."
+        pause 1
+        "I got up and walked silently to the bathroom, yanking open the door and storming in."
+        "I took two large towels out, and laid one on the floor."
+        "I grabbed Aida's arm."
+        MC "Get up."
+        show PRG aroused
+        PRG "No."
+        "I gripped her wrist and leaned in, right to where her cow ear was."
+        MC "You get your slutty ass off of this bed right now, or I swear, I will spank you until you can't sit for a month."
+        show PRG scared
+        "Aida shifted and pushed, getting up and watching me lay a towel down on her bed, folding it over itself."
+        MC "Sit on it."
+        "I reared back, and smacked her ass... a lot harder than I meant to."
+        show PRG surprised
+        PRG "AH!"
+        show PRG worried
+        "Aida quickly sat back down on the bed, looking up at me."
+        "I crawled up onto the bed, right behind Aida."
+        "I yanked her wrists down, off of her chest."
+        "Reached forward, I grabbed the fabric of her top and yanked it up, then put my hands on either side of her breasts."
+        show PRG scared
+        PRG "M-Master, please! P-Please don't!"
+        MC "You decided to make that incredibly unladylike sound, and you decided to ignore my commands."
+        PRG "B-But you already spanked me!"
+        MC "And you're still protesting! Put your hands onto your fucking udders!"
+        show PRG scared
+        "I grabbed Aida's hands, and looked over her shoulder so I could see where I was setting them... and looked in Aida's mirror."
+        hide PRG with dissolve
+        $setPRGOutfit(OutfitEnum.TOPLESS)
+        show PRG scared with dissolve
+        pause 1
+        show PRG unsure
+        pause 2
+        MC "... M-Mochi."
+        "Aida looked back over her shoulder at me."
+        MC "W... What happened to your nipples?"
+        MC "T-They're huge..."
+        PRG "They... they got bigger as my... my boobs did."
+        PRG "And, over the past... month, they started to get all puffy..."
+        MC "Holy shit... look at them..."
+        show PRG worried
+        PRG "Baby..."
+        "I looked in the mirror at her."
+        show PRG neutral
+        PRG "... I want to keep going."
+        show PRG blush-2
+        PRG "I love this..."
+        MC "That... spank wasn't too hard?"
+        PRG "It... it hurt."
+        MC "I-"
+        show PRG aroused
+        PRG "... I love it. I..."
+        PRG "M-More... please..."
+        "Aida was breathing heavily, staring into my eyes."
+        MC "Okay."
+        MC "... Un-mochi."
+        show PRG lactate
+        PRG "Master... please let me milk somewhere else."
+        PRG "I-I don't want to leak..."
+        MC "That's okay."
+        MC "You're going to be leaking anyway. It doesn't matter."
+        "I pushed Aida's breasts together."
+        "There was pressure. They felt solid, like boulders."
+        "I glanced forward, into the mirror."
+        MC "No milk yet."
+        PRG "M-Master. D-Don't... please. I-I'll be a good cow. I-I will. J-Just please don't push them mooore."
+        show PRG sad-2
+        "Aida blinked, and looked away from me."
+        MC "... What was that?"
+        PRG "N-Nothing."
+        "I gave her boobs another push, this time holding them against each other."
+        show PRG lactate
+        "My hands didn't even come around the curve of them. Her tits felt hot, with each push smushing them together. I felt Aida's back tense up, her hands coming down and gripping my legs on either side of her."
+        show PRG surprised
+        PRG2 "M-Moo!!"
+        MC "I knew it..."
+        MC "Your cow side is taking hold."
+        MC "You're enjoying this..."
+        show PRG blush
+        MC "You are nothing but a dumb little cow slut, who just wants her udders to be played with, and her belly to be filled."
+        "I smacked her chest, reaching as far forward as I could go, and pushed."
+        pause 1
+        show PRG lactate
+        pause .75
+        "Something warm ran down, through my fingers."
+        "I raised my hand up, looking at the white liquid on my palm."
+        PRG "M-Master!!"
+        PRG "MOOO!!"
+        "I looked in the mirror at the two rivers that now ran down Aida's belly, down both sides of it, and dripping down onto the towel under her."
+        MC "You're dripping. That's... filthy."
+        PRG "Y-You're MOOOooaking me leak..."
+        PRG "Mooooster!!"
+        MC "Aww... those pesky little moos just won't stop now, will they?"
+        show PRG angry-2
+        PRG "Y-You know I can't stop moOOOOOooing once I start!"
+        "I pushed her boobs again, as more milk poured down my fingers."
+        show PRG lactate
+        MC "I just knew I could make you milk..."
+        "Aida's big body... began to move. I looked in the mirror as she started to push back and forward on the bed, her ass bumping up against my still rock hard cock with every push."
+        MC "... You're fucking trying to masturbate."
+        PRG "M-Moooooooster! I-I need to breed! P-Please let me breed!"
+        "I was starting to breathe deeper and deeper, the milk, Aida's breastmilk, running down my hands, soaking into the towel on the floor."
+        "The rivers of milk pouring down her chest. The grinding, the mooing, the brattiness."
+        "Her forwardness."
+        "My hips began to buck, grinding my dick against Aida's bucking hips."
+        "I smashed her tits together."
+        "Milk spurted, spraying out all over my hands, down Aida's belly, onto her legs, and down onto the towel."
+        PRG "Y-You're making a... a... mooOOOOoo... a mess, Master."
+        "I pulled myself up and out from behind her, standing up, and yanking my boxers down, throwing them off."
+        show PRG surprised
+        "Aida stared for just a moment, then crawled backwards onto the bed, laying slightly on her side and pushing one leg into the air, finally showing me her thong, and the large stained spot growing on her panties."
+        MC "No. Suck it."
+        "I got up onto the bed and onto my knees, stradling over her massive legs... though I was more sitting on her thighs, with weight on my knees on either side."
+        MC "Well. What are you waiting for?"
+        show PRG worried
+        "Aida pushed up a little, her belly bumping into me, and tried to sit up, straining her head toward me, her eyes down and mouth open."
+        show PRG unique
+        PRG "M-Master, I can't reach..."
+        PRG "M-My belly is too big..."
+        MC "There is no such thing as too big for you."
+        MC "Figure it out."
+        show PRG worried
+        "Aida moved and tried to shift off of the bed. She got stuck for a moment, but got up and onto the floor, inching very slowly over to me, her eyes staring at my penis."
+        "Now on the floor, she leaned forward onto the bed, her eyes staring down at it, then looking up at me, her tongue out."
+        pause 1
+        "I reached down, rubbing Aida's cheek."
+        menu:
+            "Dominate further.":
+                MC "Suck."
+                show PRG neutral
+                "Aida nodded and bore her eyes down on her next task."
+                "She licked her lips and closed in."
+                "I had half-expected to feel her mouth closing around the head. Diving down, and laying into it right away."
+                "Then I felt her tongue."
+                "I looked down."
+                show PRG happy
+                "Aida licked all the way from the base, up to the tip."
+                "She curled her tongue around it, and gave a soft, demure stroke."
+            "Be kind.":
+                MC "... You've been a very good cow."
+                MC "Have all you'd like."
+                show PRG surprised
+                "I watched her eyes grow wide, her mouth slightly falling open."
+                PRG "A-All for me?"
+                MC "Mhm."
+                show PRG excited
+                "I smiled, gently running a finger across her lips."
+                MC "Excited, Honey?"
+                "Aida smiled, and nodded sweetly."
+                "I scooted forward on the bed, making it easier for her to reach."
+                MC "No rules. No tricks."
+                MC "Enjoy, my beautiful cow."
+                scene black with fade
+                "I closed my eyes, expecting to feel Aida's mouth overtake me."
+                "Softness. A gentle touch."
+                "... And a kiss."
+                scene Dorm PRG
+                show PRG blush-2
+                with fade
+                "I opened my eyes and glanced down, to watch Aida press her lips against the head one more time."
+                "She dipped down, her tongue bringing warmth with it as she licked from base to tip."
+                "She came up slowly, but ended her licked stroke with a gentle flick of the tip."
+        "She dove down again, her tongue rubbing up and down in a rhythmic seduction."
+        show PRG neutral
+        PRG "Hagghh... hnnrnnn..."
+        "I brought my hand to her jaw again, and allowed my fingers to travel up to her bottom lip, where I rubbed the soft, pink skin."
+        MC "Open..."
+        "Aida slowly dropped her jaw, and let her tongue poke out, making room for me."
+        "She licked the head, and closed her eyes, sliding me down into her mouth."
+        scene black with fade
+        "All falls away. Anxious premonitions melt around my being."
+        "I'm plucked away from all logic and reasonable thought."
+        "Her cheeks suck in, the sides of my penis being squeezed and pushed."
+        "Her mouth's warm embrace brings me down. Further."
+        "I let my eyes drift open once more."
+        "Both arms were down on her mound, her fingers digging against her skin and pulling along the surface."
+        "Her eyes were closed, her head bobbing gently, yet in time."
+        "I matched, and closed mine as well."
+        "Her movements were soft and gentle, but serenely lustful all at once."
+        "Passion was in her touch, the warm touch of her mouth truly sending the message of how long she'd been wanting this."
+        "A feeling that I fully understood."
+        "I was so far gone into my own arousal, that it barely clicked when Aida's mouth pulled away... and the tingle of cold across my now-moist cock ran down my spine."
+        "Just as quickly as the warmth had gone, it returned."
+        "Every side of it was embraced in a warm squeeze, the once icy tip being covered once more."
+        "And... more saliva rushed around."
+        "... A lot more."
+        scene Dorm PRG
+        show PRG grope-2
+        with fade
+        "The colossal, milk-filled tanks that had overtaken my girlfriend's chest had now become a prison, my penis the willing captor somewhere in between them."
+        "Milk had flowed into Aida's hands, and she carefully brought it up and ladled it down over her chest, my penis quickly being covered in warm cream."
+        PRG "Mooo... mooo...."
+        MC "Hnnnh..."
+        "Aida pushed closer. My legs were forced against the bed. Held there by her full belly."
+        "She gazed down into her cleavage, pushing down as hard as she could until the head of my dick just stuck up enough to make a small opening in between her massive breasts."
+        "She seemed to smirk... then let a large blob of saliva fall, right into the opening."
+        "She let them bounce back up, and with both hands, rocketed her breasts up and down on my cock."
+        show PRG aroused
+        "The milk provided a better lube than I'd have ever thought possible, and her huge tits forced around me made it all the more enticing."
+        "Milk still poured from her nipples as she pressed down, squirting right into my lap and draining onto the towel under me."
+        "Pressure was building. I grit my teeth, inhaling."
+        MC "Mmnn... A-Aida..."
+        MC "S-Stop. I'm gonna-"
+        "I focused deeply as the enormous tit-job halted."
+        "I took another deep, trembling breath, as the feeling slowly began to boil back down."
+        MC "There... rnngh..."
+        MC "... Get up here. You're getting bred."
+        show PRG excited
+        "Aida pressed both hands into her mattress, denting it down as she lifted."
+        show PRG scared
+        PRG "AH!"
+        "Her hands slipped off of the mattress, her body landing back on the floor, right on her butt."
+        "She whipped her eyes up."
+        PRG "M-Master, I'm sorry! I-I-"
+        MC "No. Stay there."
+        "I was off the bed in an instant, taking one of the towels and hastily drying my dick."
+        "I put both hands on her belly. I could barely see her head over it, as she lay on the floor."
+        "I dipped down, seeing my spot covered, wet-stained prize."
+        "My fingers brushed gently over Aida's panties. The sight brought me back to focus."
+        "Her vagina was visible through her panties. Not the actual details, but the outline."
+        "Her lips had swollen, the sides raised and very puffy."
+        "I realized... just how long it had been since I'd last been here."
+        "I yanked at the panties, trying to pull them to the side."
+        show PRG surprised
+        play sound ClothingTearShort
+        pause 1
+        MC "... Oops."
+        "The middle piece of fabric pulled away in my hands... soaked, the actual waistband piece still in place."
+        MC "My... look at how wet."
+        show PRG flattered
+        PRG "T-That's my breeding part. That's where I breed..."
+        MC "I know..."
+        "Aida's rear made a welcome ally. Her body was angled for me, her hips forced up by her two plump cheeks."
+        "I pulled closer, my hands going around, tight against her belly... and onto her hips."
+        pause 2
+        show PRG surprised
+        PRG2 "MMMN!!"
+        show PRG scared
+        PRG2 "Mmnnn... nnnn..."
+        "Aida's soaking, waiting slit was all the assistance I needed, and my length disappeared into her."
+        "I pushed in, my hands being forced off of her hips by her legs and belly."
+        "My grip had been futile. Her belly had seen to that."
+        "I wrapped my arms around her belly, and let the warmth coat me once more."
+        "Her insides pulsed, her swollen lips smacking against me and my balls as I drove into her."
+        "Aida's hands appeared on her belly, and she found mine, squeezing on top of them."
+        "My hands gripped her belly for support, and with pure need."
+        PRG2 "Mn-MM! Mhhh!"
+        PRG2 "Hnnn-hnn-hnnn-hnnnn!!"
+        "Aida's little squeaks confirmed for me."
+        "The ice was broken. Shattered with a hammer."
+        show PRG lactate
+        MC "God, fuck!"
+        "I grabbed her belly and smashed into her."
+        "Aida's legs on either side of me held my sides, ensuring I didn't tip over."
+        "The pressure came again... quicker. Faster."
+        "I slid out, a warm, impassioned aura filling around me."
+        show PRG scared
+        PRG2 "M-Master..."
+        "I stood up, coming over to Aida, and offering her my arm."
+        MC "Here. Come on, Sweetie."
+        "Aida held on, and I stood with her, helping her rise."
+        show PRG worried
+        PRG "M-Master... t-that was all?"
+        MC "..."
+        MC "Mochi."
+        PRG "Ah-"
+        PRG "Baby? Are... are you okay?"
+        MC "..."
+        "I shoved myself against her belly, craning around the side and smashing my lips into hers."
+        show PRG scared
+        PRG "Mm?!"
+        "I held myself there for a long time, Aida's milk spurting out against my chest."
+        MC "I..."
+        show PRG worried
+        PRG "W-What is it?"
+        PRG "W-What is it, Sweetie?"
+        stop music fadeout 2.0
+        MC "... I don't want to hide this. These feelings."
+        MC "I love you..."
+        MC "Now... Mochi and Dango still are the words."
+        MC "But, they're for you. Not for the cow."
+        show PRG surprised
+        PRG "K-Kei-?"
+        MC "Un-mochi."
+        "I reached down, and smacked Aida's butt."
+        show PRG scared
+        MC "Onto the bed. Show me your pussy."
+        MC "It's time to breed you."
+        show PRG neutral
+        pause 1
+        PRG "... Y-Yes, Baby."
+    if getFlag("Sub"):
+        PRG "W-What should we do first?"
+        MC "I..."
+        "All of this... it was driving me wild. The letter, the outfit, I had no words past ones that expressed full-on shock and surprise."
+        "But... I knew that I wasn't 'master' material. That just wasn't me."
+        MC "Aida?"
+        MC "I... I'm not a dom. I can't do like 'master' stuff."
+        PRG "Mochi."
+        "Aida walked to me, taking my hand."
+        PRG "I know..."
+        PRG "I remember."
+        MC "I-I still really want to do this. Just... not as a dom."
+        PRG "I know, Honey..."
+        PRG "Just... let me get a little further into it."
+        MC "Oh, did I cut you off before you got further into it?"
+        show PRG blush-2
+        PRG "A-A little."
+        show PRG neutral
+        PRG "But it's okay."
+        PRG "Do... do you feel comfortable continuing? W-We can stop, if you want."
+        MC "Yeah. Yeah, I'm good to go."
+        MC "Mochi."
+        PRG "..."
+        PRG "You... y-you don't know what you'd like to do first?"
+        MC "I... n-no..."
+        PRG "No...?"
+        MC "I..."
+        show PRG worried
+        PRG "No, {i}Mistress.{/i}"
+        PRG "S-Say it."
+        MC "No, Mistress."
+        show PRG aroused
+        PRG "Well, I have some ideas."
+        PRG "Um... sit down. O-On the bed."
+        "I sat down right away, looking up at Aida."
+        "Aida closed her eyes. She inhaled sharply, the exhale coming out slightly stilted."
+        "She did it again, this time a bit smoother."
+        "Then, once more, her eyes still closed."
+        show PRG neutral
+        PRG "Okay."
+        PRG "... Good boy."
+        "Aida smiled, and reached down to my neck, rubbing gently."
+        "A sort of heat rolled over my body. I felt warm, like a wave of water had just covered my body."
+        "Her calling me that... those words. It felt... unbelievable."
+        MC "Now what, Mistress?"
+        PRG "Well..."
+        PRG "... Did you read the back of the paper?"
+        pause 1
+        MCT "... There was a back?"
+        MC "Um... n-no."
+        show PRG worried
+        PRG "No, what?"
+        MC "N-No, Mistress."
+        "Aida nodded and walked over to her desk, taking the paper again and waddling back."
+        "She turned it over and handed it back to me, backside first."
+        PRG "R-Read it out loud."
+        MC "Um..."
+        MC "'A-All ownership is hereby passed over to the breeding cow. By signing this document, you have thus transferred yourself over to her.'"
+        show PRG unsure
+        MC "Um... M-Mistress?"
+        PRG "... M-Mochi."
+        "Aida sat on the bed next to me, her hand taking mine."
+        PRG "I-Is it okay? I-I'm not going too far or anything, am I?"
+        MC "N-No. Not at all."
+        show PRG neutral
+        MC "This is... really fun. I'm enjoying this."
+        "And I was. Seeing Aida like this... it was just what I needed."
+        PRG "Okay..."
+        "Aida awkwardly got back up, looking down."
+        PRG "I-I'm going to go back in now, okay?"
+        MC "Okay. Mochi."
+        show PRG blush-2
+        PRG "... You didn't read everything, did you?"
+        MC "N-No..."
+        show PRG worried
+        PRG "You didn't listen..."
+        PRG "And, l-look what happened."
+        PRG "Do... do you know how to read?"
+        MC "I... g-guess not."
+        PRG "Now you're... mine."
+        PRG "And now..."
+        "Aida rubbed one hand from my neck, down my chest."
+        show PRG neutral
+        PRG "I get to do whatever I want with you..."
+        MC "Y-Yes, Mistress..."
+        MCT "God, yes Mistress."
+        if getFlag("PRG059_Boobguy"):
+            "My eyes fell on her chest. I stared. Her tits were barely contained within the top."
+            "And... there was a large bump on the front of both sides."
+            PRG "Excuse me." 
+            PRG "Eyes on me."
+            "Aida gripped my jaw, turning my head."
+            show PRG blush-2
+            PRG "Eyes on Mistress..."
+            PRG "You're being naughty. Looking at your Mistress's udders like that."
+            PRG "Those are my udders... not yours."
+        elif getFlag("PRG059_Buttguy"):
+            "My eyes went down, staring at her butt."
+            "Her thong was {i}tight,{/i} and her cheeks jutted back behind her, her little tail sitting lightly on top."
+            PRG "Eyes on me."
+            "Aida reached down, gripping my jaw and forcing my head back up."
+            show PRG blush-2
+            PRG "Eyes on me. Eyes on Mistress..."
+            PRG "You're being naughty. Very naughty. Looking at your mistress's backside like that."
+            PRG "Were you looking at my tail?"
+            MC "Y-Yes, Mistress."
+            "I glanced back, under my hair, safe to ogle under the cover."
+            show PRG worried
+            PRG "... No, you weren't."
+            PRG "Lying is not acceptable."
+        elif getFlag("PRG059_Bellyguy"):
+            "My eyes immediately fell onto her belly."
+            "Bare... full... huge. It commanded the attention around it."
+            PRG "Eyes on me."
+            "Aida gripped my jaw, and pulled my head up so I was looking at her."
+            show PRG blush-2
+            PRG "Look at me."
+            PRG "I can understand a quick peek."
+            PRG "But staring at your mistress's belly like that is not polite."
+            MC "I-"
+            PRG "Tell me why."
+            MC "Why-"
+            PRG "Why were you looking at my belly?"
+            "Aida put both hands on either side of me on the bed, and leaned down, shifting my hair away from my ear by pushing her face in close."
+            "Her belly was right on top of me, her breasts pushing into my chest."
+            show PRG neutral
+            PRG "... I would like an answer."
+            PRG2 "Tell me why you were staring at my belly."
+            MC "... B-Because I like it. It turns me on."
+            show PRG unique-happy
+            PRG "Mm..."
+            "Aida paused for a moment. I could hear her breathing speed up."
+            PRG "Hahh... mm..."
+            PRG "You... you like my belly?"
+            PRG "You like girls with big bellies?"
+            MC "M-Mhm."
+            show PRG neutral
+            PRG "Not 'mhm.'"
+            "Aida pulled back just a little, looking me in the eyes."
+            PRG "W-When I ask you a question, I want to hear 'Yes, Mistress,' or 'No, Mistress.'"
+            PRG "I-Is that clear?"
+            MC "Yes, Mistress."
+            PRG "Good..."
+            show PRG blush-2
+            PRG "Now... you like girls with big bellies?"
+            MC "Yes, Mistress..."
+            PRG "You probably mean fat bellies then, don't you?"
+            MC "No, Mistress."
+            MC "Pregnant bellies."
+            show PRG aroused
+            PRG "You are naughty..."
+            PRG "Fat bellies would be one thing. But, pregnant ones..."
+            PRG "Even ones that are... growing?"
+            MC "Yes, Mistress."
+            "Aida leaned back down again, forcing her belly into my lap."
+            PRG "Then..."
+            PRG "Do you like my pregnant belly?"
+            PRG "My big... full... round baby belly?"
+            MC "Y-Yes, Mistress."
+            "Aida got back up, catching her balance quickly."
+            PRG "Be a good boy. No staring."
+        show PRG neutral
+        MC "Y-Yes, Mistress. I'm sorry."
+        "Aida smiled, coming over and taking off my sweatshirt with one hand, setting it beside me."
+        PRG "Take off your clothes. Just down to your underwear."
+        "I nodded and got up, taking down my pants and yanking my shirt and socks off, putting them in the pile of clothes."
+        "I stood in just my boxers... the front of them showing much more than I had imagined."
+        show PRG blush-2
+        PRG "Ohh..."
+        PRG "W-What are you doing? Why are you showing me that?"
+        MC "I-I'm sorry, Mistress. It's for breeding..."
+        "Aida grabbed my face again, right by my cheek."
+        PRG "I know what it's for."
+        show PRG aroused
+        PRG "You... you're thinking about breeding? Now?"
+        PRG "Be honest. I don't like when you don't tell me the truth."
+        MC "... Yes, Mistress."
+        PRG "Well, you're going to have to make that go away."
+        MC "I-I can't, Mistress. It won't go down..."
+        PRG "Mm..."
+        show PRG neutral
+        PRG "... Well, you're just going to have to sit there with that."
+        MC "What? I-"
+        show PRG worried
+        PRG "Did you just question your mistress?"
+        MC "I- no! I-"
+        PRG "No, Mistress."
+        MC "N-No, Mistress. I-"
+        PRG "I heard you say 'what.'"
+        PRG "You were questioning your mistress. And then you lied about it after."
+        MC "I..."
+        show PRG angry-2
+        PRG "Bad boy."
+        "Aida took my shoulder, and pushed me down onto her bed."
+        PRG "Your mistress will be right back."
+        "Aida waddled over to her bathroom, and opened the door, waddling inside."
+        show PRG neutral
+        "A moment later, she reappeared, holding a plastic jar."
+        PRG "This is your mistress's lotion."
+        PRG "A-As punishment, you're going to lotion your mistress's belly."
+        "She handed me the plastic jar, and waddled to her bed, sitting down slowly, and spreading her legs for her belly."
+        "She looked down at it, rubbing gently with her hands."
+        PRG "W-Well?"
+        "I gulped, then nodded. Unscrewing the top, I dug my fingers into the lotion, the sweet scent filling my nostrils."
+        "I stared, her pastel skin glowing."
+        "Her bare belly was right there... and I was getting to put lotion on it."
+        "I rubbed my hands together, spreading the lotion about."
+        PRG "Actually... you should get on the ground. So you can reach."
+        MC "M-Mistress, I can reach just-"
+        "Aida put her hand on my arm."
+        show PRG blush-2
+        PRG2 "Get on the ground so you can reach. You need to use your listening ears."
+        MC "... Y-Yes, Mistress."
+        "I got off the bed without using my hands, turning and putting them right onto Aida's belly, right on either side of her belly button."
+        show PRG unique-happy
+        PRG "Mmn... t-that's... mm..."
+        MC "Good?"
+        PRG "Shh... just rub..."
+        "I dug in, pushing the lotion around her belly, forming little circles with both hands."
+        "Taking more lotion, I ran my hands around either side, my fingers taking in every centimeter of her taut, pregnant gut."
+        show PRG blush-2
+        "I'd never gotten to be so hands on with it before. I needed this. My stomach was doing flip after flip, every bit of belly being better than the next."
+        "Reaching the top, I stole a glance, having to stand up both to reach the top of Aida's belly, and also to see her face."
+        "Her face was wrinkled up as she was panting, her eyes shut, and her breathing quick and sharp."
+        "She bit her bottom lip heavily, her hands on either side clutching the bedspread."
+        "I rubbed the top of her belly, then brushed my hands against my thighs, removing the extra lotion."
+        MC "I-I'm done, Mistress."
+        show PRG worried
+        PRG "I-I..."
+        PRG "U-Um..."
+        PRG "G-Good job. I..."
+        "Aida paused, and inhaled shakily."
+        PRG "Um... t-that didn't seem like it was a good enough punishment for you."
+        show PRG neutral
+        PRG "L-Look at that. You still have your breeding part showing."
+        "I glanced down, now harder than before."
+        MC "I-I'm sorry, Mistress."
+        MC "I... I did what you asked. Your belly is covered now."
+        PRG "W-Which is good. B-But..."
+        PRG "I-If I'm going to take you places with me, you can't walk around with your breeding part out."
+        PRG "T-That would be like if I walked around with my teats out. A-And that would be silly..."
+        "I looked down, right at my hard member."
+        MC "I-I don't know what to do about it, Mistress. It won't go down."
+        PRG "Y-Your mistress will take care of it."
+        PRG "Do you trust your mistress?"
+        "I nodded quickly."
+        PRG "Good boy."
+        MC "Mistress?"
+        PRG "Yes?"
+        MC "Were you... born like this? Like... were you born a cowgirl?"
+        show PRG worried
+        PRG "Um..."
+        PRG "No. No, I wasn't."
+        PRG "Sit down on the bed."
+        "I listened, and sat right beside her."
+        MC "What happened to make you this way?"
+        PRG "I... I used to be skinny... and small. Y-You should have seen my udders. They were so small... so little. And not anything like a breeding cow should have."
+        PRG "But, overtime, I started to change."
+        PRG "My udders got bigger. And my butt and hips got bigger. So I could have an easier time having my babies."
+        PRG "Then, I got pregnant for the first time, and that's when the big changes started."
+        PRG "I started making milk, and mooing, and... e-eating more."
+        show PRG neutral
+        PRG "I... I was turned into a breeding cow. Like you see now."
+        MC "And... what exactly is a breeding cow?"
+        PRG "A... cow used for breeding."
+        MC "But like... what's important for a breeding cow to have? Or to do?"
+        show PRG aroused
+        PRG "Mm..."
+        PRG "A-Are you trying to distract me from your punishment?"
+        MC "N-No. I was just curious."
+        PRG "I think you are~"
+        MC "No, no, Mistress. I promise. I'm just wondering."
+        PRG "Mm."
+        show PRG blush-2
+        PRG "Breeding cows are... well, we're supposed to breed, and grow our babies."
+        PRG "Us breeding cows have... l-lots of babies at one time, s-so we need to have the biggest bellies to hold them all."
+        MC "So... what makes a good breeding cow?"
+        "Aida leaned toward me a little."
+        PRG "... Being the biggest one."
+        "I took a breath."
+        PRG "Now... take out your breeding part. We have to take care of this."
+        MC "M-Mistress-"
+        PRG2 "Take out your breeding part."
+        PRG2 "We need to take care of this."
+        PRG2 "Use your ears... and take out your breeding part."
+        "I took my hands down, and carefully pulled my boxers over my erection, dropping them to the floor."
+        show PRG aroused
+        PRG "Mm... my..."
+        "She reached out, and gently caressed my cock."
+        PRG "And, let's see..."
+        "Moving down, she rubbed my balls, one after the other."
+        PRG "Look at these... so full."
+        "She rubbed them a few times in her hand, her breathing speeding up as well as mine did."
+        PRG "On second thought..."
+        show PRG neutral
+        PRG "No. Making this go away would make you feel good."
+        "She patted the top of it gently."
+        PRG "A-And we don't want that."
+        MC "M-Mistress-"
+        PRG "Shush."
+        PRG "I have a better idea."
+        "Aida stood shakily, and started to waddle toward the bathroom."
+        hide PRG with dissolve
+        pause 2
+        PRG2 "... I don't see my new breeding bull following me like he SHOULD be!"
+        "I hurried across the room, and into the bathroom."
+        scene Bathroom
+        show PRG neutral
+        with fade
+        "Aida had her tub door open, and was stepping into the shower."
+        PRG "In."
+        "I walked in, pressing up against Aida as I squeezed through, and sat down."
+        hide PRG with dissolve
+        "Aida closed the door and smiled, looking back at me as she turned away from me, her ass just about right in my face."
+        "She reached forward, undoing her top, and throwing it over the side."
+        PRG "N-Now... for your punishment..."
+        PRG "Y-You are going to... m-milk me until I'm empty."
+        MC "Mistress?"
+        PRG "S-Start milking..."
+        "I put my arms around her, onto her tits. I reached forward as far as I could."
+        "It was hard to reach... she was getting so big now."
+        MC "Mistress..."
+        MC "I-I can't... reach your nipples."
+        PRG "T-Teats."
+        PRG "They're my teats."
+        MC "I can't reach... y-your teats."
+        "Aida turned around, and backed up, her belly nearly smacking me halfway out of the tub."
+        $setPRGOutfit(OutfitEnum.TOPLESS)
+        show PRG blush-2 with dissolve
+        pause 1
+        MC "... A-Aida."
+        MC "M-Mochi..."
+        show PRG unsure
+        PRG "..."
+        PRG "I..."
+        PRG "... {w}They started growing after I got pregnant."
+        PRG "And... about a month ago. Before we went to my parents... they got all puffy and big."
+        PRG "I-I'm sorry if they look ugly..."
+        MC "UGLY?!"
+        show PRG unique-happy
+        PRG "Mm... eheheh..."
+        MC "I love them."
+        PRG "I-I hope I'm doing okay."
+        PRG "I-It's hard to talk like this."
+        MC "You're doing wonderfully. This is... really fun."
+        PRG "I'm just... pretending."
+        MC "Well... we should wrap this up. I have a punishment to do."
+        PRG "... Y-Yes you do."
+        MC "Mochi?"
+        PRG "M-Mochi."
+        pause 1
+        show PRG neutral
+        PRG "What are you waiting for?"
+        PRG "Milk me."
+        "Aida reached down, took my hand, and put it right on her tit."
+        "I brought the other one to her other breast, and stopped."
+        MC "Um..."
+        menu:
+            "Push into her breast":
+                "I formed a sort of curve with my hands and pressed them against Aida's boobs, her nipple in the middle of the curve."
+                "I pressed in gently, then pushed my fingers in, tugging her breast a bit and releasing the pressure from my fingers."
+                show PRG surprised
+                "Milk sprayed out... and right onto my chest."
+                PRG "Mmn... G-Good boy..." 
+                PRG "Y-You're good at this."
+            "Pull her nipple":
+                "I put two fingers around Aida's nipple, and tugged on it."
+                show PRG flattered
+                PRG "Mn... o-ow..."
+                PRG "Mm... S-Sweetie... n-not like that. T-That hurts-"
+                show PRG neutral
+                PRG "T-Try this."
+                "Aida took my hand, and brought it to her boob, forming my fingers into a curve. She pushed my hand against her chest."
+                PRG "Push down just a little."
+                "I squeezed her breast gently, making her nipple sort of pop forward."
+                PRG "Mm... pull."
+                "I pulled forward, much more carefully than before."
+                show PRG blush-2
+                PRG "And release."
+                "I watched milk spray out of her nipple... and right onto my chest."
+        MC "I-I'm going to get milk all over myself."
+        PRG "Good. T-That will be a much better punishment for you."
+        MC "How long does it take until you're empty, Mistress?"
+        PRG "As long as it needs to take."
+        show PRG aroused
+        PRG "Now... f-focus."
+        "I did a few more pulls from Aida's chest, until I felt myself getting the hang of how to properly milk her."
+        "Aida shifted her legs, pulling her feet up off of the floor."
+        "You couldn't be too light, otherwise you wouldn't get anything. But too much force, and it hurt her."
+        "There was this fine middleground, and I was right on it."
+        "I began pumping them in tandem, her creamy cargo spraying all over my chest, stomach, and crotch."
+        show PRG lactate
+        PRG "Mmnn... h-hnngh-nnn..."
+        "Aida was panting, her eyes going from her draining tits to my face."
+        MC "Are you okay, Mistress?"
+        PRG "F-F-Fine-"
+        MC "I-"
+        show PRG worried
+        PRG "N-No more talking."
+        PRG "J-Just milking. Only milking..."
+        "I kept pumping, putting my nose to the grindstone and working her breasts more and more."
+        "Her nipple's flow was intense, spraying in multiple directions like a hose with holes in it."
+        show PRG blush-2
+        "And with each tug, her nipples grew harder. They were huge, and as they hardened, they stuck out like wine corks."
+        PRG "I-I... I-I like w-when you touch my teats..."
+        MC "So do I, Mistress."
+        "I sped up again... as my arms suddenly both began to tense."
+        "Held like this, constantly going back and forth, both arms began to cramp, the muscle tensing, as my pumps began to lessen."
+        "I pulled one more time, and... no milk."
+        MC "Are... are you empty?"
+        "Aida felt both breasts with her hands, her breathing still at a lightning pace."
+        show PRG neutral
+        PRG "N-No. There's still more."
+        MC "M-My arms are tired."
+        show PRG angry-2
+        PRG "I-I don't care. K-Keep pumping."
+        PRG "Pump my udders. Right now."
+        "I brought my arms back up, and was hit by the same seizing in my muscle."
+        "I pumped twice on each nipple before I halted again."
+        PRG "I don't feel anything..."
+        pause 1
+        "I took the only other option I could think of."
+        "Leaning down, I opened my mouth... and clamped down on her nipple, my lips covering fully as I sucked once, my mouth suddenly filled with milk."
+        PRG2 "Excuse me?!"
+        "I was suddenly pushed off of her nipple, staring at her as a few lines of milk ran down the corners of my mouth."
+        show PRG angry
+        PRG2 "Naughty boy!"
+        "She tried to turn, and reach down to my ass, but she was having a hard time in the shower."
+        "Her belly was soaked, covered in her own warm, creamy milk."
+        show PRG angry-2
+        "Aida opened the door, taking a towel and throwing it at me."
+        PRG "Dry my belly off. Right now."
+        "I panted... and swallowed what was left in my mouth, taking the towel and covering Aida's belly."
+        "I ran it over carefully, drying the top, and stopping on the underside of her belly, making sure to get everything so she wouldn't drip."
+        PRG "G-Get yourself dry, and come into the other room when you're done."
+        PRG "Do you understand?"
+        hide PRG with dissolve
+        "I nodded breathlessly."
+        "I sped-dried off, and hung the towel over the tub."
+        scene Dorm PRG
+        show PRG worried
+        with fade
+        "Aida stood in the middle of the room, looking at me, hands on her hips."
+        PRG "Y-You were very naughty."
+        PRG "Weren't you?"
+        MC "I-I was."
+        PRG "You tried to... nurse."
+        "Aida reached down, lifted her boobs up from underneath, and presented them."
+        show PRG grope
+        PRG "These are not for you."
+        MC "N-No, Mistress."
+        PRG "Repeat after me."
+        PRG "Those are not for me."
+        MC "Those are not for me."
+        show PRG worried
+        PRG "Good..."
+        PRG "Now, lay on the bed."
+        "I walked right over, and laid down, the bed barely even budging as I did so."
+        PRG "Move to the middle. Head off the pillow."
+        "I slid down, until my feet were off the end of the bed."
+        PRG "Okay..."
+        PRG "Tell me... what would you call yourself?"
+        PRG "Y-You're not... a big, strong man, are you?"
+        PRG "Tell me. Tell Mistress."
+        MC "Uhm..."
+        MC "A... weak, little bitch?"
+        show PRG aroused
+        PRG "..."
+        PRG "I-I didn't even need to push you to say it."
+        PRG "And... when a weak, little... b-bitch is bad, what do they get?"
+        MC "Punished?"
+        PRG "Yes. More specific?"
+        MC "Um... spanked?"
+        PRG "No, no. That's too light."
+        "Aida sat on the edge of the bed, reaching over and rubbing my cheek."
+        show PRG blush-2
+        PRG "You're going to lay there. And I'm going to sit on you."
+        PRG "I will stay seated on you until I feel you've learned your lesson."
+        PRG "Are we understanding?"
+        "I nodded."
+        MC "Y-Yes, Mistress."
+        PRG "Will this teach you to behave?"
+        MC "I... yes, Mistress."
+        "Aida shifted, and got her leg up onto the bed, kneeling awkwardly, while moving closer in."
+        "Her belly sat on the bed, dragging the blankets and sheets with her as she pulled herself."
+        "She crawled over the top of me, facing away."
+        "I stared up at her ass, the light in the room now being blocked by Aida."
+        "Her thick thighs held me on either side."
+        "I couldn't move. Behind my head was the headboard. And both sides were blocked."
+        PRG "Mm... I'm so tired..."
+        PRG "... {w}I think I need to sit down for a little bit."
+        "Aida lowered... and sat right on my chest."
+        "Her ass seemed to claim me, her cheeks spreading across my chest as she brought her weight down."
+        MCT "Mmgh... oh..."
+        MCT "God, she's... mmngh... heavy."
+        "I stared at her ass, her tail right in my face, the fur pressing against my nose with every inhale."
+        "Then, I felt her belly come to rest... right on top of my dick."
+        "And the warmth... the heat radiating against my chest."
+        "Like a warm washcloth draped over skin. It even felt damp... very very damp."
+        PRG "Mmn... that's better."
+        PRG "I get so tired, carrying my babies all day."
+        show PRG aroused
+        PRG "I wonder where my breeding bull is. It's almost that time."
+        MC "{i}Mmnnnn...{/i}"
+        PRG "I just don't know... it's almost breeding time. And I told him to be here at 22:30."
+        show PRG blush-2
+        PRG "Where is heeeee?"
+        PRG "I'm just so... so horny. I need him."
+        MC "{i}Mmnnnn...! Mnnh!{/i}"
+        show PRG worried
+        PRG "Mm... this seat is so creaky."
+        PRG "If only I wasn't so big..."
+        "I exhaled sharply, inhaling again, and only feeling about 30 percent of my lungs take in any air."
+        show PRG blush-2
+        PRG "Like my belly... it's sooo big~"
+        PRG "So big and full... my last bull did such a good job breeding me..."
+        PRG "Now I'm packed... packed full of babies."
+        PRG "And it feels so nice to have my udders out... mmm..."
+        "Aida seemed to lean forward a little. I felt her weight pull up just enough so I could grab a full breath."
+        show PRG excited
+        "She leaned... and bounced, her ass and belly smacking down against me, all of the air in my lungs being fired out."
+        MC "HAAAaaagh-"
+        show PRG blush-2
+        PRG "Mm... where did my little bitch servant go? He's supposed to be milking me right now..."
+        PRG "Mnn. Oh well. If he isn't coming, then that means I can punish him later."
+        PRG "Maybe... make him hold my udders from behind. Take the weight for me for a while."
+        PRG "That would teach him. To hold my big... heavy udders."
+        PRG "Or... I could make it even easier for myself..."
+        PRG "Put his head in between my big cow legs, and just... squeeze."
+        PRG "Feel his head down there... squirming. And knowing that Mistress is in charge of him..."
+        PRG "Mm..."
+        "Aida's belly pressed hard against my cock, the weight alone putting the absolute best kind of pressure onto it."
+        PRG "I... I should move, I think."
+        "She managed to pull herself into a very awkward crouch again, and came off of the bed."
+        MC "Aahh... haaahhh... hahhh..."
+        show PRG aroused
+        PRG "Mm... where is he?"
+        "Aida turned around, and made her way back up onto the bed again... only this time, she was facing me."
+        "I felt her straddle me once more, her thighs hugged my hips."
+        "I gazed up at the massive belly now hovering over my head."
+        "Like the moon eclipsing the sun, her belly shadowed me, the massive mound hovering just above my face."
+        PRG "Ohh... I need to rest. Put my belly down..."
+        hide PRG with dissolve
+        "I snuck an inhale before Aida's belly smushed into my face, my head turning as she found her spot."
+        "Lower, Aida's ass came down, my cock sliding right in between her two plump asscheeks."
+        PRG "Mmmmnnn... that's so much better."
+        PRG "My breeding belly gets so heavy..."
+        PRG "And... i-it's only getting bigger..."
+        "I was taking shallow inhales, my lungs once again smashed in."
+        "I felt the soft skin, yet firm feeling of Aida's belly weighing down my face."
+        "I could feel wetness, somewhere far below."
+        "Pre-cum was coating my dick. My heart was racing."
+        "I slowly started to buck my hips, sliding my cock slipping up and down between Aida's cheeks."
+        PRG "Mm... is my chair starting to break? Why is it moving behind me?"
+        "Aida pushed forward, her belly pressing my face down into the bed."
+        MC "Rrrmmm..."
+        PRG "My belly will teach this seat a lesson..."
+        "As Aida lifted, her belly shifted just enough."
+        "I gripped her belly with both hands, and let my tongue out."
+        "I lapped her belly fiercely with my tongue, running along right to her belly button."
+        PRG "AHH-"
+        PRG "MMM-MMMMmmmmm..."
+        PRG "W-W-What is my... c-chair... d-doing?"
+        "Aida shifted, sliding off of me."
+        show PRG blush-2
+        MC "AAGH!"
+        MC "Hahh... ahhh..."
+        PRG "My seat... that's where you were."
+        PRG "I didn't see you underneath me..."
+        MC "Y-Y-Yeah... I..."
+        MC "Hahhh..."
+        pause .25
+        show PRG worried
+        PRG "M-Mochi..."
+        "Aida sat on her bed, reaching over and rubbing my cheek gently."
+        PRG "B-Baby, are you okay?"
+        MC "I-I'm fine. Just... just catching... my breath."
+        PRG "..."
+        PRG "I-I knew that was too far."
+        PRG "I knew I was too heavy..."
+        PRG "I-I just really wanted to try it..."
+        "Aida got up and backed away."
+        show PRG unsure
+        PRG "I-I'm gonna... t-take all of this off, and... a-and we can watch a movie or something."
+        MC "H-Hey... hold on."
+        "I got out of bed and caught Aida's hand just as she went to grab at her headband."
+        MC "Don't stop..."
+        PRG "B-But..."
+        PRG "I-I don't wanna hurt you..."
+        MC "You didn't..."
+        MC "See? I'm fine."
+        PRG "B-But... I-I could really hurt you if I'm not careful..."
+        MC "And we were."
+        MC "I just had to catch my breath."
+        show PRG worried
+        MC "Hey..."
+        MC "That was about one of the single hottest things that I've ever felt."
+        MC "Your belly in my face... your ass on my dick. God, I just..."
+        PRG "..."
+        MC "... Wouldn't have been pre-cum if I wasn't into it."
+        show PRG unique-happy
+        PRG "I... I-I guess not."
+        PRG "... It's still all over my butt."
+        MC "Well..."
+        MC "Look... let's try it again."
+        "I sat back down on her bed."
+        MC "Whatever you want. Let's have fun..."
+        MC "Mochi?"
+        PRG "... M-Mochi."
+        "Aida walked back over, and crouched... beside the bed. She smiled, rubbing my cheek."
+        MC "Um...?"
+        show PRG neutral
+        PRG "My breeding bull has been so good tonight. He's done all of his tasks, and done them so diligently."
+        PRG "He needs a little reward."
+        "Aida looked down, and sat on her bed, lower down."
+        "She brought her hand to her mouth, licking her palm."
+        "Her hand came down, and wrapped lovingly around my dick."
+        PRG "Now... no cumming. I need you for later."
+        MC "Y-Yes, Mistress. Thank you, Mistress."
+        "The stroking began."
+        "Up and down... up and down."
+        "My vision almost seemed to blur. I hadn't jerked off in weeks, and now, Aida's hand was the one doing it."
+        "With that huge, giant belly, and those massive tits."
+        "All of the events of the night had been piled on. I felt myself rising quickly."
+        MC "M-Mistress, I'm gonna-"
+        show PRG blush-2
+        PRG "No cumming. You need to listen."
+        PRG "You need to keep that in there until I'm ready for it."
+        "She took the head of my dick, and placed one finger over the tip."
+        "I grit my teeth, forcing my eyes closed and focusing."
+        "The feeling rose further and further, Aida's hand still touching my dick, thus pushing them further."
+        pause 1
+        "It subsided."
+        "I inhaled as the need to cum boiled down."
+        MC "Hahhh... okay. I held it back."
+        PRG "Good..."
+        "I sat up, rubbing Aida's belly as I scooted down, closer to her."
+        PRG "Excuse me? This is not- MMP?!"
+        show PRG scared
+        "Aida was silenced... as I kissed her."
+        show PRG blush-2
+        PRG "Mmmnnn..."
+        "Her head turned to the side, her eyes closing."
+        "One hand came up and rubbed the side of my face."
+        "I breathed softly."
+        MC "Mochi..."
+        PRG "Mm?"
+        show PRG worried
+        "I pulled away from Aida, as she looked back at me."
+        PRG "Y-You don't want to... keep going?"
+        stop music fadeout 2.0
+        MC "I do... but not like this."
+        MC "I..."
+        MC "... Mochi and Dango... are still the words."
+        MC "But... I want them to be used for you and me. Not the mistress and her breeding bull."
+        PRG "H-Huh?"
+        MC "I... I want it to be us. Not hiding behind anything."
+        MC "I love you... and I want us to be the ones doing this."
+        show PRG neutral
+        PRG "S-Should I... take all of this off?"
+        MC "No... God, no."
+        MC "Leave it on..."
+        PRG "Then..."
+        show PRG blush-2
+        PRG "I think it's... breeding time."
+    if getFlag("Switch"):
+        MC "Okay."
+        PRG "W-What should we do?"
+        MC "So... let me get this straight. I... own you?"
+        show PRG happy
+        PRG "Mhm!"
+        MC "Okay. Well, I wouldn't want to be too hard on such a delicate, sweet looking cow."
+        MC "What are some things you like to do?"
+        show PRG neutral
+        PRG "Well... I like my breedings."
+        MC "I... I can see that."
+        "I walked back over to her, still almost not believing what I was seeing."
+        show PRG excited
+        PRG "You can touch my belly if you want, Master!"
+        MC "I can, hm?"
+        PRG "Mhm!"
+        MC "Do you... like when someone touches your belly?"
+        show PRG neutral
+        PRG "Yeah..."
+        PRG "But, especially when you do it."
+        MC "Well, alright."
+        PRG "It feels so good for a breeding cow when her belly gets rubbed."
+        MC "Not trying to argue with that, of course. But, if it feels so good, why don't you rub your own belly?"
+        show PRG surprised
+        PRG "Oh, Master!"
+        PRG "You know us breeding cows aren't supposed to touch our bellies too much!"
+        show PRG worried
+        PRG "W-We have hooves. We can't really... rub."
+        "Aida held up both hands, balled into fists again."
+        MC "I can understand that logic."
+        MC "Hooves are usually pretty hard. That wouldn't feel good at all."
+        PRG "Mm-mn."
+        MC "What about your udders?"
+        PRG "Uhm..."
+        PRG "I-I can touch them with my hooves if I want to."
+        PRG "But... I obviously can't milk them. It's hard with hooves."
+        show PRG blush
+        PRG "And... I-I don't really know how."
+        MC "I see."
+        PRG "I-I think that was in the letter that came with me."
+        PRG "I-I don't know for sure though."
+        show PRG unique
+        PRG "... I can't really read that well."
+        MC "Oh, yeah. I suppose."
+        MC "Well, okay. Let's go sit on your bed."
+        show PRG surprised
+        PRG "I get a bed?!"
+        MC "Yes, you do!"
+        MC "What do you usually sleep on?"
+        show PRG worried
+        PRG "Um... a bed, still. But, it's usually made out of straw."
+        PRG "And, it was in the corner of my barn."
+        MC "Ahh. Right."
+        MC "But yes. You get your own bed. Even your own room."
+        "Aida looked around, as if seeing her bedroom for the first time."
+        PRG "... All for me?"
+        MC "Yes, Sweetheart. All for you."
+        MC "For a breeding cow to be healthy, she needs to have a nice, comfortable bedroom, for her to grow her babies."
+        show PRG neutral
+        "Aida smiled and walked over to the bed, sitting down."
+        "She grinned, feeling the blankets with her 'hooves.'"
+        show PRG happy
+        PRG "This is so nice, Master!"
+        PRG "Thank you!"
+        MC "Of course, Dear."
+        MC "Now, come back up here and give Master a kiss."
+        show PRG neutral
+        "Aida heaved herself up and came back over, kissing me softly on the cheek."
+        MC "Eww... cow cooties."
+        show PRG excited
+        PRG "Y-You asked for a kiss, Master!"
+        MC "I know. I'm just teasing, Cutie."
+        show PRG neutral
+        "She stayed incredibly close to me."
+        MC "Alright. Now, first things first, I want to check something."
+        MC "I'd like you to walk back over to your bed. Then, turn around, and walk back."
+        show PRG happy
+        PRG "Okay!"
+        "Aida started and walked back over to her bed. She turned slowly around, then came back."
+        show PRG neutral
+        "Her waddle had grown more apparent, her belly forcing her legs to turn out and make her sort of tip a little to each side with every step."
+        "However, even in her cow get-up, it was obvious."
+        MC "Oh, no, no, no. Dear, that will not do."
+        show PRG worried
+        PRG "W-What?"
+        MC "You're trying to hide your waddle."
+        PRG "I..."
+        MC "Honey. Here. Eyes here."
+        "I pointed at my face as Aida turned and looked right at me with those big, gray eyes. She had a way of making them look almost more innocent than usual."
+        MC "You need to allow your body to move how it needs to move."
+        MC "Let your legs spread. Let your belly press between them... forcing them apart."
+        "I stepped behind her, and with my knee, gently tapped her legs on the inside of both."
+        MC "Spread them out. Let your belly claim its spot."
+        "Aida let out a small whimper, her legs moving to the side, as her belly pushed them."
+        MC "This is the proper way for a cowgirl to walk."
+        MC "Your belly should be first and foremost."
+        MC "Unless..."
+        MC "You weren't trying to... {i}HIDE{/i} your belly? Were you?"
+        show PRG surprised
+        MC "You know that's one of the biggest rules of being a cow-girl."
+        PRG "N-No! I-I wasn't!"
+        MC "I'm just not sure. It definitely looked like you were trying to hide it."
+        PRG "N-No!"
+        "Aida forced her stomach out, projecting her belly as far forward as she could."
+        PRG "See? I'm not hiding it!"
+        MC "Very good..."
+        "From behind, I reached forward and grabbed a side of her belly, rubbing gently and massaging her tight belly skin."
+        MC "All good cow-girls must have their bellies out."
+        show PRG aroused
+        MC "Right?"
+        PRG "Y-Yes, Master. All good cow-girls must have their bellies out."
+        MC "And why is that?"
+        PRG "S-So my belly is easier to reach, in case you need to examine it?"
+        MC "Very close."
+        MC "But, no."
+        MC "It's because cow-girls are always supposed to be proud of their bellies, and of the breeding they did."
+        "I rubbed the other side of her belly, leaning my head over her shoulder."
+        show PRG blush-2
+        MC "And you don't want to look like you're not proud, do you?"
+        PRG "N-No! Never!"
+        MC "That's just what your master wanted to hear."
+        MC "Now, try walking to your bed now."
+        MC "Remember to waddle. This is the way a cow-girl should walk. Legs out and wide. She needs to make space for her belly, so it has plenty of room to grow."
+        show PRG blush
+        "Aida stepped forward, and waddled heavily toward her bed."
+        "It took her a few seconds longer, but she turned and waddled back."
+        MC "Much better."
+        MC "It feels kind of good to let your body move like that, doesn't it?"
+        PRG "Y-Yes, Master..."
+        MC "See? Walking that other way... it just doesn't work anymore, does it?"
+        MC "It doesn't feel natural..."
+        show PRG neutral
+        PRG "N-No... it doesn't."
+        MC "Good."
+        MC "Now, it's time for you to sit on your bed. It's time for your late-night belly rubs."
+        MC "You've just worked very hard on this new way of moving."
+        MC "And I know my best cow-girl absolutely loves her belly rubs."
+        "Aida waddled over to her bed again, her walking incredibly exaggerated as she sat down in the middle of her bed, and looked up at me expectantly."
+        "I sat down beside her."
+        "By now, my dick was throbbing in my sweatpants, which did almost nothing to hide it."
+        MC "Well... can't say I approve of this."
+        "I took the ring in the middle of her top in hand, and tugged it just a bit."
+        show PRG worried
+        PRG "I... I thought you wanted me to... be proud of myself?"
+        MC "You should be, Dear. And it's good to be."
+        MC "But, you can do it parading your boobs around like this."
+        show PRG neutral
+        PRG "U-Udders, Master."
+        MC "Right. Udders. Thank you."
+        show PRG worried
+        PRG "I-I'm sorry..."
+        PRG "This was the only thing that fit..."
+        PRG "They've gotten so much bigger lately..."
+        MC "I can tell... look at how big and full they are."
+        MC "You just couldn't fit them in something else, could you?"
+        PRG "N-No... I'm too big..."
+        MC "Well, we'll have to get you milked, won't we?"
+        show PRG neutral
+        PRG "Y-Yes please, Master."
+        show PRG aroused
+        MC "We'll take care of that soon."
+        MC "However, hey. Look at me."
+        show PRG neutral
+        MC "I'll let this slide this time. But next time, I want to see your udders covered up more if you're gonna go in public."
+        MC "Those are for only your master to see."
+        MC "Are we understanding?"
+        PRG "Y-Yes, Master."
+        MC "Good."
+        PRG "... Mochi."
+        MC "Ah... everything okay?"
+        pause 1
+        show PRG blush-2
+        pause .75
+        PRG "... This is so hot."
+        PRG "Mmn..."
+        show PRG neutral
+        PRG "... I want to switch."
+        MC "Switch?"
+        PRG "I-I wanna be the dominant one now."
+        MC "Ah- hey, that's all good with me."
+        MC "Mochi... or un-mochi. Whatever."
+        PRG "..."
+        show PRG blush-2
+        PRG "P-Put your hands on my belly right now."
+        PRG "It needs rubs."
+        MC "Yes... Mistress."
+        "I started rubbing on my side, running my fingers along her and putting gently pressure here and there."
+        PRG "Y-You're not going to be able to reach my whole belly that way."
+        MC "I-"
+        PRG "G-Get on the floor..."
+        "I nodded and got off the bed, and down onto the floor."
+        hide PRG with dissolve
+        "My hands started in, going around her big belly, caressing and massaging every bit of the way."
+        PRG "Mmmnn... good boy..."
+        PRG "Don't stop..."
+        "I kept rubbing, going along the underside of Aida's belly, between her legs."
+        "I felt how it hung, and pushed gently with each rub."
+        PRG "Mmmmngh... hhn-hhhhhnnn..."
+        PRG "Mmmmmm..."
+        PRG "M-Moooo..."
+        "I looked up, standing a little so I could even see Aida's face over her belly and tits."
+        show PRG happy with dissolve
+        "Her eyes were shut, her face flushing red."
+        show PRG neutral
+        "She glanced up, then looked down at my body... and the pole sticking out of the front of my pants."
+        "Aida shifted."
+        PRG "Mmgh... h-help your Mistress up. I shouldn't have to be lifting myself up."
+        "I gave her my hand and pulled, as Aida lifted the rest."
+        show PRG blush-2
+        PRG "... We need to get these clothes off of you."
+        "I started to lift my sweatshirt up, before Aida bumped my hand with her fist."
+        PRG "Mm-mn. Mistress does it."
+        "I let go, as Aida took her 'hooves,' and started to lift up my sweatshirt. She got it up and over my head, then threw it aside."
+        "Next, she went down to my pants."
+        PRG "Mmn... I need your help."
+        PRG "Mistress's hooves can't get the waistband over your breeding part."
+        "I nodded, and pulled them down, revealing my boxers... and also a slight pre-cum stain on the front."
+        PRG "You're dripping already?"
+        MC "I-I'm sorry, Mistress."
+        "Aida looked down as I pulled my socks off, leaving just my boxers."
+        PRG "... You still have too much clothes on~"
+        "I smiled and took down my boxers."
+        MC "Better?"
+        PRG "Much... what a good boy."
+        "Aida reached down, running one finger around my cock's length."
+        "She smiled, and sort of pushed her arms together around her boobs."
+        show PRG blush
+        "She glanced down, looking at her breasts."
+        PRG "Um... I-I need you to look over at the wall for a second."
+        hide PRG with dissolve
+        "I turned, glancing at Aida's TV."
+        menu:
+            "Close your eyes":
+                scene black with fade
+                "I shut my eyes."
+                "All I could make out was soft fabric noises, and a small grunt from Aida."
+                scene Dorm PRG with fade
+            "Sneak a peek in Aida's mirror":
+                "I glanced sideways, right into the mirror on Aida's wall."
+                show PRG grope
+                "My eyes shielded by hair, I was able to watch Aida reach up to her boobs and sort of cup the front, then push down... as two wet spots appeared on the front of her top."
+                hide PRG with dissolve
+                $setFlag("PRG061_mirror")
+        PRG "... M-Master?"
+        show PRG sad-2 with dissolve
+        "I turned around, watching Aida shake her head, looking up at me, her arms pushing her chest forward."
+        PRG "... I-I don't know what happened."
+        MC "Mistress?"
+        show PRG worried
+        PRG "W-Who's 'Mistress?' Y-You're my master, Master."
+        "She looked down... as two long streams of milk ran down her chest on both sides."
+        show PRG sad-2
+        PRG "Ohhh..."
+        PRG "D-Don't look at them, Master..."
+        PRG "I-It's embarrassing..."
+        MC "Come on, Dear. Follow me."
+        scene Bathroom
+        show PRG sad-2
+        with fade
+        "I walked into Aida's bathroom, turning on the light as she followed me in."
+        "I went over and opened up the door to Aida's tub."
+        MC "Let's go. Into your milking stall."
+        "Aida waddled over, and stepped into her tub carefully. She sat down on the chair, looking up at me as I stepped in."
+        PRG "I-I'm sorry my udders leaked, Master..."
+        MC "Why do you feel like that was wrong?"
+        PRG "... B-Because I could have made a mess?"
+        MC "No."
+        MC "It wasn't wrong, Dear. I just didn't milk you quick enough."
+        MC "That was my fault, Dear. I'm sorry."
+        show PRG scared
+        PRG "M-Master! I-It wasn't your fault!"
+        if getFlag("PRG061_mirror"):
+            MC "I know..."
+            "I leaned down by Aida's ear, my nude body now pressing against her big belly and milky tits."
+            MC "... I wasn't the one who pulled on their nipples to make the leaking start."
+            MC "Might be smart to rearrange your room, soon. You know, move mirrors around and stuff."
+            show PRG surprised
+            PRG2 "Y-You were peeking!"
+            MC "Yes, but last I checked, I was told to look away by my mistress."
+            MC "And, unfortunately, I see no mistress here."
+            PRG "M-Master..."
+            MC "It's okay. We'll punish you just as soon as your udders are good and empty."
+        "I nodded, took hold of the front of Aida's top, and undid it."
+        hide PRG with dissolve
+        pause .5
+        $setPRGOutfit(OutfitEnum.TOPLESS)
+        show PRG blush with dissolve
+        pause 2
+        MC "..."
+        PRG "M-Mochi..."
+        MC "I-"
+        show PRG unique
+        PRG "... I know."
+        MC "L... Look at them."
+        PRG "... They've been growing with my boobs."
+        PRG "And, about a month ago, before we went to my parents, they started to get all puffy and big..."
+        MC "They're amazing."
+        show PRG worried
+        PRG "Y-You... you like them?"
+        MC "Yeah... like, big nipples are the best."
+        MC "And puffy ones... holy shit."
+        PRG "I-I always thought that guys didn't like big nipples."
+        show PRG sad-2
+        PRG "I-I was worried because... I-I've kind of always had big nipples..."
+        MC "Aida... I don't fucking care."
+        show PRG scared
+        "I grabbed her boobs and started to rub them."
+        "Milk pushed out, and ran down Aida's belly, the streams pouring down and onto the tub floor."
+        "I felt it rush by my feet, the warmth surprising at first."
+        PRG "M-M-Mochi..."
+        MC "Huh?"
+        MC "You... okay?"
+        show PRG neutral
+        PRG "Y-Yes, I'm fine."
+        PRG "T-That was a 'lets get back into the roleplay' mochi."
+        MC "Ahh."
+        MC "Look at these udders."
+        "I pushed the sides, as more milk came flying out of Aida's nipples, now spraying and soaking my chest, stomach, and dick."
+        "Aida adjusted her legs, pulling her feet up off of the floor."
+        MC "Mmn... good girl. Let all of that milk out."
+        show PRG scared
+        PRG "Mmn... M-Mooooster..."
+        "I glanced down."
+        MC "And mooing now, too?"
+        PRG "M-Mooooster! Y-You know I can't stop my moos once they start!"
+        MC "Then let them out. Who's stopping you?"
+        "I kept squeezing and pushing, her milk flying out more and more."
+        PRG "Y-Yooooou're making a moooooeesss, M-Master!"
+        MC "I'm not. You are. All of this milk didn't come from me."
+        "I pressed my dick against her belly, pushing her big body as I rubbed her tits, pushing them in and out like balloons as milk came cascading down her body, and ran streams between her legs and belly."
+        PRG "M-Moooo!!"
+        MC "Those pesky, little moos just aren't stopping, are they?"
+        show PRG unique
+        PRG "I-I told you, Master... I-I can't stop them..."
+        MC "Okay. Well, let's see how your moos handle this."
+        MC "We aren't stopping milking until you cum. Right here, in your milking stall."
+        show PRG scared
+        PRG "M-Moooster?!"
+        PRG "B-But, I'm not supposed to... m-moooosterbate!"
+        MC "You're not?"
+        show PRG worried
+        PRG "N-No."
+        PRG "I-It's forbidden for cow-girls to touch their breeding parts."
+        MC "Well, you're not masturbating."
+        "I leaned in again, eager to press my body up against her now sopping wet body."
+        show PRG blush-2
+        MC "You're being milked, and... just getting a little too excited."
+        "I reached down, feeling Aida's rock hard nipple hit the side of my hand."
+        "So erect, her nipple felt like a large wine cork, jutting forward from her chest."
+        "I began rubbing my finger around her nipple, doing little circles as I still squeezed her other one."
+        "Aida threw her head back."
+        show PRG excited
+        PRG2 "MMMMMNNN!!"
+        "On the side I'd been squeezing, I grabbed a fistful of her tit, squeezing as if grabbing a ball and pushing it up against her."
+        "Milk poured from around my hand, gushing down my arm and onto the floor."
+        MC "So much milk from such an innocent cowgirl."
+        "Aida seemed to move her lower half forward, then back again. Doing her grinding thing I'd seen her do before."
+        "I smiled."
+        show PRG blush
+        MC "Is my cow-girl getting close?"
+        "Aida nodded violently, her panting growing louder and louder."
+        MC "When you do, I want you to moo for me. Let it out."
+        "I kept squeezing and pressing her boob against her, while rimming her other nipple."
+        PRG2 "HNGH! AAAHH!"
+        PRG2 "MUH-MOOOOO!!!"
+        MC "Good girl!"
+        show PRG scared
+        "I rubbed her breasts, as she looked back at me, panting and clutching the side of the tub."
+        "Aida glanced down looking at all of the milk on the bottom of the tub."
+        MC "We should wash you up."
+        PRG "M-Master? Maybe... we could just towel off for now?"
+        show PRG unique
+        pause .5
+        PRG "... T-These leggings are kind of hard for me to get on."
+        MC "Ah, yes. Of course."
+        "I took a towel and started to dry myself first, then handed it to Aida."
+        show PRG worried
+        PRG "I... I'm drying myself?"
+        MC "No, no. How silly of me."
+        "I started to rub Aida's front down, first her breasts, being extra careful around her nipples."
+        "Then, I came to her belly."
+        MC "Lift your udders for me, Dear. I need to towel under them."
+        show PRG blush
+        "Aida put both hands, then arms around her breasts, and heaved them up, exposing the spot where her breasts met her chest, and her belly started."
+        "I toweled carefully, then went down her belly, and into the crevice between her legs and belly."
+        MC "Turn around. I need to dry your butt off."
+        "Aida turned, bending over, as I brought the towel to her and started to rub her cheeks gently."
+        MC "Good girl. Up now."
+        "Aida straightened up, and looked back at me."
+        MC "Now, back out to the bedroom."
+        scene Dorm PRG
+        show PRG blush
+        with fade
+        "I took Aida's hand and led her back into her room."
+        if getFlag("PRG061_mirror"):
+            MC "Unless I'm mistaken, someone still has a punishment that needs to be served."
+            show PRG unique
+            PRG "..."
+            MC "Who was naughty and trying to milk themselves?"
+            PRG "... Me."
+            MC "That's right."
+            MC "Bend over. Hooves on your bed."
+            PRG "M-Master, I'm-"
+            MC "Shh. No more talking now. You're being punished."
+            PRG "... Y-Yes, Master. I-I'm sorry..."
+            "Aida put her hands on her bed, and bent down, craning her head up as her butt was now projected backwards, right at me."
+            MC "Now. Five spankings, one on each cheek for your punishment."
+            MC "One."
+            "I smacked Aida's right buttcheek. Not overly hard, but just enough to gauge her reaction."
+            show PRG scared
+            PRG "MMMH!"
+            MC "Two."
+            PRG "MMMMHH!"
+            MC "... Three, four."
+            show PRG surprised
+            "I smacked her ass twice in quick succession."
+            PRG "HHHNGGGH!!!"
+            MC "One more on this cheek..."
+            MC "Five."
+            "I smacked, this time harder than all of the others."
+            show dummy with vpunch
+            show PRG scared
+            PRG2 "MMMMNGHHH!!"
+            MC "Now the other cheek."
+            MC "And oh... your butt's turning red already."
+            MC "Such a sensitive little cow. Not used to having her butt spanked."
+            "I smiled, bringing my hand back."
+            MC "It's okay. We'll fix that."
+            MC "One."
+            "I brought my hand firmly onto her left buttcheek."
+            PRG2 "MMGH-HNH!"
+            MC "... Two, three, four... and five!"
+            "I smacked Aida's ass four times in a row, followed by the fifth, and hardest slap."
+            show PRG sad-2
+            PRG2 "AGH-AHHNNNMM!!"
+            MC "There we are..."
+            MC "All done."
+        show PRG neutral
+        MC "Now, back on the bed. Sit down."
+        "Aida sat right away, looking up at me again."
+        MC "Good girl."
+        MC "Now... mm. What other things might a cowgirl need to do?"
+        MC "She's been... milked. Yes, she definitely has. She's been examined. Wonderful rating there, of course."
+        MC "She's had her belly rubbed. Mhm. Very important."
+        PRG "I-I have an idea."
+        MC "And what might that be, Dear?"
+        PRG "I-I don't want to say it out loud..."
+        "I leaned in, putting my hand on Aida's belly for comfort as I put my ear to her mouth."
+        show PRG blush-2
+        PRG2 "... Switch."
+        "I smiled, as Aida stood up, putting her hand on my hip."
+        PRG "Y-You sit down."
+        "I sat down right where Aida had been, the outline of her rear end compared to mine being... laughable."
+        PRG "You've been such a good boy. And you deserve a little treat."
+        "Aida waddled forward, and got down onto the floor, using my legs as braces."
+        "She wriggled toward me, her belly jamming my legs against the bed."
+        "She leaned up, and planted her breasts right in my lap."
+        MC "Mmgh. T-They're heavy..."
+        PRG "No complaining~"
+        "I nodded, as Aida pushed her huge tits together, right over my cock."
+        "She threw them up and down with her hands, and smiled."
+        PRG "Hold on..."
+        "She reached down, shifting her breast with one hand and grabbing her nipple with the other, tugging just enough for milk to dribble out and into her hand."
+        "She let it go down her cleavage, dripping all over my dick."
+        PRG "There..."
+        "She started bouncing her boobs up and down, my dick sandwiched between her two milky pillows, soaked with her creamy juices."
+        "I gasped, clutching the blankets in my fists."
+        MC "Oh my- ngghh..."
+        MC "God... damn..."
+        PRG "Shh... good boy."
+        PRG "T-This is your treat."
+        "Aida leaned down, dropping a bit of spit onto her tits, and letting it roll into her cleavage as well."
+        show PRG neutral
+        PRG "Such a nice breeding part needs care... lots of care."
+        "I nodded heavily. It did need care. Aida's care."
+        "I groaned, as Aida pushed even harder, her own pants meeting my ears as I gasped again, squeezing the blankets tighter."
+        MC "I-I'm gonna-"
+        PRG "No."
+        "Aida let her breasts go and pushed her finger over the head of my dick."
+        PRG "Not yet... you can't finish yet."
+        MC "Y-You got to..."
+        show PRG blush-2
+        PRG "Mm... I-I don't remember doing that..."
+        PRG "L-Listen to Mistress. Hold it back."
+        "I managed to catch my breath and focus, as the rising tides inside me pulled back."
+        "I loosened up, my dick staying fully erect."
+        PRG "What a good boy... h-holding all of that in for your mommy cow..."
+        "I smiled softly."
+        MC "Hey... Mochi."
+        show PRG neutral
+        PRG "Y-Yes?"
+        MC "I... this has been insane. Like... fuck..."
+        show PRG blush-2
+        PRG "I-I know... it's so much fun."
+        MC "But... what do you want?"
+        MC "Do you want me to go dom, or to go sub?"
+        MC "Whatever you'd like."
+        PRG "... Dominant."
+        MC "You... you're sure?"
+        PRG "Mhm..."
+        "Aida looked up at me, still sitting on the floor."
+        show PRG aroused
+        PRG "... Be firm. Dominate me."
+        PRG "Anything you want. It's all okay..."
+        "I nodded."
+        MC "Mochi."
+        show PRG neutral
+        MC "Up on the bed. Spread your legs out."
+        "Aida crawled up carefully, and sat down, her legs spreading out."
+        "I crawled up behind her, my dick sandwiching between her asscheeks as I nestled in."
+        MC "Lean back a little."
+        "Aida obeyed, as I took my hand and worked it between her legs and her belly."
+        MC "Mm... damn."
+        MC "I can't reach... your belly is too big."
+        MC "Here, got it. Lay on your side."
+        "Aida eased down onto her left side."
+        MC "Leg out."
+        show PRG worried
+        "I lay down beside her, popped up on my elbow, and reached down, finding her bottoms immediately."
+        MC "Mmngh... here we are."
+        "I rubbed the outside of her thong, feeling... it under my hand."
+        "I glanced down, and pulled her thong to the side."
+        "Her vagina was soaked, what I could see of it glistening in the light."
+        MC "Mm. You're sopping wet. That's so unladylike."
+        show PRG unsure
+        PRG "I-I'm sorry... I can't help it."
+        "I pushed my hand down to it, taking two of my fingers."
+        "I pressed them in, the warmth of Aida's vagina covering my fingers."
+        PRG "Mmm... hnngh..."
+        "Aida's little squeaks of pleasure drove me on, as I felt my fingers brush against something vaguely shaped like a bean."
+        MC "... There you are."
+        show PRG worried
+        PRG "M-Moooster..."
+        "I began doing circles around her clit."
+        "Aida's body went rigid against me, her hand going up and grasping my arm, the thought of hooves completely out the window."
+        show PRG scared
+        PRG2 "HAAAHH! MMMN!!"
+        MC "Good girl... let all of those noises out. Good cows are loud."
+        "I smirked, digging my fingers back in and keeping the motion on pace and firm. No more, no less."
+        MC "Now... time for you to do the work."
+        "I gripped Aida's wrist, and brought her hand down to her lips."
+        PRG "M-Master! I can't!"
+        PRG "I-I'm not supposed to touch there!"
+        MC "Well... we'll just keep this little rule-break quiet, then."
+        "I pressed Aida's hand down and against her pussy."
+        "The minute they touched, Aida's fingers dug in, and started rocketing her clit in circles."
+        show PRG lactate
+        PRG "{i}Nnnhh... hhnn-hnnn-hnnn...{/i}"
+        MC "My... such a kind, sweet cow-girl. Laying in front of me and breaking the rules."
+        MC "Rubbing her clit like a dirty cow~"
+        MC "I'm appalled."
+        "Her hand jammed hard between her legs, Aida's other hand was caressing her boob, the massive tit jiggling with her movements."
+        MC "That's enough now. Hooves out from between legs."
+        "Aida didn't listen."
+        "Her hand stayed hard between her legs, her body rocking as she blasted herself."
+        "I gripped her wrist."
+        MC "Hooves out."
+        show PRG sad-2
+        PRG "N-No, Master! Please! J-Just a little more!"
+        MC "No."
+        "I yanked her arm out, watching her fingers glisten in the light."
+        "I laid beside her, coming up and kissing her on the cheek, then down on her neck."
+        PRG "Mmmnn... M-Master. Please..."
+        show PRG unsure
+        PRG "P-Please don't leave me like this... I-I need it..."
+        "I took a side of Aida's blanket and yanked it up, jamming it into Aida's mouth."
+        MC "You keep that there. When I want to hear your begging, I'll take it out."
+        show PRG worried
+        PRG "Mmff..."
+        "I laid beside her, rubbing her belly and pressing my dick between her asscheeks."
+        "I took a breath, feeling my massive girlfriend beside me, her body trembling and shaking slightly."
+        MC "You really are horny, aren't you?"
+        "I put my hand on the side of Aida's jaw, and held her head up for another kiss on the cheek."
+        MC "Filthy, filthy girl. Can't get her mind off of breeding for even a second."
+        "I looked down, seeing Aida's legs still open."
+        MC "Close those damn legs."
+        MC "Have some decency."
+        "Aida slowly brought her top leg down, trembling slightly again."
+        "I smacked Aida's ass with a resounding smack. Her ass jiggled, down into her thigh."
+        show PRG scared
+        PRG2 "MMGH!"
+        MC "Yes. This is what I like."
+        MC "A nice, calm, obedient cow-girl."
+        MC "Now... let's get you into the breeding position."
+        "I got up and crawled over Aida, standing up."
+        show PRG unsure
+        MC "Get up, Sweetheart."
+        "I gave her my hands and helped her ease herself out of bed, as I plucked the blanket from her mouth."
+        MC "Now, show me your breeding position. Show your Master."
+        "Aida put her hands down on the bed, and bent over, jamming her ass into the air."
+        "Her cheeks spread, showing her asshole, and the plump, moist pussy between her legs."
+        show PRG lactate
+        PRG "P-Please, Master."
+        PRG "I-I can't take anymore!"
+        "I nodded, positioning myself behind her and lining up."
+        "I pushed into her pussy, her asscheeks pressing up against my stomach."
+        show PRG scared
+        PRG2 "MMMMMMMNGH!! MM!"
+        "Lube wasn't needed. Aida was soaked, her vagina lubed all on its own."
+        "I felt her insides squeeze as I entered in, her pussy twitching as it took my length, her hot lips halting as I felt myself reach fully inside."
+        PRG2 "MMMGH! H-HHHN!"
+        MC "Mmngh... hhn..."
+        "My thrusts were fast and steady, pushing myself in and out on my feet, Aida's rug on the floor giving me grip to hold on to."
+        "I bounced her back and forth on my cock, a satisfying squelch from her vagina with every single thrust in."
+        PRG "AAH! AAAHN!!"
+        "Her breathing was going faster and faster. Beneath me, her belly was pressing through her legs. I could feel her body rumble after each thrust, the aftershocks of her boobs swinging reverberating through her."
+        "Her bell clanged rhythmically down below, as Aida's yelps and whimpers filled the air around me."
+        "It had been a long time. So long."
+        "Aida had been so skinny and delicate when we'd first had sex."
+        "But now... she was pregnant, and huge, and curvy."
+        "I gripped her hips, drowning my dick in her vagina."
+        "Every movement felt like butter. So smooth. So easy."
+        "The pleasure seemed to swim around my head like water currents."
+        "I was so in the moment, but also so far off in the clouds, looking down at my enormously pregnant girlfriend bent over her bed, taking my cock."
+        show PRG lactate
+        PRG2 "AAAH!"
+        "Aida let out a shockingly loud yelp, as her insides convulsed."
+        "Her vagina seemed to constrict around my dick, as if it was trying to force it out."
+        "I persisted, and shoved even deeper into her, pushing past her flesh."
+        PRG2 "HHHNGH!!"
+        "My movements sped up, as I felt the dam growing closer to bursting."
+        "I slid out, feeling the pressure die down, as Aida went limp, rolling over onto her side and letting herself slide to the floor. She was panting hard, her hair rumpled and her face bright red."
+        MC "Did you cum?"
+        show PRG worried
+        "Aida nodded her head slowly, looking up at me."
+        MC "Good... good girl."
+        "I knelt down by her, looking Aida in the face."
+        "Her belly was resting on the floor, forcing her boobs up nearly into her face, as her legs sat apart, cradling her belly between them."
+        "I saw her soft eyes, looking up at me, her soft lips plump and wet."
+        "I leaned in, kissing her deeply, holding her jaw in my hand."
+        MC "... Mochi."
+        PRG "..."
+        PRG "You didn't... you're still hard."
+        MC "I know."
+        MC "Because..."
+        "I looked Aida in the face."
+        MC "This roleplay has been... like fuck, I don't know how to describe it."
+        MC "One of the best nights of my life."
+        show PRG neutral
+        PRG "M-Me too..."
+        stop music fadeout 2.0
+        MC "But... I want to end it on the best note."
+        MC "The words are still Mochi and Dango."
+        MC "However... they apply to Aida and Keisuke. Not the cow and the master."
+        MC "I don't want us to just do this in the play setting."
+        show PRG blush-2
+        MC "I want... to do it as us. As we really are."
+        MC "And... I want to do it with you. No hiding behind anything. Just us in our purest forms."
+        "Aida smiled up at me."
+        PRG "I love you..."
+        MC "I love you too."
+        "I leaned down, kissing her lips once more."
+        MC "Now... it's time for breeding."
+        PRG "Y-Yes, Baby."
+    show PRG neutral
+    "I got onto the bed again, as Aida sat beside me, her eyes trained on mine."
+    PRG "I..."
+    MC "I know we've said it before... but no hiding."
+    MC "Let's... let our freaks out."
+    PRG "O-Okay..."
+    MC "Remember. It's all dirty talk. Just for fun."
+    PRG "Mhm. I-I know, Sweetie."
+    play music PRG fadein 2.0
+    "I nodded... then rubbed my fingers in my hand a little."
+    "It shouldn't have felt different... but it was."
+    "I'd milked Aida tonight. Like, that was way further."
+    "I reached over, and put my hand on Aida's boob. Right on the right one."
+    MC "God. Dressed up like such a nice, elegant lady tonight."
+    MC "And now look at you... sitting here with your boobs out, and half naked."
+    PRG "... Do you like me sitting here with my boobs out?"
+    show PRG blush-2
+    PRG "Just... waiting for you to come and touch them?"
+    "I scooted closed, my other hand on Aida's thigh."
+    "Our heads seemed to drift closer together of their own accord."
+    MC "Do you like when I touch them?"
+    PRG2 "Yeah..."
+    MC "Mm... well, I'd like to try something."
+    PRG "What?"
+    MC "Well..."
+    "I leaned myself into Aida, putting my head on top of her belly, and positioning my mouth by her nipple."
+    "I gave it a gentle lick, then brought my mouth to it, immediately feeling her impressively large nipple fill up a good portion of my mouth."
+    "Making sure my teeth were out of the way, I gave a gentle suck."
+    PRG "Mmmn..."
+    "I sucked gently once more... before feeling a gentle touch on the back of my head."
+    PRG "... P-Please don't stop."
+    "Another suck, and small streams of milk shot into my mouth."
+    MCT "..."
+    MCT "It's sweet. Like... coffee creamer. But... thick."
+    "I let my eyes close, continuing to suck softly, as Aida stroked my hair."
+    PRG "Shh... I've got you."
+    "I felt Aida cuddle me, holding me against her."
+    MCT "Cuddles, sweet milk, love."
+    MCT "Yep. I'm doing this again sometime."
+    "I let go, sitting back up and smiling."
+    PRG "..."
+    PRG "T-That felt... a-amazing..."
+    MC "Well, let's chalk that up for things to do again later."
+    MC "Now... should I touch something else?"
+    PRG2 "Y-Yeah..."
+    "I took my hand down and finally caressed her belly with heavy rubs. Her tight, pregnant skin was smooth as butter, her body shaking under my hand."
+    if getFlag("Dom"):
+        MC "Mm... look at how big I made you."
+        PRG "Y-Yeah..."
+    elif getFlag("Sub"):
+        PRG "L-Look... look at how big you made me..."
+        MC "Y-Yeah. I... guess I did a good job."
+        PRG "You did..."
+    elif getFlag("Switch"):
+        MC "I did a good job."
+        PRG "Y-Yes, you did."
+    PRG "You... you got me so big and pregnant..."
+    PRG "L-Look at my belly."
+    MC "I know..."
+    MC "Look... it's no secret that the whole... growing thing... turns me on."
+    show PRG neutral
+    PRG "... I know."
+    MC "But... I don't want that to like... make you think that I want you to grow bigger in exchange for... like your ease of life or anything."
+    MC "I... I don't want you hurting or in pain. Or... or sad."
+    MC "I want you to feel happy, and like you're... you."
+    PRG "... I do feel happy, Baby."
+    show PRG unique-happy
+    PRG "Every day, even when difficult moments happen... I feel happy."
+    PRG "And... I'm looking forward to... being a mom."
+    PRG "I-I've been thinking about it a lot."
+    PRG "And... growing is part of being pregnant."
+    MC "But... even at this excess?"
+    MC "Like, you're probably one of the biggest pregnant women in the world right now."
+    show PRG worried
+    PRG "I know..."
+    PRG "But..."
+    PRG "I... might not be the best mom ever. I'll have a lot to learn."
+    PRG "Even still... I'm not going to mess this up. I-I know I won't. I won't let myself."
+    PRG "And..."
+    show PRG unique-happy
+    PRG "... L-Like I told you that day... I'm horny a lot."
+    PRG "I'm..."
+    show PRG worried
+    PRG "... No matter what I do... I'm going to grow."
+    PRG "It's going to happen, whether I like it or not."
+    PRG "And, when you have something happen to you that isn't going away, and isn't able to be taken away, you... have to look at the positives."
+    PRG "Like... yes, I might have a hard time getting through normal sized doors now. And... I haven't been able to see my feet very well for a long time."
+    show PRG blush-2
+    PRG "But... {w}it kind of feels... good. To grow."
+    MC "It... does?"
+    PRG "Mhm."
+    PRG "My... skin starts to feel really tight. And strained. Then, a few days after that, that feeling goes away, and my body gets kind of loose."
+    PRG "Then, it repeats."
+    show PRG unsure
+    PRG "And... e-every part of my body that's growing is... r-really sensitive."
+    PRG "M-My belly, my boobs... m-my butt, a little anyways."
+    PRG "Even my legs tingle a lot now."
+    show PRG blush-2
+    PRG "Everything feels so... good..."
+    PRG "When... I know that... almost anyone else probably wouldn't feel that way."
+    show PRG worried
+    PRG "I know that... I'm going to be a mom, and that I'm going to have to raise... three babies all at once."
+    PRG "But... I don't care. I can do it. And... you're part of the reason why I know I can."
+    MC "So... you don't mind growing?"
+    show PRG unique
+    PRG "I wouldn't say that... {w}this is hard."
+    PRG "I... can take the hard parts of it and... accept them."
+    PRG "And... I can take the good parts and enjoy them."
+    show PRG blush
+    PRG "Plus... w-well..."
+    PRG "You... o-obviously know that I like... BDSM."
+    MC "Well, yes."
+    PRG "And... p-part of that is..."
+    show PRG unique
+    PRG "A-As... frustrating as it can be to... not really be able to bend over much anymore, p-part of the... f-fetish for me is..."
+    PRG "... S-Struggling."
+    PRG "I... find being restrained to be... r-really hot."
+    PRG "A-And I know how... m-messed up that probably sounds."
+    show PRG blush-2
+    PRG "But, like... being forced to do things, all of that."
+    PRG "I love... being dominated."
+    MC "You... think it's messed up because it's associated with pregnancy? Something that... seems very pure in comparison?"
+    show PRG unique
+    PRG "... Exactly."
+    MC "Well... I mean."
+    MC "How do you think it feels to admit that I have a fetish for pregnant girls?"
+    MC "Same sort of deal."
+    PRG "Right..."
+    MC "And, you don't think I'm immoral or anything for finding you hot, do you?"
+    show PRG neutral
+    PRG "... You know I don't think that."
+    MC "Then... I don't see it as immoral to be turned on by BDSM stuff, even if it's related to your pregnancy."
+    MC "And, you shouldn't either."
+    PRG "Mhm..."
+    PRG "And, Baby?"
+    pause 1
+    show PRG unique-happy
+    PRG "... I don't mind that you get turned on by me growing."
+    PRG "In fact... I-I kind of like it..."
+    MC "Yeah?"
+    PRG "I mean..."
+    show PRG blush-2
+    PRG "O-One of the biggest things a girl worries about is gaining weight."
+    PRG "If you don't mind my growing... then that isn't really a problem is it?"
+    show PRG unsure
+    PRG "U-Unless you don't like... f-fat girls."
+    MC "Hey... it's on you. I don't care."
+    show PRG blush-2
+    MC "You with any sort of growth factor would still turn me on."
+    PRG "... E-Even if I was as tall as a building?"
+    MC "Even then."
+    stop music fadeout 2.0
+    PRG "..."
+    MC "Now..."
+    "I started rubbing her belly again."
+    MC "Shall we... grow together?"
+    "I smiled, and felt a hand go up my back, up my neck, and into my hair, grasping a large handful right by the roots."
+    show PRG unique-happy
+    PRG "... Yes. Let's grow together."
+    "I dug my fingers against Aida's belly as she pulled my hair firmly."
+    PRG "I-I..."
+    play music Love fadein 2.0
+    show PRG blush-2
+    PRG "I want your hair long... down to the floor."
+    PRG "Your long, handsome hair..."
+    PRG "So rugged and strong..."
+    if getFlag("Sub"):
+        PRG "P-Perfect for my breeding bull..."
+    MC "I want your belly big... bigger."
+    show PRG aroused
+    MC "I want to see you waddle... struggling. Barely able to contain it."
+    "Aida smiled and eased herself off the bed, getting up... and waddling over to the wall."
+    "She turned, starting back over, even slower."
+    PRG "Ohh... l-look at what you did to me."
+    PRG "My belly's so big..."
+    MC "Hey..."
+    show PRG blush-2
+    "I stood up as well, opening my arms for her as she waddled into them."
+    MC "I believe it was time for your breeding... wasn't it?"
+    PRG "... Y-Yes."
+    PRG "... B-Breed me on the floor. Like a dirty cow does."
+    "I nodded and offered my hand, letting Aida down slowly, until she was crouching."
+    "She turned, leaning over onto her bed, her belly just barely fitting between her and the bed."
+    "I reached down, taking the fabric of her cow bottoms... and tearing them, yanking what was left of her panties off."
+    PRG "I-I've been waiting for this for so long..."
+    MC "You have no idea..."
+    "I reached up, yanking one of Aida's pillows off and onto the floor."
+    MC "But, I did not say to go up like that."
+    MC "Down on the ground. Put that pillow under your hips."
+    "I swatted Aida's ass once, watching her go rigid for a moment."
+    show PRG aroused
+    PRG "Y-Yes, Master..."
+    "Aida laid down on the floor, the pillow jacking her hips and butt up just enough."
+    "Her belly jutted up into the air like a mountain peak."
+    "Beneath, like a serene valley, her vagina seemed to glow and glisten in the light."
+    "I glanced up by her head... where her boobs were splayed out in front of her, the tops of her breasts touching her chin."
+    if getFlag("Dom"):
+        MC "Uh oh."
+        MC "Looks like someone's slutbags are getting in the way."
+        show PRG worried
+        PRG "Mhm... I-I can't see. They're too big..."
+        MC "Nothing is too big."
+        MC "Rub your slutbags."
+        show PRG lactate
+        "Aida's hands came up, and started pressing her huge tits on both sides, running her hands across them."
+        MC "Don't you love your slutbags?"
+        PRG "I-I love my... s-slutbags..."
+    elif getFlag("Sub"):
+        PRG "M-My... boobs are getting in the way."
+        MC "Let me-"
+        PRG "D-Don't touch them."
+        PRG "N-No touching~"
+        MC "Right... no touching."
+    elif getFlag("Switch"):
+        MC "Looks like someone's big, full breasts are just too big for her to see over."
+        PRG "No touching them~"
+        MC "Hey... who's the one who wanted to be dominated?"
+        "I smiled, rubbing her belly and leaning over, kissing it."
+        PRG "Mmmnnn..."
+    "I went back down, looking down at her pussy sitting there and waiting."
+    MC "You know..."
+    MC "Technically, I did already eat cow tonight."
+    MC "But, I think I could eat another."
+    hide PRG with dissolve
+    "I went down, pushing my head between her thighs, and letting my tongue out, and digging it between her lips."
+    PRG2 "MMMMHH?!!"
+    "Her lips being so swollen and puffy, I had to push a bit, feeling them press against my face, but I reached her clit quickly, digging my tongue in and swirling around it, rounding the bend over and over again."
+    PRG2 "AHH-HH! B-B-BABY! MMN!"
+    "I shut my eyes, digging even further and lapping her sex like a thirsty dog."
+    "Opening up again, I saw Aida's hands running around the edges of her belly, just seeing her fingers over the edge."
+    "She clung to her belly, her hands digging in."
+    scene black with fade
+    "I let out a gasp as Aida's legs closed around my head, sandwiching my tongue into her pussy."
+    "My hearing was all but taken from me, and my other senses deadened, the pure lust and hunger taking a heavy hold."
+    "I devoured her, my tongue plowing ahead and claiming her clit."
+    "Around my head, I felt a shaking, and glanced up as much as I could."
+    "Aida's hands were nowhere in sight, her belly above also seeming to shake."
+    "... Then I heard it."
+    PRG "MMGH! MMN-MMN... HNGGGH!!!"
+    MCT "She's trembling!"
+    "I dug in further, her thighs squishing further and further, my vision blurring as my head was pressed."
+    "Aida's thighs flew open."
+    scene Dorm PRG with fade
+    PRG "B-Baby! B-Baby, please!"
+    PRG "I-I can't wait anymore! D-Don't make me wait anymore!"
+    PRG "P-Please!"
+    show PRG scared with dissolve
+    "I got up, wiping my mouth."
+    MC "What do you want me to do?"
+    show PRG sad-2
+    PRG "I-I..."
+    PRG "P-Please... please put it in."
+    PRG "Please..."
+    PRG "I-I need it... inside me."
+    "Aida's legs spread far out, showing her pussy to me."
+    MC "Mm... you're presenting for me? Showing your master your pussy?"
+    PRG "M-Mhm! P-Please breed it!"
+    pause 2
+    "I didn't need any more coaxing."
+    "I got my knees set... and pressed the head of my dick into Aida's pussy."
+    show PRG surprised
+    PRG "MMN!"
+    MC "It isn't even all the way in yet~"
+    "I pushed, forcing my length in deeper."
+    MC "MNGH! N-Now it is!"
+    show PRG scared
+    PRG2 "MMNNN! MM! HHnnn..."
+    play sound AidaCowSex
+    "I was thrusting before I was even cognisant of it."
+    "My body pushed against hers, the feeling of her pussy being beyond anything I'd felt before."
+    "Her belly was right in front of me, blocking most of my view of Aida."
+    "I jacked one of Aida's legs up, bringing it onto my shoulder, letting me hold onto it with one arm, while the other was rubbing her belly up and down, moving in time with my thrusts."
+    PRG2 "MMMMmmmmmmnnn... Hnnnghh..."
+    PRG2 "Mn-mn-mn-mn..."
+    MC "Hah... mgh."
+    "My hand clasped Aida's thigh on her raised leg, feeling the chubby thing jiggle with each movement."
+    "I rammed my cock in further and further, looking down and watching my length disappear and reappear from Aida's slit, now stretched out and even more wet than before."
+    "Her moans had morphed into tiny, little squeaks of pleasure, each thrust pushing another cry of ecstasy past her lips."
+    "Her pussy constricted around me, tightening and forcing me to push harder to get fully inside."
+    MC "S-Someone just came... hahh..."
+    show PRG sad-2
+    PRG "I-I-I... I-I... I-I w-wanna cum a-again..."
+    "I pushed my dick further as she came, forcing the flesh to give way, pushing against her orgasming insides."
+    show PRG lactate
+    PRG "MMMMNNNNN!"
+    "I slid out quickly, getting under her and helping her up, then quickly throwing myself onto her bed."
+    MC "Get on top, hurry."
+    show PRG worried
+    PRG "B-But, I'll-"
+    MC "You're not too heavy. I don't care."
+    MC "Ride me, and put that belly right in my face."
+    "Aida crawled onto her bed, her mouth hanging open, as she positioned herself, and sat down right on my cock."
+    show PRG lactate
+    "Both of Aida's hands went under her breasts, as she bounced up and down, throwing her tits and hair up then colliding back down, before being tossed up again."
+    PRG2 "AAAHH! NNNNnnnn..."
+    "Aida's belly smacked down against me, taking my breath out with every bounce."
+    "My chest and stomach were where the bulk of her belly landed, my face so close and watching her pregnant mound jump up and down right in front of my eyes."
+    PRG2 "MMmmm... B-Baby... nnnhhh..."
+    show PRG scared
+    PRG2 "H-Hold my belly! Rub it, please!"
+    "I let her belly fall into my hands, then followed it up and down."
+    MC "G-God, you're so big... s-so big..."
+    "Aida had her tongue between her lips, looking down and bouncing even faster and harder."
+    "With each bump up, her ass came crashing down onto my hips and legs, the big, round cheeks and her pussy giving a deep, satisfyingly wet {i}smack{/i} with every hit."
+    PRG2 "O-Oh my God... nnnnn-nn-nn..."
+    MC "M-My pretty little... s-slut is... f-fucking..."
+    PRG2 "I-I'm your pretty little... s-slut..."
+    MC "G-Good girl... ride that cock."
+    "Aida leaned back into my bent legs, almost using my thighs and knees as a backrest."
+    "Her belly now was thrusting up and down in midair, right in front of me."
+    "From the sides, I could just see her boobs go bouncing up and down, free of their bra, and being flung upwards from Aida's motion."
+    "I clung onto Aida's legs, driving myself up as she rode down, her insides starting to tighten again... as I felt my insides twist, pressure building and tingling through my entire body."
+    MC "I-I... I'm gonna cum-"
+    PRG2 "Hnnn... nnn-nnnh!"
+    PRG2 "C-Cum in me again! I-I'm cumming!"
+    "I reached out, only being able to reach Aida's belly."
+    "I held the sides of it as I pushed upwards, the elation bursting over and erupting in my head."
+    "My heart slammed in my chest as I pressed up, my cock pulsing and pouring cum inside of Aida."
+    show PRG lactate
+    MC "AH! HHHHNNGH!"
+    PRG2 "AAAAAAAHHH!! MMMM!!"
+    show dummy with vpunch
+    "Aida's cry echoed through the entire room, as she covered her mouth, letting out more and more yelps and squeals."
+    show PRG worried
+    PRG2 "Ahhhhh... hughhhh..."
+    PRG2 "Mhhhh... hhhh..."
+    MC "Ahhh... hhh... hnn..."
+    "I looked up at her and her belly, as she sat there, my dick still dripping cum inside of her."
+    "Aida slipped off of me, and stood, her legs nearly buckling as she threw a hand onto the bed."
+    show PRG blush-2
+    PRG "O-Oops..."
+    PRG "Mmn..."
+    "I sat up, and wormed around her, kissing her lips close, her hair sticking to my damp face as I grabbed her jaw, holding her there."
+    PRG "I love you, Baby..."
+    MC "I love you too..."
+    PRG "Mmnnn..."
+    "Aida sat on her bed, stroking my hair."
+    show PRG unique-happy
+    PRG "Eheheh... I-I feel so tired now..."
+    MC "Yeah. That was a lot of bouncing for you. Getting your leg day in."
+    PRG "Y-Yeah..."
+    show PRG neutral
+    PRG "Um... I-I'm gonna... clean up. Then, just check to make sure nothing's out for Alice to see."
+    MC "Good idea."
+    MC "I'll pick up in here."
+    show PRG blush-2
+    PRG "Okay..."
+    PRG "But, um... n-no clothes on in bed tonight."
+    "Aida glanced behind her, reaching back and gently rubbing my dick."
+    PRG "I... I want this to be accessible. In... in case I need it."
+    MC "Heh. Can do."
+    stop music fadeout 2.0
+    "I kissed Aida's cheek one more time, then got up as she did."
+    hide PRG with dissolve
+    "As Aida shut the bathroom door behind her, I picked up her top, and the shredded bits of her panties, which I sat on her desk."
+    "I glanced down at the note one more time. My 'contract.'"
+    "Smiling, I set it down by my bag, and set my clothes beside it, then started making Aida's bed, leaving the blankets open to air everything out."
+    "I reached over, cracking the window slightly, as a cooling breeze flew in."
+    "Feeling the air circulate, I sat on the bed and sighed."
+    scene black with fade
+    pause 1
+    play music LoveC fadein 2.0
+    $setPRGOutfit(OutfitEnum.NUDE)
+    scene Dorm PRG
+    show PRG neutral
+    with fade
+    MC "Feel better?"
+    PRG "Mhm..."
+    "Aida waddled over, glancing at her clock."
+    PRG "It's past 1:00."
+    MC "I know. Time flies, huh?"
+    PRG "Y-Yeah."
+    "I shifted over in bed, as Aida hit her light and sat down, laying on her side facing away from me."
+    scene black with fade
+    "I snuggled in against her, my arm going around her and rubbing her belly."
+    pause 1
+    MC "Hey. With all of this... I forgot to tell you something."
+    PRG "What?"
+    MC "I... went down to the administrative office yesterday. And, I picked us up something."
+    MC "It'll need your signature."
+    PRG "W-What is it?"
+    MC "... Apartment application forms."
+    PRG2 "BABY!!"
+    PRG2 "Really?!"
+    MC "Yep! Got them at the dorm right now."
+    MC "The academy will help us find a place that will fit us both, plus the kids."
+    PRG2 "K-Keisuke..."
+    "I hugged her around the back."
+    MC "Wanna sign 'em tomorrow?"
+    PRG2 "Y-Yes."
+    PRG2 "I... I can't believe it... o-our own apartment someday."
+    MC "Yeah... get out of here and move right there."
+    PRG2 "I can't wait..."
+    MC "Me either."
+    "The room was quiet for a bit, as both of us seemed to drift off."
+    PRG "... I love you so much."
+    MC "I love you too."
     scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
     stop music fadeout 0.5
     "The scene you just finished marks the current end of Aida's route."
@@ -39109,668 +43037,10 @@ label PRG059_belly_b:
     "Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it."
     jump daymenu
 
-label PRG060:
-    $setProgress("PRG", "PRG061")
-    scene Dorm Interior with fade
-    play music Schoolday
-    $setSize(5)
-    $setTimeFlag("size5")
-    "Rather than my day starting with my alarm going off and me blasting obscenities in my head as I nearly hurled my ringing phone across the room, I awoke to the sound of my phone ringing instead."
-    "Sitting up, I looked over. I so rarely got phone calls, that, when I did receive one, it almost made me panic a bit."
-    "When I saw the caller ID, my heart slammed to a halt in my chest and my blood ran as cold as ice. The panic had a reason for its existence now."
-    "While my palms were sweating up a storm, I answered the phone."
-    "I knew that the call had to come at some point, but why now. God, why now?"
-    MC "Hey, Mom."
-    MomCell "Keisuke Hotsure! Would it kill you to call your own mother for once?"
-    MC "I-I'm sorry, Mom. I jus-"
-    MomCell "You've been at school for how long, and I don't even get so much as a text?!"
-    MC "Mom, I-"
-    MomCell "Mom, I nothing! For Pete's sake, Keisuke! It's been literal months! I've talked to your sister more often than I've spoken to you lately!"
-    MC "Mom, I'm really sorry for the radio silence. Like, really sorry."
-    MomCell "I should hope so."
-    MomCell "So, tell me everything. How's school been? Getting good grades, I trust? Are you keeping an eye on your sister? Any girlfriends?"
-    MC "All right. Well, starting from the beginning, school is school. Nothing's too different from the usual classes and tests. Well, aside from the growth factors."
-    MomCell "Yes, I'm sure. You and your sister kind of lucked out on hair, huh?"
-    MC "Heh, kind of, I guess."
-    MC "Grades have been there. Doing my usual, I guess. I've been trying my hardest to study and keep myself engaged in class. Note taking, paying attention, you know, the studious stuff."
-    MomCell "Good to hear, Honey."
-    MC "Tomo's been good. I don't see her too often, but she's been doing her thing, like always."
-    MomCell "I don't doubt she's made her own friends and she's off enjoying herself."
-    MCT "Or sitting in her room with the curtains drawn."
-    MC "Yeah."
-    MomCell "And, any girlfriends?"
-    MC "Well... y-yeah, actually."
-    MomCell "See, this is why you need to call me more often, Keisuke! I'm so happy for you!"
-    MC "Thanks, Mom."
-    MomCell "What's her name? Where is she from?!"
-    MomCell "Oh! Just give me all the details already!"
-    MC "Geez, Mom. You're like a high school girl."
-    MC "Well, her name is Aida Kodama."
-    MomCell "Ooh. Pretty name. What's she like?"
-    MC "Ah, let's just say that she's someone you'd get along with really well. She's really quiet and shy, but once you get to know her a little, she's incredibly kind and sweet."
-    MomCell "That's so good to hear, Honey. I'm proud of you. How did you two meet?"
-    MC "On my first day at the Academy, actually. She was cleaning a classroom, and I happened to run into her there. Unfortunately, it wasn't much of a fairy tale meeting."
-    MomCell "The way you two met doesn't matter a bit. As long as you both are happy, that's all that counts."
-    MomCell "And, I assume she has a factor, as well?"
-    MC "I... uh, yeah... yeah, she does."
-    MomCell "Right. Well, don't feel like you need to tell me, Dear. It's none of my business."
-    MC "No, I... I kind of feel like you'd want to know. And, you should know, to be blunt."
-    MomCell "Okay, Honey. If you're sure."
-    MC "Mhm. So, for starters, Aida has one of the rarest factors of all. Like, from what I've heard, there's only a handful of girls who've had this factor in the history of the Academy."
-    MomCell "I see. Go on, Dear."
-    "I felt like I was trying to rip off a full body bandage. I knew I should've called her and Dad sooner, but the tension and stress of the whole situation had just made me shove my parents into a corner and try to ignore them."
-    MC "Well... essentially, her factor gives her hyperfertility, and her actual growth is rooted in that."
-    MC "Her factor only really appears if or when she gets pregnant, but when it does, she grows from there."
-    MomCell "I see. That's definitely a unique sounding situation. I'm sure that once she got pregnant, her whole world would be flipped upside-down."
-    stop music
-    MC "Well... that's kind of the thing, Mom."
-    MomCell "What thing, Honey?"
-    MC "Aida's already pregnant."
-    MomCell "Wait... what? She..."
-    MomCell "Oh, Keisuke, you didn't..."
-    MC "I... yeah, Mom.{w} I got Aida pregnant."
-    "The line went dead. All I heard was a dull thud on the other end. Then, I heard scrambling on the other end of the line."
-    MomCell "K-Keisuke... now is absolutely not the time for joking. I-"
-    MC "Mom, I'm not lying. I swear to you that I'm telling the absolute truth."
-    MomCell "Keisuke..."
-    MomCell "I... how far along is she?"
-    MC "Probably around four to five months."
-    MomCell "She... God..."
-    MomCell "Honey, I don't mean to demean you, but do you understand what it takes to raise a child? Like... any idea? The level of dedication and patience that will be needed? You'll be tested each and every day."
-    MC "I know. I remember you telling me about when I was a baby."
-    MomCell "And you... God, I need to sit down."
-    MomCell "Hngh... okay... how is she handling this?"
-    MC "About as well as you'd expect. She tries to keep a brave face, but I can tell that, under it all, she's scared."
-    MomCell "Well, all you can do is be there for her. I'm not exactly thrilled that you're first telling us this now, but I do have to commend you for being mature about this."
-    MC "Thanks, Mom. I can text you a copy of the ultrasound, if you'd like."
-    MomCell "Yes, yes, please do. I never thought I'd be seeing my grandchild this early, but I suppose better now than never."
-    MC "And... that's the other thing. She's having more than one."
-    MomCell "... You're joking."
-    MC "No. Aida's condition raises her chances of having multiple babies at one time immensely."
-    MomCell "I... okay. How many is she having?"
-    MC "Five. Five babies."
-    MomCell "Dear Lord, Keisuke. And you... you're sure about this? I mean, one baby is a ton of work. But, five? I don't think I could even handle that and walk away with my sanity. I'm sorry to sound so downtrodden, but you do have to understand how this sounds, right?"
-    MC "Mom, I made a commitment to Aida. I'm not leaving her."
-    MomCell "I-I didn't necessarily mean that, dear. I was thinking along the lines of adoption or something..."
-    MC "We haven't discussed that yet."
-    MomCell "I... you're your own man, Keisuke, and I can't tell you what to do anymore. Having said that, I'd strongly consider adoption. You're still so young, and I..."
-    MomCell "I just don't want to see you under that level of stress."
-    MC "Mom, we're going to figure it out. Aida will be getting some financial help from the Academy. And, whatever I have to do, I'll do it. Even if I have to chop my own leg off."
-    MomCell "God, please not that."
-    MomCell "Well, alright, Keisuke. I trust you. I... look, when your father hears about this, he'll probably try and call you too. So... be ready for that, okay?"
-    MC "I will. Promise."
-    MomCell "Okay, honey. Well, I... God, five babies. I can't believe my baby is gonna be a dad."
-    MC "Yeah, I still can't believe it either, to be honest."
-    MomCell "Well, give Aida my best, okay? Tell her that I can't wait to meet her."
-    MC "I will. Try and relax, okay Mom?"
-    MomCell "Right... yeah. I'll do my best."
-    MomCell "But, if I can say something, Keisuke. Please, just... nevermind."
-    MomCell "I love you, Keisuke. So much. Please know that."
-    MC "I do, Mom. And, I love you too."
-    MomCell "Okay. Bye, Honey. I'll talk to you soon."
-    "The line clicked and went dead. I set my phone down and laid back down, pulling the blankets up and over my head. I didn't want to move."
-    "Somehow, my mom had just made this fairy tale seem so real. Stress, patience. All things I was going to have to deal with. God, the diaper changes alone..."
-    "I checked my alarm clock. I still had about half an hour before I needed to be up."
-    "I threw my bedsheets off and got up. I needed a therapy shower."
-    "My entire time in the bathroom was spent running over what my mom had said in my head. I always knew what came with raising a kid, but my mom's intense reaction had somehow made being a father seem 50 times more frightening."
-    "I knew that having a kid was no simple walk through the park, and I had anticipated that from day one."
-    "What I hadn't anticipated was the anxiety leading up to it. The gnawing belly-fire growing inside of me seemed to swallow each and every emotion that came close, leaving me with subtle other feelings commingling with the looming fear."
-    "I felt sick. I didn't want to leave my room at all."
-    "As I dried my hair and finished up in the bathroom, I briefly considered not going to class and just staying in. But, even I knew that sealing myself up in here and being a sad sack wouldn't help anything."
-    play music MCGuitar
-    "Problems were tests, right? I had to face them head on."
-    "I put on my uniform and crammed my usual school supplies into my bag, zipping it up and heaving it onto my back, then stepping outside. I still had probably ten minutes before I had to be in class, but I didn't mind being early."
-    "This was my first day of preparation for fatherhood. And, I had to seize it by the balls."
-    scene Hallway with fade
-    "I walked with purpose through the halls to class. I was going to be the best damn father I could be, or die trying."
-    "And, such drastic things didn't happen from just thinking about it. If I was going to be the best father I could be, I had to go all out."
-    "The best way to do this was by giving 110%% towards everything. Studying my ass off for tests, taking more notes than I'd ever thought possible, and helping Aida as much as I could were all good starters."
-    "When I was about 30 feet away from the classroom, a huge slam echoed from the classroom, and ricocheted down the hall."
-    stop music
-    "Even given the amount of supposedly impossible things I'd seen here, I knew that was far from normal."
-    "I sped-walked into the classroom as quickly as I could."
-    scene Classroom with fade
-    "When I walked in, I saw only three people."
-    show WG surprised with dissolve
-    "Alice was in her usual spot, and appeared to have been getting herself ready for the day. She had her notebooks and pens all in order in front of her."
-    hide WG with dissolve
-    show AE surprised with dissolve
-    "Shiori appeared to have been doing much the same thing. Her notebook was out with a proper heading at the top, and she had her bag tucked neatly under her desk."
-    "My eyes scanned over to the source of the noise."
-    hide AE with dissolve
-    show PRG sad-2 with dissolve
-    "Aida sat in her seat, her desk flipped onto its front before her."
-    "Aida's belly jutted out from her, her legs spread to either side of it so it could rest between them."
-    "Her bare desk was still wobbling on the floor, the metal ringing and echoing throughout the room."
-    "Looking up at her, Aida's face looked red. Her eyes went glassy as she looked at me."
-    PRG "G-Good morning, K-Keisuke."
-    MC "A-Aida..."
-    MC "I'll, uh... get the desk."
-    play music Rain
-    "Wordlessly, I walked over and lifted her desk back onto its legs, sliding it on the floor in front of her."
-    "It had only been a handful of days since Aida and I had had our heart to heart. I remembered how big she'd been then."
-    "And now, she was definitely larger. Even her boobs seemed to have grown a bit, and they now seemed to lay over the very top of her stomach, now having the slightest natural sag to them."
-    "I walked around Aida's front to her side. Even she seemed to just now realize the sign in front of her face."
-    "She was getting really big."
-    MC "What happened here?"
-    show PRG unique
-    PRG "I-I was scooting myself in closer to my desk, but I went a little too far."
-    show PRG worried
-    PRG "Keisuke. Could you please slide my desk as close to me as you can?"
-    "As I took hold of the desk, I crouched down to get more leverage and looked up at Aida. From this angle, I could no longer see her face. The only sign that I was looking at a woman and not at an enormous exercise ball was the two rather large spheres perched atop the mass."
-    "Well, and the two legs sticking out from underneath, spread in an awkward attempt to hold the mound comfortably."
-    "I slid the desk as close as I could to Aida, allowing it to just bump up against her soft abdomen."
-    MC "Okay. That's about as good as we'll get."
-    PRG "T-Thank you, Keisuke, I-"
-    show PRG surprised
-    PRG "W-What? Where is..."
-    show PRG sad-2
-    PRG "No... p-please no..."
-    "Aida reached her arms out around either side, stretching forward as far as she could reach."
-    "Her arms waved helplessly around her boobs and over her belly."
-    PRG "Keisuke, p-please push it closer..."
-    MC "I can't, Aida. That's as close as it'll go."
-    "Aida gave one last desperate reach forward, lunging her arms out and toward her desk."
-    "All this did was force her middle forward, sending her desk skidding across the floor."
-    "Aida let her arms fall to her sides, defeated. She looked up at me."
-    PRG "C-Can you hand me my bag, Keisuke?"
-    "I nodded, bending over and handing it to her. She opened the top and pulled out a pencil and notebook."
-    "Flipping open to a clean page, she set the notebook directly on top of her right breast, and tried to write a heading on her notes."
-    "By cocking her right arm in the air with the pencil, and holding her notebook down with her left, she could actually write at a fairly decent pace. Albeit, the legibility of the handwriting was questionable."
-    MC "Aida, c'mon. I have a better idea."
-    show PRG unique
-    PRG "Keisuke, please. I-I really don't want to make a big deal out of this."
-    PRG "I'm really trying to practice what we talked about the other day..."
-    MC "Can you hear out my idea first?"
-    show PRG worried
-    PRG "Sure, I guess..."
-    MC "Why don't we move you and your stuff to one of the back desks that aren't used as often? Since no one really sits back there, you can slide the desk to your side instead of the front, and you won't need to worry about it blocking the walkway."
-    PRG "We can try that."
-    MC "Perfect."
-    "I took Aida's notebook and pencil from her, and stuffed it back into her bag. Putting her bag over my shoulder, I slid her desk out of the way for her and held out  a hand for her."
-    "She took my hand and put the other one on her thigh, pushing down to help balance as she got up."
-    show PRG angry-2
-    PRG "Mmph... ngh..."
-    "I held her hand for support as she eased herself to her feet. When she turned herself around, I had to let go and back up to avoid getting smashed by a swinging baby gut."
-    hide PRG with dissolve
-    "Before I walked back, I looked over to Alice and Shiori."
-    show WG neutral with dissolve
-    "Alice was back in her notebook, getting her pages ready for the day."
-    hide WG with dissolve
-    show AE neutral with dissolve
-    "Shiori, however, was watching us."
-    "When my gaze met hers, rather than giving me an icy glare or a headshake of disapproval..."
-    show AE happy
-    "... she smiled at me."
-    hide AE with dissolve
-    show PRG unique with dissolve
-    "I turned back to the task at hand. As Aida reached her new seat, I came around and slid her desk away, clearing the way for the queen to take her throne."
-    MC "After you."
-    "Aida turned herself around again, slowly sitting down and resting in the chair. I took the desk and slid it off to her right side, setting her notebook and pencil down for her."
-    MC "Give this a try."
-    "Aida took her pencil and started writing a heading for her notes. Though not quite her usual pristine, almost floaty sort of script, her handwriting looked passible."
-    show PRG worried
-    PRG "I think this'll work."
-    MC "Great."
-    "I glanced up at the clock. We still had a few minutes until class would officially start."
-    MC "So... when did this happen?"
-    if checkAffection("PRG", ">", 40):
-        PRG "I-I could kind of feel it coming, I guess. Like, over the last few days.
-        I know this probably sounds a little strange, but it almost felt like my uterus was getting tighter."
-        "Aida looked at the other girls to make sure they weren't eavesdropping, then motioned me closer."
-        show PRG grope
-        PRG "Then, I started feeling the same tightness in my boobs. Like, they started itching, and felt really sore."
-        PRG "I tried pumping, but when I started, they just, like... kept going."
-        PRG "The next day, all of my bras were really tight on me. And the day after, I-I broke the hooks on my biggest one."
-        "I thought back to the last time I'd seen Aida's bras. The hooks on the back looked like they were made in a forge."
-        MC "So, you're producing more milk?"
-        PRG "Mhm. They feel a lot heavier..."
-        "I glanced down at Aida's rack."
-        "They did look more... full."
-        show PRG unique
-        PRG "Luckily, my new uniforms showed up this morning, along with three new bras, otherwise I wouldn't have been able to come to class."
-        "I pictured walking into Aida's room and seeing her under her covers, her bare legs and arms sticking out with the main peak of Mount Kodama being covered up by her blankets."
-    else:
-        PRG "I-I could kind of feel it coming, I guess. Like, over the last few days. It kind of felt like everything was tightening up inside of me."
-        show PRG unique
-        PRG "Then over the past few days, it really started to hit."
-        MC "Yeah, I guess so..."
-    PRG "And, on top of that..."
-    show PRG worried
-    PRG "I assume you've heard about how pregnant girls get cravings, right?"
-    MC "I think so, yeah."
-    PRG "I sort of had them a few weeks ago, and I tried to fight them off. But, now they've really set in. Like, I ate an entire bag of mints yesterday."
-    MC "Whoa."
-    show PRG unique
-    PRG "I don't even really like mints that much. But, yesterday, they sounded amazing."
-    MC "Right. I guess you should be expecting the unexpected when it comes to food then, huh?"
-    PRG "Yeah..."
-    MC "Have you thought about getting another ultrasound done?"
-    show PRG worried
-    PRG "I called the infirmary yesterday. I got my appointment bumped up to tomorrow after class."
-    MC "Good, good. Would you mind if I came with you?"
-    PRG "C-Can you please come? I'd feel much better with you there."
-    MC "I'll be there, then."
-    show PRG neutral
-    PRG "Thank you so much..."
-    show PRG unique
-    PRG "Also... um... would you come sit by me? I feel a little awkward being alone back here, and I'd really enjoy sitting by you."
-    "I looked forward to the front of the room. Most students sat up front for class, so Aida was alone by a good two or three rows."
-    menu:
-        "Move by Aida":
-            $setFlag("PRG060_sit")
-            "I looked back at my desk. I had been in the same spot for quite some time. And, if moving to a different desk meant getting closer to Aida and her mounds of motherhood, then I was so on board."
-            MC "Sure. Give me one sec."
-            "I hurried to my desk and scooped up all of my supplies, then heading back and taking the desk beside Aida. I leaned over and patted her arm."
-            MC "Proud of you."
-            show PRG neutral
-            PRG "T-Thanks, Keisuke."
-            "She patted her belly with one hand. I didn't know if Aida being this large was amazing or terrifying."
-            "The idea of her getting so big was really starting to get me going. She looked so incredibly curvy now. So fertile, as if she was just asking for me to do more of the nasty nasty with her."
-            "Then again, if she was this big, I had to wonder how big those five kids were inside of her."
-        "Refuse":
-            "I glanced up at my desk. I had this weird feeling that, if I moved, Shiori would get on my case about me being distracted by my girlfriend's boobs during class or something."
-            "But, even if that did happen, she was really one to talk. Try not looking forward mid-bow with her in front of you."
-            "Looking over my shoulder to make sure Shiori was looking elsewhere, I leaned over and pulled Aida's hair away from her ear so I could make sure that I wouldn't be heard."
-            MC "I really would like to, Aida, but I'm worried that Matsumoto-san would have an issue with it. I don't think it would be best to set her off right now."
-            PRG "Oh. That's okay, Keisuke. I understand."
-            "I righted myself as Tashi-sensei came in and I took my seat."
-            "As class went on, I couldn't help but look back at Aida sitting in the back taking notes."
-            "Aida had always been cute, but she was going from the girl next door to the total milf look."
-            "She looked so incredibly fertile now, especially with her added size. Her belly had even eclipsed Alice's in sheer size, which I didn't even think was possible."
-            "Even so, in the back of my mind, I was still freaking out over the conversation this morning."
-            "I'd make a point to talk to Aida about it tomorrow. Get this all ironed out."
-    jump daymenu
-
-label PRG061:
-    $setProgress("PRG", "PRG062")
-    scene Nurse Office
-    show PRG worried
-    with fade
-    play music Rain
-    Nurse2 "All right. Just fill that out and come to me when you're ready."
-    PRG "T-Thank you."
-    "Aida took the clipboard from the nurse and crossed over to the chairs in the waiting area, right beside me."
-    "Her face was completely whitewashed. She sat in the chair heavily beside me and laid the clipboard on her boob."
-    MC "Hey. Oxygen is important, you know."
-    "Aida looked at me and inhaled a bit."
-    show PRG unique
-    PRG "I-I know. I'm just... I'm so scared, Keisuke."
-    MC "Yeah..."
-    PRG "Are you scared too?"
-    menu:
-        "Terrified.":
-            MC "Terrified."
-            show PRG worried
-            PRG "You... you are?"
-            MC "Yeah. I guess after seeing you yesterday, it kicked my worries up a notch."
-            MC "I mean, I've had little worries the entire time, but seeing you getting bigger now means that your due date is getting closer."
-            MC "I hope I don't sound like I'm not supportive or anything, but I... I don't remember a time where I've felt more nervous than this."
-            show PRG unique
-            PRG "... I understand, Keisuke."
-            PRG "I at least have the benefit of carrying them around all day. With you, you don't have the interaction that I do."
-            PRG "But, even with that, I'm still scared."
-        "I'm okay.":
-            $setFlag("PRG061_okay")
-            MC "I'm okay."
-            show PRG worried
-            PRG "You are?"
-            MC "Yeah. Weird, isn't it?"
-            PRG "I-I didn't mean it like that. But, can you explain your logic a little bit?"
-            MC "Well, the way I've been looking at it is through the lens of hope."
-            MC "Don't get me wrong, I am really nervous all the same, and no matter how you look at it, five kids is a lot of work. But, I'm sure it will be rewarding too."
-            MC "And, there's gonna be times where you or I will feel down, or stressed, or ready to throw in the towel and call it quits. But, that's when we have to lean on each other for support."
-            MC "Know that together, we've got this. And, I'm sure that our families will be able to help too. So, you and I aren't alone in this."
-            show PRG unique
-            PRG "I guess you're right."
-            PRG "I still feel really scared though."
-    PRG "Like, you have general anxiety, which I know is usually what I deal with. But, this is more than that. This is actual fear."
-    PRG "I'm just... I'm terrified. I know that my factor is rare here. But, I wonder... do all of the girls with my factor end up getting this big?"
-    MC "I really wouldn't know. I don't even know if there is a way to find that out. But, at the very least, today should give us some answers on what's to come."
-    show PRG aroused
-    PRG "..."
-    MC "What's with that cute smile?"
-    PRG "You said \"give us some answers.\" Not \"you.\""
-    MC "We're a team, aren't we? Of course, we're boyfriend and girlfriend, but we're also going to be parents together too, right? So yeah, it's \"we.\" Aida and Keisuke. Mom and Dad."
-    PRG "..."
-    PRG "I can't wait to be a parent with you."
-    MC "Me either, Aida. Now, best get writing."
-    show PRG unique
-    PRG "Right..."
-    "Aida went back to her clipboard and lifted her arm to write."
-    if checkAffection("PRG", ">", 45):
-        "The way she had to write now didn't exactly look comfortable. I tried to imagine writing on my own swollen body part, before immediately shoving that idea out of my head."
-        MC "Would you like me to write for you?"
-        "Aida looked down at the paper."
-        show PRG worried
-        PRG "Um... is that allowed? Since this is my information?"
-        MC "I'm sure they'll understand. Especially given the circumstances."
-        show PRG unique
-        "Aida looked down again, then without a word, passed me the clipboard."
-        MC "Okay. Let's see here."
-        "I penciled in what I knew about Aida, stopping a few lines down."
-        MC "Your birthday is March 3rd, yeah?"
-        PRG "Yeah. I'm 18."
-        MC "Right."
-        "I nodded and continued on, stopping at another line."
-        "On the line marked \"FACTOR,\" I wrote \"HYPERFERTILITY.\""
-        "After a few more lines, there was one final line with the generic heading of \"REASON FOR VISIT.\""
-        "I stole a glance at Aida out of the corner of my eye."
-        MCT "Growth spurt should work."
-        MC "Here you are. I can hold it for your signature."
-        "I put my hand on the back of the clipboard as Aida signed her name."
-        "Taking the clipboard, she carefully read through all of my answers to the questions given."
-        MC "Look okay?"
-        show PRG worried
-        PRG "Yeah. All of this is right."
-        PRG "Thanks."
-        "I gave Aida a polite nod as she got up and went back to the counter."
-        Nurse2 "Wonderful. I can take you back now, if you're ready?"
-        PRG "O-Oh! Yes! Keisuke, are you coming?"
-        MC "Yep!"
-    else:
-        "I watched as Aida started jotting her info down. As she wrote, her right boob-table began jiggling under her clipboard."
-        "She stopped for a moment, letting her breast settle, before starting to write again."
-        MC "Can I hold the clipboard for you?"
-        "Aida looked down at her boob. She'd let go of the clipboard, so now it just sort of sat on top of her breast and moved with it, like a ship sailing on a skin-covered, yet quite milky, sea."
-        PRG "I-I've got it. Thanks, though."
-        "I nodded and stared at the wall, occupying myself in my own head."
-        "I didn't know why or how, but the nurse's office had that sort of weird hospital smell to it. The one that bore a resemblance to plastic and disinfectant."
-        "What exactly caused that smell, anyway? I'd always wondered."
-        "After a few minutes of writing, Aida got up and went over to the counter."
-        Nurse2 "Wonderful. I can take you back now, if you're ready?"
-        PRG "O-Oh! Yes! K-Keisuke, are you coming?"
-        MC "Yep!"
-    show PRG worried
-    "I got up and followed Aida back into the depths of the infirmary."
-    "We were led further back into the infirmary. Near the back was a separate room with the blocky looking ultrasound machine."
-    "The nurse flicked a couple of switches on the side, and the machine hummed quietly to life."
-    Nurse2 "The machine will need a minute to warm up. For now, let's get you comfortable."
-    "The nurse reclined the large chair back a few degrees."
-    "I held out a hand and helped Aida into the chair. As she sat down, she sighed, and looked down at herself."
-    Nurse2 "While we're waiting, do you have any questions for me?"
-    PRG "Um... yeah, I guess."
-    PRG "I-I know my factor is rare. But, exactly how... how big do you think I'll get?"
-    "The nurse sighed and looked down at Aida's paperwork."
-    Nurse2 "That's... an incredibly difficult question to answer, dear. Out of all of the possible factors, hyperfertility and the belly factor connected to it are the rarest."
-    Nurse2 "There's precious little information known about the factor. And, a good portion of the information we do have is based on speculation. Not proven fact."
-    Nurse2 "There are many different unknowns, as well. Like, the hormonal rush that you likely felt before your pregnancy."
-    Nurse2 "What I can say for certain is that no one with a hyperfertility factor has ever gotten this... well, large. It's safe to say that you are in the highest percentile of growth. And, this is..."
-    "The nurse lightly felt Aida's belly and her soft skin."
-    Nurse2 "Your body is handling this wonderfully. So... I would have to say that you may grow even larger than this..."
-    show PRG scared
-    PRG "What?!"
-    show PRG unique
-    PRG "Uhm... mm ... okay... I... sorry."
-    PRG "So... how big did the other girls get?"
-    Nurse2 "I unfortunately can't reveal much to you about them. However, what I can tell you is that your latest growth spurt shot you to the top of the charts. I don't think Seichou has ever seen a belly this size."
-    Nurse2 "And, coming to a final conclusion about your size without extensive research is next to impossible, especially considering how diversified your factor is."
-    show PRG worried
-    PRG "Diversified?"
-    Nurse2 "For instance, consider someone with a breast factor. Their factor will cause growth in their breasts, obviously. And, if someone has a hair growth factor, then the factor will, logically, only make their hair grow."
-    Nurse2 "What I'm trying to say is that, usually, the factor only affects one part of the body, and it keeps itself there."
-    Nurse2 "Your factor, however, is different. Yours seems to incorporate every part of a woman's body that would grow during the time of gestation."
-    Nurse2 "And, your growth from this factor, while similar to other factors, isn't always the same on the inside."
-    Nurse2 "Let's take a weight gain factor, for example. This factor, true to its nature, causes many parts of the body to swell. In essence, every part of the body will be affected. All of the ones that contain fat, anyway."
-    Nurse2 "And generally, a lot of weight gain factors will put quite an emphasis on the abdomen of that person, causing it to grow and distend quite a bit."
-    Nurse2 "However, as I'm sure you already know, a belly on someone with a weight gain factor, and a belly on someone with your factor, are very different."
-    MC "Because the girl with the weight gain factor is holding fat, and the girl with Aida's factor is holding babies?"
-    Nurse2 "Exactly, Hotsure-san. It's really not too complicated. The difference is easily seen from the shape differences. A weight gain factor would cause a more saggy, and I don't like this term, but a flabbier belly."
-    Nurse2 "Whereas with you, Kodama-san. Your abdomen isn't saggy."
-    Nurse2 "Likewise, your factor also differs in regards to breast growth. Typically, women with a breast growth factor won't lactate unless pregnancy happens to take place on top of the growth."
-    Nurse2 "Being that your factor directly involves pregnancy, lactation is somewhat of a given."
-    show PRG unique
-    PRG "Y-Yeah..."
-    "The nurse glanced over at the machine."
-    Nurse2 "Any other questions for me? If not, we should be ready to start."
-    PRG "N-No. I think I'm good."
-    PRG "Keisuke, did you want to ask anything?"
-    MC "Hm? Ah... let's see."
-    menu:
-        "What can I do to help Aida?":
-            MC "What can I do to help Aida?"
-            show PRG unique-happy
-            Nurse2 "As I'm sure you can imagine, having a baby is rather hard on a woman's body. Unfortunately, there isn't much anyone can do to stop Kodama-san from having to go through those difficulties."
-            Nurse2 "What you can do is help her with the odds and ends things. As they say, \"it's the small things that count.\""
-            MC "Of course. Thank you."
-            Nurse2 "Anytime. Now, let's get underway, shall we?"
-        "Where will the delivery take place?":
-            MC "Where will the delivery take place?"
-            Nurse2 "The delivery will have to take place in an actual hospital. Definitely not here, if that's what you're asking."
-            Nurse2 "The fact of the matter is, we simply aren't equipped for that sort of thing here. Most hospitals have full floors dedicated to women and infants. We have this side room with our ultrasound machine, and that's basically it."
-            MC "So, Aida and I would be flown there or something?"
-            Nurse2 "Let's worry about that when the time draws closer. But, yes. Something along those lines."
-        "Is it safe for us to have sex?"if checkAffection("PRG", ">", 44):
-            MC "Is it safe for us to have sex?"
-            show PRG surprised
-            PRG "KEISUKE!"
-            Nurse2 "Oh, don't fret, Kodama-san. It's a perfectly normal question."
-            show PRG sad-2
-            Nurse2 "As far as the health of the babies is concerned, sexual intercourse will have no effect on them, whatsoever. Usually, in the case of twins or multiples, it's generally advised to not have sex until well after the babies are born."
-            Nurse2 "However, I don't think that same rule applies here. Given Kodama-san's factor, I would think that it would be perfectly safe."
-            Nurse2 "Of course, assumptions are just asking for trouble, so I'll make sure during the ultrasound. That should tell us all we need to know."
-            MC "All right. Thank you."
-            Nurse2 "Of course. Now, let's get to work."
-        "No. Nothing.":
-            MC "No. Nothing."
-            Nurse2 "Right, then. Let's get going."
-    show PRG worried
-    "The nurse reached over and opened a small cabinet, pulling out the large tube of gel."
-    "She set the tube on the counter, and stretched a pair of latex gloves over her hands."
-    Nurse2 "All right, dear. May I have a look at your belly?"
-    PRG "Y-Yes, but..."
-    PRG "K-Keisuke? Can you please unbutton my shirt for me?"
-    show PRG unique
-    PRG "I-I... I can't reach..."
-    MC "Oh! Yeah, sure!"
-    "I got up and walked around Aida to her lower half. Her shirt pulled free from her skirt easily, and I started undoing her bottommost buttons, working my way up until I was just under her boobs."
-    "The nurse pulled aside the fabric. Aida's belly was out, and far more massive than the last time I'd seen it bare."
-    "Neither I, nor the nurse, could breathe. Aida's belly drew all attention from the two of us. She was enormous. Her belly skin looked so pure and soft. Her skin looked immaculate, as if she used an entire bottle of lotion on her belly alone."
-    "Going down either side, you could see where her belly skin connected to her hips and sides. But, along the entire mass of her belly and onto her sides, there were no stretch marks. Not a single spot of imperfection."
-    "Her abdomen reminded me of newfallen snow. So clean and unscathed."
-    Nurse2 "Right. Let's see here..."
-    "The nurse examined Aida's belly closely. After writing a few notes on her clipboard, she stood up and took her gel in hand."
-    "She squeezed a good sized pile of gel on top of Aida's mound, then took the paddle from the machine and began swirling it around, getting a good, even coating across her."
-    "The nurse kept her eyes carefully on her screen. The screen was angled in a way that she could view it and also keep an eye on the paddle."
-    show PRG worried
-    PRG "Can you see anything?"
-    Nurse2 "Not quite yet. Sometimes, babies like to play hide and seek in here."
-    show PRG nervous
-    "Aida sighed in a dissatisfied sort of way, her arms crossing over the top of her gigantic tits."
-    "The nurse worked the paddle around Aida's left hand side."
-    Nurse2 "Okay..."
-    Nurse2 "Ah! There we are!"
-    Nurse2 "Let's see... two... three..."
-    "She swiveled the ultrasound paddle around on her palm, covering a wide area. She had to push lightly on the paddle to get a clear image, but from how Aida's skin was taking it, it was clear that it didn't hurt."
-    "In fact, Aida's skin seemed to have little to no strain on it at all. Her body was tolerating this wonderfully."
-    "The paddle came back up to the top of Aida's belly, then down the other side."
-    Nurse2 "Three... four..."
-    stop music
-    Nurse2 "..."
-    Nurse2 "Ah..."
-    PRG "Is everything okay? Are my babies all right?"
-    Nurse2 "Y-Yes. They're perfectly fine. Uhm..."
-    Nurse2 "W-Would you excuse me one moment?"
-    show PRG unique
-    "The nurse set the paddle down by the machine and got up, removing her gloves."
-    "As she went to leave the room, I noticed her hands shaking slightly, and her face was turning ashy."
-    "The door shut behind her. The room was quiet, save for the humming of the machine."
-    PRG "W-What did she see?"
-    MC "I don't know. I couldn't see the screen either."
-    "Aida's hand immediately went to her belly, right above where the gel sat. She rubbed gently."
-    show PRG nervous
-    PRG "I must've done something wrong."
-    MC "Whoa, hey. What makes you say that?"
-    PRG "You saw how she left, Keisuke. You saw. She looked like a ghost."
-    PRG "Something isn't right inside of me, Keisuke. I know for a fact."
-    PRG "And, whatever is wrong is probably my fault. I'm the one carrying them."
-    MC "And if something is wrong, we'll deal with it. Remember what the nurse said?"
-    show PRG worried
-    PRG "What part?"
-    MC "Assumptions are just asking for trouble. Let's wait for her to get back and tell us herself."
-    show PRG nervous
-    PRG "Right."
-    PRG "... It's my head again."
-    MC "You mean like what we talked about?"
-    "Aida nodded slowly. She felt her belly, despite the gel that coated it."
-    PRG "It's like hearing a voice in your head, but it isn't a literal voice. It's more akin to a compulsion or one of those nervous tics."
-    PRG "I feel perfectly okay after we talk about it, and I know full well that everything will be okay. But, as time passes, the negativity of my head's compulsive thoughts almost seem to corrupt the positive ones."
-    show PRG sad-2
-    PRG "So, then I'm stuck there with a bunch of negative stuff in my head, and no way to let them out, so I just kind of... break down."
-    MC "When does it get to be the worst?"
-    PRG "Night time. That's when my mind wanders most. I just feel like I'm laying there in a mass of my own bad thoughts, and I have nothing to do with them but think them over and over again."
-    MC "Aida, I think wha-"
-    "The door opened, and the nurse walked back in. She was still pale, but she seemed at least mildly more put together from before."
-    Nurse2 "Pardon me for that."
-    show PRG nervous
-    "She seized her paddle and began the process of running it along Aida's belly again."
-    "Up..."
-    "Left..."
-    Nurse2 "Good Lord..."
-    "The nurse snapped a few photos from the machine. She looked back at the screen and rubbed her eyes to make sure she was seeing clearly."
-    "She left the room again and returned with a few printed out ultrasounds, as well as a red permanent marker."
-    show PRG worried
-    Nurse2 "I'm just going to... make this a little easier."
-    "The nurse started drawing on the ultrasounds with the marker, making marks across each sheet."
-    "She took one last glance over them, then handed them to me."
-    Nurse2 "Before you look, do you recall the last time you two came in? There was that sort of fogginess and fluid behind the five fetuses? Then, there was that sixth one that we marked as the machine mistaking fluid for a fetus?"
-    PRG "I-I remember, yes."
-    Nurse2 "Right. Well, I am certain now that the haze was not a fluid buildup."
-    PRG "W-What is it? Or... was it?"
-    Nurse2 "That hazy form was the rest of your babies."
-    show PRG nervous
-    Nurse2 "Hotsure-san. Please, count the number of circles you see on the sheet before you."
-    "My hands had begun to shake as I lifted the sheets up and gazed down at them."
-    MC "One... two... three..."
-    MC "Four... five..."
-    "I glanced away from the first sheet to the second, and my brain decided to stop processing."
-    MC "... hah... a-a... h-h..."
-    show PRG surprised
-    "My hands kept trembling with the papers in them. Words wouldn't come to me. Even logical thought seemed to halt. My eyes rocketed from red circle to red circle, counting them over and over, the masses inside now looking more and more like actual human beings."
-    Nurse2 "Hotsure-san, take a breath. It's going to be all right."
-    show PRG worried
-    PRG "Can I please see?"
-    "The nurse took the papers from my hands, which made no effort to clamp down on them. I couldn't make them move if I wanted to."
-    "Aida lifted the papers up."
-    PRG "One... two... three... four..."
-    show PRG scared
-    "Aida's counting fell flat."
-    PRG  "... N-Nurse... t-this can't be real. Can you please look again?"
-    Nurse2 "I did, Kodama-san. I printed off images before these. But, the images are near identical. That's what is in your womb right now."
-    PRG "..."
-    Nurse2 "The good news is that you aren't full term. So, no giving birth today."
-    Nurse2 "But, the bad news, or possibly more good news, depending on how you look at it..."
-    "The nurse sat back down on her stool and wheeled it over to us."
-    Nurse2 "You're the mother of thirteen children."
-    "I couldn't move."
-    "As the nurse spoke the number aloud, I knew it wasn't just some stupid joke from my inner psyche. It was actually legit. This wasn't a prank, or some wild lucid dream that I couldn't control."
-    "Aida was actually pregnant with thirteen babies."
-    play music PRGDramatic
-    Nurse2 "Hotsure-san. Please, trust me. It's going to be okay."
-    if getFlag("PRG061_okay"):
-        "From my stool, I looked up at Aida."
-        "The look on her face matched the one that was probably on mine. Shock. Horror. Surprise. Fear."
-        "The minute she looked at me, all of those feelings seemed to disappear from her face. She simply sighed, shutting her eyes..."
-        show PRG neutral
-        "And smiled at me."
-        PRG "Keisuke... I know that... this'll be really hard. But... we can do this."
-        PRG "Like you told me the other day, we have to be strong together. Without the other, we're doomed to fail."
-        PRG "And, I know in my heart that you're going to be an amazing dad. I can tell. I just hope that I can be a good mom."
-        "My view of Aida went bleary. I felt up to my face."
-        "It was my turn to cry."
-        "I got out of my chair and fell to my knees beside her large chair, clutching onto her hand like it was worth more than life itself. I knelt there on the floor, clinging to my girlfriend's hand and sniveling like a baby."
-        MC "Aida! I love you so much!"
-        "Behind us, the nurse quietly wiped off Aida's belly, then opened the door and let herself out, giving us privacy."
-        MC "Whatever I have to do to be a good dad, I'll do it! I want to be there for you! Help you as you grow more, take care of you when you're sick, and help you care for each and every baby!"
-        "Using her big chair, I pulled myself up and sat on the side, pulling Aida's head to my chest and holding her."
-        MC "You're one of the best people I've ever known, and I'm so proud to be your boyfriend."
-        MC "When I see you every day... gah, it just makes my chest flutter because I know that I'm the one you love. I never thought I'd ever meet a girl as perfect as you, but I'm so glad that I did."
-        "On my chest, Aida looked up, her gray eyes damp to match mine."
-        show PRG unique-happy
-        PRG "Gosh, Keisuke... I can't wait to be a mom. But, it will only feel right if you're there with me."
-        PRG "And... I'm not perfect..."
-        show PRG neutral
-        PRG "... but, you make me feel perfect."
-        hide PRG with dissolve
-        "I leaned over and kissed Aida. I held her and rubbed her belly with one hand. I was committed to her, and our babies. Aida was mine. My girl. And she was carrying thirteen of our babies."
-    else:
-        "Something in my chest seemed to split in two. Every feeling of anxiety or nerves I'd had bubbled up to the surface like a violent undercurrent."
-        MC "... God, no..."
-        show PRG sad-2
-        MC "Nononono... this isn't real life. This doesn't happen."
-        Nurse2 "This is as real as the hair on your head, Hotsure-san."
-        MC "What am I supposed to..."
-        MC "How do I..."
-        MC "... God..."
-        "My insides were frothing from anxiety. Each thought in my head was screaming for me to take action. Run. Get help. Run further."
-        "I didn't want it to be real. I wanted the nurse to tell me that this was all an elaborate school-wide prank and that I was the biggest sucker in the world."
-        "Then, she'd untie a knot underneath Aida's shirt, and a big balloon would deflate, and I'd be laughed at for believing that she was actually pregnant with 13 little kiddos."
-        Nurse2 "Kodama-san, would you please excuse Hotsure-san and myself for a moment?"
-        PRG "... Okay."
-        "The nurse grabbed my arm and tugged at me."
-        Nurse2 "Come on."
-        hide PRG
-        "She pulled me up and out the door, shutting it behind me and walking us away from the door."
-        Nurse2 "Now, you open those ears and listen."
-        Nurse2 "Do you have any idea how difficult this is for Kodama-san?"
-        "The nurse looked at me with eyes that said \"answer, or I'll bury you six feet under.\""
-        Nurse2 "Well? Do you?"
-        MC "N-Not firsthand."
-        Nurse2 "Picture this. Imagine waking up, and each day, it gets just a little harder to get out of bed."
-        Nurse2 "So, you walk to the bathroom for a shower. And, as you get in and turn on the water, you find that you have to lean just a little further to reach the faucet. Each day, that faucet gets a little further away."
-        Nurse2 "You go for the shampoo, and accidentally knock it over. You try to bend over to get it, but your belly hits the side of the shower. You angle differently, but then your breasts get in the way."
-        Nurse2 "So, you have to lower yourself by bending your knees and keeping your entire body vertical. And, by the time you get your bottle back, accidentally nudge the faucet, and you're getting doused in cold water."
-        Nurse2 "So now, you have to lean again just to turn the water ba-"
-        MC "I understand. You don't have to tell me more."
-        Nurse2 "Do you? Do you really understand?"
-        Nurse2 "Just a moment ago, you were near fainting when you found out that you were the father of thirteen children."
-        MC "Wouldn't you if you were in my shoes?!"
-        Nurse2 "That's not what I'm saying! Don't you go thinking about only yourself, here! Think about that girl sitting in that examination room!"
-        Nurse2 "She's looking at her belly right now. She can't believe that she's carrying thirteen babies inside of her. The babies that you put there!"
-        Nurse2 "She's scared. I know that for a fact. She's worried about how she's going to care for thirteen babies. And, she's worried that she'll be doing it alone."
-        MC "Alone? I told her that I would be there for her."
-        Nurse2 "You'd be surprised how many fathers say that same thing. Then, when it's time to step up, where are they?"
-        Nurse2 "Most likely, a few towns over, trying to forget about what they left behind."
-        MC "What are you saying?"
-        Nurse2 "I'm saying that you can go off and do whatever you want. But, Kodama-san is stuck with those babies. The least you could do is show her you care, and try not to act like the world is ending around you."
-        MC "I'm not leaving. Final answer."
-        Nurse2 "Then go tell her that. She needs you, Hotsure-san. She needs you more than you'll ever know."
-        "I walked past the nurse and opened the door back up."
-        show PRG neutral with dissolve
-        "Aida sat in her chair, her belly still covered in ultrasound gel."
-        "She looked up at me. And I looked down at her."
-        show PRG worried
-        PRG "Hey."
-        MC "I..."
-        PRG "Keisuke, can you just... sit down for a minute?"
-        "I took my seat beside her chair and looked up at her."
-        PRG "Keisuke... it's not like I don't feel scared. I do. More than did before in the waiting room."
-        PRG "But, I know that I have to do this. I can't just run away. These are my babies. And, I'm not giving up on them. Whether there's five or thirteen, it doesn't matter."
-        MC "I know. And, I don't want to give up either."
-        PRG "It definitely sounded like you did..."
-        MC "Aida, I don't want to give up. On you or the babies. I..."
-        MC "I don't have an excuse for how I acted before. I was scared. I still am, I guess."
-        if checkAffection("PRG", ">", 30):
-            MC "But, you mean far too much to me. I'm not running."
-            MC "I'd not only lose my kids, but I'd lose you too."
-            show PRG nervous
-            "Aida looked down at her belly and rubbed it, despite the gel."
-            PRG "Thank you, Keisuke. I-I don't want to lose you either. And, for a moment... I thought I did."
-            MC "You didn't. You're stuck with me."
-            "Aida smiled weakly at me."
-            show PRG unique-happy
-            PRG "Thanks."
-            MC "You're welcome, Aida."
-        else:
-            MC "But, I made a promise, and I'm not breaking it."
-            MC "If I told you that I was going to be here for you and the babies, then that's what I'm going to do."
-            PRG "Thank you, Keisuke."
-            PRG "It's going to be an experience for us both, I guess."
-            MC "Yeah, you got that right."
-    jump daymenu
-
 label PRG062:
     $setProgress("PRG", "PRG063")
+    $setSize(5)
+    $setTimeFlag("size5")
     scene Dorm Exterior with fade
     play music Rain
     "I knew what I had to do the minute I left the infirmary with Aida."

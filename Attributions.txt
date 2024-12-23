@@ -1,0 +1,160 @@
+﻿Growth Academy
+Attributions
+Writers
+        Section Chiefs
+            AzoriusLegion
+                    Breaker
+                    ClockworkPhysicist
+                    Diant707
+                    Haen
+                    Little Joe
+                    Neutral Ant
+                    The_Murp
+        Supporting Writers
+                Jubei
+                TrebleCleffy
+        Contributing Writers
+                    Adipose Rex
+                    BioYugi
+                    Breaker
+                    ClockworkPhysicist
+                    Cuda
+                    Diant707
+                    Jubei
+                    JustSomeGuyOkay
+            Little Joe
+Lurk
+            Molotovchainsaw
+            Neutral Ant
+            SoylentOrange
+            The_Murp
+            Unskilled
+Editing 
+            Breaker
+Galactase
+        Haen
+        Neutral Ant
+            MMDelight
+        The_Murp
+                    TWHAT
+Artists
+        Line Art
+            2-Bit Otaku
+                    Diant707
+                    Haen
+                    Oct-Oppai
+                    Radoon
+                    SuikaX
+        Sprite Coloring
+Anxient
+cptamerica949
+Fblue
+Galactase
+GoodNotGreat
+Haen
+Oct-Oppai
+Radoon
+SaburoX
+Sheepapp
+Sn9
+Sparkcadia
+CGs
+                BetterWithSalt
+                Diant707
+                Ekkonshon
+                GoodNotGreat
+                narodraws
+                Marrazan
+                MOLOT.CO
+                MochiiStar
+                MX-FA7
+                Oct-Oppai
+                Razzberry
+                Radoon
+                Sheepapp
+                Sparkcadia
+                Vespa
+                Vitlut
+Concept Artist
+                    2-Bit Otaku
+                    GoodNotGreat
+                    Oct-Oppai
+                    OhDangDoof
+                    Radoon
+                Regular_Syd
+                SaburoX
+                    sm5150    
+                    TWHAT
+UI Artist (Icons)
+Galactase
+Narcysses
+SaburoX
+Sheepapp
+Map Artist
+                ClockworkPhysicist
+                OhDangDoof
+                Radoon
+Backgrounds
+Custom Assets
+Ekkonshon
+GoodNotGreat
+kjkjmulo
+Paid Assets (Asset Packs)
+haikei
+Minikle
+QQQnoQnoQ
+斧人
+Creative Commons Works
+Kimagure After
+Pyonkotchi
+Uncle Mugen
+Programmers
+                JustSomeGuyOkay
+                LuckyJack020
+                TWHAT
+Intro Cinematic
+                Diant707
+Music
+Composer
+                        Post-Bop
+Additional Music
+Aaron Kenny
+Audionautix
+Doug Maxwell
+Erik Satie
+Hobby Atelier Carrot Wine
+Joel Cummins
+Johann Sebastian Bach
+Kevin MacLeod
+K.Tera
+Ludwig van Beethoven
+Patrick Patrikios
+Philipp Gottlieb Anton Sr
+pierrotlunaire
+Sir Cubworth
+Tullio Forlenza
+Yoshiki ARA
+Sound
+                Diant707
+Development Tools
+Engine
+Ren’Py Visual Novel Engine
+Libraries
+Ren’py Universal Player by GanstaKingofSA
+Fonts
+                BD Merced
+Special Thanks
+Auctus177
+CappuccinoSquid
+Cuda
+GSB
+KrauserC96
+Lord Altros
+Marsupial Mole
+Narcysses
+OhDangDoof
+Oxdarock
+Sumi
+Stigs
+Symbiobro
+VanBrunswick

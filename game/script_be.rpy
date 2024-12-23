@@ -3,36 +3,57 @@ label BE001:
     scene Classroom with fade
     play music Schoolday
     "After the bell rang, there was the familiar sound of chairs getting scraped along the ground as everyone prepared to leave."
+    show FMG happy at Position (xcenter=1.40, yalign=1.0)
+    show FMG happy at Position (xcenter=-0.4, yalign=1.0) with mov3
+    hide FMG
+    pause 1
     "The only difference was the volume. Compared to what I was used to at my old school, it was a lot quieter."
+    show AE pondering at Position (xcenter=1.40, yalign=1.0)
+    show AE pondering at Position (xcenter=-0.4, yalign=1.0) with mov3
+    hide AE
+    pause 1
+    #play sound MovingChair 
+    show WG neutral-2
+    "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
+    show WG neutral at Position (xcenter=1.40, yalign=1.0)
+    show WG neutral at Position (xcenter=-0.4, yalign=1.0) with mov3
+    hide WG
+    pause 1
     "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
     "Then again, there was another seat in the room that easily caught my attention, thanks to how big it was. It was without a doubt, the largest I'd ever seen, and now it was clear why."
-    "Though, the teacher said not everyone's growth factor was visible right away, it could have been something else."
+    show PRG insecure at Position (xcenter=1.40, yalign=1.0)
+    show PRG insecure at Position (xcenter=-0.4, yalign=1.0) with mov3
+    hide PRG
+    pause .75
+    "Although, the teacher, Kaeru Tashi, said not everyone's growth factor was visible right away, it could have been something else."
     "The classroom slowly started to empty out, and I made my way out of the room as well."
     "There were two questions that ran through my head.{w} First, what was going to grow on me?{w} Second, where was I? It was hard getting used to a new school so quickly."
+    "There were three questions that ran through my head.{w} First, what was going to grow on me?{w} Second, how's Tomo handling this? {w} and Third, where was I? It was hard getting used to a new school so quickly."
     "I decided to walk around a bit, to get the lay of the land. Maybe if I lucked out I could find it..."
-    scene Hallway with fade
+    scene HallwayStairs with fade
     "The school seemed relatively normal, apart from the size and the people within. It didn't take me long to get the gist of where everything was. Hopefully I'd remember it all when tomorrow came around."
     "But, eventually, I found what I was looking for. Without even checking my surroundings to see if I was being watched, I turned the knob and walked up the steps into the warm sunny sky above."
-    scene Roof with fade
+    scene Roof Entrace with fade
     MC "Fantastic. It was a long shot, but I figured they'd forget to lock the roof entrance while they were busy setting up the welcoming assembly."
     MC "Wow, from up here the school really looks huge. I guess it has to be big if they only put a few students in each classroom."
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
     MC "I just wonder why they didn't tell us the reason for coming here until we were already inside? This doesn't seem like a prison or anything, does it?"
     MC "No, the view is too good up here to be a prison. I'd say it's better than what my old school had. Just looks really nice."
-    show BE happy at center with dissolve
+    show BE neutral at center with dissolve
     BE "It does. And it's about to look a whole lot better!"
     play music BE
     "My introspection was suddenly interrupted by my elbow getting pressed into something warm and soft."
     MC "What the... Honoka? How'd you get up here?"
+    show BE happy
     BE "Heh, the same way as you, Kei-chan. Steps. I've been behind you for a while now, did you really not notice?"
     MCT "Not until you bumped into me with that chest of yours..."
     MC "I guess not. My head's kind of all over the place after learning why we're here. How about you? You said you didn't know what this academy was for, right?"
-    show BE neutral
-    BE "Nope, no clue until teach explained it. It's so weird, don't you think something like this would be more public knowledge?"
+    show BE shrug
+    BE "Nope, no clue until Teach explained it. It's so weird, don't you think something like this would be more public knowledge?"
     MC "I'd say so. But, if it's only a small group of people affected by this weird growth hormone thing, maybe it's better to not cause a panic of people assuming they've got it.{w} \"Oh gosh, I shot up two inches over the summer, I'm going to end up ten feet tall!\""
     show BE happy
     BE "Yeah I guess that makes sense. Still, it's a lot to take in. I have to say though, part of me is kind of excited. They didn't make it sound like it was a bad thing, just a bit of an inconvenience. Maybe I'll get something cool."
-    BE "What do you think my growth factor is?"
+    BE "What do you think my growth factor will be?"
     menu:
         "I'd say it's kind of obvious, isn't it?":
             jump BE001_c1
@@ -47,46 +68,62 @@ label BE001_c1:
     MC "Um, actually I was talking about-"
     show BE happy
     BE "Hehehe, I'm kidding, Kei-chan. Yeah, I'd say bigger boobs is definitely the most likely choice for me."
-    BE "I guess you were never there to see them grow, were you? Wow, you really missed out. Then again, you'll probably be seeing a lot more of them if our hunch is correct!"
-    "It was pretty clear that Honoka wasn't all that upset about this situation.{w} If anything, she looked pleased as punch, considering she lifted up her boobs like she was about to serve them on a silver tray."
+    show BE aroused
+    BE "I guess you were never there to see them grow, were you?"
+    show cg BE001 with dissolve
+    BE "Wow, you really missed out. Then again, you'll probably be seeing a lot more of them if our hunch is correct!"
+    "It was pretty clear that Honoka wasn't all that upset about this situation.{w} If anything, she looked pleased as punch, considering she puffed her chest out like she was about to serve them on a silver tray."
     MC "Well if that is the case, hopefully I grow something big that you'll enjoy, too."
+    hide cg
+    show BE aroused
+    with dissolve
+    pause .5
     "...{w} What did I just say?"
+    $setAffection("BE", 1)
     show BE surprised
     BE "Kei-chan! To think you'd be so forward..."
     show BE surprised at center, Transform(xzoom=-1)
     BE "I know I said I was in your care, but I didn't think you'd take in that way..."
     MC "Wait, wait, that was a big misunderstanding, I didn't mean to imply anything that-"
-    show BE happy at center, Transform(xzoom=1)
-    BE "Bahahaha, oh, wow, Kei-chan, heh, it's too easy to mess with you sometimes, you know that?"
+    show BE wink at center, Transform(xzoom=1)
+    BE "Bahahaha! Oh wow, Kei-chan. Heh, it's too easy to mess with you sometimes, you know that?"
     MC "Yeah, you've certainly taught me that lesson many times in the past. Ow..."
     "I winced as she gave me a playful punch in the arm. One that went a little too deep to be completely painless."
     jump BE001_after
 
 label BE001_c2:
     BE "That's true. Still, I think I've got a pretty good idea what mine could be. It starts with \"B\" and rhymes with \"goods\"."
+    pause 0.5
     MC "...Boods?"
+    show BE surprised-2
+    BE "What?"
     show BE sad
-    BE "What? Shoot, no, I messed that up. I was talking about my boobs."
+    BE "Shoot, no, I messed that up. I was talking about my boobs."
     show BE neutral
     BE "Like everyone at my old school seemed to do on a daily basis. Hard to blame them really, I made these cans faster than a soda factory."
+    BE "Went from a small B cup to these in just one summer."
+    MCT "{i}Just one?!{/i}"
     MC "Oh, heh. Well, that could have just been some lucky puberty at work, you know?"
     show BE happy
     BE "Sure. Still, if it was my boobs, I wouldn't mind it."
     MC "You wouldn't? But you just said everyone at your old school mentioned them all the time."
-    show BE angry
-    BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too.{w} Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
-    MC "Hm, guess you've got a good point. You're already used to big boobs, anyway."
+    show BE shrug
+    BE "Eh, I didn't care about that too much. I doubt I'll care here either, to be honest. {w} Especially if everyone's got a chance of getting giant knockers, too."
+    pause 0.25
+    show BE neutral
+    BE "And besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
+    MC "Hm, guess you've got a good point. You're already used having to big boobs, anyway."
     show cg BE001 with dissolve
     pause 0.5
     hide cg
     show BE happy at center
     BE "Exactly! Hehe, you know, Kei-chan, most boys wouldn't be so brazen about talking about a girl's chest, especially to her face."
     MC "W-Well, you're the one who brought them up in the first place!"
-    show BE neutral
+    show BE angry
     BE "Did I now? Oh, I guess I did. Yep."
     MC "Not the least bit apologetic about it, are you?"
     show BE happy
-    BE "Hey, they're my boobs, and I shall address them as I please!"
+    BE "Hey, they're my boobs, and I'll address them whenever I want!"
     MC "I... well, fair enough I guess."
     BE "Heh, you're still easy to mess with, I see."
     "Honoka gave me a little love-tap on the arm, one that stung for several minutes later."
@@ -94,6 +131,7 @@ label BE001_c2:
     jump BE001_after
 
 label BE001_c3:
+    $setAffection("BE", 2)
     show BE happy
     BE "Oh wow you still remember that! Haha I really did whoop you at all those games, didn't I? Still, huge feet? That's so weird. Imagine how many socks and shoes I'd need to buy!"
     MC "Well, regardless of what we end up getting, we'll all probably have to change our wardrobes eventually. Hopefully they'll help cover expenses."
@@ -106,8 +144,8 @@ label BE001_c3:
     show BE neutral
     BE "Nope. You know what did look appealing though?"
     MC "What?"
-    show BE happy
-    BE "Come on, I know you saw it."
+    show BE wink
+    BE "Come on, I know you saw."
     MC "Saw what?"
     show BE neutral
     BE "It was staring you right in the eyes!"
@@ -116,12 +154,22 @@ label BE001_c3:
     BE "Pff, I'm talking about my breasts, Kei-chan. Don't think I didn't catch you sneaking a peek when we met up outside the academy."
     MC "Oh, well, listen, if I'd known you were Honoka, I wouldn't have-"
     show BE unique
-    BE "Mm-hmmmmmm. Don't be embarrassed, Kei-chan, it's fine. You're a young man with healthy ambition. Though, I do think I deserve a little payment for you staring hard enough to melt my shirt."
-    MC "What do you me-ouch..."
+    BE "Mm-hmmmmmm. Don't be embarrassed, Kei-chan, it's fine. You're a young man with healthy ambition."
+    show cg BE001 with dissolve
+    BE "And I mean... Just look at 'em! They're already huge!"
+    MC "I, uh... I don't think they're that-"
+    hide cg
+    show BE happy
+    with dissolve
+    BE "Although, I do think I deserve a little payment for you staring hard enough to melt my shirt with heat vision or something... "
+    MC "What do you me-"
+    play sound Thud
+    MC "Ouch..."
     show BE happy:
         linear 0.1 xpos 0.8
         linear 0.1 xpos 0.5
     BE "There!"
+    show dummy with vpunch
     "I quickly moved my hand to rub a sore spot on my upper arm where Honoka had given me a gentle punch. Hopefully her growth factor isn't her hands, or those punches are going to get a lot harder..."
     jump BE001_after
 
@@ -14045,7 +14093,7 @@ label BE057:
     "But in any case, she wasn't miserable. We avoided discussing the future much."
     "And, in the throes of a good virtual feud, I was sure Honoka's spirit could make a comeback."
     MC "H-hey!"
-    MC "Stop it! Lemme…"
+    MC "Stop it! Lemme..."
     show BE smug
     BE "Heh heh."
     MC "Oh c'mon! I don't even have a—"
@@ -14064,10 +14112,10 @@ label BE057:
     show BE wink
     BE "It's not me that remembers, Kei-chan, it's my fingers."
     show BE surprised-2
-    BE "I see you coming in,  my heart quickens…"
+    BE "I see you coming in,  my heart quickens..."
     show BE happy
     BE "And then, suddenly! I know what to do:"
-    BE "Up, down, up, down, B, A, A, R…"
+    BE "Up, down, up, down, B, A, A, R..."
     BE "And then, {i}bam{/i}—you're finished."
     MC "Are we talking about fighting games, or sex?"
     show BE surprised
@@ -14077,7 +14125,7 @@ label BE057:
     show BE aroused
     BE "The combo to finish you off {i}that{/i} way is far simpler."
     show BE disoriented
-    BE "It goes, one…two…"
+    BE "It goes, one...two..."
     play sound Boing
     show BE unique
     BE "{i}Squeeze{/i}."
@@ -14093,7 +14141,7 @@ label BE057:
     MC "No."
     show BE neutral
     BE "Fine. Let's play one of yours."
-    MC "Okay. How about…"
+    MC "Okay. How about..."
 
 label BE057_c1:
     menu:
@@ -14117,7 +14165,7 @@ label BE057_c1_1:
     BE "But, I'll give it another shot. Haven't played this one."
     MC "Okay, so, you've got your house, your yard, your character."
     MC "Now, you just need to go into town and buy some seeds."
-    BE "On my way…"
+    BE "On my way..."
     BE "Oh hey, let's talk to this girl. She could be my friend!"
     MC "Not much point right talking to Erisu right now. You don't have any gifts for her."
     show BE doubt
@@ -14132,9 +14180,9 @@ label BE057_c1_1:
     MC "And for that, you need to give gifts."
     show BE sad
     BE "Aw. Okay."
-    MC "Once you grow some crops, the game gets way more interesting. So, why don't you get some pepper seeds and…maybe lettuce…"
+    MC "Once you grow some crops, the game gets way more interesting. So, why don't you get some pepper seeds and...maybe lettuce..."
     show BE neutral
-    "Forty minutes passed…"
+    "Forty minutes passed..."
     MC "Oh hey, look! It rained yesterday and now your pepper plants are overproducing."
     MC "This is a huge win. You'll probably double your savings now."
     show BE happy
@@ -14153,7 +14201,7 @@ label BE057_c1_1:
     BE "Sorry, Kei-chan. I don't think this is my kind of game."
     show BE neutral
     BE "Feels like I'm just making a number go up."
-    MC "Well…yeah, but…"
+    MC "Well...yeah, but..."
     MC "I-I guess that's one way of putting it."
     BE "I don't dislike it, or anything. I'm just kinda waiting for an actual {i}game{/i} to happen."
     MC "..."
@@ -14170,13 +14218,13 @@ label BE057_c1_2:
     MC "Spirit Eater."
     show BE surprised-2
     BE "No way!"
-    BE "I heard that game was like…impossible!"
+    BE "I heard that game was like...impossible!"
     BE "I have a gamer friend who described playing it as like pushing a boulder up a huge mountain."
     show BE disoriented
     BE "And I already have two of those attached to me."
     show BE shrug
     BE "I don't know if I'm looking for a third."
-    MC "Well…"
+    MC "Well..."
     show BE neutral
     MC "Okay, it's not easy. I admit."
     MC "But, if you're good at combat—which you are, and you know how to equip and buff your character in all the right ways—which I do—Spirit Eater actually becomes very playable."
@@ -14212,7 +14260,7 @@ label BE057_c1_2:
     show BE surprised-2
     BE "N-no way!"
     BE "He killed me so quickly!"
-    MC "Heh…yeah, that's how things start out."
+    MC "Heh...yeah, that's how things start out."
     show BE confused
     BE "I want a rematch."
     MC "Well, you just respawned. If you {i}really{/i} wanted to face him again, you could. But—"
@@ -14221,7 +14269,7 @@ label BE057_c1_2:
     MC "Wait, listen!"
     MC "He's going to keep kicking your butt. Let him wait. Turn east. See that little outpost?"
     show BE doubt
-    BE "Yeah…"
+    BE "Yeah..."
     MC "You can upgrade your weapon and even get some light armor. That'll help you survive a hit or two longer."
     BE "But, I wanna fight him. He's a jerk."
     MC "Don't give him the privilege just yet."
@@ -14229,7 +14277,7 @@ label BE057_c1_2:
     BE "Aw, alright. Going to the outpost."
     MC "Okay, you're all equipped now. Before you fight him, let's take a trip to those woods over there."
     show BE doubt
-    BE "Aw, but I wanna fight that guy…"
+    BE "Aw, but I wanna fight that guy..."
     MC "There's a fast level up waiting for you if you face the troopers here first. Once you get that, I think you'll have enough skill gauge to use your special move twice."
     show BE surprised-2
     BE "Ohhh."
@@ -14303,7 +14351,7 @@ label BE057_c1_3:
     MC "Go check it out."
     MC "Okay, so here's where we gather clues. Check his pockets."
     show BE doubt
-    BE "Okay…"
+    BE "Okay..."
     MC "Alright. He's got an ID, a racketball toy, a whiskey bottle."
     MC "Turn the body over now. Let's see if we can figure out how he died."
     BE "..."
@@ -14313,17 +14361,17 @@ label BE057_c1_3:
     MC "I swear, it gets interesting soon. Let's—"
     BE "I-I'm not sure a ship full of dead bodies is what I want to be thinking about today..."
     MC "Oh."
-    MC "Um…"
+    MC "Um..."
     MC "I didn't think you had a problem with violent games. The gore in this one isn't even that extreme."
     show BE embarrassed
     BE "Yeah, but in other violent games, {i}I'm{/i} the one doing the killing."
     show BE neutral
     BE "Don't ask me why, but that makes all the difference to me."
     MC "I swear, this is a good game!"
-    BE "I believe you. I just…"
-    BE "Games where something creepy is going on and I can't even {i}fight{/i} it…I-I have to be in the right mood for that sort of thing."
+    BE "I believe you. I just..."
+    BE "Games where something creepy is going on and I can't even {i}fight{/i} it...I-I have to be in the right mood for that sort of thing."
     $setAffection("BE", -1)
-    MC "Uh…yeah, sorry."
+    MC "Uh...yeah, sorry."
     jump BE057_c1_after
 
 label BE057_c1_after:
@@ -14338,7 +14386,7 @@ label BE057_c1_after:
     BE "Nah, you can stay. It shouldn't take too long anyway. Here, I'll even put it on speakerphone so you can speak to him too."
     MC "But I haven't—"
     "Before I could get a chance to reply, Honoka answered her phone call."
-    MCT "—spoken to him for over a decade…!"
+    MCT "—spoken to him for over a decade...!"
     BE "{i}*Ahem*{/i}"
     show BE unamused
     BE "{i}This is Inoue, may I ask who's speaking?{/i}"
@@ -14350,36 +14398,36 @@ label BE057_c1_after:
     BE "Hehe, gotcha again, Papa!"
     FujioCell "Gah-hahaha! C'mon, girl, what was that? An impression of me? I don't sound like that!"
     "Honoka and her father shared a laugh together."
-    MCT "Man… He sounds just like how I remember."
+    MCT "Man... He sounds just like how I remember."
     BE "Ahhh, anyway! Hi, Papa! What's up?"
     FujioCell "Oh, you know. Just getting off work. Missed my favorite daughter and wanted to hear her voice!"
     show BE embarrassed-2
-    BE "Aww, Papa… I miss you too!"
+    BE "Aww, Papa... I miss you too!"
     FujioCell "Studying hard?"
     "Honoka glanced down at the controller in her hands and the paused video game on the TV."
-    BE "Uhh, yep! You just caught me in the middle of…studying!"
+    BE "Uhh, yep! You just caught me in the middle of...studying!"
     FujioCell "Uh-huh. And I'm the next Prime Minister."
     show BE happy
     BE "Really? Then, I'm the next Prime Minister's Daughter!"
     FujioCell "... Video games?"
     show BE shrug
     BE "Video games."
-    FujioCell "Of course, of course… As long as your grades are above water..."
+    FujioCell "Of course, of course... As long as your grades are above water..."
     show BE angry
-    BE "Papa…"
+    BE "Papa..."
     FujioCell "Yeah, yeah. \"I'm your father, not your student.\" But, I still care!"
-    MC "Pff…"
-    FujioCell "Ah. You have someone over? Is that…"
+    MC "Pff..."
+    FujioCell "Ah. You have someone over? Is that..."
     show BE neutral
     BE "Yup, it's him. My boyfriend."
-    MCT "Shiiiit…"
+    MCT "Shiiiit..."
     FujioCell "Aha, finally caught 'im! The mystery guy who's name you refuse to tell me!"
     "My eyes shot open wide. I leaned over to whisper into Honoka's ear."
     MC "{size=-6}He doesn't know?!{/size}"
     pause 1
     show BE wink
     pause 1
-    "Apparently, all those times Honoka told her parents she had a boyfriend, she neglected to mention her boyfriend was someone they knew…"
+    "Apparently, all those times Honoka told her parents she had a boyfriend, she neglected to mention her boyfriend was someone they knew..."
     show BE angry
     BE "You're the one with the bad timing, Papa. You always call after he leaves!"
     FujioCell "Well, not anymore! May I speak with him?"
@@ -14391,27 +14439,27 @@ label BE057_c1_after:
     "Compared to his joking and unserious vibe with his daughter, Honoka's father's tone of voice shifted into a more professional tone after he heard my voice."
     FujioCell "Hello, this is Inoue. Fujio Inoue, Honoka's father. May I ask who's speaking, please?"
     show BE embarrassed
-    MC "Hello, sir. My name's Keisuke. Er… Honoka's boyfriend."
+    MC "Hello, sir. My name's Keisuke. Er... Honoka's boyfriend."
     FujioCell "First and last name, son. I meet a lot of people in my line of work."
-    MC "Uh… Keisuke Hotsure, sir."
+    MC "Uh... Keisuke Hotsure, sir."
     stop music
     pause 1.5
     "The line went silent. My heart started to pound so hard in my chest, I could hear it in my ears."
-    FujioCell "Hotsure…"
-    extend "Hmm…mmm… Keisuke Hotsure… I've heard that name before…"
+    FujioCell "Hotsure..."
+    extend "Hmm...mmm... Keisuke Hotsure... I've heard that name before..."
     "After audibly racking his brain, he spoke again."
     FujioCell "What's your father's name, son?"
     MC "Ryuta. And my mother's name is Himari, if it helps."
     pause 1
     play music BE
-    FujioCell "...Eh…? Ah-haha..!" 
+    FujioCell "...Eh...? Ah-haha..!" 
     FujioCell "Gaaaah-hahaha! KEISUKE-CHAN!!"
     "All my nerves melted away after hearing his voice call me \"Keisuke-chan\" again."
     show BE happy
     BE "Yup, Papa. It's the same Kei-chan from back then! I wanted it to be a surprise."
-    FujioCell "Gaaahaha! Long time, Keisuke-chan! How long's it been? 10 years? {w}Happy new year, son! Times…{w}10!"
+    FujioCell "Gaaahaha! Long time, Keisuke-chan! How long's it been? 10 years? {w}Happy new year, son! Times...{w}10!"
     MC "Heh, yeah it's been a long time, sir! It's good to hear from you again."
-    FujioCell "I'm doing well, son. Even better now! Ahh, I never would have guessed… I haven't spoken to you since the family and I moved to Kagoshima! How's your family?"
+    FujioCell "I'm doing well, son. Even better now! Ahh, I never would have guessed... I haven't spoken to you since the family and I moved to Kagoshima! How's your family?"
     MC "We're all doing well, sir! Mom and Dad are still doing well, and Tomo's here at the school, as well."
     FujioCell "EHH??? Little Tomoko-chan's there too?! Ahh! TomoHono's together again, too!"
     show BE surprised
@@ -14421,20 +14469,20 @@ label BE057_c1_after:
     FujioCell "I'll be honest, I switched them around all the time! It was always so funny whenever your name would go second, Honoka. You would bang your little arms on my leg saying you wanted to go first!"
     MC "Oh yeah! I remember! And whenever Tomo was second—"
     FujioCell "She would puff her little chubby cheeks out and pout! Gaaaahaha!"
-    BE "Haha, aww! Really? Papa…"
-    MC "Aw, man… Good times, Fujio-san."
+    BE "Haha, aww! Really? Papa..."
+    MC "Aw, man... Good times, Fujio-san."
     FujioCell "Ah-ah! Remember, I don't like being called Fujio-san. Pop quiz! What do I always ask my students to call me?"
-    MC "Mmm…"
+    MC "Mmm..."
     if isEventCleared("MC008"):
         extend " Oh yeah! Mister Fujio! Because you teach English!"
         FujioCell "Ha-hah! That's correct! 100 marks!"
     else:
-        extend " Mister Fujio. Honestly, it's been so long that I don't remember why though…"
+        extend " Mister Fujio. Honestly, it's been so long that I don't remember why though..."
         FujioCell "Ahhh, you're almost there! Remember, it's because I'm an English teacher. I'll give you 90 marks for that!"
-        MC "Oh…! That explains all the English vocabulary trivia you knew."
+        MC "Oh...! That explains all the English vocabulary trivia you knew."
 
 
-    BE "Anyway, Papa… Kei-chan and I were in the middle of an intense game when you called, so do you mind if I call you back later?"
+    BE "Anyway, Papa... Kei-chan and I were in the middle of an intense game when you called, so do you mind if I call you back later?"
     FujioCell "Of course! I'm about to hop on the train anyway, so I gotta get off the phone. Ahh, it's so good to hear from you again, Keisuke-chan. I can't wait to tell Maegami-san. She'll be over the moon!"
     MC "Same to you, Mr. Fujio. Tell Maegami-san I say hello, okay?"
     FujioCell "Absolutely! You give my regards to Ryuta and Himari as well! Hope to hear from you soon, son!"
@@ -14442,7 +14490,7 @@ label BE057_c1_after:
     Fujio "You two be good now!"
     "{i}Click{/i}"
     pause 1.25
-    MC "Phew… Y'know… a warning would have been nice."
+    MC "Phew... Y'know... a warning would have been nice."
     show BE shrug
     BE "Yeah, probably. But this was so much better don't you think? You heard how happy he was!"
     MC "I was fully expecting him to tear me apart, to be honest."
@@ -14465,13 +14513,13 @@ label BE057_c1_after:
         BE "I think my thumbs need a rest, though. I could use something more rhythmic."
         show BE confused
         BE "Don't get me wrong though. I'll be playing Spirit Eater again SOON."
-        MC "Cool. In that case…"
+        MC "Cool. In that case..."
     MC "It's your turn to pick the next game."
     show BE neutral
     BE "I challenge you to {i}Clown Royal Rush II{/i}."
     MC "Oh. THAT game."
     BE "Uh huh."
-    MC "Racing, bombs and sadistic mayhem…"
+    MC "Racing, bombs and sadistic mayhem..."
     MC "Lemme guess: you're good at this one."
     show BE happy
     BE "Uh HUH."
@@ -14482,14 +14530,14 @@ label BE057_c1_after:
     show BE happy
     BE "Yay."
     "{i}On your marks.{/i}"
-    "{i}5…4…3…{/i}"
+    "{i}5...4...3...{/i}"
     "{i}GO!{/i}"
     "{i}VROOOOOOOM{/i}"
     show BE neutral
     BE "Nice seeing you. Bye!"
     "Honoka's clownmobile shoved me to the side and she sped off."
     "I was lagging behind hard."
-    "For about…"
+    "For about..."
     extend "eight seconds."
     "{i}Waaa-BOOM{/i}"
     show BE surprised-2
@@ -14503,12 +14551,12 @@ label BE057_c1_after:
     "{i}BOOM{/i}"
     show BE surprised-2
     BE "How do you keep dodging my bombs?!"
-    MC "I…"
+    MC "I..."
     MC "Might've played this game all summer last year."
     BE "WHAT?!"
     show BE confused
     BE "Okay, it's ON."
-    "{i}VROOOOOOOOOO…{/i}"
+    "{i}VROOOOOOOOOO...{/i}"
     show BE happy
     BE "Ha HA."
     "{i}BA-BOOM—BOOM!!!{/i}"
@@ -14537,7 +14585,7 @@ label BE057_c1_after:
     "And, went behind me."
     MC "Where you going?"
     BE "Absolutely nowhere."
-    BE "But, YOU…"
+    BE "But, YOU..."
     "My eyes were glued to the screen, but just behind me, I heard Honoka doing something with her shirt."
     show BE happy
     BE "Are going on a time out."
@@ -14557,19 +14605,19 @@ label BE058:
     play music DormLife
     show BE happy
     BE "Phew! All saddled in. Thanks for the extra pair of hands, Kei-chan."
-    "Honoka sent me an early morning SOS text since Kokutan wasn't around for… whatever reason. Turns out, when you can't reach completely in front of, let alone around you, a little help in the morning goes a long way."
-    MC "Hey, anytime. You can always call on me for help uh… saddling in. If your roommate's not around."
+    "Honoka sent me an early morning SOS text since Kokutan wasn't around for... whatever reason. Turns out, when you can't reach completely in front of, let alone around you, a little help in the morning goes a long way."
+    MC "Hey, anytime. You can always call on me for help uh... saddling in. If your roommate's not around."
     show BE neutral
-    BE "Hmm… You were awfully proactive. Maybe I should hire you full time!"
+    BE "Hmm... You were awfully proactive. Maybe I should hire you full time!"
     MC "Oh, don't be so sure about that, Miss. I doubt you could afford me."
     show BE sad
     BE "Dang. How much is Alice paying you?"
     show BE surprised
-    BE "Unless…" 
+    BE "Unless..." 
     show BE unique
     extend " you mean something else?"
     MC "Oh but I do, madam. I demand nothing less than a kiss AND a squeeze for my premium services."
-    BE "Oho? You drive a hard bargain, but I think I might just be able to…"
+    BE "Oho? You drive a hard bargain, but I think I might just be able to..."
     "Honoka leaned over, taking my arm and guiding it under her bra, right to her huge, yet still perky nipple, and with both bands, squeezed my arm, as I squeezed her."
     BE "...afford such a service."
     show BE happy
@@ -14577,7 +14625,7 @@ label BE058:
     "Just as quickly, she pulled my arm out from her bra and fixed her shirt, leaving me in a daze."
     "And hard."
     BE "So! How did things go with the 'rents?"
-    MC "Uh… oh, yeah. I chatted with my folks after getting back yesterday. Honestly, they asked more about Tomo and how she's holding up, considering she never calls them…"
+    MC "Uh... oh, yeah. I chatted with my folks after getting back yesterday. Honestly, they asked more about Tomo and how she's holding up, considering she never calls them..."
     BE "Heh, you sound a little jealous."
     MC "Meh. Not really. I'm just the more responsible twin. So, they don't worry about me as much."
     show BE shrug
@@ -14587,32 +14635,32 @@ label BE058:
     BE "Uh huh. {i}Suuure.{/i}."
     MC "By the way, which of us is the math tutor?"
     BE "That doesn't count. You're just a nerd~"
-    MC "Ah, whatever…"
+    MC "Ah, whatever..."
     show BE worried 
     "Honoka looked at her breasts and frowned."
     MC "Something wrong?"
-    BE "Mm… the girls feel a little weird." 
+    BE "Mm... the girls feel a little weird." 
     MC "Oh, shit. Did I do something wrong?"
     show BE surprised-2
-    BE "No! Nothing like that. It's more like… hmm. They…"
+    BE "No! Nothing like that. It's more like... hmm. They..."
     show BE sad
     BE "How do I describe this..."
     MC "Try me."
     show BE unamused
-    BE "Okay, I know it's gonna sound weird, but they feel… "
+    BE "Okay, I know it's gonna sound weird, but they feel... "
     extend "{i}prickly{/i}? Like when your foot falls asleep." 
     MC "Huh. Pins and needles, but in the boob?"
     show BE angry
-    BE "Yeah. But it's not like… painful? It's just… I dunno, weird!"
+    BE "Yeah. But it's not like... painful? It's just... I dunno, weird!"
     MC "Not to sound like a broken record, but should we get you checked out?"
-    MC "I mean, it's totally up to you, but…"
+    MC "I mean, it's totally up to you, but..."
     show BE neutral
-    BE "I mean… it's not like I'm in pain or anything."
+    BE "I mean... it's not like I'm in pain or anything."
     show BE embarrassed-2
-    BE "{i}Ahhh…{/i} Okay. I think we're in the clear. The feeling's passing."
+    BE "{i}Ahhh...{/i} Okay. I think we're in the clear. The feeling's passing."
     MC "Alright. Just, let me know if it comes back again."
     show BE happy
-    BE "Mhm! I will. Anyway, like I was saying…"
+    BE "Mhm! I will. Anyway, like I was saying..."
     "Honoka idly rubbed the outer curve of her breast as she breezed past me, bounding out her room and down the hallway."
     scene black with fade
     pause 1
@@ -14621,7 +14669,7 @@ label BE058:
     scene Classroom with fade
     show BE surprised
     BE "Mmnh!"
-    MC "{size=-6}Still feeling… ah, prickly?{/size}"
+    MC "{size=-6}Still feeling... ah, prickly?{/size}"
     "Not wanting to draw attention before class began, I leaned over to Honoka and asked quietly."
     show BE sad
     BE "{size=-6}Yeah, it just suddenly came back when I sat down.{/size}"
@@ -14630,7 +14678,7 @@ label BE058:
     BE "{size=-6}Nah, I'm good now, think it was just the jostle as they got settled.{/size}"
     show BE angry
     BE "And here I was, hoping my new extra padding was good for something."
-    "Honoka patted her hips, which to her credit, {i}were{/i} looking… {w}plusher."
+    "Honoka patted her hips, which to her credit, {i}were{/i} looking... {w}plusher."
     hide BE with dissolve
     pause .5
     show WG happy-2 at Position(xcenter=0.2, yalign=1.0) with dissolve
@@ -14644,8 +14692,8 @@ label BE058:
     hide AE with dissolve
     pause .25
     show BE angry
-    extend "… not to say others in the class didn't have her beat down there."
-    MC "{size=-6}Alright, just… take it slow today?{/size}"
+    extend "... not to say others in the class didn't have her beat down there."
+    MC "{size=-6}Alright, just... take it slow today?{/size}"
     show BE unamused
     BE "Yeah, yeah. I hear ya."
     hide BE with dissolve
@@ -14657,7 +14705,7 @@ label BE058:
     show Hageshi neutral at Position(xcenter=0.2, yalign=1.0)
     Hageshi "Inoue-san, if you could come up to the board and solve this equation, I'll postpone the quiz I have planned."
     show BE sad at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1.0)
-    BE "Err… yes, sensei."
+    BE "Err... yes, sensei."
     show BE worried at slowease(center, right, 3.0)
     "Honoka stood slowly and walked almost without lifting her legs, all the way to the front, and turned herself to the side so she could reach the board without pressing her chest into it."
     MCT "C'mon Honoka, we went over this. You can do it!"
@@ -14673,7 +14721,7 @@ label BE058:
     stop music
     extend " and mashed her chest right into the chalkboard."
     show BE surprised at altFall(0.25)
-    BE "{size=-6}AAAHN-MMPH…{/size}"
+    BE "{size=-6}AAAHN-MMPH...{/size}"
     "Honoka cried out as she crumpled to her knees, her chest dragging down against the chalkboard and smearing most of the equation, and some notes below it besides."
     show Hageshi at altMove(0.5, 0.75)
     "Faster than I could react, Hageshi moved to where she was and hoisted her back to her feet."
@@ -14690,10 +14738,10 @@ label BE058:
         "Take Honoka to the nurse's office.":
             MC "{size=-6}Honoka, we're going to the nurse's office. Please, we can't put this off any more.{/size}"
             show BE doubt
-            BE "Hah…hah… O-okay. Just don't go too fast, okay?"
+            BE "Hah...hah... O-okay. Just don't go too fast, okay?"
         "Ask how Honoka is doing.":
             MC "{size=-6}Are you okay, Honoka? Are you hurt? We can go to your dorm if you need to lay down, whatever you need."
-            BE "{size=-6}I-I'm fine. Just startled… and embarrassed. Let's… let's just go straight to the nurse. Please."
+            BE "{size=-6}I-I'm fine. Just startled... and embarrassed. Let's... let's just go straight to the nurse. Please."
             MC "{size=-6}Got it. {w}I'll stick with you until you tell me not to.{/size}"
     "I squeezed Honoka's hand once, and walked with her out of the classroom and headed to the nurse's office."
     scene black with fade
@@ -14702,25 +14750,25 @@ label BE058:
     scene Nurse Office with fade
     play music Rain 
     pause 1
-    "The trip to the nurse's was uneventful, though for the trip there Honoka insisted on walking behind me with her chest firmly pressed against my back, doing her best to match my pace and minimize her… jostling."
+    "The trip to the nurse's was uneventful, though for the trip there Honoka insisted on walking behind me with her chest firmly pressed against my back, doing her best to match my pace and minimize her... jostling."
     "I could tell she was doing her best not to make any sounds. But the fact I {i}could{/i} tell  was itself worrying."
     pause .5
     show BE sad with dissolve
-    BE "I just don't get it, Kiyomi-san; I've had sore and sensitive breasts before, but it's usually only right around the start of my… time of the month…"
+    BE "I just don't get it, Kiyomi-san; I've had sore and sensitive breasts before, but it's usually only right around the start of my... time of the month..."
     "Honoka trailed off, glancing in my direction."
     MC "Don't worry. Keep talking like I'm not even here."
     "Honoka nodded."
     show BE neutral
-    BE "Right.{w} But, never anything like this. It's like… electric tingles? Sometimes they last for a while but aren't that bad, but when they come back, it's like getting zapped!" 
+    BE "Right.{w} But, never anything like this. It's like... electric tingles? Sometimes they last for a while but aren't that bad, but when they come back, it's like getting zapped!" 
     show BE worried
     BE "It's not like it hurts − I can't begin to describe how many times I've banged up the girls, even before coming to Seichou. I {i}know{/i} what that feels like. I guess it's like I'm constantly getting startled, like when someone pokes you in the ribs."
     show BE doubt
-    BE "Ugh…! Sorry, I'm not sure if any of that made sense… I feel like I'm talking in circles and wasting everyone's time…"
+    BE "Ugh...! Sorry, I'm not sure if any of that made sense... I feel like I'm talking in circles and wasting everyone's time..."
     Nurse "Inoue−san, while you have nothing to worry about, coming in and asking is {i}never{/i} silly, or a waste of time. That's what we're here for."
     Nurse "What you've described isn't as abnormal as you seem to think." 
     Nurse "You'll be fine with plenty of good rest. Take some painkillers if the sensations become painful, and watch your salt and caffeine intake. I would also appreciate it if you check in with us, should the pain worsen or persist beyond a few days."
     show BE unamused
-    BE "Wait… that's it? Really?"
+    BE "Wait... that's it? Really?"
     MC "Are you sure?"
     "I couldn't see the nurse's face behind her mask, but I could hear the smile in her voice that was reflected in her eyes as she gently patted Honoka's hand." 
     Nurse "Really, really."
@@ -14729,17 +14777,17 @@ label BE058:
     Nurse "Hmmm. The easiest way to put it, is you're growing a bit faster than your nervous system. Or at least, you {i}were.{/i}" 
     Nurse "Now, your brain is catching up to your body. It's building those new nerves and pathways. You're sensitive because these are, in a medical sense, {i}new{/i} sensations."
     "As the nurse finished explaining, I couldn't help but loudly exhale and slump back in my chair."
-    MC "Phew… what a relief…"
+    MC "Phew... what a relief..."
     stop music
     play music BE
     show BE happy
     BE "See Kei-chan, I told you I was fine!"
     MC "Well, excuuuuuse me for being worried after you collapsed to your knees in the front of class! I was really worried..."
     show BE doubt
-    BE "Uggggh… don't remind me…"
+    BE "Uggggh... don't remind me..."
     Nurse "Hotsure-san was right to have you come in and check with us. Besides, it's good for us to be up to date with your measurements. You do often sleep in past your routine appointments, Inoue-san."
     show BE wink
-    BE "Well, maybe I'm… a growing girl who needs her beauty sleep?"
+    BE "Well, maybe I'm... a growing girl who needs her beauty sleep?"
     MC "Ha. Oh, I mean, ha. Ha. Ha."
     Nurse "Well, it so happens, I had a cancellation in my schedule today. So, if you like, your next appointment could be later today in the afternoon."
     "I still couldn't see the nurse's face, but she exuded a palpable aura that screamed /'You better not miss it this time.'/"
@@ -14749,20 +14797,20 @@ label BE058:
     Nurse "And Hotsure-san, I'd also advise you to trust Inoue-san's judgment a little more. Despite the changes she's going through, she knows her body better than anyone." 
     MCT "Geh."
     Nurse "Caution is well and good, and I completely understand that everything may seem, well, more than a bit uncertain lately. But it's also worth practicing a bit of temperance."
-    MC "Ah… yes. Sorry, Kiyomi-san."
+    MC "Ah... yes. Sorry, Kiyomi-san."
     Nurse "I'm not the one who needs an apology, Hotsure-san."
     MC "Right."
     pause .5
     show BE unamused
-    MC "Sorry, Honoka. I didn't mean to be a mother hen or anything. I just… I guess I just wanted to make sure you're happy and healthy. But that's no excuse for trying to tell you what to do − I apologize."
+    MC "Sorry, Honoka. I didn't mean to be a mother hen or anything. I just... I guess I just wanted to make sure you're happy and healthy. But that's no excuse for trying to tell you what to do − I apologize."
     BE "..."
     pause .5
     show BE smug
     BE "So what I'm hearing is, 'I'm sorry, Queen Honoka, you were right and I was wrong. Why {i}of course{/i} I'll treat you to a triple fudge sundae, anything for you my love, light of my life?'"
     "Honoka burst into laughter, her chest jostling as if today's events never happened."
     MCT "In hindsight, I really {i}do{/i} feel silly. Honoka never said she was in pain and she bounced right back up until the end. Just like she always does—that's who she is."
-    MCT "Even if she's just putting on a face… who am I not to return that kind of energy? It's Honoka, for crying out loud."
-    MC "Listen you…"
+    MCT "Even if she's just putting on a face... who am I not to return that kind of energy? It's Honoka, for crying out loud."
+    MC "Listen you..."
     Nurse "All right, you two. I have a few more appointments to get to today, don't stick around too long."
     MC "Of course. Thank you again, Sensei."
     Nurse "Not a problem at all. Oh, and Inoue-san?"
@@ -14774,7 +14822,7 @@ label BE058:
     pause .5
     MC "All right Drama Queen Honoka, let's see if Kanami-san or Aida-san can spare a moment, maybe whip you up a caffeine-free treat. Or, I'd be happy to treat you to the finest chips available in my cupboard. Your call."
     show BE sad
-    BE "...but my triple chocolate sundae…"
+    BE "...but my triple chocolate sundae..."
     pause .5
     show BE shrug
     BE "Oh well. Sure, I'll take you up on that offer!"
@@ -14782,7 +14830,7 @@ label BE058:
     show BE happy
     BE "Race ya!"
     show BE happy at slowease (center, offscreenleft, 0.5)
-    MCT "Yeah… she's okay if that's all it takes after being denied chocolate."
+    MCT "Yeah... she's okay if that's all it takes after being denied chocolate."
     pause .5 
     MC "Wait. Shit."
     scene Hallway with dissolve

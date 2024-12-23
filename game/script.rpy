@@ -113,60 +113,60 @@ init python:
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
-        'arcade': ("town", (1100,650)),
-        'auditorium': ("school", (470,560)),
-        'bakery': ("town", (1100,650)),
-        'ballroom': ("town", (1100,650)),
-        'businterior': ("town", (1100,650)),
-        'cafeteria': ("school", (655,570)),
+        'arcade': ("town", (500,700)),
+        'auditorium': ("school", (385,200)),
+        'bakery': ("town", (500,700)),
+        'ballroom': ("town", (500,700)),
+        'businterior': ("town", (500,700)),
+        'cafeteria': ("school", (750,215)),
         'campuscenter': ("school", (570,390)),
         'classroom': ("school", (750,280)),
         'classroom_2': ("school", (750,280)),
         'classroom_3': ("school", (750,280)),
-        'clocktower': ("school", (570,500)),
-        'cookingclassroom': ("school", (740,490)),
-        'dock': ("school", (1100,650)),
+        'clocktower': ("school", (625,555)),
+        'cookingclassroom': ("school", (745,290)),
+        'dock': ("school", (500,700)),
         'dormAE': ("school", (870,300)),
         'dormWG': ("school", (870,280)),
         'dormBE': ("school", (870,260)),
         'dormPRG': ("school", (870,280)),
         'dormFMG': ("school", (870,300)),
-        'dormexterior': ("school", (860,375)),
+        'dormexterior': ("school", (820,375)),
         'dormhallway': ("school", (870,250)),
-        'dorminterior': ("school", (880,380)),
-        'facultyroom': ("school", (880,380)),
-        'festival': ("town", (1100,650)),
-        'field': ("town", (1100,650)),
-        'frozenbeach': ("town", (1100,650)),
-        'gamestore': ("town", (1100, 650)),
+        'dorminterior': ("school", (890,390)),
+        'facultyroom': ("school", (590,590)),
+        'festival': ("town", (500,700)),
+        'field': ("town", (500,700)),
+        'frozenbeach': ("town", (500,700)),
+        'gamestore': ("town", (500,700)),
         'gatefront': ("school", (570,390)),
-        'giantdorminterior': ("town", (950,100)),
-        'gym': ("school", (730,220)),
+        'giantdorminterior': ("town", (975,50)),
+        'gym': ("school", (385,400)),
         'hallway': ("school", (745,375)),
-        'hillroad': ("town", (1100,650)),
+        'hillroad': ("town", (500,700)),
         'infodesk': ("school", (590,590)),
         'lakeroad': ("school", (460,120)),
-        'library': ("school", (490,560)),
-        'lockers': ("school", (730,220)),
-        'musicclassroom': ("school", (740,490)),
+        'library': ("school", (570,275)),
+        'lockers': ("school", (385,400)),
+        'musicclassroom': ("school", (745,290)),
         'nurseoffice': ("school", (590,590)),
-        'okinawa': ("town", (1100,650)),
+        'okinawa': ("town", (500,700)),
         'office': ("school", (590,590)),
-        'park': ("town", (1100,650)),
-        'pool': ("school", (440,165)),
+        'park': ("town", (500,700)),
+        'pool': ("school", (385,400)),
         'roof': ("school", (750,375)),
         'schoolfront': ("school", (570,620)),
-        'schoolplanter': ("school", (570,265)),
+        'schoolplanter': ("school", (570,150)),
         'schoolexterior': ("school", (715,650)),
-        'summer-beach': ("town", (570,620)),
-        'summer-guestbedroom': ("town", (570,620)),
-        'supermarket': ("town", (1100,650)),
-        'town': ("town", (1100,650)),
-        'tokyo': ("town", (1100,650)),
+        'summer-beach': ("town", (500,700)),
+        'summer-guestbedroom': ("town", (500,700)),
+        'supermarket': ("town", (500,700)),
+        'town': ("town", (500,700)),
+        'tokyo': ("town", (500,700)),
         'track': ("school", (570,165)),
         'unknown': ("school", (550, 550)),
-        'waterpark': ("town", (1100,650)),
-        'woods': ("school", (460,120))
+        'waterpark': ("town", (500,700)),
+        'woods': ("school", (825,65))
     }
     debugenabled = True
     debuginput = ""
@@ -926,7 +926,7 @@ init python:
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
             PRGNsfw = False
             PRGOutfit = o
-        elif o == OutfitEnum.NUDE:
+        elif o == OutfitEnum.NUDE or o == OutfitEnum.TOPLESS:
             PRGNsfw = True
             PRGNsfwOutfit = o
             if isNSFW():
@@ -973,7 +973,7 @@ init python:
         global NatsNsfwOutfit
         global NatsOutfit
         global NatsNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL:
             NatsOutfit = o
         elif o == OutfitEnum.NUDE:
             NatsNsfw = True
@@ -1249,6 +1249,7 @@ screen choicetimer():
 
 screen daymenu():
     add "Graphics/ui/map/map_school.webp"
+    add "Graphics/ui/map/border.webp"
 
     #event choice sidebar
     grid 1 8:
