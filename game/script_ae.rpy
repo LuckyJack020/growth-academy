@@ -12469,6 +12469,7 @@ label AE053_c1_after:
     jump daymenu
 
 label AE054:
+    $setFlag("XX54")
     $setProgress("AE", "AE055")
     scene Dorm Interior with fade
     play music Schoolday

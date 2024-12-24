@@ -14172,6 +14172,7 @@ label WG003M:
     jump daymenu
 
 label WG054:
+    $setFlag("XX54")
     $setProgress("WG", "WG055")
     scene Cafeteria with fade
     play music HigherEdu

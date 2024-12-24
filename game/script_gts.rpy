@@ -7355,7 +7355,7 @@ label GTS036_c3:
 
 label GTS037:
     $setFlag("XX37")
-    $setProgress("GTS", "GTS039")
+    $setProgress("GTS", "GTS038")
     scene Classroom with fade
     play music Schoolday
     "Another day of my classes had come and gone. I sat in my chair, packing up my supplies as the other students prepared to leave. Tashi-sensei chimed in with a personal anecdote after the lesson was over."
@@ -7647,7 +7647,205 @@ label GTS037_c3_after:
     jump daymenu
 
 label GTS038:
-    jump GTS039
+    $setProgress("GTS", "GTS039")
+    scene Chukan Point with fade
+    play music ClearSkies
+    "The sun was high in the air as I made my way back to the mountain pass that Naomi and I had previously explored."
+    if isEventCleared("RM006"):
+        "Even after passing through Chūkan Point once or twice, it was hard not to be struck by its air of otherworldly detachment."
+    else:
+        "She said that the area was known as \"Chūkan Point.\" I didn't get a very thorough look at it the first time I was here, but as I ascended the lengthy road leading up to the partially walled lookout point, I noticed details that I didn't catch before."
+    "On the lower half of the road, the section closer to Seichou Academy, the pavement was nearly flawless. Very few cracks were visible, and any vegetation hanging towards the road had been nicely cut."
+    "As I neared the top of the mountain pass, however, I noticed less and less maintenance. One of the route markers was buried in the leaves of a tree on the side of the road, and a small mudslide had made nearly one third of the road unusable. Cracks like old men's ears sprouted verdant weeds."
+    "The peak looked nicer than the upper section of the pass, however. Aside from the occasional overgrown grass sprawling from the pavement, it had a very zen and disconnected feel from the rest of the world."
+    "The view from under the hanging terrace stretched on for several hundred meters, and I could easily make out Seichou's clock tower."
+    "The overlook had clearly been built to be human-sized, but I could see that giant sized benches, telescopes, and a maintenance shed had been built to accommodate its new regulars."
+    "Overlooking all of it was an island in the middle of a river flowing through the park, where a great, wizened sakura held court with a circle of snowy dogwoods."   
+    $setGTSOutfit(OutfitEnum.CASUAL)
+    show GTS neutral with dissolve
+    "Sat in one of the benches was a giantess I knew very well, to whom a great sakura was a perfect complement. She stood up from her position and greeted me with a shallow bow."
+    GTS "Good afternoon, Keisuke-kun. I hope you found the place easily?"
+    MC "Well, it was a bit of a hike, but it's good to see this place again."
+    if checkSkill("Athletics", ">=", 6):
+        MC "All that exercise I've been doing on campus kept me nice and steady."
+    else:
+        MC "I could use the extra exercise, anyway."
+    show GTS neutral-2
+    GTS "I'm glad. Might you be amenable to traveling here more often? This spot tends to go unnoticed, I... have noticed.{w} I suppose that goes without saying..."
+    "I quickly chuckled."
+    MC "It's a nice spot. I like it."
+    GTS "I wanted to explore a bit more, but the main reason why I wanted you to come out here again was because I was inspired by the view."
+    MC "From the terrace, you mean?"
+    "Naomi nodded pensively."
+    GTS "The very same. I saw you checking it out earlier. You can see many different things up here, but I found the view to the southwest the most interesting."
+    "She then picked up a... by her standards... small metal case that had been resting on the bench."
+    "As she did so, I slowly made my way towards the terrace. The clock tower that I noticed earlier could be seen if one looked southeast down the road..."
+    "...But from the southwest, there was a splendid view of the river through the park as it meandered from the mountains down, down to the lowland pine forests of the coast."
+    show GTS happy
+    GTS "I imagine that you see it too?"
+    "Naomi walked alongside me as I stared at the tranquil plain. When she did, I noticed the metal case in her hands."
+    MC "Oh, hey. Aren't those the oil pens that I gave you?"
+    show GTS neutral-2
+    GTS "That they are. I've finally found a subject that merits such high quality ink."
+    "Naomi slowly lowered herself down into a kneeling position, opening the case with an audible clack. Inside was an elaborate, colorful set of oil pens and a sketchbook. When she had brought herself to her knees, her eyes were almost perfectly in line with mine."
+    GTS "I thought you might like to help me decide what to focus on."
+    "I thought on the idea for a moment. There were a LOT of landmarks visible from the ridge, but I thought the focal point should be..."
+    menu:
+        "The clock tower at the academy.":
+            $setFlag("GTS038_clocktower")
+            MC "Why don't you try drawing the clock tower?"
+        "The trees along the path.":
+            $setFlag("GTS038_trees")
+            MC "You could do a natural piece by drawing the trees on the ridge."
+        "The river rolling through the park.":
+            $setFlag("GTS038_river")
+            MC "You could center it around the river. Flowing water should make for a nice challenge, don't you think?"
+    GTS "Ah, that {i}would{/i} be an interesting subject..."
+    "Naomi looked down towards the sketchbook, then positioned herself so that she was looking towards her subject." 
+    "She then pulled her legs towards her and crossed them until she was sitting upright. Once in position, she placed the sketchbook upon her lap."
+    "The sketchbook looked incredibly small, compared to her body. On her thigh, it looked little more than a pocket notebook."
+    "Silently, Naomi pulled out a dark gray oil pen from the set. She uncapped it using the most bashful flits of her index finger and thumb- it came off as though I had ripped it off. Much more of her strength, I could imagine, would have destroyed the thing."
+    "Naomi inhaled deeply, then exhaled as the natural sounds occasionally lapped around us, the wind causing the leaves to sing a reminder of their presence."
+    "After staring at the blank page for a few seconds, Naomi made the first stroke of the drawing - a bold, heavy mark that spanned the entire width of the sketchbook." 
+    menu:
+        "Ask what the first line represents":
+            MC "What's that line for?"
+            GTS "That will be the horizon. I felt it best to begin with the largest focal point of the piece."
+            "I nodded and watched Naomi's thought process as she continued the drawing."
+        "Quietly observe":
+            "I anticipated Naomi's next few strokes, wondering how she'd continue the drawing."
+    "Naomi began to add several lines that stemmed from the first one, using a black pen to create a subject near the horizon. I didn't know what it was until she returned the pen to the case."
+    "Naomi's brow rose slightly."
+    "She placed the sketchbook onto the bench next to her, then firmly planted both of her feet in front of her as she rose from her seated position. The bench creaked and whined faintly as it was freed from Naomi's weight."
+    "From standing, Naomi loomed even larger as she quietly observed the world around her. She softly placed her hand upon her chin as she turned her head."
+    "The air whirred with a sudden, swift gust as Naomi's arm reached down to grab the sketchbook off of the bench. The force was enough to scatter a few nearby leaves."
+    "Naomi, as if fully aware of how much force her movement produced, slowly coaxed her mouth into a smile."
+    GTS "This view... suits my purposes a bit better."
+    "From her new, significantly higher vantage point, Naomi carefully picked up another pen and continued her drawing."
+    "Naomi swapped pens often, using various shades of green and blue. From my position, I couldn't see the sketchbook... just Naomi's towering presence."
+    "About half an hour passed as Naomi continued to cradle the sketchbook in her left hand while drawing with her right. After a particular pen stroke, she paused in place and silently observed her creation."
+    MC "May I see?"
+    "Naomi looked down, over her shoulder and past the hem of her shirt. Once again, her expression shifted."
+    GTS "Oh. Certainly. It's far from complete, but I'm satisfied." 
+    "Naomi turned the sketchbook around so the drawing faced me."
+    if getFlag("GTS038_clocktower"):
+        "The sketch was a detailed, architectural piece depicting the intricate carvings of the clock tower. The tower dominated most of the canvas, allowing the viewer to see the modelwork of the stone and metal."
+        "A black pen was used for the bolder and more distinct parts of the structure, such as the numbers on the face of the clock."
+        "Gray and beige pens were used to depict the more subtle pieces of the stonework making up the front of the tower and the almost plush verdance of the patinated roof tiles."
+        MC "You made the tower very distinct. You can see all of the little details in the design."
+        GTS "Yes. I wanted to ensure that the clock tower's visibility couldn't be understated."
+    if getFlag("GTS038_trees"):
+        "The sketch was a natural piece that focused on the trees lining the road leading up to the vantage point. Rather than focusing on what one could see by looking over the cliff, it instead focused on what one could see by looking at the path one needed to take to get here."
+        "From the drawing's perspective, the trees seemed to shift downward the further back the viewer looked. The trees dominated about half of the canvas, with the pavement and sidewalk of the road making up the other half."
+        "An abstract, more subtle gradient of various greens and browns were used to depict the trees. A touch of gray strokes were used to depict the bumpiness of the tarmac below, as well as a few scattered leaves upon the ground."
+        MC "You can see quite a long way down just by observing the trees. I like how you showed that depth in such a simple sketch."
+        GTS "Thank you. I wanted to ensure that the descending slope was the focal point of the drawing."
+    if getFlag("GTS038_river"):
+        "The sketch focused on what one could see from the vantage point, looking down a short stretch of waving grass until the river disappeared into the woods."
+        "Where the sunlight hit the crests of the river, she colored in white. The rest, she illustrated with varying shades of blue, with deeper hues to match the deeper waters."
+        "She had drawn the terrain itself with an interesting compressed slope effect, no doubt on account of her perspective."
+        MC "Have you drawn or painted running water before?"
+        GTS "Seldom. You were correct in thinking that the water would be rather more challenging."
+        MC "It's abstract, but I think it works. You can clearly tell that it's a body of water, but it's not done in a way that's true to life. It's almost like the oil gives it a more whimsical, fantasy look."
+    show GTS pondering
+    GTS "Pray tell, why did you choose the subject that you did? I am curious."
+    "Naomi paused for a few seconds, then slowly relaxed her expression."
+    show GTS happy
+    GTS "Could it be because you favor large subjects?"
+    MC "That's... a possibility, yes. Really, I just thought about what would make the best drawing, is all."
+    "Naomi chuckled, covering her mouth with her hand."
+    GTS "The piece has a rather extreme perspective to it, does it not?"
+    MC "Hey, that was all your idea. I didn't say anything about adding perspective."
+    GTS "Aha. Perhaps I did that unconsciously."
+    MC "If you keep at it, you could make a lot more interesting perspective pieces. Did you want to turn this into a regular hobby?"
+    show GTS neutral
+    GTS "Mm... perhaps. More than anything else, I just wanted a creative outlet... and to test out these exquisite pens."
+    GTS "To that end, perhaps I ought to ask Kazumi-chan's advice on the matter."
+    show GTS pondering
+    extend " What a funny circumstance..."
+    MC "How so?"
+    show GTS neutral-2
+    GTS "Well, growing up, there {i}were{/i} a handful of footmen and nannies attending us and our household. What we lacked was a governess."
+    if checkSkill("Academics", ">", 9):
+        MC "I'd be a little surprised otherwise. It's not exactly an orthodox practice in Japan."
+        GTS "Per tradition, no, it is not. Quite a few of my friends at school had one, nevertheless, and I gather they thought it queer that we did not."
+        MC "Well, you could've come to my high school. Nobody there had a governess, either."
+        show GTS happy
+        GTS "It's a tad late for that, I'm afraid."
+        MC "Heh, darn."
+        show GTS neutral 
+    else:
+        MC "A what?"
+        GTS "A live-in tutor kept on retainer, in a nutshell."
+        MC "Oh, okay."
+    GTS "Well, absent an employee dedicated to fortifying the educations of my sister and I, the duty fell to my mother."
+    GTS "However, Father and Mother were both frequently needed away from the house for business, or social calls, or what have you."
+    GTS "As such, it was often necessary from my early teen years to carry the torch myself, on Kazumi-chan's behalf."
+    MC "So your mother tutored you, and then you tutored your little sister?"
+    GTS "Just so. Apart from redoubling her lessons in literacy and arithmetic, I was to educate her on the arts, etiquette, and social graces suitable for a young lady."
+    MC "I'm imagining trying that with Tomo, and it's difficult for me to picture a worse kind of hell."
+    show GTS unique 
+    "Naomi erupted into an unguarded titter that she promptly tried to tamp down."
+    GTS "It certainly bore its own challenges..."
+    show GTS neutral
+    GTS "Of course I love Kazumi-chan dearly. Nevertheless..."
+    GTS "She is as reserved as befits a lady, but at times she is taciturn to a fault. Dare I say, she could even be called brusque."
+    show GTS embarrassed 
+    GTS "Moreover, she's rather overly willful, and nearly as often has an artless and disharmonious thing to say as a kind and thoughtful thing."
+    MCT "Who does {i}that{/i} sound like..."
+    MC "I think I know what you mean." 
+    show GTS neutral-2
+    GTS "I see. So we are more akin than I realized."
+    MC "Well... I dunno. I've always thought of myself as Tomo's keeper, but I, uh, definitely never went as far as you did in personally overseeing her upbringing."
+    GTS "I don't think you ought to hang your head upon that account. I acknowledge that the circumstances of my household were rather peculiar, and I wager Tomoko-san could have turned out far worse."
+    if checkAffection("TM", ">", 3) or isEventCleared("MC014"):
+        MC "I feel like I have been doing better about having her back since we came to the island. But... it does bring to mind the times I could've done better in the past."
+    else:
+        MC "Yeah... I just find myself seeing a lot of places where I could have had her back more, especially since we were called to this island."
+    GTS "The very fact that such things occur to you is a credit to your character as a brother."
+    show GTS neutral 
+    GTS "And after all, to open your eyes to opportunities missed in the past is also to open them to those yet to come."
+    "I chuckled lightly."
+    MC "Yeah, that's true."
+    MC "So I take it Kazumi-san made up for her poor marks in the social graces in other areas?"
+    GTS "Indeed. As I alluded, she rather quickly surpassed me in drawing, painting, and music... but not quite in dance. She rather dislikes being choreographed in any respect."
+    MC "So if that's the case, how did you finally get her to listen to you?"
+    GTS "Well, much as you said during our first week of classes, sometimes learning comes through teaching. The necessity of her attention and obedience to me prompted me to research the topic of cultivating said."
+    GTS "Much like cultivating an herb garden, when my efforts finally yielded fruit, it was quite abundantly satisfying. One could say we both were enriched."
+    MC "Herbs don't produce fruit, though. They produce herbs."
+    show GTS aroused
+    GTS "Keenly observed, Keisuke-kun."
+    show GTS neutral
+    GTS "While we're on the subject, how did you and Tomoko-san pass the time as children?"
+    MC "Oh... a lot of video gaming for both of us, walking around the neighborhood."
+    MC "Sometimes when Honoka and I played together before she moved away, we'd drag Tomo along for some shenanigans."
+    MC "At school, we sorta just led separate lives... for the most part. Especially after Honoka moved away."
+    GTS "I see."
+    MC "From time to time she could be perhaps a little brusque, too. That combined with her blasé attitude towards others sometimes got her in trouble. I tried to smooth things over when I could."
+    GTS "Ahh, so therein lies the 'mother hen' you told me about."
+    if isEventCleared("MC014"):
+        MC "Yeah. Heck, it's a little like that even now."
+        show GTS neutral-2 
+        GTS "We cannot expect all deficiencies of character to vanish overnight."
+        MC "No, no. I still want to try, of course."
+        MCT "Though honestly, the way Usui-san treated you before, I don't know if I like her either."
+    MC "That's what brothers are for, right?"
+    GTS "Such a manner of chivalry is to be lauded for certain. Nevertheless, it does rather raise the question of what she is to do in the case where you are not able to intervene directly."
+    MC "I've come to realize that. We're coming to the point where we'll be on our own, and she'll have to get comfortable with taking the wheel in her life. That would help her in many areas."
+    pause 0.75
+    MC "I admit... I've never really approached the question seriously."
+    MC "The business of changing a person just seems beyond me."
+    show GTS pondering 
+    GTS "It is a tricky question indeed."
+    "She said nothing for a moment or two."
+    show GTS neutral-2
+    GTS "Well, conundrums of such complexity shall ever take their own good time to resolve. In the meantime, let us employ this fine day to the fullest."
+    GTS "Would you like to help me conjure up other things to draw?"
+    show GTS neutral 
+    "Naomi slowly lowered herself back down onto the gargantuan bench, a soft and wearisome creak its reply. She rested her hands upon her lap."
+    "I spent the rest of the afternoon discussing hobbies with Naomi."
+    $setSkill("Art", 1)
+    jump daymenu
 
 label GTS039:
     $setProgress("GTS", "GTS040")
@@ -13341,6 +13539,7 @@ label GTS053:
     jump daymenu
 
 label GTS054:
+    $setFlag("XX54")
     $setProgress("GTS", "GTS055")
     show Dorm Interior with fade
     play music MC

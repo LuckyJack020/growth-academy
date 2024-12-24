@@ -5600,8 +5600,7 @@ label FMG033_FMG_after:
     jump daymenu
 
 label FMG034:
-    $setFlag("XX35") #Move this to FMG035 when it is written.
-    $setProgress("FMG", "FMG036")
+    $setProgress("FMG", "FMG035")
     scene Hallway with fade
     play music Schoolday
     MCT "I swear if I have one more pop quiz today, I'm going to highly consider jumping out the nearest window. Science, I'm begging you. Please don't do this to me..."
@@ -5776,8 +5775,277 @@ label FMG034:
     MC "..."
     jump daymenu
 
-label FMG035: #tmp
-    jump FMG036
+label FMG035:
+    $setFlag("XX35")
+    $setProgress("FMG", "FMG036")
+    $setFMGOutfit(OutfitEnum.GYM)
+    play music FMG
+    scene Gym
+    show FMG neutral
+    with fade
+    FMG "Twenty... twenty-two.... twenty-three... {w}and done!"
+    MC "That's it, only twenty-three? Are you feeling okay? Usually, you're putting up bigger numbers."
+    FMG "I'm fine, I'm fine. This is one of my rare moments where I felt like having a lazy gym day."
+    MC "Ah, right, we've only been here for two and a half hours versus the four we're usually here for."
+    FMG "Okay, we had a few long gym sessions like that and I promised after you couldn't walk that {i}one{/i} time we wouldn't do them again."
+    FMG "You hold onto grudges for so long."
+    MC "This was last week..."
+    FMG "Well, you know what they say..."
+    pause 1
+    MC "No, no I don't know what they say."
+    FMG "Yesterday is history, tomorrow is a mystery— but today is a gift. That's why it's called the present."
+    MC "..."
+    MC "You stole that from the movie with the karate panda. And tomorrow isn't going to be a mystery, I already know I will be upset."
+    MC "We have a math test and I do not feel like studying for it."
+    FMG "Aw, I'm sorry, Kei-kun. Look on the bright side, today is a gift you get to spend it with me {i}and{/i} you get to meet my parents."
+    MC "Okay, but I spend most days with you. Sometimes I'll get some lines of dialogue by myself before you show up though."
+    show FMG sad
+    FMG "What...?"
+    MC "You... wouldn't get it. {w}Anyhow, what time are your parents getting here?"
+    show FMG neutral
+    FMG "Their text this morning said they'd be here by noon. I made reservations at a new place downtown that I think they'll enjoy."
+    MC "Can I know?"
+    FMG "Mhm, maybe, depends on what you got me for my birthday."
+    MC "Me, I'm the gift."
+    FMG "Yikes... hope the store takes returns, haha."
+    MC "Damn... Maybe I {i}will{/i} return it then."
+    FMG "Hey! No take-backsies!"
+    MC "Take-backsies? What are you, ten? {w}You just said you did want it."
+    FMG "I said I didn't want {i}you{/i} as a gift— I get that all the time already. Besides, you can't just back out of giving a gift you just said you would give!"
+    MC "Hehe, alright calm down. Just trust me, you're going to love it. I'm pretty proud of myself with what I got."
+    FMG "Don't say stuff like that, you'll get me all excited!"
+    MC "I know, it will make your inevitable disappointment that much better!"
+    FMG "Oh my god, why do you say things like that?"
+    MC "I thought it was funny, you know I'm kidding after all, heh."
+    FMG "You're such an ass. This \"gift\" of yours, {i}if{/i} it's real, better be amazing to make up for that fact."
+    MC "You know I wouldn't let you down. Where are we going to meet them at anyway?"
+    FMG "The restaurant I picked out isn't anything super duper fancy by the way. My parents hate those places where you must dress up."
+    MC "I can see myself getting along with them already."
+    FMG "Oh, yeah, I'm not worried about that at all. You and my dad might get along a little {i}too{/i} well."
+    MC "What can I say, heh, when you're as charismatic as myself you can't help being friends with everyone."
+    show FMG happy
+    FMG "You talk to a total of maybe ten people. I might be being generous with that assumption too."
+    MC "Okay, in my defense, I talk to the people that matter. We wouldn't be able to progress the game if I had to stop and chat with every single person that walks these halls."
+    MC "{size=-6}Though now that I think about it, that would be a good way to boost my speech skill...{/size}"
+    show FMG neutral
+    FMG "Stop talking like that, it's weird."
+    MC "That's my last one for now, scout's honor."
+    MC "Now, I have an important question for you."
+    FMG "Maybe I have an answer."
+    MC "Do you want to open your gift now or after we wrap up everything with your folks?"
+    FMG "Easy— {i}now!{/i} {w}Lemme take a shower first and then we can head back to my dorm for it."
+    MC "I'll go wait in your dorm. Toss me the key."
+    FMG "Don't touch my chocolate ripple ice cream."
+    MC "No promises."
+    scene black with fade
+    pause .5
+    scene Dorm FMG with fade
+    MC "Alright, I have two rules when it comes to receiving gifts from me. If you do not follow my rules, I will be taking my gift back and giving it to someone who values me and my gift more."
+    show FMG sad with dissolve
+    FMG "Oh my god..."
+    show FMG neutral
+    FMG "Do you listen to yourself when you say stuff like this?"
+    MC "Of course, Akira, I'm not crazy. {w}Now, rule one, your eyes must remain closed till I say you can open them and open the gift." 
+    MC "Rule two, you can't dislike the gift. {w}I got it for you. There is so much love and care put into my decision to get you said gift, it is impossible for you to hate it."
+    FMG "Yeah, I'm keeping my eyes open and we both know I won't hate it. Toss me the gift you bozo."
+    MC "I appreciate your honesty... {w}Here."
+    show FMG happy
+    FMG "Ooooh, it's soft. I think I know what it is!"
+    MC "No, you don't."
+    FMG "Yes, I do!"
+    pause 1
+    FMG "Yes! I was right!!! You got me a squeezemallow!!! I love these things!"
+    MCT "And that's why Keisuke Hotsure is the best gift giver."
+    FMG "You're not going to punch them are you?"
+    MC "Huh? Punch them? Why would I do that?"
+    FMG "You haven't seen one of those videos where the guy starts beating up her collection of squeezemallows when she walks out of the room?"
+    MC "No, can't say I have actually... {size=-6}Am... Am I falling behind with the times?{/size}"
+    FMG "I'll show you later tonight when we get back from dinner with my parents."
+    MC "Well, we have like an hour before we have to meet them. You wanna watch our show?"
+    show FMG happy
+    FMG "I'm down!"
+    show FMG neutral
+    FMG "Can we make popcorn?"
+    MC "...We're going out to eat with your parents soon and you want to ruin your appetite by snacking?"
+    show FMG angry
+    FMG "Yes."
+    show FMG neutral
+    FMG "Funny how you think a small bowl of popcorn will fill me up."
+    MC "Akira, you go through four bags of popcorn alone, and don't get me started on the ungodly amount of butter you use."
+    FMG "There's nothing wrong with the amount of butter I use!"
+    MC "You use half a stick..."
+    show FMG angry
+    FMG "I don't have a problem! You have a problem!"
+    MC "Might be time for Popcorn Anonymous."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause .5
+    scene Town Street with fade
+    "I knew I shouldn't be nervous, but the reality of how important this could be was finally starting to hit me. Akira was the coolest chick I'd ever known, and the best girlfriend I could ask for— I couldn't afford to screw this up."
+    MC "Anything important I should know that you haven't told me about your parents yet?"
+    show FMG neutral with dissolve
+    FMG "Hm, lemme think... {w}I don't think so, no. Trust me, man, you don't have anything to worry about. They are so chill, promise."
+    MC "Akira, how can I not stress? It could ruin our relationship if I don't make a good impression."
+    FMG "Wow, you {i}are{/i} stressing. You never bounce your leg that fast. {w}I'm telling you, Kei-kun, don't worry. You and my dad are going to get along great!"
+    MC "It's never too late to call this off. You can tell them I come down with a life-threatening disease and you're taking me to the hospital." 
+    show FMG happy
+    FMG "Here, hold my hand."
+    pause 1
+    show FMG neutral
+    FMG "Better?"
+    MC "A little, yeah? {w}Can't recall a time when I've been this nervous."
+    FMG "You'll be fine, dude. I can't say it enough. They're going to love you and you're going to love them. {w}It might be for the best that you don't lay the Keisuke charm on {i}too{/i} much... for now."
+    MC "Am I that bad?"
+    FMG "Nah, I'm messing with you."
+    MC "..."
+    FMG "Heh... bad time, sorry."
+    pause 1
+    show FMG happy
+    FMG "Ooooh, here they come now!"
+    MC "W-Wait, I need more time to prepare my opening!"
+    show FMG neutral
+    FMG "Better figure it out fast. {w}Mom! Dad!"
+    MCT "God... Dammit."
+    show FMG neutral at altMove(0.5, 0.75)
+    show Yuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Yuko "Akira!!! I've missed you so much, sweetie. I've been begging your father to get us down here sooner to see you."
+    MCT "Well... she definitely matches Akira's energy..."
+    Midori "You look great! I see all that gym time is paying off rather well, hahaha."
+    show FMG flex
+    FMG "I know, I couldn't be happier!"
+    show FMG neutral
+    FMG "I want to catch up with you guys some more but I want to introduce you to my boyfriend before anything else."
+    MCT "Oh no, she's putting me on the spot."
+    MC "Hey! It's great to meet you two! Akira has told me so much about you guys."
+    Midori "Tell me it was all good things, hahaha!"
+    MC "Ha, of course!"
+    Yuko "My, that certainly is an interesting hair style..."
+    Midori "Reminds me of when I let mine grow long."
+    FMG "{i}Mom{/i}...That's his factor. He can't help it."
+    Yuko "Oh! {w}I see. {w}I didn't mean it in a negative way. I mean your father certainly could pull it off when he was young."
+    Midori "She's underselling it. She could scarcely resist any opportunity to run her fingers through my magnificent do."
+    FMG "Okay, okay. No need to get into {i}that{/i}!"
+    Yuko "Should we get going to the restaurant? We can talk more there instead of standing out here in the cold."
+    FMG "Yeah, that sounds like a good idea."
+    scene black with fade
+    pause 0.5
+    scene Sushi Restaurant
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Yuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    MCT "Okay, Kei. She's the coolest girlfriend you've ever had, so you gotta nail this. Just try not to say something stupid that might screw things up."
+    MC "Alright, this menu looks good. So, what are we all ordering?"
+    FMG "I'm getting the boat."
+    MC "The sushi love-boat for two? I mean it does look pretty good, I guess we could do that."
+    FMG "What!? Get your own. That one is for me. The sashimi one too." 
+    MC "Alright, alright, sheesh. I wouldn't want to risk my fingers having to reach in front of your mouth anyway."
+    Midori "Haha! She sure does like her protein."
+    FMG "What are you going to get, dad?"
+    Midori "I'm going with an eel roll and the gyu tataki sashimi."
+    FMG "Can't say I'm surprised."
+    MC "Isn't that when the beef is served raw?"
+    Midori "It's seared, but otherwise, it's pretty much raw like you said. It's the only real way to eat a steak. Ever tried it?"
+    MC "Uhh, can't say that I have..."
+    Midori "Well that changes today. You can try some of mine."
+    MC "Great... I can't wait..."
+    FMG "What are you getting, mom?"
+    Yuko "I think I'll do the uni nigiri crab roll."
+    MC "Hmm, I think I'm going with the spicy yellowtail and tempura shrimp rolls."
+    "The waiter came and took our orders without much fanfare. After that, though the conversation started turning towards more questions, and the pressure I had almost forgotten about was already back on."
+    Yuko "So, how did you two meet?"
+    FMG "I thought I already told you, we're in the same homeroom class."
+    Yuko "Well I knew that sweety, but I mean, how did you two come to be more than friends?"
+    MC "We bumped into each other at the gym. And that kept on happening."
+    Midori "No surprises there."
+    FMG "Yeah, it's almost like you were stalking me or something."
+    MC "I was not stalking you... I was just strategically placing myself to increase the chances I might see you again."
+    FMG "Haha! Sure, Kei. Honestly, I should have picked up on it sooner. You didn't exactly fit the gym-bro type."
+    MC "I don't know what you're talking about. I'm quite the human specimen."  
+    FMG "I agree. You do look like you belong in a zoo."
+    MC "And I make the zoo look, look {i}good{/i}."
+    show FMG happy
+    FMG "Depends on the day and if you put in the effort to style your hair."
+    MC "True."
+    Yuko "I'm glad we got this opportunity to learn more about you, Hotsure-san. I'm curious, what exactly are your plans for yourself after this academy?"
+    MCT "Oof, here come the hardballs."
+    MC "I'm looking to go to school for architecture."
+    FMG "Yeah, Kei's good at math and he's a really good sketch artist."
+    show FMG angry
+    FMG "At least I've heard. How come you haven't drawn me yet?"
+    MC "Like you'd ever sit still long enough for that to work."
+    show FMG neutral
+    Yuko "Oo, that's an interesting career."
+    Midori "Glad to know she has a study-buddy. Math was never her strong-suit in school."
+    FMG "I told you, I'm not bad at it, it's just {i}so{/i} boring. Doesn't help that our teacher here enjoys torturing us with his assignments either."
+    Yuko "Oh, I hardly doubt that's the case. As a teacher, I can tell you we don't try to go out of our way to make things miserable for our students."
+    FMG "Yeah, but the gym is fun, Mom. Besides, it's not like you hand out homework to students either."
+    Yuko "My point still stands."
+    MC "You're probably right, but I don't know about Hageshi-sensei. It wouldn't surprise me if he {i}did{/i} intend his homework to be torture, but at least he doesn't put us to sleep like the biology teacher."
+    FMG "Oh my god, for {i}real{/i}!"
+    MC "Not that I like studying either, but it's as good an excuse as any to hangout with Akira more."
+    FMG "True, I suppose it does make it quite a bit more bearable to work on things together."
+    Yuko "Glad to hear you aren't spending all your spare time in the gym. Anything else you enjoy doing together?"
+    MC "Video games."
+    FMG "Yep, definitely video games. They have this retro-style rec-room on campus with a handful of arcade games. It's a pretty cool spot to hang out, especially on a rainy day."
+    Midori "Oh really? Any Shun Electronics classics?"
+    MC "They got that platformer with the blobby green character. That's pretty fun, but the later levels are tough."
+    FMG "You mean \"Limerick!\."
+    Midori "Oh yeah. That's a favorite one of mine too."
+    MC "Yeah, Akira mentioned you worked on video games at Shun Electronics."
+    Midori "Yup, seems like ages ago now, but I guess it wasn't that long ago. I got my start going around fixing arcade machines for them." 
+    MC "That sounds cool."
+    Midori "Well, that was part of it. The arcade games were the fun ones, a nice break between every thousand or so plinko machines."
+    FMG "He worked for their corporate offices for quite a few years. That's when he'd bring home the games they were working on that we got to play."
+    Midori "Oh yeah, Akira loved that part of my job, haha!"
+    MC "What do you do now?"
+    Midori "I run my own HVAC repair company. Heating, cooling systems, that kind of stuff. It pays pretty good, plus I get to work with my hands."
+    MC "That seems like an odd jump from video game development."
+    Midori "Who said I did that?"
+    show FMG surprised
+    FMG "WHAT!? {w}I did. I said that!"
+    FMG "You mean you've been lying to me this whole time after all these years?"
+    Midori "Haha! Children sure do have an imagination. I told you I worked {i}at{/i} a video game company, not making video games at a company. I was their building manager and repair technician."
+    FMG "How am I just now learning about this!?"
+    Midori "Akira, you never once asked about my job, you only ever asked about what video games the company was working on."
+    FMG "But you showed me your name in the end credits of Blast Master!"
+    Midori "Yeah, under \"Special Thanks\". {w}They had a pipe burst, would have flooded the place, and delayed production for months if I hadn't been right there to seal it up."
+    FMG "You can't be serious..."
+    FMG "My whole childhood was a lie."
+    Midori "Haha! Sorry to burst your bubble there, kiddo!"
+    Yuko "To be fair Akira, we thought you were old enough to have pieced it all together by now."
+    MC "Dang, even your mom is throwing shade."
+    FMG "Ugh, wish the food would hurry up already..."
+    scene black with fade
+    pause .5
+    scene Sushi Restaurant
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Yuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    "Turns out, getting nervous over meeting Akira's parents was a big nothingburger. They were both pretty chill. We were starting to hit it off."
+    MC "So you like to grill?"
+    Yuko "Oh, don't get him started. He even has his own pair of shoes for it."
+    MC "That's a real thing? I thought that was just my dad joking when he called them his barbeque shoes."
+    Midori "Oh they're real alright. I hope your dad didn't get the kind with velcro though{w}— I hear they're a rip-off."
+    FMG "Ohhh, nooo. Don't you see what you've done, Kei?"
+    MC "Huh?"
+    Midori "Oh, don't mind her. She's still upset about the time I burned dinner on the grill{w}— mistakes were made."
+    FMG "Ugh, maybe I'll get lucky and get food poisoning from this place so we can leave."
+    Midori "Last time I was grilling, the meat started smoking{w}— steaks were high."
+    FMG "Forget it, just bury me alive now."
+    MC "Akira, that's how all dads talk. {w}Well, my dad doesn't do it often... at least your dad is making it work."
+    FMG "Uuuugh, I was hoping he'd do this later."
+    Yuko "Oh don't be so dramatic, Akira. Besides, you should be more supportive of your father's hobbies. He's actually really good at grilling steaks{w}— they're all very well done."
+    Midori "Hey!"
+    FMG "Not you too, Mom."
+    Yuko "I had to sneak in one!"
+    Midori "Alright, I guess I did push my luck."
+    MC "Hey don't be so hard on your folks. You're supposed to enjoy spending time with them. Like this time I was helping my dad clean the grill{w}— it was grate."
+    FMG "Oh my god... I'm going to leave you here."
+    Midori "High five! Right there!"
+    MC "Boom!"
+    Midori "See, this kid gets it!"
+    FMG "This could not have gone worse..."
+    jump daymenu
 
 label FMG036:
     $setProgress("FMG", "FMG037")
@@ -9697,6 +9965,7 @@ label FMG053:
     jump daymenu
 
 label FMG054:
+    $setFlag("XX54")
     $setProgress("FMG", "FMG055")
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)

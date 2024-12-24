@@ -33,7 +33,7 @@ label BE001:
     scene HallwayStairs with fade
     "The school seemed relatively normal, apart from the size and the people within. It didn't take me long to get the gist of where everything was. Hopefully I'd remember it all when tomorrow came around."
     "But, eventually, I found what I was looking for. Without even checking my surroundings to see if I was being watched, I turned the knob and walked up the steps into the warm sunny sky above."
-    scene Roof Entrace with fade
+    scene Roof Entrance with fade
     MC "Fantastic. It was a long shot, but I figured they'd forget to lock the roof entrance while they were busy setting up the welcoming assembly."
     MC "Wow, from up here the school really looks huge. I guess it has to be big if they only put a few students in each classroom."
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
@@ -13061,6 +13061,7 @@ label BE053:
     jump daymenu
 
 label BE054:
+    $setFlag("XX54")
     $setProgress("BE", "BE055")
     scene Pool with fade
     $setBEOutfit(OutfitEnum.SWIM)
@@ -15996,4 +15997,645 @@ label BEGTS004_c1_after:
     hide PRG with dissolve
     "Aida slowly departed from the courtyard, using the opposite set of double doors that Honoka had used. The wind rolling against the trees and windows soon overtook the sounds of the other students once more."
     "I made my way out of the courtyard, and returned to my dorm."
+    jump daymenu
+
+label BEGTS005:
+    "..."
+    "..."
+    "{i}Click{/i}"
+    $setTime(TimeEnum.RAIN)
+    scene Lockers with fade
+    MCT "Huh... no one's around..."
+    play music Rain fadein 9.0
+    "When I turned on the lights in the locker room, the first thing that I noticed was the blanket of fog beyond the windows."
+    "It had been pouring all afternoon. Many streaks of rain were slowly running down the glass, creating uneven lines and droplets all along the panes."
+    "I stood in front of my locker and opened the door, placing my gym clothes inside. Since I was the only one around, the entire area was quiet. The sound of the locker door closing resonated over the subtle, rolling sounds of the rain."
+    "It wasn't uncommon for the locker rooms to be empty around this time. School was over, so there weren't many people in the building to begin with. Even so, something felt off."
+    "I reached into my pocket and pulled out my phone, checking to see if there were any new messages."
+    "..."
+    "Much to my surprise, none of my contacts had any icons next to them. No message bubbles, no posts, not even a missed call. Total silence."
+    "Usually, Honoka would send just a simple message checking in on her friends, or she'd post something to social media about where she's been or where she's going. This week... nothing."
+    "I felt strongly disconnected with reality these few minutes. I had only been in the locker room briefly to store my clothes, but it felt considerably longer. The building was so quiet, I was left only to my thoughts."
+    "I walked out of the locker room and returned to the hallway."
+    scene Classroom with fade
+    "I saw a few other students as I walked through the corridor. They were packing up and returning to their dorms, just like I was."
+    "Out of curiosity, I peeked into my homeroom to see if anyone was there. I suppose it wasn't surprising, but that room was empty too."
+    "It's not like the building was desolate or anything. The school day was ending, so of course it made sense for very few people to be around. Maybe it was the lack of messages that made me feel off."
+    "When I talked to others, even if it was just text messaging, I felt... active. I could imagine them there, standing next to me, engaging in conversation. Humans are social beings; it's in our nature to feel that way."
+    "Without anyone near me, the place just... felt like a void. Not just physically, but mentally as well. I felt like I was isolated in my own personal bubble."
+    MCT "I should probably head home..."
+    "I didn't want to look at the empty rooms for too long. It was saddening enough. I didn't look forward to walking in the rain, but I'd only be outside for about a minute. The dorms were relatively close."
+    scene black with fade
+    play sound LightRainAmbience fadein 1.0 loop
+    pause 1.0
+    scene Dorm Hallway with fade
+    "I wiped my shoes on the doormat as I entered the dorms."
+    "The only other sound I could hear was the rain pelting the sides of the dorm windows as the doorway slid open."
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Dorm Interior
+    show RM neutral
+    with fade
+    play music TwilightAmbient fadein 1.0
+    "Daichi was at his computer as usual. Only his eyelids were a little more drooped, and his posture a {i}lot{/i} more lax than usual."
+    MC "Hey, Daichi. I'm going to bed."
+    "He briefly turned towards me, nodded once, then quickly returned to looking at the computer screen."
+    RM "Okay. Night."
+    MC "Night."
+    hide RM with dissolve
+    "My body hit the bed like a ton of bricks after I slumped over onto the pillow, face first. I was tired, of course, but I found it difficult to sleep."
+    "It was difficult to stop thinking about what went down the other day. Several questions were buzzing around in my head, all at the same time, and none of them with a concrete answer."
+    "'Is this going to affect my personal life?'"
+    "'Will I need to avoid some of the girls in order to avoid future conflicts?'"
+    "'Why did Aida need to get involved in this?'"
+    "'Is there anything I can really do in this situation?'"
+    "After laying awake in bed for nearly half an hour, I did think of... one possible thing."
+    "I rolled over on the bed and reached my arm out to the side, picking my phone up from the nightstand beside me."
+    MCT "I should... at least see how one of them feels about all this. Naomi is always more at peace when she's somewhere quiet."
+    MCT "Then again... Honoka's always been my friend. Maybe she'll be more upfront about all of this if she's only with me."
+    MCT "..."
+    MCT "I should think very carefully about who I want to invite."
+    menu:
+        "Make plans to meet with Honoka":
+            jump BEGTS005_BEPath
+        "Make plans to meet with Naomi":
+            jump BEGTS005_GTSPath
+
+label BEGTS005_BEPath:
+    MCT "I'll talk to Honoka tomorrow."
+    MCT "I should let her know ahead of time."
+    "I tapped the icon for my contact list on the bottom of my phone's home screen, then scrolled through the list and tapped on Honoka's icon."
+    MCCell "Hey, Honoka. You want to meet up at our usual spot tomorrow?"
+    pause 1.0
+    "I waited several minutes, but there was no response. She was probably sleeping, so it wasn't a surprise."
+    "I decided to just leave it at that, and see if there's a reply in the morning."
+    scene black with fade
+    stop sound fadeout 1.0
+    $setTime(TimeEnum.DAY)
+    pause 1.0
+    scene Dorm Interior with fade
+    play music HigherEdu 
+    "The next day, I rolled over on the bed while holding out my arm, feeling for the nightstand."
+    "Eventually, my hand rested upon my phone. I wiped my bangs away from my eyes and peered at the screen."
+    "There was a reply from Honoka."
+    BECell "<Sure, I can talk. The rooftop, right?>"
+    MCCell "<Sounds good. I'll be there after school.>"
+    MCT "That was a pretty normal reply. Maybe she's not upset anymore? Then again, I can't really tell from text alone."
+    MCT "I'll just have to see how it goes when we meet up."
+    "I quickly finished preparing, then exited the dorm to head to class."
+    scene Classroom with fade
+    "I set my bag on the floor and took my seat. Honoka was still on my mind, but I was able to pay attention to Hageshi-sensei's lecture."
+    show Hageshi neutral with dissolve
+    Hageshi "Since some of you seem to like to complain about the supposed lack of application these math lessons provide, I figured today, I might discuss something you should all be acquainted with."
+    Hageshi "Seeing as how you will be in some form sooner or later. What I'm referring to is the relationship between the dimensions of an object relative to its mass and volume."
+    hide Hageshi
+    show BE confused
+    with dissolve 
+    "Honoka's eyes widened slightly upon hearing Hageshi-sensei."
+    "I turned my head to look more closely, too."
+    hide BE 
+    show Hageshi neutral
+    with dissolve
+    "Hageshi-sensei appeared to silently note our expressions, staring just half a second longer than was comfortable, then proceeded to write something on the board. It read: Volume : Mass."
+    Hageshi "If you haven't guessed already, it's the Square-Cube Law. Many of you will have encountered this term in your earlier schooling. At least I hope."
+    Hageshi "How about... you, Hotsure-san?"
+    "I blinked once, then sat up straight when I realized I was being called on."
+    Hageshi "When the length of all three dimensions of a 3-D object is doubled, what happens to the object's weight?"
+    menu:
+        "It's doubled.":
+            Hageshi "Have you been getting enough sleep, Hotsure-san? I would have assumed this to be an easy question for you." 
+            Hageshi "The correct answer is a doubling of an object's dimensions results in an octupling of its volume and mass. This is can be expressed as a length of 2x whereby the volume would be (2x)^3."
+        "It's quadrupled.":
+            Hageshi "Not quite. Have you been getting enough sleep, Hotsure-san? I would have assumed this to be an easy question for you."
+            Hageshi "The correct answer is a doubling of an object's dimensions results in an octupling of its volume and mass. This is can be expressed as a length of 2x whereby the volume would be (2x)^3."
+        "It's multiplied by 8.":
+            Hageshi "Correct. As one might imagine, the 3-D component of mass starts to add up rather quickly with relatively small changes in one or more dimensions."
+            MCT "Weird. That was a bit easy..."
+            $setSkill("Academics", 1)
+        "The weight doesn't change.":
+            Hageshi "..."
+            "Hageshi-sensei stared at me with a faintly tired look."
+            Hageshi "It's not intended to be a trick question Hotsure-san. Think before assuming... or just giving up entirely."
+            Hageshi "The correct answer is a doubling of an object's dimensions results in an octupling of its volume and mass. This is can be expressed as a length of 2x whereby the volume would be (2x)^3."
+            MCT "It was a long shot..."
+    Hageshi "Numbers equations are abstractions, but they represent tangible and intractable real world relationships."
+    Hageshi "The square-cube law becomes easier to picture if you imagine it using wooden cubes."
+    Hageshi "In order to expand a cube's dimensions to double of the original, you'd need to set three other identical cubes around it to make the length, width, and height twice as large..."
+    Hageshi "Then stack four more of those cubes on top of those to create a larger cube that's two blocks tall, two blocks long, and two blocks wide, using a total of eight cubes."
+    Hageshi "Hopefully by now this is starting to make sense."
+    Hageshi "Perhaps the wheels are turning inside your head as to how this might apply to what you are currently experiencing, if not, certainly your fellow co-eds."
+    hide Hageshi
+    show BE happy 
+    with dissolve
+    BE "Eight times, huh? Hehe... I wonder how heavy these are gonna get!"
+    hide BE 
+    show Hageshi neutral 
+    with dissolve
+    Hageshi "So let's apply this to a plausible scenario."
+    Hageshi "Nakano-san grows tomatoes in a garden. The first year, his largest tomato measures 12 centimeters in diameter and weighs 450 grams. The second year..."
+    "I listened to the rest of the lecture until class ended."
+    scene Hallway with fade
+    MCT "Ah, that's right. I promised Honoka we'd meet up after class."
+    "I decided to head right to the stairwell on the far side of the building, then headed up to the roof."
+    scene Roof with fade
+    "Getting some fresh air felt rather nice, even if it was a bit muggy. It seemed like it was going to rain again soon."
+    "I took a seat upon one of the benches and waited for Honoka."
+    "After a few minutes, I heard the door to the roof click open."
+    show BE neutral with dissolve
+    "Honoka seemed to be okay. Her expression wasn't troubled at all, but I wasn't sure if she was still thinking about what happened a few days ago."
+    MC "Hey, Honoka."
+    BE "Hi, Kei-chan."
+    "Honoka sat down on the opposite side of the bench I was on."
+    BE "What did you wanna talk about?"
+    MCT "Now isn't the time to hesitate. I need to be direct."
+    MC "Well, it's about Yamazaki-san."
+    show BE doubt
+    BE "...Yeah? What about her?"
+    MC "You two really got along."
+    show BE angry
+    BE "Yeah, until she had to go running her mouth about Alice!"
+    MC "That's just it. It wasn't between the two of you at all. You only had a fight because Yamazaki-san dislikes the way Kodama-san is treated."
+    show BE doubt
+    BE "I mean, was I wrong? She completely overreacted."
+    menu:
+        "People can disagree, and still be friends.":
+            BE "Yeah, I... suppose you're right."
+            show BE confused
+            BE "Ugh... I feel stupid, now. It wasn't even {i}about{/i} us, to begin with..."
+        "Yeah, I think she overreacted too.":
+            BE "Of course she did! As long as Kodama-san's happy, what's the issue?"
+            BE "It's like she's so traditional, she thinks everyone else needs to act all proper like her..."
+            MC "Isn't that the reason you two got along so well in the first place? Because she thought you looked refined?"
+        "Naomi was only trying to show concern for Aida.":
+            show BE angry
+            BE "I know that! The problem is, does she?"
+            BE "Or, is she too blinded by being all proper that she doesn't see when she's overstepping her boundaries?"
+    "I took a deep breath, then looked Honoka straight in the eyes."
+    MC "Honoka, she's your friend. You KNOW she wants to spend more time with you."
+    MC "Are you really going to let a single fight ruin all of this?"
+    show BE sad
+    "Honoka lowered her head, staring at the floor. She didn't seem to want to make eye contact with me."
+    MC "I mean... just look at the two of us. You hadn't seen me in years, and you still greeted me like you were the happiest girl in the world."
+    BE "Well, yeah. Even if the two of us {i}did{/i} have a fight, I wouldn't have remembered..."
+    "We both stood there in silence as the breeze continued to make the flowers rustle behind us."
+    MC "Things between guys and girls are complicated, Inoue-san... but... having a friend shouldn't be."
+    MC "Best friends can see each other after years of separation, and it'll still feel like you just spoke the day before."
+    show BE happy
+    "Honoka chuckled a bit, exhaling a quick, inelegant breath from her nostrils."
+    BE "Heh... why are {i}you{/i} telling me all that stuff, Kei-chan? Poetry sounds weird, coming from you!"
+    MC "I guess my mind just decided that I absolutely needed to be creative and enhance the moment."
+    "Honoka chuckled again, this time covering her mouth with her hand."
+    BE "All right... all right. I understand. Yamazaki-san and I should talk. Right now, though, I..."
+    "Honoka trailed off, unsure how to finish her statement."
+    menu:
+        "You need some time to think it over. I get it.":
+            BE "Yeah. I gotta think about what I'm gonna say."
+        "(Wait for her to speak)":
+            BE "..."
+            BE "I need some time to think. Ya mind... just letting me sit here for a bit?"
+    MC "Give me a call if you need anything, Honoka Inoue."
+    show BE neutral 
+    BE "You don't gotta keep calling me that."
+    MC "Right. Take all the time you need, Honkers."
+    hide BE with dissolve 
+    "I gave Honoka a smile, then proceeded to walk through the doorway leading back to the stairs."
+    pause 1.0
+    show BE neutral with dissolve
+    BE "Kei-chan?"
+    MC "Yeah?"
+    show BE happy
+    BE "Thanks."
+    MC "Don't mention it."
+    hide BE with dissolve 
+    "I let the door close behind me, then proceeded to walk down the stairs."
+    "All I could hear was the sound of my own footsteps as I proceeded down the empty stairwell."
+    scene black with fade
+    jump BEGTS005_after
+
+label BEGTS005_GTSPath:
+    MCT "I'll talk to Naomi tomorrow."
+    MCT "I suppose I should let her know ahead of time."
+    "I scrolled through my phone's contact list, tapping on Naomi's icon. I then stared at the empty message line for a few seconds, thinking about what to say."
+    "I wasn't entirely sure how to phrase it..."
+    MCCell "Hey, Yamazaki-san. Would you like to talk to me tomorrow?"
+    MCCell "Let me know if you need someone to share your thoughts with."
+    "I sent the message, then proceeded to set my phone to sleep mode. I figured that Naomi would take comfort in hearing that I'm able to listen."
+    "She tends to have a lot of thoughts, some of which are very poetic. It can be overwhelming if there isn't anyone around to listen."
+    "There was no use mulling over it all night. I set my phone on my bedside table and tried to get some sleep."
+    scene black with fade
+    stop sound fadeout 1.0
+    $setTime(TimeEnum.DAY)
+    pause 1.0
+    scene Dorm Interior with fade
+    "I woke up and brushed my hair away from my eyes. I stared at the ceiling for a while before I sat up in bed, stretching my arms upward."
+    "Sunlight was filtering in from the window. I didn't sleep very well, since there was a lot on my mind."
+    "When I saw my phone on the bedside table, I remembered the message I sent the previous night. I picked up my phone and opened the messages tab."
+    MCT "..."
+    MCT "Naomi hasn't replied. There's a small check mark next to my message, though. That means she's seen it..."
+    MCT "This isn't like her. She's usually very punctual with things like this."
+    "I figured it was best not to overthink things. I had to finish preparing for class, so I turned my phone off and gathered my supplies."
+    scene Classroom with fade
+    "I set my bag on the floor and took my seat. Honoka was still on my mind, but I was able to pay attention to Hageshi-sensei's lecture."
+    show Hageshi neutral with dissolve
+    Hageshi "Since some of you seem to like to complain about the supposed lack of application these math lessons provide, I figured today, I might discuss something you should all be acquainted with."
+    Hageshi "Seeing as how you will be in some form sooner or later. What I'm referring to is the relationship between the dimensions of an object relative to its mass and volume."
+    hide Hageshi
+    show BE confused
+    with dissolve 
+    "Honoka's eyes widened slightly upon hearing Hageshi-sensei."
+    "I turned my head to look more closely, too."
+    hide BE 
+    show Hageshi neutral
+    with dissolve
+    "Hageshi-sensei appeared to silently note our expressions, staring just half a second longer than was comfortable, then proceeded to write something on the board. It read: Volume : Mass."
+    Hageshi "If you haven't guessed already, it's the Square-Cube Law. Many of you will have encountered this term in your earlier schooling. At least I hope."
+    Hageshi "How about... you, Hotsure-san?"
+    "I blinked once, then sat up straight when I realized I was being called on."
+    Hageshi "When the length of all three dimensions of a 3-D object is doubled, what happens to the object's weight?"
+    menu:
+        "It's doubled.":
+            Hageshi "Have you been getting enough sleep, Hotsure-san? I would have assumed this to be an easy question for you." 
+            Hageshi "The correct answer is a doubling of an object's dimensions results in an octupling of its volume and mass. This is can be expressed as a length of 2x whereby the volume would be (2x)^3."
+        "It's quadrupled.":
+            Hageshi "Not quite. Have you been getting enough sleep, Hotsure-san? I would have assumed this to be an easy question for you."
+            Hageshi "The correct answer is a doubling of an object's dimensions results in an octupling of its volume and mass. This is can be expressed as a length of 2x whereby the volume would be (2x)^3."
+        "It's multiplied by 8.":
+            Hageshi "Correct. As one might imagine, the 3-D component of mass starts to add up rather quickly with relatively small changes in one or more dimensions."
+            MCT "Weird. That was a bit easy..."
+            $setSkill("Academics", 1)
+        "The weight doesn't change.":
+            Hageshi "..."
+            "Hageshi-sensei stared at me with a faintly tired look."
+            Hageshi "It's not intended to be a trick question Hotsure-san. Think before assuming... or just giving up entirely."
+            Hageshi "The correct answer is a doubling of an object's dimensions results in an octupling of its volume and mass. This is can be expressed as a length of 2x whereby the volume would be (2x)^3."
+            MCT "It was a long shot..."
+    Hageshi "Numbers equations are abstractions, but they represent tangible and intractable real world relationships."
+    Hageshi "The square-cube law becomes easier to picture if you imagine it using wooden cubes."
+    Hageshi "In order to expand a cube's dimensions to double of the original, you'd need to set three other identical cubes around it to make the length, width, and height twice as large..."
+    Hageshi "Then stack four more of those cubes on top of those to create a larger cube that's two blocks tall, two blocks long, and two blocks wide, using a total of eight cubes."
+    Hageshi "Hopefully by now this is starting to make sense."
+    Hageshi "Perhaps the wheels are turning inside your head as to how this might apply to what you are currently experiencing, if not, certainly your fellow co-eds."
+    hide Hageshi
+    show BE happy 
+    with dissolve
+    BE "Eight times, huh? Hehe... I wonder how heavy these are gonna get!"
+    hide BE 
+    show Hageshi neutral 
+    with dissolve
+    Hageshi "So let's apply this to a plausible scenario."
+    Hageshi "Nakano-san grows tomatoes in a garden. The first year, his largest tomato measures 12 centimeters in diameter and weighs 450 grams. The second year..."
+    "I listened to the rest of the lecture until class ended."
+    scene Hallway with fade
+    "After I left the classroom, I decided to reach into my bag and check my phone."
+    "There weren't any new messages..."
+    "I suppose that isn't too surprising, though. Class just got out."
+    "I was a little concerned, but I decided that it wasn't worth obsessing over. I just had to figure out what to do for the rest of the day."
+    "I wandered around the campus for a bit..."
+    scene Campus Center with fade
+    "I headed outside and walked past the sakura tree in the center of the courtyard. I saw several other students as I did."
+    "The only thing I could hear over the rustling leaves was the scattered sound of various footsteps on the sidewalk."
+    scene School Planter with fade
+    "As I neared the edge of the courtyard, I could see that the planters nestled on the side of the school building now had a lot more color."
+    "The flowers that were planted at the beginning of the school year have started to come in."
+    "For some reason, that moment felt like such a long time ago..."
+    scene Dorm Exterior with fade
+    "I made my way back to the dorm. It was the same walk I made every day, but I found myself unable to focus."
+    scene Dorm Interior with fade 
+    "Even something as mundane as walking through the front door was clouded by my thoughts. I needed to distract myself."
+    $setTime(TimeEnum.DAY)
+    "I sat in the dorm for several hours, just looking for things to accomplish. I cleaned up a bit, organized the closet, and made the bed."
+    "I had never been more inclined to clean in my life. It felt like I was about to clean the entire dorm, when a subtle sound broke the silence."
+    play sound PhoneVibrate
+    "...I walked over to the source of the sound."
+    "I picked up my phone off the desk and turned it over."
+    GTSCell "<Certainly. I could use someone to talk to.>"
+    "Naomi had responded. That was all the notification said. I didn't really know how Naomi was feeling from text alone, though."
+    "Again, I thought about how to respond."
+    MCCell "<Where would you like to meet?>"
+    "I waited about a minute for Naomi to type her response."
+    GTSCell "<There is a hill overlooking the campus that I like to go to when I need to collect my thoughts.>" 
+    GTSCell "<It's called Chūkan Point.>"
+    if not getFlag("VisitedChukanPoint"):
+        $setFlag("VisitedChukanPoint")
+        "I thought to myself for a few moments. There are plenty of roads leading away from the campus, but I hadn't seen any signs that had that name on them."
+        MCCell "<I've never been there before. Where is it?>"
+        GTSCell "<At the main entrance of the campus, turn right. The road running parallel to the clock tower extends into the forest.>"
+        GTSCell "<Follow the pavement all the way down, until you see the road turn into an incline. Follow the incline up, and you'll reach Chukan Point.>"
+        "There was a brief pause."
+        GTSCell "<I... realize that's a lot of directions. Are you certain you'll be all right? Would you like me to escort you?>" 
+        MCCell "<No, it's okay. If I get lost, I can just text you again.>"
+        GTSCell "<If you're certain.>"
+        MCCell "<I'll see you soon>"
+    else:
+        MCT "Oh, that place. Fine a spot as any, I suppose."
+        MCCell "<I know that place. I'll see you soon>"
+    GTSCell "<Okay. I'll be waiting.>"
+    "I knew I had to get there as quickly as possible. This was important. I promptly followed Naomi's directions."
+    scene Field with fade 
+    play music Nembutsu 
+    "It's quite a difficult walk since it's uphill, but it's only about fifteen minutes from the campus on foot."
+    "I knew I had to talk to Naomi..."
+    "The natural scenery around me helped clear my mind, but I hoped I could get my point across."
+    scene Chukan Point
+    show GTS neutral
+    with fade     
+    "Naomi was sitting upon one of the benches next to the viewing platform when I arrived."
+    "She looked still and somber, as if lost in thought. Her hands were folded upon her lap, and she was idly scanning the trees as they swayed."
+    "It was fortunate that this place had giants in mind. Naomi didn't look out of place at all on the oversized bench."
+    "Well... a giant girl next to a lot of trees didn't look {i}normal{/i} to anyone outside of the university, but she still looked like she belonged here."
+    MC "Hello, Yamazaki-san." 
+    show GTS happy
+    GTS "Hello, Hotsure-san."
+    "Naomi barely moved as she spoke. Her motions were slow and deliberate, as if she were a stone statue slowly turning."
+    MC "How are you feeling?"
+    show GTS neutral 
+    "Naomi was silent for a few moments. Her expression only changed slightly, but something was clearly bothering her."
+    GTS "I am not certain."
+    "I quietly sat down on the oversized bench next to Naomi, leaving a decent space between us."
+    "I silently watched the scenery with her, enjoying the natural beauty around us. Eventually, Naomi broke the silence."
+    GTS "Do you feel that I handled it well?"
+    menu:
+        "I think everyone was at fault that day.":
+            MC "I think everyone made a mistake that day. No one person is to blame. People fight all the time, you know?"
+            GTS "I... suppose that's one way of putting it."
+            MCT "What I said made sense, but... Naomi doesn't seem fully convinced."
+        "Yes, you handled it well.":
+            MC "Yeah, I think you were on top of things. You were just concerned for Kodama-san, that's all."
+            GTS "That's exactly why I spoke up. What would the alternative be? Saying nothing?"
+            "Naomi took an authoritative, powerful stance. She straightened her back while sitting on the bench, making herself look even larger."
+        "No, you were too harsh.":
+            MC "I... think you were a little harsh. You didn't have to step in like that."
+            GTS "..."
+            "Naomi let out a deep, powerful exhale. It almost sounded like she was disappointed. She was clearly deep in thought - was she upset at herself, or at me?"
+    "There was a brief pause. The air was still, aside from Naomi's idle breathing."
+    "Because of her size, even something as mundane as her breath sounded like a hollow and bellowing tone."
+    GTS "I... believe I know what this is about. Why you invited me here."
+    MC "It wasn't just to chew you out. Please, believe me."
+    MCT "Naomi picked up on that pretty quickly..."
+    GTS "Indeed?"
+    "Whether intentional or not, there was quite a lot of authority in Naomi's speech."
+    MC "I just... wanted to talk. It can be about anything you want. Better than bottling your thoughts up, right?"
+    show GTS sad
+    GTS "..."
+    "Naomi exhaled again."
+    GTS "You make a good point. This is one of my favorite places, as well. It's... quite difficult to be angry here."
+    MC "That's why you chose this place?"
+    GTS "It is. I do not {i}wish{/i} for the vagaries that sometimes discompose me."
+    "Naomi craned her head slightly to look beyond the guard rail next to the road. She focused on the clock tower in the distance, then slowly scanned her view to the left until she was looking at the ocean."
+    GTS "It's quiet here. A good place for fortifying the mind and... purifying the soul."
+    MC "Are you not feeling well?"
+    "Naomi paused for a few moments. She gently tapped her foot upon the pavement below her, then slowly looked down at me."
+    GTS "Physically, I am well. This is strange, given how much my growth factor should be doing to me..."
+    GTS "Mentally, however... well. My condition causes my family much consternation, and, given recent events..."
+    MC "You just needed to take some time off. Relax for a bit."
+    GTS "Mm... you make it sound as though I'm punishing myself."
+    MC "Because I know you. I know how hard you work, and I know hard it is for you to take time for yourself."
+    show GTS pondering
+    "Naomi placed her hand upon her chin."
+    GTS "Hm..."
+    MC "This isn't just about Inoue-san, is it?"
+    GTS "No. No, it is not."
+    MCT "Yamazaki-san can be difficult to read sometimes..."
+    MC "I'm sure Inoue-san will forgive you if you just talk to her."
+    "Naomi let out one last, powerful exhale. Her expression barely changed, but I could tell that she seemed happier."
+    GTS "You are right. My own circumstances are immaterial, in this case. I don't need to allow my own thoughts to pollute my opinion of Inoue-san."
+    show GTS unique
+    "Naomi chuckled while covering her mouth."
+    GTS "She is so easy and forthright in her manners. She doesn't become lost in the hypothetical, like I do..."
+    MC "Is that why you started hanging out with her more?"
+    GTS "That's only one of the reasons... but yes, in a way. Sometimes, I forget how to just... do as I feel."
+    GTS "I admire how she... allows herself to be happy."
+    show GTS pondering
+    "Naomi blinked twice, looked towards the sky, then back to me. It seemed as though she had a personal revelation."
+    MC "I think you should tell her that, not me."
+    show GTS neutral 
+    "Naomi nodded."
+    GTS "I shall."
+    "The air fell silent for a few more seconds, once again. The only sounds I could hear were the occasional rustling of leaves, punctuated by Naomi's quiet heartbeat."
+    "Naomi shifted in her position once more, leaning slightly forward. Her presence made me feel even smaller."
+    GTS "Is there anything else you'd like to talk about, in the meantime? I'd feel guilty if I called you up here just to talk about that..."
+    "I scratched my chin as she looked at me for a moment."
+    MC "Wanna hear what my roommate's been up to lately?"
+    show GTS pondering
+    pause 0.75
+    show GTS neutral
+    GTS "Very well..."
+    MC "Okay. So you know how the groundskeeper sometimes parks his wheelbarrow near the dorm buildings?"
+    GTS "I recall as much, yes."
+    MC "Well..."
+    show GTS aroused
+    extend " pff... you're not gonna believe this. Okay..."
+    "Naomi and I spun tales and remembrances as the afternoon rolled by, until at last we parted ways."
+    "I was happy to see her feeling just a little better."
+    scene black with fade
+    jump BEGTS005_after
+
+label BEGTS005_after:
+    $setTime(TimeEnum.RAIN)
+    pause 1.0
+    play sound MidRainAmbience fadein 1.0 loop
+    scene Campus Center with dissolve 
+    play music Rain
+    "By the time I had walked back to the courtyard, I could hear the gentle taps of rain upon the sidewalk. Clouds had begun to roll in."
+    MCT "It's starting to come down pretty hard now..."
+    MCT "I should head inside as soon as possible."
+    MCT "I walked over to the nearest set of double-doors and headed inside the school building."
+    scene black with fade
+    $setTime(TimeEnum.DAY) #change after we have a rain alt for these backgrounds
+    scene School Front with fade
+    "By the time I had entered the school, I'd only become slightly wet. The dorm was only a brief walk from here, so it wouldn't be {i}that{/i} bad if I needed to get there without an umbrella."
+    "Still, I decided to just wait around for a bit in the entranceway of the school to see if the rain let up."
+    stop sound
+    pause 0.1
+    play sound LightRainAmbience fadein 1.0 loop
+    scene HallwayStairs with fade
+    MCT "It's been about half an hour..."
+    MCT "The school will be closing soon. I'll need to head back. Maybe the office has an umbrella I can borrow."
+    "I turned my head and saw a few students filtering in from the rain. Club leaders, most likely. One of the students was familiar."
+    show BE neutral with fade
+    BE "Oh. Hey, Kei-chan."
+    MC "Hey, Honoka."
+    show BE sad
+    "Honoka was holding a transparent umbrella over her shoulder. She collapsed it when she entered the building, revealing a suddenly deflated expression."
+    MC "Did you forget something?"
+    "I wondered why she was here so late."
+    BE "Yeah, I did."
+    "Honoka paused for a few seconds, then spoke again. Her expression seemed to perk up slightly."
+    BE "Actually, since you're here... do you wanna go somewhere?"
+    "I stood there in silence for a few seconds."
+    MC "...It's pouring out."
+    show BE happy
+    BE "I know! I just... really wanna go somewhere."
+    "Honoka briefly looked around, noticing that I was empty-handed."
+    BE "Besides, you need an umbrella, don't you?"
+    MCT "I can't believe I'm letting her talk me into this..."
+    MC "All right. Where did you want to go?"
+    show BE neutral
+    BE "Hmm, let's see..."
+    BE "Oh! I know a spot. It's really close by."
+    menu:
+        "Really close by...?":
+            BE "Uh huh! You'll know what I'm talking about."
+        "Where is it?":
+            BE "I'll show you! It's a good place to think, especially in this weather."
+        "I dunno about this...":
+            show BE angry
+            BE "Nope! No takebacks! Besides, I'm the one with the umbrella here!"
+            MCT "Can't argue with that logic..."
+    "Honoka walked towards the double doors of the school building, then opened the umbrella once outside. Rain began to patter upon the surface of the umbrella. She waited for me to step under as well."
+    "There wasn't much room under the umbrella with Honoka there..."
+    "The two of us then walked on the sidewalk leading away from the school."
+    scene black with fade
+    $setTime(TimeEnum.RAIN)
+    stop sound
+    pause 0.1
+    stop music fadeout 5.0
+    play sound MidRainAmbience fadein 1.0 loop
+    "Honoka led me away from the entrance to the school, and down the road leading South. We walked for about ten minutes."
+    play voice Thunder
+    "The sidewalk next to the pavement eventually split off from the road and led slightly deeper into the woods."
+    scene Lake Road with fade
+    "We arrived at a narrow wooden bridge that continued from the sidewalk, overlooking the lake just south of the campus."
+    show BE neutral with dissolve
+    "Honoka slowly turned towards me, looking somber. She seemed to be deep in thought."
+    BE "Do you remember this place?"
+    MC "This is..."
+    "The area looked very familiar. The scenery was very different due to the dark clouds above, but I've been here before..."
+    MC "It's where we first arrived, isn't it?"
+    show BE happy
+    BE "That's it."
+    "Honoka briefly smiled, then slowly relaxed her face. She leaned out over the railing and stared out towards the lake."
+    "I had to follow if I wanted to stay under the umbrella. I stood beside her, watching the rain displace the water on the surface of the lake."
+    show BE neutral
+    MC "Is this place special to you?"
+    BE "Mmm... not particularly. It's just a good place to go when you're thinking, ya know?"
+    play voice Thunder
+    show BE surprised with vpunch
+    pause 0.75
+    show BE embarrassed
+    BE "Heheh... maybe we should be thinking indoors."
+    BE "We won't stay here too long, I promise."
+    show BE neutral
+    "I placed my hands on the railing, quietly scanning the lake once more."
+    play voice Thunder
+    "I heard another boom of thunder. The sound seemed to resonate through the nearby trees."
+    MC "..."
+    show BE surprised
+    BE "...!"
+    hide BE with dissolve
+    "I slowly turned around, facing the direction we came from."
+    "The treeline had been disturbed as something was moving behind the trunks and branches..."
+    "I saw a large field of white behind the trees, clashing against the natural green and brown pattern that the leaves formed in the cloudy atmosphere."
+    "It wasn't until the figure got closer that I could see a face looming above that large field of white."
+    show BE surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with easeinright 
+    "The thunder had masked the sound of Naomi's footsteps..."
+    "Well, not that her footsteps were all that loud to begin with."
+    show BE sad
+    BE "Yamazaki-san..."
+    show GTS sad
+    GTS "..."
+    show GTS neutral
+    GTS "Good afternoon, Inoue-san."
+    "The air was extremely heavy. Naomi didn't seem to want to get any closer."
+    BE "What's... uh... what's up?"
+    GTS "I saw you two leaving the school, and I was curious..."
+    BE "As direct as ever..."
+    show GTS sad
+    GTS "...May I approach?"
+    show BE neutral
+    BE "Can the bridge even handle your weight?"
+    MC "Honoka... c'mon. It was built right outside of Seichou."
+    show BE sad
+    "Honoka exhaled."
+    BE "You're right, you're right."
+    show GTS neutral
+    GTS "...Thank you."
+    "Naomi slowly and carefully took a single step towards us. Her opposite foot followed right after."
+    "{i}Thump... thump...{/i}"
+    "It was quiet for several seconds. The only thing audible was the rain tapping upon the umbrella."
+    BE "So why'd you-"
+    GTS "I don't wish-"
+    GTS "Pardon me. Go ahead."
+    BE "No, no... it's fine."
+    show GTS angry
+    "Naomi grumbled slightly, placing her hand upon her chest."
+    GTS "I don't think it's worth bottling up emotions such as these over a petty fight. It profits us nothing."
+    show GTS sad
+    GTS "I... do not wish to have these feelings anymore."
+    BE "Is that from a proverb, or something?"
+    "Honoka took a deep breath, then relaxed her face."
+    BE "Sorry... sorry. Yeah. I feel the same way."
+    show GTS neutral
+    GTS "There is no need to apologize. Your thoughts are justified."
+    BE "This isn't even about the others... is it?"
+    GTS "It is not. I do not feel that anyone else should affect our ability to-"
+    show BE angry
+    BE "Oh my GOD, Yamazaki-san, just say you wanna be friends again!"
+    show GTS surprised
+    GTS "I... have been overthinking it, haven't I?"
+    show BE happy
+    BE "You have."
+    "Honoka let out a brief, uneasy chuckle."
+    show GTS neutral
+    GTS "..."
+    GTS "Inoue-san, when I look at you, I realize that there is beauty in simplicity. I... envy your ability to say what's on your mind."
+    GTS "It shames me to know that it's taken me this long to realize that."
+    show BE neutral
+    "Honoka seemed flattered."
+    BE "I've always thought you were really cool too, Yamazaki-san, so classy and refined. Like... I thought someone like you would never talk to someone like me."
+    show GTS surprised
+    GTS "Really?"
+    show GTS unique 
+    GTS "It has been a long time since another's opinion of me has given me such relief. Such... joy..."
+    "Naomi bent over at her abdomen, looming over us. She breathed deep, clawing at composure in the rain. Although both of them had umbrellas, Naomi by herself seemed to be shielding us from it."
+    show BE sad
+    BE "Oh... thanks."
+    show GTS happy
+    GTS "You are welcome."
+    "Naomi paused for a few seconds, maintaining her overarching position. She then noticed Honoka's worried expression below."
+    GTS "Is something on your mind?"
+    BE "I just thought... are we gonna be okay? Like... when we go back to school, and the others..."
+    show GTS neutral
+    GTS "We can apologize as necessary, can we not? \"Play it by ear\", as the saying goes?"
+    GTS "I'm certain that everything will work out. As long as I have you to talk to, I feel... at peace."
+    show BE neutral
+    BE "I know, I know... I feel the same way."
+    "The air became quiet once more. The rain seemed to be letting up a bit..."
+    MC "Honoka... did you plan this?"
+    show BE happy
+    BE "Nope! Not at all!"
+    GTS "I just... happened to notice, that's all."
+    show BE neutral
+    show GTS embarrassed 
+    "Naomi blinked, then shuffled around slightly as the two awkwardly looked at each other."
+    GTS "Ah... Inoue-san?"
+    show BE confused
+    BE "Yeah?"
+    show GTS happy
+    GTS "...You're my best friend."
+    "Honoka paused for a few moments."
+    BE "...You really think of me that way?"
+    GTS "There isn't a single person I'd consider closer to me."
+    BE "Well, thanks, Yamazaki-san! Or... should I just call you 'Naomi'?"
+    show GTS neutral
+    GTS "If we aren't with formal company... certainly."
+    show BE happy
+    BE "Hehe... all right."
+    "Naomi slowly stood upright once more, straightening out her back."
+    "The sun began to peek out from beyond the dark clouds in the sky, almost as if a higher power had heard us."
+    GTS "I look forward to spending more time with you... Honoka-chan."
+    show BE neutral
+    BE "Pff... any idea what we should do first, {i}Naomi{/i}-chan?"
+    GTS "Perhaps I could show you a few tea ceremonies? You did express interest in formal dining before..."
+    MC "She did?"
+    show BE surprised
+    BE "I did?"
+    show GTS embarrassed
+    GTS "Ah... was I mistaken?"
+    show GTS happy 
+    show BE embarrassed 
+    "The three of us walked back to the school as the sidewalk subtly shimmered from the water."
+    "I was glad that Honoka and Naomi were able to resolve their conflict."
+    "In just this short year, the two of them had managed to become best friends..."
+    "And I was glad to see it stayed that way..."
     jump daymenu

@@ -33904,6 +33904,7 @@ label PRG053:
     jump daymenu
 
 label PRG054:
+    $setFlag("XX54")
     $setProgress("PRG", "PRG055")
     play music Schoolday
     scene Campus Center with fade

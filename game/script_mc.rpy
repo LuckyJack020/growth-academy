@@ -10283,6 +10283,373 @@ label MC014:
     "Wasn't much, but I at least felt better about the fact if I could be there for the times she wanted to get out but felt overwhelmed, it might eventually help her feel more comfortable doing it herself."
     jump daymenu
 
+label MC023:
+    play sound Bell
+    pause 1
+    play music Busy
+    scene Classroom4 with fade
+    "I bolted for the door as soon as the day's final bell rang. My eagerness was well founded, as a game I'd been anticipating dropped today."
+    pause 1
+    scene HallwayStairs with fade
+    "I knew I shouldn't be dashing through the halls, but I felt like a twelve-year-old kid again. That same rush of energy I had when I'd rush home after school to hop on a new game was tangible."
+    "Unfortunately, the energy was cut short by..."
+    "*CRASH*"
+    show dummy with vpunch
+    "I didn't see what happened on impact, but next thing I knew, I was laying on the ground."
+    show Kokutan neutral with dissolve
+    UNKNOWN "OW! {w}What's your deal, you nimrod?"
+    MCT "Did I just get called a nimrod?"
+    if getFlag("Meet_Kokutan"):
+        "Standing up, I found what caused the commotion. A girl in a strange uniform sat on the floor picking up their books. It was unmistakably a school uniform, but its design was completely foreign; like an almost fantastical gothic design."
+        MCT "Oh, I know her. Honoka's odd roommate, Kokutan."
+        "Her eyes were a sharp, vibrant shade of pink which only added to her odd, uncanny appearance."
+        "Despite this, she was rather diminutive in height, which detracted somewhat from the sheer gravitas of her presence, and yet at the same time only made her that much more befuddling to behold."
+        if routelock == "AE":
+            MCT "I wonder how Shiori-chan feels about that outfit. I should ask her about it. She's a stickler for the rules, so I imagine probably not enthused... that said, even Shiori seems to be a bit lenient on proper dress..."
+        else:
+            MCT "She must be an utter nightmare for the student council..."
+        MC "Oh my apologies. Do you need any help? Are you hurt?"
+        "I offered her a hand, but it was unceremoniously slapped away. The girl stood up slowly as some flowers fell out from her books."
+        Kokutan "I'm fine, but since you made me lose some ingredients, you should help me get new ones."
+        "She gestured to the dead flowers and grass blades scattered on the floor."
+        MC "I... uh... well, you see..."
+        Kokutan "See? Oh, I see clearly. You run me over, trample my ingredients, and then want to leave me defeated and at a complete loss. Absolutely shameful, complete and utter lack of honor or dignity!"
+        Kokutan "Had I done the same, my sense of guilt and debt would be crushing! But alas, that's simply the age we were born to..."
+        MCT "I could bolt again, but I fear she'd chase me. Ughm... I hope this doesn't take long."
+        MC "Fine, fine, I'll repay my debt."
+        Kokutan "Good decision. It's bad luck to leave a personal debt unpaid."
+        MCT "Note to self: never run in the halls."
+        "With as much ceremony and pomp as she could muster, the girl led me out towards the edge of the athletic fields. Many afterschool programs were in session, making it quite lively outside today."
+        Kokutan "Now, see? When walking side by side with me in my time of need, can't you just feel the weight of your sins being lifted? It's refreshing right?~"
+        MC "Y-Yeah..."
+        MCT "This girl is nuts..."
+        "I looked around to make sure there weren't many people watching, despite her efforts to the contrary."
+        MC "So, uh, where are we going?"
+        "Despite my questioning, she simply ignored me and kept going."
+        "She eventually stopped us by a small cluster of trees. In the center, I could see a patch of wildflowers and mushrooms."
+        Kokutan "These will do nicely. Grab that Udo beside you."
+        "She pointed to a spindly-looking plant with white flowers. Gingerly, I plucked off the top portion and handed it over, my better sense of judgement then immediately kicking in as I began to question if any of this was even allowed or safe for that matter."
+        Kokutan "This will do nicely in some Miso soup."
+        MC "M... Miso... soup?"
+        Kokutan "But of course! Nourishment for the soul and mind! Especially one burdened by guilt and shame."
+        MCT "Will you knock it off?!"
+        MCT "Uch, seriously... all this for some soup?"
+        Kokutan "Ooo! This, over here, fresh Enoki! These will go just splendidly!"
+        MC "... This whole island's ecology is completely screwed."
+        "This process repeated again and again. Plants I'd assume were just weeds she'd say would be good in a remedy or a food dish. This girl was certainly odd, to say the least, but she knew her herbology."
+        MC "Okay, do you think this should be enough?"
+        Kokutan "Absolutely not! Don't you dare try to weasel your way out of penance! See that little sprig of Mitsuba, over there?"
+        MC "... Y-Yeah?"
+        Kokutan "Pluck it."
+        MC "..."
+        "Unceremoniously, I walked over and plucked the little parsley leaves. As I walked over, she nudged me with her basket before I made a small show of dropping them in."
+        Kokutan "NOW this is enough!~"
+        MC "Ugh... great."
+        Kokutan "Fantastic work, Mr. Honoka's confidant!"
+        if routelock == "BE":
+            MC "Boyfriend. Hello Kokutan, nice to meet you again."
+        else:
+            MC "We were childhood friends, we recently reunited. Nice to meet you again, Kokutan."
+        MC "I never got a chance to ask... What's the deal with the uniform?"
+        Kokutan "Isn't it obvious? I have a uniform because I'm a student! Obvious is mundane, and mundane is boring. Please, try not to bore me in the future!"
+        MC "I walked right into that one..."
+    else:
+        "Standing up, I found what caused the commotion. A girl in a strange uniform sat on the floor picking up their books. It was unmistakably a school uniform, but its design was completely foreign; like an almost fantastical gothic design."
+        "Her eyes were a sharp, vibrant shade of pink which only added to her odd, uncanny appearance."
+        "Despite this, she was rather diminutive in height, which detracted somewhat from the sheer gravitas of her presence, and yet at the same time only made her that much more befuddling to behold."
+        if routelock == "AE":
+            MCT "I wonder how Shiori-chan feels about that outfit. I should ask her about it. She's a stickler for the rules, so I imagine probably not enthused... that said, even Shiori seems to be a bit lenient on proper dress..."
+        else:
+            MCT "She must be an utter nightmare for the student council..."
+        MC "Oh my apologies. Do you need any help? Are you hurt?"
+        "I offered her a hand, but it was unceremoniously slapped away. The girl stood up slowly as some flowers fell out from her books."
+        Student "I'm fine, but since you made me lose some ingredients, you should help me get new ones."
+        "She gestures to the dead flowers and grass blades scattered on the floor."
+        MC "I... uh... well, you see..."
+        Student "See? Oh, I see clearly. You run me over, trample my ingredients, and then want to leave me defeated and at a complete loss. Absolutely shameful, a complete and utter lack of honor or dignity!"
+        Student "Had I done the same, my sense of guilt and debt would be crushing! But alas, that's simply the age we were born to..."
+        MCT "I could bolt again, but I fear she'd chase me. Ughm... I hope this doesn't take long."
+        MC "Fine, fine, I'll repay my debt."
+        Student "Good decision. It's bad luck to leave a personal debt unpaid."
+        MCT "Note to self: never run in the halls."
+        "With as much ceremony and pomp as she could muster, the girl led me out towards the edge of the athletic fields. Many afterschool programs were in session, making it quite lively outside today."
+        Student "Now, see? When walking side by side with me in my time of need, can't you just feel the weight of your sins being lifted? It's refreshing right?~"
+        MC "Y-Yeah..."
+        MCT "This girl is nuts..."
+        "I looked around to make sure there weren't many people watching, despite her efforts to the contrary."
+        MC "So, uh, where are we going?"
+        "Despite my questioning, she simply ignored me and kept going."
+        "She eventually stopped us by a small cluster of trees. In the center, I could see a patch of wildflowers and mushrooms."
+        Student "These will do nicely. Grab that Udo beside you."
+        "She pointed to a spindly-looking plant with white flowers. Gingerly, I plucked off the top portion and handed it over, my better sense of judgement then immediately kicking in as I began to question if any of this was even allowed or safe for that matter."
+        Student "This will do nicely in some Miso soup."
+        MC "M... Miso... soup?"
+        Student "But of course! Nourishment for the soul and mind! Especially one burdened by guilt and shame."
+        MCT "Will you knock it off?!"
+        MCT "Uch, seriously... all this for some soup?"
+        Student "Ooo! This, over here, fresh Enoki! These will go just splendidly!"
+        MC "... This whole islands ecology is completely screwed."
+        "This process repeated again and again. Plants I'd assume were just weeds she'd say would be good in a remedy or a food dish. This girl was certainly odd, to say the least, but she knew her herbology."
+        MC "Okay, do you think this should be enough?"
+        Student "Absolutely not! Don't you dare try to weasel your way out of penance! See that little sprig of Mitsuba, over there?"
+        MC "... Y-Yeah?"
+        Student "Pluck it."
+        MC "..."
+        "Unceremoniously, I walked over and plucked the little parsley leaves. As I walked over, she nudged me with her basket before I made a small show of dropping them in."
+        Student "NOW this is enough!~"
+        MC "Ugh... great."
+        Student "Fantastic work, Mr. Whoever you are!"
+        MCT "Oh, yeah... this whole time we haven't even introduced ourselves. I might as well learn her name, since I doubt I'm going to forget this."
+        MC "Pardon me but I don't think we ever introduced ourselves; I'm Keisuke Hotsure."
+        Student "Well, Keisuke, I normally don't give my name to those who try to turn me into roadkill. However, seeing your usefulness, I'll make an exception— I'm Kokutan."
+        $setFlag("Meet_Kokutan")
+        MC "I'm guessing by the uh... uniform you're a fellow student?"
+        Kokutan "Hmmph... Isn't that obvious? {w}Obvious is mundane, and mundane is boring. Please, try not to bore me in the future!"
+        MC "That... I hate how you put that, but it is obvious, I guess."
+    Kokutan "Reword your questions in a way which is more spontaneous! More in depth!"
+    MCT "Alright, she wants in depth?"
+    MC "So Kokutan, do you have a factor?"
+    Kokutan "Gch, n-not that in depth! What, do you ask all of the girls you meet if they're going to get big boobs, or a big fat butt like madame president, or become a titan!? DOGEZA!"
+    MCT "YOU LITERALLY ASKED ME TO BE SPONTANEOUS!"
+    MC "G-Geez, sorry."
+    Kokutan "Try again; the previous question has been erased from my memory!"
+    MC "Oookay... then... back on the outfit-"
+    Kokutan "Uuugh-"
+    MC "Is a uniform like this even allowed?"
+    Kokutan "{i}Ooo{/i}, that is a more interesting question-!"
+    Kokutan "W-Wait, what? {w}Hey, it's not like I'm breaking any school rules!"
+    MC "Jeesh, lighten up, I'm just trying to figure out what your deal is with questions that wouldn't bore you."
+    Kokutan "As tactful as a cactus I see, should've been expected. Well, for your information I won't be telling you as that's rather private information."
+    MC "Secret clothes factor, got it."
+    Kokutan "... You're incorrigible. You won't get your questions answered bumbling around like that."
+    MCT "Smooth one, wise guy."
+    Kokutan "I'll keep you in the know on my outfit, however. You see, my outfits are custom modified specifically for me! The louses at the student council can object how they wish, but the simple fact is that I've always been consistent within the written word of the rules!"
+    MC "I... see. Well, how do you know so much about plants?"
+    Kokutan "Since you want to start a questionnaire, I'll indulge. Do you believe in fairytales?"
+    menu:
+        "A little bit.":
+            jump MC023_C1_1
+        "No.":
+            jump MC023_C2_1
+
+label MC023_C1_1:
+    $setFlag("MC023_Yes")
+    MC "A little bit, I could see where there may be truth in some tales."
+    Kokutan "I'm glad someone has a little imagination left."
+    Kokutan "I think many folk and fairy tales might have some ounces of truth. What's fact or fiction— we might not know, but it's fun to imagine."
+    "In a strange motion that caught me off guard, she waved her hand towards the center of the patch."
+    Kokutan "Have you ever heard of a fairy ring?"
+    MC "I don't believe so."
+    "With her fingertip, she traced a circle in the patch of mushrooms."
+    Kokutan "Many different folktales speak of these rings. The Germans believe they are created by witches dancing. The Dutch claimed it's where the devil set his milk churn down."
+    MC "I... see. I mean... from the way you're selling this to me, it sounds like it's an evil sign by those descriptions."
+    MCT "More like some medieval farmers had a bit too much mead."
+    Kokutan "Those are a few interpretations; some are more light-hearted. Some Welsh sources paint them as spots of fertility and prosperity."
+    MC "I like the Welsh version better."
+    "The strange girl let out a haughty laugh."
+    Kokutan "The Welsh seem more positive about them, that's true."
+    "Curiously, she picked a few random flowers and stuck them inside one of her books."
+    MC "I think there are better bookmarks available."
+    Kokutan "These aren't bookmarks— it's a flower scrapbook. I collect wildflowers and then catalog them."
+    MC "Can't say I've heard of that before."
+    Kokutan "I don't think it's exactly within your area of interest."
+    "Her last statement had a certain coldness that left me wondering if I should be offended."
+    "As we stood up and prepared to leave, she asked me one last question."
+    Kokutan "Do you believe in fate, Keisuke?"
+    MC "... Care to elaborate?"
+    Kokutan "Humor me. I want to hear YOUR thoughts."
+    MCT "Seriously? Hmm..."
+    MC "Uh, you mean the whole \"if you could change your fate, would'ya?\" kind of deal?"
+    Kokutan "No, not that Pixel Studio movie. I mean actual fate, that everything is already predetermined."
+    MC "I guess sorta. I mean, it's hard to tell what's fate and what's luck."
+    Kokutan "Ever considered they might be the same?"
+    "I pondered her statement for a minute before I spotted the unmistakable silhouette of Honoka bounding across the field."
+    show Kokutan neutral at altMove(0.5, 0.75)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    if routelock == "BE":
+        pause 0.1
+        #(I would consider a very similar version of that "else" variant, but with Honoka being aware of the math elective Kei is attending on this floor, tapping to the fact they're dating and knowing about each other much more if they wouldn't.)
+    else:
+        BE "Oh hey Kei-chan, what are you doing out here?"
+    MC "I... uh."
+    Kokutan "He owed me a debt, nearly turned me into roadkill!"
+    BE "Roadkill?!"
+    BE "Didn't expect you to be a cold-hearted killer like that."
+    MC "O-Oy! She's fine, isn't she?!"
+    show BE happy
+    "The two girls began laughing, Honoka with her hearty laugh and Kokutan with her haughty laugh." 
+    MCT "Maybe that ring also summons witches."
+    MC "Wait, why are you out here then, Honoka?"
+    show BE neutral
+    BE "Oh, I've been looking for my roommate. I just needed to ask where she put her blow dryer."
+    MC "Huh. Well, I mean, if you find her you-"
+    Kokutan "Need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
+    BE "Eh, I figured you'd be around here. You're often skulking around for herbs, so the biggest place outside wasn't exactly a big assumption."
+    BE "I mean, seriously, my hair was gonna be a complete wreck!"
+    Kokutan "H-Hey, you look fine!"
+    BE "Uh, duh-doy! NOW I do, but if I keep air drying? Bad, freaking, news."
+    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+        MC "Wait, are you two roommates?"
+        show BE confused
+        BE "Yeah, you didn't know?"
+        MC "I don't think you've ever mentioned it."
+        show BE happy
+        BE "Well, surprise!"
+    MCT "Talking about an odd pairing."
+    Kokutan "I'll be back later, Honoka, but the hair dryer is in the lower cabinet in my bathroom."
+    show BE happy
+    BE "Do you put it there on purpose?"
+    Kokutan "You are relieved from your bond, Keisuke Hotsure."
+    "Kokutan gave Honoka a smirk before turning around and heading off towards Chūkan Point."
+    hide Kokutan with dissolve
+    show BE happy at altMove(0.5, 0.5)
+    BE "That girl is something for sure."
+    MC "You're telling me, I felt she had me under a spell earlier with how she guilted me."
+    BE "Yeah, that's Kokutan for you. She can be sweet, but she is quite eccentric."
+    MC "True. I couldn't help but notice her uniform is a bit... different."
+    BE "I know, right? She loves tailoring and does a lot of modifications like that to her clothes."
+    MC "Looks like a handy talent to have, considering our situation."
+    MC "Well, not really mine, but you know what I mean."
+    show BE sad
+    BE "Yeah..."
+    pause 1
+    MC "Everything okay?"
+    show BE neutral
+    BE "Oh, yeah. I'm fine."
+    BE "She's just so secretive, and I don't really know that much about her."
+    BE "Which is odd. She's my roommate, you know?"
+    if routelock == "BE":
+        MC "Like her real name?"
+        "Honoka nodded."
+        MC "\"The Ebony Lord of Destruction\"."
+        show BE happy
+        BE "\"Master of A Thousand Demons\"."
+        pause 1
+        MC "... And whatever the other thing was."
+        "Honoka smirked."
+        BE "Dork."
+    else:
+        BE "But like, all I really know is... mm..."
+        BE "Her real name isn't \"Kokutan\"."
+        BE "She wears contacts. Never seen the real color of her eyes."
+    BE "And... more unknown, I guess, but she won't even tell me her factor."
+    MC "Almost reminds me of Daichi in a way but with more... sass, I guess."
+    show BE happy
+    BE "I can see it, though now I'm imagining Utagashi-san in a gothic maid outfit, which is an image indeed."
+    MC "I don't think I needed that image in my head today."
+    "Honoka chuckled as we made our way back towards the dorms."
+    jump daymenu
+
+label MC023_C2_1:
+    $setFlag("MC023_No")
+    MC "Not really, it's all mostly superstitious stuff. The kind of things you tell your kids before bed to teach them lessons."
+    Kokutan "{i}Hmph{/i}. A dull one you are Keisuke."
+    "In a strange motion that caught me off guard, she waved her hand towards the center of the patch."
+    Kokutan "Have you ever heard of a fairy ring?"
+    MC "I don't believe so."
+    "With her fingertip, she traced a circle in the patch of mushrooms."
+    Kokutan "Many different folktales speak of these rings. The Germans believe they are created by witches dancing. The Dutch claimed it's where the devil set his milk churn down."
+    MC "Sounds like it's an evil sign by those descriptions."
+    Kokutan "Those are a few interpretations; some are more light-hearted. Some Welsh sources paint them as spots of fertility and prosperity."
+    MC "I like the Welsh version better."
+    "She lets out a haughty laugh."
+    Kokutan "The Welsh seem more positive about them; it's true."
+    "She picked a few random flowers and stuck them inside one of her books."
+    MC "I think there are better bookmarks available."
+    Kokutan "These aren't bookmarks; it's a flower scrapbook. I collect wildflowers and then catalog them."
+    MC "Can't say I've heard of that before."
+    Kokutan "I don't think it's exactly within your area of interest."
+    "She said that last statement with a certain coldness that left me wondering if I should be offended."
+    "As we stood up and prepared to leave, she asked me one last question."
+    Kokutan "Do you believe in fate, Keisuke?"
+    MC "... Care to elaborate?"
+    Kokutan "Humor me. I want to hear YOUR thoughts."
+    MCT "Seriously? Hmm..."
+    MC "Uh, you mean the whole \"if you could change your fate, would'ya?\" kind of deal?"
+    Kokutan "No, not that Pixel Studio movie. I mean actual fate, that everything is already predetermined."
+    MC "Not really, same kind of reluctance, I suppose."
+    Kokutan "You have the imagination of a cardboard box."
+    "Before I could respond, I spotted the unmistakable silhouette of Honoka bounding across the field."
+    show Kokutan neutral at altMove(0.5, 0.75)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    if routelock == "BE":
+        BE "Oh hey Kei-chan, how's that elective with Hageshi-sensei?"
+        MC "Not bad. I thought it will be more demanding-"
+        BE "Heeey, why are you out here with Kokutan?"
+        Kokutan "He tried to turn me into roadkill!"
+    else:
+        BE "Oh hey Kei-chan, what are you doing out here?"
+        Kokutan "He owed me a debt, nearly turned me into roadkill."
+    MC "I... uh-"
+    BE "Didn't expect you to be a cold-hearted killer like that."
+    MC "O-Oy! She's fine, isn't she?!"
+    show BE happy
+    "The two girls began laughing, Honoka with her hearty laugh and Kokutan with her haughty laugh."
+    MCT "Maybe that ring also summons witches."
+    MC "Wait, why are you out here then, Honoka?"
+    show BE neutral
+    BE "Oh, I've been looking for my roommate. I just needed to ask where she put her blow dryer."
+    MC "Huh. Well, I mean, if you find her you-"
+    Kokutan "Need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
+    BE "Eh, I figured you'd be around here. You're often skulking around for herbs, so the biggest place outside wasn't exactly a big assumption."
+    BE "I mean, seriously, my hair was gonna be a complete wreck!"
+    Kokutan "H-Hey, you look fine!"
+    BE "Uh, duh-doy! NOW I do, but if I keep air drying? Bad, freaking, news."
+    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+        MC "Wait, are you two roommates?"
+        show BE confused
+        BE "Yeah, you didn't know?"
+        MC "I don't think you've ever mentioned it."
+        show BE happy
+        BE "Well, surprise!"
+    MCT "Talking about an odd pairing."
+    Kokutan "I'll be back later, Honoka, but the hair dryer is in the lower cabinet in my bathroom."
+    show BE happy
+    BE "Do you put it there on purpose?"
+    Kokutan "You are relieved from your bond, Keisuke Hotsure."
+    "Kokutan gave Honoka a smirk before turning around and heading off towards Chūkan Point."
+    hide Kokutan with dissolve
+    show BE happy at altMove(0.5, 0.5)
+    BE "That girl is something for sure."
+    MC "You're telling me, I felt she had me under a spell earlier with how she guilted me."
+    BE "Yeah, that's Kokutan for you. She can be sweet, but she is quite eccentric."
+    MC "True. I couldn't help but notice her uniform is a bit... different."
+    BE "I know, right? She loves tailoring and does a lot of modifications like that to her clothes."
+    MC "Looks like a handy talent to have, considering our situation."
+    MC "Well, not really mine, but you know what I mean."
+    show BE sad
+    BE "Yeah..."
+    pause 1
+    MC "Everything okay?"
+    show BE neutral
+    BE "Oh, yeah. I'm fine."
+    BE "She's just so secretive, and I don't really know that much about her."
+    BE "Which is odd. She's my roommate, you know?"
+    if routelock == "BE":
+        MC "Like her real name?"
+        "Honoka nodded."
+        MC "\"The Ebony Lord of Destruction\"."
+        show BE happy
+        BE "\"Master of A Thousand Demons\"."
+        pause 1
+        MC "... And whatever the other thing was."
+        "Honoka smirked."
+        BE "Dork."
+    else:
+        BE "But like, all I really know is... mm..."
+        BE "Her real name isn't \"Kokutan\"."
+        BE "She wears contacts. Never seen the real color of her eyes."
+    BE "And... more unknown, I guess, but she won't even tell me her factor."
+    MC "Almost reminds me of Daichi in a way but with more... sass, I guess."
+    show BE happy
+    BE "I can see it, though now I'm imagining Utagashi-san in a gothic maid outfit, which is an image indeed."
+    MC "I don't think I needed that image in my head today."
+    "Honoka chuckled as we made our way back towards the dorms."
+    "As we left the small fairy ring patch, I could've sworn I heard a whisper behind me."
+    "Glancing back at the clearing and seeing nothing there, I continued walking."
+    MCT "I think that girls mystic speak is getting to me."
+    jump daymenu
+
 label MC024:
     scene Cafeteria with fade 
     play music Schoolday

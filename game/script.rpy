@@ -120,6 +120,7 @@ init python:
         'businterior': ("town", (500,700)),
         'cafeteria': ("school", (750,215)),
         'campuscenter': ("school", (570,390)),
+        'chukanpoint': ("school", (975,50)),
         'classroom': ("school", (750,280)),
         'classroom_2': ("school", (750,280)),
         'classroom_3': ("school", (750,280)),
@@ -1289,11 +1290,27 @@ screen daymenu():
 
     #studying activities (costs skill point)
     if "spmax" in globals():
-        text "Free Periods: " + str(spmax - spspent) xalign 0.05 yalign 0.845 color Color((0, 0, 0))
+        text "Free Periods: " + str(spmax - spspent) xalign 0.05 yalign 0.765 color Color((0, 0, 0))
+        if getSkill("Athletics") > 9:
+            text str(getSkill("Athletics")) xalign 0.0646 yalign 0.83 color Color((0, 0, 0)) textalign 0.5
+        else:
+            text str(getSkill("Athletics")) xalign 0.068 yalign 0.83 color Color((0, 0, 0)) textalign 0.5
+        if getSkill("Art") > 9:
+            text str(getSkill("Art")) xalign 0.161 yalign 0.83 color Color((0, 0, 0)) textalign 0.5
+        else:
+            text str(getSkill("Art")) xalign 0.165 yalign 0.83 color Color((0, 0, 0)) textalign 0.5
+        if getSkill("Academics") > 9:
+            text str(getSkill("Academics")) xalign 0.258 yalign 0.83 color Color((0, 0, 0)) textalign 0.5
+        else:
+            text str(getSkill("Academics")) xalign 0.26 yalign 0.83 color Color((0, 0, 0)) textalign 0.5
         if spmax > spspent:
-            imagebutton idle "Graphics/ui/map/athletics.webp" xalign 0.05 yalign 0.95 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-            imagebutton idle "Graphics/ui/map/art.webp" xalign 0.15 yalign 0.95 action [SetVariable("activeevent", "Art"), Jump("train")]
-            imagebutton idle "Graphics/ui/map/academics.webp" xalign 0.25 yalign 0.95 action [SetVariable("activeevent", "Academics"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/setathletics.webp" hover "Graphics/ui/map/newathletics.webp" xalign 0.05 yalign 0.92 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/setart.webp" hover "Graphics/ui/map/newart.webp" xalign 0.15 yalign 0.92 action [SetVariable("activeevent", "Art"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/setacademics.webp" hover "Graphics/ui/map/newacademics.webp" xalign 0.25 yalign 0.92 action [SetVariable("activeevent", "Academics"), Jump("train")]
+        else:
+            add "Graphics/ui/map/athletics.webp" xalign 0.05 yalign 0.92
+            add "Graphics/ui/map/art.webp" xalign 0.15 yalign 0.92
+            add "Graphics/ui/map/academics.webp" xalign 0.25 yalign 0.92
 
     #scene title
     if highlitevent != "":
