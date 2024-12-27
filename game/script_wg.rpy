@@ -32211,7 +32211,7 @@ label WG096:
     AE "Understandable. I will keep it brief. Though despite our justified objections," 
     show WG surprised-2
     show AE neutral
-    AE "The council does wish to formally acknowledge the contribution of your clothing business as a service to the Academy that has helped to promote the general well being of the student body during such a critical and turbulent stage of students' lives."
+    AE "the council does wish to formally acknowledge the contribution of your clothing business as a service to the Academy that has helped to promote the general well being of the student body during such a critical and turbulent stage of students' lives."
     AE "Though the school supplies the necessary clothing elements for attendance and appearing presentable in public,"
     AE "it is worth acknowledging the option for custom clothing served to provide a source of comfort, and an outlet for personal expression unmet by the standard provision." 
     "I couldn't believe what I was hearing... {w}Alice for her part was at a loss for words herself."
@@ -32701,7 +32701,7 @@ label WG097:
         WG "Thank you, Dear."
         "Alice grabbed the serving dish with both hands, wasting no time digging in with the spoon once it was in her grasp."
         WG "Mmm. That does hit the spot."
-        "With my hands freed up, I was able to finally able to get a few licks on mine. It strange, but in a good way. The flavors were all sweet but very different at the same time." 
+        "With my hands freed up, I was able to finally get a few licks on mine. It was strange, but in a good way. The flavors were all sweet but very different at the same time." 
         "Some bites were distinct with just one flavor and then others had them all at the same time, and this thing had plenty of nuts, cherries, and chocolate chips stuffed into it."
         WG "Mmm, I love the dense and silky texture of gelato. Not that I don't appreciate ice cream, but I think I was well overdue for a break from the usual fair on this island."
         MCT "She sure does like her sweets. {w}Hehe. You are what you eat, as they say."
@@ -32835,6 +32835,7 @@ label WG097:
     MCT "Yes, that's a much more eloquent way of putting it."
     WG "Well you've certainly managed to outdo yourself with this one..."
     pause 1
+    show WG sad
     WG "{i}Sniff{/i}...{i}Sniff{/i}..."
     "Alice's eyes began to well up with tears."
     MCT "Oh... I hope this didn't remind her of how she used to look. I mean, she is a lot larger than last time I drew for her."
@@ -32875,6 +32876,7 @@ label WG097:
 label WG098:
     $setProgress("WG", "WG099")
     $setTime(TimeEnum.EVE)
+    $setWGOutfit(OutfitEnum.DRESS)
     scene Dorm WG with fade
     play music DormLife
     "Tonight was the big night. The time had come for the music club's final concert of the year. All of Alice's hard work she put into the preparations (not to mention all her scheming to gain a leadership position) was about to pay off."
@@ -32900,7 +32902,7 @@ label WG098:
     Chibuki "I don't need the credits but I suppose I wouldn't hear the end of it from either of you if I didn't show up."
     MCT "That's one thing I'll say about Chibuki, she doesn't have the greatest attitude, but at least she shows up."
     show WG sly
-    MC "I'm sure Kokutan will have a seat waiting for you right next to here."
+    MC "I'm sure Kokutan will have a seat waiting for you right next to her."
     Chibuki "She can keep waiting as far as I'm concerned. Hopefully her roommate and that friend of hers sits by her instead."
     show WG neutral
     Chibuki "Right then, looks like loverboy's got you covered for the rest of the evening, so I'm off. Later."
@@ -33015,8 +33017,8 @@ label WG098:
     "Usuda-san leaned forward into view on the other side of Ichiro, her overly-generous chest spilling into her lap in the process."
     MC "Ah, another familiar face. Good evening Usuda-san. I'm sure Alice will be glad to see you in attendance as well."
     Misaki "The pleasure is mine. I've heard far too much about Alice's musical talents to even think about passing on the occasion. I simply must see it for myself." 
-    show Vivian neutral at altMove(0.5, 0.25)
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Vivian neutral at altMove(0.5, 0.75)
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     PRG "H-Hello, Hotsure-san. M-Mind if I sit here?"
     show PRG surprised
     PRG "Oh!"
@@ -33055,33 +33057,42 @@ label WG098:
     hide Sakura with dissolve
     "I didn't see where Chibuki or Kokutan were sitting, but knowing the both of them I assumed it was somewhere closer to the back."
     play music SwingBadaBing
+    "The curtain opened and immediately things started off with a bang, not even leaving time for an introduction or audience applause."
+    pause 3.0
     show WG neutral with dissolve
-    "The curtain opened and immediately things started off with a bang, not even leaving time for an introduction or audience applause." 
     "Trumpets along with the rest of the brass ensemble lead by the portly Kentaro were blaring. But this didn't stop Alice's voice from punching through and filling the auditorium."
+    pause 5.0
     "It was one of those jazzy swing numbers from early in the 20th century. Most of the student body, myself included, were completely caught off-guard." 
+    pause 5.0
     "I think most of them expected it to be a drab evening they were all but forced to go through, but this opening number certainly seemed to set the tone that we were going to have some fun tonight."
-    stop music fadeout 1.5
+    pause 5.0
+    stop music fadeout 3.0
+    pause 3.0
     hide WG with dissolve
     play music SlowDance
     "Keeping the same set, the band shifted to a slower number, with that quintessential big band sound."
+    pause 3.0
     show Okisho neutral with dissolve
     "The slower number lent itself well to Okisho's more sultry and raspy tone, as compared to Alice's power ballad operatic voice."
     Vivian "{size=-6}Oh, that voice! Such a unique tone. How lovely!{/size}"
     "Ichiro" "{size=-6}Indeed, it certainly is a rare gift among female vocalists.{/size}"
+    pause 5.0
     "The audience was transfixed. I noticed most everyone was swaying in their seats along with the gentle waxing of the song's easy slow rhythm." 
     "And who could blame them? It certainly evoked a sense of Old World romanticism."
     MCT "Hey that's pretty good! Write that down."
     "I of course was also part of the majority of students looking to get credit from attending the concert. As much as I enjoyed getting completely sucked in, I couldn't get {i}too{/i} distracted and forget to take notes."
+    pause 3.0
     "Luckily for us there were plenty of songs still left to go."
-    stop music fadeout 1.0
+    stop music fadeout 3.0
     scene black with fade
-    pause .5
+    pause 3.0
     scene Auditorium with fade
     play music BaroqueLetter2
     "By this point in the performance we were firmly into the later half with one of the few true \"Classical\" numbers. {w}The variety of musical styles had been a true journey through time and across cultures."
     "I suspected an instrumental number at this stage was planned in order for both Alice and Okisho to rest their voices. The spotlight for this number was on Emiko, instead with the clean sound of her English horn."
     show Okisho neutral with dissolve
     "Okisho was conducting this particular piece, no doubt another one of her uncannily masterful arrangements."
+    pause 8.0
     stop music fadeout 1.0
     pause 1
     hide Okisho
@@ -33089,17 +33100,19 @@ label WG098:
     with dissolve
     "To my surprise, though I don't think anyone else thought much of it, Okisho handed off the conducting wand to Alice— and she didn't waste any time getting right into the next number."
     play music Fiddles
-    "It was a Celtic folk number. {w}Ami was going absolutely nuts on her violin. Her bow was sawing back and forth rapidly across all the different strings to create a droning effect, not unlike the bagpipes."
+    "It was a Celtic folk number."
+    pause 5.0
+    "Ami was going absolutely nuts on her violin. Her bow was sawing back and forth rapidly across all the different strings to create a droning effect, not unlike the bagpipes."
     pause 6
     "There was a lot going on, it was almost hard to keep track of. You could tell the fast pace of the number was definitely a challenge for everyone to keep in time, judging by the frenzied movement of the band."
-    pause 2
+    pause 4
     "But keep up they did. I couldn't pick out a single sour or dropped note."
     pause 6
     "It didn't take long for Emiko to join her in duet, now with a wooden flute."
     pause 4 
     hide WG 
-    show PRG excited at Position(xcenter=0.25, yalign=1.0)
-    show Sakura happy at Position(xcenter=0.75, yalign=1.0)
+    show PRG excited at Position(xcenter=0.75, yalign=1.0)
+    show Sakura happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with dissolve
     PRG "{size=-6}This is so fun!{/size}"
     Sakura "{size=-6}Mhmm! I'm having a blast.{/size}"
@@ -33112,14 +33125,17 @@ label WG098:
     show Okisho neutral with dissolve
     "The music faded briefly as the music set shifted. Okisho slung up her keytar as they brought the mic up close to Monterio's giant octobass."
     play music RevvinUp
-    pause .5
+    pause 1.5
     "And we were all just about blown out of our seats as the thumping bass and crashing percussion took off like a jet."
+    pause 2.5
     "Only to get even louder and in your face with Okisho's distorted keytar axe blaring out the lead guitar part."
+    pause 3.0
     "It was definitely a rock'n roll song, but not like any kind I had heard before."
     MCT "This must be the psychobilly track Monterio and Botan wanted to do. {w}I can see why— this shit {i}THUMPS{/i}!"
     Vivian "{size=-6}Oh my, this is certainly interesting... Quite unexpected, if I do say so.{/size}"
     "Ichia" "{size=-6}Heh. Just like her to do something like this. She is fond of many genres of music— apt at most all of them as well.{/size}"
-    "Usuda" "{size=-6}Unexpected indeed. I must admit— I quite like it.{/size}" 
+    Misaki "{size=-6}Unexpected indeed. I must admit— I quite like it.{/size}"
+    pause 5.0
     stop music fadeout 2.0
     pause 2
     hide Okisho
@@ -33148,6 +33164,7 @@ label WG098:
     with dissolve
     MCT "This must be the finale."
     MCT "Like they say... It ain't over till the fat lady sings{w}— and there ain't a fatter one out there than the one on stage. {w}Or more beautiful for that matter."
+    pause 10
     stop music fadeout 2.0
     pause 1
     $setTime(TimeEnum.NIGHTLIGHTS)
@@ -33185,6 +33202,7 @@ label WG098:
     extend " Revealing the two stars of the show front and center."
     Okisho "1 2 3 4"
     play music OuttaMyFace
+    pause 15
     show WG sly
     Okisho "{cps=15}I know you know what you're doing to me{/cps}{nw=.4}"
     Okisho "{cps=15}You think I'm stupid- that I can't see{/cps}{nw=.4}"
@@ -33194,6 +33212,7 @@ label WG098:
     Okisho "{cps=15}Buy a train ticket, take it by rail{/cps}{nw=.4}"
     Okisho "{cps=15}Board a shuttle and get lost in space.{/cps}{nw=.4}"
     Okisho "{cps=15}Just don't come back and GET OUT OF MY FACE!{/cps}{nw=.4}"
+    pause 1
     WG "{cps=15}You think you can just get rid of me,{/cps}{nw=.4}"
     WG "{cps=15}But that's not the way things are gonna be.{/cps}{nw=.4}"
     WG "{cps=15}Cause you don't know what you're doing.{/cps}{nw=.4}"
@@ -33202,16 +33221,20 @@ label WG098:
     WG "{cps=15}Wither up like a prune and grow old.{/cps}{nw=.4}"
     WG "{cps=15}Just do me a favor and learn your place{/cps}{nw=.4}"
     WG "{cps=15}Don't ever come back and GET OUT OF MY FACE!{/cps}{nw=.4}"
+    pause 1
     Okisho "{cps=15}Maybe we should just agree to disagree{/cps}{nw=.4}"
     Okisho "{cps=15}All this hate's been draining me{/cps}{nw=.4}"
+    pause 1
     WG "{cps=15}I think you're right, it's now plain to see{/cps}{nw=.4}"
     WG "{cps=15}So just say you're sorry and I'll leave it be{/cps}{nw=.4}"
+    pause 1
     Okisho "{cps=15}On second thought- I'd rather die{/cps}{nw=.4}"
     WG "{cps=15}I figured it was just another one of your lies{/cps}{nw=.4}"
     Okisho "{cps=15}This whole song has been a disgrace{/cps}{nw=.4}"
     "Alice & Okisho" "{cps=15}So let's end here and GET OUT OF MY FACE!{/cps}{nw=.4}"
     show WG happy-2
-    stop music
+    pause 20
+    stop music fadeout 2.0
     "Crowd" "{i}*Applause*{/i}"
     play music DormLife
     "If the crowd's cheers were loud before, this time they practically brought down the house."
@@ -33620,7 +33643,7 @@ label WG099:
     WG "I know you can't see, but do try to hurry, Dear. This is pretty {i}urgent{/i} on my part."
     MCT "Trust me, you do not want {i}me{/i} to be urgent."
     "Putting my arms up and cupping both massive cheeks with the full length of my arms and hands, I began to poke around down below with my head that didn't have any hair."
-    MC "How's that? Am I in."
+    MC "How's that? Am I in?"
     WG "Trust me, I'll let you know."
     MC "Okay, I'll keep trying."
     MCT "To be fair, every fold on her body feels like a fat pussy."

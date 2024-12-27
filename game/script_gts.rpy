@@ -137,7 +137,7 @@ label GTS001_after:
     jump daymenu
 
 label GTS002:
-    $setProgress("GTS", "GTS004")
+    $setProgress("GTS", "GTS003")
     scene School Planter with fade
     $setGTSOutfit(OutfitEnum.WORK)
     "All around in the garden was orange and yellow, peach pink and rose red."
@@ -258,6 +258,7 @@ label GTS002_after:
     jump daymenu
 
 label GTS003:
+    $setProgress("GTS", "GTS004")
     scene Hallway with fade
     play music Schoolday
     "En route to the cafeteria at breakfast, I espied Naomi chatting with a taller, more robust woman a few paces ahead of me."
@@ -704,7 +705,8 @@ label GTS006:
     "Seeing the puppy suddenly become laser-focused on the newcomer, Naomi took the hint, scooping up Pedro and standing. The other students cleared a path between her and the owner."
     "She gingerly handed him over and the man, a little less gingerly, hugged the pup to his chest."
     "After tying the intact part of a snapped leash to the collar, the man dug out his wallet and extracted some bills."
-    "Then, he got on one knee before her, cast his gaze down to the ground and held the money out to Naomi.{w}I think it was about 500 yen."
+    show GTS neutral
+    "Then, he got on one knee before her, cast his gaze down to the ground and held the money out to Naomi.{w} I think it was about 500 yen."
     UNKNOWN "It's not much, but please, please accept this small \"thank you\"."
     GTS "That shall not be necessary, sir. A pleasant morning to both of you."
     UNKNOWN "Pleeease?"
@@ -764,7 +766,7 @@ label GTS006:
     MC "Whuh- for real? Aren't those like {i}really{/i} rare?"
     GTS "I've never heard that, but I suppose they could be. I always thought they were rather common, since SuaveBank uses one as a mascot."
     MC "I don't know, I've always heard they were really rare, even in Japan. Your family must be loaded."
-    show GTS embarrassed at Position(xcenter=0.4, yalign=1.0)
+    show GTS embarrassed
     "There was the faintest hint of a blush on Naomi's face as she looked to the side for a second, before returning her attention."
     GTS "My father always said he picked that breed because the Hokkaido has the three characteristics he looks for in people: bravery, loyalty, and intelligence."
     GTS "I can say he was right about that description, because she's been one of the most loyal dogs I have met."
@@ -11709,7 +11711,7 @@ label GTS049_c3:
     GTS "What on {i}Earth{/i} are you talking about?"
     MC "You sick, considerate pervert."
     "Her chest shuddered and so did I with her chirping giggle,{w} which faded away into a countenance wrought with worry as she tried to hide behind her hand."
-    show GTS sad
+    show GTS embarrassed
     GTS "...Please... don't tell my family. My mother would be dreadfully disappointed."
     MC "...Don't... wait... w-what?"
     show GTS wink
@@ -11718,7 +11720,7 @@ label GTS049_c3:
     else:
         GTS "For shame, Keisuke-kun. It takes two to tango, you know."
     MC "Pfff, ya got me."
-    show GTS unique
+    show GTS happy
     GTS "Ahaha!"
     MC "I guess now we know what you really like, anyway. Maybe being big has its perks, doesn't it?"
     show GTS embarrassed
@@ -12936,10 +12938,10 @@ label GTS053:
     show GTS neutral
     GTS "Say, on second thought, why don't you squirt some onto the rest of your body as well?"
     MC "Uh... sure, if you want."
-    show GTS aroused at Position(ycenter=0.35)
+    show GTS aroused
     GTS "Thank you."
     "Maybe it was the sunblock, but I got a sudden chill at the thought of Honoka secretly watching us, seeing us as we were... I couldn't place why."
-    show GTS happy at Position(ycenter=0.55)
+    show GTS happy
     "Once I'd done as Naomi said, she leaned forward on her elbows and scooted forward until her extended finger brushed against my abs."
     "The warm pad of her pale finger swirled the chilly cream round and round, shortly coating the front and sides of my torso."
     "The veiled strength of her strokes, in harmony with the two-headed rampage of hot and cold across my skin, caused a fluttery feeling to well in the depths of my trunk."
@@ -13375,14 +13377,14 @@ label GTS053:
     show BE neutral at Transform(xzoom=-1), Position(xcenter=0.35, yalign=1.0)
     show Kanami neutral at Transform(xzoom=-1), Position(xcenter=0.15, yalign=1.0) behind BE
     show Jineko neutral at Position(xcenter=0.6, yalign=1.0)
-    show GTS neutral at Position(xcenter=0.8, ycenter=0.5) behind Jineko
+    show GTS neutral at Position(xcenter=0.8, ycenter=0.55) behind Jineko
     with dissolve
     BE "Mm, this is pretty good, Watanabe-san."
     Kanami "It's certainly novel. The faint fruitiness coming through the smoke works surprisingly well."
     MC "Yeah, I like it."
-    show GTS aroused at Position(ycenter=0.35)
+    show GTS aroused
     GTS "You may count that high praise indeed, Watanabe-san. Keisuke-kun is no slouch with the grill himself."
-    show GTS neutral at Position(ycenter=0.55)
+    show GTS neutral
     Jineko "Ooh, is that right?"
     MC "Pssh... I'm no expert either. You pick up a thing or two when your dad assigns you to be the dedicated hot dog flipper at age seven. That's all."
     show BE happy

@@ -38556,7 +38556,7 @@ label PRG059:
     MC "For what?"
     show PRG unsure
     PRG "... F-For yesterday."
-    PRG "Y-You had to leave so quickly yesterday, t-that I didn't really have time to say it, but..."
+    PRG "Y-You had to leave so quickly t-that I didn't really have time to say it, but..."
     show PRG unique
     PRG "Yesterday meant so much to me..."
     MC "In what way?"
@@ -38690,7 +38690,7 @@ label PRG059:
         PRG "Or when... you felt my boobs when we were on vacation."
     PRG "Baby..."
     "Aida shut her eyes, taking a deep breath."
-    PRG "After dinner, when we come back here..."
+    PRG "After dinner, when we come back..."
     pause .5
     PRG "... Do you want to?"
     "I looked down, as Aida's hand sat on the bed right beside my hand. She put her hand on top of mine, rubbing gently."
@@ -39013,7 +39013,7 @@ label PRG059_belly_b:
     "Walking down the hall, I turned and headed into the cafeteria."
     scene Cafeteria with fade
     "I stepped in, and glanced around the large room."
-    show Takamura neutral with fade
+    show Takamura neutral with dissolve
     MCT "Oh, perfect."
     MC "Excuse me. Sensei?"
     "Takamura-sensei glanced up from the coffee mug in front of her. A tray sat beside her, a clean plate upon it."
@@ -39150,8 +39150,8 @@ label PRG060:
     MomCell "How has that been going?"
     MC "Well, if you can imagine it, I trimmed my hair this morning. Right to where it was last time you saw me. So like, over the eyes, and a little under the jaw in the back."
     MC "And, as of right now, it's..."
-    "I glanced back. Now late afternoon, my hair was well past my ass and down by my thighs."
-    MC "A little past my butt."
+    "I glanced back. Now late afternoon, and just post-trim, my hair sat just at my shoulders."
+    MC "Well, okay. I just trimmed it, so it's not too unruly yet. But it was down to my butt before."
     MomCell "Dear, that's insane."
     MomCell "Like... that isn't natural. It's hard to even fathom."
     MC "You'd be shocked, Mom. You really would. The things here are... past imagination."
@@ -39274,7 +39274,7 @@ label PRG060:
     "I brushed my hand to my back, adjusting my hair."
     MCT "... It's this long already?"
     "I got up, opened my phone camera, turning it to selfie mode and stared."
-    "My hair had already reached my shoulders."
+    "My hair had already reached my upper back."
     MCT "I just cut this..."
     "I ran my hand through it."
     MCT "Holy shit..."
@@ -39538,7 +39538,9 @@ label PRG060:
     show PRG blush
     PRG "I know it's out of the way, but... would you mind?"
     MC "Not at all. Let's go find it."
+    scene School Front
     show PRG neutral
+    with fade
     "I led Aida through campus, and out toward the road."
     MC "Down... this way?"
     PRG "I think so."
@@ -39876,7 +39878,9 @@ label PRG060:
     show PRG neutral
     PRG "I didn't know there were two till Alice told me."
     MC "Me either, to be honest."
-    scene Hotel Elevator with fade
+    scene Hotel Elevator
+    show PRG neutral
+    with fade
     "Inlaid into the wall nearby were two large elevators. I led Aida to them and pressed the button, to which the shimmering, metal doors rolled smoothly open, leading into the spacious elevator."
     MC "And... floor two. Here we are."
     "I pressed the button as the elevator started to climb."
@@ -40149,7 +40153,7 @@ label PRG060:
     show PRG neutral
     PRG "... When I'm eating at my dorm, it happens all the time. Since I'm usually not wearing my uniform."
     "Aida went back in for more crab cake, as I kept up with my appetizer."
-    "Before I was even half done with mine, Aida was soon, picking the last bits of crab from her plate. She took a piece of bread, started to spread the bone marrow butter onto it, and smelled it."
+    "Before I was even halfway done with mine, Aida was picking the last bits of crab from her plate. She took a piece of bread, started to spread the bone marrow butter onto it, and smelled it."
     show PRG worried
     PRG "It just smells like butter..."
     MC "I mean, it is butter."
@@ -40338,7 +40342,7 @@ label PRG060:
     Waiter "You're very welcome."
     "Aida pushed her chair back a little, as I got up. I stretched a little. I felt like I'd eaten half the food in the Seichou kitchen."
     Waiter "Oh, allow me, Ma'am."
-    show PRG blush
+    show PRG unique
     "Hakatu-san went behind Aida's chair and gently pulled, clearly not moving Aida as much as he had imagined he would."
     "Aida pushed up heavily, rising to her feet."
     PRG "T-Thank you..."
@@ -40348,6 +40352,7 @@ label PRG060:
     "I took Aida's arm again, and walked with her through the restaurant."
     stop music fadeout 2.0
     scene black with fade
+    $setTime(TimeEnum.NIGHT)
     pause .5
     scene Hotel Exterior
     show PRG neutral
@@ -40435,6 +40440,7 @@ label PRG061:
     pause .75
     scene Dorm Hallway with fade
     "I stepped in, the door closing and seeming to echo down the hall all the way down."
+    play sound MaleStepAway
     "The tall ceilings and wide walkway did little to stifle the sound as my footsteps echoed with it."
     "Anticipation bounded with every step. Each one felt like I was being bounced back into the next footfall."
     "I adjusted my bag over my shoulder."
@@ -40512,7 +40518,7 @@ label PRG061:
     MCT "Mm... I need something kind of sensual."
     "I flicked a few more pages ahead, then started in."
     MCT "Oh yeah. This'll work."
-    "I slid a desk out."
+    "I slid a disk out."
     MCT "Never met a girl who didn't like 'The Sticky Note.'"
     "I turned and looked around Aida's room."
     "In one corner was Aida's laundry hamper, which was looking a touch full."
@@ -40586,7 +40592,7 @@ label PRG061:
     "'This specific cow has been bred, as you can see by her large, swollen belly and plump, round udders.'"
     "'She will produce many healthy young, provided she's given proper care.'"
     "'Before continuing on, please check the box stating that you consent to ownership of this lovely Kodama-grade breeding cow, and that you accept your status as her owner.'"
-    "'In addition, by checking the box, you also agree to love and care for your Kodama-grade breeding cow."
+    "'In addition, by checking the box, you also agree to love and care for your Kodama-grade breeding cow.'"
     "I looked under, where a small box was placed. My eyes followed to the side, seeing another small line of text."
     "The stopping safe word is 'Mochi.' And the slowing down word is 'Dango.'"
     "I looked down at Aida, still sitting quietly on the floor, looking up at me."
@@ -40827,7 +40833,7 @@ label PRG061:
         MC "Understood?"
         "Aida nodded vigorously."
         MC "Good."
-        MC "Now, I'm going to take this blanket out of your mouth. And when I do, I would like you to hear a full apology. Are we understanding?"
+        MC "Now, I'm going to take this blanket out of your mouth. And when I do, I would like to hear a full apology. Are we understanding?"
         "Aida nodded again, as I reached out and took the blanket from her mouth."
         PRG "I-I'm very sorry about your clothes, Master. A-And about not waiting to receive all of my spankings."
         show PRG unsure
@@ -41018,7 +41024,7 @@ label PRG061:
         "Aida turned her head."
         PRG "No."
         MC "No?"
-        show PRG angry-2
+        show PRG angry
         "Aida turned back to face me... and blew a raspberry right at me."
         MC "... I don't believe I heard you properly."
         MC "You push your udders together right now, or I-"

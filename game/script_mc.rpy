@@ -12155,7 +12155,7 @@ label MC033:
     HR "He's also known to have remarkably fast reflexes. Then again, he was, and still is, a trained fighter. Maybe that has something to do with it besides his growth."
     show HR unique
     Tsubasa "It's a possibility I've considered as well."
-    Tsubasa "Those are rather minor nuances of his condition by comparison though. THe most peculiar attribute of his is his unusual strength to bodyweight ratio."
+    Tsubasa "Those are rather minor nuances of his condition by comparison though. The most peculiar attribute of his is his unusual strength to bodyweight ratio."
     Tsubasa "Though rather small in size across the growth distribution of those with muscle factors, his strength approaches the level of some of the past record breakers."
     Tsubasa "I suppose in that regard I should come to expect these things. In all my years of studying the factors, just as we think a definitive pattern can be established, a new outlier like Hageshi-san seems to emerge."
     Tsubasa "{size=-6}Not unlike this current crop of students this year...{/size}"
@@ -12348,13 +12348,13 @@ label MC041:
     MC "No offense, Hageshi-sensei, but that doesn't exactly sound like a denial of anything."
     Hageshi "I didn't realize I was a person of interest in an investigation."
     MC "Oh, come on, Hageshi-sensei. You gotta give me something. I'm dying to know the juicy details!" 
-    MC "Everyone's got that one person that just annoys the hell out of them that they wish they could just {i}{b}BAM!{/i}/{b} right in the face, and I doubt you're the exception."
+    MC "Everyone's got that one person that just annoys the hell out of them that they wish they could just {i}{b}BAM!{/b}{/i} right in the face, and I doubt you're the exception."
     Hageshi "What else is there to know? I was a small skinny kid that got beat up a lot."
     MC "Yeah, but you didn't stay that way. I bet things changed once your factor started kicking in."
     Hageshi "You'd think that, but it wasn't so simple." 
     Hageshi "Just because I could fight back didn't stop everyone from wanting a piece of me still. No doubt trying to salvage their egos once their former punching bag suddenly punched back harder."
     MC "Sounds like they had a hard time accepting things had changed."
-    Hageshi "That's the thing with insecure people. They always need someone to stay small so they feel big."
+    Hageshi "That's the thing with insecure people. They always need someone to stay small so they can feel big."
     Hageshi "Or conversely, more often as is the case with the growths, as long as someone else is bigger, they can fool themselves into thinking they're still small. Either way, it's an attempt to escape the reality of their situation."
 
     if routelock == "FMG":
@@ -12524,7 +12524,7 @@ label global005:
     with dissolve
     "Up ahead were most of my classmates, all seeming to be waiting, much like I was."
     if getHighestAffection() == "BE":
-        show BE neutral with dissolve
+        show BE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         BE "Hey there, Kei-chan! How are things going for you?"
         MC "Oh, pretty good. You?"
         BE "Still getting used to how big this campus is! I've been spending some time walking around each night and I still haven't seen it all!"
@@ -12532,7 +12532,7 @@ label global005:
         BE "Maybe we can go exploring together sometime!"
         hide BE with dissolve
     elif getHighestAffection() == "WG":
-        show WG neutral with dissolve
+        show WG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         WG "Hotsure-san."
         MC "Oh, hello Nikumaru-san."
         WG "Please, I've told you before, call me Alice. Formalities are for business, I find them so tiresome in normal conversation."
@@ -12544,7 +12544,7 @@ label global005:
         hide WG with dissolve
     elif getHighestAffection() == "GTS":
         "I walked up behind Naomi and heard some faint muttering."
-        show GTS neutral at Transform(xzoom=-1) with dissolve
+        show GTS neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
         GTS "{size=-8}-mida Buddha. I take re-{/size}"
         MC "Hey there, Yamazaki-san."
         show GTS surprised
@@ -12560,7 +12560,7 @@ label global005:
         GTS "...It was nothing spectacular."
         hide GTS with dissolve
     elif getHighestAffection() == "FMG":
-        show FMG neutral with dissolve
+        show FMG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         FMG "Keisuke! How ya doin'?"
         "I cringed as Akira slapped me on the back in what she probably thought was a friendly manner."
         MC "Hrrrk!"
@@ -12572,7 +12572,7 @@ label global005:
         MCT "I boggled to think what a \"harder\" workout was for Akira, seeing how hard she already pushed herself..."
         hide FMG with dissolve
     elif getHighestAffection() == "PRG":
-        show PRG neutral with dissolve
+        show PRG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         PRG "H-Hello, Hotsure-san..."
         MC "Oh, hi Kodama-san."
         MC "Having a good morning?"
@@ -12583,7 +12583,7 @@ label global005:
         PRG "T-That's good."
         hide PRG with dissolve
     elif getHighestAffection() == "AE":
-        show AE neutral with dissolve
+        show AE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         AE "Hotsure-san."
         MC "Oh, hello Matsumoto-san."
         AE "Good to see you on time. I may have need of your assistance later."
@@ -12600,7 +12600,7 @@ label global005:
         MCT "Shiori probably knows what the deal is with all of this, but..."
         MCT "Ah, I'll just wait on Tashi-sensei. Get the straightest answer."
         pause .5
-        show HR neutral with dissolve
+        show HR neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         "The door opened, and Tashi-sensei stepped out."
         HR "Everyone inside, if you all would be so kind."
     scene Classroom
@@ -16702,7 +16702,7 @@ label RM006:
         show RM neutral
         MCT "Well, at least it's a nice day."
     hide RM with dissolve
-    "There was hardly a cloud in the sky. I could actually see the clocktower at the front of the campus from here, hard to miss it with those old world style verdigris copper tiles."
+    "Even with the light cloud cover, it was still a clear day. I could actually see the clocktower at the front of the campus from here, hard to miss it with those old world style verdigris copper tiles."
     "In the other direction, it looked like there was in fact some other students from the campus doing something far back in the park."
     if isEventCleared("GTS023"):
         "Various props and equipment were scattered around. I wondered if this was another one of Tanaka-san's short film projects."
@@ -16846,7 +16846,7 @@ label RM006:
     MCT "Stealthiness I'll grant you, along with a generous portion of paranoia."
     show RM doubt
     MC "I still don't understand what we're supposed to be waiting for. Is something going to happen?"
-    RM "{i}Shhh/{i}! That's exactly what we're trying to find out. Didn't your parents teach you \"Patience is a virtue\" ?"
+    RM "{i}Shhh{/i}! That's exactly what we're trying to find out. Didn't your parents teach you \"Patience is a virtue\" ?"
     MC "Perhaps, but forgive me if  \"Let's spy on people instead of bothering to ask them anything\" doesn't strike me as the most patient approach."
     RM "Interviewing eyewitnesses is only worth it {i}if{/i} they don't blow your cover. We don't know that yet so we'll just have to sit tight."
     if isEventCleared("GTS030"):
@@ -17035,7 +17035,7 @@ label RM006:
     MC "Well, it's not like we don't have plenty of other leads to chase down. Your board is still looking pretty full."
     RM "True, new opportunities can open up as more info about this place gets revealed." 
     show RM happy-2
-    RM " For one, I'd like to take a trip into town to look at a hotel that was supposedly built early in the island's history around the same time the rock quarry was in commission."
+    RM "For one, I'd like to take a trip into town to look at a hotel that was supposedly built early in the island's history around the same time the rock quarry was in commission."
     RM "It's a long shot, but there might be a connection."
     MC "Hmm, sounds rather tenuous, but at the same time, it certainly couldn't hurt."
     show RM smug

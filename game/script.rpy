@@ -144,6 +144,7 @@ init python:
         'giantdorminterior': ("town", (975,50)),
         'gym': ("school", (385,400)),
         'hallway': ("school", (745,375)),
+        'hallwaystairs': ("school", (745, 375)),
         'hillroad': ("town", (500,700)),
         'infodesk': ("school", (590,590)),
         'lakeroad': ("school", (460,120)),
