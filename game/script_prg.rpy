@@ -41511,7 +41511,7 @@ label PRG061:
         PRG "I heard you say 'what.'"
         PRG "You were questioning your mistress. And then you lied about it after."
         MC "I..."
-        show PRG angry-2
+        show PRG angry
         PRG "Bad boy."
         "Aida took my shoulder, and pushed me down onto her bed."
         PRG "Your mistress will be right back."
@@ -41531,7 +41531,7 @@ label PRG061:
         MC "M-Mistress, I can reach just-"
         "Aida put her hand on my arm."
         show PRG blush-2
-        PRG2 "Get on the ground so you can reach. You need to use your listening ears."
+        PRG2 "Get on the ground so you can reach. You need to use your ears."
         MC "... Y-Yes, Mistress."
         "I got off the bed without using my hands, turning and putting them right onto Aida's belly, right on either side of her belly button."
         show PRG unique-happy
@@ -41703,8 +41703,8 @@ label PRG061:
         MC "I-I'm going to get milk all over myself."
         PRG "Good. T-That will be a much better punishment for you."
         MC "How long does it take until you're empty, Mistress?"
-        PRG "As long as it needs to take."
         show PRG aroused
+        PRG "As long as it needs to take."
         PRG "Now... f-focus."
         "I did a few more pulls from Aida's chest, until I felt myself getting the hang of how to properly milk her."
         "Aida shifted her legs, pulling her feet up off of the floor."
@@ -41734,7 +41734,7 @@ label PRG061:
         show PRG neutral
         PRG "N-No. There's still more."
         MC "M-My arms are tired."
-        show PRG angry-2
+        show PRG angry
         PRG "I-I don't care. K-Keep pumping."
         PRG "Pump my udders. Right now."
         "I brought my arms back up, and was hit by the same seizing in my muscle."
@@ -41749,7 +41749,6 @@ label PRG061:
         PRG2 "Naughty boy!"
         "She tried to turn, and reach down to my ass, but she was having a hard time in the shower."
         "Her belly was soaked, covered in her own warm, creamy milk."
-        show PRG angry-2
         "Aida opened the door, taking a towel and throwing it at me."
         PRG "Dry my belly off. Right now."
         "I panted... and swallowed what was left in my mouth, taking the towel and covering Aida's belly."
@@ -41884,7 +41883,7 @@ label PRG061:
         PRG "MMM-MMMMmmmmm..."
         PRG "W-W-What is my... c-chair... d-doing?"
         "Aida shifted, sliding off of me."
-        show PRG blush-2
+        show PRG blush-2 with dissolve
         MC "AAGH!"
         MC "Hahh... ahhh..."
         PRG "My seat... that's where you were."
@@ -42130,7 +42129,7 @@ label PRG061:
         show PRG worried
         PRG "I... I thought you wanted me to... be proud of myself?"
         MC "You should be, Dear. And it's good to be."
-        MC "But, you can do it parading your boobs around like this."
+        MC "But, you can't do it parading your boobs around like this."
         show PRG neutral
         PRG "U-Udders, Master."
         MC "Right. Udders. Thank you."
@@ -42224,7 +42223,7 @@ label PRG061:
                 scene Dorm PRG with fade
             "Sneak a peek in Aida's mirror":
                 "I glanced sideways, right into the mirror on Aida's wall."
-                show PRG grope
+                show PRG grope with dissolve
                 "My eyes shielded by hair, I was able to watch Aida reach up to her boobs and sort of cup the front, then push down... as two wet spots appeared on the front of her top."
                 hide PRG with dissolve
                 $setFlag("PRG061_mirror")
@@ -42935,7 +42934,7 @@ label PRG061:
     "Both of Aida's hands went under her breasts, as she bounced up and down, throwing her tits and hair up then colliding back down, before being tossed up again."
     PRG2 "AAAHH! NNNNnnnn..."
     "Aida's belly smacked down against me, taking my breath out with every bounce."
-    "My chest and stomach were where the bulk of her belly landed, my face so close and watching her pregnant mound jump up and down right in front of my eyes."
+    "My chest and stomach was where the bulk of her belly landed, my face so close and watching her pregnant mound jump up and down right in front of my eyes."
     PRG2 "MMmmm... B-Baby... nnnhhh..."
     show PRG scared
     PRG2 "H-Hold my belly! Rub it, please!"
@@ -43015,27 +43014,27 @@ label PRG061:
     scene black with fade
     "I snuggled in against her, my arm going around her and rubbing her belly."
     pause 1
-    MC "Hey. With all of this... I forgot to tell you something."
+    AltMC "Hey. With all of this... I forgot to tell you something."
     PRG "What?"
-    MC "I... went down to the administrative office yesterday. And, I picked us up something."
-    MC "It'll need your signature."
+    AltMC "I... went down to the administrative office yesterday. And, I picked us up something."
+    AltMC "It'll need your signature."
     PRG "W-What is it?"
-    MC "... Apartment application forms."
+    AltMC "... Apartment application forms."
     PRG2 "BABY!!"
     PRG2 "Really?!"
-    MC "Yep! Got them at the dorm right now."
-    MC "The academy will help us find a place that will fit us both, plus the kids."
+    AltMC "Yep! Got them at the dorm right now."
+    AltMC "The academy will help us find a place that will fit us both, plus the kids."
     PRG2 "K-Keisuke..."
     "I hugged her around the back."
-    MC "Wanna sign 'em tomorrow?"
+    AltMC "Wanna sign 'em tomorrow?"
     PRG2 "Y-Yes."
     PRG2 "I... I can't believe it... o-our own apartment someday."
-    MC "Yeah... get out of here and move right there."
+    AltMC "Yeah... get out of here and move right there."
     PRG2 "I can't wait..."
-    MC "Me either."
+    AltMC "Me either."
     "The room was quiet for a bit, as both of us seemed to drift off."
     PRG "... I love you so much."
-    MC "I love you too."
+    AltMC "I love you too."
     scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
     stop music fadeout 0.5
     "The scene you just finished marks the current end of Aida's route."

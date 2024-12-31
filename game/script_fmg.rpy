@@ -5783,7 +5783,7 @@ label FMG035:
     scene Gym
     show FMG neutral
     with fade
-    FMG "Twenty... twenty-two.... twenty-three... {w}and done!"
+    FMG "Twenty... twenty-one... twenty-two... twenty-three... {w}and done!"
     MC "That's it, only twenty-three? Are you feeling okay? Usually, you're putting up bigger numbers."
     FMG "I'm fine, I'm fine. This is one of my rare moments where I felt like having a lazy gym day."
     MC "Ah, right, we've only been here for two and a half hours versus the four we're usually here for."
@@ -5810,7 +5810,7 @@ label FMG035:
     FMG "Yikes... hope the store takes returns, haha."
     MC "Damn... Maybe I {i}will{/i} return it then."
     FMG "Hey! No take-backsies!"
-    MC "Take-backsies? What are you, ten? {w}You just said you did want it."
+    MC "Take-backsies? What are you, ten? {w}You just said you didn't want it."
     FMG "I said I didn't want {i}you{/i} as a gift— I get that all the time already. Besides, you can't just back out of giving a gift you just said you would give!"
     MC "Hehe, alright calm down. Just trust me, you're going to love it. I'm pretty proud of myself with what I got."
     FMG "Don't say stuff like that, you'll get me all excited!"
@@ -5881,6 +5881,7 @@ label FMG035:
     $setTime(TimeEnum.EVE)
     pause .5
     scene Town Street with fade
+    play music MomentTime
     "I knew I shouldn't be nervous, but the reality of how important this could be was finally starting to hit me. Akira was the coolest chick I'd ever known, and the best girlfriend I could ask for— I couldn't afford to screw this up."
     MC "Anything important I should know that you haven't told me about your parents yet?"
     show FMG neutral with dissolve
@@ -5923,7 +5924,7 @@ label FMG035:
     Midori "Reminds me of when I let mine grow long."
     FMG "{i}Mom{/i}...That's his factor. He can't help it."
     Yuko "Oh! {w}I see. {w}I didn't mean it in a negative way. I mean your father certainly could pull it off when he was young."
-    Midori "She's underselling it. She could scarcely resist any opportunity to run her fingers through my magnificent do."
+    Midori "She's underselling it. She could scarcely resist any opportunity to run her fingers through my magnificent doo."
     FMG "Okay, okay. No need to get into {i}that{/i}!"
     Yuko "Should we get going to the restaurant? We can talk more there instead of standing out here in the cold."
     FMG "Yeah, that sounds like a good idea."
@@ -5940,7 +5941,7 @@ label FMG035:
     FMG "What!? Get your own. That one is for me. The sashimi one too." 
     MC "Alright, alright, sheesh. I wouldn't want to risk my fingers having to reach in front of your mouth anyway."
     Midori "Haha! She sure does like her protein."
-    FMG "What are you going to get, dad?"
+    FMG "What are you going to get, Dad?"
     Midori "I'm going with an eel roll and the gyu tataki sashimi."
     FMG "Can't say I'm surprised."
     MC "Isn't that when the beef is served raw?"
@@ -5948,7 +5949,7 @@ label FMG035:
     MC "Uhh, can't say that I have..."
     Midori "Well that changes today. You can try some of mine."
     MC "Great... I can't wait..."
-    FMG "What are you getting, mom?"
+    FMG "What are you getting, Mom?"
     Yuko "I think I'll do the uni nigiri crab roll."
     MC "Hmm, I think I'm going with the spicy yellowtail and tempura shrimp rolls."
     "The waiter came and took our orders without much fanfare. After that, though the conversation started turning towards more questions, and the pressure I had almost forgotten about was already back on."
@@ -5989,7 +5990,7 @@ label FMG035:
     FMG "Yep, definitely video games. They have this retro-style rec-room on campus with a handful of arcade games. It's a pretty cool spot to hang out, especially on a rainy day."
     Midori "Oh really? Any Shun Electronics classics?"
     MC "They got that platformer with the blobby green character. That's pretty fun, but the later levels are tough."
-    FMG "You mean \"Limerick!\."
+    FMG "You mean \"Limerick!\"."
     Midori "Oh yeah. That's a favorite one of mine too."
     MC "Yeah, Akira mentioned you worked on video games at Shun Electronics."
     Midori "Yup, seems like ages ago now, but I guess it wasn't that long ago. I got my start going around fixing arcade machines for them." 
@@ -6009,10 +6010,12 @@ label FMG035:
     Midori "Akira, you never once asked about my job, you only ever asked about what video games the company was working on."
     FMG "But you showed me your name in the end credits of Blast Master!"
     Midori "Yeah, under \"Special Thanks\". {w}They had a pipe burst, would have flooded the place, and delayed production for months if I hadn't been right there to seal it up."
+    show FMG sad
     FMG "You can't be serious..."
     FMG "My whole childhood was a lie."
     Midori "Haha! Sorry to burst your bubble there, kiddo!"
     Yuko "To be fair Akira, we thought you were old enough to have pieced it all together by now."
+    show FMG angry-3
     MC "Dang, even your mom is throwing shade."
     FMG "Ugh, wish the food would hurry up already..."
     scene black with fade
@@ -6026,24 +6029,30 @@ label FMG035:
     Yuko "Oh, don't get him started. He even has his own pair of shoes for it."
     MC "That's a real thing? I thought that was just my dad joking when he called them his barbeque shoes."
     Midori "Oh they're real alright. I hope your dad didn't get the kind with velcro though{w}— I hear they're a rip-off."
+    show FMG disappointed
     FMG "Ohhh, nooo. Don't you see what you've done, Kei?"
     MC "Huh?"
     Midori "Oh, don't mind her. She's still upset about the time I burned dinner on the grill{w}— mistakes were made."
+    show FMG sad
     FMG "Ugh, maybe I'll get lucky and get food poisoning from this place so we can leave."
     Midori "Last time I was grilling, the meat started smoking{w}— steaks were high."
     FMG "Forget it, just bury me alive now."
     MC "Akira, that's how all dads talk. {w}Well, my dad doesn't do it often... at least your dad is making it work."
+    show FMG sad-2
     FMG "Uuuugh, I was hoping he'd do this later."
     Yuko "Oh don't be so dramatic, Akira. Besides, you should be more supportive of your father's hobbies. He's actually really good at grilling steaks{w}— they're all very well done."
     Midori "Hey!"
+    show FMG surprised-2
     FMG "Not you too, Mom."
     Yuko "I had to sneak in one!"
+    show FMG sad-2
     Midori "Alright, I guess I did push my luck."
     MC "Hey don't be so hard on your folks. You're supposed to enjoy spending time with them. Like this time I was helping my dad clean the grill{w}— it was grate."
     FMG "Oh my god... I'm going to leave you here."
     Midori "High five! Right there!"
     MC "Boom!"
     Midori "See, this kid gets it!"
+    show FMG sad
     FMG "This could not have gone worse..."
     jump daymenu
 
@@ -22364,6 +22373,7 @@ label FMGD001:
     pause 0.8
     $setFMGOutfit(OutfitEnum.NUDE)
     $setNatsOutfit(OutfitEnum.NUDE)
+    play music Natsuko
     show FMG flex at Position(xcenter=0.25, yalign=1.0)
     show Natsuko flex at Position(xcenter=0.75, yalign=1.0)
     with vpunch
@@ -22480,6 +22490,7 @@ label FMGD001:
     MC "Here you guys- OOH SHIT!"
     "I tripped over my own feet... {w}I had sent myself flying due to my excitement..."
     "BAM!"
+    stop music fadeout 0.5
     "I collided head first with Akira's abs and my world started going dark."
     scene black with fade
     MCT "Is this how I die? Death by eight pack? I wanted to get crushed between their boobs before suffocation kicked in... and now... now that's never going to happen..."
@@ -22489,6 +22500,7 @@ label FMGD001:
     MC "NO! NO, DON'T LEAVE ME! COME BACK!"
     show FMG surprised with dissolve
     FMG "AH!"
+    play music DormLife
     "My scream had startled Akira so badly that the amazon had fallen out of bed with a thud probably waking up the whole building from the sound."
     play sound Crash
     show FMG angry

@@ -7658,7 +7658,8 @@ label GTS038:
     else:
         "She said that the area was known as \"Chūkan Point.\" I didn't get a very thorough look at it the first time I was here, but as I ascended the lengthy road leading up to the partially walled lookout point, I noticed details that I didn't catch before."
     "On the lower half of the road, the section closer to Seichou Academy, the pavement was nearly flawless. Very few cracks were visible, and any vegetation hanging towards the road had been nicely cut."
-    "As I neared the top of the mountain pass, however, I noticed less and less maintenance. One of the route markers was buried in the leaves of a tree on the side of the road, and a small mudslide had made nearly one third of the road unusable. Cracks like old men's ears sprouted verdant weeds."
+    "As I neared the top of the mountain pass, however, I noticed less and less maintenance. One of the route markers was buried in the leaves of a tree on the side of the road, and a small mudslide had made nearly one third of the road unusable."
+    "Cracks like old men's ears sprouted verdant weeds."
     "The peak looked nicer than the upper section of the pass, however. Aside from the occasional overgrown grass sprawling from the pavement, it had a very zen and disconnected feel from the rest of the world."
     "The view from under the hanging terrace stretched on for several hundred meters, and I could easily make out Seichou's clock tower."
     "The overlook had clearly been built to be human-sized, but I could see that giant sized benches, telescopes, and a maintenance shed had been built to accommodate its new regulars."
@@ -7856,7 +7857,7 @@ label GTS039:
     "I walked through the central courtyard as the sun had just reached its highest point in the afternoon. It was the weekend, so I had plenty of time to myself."
     "I decided to have a seat upon one of the benches surrounding the big cherry tree in the center of campus. I passed by it almost every single day, and even used it as a study spot on several occasions."
     "This was the first time I ever took a close look at it, however. Blossoms periodically fell from its branches as the gusts of wind made them sway from side to side."
-    "Despite being one of the oldest trees on campus, it looked very well maintained. I can understand why this became the centerpiece for Seichou University."
+    "Despite being one of the oldest trees on campus, it looked very well maintained. I can understand why this became the centerpiece for Seichou Academy."
     "I sat underneath the cherry tree for several minutes, scrolling through the messages on my phone. I heard rhythmic, steady pulses on the ground as I looked down."
     "I was used to the sound of the occasional heavy, pulsing footsteps by now, but I still recoiled in surprise upon looking up."
 
@@ -13894,11 +13895,11 @@ label GTS054_after:
     "I bowed, felt a rush of air from Naomi bowing, and saw Minori reciprocate before she started back towards campus."
     hide Minori with dissolve
     pause 0.3
-    show GTS aroused at Transform(xzoom=1), Position(ycenter=0.35) with dissolve
+    show GTS aroused with dissolve
     "Naomi closed her eyes again and sighed, smiling."
     GTS "Have I ever told you I do so love you?"
     MC "One more time wouldn't go amiss."
-    show GTS unique at Position(ycenter=0.55)
+    show GTS unique
     GTS "I {i}do{/i} so love you."
     MC "Heheh, I love you, too."
     GTS "It is a benefit to my soul to know that the lives of so many are all the better for knowing you."
@@ -13978,7 +13979,7 @@ label GTS054_after:
     show GTS happy-2 
     GTS "So long as I may expect the same of you!"
     MC "Of course, Blossom. I will give you anything you care to ask."
-    show GTS aroused
+    show GTS aroused at Position(ycenter=0.55)
     GTS "Splendid. We have an accord, then."
     if getFlag("GTS054_read"):
         show GTS neutral
@@ -13997,10 +13998,10 @@ label GTS054_after:
         MC "?..."
         "I flipped it open to reveal a book bound in techōsō style, either deceptively new or very well cared-for, with binding threads of azure yarn tied in butterfly knots. The title read \"A Fool's Love\", by Junichirō Tanizaki."
         MC "Ohhhh, I've heard about this one."
-        show GTS surprised 
+        show GTS surprised at Position(ycenter=0.35)
         GTS "Have you now? It has always seemed to me a rather obscure work... rather unjustly so, to be sure."
         MC "I never learned about it in school, true enough. My mom once took me along to this novelists' conference and Tanizaki-san was mentioned in this presentation on influential early Tokyo novelists."
-        show GTS neutral 
+        show GTS neutral at Position(ycenter=0.55)
         GTS "What a pleasant surprise indeed! That must've been a lovely occasion."
         show GTS wink
         GTS "If a little misleading. I seem to recall Tanizaki-san did not begin writing his most notable works until he moved to Kyoto."
@@ -14009,10 +14010,10 @@ label GTS054_after:
         "Naomi's shuddering laugh boomed across the sky and left aftershocks in my innards, which soon were shaking with my own laughter."
         "My stretched cheeks began to ache as I watched for a moment or two of Naomi pinching between her eyes, trying and failing to regain composure."
         GTS "N- Now then... aha! Ahem..."
-        show GTS pondering
+        show GTS pondering at Position(ycenter=0.35)
         GTS "You said... your mother attended a novelists' conference. Is that to say she is one herself?"
         MC "Indeed she is!"
-        show GTS happy
+        show GTS happy at Position(ycenter=0.55)
         GTS "Well, by Jove! How lovely! Ought I to have heard of her?"
         MC "I guess... it's a little surprising my surname never rang any bells for you? She specializes in romance, and she is {i}prolific{/i}."
         show GTS neutral 
@@ -14031,14 +14032,14 @@ label GTS054_after:
         MC "Well! Shall I begin?"
         show GTS neutral 
         GTS "Please."
-        show GTS neutral-2 with dissolve
+        show GTS neutral-2 at Position(ycenter=0.35) with dissolve
         "Millions of crisp, arboreal voices cried out and were suddenly silenced as Naomi laid down on her stomach. She patted a patch of now-bare grass beside her head, and I heeded."
         "With due care, I opened the book. The pages bore the softness and just the faint yellowing of a few decades of age."
         MC "'A Fool's Love', by Junichiro Tanizaki. Chapter one."
     else:
         GTS "Now, then, I see you have your materials. Let's put that essay behind you, shall we?"
         MC "Yes, let's."
-        show GTS neutral-2 with dissolve
+        show GTS neutral-2 at Position(ycenter=0.35) with dissolve
         "Thousands of crisp, arboreal voices cried out and were suddenly silenced as Naomi laid down on her stomach. She patted a patch of now-bare grass beside her head, and I heeded."
         "Opening my backpack, I retrieved my history notebook."
         MC "Here are my handwritten notes and outline for the essay, in the back. I admit they're a little, uh..."
@@ -14308,17 +14309,17 @@ label GTS054_after:
         MC "Relate the facts of our relationship as man and wife..."
         "Temporal culture shock began to overtake me as I read on."
         MC "Japanese and foreigners are eagerly mingling with each other... Woof, tell us how you really feel, Tanizaki-san..."
-        show GTS unique-2 
+        show GTS unique-2 at Position(ycenter=0.55)
         MC "About seven years ago I first met the woman who is now my wife..."
         MC "She was only in her fifteenth year... okay..."
         MC "Why I, a man of twenty-eiiiiiiyeah, sorry, I'm not reading this."
-        show GTS neutral-2 
+        show GTS neutral-2 at Position(ycenter=0.35)
         GTS "Oh come now, you must give it more of a chance than that. It's a superlative work of comedy."
         MC "My mom only gives a book one sentence to impress her."
         MC "And I'm pretty sure this would be a hard no for anyone in my family."
         GTS "Would it be some comfort for you to know that our protagonist shall receive a {i}thorough{/i} comeuppance?"
         MC "Is he gonna fall off a building in chapter two and we get a new protagonist? That'd be swell."
-        show GTS aroused
+        show GTS aroused at Position(ycenter=0.55)
         GTS "Will you really make me beg, Keisuke-kun?"
         MC "Okay, okay, I'll keep going... if it were anyone else, Nacchan..."
         show GTS neutral

@@ -5,36 +5,33 @@ label BE001:
     "After the bell rang, there was the familiar sound of chairs getting scraped along the ground as everyone prepared to leave."
     show FMG happy at Position (xcenter=1.40, yalign=1.0)
     show FMG happy at Position (xcenter=-0.4, yalign=1.0) with mov3
-    hide FMG
-    pause 1
     "The only difference was the volume. Compared to what I was used to at my old school, it was a lot quieter."
+    pause 1
     show AE pondering at Position (xcenter=1.40, yalign=1.0)
     show AE pondering at Position (xcenter=-0.4, yalign=1.0) with mov3
-    hide AE
     pause 1
     #play sound MovingChair 
     show WG neutral-2
     "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
     show WG neutral at Position (xcenter=1.40, yalign=1.0)
     show WG neutral at Position (xcenter=-0.4, yalign=1.0) with mov3
-    hide WG
-    pause 1
     "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
+    pause 1
     "Then again, there was another seat in the room that easily caught my attention, thanks to how big it was. It was without a doubt, the largest I'd ever seen, and now it was clear why."
     show PRG insecure at Position (xcenter=1.40, yalign=1.0)
     show PRG insecure at Position (xcenter=-0.4, yalign=1.0) with mov3
-    hide PRG
-    pause .75
     "Although, the teacher, Kaeru Tashi, said not everyone's growth factor was visible right away, it could have been something else."
+    pause 1
     "The classroom slowly started to empty out, and I made my way out of the room as well."
     "There were two questions that ran through my head.{w} First, what was going to grow on me?{w} Second, where was I? It was hard getting used to a new school so quickly."
-    "There were three questions that ran through my head.{w} First, what was going to grow on me?{w} Second, how's Tomo handling this? {w} and Third, where was I? It was hard getting used to a new school so quickly."
+    "There were three questions that ran through my head.{w} First, what was going to grow on me?{w} Second, how's Tomo handling this? {w}And Third, where was I? It was hard getting used to a new school so quickly."
     "I decided to walk around a bit, to get the lay of the land. Maybe if I lucked out I could find it..."
     scene HallwayStairs with fade
     "The school seemed relatively normal, apart from the size and the people within. It didn't take me long to get the gist of where everything was. Hopefully I'd remember it all when tomorrow came around."
     "But, eventually, I found what I was looking for. Without even checking my surroundings to see if I was being watched, I turned the knob and walked up the steps into the warm sunny sky above."
     scene Roof Entrance with fade
     MC "Fantastic. It was a long shot, but I figured they'd forget to lock the roof entrance while they were busy setting up the welcoming assembly."
+    scene Roof with fade
     MC "Wow, from up here the school really looks huge. I guess it has to be big if they only put a few students in each classroom."
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
     MC "I just wonder why they didn't tell us the reason for coming here until we were already inside? This doesn't seem like a prison or anything, does it?"
@@ -102,6 +99,7 @@ label BE001_c2:
     show BE neutral
     BE "Like everyone at my old school seemed to do on a daily basis. Hard to blame them really, I made these cans faster than a soda factory."
     BE "Went from a small B cup to these in just one summer."
+    show cg BE001 with dissolve
     MCT "{i}Just one?!{/i}"
     MC "Oh, heh. Well, that could have just been some lucky puberty at work, you know?"
     show BE happy
@@ -113,10 +111,9 @@ label BE001_c2:
     show BE neutral
     BE "And besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used having to big boobs, anyway."
-    show cg BE001 with dissolve
-    pause 0.5
     hide cg
     show BE happy at center
+    with dissolve
     BE "Exactly! Hehe, you know, Kei-chan, most boys wouldn't be so brazen about talking about a girl's chest, especially to her face."
     MC "W-Well, you're the one who brought them up in the first place!"
     show BE angry
@@ -164,12 +161,12 @@ label BE001_c3:
     BE "Although, I do think I deserve a little payment for you staring hard enough to melt my shirt with heat vision or something... "
     MC "What do you me-"
     play sound Thud
-    MC "Ouch..."
     show BE happy:
         linear 0.1 xpos 0.8
         linear 0.1 xpos 0.5
     BE "There!"
     show dummy with vpunch
+    MC "Ouch..."
     "I quickly moved my hand to rub a sore spot on my upper arm where Honoka had given me a gentle punch. Hopefully her growth factor isn't her hands, or those punches are going to get a lot harder..."
     jump BE001_after
 
@@ -7950,11 +7947,12 @@ label BE042:
     scene black with fade
     pause 1
 
-    scene Town with fade
+    scene Town Bus with fade
     play music BrightLights
     "The bus soon reached town and we departed. Though I wasn't too sure where the clothes shop was."
     MCT "I do wonder if they'll have something in Honoka's size. I mean I doubt they wouldn't since she isn't that much bigger than her classmates."
     MC "Hey Honoka where is that shop... {w}Honoka?"
+    scene Town with fade
     "Looking around I noticed Honoka was nowhere around me. Searching further I found her back at the bus stop talking with the swimsuit lady from the bus. The two of them were laughing and obviously having a good conversation."
     MCT "Guess her charisma is contagious."
     menu:

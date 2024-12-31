@@ -2084,7 +2084,7 @@ label MC004:
             MC "Mhm. We bumped into each other when I got off the ferry."
             MomCell "Wow. Small world. How is she doing?"
             MC "Good. She's definitely grown up."
-            MomCell "I'm sure. I remember her playing in the mud in our backyard when you two were little. Remember that mud castle she tried making? She was so adorable.."
+            MomCell "I'm sure. I remember her playing in the mud in our backyard when you two were little. Remember that mud castle she tried making? She was so adorable."
             MC "I... yeah. I think I remember that too."
             MCT "I also wouldn't put it past Honoka to try something like that now."
             MomCell "Well, I'm glad you have someone you know there with you and Tomoko. Hopefully, it'll make the whole process a lot easier."
@@ -9309,7 +9309,7 @@ label MC014:
     MC "Retail, huh?"
     DadCell "Yeah. But, it's work. People depend on us."
     MCT "There's that dedication again."
-    MCT " \"With time, you'll get it, Keisuke.\" Like ancient proverbs."
+    MCT "\"With time, you'll get it, Keisuke.\" Like ancient proverbs."
     DadCell "And her kid started dumping his soda onto the floor. Right in front of the register."
     MC "Er... why did he dump it? Just being a kid?"
     DadCell "He was hot and didn't want to walk back to where his mom parked. At least, that's what he started crying about."
@@ -9563,7 +9563,7 @@ label MC014:
     play music Tomoko
     Tomoko "Hey."
     $setTomoOutfit(OutfitEnum.CASUAL)
-    show Tomoko neutral with dissolve
+    show Tomoko neutral with easeinright
     "... And right back into the pocket."
     "Tomo gave me a sort of look, as if waiting for something."
     MC "Hey."
@@ -9609,8 +9609,8 @@ label MC014:
     Tomoko "Pff, no."
     Tomoko "I gave up after an hour and console-commanded them into my inventory."
     MC "You would. Dirty cheater."
+    show Tomoko annoyed
     Tomoko "I'm not going to sit there and waste my time on some dumbass quest just because some developer was feeling especially sadistic. And, I don't want that on my quest log either."
-    show Tomoko smile
     Tomoko "This was the solution. Which worked very well."
     "I shook my head and laughed."
     play music DayByDay
@@ -9706,8 +9706,10 @@ label MC014:
         MCCell "<Will do. I'll stop by after I get back>"
         BECell "<K!>"
         MC "Girlfriend says hi, by the way."
+        show Tomoko distracted with dissolve
         Tomoko "Hm. Nice one."
         MC "It's true, you jerk. Her name is Ho-"
+        hide Tomoko with dissolve
         MC "And she's gone."
         "I watched her zone out on her puzzle game again, as I laid my head back in my seat."
     if routelock == "GTS":
@@ -9952,13 +9954,13 @@ label MC014:
             MCT "Says a lot, I suppose."
     if getFlag("Meet_Fumika") or isEventCleared("RM002"):
         MC "The name rings a bell, I think."
+        show Tomoko neutral
         Tomoko "She hangs out with Yuki, sometimes. Plays a lot of basketball."
         MC "Ah. Her."
         if isEventCleared("GTS018"):
             MCT "The girl who tried to get Naomi onto the basketball team just because of her height."
             MCT "Real charmer, that one."
         MC "You good?"
-        show Tomoko neutral
         Tomoko "Fine. It's nothing."
         Tomoko "Fumika and I just really don't get along."
         Tomoko "She likes to spread rumors about me."
@@ -10079,7 +10081,7 @@ label MC014:
             MC "Huh, small world. That's where my girlfriend is from."
             Chie "Okinawa? How lovely."
         Chie "I do miss her quite a bit, but I'm glad she's enjoying herself. Luckily, I've been keeping up around here."
-    if (isEventCleared("MC007") or isEventCleared("FMGWG001")) and not (getFlag("MC008_RegardsPassed") or not getFlag("RM004_RegardsPassed")):
+    elif (isEventCleared("MC007") or isEventCleared("FMGWG001")) and not (getFlag("MC008_RegardsPassed") or not getFlag("RM004_RegardsPassed")):
         MC "Where's your usual cashier up front?"
         Chie "Oh, Haruko?"
         Chie "She's in Okinawa right now with some friends."
@@ -10112,7 +10114,9 @@ label MC014:
     "Tomoko wasted no time digging into hers as I sipped my tea."
     MC "How's it?"
     Tomoko "Mmn... good."
-    if not isEventCleared("MC007") or not isEventCleared("FMGWG001"):
+    if isEventCleared("MC007") or isEventCleared("FMGWG001"):
+        pause 0.1
+    else:
         UNKNOWN"{i}Psst...{/i}"
         pause 1
         UNKNOWN"{i}PSST!{/i}"
@@ -10467,8 +10471,10 @@ label MC023_C1_1:
     show Kokutan neutral at altMove(0.5, 0.75)
     show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     if routelock == "BE":
-        pause 0.1
-        #(I would consider a very similar version of that "else" variant, but with Honoka being aware of the math elective Kei is attending on this floor, tapping to the fact they're dating and knowing about each other much more if they wouldn't.)
+        BE "Oh hey Kei-chan, how's that elective with Hageshi-sensei?"
+        MC "Not bad. I thought it will be more demanding-"
+        BE "Heeey, why are you out here with Kokutan?"
+        Kokutan "He tried to turn me into roadkill!"
     else:
         BE "Oh hey Kei-chan, what are you doing out here?"
     MC "I... uh."
@@ -10488,7 +10494,9 @@ label MC023_C1_1:
     BE "I mean, seriously, my hair was gonna be a complete wreck!"
     Kokutan "H-Hey, you look fine!"
     BE "Uh, duh-doy! NOW I do, but if I keep air drying? Bad, freaking, news."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+    if isEventCleared("BE039") or isEventCleared("WG062"):
+        pause 0.1
+    else:
         MC "Wait, are you two roommates?"
         show BE confused
         BE "Yeah, you didn't know?"
@@ -10595,7 +10603,9 @@ label MC023_C2_1:
     BE "I mean, seriously, my hair was gonna be a complete wreck!"
     Kokutan "H-Hey, you look fine!"
     BE "Uh, duh-doy! NOW I do, but if I keep air drying? Bad, freaking, news."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+    if isEventCleared("BE039") or isEventCleared("WG062"):
+        pause 0.1
+    else:
         MC "Wait, are you two roommates?"
         show BE confused
         BE "Yeah, you didn't know?"
@@ -12507,14 +12517,15 @@ label global005:
     scene Hallway with fade
     play music Schoolday
     "As I made my way inside the classroom building, I glanced down the hall."
-    show GTS neutral at Position(xcenter=0.15, yalign=1.0)
-    show BE happy at Position(xcenter=0.26, yalign=1.0)
-    show PRG insecure at Position(xcenter=0.40, yalign=1.0) behind BE
-    show FMG flex at Position(xcenter=0.60, yalign=1.0)
-    show WG neutral-2 at Position(xcenter=0.75, yalign=1.0)
-    show AE neutral at Position(xcenter=0.90, yalign=1.0) behind WG
+    show GTS neutral at Position(xcenter=0.20, yalign=1.0)
+    show BE happy at Position(xcenter=0.30, yalign=1.0)
+    show PRG insecure at Position(xcenter=0.43, yalign=1.0)
+    show FMG flex at Position(xcenter=0.54, yalign=1.0) behind PRG
+    show WG neutral-2 at Position(xcenter=0.68, yalign=1.0)
+    show AE neutral at Position(xcenter=0.83, yalign=1.0) behind WG
     with dissolve
     pause 1
+    "Up ahead were most of my classmates, all seeming to be waiting, much like I was."
     hide GTS
     hide BE
     hide PRG
@@ -12522,7 +12533,6 @@ label global005:
     hide WG
     hide AE
     with dissolve
-    "Up ahead were most of my classmates, all seeming to be waiting, much like I was."
     if getHighestAffection() == "BE":
         show BE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
         BE "Hey there, Kei-chan! How are things going for you?"
@@ -12634,8 +12644,11 @@ label global005:
     if isEventCleared("RM001"):
         MCT "Maybe it has something to do with that... thing he was building."
         MCT "I don't know."
+        hide HR with dissolve
         "Somewhere behind me, I felt a near-physical needle-like stare at the back of my neck."
+        show AE neutral-eyebrow with dissolve
         "Turning my head just enough, Shiori broke contact and looked back out at the room."
+        hide AE with dissolve
         MCT "This better not blow back on me..."
     hide HR with dissolve
     show BE neutral with dissolve
@@ -12732,7 +12745,7 @@ label global010:
     show HR unique with dissolve
     "I laid my head on my desk hoping to catch a few more Z's as Tashi-sensei took attendance at the start of homeroom class."
     show HR neutral
-    HR "Let's see... Inoue, Hotsure, Kodama, Matsumoto, Mizutani, Nikumaru, Utagashi, and Yamazaki... Looks like everyone's here."
+    HR "Let's see... Hotsure, Inoue, Kodama, Matsumoto, Mizutani, Nikumaru, Utagashi, and Yamazaki... Looks like everyone's here."
     HR "Couple of house cleaning items. Enjoy the time off for Golden Week, just don't forget to use that extra time to study and work on your assignments for your classes."
     MCT "Aw crap. That reminds me, I really need to start studying for that one big test after the break."  
     HR "Once you get back from the break, I have a special surprise for you all from Hageshi-sensei and coach Naoki. So look forward to that."
@@ -16741,7 +16754,7 @@ label RM006:
         "I wasn't sure why he seemed so skeptical of Tsubasa's claims. I mean we all had to find out about Naomi being transferred to the Giant's dorm when she reached that height."
         "I guess he's just more preoccupied with where these other giants might be."
     elif isEventCleared("MC002") and not isEventCleared("GTS030"):
-        MCT "Caverns... That sounds familiar. {w}Is that what Takamura and Tsubasa-sensei were discussing that time in the teacher's lounge?"
+        MCT "Caverns... That sounds familiar... but I'm not sure why..."
         MCT "Maybe there is more going on at this place after all..."
     else:
         "I wasn't sure why he seemed so skeptical of Tsubasa's claims. Sure, it seemed incredible at the time, but it would be rather odd for someone like Tsubasa to state something so plainly if it was so easily falsifiable."
@@ -16890,9 +16903,9 @@ label RM006:
     show RM doubt
     RM "{size=-6}{i}Shh{/i}, try to catch what keys they are punching in on the number pad.{/size}"
     $setFlag("Meet_Gou")
-    "Gou" "'Course this can't be easy either...."
-    "Junsei" "Hey, no biggie, Kajiwara-san. Just give it four lil' boops on the snoots, lil' smooch to show you care and it'll be open like sesame."
-    "Gou" "Thanks Uno-sensei, I know how to press a button."
+    Gou "'Course this can't be easy either...."
+    Junsei "Hey, no biggie, Kajiwara-san. Just give it four lil' boops on the snoots, lil' smooch to show you care and it'll be open like sesame."
+    Gou "Thanks Uno-sensei, I know how to press a button."
     show RM neutral-2
     RM "{size=-6}Did you catch what it was?{/size}"
     MC "{size=-6}Uh, one of the numbers appeared to be a \"4\". It was likely the second or third number. That's all I got though.{/size}"
@@ -16911,15 +16924,15 @@ label RM006:
     RM "{size=-6}Just let me do the talking here.{/size}"
     show RM happy
     RM "Oi! Hello there! I was wondering if you two could help me with something?"
-    "Junsei" "Hm?"
-    "Gou" "Go on ahead, Uno-san. I'll take care of this. Don't want to keep Yasuhara-san waiting."
-    "Gou" "What do you need?"
+    Junsei "Hm?"
+    Gou "Go on ahead, Uno-san. I'll take care of this. Don't want to keep Yasuhara-san waiting."
+    Gou "What do you need?"
     RM "We were hoping to visit a friend from our homeroom that just transferred. She doesn't know we're coming. I'm sure you know how being transferred to a new place can be a difficult process."
     RM "We wanted to show our support with a surprise visit. You know, let her know we're thinking about her."
     MCT "This is your grand idea, Daichi? Attempting to smooth-talk yourself through the situation as the dude who goes out of his way to avoid conversation whenever possible?" 
-    "Gou" "Ahh, I see. That's really thoughtful of you."
+    Gou "Ahh, I see. That's really thoughtful of you."
     "I didn't know Kajiwara-san, so I wasn't in a position to tell if his tone was sincere or sarcastic in response to Daichi's questionable acting skills."
-    "Gou" "Who are you looking to visit? I was one of the first students transferred here, so I pretty much know everybody here."
+    Gou "Who are you looking to visit? I was one of the first students transferred here, so I pretty much know everybody here."
     if isEventCleared("global032") or isEventCleared("GTS030"):
         MCT "At least he has an easy answer at the ready with Naomi's transfer so he won't blow his cover."
     "Daichi paused for a brief second, seemingly mulling over the possibilities before landing on an answer."
@@ -16930,25 +16943,25 @@ label RM006:
         MCT "You gotta be fucking kidding me dude."
     else:
         MCT "Who the hell is that? Did he just pull some name out of his ass? The guy specifically said he knows everyone living there!"
-    "Gou" "Watanabe-san, that right?"
+    Gou "Watanabe-san, that right?"
     RM "Yes, I met her on the first day and really hit it off. We've been friends ever since."
     "A long wide grin crawled across the giant's face."
     show RM doubt
-    "Gou" "Oh, that's funny. You had me going there for a sec. But see, funny story, there's no Hikari Watanabe here."
+    Gou "Oh, that's funny. You had me going there for a sec. But see, funny story, there's no Hikari Watanabe here."
     show RM sad
-    "Gou" "'Cuz, y'know, I would {i}know{/i}, Einstein. There's barely a goddamn handful of us here in this dirt pit. Where'd you even get that name, slick? That tall chick on the student council?"
-    "Gou" "Last time I saw her, she wasn't even close to whatever height threshold it is to get shunted off here."
+    Gou "'Cuz, y'know, I would {i}know{/i}, Einstein. There's barely a goddamn handful of us here in this dirt pit. Where'd you even get that name, slick? That tall chick on the student council?"
+    Gou "Last time I saw her, she wasn't even close to whatever height threshold it is to get shunted off here."
     show RM concerned
     RM "Umm, well... Have you checked lately?"
     show RM concerned
-    "Gou" "You know, I thought you were full of shit, but part of me was hoping that you were at least a little sincere. When I got transferred to this place, no one from my homeroom bothered to visit {i}me{/i}."
-    "Gou" "Nope! Nobody gave a shit, not even my so-called friends. Instead I was just left in this fuckin' pit to be forgotten while everyone else just moved on."
-    "Gou" "Oh, but coming down here trying to play me for a rube with your half-assed story, that's a {i}real{/i} fuckin' class act."
+    Gou "You know, I thought you were full of shit, but part of me was hoping that you were at least a little sincere. When I got transferred to this place, no one from my homeroom bothered to visit {i}me{/i}."
+    Gou "Nope! Nobody gave a shit, not even my so-called friends. Instead I was just left in this fuckin' pit to be forgotten while everyone else just moved on."
+    Gou "Oh, but coming down here trying to play me for a rube with your half-assed story, that's a {i}real{/i} fuckin' class act."
     show RM sad
     RM "W-Wait! It's not like that. I think there's been a mix-up. The council member is Hikari's twin sister."
-    "Gou" "{i}Oh! Oh really? Well that changes everything!{/i} {w}How about you break into a rubber dick store and go fuck yourself, pencilneck. I ain't buying it."
+    Gou "{i}Oh! Oh really? Well that changes everything!{/i} {w}How about you break into a rubber dick store and go fuck yourself, pencilneck. I ain't buying it."
     "He quickly punched the keys again before he walked through the gate and shut it behind him."
-    "Gou" "I don't know what the hell you're up to snooping around here, but I suggest you go back to the campus for the \"normies\" and stay there."
+    Gou "I don't know what the hell you're up to snooping around here, but I suggest you go back to the campus for the \"normies\" and stay there."
     "Kajiwara-san walked away, but kept looking back as he did so, doubtless to make sure we didn't try to mess with the keypad or something else to attempt to get in."
     MC "Welp, so much for that..."
     show RM doubt
