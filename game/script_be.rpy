@@ -11,8 +11,6 @@ label BE001:
     show AE pondering at Position (xcenter=-0.4, yalign=1.0) with mov3
     pause 1
     #play sound MovingChair 
-    show WG neutral-2
-    "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
     show WG neutral at Position (xcenter=1.40, yalign=1.0)
     show WG neutral at Position (xcenter=-0.4, yalign=1.0) with mov3
     "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
@@ -23,7 +21,6 @@ label BE001:
     "Although, the teacher, Kaeru Tashi, said not everyone's growth factor was visible right away, it could have been something else."
     pause 1
     "The classroom slowly started to empty out, and I made my way out of the room as well."
-    "There were two questions that ran through my head.{w} First, what was going to grow on me?{w} Second, where was I? It was hard getting used to a new school so quickly."
     "There were three questions that ran through my head.{w} First, what was going to grow on me?{w} Second, how's Tomo handling this? {w}And Third, where was I? It was hard getting used to a new school so quickly."
     "I decided to walk around a bit, to get the lay of the land. Maybe if I lucked out I could find it..."
     scene HallwayStairs with fade

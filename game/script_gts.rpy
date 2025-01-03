@@ -449,7 +449,7 @@ label GTS003_after:
 
 label GTS004:
     $setTimeFlag("testday")
-    $setProgress("GTS", "GTS005")
+    $setProgress("GTS", "GTS006")
     scene Library with fade
     play music Peaceful
     "The afternoon sun trickled, glowing, through the library's large and numerous windows, and through the gaps in my bangs."

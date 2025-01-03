@@ -1556,6 +1556,7 @@ label daymenu:
         eventname = ""
         eventchoices = rollEvents()
         cleanupCostumes()
+    stop sound
     play music Daymenu
     window hide None
     call screen daymenu with fade
