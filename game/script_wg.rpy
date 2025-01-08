@@ -22770,7 +22770,7 @@ label WG004M:
     MC "Uh-huh, suuure."
     show WG neutral
     WG "Perhaps it just suffers by comparison to now."
-    MC "I'll take that as a complement."
+    MC "I'll take that as a compliment."
     pause 8
     show WG happy
     pause 8
@@ -32785,7 +32785,7 @@ label WG097:
     WG "Don't tell me you're just staring— you have a job to do My Dear Boy!"
     show WG happy-2
     MC "Sorry. {w}I was distracted... by your beauty."
-    "I shot her wink, just to seal the deal on the complement, to which could only roll her eyes in response."
+    "I shot her wink, just to seal the deal on the compliment, to which could only roll her eyes in response."
     show WG doubt
     WG "Keisuke, Dear, I would have to consider that to be your lamest excuse yet to date..."
     show WG happy-2
@@ -33505,7 +33505,7 @@ label WG099:
     MCT "I hit the jackpot."
     "I had more than I could handle, and more than I could imagine, and I wanted it all!"
     "I rubbed and stroked the vast expanse of her flab. Back and forth, wide and small circles, hands, elbows, and knees. {w}I put my whole body into it."
-    "No matter where I reached across her belly, I couldn't find the edges. {w}So lucios, so soft... irresistible as it was overwhelming... {w}I needed a taste."
+    "No matter where I reached across her belly, I couldn't find the edges. {w}So luscious, so soft... irresistible as it was overwhelming... {w}I needed a taste."
     show WG surprised-2
     WG "?"
     show WG sly
