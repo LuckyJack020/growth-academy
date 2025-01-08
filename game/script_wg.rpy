@@ -32785,7 +32785,7 @@ label WG097:
     WG "Don't tell me you're just staring— you have a job to do My Dear Boy!"
     show WG happy-2
     MC "Sorry. {w}I was distracted... by your beauty."
-    "I shot her wink, just to seal the deal on the compliment, to which could only roll her eyes in response."
+    "I shot her a wink, just to seal the deal on the compliment, to which could only roll her eyes in response."
     show WG doubt
     WG "Keisuke, Dear, I would have to consider that to be your lamest excuse yet to date..."
     show WG happy-2
