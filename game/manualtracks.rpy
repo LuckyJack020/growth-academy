@@ -87,7 +87,7 @@ init python:
         name = "Choose Your Story",
         path = "Audio/BGM/menu_daymenu.ogg",
         priority = 3,
-        author = "Post-Bop",
+        author = "Yoshiki Ara",
         description = "Map Music",
         cover_art = False,
         unlocked = True
@@ -98,7 +98,7 @@ init python:
         name = "Roommate",
         path = "Audio/BGM/scene_RM.ogg",
         priority = 2,
-        author = "Post-Bop",
+        author = "K.Tera",
         description = "Daichi's Theme",
         cover_art = False,
         unlocked = True
@@ -131,7 +131,7 @@ init python:
         name = "Bittersweet",
         path = "Audio/BGM/scene_bittersweet.mp3",
         priority = 2,
-        author = "Post-Bop",
+        author = "Hobby Atelier Carrot Wine",
         description = "Bitter Mood Music",
         cover_art = False,
         unlocked = True
@@ -142,7 +142,7 @@ init python:
         name = "Busy",
         path = "Audio/BGM/scene_busy.mp3",
         priority = 2,
-        author = "Post-Bop",
+        author = "pierrotlunaire",
         description = "Bustlin' Music",
         cover_art = False,
         unlocked = True
@@ -175,7 +175,7 @@ init python:
         name = "Memories",
         path = "Audio/BGM/memories.mp3",
         priority = 2,
-        author = "Post-Bop",
+        author = "Unknown",
         description = "Reminiscing Music",
         cover_art = False,
         unlocked = True
@@ -186,7 +186,7 @@ init python:
         name = "Rain",
         path = "Audio/BGM/scene_rain.mp3",
         priority = 2,
-        author = "Post-Bop",
+        author = "Hobby Atelier Carrot Wine",
         description = "Somber Music",
         cover_art = False,
         unlocked = True
@@ -197,7 +197,7 @@ init python:
         name = "Requiem",
         path = "Audio/BGM/requiem.mp3",
         priority = 2,
-        author = "Post-Bop",
+        author = "Unknown",
         description = "Resolved Music",
         cover_art = False,
         unlocked = True
@@ -230,7 +230,7 @@ init python:
         name = "Sunset",
         path = "Audio/BGM/scene_sunset.mp3",
         priority = 3,
-        author = "Post-Bop",
+        author = "Unknown",
         description = "Soothing Music",
         cover_art = False,
         unlocked = True
@@ -241,7 +241,7 @@ init python:
         name = "Schoolday",
         path = "Audio/BGM/scene_schoolday.mp3",
         priority = 2,
-        author = "Post-Bop",
+        author = "Yoshiki Ara",
         description = "Classroom Theme",
         cover_art = False,
         unlocked = True

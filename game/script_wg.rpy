@@ -32823,7 +32823,8 @@ label WG097:
     show WG surprised
     pause .5
     play music Stardust
-    #show cg WG097_drawing
+    $ persistent.unlock_cgWG097_drawing = True
+    show cg WG097_drawing with dissolve
     WG "Keisuke, Dear... I'm at a loss for words..."
     WG "It's as beautiful of a work of art as I've seen... well almost anywhere."
     MC "Really? You think so?"
@@ -32844,7 +32845,7 @@ label WG097:
     show WG happy
     WG "It's a wonderful feeling. Thank you, Dear."
     MC "You're welcome, Babe."
-    #hide cg
+    hide cg with dissolve
     "I leaned in close, gently brushing the tears away from her eyes, and leaned in for a long soft kiss." 
     show WG aroused
     "Her warm, pouty lips and her soft plush cheeks pressed against mine as her voluptuous frame began to envelop me in our embrace. It was a feeling I could never forget, and one I could only hope to capture on canvas."

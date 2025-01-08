@@ -624,6 +624,7 @@ image cg WG091 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG091.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG093 = "Graphics/ui/gallery/WG093.webp"
+image cg WG097_drawing = "Graphics/ui/gallery/WG097_drawing.webp"
 
 image cg MC000 = "Graphics/ui/gallery/MC000.webp"
 image cg MC003 = "Graphics/ui/gallery/MC003.webp"
@@ -1215,7 +1216,7 @@ init 1 python:
     eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}
     eventlibrary['RM004'] = {"name": "Voices of the Past", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "classroom_3",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM003"], [ConditionEnum.FLAG, "XX15"]]]}
     eventlibrary['RM005'] = {"name": "Milestone", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM004"], [ConditionEnum.TIMEFLAG, "XX20"]]]}
-    eventlibrary['RM006'] = {"name": "The Gate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
+    eventlibrary['RM006'] = {"name": "The Gate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1533,7 +1534,7 @@ init 2 python:
     eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG028"]]}
     eventlibrary['FMG078'] = {"name": "The Holy Grail of Revengeance", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                      "location": "arcade",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG076"]]}
     
-    eventlibrary['FMGD001'] = {"name": "Hot Springs and Hotter Women", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                     "location": "lockers",                    "priority": PrioEnum.NONE,              "obsflags": ["size6"],                                 "conditions": [[ConditionEnum.AND, [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHANEQUALS, 38], [ConditionEnum.FLAG, "FMG082_Win"]]]}
+    eventlibrary['FMGD001'] = {"name": "Hot Springs and Hotter Women", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                     "location": "lockers",                    "priority": PrioEnum.NONE,              "obsflags": ["size6"],                          "conditions": [[ConditionEnum.AND, [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHANEQUALS, 38], [ConditionEnum.FLAG, "FMG082_Win"]]]}
     
     eventlibrary['FMGGTS001'] = {"name": "Down and Dirty", "girls": ["FMG", "GTS"], "type": EventTypeEnum.OPTIONAL,                         "location": "bakery",                     "priority": PrioEnum.NONE,              "obsflags": ["GTSFMG001"],                                    "conditions": [[ConditionEnum.EVENT, "FMG023"]]}
     eventlibrary['FMGGTS002'] = {"name": "Burger Buddies and Kei", "girls": ["FMG", "GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "gym",                     "priority": PrioEnum.NONE,              "obsflags": ["size3"],                            "conditions": [[ConditionEnum.EVENT, "FMGGTS001"]]}
