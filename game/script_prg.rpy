@@ -25243,7 +25243,7 @@ label PRG045:
             "... And popped right back down."
             "Her belly had begun pressing between her legs when she sat, most of the time not even allowing her legs to come together when she was sitting down."
             "Usually, her legs were more cradling her belly between them, spread out, as if holding it in between."
-            show PRG angry-2
+            show PRG angry
             PRG "Mngh!"
             "Aida put her hands down on either side and used them to press herself up, getting her footing and standing."
             show PRG worried
@@ -26389,7 +26389,7 @@ label PRG046:
     PRG "I-I'm sorry... w-we can go."
     MC "No harm done."
     "I took hold of Aida's suitcase, as well as my own, then turned back around."
-    show PRG angry-2
+    show PRG angry
     "Aida had both boots slipped onto her feet, and was leaned up against one wall, trying to reach down with one hand to get her laces done, while simultaneously heaving her leg and foot up beside her."
     MC "Whoa whoa! Let me do it!"
     show PRG unique 
@@ -26657,13 +26657,13 @@ label PRG046:
     MC "Down a ways then?"
     PRG "Close to the end of this car."
     "Aida started forward..."
-    show PRG angry-2
+    show PRG angry
     PRG "Mn..."
     show PRG worried
     PRG "T-This aisle is r-really... tight-"
     "Aida pressed forward. I couldn't tell what was going on at the front, though I could well imagine, based on how her hips were being squeezed by the seats on either side of her."
     MC "Want me to take your suitcase?"
-    show PRG angry-2
+    show PRG angry
     PRG "N-No. I-I can do it...{w} mgh!"
     "Aida yanked, moving past the first row of seats then to the second... then third... then fourth."
     "Luckily, no one else was in their seats, and aside from one man sleeping with a pair of headphones in his seat, no one else was in our car yet."
@@ -28389,7 +28389,7 @@ label PRG048:
     "Her belly nudged the end table next to the TV stand, and she steered away."
     show PRG scared
     "As she turned, her ankle turned on the edge of her foot, and she stumbled."
-    show PRG angry-2 at altMove(0.2, 0.7)
+    show PRG angry at altMove(0.2, 0.7)
     "Aida fell to the right, managing to grasp the wall to stop herself from falling to the floor."
     PRG "Hhgh..."
     "I got up in a flash, throwing the blankets off and dashing to her."
@@ -28402,7 +28402,7 @@ label PRG048:
     MC "Here, let's sit down..."
     PRG "N-No. J-Just... h-help me get to the shower, p-please..."
     MC "Aida, just sit for a sec. I want to look at your ankle."
-    show PRG angry-2
+    show PRG angry
     PRG "K... K-Keisuke, I'm... f-fine..."
     stop music fadeout 5.0
     show PRG unsure at altMove(0.5, 0.5)
@@ -29622,7 +29622,7 @@ label PRG049:
     PRG "L-Let me help you cut it. Let's go into the bathroom..."
     "Aida tried to get up on her side. She threw her arms forward to build momentum, and spread her legs to make room."
     "But all she did was come right back down onto her butt."
-    show PRG angry-2
+    show PRG angry
     PRG "Hmp... Mm!"
     "And again. The air mattress sprung up on my side from the forced air, jolting me up."
     show PRG nervous
@@ -30248,7 +30248,7 @@ label PRG049:
     show PRG worried with dissolve
     MC "Alright. The box seats should be down this way."
     "The two of us were walking down the large hall away from the souvenir shop."
-    show PRG angry-2
+    show PRG angry
     PRG "Oh... mm..."
     PRG "Leg cramp..."
     MC "Ohp, here. Let's sit down for a sec so you can stretch it."
@@ -30629,7 +30629,7 @@ label PRG049:
     "Both of us were glued to the pitcher as the pitch came."
     pause 1
     Announcer "Out!!"
-    show PRG angry-2
+    show PRG angry
     PRG "Ohh!"
     "Aida sat back in her chair, the leather squeaking abruptly with her forced back thrust."
     MC "Miss Kodama, my word. I never would have pictured you as an angry sports fan!"
@@ -31128,7 +31128,7 @@ label PRG050:
     show PRG sad-2
     PRG2 "This is my conversation! It's about me!"
     Enmei "Aida, I will not tell you again. Out."
-    show PRG angry-2
+    show PRG angry
     PRG2 "No, Dad!"
     play music PRGOverflow fadein 1.0
     "Aida hurried over to me, taking my hand in hers."
@@ -31167,7 +31167,7 @@ label PRG050:
     show PRG sad-2
     PRG "D-Don't call him that."
     Enmei "Aida, you're testing my patience..."
-    show PRG angry
+    show PRG angry-2
     PRG2 "Good! I don't care!" 
     Enmei "Young lady!" with hpunch
     show PRG sad-2 #at center, shake2(.04, 5) remove hash once SFX is recorded
@@ -31185,17 +31185,17 @@ label PRG050:
     Enmei "Out."
     show PRG sad-2
     "Enmei halted, as in a flash, Aida reached down and grabbed his wrist."
-    show PRG angry
+    show PRG angry-2
     PRG2 "Let go of him!"
     menu:
         "Let Aida Fight":
             pause 1
-            show PRG angry-2
+            show PRG angry
             PRG2 "I am okay! Let go of him!"
             "Aida yanked her father's arm, pulling his grip off of my wrist."
             PRG2 "I'm my own woman! Not yours! Not Keisuke's! Me! Aida Kodama!"
             Enmei "That is eno-"
-            show PRG angry
+            show PRG angry-2
             PRG2 "No! I'm saying no!"
             PRG2 "I don't care if you get mad at me! Or if you kick me out!"
             Enmei "You're not leaving with him."
@@ -31217,13 +31217,13 @@ label PRG050:
             show PRG worried
             PRG2 "Why is it only now that you want to offer help? Why can you hear me now when you couldn't for years?!"
             Enmei "Aida, we wanted to give you-"
-            show PRG angry-2
+            show PRG angry
             PRG2 "You pushed me away!"
             Enmei "It was for your own good!"
             PRG2 "It was good for me to lose contact with you?!"
             Enmei "Young lady, you-"
             Enmei "You know what, fine. Fine. Maybe if your mother and I had been closer to you, you wouldn't have ended up with a fuzzy twig like this guy."
-            show PRG angry
+            show PRG angry-2
             PRG2 "Don't you {b}dare{/b} talk about Keisuke like that! You don't know a thing about him besides what you've heard secondhand!"
             PRG2 "Did you know he has a twin sister? Or that he wants to be an architect?!"
             PRG2 "Did you know that he accepts me for who I am, and isn't disgusted by my growth factor?"
@@ -31234,7 +31234,7 @@ label PRG050:
             show PRG worried
             PRG2 "It was consensual... but it was my idea first..."
             Enmei "Aida, you don't have to cover for him..."
-            show PRG angry
+            show PRG angry-2
             PRG2 "I'm telling the truth! Listen to me just one time!"
             PRG2 "Keisuke has been there for me! He's made me feel cared for!"
             PRG2 "And, he makes me feel SAFE! I feel SAFE when I'm with him! He doesn't just treat me like a coat and put me away when he's done with me!"
@@ -31260,7 +31260,7 @@ label PRG050:
             PRG "Keisuke, stop..."
             MC "You can say all that shit you want, I don't care."
             MC "But you have no right to try and control your daughter!"
-            show PRG angry
+            show PRG angry-2
             PRG2 "Keisuke! Stop it!"
             $setFlag("PRG050_Kei")
     show PRG worried
@@ -31309,10 +31309,10 @@ label PRG050:
     Enmei "It's okay..."
     pause 1
     "Aida yanked her arm away, her head going up with her eyes filled with tears, her cheeks and face a deep scarlet."
-    show PRG angry-2
+    show PRG angry
     PRG "S-Shut up..."
     Enmei "What did you-"
-    show PRG angry
+    show PRG angry-2
     PRG2 "I said shut up!"
     PRG2 "You {i}didn't{/i} raise me!"
     PRG2 "Y-You're not my father anymore!"
@@ -31340,7 +31340,7 @@ label PRG050:
     Takara "We can. We can, honey... w-we just need to take a moment. Just... t-take a deep breath. Your father was out of line, I agree with you. I'll talk to him and we can-"
     "She reached out, her arms going out for a hug... before both hands were smacked away."
     "Aida's eyes filled with tears, not blurring, but razor sharp and flooded with emotion."
-    show PRG angry-2
+    show PRG angry
     "She opened her mouth... and closed it, then turned and stormed into the living room, going back to her packing."
     "I watched as Aida threw her toiletry bag into her suitcase and zipped it up, taking her wallet."
     Takara "H-Honey... {w}p-please..."
@@ -31758,7 +31758,7 @@ label PRG051:
     PRG "..."
     show WG happy-2
     WG "Aida. Dear. Go get some food. You need to eat."
-    show PRG angry-2
+    show PRG angry
     stop music 
     pause .5
     PRG "... {w}D-Don't tell me what to do."
@@ -35874,7 +35874,7 @@ label PRG056:
     show PRG neutral
     MC "Come to think of that, actually... have we ever talked about that? Like, what we want to do after we're done here?"
     "I stood up and offered Aida a hand, giving a mighty pull."
-    show PRG angry-2
+    show PRG angry
     PRG "Mmngh!"
     "Aida heaved up as I took a measured step to the side, lest I get bopped across the room by belly."
     show PRG neutral
@@ -44137,7 +44137,7 @@ label PRG065:
 
 label PRG065_pass:
     "As I took a seat on one of the stools by the counter, Aida reached up to grab some soup bowls. She swung the cabinet open and reached up with one hand. But, as she reached, she couldn't quite grab the bowls."
-    show PRG angry-2
+    show PRG angry
     PRG "Ngh... come on..."
     MC "Here, let me-"
     PRG "N-No... I can get it..."
@@ -44368,7 +44368,7 @@ label PRG065_pass:
 
 label PRG065_fail:
     "As I took a seat on one of the stools by the counter, Aida reached up to grab some soup bowls. She swung the cabinet open and reached up with one hand. But, as she reached, she couldn't quite grab the bowls."
-    show PRG angry-2
+    show PRG angry
     PRG "Ngh... come on..."
     MC "Here. Let me."
     show PRG unique

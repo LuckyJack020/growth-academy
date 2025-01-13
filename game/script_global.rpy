@@ -688,6 +688,7 @@ image BE disoriented = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/disorie
 image BE doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.webp")
 image BE embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.webp")
 image BE embarrassed-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed-2.webp")
+image BE flustered = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/flustered.webp")
 image BE furious = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/furious.webp")
 image BE seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.webp")
 image BE shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.webp")
@@ -954,10 +955,10 @@ image Kanami surprised = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/surp
 
 image Kokutan neutral = "Graphics/minor/kokutan/neutral.webp"
 
-image Minori neutral = "Graphics/minor/minori/neutral.webp"
-image Minori happy = "Graphics/minor/minori/happy.webp"
-image Minori embarrassed = "Graphics/minor/minori/embarrassed.webp"
-image Minori sad = "Graphics/minor/minori/sad.webp"
+image Minori neutral = "Graphics/minor/minori/[MinoriOutfit]/neutral.webp"
+image Minori happy = "Graphics/minor/minori/[MinoriOutfit]/happy.webp"
+image Minori embarrassed = "Graphics/minor/minori/[MinoriOutfit]/embarrassed.webp"
+image Minori sad = "Graphics/minor/minori/[MinoriOutfit]/sad.webp"
 
 image Sakura angry = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/angry.webp")
 image Sakura awkward = DynamicImage("Graphics/minor/sakura/[globalsize]/[SakuraOutfit]/awkward.webp")

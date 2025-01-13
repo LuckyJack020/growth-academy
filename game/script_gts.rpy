@@ -2056,6 +2056,7 @@ label GTS015:
     GTS "I've been well, thank you for asking."
     Ryoko "That's great, love to hear it."
     "Just then another student walked over and handed Ryoko a tablet."
+    $setMinoriOutfit(OutfitEnum.ALTERNATE)
     show Minori neutral at center with dissolve
     UNKNOWN "Sorry to intrude. Here you go, Tanaka-san."
     UNKNOWN "This is the new shooting schedule I managed to set up for you. We had to shift some things around as I couldn't secure proper locales yet."
@@ -4987,6 +4988,7 @@ label GTS028S:
     "Its arthritic axles ground to a slow halt at the stop before us; it was then that I observed how close Naomi was, standing there with her hands folded, to being able to see over even the island's enlarged buses."
     "The door folded open, and glossy heads filed out into the sunlight; one was a fiery red, and one right behind it clay brown."
     $setRyokoOutfit(OutfitEnum.CASUAL)
+    $setMinoriOutfit(OutfitEnum.ALTERNATE)
     show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
     show Minori neutral at Position(xcenter=0.2, yalign=1.0)
     with dissolve
@@ -5627,6 +5629,7 @@ label GTS028T:
     show GTS surprised
     GTS "Oh, this one reminds me of those ancient paintings you'd see in a museum."
     $setRyokoOutfit(OutfitEnum.CASUAL)
+    $setMinoriOutfit(OutfitEnum.ALTERNATE)
     show Ryoko happy at Position(xcenter=0.4, yanchor=1.0) with dissolve
     Ryoko "That's Koichi: A battle of love and honor. It's a period piece. Also hey you two!"
     show Minori neutral at center with dissolve

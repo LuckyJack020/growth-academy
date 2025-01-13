@@ -20389,11 +20389,11 @@ label WG068:
     PRG "M-My roommate and my... best friend..."
     WG "Aida... I don't know what to say... I thought you'd be happy to not have to work anymore. {w}As your pregnancy has progressed, it's obviously been more difficult to maneuver in the kitchen like you used to."
     WG "Well that and how..."
-    show PRG angry at Transform(xzoom=1)
+    show PRG angry-2 at Transform(xzoom=1)
     PRG "Is that it?! Is that all I am to both of you?! Someone you feel sorry for?! {w}W-Well, I'm not helpless!"
-    show PRG angry-2
-    PRG "M-My life is different now, a-and I wish things would've been different. I-I do..."
     show PRG angry
+    PRG "M-My life is different now, a-and I wish things would've been different. I-I do..."
+    show PRG angry-2
     extend " but that doesn't mean my life is over! I can still do things!"
     pause .5
     PRG "I don't need your pity... {w}a-and I don't want it."
@@ -28470,7 +28470,7 @@ label WG087:
     show PRG insecure
     PRG "Right..."
     "Of course then after that the real plot twist was revealed that the prince was the one who hired the bandits to kidnap the princess so he could frame her death on the neighboring kingdom to start a war."
-    show PRG angry-2
+    show PRG angry
     PRG "I knew he was all pompous for a reason..."
     MC "He did come off as kind of dick."
     show PRG surprised

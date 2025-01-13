@@ -9,6 +9,7 @@ default PRGOutfit = OutfitEnum.DEFAULT
 default WGOutfit = OutfitEnum.DEFAULT
 default TakoOutfit = OutfitEnum.DEFAULT
 default TomoOutfit = OutfitEnum.DEFAULT
+default MinoriOutfit = OutfitEnum.DEFAULT
 default NatsOutfit = OutfitEnum.DEFAULT
 default OkishoOutfit = OutfitEnum.DEFAULT
 default SakuraOutfit = OutfitEnum.DEFAULT
@@ -1018,6 +1019,11 @@ init python:
         global TakamuraOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.COOKING:
             TakamuraOutfit = o
+    
+    def setMinoriOutfit(o):
+    	global MinoriOutfit
+    	if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
+        	MinoriOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -1163,6 +1169,7 @@ label start:
         WGOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
+        MinoriOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
         OkishoOutfit = OutfitEnum.DEFAULT
         SakuraOutfit = OutfitEnum.DEFAULT
@@ -1226,6 +1233,7 @@ label splashscreen:
         WGOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
+        MinoriOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
         OkishoOutfit = OutfitEnum.DEFAULT
         SakuraOutfit = OutfitEnum.DEFAULT
@@ -1615,6 +1623,7 @@ label startevent:
         WGOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
+        MinoriOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
         OkishoOutfit = OutfitEnum.DEFAULT
         SakuraOutfit = OutfitEnum.DEFAULT
