@@ -7,6 +7,7 @@ default FMGOutfit = OutfitEnum.DEFAULT
 default GTSOutfit = OutfitEnum.DEFAULT
 default PRGOutfit = OutfitEnum.DEFAULT
 default WGOutfit = OutfitEnum.DEFAULT
+default MCOutfit = OutfitEnum.DEFAULT
 default TakoOutfit = OutfitEnum.DEFAULT
 default TomoOutfit = OutfitEnum.DEFAULT
 default MinoriOutfit = OutfitEnum.DEFAULT
@@ -24,6 +25,7 @@ default FMGNsfw = False
 default GTSNsfw = False
 default PRGNsfw = False
 default WGNsfw = False
+default MCNsfw = False
 default TakoNsfw = False
 default AEPrevOutfit = OutfitEnum.DEFAULT
 default AENsfwOutfit = OutfitEnum.DEFAULT
@@ -37,7 +39,11 @@ default PRGPrevOutfit = OutfitEnum.DEFAULT
 default PRGNsfwOutfit = OutfitEnum.DEFAULT
 default WGPrevOutfit = OutfitEnum.DEFAULT
 default WGNsfwOutfit = OutfitEnum.DEFAULT
+default MCPrevOutfit = OutfitEnum.DEFAULT
+default MCNsfwOutfit = OutfitEnum.DEFAULT
+default NatsPrevOutfit = OutfitEnum.DEFAULT
 default NatsNsfwOutfit = OutfitEnum.DEFAULT
+default TakoPrevOutfit = OutfitEnum.DEFAULT
 default TakoNsfwOutfit = OutfitEnum.DEFAULT
 define dis1 = { "master" : Dissolve(1.0) }
 define mov1 = { "master" : MoveTransition(1.0)}
@@ -783,6 +789,7 @@ init python:
         global GTSOutfit
         global PRGOutfit
         global WGOutfit
+        global MCOutfit
         global NatsOutfit
         global TakoOutfit
         if (AEOutfit == OutfitEnum.NUDE or AEOutfit == OutfitEnum.EPILOGUEBAD) and not isNSFW():
@@ -814,6 +821,11 @@ init python:
             WGOutfit = WGPrevOutfit
         elif WGNsfw and isNSFW():
             WGOutfit = WGNsfwOutfit
+
+        if MCOutfit == OutfitEnum.NUDE and not isNSFW():
+            MCOutfit = MCPrevOutfit
+        elif MCNsfw and isNSFW():
+            MCOutfit = MCNsfwOutfit
         
         if NatsOutfit == OutfitEnum.NUDE and not isNSFW():
             NatsOutfit = NatsPrevOutfit
@@ -951,6 +963,21 @@ init python:
                 WGPrevOutfit = WGOutfit
                 WGOutfit = o
 
+    def setMCOutfit(o):
+        global MCOutfit
+        global MCPrevOutfit
+        global MCNsfwOutfit
+        global MCNsfw
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.FORMAL or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.UNDERWEAR:
+            MCNsfw = False
+            MCOutfit = o
+        elif o == OutfitEnum.NUDE:
+            MCNsfw = True
+            MCNsfwOutfit = o
+            if isNSFW():
+                MCPrevOutfit = MCOutfit
+                MCOutfit = o
+
     def setTakoOutfit(o):
         global TakoOutfit
         global TakoPrevOutfit
@@ -1021,9 +1048,9 @@ init python:
             TakamuraOutfit = o
     
     def setMinoriOutfit(o):
-    	global MinoriOutfit
-    	if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
-        	MinoriOutfit = o
+        global MinoriOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
+            MinoriOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -1149,6 +1176,8 @@ label start:
         PRGNsfwOutfit = OutfitEnum.DEFAULT
         WGPrevOutfit = OutfitEnum.DEFAULT
         WGNsfwOutfit = OutfitEnum.DEFAULT
+        MCPrevOutfit = OutfitEnum.DEFAULT
+        MCNsfwOutfit = OutfitEnum.DEFAULT
         NatsPrevOutfit = OutfitEnum.DEFAULT
         NatsNsfwOutfit = OutfitEnum.DEFAULT
         TakoPrevOutfit = OutfitEnum.DEFAULT
@@ -1159,6 +1188,7 @@ label start:
         GTSNsfw = False
         PRGNsfw = False
         WGNsfw = False
+        MCNsfw = False
         NatsNsfw = False
         TakoNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
@@ -1167,6 +1197,7 @@ label start:
         GTSOutfit = OutfitEnum.DEFAULT
         PRGOutfit = OutfitEnum.DEFAULT
         WGOutfit = OutfitEnum.DEFAULT
+        MCOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         MinoriOutfit = OutfitEnum.DEFAULT
@@ -1213,6 +1244,8 @@ label splashscreen:
         PRGNsfwOutfit = OutfitEnum.DEFAULT
         WGPrevOutfit = OutfitEnum.DEFAULT
         WGNsfwOutfit = OutfitEnum.DEFAULT
+        MCPrevOutfit = OutfitEnum.DEFAULT
+        MCNsfwOutfit = OutfitEnum.DEFAULT
         NatsPrevOutfit = OutfitEnum.DEFAULT
         NatsNsfwOutfit = OutfitEnum.DEFAULT
         TakoPrevOutfit = OutfitEnum.DEFAULT
@@ -1223,6 +1256,7 @@ label splashscreen:
         GTSNsfw = False
         PRGNsfw = False
         WGNsfw = False
+        MCNsfw = False
         NatsNsfw = False
         TakoNsfw = False
         AEOutfit = OutfitEnum.DEFAULT
@@ -1231,6 +1265,7 @@ label splashscreen:
         GTSOutfit = OutfitEnum.DEFAULT
         PRGOutfit = OutfitEnum.DEFAULT
         WGOutfit = OutfitEnum.DEFAULT
+        MCOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         MinoriOutfit = OutfitEnum.DEFAULT
@@ -1621,6 +1656,7 @@ label startevent:
         GTSOutfit = OutfitEnum.DEFAULT
         PRGOutfit = OutfitEnum.DEFAULT
         WGOutfit = OutfitEnum.DEFAULT
+        MCOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         MinoriOutfit = OutfitEnum.DEFAULT

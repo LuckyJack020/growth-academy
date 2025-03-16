@@ -14952,7 +14952,7 @@ label WG056:
     MC "Then I have to scrape three layers of garbage off your couch just so we could sit and visit, only for you to show approximately zero interest in holding basic conversation unless you're asking about the most invasively private shit possible!"
     MC "For once, could you just take a hint and take something seriously? I {i}LOVE{/i} this woman. She's the most important thing I've got going on in my life. Excuse the hell out of me for wanting to include you with that."
     "Even Tomo's usually shameless and unflappable demeanor was shocked, if not a bit shamed, by my unexpected diatribe."
-    show Tomoko sad
+    show Tomoko worried
     Tomoko "...Sorry."
     MC "Good. That's a start, but it isn't enough. We're going."
     show WG surprised-2
@@ -25986,11 +25986,11 @@ label WG082:
     Tomoko "So I have to make a new one for each college?"
     show WG haughty
     WG "If you want it to stand out you will. You can have a skeleton that forms the basis of all of them, just be sure to name the right one you plan to send it to."
-    show Tomoko sad
+    show Tomoko worried
     Tomoko "This sounds like a lot of work."
     show Tomoko distracted
     WG "If the application sounds too daunting, then why are you applying for the program? Work and responsibilities don't get any easier as you get older, you just learn to be better at managing them."
-    show Tomoko neutral
+    show Tomoko distracted-2
     show WG neutral
     Tomoko "We're like the same age, Alice."
     WG "I was just quoting my father. It was something he was fond of saying growing up if I ever complained about having too much schoolwork."
@@ -26001,7 +26001,7 @@ label WG082:
     WG "Besides, you didn't even get to the part where you explain {i}why{/i} you want to get into that field."
     Tomoko "Well, I want to be able to help people, like my roommate Yuki. When she started having trouble talking with her lips, no one could understand her. This girl loved to talk, sure maybe too much at times, but that was kind of her thing."
     show WG neutral-2
-    show Tomoko sad
+    show Tomoko worried
     Tomoko "After a while, all she ever got was confused stares from her friends every time she spoke. Eventually she gave up trying altogether. It was like the spark in her eye had faded. She wasn't the same."
     Tomoko "I mean, how could she be? It was like she was isolated from her friends, even though they were right next to her." 
     show Tomoko happy
@@ -31728,7 +31728,7 @@ label WG094:
     WG "I'll have Keisuke send you the article I was reading in a business journal. The article itself is more broadly about store layout design and how more intuitive layouts, like say a grid, don't necessarily maximize foot traffic in the store."
     Dad "That'd be great! If I can bump up the store sales to our quota levels, I'll be getting a nice bonus this year."
     WG "It certainly couldn't hurt."
-    show Tomoko sad
+    show Tomoko worried
     Tomoko "Ughhh... I think I ate too much."
     show Tomoko happy
     show WG happy
@@ -35262,7 +35262,7 @@ label WGBE004B:
     "But when Kanami told her there would be dessert, she magically made time to hang out.{w} To be fair, she did say she'd come by if she finished early, so I decided to give her the benefit of doubt, but the irony certainly wasn't lost on me."
     hide WG
     hide PRG
-    show Tomoko sad
+    show Tomoko worried
     with dissolve
     "As excited as I was to see our guest judges, Tomo seemed to have the opposite reaction. The color drained from her face and she started shaking nervously."
     MC "{size=-6}Tomo, what's wrong?{/size}"

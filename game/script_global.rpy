@@ -816,7 +816,7 @@ image WG back = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/behind.webp")
 image WG pondering = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/pondering.webp")
 image WG worried = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/worried.webp")
 
-image side MC = "Graphics/MC/side.webp"
+image side MC = DynamicImage("Graphics/MC/[globalsize]/side/[MCOutfit]/side.webp")
 image side AECell = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/side.webp") #mainly used only in 098-D
 image side BECell = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/side.webp")
 image side WGCell = DynamicImage("Graphics/WG/[globalsize]/[WGOutfit]/side.webp")
@@ -926,11 +926,12 @@ image Tomoko distracted-3 = Composite(
         "getAffection('TM') <= 20 and getAffection('TM') >= 16", "Graphics/minor/tomoko/overlays/emoji4.webp",
         None, Null()),
     )
+image Tomoko embarrassed = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/embarrassed.webp")
+image Tomoko flattered = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/flattered.webp")
 image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/neutral.webp")
 image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/happy.webp")
 image Tomoko smile = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/smile.webp")
 image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/surprised.webp")
-image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/sad.webp")
 image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/unique.webp")
 image Tomoko worried = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/worried.webp")
 

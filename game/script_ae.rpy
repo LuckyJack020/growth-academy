@@ -11790,17 +11790,21 @@ label AE052:
     show Tomoko surprised
     Tomoko "Hey! I'm doing good right now!"
     MC "Uhuh. Hey, how's biology going?"
-    show Tomoko sad
+    show Tomoko worried
     Tomoko "...It's going fine."
     MC "Tomo, you know my girlfriend has access to every student's record, right?"
     MCT "I had no idea if that was true, and I knew for a fact that if she did there's no way she'd show me, but what was important was that my bluff worked on my gullible little sister."
     Tomoko "Mweeeeh~"
     MC "Tomooo, c'mon!"
     show Tomoko neutral
-    Tomoko "Biology is haaard!"
+    Tomoko "Biology is boooring!"
+    MC "Tsubasa-sensei isn't there to entertain you!"
+    Tomoko "So you've never fallen asleep in his class?"
+    MC "..."
+    Tomoko "Mmmhmmm."
     MC "If you needed to-"
     "{i}Creak{/i}"
-    "I stopped mid sentence to look to the door, saving Tomo from a a verbal lashing. As students piled out from the office, Shiori made her way out before turning back to the office."
+    "I stopped mid sentence to look to the door, saving Tomo from a verbal lashing. As students piled out from the office, Shiori made her way out before turning back to the office."
     show Tomoko neutral at Position(xcenter=0.25, yanchor=1.0)
     show AE neutral at Position(xcenter=0.75, yanchor=1.0)
     with dissolve
@@ -18542,7 +18546,7 @@ label AE080:
     MC "Haaah, shit, so people are talking about her."
     "I leaned forward in bed looking over to Tomo as my hair cascaded down to cover all of my face."
     MC "I don't know what to do. How do I make this go away?"
-    show Tomoko sad
+    show Tomoko worried
     Tomoko "..."
     "Tomo let out a sigh, of frustration or pity I couldn't tell, but she reached out and put her hand on my shoulder."
     Tomoko "Bro, dude, I get it, but like... you're not gonna be able to be there for her always. Sometimes you gotta know that the girls in your life... they're grown ups."
@@ -21661,7 +21665,7 @@ label AE095:
     show RM sad at Position(xcenter=0.2, yalign=1.0)
     show Minori sad at Position(xcenter=0.4, yalign=1.0)
     show Yuki sad at Position(xcenter=0.6, yalign=1.0)
-    show Tomoko sad at Position(xcenter=0.8, yalign=1.0)
+    show Tomoko worried at Position(xcenter=0.8, yalign=1.0)
     with fade
     Tomoko "So... then what are we supposed to do?"
     "As Tomo spoke, she made a few motions with her hands to Yuki-san who nodded along before making a few signs back."

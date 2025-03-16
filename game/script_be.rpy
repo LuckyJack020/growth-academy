@@ -9175,7 +9175,7 @@ label BE045:
     show BE angry
     BE "Haaah, man, I gotta say, I'm pretty hungry!"
     MC "Yeah... I could use some food too, now that you mention it. How about you, Tomo? Hungry?"
-    show Tomoko sad
+    show Tomoko worried
     "Tomo, for her part, however, was mostly silent as she sat on the bed next to me, looking down at the floor as she fiddled with her stuffed bear."
     Tomoko "Hm? Ah, no thanks. Um... I figure it's probably really busy out in the lunchroom."
     MC "Ah, that's true."

@@ -1911,7 +1911,7 @@ label MC003:
     MC "My roommate told me that isn't any guarantee."
     show Tomoko surprised
     Tomoko "Oh,"
-    show Tomoko sad
+    show Tomoko worried
     extend " I guess I understand why you were making such a big deal out of it then..."
     "I thought about teasing her for finally taking me seriously, but my emotional energy had been spent from being wound up about this all day. At that moment I was just glad my little sister was going to be okay."
     show Tomoko neutral
@@ -3527,11 +3527,11 @@ label MC005_TM:
     if isEventCleared("FMG011"):
         "It looked much the same as it had the last time I'd been here."
         MC "Well, here we are."
-        show Tomoko sad
+        show Tomoko worried
         Tomoko "..."
     else:
         MC "Huh. I'm shocked I haven't heard of this place till now."
-        show Tomoko sad
+        show Tomoko worried
         Tomoko "..."
     MC "So. What should we check out first?"
     Tomoko "..."
