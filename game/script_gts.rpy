@@ -4315,6 +4315,7 @@ label GTS025:
     $setTimeFlag("XX25")
     $setProgress("GTS", "GTS026")
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.ALTERNATE)
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn't shown up."
     show GTS neutral at center with dissolve
@@ -6743,6 +6744,7 @@ label GTS035_testpass:
     MC "I understand, Yamazaki-san. Now, pardon me while I get ready."
     "I closed my window and got ready all the while I could hear Naomi humming the same tune to herself."
     if checkSkill("Art", ">=", 6):
+        $setMCOutfit(OutfitEnum.TRADITIONAL)
         "When deciding what to wear, I decided that since this is a very special kind of event and I should dress appropriately."
         "Reaching under my bed and I produced my dark blue Yukata that hadn't been used in some time. Throwing on the article and tying the sash I headed outside."
         MC "How do I look?"
@@ -6756,6 +6758,7 @@ label GTS035_testpass:
         GTS_S "Anyway, we better be going, it's nearly 5. Thankfully this place is quite close so I don't need to rush."
         MC "I'm right behind you."
     else:
+        $setMCOutfit(OutfitEnum.FORMAL)
         "When deciding what to wear I decided that a suit will be more than suitable for the occasion. Slipping on my dress shoes and straightening my tie I heard downstairs."
         MC "How do I look?"
         "Naomi cocked her head and looked at me like she was deciding the best way to describe a bad situation."
@@ -10312,6 +10315,7 @@ label GTS046:
     $setProgress("GTS", "GTS047")
     scene Giant Dorm Interior with fade
     play music HigherEdu
+    $setMCOutfit(OutfitEnum.ALTERNATE)
     "After a couple hours of chilling at my dorm and digesting lunch, I headed over to Naomi's dorm, guided by the light of promised cookies."
     show GTS neutral with dissolve
     "I looked up to see her face brighten as she greeted me at the door, as ever."

@@ -8236,6 +8236,7 @@ label BE043:
     $setProgress("BE", "BE044")
     play music DayByDay
     $setBEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm Interior with fade
     "There's no school today, and the stars and planets must have aligned properly, because I had no homework to get done over the weekend."
     "So, I'd just woken up and was browsing through my phone when my phone vibrated enough that it escaped my grasp and gave my face a high-five."

@@ -29,6 +29,7 @@ label global000:
 
     pause 1.5
     scene Ferry with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music MC
     "The hard bench under me lightly hummed with the vibrations of the ferry. Two hours of sitting here twiddling my thumbs and scrolling through my phone had left me beyond bored."
     "I leaned against the side of the boat, looking out across the shimmering, tranquil sea as the sun shimmered across its waves."
@@ -797,9 +798,11 @@ label global000_RM_after:
     play sound AlarmClock
     "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
     scene Dorm Interior with dissolve
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     play music Peaceful
     "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
     MCT "Hard to believe that just yesterday I was in my hometown, and now I'm off on this little island..."
+    $setMCOutfit(OutfitEnum.DEFAULT)
     "I got up and got into my uniform, doing my best to comb my shaggy hair into something approaching proper. In the corner of my eye I saw Daichi watching me."
     if checkAffection("RM", ">=", 0):
         show RM neutral
@@ -2358,6 +2361,7 @@ label MC004:
 
 label MC005:
     scene Dorm Interior with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music HigherEdu
     "{i}CREEEEAK{/i}"
     pause .5
@@ -4187,6 +4191,7 @@ label MC006:
     $setGTSOutfit(OutfitEnum.ATHLETIC)
     $setPRGOutfit(OutfitEnum.ATHLETIC)
     $setFMGOutfit(OutfitEnum.ATHLETIC)
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     "We were told our class had some kind of special assembly today. There weren't too many details, but we all had to show up to the auditorium in our gym clothes."
     if not checkSkill("Athletics", ">", 0):
         "It'd been a while since I'd done anything athletic. I was probably going to be sore tomorrow, whatever this was."
@@ -7954,7 +7959,7 @@ label MC013:
         pause .5
         show BE surprised
         MC "Oh, shit! I'm sorry, Honoka!"
-        show BE surprised
+        show BE flustered
         BE "N-No! I'm sorry!"
         show BE neutral
         BE "I-I was going to lean over and cover your eyes. Doing the whole \"guess who\" thing, you know?"
@@ -9253,7 +9258,8 @@ label MC013_aftermenu:
     jump daymenu
 
 label MC014:
-    scene Dorm Interior with fade 
+    scene Dorm Interior with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music ChangingSeasons fadein 2.0
     pause 1
     MCT "Breezy. Perfect."
@@ -12475,6 +12481,7 @@ label MC042:
 label global005:
     $setTimeFlag("testday2")
     scene Dorm Interior with fade
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     play music DormLife
     pause .5
     play sound AlarmClock
@@ -12504,6 +12511,7 @@ label global005:
     MCT "...{w} Or tongue growth."
     MCT "God..."
     scene Dorm Interior with fade
+    $setMCOutfit(OutfitEnum.DEFAULT)
     "I walked back into my room and got uniformed up, then headed promptly outside, trying my damndest to keep my fears internalized."
     "I glanced back for a moment."
     MCT "... Still not here."

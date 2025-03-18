@@ -10238,6 +10238,7 @@ label FMG055:
     show FMG happy
     FMG "I wasn't going to, I swear~"
     MC "No more stalling. The kid gloves are coming off."
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "I threw my shirt off and started posing in the mirror poking fun at Akira's poses."
     show FMG sad-2
     FMG "This was a horrible idea... I should've backed out."
@@ -19830,6 +19831,7 @@ label FMG090:
     $setProgress("FMG", "FMG091")
     $setTime(TimeEnum.NIGHT)
     $setFMGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene Dorm Interior with fade
     play music TwilightBright 
     if not getFlag("Meet_Kokutan"):

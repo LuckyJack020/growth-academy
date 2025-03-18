@@ -2322,6 +2322,7 @@ label AE015:
     $setProgress("AE", "AE016")
     $setFlag("XX15")
     scene Hallway with fade
+    $setMCOutfit(OutfitEnum.ALTERNATE)
     "As I walked down the halls, my mind kept flashing back to yesterday's incident. Specifically, my mind travelled more towards the worry that Shiori-san may have realized by now that it wasn't my pocketbook she was rubbing up against."
     MCT "I am NOT looking forward to having to work in such a cramped environment again."
     "I tried to convince myself pathetically, with a smile on my face and less than innocent thoughts running through my head. I headed towards the old wood door, wary of any possible obstructions."
@@ -11537,6 +11538,7 @@ label AE051:
 
     scene Dorm AE with fade
     $setAEOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     play music HigherEdu
     MC "M-Mmmn."
     "I yawned as I wiped the sleep from my eyes, memories of last night still replaying fondly in my head. I almost began to wonder if it was a dream, until I looked over to my lover."
@@ -11713,6 +11715,7 @@ label AE051_c1_after:
     MCT "Gch! Ow. Ugh, matted... whatever, I already said I wouldn't."
     hide AE with dissolve
     "As I went to the other side of the bed, I looked back to Shiori-chan, who had put on her shirt and was hiking up her panties as best she could, her ass engulfing it to make a triangle shaped thong."
+    $setMCOutfit(OutfitEnum.DEFAULT)
     "I handed her the accessories as I put my own uniform on as she squeezed as best she could into an ill-fitting skirt."
     #$Ripping sfx$
     $setAEOutfit(OutfitEnum.DEFAULT)
@@ -12036,6 +12039,7 @@ label AE053:
     $setProgress("AE", "AE054")
     $setTime(TimeEnum.EVE)
     scene Town with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music Busy
     AE "Are you sure you know where it is?"
     show AE neutral with dissolve

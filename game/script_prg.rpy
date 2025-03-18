@@ -8726,6 +8726,7 @@ label PRG025_Sex:
     "She was breathing so heavily now, her face even redder than when I'd opened the door for her."
     "Still panting, she leaned forward into me and pressed her lips against mine once again, and continued grinding herself against me in a fervent, yet slightly awkward motion."
     "Instead of keeping her arms around me in a hug, she put her hands on my chest to support herself."
+    $setMCOutfit(OutfitEnum.NUDE)
     "I lifted the bottom of my shirt and took one of her wrists in each hand, and guided them up my shirt and onto my bare chest."
     show PRG admire
     PRG "Mmmm~"

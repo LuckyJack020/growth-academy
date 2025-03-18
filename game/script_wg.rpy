@@ -9905,6 +9905,7 @@ label WG043:
     $setPRGOutfit(OutfitEnum.SWIM)
     $setWGOutfit(OutfitEnum.SWIM)
     $setNatsOutfit(OutfitEnum.SWIM)
+    $setMCOutfit(OutfitEnum.SWIM)
     scene Pool
     show WG haughty
     with fade
@@ -11546,6 +11547,7 @@ label WG046:
     $setProgress("WG", "WG047")
     scene School Front with fade
     $setWGOutfit(OutfitEnum.SUMEXT)
+    $setMCOutfit(OutfitEnum.CASUAL2)
     play music Peaceful
     "It was a bright, sunny day outside. The skies were clear, and a faint breeze went against our backs. The weather app said these conditions were expected for the next few days."
     "I looked the street up and down, waiting for Alice's ride to arrive. The giddy feeling in my hands was a mix of nervousness and excitement."
@@ -11837,6 +11839,7 @@ label WG047:
     $setProgress("WG", "WG048")
     scene Summer Guest Bedroom with fade
     play music Peaceful
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "Warm, soft, and safe..."
     "Those were the only words that could describe how comfortable I felt in this bed. My entire body felt like it could just sink right into the mattress."
     "Part of me wondered what time it was, maybe I had accidentally slept in? But the other part of me really didn't care, and wanted to stay in this spot for as long as possible."
@@ -11860,6 +11863,7 @@ label WG047:
     "With the same ferocity Shino had opened my door with, she bolted out of my room like it was on fire."
     MCT "Not exactly the most pleasant good morning, but I guess they really want everything to be perfect for Alice."
     "I managed to slog myself out of the comforting embrace that the linen sheets provided. My eyes barely opened as my feet automatically made me lumber to the bathroom."
+    $setMCOutfit(OutfitEnum.PAJAMAS)
     "By the time the haze in my mind had cleared, I was standing in the doorway of my room. Hair neatly combed, dressed in a pair of pajama pants and loose t-shirt."
     MCT "I hope Alice doesn't mind me being a bit tardy to the sunrise."
     scene Summer Balcony Exterior with fade
@@ -11919,6 +11923,7 @@ label WG047_c1_after:
     MC "I can't wait."
     scene Summer Beach Ocean with fade
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     play music Beach
     "After finally getting a chance to eat breakfast, I made haste to get changed into my swim trunks."
     "It was midday, the sky's were mostly cloudy with strong rays of sunshine going through the gaps. And one couldn't ask for better weather on the beach."
@@ -20569,6 +20574,7 @@ label WG069:
     $setProgress("WG", "WG070")
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.ALTERNATE)
+    $setMCOutfit(OutfitEnum.FORMAL)
     scene Dorm Interior with fade
     play music Sunset
     MCT "I hope this tie is done correctly. Haven't tried to do this by myself since the 4th grade."
@@ -20769,6 +20775,7 @@ label WG070:
     $setProgress("WG", "WG071")
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.ALTERNATE)
+    $setMCOutfit(OutfitEnum.FORMAL)
     scene Ballroom
     show WG neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1)
     with fade
@@ -20994,6 +21001,7 @@ label WG071:
     $setProgress("WG", "WG072")
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.ALTERNATE)
+    $setMCOutfit(OutfitEnum.FORMAL)
     play music TwilightAmbient
     scene Ballroom
     show WG neutral-2
@@ -21084,6 +21092,7 @@ label WG071:
     "Alice pulled in closer, her quivering flesh wobbling even more than usual, now freed from any sense of confinement. {w}She pulled on the lapels of my suit as I shifted my shoulders to assist in casting the coat off."
     show WG sly
     "Wasting no time she proceeded to lean in further, unbuttoning my shirt down the line one by one as I loosened my tie."
+    $setMCOutfit(OutfitEnum.NUDE)
     "With her arms barely able to reach across the peak of her prodigious middle as she handled my shirt, there was plenty of contact with it below my waist, pressing softly, yet firmly into my nether regions, priming myself before she could even get to the belt."
     "And with the release of my belt there wasn't much left to hold onto as I cast my pants off to the side. Leaving me standing in a pair of socks with a pitched tent in my briefs."
     "Normally this would be cause for embarrassment, but after overcoming my brief sense of hesitation, I cast off the final vestiges of cover to reveal my birthday suit."
@@ -21419,6 +21428,7 @@ label WG072:
     $setProgress("WG", "WG073")
     $setWGOutfit(OutfitEnum.ALTERNATE)
     $setWGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     play music Peaceful
     scene Hotel Room with fade
     MCT "Was last night a dream?"
@@ -21593,6 +21603,7 @@ label WG072:
     "I didn't take any extra time to savor the warm steam of the hot shower— if Alice said she was already hungry, her body's need was likely a lot more urgent than she let on."
     scene Hotel Room with fade
     "I dried off and put on a fresh set of clothes Alice had apparently provided for me. I did have to hand it to her for planning all of this under my nose, but it sure made it easier knowing she had thought of everything for the occasion."
+    $setMCOutfit(OutfitEnum.CASUAL2)
     "Set out next to them was the hair clip she got me last night. A metal prison for my hair, that finally let me feel free from its nagging tug, and avoid being seen as an object of ridicule."
     MCT "Heh! A beauty was able to tame this beast after all."
     "Alice and I, our classmates... we were all changing ever since we got here at Seichou, in ways we didn't understand. {w}But it made me think, maybe some of these changes could be for the better."
@@ -27329,6 +27340,7 @@ label WG085:
     "My body wasn't exactly looking forward to another exhausting attempt at keeping up with Alice in the pool."
     "But judging by the extra shuffling and maneuvering needed to get my swim trunks on, I could tell the other part of my body was looking forward to seeing her in her swimsuit."
     $setWGOutfit(OutfitEnum.SWIM)
+    $setMCOutfit(OutfitEnum.SWIM)
     scene Pool
     show WG neutral-2
     with fade
@@ -29632,6 +29644,7 @@ label WG090:
 label WG091:
     $setProgress("WG", "WG092")
     $setWGOutfit(OutfitEnum.CASUAL2)
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music Peaceful
     scene Dorm Exterior with fade
     "I had been looking forward to this day all week. With the drama of the recent events, now thankfully well behind us, I was in need of a true weekend to recharge my batteries, since the last one wasn't exactly the most restful experience."
@@ -29875,6 +29888,7 @@ label WG091:
     "In one quick action that seemed effortless, Emi flipped up the massage table and folded out its legs, planting it firmly on the floor. No small feat considering how sturdy it looked." 
     "Sturdy as it was, I had to agree with the assessment that one, or even two together, would not likely have been sturdy enough to hold Alice."
     Masseuse1 "I will step out for a bit while you disrobe. You don't need to disrobe completely if you don't feel comfortable with that, but we are professionals here. Please lay face down on the table once you are ready."
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "It didn't take long for me to get out of my clothes and onto the table. I kept my underwear on just to make sure everything was tucked into place." 
     "I didn't feel that great about doing this just by myself. Alice was used to getting treated to this kind of thing on the regular and I'm sure it had been quite a long time for her since she got to enjoy something like it."
     "I had to imagine she was more disappointed than she led on, but her insistence on the matter was clear. {w}Still though, I wanted to make it up to her somehow."
@@ -29938,6 +29952,7 @@ label WG091:
     show Ryokan Onsen with fade #steam overlay
     play music TwilightBright
     $setWGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     "I walked into the Onsen, thick steam hung in the air obscuring my view."
     WG "Keisuke? Is that you?"
     MC "Yes."
