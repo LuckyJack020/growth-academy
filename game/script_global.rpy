@@ -283,6 +283,7 @@ image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheat
 image Park = DynamicImage("Graphics/ui/bg/archiveBG/park_[gametime].webp")
 image Pharmacy = DynamicImage("Graphics/ui/bg/archiveBG/pharmacy_[gametime].webp")
 image Restaurant = "Graphics/ui/bg/restaurant.webp"
+image Sound Studio = DynamicImage("Graphics/ui/bg/archiveBG/soundstudio_[gametime].webp")
 image Store = DynamicImage("Graphics/ui/bg/store_[gametime].webp")
 image Supermarket = DynamicImage("Graphics/ui/bg/archiveBG/supermarket_[gametime].webp")
 image Sushi Restaurant = "Graphics/ui/bg/archiveBG/sushirestaurant.webp"
@@ -368,6 +369,7 @@ image Okinawa Ocean = DynamicImage("Graphics/ui/bg/archiveBG/okinawa_ocean_[game
 #Other - Tokyo
 image Tokyo = DynamicImage("Graphics/ui/bg/tokyo_streets_[gametime].webp")
 image Tokyo Abandoned Building = "Graphics/ui/bg/NYI.webp"
+image Tokyo Architect Office = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_architectoffice_[gametime].webp")
 image Tokyo Club = "Graphics/ui/bg/archiveBG/tokyo_club.webp"
 image Tokyo Club Alt = "Graphics/ui/bg/archiveBG/tokyo_club2.webp"
 image Tokyo Club Interior = "Graphics/ui/bg/archiveBG/tokyo_clubinterior.webp"
@@ -376,6 +378,7 @@ image Tokyo Club Stage Alt = "Graphics/ui/bg/archiveBG/tokyo_clubstage2.webp"
 image Tokyo House Exterior = DynamicImage("Graphics/ui/bg/tokyo_houseexterior_[gametime].webp")
 image Tokyo Dining Room = "Graphics/ui/bg/NYI.webp"
 image Tokyo MC Apartment = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_mcapartment_[gametime].webp")
+image Tokyo Mega Metro = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_megametro_[gametime].webp")
 image Tokyo Restaurant = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_restaurant.webp")
 image Tokyo Station = DynamicImage("Graphics/ui/bg/tokyo_station_[gametime].webp")
 image Tokyo Train = DynamicImage("Graphics/ui/bg/tokyo_train_[gametime].webp")
@@ -391,6 +394,11 @@ image Kanagawa Game Store = "Graphics/ui/bg/archiveBG/kanagawa_gamestore.webp"
 image Kanagawa Supermarket Exterior = "Graphics/ui/bg/archiveBG/kanagawa_supermarketexterior.webp"
 image Kanagawa Supermarket Interior = "Graphics/ui/bg/archiveBG/kanagawa_supermarketinterior.webp"
 image Kanagawa Station = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_station_[gametime].webp")
+
+#Other - Yokohama
+image Yokohama HighRise Hallway = DynamicImage("Graphics/ui/bg/archiveBG/yokohama_highrise_hallway_[gametime].webp")
+image Yokohama HighRise Office = "Graphics/ui/bg/archiveBG/yokohama_highrise_office.webp"
+image Yokohama HighRise Skyline = DynamicImage("Graphics/ui/bg/archiveBG/yokohama_highrise_skyline_[gametime].webp")
 
 #General
 image Airport = "Graphics/ui/bg/NYI.webp"
@@ -548,8 +556,10 @@ image cg FMG090 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMG090.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg FMG092 = "Graphics/ui/gallery/FMG092.webp"
+image cg FMG095 = "Graphics/ui/gallery/FMG095.webp"
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.webp"
+image cg GTS016 = "Graphics/ui/gallery/GTS016.webp"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.webp"
 image cg GTS025 = "Graphics/ui/gallery/GTS025.webp"
 image cg GTS035 = "Graphics/ui/gallery/GTS035.webp"
@@ -597,6 +607,7 @@ image cg PRG061_front = "Graphics/ui/gallery/PRG061_front.webp"
 
 image cg WG000 = "Graphics/ui/gallery/WG000.webp"
 image cg WG009 = "Graphics/ui/gallery/WG009.webp"
+image cg WG010_BE = "Graphics/ui/gallery/WG010_BE.webp"
 image cg WG010 = "Graphics/ui/gallery/WG010.webp"
 image cg WG039 = "Graphics/ui/gallery/WG039.webp"
 image cg WG042 = "Graphics/ui/gallery/WG042.webp"
@@ -625,6 +636,8 @@ image cg WG091 = ConditionSwitch(
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG093 = "Graphics/ui/gallery/WG093.webp"
 image cg WG097_drawing = "Graphics/ui/gallery/WG097_drawing.webp"
+image cg WG101_drawing1 = "Graphics/ui/gallery/WG101_drawing1.webp"
+image cg WG101_drawing2 = "Graphics/ui/gallery/WG101_drawing2.webp"
 
 image cg MC000 = "Graphics/ui/gallery/MC000.webp"
 image cg MC003 = "Graphics/ui/gallery/MC003.webp"
@@ -1562,7 +1575,9 @@ init 2 python:
     eventlibrary['GTS011b'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 1,          "next": "GTS014", "obsflags": [],       "conditions": [[ConditionEnum.NOFLAG, "GTS011_unlock"]]}
     eventlibrary['GTS013'] = {"name": "The Craft of Confection", "girls": ["GTS"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS015", "obsflags": [],       "conditions": []}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS015", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS018", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS016", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "schoolplanter",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS017", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "schoolplanter",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS018", "obsflags": [],       "conditions": []}
     eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS019", "obsflags": [],       "conditions": []}
     eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 3,          "next": "GTS020", "obsflags": [],       "conditions": []}
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "sp": 3,          "next": "GTS021", "obsflags": [],       "conditions": []}
@@ -1607,8 +1622,6 @@ init 2 python:
 
     #Optional
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
-    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS001"]]}
-    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS001"]]}
 
     eventlibrary['GTS005'] = {"name": "Rhymes and Reasons", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "sp": 1,          "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['GTS010'] = {"name": "A Head Above the Class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 2,          "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}

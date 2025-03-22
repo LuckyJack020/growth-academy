@@ -18270,6 +18270,7 @@ label AE078:
 label AE079:
     $setProgress("AE", "AE080")
     scene Dorm Interior with fade
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     MCT "Mm... mhn..."
     "I squinted at the bright morning sun intruding on my restful sleep as it bathed the room in its light. I turned in my bed and got a good look at Shiori, resting silently as her every breath caused her body to undulate ever so slightly."
     "Looking a bit further down, I was confused as to just how it was that our jerry rigged double wide bed was able to contain an ass of that magnitude. Most of Shiori's blanket covered it, though she had pulled it up in the night to cover her back, leaving it exposed."
@@ -18287,6 +18288,7 @@ label AE079:
     "The egg sizzled as I cracked it over the skillet. Though I wouldn't call myself a gourmet chef, I spent enough time watching mom to pick up on the movements."
     "After a bit, everything was looking good, the rice set to be finished soon as I focused on getting everything ready."
     "As I did, meanwhile, I heard the gentle rustle of sheets behind me, along with a quiet murmur."
+    $setAEOutfit(OutfitEnum.UNDERWEAR)
     show AE sad with dissolve
     play music AE
     AE "M-Mmhn."
@@ -18403,6 +18405,8 @@ label AE079:
     scene black with fade
     "As we took turns brushing our teeth and doing our morning routines, I couldn't help that Shiori was taking everything rather slow."
     "At first I thought it may have been because it wasn't her room, but it quickly became apparent that she was being overly meticulous with everything."
+    $setMCOutfit(OutfitEnum.DEFAULT)
+    $setAEOutfit(OutfitEnum.DEFAULT)
     scene Dorm Interior
     show AE neutral
     with fade

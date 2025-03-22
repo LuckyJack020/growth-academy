@@ -3905,6 +3905,7 @@ label FMG023_c2_after:
     jump daymenu
 
 label FMG024:
+    $setTimeFlag("XX25")
     $setProgress("FMG", "FMG026")
     play music Rain
     scene Woods with fade
@@ -4082,7 +4083,6 @@ label FMG024_c1_after:
     jump daymenu
 
 label FMG025:
-    $setTimeFlag("XX25")
     play music Schoolday
     scene Track with fade
     MCT "The air was crisp and refreshing as it hit my sweaty forehead, slowly cooling me down."

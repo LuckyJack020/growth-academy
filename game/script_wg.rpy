@@ -1624,15 +1624,15 @@ label WG010:
     WG "The school told me it would take as much as a week to get me a larger set of uniforms,"
     WG "but I- going directly to the company that has the contract with this school- was able to get this comfortable and properly-fitting outfit before my old set became restrictive."
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now-wider torso and rounder belly."
-    show WG happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
+    show cg WG010 with dissolve
     "I actually hadn't noticed that she had gotten plumper. It hadn't been a month yet, and I wasn't expecting to see such changes so quickly."
     "Seeing it up close, I'd be lying if I said it didn't catch my... attention, shall we say."
     "Unless she had told me I wouldn't have noticed that this was a larger outfit— it fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
-    show WG haughty at center, Transform(zoom=1.0)
     WG "No muffin top, no pinching in the sleeves."
     "I was still looking over her plump middle, my eyes lingering on the soft curves of her belly, when she snapped me out of my reverie."
-    show WG haughty
     WG "I take it you approve?"
+    show WG haughty
+    hide cg with dissolve
     "I had been caught red-handed ogling her curves. She didn't seem to mind the attention, but still, I figured it'd be best to play it cool."
     MC "Seems like a pretty good fit."
     show WG happy
@@ -1779,7 +1779,7 @@ label WG010_c3:
     MC "At least help me clean these up."
     BE "What're these?"
     "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine, I had curves on the brain, and Honoka was looking particularly curvy in her own right."
-    show cg WG010
+    show cg WG010_BE with vpunch
     BE "Hey! Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
     hide cg

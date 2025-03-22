@@ -2036,7 +2036,7 @@ label GTS014_after:
     jump daymenu
 
 label GTS015:
-    $setProgress("GTS", "GTS018")
+    $setProgress("GTS", "GTS016")
     $setFlag("XX15")
     scene Dorm GTS with fade #this should change eventually
     play music Busy
@@ -2170,6 +2170,7 @@ label GTS015_c2_after:
     jump daymenu
 
 label GTS016:
+    $setProgress("GTS", "GTS017")
     scene School Planter
     show GTS neutral
     with fade
@@ -2197,9 +2198,12 @@ label GTS016:
     GTS "Yes, very much so. And truthfully, I find them cute in a way. Their little fuzzy bodies just floating by to see the flowers."
     MC "Really? I think it's hard to find many people who can say that about insects."
     GTS "True, but I like them well enough. Actually... when I was younger, I asked if I could dress up like a bee for school."
+    show cg GTS016 with dissolve
     "The mental image of Naomi in a bee-inspired costume flashed by immediately."
+    pause 2
+    hide cg with dissolve
     MC "I guess you'd have been the queen bee then, huh?"
-    show GTS happy
+    show GTS happy with dissolve
     GTS "Ara ara. I never saw myself as the queen. If anything I wanted to be a drone."
     MC "Huh? Really? Why?"
     show GTS sad
@@ -2253,6 +2257,7 @@ label GTS016_c1_after:
     jump daymenu
 
 label GTS017:
+    $setProgress("GTS", "GTS018")
     scene School Planter with fade
     play music Busy
     "My brow lowered in annoyance as the wind blew my hair across my face yet again, my hands constantly trying to tuck it behind my ears or slick it back to keep my hair from doing so. I could see Naomi in our usual meeting place, attending to something."

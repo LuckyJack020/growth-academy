@@ -3799,14 +3799,15 @@ label MC005_RM:
     "The whole area was awash with students, and I spotted a few that I hadn't met prior milling about and chatting with each other, as well as the occasional familiar face dotted around."
     hide Tako
     hide Jineko
-    show RM neutral
+    show RM distrustful
     with dissolve
-    play music RM
+    play music RMInvestigate
     "Up ahead, Daichi stood near the men's dorms, slightly in the shadows, observing the crowd of people like a hawk."
     "I walked over to him, unsure whether I should approach him from the front, or sidle alongside him like a cringey 80's movie villain."
+    show RM neutral-2
     RM "You in then?"
     MC "In."
-    show RM happy
+    show RM happy-2
     $setAffection("RM", 1)
     RM "Great. Let's go."
     MC "Go? To... where, exactly?"
@@ -3819,6 +3820,7 @@ label MC005_RM:
     RM "Do you think that everything I do is strictly for investigation?"
     MC "I..."
     MCT "Well, he has been AWOL for the last handful of days."
+    show RM neutral-2
     RM "Anyways. We're heading to town. Let's go."
     MC "I..."
     pause .5
@@ -3827,9 +3829,10 @@ label MC005_RM:
     scene black with fade
     pause .5
 
-    scene Campus Center
-    show RM neutral
-    with fade
+    scene Campus Center with fade
+    play music RM
+    pause 0.25
+    show RM neutral with dissolve
     RM "So, how's classes for you?"
     MC "Uh... fine?"
     RM "Cool."
@@ -3882,10 +3885,10 @@ label MC005_RM:
     MCT "At least someone is having a grand ol' time."
     scene black with fade
     pause .5
-    scene Town with fade
+    scene Town Bus with fade
     play music DayByDay
     "The bus spat us out on one end of the main drag. I looked down it, admiring the lush greenery and flowers that were out for the holiday."
-    show RM neutral with dissolve
+    show RM neutral-2 with dissolve
     MC "So, what did you have in mind? Now that we're here."
     RM "Let's just walk a bit."
     "Daichi started down the street with me in tow."
@@ -3904,7 +3907,7 @@ label MC005_RM:
         show RM concerned
         RM "You mean the one from the gift bag that the hourglass teacher gave us?"
         MC "Yes?"
-        show RM concerned-2
+        show RM distrustful
         RM "I..."
         show RM angry
         RM "Look, I don't have time for their propaganda! I want actual {i}FACTS{/i}!"
@@ -3919,11 +3922,14 @@ label MC005_RM:
     MC "Okay, look."
     MC "I get that you're suspicious of the school, okay? I get that."
     MC "But, do you have any solid proof? Like, anything past doubts?"
+    show RM neutral-2
     RM "Nothing hard. But, think of the coincidences."
     RM "For instance, how would they know about my..."
+    show RM concerned-2
     MC "..."
     "Daichi simply shook his head and walked on."
     MC "Your...?"
+    show RM neutral
     RM "Agh... it doesn't matter."
 
     "As we walked along through town, we saw all manner of townsfolk and students alike out and about, admiring the foliage and such, with a large group of them heading outside of town."
@@ -4001,17 +4007,20 @@ label MC005_RM:
     show RM concerned-2
     RM "..."
     MC "Look, do you like this girl? Or, is this part of your master scheme?"
+    show RM doubt
     RM "I... n-not at all."
     "I looked over and watched as the girl threw her takeout container in a trash bin and headed off down the sidewalk."
+    show RM concerned-2
     RM "L-Look, I'll explain later, okay?"
     "Daichi got up and tossed his entirely uneaten meal in the bin and walked down the sidewalk in the same direction, weaving in and out of the crowd."
     MCT "Dude..."
     "I got up and walked toward him, not even bothering to maintain his \"cover.\""
     MC "Okay, fill me in, or I'm out."
+    show RM doubt
     RM "I..."
     "He halted, eyes wide and staring at me."
     "Five or six other people around us were staring at the two of us... and that girl was gone."
-    show RM angry
+    show RM angry-2
     RM "Urgh!"
     RM "Stay here, okay? I'll explain everything later!"
     hide RM with easeoutright
@@ -4091,16 +4100,15 @@ label MC005_RM:
     show RM concerned
     RM "Doing all of that, I found some records for more siblings... but the data was incomplete. Like, there was an error or it wasn't updated, I don't know."
     MCT "He better have not broke into a facility for this..."
-    show RM neutral
+    show RM neutral-2
     RM "I'm trying to track down a pair of twins to learn more about them. I've found the first one... but I can't find the second for the life of me."
-    show RM concerned-2
     RM "Some... \"Hikari Watanabe\". I've found nothing."
     RM "I've checked literally every possible lead. Checking different classrooms and asking various students, but no one has heard of her."
-    show RM neutral
     RM "Most of them just told me to back off... which must mean there's something more."
     MCT "Does it though?"
     RM "I've been digging up all I can lately, and have still come up dry. So, I decided to follow the easiest lead."
     RM "Follow her sister."
+    show RM neutral
     RM "Unfortunately... all she's done is hang out with that one girl with the beanie and an ass the size of Matsumoto-san's and that other girl with the braid."
     RM "And... I still don't have a clue on her factor."
     MC "So... lemme throw something out here."
@@ -4116,9 +4124,11 @@ label MC005_RM:
     show RM doubt
     RM "What did she say?!"
     MC "Well, she assumed that you were looking for a date with her."
+    show RM angry-2
     RM "I-I... urgh..."
     RM "..."
     pause .5
+    show RM doubt
     RM "Fine. Maybe this all is some big misunderstanding."
     MC "Figure that one out by yourself, did you?"
     RM "..."
