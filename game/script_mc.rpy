@@ -11811,6 +11811,8 @@ label MC024:
     MC "I was going to apply for the scholarship today, and I... I mean my forms didn't have Sae... Naoki-sensei's signature, so I had to go find him and..."
     MC "I... I'm sorry. Here's my form."
     MC "I just need the principal to authorize it."
+    pause 1
+    play music RMInvestigate
     "I glanced up for a moment, following a shadow from the corner of my eye that seemed to move by the wardrobe."
     MCT "God, I really am that tired."
     Receptionist "Yes, of course. One moment, please."
@@ -11819,11 +11821,14 @@ label MC024:
     show RM neutral with moveinright
     with vpunch
     RM "{size=-6}Gah! Hagh...{/size}"
+    show RM happy
     RM "{size=-6}T-Thanks. I've been stuck with my leg up by my waist for the last half an hour.{/size}"
     "Thanks to my advancing grogginess, I was hardly surprised to see Daichi wrestling himself from the inside of the wardrobe."
     MC "{size=-6}... Yeah, I got nothing. I've had enough wildness today. Even though this takes the cake for that.{/size}"
+    show RM neutral
     pause .5
     MC "{size=-6}Should I even ask?{/size}"
+    show RM smug
     RM "{size=-6}Mm. Probably not.{/size}"
     "I watched Daichi straighten up the wardrobe, then make his exit."
     hide RM with dissolve
@@ -11833,6 +11838,7 @@ label MC024:
         MCT "Somehow, slightly more elegant than the bush during Golden Week."
     "I shook my head, and took a chair near the desk, and waited patiently."
     pause .75
+    play music Sunset
     "A few minutes later, the receptionist emerged from the office."
     Receptionist "The principal would like to speak with you, Hotsure-san."
     "My stomach flipped just a touch as I stood."
@@ -14800,7 +14806,7 @@ label RM002:
     UNKNOWN "{size=-6}Psst! It's me.{/size}"
     MC "Well that doesn't exactly tell me anything."
     "Peaking around the pillar where I saw the movement from earlier revealed none other than who I should have suspected from the get-go."
-    play music RM
+    play music RMInvestigate
     show RM neutral with dissolve
     MC "Oh, it's you. What's going on? {w}...You weren't tailing me, were you?"
     show RM neutral-2
@@ -14859,7 +14865,7 @@ label RM002:
     UNKNOWN "Is everything okay?"
     show Yuki neutral with vpunch
     MC "{i}GAAAH!{/i}"
-    play music HallowedHalls
+    play music RM
     UNKNOWN "You don't look so good..."
     MC "Bah? Wha?"
     "After briefly recovering from my soul nearly leaving my body from the sudden startle, I turned to see the source of the voice behind me." 
@@ -14979,7 +14985,7 @@ label RM002_C2_1:
 label RM002_After_C1:
     show Yuki surprised at altMove(0.5, 0.25)
     show RM neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
-    play music Rain
+    play music TheAnswer
     "I turned around to see Daichi, opting for the \"hiding in plain sight\" approach rather than stealth after pulling off the heist."
     "Seeing as he wasn't being escorted out of the building by security, Daichi must have managed to slip away undetected. {w}How, I have no idea, and I doubted he'd even tell me, but I was impressed." 
     MCT "Wait a second... Daichi-kun? {w}How does she know him? I don't even see him talk to other people besides me. {w}Does the student government already have a file on him? He must already be rattling some cages."
@@ -15042,6 +15048,7 @@ label RM002_After_C1:
     show RM doubt
     Yuki "I'm taking this. You're going to go back to your room and consider where this behavior is leading and the path you're choosing to go down." 
     Yuki "You're lucky I had hall monitor duties today and not someone else, or you would have landed yourself in big trouble. {w}You're welcome by the way."
+    play music Memories
     show RM concerned-2
     RM "..."
     "Before walking away, Yuki turned her attention back to me."
