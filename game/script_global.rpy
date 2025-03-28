@@ -399,6 +399,7 @@ image Kanagawa Station = DynamicImage("Graphics/ui/bg/archiveBG/kanagawa_station
 image Yokohama HighRise Hallway = DynamicImage("Graphics/ui/bg/archiveBG/yokohama_highrise_hallway_[gametime].webp")
 image Yokohama HighRise Office = "Graphics/ui/bg/archiveBG/yokohama_highrise_office.webp"
 image Yokohama HighRise Skyline = DynamicImage("Graphics/ui/bg/archiveBG/yokohama_highrise_skyline_[gametime].webp")
+image Yokohama Corporate Office = "Graphics/ui/bg/NYI.webp"
 
 #General
 image Airport = "Graphics/ui/bg/NYI.webp"
@@ -1820,7 +1821,13 @@ init 2 python:
     eventlibrary['WG097'] = {"name": "Time for a Do-Over", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "town",          "priority": PrioEnum.NONE,     "next": "WG098", "obsflags": [],                                     "conditions": []}
     eventlibrary['WG098'] = {"name": "It Ain't Over Til'...", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "dormWG",          "priority": PrioEnum.NONE,     "next": "WG099", "obsflags": [],                                     "conditions": []}
     eventlibrary['WG099'] = {"name": "Made it to the Big Time", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "campuscenter",          "priority": PrioEnum.NONE,     "next": "WG100", "obsflags": [],                                     "conditions": []}
-    eventlibrary['WG100'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG100'] = {"name": "Burger Babes", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "town",          "priority": PrioEnum.NONE,     "next": "WG101", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG101'] = {"name": "Burger Business", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "town",          "priority": PrioEnum.NONE,     "next": "WG102", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG102'] = {"name": "Looking Back, But Moving Forward", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                   "location": "dorminterior",          "priority": PrioEnum.NONE,     "next": "WG103", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG103'] = {"name": "The Big Finish", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "tokyo",          "priority": PrioEnum.NONE,     "next": "WG104", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG103G'] = {"name": "Stay Golden", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "tokyo",          "priority": PrioEnum.NONE,     "next": "WG104", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG103B'] = {"name": "All Things Fade in Time", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                     "location": "tokyo",          "priority": PrioEnum.NONE,     "next": "WG104", "obsflags": [],                                     "conditions": []}
+    eventlibrary['WG104'] = {"name": "Alice end", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                           "location": "library",          "priority": PrioEnum.NONE,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['WG009'] = {"name": "Between a Soft and a Hard Place", "girls": ["WG", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE,              "obsflags": [],                "conditions": [[ConditionEnum.EVENT, "WG008"]]}
