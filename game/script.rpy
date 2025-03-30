@@ -863,6 +863,11 @@ init python:
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
+            
+    def setPRGSize(size):
+        global prgsize
+        if size < 7:
+            prgsize = size
 
     def getTime():
         global gametime

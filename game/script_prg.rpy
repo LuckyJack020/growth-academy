@@ -86,7 +86,7 @@ label PRG001b_c1_3:
     MC "Glad I could help!"
     hide PRG with dissolve
     "And with that she was on her way again, though I thought about the conversation for a few minutes afterwards. What {i}was{/i} going to change about me?"
-    $ setAffection("PRG", 2)
+    $setAffection("PRG", 2)
     jump daymenu
 
 label PRG001:

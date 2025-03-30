@@ -45,6 +45,7 @@ label WG001:
     show WG happy at altMove(0.5, 0.5)
     WG "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
     MCT "Bringing along her own private chef and taking over a fifth of the kitchen? Just how loaded is this girl?"
+    show WG stern
     "Lunchlady" "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus."
     "Lunchlady" "Either you can take what we offer you, or you can make your own meals in the Home Ec classes."
     show WG angry
@@ -53,6 +54,7 @@ label WG001:
     show WG haughty
     WG "What!? That notion is absurd. It takes years of culinary study and experience to achieve the level of skill required to satisfy my fine palate."
     WG "I can't be expected to devote adequate time to my studies if I am preoccupied with culinary pursuits. That is all the more ridiculous in light of the fact that François is already here."
+    show WG surprised-2
     "Lunchlady" "If you don't get out of my kitchen in the next five seconds, you'll be dunking that expensive manicure in cold, greasy dishwater as I have you scrubbing every pot and pan we have."
     show WG angry
     stop music
@@ -106,7 +108,7 @@ label WG001_c1_after:
 label WG001_c2_1:
     MC "Daitaro... Isn't he some sort of businessman?"
     show WG happy
-    WG "Not just \"some sort\" of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
+    WG "Not just \"some sort\" of businessman. He is a leader in the heavy manufacturing industry in Japan. He is ranked on the list of the richest people in the world."
     MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install François as head chef?"
     show WG neutral
     WG "Tsk. Such a simple thought. Just because you {i}can{/i} buy something, my dear boy, does not mean you should. Not all investments are worth the trouble."
@@ -117,7 +119,7 @@ label WG001_c2_1:
 label WG001_c2_2:
     MC "Uh, can't say that I have...should I?"
     show WG stern
-    WG "As a matter of fact, you should. He is the leader of the heavy manufacturing industry in Japan. His meteoric rise to success should be an inspiration to everyone."
+    WG "As a matter of fact, you should. He is a leader in the heavy manufacturing industry in Japan. His meteoric rise to success should be an inspiration to everyone."
     MC "Is that so? That does sound pretty impressive actually."
     show WG haughty
     WG "Quite the understatement if anything, but at least now you know."
@@ -384,7 +386,7 @@ label WG003_c1_3:
     MC "Your assistant?"
     WG "Naturally I'll need to find someone to help me now that my personal retinue has been barred from the school. And Kodama-san was eager to take on the position."
     MCT "I can't help but think things played out a little differently..."
-    MCT "I wasn't exactly up for an argument. Still though, Aida doesn't seem to mind the whole arrangement, so there's not much else to say."
+    MCT "Well, can't say I'm looking to get into an argument here. Still though, Aida doesn't seem to mind the whole arrangement, so there's not much else to say."
     MC "Well, I don't want to interrupt you two any further. I'll just be on my way then."
     hide WG
     hide PRG
@@ -34029,7 +34031,7 @@ label WG100:
     show WG doubt
     "But by the time I finished assisting Alice with cleaning up the stray dribbles on her chin, Okisho had already devoured hers."
     MCT "Yeesh, don't get your hands close to that maw when she's eating."
-    Okisho "Sooo good. That yoke is the way to go."
+    Okisho "{i}Sooo good{/i}! That yoke is the way to go."
     show WG sly
     WG "Perhaps we'll make a foodie out of you yet then?"
     Okisho "Well, I'm already a fattie, so a foodie wouldn't be much of a leap, but I'm not exactly leaping these days either."
@@ -34101,7 +34103,7 @@ label WG101:
     Okisho "Oh, yeah you're right. We should try the shakes. Where's that waiter lady?"
     "Okisho didn't exactly have a \"volume control\" setting on her voice, so I assumed the waitress heard her."
     Waitress "Oh, looks like we're all just about done here."
-    Waitress "{size=-6}Surprise, surprise... not{/size}"
+    Waitress "{size=-6}Surprise, surprise... not.{/size}"
     Okisho "We want to order some milkshakes."
     Waitress "We have vanilla, chocolate, strawberry, banana, mint, and cookies & cream."
     Okisho "We'll take it. Extra larges please."
@@ -34302,7 +34304,7 @@ label WG101:
     show WG happy
     WG "Easy now. Let me explain."
     show WG haughty
-    WG "This is true, Dear, but it's popular music I don't have a finger on the pulse of. The world of classical music is a different story. An \"Ichia\" album would easily sweep the industry award for classical albums as well as solo performances."
+    WG "This is true, Dear, but it's popular music I don't have a finger on the pulse of. The world of classical music is a different story. An \"Ichia\" album would easily sweep the industry awards for classical albums as well as solo performances."
     WG "It wouldn't necessarily be chart topper over here or in the States, but international sales would be steady and industry accolades would be overwhelming. Plus, I would get to enjoy more \"Ichia\" music. It's a perfect deal."
     show WG neutral
     Okisho "You're probably right about all of that. {w}So what's in it for me if I convince him to hitch up with you?"
@@ -34329,7 +34331,7 @@ label WG101:
     Waitress "Alright, your total comes to ¥90,000. Who's paying?"
     Okisho "¥90,000? I know we both eat like hogs, but {i}damn{/i}."
     Okisho "Oh well. Your time to shine, Moneybags."
-    show WG haughty
+    show WG sly
     WG "Certainly. This is coming out of your sign-on bonus though."
     Okisho "Aw, dammit."
     scene black with dissolve
@@ -34423,7 +34425,7 @@ label WG101:
     Okisho "If you know a dude, don't hold out on me, hook a fat bitch up!"
     MC "We're a rare breed I guess."
     Okisho "I guess. Oh well. I'm sure I'll get lucky one of these days."
-    Okisho "Good luck on architect school, or whatever it was."
+    Okisho "Good luck in architect school, or whatever it was."
     MC "Thanks. I'm sure we'll be running into each other again now that you're on her payroll."
     Okisho "Ugh, don't say it like that!"
     MC "Hehe."
@@ -34433,6 +34435,8 @@ label WG102:
     $setWGOutfit(OutfitEnum.CASUAL)
     $setMCOutfit(OutfitEnum.CASUAL)
     $setPRGOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL)
+    $setPRGSize(2)
     scene Dorm Interior with fade
     play music DormLife
     "I woke up from the light peaking in through my balcony window, the sun finally high enough to let it come beaming down directly on my face."
@@ -34541,10 +34545,12 @@ label WG102:
     PRG "Oh... before I leave."
     "Aida reached into her bag, producing a small box."
     PRG "I... well, I didn't want us to lose touch. After all of this time. We... kind of went through a lot."
+    show WG surprised-2
     "Aida handed Alice the box, which Alice opened, revealing a bright, silver bracelet."
     PRG "There's extra pieces of chain in the bottom, so you can size it however you need to."
     PRG "It's not fancy, but... I hope you like it."
     WG "Aida..."
+    show WG happy
     WG "I... thank you."
     WG "I might need a bit of help putting it on, but... you didn't have to do this."
     PRG "No... I did."
@@ -34555,8 +34561,10 @@ label WG102:
     MC "That'd be amazing, Aida. Thank you."
     "Aida nodded, and embraced me once more, then went to Alice."
     PRG "Thank you both. I'll see you soon."
+    hide PRG with dissolve
     "I watched Aida walk into her old room and, after a moment of adjusting, she was able to stack both boxes so they could fit under her boobs, which she headed out of the room with."
     MC "Well that was an unexpected surprise. Nice to get to see her before heading out."
+    show WG happy at altMove(0.5, 0.5)
     WG "I've been meaning to come visit her, but I wasn't sure how soon is too soon. Sounds like she could still use more time to adjust. Hopefully her family can come visit her soon and stay a little while."
     MC "How's your move coming along?"
     show WG pondering
@@ -34732,7 +34740,7 @@ label WG102:
     "I nodded in response. As much as I wanted to hold onto her for just a little longer, I didn't want to make her late. I had to be content with the fact I had been able to make the most of our last day at Seichou together."
     scene black with fade
     pause .5
-    scene Gate Front
+    scene School Front
     show WG neutral
     with fade
     "We arrived at the front gate shortly after the driver had pulled up. It was one of those black luxury cars that looked normal but was actually armored— and this one must have had one hell of suspension."
@@ -34760,7 +34768,7 @@ label WG102:
     "I stood at the entrance and waved goodbye until her car was out of sight. I thought I was going to have a hard time sleeping that night, but I had something soft and squishy to keep me warm that made it feel a little less lonely..."
     play music Memories
     pause .5
-    scene Ferry
+    scene Dock
     show Tomoko neutral
     with fade
     MC "So what do you think, Tomo?"
@@ -34782,8 +34790,10 @@ label WG102:
 
 label WG103:
     $setProgress("WG", "WG104")
-    $setWGOutfit(OutfitEnum.FORMAL)    
-    $setMCOutfit(OutfitEnum.CASUAL)    
+    $setWGOutfit(OutfitEnum.FORMAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
+    $setBEOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL)
     scene Tokyo Station with fade
     play music Memories
     "And from there things pretty much went like we planned."
@@ -34828,7 +34838,7 @@ label WG103:
     pause .5
     scene Tokyo Restaurant with fade
     play music MC
-    show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
+    show Tomoko neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
     show BE neutral at Position(xcenter=0.8, yalign=1.0)
     show WG neutral behind Tomoko, BE
     with dissolve
@@ -34964,8 +34974,12 @@ label WG103:
 
 label WG103G:
     $setProgress("WG", "WG104")
-    $setWGOutfit(OutfitEnum.FORMAL)   
-    $setMCOutfit(OutfitEnum.CASUAL)  
+    $setWGOutfit(OutfitEnum.FORMAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
+    $setBEOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL)
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setNatsOutfit(OutfitEnum.GYM)
     scene Tokyo Station with fade
     play music Bittersweet
     "I'll admit, when we both started school along with Alice taking on her internship at her father's business, I was worried how much we'd get to see each other."
@@ -35059,7 +35073,7 @@ label WG103G:
     show WG haughty
     WG "Good to know you're running a tight ship here."
     show FMG sad
-    FMG "Man... it was going to be so cool... ."
+    FMG "Man... it was going to be so cool..."
     show FMG happy
     extend " Say, wanna go get ice cream when we're done with the tour?"
     show WG happy
@@ -35069,7 +35083,7 @@ label WG103G:
     pause .5
     play music MomentTime
     scene Tokyo Restaurant with fade
-    show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
+    show Tomoko neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-3)
     show BE neutral at Position(xcenter=0.8, yalign=1.0)
     show WG neutral behind Tomoko, BE
     with dissolve
@@ -35408,7 +35422,7 @@ label WG103B:
     play sound ClockTower
     MCT "Looks like that's my train."
     scene black with fade
-    pause .5
+    pause 2
     $setTime(TimeEnum.NIGHT)
     scene Yokohama HighRise Hallway with fade
     play music Sunset
@@ -35501,7 +35515,7 @@ label WG103B:
     WG "It's not like I can drink enough to even feel tipsy when I'm the size of a fucking cow."
     MC "Touché."
     show WG neutral
-    "I gave my drink a sip. It was quite good, though a little dry for my taste. I couldn't even begin to guess how much it cost"
+    "I gave my drink a sip. It was quite good, though a little dry for my taste. I couldn't even begin to guess how much it cost."
     MC "So let me get this straight. You had me hop on a train halfway across the country under false pretenses because you wanted to \"celebrate\"?"
     show WG sly
     WG "With a bang."
@@ -35545,8 +35559,8 @@ label WG103B:
     jump daymenu
 
 label WG104:
-    "This marks the current end of Alice's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    "This marks the end of Alice's route."
+    "Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well."
     jump daymenu_noadvance
 
 label WGB001:
