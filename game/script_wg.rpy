@@ -422,7 +422,7 @@ label WG004:
     MC "Yup, you got it. So, um... Alice, what brings you into the library so early today?"
     WG "Hm?"
     "Alice looked up again from her work to look at me, clearly not expecting I would continue to try to engage her in conversation after the initial pleasantries."
-    WG "Oh, well normally I would be working on my finances in my room, but I requested Aida to make a particular dish and it proved to be too distracting with the clanging of the pots and pans"
+    WG "Oh, well normally I would be working on my finances in my room, but I requested Aida to make a particular dish and it proved to be too distracting with the clanging of the pots and pans."
     WG "So, I decided this would be a less distracting atmosphere."
     MC "Oh, sorry about that, didn't mean to distract you if you needed the peace and quiet."
     WG "You needn't worry. I would have expressed my wishes for you to sit elsewhere if that were the case."
@@ -768,7 +768,7 @@ label WG006:
     WG "Besides my own skills, I'd like to think I have a natural eye for talent."
     WG "During my time here, I also hope to find a talent or two I could nurture."
     MC "Nurture?"
-    WG "The Nikumarus have a long history of patronage of the arts, one I hope to continue. I hope to get a start on it by finding a budding talent to encourage. Pushing them to refine their art and attain what greatness they were born for."
+    WG "My mother's family has a long history of patronage of the arts, one I hope to continue. I hope to get a start on it by finding a budding talent to encourage. Pushing them to refine their art and attain what greatness they were born for."
     WG "Privilege, after all, comes with the responsibility of helping others."
     MCT "You sound both selfless and selfish when you say that."
     MCT "She's definitely not the easiest person to pin down, that's for sure."
@@ -34434,9 +34434,8 @@ label WG101:
 label WG102:
     $setWGOutfit(OutfitEnum.CASUAL)
     $setMCOutfit(OutfitEnum.CASUAL)
-    $setPRGOutfit(OutfitEnum.CASUAL)
+    $setPRGOutfit(OutfitEnum.ALTERNATE)
     $setTomoOutfit(OutfitEnum.CASUAL)
-    $setPRGSize(2)
     scene Dorm Interior with fade
     play music DormLife
     "I woke up from the light peaking in through my balcony window, the sun finally high enough to let it come beaming down directly on my face."
@@ -35208,8 +35207,8 @@ label WG103G:
 
 label WG103B:
     $setProgress("WG", "WG104")
-    $setWGOutfit(OutfitEnum.FORMAL)  
-    $setMCOutfit(OutfitEnum.CASUAL) 
+    $setWGOutfit(OutfitEnum.FORMAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Tokyo Restaurant with fade
     play music Memories
     "After Seichou, things didn't exactly get easier."
@@ -35782,7 +35781,7 @@ label WGB002:
     MC "Sorry. Not that I want to dance around the obvious, but most people haven't seemed to take the news of their growth so well."
     Okisho "That's understandable, but just because that's their business, doesn't mean I have to make it mine."
     MC "So you don't mind it then?"
-    Okisho "Eh, well it's not like getting fat was on my list of things to do, but it's not the worst thing that could happen to me. I mean yeah, I've always been pretty athletic from playing soccer and volleyball."
+    Okisho "Eh, well it's not like getting fat was on my list of things to do, but it's not the worst thing that could happen to me. I mean yeah, I've always been pretty athletic from playing field hockey and volleyball."
     Okisho "But I never planned on sticking with either after highschool. Music was always the plan."
     Okisho "Besides, it's not like I was ever going to stick with a diet anyway— I love food too much! Only reason I was as thin as I was before the year started was because I was so active." 
     Okisho "From what they told me, trying to diet and exercise isn't going to do anything to slow down the process. So I figure if I'm going to blow-up anyway, why waste any time and energy feeling guilty about it?"
@@ -36092,23 +36091,37 @@ label WGB004:
     "{i}DINN DINNN{/i} followed by a lower {i}DUNN DUNNN{/i} as she shifted her hand over."
     "With a flick of another switch, both these sounds started to repeat on auto loop. It was simple, but still a pretty catchy at the same time."
     Okisho "Then you add the melody."
-    "From here, I could hardly believe my ears. Okisho proceeded to belt it out with a surprisingly soulful and sultry soprano voice I hadn't expected to come out of her as she proceeded to lay down lyrics to the track."
+    "From here, I could hardly believe my ears. Okisho proceeded to belt it out with a surprisingly soulful and sultry alto voice I hadn't expected to come out of her as she proceeded to lay down lyrics to the track."
     Okisho "{cps=15}I'm wondering what you're seeing{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}When I see you look at me{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}Cause I don't see nothing{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}No eyes staring back at me{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}What lies within those eyes{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}Veiled feelings hidden inside{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}I wanna know, what does it mean{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}What do you really think of me{/cps}{nw=.4}"
-
+    pause 0.2
     Okisho "{cps=15}What lies within those eyes{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}Those eyes hidden in disguise{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}I want to know, I'll find some day{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}But for now, it's okay{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}Someday I'll solve this mystery{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}So for now just stay with me{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}One day, I will find{/cps}{nw=.4}"
+    pause 0.2
     Okisho "{cps=15}What lies within those eyes{/cps}{nw=.4}"
     pause 1.5
     play music DormLife
@@ -41286,7 +41299,7 @@ label WGGTS001:
     hide GTS with dissolve
     show WG neutral at Position(xcenter=0.2, yalign=1.0) with move
     WG "As I was saying, before being interrupted, {i}again{/i}, I am sure you will do better, Aida. I understand you are new to this role and do not have the years of professional experience of my usual assistants."
-    WG "Forgetting today's uncharacteristic lapse, your performance has been impressive, admiral even, thus far."
+    WG "Forgetting today's uncharacteristic lapse, your performance has been impressive, admirable even, thus far."
     show PRG neutral
     PRG "T-Thank you, Alice."
     show WG haughty

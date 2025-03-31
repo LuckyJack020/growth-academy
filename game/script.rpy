@@ -392,6 +392,8 @@ init python:
                 continue
             if len(v["girls"]) == 0 or v["girls"][0] != girl:
                 continue
+            if girl in girllist and not isRouteEnabled(girl):
+                continue
             if k in clearedevents:
                 continue
             criteriavalid = checkCriteria(v["conditions"])
@@ -863,11 +865,6 @@ init python:
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
-            
-    def setPRGSize(size):
-        global prgsize
-        if size < 7:
-            prgsize = size
 
     def getTime():
         global gametime
@@ -943,7 +940,7 @@ init python:
         global PRGPrevOutfit
         global PRGNsfwOutfit
         global PRGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
             PRGNsfw = False
             PRGOutfit = o
         elif o == OutfitEnum.NUDE or o == OutfitEnum.TOPLESS:
