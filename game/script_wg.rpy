@@ -7898,6 +7898,7 @@ label WG037:
     #Time: Afternoon
     $setTime(TimeEnum.EVE)
     $setWGOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Gate Front with fade
     "I arrived at the school gate a few minutes before five."
     "Being a little early is better than being on time, and it gave me a chance to calm my nerves before Alice showed up."
@@ -9054,6 +9055,7 @@ label WG041_after_choice1:
     $setTime(TimeEnum.NIGHTLIGHTS)
 
     $setWGOutfit(OutfitEnum.CASUAL2)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Festival with fade
     play music Festival
     "Standing by the brightly illuminated entrance of the carnival, I nervously checked the tickets again and again. The weight of the situation started to hit me— just how much of a gamble did I take by inviting Alice here?"
@@ -9404,6 +9406,7 @@ label WG042:
     $setProgress("WG", "WG043")
     $setTime(TimeEnum.NIGHT)
     $setWGOutfit(OutfitEnum.CASUAL2)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Festival
     show WG neutral
     with fade
@@ -10619,6 +10622,7 @@ label WG045:
     scene black with fade
     pause .5
     $setWGOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Park with fade
     play music ClearSkies
     "Luckily for our date, it turned out to be a surprisingly nice summer day. Clear skies with a nice, gentle breeze coming off the ocean."
@@ -12274,6 +12278,7 @@ label WG048:
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Summer Beach with fade
     $setWGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "The weather here really is amazing, the location is perfect. I can't think of a more pleasant day I have had than today."
     "Gazing upon the azure waters, having tinted to more of a violet from the evening sky, the gently rolling waves made me wonder if this gorgeous day spent with such a beautiful woman had been real, or if I merely found myself in some idyllic surreal fantasy of my own imagination..."
     "I ultimately decided that my imagination was not this good, so it had to have been real."
@@ -12342,6 +12347,7 @@ label WG048_c1_1:
     MC "Sorry to cause concern. Please, lead the way."
     stop music
     $setWGOutfit(OutfitEnum.SUMINT)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Summer Dining Room
     show WG stern at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
@@ -12693,6 +12699,7 @@ label WG049:
 
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
     $setWGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     scene Summer Beach Ocean
     show WG neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
@@ -12957,6 +12964,7 @@ label WG050:
     scene Summer Beach with fade
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
     $setWGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     play music WGAlt
     "When I finally realized I arrived at my destination I began to walk back towards the house."
     "Looking up, I could see the servants were just finishing up setting out a fully catered beachside lunch under the tent. Looks like they had set up a volleyball net at Alice's request as well."
@@ -13148,6 +13156,7 @@ label WG051:
     scene Summer Beach Ocean with fade
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
     $setWGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     play music Beach
     "Whether it was from a food coma, the warm summer sun, or the pent-up exhaustion from the morning's swim, I must have dozed off."
     show WG neutral with dissolve
@@ -13476,6 +13485,7 @@ label WG051_c2:
 label WG052:
     $setProgress("WG", "WG053")
     scene Summer Guest Bedroom with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music Peaceful
     "The early morning sunlight crept through my window, illuminating my room as I checked and rechecked my bags."
     "It was the day of our departure from this summer home. And even though the time here felt short, it felt like Alice and I had grown closer."
@@ -15539,6 +15549,7 @@ label WG057_afterchoice_2:
 label WG058:
     scene Woods with fade
     $setWGOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music HigherEdu
     "The weather has been really nice recently. The scorching summer from our vacation at the beach had faded into a much more temperate fall climate over the island by now."
     "I knew I'd be kicking myself later if I didn't do something to take advantage of the nice weather before winter set in."
@@ -27773,6 +27784,7 @@ label WG085:
 label WG086:
     $setProgress("WG", "WG087")
     $setWGOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm Hallway with dissolve
     play music DormLife
     "I came to pick up Alice for our planned date this afternoon."
@@ -31271,6 +31283,7 @@ label WG005M:
 
 label WG094:
     $setProgress("WG", "WG095")
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene View Point with fade
     play music Beach
     MC "Ahh, what a nice day."
@@ -32584,6 +32597,8 @@ label WG096:
 
 label WG097:
     $setProgress("WG", "WG098")
+    $setWGOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music MomentTime
     scene Town
     show WG doubt
@@ -33451,6 +33466,7 @@ label WG099:
     WG "First. {w}Your clothes. {w}Off."
     MC "Yes ma'am."
     WG "That's what I like to hear."
+    $setMCOutfit(OutfitEnum.NUDE)
     MC "Check. Done."
     WG "Second. {w}I'm hungry. {w}There's a dessert in the bottom of the fridge Sakura made with Aida's help. {w}I didn't have time or the room to spare in my dress prior to the concert, but I'd like to have it now."
     show WG sly
@@ -33718,6 +33734,7 @@ label WG100:
     $setProgress("WG", "WG101")
     $setWGOutfit(OutfitEnum.CASUAL)
     $setOkishoOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Town Shops with fade
     play music ClearSkies
     MC "It was nice of Okisho to invite us out to lunch. Can't say I ever expected the two of you would ever want to hang out together outside of school."
@@ -34046,6 +34063,7 @@ label WG101:
     $setProgress("WG", "WG102")
     $setWGOutfit(OutfitEnum.CASUAL)
     $setOkishoOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music MomentTime
     scene Diner
     show WG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
