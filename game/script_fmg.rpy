@@ -22269,6 +22269,7 @@ label FMG094:
 
 label FMG095:
     $setProgress ("FMG", "FMG096")
+    play music MomentTime
     scene Dorm FMG with fade
     MC "Nice day out, you wanna go for a walk?"
     show FMG neutral with dissolve
@@ -22290,7 +22291,10 @@ label FMG095:
     FMG "Maybe I want to look big and sexy as I smash nightstands with my bare hands? Who are you to judge? Let a girl live!"
     MC "Sassy as always."
     FMG "Okay! I'm ready."
+    $setFMGOutfit(OutfitEnum.UNDERWEAR)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     #show cg
+    show FMG neutral with dissolve
     FMG "Are you ready for me, little man? You look so cute down there."
     MC "..."
     pause 2
@@ -22348,7 +22352,10 @@ label FMG095:
     MC "Two-"
     "*Click*"
     MC "Three."
+    hide FMG with dissolve
     "*Click*"
+    $setFMGOutfit(OutfitEnum.NUDE)
+    show FMG neutral with dissolve
     "And with that, her bra fell down, unleashing her bosom in front of me as I started to massage each breast, my thumbs moving her nips in circles as I did."
     FMG "Oooh shit... haa... Kei~"
     MC "Mmm..."
@@ -22580,6 +22587,7 @@ label FMG096:
     MCT "You two are crazy..."
     FMG "Enough about that for now, she should be around the corner here."
     play sound Thud
+    play music Memories
     show FMG neutral at altMove(0.5, 0.25)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "And there was Nat... covered in cuts and bruises..."
@@ -22634,7 +22642,7 @@ label FMG096:
     Natsuko "During my parents' anniversary, we were on the road driving home and we were hit by another car...  {w}We spun off the road and crashed."
     "Natsuko paused, taking a few deep breaths in an attempt to calm herself down."
     Natsuko "I had blacked out upon impact, when I came to my senses I was in a hospital bed with my mother standing over my bed, holding my hand."
-    Natsuko "The very first thing I said was where was dad... {w}and she gave no answer.{w}She just cried... and so did I... and that's the only honest answer I ever got..."
+    Natsuko "The very first thing I said was where was dad... {w}and she gave no answer.{w} She just cried... and so did I... and that's the only honest answer I ever got..."
     "Natsuko clenched her fist..."
     Natsuko "..."
     "And in a sudden flurry, repeatedly punched the ground— breaking open cracks throughout it, ignoring her own tears."
@@ -22668,6 +22676,7 @@ label FMG096:
     Natsuko "My apologies, I don't hug people."
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     FMG "Wow, is that what it's like when you let me hug you?"
     MC "Yep. Just like that."
     MC "Actually, probably much worse since at least she's almost your size."
