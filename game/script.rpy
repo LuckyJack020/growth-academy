@@ -142,6 +142,7 @@ init python:
         'dormexterior': ("school", (820,375)),
         'dormhallway': ("school", (870,250)),
         'dorminterior': ("school", (890,390)),
+        'dormtomoko': ("school", (870, 260)),
         'facultyroom': ("school", (590,590)),
         'festival': ("town", (500,700)),
         'field': ("town", (500,700)),

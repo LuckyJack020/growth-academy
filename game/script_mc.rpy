@@ -7579,7 +7579,7 @@ label MC012:
     BE "I wonder what Tashi-sensei is gonna do without us!"
     AE "Finally get a good night's sleep?"
     MC "He's a teacher. We both know that's not possible."
-    MC "True, I guess. Tashi-sensei is a bit of a lost cause"
+    AE "True, I guess. Tashi-sensei is a bit of a lost cause"
     BE "I don't know what would make him happy. I've never seen him smile."
     MC "Maybe because when you see him, that means you're there."
     show BE wink

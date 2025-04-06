@@ -18647,6 +18647,7 @@ label WG062_C1_after:
     show Kokutan neutral at Transform(xzoom=-1, yalign=1.0) with easeinleft
     BE "Kokutan!?"
     "Standing up to dust herself off, the mysterious stranger had revealed herself."
+    Kokutan "Ah, yes, it is I!"
     if isEventCleared("MC023") or getFlag("Meet_Kokutan"):
         "Ah yes indeed. I recognized Honoka's odd duck roommate. I had run into her before. Her manner of dress was already enough to tell you that she was a little \"different\"."
         "My unexpected introduction to her that one day did nothing to dispel that impression either."
@@ -34174,7 +34175,7 @@ label WG101:
             WG "No, but I can't say I've ever seen him try to dissuade me from indulging."
     Okisho "Man, I could use a guy like that to help me out." 
     show WG surprised-2
-    "Now that I think about it, is that why you're so much fatter than me?"
+    Okisho "Now that I think about it, is that why you're so much fatter than me?"
     show WG stern
     WG "Ahem."
     show WG haughty
@@ -35100,7 +35101,7 @@ label WG103G:
     pause .5
     play music MomentTime
     scene Tokyo Restaurant with fade
-    show Tomoko neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-3)
+    show Tomoko neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
     show BE neutral at Position(xcenter=0.8, yalign=1.0)
     show WG neutral behind Tomoko, BE
     with dissolve
@@ -40560,7 +40561,7 @@ label WGFMG004B:
     Hidaka "All good choices, then again, I may be biased, ohoho! I'll get those right out."
     pause .5
     "It didn't take long for the old man to bring out the soba bowls. I'm assuming most everything was ready to go except to throw the fresh soba noodles into scalding hot water for a quick cook."
-    Hidaka "Beef soba bowl you sir, and two family specials for our two hungry ladies. Enjoy!"
+    Hidaka "Beef soba bowl for you sir, and two family specials for our two hungry ladies. Enjoy!"
     FMG "It looks amazing! Thank you Hidaka-san!"
     Hidaka "My pleasure."
     WG "Mmm, it smells delightful."
