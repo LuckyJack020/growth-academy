@@ -28499,7 +28499,7 @@ label WG087:
     PRG "I... kind of thought he would come back. It's common in these kinds of movies. But... that's still so heartwarming..."
     WG "Like he told her, \"Death cannot stop true love.\""
     "The hero dispatched the bandits to run away with the princess, only to be caught by the prince, who made no distinction between the hero and the bandits, who sought to have him executed on the spot."
-    "In exchange for not harming him, the princess agrees to return with the prince... who unbeknownst to her, immediately breaks the promise by jailing and torchering the guy."
+    "In exchange for not harming him, the princess agrees to return with the prince... who unbeknownst to her, immediately breaks the promise by jailing and torturing the guy."
     PRG "They were so close... just let them be happy..."
     WG "He saved her, now she saved him. Sometimes just knowing the person you love is alright is enough, even if you can't be with each other."
     show PRG insecure
@@ -34036,20 +34036,20 @@ label WG100:
     Okisho "..."
     "Okisho dug in with a big bite, only to pause staring out into space like she was seeing into the future..."
     show WG bored
-    extend " with yoke dribbling down her chin, much to Alice's disgust."
+    extend " with yolk dribbling down her chin, much to Alice's disgust."
     MC "You uh, okay there, Okisho?"
     show WG neutral
     Okisho "It's... It's {i}so{/i} damn good! Why have I not had this before?"
     show WG surprised-2
     WG "You haven't?"
     show WG happy 
-    extend " You've been missing out then. A properly cooked fried egg allows for the runny yoke to serve as its own sauce for the dish. They did an exceptional job of cooking it to the perfect consistency here."
-    "I turned to grab Alice some extra napkins to deal with the yoke situation."
+    extend " You've been missing out then. A properly cooked fried egg allows for the runny yolk to serve as its own sauce for the dish. They did an exceptional job of cooking it to the perfect consistency here."
+    "I turned to grab Alice some extra napkins to deal with the yolk situation."
     WG "Thank you, Dear."
     show WG doubt
     "But by the time I finished assisting Alice with cleaning up the stray dribbles on her chin, Okisho had already devoured hers."
     MCT "Yeesh, don't get your hands close to that maw when she's eating."
-    Okisho "{i}Sooo good{/i}! That yoke is the way to go."
+    Okisho "{i}Sooo good{/i}! That yolk is the way to go."
     show WG sly
     WG "Perhaps we'll make a foodie out of you yet then?"
     Okisho "Well, I'm already a fattie, so a foodie wouldn't be much of a leap, but I'm not exactly leaping these days either."
@@ -34751,7 +34751,7 @@ label WG102:
     show WG neutral
     WG "{i}Sigh{/i}... Looks like they're ready."
     WG "Hello?"
-    "ReinaCell" "Your ride to the airport is on its way Miss Nikumaru. Your belongings are packed up and ready to ship out as well."
+    "Reina" "{i}Your ride to the airport is on its way Miss Nikumaru. Your belongings are packed up and ready to ship out as well.{/i}"
     WG "Thank you Reina, we'll be there shortly."
     show WG neutral-2
     WG "Looks like it's time."
@@ -34798,7 +34798,7 @@ label WG102:
     "Tomoko was never one for many words, but sometimes, a few words was all that was needed."
     MC "Strange... but in a good way."
     MC "Yeah. I like that."
-    if checkAffection("WG", ">", 85) and getVar("BEP") < 2 and isEventCleared("WGGTS001") and isEventCleared("WGGTS002") and isEventCleared("WGGTS003") and isEventCleared("WGGTS004") and isEventCleared("WGGTS005") and isEventCleared("WGBE001")  and isEventCleared("WGBE002") and isEventCleared("WGBE003") and isEventCleared("WGBE004A") and isEventCleared("WGBE004B") and isEventCleared("WGBE005") and isEventCleared("WGAE001") and isEventCleared("WGFMG001") and isEventCleared("WGFMG002") and isEventCleared("WGFMG003") and isEventCleared("WGFMG004A") and isEventCleared("WGFMG004B") and isEventCleared("WGFMG005") and isEventCleared("FMGWG001") and isEventCleared("WGM001") and isEventCleared("WGM001") and isEventCleared("WGM002") and isEventCleared("WGM003") and isEventCleared("WGM004") and isEventCleared("WGM005") and isEventCleared("WG009") and isEventCleared("WG011") and isEventCleared("WG013") and isEventCleared("WG014") and isEventCleared("WG017") and isEventCleared("WG018") and isEventCleared("WG021") and isEventCleared("WG023") and isEventCleared("WG032") and isEventCleared("WG058") and isEventCleared("WG065") and isEventCleared("WG083"):
+    if checkAffection("WG", ">", 85) and getVar("BEP") < 2 and isEventCleared("WGGTS001") and isEventCleared("WGGTS002") and isEventCleared("WGGTS003") and isEventCleared("WGGTS004") and isEventCleared("WGGTS005") and isEventCleared("WGBE001")  and isEventCleared("WGBE002") and isEventCleared("WGBE003") and isEventCleared("WGBE004A") and isEventCleared("WGBE004B") and isEventCleared("WGBE005") and isEventCleared("WGAE001") and isEventCleared("WGFMG001") and isEventCleared("WGFMG002") and isEventCleared("WGFMG003") and isEventCleared("WGFMG004A") and isEventCleared("WGFMG004B") and isEventCleared("WGFMG005") and isEventCleared("FMGWG001") and isEventCleared("WG001M") and isEventCleared("WG002M") and isEventCleared("WG003M") and isEventCleared("WG004M") and isEventCleared("WG005M") and isEventCleared("WG009") and isEventCleared("WG011") and isEventCleared("WG013") and isEventCleared("WG014") and isEventCleared("WG017") and isEventCleared("WG018") and isEventCleared("WG021") and isEventCleared("WG023") and isEventCleared("WG032") and isEventCleared("WG058") and isEventCleared("WG065") and isEventCleared("WG083"):
         $setProgress("WG", "WG103G")
     elif checkAffection("WG", "<", 36) or getVar("BEP") > 7:
         $setProgress("WG", "WG103B")
@@ -34907,7 +34907,7 @@ label WG103:
     "Things would sometimes get hectic, balancing all the irons in the fire Alice had going with her fulltime work, school and business ventures."
     "Reina" "I assure you the catering is not excessive for the number of people present for the studio sessions. Please have it prepared per the order you received..."
     show Okisho neutral with dissolve
-    Okisho "Yo, Alice. You made it. You gotta hear the latest mix. Between Icherio, Botan, and I we got a full orchestra effect going for his latest album. {w}Take a listen."
+    Okisho "Yo, Alice. You made it. You gotta hear the latest mix. Between Ichiro, Botan, and I we got a full orchestra effect going for his latest album. {w}Take a listen."
     show Okisho neutral at altMove(0.25, 0.75) behind WG
     show WG surprised-2 at Position(xcenter=0.25, yalign=1.0) with easeinleft
     pause 1
@@ -34941,7 +34941,7 @@ label WG103:
     show Vivian neutral at Position(xcenter=0.8, yalign=1.0)
     show WG happy behind Daitaro, Vivian
     with dissolve
-    "And with that said, I'm pleased to announce your promotion as the new Regional Director of the Asian-Pacific Region of the Nikumaru corporation. Congratulations, my Little Princess."
+    Daitaro "And with that said, I'm pleased to announce your promotion as the new Regional Director of the Asian-Pacific Region of the Nikumaru corporation. Congratulations, my Little Princess."
     show WG stern
     WG "Father! What did I tell you about using that name in the office!?"
     show WG happy
@@ -35108,7 +35108,7 @@ label WG103G:
     "And of course keeping in touch with Honoka or Tomo whenever we could swing by, though the two of them together was another story...."
     WG "And how has your JSL training been going, Tomo?"
     Tomoko "Not too much more left. It's bullshit though because I'm already fluent now, but I'm excited to be almost done."
-    BE "Ah, don't be so down, you'd almost out of the woods."
+    BE "Ah, don't be so down, you're almost out of the woods."
     show BE happy 
     BE "Tell you what, I'll throw a party for you when you finish! I mean, what else are friends for?"
     show BE angry
@@ -35176,7 +35176,7 @@ label WG103G:
     show WG happy behind Daitaro, Vivian
     with dissolve
     Daitaro "And with that said, I'm sad to see the departure of our Director of Domestic Business Development depart from the company..."
-    "But I'm even more proud of her for starting her brand new venture: Nikumaru-Hotsure Hospitality Holding Company!"
+    extend " But I'm even more proud of her for starting her brand new venture: Nikumaru-Hotsure Hospitality Holding Company!"
     "{i}*Applause*{/i}"
     Daitaro "My Little Princess is all grown up now, off and starting a business of her own. I'm so proud of you!"
     show WG stern
