@@ -20547,7 +20547,8 @@ label FMG092:
 
     scene Lockers with fade
     play music FMG
-    $setFMGOutfit(OutfitEnum.GYM)
+    $setFMGOutfit(OutfitEnum.UNDERWEAR)
+    $setNatsOutfit(OutfitEnum.UNDERWEAR)
     MC "We've barely been here for ten minutes and both of you are already flexing in front of the mirrors..."
     show FMG flex at Position(xcenter=0.25, yalign=1.0)
     show Natsuko flex at Position(xcenter=0.75, yalign=1.0)
