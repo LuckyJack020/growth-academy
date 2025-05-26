@@ -688,6 +688,28 @@ init python:
     )
     ost.manualDefineList.append(theme_ChS)
 
+    theme_PnP = ost.soundtrack(
+        name = "Plug and Play",
+        path = "Audio/BGM/PlugAndPlay.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Arcade Antics",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_PnP)
+
+    theme_RgN = ost.soundtrack(
+        name = "Reignition",
+        path = "Audio/BGM/Reignition.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Not Down Yet",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_RgN)
+
     ## Base Template
     ######################################
 
