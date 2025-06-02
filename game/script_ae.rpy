@@ -5,7 +5,7 @@ label AE001:
     "Even though a few hours had passed, what Tashi-sensei said was still ringing in my head. I wasn't completely sure how to process what had been going on, but I was worried to say the least."
     "I grabbed a chair, sat down at the table and, resting my head on my hands, I let out a long sigh."
     MC "Well, I never got anywhere by just moping... right?"
-    AE "{i}Ahem{/i}"
+    UNKNOWN "{i}Ahem{/i}"
     MC "Eh?"
     "I looked over to the table adjacent, where I saw Shiori-san flipping through the pages of a large book."
     play music HigherEdu
@@ -414,12 +414,12 @@ label AE004:
     $setTimeFlag("testday")
     scene Dorm Interior with fade
     play music Rain
-    "I slipped my shoes on as my mind began to mull over the incident in the hall the other day, it was strange, but honestly I just felt a bit ticked off about the whole thing." #Splitted the line up in 2 -Auctus
+    "I slipped my shoes on as my mind began to mull over the incident in the hall the other day, it was strange, but honestly I just felt a bit ticked off about the whole thing."
     "Was it because they were bad mouthing someone I knew, was it because it was just blatant disrespect towards someone who seems like they work hard? Either way, I was annoyed enough by the whole thing that I now had a big problem on my hands."
     MCT "I can't believe I forgot to get a new notebook!"
     "The notebook that I had been mulling around with yesterday lay in the bin next to my bed. It was old and used up in the first place, but it didn't help that I used it as a factory for miniature planes."
     MC "Okay, so if I rush, I can get to the store in time to get a new one, get back, and start writing my homework down."
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     "I opened the door quickly, and began to head out. If it weren't for my reflexes, I would have ran head first into Shiori-san, hand prepped to knock on the door. I jumped a bit, and took a step back."
     show AE surprised at center with dissolve
     MC "Uwa! S-sorry, Shiori-san! I was just heading out, I didn't mean to startle you."
@@ -701,6 +701,7 @@ label AE005_after:
 
 label AE006:
     scene Hallway with fade
+    $setTime(TimeEnum.RAIN)
     play music Rain
     "The soles of my shoes made a loud, squeaky, and wet patter as I walked down the hall, drenched with the torrential downpour from outside."
     MC "Ugh, why does it always have to rain on days that look sunny in the morning? I'm soaked!"
@@ -770,6 +771,9 @@ label AE006:
     show AE neutral-annoyed
     AE "Just don't make too much of a ruckus."
     "Shiori-san and I walked into the library and over to the door of the office. She pulled out a key from her pack and unlocked the door, flicking on the lights as she entered the room."
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.NIGHTLIGHTS)
     scene Office
     show AE neutral
     with fade
@@ -848,6 +852,9 @@ label AE006:
             show AE happy
             AE "However... I will say, I appreciate your interest in our work."
             AE "Please, have a good day, Hotsure-san."
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.RAIN)
     scene Hallway with fade
     stop music
     "As I left the library, I gazed out the window. The rain had passed into to a soft drizzle on the horizon as the sun's golden rays began to peek through the clouds."
@@ -2966,6 +2973,8 @@ label AE018:
     MC "Oh, you wanted to go to the roof?"
     AE "Mhm. It's nice up here. Not a lot of people, nice, cool air, and a great view."
     MC "All right, cool."
+    if not getFlag("VisitedRoof"):
+        $setFlag("VisitedRoof")
     scene Roof with fade
     "Shiori-san opened the doors, and a nice gust of air swept into the doorway."
     "It was fairly strong, and almost instantly as the wind picked up, Shiori-san's skirt was lifted a few inches as well; giving me a brief view of her behind, squeezed tightly by white panties, before she pulled her skirt back down."
@@ -3933,7 +3942,7 @@ label AE022:
     hide HR with dissolve
     "The class went by as I simply sat there and listened, the seeds of what I had sown being put into action all the meanwhile."
     scene black with fade
-    "Last night."
+    "{font=gui/Caveat-Bold.ttf}{size=*2}Last night.{/size}{/font}"
     scene Dorm Interior
     show RM neutral
     with fade
@@ -4952,6 +4961,7 @@ label AE025:
 label AE026:
     $setProgress("AE", "AE027")
     scene black
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     play sound AlarmClock
     scene Dorm Interior with fade
     "I awoke to the sound of my alarm clock buzzing it's shrill beeps as my eyes fluttered slowly open."
@@ -4970,6 +4980,7 @@ label AE026:
     MC "Aagn, damnit. Do you think I have time for-"
     RM "I get to class via air duct and I'm still gonna cut it close; you don't have time for nothin'."
     MCT "Ech, hair's gonna get all matted. Whatever, I'll deal with it later."
+    $setMCOutfit(OutfitEnum.DEFAULT)
     "I rubbed my eyes with my thumb and middle finger before sluggishly pulling myself off of bed and pulling on my uniform, laid out as I usually have it at the end of the bed."
     "I pulled the pants on first and then the button up came next. A warm smile came to my face as I recounted my wonderful sleep."
     MC "I had this... amazing dream last night."
@@ -5058,7 +5069,7 @@ label AE026:
     MC "Sounds good."
     "I looked her in the eyes, and she looked back with a deep, yet calm and serene gaze. The two of us walked into the hallway together, us standing side to side as we walked."
     "Or, at least as side to side as her massive rear would allow."
-    scene School Inner
+    scene HallwayStairs
     show AE sad
     with fade
     AE "Hotsure-san, I'd like to start off by apologizing for this morning."
@@ -5588,8 +5599,9 @@ label AE028:
     show AE happy
     AE "My thoughts exactly."
     "I smiled at her warmly. It was nice to see her so friendly and relaxed... at least as far as relaxed can be for her."
-    scene black with fade
+    scene HallwayStairs with fade
     "We walked together towards the staircase. As we walked, we discussed many different topics. How our days went, how we're doing in class, and of course, the different tasks Shiori-chan had to carry out as class president."
+    scene Roof Entrance with fade
     "I followed her lead up the stairs; taking the admitted glance every once in a while. Her skirt had recently begun to ride up even further, signifying that she'd been growing a lot recently."
     "I looked to my own hair and began to lightly pet it. Shiori-chan opened the door and we stepped out into the light."
     scene Roof
@@ -7153,7 +7165,7 @@ label AE034:
     "I heard the sound of footsteps and then the click of the door unlocking as she opened the door a crack."
     show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Tomoko "Hm? What's up, bro?"
-    "Tomo's hair reached down to her calves at this point, her silken ebony locks swaying with even the gentlest touch of the wind. Her bangs covered but one eye."
+    "Tomo's hair reached down to her calves at this point, her silken brown locks swaying with even the gentlest touch of the wind. Her bangs covered but one eye."
     MCT "Her depth perception must be terrible. I can't understand how anyone sees so easily with their hair in the way..."
     MC "Hi, Tomo. Me and my... friend wanted to talk."
     AE "May we come in, please?"
@@ -7678,7 +7690,7 @@ label AE036:
 label AE037:
     $setFlag("XX37")
     $setProgress("AE", "AE038")
-    $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL3)
     scene School Front with fade
     #BIRD CHIRPING SFX
     play music Peaceful
@@ -7808,7 +7820,7 @@ label AE037_c1_after:
     MC "Thanks."
     "We continued on, and after walking for a little bit more, we'd reached the town."
 
-    scene Town
+    scene Town Street
     show AE neutral
     with fade
     play music BrightLights
@@ -7935,6 +7947,7 @@ label AE037_c2_2:
     jump AE037_c2_after
 
 label AE037_c2_after:
+    $setTime(TimeEnum.EVE)
     scene Hill Road
     show AE neutral
     with fade
@@ -8005,6 +8018,7 @@ label AE037_c2_after:
 label AE038:
     $setProgress("AE", "AE039")
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Hill Road
     show AE neutral
     with fade
@@ -8031,7 +8045,7 @@ label AE038:
     MC "...Hm... yeah."
     scene black with fade
     "We continued to walk, and eventually we reached the town."
-    scene Town
+    scene Town Shops
     show AE neutral
     with fade
     play music BrightLights
@@ -8241,20 +8255,19 @@ label AE038:
 label AE039:
     $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE040")
-    scene Town
+    $setMCOutfit(OutfitEnum.CASUAL2)
+    scene Town Shops
     show AE neutral
     with fade
     play music BrightLights
     "As Shiori-chan and I walked through town, the murmur of bustling crowds and the gentle rumble of vehicles permeated the air, giving me a distinct feeling of nostalgia for home."
-    #%If the area hasn't been seen before%
-    "We explored the town like usual, however today we found ourselves in a new area; one with tall apartment complexes, brand name stores, and plenty of motorbikes and cars going to and fro."
-    #%If the area has been seen before%
-    ##Today, I decided to take Shiori-chan to a new part of town for her; the commercial area. I was worried at first, but she actually seemed to not mind all the people.#
-    "Despite the crowds, Shiori-chan seemed calm and composed, staying as close as her behind would allow to me while taking in the sights and sounds around her."
-    #%If this area hasn't been seen before%
-    MC "Look at this place! I'd never expect something like this from the island."
-    #%If this area has been seen before%
-    #MC "What do ya think? Not expecting all this from our little island, huh?
+    if isEventCleared("MC014"):
+        "Today, I decided to take Shiori-chan to a new part of town for her; the commercial area. I was worried at first, but she actually seemed to not mind all the people."
+        "Despite the crowds, Shiori-chan seemed calm and composed, staying as close as her behind would allow me while taking in the sights and sounds around her."
+        MC "Look at this place! I'd never expect something like this from the island."
+    else:
+        "We explored the town like usual, however today we found ourselves in a new area; one with tall apartment complexes, brand name stores, and plenty of motorbikes and cars going to and fro."
+        MC "What do ya think? Not expecting all this from our little island, huh?"
     AE "Well, it makes sense. If there's a sustained community here, there has to be somewhere for the people to stay."
     MC "Yeah, I guess so. Still feels nice to have somewhere that feels like home, though."
     "Rounding a street corner, we made it to the main strip of the commercial area."
@@ -8271,7 +8284,11 @@ label AE039:
     show AE surprised
     AE "That store... across the street."
     "Craning my neck to see further, I noticed a store with a purple and yellow awning, the characters for \"Amatsu Game Store\" on the window pane. Shiori-chan turned around after addressing it to me."
-    MC "Amatsu? Never heard of it."
+    if isEventCleared("MC014"):
+        "Oh, Tomo bought Wyrm's Pursuit here."
+        MC "Amatsu?"
+    else:
+	    MC "Amatsu? Never heard of it."
     show AE happy
     AE "Aha, that's... it's an old store from my childhood."
     MC "Huh? Wait, really?"
@@ -8295,6 +8312,8 @@ label AE039:
     "Taking her hand, we waited at the stop light to cross before getting to the front of the store. I held it open and motioned for her to go in first."
 
     scene Game Store with fade
+    if not getFlag("VisitedGameStore"):
+	    $setFlag("VisitedGameStore")
     "As we entered the building, a strange smell of cheap cinnamon-apple air freshener and dust permeated the air. Behind glass displays, miniature soldiers and creatures were painted a variety of vibrant colors with precise detail."
     "Along the walls, wooden shelves contained a plethora of shrink wrapped books and board games, some in Japanese, but a majority having logos in what appeared to be English."
     "While I was taking in the sights, Shiori-chan looked around, the nostalgia creeping in."
@@ -8448,11 +8467,15 @@ label AE039:
     jump daymenu
 
 label AE040:
-    $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE041")
-    scene Dorm Exterior with fade
-    play music Schoolday
-    "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomo, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
+    $setMCOutfit(OutfitEnum.CASUAL2)
+	$setTomoOutfit(OutfitEnum.CASUAL)
+	$setTakoOutfit(OutfitEnum.CASUAL)
+	$setYukiOutfit(OutfitEnum.CASUAL)
+    scene Dorm Hallway with fade
+    play music Dorm Life
+    "As I exited the room, my eyes adjusted to the bright light on the hallway. I'd spent some of the afternoon with Tomo, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
+    scene Dorm Entrance with fade
     show Yuki neutral at Position(xcenter=0.25, yanchor=1.0)
     show Tomoko neutral at Position(xcenter=0.75, yanchor=1.0)
     with dissolve
@@ -8561,13 +8584,14 @@ label AE040:
         MC "NAH, Nahg. It's fahn... I'm... ah..."
         MCT "Those panties... are mine..."
 
-    #SCENE STORE FRONT/STREET
-    scene Town
+    $setTime(TimeEnum.EVE)
+    scene Town Street
     show AE sad
     with fade
     play music BrightLights
     "I traveled through the mountains high and the valleys green, through the streets paved with cobble and stone."
     "Indeed, there have been many men who have done so for the sake of booty, yay. But nary a man to do so for the promise of panties. This is my creed."
+    scene Town Bus with dissolve
     MC "Okay. Hah... hah... here we are."
     AE "N-no... pah... r-running in... ugh..."
     "We stopped to catch our breath, the amount of time it likely would have taken us just to walk spent resting my arm on Shiori-chan's hip as she panted away. We composed ourselves, and after a verbal thrashing to me, Shiori-chan calmed down."
@@ -8795,7 +8819,7 @@ label AE041:
     MC "Understood."
     stop music
 
-    scene Town with fade
+    scene Town Bus with fade
     play music BrightLights
     "We exited the school, went through the valley, and made our way to the commercial district. The closer I got, the more amped I became."
     "After spending all night reading up on the rules and watching games online, I'd become more motivated than ever to win. My soul felt like it was on fire as I experienced a surge of energy like I never had before."
@@ -8949,6 +8973,8 @@ label AE041_c1_after:
 label AE042:
     $setProgress("AE", "AE043")
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL)
+	$setTakoOutfit(OutfitEnum.CASUAL)
     scene Game Store with fade
     #STORE BELL SFX
     play music Tension
@@ -9131,7 +9157,7 @@ label AE042:
 
     scene black with fade
     "We walked back to the school, and as we did, Shiori-chan made sure to keep me close. Call it a hunch, but I feel as if that victory may have made us closer... somehow?"
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     "We got to the dorms just in time, the sun nearly sunk into the horizon, orange light shining through the windows in the hall. We stopped just short of Shiori-chan's door, and the anticipation finally kicked in."
     MC "Sooo, Shiori-chan?"
     show AE neutral with dissolve
@@ -9214,10 +9240,12 @@ label AE042:
 label AE043:
     $setProgress("AE", "AE044")
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL3)
     scene Town with fade
     play music Rain
     "As we walked through town, the bright afternoon sun shone only in short rays as silver clouds rolled in and filled the air with the rain's fragrance."
-    #RAIN SFX
+    show rain with dissolve
+    play sound MidRainAmbience
     show AE neutral with dissolve
     "Shiori-chan, ever vigilant of the weather, had brought her umbrella along in anticipation, a large school-regulated tent of a thing."
     "A side effect of her giant umbrella being able to cover her front to back, however, was that it could me alongside her, as I'd forgotten mine."
@@ -9461,6 +9489,7 @@ label AE043:
 label AE044:
     $setProgress("AE", "AE045")
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     #BIRD SFX
     "Entering the courtyard, I took a look around for Shiori-chan, who I'd promised to meet with for another afternoon out on the town."
@@ -9916,7 +9945,8 @@ label AE045:
 label AE046:
     $setProgress("AE", "AE047")
     $setTime(TimeEnum.EVE)
-    scene Dorm Exterior with fade #girl's dorm
+    $setMCOutfit(OutfitEnum.CASUAL)
+    scene Dorm Hallway with fade #girl's dorm
     play music Rain
     play sound Knock
     "I knocked on Shiori-chan's door, and then waited with my hands in my pockets."
@@ -10723,7 +10753,9 @@ label AE048:
 label AE049:
     $setProgress("AE", "AE050")
     $setTime(TimeEnum.EVE)
-    scene Dorm Exterior with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
+	$setTakoOutfit(OutfitEnum.CASUAL)
+    scene Dorm Hallway with fade
     play sound Knock
     MC "Shiori-chan, it's me. Can you open up?"
     "Shiori-chan had been acting strange recently, and it left me worried and confused. Up until the other day, I'd felt we'd been getting closer. But after that kiss..."
@@ -10994,13 +11026,15 @@ label AE050:
     "Silently, I crept through the room as to not wake Daichi. I reached the door, slowly unlocking and opening it to the darkness of the empty hall. I turned around once more to ensure that Daichi wasn't watching."
     MCT "If whatever is going on is important enough to warrant Shiori-chan asking me to break the rules, then I think this should be private."
 
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     "I stepped out of the room and closed the door behind me. With no hallway monitor out and about, all I needed to do was make sure that I didn't wake any of the other students or on site faculty."
     #FOOTSTEP SFX
+    scene Dorm Exterior with fade
     "Though it was dark, the moonlight from the windows was able to guide me well enough through the hallways. It took some time, but eventually I made my way to the girls dorm."
 
-    scene Dorm Exterior with fade #girl's dorms
+    scene Dorm Entrance with fade
     "As I entered the main hallway of the dorms, I began to tread even more lightly. Getting caught here after hours would be disastrous."
+    scene Dorm Hallway with fade
     "Finally, I managed to climb the stairs and reach the top floor. I made my way over to her door at the end of the hall. With the back of my knuckles, I made the lightest knock I could muster."
     MC "Shiori-chan, you awake?"
     "I spoke lightly as to not alert anyone, but after a minute or so of no response, I was worried she hadn't heard me."
@@ -11366,6 +11400,8 @@ label AE050_after3:
     "The first."
     "The second."
     "And the third."
+    $setAEOutfit(OutfitEnum.NUDE)
+	$setMCOutfit(OutfitEnum.NUDE)
     "Shiori-chan put her arms out as my heart pounded in my chest. I pulled her bra away and got a look at her cute tits."
     "They weren't big, but they were sure as hell beautiful. I watched her chest as she began to breath deep."
     MC "Wow."
@@ -12039,7 +12075,7 @@ label AE052:
 label AE053:
     $setProgress("AE", "AE054")
     $setTime(TimeEnum.EVE)
-    scene Town with fade
+    scene Town Shops with fade
     $setMCOutfit(OutfitEnum.CASUAL)
     play music Busy
     AE "Are you sure you know where it is?"
@@ -12058,7 +12094,7 @@ label AE053:
     MC "Eheh, eh... sorry bout that. I'll, put \"clothing stores\" into my phone."
     MC "Let's see here..."
     MC "Ah, here we go!"
-    MC "\"Radiant Raiment (Placeholder name), clothing for ladies and gentlemen of all sizes\", cool. I'll put this into the map-"
+    MC "\"Bountiful Boutique, clothing for ladies and gentlemen of all sizes\", cool. I'll put this into the map-"
     MC "Aaand it's right around this corner."
     show AE surprised
     AE "W-Wait, really?"
@@ -12311,6 +12347,7 @@ label AE053_c1_2:
 label AE053_c1_after:
     AE "..."
     WG "Come now, don't be so bashful. You {i}did{/i} ask me to find you something."
+    #$setAEOutfit(OutfitEnum.ALTERNATE)
     AE "I... you're right. I trust your judgment."
     WG "Well, then, off to the dressing room with you!"
     "Shiori nodded, as she handed me her prized headband, letting her hair down and walked into the dressing room."
@@ -12406,16 +12443,15 @@ label AE053_c1_after:
     WG "Now, I'd also like to make a purchase-"
     "As we walked out of the door, I looked at Nikumaru-san to see her put a red basket on the counter."
 
-    scene Town
-    show AE sad
-    with fade
+    scene Town Shops with fade
+    show AE sad with dissolve
     AE "So... about my... panic attack."
     MC "No need to explain. I think I understand."
     AE "..."
     show AE smile
     AE "Thanks."
 
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     MC "So, can you do lunch tomorrow?"
     show AE smile with dissolve
     AE "Definitely. Schedule's free."
@@ -12747,6 +12783,7 @@ label AE054:
 label AE055:
     $setTime(TimeEnum.EVE)
     $setAEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     $setProgress("AE", "AE056")
     scene Hill Road
     show AE happy
@@ -13210,6 +13247,7 @@ label AE056_c1_after:
     play music Steamy
     #NSFW: short(?)
     "As we sat together on the edge of her bed, her demeanor seemed to change, she pushed into me more forcefully as we sat down, her hips spilling over the top of mine and pushing into my side."
+    #$setAEOutfit(OutfitEnum.ALTERNATE) 
     "As we kissed, I took off her headband and placed it amongst her books, causing her raven black hair to fall loosely in front of her glasses before she sweeped one side of her locks behind her ear."
     "As my hands rode gingerly up her skirt, I reared my hands back and gave a hearty slap to her sizable rear."
     "{i}SMACK{/i}"
@@ -13228,6 +13266,7 @@ label AE056_c1_after:
     Tako "H-WOAH MY GOD-!"
     show AE surprised at Position(xcenter=0.75, yanchor=1.0)
     AE "Eek!"
+    $setTakoOutfit(OutfitEnum.ALTERNATE)
     "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling off of me hurriedly."
     MC "Woah, shit!"
     "Tako turned her head and covered her face with her hand."
@@ -13238,12 +13277,13 @@ label AE056_c1_after:
     show AE embarrassed
     AE "A- I- Um-!"
     "Shiori stammered as she shakily adjusted her skirt and bent over to pick up her headband off of the ground."
+    #$setAEOutfit(OutfitEnum.DEFAULT)
     show Tako neutral
     Tako "Yo, like, you can continue if you need, but I got an exam goin' on tomorrow, man."
     AE "No, no, K-Keisuke and I were just about to leave."
     "I nodded wordlessly and stroked my long, brown locks in embarrassment. Shiori grabbed my hand and led me out of the room past Tako as she pursed her lips, held open the door for Shiori, and closed the door behind herself."
 
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     play music HigherEdu
     MC "Well... damn."
     show AE sad with dissolve
@@ -14143,6 +14183,7 @@ label AE060:
     MCT "I lov-"
     "{i}CREAK{/i}"
     stop music
+    $setTakoOutfit(OutfitEnum.ALTERNATE)
     show Tako confused
     Tako "WOAH, SHIT!"
     show AE surprised at Position(xcenter=0.25, yanchor=1.0)
@@ -14172,7 +14213,7 @@ label AE060:
     MC "Yep, yep."
     "We made our way past Yureno-san, whose massive hips proved to be a bit of trouble to get past at first; eventually leading us to the outside as we shut the door."
 
-    scene Dorm Exterior
+    scene Dorm Hallway
     show AE angry
     with fade
     play music HigherEdu
@@ -14575,6 +14616,7 @@ label AE062:
     "Shiori leaned in, brushed my hair out of my eyes, and pecked me on the forehead."
 
     scene School Front with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     MCT "\"Go ahead of me and get a table early. Need a bit of time.\""
     "I stared at the text as I waited out by the gate."
     MCT "Huh. Wonder what happened. Work?"
@@ -14584,6 +14626,7 @@ label AE062:
 
     scene Restaurant with fade
     $setAEOutfit(OutfitEnum.DRESS)
+    $setBEOutfit(OutfitEnum.CASUAL)
     play music Busy
     Waitress "Welcome!"
     MC "Table for two, please. Booth, um... extra wide, if possible."
@@ -15852,7 +15895,7 @@ label AE066_c1_after:
 
 label AE067:
     $setProgress("AE", "AE068")
-    scene black with fade
+    scene Roof Entrance with fade
     "Once again, as usual, where we'd usually meet up during the day, I'd completely lost track of Shiori. However, this time around, I had a strong feeling I knew exactly where she was."
     scene Roof with fade
     "I opened the door to the rooftop from the stairwell as a deep orange light bathed the concrete walls around me."
@@ -16318,7 +16361,10 @@ label AE069:
     Tako "Hell, at first I thought it was your dandruff!"
     "Small flakes of pristine white snow gently cascaded to the ground, which itself had become covered in a thin white sheet since class had started."
     Ryoko "Seems kinda early in the year for it, but hey, looks pretty enough!"
-    "I turned to see Ryoko walking towards me with Shiori in tow. I straightened up and nodded towards the two."
+    if isEventCleared("GTS011") or isEventCleared("GTS011B") or isEventCleared("RM007") or isEventCleared("MC021"):
+        "I turned to see Ryoko walking towards me with Shiori in tow. I straightened up and nodded towards the two."
+    else:
+        "I turned to see Tanaka-san walking towards me with Shiori in tow. I straightened up and nodded towards the two."
     hide Tako with dissolve
     show Ryoko camera at Position(xcenter=0.3, yalign=1.0)
     show AE neutral at Position(xcenter=0.7, yalign=1.0)
@@ -16332,7 +16378,10 @@ label AE069:
     show AE embarrassed:
         ease 0.8 xpos 0.5
     AE "Wuh-ah-!"
-    "With that, Tako gave a thumbs up and a quick wink before following Ryoko on her way out, leaving Shiori and I alone."
+    if isEventCleared("GTS011") or isEventCleared("GTS011B") or isEventCleared("RM007") or isEventCleared("MC021"):
+        "With that, Tako gave a thumbs up and a quick wink before following Ryoko on her way out, leaving Shiori and I alone."
+    else:
+        "With that, Tako gave a thumbs up and a quick wink before following Tanaka-san on her way out, leaving Shiori and I alone."
     MC "Practice?"
     AE "U-Um, yeah."
     MC "What for?"
@@ -16838,7 +16887,7 @@ label AE072:
     $setProgress("AE", "AE073")
     scene Frozen Beach with fade
     play music Peaceful
-    "As we made our way down the hillside towards the docks, I walked slowly in front of Shiori as she took slow, deliberate steps so as not to fall."
+    "As we made our way down the hillside towards Beachside Village, I walked slowly in front of Shiori as she took slow, deliberate steps so as not to fall."
     show AE neutral with dissolve
     AE "Careful not to slip on any ice."
     MC "I know, I know! You don-"
@@ -17730,11 +17779,12 @@ label AE076_c1_fail:
     AE "Gch... d-don't run in the halls."
     "I wasn't sure if that was a legitimate warning, or some sort of sick humor, but either way I wasn't listening."
 
-    scene School Exterior with fade
+    scene Gym with fade
     MCT "Where is she, where is she?!"
     "I had to find her. She's the only one that could help that I knew."
     "As I frantically, looked, however, it seemed as though luck was on my side."
     MC "HEEEY!!!"
+    $setFMGOutfit(OutfitEnum.GYM)
     show FMG neutral with dissolve
     FMG "Eeeeh?"
     if checkAffection("FMG", ">", 10): #>30%
@@ -18176,6 +18226,7 @@ label AE077:
 
 label AE078:
     $setProgress("AE", "AE079")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     $setTime(TimeEnum.NIGHT)
     scene black with fade
     MCT "..."
@@ -18189,9 +18240,9 @@ label AE078:
     "{i}Klk!{/i}"
     MC "Ach."
     "I squinted as I had to let my eyes adjust to the sudden burst of light from the screen, each blink stinging as I looked to find two messages awaiting me. My eyes adjusted to the screen as my thumb tapped on the message box and lingered for a moment."
-    "<Apologies, but I'm currently unable to enter my room. I just left the physical therapy building.>" #Should we create an AECell for stuff like this?
+    AECell "<Apologies, but I'm currently unable to enter my room. I just left the physical therapy building.>"
     "Exhaling through my nose, I stumbled out of bed and threw on the pair of clothes I dropped onto the floor, and headed out."
-
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm Exterior with fade
     "I walked through the hallway and out the door, exiting to the dark campus. The cool wind hit my face as my hair began to whip about wildly. I exhaled through tight lips as I walked about."
     MC "Pfffhaaa..."
@@ -18199,6 +18250,7 @@ label AE078:
     "Though it was still about an hour and a half off until sunrise began, the smell of morning dew began to permeate the air."
     MCT "I guess Shiori-san... the door and... mngh..."
     "At this time of night, even forming a coherent thought was like a distant hope. The school lights had all been turned off, and the silence was penetrated only by the sound of the industrial heater on the roof whirring away as it warmed its sleeping occupants."
+    scene Dorm Entrance with fade
     "After a good bit of walking, flanked on all sides by the tall facades of the dorm buildings, I headed over to the women's dorm, only to see a familiar face awaiting me right at the entrance."
     MC "Hey."
     show AE sad with dissolve
@@ -18214,6 +18266,7 @@ label AE078:
     MC "C'mon, did you plan on sleeping in the office? Let's go to my room. It's warm."
     show AE neutral
     AE "Ghn... alright."
+    scene Dorm Exterior with fade
     "As we walked toward the other side of the building towards the entrance of the men's dorm, for the first time I noticed Shiori shivering; something I never thought I'd see."
     MC "Well, at the very least you shouldn't mind the temp, right?"
     AE "What on earth are you saying? It's brick outside."
@@ -19819,7 +19872,7 @@ label AE086:
         jump AE086_ending
 
 label AE086B:
-    scene Library with fade
+    scene Info Desk with fade
     play music HigherEdu
     "Something was fundamentally wrong with Shiori, I could feel it. Something deeper than just her anxieties about her growth."
     "As much as it pained me to think, something that I alone couldn't help her with."
@@ -20524,8 +20577,9 @@ label AE090:
     "Everyone else began to shuffle in, and the weekend had certainly changed quite a bit, it seemed, as the time away almost visibly made everyone look much bigger."
     show BE sad
     "I looked up towards Shiori's empty seat as Honoka walked over with a worried look."
-    BE "...Shii-chan isn't here today?"
+    BE "...Shiori-chan isn't here today?"
     MC "Uh... n-no, she asked for some time out of class."
+    BE "Is she alright?"
     "As I brought it up, I heard Yamazaki-san's voice come from the monitor."
     show GTS_S neutral:
         alpha 0.0
@@ -20582,7 +20636,6 @@ label AE090:
     FMG "Extra movement won't hurt none."
     show WG surprised-2
     "Nikumaru-san seemed flabbergasted as Mizutani-san stood up next."
-    GTS_S "I am already doing so."
     hide FMG
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     PRG "I... I suppose I haven't really sat down yet, so..."
@@ -21979,6 +22032,7 @@ label AE095G:
     scene black with fade
     pause 0.5
     $setTime(TimeEnum.NIGHT)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Dock with fade
     "*DING*"
     "The small chime sounded to signify that the ferry was ready to leave. We stood there in the dock, the cool wind causing our breath to mist from our mouths as our hearts fluttered in our chests."
@@ -21989,7 +22043,7 @@ label AE095G:
     AE "Goodbye for now, Seichou..."
     "As the ferry drove out into the dark sea, it's crested waves illuminated by the pale moonli-"
     AE "Did you remember to file your RW2-Section 8 form?"
-    scene black with fade
+    scene Ferry with fade
     MC "..."
     MC "Shit."
     "An extra 30 minutes was added to our time after Shiori requested for the ferry to turn around."
@@ -22117,6 +22171,7 @@ label AE096G:
     $setProgress("AE", "AE097G")
     #Terminal Sound
     "Attention: The train will be arriving at the Tokyo metropolitan station in three minutes. Please prepare to depart to the terminal in an orderly fashion"
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Tokyo Train with fade
     "The bright, white light of the snow came in from the window of our train terminal. When we entered it this morning, it was pretty spacious, and Shiori-chan thankfully grabbed a few seats before it began to fill up."
     MC "Hey."
@@ -22289,6 +22344,7 @@ label AE096G:
 
 label AE097:
     $setTime(TimeEnum.NIGHT)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "..."
     "..."
     "..."
@@ -22420,6 +22476,7 @@ label AE097_c2_5:
 
 label AE097G:
     $setProgress("AE", "AE098G")
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Tokyo House Exterior with fade
     "Nestled deep in the hills and valleys on the north end of the city, I walked ahead a few feet of Shiori as we walked towards my neighborhood."
     "There, sitting quietly nestled on the hill at the inclined road, cars still parked in the driveway and lights on in the living room, was my home."
@@ -22748,6 +22805,7 @@ label AE097G:
 
 label AE098:
     $setProgress("AE", "AE099")
+    $setTakoOutfit(OutfitEnum.ALTERNATE)
     scene Dorm Hallway with fade
     play music Memories
     play sound Knock
@@ -22925,6 +22983,7 @@ label AE098:
 
 label AE098G:
     $setProgress("AE", "AE099G")
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music AE
     scene Tokyo with fade
     "It wasn't long before we reached our destination, the deep golden sunset dancing across the vibrant waves of the sea before us, beating on behind the facade of a large, crumbling ruin of a boarded up apartment block."
@@ -23531,11 +23590,14 @@ label AE098G:
 
 label AE098D:
     $setProgress("AE", "AE099D")
+    $setMCOutfit(OutfitEnum.FORMAL)
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     $setTime(TimeEnum.NIGHT)
+    "{font=gui/Caveat-Bold.ttf}{size=*2}7 Years Later{/size}{/font}"
+    MCT "..."
+    scene Tokyo with fade
     MCT "..."
     MCT "Man, can tonight get any more boring?"
-    scene Tokyo with fade
     #City SFX
     Coworker "Naaa, Hotsure-san, what's with that look on your face?"
     play music DayByDay
@@ -23900,6 +23962,7 @@ label AE098D:
     MC "I want to motorboat that fat money maker you got."
     show AE neutral-smug
     AE "Oooo, kinky!~ Ehehe!~"
+    $setMCOutfit(OutfitEnum.NUDE)
     "With that, after a bit of maneuvering, I took my shirt off and laid down on the bed, Shiori sitting on my chest, a few inches from my face. She was heavy, but thankfully I'd been working out for a while."
     show AE happy
     "Wrapping both of her gigantic buttcheeks in my arms, I borrowed my head between them, pushing past her thong as I let myself be wedged between her cheeks."
@@ -24237,6 +24300,7 @@ label AE099:
     AE "I want to show you my resolve."
     #(Fade to black for now. Will have sex CGs in the future)
     scene black with fade
+    $setMCOutfit(OutfitEnum.NUDE)
     #CG 1 goes here (Shiori taking off skirt)
     MC "Huh?"
     AE "I have been so long afraid of this..."
@@ -24278,7 +24342,7 @@ label AE099G:
     $setProgress("AE", "AE100G")
     scene Tokyo with fade
     play music Bittersweet
-
+    $setMCOutfit(OutfitEnum.CASUAL)
     "The deep night washed over Tokyo like waves from the ocean; before the night could even settle in, the light shone bright from the countless lights of the city. The scenery itself would almost be breathtaking..."
     "If that was at all where our mindset was."
     show AE sad with dissolve
@@ -24410,7 +24474,7 @@ label AE099G:
     MC "Alright. Come on. Already checked in; room is on the twentieth floor."
     scene black with fade
     "I put the card key in the reader, and after a beep and a click, the door opened to our room..."
-    scene Tokyo
+    scene Tokyo Hotel Room
     show AE surprised
     with fade
     "The student special."
@@ -24531,6 +24595,7 @@ label AE099G:
     AE "Keisuke... get undressed."
     MC "H-Huh?"
     "I was so lost in the moment I could hardly register what she was saying, and yet still, she stood up, legs shaking, as she slowly began to take off her clothes, neatly folding them with the utmost care."
+    $setMCOutfit(OutfitEnum.NUDE)
     "I, on the other hand, still had my heart racing as I threw off my clothes, sitting further back on the bed... and yet..."
     "For a moment of clarity, my reason returned to me as I contemplated what Shiori had said earlier in the heat of making love, short though it was."
     MC "Hey, Shiori..."
@@ -24580,6 +24645,7 @@ label AE099D:
     $setProgress("AE", "AE100D")
     $ globalsize = 4
     $setAEOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     "..."
     "..."
     AE "Mmn."
@@ -24602,6 +24668,7 @@ label AE099D:
     scene black with fade
     pause 1
     $setSize(6)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
     play music Sunset
     scene Tokyo MC Apartment
@@ -24641,6 +24708,7 @@ label AE099D:
     AE "Hold up, lemme grab some gum. Then I can explain a bit more."
     MC "Huh? Oh, okay, sure."
     show AE neutral-2
+    $setMCOutfit(OutfitEnum.CASUAL2)
     "Shiori stood up and reached for her purse, myself standing to put on my pants. Grabbing her pack, it looked more like an old-time cigarette case, gold and expensive. But when she opened it up, inside were several rows of bubblegum."
     show AE neutral
     AE "Chewing gum always helps me take the edge off."
@@ -24837,6 +24905,7 @@ label AE099D:
     Receptionist "... Wow..."
     scene black with fade
     pause 1
+    $setMCOutfit(OutfitEnum.FORMAL)
     scene Tokyo Restaurant with fade
     "I sat there, kind of nervous as I looked around. What would Shiori wear? Would she get stares? Would the owners call us out and boot us? Was the receptionist from earlier staring at Shiori's ass? Why was she blushing? Is that why she said she'd be quiet?"
     "All these thoughts rushed through my head as, after a moment, I heard the door to the restaurant open. With a sigh I turned around and..."
@@ -25195,12 +25264,15 @@ label AE100:
     MCT "I still don't completely understand her. Her desire to be a hardass, her cold shell, her stoic and orderly nature— {w}to think it's all just her in her natural state is so odd."
     MCT "But still."
     MCT "Even if she does want to keep the outside world out... I'm happy I can stay inside with her."
+    scene black with fade
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}"THE END"{/size}{/font}"
     jump daymenu
 
 label AE100G:
     $setProgress("AE", "AE101")
+    $setMCOutfit(OutfitEnum.FORMAL)
     play music MC
-    "7 Years Later"
+    "{font=gui/Caveat-Bold.ttf}{size=*2}7 Years Later{/size}{/font}"
     scene Tokyo with fade
     UNKNOWN "Oooy, Hotsure-san!"
     MC "Hm?"
@@ -25519,13 +25591,14 @@ label AE100G:
     "She grabbed it."
     "And pulled me in."
     scene black with fade
-    "THE END"
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}"THE END"{/size}{/font}"
     jump daymenu
 
 label AE100D:
     $setProgress("AE", "AE101")
     scene Tokyo MC Apartment with fade
     $setAEOutfit(OutfitEnum.EPILOGUEBAD)
+    $setMCOutfit(OutfitEnum.FORMAL)
     "Wobbelz 'd Azz"
     MCT "Search."
     play music Sunset
@@ -25815,6 +25888,7 @@ label AE100D:
     "Gazing into each other's eyes, we leaned in for a kiss."
     "There was no frenzied passion, no lustful groping... just us. Just the feeling of deep love we shared. For seven years we'd been apart, and this moment felt like light breaking through a fog which filled the hollow void."
     "It was sublime."
+    $setMCOutfit(OutfitEnum.NUDE)
     "Without thinking, I began to unbutton my shirt as Shiori took a step back, sitting on the bed as it gave a heavy groan from the sheer size of her. With each button I undid, she watched me with intent."
     "Wordlessly, she leaned back a bit as I unzipped my pants. I looked to her, and she simply smiled and nodded as she motioned with her fingernails. I exhaled out my nose with a smile, knowing exactly what she meant."
     "Getting on my knees, I reached her heels, slowly taking them off one after another. Then, I reached up and rolled down her fishnet stockings. Looking up at her, I moved forward and reached for her hands, which she stretched out to me."
@@ -25852,7 +25926,7 @@ label AE100D:
     "This was destiny."
     "This moment together."
     scene black with fade
-    "THE END"
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}"THE END"{/size}{/font}"
     jump daymenu
 
 label AE101:
@@ -25862,6 +25936,10 @@ label AE101:
 
 label AEBE004:
     play music BE
+    $setBEOutfit(OutfitEnum.CASUAL)
+	$setMCOutfit(OutfitEnum.CASUAL)
+	if isEventCleared("AE053"):
+    	$setAEOutfit(OutfitEnum.CASUAL)
     scene Festival
     show BE surprised
     with fade

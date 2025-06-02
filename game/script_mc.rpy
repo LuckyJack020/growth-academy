@@ -2820,8 +2820,23 @@ label MC005:
     $setTime(TimeEnum.NIGHT)
     show dummy with dissolve
     "..."
+    if isEventCleared("RM002"):
+        play music RM
+        "..."
+        show RM concerned-2 at offscreenright
+        show RM concerned-2 at altMove(1.5, 0.5)
+        pause 1.5
+        show RM concerned-2 at Transform(xzoom=-1)
+        show RM smug
+        "..."
+        show RM smug at Transform(xzoom=1)
+        show RM smug at offscreenleft with move
+        hide RM
+        pause 1
+        stop music
     scene black with fade
     $setTime(TimeEnum.DAY)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     pause 1
 
     scene Bathroom with fade
@@ -2865,6 +2880,7 @@ label MC005:
         MCCell "Yep. You texted it to me awhile ago."
     TomokoCell "K"
     "I set my phone down and started finishing getting dressed. That was about as solid of a yes as one could get out of Tomo."
+    $setMCOutfit(OutfitEnum.CASUAL)
     "It was kind of nice not having to be anywhere at a specific time for a little bit. Classes weren't exactly difficult, of course, but the whole \"being up at X time\" got real old real fast."
     scene Dorm Exterior with fade
     MC "Damn. Nice day out."
@@ -3087,6 +3103,7 @@ label MC005:
     scene Campus Center with fade
     "I'd never really been the biggest expert on the day, but just as it was with the other days of Golden Week, it was a remembrance holiday."
     "As such, I was doing my remembering by walking around campus and taking it all in. Admiring the foliage and whatnot."
+    play music RMInvestigate
     UNKNOWN "Psst."
     pause .5
     MCT "What..."
@@ -3107,7 +3124,9 @@ label MC005:
     hide RM with dissolve
     MC "... Nevermind."
     MCT "God, that guy is a damn wild card. What has he even been doing the last few days?"
+    stop music
     pause .5
+    play music Schoolday
     MCT "Anyway... speaking of, what do I want to do today?"
     "I walked further along, admiring the foliage as I went along."
     MCT "God, Tomo would hate today. An entire day about the world outside. Her own personal hell."
@@ -8610,6 +8629,7 @@ label MC013_AE:
     show AE neutral
     AE "Hahh..."
     MC "Well, I'd best be on my way as well. Thank you for the chat."
+    $setAffection("AE", 1)
     show AE pondering
     AE "Best of luck on your exam, Hotsure-san."
     "I headed back away from them down the hall again."

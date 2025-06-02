@@ -28,6 +28,8 @@ label BE001:
     "But, eventually, I found what I was looking for. Without even checking my surroundings to see if I was being watched, I turned the knob and walked up the steps into the warm sunny sky above."
     scene Roof Entrance with fade
     MC "Fantastic. It was a long shot, but I figured they'd forget to lock the roof entrance while they were busy setting up the welcoming assembly."
+    if not getFlag("VisitedRoof"):
+        $setFlag("VisitedRoof")
     scene Roof with fade
     MC "Wow, from up here the school really looks huge. I guess it has to be big if they only put a few students in each classroom."
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
@@ -940,6 +942,7 @@ label BE008:
     $setProgress("BE", "BE009")
     scene Dorm Interior with fade
     play music HigherEdu
+    $setMCOutfit(OutfitEnum.CASUAL2)
     "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water."
     "Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
     "I had barely gotten started when the door knocked. Daichi was out, so I figured he'd simply forgotten his key."
@@ -1531,6 +1534,7 @@ label BE011_c3:
 label BE012:
     $setFlag("XX12")
     $setProgress("BE", "BE014")
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     play music Busy
     "It was sometimes a bit annoying to track down Honoka when I wanted to find her. She was never really the type to have a regular hangout spot."
@@ -1656,6 +1660,7 @@ label BE012:
             jump daymenu
 
 label BE013:
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Arcade with fade
     play music Busy
     "After the devastating loss I suffered at Honoka's skilled hands, I needed something simpler. Preferably something where she wouldn't destroy me. Which likely meant a game that wasn't even competitive."
@@ -1691,6 +1696,8 @@ label BE013:
     BE "Sure! Bet I'll beat your score at least three times over."
     "At this point I didn't doubt she would. But she tilted her head as we approached the table."
     BE "Oh snap, Koneko! Hey, wassup!"
+    if not getFlag("Meet_Koneko"):
+        $setFlag("Meet_Koneko")
     "Honoka dashed over to a darker-skinned girl and threw herself into a strong hug that squeezed the blonde tight and made it look like her spine was about to snap."
     Koneko "Oof, like, what are you doing here, Honoka?"
     BE "I'm hanging out with Kei-chan. Kei-chan, this is Koneko, she's in the soccer club."
@@ -2072,6 +2079,8 @@ label BE016:
 
 label BE017:
     $setProgress("BE", "BE018")
+    $setBEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Arcade
     show BE happy
     with fade
@@ -2777,9 +2786,11 @@ label BE020_c1_3:
     jump BE020_c1_after
 
 label BE020_c1_after:
-    scene School Front with fade
+    scene Dorm Interior with fade
     stop music
+    $setMCOutfit(OutfitEnum.FORMAL)
     "After I got back to my dorm room, I decided on what to wear. Honoka and I decided to wear something nicer than normal, so I pulled out a charcoal gray button-up shirt with some black slacks. Simple, but effective."
+    scene School Front with fade
     play music Rain
     "I went to the bus stop to meet Honoka after checking over my appearance multiple times. I even asked Daichi for an appearance check. Not sure why I was feeling so nervous about how I looked, this was Honoka after all."
     "When I got to the bus stop, she was already waiting when I arrived."
@@ -3045,6 +3056,7 @@ label BE020_c2_2:
 label BE021:
     $setProgress("BE", "BE022")
     $setBEOutfit(OutfitEnum.ATHLETIC)
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     scene Woods
     show BE happy
     with fade
@@ -3079,6 +3091,8 @@ label BE021:
     UNKNOWN "Affirmative."
     MC "Fair enough. Could we at least know your name first?"
     Haruhiro "Haruhiro Haganeya. Leader of the Seichou Archery Club. I-"
+    if not getFlag("Meet_Haruhiro"):
+        $setFlag("Meet_Haruhiro")
     BE "Yeah, yeah, we got it."
     stop music
     Haruhiro "Hmph."
@@ -4583,10 +4597,10 @@ label BE025_c2_after:
     jump daymenu
 
 label BE026:
-    #Setting: Field or Flowery Area
     $setProgress("BE", "BE027")
     $setBEOutfit(OutfitEnum.CASUAL)
-    scene Field
+    $setMCOutfit(OutfitEnum.CASUAL2)
+    scene Flower Clearing
     show BE happy
     with fade
     play music HigherEdu
@@ -7218,6 +7232,8 @@ label BE037:
         $setProgress("BE", "BE038A")
     elif getFlag("BE_SOFTBALL"):
         $setProgress("BE", "BE038B")
+    $setBEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Lake Road
     show BE happy
     with fade
@@ -7878,6 +7894,7 @@ label BE042:
     "When Honoka invited me over, I wasn't sure what to expect anymore. Granted I had learned by now that trying to guess what Honoka had planned was foolish."
     play sound Knock
     $setBEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Dorm BE
     show BE happy
     with fade
@@ -8432,6 +8449,7 @@ label BE044:
     scene School Front with fade
     play music Busy
     $setBEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     MCT "Finally. The promised day."
     "It's been a few days since Honoka and I went swimsuit shopping. After yesterday's... cleanup job, Honoka reminded me about the beach trip."
     "Honoka and I had just gotten off the phone with each other, agreeing to meet up at the bus stop."
@@ -8616,6 +8634,7 @@ label BE044:
     MC "Baugh?! H-Hey!"
     BE "We can't wait, Kei-chan! Water will clear your head!"
     "I dropped my bag to the sand as she plowed ahead to the water."
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     pause .25
     "{i}SPLOOOSH!!{/i}"
     pause .5
@@ -9483,6 +9502,8 @@ label BE046:
 
 label BE047:
     $setProgress("BE", "BE048")
+    $setMCOutfit(OutfitEnum.CASUAL)
+    $setBEOutfit(OutfitEnum.CASUAL)
     scene Bus Interior
     show BE neutral
     with fade
@@ -9573,6 +9594,7 @@ label BE047:
     MCT "Damnit..."
     MC "G-Good. Carry on then."
     "As I shimmied my shirt off and hopped out of my uniform pants all in one move, I felt a tap on my arm."
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     show BE sad
     BE "Umm, Kei-chan? Mind giving me a hand here?"
     "Honoka motioned to her prominent bosom. Specifically over the row of buttons down the middle of her shirt."
@@ -9896,6 +9918,7 @@ label BE048:
     $setProgress("BE", "BE049")
     $setTime(TimeEnum.DAY)
     $setBEOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     scene Waterpark with fade
     play music Beach
     "Honoka, Kanami and I strolled through the water park. Honoka patted her belly. She turned to Kanami and I, close behind, flashed a smile and gave Kanami a thumbs up."
@@ -10393,6 +10416,7 @@ label BE048_afterChoice1:
     pause .5
     $setTime(TimeEnum.EVE)
     $setBEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
 
     scene Town Bus
     show BE neutral at Position(xcenter=0.25, yalign=1.0)
@@ -10563,6 +10587,7 @@ label BE049:
     BECell "Hah! Tell me something I don't know."
     scene black with fade
 
+    $setMCOutfit(OutfitEnum.CASUAL)
     "I changed out of my school clothes and into shorts, a t-shirt and outdoor shoes. I got my backpack out from under my bed and filled it with basic supplies. Then I heated some frozen onigiri and ate it on my way out."
     "The temperature had dropped a notch in the evening, thankfully, but the air was still muggy. I would be sweating again soon."
     scene Dorm Exterior with fade
@@ -11233,6 +11258,7 @@ label BE049_C2_3:
     jump BE049_C2_menu
 
 label BE049_C2_after:
+    $setMCOutfit(OutfitEnum.NUDE)
     "I tossed off my shirt and slipped out of my pants. The turn things took with Honoka had bent down my full-mast erection. I was semi-hard at best."
     "But anyhow, my boner was not the thing to worry about right now."
     "Honoka needed attention."
@@ -11503,6 +11529,7 @@ label BE049_C2_after:
 label BE050:
     $setProgress("BE", "BE051")
     $setTimeFlag("size4")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     MCT "Screw off, sun. I'm not ready to get up..."
     "My body was exhausted after last night. I was roused from my slumber by the sound of running water and a loud..."
     #play sound shower
@@ -11565,6 +11592,7 @@ label BE050:
     MCCell "<On my way.>"
     "I sent a quick reply to Honoka and combed my hair tidy with my fingers."
     MC "No time for a trim."
+    $setMCOutfit(OutfitEnum.DEFAULT)
     "I gathered my clothes and got dressed. Before I could leave, I looked again at the bathroom."
     MCT "I can't leave it like this."
     "I mopped up the excess water on the floor and took some extra time to rearrange the knocked over bottles of... girl stuff."
@@ -13062,6 +13090,7 @@ label BE054:
     scene Pool with fade
     $setBEOutfit(OutfitEnum.SWIM)
     $setWGOutfit(OutfitEnum.SWIM)
+    $setMCOutfit(OutfitEnum.SWIM)
     play music Peaceful
     MC "Are you sure you want to do this?"
     show BE smug with dissolve
@@ -14849,6 +14878,11 @@ label BEGTS001:
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
         $setFlag("BEGTS001_TomFix")
+    $setMCOutfit(OutfitEnum.CASUAL)
+    if getSize() <= 2:
+        $setBEOutfit(OutfitEnum.DRESS)
+    else:
+        $setBEOutfit(OutfitEnum.CASUAL)
     "I walked out of my dorm to get some fresh air. The sun was hanging just above the horizon, tinting the sky in a vibrant orange."
     "I pulled my arms back, then folded my hands together while rotating my neck slowly to give my body a good stretch. I had been sitting down so long during my lectures, I had become stiff."
     "Afterward, I checked my phone for any new messages. There was a single unread text from Honoka."
@@ -15019,6 +15053,9 @@ label BEGTS002:
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
         $setFlag("BEGTS002_TomFix")
+    $setMCOutfit(OutfitEnum.CASUAL)
+    $setBEOutfit(OutfitEnum.CASUAL)
+    $setGTSOutfit(OutfitEnum.CASUAL)
     play music Peaceful
     "The weekend had arrived, and I found myself sitting outside my dorm room just as the sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
     "Unless I actively make plans with someone else, I'll usually just browse the internet, watch videos, or play games. Daichi usually has something to stream, so I'll occasionally peek in and watch what he's watching."
@@ -15119,7 +15156,7 @@ label BEGTS002:
     BE "Right behind ya!"
 
     scene Night Sky with fade
-    "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just past the entrance to the GTS dorm, so the walk only took us a few minutes."
+    "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just past the entrance to the giant's dorms, so the walk only took us a few minutes."
     if not isEventCleared("GTS020"):
         "Naomi struggled to find the correct pace to her strides. Due to her immense height, she needed to stop in her tracks every time she outpaced us."
         "She swayed idly on her heels as she waited for Honoka and I to catch up. It looked like she clearly didn't intend to walk so fast. Her strides just naturally took her further."
@@ -15296,7 +15333,7 @@ label BEGTS003:
     "After tapping her pointer to send the message, she became awash with happiness only seconds later. I wondered what could have been sent to make her so happy and blush-filled."
     show BE happy
     "She turned towards me after reading the message, waving me closer to the table."
-    BE "Oh! Hey, Kei-kun!"
+    BE "Oh! Hey, Kei-chan!"
     MC "Hi, Honoka."
     BE "I don't usually see you here after school. Are you following me?"
     "She punctuated her words with a sarcastic, sing-song tone."
@@ -15345,7 +15382,7 @@ label BEGTS003:
     show BE embarrassed
     BE "All the time! I'll be sitting in my dorm room, and she'll just be... there, waving at me from the 2nd story window!"
     show BE happy
-    BE "C'mon, Kei-kun. She's not gonna crawl into the building, so let's go meet her outside~"
+    BE "C'mon, Kei-chan. She's not gonna crawl into the building, so let's go meet her outside~"
     hide BE with dissolve
     "I let out a quiet laugh as Honoka walked towards the exit."
     MC "All right."
@@ -15390,7 +15427,7 @@ label BEGTS003:
     GTS "You showed me what it was like to go to an arcade."
     MC "Honoka dragged you there in my place?"
     show BE angry
-    BE "Your place is still reserved, Kei-kun. I've just added someone to keep my other shoulder company~"
+    BE "Your place is still reserved, Kei-chan. I've just added someone to keep my other shoulder company~"
     show GTS unique-2
     GTS "I'm afraid your shoulder is far too low, Inoue-chan. Would you prefer that I rest my elbow on your head instead?"
     MCT "I'd like to see that, actually..."
@@ -15419,7 +15456,7 @@ label BEGTS003:
     BE "They're probably still open. Do you wanna head out?"
     show GTS happy
     if getRoutelock() == "GTS":
-        GTS "As long as Kei-kun is okay with having you here too~"
+        GTS "As long as Kei-chan is okay with having you here too~"
         MC "I've known Honoka for a long time. It'll be fine having all three of us."
     elif getRoutelock() == "BE":
         GTS "As long as you don't feel that I'm not a third wheel. I know you two are an item~"
@@ -15466,7 +15503,7 @@ label BEGTS003:
     "Naomi ducked underneath a neon sign mounted to the wall when entering the alley, then contorted herself under the heating ducts mounted to the alley walls."
     show BE happy
     "By the time we had all reached the storefront, Naomi was bracing her hands near the overhead heating ducts while craning her body downward. Honoka stood next to me, smiling innocently."
-    BE "Would you mind heading inside, Kei-kun? You know, because..."
+    BE "Would you mind heading inside, Kei-chan? You know, because..."
     MC "No problem. What are we getting?"
     "Honoka pulled out a pile of yen coins from a small bag. Naomi did the same from her purse."
     GTS "This should cover the cost, I feel."
@@ -15516,7 +15553,7 @@ label BEGTS003:
     GTS "I insist. Allow me to carry it all."
     "A heavy, looming aura could be felt from Naomi as she craned her posture slightly lower to look at the two of us. A smile could be seen as she enveloped Honoka and I in her presence."
     show BE shrug
-    BE "Sounds like she means business, Kei-kun."
+    BE "Sounds like she means business, Kei-chan."
     MC "Hah... all right, if you insist. Here, Yamazaki-san."
     "Naomi bent down and gathered everything I was carrying in her powerful hands. They were nearly triple the size of Honoka's."
     "She then rose to her full height, coaxing her head to the left to avoid the heating ducts in the alley."
@@ -15557,7 +15594,7 @@ label BEGTS003:
     BE "Why don't we just have a seat underneath one of the trees? We can all sit in the shade."
     GTS "I wouldn't want to deprive you two of the bench."
     show BE happy
-    BE "We don't mind! Right, Kei-kun?"
+    BE "We don't mind! Right, Kei-chan?"
     menu:
         "Actually, the bench does sound nice.":
             $setFlag("BEGTS003_c1_1")
@@ -15620,7 +15657,7 @@ label BEGTS003:
     BE "I wouldn't trade the experience for anything!"
     show GTS unique
     GTS "That's very flattering, Inoue-chan. I treasure the time we spend together too."
-    BE "Kei-kun's been my friend for as long as I can remember, but I made a note to get to know everyone else, too."
+    BE "Kei-chan's been my friend for as long as I can remember, but I made a note to get to know everyone else, too."
     if getRoutelock() == "BE":
         BE "That, and... he's much, much more than just a friend now."
     show GTS neutral
@@ -15642,11 +15679,11 @@ label BEGTS003:
     GTS "I'll be certain to give her a formidable challenge."
     "The three of us paused for a few moments while we continued to eat. I decided to tear open the bag of bumpy candy, offering a handful to Honoka."
     show BE happy
-    BE "Appreciated, Kei-kun."
+    BE "Appreciated, Kei-chan."
     if getRoutelock() == "GTS":
         MC "You're welcome. Do you want some, Naomi-chan?"
         show GTS neutral
-        GTS "Certainly. Thank you, Kei-kun."
+        GTS "Certainly. Thank you, Kei-chan."
     else:
         MC "You're welcome. Do you want some, Yamazaki-san?"
         show GTS neutral
@@ -15668,7 +15705,7 @@ label BEGTS003:
     BE "I think that inner peace and established moral rules can coexist, since they usually agree with each other. If they conflict, though, that's when you need the wisdom to decide what you should do."
     MC "That's... pretty high brow, Honoka. I don't usually hear you talk like that."
     show BE seductive
-    BE "I'm just full of surprises, Kei-kun."
+    BE "I'm just full of surprises, Kei-chan."
     show GTS unique
     GTS "That's why I'm happy to have you, Inoue-chan. You help ease my spirits when I'm feeling conflicted."
     show BE happy
@@ -15680,7 +15717,7 @@ label BEGTS003:
     GTS "Hm."
     "I could see Honoka focus on Naomi's face as she gradually lost her smile, a fog of uneasiness washing over her."
     show BE doubt
-    BE "We didn't exactly have the best first impression. All Kei-kun and I saw was her bossing Kodama-san around."
+    BE "We didn't exactly have the best first impression. All Kei-chan and I saw was her bossing Kodama-san around."
     show GTS angry
     GTS "That's exactly why I don't have much respect for Nikumaru-san at all."
     BE "I see the good in everyone. I'm sure you just got off on the wrong foot."
@@ -15722,7 +15759,7 @@ label BEGTS003:
     GTS "I'll be all right. You don't need to worry about me, Inoue-chan."
     "Honoka gathered up the empty bento boxes and stacked them up into her hands."
     show BE neutral
-    BE "Mind if I take that, Kei-kun?"
+    BE "Mind if I take that, Kei-chan?"
     MC "Go ahead."
     BE "I hope you had fun today, even if it got a little melancholy."
     MC "I like spending time with you two. This was nice."
@@ -15835,7 +15872,7 @@ label BEGTS004_c1_1:
     show PRG worried
     PRG "I... really? In what way?"
     MC "Back when you were working for Nikumaru-san, Yamazaki-san felt that she was taking advantage of you. She... really disliked that."
-    show PRG sad
+    show PRG sad-2
     PRG "She shouldn't feel that way. I liked working for Alice. Why would she-?"
     jump BEGTS004_c1_after
 
@@ -15950,10 +15987,11 @@ label BEGTS004_c1_after:
     PRG "I-I had no idea..."
     "I stood up from my seat and slowly walked towards Aida."
     MC "Kodama-san. Listen to me. You're not at fault. No one could have prepared for this. You did everything you could."
-    show PRG sad
+    show PRG sad-2
     "Aida sniffled while she sat upon the bench."
     PRG "I-I know. Still... I hate that this had to happen. I should have seen the early signs..."
     MC "You couldn't have known."
+    show PRG worried
     "I held out my hand, offering it to Aida. She took my hand and stood up in front of me, the sadness slightly fading from her face."
     PRG "Thank you, Hotsure-san."
     MC "You're welcome."
@@ -15965,7 +16003,7 @@ label BEGTS004_c1_after:
             MC "Sometimes, yeah, I do."
             PRG "That's... how I'm feeling right now."
             MC "It's natural to feel that way sometimes. I'm just... hoping that we'll all be happy where we are right now."
-            show PRG sad
+            show PRG sad-2
             PRG "Y-yeah, one can hope..."
         "It's more important to look forward, rather than back.":
             MC "It's more important to look forward, rather than back."
@@ -16078,6 +16116,7 @@ label BEGTS005_BEPath:
     MCT "That was a pretty normal reply. Maybe she's not upset anymore? Then again, I can't really tell from text alone."
     MCT "I'll just have to see how it goes when we meet up."
     "I quickly finished preparing, then exited the dorm to head to class."
+    $setTime(TimeEnum.RAIN)
     scene Classroom with fade
     "I set my bag on the floor and took my seat. Honoka was still on my mind, but I was able to pay attention to Hageshi-sensei's lecture."
     show Hageshi neutral with dissolve
@@ -16229,6 +16268,7 @@ label BEGTS005_GTSPath:
     MCT "Naomi hasn't replied. There's a small check mark next to my message, though. That means she's seen it..."
     MCT "This isn't like her. She's usually very punctual with things like this."
     "I figured it was best not to overthink things. I had to finish preparing for class, so I turned my phone off and gathered my supplies."
+    $setTime(TimeEnum.RAIN)
     scene Classroom with fade
     "I set my bag on the floor and took my seat. Honoka was still on my mind, but I was able to pay attention to Hageshi-sensei's lecture."
     show Hageshi neutral with dissolve
@@ -16337,7 +16377,7 @@ label BEGTS005_GTSPath:
     "Naomi was sitting upon one of the benches next to the viewing platform when I arrived."
     "She looked still and somber, as if lost in thought. Her hands were folded upon her lap, and she was idly scanning the trees as they swayed."
     "It was fortunate that this place had giants in mind. Naomi didn't look out of place at all on the oversized bench."
-    "Well... a giant girl next to a lot of trees didn't look {i}normal{/i} to anyone outside of the university, but she still looked like she belonged here."
+    "Well... a giant girl next to a lot of trees didn't look {i}normal{/i} to anyone outside of the academy, but she still looked like she belonged here."
     MC "Hello, Yamazaki-san." 
     show GTS happy
     GTS "Hello, Hotsure-san."
@@ -16436,8 +16476,9 @@ label BEGTS005_after:
     MCT "I should head inside as soon as possible."
     MCT "I walked over to the nearest set of double-doors and headed inside the school building."
     scene black with fade
-    $setTime(TimeEnum.DAY) #change after we have a rain alt for these backgrounds
+    $setTime(TimeEnum.RAIN)
     scene School Front with fade
+    show rain with dissolve
     "By the time I had entered the school, I'd only become slightly wet. The dorm was only a brief walk from here, so it wouldn't be {i}that{/i} bad if I needed to get there without an umbrella."
     "Still, I decided to just wait around for a bit in the entranceway of the school to see if the rain let up."
     stop sound
@@ -16490,61 +16531,62 @@ label BEGTS005_after:
     play voice Thunder
     "The sidewalk next to the pavement eventually split off from the road and led slightly deeper into the woods."
     scene Lake Road with fade
+    show rain with dissolve
     "We arrived at a narrow wooden bridge that continued from the sidewalk, overlooking the lake just south of the campus."
-    show BE neutral with dissolve
+    show BE neutral behind rain with dissolve
     "Honoka slowly turned towards me, looking somber. She seemed to be deep in thought."
     BE "Do you remember this place?"
     MC "This is..."
     "The area looked very familiar. The scenery was very different due to the dark clouds above, but I've been here before..."
     MC "It's where we first arrived, isn't it?"
-    show BE happy
+    show BE happy behind rain
     BE "That's it."
     "Honoka briefly smiled, then slowly relaxed her face. She leaned out over the railing and stared out towards the lake."
     "I had to follow if I wanted to stay under the umbrella. I stood beside her, watching the rain displace the water on the surface of the lake."
-    show BE neutral
+    show BE neutral behind rain
     MC "Is this place special to you?"
     BE "Mmm... not particularly. It's just a good place to go when you're thinking, ya know?"
     play voice Thunder
-    show BE surprised with vpunch
+    show BE surprised behind rain with vpunch
     pause 0.75
-    show BE embarrassed
+    show BE embarrassed behind rain
     BE "Heheh... maybe we should be thinking indoors."
     BE "We won't stay here too long, I promise."
-    show BE neutral
+    show BE neutral behind rain
     "I placed my hands on the railing, quietly scanning the lake once more."
     play voice Thunder
     "I heard another boom of thunder. The sound seemed to resonate through the nearby trees."
     MC "..."
-    show BE surprised
+    show BE surprised behind rain
     BE "...!"
     hide BE with dissolve
     "I slowly turned around, facing the direction we came from."
     "The treeline had been disturbed as something was moving behind the trunks and branches..."
     "I saw a large field of white behind the trees, clashing against the natural green and brown pattern that the leaves formed in the cloudy atmosphere."
     "It wasn't until the figure got closer that I could see a face looming above that large field of white."
-    show BE surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with easeinright 
+    show BE surprised at Position(xcenter=0.25, yalign=1.0) behind rain with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) behind rain with easeinright 
     "The thunder had masked the sound of Naomi's footsteps..."
     "Well, not that her footsteps were all that loud to begin with."
-    show BE sad
+    show BE sad behind rain
     BE "Yamazaki-san..."
-    show GTS sad
+    show GTS sad behind rain
     GTS "..."
-    show GTS neutral
+    show GTS neutral behind rain
     GTS "Good afternoon, Inoue-san."
     "The air was extremely heavy. Naomi didn't seem to want to get any closer."
     BE "What's... uh... what's up?"
     GTS "I saw you two leaving the school, and I was curious..."
     BE "As direct as ever..."
-    show GTS sad
+    show GTS sad behind rain
     GTS "...May I approach?"
-    show BE neutral
+    show BE neutral behind rain
     BE "Can the bridge even handle your weight?"
     MC "Honoka... c'mon. It was built right outside of Seichou."
-    show BE sad
+    show BE sad behind rain
     "Honoka exhaled."
     BE "You're right, you're right."
-    show GTS neutral
+    show GTS neutral behind rain
     GTS "...Thank you."
     "Naomi slowly and carefully took a single step towards us. Her opposite foot followed right after."
     "{i}Thump... thump...{/i}"
@@ -16553,83 +16595,83 @@ label BEGTS005_after:
     GTS "I don't wish-"
     GTS "Pardon me. Go ahead."
     BE "No, no... it's fine."
-    show GTS angry
+    show GTS angry behind rain
     "Naomi grumbled slightly, placing her hand upon her chest."
     GTS "I don't think it's worth bottling up emotions such as these over a petty fight. It profits us nothing."
-    show GTS sad
+    show GTS sad behind rain
     GTS "I... do not wish to have these feelings anymore."
     BE "Is that from a proverb, or something?"
     "Honoka took a deep breath, then relaxed her face."
     BE "Sorry... sorry. Yeah. I feel the same way."
-    show GTS neutral
+    show GTS neutral behind rain
     GTS "There is no need to apologize. Your thoughts are justified."
     BE "This isn't even about the others... is it?"
     GTS "It is not. I do not feel that anyone else should affect our ability to-"
-    show BE angry
+    show BE angry behind rain
     BE "Oh my GOD, Yamazaki-san, just say you wanna be friends again!"
-    show GTS surprised
+    show GTS surprised behind rain
     GTS "I... have been overthinking it, haven't I?"
-    show BE happy
+    show BE happy behind rain
     BE "You have."
     "Honoka let out a brief, uneasy chuckle."
-    show GTS neutral
+    show GTS neutral behind rain
     GTS "..."
     GTS "Inoue-san, when I look at you, I realize that there is beauty in simplicity. I... envy your ability to say what's on your mind."
     GTS "It shames me to know that it's taken me this long to realize that."
-    show BE neutral
+    show BE neutral behind rain
     "Honoka seemed flattered."
     BE "I've always thought you were really cool too, Yamazaki-san, so classy and refined. Like... I thought someone like you would never talk to someone like me."
-    show GTS surprised
+    show GTS surprised behind rain
     GTS "Really?"
-    show GTS unique 
+    show GTS unique behind rain
     GTS "It has been a long time since another's opinion of me has given me such relief. Such... joy..."
     "Naomi bent over at her abdomen, looming over us. She breathed deep, clawing at composure in the rain. Although both of them had umbrellas, Naomi by herself seemed to be shielding us from it."
-    show BE sad
+    show BE sad behind rain
     BE "Oh... thanks."
-    show GTS happy
+    show GTS happy behind rain
     GTS "You are welcome."
     "Naomi paused for a few seconds, maintaining her overarching position. She then noticed Honoka's worried expression below."
     GTS "Is something on your mind?"
     BE "I just thought... are we gonna be okay? Like... when we go back to school, and the others..."
-    show GTS neutral
+    show GTS neutral behind rain
     GTS "We can apologize as necessary, can we not? \"Play it by ear\", as the saying goes?"
     GTS "I'm certain that everything will work out. As long as I have you to talk to, I feel... at peace."
-    show BE neutral
+    show BE neutral behind rain
     BE "I know, I know... I feel the same way."
     "The air became quiet once more. The rain seemed to be letting up a bit..."
     MC "Honoka... did you plan this?"
-    show BE happy
+    show BE happy behind rain
     BE "Nope! Not at all!"
     GTS "I just... happened to notice, that's all."
-    show BE neutral
-    show GTS embarrassed 
+    show BE neutral behind rain
+    show GTS embarrassed behind rain
     "Naomi blinked, then shuffled around slightly as the two awkwardly looked at each other."
     GTS "Ah... Inoue-san?"
-    show BE confused
+    show BE confused behind rain
     BE "Yeah?"
-    show GTS happy
+    show GTS happy behind rain
     GTS "...You're my best friend."
     "Honoka paused for a few moments."
     BE "...You really think of me that way?"
     GTS "There isn't a single person I'd consider closer to me."
     BE "Well, thanks, Yamazaki-san! Or... should I just call you 'Naomi'?"
-    show GTS neutral
+    show GTS neutral behind rain
     GTS "If we aren't with formal company... certainly."
-    show BE happy
+    show BE happy behind rain
     BE "Hehe... all right."
     "Naomi slowly stood upright once more, straightening out her back."
     "The sun began to peek out from beyond the dark clouds in the sky, almost as if a higher power had heard us."
     GTS "I look forward to spending more time with you... Honoka-chan."
-    show BE neutral
+    show BE neutral behind rain
     BE "Pff... any idea what we should do first, {i}Naomi{/i}-chan?"
     GTS "Perhaps I could show you a few tea ceremonies? You did express interest in formal dining before..."
     MC "She did?"
-    show BE surprised
+    show BE surprised behind rain
     BE "I did?"
-    show GTS embarrassed
+    show GTS embarrassed behind rain
     GTS "Ah... was I mistaken?"
-    show GTS happy 
-    show BE embarrassed 
+    show GTS happy behind rain
+    show BE embarrassed behind rain
     "The three of us walked back to the school as the sidewalk subtly shimmered from the water."
     "I was glad that Honoka and Naomi were able to resolve their conflict."
     "In just this short year, the two of them had managed to become best friends..."

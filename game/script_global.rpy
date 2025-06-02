@@ -8,6 +8,7 @@ define AltMC = Character('Keisuke', color="#0066CC") #For flashback Keisuke, wil
 
 #Main Cast
 define AE = Character('Shiori', color="#FF3300")
+define AECell = Character('Shiori', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="AECell")
 define BE = Character('Honoka', color="#FCCF20")
 define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
@@ -201,12 +202,13 @@ image Cooking Classroom = "Graphics/ui/bg/cooking.webp"
 image Faculty Room = DynamicImage("Graphics/ui/bg/archiveBG/facultyroom_[gametime].webp")
 image Gate Front = "Graphics/ui/bg/gatefront.webp"
 image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].webp")
-image Hallway = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway1_[gametime].webp")
+image Hallway = DynamicImage("Graphics/ui/bg/schoolhallway1_[gametime].webp")
 image Hallway2 = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway2_[gametime].webp")
-image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].webp") #Hallway3
+image Hallway3 = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway3_[gametime].webp")
+image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].webp") #Hallway with stairs
 image Hospital Room = "Graphics/ui/bg/NYI.webp"
 image Info Desk = DynamicImage("Graphics/ui/bg/archiveBG/infodesk_[gametime].webp")
-image Library = DynamicImage("Graphics/ui/bg/archiveBG/library_[gametime].webp")
+image Library = DynamicImage("Graphics/ui/bg/library_[gametime].webp")
 image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].webp")
 image Lockers Showers = "Graphics/ui/bg/archiveBG/lockers_showers.webp"
 image Music Classroom = DynamicImage("Graphics/ui/bg/archiveBG/music_[gametime].webp")
@@ -312,6 +314,7 @@ image Ryokan Room = DynamicImage("Graphics/ui/bg/archiveBG/ryokanroom_[gametime]
 #Beachside Village
 image Beach = DynamicImage("Graphics/ui/bg/archiveBG/beach_[gametime].webp")
 image Frozen Beach = "Graphics/ui/bg/archiveBG/beach_frozen.webp"
+image Beachside Clothes Store = "Graphics/ui/bg/archiveBG/beachside_clothesstore.webp"
 
 #Giants Town
 image Giants Town = "Graphics/ui/bg/NYI.webp"
@@ -723,6 +726,7 @@ image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-2.
 image FMG angry-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-3.webp")
 image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused.webp")
 image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused-2.webp")
+image FMG devious = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/devious.webp")
 image FMG disappointed = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/disappointed.webp")
 image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/flex.webp")
 image FMG upbeat = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/upbeat.webp")
@@ -858,11 +862,11 @@ image RM happy-2 = "Graphics/minor/RM/happy-2.webp"
 image RM sad = "Graphics/minor/RM/sad.webp"
 image RM smug = "Graphics/minor/RM/smug.webp"
 
-image Yuki neutral = DynamicImage("Graphics/minor/yuki/[globalsize]/neutral.webp")
-image Yuki happy = DynamicImage("Graphics/minor/yuki/[globalsize]/happy.webp")
-image Yuki sad = DynamicImage("Graphics/minor/yuki/[globalsize]/sad.webp")
-image Yuki surprised = DynamicImage("Graphics/minor/yuki/[globalsize]/surprised.webp")
-image Yuki gossip = DynamicImage("Graphics/minor/yuki/[globalsize]/gossip.webp")
+image Yuki neutral = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/neutral.webp")
+image Yuki happy = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/happy.webp")
+image Yuki sad = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/sad.webp")
+image Yuki surprised = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/surprised.webp")
+image Yuki gossip = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/gossip.webp")
 
 image HR neutral = "Graphics/minor/faculty/HR/neutral.webp"
 image HR neutral-2 = "Graphics/minor/faculty/HR/neutral-2.webp"
@@ -1071,6 +1075,16 @@ image AlternateOutfitBE = "Graphics/BE/[globalsize]/overlays/alternate-overlay.w
 image Table = "Graphics/BE/4/overlays/table-overlay.webp"
 image TableBE = "Graphics/BE/4/overlays/table-boobs-overlay.webp"
 image TableBEWorried = "Graphics/BE/4/overlays/table-boobs-worried-overlay.webp"
+
+#Rain Overlay
+image rain:
+    "Graphics/ui/overlays/rain1.webp"
+    0.1
+    "Graphics/ui/overlays/rain2.webp"
+    0.1
+    "Graphics/ui/overlays/rain3.webp"
+    0.1
+    repeat
 
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"

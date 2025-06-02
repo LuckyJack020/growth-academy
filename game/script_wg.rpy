@@ -5730,7 +5730,11 @@ label WG028:
     "The packaging for the tea had been changed since I was a kid. I went past it twice before I spotted it."
     "I paid for the tea, shoved it in my backpack, and started speed-walking back to the hill."
     scene black with fade
+    pause 0.5
+    scene Hill Road with fade
     play sound Thunder
+    show rain with dissolve
+    play sound MidRainAmbience
     "The bottom of the hill was in sight when the sky just opened up and began dumping water by the bucket full."
     "I had my umbrella, for all the help it was. With the heaviness of the rain and wind blowing this way and that I got pretty drenched."
     "Nothing to be done about it, I pressed on, scaling the hill and reaching the school grounds."

@@ -19,6 +19,7 @@ default JinekoOutfit = OutfitEnum.DEFAULT
 default DaitaroOutfit = OutfitEnum.DEFAULT
 default TakamuraOutfit = OutfitEnum.DEFAULT
 default KanamiOutfit = OutfitEnum.DEFAULT
+default YukiOutfit = OutfitEnum.DEFAULT
 default AENsfw = False
 default BENsfw = False
 default FMGNsfw = False
@@ -1054,6 +1055,11 @@ init python:
         global MinoriOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
             MinoriOutfit = o
+    
+    def setYukiOutfit(o):
+        global YukiOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2:
+            YukiOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -1212,6 +1218,7 @@ label start:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        YukiOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []
@@ -1280,6 +1287,7 @@ label splashscreen:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        YukiOutfit = OutfitEnum.DEFAULT
     scene black
     with Pause(1)
     centered "The following represents a work in progress."
@@ -1432,12 +1440,13 @@ transform notif_transform:
     linear 1.0 yalign -0.2
 
 screen debugmenu():
+    add "Graphics/ui/bg/sky_night.webp"
     $debuginput = ""
     grid 3 16:
         xalign 0.5
         yalign 0.5
 
-        text "Input:"
+        text "Input:" style 'boutlined_text'
         input value VariableInputValue("debuginput")
         text ""
 
@@ -1453,97 +1462,97 @@ screen debugmenu():
         textbutton "Set Timeflag" action Jump("settimeflag")
         textbutton "Unset Timeflag" action Jump("unsettimeflag")
 
-        text "Girl"
-        text "Affection"
-        text "Core Progress"
+        text "Girl" style 'boutlined_text'
+        text "Affection" style 'boutlined_text'
+        text "Core Progress" style 'boutlined_text'
 
-        text "BE"
+        text "BE" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "BE", -1)
-            text str(affection["BE"])
+            text str(affection["BE"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "BE", 1)
             textbutton "{u}Lock Route{/u}" action Function(lockRoute, "BE")
-        text getProgress("BE")
+        text getProgress("BE") style 'boutlined_text'
 
-        text "GTS"
+        text "GTS" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "GTS", -1)
-            text str(affection["GTS"])
+            text str(affection["GTS"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "GTS", 1)
             textbutton "{u}Lock Route{/u}" action Function(lockRoute, "GTS")
-        text getProgress("GTS")
+        text getProgress("GTS") style 'boutlined_text'
 
-        text "AE"
+        text "AE" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "AE", -1)
-            text str(affection["AE"])
+            text str(affection["AE"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "AE", 1)
             textbutton "{u}Lock Route{/u}" action Function(lockRoute, "AE")
-        text getProgress("AE")
+        text getProgress("AE") style 'boutlined_text'
 
-        text "FMG"
+        text "FMG" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "FMG", -1)
-            text str(affection["FMG"])
+            text str(affection["FMG"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "FMG", 1)
             textbutton "{u}Lock Route{/u}" action Function(lockRoute, "FMG")
-        text getProgress("FMG")
+        text getProgress("FMG") style 'boutlined_text'
 
-        text "WG"
+        text "WG" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "WG", -1)
-            text str(affection["WG"])
+            text str(affection["WG"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "WG", 1)
             textbutton "{u}Lock Route{/u}" action Function(lockRoute, "WG")
-        text getProgress("WG")
+        text getProgress("WG") style 'boutlined_text'
 
-        text "PRG"
+        text "PRG" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "PRG", -1)
-            text str(affection["PRG"])
+            text str(affection["PRG"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "PRG", 1)
             textbutton "{u}Lock Route{/u}" action Function(lockRoute, "PRG")
-        text getProgress("PRG")
+        text getProgress("PRG") style 'boutlined_text'
 
-        text "RM"
+        text "RM" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "RM", -1)
-            text str(affection["RM"])
+            text str(affection["RM"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "RM", 1)
-        text ""
+        text "" style 'boutlined_text'
 
-        text "TM"
+        text "TM" style 'boutlined_text'
         hbox:
             textbutton "-" action Function(setAffection, "TM", -1)
-            text str(affection["TM"])
+            text str(affection["TM"]) style 'boutlined_text'
             textbutton "+" action Function(setAffection, "TM", 1)
-        text ""
+        text "" style 'boutlined_text'
 
         hbox:
-            text "Athletics"
+            text "Athletics" style 'boutlined_text'
             textbutton "-" action Function(setSkillDebug, "Athletics", -1)
-            text str(skills["Athletics"])
+            text str(skills["Athletics"]) style 'boutlined_text'
             textbutton "+" action Function(setSkillDebug, "Athletics", 1)
 
         hbox:
-            text "Art"
+            text "Art" style 'boutlined_text'
             textbutton "-" action Function(setSkillDebug, "Art", -1)
-            text str(skills["Art"])
+            text str(skills["Art"]) style 'boutlined_text'
             textbutton "+" action Function(setSkillDebug, "Art", 1)
 
         hbox:
-            text "Academics"
+            text "Academics" style 'boutlined_text'
             textbutton "-" action Function(setSkillDebug, "Academics", -1)
-            text str(skills["Academics"])
+            text str(skills["Academics"]) style 'boutlined_text'
             textbutton "+" action Function(setSkillDebug, "Academics", 1)
 
         textbutton "Return to game" action Jump("daymenu_noadvance")
-        text ""
-        text ""
+        text "" style 'boutlined_text'
+        text "" style 'boutlined_text'
 
-        text "Size: " + str(globalsize)
-        textbutton "+" action Function(setSizeDebug, 1)
+        text "Size: " + str(globalsize) style 'boutlined_text'
         textbutton "-" action Function(setSizeDebug, -1)
+        textbutton "+" action Function(setSizeDebug, 1)
 
 screen debugvarlist():
     vbox:
@@ -1671,6 +1680,7 @@ label startevent:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        YukiOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
         updateSP()
         showQuickMenu = True

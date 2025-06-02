@@ -42,6 +42,9 @@ style prompt_text is gui_text:
 style outlined_text is text:
     outlines [ (absolute(2), "#FFFFFF", absolute(0), absolute(0)) ]
 
+style boutlined_text is text:
+    outlines [ (absolute(2), "#000000", absolute(0), absolute(0)) ]
+
 style bar:
     ysize gui.bar_size
     left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)

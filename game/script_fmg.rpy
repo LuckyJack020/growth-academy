@@ -1,5 +1,7 @@
 label FMG001:
     $setProgress("FMG", "FMG002")
+    $setMCOutfit(OutfitEnum.GYM)
+    $setFMGOutfit(OutfitEnum.GYM)
     play music Schoolday
     "After thinking of what to do after class, I decided to check out the gym. {w}I'm not one to work out much myself, but I figured it wouldn't hurt to take a look."
     scene Gym with dissolve
@@ -144,7 +146,6 @@ label FMG002:
     jump daymenu
 
 label FMG003:
-    $setTimeFlag("testday")
     scene Library with fade
     "Sadly, it was time to hit the books. Even if I wanted to hit myself with a book instead."
     MC "Bruh, we just started here and I'm getting dogpiled with homework. School. School never changes."
@@ -280,6 +281,9 @@ label FMG003_c3_3:
 
 label FMG004:
     $setProgress("FMG", "FMG007")
+    $setTimeFlag("testday")
+    $setMCOutfit(OutfitEnum.GYM)
+    $setFMGOutfit(OutfitEnum.GYM)
     scene Gym with fade
     play music Schoolday
     "So this was the first workout I was going to have with Akira after agreeing to let her be my personal trainer."
@@ -364,6 +368,7 @@ label FMG004:
     pause 1
 
     scene Track with fade
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     play music Busy
     FMG "Aaah, it's perfect outside this afternoon! Once we finish this up, I say we grab a bite to eat as a reward."
     MC "You paying?"
@@ -591,6 +596,8 @@ label FMG006:
     FMG "Sorry, can't waste a good paper ball!"
     MCT "Revenge is a dish best served cold... {w}your time will come."
     scene Gym with fade
+    $setMCOutfit(OutfitEnum.GYM)
+    $setFMGOutfit(OutfitEnum.GYM)
     "By the time I got to the gym, Akira was already doing her warm-up stretches by the weight sets."
     show FMG neutral with dissolve
     FMG "Yooo, what's up, dude?!?"
@@ -671,7 +678,9 @@ label FMG006_c1:
     MCT "Please don't get {i}everything{/i} you want... this is already going to be a big hit to my savings."
     scene black with fade
     pause 0.5
-    scene Cafeteria with fade 
+    scene Cafeteria with fade
+    $setMCOutfit(OutfitEnum.DEFAULT)
+    $setFMGOutfit(OutfitEnum.DEFAULT)
     "She ended up getting nearly every topping except for two of them... "
     show FMG happy with dissolve
     FMG "Thank you sooooo much, Kei! You're the best!"
@@ -780,6 +789,8 @@ label FMG007:
 
 label FMG008:
     $setProgress("FMG", "FMG009")
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym with fade
     play music Busy
     "I came by the gym after class. Well, after I stopped back at my room to change into some more comfortable clothes. {w}I wasn't sure when I was supposed to meet up with her. We hadn't exactly agreed on a specific time to meet up."
@@ -922,7 +933,7 @@ label FMG008:
     scene black with fade
     pause 1
     $setTime(TimeEnum.EVE)
-
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene Dorm Interior with fade
     "I finally made it back to my dorm after taking the elevator to my floor. I probably should have studied, but I knew before I set one foot inside I wasn't doing jackshit. I just went to bed I was so exhausted."
     scene black with fade
@@ -1198,6 +1209,8 @@ label FMG010_testfail:
 
 label FMG011:
     scene School Planter with fade
+    play sound MidRainAmbience
+    show rain with dissolve
     play music Rain
     "It was a cloudy day, but I figured it would be nice to just walk around the school despite that."
     "...At least, until it started raining."
@@ -1399,6 +1412,8 @@ label FMG011:
         jump daymenu
 
 label FMG012:
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym
     show FMG neutral
     with fade
@@ -1496,7 +1511,8 @@ label FMG013:
     FMG "You'll have a great time, come on!"
     scene black with fade
     pause 1
-
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym with fade
     "I didn't know Akira too well but she seemed very happy to have someone to be her gym partner. She hurried over to the weight rack and started loading picking up weights bigger than my head."
     MC "Alright, show me how it's done."
@@ -1753,6 +1769,7 @@ label FMG014:
 label FMG015:
     $setProgress("FMG", "FMG016")
     $setFlag("XX15")
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Town with fade
     play music HigherEdu
     $setFlag("VisitedTown")
@@ -1887,6 +1904,7 @@ label FMG016:
     play music FMG
     $setFMGOutfit(OutfitEnum.ATHLETIC)
     $setNatsOutfit(OutfitEnum.ATHLETIC)
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by twelve and it's three o'clock."
     scene Dorm Hallway with fade
     MC "I gotta hurry to the track, she's going to be pissed."
@@ -3165,6 +3183,8 @@ label FMG021:
 label FMG022:
     $setFlag("XX22")
     $setProgress("FMG", "FMG023")
+    $setFMGOutfit(OutfitEnum.ATHLETIC)
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     scene Track with fade
     play music Motivation
     if checkSkill("Athletics", ">", 3):
@@ -3232,7 +3252,8 @@ label FMG022:
     hide FMG with dissolve
     "We walked off the track and parted ways, Akira to her dorm and I towards town."
     MCT "I talk a big game but I'm getting my ass handed to me without a doubt. {w}Meh, whatever, at least I can spend some time with her."
-
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+	$setMCOutfit(OutfitEnum.CASUAL)
     scene Town with fade
     MCT "Oh yeah, today's feeling like a fantastic day to lose... Man, I really have to start being more positive."
     MCT "Maybe I'll win. {w}Yeah, that's much better. Great job me."
@@ -4084,6 +4105,8 @@ label FMG024_c1_after:
 
 label FMG025:
     play music Schoolday
+    $setFMGOutfit(OutfitEnum.ATHLETIC)
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     scene Track with fade
     MCT "The air was crisp and refreshing as it hit my sweaty forehead, slowly cooling me down."
     MCT "I laid down and closed my eyes, relaxing for as long as possible before I had to return to the track."
@@ -4117,9 +4140,11 @@ label FMG025:
     MCT "I wonder what that could mean."
 
     scene black with fade
+    $setFMGOutfit(OutfitEnum.DRESS)
+    $setMCOutfit(OutfitEnum.FORMAL)
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Dorm Exterior with fade
-    "For tonight, I went with a white button-down and a pair of black dress pants. Nothing over the top. I'm curious as to what Akira could be wearing; I never saw her as one to dress up. I'd be lying if I said I wasn't excited to see."
+    "For tonight, I went with a charcoal button-down and a pair of black dress pants. Nothing over the top. I'm curious as to what Akira could be wearing; I never saw her as one to dress up. I'd be lying if I said I wasn't excited to see."
     MC "Hey Akira, I'm outside when you're all set!"
     FMG "Just need a minute, sorry for the wait!"
     "What was supposed to be a minute turned into forty-five minutes."
@@ -5779,6 +5804,7 @@ label FMG035:
     $setFlag("XX35")
     $setProgress("FMG", "FMG036")
     $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     play music FMG
     scene Gym
     show FMG neutral
@@ -5839,6 +5865,8 @@ label FMG035:
     MC "No promises."
     scene black with fade
     pause .5
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Dorm FMG with fade
     MC "Alright, I have two rules when it comes to receiving gifts from me. If you do not follow my rules, I will be taking my gift back and giving it to someone who values me and my gift more."
     show FMG sad with dissolve
@@ -5879,6 +5907,7 @@ label FMG035:
     MC "Might be time for Popcorn Anonymous."
     scene black with fade
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.FORMAL)
     pause .5
     scene Town Street with fade
     play music MomentTime
@@ -6683,7 +6712,7 @@ label FMG039:
     scene black with fade
     stop music
     $setTime(TimeEnum.DAY)
-    "Earlier that day..."
+    "{font=gui/Caveat-Bold.ttf}{size=*2}Earlier that day...{/size}{/font}"
     scene Gym with fade
     play music Busy
     $setSkill("Athletics", 2)
@@ -6836,6 +6865,7 @@ label FMG039:
 
 label FMG040:
     $setProgress("FMG", "FMG041")
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Campus Center
     show FMG flex
     with fade
