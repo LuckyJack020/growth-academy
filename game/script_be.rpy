@@ -1582,12 +1582,15 @@ label BE012:
     show BE neutral
     with fade
     play music BrightLights
-    $setFlag("VisitedTown")
+    if not getFlag("VisitedTown"):
+        $setFlag("VisitedTown")
     "Now that she was headed in the right direction, I followed Honoka to the bus stop, where we were just in time to hop aboard. With a little more hop in Honoka's case. After a few stops, we ended up in a small shopping district in the city."
     MC "Now, if I remember the directions right, we just go this way, and take a right, and we should be there soon."
     show BE happy
     BE "Perfect."
     scene Arcade with fade
+    if not getFlag("VisitedArcade"):
+        $setFlag("VisitedArcade")
     "Honoka and I shared a lovely, albeit quick walk over to the arcade. Even before we stepped inside we could tell what it was, thanks to the many noises of buzzers and bells going off from pachinko machines."
     "But, Honoka and I preferred games of skill. Or at least games that were more fun than sitting at a machine, watching balls drop. So we searched out one of our old favorites."
     show BE neutral at center with dissolve
@@ -4690,10 +4693,13 @@ label BE026_c2_1:
     MC "Let's just head to the nurse's office, and get a bandage for it."
     "Honoka nodded. It sucked to put our bug-hunt to a short stop, but better to make sure Honoka didn't get an infection or anything."
 
-    scene Nurse Office with fade
+    scene Nurse Office
+    show Nurse neutral
+    with fade
     "We were surprised when the nurse was actually there to help Honoka."
     Nurse "Hello. How can I help you?"
-    show BE sad with dissolve
+    show Nurse neutral at altMove(0.5, 0.75)
+    show BE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
     BE "I got a cut on my arm here..."
     Nurse "Oh my. How did that happen?"
     "The nurse took Honoka to sit down as she pulled out the standard array of disinfectant and bandages. Honoka explained how she got it from a bush, trying to catch a cicada."
@@ -4712,6 +4718,8 @@ label BE026_c2_1:
     Nurse "Just about, just making sure that bandage is on nice and secure. Yes. Now you're fine. A regular adhesive strip should be fine if that happens to come off. But that should last until it heals."
     Nurse "If it doesn't seem to be getting better after a few days, just come on back."
     BE "Okay. Will do. Thank you."
+    show BE neutral at altMove(0.5, 0.5)
+    hide Nurse with dissolve
     "Honoka hopped off of the bed and walked over, taking my hand and leaving the nurse's office."
     MC "So, what do you want to do now?"
     BE "Hm. I guess I want to go back to my room and wash my boobs, honestly. It's one thing to hold a cicada, having it crawl on you is not fun."
@@ -11643,6 +11651,7 @@ label BE050:
     Receptionist "Well, she's still in testing. She should be done soon. I can let the doctor know you're here. In the meantime, please have a seat here in the lobby."
     MC "That would be perfect, thank you."
     "The receptionist walked into the back rooms. I took a seat and tapped my finger against my knee."
+    show Nurse neutral with dissolve
     "Nurse Kiyomi appeared from the back room."
     Nurse "Good morning, Hotsure-san. Could you come with me, please?"
     MC "Sure. I-Is everything alright?"
@@ -11656,6 +11665,7 @@ label BE050:
     "Then, Nurse Kiyomi leaned in and whispered into my ear."
     Nurse "{size=-6}Be strong, Hotsure-san.{/size}"
     MCT "\"Strong?\""
+    hide Nurse with dissolve
     "With that, the two of us were alone, together."
     BE "Morning, sleepyhead~"
     "I plastered a smile across my face and walked across the room toward Honoka."
@@ -13508,7 +13518,7 @@ label BE055:
     MC "Ah, well, I would like to try and get some more work done. I'll take you up on the first aid room. Thank you, sensei."
     Naoki "Mhmm. And... stay alert, Hotsure-san."
     "Naoki-sensei nodded as I bowed my head. As I stepped into the first aid room, I heard him blow one of his whistles. The sounds of splashing in the pool died down in response."
-    scene NYI with fade #first aid room
+    scene First Aid Room with fade
     stop music fadeout 2.0
     pause 1
     play music LastBell fadein 1.0

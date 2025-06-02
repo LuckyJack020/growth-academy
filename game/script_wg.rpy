@@ -3526,6 +3526,8 @@ label WG018:
 label WG018_arcade:
     scene Arcade with fade
     play music Busy
+    if not getFlag("VisitedArcade"):
+        $setFlag("VisitedArcade")
     "The arcade was probably the best shot at ending my boredom. With all those bright lights and electronic chimes, I at least couldn't zone out."
     "I got some change and walked around the floor once, seeing if maybe something caught my eye. When that failed, I went for one of the racing games."
     "Oddly, driving around in circles turned out to not be the key to shaking off my lethargy."
@@ -4384,6 +4386,8 @@ label WG021_c2_2:
     scene black with fade
     pause 1
     scene Roof with fade
+    if not getFlag("VisitedRoof"):
+        $setFlag("VisitedRoof")
     "I led her to the roof, Alice grumbling about the stairs after the second story."
     show WG neutral at center with dissolve
     WG "Such an inconvenient place."
@@ -7545,8 +7549,10 @@ label WG035:
     scene Dorm Interior with fade
     "I tried to kill some time before the concert started by doing a bit of homework. When the time grew closer I decided I had better get dressed if I wanted to get there early enough to grab a good seat."
     if getFlag("NiceSuit") or getFlag("CheapSuit"):
+        $setMCOutfit(OutfitEnum.SUIT)
         "I took the suit I had bought out of the closet and looked it over. Maybe I wasn't able to help her out on her big night, but the extra effort I put into looking nice would at least show her I cared."
     else:
+        $setMCOutfit(OutfitEnum.FORMAL)
         "I took out the slacks and sweater ensemble I got from the department store. It wasn't anything fancy, but it was a step up from my school clothes."
         "I may not have been able to help her out on her big night, but the little extra effort I put into looking nice would at least show her I cared."
     "I gave myself a once over in the mirror."
@@ -13646,6 +13652,7 @@ label WG053:
     $setSize(4)
     $setTimeFlag("size4")
     $setProgress("WG", "WG054")
+    $setMCOutfit(OutfitEnum.SUIT)
     "I had the tickets in hand when my phone buzzed from a text. It was from Alice."
     WGCell "Head over when you are presentable, I'm ready."
     play music WG
@@ -20600,7 +20607,7 @@ label WG069:
     $setProgress("WG", "WG070")
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.ALTERNATE)
-    $setMCOutfit(OutfitEnum.FORMAL)
+    $setMCOutfit(OutfitEnum.SUIT)
     scene Dorm Interior with fade
     play music Sunset
     MCT "I hope this tie is done correctly. Haven't tried to do this by myself since the 4th grade."
@@ -20801,7 +20808,7 @@ label WG070:
     $setProgress("WG", "WG071")
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.ALTERNATE)
-    $setMCOutfit(OutfitEnum.FORMAL)
+    $setMCOutfit(OutfitEnum.SUIT)
     scene Ballroom
     show WG neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1)
     with fade
@@ -21027,7 +21034,7 @@ label WG071:
     $setProgress("WG", "WG072")
     $setTime(TimeEnum.NIGHTLIGHTS)
     $setWGOutfit(OutfitEnum.ALTERNATE)
-    $setMCOutfit(OutfitEnum.FORMAL)
+    $setMCOutfit(OutfitEnum.SUIT)
     play music TwilightAmbient
     scene Ballroom
     show WG neutral-2
@@ -31814,6 +31821,7 @@ label WG095:
     play music Stardust
     $setTime(TimeEnum.EVE)
     $setWGOutfit(OutfitEnum.DRESS)
+    $setMCOutfit(OutfitEnum.SUIT)
     MC "Alright, just a few more adjustments... Alright looks like we got it tied up back here."
     show WG happy with dissolve
     WG "How do I look?"
@@ -32923,6 +32931,7 @@ label WG098:
     $setProgress("WG", "WG099")
     $setTime(TimeEnum.EVE)
     $setWGOutfit(OutfitEnum.DRESS)
+    $setMCOutfit(OutfitEnum.SUIT)
     scene Dorm WG with fade
     play music DormLife
     "Tonight was the big night. The time had come for the music club's final concert of the year. All of Alice's hard work she put into the preparations (not to mention all her scheming to gain a leadership position) was about to pay off."
@@ -33313,6 +33322,8 @@ label WG099:
     $setProgress("WG", "WG100")
     $setTime(TimeEnum.NIGHT)
     $setWGOutfit(OutfitEnum.DRESS)
+    $setMCOutfit(OutfitEnum.SUIT)
+    $setTomoOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     play music TwilightBright
     "By this point the students and other concert goers had mostly cleared out of the auditorium. I decided to stand outside and get a little fresh air while I waited on Alice to finish up her stuff behind the scenes."
@@ -34834,7 +34845,7 @@ label WG103:
     "Through all of this we still managed to keep in touch with old friends."
     scene black with fade
     pause .5
-
+    "{font=gui/Caveat-Bold.ttf}{size=*2}A few years later...{/size}{/font}"
     play music MomentTime
     scene Town
     show PRG excited at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
@@ -34991,7 +35002,9 @@ label WG103:
     $setMCOutfit(OutfitEnum.NUDE) 
     show WG aroused with dissolve
     WG "Keisuke, Dear, come to bed. {w}I might have overindulged at dinner this evening. I could use your \"special touch\" to get comfortable..."
-    "Afterall, I think we've earned it." 
+    "Afterall, I think we've earned it."
+    scene black with fade
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}THE END{/size}{/font}"
     jump daymenu
 
 label WG103G:
@@ -35174,7 +35187,8 @@ label WG103G:
     scene Yokohama HighRise Office with fade
     play music WGAlt
     $setMCOutfit(OutfitEnum.DEFAULT) 
-    "Needless to say, we'd both been pretty busy over the past few years since Seicho Academy, but all the hard work would eventually pay off."
+    "Needless to say, we'd both been pretty busy over the past few years since Seichou Academy, but all the hard work would eventually pay off."
+    "{font=gui/Caveat-Bold.ttf}{size=*2}A few years later...{/size}{/font}"
     show Daitaro neutral at Position(xcenter=0.2, yalign=1.0)
     show Vivian neutral at Position(xcenter=0.8, yalign=1.0)
     show WG happy behind Daitaro, Vivian
@@ -35226,6 +35240,8 @@ label WG103G:
     extend " But I think I need to reapply my sunscreen before heading back to the beach."
     show WG happy-2
     MC "I think I can help with that..."
+    scene black with fade
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}THE END{/size}{/font}"
     jump daymenu
 
 label WG103B:
@@ -35267,6 +35283,7 @@ label WG103B:
     MC "Right, yeah. That came out wrong..."
     scene black with fade
     pause .5
+    "{font=gui/Caveat-Bold.ttf}{size=*2}1 year later...{/size}{/font}"
     scene Tokyo Station with fade
     "Things didn't exactly get better from there. Between more business trips and big assignments, our ability to make our schedules work together became more and more challenging, and less and less frequent."
     "I wasn't comfortable with how we were drifting apart, but I was hoping we could get back on track. Alice was just getting back from a month-long business trip, so I made sure to book a train into town to meet up with her that weekend."
@@ -35332,6 +35349,7 @@ label WG103B:
     MCT "No... I said what I wanted to say, and I said what I meant... {w}It just wasn't enough."
     scene black with fade
     pause .5
+    "{font=gui/Caveat-Bold.ttf}{size=*2}Several months later...{/size}{/font}"
     $setTime(TimeEnum.EVE)
     $setTomoOutfit(OutfitEnum.CASUAL)  
     scene Tokyo MC Apartment
@@ -35371,13 +35389,15 @@ label WG103B:
     MC "{i}Sigh{/i}... Still worried about your image in the eyes of others I see, huh Alice?"
     scene black with fade
     pause .5
+    "But then one day my life trajectory took a radically unexpected turn, and things started looking up."
+    "{font=gui/Caveat-Bold.ttf}{size=*2}A few years later...{/size}{/font}"
     scene Tokyo Architect Office with fade
     $setMCOutfit(OutfitEnum.DEFAULT) 
     play music MC
-    "But then one day my life trajectory took a radically unexpected turn, and things started looking up."
     "Boss" "Hotsure-san, come into my office."
     MC "Certainly sir."
     "I managed to land a job at a fairly reputable architecture firm in Tokyo straight out of school. My grades and the school I came out of got me the moniker of the \"young hotshot\" in the workplace, but I still lacked experience."
+    scene Tokyo Office with fade
     "Boss" "I got a bid that came in from this company called Du-Lux Property Holdings. They want us to put in a design bid on this new luxury hotel they're putting in on the oceanfront."
     MC "Oh? Seems odd. That's not really the type of building we do here, at least to my knowledge."
     "Boss" "Exactly. It's a bullshit bid."
@@ -35390,6 +35410,7 @@ label WG103B:
     "Boss" "I don't want you to get excited like you got a chance of getting this bid, but I want to see what you're capable of. Impress me. {w}If you can do that, we'll see about putting you on some of these bigger projects."
     MC "Thank you, sir. I'll give it my best shot."
     "Boss" "That's what I like to hear. Now get back to work."
+    scene Tokyo Architect Office with fade
     "At first I had no idea what the hell I was going to do."
     "Sure I knew the basics of design, but a luxury resort hotel wasn't the sort of thing I had ever planned on doing." 
     "I felt stumped, I didn't know what to do...{w} Until I realized that I did."
@@ -35399,6 +35420,7 @@ label WG103B:
     pause .5
     scene Tokyo Architect Office with fade
     "Boss" "Hotsure-san, can you come into my office?"
+    scene Tokyo Office with fade
     MC "Certainly sir. What do you need?"
     "Boss" "I can't believe I'm saying this, but you got it! You got us the bid from Du-Lux Property Holdings."
     MC "You're serious!?"
@@ -35409,6 +35431,7 @@ label WG103B:
     "All of these were luxuriant design features in a country squeezed for space and stack on top of itself, but for those that money wasn't an issue, it's what they wanted. Apparently I was one of the few architects that understood that."
     scene black with fade
     pause .5
+    "{font=gui/Caveat-Bold.ttf}{size=*2}Several years later...{/size}{/font}"
     $setTime(TimeEnum.DAY)
     scene Tokyo Mega Metro with fade
     "Boss" "Well, would you look at that thing? How does it feel seeing your latest masterpiece finally complete, kid?"
@@ -35578,6 +35601,8 @@ label WG103B:
     show WG happy-2
     WG "But you better give me the night of my life."
     MC "Easiest deal I ever made."
+    scene black with fade
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}THE END{/size}{/font}"
     jump daymenu
 
 label WG104:
@@ -35942,6 +35967,8 @@ label WGB003:
     scene Arcade
     show Okisho neutral
     with fade
+    if not getFlag("VisitedArcade"):
+        $setFlag("VisitedArcade")
     Okisho "So this is where you wanted to go?" 
     "Suddenly I realized it was a bit of a risk just yanking her downtown without asking where she wanted to go." 
     Okisho "Awesome! {w}I heard they had one in town but I hadn't made the time to come myself."
@@ -37445,7 +37472,7 @@ label WGBE004A:
     scene black with fade
     stop music fadeout 1.0
     pause 1
-    "Later on..."
+    "{font=gui/Caveat-Bold.ttf}{size=*2}Later on...{/size}{/font}"
 
     scene Dorm BE
     show BE surprised-2 at Position(xcenter=0.25, yalign=1.0)

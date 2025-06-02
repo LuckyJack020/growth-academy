@@ -19,6 +19,7 @@ default JinekoOutfit = OutfitEnum.DEFAULT
 default DaitaroOutfit = OutfitEnum.DEFAULT
 default TakamuraOutfit = OutfitEnum.DEFAULT
 default KanamiOutfit = OutfitEnum.DEFAULT
+default NurseOutfit = OutfitEnum.DEFAULT
 default YukiOutfit = OutfitEnum.DEFAULT
 default AENsfw = False
 default BENsfw = False
@@ -117,7 +118,7 @@ init python:
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
-    charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM', 'faculty']
+    charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM', 'WGB']
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
@@ -201,6 +202,7 @@ init python:
         BEND = "bend"
         CASUAL = "casual"
         CASUAL2 = "casual-2"
+        CASUAL3 = "casual-3"
         COOKING = "cooking"
         COSTUME = "costume"
         EPILOGUE = "epilogue"
@@ -214,6 +216,7 @@ init python:
         COW = "cow"
         PAJAMAS = "pajamas"
         RIPPED = "ripped"
+        SUIT = "suit"
         SUMEXT = "summer-exterior"
         SUMEXTSG = "summer-exterior-sunglasses"
         SUMINT = "summer-interior"
@@ -972,7 +975,7 @@ init python:
         global MCPrevOutfit
         global MCNsfwOutfit
         global MCNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.FORMAL or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.UNDERWEAR:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.CASUAL3 or o == OutfitEnum.FORMAL or o == OutfitEnum.GYM or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SUIT or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.UNDERWEAR:
             MCNsfw = False
             MCOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -1055,6 +1058,11 @@ init python:
         global MinoriOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
             MinoriOutfit = o
+    
+    def setNurseOutfit(o):
+        global NurseOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
+            NurseOutfit = o
     
     def setYukiOutfit(o):
         global YukiOutfit
@@ -1218,6 +1226,7 @@ label start:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
@@ -1287,6 +1296,7 @@ label splashscreen:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
     scene black
     with Pause(1)
@@ -1680,6 +1690,7 @@ label startevent:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
         updateSP()

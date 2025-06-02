@@ -12355,6 +12355,8 @@ label PRG029B:
     show PRG surprised at Position(xcenter=0.75, yalign=1.0)
     with fade
     pause 0.5
+    if not getFlag("VisitedArcade"):
+        $setFlag("VisitedArcade")
     BE "Here we are!"
     PRG "Oh wow..."
     PRG "T-There's... a lot of games..."
@@ -13926,6 +13928,9 @@ label PRG032:
     MCT "They only show one baby..."
     "I stole a glance back at Aida."
     "There was a quiet knock at the door."
+    $setNurseOutfit(OutfitEnum.ALTERNATE)
+    show PRG worried at altMove(0.5, 0.75)
+    show Nurse neutral at Position(xcenter=0.25, yalign=1.0) with easeinleft
     pause .25
     Nurse "Are you all set in there, Kodama-san?"
     show PRG nervous
@@ -33756,6 +33761,7 @@ label PRG053:
     scene Nurse Office with fade
     "Stepping inside, the hospital smell hit me right in the schnozz again."
     MCT "What the hell is it that makes that smell?"
+    show Nurse unique with dissolve
     "Behind the desk, one of the nurses sat typing away, her large lips looming from behind the monitor."
     MC "Excuse me?"
     "The nurse glanced up."

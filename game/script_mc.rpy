@@ -7598,7 +7598,7 @@ label MC012:
     BE "I wonder what Tashi-sensei is gonna do without us!"
     AE "Finally get a good night's sleep?"
     MC "He's a teacher. We both know that's not possible."
-    AE "True, I guess. Tashi-sensei is a bit of a lost cause"
+    BE "True, I guess. Tashi-sensei is a bit of a lost cause."
     BE "I don't know what would make him happy. I've never seen him smile."
     MC "Maybe because when you see him, that means you're there."
     show BE wink
@@ -11792,6 +11792,9 @@ label MC024:
     Secretary3 "She did. Apparently, her fiance moved from the mainland to the town here and found himself a job and everything."
     Secretary1 "My husband won't even do breakfast in bed for me..."
     "I sighed, possibly a bit more audibly than I had planned, and sat in a chair in the corner, nearby a coffee table and some other chairs, clearly set up for waiting students."
+    scene black with fade
+    "{font=gui/Caveat-Bold.ttf}{size=*2}Some time later...{/size}{/font}"
+    pause .5
     $setTime(TimeEnum.EVE)
     scene Info Desk with fade
     play music LastBell
@@ -12708,7 +12711,7 @@ label global005:
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
-    #show Nurse neutral with dissolve
+    show Nurse neutral with dissolve
     Nurse "Hello, Hotsure-san, please have a seat."
     Nurse "My name is Hitomi Kiyomi. Or, as I usually go by, Nurse Kiyomi."
     "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp."
@@ -15232,9 +15235,14 @@ label RM003_After1:
     "Despite the sudden hustle and bustle normally absent on this sparsely populated island, nothing seemed out of the ordinary to me."
     MC "Not really, what do you see?"
     RM "Not {i}what{/i}, but {i}who{/i}."
+    $setNurseOutfit(OutfitEnum.ALTERNATE)
+    hide RM with dissolve
+    show Nurse neutral with dissolve
     "Daichi's nod in the general direction helped me to zero in on what he had managed to pick out from the crowd. A young woman in a white nursing outfit with a surgical mask on."
     MC "Wait a second, that's the school nurse."
-    show RM happy
+    pause 1
+    hide Nurse with dissolve
+    show RM happy with dissolve
     RM "Exactly. Hitomi Kiyomi is her name."
     MC "Oh yeah, I remember now. How could I forget? That shot hurt."
     MC "What is she doing? It's a weekday. The ferry trip seems a bit too long for a daily commute."
@@ -15340,10 +15348,10 @@ label RM003_After2:
     "I left Daichi behind as I walked across the dock boardwalk to catch her before she got in the boarding queue, much to his continued protests."
     "At this point, I was getting impatient with Daichi's approach, which seemed to be \"If it's worth thinking over, it's worth overthinking.\"." 
     "I figured it couldn't hurt to try the direct approach for once."
-    #show nurse with dissolve
+    show Nurse neutral with dissolve
     play music Peaceful
     MC "Kiyomi-san, nice to run into you this evening. Are you heading out on a trip?"
-    show RM concerned-2 with dissolve
+    show RM concerned-2 at Position(xcenter=0.8, yalign=1.0) with dissolve
     Nurse "Oh! Nice to see you as well Hotsure-san, and Utagashi-san. I didn't expect to run into any students at the dock. Were you planning a trip to Wakkanai as well?"
     show RM neutral
     MC "Uh, maybe eventually, I guess. We just happened to take a walk around the area and noticed people gathering and came to see what all the commotion was. I didn't realize the ferry port was still active after it dropped us off."
@@ -15384,7 +15392,7 @@ label RM003_After2:
     Nurse "Oh! That's the call for boarding." 
     "At this point the line was starting to move and she didn't really have a choice to stay and continue the conversation."
     Nurse "I'm sure I'll see you two boys in a few days when I return. Enjoy the rest of your afternoon."
-    #hide nurse with dissolve
+    hide Nurse with dissolve
     "As Nurse Kiyomi got swept up in the moving line onto the ferry, I couldn't help but think of the contrast between her staunch unwillingness to tell me anything about Tomo on Measuring Day, and her personable cordialness today." 
     "Listening to her talk about him, she seemed genuinely happy she was going to see her fiance. Something I never expected in a million years, given the intrusive, if not completely problematic, nature of her factor."
     "A factor, mind you, that was arguably equally shocking as Tashi-sensei's tongue. To think someone with a factor like that can still find true happiness after all..."
@@ -16828,7 +16836,7 @@ label RM006:
     "That's what the sane part of my brain was asking anyway, but I've more or less come to accept that since I got to this island my whole perception of \"impossible\" was constantly being challenged and redefined."
     "So in that sense, this was just another day at school."
 
-    scene Giants Gate 
+    scene Giant Dorm Gate 
     show RM neutral 
     with fade
     play music RMInvestigate

@@ -6099,11 +6099,11 @@ label GTS030:
     "I awoke to my alarm reminding me to go over to Naomi's dorm to grab the notes from last week's lecture that I let her borrow."
     RM "Are you gonna turn that thing off, or do I have to?"
     MC "I got it, I'm up now."
-    "Swinging myself out of bed, I got dressed and, after some basic grooming, made my way towards Naomi's dorm."
-
+    "Swinging myself out of bed, I got dressed and, after some basic grooming, headed for Naomi's dorm."
+    $setGTSOutfit(OutfitEnum.CASUAL)
     scene School Inner with fade
     play music Schoolday
-    "As I made my way towards Naomi's dorm, I noticed a board full of flyers for upcoming events. One of the flyers is for the local Children's Day Festival."
+    "As I made my way towards her dorm, I noticed a board full of flyers for upcoming events. One of the flyers is for the local Children's Day Festival."
     MCT "I'll take one of these, maybe Naomi would like to go to this."
     "After grabbing a copy of the flyer and stuffing it in my pocket, I spotted Ryoko walking my way briskly. I stopped and bowed to greet her."
     MC "Morning, Ryoko."
@@ -6131,9 +6131,10 @@ label GTS030:
     MC "I will."
     "I turned and, after consulting a map of the school, made my way towards the giant's dorms."
 
-    scene Giant Dorm Exterior with fade
+    scene Giant Dorm Gate with fade
     "After following the directions Ryoko had given me, I found the chain-link fence gate with a large number pad mounted on it."
     "After punching in the code, I eventually made my way to the edge of a large, abandoned quarry. A wide road wound down the edge of the pit lined with weathered grey buildings."
+    scene Giant Dorm Exterior with fade
     "From down the road, I can see Naomi waving at me."
     GTS "Hotsure-san!"
     show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -6232,7 +6233,7 @@ label GTS030_c2_2:
     jump daymenu
 
 label GTS031:
-    scene Giant Dorm Interior with fade
+    scene Giant Dorm Exterior with fade
     $setProgress("GTS", "GTS032")
     play music GTS
     "I headed over to the giants' dorm after class to check in on Naomi. I hoped that she had moved in well."
@@ -6244,6 +6245,9 @@ label GTS031:
     GTS "Are you thirsty, by chance? I'm considering brewing a pot of tea for myself."
     MC "I could go for a cup. It's been a while since I've had a cup of home-brewed tea."
     "She held open the door for me. I suppose she didn't want it to hit me on the way in."
+    scene Giant Dorm Interior
+    show GTS neutral
+    with fade
     "The dorms inside had changed slightly since I'd visited yesterday. For one, there was some more furniture, like a couch, a table, some chairs, and nearly a full kitchen."
     "Though all the new additions had a similar utilitarian aesthetic as the rest of the dorm, it was good to see some of the space filled."
     MC "Did the school provide furniture and appliances?"
@@ -6642,6 +6646,7 @@ label GTS032_after:
 label GTS034:
     $setTime(TimeEnum.EVE)
     $setProgress("GTS", "GTS035")
+    $setGTSOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     play music GTS
     "I checked my phone once more to make sure I was headed to the right place."
@@ -6784,6 +6789,7 @@ label GTS035:
     $lockRoute("GTS")
     $setFlag("XX35")
     $setProgress("GTS", "GTS036")
+    $setGTSOutfit(OutfitEnum.CASUAL)
     scene Dorm Interior with fade
     play music Peaceful
     "My hands shook a little as I checked my hair in the mirror once more. I knew it didn't grow that quickly yet, but my anxiety had me constantly double-checking."
@@ -6922,6 +6928,7 @@ label GTS035_c1_2:
 
 label GTS035_testpass:
     scene Dorm Interior with fade
+    $setGTSOutfit(OutfitEnum.TRADITIONAL)
     "When I awoke the next morning, it wasn't due to my alarm ringing but of someone singing."
     MCT "The heck? That's not my alarm."
     UNKNOWN "Sekai wa kawari dasu, Inori mo todokanai, Boku ga kawari dasu."
@@ -7281,6 +7288,7 @@ label GTS035_testpass:
 label GTS036:
     $setProgress("GTS", "GTS037")
     scene Dorm Interior with fade
+    $setGTSOutfit(OutfitEnum.CASUAL)
     "It had been two days since the meeting with Naomi's parents, and things had been quiet between us."
     "This left me plenty of time to repeat the dinner scene over and over. Her father had been particularly difficult to deal with, but not in a way that was malicious."
     "It had grown apparent the task that lay ahead of me in rising not only to Naomi's standards, but her family's too."
@@ -7301,7 +7309,7 @@ label GTS036:
     hide RM with dissolve
     stop music
     "He handed me the box and returned to his room. Looking over the package, there appeared to be no markings besides the address."
-    MCT "I wonder who could've sent me this. I doubt my parents would; they normally only send that stuff to Tomoko for some reason."
+    MCT "I wonder who could've sent me this. I doubt my parents would; they normally only send that stuff to Tomo for some reason."
     Letter "Dear Hotsure-san,{w} our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind.{w} Please accept this gift as a display of hope towards your futures."
     "After I set the letter down, I began disassembling the brown packaging. Lifting the lid, I spotted an ornate, lacquered black box sitting amongst the packing material. With leaden curiosity, I lifted the box out, and gently opened the smaller box."
     "Inside was a tanto, its flawless blade glaring white in the afternoon sun."
@@ -8060,6 +8068,7 @@ label GTS038:
 
 label GTS039:
     $setProgress("GTS", "GTS040")
+    $setGTSOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     play music Schoolday
     "I walked through the central courtyard as the sun had just reached its highest point in the afternoon. It was the weekend, so I had plenty of time to myself."
@@ -8538,6 +8547,7 @@ label GTS040_c3:
 
 label GTS041:
     $setProgress("GTS", "GTS042")
+    $setGTSOutfit(OutfitEnum.CASUAL)
     play music DayByDay
     "More frequently than ever, I found myself going straight over to the Giants' Dorm after class. I didn't even need a call from Naomi."
     "She didn't mind me coming by; she treasured my company just  as much as I treasured hers."
@@ -8828,6 +8838,7 @@ label GTS042:
     scene black with fade
     pause 1.0
     $setRyokoOutfit(OutfitEnum.CASUAL)
+    $setGTSOutfit(OutfitEnum.CASUAL)
     scene Chukan Point
     show Ryoko neutral
     with fade
@@ -10834,8 +10845,9 @@ label GTS047:
     "Even still, visiting Naomi after class was just about a daily routine by now; making the trip so many times every week through the baking summer haze was good for cardio, that was for sure."
     "I was easily working off Naomi's steady line of experimental baked goods and then some."
     "I guess... she was just getting a little harder to resist these days. I really looked forward to getting to see her, and I could tell the feeling was mutual."
-    scene Giant Dorm Exterior with fade
+    scene Giant Dorm Gate with fade
     "A butterfly resting on the chain link fencing whisked away as the gate rattled open before me. I spared a glance at it, flickering leafy green against the vast blue, as I strolled past and off towards Naomi's dorm."
+    scene Giant Dorm Exterior with fade
     "I entered the building's engulfing shadow and stepped up to knock on the door."
     play sound Knock
     "After a few seconds, I heard a familiar booming voice from a few meters above me. Light and airy as it was, the reverb from the high ceilings and the sheer volume of her unrestrained voice still produced a potent echo."
@@ -11146,10 +11158,11 @@ label GTS049:
     scene black with fade
     pause 0.5
     $setTime(TimeEnum.NIGHT)
-    scene Giant Dorm Exterior with fade
+    scene Giant Dorm Gate with fade
     "I crossed the open fields with an unimpeded wind whipping, howling, slicing across my back. My skin grew cold where it touched, and I could feel my ponytail trying, with insufficient but surprising strength, to pull me away with the gale."
     play sound Thunder
     "I punched in the gate code and darted towards Naomi's dorm."
+    scene Giant Dorm Exterior with fade
     play sound Knock
     pause 1.0
     "{i}plip{/i}"

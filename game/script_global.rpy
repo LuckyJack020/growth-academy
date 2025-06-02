@@ -7,58 +7,58 @@ define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_su
 define AltMC = Character('Keisuke', color="#0066CC") #For flashback Keisuke, will not show graphic alongside his text.
 
 #Main Cast
-define AE = Character('Shiori', color="#FF3300")
+define AE = Character('Shiori', color="#7FB3D5")
 define AECell = Character('Shiori', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="AECell")
-define BE = Character('Honoka', color="#FCCF20")
+define BE = Character('Honoka', color="#FF6E6E")
 define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
 define FMGCell = Character('Akira', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="FMGCell")
 define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTSCell")
-define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
-define PRG2 = Character('Aida', color="#FF3399") #normal speaking voice
+define PRG = Character('Aida', color="#B586EC", what_prefix='{size=-6}', what_suffix='{/size}')
+define PRG2 = Character('Aida', color="#B586EC") #normal speaking voice
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
 define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #hidden picture
-define WG = Character('Alice', color="#CC33FF")
+define WG = Character('Alice', color="#FFD700")
 define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
 
 define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
 define MC_BE = Character('Keisuke & Honoka', color="#C0C0C0")
 
 #Supporting Cast
-define Chibuki = Character('Chibuki', color="#CC33FF")
+define Chibuki = Character('Chibuki', color="#49516D")
 define ChibukiCell = Character('Chibuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="ChibukiCell")
-define Jineko = Character('Jineko', color="#228B22")
+define Jineko = Character('Jineko', color="#EFAC87")
 define Kanami = Character('Kanami', color="#C0C0C0")
-define Kokutan = Character('Kokutan', color="#C0C0C0")
+define Kokutan = Character('Kokutan', color="#5E774A")
 define Minori = Character('Minori', color="#FF91DC")
 define Natsuko = Character('Natsuko', color="#8E0C0C")
 define Okisho = Character('Okisho', color="#8D2394", what_prefix='{size=+2}', what_suffix='{/size}')
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
-define Sakura = Character('Sakura', color="#FF3399")
+define Sakura = Character('Sakura', color="#FC79B4")
 define Tako = Character('Tako', color="#ce9b50")
-define Yuki = Character('Yuki', color="#FF91DC")
+define Yuki = Character('Yuki', color="#BDB8A5")
 define YukiCell = Character('Yuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="YukiCell")
 define Yua = Character('Yua', color="#C0C0C0") #Natsuko’s Mother
 
 #School Staff
-define HR = Character('Tashi-sensei', color="#C0C0C0")
-define Naoki = Character('Naoki-sensei', color="#C0C0C0")
-define Nurse = Character('Nurse Kiyomi', color="#C0C0C0") #Lips
-define Nurse2 = Character('Nurse Kiyomi', color="#0099CC") # Nails
-define Lunch = Character('Lunchlady', color="#CC33FF")
-define Hageshi = Character('Hageshi-sensei', color="#C0C0C0")
-define Misuboro = Character('Misuboro', color="#0099CC")
-define Principal = Character('Principal Noguchi', color="#C0C0C0")
-define Sugiyama = Character('Sugiyama-sensei', color="#C0C0C0")
-define Takamura = Character('Takamura-sensei', color="#C0C0C0")
-define Tsubasa = Character('Tsubasa-sensei', color="#C0C0C0")
+define HR = Character('Tashi-sensei', color="#B7A99A")
+define Naoki = Character('Naoki-sensei', color="#B7A99A")
+define Nurse = Character('Nurse Kiyomi', color="#FFCFFC") #Hitomi Kiyomi - Lips
+define Nurse2 = Character('Nurse Kiyomi', color="#0099CC") #Hanami Kiyomi - Nails
+define Lunch = Character('Lunchlady', color="#B7A99A")
+define Hageshi = Character('Hageshi-sensei', color="#B7A99A")
+define Misuboro = Character('Misuboro', color="#B7A99A")
+define Principal = Character('Principal Noguchi', color="#B7A99A")
+define Sugiyama = Character('Sugiyama-sensei', color="#B7A99A")
+define Takamura = Character('Takamura-sensei', color="#B7A99A")
+define Tsubasa = Character('Tsubasa-sensei', color="#B7A99A")
 
 #Parents and Other Relatives
 define Akihiro = Character('Akihiro', color="#C0C0C0") #Naomi’s Father
-define Dad = Character('Dad', color="#C0C0C0") #Keisuke’s Father
+define Dad = Character('Dad', color="#57C5F2") #Ryuta - Keisuke’s Father
 define DadCell = Character('Dad', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Father Cell
 define Enmei = Character('Enmei', color="#C0C0C0") #Aida's Father
 define Daitaro = Character('Daitaro', color="#C0C0C0") #Alice’s Father
@@ -68,12 +68,12 @@ define Kazumi = Character('Kazumi', color="#C0C0C0") #Naomi’s Sister
 define Midori = Character('Midori', color="#C0C0C0") #Akira’s Father
 define Miko = Character('Miko', color="#C0C0C0") #Naomi’s Mother
 define Minami = Character('Minami', color="#C0C0C0") #Shiori’s Mother
-define Mom = Character('Mom', color="#FF3300") #Keisuke’s Mother
+define Mom = Character('Mom', color="#57C5F2") #Himari - Keisuke’s Mother
 define MomCell = Character('Mom', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Mother Cell
 define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0") #Aida’s Mother
 define Takara = Character('Takara', color="#C0C0C0") #Aida’s Mother
 define TakaraCell = Character('Takara', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Aida's Mother Cell
-define Tomoko = Character('Tomo', color="#FF3300") #Keisuke’s Sister
+define Tomoko = Character('Tomo', color="#57C5F2") #Keisuke’s Sister
 define TomokoCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell") #Keisuke’s Sister Cell
 define Vivian = Character('Vivian', color="#C0C0C0") #Alice’s Mother
 define Yuko = Character('Yuko', color="#FF3300") #Akira’s Mother
@@ -94,13 +94,12 @@ define Sakie = Character('Sakie', color="#C0C0C0") #BE Route
 
 #Background Characters
 define Akio = Character('Akio', color="#C0C0C0") #GTS Route
-define Chie = Character('Chie', color="#FF9900") #FMG Route, MC Route
-define Chiyo = Character('Chiyo-san', color="#FF9900") #MC Route - Tsubasa-sensei’s wife
+define Chie = Character('Chie', color="#FF9900") #FMG Route, MC Route - Bakery Owner
+define Chiyo = Character('Chiyo', color="#FF9900") #MC Route - Tsubasa-sensei’s wife
 define Francois = Character('François', color="#CC33FF") #WG Route
 define Fujimoto = Character('Fujimoto', color="#DDA510") #FMG Route
 define Haruko = Character('Haruko', color="#DDA510") #FMG Route, MC Route
 define Hidaka = Character('Hidaka', color="#DDA510") #FMG Route
-define Katsumi = Character('Katsumi', color="#C0C0C0") #AE Route
 define Lee = Character('Lee', color="#C0C0C0") #WG Route - Summer Arc
 define Minei = Character('Minei', color="#C0C0C0") #FMG Route
 define Misaki = Character('Misaki', color="#C0C0C0") #WG Route
@@ -127,7 +126,7 @@ define Chef = Character('Chef', color="#C0C0C0")
 define Clown = Character('Clown', color="#C0C0C0")
 define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
 define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
-define Coach = Character('Coach', color="#C0C0C0")
+define Coach = Character('Coach', color="#B7A99A")
 define Cook = Character('Cook', color="#C0C0C0")
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Contractor = Character('Contractor', color="#C0C0C0")
@@ -135,8 +134,8 @@ define Coworker = Character('Coworker', color="#C0C0C0")
 define Coworker2 = Character('Coworker2', color="#C0C0C0")
 define DJ = Character('DJ', color="#C0C0C0")
 define Driver = Character('Driver', color="#C0C0C0")
-define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
-define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
+define FemStudent1 = Character('Female Student 1', color="#C0C0C0")
+define FemStudent2 = Character('Female Student 2', color="#C0C0C0")
 define Giant1 = Character('Giant 1', color="#C0C0C0")
 define Giant2 = Character('Giant 2', color="#C0C0C0")
 define Girls = Character('Girls', color="#ffffff")
@@ -146,7 +145,7 @@ define Intercom = Character('Intercom', color="#C0C0C0")
 define Interviewer = Character('Interviewer', color="#C0C0C0")
 define Judge = Character('Judge', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
-define Lifeguard = Character('Lifeguard', color="#C0C0C0")
+define Lifeguard = Character('Lifeguard', color="#B7A99A")
 define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Local = Character('Local', color="#C0C0C0")
 define Magician = Character('Magician', color="#C0C0C0")
@@ -155,19 +154,19 @@ define Masseuse1 = Character('Masseuse 1', color="#C0C0C0")
 define Masseuse2= Character('Masseuse 2', color="#C0C0C0")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Owner = Character('Store Owner', color="#C0C0C0")
-define Postwoman = Character('Postwoman', color="#C0C0C0")
-define Receptionist = Character('Receptionist', color="#C0C0C0")
+define Postwoman = Character('Postwoman', color="#B7A99A")
+define Receptionist = Character('Receptionist', color="#B7A99A")
 define Referee = Character('Referee', color="#C0C0C0")
-define Secretary1 = Character('Secretary 1', color="#C0C0C0")
-define Secretary2 = Character('Secretary 2', color="#C0C0C0")
-define Secretary3 = Character('Secretary 3', color="#C0C0C0")
+define Secretary1 = Character('Secretary 1', color="#B7A99A")
+define Secretary2 = Character('Secretary 2', color="#B7A99A")
+define Secretary3 = Character('Secretary 3', color="#B7A99A")
 define Stewardess = Character("Stewardess", color="C0C0C0")
-define Student = Character('Student', color="#FF3300")
-define Student1 = Character('Student 1', color="#FF3300")
-define Student2 = Character('Student 2', color="#FF3300")
-define Student3 = Character('Student 3', color="#FF3300")
-define Student4 = Character('Student 4', color="#FF3300")
-define Teacher = Character('Teacher', color="#C0C0C0")
+define Student = Character('Student', color="#C0C0C0")
+define Student1 = Character('Student 1', color="#C0C0C0")
+define Student2 = Character('Student 2', color="#C0C0C0")
+define Student3 = Character('Student 3', color="#C0C0C0")
+define Student4 = Character('Student 4', color="#C0C0C0")
+define Teacher = Character('Teacher', color="#B7A99A")
 define Umpire = Character('Umpire', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define UNKNOWNCell = Character('???', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
@@ -200,6 +199,7 @@ image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].webp")
 image Computer Room = DynamicImage("Graphics/ui/bg/computerroom_[gametime].webp")
 image Cooking Classroom = "Graphics/ui/bg/cooking.webp"
 image Faculty Room = DynamicImage("Graphics/ui/bg/archiveBG/facultyroom_[gametime].webp")
+image First Aid Room = DynamicImage("Graphics/ui/bg/archiveBG/firstaidroom_[gametime].webp")
 image Gate Front = "Graphics/ui/bg/gatefront.webp"
 image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].webp")
 image Hallway = DynamicImage("Graphics/ui/bg/schoolhallway1_[gametime].webp")
@@ -253,7 +253,7 @@ image Courtyard GTS = "Graphics/ui/bg/NYI.webp"
 image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].webp")
 image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].webp")
 image Giant Dorm Quarry = "Graphics/ui/bg/GTSDorm_quarry_rocks.webp"
-image Giants Gate = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].webp")
+image Giant Dorm Gate = DynamicImage("Graphics/ui/bg/GTSDorm_gate_[gametime].webp")
 
 #Seichou Town
 image Arcade = DynamicImage("Graphics/ui/bg/archiveBG/arcade_[gametime].webp")
@@ -380,12 +380,13 @@ image Tokyo Club Stage = "Graphics/ui/bg/archiveBG/tokyo_clubstage.webp"
 image Tokyo Club Stage Alt = "Graphics/ui/bg/archiveBG/tokyo_clubstage2.webp"
 image Tokyo House Exterior = DynamicImage("Graphics/ui/bg/tokyo_houseexterior_[gametime].webp")
 image Tokyo Dining Room = "Graphics/ui/bg/NYI.webp"
+image Tokyo Hotel Room = "Graphics/ui/bg/archiveBG/tokyo_hotelroom.webp"
 image Tokyo MC Apartment = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_mcapartment_[gametime].webp")
 image Tokyo Mega Metro = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_megametro_[gametime].webp")
 image Tokyo Restaurant = DynamicImage("Graphics/ui/bg/archiveBG/tokyo_restaurant.webp")
 image Tokyo Station = DynamicImage("Graphics/ui/bg/tokyo_station_[gametime].webp")
 image Tokyo Train = DynamicImage("Graphics/ui/bg/tokyo_train_[gametime].webp")
-image Tokyo Office = "Graphics/ui/bg/NYI.webp"
+image Tokyo Office = DynamicImage("Graphics/ui/bg/tokyo_office_[gametime].webp")
 
 #Other - Kagoshima
 image Kagoshima Aquarium = DynamicImage("Graphics/ui/bg/archiveBG/kagoshima_aquarium_[gametime].webp")
@@ -687,6 +688,7 @@ image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.webp")
 image AE afraid = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/afraid.webp")
 image AE ahegao = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ahegao.webp")
 image AE hatred = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hatred.webp")
+image AE hopeful = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/hopeful.webp")
 image AE love = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/love.webp")
 image AE rage = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/rage.webp")
 
@@ -890,6 +892,11 @@ image Tsubasa neutral = "Graphics/minor/faculty/tsubasa/neutral.webp"
 image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.webp"
 image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.webp"
 image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.webp"
+
+image Nurse neutral = "Graphics/minor/faculty/kiyomi/hitomi/[NurseOutfit]/neutral.webp"
+image Nurse unique = "Graphics/minor/faculty/kiyomi/hitomi/[NurseOutfit]/unique.webp"
+image Nurse2 neutral = "Graphics/minor/faculty/kiyomi/hanami/neutral.webp"
+image Nurse2 unique = "Graphics/minor/faculty/kiyomi/hanami/unique.webp"
 
 image Chiyo neutral = "Graphics/minor/other/chiyo/neutral.webp"
 
@@ -1221,34 +1228,34 @@ define audio.Vibrate = "Audio/SFX/sfx_vibrate.ogg"
 
 init 1 python:
     eventlibrary['MC001'] = {"name": "Sharpening the Senses", "girls": ["MC", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
-    eventlibrary['MC002'] = {"name": "Warmth of a Heart", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,                      "location": "facultyroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],                  "conditions": [[ConditionEnum.EVENT, "MC001"]]}
-    eventlibrary['MC003'] = {"name": "Will She Ever Grow up?", "girls": ["TM", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dormexterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "global005"]]}
+    eventlibrary['MC002'] = {"name": "Warmth of a Heart", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                      "location": "facultyroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],                  "conditions": [[ConditionEnum.EVENT, "MC001"]]}
+    eventlibrary['MC003'] = {"name": "Will She Ever Grow up?", "girls": ["MC", "TM", "RM"], "type": EventTypeEnum.OPTIONAL,                      "location": "dormexterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "global005"]]}
     eventlibrary['MC004'] = {"name": "Summary", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                      "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size2"],          "conditions": [[ConditionEnum.EVENT, "MC003"]]}
     eventlibrary['MC005'] = {"name": "Golden Week", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                      "location": "park",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX20"],          "conditions": [[ConditionEnum.TIMEFLAG, "aftersize2"]]}
     eventlibrary['MC006'] = {"name": "A Bad Handoff", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                               "location": "auditorium",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX20"],      "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "MC005"], [ConditionEnum.FLAG, "XX12"]]]}
-    eventlibrary['MC007'] = {"name": "Stakeout at the Bakeout", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,             "location": "bakery",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3", "noMC007"],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]}
+    eventlibrary['MC007'] = {"name": "Stakeout at the Bakeout", "girls": ["MC", "RM"], "type": EventTypeEnum.OPTIONAL,             "location": "bakery",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3", "noMC007"],                "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMG010"], [ConditionEnum.FLAG, "XX15"]]]}
     eventlibrary['MC008'] = {"name": "edoc ruo", "girls": ["MC", "BE"], "type": EventTypeEnum.OPTIONAL,                           "location": "classroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],                "conditions": [[ConditionEnum.TIMEFLAG, "XX20"]]}
-    eventlibrary['MC009'] = {"name": "La Femme de France", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,             "location": "cookingclassroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],                "conditions": [[ConditionEnum.FLAG, "XX22"]]}
-    eventlibrary['MC011'] = {"name": "Put Up a Fight", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,                           "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
+    eventlibrary['MC009'] = {"name": "La Femme de France", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,             "location": "cookingclassroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],                "conditions": [[ConditionEnum.FLAG, "XX22"]]}
+    eventlibrary['MC011'] = {"name": "Put Up a Fight", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
     eventlibrary['MC012'] = {"name": "GnG", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "global032"], [ConditionEnum.EVENT, "GTS032"]]]}
     eventlibrary['MC013'] = {"name": "Finals", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "classroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.FLAG, "XX35"]]}
     eventlibrary['MC014'] = {"name": "The Line", "girls": ["TM"], "type": EventTypeEnum.OPTIONAL,                           "location": "gamestore",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],     "conditions": [[ConditionEnum.FLAG, "XX37"]]}
     eventlibrary['MC023'] = {"name": "Stranger Than Fiction", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,               "location": "hallwaystairs",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],     "conditions": [[ConditionEnum.FLAG, "XX54"]]}
     eventlibrary['MC024'] = {"name": "The Scholarship", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                           "location": "infodesk",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],     "conditions": [[ConditionEnum.FLAG, "XX56"]]}
-    eventlibrary['MC033'] = {"name": "The Sentinel of Seichou", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,                   "location": "facultyroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX80"],     "conditions": [[ConditionEnum.FLAG, "XX73"]]}
-    eventlibrary['MC041'] = {"name": "Not So Big Afterall", "girls": ["faculty"], "type": EventTypeEnum.OPTIONAL,             "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.TIMEFLAG, "size6"]]}
-    eventlibrary['MC042'] = {"name": "Keisuke End", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC033"]]}
+    eventlibrary['MC033'] = {"name": "The Sentinel of Seichou", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                   "location": "facultyroom",  "priority": PrioEnum.NONE, "next": "", "obsflags": ["XX80"],     "conditions": [[ConditionEnum.FLAG, "XX73"]]}
+    eventlibrary['MC041'] = {"name": "Not So Big Afterall", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,             "location": "cafeteria",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.TIMEFLAG, "size6"]]}
+    eventlibrary['MC042'] = {"name": "Keisuke End", "girls": ["MC"], "type": EventTypeEnum.OPTIONAL,                                "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "MC041"]]}
 
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": ["MC"], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['global010'] = {"name": "A Start of Something Big", "girls": ["MC"], "type": EventTypeEnum.OPTIONALCORE,        "location": "campuscenter",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['global026'] = {"name": "Talk of the Town", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,             "location": "classroom",        "priority": PrioEnum.ALL,  "next": "", "obsflags": [],          "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "XX25"], [ConditionEnum.NOROUTELOCK, "PRG"]]]}
     eventlibrary['global032'] = {"name": "The Departure", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "classroom",        "priority": PrioEnum.ALL,   "next": "",  "obsflags": ["noGTS030"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.FLAG, "XX32"]]]}
-    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.FLAG, "RMRoute_Unlocked"]]}
-    eventlibrary['RM002'] = {"name": "Ties that Bind", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "gatefront",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}
-    eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}
-    eventlibrary['RM004'] = {"name": "Voices of the Past", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "classroom_3",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM003"], [ConditionEnum.FLAG, "XX15"]]]}
-    eventlibrary['RM005'] = {"name": "Milestone", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM004"], [ConditionEnum.TIMEFLAG, "XX20"]]]}
-    eventlibrary['RM006'] = {"name": "The Gate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
+    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.FLAG, "RMRoute_Unlocked"]]}
+    eventlibrary['RM002'] = {"name": "Ties that Bind", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,                   "location": "gatefront",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM001"], [ConditionEnum.EVENT, "global005"]]]}
+    eventlibrary['RM003'] = {"name": "Mystery of the Seichou Dock", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,     "location": "dock",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM002"], [ConditionEnum.FLAG, "XX12"]]]}
+    eventlibrary['RM004'] = {"name": "Voices of the Past", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,     "location": "classroom_3",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM003"], [ConditionEnum.FLAG, "XX15"]]]}
+    eventlibrary['RM005'] = {"name": "Milestone", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size3"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM004"], [ConditionEnum.TIMEFLAG, "XX20"]]]}
+    eventlibrary['RM006'] = {"name": "The Gate", "girls": ["RM"], "type": EventTypeEnum.OPTIONAL,     "location": "chukanpoint",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size4"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1564,7 +1571,7 @@ init 2 python:
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['FMG006'] = {"name": "Crying Over Spilled Milk", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                             "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                              "location": "dormexterior",             "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG010"]]}
-    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
+    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.AND, [ConditionEnum.FLAG, "FMG_workout"], [ConditionEnum.EVENT, "FMG010"]]]}
     eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG028"]]}
     eventlibrary['FMG078'] = {"name": "The Holy Grail of Revengeance", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                      "location": "arcade",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG076"]]}
     
@@ -1865,10 +1872,10 @@ init 2 python:
     eventlibrary['WG004M'] = {"name": "To Play the Fool", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                             "location": "musicclassroom",    "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG003M"], [ConditionEnum.AND, [ConditionEnum.EVENT, "WG075"], [ConditionEnum.SKILL, "Art", ConditionEqualityEnum.GREATERTHANEQUALS, 14]]]]}
     eventlibrary['WG005M'] = {"name": "Practice Pays Dividends", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                             "location": "musicclassroom",    "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.NOEVENT, "WG102"], [ConditionEnum.AND, [ConditionEnum.EVENT, "WG004M"], [ConditionEnum.AND, [ConditionEnum.EVENT, "WG093"], [ConditionEnum.SKILL, "Art", ConditionEqualityEnum.GREATERTHANEQUALS, 20]]]]]}
 
-    eventlibrary['WGB001'] = {"name": "When a Door Closes...", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dorminterior",        "priority": PrioEnum.NONE,              "obsflags": ["size3"],            "conditions": [[ConditionEnum.AND, [ConditionEnum.FLAG, "WG_disabled"], [ConditionEnum.AND, [ConditionEnum.FLAG, "Meet_Mizawa"], [ConditionEnum.OR, [ConditionEnum.FLAG, "WG008_C2_M1"], [ConditionEnum.FLAG, "WG008_C3_M1"]]]]]}
-    eventlibrary['WGB002'] = {"name": "A Little Extra", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "schoolfront",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB001"]]}
-    eventlibrary['WGB003'] = {"name": "No Time Like the Present", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dorminterior",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB002"]]}
-    eventlibrary['WGB004'] = {"name": "The Rocker with Rolls", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "hallway",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB003"]]}
+    eventlibrary['WGB001'] = {"name": "When a Door Closes...", "girls": ["WGB"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dorminterior",        "priority": PrioEnum.NONE,              "obsflags": ["size3"],            "conditions": [[ConditionEnum.AND, [ConditionEnum.FLAG, "WG_disabled"], [ConditionEnum.AND, [ConditionEnum.FLAG, "Meet_Mizawa"], [ConditionEnum.OR, [ConditionEnum.FLAG, "WG008_C2_M1"], [ConditionEnum.FLAG, "WG008_C3_M1"]]]]]}
+    eventlibrary['WGB002'] = {"name": "A Little Extra", "girls": ["WGB"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "schoolfront",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB001"]]}
+    eventlibrary['WGB003'] = {"name": "No Time Like the Present", "girls": ["WGB"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dorminterior",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB002"]]}
+    eventlibrary['WGB004'] = {"name": "The Rocker with Rolls", "girls": ["WGB"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "hallway",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB003"]]}
 
     eventlibrary['WGAE001'] = {"name": "Butting Into Her Business", "girls": ["WG", "AE"], "type": EventTypeEnum.OPTIONAL,                                        "location": "hallway",        "priority": PrioEnum.NONE,              "obsflags": ["size3"],            "conditions": [[ConditionEnum.EVENT, "WG012"]]}
 

@@ -1772,7 +1772,8 @@ label FMG015:
     $setMCOutfit(OutfitEnum.CASUAL)
     scene Town with fade
     play music HigherEdu
-    $setFlag("VisitedTown")
+    if not getFlag("VisitedTown"):
+        $setFlag("VisitedTown")
     "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."
     "The streets were full of bustling people given the time and day, everyone was either working or buying things from the many open stores. Seeing so many going shopping made me feel like buying something too."
     "As I was taking in the sites and wondering what store I should go to, a thought came to me."
@@ -1810,6 +1811,8 @@ label FMG015:
 
     scene Arcade with fade
     play music Busy
+    if not getFlag("VisitedArcade"):
+        $setFlag("VisitedArcade")
     MC "Alrighty, where is she? Shouldn't be hard to find her given her build."
     pause 1
     MC "Ah-ha, there she is. I'd recognize that ponytail anywhere."
@@ -3253,7 +3256,7 @@ label FMG022:
     "We walked off the track and parted ways, Akira to her dorm and I towards town."
     MCT "I talk a big game but I'm getting my ass handed to me without a doubt. {w}Meh, whatever, at least I can spend some time with her."
     $setFMGOutfit(OutfitEnum.DEFAULT)
-	$setMCOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Town with fade
     MCT "Oh yeah, today's feeling like a fantastic day to lose... Man, I really have to start being more positive."
     MCT "Maybe I'll win. {w}Yeah, that's much better. Great job me."
@@ -6695,10 +6698,12 @@ label FMG039:
     scene Nurse Office with fade
     play music Rain
     MCT "Sitting in the nurse's office with Akira out like a light and Natsuko sitting to my right. Not really how I'd like to spend my evening."
+    show Nurse2 neutral with dissolve
     Nurse2 "You can relax sweetie! She'll be fine! She should've stayed in bed today... Muscle growth students and pushing themselves too hard. Haha, name a more iconic duo."
     MC "Tell me about it...Thank you again for your help."
     Nurse2 "Don't mention it dear. Unfortunately, I have to step out for a moment to help another student. If you need my help, ring the bell on my desk and I'll come running!"
     MC "Got it. Thanks again."
+    hide Nurse2 with dissolve
     "The nurse smiled at us and headed out the door."
     show Natsuko neutral with dissolve
     Natsuko "She'll be fine Keisuke. Let this be a lesson for her."
@@ -6853,6 +6858,7 @@ label FMG039:
     MC "I hope you don't mind, but I think I'm the one in need of medical attention now."
     "I shuffled my feet towards the bed while popping my back, back into place."
     MC "Ahhh, much better."
+    show Nurse2 neutral with dissolve
     "It was at this moment the nurse walked back in and saw the situation flipped."
     Nurse2 "It seems a lot happened during my absence. What did I miss?"
     show FMG sad
@@ -7050,6 +7056,7 @@ label FMG040:
 
 label FMG041:
     $setProgress("FMG", "FMG042")
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm Exterior with fade
     play music Busy
     MC "We got everything right?"
@@ -7243,6 +7250,7 @@ label FMG041:
     FMG "No problem, I'll get the umbrella and towels set up."
     hide FMG with dissolve
     pause 3
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     show FMG neutral with dissolve
     MC "Alright, I'm back. What do you need help with?"
     show FMG happy
@@ -7760,6 +7768,8 @@ label FMG044:
     "I froze up for a moment."
     MCT "Can't she just... use a different one? They can't all be broken, can they? And besides, I'm not a plumber!"
     MC "Uh... gimme a sec, I'll be right over there!"
+    scene Lockers Showers with fade
+    $setFMGOutfit(OutfitEnum.NUDE)
     "I grabbed my bag and slowly made my way to the shower room."
     "DO NOT ENTER - CLOSED FOR REPAIRS."
     "Huh, that's strange... unless that was put up there a second ago, why would Akira be in the showers?"
@@ -7769,7 +7779,7 @@ label FMG044:
     stop music
     MC "-Goh?! Y-Y-Y-Y-You... "
     #cg
-    show FMG neutral
+    show FMG neutral with dissolve
     FMG "Hm?"
     MC "You're NAKED! I-I... uh... sorry! I meant undressed!"
     FMG "Huh? What, am I gonna shower with my clothes on?"
@@ -7824,6 +7834,7 @@ label FMG044:
     FMG "Gotta get dressed right before you work out, right?"
     "Before I could even respond, my eyes shut as she tugged even harder."
     "Rrrrrrrrrip!"
+    $setMCOutfit(OutfitEnum.NUDE)
     "There went my shirt. And my pants."
     "...And my underwear. I could feel my cock throb as arousal clouded my mind."
     FMG "Well, don't make me do all the heavy lifting!"
@@ -9443,6 +9454,8 @@ label FMG051:
 
 label FMG052:
     $setProgress("FMG", "FMG053")
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Track with fade
     play music FMG
     "For today's exercise Akira wanted to train abs... it was supposed to be leg day but I convinced her to move that to another day."
@@ -9513,7 +9526,8 @@ label FMG052:
     FMG "Suck it up buttercup they're only getting bigger."
     MC "{i}sigh{/i}... I guess."
     scene black with fade
-
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setMCOutfit(OutfitEnum.DEFAULT)
     pause 1
     scene Dorm Exterior with fade
     MC "You got here in record time, very impressive."
@@ -9789,7 +9803,9 @@ label FMG053:
     scene black with fade
     pause 1
 
-    scene Nurse Office with fade
+    scene Nurse Office
+    show Nurse neutral
+    with fade
     play music Peaceful
     Nurse "Okay! We'll send you a reminder for scheduling your next appointment. It doesn't have to be exact, but we generally try to aim for an every two weeks basis."
     show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
@@ -9842,6 +9858,7 @@ label FMG053:
     Nurse "Heh, you're all set. I'll write this down and you're free to leave."
     MC "Awesome, thank you so much."
     Nurse "My pleasure."
+    hide Nurse with dissolve
     "I walked back over to Akira and Aida to see them saying their goodbyes."
     show FMG happy at Position(xcenter=0.75, yalign=1.0)
     show PRG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
@@ -10008,6 +10025,7 @@ label FMG054:
     $setProgress("FMG", "FMG055")
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym
     show FMG neutral
     with fade
@@ -10067,6 +10085,7 @@ label FMG054:
     scene black with fade
     $setFMGOutfit(OutfitEnum.DEFAULT)
     $setNatsOutfit(OutfitEnum.DEFAULT)
+    $setMCOutfit(OutfitEnum.DEFAULT)
     pause 1
     "I hurried my way out of the locker room and waited for them outside, my mind racing with thoughts."
 
@@ -10268,7 +10287,7 @@ label FMG055:
     show FMG happy
     FMG "I wasn't going to, I swear~"
     MC "No more stalling. The kid gloves are coming off."
-    $setMCOutfit(OutfitEnum.UNDERWEAR)
+    $setMCOutfit(OutfitEnum.GYM)
     "I threw my shirt off and started posing in the mirror poking fun at Akira's poses."
     show FMG sad-2
     FMG "This was a horrible idea... I should've backed out."
@@ -10393,6 +10412,7 @@ label FMG056:
     $setFlag("XX56")
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym with fade
     play music FMG
     "Normally I wouldn't be looking forward to getting absolutely obliterated by Akira's program for me, which seemed designed as a punishment."
@@ -10764,6 +10784,7 @@ label FMG058:
     $setProgress("FMG", "FMG059")
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym with fade
     play music FMG
     "After a few minutes of surprisingly non-hostile convincing, Akira convinced Natsuko to join us for our workouts at the gym."
@@ -11376,6 +11397,7 @@ label FMG060:
 
 label FMG061:
     $setProgress("FMG", "FMG062")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene black with fade
     FMG "You awake...? Kei-kun?"
     MC "Nooooo, Alice... that's my hotdog..."
@@ -11431,7 +11453,7 @@ label FMG061:
     MC "...Fine...!"
     scene black with fade
     pause 1
-
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm FMG with fade
     MCT "Unbothered. Happy in my lane. Focused. Flourishing. A good shower does the trick all the time."
     FMG "I can't wait to rock this! This dress brings out my muscles so well, I look huge, haha."
@@ -11542,6 +11564,7 @@ label FMG062:
     $setProgress("FMG", "FMG063")
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym with fade
     play music FMG
     MC "I'm telling you, there is no way Fuke Groundrunner beats Mandalf. One is an all-powerful wizard and the other has daddy issues."
@@ -12479,6 +12502,8 @@ label FMG065:
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
     $setNatsOutfit(OutfitEnum.SWIMSUIT)
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
+    $setSakuraOutfit(OutfitEnum.CASUAL)
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -12756,6 +12781,7 @@ label FMG065:
 
 label FMG066:
     $setProgress("FMG", "FMG067")
+    $setMCOutfit(OutfitEnum.CASUAL3)
     scene Airport with fade
     play music Busy
     MC "Think you got everything?"
@@ -12922,6 +12948,7 @@ label FMG066:
 #The next scenes with Akira will all have PrioEnum.ALL similar to the Alice summer trip arc
 label FMG067:
     $setProgress("FMG", "FMG068")
+    $setMCOutfit(OutfitEnum.CASUAL3)
     scene Plane Interior with fade
     play music FMG
     "I had fallen asleep after Akira and I raided Alice's ice cream stash and polished off roughly three tubs. Having to compete with Akira for every scoop was a challenge, unlike anything I'd done before."
@@ -13236,6 +13263,7 @@ label FMG067:
 
 label FMG068:
     $setProgress("FMG", "FMG069")
+    $setMCOutfit(OutfitEnum.CASUAL3)
     FMG "Kei? Kei?"
     pause 1
     FMG "Oh my freaking god... Kei!"
@@ -13289,6 +13317,7 @@ label FMG068:
     pause 1
 
     scene Okinawa Beach with fade
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
     MC "Might I just say that you {i}never{/i} stop looking good in that."
     show FMG flex with dissolve
@@ -13327,6 +13356,7 @@ label FMG068:
     pause 1
 
     scene Okinawa Market with fade
+    $setMCOutfit(OutfitEnum.CASUAL3)
     MC "I'm a total fool for not asking, but what's the name of this place?"
     show FMG neutral with dissolve
     FMG "It's nothing crazy fancy, I hope they haven't changed the name. Back when I was a kid it was called \"Fortune Dragon\". It should be down this street unless they moved."
@@ -13447,6 +13477,7 @@ label FMG068:
     $setTime(TimeEnum.EVE)
     scene Okinawa Beach with fade
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     MC "We have a thing for watching sunsets. This is our third one if I can count."
     show FMG happy with dissolve
     FMG "Actually, it's our second. But who's counting?"
@@ -13501,6 +13532,7 @@ label FMG068:
 
 label FMG069:
     $setProgress("FMG", "FMG070")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene Okinawa Bedroom with fade
     "I woke up in a silent and empty room, the only noise coming from the waves gently crashing onto the shore."
     MC "God, this island is gorgeous... Now, then... {w}Where is everybody???"
@@ -13516,6 +13548,7 @@ label FMG069:
     MC "Hm, she said she'll be back in five minutes. That should be {i}just{/i} enough time to take a shower and get everything cleaned up."
     scene black with fade
     pause 1
+    $setMCOutfit(OutfitEnum.CASUAL3)
     scene Okinawa Bedroom with fade
     MC "Clean as a whistle. I'm so much more productive when she isn't around. {w}Never too late to consider a career change."
     FMG "You wouldn't last a day without me."
@@ -13687,6 +13720,7 @@ label FMG070:
     $setSize(5)
     $setTimeFlag("size5")
     $setFMGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "After everything that had happened yesterday, a good night's rest was what we all needed— and it was a great night's rest, fantastic even. {w}Until the air mattress popped and I was relegated to the couch."
     "The couch was... rough. It was one of those couches that looks incredibly comfy and then when you sit or lay down on it you immediately regret your life choices. Freaking terrible."
     "To make matters even worse when I finally started to doze off. I heard what sounded like a bomb going off in Akira's room."
@@ -14054,6 +14088,7 @@ label FMG070:
 label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
     $setProgress("FMG", "FMG072")
     $setFMGOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL3)
     scene Okinawa House Interior with fade
     play music Peaceful
     "With what happened yesterday, Akira slept on the family room floor, I hopped off the couch to keep her some company and so we could be just a little closer to each other."
@@ -14754,6 +14789,7 @@ label FMG072:
     scene Nurse Office
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
     show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Nurse neutral
     with fade
     "When we entered the nurse's office, we found Nat speaking with Nurse Kiyomi."
     Nurse "Can't say I'm surprised given the pace of your growth. Your mother was a previous record-holder after all."
@@ -14891,7 +14927,7 @@ label FMG072:
     Nurse "Be proud of what you've achieved. {w}Now, I need to get a bite to eat. You two are welcome to stay as long as you like. When I get back from lunch, I'll get your outfit ordered, Mizutani-san. Should be ready at the end of the day."
     FMG "Thank you, Nurse Kiyomi. I appreciate it."
     Nurse "I'll see you two around."
-    pause .5
+    hide Nurse with dissolve
     MC "You okay?"
     FMG "Hm? Yeah, I'm not as annoyed as I thought I'd be. In the back of my head, I assumed I wouldn't be able to best Nat. Gotta temper your expectations, you know?"
     show FMG flex
@@ -16248,7 +16284,8 @@ label FMG077:
     FMG "Yessssss!"
     "Placing her hands on my hips, she managed to get a hold of both my shirt and pants."
     "{i}Schriiiiiip!{/i}"
-    MC "Huh. That was surprisingly clean, actually. you've gotten pretty good at this."
+    $setMCOutfit(OutfitEnum.NUDE)
+    MC "Huh. That was surprisingly clean, actually. You've gotten pretty good at this."
     show FMG neutral
     FMG "I've done this like, 30 times now, dude. Bigger hands certainly help, but practice makes perfect!"
     show FMG aroused
@@ -16579,6 +16616,7 @@ label FMG079:
     play music Peaceful
     scene Dorm FMG with fade
     $setFMGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     "Yesterday was magical... and a little painful now that I think about it..."
     MCT "My back! Oooh, my back! I am {i}never{/i} flipping her again. Holy crap..."
     "Having my head between Akira's massive boobs helped ease the pain a bit; best pillows a guy could ask for."
@@ -16705,6 +16743,7 @@ label FMG079:
     MC "Eeee, it can't get much worse. Don't eat without me."
     show FMG neutral
     FMG "I won't. Don't take too long or I might end up eating yours."
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Dorm FMG
     show FMG neutral
     with fade
@@ -16791,6 +16830,7 @@ label FMG080:
     scene Gym with fade
     play music FMG
     $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     MC "Could you use any more weights?"
     show cg FMG080 with dissolve
     FMG "It's only eight plates."
@@ -16902,7 +16942,7 @@ label FMG080:
     MC "The pants are already off, let's dance!"
     scene black with fade
     pause .5
-
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Lockers with fade
     "Akira's shower antics are some of the best things she does. Will she lift me up and suck the soul out of my body? Maybe she'll grab my hands and have me stroke her abs. The possibilities are endless. {w}Too bad none of those possibilities happened."
     MC "I'm a little upset, I thought we'd do more... usually you're more aggressive when we shower together."
@@ -17137,6 +17177,7 @@ label FMG081:
     $setProgress("FMG", "FMG082")
     scene Dorm FMG with fade
     $setFMGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     play music FMG
     MC "I'm not sold on lifting me over the weights you already have in your room. Wouldn't it be more effective to lift... and this is a wild guess... {w}something that's {i}heavy{/i}?"
     show FMG neutral with dissolve
@@ -17184,6 +17225,7 @@ label FMG081:
     $setTime(TimeEnum.EVE)
     scene Library with fade
     $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setMCOutfit(OutfitEnum.DEFAULT)
     play music Natsuko
     "Don't tell Akira {w}but I went to go bother Nat. I made the executive decision to play it safe and asked her to play some chess with me... which worked a little too well."
     show Natsuko neutral with dissolve
@@ -17242,6 +17284,7 @@ label FMG081:
     MC "Maybe she's not all ice after all."
     scene black with fade
     pause .5
+    $setMCOutfit(OutfitEnum.FORMAL)
     scene Dorm Hallway
     show FMG neutral
     with fade
@@ -17780,10 +17823,12 @@ label FMG082:
         $setTime(TimeEnum.EVE)
 
         play music Sunset
-        scene Nurse Office with fade
+        scene Nurse Office
+        show Nurse neutral at Position(xcenter=0.25, yalign=1.0)
+        with fade
         Nurse "Keep it on ice and you'll be just fine. You need to be more careful, Hotsure-san."
         MC "Heh, silly me. I'll do my best."
-        show FMG neutral with dissolve 
+        show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve 
         FMG "Thank you so much, Nurse Kiyomi. I tried to warn him to be more careful in the kitchen. Those bowls get quite heavy."
         Nurse "Accidents happen, don't worry."
         MC "...Heh... They sure do..."
@@ -17791,7 +17836,8 @@ label FMG082:
         MCT "Keep flexing, you'll pull a muscle eventually and I'll be there to laugh at you."
         Nurse "Now, if you could sign here, you'll be on your way. The ice packs are good for roughly two hours, keep them on for the full duration and wrapped in paper towels."
         MC "Will do! Thank you again! {size=-6}Let's get out of here, I already feel like an idiot.{/size}"
-        show FMG neutral
+        show FMG neutral at altMove(0.5, 0.5)
+        hide Nurse with dissolve
         FMG "{size=-6}Right behind you. {/size}"
         scene black with fade
         pause 1
@@ -17879,6 +17925,7 @@ label FMG083:
     scene Gym with fade
     play music WildBlur
     $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     "There I was, crushing personal records. Curling ungodly amounts of weight without breaking a sweat. In fact, I guarantee the weights were sweating when they saw me approaching."
     pause 2
     show FMG neutral with dissolve
@@ -17939,7 +17986,8 @@ label FMG083:
     scene black with fade
     pause .5
 
-    $setTime(TimeEnum.EVE)
+    $setTime(TimeEnum.NIGHT)
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Dorm Tomoko with fade
     if not getFlag("TM_VisitedDorm"):
         $setFlag("TM_VisitedDorm")
@@ -18588,6 +18636,7 @@ label FMG086:
         $setProgress("FMG", "FMG087B")
     scene Gym with fade
     $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     play music FMG
     "There I was in awe watching Akira bench some absurd amount of weight I had been too lazy to add up. Judging by the bar bending like that you'd think the bar was made of rubber."
     MC "Are you ever afraid of like I don't know... dying. I'm no gym expert but the bars aren't supposed to bend like that."
@@ -19029,6 +19078,7 @@ label FMG087A:
     "And with that, she picked me up and ripped my clothes to pieces."
     MCT "One time. Please let me take off my clothes one time!"
     show FMG aroused
+    $setMCOutfit(OutfitEnum.NUDE)
     FMG "Augh, finally you're naked. Let's go!"
     MC "Oooookay..."
     pause .5
@@ -19329,6 +19379,7 @@ label FMG088:
     play music Peaceful
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     "Akira and Nat were busy arguing about whatever form was right for whatever workout they were doing. {w}Again."
     "If you couldn't tell, I wasn't paying much attention since I was taking a water break and staring out the window praying that I could be free of this prison they call a gym... {w}Until I was given an out."
     MC "Oh, hey! It's snowing! What do you say we cut our workout short and have a good old fashioned snowball fight."
@@ -19406,6 +19457,9 @@ label FMG088:
     pause .5
     $setFMGOutfit(OutfitEnum.CASUAL2)
     $setNatsOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
+    $setTime(TimeEnum.RAIN)
+    #Snow overlay
     scene Campus Center with fade
     show FMG neutral
     with fade
@@ -19607,6 +19661,7 @@ label FMG089:
     $setTime(TimeEnum.EVE)
     $setFMGOutfit(OutfitEnum.GYM)
     $setFMGOutfit(OutfitEnum.NUDE)
+    $setMCOutfit(OutfitEnum.NUDE)
     scene Dorm FMG
     show FMG neutral
     with fade
@@ -20244,6 +20299,10 @@ label FMG091:
     MC "Damn, you got some grippers now. Heh, my what big hands you have! {w}Aaah, that's funny. Alright, I'll see you in a bit. Love you."
     show FMG happy
     FMG "Love you too."
+    scene black with fade
+    pause 0.5
+    $setFMGOutfit(OutfitEnum.GYM)
+    $setMCOutfit(OutfitEnum.GYM)
     scene Gym with fade
     MCT "I need to start charging Tomo for my services, a hefty inconvenience should. Working for free just isn't cutting it anymore. Ah, I'll worry about it later, where's Akira?"
     FMG "More weight guys!"
@@ -20335,7 +20394,8 @@ label FMG091:
     MC "Here, hold my hand."
     scene black with fade
     pause 1
-
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Hallway with fade
     play music Peaceful
     MC "How are you holding up?"
@@ -21304,7 +21364,7 @@ label FMG093B:
     Natsuko "We'll see about that. I won't make the same mistake again."
     show Natsuko neutral
     show FMG neutral
-    show Hageshi with dissolve
+    show Hageshi neutral with dissolve
     Hageshi "Athletes ready."
     "Hageshi-sensei wasn't giving either of them much of a break, bringing them right back to the center, stick in hand."
     play sound Whistle
