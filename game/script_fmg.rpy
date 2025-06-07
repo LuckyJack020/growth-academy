@@ -22802,6 +22802,206 @@ label FMG096:
     jump daymenu
 
 label FMG097:
+    $setProgress ("FMG", "FMG098")
+    play music Reignition
+    if not getFlag("VisitedGameStore"):
+        $setFlag("VisitedGameStore")
+    scene Game Store
+    show FMG sad
+    with fade 
+    FMG "Kei, I think he forgot..."
+    MC "He didn't forget, Akira. He's most likely running late, these types of famous people are always getting caught up in something."
+    "Akira was a subscriber to Sensational Infinity and had entered into a contest where if the winner won, the creator, Axel Day, would travel to your town, college or whatever it be in search of inspiration for his next comic book run."
+    "Akira and a bunch of other students submitted a {i}lot{/i} of entries for the school and ended up winning."
+    "To say the game store was packed was an understatement, they had to limit how many people could be inside. People were freaking ecstatic. {w}I was too but I had to play it cool in front of Akira." 
+    MCT "I am {i}this{/i} close to screaming like a little girl."
+    MC "Also, it's your turn."
+    show FMG neutral
+    FMG "Ah, right, sorry, I'll draw, play a land for turn and pass."
+    MC "If you counter any fun I try to have, I'm dragging you home."
+    FMG "I'm not!"
+    MC "Hmm... I'll draw, play land for turn, tap three and play-"
+    FMG "In response..."
+    MC "I didn't even finish my sentence... You have no idea what card it is, what it does, maybe it doesn't do anything at all and it's simply a ramp spell."
+    FMG "You'd be upset if I do counter it and that itself is more than enough for me."
+    MC "Yeah, I definitely would be."
+    show FMG happy
+    FMG "Well, I'm countering it."
+    MC "..."
+    MC "Okay, fine. It's countered... whatever."
+    show FMG neutral
+    FMG "Are you going to get anything signed by Axel?"
+    MC "He's signing stuff?!!? I thought he was only popping his head in and then he was sightseeing."
+    FMG "I told you he was signing stuff! It said in the contest that he would sign merch for at least three hours."
+    MC "I can only imagine the hand cramps."
+    show FMG sad
+    FMG "I hope he shows up soon, we've been here for hours."
+    MC "It has been a whopping 45 minutes."
+    FMG "And it feels like an eternity..."
+    MC "You said he'd be around one, that's in twenty minutes. You're getting yourself all sad for nothing... WE GOT TIME."
+    show FMG neutral
+    FMG "Oh my god! I can't believe it skipped my mind... He's never seen people like us, he's probably going to freak out and run away."
+    show FMG sad
+    FMG "It's gonna be over before it even began."
+    MC "Ew, overly sad Akira is gross. New rule, you can't be sad for the rest of your life."
+    show FMG neutral
+    FMG "And if I ever get sad?"
+    MC "I slap your big ol' titties. Can't be sad when you've had a titty slap."
+    FMG "That is certainly a sentence."
+    MC "It is... now can you {i}please{/i} gooooo, you take so long on your turns."
+    show FMG angry
+    FMG "Can you let a girl think?? God damn."
+    MC "You will play a land and pass. You've done it for the last three turns! Your hand is nothing but counterspells and lands."
+    show FMG neutral
+    FMG "Heh... maybe..."
+    MC "I never should've helped you build that deck..."
+    FMG "Oooh, for sure. Look on the bright side, we know it works and it's pretty fun to play."
+    MC "Yeah, bet you're having a freaking blast... damn counterspell andies."
+    MC "After this session, we're building you a different deck. I need something that actually lets me play the game."
+    "Seeing some commotion from the people standing near the entrance, I turned my head back towards the window."
+    Student1 "Guys! Guys! He's pulling in right now!!!"
+    "Everyone in the building dropped what they were doing to turn towards the windows to see for themselves."
+    show FMG surprised
+    FMG "Holy shit! He's really here!!!"
+    show FMG neutral
+    FMG "You'd think he'd have bigger bodyguards."
+    MC "..."
+    FMG "What?"
+    "A part of me couldn't believe this was happening and not only was it happening, I was here to witness it. It's these types of events that you'd talk to your kids about because it's just that cool."
+    MC "There's too many freaking people, I can't see anything!"
+    FMG "I'm seeing just fine from up here."
+    MCT "The urge to kick your shin..."
+    "Bodyguard 1" "Please make room, back up, back up."
+    "Bodyguard 2" "Back away please!"
+    "Axel Day" "Relax fellas, I'm a big deal after all, haha."
+    "Security was able to corral the herd of students to the other side of the room to allow Axel to sit down at the booth and get himself comfortable."
+    "Axel Day" "Quite the crowd! Love seeing all this excitement from you guys! We have a lot of time to kill here so I want a lot of questions and I want even more things to sign."
+    "Axel Day" "I've heard a ton about this place and it's got {i}me{/i} excited to get to know you guys and Seichou."
+    "The more Axel talked, the more the crowd was pressing in."
+    MC "Akira, you need to shove these people out of the way. I'm getting smushed!"
+    FMG "Do you want us to get kicked out???"
+    show FMG happy
+    FMG "Be taller next time... like me."
+    MCT "...{w}Don't"
+    "Axel Day" "I want to start with the question portion of the event if that's good with you guys!"
+    "You'd think we were at a rock concert with how everyone was acting. The energy in the room could've rivaled the Strength Pentathlon— it was awesome."
+    "Axel Day" "And with that... {w}Who wants to go first?"
+    pause .5
+    "Just about the whole place raised their hand. I think the guy was overwhelmed."
+    "Axel Day" "Uh... hmmm... {w}Ah! You! In the back with the curly black hair."
+    "The One in the Back" "!"
+    "The One in the Back" "I was... I was ummm... wondering what's been your biggest inspiration for your comics?"
+    "Axel Day" "Oh, starting off strong. Hm, my biggest inspiration..."
+    "Axel Day" "I'd have to say it's my father. My pops was the most supportive person in my life when I decided to take this risk and start writing and drawing comics." 
+    "Axel Day" "He was there for me every single second, no one ever pushed me harder or cared as much as he ever did. I couldn't have asked for a better dad."
+    "Axel Day" "On that topic, I encourage all of you guys to look at who your biggest inspiration is in your life and what pushes you forward each and every day."
+    MC "You're my inspiration, Akira."
+    FMG "I'd push you if we weren't surrounded by people."
+    MC "I'll scream if you touch me."
+    FMG "Weirdo."
+    "Axel Day" "Let's see... how about... {w}the girl with the Ferric t-shirt! Great choice, he's one of my favorites as well."
+    "T-Shirt Girl" "Oh my gosh, I didn't think you'd ever pick me mister day. I'm like one of your biggest fans."
+    FMG "{size=-6}Oh my god can you just give your question... {w}Why does she have to talk like that too.{/size}"
+    MC "{size=-6}OMG, Akira, you're like tots being so rude right now.{size=-6}"
+    show FMG sad
+    FMG "...I'm going to hurt you later."
+    MC "Heh."
+    show FMG neutral
+    "T-Shirt Girl" "Would you be able to... like talk about... like any like upcoming movie projects?"
+    "Axel Day" "At the moment, my lips are sealed. {w}HOWEVER, keep your eyes peeled for something very special next week. All SICU fans are going to freaking love it."
+    "Axel Day" "Might just be the best project I've ever had the pleasure of working on... {w}But you guys didn't hear it from me."
+    FMG "But we did hear it from him."
+    MC "That's the joke..."
+    FMG "I know I was explaining it to you, duh... sometimes you can be quite slow to pick up on these things."
+    MC "..."
+    $setTime(TimeEnum.EVE)
+    scene Game Store with fade
+    "After putting up with some seriously awful questions for far too long, Axel told everyone he'd move on to signing stuff people had brought. He also said he wasn't leaving till everyone had something with his name on it too."
+    show FMG happy with dissolve
+    FMG "Can you believe it?!?!? We're almost to the front of the line!!! I'm this close to passing out."
+    MC "Can you not? You're embarrassing me in front of everyone. You need to be chill like me. Cool, calm, and collected."
+    "Bodyguard 1" "Next!"
+    MC "LET'S GO BABY, THAT'S US! I CAN'T CONTAIN IT ANYMORE! THIS IS THE MOMENT I'VE BEEN WAITING FOR!"
+    show FMG sad
+    FMG "Cool, calm, and collected?"
+    FMG "More like loud, wild and sporadic..."
+    MC "Don't go pretending like you're better than me. LET'S GO!"
+    show FMG neutral
+    "As we walked up Akira noticed the glances coming from the bodyguards."
+    show FMG flex
+    FMG "Don't stare too long, guys."
+    "Bodyguard 2" "Move along, ma'am. We need to keep everyone moving."
+    show FMG neutral
+    FMG "I'd say they're jealous. Ah, can't say I blame them when I'm built like this."
+    MC "...{i}sigh{/i}..."
+    "Thankfully, Akira had stopped yapping about herself as we got closer to Axel limiting how she could potentially embarrass us in front of the coolest person on the planet."
+    "Axel Day" "Love the hair, man. You must run through bottles of shampoo and conditioner, haha."
+    MC "Unfortunately, those are the least of my problems with it."
+    "Axel Day" "I can only imagine. {w}So, what did you bring for me?"
+    MC "The absolute peak of comic book storytelling... {w}The Extraordinary Quadruples #3"
+    "Axel Day" "Heh, it is fantastic."
+    MC "You could say that again."
+    "Axel Day" "You kept this thing in great condition. Have you had it since release?"
+    MC "Just about, I might have picked it up two or three days after it launched. The first two issues were superb."
+    "Axel Day" "Happy to hear that, man. I seriously am, your support is everything to me. Who would you like this made out to?"
+    MC "Keisuke Hotsure, please."
+    "Axel Day" "Consider it done... {w}Here ya go!"
+    MC "You've made my whole life with this..."
+    "Axel Day" "Ha, you're far too kind."
+    FMG "Move over, Kei, it's my turn!"
+    MC "Ack!"
+    show FMG happy
+    "Axel Day" "I take it you two are together?"
+    MC "Sadly, yes."
+    "Axel Day" "Incredible physique... ah..."
+    show FMG neutral
+    FMG "Akira, you can call me, Akira."
+    "Axel Day" "Well, it is certainly a pleasure to meet both of you. {w}Now, what did you bring, Akira? Certainly, it's going to be better than, Kei's."
+    FMG "Without a doubt! {w}This is my brother's favorite issue from one of your earlier releases."
+    "Axel Day" "Woah... and it's even a first edition print. I'm impressed! Keeping this in near mint condition for all these years."
+    "Axel Day" "Would you like me to make it out to your brother?"
+    FMG "Y-Yeah, if it's not too much trouble. His name is Tatsuya."
+    pause 1
+    "Axel Day" "There! I hope he likes it."
+    FMG "He will! Thank you so much."
+    "Axel Day" "Anytime! {w}Oh, actually, hang on a second."
+    "Axel began digging into his bag, pulling out a brand new print of one of his comics."
+    "Axel Day" "Give this to your brother too. I planned to announce the next issue today but I think everyone here can wait a bit longer."
+    "Axel Day" "Thanks for being fans, guys. I don't have enough words for everyone here for how grateful I am."
+    show FMG happy
+    FMG "T-Thank you. He'll love this."
+    "Axel Day" "It's nothing, have a great day, guys."
+    "Walking away from the booth, I could tell Akira was tense."
+    show FMG neutral
+    MC "Do you wanna step outside for a bit and get some fresh air?"
+    FMG "Yeah, yeah that sounds nice."
+    play music LoveC
+    pause .5
+    scene Town with fade
+    "We sat down on a nearby bench, Akira's eyes still fixated on the signature."
+    MC "You good?"
+    show FMG neutral with dissolve
+    FMG "I guess... {w}You know, some days I still miss him... it just hurts a little less."
+    MC "..."
+    FMG "{i}Sigh{/i}, I'm sorry, Kei. I didn't want to ruin the day for you."
+    MC "Ruin? Man, stop talking like that. Yeah, sure, the way you play cards annoys the absolute shit out of me, but you didn't ruin anything. I'm glad we got to do this." 
+    pause 1
+    "I could tell Akira was still thinking through a lot, so I gave her a few moments to collect herself."
+    pause 1
+    MC "Do you want to head back to campus?"
+    show FMG happy
+    FMG "Can we buy some packs to open first?"
+    MC "Depends on who is buying the booster box."
+    FMG "We can split it this time!"
+    MC "Hmmm... perhaps not."
+    FMG "Oh, come on!"
+    pause .5
+    MC "You know, if you ever want to talk about Tatsuya, I'm here."
+    show FMG neutral
+    FMG "I know... You're always there for me like that."
+    jump daymenu
+
+label FMG098:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

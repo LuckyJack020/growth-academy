@@ -1451,26 +1451,30 @@ transform notif_transform:
 
 screen debugmenu():
     add "Graphics/ui/bg/sky_night.webp"
+    text "{b}CAUTION{/b}: The debug menu is {b}not{/b} intended for normal gameplay.":
+        style 'boutlined_text' xalign 0.5 yalign 0.025 textalign 0.5
+    text "Playing scenes with different sizes enabled can lead to bugs.":
+        style 'boutlined_text' xalign 0.5 yalign 0.068 textalign 0.5
     $debuginput = ""
     grid 3 16:
         xalign 0.5
         yalign 0.5
 
         text "Input:" style 'boutlined_text'
-        input value VariableInputValue("debuginput")
+        input value VariableInputValue("debuginput") style 'boutlined_text'
         text ""
 
-        textbutton "Start Event" action Jump("debugevent")
-        textbutton "List Cleared Events" action Jump("debugclearedeventlist")
-        textbutton "List Variables" action Jump("debugvarlist")
+        textbutton "Start Event" action Jump("debugevent") style 'boutlined_text'
+        textbutton "List Cleared Events" action Jump("debugclearedeventlist") style 'boutlined_text'
+        textbutton "List Variables" action Jump("debugvarlist") style 'boutlined_text'
 
-        textbutton "List Flags" action Jump("debugflaglist")
-        textbutton "Set Flag" action Jump("setflag")
-        textbutton "Unset Flag" action Jump("unsetflag")
+        textbutton "List Flags" action Jump("debugflaglist") style 'boutlined_text'
+        textbutton "Set Flag" action Jump("setflag") style 'boutlined_text'
+        textbutton "Unset Flag" action Jump("unsetflag") style 'boutlined_text'
 
-        textbutton "List Timeflags" action Jump("debugtimeflaglist")
-        textbutton "Set Timeflag" action Jump("settimeflag")
-        textbutton "Unset Timeflag" action Jump("unsettimeflag")
+        textbutton "List Timeflags" action Jump("debugtimeflaglist") style 'boutlined_text'
+        textbutton "Set Timeflag" action Jump("settimeflag") style 'boutlined_text'
+        textbutton "Unset Timeflag" action Jump("unsettimeflag") style 'boutlined_text'
 
         text "Girl" style 'boutlined_text'
         text "Affection" style 'boutlined_text'
@@ -1556,13 +1560,16 @@ screen debugmenu():
             text str(skills["Academics"]) style 'boutlined_text'
             textbutton "+" action Function(setSkillDebug, "Academics", 1)
 
-        textbutton "Return to game" action Jump("daymenu_noadvance")
-        text "" style 'boutlined_text'
-        text "" style 'boutlined_text'
-
         text "Size: " + str(globalsize) style 'boutlined_text'
         textbutton "-" action Function(setSizeDebug, -1)
         textbutton "+" action Function(setSizeDebug, 1)
+
+        textbutton "Return to game" action Jump("daymenu_noadvance") style 'boutlined_text'
+        text "" style 'boutlined_text'
+        text "" style 'boutlined_text'
+
+    text "If you encounter bugs after making edits, please seek help on" style 'boutlined_text' xalign 0.24 yalign 0.94
+    textbutton "Growth Academy's Discord." action OpenURL("https://discord.gg/Hs6ggpp") xalign 0.855 yalign 0.94 style 'boutlined_text'
 
 screen debugvarlist():
     vbox:

@@ -7347,6 +7347,864 @@ label MC009:
     "Any thoughts that I could have had about what she had said were drowned out by the sudden jab of hunger in my guts."
     jump daymenu
 
+label MC010_BE:
+    $setBEOutfit(OutfitEnum.TRADITIONAL)
+    $setFMGOutfit(OutfitEnum.TRADITIONAL)
+    MC "Yeah. You're right, I guess."
+    MC "Some alone time wouldn't be the worst, honestly. Get some quiet in."
+    "I looked at Tomo, the concern slightly bubbling."
+    MCT "I mean... don't want to pry."
+    MCT "But, come on. She's got something going on."
+    MCT "She left her dorm. That's a good step forward at least."
+    MC "But like... you're good, though? You're sure?"
+    "Tomo rested her hand on the strap of her bag, a heavy sigh coming out."
+    show Tomoko defiant
+    Tomoko "Kei, I'll be fine."
+    MC "Okay."
+    show Tomoko neutral
+    Tomoko "..."
+    Tomoko "Like, seriously."
+    Tomoko "I'm an adult. Just like you."
+    Tomoko "I'm going back to my dorm. Straight back."
+    MC "Tomo, listen-"
+    Tomoko "Just because dad isn't here doesn't mean that I need someone to take his place trying to helicopter over me."
+    Tomoko "I get why you're asking, but I'm not your baby sister."
+    Tomoko "We're twins."
+    MC "I mean... technically I'm older."
+    Tomoko "By literal minutes."
+    MC "Older. I tasted oxygen first."
+    show Tomoko annoyed
+    Tomoko "Doesn't count."
+    if checkAffection("TM", ">", 3) or getFlag("MC005TM"):
+        show Tomoko smile
+        Tomoko "Look... I get it, Bro."
+        Tomoko "But, I'm okay. I'm good. You don't need to worry."
+        MC "Right. I know."
+        Tomoko "Go chill out. Get something to eat."
+        "I nodded as the bus pulled up and Tomo got on, followed by a few other festival goers."
+        hide Tomoko with dissolve
+        "I watched the bus pull off, then looked back toward the edge of the festival."
+        MCT "Well... here goes."
+        $setAffection("TM", 1)
+    else:
+        show Tomoko neutral
+        Tomoko "Kei... I'm fine. I told you."
+        Tomoko "Don't get yourself all worked up."
+        MC "I... I know. I just want you to be safe."
+        MC "I don't mean to hover over you. I'm just worried."
+        "Tomo glanced back at me and nodded, before turning and stepping onto the bus, the door closing after a few people followed behind her."
+        hide Tomoko with dissolve
+        "I sighed as the bus pulled away, then looked toward the edge of the festival ahead of me."
+        MCT "Alright... here goes, I guess."
+        $setAffection("TM", 1)
+    
+    "I turned, heading back into the thick of the festival."
+    scene Festival with fade
+    $eventname = "Wistful Fishing"
+    $save_name = "Wistful Fishing"
+    play music Festival
+    pause 2
+    scene Festival with fade
+    play music Festival
+    pause 2
+    "I glanced sideways as two women, both in yukatas, passed right by me, laughing and holding some sort of dessert."
+    UNKNOWN "May those two have the worst! All the worst!"
+    UNKNOWN "That's so mean!"
+    if isEventCleared("MC009"):
+        MCT "Hold up... is that Etsuko and Hotaru?"
+        MCT "I thought they hated each other."
+        Hotaru "But look, you should give the strong arm thing a try anyway. Show everyone else how it's done."
+        Etsuko "I'd rather not. Thanks."
+        Etsuko "I'm not really into that kind of thing, even with my factor. I'd rather be focused on my cooking."
+        Hotaru "Hey, your call."
+        Hotaru "Could totally see you in the Strength Pentathlon thing, though."
+        Etsuko "The only competition I'll be in are cooking competitions, of which I will firmly hand your ass to you."
+        Hotaru "Oh, you're on."
+    else:
+        "Girl 1" "But, look. You should give the strong arm thing a try anyway. Show everyone else how it's done."
+        "Girl 2" "I'd rather not. Thanks."
+        "Girl 2" "I'm not really into that kind of thing, even with my factor. I'd rather be focused on my cooking."
+        "Girl 1" "Hey, your call."
+        "Girl 1" "Could totally see you in the Strength Pentathlon thing, though."
+        "Girl 2" "The only competition I'll be in are cooking competitions, of which I will firmly hand your ass to you."
+        "Girl 1" "Oh, you're on."
+    "The two walked out of earshot, before one of them pointed at a katanuki game off to the side, both of them dipping off into the crowd of people near it."
+    MCT "... Alright, moving on."
+    "Walking down the large row of stalls and stands, I glanced around and into the crowd."
+    MCT "Guess I should... just hang out for a bit."
+    MCT "She said not to wait, but... part of this is doing it all together. Like, it kind of defeats the purpose if I experience a good 20 percent of it solo first."
+    "I found a bench nearby and sat down, rubbing my neck and glancing up at the people passing in and out."
+    "Pulling my phone out, I checked my texts, but only received an email about all of the free phones I was missing out on winning."
+    "I glanced back up, peering through the crowd."
+    show FMG neutral at Position (xcenter=1.40, yalign=1.0)
+    show FMG happy at Position (xcenter=-0.4, yalign=1.0) with mov3
+    "Akira passed by me, flashing a smile and a wave, which I returned."
+    MCT "There's a familiar face."
+    MCT "Wonder where everyone else is."
+    "I turned and glanced down the 'lanes' of food stands and games."
+    MCT "Like I could really make anyone out in all this hustle and bustle."
+    "I looked back toward the entrance, my gaze hopeful before being dashed once more."
+    MCT "Mm..."
+    "Stifling a yawn, I stretched out a little."
+    MCT "I should think about food. Honoka's probably gonna want to grab something when she gets here."
+    MCT "Maybe some kakigori. With some karaage to fill me up."
+    MCT "Gonna need the energy to follow Honoka around. She was always everywhere at once at the festivals back home."
+    pause 1
+    MCT "Gonna be weird, though..."
+    MCT "This feels just like how it was."
+    MCT "Honoka, Tomo, and I running around festivals together, blowing all of our money on soda, games, and food."
+    MCT "But, it's been so long. And so much isn't what it was."
+    MCT "Like... I'm dating my childhood best friend, for one thing."
+    "I looked back down toward the bus stop."
+    MCT "And, Tomo isn't here for this."
+    "I looked back down at my phone, opening my web browser, which had a game on it that I'd been checking out before swinging for the purchase. The third one in a series."
+    MCT "... 140 gigs? Eesh. Gonna need another console to hold the thing at this point."
+    "I tapped a drop down menu at the top, checking through the various screenshots, all totally edited to make the game look stunning."
+    "Opening a picture of a bar with flame lighting the inside, I admired the reflections of the fireplace along the walls and the faces of the patrons."
+    MCT "Ray tracing at its finest."
+    "Scrolling down, I went through a few more screenshots, showing castles, cities, and NPCs."
+    MCT "Wonder if the crossbow bolt to the elbow is coming back. Nothing like hearing every raider or thief scream it at you everywhere you went."
+    "I tapped the top of the menu again, closing the drop down."
+    "A notification popped up just as I tapped, right under my finger."
+    MCT "Dammit..."
+    "My texts popped up."
+    BECell "OMW!!"
+    "I smiled."
+    MCT "The ray tracing from the lights down here is about to be off the hook."
+    MCCell "Okay! Waiting by the entrance"
+    "The texting bubble came back up."
+    BECell "Why did you wait for me?!! I told you I'd catch up!!"
+    MCCell "I'll explain when you get here"
+    BECell "You better"
+    "I went back to the game page with a smile, finishing scrolling through the pictures before putting my phone away."
+    "Standing up, I turned, looking back at the festival."
+    MCT "Alright. What's the ol' game plan looking like?"
+    MCT "Food first, probably. Then something to drink while we're walking."
+    MCT "And... probably game after game from there."
+    "The aisles of booths had a sort of mixture of both games and food stands, with the bright lights accenting everything, making every dessert photo look more tasty, and every drink look even colder and more refreshing."
+    MCT "... Gonna need something to sip soon. Roasting away in this thing."
+    "I stuck a thumb under my collar, flapping it to get some airflow as I sat back down."
+    MCT "It's... kind of funny."
+    MCT "This place almost feels less... utilitarian now."
+    MCT "I mean, compared to the first week here."
+    MCT "Getting to know all of the other students more, seeing some of the island, now this. People just going about the place like a normal festival..."
+    MCT "Feels nice... kind of like nothing is out of the ordinary."
+    "A girl and guy walked past me. The girl was easily four heads taller than the guy, to the point where he had to reach sideways instead of down to hold her hand."
+    MCT "... Yep. {i}Kind of{/i}."
+    "I brushed my hair over my shoulder, reaching up and pulling a stray one out from my eyebrow and eyelash."
+    pause 1
+    "I wasn't sure why, but the thought of it hit me again."
+    MCT "... {w}I'm dating my best friend."
+    "It sounded so weird, even still."
+    "The girl I used to make dirt castles with during summer break. The tomboy-est of the tomboys."
+    MCT "I'm dating her. And she's so... different."
+    MCT "She used to be such a dude. Sports, video games, junk food, all that crap."
+    MCT "Now, she... she..."
+    show BE happy
+    show WmHairpinBE2
+    with dissolve
+    pause 1
+    "Honoka walked down the sidewalk, turning and heading into the park."
+    "She had a type of... flow as she walked. It wasn't just steps. She sort of moved through the crowd."
+    "I watched a few guys pass by, each holding some sort of food item."
+    "... All three of their heads turned."
+    "She passed them, brushing some hair over one shoulder as she looked up, scanning across the crowd."
+    show BE wink
+    "Her eyes widened, and she did a sort of girlish wave, then brushed her hands down over her yukata, and continued her elegant stride."
+    BE "Pardon me. But, are you looking for a lady?"
+    MC "Lady?"
+    show BE seductive
+    BE "Yes, that's what I said."
+    MC "Yes. Yes, I am."
+    show BE shrug
+    BE "Mm. Well, tell me when you see one."
+    "I stepped back and raised my arm, pointing right at Honoka."
+    MC "Lady."
+    show BE happy
+    BE "PFFFFFHH!"
+    BE "You are such a dork! I had a good thing going there! All regal and prim and stuff."
+    MC "Oh, whatever. Bus driver must have been speeding to get you here this fast."
+    BE "Nah. I just didn't text you till I was like halfway here."
+    MC "Why, exactly?"
+    BE "Under-promise, over-deliver. Simple."
+    MC "Well, you did deliver."
+    BE "Did I? You like?"
+    MC "I like, I like a lot. Quick 360?"
+    show BE embarrassed
+    "I twirled one finger in a circle, as Honoka nodded, giggling."
+    show BE happy
+    "Honoka did a slow twirl, making her yukata spin out just a bit around her."
+    MC "Perfect."
+    MC "I fail to see what 'yukata troubles' you may have had. Seems pretty seamless to me."
+    BE "Oh."
+    BE "You have no idea."
+    "Honoka stepped toward me, leaning in."
+    show BE unique
+    BE "The girls did NOT want to fit into this."
+    MC "Huh. Can't... really tell."
+    BE "Sports bras. Got two on right now."
+    MC "Isn't that... hot?"
+    show BE disoriented
+    BE "Extremely."
+    show BE happy
+    BE "So yeah. Drinks. Lemonade, soda, tea, I don't care."
+    MC "Of course. How impolite of me."
+    BE "Speaking of."
+    BE "What's this with you waiting up for me?"
+    "Honoka put both hands on her hips."
+    BE "I TOLD you I'd catch up!"
+    MC "And?"
+    MC "I didn't want to experience this without you."
+    MC "It's our first festival as a couple. And, I want to see it as a couple."
+    show BE embarrassed
+    BE "... You're a dork."
+    show BE seductive
+    BE "And do you know what dorks get?"
+    "Honoka reached down, grabbing my hand."
+    show BE happy
+    BE "The hand."
+    MC "The left hand of the beautiful one?"
+    BE "The very same..."
+    "I squeezed her hand lightly."
+    MC "Drinks and food?"
+    BE "Please, for all that is sacred."
+    "I led the two of us in past the gates, and down the line of stands."
+    "Honoka turned at literally the very first stand that had a picture of a large tea with bubbles in it."
+    BE "Bubble milk tea."
+    MC "Want anything for food?"
+    BE "Bubble milk tea."
+    "She pulled my hand sideways, toward the line of three or four people."
+    MC "Tapioca balls?"
+    BE "Please."
+    MC "In all seriousness, did you eat before this?"
+    show BE neutral
+    BE "Eh... kind of."
+    BE "Had lunch earlier then nibbled when I got back to my dorm and while I was getting ready."
+    show BE happy
+    BE "But yeah. I want some bomb ass food."
+    MC "So... wait. Like you want a steak or something?"
+    BE "No, no."
+    BE "That's good food. Or fancy food."
+    BE "Bomb ass food is the tastiest and least healthy stuff."
+    BE "I've come here with taiyaki in mind and taiyaki I will have."
+    MC "... After the bubble tea?"
+    BE "Possibly with. We don't know yet."
+    MC "Wanna see who can drink their tea faster?"
+    show BE neutral
+    BE "Ugh! Not this again! You always did this at the festivals back home!"
+    MC "I have no idea what you-"
+    BE "YOU always said that, and YOU would always pretend to drink fast so I would try and catch up and get a really bad brain freeze!"
+    show BE angry
+    BE "So, no! I don't care if I drink slower."
+    "I smiled and ordered for us at the counter, setting the yen up, then stepped off to the side, where after a moment, we were handed two large teas."
+    show BE flustered
+    BE "Oh, Kei-chan. You didn't have to..."
+    BE "I didn't mean to like make it sound like I was seriously demanding tea."
+    BE "Just..."
+    MC "This is called buying something for your girlfriend."
+    "Setting my tea down, I took her straw and popped it into the cup."
+    MC "Start sipping."
+    show BE happy
+    BE "... Well, now you took the best part away."
+    "I chuckled, handing her my cup and straw."
+    MC "Have at it."
+    "She unwrapped the straw and slammed it down into the cup."
+    BE "All is well now."
+    "She took her cup back as I took mine, and took a long sip."
+    BE "Mmmm... agh... I needed that."
+    MC "The straw slam or the sip?"
+    BE "Both."
+    MC "Well, shall we check out some food options first before games?"
+    BE "Yeah, let's go."
+    "Honoka seized my hand again and started first, half-pulling me along and down the walkway of carts and booths."
+    "I sped up alongside her, turning and glancing up and down at her."
+    MC "... You rock that yukata."
+    show BE neutral
+    BE "Do I?"
+    MC "Oh yeah. No contest."
+    show BE happy
+    BE "Thanks..."
+    show BE neutral
+    BE "Like an hour ago, I was ready to throw it into the trash."
+    MC "From the problems?"
+    BE "Yeah."
+    BE "It's kind of hard to work around these things sometimes."
+    BE "I mean, I don't want to sound bitchy, but... God, I was ready to ditch this thing."
+    MC "Well, glad you didn't."
+    show BE happy
+    BE "... When did you get so sweet?"
+    BE "The Kei-chan I knew from my younger days would have never been so complimentary."
+    BE "More worried about cooties than being nice."
+    MC "Well... guess a lot can change in all that time."
+    BE "Like you being taller than me now?"
+    MC "Hey, that was only for like one summer."
+    BE "I remember. You were taller than me, then I caught up and surpassed you, then we evened out right before I left."
+    MC "Yeah..."
+    BE "Now look at you..."
+    MC "Could say the same thing to you."
+    MC "Used to hate wearing dresses and stuff way back when. Lived almost exclusively in sweatpants and t-shirts."
+    show BE seductive
+    BE "Mhm. Well, I'm a lady now. And, us ladies need to show some girlish flair, don't we?"
+    show BE happy
+    BE "... Though, I was hanging out in a pair of sweats before this."
+    MC "Some things never change, do they?"
+    "We walked to a large food truck parked beside the other stands, serving a wide variety."
+    MC "Taiyaki, right?"
+    BE "Mm... and some grilled corn. But, don't-"
+    MC "Hey, could I get two ears of grilled corn, and an order of taiyaki with..."
+    MC "Chocolate filling, right?"
+    BE "I... mmhn... yeah. Yes, please."
+    MC "Chocolate filling, please."
+    "The cashier nodded as I handed more yen over, then stepped aside with Honoka."
+    "A finger poked into my cheek."
+    show BE neutral
+    BE "Hey."
+    BE "Supposed to let me pay for this one."
+    MC "Who said?"
+    show BE happy
+    BE "Me, you loser."
+    MC "Loser?"
+    BE "Yes."
+    MC "What have I lost, exactly?"
+    show BE neutral
+    BE "I... you lost the... uh... being a boyfriend who lets his girlfriend do stuff for him competition."
+    BE "... That was bad. You know what, the parts of the joke are all there. Put 'em together yourself."
+    "I rolled my eyes... which didn't really do much good in expressing feelings."
+    show BE happy
+    BE "What games do you wanna play?"
+    MC "Hmm... I dunno. We could walk around and see what looks fun if you want?"
+    BE "Sounds good to me!"
+    "Honoka stuffed the rest of her taiyaki in her mouth." 
+    BE "Mlesh gho!"
+    MC "You sure? Wouldn't you want to-"
+    BE "{i}Mmmph!{/i}"
+    BE "I can walk and eat! Come on!"
+    "She grabbed and pulled me hard enough that my precious corn almost went a-flying, and dragged me toward the row of games, one taiyaki dangling from her mouth."
+    BE "Awlrihh! Wha firsh?"
+    "Honoka swallowed the taiyaki, looking at me."
+    MC "So, being good at walking while you're eating gives you a pass when it comes to having chocolate on your face?"
+    show BE confused
+    BE "Huh?"
+    BE "Oh, crap. Leave it to me... in a yukata, too..."
+    menu:
+        "Let her find it":
+            "Honoka ran her thumb across her cheek, smearing the chocolate further across her cheek."
+            show BE doubt
+            BE "Did I get it?"
+            MC "To be honest... You kinda made it worse. Here, let's find a bathroom for you first and along the way, we can pick out a game or two to play."
+            BE "Sure, okay."
+            show BE neutral
+            "Honoka and I shuffled off towards a restroom passing by multiple booths. Shooting games, goldfish scooping, senbonbiki, a Daruma Otoshi setup."
+            "Glancing to my side, I noticed Honoka was glancing downwards with her cheeks slightly puffed out."
+            "I waited outside the restroom while Honoka cleaned her face up."
+            BE "Phew, sorry about that!"
+            MC "No problem. Next time, we can take it a little slower and not get our food on our faces."
+            BE "Pro tip, Kei-chan. If a girl has food on her face and she's dressed in reeeally nice clothes, "
+            extend "help her clean her face, huh? Don't walk her through a crowd with food on her face."
+            MCT "Oh..."
+            MC "That... makes sense. Sorry about that. I just didn't think about it."
+            show BE angry
+            BE "No worries. I'm not mad!"
+            "Honoka breezed by me, looking over her shoulder. She stuck her tongue out at me."
+            BE "You're just a bit of a dummy, that's all."
+            $setAffection("BE", -1)
+            MCT "Yup. She's mad."
+        
+        "Get it for her":
+            MC "Here. Look over this way. Toward the booths."
+            "Honoka turned her head, her eyes still on me."
+            "I brought my thumb to her cheek, resting my other fingers lightly on her jaw, and brushed my thumb across the chocolate."
+            BE "Get it?"
+            MC "Almost. Hold on."
+            "I licked the chocolate from my thumb, and checking that it was clean, brushed it off on myself before bringing it back to her face, cleaning up the rest of the smear on her cheek."
+            show BE unamused
+            BE "Eww... boy cooties on my face."
+            "I chuckled, checking her face once more."
+            MC "Clean enough to eat off of."
+            show BE happy
+            BE "... You pretty much just did."
+            MC "And? Ten out of ten, would taste again."
+            "I held my thumb out to her, now clean."
+            MC "Oh, pardon. Would you like some face chocolate?"
+            BE "That thumb is clean, Sir. As is your face."
+            "I glanced down at my corn in my hand, brushing a bit of the seasoning onto my thumb and dabbing the side of my cheek."
+            MC "Oh {i}no!{/i}"
+            show BE wink
+            BE "You're such a dummy..."
+            "Honoka giggled and brushed her thumb over my cheek, brushing the seasoning off." 
+            "She licked off her thumb, and ran it over my cheek again, licking more off of her thumb."
+            show BE happy
+            BE "There."
+            BE "Now, I was promised chocolate, not corn seasoning."
+            BE "I'll require one hand-hold to make up for this loss."
+            MC "In times of need, a substitution is sometimes the best solution."
+            MC "So, I'll see your hand-hold and raise you one arm-hold."
+            "I held my arm out to her, in a loop."
+            "Honoka came alongside me and held my arm with her hand, her touch airy and gentle."
+            MC "Alright."
+
+    MC "What are you feeling?"
+    show BE neutral
+    BE "Uhh... hm. Good question."
+    show BE happy
+    BE "Ooh! Kei-chan! Here!"
+    "She plunged ahead with me alongside her, turning toward a large booth with a huge pool set up. Inside were multiple colored balloons, each with a rubber string and loop attached to it."
+    BE "Wanna play too?"
+    MC "You know what, let's do it."
+    "Standing beside her, Honoka handed some yen over to the attendant."
+    BE "For both of us, please."
+    "She stuck her tongue out at me as the attendant handed us two hooks made of tissue paper."
+    BE "Gotta be quick, Kei-chan. Don't want your hook to melt~"
+    MC "You know I can catch more than you."
+    show BE neutral
+    BE "Mm... no, I actually don't think I know that."
+    show BE happy
+    BE "Better prove it to me."
+    "I dove my hook in just as Honoka did, and trailed it under a balloon, yanking up quickly until the tension hit, then slowly cranking it up from the water."
+    "Honoka was angled inward, doing a one-handed technique as she craned her own balloon up."
+    MC "How long can we go?"
+    Attendant "Until your hook breaks!"
+    "I got mine back in just after Honoka's."
+    "As I got my hook into position, Honoka hauled another balloon out of the water, setting it beside the other one and went down again."
+    "I heaved one up as well, putting it aside and plunging my hook back down."
+    "We each pulled another up from the water, as our hooks went back in."
+    BE "Oh, Kei-chan~"
+    BE "You're gonna choke. I can see it. Your hand is getting shaky!"
+    "I looked down as I pulled another balloon up."
+    "Honoka shot her eyes back to her own hook as she pulled on another balloon."
+    "Her hook snapped, the string in her hand falling to pieces and floating into the water."
+    show BE surprised
+    BE "AW!"
+    MC "It would seem that you are the one who has in fact choked."
+    MC "And heretofore, you may suck it."
+    "I stuck one finger out and poked the tip of her nose, to which she playfully bit at my finger."
+    show BE neutral
+    BE "Still talking trash."
+    Attendant "Feel free to choose a prize, both of you!"
+    "I looked up at the large rack, with different tiers all the way up to like 15 balloons."
+    BE "Aw. We could have gotten that massive, yellow chicken."
+    MC "The fat chicken. Good name."
+    "Honoka looked at the rack of different prizes in the third tier, and reached out, taking a stuffed clownfish."
+    "In return, I chose a slightly larger, stuffed duck."
+    show BE happy
+    BE "Thank you!"
+    Attendant "Very welcome. Enjoy the Blossom Festival."
+    "The two of us turned and walked back into the walkway in the middle."
+    BE "His name is Blubs."
+    MC "That written on his tag?"
+    BE "No. That's the name I've given him."
+    BE "His name is Blubs, and he'll be very happy blubbing around in my dorm."
+    MC "I mean, to blub, or not to blub?"
+    BE "Good question."
+    BE "What are you naming yours?"
+    MC "Uh..."
+    MC "... His Esteemed Royal Highness, Quackers Esq."
+    show BE confused
+    BE "Oh, damn."
+    show BE wink
+    BE "Royal duck blood. That's quackin' crazy."
+    "I motioned my duck toward Honoka's fish, and smacked his head down onto the fish, pressing the beak to the top of it."
+    show BE surprised-2
+    MC "Nom."
+    show BE surprised
+    BE "DID HE JUST EAT BLUBS?!"
+    MC "Now, hold on. We don't-"
+    MC "{i}gulp{/i}"
+    MC "Oh... so about that-"
+    show BE neutral
+    BE "HEY! You un-swallow him right now!"
+    "Honoka grabbed the stuffed duck and stared him straight in the eyes."
+    BE "Unhand the Blubs."
+    "The duck stared back, his eyes unmoving and unfeeling."
+    pause 1
+    show BE angry
+    BE "... You disgust me."
+    "I smirked and pushed her hands forward, the duck's beak going onto Honoka's nose."
+    show BE happy
+    BE "Oh! OH!! It's got me! It's got me!!"
+    BE "Kei-chan, get him off!"
+    MC "You've insulted The Royal Highness, Quackers Esq. I pray for your safety."
+    BE "... You said his name was 'The ESTEEMED Royal Highness.'"
+    BE "This duck is clearly an imposter."
+    "Showing teeth, I let a soft chuckle out as Honoka stopped me near the end of the walkway."
+    BE "You think this is funny?"
+    BE "A duck clamps onto your girlfriend's face and you laugh?"
+    MC "Yes, I do."
+    "I took the duck back from her and rubbed its head gently."
+    MC "I've subdued him."
+    BE "Still doesn't explain you laughing at me. If that had been any worse, my entire face could have been taken off."
+    MC "Oh, shit. Yeah, you're right."
+    MC "Here, come here."
+    show BE embarrassed-2
+    BE "Wha-"
+    MC "We have to check. Come on."
+    "I pulled Honoka off to one side. Near a railing by the waterfront, it was fairly quiet."
+    MC "Alright..."
+    show BE neutral
+    "I brought my hand to her chin and turned her head a bit, shifting her hair up."
+    MC "Still attached here."
+    "I turned her head, looking at the other side."
+    MC "Here too..."
+    "I lifted her chin just a bit."
+    MC "And... here."
+    "I brought her head down, so she was looking at me again."
+    MC "All good. Face is still on."
+    show BE happy
+    BE "Oh phew. That's a relief."
+    "I smiled... and let my hand linger under her chin."
+    pause 1
+    show BE neutral
+    BE "... It feels so different, but still so familiar."
+    MC "Us?"
+    BE "Yeah."
+    BE "Like... I still can't believe we met back up here."
+    MC "I know..."
+    BE "And, you're still... you. Like, I was worried you would be completely different if we ever met again."
+    BE "But, you're still the same..." 
+    show BE happy
+    extend " dork you always were."
+    MC "Hehe. Thanks, I guess."
+    MC "Time's passed, obviously."
+    MC "We're still the same girl and guy, though."
+    BE "Yeah, of course. Just that you're such a gentleman now. And I'm..."
+    show BE seductive
+    BE "Well, I'm a woman now."
+    MC "And you're short."
+    show BE surprised-2
+    BE "Hey. I'm not that short. I'm just above average, I'll have you know."
+    MC "Mhm, sure. And I have pink hair."
+    show BE neutral
+    "Honoka leaned against my shoulder."
+    show BE happy
+    BE "Oh, whatever."
+    "Honoka and I trailed off, letting the faint sounds of the Matsuri fill in the silence."
+    MC "... This was nice."
+    BE "Yeah. It really was. Thanks for spending it with me, Kei-chan."
+    MC "Of course."
+    pause 1
+    MC "Hey, how about we make a promise?"
+    "Honoka turned towards me."
+    show BE neutral
+    BE "And what would that be, hm?"
+    MC "How about we do this again next year? No matter what."
+    MCT "And no matter what either of us look like."
+    show BE happy
+    BE "I'd... like that a lot." 
+    $setAffection("BE", 1)
+    MC "Then it's a promise?"
+    BE "..."
+    "As the first of the Matsuri ending fireworks exploded into the sky, Honoka leaned in quicker than I could react, pressing her lips to mine."
+    BE "Promise."
+    MC "Uh-"
+    "{i}{b}*BOOM!*{/b}{/i}"
+    show BE surprised
+    "Both Honoka and I jumped as a rocket blew up... way too close to us. Like, at tree level, lighting up the entire festival."
+    BE "WHAT THE-!"
+    MC "Holy-!"
+    MC "Who screwed up?"
+    show BE confused
+    BE "No idea. But someone's probably getting canned after that."
+    "I exhaled and glanced up as the show continued."
+    show BE happy
+    BE "Wanna watch from here? By the water?"
+    MC "Sounds perfect."
+    "Honoka moved in very close, and laid her head against me, looking up at the sky."
+    "I mimicked her and after a moment, rested my chin against her head, the explosions overhead setting the mood better than any music ever could."
+    jump daymenu
+
+label MC010_WG:
+    $setWGOutfit(OutfitEnum.TRADITIONAL)
+    $setGTSOutfit(OutfitEnum.TRADITIONAL)
+    $setOkishoOutfit(OutfitEnum.TRADITIONAL)
+    MC "Nevermind..."
+    if checkAffection("TM", ">", 3) or getFlag("MC005TM"):
+        MCT "Something must have happened. As much as I want to pry I probably shouldn't. She probably just needs her space... {w}I'll make sure to check up on her tomorrow."
+        MC "You probably got the right idea. I guess these are quite the same like when we were kids. Still though, I think I'm going to check it out."
+        Tomoko "Yeah... I mean, it was worth checking out... I just think I've seen all I wanted to see already."
+        MC "Sounds good. I'll talk to you tomorrow."
+        Tomoko "Sure. Later, Kei."
+        $setAffection("TM",1)
+        MCT "I wish I could keep a better eye on her, but I can't hover over her all the time either."
+        MCT "There's probably not that many people heading out of town on the bus at this time. A little quiet time is probably what she needs."
+    else:
+        MCT "Something must have happened. As much as I want to help, it's not like she listens to me about anything anyway... {w}Maybe I'll check in with her tomorrow."
+        MC "I guess I'm not expecting too much from this festival either. Still though, I think I'm going to check it out. Something to do at least."
+        Tomoko "Yeah... I mean, it was worth checking out... I just think I've seen all I wanted to see already."
+        MCT "I guess that's her excuse."
+        MC "Alright, sounds good. I'll see you later."
+        Tomoko "Later, Kei."
+        $setAffection("TM",1)
+        MCT "...I'm not so sure if I'm doing a good job of keeping an eye on her like Dad asked..."
+    scene Festival with fade
+    $eventname = "Patiently Weighting"
+    $save_name  = "Patiently Weighting"
+    MCT "Now let's see here..." 
+    MCT "Alice shouldn't be too hard to find. Those golden curls of hers makes her stick out in just about any crowd."
+    MCT "Well, assuming she's even here. Not sure how she feels about your common street festival when you're used to fine dining and fancy galas. {w}At least that's what I assume rich people are into."
+    if isEventCleared("WG014"):
+        MCT "Then again she did mention she tries to experience the local culture when traveling, maybe she would while she's on the island?"
+    MCT "But {i}where{/i} to find her?"
+    if isEventCleared("RM003") or getFlag("MC005RM"):
+        "Maybe hanging out with Daichi was starting to rub off on me, but I don't think I needed to be a detective to start with the obvious trail of evidence."
+        MCT "Better hit up the food stalls."
+    else:
+        "I wasn't any kind of detective, but something told me I had a pretty good lead that I should follow."
+        MCT "Time to hit up the food stalls I guess."
+    "I meandered through the aisles of stalls for a while without much luck. It wasn't like there was a definitive section where all the food stalls were, but there were definitely pockets where they seemed to cluster together."
+    if isEventCleared("WG027") or isEventCleared("WG027A"):
+        "Part of me was wondering if I might have been jumping the gun by trying to find her. {w}I already asked her out and we were on for a date, but I met up with her here, was that going to be our first date now?" 
+        MCT "Get out of your own head dude. You're just going to see if she was to hang out and take it from there. Doesn't need to be anything more than that."
+        MC "Right... Just keep it casual, Kei."
+ 
+    show WG neutral with dissolve
+    "Eventually I managed to spot her."
+    MCT "Whoah..."
+    "When I finally saw her, I couldn't believe I hadn't noticed her sooner. {w}It wasn't just her blonde curls that made her stand out, the sheer shimmering opulence of her yukata made even the more colorful fare of the crowd seem drab by comparison."
+    "It was gorgeous. {w}{i}She{/i} looked gorgeous."
+    MCT "I can't imagine what that thing must have cost."
+    "I walked over to the ikayaki stand where she was hanging around. Judging by the other empty sticks in her hand she had already gone through a couple already as she was polishing off another."
+    "I tried to get her attention as I approached."
+    MC "Hey, Alice!"
+    show WG pondering
+    WG "Hm?"
+    "I waved to her. It wasn't a long distance, but I didn't want to risk losing her in the crowd as people kept shuffling to and fro through the booth aisles."
+    show WG neutral-2
+    MC "Hey, fancy running into you here."
+    pause .5
+    "Alice didn't answer right away as she had just finished her last few bites of her remaining ikayaki."
+    MCT "{i}Offt!{/i} Bad timing on my part. She doesn't strike me as the type to talk with her mouth full."
+    "Getting a much closer look, I noticed her yukata was fitting a little more snug than was likely intended. Something told me this wasn't the first food booth she had hit up in the time she'd been here."
+    show WG neutral
+    WG "Hello, Keisuke. Nice to run into you here as well. Have you been enjoying the festivities?"
+    MC "Uh, I guess. Haven't gotten to see too much of it yet. How about you?"
+    WG "I caught a bit of one of the stage performances, a couple of circus strongmen juggling various heavy objects. Quite impressive, but not what I was really expecting."
+    WG "I felt a bit peckish so I tried one of the okonomiyaki booths. {w}A bit of a disappointment really. The sauce was decent on it, but far too much of it— likely an attempt to disguise the subpar execution on the pancake itself."
+    show WG pondering
+    WG "Since it didn't quite satisfy my taste buds, I decided to try this ikayaki booth."
+    MC "Had better luck with that, I take it?"
+    show WG haughty
+    WG "Quit so. Good, but not amazing. The preparation isn't anything special, but the sweet glaze they used elevates it above the mundane."
+    MC "Well, hopefully there's something here that'll hit it out of the park for you." 
+    show WG neutral-2
+    WG "Here's to hoping, but I'm not terribly optimistic."
+    MC "So where you headed to next? I was thinking about hitting up one of the yaki tomorokoshi booths."
+    WG "I was wanting to see more of the performances, either theatrical or musical. Since Matsuri all have their own local flare, it's a good opportunity to  take in a new cultural experience."
+    show WG pondering
+    WG "But yaki tomorokoshi does sound good. You won't mind if I join you, would you?"
+    show WG neutral-2
+    MC "Not at all. I think I saw a stall down this way. I'm sure we'll run into a few things you're looking for too."
+    MC "I'm actually surprised you're so interested in the festival. I wasn't really sure this kind of thing was... well... your kind of thing."
+    show WG coy
+    WG "Slumming it up with the commoners? Is that what you mean?"
+    MC "Um, well, maybe not in those words exactly... but more or less."
+    show WG sly
+    WG "My family is wealthy Keisuke, but that doesn't make me royalty."
+    show WG neutral
+    extend " Besides, exclusive galas cannot capture the same experience one has at a public festival."
+    WG "I don't consider myself the sentimental type, but it has been a while since I attended one of these kinds of festivals. Growing up my mother used to take me to these all the time. I guess I figured I was overdo for one."
+    MC "Your mother? I thought it was your dad who was Japanese?"
+    show WG neutral-2
+    WG "That's correct, but it was my mother that insisted I immerse myself in both of my family's cultures."
+    MC "Huh, can't say I expected that."
+    WG "Most people probably wouldn't. Father isn't a strict traditionalist by any means, and he doesn't have any particular fond memories growing up with these types of festivals. For him it was just another day he had to work."
+    MC "Are you sure about that? That sounds like one of those \"uphill both ways to school everyday\" stories that parents tell their kids." 
+    MC "I loved going to these things as a kid. The games with prizes, the food, and the fireworks— what kid wouldn't?" 
+    show WG neutral
+    WG "My father may be a wealthy businessman now, but he did not have an easy childhood growing up. Most local festivals he would work at a booth with his grandfather selling yakiton."
+    show WG sly
+    WG "To hear my mother tell it, I don't know if the man ever took a day off in his life before she finally convinced him to start taking vacation trips with her."
+    MC "Yikes. That does sound rough."
+    show WG neutral-2
+    MCT "Guy sounds like a total hardass. But, I guess he can't be that bad if Alice thinks so highly of him."
+    "As we walked along we saw a crowd gathering around one of the performance stages. Neither one of us could quite see what the fuss was about, but Alice immediately recognized the strumming of a biwa."
+    show WG surprised-2
+    WG "Oh, it looks like someone is doing a traditional story reading. Let's get a closer look."
+    pause .5
+    if getFlag("Meet_Mizawa"):
+        show GTS happy-2 at Position(xcenter=0.25, yalign=1.0)
+        show Okisho neutral at Position(xcenter=0.75, yalign=1.0)
+        with dissolve
+        show WG bored
+        "Much to my surprise, we both recognized the story performer and her accompanist; though given the context of such a traditionalist affair, I guess it wasn't that much of a surprise."
+        GTS "...Valiant warriors and their steeds... And Kinmei's own crown princess, a maiden of unsurpassed beauty and purity. So formed the cohort that would bargain for the life of Japan..."
+        MCT "Didn't expect to see Okisho with her. I wonder how those two know each other?"
+        "Okisho was accompanying Naomi's dramatic reading with her biwa between the lines of her recitation." 
+        "She was pretty good at it too. The strumming of her instrument really helped emphasize the emotional ebb and flow of the performance."
+        WG "Nevermind, let's keep walking."
+        hide GTS
+        hide Okisho
+        with dissolve
+    else:
+        show GTS happy-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
+        show WG bored
+        "Much to my surprise, we both recognized the story performer; though given the context of such a traditionalist affair, it was no surprise at all."
+        GTS "...Valiant warriors and their steeds... And Kinmei's own crown princess, a maiden of unsurpassed beauty and purity. So formed the cohort that would bargain for the life of Japan..."
+        "Her companion strummed her biwa between the lines of her recitation, further emphasizing the emotional ebb and flow of the dramatic reading."
+        WG "Nevermind, let's keep walking."
+        hide GTS with dissolve
+    
+    if isEventCleared("WGGTS001") or isEventCleared("GTSWG001") or isEventCleared("WGGTS002"):
+        MCT "To be expected, I guess."
+    else:
+        show WG stern
+        MC "But don't you want to see Yamazaki-"
+        WG "You can stay and watch if you'd like, but there is still much left to see as far as I'm concerned."
+        MC "Okay..."
+        MCT "Guess she's in a hurry. {w}Or maybe just hungry."
+
+    show WG neutral
+    "We passed by a few different booths, but no yaki tomorokoshi stall yet. What I did see though was a booth with the goldfish scooping game."
+    MC "Aw man, I remember doing this as a kid. Talk about rigged. Those stupid paper scoops would rip every time— and even if they didn't, the fish would just slide off them!"
+    show WG coy
+    WG "Is that so? Sounds like someone doesn't have very good technique for catching goldfish."
+    MC "I don't know if it's a technique deficiency so much as the limits of intentionally chintzy paper."
+    show WG haughty
+    WG "Patience, My Dear Boy. That's the technique."
+    MC "Hehe, is that so? I think you just talked yourself into a demonstration."
+    show WG surprised-2
+    WG "Oh?"
+    show WG sly
+    extend " Well I'll be delighted to show you then."
+    MC "Excuse me, sir. Five scoops and one bowl for the lady here."
+    "I handed him a 500 yen coin."
+    show WG haughty
+    WG "Should have saved your money. I'll only need one."
+    MC "That's a bold claim. I gotta see this then."
+    show WG neutral-2
+    "Expecting her to jump into action and just start scooping, Alice instead just stood by the side of the tank." 
+    pause 1
+    "I assumed she was taking her sweet time picking her mark, but after what felt like over a minute she still hadn't made a move."
+    pause 1
+    MC "Am I missing something here?"
+    show WG sly
+    WG "Patience apparently. I never said this would be quick— only that I would succeed." 
+    MC "I'll reserve my judgement until the final result then."
+    show WG neutral-2
+    pause 1
+    show WG surprised-2
+    "After what seemed like forever to me, but was probably just a minute or two, Alice's eyes trained on one fish in particular that was meandering toward her."
+    show WG neutral
+    "As it began to pass by her, in one smooth motion she slipped the paper scoop into the water at a shallow angle." 
+    show WG happy
+    "She was moving her hand at a pace slightly faster than the fish and then tilted the scoop slightly to prevent the fish from sliding off as she picked it right up out of the water and slid it into the bowl."
+    MC "!"
+    "It was such a gentle and controlled motion— and it was over in less than 2 seconds."
+    show WG coy
+    WG "Why do you look so surprised, Keisuke? I told you what was going to happen."
+    MC "Good thing I didn't make it a bet."
+    show WG sly
+    WG "I don't think it's very wise to bet against me either."
+    MC "Apparently so."
+    show WG happy
+    MC "How did you do that? {w}I mean I saw it, but I still can't believe it. Or maybe I don't want to believe it because that means all those years I spent blowing out my paper scoops on this stupid game really was my fault."
+    WG "Hehe. The truth hurts sometimes, I guess."
+    MC "So all this time I just needed to be more patient?"
+    show WG happy-2
+    WG "Are you asking for life advice, or are we still talking about the goldfish game?"
+    MC "I'll take some pointers on either if you're offering."
+    show WG haughty
+    WG "Patient planning will take you far in life— but only if you're willing to seize the moment once those plans have finally come to fruition."
+    MC "I'll keep that in mind."
+    show WG neutral-2
+    "Alice dumped the fish out of the bowl back into the tank and handed her spare scoops to a little girl standing next to us."
+    Girl "Thanks, lady!"
+    show WG happy
+    WG "You're welcome."
+    MC "Didn't want your souvenir from the festival?"
+    show WG happy-2
+    WG "Hehe. Even if the academy allowed for pets, I don't think a goldfish qualifies as a good long-term investment."
+    MC "Yeah, that's true. I remember the ones that Honoka would catch never did last that long."
+    MC "Anyway, I didn't take you up on a bet, thankfully, but I feel like I owe you something for doubting your skills. Seems like you've earned a yaki tomorokoshi."
+    show WG haughty
+    WG "Is that so? I didn't expect you to pay for mine, but if you're offering then I'm accepting."
+    show WG neutral
+    "The stall selling them wasn't too far from where the goldfish scooping booth was. Luckily the line was only a few people deep. I suspected it was because the bulk of the crowd was starting to make their way towards the fireworks display."
+    MC "Two yaki tomorokoshi please."
+    Chef "There you go!"
+    WG "Thank you, Keisuke. You didn't have to."
+    MC "Eh, don't mention it. I'll consider it as having lost a hedged bet. I probably would have been dumb enough to bet against you without knowing you were a ringer if you had asked." 
+    show WG happy
+    WG "Hedging is an advanced investment strategy. Maybe you'll make a good businessman yourself some day."
+    MC "Heh, not sure about that."
+    MC "But you gotta tell me how you did that back there. And don't just say \"Patience\". I've watched professional tennis players with less elegant slices than your scooping technique."
+    show WG coy
+    WG "Haha! So you're not buying my story?"
+    MC "I didn't know you were selling it. Maybe I should since it would apparently let me corner the market on goldfish."
+    show WG pondering
+    WG "I was not being deceitful, but your inference is correct in that there is a bit more to it."
+    show WG neutral
+    WG "Patience is the most important part, but I only learned that after many many failures and busted poi nets."
+    WG "I'm sure it was frustrating for my mother to watch me struggle and get so upset, but my father was always adamant about having to earn things through effort." 
+    show WG neutral-2
+    WG "She refused to catch one for me, but she did bank roll as many attempts as I felt like doing."
+    MC "Sounds like it was a lot of attempts then to get that good."
+    WG "More than I can remember, I'll say that much."
+    show WG neutral
+    WG "I progressed from the wild flailing approach, to precision speed, both which would break the scoops, until I finally learned to be patient and to strike at the right time."
+    show WG happy
+    WG "In the end, my first time actually succeeding ended up meaning far more than some slimy fish that would barely live two weeks after I caught it."
+    MC "So that's why you gave the little girl your scoops instead of your fish?"
+    $setAffection("WG", 2)
+    show WG happy-2
+    WG "For a guy whose hair covers half his face you sure notice a lot, don't you?" 
+    MC "Echo location. It's my special talent."
+    WG "I highly doubt that, but something tells me I shouldn't bet against it either."
+    show WG neutral
+    MC "How's your yaki tomorokoshi?"
+    "Considering hers looked gnawed down to the core of the cob by this point and I was only a third of the way through mine, I had a pretty good idea what the answer might be."
+    WG "It's not a three star dish by any means, but it is quite delightful. The savoriness and sweetness of the corn are complemented by the savoriness and sweetness of the soy sauce and teriyaki glaze respectively."
+    WG "Slightly charred, but more browned than blackened. The preparation reflects the fact the chefs have done this thousands of times."
+    MC "It is definitely one of the better one's I've ever had at one of these festivals."
+    show WG pondering
+    WG "I wouldn't mind getting another, but I think I'll save room for dessert."
+    show WG surprised-2
+    "{i}{b}*BOOM!*{/b}{/i}"
+    MC "Sounds like the fireworks are starting."
+    show WG neutral-2
+    "Both of us looked up in time to see a shower of blue and white sparks rain down overhead."
+    "{i}{b}*BOOMPH!*{/b}{/i}"
+    "Another one plunked out from the motor tube from the festival center, this one exploding into a bright green supernova of sparkles."
+    MC "I heard Americans like fireworks too."
+    WG "This is true. They are most commonly used on 4th of July and New Years Eve," 
+    show WG happy
+    extend " but like with Japanese festivals, most Americans would agree any occasion worth celebrating is made better with fireworks."
+    MC "That I would definitely agree with."
+    "We found a spot to stop that gave us a good view without standing in the path. Probably would have been nicer to have gotten closer but the fireworks filled up the sky just fine from where we could see."
+    show WG surprised-2
+    "There had been a steady stream of one at a time by this point, then suddenly three shot up all at once."
+    MC "?"
+    show WG surprised
+    WG "!"
+    "Well, three shot out, but only two went up."
+    "The remaining one shot veered off almost straight out sideways and over the crowd, blowing up just above some of the trees."
+    show WG surprised-2
+    MC "Guess it was a good thing we didn't get too close."
+    WG "It appears so. Fireworks are best viewed from a distance afterall."
+    show WG neutral
+    MC "Did you want to get dessert?"
+    WG "I appreciate the offer Keisuke and I'm glad I got to run into you, but I did promise to meet back up with Aida and go home with her before the evening got too late."
+    MC "Oh, I see. Sorry, I didn't realize I was holding you up."
+    WG "Don't worry about it. She wasn't feeling well earlier today but she did tell me she was still planning to come later."
+    WG "I'm sure you can appreciate that things have been quite the period of adjustment for her as of late."
+    MC "I can only imagine. Wouldn't want to be a third wheel for the two of you."
+    MC "How's she been holding up lately?"
+    show WG worried
+    WG "About as well as anyone could expect given the shock of such a sudden change of circumstance." 
+    show WG sad
+    WG "She's been quiet most of the time, and I respect her need for space, but I do my best to make sure I'm there to listen when she does want to talk."
+    show WG neutral-2
+    WG "Honestly I'm proud of her for wanting to step out and attend the festival. It's a small thing, but I think it shows that she realizes that the world isn't going to stop on account of her personal circumstances."
+    WG "She may come off as meek, but in my experience she is a very diligent worker and I know she'll do her best to navigate her situation as best she possibly can." 
+    MC "That's good to know then."
+    MC "Well, I don't want to hold you up any further. {w}So, raincheck on dessert?"
+    show WG happy
+    WG "If that's what you're offering, consider it a deal."
+    MC "Done."
+    MC "Goodnight, Alice."
+    WG "Goodnight, Keisuke."
+    "Something told me I'd be cashing that check for dessert with her sooner rather than later..."
+    jump daymenu
+
 label MC011:
     scene Cafeteria with fade
     play music Schoolday
