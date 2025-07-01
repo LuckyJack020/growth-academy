@@ -140,6 +140,7 @@ label GTS002:
     $setProgress("GTS", "GTS003")
     scene School Planter with fade
     $setGTSOutfit(OutfitEnum.WORK)
+    $setMCOutfit(OutfitEnum.CASUAL)
     "All around in the garden was orange and yellow, peach pink and rose red."
     "I didn't normally find myself staring up at the clouds, but this was one spring evening that merited an exception as its light bathed the flowers in warmth. Yet the air was cool, even a little chilly, carried by the lackadaisical breeze."
     "I turned a corner and my silence was broken by a faint voice in the distance. When I looked around, because why not, I spied Naomi bowing deeply to a man whose face was as weathered as his dungarees; he smiled, nodded, and the two parted ways."
@@ -370,7 +371,7 @@ label GTS003_c1:
     show HairpinGTS1 at Transform(xzoom=1)
     GTS "Oh, why thank you so much. It's just a little something I hoped would spruce up my attire a tad. I have a bit of a collection of them, various species and things of that nature."
     MC "Well, I think it suits you rather well."
-    GTS "How kind if you..."
+    GTS "How kind of you..."
     show GTS neutral
     GTS "As for your question, this flower is a jasmine. It's rather ironic. For many, it is their mental archetype of a flower, yet fewer than one might expect could name it out of hand."
     MC "It does look kinda generic, doesn't it?"
@@ -647,7 +648,7 @@ label GTS005_c2:
 label GTS005_after:
     MC "So, what did you hear from the nurse?"
     show GTS neutral 
-    "The happy humor on Naomi's face withdrew to a more characteristically tempered mine. She silently regarded the peonies a moment before she looked back to me."
+    "The happy humor on Naomi's face withdrew to a more characteristically tempered mien. She silently regarded the peonies a moment before she looked back to me."
     GTS "I don't know if it was what I expected to hear after so much cloak and dagger. Apparently, I am due to grow taller over the course of the year."
     MC "...Oh. That's not that bad."
     GTS "Not at all. I should hope the condition does not proceed to render me unsightly, but as I understand it I could have fared well worse."
@@ -943,6 +944,7 @@ label GTS008:
     scene Roof Entrance with fade
     play music ChangingSeasons
     "My footsteps echoed up the stairwell as I ascended to the top of the corridor. With a turn of the handle, a wave of warm sunlight washed over me just beyond the door."
+    scene Roof with fade
     if isEventCleared("BE001"):
         "As my eyes adjusted and I stepped out onto the school roof, I scanned the area to see if Honoka might be around. There were a small number of students hanging out and chatting, but no sign of her."
         "I didn't call out her name, but I did walk around to see if she might be around the stairway entrance. To my surprise, it wasn't Honoka I found, but Naomi."
@@ -1073,8 +1075,8 @@ label GTS008_after:
     else:
         GTS "Good afternoon, Hotsure-san. Have a pleasant day."
     "I waved at her as she bowed before I left the roof. I smiled at the idea of a day of fun and levity with Naomi and Honoka. Now if only I could find the second half of the equation..."
-    scene Roof Entrance with fade
     "Nevertheless, my thoughts took a different course the second I thought myself out of Naomi's sight. Seeing no one trying to climb up, I lingered at the top of the stairs."
+    scene Roof Entrance with fade
     MCT "Yamazaki-san {i}definitely{/i} was not as tall as me yesterday..."
     MCT "So it really {i}is{/i} true."
     "Smiling still, and a little stiff with a familiar buzz running down my limbs, I climbed down again."
@@ -1123,7 +1125,7 @@ label GTS009:
     show GTS embarrassed 
     MC "Honoka, I can't keep buying you things... I'm going to run out of money."
     show BE sad
-    BE "But Kei-chan! It's shaved ice! What afternoon with friends be complete without shaved ice?"
+    BE "But Kei-chan! It's shaved ice! What afternoon with friends is complete without shaved ice?"
     show GTS neutral
     GTS "I should rather enjoy some as well. I shall buy us a round, if there is no objection. What flavor would you like, Inoue-san?"
     show BE happy
@@ -1506,6 +1508,7 @@ label GTS010_after:
 label GTS011:
     $setProgress("GTS", "GTS013")
     scene Dorm Exterior with fade
+    $setMCOutfit(OutfitEnum.CASUAL2)
     "Journeying around the dorm, I heard whispers hang around behind me. The occasional giggle accompanied them as some girls watched me."
     "I could imagine it now, some small-time rumors about me visiting a girl at her dorm. The same happened when I saw my sister at the start of the year, but I had learned to merely ignore it."
     "Upon reaching her door, I gave it a couple knocks, faintly hearing some noise through it. When she opened the door, I found myself looking at the crook of her lip instead of her eyes."
@@ -1748,6 +1751,7 @@ label GTS013:
     $setFlag("XX12")
     $setProgress("GTS", "GTS014")
     scene Campus Center with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music Peaceful
     "{i}Shkt shkt shkt{/i}"
     MC "Hm."
@@ -2229,6 +2233,7 @@ label GTS015:
     $setProgress("GTS", "GTS016")
     $setFlag("XX15")
     scene Dorm GTS with fade #this should change eventually
+    $setMCOutfit(OutfitEnum.CASUAL2)
     play music Busy
     Ryoko "...And cut! Good job everyone!"
     "These were the first words Naomi and I heard as we waited outside of Ryoko's dorm room before we were allowed in, the \"QUIET! Filming inside!\" sign taped on the door preventing us from knocking."
@@ -2567,6 +2572,7 @@ label GTS017_c1_2:
 label GTS018:
     $setProgress("GTS", "GTS019")
     scene School Exterior with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music HigherEdu
     #SFX wind
     "There it was, again. The spring breeze always managed to blow my hair right over my eyes."
@@ -2690,6 +2696,7 @@ label GTS018_c2:
     stop music fadeout 1
     scene black with fade
     pause 1
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Campus Center
     show Ryoko neutral at Position(xpos=1.8, xanchor=1.0, yanchor=1.0)
     with fade
@@ -3079,6 +3086,7 @@ label GTS021_c1_after:
 label GTS022:
     $setFlag("XX22")
     $setProgress("GTS", "GTS023")
+    $setMCOutfit(OutfitEnum.CASUAL)
     MCT "Huh boy, this isn't gonna look good."
     scene Library with fade
     "I kept one hand on the knob behind me to ensure it closed quietly."
@@ -3325,6 +3333,7 @@ label GTS022_c3:
     stop music fadeout 4.0
     pause 1.5
     scene School Planter with fade
+    $setMCOutfit(OutfitEnum.DEFAULT)
     play music Peaceful
     "By my watch, I'd arrived at the courtyard with some five minutes to spare after emptying out my backpack at my dorm."
     if getFlag("GTS022_scribe"):
@@ -3890,6 +3899,7 @@ label GTS022_cutoff_b:
 label GTS023:
     $setProgress("GTS", "GTS024")
     $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene School Exterior with fade
     play music Busy
     Ryoko "Cut!"
@@ -4153,6 +4163,7 @@ label GTS023_c2_2:
 label GTS024:
     $setProgress("GTS", "GTS025")
     $setTime(TimeEnum.RAIN)
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Roof with fade
     play music GTS
     "Mottled mists flowed in the heavenly river above, beckoning the eye to see."
@@ -4295,7 +4306,7 @@ label GTS024:
     "That one, alas, was not Honoka, as the sudden coin-sized dark spot on my shirt testified. She did, however, look down at me with one finger over her broad grin."
     BE "Better take cover under the awning, Kei-chan. You're so sweet doing all this for your girlfriend, you must be made of sugar. You'll melt~"
     MC "Thanks for the tip."
-    play sound LightRainAmbience
+    play sound LightRainAmbience fadein 1.0 loop
     "She gave me a sharp salute, a dainty little wave, and slid her window closed. I took her advice and moved."
     show rain with dissolve
     "I played over what Honoka said once or twice in my head.{w} Then, as raindrops began to dot the now stony-smelling ground, it occurred to me to take my umbrella out and have it ready."
@@ -4390,8 +4401,9 @@ label GTS024:
         "Thusly, I raised the umbrella and briskly set out on newly pitter-pattering, damp ground down to my dorm."
         scene black with fade
         pause 2
-        show rain with dissolve
-        scene Dorm Exterior with fade
+        scene Dorm Exterior
+        show rain
+        with fade
         "I fear I ended up forcing Naomi to wait some time as well. I searched every nook and cranny of my dorm that I could conceive in the quest for my umbrella...{w} ultimately to find it in my raincoat pocket."
         "This done, I hastened to beneath the awning where Naomi was standing, hands folded in front of her thighs and eyes cast aloft to the sky."
         show GTS neutral behind rain with dissolve
@@ -4598,7 +4610,9 @@ label GTS025_c1_2:
     jump daymenu
 
 label GTS026:
+    $setFlag("MC010_Unlock")
     $setProgress("GTS", "GTS027")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     "I awoke in the same bed in the same room, where I could look out the window and see the same otherworldly campus under the same vermillion sky."
     "Time stopped yesterday on the roof."
     scene Dorm Interior with fade
@@ -4638,6 +4652,7 @@ label GTS026:
 
     scene black with fade
     pause 1
+    $setMCOutfit(OutfitEnum.DEFAULT)
     scene Hallway with fade
     play music HigherEdu
     "Things didn't feel much more real as I collected myself and headed to class."
@@ -5024,6 +5039,7 @@ label GTS027:
         $setProgress("GTS", "GTS028S")
     else:
         $setProgress("GTS", "GTS029")
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Dorm Interior with fade
     "I was sitting at my desk playing Left to Die 2 when my phone buzzed."
     GTSCell "Do you have a pair of scissors?"
@@ -5158,6 +5174,7 @@ label GTS027_c1_2:
 
 label GTS028S:
     $setProgress("GTS", "GTS029")
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Town with fade
     "I realized then that I couldn't remember ever seeing Naomi in a hurry."
     play music Busy
@@ -5823,19 +5840,20 @@ label GTS028S_c3a:
 
 label GTS028T:
     $setProgress("GTS", "GTS029")
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Movie Theater with fade
     play music Peaceful
     "I scanned the various posters that decorated the inside of the theater, wondering what might be good. Naomi leaned down slightly to get a closer look at the posters as well."
-    show GTS neutral at Position(xcenter=0.8, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.8, ycenter=0.8) with dissolve
     GTS "I like the artwork used in some of these posters."
     MC "Yeah, I like it when the poster is more than just a character standing in the center with the title on them. "
     show GTS surprised
     GTS "Oh, this one reminds me of those ancient paintings you'd see in a museum."
     $setRyokoOutfit(OutfitEnum.CASUAL)
     $setMinoriOutfit(OutfitEnum.ALTERNATE)
-    show Ryoko happy at Position(xcenter=0.4, yanchor=1.0) with dissolve
+    show Ryoko happy at Position(xcenter=0.25, ycenter=0.8) with dissolve
     Ryoko "That's Koichi: A battle of love and honor. It's a period piece. Also hey you two!"
-    show Minori neutral at center with dissolve
+    show Minori neutral at Position(xcenter=0.5, ycenter=0.8) with dissolve
     Minori "Good afternoon. I hope we didn't keep you two waiting long."
     "Naomi gave a small bow in greetings as Ryoko and Minori waved."
     MC "Not at all, we got here only a couple of minutes ago."
@@ -6095,18 +6113,20 @@ label GTS030:
     $setTimeFlag("size3")
     $setProgress("GTS", "GTS031")
     $setTimeFlag("noGTS030")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene Dorm Interior with fade
     "I awoke to my alarm reminding me to go over to Naomi's dorm to grab the notes from last week's lecture that I let her borrow."
     RM "Are you gonna turn that thing off, or do I have to?"
     MC "I got it, I'm up now."
     "Swinging myself out of bed, I got dressed and, after some basic grooming, headed for Naomi's dorm."
     $setGTSOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene School Inner with fade
     play music Schoolday
     "As I made my way towards her dorm, I noticed a board full of flyers for upcoming events. One of the flyers is for the local Children's Day Festival."
     MCT "I'll take one of these, maybe Naomi would like to go to this."
     "After grabbing a copy of the flyer and stuffing it in my pocket, I spotted Ryoko walking my way briskly. I stopped and bowed to greet her."
-    MC "Morning, Ryoko."
+    MC "Morning, Tanaka-san."
     show Ryoko neutral with dissolve
     Ryoko "Oh, sweet, just the person I needed to find!"
     MC "Hm? What's up?"
@@ -6647,6 +6667,7 @@ label GTS034:
     $setTime(TimeEnum.EVE)
     $setProgress("GTS", "GTS035")
     $setGTSOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Campus Center with fade
     play music GTS
     "I checked my phone once more to make sure I was headed to the right place."
@@ -6954,8 +6975,9 @@ label GTS035_testpass:
     "I closed my window and got ready all the while I could hear Naomi humming the same tune to herself."
     if checkSkill("Art", ">=", 6):
         $setMCOutfit(OutfitEnum.TRADITIONAL)
+        $setFlag("GTS035_yukata")
         "When deciding what to wear, I decided that since this is a very special kind of event and I should dress appropriately."
-        "Reaching under my bed and I produced my dark blue Yukata that hadn't been used in some time. Throwing on the article and tying the sash I headed outside."
+        "Reaching under my bed, I produced my dark blue yukata that hadn't been used in some time. Throwing on the article and tying the sash I headed outside."
         MC "How do I look?"
         show GTS_S surprised
         $setAffection("GTS", 1)
@@ -6967,7 +6989,8 @@ label GTS035_testpass:
         GTS_S "Anyway, we better be going, it's nearly 5. Thankfully this place is quite close so I don't need to rush."
         MC "I'm right behind you."
     else:
-        $setMCOutfit(OutfitEnum.FORMAL)
+        $setMCOutfit(OutfitEnum.SUIT)
+        $setFlag("GTS035_suit")
         "When deciding what to wear I decided that a suit will be more than suitable for the occasion. Slipping on my dress shoes and straightening my tie I heard downstairs."
         MC "How do I look?"
         "Naomi cocked her head and looked at me like she was deciding the best way to describe a bad situation."
@@ -7160,7 +7183,8 @@ label GTS035_testpass:
     Akihiro "I suppose the pests can be tolerated for this evening."
     MC "Thank you, sir."
     "Stepping around the house, Naomi, Akihiro, and I stood around the table as her mother and sister gathered the dishes and utensils for the meal. Glancing at Naomi, I could see that while she was smiling, there was a hint of sadness in her eyes."
-    show cg GTS035 with dissolve
+    if getFlag("GTS035_yukata"):
+        show cg GTS035 with dissolve
     "Eventually her family stepped out with the tea and food for the evening. We exchanged bows and took the Seiza position around the table. Naomi reached for the tea set but her father raised his hand."
     Akihiro "No Naomi, I believe Kazumi should do the ceremony tonight. She has been practicing, so let us observe her work."
     "Her mouth fell open, but she quickly snapped it shut as her sister began the tea ceremony. Kazumi exhibited a level of skill with the making of the tea, always making sure that each step was done precisely as the last."
@@ -7227,7 +7251,8 @@ label GTS035_testpass:
             MC "My apologies, sir."
         "(Remain silent)":
             pass
-    hide cg with dissolve
+    if getFlag("GTS035_yukata"):
+        hide cg with dissolve
     "Eventually we finished our supper with Kazumi and Miko taking care of the dishes. Naomi had wandered off towards a koi pond at the edge of the inn's yard. I stood and was preparing to walk towards her when I noticed her father stand up and approach me."
 
     Akihiro "They say a tree is only as strong as the ground beneath it, but that is not true. A tree can grow on a rock and still thrive, but it's the support it receives that keeps it alive."
@@ -7289,6 +7314,7 @@ label GTS036:
     $setProgress("GTS", "GTS037")
     scene Dorm Interior with fade
     $setGTSOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     "It had been two days since the meeting with Naomi's parents, and things had been quiet between us."
     "This left me plenty of time to repeat the dinner scene over and over. Her father had been particularly difficult to deal with, but not in a way that was malicious."
     "It had grown apparent the task that lay ahead of me in rising not only to Naomi's standards, but her family's too."
@@ -7310,7 +7336,7 @@ label GTS036:
     stop music
     "He handed me the box and returned to his room. Looking over the package, there appeared to be no markings besides the address."
     MCT "I wonder who could've sent me this. I doubt my parents would; they normally only send that stuff to Tomo for some reason."
-    Letter "Dear Hotsure-san,{w} our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind.{w} Please accept this gift as a display of hope towards your futures."
+    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3}Dear Hotsure-san,{w} our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind.{w} Please accept this gift as a display of hope towards your futures.{/size}{/font}"
     "After I set the letter down, I began disassembling the brown packaging. Lifting the lid, I spotted an ornate, lacquered black box sitting amongst the packing material. With leaden curiosity, I lifted the box out, and gently opened the smaller box."
     "Inside was a tanto, its flawless blade glaring white in the afternoon sun."
     MCT "...How the hell did this get through customs?"
@@ -8839,6 +8865,7 @@ label GTS042:
     pause 1.0
     $setRyokoOutfit(OutfitEnum.CASUAL)
     $setGTSOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Chukan Point
     show Ryoko neutral
     with fade
@@ -9120,6 +9147,7 @@ label GTS042:
 
 label GTS043:
     $setProgress("GTS", "GTS044")
+    $setMCOutfit(OutfitEnum.ATHLETIC)
     scene Hallway with fade
     play music HigherEdu
     "The day had finally arrived. Now that my usual classes were complete, I had made plans to begin the Tai Chi course with Naomi after school."
@@ -9744,6 +9772,7 @@ label GTS044_c3b:
     "With the footsteps and chatter from the hall outside dying down, I gathered my things and prepared to head back to my dorm."
     scene black with fade
     pause 1
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Dorm Interior with fade
     MC "Home sweet home. Did you miss me, pillows, sheets, and Aystation? 'Cuz I missed you."
     "But our love would have to go unrequited a while longer. I dropped my backpack on my desk with plenty of slack on the arm and went to grab a glass of water before sitting down."
@@ -10012,6 +10041,7 @@ label GTS045:
     $setProgress("GTS", "GTS046")
     scene Dorm Hallway with fade
     play music Peaceful
+    $setMCOutfit(OutfitEnum.CASUAL)
     if not getFlag("TM_VisitedDorm"):
         $setFlag("TM_VisitedDorm")
     "I listened to the ringing of clashing blades and cries of dying men from the other side of the door."
@@ -10101,6 +10131,7 @@ label GTS045:
     "With a tenth try the knot was looking clean and symmetrical, and I was content to lay it down."
     "One last parting measurement, just to be sure the material would fully encircle the necessary circumference; and I turned to the less pleasurable labor of the day's assignments."
     "But I couldn't be too chagrined. I had the next day off classes, and I aimed to make the absolute most of it."
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene black with fade
     pause 2
     $setTime(TimeEnum.DAY)
@@ -10839,6 +10870,7 @@ label GTS046_c2:
 label GTS047:
     $setProgress("GTS", "GTS049") #Change to 48 once it's been written
     scene Field with fade
+    $setMCOutfit(OutfitEnum.CASUAL)
     play music HigherEdu
     "No matter how many times I made the long walk to the giant dorms, the change in scale never ceased to put me off my footing, even if just a little."
     $setSkill("Athletics", 1)
@@ -11609,7 +11641,7 @@ label GTS049_c1_2:
     with dissolve
     "She leaned back a bit to look at me, seated on her leg, and as though I'd thought it into existence, the surety on her face had receded somewhat before an encroaching blush."
     GTS "I, erm... don't suppose you have experience with this sort of thing?"
-    MC "Uh... once or twice. I can't say I ever had sex with a girl as tall as my house before, though."
+    MC "Uh... n-not... really, to be honest.{w} Definitely never with a girl as tall as my, uh... my house."
     show GTS aroused
     "She blushed harder still."
     GTS "Oh, you cad..."
@@ -11702,6 +11734,7 @@ label GTS049_c2_1:
     show GTS aroused
     with dissolve
     "And then, like the earth itself moving, Naomi folded her legs and spread them to the sides; with such little effort she corralled my attention directly to her open gate, a peach blossom glistening in the rain."
+    $setMCOutfit(OutfitEnum.NUDE)
     "And the next thing I knew, my clothes, too, were good and shed."
     stop music fadeout 10
     "I approached, well and truly awestruck. Her immaculate beauty, the hand-sculpted aesthetic of her every curve... if she'd never had to come to this island, the sight would have stuck in my memory forever."
@@ -11793,6 +11826,7 @@ label GTS049_c2_1:
 label GTS049_c2_2:
     GTS "Not at all."
     "She leaned forward again to pick me up, and I had the bizarre but exhilarating sensation of two arms rooting around between my clothes and my abdomen; with those two fingers she made short work of my shirt, pants, and finally underwear."
+    $setMCOutfit(OutfitEnum.NUDE)
     "With the final item, a brush of her finger made tangible what she was expecting; she grinned at the prospect just as I was."
     "It only widened as she looked my naked form up and down, like an offering, before setting me down."
     show GTS aroused at Transform(xzoom=-1)
@@ -12056,6 +12090,7 @@ label GTS050:
     "If that wasn't enough, each boom was preceded by a flash of searing, ghostly white from the high windows; closing my eyes only showed me red light instead."
     if getFlag("GTS049_embrace"):
         $setGTSOutfit(OutfitEnum.NUDE)
+        $setMCOutfit(OutfitEnum.NUDE)
         MCT "Urgh... I'm grateful for what you did earlier, but now I just wanna sleep..."
     else:
         MCT "Urgh... I just wanna sleep, go away already..."
@@ -12254,12 +12289,12 @@ label GTS051:
 
 label GTS051_c1_1:
     $setFlag("GTS051_c1_1")
-    show GTS surprised
+    show GTS surprised at Position(ycenter=0.55)
     GTS "Your confidence in your writing ability is admirable, but are you sure that's best?"
     MC "I've found that my first thoughts normally pan out better than me second guessing myself."
     GTS "Didn't you mention that on your last paper that you got marked off a lot for grammar?"
     MC "A few times, but only some small details."
-    show GTS unique at Position(ycenter=0.55)
+    show GTS unique
     GTS "I can help you with the grammar if you want. The linguistic arts {i}are{/i} one of my stronger subjects."
     MC "{i}*sigh*{/i}"
     MC "I may take you up on that for this report. My last one didn't go so well, though that may have been because I wasn't too familiar with the Renaissance stuff."
@@ -12448,6 +12483,7 @@ label GTS051_afterc2:
 
 label GTS052:
     $setProgress("GTS", "GTS053")
+    $setMCOutfit(OutfitEnum.CASUAL2)
     scene Mountains with fade
     play music GTSAlt fadein 2.0
     show GTS_S neutral with dissolve 
@@ -12510,7 +12546,7 @@ label GTS052:
     show GTS_S happy
     GTS "Thank you, my love."
     hide GTS_S
-    show GTS neutral 
+    show GTS neutral at Position(ycenter=0.55)
     with dissolve 
     "She then eased herself into a proper, ladylike sitting position, and then gently lowered me to the ground."
     "More and more, despite the gentle grace with which she did everything, even the lightest flits of her only-proportionally slender muscles sent shockwaves through me. It was like being caressed by an excavator."
@@ -13059,6 +13095,7 @@ label GTS052:
 
 label GTS053:
     $setProgress("GTS", "GTS054")
+    $setMCOutfit(OutfitEnum.CASUAL2)
     show Giant Dorm Exterior with fade
     play music ClearSkies
     "The afternoon sun sat high and mighty above me, casting a mirage-like shimmer on everything in sight. Despite the calendar, summer seemed to have just one more day left in it."
@@ -13158,6 +13195,7 @@ label GTS053:
     show GTS happy
     "She nodded briskly."
     "I unbuttoned and doffed my shirt, then squirted a blob of the pale, chilly goop on my bicep."
+    $setMCOutfit(OutfitEnum.SWIMSUIT)
     show GTS neutral
     GTS "Say, on second thought, why don't you squirt some onto the rest of your body as well?"
     MC "Uh... sure, if you want."
@@ -13579,7 +13617,7 @@ label GTS053:
     BE "Cooool!"
     MC "{i}Is it supposed to do that?{/i}"
     "She didn't respond. With the pillar of sunset-orange flames roaring curses to heaven before me, maybe she just didn't hear me."
-    show GTS pondering
+    show GTS pondering at Position(ycenter=0.55)
     GTS "Are you quite sure it's safe, Watanabe-san?"
     Jineko "{size=+6}Whadja say?{/size}"
     show GTS surprised
@@ -13766,6 +13804,7 @@ label GTS053:
 label GTS054:
     $setFlag("XX54")
     $setProgress("GTS", "GTS055")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     show Dorm Interior with fade
     play music MC
     "I slowly awoke to a world of mist beyond the window."
@@ -13774,6 +13813,7 @@ label GTS054:
     MCT "Brr..."
     "I promptly made for my socks."
     scene Bathroom with fade
+    $setMCOutfit(OutfitEnum.NUDE)
     "After cranking the shower faucet extra-hot, I stepped in, soaked my hair. I would liken the sensation to being piggybacked by a gargantuan lukewarm slug."
     "My palm was only half full when my shampoo bottle died in my arms."
     MCT "Ah, crud. The back's gonna be filthy."
@@ -13795,6 +13835,7 @@ label GTS054:
 
     scene black with fade
     pause 0.75
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Field with fade        
     "My bejacketed shoulder grew cold on the metal as I watched the valley roll by on the 9:20 into town."
     "A high gale slammed into the bus' venerable outer frame and a chilly whisper of it whistled in from somewhere. Scarlet leaves more gently pattered at the window by every tree we passed."
@@ -14696,6 +14737,7 @@ label GTS054_after:
 label GTS055:
     $setProgress("GTS", "GTS056")
     $setTime(TimeEnum.NIGHT)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene Field with fade
     "I left the school late at night after laying in bed for what seemed like hours without being able to sleep, heading out because..."
     "..."

@@ -84,6 +84,22 @@ transform shake2(rate=.090, rpt=1):
     linear rate xoffset +0 yoffset +0
     repeat rpt
 
+transform shake3(rate=.090):
+    linear rate yoffset -5.8 xoffset 0
+    linear rate yoffset -1 xoffset 2
+    linear rate yoffset -3 xoffset 0
+    linear rate yoffset -5.0 xoffset 2
+    linear rate yoffset -1 xoffset 0
+    repeat
+
+transform shake4(rate=.090):
+    linear rate yoffset -7.8 xoffset 4
+    linear rate yoffset -3 xoffset -4.8
+    linear rate yoffset -5 xoffset 4.8
+    linear rate yoffset -7.0 xoffset -4
+    linear rate yoffset -1 xoffset 0
+    repeat
+
 transform slowease(start, end, time):
     subpixel True
     start
@@ -124,6 +140,7 @@ init python:
         #name of place: (map used, x/y pixel position)
         'arcade': ("town", (500,700)),
         'auditorium': ("school", (385,200)),
+        'beach': ("town", (500,700)),
         'bakery': ("town", (500,700)),
         'ballroom': ("town", (500,700)),
         'businterior': ("town", (500,700)),

@@ -2120,7 +2120,7 @@ label AE013:
     MC "Ehh?! But, I didn't even hit my head that ha-"
     AE "No excuses!"
     "Shiori-san grabbed my hand, and I felt each tiny tremble ripple throughout her shaky arms."
-    scene Nurse Office
+    scene Infirmary
     show AE sad-2
     with fade
     "I sat on the small, cushioned bench, paper crinkling beneath my pants as I shifted position."
@@ -3468,7 +3468,7 @@ label AE020:
     menu:
         "I didn't mean it like that.":
             jump AE020_c1_1
-        "I think we should be together":
+        "I think we should be together.":
             jump AE020_c1_2
 
 label AE020_c1_1:
@@ -3758,7 +3758,7 @@ label AE021:
     MC "A-after me- ow, hey, hey!"
     "Daichi grabbed me by the hair and walked quickly across the corner, causing me to stomp awkwardly in his direction."
     RM "Here, into the men's bathroom. They won't follow us here."
-    scene Bathroom
+    scene Restroom
     show RM neutral
     with fade
     MC "Ach-g-get your hands off ma-!"
@@ -5948,18 +5948,31 @@ label AE029:
     UNKNOWN "A-HAHAHAHA! Ohhh my god, that was bad~!"
     "Out from the bathroom door came a girl, clutching at her stomach and cackling loudly like a hyena."
     show AE angry at Position (xcenter=0.25, yalign=1.0)
-    show Tako neutral at Position (xcenter=0.75, yalign=1.0)
+    show Tako unique at Position (xcenter=0.75, yalign=1.0)
     with dissolve
     AE "Ngh, Yureno-san!"
+    show Tako neutral
     Tako "Oy, oy, Shio-rear, what, didn't hear me in the bathroom?"
     AE "I thought I told you not to call me that!"
     MC "H-hey! What's going on?!"
     Tako "Ehehehe."
     "I took off the pad from my face, and sputtered as I tried to get the powder out of my mouth."
     Tako "Sorry about that dude, she warned you though, right?"
-    "As I wiped my eyes, the girl came into plain view. She was a somewhat taller girl, around my height actually, with a toothy grin plastered across a soft and feminine face. Her hair was a light brown color with a golden blonde tips."
-    "Her hair was mostly covered, however, by a grey beanie with a pin on it. Her tattered denim jacket sported more pins with various anime characters and bands, but was left opened to reveal her untucked school shirt."
-    "I could tell she wasn't exactly the type to take things seriously; from her weird hat to her unkempt jacket, she seemed like one of those carefree types."
+    if getFlag("MC010_AE"):
+        "As I wiped my eyes, the girl came into plain view."
+        MC "Wait... you're... the girl from the festival."
+        Tako "Ha?"
+        "Reaching down, I grabbed a nearby cloth an wiped the rest of my face clean."
+        MC "The one that was with Matsumoto-san when I met up with her."
+        Tako "...Woah, you remember that?"
+        MCT "I-It wasn't that long ago..."
+        MC "Y-Yeah, I guess this is just the first time we're properly meeting though."
+        Tako "Hmmmm..."
+        MC "Did she really forget we met that quickly?!"
+    else:
+        "As I wiped my eyes, the girl came into plain view. She was a somewhat taller girl, around my height actually, with a toothy grin plastered across a soft and feminine face. Her hair was a light brown color with a golden blonde tips."
+        "Her hair was mostly covered, however, by a grey beanie with a pin on it. Her tattered denim jacket sported more pins with various anime characters and bands, but was left opened to reveal her untucked school shirt."
+        "I could tell she wasn't exactly the type to take things seriously; from her weird hat to her unkempt jacket, she seemed like one of those carefree types."
     "From demeanor, to dress, and even their sides of the rooms; the two were polar opposites in every way."
     "Aside from one glaring similarity."
     #show Tako zoomin
@@ -5970,9 +5983,10 @@ label AE029:
     MC "Y-yeah."
     show AE neutral
     AE "You don't need to answer that, Hotsure-san."
-    Tako "Daaaww, shy? Isn't that Kodama-chan's thing?"
+    Tako "Daaaww, shy? Isn't that Preggos thing?"
     show AE angry
-    AE "How many times have I told you to clean up your side of the room?!"
+    AE "It's 'Kodama-san'."
+    AE "And how many times have I told you to clean up your side of the room?!"
     "Shiori-chan reached for an empty two-liter when she was stopped by the girl."
     Tako "Woah, woah, ey, don't touch that! I might use it."
     AE "Ach-For what?!"
@@ -9244,12 +9258,13 @@ label AE043:
     $setProgress("AE", "AE044")
     $setTime(TimeEnum.EVE)
     $setMCOutfit(OutfitEnum.CASUAL3)
-    scene Town with fade
+    scene Town
+    show rain
+    with fade
     play music Rain
     "As we walked through town, the bright afternoon sun shone only in short rays as silver clouds rolled in and filled the air with the rain's fragrance."
-    show rain with dissolve
     play sound MidRainAmbience
-    show AE neutral with dissolve
+    show AE neutral behind rain with dissolve
     "Shiori-chan, ever vigilant of the weather, had brought her umbrella along in anticipation, a large school-regulated tent of a thing."
     "A side effect of her giant umbrella being able to cover her front to back, however, was that it could me alongside her, as I'd forgotten mine."
     "I didn't mind, however. It simply meant I needed to huddle close to her... although her swinging hips made it a bit hard."
@@ -16501,7 +16516,7 @@ label AE070:
     MC "Ahh shit. Welp, to the nurses office I go."
     "I put my shirt and pants back on, and then made my way out to the living room, silently making my way towards the door. I slowly closed the door behind me as not to wake Daichi, and quietly slunk out into the hallway."
 
-    scene Nurse Office with fade
+    scene Infirmary with fade
     "As I walked into the nurses office, I looked around to see if anyone was available. Sure enough, at the desk in front of the main medical wing doors, was the nurse. She looked up and greeted me with a smile, yet bowed apologetically."
     show Nurse2 neutral with dissolve
     Nurse2 "Ah, apologies, Hotsure-san, but we currently have testing and therapy in progress."
@@ -16879,6 +16894,7 @@ label AE071_c1_after:
     jump daymenu
 
 label AE072:
+    $setFlag("XX72")
     $setProgress("AE", "AE073")
     scene Frozen Beach with fade
     play music Peaceful
@@ -17463,7 +17479,7 @@ label AE074:
 label AE075:
     $setProgress("AE", "AE076")
     $setTime(TimeEnum.EVE)
-    scene School Planter with fade #winter?
+    scene School Planter Winter with fade
     play music Peaceful
     "As the fresh snow crunched against the bottom of my shoes, I made my way over to Shiori, who stood silent and alone in the center of the garden."
     show AE neutral with dissolve
@@ -17854,7 +17870,7 @@ label AE076_c1_fail:
     jump AE076_c1_after
 
 label AE076_c1_after:
-    scene Nurse Office
+    scene Infirmary
     show Nurse neutral
     with fade
     Nurse "You were very wise to bring her here, Hotsure-san."
@@ -18017,7 +18033,7 @@ label AE076_c1_after:
 label AE077:
     $setProgress("AE", "AE078")
     $setTime(TimeEnum.EVE)
-    scene Nurse Office with fade
+    scene Infirmary with fade
     play music TwilightAmbient
     MC "Haah, okay."
     "As I entered the nurse's office, I was hit with the smell of freshly brewed coffee and the gleam of the bright office lights above."
@@ -20686,7 +20702,7 @@ label AE090:
     pause .5
 
     "But today was far from over."
-    scene Nurse Office with fade
+    scene Infirmary with fade
     "As soon as class ended, I made my way straight to the nurses office."
     MCT "C'mon... please be okay."
     "As I went to knock on the door to the office, I stopped and hesitated."

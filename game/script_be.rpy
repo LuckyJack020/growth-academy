@@ -4693,7 +4693,7 @@ label BE026_c2_1:
     MC "Let's just head to the nurse's office, and get a bandage for it."
     "Honoka nodded. It sucked to put our bug-hunt to a short stop, but better to make sure Honoka didn't get an infection or anything."
 
-    scene Nurse Office
+    scene Infirmary
     show Nurse neutral
     with fade
     "We were surprised when the nurse was actually there to help Honoka."
@@ -11634,7 +11634,7 @@ label BE050:
     "I didn't even know I could skip down four stairs at a time, but I managed to clear them in record time."
     MC "Hold on a second. Honoka literally told me she was okay. If there was something seriously wrong, wouldn't she have mentioned it before?"
     "I had to stop and catch my breath. Then, doing my best to keep my mind clear and calm, I walked the rest of the way to the nurse's office."
-    scene Nurse Office with fade
+    scene Infirmary with fade
     "I reached the office, took a deep breath and steeled myself. I went up to the front desk."
     Receptionist "First and Last name please?"
     MC "Keisuke Hotsure."
@@ -14638,8 +14638,9 @@ label BE057_c1_after:
 label BE058:
     $setProgress("BE", "BE059")
     scene Dorm BE
-    play music DormLife
     show BE happy
+    with fade
+    play music DormLife
     BE "Phew! All saddled in. Thanks for the extra pair of hands, Kei-chan."
     "Honoka sent me an early morning SOS text since Kokutan wasn't around for... whatever reason. Turns out, when you can't reach completely in front of, let alone around you, a little help in the morning goes a long way."
     MC "Hey, anytime. You can always call on me for help uh... saddling in. If your roommate's not around."
@@ -14723,9 +14724,10 @@ label BE058:
     pause .5
     show AE neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     pause 1
-    hide WG with dissolve
-    hide PRG with dissolve
-    hide AE with dissolve
+    hide WG
+    hide PRG
+    hide AE
+    with dissolve
     pause .25
     show BE angry
     extend "... not to say others in the class didn't have her beat down there."
@@ -14737,8 +14739,9 @@ label BE058:
     pause .5 
     show BE surprised-2
     "Every now and then, throughout the period, she whimpered and muttered to herself. More than once, I saw her jolt upright in her chair, like someone had just pinched her."
-    scene Classroom with fade
+    scene Classroom
     show Hageshi neutral at Position(xcenter=0.2, yalign=1.0)
+    with fade
     Hageshi "Inoue-san, if you could come up to the board and solve this equation, I'll postpone the quiz I have planned."
     show BE sad at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1.0)
     BE "Err... yes, sensei."
@@ -14749,9 +14752,9 @@ label BE058:
     pause .5
     show BE neutral
     "Honoka stared blankly at the equation on the board. Then, I could almost see the gears click as her face lit up. She started working through the problem, her tempo increasing as she got toward the end."
-    MCT "Noo! You forgot to √−1 after simplifying that last step! Go back, go back!"
+    MCT "Noo! You forgot to √-1 after simplifying that last step! Go back, go back!"
     show BE surprised
-    "As if she could hear my psychic screams of anguish at the thought of taking that quiz, I saw Honoka's eyes go wide. She reached forward to erase her last few strokes−"
+    "As if she could hear my psychic screams of anguish at the thought of taking that quiz, I saw Honoka's eyes go wide. She reached forward to erase her last few strokes-"
     play sound Boing
     pause .5
     stop music
@@ -14783,13 +14786,15 @@ label BE058:
     scene black with fade
     pause .5
     $setTime(TimeEnum.EVE)
-    scene Nurse Office with fade
+    scene Infirmary with fade
     play music Rain 
     pause 1
     "The trip to the nurse's was uneventful, though for the trip there Honoka insisted on walking behind me with her chest firmly pressed against my back, doing her best to match my pace and minimize her... jostling."
     "I could tell she was doing her best not to make any sounds. But the fact I {i}could{/i} tell  was itself worrying."
     pause .5
-    show BE sad with dissolve
+    show BE sad at Position(xcenter=0.75, yalign=1.0)
+    show Nurse neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
     BE "I just don't get it, Kiyomi-san; I've had sore and sensitive breasts before, but it's usually only right around the start of my... time of the month..."
     "Honoka trailed off, glancing in my direction."
     MC "Don't worry. Keep talking like I'm not even here."
@@ -14797,10 +14802,10 @@ label BE058:
     show BE neutral
     BE "Right.{w} But, never anything like this. It's like... electric tingles? Sometimes they last for a while but aren't that bad, but when they come back, it's like getting zapped!" 
     show BE worried
-    BE "It's not like it hurts − I can't begin to describe how many times I've banged up the girls, even before coming to Seichou. I {i}know{/i} what that feels like. I guess it's like I'm constantly getting startled, like when someone pokes you in the ribs."
+    BE "It's not like it hurts - I can't begin to describe how many times I've banged up the girls, even before coming to Seichou. I {i}know{/i} what that feels like. I guess it's like I'm constantly getting startled, like when someone pokes you in the ribs."
     show BE doubt
     BE "Ugh...! Sorry, I'm not sure if any of that made sense... I feel like I'm talking in circles and wasting everyone's time..."
-    Nurse "Inoue−san, while you have nothing to worry about, coming in and asking is {i}never{/i} silly, or a waste of time. That's what we're here for."
+    Nurse "Inoue-san, while you have nothing to worry about, coming in and asking is {i}never{/i} silly, or a waste of time. That's what we're here for."
     Nurse "What you've described isn't as abnormal as you seem to think." 
     Nurse "You'll be fine with plenty of good rest. Take some painkillers if the sensations become painful, and watch your salt and caffeine intake. I would also appreciate it if you check in with us, should the pain worsen or persist beyond a few days."
     show BE unamused
@@ -14837,8 +14842,8 @@ label BE058:
     Nurse "I'm not the one who needs an apology, Hotsure-san."
     MC "Right."
     pause .5
-    show BE unamused
-    MC "Sorry, Honoka. I didn't mean to be a mother hen or anything. I just... I guess I just wanted to make sure you're happy and healthy. But that's no excuse for trying to tell you what to do − I apologize."
+    show BE unamused at Position(xcenter=0.75, yalign=1.0) with dissolve
+    MC "Sorry, Honoka. I didn't mean to be a mother hen or anything. I just... I guess I just wanted to make sure you're happy and healthy. But that's no excuse for trying to tell you what to do - I apologize."
     BE "..."
     pause .5
     show BE smug
@@ -14873,9 +14878,1021 @@ label BE058:
     pause 1
     scene Hallway at Transform(xzoom=-1) with dissolve
     MC "{i}...which offer?{/i}"
-jump daymenu
+    jump daymenu
 
 label BE059:
+    $setProgress("BE", "BE060")
+    play music HigherEdu
+    scene Cooking Classroom
+    show BE sad
+    with fade
+    play sound Bell
+    BE "S-Sorry, Nakayama-san...!"
+    show BE doubt
+    extend " {size=-6}...Again.{/size}"
+    Genji "... It's fine, Inoue-san. I'm not really built for cooking."
+    BE "{size=-6}... Apparently, neither am I.{/size}"
+    if getFlag("Meet_Genji"):
+        "That was the fourth instance of Honoka apologizing for bumping into Genji." 
+    else:
+        "That was the fourth instance of Honoka apologizing for bumping into Nakayama-san." 
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0)with dissolve
+    Takamura "..."
+    BE "Don't worry about cleaning up, I can stay behind and clean up our cooking station."
+    Genji "Thanks."
+    hide Takamura with dissolve
+    "That day's cooking period was pretty rough. Takamura-sensei had assigned us a meal of shrimp tempura with some fried gyoza and inari sushi on the side."
+    "I decided to hang back with Honoka as she began scooping up clumps of spilled sushi rice and gyoza filling."
+    MC "Anything I can help with?"
+    show BE sad
+    BE "Nah. I got it. I feel bad enough for giving Nakayama-san a hard time as he was trying to fry up our food for us since uh..."
+    "Honoka gestured to her prodigious front."
+    show BE worried
+    BE "... Y'know?"
+    MC "Nah, I totally get it. For what it's worth, Mizutani-san and I found it pretty tricky as well. She kept tearing the tofu pouches because she stuffed them too full..."
+    show BE surprised-2
+    BE "I had the same problem!"
+    show BE shrug
+    BE "I just wanted to make sure that there was enough rice in each one."
+    MC "And as for me..."
+    MC "I never realized how scary it is working over a hot stove with hair as long as this. I found myself stuck between making sure my hair didn't burst into flame and trying to keep my hair out of the food."
+    show BE neutral
+    BE "Pff. Here, lemme take a look."
+    "Honoka took the time to inspect my hair, checking for any damage."
+    BE "Hmm... No signs of any scorch marks anywhere. You're all clear, Kei-chan!"
+    MC "Heh, thanks. Although, I think I'd realize it by now if I was on fire."
+    Takamura "Ahem."
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) behind BE with dissolve
+    show BE surprised-2
+    BE "Ah, sorry Sensei. I'm almost done cleaning up."
+    Takamura "Actually... I overheard a bit of your conversation. And I have a small request for you two if you're interested?"
+    "Honoka and I exchanged looks."
+    MC "Well, I don't think we had anything else planned today. Right, Honoka?"
+    show BE shrug
+    BE "Nope, not that I can remember."
+    "Before Takamura-sensei could continue, the door to the cooking classroom opened."
+    Kanami "Sorry I took so long, Sensei. Just finishing up some prep."
+    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) behind BE with dissolve 
+    Takamura "Actually, your timing is perfect timing, Kanami-san."
+    show BE happy
+    BE "Oh! Kanami-chan! How ya doing?"
+    MC "Hey, Kanami-san. Nice to see you."
+    Kanami "I'm doing well, you two. Nice to see you as well."
+    Takamura "Now that everyone is here, my request."
+    "Takamura-sensei clasped her hands together."
+    Takamura "Our usual taste testers had to cancel for today's club meeting, and I'd really appreciate it if you two could sub in for them."
+    Kanami "Ah, so that's what this was about."
+    MC "Oh, would you be okay with us? It's not like we're qualified food critics or anything..."
+    Takamura "That isn't really a requirement for us, Hotsure-kun. As long as you have taste buds, your opinion is valid. And besides, you'd both have a chance to taste some food made by some of our school's most aspiring chefs!"
+    show BE neutral
+    BE "You had me at ‘good food', sensei."
+    Takamura "Splendid! Kanami-chan, if you could give them the rundown? I have a meeting I must attend. Thanks again, you two."
+    Kanami "Of course. See you later, Takamura-sensei."
+    hide Takamura with dissolve
+    Kanami "Alright. Well, the club meeting is actually supposed to take place in this classroom. So if you two needed a few minutes to stretch your legs and get something to drink. You can go ahead."
+    BE "I... think I do need a few minutes actually. Wanna come with, Kei-chan?"
+    MC "Sure. We'll be right back, Kanami-san."
+    Kanami "That's fine. I would advise water, by the way. Helps with cleansing your palate before taste testing."
+    MC "Thanks for the tip."
+    "Kanami nodded and turned to her cooking station, bending down below the countertop as Honoka and I left the classroom."
+    scene Hallway with dissolve
+    "As we walked down the hallway towards the nearest vending machine, Honoka clasped her hand around mine."
+    show BE doubt with dissolve
+    "I squeezed my hand a little tighter around hers."
+    MC "What's wrong? You okay?"
+    BE "Yeah... I think I'm just having one of those days, y'know? I'm just... feeling a little bad about getting in the way. It's something I'm gonna have to get used to, I guess."
+    MC "Yeah... I get what you mean. Well, on the positive side... at least we get free food. And no burnt hair in it either."
+    show BE neutral
+    BE "Heh. With hair like yours, the chance still won't be zero."
+    MC "Hey now. I try my best! It's a lot of hair!"
+    BE "I know you do, Fluffsure-san."
+    MC "Please don't make that a thing. I like Kei-chan much more. Especially when it comes from you."
+    BE "Yup! It's a Honoka Inoue exclusive nickname!"
+    "Honoka took a half step closer to me as we continued onward toward the vending machine, brushing her shoulder against mine, her left boulder resting above my arm."
+    scene Cooking Classroom
+    show BE neutral
+    with fade
+    "The club meeting seemed to have started and was in progress upon our return."
+    "That day's cooking club meeting seemed to only have a few members, with only about 6 students in attendance alongside Kanami-san."
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Kanami "Ah, welcome back." 
+    MC "So... What exactly is expected of us for this?"
+    Kanami "Well, all you two would really need to do is taste the finished products." 
+    BE "Sounds easy enough. Anything else?"
+    Kanami "Considering today's meeting involves some of our more experienced chefs, myself included, I would suggest going around to the others and asking them about their dishes."
+    "Kanami showed us where we'd be seated for the meeting and with a gentle wave, she whisked away to her cooking station to continue her work."
+    hide Kanami with dissolve
+    MC "Well, thankfully there aren't too many students cooking this time around, so it shouldn't take too much time, I suppose."
+    MCT "Hell, maybe we might not even need to have dinner on top of this."
+    show BE happy
+    BE "Oh, Aida-chan's here! Myoga-chan too!"
+    MC "Huh. I guess this explains why Aida-chan wasn't in Takamura's class today."
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Sakura happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Upon hearing their names Aida and Sakura exchanged waves with Honoka and I before going back to their cooking."
+    hide PRG
+    hide Sakura
+    with dissolve
+    show BE neutral
+    BE "... Huh."
+    MC "What's up?"
+    BE "Nothing, I just... noticed something about a lot of the members here."
+    MCT "Considering most of the members here are female, I don't think I should comment before Honoka does."
+    MC "Well, why don't we take the chance to go around and ask about their dishes in the meantime? Maybe they have some insight about what you're thinking?"
+    BE "Good idea."
+    "Honoka bounded over to the shared station of Aida and Sakura first."
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) behind BE with dissolve
+    show BE happy
+    BE "Myoga-chan! Good to see you!"
+    Sakura "Hey you two! Been a little bit." 
+    MC "Heya. How's the cooking going?" 
+    BE "It smells really good in here!"
+    Sakura "It's going well. So you two must be our taste testers today, huh?"
+    show BE neutral
+    BE "Yup. Takamura-sensei asked us to step in!"
+    show Sakura happy
+    Sakura "Ooh! Not too many opportunities for us to have some fresh testers for a club meeting. This should be fun!"
+    MC "So what kind of meal should we expect from the two of you? You're both partners, right?"
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0) behind BE with dissolve
+    PRG "N-Normally, yes we are. But today has us working individually."
+    PRG "We just... happened to be on the same station."
+    show Sakura neutral-2
+    Sakura "Yup, We're trying our best to be considerate of each other since Aida's carrying a few  extra passengers. So I'm cooking up some meat for gyudon using most of the stove burners." 
+    MC "Ooh... Gyudon sounds like it would hit the spot right now... I haven't had it in a while."
+    show Sakura happy
+    Sakura "Then I think you'd love mine! Not to brag, but I definitely know my way around the kitchen."
+    pause .25
+    Sakura "As is... kinda obvious, I guess."
+    "Sakura glanced down for a second, her eyes quickly going back to her work."
+    show BE neutral
+    BE "Hehe, well it doesn't make much of a difference to me! How about you, Aida-chan?"
+    "Aida set the cream filled mixing bowl she'd been whisking on the counter as she maneuvered around Sakura."
+    PRG "I-I've got chocolate cake in the oven at the moment. Once it finishes baking and has a chance to cool, I'll be rolling up a swiss roll using this extra cream."
+    show BE surprised-2
+    BE "CHOCOLATE?!"
+    show PRG surprised
+    PRG "Y... Yes?"
+    MC "Down, girl. We're just taste testing."
+    show PRG insecure
+    PRG "I-I'm not really cooking anything special. It's just something I felt like baking today."
+    PRG "A-And I like chocolate, so..."
+    show BE surprised-2
+    BE "Oh my gosh, me too. We should just be like besties already!"
+    show PRG neutral
+    PRG "I-If there's any leftovers, feel free to take them with you!"
+    show BE neutral
+    BE "Kei-chan, I'm tasting some of yours. Just letting you know early."
+    MC "Yeah, yeah, I know. I still have to have enough of it to taste, though."
+    show PRG happy
+    PRG "There'll be enough. It's a big cake."
+    BE "Actually, I had a question for you if you don't mind, Aida-chan?"
+    show PRG neutral
+    PRG "O-Oh, okay. Would you mind if we sit down first? I'd like to give Sakura-chan some space to work."
+    show PRG unique
+    PRG "... And my ankles and hips are getting kind of sore."
+    show Sakura neutral
+    Sakura "Go take a seat, Aida. I'll put your cream in the fridge."
+    show BE happy
+    BE "Good luck, Myoga-chan!"
+    show Sakura happy
+    Sakura "Thanks! This'll be a cake walk!"
+    hide Sakura with dissolve
+    "Aida shuffled past Sakura and took a seat near her station as Honoka and I sat across from her."
+    show PRG nervous
+    PRG "So... um. How can I help?"
+    show BE unamused
+    BE "Hmm. How do I word this..."
+    "Honoka crossed her arms below her chest as she tilted her head, pondering."
+    show BE shrug
+    BE "Ah, I'll just be direct with it. I was wondering how you manage to cook so well considering how much space your front takes up."
+    show PRG surprised
+    PRG "Uhh..."
+    MCT "Maybe a touch {i}too{/i} direct..."
+    show BE sad 
+    BE "We just had cooking class here earlier and I felt like I was {i}completely{/i} in the way. Like no matter what I did, I couldn't help but bump into something or someone around me..."
+    MCT "Ahh. So that's what this is about."
+    show PRG unsure
+    PRG "O-Oh um... r-right." 
+    PRG "I-I guess I would be... the right girl to talk to about something like that..."
+    show BE surprised
+    BE "N-No offense! I meant it like... You're really good at what you do!" 
+    show PRG insecure
+    PRG "T-Thanks."
+    show BE doubt
+    BE "And I was wondering how you manage to still be so good at it even though circumstances have made it a lot harder for you."
+    Kanami "I think I can also weigh in on this conversation."
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) behind BE with dissolve
+    Kanami "But feel free to go first, Kodama-san. I have a feeling your answer will end up being quite similar to my own."
+    show BE neutral
+    show PRG worried
+    PRG "It's..."
+    PRG "I-I kind of just... told myself that I was going to figure it out, i-if that makes any sense."
+    PRG "I love cooking so much, and baking, and... and everything. So..."
+    PRG "Losing the thing I love doing so much would be so hard. So, I do the best I can."
+    PRG "I just think 'how can I position myself so my arms aren't blocked?' A-And, I try to do that."
+    PRG "I can show you some of the things I do... i-if you want."
+    "Kanami nodded in agreement."
+    Kanami "Well said, Kodama-san. That's exactly what I was thinking."
+    Kanami "Although I may not have as... much... as you or Kodama-san, I also had my fair share of struggles and growing pains as I had to readjust."
+    Kanami "But if it's something you love and enjoy doing, you really do just... figure it out."
+    show BE sad
+    BE "Something you love and enjoy doing..."
+    Kanami "But the important thing to remember is that you can always ask for help. You don't have to go it alone. I can also help show you some of my little tricks to work around all this."
+    "Kanami heaved one of her breasts with her arm."
+    Kanami "It's not impossible. And I refuse to let them stop me either."
+    show PRG happy
+    PRG "Tozakura-san and Takamura-sensei helped me out a bit since my factor started showing."
+    "Honoka took some time to absorb the words of both Aida and Kanami."
+    show BE happy
+    BE "Y'know... I think I'll take the two of you up on your offer."
+    MC "And for what it's worth. You also have me to help as well. Well... maybe not during class. But outside of that, I can be an extra pair of hands for you if you need it."
+    show BE wink
+    BE "Hehe, thanks Kei-chan."
+    show BE happy 
+    BE "And thank you both as well!"
+    Kanami "You're very welcome."
+    PRG "You're welcome. Feel free to send me a message wherever you'd like some tips."
+    PRG "I'm... not the best at texting, just so you know."
+    "The sound of the oven's timer went off from Sakura and Aida's cooking station."
+    show PRG surprised
+    PRG "Oh, my cake's done!"
+    BE "Good luck, Aida-chan! Can't wait to taste it!"
+    hide PRG with dissolve
+    Kanami "I should also head back over and finish up. I also need to monitor the other students and see how they're doing."
+    MC "Sounds good, Kanami-san. Thanks."
+    hide Kanami with dissolve
+    MC "So... How ya feeling now?"
+    show BE neutral
+    BE "A lot better, actually."
+    MC "Yeah?"
+    show BE happy
+    BE "Yeah! I never really thought of my situation like that before."
+    BE "In hindsight, It's a pretty simple solution."
+    MC "Hey, it wasn't that simple. I probably wouldn't have thought of it either."
+    "Kanami's voice rung out from the front of the classroom"
+    Kanami "Alright chefs, there's about 30 minutes left until taste testing! Make sure you give yourselves enough time to properly plate your dishes!"
+    "Classroom" "YES, CHEF!"
+    MC "Huh. I've never seen her in action in front of other students before. She's got a knack for this."
+    BE "She... figured it out."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    scene Hallway
+    show Takamura neutral
+    with fade
+    Takamura "Mission accomplished~"
+    if not getFlag("Meet_Sakura"):
+        $setFlag("Meet_Sakura")        
+    jump daymenu
+
+label BE060:
+    $setProgress("BE", "BE061")
+    play music DormLife
+    scene Classroom with fade
+    "It was late October. The days were getting shorter and the air outside was whipped by a dry breeze."
+    show BE worried with dissolve
+    "Over these past couple weeks, Honoka's demeanor had changed."
+    "It wasn't long ago she came to class bright-eyed and vivacious."
+    "Nowadays, she was preoccupied, her eyes downcast, hands massaging her chest."
+    "As usual, I checked in with her before lunch."
+    play sound "<from 0.0 to 3.0>Audio/SFX/sfx_clocktower.mp3"
+    MC "Hey! How's it going?"
+    show BE doubt
+    BE "Aw, y'know..."
+    show BE shrug
+    BE "Tender."
+    "This was a pretty routine exchange for us at this point. Honoka's breast sensitivity, it seemed, was more intense each day."
+    show BE neutral
+    "\"It couldn't possibly get worse than {i}this{/i}\", was a common refrain from both of us."
+    "But it did get worse. Honoka's factor, it seemed, was growing one hell of a new nervous system."
+    "Even Honoka's walk had changed recently. Her movements were slow and cautious now. Collisions were too uncomfortable to risk."
+    "But...halfway through the afternoon, I glanced across the room at Honoka and realized, something was different this time..."
+    show BE flustered with dissolve
+    MCT "Oh man...is she okay?"
+    MCT "She looks...I don't know..."
+    MCT "Scared?{w} In pain? {w}Overwhelmed?"
+    MCT "I've never seen her with that face before."
+    play sound "<from 0.0 to 3.0>Audio/SFX/sfx_clocktower.mp3"
+    "Most of the class got up to stretch their legs or refill water bottles from the fountains."
+    "Honoka, who usually didn't pass up the chance to stretch her legs between classes, stayed at her desk."
+    MC "Hey..."
+    BE "Hey, Kei-chan!"
+    MC "Um...how you doing?"
+    BE "Fine! I'm fine."
+    MC "You...sure you're okay?"
+    show BE embarrassed
+    BE "Y-yes. I'm great. Doing great!"
+    show BE flustered
+    BE "Couldn't be better!"
+    MC "Uh...seriously, what's going on?"
+    show BE doubt
+    BE "I-I can't talk about it here, Kei-chan."
+    MC "Uh...alright. Do you need anything?"
+    show BE confused
+    BE "I don't need to go to the nurse's office if that's what you're thinking, Kei-chan."
+    show BE doubt
+    BE "They're not going to tell me anything I don't already know."
+    MC "Alright. Do you need something else?"
+    BE "Maybe refill my water bottle?"
+    show BE flustered
+    BE "I really don't feel like leaving my desk right now."
+    MCT "Gosh. The sensitivity much be really bad if she doesn't even want to move."
+    MC "Sure. I'll be right back."
+    "I refilled Honoka's water and returned."
+    MC "There ya go."
+    show BE neutral
+    BE "Thanks, Kei-chan!"
+    MC "Anything else you need?"
+    show BE flustered
+    BE "Nope!"
+    "All through class, she had that indecipherable look on her face."
+    MCT "Well...she's not scared. When she's scared, I can usually convince her to see the nurse."
+    MCT "She's probably not in {i}pain{/i}. Honoka wouldn't tell me she's doing great if she was hurting."
+    MCT "What could it be?"
+    play sound ClockTower
+    "Classes were dismissed. As the room emptied out, I made my way back to Honoka's desk."
+    show BE neutral
+    MC "Hey."
+    BE "Hey, Kei-chan. Help me up?"
+    "Honoka extended a hand which I took. She levered herself up with her other hand. She rose to her feet."
+    "Honoka threw her notebook into her backpack and slung it over her shoulders."
+    MC "Hey—what's...?"
+    show BE doubt
+    BE "I wanna get out of here."
+    MC "Uh—alright."
+    stop music fadeout 1.0
+    scene Hallway
+    show BE doubt
+    with fade
+    "Honoka led the way, weaving down the hall past knots of students until we got to the end where the way was clear."
+    MC "Alright, so what's—"
+    show BE flustered
+    BE "I wanna go somewhere."
+    MC "Uh—where?"
+    BE "Not my room."
+    MC "Okay..."
+    show BE sad
+    BE "I don't know {i}where{/i}, exactly."
+    show BE doubt
+    "She took a cautious step toward me. Her chest squished against me and her eyes winced at our contact."
+    show BE flustered
+    "But, she had to tell me. She muttered it under her breath."
+    BE "{size=-8}Kei-chan...{/size}"
+    BE "{size=-8}I wanna go somewhere...{/size}"
+    BE "{size=-8}Somewhere I can {i}scream{/i}{/size}."
+    scene black with fade
+    $ setTime(TimeEnum.EVE)
+    play music LastBell
+    scene Woods with fade
+    "There was an urgency in Honoka's voice. So, we wasted no time. Didn't even stop by the dorms to drop off our backpacks."
+    "We took the sidewalk that led out to the flower clearing. The air was crisp and a quick breeze whipped us as we left campus. Leaves susurrated under our feet."
+    show BE worried with dissolve:
+        xcenter 0.65
+        yalign 1.0
+    BE "Mmmmgh."
+    MC "What's up?"
+    show BE doubt
+    BE "This wind is...{w}giving me lots of feels."
+    MC "Does it hurt?"
+    show BE embarrassed-2
+    BE "Heh heh. Kinda?"
+    BE "And, it kinda feels..."
+    show BE wink
+    extend "pleasant."
+    MC "Pleasant."
+    show BE doubt
+    BE "It started...maybe two nights ago?"
+    BE "I felt it first when I went to bed and pulled my covers over me."
+    show BE embarrassed-2
+    BE "It was like...{i}oooh! That's kinda nice.{/i}"
+    show BE shrug
+    BE "I didn't think too much of it at the time, but it was stronger yesterday."
+    show BE flustered
+    BE "But—TODAY!"
+    BE "Today, it's {i}strong{/i}."
+    MC "Uhhh...what does it feel like, exactly?"
+    BE "It's like my breasts are supercharged. It's most intense in my nipples, but the sensations carry out to the rest of my boobs."
+    show BE neutral:
+        ease 0.5 xcenter 0.5
+    "Honoka sidestepped closer to me, her boob flank close in my vicinity."
+    show BE seductive
+    BE "Touch me there."
+    "So, I did."
+    show BE embarrassed
+    BE "That's like...a pleasant tickle."
+    show BE neutral
+    BE "Hold up, Kei-chan."
+    "We stopped. Honoka pointed to a spot maybe a foot's worth of circumference from her nipple."
+    BE "Touch me here."
+    "I gave her a gentle pat."
+    show BE aroused at shake2(.04, 3)
+    BE "Hoooo! That's...that's nice."
+    MC "And if I touched your nip—"
+    show BE confused
+    BE "No, don't!"
+    show BE doubt
+    BE "I'm not ready for that. Not yet. Not until we're far, {i}far{/i} away from anybody."
+    MC "Got it."
+    show BE neutral
+    BE "Let's go."
+    scene Flower Clearing with fade
+    "We reached the flower clearing, got off the path and kept walking. We crossed hill after hill until the flowers thinned out."
+    "Soon enough, we were in a field of pure yarrow."
+    "Honoka picked a spot a little below the crest of a hill. The hill blocked us from the full force of the breeze."
+    "Without the wind whipping us, it wasn't actually that cold."
+    show BE doubt with dissolve:
+        xcenter 0.5
+        yalign 1.0
+    BE "Do you see anyone?"
+    MC "No. I think we're alone out here."
+    show BE embarrassed-2
+    BE "Finally!"
+    show BE neutral
+    BE "Help me out of this top. Bra comes off too."
+    MC "Yes, ma'am."
+    "We unbuttoned Honoka's shirt. She started at the top, I started at the bottom. We met in the middle."
+    "Then, I undid the ten or so clasps of Honoka's industrial strength bra."
+    $setBEOutfit(OutfitEnum.TOPLESS)
+    show BE embarrassed
+    BE "Ahhh! Free at last."
+    "She was huge and resplendent in the evening sun."
+    "My dick was already rock hard."
+    "I reached out a hand to her nipple."
+    show BE surprised-2
+    BE "Not yet, I said! I'm not ready for that."
+    MC "Ah. Pardon."
+    show BE smug
+    BE "C'mon, Kei-chan. It's your turn to lose some clothes."
+    "I unbuttoned my shirt and tossed it in our pile of clothes. As I did so, Honoka sat in the grass and yarrow and dropped to her back."
+    show BE embarrassed-2
+    BE "Ahhhhh. This yarrow is so soft. It feels AMAZING on the girls."
+    show BE neutral
+    "She looked up at me through the nearly two foot canyon of her boobs. With a gratified smile, she held out her arms to me."
+    show BE confused
+    BE "Actually, lose the belt. And the pants."
+    show BE neutral
+    BE "Please."
+    MC "I see you're in the driver's seat today, Miss Inoue."
+    show BE aroused
+    BE "Uh huh. Hope you don't mind riding along."
+    show BE doubt
+    BE "I'm feeling needy today."
+    MC "By all means, drive."
+    "I tossed my pants in the pile and stood over Honoka in nothing but my socks and boxers."
+    show BE neutral
+    BE "Join me now?"
+    "I got down to my knees and crawled into the canyon."
+    show BE embarrassed-2
+    BE "Haaahhh! You feel good in there."
+    "I got up to the point where my face was level with Honoka's. Boob walled my torso in at both sides."
+    show BE aroused
+    "We made out. Our tongues caressing. Honoka's breath got heavy."
+    BE "Mmmmm. Yeah."
+    "Our little movements sent quivers up her chest, which I felt in my ribs."
+    show BE embarrassed-2
+    BE "Hee hee."
+    MC "What is it?"
+    BE "... pff."
+    MC "C'mon! Tell me!"
+    show BE happy
+    BE "It's like I'm a bao bun and you're a piece of saucy meat inside."
+    MC "I never met a bao bun so...inflated."
+    show BE aroused
+    BE "Yeah. I guess I'm extra yeasty."
+    show BE embarrassed
+    BE "Sometimes, it's kind of embarrassing to be this... big."
+    show BE shrug
+    BE "But when it feels good like this, I don't care."
+    show BE happy
+    BE "And, judging by that cucumber you're pressing into my stomach, it doesn't feel like you mind it all that much either."
+    MC "Is it that obvious?"
+    show BE aroused
+    BE "Uh huh. Those boxers better watch out."
+    show BE happy
+    BE "Alright. Help me out of this skirt, Kei-chan?"
+    BE "I wanna take this a bit further."
+    "I pulled out of Honoka's 'bao bun' and helped her out of her skirt and panties."
+    $ setBEOutfit(OutfitEnum.NUDE)
+    "She tried reaching herself across her boob, but her elbow was up at too much of an angle for it to be comfortable."
+    "So, I carefully lifted Honoka's left boob so she could get her hand around it."
+    show BE neutral
+    BE "There we go! This works."
+    "She began touching herself."
+    show BE aroused
+    BE "T-touch me also, Kei-chan? Not too close to my nipple?"
+    "I knelt beside her right boob and caressed her soft titflesh, keeping my hands inches from her areola."
+    show BE flustered at shake2(.04, 4)
+    show BE surprised-2 at shake2(.04, 4)
+    BE "AH HAH HAAAHHHHH"
+    show BE aroused
+    BE "Yeah. Keep going like that."
+    MCT "Wow. Even the gentlest contact on her boobs is getting Honoka worked up."
+    MCT "How sensitive has she gotten over the last couple weeks?"
+    "I pressed my palm into the mountainside of Honoka's left boob gave it a little squeeze while my right was busy with the other."
+    show BE surprised-2
+    BE "Gyaaaa!!"
+    MC "Sorry, was that—?"
+    show BE surprised-2 at shake2(.04, 4)
+    BE "It was great! Keep going—easy like that."
+    "I began squeezing Honoka, both boobs with both hands. I did it slowly, gently, but with increasing pressure."
+    "Each time I did, Honoka's mouth fell open, her eyes fluttered and she let out a hearty gasp."
+    "I looked down between her legs and was surprised to see her hand was no longer touching herself."
+    MC "You're not..."
+    show BE embarrassed-2
+    BE "Eh hee hee hee!"
+    show BE embarrassed
+    BE "I don't feel like I need to touch myself with you honking me like that."
+    MC "Uh...really?"
+    BE "Yeah..."
+    show BE doubt
+    BE "I think...{w}I think I have a new happy spot."
+    BE "Or, spots? Heh!"
+    show BE embarrassed-2
+    MC "W-wow."
+    MC "You seem embarrassed about it."
+    show BE doubt
+    BE "Well...I kind of am."
+    BE "This doesn't seem normal."
+    show BE worried
+    BE "It's...it's like my boobs are on fire."
+    BE "This is...it's beyond anything I ever experienced between my legs."
+    MC "..."
+    MC "I see."
+    MC "Well, maybe it isn't normal."
+    MC "But, why should you be embarrassed about it?"
+    MC "Isn't it kind of...miraculous?"
+    show BE doubt
+    BE "You think so?"
+    "I scooted in until my body was up against Honoka's right boob and I pressed in on either side of her areola."
+    show BE surprised-2 at shake2(.04, 4)
+    BE "Haaahhhh!"
+    MC "Does it feel miraculous?"
+    BE "Oh my god, yes it does!!!"
+    "I threw my arms around Honoka's boob and sank my face into the warm flesh, cuddling it."
+    show BE flustered
+    BE "Oh!"
+    show BE aroused at shake2(.04, 4)
+    BE "Eh heh heh heh heh heh heh heh heh..."
+    BE "Kei-chan..."
+    show BE happy
+    BE "I have NEVER felt anything like this before."
+    show BE confused
+    BE "Hey! Is that your boxers I'm feeling down there?"
+    MC "Heh. Yeah?"
+    BE "Get 'em off already!"
+    MC "Alright, alright!"
+    "I slid my boxers off and added them to the pile."
+    MC "Alright, where were we?"
+    show BE surprised-2
+    BE "I'm already pretty close, Kei-chan!"
+    show BE doubt
+    BE "Think you could get me the rest of the way?"
+    MC "I'll do my best."
+    "How are you going to please Honoka?"
+
+label BE060_c1:
+    menu:
+        "Make out with her nipple":
+            jump BE060_c1_1
+        "Get your dick between her boobs so you can both have the titty fuck of your life":
+            jump BE060_c1_2
+        "Get inside Honoka while hugging her breasts":
+            jump BE060_c1_3
+
+label BE060_c1_1:
+    MC "Okay, y'know what?"
+    MC "You just sit tight right here and let me do my thing."
+    show BE unamused
+    BE "Are you up to something Kei-chan?"
+    MC "I dunno. You'll just have to find out."
+    show BE surprised-2
+    BE "Wh-what is it?"
+    show BE confused
+    BE "You know how much I hate surprises, Kei-chan."
+    MC "That's not true. You {i}love{/i} surprises."
+    show BE aroused
+    BE "You're right. That was a lie."
+    show BE doubt
+    BE "But, what're you up to?"
+    MC "Just relax."
+    "I crawled up to Honoka's left boob, straddling her leg, and threw my arms around this mountain of titty."
+    show BE aroused
+    BE "Mmmmm..."
+    BE "Do you love my boobies, Kei-chan?"
+    MC "Oh, I will show them just how much."
+    show BE confused
+    BE "What are you up to??"
+    "I began to nuzzle it, sinking my face in the doughy flesh. It was cool from the outside air but with my head against it, it became warm."
+    show BE aroused
+    BE "Heehhh heh heh..."
+    "I drew a lazy hand up to the areola and began tracing curves across it."
+    show BE unique
+    BE "Fssshhh! Mmmmm..."
+    show BE seductive
+    BE "Easy, boy. You're a bit close to my 'ground zero'."
+    MC "Oh, really?"
+    "I stuck out my tongue and gave it a lick."
+    show BE surprised-2
+    BE "Ah!"
+    show BE aroused
+    BE "You sadist, you!"
+    "I began kissing it."
+    "Honoka's breathing grew heavy and thick as I hugged and kissed her massive boob."
+    "My hard on sank into the cliffside of boob..."
+    "And, without even thinking about it, I began bucking my hips against it."
+    "The smooth, creamy flesh felt nice against my cock. I thickened and lengthened until I was fully erect."
+    show BE disoriented
+    BE "Mmmmm."
+    BE "This...this is nuts, Kei-chan..."
+    BE "But I'm getting close just from you doing that."
+    "I looked up. Honoka's nipple was engorged, big as a dinner roll."
+    MC "Mmmm. Doing what?"
+    MC "Doing...{i}this{/i}?"
+    "I planted a kiss on the nipple."
+    show BE surprised-2 at shake3(.06)
+    "Honoka squirmed."
+    BE "Ohhhh...oh my..."
+    BE "That's—that's so intense, Kei-chan!!!"
+    "I put an arm around Honoka's nipple, cradling it from behind..."
+    "And kissed it harder."
+    show BE surprised-2 at shake4(.06)
+    "Honoka's eyes drew up, squinting and unsquinting. Her mouth opened and closed. She writhed as I kept this huge, beautiful nipple busy with my lips and tongue."
+    BE "Hahh! Ahah! Ahhhh!!!"
+    "Then, I pinched it with my lips."
+    BE "OH GOD!!!!"
+    "And started tonguing it and kissing it with abandon."
+    BE "OH! OH KEI-CHAN!!!"
+    BE "Wh-what're you...?!"
+    "I mopped it with my tongue."
+    show BE flustered
+    BE "OH!!!"
+    "And then, because I couldn't help myself..."
+    "I bit it. Very lightly, so it wouldn't hurt her."
+    show BE surprised-2 at shake4(.03)
+    BE "AHHHHHHHHHHHHHHH"
+    "She shook so hard, the whole boob jiggled, the waves of undulation smacking me in the chest."
+    show BE surprised-2:
+        yalign 1.0
+        xcenter 0.5
+    "I caressed her boob along the sides to calm the poor thing down."
+    MC "Doing okay?"
+    BE "..."
+    MC "Honoka?"
+    BE "...{w}...{w}..."
+    pause 2.0
+    show BE aroused
+    BE "HAAAAHHHHHHH THAT WAS AMAZING"
+    $ setAffection("BE", 2)
+    BE "That was like a {i}mushroom cloud{/i} of sensation."
+    show BE surprised
+    BE "I came.{w} So.{w} Hard.{w} Kei-chan."
+    show BE aroused
+    BE "Heeeeh heh heh heh heh heh."
+    show BE unique
+    BE "You can do pretty much whatever you like to finish off, Kei-chan."
+    show BE seductive
+    BE "I got what I came for."
+    "How do you want to finish off?"
+    label BE060_c2:
+    menu:
+        "Between Honoka's legs":
+            jump BE060_c2_1
+        "Against Honoka's boob":
+            jump BE060_c2_2
+
+label BE060_c1_2:
+    MC "What if I got between them?"
+    show BE surprised-2
+    BE "And you have sex with my boobies? That sounds AMAZING right now!"
+    show BE doubt
+    BE "But, how do we do it?"
+    show BE wink
+    BE "Hee hee. Remember that time when I had you in there and I worked you until you came all over 'em?"
+    MC "Yeah...you were so much smaller then."
+    show BE embarrassed
+    BE "It just seems so {i}cute{/i} at this point, doesn't it?"
+    show BE worried
+    BE "So, how do we make this work now that I'm this...insane, mega-size?"
+    MC "Ummmm..."
+    MC "Okay, you stay on your back, keep your legs together..."
+    show BE neutral
+    BE "Like this?"
+    MC "That's perfect."
+    "I got up on my knees and straddled Honoka's legs."
+    MC "Alright. If we can squeeze them together, I can get between them."
+    show BE surprised-2
+    BE "Gosh! My cleavage actually goes up that high."
+    MC "It does when I hold your boobs together like this, anyway."
+    show BE doubt
+    BE "Isn't that a lot of work for you to hold them?"
+    show BE seductive
+    BE "Do you need help?"
+    MC "Heh. I do."
+    "Honoka extended her arms and helped me squeeze her boobs together."
+    MC "Yeah. I think this could work."
+    show BE confused
+    BE "Or, my boobs could get even bigger so my cleavage is higher when I'm on my back and you could just slide in."
+    MC "..."
+    show BE happy
+    BE "Heh heh heh heh heh. Don't sound {i}too{/i} enthusiastic, Kei-chan."
+    MC "Oh...I'm..."
+    show BE wink
+    BE "Still hard as a rock! I can feel every inch of you in there."
+    MC "{i}Sigh.{/i} Yeah."
+    show BE neutral
+    BE "It's okay. No need to be ashamed, Kei-chan."
+    BE "Anyway, let's try this out."
+    "I tightened my grip around Honoka's gigantic rack. Our hands touched, then we took hold of each other, our fingers grasping each other's elbows."
+    "It made a sort of squeeze belt around Honoka's bosoms, keeping them tight together."
+    "With our arms locked, with our combined strength, Honoka's boobs squished around me."
+    show BE surprised-2
+    BE "Oh! This is good!"
+    show BE happy
+    BE "Yeah, I think this is gonna work!"
+    MC "I think so too."
+    BE "You in there safe and sound, Kei-chan?"
+    MC "Oh, it's beyond comfy in here."
+    BE "Alright. Do your thing!"
+    show BE surprised-2 at shake3(.06)
+    "I started thrusting. My thighs sank into cliffsides of tit. Boob flesh quivered everywhere."
+    "No matter how wobbly it got, our locked arms held it all in."
+    "The cool autumn air kept Honoka's sweat at bay. I was able to slide between her boobs with little friction."
+    "My hard-on lengthened and thickened in soft, undulating flesh."
+    "It was strange. But, it felt {i}good{/i}."
+    BE "Ah hah! Ah! Oh my—!"
+    MC "D-does it...f-feel...?"
+    BE "AMAZING, Kei-chan!!!"
+    show BE aroused
+    BE "A-all this...jiggling is...doing me favors."
+    BE "D-didn't know a t-tit fuck could be this..."
+    extend "nice."
+    show BE disoriented
+    BE "And here I thought titty fucking was just to make the guys cum."
+    MC "Is it really that good?"
+    show BE aroused
+    BE "Mmmmmmmm. Yeah."
+    show BE happy
+    BE "Hee hee hee..."
+    MC "What? What's so funny?"
+    show BE seductive
+    BE "It's like having a second pussy."
+    MC "..."
+    show BE happy
+    BE "Ah ha ha ha ha ha ha!"
+    BE "Alright, I won't torment you with more weird ideas."
+    show BE seductive
+    BE "I do want you to stay hard in there, after all."
+    MC "Thanks."
+    "Waves of titty flesh battered my steel, hard cock."
+    "Honoka's cleavage was getting toasty. The friction was building up."
+    "But...so was my pleasure."
+    show BE flustered
+    "And so, for that matter, was Honoka's."
+    MC "Y-you close?"
+    BE "Mmmmmm...."
+    MC "H-hello?"
+    show BE surprised-2
+    BE "Y-yeah! I'm REALLY close. Just work me a little faster, Kei-chan."
+    show BE aroused
+    BE "I need the jiggles."
+    "I tightened my grip. We squeezed Honoka's tits harder..."
+    show BE surprised-2 at shake3(.045)
+    "And, I pounded those boobs like my life depended on it."
+    BE "Oh...oh my...oh..."
+    BE "OH!!!"
+    show BE surprised-2 at shake4(.03)
+    BE "HAAAHHHHHHHHHHHHHHHHHHHH"
+    MC "Ungh! Uhhh..."
+    "Honoka's wild shaking did the rest of the work for me."
+    "White hot sensation filled my cock..."
+    extend "and I came like a geyser."
+    MC "Ohhhhhhh"
+    show BE flustered at shake3(.08)
+    BE "{i}Huff...huff...huff...huff{/i}"
+    MC "Hahhh...mmmmn...uhhhh..."
+    BE "S-..."
+    BE "So intense."
+    MC "Uuuuuh."
+    MC "I'm...I'm spent."
+    show BE neutral
+    BE "C-come on down here."
+    BE "Cuddle with me a while."
+    "I wiped up the mess in Honoka's boobs with my school shirt and we rested, her arms around me, our breaths getting longer and calmer."
+    show BE happy
+    BE "Th-that was...just the best, Kei-chan."
+    $ setAffection("BE", 1)
+    MC "Y-you're telling me."
+    jump BE060_c1_after
+
+label BE060_c1_3:
+    $setFlag("BE060_c1_3")
+    show BE neutral
+    "I parted Honoka's legs and got inside."
+    "She was already slick in there and it took very little effort before she opened up for me fully."
+    "I set a hand...scratch that, an ARM on each boob and pulled them close, bracing myself against them..."
+    "I looked between them at Honoka's smiling face. She was ready."
+    "My legs and feet did the rest of the work. I began thrusting."
+    show BE happy
+    BE "Mmmm. That's nice."
+    show BE neutral
+    "Honoka seemed to be enjoying it, but from time to time, she squinted at me."
+    "Like...like we were missing something."
+    MC "You okay?"
+    BE "Yeah, I'm okay."
+    MC "Are you...good?"
+    BE "I'm okay. It's kind of intense when you hug my tits, but I'm enjoying it. Keep going."
+    "I continued. She was wet throughout, and from time to time, she'd sigh and moan."
+    MC "Ennngh. Mmmmm..."
+    "I was getting close before she was."
+    MC "Dammit."
+    show BE doubt
+    BE "It's alright. You can finish up."
+    "I thrust faster. Honoka's boob flesh jiggled under my forearms. Her humongous nipples quivered in the evening sun."
+    MC "Mmmm. Nnnnng."
+    MC "Haahhhhhh!"
+    MC "{i}Huff...huff...huff{/i}"
+    MC "S-sorry."
+    show BE neutral
+    BE "It's alright. I could tell you were really close."
+    MC "Yeah...but, you didn't get there..."
+    show BE worried
+    BE "No. I didn't."
+    show BE happy
+    BE "But, it's okay! I enjoyed it anyway."
+    "Honoka wasn't lying, but I could see the disappointment in her face."
+    MCT "Dammit. I think I botched that."
+    MCT "Honoka's being nice about it, but I think she feels a bit left out."
+    $ setAffection("BE", -1)
+    show BE neutral
+    BE "It's alright, Kei-chan. Cuddle me a while?"
+    MC "Of course."
+    jump BE060_c1_after
+
+label BE060_c2_1:
+    show BE neutral
+    "I got off Honoka's tit and slid into the chasm of her cleavage."
+    "She spread her legs and gave me a very wet welcome."
+    "I was tired from all my busy work on Honoka's boob, so I kept it slow."
+    "Honoka put her arms around me, ran her fingers through my hair as I thrust, soft and easy into her."
+    BE "Yeah. Yeah, just like that, Kei-chan."
+    "I pushed all the way in. She was warm and comfy and the mass of boob that sandwiched me in was warm and reassuring."
+    "I could feel myself getting harder still, lengthening those last couple millimeters before I was ready to explode."
+    show BE aroused
+    BE "Mmmmm hm hm HMMMMM"
+    MC "Are you...{w}close again?"
+    show BE wink
+    BE "All I'm saying is, don't stop, Kei-chan."
+    MC "Roger that."
+    MC "Ughnn...okay, I'm...."
+    show BE aroused
+    BE "Do it, Kei-chan!"
+    "I plowed her faster."
+    MC "Uh....uh....UH!!!!"
+    show BE happy
+    "She hugged me close as I shot a monster load."
+    "Ohhhoohhhhohhhhh..."
+    show BE surprised-2
+    BE "Huhhh?"
+    BE "I..."
+    show BE surprised-2 at shake3(0.5)
+    BE "OH GOD"
+    show BE surpised-2:
+        xcenter 0.5
+    pause 0.5
+    show BE happy
+    BE "T-two in a row!!!"
+    show BE embarrassed-2
+    BE "Personal record!"
+    MC "{i}Huff...huff...huff{/i}{w}...really?"
+    show BE happy
+    BE "Uh huh!"
+    show BE aroused
+    BE "You're talented, Kei-chan."
+    show BE doubt
+    BE "Can we cuddle a while?"
+    MC "I-I'm too winded to do anything else."
+    show BE happy
+    BE "Good."
+    show BE neutral
+    BE "Cuz, this is exactly where I want you."
+    jump BE060_c1_after
+
+label BE060_c2_2:
+    "I thought about it and realized,{w} I didn't want to be anywhere else besides {i}right here{/i}, pressed up against Honoka's boob."
+    "So, I hugged it tight..."
+    "And started bucking my hips harder."
+    show BE surprised
+    BE "Are you...are you doing what I think you're doing, Kei-chan?"
+    MC "Is...is that a problem?"
+    show BE aroused
+    BE "Oh, {i}no{/i}."
+    show BE seductive
+    BE "I just didn't know you liked to get weird."
+    "What could I say? I LOVED this gigantic boob."
+    "I rubbed my cock harder against it."
+    "Waves of jiggly tit ran into me."
+    "Honoka's softness collided with my hardness."
+    "It felt wonderful."
+    show BE aroused
+    BE "Ohhhh...the sensations are coming back!"
+    BE "Heheheheh...heh..."
+    MC "Y-you too?"
+    show BE unique
+    BE "Mmmm-HMMMM."
+    BE "I was so tingly from that orgasm, my body went numb for a bit there."
+    BE "But, it's BACK."
+    "I started kissing Honoka's nipple and areola again."
+    "I kept it slow and careful. I didn't want to push her too hard."
+    "And, anyway, I was more focused on my own orgasm at this point."
+    "I nuzzled Honoka's boob with my face as my hips moved forward and back, driving my cock into it."
+    "Just the idea of a boob being so big I could do something like this...that was hot enough on its own."
+    "But, to actually {i}do{/i} it..."
+    MC "Uhhhh"
+    show BE aroused
+    BE "Y-yeah. I'm close again too."
+    show BE surprised-2
+    BE "Hahhh..hahhh..."
+    show BE surprised-2 at shake3(0.5)
+    BE "OHHHHHH"
+    "Honoka had just completed a second lap."
+    "I wasn't quite there yet."
+    "But, it wouldn't be long now."
+    show BE aroused:
+        xcenter 0.5
+    BE "C-c'mon, Kei-chan..."
+    BE "Get really hard for me."
+    BE "Get hard for my humongous boobies."
+    BE "Get hard until you can't take it anymore, and you—"
+    MC "OH..."
+    MC "Mmmm!"
+    show BE happy
+    BE "Do it, Kei-chan!!!"
+    "I couldn't take it anymore."
+    "I dove on top of Honoka's boob and sank my cock deep into it..."
+    "And, came."
+    MC "Uuugh...oh...oh god..."
+    MC "OHHHHHHH"
+    "As I finished off against Honoka's tit, she began to gyrate."
+    BE "HAAAAHHHHHH"
+    show BE surprised-2 at shake3(0.35)
+    pause 1.0
+    show BE happy:
+        xcenter 0.5
+    MC "You...you..."
+    show BE neutral
+    BE "Uh huh. Third time."
+    MC "...gosh."
+    BE "{i}huff...huff...{/i} Uh huh!"
+    MC "Yeah...{i}huff...{/i}that was..."
+    BE "Amazing. just the best."
+    show BE doubt
+    BE "I'm exhausted now, Kei-chan."
+    MC "M-me too."
+    BE "Cuddle me a while?"
+    MC "N-nothing else I'm even capable of at this point."
+    "I practically fell off Honoka's tit and into her chasm of cleavage."
+    "She held me tight as I panted, completely spent."
+    "Not an inch of me was cold now."
+    jump BE060_c1_after
+
+label BE060_c1_after:
+    "We laid there a long time."
+    "The sun fell below the horizon."
+    $setTime(TimeEnum.EVE)
+    scene Flower Clearing
+    show BE neutral
+    with Dissolve(3.0)
+    "We didn't care. We just stayed there in each other's arms."
+    BE "Y'know, Kei-chan?"
+    MC "Hmmm?"
+    BE "This is the first time in a long while..."
+    extend "that I'm not even the slightest bit sad to have such huge tits."
+    BE "They feel like a gift right now."
+    BE "It makes me happy you feel the same."
+    MC "I do."
+    show BE doubt
+    BE "Well...it's getting a little cold out."
+    show BE neutral
+    BE "And, I'm hungry."
+    MC "Oh man, I'm STARVED."
+    BE "Let's go back and have dinner."
+    MC "I'll help you into this bra."
+    show BE happy
+    BE "You're the best, Kei-chan."
+    hide BE with dissolve
+    "We got ourselves decent and cast back through the yarrow to the flower fields."
+    if getFlag("BE060_c1_3"):
+        MCT "That was a really good time."
+        MCT "But...I feel like I could've done better with Honoka back there."
+        MCT "Well, lessons learned. I'll have more chances to please her moving forward."
+    else:
+        MCT "Wow..."
+        MCT "That's a hell of a memory we just left back there."
+        MCT "I don't think sex with Honoka will ever be quite the same again."
+        MCT "But hey, who's complaining?"
+    jump daymenu
+
+label BE061:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -16114,7 +17131,7 @@ label BEGTS005_BEPath:
     "I decided to just leave it at that, and see if there's a reply in the morning."
     scene black with fade
     stop sound fadeout 1.0
-    $setTime(TimeEnum.DAY)
+    $setTime(TimeEnum.RAIN)
     pause 1.0
     scene Dorm Interior with fade
     play music HigherEdu 
@@ -16268,7 +17285,7 @@ label BEGTS005_GTSPath:
     "There was no use mulling over it all night. I set my phone on my bedside table and tried to get some sleep."
     scene black with fade
     stop sound fadeout 1.0
-    $setTime(TimeEnum.DAY)
+    $setTime(TimeEnum.RAIN)
     pause 1.0
     scene Dorm Interior with fade
     "I woke up and brushed my hair away from my eyes. I stared at the ceiling for a while before I sat up in bed, stretching my arms upward."

@@ -6162,10 +6162,11 @@ label MC008:
     MCT "Got it."
     $eventname = "our code"
     $save_name = "our code"
-    MCT "watashitachinoanshou."
+    MCT "{font=gui/Caveat-Bold.ttf}{size=*1.3}watashitachinoanshou.{/size}{/font}"
     MCT "Our secret code."
     "I went back to Honoka's paper."
-    MCT "iesnes-iami. Perfect."
+    MCT "{font=gui/Caveat-Bold.ttf}{size=*1.3}iesnes-iami.{/size}{/font}"
+    MCT "Perfect."
     "I folded the paper back up and went to hand it to Alice."
     "Alice simply sighed."
     "She held her hand out and I passed it to her."
@@ -6191,11 +6192,11 @@ label MC008:
     show WG stern with dissolve
     "I looked to Alice, who gave me a sort of scowl before facing front again."
     hide WG with dissolve
-    BECell "<hell yeah! Imai's classes were just as boring!>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}hell yeah! Imai's classes were just as boring!{/size}{/font}>"
     MCT "Jeez... almost forgot that. So boring to the point that Honoka and I had to take lessons from Honoka's dad just to learn romaji."
     MCT "Of course, him teaching us led us to create our little game, so hey... who's fault is that?"
     MCT "I think Fujio-san taught English, if I remember properly."
-    MCCell "<how is your dad?>"
+    MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}how is your dad?{/size}{/font}>"
     MCT "I... kind of remember all of the details? Pretty sure her dad got a job offer and he, Honoka, and Maegami-san, her mom moved away to the Kagoshima prefecture."
     play music Peaceful
     "I folded the note back up, and passed it to Alice, who while taking it, rolled her eyes."
@@ -6234,9 +6235,9 @@ label MC008:
         MCT "I wonder... those \"giants\" dorms. Will... will Yamazaki-san be sent there?"
     "The paper came back, smack onto my notes."
     MCT "Okay... this is a long one."
-    BECell "<good! still teaching. how are Ryuta-san and Himari-san?>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}good! still teaching. how are Ryuta-san and Himari-san?{/size}{/font}>"
     "I moved over a line and jotted in a response."
-    MCCell "<dad received a promotion and is a manager now, mom still writes her romance novels>"
+    MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}dad received a promotion and is a manager now, mom still writes her romance novels{/size}{/font}>"
     "The note went back to Alice, and I looked forward again."
     "But, I couldn't focus. All I could think of was all the fun I'd had with Honoka when we were kids."
     "We'd ran around Shibuya with Tomo like it was our own personal playground. The parks had been our yards, and the subway tunnels had been our own giant game of hide and seek, and the arcades were our amusement parks."
@@ -6253,15 +6254,15 @@ label MC008:
     "Akira was looking back at me. Seeing me notice her, she gestured with one hand, her head cocked."
     "I smiled at her and looked down to my note."
     "Right next to her question, I drew a small emoji of a man shrugging, then looked to Honoka's code."
-    BECell "<nice! and how's Tomo-chan doing?>"
-    BECell "<she's still not leaving her room, right?>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}nice! and how's Tomo-chan doing?{/size}{/font}>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}she's still not leaving her room, right?{/size}{/font}>"
     if not isEventCleared("MC003") and not isEventCleared("MC005"):
-        MCCell "<unfortunately not. her roommate has been trying to get her out though>"
-        MCCell "<speaking of, how is your roommate?>"
+        MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}unfortunately not. her roommate has been trying to get her out though{/size}{/font}>"
+        MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}speaking of, how is your roommate?{/size}{/font}>"
     if isEventCleared("MC003") or isEventCleared("MC005"):
-        MCCell "<unfortunately not, but we recently spent some time together>"
-        MCCell "<her roommate has been trying to get her moving>"
-        MCCell "<speaking of, how's your roommate?>"
+        MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}unfortunately not, but we recently spent some time together{/size}{/font}>"
+        MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}her roommate has been trying to get her moving{/size}{/font}>"
+        MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}speaking of, how's your roommate?{/size}{/font}>"
     "I folded the paper."
     MC "Alice..."
     show WG angry with dissolve
@@ -6296,16 +6297,16 @@ label MC008:
             "After a few minutes of this, I glanced back at the board, only to see a brand new wall of text."
             MCT "... Dammit."
     "Back came my new friend, the paper."
-    BECell "<we should think about resurrecting TomoHono>"
-    BECell "<not much to say, my roommate is weird>"
-    BECell "<PS. No dozing off!>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}we should think about resurrecting TomoHono{/size}{/font}>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}not much to say, my roommate is weird{/size}{/font}>"
+    BECell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}PS. No dozing off!{/size}{/font}>"
     MCT "Good ol' TomoHono. Honoka and Tomo's weird gal-pal alliance."
     "I started jotting down my response."
     MCT "Pretty sure her roommate isn't that crazy."
     "I looked back toward Daichi, who by the look of his eyelids, was about to lose a long fought battle."
     MCT "No. Not even close."
-    MCCell "<oh yeah, definitely! weird?>"
-    MCCell "<don't blame me. not my fault that Tsubasa's lectures are so boring>"
+    MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}oh yeah, definitely! peculiar?{/size}{/font}>"
+    MCCell "<{font=gui/Caveat-Bold.ttf}{size=*1.3}don't blame me. not my fault that Tsubasa's lectures are so boring{/size}{/font}>"
     "I folded it and handed it back to Alice."
     show WG surprised with dissolve
     WG "..."
@@ -6534,7 +6535,7 @@ label MC008:
     BE "Totally weird."
     BE "Crack it open."
     "Honoka peered at it as I unfolded it, holding it before us both."
-    MC "usedemad aw nakuok ot-on ed uhc uoyguj."
+    MC "{font=gui/Caveat-Bold.ttf}{size=*1.3}usedemad aw nakuok ot-on ed uhc uoyguj.{/size}{/font}"
     BE "Exchanging notes in class is forbidden."
     BE "How in the heck did she-"
     MC "I have no idea."
@@ -7275,7 +7276,7 @@ label MC009:
     Sakura "Apparently they got back together then, because I heard that no more than a couple of hours ago."
     Hotaru "That BITCH!"
     Etsuko "For real! Screw her!"
-    Hotaru "Well, there goes my Matsuri plans. Guess I'm going stag now..."
+    Hotaru "Well, there goes my matsuri plans. Guess I'm going stag now..."
     Etsuko "I know! Stupid skank..."
     "I glanced at Sakura, who rolled her eyes as the other two girls kept throwing around different expletives to describe this abhorrent \"date stealer\"."
     MC "So. Inventory day, huh?"
@@ -7298,9 +7299,12 @@ label MC009:
     Takamura "I-I'm a bit too focused on my work at the moment for dating."
     show Takamura happy
     Takamura "Though, I have greatly missed the Matsuri. Such a wonderful time. Filled with such lively excitement in the air."
+    Takamura "A celebration of the end of spring. The Saku Matsuri is always a fantastic capstone."
+    Takamura "And they've been a tradition for so long now. I'm looking forward to it."
+
     MC "You... missed them?"
     Takamura "Oh, yes. I've spent the last decade or so in Europe, Hotsure-san."
-    Sakura "What are the festivals like there, Sensei? Compared to the Matsuri."
+    Sakura "What are the festivals like there, Sensei? Compared to the matsuri."
     show Takamura neutral
     Takamura "Well, firstly, no yukatas."
     MC "That's different."
@@ -7347,6 +7351,929 @@ label MC009:
     "Any thoughts that I could have had about what she had said were drowned out by the sudden jab of hunger in my guts."
     jump daymenu
 
+label MC010:
+    play music MC
+    $setTime(TimeEnum.EVE)
+    scene Bus Interior with fade
+    $setMCOutfit(OutfitEnum.TRADITIONAL)
+    $setBEOutfit(OutfitEnum.TRADITIONAL)
+    $setTomoOutfit(OutfitEnum.TRADITIONAL)
+    $setPregnant()
+    pause 1
+    MC "Blossom Festival."
+    MCT "Kind of surprised this wasn't advertised more. Seems like something people would go wild over."
+    "I glanced forward at two girls sitting together, both in yukatas."
+    MCT "... I mean, unless it was just me that didn't hear about it."
+    "I looked down at my phone, pulling up my email and opening the announcement that had been sent to me."
+    "'Don't miss one of the biggest events of the year! The annual Seichou Saku Matsuri! Let's end spring properly!"
+    if isEventCleared("MC009"):
+        MCT "Wait a minute... is this the same festival the cooking club girls were talking about? Even Daichi knew about it."
+    else:
+        MCT "If it's such a big deal, then how did I miss it? Daichi even knew about it."
+    MCT "Not that he really gave a rip anyway. Guess if it doesn't directly involve the school and whatever supposedly nefarious plot behind it might be, he could care less."
+    MCT "Didn't even mention it until I said something." 
+    MCT "He's been acting weird anyway. Like, weirder than normal... like Daichi weird." 
+    MCT "Probably all wrapped up in his world famous \"Daichi Things\". Patent pending."
+    if getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "I glanced out the window, then back down at my phone, opening up my texts."
+        MCT "Wonder how long she'll be?"
+        "I scrolled to Honoka's texts, stopping on the one where she mentioned her \"yukata troubles.\" "
+        MCT "She said not to wait for her and that she'd catch up, but what the hell am I supposed to do alone till then? Walk around and take it all in?"
+        MCT "Actually... that's not bad. I could do that."
+    elif routelock == "AE":
+        "I glanced out the window, rubbing the side of my head."
+        MCT "Would've been nice to ride together at least. I get that being the academy representative means getting there early. But still."
+        MCT "Hopefully she and I have some time to walk through the festival, though. Check everything out and all."
+        MCT "Knowing Shiori, though, I might have some time to kill before she's able to leave."
+        MCT "Given the buses crowding, I think Shiori's... back facing projection would cause some problems if we were headed back together."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        "I took a breath and laid my head against the seat, watching trees fly by out the window."
+        MCT "It feels nice, but exciting all at once."
+        MCT "Hopefully it isn't overstepping for me to go looking for Naomi at the festival. I'm sure she'll be there."
+        "I looked forward as the bus rounded a corner, heading down and into town."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I glanced at my phone, rubbing a smudge off the screen."
+        MCT "Wonder when she'll make it down."
+        "I laid my head back, sighing and looking forward."
+        MCT "I might as well just walk around for a bit. She said she'd call me or shoot me a text when she gets to town."
+        MCT "I mean, on one hand, she could have probably cut a workout short for once."
+        MCT "On the other, I'm not doing the workout. No soreness or sweat for this guy."
+        MCT "Probably for the best, I think my back is still blown out from last time."
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        MCT "Wonder if Alice will be there..."
+        MCT "I mean... maybe I should have asked her out, could have made this a date. {w}Then again, would she have accepted?"
+        MCT "Eh, it's worth checking. I can hang out with her if I find her."
+    elif routelock == "PRG":
+        if isEventCleared("PRG027") and not isEventCleared("PRG028"):
+            "My thoughts fell off as I looked down for a long moment."
+            "I turned on my phone's screen and opened my texts, before closing them again."
+            MCT "... Feel like I've been on eggshells for weeks. And it's only been a few days."
+            "I rubbed my eyes, shaking my head."
+            "I'd tried to invite Aida, but she'd politely turned me down."
+            "She hadn't really given details as to why, but I understood. After everything that had gone down, it made sense that she would want a night off."
+            "I looked back down at my phone again, opening my texts and clicking on hers."
+            MCT "Maybe I can find her like a gift or something. Something to kind of break through the tension."
+        elif isEventCleared("PRG028"):
+            "I looked forward, out the front of the bus."
+            MCT "I have a girlfriend..."
+            MCT "... A pregnant one."
+            "I'd invited Aida along. Tried to see if she wanted to check out the carnival."
+            "But, she'd very politely turned me down, saying that her yukata likely wouldn't be fit to wear, given how she'd... filled out over the last bit of time."
+            "She had told me to go have a good time, though."
+            MCT "Maybe it's for the best. Take some downtime to cool things off after all the news."
+            "I looked back down at my phone again, opening my texts and clicking on hers."
+            MCT "Maybe I can find her like a gift or something. Something to really establish things."
+            "I glanced out the window."
+            "Our night after becoming a couple had gone so well. I totally could have invited her along."  
+        else:
+            "I looked out the window to my side."
+            "I wasn't really sure why I was going. Maybe just something to break up the days."
+            MCT "Just checking things out will be fun, though. Have some food and walk around a bit."
+
+    scene black with fade
+    pause .5
+    scene Town Bus with fade
+    "As the bus doors opened, I stepped off and took a nice, deep, non-bus scented inhale."
+    MCT "Mm... the air even feels like a festival."
+    "I watched the flow of people and followed the crowd down the sidewalk."
+    MCT "Eesh. Busy. Never really thought of how many people would be on this island, save for the academy."
+    "I passed a few stores, and glanced up as I came to a crosswalk."
+    play music Tomoko
+    show Tomoko worried with easeinright
+    MC "Tomo?"
+    Tomoko "..."
+    "Tomo came closer... and walked right past me."
+    MC "Tomo? Hey!"
+    "She turned around, her eyes going a few degrees wider."
+    show Tomoko neutral
+    Tomoko "Oh... h-hey."
+    "Tomo shifted, repositioning what looked like a messenger bag over her arm."
+    MC "What's up?"
+    Tomoko "With what?"
+    MC "You. You just walked right past me."
+    Tomoko "Didn't see you."
+    MC "I called."
+    Tomoko "Didn't hear you either."
+    MC "Look... what's going on?"
+    show Tomoko worried
+    Tomoko "Nothing..."
+    "I stared at her for a moment."
+    MCT "Something's up. She looks like she's seen a ghost."
+    if getAffection("RM") >= 6 and isEventCleared("RM005"):
+        $setFlag("MC010RM_VariantUnlocked")
+        MCT "Maybe I should just go back with her. Meet up with her at the dorms or something."
+    MC "Well, alright. What are you up to now?"
+    Tomoko "Just heading back to my dorm."
+    MC "You went to the festival, then?"
+    show Tomoko neutral
+    Tomoko "For a little while."
+    MC "Anything worth seeing?"
+    Tomoko "I didn't really explore. It's just a normal matsuri, bro. Games and food."
+    Tomoko "You should go check it out."
+    Tomoko "Quiet and off the beaten path moments in video games are always nice changes of pace."
+    if not getHighestAffection() == ("BE") and not isEventCleared("BE025"):
+        pause 1
+        show BE neutral at Position (xcenter=1.40, yalign=1.0) behind Tomoko
+        show BE neutral at Position (xcenter=-0.4, yalign=1.0) behind Tomoko with mov3
+        pause 1
+        MC "Hang on..."
+        Tomoko "What?"
+        MC "Is that-"
+    if routelock == "AE":
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_AE_RMUnlocked
+        else:
+            jump MC010Menu_AE
+    elif routelock == "PRG":
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_PRG_RMUnlocked
+        else:
+            jump MC010Menu_PRG
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_WG_RMUnlocked
+        else:
+            jump MC010Menu_WG
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_FMG_RMUnlocked
+        else:
+            jump MC010Menu_FMG
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_GTS_RMUnlocked
+        else:
+            jump MC010Menu_GTS
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_BE_RMUnlocked
+        else:
+            jump MC010Menu_BE
+    else:
+        if getFlag("MC010RM_VariantUnlocked"):
+            jump MC010Menu_Alone_RMUnlocked
+        else:
+            jump MC010Menu_Alone
+
+
+label MC010Menu_AE_RMUnlocked:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for Shiori":
+            $setFlag("MC010AE")
+            jump MC010_AE
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM
+
+label MC010Menu_AE:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for Shiori":
+            $setFlag("MC010AE")
+            jump MC010_AE
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        
+label MC010Menu_PRG_RMUnlocked:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for a gift for Aida":
+            $setFlag("MC010PRG")
+            jump MC010_PRG
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM
+
+label MC010Menu_PRG:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for a gift for Aida":
+            $setFlag("MC010PRG")
+            jump MC010_PRG
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        
+label MC010Menu_WG_RMUnlocked:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for Alice":
+            $setFlag("MC010WG")
+            jump MC010_WG
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM       
+
+label MC010Menu_WG:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for Alice":
+            $setFlag("MC010WG")
+            jump MC010_WG
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+
+label MC010Menu_FMG_RMUnlocked:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Wait for Akira":
+            $setFlag("MC010FMG")
+            jump MC010_FMG
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM
+
+label MC010Menu_FMG:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Wait for Akira":
+            $setFlag("MC010FMG")
+            jump MC010_FMG
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+
+label MC010Menu_GTS_RMUnlocked:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for Naomi":
+            $setFlag("MC010GTS")
+            jump MC010_GTS
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM
+
+label MC010Menu_GTS:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Look for Naomi":
+            $setFlag("MC010GTS")
+            jump MC010_GTS
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+
+label MC010Menu_BE_RMUnlocked:
+    menu:
+        "Wait for Honoka":
+            $setFlag("MC010BE")
+            jump MC010_BE
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM
+
+label MC010Menu_BE:
+    menu:
+        "Wait for Honoka":
+            $setFlag("MC010BE")
+            jump MC010_BE
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+
+label MC010Menu_Alone_RMUnlocked:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+        "Go back to the academy with Tomo":
+            $setFlag("MC010RM")
+            jump MC010_RM
+
+label MC010Menu_Alone:
+    menu:
+        "Follow Honoka":
+            $setFlag("MC010BE_Friend")
+            jump MC010_BE_Friend
+        "Hang out with Tomo":
+            $setFlag("MC010TM")
+            jump MC010_TM 
+        "Go alone":
+            $setFlag("MC010MC")
+            jump MC010_MC
+
+label MC010_AE:
+    "I stood as I put my hand on my hip, exhaling through my nose as I looked down at the town. I'm not entirely sure exactly what happened but... her clamming up usually means that she didn't exactly have the best time."
+    show Tomoko worried
+    "I looked down and noticed she was clutching the sash of her bag."
+    MC "You got what you need?"
+    Tomoko "... Mhm."
+    MCT "On one hand, Tomo seems... withdrawn, a bit. Like she wants someone to spend time with, and yet... not. For the first time in a while, I can't really know what she's thinking in the moment."
+    MCT "Seeing the town lit up like this..."
+    Tomoko "... Uuuch, I'm fine, go on ahead."
+    "But the same couldn't be said for her."
+    MC "You sure?"
+    show Tomoko neutral
+    Tomoko "Mhm. I know you have friends outside of me, for some reason. So you may as well go spend time with them."
+    MC "Tsh, well thanks for that."
+    show Tomoko smile
+    Tomoko "I'm a good sister."
+    MC "Heh..."
+    "I patted her gently on the head as she looked up from her bag."
+    MC "The best."
+    show Tomoko annoyed
+    Tomoko "H-Hey, I was trying to be sarcastic, stop being cute."
+    MC "You first!"
+    Tomoko "You!"
+    MC "Nyeeh."
+    $setAffection("TM", 1)
+    hide Tomoko with dissolve
+    "I gave Tomo a small fist bump before we parted ways. As bad as it felt separating from my twin during a celebration, I understood her well enough to know that she didn't exactly like to be chained to social obligations."
+    "As for people who thrive on obligations..."
+    MC "With all of this action and set up... Shiori must be absolutely swamped. I wonder what she's up to?"
+    scene Festival with fade
+    $setAEOutfit(OutfitEnum.TRADITIONAL)
+    $setTakoOutfit(OutfitEnum.TRADITIONAL)
+    $eventname = "Trinita Sinfonica"
+    $save_name = "Trinita Sinfonica"
+    play music Festival
+    "I walked through the crowded pathways as my eyes scanned the stalls, the area abuzz with excited chatter and the sound of old enka music playing over speakers in the distance."
+    MCT "For what's essentially a small community, everyone here sure is lively."
+    show Tsubasa neutral at Position(xcenter=0.25, yalign=1.0)
+    show Chiyo neutral at Position(xcenter=0.75, yalign=1.0)
+    with easeinright
+    "Just as this thought crossed my mind, I could hear a rather loud conversation as I looked over and saw Tsubasa-sensei with his arms crossed."
+    MC "Ah! Sens-"
+    MC "Eh?"
+    if isEventCleared("MC005"):
+        "It seemed like he was getting into a row with his wife."
+        Chiyo "The audacity to not put any effort into your outfit when all of these students put their most into everything is utterly shameful, Michi-kun. Shameful!"
+        Tsubasa "For the last time, woman, I'm here supervising."
+        Chiyo "OOOOOHHHH supervising now, is it? Last I checked I had to drag you here by that gaudy necktie of yours!"
+        Tsubasa "Gaudy! Pah! You want to talk about gaudy, why not give a word in about your-"
+        Chiyo "Don't you dare even say it!"
+        Tsubasa "40,000 yen porcelain pig statue you INSIST on putting up in the kitchen!"
+        Chiyo "That is THE GENTLEMAN IN THE CORNER!"
+        "As the two continued to bicker, I turned and tried to avert my gaze."
+        MCT "I... really hope that when I get old I don't have to deal with stuff like that... though I imagine that Shiori has to deal with that kind of squabbling daily."
+        hide Tsubasa
+        hide Chiyo
+        with easeoutleft
+    else:
+        "It seemed like he was being shouted at by a fellow octogenarian woman."
+        UNKNOWN "The audacity to not put any effort into your outfit when all of these students put their most into everything is utterly shameful, Michi-kun. Shameful!"
+        Tsubasa "For the last time, woman, I'm here supervising."
+        UNKNOWN "OOOOOHHHH supervising now, is it? Last I checked I had to drag you here by that gaudy necktie of yours!"
+        Tsubasa "Gaudy! Pah! You want to talk about gaudy, why not give a word in about your-"
+        UNKNOWN "Don't you dare even say it!"
+        Tsubasa "40,000 yen porcelain pig statue you INSIST on putting up in the kitchen!"
+        UNKNOWN "That is THE GENTLEMAN IN THE CORNER!"
+        "As the two continued to bicker, I turned and tried to avert my gaze."
+        MCT "I... really hope that when I get old I don't have to deal with stuff like that... though I imagine that Shiori has to deal with that kind of squabbling daily."
+        hide Tsubasa
+        hide Chiyo
+        with easeoutleft
+    "As I walked through the crowds, I started to wonder if I would ever be able to find Shiori, despite her unique physique, which in theory would have made it easy."
+    MCT "It makes sense she's a bit harder to find; she often just blends into the background... until she suddenly doesn't."
+    "I sighed as I put my hand on my hips, looking around with one last quick glance near the wooden bridge when I saw..."
+    MC "Hm?"
+    show Minori neutral with dissolve
+    MC "Ah, Tomoe-san."
+    Minori "Hotsure-san."
+    "We both gave each other a quick bow before Minori looked at me and smiled warmly."
+    Minori "Are you enjoying the festivities?"
+    MC "I haven't exactly had much of the chance to, but it all looks... really fun to be honest!"
+    show Minori happy
+    Minori "I'm glad!"
+    show Minori neutral
+    MCT "Minori is always at Shiori's side, along with Yuki, when it comes to official business and yet... I haven't had many opportunities to talk one on one with her. In fact if anything she often seems to blend in more than Shiori."
+    MCT "Hmm..."
+    MC "Care for a walk?"
+    Minori "Of course."
+    "Minori followed by my side as we walked down past the garden area towards the activity stalls. I never really noticed it before, but she walked with exceptional grace and gentleness, her hands behind her back as she took in our surroundings."
+    MC "Where is your yukata? It seems like most of the others on the council have one."
+    show Minori sad
+    Minori "Haaah, if you'd believe it... that's a mishap on my end. Matsumoto-san gave a speech about how we were on official business despite having the leeway to enjoy ourselves. I... took it the wrong way."
+    MC "Owch."
+    Minori "Yeaaaah. Here I thought Shiori would be able to commiserate with me, but she found something to wear last minute. Now I just stick out like a sore thumb."
+    MC "Wait, Shiori is in a Yukata?"
+    Minori "Mhm. I didn't expect it either... well, quite literally, but... you get what I mean."
+    MCT "That... wow. I never would have expected her to be the type unless it was absolutely mandatory..."
+    MC "Guessing it was near mandatory?"
+    Minori "If only because the local committee insisted. Hence my melancholy."
+    MC "Yeah, I can get that. Are... festivals your thing?"
+    show Minori happy
+    Minori "I've always enjoyed festivals. Seeing everyone enjoying themselves, carrying on traditions that have been in place for far longer than we have, it's quite nice."
+    Minori "It also helps to see the fruits of our labors as the student council come to fruition."
+    MC "I bet, it must have been a lot of work getting all of this ready."
+    Minori "Ehehe, the biggest part was adjusting to the new surroundings. Most all of us at the school are students from elsewhere, so the local traditions and customs had to be learned to put things together properly."
+    MC "Oh yeah, that reminds me; where are you from?"
+    show Minori neutral
+    Minori "Osaka. What about yourself?"
+    MC "Tokyo."
+    MC "I gotta say, it's pretty wild how you all were just able to so easily connect together to get all of this done so quickly. I imagine Matsumoto-san must have been running both you and Utagashi-san ragged."
+    Minori "Not at all, having her by our side working along with us lifts our spirits like nothing else. Utagashi-san especially shines around her."
+    MC "She really does, I've noticed. In fact, if I can say the same for a lot of the council. Every time I see them with Shiori, they're at the top of their game. I guess that is the power of unity."
+    MCT "Come to think of it... I don't know if even I've spent as much time as I should connecting with others."
+    MC "Say, Tomoe-san?"
+    Minori "Yes?"
+    MC "Why exactly did you join the student council? It seems like a lot of work, especially considering your position."
+    "Minori seemed to ponder this for a moment, her hand on her chin as she closed her eyes to think before, quietly, taking her armband off and placing it in her pocket."
+    $setMinoriOutfit(OutfitEnum.ALTERNATE)
+    Minori "Hmm... I suppose... because it helped me establish a rapport with the broader community at Seichou."
+    MC "Broader community?"
+    Minori "Mhm. Village, student base, teachers, whoever I can."
+    MC "Any reason in particular you uh... want that?"
+    Minori "Community is a key part of the human person. No matter how individualistic, everyone is a part of a broader community; how one engages with these communities is what forms and shapes identity."
+    MC "So... is identity individual or communal?"
+    Minori "Mmm, I feel an either or dichotomy is too reductive for a topic like that. Indeed, we decide who we are to an extent, and yet so do others."
+    Minori "It's how others perceive you which matters more than what you think about yourself, I believe. In that way, I've always felt more comfortable letting people refer to me however they wish and treat me accordingly."
+    MC "Don't you ever think about yourself?"
+    Minori "Myself?"
+    show Minori sad
+    Minori "..."
+    show Minori neutral
+    Minori "I suppose I already answered your question; I feel comfortable when I match people's perceptions of me. That is where my identity lies."
+    Minori "Community above all else. Nothing more and nothing less."
+    MC "Huh... guessing your old school board loved you, eh?"
+    show Minori sad
+    Minori "Yes. They did. Now I'm here, however. New norms, new traditions, new... me, in a way."
+    "Quietly, Minori came to a stop as she crossed her arms and placed them on the wooden railing of the bridge we paused on, looking to the cherry blossoms above as she exhaled through her nose."
+    MC "Well, hey, it's not all bad."
+    "I followed suit and looked up at the trees with her."
+    MC "At least you could be here, right?"
+    Minori "Mm..."
+    Minori "I only wish I could have been in line with expectations."
+    "She watched as a petal fell down and into the water, as it joined a large bed of pink petals as they slowly floated down the river."
+    "I looked at the bed, my eye hopping from petal to petal trying to keep track of which one was the one that fell to no avail."
+    MC "Is there... any in particular you have your eye on?"
+    Minori "... No."
+    Minori "..."
+    show Minori happy at altMove(0.5, 0.25)
+    Minori "Heh, well, I suppose I'm not the one to ask."
+    Minori "What do you think, Shiori? Did you come to see the petals fall too?"
+    MC "Huh?"
+    "I turned around to see, once again not noticing as Shiori approached, only to find..."
+    show AE embarrassed at Position(xcenter=0.4, yalign=1.0)
+    show dummy with vpunch
+    MC "Ah-!"
+    "Shiori's outfit was nowhere near what I had expected. Her kimono hung off of one shoulder as her hair was held up in a rather ornate looking bun, her sleeves falling down low from her arms."
+    "The most noticeable thing, however, was the flowing silk cascading down like a waterfall to cover her groin, but left her legs rather bare at the hips, her backside covered in the same way."
+    "Looking to the side, she blushed as she adjusted her glasses with one hand."
+    AE "N-Nnngh..."
+    if isEventCleared("AE029") or getFlag("Meet_Tako"):
+        show Tako neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        "She wasn't alone, however; as it seemed that Tako tagged along too,dressed in an extremely ill fitting kimono which was barely shut, her ratty hair being held by a pair of drumsticks as she held a Takoyaki stick in her hand."
+        Tako "Aww you're not sour about the kimono I found ya, are you?"
+        show AE angry
+        AE "Kimono? This is in no way a kimono, this is a costume— and an utterly scandalous one at that."
+        Tako "Aww, lighten up, all outfits are basically costumes! Besides, you yourself said \"Beggars can't be choosers\"."
+        show AE aroused-3
+        AE "If I had known, I'd have begged for a bullet to the head instead."
+        MC "M-Matsumoto... san?"
+        Tako "Oy! Kei-kun! Look who's here, Shii-chan."
+        show AE surprised
+        AE "A-Ah... Hotsure-san. I hope you're having a good evening."
+        MC "I... yeah."
+        show AE aroused-3
+        AE "Apologies for my... outlandish attire."
+        Minori "I think you look great, Matsumoto-san!"
+        show AE embarrassed
+        AE "Thank you, Tomoe-san."
+        AE "Now, if you both will; I would like some time to myself."
+        Tako "Oooy, Shii-chan, ya really just gonna leave me high and dry?"
+        show AE aroused-3
+        AE "Haah, please don't call me that."
+        Tako "Alriiight, alright, fine, go off without me. I'm gonna see if I can get whoever is doing the music to blast some N.I.L.8 through the PA system. Hope no-one tries to stop mee!~"
+        "Shiori watched as Tako turned and walked away, Minori patting the wood before she bowed."
+        Minori "I'll keep an eye on her and leave you both to it."
+        hide Minori
+        hide Tako
+        with dissolve
+        "With that, Minori began to trail the girl, leaving the two of us alone as Shiori looked down and blushed."
+    else:
+        show Tako neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+        "She wasn't alone, however; standing beside her was another girl, dressed in an extremely ill fitting kimono which was barely shut, her ratty hair being held by a pair of drumsticks as she held a Takoyaki stick in her hand."
+        UNKNOWN "Aww you're not sour about the kimono I found ya, are you?"
+        show AE angry
+        AE "Kimono? This is in no way a kimono, this is a costume; and an utterly scandalous one at that."
+        UNKNOWN "Aww, lighten up, all outfits are basically costumes! Besides, you yourself said beggars can't be choosers."
+        show AE aroused-3
+        AE "If I had known, I'd have begged for a bullet to the head instead."
+        MC "M-Matsumoto... san?"
+        show AE surprised
+        AE "A-Ah... Hotsure-san. I hope you're having a good evening."
+        MC "I... yeah."
+        show AE aroused-3
+        AE "Apologies for my... outlandish attire."
+        Minori "I think you look great, Matsumoto-san!"
+        show AE embarrassed
+        AE "Thank you, Tomoe-san."
+        AE "Now, if you both will; I would like some time to myself."
+        UNKNOWN "Oooy, Shii-chan, ya really just gonna leave me high and dry?"
+        show AE aroused-3
+        AE "Haah, please don't call me that."
+        UNKNOWN "Alriiight, alright, fine, go off without me. I'm gonna see if I can get whoever is doing the music to blast some N.I.L.8 through the PA system. Hope no-one tries to stop mee!~"
+        "Shiori watched as the strange girl holding the Takoyaki walked away, Minori patting the wood before she bowed."
+        Minori "I'll keep an eye on her and leave you both to it."
+        hide Minori
+        hide Tako
+        with dissolve
+        "With that, Minori began to trail the girl, leaving the two of us alone as Shiori looked down and blushed."
+    play music AE
+    show AE embarrassed
+    AE "Haaah..."
+    MC "Y-You look-"
+    show AE angry
+    AE "Please, contain your... enthusiasm for my outfit. There were... sudden complications."
+    show AE aroused-3
+    AE "I didn't expect to need something so soon and my... roommate said she would find something for me."
+    AE "Let this be a lesson, Hotsure-san, that desperation breeds embarrassment."
+    MC "I- I mean... you do look amazing."
+    show AE surprised
+    AE "Ah..."
+    "Shiori's blush intensified as she tried to hide her face with her sleeve."
+    show AE aroused-3
+    AE "That's... {w}don't say things like that so flippantly, idiot."
+    MCT "Tsun, tsun..."
+    MC "Well, at the very least..."
+    "I held my hand out towards the path further into the festival grounds."
+    MC "Care to join me?"
+    show AE neutral
+    AE "Ah... very well, yes."
+    "As I walked forward, she followed closely by my side. Every once in a while, I would lag a bit behind."
+    "When I did, I saw her big, wobbling ass sway too and fro with every gentle swing of her hips, clapping slightly as her cheeks smacked together."
+    "Yet even with the rather uncouth display... she walked with such elegance and grace, especially when paired with her outfit, I couldn't help but be in awe of her presence. It was like a floating dream."
+    MCT "She's so... I mean... what do I even say in this situation?"
+    show AE embarrassed
+    AE "..."
+    "Shiori kept her eyes down as she blushed softly, not wanting the awkward air to linger, I brought up the first thing that came to my mind."
+    MC "So, uh... I saw Tomoe-san earlier, but... where is Utagashi-san?"
+    show AE neutral
+    AE "She is spending some time relaxing at the festival."
+    MC "Eheh, and you allowed that?"
+    show AE neutral-eyebrow
+    AE "What? I'm organized and punctual, not a vicious taskmaster."
+    MCT "Could have fooled me..."
+    show AE neutral
+    AE "No, she is currently spending some time with her roommate, I believe."
+    MC "Her roommate?"
+    AE "Mm."
+    if isEventCleared("RM002") or isEventCleared("MC005"):
+        MCT "Tomo's already left... hmm..."
+        MCT "Ah well, I figure if anything she'll be able to ask around."
+    else:
+        MCT "Wait... isn't Tomo her roommate?"
+        MCT "Huh."
+    MC "Either way, I'm sure she'll be able to find something fun to do."
+    show AE pondering
+    AE "I don't doubt it, that girl is a ball of energy."
+    MC "Well, energy isn't bad, especially at a time like this where everyone is meant to be celebrating."
+    show AE glasses-2
+    AE "I suppose, but someone has to keep a proper and diligent head on their shoulders if such celebrations are going to run smoothly for the festival goers."
+    MC "Fair enough, I guess."
+    MC "That said... if you want to know how to really take everything in with everyone else, I can show you the ropes."
+    show AE neutral-eyebrow
+    AE "Show me the ropes?"
+    MC "I mean, yeah. Like, what all goes down at a Matsuri."
+    show AE neutral-annoyed
+    AE "... Do I really seem so dreary as to not even come across to have experienced festivities before?"
+    MC "I mean... uh..."
+    show AE neutral
+    AE "This isn't my first festival, you know."
+    MC "Really? I never took you for a celebratory kind of girl."
+    AE "Mmm, normally I'm not, but when I was very young my family lived in Hakodate, and my mother would sometimes take me to the Port Festival." 
+    AE "I even remember that even after we moved to Tokyo, every year my uncle took me to the Blue Marin festival in Oma."
+    MC "... You're from Hakodate?"
+    show AE neutral-eyebrow
+    AE "Does that surprise you, Hotsure-san?"
+    MC "N-No, just... you don't really have much of an accent."
+    show AE neutral
+    AE "Mhm, well... as I said, my family moved when I was rather young. But I'll always have a fondness for the Tsugaru. I consider it like a second home."
+    MC "Heh, guess winters up here don't phase you too much then, eh?"
+    AE "Not at all, no."
+    MC "Well, you'll have to take me sometime, then."
+    show AE neutral-eyebrow
+    AE "...Oh?"
+    MC "Yeah! I mean, if you would be down to show me around some time?"
+    if checkAffection("AE", ">", 15):
+        show AE happy
+        AE "... There's... a place called Temple River Restaurant in Oma. I would always go and get Katsu-curry whenever I would visit. It's been quite a long time, but..."
+        AE "If you find yourself in the area, I would be delighted to take you."
+        MC "Ehehe, sounds like a plan."
+        MCT "It's strange seeing Shiori this tender... she must really be enjoying all of this, despite her earlier coldness."
+    elif checkAffection("AE", "<", 15):
+        AE "Perhaps. Though I'm certain I will have much work to be done, so I doubt I'd have much time to set aside for personal pleasantries."
+        MC "What, like now?"
+        AE "I am talking about future engagements. I plan on going to University immediately after my stay here, and I find it unlikely I will have time to keep connections."
+        MC "Ah..."
+        show AE sad-2
+        AE "..."
+        show AE neutral
+        AE "But... perhaps we will see how things pan out."
+        MC "Heh, that's fair enough. I suppose you can never really predict the future."
+        show AE neutral
+        AE "Quite right..."
+        MC "No matter how things turn out though."
+        MC "I'd like to be there, spending time with you whenever we can."
+        show AE sad-2
+        AE "..."
+        show AE happy
+        AE "I appreciate the sentiment."
+    pause 1
+    scene Festival
+    show AE happy
+    with fade
+    "We seemed to just walk and share pleasantries, taking in the sights of the Matsuri together as we did."
+    "Every once in a while, I would catch Shiori looking off wistfully at groups of other students enjoying themselves, locals, families, spending their time together in the festival she herself organized."
+    show AE neutral
+    AE "..."
+    show AE neutral-eyebrow
+    AE "Here we are. This should be something we could both enjoy."
+    MC "Eh?"
+    "Shiori motioned over to a stand and gave a little bow. It was simple, a little stand painted red with stools out front, paper talismans swaying gently in the wind as they hung from the overhang."
+    MC "Calligraphy?"
+    show AE neutral
+    AE "Indeed. It is a cornerstone of Japanese tradition and art, and so I thought it would be fitting to have a booth where you could try your hand at making some of your own."
+    MCT "How very... Shiori."
+    MC "Alright, I can make a talisman no problem! Any theme you wanna go for?"
+    show AE pondering
+    AE "Theme? Hmm... I hadn't considered that..."
+    show AE neutral
+    AE "Anything in particular that comes to mind. Think of it as akin to a rorschach test."
+    MC "Rorschach test... got it."
+    "We walked forward and sat down at our stools as-"
+    #*Creak SFX*
+    "{i}Creeeak{/i}"
+    show AE aroused-3
+    AE "Ngh... haaah."
+    "The stool itself not being able to handle the enormity of Shiori's ass on its own, she quietly stood up and grabbed one next to her before sitting between the two. The stools bowed slightly at the enormity of her rump."
+    MC "All good?"
+    "Shiori looked back at her behind, the thin fabric covering her buttcrack, but both cheeks spilling out from the sides of the stools as she blushed."
+    AE "Ready whenever you are."
+    hide AE aroused-3 with dissolve
+    "I nodded and looked down at the paper talisman before me. So many options..."
+    menu:
+        "Momo (Peach)":
+            MCT "... Heheheh..."
+            $setFlag("MC010AE_Momo")
+        "Maguro (Blue Fin Tuna)":
+            MCT "... There we go. That would be the perfect one."
+            $setFlag("MC010AE_Maguro")
+        "Henka (Transformation)":
+            MCT "What's been on my mind recently..."
+            $setFlag("MC010AE_Henka")
+    "My brush glided along the paper as the black ink brought my thoughts onto the page with every stroke of the characters. I concentrated on making sure it both conveyed the word, but also looked pleasing to the eye."
+    show AE neutral with dissolve
+    MC "Alright! Done."
+    AE "I as well."
+    MC "So, you show yours first!"
+    AE "Show?"
+    MC "Well yeah, we both worked on one; why not show them to each other?"
+    show AE embarrassed
+    AE "I see... well, I suppose that will make the keepsake more meaningful."
+    MCT "Did she really intend to just work on these in silence and then take them home with no fanfare?!"
+    show AE neutral
+    "Reaching down, Shiori took the talisman and held it palms out towards me."
+    MC "... \"Omoide\". Awwww, memories~"
+    AE "Indeed. It seemed most appropriate at the time."
+    MC "Ehehe, it certainly is."
+    AE "I'm glad to hear it."
+    "Shiori held it further out to me, and bowed."
+    AE "Please, accept this gift."
+    MC "Eh? Ah! W-We're trading?!"
+    AE "If that would be alright... I understand if not."
+    MC "N-No, no, I'd be happy to take it! I mean... if I'd have known I would have made more of an effort to make it more... erm... meaningful."
+    AE "..."
+    show AE happy
+    AE "Seeing into each other's thought processes is meaningful enough."
+    MC "... Eheheh, alright then; I will gladly accept your gift."
+    "I took Shiori's talisman with both hands before looking it over, almost as though taking it into myself, before placing it down next to my brush."
+    MC "Then... will you accept mine?"
+    AE "Of course."
+    if getFlag("MC010AE_Momo"):
+        AE "Let me see..."
+        show AE neutral
+        AE "..."
+        show AE aroused-3
+        AE "Hmph."
+        MC "What? Peach."
+        show AE angry
+        AE "I wonder what got you thinking about that specific word, hm?"
+        MC "Anooo... because you're sweet?"
+        show AE neutral-smug
+        AE "Oh really now?"
+        MC "Eheheh...eh..."
+        show AE neutral
+        AE "Well..."
+        show AE neutral-smug
+        AE "You're a tart."
+        MC "A-Ah! Hahaha!"
+        MCT "Just laugh, Keisuke, her terrible pun is the only thing saving you right now."
+        show AE happy
+        AE "Can I say, Hotsure-san... despite my circumstances... I'm glad to have companionship in any sense."
+    if getFlag("MC010AE_Maguro"):
+        AE "Let me see..."
+        show AE surprised
+        $setAffection("AE", 2)
+        AE "Ah!"
+        MC "Tadaa. It's not very pretty or, well, calligraphy like but-"
+        show AE happy
+        AE "But it shows you know a bit more than I had thought. Bluefin Tuna, Oma's specialty."
+        MC "Yeah, I heard about it from a video online so uh... hey, may as well use what I got to show I listen."
+        show AE happy-2
+        AE "That... means a lot, actually."
+        MC "It does?"
+        AE "Very few people do. I take... solace in the fact you do."
+    if getFlag("MC010AE_Henka"):
+        $setAffection("AE", -2)
+        AE "Hmm..."
+        show AE sad
+        AE "..."
+        MC "Eh? What's wrong? Did I mess up the Kanji?"
+        AE "... Is there a... particular reason you chose that one?"
+        MC "Huh? Oh, no not at all, just thinking about it a lot. Transformation, and all that."
+        AE "Hm... it looks... nice."
+        MC "Is something wrong?"
+        AE "No, it's just..."
+        AE "..."
+    show AE happy
+    AE "I'm simply glad I didn't have to experience the... impropriety of my situation alone. It's easier when the both of us have made a fool of ourselves, I suppose."
+    MC "Yeah... wait, both of us?"
+    show AE neutral
+    AE "Indeed. You have something on your nose."
+    MC "Hm? Wha-"
+    "As I turned towards Shiori, she took the brush in her hand and left a little dab on my nose."
+    MC "Bah!"
+    show AE neutral-smug
+    AE "Mhmhmhm~"
+    "Looking at Shiori's smiling face as, for the first time in quite a while, she giggled gently to me, I felt my heart flutter for a moment."
+    MC "Ahahaha~"
+    "Before it was put at ease."
+    show AE aroused
+    AE "Ah... Hotsure-san?"
+    MC "Heheh... what is it?"
+    AE "There is... one last thing I would like to do with you tonight."
+    scene black with fade
+    $setTime(TimeEnum.NIGHT)
+    pause 2
+    play music Love
+    "♫ Arigatō arigatō ♫"
+    "♫ Chanto tsutawaru kana? ♫"
+    "♫ Sono egao ga yūki ni naru. ♫"
+    scene Hill Road with fade
+    "♫ Arigatō arigatō ♫"
+    "♫ Kono kotoba hitotsu de ♫"
+    "♫ Hikari ga tsunagatteikuyo ♫"
+    "We sat there on the side of the hill, having walked for quite a bit outside of the city, and yet we could still hear the music play over the PA system down below."
+    "The first firework flew up into the sky and exploded with a burst of beautiful color. As we sat and watched from under the tree."
+    show AE hopeful at Position(xcenter=0.4, yalign=1.0) with dissolve
+    "Shiori, completely silent, looked on with a lighthearted look of joy I had never before seen on her face."
+    "Quietly, we watched on as the fire flowers burst in the skies, enjoying each other's presence as we did."
+    if isEventCleared("AE029") or getFlag("Meet_Tako"):
+        show Tako happy at Position(xcenter=0.75, yalign=1.0)
+        show Minori happy at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
+        Minori "Room for two more?"
+        show AE surprised
+        AE "Ah-"
+        MC "Well-"
+        "We looked at each other..."
+        "Then smiled."
+        show AE happy
+        AE "Of course."
+        Tako "Gyahaha, then scootch over!"
+        show AE smile with None
+        show Tako happy at altMove(0.5, 0.55)
+        show Minori happy at altMove(0.5, 0.3)
+        "Minori quietly sat by my side as Tako plopped down next to Shiori."
+        "We all stared up at the smoke filled skies as the array of colors and sounds dazzled the night sky."
+        "And eventually, a lone firework shot up into the air, seemingly a bit low."
+        show dummy with vpunch
+        "{i}BOOM{/i}"
+        show AE surprised
+        show Minori neutral
+        #show Minori surprised
+        show Tako happy
+        show dummy with vpunch
+        "And exploded with a thunderous bang."
+        MC "Woah!"
+        Minori "O-Oh my goodness!"
+        show AE angry
+        AE "You!"
+        "Shiori quickly looked over to Tako, whose expression quickly changed from amusement to shock."
+        Tako "O-Oy! It wasn't me!"
+        "I could tell it was a night neither of us would forget."
+        jump daymenu
+    else:
+        show Tako happy at Position(xcenter=0.75, yalign=1.0)
+        show Minori happy at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
+        Minori "Room for two more?"
+        show AE surprised
+        AE "Ah-"
+        MC "Well-"
+        "We looked at each other..."
+        "Then smiled."
+        show AE happy
+        AE "Of course."
+        UNKNOWN "Gyahaha, then scootch over!"
+        show AE smile with None
+        show Tako happy at altMove(0.5, 0.55)
+        show Minori happy at altMove(0.5, 0.3)
+        "Minori quietly sat by my side as the mystery girl from earlier plopped down next to Shiori."
+        "We all stared up at the smoke filled skies as the array of colors and sounds dazzled the night sky."
+        "And eventually, a lone firework shot up into the air, seemingly a bit low."
+        show dummy with vpunch
+        "{i}BOOM{/i}"
+        show AE surprised
+        show Minori neutral
+        #show Minori surprised
+        show Tako happy
+        show dummy with vpunch
+        "And exploded with a thunderous bang."
+        MC "Woah!"
+        Minori "O-Oh my goodness!"
+        show AE angry
+        AE "You!"
+        "I didn't learn who that mystery girl was that night."
+        UNKNOWN "O-Oy! It wasn't me!"
+        "But I did know it was a night neither of us would forget."
+        jump daymenu
+
 label MC010_BE:
     $setBEOutfit(OutfitEnum.TRADITIONAL)
     $setFMGOutfit(OutfitEnum.TRADITIONAL)
@@ -7382,10 +8309,10 @@ label MC010_BE:
         MC "Right. I know."
         Tomoko "Go chill out. Get something to eat."
         "I nodded as the bus pulled up and Tomo got on, followed by a few other festival goers."
+        $setAffection("TM", 1)
         hide Tomoko with dissolve
         "I watched the bus pull off, then looked back toward the edge of the festival."
         MCT "Well... here goes."
-        $setAffection("TM", 1)
     else:
         show Tomoko neutral
         Tomoko "Kei... I'm fine. I told you."
@@ -7393,10 +8320,10 @@ label MC010_BE:
         MC "I... I know. I just want you to be safe."
         MC "I don't mean to hover over you. I'm just worried."
         "Tomo glanced back at me and nodded, before turning and stepping onto the bus, the door closing after a few people followed behind her."
+        $setAffection("TM", 1)
         hide Tomoko with dissolve
         "I sighed as the bus pulled away, then looked toward the edge of the festival ahead of me."
         MCT "Alright... here goes, I guess."
-        $setAffection("TM", 1)
     
     "I turned, heading back into the thick of the festival."
     scene Festival with fade
@@ -7436,10 +8363,11 @@ label MC010_BE:
     "I found a bench nearby and sat down, rubbing my neck and glancing up at the people passing in and out."
     "Pulling my phone out, I checked my texts, but only received an email about all of the free phones I was missing out on winning."
     "I glanced back up, peering through the crowd."
-    show FMG neutral at Position (xcenter=1.40, yalign=1.0)
-    show FMG happy at Position (xcenter=-0.4, yalign=1.0) with mov3
+    show FMG neutral with dissolve
     "Akira passed by me, flashing a smile and a wave, which I returned."
+    show FMG happy
     MCT "There's a familiar face."
+    hide FMG with dissolve
     MCT "Wonder where everyone else is."
     "I turned and glanced down the 'lanes' of food stands and games."
     MCT "Like I could really make anyone out in all this hustle and bustle."
@@ -7743,8 +8671,12 @@ label MC010_BE:
             "Honoka came alongside me and held my arm with her hand, her touch airy and gentle."
             MC "Alright."
 
-    MC "What are you feeling?"
+    scene black with fade 
+    $setTime(TimeEnum.NIGHTLIGHTS) 
+    scene Festival
     show BE neutral
+    with fade
+    MC "What are you feeling?"
     BE "Uhh... hm. Good question."
     show BE happy
     BE "Ooh! Kei-chan! Here!"
@@ -7896,6 +8828,7 @@ label MC010_BE:
     "As the first of the Matsuri ending fireworks exploded into the sky, Honoka leaned in quicker than I could react, pressing her lips to mine."
     BE "Promise."
     MC "Uh-"
+    show dummy with vpunch
     "{i}{b}*BOOM!*{/b}{/i}"
     show BE surprised
     "Both Honoka and I jumped as a rocket blew up... way too close to us. Like, at tree level, lighting up the entire festival."
@@ -7912,32 +8845,2483 @@ label MC010_BE:
     "I mimicked her and after a moment, rested my chin against her head, the explosions overhead setting the mood better than any music ever could."
     jump daymenu
 
+label MC010_BE_Friend:
+    $setBEOutfit(OutfitEnum.TRADITIONAL)
+    MC "Yeah. You're right, I guess."
+    MC "Good advice."
+    Tomoko "See? I give good pep talks."
+    MC "I actually think I just saw someone I know. First off, gonna see if my suspicions are correct. After that, well, we'll see."
+    Tomoko "Good idea."
+    MC "Alright. Well, see you later, Tomo. Be good."
+    Tomoko "You too. Later."
+    "Tomo turned and stepped onto the waiting bus, the door shutting behind her."
+    $setAffection("TM", 1)
+    "I watched the bus roll off, then turned to the festival."
+    MCT "Alright... let's see if I'm right."
+    scene Festival with fade
+    play music Festival
+    $eventname = "Reconnected"
+    $save_name = "Reconnected"
+    "I stepped into the festival, the crowds of people milling about and chit-chattering aiding the ambiance."
+    MCT "She should be here... at least somewhere around here."
+    "I took a few steps towards one of the long aisles of booths and went on tiptoe, glancing over some heads."
+    MCT "Mm... anyone Honoka-esque?"
+    MCT "No... mmh."
+    "I went down the aisle a little further, cutting a path sort of down the center."
+    UNKNOWN "Well, he's there now. Doesn't matter about before, I guess."
+    "I pulled off to the side to gather my bearings and take another scan, glancing off to the side at two guys waiting in line for a game."
+    UNKNOWN "Look, okay. It's been two months. Around 60 days. And he's already over three and a half meters."
+    UNKNOWN "Okay. So, I'm about 1.8 meters. And you're... what, like 1.85?"
+    UNKNOWN "Give or take."
+    UNKNOWN "So... not sure exactly where Kajiwara-san's at, but he straight up might be taller than the two of us combined."
+    UNKNOWN "Think about that for a second."
+    UNKNOWN "Hard to know without seeing him. On that, have you actually seen him recently?"
+    UNKNOWN "Nah. Haven't gone."
+    UNKNOWN "Eh, someone from class probably popped in by now."
+    UNKNOWN "Sure he's fine."
+    if isEventCleared("RM006"):
+        MCT "... If we're thinking of the same dude, I think they'd be shocked to hear how he's doing."
+        MCT "Daichi would dig this, though. Totally. Pin it up on his conspiracy board for him to obsess over later."
+    "I continued down the lane, the crowd thinning out the further I went."
+    "When I reached the end, I glanced side to side."
+    "Down one end were some tables and a railing by the water, which led into the other side of the festival."
+    "Looking down to the right, a path led out of the festival, by the water, and along the buildings of the town. It looked quiet and empty, with a few benches here and there."
+    MCT "Don't see anyone down there."
+    "I turned left, and headed to the other end, stopping by the railing for a moment to check around again."
+    "I leaned against it, craning my neck to see into the middle of the park a little better."
+    MC "Hmm..."
+    if checkAffection("BE", ">", 6):
+        UNKNOWN "Oh no! I can't stop!"
+        "I felt two very... soft somethings bump into my back, as I turned."
+        show BE happy with dissolve
+        BE "Kei-chan! Thank goodness you were standing there!"
+        MC "I..."
+        BE "Well, you stopped my fall!"
+        "I smirked."
+        MCT "How convenient."
+        MC "What's up?"
+        show BE neutral
+        BE "Not much! Just saw you walk past me back there and figured I'd give chase."
+        MC "Damn. Sneaky one, aren't you?"
+        show BE wink
+        BE "I do what I can! Having fun?"
+        show BE happy
+    else:
+        "I scanned about, my gaze bringing me back to where I'd just came from."
+        show BE neutral at Position (xcenter=1.40, yalign=1.0)
+        show BE happy at Position (xcenter=-0.4, yalign=1.0) with mov3
+        pause .75
+        MC "Huh?"
+        hide BE
+        "Honoka walked right past me, coming from behind me."
+        MCT "Did I just blow right past her in the crowd?!"
+        MC "Honoka!"
+        show BE happy with dissolve
+        play music BE
+        BE "Wasn't sure if you'd notice me."
+        MC "Did you seriously plan that?"
+        show BE shrug
+        BE "Eh, I may have seen you walking and kind of shadowed you a little. Playing some secret agent stuff."
+        MC "I thought I saw you walking in! I was looking for ya!"
+        show BE happy
+        BE "Well, you found me!"
+        BE "But, it's good to see you, Kei-chan. Having fun?"
+    MC "I mean, just got here, so I haven't seen much yet. Are you here with anyone?"
+    show BE doubt
+    BE "Ech... well, I was gonna be..."
+    if isEventCleared("BE021"):
+        BE "I was supposed to go with some people from the archery club, but they're boring as hell, so I just flew solo instead."
+        show BE neutral
+        MC "I mean, maybe they're all scared of that sergeant dude."
+        show BE happy
+        BE "PFF! Haruhiro?!"
+        MC "Yeah! He might rat some people out at your guy's next meeting."
+        show BE angry
+        BE "Wouldn't be shocked, to be honest."
+        MC "I mean... don't say that too loud. He might hear you."
+        show BE happy
+        BE "HAHAHA! That's so mean, but... ahh, you're kind of half right."
+        if isEventCleared("MC008"):
+            show BE wink
+            BE "Can always just speak in our code. We'll be fine."
+            show BE happy
+    elif isEventCleared("BE014") and not isEventCleared("BE021"):
+        BE "I was gonna come with some of the basketball club people, then I left because I kept getting benched."
+        show BE neutral
+        BE "So, now I joined the archery club, and I asked if any of them were gonna show up, and they all just kind of skirted around the question."
+        show BE shrug
+        BE "The president of the club is a total downer, too. So, that's another cherry on top."
+        MC "So, is the club like okay?"
+        BE "Yeah, it's fine. The dude is just like a drill sergeant, though. Kind of kills the 'fun' part from time to time."
+        show BE neutral
+        BE "But, the guy has huge ears, kind of like an elf."
+        MC "Fitting."
+        show BE happy
+        BE "Shh... if he's here, he might hear you. He can hear everything, I swear."
+        if isEventCleared("MC008"):
+            BE "I mean, we can just speak in our code and we'll be golden."
+    elif isEventCleared("BE011") and not isEventCleared("BE014"):
+        BE "Some of the people from the club were going to join, but they all got cold feet."
+        show BE neutral
+        MC "Ah."
+        MC "Sorry... and what club is that now? I remember you jumped out of soccer."
+        BE "Yeah. I tried basketball too, but that... yeah, that didn't really work out."
+        BE "So now I'm doin' archery."
+        MC "Huh. Sounds fun."
+        show BE angry
+        BE "The archery part is. The club, though..."
+        MC "You good?"
+        show BE neutral
+        BE "Huh? Yeah."
+        BE "The dude who runs it is just a huge pain. Acts like he's some sort of drill sergeant or something."
+        BE "When it's like... my guy, this is an archery club for fun."
+        MC "Seems like an overreaction. From him, I mean."
+        show BE angry
+        BE "Ugh. Yeah."
+        "Honoka glanced around us a little and leaned in."
+        show BE happy
+        BE "He has like... huge ears. Like an elf. And I swear, he can hear better than normal."
+        MC "Seriously?"
+        BE "Not kidding. And, I might be screwed now because he might have heard me talking about it."
+        if isEventCleared("MC008"):
+            show BE wink
+            BE "Eh, I'll speak in our code from now on. He won't hear a thing."
+            show BE happy
+    elif isEventCleared("BE003") or isEventCleared("GTS007") and not isEventCleared("BE011"):
+        MC "People bail on you?"
+        show BE neutral
+        BE "Eh, kinda."
+        BE "See, I was in soccer club, but that just... yeah, that wasn't it."
+        BE "Then, I tried basketball, and left that pretty quickly, too."
+        MC "That wasn't it either?"
+        BE "... Well, yeah."
+        BE "So now I'm doin' the archery club."
+        MC "Good time?"
+        BE "The archery is, yeah. The guy who leads the group, though... God, he's such a downer."
+        show BE angry
+        MC "Downer?"
+        BE "Yeah. I mean, it's fine. He just treats the club like he's the drill sergeant over us underlings."
+        show BE happy
+        "Honoka glanced side to side, then back at me."
+        BE "... And he has these massive ears. Like, kind of like an elf."
+        BE "But, uh... he may have heard me say that, so I should shut it."
+        MC "Oh, crap. Yeah. Well, we should hide you then."
+        BE "Eh, it's fine. He definitely wouldn't come to this."
+        if isEventCleared("MC008"):
+            show BE wink
+            BE "Worst case, I'll just speak in our code. He's not getting that."
+            show BE happy
+    elif not isEventCleared("BE003"):
+        MC "Ah."
+        MC "So... sorry, but... why's that?"
+        BE "Eh. Club people kind of bailed on me."
+        MC "Mm."
+        MC "And... what club are you in?"
+        MC "Sorry, kind of dropping the childhood friend ball a little."
+        show BE neutral
+        BE "Oh, you're fine, Kei-chan. We've both had a lot going on."
+        if isEventCleared("MC008"):
+            show BE happy
+            BE "And, we did reestablish our code, so you're hanging in there."
+        show BE neutral
+        BE "But anyways, back to the club thing. First, I was in soccer club, and that just wasn't it."
+        MC "Uh, sorry... {w}first?"
+        BE "Yep. Left that, then joined basketball."
+        MC "That wasn't it either?"
+        show BE shrug
+        BE "Well... yeah. Not at all."
+        show BE happy
+        BE "So now I'm doing archery."
+        MC "Fun?"
+        BE "Oh, yeah. The actual archery part is."
+        show BE sad
+        pause 1
+        MC "... You good?"
+        show BE neutral
+        BE "Huh? Yeah."
+        BE "Just that the rest of it is kind of... blah."
+        show BE angry
+        BE "The dude who leads the club is sort of a downer."
+        show BE neutral
+        BE "And, he has like... huge ears. Kinda looks like an elf with his bow."
+        show BE happy
+        BE "But uh... he probably just heard me say that, actually."
+        $setAffection("BE", 1)
+        if isEventCleared("MC008"):
+            MC "I mean, could always break out the trusty code again. Speak that for like a month or two."
+            show BE wink
+            BE "Now you're thinking, Kei-chan."
+            show BE happy
+    "I smiled, glancing at the row of stalls behind us. Behind one of them, a few people in uniform were grilling something over a large fire."
+    MC "You wanna grab some food at all?"
+    show BE sad
+    "Honoka put her arm over her middle."
+    #Potential stomach growling SFX
+    pause 1
+    show BE flustered
+    BE "You... didn't hear my stomach growl during that whole explanation, did you?"
+    MC "Nope. Promise." 
+    show BE happy
+    BE "Okay, cool."
+    BE "I uh... had a few... yukata problems before I got here, so I haven't really eaten since this morning."
+    BE "Even then, I only had a bagel."
+    MC "Huh. Well, I couldn't tell. You look awesome."
+    show BE embarrassed
+    BE "Thanks."
+    show BE neutral
+    BE "But, you didn't see the lead up to this."
+    show BE worried
+    BE "Trying to corral the girls inside of this thing wasn't working."
+    BE "Like... okay, this is TMI, but I mean, that's kind of par for the course around here."
+    BE "I've got like two sports bras under this."
+    show BE neutral
+    MC "Well, alright. Let's get you something to munch on before you keel over."
+    "I nodded to the row of stalls and walked alongside Honoka, stepping into line."
+    show BE happy
+    BE "So, how have your two months been so far?"
+    MC "I mean... lots has happened, but I'm making out okay."
+    BE "Awesome."
+    BE "This is kind of nice. Getting to catch up."
+    BE "I actually wanted to bug you to do something during Golden Week, but Koneko-chan and the girls in the soccer club yanked me away to do other stuff with them, and we ended up just doing the entire holiday together."
+    MC "Hey, can't blame you. Sounds fun."
+    if isEventCleared("MC005"):
+        MC "But yeah. Golden Week adventures are always fun."
+        BE "What did you do for it?"
+        if getFlag("MC005TM"):
+            MC "So, I was planning on prepping for that test we had after the holidays, but I ended up hanging with Tomo."
+            BE "Where'd you guys go?"
+            MC "Well, there's this like rec room with a few arcade cabinets, air hockey, that retro looking carpet from the 80's, lots of stuff like that. So, we hit that up."
+            show BE surprised-2
+            BE "I... have never heard of that."
+            MC "I know, right?"
+            MC "The entrance isn't super clear, but it's marked on that campus brochure thing we got when we came onto the island, if you feel like going."
+            show BE happy
+            BE "Huh. I might check that out."
+            BE "I've been to the arcade in town, but it would be nice to not have to take that drive every time."
+            MC "Yeah, totally."
+            BE "What did you guys play?"
+            MC "Air hockey. Kept it simple."
+            show BE confused
+            BE "Ah."
+            show BE neutral
+            BE "... Who won?"
+            MC "Uh... well, it was an even game."
+            show BE happy
+            BE "So you lost?"
+            BE "You always played that card when you got it handed to you."
+            MC "... Fine, Tomo won."
+            BE "Knew it."
+        elif getFlag("MC005GTS") and getHighestAffection() == ("GTS"):
+            MC "I was planning on working on stuff for that test, but I ended up going into town and hanging out with Tomo, then went with Yamazaki-ch... san to the flower festival."
+            show BE surprised
+            BE "Ooh. Deets, please."
+            pause 1
+            show BE happy
+            MC "Well, we had an awesome time together."
+            MC "Went to the festival, which was cool to see. There was this like {i}huge{/i} field of flowers run by this guy, which we checked out for awhile. Very low key."
+            show BE seductive
+            BE "... Really dancing around the fun stuff, huh?"
+            show BE happy
+            BE "Nah. I'm happy you guys had a good time."
+        elif getFlag("MC005GTS"):
+            MC "I was planning on working on stuff for that test, but I ended up going into town and hanging out with Tomo, then hung out with Yamazaki-san."
+            show BE surprised-2
+            pause .75
+            MC "I-I mean... just as friends. Nothing romantic."
+            show BE confused
+            MC "Just like... flowers and stuff."
+            show BE happy
+            BE "Good one."
+            MC "I mean, it was a flower festival, so there were tons of flowers to check out."
+            BE "I'm just messing with you."
+            BE "But, you are cute when you're all flustered. Your cheeks get really red, like towards the top."
+            MC "I wasn't flustered..."
+            show BE seductive
+            BE "Sure."
+            show BE happy
+        elif getFlag("MC005RM"):
+            MC "I was gonna prep for the test, but ended up hanging out with Tomo, then went into town with Daichi."
+            show BE confused
+            BE "Ah..."
+            BE "What's he... like, exactly?"
+            show BE neutral
+            BE "Like, I've never really talked to him."
+            MC "Uh..."
+            MC "... Eccentric. That's what I'm going with."
+            show BE happy
+            BE "Hey, just like my roommate. Though, I usually just call her peculiar."
+            BE "It's... the nicer version of 'strange'."
+            if isEventCleared("MC008"):
+                MC "I remember. You mentioned that in one of our notes."
+            BE "Wanna matchmake them? See what happens?"
+            MC "Heh... you know, as fun as that would be to watch, I doubt that's what Daichi is looking for." 
+    else:
+        MC "I, on the other hand, was studying for my test like the good, diligent student that I am."
+        pause 1
+        show BE wink
+        BE "... God, you are so full of it."
+        MC "Hnngh!"
+        "Both of us snorted out a laugh as Honoka shook her head."
+        show BE happy
+        BE "Diligent? Really? Call yourself something more believable next time!"
+        MC "Look, I can try!"
+        MC "Yeah, honestly that whole holiday was a blur. Kind of just flew by."
+    pause .75
+    "After ordering, Honoka and I stepped off to the side to wait, staring up at the lights strung over the aisles."
+    if not routelock == "PRG":
+        show BE neutral
+        BE "You mind if I like, bring up something kind of awkward? You're kind of the first person I've gotten to talk to about this."
+        MC "Yeah, what's up?"    
+        BE "So, like... Kodama-san."
+        MC "Oh... yeah."
+        "Honoka rubbed the back of her head."
+        BE "Like... I get that adulthood has a lot of changes and stuff. Doubly so for all of us."
+        BE "But, like... I can't even imagine having a baby. Especially like... {i}right{/i} now."
+        MC "And especially like her of all girls."
+        BE "Right?! Like... Kodama-san seems like she'd be the type to hold off on sex for a while."
+        MC "You calling her a prude?"
+        show BE sad
+        BE "No! Not at all! But like... I mean..."
+        BE "Kei-chan, the day you and I met her in the classroom with Alice, she barely said anything. And like, she barely even made eye contact."
+        BE "And, she never really mentioned anything with her factor at all. Like, I kind of thought she had the boob factor too, since she's kind of... well..."
+        MC "... She's got big tits?"
+        show BE neutral
+        BE "I mean, yeah!"
+        BE "But then, like... all this comes out, and she ends up having this factor that's like sex-dependent. Think about the irony."
+        MC "Irony or coincidence?"
+        BE "Irony. Most angelic, quiet girl on the island. Gets the factor that is associated with something that can be seen as so 'dirty'. Like, you can't write that shit."
+        MC "Yeah... guess not."
+        show BE sad
+        BE "Anyways... I shouldn't talk about her behind her back, but... it just gets your mind going, you know?"
+        MC "Yeah. Talk of the island, I guess."
+        show BE neutral
+        BE "Mhm... wonder if she's here."
+        "She glanced around her, craning her neck up and around."
+        MC "Probably not. If I'd just had something like that happen, I'd probably need the weekend off just for my sanity."
+        BE "You and me both. If we do see her, though, I want to go talk to her."
+        BE "Not even about what's going on. Just to like, be there, you know?"
+        show BE happy
+        BE "She seems like she could use a gal pal."
+        MC "Sounds like a plan."
+    "I sighed, glancing up."
+    MC "Cool out tonight."
+    show BE happy
+    BE "Mhm. It's nice."
+    scene black with fade 
+    $setTime(TimeEnum.NIGHTLIGHTS) 
+    scene Festival with fade
+    "A few minutes later, the sun set overhead, bathing the festival in night."
+    show BE neutral with dissolve
+    if routelock == "AE":
+        show BE neutral
+        BE "So, hold on. Why aren't you hanging with Matsumoto-san?"
+        MC "She's with the student council right now. We're planning to meet up later, so I have some time to kill."
+        MC "She's all about giving stuff 100 percent and all, but I don't mind waiting. She's worth that."
+        show BE happy
+        BE "Gotcha."
+    if routelock == "PRG":
+        show BE neutral
+        BE "How is Kodama-san doing, by the way?"
+        MC "Eh... it's complicated."
+        BE "I can imagine."     
+        BE "She feelin' okay?"
+        MC "From what I gather, yeah. I think she's a little shellshocked."
+        BE "I... yeah. I can imagine."
+        if isEventCleared("PRG028"):
+            show BE happy
+            BE "Well, when you see her, can you thank her again for the cookies?"
+            BE "I'm not even exaggerating, some of the best cookies I've ever had."
+            BE "Your... {i}ahem{/i} giiiiirlfriend is a pretty good baker."
+            MC "Just a really good cook as a whole. Some of the stuff she's made, it's unreal."
+            BE "I'm gonna have to try some of that. Pencil me in for a taste test session."
+            MC "I'll double check her schedule, but she can probably work you in."
+        MC "I'm actually looking to get her a gift or something down here, if you have any ideas."
+        show BE neutral
+        BE "Aw! That's sweet, Kei-chan! I'll keep my peepers open!"
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I slid my phone out of my pocket and turned the screen on, checking for any texts."
+        show BE neutral
+        BE "Am I so boring that you need your phone, Kei-chan?"
+        "I glanced up as Honoka giggled."
+        show BE seductive
+        BE "I'm just teasing."
+        show BE neutral
+        MC "Sorry, just checking."
+        BE "For a message from Mizutani-san?"
+        MC "Yeah, pretty much."
+        BE "I was gonna say, shocked you guys aren't hanging out tonight."
+        BE "You two always seem to be attached at the hip."
+        MC "Oh, we're gonna. She's just running behind."
+        MC "She was trying to sneak a workout in before this."
+        show BE happy
+        BE "Well, I'm sure you guys will have an amazing time when she gets here."
+        BE "Maybe I should start pumping the ol' iron. Get some abs."
+        show BE unique
+        BE "Wouldn't even need weights either."
+        "I chuckled as Honoka imitated putting her arms behind her head and doing a sit up maneuver."
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        show BE neutral
+        BE "Soo... can I be nosey?"
+        MC "I mean, nice of you to ask this time."
+        show BE wink
+        BE "Heeyyy... a girl gets curious!"
+        show BE happy
+        BE "I was just wondering why you didn't ask Alice here."
+        MC "Well, awkward timing, but I probably should have."
+        show BE unamused
+        BE "Whoops..."
+        show BE neutral
+        BE "In any case, I'm sure you guys would have had an awesome time here."
+        BE "I mean, she might be here now. Could always find her and ask her to hang out."
+        BE "Because, I mean..."
+        show BE happy
+        BE "Like, there's a lot for you guys to do."
+        "I watched Honoka. Her eyes glanced off toward the right."
+        "I followed her line of sight to... a large food stand, serving a rather large roasted chicken to someone."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        show BE neutral
+        BE "So... can I be nosey?"
+        MC "I mean, nice of you to ask this time around."
+        show BE wink
+        BE "Look, I'm curious!"
+        show BE happy
+        BE "I was just wondering why you didn't come here with Yamazaki-san?"
+        MC "Ehh... timing was a little awkward, but I probably should have asked her."
+        show BE sad
+        BE "Ah... got ya..."
+        show BE happy
+        BE "Well, could always find her."
+        BE "This place oozes Yamazaki-san vibes. I'm sure she's already here somewhere."
+        MC "Hopefully. Maybe I'll try and touch base with her."
+    else:
+        show BE neutral 
+        BE "Did you plan on coming here with someone, Kei-chan?"
+        MC "Not really. It was kind of just a random decision. No heavy set plans."
+        MC "Just wanted to have some fun."
+        show BE happy
+        BE "Same here."
+    "I leaned against a nearby table."
+    Cashier "Order for Inoue and Hotsure!!"
+    BE "This is going to be so needed."
+    BE "I could eat like..."
+    show BE confused
+    BE "Well, I don't know what I could eat. That's how hungry I am."
+    show BE neutral
+    "The two of us walked around to the front, taking our food."
+    MC "Thank you!"
+    "The girl behind the register nodded as we stepped aside, walking a bit toward one of the further away tables."
+    "Honoka sat down across from me, rubbing her hands together."
+    show BE wink
+    BE "Mm, fuck me up with this..."
+    MC "You're weird."
+    show BE unamused
+    BE "Dude, I'm hungry! Give a lady a break!"
+    show BE neutral
+    "She cracked open the can of tea she'd ordered and took a long sip before picking up a piece of yakitori."
+    "I took a bite of onigiri and shut my eyes for a moment. The flavor felt like home. Simple, but comforting."
+    "I opened my can of tea and took a sip as well, as I glanced around the festival."
+    "It was darker now, the sky nearly black as the lights made the festival glow with a warm, reddish-orange hue."
+    BE "Mmmhgh... oohhmmm..."
+    MC "And how is the lady enjoying her meal?"
+    "I looked back to Honoka as a small piece of chicken stuck out from between her lips."
+    show BE neutral
+    "She just nodded quickly, chewing."
+    MC "Good."
+    "I took another bite of onigiri."
+    show dummy with vpunch
+    "{i}BOOM!!{/i}"
+    show BE surprised
+    "Honoka and I both jumped at the table as a massive burst of blue exploded over the festival."
+    show BE surprised-2
+    MC "We got good seats for this."
+    show BE embarrassed
+    BE "Mmnhh... I hit my knee on the table."
+    "Honoka made a face and rubbed under the table."
+    show BE sad
+    BE "Mnnghh... that hurts."
+    "Another explosion, this one green, blew up in the sky as Honoka and I watched."
+    show BE happy
+    BE "Ooh, I like that one."
+    show dummy with vpunch
+    "Another slight pop came as a rocket shot... sideways. Multiple people either gasped or backpedaled as the rocket blew up at the treeline, the explosion far lower than all the others."
+    show BE surprised
+    BE "WHOA!"
+    "I gasped as the light cleared. A few people checked in with others nearby them."
+    MC "Someone screwed up. That probably wasn't the plan."
+    show BE neutral
+    BE "You think?"
+    MC "Well... ugh."
+    show BE wink
+    "Honoka giggled, as the show continued in the sky."
+    scene black with fade
+
+    pause .5
+    scene Festival with fade
+    "As I got up, I took my trash, as well as Honoka's."
+    show BE happy with dissolve
+    BE "Thanks, Kei-chan."
+    MC "For sure."
+    "I dumped it into a nearby trash can, turning back."
+    BE "Well, wanna do a game or something before we head back? We've got time."
+    MC "Oh, hell yeah. Whatcha thinking?"
+    show BE neutral
+    BE "Hmm..."
+    pause 1
+    show BE happy
+    BE "I'm picturing a ball, and a little wooden thing with a stick and cups on it."
+    MC "... You are so on."
+    MC "Is there a booth for it?"
+    show BE neutral
+    BE "Saw it on the way in. Let's go."
+    "I walked off beside her, back down the lane of booths."
+    "The crowds had thinned a little, leaving things a bit easier to see."
+    "About halfway down, Honoka turned and smiled."
+    show BE happy
+    BE "It's been so long."
+    BE "Think you've still got it?"
+    MC "Do you?"
+    show BE disoriented
+    BE "I know a few things about getting round things into cups."
+    show BE neutral
+    "Honoka and I stepped forward to the kendama booth."
+    show BE happy
+    BE "I got the first round."
+    "She paid the attendant, who passed Honoka a kendama."
+    BE "We've each got two minutes."
+    show BE neutral
+    MC "Then let's see it."
+    show BE happy
+    "Honoka tossed the ball up, catching it in the rounded cup easily."
+    show BE neutral
+    "She put the ball up again, and spun the handle in her hand, catching the ball on the reverse cup and sending it up again, going for the peg on top, which the ball hit and bounced off."
+    show BE unamused
+    BE "Mm. Hang on."
+    "She popped the ball up a few times, alternating the cups, of which she lost her rhythm on the fourth catch and dropped the ball once more."
+    show BE angry
+    BE "W-Wait. Uh... wait."
+    MC "One minute."
+    show BE neutral
+    "She sent the ball up again, popping it up and down in the same cup for a couple seconds, then sent the ball up, flipping the kendama in her hand and catching it, but dropping the ball."
+    show BE angry
+    BE "Mghh..."
+    "She tried the same thing, this time catching it and popping the ball back up, doing another cup reverse, then flipping it up and aiming the ball for the peg again, which once again, missed."
+    show BE neutral
+    "With about 20 seconds left, she tossed again and knocked the ball between the cup and the peg, flipping the ball up and knocking it again on the other side in the same groove."
+    "She tossed up once more, catching the ball in the cup on the bottom side, then doing a reverse cup and into the main one as time ran out."
+    show BE shrug
+    BE "Eh, could be better, could be worse."
+    show BE happy
+    BE "... Still gonna beat you, though."
+    "Having my phone in my hand and timing, I quickly went to my internet browser and typed in 'bell' in my video search, playing the sound effect of a bell ringing."
+    #Potential Bell SFX
+    show BE confused
+    MC "Oh, what's that? A bell?"
+    MC "Time for school."
+    show BE unamused
+    "I took the kendama and flipped the ball off the peg and into one of the cups, then pivoted my hand so it landed in the underside cup."
+    show BE neutral
+    "I popped it back this way, popping the ball up."
+    menu:
+        "Flip the kendama in the hand":
+            "I tossed the kendama to get it back into standard grip."
+            if checkSkill("Athletics", ">", 3):
+                "I caught it easily, catching the ball in the front facing cup."
+                show BE surprised
+                BE "Oh damn-"
+            else:
+                "Fumbling in my hand, I seized the handle while the ball taped my knuckles instead, hanging down."
+                show BE happy
+                BE "PFFF!"
+        "Catch the ball in the reverse":
+            "I twisted my wrist, catching the ball in the reverse cup."
+    "Popping it up again, I knocked the ball into the divot between the cup and peg, then popped it into the cup, spinning the handle in my hand and going for the cup, which I missed completely and sent the ball hanging again."
+    MC "Damn."
+    "I sent it up again, this time catching it in the main cup, popping it to the bottom cup, then to the reverse one."
+    MC "'Kay..."
+    "I reversed the order, almost tipping the ball out of the bottom cup before barely saving it."
+    "I sent the ball up again, and flipped the handle to my other hand... and missed entirely, sending the handle to the concrete."
+    "Picking it back up, the ball flew into the main cup, after which I knocked it between the cup and the peg, then sent it up again, and lined up..."
+    "The ball sailed right onto the peg, bouncing lightly."
+    BE "Time!"
+    "I set the kendama down, breathing lightly."
+    if checkSkill("Athletics", ">", 3):
+        BE "Yeah... you definitely took that one."
+        MC "I mean, yours was still really good. We haven't done this in a long time."
+    else:
+        MC "Think you got that one."
+        MC "I kept dropping the ball. Literally."
+        BE "It's been awhile, Kei-chan. We're both probably out of practice."
+    BE "You did nail that catch on the peg though."
+    MC "I mean... I try."
+    "The two of us played for about another 15 minutes or so, eventually stepping back."
+    BE "I started off okay, but it's hard to keep that going for so long."
+    MC "Yeah. Works the forearms."
+    BE "I do think I deserve some grace points, though."
+    show BE unique
+    BE "You don't have baggage to work around."
+    MC "Now see, I was told that you knew a few things about getting round things into cups. Seems like your knowledge helped you."
+    show BE happy
+    MC "Getting tired out doesn't gain you extra points."
+    show BE neutral
+    BE "Eh, guess not."
+    if routelock == "AE":
+        "I slid my phone out and checked the time."
+        MC "Hm. Shiori should be all done with her stuff, if you want to go visit her."
+        show BE neutral
+        BE "Mm..."
+        BE "Appreciate the invite, Kei-chan, but no."
+        BE "It's your date time. It should be just for you guys."
+        show BE happy
+        BE "I had a lot of fun catching up, though!"
+        MC "Yeah, me too! See you soon, then?"
+        BE "Mhm!"
+        $setAffection("BE", 1)
+        hide BE with dissolve
+        "Honoka turned and walked off into the festival, as I headed more toward the entrance."
+    elif routelock == "PRG":
+        "As I walked back, I looked toward the table."
+        "Honoka was walking toward a few booths off to the side that seemed to be selling shirts, jewelry, other gift-y type stuff."
+        "I caught up with her."
+        show BE happy
+        BE "Think Kodama-san would want something she could wear? Or like... maybe a trinket or something decorative?"
+        MC "Hm. Good question."
+        MC "Well, I think something more subtle."
+        "Honoka walked into a booth, passing a few racks here and there."
+        show BE surprised
+        BE "Aww... what about this, Kei-chan?"
+        show BE happy
+        "Honoka held up a stuffed bear with a floral t-shirt on."
+        MC "Cute, but let's look a little more first. Keep that in mind."
+        $setAffection("BE", 1)
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "My phone buzzed against me, and I pulled it out, glancing down."
+        BE "Mizutani-san?"
+        MC "Mhm."
+        MC "She's gonna be at the bus stop soon, so we should head that way."
+        show BE neutral
+        BE "Mm..."
+        BE "I appreciate the offer, Kei-chan, but it's your date time."
+        BE "You two have a good time together. I don't wanna stick my nose into it."
+        show BE happy
+        BE "I had a great time, though!"
+        MC "Yeah, me too! See you soon, then?"
+        BE "Oh, you will!"
+        hide BE with dissolve
+        "I headed off for the bus stop as Honoka headed off into the festival again."
+        $setAffection("BE", 1)
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        "I sighed quietly as Honoka checked her phone, looking out over the crowd for the distinct, yellow hair."
+        show BE happy
+        BE "Ah! I know who you're lookin' for!"
+        MC "That obvious?"
+        BE "Wanna look for her together?"
+        MC "If it's not a bother."
+        BE "I got nothing going on. Let's roll!"
+        "The two of us headed off into the festival together, on the search for Alice."
+        $setAffection("BE", 1)
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        "I sighed as Honoka checked her phone, looking out and... above the crowd."
+        MCT "She shouldn't be hard to spot, at least."
+        show BE happy
+        BE "I know who you're scanning the crowd for!"
+        MC "I mean, she's usually pretty easy to spot. Maybe she's shuffling around on her knees?"
+        BE "Wanna look for her together?"
+        MC "If you want to."
+        BE "Yeah! I'd love to see Yamazaki-san! Let's go!"
+        "The two of us headed off, curving around the booths and more toward the park, on the hunt for Naomi."
+        $setAffection("BE", 1)
+    else:
+        scene black with fade
+        pause .5
+        scene Town Bus
+        show BE neutral
+        with fade
+        BE "How long till the next bus, anyway?"
+        MC "You think I just have that info on hand?"
+        show BE happy
+        BE "I mean, you usually have some sort of an idea with these sorts of things."
+        MC "Well, I'd guess the top of the hour would be the next one."
+        "The two of us came to the bus stop, both checking our phones."
+        MC "There are people waiting already, so probably pretty quick."
+        BE "Yeah. I'm going to take the fattest shower when I get back."
+        MC "Feel that."
+        MC "This was a ton of fun though."
+        BE "Yeah, totally! It's been so long since we got to just hang, you know?"
+        MC "Mhm! Do it again sometime?"
+        BE "Oh, we have to. Totally. Get Tomo in on it too."
+        BE "TomoHono will ride again. You'll see."
+        MC "So damn cheesy."
+        "The bus pulled up as a few people got off, then others got on."
+        "I sat down as Honoka found the seat beside me, grinning."
+        BE "Always an awkward goodbye when you leave walking in the same direction as the other person, isn't it?"
+        MC "Well, we didn't say goodbye yet."
+        BE "True."
+        pause 1
+        MC "See ya."
+        BE "Later!"
+        "Honoka and I both laughed as the bus started up and took off."
+        $setAffection("BE", 1)
+    jump daymenu
+
+label MC010_FMG:
+    MC "Yeah. You're right, I guess."
+    MC "Some alone time wouldn't be the worst, honestly. Get some quiet in."
+    "I looked at Tomo, the concern slightly bubbling."
+    MCT "I mean... don't want to pry."
+    MCT "But, come on. She's got something going on."
+    MCT "She left her dorm. That's a good step forward at least."
+    MC "But like... you're good, though? You're sure?"
+    "Tomo rested her hand on the strap of her bag, a heavy sigh coming out."
+    show Tomoko defiant
+    Tomoko "Kei, I'll be fine."
+    MC "Okay."
+    show Tomoko neutral
+    Tomoko "..."
+    Tomoko "Like, seriously."
+    Tomoko "I'm an adult. Just like you."
+    Tomoko "I'm going back to my dorm. Straight back."
+    MC "Tomo, listen-"
+    Tomoko "Just because dad isn't here doesn't mean that I need someone to take his place trying to helicopter over me."
+    Tomoko "I get why you're asking, but I'm not your baby sister."
+    Tomoko "We're twins."
+    MC "I mean... technically I'm older."
+    Tomoko "By literal minutes."
+    MC "Older. I tasted oxygen first."
+    show Tomoko annoyed
+    Tomoko "Doesn't count."
+    if checkAffection("TM", ">", 3) or getFlag("MC005TM"):
+        show Tomoko smile
+        Tomoko "Look... I get it, Bro."
+        Tomoko "But, I'm okay. I'm good. You don't need to worry."
+        MC "Right. I know."
+        Tomoko "Go chill out. Get something to eat."
+        $setAffection("TM", 1)
+        "I nodded as the bus pulled up and Tomo got on, followed by a few other festival goers."
+        hide Tomoko with dissolve
+        "I watched the bus pull off, then looked back toward the edge of the festival."
+        MCT "Well... here goes."
+    else:
+        show Tomoko neutral
+        Tomoko "Kei... I'm fine. I told you."
+        Tomoko "Don't get yourself all worked up."
+        MC "I... I know. I just want you to be safe."
+        MC "I don't mean to hover over you. I'm just worried."
+        "Tomo glanced back at me and nodded, before turning and stepping onto the bus, the door closing after a few people followed behind her."
+        $setAffection("TM", 1)
+        hide Tomoko with dissolve
+        "I sighed as the bus pulled away, then looked toward the edge of the festival ahead of me."
+        MCT "Alright... here goes, I guess."
+
+    MCT "Well... alright."
+    "The festival was audible even by the bus stop."
+    "I headed down back toward it, brushing some hair behind one ear."
+    $eventname = "Gains and Bulks"
+    $save_name = "Gains and Bulks"
+    scene Festival with fade
+    play music Festival
+    $setFMGOutfit(OutfitEnum.TRADITIONAL)
+    $setAEOutfit(OutfitEnum.TRADITIONAL)
+    pause 1
+    MCT "Geez."
+    "I stepped into what felt like a new world. Lights shone all around in every color, and the smell of delicious carnival food wafted down the lanes of booths and stalls."
+    "Glancing about, I walked down, weaving my way through the crowd as only a single attendant could."
+    "The air reeked of excitement and pent-up fun to be had. Even as I walked through just people-watching."
+    if getFlag("Meet_Yuki"):
+        Yuki "Where is she? I looked everywhere. J-Just take a deep breath, Yuki. This wasn't supposed to go like this, this isn't your fault."
+        MC "Huh? Yuki-san?"
+        "I looked back, but Utagashi-san, if that was her, already had disappeared in the crowd."
+    else:
+        UNKNOWN "Where is she? I looked everywhere. J-Just take a deep breath, Yuki. This wasn't supposed to go like this, this isn't your fault." 
+        MC "Huh?"
+        "I looked back, but the girl had already disappeared into the crowd."
+    "I passed by the food, and turned, heading into even more booths and larger areas."
+    "I spotted a few seating areas, filled with people enjoying food and drinks, music being played, even a few singers here and there."
+    "Looking about and finding the shortest line, I stood and waited to order something to drink."
+    "{i}CLANG!{/i}"
+    "I knew the sound, but I never thought it would be there of all places."
+    "I turned."
+    "Two men stood on a makeshift stage, with one of those large globe style barbells straight out of the circus."
+    "One of the two had the bar hoisted onto his chest, doing an almost showy squat as he lifted the bar high above his head in just a split second, only to bring it back down hard enough to make the stage and its decor tremble."
+    "Various smatterings of applause rang out as I placed my order, taking my soda as I watched the next man take the bar and balance it on his chin."
+    "He held it for nearly 30 seconds, bumping it up into the air and catching it in the crook of his arms to the sounds of more applause."
+    "I stepped off to the side, applauding as best I could."
+    pause 1
+    scene black with fade
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Festival with fade
+    "My phone vibrated in my pocket, as I worked it out with my non-dominant hand."
+    MC "Hey!"
+    FMGCell "Hey! Just getting off the bus. Decided to wrap it up a little early."
+    MC "Cool. There's something here you gotta see."
+    FMGCell "Well, it's not you, that's for sure."
+    MC "Rude. I look pretty damn dapper, I'd say."
+    FMGCell "Dapper? Really?"
+    FMGCell "What are you? 50?"
+    MC "Pardon me for improving my vocabulary."
+    FMGCell "... When'd you learn how to read?"
+    "I snorted and laughed."
+    MC "Get down here so I can see you, dammit."
+    FMGCell "On my way~"
+    "I heard the line click as I started walking, passing the stage and cutting through a few open spaces."
+    "It was nearing nighttime when I reached the entrance and planted myself nearby, keeping an eye on the sidewalk."
+    "Far off, I saw the form of a taller, clearly well-built female form, and I looked away."
+    MCT "No spoilers. Got to see her in full glory up close."
+    "I kept my eyes off the prize, looking up at the flags over the entryway. The bright lights. The buildings."
+    FMG "That last workout blow out your neck or something?"
+    show FMG neutral with dissolve
+    pause 1
+    MC "... Whoa."
+    show FMG sad
+    FMG "That's all you've got to say? Whoa?"
+    MC "Well, what words would fit your expectations?"
+    show FMG upbeat
+    FMG "Heh."
+    show FMG flex
+    FMG "'Nice lats.'"
+    MC "Then turn around so I can check them out."
+    show FMG aroused-2
+    FMG "And give you a glance at my ass? No shot."
+    MC "You literally-"
+    show FMG happy
+    "Akira walked to me."
+    FMG "So, what's this thing I have to see?"
+    MC "Right this way, Madam."
+    "I gestured to one path bordered by booths and stalls all the way down."
+    FMG "... Games?"
+    MC "It's at the end around the corner."
+    FMG "Ah. Right."
+    show FMG aroused
+    FMG "Gonna take my arm and show me around?"
+    MC "Promise you won't flex and snap my forearm?"
+    show FMG neutral
+    FMG "Possibly."
+    "I took her arm, walking alongside her as her yukata floated behind her, billowing in contrast to her seemingly hardened form."
+    MC "Such grace."
+    FMG "I can be an angelic little thing when I want to."
+    MC "You pull it off."
+    FMG "Well, you rock the classy look too."
+    MC "I thank you."
+    MC "But, what would you like to do after we check this out."
+    FMG "Food."
+    MC "Alright. Straightforward and to the point."
+    show FMG disappointed
+    FMG "No, straight up. I'm starving."
+    MC "There's food literally everywhere here. We can load up."
+    show FMG happy
+    FMG "I'm gonna. You have no clue."
+    show FMG neutral
+    "I led her down the rows of stands, turning her toward where I'd been sitting."
+    "In front of us was the large, makeshift stage, the two men each judging what looked to be full-on iron cannon balls back and forth between the two of them." 
+    "Akira stopped literally in the middle of the walkway, her eyes widening as she watched the two. Her hand went to her collarbone as she visibly exhaled."
+    show FMG surprised-2
+    FMG "Whoa..."
+    MC "Aside from ogling the gents, pretty cool huh?"
+    show FMG disappointed
+    FMG "..."
+    pause 1
+    FMG "I want to do that, Kei-kun."
+    MC "You're in a yukata. I don't-"
+    show FMG sad-2
+    FMG "Not now."
+    FMG "But like... someday. I want to show my guns off. Flex and make people gasp."
+    FMG "Walk up there and be like... BAM! You know? Leave an impact."
+    MC "I get ya."
+    show FMG neutral
+    FMG "Do you?"
+    MC "Of course. I think a lot of people have some degree of performer in them. The desire to wow people."
+    FMG "That's just called being competitive."
+    show FMG happy
+    FMG "And I am."
+    FMG "Food. Let's go."
+    show FMG neutral
+    "Akira pushed me right in the middle of my back."
+    MC "I figured you'd wanna watch longer!"
+    FMG "Food is fuel. Fuel builds size. Your girl needs size."
+    FMG "... And like some dango or something."
+    scene black with fade
+    pause .5
+    play music MomentTime
+    scene Festival
+    show FMG neutral
+    with fade
+    "The two of us had hit at least four stands."
+    "Now seated at an outdoor table, we both had smaller portions of different food in front of us, along with a lemonade for Akira, and my soda in front of me."
+    FMG "Now."
+    show FMG happy
+    FMG "I taste. I give feedback. You taste, you give feedback."
+    "I took stock of the various types of fried foods laid before us."
+    MC "Seems fair enough. How do we win? Have the best descriptions?"
+    FMG "Kei, I'm just hungry. There is no winning."
+    MC "Not with that attitude."
+    FMG "Fine. You know what, there is winning. I win by getting all of this into my stomach."
+    MC "And I win by doing the same thing?"
+    show FMG neutral
+    FMG "See? Not so hard."
+    MC "Alright. If you would."
+    "Akira lifted some dango, holding it delicately by the stick."
+    MC "Dango. Rice flour dumplings, made from-"
+    FMG "Is this your dish?"
+    MC "Uh... no."
+    FMG "Then can it."
+    "She brought it to her lips, taking a delicate bite and sliding one of the balls off the stick and into her mouth."
+    FMG "Mgh. Soft, spongy. Very sweet."
+    FMG "I'm detecting a slight nutty overtone, with a {i}hint{/i} of umami."
+    MC "... You are so full of shit."
+    show FMG disappointed
+    FMG "Yeah... it's good. Not really sure what else."
+    MC "Let me see this."
+    show FMG neutral
+    "I took my half ear of grilled corn and inhaled."
+    MC "Buttery, salty, a bit of smoke."
+    MC "Mhm. I'm getting a mixed profile. A real flavor soirée."
+    show FMG upbeat
+    FMG "Who the hell says that anymore?"
+    MC "Me. I said that. Let me taste my soirée."
+    show FMG angry-2
+    FMG "You just picked out some random fancy word you heard Alice say one time, didn't you?"
+    MC "...No. Absolutely not. That was not a thing that happened. {w}You just fail to appreciate how expansive my vocabulary is and how well cultured I am."
+    FMG "Uh huh, sure..." 
+    "I took a slightly larger than I would have preferred bite, scraping as much corn as I could and sighing."
+    show FMG neutral
+    FMG "That good soirée?"
+    MC "An excellent soirée in fact."
+    FMG "I'm going to ask Alice if you're even using that word right."
+    MCT "Hopefully she forgets between now and then."
+    MC "Alright, fine. Enough with the soirée."
+    "I did a little flourish and opened my hands to her choco banana."
+    FMG "..."
+    FMG "No eye contact."
+    show FMG disappointed
+    MC "Why would either of us have to worry about that?"
+    FMG "... Lemme just eat the nanner."
+    "Akira slid the banana into her mouth, keeping her eyes down as she bit off a chunk, chewing."
+    MCT "..."
+    MCT "It still makes my stomach sting a little."
+    show FMG happy
+    FMG "Oh gahh... mmh... I just remembered why I love these things."
+    FMG "It's like a hot fudge sundae, but easier to eat."
+    MC "And without ice cream."
+    show FMG neutral
+    FMG "Yeah, that."
+    MC "And on a stick."
+    FMG "Yeah-"
+    MC "And the fudge isn't hot."
+    FMG "I will throw this at you."
+    MC "Noted."
+    MC "Next up is my karaage."
+    "I lifted a piece with my chopsticks, and aided it into my mouth."
+    MC "Yeah, that's just like good. I got nothing."
+    FMG "We kind of suck at this."
+    MC "I mean, if something is bad, we'll know."
+    FMG "But will we know why it's bad?"
+    MC "My tongue no like-y the flavor."
+    show FMG aroused
+    FMG "Finish your chicken, you dork."
+    "Akira had the rest of her banana, then put the dish of yakitori in front of her."
+    FMG "And now for my chicken."
+    show FMG neutral
+    "Forgoing almost all ladylike-ness, Akira dug her teeth into the chicken on the end of the skewer and shredded a piece off, chewing."
+    show FMG disappointed
+    FMG "Mmn... oh, that's good."
+    "She went in for more, shutting her eyes and chewing."
+    MC "How is it?"
+    FMG "I just told you."
+    show FMG happy
+    "She swallowed, taking a sip of lemonade and opened her mouth, sticking her tongue out."
+    FMG "See? All gone."
+    MC "Ate it all up!"
+    FMG "Hahah!"
+    "She shook her head, taking some more chicken."
+    "I moved onto my crepe next, specifically one loaded with strawberry ice cream."
+    show FMG neutral
+    FMG "Hey. Gimme a taste of that."
+    MC "Isn't that like a foul? Offsides?"
+    FMG "This isn't official."
+    MC "I'm calling the ref on this. We're throwing flags."
+    show FMG devious
+    "Akira nearly stabbed her chopstick into my crepe."
+    FMG "Penalty for holding. Gimme."
+    show FMG upbeat
+    "I laughed, sliding my crepe to her, as she took the second bite."
+    "I moved back to her dango, stealing a bite."
+    show FMG surprised-2
+    FMG "AY! I saw that!"
+    MC "I'm just stealing bases. No biggie, Babe."
+    show FMG angry
+    "Chopsticks immediately sunk into my karaage."
+    MC "Okay, okay, truce!"
+    show FMG angry-2
+    FMG "You started this!"
+    "I put my hands over my food and smirked."
+    MC "Last dish."
+    show FMG neutral
+    "In a good ending touch, we both had gotten kakigori. Mine was blueberry, while Akira's was raspberry."
+    "I glanced back at the other dishes. All had been fully polished off."
+    MC "Hm. Shall we do like a little toast?"
+    FMG "Yeah..."
+    FMG "To sick gains?"
+    MC "Really now?"
+    FMG "Nah, I know."
+    FMG "Mm..."
+    FMG "To a great night with my manslice?"
+    MC "That works."
+    show FMG happy
+    "I took my spoon and picked up a bit, dinking it against Akira's."
+    "I went in for it-"
+    show dummy with vpunch
+    "BOOM!"
+    show FMG surprised
+    "Overhead, one large firework shot up, exploding in the air."
+    FMG "It's that late already?"
+    MC "Guess so. I didn't realize it either."
+    show FMG neutral
+    "We both glanced up to a shower of blue and white overhead."
+    "Another one shot up, this one exploding into a bright green burst."
+    FMG "Let's go find a better spot!"
+    "I grabbed my kakigori and spoon before Akira could grab my arm and part me from my dessert, and followed her away from the booths and into a more open area, looking off into the distance at the various shapes of people operating the show."
+    MC "This is better."
+    FMG "Oh yeah."
+    "I sat down beside Akira, everyone else around us gazing up as well."
+    "Three rockets shot up all at once... well, two of them went up."
+    "The remaining one shot off askew... and over the crowd, blowing up just above some of the trees."
+    show FMG surprised-2
+    FMG "WHOO! That one was close!"
+    MC "I think someone screwed something up."
+    FMG "Who knows! Hopefully there's more of that!"
+    show FMG surprised
+    "I laughed as the explosion illuminated the two of us, and the area around."
+    show FMG neutral
+    FMG "Now, as we were saying."
+    "She lifted her kakigori, taking some on her spoon."
+    FMG "To tonight."
+    "I smiled."
+    MC "To tonight."
+    show FMG happy
+    "I dinked my spoon against hers, and tasted it."
+    MC "Mmn..."
+    show FMG neutral
+    FMG "You got some blueberry in with my raspberry."
+    MC "It's dark, you can't even see it."
+    "Another round of explosions lit up the night sky."
+    FMG "Now I can! Look!"
+    MC "Nope."
+    "I scooped up some blueberry and held it over to her mouth."
+    MC "This'll cancel it out."
+    "It was hard to see, but I felt Akira's mouth hit my spoon."
+    FMG "Good. Your turn."
+    "Akira held her spoon over to me, which I took from her and ate carefully."
+    MC "Mmh... yeah."
+    show FMG happy
+    FMG "We kind of suck at this food tasting thing, don't we?"
+    MC "A little bit, yeah."
+    MC "This is more Kodama-san's area of expertise."
+    show FMG sad-2
+    FMG "Yeah... shit, man."
+    MC "Hm?"
+    show FMG sad
+    FMG "Kodama-san..."
+    MC "Oh... yeah."
+    FMG "Like..."
+    FMG "You know, most of the other ones seem pretty... I don't know, expected?"
+    FMG "Like, boobs grow, muscles get bigger, people get taller, people gain weight, yeah."
+    FMG "But, I never even thought about there being like... a preggo based one."
+    FMG "And of all the girls to get that one, it's her. Like, she's not even a slut or anything. It's like... you get what I mean? It's so out of left field."
+    MC "Right, right."
+    show FMG neutral
+    "I glanced around a little. It was hard to really see any details of anybody, but off to one side, I could make out the form of Shiori, standing near a walkway."
+    show FMG surprised-2
+    FMG "Oh! Look at that one!"
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "I looked up as a blue, yellow, and orange swirl lit up the sky, and glanced back at Shiori just as the light faded."
+    MCT "... The hell is she wearing?"
+    hide AE with dissolve
+    "I wasn't really focused on that for much longer, however."
+    show FMG aroused
+    "A hand wove its way into mine, as Akira scooted over right against me."
+    FMG "Sorry I lost track of time working out... this is great."
+    MC "Hey, it's no problem. We still got to do some stuff."
+    show FMG happy
+    FMG "Eating is stuff?"
+    MC "I mean yeah. It's not... not stuff."
+    MC "Plus, who doesn't like a sweet treat?"
+    $setAffection("FMG", 1)
+    "I reached my arm around Akira, and held her there, looking up at the sky."
+    jump daymenu
+
+label MC010_GTS:
+    "I saw Naomi making her way through the crowd as I inclined my head towards Tomo."
+    MCT "Kinda hard to miss her standing well over head and shoulders above everyone else."
+    "I pondered my options for a moment or two, and just caught Tomo starting to slip away out of the corner of my eye."
+    MC "Hey."
+    Tomoko "What?"
+    MC "I think I {i}am{/i} gonna check out the festival. Shoot me a text when you get back to your dorm, okay?"
+    show Tomoko annoyed
+    Tomoko "Whatever you say, boss."
+    MC "Hush. And call me if you need anything. Have a good night, sis."
+    show Tomoko smile
+    Tomoko "You too."
+    $setAffection("TM", 1)
+    hide Tomoko with dissolve
+    "Thus we parted, and I plunged into the twilit festival."
+    $eventname = "Aoi Monogatari"
+    $save_name = "Aoi Monogatari"
+    $setGTSOutfit(OutfitEnum.TRADITIONAL)
+    $setAEOutfit(OutfitEnum.TRADITIONAL)
+    $setOkishoOutfit(OutfitEnum.TRADITIONAL)
+    scene Festival with fade
+    play music Festival
+    "I worked my way through the crowd, enwreathed in the aroma of plastic and fritters and ginger-dusted amazake."
+    "The third aroma ran a finger down my dry throat as I passed, so I stopped to buy a cup. As the cashier poured, I noticed two faces I'd seen around school before, sans their usual red armbands."
+    CMM "Oh! It's a Christmas miracle, I'm telling you."
+    CMM "Like, for Matsumoto-san to give us a day off, just that."
+    CMM "Yeah! And Utagashi-san's off her leash, heck, even our glorious leader took it off."
+    CMM "Heh, taking it off is right. Did you {i}see{/i} what she showed up in?"
+    CMM "No, did you get a picture?"
+    CMM "Yeah, lemme show you... I should probably delete these tomorrow morning..."
+    CMM "Poor Tomoe-san, though."
+    CMM "The most professional of us, yet came in a uniform with a council band."
+    "I tuned them out and made my way to an uninhabited light pole to lean back and sip my amazake."
+    "The warm, creamy brew coated my mouth in an earthy sweetness- the rest of my body began to slacken against the cold metal."
+    "The cloud of noise enveloping me tapered to a lullaby, the lanterns jostling against shoulders wrapped in a hundred pastel colors. The rest of my drink just seemed to disappear."
+    "Wreathed in all the colors and radiance of fire, the booths wavered between my sight and my memory. I took in the glowing lanterns, heard the splashing water, felt a warm breeze rustle my hair..."
+    "Then I sniffed."
+    MCT "Flowers?..."
+    "I looked and beheld a kindred spirit taking in the sensations of the festival."
+    show GTS neutral with dissolve
+    "Naomi was dressed in a subtly but extravagantly patterned yukata in all the colors of a fresh plum, with a just-so layer of foundation enhancing her porcelain countenance."
+    "Her eyes were closed as her face floated above the river of bright eyes meandering by."
+    "Just as I finished tightening my sash and walked toward her, she opened her eyes. She scanned the crowd with lukewarm interest for a second or two before fixing on me."
+    show GTS happy
+    GTS "Hotsure-san!"
+    "We exchanged a shallow bow."
+    GTS "I had hoped you would be in attendance."
+    MC "Same to you, Yamazaki-san. What's up?"
+    GTS "Oh, I thought I would do with a turn about the grounds. Might I tempt you to join me?"
+    MC "Love to! Mind if we stop by a snack stall?"
+    show GTS wink
+    GTS "A fine idea."
+    "She turned and stepped into the river of festival-goers; once Naomi was in motion, a gap opened up around her midriff as quite everyone made sure to give her a wide berth."
+    "She tilted her head as she looked over her shoulder at me, indicating a spot by her right hip."
+    show GTS happy
+    "I happily took my place, and I couldn't help but take a closer look at her."
+    MC "W-Wow... you look..."
+    menu:
+        "Amazing":
+            extend " amazing tonight, Yamazaki-san."
+            $setAffection("GTS", 1)
+            show GTS aroused 
+            "Her pale forearms sprouted from her plum sleeves to cup her face as she beamed down at me."
+            GTS "{i}Ara ara{/i}! You're too kind, Hotsure-san."
+        "Beautiful":
+            extend " beautiful tonight, Na- ah, um... Yamazaki-san."
+            show GTS embarrassed 
+            "Her hands folded in front of my nose, and I couldn't help but watch them squeeze each other lightly."
+            GTS "Thank you, Hotsure-san."
+        "Sharp":
+            extend " very sharp tonight, Yamazaki-san."
+            "There was no denying it. Even still, the phrase sat on my tongue with the crackling acidity of a lie."
+            "Naomi nodded, her face inscrutable to me."
+            $setAffection("GTS", -1)
+            GTS "Thank you, Hotsure-san."
+    GTS "I am quite pleased to see your honoring the occasion as well."
+    if getFlag("MC005GTS"):
+        MC "How could I not? I knew a festival would put some extra pep in your step, and how could I expect you to skip around the festival dragging along some shaggy sadsack in sweatpants?"
+        show GTS unique-2
+        GTS "Skip, indeed! I hope I had not abandoned all reserve on Greenery Day."
+        MC "You, Yamazaki-san? Never. I just liked seeing you so radiantly happy."
+        show GTS aroused
+        "Naomi squeezed her hands tight as her even expression melted a little."
+        GTS "How happy I am to hear that."
+    if isEventCleared("GTSWG001"):
+        MC "So, did you finally squeeze an apology out of Nikumaru-san and hit up her little tailoring racket?"
+    else:
+        MC "So, did you finally broker peace with Nikumaru-san and hit up her little tailoring racket?"
+    show GTS neutral 
+    GTS "My father maintains contacts with a certain traditional modiste of exceptional ability in Kyoto. She was willing to put this piece together for me, bless her."
+    show GTS embarrassed 
+    GTS "It is rather a pity my own estimates for my dimensions should be so far off, but at least I have {i}something{/i} to wear."
+    MC "Looks like it fits great to me."
+    GTS "Traditionally, this garment is intended to cover the forearms."
+    MC "...{w}You make it work."
+    show GTS neutral 
+    GTS "Hmhm, thank you."
+    show GTS happy
+    GTS "Ah, yakisoba! How does that strike your fancy, Hotsure-san?"
+    "Just as she turned to face me, I barely heard a wet, bestial rumble right beside my ear... muffled somewhat by Naomi's layered yukata."
+    show GTS embarrassed 
+    "I smiled as I craned my neck up to see her casting her gaze aside, pinching her lips."
+    MC "Don't mind if I do! Do you want a bun or a bowl? My treat!"
+    "At last she returned my admiring look."
+    GTS "Surpassingly kind of you, Hotsure-san. But please, allow me to commemorate our evening together. Tell me what you would like."
+    MC "Well, who am I to tell you no?"
+    if getFlag("GTS028S_pay"):
+        MCT "Besides, my wallet might just veto me anyway..."
+    MC "I think I'll have..."
+    Student1 "Hey, it's her!"
+    show GTS surprised at Transform(xzoom=-1)
+    "We both turned to see a couple of guys about our age eagerly working their way towards us with wide eyes and dazzled grins." 
+    "As they came into the light of the booth, I saw they were each wearing a boutonniere of some trumpet-shaped magenta flowers."
+    Student2 "You're Yamazaki-san, right?"
+    GTS "I am..."
+    Student1 "Well, that was freakin' awesome back there! We both enjoyed it a lot. Let us buy you both yakisoba!"
+    Student2 "Yeah! You want a bun or a bowl?"
+    show GTS embarrassed at Transform(xzoom=1)
+    GTS "Ah-"
+    MC "She'll have a bun. Bowl for me, please, if you're offering."
+    Student1 "Hey now, let the lady talk."
+    show GTS neutral 
+    GTS "Yes, actually, that is just what I had in mind. Thank you, Hotsure-san."
+    Student1 "Well, fine by me."
+    "After brief fiduciary negotiations, the two made good on their offer and handed me a large, hollowed-out wheat roll full of steaming, drenched soba, and Naomi a humble yakisoba-pan.{w} And napkins."
+    MC "Thanks!"
+    GTS "Yes, thank you kindly, sirs."
+    Student1 "You're we- dude, Maeno-san's leaving without us."
+    Student2 "Word? We better run. See you around, Yamazaki-san! Thanks again!"
+    "Thus our mysterious benefactors melted back into the crowd."
+    MC "...{w}Friends of yours?"
+    show GTS pondering
+    GTS "I don't believe I've properly met them. Normally I can recall a face rather well."
+    MC "Really? Well, I guess you're just one of the popular kids. I can't say I'm surprised."
+    GTS "It would be a new status for me. I like to imagine I was the object of no one's resentment, but neither was my company widely sought after in high school."
+    show GTS neutral 
+    GTS "My advice, perhaps on occasion, but otherwise my little friend group was quite its own sunflower in a field of many."
+    MC "Heh. It's funny, I thought you'd say something like that."
+    show GTS unique-2 
+    GTS "It's true, you know."
+    MC "Oh, I believe you. I'm just-"
+    Local "Ah, there's the young lady."
+    show GTS surprised 
+    "A bespectacled man, imposing and hawkish of mien despite the bucket of takoyaki pressed between his hand and his vast belly, strutted up to us out of the crowd with a smiling, drowsy-eyed woman in tow."
+    Woman "Ohhh, she's a looker up close, too."
+    show GTS embarrassed 
+    Local "Now Aya-chan, let's not forget ourselves."
+    Local "{i}Ahem!{/i} Excuse us, miss. My sister and I caught a part of your performance and I just wanted to applaud you in person."
+    Local "There's something touching about kids like you finding their passion in things of the old world. I think you and your friend on the biwa really added to the magic tonight. Don't you agree, Aya-chan?"
+    Woman "Mmhm, nice show."
+    show GTS pondering 
+    GTS "{size=-6}My friend?...{/size}"
+    GTS "Yes. Yes, of course. Thank you."
+    if checkSkill("Academics", "<=", 0):
+        MCT "The hell's a biwa?"
+    else:
+        MCT "What... is happening?"
+    "Local" "Anyhow, that's all. You kids have a nice evening."
+    "And away he went. I stared into the blur of the crowd with sparks flying out of my ears until at last I looked up at Naomi's puzzled face."
+    MC "Well, now I have to see this for myself."
+    "Naomi did not reply for a second, still and quiet as a monk. But then she smiled."
+    show GTS happy
+    GTS "Yes... yes, let's see it together! Come, please do come!" 
+    show GTS happy with vpunch
+    "She grabbed my hand and started to fast walk through the crowd; apparently used to people of dimensional extremes, they handily dodged her advance."
+    "Unfortunately, Naomi's brisk walk was, for me, closer to rollerblading while I white-knuckled the bumper of a speeding truck."
+    MC "Yamazaki, where are we go-{i}ing!{/i}"
+    GTS "You shall see in but a moment!"
+    scene black with fade
+    pause .25
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Festival with fade
+    "The ambient heat of the festival turned to cool, whistling fingers across my scalp as Naomi sped along through the generous gap in the crowd. Faces familiar and not flashed by in a blur as my feet skittered and skipped under me."
+    show AE pondering at Position (xcenter=1.40, yalign=1.0)
+    show AE pondering at Position (xcenter=-0.4, yalign=1.0) with mov3
+    pause 1
+    "At one point, I thought I saw..."
+    MC "Jesus Christ, is that {i}Matsumoto-san?{/i}"
+    GTS "Come again?"
+    MC "N-Nothing!"
+    "At last we slowed to a stop in a bubble of air that was thick with the perfume of flowers. There was a gap in the booths, around which a small crowd was gathered like the first ants upon a fallen snow cone."
+    show Okisho neutral with dissolve
+    "I got closer, and saw a familiar dome of glossy violet hair bobbing at the heart of the crowd, whose heartbeat was the rhythmic clang of a biwa resting on her jutting stomach."
+    MCT "Wait a second... {w}I-Is that?..."
+    show GTS surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Another moment of listening and I doubled over, stomach quivering violently and my face growing hot. Okisho was playing... a very familiar rock song."
+    hide Okisho with dissolve
+    "One I had seen in many a meme online."
+    show GTS surprised at altMove(0.5, 0.5)
+    GTS "Hotsure-san, are you well?"
+    MC "Hhyeah, I'm, I'm good, just... ohhhh, shi- sheep. Pff! I just recognized... yeah, I recognized what song she's playing just now."
+    show GTS pondering 
+    GTS "Is it some manner of comedic song?"
+    MC "Uh, not {i}really{/i}, it's just that she's doing it on a... y'know what, never mind. Let's go talk to her."
+    show GTS neutral 
+    GTS "Indeed!"
+    "A few brushed past me going the other way, smiling down at talismans of rubicund pastel flowers gracing their chests. I slunk through closer, until at last I was near the center of the gathering. I smiled at the sight."
+    show GTS unique at Position(xcenter=0.25, yalign=1.0)
+    show Okisho happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Naomi's roommate sat behind a low table, improvising through a flurry of different notable rock hits of the decades passed." 
+    "Her non-traditional playing contrasted (if not outright clashed) with her traditional dress and the surrounding setting. Two wooden jewelry racks stood before her, half-full of those magenta flower talismans..."
+    "...While behind her waved two tall, proud nobori, one bearing a kamon of a crane emerging from an ocean wave, the other advertising free hollyhock charms in blooming, flourished calligraphy."
+    "All around the scene, squat raku pots bursting at the seams with pink and yellow chrysanthemums wreathed the table with an infectious vitality."
+    "The younger crowd members clapped and laughed, having fun alongside Okisho who seemed to be enjoying herself by just goofing off, but the older members of the crowd didn't seem so impressed by this perceived lack of reverence." 
+    "Sensing she might be losing her audience, she shifted her tone."
+    Okisho "Alright, intermission's over, I know what you all came here for."
+    "Expecting to hear one of the traditional chanting style story songs set to gentle plucking, my eyes went wide as my ears were struck by a furious onslaught of rapid fire strumming."
+    "The bass tone of the biwa thundered like a stampede, while the buzz coming from her attack of the strings cut through with a mounting sense of urgency."
+    "The song itself depicted the clash of a historic battle as it swept the audience up in its fury."
+    MC "Wow! She's really good. How does anyone move their fingers that fast?"
+    GTS "Mizawa-san descends from a long line of talented musicians. She grew up playing music from a young age."  
+    "Okisho's song reached a crescendo as the entire crowd in the vicinity amongst the festival goers was transfixed. With one final tumultuous bridge in the song she concluded with a strong and abrupt outro."
+    "Crowd" "{i}*Cheers*{/i}" 
+    "The nearby crowd burst into applause. The older members of the crowd, previously skeptical of her choice of music, were now eagerly nodding in approval."
+    Okisho "Thank you! I'll be here all night. But first, I gotta get something to eat."
+    "As the crowd began to move again, no longer brough to a standstill to listen to her, Naomi cut through the crowd to speak with her."
+    GTS "Why Mizawa-san, I had no idea you were bringing your biwa to the festival! Heavens, what a delight!"
+    Okisho "Hey, Yamazaki-san. Of course I brought it! I don't know if I've ever been to a Matsuri without it. I used to play these types of gigs with my family all the time." 
+    Okisho "Even though I've outgrown having to do it, I figured it'd be fun this time to play what I want instead." 
+    MC "Well, you two lemme know when you're going on the road together. Look at you, your own stall and everything!"
+    GTS "Pardon me if I am a bit over-eager today. I {i}do{/i} love a festival."
+    "I chuckled."
+    MC "Who doesn't?"
+    MC "So... are hollyhocks relevant to the Blossom Festival somehow?"
+    show GTS neutral 
+    GTS "Not that I know of."
+    GTS "The festival itself is in celebration of the passing of seasons. The celebration of the end of spring and start of the coming summer."
+    GTS "Now, I don't recall a local legend being tied to it, in my experience anyhow."
+    if isEventCleared("RM005") and checkSkill("Art", ">", 5):
+        MCT "One thing Daichi would never research."
+        MCT "And I'm actually into it. Sad. For him, anyway."
+    GTS "The occasion simply reminded me of the annual Hollyhock Festival back home, in which my family has been rather intimately involved for generations."
+    show GTS happy
+    GTS "I thought people might enjoy a little taste of what has been such a tremendous pleasure for so many for so long."
+    MC "Heh, hard to argue with that."
+    MC "I... take it that symbol is associated with these charms somehow?"
+    show GTS unique 
+    GTS "Indeed it is. The erumpent crane is the emblem of the Yamazaki family, which..."
+    show GTS embarrassed at Transform(xzoom=-1)
+    extend " Ah, begging your pardon, miss. Here you are..."
+    show GTS neutral at Transform(xzoom=1)
+    GTS "Yes, these talismans are a rather popular accessory for the festival-goers back home, and their manufacture has been the business of Yamazaki ladies since the days of Meiji."
+    show GTS unique 
+    GTS "Indeed, my dear Aunt Inori was once chosen as the Festival Queen on that very merit. Imagine one's own relation being bestowed with such a tremendous honor!"
+    MC "Wow... yeah, you guys must've caught onto something. You're pushing some mad units, by the looks of it."
+    show GTS neutral 
+    GTS "And one for you, sir. Thank you for your patience."
+    show GTS happy
+    GTS "Oh, isn't it just delightful? Heehee!"
+    MC "Heheh... it really is, Yamazaki-san."
+    MC "Is there a story behind the hollyhock and its supposed anti-lightning properties?"
+    stop music 
+    "The crowd for a few meters around suddenly fell silent. Somewhere far away, a man in a bowler hat stopped playing his piano."
+    Student1 "Ooh, is Yamazaki-san gonna tell it again?"
+    Student2 "I think so!"
+    show GTS embarrassed 
+    "I raised an eyebrow as I looked Naomi in her pinkening face."
+    GTS "Well, I could tell you the story of how we in Kyoto came to celebrate the Hollyhock Festival... if you so wished..."
+    Student1 "Encore!"
+    "Female Student" "Do it!"
+    MC "Well now I {i}have{/i} to hear it."
+    GTS "Well, then... allow me the pleasure of indulging you."
+    show GTS neutral 
+    GTS "{i}Ahem{/i}"
+    pause 1.0
+    play music Nembutsu
+    GTS "One thousand and five hundred years ago, in the green and peaceful valleys of Yamato..."
+    "A chord rang out from the strumming of a biwa behind her, punctuating her prose."
+    show Okisho neutral
+    "Caught by surprise at first, Naomi smiled upon realizing she had picked up an accompanist."
+    hide Okisho with dissolve
+    GTS "The emperor Senka fell ill in his old age, and passed on."
+    show GTS despaired-thought at altMove(0.5, 0.5) 
+    "Naomi wistfully regarded her clenched hand, which slowly opened."
+    GTS "And in the midst of mourning, his brother of only thirty, Kinmei, assumed the imperial throne."
+    GTS "And as the grief for their beloved emperor seeped into the hearts of all in young Kinmei's court..."
+    pause 0.5
+    show GTS angry with dissolve
+    GTS "Their sorrow festered into something {w}much {w}darker."
+    show GTS angry with vpunch
+    "Naomi slammed her palms on the table, causing me and a few other listeners to jolt."
+    GTS "Civil war swallowed the land! Shrines burned and angry rebels dumped the great statue of the Buddha into the shadowy depths of the Kamo!"
+    "{i}Clang clang clang{size=-6}"
+    GTS "Three long years, a black veil of smoke hid away the heavens, and Japan wept crimson tears."
+    "She wore an intense expression as she continued that I couldn't look away from, even as much as I yearned to. Her finger prodded the sky."
+    GTS "{i}Botoboto!{/i} {w}Beyond the black clouds, the god of thunder, Kamo Wake Ikazuchi, watched the souls of men grow filthy with murder, and in righteous fury poured his wrath upon the earth."
+    "Her hands swept down again, producing a palpable breeze, all the more grandiose for Naomi's prodigious stature."
+    "As she began thrumming her fingers on the table and glaring over us with a dark, hooded look, a few in the crowd covered their mouths. I found myself wringing my hands and set them to my sides to stop."
+    show GTS surprised 
+    GTS "{i}Gaoo!{/i} In the midst of that spring, gales {i}crashed{/i} down from heaven, and they {i}flayed{/i} the tender crops from the stem, while lightning {i}scorched{/i} living and dead alike."
+    GTS "{i}Gorogoro!{/i} And those who escaped the wind, the thunder and the lightning... fell ill in scores, in hundreds, as the stench of death choked every corner."
+    pause 0.5
+    show GTS sad with dissolve
+    GTS "The once green and peaceful Yamato sat on the brink of ruin."
+    FemStudent1 "{size=-8}Oh shit!{/size}"
+    pause 1.0
+    "{i}Clang clang{/i}"
+    GTS "And as he looked upon his kingdom fallen to such a state, "
+    show GTS despaired-thought 
+    extend "the young Emperor Kinmei swallowed his grief, and resolved to make a last stand for his people."
+    "{i}Claaaang{/i}"
+    show GTS neutral with dissolve 
+    GTS "The emperor gathered a great retinue to march upon the Kamo Shrine, where dwelt the thunder god, to make a final offering of the best that fair Yamato had to offer."
+    GTS "The imperial ambassador and his retainers, to plead the divine for mercy..."
+    GTS "A cohort of a thousand valiant warriors and their mighty steeds..."
+    show GTS happy
+    GTS "...And the emperor's own crown princess, beautiful and pure of heart, to be a worthy bearer of the sacred peace offering."
+    GTS "Together, they marched from the great palace at Asuka to the place of the Kamo Shrine, today called Kyoto."
+    show GTS surprised at altMove(0.5, 0.25)
+    show Okisho happy at Position(xcenter=0.75, yalign=1.0)
+    "{i}Clang clang{/i}"
+    GTS "Before the crimson gates, flogged by a wall of wind and rain, the thousand warriors galloped across the river basin and back, and the drumbeat of hooves on the earth began to match the thunder rolling from heaven."
+    GTS "Then, at the ambassador's command, a thousand bowstrings creaked, and {i}creaked{/i} with a thousand gleaming arrows as the warriors took aim at a boulder at the center of the field."
+    GTS "An annual ritual was formed, the story of the vehement onslaught passing on the winds and into the throngs of legends."
+    GTS "The fierce deities of the Kamo shrines thus serve on as stalwart protectors of the Heian capital, the yearly ritual taking form and becoming this very festival we celebrate this eve!"
+    "{i}CLAAANG{/i}"
+    "Naomi, palm open, brought her hand down on the table once more with a clatter, her hair blowing up behind her in force as though she were a warrior of eld herself."
+    "A second or so after her hand hit the table-"
+    stop music
+    show GTS surprised 
+    show Okisho surprised 
+    with vpunch
+    "{i}BOOM!!{/i}"
+    "Naomi held her pose for a second as applause rang out, the loudest coming from my neck of the woods."
+    show GTS neutral-2
+    "Naomi stood and adjusted her hair a bit, bowing deeply."
+    play music Festival
+    "Multiple different sessions of discussion sprung up as groups formed and turned to find different positions for the fireworks show."
+    MC "Right up to the mark."
+    show GTS happy
+    GTS "And not a second over."
+    MC "Shall we?"
+    show GTS neutral
+    GTS "Yes. Come. We'll need an optimal view."
+    "Naomi took my hand and led me in yet another scurry down the middle of the festival lanes, and toward the end, where the festival booths met a waterfront."
+    scene Town Waterfront
+    show GTS neutral
+    with fade
+    "She led me along the front to a railing, and past that a bit toward a section with a large stage, currently unoccupied."
+    "Halting us closer to the water, we had a near perfect view of the night sky, the lights from our small island doing little to impede the stars above, or the shimmering sparks of a rocket."
+    MC "Couldn't have chosen a better spot myself. Well done. Both in this spot and your performance."
+    show GTS happy
+    GTS "And a warm thank you and thank you."
+    MC "I appreciate your invigorated tone while relaying it as well."
+    GTS "The excitement of a good story comes from a place of two parts. One of the story, and another of the teller."
+    show GTS neutral
+    GTS "A truly amazing tale can be sullied by improper telling, just as a boring old drawn out mess of a story can be brought to near perfection by an animated speaker."
+    MC "Far be it from me to argue. You had both ingredients of that, I would say."
+    GTS "There is a third, you know. A much more... uncontrollable ingredient."
+    MC "Do tell?"
+    GTS "A willing and engaged crowd."
+    show GTS happy
+    GTS "Your applause was telling, Hotsure-san."
+    MC "And I'd clap again."
+    show GTS unique
+    "I lightly tapped my palm with three fingers, holding them at an angle."
+    "Above, a radiant red rocket blew up over the festival, bathing the crowd and booths in a sea of scarlet."
+    MC "Like the crimson gates themselves."
+    show GTS neutral
+    "A blue rocket shot up behind the red one, exploding in a far larger blast."
+    GTS "Enveloped by the blinding wind and driving rain."
+    MC "Pure poetry."
+    "I gazed up at Naomi, offering her a gentle smile."
+    "I repositioned myself, putting my fingers up in a sort of camera motion."
+    MC "Now, if I shift my angle, like so, I can get both the subject and the background in frame all at once."
+    "I let a smirk play across my face as I came to stop beside her, the fireworks now blowing up behind Naomi's head."
+    MC "And from here, follow along now, I can see both the fireworks display, and the gentle flower of a proper lady in front of them."
+    GTS "Ah, Hotsure-san~"
+    "I giggled, lowering my 'camera.'"
+    show dummy with vpunch
+    "{i}BOOM!!{/i}"
+    show GTS surprised
+    "Naomi and I jumped as a rocket blew up sort of in the middle of the park, far lower than all of the others!"
+    GTS "HEAVENS!"
+    GTS "Some sort of malfunction?"
+    MC "Would have had to have been. Otherwise, how in the world?"
+    "There was an uncomfortably long pause before the show continued up high, where it ought to be."
+    GTS "Someone could have been injured..."
+    MC "Thankfully, looks like no one was."
+    MC "Now, pardon me."
+    show GTS neutral-2
+    "Nearby where we stood was a sturdy looking bench."
+    "I pressed my hand to it, ensuring the sturdiness, before I stepped onto the seat, giving me a bit more reach."
+    MC "There we are."
+    show GTS neutral
+    GTS "How convenient."
+    MC "And on that, might I offer a congratulatory hug on a job well done tonight?"
+    show GTS happy
+    GTS "... You certainly may."
+    "I stuck my arms... still up, as Naomi came in closer, pushing herself into me and bringing her arms gracefully around."
+    GTS "Thank you for coming."
+    MC "And thank you for showing me a wonderful time."
+    "Naomi let go carefully to ensure I didn't get bounced off the bench and into the drink beside her."
+    show GTS happy-2
+    GTS "A truly heartfelt congratulations. I'm stunned."
+    MC "As was I."
+    MC "Now, pardon me while I admire the bright shiny colors in the sky."
+    show GTS unique
+    GTS "Ahaha... oh, you make me laugh, Hotsure-san."
+    "Overhead, a bright emerald green explosion lit up the buildings and sky."
+    "I watched the color reflect off of Naomi and her yukata, smiling softly to myself once more as the two of us let the show take our attention."
+    jump daymenu
+
+label MC010_PRG:
+    $setPRGOutfit(OutfitEnum.TRADITIONAL)
+    $setFMGOutfit(OutfitEnum.TRADITIONAL)
+    $setGTSOutfit(OutfitEnum.TRADITIONAL)
+    play music Rain
+    MC "Yeah. You're right, I guess."
+    MC "Some alone time wouldn't be the worst, honestly. Get some quiet in."
+    "I looked at Tomo, the concern slightly bubbling."
+    MCT "I mean... don't want to pry."
+    MCT "But, come on. She's got something going on."
+    MCT "She left her dorm. That's a good step forward at least."
+    MC "But like... you're good, though? You're sure?"
+    "Tomo rested her hand on the strap of her bag, a heavy sigh coming out."
+    show Tomoko defiant
+    Tomoko "Kei, I'll be fine."
+    MC "Okay."
+    show Tomoko neutral
+    Tomoko "..."
+    Tomoko "Like, seriously."
+    Tomoko "I'm an adult. Just like you."
+    Tomoko "I'm going back to my dorm. Straight back."
+    MC "Tomo, listen-"
+    Tomoko "Just because dad isn't here doesn't mean that I need someone to take his place trying to helicopter over me."
+    Tomoko "I get why you're asking, but I'm not your baby sister."
+    Tomoko "We're twins."
+    MC "I mean... technically I'm older."
+    Tomoko "By literal minutes."
+    MC "Older. I tasted oxygen first."
+    show Tomoko annoyed
+    Tomoko "Doesn't count."
+    if checkAffection("TM", ">=", 3) or getFlag("MC005TM"):
+        show Tomoko smile
+        Tomoko "Look... I get it, Bro."
+        Tomoko "But, I'm okay. I'm good. You don't need to worry."
+        MC "Right. I know."
+        Tomoko "Go chill out. Get something to eat."
+        "I nodded as the bus pulled up and Tomo got on, followed by a few other festival goers."
+        $setAffection("TM", 1)
+        hide Tomoko with dissolve
+        "I watched the bus pull off, then looked back toward the edge of the festival."
+        MCT "Well... here goes."
+    else:
+        Tomoko "Kei... I'm fine. I told you."
+        Tomoko "Don't get yourself all worked up."
+        MC "I... I know. I just want you to be safe."
+        MC "I don't mean to hover over you. I'm just worried."
+        $setAffection("TM", 1)
+        "Tomo glanced back at me and nodded, before turning and stepping onto the bus, the door closing after a few people followed behind her."
+        "I sighed as the bus pulled away, then looked toward the edge of the festival ahead of me."
+        MCT "Alright... here goes, I guess."
+    "I turned, heading back into the thick of the festival."
+    scene Festival with fade
+    play music Festival
+    pause 2
+    $eventname = "Reprieve"
+    $save_name = "Reprieve"
+    pause 2
+    "I glanced sideways as two women, both in yukatas, passed right by me, laughing and holding some sort of dessert."
+    UNKNOWN "Sucks they couldn't come over, though."
+    UNKNOWN "It happens, Dear. Nothing to do about it but make the best."
+    if isEventCleared("MC007"):
+        "Turning my head, I realized something was familiar about them... One with rather large... and rather bouncy boobs, the other well endowed by, I guess \"normal\" standards, but dwarfed in comparison to the other."
+        MCT "That's... those ladies from the bakery. What are they..."
+        MCT "Chie and Haruko... Kazomazumi, I think?"
+        Haruko "Like... what else do they have going on? It isn't every weekend that a festival rolls around."
+        Chie "Spend time with your mother then."
+        "The staring from me didn't even draw any attention. Both women wore rather low-cut yukatas, Kazomazumi-san's breasts being rather out with her daughter not being much different."
+        "What was different was... just how huge Chie was."
+        "Compared to her daughter, her front was dominated by breasts. And with the jiggle that came, it was almost impossible to not stare at them."
+        Chie "You know, the two of us could branch out from the bakery a little. Spread our wings."
+        Haruko "My wings {i}are{/i} spread, Mom. I love the bakery."
+        Haruko "It is nice to get out, though. Check things out."
+        if getFlag("MC008_RegardsPassed") or getFlag("RM004_RegardsPassed"):
+            "As I passed by, Haruko blinked, turning her head to me and grinning, offering a friendly wave."
+            "I smiled back and returned the wave, passing by her and her mother."
+    else:
+        "I turned my head."
+        "The two women walking toward me... clearly had taken notes from Honoka's book."
+        "One of them, the elder of the two, clearly had some sort of factor, her boobs being about the size of Honoka's last I'd seen her."
+        "She had a bit of a belly, and looked to be about in her sixties, though her factor being so on display made her seem younger."
+        "The other girl, younger than her but older than me, was slightly chubby, with breasts that I would have once considered to be quite big, but now by island standards were... well, average."
+        Girl "Like... what else do they have going on? It isn't every weekend that a festival rolls around."
+        Woman "Spend time with your mother then."
+        "Luckily the staring from me didn't even draw their attention. Both women wore rather low-cut yukata, the woman's breasts being rather out with her daughter not being much different."
+        Woman "You know, the two of us could branch out from the bakery a little. Spread our wings."
+        Girl "My wings {i}are{/i} spread, Mom. I love the bakery."
+        Girl "It is nice to get out, though. Check things out."
+    "I continued on, down the row of games, glancing this way and that."
+    "Groups of people were on both sides of me, laughing over the sounds of music and carnival games."
+    "I kept walking, and headed down the lane further, the crowd thinning a little as I made it to the end of the row a few minutes later."
+    MCT "Big festival. Sheesh."
+    "I turned again, going around another edge of the park, past a few stages."
+    "On one of them, two men stood, lifting those weights with the round, ball-shaped ends, like from cartoons."
+    "I stopped, watching one of them crouch down, lifting the bar up over his head, flexing and letting out a grunt."
+    "The crowd and I politely applauded, as the next guy grabbed a bar in return."
+    "I turned and skirted around the crowd, glancing away from the stage after a moment."
+    FMG "AYY!"
+    show FMG surprised with dissolve
+    "I threw on the brakes and stopped {i}right{/i} in front of Akira, her hands loaded with a few different foods and a large drink."
+    MC "Oh! My bad!"
+    "Akira set her food down on a table nearby, sighing."
+    show FMG neutral
+    FMG "That was close, Dude."
+    MC "Yeah, my bad."
+    FMG "Distracted by the show?"
+    MC "I mean, yeah. Just taking it all in."
+    FMG "Don't blame you."
+    show FMG upbeat
+    FMG "I {i}so{/i} want to be up there."
+    "I looked back towards the two men, now both balancing a large, metal bar on their chins."
+    show FMG neutral
+    FMG "Well, more the lifting part."
+    MC "Right."
+    FMG "Hanging solo tonight?"
+    MC "Yeah. Just thought I'd check it out."
+    FMG "Gotcha."
+    FMG "Is uh..."
+    "Akira leaned over a little."
+    FMG "Is she here?"
+    MC "Not that I know of."
+    MC "I invited her, but no dice."
+    show FMG sad
+    FMG "Yeah... damn."
+    FMG "Can't really picture how that feels. Like... being pregnant and stuff."
+    FMG "And for you, too. Not easy on the dad's end either."
+    MC "Yeah."
+    FMG "... Kind of always thought she had like tit growth or something."
+    show FMG surprised 
+    FMG "Or wait, shit. She's your girlfriend now. I shouldn't talk about her like that. My bad."
+    MC "No, no. You're good."
+    MC "I kind of thought the same for a while, to be honest."
+    show FMG neutral
+    FMG "Well, hope she's doing okay. Let her know I say hey when you see her next."
+    MC "I will. Thanks, Mizutani-san."
+    FMG "Yeah, no prob."
+    hide FMG with dissolve
+    "I kept on my way around the crowd, and toward more of the food trucks."
+    "The smell alone was near intoxicating, wafting around the entire festival like a cloud of heaven."
+    "The lights shining like stars in the darkening sky brought a deep shot of nostalgia, their omniscient glow reminding me so much of those trips to festivals as a kid."
+    MCT "Tomo, Honoka, and I would run around like little hellions with nothing but our allowances holding us back."
+    MCT "We'd hit every game we could with the money our parents gave us, then load up on all the sugar and fried foods we could until we were forced to head home."
+    MCT "If we were lucky and Honoka got to stay over, the three of us would try and stay up as late as we could, so high on caffeine and sweet treats that we'd chase each other around the house and collapse in front of the TV, falling asleep right there."
+    "I looked forward, a large tree nearby strung up with lights, glowing as if it were ablaze."
+    MCT "Then we'd wake up the next day, and Mom would make a massive breakfast. We'd eat in our pajamas and try to play as much as we could before Honoka had to go home."
+    MCT "Felt like I could run for ages. Like sprinting down hallways was equal to a superhero dashing through a massive tunnel, enemies surrounding him from all corners."
+    MCT "And every new pair of shoes made me run ten times faster. It did. It wasn't pretend."
+    "I'd made it to the massive tree, and turned, walking a diagonal through the festival and toward a large rail at one end of the park, separating the park from a large coastline overlooking the ocean."
+    "Standing there for a moment, I looked out toward the dark blue water, the horizon still glowing from the setting sun."
+    "It was strangely calm, even with the festival rampaging behind me."
+    "The water was peaceful and calm, the ocean in front of me holding such contrast compared to the energy here, on the island."
+    MCT "For a place that's supposed to be so removed, it feels so... welcoming and alive."
+    "I glanced back toward the hustle, hearing a female voice echo out a song from somewhere in the crowds."
+    "I rubbed my head."
+    MCT "All this craziness has me more in my brain than in my eyes. Let's find her that gift."
+    "I made way toward the huge row of games, keeping an eye for those offering prizes, or any of the gift vendors."
+    "Near the entrance was where the crowd was more focused. Being on the opposite end, the booths had shorter lines, if any."
+    "I passed a few games, perusing here and there for something that Aida might like."
+    "I went right over a ring tossing game and one of those where you tried to catch a fish."
+    MCT "Ring toss is always rigged, and the fish is just a burden for whoever gets it gifted to them."
+    MCT "Maybe like a stuffed animal or something?"
+    "Reaching the section where the crowd was more focused, I switched to the other side and headed back down toward the water again, looking at each booth as I went."
+    "A small gap between the booths had a large food truck parked, the images of different carnival foods being enough to literally make my mouth water."
+    "I stood there for about a minute, scanning down the various choices."
+    "For whatever reason, nothing stuck out to me. I kind of wanted everything, but didn't really crave anything."
+    MCT "Eh, I'll come back later. If I get hungry enough, I could probably eat the tires off of that truck."
+    "I stepped away, trying to reason out my indecisiveness."
+    "With each step, I shifted my left foot a little, sort of scraping the bottom of my tabi against the pavement with a sideways push."
+    MCT "Damn sock is folded weird."
+    "The seam of my sock was under the side of my foot, making the slightly snug fit of my tabi feel all the more awkward."
+    "I sort of half-hobbled down the row, scraping my foot on the pavement in this side shuffle way."
+    MCT "... I look stupid. Screw this."
+    "I half-hobbled and side-scraped my way down to the end of the booths, glancing toward the railing by the water and down."
+    MCT "No benches that way..."
+    "I turned, looking down the way along the railing."
+    "The waterfront led down past the booths and down a side walking path, the festival decor stopping with the booths."
+    "I passed the booths and followed the railing along, heading out of the festival and into this side alley of the town."
+    scene Town Waterfront with fade
+    stop music fadeout 4.0
+    "The small path followed close to the railing, with the building beside it quite close to the waterfront."
+    "Following it, I went along until I came to a small bench, looking out over the water."
+    "The music was more quiet here, the hum of the festival a distant echo. No one was around, it seemed, all of the fun being held in the festival instead."
+    "Sitting heavily, I hiked up my yukata and eased my tabi off, setting it beside me while I jerked my sock back into where it should be."
+    MC "Mmg... better."
+    "I held my sock tight and slipped my tabi back on, wriggling my toe a little until it sat right."
+    MC "There."
+    "I brushed my hand through my hair, listening to the sound of the festival droning on in the distance."
+    scene black with fade
+    "Shutting my eyes, I sighed, feeling tension ease out and into the air around me."
+    MCT "This quiet is kind of nice for a little while."
+    "I took a breath, the breeze from the ocean refreshing my yukata covered body."
+    MCT "Mmn..."
+    pause 2
+    if isEventCleared("PRG028"):
+        UNKNOWN "... K-Keisuke?"
+        scene Town Waterfront with vpunch
+        "I leapt up from the bench, a huge bolt running through me."
+        MC "OH-!"
+        show PRG surprised
+        PRG "A-AH!"
+        pause 1
+        "My startled eruption fell into a stunned silence."
+        show PRG scared
+        PRG "I-I'm sorry!"
+        MC "N-No, you're good!"
+        MC "Sorry about that. You... hagh... God, you scared me."
+        show PRG worried
+        PRG "I-I'm sorry... I-I know I said I wasn't going to be able to come..."
+        MC "No, no. It's totally fine!"
+        PRG "..."
+        "I rubbed my chest over my heart... only then glancing down."
+        MC "Whoa."
+        pause .5
+        show PRG unsure
+        pause 1
+        PRG "I-It looks bad, I know..."
+        MC "N-No... you look amazing."
+        MC "Like, seriously. Wow."
+        show PRG worried
+        PRG "... Alice helped me fix it so it would still fit."
+        "Aida turned around, facing toward the distant lights of the festival."
+        "On the band that went around her, the piece that was around her back was ever so slightly a different shade of color than the rest."
+        "Going up, I could see a bit of extra fabric sewn into the top of the yukata, near her neck. Quite a large chunk was sewn onto it, but Aida's hair covered a good portion of it."
+        MC "Hey, if you wouldn't have said anything, I wouldn't have noticed."
+        pause .25
+        show PRG unsure
+        pause .5
+        MC "I'm serious."
+    else:
+        UNKNOWN "... H-Hotsure-san?"
+        scene Town Waterfront with vpunch
+        "I leapt up from the bench, a huge bolt running through me."
+        MC "OH-!"
+        show PRG surprised 
+        PRG "A-AH!"
+        pause 1
+        "My startled eruption fell into a stunned silence."
+        show PRG scared
+        PRG "I-I'm sorry!"
+        MC "N-No! It's fine! Just made me jump is all."
+        show PRG worried
+        PRG "I... s-sorry..."
+        "I rubbed my chest over my heart... only then glancing down."
+        MC "Whoa."
+        pause .75
+        show PRG unsure
+        pause 1
+        PRG "I-It looks bad, I know..."
+        MC "N-No... you look amazing."
+        PRG "..."
+        MC "I'm being honest."
+        PRG "I... I had to get help from Alice."
+        MC "For...?"
+        show PRG worried
+        PRG "... Fitting."
+        "Aida turned around, showing the back of her yukata."
+        "The band that wrapped around her clearly had a piece of fabric sewn to it that was a different shade from the rest of the band."
+        "In addition, near her neck, another discolored piece of fabric stuck out. And though it was a rather large chunk, Aida's hair covered a good amount of it."
+        MC "Hey, I never would've noticed if you hadn't said anything."
+        PRG "... You're sure?"
+        MC "Promise."
+    PRG "... Okay."
+    MC "What are you doing back here?"
+    PRG "..."
+    show PRG unique
+    PRG "I... {w}got kind of... anxious."
+    MC "Gotcha."
+    MC "Just needed some time away from people?"
+    PRG "M... Mhm..."
+    show PRG worried
+    PRG "B-But I don't want you to..."
+    PRG "I..."
+    show PRG unique
+    PRG "I-I mean please... please stay."
+    PRG "..."
+    show PRG unsure
+    PRG "I-I wasn't going to come to this, until you invited me."
+    PRG "A-And I said no because... mh..."
+    show PRG insecure
+    PRG "T-This is an old yukata from home. And... it didn't fit."
+    MC "I understand."
+    PRG "B-But I felt so bad saying no to your invitation. A-And right before Alice was going to leave to come down here, she asked me if I was coming, a-and I told her no."
+    show PRG worried
+    PRG "... She wouldn't let it go. S-She just kept telling me that I should really consider coming."
+    PRG "S-So she helped me fix my yukata and helped me make it fit a little better."
+    PRG "I... I want to patch it more neatly, s-so it'll look more uniform."
+    MC "Hey, I think it looks awesome. And I think you look pretty wonderful tonight, too."
+    PRG "T-Thank you..."
+    PRG "... I'm sorry. For... for saying no to coming."
+    MC "No, no way. Please don't be sorry."
+    MC "I totally get it. Especially with everything."
+    show PRG unsure
+    PRG "..."
+    MC "So... how was your day today?"
+    show PRG worried
+    PRG "My... my day?"
+    MC "Mhm. What did you do?"
+    PRG "Um..."
+    PRG "I... w-well, I... {w}I cleaned."
+    MC "Hey, cleaning can be kind of relaxing."
+    PRG "Kind of, y-yeah."
+    PRG "I-I always am amazed how much of my hair gets on the floor."
+    PRG "L-Like, I-"
+    show PRG scared
+    "Aida's eyes went to me as she immediately stopped."
+    PRG "... I-I hope that wasn't insensitive. I-I'm sorry..."
+    MC "Huh? How?"
+    PRG "Talking about... hair getting everywhere."
+    MC "That's... not at all. You're fine."
+    show PRG worried
+    MC "Like, I don't think that's offensive in any way."
+    show PRG unique
+    PRG "..."
+    PRG "I think I'm just overthinking everything lately."
+    PRG "... Sorry."
+    if isEventCleared("PRG028"):
+        MC "Aida, hey..."
+        MC "You don't have to try so hard. It's okay."
+    else:
+        MC "Kodama-san, hey..."
+        MC "You don't have to try so hard. It's okay."
+    MC "I understand."
+    MC "I've been feeling it too."
+    PRG "..."
+    MC "Now... I know that tonight has been kind of hectic already."
+    MC "But, would you want to grab something to eat together?"
+    MC "We can hit one of the spots closer to the end here, away from some of the crowds."
+    show PRG unsure
+    if isEventCleared("PRG028"):
+        PRG "H-Hots... Keisuke. I-I..."
+    else:
+        PRG "H-Hotsure-san... I-I..."
+    PRG "I-I... c-can't."
+    PRG "E-Everyone was looking at me when I got here..."
+    "Aida reached up to the top of her yukata and tugged it up a little."
+    PRG "I-I saw a few girls from the cooking club. A-All of them were staring at me."
+    MC "I understand."
+    MC "Would you feel better if I tried to find Alice or someone else? Someone else to walk with us and maybe make you feel like... part of the group?"
+    show PRG unique
+    PRG "... {w}I don't want anyone else here."
+    PRG "J-Just you..."
+    MC "Alright."
+    MC "Well, okay. How about this?"
+    MC "We walk just so we can see out and see how many people are there."
+    MC "Then, when things clear out a little, we walk out to the nearest booth, buy some comfort food, then find a quiet, secluded place to watch the fireworks."
+    MC "No big crowds. Nothing crazy. Just the two of us."
+    show PRG worried
+    PRG "... Do you promise?"
+    MC "Cross my heart."
+    pause 1
+    show PRG insecure
+    PRG "Do I look okay?"
+    PRG "N-Nothing looks out of place, does it?"
+    MC "Not at all."
+    PRG "..."
+    MC "Feel up to it?"
+    PRG "... Okay."
+    show PRG worried
+    PRG "... I'm ready."
+    hide PRG with dissolve
+    "I got up and sort of led the way forward. While proper manners dictated having Aida lead, it felt closer to me clearing the path for her to feel more at ease."
+    "I walked along the narrow path, and brought us to the very edge of the festival, sort of behind one of the booths."
+    MC "Okay, we-"
+    "I turned to look back over my shoulder."
+    pause .75
+    show PRG sad-2 with dissolve
+    pause 1
+    "Aida was about a meter or two behind me."
+    "I turned, walking back."
+    MC "I'm here..."
+    PRG "... I-It's hard."
+    MC "... I know."
+    MC "Is there anything I can do to make it a little less so?"
+    "Aida looked off into the corner of her eye, like fading into herself."
+    "She took a few breaths, then lifted her hand slightly toward me."
+    MC "Want me to hold your hand?"
+    PRG "P-Please."
+    "I nodded, taking her... admittedly slightly clammy hand and held it gently."
+    MC "Okay. There's a booth right across from us selling some different foods and drinks. We can grab something there."
+    PRG "O-Okay..."
+    MC "Alright. Ready?"
+    show PRG worried
+    PRG "... K-Kind of."
+    MC "Okay. Let's just... just do it, okay? Let's just step out like anyone else would."
+    "Aida gripped my hand a little tighter."
+    scene Festival
+    show PRG worried
+    with fade
+    play music Festival fadein 3.0
+    "I led her out and into the far end of the festival."
+    "Overhead lights illuminated her yukata, the soft, colorful lights shimmering across her hair."
+    "The walk felt... way longer than it should have."
+    "What I'd covered in about ten seconds felt closer to a minute."
+    "My own concerns weren't at the forefront. Aida's own worries almost seemed to seep into me through her hand."
+    show PRG insecure
+    "Her hand tensed. Her grip shifted from right to left as I felt her twist around to look in different directions."
+    "She sped up beside me, tugging a little as she and I came to the booth right across from Aida's side alleyway."
+    MC "Well... here we are."
+    PRG "M-Mhm..."
+    MC "Hungry?"
+    PRG "Y-Yes..."
+    MC "Excuse me?"
+    "One of the workers inside the booth turned, wiping his hands on his large apron and shuffled over."
+    "Clerk" "Somethin' for you two?"
+    show PRG worried
+    PRG "Y-You go first..."
+    MC "Mm... could I have a crepe, please? Actually, two. One with strawberry and one with cinnamon."
+    MC "Oh, and a can of tea, please?"
+    "Clerk" "'Course."
+    "The man jotted something down onto a piece of paper, then looked back up."
+    "Clerk" "Somethin' for you, Miss?"
+    PRG "U-Um... c-could I have an... order of the nikuman, please? A-And a bottle of water?"
+    PRG "B-But... could you put us on separate transactions?"
+    MC "Actually, please don't."
+    show PRG insecure
+    if isEventCleared("PRG028"):
+        PRG "Keisuke-"
+    else:
+        PRG "Hotsure-san-"
+    "Clerk" "S'already on one ticket anyway."
+    "I nodded and passed him some yen, then stepped Aida and I off to the side."
+    show PRG worried
+    PRG "W-Why did you do that?"
+    MC "Pay for you?"
+    PRG "Mm."
+    MC "Because it's polite, and I wanted to."
+    PRG "W-Well, you didn't have to-"
+    show PRG unique
+    PRG "Mmn..."
+    show PRG worried
+    PRG "... T-Thank you."
+    MC "Of course."
+    "I looked down the row of booths. The sky was now nearly completely dark overhead, making the festival have even more of a spark to it."
+    PRG "I-It's so nice out."
+    MC "Yeah. Not humid, cool breeze. Perfect."
+    MC "What did you get to see before you headed down that way?"
+    PRG "I just... w-walked past the games."
+    MC "Play any?"
+    PRG "N-No."
+    PRG "I've only been here for... 20 minutes?"
+    MC "Alright."
+    "In the middle of the festival nearby, a woman was singing some sort of flowy, slow song. A few people stood nearby, listening."
+    scene black with fade 
+    $setTime(TimeEnum.NIGHTLIGHTS) 
+    pause .25
+    scene Festival
+    show PRG worried
+    with fade
+    "Clerk" "'Ere ya go."
+    "The man in the booth set my two crepes, Aida's nikuman, her water, and my tea on the counter."
+    MC "Thank you."
+    pause 1
+    PRG "Um... w-where should we go sit?"
+    MC "Maybe by the water? Over there?"
+    "I pointed off to one end of the festival to a few tables set up by the water. One or two of them had people at them, but quite a few were open."
+    PRG "O-Okay. I... I'll follow you."
+    "I led the way across the grass, bringing Aida over to the table."
+    "Setting my food and tea down, I held my hand out to set Aida's food down for her, offering her a hand so she could sit."
+    PRG "T-Thanks... t-thank you."
+    MC "Of course."
+    "I took my chopsticks and broke some of my cinnamon crepe off, getting it into my mouth with very little drippage."
+    show PRG unique
+    pause 1
+    PRG "I-I'm... s-sorry for being so difficult."
+    MC "What?"
+    PRG "... S-Sorry."
+    MC "What do you mean?"
+    show PRG unsure
+    PRG "H-How I'm acting."
+    PRG "... B-Being around all of these people."
+    PRG "I-I feel like everyone is staring."
+    "I took a glance at the table beside us, where three guys were sitting, all on their phones."
+    "Behind Aida, I could see a table of about six or seven people, all of whom were just eating and talking."
+    "Just as Aida took a bite of her nikuman, a group of five passed us. One or two people glanced down briefly, but little more than a passing ponder."
+    "The last one of the group, a guy who looked a little older than me glanced down longer than the others, but kept moving."
+    MCT "... Can't really blame a guy for checking out cleavage."
+    MC "Well... okay."
+    MC "I know that when it comes to this sort of thing, logicing it out... never quite cuts it."
+    PRG "N-No..."
+    MC "But, I get it. I'm here."
+    show PRG unique
+    MC "I'm totally fine with just chilling out here. But, you aren't being difficult."
+    MC "You're trying to come back out into the world after having dealt with some... well, for lack of better phrasing, really heavy shit."
+    PRG "I-I... still feel like I'm being such a baby..."
+    PRG "But... mmn..."
+    "She scanned the area around us."
+    PRG "Mmn... nevermind."
+    "I took a breath."
+    "It likely wasn't easy. Getting pregnant and growing to the size of a full-term pregnant woman only to, days later, go to a festival dressed to the nines in an outfit that had to be altered to even make it fit."
+    "Plus, showing a lot more skin than you were likely comfortable with, on top of all of this."
+    show PRG worried
+    UNKNOWN "{i}Mmch-hnmm...{/i}"
+    "Aida and I both glanced toward the sound that was almost that of someone trying to get attention."
+    show PRG worried at altMove(0.5, 0.25)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    pause 1
+    "Naomi walked past the tables, sipping from a liter bottle of water. She stopped by the railing, facing away from us, and just stood, looking out over the sea."
+    PRG "... She looks so amazing."
+    "Groups of people and others stood around her."
+    "A family on a festival get-together stood off to her right."
+    "A photographer taking pictures of a woman in an almost model-like yukata and makeup was off to her other side."
+    "... A couple clearly having their first kiss were off a ways behind the photographer."
+    GTS "{i}Mmh-hhchnn...{/i}"
+    "She sipped her water again, as a guy our age walked up to Naomi and said something to her."
+    show GTS happy 
+    "Naomi smiled and bowed politely, offering some words of thanks or something to that degree."
+    pause 1
+    GTS "Ah! Kodama-san and Hotsure-san! Good evening!"
+    show PRG blush
+    "She walked over... which took much shorter than I would have imagined. Aida shifted over slightly on her side of the table."
+    PRG "H-Hello..."
+    GTS "Pray pardon me if-"
+    show GTS surprised
+    GTS "I... Kodama-san. My goodness..."
+    GTS "You look absolutely stunning."
+    show PRG insecure
+    "Naomi crouched a little, and ran her fingers over Aida's yukata sleeve."
+    GTS "Your yukata is so elegant and serene. Like newfallen snow..."
+    show PRG unique
+    "I turned my head, hiding a large 'I told you so' as Aida blinked and suddenly became very interested in adjusting the top of her yukata."
+    PRG "T-Thank you... Y-Yamazaki-san. You too. Y-You look beautiful."
+    show GTS neutral
+    GTS "Thank you very much."
+    GTS "Now, as I was, you'll forgive me if my voice is a bit unseemly."
+    MC "Mm. Allergies?"
+    GTS "Oh, not at all! I've simply been rather occupied."
+    GTS "You see, I've been indulging attendees tonight with the story of how Kyoto's own Hollyhock festival came to be."
+    GTS "And, my voice is a touch spent, to put it lightly."
+    MC "I see."
+    show PRG worried
+    PRG "Um..."
+    "Aida scooted over a little, and patted the seat beside her."
+    PRG "F-Feel free to sit down."
+    GTS "Mmn, thank you."
+    "Naomi sat toward the very end of the bench, extending her legs out off to the side and bringing them under her seat delicately."
+    GTS "I do so enjoy the night time breezes coming off of the ocean."
+    GTS "Especially on a clear night such as tonight. The air is thinner, and scents flow so easily."
+    PRG "Me too."
+    GTS "Have you two gotten to explore the festival? Take in the sights?"
+    show PRG unsure
+    MC "Not quite yet. We're just taking things easy for now."
+    GTS "And a fine way to do it."
+    GTS "I do love a festival, but this one in particular feels so much more... necessary."
+    MC "Necessary?"
+    GTS "Perhaps that's a poor choice of word. In which case, I'd say 'restorative' might be more applicable."
+    MC "Why do you say that?"
+    GTS "For one simple reason. It's brought back a sense of normalcy, and has brought so many people together."
+    MC "In the sense of... factors?"
+    GTS "Exactly that."
+    GTS "You have doubtless noticed, too. The ease of everyone's manners, the kind words, and the gaiety, and the lightness on every face."
+    GTS "As well, many of them have been students or associates of the academy."
+    GTS "Seeing everyone here, delighting in a classic story despite circumstances. It has a way of healing."
+    show PRG worried
+    MC "Yeah. Seems like it does."
+    GTS "A few of our classmates have come by, as well. Inoue-san and Matsumoto-san, chiefly."
+    MCT "Knew I saw Honoka earlier."
+    MC "That's awesome. Must be an amazing storyteller then."
+    GTS "While the complement isn't lost, Hotsure-san, I believe that at a festival like this, all talents are appreciated and acclaimed."
+    GTS "It's a celebration of life. A night of fun and peace. Why, it dispels stress just like magic."
+    "I looked off, where far in the distance, I could see the stage with the strongmen doing some sort of showboat-y balancing of weights in their arms."
+    MC "Yeah. Makes sense."
+    GTS "As we were, pardon my rambling."
+    GTS "Kodama-san, have you had a chance to sample some of the foods being offered?"
+    PRG "J-Just nikuman."
+    GTS "In which case, I must recommend the tomorokoshi. For someone versed in the culinary as much as yourself, I believe you'd find it quite appealing."
+    PRG "O-Okay."
+    GTS "Would you like to join me? And Hotsure-san, of course?"
+    if isEventCleared("PRG028"):
+        MC "Your call, Aida."
+    else:
+        MC "Your call, Kodama-san."
+    pause .25
+    show PRG unsure
+    pause 1.5
+    show PRG worried
+    pause .75
+    PRG "... Okay."
+    GTS "Excellent!"
+    "Naomi rose up from the table, her head brushing the branch of a tree."
+    "She idly and quickly brushed a stray leaf from her head as Aida and I got up from the table."
+    GTS "Now, shall we? We should be able to make our way through the park in the middle."
+    MC "Sounds good."
+    show PRG sad-2
+    "As Naomi turned and headed off, I came forward and took Aida's hand."
+    MC "I'm right here."
+    "Walking after her, Aida didn't say anything. Until about half a minute later, when she squeezed my hand."
+    PRG "T-Thank you..."
+    "Following Naomi proved to be a bit more difficult than I would have imagined. She was easy to keep track of, but her pace proved quicker than what Aida or I were used to."
+    "Luckily, she halted not too far into the park, by a large tree in the middle."
+    "A woman stood under it, singing a delicate, traditional song. Beside her, another woman was sat on the ground, playing a shamisen."
+    GTS "Oh..."
+    show PRG worried
+    "Naomi turned, halting around the small crowd that had formed by the woman and sighed, her eyes closing as she folded her hands in front of her."
+    "The crowd made it a bit hard to actually see the singer of her accompaniment, but her voice rang out, the natural, harp-like tone almost seeming to be filtered by the leaves and greenery around her."
+    GTS "Her tone is serene..."
+    PRG "It's beautiful..."
+    "I leaned down to Aida."
+    MC "Can you see?"
+    PRG "N-Not the singer. But, it's okay."
+    PRG "I can hear."
+    GTS "Do you mind if we stay and listen for a short while?"
+    show PRG neutral
+    PRG "No, that's okay."
+    if isEventCleared("PRG028"):
+        PRG "Is it okay with you, Hot- I-I mean, Keisuke?"
+    else: 
+        PRG "Is it okay with you, Hotsure-san?"
+    MC "Yeah, totally."
+    MC "Here. Let's back up a bit. Get our own space."
+    "The three of us found a spot along the edge of the crowd, leaving room for others to pass us."
+    "Naomi sighed softly, easing herself down into the grass."
+    "I fluffed my yukata out to sit."
+    if isEventCleared("PRG028"):
+        "I turned my head sideways, a flash of red catching my eye."
+        "Toward the back of the group, there was another clearing, in which a man and a woman were held close together, swaying slightly to the tune, both dressed in bright red yukata."
+        "Still holding Aida's hand, I squeezed to get her attention."
+        MC "Hey. Come here a second."
+        show PRG worried
+        PRG "H-Huh? W-Where are we going?"
+        MC "Just trust me."
+        "Aida followed as I led her down the small slope and toward the dancing couple's area."
+        show PRG scared
+        PRG "K-Keisuke..."
+        PRG "D-D-Dance?"
+        MC "Well... to make it official, may I have this dance?"
+        PRG "I-I haven't danced in years..."
+        MC "That's alright."
+        MC "I've never really danced."
+        MC "Let's celebrate."
+        show PRG insecure
+        PRG "C-Celebrate? Celebrate what?"
+        MC "Well... I don't know. Life? Like Yamazaki-san said."
+        MC "And, I think us too."
+        MC "A new relationship."
+        "Aida glanced back at Naomi, who had gotten up and followed us."
+        "I led Aida into the middle of the small clearing, sort of closer to the other couple."
+        show PRG scared
+        PRG "K-Keisuke-"
+        "Aida looked sideways at everyone around us."
+        "Aside from Naomi, literally no one was looking."
+        PRG "I-I-I..."
+        MC "Here... we're gonna have to get a little closer."
+        show PRG surprised
+        "I reached gently around Aida, putting my hands on her waist and nudging her in."
+        "Her belly pushed into my stomach."
+        MC "Now, we go here-"
+        "I took Aida's right hand with my left and held it up a little, my other hand around her waist."
+        MC "There."
+        show PRG blush
+        "Aida's other hand went to my upper arm, then pulled down onto my upper chest, right by my collarbone."
+        "The duet's song continued on, as Aida stared into my eyes like a wide-eyed doe."
+        "We barely moved at first, our bodies needing time to get to know each other."
+        "A minute or so in, I slowly twisted her around in a slow rotation, both to move us from our spot, but also so Aida could see... just how few people were looking at us."
+        "Naomi sat on the ground off to the side, her hands folded in her lap as she watched, her face open and warm."
+        "The other couple beside us glanced over momentarily, the guy clearly not really paying attention, and looking off toward the musicians."
+        "The woman, however, let her glance linger a bit. She saw my head turned toward her and gave a warm smile."
+        "She was clearly in her mid to late 20's, with a slim yukata on."
+        "She and her dance partner moved a bit closer toward us, the two coming alongside."
+        Woman "Try bringing your hand higher, Dear."
+        show PRG scared
+        "Aida jumped, turning her head."
+        Woman "Up a bit, onto his shoulder a little more, then lean in a little. Let him lead you."
+        show PRG worried
+        "Aida glanced up at me, then back to her."
+        PRG "T-Thank you..."
+        "She nodded, shifting away again."
+        "Aida adjusted her hand by my neck, and leaned in a little more."
+        PRG "S-Sorry for my belly..."
+        MC "Hey, no worries."
+        MC "I'm just happy to be dancing with you."
+        MC "You look gorgeous, and this is the perfect night."
+        "I could hear Aida inhale."
+        "In that moment, she seemed to loosen a little, her movements turning ever so slightly more fluid."
+        "She turned a little more with me, where I could see Naomi, and she could see behind me."
+        show PRG insecure
+        PRG "K-Keisuke..."
+        MC "Hm?"
+        PRG "... Mmnnnn."
+        "Aida's eyes were trained on a spot off to the side of me."
+        "Her hand held in mine suddenly started to shake."
+        "We turned a little more... and I saw what she was staring at."
+        "Across from where Naomi was sitting were... four girls."
+        "And all of them were staring at us, eyes wide and mouths slightly open."
+        MC "Who are they?"
+        PRG "... C-Cooking club. R-Remember?"
+        MC "Oh..."
+        "I tried to fill the space around Aida. To take up more room."
+        "It wasn't working. Aida was now staring right at my chest, her face stark white."
+        MC "Aida."
+        PRG "..."
+        "I leaned my head down to her."
+        MC "Hey. It's okay. The song is winding down."
+        MC "I'm right here with you."
+        MC "I'm not letting go."
+        "Aida stared up at me as the song ended."
+        "Polite applause came from the crowd. Aida and I applauded as well for a moment, before I took Aida's hand again and started back toward Naomi."
+        GTS "That was so moving, you two. So elegant and passionate."
+        show PRG unsure
+        PRG "I-I haven't danced in a long time."
+        GTS "I would never have known had you not said. That was heartwarming."
+        show PRG scared
+        UNKNOWN "Kodama-san!!"
+        "Naomi and I glanced over as the same four girls came over."
+        "One of them seemed to be completely average on her top half, but her hips jutted out on either side of her yukata, her longer, brown hair hanging down in curls."
+        show PRG unique
+        UNKNOWN "You look amazing!!"
+        PRG "T-Thank you... A-Akasofu-san..."
+        UNKNOWN "I never knew you could dance."
+        "I glanced at a girl who, shockingly, was shorter than Aida. This was offset by her slightly chubbier look."
+        PRG "I-I don't do it often..."
+        UNKNOWN "Hold on, who are these two?"
+        "The girl, Akasofu-san, glanced at me, her eyes wide, as the rest of the group seemed to be paying more attention to Aida's middle."
+        PRG "T-This is Keisuke... m-my boyfriend."
+        PRG "And... u-um..."
+        show PRG unsure
+        PRG "W-Well... I-I'm... {w}p-pregnant, and-"
+        "All four girls let out different degrees of cries, exclamations, and squeals."
+        PRG "A-And this is Yamazaki-san. A-And s-she's a friend from m-my homeroom."
+        PRG "And-"
+        show PRG worried
+        "The four girls clearly hadn't heard anything past Aida's pregnancy announcement."
+        "Aida simply let her thought drop, looking over to me and holding my hand again."
+        "She leaned over to my ear."
+        PRG "C-Can we go?"
+    else:
+        MC "Oh, here."
+        "I held a hand out to Aida, and helped her sit down on the ground."
+        GTS "Mm... I love watching musicians."
+        GTS "Is it not a wonder how a few mere sounds can quicken the heart?"
+        MC "Very."
+        show PRG worried
+        PRG "Y-Yes..."
+        "The song went on for another five or so minutes, until the duet came to a close and the crowd around them broke into delicate, polite applause."
+        GTS "Well, shall we continue on?"
+        PRG "O-Okay."
+        "I got myself up, and offered Aida a hand up."
+        "After getting Aida standing, I held my hand out to Naomi."
+        GTS "Thank you, Hotsure-san."
+        "She stood up beside Aida and I, her presence making itself known over us."
+        GTS "Well, we aren't far now."
+        show GTS surprised
+        UNKNOWN "KODAMA-SAN?!"
+        show PRG sad-2
+        PRG "Oh, no..."
+        "Across the crowd of people, four girls made their way toward us."
+        "One of them sort of led the group, her hips jutting out to either side of her, tenting her yukata out."
+        UNKNOWN "We didn't think we'd see you here!"
+        UNKNOWN "Yeah! And like... wow."
+        "Aida seemed to almost press herself into my side."
+        UNKNOWN "Who are these two?"
+        show PRG insecure
+        show GTS neutral
+        PRG "T-This is Yamazaki-san. S-She's a... a friend from my homeroom."
+        "Aida glanced at me."
+        PRG "A-And this is H-Hotsure-san. He's... m-m-"
+        UNKNOWN "Wait, hold on!"
+        UNKNOWN "What's with the..."
+        "The girl with the hips made a sort of nod to Aida's belly."
+        PRG "Um... w-well, I'm... p-pregnant, and..."
+        show PRG worried
+        "All four girls erupted into squeals and cries of excitement and giggles."
+        "Aida glanced up at me."
+        PRG "C-Can we go?"
+    "I nodded."
+    MC "Well, we should be on our way. We have to-"
+    UNKNOWN "Hold on, Kodama-san!"
+    "One of the other girls, a girl with rather large breasts, came forward."
+    UNKNOWN "You look gorgeous. Like, so... naturally beautiful."
+    show PRG blush
+    PRG "T-Thank you..."
+    "Aida sort of pressed into me again, almost seeming to push me along."
+    MC "It was nice meeting you all."
+    "All four girls gave some sort of goodbye as Aida pulled my hand forward, and away from them."
+    pause 1
+    PRG "S-Sorry..."
+    MC "Hey, no skin off my back."
+    GTS "Yes, I see no reason to apologize. I take it those four are familiar with you?"
+    PRG "... I-I don't know them that well."
+    PRG "J-Just from cooking club."
+    GTS "They seemed quite eager to speak with you."
+    PRG "Yes..."
+    pause .75
+    show PRG unsure
+    pause 1
+    GTS "... I do not wish to assert myself where it isn't polite..."
+    GTS "However... I do understand, Kodama-san."
+    GTS "It is... rather difficult to bring yourself out into the eyes of others when your own eyes are on yourself as well."
+    show PRG unique
+    PRG "I'm... sorry. I know that I must sound so... p-pathetic compared to..."
+    PRG "... N-Nevermind."
+    GTS "Come now, Kodama-san."
+    GTS "Each of us must live our own lives by our own standards."
+    GTS "A boulder in one man's path may well be a pebble in another's."
+    MCT "I'm sure it is, Yamazaki."
+    GTS "And until the twain have walked each other's paths, indeed, how can either judge?"
+    GTS "As such, while I won't say that my situation is easy, I also would never think yours simple by comparison."
+    show PRG worried
+    GTS "Nor would I claim such about Hotsure-san's either, nor any of our classmates, for that matter."
+    "I nodded after a moment, and turned my gaze back to Aida."
+    PRG "T-Thank you."
+    GTS "And thank you for spending tonight with me."
+    GTS "Now, shall we? There's tomorokoshi yet to taste, and I simply must hear your opinion."
+    "Aida nodded as Naomi turned and strode off in front of us."
+    "I held Aida's hand again, to which she held a bit tighter."
+    scene black with fade
+    pause .75
+    scene Festival
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    "About fifteen or so minutes later, Aida and I sat by the waterfront again, at the table."
+    "Naomi sat across from us at the table, the three of us finishing our tomorokoshi."
+    MC "Okay... that was well worth the walk. Well worth."
+    GTS "I'm so glad you enjoyed it. What about you, Kodama-san?"
+    PRG "Mmmnh... t-that's the best tomorokoshi I've ever had."
+    MC "Can you make that in the kitchen?"
+    show PRG worried
+    PRG "Um... not quite like this, but I can do something close."
+    PRG "It would have to be pan-fried as opposed to grilled."
+    MC "I have utmost faith."
+    PRG "I... w-well I'm not sure how-"
+    show dummy with vpunch
+    "{i}{b}BOOM!{/b}{/i}"
+    show PRG scared
+    show GTS surprised
+    show dummy
+    with vpunch
+    "Aida, Naomi, and I all jumped at once as a huge rocket exploded in the sky, showering the festival in blue light."
+    GTS "Oh! The show is beginning!"
+    "We all glanced up as another rocket blew up in an explosion of yellow."
+    GTS "I'd like to see it from the center of the festival. Might I trouble you two once more?"
+    show PRG worried
+    PRG "Um..."
+    MC "Wanna go closer to the water to watch?"
+    PRG "... Mhm."
+    MC "We might head over to the water, Yamazaki-san. Appreciate it, though."
+    show GTS neutral
+    GTS "Not at all."
+    GTS "And, I must say, I had such a wonderful time with you two. Thank you dearly for spending it with me."
+    show PRG neutral
+    PRG "Y-You're welcome. T-Thank you, too."
+    GTS "You're very welcome, Kodama-san. I wish you both the best of evenings."
+    hide GTS with dissolve
+    "We both waved to Naomi as she headed off toward the middle of the park. Aida and I threw our trash out, then walked off to one side, where we could see the sky from the railing by the waterfront."
+    "I leaned against the railing, putting my arms out on either side and looked up to the sky."
+    if isEventCleared("PRG028"):
+        show PRG neutral at altMove(0.5, 0.5)
+        "Aida walked up to my side, and leaned against the rail too."
+        "She pulled in against me, and looked up, as one of her arms went around my back."
+        "I raised my arm up and around her shoulder, pulling her in against me."
+        PRG "They're so pretty..."
+        MC "Yeah... look at that one..."
+        "A huge blast of red and white exploded, shimmering down with crackling pops all around."
+        "Aida leaned her head onto my chest, as I glanced down at her."
+        "Her boobs were pressed into me, as underneath them, I could feel her belly pressing into my side."
+        MC "... Getting snuggly?"
+        show PRG neutral
+        PRG "Mhm."
+        MC "Come here, then."
+        "I hugged her around the shoulders, as-"
+        show dummy with vpunch
+        "{i}{b}BOOM!{/b}{/i}"
+        show PRG surprised
+        show dummy
+        with vpunch
+        PRG2 "OH!"
+        "I gasped as one firework exploded... way lower than it should have, low enough that it illuminated the entire crowd in the middle of the park, the explosion just missing a few trees."
+        PRG "T-That was so low!"
+        MC "Yeah, someone really screwed up. Holy crap."
+        "I took a breath as the rest of the show continued up above, where it should be."
+        show PRG neutral
+        PRG "H-Hey."
+        MC "Hm?"
+        PRG "... A-Are we going to work on our paper tomorrow?"
+        MC "... I mean."
+        PRG "W-We have to get it done."
+        MC "I know, I know."
+        MC "But yeah, we will."
+        PRG "Good."
+        "As the show continued overhead, I glanced down at Aida, as she looked up at me."
+        "I brought my hand to her forehead, brushing a piece of hair away."
+        "Resting my head on hers, I held her there as we watched the show."
+        $setFlag ("MC010PRG_PRG028")
+        jump daymenu
+    else:
+        show PRG neutral at altMove(0.5, 0.5)
+        "Aida came to the railing beside me and leaned against it, looking up."
+        PRG "They're so pretty..."
+        MC "Yeah..."
+        "I turned to Aida, a piece of hair fluttering by her lip."
+        MC "Here... you got like a..."
+        "I pointed at my own lips."
+        show PRG blush
+        MC "Uh... here."
+        "I reached over and brushed the piece back behind her ear."
+        PRG "T-Thank you..."
+        MC "Mhm."
+        MC "Did you have-"
+        show PRG scared
+        show dummy with vpunch
+        "{i}{b}BOOM!{/b}{/i}"
+        PRG2 "OH!"
+        "I gasped as one firework exploded... way lower than it should have, low enough that it illuminated the entire crowd in the middle of the park, the explosion just missing a few trees."
+        PRG "T-That was so low!"
+        MC "Yeah... someone really screwed that up. Holy crap."
+        show PRG worried
+        "I took a breath as the rest of the show continued up above, where it should be."
+        MC "Anyway... did you have fun tonight?"
+        PRG "..."
+        PRG "I-I was worried... b-but yes."
+        PRG "Thank you..."
+        MC "My pleasure."
+        MC "It was..."
+        MC "Hm..."
+        PRG "What?"
+        MC "Nhh... nothing."
+        PRG "No... what is it?"
+        "I sighed, looking back at her, as Aida was leaned slightly into me, trying to meet my eye."
+        MC "Just... after all this stuff going on lately, it was... nice to have this time together."
+        MC "A low stress night, you know?"
+        MC "I-I mean... low stress as in like nothing going on, not like no worries or anything because I know that you were... ach, nevermind."
+        PRG "... I know."
+        PRG "I-I know... what you mean."
+        "Aida looked back up at the sky."
+        "I felt her hand touch my side, then find my arm and go to my hand, holding it again."
+        pause 1
+        PRG "Spending time with you made me feel better."
+        MC "I'm glad, especially after that announcement."
+        PRG "It... it would have needed to happen anyway."
+        PRG "I-I can't just hide this."
+        MC "I... yeah. Guess you can't."
+        "Aida sighed, her eyes still in the sky as a bright green firework blew up overhead."
+        PRG "... Tonight made me feel normal again, though."
+        MC "I get that. I do."
+        "I squeezed her hand again as we looked on together."
+        $setFlag ("MC010PRG_PRG027")
+        jump daymenu
+
 label MC010_WG:
     $setWGOutfit(OutfitEnum.TRADITIONAL)
     $setGTSOutfit(OutfitEnum.TRADITIONAL)
     $setOkishoOutfit(OutfitEnum.TRADITIONAL)
+    play music ChangingSeasons
     MC "Nevermind..."
     if checkAffection("TM", ">", 3) or getFlag("MC005TM"):
         MCT "Something must have happened. As much as I want to pry I probably shouldn't. She probably just needs her space... {w}I'll make sure to check up on her tomorrow."
-        MC "You probably got the right idea. I guess these are quite the same like when we were kids. Still though, I think I'm going to check it out."
+        MC "You probably got the right idea. I guess these aren't quite the same like when we were kids. Still though, I think I'm going to check it out."
+        show Tomoko worried
         Tomoko "Yeah... I mean, it was worth checking out... I just think I've seen all I wanted to see already."
         MC "Sounds good. I'll talk to you tomorrow."
-        Tomoko "Sure. Later, Kei."
-        $setAffection("TM",1)
+        show Tomoko neutral
+        Tomoko "Sure. Later, Bro."
+        $setAffection("TM", 1)
         MCT "I wish I could keep a better eye on her, but I can't hover over her all the time either."
         MCT "There's probably not that many people heading out of town on the bus at this time. A little quiet time is probably what she needs."
     else:
         MCT "Something must have happened. As much as I want to help, it's not like she listens to me about anything anyway... {w}Maybe I'll check in with her tomorrow."
         MC "I guess I'm not expecting too much from this festival either. Still though, I think I'm going to check it out. Something to do at least."
+        show Tomoko worried
         Tomoko "Yeah... I mean, it was worth checking out... I just think I've seen all I wanted to see already."
         MCT "I guess that's her excuse."
         MC "Alright, sounds good. I'll see you later."
-        Tomoko "Later, Kei."
-        $setAffection("TM",1)
+        show Tomoko neutral
+        Tomoko "Later, Bro."
+        $setAffection("TM", 1)
+        hide Tomoko with dissolve
         MCT "...I'm not so sure if I'm doing a good job of keeping an eye on her like Dad asked..."
     scene Festival with fade
+    play music Festival
     $eventname = "Patiently Weighting"
-    $save_name  = "Patiently Weighting"
+    $save_name = "Patiently Weighting"
     MCT "Now let's see here..." 
     MCT "Alice shouldn't be too hard to find. Those golden curls of hers makes her stick out in just about any crowd."
     MCT "Well, assuming she's even here. Not sure how she feels about your common street festival when you're used to fine dining and fancy galas. {w}At least that's what I assume rich people are into."
@@ -7951,7 +11335,11 @@ label MC010_WG:
         "I wasn't any kind of detective, but something told me I had a pretty good lead that I should follow."
         MCT "Time to hit up the food stalls I guess."
     "I meandered through the aisles of stalls for a while without much luck. It wasn't like there was a definitive section where all the food stalls were, but there were definitely pockets where they seemed to cluster together."
-    if isEventCleared("WG027") or isEventCleared("WG027A"):
+    if isEventCleared("WG027") and getFlag("WG027A_unlock") and not isEventCleared("WG027A"):
+        "Part of me was wondering if it might not have been the best idea to try to find her here. After having her turn down my invitation to a date, it might have been better to let things cool off a bit before trying something again."
+        MCT "But maybe this is a good way to ease into things? If we end up having a good time together, maybe that'd convince her to go out on a {i}date{/i} date."
+        "One thing was for sure, I wasn't going to get a chance to ask her out again by trying to avoid her."
+    elif isEventCleared("WG027") or isEventCleared("WG027A"):
         "Part of me was wondering if I might have been jumping the gun by trying to find her. {w}I already asked her out and we were on for a date, but I met up with her here, was that going to be our first date now?" 
         MCT "Get out of your own head dude. You're just going to see if she was to hang out and take it from there. Doesn't need to be anything more than that."
         MC "Right... Just keep it casual, Kei."
@@ -7983,7 +11371,7 @@ label MC010_WG:
     WG "Since it didn't quite satisfy my taste buds, I decided to try this ikayaki booth."
     MC "Had better luck with that, I take it?"
     show WG haughty
-    WG "Quit so. Good, but not amazing. The preparation isn't anything special, but the sweet glaze they used elevates it above the mundane."
+    WG "Quite so. Good, but not amazing. The preparation isn't anything special, but the sweet glaze they used elevates it above the mundane."
     MC "Well, hopefully there's something here that'll hit it out of the park for you." 
     show WG neutral-2
     WG "Here's to hoping, but I'm not terribly optimistic."
@@ -8016,6 +11404,7 @@ label MC010_WG:
     MC "Yikes. That does sound rough."
     show WG neutral-2
     MCT "Guy sounds like a total hardass. But, I guess he can't be that bad if Alice thinks so highly of him."
+    play music GTSAlt
     "As we walked along we saw a crowd gathering around one of the performance stages. Neither one of us could quite see what the fuss was about, but Alice immediately recognized the strumming of a biwa."
     show WG surprised-2
     WG "Oh, it looks like someone is doing a traditional story reading. Let's get a closer look."
@@ -8053,6 +11442,7 @@ label MC010_WG:
         MCT "Guess she's in a hurry. {w}Or maybe just hungry."
 
     show WG neutral
+    play music Festival
     "We passed by a few different booths, but no yaki tomorokoshi stall yet. What I did see though was a booth with the goldfish scooping game."
     MC "Aw man, I remember doing this as a kid. Talk about rigged. Those stupid paper scoops would rip every time— and even if they didn't, the fish would just slide off them!"
     show WG coy
@@ -8072,9 +11462,9 @@ label MC010_WG:
     MC "That's a bold claim. I gotta see this then."
     show WG neutral-2
     "Expecting her to jump into action and just start scooping, Alice instead just stood by the side of the tank." 
-    pause 1
+    pause 3
     "I assumed she was taking her sweet time picking her mark, but after what felt like over a minute she still hadn't made a move."
-    pause 1
+    pause 3
     MC "Am I missing something here?"
     show WG sly
     WG "Patience apparently. I never said this would be quick— only that I would succeed." 
@@ -8117,7 +11507,12 @@ label MC010_WG:
     MC "Anyway, I didn't take you up on a bet, thankfully, but I feel like I owe you something for doubting your skills. Seems like you've earned a yaki tomorokoshi."
     show WG haughty
     WG "Is that so? I didn't expect you to pay for mine, but if you're offering then I'm accepting."
-    show WG neutral
+    scene black with fade
+    pause .2
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Festival with fade
+    play music TwilightBright
+    show WG neutral with dissolve
     "The stall selling them wasn't too far from where the goldfish scooping booth was. Luckily the line was only a few people deep. I suspected it was because the bulk of the crowd was starting to make their way towards the fireworks display."
     MC "Two yaki tomorokoshi please."
     Chef "There you go!"
@@ -8158,10 +11553,12 @@ label MC010_WG:
     show WG pondering
     WG "I wouldn't mind getting another, but I think I'll save room for dessert."
     show WG surprised-2
+    show dummy with vpunch
     "{i}{b}*BOOM!*{/b}{/i}"
     MC "Sounds like the fireworks are starting."
     show WG neutral-2
     "Both of us looked up in time to see a shower of blue and white sparks rain down overhead."
+    show dummy with vpunch
     "{i}{b}*BOOMPH!*{/b}{/i}"
     "Another one plunked out from the motor tube from the festival center, this one exploding into a bright green supernova of sparkles."
     MC "I heard Americans like fireworks too."
@@ -8194,7 +11591,7 @@ label MC010_WG:
     WG "She's been quiet most of the time, and I respect her need for space, but I do my best to make sure I'm there to listen when she does want to talk."
     show WG neutral-2
     WG "Honestly I'm proud of her for wanting to step out and attend the festival. It's a small thing, but I think it shows that she realizes that the world isn't going to stop on account of her personal circumstances."
-    WG "She may come off as meek, but in my experience she is a very diligent worker and I know she'll do her best to navigate her situation as best she possibly can." 
+    WG "She may come off as meek, but in my experience she is a very diligent worker and I know she'll do her best to navigate her situation as well as she possibly can." 
     MC "That's good to know then."
     MC "Well, I don't want to hold you up any further. {w}So, raincheck on dessert?"
     show WG happy
@@ -8203,6 +11600,1438 @@ label MC010_WG:
     MC "Goodnight, Alice."
     WG "Goodnight, Keisuke."
     "Something told me I'd be cashing that check for dessert with her sooner rather than later..."
+    jump daymenu
+
+label MC010_TM:
+    show Tomoko worried
+    Tomoko "I..."
+    Tomoko "I just kind of... want to go back to my dorm, though."
+    MC "Alright, hold on."
+    MC "I think I've got an idea."
+    MC "You said before that quiet and off the beaten path moments in games are nice changes of pace."
+    MC "What about levels where the main character and their companions or party hang out and have a good time?"
+    show Tomoko neutral
+    MC "I always found those enjoyable, myself."
+    show Tomoko smile
+    Tomoko "... That shit was so cheesy."
+    MC "Come on. Hang with your bro for once."
+    show Tomoko neutral
+    Tomoko "... {w}Fine. But only for a little while."
+    MC "Deal."
+    "I bowed with a flourish, and gestured my hand out with a bit of flair."
+    show Tomoko annoyed
+    "I glanced up as Tomo pulled off the world's greatest facepalm and walked ahead."
+    Tomoko "I don't know you, I don't know you, I don't know you..."
+    $eventname = "Deep Dive"
+    $save_name = "Deep Dive"
+    play music Tomoko
+    scene Festival
+    show Tomoko neutral
+    with fade
+    if routelock == "AE":
+        MCT "Shiori's probably still busy, anyway. I got time."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I slipped my phone out of my pocket, pulling up my texts."
+        MCCell "Hey!! You still working out or are you on your way?"
+        "I slid it back into my pocket, patting my kimono to make sure it was in the right spot as I walked on."
+    elif routelock == "PRG":
+        pause 2
+        MCT "... Should I tell her?"
+        "I looked sideways at her."
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "I slipped my phone out of my pocket, pulling up my texts."
+        MCCell "Hey!! Get the yukata problem contained? Let me know when you're heading down!"
+        "I slid it back into my pocket, patting my kimono to make sure it was in the right spot as I walked on."
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        MCT "I'll look for Alice later. I can keep an eye out as we're going around."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        MCT "I'll keep an eye out for Naomi. Can probably spot her around if I look hard enough."
+    else:
+        MCT "Is that a new yukata? Haven't seen it before..."
+    show Tomoko worried
+    "The crowd thickened as we came into the heart of the festival. A small opening in the gathering let me slip through, forcing Tomo behind me a bit."
+    "As we came out on the other side, Tomo kind of... held there, walking fairly close behind me."
+    "She had one arm down and over her messenger bag, her hand up and picking at the coarse fabric with one fingernail."
+    MC "Hey. You look nice in your yukata, by the way. I like it."
+    show Tomoko flattered
+    "Tomo pulled out from behind me and walked alongside, glancing and scooting in against me as a heavier set woman walked past her, Tomo's eyes following her as she passed."
+    show Tomoko neutral
+    Tomoko "Thanks..."
+    Tomoko "I feel so... weird in traditional clothes."
+    "Her arm was still over her bag, as she shuffled along beside me."
+    "We turned down along some of the various booths and pop ups, glancing at the many people ordering food or playing games, the idle crowd noise seeming to dull the senses a little."
+    MC "How..."
+    MC "{i}Ehem{/i}... how are you feeling?"
+    show Tomoko worried
+    Tomoko "I'm... fine."
+    pause 2
+    MCT "Yeah, that's Tomo."
+    MCT "Always fine."
+    if routelock == "PRG":
+        "My eyes went back to her again."
+        MCT "... Maybe I should. She deserves to know that... well, she's gonna be an aunt."
+    "I shook my head."
+    show Tomoko neutral
+    MC "How's classes and stuff going?"
+    Tomoko "Okay."
+    MC "Just okay?"
+    Tomoko "Yeah..."
+    Tomoko "Well, there's this project I'm working on in economics and civics that I'm working on with this girl in my class."
+    MC "Cannot stand that class."
+    MC "And the teacher. Yeah, no. Straight up the worst."
+    Tomoko "Yeah. Same here."
+    Tomoko "Anyways... I wanted to do the project alone, but we were paired up, and I think we got a really bad start."
+    MC "On the project?"
+    Tomoko "No... like, with each other. We don't really get along that well."
+    MC "Ah."
+    MC "What did you say to her?"
+    show Tomoko annoyed
+    Tomoko "Nothing. Literally nothing."
+    Tomoko "She couldn't get in touch with me, and she got all pissy."
+    MC "That's it?"
+    show Tomoko neutral
+    Tomoko "I dunno. Probably."
+    if isEventCleared("MC003"):
+        MC "I know the feeling."
+        Tomoko "I apologized already. Multiple times."
+        Tomoko "You can stop giving me shit about that whenever you'd like."
+    MC "So, did you do anything to get this all sorted out?"
+    Tomoko "Yeah. Yuki did most of the work."
+    Tomoko "She talked to the girl and got everything figured out."
+    Tomoko "The paper is done. I just... I don't want to have to do more work with her again."
+    if isEventCleared("RM002"):
+        MCT "Wait... shit, I overheard someone talking about this exact thing."
+        MCT "Chick was rambling about not being able to get in touch with her classmate. The day I met Yuki."
+        MCT "Was that Tomo she meant?"
+    MC "Right, right."
+    MC "So, how's things with your roommate?"
+    Tomoko "I mean... she's tolerable."
+    Tomoko "Still don't want to be like, all chummy with her or anything. But, she's alright."
+    Tomoko "She's in my class, too. So, I kind of get a double dose."
+    Tomoko "She's around me... a lot. And like..."
+    show Tomoko annoyed
+    Tomoko "... She doesn't stop talking."
+    Tomoko "You'd get it if you were around her for longer than ten minutes. Her lips don't stop."
+    show Tomoko neutral
+    if isEventCleared("RM002") or getFlag("Meet_Yuki"):
+        MC "Yeah... I met her. I know what you're saying."
+        Tomoko "Yeah..."
+    Tomoko "I'm glad I have nice headphones..."
+    MC "I get that."
+    "Three girls that I recognized from around campus passed by, all laughing and holding different food items."
+    show Tomoko worried at altMove(0.5, 0.25)
+    pause 0.1
+    show Tomoko worried at Transform(xzoom=-1)
+    "Tomo's hand went over her bag again as she pulled herself away and closer to me, letting the group pass her."
+    MC "So... what games have you been playing lately?"
+    show Tomoko neutral
+    Tomoko "Huh?"
+    MC "What games have you been playing lately?"
+    show Tomoko worried at altMove(0.5, 0.5)
+    pause 0.1
+    show Tomoko worried at Transform(xzoom=1)
+    Tomoko "I... I just finished Till Sunrise 3."
+    MC "How was it?"
+    Tomoko "So..."
+    Tomoko "I'm not sure how, but I screwed up some choice or something and one of the main characters died like halfway through."
+    MC "That seems... a little BS."
+    Tomoko "Well, it made the ending weird. Since that one person was gone, it didn't explain everything when the game ended."
+    show Tomoko annoyed
+    Tomoko "I watched some playthroughs online, and the 'real' ending is even worse."
+    Tomoko "I mean, I'm glad that I screwed up now. The real ending was so stupid."
+    MC "I'll remember the title at least."
+    show Tomoko smile
+    Tomoko "It's really fun, just the endings kind of suck."
+    MC "Right. I've been thinking about playing something new, but I'm not really sure what to go for."
+    show Tomoko neutral
+    Tomoko "If you asked me a few days ago, I would've said Wyrm's Pursuit."
+    MC "A few days ago? Why not now?"
+    Tomoko "Delayed release. They announced it online."
+    MC "Of course."
+    Tomoko "Gotta wait till like mid-July now. I mean, it looks super cool, but with all the delays and stuff, it makes you wonder if it'll even be worth it."
+    MC "Well, hopefully it comes out okay."
+    Tomoko "I hope so too."
+    show Tomoko neutral at altMove(0.5, 0.5)
+    pause 1
+    scene black with fade
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    play music Festival
+    scene Festival
+    show Tomoko neutral
+    with fade
+    "The two of us walked in toward a huge row of carnival games and such. Lines of people crowded the fronts to the point where it was almost hard to tell what the actual games were."
+    if isEventCleared("WG020"):
+        Tomoko "Hey. They have goldfish scooping."
+        MC "Ehh, I wouldn't bother. Even if you get one, it won't live till you get back to your dorm."
+        Tomoko "You've overthinking it."
+        "Tomo walked across the middle of the walkway and toward an open spot at the stand."
+        show Tomoko smile
+        Tomoko "See? They're cute."
+        "I rolled my eyes as Tomo took a small net and let it sink into the water."
+        "Stepping forward, I looked down into the water as Tomo let the net sit there for a moment."
+        MC "What exactly is the strat here?"
+        Tomoko "Let the net sit there long enough for them to get used to it."
+        "I watched the net drift in the water a bit, Tomo still holding the end as a particularly lazy looking fish swam over the top of the opening."
+        "Tomo let the net sit as the fish seemed to halt right over it."
+        "She lifted the net..."
+        "The net passed in front of the fish's back, and lightly tapped its back fins."
+        "Tomo lifted quickly as the fish quickly shifted, lifting it out of the water..."
+        "The net broke, and the fish fell back into the water, darting down near the bottom of the tank."
+        MC "Huh. At least someone had luck today. The fish, I mean."
+        show Tomoko embarrassed
+        Tomoko "Oh, shut up!"
+        "Tomo stepped away from the stand as I chuckled and followed her."
+    else:
+        Tomoko "They have ring tossing..."
+        "The two of us passed a booth that had... a very short line."
+        Tomoko "I've always wanted to try that!"
+        MC "Tomo, those games are literally always rigged."
+        MC "They make them specifically so you can't win."
+        show Tomoko smile
+        Tomoko "That a challenge?"
+        MC "I..."
+        MC "You know what, yeah. It is. Show me that you can win."
+        "Tomo slid her bag off and pushed it into my arms."
+        Tomoko "Hold that."
+        "Tomo stepped forward and took some rings, holding one in her right hand and lining it up with her eye."
+        Tomoko "Now you're gonna see how it's done."
+        "She threw... and bounced the ring off of the pole."
+        Tomoko "Warm up."
+        "She lined up and tossed another, this one missing the pole entirely and landing beside it, rattling around on its edges."
+        Tomoko "Mrrh..."
+        show Tomoko neutral
+        "Another ring... and it hit the top of the pole, bouncing off and making the pole wobble a bit as it landed right beside the second ring."
+        "She lined up once more... and completely missed again, the ring nearly flying off of the table."
+        show Tomoko annoyed
+        MC "... I'm not gonna say I told you so, but-"
+        show Tomoko embarrassed
+        Tomoko "Oh, shut up."
+        "Tomo backed away from the stand and started back down as I followed her, grinning in satisfaction."
+
+    show Tomoko neutral
+    "We passed a few food places, various fried dishes and drinks seeming to almost glow in the ambient carnival lighting."
+    if getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I felt my phone vibrate through my pocket, and pulled it out."
+        FMGCell "Not yet. Got a few more sets then im leaving"
+        MCCell "Sounds good. I'll wait for you"
+        "A thumbs-up emoji came through as I slipped my phone back into my pocket."
+    if getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "I felt my phone vibrate and slid it out of my pocket, turning the screen on."
+        BECell "Not yet! But I'm leaving soon"
+        MCCell "Got it. I'll wait for you"
+        BECell "I've got two surprises for you Kei-chan!!"
+        MCCell "Looking forward to it!"
+        "I sent an emoji of two eyes looking off to the side and put my phone back."
+    Student1 "Oh my GOD!!"
+    "An uproar of at least six different voices of laughter erupted beside us as a girl splattered some sort of sauce onto her cheek."
+    show Tomoko worried with vpunch
+    Tomoko "Ah-!"
+    "Tomo jumped, her head whipping so hard that her hair flew up with the motion."
+    MC "Ohp. You... you good?"
+    Tomoko "Y-Yeah... I-I'm fine..."
+    "She shifted and walked toward the middle of the path, about as far from the crowds on either side as she could be."
+    MCT "... Think I just found the culprit."
+    "Tomo's walk had turned into more of a speed-walk as she nearly plowed down the middle of the path."
+    MCT "I'll... try and talk to her about it another time. Because, now isn't it."
+    if routelock == "PRG":
+        MCT "And, yeah... definitely not bringing up Aida tonight."
+    "Tomoko went nearly all the way to the end, as I followed. She turned, glancing at the last booth, which looked significantly less showy than the others."
+    pause 1
+    play music Tomoko
+    Tomoko "... You're probably wondering why I even came to this thing."
+    MC "I mean... I had my wonderings, yeah."
+    MC "Wanna sit down?"
+    "I nodded to a bench nearby. Being at the end of all the stalls, there was quite the lull in crowd activity. Tomo nodded and we headed to it, sitting together."
+    Tomoko "..."
+    Tomoko "I came because of Yuki."
+    MC "Yuki?"
+    Tomoko "Mhm..."
+    Tomoko "She kept bringing it up over the last like two weeks. I eventually said I would come just so she'd stop pestering me..."
+    Tomoko "But, when we got here, I started to feel really overwhelmed and... anxious. So, I told Yuki I was going to go back to the dorm."
+    Tomoko "She tried to convince me to stay here, and..."
+    "Tomo held her bag on her lap, clutching it with both hands and rubbing the side with her fingers."
+    Tomoko "... She told me that she and Takamura-sensei have been worried about me, and it was all their idea to get me to come."
+    Tomoko "And that... well, that really pissed me off."
+    Tomoko "I told her that she and Sensei need to stop sticking their noses where they don't belong, and that maybe she ought to worry more about her own problems."
+    Tomoko "We got into a huge fight, and I was going back to the bus to head back to the dorms..."
+    MC "Tomo-"
+    Tomoko "It's... stop."
+    Tomoko "Just... forget I said anything."
+    show Tomoko neutral
+    "Tomo got up from the bench and walked toward the corner which led into more of the food stalls."
+    MCT "Shit..."
+    MCT "I mean... I could try and find her roommate. Or just like... let it sort itself out."
+    "I shook my head."
+    MCT "She's a big girl. She can handle it."
+    MCT "Still glad to see her out and about, though."
+    "I got up and went after her, into the food section."
+    play music Stardust
+    if checkAffection("TM", ">=", 4):
+        Tomoko "We grabbing any food?"
+        MC "You paying?"
+        show Tomoko smile
+        Tomoko "... So you offer to hang out with me, then have me pay?"
+        Tomoko "Thought I was related to a gentleman, not a leech."
+        MC "Hah! Tough talk."
+        Tomoko "Well, I can settle this."
+        MC "Usual?"
+        "Keisuke and Tomoko" "JANKEN!"
+    else:
+        MC "You... wanna get some food?"
+        Tomoko "Who's paying?"
+        MC "I mean..."
+        "I glanced sideways at her."
+        MC "The usual?"
+        Tomoko "..."
+        show Tomoko smile
+        Tomoko "You mean Janken?"
+        MC "The one and only."
+    show Tomoko neutral
+    "Tomo turned and faced me, wriggling her fingers as if preparing."
+    Tomoko "You know how this always goes."
+    MC "I know."
+    MC "Been winning it since we were kids."
+    Tomoko "You think."
+    "Tomo raised one hand, as I followed."
+    Tomoko "First is rock!"
+    "I pumped one fist down as she did so."
+    MCT "Alright... rock, paper, or scissors?"
+    Tomoko "Janken"
+    Tomoko "PON!"
+    menu:
+        "Rock":
+            "I threw my fist out... matching Tomo's."
+            MC "Just seeing if rock was still your main choice."
+            show Tomoko embarrassed
+            Tomoko "Hey..."
+            Tomoko "I don't know what you're talking about."
+            MC "Sure."
+            $setFlag("MC010TM_JankenDraw")
+        "Paper":
+            "I stuck my hand out flat, laying it over Tomo's closed fist."
+            MC "Knew it."
+            MC "You always go for rock."
+            show Tomoko embarrassed
+            Tomoko "... Not always."
+            $setFlag("MC010TM_JankenWon")
+        "Scissors":
+            "I stuck my hand out with two fingers outstretched... as Tomo knocked her closed fist on top of my fingers."
+            show Tomoko happy
+            Tomoko "I'll now take my spoils."
+            "Tomo turned around, walking toward the booths."
+            MCT "... She still goes for that damn rock. Every time."
+            $setFlag("MC010TM_JankenLost")
+    if getFlag("MC010TM_JankenDraw"):
+        show Tomoko neutral
+        MC "It's a draw, isn't it?"
+        menu:
+            "Rock":
+                "I threw my fist forward... as Tomo threw out scissors."
+                MC "Knew you'd try that."
+                show Tomoko embarrassed
+                Tomoko "Ugh. Try strategy one time..."
+                $setFlag("MC010TM_JankenWon")
+            "Paper":
+                "I stuck my hand out flat... as Tomo snipped the side of my hand with her 'scissors.'"
+                show Tomoko happy
+                Tomoko "You seriously fell for that..."
+                MCT "Dumbass..."
+                $setFlag("MC010TM_JankenLost")
+            "Scissors":
+                "I stuck out scissors... as did Tomo."
+                if checkAffection("TM", ">=", 3) or getFlag("MC005TM_LetTomoWin"):
+                    Tomoko "... I'll just pay for it. This is going on, and I'm hungry."
+                    $setFlag("MC010TM_TomoPays")
+                else:
+                    MC "Alright, screw it. I'll pay."
+                    $setFlag("MC010TM_KeiPays")
+    show Tomoko neutral
+    "I walked with Tomo in toward all of the booths, glancing around and stopping by one."
+    MC "What are you thinking?"
+    Tomoko "Crepes."
+    MC "Cool. I'm doing okonomiyaki."
+    if getFlag("MC010TM_JankenLost") or getFlag("MC010TM_KeiPays"):
+        "The two of us ordered, and I handed the money to the cashier, stepping back to wait."
+    if getFlag("MC010TM_JankenWon") or getFlag("MC010TM_TomoPays"):
+        "The two of us ordered, and Tomo set some yen on the counter, then stepped back to wait with me."
+        if getFlag("MC010TM_TomoPays") and getFlag("MC005TM_LetTomoWin"):
+            MC "Well... this is a surprise."
+            Tomoko "I uh... well, y'know."
+            Tomoko "Had to pay you back for letting me win that game of air hockey."
+            MC "I mean, hope you didn't take that in a bad way. Didn't mean to make it seem like you couldn't win or something."
+            Tomoko "No..."
+            Tomoko "I appreciated the gesture. Helped keep me busy."
+            $setAffection("TM", 1)
+    "After a few minutes, our food was set on the counter. I took it and handed the crepes to Tomo, then stepped off to the side."
+    MC "Alright, let's go... ah, over there."
+    "I nodded at another bench, sitting down beside Tomo."
+    "Tomo took a bite of crepe, as I dug into my okonomiyaki."
+    if routelock == "PRG":
+        "Chewing, I looked down at my food, then at the people walking in front of us."
+        MCT "How can I even tell her about this shit?"
+        MC "Hey... uh..."
+        Tomoko "You... okay?"
+        MC "What?"
+        Tomoko "You've got that stomach drop look on your face."
+        MC "I..."
+        MC "I uh... there's something I kind of want to talk to you about. But, I don't really know how."
+        Tomoko "Huh?"
+        MC "I'm kind of still processing it."
+        if getFlag("PRG024_Tomo"):
+            Tomoko "This with that girl you were talking to me about?"
+            "I nodded slowly."
+        "Tomo waved one hand."
+        Tomoko "Then tell me when you feel ready."
+        Tomoko "I get it. Sometimes you need to let your head sort things out before you can talk about it."
+        MC "R-Right... thanks."
+    "Silence fell as we ate. For at least a good couple minutes."
+    Tomoko "So... can I ask you something?"
+    MC "Yeah. What's up?"
+    Tomoko "For the whole main character and companions thing you mentioned earlier."
+    MC "Mhm?"
+    Tomoko "Which of us is the main character and which is the follower?"
+    MC "Oh, I'm the main character. Obviously."
+    Tomoko "Really?"
+    show Tomoko smile
+    Tomoko "Seem more like a sidekick to me."
+    MC "You don't look like a main character either, if that's how you wanna play it."
+    show Tomoko neutral
+    Tomoko "... Guess it's a draw then."
+    "I took another bite."
+    MC "Eat your thin pancakes."
+    "Overhead, I watched the fireworks going off, lighting up the buildings and the park all around us."
+    MC "This view is unbelievable."
+    Tomoko "Best seats in the house."
+    Tomoko "Right next to the trash cans."
+    "I glanced beside us and scoffed at the large bins."
+    show Tomoko smile
+    "Tomo smirked and looked over at me."
+    "Suddenly, a firework blew up literally right overhead, way lower than it ought to have been."
+    show dummy with vpunch
+    MC "What the-?!"
+    show Tomoko worried
+    Tomoko "Ah-!!"
+    "I caught my breath as the scent of blown fireworks caught my nose."
+    MC "The... hell happened there?"
+    Tomoko "I... I don't know."
+    "I sighed, looking back up as more fireworks shot up, this time at a much more reasonable height."
+    pause 1
+    Tomoko "Bro?"
+    Tomoko "Um..."
+    Tomoko "Thanks for... tonight. And... stuff."
+    show Tomoko smile
+    Tomoko "For offering to... hang out."
+    $setAffection("TM", 2)
+    Tomoko "I..."
+    show Tomoko happy
+    Tomoko "I'd never tell Mom or Dad, but... I-I kind of... needed something like this tonight."
+    MC "... You're welcome."
+    MC "I'm always happy to hang out with my sis."
+    show Tomoko neutral
+    if checkAffection("TM", ">=", 4) or getFlag("MC005TM"):
+        Tomoko "And... don't worry about the thing with Yuki or Takamura-sensei."
+        Tomoko "I'm still pissed, but... I know they didn't mean anything bad."
+        Tomoko "... Even if I think that they both crossed a line."
+        Tomoko "But... yeah. I'm gonna talk to Yuki."
+        "I half-stared at Tomo."
+        MC "Well... I'll keep in my own lane then. Let me know if you need anything."
+    "After finishing our food, Tomo and I got up."
+    MC "You heading back?"
+    Tomoko "Yeah. You?"
+    MC "I still have some things I wanted to do."
+    MC "But yeah. I had fun tonight too."
+    Tomoko "Night, Bro. I'll see you soon."
+    "I nodded as Tomo headed back toward the bus, as I turned and went back into the festival."
+    jump daymenu
+
+label MC010_RM:
+    play music ChangingSeasons
+    MC "Hey, how about you go back to the festival with me? We don't need to see everything or walk through the thick of it."
+    show Tomoko worried 
+    Tomoko "I don't know... I feel like I already saw enough... Not really sure I need to see more."
+    MC "Are you sure? You always liked hanging out together at these things when we were kids. I'm just kinda worried you're missing out on stuff you'd enjoy."
+    pause 1.5
+    "Tomo for her part didn't respond. {w}With words anyway."
+    "She slumped her shoulders and looked down at the ground. Something must have happened to make her start to shut down like this."
+    "I wanted to ask but I knew that would do more harm than good at this point."
+    MC "Well, how about this, I'll head back with you so you don't have to take the bus by yourself."
+    pause 1.5
+    "Tomo didn't respond right away, but I could tell she was mulling it over."
+    Tomoko "...If you don't have anything else going on, sure."
+    MC "Nothing that can't wait."
+    pause .5
+    show Tomoko smile
+    pause .5
+    show Tomoko neutral 
+    "I didn't really know what was going on, not like she tells me much these days, but I knew it would be gnawing at the back of my mind until I knew she got back to her dorm okay."
+    "She might have wanted to go be alone, but I wasn't so sure that was the best thing for her right now."
+
+    if routelock == "AE":
+        MCT "Shiori is still going to be busy for a while. I got time for a small detour."
+    elif routelock == "PRG":
+        MCT "Besides, it's not like I have anything planned. I had hoped Aida would want to come along, but she had seemed a little iffy when I'd asked her."
+        MCT "Makes sense, to be honest. Given everything."
+        MCT "Things got so complicated so damn fast. Nothing to it but to just do my best. For her and the baby."
+        MCT "Well, I'll find her something down here. A little 'thinking of you' present."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        MCT "Not a big deal, it's not like I have anything planned. I would have liked to ask Naomi out to make it a date, but man, our relationship is in kind of an awkward state... {w}Would coming out with an invitation for a festival be okay?"
+        MCT "I mean, she seems to love festivals, so maybe she's here? {w}Probably. {w}I'll go back and check later." 
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "I checked my phone real quick."
+        MCT "Hmm, last text says she's getting ready but nothing coming through that she's left yet. I can just head back to the festival with her after I walk Tomo back to her dorm."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        MCT "Should be a big deal. I can just head back here with Akira. I'm certain she hasn't finished working out yet and I didn't see any text from her that she's left yet."
+        MCT "That'd be a nice surprise, make me look all charming and crap like that. {w}Or will she think I'm some kind of sappy dork?"
+        MCT "Well, either way I'll get to hang out with her more— so it's a win-win!"
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        MCT "It's not like I had any plans at the festival anyway. There was a chance I might have gotten to stumble into Alice, but that wasn't a guarantee."
+        MCT "For now, I'll just try to make sure Tomo's okay. If Alice was going she might still be around when I get back anyway."
+    else:
+        MCT "A bit of an unexpected detour, but it's not like I had any plans for anything at the festival anyway."
+    show Tomoko defiant
+    Tomoko "Sigh... I guess then."
+    Tomoko "Not like it would change anything since it sounds like you've already made up your mind anyway, right?"
+    "I gave her a knowing nodd."
+    show Tomoko annoyed
+    MC "Yup, you're stuck with me I'm afraid."
+    "Tomoko just shook her head. Already sick of me apparently, but it's not like she didn't know she'd get made fun of if she were to jump at the chance to go with me instead."
+    MCT "Guess we really are stuck with each other."
+    scene black with fade
+    pause .5
+    scene Bus Interior
+    show Tomoko neutral
+    with fade
+    play music DormLife
+    $eventname = "Interloper"
+    $save_name = "Interloper"
+
+    "We sat next to each other on the bus. Tomo for her part hadn't said anything. Not like she usually does anyway, but in this instance it wasn't because she was buried in her phone."
+    "She was staring outside the window, nervously fidgeting with the strap of her messenger bag."
+    "Something was up, I could tell. {w}I wanted to ask her, but the better part of me resigned myself to the fact that I wasn't going to find out, even if I asked."
+    MCT "Relax Kei. If she wants to tell you, she will."
+
+    if getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "I checked my phone real quick to see if there were any new texts from Honoka."
+        MCT "Huh, nothing yet. I wonder just what this \"unexpected\" problem with her yukata was that she mentioned earlier..."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I checked my phone to see if there was any news from Akira."
+        MCT "Nothing yet. All good then."
+    elif getFlag("MC005_browseweb"):
+        "I was starting to get a little bored so I pulled up the browser on my phone."
+        MCT "...Dang! Absolutely nothing out here. Wonder why it's not working this time?"
+        MCT "Guess I can always just people watch..."
+    else:
+        "I was starting to get a little bored so I pulled up the browser on my phone."
+        MCT "...Dang! Absolutely nothing out here. The middle of the island must be a deadzone or something."
+        MCT "Well, I guess there's always people watching to fall back to."
+    hide Tomoko with dissolve
+    "The bus itself was pretty much empty besides us. To be expected really. It was the middle of the festival, so people were coming into town as opposed to heading out." 
+    "About the only other people I saw were a couple of older ladies a few seats behind us."
+    MCT "Wait a second... I recognize one of them."
+    "Shinju Gurīsu, the school lunch lady. I probably wouldn't have known her name if it wasn't for having seen it featured on Daichi's \"Persons of Interest\" section on his conspiracy board."
+    if isEventCleared("WG001"):
+        "Though I definitely knew the face from her contentious little spat with Alice at the beginning of the year."
+    MCT "Hehe... It's always who you'd least expect— the little old lunch lady."
+    "I couldn't even begin to seriously entertain what Daichi might have possibly inferred from her history that she earned a spot on that \"naughty list\" of his." 
+    "To his credit, Daichi questioning and investigations did reveal some interesting curiosities I wouldn't have thought of myself that piqued my interest, while others suggested a more unhinged line of reasoning— or lack thereof."
+    "Tying the lunch lady of all people into a network of some grand conspiracy struck me more as one of the latter rather than the former type of leads he was working on."   
+    Lunch "Oh the Blossom Festival was beautiful this year, as always. It's one of the few things I do look forward to each year on the island."
+    UNKNOWN "The blossoms were lovely. They timed it perfectly this year at the peak of the season."  
+    "Gurīsu-san was in the middle of a conversation with another woman. I recognized her from the school as well, but I didn't know her name. I knew she wasn't a teacher, so she must have been a staff member of some sort."
+    UNKNOWN "Did you take your omikuji slip from the booth?"
+    Lunch "Yes, but I'm not sure I want to read it."
+    UNKNOWN "You're not interested in your fortune?"
+    Lunch "Not particularly if you ask me. I don't believe in that crap."
+    UNKNOWN "Oh, don't be so dismissive, Gurīsu-san, especially on today of all days. It's a tradition after all, one that's supposed to be fun, you know?" 
+    UNKNOWN "Besides, it can't hurt anything. What's the worst thing that can be written there?"
+    Lunch "Alright fine."   
+    "Gurīsu-san begrudgingly pulled the slip from her pocket."
+    Lunch "\"There is always a second chance.\""
+    UNKNOWN "See? There you go. Some good fortune after all."
+    "Judging by how she was shaking her head, Gurīsu-san didn't seem to agree."
+    Lunch "Bahh! I knew it. Nothing more than stupid nonsense..."
+    show Tomoko worried with dissolve
+    "Gurīsu-san's comment apparently was loud enough to draw Tomo's attention from looking out the window for once this whole ride. She turned her head back behind us, then to the seat ahead, then down at the floor."
+    "Looking at her, hoping I might get a sense of what was wrong, I got the impression she'd been mulling a few things over in her head." 
+    show Tomoko neutral
+    Tomoko "You don't need to worry about me you know."
+    "She caught me off guard, as I hadn't expected her to say anything by this point. I must have been studying her a bit too intently if it had prompted her to finally say something."
+    Tomoko "Nothing bad happened or anything like that back at the festival."
+    show Tomoko defiant
+    Tomoko "It's just... it's not my thing."
+    show Tomoko neutral
+    "I know she was trying to be reassuring, but her answer didn't sit well with me. She used to love going to those kinds of festivals back when we were kids hanging out with Honoka. {w}The games, the prizes, the food..."
+    MCT "Yeah... back when we were kids. We're adults now. {w}Maybe she isn't that into that stuff anymore?"
+    MCT "Or maybe that's just what she tells herself these days."
+    MC "Honestly I'm surprised I managed to stumble into you back there. I didn't expect you to come out for the event."
+    show Tomoko smile
+    "Tomo looked down, but managed a rather meek smile."
+    Tomoko "Yeah... I didn't expect it either."
+    show Tomoko neutral 
+    Tomoko "Yuki had been nagging me to go with her for weeks leading up to it."
+    pause 1
+    show Tomoko annoyed 
+    Tomoko "I lost track of how many times I told her no, but after a while I finally agreed to go just so she'd stop yapping about it."
+    "Having been subject to one of Yuki's unending audible onslaughts back in the admin building that one time, I can imagine how that would wear down someone even as staunchly resistant as Tomo." 
+    MC "So you came with her?"
+    show Tomoko neutral
+    Tomoko "Yeah, we went to this clothes store she wanted to go to, that's where I got this yukata."
+    show Tomoko embarrassed 
+    Tomoko "But yeah... it didn't go well..."
+    show Tomoko worried
+    "Tomo just trailed off at that point in the story. Looking down at the floor, she didn't offer up any further details." 
+    "I didn't push the issue, recognizing I already got more information than she probably initially intended to tell me in the first place."
+    "As much of a downer note that was to leave on with her story, in the grand scheme of things it wasn't too bad for Tomo. Sounded like she at least tried to come out of her shell."
+    "It did give me some hope that she was at least trying... and that maybe she'd try again."
+    MCT "Like they say, \"There's always a second chance.\" "
+    scene black with fade
+    pause .5
+    scene School Front with fade
+    "We got back to the school without much of a fuss, though I was starting to worry about the time."
+    MCT "Let's see the schedule here... {w}Okay, good. Looks like I'll still have time to get back to the festival when the next bus comes."
+    "It worked out. I didn't want to just drop Tomo off at the bus stop and wish her luck. Being obviously shaken up by whatever happened, I figured it best to take the extra step and walk her back to her dorm."
+    show Tomoko neutral with dissolve
+    MC "Got your bag?"
+    Tomoko "Right here."
+    MC "Good. Let's head back."
+    scene Campus Center with fade
+    play music Sunset
+    "Sure was a nice day. The cherry blossom tree in the center of campus was in full bloom, though I guess of all days it was to be expected, the Island's Matsuri was a cherry blossom festival afterall."
+    show Tomoko neutral with dissolve
+    "Tomo for her part seemed lost in her own thoughts, judging by how she kept her head down just staring at one of the benches in the courtyard, rather than the giant tree in full bloom."
+    MC "Something there?"
+    Tomoko "Huh? Oh, it's nothing. Let's go."
+    MC "Alright."
+    scene Dorm Entrance
+    show Tomoko neutral
+    with fade
+    "We walked the rest of the way across campus, Tomo didn't have much to say. Whether it was the weather, problems with my hair, or complaining about upcoming tests, nothing really got much of a reaction out of her."
+    MCT "I guess I'll just give it a rest. Looks like her social energy bar has been drained for the day."
+    scene Dorm Hallway
+    show Tomoko neutral
+    with fade
+    "We finally got to Tomo's room. I figured I'll just let her have time to herself, since she didn't seem to feel like talking."
+    show Tomoko smile
+    Tomoko "Thanks for walking back with me, Bro. I know it probably doesn't seem like it, but I really do appreciate it."
+    $setAffection("TM", 1)
+    MCT "Huh. Well, color me surprised then."
+    MC "You're welcome."
+    scene Dorm Tomoko
+    show Tomoko neutral
+    with fade
+    "Seeing as how Tomo perked up a bit, and I still had time to kill, I changed my mind and decided to hang out a bit before the next bus came by{w}— and it was a good thing I did."
+    Tomoko "Huh... That's odd. Why's the balcony door open?"
+    MC "I don't know. You tell me, it's your room."
+    Tomoko "Yeah but I usually keep it closed."
+    MC "Eh, you probably just forgot about it. It is a nice day after all, who wouldn't want to keep their window cracked open? I leave mine open whenever it's nice out. One of the perks of being on the second floor."
+    Tomoko "Eh, I'm pretty sure I didn't, but maybe Yuki did before we left."
+    show Tomoko distracted
+    "Tomo set her bag down on her chair near the table and went to get a snack from the fridge." 
+    "Her place was messy. I didn't want to have to move anything around so I just popped a squat at the end of her bed. There was enough clearance between the bed frame and the floor to let my legs dangle as lazily I swung them back and forth."
+    "Looking around, I noticed Tomo's Pretendo console near the TV."
+    MC "Whatcha been playing lately? Anything good?"
+    show Tomoko distracted-2
+    Tomoko "I just finished Till Sunrise 3."
+    MC "I've been curious about that one. How was it?"
+    show Tomoko distracted
+    "Tomo just shrugged, clearly not having any particularly strong feelings about it."
+    Tomoko "It was fine. Some good parts but I had issues with the controls at times and I didn't like the ending."
+    show Tomoko distracted-3
+    Tomoko "I even looked up the other ending online and it was even worse. What a let down."
+    MC "That bad, huh?"
+    MC "What was so-"
+    show Tomoko distracted-2
+    stop music
+    play sound Thud
+    "Before I could finish my question I felt the back of my heel slam into something hard under her bed."
+    MCT "What the fuck was that?"
+    show Tomoko surprised
+    show dummy with vpunch
+    UNKNOWN "{i}OWWWW!{/i}"
+    MC "What the!?"
+    "Hearing the voice, I jumped up off the bed."
+    show dummy with vpunch
+    Tomoko "{i}EEEAAHHHH!{/i}"
+    "Hearing Tomo scream, I looked below and saw something roll out from under her bed."
+    show Tomoko surprised at Transform(xzoom=-1)
+    pause 0.1
+    show Tomoko surprised at altMove(0.25, 0.25)
+    pause 0.1
+    show Tomoko surprised at shake2
+    show RM angry at Position(xcenter=0.75, yalign=1.0) with easeinbottom
+    play music RMInvestigate
+    RM "Oww! You hit me right in the nose with your foot!"
+    MCT "You can't be fucking serious..."
+    show RM angry-2
+    "Tomo just stood in the corner of the room, the color visibly drained from her face."
+    "If it had been any other dude on campus I caught like this in my sister's room, I'd already be strangling them, but I mustered all the restraint I had to think to interrogate him instead{w}... before I strangled him."
+    show RM concerned
+    MC "{i}What the {b}fuck{/b}, man!?{/i}"
+    show RM sad
+    RM "It's not what it looks like! I can explain!"
+    MC "Well it looks like you're a peeping Tom perving on my sister, so this better be a damn good explanation as to why it's not the most obvious fucking thing happening right now!"
+    show Tomoko defiant
+    show RM concerned-2
+    RM "Yes, well... um... you see... I..."
+    if isEventCleared("MC005"):
+        "Honestly, this guy has a habit of showing up in unexpected places, but this is not quite the same type of surprise like that time he startled me by popping out of a bush asking me to go on his \"Golden Week adventure\"."
+        if getFlag("MC005RM"):
+                "An \"adventure\" that turned out to be an elaborate stakeout. {w}Just what is he up to this time around?"
+        else:
+            "This makes me glad I didn't go with him. He probably would have tried to rope me into spying on some girls from school!"
+    else:
+        MCT "Just what on earth is he up to this time around?"
+    show RM concerned
+    RM "Uhhh... well, on second thought, let me start at the beginning. There's a good explanation-"
+    show RM sad
+    Tomoko "No there isn't! {w}Just shut up! {w}There's no reason for a complete stranger to be in my room, violating my personal space like that!"
+    Tomoko "I thought I'd be safe here, but apparently I have to check under my bed each night for some boogeyman like I'm four years old!" 
+    MC "She's right. This is pretty fucked up dude. You can't go around doing this stuff even if you think there's a good reason— cause it's not good enough to anyone else."
+    show RM concerned
+    RM "{i}Sigh{/i}... Look, I know it looks bad— just give me a second to explain."
+    menu:
+        "Vouch for Daichi":
+            $setFlag("MC010RM_VouchedForRM")
+            MC "{i}Sighhhh{/i}... I know it looks bad, Tomo, but try not to freak out too bad. I know him, he's my roommate and he's Yuki's brother."
+            show RM distrustful
+            MC "While he can often act like a complete weirdo..."
+            show RM happy-2
+            extend " It is possible that there's something else going on, as in my experience he doesn't tend to act without good reason."
+            $setAffection("RM", 1)
+            MCT "Boy am I reaching here just to try to smooth this over..."
+            MC "Just hear him out for a second and see what he has to say for himself."
+            show RM concerned-2
+            show Tomoko defiant at Transform(xzoom=1)
+            Tomoko "I don't give a {i}fuck{/i} about whatever he has to say about anything! The only thing I want from him is to leave!"
+            "Tomo pointed her finger at the door."
+            show Tomoko defiant at shake2
+            Tomoko "{b}NOW!{/b}"
+            jump MC010_RM_afterchoice
+
+        "Let Daichi fend for himself":
+            $setFlag("MC010RM_RMFendHimself")
+            RM "I wasn't here to... {w}spy on you, as you suggest... Uhhh, what I was here to..."
+            show RM concerned-2
+            RM "Well, how should I say it?"
+            Tomoko "..."
+            show RM doubt
+            RM "I wasn't here because of you... well not really anyway... but because of Yuki."
+            Tomoko "So you were hoping to spy on Yuki?"
+            show RM smug
+            RM "Yes!"
+            show RM doubt
+            extend " -Wait! I mean no!"
+            show RM concerned-2
+            RM "I mean... I was here {i}because{/i} of her, but..."
+            "Daichi was clearly uncomfortable with this whole situation, stammering on barely able to finish a thought."
+            show RM concerned
+            RM "You see... um, I'm her brother... So it'd be natural that I'd be checking in on her now and then. {w}{size=-6}Yes, that would make sense{/size}..."
+            Tomoko "And you expect me to believe that?"
+            MC "He is her brother. I've seen the two together. He's my roommate."
+            show RM sad
+            show Tomoko defiant at Transform(xzoom=1)
+            Tomoko "Spare me wherever this story is going because I don't give a {i}fuck{/i} his stupid reasons for breaking into our room. The only thing I'm interested in is seeing him leave!"
+            "Tomo pointed her finger at the door."
+            show Tomoko defiant at shake2
+            Tomoko "{b}NOW!{/b}"
+            jump MC010_RM_afterchoice
+
+label MC010_RM_afterchoice:
+    $setFlag("TM_MeetRM")
+    show RM concerned
+    pause .5
+    "Daichi hung his head in silence, looking quite defeated as he walked out."
+    hide RM with dissolve
+    play music DormLife
+    show Tomoko defiant at altMove(0.5, 0.5)
+    MC "Sorry about that. I know he didn't mean that to happen. He's a high strung guy and he's paranoid about the reason why we're at this school. It drives him to do some crazy stuff sometimes, but he's not trying to hurt anyone."
+    MC "I'm going to have a talk with him to make sure something like this never happens again."
+    Tomoko "Good. Make sure he knows he's not allowed to ever set foot in this room again— even if Yuki's his sister."
+    MC "That's fair."
+    show Tomoko worried
+    "Tomoko still looked a bit shaken, I couldn't blame her either. Daichi really stepped in it with this stunt."
+    MC "You gonna be okay?"
+    "Tomo nodded."
+    show Tomoko neutral
+    Tomoko "Yeah... I'm just tired of this day. I'm gonna go to bed."
+    MC "Sounds good then. Have a good night."
+    Tomoko "Night."
+    MC "Oh, and for what it's worth— I'm glad to see you at least gave it a shot and got out there to check it out."
+    Tomoko "Yeah, that's something I guess."
+    Tomoko "Later, Kei."
+    MC "See you around."
+    scene Dorm Hallway
+    show RM concerned
+    with fade
+    play music RM
+    "I stepped out of Tomo's dorm to find Daichi was still lingering outside."
+    show RM doubt
+    MC "Dude, what's going on? Why are you here? And why didn't you mention anything about what you were planning?"
+    MC "You do realize things would have been 100 times worse if I wasn't there to help smooth over that disaster, right?"
+    show RM concerned-2
+    RM "{i}Hoooo{/i}..."
+    "Daichi let out a long gasp, barely able to keep his breath."
+    RM "I can explain everything."
+    MC "I'm listening..."
+    RM "{i}Hoooo{/i}... Maybe we get some fresh air first?"
+    MC "Outside?"
+    RM "I was thinking the roof."
+    MC "Is it even open?"
+    RM "I don't know for sure, but if it's like the men's dorm building, then yeah, it should be open."
+    "I just shrugged and proceeded to follow him to the roof, even though I was still plenty pissed about the whole situation." 
+    "The guy looked to be such a nervous wreck he looked like he needed some fresh air and I wasn't going to get anything out of him if he was just going to yammer on in a state of panic like he did earlier."
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm Roof
+    show RM sad
+    with fade
+    "After getting to the roof, Daichi breathed a sigh of relief, letting the wind blow through his hair while he rubbed his face."
+    "I didn't say anything, but he could tell what my impatient glare meant: \"I demand answers.\" "
+    RM "{i}Sigh{/i}... I'm really sorry about everything. I didn't mean for that to happen with your sister. I made a really big miscalculation."
+    MC "I'll say."
+    RM "I thought it was Yuki that came back, so I picked a hiding place on the complete opposite side of her side of the dorm so she wouldn't find me." 
+    RM "I didn't mean to spook your sister by crawling under her bed, it just seemed like the best place to hide going off the information I had."
+    MC "So your information didn't include the basic fact that she has a roommate and that two people live in that dorm?"
+    show RM doubt
+    RM "Ermm..."
+    show RM concerned-2
+    MC "Why didn't you tell me about your plans? I thought we were partners?"
+    MC "I could have told you that Tomo basically never leaves her dorm and that this would have been a bad idea. Or hell, if it was a matter of life and death I could have stalled her for hours!"
+    MC "What were you thinking!?"
+    show RM concerned
+    RM "I know it was risky, and I didn't want to make you an accomplice if things went south." 
+    RM "Besides, I knew you wouldn't be okay with it, but I couldn't think of any other possible ways to get in there without alerting Yuki to my plans."
+    if getFlag("RM006_CompletedGTS030"):
+        MCT "I know I withheld the code to the Giant's Dorm gate from him for similar reasons. I guess when it comes to someone close to you, it's not worth risking."
+    MC "I don't like where this is going..."
+    show RM distrustful
+    RM "It's nothing like that."
+    show RM neutral-2
+    RM "Do you remember that recording device I was building at the beginning of the semester? The one that Yuki took?"
+    MC "I still don't like where this is going..."
+    show RM angry-2
+    RM "{i}Tch{/i}! Just let me finish."
+    MC "Alright, alright. Go on..."
+    show RM neutral-2
+    RM "As I was saying... I need it back— but I know she won't give it back to me."
+    MC "I can't imagine why..."
+    RM "Yeah, yeah. {w}But that's the reason why I was there— to try to get it back."
+    show RM neutral
+    RM "It seemed like the perfect opportunity, one that I had been waiting for for weeks, but hadn't been able to because... well, your sister rarely leaves their dorm."
+    MC "Tell me something I don't know. She was never much of a socialite to begin with but ever since-"
+    RM "Yes, that was the biggest sticking point, trying to find a long enough period of time when she'd be out of the dorm." 
+    show RM doubt
+    RM "When I heard Yuki-chan mention she was going to the Blossom Festival with your sister, I figured this would be my best chance."
+    MC "Why didn't you try when they were both in class? You certainly don't seem to be above skipping class to engage in your espionage escapades."
+    pause .3
+    show RM distrustful
+    MC "That's not a suggestion by the way."
+    show RM neutral-2
+    RM "Too risky during a normal school day. Too many eyes on the entrance and too many random people going to and fro." 
+    RM "It's one thing to blend in on a park bench in public, or sitting inside a bush, but it's hard not to stick out in a place where people know you're not supposed to be while people are looking for you."
+    MC "Sounds like you were planning this for a while."
+    show RM neutral
+    RM "Correct. It was the moment I was waiting for."
+    show RM sad
+    RM "Sigh... But instead I ended up just making a fool of myself, and fell right into my sister's trap." 
+    show RM angry
+    extend " Damnit! I was so focused on seizing the opportunity that I couldn't see it was a setup!"
+    show RM angry-2
+    MC "Huh??"
+    MC "What do you mean \"it was a setup\"?"
+    show RM concerned-2
+    "Daichi hung his head like a whipped pup. Reaching into the pocket of his trousers, he pulled out a crumpled piece of paper and handed it to me."
+    MCT "What's this now?"
+    "Upon inspection, the paper had a message written on it. The handwriting was elegant and pretty, damn near a work of art, a far cry from Daichi's manic chicken scratches."
+    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \"Dear Brother, did you seriously think I was going to leave - whatever that thing was I took from you -  in my own dorm?\"{/size}{/font} "
+    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \"I have no idea what that blasted thing is or what its purpose is, but knowing you, it can't be good. Whatever it is, I refuse to make myself an unknowing accomplice due to your own foolishness.\"{/size}{/font} "
+    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \"I found a safe place for it and you will never find it, but you are of course welcome to try.\"{/size}{/font} "
+    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \" XOXO - Sorry for this little scheme\"{/size}{/font} "
+    MC "...Little scheme?"
+    show RM angry-2
+    RM "You see? The whole thing was rigged from the start!" 
+    MC "I think you're reading too much into this. She could have written this right after she took it from you, knowing you'd try at {i}some{/i} point."
+    "I said that, but now my curiosity was piqued as to just what happened with Tomo and Yuki at the yukata shop." 
+    "Yuki certainly seemed to have anticipated Daichi's next move, but she didn't strike me as a cunning mastermind that would just use Tomo as part of an elaborate scheme to pull one over on him." 
+    RM "{i}Arrgh{/i}! This is so frustrating! Such a massive screw up on top of walking away empty handed."
+    show RM doubt
+    RM "Sis knows me well... too well. I underestimated her potential to impede things... {w}Why can't she understand what this is about?"
+    MCT "Heh, perhaps there's more to Yuki than just a blabbermouth that gets on my sister's nerves." 
+    MCT "After all, she managed to pull Tomo out of her dorm and make a fool out of Daichi just by mentioning she was going and leaving a handwritten note she knew he'd find."
+    play music TheAnswer
+    show RM neutral
+    if getFlag("RM001_Device"):
+        MC "Just what exactly is that thing for? I could tell from when you were working on it that it's not just a regular recording device."
+    elif getFlag("RM001_Study"):
+        MC "Tell me, what's so special about this device you tried to get back from her. Even I have no idea what it's supposed to do."
+    else:
+        MC "Tell me, what's so special about this device you tried to get back from her. Even I have no idea what it's supposed to do."
+    show RM neutral-2
+    RM "Remember when you asked me about the radio tower? The source of that red blinking light in the woods if you look off towards the East from the rooftop?"
+    MC "Vaguely, I'm not sure I've seen it myself."
+    RM "Maybe it'd be visible now... {w}Ah, blast it! This building isn't tall enough."
+    RM "Anyway, the point is that's where the red light is coming from. The reason it caught my attention is that supposedly it had been decommissioned for broadcasts and is supposed to be inactive— unpowered even."
+    show RM doubt
+    RM "Even more suspicious, the light doesn't appear each day. I haven't been able to make anything of the cadence of its activation either."
+    MC "Let me guess. You suspect something off the books then?"
+    show RM smug
+    RM "Exactly. Even the name, RKVB Radio Tower, sounds suspiciously governmental."
+    show RM doubt
+    RM "I read some weird stories about the tower and that device was going to help me test a couple of theories I had."
+    MCT "I wonder what he means by that..."
+    "This was one of the more interesting and suspicious mysteries on the island Daichi had mentioned that I was genuinely curious about." 
+    "That along with the fact that it was a little bit easier to get on board with since I wasn't too keen on getting wrapped up with anymore spying on students."
+    show RM neutral
+    RM "But it will have to wait until I get the device back"
+    show RM angry-2
+    extend "—which I {i}will{/i} get back."
+    RM "Telling me that she put it in a safe place I'd never find was just the hint I needed..."
+    MC "If you say so..."
+    show RM neutral-2
+    RM "Besides, it's not like the tower will be going anywhere any time soon. There's more pressing leads to follow up on."
+    if isEventCleared("RM006") and not isEventCleared("RM010"):
+        RM "We still have to find a way into the Giant's Dorms. That's the priority for now."
+        MCT "Say what you will about Daichi, and I do plenty, the guy doesn't give up easily."
+    pause 2
+    "With the combination of fresh air and finally getting all that off his chest, Daichi seemed to have finally calmed down from his near-hysteric state after we left Tomo's dorm as we both stood there in silence for a while."
+    pause 1
+    show RM concerned
+    RM "Hey, I'm really sorry about everything back there with your sister. That was... it was pretty bad. I never even considered the possibility of getting her pulled into this mess between me and my sister." 
+    MC "I appreciate the apology, and I know you didn't intend for this to happen, but I'm not going to sugar coat it— you really fucked up this time."
+    RM "Sigh... I know."
+    MC "Tomo is super sensitive about her privacy. She's not gonna let this one go, she's gonna be pissed at you, probably for forever."
+    show RM concerned-2
+    RM "Yeah... I can understand why..."
+    MC "I'm gonna talk to her tomorrow and try to smooth this over the best I can and convince her not to report this as an incident to the faculty or staff."
+    MC "If anything, Yuki setting a trap for you only helps your case. The fact that she might have goaded you into doing it, as well as making you completely embarrass yourself, just might be enough to convince Tomo you've suffered enough."
+    show RM neutral-2
+    RM "I guess that's the silver lining, if there is one in this whole mess."
+    $setAffection("RM", 1)
+    show RM happy
+    RM "Thanks for doing that. This fiasco would have sunk my investigation if you hadn't been there to help bail me out."
+    RM "I know I kept you in the dark on this one, but I really do appreciate your help."
+    MC "Just promise me you aren't going to pull something like that again. I can only get you out of a mess like this once, and that's only because it was Tomo and not someone else."
+    RM "Understood."
+    play music Sunset
+    show RM neutral
+    "We both just stood there in silence for a bit after that. Standing on the roof gave a good look at the night sky full of stars. As isolated and empty this island seemed sometimes, it did have some picturesque views."
+    "Looking out to the southeast, a flash of color in the sky caught my attention."
+    MC "Looks like the fireworks at the Matsuri are starting."
+    "Red, blue, and green bursts of color splashed across the sky."
+    "Quite an impressive display, with the exception of something flashing really low to the ground."
+    MCT "That doesn't look right. What happened there? Maybe it's a good thing I'm watching this from far away."
+    if getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "{i}Bzzt{/i}...{i}Bzzt{/i}...{i}Bzzt{/i}..."
+        "My phone was going off. Daich for his part was still focused on the fireworks show in the distance."
+        "I unlocked it to check my texts."
+        BECell "<Just leaving my dorm. Headed to the bust stop>"
+        MCT "Hehehe, that girl. I'll have to ask her if that typo was intentional or not... She'll probably deny it, but I know better."
+        MCT "Can't believe I lost track of time and forgot to text her I was here. Looks like it'll still work out though."
+        MCCell "<Hey I'm here. Can you wait at your dorm? I'll come pick you up.>"
+        BECell "<Okay cool. Didn't think you'd be back here. What's up?>"
+        MCCell "<Long story. I'll explain later. Be right down>"
+        MC "I gotta go. You gonna be okay up here?"
+        show RM happy
+        RM "Yeah, I'm good. Go ahead."
+        MC "Don't pull anything else while I'm gone either."
+        show RM neutral-2
+        RM "Don't worry about me. I've had enough for today."
+        MC "Good. I'll catch you later."
+        MCT "And after all of that, the night's just getting started."
+        jump daymenu
+
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "{i}Bzzt{/i}...{i}Bzzt{/i}...{i}Bzzt{/i}..."
+        "My phone was going off. Daich for his part was still focused on the fireworks show in the distance."
+        "I unlocked it to check my texts."
+        FMGCell "<I'm ready. Heading to the bus stop now.>"
+        MCT "Shit! My dumbass forgot to text her I was back on campus."
+        MCCell"<Hey thanks for the heads up. I'm here on campus. Wait up for me.>"
+        FMGCell "<I thought you left hours ago? You're back already?>"
+        MCCell "<Long story. I'll explain later. omw>"
+        MC "I gotta go. You gonna be okay up here?"
+        show RM happy
+        RM "Yeah, I'm good. Go ahead."
+        show RM neutral-2
+        MC "Don't pull anything else while I'm gone either."
+        RM "Don't worry about me. I've had enough for today."
+        MC "Good. I'll catch you later."
+        MCT "And after all of that, the night's just getting started."
+        jump daymenu
+
+    elif routelock == "PRG":
+        MCT "Shit! The festival! I forgot to pick up a gift for Aida!"
+        "I checked the time on my phone, there was still enough time to hop on the bus and head into town before the festival wound down for the evening."
+        MC "I gotta go. You gonna be okay up here?"
+        show RM happy
+        RM "Yeah, I'm good. Go ahead."
+        show RM neutral-2
+        MC "Don't pull anything else while I'm gone either."
+        RM "Don't worry about me. I've had enough for today."
+        MC "Good. I'll catch you later."
+        MCT "And after all of that, the night's just getting started."
+        jump daymenu
+
+    elif routelock == "AE":
+        MCT "Damn, it's already really late. I was hoping I'd be able to catch Shiori at the festival."
+        MCT "On second thought, this might work out just fine. She's probably finished with the council stuff by now and we can actually hang out, instead being a distraction to her work."
+        MCT "She'd probably appreciate that."
+        MC "I'm gonna head out. You gonna be okay up here?"
+        show RM happy
+        RM "Yeah, I'm good. Go ahead."
+        show RM neutral-2
+        MC "Don't pull anything else while I'm gone either."
+        RM "Don't worry about me. I've had enough for today."
+        MC "Good. I'll catch you later."
+        MCT "And after all of that, the night's just getting started."
+        jump daymenu
+
+    else:
+        MCT "Maybe I should go back. I got so caught up in all of this I never got a chance to take in the festival. I'm getting pretty hungry for dinner too and I know I can find some good grub back at the food booths there."
+        MC "Hey, I think I'm gonna head back to the festival. You wanna come? {w}Some time off from investigating could do some good for you."
+        show RM neutral-2
+        RM "Nah, that's okay. You don't have to worry about me, I've had enough for today."
+        MC "Alright. That's probably a good thing. Try to get some rest for once then. I'll catch you later."
+        RM "Later."
+        MCT "Can't say I expected all of that to happen when I went to the festival the first time. Hopefully I get a little bit further the second time."  
+        MCT "But who's to say? The night's just getting started."
+        jump daymenu
+
+label MC010_MC:
+    MC "Yeah. You're right, I guess."
+    MC "Some alone time wouldn't be the worst, honestly. Get some quiet in."
+    "I looked at Tomo, the concern slightly bubbling."
+    MCT "I mean... don't want to pry."
+    MCT "But, come on. She's got something going on."
+    MCT "She left her dorm. That's a good step forward at least."
+    MC "But like... you're good, though? You're sure?"
+    show Tomoko defiant
+    "Tomo rested her hand on the strap of her bag, a heavy sigh coming out."
+    Tomoko "Kei, I'll be fine."
+    MC "Okay."
+    show Tomoko neutral
+    Tomoko "..."
+    Tomoko "Like, seriously."
+    Tomoko "I'm an adult. Just like you."
+    Tomoko "I'm going back to my dorm. Straight back."
+    MC "Tomo, listen-"
+    Tomoko "Just because dad isn't here doesn't mean that I need someone to take his place trying to helicopter over me."
+    Tomoko "I get why you're asking, but I'm not your baby sister."
+    Tomoko "We're twins."
+    MC "I mean... technically I'm older."
+    Tomoko "By literal minutes."
+    MC "Older. I tasted oxygen first."
+    show Tomoko annoyed
+    Tomoko "Doesn't count."
+    if checkAffection("TM", ">", 3) or getFlag("MC005TM"):
+        show Tomoko smile
+        Tomoko "Look... I get it, Bro."
+        Tomoko "But, I'm okay. I'm good. You don't need to worry."
+        MC "Right. I know."
+        Tomoko "Go chill out. Get something to eat."
+        $setAffection("TM", 1)
+        "I nodded as the bus pulled up and Tomo got on, followed by a few other festival goers."
+        hide Tomoko with dissolve
+        "I watched the bus pull off, then looked back toward the edge of the festival."
+        MCT "Well... here goes."
+
+    else:
+        show Tomoko neutral
+        Tomoko "Kei... I'm fine. I told you."
+        Tomoko "Don't get yourself all worked up."
+        MC "I... I know. I just want you to be safe."
+        MC "I don't mean to hover over you. I'm just worried."
+        "Tomo glanced back at me and nodded, before turning and stepping onto the bus, the door closing after a few people followed behind her."
+        $setAffection("TM", 1)
+        hide Tomoko with dissolve
+        "I sighed as the bus pulled away, then looked toward the edge of the festival ahead of me."
+        MCT "Alright... here goes, I guess."
+
+    $eventname = "Hanabi"
+    $save_name = "Hanabi"
+    scene Festival with fade
+    play music Festival
+    pause 2
+    "I glanced sideways as three women, all in yukatas, passed right by me, laughing and holding some sort of dessert."
+    "Walking down the large row of stalls and stands, I glanced around and into the crowd."
+    "A few faces stuck out from the academy. No one who I really could say I knew, but I'd definitely seen in passing."
+    "Some older people went around as well, likely town residents and other locals."
+    "I glanced at a woman passing by with someone who was likely her husband on her arm, her cleavage more than a bit noticeable as the front of her yukata stretched out to contain her almost unthinkably large chest."
+    "Her husband, seemingly just your average dude, walked along with her, smiling and laughing with her."
+    MCT "Guess there's both types here. At least, I'd assume so. Based on how... apparent some of them are."
+    "As I walked further, a woman stood nearby, singing some sort of song about spring's passing and the beginning of summer."
+    "While her song was admittedly familiar, and told about the beginning of the rice season, and a little robin coming early and chirping softly, my mind sort of glossed over it."
+    "Instead, my focus fell more on her enormous rear end, which gave her yukata a distinct pear shape, the sides and back bulging out like a bell around her."
+    MCT "Is it seriously that time already?"
+    MCT "Doesn't feel like I've been here that long."
+    if getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        "I glanced back at the stalls, the sweet smell of festival desserts and treats nearly picking me up by the nose and making me go a-floating."
+        MCT "Wonder what Alice is doing."
+        MCT "Missed that opportunity. Shit."
+        MCT "Maybe she's here. I'll take a peek around later."
+    elif routelock == "AE":
+        "I glanced around the stalls and the open area nearby."
+        MCT "Our meeting spot should be here somewhere..."
+        MCT "She's still busy with work, though, so no rush."
+        MCT "I'll find it though. Good to get an idea of how to get there."
+    elif getHighestAffection() == ("AE") and not routelock == "AE":
+        "I glanced back at the singing woman."
+        MCT "Wonder where Shiori might be..."
+        MCT "I think I heard something about a student council project thing, but who knows what that's about."
+        MCT "I'll go looking for her later."
+    elif routelock == "PRG":
+        UNKNOWN "Dad! Dad!"
+        "I turned around, looking back toward the stalls."
+        "A man and a woman were walking together, a small kid walking, holding his dad's hand."
+        Man "Hold on! What's up?"
+        Kid "I want to play daruma otoshi!"
+        "The man looked over who I assumed was his wife, who shook her head and got in line at a food stall."
+        Kid "Dad! C'mon!!"
+        Man "Alright, alright! Let's go find it."
+        "The kid half walked, half dragged his dad down the rows of stalls, into the crowd."
+        pause 1
+        MCT "... God, I wish she was here."
+        "I watched where the two had gone, and my eyes landed on the woman waiting in line."
+        "I looked back into the open area, trying to think of where I might find a gift for her."
+    #if routelocked to PRG and not the father
+        #"I looked toward the rows of stalls, and saw a man and woman walking, a kid practically leading the man along toward something."
+        #MCT "... I wish she could have been here."
+        #MCT "I know she's got a lot on her plate, but I'd still really like to at least see her."
+        #"I sighed, and glanced up at the sky, watching the leaves blow on a tree."
+        #MCT "Eh... maybe it's for the best."
+        #MCT "I'll look for a gift or something. Something that shows I was thinking of her."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        "I glanced down all of the stalls."
+        "Near the end, my eyes fell on one practically overflowing with flowers in every direction."
+        MCT "... Yeah, should have asked her out. Damn."
+        MCT "She might be here, actually. Could go searching."
+        if getFlag("MC005GTS"):
+            MCT "Actually, hold on."
+            "I took a few steps closer to the stall, peering over."
+            MCT "That's that dude from that shop. Ren Hirano."
+            MCT "Hm... chocolate cosmos."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I took another look down the stalls, admiring one of the many food-based ones before taking my phone out."
+        MCT "Damn."
+        MCT "Maybe I could give her a call?"
+        MCT "Nah. She said she'd call when she gets here. Too clingy."
+        MCT "Plus, she'd call me lame or something. Not happening."
+        "I turned again, seeing a sign advertising a strong-man booth down the way."
+        MCT "Alright, she'll love it."
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        MCT "Okay... where the hell is she?"
+        MCT "I've gotta see that yukata. And, more importantly, her in it."
+        "I checked my phone hopefully, unfortunately coming up blank, save for my wallpaper."
+        MCT "What 'unexpected trouble' could she have had?"
+        MCT "... I mean, I can think of a few things, but who knows? Maybe it's out of left field."
+    else:
+        "I looked at a few stalls... and kind of just wandered into the open area."
+        "I thought about Tomo's face as she'd walked up to me, and as she'd left."
+        MCT "Call me a big brother... or just a brother, I guess."
+        MCT "I hope she's okay."
+        "I rubbed my eyes, shaking my hair out a little."
+        MCT "I mean, she left the dorm. And for something that wasn't a necessity. That counts for something, especially in her case."
+        
+    "I walked a little ways past the singer and the crowd, and toward the stalls again."
+    "A few games were set up, multiple people playing them."
+    "A ring tossing game stuck out near the end of the row. Only one person was playing it. A skinny looking guy, tossing ring after ring."
+    "A strong gust blew along the row of stalls."
+    MC "Gaggh-"
+    "I pulled a long piece of hair out of my mouth, brushing my hair away from my face for a second before it flopped back down."
+    MCT "This damn factor, I swear."
+    MCT "Gonna start shaving my head at this rate."
+    "I looked back at the ring tossing game, the guy still throwing rings, despite not a single one striking true."
+    MCT "Rigged ass game. Can't win no matter what you do."
+    "I walked past it, resisting the urge to pat the guy on the shoulder and gently tell him to stop trying."
+    "Going to another row, I walked along for a short while, taking in the smells of delicious fried foods."
+    MCT "Should find something to drink..."
+    "I glanced sideways, noticing that I'd stopped right by a stand featuring a load of strings strung through holes."
+    MCT "Ah. My old friend. We meet again to do battle."
+    "I stepped forward to the senbonbiki stand, waiting in line behind a woman in front of me, and recalling the time that Tomo and I had spent at these exact types of stands."
+    MCT "Tomo and I raked in lots of shit at these..."
+    MCT "And dad won a cookie... that he promptly broke a tooth trying to eat."
+    pause 1
+    MCT "... Why the hell am I thinking about Dad's tooth and the following dental visit?"
+    "The woman in front of me pulled a string, taking her prize and stepping aside as I came forward, the man behind the booth nodding and presenting the strings."
+    MCT "Alright... which one? Which one?"
+    menu:
+        "Left":
+            "I reached my hand toward the left string, taking hold."
+            MCT "Alright. Here goes, no bad prizes, all the good, let's go."
+            "I rubbed the string between my fingers for luck, and gave it a tug."
+            Attendant "Congratulations!"
+            "He reached under, taking out... a daruma doll, which he handed to me."
+            MC "Thank you!"
+            "I looked down at the doll. Remembering that it was a symbol for good luck, I tucked it in by my phone, and stepped aside."
+            $setFlag("MC010MC_Doll")
+        "Middle":
+            "I reached my hand toward the middle string, taking hold."
+            MCT "Alright. Here goes, no bad prizes, all the good, let's go."
+            "I rubbed the string between my fingers for luck, and gave it a tug."
+            Attendant "Congratulations!"
+            "He reached under, taking out... a small plushie of a cat."
+            MC "Thank you!"
+            "Taking it from him, I glanced down at it."
+            "I tucked it into my pocket and stepped aside."
+            $setFlag("MC010MC_Plushie")
+        "Right":
+            "I reached my hand toward the right string, taking hold."
+            MCT "Alright. Here goes, no bad prizes, all the good, let's go."
+            "I rubbed the string between my fingers for luck, and gave it a tug."
+            Attendant "Congratulations!"
+            "He reached under, taking out... a bouncy ball."
+            MC "Thank you!"
+            "I took the ball from him, turning it in my hand as I stepped aside."
+            MCT "Seichou Saku Matsuri. I wouldn't imagine bouncy balls being a common form of merch for this, but whatever."
+            "I tucked it in by my phone, making sure it wouldn't slip out."
+            $setFlag("MC010MC_Ball")
+    "As I backed up and started to continue my walk, my gait was slowed to a stop."
+    "A nearby couple, a boy and a girl, were at another senbonbiki stand. And, based on their age, they definitely were students."
+    if isEventCleared("BE013") or getFlag("Meet_Koneko"):
+        MCT "Wait... that's Koneko. The chick from soccer club with Honoka."
+    "I glanced down at the girl's yukata."
+    MCT "Eesh... girl looks like a tie-dye shirt."
+    MCT "Way too many colors."
+    "Her hands had more rings on them than I'd ever seen in one place, her hands glinting like a disco ball."
+    "Beside her, her male suitor was... basically the exact opposite."
+    "He was taller, and a fairly good looking guy, with a basic, gray kimono on."
+    "My eyes went to his face."
+    MCT "Looks almost scared."
+    Girl "You pick!"
+    Boy "Koneko, you picked it. I mean this. Like the game. You should pick."
+    Koneko "I told you to choose before! As in, before we even started playing!"
+    Koneko "Left, right, middle! One, two, three! Just choose one!"
+    if isEventCleared("BE013") or getFlag("Meet_Koneko"):
+        MCT "I'm... not touching this."
+    Koneko "We just got back together and we're already fighting..."
+    Boy "Hm. Glad I'm not the only one with regrets."
+    "A hand was clapped over Koneko's mouth as her jaw dropped."
+    Koneko "Takeda Yamamoto!"
+    if not getFlag("Meet_Takeda"):
+        $setFlag("Meet_Takeda")
+    if not getFlag("Meet_Koneko"):
+        $setFlag("Meet_Koneko")
+    Koneko "W-What did you just say to me?!"
+    Takeda "I-I-"
+    Takeda "I said I'm not the only one with {i}reverence!{/i}"
+    "His hands were up beside his head, as if in surrender. He glanced over at the strings... and the slightly perturbed looking man running the stand."
+    Takeda "Just... pick one."
+    if isEventCleared("MC009"):
+        MCT "Those two names sound... familiar. But, later. I shouldn't sit there drawing attention."
+    "I continued on my way a bit, sighing and sliding my hands down my kimono in a poor attempt at putting my hands in my nonexistent pockets, while keeping myself close-ish to the stands and the bickering couple."
+    "I started thinking. About those two and their argument."
+    "... And about her."
+    "My ex."
+    "I glanced backwards, toward Koneko and Takeda."
+    MCT "I wonder... what it would take for me to want to get back with her?"
+    MCT "Doubt it would work, but... it's a funny thought."
+    MCT "Wonder if my long hair could wrestle her out of that soccer captain's arms that she \"fell\" into."
+    MCT "Cheating skank..."
+    Koneko "I hate chocolate! Of course!"
+    "I glanced over as Koneko held up her prize from the game. A large chocolate bar."
+    "She tossed it at Takeda, who fumbled with it, bouncing it from hand to hand before it fell to the ground, the bar snapping with an audible crunch."
+    pause 1
+    MCT "Nope. Not in a million years."
+    "I shook my head."
+    MCT "Leaving that chick in the past."
+    if routelock == "AE" or isEventCleared("BE020") or isEventCleared("FMG020") or isEventCleared("FMG020B") or isEventCleared("GTS026"):
+        MCT "Think I've already got a pretty good thing going anyway. No good can come from thinking back on that crap."
+    elif isEventCleared("PRG027"):
+        MCT "I've got other things to worry about, anyway."
+        MCT "... God, do I ever."
+    Koneko "Why did you drop it?!"
+    Takeda "I-It was an accident!"
+    Takeda "I thought you didn't like chocolate?"
+    Koneko "I don't! But, you should be supporting me! Not dropping my reward!"
+    "She turned and stormed off, leaving Takeda looking about as dumbfounded as I felt."
+    MCT "Rip, my dude. Colossal rip."
+    "I glanced toward Koneko heading off into the crowd, then back at her now lone date."
+    pause 1
+    menu:
+        "Try and talk to him":
+            "I lingered my gaze on him for a moment."
+            MC "Hey..."
+            MC "Not to like, eavesdrop, but... you good?"
+            "Takeda shook his head."
+            Takeda "Mn..."
+            Takeda "Not hard to listen in on that, I guess."
+            Takeda "Just. You know, kind of thinking I made a massive mistake."
+            Takeda "I think that... maybe Sakuma-chan and I just aren't meant to be."
+            MC "Well..."
+            MC "I guess, look back on things and... see where things lie, you know? Kind of give it all a good analysis."
+            MC "Especially when you've got those sorts of feelings. Can't make the same blunder twice."
+            MC "She... seems a little intense. At least from an outsider's point of view."
+            Takeda "Not always."
+            Takeda "Well... maybe she is. I don't know."    
+            Takeda "I'm just kind of tired of it. Tired of feeling like dirt."
+            if getFlag("MC010MC_Plushie"):
+                MCT "Maybe I should give him the cat plush?"
+                MCT "Could smooth things over, if there's even a chance of that."
+                menu:
+                    "Give him the plush":
+                        MC "Here."
+                        "I reached into my kimono and took out the plush, holding it to him."
+                        MC "Maybe giving it to her will help things."
+                        Takeda "You... would just give me that?"
+                        MC "Yeah. Won it at the senbonbiki."
+                        MC "Go ahead. Not gonna do much good staring at it."
+                        "The taller guy seemed to sigh, then reach over."
+                        Takeda "Thanks. For the chat, and the gift."
+                        MC "'Course."
+                        "Takeda tucked the plush into his kimono and headed off after her."
+                        MCT "Well, there's the good deed for the day."
+                        $setFlag("MC010MC_PlushieGiven")
+                    "Keep it":
+                        MCT "Not... really sure how much saving there is to do here."
+                        "Takeda stood up and shook his head."
+                        Takeda "I should go find her."
+                        Takeda "Thanks. You know, for the chat."
+                        MC "Sure."
+                        "I watched him walk off."
+                        MCT "Been there, brother..."
+                        "I set off toward the stands."
+        "Leave him be.":
+            "I sighed."
+            MCT "Been there, bro..."
+            "I turned and headed off toward the other stands, as I saw Takeda gather himself and follow slowly after her."
+    pause 1
+    scene black with fade
+    $setTime(TimeEnum.NIGHTLIGHTS)    
+    scene Town Omikuji with fade
+    "Heading in, I kept my eyes out for anything that might occupy some time."
+    "A small shrine stood before me, an admittedly old and rather friendly looking monk. He stood near motionless, save for his hands, which gestured with the grace and poise of flowing water."
+    MCT "Wonder if he's doing one of those vows of silences."
+    "The monk nodded toward me, bowing deeply and waving one hand toward two wooden boxes, faded with age. The sign above read omikuji for 100 yen."
+    "I glanced to the box, then back at the monk."
+    MCT "Didn't pick one for the new year."
+    MC "It's been a while. I could use one."
+    "The monk smiled and nodded in his flowy way."
+    "I set the money in the larger box. The monk bowed once more and gestured toward the thinner, vertical shaped box."
+    "I stepped in and picked up the box, giving it a shake."
+    "Finding nothing, I shook again, until a small bamboo stick fell from it."
+    "Taking it, I glanced down, looking for my number."
+    if routelock == "AE":
+        MCT "Hm... 007."
+    elif routelock == "PRG":
+        MCT "Mn... 055."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        MCT "Hnn... 235. Okay."
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        MCT "Mmm... 088."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        MCT "115. Alright."
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        MCT "808. Hm."
+    else:
+        MCT "034."
+    
+    "My eyes went to the large choice of drawers. I skimmed, keeping an eye out for my number."
+    if routelock == "AE":
+        "I reached forward, taking the 007 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'Your presence has an effect on everyone around you. Understanding it will decide the future of yourself and others.'"
+    elif routelock == "PRG":
+        "I reached forward, taking the 055 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'The vile seeds of the past hinder the growth of the brightest future. Care and patience will yield the richest sunrise.'"
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        "I reached forward, taking the 235 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'Let go and hold tight; close your eyes and see clearly; see clearly, lest the heart be parted of blood.'"
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        "I reached forward, taking the 088 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'The one who seeks wisdom over wealth will find both.'"
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "I reached forward, taking the 115 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'You will be the light that helps guide them out of the darkness.'"
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "I reached forward, taking the 808 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'Be prepared to broaden your horizons.'"
+    else:
+        "I reached forward, taking the 034 drawer and sliding it open, pulling out the piece of omikuji."
+        MCT "'The purpose of life is a life of purpose.'"
+    "I tucked the paper into my pocket, folded it a bit, and bowed to the monk."
+    "I turned, heading down the line of stands again, this time into the park."
+    scene black with fade
+    $setTime(TimeEnum.NIGHT)
+    pause 0.5
+    scene Park with fade
+    "Groups of people were starting to gather, all seeming to face the same direction."
+    UNKNOWN "They always have them in that direction. It's the best view in town."
+    "I craned my neck, glancing over a few people to see a few people far in the distance, huddled over something."
+    MCT "Mm. Hanabi."
+    "I smiled. It was almost impossible to hate a good hanabi show."
+    "As I watched the shadowed figures, my eyes drifted closer... toward the loud pair of voices coming closer."
+    pause 1
+    MCT "... So soon?"
+    "I watched Koneko and Takeda walk through the crowd, away from the festivities."
+    Takeda "Ten minutes. Literally ten minutes."
+    Koneko "You're making it sound like I broke the law."
+    Takeda "You did! Relationship law! There's expected guidelines! Like don't flirt with a guy setting up the fireworks!"
+    Koneko "I told you. We're just friends."
+    Takeda "Friends don't make those kinds of eyes."
+    Koneko "We met up after you and I broke up. Nothing happened. Everything fizzled out, and now we're friends. Simple enough for you?"
+    Takeda "I came backstage to see the prep work being done. Not to give you a free pass."
+    Koneko "You're just overreacting again. It's not that big a deal."
+    Takeda "I think I'm reacting with perfect validity, thank you."
+    Takeda "Your nonstop handwaving is what made me pull the plug in the first place."
+    Koneko "Could say the same thing about you and your jealousy."
+    MCT "Holy shit, this is painful."
+    "I took out my phone and glanced at the screen."
+    MCT "Still early."
+    show dummy with vpunch
+    "{i}PPPPSSSSSSSHHHHHHFFFFFF!!!!{/i}"
+    "I looked up as multiple fireworks went flying into the air, exploding with a huge boom."
+    "Multiple gasps and exclamations came from the crowd."
+    Takeda "This'll be a good lesson in boundaries, then."
+    Koneko "Wha-"
+    Koneko "What did you..."
+    "As the next round shot up, one of the rockets angled off out of line, and shot over the trees instead of straight up, blowing up much lower than the others."
+    "Many of the people didn't seem to notice, save for a few heads that followed it."
+    Koneko "What did you do?!"
+    "Koneko glanced from his face, down to his hands, her eyes holding there for a long second."
+    if getFlag("MC010MC_PlushieGiven"):
+        Koneko "... Where's that cat plushie you had?"
+        Takeda "Being put to good use."
+        MCT "... Did I just indirectly cause that?"
+        MCT "He wouldn't have... no. No that's..."
+        "I looked up at where the rocket had blown, and breathed."
+        MCT "Least it didn't do any damage."
+    else:
+        Koneko "Where's that plushie you bought me?"
+        Takeda "Being put to good use."
+        "I blinked, glancing over."
+    Koneko "YOU ARE SUCH AN-"
+    show dummy with vpunch
+    "{i}BOOOOM!!{/i}"
+    "Whatever she'd said was muffled by the display overhead."
+    Koneko "-SO DONE! YOU COULD HAVE HURT SOMEONE!"
+    "Koneko pushed through a few people, crossing the crowd."
+    Takeda "We are done! I'm done with you!"
+    "Takeda went the other way at a quick pace."
+    MCT "... Both of those two are insane."
+    "As the fireworks went on, I checked my phone again."
+    if routelock == "AE":
+        MCT "Probably been long enough. Think I can visit."
+    elif routelock == "PRG":
+        MCT "I need to find a gift for Aida. At least something proper with some meaning."
+        MCT "Not something tied to a string, either."
+    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
+        MCT "Shocked I haven't seen Naomi around, she's a head above everyone else, I figured it'd be easy to spot her. She's probably somewhere around here, though."
+        MCT "May as well mosey. See if I can find her."
+    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
+        MCT "Kind of surprised that I haven't seen Alice yet."
+        MCT "I always thought fireworks were pretty huge in America. Maybe she's close?"
+        "I checked my immediate area."
+        MCT "... Or maybe by the food stalls..."
+    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
+        "My phone buzzed in my hand, and I glanced down."
+        FMGCell "I'm at the bus stop. Where u at?"
+        "I smiled and turned around, heading away from the show."
+    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
+        "My phone vibrated, making me glance down at it."
+        BECell "Im by the bust stop! Where are you??"
+        "I stared for a second, then let out a light exhale of laughter."
+        MCCell "I'm coming"
+    else:
+        MCT "Well... think I might wander a little more. Take in the sights while everyone is busy."
+        "I headed back toward a new section of festival, keeping an eye on the show."
     jump daymenu
 
 label MC011:
@@ -10516,6 +15345,17 @@ label MC014:
     "She glanced over at the crowd, tucking her hands into her overall's pockets."
     MC "Do you know where the game store is in town?"
     Tomoko "Near the bus stop by some other shops."
+    if isEventCleared("AE039"):
+        MC "The Amatsu game store?"
+        show Tomoko distracted
+        Tomoko "Uuuhhh..."
+        pause 1
+        show Tomoko distracted-2
+        Tomoko "Yeah."
+        show Tomoko neutral 
+        Tomoko "You been there with that council girl?"
+        MC "Yep."
+        Tomoko "Huh. Didn't think she'd be a gamer."
     "Tomo shifted on her heels a little, doing a gentle rocking motion."
     "I glanced back to the crowd beside us."
     MCT "Wyrm's Pursuit does always have those wild Saturday launches."
@@ -10587,6 +15427,7 @@ label MC014:
         MCT "Wonder what Honoka is up to. This seems like her sort of gig."
         "I glanced down at my phone again and kept scrolling, clicking on another tab."
         "I stopped just as I nearly swiped away a notification and clicked it."
+        $setBEOutfit(OutfitEnum.CASUAL)
         BECell "<Miss you!!>"
         "I smiled. Superhuman timing as always."
         MCCell "<Hey. Miss you too!>"
@@ -10605,6 +15446,7 @@ label MC014:
         MC "It's true, you jerk. Her name is Ho-"
         hide Tomoko with dissolve
         MC "And she's gone."
+        $setBEOutfit(OutfitEnum.DEFAULT)
         "I watched her zone out on her puzzle game again, as I laid my head back in my seat."
     if routelock == "GTS":
         MCT "Right after this, it's over to Naomi's."
@@ -10625,10 +15467,17 @@ label MC014:
     with fade
     "I followed Tomo off the bus and onto the sidewalk."
     "She had her phone in one hand and the other one over the flap of her messenger bag, as she glanced back at me."
-    Tomoko "Um... the store is this way."
-    MC "... 'Kay?"
+    if isEventCleared("AE039"):
+        MC "Store should be close."
+        Tomoko "..."
+    else:
+        Tomoko "Um... the store is this way."
+        MC "... 'Kay?"
     "I walked after her, Tomo's walk bearing a slight resemblance to Tashi-sensei when he was all worked up."
+    "We walked along the buildings, coming up on one that read \"Amatsu Game Store.\""
     play music MomentTime
+    if not getFlag("VisitedGameStore"):
+        $setFlag("VisitedGameStore")
     scene Game Store
     show Tomoko worried
     with fade
@@ -12812,6 +17661,271 @@ label MC024:
     MC "... Do you have another form, please?"
     jump daymenu
 
+label MC032:
+    play music ChangingSeasons
+    $setTime(TimeEnum.RAIN)
+    scene Campus Center with fade
+    "The weather today was down right dreadful, with a swirl of gray clouds hanging above. Rain seemed likely, yet the veil held as I crossed the courtyard."
+    "As I walked, I spotted a surprising figure, sitting beneath a tree. Her focus seemed aimed at the book in her hands, seemingly unaware of the dark clouds above her."
+    show Kokutan neutral with dissolve
+    MC "I hope you have an umbrella with you."
+    Kokutan "Why should I? There is no rain coming."
+    "I pointed my finger towards the sky while looking up, but she didn't react."
+    Kokutan "I'm aware of the clouds, but I did not consent to their existence. They dare not act further, for it was not part of fate's design. Even dark clouds have no sway over the presence of a dark lord."
+    "Her confidence on the matter was perplexing, but one I struggled to argue against."
+    Kokutan "The sky's cerulean tears dare not fall without my permission."
+    "She gently shifted over as though to invite me beside her."
+    MC "Uh..."
+    "I wasn't quite sure how to take that gesture; it's far more... demure that I'm used to from Kokutan. Regardless, I sat down and nodded in thanks."
+    Kokutan "Have you stopped to consider the year so far?"
+    MC "You mean like where my grades are, or with everything else?"
+    Kokutan "With everything else."
+    MC "I mean I think everyone's coming to terms with it. Some are faster than others, but everyone's managing."
+    Kokutan "Where do you put yourself?"
+    MC "I was pretty fast, since I got rather lucky, all things considered. My hair was probably one of the more easily adjustable factors to receive."
+    Kokutan "You were rather lucky I suppose, especially compared to our female classmates. Some of them I feel extremely empathetic for, knowing they might never fully reintegrate into society."
+    MC "You're referring to your roommate I take it?"
+    Kokutan "Not specifically, no. Not to say it doesn't apply, but her factor, for better or worse, enjoys some level of positive acceptance, at least in some circles.  Others are not nearly as fortunate..."
+    if routelock == "WG":
+        MC "I take it you are referring to your boss?"
+        Kokutan "Among others... Hers certainly being one of the most stigmatizing, but far from the only example."
+    MC "Well it's not like they grew furry tails, fangs, or gills."
+    Kokutan "Yes, but what awaits someone with muscles like a titan? Breasts the size of barns? Heights that could dwarf towers? Humans know to recognize things they see as, well... inhuman."
+    MC "We live in a modern world, people are more accepting than ever before."
+    "Kokutan swiftly shut her book before letting out a sigh."
+    Kokutan "I want you to think back to the day you stepped on that ferry."
+    MC "Okay..." 
+    Kokutan "Now remember the first time you saw the one who entreated us unto this new world and honestly say you weren't instantly either judgemental or reactionary."
+    MCT "The one who entreated us unto this new world...?"
+    MC "...Takamura-sensei."
+    Kokutan "Exactly so. In your mind palace you found the correct key, and now can see my masterwork of wisdom with unclouded eyes. Though we revere harmony, we cannot deny the beast of judgement inside."
+    "My thoughts immediately went to that moment where Tomo and I met Takamura-sensei. Her hips aren't... abnormal by any means, but they were noticeably larger than normal."
+    "But to her point, apparently large enough that they stuck out in my mind."
+    MCT "And then I met Honoka..."
+    if routelock == "BE":
+        MCT "Seeing Honoka... truthfully when I saw her, her boobs weren't exactly the very first thing on my mind. I felt... normal again. Like I was adrift in a storm and found a familiar port. Everything felt... like it was gonna be okay again."
+        MCT "As for her boobs, well, yeah those definitely shot out to me in my mind. Silly now to think just how much bigger they are... guess that's more of a bonus for me, though. Like a fun extra to an already fantastic love we share."
+        MCT "... But if I hadn't found and fallen for her again, would I have felt the same way? If she was anyone else I saw on the street..."
+    else:
+        MCT "Seeing how she had grown after all of these years was... wild. It almost felt comical, like it was a bit I wasn't in on."
+        MCT "Now however, it doesn't even hold a candle to what I've seen since... but would I really have the same perspective now?"
+        MCT "Hm..."
+    MC "Personally, I wouldn't care that much. Sure I'd be shocked, but I wouldn't judge them."
+    Kokutan "I forget you have such an open mind and heart sometimes."
+    "She tried to hide it, but I thought I caught for a second the barest hint of a genuine smile. Not one of her normal grins or smirks, but an actual smile. It faded as fast as it appeared as she recomposed herself."
+    Kokutan "What I mean to say is that the rest of the world isn't you. Some people see anything unfamiliar as hostile and can get incredibly aggressive about it." 
+    Kokutan "The status quo always supersedes whatever image society tries to put forward. You know— actions speak louder than words, sort of deal."
+    MC "I understand what you're saying, but I don't think the world is as hostile as you imagine it to be."
+    "Kokutan went silent for a couple minutes, her gazing drifting up at the gray blob above us."
+    Kokutan "Do you ever think about the future?"
+    "I don't know why, but it seemed like an odd question coming from her."
+    MC "I mean yeah, I've thought about the end of the school year, what student doesn't?"
+    Kokutan "No, I mean long term, you know when you are 30, 40, 50... The future we think about, but don't try to dwell on."
+    MC "Sometimes, I guess. But I don't try to focus on it, like you said."
+    Kokutan "But have you thought about it recently with your factor, right? What will it be like when you are 50 trying to take care of it?"
+    MC "Might be a hassle, but I could still manage it. It's only hair afterall. Keep it clean and it pretty well takes care of itself."
+    Kokutan "I feel bad for your girlfriend if that's all you think goes into haircare."
+    "I shrugged meekly causing her to chuckle. I wasn't about to feign any semblance of understanding about feminine hair care techniques."
+    if routelock == "BE":
+        Kokutan "Actually, speaking of your girlfriend, have you already tried imagining your future with our girlfriend?"
+        MC "MY girlfriend."
+        Kokutan "That's what I said."
+    elif routelock == "WG":
+        Kokutan "Actually, speaking of your girlfriend, have you already tried imagining your future with Nikumaru-san?"
+        MC "What, is this? An interview? Where will we be in five years?"
+        Kokutan "Humor me."
+    else:
+        Kokutan "Actually, speaking of your girlfriend, have you already tried imagining your future with your lady friend?"
+
+    if routelock == "FMG":
+        MC "Hm, can't say I have. With Akira, we both take it one day at a time and focus on what's in front of us."
+        MC "Having said that, if there is more for both of us when we're done here. I gladly accept it with open arms. She brings so much happiness into my life and I can't be without her smile, heh."
+        Kokutan "What do you mean?"
+        MC "Can't lie though, I am curious on what she plans to do when she's out of here."
+        Kokutan "You haven't once asked her what she wants to be?"
+        MC "Truth be told, I think she doesn't know either. Again, she takes it one day at a time. She has the time to figure out what she wants to do and I'll be there to support her regardless of her decision." 
+    elif routelock == "WG":
+        MC "Hard to say, I don't really know what that would look like to be honest."
+        Kokutan "What do you mean? Surely you've imagined something by now?"
+        MC "What I mean is that she's pretty well off, obviously, but she's not going to tolerate me being some kind of sponge mooching off her just because she has money."
+        MC "I have my own career ambitions, and she clearly has hers. I haven't figured out how those two things are going to work together. She's already pretty busy with her business here. I have to imagine she'll only get busier once we leave here."
+        Kokutan "You're worried that she won't have time for you?"
+        MC "Yes and no. She's not one to use \"I'm too busy\" as an excuse to get out of things.  She'll prioritize her time for the people that matter to her, and she's very efficient with her scheduling."
+        MC "But still, there's only so many hours in a day, and big time business execs work a lot of hours."
+        Kokutan "So you're worried she'll outgrow you?"
+        "Of all the things that Alice had outgrown by this point (in the literal sense) I hadn't given much  thought about her outgrowing our relationship. {w}Maybe I should have." 
+        "Having seen her beach house, not to mention all the luxuries and amenities she surrounded herself with, including her own personal assistant, it was pretty obvious she and I occupied very different stratas of society." 
+        MC "I suppose I am. She's not the easiest person to keep up with. But doesn't everyone want to be with someone who pushes them to be a better version of themselves?"
+        Kokutan "True. Though few are fortunate enough to surround themselves with such people in their lives."
+    elif routelock == "PRG":
+        MC "Well, I mean... it's pretty cut and dry, I'd say."
+        MC "Life with Aida and fatherhood."
+        Kokutan "So, you're planning to marry her?"
+        MC "Well, I'm definitely not planning to leave what we have now and try to start somewhere else."
+        MC "Can never really plan for every scenario, of course. But, I'm doing what I can to be well prepared in every corner."
+        Kokutan "Makes sense."
+        Kokutan "For the future though... have you considered what life might be like for Kodama-san in a few decades?"
+        MC "I have thought about it, of course."
+        Kokutan "Will you stay on the island?"
+        MC "... Yeah. Probably."
+        MC "With Aida's factor being what it is, and how much work parenting is on its own, living in a place more accessible for people of her size makes way more sense. Even after she has her kids, I imagine she'll be a fairly massive woman curves wise."
+        Kokutan "Are you worried? For what might be down the line for you two?"
+        MC "... What good would worrying even do?"
+        MC "It's... just thoughts of what could theoretically happen. Not anything set in stone."
+        MC "I could be worried. But... what good would sitting here mulling all that over in circles do for me? Not much."
+        MC "The best I can do is keep pushing on and trust in Aida and myself to come out on top."
+        MC "I've got to look out for number one. Aida and my kids."
+        Kokutan "That is two numbers, you know-"
+        MC "Don't ruin it."
+        Kokutan "Fine. Fine."
+        Kokutan "Be careful though, it's good to prioritize Aida and your kids, but it's easy to forget yourself."
+    elif routelock == "GTS":
+        MC "I have."
+        MC "It's kinda funny."
+        MC "I've come to realize I'm probably going to live on this island for the rest of my life."
+        MC "And yet... I don't really care at all."
+        Kokutan "That's good? In a way?"
+        "I chuckled."
+        MC "Yeah."
+        "I scratched my head."
+        MC "It's gonna take quite an adjustment, though. Just physically interacting with her, it's... nothing's the same anymore. Old rules don't apply, even from the first half of the year."
+        MC "Not to mention housing..."
+        Kokutan "Oh yeah, I never even thought of that. You're gonna be living like a pet mouse."
+        MCT "Don't love the way you phrased that."
+        MC "Well, it's the least I can do. If I really wanted to, I could walk away. I could go back and go hang with my old friends and be half normal."
+        MC "Naomi doesn't get that choice. This is her life now."
+        MC "She needs me."
+        MCT "I wonder if it's as much as I need her..."
+        "Kokutan chewed on something for a moment, her expression momentarily knitting into something like frustration."
+    elif routelock == "AE":
+        MC "Future? I mean... being honest, that's kind of inevitable."
+        Kokutan "Inevitable?"
+        MC "Mm."
+        Kokutan "... Mind explaining a bit?"
+        MC "Shiori is the type of girl who's always thinking way farther ahead than I am, her mind is set on the future."
+        MC "It's kind of hard not to at least be in the mindset of what the future will hold with her. In a way... I dunno, I suppose that given how close we are now, she's factored me into her future."
+        Kokutan "But do you factor HER into yours?"
+        MC "What do you mean?"
+        Kokutan "What I mean is that Shiori seems to take initiative in a lot of things in your relationship from how you describe it. She is a reliable person, after all."
+        Kokutan "However, being as reliable as she is, you kinda seem to default to her vision because you can rely on it."
+        Kokutan "How can SHE rely on you? What are your plans for the future with her?"
+        MC "... Hmm..."
+        Kokutan "It's well enough if you don't have an answer now, I just-"
+        MC "No, no, that's not it."
+        MCT "Really, I had to think about it because of the thought of what would happen if she had to rely on me when I'm not sure I could match her expectations... but..."
+        MC "I would like to buy a house somewhere. Settle down, have a few kids... you know how it goes."
+        Kokutan "Oooo, a few?"
+        MC "Y-Yeah."
+        Kokutan "Here I was about to say it's as bog standard and milquetoast of a dream for the future as I could expect from Hotsure-san-"
+        MC "Oy."
+        Kokutan "But a few? Interesting."
+        MC "What can I say, my dad had me and Tomo and well... I dunno. It's just a nice dream."
+        MC "For your reference, it's not milquetoast at all, it would be a cool ass Frank Lloyd Wright house. With waterfalls and self-playing instruments and a giant whale."
+        Kokutan "You and Shiori both, I swear."
+        Kokutan "..."
+        Kokutan "A giant whale?"
+        MC "The man was a visionary."
+    elif routelock == "BE":
+        MC "Honestly? It depends on Honoka and how she feels about her situation. With my factor, I don't have to stay localized on this island. But considering how far her's is progressing, it may make things difficult in the future."
+        Kokutan "So in other words, you'll cross that bridge when you come to it?"
+        MC "Yup. Surely you've known Honoka long enough that she prefers to live in the moment, and not think about the future."
+        "Kokutan chuckled."
+        Kokutan "Yes, that's very true. She has the tendency to go at her own pace, sweeping up anyone around her up with her. I envy that."
+    else:
+        MC "Mmm... ehhhtooo... I think that, honestly... there's a level of complexity to it. To be honest, I don't even know if I can say anything concrete about..."
+        MC "..."
+        Kokutan "... Well geez, you don't have to answer all at once now."
+        MC "Hey, cut me some slack, figuring out big things like \"the future\" is hard."
+        Kokutan "Perhaps you'd like to check and see what my cards have to say? Shall Marseilles decide your fate? Will it be Rider-Waite to guide you? Or do you dare delve into the secrets of Thoth?"
+        Kokutan "If you can't commit to one, or any interest you beyond what you are used to, then perhaps one must take a step away from the main road and adventure into the side routes~"
+        MCT "Yeah, yeah, I get it— knock it off with the mysticism already."
+    if getFlag("TM_Meet_Kokutan") or routelock == "AE":
+        Kokutan "And what about your sister? What do you think she sees for herself in the future?"
+        MC "I'm not sure if my sister thinks long term. I suppose that's something we share. If I had to guess, probably just as I said, continue life and just maintain our hair."
+        MC "I actually think she'll actually get by easier since girls with long hair don't exactly stick out."
+        Kokutan "I suppose that's true, I forget that you two share the same factor at times. I guess that makes you lucky twice."
+    else:
+        MC "As for my sister... well, she has her own priorities. Not sure that the future ranks in the top five, even."
+        Kokutan "... I'm sorry, sister?"
+        MC "Yeah. Tomo Hotsure? We're twins."
+        Kokutan "Twins you say..."
+        Kokutan "Just as the prophecy foretold..."
+        MCT "Dch-shut up."
+        Kokutan "Truly, a sign that your luck is twice as great."
+    MC "Why do you say that?"
+    Kokutan "Not only do you have someone to share a similar experience with, but it's your sibling. I know that you and your significant other are both experiencing factors, but I doubt you can relate all the time."
+    pause 1
+    Kokutan "Your sibling... {w}will always be your confidante."
+    "She appeared to struggle speaking that last sentence. Her voice cracking under the weight of the word \"sibling\"."
+    MCT "...{w}She's never mentioned any family that I'm aware of."
+    MC "Forgive me if I'm prying, but who is your sibling?" 
+    Kokutan "..."
+    MC "I mean I guess it could be a cousin too." 
+    Kokutan "...Your speculations are only just that."
+    MC "No offense, but by this point it seems pretty obvious you don't have a factor— yet you are here. I know Daichi is here for his sister, but who are you here for?"
+    pause 1
+    "Kokutan's posture slumped over, unable to further deflect the obvious."
+    Kokutan "I'm here for someone that doesn't care for me. Someone who never needed anyone because they can do it all."
+    if routelock == "GTS2":
+        MC "Sounds like some people I know."
+        "She gave me a sideways glance briefly before returning her gaze to the sky. A silence fell over the courtyard as I found myself staring at the gray mass above us." 
+        "No discernible shapes could be made out, but yet my eyes followed the weaving trails formed by the wind. Shifting, crossing and dissipating over and over again."
+        Kokutan "I always imagine the future to act like clouds. Constantly shifting yet remaining coherent. Sometimes calm and peaceful, and other times fierce and dangerous."
+        Kokutan "The wind constantly changes a cloud till it looks nothing like it was a few minutes ago."
+        "We remained there in silence observing the changing sky. I began to understand what she meant, as gazing upwards I could see bits of blue beginning to peek through." 
+        "Right now for many I knew this was a time that was filled with turmoil. But beneath the turmoil, they may still yet find peace. Perhaps Kokutan's words had me thinking more introspective than normal."
+        "Kokutan slowly stood up from her spot making sure no dirt followed on her uniform."
+        Kokutan "Make sure to keep your sister near you, she'll be one of the few who will truly know you in life."
+        "I simply nodded as she stepped away. As she made her way towards the building I heard a more familiar tone emerge."
+        Kokutan "Don't go getting all sappy like that again or I'll make sure to send some spirits your way."
+        MC "Heh... fair enough."
+        hide Kokutan with dissolve
+        "As she disappeared it began to dawn on me that I had just witnessed something similar to that of a professional actor slipping into a role."
+        MC "She's acting... differently. What is going on with her... was that even Kokutan?"
+        if isEventCleared("RM005"):
+            MCT "Knowing Daichi, a mystery I couldn't begin to unravel is right up his alley. I've and given this involves another student without a factor like himself..."
+        else:
+            "The person who had just left was indeed Kokutan, but the person who I was just sitting with. That was a new mystery I couldn't begin to unravel." 
+        MC "Haaah, there really is no-"
+        "{i}*Patter*{/i}"
+        MC "Hm?"
+        "I felt the soft tingle of a droplet hit the tip of my nose as I looked up towards the sky."
+        play sound LightRainAmbience fadein 1.0 loop
+        show rain with dissolve
+        "As slowly, the frigid rain began to fall down."
+        pause 1
+        MCT "... So mote it be."
+        jump daymenu
+    else:
+        MC "I'm sorry to hear that."
+        "A silence fell over the courtyard as I found myself staring at the gray mass above us. No discernible shapes could be made out, but yet my eyes followed the weaving trails formed by the wind. Shifting, crossing and dissipating over and over again."
+        Kokutan "I always imagine the future to act like clouds. Constantly shifting yet remaining coherent. Sometimes calm and peaceful, and other times fierce and dangerous." 
+        Kokutan "The wind constantly changes a cloud till it looks nothing like it was a few minutes ago."
+        "We remained there in silence observing the changing sky. I began to understand what she meant, as gazing upwards I could see bits of blue beginning to peek through. Right now for many I knew this was a time that was filled with turmoil." 
+        "But beneath the turmoil, they may still yet find peace. Perhaps Kokutan's words had me thinking more introspective than normal."
+        "Kokutan slowly stood up from her spot making sure no dirt followed on her uniform."
+        Kokutan "Make sure to keep your sister near you, she'll be one of the few who will truly know you in life."
+        "I simply nodded as she stepped away. As she made her way towards the building I heard a more familiar tone emerge."
+        Kokutan "Don't go getting all sappy like that again or I'll make sure to send some spirits your way."
+        MC "Heh... fair enough."
+        hide Kokutan with dissolve
+        "As she disappeared it began to dawn on me that I had just witnessed something similar to that of a professional actor slipping into a role."
+        MC "She's acting... differently. What is going on with her... was that even Kokutan?"
+        if isEventCleared("RM005"):
+            MCT "Knowing Daichi, a mystery I couldn't begin to unravel is right up his alley. I've and given this involves another student without a factor like himself..."
+        else:
+            "The person who had just left was indeed Kokutan, but the person who I was just sitting with. That was a new mystery I couldn't begin to unravel."  
+        MC "Haaah, there really is no-"
+        "{i}*Patter*{/i}"
+        MC "Hm?"
+        "I felt the soft tingle of a droplet hit the tip of my nose as I looked up towards the sky."
+        play sound LightRainAmbience fadein 1.0 loop
+        show rain with dissolve
+        "As slowly, the frigid rain began to fall down."
+        pause 1
+        MCT "... So mote it be."
+        jump daymenu
+
 label MC033:
     scene Dorm Interior with fade
     play music MC
@@ -14389,6 +19503,8 @@ label global010_afterchoice:
     jump daymenu
 
 label global026:
+    if getHighestAffection() != ("GTS"):
+        $setFlag("MC010_Unlock")
     $setPregnant()
     $disableRoute("PRG")#may need to remove when the "not the father" route is written
     scene Dorm Hallway with fade

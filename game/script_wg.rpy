@@ -3061,7 +3061,7 @@ label WG015_test_fail:
     jump daymenu
 
 label WG015_c1_3:
-    scene Nurse Office with fade
+    scene Infirmary with fade
     "It took all of five seconds to realize this was the wrong decision."
     "To avoid detection I had gone into the men's room, waited until it was empty, and then tried to crawl into the ventilation system."
     "Thus when I got stuck nobody was around to see me, or hear me."
@@ -5065,7 +5065,7 @@ label WG025:
     play music Peaceful
     scene Campus Center with fade
     "It was a beautiful day outside, so much so that even I thought I shouldn't waste it with an afternoon nap."
-    "I'd brought a book with me to read, and it turned out to be more engrossing than I expected. \"I'll just finish this chapter,\" I told myself. Well, that was several captures ago."
+    "I'd brought a book with me to read, and it turned out to be more engrossing than I expected. \"I'll just finish this chapter,\" I told myself. Well, that was several chapters ago."
     "That and I honestly didn't have anything better to do, so I thought I might as well just stick with it."
     WG "Keisuke!"
     "I was initially startled to have the quiet of my current setting  interrupted, but when I realized who it was, I was pleasantly relieved."
@@ -8071,7 +8071,7 @@ label WG_037_afterchoice1:
     pause 1
     scene Movie Theater Lights with fade
     "I got our tickets and it didn't take long to find our seats. The theatre was basically empty but there were a handful of people spread out across seats."
-    show WG neutral with dissolve
+    show WG neutral at Position(xcenter=0.5, ycenter=0.8) with dissolve
     WG "Are you sure this is something you're interested in seeing?"
     MC "To be honest, I have no idea, but I thought it could be interesting."
     "The truth of the matter is I just picked it because it just sounded like something Alice would like."
@@ -8081,7 +8081,7 @@ label WG_037_afterchoice1:
     MCT "She's already read the book? Aw man, what could possibly live up to her expectations then?"
     "I was probably making a bigger deal of it than I should, but I felt like I got a gut punch, knowing Alice was probably going to find plenty wrong with it."
     scene Movie Theater
-    show WG neutral
+    show WG neutral at Position(xcenter=0.5, ycenter=0.8)
     with dissolve
     "The movie started and it seemed kind of slow and boring at first to me, but Alice seemed into it. It didn't take too long though for things to get interesting."
     "The main character was a wealthy heiress who enjoyed meddling in other people's business, fancying herself to be some kind of matchmaker."
@@ -8090,7 +8090,7 @@ label WG_037_afterchoice1:
     WG "True, but it is a relatable failing though, being too preoccupied with the affairs of others to mind your own."
     "The main character of course doesn't learn her lesson and a more complicated series of interconnected love triangles ensues, with no one being honest about who they are in love with right up until the end."
     scene Movie Theater Lights
-    show WG neutral
+    show WG neutral at Position(xcenter=0.5, ycenter=0.8)
     with dissolve
     pause 1
     MC "Am I missing something here?"
@@ -21458,6 +21458,7 @@ label WG071:
     jump daymenu
 
 label WG072:
+    $setFlag("XX72")
     $setProgress("WG", "WG073")
     $setWGOutfit(OutfitEnum.ALTERNATE)
     $setWGOutfit(OutfitEnum.NUDE)
@@ -27795,7 +27796,7 @@ label WG085:
 
 label WG086:
     $setProgress("WG", "WG087")
-    $setWGOutfit(OutfitEnum.CASUAL)
+    $setWGOutfit(OutfitEnum.CASUAL2)
     $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm Hallway with dissolve
     play music DormLife
@@ -40244,7 +40245,7 @@ label WGFMG004A:
     show WG sly
     extend " but you're still going to have to work for it."
     scene black with fade
-    $setWGOutfit(OutfitEnum.SWIM)
+    $setWGOutfit(OutfitEnum.SWIMSUIT)
     pause .5
 
     scene Okinawa Ocean with fade
@@ -40800,30 +40801,27 @@ label WGFMG004B:
     show WG neutral-2
     MC "Hey Babe, how about this parfait? It looks pretty good. If you don't want it, I think I might have some— that is, if Akira doesn't want it."
     WG "No, no. That won't be necessary, I would love some. We can split it."
+    show cg WGFMG004B with dissolve
     "By this point Alice was so glutted she could barely move to retrieve it herself. Sparing her the indignity of the \"here comes the airplane\" routine, I proceeded to spoon feed her each morsel of the parfait."
     "Her lips eagerly reached forward for each bite as I brought each spoonful near. By the time she was done, there wasn't even one morsel left for me— much to my delight."
-    show WG happy
     WG "Oh that was heavenly."
     MC "You still have another bowl left, Babe."
-    show WG neutral-2
     WG "{i}Hooo{/i}... I think I can manage."
     "The next bowl was slow going. I could tell Alice was nearly at capacity. But Alice's capacity at this point was uncharted territory. If space was the final frontier, Alice's gut was a black hole."
     WG "{i}Ooo{/i}... {size=-6}{i}urp{/i}{/size}... {i}whew{/i}"
     "I could tell despite being close to bursting, Alice was still eyeing that monburan cake with a look of longing. The rich, creamy chestnut frosting piled high on top of the flaky cake and sweet cream cried out to her watering lips."
     MC "And now it's time for the pièce de résistance. Would you like a slice, mademoiselle?"
     if isEventCleared("WG060S"):
-        show WG doubt
         WG "I know what you're doing Keisuke."
         MC "Is it that obvious?"
         WG "Yes, it is, but you didn't let me finish."
-        show WG sly
         WG "I know what you're doing... {w}And I don't even care."
-        show WG happy-2
         extend " Give it to me!"
     else:
         WG "I certainly would, if you don't mind."
         MC "Certainly, mon chéri. The pleasure is all mine."
     show WG surprised-2
+    hide cg with dissolve
     "A spark lit up in Alice's eyes, breathing life into her overgorged stupor, as the sweet, creamy frosting and light airy cake hit her lips."
     show WG happy
     "Any trace of uncomfortable distention vanished from her face as she eagerly chomped down on the pastry. I continued to bring it closer to her lips with each bite disappearing into her seemingly bottomless gullet."
