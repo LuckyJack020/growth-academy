@@ -17178,7 +17178,7 @@ label WG060S_Accept:
     "Holding the other leg up to her mouth she devoured it in half the time of the first. Not wanting her impulses to get the better of her, I withdrew the leg bone lest I thought she might attempt to consume it as well."
     show WG aroused
     WG "Please tell me there's more."
-    MC "Oh mon chéri, there is still much more."
+    MC "Oh ma chérie, there is still much more."
     "The remainder of it was shredded meat from the breast, all the more soaked through and through, dripping with fat. I began to feed her by the fork-full."
     MC "Open wide."
     show WG happy
@@ -17623,7 +17623,7 @@ label WG061:
     "Whether it was the goopy texture, the slimy clinging of the runny egg on my fingers, or the seemingly unsanitary nature of handling raw egg, Alice's expression was one of intense hesitation."
     show WG haughty
     WG "You seem to have this adequately handled, Keisuke. Here, I'll hold on to this recipe card to prevent it from accidently becoming soiled, and supervise the process so that you don't accidentally make any missteps."
-    MCT "Oh ho ho, mon chéri. You're not weaseling your way out of this one."
+    MCT "Oh ho ho, ma chérie. You're not weaseling your way out of this one."
     MC "Oh that should work fine, but you do know the first rule about couples that cook together, right?"
     show WG surprised-2
     WG "What rule? Have I missed something?"
@@ -27569,7 +27569,7 @@ label WG085:
     "I walked up the steps in advance, extending a hand to hers to help her navigate the steps."
     show WG happy
     WG "Such a gentleman."
-    MC "Ah, mon chéri, the pleasure is all mine."
+    MC "Ah, ma chérie, the pleasure is all mine."
     show WG happy-2
     WG "Your pronunciation is getting better."
     MC "I have a good teacher."
@@ -31205,7 +31205,7 @@ label WG005M:
     show WG surprised-2
     WG "You can't be serious..."
     show WG sly
-    MC "Oh, mon cheri, but I am."
+    MC "Oh, ma chérie, but I am."
     WG "You mean to tell me, you really can play that?"
     MC "I think so, but I'll let you be the judge."
     MCT "Showtime..."
@@ -40819,7 +40819,7 @@ label WGFMG004B:
         extend " Give it to me!"
     else:
         WG "I certainly would, if you don't mind."
-        MC "Certainly, mon chéri. The pleasure is all mine."
+        MC "Certainly, ma chérie. The pleasure is all mine."
     show WG surprised-2
     hide cg with dissolve
     "A spark lit up in Alice's eyes, breathing life into her overgorged stupor, as the sweet, creamy frosting and light airy cake hit her lips."

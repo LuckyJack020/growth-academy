@@ -12091,7 +12091,7 @@ label MC010_RM:
     show Tomoko defiant
     Tomoko "Sigh... I guess then."
     Tomoko "Not like it would change anything since it sounds like you've already made up your mind anyway, right?"
-    "I gave her a knowing nodd."
+    "I gave her a knowing nod."
     show Tomoko annoyed
     MC "Yup, you're stuck with me I'm afraid."
     "Tomoko just shook her head. Already sick of me apparently, but it's not like she didn't know she'd get made fun of if she were to jump at the chance to go with me instead."
