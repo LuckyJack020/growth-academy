@@ -8029,7 +8029,7 @@ label MC010_AE:
     show AE neutral-eyebrow
     AE "...Oh?"
     MC "Yeah! I mean, if you would be down to show me around some time?"
-    if checkAffection("AE", ">", 15):
+    if checkAffection("AE", ">=", 15):
         show AE happy
         AE "... There's... a place called Temple River Restaurant in Oma. I would always go and get Katsu-curry whenever I would visit. It's been quite a long time, but..."
         AE "If you find yourself in the area, I would be delighted to take you."
@@ -12833,11 +12833,11 @@ label MC010_MC:
     MCT "Nope. Not in a million years."
     "I shook my head."
     MCT "Leaving that chick in the past."
-    if routelock == "AE" or isEventCleared("BE020") or isEventCleared("FMG020") or isEventCleared("FMG020B") or isEventCleared("GTS026"):
-        MCT "Think I've already got a pretty good thing going anyway. No good can come from thinking back on that crap."
-    elif isEventCleared("PRG027"):
+    if isEventCleared("PRG027"):
         MCT "I've got other things to worry about, anyway."
         MCT "... God, do I ever."
+    elif routelock == "AE" or isEventCleared("BE020") or isEventCleared("FMG020") or isEventCleared("FMG020B") or isEventCleared("GTS026"):
+        MCT "Think I've already got a pretty good thing going anyway. No good can come from thinking back on that crap."
     Koneko "Why did you drop it?!"
     Takeda "I-It was an accident!"
     Takeda "I thought you didn't like chocolate?"
@@ -17732,7 +17732,7 @@ label MC032:
         Kokutan "That's what I said."
     elif routelock == "WG":
         Kokutan "Actually, speaking of your girlfriend, have you already tried imagining your future with Nikumaru-san?"
-        MC "What, is this? An interview? Where will we be in five years?"
+        MC "What is this, an interview? Where will we be in five years?"
         Kokutan "Humor me."
     else:
         Kokutan "Actually, speaking of your girlfriend, have you already tried imagining your future with your lady friend?"
@@ -17883,7 +17883,7 @@ label MC032:
         "As she disappeared it began to dawn on me that I had just witnessed something similar to that of a professional actor slipping into a role."
         MC "She's acting... differently. What is going on with her... was that even Kokutan?"
         if isEventCleared("RM005"):
-            MCT "Knowing Daichi, a mystery I couldn't begin to unravel is right up his alley. I've and given this involves another student without a factor like himself..."
+            MCT "Knowing Daichi, a mystery I couldn't begin to unravel is right up his alley. Given this involves another student without a factor like himself..."
         else:
             "The person who had just left was indeed Kokutan, but the person who I was just sitting with. That was a new mystery I couldn't begin to unravel." 
         MC "Haaah, there really is no-"

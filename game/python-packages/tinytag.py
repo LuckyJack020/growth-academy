@@ -33,7 +33,8 @@
 from __future__ import print_function
 
 import json
-from collections import MutableMapping, OrderedDict
+from collections.abc import MutableMapping
+from collections import OrderedDict
 import codecs
 from functools import reduce
 import struct

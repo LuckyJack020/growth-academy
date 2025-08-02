@@ -34743,7 +34743,7 @@ label WG102:
     show WG neutral
     WG "Trust me, once you get settled in your new dorm, I'll have a bullet train ticket straight to Yokohama waiting for you."
     MC "I know. It's just that we've seen each other basically every day for the past year, even a couple of weeks is going to feel like forever."
-    if checkAffection("WG", "<", 36) or getVar("BEP") > 7:
+    if not checkAffection("WG", ">=", 36) or not getVar("BEP") < 6:
         show WG haughty
         WG "I think you're being a bit melodramatic, Dear."
         WG "It'll only be a few weeks at most until we get to meet up again."

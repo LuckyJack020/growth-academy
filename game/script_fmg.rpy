@@ -23811,6 +23811,7 @@ label FMGD002:
     MC "Uh, too much information..."
     "The giantess strolled over to a nearby building, causing earthquakes as she walked, disregarding the screams below."
     MC "Woah, woah, Nat, be careful! You could be stepping on other students!"
+    $ persistent.unlock_cgFMGD002_dream1 = True
     show cg FMGD002_dream1 with fade
     "Suspended in the air against my will, Natsuko kept trying to convince herself that she hadn't hurt anyone."
     "Which, well... it could be true... but how are you going to destroy all these buildings and think you didn't give someone a sprained ankle or worse... {w}A torn ACL."
@@ -23862,10 +23863,12 @@ label FMGD002:
     "Akira flexed, and her titanic body, every bulging, oaken muscle, swelled bigger still in every direction. I heard the low, soft thrum of her quickening heartbeat as I instinctively took a step back."
     MC "Uh... so... how did you get this big?"
     FMG "Hang on, I can't hear you. I'll pick you up."
+    $ persistent.unlock_cgFMGD002_dream2 = True
     show cg FMGD002_dream2 with dissolve
     "Her massive hand swept down towards me, gently scooping me up and bringing me up towards her gigantic breasts."
     FMG "Aw, you look so cute! You're smaller than my nipple, hahaha."
     hide cg FMGD002_dream2
+    $ persistent.unlock_cgFMGD002_dream3 = True
     show cg FMGD002_dream3
     "Akira flexed her other arm as she continued to hold me against my will."
     FMG "God, I love this! I wish I could've gotten this big sooner! I would've never stopped growing!"

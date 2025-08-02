@@ -147,11 +147,13 @@ define Hostess = Character('Hostess', color="#C0C0C0")
 define Intercom = Character('Intercom', color="#C0C0C0")
 define Interviewer = Character('Interviewer', color="#C0C0C0")
 define Judge = Character('Judge', color="#C0C0C0")
+define Kid = Character('Kid', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Lifeguard = Character('Lifeguard', color="#B7A99A")
 define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Local = Character('Local', color="#C0C0C0")
 define Magician = Character('Magician', color="#C0C0C0")
+define Man = Character('Man', color="#C0C0C0")
 define Manager = Character('Manager', color="#C0C0C0")
 define Masseuse1 = Character('Masseuse 1', color="#C0C0C0")
 define Masseuse2= Character('Masseuse 2', color="#C0C0C0")
@@ -1562,7 +1564,7 @@ init 2 python:
     eventlibrary['FMG069'] = {"name": "In Another Life", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "okinawa",                         "priority": PrioEnum.ALL, "sp": 15,     "next": "FMG070", "obsflags": [],               "conditions": []}
     #FMG size5
     eventlibrary['FMG070'] = {"name": "Size Woes", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "okinawa",                         "priority": PrioEnum.ALL, "sp": 15,     "next": "FMG071", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG071'] = {"name": "A Big Send-Off", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                                            "location": "airport",      "priority": PrioEnum.ALL, "sp": 16,     "next": "FMG072", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG071'] = {"name": "A Big Send-Off", "girls": ["FMG", "WG"], "type": EventTypeEnum.CORE,                                 "location": "okinawa",      "priority": PrioEnum.ALL, "sp": 16,     "next": "FMG072", "obsflags": [],               "conditions": []}
     eventlibrary['FMG072'] = {"name": "Record Breaking", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.NONE, "sp": 16,     "next": "FMG073", "obsflags": [],               "conditions": []}
     eventlibrary['FMG073'] = {"name": "Disaster Zone", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.NONE, "sp": 16,     "next": "FMG074", "obsflags": [],               "conditions": []}
     eventlibrary['FMG074'] = {"name": "A Tough Nut to Crack", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dorminterior",               "priority": PrioEnum.ALL, "sp": 16,     "next": "FMG075", "obsflags": [],               "conditions": []}

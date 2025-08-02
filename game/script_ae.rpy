@@ -16712,7 +16712,8 @@ label AE071:
     "Both of her fat, bloated buttcheeks collided into each other with an immense force as the room was filled with a loud, thunderous clap."
     show AE surprised
     AE "OH SWEET-!"
-    "Shiori's knees gave out as she held onto the desk. Seeing this, I leapt up from the bedside and grabbed onto her arm firmly and supported her back while she composed herself. It took a moment for her to stop grunting as her booty kept clapping even after she stopped."
+    "Shiori's knees gave out as she held onto the desk. Seeing this, I leapt up from the bedside and grabbed onto her arm firmly and supported her back while she composed herself."
+    "It took a moment for her to stop grunting as her booty kept clapping even after she stopped."
     "*CLAP* *CLAP* *CLAP*... *CLAP*... *CLAP*..."
     show AE aroused-3
     AE "Gnnnch-!!"
@@ -18127,10 +18128,10 @@ label AE077:
     scene Gym with fade
     "The building we went to looked like a modified gym, the walls surrounded by mirrors, the floors covered in a soft padding, and from up above a chassis held ropes overhead which hung down and buckled into various harnesses. There, waiting with a few men, was..."
     $setNurseOutfit(OutfitEnum.ALTERNATE)
-    show Nurse unique at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Nurse unique at Position(xcenter=0.2, yalign=1.0) with dissolve
     Nurse "Ah, hello, Matsumoto-san."
     MC "Huh? Nurse Kiyomi?"
-    show Nurse2 unique at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show Nurse2 unique at Position(xcenter=0.45, yalign=1.0) with dissolve
     MC "W-Wait-!"
     Nurse2 "Surprise!"
     Nurse "Hm? Surprise?"

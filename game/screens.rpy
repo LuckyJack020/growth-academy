@@ -662,10 +662,10 @@ screen file_slots(title):
                     textbutton _("{#quick_page}Q") action FilePage("quick")
 
                 ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
+                ##for page in range(1, 10):
+                ##    textbutton "[page]" action FilePage(page)
 
-                textbutton _(">") action FilePageNext(max=9)
+                textbutton _(">") action FilePageNext()
 
 
 style page_label is gui_label
