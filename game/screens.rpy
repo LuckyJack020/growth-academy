@@ -207,7 +207,6 @@ style input:
     xalign gui.dialogue_text_xalign
     xmaximum gui.dialogue_width
 
-
 ## Choice screen ###############################################################
 ##
 ## This screen is used to display the in-game choices presented by the menu
@@ -598,8 +597,7 @@ screen file_slots(title):
 
         fixed:
             if renpy.current_screen().screen_name[0] == "save":
-                input:
-                    value VariableInputValue('save_name')
+                textbutton _("[save_name]") action Show('dialogue')
             ## This ensures the input will get the enter event before any of the
             ## buttons do.
             order_reverse True
@@ -2104,3 +2102,16 @@ style slider_pref_slider:
 #         selected_idle_color "#cc08"
 #         selected_hover_color "#cc0"
 #         insensitive_color "#4448"
+screen dialogue():
+
+    modal True
+
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 500 ysize 100
+
+        vbox:
+            label "Enter save file name:"
+            input:
+                value VariableInputValue('save_name', returnable=True)
+            textbutton _("Confirm") action Hide('dialogue')
