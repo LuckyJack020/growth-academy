@@ -82,6 +82,7 @@ Artists
 		Sparkcadia
 		Vespa
 		Vitlut
+		yukisan0680
 
 	Concept Artist
   	  	2-Bit Otaku
@@ -107,6 +108,7 @@ Backgrounds
 		Ekkonshon
 		GoodNotGreat
 		kjkjmulo
+		Lily Loxxx
 	Paid Assets (Asset Packs)
 		haikei
 		Minikle
@@ -117,8 +119,9 @@ Backgrounds
 		Pyonkotchi
 		Uncle Mugen
 
-	Other
+	Other Art
 		Animated Rain Overlay Background by qirien
+		Ultimate Icon & Button Pack by Pandemonium
 Programmers
 	JustSomeGuyOkay
 	LuckyJack020
@@ -146,6 +149,7 @@ Music
 		Sir Cubworth
 		Tullio Forlenza
 		Yoshiki ARA
+		Monosolomono
 Sound
 	Diant707
 

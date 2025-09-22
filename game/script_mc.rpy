@@ -798,7 +798,7 @@ label global000_RM_after:
     play sound AlarmClock
     "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
     scene Dorm Interior with dissolve
-    $setMCOutfit(OutfitEnum.UNDERWEAR)
+    $setMCOutfit(OutfitEnum.PAJAMAS)
     play music Peaceful
     "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
     MCT "Hard to believe that just yesterday I was in my hometown, and now I'm off on this little island..."
@@ -2418,6 +2418,15 @@ label MC005:
         MC "Uh... yeah?"
         RM "So, why are you here and not with her?"
         MC "Just... working on the paper. Probably gonna study for the test, too. I'm sure Kodama-san is doing the same."
+    else:
+        show RM smug
+        "Daichi... winked?"
+        RM "I know exactly who."
+        MC "Fantastic."
+        MC "I don't. Tell me, Dr. Genius."
+        show RM neutral
+        RM "So, you're just working on your paper? Nothing else?"
+        MC "Uh... yeah?"
     show RM doubt
     RM "And, how is your work going?"
     MC "... I wrote a few lines."
@@ -2836,7 +2845,7 @@ label MC005:
         stop music
     scene black with fade
     $setTime(TimeEnum.DAY)
-    $setMCOutfit(OutfitEnum.UNDERWEAR)
+    $setMCOutfit(OutfitEnum.PAJAMAS)
     pause 1
 
     scene Bathroom with fade
@@ -3053,9 +3062,11 @@ label MC005:
     Tomoko "Egh, hold on."
     show Tomoko distracted
     "She looked down at her phone again."
+    show Tomoko distracted-3
     Tomoko "... I swear to God."
-    show Tomoko neutral
+    show Tomoko distracted-2
     Tomoko "Look at this."
+    show Tomoko neutral
     "She handed her phone to me."
     Tomoko "Start at the top."
     if isEventCleared("RM002"):
@@ -3476,6 +3487,7 @@ label MC005_TM:
     show Tomoko annoyed
     Tomoko "Ugh... that's why you're here?"
     MC "Eh... yeah? I just thought it would be fun."
+    show Tomoko worried
     Tomoko "Mmngh... fine."
     show Tomoko neutral
     MC "Cool."
@@ -3487,6 +3499,7 @@ label MC005_TM:
         MC "Oh, what about that rec room place?"
         Tomoko "Rec room? What do you... oh, you mean where they have those arcade games and stuff?"
         MC "Yeah, that place. How's that sound?"
+        show Tomoko worried
         Tomoko "Uh... fine? I guess..."
     else:
         MC "Uh..."
@@ -3499,8 +3512,11 @@ label MC005_TM:
         MC "The school has that?"
         Tomoko "Eh? ... How do I know about this and you don't?"
         MC "Your roommate tells you everything?"
+        show Tomoko embarrassed
         Tomoko "..."
+        show Tomoko flattered
         Tomoko "You aren't wrong."
+    show Tomoko neutral
     "Tomo slipped off of her bed and shuffled toward the door, taking her shoes from the floor and shoving her feet into them, kicking her heels in."
     Tomoko "Let's go."
     MC "Eh? Just like that?"
@@ -3578,7 +3594,7 @@ label MC005_TM:
     MC "You're worried I'm gonna kick your ass, aren't you?"
     MC "Don't want your roommate to tell everyone that your brother is a better hockey player than you?"
     Tomoko "..."
-    show Tomoko happy
+    show Tomoko smile
     Tomoko "... Pick up a paddle, smartass."
     "She walked away to one side of the table and took the red paddle for herself, leaving me with the blue one."
     MC "You're on."
@@ -3593,7 +3609,9 @@ label MC005_TM:
     "{i}CRACK!{/i}"
     "I smacked the puck, and rocketed it across the table toward Tomo. However, due to the force of my shot, the puck got airborne for just a second, and wobbled on one edge, causing it to smack the lip of Tomo's goal and bouncing it back."
     MC "Dammit!"
+    show Tomoko smile
     Tomoko "Went too hard, bro."
+    show Tomoko neutral
     "Tomo smacked her paddle on top of the puck to steady it, and centered the puck."
     Tomoko "Hmm..."
     "Tomo brought her hand to the left, then floated her paddle over to her other hand, then back over."
@@ -3601,7 +3619,9 @@ label MC005_TM:
     "I hit it back to the left, where it shot off of the backboard beside Tomo's goal, and came shooting back toward me."
     "I moved to intercept, but at the last minute, my hand slipped, and I lost grip on my paddle, causing me to slide it too far, and letting the puck slide harmlessly into my goal."
     MC "Shit..."
+    show Tomoko smile
     Tomoko "Point for me."
+    show Tomoko neutral
     "Tomo slid a plastic scoring piece over to her side of the table."
     MC "My serve, then."
     "I took the puck from the little... holder thing."
@@ -3610,8 +3630,9 @@ label MC005_TM:
     show Tomoko surprised
     Tomoko "Wha?!"
     MC "Think faster, Tomo!"
-    show Tomoko neutral
+    show Tomoko annoyed
     Tomoko "Rgh..."
+    show Tomoko defiant
     Tomoko "You're going down!"
     scene black with fade
     pause .5
@@ -3663,7 +3684,7 @@ label MC005_TM:
         Tomoko "Oh, come on, bro. You're an ass man through and through."
         Tomoko "Walking past someone on the street and doing the half head turn to look back. It's as obvious as the hair on your head."
         MC "..."
-    elif getHighestAffection() == ("WG"):
+    elif getHighestAffection() == ("WG") or isEventCleared("WGB001"):
         $setFlag("MC005TM_WG")
         Tomoko "Maybe she's got the... what's it called... fat girl factor?"
         MC "That's kind of rude."
@@ -3713,6 +3734,9 @@ label MC005_TM:
         Tomoko "Just watch. Someday, you'll be ready to have kids with a girl set up like that."
         MC "TOMO!"
         "Tomo simply shrugged."
+    else:
+        Tomoko "I'm not even gonna guess."
+        Tomoko "For all I know, it might be some new thing I've never heard of."
     MC "Look... all I wanted to say is that Honoka is on the island too."
     Tomoko "Bet I could kick her butt in air hockey."
     MC "Well, ask her to play you sometime."
@@ -3782,7 +3806,7 @@ label MC005_TM:
             MC "Ach, dammit."
             MC "Good game, Tomo."
             Tomoko "Yeah... you too."
-            show Tomoko neutral
+            show Tomoko smile
             MC "Wanna play another? Or hit up an arcade game or something?"
             Tomoko "Mm... I kind of just want to go finish my movie."
             MC "Alright, sounds good then. I'll see you soon, okay?"
@@ -3891,6 +3915,11 @@ label MC005_RM:
         MC "Mizutani-san? Yeah, we're still spending time together."
         RM "Cool."
         "Daichi walked on as I tagged along behind him."
+    else:
+            MC "Who?"
+            RM "You know who."
+            MC "Ugh... alright, whatever. Sure. Sure, I do."
+            "I shook my head."
     "I kept the conversation light as we reached the bus stop. Clearly all attempts at small talk would be half-assed."
     scene School Front with fade
     "As we got to the bus stop, I sighed and glanced at Daichi."
@@ -6840,7 +6869,7 @@ label MC009:
                 MCT "She... kind of looks like she wants to be left alone."
                 "I continued on away from the dorms, giving Aida her space."
                 "I could never say I truly understood how she felt, but it wasn't hard to empathize. She had a super wild factor compared to some of the others. I didn't blame her for being a little quiet."
-    elif routelock = "PRG" and not isEventCleared("PRG028") and not isEventCleared("PRG0029"):
+    elif routelock == "PRG" and not isEventCleared("PRG028") and not isEventCleared("PRG0029"):
         scene Dorm Entrance with fade
         "I shook my head and glanced back, hearing one of the doors shut heavily behind me."
         show PRG worried with dissolve
@@ -10410,9 +10439,9 @@ label MC010_PRG:
     $save_name = "Reprieve"
     pause 2
     "I glanced sideways as two women, both in yukatas, passed right by me, laughing and holding some sort of dessert."
-    UNKNOWN "Sucks they couldn't come over, though."
-    UNKNOWN "It happens, Dear. Nothing to do about it but make the best."
-    if isEventCleared("MC007"):
+    Girl "Sucks they couldn't come over, though."
+    Woman "It happens, Dear. Nothing to do about it but make the best."
+    if getFlag("VisitedBakery"):
         "Turning my head, I realized something was familiar about them... One with rather large... and rather bouncy boobs, the other well endowed by, I guess \"normal\" standards, but dwarfed in comparison to the other."
         MCT "That's... those ladies from the bakery. What are they..."
         MCT "Chie and Haruko... Kazomazumi, I think?"
@@ -11208,6 +11237,7 @@ label MC010_PRG:
         "Her boobs were pressed into me, as underneath them, I could feel her belly pressing into my side."
         MC "... Getting snuggly?"
         show PRG neutral
+        $setAffection("PRG", 1)
         PRG "Mhm."
         MC "Come here, then."
         "I hugged her around the shoulders, as-"
@@ -11233,7 +11263,7 @@ label MC010_PRG:
         "As the show continued overhead, I glanced down at Aida, as she looked up at me."
         "I brought my hand to her forehead, brushing a piece of hair away."
         "Resting my head on hers, I held her there as we watched the show."
-        $setFlag ("MC010PRG_PRG028")
+        $setFlag("MC010PRG_PRG028")
         jump daymenu
     else:
         show PRG neutral at altMove(0.5, 0.5)
@@ -11283,10 +11313,11 @@ label MC010_PRG:
         PRG "I-I can't just hide this."
         MC "I... yeah. Guess you can't."
         "Aida sighed, her eyes still in the sky as a bright green firework blew up overhead."
+        $setAffection("PRG", 1)
         PRG "... Tonight made me feel normal again, though."
         MC "I get that. I do."
         "I squeezed her hand again as we looked on together."
-        $setFlag ("MC010PRG_PRG027")
+        $setFlag("MC010PRG_PRG027")
         jump daymenu
 
 label MC010_WG:
@@ -15285,7 +15316,7 @@ label MC014:
     "I took my phone from my pocket and unlocked it."
     play music Tomoko
     Tomoko "Hey."
-    $setTomoOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL2)
     show Tomoko neutral with easeinright
     "... And right back into the pocket."
     "Tomo gave me a sort of look, as if waiting for something."
@@ -16135,7 +16166,7 @@ label MC023:
         MCT "Will you knock it off?!"
         MCT "Uch, seriously... all this for some soup?"
         Student "Ooo! This, over here, fresh Enoki! These will go just splendidly!"
-        MC "... This whole islands ecology is completely screwed."
+        MC "... This whole island's ecology is completely screwed."
         "This process repeated again and again. Plants I'd assume were just weeds she'd say would be good in a remedy or a food dish. This girl was certainly odd, to say the least, but she knew her herbology."
         MC "Okay, do you think this should be enough?"
         Student "Absolutely not! Don't you dare try to weasel your way out of penance! See that little sprig of Mitsuba, over there?"
@@ -16942,7 +16973,7 @@ label MC024:
     pause .25
     MCT "Well, at least this is something new."
     "I could hear the sound of a dribbling basketball from down the hall, and the sight of actual life here made me hopeful that Naoki-sensei would be somewhere associated with it."
-    if isEventCleared("BE016"):
+    if isEventCleared("BE016") or getFlag("Meet_Sakie"):
         "I did a quick once-over of the players, noting Sakie Iwata, the girl who I'd met back when Honoka played basketball, playing defense against a girl with rather plump thighs."
         MCT "I wonder if Honoka ever got around to having that conversation with everyone?"
         "I pondered this for a moment, and ran over my conversations with Honoka in my head."
@@ -18492,7 +18523,7 @@ label MC042:
 label global005:
     $setTimeFlag("testday2")
     scene Dorm Interior with fade
-    $setMCOutfit(OutfitEnum.UNDERWEAR)
+    $setMCOutfit(OutfitEnum.PAJAMAS)
     play music DormLife
     pause .5
     play sound AlarmClock
@@ -19745,7 +19776,7 @@ label global026:
         "I got up and slipped my bag on, and the two of us headed out toward the cafeteria."
         jump daymenu
 
-    if getHighestAffection() == ("AE"):
+    elif getHighestAffection() == ("AE") or routelock == "AE":
         show AE neutral with dissolve
         "Ahead of me, Shiori had begun packing up her desk, and organizing it neatly into her bag as around us, the other students got up to leave."
         "Eventually, most of the room had cleared out, save for Shiori, Alice, Aida, and I."
@@ -19831,7 +19862,7 @@ label global026:
                 AE "Regardless, Kodama-san has been blessed with a gift. And, I believe it is only right to help her through this difficult time as best we can."
                 jump global026_AE_end
 
-    if getHighestAffection() == ("GTS"):
+    elif getHighestAffection() == ("GTS"):
         "After assembling my things as neatly as I could manage into my backpack, I rose from my desk and turned to sidle up to Naomi's, where she was taking her sweet time putting away her writing supplies."
         if getFlag("GTS025_kiss"):
             "Her cheek wrinkled as she turned her head to regard me with a warm smile."
@@ -19916,7 +19947,7 @@ label global026:
         MC "Indeed."
         jump daymenu
 
-    if getHighestAffection() == ("WG"):
+    elif getHighestAffection() == ("WG"):
         "I glanced down at my desk and started getting myself packed up."
         show WG neutral with dissolve
         "Looking up, I spotted Alice... well, the tail end of her, leaving the room."
@@ -20053,7 +20084,7 @@ label global026:
         "I headed off in that direction, eager to lighten my load."
         jump daymenu
 
-    if getHighestAffection() == ("FMG"):
+    elif getHighestAffection() == ("FMG"):
         show FMG neutral with dissolve
         "As most students rose from their seats, Akira was up a full pace ahead of them, and turned toward me."
         "She looked over as Shiori got up and left, then made her move toward me."
@@ -20099,7 +20130,7 @@ label global026:
         MC "Uh-huh, I bet it is."
         jump daymenu
 
-    if getHighestAffection() == ("PRG"):
+    elif getHighestAffection() == ("PRG"):
         "I loaded up my bag, managing to cram everything in my usual unorganized fashion without too much trouble."
         "Glancing up, I watched Honoka leave the room, followed by Akira, Naomi, Daichi, and finally, Shiori."
         show WG neutral with dissolve

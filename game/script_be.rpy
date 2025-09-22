@@ -192,22 +192,51 @@ label BE001_after:
 label BE002:
     $setProgress("BE", "BE003")
     scene Campus Center with fade
-    play music Rain
+    play music ClearSkies
+    "The sun shined down on the courtyard as I walked back from class, stretching my arms above my head."
+    MCT "Man, this place is gonna take a bit of getting used to."
+    "With a sigh, I began to round the corner, heading out towards the dorm to get some needed rest after another day of classes."
+    UNKNOWN "W-Woah!"
+    MC "Eh? GAH-!"
+    "I didn't even have any time to react as, suddenly, I felt the full force of boobage being slammed into me at mach-tiddy."
+    "I flew back a foot or so before using my hand to stabilize myself on the wall. I looked up to see who it was... even though I had more or less already known."
+    MC "Ach... h-hey, Honoka."
     show BE neutral:
         xpos 1.0 xanchor 0.5 yalign 1.0
         linear 0.5 xpos 0.5
     pause 0.5
     show BE sad
+    show dummy with vpunch
     BE "Oof! Sorry about that, slippery ground!"
     MC "Ah, heh, it's no problem, Honoka. Hard to stop when you get moving, huh?"
     show BE neutral
-    BE "Yep, not to mention I slept great last night so I've got tons of energy. I'm so excited, new school, new opportunities."
-    MC "Sounds almost like you should have had a tough time getting to sleep then. I had trouble myself, my roommate is... weird. Plus, I'm a bit nervous about this whole thing."
+    BE "Yep, not to mention I slept great last night so I've got tons of energy. I'm just so excited y'know? New school, new opportunities!"
+    MC "Sounds almost like you should have had a tough time getting to sleep then. I had trouble myself, my roommate is... pretty weird. Plus, I'm a bit nervous about this whole thing."
+    show BE surprised
+    BE "Eh? Your roommate? Do you guys not get along or something?"
+    MC "Well, no, it's not that. It's more that he's..."
+    if getFlag("RM_govagent"):
+        MCT "Crazy?"
+        MC "... Intense."
+        show BE neutral
+        BE "Say no more, I think I get what you mean."
+        BE "My roommate's pretty quirky too..."
+        MC "Ah. Say no more. Besides that, how've you been holding up in all this?"
+    else:
+        MC "I guess that I don't really know too much about him yet. He seems cool enough, just... a bit high strung."
+        BE "Mm, I can get that."
+        BE "My roommate's pretty quirky too..."
+        MC "Ah. Say no more. Besides that, how've you been holding up in all this?"
     show BE happy
-    BE "Oh I was jittering all over the place last night. But I still got like, four hours of sleep which is a lot for me!"
+    BE "Oh, I was jittering all over the place last night. But I still got like, four hours of sleep which is a lot for me!"
     MC "Really? That seems unhealthy."
     show BE happy
     BE "Hehe, probably. Good thing I'm just messing with you then."
+    if isEventCleared("MC002"):
+        show BE wink
+        BE "I got plenty of sleep in Tsubasa-sensei's class as is; I'm running on like, infinite hours of sleep."
+        MC "... Honoka, that's not a good thing."
+        BE "It is when you're as well rested as me! Gives me LOTS of energy to do other stuff I wanna do!~"
     "I chuckled and rolled my eyes, then snickered in the direction of the ground as I crossed my arms. Honoka always was a bit of a jokester."
     MC "So, what have you been up to, Honoka?"
     show BE neutral
@@ -215,7 +244,7 @@ label BE002:
     "She rolled her eyes a bit and gave finger quotes in the air, before planting her hands on her hips and looking around. I could practically see the energy rippling off of her, trying to break free. Clearly she wanted to go and do something more active."
     MC "Oh yeah, anything good?"
     show BE happy
-    BE "Definitely! I've already signed up for the soccer club, but there were a bunch of others that looked really fun too. There was a jogging club, a basketball club, archery, kendo. You know, all the classic stuff."
+    BE "Definitely! I've already signed up for the soccer club, but there were a bunch of others that looked really fun too. There was a track and field club, a basketball club, archery, kendo. You know, all the classic stuff."
     play music Busy
     MC "Soccer, huh? Yeah, that's definitely a good fit for you."
     BE "I know, right? Wait until they see how hard I can kick!"
@@ -224,7 +253,11 @@ label BE002:
     show BE neutral at center, Transform(xzoom=-1)
     BE "It was a tough call between that and basketball actually, but I think I picked the right one."
     show BE sad at center, Transform(xzoom=1)
-    BE "Though, I dunno, maybe something more physical, I didn't see if there was a wrestling club, hm."
+    BE "Though, I dunno, maybe something more physical, I didn't see if there was a wrestling club, hm..."
+    BE "There is a judo club buuuut..."
+    MC "But? But what, that sounds sick."
+    BE "Yeeaaaah, tooootally fun; getting thrown around and landing on the girls is a great way to make sure I go from a g-cup to a g-flat."
+    MC "Noted."
     MC "Well, maybe just stick to one club for now, yeah? Not like you can join them all, anyway, so don't worry about one club you missed out on, because there's no way you'd be able to do them all regardless."
     show BE happy
     BE "Oh yeah? You think it'd make me too tired?"
@@ -233,6 +266,10 @@ label BE002:
     BE "...Well when you put it that way it sounds pretty silly, doesn't it? You sure are clever, Kei-chan."
     "I think that qualified more as \"common sense\" as opposed to \"cleverness\", but, I'll take it."
     show BE neutral
+    BE "Still, what I AM doing is looking around for the soccer field to give it a gander. Wanna come?"
+    MC "Uh... sure, I'd love to."
+    BE "Hehe, sweet."
+    "We walked side by side as I tried to match Honoka's upbeat pace."
     BE "What about you, Kei-chan, were you thinking of joining a club?"
     MC "Me? Honestly I'm not sure. I hadn't given it much thought yet. I think I might hold off until I know for sure what my growth factor is. I really don't have any clue yet. I wouldn't want to pick something I'd be unable to do once I started growing."
     BE "That's a good point. Would be really lame to get good at something and then end up being unable to do it. So, probably best if you don't pick something like tap-dancing for when you end up getting gigantic feet."
@@ -243,6 +280,8 @@ label BE002:
     "Maybe it's her subconscious way of making up for when she bumped into me with her chest earlier?"
     MC "Well I can assure you, you won't."
     "Honoka chuckled again, and started to meander around the campus. I kept up with her, still unfamiliar with the surroundings, but wanting to know the place better."
+    scene Track with fade
+    "Eventually, we wandered out to the soccer field, having been freshly mowed as we stepped out onto the grass towards the bleachers."
     MC "Actually, speaking of growth factor and everything, did you find out what yours is, yet?"
     show BE neutral
     BE "No, I think that I'll find out later. I mean, I'm like, 95%% positive it's my chest to begin with so even once I find out, it probably won't be a big deal."
@@ -250,10 +289,10 @@ label BE002:
     show BE happy
     BE "Pfff, that was lame, Kei-chan."
     MC "Hey, I'm trying. I like seeing you laugh."
-    "Don't say \"Because it makes my boobs bounce?\". Don't say \"Because it makes my boobs bounce?\". Don't say \"Because it makes my boobs bounce?\"."
+    MCT "Don't say \"Because it makes my boobs bounce?\". Don't say \"Because it makes my boobs bounce?\". {i}PLEASE{/i} Don't say \"Because it makes my boobs bounce?\"."
     show BE unique
     BE "Because it makes my boobs bounce?"
-    "Damnit."
+    MCT "Damnit."
     MC "No, it's just, I dunno, making one another laugh, seems like something only friends do for each other?"
     show BE happy
     BE "Heh, I guess so. I can see your logic there, Kei-chan. But then you really need to work on your sense of humor."
@@ -1973,8 +2012,9 @@ label BE016:
     MCT "Heh. she has more... aftershocks after she finishes her jump, compared to the rest of the team."
     MCT "Also...I haven't seen Honoka in her gym clothes in a while but...that shirt's looking much tighter than it was a couple weeks ago..."
     "Deciding to not stare from the entrance, I moved to sit down next to one of the other players who was sitting on the stands, wearing a jersey."
-    MC "Hi. I'm Keisuke."
-    Sakie "Ah. Hello. Sakie."
+    MC "Hi. I'm Keisuke Hotsure."
+    $setFlag("Meet_Sakie")
+    Sakie "Ah. Hello. Sakie Iwata."
     "She stuck out her hand to grab mine, where I took note of her sweatband."
     MC "Oh, neat. Dungeon Doom fan?"
     Sakie "Huh?"
@@ -4924,7 +4964,7 @@ label BE027:
     BE "Heyyyy, Kei-chan. Wanna come clothes-shopping with me? I wanted to grab a new t-shirt since it was getting hotter out. I could use a second opinion!"
     "Helping Honoka pick out a new t-shirt? Well, that could definitely be considered a nice turn of events."
     MC "Sure, I could help you out. I don't think I'd consider myself much of a fashion expert. But I can at least help make sure you pick out something that's not tacky."
-    BE "That's all I need. Let's go now, I found this neat-looking store on the Internet that had a good variety of stuff."
+    BE "That's all I need. Let's go now, I found this neat-looking store on the internet that had a good variety of stuff."
     "I checked my pockets, making sure I had my wallet and ID on me. Seeing no reason I couldn't leave right then and there, I followed Honoka to the bus stop so we could travel into town."
     "The short ride there was uneventful. Honoka and I sat next to each other on the next bus we could grab, and made our way to the stop nearest her chosen shop."
 
@@ -8542,6 +8582,8 @@ label BE044:
     scene black with fade
     pause 1
 
+    if not getFlag("VisitedBeach"):
+        $setFlag("VisitedBeach")
     scene Beach
     show BE happy
     with fade
@@ -9579,6 +9621,8 @@ label BE047:
     "My feet plopped against the wet ground as we walked ahead, and yet still I'd not known even the slightest bit of where we were, keeping true to my word until, finally..."
     show side BECell at Position(xcenter=0.1) onlayer overlay
     BE "Okay! Open up, buttercup!"
+    if not getFlag("VisitedWaterpark"):
+        $setFlag("VisitedWaterpark")
     scene Waterpark Pool
     show BE happy
     with fade
@@ -17353,6 +17397,9 @@ label BEGTS005_GTSPath:
     "I suppose that isn't too surprising, though. Class just got out."
     "I was a little concerned, but I decided that it wasn't worth obsessing over. I just had to figure out what to do for the rest of the day."
     "I wandered around the campus for a bit..."
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     "I headed outside and walked past the sakura tree in the center of the courtyard. I saw several other students as I did."
     "The only thing I could hear over the rustling leaves was the scattered sound of various footsteps on the sidewalk."
@@ -17364,7 +17411,6 @@ label BEGTS005_GTSPath:
     "I made my way back to the dorm. It was the same walk I made every day, but I found myself unable to focus."
     scene Dorm Interior with fade 
     "Even something as mundane as walking through the front door was clouded by my thoughts. I needed to distract myself."
-    $setTime(TimeEnum.DAY)
     "I sat in the dorm for several hours, just looking for things to accomplish. I cleaned up a bit, organized the closet, and made the bed."
     "I had never been more inclined to clean in my life. It felt like I was about to clean the entire dorm, when a subtle sound broke the silence."
     play sound PhoneVibrate

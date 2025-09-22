@@ -2516,7 +2516,6 @@ label WG014:
     WG "{i}Gar.{/i}"
     show WG haughty
     WG "There, now it's out of the way."
-    "I found a couple skis propped up against the wall and followed her."
     "Following behind her so I wouldn't trip on it again, I accidentally knocked over a couple skis that were propped up against the wall."
     show WG neutral
     MC "Son of a— {w}We have skis here too? Did I sleep through the summer and fall?"
@@ -20734,6 +20733,8 @@ label WG069:
     pause 1
     $setTime(TimeEnum.NIGHT)
 
+    if not getFlag("VisitedHotel"):
+        $setFlag("VisitedHotel")
     scene Hotel Exterior
     show WG neutral
     with fade
@@ -31326,6 +31327,8 @@ label WG094:
     scene black with fade
     pause .5
     $setWGOutfit(OutfitEnum.SWIM)
+    if not getFlag("VisitedBeach"):
+        $setFlag("VisitedBeach")
     scene Beach
     show WG happy
     with fade

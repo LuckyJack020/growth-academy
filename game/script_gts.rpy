@@ -1084,10 +1084,7 @@ label GTS008_after:
 
 label GTS009:
     $setTimeFlag("size2")
-    if getFlag("GTS011_unlock"):
-        $setProgress("GTS", "GTS011")
-    else:
-        $setProgress("GTS", "GTS011b")
+    $setProgress("GTS", "GTS011")
     $setTime(TimeEnum.EVE)
     scene Town with fade
     play music Sunset
@@ -1507,6 +1504,13 @@ label GTS010_after:
 
 label GTS011:
     $setProgress("GTS", "GTS013")
+    if checkAffection("GTS", ">=", 7):
+        jump GTS011_A
+    else:
+        jump GTS011_B
+
+label GTS011_A:
+    $setFlag("GTS011A")
     scene Dorm Exterior with fade
     $setMCOutfit(OutfitEnum.CASUAL2)
     "Journeying around the dorm, I heard whispers hang around behind me. The occasional giggle accompanied them as some girls watched me."
@@ -1586,8 +1590,8 @@ label GTS011:
     GTS "Yes... it seems so."
     jump daymenu
 
-label GTS011b:
-    $setProgress("GTS", "GTS013")
+label GTS011_B:
+    $setFlag("GTS011B")
     scene School Planter with fade
     play music Busy
     "I stepped into the garden expecting the normal serenity one would find there, but surprisingly it was more active than usual."
@@ -13144,6 +13148,8 @@ label GTS053:
     stop music fadeout 3.0
     play music Beach
 
+    if not getFlag("VisitedBeach"):
+        $setFlag("VisitedBeach")
     scene Beach
     show GTS_S neutral 
     with fade

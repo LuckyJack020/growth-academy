@@ -7208,6 +7208,8 @@ label FMG041:
     show FMG neutral
     FMG "Don't just stand there! We need to get a good spot."
     MC "Hold your horses, I'm coming."
+    if not getFlag("VisitedBeach"):
+        $setFlag("VisitedBeach")
     scene Beach with fade
     MC "God damn, it's a beautiful day... But not as beautiful as you."
     show FMG neutral with dissolve
@@ -12498,12 +12500,11 @@ label FMG065:
     MCT "I'd help... if anyone asked me."
     MCT "Maybe not Sakura though... she's got too much going on down bottom."
     "Thankfully Akira and Nat had finished changing and walked out before boredom did me in."
-    #REPLACE WITH SWIMSUIT ONCE CASUAL SPRITES ARE FINISHED
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
     $setNatsOutfit(OutfitEnum.SWIMSUIT)
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
     $setMCOutfit(OutfitEnum.SWIMSUIT)
-    $setSakuraOutfit(OutfitEnum.CASUAL)
+    $setSakuraOutfit(OutfitEnum.SWIMSUIT)
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -23932,7 +23933,7 @@ label FMGD002:
     pause 1
     $setTime(TimeEnum.NIGHT)
     scene Dorm FMG with fade
-    $setFMGOutfit(OutfitEnum.Nude)
+    $setFMGOutfit(OutfitEnum.NUDE)
     "I threw myself up in a cold sweat, breathing heavily."
     MC "Holy shit, I'm alive... It... it was just another dream... or nightmare..."
     MC "Hey, Akira."

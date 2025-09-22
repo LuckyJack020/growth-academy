@@ -1018,7 +1018,7 @@ init python:
 
     def setTomoOutfit(o):
         global TomoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.TRADITIONAL:
             TomoOutfit = o
 
     def setNatsOutfit(o):
@@ -1048,7 +1048,7 @@ init python:
 
     def setSakuraOutfit(o):
         global SakuraOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIMSUIT:
             SakuraOutfit = o
 
     def setDaitaroOutfit(o):

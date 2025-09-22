@@ -340,7 +340,7 @@ label AE003_c1_1:
         MC "Try it and get laid out."
         Student3 "..."
         "I'm not exactly the strongest, but apparently neither is he, as he felt intimidated enough to back down quickly."
-    elif checkSkill("Academics", ">", getSkill("Art")):
+    elif (getSkill("Academics") > getSkill("Art")):
         "One of his friends decided to get up and hold the line for him."
         Student2 "Now hold on, what does how much we get laid have to do with anything?!"
         MC "If it doesn't, then why'd he bring it up in the first place?"
@@ -8948,7 +8948,7 @@ label AE041_c1_2:
     MCT "Damnit. I forgot. The rule that lets a nearby soldier protect a leader."
     AE "Rolling three. Casting \"Boon of the Empire\" to add one. It passes."
     MC "Oka-"
-    AE "Character affect active. Upon dying, allows secondary reserves to be played on the right side of the field."
+    AE "Character effect active. Upon dying, allows secondary reserves to be played on the right side of the field."
     MCT "Secondary... reserves?"
     "Suddenly, a cavalcade of armored knights on motorcycles came from the void and charged towards point C, my only territory, from out of nowhere."
     MC "Wait... wait, wait, wait, wait!"
@@ -11321,7 +11321,7 @@ label AE050_after2:
     MC "Just like that."
     AE "Oh, okay."
     MC "Mmn..."
-    AE "R-Right, um... felatio. I um... I r-r-read up a bit on it."
+    AE "R-Right, um... fellatio. I um... I r-r-read up a bit on it."
     AE "Hoookay, you can do this..."
     "She took a deep breath in, and after planting a few tiny kisses to the tip of my dick-"
     $ persistent.unlock_cgAE050_bj1 = True
@@ -16469,6 +16469,7 @@ label AE070:
     $setSize(5)
     $setTimeFlag("size5")
     $setProgress("AE", "AE071")
+    $setMCOutfit(OutfitEnum.PAJAMAS)
     scene black with fade
     "I'm sorry..."
     "I'm sorry I couldn't save you from yourself."
@@ -16486,11 +16487,13 @@ label AE070:
     scene Bathroom with fade
     "I looked myself in the mirror for a moment... just staring. Looking at myself..."
     "After a moment, I took off my shirt."
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     if checkSkill("Athletics", ">", 5):
         MCT "I'm glad I've been hitting the gym recently. I think I look pretty good."
     MCT "..."
     MCT "I look good enough for Shiori, right?"
     if isNSFW():
+        $setMCOutfit(OutfitEnum.NUDE)
         "Then, I took off my pants... then my boxers."
         "I continued to look at myself in the mirror, still under the effects of my morning wood."
         MCT "My dick is big enough for her, right?"
@@ -16500,11 +16503,13 @@ label AE070:
         MCT "..."
         "As I thought about it, I imagined what it'd be like to have that growth instead... and my thoughts began to wander."
         "I sat down on the cold toilet seat and wrapped my hand around my member, stroking it gently. Imagining what it would be like to give Shiori everything she'd want."
-        "\"Oh fuck! Keisuke!\""
+        $setAEOutfit(OutfitEnum.NUDE)
+        AECell "\"Oh fuck! Keisuke!\""
         "Everything she deserves."
-        "\"Yes! Yes! Harder!\""
+        AECell "\"Yes! Yes! Harder!\""
         "I took my hair in my hand and began to rub my cock with a higher tempo, feeling the coarse, yet silky roughness titillate me as I imagined making her cock thirsty for me. How it would break her."
-        "\"Please! More! I need more!\""
+        AECell "\"Please! More! I need more!\""
+        $setAEOutfit(OutfitEnum.DEFAULT)
         "My eyes shot open as I quickly stopped in a state of pre-nut clarity and realized just what it was I was fantasizing about doing to her."
         MCT "Woooah, woooah, fuck. Nonono, huh-uh. Nope. Cutting that fucking fantasy off right now."
         MC "Shit... I need a cold ass shower right now."
@@ -16514,6 +16519,7 @@ label AE070:
     MC "Wait... is it?"
     "I shook the bottle for a moment, only to realize that, as I feared from the weight, the bottle had been depleted."
     MC "Ahh shit. Welp, to the nurses office I go."
+    $setMCOutfit(OutfitEnum.DEFAULT)
     "I put my shirt and pants back on, and then made my way out to the living room, silently making my way towards the door. I slowly closed the door behind me as not to wake Daichi, and quietly slunk out into the hallway."
 
     scene Infirmary with fade
@@ -17480,6 +17486,8 @@ label AE074:
 label AE075:
     $setProgress("AE", "AE076")
     $setTime(TimeEnum.EVE)
+    $setAEOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
     scene School Planter Winter with fade
     play music Peaceful
     "As the fresh snow crunched against the bottom of my shoes, I made my way over to Shiori, who stood silent and alone in the center of the garden."
@@ -18268,7 +18276,7 @@ label AE077:
 
 label AE078:
     $setProgress("AE", "AE079")
-    $setMCOutfit(OutfitEnum.UNDERWEAR)
+    $setMCOutfit(OutfitEnum.PAJAMAS)
     $setTime(TimeEnum.NIGHT)
     scene black with fade
     MCT "..."
@@ -18293,6 +18301,7 @@ label AE078:
     MCT "I guess Shiori-san... the door and... mngh..."
     "At this time of night, even forming a coherent thought was like a distant hope. The school lights had all been turned off, and the silence was penetrated only by the sound of the industrial heater on the roof whirring away as it warmed its sleeping occupants."
     scene Dorm Entrance with fade
+    $setAEOutfit(OutfitEnum.CASUAL)
     "After a good bit of walking, flanked on all sides by the tall facades of the dorm buildings, I headed over to the women's dorm, only to see a familiar face awaiting me right at the entrance."
     MC "Hey."
     show AE sad with dissolve
@@ -18418,7 +18427,7 @@ label AE079:
     "Shiori spoke to herself in a monotone, almost empty voice."
     AE "So don't keep trying to do it."
     "As I began to walk over to help, she used all of her strength to get her fat ass to sway to the side, the momentum dragging her body to the ground as she clung tightly to the sheets. Her feet hit the ground first, and she was able to get some footing."
-    "Her big, plump ass collided with the drawer, making both the appliance and my lovers ass begin to wobble. Shiori let out a very audible moan before placing one hand to her mouth and her other to stabilize the nightstand."
+    "Her big, plump ass collided with the drawer, making both the appliance and my lover's ass begin to wobble. Shiori let out a very audible moan before placing one hand to her mouth and her other to stabilize the nightstand."
     show AE aroused-3
     AE "I'm... fine."
     MC "Got it."
@@ -23223,7 +23232,7 @@ label AE098G:
     AE "Mother... I loved you, once."
     AE "I would come home from school and... and you... you had a smile on your face each time. Each time— until you broke your back."
     Minami "..."
-    AE "But fathers demons kept gnawing at him and I could tell it was wearing on you... just like yours wore on me."
+    AE "But father's demons kept gnawing at him and I could tell it was wearing on you... just like yours wore on me."
     AE "I am speaking to you now because I... I am in a place in my life where I feel confident. Where I feel I can tell you that, though I'm disappointed... I believe things can turn around... and..."
     show AE angry-4
     AE "And that you can't get to me. I've... I've known what you've been thinking of for a while and... it won't work. I have someone in my life who loves me. Someone who... who I love too."
@@ -24054,7 +24063,7 @@ label AE098D:
     AE "..."
     MC "..."
     AE "Well... that was... haah... rather enjoyable. Being completely honest... far more than usual."
-    "As I dislodged myself from her buttcheeks, my eyebrows raised. He pitch, tone of talking, demeanor... it all seemed to go back to normal."
+    "As I dislodged myself from her buttcheeks, my eyebrows raised. Her pitch, tone of talking, demeanor... it all seemed to go back to normal."
     MC "Oh yeah?"
     AE "Mm. I... I feel as though I needed that."
     MC "Heh. I'm glad."

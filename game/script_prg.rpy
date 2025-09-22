@@ -18567,6 +18567,8 @@ label PRG036:
     "As I glanced over, they looked at me."
     "One of them whispered something to the others, then the three started laughing amongst themselves."
     "Kanami and Michiko stood by one of the counters, also in conversation with each other."
+    "Near them, two or three girls were chatting, each holding a plate of food and a cup or can."
+    "One of them let out a laugh, pointing at another group with... a very long fingernail and saying something in a mocking tone that, while I couldn't make out the words, I could hear the tone from where I was sitting."
     MC "The club seems kind of clique-y, doesn't it?"
     PRG "A little. Everyone gets to be closer with their partners as they work with them."
     MC "Right."
@@ -22366,6 +22368,8 @@ label PRG042:
     scene black with fade
     play music Beach
     pause .25
+    if not getFlag("VisitedBeach"):
+        $setFlag("VisitedBeach")
     scene Beach with fade
     pause .5
     show PRG surprised with dissolve
@@ -39915,6 +39919,8 @@ label PRG060:
     play music MC fadein 2.0
     "I turned us away from the usual main drag of downtown and headed the other way, toward more of a residential area."
     MC "There it is."
+    if not getFlag("VisitedHotel"):
+        $setFlag("VisitedHotel")
     scene Hotel Exterior
     show PRG surprised
     with fade
