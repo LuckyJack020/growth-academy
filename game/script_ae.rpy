@@ -1412,6 +1412,7 @@ label AE010:
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once."
+    show cg AE010 with dissolve
     "Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
     "Both cheeks were blown up to the size of full balloons and stuck out a foot from her back, creating noticeable creases along the top of their curvature."
     "Shiori's shelf-like hips stuck out from her sides to match her astounding ass, taking her poor skirt to its limits in order to cover her shame."
@@ -1419,6 +1420,7 @@ label AE010:
     "Her thunder thighs were in full view, as the girl could do nothing but show off her fat, chubby legs in embarrassment, her knee being the only respite until reaching her calves, which had seemed to have swelled a bit too."
     MC "Shiori-san! You're huge!"
     show AE neutral at center, Transform(zoom=1.0)
+    hide cg with dissolve
     "Shiori-san turned around, blushing furiously as she brought a hand to the side of her face to avoid eye contact."
     show AE sad
     play music AE

@@ -1408,19 +1408,100 @@ label GTS009_c1_3:
 label GTS010:
     $setSize(2)
     $setTimeFlag("aftersize2")
-    scene Classroom with fade
-    "A defeated sigh vacated my body. My hands had been slicking back my bangs all morning, and I could already tell this growth was going to be annoying."
-    "I had only just recently had my hair trimmed, and already it was as long as before I had first gotten it cut."
-    MC "This is really going to burn a hole in my wallet if I want to keep myself from looking like a mountain man by the end of the month..."
+    $setTime(TimeEnum.NIGHT)
+    $setMCOutfit(OutfitEnum.PAJAMAS)
+    $setProgress("GTS", "GTS011")
+    scene black with fade
+    "It all began with the feeling of something brushing my knuckles."
+    MC "Mmng..."
+    "It was the floor- I was hanging off the side of my mattress. Just as I felt gravity's long tongue start to encircle me, I flopped to the safety of the wall and writhed in a dozen small stretches, groaning."
+    scene Dorm Interior with fade 
+    "My sticky eyelids pulled open. In the center of the shapeless abyss of gray-blue, there was a dot of red light. Slowly, the light became numbers."
+    MC "{size=-6}Three... three seventeen.{w} Ugh.{/size}"
+    "I wriggled halfway back under the sheets and laid back."
+    "I shut my eyes... and relaxed... and slumped... and..."
+    "..."
+    "Didn't work."
+    MC "{size=-6}Three... forty. Fuggin'...{/size}"
+    $setMCOutfit(OutfitEnum.ALTERNATE)
+    "I grabbed my phone, tickled the screen for a few hours, and eventually just slapped on my outfit for class. By then I'd processed a gentle, constant patter on the window."
+    "I also processed a pale, lanky shape slipping silently in through the door to the hall."
+    play music RM fadein 3.0
+    show RM angry-2 with dissolve
+    MC "Morning, Daichi. By any chance you see my umbrella?"
+    show RM doubt
+    RM "I don't- it's not where you left it?"
+    MC "Don't think so. Then again, it's been a while since I needed it."
+    show RM neutral 
+    RM "Yeah."
+    MC "What was it, two weeks ago? What'd I do with it then?..."
+    RM "Hmm."
+    MC "Did I put it in my pants pocket and forget?..."
+    RM "Yeah."
+    MC "...Wait, I did?"
+    RM "Hmm."
+    "I blinked as something stirred the fog in my head and I turned to look right at him."
+    hide RM with dissolve 
+    extend " Before me was a mop affixed with a black wig, an academy uniform shirt, and a tape recorder."
+    "It leaned ever so slightly backwards, a {i}little{/i} farther, a little farther, a second before clattering to the floor. He was gone."
+    "I blinked again."
+    MCT "I'm not even mad."
+    RM "Hmm."
+    "I looked to the window once more- the rain wasn't that heavy, my jacket would be enough."
+    "And so I slipped out of the room and down the hall."
+    stop music fadeout 3.0
+    scene black with fade
+    $setTime(TimeEnum.RAIN)
+    pause 1.0
+    scene Hallway with fade
+    play music Rain fadein 3.0
+    "Dripping, teeth rattling, and dead-eyed, I slouched down the silent first floor hall like the survival horror tutorial enemy I was always meant to be."
+    "As I approached an intersection, a second pair of footsteps joined my own."
+    show AE neutral-annoyed with dissolve
+    "I lurched a little, I hope undetectably, as my eyes immediately met Shiori's."
+    "Not only had she pinpointed my location before laying eyes on me, the slight scrunch in her iron face said she already knew I was dripping wet. I'd probably be arraigned before lunch."
+    MC "Good morning."
+    AE "And good morning to you as well."
+    MC "Weeeelp I should probably head off-"
+    AE "Before you do, could you sate my curiosity for a moment?"
+    MC "Y-Yeah?"
+    AE "Where is your umbrella, Hotsure-san?"
+    MC "It's, uh... I'll find it when I get back to my dorm."
+    AE "See that you do. You are creating hazardous conditions for everyone who comes in after you."
+    MC "I..."
+    MC "Sorry."
+    AE "And furthermore, you should {i}always{/i} store your personal effects in the same place. Ignorance does not excuse the effects of your conduct on others."
+    MC "Yes, Matsumoto-san. I'll... I'll stick close to the walls until I dry off."
+    show AE neutral
+    AE "That is an acceptable accommodation..., {i}provided{/i} you are careful not to get water on any posted signage."
+    MC "I'll be careful."
+    AE "Very good. See you in class."
+    show AE neutral at Transform(xzoom=-1)
+    MC "Oh, quick question..."
+    show AE neutral-eyebrow at Transform(xzoom=1)
+    AE "Yes?"
+    MC "Well... I don't usually get here this early..."
+    AE "I am aware. I must say I'm somewhat impressed."
+    MC "...Is the classroom open right now? Can I go in?"
+    AE "Of course."
+    MC "Okay, cool. Thanks, Matsumoto-san."
+    show AE neutral
+    "She nodded and we continued about our business."
+    scene Classroom with fade 
+    stop music fadeout 5.0 
+    MCT "Half an hour until class starts..."
+    "A warm sigh kissed my cold nose. A stray droplet flowed from my bangs to my eye and I brushed the lanky strands aside."
+    "I had only just recently had my hair trimmed, and they were already getting too close for comfort."
+    MCT "This is really going to burn a hole in my wallet if I want to keep myself from looking like a mountain man by the end of the month..."
     "As I slumped back in my chair, I heard the door to the classroom open and looked over to see Naomi uncharacteristically rushing to get to her seat."
-    play music GTS
-    MC "Hey Yamazaki-san."
-    "The sound of my voice seemed to make her freeze on the spot like a deer in headlights. As I got up to greet her, I noticed that she was keeping her school bag in front of her."
+    play music GTS fadein 2.0 
+    MC "Morning, Yamazaki-san."
+    "She froze like a deer at the greeting, offering only a short, sharp nod before gazing back down at the tiles. As I got up to bow, I noticed that she was quite carefully holding her backpack to the outside of her left thigh, like an ice pack."
     show GTS neutral:
         xpos 0.99 xanchor 0.0 yalign 1.0
         linear 5.0 xanchor 0.5 xpos 0.75
     MC "How... are you?"
-    "As I walked over, her eyes were looking between me and her desk, and she seemed to be inching her way towards it."
+    "As I got closer, her eyes were looking between me and her desk, and her feet inching towards it at a pace that didn't seem to satisfy her."
     show GTS embarrassed:
         xanchor 0.5 xpos 0.75
         linear 1.0 xpos 0.7
@@ -1432,24 +1513,32 @@ label GTS010:
         linear 1.0 xpos 0.55
         pause 1
         linear 1.0 xpos 0.5
-    GTS "I'm... doing well Hotsure-san. Yes, rather well today."
+    GTS "I'm... doing well, Hotsure-san. Yes, quite well today."
     MC "You sure?"
-    "I rose an eyebrow, but then tilted my head as something finally connected. Placing my hand flat on the top of my head, I moved it out towards her, making her duck ever so slightly as my hand just barely hovered over her head."
+    "I raised an eyebrow, but then tilted my head as something finally connected. Suddenly, I was quite awake."
+    "I felt compelled to turn forward again... and yet it was a mere few seconds before the urge to look became irresistible."
+    "The way her hips rose above the tops of the desks, her slightly lengthened stride, how high I needed to crane my neck to meet her amber eye..."
+    "There weren't a lot of people in my life over two meters... Uncle Hiroshi, some of the guys on the basketball team at school, that's about it."
+    "But the effect of {i}her{/i} lithe, doll-like physique... becoming more, surpassing me, growing out of the waifish little thing I'd come to call friend, it was..."
     MC "Huh..."
-    GTS "Please excuse me Hotsure-san!"
-    "She hurried to her seat and sat down, sighing as she placed her bag to the side of her desk, apparently feeling more secure now that she was seated."
-    MC "Don't worry, Yamazaki-san, I don't think it's that noticeable."
+    GTS "Please excuse me, Hotsure-san."
+    show GTS despaired-thought 
+    "She hurried to her seat and hunkered down, sighing through her nose as she placed her bag to the side of her desk. She looked as though she had overcome one hurdle out of many."
     GTS "..."
-    MC "I mean, I didn't even notice until just now. So I don't think anyone else has, especially with how everyone else is growing."
+    pause 2.0
+    MC "If it's any consolation, Yamazaki-san, I barely noticed."
+    GTS "..."
+    MC "Besides, everyone's going through the same thing, right?... basically, anyway. Who can judge?"
     GTS "Thank you..."
     show GTS neutral
-    GTS "You're right, it's rude of me to forget that everyone else is undergoing the same thing."
-    MC "Heh... Well I didn't mean that you were being rude. Just that it's not something you have to worry about."
+    GTS "And you are right, it is inconsiderate of me to overlook that everyone else is undergoing the same thing."
+    MC "Well, I didn't mean that you were being inconsiderate. Just that it's not something you have to worry about."
     show GTS embarrassed
-    GTS "I'm sorry, It's not really the height that bothers me it's just that..."
-    "Her cheeks seemed to gain a slight shade of red as she looked away."
-    GTS "My clothes don't fit as well, and I don't want to make a poor impression."
+    GTS "I'm sorry, it's not really the height that bothers me, it's just that..."
+    "Her cheeks blushed a slight shade of red as she looked down."
     show GTS embarrassed at center
+    GTS "The, ah..."
+    GTS "The change in my person has... created something of a wardrobe malfunction, and I fear I may make a poor impression."
     menu:
         "(Check to see what she means)":
             jump GTS010_c1
@@ -1457,49 +1546,134 @@ label GTS010:
             jump GTS010_c2
 
 label GTS010_c1:
-    $setAffection("GTS", -5)
-    "I looked around her desk as she mentioned that, and saw just the faintest hint of her midriff before her hands quickly flew down to cover herself."
-    #This could act as a special image where you see the faintest hint of her flat stomach.
+    "I looked around her desk as she mentioned that, and saw a distinct band of her exposed porcelain midriff, wide as my thumb."
+    "From there, my helpless eye fell on a pale, pencil-thin sliver running all the way up to the waistband of her skirt. Before I recollected how rude it is to stare, Naomi's hand flew down to attempt to cover herself."
     show GTS angry
-    GTS "Hotsure-san!"
-    "The surprising outburst caught the other students attention as I quickly rose my hands like a criminal giving in to the law."
-    MC "Sorry! Sorry! Kind of did that subconsciously."
-    GTS "Please. Don't do that again."
+    $setAffection("GTS", -10)
+    GTS "{i}I beg your pardon,{/i} Hotsure-san."
+    "My throat seized at my own impropriety and it was my turn to stare at the floor."
+    MC "Sorry! I didn't mean to- I wasn't thinking. I'm sorry."
+    GTS "I accept your apology."
     MC "Sorry again..."
+    show GTS sad 
+    "She sighed."
+    GTS "It is well, Hotsure-san."
     jump GTS010_after
 
 label GTS010_c2:
+    MC "Everybody's gonna have to adjust, right? We're all united in that. We can all relate a little."
+    show GTS neutral 
+    GTS "Hear, hear."
+    MC "I mean, think about Kodama-san. Nikumaru-san may well require the poor girl to be forklift certified by summer break."
+    "She tilted her head and stared at me for a moment, "
+    show GTS embarrassed with vpunch
+    extend "before her lips began to mash together and she lowered her head as her torso shuddered violently."
+    "She opened her mouth, barely able to look at my stupid, grinning face, and only let out little gasps and half-starts before she finally spoke."
     $setAffection("GTS", 1)
-    MC "I think they'll understand. I assume a few people are a little intimidated of the thought of going to the store to constantly to take new measurements for their uniforms."
-    show GTS neutral
-    GTS "That could be possible yes. I know I wouldn't want to bother them more than is necessary. I might have to see if I can get a seamstress to add a bit of fabric so it covers me better."
-    MC "Let me know if you find a hair stylist looking for someone to be a practice dummy, while you're at it?"
-    "I chuckled and pointed to my hair, which was more than a little messy looking."
-    GTS "Hadn't you just gotten it cut at the start of the week?"
-    MC "Yep! Looks like I'm gonna have to start taking notes on how fast it grows so I can properly think of hairstyles to give myself between haircuts. Because there's no way I'm gonna pay for a haircut every couple of weeks."
-    GTS "Yes, that would be quite impractical after a while, I'd assume."
+    GTS "You mustn't do that, you know. People will start coming in at any moment."
+    "Perhaps she felt a breeze just then as she looked down and then quite pointedly tugged the hem of her shirt over a few centimeters of exposed stomach, pale and plush as mochi."
+    GTS "Oh, my kingdom for a seamstress..."
+    MC "Let me know if you happen across a barber while you're at it."
+    "She flashed me a polite smile and promptly returned to attempting to make herself decent."
+    MC "{i}Khm{/i}... bad joke. Sorry."
+    GTS "Think nothing of it."
     jump GTS010_after
 
 label GTS010_after:
-    MC "Still, I think you're in the clear for now Yamazaki-san. Plus if you don't mind me saying, the new height isn't bad on you."
+    "I found myself twirling and tugging at my still-damp tresses as I looked into every corner of the room."
+    MCT "A good friend would make this situation better somehow..."
+    MCT "Mmm... my jacket might cover her... if it weren't all wet..."
+    MCT "Well... maybe I can..."
+    "I breathed out my reticence through my nose, stood, and turned to face Naomi."
     show GTS embarrassed
-    GTS "I..."
-    GTS "Thank you..."
-    if checkAffection("GTS", ">=", 7):
-        $setFlag("GTS011_unlock")
-        if getProgress("GTS") == "GTS011b":
-            $setProgress("GTS", "GTS011")
-        GTS "Apologies for changing the subject so suddenly, but Hotsure-san... I was hoping to ask you..."
-        show GTS embarrassed at center, Transform(xzoom=-1)
-        GTS "Would you be interested in coming over to my dorm room sometime later? Some things I had forgotten at home will be coming by and I was hoping you wouldn't mind having some tea with me."
-        "Like earlier, I saw the barest motion of a blush as her eyes for a split second looked away."
-        MC "Totally! That sounds great."
-        "For the briefest moment, her lips rose to a slightly larger smile before returning to their normal position."
-        show GTS neutral at center, Transform(xzoom=1)
-        GTS "I'll be sure to get everything fully prepared, then. I do hope you'll enjoy it."
-        MC "Oh, I'm sure I will. After all, with your plant knowledge I'd expect you to be a tea expert."
-        GTS "I wouldn't say so, but thank you for the vote of confidence."
-        "We shared a smile before the door to the classroom opened once more and the teacher walked in, resulting in me hurriedly rushing to my desk as we began the day."
+    GTS "Is there something you wish to say?"
+    MC "Yes. My jacket's hanging up in the foyer. I can go get it and wring it out, and then... you could use that to cover up until the day's over."
+    show GTS pondering
+    GTS "Your jacket?..."
+    MC "If you think that would help. I mean...{w} if you'd like."
+    pause 0.5
+    GTS "Hotsure-san, pray, what do you mean by this? This is most unusual."
+    MC "Well..."
+    MC "You're a friend of mine, Yamazaki-san, and... I just want to help somehow."
+    "I couldn't even tell you what the hell I was thinking just then, every choppy syllable a thrust of the shovel into bedrock."
+    "And yet, somehow, the bedrock of Naomi's composure fragmented just faintly as her eyes floated between me, and the clock counting down to whoever would first walk in and witness the scene."
+    show GTS pondering at Transform(xzoom=-1)
+    "She cupped her cheek in her palm as she regarded me, and considered."
+    GTS "..."
+    if checkAffection("GTS", ">", 8):
+        GTS "I suppose a damp seat is preferable to an entire day spent in indecency."
+        GTS "Yes, if you would, please bring up your jacket."
+        "I bowed."
+        MC "I'll be quick."
+        scene HallwayStairs with fade
+        "I must have been... the trip down to the coat racks, wringing out my jacket just outside, hurrying back up to 3-B, it all blurred together into a blue-gray mnemonic mush."
+        "Naomi started in her chair, as though her eyes were just closed, as I flew through the door."
+        scene Classroom 
+        show GTS surprised 
+        with fade
+        MC "Sorry for the wait."
+        show GTS neutral 
+        "As if by reflex, she flattened the lap of her skirt."
+        GTS "I had hardly noticed you were gone. {w}Well... that is to say it seems you took no time at all."
+        MC "Good. Uh... I realize now that I'm standing here that it, uh, it got a little damp."
+        MC "Here, I'll wring it out through the window. Just a second..."
+        "She nodded, though I really couldn't have blamed her if she'd have told me to put that sopping rag back where I found it, and kindly never try to help again."
+        "What was it that was making me do this?"
+        "With no answers, I marched to the window."
+        "It opened out, as I'd hoped, forming a sloped hood to block the rain."
+        "Thus I began wringing it out bit by bit, squeezing until my palms ached. The morning chill prickling through the water on my chest was strangely invigorating for my resolve."
+        MC "Hmph... there. No one else would be able to see anything you don't want them to."
+        MC "I wrung out what I could. It might be a little damp still."
+        MC "You don't have to get your hands wet... I'll tie it for you. If you like."
+        GTS "That shall have to suffice, shan't it?"
+        show GTS pondering 
+        GTS "Only... please do mind how tightly you tie it, Hotsure-san."
+        "I nodded firmly."
+        MC "I will."
+        "Patting it down once more, I approached her, locked into her curious gaze, until I circled around behind her."
+        "Her hand was already outstretched when I extended one cuff for her to take, and I pulled the other sleeve around her until our eyes met. She drew the sleeve around her waist."
+        show GTS surprised 
+        GTS "Ah! It's frigid!"
+        MC "Sorry..."
+        GTS "It's alright."      
+        MC "Th-thank you. Uh... okay."
+        "Something I have to call instinct took over as I clutched the sleeves and twisted them over each other. There was a soft heat on the backs of my hands."
+        "Just to be sure I tied a sturdy, secure knot, I lowered myself down until my eyes were just above the gap beneath her shirt. I was on one knee."
+        #show cg GTS010 with dissolve
+        "I heard the distant sound of fabric creaking as I made a loop with one sleeve. A jolt wringed my spine as I began to wrap the other around it, only to become suddenly aware that my knuckle might brush against her."
+        GTS "Thank you for this, Hotsure-san. Should the rain not let up, I shall be sure to return it to you by the end of last hour."
+        "Hearing her was all I needed. With one more breath, I tightened the knot and let it fall."
+        MC "Sure thing, Yamazaki-san. Whatever you wanna do."
+        "With the feeling of walking back through a gate I could not see, I stood."
+        show GTS embarrassed 
+        #hide cg with dissolve
+        MC "There. Does that feel okay? Not too tight or too loose?"
+        GTS "I believe this shall serve nicely. Thank you."
+        MC "You're welcome." 
+        "She turned to sit down at her desk, as did I at mine. Taking up my pencil, for no reason in particular, I began to doodle a dozen half-somethings in the margins, hoping for somebody to walk in and for class to start."
+    else:
+        GTS "I ought not permit you to trouble yourself, Hotsure-san. Please, have a seat."
+        MC "..."
+        "I nodded."
+        MC "Sure thing. Just thought I should offer."
+        show GTS neutral at Transform(xzoom=1)
+        GTS "And that was quite gentlemanly to do it. Thank you."
+        MC "Any time."
+        "I took my seat."
+    "Naomi was silent for a moment or two."
+    GTS "Ah... by the by, Hotsure-san, I was hoping to ask you..."
+    "I turned around in my chair, quite conscious of the mild but receptive expression I was putting on."
+    show GTS embarrassed at center, Transform(xzoom=-1)
+    GTS "Might I persuade you to visit my dormitory tomorrow afternoon? Some things I had forgotten at home will be coming by, and I was hoping to share a spot of tea with some friends and acquaintances."
+    "Like earlier, I saw the barest hint of a blush as she, for a split second, looked away."
+    MC "Totally! That sounds great."
+    "For the briefest moment, her lips rose to a slightly larger smile before returning to their normal position."
+    show GTS neutral at center, Transform(xzoom=1)
+    GTS "I'll be sure to get everything fully prepared, then. I do hope you'll enjoy it."
+    MC "Oh, I'm sure I will. After all, with your plant knowledge I'd expect you to be a tea expert."
+    GTS "I could hardly say so, but thank you for the vote of confidence."
+    "We shared a smile before the door to the classroom opened once more and Tashi-sensei sauntered in, loosely gripping a steaming thermos. I twisted myself forward again."
+    "I was thankful that he saw fit not to look at us, if just for that small, trailing moment. I opened my book and got ready to begin a new day."
     jump daymenu
 
 label GTS011:

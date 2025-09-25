@@ -23361,8 +23361,535 @@ label FMG098:
     jump daymenu
 
 label FMG099:
-    "This marks the current end of Akira's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    $setProgress ("FMG", "FMG100")
+    play music FMG
+    $setFMGOutfit(OutfitEnum.UNDERWEAR)
+    $setNatsOutfit(OutfitEnum.UNDERWEAR)
+    scene Lockers with fade
+    MC "You guys ever get tired of doing the same poses repeatedly? Does the urge to mix it up never strike you two?"
+    show FMG flex at Position(xcenter=0.75, yalign=1.0)
+    show Natsuko flex at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    Natsuko "Posing is an art form, Hotsure-san. One that takes many hours of practice to properly hone. Akira's size is impressive, but it'd be all the more so if she can nail her poses."
+    FMG "See? As huge as I am, I'm selling myself short by not practicing. The whole world's gonna get a good look at these guns— I'm gonna make sure of it!"
+    MC "I'll admit it was exciting the first 500 times today, but we've been here forever. How much longer is this gonna be? I would like to do... {w}literally anything that isn't this right now."
+    Natsuko "It's only been twenty minutes."
+    FMG "And it's going to be another ten! Might as well enjoy the show, little man!"
+    Natsuko "I'd say make it another twenty!"
+    MC "..."
+    MC "Like I said, {i}forever{/i}."
+    FMG "Oh, go cry in the corner then."
+    MC "The world is cruel and unjust, and I'm its favorite victim to torture."
+    FMG "See? There you go. Good job!"
+    "{i}*Bzzt*   *Bzzt*{/i}"
+    "Bored as I was, Nat's phone ringing managed to pull me from my spiral of endless suffering."
+    Natsuko "Can you check to see who that is, Hotsure-san? I haven't hit my lat spread yet."
+    MC "???"
+    MC "Uh, sure."
+    pause 1
+    MC "Nah, there's no way..."
+    Natsuko "What is it?"
+    show Natsuko annoyed
+    MC "You use Minder?!?!?"
+    "Call that a trigger word because that phone was yoinked out of my hands before I could even blink."
+    show FMG neutral
+    show Natsuko frustrated
+    Natsuko "That isn't any of your business."
+    MC "I think I might just make it my business."
+    show Natsuko neutral
+    FMG "Have you had any success, Nat? Guys, must be lining up for a girl like you. {w}Until you try and bite their head off because they did something slightly wrong."
+    Natsuko "Please, I am not like that."
+    "Akira and I didn't even respond, we just gave each other a glance{w} and looked right back to Natsuko, who was now clearly flustered."
+    show Natsuko annoyed
+    Natsuko "I've been working on it..."
+    MC "Should we expect the work to be completed in five to seven business days or is this one of those things that gets delayed constantly?"
+    Natsuko "Ugh... {w}To answer your question, Akira, unfortunately, not much. I've been on a few dates, but none of them have impressed me."
+    MC "Have you considered lowering your standards? I lowered mine and look at me!"
+    FMG "Is that so?"
+    MC "{i}*cough*{/i} Is what I'd say if I weren't dating the coolest girl on the planet!"
+    FMG "Yeah, pal, you're getting knocked into the solar system later."
+    FMG "Anyway, back to more important things. What do you mean by none of them impressing you?"
+    Natsuko "For starters, none of them worked out as consistently as I do. Next, none of them complimented my dress, and then on top of that, one of them told me I intimidated him and he couldn't date someone bigger than him."
+    MC "Bigger than him? Is the dude blind??? How would he not know you're built like a brick house."
+    pause 1
+    MC "You freaking lied on your bio didn't you?"
+    show Natsuko neutral
+    Natsuko "I might have used some pictures of myself before I was this size..."
+    show FMG happy
+    FMG "I mean that's not a good habit to have... BUT, the look on his face must've been hilarious."
+    show Natsuko smug 
+    Natsuko "It was pretty humorous, he couldn't get his jaw off the floor."
+    MC "Okay, okay, let's stay on topic here."
+    MC "A small part of me, an incredibly tiny minuscule part of me, has this feeling that you might not be making this easier for any of these guys." 
+    MC "This previous guy you straight up lied to, so that one doesn't count. However, not wanting to date someone bigger than you is odd for sure, given where we are."
+    FMG "Yeah, I agree with that too. Look at Kei, for example... he's so... small. And he doesn't have any problems with me."
+    MC "Well, I wouldn't say my problems with you are about the size difference in our relationship."
+    show FMG angry
+    FMG "So what are they then?!?"
+    MC "We are not doing this right now, we are here for Nat."
+    MC "And it's EATING {i}ALL{/i} THE ICE CREAM."
+    MC "Sorry, Nat, I almost lost my cool there. You were saying?"
+    show FMG neutral
+    Natsuko "Look, I couldn't care less about how big the guy's muscles are. I {i}will{/i} always be bigger than him."
+    show Natsuko flex
+    Natsuko "I love how big the smaller men make me feel."
+    show Natsuko neutral
+    Natsuko "That being said, while I'm built like a Greek god, I would still like to be treated like a woman, and I haven't received that once yet."
+    MC "I see. Still, I think both sides might be lacking here. Let me see your profile setup."
+    FMG "How do we know we can trust your advice?"
+    MC "Heh, back in the day, I was quite the catch with the ladies. I was practically sweeping girls off their feet. There isn't anyone better."
+    Natsuko "Considering you are all I have... {w}Here."
+    pause 1
+    MC "...{w}This can't be your bio..."
+    MC "I can't believe you actually did this stupid copy pasta."
+    FMG "Which one?"
+    MC "I can't believe I have to read this out loud..."
+    MC "I am your ideal woman, 239 cm, 385 kg of pure muscle. ONLY eat beef..."
+    pause 1
+    MC "Ugh, it's awful, I can't read the rest."
+    Natsuko "Do men not find that... funny? I figured something humorous would make me come off as more appealing."
+    MC "Ah, your first problem. I don't know if you understand humor,  Nat."
+    Natsuko "I do."
+    MC "Okay. Tell me a joke... {w}A funny one."
+    FMG "Oh no..."
+    Natsuko "..."
+    MC "I'm waiting."
+    FMG "Ooooh, he's serious..."
+    show Natsuko annoyed
+    Natsuko "..."
+    pause .5
+    Natsuko "Fine. You were right. I have nothing."
+    MC "Expected, yet I am still disappointed with the outcome, nonetheless."
+    FMG "Maybe you just need to make your profile more... you, Nat."
+    MC "That might actually be some of the worst advice you could've given."
+    MC "Besides this bio being... terrible, you need some better pictures."
+    show Natsuko neutral
+    Natsuko "I don't see any problems with them. They show exactly who I am."
+    MC "My guy, six out of the eight photos are you flexing in your underwear."
+    FMG "Hey, she does look good though! {w}Ooooh, that lat spread is great, you barely fit in the frame!"
+    Natsuko "See."
+    MC "{size=-6}Oh my god{/size}... listen guys, I get it, you two {i}love{/i} your bodies. {size=-6}Maybe a little too much{/size}... {w}But this can't be your personality all the time."
+    MC "I already know I'll regret asking this question, as the words slip from my lips, but..."
+    MC "What do you do for fun?"
+    Natsuko "The gym."
+    MC "Can you give me something that DOESN'T INVOLVE THE GYM!?"
+    Natsuko "..."
+    FMG "Don't you do a bunch of clubs, Nat? Oh, and you play video games too! That's huge for guys!"
+    Natsuko "They are... mostly gym clubs. And I haven't had the time to play much because of the gym..."
+    MC "You're killing me. Do you have any fun facts about yourself?"
+    MC "And do not give me your bench press PR."
+    pause 1
+    Natsuko "I... hm..." 
+    pause 1
+    MC "Still waiting, Nat."
+    Natsuko "...I'll admit... I didn't think that I was this uninteresting."
+    MC "{size=-6}That makes one of us...{/size}"
+    FMG "Aw, don't be so hard on yourself, Nat. There's plenty of interesting stuff about you... {w}Like, um... that one thing you like...{w}{size=-6}crap, that's a gym thing too...{/i}"
+    MC "This is the part where I remind you you aren't helping."
+    FMG "It's a lot harder than it looks, okay!"
+    show Natsuko annoyed
+    MC "Anyway, don't sweat it, Nat— I can make you interesting and wannable."
+    FMG "Mmmm, can you though?"
+    MC "Of course, there isn't a doubt in my mind."
+    Natsuko "There is in mine."
+    show FMG happy
+    FMG "Mine too!"
+    MC "Hur hur, you're both {i}so{/i} funny...{size=-6}Definitely {i}not{/i} putting comedy on the interests tab...{/size}"
+    MC "Let's return to your photos, we'll work on these first."
+    Natsuko "I still don't see any problems with them, but go on."
+    MC "You said earlier that you still wanna be treated like a woman despite your body."
+    Natsuko "That is correct."
+    MC "Alright, let's try and aim for more feminine photos instead of these dude bro ones you currently have."
+    Natsuko "Hm, alright, I would like to keep a few flexing photos though."
+    MC "You get two, and I'll let you pick."
+    Natsuko "Deal."
+    FMG "Aaaaa, this is going to be so much fun! We're going to make you such a catch!"
+    show FMG neutral
+    MC "Knowing you, I'm assuming you have a lot of photos of yourself saved on your phone. Do you think you have any of you in a dress?"
+    Natsuko "You'd have to look."
+    pause .5
+    MC "Holy shit... you have three whole albums of yourself posing."
+    Natsuko "Yes."
+    MC "How... how often do you take pictures of yourself?"
+    Natsuko "Nearly every day. Every time I flex, I get the urge."
+    FMG "True! It's tough some days."
+    MC "..."
+    MC "You have over 2000 pictures of yourself flexing, and you don't have a single one with you not in gym clothing or in your undies."
+    show Natsuko flex
+    Natsuko "Heh, well, I know a dress couldn't support all of {i}this{/i}."
+    show FMG happy
+    FMG "Ooooo, get it girl!"
+    MC "If you want to help, you could try starting now, instead of, you know... never."
+    FMG "Being encouraging of my friend and her physique is helping. Man, I could get lost in her arms."
+    Natsuko "You don't have to ask twice if you want to feel them..."
+    MC "Can we {i}please{/i} for the love of god, focus on the task at hand?"
+    MC "Actually, no, we can't do it here. You two can't do anything when you're half-naked, staring at each other posing. We're taking this to the cafe."
+    show FMG neutral
+    FMG "Booooooo, the fun police showed up... booooo."
+    show Natsuko neutral
+    Natsuko "Fine, another time, I suppose."
+    scene black with fade
+    pause .5
+    scene Cafe with fade
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    $setNatsOutfit(OutfitEnum.DEFAULT)
+    MC "You're probably wondering why I've gathered you all here today."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve 
+    FMG "Can't say I am, since we both know why we're here."
+    MC "Yes, obviously... {w}{i}sigh{/i}... forget it. Let's just move on."
+    Natsuko "Finally, you've been wasting our time all day, Hotsure-san."
+    MCT "I'm going to have an aneurysm."
+    show Natsuko smug
+    Natsuko "That was a joke if you couldn't tell."
+    MCT "Holy fuck, this is doomed."
+    show Natsuko neutral
+    Natsuko "So, how do you plan to fix my profile?"
+    MC "We'll have to start from scratch, there isn't much to work with here."
+    MC "The first picture is the most important, we'll need a strong opener to want to keep them interested."
+    MC "Luckily, you aren't ugly, which makes this very easy. Rest your arms on the table, put some of your hair on your shoulder, and smile."
+    pause 1
+    Natsuko "Like... this?"
+    MC "Perfect. See, that wasn't hard."
+    pause .5
+    MC "There, here's your first photo."
+    "I handed Nat her phone, and both her and Akira were immediately impressed."
+    FMG "Damn, Nat, you're hot."
+    FMG "Maybe if you smiled more often, more people wouldn't think you're so angry all the time and ready to kill someone."
+    MC "That would be a great starting point. Honestly, top five best tip."
+    MC "We can work on that after we fix this disaster. Alright, Nat, before we continue, pick the two pictures you'd like to keep."
+    Natsuko "The bikini one where I'm showing off my abs stays, and the other where I'm in my lingerie hitting the most muscular."
+    MC "Okay, done. We can worry about the other pictures later. Let's focus on the bio for now."
+    FMG "The hardest part."
+    MC "What do you want it to say, Nat?"
+    Natsuko "I... I don't know. What do people typically say?"
+    MC "Usually, it's facts about themselves, maybe something funny, or if you're boring and have no personality, you write \"Here for a good time, not a long time.\" "
+    MC "Thankfully, you won't be writing that."
+    MCT "Then again, at this rate, maybe I will if she doesn't give me anything usable."
+    MC "Describe yourself, Nat. What would you say makes you, you?"
+    FMG "Now {i}this{/i} I'm interested to hear."
+    Natsuko "..."
+    MC "..."
+    FMG "..."
+    Natsuko "..."
+    MC "...Uh... are you going to say anything?"
+    Natsuko "...I must admit, I'm nervous."
+    MC "???????"
+    FMG "Why?"
+    show Natsuko frustrated 
+    Natsuko "What if these men don't like the real me?"
+    MC "They swipe left? Are you new to this?"
+    MC "If you see a hot boy, you swipe right. If a hot boy finds you hot, he will also swipe right."
+    MC "So, what you're telling me is that you've been lying sometimes because you think no one is going to like {i}you{/i}."
+    Natsuko "Yes."
+    FMG "Aw, Nat."
+    show Natsuko neutral
+    MC "Well, I guess that's a valid concern, but I can't see that mattering. You have a lot more working with you than against you."
+    Natsuko "Really? Like what?" 
+    MC "Tall, unreasonably buff, need some work on your personality, like we've said before, {w}BUT you also follow rules one and two for online dating."
+    "Akira & Natsuko" "What are those?"
+    MC "Be attractive and don't be unattractive."
+    show Natsuko flex
+    Natsuko "So that means I could use more posing photos?"
+    MC "...No... that's not... what that means... at all."
+    show Natsuko annoyed
+    MC "Being serious again, can you think of anything for your bio, Nat? I'll take anything."
+    show Natsuko neutral
+    Natsuko "What should I start with?"
+    show FMG flex
+    FMG "Your max deadlift!"
+    MC "You are {i}zero{/i} help."
+    show FMG neutral
+    FMG "Oh, I know. I'm only doing this to bug you."
+    MC "Considering all the bad advice you've given in the time I've known you, you could've fooled me."
+    Natsuko "Well, what about... what I'm looking for?"
+    MC "Mmm, that could work. What are you looking for, though?"
+    Natsuko "Hmmm, they don't have to be obsessed with the gym like me, that is too much to ask. I am into shorter men. {w}I wouldn't say no to a man who loves animals."
+    show Natsuko frustrated 
+    Natsuko "Ugh, why is this so difficult?"
+    FMG "Hey, that's a decent start. We can always add to it later, I say we give it a run and see how it goes!"
+    MC "Let me work my magic and see what I can write for you."
+    pause .5
+    MC "Bam! Take a look at this masterpiece."
+    show Natsuko neutral
+    Natsuko "Wow, I must say I am impressed. This is miles better than anything I could write."
+    MC "The bar was on the floor, yeah. Maybe even in the earth's core."
+    show FMG happy
+    FMG "Very nice, Kei. You could open up a side gig and fix people's dating profiles. This is good stuff."
+    MC "Remember Nat, don't just swipe left on everyone. Looks aren't everything, even if there are a few guys who do look like thumbs. Personality and being able to hold a conversation goes a long way."
+    Natsuko "Mmm, can't say I disagree."
+    Natsuko "Regardless, we'll see how this goes. I'll send Alice a text and see what she can do about getting me a few more flattering outfits. Thank you for your help, Hotsure-san."
+    show Natsuko smug
+    Natsuko "And I expect to see you bright and early tomorrow, Akira. We will be running tomorrow."
+    FMG "I wouldn't miss that for the world!"
+    show FMG neutral
+    show Natsuko neutral
+    Natsuko "I'll be taking my leave. I'll see you two later."
+    show FMG sad at altMove(0.5, 0.5)
+    hide Natsuko with dissolve
+    FMG "I need the world to explode before tomorrow..."
+    MC "Oooooh, sounds like someone doesn't like working out."
+    show FMG neutral
+    FMG "Do you have any idea how annoying it is to run for like forty to fifty minutes straight when your thighs are the size of stone pillars???"
+    MC "No, but I can imagine it's similar to listening to someone talk about it who does."
+    FMG "The thigh rub... uuuuuugh."
+    MC "Is that a good \"ugh\" like {i}uuuugh{/i} or a bad one like UUUUGH?" 
+    FMG "And on top of it, you have people on the track who can't run to save their life, and I have to step out of the way to not body check them."
+    MC "Hmm, basic courtesy does sound unreasonably burdensome when you put it that way."
+    show FMG sad
+    FMG "Why can't everyone be such a gifted athlete like myself..."
+    MC "Hm, can't say I care."
+    FMG "Hey! Are you even listening to me?"
+    MC "Kinda, I'm like pretend listening at the moment."
+    jump daymenu
+
+label FMG100:
+    $setProgress("FMG", "FMG101")
+    play music FMG
+    scene Campus Center with fade
+    MC "Ugh, this day is going sooooooo sloooow."
+    show FMG sad with dissolve
+    FMG "I knooooooow."
+    FMG "Kei, think of a fun activity for us."
+    MC "Why can't you do it this time?"
+    FMG "Too much effort."
+    MC "Man..."
+    pause .5
+    MC "Okay, thoughts on setting up an arm wrestling booth, and you get us free money."
+    show FMG neutral
+    FMG "Should've tried that months ago when I was smaller and before they dubbed me the strongest on campus."
+    MC "No one says that?"
+    FMG "I've heard it several times for your information."
+    MC "Bro, {i}I've{/i} heard you say it to yourself when you get yourself ready in the morning."
+    FMG "I mean, that's simply just not true. Sounds like fake Akira hate propaganda to me."
+    MC "Uh-huh..."
+    FMG "You wanna go for a walk?"
+    MC "That's the best you got? Seriously? A walk?"
+    FMG "You wanted to solicit money from other students."
+    MC "Well, when you word it like that it sounds bad. I am merely trying to provide others with different means of entertainment."
+    FMG "Sure, pal. Oh, and just so you're aware, if we ever do anything like that. I'm taking eighty percent."
+    MC "That doesn't seem fair."
+    FMG "Okay, then you can do the arm wrestling."
+    MC "Seventy."
+    FMG "Seventy-five."
+    MC "Fine."
+    scene black with fade
+    pause .5
+    scene Town
+    show FMG happy
+    with fade
+    FMG "See, isn't this fun!?!"
+    MC "Um... I guess..."
+    show FMG angry
+    FMG "You don't sound like you're having fun."
+    MC "I'm having loads of fun because I'm spending it with you, my favorite person in the world."
+    show FMG neutral
+    FMG "You're such a kiss ass, ha!"
+    FMG "Wait..."
+    FMG "I'm only your favorite person on earth? If we left Earth, I wouldn't be your favorite person anymore???"
+    MC "Uh... wut..."
+    show FMG sad
+    FMG "I always knew you hated me..."
+    MC "...You want to grab a bite to eat?"
+    show FMG happy
+    FMG "Sure!"
+    MC "Great, and since I hate you, you can pay this time too! Thanks!"
+    show FMG neutral
+    FMG "You paid the last eight times, so I guess I can cover this time."
+    MCT "You guess?!?!"
+    FMG "In fact, I have the {i}perfect{/i} place in mind! You'll love it."
+    MC "Considering it's free, yeah, I think I will, heh. {w}See, the joke is you're paying and not me, thus the meal is free... {w}for me."
+    show FMG sad
+    FMG "Sometimes I wonder what our relationship would be like if you never spoke."
+    MC "Miserable, someone as charming and whimsical as myself can not be silenced."
+    hide FMG with dissolve
+    pause 1
+    MC "Yeah, she loves me."
+    scene black with fade
+    pause .5
+    scene Diner with fade
+    MC "Ha, I didn't think you'd pick Lunar Burger. It does bring back a lot of memories, like how incredibly awkward and embarrassing you were. Thankfully, I don't judge."
+    show FMG neutral with dissolve
+    FMG "God forbid a girl is nervous around a dude she likes. {w}I remember you getting all nervous asking me out, though."
+    MC "Uh, yeah, you're hot as fuck. Asking women out isn't an easy task, especially when a woman can bench eight times your bodyweight."
+    show FMG flex
+    FMG "Hey, don't sell me short here, it's far, far more than eight."
+    MC "Yeah, now it is, heh. Regardless, it doesn't change how nervous I was. Usually, I'm as cool as a cucumber."
+    show FMG neutral
+    "We grabbed our seats and in classic Akira fashion, she ordered roughly half the menu while my meal looked like it was off the kids' menu in comparison."
+    FMG "Damn, it's still as good as it was the first time. We have to come here more often."
+    MC "Wouldn't say no to that, a good burger always hits the spot."
+    FMG "True! {w}Hey, so I have a silly question for you."
+    MC "Shoot."
+    FMG "Okay, would you still have asked me out if we met when I was this size?"
+    MC "Definitely an odd one for sure. {w}Yeah, I don't see why I wouldn't. I'd want to be with you no matter what size you are. You've never stopped being the girl of my dreams."
+    show FMG happy
+    FMG "My man!"
+    MC "I have a question for you now. {w}Why would you ask something like that?"
+    show FMG sad
+    FMG "Well... it was something I had been thinking about a long time ago when I started to get {i}really{/i} big. I was having nightmares and thoughts about you being scared of me and leaving."
+    MC "What?"
+    MC "Why did you wait so long to talk about this?"
+    show FMG neutral
+    FMG "I figured if I'd ignore it, it would all go away." 
+    FMG "You're the first person I've met where I stopped feeling alone with. I didn't want to risk anything. I've always struggled with my mental health, but being with you... It was the light that lit my path... I guess."
+    FMG "It sounds cheesy and dumb, I know..."
+    MC "Hey, it's not. What do I always say?"
+    FMG "It's important to talk about these things."
+    MC "Exactly, no matter what it is."
+    MC "Ah, I have a question for you. {w}Out of all the dudes you could've gotten with you chose me. I've thought it was odd a few times with your gym addiction and you know... being an absolute unit."
+    FMG "Honestly, I couldn't stand to be with someone who shares my love of the gym or was bigger than me."
+    FMG "Given I didn't know how big I was going to get, but still, I enjoy being the bigger one in the relationship."
+    show FMG happy
+    FMG "And on top of that, watching you improve and strengthen yourself at the gym has been awesome! I couldn't get that same excitement with someone who would be at my level or above it."
+    FMG "You have such charm to you, Kei. I love it, you're an ass most of the time, but you're my ass. There isn't anyone who could replace you."
+    MC "Aw, stop, you're gonna make me blush. It feels good when other people tell you how amazing you are, even when you've known it yourself for so long. That type of validation can't be beat."
+    show FMG neutral
+    FMG "Modest as ever."
+    FMG "Um... {w}Are you going to finish your fries?"
+    MC "I was planning on it, yes. I'll let you take three, BUT don't take the big ones."
+    FMG "Man... and after I talked you up like that."
+    MC "You could talk me up as much as you want, and I'd never willingly hand over the big fries."
+    FMG "Fair, fair."
+    MC "You feeling ice cream after we finish up here?"
+    show FMG happy
+    FMG "Bro, I'm {i}always{/i} down for a sweet treat! Especially if it's with my man."
+    MC "That's me!"
+    show FMG neutral
+    FMG "Heh, you know it!"
+    scene black with fade
+    pause 0.5
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    play music BrightLights
+    scene Town
+    show FMG neutral
+    with fade
+    FMG "Man, I would've got a dress from Nat or Alice if I knew we'd be going on a date!"
+    MC "Damn, yeah, I might have considered tucking my shirt in."
+    FMG "You wouldn't even wear your nice pants for me?"
+    MC "Oh shit! Yeah, and I'd wear my nice pants too. Have to keep the fit together."
+    MC "Question of the hour. What ice cream are you getting?"
+    FMG "I'm not too sure yet, I'm still deciding if I want to get a cone or a cup. Then that will also determine my toppings and my ice cream. I can't get mint chocolate chip in a cup, that's cone worthy ice cream. But something like vanilla bean can go in a cup, that's basic."
+    FMG "What are you getting?"
+    MC "Hm, well, I honestly might pass this time. A part of me is feeling it and another part of me isn't. I could go either way, however, I'm leaning more towards the bench."
+    show FMG sad
+    FMG "I'm not getting anything if you don't."
+    MC "Why? Why does my choice stop you from getting a sweet treat?"
+    FMG "I'm going to look fat."
+    MC "{size=6}Oh my god...{/size}"
+    MC "Alright, alright, I'll get a small. You twisted my arm."
+    show FMG happy
+    FMG "There's no one easier to guilt trip! You're the best."
+    MC "Unbelievable."
+    scene black with fade
+    $setTime(TimeEnum.NIGHT)
+    scene Park with fade
+    "We got our ice cream and headed back to the park. Akira wanted to look up at the stars and relax a bit longer before heading back to campus."
+    show FMG neutral with dissolve
+    FMG "It's beautiful tonight."
+    MC "Not-"
+    FMG "Don't say it. I know what you're going to say. Yes, of course, it's not as beautiful as me."
+    MC "You're lucky, you're not ugly."
+    FMG "Almost choke, that was crazy, haha."
+    "I looked at the smile on Akira's face as she laughed. It was warm, comforting even. It was one of the things I loved about her the most, really."
+    "Which is why I could always tell when there was something else behind it."
+    MC "..."
+    show FMG devious
+    FMG "Hehehe~"
+    "One lick."
+    show FMG neutral
+    FMG "So, Kei, what's the plan now, eh?"
+    MC "Mm... I'm... still thinking of college, y'know? Architecture."
+    FMG "Oh yeah? You think you're got what it takes for the big leagues?"
+    "Two licks."
+    MC "I think so, yeah. I mean... why go to school if not, right?"
+    show FMG happy
+    FMG "So you can come and hang out with me!"
+    "Three licks."
+    MC "... Mm... yeah, I wouldn't have met you if I just, like... refused to come."
+    FMG "Right? You lucked out, buddy!"
+    "Four licks."
+    FMG "I mean, I totally did too. Wasn't gonna be getting away from the house otherwise, right? That's how I found someone like you!"
+    show FMG neutral
+    FMG "As for my future... well... pro-something, right?"
+    "Akira looked down and licked her ice cream once more, only to realize that, by now, it was mostly gone."
+    show FMG disappointed
+    FMG "Aw c'mon."
+    MC "Heh, ate it too fast?"
+    FMG "Yeaaah, I guess."
+    MC "... Want some of mine?"
+    FMG "..."
+    show FMG angry-3
+    FMG "You're totally gonna call me fatty as soon as I take a lick."
+    MC "Damnit, Akira, I hate how quickly you've caught on to me."
+    show FMG happy
+    FMG "HAH!"
+    MC "Heheheh~"
+    FMG "Hmm... I always figure there's even more to discover~"
+    MC "Oh yeah?"
+    "With a smile, Akira reached over and pulled me in as I nuzzled up closer to her."
+    FMG "Yeah."
+    "Gently, we both leaned back and looked up at the night stars above, their light shining down as we made connections in our minds."
+    MC "Hm... what do you think that one is?"
+    FMG "Ares. I know that one because he's jacked."
+    MC "Pff, really?"
+    FMG "Mhm... I'm a bit more, though~"
+    MC "Whaat? More jacked than the stars?"
+    FMG "You know it!"
+    MC "Miss Galactic over here."
+    FMG "Ooo, I like that."
+    MC "Heheh... hmmm... right there. Big dipper."
+    FMG "Umm... you sure that isn't little dipper, buddy?"
+    MC "Bet. 100%%"
+    FMG "Alright, well, bet lost INSTANTLY then, because that over there... is..."
+    MC "... Smaller?"
+    FMG "... Damnit."
+    MC "HAH!"
+    FMG "Psssh, okay, star boy, you know your stuff."
+    MC "That's right, baby."
+    FMG "Heh..."
+    FMG "... Hey Kei."
+    MC "Hm?"
+    FMG "Which is your favorite?"
+    MC "Hm... my favorite star?"
+    FMG "Yeah, I guess."
+    MC "..."
+    MC "You."
+    FMG "SON of a bitch, how did I not catch that one!"
+    "Akira let out a groan before looking at me for affirmation..."
+    "Yet I wasn't laughing. Instead, I looked at her sincerely, meaning every word I said. She perked up for a moment, before looking down with a blush on her face."
+    FMG "G-Geez, well now you've gone and made it all cutesy and..."
+    FMG "..."
+    MC "Hey Akira?"
+    FMG "Yo?"
+    MC "I'm glad to be your little dipper."
+    FMG "... Pfff, way to make it corny."
+    MC "Hehehe~"
+    FMG "Kehehehe~"
+    "I rolled over and looked her in the eye."
+    MC "Do you know why?"
+    FMG "Why's that?"
+    MC "I'm here."
+    MC "And I always will be."
+    FMG "..."
+    "Akira's eyes softened, her lip quivered as I looked her in the eyes."
+    "Slowly, gently under the night sky, she reached over and wrapped her massive arms around me, holding me close."
+    "There was no fear, no worry as she supported the rest of her body on her elbow as she kneeled down in the grass and placed her lips on mine. We kissed in spite of the past, ignoring the future, and embracing the moment."
+    "All anxieties of loss and pains of loneliness were dashed."
+    "The stars above were all we needed as we lay there in this moment. A moment that sealed us together, ensuring we would never part no matter where our lives took us. To be in this moment here with her..."
+    "Is the greatest gift anyone could ever have."
+    FMG "Kei..."
+    "Akira pressed her forehead against mine as I pulled her in close with my hand to the back of her head."
+    scene black with fade
+    FMG "I love you."
+    pause 1
+    centered "{font=gui/Caveat-Bold.ttf}{size=*2}THE END{/size}{/font}"
+    jump daymenu
+
+label FMG101:
+    "This marks the end of Akira's route."
+    "Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well."
     jump daymenu_noadvance
 
 label FMGD001:
@@ -23666,7 +24193,6 @@ label FMGD002:
     FMG "During."
     MC "...I'll hit record..."
     scene black with fade
-    pause 1
     $setTime(TimeEnum.EVE)
     scene Dorm FMG with fade
     FMG "Dude, what the freak?!?!"
@@ -23721,7 +24247,8 @@ label FMGD002:
     FMG "Oooooh, there's that feeling again."
     MC "What was that?"
     "As the words had left my mouth, she grew again, her bra snapping off and hitting me in the face."
-    $setSize(6)
+    $ globalsize = 6
+    show dummy with dissolve
     $setFMGOutfit(OutfitEnum.NUDE)
     MC "Well, that's new and oddly terrifying."
     MC "Akira, I think it's within our best interest, more so mine, that we figure out what's happening before we do anything else."
@@ -23797,6 +24324,7 @@ label FMGD002:
     "I looked up to see a large chunk of concrete start to fall down right above me, but with only a moment, Akira reached down and held me tightly in her growing hands as the rocks shattered to dust atop her mighty hands."
     FMG "Mhmhmhmhmh~"
     "As everything went black."
+    $ globalsize = 5
     scene black with fade
     "..."
     "It was quiet. I felt for a moment like I must have passed out in the darkness..."
@@ -23813,7 +24341,7 @@ label FMGD002:
     "The giantess strolled over to a nearby building, causing earthquakes as she walked, disregarding the screams below."
     MC "Woah, woah, Nat, be careful! You could be stepping on other students!"
     $ persistent.unlock_cgFMGD002_dream1 = True
-    show cg FMGD002_dream1 with fade
+    show cg FMGD002_dream1 with dissolve
     "Suspended in the air against my will, Natsuko kept trying to convince herself that she hadn't hurt anyone."
     "Which, well... it could be true... but how are you going to destroy all these buildings and think you didn't give someone a sprained ankle or worse... {w}A torn ACL."
     Natsuko "I haven't stepped on anyone... yet. I'm sure I would've known by now if I stepped on an ant."
@@ -23842,18 +24370,49 @@ label FMGD002:
     "And then she looked down at me biting her lips seductively."
     Natsuko "And I know just the little guy to help me..."
     MC "Sorry, Nat, I don't think I'll be able to help you with that problem... at all."
+    $ persistent.unlock_cgFMGD002_dream6 = True
+    show cg FMGD002_dream6 with dissolve
     Natsuko "Oh, believe me, you can, Hotsure-san. And you will..."
     Natsuko "Don't worry, I won't leave you in there long..." 
+    hide cg FMGD002_dream6 with dissolve
     "As Nat's palm began to eclipse my world, I saw it flinch at some booming tremor that made the concrete beneath me shiver and fracture. Then came another, like the drumbeats of the apocalypse. We both zeroed in on its source instantly."
     MC "Holy shit."
     "Her shadow eclipsed the sun. A monumental wall of tanned muscle, every ripple in 4k display, emerged out of the haze of distance in agonizing and captivating slow motion."
     "Until the very real-time flattening of a dogwood in the plaza broke the illusion as her colossal foot crunched it into woodchips. She didn't seem to feel it."
     "Every step punched a new dimple in the earth and rattled my skull enough to blur my vision. Even still, I could plainly see the stunned awe frozen on Nat's face."
     "And as the colossess came to a stop right behind her, in between the sway of her hot air balloon tits, I caught glimpses of the pride, the joy, the barely-concealed triumphant mania that radiated off of Akira's pearly grin beaming down at us."
-    FMG "Looking pretty tiny, aren't we, Nat?"
+    "Her presence was unmistakable, and her aura powerful enough to bring any man to his knees. She was a titan; a massive behemoth beyond anything I could have imagined before. Each breast was larger than a house, each pec the size of a semi-truck."
+    "If I had looked up any further at her, I would imagine clouds swirling about her head as she smirked with an imperious gaze."
+    $ persistent.unlock_cgFMGD002_dream5 = True
+    show cg FMGD002_dream5 with dissolve
+    "With a gentle movement, Akira tapped on Natsuko's shoulder with one of her gargantuan fingers attached to a hand large enough to completely eclipse both of us; more compressing Natsuko's shoulder than anything."
+    FMG "Looking pretty tiny, aren't we, Nat? {w}Hm, and it looks like you have something that belongs to me too."
+    Natsuko "T-There's no way..."
+    hide cg FMGD002_dream5 with dissolve
+    "Natsuko turned, but she couldn't see the face of the one who alerted her, only a pair of gargantuan breasts blocking her view."
     FMG "Hahaha, guess you aren't the biggest anymore!"
     "Akira's chest bounced hypnotically in rhythm with her amused laughter."
-    FMG "Alright, now get lost, Nat. Kei is mine and only mine."
+    FMG "Heh, let me get a better look at you."
+    "With one swift motion and one hand, Akira picked up Nat like she was nothing more than a child." 
+    FMG "Awww, look at you! You're so adorable! Thinking you were going to be bigger than me, don't make me laugh."
+    Natsuko "Put me down!"
+    FMG "I bet you hate this, haha. You're like a toy to me. I could get some use out of you, maybe. {w}Oh, that's it! You could be my servant!"
+    Natsuko "No! I'm not going to be your anything! Now, let me go!"
+    FMG "You're no fun at all, Nat. Even when you're so little, you're still the biggest killjoy."
+    FMG "Mmmmm... Your teeny, tiny little size."
+    "Akira pressed her finger up against Natsuko who tried to fight back...  only to look in shock as Akira grew even larger."
+    Natsuko "H-Huh?!"
+    FMG "Hooh..."
+    "Akira's body seemed to swell in pulses, pumping bigger and bigger as her musculature stiffened, Natsuko becoming utterly dwarfed in the palms of the giantess' hands."
+    Natsuko "H-How..."
+    FMG "MMF! Even bigger... stronger! {w}Man, seeing you all small like that... helpless in my hands... not gonna lie, it's kinda turning me on!"
+    "Akira bit her lip as she gently caressed her breast, moving her index finger to rub one of her nipples."
+    FMG "God... being this massive...."
+    "Natsuko, meanwhile, turned bright red in the face."
+    Natsuko "PUT ME DOWN NOW!"
+    FMG "Never any fun, fine, have it your way."
+    pause 1 
+    FMG "Alright, now get lost, Nat. I want some alone time with my little man. {w}And I better not see you around here again."
     Natsuko "Argh, I don't know how you grew so much, but I'll be back, and I'll flatten you."
     FMG "You? Flatten me? Ha! You're lucky I don't step on you right now."
     "Natsuko took off, but not before punching a building, knocking it down."
@@ -23871,20 +24430,23 @@ label FMGD002:
     hide cg FMGD002_dream2
     $ persistent.unlock_cgFMGD002_dream3 = True
     show cg FMGD002_dream3
-    "Akira flexed her other arm as she continued to hold me against my will."
+    "Akira flexed her other arm as she held me against my will."
     FMG "God, I love this! I wish I could've gotten this big sooner! I would've never stopped growing!"
     FMG "I'm practically a goddess!"
     hide cg FMGD002_dream3
     show cg FMGD002_dream2
     MC "Alright, pal, take a step back for a second and realize how stupid that sounds."
-    FMG "HA, it's true. These arms, this chest, my quads. I'm built like a god, I'm probably the size of one at this point! Nothing can stop me."
-    FMG "You should consider yourself lucky. Think about it, no one else has a girlfriend like {i}this{/i}."
-    hide cg FMGD002_dream2
+    FMG "HA, it's true. These arms, this chest, my quads. I'm built like a god. Hell, I'm probably even bigger than one at this point! Nothing can stop me."
+    FMG "You should consider yourself lucky! Think about it, no one else has a girlfriend like {i}this{/i}."
+    hide cg FMGD002_dream2 with dissolve
     "The giantess laughed to herself, her booming voice shaking the nearby buildings, and her chest bouncing in rhythm with her laughter once more."
     FMG "Mmmm, all this power..."
+    $ persistent.unlock_cgFMGD002_dream4 = True
+    show cg FMGD002_dream4 with dissolve
     MC "Listen, Akira, this isn't safe! You and Nat can seriously hurt someone. We have to find some way to get you guys back to normal!"
     FMG "Normal? Hell no, this is the greatest thing ever! I can do whatever I want with anything and anyone."
     FMG "If anything, I have to get even bigger! Why stop now?"
+    hide cg FMGD002_dream4 with dissolve
     MC "Are you crazy?!?!? How many people do you think you've hurt??? The Akira I know would be freaking out if she knew she even scratched a person."
     FMG "Pfff, I haven't hurt anyone. They all run away, screaming for whatever reason. I've been watching where I'm stepping."
     "As we continued our argument, Akira continued to trample buildings with ease whenever she stepped on them or her shoulders simply brushed against them. She was a force of nature."
@@ -23895,7 +24457,7 @@ label FMGD002:
     FMG "I've been-"
     "Suddenly, Akira's whole body started to tremble..."
     "I could feel her iron grip tighten as her rapidly thickening fingers effortlessly squeezed me thinner."
-    FMG "Ooooh, fucccck."
+    FMG "Ooooh, fucccck. A-Another spurt... so soon."
     "Her body began to expand outward, stretch higher, her muscles growing even more prominent, her breasts swelling up even more."
     "As she continued to ascend, her size had become too much for the buildings we were caught between, they collapsed with little resistance as her shoulders expanded."
     FMG "God, it feels soooo goooood!"
@@ -23912,7 +24474,7 @@ label FMGD002:
     FMG "Okay and? Imagine how freaking cool it would be to take a single step in and be on another continent?"
     FMG "It's a good thing I found you, Kei. Even though you're so adorably small, I know you'll be able to help me grow."
     MC "What the fuck... are you going to eat me?!?!?"
-    FMG "Absolutely not!!! Why would you even say that? God, I'd never do that. Are you crazy?"
+    FMG "Absolutely not!!! Why would you even say that? I'd never do that. Are you crazy?"
     MC "Yeah, excuse me for being the crazy one here, my bad, bro. Won't make that mistake again..."
     FMG "If sex made me {i}this{/i} big just imagine how much bigger and stronger I'd get if we did it again!"
     MC "No, hell no. I'm drawing the line here. I'm sure as shit not going spelunking in your lower region."
@@ -23929,8 +24491,6 @@ label FMGD002:
     MC "It's not too late to rethink this, Akira! Put me back on the roof!"
     FMG "Oh, I'll be putting you somewhere alright... I can't wait to see the results."
     "My muffled screams did nothing, meant nothing. This was how it ended... being an accessory to my giant girlfriend. I could hear her laugh as she brought me closer to my fate and then... {w}everything went quiet."
-    scene black with fade
-    pause 1
     $setTime(TimeEnum.NIGHT)
     scene Dorm FMG with fade
     $setFMGOutfit(OutfitEnum.NUDE)

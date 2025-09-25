@@ -16061,6 +16061,567 @@ label MC014:
     "Wasn't much, but I at least felt better about the fact if I could be there for the times she wanted to get out but felt overwhelmed, it might eventually help her feel more comfortable doing it herself."
     jump daymenu
 
+label MC021:
+    scene Classroom4 with fade
+    play music Schoolday
+    "It was the first day of class in the new semester. Not sure why they still called them semesters here when the school was on a trimester system, but here we are."
+    "It felt a little bit odd being that it was my first time stepping into a classroom here without the rest of 3-B, with most of them opting not to add this elective course to their schedule."
+    "Honoka and Akira would have probably been particularly miserable knowing they actually chose to be in another of Hageshi-sensei courses."
+    "But even if we weren't all on the exact same schedule anymore, we still got to see each other in Tashi-sensei's class for homeroom and history everyday."
+    if routelock == "GTS":
+        "Well, I mean, I do still see Naomi everyday, but that's after class."
+    else: 
+        "Well, except for Naomi. I mean, she's still in Tashi-sensei's class, I just don't see her everyday like before."
+    "I filed into the room and chose an open seat, one that wasn't too far up front, or in the back, hoping that might draw the least amount of attention to myself from Hageshi-sensei's gaze."
+    "As I sat down, more students made their way in. Some I recognized, others I didn't."
+    if getFlag("Meet_Sakie"):
+        "One of the students I recognized, in so small part because she always stood out. Sakie Iwata, aka \"Foot Girl\" as she's known on campus,{w} though I can't imagine she appreciates that moniker. She sat near the front."
+        MCT "Man, those clompers are even bigger than the last time I saw them. Wonder what shoe size she's up to?"
+        Student1 "Easy their Bigfoot! You trying to trip me or something? Keep those clown shoes out of the aisle before someone gets hurt."
+        Sakie "Get bent Karaku-san! Not my fault your fatass can't see your feet when you're walking anymore. I can't help it anymore than you."
+        Student1 "Oh, I'm sorry. I didn't mean to make fun of your feet. I just thought we had a sasquatch in here since it looks like your legs never met a razor in their life."
+        Sakie "These feet might not fit into too many shoes, but I bet they'd fit real nice right up your fat ass."
+        Student1 "Yeah, yeah, whatever. Big talk, but all you got is big feet."
+        "Sota Karaku, I didn't know the guy, but I hadn't heard good things either. Now I know why."
+        MCT "What an asshole."
+    else:
+        "One of the students sat down in front and she immediately stood out."
+        MCT "I didn't even know \"Foot Growth\" was a thing. Those are some {i}huge{/i} ass shoes."
+        Student1 "Easy their Bigfoot! You trying to trip me or something? Keep those clown shoes out of the aisle before someone gets hurt."
+        "Foot Girl" "Get bent Karaku-san! Not my fault your fatass can't see your feet when you're walking anymore. I can't help it anymore than you."
+        Student1 "Oh, I'm sorry. I didn't mean to make fun of your feet. I just thought we had a sasquatch in here since it looks like your legs never met a razor in their life."
+        "Foot Girl" "These feet might not fit into too many shoes, but I bet they'd fit real nice right up your fat ass."
+        Student1 "Yeah, yeah, whatever. Big talk, but all you got is big feet."
+        "Sota Karaku, I didn't know the guy, but I hadn't heard good things either. Now I know why."
+        MCT "What an asshole."
+    "I watched as another student I hadn't seen before walk in and sat down behind me. I feel like I would have recognized her if I had because her long streaming pigtails and bleach blond hair made her stand out like a sore thumb."
+    MC "Hello. I don't think we've met before. I'm Keisuke Hotsure."
+    Student2 "Haa?? {w}Why are you trying to talk to me? Did I say you could?"
+    MC "Uh, I guess not. I just assumed it was, you know... {i}normal{/i} to introduce yourself to people you'll be in class with."
+    Student2 "Tsh."
+    MC "Okay... cool, I guess."
+    MCT "Weirdo. Can't say I expected to meet someone here with less social skills than Daichi, but this place has all sorts of surprises."
+    "Not bothering to waste anymore time with pigtails behind me, I noticed another guy sat down to the left of me."
+    if getFlag("Meet_Genji"):
+        "Luckily this time it was a familiar face. At least, the part of it that I could see."
+        Genji "Yo, Tokyo!"
+        MC "Hey, Genji. Sick beard man. Looks like it's coming in nicely."
+        "\"Nicely\" was an understatement. \"With a vengeance\" was probably more accurate. This thing was well past his chest by now."
+        Genji "Thanks, man. I tried shaving it everyday at first, but gave up on that a couple weeks ago after my five o'clock shadow started becoming a five minute one."
+        Genji "Hey, now that I think about it, why is yours just on your head?"
+        MC "If I had an answer, I'm sure Tsubasa-sensei would like to know."
+        Genji "Hehe. Yeah, you're right about that. Just cause we're getting used to this stuff doesn't mean it still isn't strange when you stop to think about it."
+        MC "Tell me about it."
+        MC "What made you decide to take this class? Did Hageshi-sensei twist your arm?"
+        Genji "I don't think it'd still be attached to me if he did."
+        MC "Haha! Probably not."
+        Genji "Nah, man. Really, when you watch as much sports and follow them as closely as I do, it's all about the stats." 
+        Genji "Sure, having the talent, heart, and who wants it more are what makes it exciting, but at the end of the day the teams that win are the ones that put up the bigger numbers."
+        Genji "Not just scoring, but assists, rebounds, strikes, on base hits, etc. Then throw in if it's pre-season or the playoffs, at home or traveling— it's a lot to keep track of, and it all factors in."
+        MC "Makes sense. Hadn't thought about it for this course. Wonder if that'll be part of the story problems. Hageshi-sensei {i}loves{/i} assigning story problems with his homework."
+        Genji "He sure does. {i}Oof{/i}, maybe this course wasn't such a good idea afterall..."
+    elif checkSkill("Athletics", ">", 10):
+        $setFlag("Meet_Genji")
+        "I recognized this guy from being at a lot of sports events on campus. More often than not he's pulling announcer duty for the events. I'd seen him a couple of times in the dorm, I think he even lives on my floor."
+        Genji "Hey! I recognize you from somewhere. Have we met before?"
+        MC "I had a same thought. I've seen you around before but I don't think we've ever met."
+        Genji "We can fix that. Genji Nakayama, Beppu."
+        MCT "Beppu...? {w}Oh! I get it."
+        MC "Keisuke Hotsure, Tokyo."
+        Genji "I recognise you too. You're the guy with the major doo. Kinda like me, though you don't seem to have it growing on your face like I do."
+        MC "Yeah, I guess I kinda lucked out on that, but the hair on my head seems to be in turbo drive to make up for it."
+        Genji "Eh, it's not the end of the word. Sure it gets in the way sometimes, but I don't think it looks too bad on me."   
+        "Genji's beard draped down well past his chest. As a guy who couldn't grow a beard for shit, I was kinda jealous. Then again, I had enough problems with the hair coming out of just one end of my head."
+        MC "I take it as a sports guy you're into stats?"
+        Genji "Nothing but net, you got it man."
+        Genji "Sure, having the talent, heart, and who wants it more are what makes watching sports exciting, but at the end of the day the teams that win are the ones that put up the bigger numbers."
+        Genji "Not just scoring, but assists, rebounds, strikes, on base hits, etc. Then throw in if it's at home or traveling, clay courts or grass, the wind— it all factors in."
+        Genji "Stats on a spreadsheet might not be exciting, and they can't tell you who will win on a given night, but they do have a good track record of telling you who comes out on top in the end."
+        MC "Makes sense. Hadn't thought about applying this to sports with this course. Wonder if that'll be part of the story problems. Hageshi-sensei {i}loves{/i} assigning story problems with his homework."
+        Genji "He sure does. {i}Oof{/i}, maybe this course wasn't such a good idea afterall..."
+    else:
+        $setFlag("Meet_Genji")
+        "I hadn't met the guy before, but I definitely should have, seeing as it looked like we shared a different version of the same factor."
+        MC "Hey, what's up? My name's Keisuke Hotsure. I don't think I've seen you around before, but looks like we got the same thing going on. {w}Well, almost the same thing."
+        Student3 "Hey, you're right. How's it going man? {w}The name's Genji Nakayama, Beppu."
+        MCT "Beppu...? {w}Oh! I get it."
+        MC "Keisuke Hotsure, Tokyo."
+        Genji "You got one major doo there. Mine's a bit more even between my face and my head though compared to yours." 
+        "That it was. My hair was definitely longer, but Genji had a beard that draped down well past his chest." 
+        "As a guy who couldn't grow a beard for shit, I was kinda jealous. Then again, I had enough problems with the hair coming out of just one end of my head."
+        MC "I didn't know this factor could be like that."
+        Genji "What? You're telling me. How is it affecting only one type of hair on you?"
+        MC "Couldn't tell you. Guess we're both lucky it doesn't affect our body hair."
+        Genji "Haha! I guess we're pretty lucky to just get what we got when you put it that way."
+        MC "Any reason in particular why you decided to take this class?"
+        Genji "Sports. I'm a stats junky when it comes to sports. Really, when you watch as much of it as I do, it's all about the stats." 
+        Genji "Sure, having the talent, heart, and who wants it more are what makes watching them exciting, but at the end of the day the teams that win are the ones that put up the bigger numbers."
+        Genji "Not just obvious stuff either like scoring, but assists, rebounds, strikes, on base hits, etc. Then factor in if it's mid-season or the playoffs, at home or traveling, or heck even the weather." 
+        Genji "It's a lot to keep track of, but it's the kind of stuff you need to know if you want to know what's going on."
+        MC "Makes sense. Hadn't thought about sports stats when I signed up for the course. Wonder if that'll be part of the story problems. Hageshi-sensei {i}loves{/i} assigning story problems with his homework."
+        Genji "He sure does. {i}Oof{/i}, maybe this course wasn't such a good idea afterall..."
+    "As I was talking to Genji, out of the corner of my eye I caught a glimpse of a familiar silhouette and a flock of blonde hair that always stood out on campus."
+    show WG neutral with dissolve
+    "Not to say she was easy to miss otherwise{w}— especially lately."
+    if routelock == "WG":
+        MC "Fancy meeting you here."
+        show WG sly
+        WG "I'm starting to think you follow me around all the time."
+        MC "Not {i}all{/i} time. {w}Just every chance I get."
+        show WG coy
+        WG "Is that why you recommended I take this elective?"
+        MC "No, of course not... {w}It was only half the reason."
+        show WG haughty
+        WG "I surmised as much."
+        show WG neutral
+        WG "Though, to your credit I do think it was a good fit."
+        WG "Normally I wouldn't be too interested in a math course for one of my elective slots. However, probability and statistics struck me as rather important subjects to have a decent grasp of when it comes to business and investment."
+        show WG neutral-2
+        WG "Risk analysis, sales forecasting figures, market trend projections, all of them rely on certain assumptions based on the underlying data. Better to know rather than to assume as far as I'm concerned."
+        MC "Most CEOs have bean counters to handle that kind of stuff though. I take it the \"hands off\" approach isn't your style?"
+        show WG happy
+        WG "You'd be correct. {w}Due diligence in business requires going over the numbers yourself, not just always trusting others to \"handle it\"."
+        show WG happy-2
+        WG "As my father is fond of saying \"The stats don't lie, but people can lie to you using stats.\" "
+        MC "Sounds like he learned that through experience."
+        show WG happy
+        WG "Unfortunately yes, but part of Father's business success is that he's very good at sniffing out snakes."
+        MCT "Why do I get the impression I'm going to get absolutely grilled by this guy if I ever meet him?"  
+    else:
+        MC "Hey, Alice. Didn't realize there'd be another person from 3-B in this class."
+        WG "I'd say the same. I know you seem rather proficient at math, but I didn't think this type of course would interest you."
+        MC "True, I wouldn't say it's in my usual wheelhouse, but I know as part of my planned architecture major I'm going to need to fill out some math electives."
+        if isEventCleared("MC011"):
+            MC "Hageshi-sensei mentioned the class to me and it sounded worthwhile. What about you?"
+        else:
+            MC "Of all the different ones to pick from this one didn't sound too bad based on the course description. What about you?"
+        show WG neutral-2
+        WG "Admittantly most of the school's math course offerings don't interest me that much."
+        show WG pondering
+        WG "Probability and statistics struck me as rather important subjects to have a decent grasp of if I'm going to be able to properly leverage risk analysis and market forecasting metrics with my future businesses."
+        MC "Don't CEOs have bean counters to handle that kind of stuff though?"
+        show WG haughty
+        WG "Due diligence in business requires going over the numbers yourself, not just always trusting others to \"handle it\"."
+        WG "As my father is fond of saying \"The stats don't lie, but people can lie to you using stats.\" "
+        MC "Does that mean you're a \"by the numbers\" businesswoman then?"
+        show WG sly
+        WG "Ha! I suppose it might sound that way, but any decent business acumen still relies heavily on intuition. Data is certainly important, actually understanding that data all the more so, but you can't run a business like an unfeeling robot."
+        show WG doubt
+        WG "Well, unless you work in private equity I guess..."
+
+    hide WG with dissolve
+    stop music fadeout 2.0
+    show Hageshi neutral with dissolve
+    play sound Bell
+    pause 1
+    play music Peaceful
+    "Our conversation was cut short as the class period bell rang and Hageshi-sensei walked in, wasting no time drawing up the lesson on the board."
+    Hageshi "Alright, find your seats. Unlike most first days of class we aren't going to waste a full period going over the course syllabus. You're all responsible for knowing the material in it, so you can do it on your own time if you haven't already."
+    Hageshi "This course covers probability and serves as an introduction to basic stats." 
+    Hageshi "By the end of it you should have a firm grasp on understanding the difference between dependent and independent outcomes and how to use that when analyzing data."
+    Hageshi "Also understanding mean, median, and mode and why a simple average isn't always the best indicator to represent the expected outcome in your data set."
+    Hageshi "If nothing else, you should walk away with the knowledge of why playing roulette or the lottery is a terrible idea."
+    Hageshi "Stick with craps or blackjack if you really can't control the urge to waste your money." 
+    "Karaku-san stuck up his hand, but Hageshi-sensei didn't bother to turn his attention away from the board."
+    Hageshi "And before anyone asks, we won't be covering card counting in this course."
+    Student1 "{i}Lame{/i}..."
+    Hageshi "Let's start with the first example. Let's say we want to roll a six on a di. What are the odds of that outcome?"
+    Genji "One out of six."
+    Hageshi "Correct. Easy enough, right?"
+    Hageshi "Now, how likely is it that I roll another six?"
+    if getFlag("Meet_Sakie"):
+        Sakie "Not very likely."
+    else:
+        "Foot Girl" "Not very likely."
+    Hageshi "True, it is unlikely, but is it any less likely than it was the first time?"
+    Student1 "It's gotta be. I wouldn't bet on it."
+    Hageshi "It may {i}seem{/i} that way, but probability isn't based on gut feelings."
+    show Hageshi neutral at altMove(0.5, 0.75)
+    show WG pondering at Position(xcenter=0.25, yalign=1.0) with dissolve
+    WG "It's still a one out of six chance. The previous di roll doesn't affect the second."
+    Hageshi "Exactly. No matter how many sixes are rolled in a row, the odds of rolling a six again remain the same. This is why it is called an \"independent outcome\"."
+    scene black with dissolve
+    pause .5
+    scene Classroom4 with fade
+    "In true Hageshi-sensei fashion, he hadn't pumped the brakes at all when diving into the thick of the material on the first day, despite starting with some relatively simple examples."
+    Student2 "Sooo... what? There a point to this \"exact binomial test\"?"
+    Hageshi "That's a fair question. At its most basic level it's a comparison of the expected outcome to the actual outcome, but it's a really good statistical test for detecting cheating."
+    show WG sly with dissolve
+    WG "Or if someone is cooking the books."
+    Hageshi "Also true."
+    show WG pondering 
+    Hageshi "For example, if I flipped a coin five times and four of those came out heads, that might seem rather lucky, but not enough to raise an eyebrow. It's not that different from the expected outcome of 2.5 after all."
+    Hageshi "But if I flipped a coin 50 times and 40 of those came out heads..."
+    Genji "That'd be a little \"too\" lucky."
+    Hageshi "I'd say so."
+    Student2 "...Oh. {w}I mean... I think."
+    Student2 "{size=-6}...This dudes pretty smart for a big lunk...{/size}"
+    Hageshi "Always keep in mind, probability doesn't care about what you think {i}should{/i} happen, it can only tell you what's {i}likely{/i} to happen. The problems come when we believe what {i}will{/i} happen just because it {i}could{/i} happen."
+    show WG happy
+    MC "I didn't realize this was a philosophy elective, Hageshi-sensei."
+    Hageshi "Perhaps you understand more than you lead on Hotsure-san if you've managed to grapple with the epistemological implications of this subject."
+    if checkSkill("Academics", ">=", 10):
+        $setSkill("Academics", 1)    
+        MCT "Perhaps this course was going to be more interesting than I initially thought."
+    else:
+        MC "Epistem-whatnow?"
+    play sound Bell
+    Hageshi "Looks like we're out of time. You'll find your first assignment in the syllabus."
+    show WG surprised-2
+    "Class" "Awwww!"
+    Student2 "Excuse me?!"
+    show WG doubt
+    if getFlag("Meet_Sakie"):
+        Sakie "Aw, come on, Hageshi-sensei. It's the first day of the semester!"
+    else:
+        "Foot Girl" "Aw, come on, Hageshi-sensei. It's the first day of the semester!"
+    Genji "Yikes! What did I get myself into with this course..."
+    MC "I knew he was merciless, but {i}damn{/i}."
+    WG "I don't know what else I expected..."
+    if getFlag("Meet_Sakie"):
+        Sakie "Man, we got training this week at basketball club. I wanted to stay late doing that, not work on some stupid math assignment!"
+    else:
+        "Foot Girl" "Man, we got training this week at basketball club, I wanted to stay late doing that, not work on some stupid math assignment!"
+    Hageshi "Oh, stop complaining."
+    show WG neutral
+    Hageshi "If any of you had actually read the syllabus, you'd know the first assignment isn't due until the end of the week. You have plenty of time to work on it between now and then."
+    Student1 "Gee, thanks Hageshi-sensei, you're the best!"
+    Student1 "{size=-6}...Asshole.{/size}"
+    show WG surprised-2
+    Hageshi "Hm? {w}This does remind me, maybe I should check my syllabus again for typos... {w}I do tend to mix up dates that are close to each other every now and then..."
+    if getFlag("Meet_Sakie"):
+        Sakie "Nope. Nope. We're good. Everyone good?"
+    else:
+        "Foot Girl" "Nope. Nope. We're good. Everyone good?"
+    Student1 "Super good."
+    if getFlag("Meet_Sakie"):
+        Sakie "Great. Thanks, Hageshi-sensei!"
+    else:
+        "Foot Girl" "Great. Thanks, Hageshi-sensei!"
+    MC "Let's get out of here before he changes his mind." 
+    show WG neutral-2
+    WG "Good idea."
+    Genji "Right behind ya."
+    stop music fadeout 1.0
+    scene black with fade
+    pause .5
+    scene Cafeteria with fade
+    play music MomentTime
+    "I thought the first day of the new semester was gonna be an easy one, but so far that hadn't been the case."
+    "When I signed up for Hageshi-sensei's class, knowing him I knew it wasn't going to be easy, but I figured it'd be more about coin tosses and poker hands, not \"binomial distributions\" and just as many Greek letters as calc."
+    MCT "Welp, my brain is fried already and the day's only half over. Hopefully there's something good for lunch here today."
+    pause 1
+    MC "Ooo! Curry udon. Nice!"
+    "That brown sauce may look like... well, other less appetizing things that are brown... {w}but damn if there's not something magic Gurīsu-san put in it. It was better than what I'd had at most restaurants."
+    MCT "Alright, time to dig in."
+    "But before I could dig into my sauced up noods, I was interrupted by a distraction."
+    show BE neutral with dissolve
+    extend " Two {i}big{/i} distractions to be precise."
+    BE "Is this seat taken?"
+    MC "Would that stop you from sitting down if I said yes?"
+    show BE smug
+    BE "Nope. Too bad for you."
+    MC "Well I have come to accept I can't seem to escape your presence, even if I get shipped off to the other end of the country."
+    show BE wink
+    BE "Exactly. You're stuck with me forever, Kei-chan. Lucky you."
+    show BE angry
+    MC "I don't know if \"lucky\" is the best word to use if that's the case. {w}\"Cursed for all eternity\" might be more accurate."
+    show BE smug
+    BE "Yeah, for {i}me{/i}!"
+    "Honoka & Keisuke" "Hahaha!"
+    MC "How's the new semester going for you so far?"
+    show BE shrug
+    BE "Eh, it hasn't changed much. Only a couple of classes are different. Should be more of a change of pace next semester. {w}What about you?"
+    show BE neutral
+    MC "I'm still reeling from Hageshi-sensei's elective on probability and stats. I thought it would be one of the easier math electives to take, but odds aren't looking too good on that."
+    BE "I can't believe anyone would sign up for an extra class with Hageshi-sensei. I mean, he's not boring like Tsubasa-sensei, but he covers so much every class, it's {i}brutal{/i}."
+    show BE doubt 
+    BE "Not to mention his homework assignments are like math marathons."
+    show BE neutral
+    MC "I know, I know. But I needed the math elective anyway and it sounded more interesting than linear algebra, so I'm stuck with it." 
+    MC "At the very least I think I'll get to learn some useful stuff, something that's not super common with math classes."
+    BE "I'll say. I don't know about you, but I've never once had to use calc to get through a day."
+    MC "Me neither, but at least it helps my GPA. Can't say biology and history are my strong suits, so I gotta lean on the math courses more to keep it up."
+    show BE happy
+    BE "At least someone's getting something out of it then."
+    if getFlag("MC013_Perfect"):
+        BE "I think you're underestimating your history chops though. You did pretty well on Tashi's final exam. I barely passed, in part thanks to your little pre-test chat about the Yayoi period."
+        MC "What can I say? I'm a man of many talents."
+        BE "Being humble doesn't appear to be one of them."
+        MC "I said many talents, not all of them."
+    MC "What'd you end up taking as an elective this semester?"
+    show BE neutral
+    BE "I took a PE class. They had this whole unit on racket sports, you know like squash, badminton, tennis, pickleball— that kind of stuff."
+    MC "Well you certainly seem to have an affinity for {i}rack{/i} sports."
+    show BE angry
+    BE "First of all, it's {i}racket{/i} sports." 
+    show BE happy
+    extend " And second of all, {i}I{/i} was going to make that joke and you totally ruined it, you butthead!"
+    if routelock == "BE":
+        MC "That kind of name calling is uncalled for. {w}I'm more of a boobman than a butthead in case you hadn't noticed."
+        show BE unique
+        BE "More like boob-brain since that's about all I think you think of sometimes Kei."
+        MC "Not {i}all{/i} the time, {w}just {i}most{/i} of the time."
+        show BE embarrassed
+        BE "Pshh! Figures."
+    else:
+        MC "What can I say? I'm just two steps ahead of you today."
+        BE "Now I gotta work on some new material."
+        MC "I'm sure you'll find plenty of inspiration just by looking down."
+        show BE disoriented
+        BE "Are you speaking for yourself Kei-chan?"
+        MC "Changing subjects-"
+    show BE neutral
+    MC "You sure darting back and forth on a court with a set of heavy pendulums swinging on your chest is gonna work out for ya?"
+    BE "That's just it, I think it's a perfect fit. {w}I got a racket to give me the extra reach to work around these babies! {w}Besides, it's not super competitive, it's more about learning the sports."
+    MC "You know, Tomo and I are pretty good at badminton. Maybe you could join us sometime once you get the hang of it? Been a while since we played together, I think she'd like that."
+    show BE confused
+    BE "What? That seems hard to picture. {w}Tomo doesn't seem like the sports type, but then again she does get super competitive when it comes to video games, so I guess I could see it."
+    show BE neutral
+    MC "Just like video games, when we play against each other, we play for blood. {w}Well, bragging rights really, but it {i}feels{/i} like blood."
+    MC "It's been a while, but we were pretty into it in middle school. We both got really good cause we were constantly trying to screw each other over with sinker shots."
+    show BE shrug
+    BE "Maybe I'll take a rain check on that badminton match then."
+    MC "We'd go easy on you... at first."
+    show BE smug 
+    BE "That's a lie."
+    MC "Hey, I can't be held responsible for my actions when Tomo and I get worked up into a bloodlust frenzy when shuttlecocks start flying."
+    show BE angry
+    BE "That is the lamest threat I've ever heard in my life."
+    show BE happy
+    MC "And you'll rue the day when you are forced to bear witness to it."
+    BE "Sure, Kei-chan. I'm going to grab my tennis shoes before the class starts. Good luck with Hageshi's class." 
+    if routelock =="BE":
+        "I leaned in for a quick good-bye kiss. Honoka tried to as well, but given that she had two obstacles in her way, I was nearly vaulting over the table by the time I was able to reach her lips."
+        MC "Mwah!"
+        BE "You goofball."
+        BE "You swinging by my place tonight?"
+        MC "You betcha!"
+        BE "I was hoping you would. I'll see you later, Kei-chan."
+    else:
+        MC "Later."
+
+    stop music fadeout 1.0
+    scene black with fade
+    pause .5
+    scene Library with fade
+    play music DormLife
+    "A day had already passed and I hadn't gotten anything done on Hageshi-sensei's assignment."
+    "Based on last semester, I knew it was going to come back to bite me in the ass if I waited till the last minute to make progress on it, so I decided to stop by the library to work in a bit of dedicated study time on it."
+    show Tomoko neutral with dissolve
+    MCT "Well isn't that something? A rare Tomo sighting out in the wild beyond the confines of her hermit den."
+    MC "Yo, Tomo. Didn't think I'd see you here."
+    show Tomoko defiant
+    Tomoko "What? I study."
+    show Tomoko distracted
+    extend ".. sometimes."
+    "I cocked my head sideways to get a look at the book she was carrying under her arm."
+    MCT " \"Japanese Sign Language Compendium\" "
+    show Tomoko neutral
+    Tomoko "I'm just checking out a book for class."
+    MC "How's the JSL class going?"
+    Tomoko "It's alright, I guess. I can't say too much about it since I just started but it seems interesting."
+    MCT "That's about as close to a glowing review I've ever gotten out of her about a class. Must not be that bad."
+    show Tomoko distracted
+    Tomoko "How's your math class?"
+    MC "Harder than I thought it'd be, which is why I'm here. Gonna hit the books for a bit. Maybe literally if these problems are really tough."
+    show Tomoko distracted-2
+    Tomoko "Well, good luck with that. I'll catch you later."
+    MC "Later."
+    show Tomoko neutral at altMove(1.5, 0.15)
+    "Tomo started to walk away, but I had that nagging feeling in the back of my head that I should probably take the opportunity since I don't seem to run into her that often."
+    MC "Hey, let's hang out sometime. We can play some games, either at my place or yours if you're up for it."
+    if getFlag("MC010RM"):
+        show Tomoko defiant
+        Tomoko "No offense, Kei, but I'm not interested in going to your dorm if there's a chance your roommate will be around."
+        MC "Oh yeah... Well, that's fair."
+        MC "We can do your place, I don't mind."
+        show Tomoko neutral
+    MC "How's tomorrow night looking for you?"
+    show Tomoko smile
+    $setAffection("TM", 1)
+    Tomoko "Sure. That works for me. See you then, Bro."
+    hide Tomoko with easeoutleft
+    pause .5
+    MCT "Alright, time to hit the books."
+    "I scanned around looking for an empty study table. Unlike finals week not that long ago, the study section of the library was basically a ghost town."
+    show WG neutral with dissolve
+    "With one notable exception, who would have been hard to miss even if the place was jammed packed. {w}Something told me she was here for the same reason I was."
+    MC "Hey, Alice. {w}Working on Hageshi-sensei's assignment I take it?"
+    WG "Hello, Keisuke. You are correct in your assessment. Knowing Hageshi-sensei, I assumed this assignment would be rather lengthy and benefit from some dedicated study time."
+    show WG worried
+    WG "My assumption has proven correct if the first five problems are any indication of the rest."
+    show WG neutral-2
+    "Alice might not have been an academic encyclopedia like Shiori, but she was no slouch when it came to schoolwork in her own right." 
+    "Probably the product of some seriously expensive boarding schools if I had to guess. So if she said it was tough, it meant this thing was no joke."
+    MCT "Crap. Sounds like I'm in for the long haul on this thing tonight."
+    MC "Well, that's why I'm here. Sounds like I made the right choice then to try to start early on it."
+    MC "What's so tough about it? I take it he has a lot of story problems?"
+    show WG doubt
+    WG "Right out of the gate."
+    show WG bored 
+    WG "Doesn't make it easier that I've never been too keen on gambling, so I can't say I relate to these calculated odds based on card draws and card hands like in some of these problems."
+    MC "But isn't the stock market and investments in general a form of gambling?"
+    show WG haughty
+    WG "Hardly. Calculated risks and gambling are not the same."
+    show WG pondering
+    WG "With a business you can investigate its underlying fundamentals, like cashflow, revenue streams, upside potential, market demand, executive leadership experience, etc." 
+    if routelock =="WG":
+        MC "So as long as you have enough information to feel good about your decision that makes it different?"
+        show WG coy
+        $setAffection("WG", 1)
+        WG "So you like to play devil's advocate?"
+        MC "Maybe just a little. What's it to ya, Babe?"
+        show WG happy-2
+        WG "Ha! {w}I don't mind, it's a fair question. \"What separates the suave investor from the degenerate gambler?\" "
+        WG "Certainly the fool that blows their life savings on a bad bet was convinced a different outcome would occur."
+        show WG sly
+        MC "Or an investor that lost all his money."
+        WG "True, but they violated Rule Number 1: Never invest what you can't afford to lose."
+        MC "But don't entrepreneurs tend to go \"all in\" on their business ideas?"
+        show WG neutral
+        WG "Fair point, but high risk investments should be offset by a proportionate potential for high yields. With a business you can set up an LLC to keep the business' money separate from your personal finances and liabilities."
+        MC "I guess I hadn't thought about that."
+        WG "It's a good fallback if a business has to file bankruptcy. Not an available option when someone spends an evening looking to find some loose slots."
+        show WG happy
+        WG "Besides, no competent investor would put all their eggs in one basket anyway. That's Rule Number 2: diversification. It might not be as exciting as betting it all on black, but a lot of small smart bets spread out over time is the better strategy."
+        MC "I take it that's how your dad got rich?"
+        show WG happy-2
+        WG "Haha! An oversimplification to be sure, but it certainly has been an important part of his success."
+    else:
+        show WG sly
+        WG "When gambling you're just blindly trusting the future of your finances to the roll of the dice."
+        MC "I take it that's not how your dad got rich?"
+        show WG happy-2
+        WG "Haha! Certainly not!"
+    show WG neutral
+    WG "My father doesn't gamble, at least not seriously. Casinos roll out the red carpet for him in an attempt to schmooze him, hoping he'll drop a few million yen in a single hand."
+    show WG sly
+    WG "But he just ends up costing them more in free comps of fine scotch compared to the scrap he actually does put down."
+    MC "Sounds like he has a lot of restraint."
+    show WG haughty
+    WG "Knowing how to hold on to money requires discipline, and it's just as important as knowing how to make it when it comes to wealth." 
+    show WG neutral
+    MC "I feel like I should know this, but admittedly I don't... Just what exactly does your dad do? I mean I vaguely know from the news here and there he's some kind of industrialist."
+    WG "Normally I'd find that rather surprising, but I've come to accept most people our age haven't exactly been keeping abreast of business and finance news throughout their lives."
+    WG "Your initial impression isn't wrong. He's most known for his core business companies in the heavy industry sector that produce key industrial components: cogs, bearings, fasteners, construction materials and the like."
+    menu:
+        "Oh, sounds interesting...":
+            MC "Oh, sounds interesting..."
+            $setAffection("WG", -1)
+            show WG bored
+            WG "I can't tell if you're being facetious or not, but if you were, you need to work on your delivery, and if not, it would seem you're easily fascinated."
+            show WG neutral
+            MC "Eh, you're right. I just didn't want to be rude. It is admittedly kinda drab compared to something like computer chips, or pharmaceuticals, or a big restaurant chain."
+            show WG haughty
+            WG "Ah, but therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
+            show WG neutral
+            WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
+            MC "That does sound like a lot. No wonder he's so rich."
+            show WG happy
+            WG "That's not even half of it. The bulk of his wealth is from his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+            show WG haughty
+            WG "Father is known to be a particularly savvy investor in global financial circles. When he makes a move, markets take notice."
+            show WG neutral-2
+            MC "I see. So that's why he's {i}really{/i} rich."
+            WG "There's a bit more to it than that, but I think you get the picture."
+        "Honestly, that sounds kinda boring.":
+            MC "Honestly, that sounds kinda boring."
+            $setAffection("WG", 1)
+            show WG happy
+            WG "You're not incorrect in that assessment. If anything, that's the intent."
+            MC "What do you mean? Like it's supposed to be boring?"
+            WG "In a way of sorts. {w}It's one of the core tenants of Father's approach to business, \"Find the boring work that everyone needs done but no one wants to do.\" That's what he provides."
+            WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
+            MC "Pretty impressive. When you put it that way, no wonder he's so rich."
+            show WG happy-2
+            WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+            MC "So he's some kind of venture capitalist too?"
+            show WG pondering
+            WG "Not quite. More of a value-based investor, and one of the best in the business I might add. If you had 20 million yen to invest now, you could retire by the time you're 30 if you averaged the returns he gets."
+            show WG happy
+            MC "Damn! So that's why he's {i}really{/i} rich."
+            WG "I wouldn't discount the contribution of his indomitable work ethic either, but hopefully that satisfies your curiosity."
+        "That's surprising." if routelock == "WG":
+            MC "Huh. That's surprising."
+            show WG surprised-2
+            WG "Really? How so?"
+            MC "I mean, it's obvious you get your interest in business from your Father and are looking to fill his shoes someday, so I guess I thought he'd be more involved in real estate or the hospitality industry, or something like that."
+            MC "I just don't really see you taking much interest in making cogs or construction materials."
+            $setAffection("WG", 2)
+            show WG happy-2
+            WG "Quite an astute observation, Dear. Admitently, per my own taste, Father doesn't exactly operate in the most exciting of industries." 
+            WG "But therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
+            MC "So the stuff nobody ever thinks about that they use all the time?"
+            show WG sly
+            WG "Exactly. Most people would never give it a passing thought, but I guarantee 80%% of all goods bought in Japan used something his company made to build it or ship it."
+            MC "Makes sense how someone could get rich doing that."
+            show WG happy-2
+            WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+            MC "So not just big business, but big {i}businesses{/i}, along with investments."
+            show WG happy
+            WG "Correct. As great as a businessman he is, he's arguably an even better investor. Most hedge funds wish they could reach the average returns of his portfolio. So when he makes a move, markets take notice."
+            MC "I guess that explains why he's {i}super{/i} rich."
+            show WG haughty
+            WG "He's done alright for himself you could say. But it wasn't a matter of luck. I have no doubt if he lost it all tomorrow he'd be back to where he is today in less than ten years."
+    show WG neutral
+    MC "Well, now I know. Better late than never I guess."
+    if routelock == "WG":
+        show WG happy
+        MC "Think you could use a study buddy for the homework?"
+        WG "I was gonna track you down eventually, but you made things quite a bit easier for me by happening to show up now."
+        WG "I could use your eye on problem number six here..."
+        $setSkill("Academics", 1)
+        $setFlag("MC021_StudyPartner")
+        scene black with fade
+        pause .5
+        scene Library with fade
+        "It was nice having a study buddy to go over the homework with{w}— even nicer to have a snuggle buddy as soft as Alice to cuddle up at the same time."
+        show WG aroused with dissolve
+        WG "Mmm, I'm starting to think you might be more of a distraction than a study partner, Dear."
+        "Admittently I was sneaking a few more squeezes of her soft rolls than I probably ought to have, but something told me she didn't mind it as much as her words might have suggested." 
+    else:
+        MCT "Looks like she's already gotten a pretty good start on the assignment. Might be a good idea to see if she could use a study partner. Plus it couldn't hurt to get to know one of my homeroom classmates a bit better."
+    menu:
+        "Ask her if she wants to study together":
+            MC "Do you want to study together? Two heads are better than one after all."
+            if routelock == "GTS":
+                show WG neutral-2
+                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today, but I think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
+                MC "Sure, no problem. Later."
+                hide WG with dissolve
+                MCT "Hmm, that seemed rather curt. {w}I wonder if it cause..."
+                MCT "Nah, that seems rather petty. I'm probably reading too much into it." 
+                MCT "Oh well, guess I better get studying."
+            elif isEventCleared("WGB001") or getFlag("WG_disabled"):
+                show WG neutral-2
+                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today, but I think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
+                MC "Sure, no problem. Later."
+                hide WG with dissolve
+                MCT "Hmm, that seemed rather curt. {w}I'm wondering if she's still a bit miffed about how things didn't work out between us last semester." 
+                MCT "Oh well, guess I better get studying."
+            else:
+                show WG pondering
+                WG "Sure. I appreciate the offer. I could use your eye on problem number six here..."
+                scene black with fade
+                pause .5
+                scene Library with fade
+                $setSkill("Academics", 1)
+                $setFlag("MC021_StudyPartner")
+                "It was nice having a study buddy to go over the homework with. Sure I knew Alice, but I didn't know her that well outside of class. I knew she had a reputation for being aloof and stuck-up, but I didn't find that to be the case studying with her."
+                $setAffection("WG", 1)
+                "Something told me this wouldn't be the last of our study sessions this semester."
+        "Study by yourself":
+            MC "Well, nice talking with you Alice. I'm gonna take a crack at this thing and see how far I get before I start falling asleep."
+            WG "Good luck with that. I wasn't planning on spending much more time on it today, but I think it's wise that you're starting early on it." 
+            WG "I'll see you in class tomorrow, Keisuke."
+            MC "Sounds good. Later."
+            hide WG with dissolve
+            pause 1
+            "After digging into the assignment, by the time I got to problem six, I realized I could have really used a study buddy to tackle this beast."
+            MCT "{i}Uggh{/i}. It's gonna be a long night..."
+    jump daymenu
+
 label MC023:
     play sound Bell
     pause 1
