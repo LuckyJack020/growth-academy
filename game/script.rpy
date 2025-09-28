@@ -136,6 +136,7 @@ init python:
     showQuickMenu = False
     charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM', 'WGB']
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
+    lockroutelist = ['FMG030', 'AE020', 'PRG026', 'GTS035', 'WG027', 'WG027A', 'BE030']
     locationlist = {
         #name of place: (map used, x/y pixel position)
         'arcade': ("town", (500,700)),
@@ -150,6 +151,7 @@ init python:
         'classroom': ("school", (750,280)),
         'classroom_2': ("school", (750,280)),
         'classroom_3': ("school", (750,280)),
+        'classroom_4': ("school", (750,280)),
         'clocktower': ("school", (625,555)),
         'cookingclassroom': ("school", (745,290)),
         'dock': ("school", (500,700)),
@@ -521,6 +523,13 @@ init python:
             if t[0] in timeflags and not t[1] in timeflags:
                 return False
         return True
+
+    #Compare clearedEvents for any entries that match a scene just before an optional event would be prevented from appearing.
+    def checkExpire(preobsflags):
+        for o in preobsflags:
+            if o in timeflags:
+                return True
+        return False
 
     #Other misc functions
     def setAffection(girl, val):
@@ -1360,6 +1369,10 @@ screen daymenu():
                         else:
                             for g in eventlibrary[c]["girls"]:
                                 add Crop((0, 0, 184, 40), "Graphics/ui/icons/charicon-%s.webp" % g)
+                    if c in lockroutelist:
+                        add Crop((0, 0, 40, 40), "Graphics/ui/map/lock.webp")
+                    if eventlibrary[c]["type"] == EventTypeEnum.OPTIONAL and len(eventlibrary[c]["preobsflags"]) != 0 and checkExpire(eventlibrary[c]["preobsflags"]):
+                        add Crop((0, 0, 40, 40), "Graphics/ui/map/expire.webp")
                         #FIXME this looks awful and breaks tables, needs harder adjustments
                         #fixed:
                         #    frame:
@@ -1398,13 +1411,19 @@ screen daymenu():
     if highlitevent != "":
         frame:
             xalign 0.9
-            yalign 0.9
+            yalign 0.825
             xanchor 1.0
             background Solid(Color((0, 0, 0, 100)))
             if debugenabled:
                 text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
             else:
                 text(eventlibrary[highlitevent]["name"])
+        frame:
+            xalign 0.9
+            yalign 0.9
+            xanchor 1.0
+            background Solid(Color((0, 0, 0, 100)))
+            text(eventlibrary[highlitevent]["display"])
         frame:
             xalign 0.9
             yalign 0.975
@@ -1414,6 +1433,20 @@ screen daymenu():
                 text("Core Event")
             else:
                 text("Optional Event")
+        if highlitevent in lockroutelist:
+            frame:
+                xalign 0.9
+                yalign 0.75
+                xanchor 1.0
+                background Solid(Color((0, 0, 0, 100)))
+                text("This scene will lock your route.")
+        if eventlibrary[highlitevent]["type"] == EventTypeEnum.OPTIONAL and len(eventlibrary[highlitevent]["preobsflags"]) != 0 and checkExpire(eventlibrary[highlitevent]["preobsflags"]):
+            frame:
+                xalign 0.9
+                yalign 0.75
+                xanchor 1.0
+                background Solid(Color((0, 0, 0, 100)))
+                text("This scene will expire soon.")
 
     #debug menu toggle (if debug is enabled)
     if debugenabled and highlitevent == "":

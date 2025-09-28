@@ -1,1 +1,13 @@
-{"android_build": "Release", "renamed_all": true, "renamed_steam": true, "force_recompile": false, "build_update": false, "packages": ["win", "mac", "linux"], "add_from": true, "tutorial": false}
+{
+  "android_build": "Release",
+  "renamed_all": true,
+  "renamed_steam": true,
+  "force_recompile": false,
+  "build_update": false,
+  "packages": [
+    "win",
+    "mac"
+  ],
+  "add_from": true,
+  "tutorial": false
+}

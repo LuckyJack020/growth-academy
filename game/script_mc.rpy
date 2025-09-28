@@ -16167,7 +16167,7 @@ label MC021:
         MC "Fancy meeting you here."
         show WG sly
         WG "I'm starting to think you follow me around all the time."
-        MC "Not {i}all{/i} time. {w}Just every chance I get."
+        MC "Not {i}all{/i} the time. {w}Just every chance I get."
         show WG coy
         WG "Is that why you recommended I take this elective?"
         MC "No, of course not... {w}It was only half the reason."
@@ -16225,7 +16225,7 @@ label MC021:
     "Karaku-san stuck up his hand, but Hageshi-sensei didn't bother to turn his attention away from the board."
     Hageshi "And before anyone asks, we won't be covering card counting in this course."
     Student1 "{i}Lame{/i}..."
-    Hageshi "Let's start with the first example. Let's say we want to roll a six on a di. What are the odds of that outcome?"
+    Hageshi "Let's start with the first example. Let's say we want to roll a six on a die. What are the odds of that outcome?"
     Genji "One out of six."
     Hageshi "Correct. Easy enough, right?"
     Hageshi "Now, how likely is it that I roll another six?"
@@ -16238,15 +16238,17 @@ label MC021:
     Hageshi "It may {i}seem{/i} that way, but probability isn't based on gut feelings."
     show Hageshi neutral at altMove(0.5, 0.75)
     show WG pondering at Position(xcenter=0.25, yalign=1.0) with dissolve
-    WG "It's still a one out of six chance. The previous di roll doesn't affect the second."
+    WG "It's still a one out of six chance. The previous die roll doesn't affect the second."
     Hageshi "Exactly. No matter how many sixes are rolled in a row, the odds of rolling a six again remain the same. This is why it is called an \"independent outcome\"."
     scene black with dissolve
     pause .5
-    scene Classroom4 with fade
+    scene Classroom4
+    show Hageshi neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
     "In true Hageshi-sensei fashion, he hadn't pumped the brakes at all when diving into the thick of the material on the first day, despite starting with some relatively simple examples."
     Student2 "Sooo... what? There a point to this \"exact binomial test\"?"
     Hageshi "That's a fair question. At its most basic level it's a comparison of the expected outcome to the actual outcome, but it's a really good statistical test for detecting cheating."
-    show WG sly with dissolve
+    show WG sly behind Hageshi with dissolve
     WG "Or if someone is cooking the books."
     Hageshi "Also true."
     show WG pondering 
@@ -16360,7 +16362,7 @@ label MC021:
     if routelock == "BE":
         MC "That kind of name calling is uncalled for. {w}I'm more of a boobman than a butthead in case you hadn't noticed."
         show BE unique
-        BE "More like boob-brain since that's about all I think you think of sometimes Kei."
+        BE "More like boob-brain since that's all you seem to think about, Kei."
         MC "Not {i}all{/i} the time, {w}just {i}most{/i} of the time."
         show BE embarrassed
         BE "Pshh! Figures."
@@ -16587,15 +16589,15 @@ label MC021:
             MC "Do you want to study together? Two heads are better than one after all."
             if routelock == "GTS":
                 show WG neutral-2
-                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today, but I think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
+                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
                 MC "Sure, no problem. Later."
                 hide WG with dissolve
-                MCT "Hmm, that seemed rather curt. {w}I wonder if it cause..."
+                MCT "Hmm, that seemed rather curt. {w}I wonder if it's cause..."
                 MCT "Nah, that seems rather petty. I'm probably reading too much into it." 
                 MCT "Oh well, guess I better get studying."
             elif isEventCleared("WGB001") or getFlag("WG_disabled"):
                 show WG neutral-2
-                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today, but I think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
+                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
                 MC "Sure, no problem. Later."
                 hide WG with dissolve
                 MCT "Hmm, that seemed rather curt. {w}I'm wondering if she's still a bit miffed about how things didn't work out between us last semester." 
@@ -16613,8 +16615,7 @@ label MC021:
                 "Something told me this wouldn't be the last of our study sessions this semester."
         "Study by yourself":
             MC "Well, nice talking with you Alice. I'm gonna take a crack at this thing and see how far I get before I start falling asleep."
-            WG "Good luck with that. I wasn't planning on spending much more time on it today, but I think it's wise that you're starting early on it." 
-            WG "I'll see you in class tomorrow, Keisuke."
+            WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke." 
             MC "Sounds good. Later."
             hide WG with dissolve
             pause 1

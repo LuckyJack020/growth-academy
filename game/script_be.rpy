@@ -196,23 +196,23 @@ label BE002:
     "The sun shined down on the courtyard as I walked back from class, stretching my arms above my head."
     MCT "Man, this place is gonna take a bit of getting used to."
     "With a sigh, I began to round the corner, heading out towards the dorm to get some needed rest after another day of classes."
+    show BE neutral:
+        xpos 1.0 xanchor 0.5 yalign 1.0
+        linear 0.5 xpos 0.5
     UNKNOWN "W-Woah!"
     MC "Eh? GAH-!"
     "I didn't even have any time to react as, suddenly, I felt the full force of boobage being slammed into me at mach-tiddy."
     "I flew back a foot or so before using my hand to stabilize myself on the wall. I looked up to see who it was... even though I had more or less already known."
     MC "Ach... h-hey, Honoka."
-    show BE neutral:
-        xpos 1.0 xanchor 0.5 yalign 1.0
-        linear 0.5 xpos 0.5
     pause 0.5
-    show BE sad
+    show BE embarrassed
     show dummy with vpunch
     BE "Oof! Sorry about that, slippery ground!"
     MC "Ah, heh, it's no problem, Honoka. Hard to stop when you get moving, huh?"
-    show BE neutral
+    show BE happy
     BE "Yep, not to mention I slept great last night so I've got tons of energy. I'm just so excited y'know? New school, new opportunities!"
     MC "Sounds almost like you should have had a tough time getting to sleep then. I had trouble myself, my roommate is... pretty weird. Plus, I'm a bit nervous about this whole thing."
-    show BE surprised
+    show BE neutral
     BE "Eh? Your roommate? Do you guys not get along or something?"
     MC "Well, no, it's not that. It's more that he's..."
     if getFlag("RM_govagent"):
@@ -978,6 +978,7 @@ label BE007_after:
     jump daymenu
 
 label BE008:
+    $setTimeFlag("size2exp")
     $setProgress("BE", "BE009")
     scene Dorm Interior with fade
     play music HigherEdu
@@ -2570,6 +2571,7 @@ label BE018_c2_2:
     jump daymenu
 
 label BE019:
+    $setTimeFlag("xx20exp")
     $setProgress("BE", "BE020")
     scene Cafeteria with fade
     play music Schoolday
@@ -5879,6 +5881,7 @@ label BE030_neutral:
     jump daymenu
 
 label BE031:
+    $setTimeFlag("size3exp")
     $setProgress("BE", "BE032")
     scene Dorm Hallway with fade
     play music HigherEdu
@@ -10566,6 +10569,7 @@ label BE048_afterChoice1:
     jump daymenu
 
 label BE049:
+    $setTimeFlag("size4exp")
     $setProgress("BE", "BE050")
     $setBEOutfit(OutfitEnum.CASUAL)
     scene Dorm Exterior with fade

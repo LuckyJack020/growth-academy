@@ -788,6 +788,7 @@ label FMG007:
     jump daymenu
 
 label FMG008:
+    $setTimeFlag("size2exp")
     $setProgress("FMG", "FMG009")
     $setFMGOutfit(OutfitEnum.GYM)
     $setMCOutfit(OutfitEnum.GYM)
@@ -978,6 +979,7 @@ label FMG008:
 
 label FMG009:
     $setTimeFlag("size2")
+    $setTimeFlag("FMG009clear")
     $setProgress("FMG", "FMG010")
     scene Dorm Exterior with fade
     play music Rain
@@ -2558,6 +2560,7 @@ label FMG018_c1_3:
     jump daymenu
 
 label FMG019:
+    $setTimeFlag("xx20exp")
     $setProgress("FMG", "FMG020")
     scene Dorm Hallway with fade
     play music Rain
@@ -4842,8 +4845,9 @@ label FMG028:
     jump daymenu
 
 label FMG029:
+    $setTimeFlag("size3exp")
     $setProgress("FMG", "FMG030")
-    scene Dorm Interior
+    scene Dorm Interior with fade
     play music Schoolday
     "Just another morning where I didn't feel like doing much of anything. Somehow, I managed to roll out of bed once again, get dressed, and make my way to the cafeteria."
     scene Cafeteria with fade
@@ -8893,6 +8897,7 @@ label FMG048:
     jump daymenu
 
 label FMG049:
+    $setTimeFlag("size4exp")
     $setProgress("FMG", "FMG050")
     $setTime(TimeEnum.EVE)
     play music FMG
@@ -13532,6 +13537,7 @@ label FMG068:
     jump daymenu
 
 label FMG069:
+    $setTimeFlag("size5exp")
     $setProgress("FMG", "FMG070")
     $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene Okinawa Bedroom with fade
@@ -16615,6 +16621,7 @@ label FMG078:
     jump daymenu
 
 label FMG079:
+    $setTimeFlag("xx80exp")
     $setProgress("FMG", "FMG080")
     play music Peaceful
     scene Dorm FMG with fade
@@ -16829,6 +16836,7 @@ label FMG079:
     jump daymenu
 
 label FMG080:
+    $setFlag("XX80")
     $setProgress("FMG", "FMG081")
     scene Gym with fade
     play music FMG
@@ -19660,6 +19668,7 @@ label FMG088:
     jump daymenu
 
 label FMG089:
+    $setTimeFlag("size6exp")
     $setProgress("FMG", "FMG090")
     $setTime(TimeEnum.EVE)
     $setFMGOutfit(OutfitEnum.GYM)
@@ -24347,7 +24356,6 @@ label FMGD002:
     Natsuko "I haven't stepped on anyone... yet. I'm sure I would've known by now if I stepped on an ant."
     MC "Nat, these are {i}people{/i} we're talking about here. Human beings. What the hell do you mean ants?!"
     Natsuko "Ants. They are beneath me. Well, everyone always was. But now... at this size. They are nothing to me. They are small and weak, pathetic."
-    hide cg FMGD002_dream1 with dissolve
     "Natsuko placed me down on the edge of the building, gently releasing me from her enormous hand."
     Natsuko "Besides, we aren't here for them. Look at this body, Hotsure-san. I must be the biggest person on the island now."
     "Natsuko backed up, and I was finally able to see just how huge she was... not only did she dwarf Naomi, but her muscles were incredible. She might as well have been a goddess in the flesh."
@@ -24371,10 +24379,11 @@ label FMGD002:
     Natsuko "And I know just the little guy to help me..."
     MC "Sorry, Nat, I don't think I'll be able to help you with that problem... at all."
     $ persistent.unlock_cgFMGD002_dream6 = True
-    show cg FMGD002_dream6 with dissolve
+    hide cg FMGD002_dream1
+    show cg FMGD002_dream6
+    with dissolve
     Natsuko "Oh, believe me, you can, Hotsure-san. And you will..."
     Natsuko "Don't worry, I won't leave you in there long..." 
-    hide cg FMGD002_dream6 with dissolve
     "As Nat's palm began to eclipse my world, I saw it flinch at some booming tremor that made the concrete beneath me shiver and fracture. Then came another, like the drumbeats of the apocalypse. We both zeroed in on its source instantly."
     MC "Holy shit."
     "Her shadow eclipsed the sun. A monumental wall of tanned muscle, every ripple in 4k display, emerged out of the haze of distance in agonizing and captivating slow motion."
@@ -24384,11 +24393,12 @@ label FMGD002:
     "Her presence was unmistakable, and her aura powerful enough to bring any man to his knees. She was a titan; a massive behemoth beyond anything I could have imagined before. Each breast was larger than a house, each pec the size of a semi-truck."
     "If I had looked up any further at her, I would imagine clouds swirling about her head as she smirked with an imperious gaze."
     $ persistent.unlock_cgFMGD002_dream5 = True
-    show cg FMGD002_dream5 with dissolve
+    hide cg FMGD002_dream6
+    show cg FMGD002_dream5
+    with dissolve
     "With a gentle movement, Akira tapped on Natsuko's shoulder with one of her gargantuan fingers attached to a hand large enough to completely eclipse both of us; more compressing Natsuko's shoulder than anything."
     FMG "Looking pretty tiny, aren't we, Nat? {w}Hm, and it looks like you have something that belongs to me too."
     Natsuko "T-There's no way..."
-    hide cg FMGD002_dream5 with dissolve
     "Natsuko turned, but she couldn't see the face of the one who alerted her, only a pair of gargantuan breasts blocking her view."
     FMG "Hahaha, guess you aren't the biggest anymore!"
     "Akira's chest bounced hypnotically in rhythm with her amused laughter."
@@ -24424,7 +24434,9 @@ label FMGD002:
     MC "Uh... so... how did you get this big?"
     FMG "Hang on, I can't hear you. I'll pick you up."
     $ persistent.unlock_cgFMGD002_dream2 = True
-    show cg FMGD002_dream2 with dissolve
+    hide cg FMGD002_dream5
+    show cg FMGD002_dream2
+    with dissolve
     "Her massive hand swept down towards me, gently scooping me up and bringing me up towards her gigantic breasts."
     FMG "Aw, you look so cute! You're smaller than my nipple, hahaha."
     hide cg FMGD002_dream2
@@ -24438,15 +24450,15 @@ label FMGD002:
     MC "Alright, pal, take a step back for a second and realize how stupid that sounds."
     FMG "HA, it's true. These arms, this chest, my quads. I'm built like a god. Hell, I'm probably even bigger than one at this point! Nothing can stop me."
     FMG "You should consider yourself lucky! Think about it, no one else has a girlfriend like {i}this{/i}."
-    hide cg FMGD002_dream2 with dissolve
     "The giantess laughed to herself, her booming voice shaking the nearby buildings, and her chest bouncing in rhythm with her laughter once more."
     FMG "Mmmm, all this power..."
     $ persistent.unlock_cgFMGD002_dream4 = True
-    show cg FMGD002_dream4 with dissolve
+    hide cg FMGD002_dream2
+    show cg FMGD002_dream4
+    with dissolve
     MC "Listen, Akira, this isn't safe! You and Nat can seriously hurt someone. We have to find some way to get you guys back to normal!"
     FMG "Normal? Hell no, this is the greatest thing ever! I can do whatever I want with anything and anyone."
     FMG "If anything, I have to get even bigger! Why stop now?"
-    hide cg FMGD002_dream4 with dissolve
     MC "Are you crazy?!?!? How many people do you think you've hurt??? The Akira I know would be freaking out if she knew she even scratched a person."
     FMG "Pfff, I haven't hurt anyone. They all run away, screaming for whatever reason. I've been watching where I'm stepping."
     "As we continued our argument, Akira continued to trample buildings with ease whenever she stepped on them or her shoulders simply brushed against them. She was a force of nature."
@@ -24485,6 +24497,7 @@ label FMGD002:
     MC "No, we have to fix all this."
     FMG "Ugh, whatever, I'll do it myself. Get over here."
     MC "I'll bite your hand! Don't touch me!"
+    hide cg FMGD002_dream4 with dissolve
     "Her hand consumed the light around me plunging me into total darkness."
     FMG "I'm already getting tingly thinking about all the good work you're going to do."
     FMG "Make me nice and big, Kei! I want my head in the clouds."

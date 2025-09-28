@@ -938,6 +938,7 @@ label GTS007:
     jump daymenu
 
 label GTS008:
+    $setTimeFlag("size2exp")
     $setProgress("GTS", "GTS009")
     if not getFlag("VisitedRoof"):
         $setFlag("VisitedRoof")
@@ -2930,6 +2931,7 @@ label GTS018_c2:
     jump daymenu
 
 label GTS019:
+    $setTimeFlag("xx20exp")
     $setProgress("GTS", "GTS020")
     scene School Planter with fade
     "A gentle humming floated through the air as I stared up towards the clouds. There was a faint swishing noise a foot or two away from me as I laid in the shadow cast by Naomi."
@@ -6179,6 +6181,7 @@ label GTS028T_c1_after:
     jump daymenu
 
 label GTS029:
+    $setTimeFlag("size3exp")
     $setProgress("GTS", "GTS030")
     scene Cafeteria with fade
     play music HigherEdu
@@ -11346,6 +11349,7 @@ label GTS048:
     jump daymenu
 
 label GTS049:
+    $setTimeFlag("size4exp")
     $setProgress("GTS", "GTS050")
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Dorm Interior with fade

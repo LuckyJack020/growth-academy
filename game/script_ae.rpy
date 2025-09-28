@@ -998,6 +998,7 @@ label AE007_after:
     jump daymenu
 
 label AE008:
+    $setTimeFlag("size2exp")
     $setProgress("AE", "AE009")
     scene Office
     show AE neutral
@@ -3172,6 +3173,7 @@ label AE018:
     jump daymenu
 
 label AE019:
+    $setTimeFlag("xx20exp")
     $setProgress("AE", "AE020")
     scene Hallway with fade
     play music Peaceful
@@ -3594,7 +3596,6 @@ label AE020_c1_2:
     jump daymenu
 
 label AE021:
-    $setTimeFlag("XX20")
     $setProgress("AE", "AE022")
     scene Classroom with fade
     "When I walked into class today, Shiori-san was the first in the room."
@@ -5872,6 +5873,7 @@ label AE028_c1_after:
     jump daymenu
 
 label AE029:
+    $setTimeFlag("size3exp")
     $setProgress("AE", "AE030")
     scene Dorm Hallway with fade
     play music Peaceful
@@ -10771,6 +10773,7 @@ label AE048:
     jump daymenu
 
 label AE049:
+    $setTimeFlag("size4exp")
     $setProgress("AE", "AE050")
     $setTime(TimeEnum.EVE)
     $setMCOutfit(OutfitEnum.CASUAL)
@@ -16215,6 +16218,7 @@ label AE068_c1_after:
     jump daymenu
 
 label AE069:
+    $setTimeFlag("size5exp")
     $setProgress("AE", "AE070")
     scene Classroom
     play music Schoolday
@@ -18395,6 +18399,7 @@ label AE078:
     jump daymenu
 
 label AE079:
+    $setTimeFlag("xx80exp")
     $setProgress("AE", "AE080")
     scene Dorm Interior with fade
     $setMCOutfit(OutfitEnum.UNDERWEAR)
@@ -20435,6 +20440,7 @@ label AE088:
     jump daymenu
 
 label AE089:
+    $setTimeFlag("size6exp")
     $setProgress("AE", "AE090")
     scene Dorm AE with fade
     play music Rain
@@ -26932,6 +26938,7 @@ label AE007b_c1_after:
     jump daymenu
 
 label AE008b:
+    $setTimeFlag("size2exp")
     $setProgress("AE", "AE009b")
     scene Dorm Interior with fade
     play music Schoolday

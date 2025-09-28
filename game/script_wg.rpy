@@ -909,6 +909,7 @@ label WG006_afterchoice:
     jump daymenu
 
 label WG007:
+    $setTimeFlag("size2exp")
     $setProgress("WG", "WG008")
     scene Cafeteria with fade
     play music Schoolday
@@ -3335,9 +3336,9 @@ label WG017_c1_after:
     MC "Well, the most popular titles are..."
     $setVar("WG017_gamesplayed", 0)
     menu:
-        "Roller Coaster Empire" if not getFlag("WG017_rollercoaster"):
+        "Roller Coaster Empire":
             jump WG017_c2_1
-        "Rail Barons" if not getFlag("WG017_railroad"):
+        "Rail Barons":
             jump WG017_c2_2
 
 label WG017_c2_menu:
@@ -3789,6 +3790,7 @@ label WG018_theater:
                 jump daymenu
 
 label WG019:
+    $setTimeFlag("xx20exp")
     $setProgress("WG", "WG020")
     scene Dorm Interior with fade
     play music Schoolday
@@ -5645,6 +5647,7 @@ label WG027A:
     jump daymenu
 
 label WG028:
+    $setTimeFlag("size3exp")
     $setProgress("WG", "WG029")
     scene Dorm Interior with fade
     play music MC
@@ -9412,6 +9415,7 @@ label WG041_AfterFood:
     jump daymenu
 
 label WG042:
+    $setTimeFlag("WG042clear")
     $setProgress("WG", "WG043")
     $setTime(TimeEnum.NIGHT)
     $setWGOutfit(OutfitEnum.CASUAL2)
@@ -9824,6 +9828,7 @@ label WG042_AfterFood:
     jump daymenu
 
 label WG043:
+    $setTimeFlag("WG043clear")
     $setProgress("WG", "WG044")
     scene Dorm Interior with fade
     play music Peaceful
@@ -10570,6 +10575,7 @@ label WG044_c2_2:
     jump daymenu
 
 label WG045:
+    $setTimeFlag("WG045clear")
     $setProgress("WG", "WG046")
     play music Schoolday
     scene Classroom
@@ -13492,6 +13498,7 @@ label WG051_c2:
     jump daymenu
 
 label WG052:
+    $setTimeFlag("size4exp")
     $setProgress("WG", "WG053")
     scene Summer Guest Bedroom with fade
     $setMCOutfit(OutfitEnum.CASUAL)
@@ -20305,6 +20312,7 @@ label WG067:
     jump daymenu
 
 label WG068:
+    $setTimeFlag("WG068clear")
     $setProgress("WG", "WG069")
     $setTime(TimeEnum.NIGHTLIGHTS)
     play music Sunset
@@ -21459,6 +21467,7 @@ label WG071:
     jump daymenu
 
 label WG072:
+    $setTimeFlag("size5exp")
     $setFlag("XX72")
     $setProgress("WG", "WG073")
     $setWGOutfit(OutfitEnum.ALTERNATE)
@@ -24459,6 +24468,7 @@ label WG078:
     jump daymenu
 
 label WG079:
+    $setTimeFlag("xx80exp")
     $setProgress("WG", "WG080")
     scene Cooking Classroom with fade
     play music Peaceful
@@ -24947,6 +24957,7 @@ label WG079:
         jump daymenu
 
 label WG080:
+    $setFlag("XX80")
     $setProgress("WG", "WG081")
     play music Schoolday
     scene Classroom
@@ -28642,6 +28653,7 @@ label WG087:
     jump daymenu
 
 label WG088:
+    $setTimeFlag("WG088clear")
     $setProgress("WG", "WG089")
     scene Hallway with fade
     play music DayByDay
@@ -30229,6 +30241,7 @@ label WG091:
     jump daymenu
 
 label WG092:
+    $setTimeFlag("size6exp")
     $setProgress("WG", "WG093")
     $setWGOutfit(OutfitEnum.DRESS)
     $setTime(TimeEnum.EVE)
@@ -34080,6 +34093,7 @@ label WG100:
     jump daymenu
 
 label WG101:
+    $setTimeFlag("WG101clear")
     $setProgress("WG", "WG102")
     $setWGOutfit(OutfitEnum.CASUAL)
     $setOkishoOutfit(OutfitEnum.CASUAL)
@@ -35901,6 +35915,7 @@ label WGB002:
     jump daymenu
 
 label WGB003:
+    $setTimeFlag("xx20exp")
     $setProgress("WGB", "WGB004")
     scene Dorm Interior
     play music DormLife
@@ -36333,7 +36348,7 @@ label WGB005:
     MC "So that's how you knew where to go?"
     Okisho "She seems to know her way around the island. So I asked her if there were any \"must see\" spots. Apparently this is the best view in all the island and it just so happens to not be that far from campus."
     MC "This island does seem like its own little world in some ways, especially with these kinds of places tucked away in little pockets."
-    Okisho "I guess that's true. I suppose there's some perks to getting sent of to exile on this rock on the far side of the country."
+    Okisho "I guess that's true. I suppose there's some perks to getting sent off to exile on this rock on the far side of the country."
     MC "Maybe that was part of the plan? At least we got something nice to look at while we have to sort out the stuff that's happening to us."
     Okisho "Ha! Sounds like a leper colony when you put it that way."
     MC "Hehe, maybe..."
@@ -36418,7 +36433,7 @@ label WGB005:
     MCT "YES! SAY YES YOU IDIOT!"
     MC "Uhh, umm... yeah. S-Sure... Uh, if that's okay."
     Okisho "Go for it. I mean, not like anyone else is around to see it, so why not? Besides, you filled it up, I suppose you've earned it."
-    "I crawled over next to her, as she reclined back, fully accepting my advance and looking like stuffed turkey in the process."
+    "I crawled over next to her, as she reclined back, fully accepting my advance and looking like a stuffed turkey in the process."
     "I reached out with my hand, placing my full palm on the peak of her bloated out rounded belly. {w}It was squishy, but only for a couple of centimeters before I could feel the taught pressure of her stomach pushing back."
     "I moved my palm up, new rolls forming as loose flab bunched up and then yielded flat again causing it to jiggle as it rolled over the surface." 
     "Noticing the effect, I gave my palm a quick little shake, resulting in a quake of jiggling flab coursing across the surface of her midsection."

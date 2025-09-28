@@ -1414,6 +1414,7 @@ label PRG007_c1_after:
         jump daymenu
 
 label PRG008:
+    $setTimeFlag("size2exp")
     $setProgress("PRG", "PRG009")
     scene Dorm Exterior with fade
     play music Peaceful
@@ -5344,6 +5345,7 @@ label PRG018_c1_after:
     jump daymenu
 
 label PRG019:
+    $setTimeFlag("xx20exp")
     $setProgress("PRG", "PRG020")
     scene black with fade
     pause 2
@@ -11938,6 +11940,7 @@ label PRG029_aftermenu:
     jump daymenu
 
 label PRG029B:
+    $setTimeFlag("size3exp")
     $setProgress("PRG", "PRG030")
     scene Dorm Hallway with fade
     play music Sunset
@@ -24705,6 +24708,7 @@ label PRG043B:
     jump daymenu
 
 label PRG044:
+    $setTimeFlag("size4exp")
     $setProgress("PRG", "PRG045")
     $setTime(TimeEnum.NIGHT)
     $setMCOutfit(OutfitEnum.UNDERWEAR)
@@ -25208,6 +25212,7 @@ label PRG044:
 
 label PRG045:
     $setProgress("PRG", "PRG046")
+    $setTimeFlag("size4")
     $setSize(4)
     scene Dorm Exterior with fade
     $setMCOutfit(OutfitEnum.CASUAL2)
@@ -44715,6 +44720,7 @@ label PRG062B:
     jump daymenu
 
 label PRG063:
+    $setTimeFlag("size5exp")
     $setProgress("PRG", "PRG064")
     play music Schoolday fadein 2.0
     scene HallwayStairs with fade
