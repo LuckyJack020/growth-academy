@@ -2134,6 +2134,7 @@ label WG001M:
     jump daymenu
 
 label WG012:
+    $setTimeFlag("WG012clear")
     $setFlag("XX12")
     $setProgress("WG", "WG015")
     scene Classroom with fade
@@ -24018,6 +24019,7 @@ label WG077_Beef:
         jump daymenu
 
 label WG078:
+    $setTimeFlag("WG078clear")
     $setProgress("WG", "WG079")
     play music Peaceful
     scene Hallway
