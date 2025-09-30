@@ -44964,7 +44964,7 @@ label PRG063:
     PRG "I'm gonna kick some... {w}ass."
     MC "I'm telling."
     PRG "Huh?!"
-    PRG "I'm telling. You swore."
+    MC "I'm telling. You swore."
     PRG "You-"
     show PRG excited
     PRG "You are the biggest butt!"
@@ -45012,6 +45012,8 @@ label PRG063:
     MCT "... Yeah, that's right. Geez."
     "I imagined a huge pile of rice sitting in a room, overflowing like a tidal wave."
     "I went onto the next question, rubbing my eyes."
+    $setTime(TimeEnum.EVE)
+    show dummy with dissolve
     "It wasn't super late. Only about 17:30. But, I'd been staring at paper and screen for nearly three hours by then."
     "I sat back in my chair, sighing."
     "I would have done anything to be in the kitchen with Aida instead. Tasting taiyaki and ice cream instead of writing notes on bugs."

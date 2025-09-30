@@ -1474,7 +1474,7 @@ label GTS010:
     AE "And furthermore, you should {i}always{/i} store your personal effects in the same place. Ignorance does not excuse the effects of your conduct on others."
     MC "Yes, Matsumoto-san. I'll... I'll stick close to the walls until I dry off."
     show AE neutral
-    AE "That is an acceptable accommodation..., {i}provided{/i} you are careful not to get water on any posted signage."
+    AE "That is an acceptable accommodation...{i}provided{/i} you are careful not to get water on any posted signage."
     MC "I'll be careful."
     AE "Very good. See you in class."
     show AE neutral at Transform(xzoom=-1)

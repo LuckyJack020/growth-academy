@@ -16507,65 +16507,104 @@ label MC021:
     MC "I feel like I should know this, but admittedly I don't... Just what exactly does your dad do? I mean I vaguely know from the news here and there he's some kind of industrialist."
     WG "Normally I'd find that rather surprising, but I've come to accept most people our age haven't exactly been keeping abreast of business and finance news throughout their lives."
     WG "Your initial impression isn't wrong. He's most known for his core business companies in the heavy industry sector that produce key industrial components: cogs, bearings, fasteners, construction materials and the like."
-    menu:
-        "Oh, sounds interesting...":
-            MC "Oh, sounds interesting..."
-            $setAffection("WG", -1)
-            show WG bored
-            WG "I can't tell if you're being facetious or not, but if you were, you need to work on your delivery, and if not, it would seem you're easily fascinated."
-            show WG neutral
-            MC "Eh, you're right. I just didn't want to be rude. It is admittedly kinda drab compared to something like computer chips, or pharmaceuticals, or a big restaurant chain."
-            show WG haughty
-            WG "Ah, but therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
-            show WG neutral
-            WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
-            MC "That does sound like a lot. No wonder he's so rich."
-            show WG happy
-            WG "That's not even half of it. The bulk of his wealth is from his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
-            show WG haughty
-            WG "Father is known to be a particularly savvy investor in global financial circles. When he makes a move, markets take notice."
-            show WG neutral-2
-            MC "I see. So that's why he's {i}really{/i} rich."
-            WG "There's a bit more to it than that, but I think you get the picture."
-        "Honestly, that sounds kinda boring.":
-            MC "Honestly, that sounds kinda boring."
-            $setAffection("WG", 1)
-            show WG happy
-            WG "You're not incorrect in that assessment. If anything, that's the intent."
-            MC "What do you mean? Like it's supposed to be boring?"
-            WG "In a way of sorts. {w}It's one of the core tenants of Father's approach to business, \"Find the boring work that everyone needs done but no one wants to do.\" That's what he provides."
-            WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
-            MC "Pretty impressive. When you put it that way, no wonder he's so rich."
-            show WG happy-2
-            WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
-            MC "So he's some kind of venture capitalist too?"
-            show WG pondering
-            WG "Not quite. More of a value-based investor, and one of the best in the business I might add. If you had 20 million yen to invest now, you could retire by the time you're 30 if you averaged the returns he gets."
-            show WG happy
-            MC "Damn! So that's why he's {i}really{/i} rich."
-            WG "I wouldn't discount the contribution of his indomitable work ethic either, but hopefully that satisfies your curiosity."
-        "That's surprising." if routelock == "WG":
-            MC "Huh. That's surprising."
-            show WG surprised-2
-            WG "Really? How so?"
-            MC "I mean, it's obvious you get your interest in business from your Father and are looking to fill his shoes someday, so I guess I thought he'd be more involved in real estate or the hospitality industry, or something like that."
-            MC "I just don't really see you taking much interest in making cogs or construction materials."
-            $setAffection("WG", 2)
-            show WG happy-2
-            WG "Quite an astute observation, Dear. Admitently, per my own taste, Father doesn't exactly operate in the most exciting of industries." 
-            WG "But therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
-            MC "So the stuff nobody ever thinks about that they use all the time?"
-            show WG sly
-            WG "Exactly. Most people would never give it a passing thought, but I guarantee 80%% of all goods bought in Japan used something his company made to build it or ship it."
-            MC "Makes sense how someone could get rich doing that."
-            show WG happy-2
-            WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
-            MC "So not just big business, but big {i}businesses{/i}, along with investments."
-            show WG happy
-            WG "Correct. As great as a businessman he is, he's arguably an even better investor. Most hedge funds wish they could reach the average returns of his portfolio. So when he makes a move, markets take notice."
-            MC "I guess that explains why he's {i}super{/i} rich."
-            show WG haughty
-            WG "He's done alright for himself you could say. But it wasn't a matter of luck. I have no doubt if he lost it all tomorrow he'd be back to where he is today in less than ten years."
+    if routelock == "WG":
+        menu:
+            "Oh, sounds interesting...":
+                MC "Oh, sounds interesting..."
+                $setAffection("WG", -1)
+                show WG bored
+                WG "I can't tell if you're being facetious or not, but if you were, you need to work on your delivery, and if not, it would seem you're easily fascinated."
+                show WG neutral
+                MC "Eh, you're right. I just didn't want to be rude. It is admittedly kinda drab compared to something like computer chips, or pharmaceuticals, or a big restaurant chain."
+                show WG haughty
+                WG "Ah, but therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
+                show WG neutral
+                WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
+                MC "That does sound like a lot. No wonder he's so rich."
+                show WG happy
+                WG "That's not even half of it. The bulk of his wealth is from his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+                show WG haughty
+                WG "Father is known to be a particularly savvy investor in global financial circles. When he makes a move, markets take notice."
+                show WG neutral-2
+                MC "I see. So that's why he's {i}really{/i} rich."
+                WG "There's a bit more to it than that, but I think you get the picture."
+            "Honestly, that sounds kinda boring.":
+                MC "Honestly, that sounds kinda boring."
+                $setAffection("WG", 1)
+                show WG happy
+                WG "You're not incorrect in that assessment. If anything, that's the intent."
+                MC "What do you mean? Like it's supposed to be boring?"
+                WG "In a way of sorts. {w}It's one of the core tenants of Father's approach to business, \"Find the boring work that everyone needs done but no one wants to do.\" That's what he provides."
+                WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
+                MC "Pretty impressive. When you put it that way, no wonder he's so rich."
+                show WG happy-2
+                WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+                MC "So he's some kind of venture capitalist too?"
+                show WG pondering
+                WG "Not quite. More of a value-based investor, and one of the best in the business I might add. If you had 20 million yen to invest now, you could retire by the time you're 30 if you averaged the returns he gets."
+                show WG happy
+                MC "Damn! So that's why he's {i}really{/i} rich."
+                WG "I wouldn't discount the contribution of his indomitable work ethic either, but hopefully that satisfies your curiosity."
+            "That's surprising.":
+                MC "Huh. That's surprising."
+                show WG surprised-2
+                WG "Really? How so?"
+                MC "I mean, it's obvious you get your interest in business from your Father and are looking to fill his shoes someday, so I guess I thought he'd be more involved in real estate or the hospitality industry, or something like that."
+                MC "I just don't really see you taking much interest in making cogs or construction materials."
+                $setAffection("WG", 2)
+                show WG happy-2
+                WG "Quite an astute observation, Dear. Admitently, per my own taste, Father doesn't exactly operate in the most exciting of industries." 
+                WG "But therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
+                MC "So the stuff nobody ever thinks about that they use all the time?"
+                show WG sly
+                WG "Exactly. Most people would never give it a passing thought, but I guarantee 80%% of all goods bought in Japan used something his company made to build it or ship it."
+                MC "Makes sense how someone could get rich doing that."
+                show WG happy-2
+                WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+                MC "So not just big business, but big {i}businesses{/i}, along with investments."
+                show WG happy
+                WG "Correct. As great as a businessman he is, he's arguably an even better investor. Most hedge funds wish they could reach the average returns of his portfolio. So when he makes a move, markets take notice."
+                MC "I guess that explains why he's {i}super{/i} rich."
+                show WG haughty
+                WG "He's done alright for himself you could say. But it wasn't a matter of luck. I have no doubt if he lost it all tomorrow he'd be back to where he is today in less than ten years."
+    else:
+        menu:
+            "Oh, sounds interesting...":
+                MC "Oh, sounds interesting..."
+                $setAffection("WG", -1)
+                show WG bored
+                WG "I can't tell if you're being facetious or not, but if you were, you need to work on your delivery, and if not, it would seem you're easily fascinated."
+                show WG neutral
+                MC "Eh, you're right. I just didn't want to be rude. It is admittedly kinda drab compared to something like computer chips, or pharmaceuticals, or a big restaurant chain."
+                show WG haughty
+                WG "Ah, but therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
+                show WG neutral
+                WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
+                MC "That does sound like a lot. No wonder he's so rich."
+                show WG happy
+                WG "That's not even half of it. The bulk of his wealth is from his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+                show WG haughty
+                WG "Father is known to be a particularly savvy investor in global financial circles. When he makes a move, markets take notice."
+                show WG neutral-2
+                MC "I see. So that's why he's {i}really{/i} rich."
+                WG "There's a bit more to it than that, but I think you get the picture."
+            "Honestly, that sounds kinda boring.":
+                MC "Honestly, that sounds kinda boring."
+                $setAffection("WG", 1)
+                show WG happy
+                WG "You're not incorrect in that assessment. If anything, that's the intent."
+                MC "What do you mean? Like it's supposed to be boring?"
+                WG "In a way of sorts. {w}It's one of the core tenants of Father's approach to business, \"Find the boring work that everyone needs done but no one wants to do.\" That's what he provides."
+                WG "You may have never bought a single product from one of his businesses in your life, but I guarantee you 80%% of everything you've ever bought in Japan used something his company made to build it or ship it."
+                MC "Pretty impressive. When you put it that way, no wonder he's so rich."
+                show WG happy-2
+                WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
+                MC "So he's some kind of venture capitalist too?"
+                show WG pondering
+                WG "Not quite. More of a value-based investor, and one of the best in the business I might add. If you had 20 million yen to invest now, you could retire by the time you're 30 if you averaged the returns he gets."
+                show WG happy
+                MC "Damn! So that's why he's {i}really{/i} rich."
+                WG "I wouldn't discount the contribution of his indomitable work ethic either, but hopefully that satisfies your curiosity."
     show WG neutral
     MC "Well, now I know. Better late than never I guess."
     if routelock == "WG":
