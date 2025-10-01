@@ -1440,7 +1440,7 @@ label MC002:
         if getFlag("global000_sitPRG"):
             MCT "... Guess she really wants to have all of her bases covered."
         hide PRG with dissolve
-    elif isEventCleared("MC001"):
+    else:
         pause .25
         "I glanced over toward the left side of the classroom."
         show RM neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
