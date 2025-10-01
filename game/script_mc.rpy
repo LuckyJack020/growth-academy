@@ -16623,43 +16623,43 @@ label MC021:
         "Admittently I was sneaking a few more squeezes of her soft rolls than I probably ought to have, but something told me she didn't mind it as much as her words might have suggested." 
     else:
         MCT "Looks like she's already gotten a pretty good start on the assignment. Might be a good idea to see if she could use a study partner. Plus it couldn't hurt to get to know one of my homeroom classmates a bit better."
-    menu:
-        "Ask her if she wants to study together":
-            MC "Do you want to study together? Two heads are better than one after all."
-            if routelock == "GTS":
-                show WG neutral-2
-                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
-                MC "Sure, no problem. Later."
+        menu:
+            "Ask her if she wants to study together":
+                MC "Do you want to study together? Two heads are better than one after all."
+                if routelock == "GTS":
+                    show WG neutral-2
+                    WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
+                    MC "Sure, no problem. Later."
+                    hide WG with dissolve
+                    MCT "Hmm, that seemed rather curt. {w}I wonder if it's cause..."
+                    MCT "Nah, that seems rather petty. I'm probably reading too much into it." 
+                    MCT "Oh well, guess I better get studying."
+                elif isEventCleared("WGB001") or getFlag("WG_disabled"):
+                    show WG neutral-2
+                    WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
+                    MC "Sure, no problem. Later."
+                    hide WG with dissolve
+                    MCT "Hmm, that seemed rather curt. {w}I'm wondering if she's still a bit miffed about how things didn't work out between us last semester." 
+                    MCT "Oh well, guess I better get studying."
+                else:
+                    show WG pondering
+                    WG "Sure. I appreciate the offer. I could use your eye on problem number six here..."
+                    scene black with fade
+                    pause .5
+                    scene Library with fade
+                    $setSkill("Academics", 1)
+                    $setFlag("MC021_StudyPartner")
+                    "It was nice having a study buddy to go over the homework with. Sure I knew Alice, but I didn't know her that well outside of class. I knew she had a reputation for being aloof and stuck-up, but I didn't find that to be the case studying with her."
+                    $setAffection("WG", 1)
+                    "Something told me this wouldn't be the last of our study sessions this semester."
+            "Study by yourself":
+                MC "Well, nice talking with you Alice. I'm gonna take a crack at this thing and see how far I get before I start falling asleep."
+                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke." 
+                MC "Sounds good. Later."
                 hide WG with dissolve
-                MCT "Hmm, that seemed rather curt. {w}I wonder if it's cause..."
-                MCT "Nah, that seems rather petty. I'm probably reading too much into it." 
-                MCT "Oh well, guess I better get studying."
-            elif isEventCleared("WGB001") or getFlag("WG_disabled"):
-                show WG neutral-2
-                WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke."
-                MC "Sure, no problem. Later."
-                hide WG with dissolve
-                MCT "Hmm, that seemed rather curt. {w}I'm wondering if she's still a bit miffed about how things didn't work out between us last semester." 
-                MCT "Oh well, guess I better get studying."
-            else:
-                show WG pondering
-                WG "Sure. I appreciate the offer. I could use your eye on problem number six here..."
-                scene black with fade
-                pause .5
-                scene Library with fade
-                $setSkill("Academics", 1)
-                $setFlag("MC021_StudyPartner")
-                "It was nice having a study buddy to go over the homework with. Sure I knew Alice, but I didn't know her that well outside of class. I knew she had a reputation for being aloof and stuck-up, but I didn't find that to be the case studying with her."
-                $setAffection("WG", 1)
-                "Something told me this wouldn't be the last of our study sessions this semester."
-        "Study by yourself":
-            MC "Well, nice talking with you Alice. I'm gonna take a crack at this thing and see how far I get before I start falling asleep."
-            WG "I appreciate the offer, but I wasn't planning on spending much more time on it today. Though I do think it's wise that you're starting early on it. I'll see you in class tomorrow, Keisuke." 
-            MC "Sounds good. Later."
-            hide WG with dissolve
-            pause 1
-            "After digging into the assignment, by the time I got to problem six, I realized I could have really used a study buddy to tackle this beast."
-            MCT "{i}Uggh{/i}. It's gonna be a long night..."
+                pause 1
+                "After digging into the assignment, by the time I got to problem six, I realized I could have really used a study buddy to tackle this beast."
+                MCT "{i}Uggh{/i}. It's gonna be a long night..."
     jump daymenu
 
 label MC023:

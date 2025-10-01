@@ -6955,7 +6955,7 @@ label PRG020_c2_2:
     MC "If you say so. Are you going to try talking to Alice and see if she'll take you back? I'll talk to her with you, if you want."
     show PRG sad-2
     "Aida looked off in the distance, a wistful haze coming over her."
-    show PRG .25
+    pause .25
     PRG "S-She seemed as though her mind was made up. I-I think for now, I'll... just do my homework, and go to classes, and practice, and try to rest a little more."
     PRG "I-I can always ask her later."
     MC "Okay... I-I'm sorry that I intruded on your personal matters."
