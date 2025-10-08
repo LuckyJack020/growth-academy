@@ -45320,12 +45320,15 @@ label PRG063:
     "I rubbed my neck."
     MCT "Get through the ultrasound, then the contest. One step at a time."
 
-    scene black with fade #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
+    #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
+    scene black with fade
     stop music fadeout 0.5
-    "The scene you just finished marks the current end of Aida's route."
-    "Since 2021, Aida's route is receiving an extensive rewrite treatment, rebooting the story in a more focused direction."
-    "Everything playable after this last scene was written before the rewrites. Because of this, you may notice some plot holes and inconsistencies, which are intended to be fixed with future builds."
-    "Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}The scene you just finished marks the current end of Aida's route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Since 2021, Aida's route is receiving an extensive rewrite treatment, rebooting the story in a more focused direction.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Everything playable after this last scene was written before the rewrites. Because of this, you may notice some plot holes and inconsistencies, which are intended to be fixed with future builds.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it.{/outlinecolor}{/size}"
     jump daymenu
 
 label PRG064:
@@ -46227,8 +46230,10 @@ label PRG065_fail:
     jump daymenu
 
 label PRG066:
-    "This marks the current end of Aida's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Aida's route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
 label PRG027Z:

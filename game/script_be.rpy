@@ -101,13 +101,13 @@ label BE001_c2:
     show cg BE001 with dissolve
     MCT "{i}Just one?!{/i}"
     MC "Oh, heh. Well, that could have just been some lucky puberty at work, you know?"
-    show BE happy
+    #show BE happy
     BE "Sure. Still, if it was my boobs, I wouldn't mind it."
     MC "You wouldn't? But you just said everyone at your old school mentioned them all the time."
-    show BE shrug
+    #show BE shrug
     BE "Eh, I didn't care about that too much. I doubt I'll care here either, to be honest. {w} Especially if everyone's got a chance of getting giant knockers, too."
     pause 0.25
-    show BE neutral
+    #show BE neutral
     BE "And besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used having to big boobs, anyway."
     hide cg
@@ -15941,8 +15941,10 @@ label BE060_c1_after:
     jump daymenu
 
 label BE061:
-    "This marks the current end of Honoka's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Honoka's route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
 label BEGTS001:

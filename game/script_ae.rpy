@@ -25990,8 +25990,10 @@ label AE100D:
     jump daymenu
 
 label AE101:
-    "This marks the end of Shiori's route."
-    "Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the end of Shiori's route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
 label AEBE004:

@@ -1326,11 +1326,12 @@ label splashscreen:
         YukiOutfit = OutfitEnum.DEFAULT
     scene black
     with Pause(1)
-    centered "The following represents a work in progress."
-    centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
-    centered "This is a work of fiction. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental."
-    centered "For more information, visit\n https://discord.gg/Hs6ggpp"
-    centered "Enjoy."
+    centered "{size=+3}The following represents a work in progress.{/size}"
+    centered "{size=+3}Art assets are placeholders or otherwise unfinished\n and all general content has yet to be finalized.{/size}"
+    centered "{size=+3}This is a work of fiction. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.{/size}"
+    centered "{size=+3}This game includes nudity and consensual sexual content; all characters who appear naked or engage in said sexual content are aged 18 or older.{/size}"
+    centered "{size=+3}For more information, visit\n https://discord.gg/Hs6ggpp{/size}"
+    centered "{size=+3}Enjoy.{/size}"
     play movie "Graphics/ui/intro.webm"
     pause 96
     return

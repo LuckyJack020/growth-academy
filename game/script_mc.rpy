@@ -19117,8 +19117,24 @@ label MC041:
     jump daymenu
 
 label MC042:
-    "This marks the current end of the Keisuke-centric scenes."
-    "More are planned for a later release. Until then, feel free to explore the main routes."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of the Keisuke-centric scenes.{/outlinecolor}{/size}"
+    if routelock == "FMG" or routelock == "WG":
+        if isEventCleared("MC001") and isEventCleared("MC002") and isEventCleared("MC003") and isEventCleared("MC004") and isEventCleared("MC005") and isEventCleared("MC006") and isEventCleared("MC008") and isEventCleared("MC009") and isEventCleared("MC010") and isEventCleared("MC011") and isEventCleared("MC012") and isEventCleared("MC013") and isEventCleared("MC014") and isEventCleared("MC021") and isEventCleared("MC023") and isEventCleared("MC024") and isEventCleared("MC032") and isEventCleared("MC033") and isEventCleared("MC041"):
+            centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 19 optional Keisuke's stories.{/outlinecolor}{/size}"
+        else:
+            centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 19 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
+    else:
+        if isEventCleared("MC001") and isEventCleared("MC002") and isEventCleared("MC003") and isEventCleared("MC004") and isEventCleared("MC005") and isEventCleared("MC006")  and isEventCleared("MC007") and isEventCleared("MC008") and isEventCleared("MC009") and isEventCleared("MC010") and isEventCleared("MC011") and isEventCleared("MC012") and isEventCleared("MC013") and isEventCleared("MC014") and isEventCleared("MC021") and isEventCleared("MC023") and isEventCleared("MC024") and isEventCleared("MC032") and isEventCleared("MC033") and isEventCleared("MC041"):
+            centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 20 optional Keisuke's stories.{/outlinecolor}{/size}"
+        else:
+            centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 20 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
+    if isEventCleared("RM006"):
+        centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 6 core scenes from Daichi's side route.{/outlinecolor}{/size}"
+    else:
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 6 core scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}More are planned for a later release. Until then, feel free to explore the main routes.{/outlinecolor}{/size}"
     jump daymenu
 
 label global005:

@@ -35626,8 +35626,14 @@ label WG103B:
     jump daymenu
 
 label WG104:
-    "This marks the end of Alice's route."
-    "Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the end of Alice's route.{/outlinecolor}{/size}"
+    if isEventCleared("WGGTS001") and isEventCleared("WGGTS002") and isEventCleared("WGGTS003") and isEventCleared("WGGTS004") and isEventCleared("WGGTS005") and isEventCleared("WGBE001")  and isEventCleared("WGBE002") and isEventCleared("WGBE003") and isEventCleared("WGBE004A") and isEventCleared("WGBE004B") and isEventCleared("WGBE005") and isEventCleared("WGAE001") and isEventCleared("WGFMG001") and isEventCleared("WGFMG002") and isEventCleared("WGFMG003") and isEventCleared("WGFMG004A") and isEventCleared("WGFMG004B") and isEventCleared("WGFMG005") and isEventCleared("FMGWG001") and isEventCleared("WG001M") and isEventCleared("WG002M") and isEventCleared("WG003M") and isEventCleared("WG004M") and isEventCleared("WG005M") and isEventCleared("WG009") and isEventCleared("WG011") and isEventCleared("WG013") and isEventCleared("WG014") and isEventCleared("WG017") and isEventCleared("WG018") and isEventCleared("WG021") and isEventCleared("WG023") and isEventCleared("WG032") and isEventCleared("WG058") and isEventCleared("WG065") and isEventCleared("WG083"):
+        centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 36 optional scenes from Alice's route.{/outlinecolor}{/size}"
+    else:
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 36 optional scenes from Alice's route, there are still some that are left.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
 label WGB001:
@@ -36468,6 +36474,14 @@ label WGB005:
     "Sitting here in the serene atmosphere of the mountain valley, listening to the beautiful sounds coming out of the harmonica, played by an even more beautiful girl... Something about this peaceful setting seemed out of sorts..."
     "Cause as nice and relaxing as today was, something about Okisho told me this was actually the start of one wild ride."
     jump daymenu
+
+label WGB006:
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Okisho's side route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
+    jump daymenu_noadvance
+
 
 label WGAE001:
     scene HallwayStairs with fade

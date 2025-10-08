@@ -14995,8 +14995,10 @@ label GTS055:
     jump daymenu
 
 label GTS056:
-    "This marks the current end of Naomi's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Naomi's route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
 label GTSFMG001:

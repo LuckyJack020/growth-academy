@@ -23897,8 +23897,14 @@ label FMG100:
     jump daymenu
 
 label FMG101:
-    "This marks the end of Akira's route."
-    "Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well."
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the end of Akira's route.{/outlinecolor}{/size}"
+    if isEventCleared("FMG006") and isEventCleared("FMG011") and isEventCleared("FMG012") and isEventCleared("FMG025") and isEventCleared("FMG078") and isEventCleared("FMGD001")  and isEventCleared("FMGD002") and isEventCleared("FMGGTS001") and isEventCleared("FMGGTS002") and isEventCleared("FMGWG001") and isEventCleared("FMGWG002") and isEventCleared("FMGWG003") and isEventCleared("FMGWG004") and isEventCleared("FMGWG006"):
+        centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 14 optional scenes from Akira's route.{/outlinecolor}{/size}"
+    else:
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 14 optional scenes from Alice's route, there are still some that are left.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
 label FMGD001:
