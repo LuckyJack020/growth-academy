@@ -6092,6 +6092,7 @@ label BE032:
     $setTimeFlag("size3")
     $setProgress("BE", "BE033")
     $setFlag("XX32")
+    $setBEOutfit(OutfitEnum.ALTERNATE)
     scene Classroom with fade
     "I didn't get to sleep right away the previous night. How could I? Even an hour after Honoka's boobjob, I felt flushed and excited. We didn't know what to do with ourselves."
     "Honoka took some time to clean up, as did I. Then we spent a bit more time together, watching television. It wasn't awkward, per se, but we kept looking back at each other the whole time."
@@ -6901,7 +6902,8 @@ label BE035B:
     "When Honoka and I checked out the softball club, joining was contingent on one thing. She wouldn't be put into the team right away. They'd already split into two teams early in the year and played matches against each other on a regular basis."
     "They didn't want to put new players in the running right off the bat. So the first few meetings would be learning the basics and seeing where she performed."
     "As seemed traditional by this point, I offered to go with her to the first meeting to check it out, and try it for myself."
-    #SFX: Whistle
+    play sound Whistle
+    #show Naoki neutral with dissolve
     Naoki "All right, everyone. Huddle up, huddle up."
     "The assembled members approached a young man with three whistles around his neck. We joined with the others."
     if isEventCleared("MC006"):
@@ -6912,6 +6914,7 @@ label BE035B:
     Naoki "Okay. Here's the deal. I've got a wicked headache today, so I don't want to hear any bellyaching because it's gonna drive me crazy. Our next match is scheduled in two days, so spend this time brushing up on your catching and throwing."
     Naoki "We've got three batting stations reserved. So if you see one is empty, just go for it with your partner. Try not to hog it. Collect your balls when you're done. We don't wanna leave a mess anywhere."
     Naoki "Any questions? Good. Get out there, have fun."
+    #hide Naoki with dissolve
     MC "Huh. Well, he was a bit rough around the edges, huh?"
     show BE neutral with dissolve
     BE "Eh. Headaches are a pain. Literally. What are ya gonna do about it?"
@@ -9457,6 +9460,9 @@ label BE046:
     scene Pool with fade
     "I decided to sit near the fence, so as to not interrupt the swim club practice in progress. By the time I got there, Honoka was in the circle of the rest of the swimmers going through their warm-up stretches."
     MCT "Huh...a lot of them seem to have pretty non-obtrusive growth factors."
+    if not getFlag("Meet_Naoki"):
+        $setFlag("Meet_Naoki")
+    #show Naoki neutral with dissolve
     Naoki "Alright, final set!"
     "As Naoki-sensei blew his whistle and barked some more orders at the swim team, they finally lined up at the starting point of the pool."
     show BE neutral with dissolve
@@ -9491,6 +9497,7 @@ label BE046:
     Naoki "Heh. I like that. Alright, Inoue. I want 200m out of you. Freestyle, Breaststroke, Backstroke, Butterfly. 50m of each. If you can't manage one of the strokes, finish off with the one most comfortable to you.  Let's get you in the pool."
     show BE happy
     BE "Yes, Sensei!"
+    #hide Naoki with dissolve
     "Honoka trotted off towards the poolside and before jumping in, she looked in my direction."
     "I gave Honoka a thumbs up, and she replied with a victory sign."
     "Honoka finally dove into the pool to begin practicing."
@@ -11586,6 +11593,7 @@ label BE050:
     $setProgress("BE", "BE051")
     $setTimeFlag("size4")
     $setMCOutfit(OutfitEnum.UNDERWEAR)
+    $setBEOutfit(OutfitEnum.ALTERNATE)
     MCT "Screw off, sun. I'm not ready to get up..."
     "My body was exhausted after last night. I was roused from my slumber by the sound of running water and a loud..."
     #play sound shower
@@ -13057,6 +13065,8 @@ label BE053:
     show BE surprised
     BE "Hnn~! C-careful! You brushed a peak!"
     MC "Is that what that was? I thought that was something else you had hidden in there. Lemme just... go back and check..."
+    $setBEOutfit(OutfitEnum.ALTERNATE)
+    show dummy with dissolve
     "Using my supporting arm, I rubbed back and forth across the front of Honoka's chest, her nipple swelling up in reaction."
     show BE embarrassed
     BE "Nnn! Y-you made your point! Get back to looking, please!"
@@ -13545,7 +13555,7 @@ label BE055:
     extend " of the first question. But by now, my neck was killing me. I put down my schoolwork and cracked my neck, breathing a sigh of relief."
     Naoki "You're going to give yourself neck strain at this rate. You may as well use the desk in the office."
     MC "Gah! Sorry Sa...Naoki-sensei. I didn't notice you were there."
-    #show Naoki neutral
+    #show Naoki neutral with dissolve
     Naoki "No problem at all. Though, two things. One, instead of cracking your neck, it's better to do stretches. Chin tucks are easy, just pull your head back like you're trying to give yourself a double chin while keeping your head level." 
     Naoki "Hold for five seconds, then relax, repeating as often as you like. You can also put your palms on your forehead, then try to push your head forward with your neck while pushing back with your hands."
     MC "Oh... I'll have to give those a try then, my neck gets stiff pretty frequently from, uh... all the studying I do."
@@ -13560,11 +13570,12 @@ label BE055:
     Naoki "I don't have a factor myself, but I've seen many students come and go, with just as many and varied factors." 
     Naoki "I try my best to give them tools and advice so they may continue to accommodate themselves, but it isn't easy. Everyone's experience of their factor is ultimately unique. It's part of the reason I'm so busy."
     pause 1
-    "Naoki-sensei took off his cap, smoothed back his hair, readjusted his tie and put it back on."
+    "Naoki-sensei took off his cap, smoothed back his hair, readjusted his hair tie and put it back on."
     Naoki "That brings me to the next thing. Contrary to what I mentioned earlier, I actually planned to use my office today. I'll be meeting with some of the students." 
     Naoki "Could I ask you to relocate yourself, either to the bleachers or perhaps the neighboring first aid room...?"
     MC "Ah, well, I would like to try and get some more work done. I'll take you up on the first aid room. Thank you, sensei."
     Naoki "Mhmm. And... stay alert, Hotsure-san."
+    #hide Naoki with dissolve
     "Naoki-sensei nodded as I bowed my head. As I stepped into the first aid room, I heard him blow one of his whistles. The sounds of splashing in the pool died down in response."
     scene First Aid Room with fade
     stop music fadeout 2.0
@@ -15197,6 +15208,7 @@ label BE060:
     $setProgress("BE", "BE061")
     play music DormLife
     scene Classroom with fade
+    $setBEOutfit(OutfitEnum.ALTERNATE)
     "It was late October. The days were getting shorter and the air outside was whipped by a dry breeze."
     show BE worried with dissolve
     "Over these past couple weeks, Honoka's demeanor had changed."
@@ -15371,6 +15383,7 @@ label BE060:
     MC "Ah. Pardon."
     show BE smug
     BE "C'mon, Kei-chan. It's your turn to lose some clothes."
+    $setMCOutfit(OutfitEnum.NUDE)
     "I unbuttoned my shirt and tossed it in our pile of clothes. As I did so, Honoka sat in the grass and yarrow and dropped to her back."
     show BE embarrassed-2
     BE "Ahhhhh. This yarrow is so soft. It feels AMAZING on the girls."

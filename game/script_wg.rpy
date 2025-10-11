@@ -18325,6 +18325,7 @@ label WG061D:
 
 label WG062:
     $setProgress("WG", "WG063")
+    $setBEOutfit(OutfitEnum.ALTERNATE)
     scene Dorm Exterior with fade
     play music DayByDay
     "Alice had invited me over to her room today for some afternoon tea."
@@ -18367,23 +18368,27 @@ label WG062:
     show BE wink
     "Normally I would find Honoka's humor quite amusing, even if it was at my expense, but in front of Alice— part of me wasn't really sure how I felt about that."
     "Regardless, Honoka wasn't going to let off the gas anytime soon, so I got the feeling I was in it for the long haul."
-    MC "Wait a minute, why are you here, Honoka? Don't you have some kind of club practice to get to? Like underwater basket weaving or something?"
+    MC "Wait a minute, why are you here, Honoka?"
+    MCT "Perhaps the more pressing question would be why she isn't wearing a bra, but I'm not gonna go there..."
+    MC "Don't you have some kind of club practice to get to? Like underwater basket weaving or something?"
     show BE seductive
     BE "Oof, okay. Fair play. Hitting me where it hurts."
     MCT "Uhg, I finally land a solid jab and then she hits me with {i}that{/i} look."
     MC "Aw come on, you know I didn't mean it like that."
     show BE happy
     BE "Nah, truth can just be the harshest mistress when it comes to scathing comments."
-    MCT "Wait a second, why am I made to feel guilty now? This woman is relentless."
-    show WG neutral
-    WG "To answer your question, I ran into Honoka after class and we got to discussing her need for a re-fit since her last order."
+    MCT "Wait a second, why am I made to feel guilty now? Let's not forget, this woman is relentless."
+    show WG neutral-2
+    WG "To answer your question, I ran into Honoka after class and we got to discussing her need for a re-fit since her last order... {w}and a rather urgent one at that."
     show BE unique
     BE "Yeah, Kei-chan, in case you hadn't noticed, I've recently been in need of a wardrobe \"upgrade\"."
-    MCT "Noticed? If I was blind I'd still be able to feel the gravitational pull from those planet sized orbs."
+    MCT "Noticed?  Even if I was blind I'd still be able to feel the gravitational pull from those planet sized orbs, especially since they seem to have sprung free from their cage.."
     WG "I invited her to stay to join us for tea after we took her measurements and got her order in."
     MCT "Oh, joy."
     show WG neutral-2
-    WG "It simply had been too long since her last visit. I wanted to hear about all these \"stories\" about you she mentioned last time."
+    WG "It simply had been too long since her last visit."
+    show WG coy 
+    extend " Besides, I wanted to hear about all these \"stories\" about you she mentioned last time."
     "I turned Honoka with a weary stare."
     show BE seductive
     extend " Shameless, no remorse was found behind those deceptively innocent eyes."
@@ -18469,17 +18474,19 @@ label WG062_C1_after:
     "So I felt some relief to finally see Alice return from the kitchen, knowing that I might at least catch a break."
     show WG neutral at Position(xpos=0.65, yalign=1.0) with dissolve
     "Alice came carrying a platter with the tea kettle and cups on it. Though she declined my offer to help earlier. I wished she hadn't."
-    "She practically had to carry the thing arms extended out in front of her just to avoid bumping it against her belly and so it could clear her boobs."
+    "She practically had to carry the thing arms extended out in front of her just to avoid bumping it against her belly, but also it could clear her boobs."
     "Though she took these things in stride and she was managing just fine, it was still apparent to see her reach was starting to run out of room as her body steadily piled on the weight this past year."
     "Alice placed the platter gently on her tea table in the center of her room, bending over to do so. If she stood up too close to the table, she would risk having her protruding belly knock the entire thing over."
     MCT "I wonder if she ever had a situation like that happen when nobody was around..."
     "As she poured each of us a cup, my attention was drawn to the elegant movements of her pudgy fingers, with her dimpled knuckles and wrists."
+    show WG haughty
     WG "This blend is specifically designed to be enjoyed at temperatures over 90 degrees. To let it cool would diminish the taste. Otherwise I would have had it already prepared before your arrival."
     MC "Sounds interesting, such specific directions. What kind of tea is it?"
     BE "It smells like green tea, is it a type of exotic matcha?"
     show WG neutral-2
     WG "Not quite, this delicacy is a rather strong herbal tea. The rare caffeinated holly leaf known as Guayusa makes a splendid morning tea."
     BE "Guayusa?"
+    show WG happy
     WG "{i}Ilex guayusa{/i}, to be precise. A species of tree that can be found in the Amazon."
     MC "Seems like a long way to go for some tea leaves. Somebody could probably get a similar tea at a farmers market."
     show WG haughty
@@ -18514,6 +18521,7 @@ label WG062_C1_after:
             BE "Really?"
             MC "Would you appreciate a gift bought with pocket change?"
             BE "A gift is still a gift! Even if it's cheap, it was still bought with someone else's cash."
+            show WG pondering
             WG "Perhaps, but there's a difference between hard earned cash someone worked for and an incidental expense. 100 yen doesn't really rise to the level of any appreciable effort."
             show BE angry
             BE "Eh, I'd still take it."
@@ -18521,27 +18529,32 @@ label WG062_C1_after:
         "What if the person didn't have that much money though?":
             MC "What if the person didn't have that much money though?"
             BE "Yeah, what if that's all someone could really afford? That could be a lot to somebody."
+            show WG pondering
             WG "Perhaps, I suppose. The relative cost to the giver does merit some consideration."
             WG "But if someone considers 100 yen to be an extraordinary expenditure doesn't that burden the recipient with the knowledge that the giver over-extended their means to procure it for them?"
             show BE worried
             BE "I hadn't really thought about it like that."
 
     show BE neutral
-    WG "I do believe in the idea of \"It's the thought that counts\", and if I were to be presented with such a gift, it would be painfully obvious the offering was an afterthought."
+    show WG haughty
+    WG "Don't get me wrong, I do believe in the idea of \"It's the thought that counts\". However, if I were to be presented with such a gift, it would be painfully obvious the offering was an afterthought."
     show WG neutral-2
-    WG "However, by no means does that mean a cheap gift is inherently bad. In fact it's quite the contrary. For example, a single pencil and paper would cost about the same."
+    WG "Now mind you, I don't mean to suggest an inexpensive gift is inherently bad. In fact it's quite the contrary.{w} For example, a single pencil and paper would cost about the same."
     show BE shrug
     BE "I'm not sure I follow."
+    show WG haughty
     WG "It's less so about the cost as it is the potential."
+    show WG pondering
     WG "Let's say, instead of spending that 100 yen on some cheap machine, they use it to make something. A simple sketch devoted to the gift recipient has far more value than a single drink."
-    show WG happy at Transform(xzoom=-1)
+    show WG sly at Transform(xzoom=-1)
     "Alice turned her gaze towards me with a wry smile. She was aware of my drawing talent, or at least capabilities, but I hadn't shown her any of my artwork yet."
     "I had no doubt her seemingly arbitrary example was actually a not-so-subtle hint for a gift idea."
     show BE neutral
     BE "Yeah, but you can't exactly drink a notebook sketch."
-    show WG neutral
+    show WG pondering
     WG "...Amusing. That is certainly one way to think about it."
     show BE angry
+    show WG neutral
     BE "Eh, I'd be happy with either gift to be honest. Though maybe I'd appreciate it more if I knew the person giving it didn't have much to begin with."
     show BE happy
     BE "Actually... Speaking of cheap vending machines, did Kei-chan ever tell you about the time he and I found a 2,000 yen bill?"
@@ -18554,11 +18567,14 @@ label WG062_C1_after:
     BE "I mean, if we did find a 2,000 bill now, the story would probably be the same, more or less."
     MC "Speak for yourself, I'm actually quite good at saving my money now."
     show BE wink
+    show WG sly
     BE "Yeah, but that's only because you don't have any money to save in the first place!"
     MC "Wha, Hey!-"
+    show WG pondering
     WG "I'm quite intrigued, what exactly did you do with this newfound wealth?"
     show BE happy
     BE "I like to think we did what any sensible kid would do-"
+    show WG happy
     MC "-We spent it all on sugary drinks and candy from vending machines."
     BE "Hehe, yep. Every last yen was used to buy junk food, and it was certainly an experience I'll never forget."
     MC "I wish I could forget it. The stomach aches I had that night still plague me like a curse."
@@ -18577,26 +18593,30 @@ label WG062_C1_after:
             extend " Ah well, I guess you did eat more than me after all. Hehe!"
             MC "Honoka, please, I beg you. Even just talking about that night is making my stomach queasy."
 
+    show WG neutral
     BE "Come to think of it, that was the last time I ever had a Miracle Bar."
     MC "That's probably a good thing, you were downright addicted to those."
     BE "No kidding, I'd probably be the size of Al...{w} a lot more than I am now, if that wasn't the case."
     MCT "I can't believe you seriously almost said that."
-    show WG surprised-2
+    show WG pondering
     WG "I beg your pardon, but what exactly is a \"Miracle bar\"?"
     show BE surprised
     BE "{i}Gasp{/i} Have you really never tried one?!"
     show WG neutral
     WG "I can't say that I have, but your enthusiasm is tempting me into trying one for myself."
     show BE surprised-2
+    show WG neutral-2
     BE "They're these super thick slabs of dark chocolate coated with pecans, right? And the middle is filled with this kind of red liquid caramel filling- I don't know what to call it."
     MC "It's a candy bar they stopped selling a while back. Turns out it contained like three times your recommended daily sugar intake. Thing was practically lethal."
     show BE neutral
     BE "Right, yeah... I forgot they stopped supplying them to Japan. Something about stupid health concerns."
     show BE happy
     extend " God I miss them, they were the best!"
+    show WG coy
     WG "Oh that shouldn't pose too much of a problem."
     show BE confused
     BE "Huh?"
+    show WG pondering
     WG "This candy, is it still sold elsewhere in the world?"
     MC "Last I remember, it was still going strong in the western parts of the world."
     show WG happy
@@ -18609,6 +18629,7 @@ label WG062_C1_after:
     "As much Alice tried to play this off as passé and not a big deal. The palpable smugness in her tone rang true."
     "Whether it was the flaunting of wealth, or the joy of presenting a gift to Honoka. Alice was positively beaming with pride."
     show BE happy
+    show WG neutral-2
     BE "Kei! C'mon, aren't you excited?"
     MC "Mostly nauseous, actually-"
     show BE angry
@@ -18618,9 +18639,10 @@ label WG062_C1_after:
     BE "Because you watched Vein Leeches all the way through! You've gotta have guts to power through that."
     MC "..."
     MC "Please never say that name again, the only reason I have a phobia of leeches is because of that whole experience."
+    show WG sly
     BE "You're the one who wanted to keep it playing. I tried to eject the disk, but {i}noooooo{/i}. You wanted to act all grown up, didn't you?"
     MC "Well I— we already rented it! I thought this was going to be the only chance we had to watch an R-rated movie."
-    show WG doubt
+    show WG pondering
     WG "Forgive me, but I feel as if I am missing some vital context for this argument."
     show BE wink
     BE "There really isn't a lot to give context to."
@@ -18631,22 +18653,31 @@ label WG062_C1_after:
     show WG surprised-2
     WG "They let you rent out those kinds of movies at such a young age?"
     BE "Nah, we switched the disks out with this kids show he used to watch."
-    show WG neutral-2
+    show WG sly
     MC "I just want to make this clear, switching the disks was entirely her idea. I was just the accomplice."
     show BE happy
     BE "Hehehe, I mean it did work didn't it?"
-    show WG happy
+    show WG pondering
     WG "Intriguing, I had almost hoped Keisuke was the one who came up with that plan. It is rather ingenious."
     BE "He wishes!"
+    MC "Yeah, wish we hadn't."
+    show WG happy
     "The two of us continued to regale Alice with more stories of getting into trouble together as kids."
     "Though Honoka's story selection and sense of humor was often at my expense, it still felt nice seeing my best friend and my girlfriend hitting it off so well with each other."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
     "It wasn't until late in the day that we realized how much time we'd spent prattling on."
-    show BE surprised
+    scene Dorm WG
+    show BE surprised at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with fade
     BE "Oh geez, I have to get going. I still have homework to get done."
     show BE angry
-    BE "Doesn't mean I'm going to do it tonight,"
+    extend " Doesn't mean I'm going to do it tonight,"
     show BE happy
     BE "but I should probably head out. Thanks for the tea, Alice. I've never had anything like it before."
+    show WG neutral-2
     WG "It was my pleasure. We'll have to do this again sometime."
     MC "Maybe next time I'll get to share my embarrassing stories about you."
     BE "Ha! Do your worst."
@@ -18720,12 +18751,12 @@ label WG062_C1_after:
         MC "How could I not? She certainly stood out in that regard... among other things. Honoka mentioned to me she is a tailor who made that get-up herself."
     show WG surprised-2
     WG "Really? Is that so?"
-    show WG neutral
+    show WG pondering
     WG "Hmm, though it certainly doesn't match my style, {w}it doesn't take a trained eye to recognize she has some talent with a needle and thread to make something like that out of a basic school uniform."
-    show WG neutral-2
     WG "The altered sleeves with the puffier shoulders gives her dress a sort of Victorian look, which I found interesting, but all the black just clashed with everything unnecessarily."
     "Alice seemed more intrigued than perplexed by Honoka's roommate, despite her not making a particularly good first impression."
     show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG neutral-2
     PRG "{i}Yaaawn{/i}"
     "Aida had emerged from her room, looking like she just got up from a long nap. With how far along she was, I'm sure she needed all the rest she could get."
     MCT "Wait a second."
@@ -18735,13 +18766,14 @@ label WG062_C1_after:
     MC "No, no, it's not that. You're fine, take all the rest you need. I was just curious, did you lie down before Honoka was here?"
     show PRG neutral
     PRG "Inoue-san was here?"
-    show WG neutral
+    show WG pondering
     WG "Interesting...{w} Aida, do you happen to know anyone who goes to this school named Kokutan?"
     PRG "Umm, no. That doesn't sound familiar."
     show PRG embarrassed
     extend " Should I?"
     WG "No, just curious is all. I wouldn't worry about it."
     show PRG neutral
+    show WG coy
     "Alice and I turned to look at each other with raised eyebrows, realizing our encounter with Kokutan left us with more questions than answers."
     jump daymenu
 
