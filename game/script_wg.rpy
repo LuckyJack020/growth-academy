@@ -34875,6 +34875,7 @@ label WG102:
 
 label WG103:
     $setProgress("WG", "WG104")
+    $setPRGOutfit(OutfitEnum.ALTERNATE)
     $setWGOutfit(OutfitEnum.FORMAL)
     $setMCOutfit(OutfitEnum.CASUAL)
     $setBEOutfit(OutfitEnum.CASUAL)
@@ -35061,6 +35062,7 @@ label WG103:
 
 label WG103G:
     $setProgress("WG", "WG104")
+    $setPRGOutfit(OutfitEnum.ALTERNATE)
     $setWGOutfit(OutfitEnum.FORMAL)
     $setMCOutfit(OutfitEnum.CASUAL)
     $setBEOutfit(OutfitEnum.CASUAL)

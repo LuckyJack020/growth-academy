@@ -11755,7 +11755,8 @@ label BE050:
     pause .5
     MC "S-sorry. I'm just...shocked."
     "Honoka turned to the wall where a full-length mirror was mounted."
-    BE "You're telling me. When I woke up, I wanted a bath, so I went to the bathroom and leaned over to start the bathwater. I didn't even fill up the tub enough to cover my toes before I knocked over a bottle of shampoo and conditioner that was already far out of reach!"
+    BE "You're telling me. When I woke up, I wanted a bath, so I went to the bathroom and leaned over to start the bathwater."
+    BE "I didn't even fill up the tub enough to cover my toes before I knocked over a bottle of shampoo and conditioner that was already far out of reach!"
     MC "That's what that sound was?? I thought someone threw a water balloon at the window or something."
     BE "No, that was me! Once I noticed, I tried to rush over here as fast as I could. I almost ripped my only fitting uniform shirt." 
     BE "I couldn't even put a bra on! The one I wore last night barely fit. There was no way I was getting in THAT again today..."

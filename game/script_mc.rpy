@@ -2032,6 +2032,8 @@ label MC004:
             elif getHighestAffection() == ("FMG"):
                 "..."
                 MCT "Mizutani-san totally has at least five different workout playlists saved to her phone. Guaranteed."
+            else:
+                MCT "Hm... not a bad cover."
             "I felt my thoughts drift away a bit as I turned up the volume a touch."
             "The idea of going out and having fun tonight was really nice, and did sound like the \"in\" thing to do... but my bed was comfy, and this music was-"
             scene Dorm Interior with vpunch
@@ -2220,6 +2222,9 @@ label MC004:
                 show PRG embarrassed
                 "Seeing me, she blushed a bright red and waved quickly with one hand, before continuing on her way."
                 hide PRG with dissolve
+            else:
+                "I looked out over the courtyard, as multiple groups of students made their way back toward the dorms, splitting here and there."
+                MCT "Peaceful out here..."
             Student "Ey."
             "I blinked and glanced toward the voice beside me."
             "On the balcony with the clothes hanging was who I assumed to be the clothes' owner. He was a fairly skinny, slightly shorter guy, with a bit of stubble."
@@ -12552,7 +12557,7 @@ label MC010_RM_afterchoice:
     MCT "That doesn't look right. What happened there? Maybe it's a good thing I'm watching this from far away."
     if getHighestAffection() == ("BE") and isEventCleared("BE025"):
         "{i}Bzzt{/i}...{i}Bzzt{/i}...{i}Bzzt{/i}..."
-        "My phone was going off. Daich for his part was still focused on the fireworks show in the distance."
+        "My phone was going off. Daichi for his part was still focused on the fireworks show in the distance."
         "I unlocked it to check my texts."
         BECell "<Just leaving my dorm. Headed to the bust stop>"
         MCT "Hehehe, that girl. I'll have to ask her if that typo was intentional or not... She'll probably deny it, but I know better."
@@ -12572,7 +12577,7 @@ label MC010_RM_afterchoice:
 
     elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
         "{i}Bzzt{/i}...{i}Bzzt{/i}...{i}Bzzt{/i}..."
-        "My phone was going off. Daich for his part was still focused on the fireworks show in the distance."
+        "My phone was going off. Daichi for his part was still focused on the fireworks show in the distance."
         "I unlocked it to check my texts."
         FMGCell "<I'm ready. Heading to the bus stop now.>"
         MCT "Shit! My dumbass forgot to text her I was back on campus."
