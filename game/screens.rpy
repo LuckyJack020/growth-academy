@@ -2115,3 +2115,14 @@ screen dialogue():
             input:
                 value VariableInputValue('save_name', returnable=True)
             textbutton _("Confirm") action Hide('dialogue')
+
+screen debugScene():
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 500 ysize 100
+
+        vbox:
+            label "Enter debug input:"
+            input:
+                value VariableInputValue('debuginput', returnable=True)
+            textbutton _("Confirm") action Jump("debugmenu")

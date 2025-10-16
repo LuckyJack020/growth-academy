@@ -1506,13 +1506,12 @@ screen debugmenu():
         style 'boutlined_text' xalign 0.5 yalign 0.025 textalign 0.5
     text "Playing scenes with different sizes enabled can lead to bugs.":
         style 'boutlined_text' xalign 0.5 yalign 0.068 textalign 0.5
-    $debuginput = ""
     grid 3 16:
         xalign 0.5
         yalign 0.5
 
         text "Input:" style 'boutlined_text'
-        input value VariableInputValue("debuginput") style 'boutlined_text'
+        textbutton _("[debuginput]") action Jump('debugtextinput') style 'boutlined_text'
         text ""
 
         textbutton "Start Event" action Jump("debugevent") style 'boutlined_text'
@@ -1677,6 +1676,7 @@ label daymenu:
         showQuickMenu = False
         activeevent = ""
         eventname = ""
+        debuginput = "Click to enter text"
         eventchoices = rollEvents()
         cleanupCostumes()
     stop sound
@@ -1696,6 +1696,11 @@ label debugmenu:
     scene black
     window hide None
     call screen debugmenu
+    window show None
+
+label debugtextinput:
+    window hide None
+    call screen debugScene
     window show None
 
 label debugvarlist:
