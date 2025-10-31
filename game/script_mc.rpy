@@ -17279,7 +17279,7 @@ label MC024:
     Secretary2 "Saemonsaburokouji-sensei."
     MC "I... don't know who that would be. I'm sorry."
     Secretary2 "The grade comes from Naoki Saemonsaburokouji. From your physical exercise elective."
-    if isEventCleared("MC006") or isEventCleared("BE046"):
+    if isEventCleared("MC006") or isEventCleared("BE046") or getFlag("Meet_Naoki"):
         MC "Ohh... right. My fault."
         MCT "Naoki-sensei. Of course."
     else: 
@@ -17317,7 +17317,12 @@ label MC024:
     MCT "I feel like I've hardly met him."
     if isEventCleared("MC006"):
         MCT "Well, okay. There was the handball game after Golden Week."
-    if routelock == "BE":
+    if routelock == "BE" and getFlag("BE_SOFTBALL"):
+        MCT "I... think that he coached the softball club."
+        "And he was coaching swimming club. Poor Honoka."
+        "I sighed and pulled out my phone. I looked at it and decided to hide it back to my pocket."
+        "Hmm, maybe I won't disturb her, she already has enough on her plate as it is."
+    elif routelock == "BE" and not getFlag("BE_SOFTBALL"):
         MCT "I... think that he might coach the softball club, though. I don't even know where I'm pulling that from, but I feel like I heard that somewhere..."
         "And he was coaching swimming club. Poor Honoka."
         "I sighed and pulled out my phone. I looked at it and decided to hide it back to my pocket."
@@ -17435,7 +17440,7 @@ label MC024:
         "I watched her for a moment, particularly as she wrenched the plates free of the machine and re-racked them, then headed out the door."
     else:
         MC "Sounds good. I'll see you later."
-        FMG "See ya, Kei-kun!"
+        FMG "See ya, Kei!"
     scene black with fade
     pause .5
 
@@ -17471,7 +17476,7 @@ label MC024:
     MC "Hey, Alice!"
     if routelock == "WG":
         WG "Good afternoon, Dear. I hadn't expected you to stop by the pool. Were you looking for me?"
-        "My gaze scanned over her as she pulled herself up from the pool, taking the steps at the corner of the pool. ."
+        "My gaze scanned over her as she pulled herself up from the pool, taking the steps at the corner of the pool."
         "The thoughts and frustrations of paperwork and the like momentarily left me as I found myself thinking more... fun thoughts."
         MC "I actually wandered in here by accident, but I suppose it wasn't a waste of time if I managed to run into you."
         show WG happy

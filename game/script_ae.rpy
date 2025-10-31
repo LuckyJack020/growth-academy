@@ -14581,7 +14581,8 @@ label AE061:
 
 label AE062:
     $setProgress("AE", "AE063")
-    scene Hill Road with fade
+    $setFlag("XX62")
+    scene Lake Road with fade
     play music HigherEdu
     "A gentle, brisk wind blew through the fields outside the school, causing my bangs to flutter as Shiori gingerly pet my head."
     show AE happy with dissolve

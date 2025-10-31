@@ -10223,6 +10223,7 @@ label GTS045:
     scene Dorm Hallway with fade
     play music Peaceful
     $setMCOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL2)
     if not getFlag("TM_VisitedDorm"):
         $setFlag("TM_VisitedDorm")
     "I listened to the ringing of clashing blades and cries of dying men from the other side of the door."

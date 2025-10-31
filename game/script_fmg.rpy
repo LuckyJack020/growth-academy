@@ -11569,6 +11569,7 @@ label FMG061:
 
 label FMG062:
     $setProgress("FMG", "FMG063")
+    $setFlag("XX62")
     $setFMGOutfit(OutfitEnum.GYM)
     $setNatsOutfit(OutfitEnum.GYM)
     $setMCOutfit(OutfitEnum.GYM)

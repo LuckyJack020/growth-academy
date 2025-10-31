@@ -18610,6 +18610,7 @@ label PRG037:
     $setProgress("PRG", "PRG038")
     show Dorm Interior with fade
     $setMCOutfit(OutfitEnum.CASUAL2)
+    $setTomoOutfit(OutfitEnum.CASUAL2)
     #$setRMOutfit(OutfitEnum.CASUAL)
     $setPRGOutfit(OutfitEnum.CASUAL)
     play music DayByDay
@@ -18670,7 +18671,6 @@ label PRG037:
     "I got up and walked over to the door, looking back at my bed."
     MCT "Eh, that's fine."
     "I took hold and opened the door."
-    $setTomoOutfit(OutfitEnum.CASUAL)
     scene Dorm Hallway
     show Tomoko neutral
     with fade
@@ -44006,6 +44006,7 @@ label PRG062:
 
 label PRG062B:
     $setProgress("PRG", "PRG063")
+    $setFlag("XX62")
     play music DormLife
     scene Cafeteria
     show PRG unsure

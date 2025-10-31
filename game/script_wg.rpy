@@ -18325,6 +18325,7 @@ label WG061D:
 
 label WG062:
     $setProgress("WG", "WG063")
+    $setFlag("XX62")
     $setBEOutfit(OutfitEnum.ALTERNATE)
     scene Dorm Exterior with fade
     play music DayByDay
