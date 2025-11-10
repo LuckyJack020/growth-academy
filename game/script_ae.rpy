@@ -15772,17 +15772,21 @@ label AE066:
         $setFlag("Meet_Hamikawa")
     Hamikawa "Oh, bite me! You think I give two shits?!"
     MC "Huh?"
-    #hamikawa angry
+    show Hamikawa angry at Position(xcenter=0.25, yalign=1.0) with dissolve
     "I craned my head forward and stood on my toes to get a better look at the scene unfolding before me in the distance."
     "Shiori was visibly shaken to the core when talking to this student, as though she'd seen a ghost. She had shrunken back, and was visibly struggling to find a response."
     "Meanwhile, the student she was talking with was absolutely livid. She was tall, admittedly fairly pretty, and I'd be willing to say she seemed to have a lot of class granted it's all third."
-    show AE sad with dissolve
+    show AE sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     play music Tension
     AE "Please, I know you're still-"
     Hamikawa "I {i}KNEW{/i} it was you, you rat!"
     "Panicked, I rushed over to meet the two girls as they continued in a vicious tirade; Shiori in particular on the receiving end."
     MC "Wooah, hey, hey, what's going on?"
-    Hamikawa "Haaa? Who's soy sauce face over here?"
+    if isEventCleared("MC021"):
+        MCT "Wait... is that?"
+        "I recognized her, I was taking a class with her, in fact."
+    else:
+        Hamikawa "Haaa? Who's soy sauce face over here?"
     show AE surprised
     AE "Keisuke?"
     Hamikawa "Back off, this doesn't concern you."
@@ -15797,10 +15801,10 @@ label AE066:
 
 label AE066_c1_1:
     MC "I'm sorry, is your growth your lips?"
-    #hamikawa neutral
+    show Hamikawa neutral
     Hamikawa "What? No. Does that hair covering your eyes blind you?"
     MC "Just asking cause you sure do have a fat mouth."
-    #hamikawa angry
+    show Hamikawa angry
     Hamikawa "Y-You mouthy little shit! How dare you?!"
     $setAffection("AE", -2)
     AE "Hey! There's no need to escalate this any further."
@@ -15816,7 +15820,7 @@ label AE066_c1_1:
 
 label AE066_c1_2:
     MC "Is everything alright?"
-    #hamikawa neutral
+    show Hamikawa neutral
     Hamikawa "Are you supposed to be her boyfriend or something?"
     MC "Yes, I am."
     "She seemed put off by the situation, but it seems like my straightforward and calm demeanor at least de-escalated the situation a bit."
@@ -15824,36 +15828,36 @@ label AE066_c1_2:
     Hamikawa "That obvious, huh?"
     show AE sad
     AE "Keisuke, please, I can handle this."
-    #hamikawa angry
+    show Hamikawa angry
     Hamikawa "And why should I listen to you? Eh?"
     if checkSkill("Art", ">", 10):
         MC "You don't have to listen to me at all, but it couldn't hurt to calm down and maybe explain what's going on."
-        #hamikawa surprised
+        show Hamikawa surprised
         Hamikawa "I..."
         MC "I don't think Shiori would be the type to take time out of her day to meet with you and apologize if she wasn't entirely sincere."
-        #hamikawa neutral
+        show Hamikawa neutral
         Hamikawa "...Hmph... I guess you... have a point."
     else:
         MC "W-Well I, um... I guess... you don't really need to, but... it might help to?"
         "I went in blindly trying to help, but unfortunately tense situations aren't really my strong point..."
-        #hamikawa angry
+        show Hamikawa angry
         Hamikawa "Is this some kind of trick?"
         AE "E-Erm... I suppose that... maybe we can talk this over another time?"
         MCT "Looks like Shiori's too frazzled to say what she wants to for now."
     "She seemed to calm down a bit, at least enough to stay quiet for a moment, though it was clear as day her anger hadn't subsided."
     MC "Is there a reason why you're so mad?"
-    #hamikawa angry
+    show Hamikawa angry
     Hamikawa "Shiori's talking about my family like she has any idea what my life has been like. I don't appreciate her just assumin' shit about me!"
     AE "I-I didn't mean to. I was just trying to say that I can empathize with..."
     MC "Wait, why did she bring up a family life? Do you know her?"
-    #hamikawa neutral
+    show Hamikawa neutral
     Hamikawa "Tch, you don't know? I'm..."
     stop music
-    #hamikawa sad
+    show Hamikawa sad
     Hamikawa "..."
     "She looked over to Shiori, who herself had given a pleading, sorrowful look to Hamikawa wordlessly before casting her eyes down to her feet; a sign of defeat I'd rarely seen in Shiori."
     "In response, Hamikawa merely pursed her lips before exhaling in frustration and shaking her head."
-    #ha neutral
+    show Hamikawa neutral
     Hamikawa "I'm... someone who has better things to do with my time. Standing here and arguing about nothing is pointless."
     MCT "Something was different about that. While it could just be seen as her being rash and dismissive... I feel like she just helped Shiori out for some reason."
     "She then turned and began to briskly walk away."
@@ -15868,15 +15872,15 @@ label AE066_c1_2:
         MC "But believe me when I say that Shiori has let that pain drive her to change for the better. Whatever problems the two of you may have had in the past... they should stay there."
         MCT "C'mon... please let me be right. I really don't want to look like a dumb asshole right now."
         "She was taken aback by this. She stood for a moment, surprised, and with her mouth open as she stared incredulously at me. However, I watched as the tension in her shoulders eased a bit. She closed her eyes and let out a deep sigh."
-        #ha sad
+        show Hamikawa sad
         Hamikawa "...Tshhh, man..."
         Hamikawa "You're a chill guy. Mouthy, but... you're alright. I ain't got no problem with you."
         "Sheer relief. It seems my blind leap of faith ended up paying off. Thankfully, it showed that Hamikawa-san is at least reasonable."
         MC "Well, thanks. And, please, try to keep what Shiori said-"
-        #ha neutral
+        show Hamikawa neutral
         Hamikawa "I don't think I'm at that point yet. If she wants to talk with me again some other time... then fine. But I want {i}her{/i} to talk to me woman to woman."
         MC "That's perfectly fine, just keep her own concerns in mind too."
-        #ha sad
+        show Hamikawa sad
         Hamikawa "I'll... try."
     jump AE066_c1_after
 
@@ -15889,10 +15893,11 @@ label AE066_c1_3:
     "I nodded before giving a quick glance at her talking partner, who simply raised an eyebrow at me."
     AE "Hamikawa-san, all I was trying to say-..."
     stop music
-    "I quietly stepped away and went elsewhere in the courtyard for a time, tyring to keep out of their business as best I could... though after enough worry and a bit of time, I found myself migrating back to the area in hope that things had calmed down."
+    "I quietly stepped away and went elsewhere in the courtyard for a time, trying to keep out of their business as best I could... though after enough worry and a bit of time, I found myself migrating back to the area in hope that things had calmed down."
     jump AE066_c1_after
 
 label AE066_c1_after:
+    hide Hamikawa with dissolve
     "I looked over to Shiori as Hamikawa walked away, her head slumped down in defeat and her hand tightly grasping her arm."
     MC "Shiori, what was that?"
     show AE sad
@@ -21686,10 +21691,11 @@ label AE095:
     "And I instantly knew."
     MCT "Aaah, shit."
     "Quickly rushing over to the other side of the room, I ran to see what was going on."
-    show AE angry-4 with vpunch
+    show AE angry-4 at Position(xcenter=0.75, yalign=1.0) with vpunch
     AE "Do I need to take this to the principal, huh?!"
     "I pushed past a few people in the crowd and watched as Shiori dressed down another student."
     "More specifically..."
+    show Hamikawa angry at Position(xcenter=0.25, yalign=1.0) with vpunch
     "The one she had an argument with earlier in the year."
     Hamikawa "What the fuck is your problem?! Do you actually give that much of a shit if I unbutton my shirt or not?"
     AE "Of course I do! It's inappropriate for-"
@@ -21718,24 +21724,29 @@ label AE095:
         Hamikawa "What? Thought I wouldn't find out? You're not the only one with ears in this place!"
         "Moving past the crowd, I ran forward and shouted."
         MC "STOP!"
+        show Hamikawa surprised
         Hamikawa "Eh?"
         MC "STOP THIS RIGHT NOW, GODDAMNIT!"
         show AE surprised
         AE "A-..."
         Hamikawa "Finally decided to nut up, huh fuckboy?"
         MC "I don't care about what your personal history with Shiori is, you don't just get to treat another human this way because of it."
+        show Hamikawa angry
         Hamikawa "And what makes you think you can just come in here and act all high and mighty, huh?"
         MC "Because it's my responsibility! Letting this continue goes against my principles!"
         Hamikawa "Holy shit, she has just been grooming you into her little pet, huh?"
+        show Hamikawa surprised
         MC "Say what you want, but I know when something is right, and when something is wrong, and this has fucking wrong written all over it!"
         MC "If you believe otherwise... then explain why."
         Hamikawa "..."
         Hamikawa "..."
+        show Hamikawa angry
         Hamikawa "..."
         Hamikawa "Waste of my fucking time."
         Hamikawa "Enjoy your slut."
         "Hamikawa, in a huff, pushed past Shiori as she walked away out of the crowd."
-        show AE glasses
+        show AE glasses at altMove(0.5, 0.5)
+        hide Hamikawa with dissolve
         AE "..."
         show AE sad
         AE "*Gch* hnn..."
@@ -21744,20 +21755,22 @@ label AE095:
         Hamikawa "What? Thought I wouldn't find out? You're not the only one with ears in this place!"
         Hamikawa "You think you're bad because your family is in deep with the 8-9-3?!"
         Hamikawa "Don't you fucking {i}dare{/i} talk down to me like that again! Because at the end of the day, you're just like your mom-!"
-        #show AE hatred
+        show AE hatred
         "With that, in an instant, Shiori's eyes shot open as she sank her teeth into her knuckle; blood splattering out from her reopened scar and onto her lips."
         "In what felt like an instant, she sprung forward and grabbed Hamikawa's collar; lifting her up and slamming her into the concrete wall."
         AE "SHUT YOUR FUCKIN' MOUTH, YOU BITCH!! YOU THINK YOU CAN JUST SAY THAT SHIT TO ME AND GET AWAY WITH IT, EH?!"
+        show Hamikawa surprised
         AE "WHY'RE YOU TALKIN' LIKE YOU KNOW SHIT?! DON'T YOU FUCKIN' RUN YOUR COCKSUCKER TO ME AGAIN!!!"
         MC "..."
         Hamikawa "..."
         AE "..."
-        #show AE afraid
+        show AE afraid
         AE "..."
         AE "A-Ahg..."
         "Blood dripped freely from her open wound as tears fell from her eyes."
         show AE angry at altMove(0.5, -0.5)
         "Almost in an instant, Shiori tried to rush away from the scene as best she could. Her feet making heavy footfalls on the tile as she ran."
+        hide Hamikawa with dissolve
     MC "Shiori!"
     "As I went to round the corner, I saw Shiori at the end of the hall, already headed to the dorms."
     MCT "S-Shit! How is she so fast?!"
@@ -22045,24 +22058,29 @@ label AE095G:
     "However, once we got everything squared away and said our thank yous and goodbyes..."
     "Shiori requested that we go meet one last person. Someone she saw in the courtyard earlier."
     scene Campus Center
-    show AE sad
+    show AE sad at Position(xcenter=0.75, yalign=1.0)
     with fade
     AE "..."
+    show Hamikawa surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
     Hamikawa "..."
     Hamikawa "Hmph. Is there a reason why you wanna talk to me or what?"
     AE "Yes. I wanted to talk to you to tell you something I should have a long time ago."
+    show Hamikawa angry
     Hamikawa "Haaa? Well, if you got something to say, say it!"
     AE "You were right."
+    show Hamikawa surprised
     Hamikawa "Eh?"
-    #Hamikawas eyes seemed to open wide in shock as Shiori looked down at her feet."
+    "Hamikawa's eyes seemed to open wide in shock as Shiori looked down at her feet."
     Hamikawa "I was... right?"
     AE "I... I'd fallen into the trap of moralism."
     Hamikawa "When... when the fuck did I say that?"
     AE "I was acting so... I was looking down on you. And I shouldn't've been."
     AE "I was talking to you like I was better than you because I thought that I behaved better but... that don't matter."
+    show Hamikawa sad
     Hamikawa "...."
     AE "I'd become so obsessed with not being like my mother... that I'd forgotten what makes me {i}me{/i}. And... and I'd gotten caught in the trap of thinking that I was somehow just or righteous..."
     AE "Hamikawa... you have every right to hold that against me-"
+    show Hamikawa neutral
     Hamikawa "Of course not, I'm a bigger woman than that."
     AE "Eh?"
     Hamikawa "Yeah, it's no big. Like, you get it. If you get it, I ain't finna be mad or nothin."
@@ -22077,12 +22095,14 @@ label AE095G:
     AE "You... you were in the same place as me. You just wanted people to think you were cool and... I hurt you for it."
     AE "Hamikawa-san... Nanako..."
     AE "I'm sorry."
+    show Hamikawa sad
     Hamikawa "I was a little dumbass. I thought by beating on you I could have at least gotten some respect."
     Hamikawa "Besides, I at least went to the docs, you just let that cut on your finger scar over. And you wouldn't have even needed to pay the medical bills if you hadn't snitched on yourself! Like, damn..."
     AE "I... I'm sorry."
     Hamikawa "..."
     Hamikawa "What were the chances that we would meet here of all places?"
     AE "I... I don't know but... can we... move past it?"
+    show Hamikawa neutral
     Hamikawa "We were kids. Let's put the kid shit behind us."
     AE "Eheh."
     "The two smiled at each other as they bowed. I wasn't sure exactly what all was going on between them but..."

@@ -1096,6 +1096,11 @@ image Jineko sad = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/sad.webp"
 image Jineko surprised = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/surprised.webp"
 image Jineko unique = "Graphics/minor/jineko/[globalsize]/[JinekoOutfit]/unique.webp"
 
+image Hamikawa neutral = "Graphics/minor/hamikawa/neutral.webp"
+image Hamikawa angry = "Graphics/minor/hamikawa/angry.webp"
+image Hamikawa sad = "Graphics//minor/hamikawa/sad.webp"
+image Hamikawa surprised = "Graphics/minor/hamikawa/surprised.webp"
+
 image Daitaro neutral = "Graphics/minor/parents/daitaro/neutral.webp"
 image Vivian neutral = "Graphics/minor/parents/vivian/neutral.webp"
 image Vivian happy = "Graphics/minor/parents/vivian/happy.webp"

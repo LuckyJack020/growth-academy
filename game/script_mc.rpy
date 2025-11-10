@@ -16099,13 +16099,16 @@ label MC021:
         Student1 "Yeah, yeah, whatever. Big talk, but all you got is big feet."
         "Sota Karaku, I didn't know the guy, but I hadn't heard good things either. Now I know why."
         MCT "What an asshole."
+    show Hamikawa neutral with dissolve
     "I watched as another student I hadn't seen before walk in and sat down behind me. I feel like I would have recognized her if I had because her long streaming pigtails and bleach blond hair made her stand out like a sore thumb."
     MC "Hello. I don't think we've met before. I'm Keisuke Hotsure."
+    show Hamikawa angry
     Student2 "Haa?? {w}Why are you trying to talk to me? Did I say you could?"
     MC "Uh, I guess not. I just assumed it was, you know... {i}normal{/i} to introduce yourself to people you'll be in class with."
     Student2 "Tsh."
     MC "Okay... cool, I guess."
     MCT "Weirdo. Can't say I expected to meet someone here with less social skills than Daichi, but this place has all sorts of surprises."
+    hide Hamikawa with dissolve
     "Not bothering to waste anymore time with pigtails behind me, I noticed another guy sat down to the left of me."
     if getFlag("Meet_Genji"):
         "Luckily this time it was a familiar face. At least, the part of it that I could see."
@@ -16251,8 +16254,10 @@ label MC021:
     show Hageshi neutral at Position(xcenter=0.25, yalign=1.0)
     with fade
     "In true Hageshi-sensei fashion, he hadn't pumped the brakes at all when diving into the thick of the material on the first day, despite starting with some relatively simple examples."
+    show Hamikawa angry with dissolve
     Student2 "Sooo... what? There a point to this \"exact binomial test\"?"
     Hageshi "That's a fair question. At its most basic level it's a comparison of the expected outcome to the actual outcome, but it's a really good statistical test for detecting cheating."
+    hide Hamikawa with dissolve
     show WG sly behind Hageshi with dissolve
     WG "Or if someone is cooking the books."
     Hageshi "Also true."
@@ -16261,8 +16266,10 @@ label MC021:
     Hageshi "But if I flipped a coin 50 times and 40 of those came out heads..."
     Genji "That'd be a little \"too\" lucky."
     Hageshi "I'd say so."
+    show Hamikawa surprised with dissolve
     Student2 "...Oh. {w}I mean... I think."
     Student2 "{size=-6}...This dudes pretty smart for a big lunk...{/size}"
+    hide Hamikawa with dissolve
     Hageshi "Always keep in mind, probability doesn't care about what you think {i}should{/i} happen, it can only tell you what's {i}likely{/i} to happen. The problems come when we believe what {i}will{/i} happen just because it {i}could{/i} happen."
     show WG happy
     MC "I didn't realize this was a philosophy elective, Hageshi-sensei."
@@ -16276,7 +16283,9 @@ label MC021:
     Hageshi "Looks like we're out of time. You'll find your first assignment in the syllabus."
     show WG surprised-2
     "Class" "Awwww!"
+    show Hamikawa surprised with dissolve
     Student2 "Excuse me?!"
+    hide Hamikawa with dissolve
     show WG doubt
     if getFlag("Meet_Sakie"):
         Sakie "Aw, come on, Hageshi-sensei. It's the first day of the semester!"
