@@ -877,7 +877,7 @@ image side FMGCell = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/side.we
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.webp")
 image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.webp")
 image side TomoCell = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/side.webp")
-image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/side.webp")
+image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/[globalsize]/[ChibukiOutfit]/side.webp")
 image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.webp")
 image side YukiCell = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/side.webp")
 
@@ -1003,7 +1003,7 @@ image Ryoko tongue = "Graphics/minor/ryoko/[RyokoOutfit]/unique.webp"
 image Ryoko confused = "Graphics/minor/ryoko/[RyokoOutfit]/confused.webp"
 image Ryoko embarrassed = "Graphics/minor/ryoko/[RyokoOutfit]/embarrassed.webp"
 
-image Chibuki neutral = "Graphics/minor/chibuki/neutral.webp"
+image Chibuki neutral = "Graphics/minor/chibuki/[globalsize]/[ChibukiOutfit]/neutral.webp"
 
 image Kanami neutral = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/neutral.webp"
 image Kanami angry = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/angry.webp"

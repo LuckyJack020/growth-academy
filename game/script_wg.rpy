@@ -8176,6 +8176,7 @@ label WG038:
         jump WG038_Part2
 
 label WG038_Part2:
+    $setChibukiOutfit(OutfitEnum.COSTUME)
     scene Town with fade
     play music BrightLights
     "I finally reached the arcade, feeling like I had run a marathon."

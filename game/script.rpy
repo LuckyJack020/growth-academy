@@ -19,6 +19,7 @@ default JinekoOutfit = OutfitEnum.DEFAULT
 default DaitaroOutfit = OutfitEnum.DEFAULT
 default TakamuraOutfit = OutfitEnum.DEFAULT
 default KanamiOutfit = OutfitEnum.DEFAULT
+default ChibukiOutfit = OutfitEnum.DEFAULT
 default NurseOutfit = OutfitEnum.DEFAULT
 default YukiOutfit = OutfitEnum.DEFAULT
 default AENsfw = False
@@ -911,7 +912,7 @@ init python:
         global AEPrevOutfit
         global AENsfwOutfit
         global AENsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.EPILOGUEGOOD or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.CASUAL or o == OutfitEnum.UNDERWEAR:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.EPILOGUEGOOD or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.CASUAL or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.COSTUME:
             AENsfw = False
             AEOutfit = o
         elif o == OutfitEnum.NUDE or o == OutfitEnum.EPILOGUEBAD:
@@ -926,7 +927,7 @@ init python:
         global BEPrevOutfit
         global BENsfwOutfit
         global BENsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COSTUME:
             BENsfw = False
             BEOutfit = o
         elif o == OutfitEnum.NUDE or o == OutfitEnum.TOPLESS:
@@ -941,7 +942,7 @@ init python:
         global FMGPrevOutfit
         global FMGNsfwOutfit
         global FMGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.UNDERWEAR:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME or o == OutfitEnum.DRESS or o == OutfitEnum.GYM or o == OutfitEnum.RIPPED or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.COSTUME:
             FMGNsfw = False
             FMGOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -956,7 +957,7 @@ init python:
         global GTSPrevOutfit
         global GTSNsfwOutfit
         global GTSNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.WORK:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.WORK or o == OutfitEnum.COSTUME:
             GTSNsfw = False
             GTSOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -971,7 +972,7 @@ init python:
         global PRGPrevOutfit
         global PRGNsfwOutfit
         global PRGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS or o == OutfitEnum.COSTUME:
             PRGNsfw = False
             PRGOutfit = o
         elif o == OutfitEnum.NUDE or o == OutfitEnum.TOPLESS:
@@ -986,7 +987,7 @@ init python:
         global WGPrevOutfit
         global WGNsfwOutfit
         global WGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.FORMAL or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMCAP or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.FORMAL or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMCAP or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COSTUME:
             WGNsfw = False
             WGOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -1001,7 +1002,7 @@ init python:
         global MCPrevOutfit
         global MCNsfwOutfit
         global MCNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.CASUAL3 or o == OutfitEnum.FORMAL or o == OutfitEnum.GYM or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SUIT or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.UNDERWEAR:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.CASUAL3 or o == OutfitEnum.FORMAL or o == OutfitEnum.GYM or o == OutfitEnum.PAJAMAS or o == OutfitEnum.SUIT or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.COSTUME:
             MCNsfw = False
             MCOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -1084,6 +1085,11 @@ init python:
         global MinoriOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
             MinoriOutfit = o
+
+    def setChibukiOutfit(o):
+        global ChibukiOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE or o == OutfitEnum.COSTUME:
+            ChibukiOutfit = o
     
     def setNurseOutfit(o):
         global NurseOutfit
@@ -1252,6 +1258,7 @@ label start:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        ChibukiOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
         flags = []
@@ -1322,6 +1329,7 @@ label splashscreen:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        ChibukiOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
     scene black
@@ -1753,6 +1761,7 @@ label startevent:
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
+        ChibukiOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
