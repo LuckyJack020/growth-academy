@@ -16677,11 +16677,14 @@ label MC021:
     jump daymenu
 
 label MC023:
+    $setBEOutfit(OutfitEnum.ALTERNATE)
     play sound Bell
     pause 1
     play music Busy
     scene Classroom4 with fade
     "I bolted for the door as soon as the day's final bell rang. My eagerness was well founded, as a game I'd been anticipating dropped today."
+    if routelock == "WG":
+        "I wasn't exactly sure if Alice would mind, but she seemed to have her own business ventures to attend to, freeing up time for me to dilly dally after a long day of locking in."
     pause 1
     scene HallwayStairs with fade
     "I knew I shouldn't be dashing through the halls, but I felt like a twelve-year-old kid again. That same rush of energy I had when I'd rush home after school to hop on a new game was tangible."
@@ -16712,6 +16715,11 @@ label MC023:
         MC "Fine, fine, I'll repay my debt."
         Kokutan "Good decision. It's bad luck to leave a personal debt unpaid."
         MCT "Note to self: never run in the halls."
+        if routelock == "AE":
+            MCT "I think I know a certain class president who would feel the same... best to follow through to make up for the hypothetical earful I'd receive for running in the halls."
+        scene School Exterior
+        show Kokutan neutral
+        with fade
         "With as much ceremony and pomp as she could muster, the girl led me out towards the edge of the athletic fields. Many afterschool programs were in session, making it quite lively outside today."
         Kokutan "Now, see? When walking side by side with me in my time of need, can't you just feel the weight of your sins being lifted? It's refreshing right?~"
         MC "Y-Yeah..."
@@ -16765,6 +16773,11 @@ label MC023:
         MC "Fine, fine, I'll repay my debt."
         Student "Good decision. It's bad luck to leave a personal debt unpaid."
         MCT "Note to self: never run in the halls."
+        if routelock == "AE":
+            MCT "I think I know a certain class president who would feel the same... best to follow through to make up for the hypothetical earful I'd receive for running in the halls."
+        scene School Exterior
+        show Kokutan neutral
+        with fade
         "With as much ceremony and pomp as she could muster, the girl led me out towards the edge of the athletic fields. Many afterschool programs were in session, making it quite lively outside today."
         Student "Now, see? When walking side by side with me in my time of need, can't you just feel the weight of your sins being lifted? It's refreshing right?~"
         MC "Y-Yeah..."
@@ -16860,51 +16873,95 @@ label MC023_C1_1:
     show Kokutan neutral at altMove(0.5, 0.75)
     show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     if routelock == "BE":
-        BE "Oh hey Kei-chan, how's that elective with Hageshi-sensei?"
-        MC "Not bad. I thought it will be more demanding-"
-        BE "Heeey, why are you out here with Kokutan?"
+        BE "Hey, my dearest sweetie-pie~"
+        "With little pomp and circumstance, she leaned over and pecked me on the cheek, causing me to blush."
+        MC "Sorry... dearest sweetie-pie?"
+        BE "That's right! Gotta claim you now before someone else tries to swoop in!"
+        BE "Right, Kokutan?"
+        Kokutan "EH?!"
+        MC "Okay, come on, you know it's not like that."
+        BE "I mean, duh! I'm just playin' around!"
+        BE "On a more serious note, what are you doin' hanging around without inviting me?"
+        MC "Actually, it's more that I just stumbled across her-"
+        Kokutan "He tried to turn me into roadkill!"
+    elif isEventCleared("MC021"):
+        BE "Oh, hey Kei-chan. How's that elective with Hageshi-sensei?"
+        MC "Not bad. Or I guess not as bad. I think I'm getting into the swing of it, but I'm not so sure I'd have picked it up if I knew it was gonna be so demanding-"
+        BE "Gotcha."
+        BE "Aaand, why are you out here with Kokutan?"
+        MC "Eh?"
         Kokutan "He tried to turn me into roadkill!"
     else:
-        BE "Oh hey Kei-chan, what are you doing out here?"
-    MC "I... uh."
-    Kokutan "He owed me a debt, nearly turned me into roadkill!"
+        BE "Oh, hey Kei-chan. What are you doing out here?"
+        MC "I... uh."
+        Kokutan "He owed me a debt, nearly turned me into roadkill!"
     BE "Roadkill?!"
-    BE "Didn't expect you to be a cold-hearted killer like that."
-    MC "O-Oy! She's fine, isn't she?!"
+    BE "Jeez, Kei-chan. That's intense."
+    MC "Look! She's fine, isn't she?!"
     show BE happy
-    "The two girls began laughing, Honoka with her hearty laugh and Kokutan with her haughty laugh." 
+    "The two girls both burst into giggles, Honoka's filled with a warmth and Kokutan's with a sprinkle of pomp."
     MCT "Maybe that ring also summons witches."
     MC "Wait, why are you out here then, Honoka?"
     show BE neutral
-    BE "Oh, I've been looking for my roommate. I just needed to ask where she put her blow dryer."
-    MC "Huh. Well, I mean, if you find her you-"
-    Kokutan "Need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
-    BE "Eh, I figured you'd be around here. You're often skulking around for herbs, so the biggest place outside wasn't exactly a big assumption."
-    BE "I mean, seriously, my hair was gonna be a complete wreck!"
-    Kokutan "H-Hey, you look fine!"
-    BE "Uh, duh-doy! NOW I do, but if I keep air drying? Bad, freaking, news."
-    if isEventCleared("BE039") or isEventCleared("WG062"):
-        pause 0.1
-    else:
+    BE "Oh, I've been looking for Kokutan."
+    Kokutan "And need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
+    BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
+    Kokutan "Gah! I told you earlier, I needed only the freshest herbs-"
+    BE "To cleanse our space and ward off the darkness, I know."
+    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+        MCT "Our space?"
         MC "Wait, are you two roommates?"
         show BE confused
-        BE "Yeah, you didn't know?"
+        BE "You didn't know?"
         MC "I don't think you've ever mentioned it."
         show BE happy
         BE "Well, surprise!"
     MCT "Talking about an odd pairing."
-    Kokutan "I'll be back later, Honoka, but the hair dryer is in the lower cabinet in my bathroom."
-    show BE happy
-    BE "Do you put it there on purpose?"
-    Kokutan "You are relieved from your bond, Keisuke Hotsure."
-    "Kokutan gave Honoka a smirk before turning around and heading off towards Chūkan Point."
+    BE "So, did you get the chance to toughen up the straps yet?" 
+    BE "It's one thing to walk around with big bazonga, but doing it unsupported is kinda..."
+    "I averted my eyes instinctively... after lingering on the outline of her nips through her shirt for a quick spell."
+    Kokutan "Y-You'll have it in due time! You said you could use your older ones, yes?"
+    BE "The uh... the deal has been altered. Pray they don't alter it further."
+    "As though to emphasize the problem, she hefted up her breasts once more, giving them a small jiggle to show off their growth."
+    if routelock == "BE":
+        MCT "Still... being honest, I am a bit worried about her. Things have been going rough given how fast her growth is progressing."
+    else:
+        MCT "YOU'RE REALLY NOT MAKING THIS EASY ON ME, GIRL."
+    Kokutan "Not to worry, Honoka Inoue, for my work is already completed."
+    BE "I mean, no rush j- wait what?"
+    Kokutan "But of course! I ensured that the ritual of repair was carried out post haste and ensured its quality with the golden glutton of capitalistic countenance. It simply needs a few small adjustments to ensure the clips don't mar thy flesh."
+    BE "..."
+    MC "..."
+    if isEventCleared("WG062") or getFlag("XX62"):
+        Kokutan "The maiden with eyes of blue who-"
+        BE "Okay, so Alice is working on it?"
+        Kokutan "Yes."
+    else:
+        Kokutan "In just a moments time it will be ready! I simply need to figure out a way to prevent it from marring thy flesh."
+        BE "... Care to elaborate?"
+        Kokutan "You see, the metal hoists keeping the straps aloft have been sharpened by the malice of the makers hand. It cannot be worn without grievous injury befalling thyself-"
+        BE "The clips are sharp and you are fixing that."
+        Kokutan "Yes."
+    MC "See, was that so hard?"
+    Kokutan "I should ask the same of you! Speaking of..." 
+    Kokutan "You are relieved from your bond, Keisuke Hotsure. Your debt has been fulfilled." 
+    Kokutan "I will be headed to where the cherry blossoms meet the peaks."
     hide Kokutan with dissolve
-    show BE happy at altMove(0.5, 0.5)
-    BE "That girl is something for sure."
+    show BE neutral at altMove(0.5, 0.5)
+    BE "That girl...."
     MC "You're telling me, I felt she had me under a spell earlier with how she guilted me."
-    BE "Yeah, that's Kokutan for you. She can be sweet, but she is quite eccentric."
+    BE "Yeah, that's Kokutan for you. She's sweet, but uh... yeah. She's kind of tough to forget."
     MC "True. I couldn't help but notice her uniform is a bit... different."
-    BE "I know, right? She loves tailoring and does a lot of modifications like that to her clothes."
+    BE "She's been a massive help to me, especially given it's a constant tussle."
+    if checkAffection("BE", ">=", 6) and not routelock == "BE": 
+        BE "And with managing... well, you know."
+        MC "I know?"
+        BE "I know you know because I saw you see 'em!"
+        MC "Am I REALLY not that slick?"
+        BE "Pssh, I know you, how could you NOT notice these diamond cutters?"
+        MC "M-Mm..."
+        BE "You're cute when you get all bashful." 
+        BE "Maybe if you learned how to work a needle, you could be the one to do my measurements~"
     MC "Looks like a handy talent to have, considering our situation."
     MC "Well, not really mine, but you know what I mean."
     show BE sad
@@ -16913,6 +16970,39 @@ label MC023_C1_1:
     MC "Everything okay?"
     show BE neutral
     BE "Oh, yeah. I'm fine."
+    if routelock == "BE":
+        MC "Anything I can do to help?"
+        BE "Pssh, you kidding?"
+        "With a smile, Honoka reached over and rubbed my back before patting me."
+        BE "You've been the best boyfriend a girl can ask for. As far as I'm concerned, that's all the help I need."
+        MC "Heh, thanks."
+    else:
+        BE "Nnf... the girls are just a bit... weighty without the bra is all."
+        BE "And I mean, like... you have no idea how often I bump into things or just outright send things to the floor."
+        MC "Y-Yeah."
+        BE "Yeah?"
+        MC "W-Well, yeah."
+        BE "Tsh, no need to be so nonchalant. We both knew they were gonna get huge."
+        BE "Eheheh... heh..."
+        BE "... Just... wasn't expecting... this much..."
+        MC "Mm."
+        BE "... Aaah~"
+        "With a quick motion, Honoka slapped both of her cheeks with her hands."
+        BE "Well, back onto other things!"
+        MC "Heh, atta girl. Is there anything I can do to help?"
+        BE "What, help carry, you mean?"
+        MC "Ehh-"
+        BE "You wish, Kei-chan. Don't worry too much about me, I'll bounce back."
+        BE "... Bounce."
+        $setAffection("BE", 1)
+    "Though she had been putting on a tough front, I know things have been really rough for her recently."
+    "Even so, if I could help take her mind off of it all for just a moment..."
+    MC "So... have things been going good with Kokutan?"
+    BE "Mmmm... yeah, I think so."
+    MC "You think so?"
+    BE "Well look who's being a snoopy snoo."
+    MC "Just wondering, is all. You two seem like you get along."
+    BE "Hmm... yeah though..."
     BE "She's just so secretive, and I don't really know that much about her."
     BE "Which is odd. She's my roommate, you know?"
     if routelock == "BE":
@@ -16935,6 +17025,91 @@ label MC023_C1_1:
     BE "I can see it, though now I'm imagining Utagashi-san in a gothic maid outfit, which is an image indeed."
     MC "I don't think I needed that image in my head today."
     "Honoka chuckled as we made our way back towards the dorms."
+    scene Dorm Exterior with fade
+    show BE happy with dissolve
+    if routelock == "BE":
+        MC "So, where are you headed?"
+        BE "Well, first and foremost I gotta find a boulder holder, but then I gotta go have a meeting with Sakie-chan."
+        MC "Eh? Sakie? Iwata?"
+        BE "Yeah. It's wild you never told me you guys had the same elective. I was gonna ask but... well, you know, didn't exactly think we were gonna meet up like this."
+        MC "Ah... yeah, we are."
+        BE "Well why didn't you tell me, dummy?"
+        MC "I was gonna! Stuff's just been busy recently, y'know?"
+        BE "Hehehe, I'm just messing with you, Kei-chan."
+        MC "Pssh."
+        "I smirked as we continued to walk, the fairy ring behind me still somewhat... present in my mind."
+        MC "Gonna head in, make sure to say hi to Sakie for me."
+        BE "Hehe~"
+        "Gingerly, she leaned over and pecked me on the cheek."
+        BE "Will do~"
+        "Honoka bounded off in the other direction, my eyes following her the entire way."
+    elif not routelock == "BE" and getFlag("Meet_Sakie") and isEventCleared("MC021"):
+        MC "So, where are you headed?"
+        BE "Gotta go have a meeting with Sakie-chan."
+        MC "Iwata-san? From the basketball club?"
+        BE "One and the same."
+        MC "Guess what, we're taking Hageshi-sensei's stats elective together."
+        BE "Ooo, small world. Shame the club didn't really pan out though, too much bouncing... and I barely got to hold the ball."
+        MC "Haaa, I could tell that was coming from a mile away."
+        BE "Really? Jeeez, I gotta come up with better material then. Was thinking of saying I already had two basketballs of my own-"
+        MC "Yeah yeah, but they..."
+        "I stopped before I could finish Honoka's joke. Maybe it could be taken the wrong way..."
+        MCT "Given her worries earlier about how her boobs are getting in the way, maybe a joke might not be for the best right now."
+        MC "Uh..."
+        BE "..."
+        MC "*Khm*..."
+        BE "Soo speaking of, did I actually tell you what's going on with the sports elective?"
+        MC "Huh? Oh! Nah, what was it?"
+        BE "I got it with Sugiyama-sensei, and guess what else he supervises?"
+        MC "Uh... wait, the elective?"
+        BE "Bingo. The club meets RIGHT after the elective!"
+        MC "You joined the bingo club?"
+        BE "Yep! I'm gonna be meeting t-"
+        BE "Wait, what, no! He teaches the elective!"
+        MCT "I'm not sure if I walked right into that or if we both slammed into it face first."
+        BE "He also coaches basketball club, my former club, the one where Sakie-chan is in."
+        BE "Ehehe, that's actually how I met up with Sakie. We're gonna hang out after classes to catch up on stuff."
+        MC "Hope you two have a good one, I'm headed back to my dorm to play some games."
+        BE "Nice, I'd want the deets, but I gotta scram. Catch ya later!"
+    elif not routelock == "BE" and not getFlag("Meet_Sakie") and isEventCleared("MC021"):
+        MC "So, where are you headed?"
+        BE "Gotta go have a meeting with Sakie-chan."
+        MC "Iwata-san?"
+        BE "Eh? You know her?"
+        MC "Yeah, we're taking Hageshi-sensei's stats elective together."
+        BE "Ooo, small world. I was in basketball club with her. Didn't really pan out though, too much bouncing... and I barely got to hold the ball."
+        MC "Haaa, I could tell that was coming from a mile away."
+        BE "Really? Jeeez, I gotta come up with better material then. Was thinking of saying I already had two basketballs of my own-"
+        MC "Yeah yeah, but they..."
+        "I stopped before I could finish Honoka's joke. Maybe it could be taken the wrong way..."
+        MCT "Given her worries earlier about how her boobs are getting in the way, maybe a joke might not be for the best right now."
+        MC "Uh..."
+        BE "..."
+        MC "*Khm*..."
+        BE "Soo speaking of, did I actually tell you what's going on with the sports elective?"
+        MC "Huh? Oh! Nah, what was it?"
+        BE "I got it with Sugiyama-sensei, and guess what else he supervises?"
+        MC "Uh... wait, the elective?"
+        BE "Bingo. The club meets RIGHT after the elective!"
+        MC "You joined the bingo club?"
+        BE "Yep! I'm gonna be meeting t-"
+        BE "Wait, what, no! He teaches the elective!"
+        MCT "I'm not sure if I walked right into that or if we both slammed into it face first."
+        BE "He also coaches basketball club, my former club, the one where Sakie-chan is in."
+        BE "Ehehe, that's actually how I met up with Sakie. We're gonna hang out after classes to catch up on stuff."
+        BE "I should ask Sakie when I see her, we were workshopping some good ones earlier at lunch before we decided to catch up after class."
+        MC "I already dread it. Still, hope you two have a good one, I'm headed back to my dorm to play some games."
+        BE "Nice, I'd want the deets, but I gotta scram. Catch ya later!"
+    else:
+        MC "So, where are you headed?"
+        BE "Gotta go meet with a friend I met at an old club I was in."
+        MC "Knowing you, that's a loooot of possible friends."
+        BE "Aww~"
+        MC "On my end, I'm gonna go catch up on some of my games."
+        BE "Ooo, give me the deets when you're free."
+        MC "You got it, shoot me a text."
+        BE "For sure. Be good."
+        MC "Later."
     jump daymenu
 
 label MC023_C2_1:
@@ -16970,50 +17145,106 @@ label MC023_C2_1:
     show Kokutan neutral at altMove(0.5, 0.75)
     show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     if routelock == "BE":
-        BE "Oh hey Kei-chan, how's that elective with Hageshi-sensei?"
-        MC "Not bad. I thought it will be more demanding-"
-        BE "Heeey, why are you out here with Kokutan?"
+        BE "Hey, my dearest sweetie-pie~"
+        "With little pomp and circumstance, she leaned over and pecked me on the cheek, causing me to blush."
+        MC "Sorry... dearest sweetie-pie?"
+        BE "That's right! Gotta claim you now before someone else tries to swoop in!"
+        BE "Right, Kokutan?"
+        Kokutan "EH?!"
+        MC "Okay, come on, you know it's not like that."
+        BE "I mean, duh! I'm just playin' around!"
+        BE "On a more serious note, what are you doin' hanging around without inviting me?"
+        MC "Actually, it's more that I just stumbled across her-"
         Kokutan "He tried to turn me into roadkill!"
-    else:
-        BE "Oh hey Kei-chan, what are you doing out here?"
-        Kokutan "He owed me a debt, nearly turned me into roadkill."
-    MC "I... uh-"
-    BE "Didn't expect you to be a cold-hearted killer like that."
-    MC "O-Oy! She's fine, isn't she?!"
+    elif isEventCleared("MC021"):
+        BE "Oh, hey Kei-chan. How's that elective with Hageshi-sensei?"
+        MC "Not bad. Or I guess not as bad. I think I'm getting into the swing of it, but I'm not so sure I'd have picked it up if I knew it was gonna be so demanding-"
+        BE "Gotcha."
+        BE "Aaand, why are you out here with Kokutan?"
+        MC "Eh?"
+        Kokutan "He tried to turn me into roadkill!"
+    BE "Roadkill?!"
+    BE "Jeez, Kei-chan. That's intense."
+    MC "Look! She's fine, isn't she?!"
     show BE happy
-    "The two girls began laughing, Honoka with her hearty laugh and Kokutan with her haughty laugh."
+    "The two girls both burst into giggles, Honoka's filled with a warmth and Kokutan's with a sprinkle of pomp."
     MCT "Maybe that ring also summons witches."
     MC "Wait, why are you out here then, Honoka?"
     show BE neutral
-    BE "Oh, I've been looking for my roommate. I just needed to ask where she put her blow dryer."
-    MC "Huh. Well, I mean, if you find her you-"
-    Kokutan "Need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
-    BE "Eh, I figured you'd be around here. You're often skulking around for herbs, so the biggest place outside wasn't exactly a big assumption."
-    BE "I mean, seriously, my hair was gonna be a complete wreck!"
-    Kokutan "H-Hey, you look fine!"
-    BE "Uh, duh-doy! NOW I do, but if I keep air drying? Bad, freaking, news."
-    if isEventCleared("BE039") or isEventCleared("WG062"):
-        pause 0.1
-    else:
-        MC "Wait, are you two roommates?"
-        show BE confused
-        BE "Yeah, you didn't know?"
-        MC "I don't think you've ever mentioned it."
-        show BE happy
-        BE "Well, surprise!"
-    MCT "Talking about an odd pairing."
-    Kokutan "I'll be back later, Honoka, but the hair dryer is in the lower cabinet in my bathroom."
+    BE "Oh, I've been looking for Kokutan."
+    Kokutan "And need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
+    BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
+    Kokutan "Gah! I told you earlier, I needed only the freshest herbs-"
+    BE "To cleanse our space and ward off the darkness, I know."
+    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+        MCT "Our space?"
+    MC "Wait, are you two roommates?"
+    show BE confused
+    BE "You didn't know?"
+    MC "I don't think you've ever mentioned it."
     show BE happy
-    BE "Do you put it there on purpose?"
-    Kokutan "You are relieved from your bond, Keisuke Hotsure."
-    "Kokutan gave Honoka a smirk before turning around and heading off towards Chūkan Point."
+    BE "Well, surprise!"
+    MCT "Talking about an odd pairing."
+    BE "Oh, I've been looking for Kokutan."
+    Kokutan "And need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
+    BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
+    Kokutan "Gah! I told you earlier, I needed only the freshest erbs-"
+    BE "To cleanse our space and ward off the darkness, I know."
+    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+        MCT "Our space?"
+    MC "Wait, are you two roommates?"
+    show BE confused
+    BE "You didn't know?"
+    MC "I don't think you've ever mentioned it."
+    show BE happy
+    BE "Well, surprise!"
+    MCT "Talking about an odd pairing."
+    BE "So, did you get the chance to toughen up the straps yet?" 
+    BE "It's one thing to walk around with big bazonga, but doing it unsupported is kinda..."
+    "I averted my eyes instinctively... after lingering on the outline of her nips through her shirt for a quick spell."
+    Kokutan "Y-You'll have it in due time! You said you could use your older ones, yes?"
+    BE "The uh... the deal has been altered. Pray they don't alter it further."
+    "As though to emphasize the problem, she hefted up her breasts once more, giving them a small jiggle to show off their growth."
+    if routelock == "BE":
+        MCT "Still... being honest, I am a bit worried about her. Things have been going rough given how fast her growth is progressing."
+    else:
+        MCT "YOU'RE REALLY NOT MAKING THIS EASY ON ME, GIRL."
+    Kokutan "Not to worry, Honoka Inoue, for my work is already completed."
+    BE "I mean, no rush j- wait what?"
+    Kokutan "But of course! I ensured that the ritual of repair was carried out post haste and ensured its quality with the golden glutton of capitalistic countenance. It simply needs a few small adjustments to ensure the clips don't mar thy flesh."
+    BE "..."
+    MC "..."
+    if isEventCleared("WG062") or getFlag("XX62"):
+        Kokutan "The maiden with eyes of blue who-"
+        BE "Okay, so Alice is working on it?"
+        Kokutan "Yes."
+    else:
+        Kokutan "In just a moments time it will be ready! I simply need to figure out a way to prevent it from marring thy flesh."
+        BE "... Care to elaborate?"
+        Kokutan "You see, the metal hoists keeping the straps aloft have been sharpened by the malice of the makers hand. It cannot be worn without grievous injury befalling thyself-"
+        BE "The clips are sharp and you are fixing that."
+        Kokutan "Yes."
+    MC "See, was that so hard?"
+    Kokutan "I should ask the same of you! Speaking of..." 
+    Kokutan "You are relieved from your bond, Keisuke Hotsure. Your debt has been fulfilled." 
+    Kokutan "I will be headed to where the cherry blossoms meet the peaks."
+
     hide Kokutan with dissolve
-    show BE happy at altMove(0.5, 0.5)
-    BE "That girl is something for sure."
+    BE "That girl..."
     MC "You're telling me, I felt she had me under a spell earlier with how she guilted me."
-    BE "Yeah, that's Kokutan for you. She can be sweet, but she is quite eccentric."
+    BE "Yeah, that's Kokutan for you. She's sweet, but she is... something."
     MC "True. I couldn't help but notice her uniform is a bit... different."
     BE "I know, right? She loves tailoring and does a lot of modifications like that to her clothes."
+    BE "She's been a massive help to me, especially given it's a constant tussle."
+    if checkAffection("BE", ">=", 6) and not routelock == "BE": 
+        BE "And with managing... well, you know."
+        MC "I know?"
+        BE "I know you know because I saw you see ‘em!"
+        MC "Am I REALLY not that slick?"
+        BE "Pssh, I know you, how could you NOT notice these diamond cutters?"
+        MC "M-Mm..."
+        BE "You're cute when you get all bashful." 
+        BE "Maybe if you learned how to work a needle, you could be the one to do my measurements~"
     MC "Looks like a handy talent to have, considering our situation."
     MC "Well, not really mine, but you know what I mean."
     show BE sad
@@ -17022,30 +17253,147 @@ label MC023_C2_1:
     MC "Everything okay?"
     show BE neutral
     BE "Oh, yeah. I'm fine."
+    if routelock == "BE":
+        MC "Anything I can do to help?"
+        BE "Pssh, you kidding?"
+        "With a smile, Honoka reached over and rubbed my back before patting me."
+        BE "You've been the best boyfriend a girl can ask for. As far as I'm concerned, that's all the help I need."
+        MC "Heh, thanks."
+    else:
+        BE "Nnf... the girls are just a bit... weighty without the bra is all."
+        BE "And I mean, like... you have no idea how often I bump into things or just outright send things to the floor."
+        MC "Y-Yeah."
+        BE "Yeah?"
+        MC "W-Well, yeah."
+        BE "Tsh, no need to be so nonchalant. We both knew they were gonna get huge."
+        BE "Eheheh... heh..."
+        BE "... Just... wasn't expecting... this much..."
+        MC "Mm."
+        BE "... Aaah~"
+        "With a quick motion, Honoka slapped both of her cheeks with her hands."
+        BE "Well, back onto other things!"
+        MC "Heh, atta girl. Is there anything I can do to help?"
+        BE "What, help carry, you mean?"
+        MC "Ehh-"
+        BE "You wish, Kei-chan. Don't worry too much about me, I'll bounce back."
+        BE "... Bounce."
+        $setAffection("BE", 1)
+    "Though she had been putting on a tough front, I know things have been really rough for her recently."
+    "Even so, if I could help take her mind off of it all for just a moment..."
+    MC "So... have things been going good with Kokutan?"
+    BE "Mmmm... yeah, I think so."
+    MC "You think so?"
+    BE "Well look who's being a snoopy snoo."
+    MC "Just wondering, is all. You two seem like you get along."
+    BE "Hmm... yeah though..."
     BE "She's just so secretive, and I don't really know that much about her."
     BE "Which is odd. She's my roommate, you know?"
-    if routelock == "BE":
-        MC "Like her real name?"
-        "Honoka nodded."
-        MC "\"The Ebony Lord of Destruction\"."
-        show BE happy
-        BE "\"Master of A Thousand Demons\"."
-        pause 1
-        MC "... And whatever the other thing was."
-        "Honoka smirked."
-        BE "Dork."
+    if routelock == "BE"
+    MC "Like her real name?"
+    "Honoka nodded."
+    MC "\"The Ebony Lord of Destruction\"."
+    show BE happy
+    BE "\"Master of A Thousand Demons\"."
+    pause 1
+    MC "... And whatever the other thing was."
+    "Honoka smirked."
+    BE "Dork."
     else:
         BE "But like, all I really know is... mm..."
         BE "Her real name isn't \"Kokutan\"."
         BE "She wears contacts. Never seen the real color of her eyes."
-    BE "And... more unknown, I guess, but she won't even tell me her factor."
+        BE "And... more unknown, I guess, but she won't even tell me her factor."
     MC "Almost reminds me of Daichi in a way but with more... sass, I guess."
     show BE happy
     BE "I can see it, though now I'm imagining Utagashi-san in a gothic maid outfit, which is an image indeed."
     MC "I don't think I needed that image in my head today."
     "Honoka chuckled as we made our way back towards the dorms."
+    show BE happy with dissolve
+    if routelock == "BE":
+        MC "So, where are you headed?"
+        BE "Well, first and foremost I gotta find a boulder holder, but then I gotta go have a meeting with Sakie-chan."
+        MC "Eh? Sakie? Iwata?"
+        BE "Yeah. It's wild you never told me you guys had the same elective. I was gonna ask but... well, you know, didn't exactly think we were gonna meet up like this."
+        MC "Ah... yeah, we are."
+        BE "Well why didn't you tell me, dummy?"
+        MC "I was gonna! Stuff's just been busy recently, y'know?"
+        BE "Hehehe, I'm just messing with you, Kei-chan."
+        MC "Pssh."
+        "I smirked as we continued to walk, the fairy ring behind me still somewhat... present in my mind."
+        MC "Gonna head in, make sure to say hi to Sakie for me."
+        BE "Hehe~"
+        "Gingerly, she leaned over and pecked me on the cheek."
+        BE "Will do~"
+        "Honoka bounded off in the other direction, my eyes following her the entire way."
+    if not routelock == "BE" and getFlag("Meet_Sakie") and isEventCleared("MC021"):
+        MC "So, where are you headed?"
+        BE "Gotta go have a meeting with Sakie-chan."
+        MC "Iwata-san? From the basketball club?"
+        BE "One and the same."
+        MC "Guess what, we're taking Hageshi-sensei's stats elective together."
+        BE "Ooo, small world. Shame the club didn't really pan out though, too much bouncing... and I barely got to hold the ball."
+        MC "Haaa, I could tell that was coming from a mile away."
+        BE "Really? Jeeez, I gotta come up with better material then. Was thinking of saying I already had two basketballs of my own-"
+        MC "Yeah yeah, but they..."
+        "I stopped before I could finish Honoka's joke. Maybe it could be taken the wrong way..."
+        MCT "Given her worries earlier about how her boobs are getting in the way, maybe a joke might not be for the best right now."
+        MC "Uh..."
+        BE "..."
+        MC "*Khm*..."
+        BE "Soo speaking of, did I actually tell you what's going on with the sports elective?"
+        MC "Huh? Oh! Nah, what was it?"
+        BE "I got it with Sugiyama-sensei, and guess what else he supervises?"
+        MC "Uh... wait, the elective?"
+        BE "Bingo. The club meets RIGHT after the elective!"
+        MC "You joined the bingo club?"
+        BE "Yep! I'm gonna be meeting t-"
+        BE "Wait, what, no! He teaches the elective!"
+        MCT "I'm not sure if I walked right into that or if we both slammed into it face first."
+        BE "He also coaches basketball club, my former club, the one where Sakie-chan is in."
+        BE "Ehehe, that's actually how I met up with Sakie. We're gonna hang out after classes to catch up on stuff."
+        BE "I should ask Sakie when I see her, we were workshopping some good ones earlier at lunch before we decided to catch up after class."
+        MC "I already dread it. Still, hope you two have a good one, I'm headed back to my dorm to play some games."
+        BE "Nice, I'd want the deets, but I gotta scram. Catch ya later!"
+    if not routelock == "BE" and not getFlag("Meet_Sakie") and isEventCleared("MC021"):
+        MC "So, where are you headed?"
+        BE "Gotta go have a meeting with Sakie-chan."
+        MC "Iwata-san?"
+        BE "Eh? You know her?"
+        MC "Yeah, we're taking Hageshi-sensei's stats elective together."
+        BE "Ooo, small world. I was in basketball club with her. Didn't really pan out though, too much bouncing... and I barely got to hold the ball."
+        MC "Haaa, I could tell that was coming from a mile away."
+        BE "Really? Jeeez, I gotta come up with better material then. Was thinking of saying I already had two basketballs of my own-"
+        MC "Yeah yeah, but they..."
+        "I stopped before I could finish Honoka's joke. Maybe it could be taken the wrong way..."
+        MCT "Given her worries earlier about how her boobs are getting in the way, maybe a joke might not be for the best right now."
+        MC "Uh..."
+        BE "..."
+        MC "*Khm*..."
+        BE "Soo speaking of, did I actually tell you what's going on with the sports elective?"
+        MC "Huh? Oh! Nah, what was it?"
+        BE "I got it with Sugiyama-sensei, and guess what else he supervises?"
+        MC "Uh... wait, the elective?"
+        BE "Bingo. The club meets RIGHT after the elective!"
+        MC "You joined the bingo club?"
+        BE "Yep! I'm gonna be meeting t-"
+        BE "Wait, what, no! He teaches the elective!"
+        MCT "I'm not sure if I walked right into that or if we both slammed into it face first."
+        BE "He also coaches basketball club, my former club, the one where Sakie-chan is in."
+        BE "Ehehe, that's actually how I met up with Sakie. We're gonna hang out after classes to catch up on stuff."
+        MC "Hope you two have a good one, I'm headed back to my dorm to play some games."
+        BE "Nice, I'd want the deets, but I gotta scram. Catch ya later!"
+    else:
+        MC "So, where are you headed?"
+        BE "Gotta go meet with a friend I met at an old club I was in."
+        MC "Knowing you, that's a loooot of possible friends."
+        BE "Aww~"
+        MC "On my end, I'm gonna go catch up on some of my games."
+        BE "Ooo, give me the deets when you're free."
+        MC "You got it, shoot me a text."
+        BE "For sure. Be good!"
+        MC "Later."
     "As we left the small fairy ring patch, I could've sworn I heard a whisper behind me."
-    "Glancing back at the clearing and seeing nothing there, I continued walking."
+    "Glancing  back at the clearing and seeing nothing there, I continued walking."
     MCT "I think that girls mystic speak is getting to me."
     jump daymenu
 
@@ -20583,7 +20931,7 @@ label global026:
         MC "Indeed."
         jump daymenu
 
-    elif getHighestAffection() == ("WG"):
+    elif getHighestAffection() == ("WG") and not getFlag("WG_disabled"):
         "I glanced down at my desk and started getting myself packed up."
         show WG neutral with dissolve
         "Looking up, I spotted Alice... well, the tail end of her, leaving the room."
@@ -20860,6 +21208,135 @@ label global026:
         MCT "That's... so different from everyone else's..."
         MCT "And the rarest factor."
         "I took a slow breath and started on my way back to my dorm."
+        jump daymenu
+
+    else:
+        show BE neutral with dissolve
+        "At the end of the aisle, Honoka waited patiently for me, sliding over to let Shiori pass, then walking down to me."
+        BE "Eesh. Snoozer of a lesson, huh?"
+        MC "Yeah, totally."
+        BE "Get some notes down?"
+        MC "A handful. Enough to get by."
+        BE "That's really all ya need."
+        "I rolled my eyes."
+        MC "Then, how much is that for you? How many is enough to get by?"
+        BE "Eh, depends on the topic."
+        show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+        "Across from us, Naomi finished packing her bag and headed out of the room."
+        "I watched her leave, still keeping an eye on her."
+        hide GTS with easeoutright
+        show BE happy
+        BE "Got a thing for Yamazaki-san, Kei-chan?"
+        MC "Huh? No, no. I was just thinking about something."
+        BE "What, like me?"
+        MC "I... what?"
+        BE "Heh. Eyes are up here."
+        MC "I wasn't... ugh, nevermind."
+        show BE neutral
+        BE "What's up?"
+        MC "I... well, I was heading to class today, and I overheard some girls gossiping about some other girl. Some girl in our homeroom who apparently had some wicked growth overnight or something."
+        MC "I thought they may have been talking about Yamazaki-san, since she does tend to stick out a little."
+        show BE doubt
+        BE "Mm... no, I don't think that's who they were discussing."
+        MC "You... you know who it might be?"
+        BE "I... yeah."
+        BE "You missed the commotion earlier, Kei-chan."
+        MC "Commotion?"
+        BE "Mhm. Before class started, and before you came in."
+        MC "... Oops."
+        BE "Still... I don't think this is the right place to go over it, though."
+        "Honoka didn't make a move, but she turned her head a bit, and her eyes went over her shoulder."
+        hide BE 
+        show WG neutral
+        with dissolve
+        "Behind her and a few desks over, Alice was busy getting herself situated before heading out."
+        "And, in front of her, Aida sat with her bag on her desk, leaned toward herself."
+        show RM neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        "The two watched Daichi get up and leave, and only then did Alice get up."
+        hide RM with dissolve
+        "She made a motion to Aida and said something to her."
+        "Aida stood up behind Alice and moved her bag, pulling it over her shoulders."
+        pause .5
+        show PRG unsure at Position(xcenter=0.75, yalign=1.0) with dissolve
+        pause .75
+        MCT "Holy..."
+        BE "Keisuke-chan..."
+        BE "Don't make it so obvious."
+        pause .25
+        hide PRG
+        hide WG
+        with dissolve
+        "Alice and Aida walked out of the room together, the two standing quite close to each other."
+        show BE doubt with dissolve
+        MC "What the... what the hell happened?!"
+        MC "I-I just saw her a few days ago, and that sure as hell wasn't there!"
+        BE "That's why everyone was quiet when you came in, Kei-chan."
+        BE "We were all... well... shocked."
+        MC "But wait... hold on a second."
+        MC "Is... is that kind of growth even possible? Like, coming out of nowhere like that?"
+        MC "That... almost looks like a weight gain factor. But... not."
+        MC "Can a weight gain factor even focus on one part of the body like that?"
+        BE "Ah... Kei-chan. I'm not an expert here either."
+        pause .25
+        play music none
+        BE "But... look."
+        BE "So, the reason everyone is talking is..."
+        pause .75
+        BE "... {w}Kodama-san is pregnant."
+        MC "..."
+        MC "Okay, now I know that you're messing with me."
+        BE "Kei-chan, I'm not. I {i}promise{/i} you that I'm not."
+        "I met Honoka's gaze."
+        show BE sad
+        pause .5
+        BE "... It's been all over the girl's dorms."
+        BE "Her factor is apparently somehow based around pregnancy."
+        MC "That can happen?"
+        MC "Also... who's the father, then?"
+        show BE doubt
+        BE "I... have no clue. No one knows."
+        play music Rain
+        MC "So... hold on, back up. How do people know that it's a pregnancy and not just weight gain?"
+        BE "Because one girl happened to be in the infirmary when Kodama-san went in to get her exam."
+        BE "She overheard Kodama-san mention the word \"hyperfertility\" to the nurse, apparently."
+        BE "That was yesterday afternoon, I think."
+        BE "And now, that girl went and blabbed to everyone, so now most of the women's dorms know about it."
+        MC "Geez..."
+        show BE sad
+        BE "Mhm... poor girl."
+        BE "I know I haven't really spent a ton of time with her, but I feel horrible for her."
+        BE "Like... every girl on campus is talking about her. And it's about something that's supposed to be really personal."
+        BE "She already keeps to herself a lot. I just... I can't imagine how she's feeling now."
+        MC "Yeah..."
+        MC "Still, I can't believe it. I didn't even know that a pregnancy factor was a thing."
+        show BE neutral
+        BE "Same here."
+        MC "So... how did the reveal go? Like... did she just come out and say it?"
+        BE "Kind of..."
+        BE "She walked in with Alice, of course. And, I think she was trying to cover herself up, but with her already being on the high end of a normal nine month pregnant girl's size, it really wasn't doing much."
+        BE "I was here a little early. Didn't sleep the best last night, so I took a little morning walk before class to help wake myself up. So, I think that only Yamazaki-san and I were here."
+        BE "Anyway, I made some conversation with her and Alice as they walked by. You know, just small talk stuff."
+        BE "And as she went to sit down, I saw her belly."
+        show BE sad
+        BE "I... I guess she and Alice saw me look down at it, because before I knew it, Alice told her that it was okay. That seemed to make Kodama-san feel a bit more at ease, and then she told me."
+        show BE neutral
+        BE "Of course, Yamazaki-san overheard and came over to congratulate her."
+        BE "Then Matsumoto-san came in and, of course, had to examine the commotion, so then Kodama-san told her."
+        BE "And finally Mizutani-san came in and heard, too."
+        MC "So that's... like three different instances of having to retread that same conversation in like five minutes?"
+        BE "Mhm."
+        MC "I... wow. I'm still stunned."
+        BE "I know."
+        MC "Like... her? Of all girls? She doesn't seem the type to even date much, let alone have sex."
+        BE "I know! That's part of what has me floored too."
+        pause .5
+        BE "But anyway. Wanna get some lunch? I didn't eat breakfast this morning."
+        MC "Do you ever?"
+        BE "Sometimes."
+        MC "Well, yeah. I'm down."
+        BE "Cool."
+        hide BE
+        "I got up and slipped my bag on, and the two of us headed out toward the cafeteria."
         jump daymenu
 
 label global026_AE_end:

@@ -710,6 +710,50 @@ init python:
     )
     ost.manualDefineList.append(theme_RgN)
 
+    theme_WlW = ost.soundtrack(
+        name = "What Lies Within",
+        path = "Audio/BGM/WhatLiesWithin.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Okisho's Complete Song",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_WlW)
+
+    theme_WwD = ost.soundtrack(
+        name = "What Lies Within (Drums)",
+        path = "Audio/BGM/WhatLiesWithinDrums.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Okisho's Song Drum Intro",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_WwD)
+
+    theme_WwC = ost.soundtrack(
+        name = "What Lies Within (Drums + Chords)",
+        path = "Audio/BGM/WhatLiesWithinDrumChords.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Okisho's Song Drum & Chord Intro",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_WwC)
+
+    theme_OsD = ost.soundtrack(
+        name = "Okisho's Song (Demo)",
+        path = "Audio/BGM/OkishoSongDemo.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Okisho's WIP Song",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_OsD)
+
     ## Base Template
     ######################################
 

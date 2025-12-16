@@ -8144,6 +8144,7 @@ label WG_037_afterchoice1:
 
 label WG038:
     $setProgress("WG", "WG039")
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
     scene Dorm Interior with fade
     play music DayByDay
     MCT "Ugh. So bored."
@@ -8156,6 +8157,7 @@ label WG038:
     WGCell "< Come to the arcade, I have something fun to show you. >"
     MCT "Alice? At the arcade? Ohhh, this {i}will{/i} be fun!"
     MCCell "<I'm on my way.>"
+    $setMCOutfit(OutfitEnum.CASUAL)
     "I got dressed and rushed to the bus stop. I had to be there as soon as possible."
 
     scene School Exterior with fade
@@ -36196,14 +36198,19 @@ label WGB004:
     MC "Yeah, I gotcha. {w}Say, uh... I hope I'm not distracting you. I'm imagining you're not exactly looking for an audience while you iron out new material."
     Okisho "{i}Pshh!{/i} I don't care. You can't make it as a musician if you're going to get stage fright. Music is meant to have an audience after all."
     MC "Oh good. Cause I'd definitely be interested in being a fly on the wall while you work on some stuff. Maybe I'll learn a thing or two."
+    stop music fadeout 1.0
     Okisho "Well if you're interested, I'll show you."
     Okisho "First, you gotta lay down a beat."
-    "Okisho flicked a few buttons on her keyboard, resulting in a short, steady repeating {i}THOOM{/i} of an electronic bass drum coming out in regular intervals."
+    play music WhatLiesWithinDrums
+    "Okisho flicked a few buttons on her keyboard, resulting in a short, steady repeating {i}THOOM{/i} of an electronic bass kick drum coming out in regular intervals."
     Okisho "Then I lay down a rhythm"
     "She flicked another switch before pressing fingers onto the keys."
+    play music WhatLiesWithinDrumChords
     "{i}DINN DINNN{/i} followed by a lower {i}DUNN DUNNN{/i} as she shifted her hand over."
     "With a flick of another switch, both these sounds started to repeat on auto loop. It was simple, but still a pretty catchy at the same time."
     Okisho "Then you add the melody."
+    "With the next part, I could hardly believe my ears as she flipped some more switches and then began to put it all together."
+    play music OkishoSongDemo
     "From here, I could hardly believe my ears. Okisho proceeded to belt it out with a surprisingly soulful and sultry alto voice I hadn't expected to come out of her as she proceeded to lay down lyrics to the track."
     Okisho "{cps=15}I'm wondering what you're seeing{/cps}{nw=.4}"
     pause 0.2
@@ -36236,8 +36243,10 @@ label WGB004:
     Okisho "{cps=15}One day, I will find{/cps}{nw=.4}"
     pause 0.2
     Okisho "{cps=15}What lies within those eyes{/cps}{nw=.4}"
+    stop music fadeout 1.0
     pause 1.5
     play music DormLife
+    "I was floored. Okisho just belted it out with a surprisingly soulful and sultry alto voice I hadn't expected to come out of her when she laid down lyrics to the track."
     MC "... {w}Wow. That was... that was amazing Okisho!"
     Okisho "Eh, it's just something that came to me on the fly. Still needs some work. I might do more with it later, I might not. I'm not that invested in it yet."
     MC "Oh. Well still, it sounded pretty good to me."

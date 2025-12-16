@@ -20,6 +20,7 @@ default DaitaroOutfit = OutfitEnum.DEFAULT
 default TakamuraOutfit = OutfitEnum.DEFAULT
 default KanamiOutfit = OutfitEnum.DEFAULT
 default ChibukiOutfit = OutfitEnum.DEFAULT
+default RMOutfit = OutfitEnum.DEFAULT
 default NurseOutfit = OutfitEnum.DEFAULT
 default YukiOutfit = OutfitEnum.DEFAULT
 default AENsfw = False
@@ -972,7 +973,7 @@ init python:
         global PRGPrevOutfit
         global PRGNsfwOutfit
         global PRGNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS or o == OutfitEnum.COSTUME:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS or o == OutfitEnum.COSTUME or o == OutfitEnum.UNDERWEAR:
             PRGNsfw = False
             PRGOutfit = o
         elif o == OutfitEnum.NUDE or o == OutfitEnum.TOPLESS:
@@ -1090,6 +1091,11 @@ init python:
         global ChibukiOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE or o == OutfitEnum.COSTUME:
             ChibukiOutfit = o
+
+    def setRMOutfit(o):
+        global RMOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME:
+            RMOutfit = o
     
     def setNurseOutfit(o):
         global NurseOutfit
@@ -1259,6 +1265,7 @@ label start:
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
         ChibukiOutfit = OutfitEnum.DEFAULT
+        RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
         flags = []
@@ -1330,6 +1337,7 @@ label splashscreen:
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
         ChibukiOutfit = OutfitEnum.DEFAULT
+        RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
     scene black
@@ -1762,6 +1770,7 @@ label startevent:
         TakamuraOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
         ChibukiOutfit = OutfitEnum.DEFAULT
+        RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)

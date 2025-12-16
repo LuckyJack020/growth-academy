@@ -8781,7 +8781,7 @@ label PRG025_Sex:
     "Well, almost anyhow. They were still caged by the fabric of her bra. And, from the looks of it, they were fighting to escape."
     "Before moving any further, Aida got off of me and reached down, taking both socks off and throwing them to the side."
     "Next, she worked her hands north and slid her skirt off."
-    #$setPRGOutfit(OutfitEnum.UNDERWEAR)
+    $setPRGOutfit(OutfitEnum.UNDERWEAR)
     show PRG aroused
     pause 1
     "Now, with Aida in only her bra and panties, I could see her true shape for myself, which had always been a little murky from under her clothes."
