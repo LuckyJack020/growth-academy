@@ -29352,17 +29352,7 @@ label PRG048:
     "I felt Aida's hand go down, finding my shirt and going up onto my chest."
     "Her hand went up, running along my chest and sending bolts of excitement down and around my body."
     "I brought my hands around her again, holding her a little higher and feeling her belly rub most of my lower body."
-    if checkAffection("PRG", "<", 22):
-        "Aida's lips pulled from mine."
-        "I could make out her breathing. Heavy and deep."
-        PRG "Come here... lay your head down."
-        "I followed her hand as she guided my head down onto her collar, right below her shoulder."
-        "Because of the mattress, I had to curl up my legs even further, but I would have broken them off if it meant I could stay like this even longer."
-        "Aida gently rubbed my head, her right arm over my back."
-        PRG "I can't wait for tomorrow..."
-        "Keisuke" "Me either... sleep well."
-        jump daymenu
-    else:
+    if checkAffection("PRG", ">=", 22):
         $setFlag("PRG048_boob")
         "Aida pulled her lips back away from me, and I felt her shift up, her belly lifting a little bit."
         PRG "G-Give me your hand..."
@@ -29572,6 +29562,17 @@ label PRG048:
             "Aida kissed me on the jaw again, nuzzling me again."
             PRG "You always are to me..."
             jump daymenu
+    
+    else:
+        "Aida's lips pulled from mine."
+        "I could make out her breathing. Heavy and deep."
+        PRG "Come here... lay your head down."
+        "I followed her hand as she guided my head down onto her collar, right below her shoulder."
+        "Because of the mattress, I had to curl up my legs even further, but I would have broken them off if it meant I could stay like this even longer."
+        "Aida gently rubbed my head, her right arm over my back."
+        PRG "I can't wait for tomorrow..."
+        "Keisuke" "Me either... sleep well."
+        jump daymenu
 
 label PRG049:
     $setProgress("PRG", "PRG050")

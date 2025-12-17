@@ -24232,3 +24232,736 @@ label RM006:
         "Besides, it would be best to talk with Naomi first about potentially sharing the password, as I wouldn't want to do anything that might betray her confidence."
     "As far as investigations go, this was another dead end, but hopefully that just meant we were overdue for a breakthrough in our investigation."
     jump daymenu
+
+label RM007:
+    scene Dorm Interior with fade
+    if not getFlag("RM006_CompletedGTS030") and isEventCleared("GTS030"):
+        $setFlag("RM007_CompletedGTS030")
+    play music RMInvestigate
+    show RM neutral-2 with dissolve
+    RM "Alright, here's what we've learned so far."
+    RM "The Giant's Dorms are located within a massive quarry, which is surrounded by a large chain-linked fence..."
+    "I couldn't tell what prompted this, but here we were again standing in front of Daichi's conspiracy board, which somehow looked even more unhinged and messy with a few old items crossed off and new ones pinned on."
+    RM "Now the gate is our only way inside, but to get inside we need to learn this four digit code..."
+    "Apparently I had unwittingly crossed some invisible barrier and stepped inside the situation room."
+    show RM angry
+    RM "Hey! {w}Are you even listening?"
+    show RM distrustful
+    MC "Dude, give me a break. I just got up from my desk to get a sandwich from the refrigerator, I didn't think you'd start monologuing out of nowhere once I breached your peripheral vision."
+    show RM angry-2
+    RM "Tsh! You walked right up to the board. I thought you were ready for the debrief from the previous mission."
+    MC "You mean in the vague direction of the board, which is on the way to the kitchen."
+    show RM distrustful
+    pause 1
+    "I couldn't tell if Daichi was genuinely skeptical of my reasoning or just disappointed I somehow forgot to read his mind."
+    MCT "Best just to humor him I guess."
+    show RM happy-2
+    MC "Alright, since I'm already here. Lay it on me." 
+    RM "Hmph. As I was saying..."
+    show RM neutral-2
+    RM "To get inside we need to learn this four digit code."
+    MCT "Four digits, with 0-9 for 10 possibilities, only a 10,000 to 1 chance... Better than the lottery I guess."
+    show RM neutral
+    "Daichi scribbled four underscore marks on the board, each one representing one of the needed digits for the code."
+    RM "A pretty basic passcode but complex enough to make it too tedious to guess. The good news is through our scouting we did manage to learn two of the digits."
+    "Daichi scribbled in the known digits in their spot: _4_1."
+    show RM neutral-2
+    MC "Great, so only 100 possibilities left... I guess that's something. {w}Better than 10,000 anyway."
+    RM "Yes, though much improved, it is a bit further from where I'd hoped we'd be at this point in the investigation." 
+    show RM doubt
+    MC "I figured you'd be set. For someone who spends so much time staking out locations just sitting in bushes, guessing 100 different combinations doesn't sound like a serious time commitment."
+    RM "As always, the solution is not so obvious. There's at least three issues with just trying to \"Hageshi\" this problem: A) We don't know if the system won't lock us out after multiple attempts."
+    RM "B) We don't know if the same code is used all year so it could be useless next time we get there."
+    show RM angry-2
+    RM "And C) There's a freaking CCTV camera outside that will definitely record some students brute-forcing 100 different combinations of codes to get in."
+    show RM neutral
+    MC "I guess you're right, it isn't so straight forward. {w}Is this the part where you tell me you've been working on some kind of lock scrambling spy gadget? {w}I mean, like another one."
+    RM "I'm sorry to disappoint you, but this isn't a secret agent movie."
+    show RM angry-2
+    extend " And that's not what that device was for!"
+    MC "Sure, sure. I believe you."
+    show RM distrustful
+    RM "{i}Tsh!{/i} Shut up."
+    if getFlag("MC010_RM"):
+        "Whatever importance that device might have had for him to risk sneaking into my sister's room, most assuredly it was still in Yuki's hands, as I suspected he would have made a big deal of it had he managed to get it back." 
+        "Clearly it was a bit of a sore spot for him still, but given what he put my sister through, I didn't mind rubbing salt into that particular wound. But at the risk of him not opening up with more, I decided to move on from the issue for now."
+    else:
+        "Whatever importance that device might of had, Yuki must have managed to still hold onto it still, as I suspected he would have made a big deal of it had he managed to get it back." 
+        "Clearly it was a bit of a sore spot for him, so I figured it was best to just move past the issue for now."
+    show RM neutral
+    MC "Alright, so it sounds like it might not be so easy."
+    if getFlag("RM006_CompletedGTS030") or getFlag("RM007_CompletedGTS030"):
+        MCT "This information does however bring up some issues with the Giant's Dorm access that I hadn't thought of before."
+        MCT "Shit. What if they changed it up and then I mess up the code and get locked out? {w}Would that accidentally lock Naomi and the other Giant's inside?"
+        MCT "...Probably not. That seems a bit extreme, no need to catastrophize everything. {w}Still though, maybe it would be better to tell him I know the code..." 
+
+    pause 1
+    show RM concerned-2
+    RM "{i}Sighhhh{/i}..."
+    "Daichi looked visibly frustrated, if not downright deflated compared to his usually determined self."
+    MCT "Looks like he's still kicking himself for his screw up with the giant student back at the gate."
+    MCT "What was the guy's name again? {w}Gou Kajiwara?{w} That sounds right..."
+    MC "Is everything alright?"
+    "As much as Daichi's present problems were largely self-inflicted, I still kinda felt sorry for him."
+    RM "Yeah... I'm okay. {w}I just had a real good feeling that a big break in my investigation dropped right in my hand. Every bit of my intuition told me to seize the moment where everything clicked." 
+    show RM sad
+    RM "I really thought I finally found an answer to this Hikari Watanabe mystery. If I can't trust my investigative intuition on something so seemingly obvious, I'm not sure I can trust it on anything I've gathered so far."
+    show RM angry-2
+    RM "{i}Arghhh!!{/i} I should have known it was {i}too{/i} perfect." 
+    RM "I thought I could kill two birds with one stone. Solving this frustratingly bizarre mystery that has been driving me nuts for weeks on end, all while also fulfilling our current investigative objective to get inside."
+    show RM concerned
+    "As much as I agreed with Daichi that he really messed up that one, I thought the better of expressing as much." 
+    "Not because he didn't deserve it, mind you. Especially considering this was not even the first time he pulled a stunt like this that got himself cornered. {w}No scratch that. Not even cornered, but a full on {i}collision course{/i} with a wall." 
+    MCT "Let's see... Man, where do I even start?"
+    MCT "Probably with Tsubasa-sensei now that I think about it."
+    "That would have been the obvious one. Just when we were about to get an answer out of him about the Giants, Daichi went and jumped the gun when he got impatient with Tsubasa's old man meanderings."
+    "Then there was the time he thought Nurse Kiyomi was up to something suspicious, when it turns out she was just visiting her fiancee on the mainland."
+    "Something he could have just politely asked about when bumping into her instead of stalking her for what had to have been weeks on end."
+    if isEventCleared("MC006"):
+        "Then there was the time Hageshi caught him hiding in the vents when he tried to get out of playing handball with the rest of us."
+        MCT "Hehe... He sure looked like a whipped pup when he was literally dragged by the collar by Hageshi-sensei back to the gymnasium."
+    show RM concerned-2
+    if isEventCleared("AE004"):
+        "There was also that close call when Shiori chased him all across campus when trying to confront him about his student data." 
+        "Which he somehow managed to forge and replace with documents claiming he was from some far-off place called Cobrastan..."
+    if getFlag("MC010RM"):
+        "And then you have the arguably bigger blunder where his stake out turned to full on stalker-fest that landed him a full on kick to the face from my foot."
+        "I smiled at the thought, barely managing to suppress a chuckle. {w}Admittantly, I had an odd sense of satisfaction knowing I helped to teach him a lesson over that shit he pulled in Tomo's dorm, intentional or not."
+    MCT "{i}Geesh!{/i} And those are just the incidents that I know of..."
+    MCT "Wait. Why do I hang out with this guy again?"
+    pause 1
+    show RM sad
+    "But I already knew the answer. Whether I liked it or not, by sheer happenstance I found myself joined at the hip by having to share the same space with him. I was going to get drawn into this investigation whether I wanted to or not."
+    "As much as I had my reservations about Daichi's eccentricities, I still had my own questions about this place I wanted answers to."
+    "Hell we all did when we first got here, but I don't hear so many people talking about that anymore. Maybe it's just been pushed to the back of their minds in most people since then." 
+    "Probably because most people are having to deal with a bit more tumult in their lives than a body that gives them a bad haircut everyday."
+    show RM concerned-2
+    MCT "At least the guy's been reflecting on his mistakes. I guess that show's progress. {w}Right?"  
+    MCT "Maybe not, but it wouldn't hurt to look on the bright side."
+    MC "Well, I know it feels like a setback, but remember what you told me? We weren't even expecting to find a way in, it was just reconnaissance. And in that respect we walked away with more than what we had before."
+    show RM doubt
+    MC "So there's always that I guess."
+    RM "I suppose... That's one way of looking at it anyway."
+    "I guess I shouldn't have been too shocked that tiny pep talk wasn't quite enough to rouse Daichi from his self-inflicted self-loathing stupor."
+    MC "Besides, you never know. That Gou guy may still help us if we level with him and just be honest about what we're looking to do."
+    show RM concerned-2
+    "Daichi just shook his head in frustration. {w}At this point I didn't know what else to say to get him out of his funk."
+    RM "Knowing my big mouth, I'd probably just end up saying something else that would upset the guy all over again."
+    show RM concerned
+    RM "Besides, we don't have any way of contacting Kajiwara-san, which means our only choice of reaching him would be sitting outside the gate hoping he'll appear since we don't know his daily routine."
+    MC "That's never stopped you from doing a stakeout before."
+    show RM doubt
+    RM "Stakeouts are a necessary effort to pursue promising leads. They aren't a pretext for justifying a doomed expedition. It feels like it'll just be a waste of time."
+    MC "So wait, does that mean you didn't know the guy before? I thought you knew who he was?"
+    show RM concerned-2
+    "Daichi shook his head again, this time rather sheepishly."
+    RM "I got his name, but that's about it, and that information didn't exactly come from fraternizing."
+    MC "I suppose I shouldn't ask how then."
+    show RM sad
+    "Daichi just stared down at the floor, fidgeting slightly with one foot rubbing the floor as he avoided eye contact."
+    RM "Yeah, that's probably for the best."
+    MCT "Sounds like a shaky subject, likely involving some shady stuff he's not proud of. As much as I'd like to know more, it's probably better I try to pivot."
+    show RM doubt
+    MC "What about the faculty? Don't you think we could just ask one of them about the code? We are students here, it's not like we're suspicious outsiders prying for secrets."
+    MC "I mean... Even if that's technically what we are... in a sense."
+    show RM distrustful
+    "Daichi shook his head stiffly, half out of frustration, half trying to snap out of his funk."
+    show RM neutral-2
+    RM "Honestly, I'm not sure how I'd pull this one out. Like we just ask them if we can check out the Giants' Dorm because we find the place suspicious?"
+    "For my part, I just shrugged my shoulders. Despite the skepticism, I thought he should have at least conceded it had a better chance than anything he'd come up with so far."
+    pause 1
+    "After a brief pause, Daichi shot me a weird look. I could tell the gears were starting to turn again."
+    show RM smug
+    RM "Hmm, now that you mention it..."
+    show RM happy-2
+    RM "Hey... Just hear me out."
+    MC "Not the most assuring words, but I'm listening."
+    RM "Now I'm not gonna lie and say I haven't thought of breaking into the faculty room to find a code before..."
+    "I stared at Daichi in silence, not with a look of shock or disbelief, since I was well beyond that, but one of expressive disappointment and perturbation."
+    RM "I mean, {i}obviously{/i} we aren't going to do that— I'm just spitballing here."
+    MC "..."
+    show RM smug
+    RM "Heh... Yeah, just harmless spitballing..."
+    show RM concerned
+    MC "I'm gonna stop you right there. {w}Listen. {w}I've stuck my neck out for you plenty already." 
+    MC "I don't mind suffering a bit of embarrassment or having to lose face just to cover for a friend, but I'm not going to jail for some dumbass who can't take a hint when enough is enough. This kind of shit has to stop."
+    show RM concerned
+    RM "Wait, that's not what I meant! You see—"
+    show RM concerned-2
+    MC "Do you even realize how lucky you are you haven't gotten your ass thrown out of this place for the shit you've pulled already?"
+    MC "Do you seriously think by now that {i}both{/i} the council and the faculty aren't aware of your suspicious activity?"
+    RM "Well... It's not like they know that much..."
+    MC "Which means they probably know more than you think."
+    MC "Look, I'm not throwing in the towel, but if we're gonna do this together then we gotta do it right. No more funny business anymore. Period."
+    show RM sad
+    "Daichi looked down at the ground and gave a tired sigh, seeming to finally face the facts of getting called out."
+    RM "You're right. {w}I've taken a few too many reckless risks and now things have gotten a bit too hot. It would be a good idea to step back and take a more reserved approach to let things cool off around campus."
+    MC "So you have some other ideas in mind then?"
+    show RM neutral
+    RM "Well, a few anyway. And no more funny business, like you said..."
+    MC "Okay. Let's hear it then."
+    show RM neutral-2
+    RM "There's no sense in banging our heads against a wall, or in this case- a gate."
+    RM "There's plenty of other leads to follow up on, and who knows? An opportunity to get inside the Giant's Dorms might appear by itself in the meantime."
+    if getFlag("RM006_CompletedGTS030") or getFlag("RM007_CompletedGTS030"):
+        show RM neutral
+        "Daichi looked at me as if he were expecting me to complete his train of thought."
+        MCT "He might know that I know... {w}Or perhaps he's bluffing like with Gou..."
+        MC "..."
+        "Either way, I didn't take the bait, and Daichi didn't bite."
+        RM "Anyway, there are some other things we could focus on for now."
+    else:
+        RM "There are some other things I have in mind we could focus on for now."
+    show RM happy-2
+    RM "Before we do that though, I'm thinking I could use a fresh pair of eyes. {w}Why don't you take a look at the board and see if there is anything else you've learned about some of these loose threads that could help the investigation."
+    "Not sure what'd I'd notice that he wouldn't have already, but it had been a while since I looked at the board." 
+    "I can't say I had my ears to the ground and eyes in the back of my head soaking up potential leads non-stop in the meantime like Daichi would have preferred, but there might have been a few things here or there I managed to pick up."
+    if not getFlag("RMBoard_Takamura") and isEventCleared("MC009"):
+        "One familiar name stuck out where the information didn't match."
+        MCT "Takamura-sensei... {w} Wait, what is this? {w}\"Hourglass factor\"!? {w} \"Hips growth factor\"??"
+        show RM neutral-2
+        MC "This, right here."
+        "I walked up and pointed to Takamura's spot on the board."
+        MC "This is not right. I know for a fact Takamura doesn't have a growth factor."
+        show RM doubt
+        RM "Are you sure? You have seen Takamura-sensei's... figure, right?"
+        MC "I know what you mean, but I'm positive. She told me herself. \"Sweets and genetics\" apparently."
+        RM "I have a hard time believing that. Seems too convenient. Maybe that's just what she wants you to think?"
+        MC "She doesn't strike me as having a deceptive bone in her body. Besides, is it really hard to believe a woman without a growth might have a big ass?"
+        show RM neutral-2
+        RM "Alright, fine. I'll update the info."
+        $setFlag("RMBoard_Takamura")
+    MCT "Let's see here... \"D.A. Kusoreikā\"... \"way to contact?\" {w}I almost forgot about that."
+    show RM neutral
+    MC "What about this D.A. Kusoreikā person? Have you made any progress in contacting her?"
+    show RM distrustful
+    "Daichi shook his head in an irritated manner. My question must have been a reminder of further frustration on his part."
+    RM "Unfortunately, no. Whoever hides under that pseudonym - he or she - stopped using it a long time ago." 
+    RM "As far as I can tell from my research there haven't been any articles made by them since the late 2000s. Which is a shame, cause based on their articles they seem to know a great deal about what is happening here."
+    MC "More than what they've published you mean?"
+    show RM doubt
+    RM "I'm certain of it."
+    RM "I've tried to find them, but no luck so far. {w}No photos or any real leads to suggest where to find them. I'm not even sure if they are living on this island, though I suspect they must have at some point at least."
+    RM "I found an e-mail while looking them up, but I'm not even sure if it even still works since it was an email associated with an anonymous tips hotline whose number has since been defunct."
+    show RM angry-2
+    RM "But that's just it- I don't know. {w}I didn't get an automatic reply saying the email address doesn't exist, or could not be delivered. So in theory it still exists. But that's just in theory, the reality is that lead went nowhere so far."
+    show RM neutral
+    MCT "Well I guess that's the state of that lead so far. Hmm... What else do we got here?"
+    if routelock == "BE" or routelock == "PRG" or getHighestAffection() == ("BE"):
+        "My eyes scanned the board until two words immediately caught my attention \"breast growth\"."
+    elif routelock == "AE":
+        "My eyes scanned the board until two words immediately caught my attention \"ass growth\"."
+    elif routelock == "WG" or getHighestAffection() == ("WG") or isEventCleared("WGB001"):
+        "My eyes scanned the board until two words immediately caught my attention \"weight gain\"."
+    elif routelock == "FMG" or getHighestAffection() == ("FMG"):
+        "My eyes scanned the board until two words immediately caught my attention \"muscle growth\"."
+    elif routelock == "GTS" or getHighestAffection() == ("GTS"):
+        "My eyes scanned the board until two words immediately caught my attention \"gigantism/height growth\"."
+    else:
+        "My eyes scanned the board until two words immediately caught my attention \"breast growth\"."
+    "It was part of a whole section about the growth factors he had already begun to do some research on."
+    "There were the familiar ones I recognised from our co-eds in 3-B: breast growth, ass growth, weight gain, muscle, etc."
+    "But he had another group he classified as derivatives of these like nipples growth, hip growth, thighs growth..." 
+    MCT "Hmmm. Hadn't thought of it like that before. Those do seem less common, but are they related?"
+    "And then there was a completely different section for unrelated ones such as nails growth, tongue growth, as well as mine with hair growth..."
+    show RM neutral-2
+    MCT "Not as much information on those it seems."
+    "Besides that section were two relatively large bubbles tethered on the side containing much more information about \"lip growth\" and \"gigantism/height growth factor\"."
+    MCT "Makes sense he would focus on those. Probably wants to know any crumb of information that might be able to help his sister."
+    MCT "As for the Giants, that seems to be his most recent obsession given that it's the most prominent element of the investigation so far. It certainly is a loose thread we should know more about by now."
+    if getFlag("Meet_Sakie") and isEventCleared("BE016"):
+        MC "I didn't see any mention of \"foot growth\" on your list. There's at least one student with it that I've met before. Maybe you should add that to your list."
+        show RM doubt
+        RM "Where was that at? I haven't seen someone with it before. Are you sure it's not just some derivation of the giant growth as they undergo a growth spurt?"
+        MC "I'm pretty sure, I don't think she's gotten taller... other than maybe her feet. {w}She's a member of the basketball club. I saw her at a practice one time."
+        RM "Interesting... I'll write it in."
+        RM "I'm surprised to hear that, I never realized you were a member of the basketball club."
+        MC "Me either. Cause I'm not. I was just there to support Honoka as a spectator. She's the club member."
+        if getHighestAffection() == ("BE"):
+            MC "Or {i}was{/i} I should say. That girl changes clubs like she changes shirts."
+            RM "Ah yes, how could I forget. You two are quite the lovebirds, especially if you're going out of your way to show some obligatory superficial interest in her hobbies."
+            MC "That's one way to look at it I guess."
+        else:       
+            show RM smug            
+            RM "You and Inoue-san certainly seem to spend a lot of time with each other."
+            show RM doubt
+            MC "It's cause we're friends. We go way back, long before we met up again when we got here."
+            show RM happy-2
+            RM "That's interesting..."
+            "Daichi began scribbling down some notes in a random notebook he picked up off his desk."
+            MC "What are you writing?"
+            show RM smug
+            RM "Oh, nothing. Just was reminded of some rather interesting observations that I forgot to write down. Nothing to do with you and Inoue-san."
+            MCT "You are a terrible liar."
+            RM "Back to the topic at hand."
+        RM "Did you by chance meet their coach, Sugiyama-san?"
+        "I nodded yes. Looking over at the board again I noticed the name Jiro Sugiyama was under the list of names of the Academy staff, leading me to suspect he was of some interest to Daichi in his present investigation."
+        MC "He was impressively tall, but I wouldn't have assumed he was a giant."
+        RM "I agree. From what I've gleaned they tend to call his type of growth \"height factor\" as opposed to the more extreme cases like Gou or Naomi's, which Tsubasa-sensei referred to as \"gigantism factor\"."
+    elif getFlag("Meet_Sakie"):
+        MC "I didn't see any mention of \"foot growth\" on your list. There's at least one student with it that I've met before. Maybe you should add that to your list."
+        show RM doubt
+        RM "Where was that at? I haven't seen someone with it before. Are you sure it's not just some derivation of the giant growth as they undergo a growth spurt?"
+        MC "I'm pretty sure, I don't think she's gotten taller... other than maybe her feet. {w}She's a member of the basketball club."
+        RM "Interesting... I'll write it in."
+        RM "I'm surprised to hear that, I never realized you were a member of the basketball club."
+        MC "Me either. Cause I'm not. I just met her before and overheard her talk about being in it."
+        show RM happy-2
+        RM "Seems like you've been keeping your eyes open like I asked. I appreciate it."
+        MC "Yeah, no problem."
+    show RM neutral-2
+    if routelock == "PRG":
+        "Along the list of growths, all the way at the bottom was a crossed out entry for \"hyperfertility\"." 
+        "Even partially obscured with a thick black marker, the word still managed to pierce right into my brain, like a hammer sinking a nail into a board."
+        "It was a word I'd come to know all {i}too{/i} well since learning I was going to become a father. {w}I shouldn't be surprised to see it on his board though."
+        show RM concerned
+        RM "We don't have to talk about every one of them. We can save it for some other time."
+        "Daichi's remark snapped me out of getting too lost in my thoughts. He must have noticed me staring off into space at the sight of that particular entry."
+        MC "Probably for the best. I don't even know where to start when it comes to {i}that one{/i}. {w}It's... It's just a lot to take in."
+        show RM happy-2
+        RM "Mhmm, that's understandstable."
+        "I was surprised to feel an awkward clammy hand on my shoulder from behind."
+        RM "I understand your situation is really complicated, but just so you know, I got your back."
+        "I wasn't quite sure what to say in response to that. Not that we weren't friends, but he about bowled me over by expressing some genuine concern for something other than his little schemes for once."
+        MC "Thanks man, appreciate it."
+        MCT " \"Hyperfertility\", {w}a rose by any other name... no matter what you called, it was still hard to imagine something like \"pregnancy growth\" was a thing, but that belly of Aida's told no lies."
+    else:
+        "Along the list of growths, all the way at the bottom was the final entry: \"hyperfertility\"."
+        if getHighestAffection() == ("BE") or if getHighestAffection() == ("WG"):
+            MC "\"Hyperfertility\", I presume that's referring to Aida's growth factor?"
+            show RM smug
+            RM "Correct. That appears to be the technical term for it."
+            MC "Right. That makes sense. She had to have had the condition before she even got pregnant, which makes sense why it would be named after that, instead of her belly growth."
+            MC "Still though, no matter what you call it, it's hard to believe \"pregnancy growth\" is a thing."
+        else:
+            MC "Hyper-whatnow? What does that have to do with growths?"
+            show RM doubt
+            RM "It's Kodama-san's growth, or at least the technical term for it. {w}I mean, it sort of makes sense if you think about it. Technically she had the \"growth\" before she got pregnant."
+            show RM neutral-2
+            MC "Oh, right. I guess it makes sense. Sounds a bit more official than \"mega-pregnancy\" or \"hyper-belly\" anyway."
+            MC "Still kinda hard to believe \"pregnancy growth\" is a thing..."
+            "I don't know what it was about that one specifically... maybe it was just the sheer shock of Aida's condition and what it meant for her." 
+            "But reading that word and being reminded of that factor brought me back to the harsh reality of what we found ourselves in, in a way that hadn't registered when mentioning the other ones."
+    if routelock == "PRG":
+        MC "Man, every time I think my perception of the unbelievable is stretched to its limits... it always somehow manages to get... {w}more stretched?"
+        show RM neutral
+        MC "If that makes any sense."
+        RM "It does, but maybe you should stick to your doodling since composing prose doesn't seem to be your strong suit."
+        MCT "Like your chicken scratches and manic ramblings scrawled all over this thing are much better."
+        "Looking more closely at the entry for \"hyperfertility\" there were quite a few text bubbles and notes stemming off of it... well, more so than most others anyway. All manner of crazy theories abandoned."
+        MCT "Failed experiments? Potential government plot? {w}What does that have to do with pregnancy?"
+        "I hadn't realized at the time how much attention Aida's condition drew from Daichi. To his credit, despite his curiosity, he was clearly trying to be sensitive about my situation with Aida by not prying like I'm sure he was itching to."
+        "But given that this appeared to be more on the unhinged side of the spectrum of his investigation, I decided it was better to just ignore this particular part for the sake of my own sanity."
+        show RM doubt
+        MC "{i}*Cough*{/i}... Ugh. Yeah, maybe we should move on to something else you got on here."
+        show RM concerned
+        RM "Yeah, sure. No problem, we can do that."
+    else:
+        MC "Man, every time I think my perception of the unbelievable is stretched to its limits... it always somehow manages to get... {w}more stretched?"
+        show RM neutral
+        MC "If that makes any sense."
+        RM "It does, but maybe you should stick to your doodling since composing prose doesn't seem to be your strong suit."
+        MCT "Like your chicken scratches and manic ramblings scrawled all over this thing are much better."
+        "Looking more closely at the entry for \"hyperfertility\" there were quite a few text bubbles and notes stemming off of it... well, more so than most others anyway. All manner of crazy theories abandoned."
+        MCT "Failed experiments? Potential government plot? {w}What does that have to do with pregnancy?"
+        "This particular entry appeared to be more towards the unhinged of the spectrum of his investigations, but I'd have been lying if I said it didn't raise questions of my own."   
+        MC "Seems like you spent a lot of time looking into this one."
+        show RM smug
+        RM "I investigated this one quite thoroughly, as I was really curious. I mean, well... you know... {w}Her belly. It just grew so fast... I would have dismissed it as a mere rumor if I hadn't seen it myself."
+        MC "Did you learn anything interesting?"
+        show RM neutral-2
+        RM "I wasn't able to dig up much. Part of that has to do with the nature of the factor itself. Apparently it's one of the rarest growths ever recorded at this academy." 
+        RM "There have only ever been a handful of students with this factor. With so few examples, there's just much less data on it compared to the others."
+        show RM smug
+        RM "I did figure out the part about her belly though."
+        show RM doubt
+        MC "Was there something insufficient about getting pregnant that failed to explain it?"
+        RM "Tsh! Shut up. {w}I mean why her belly got so big so fast. Didn't you find that to be odd?"
+        show RM smug
+        RM "It was surprisingly easy to explain. Her uterus is filled with fluids that make her belly look so swollen." 
+        RM " \"Polyhydramnios\" is the medical term for it." 
+        show RM neutral-2
+        RM "It's not usual for it to occur to some extent in normal pregnancies, but apparently it's common for those with the hyperfertility factor to present with it to an extreme degree once they become pregnant."
+        MC "That would make sense considering it's much easier to grow with fluid that fast than it is with babies."
+        show RM doubt
+        RM "Exactly. Initially I was concerned this was some kind of unnatural acceleration of pregnancy." 
+        show RM happy
+        RM "But the records I could find on the limited number of cases all indicated that hyperfertility factor holders always followed the typical stages of pregnancy over the usual time course of three trimesters."
+        RM "...So that's why her belly looks the way that it does."
+        "I just stood there trying to process what had just been said, then blinked a couple of times as I began to come back to my senses."
+        "It wasn't the most comfortable of subject matters that was for sure. Especially knowing that one of our classmates was actually going through it, even if attempting to discuss it in detached clinical terms."
+        show RM doubt
+        MC "{i}*Cough*{/i}... Ugh. Yeah, maybe we should move on to something else you got on here."
+        MC "This is just... {w}Well, it's just a bit too awkward, don't you think?"
+        show RM distrustful
+        RM "Hey, you're the one that brought it up. It's not like I had casually discussing a classmate's uterus stretching on my bingo card this morning either."
+        MC "Uggh... Just shut the fuck up."
+        MC "Don't you have something else in your conspiracy pipeline we can talk about?"
+        RM "Fine we can do that. Just give me a sec."
+        "The conversation must have jogged his memory. Not wanting to miss the opportunity, Daichi proceeded to pull out a marker to update his notes on the board about the factor with the info he had just relayed to me."
+    show RM neutral
+    "By this point I would have preferred to save whatever he had to be left for another day, but I knew he would pester me to no end if I just walked away now. The easier course of action was likely to get his mind on a different track."
+    show RM happy
+    MC "You mentioned earlier you had something else we could focus on?"
+    show RM happy-2
+    RM "Mhmm."
+    "Daichi nodded confidently with his typical smug smirk."
+    RM "There's a few things actually. {w}One main thing, and another minor thing."
+    show RM happy
+    RM "This minor thing is completely optional though, but I do think it would prove rather useful..."
+    show RM doubt
+    MC "Gee, how interesting. Well, don't keep me in suspense now..."
+    RM "Yes, well, you see, it concerns-"
+    show RM distrustful
+    MC "Let's just start with the main thing instead."
+    "Daichi could sense my patience was wearing thin by this point, so he made an effort to get to the point."
+    show RM neutral-2
+    RM "Ahem. {w}Alright. I think our next destination should be the old hotel in Seichou Town."
+    RM "If you recall I had mentioned it before. Apparently it originally was used for worker housing for the quarry workers back when it was in operation. A barracks of sorts."
+    show RM neutral
+    MC "Are you sure about that? Seems kind of far from the Giant's Dorm, don't you think?"
+    RM "It's not that far from where the stone would have been shipped out of the harbor though. Besides, no one's getting a good night's sleep if they have to live nearby where they're blasting out rock tunnels with explosives."
+    MC "You got a point there."
+    RM "It likely also served as some form of front office for the quarry's operations. I bet there's some useful information somewhere in the place that might let us learn more about the Giant's Dorms."
+    MC "What if we don't find anything?"
+    show RM neutral-2
+    RM "It's possible, but I think unlikely. Worst case scenario though we'll likely find some new information about the history of the island, since the hotel was built back in Seichou Town's early days."
+    show RM smug
+    RM "So at the very least, it won't be a waste of time."
+    MC "That's a plus, especially considering our recent streak of strikeouts."
+    if isEventCleared("MC010"):
+        show RM happy
+        RM "Do you think you'd have time to go with me sometime in the near future?"
+        MC "I should. Just give me a few days. I have some papers I need to finish."
+        if routelock == "AE":
+            show RM doubt
+            MC "That and I made some plans with Shiori already. She's already pretty busy with the student council stuff and you know how much she values keeping a strict schedule."
+            RM "I see. Well just keep this tight-lipped. I don't trust Matsumoto-san..."
+            show RM distrustful
+            MC "Don't worry. It's nothing tied to you. Believe it or not, you're not the focus of our conversations."
+            "Daichi's sour expression indicated an extreme skepticism with my statement. {w}Then again, what else is new?"
+        elif routelock == "PRG":
+            MC "I also made some other plans. You know..."
+            RM "Relax. I get it. It's a lot to process."
+            "I gave Daichi an appreciative nod, and we just left that matter at that."
+        elif routelock == "WG" or getHighestAffection() == ("WG"):
+            MC "Besides, I got some other plans."
+            show RM smug
+            RM "Spending more time with the heiress?"
+            MC "Hm, well I guess it wasn't that hard to guess."
+            RM "Not at all."
+            show RM neutral
+            MC "I suggest you stop referring to her as \"The Heiress\" lest you slip up and say it in front of her sometime and get an earful."
+            MC "She's still not all too keen on you after that \"measurement\" fiasco, you know."
+            show RM angry-2
+            RM "{i}Tsh{/i}. I was just gathering data. Data that would have been {i}useful{/i} for learning more about her particular growth. {w}If anything I was trying to {i}help{/i} her."
+            MCT "So far the only mystery we've managed to solve is why this guy doesn't have a girlfriend."
+        elif routelock == "FMG" or getHighestAffection() == ("FMG"):
+            MC "Besides that I got plans to hang out with my girlfriend."
+            RM "Gonna hit the gym again, with Mizutani-san?"
+            MC "I'll have you know, Akira is more than just a gym rat."
+            show RM smug
+            RM "But the answer's still yes, right?"
+            MC "...Yes- But only by mere coincidence this time!"
+            RM "Sure..."
+        elif routelock == "BE" or getHighestAffection() == ("BE"):
+            MC "Besides, I was already planning on hanging out with my girlfriend."
+            MC "We've recently been hanging out at this cool arcade Honoka found in town. I definitely recommend the place if you're ever downtown and need a break from all your snooping."
+            show RM neutral
+            RM "...I'll consider it. Arcades aren't really my thing though."
+            MCT "Color me surprised the strangest guy I know isn't into normal guy stuff. {w}Oh well, at least I tried."
+        elif routelock == "GTS" or getHighestAffection() == ("GTS"):
+            if isEventCleared("RM006_CompletedGTS030") or isEventCleared("RM007_CompletedGTS030"):
+                MC "That and I've already made plans with... Well, I've already made some plans."
+                show RM neutral
+                "Daichi stared at me rather oddly waiting for me to finish that thought..."
+                extend " Only to realize that was the end of it. {w}He stared a little longer, but didn't say anything."
+                MCT "Best not to give him any more ideas than necessary."
+            else:
+                MC "That and I've already made plans. I'd say more but I don't want to jinx it."
+                RM "That's fine. I wasn't meaning to ask."
+                MC "Appreciate it."
+                RM "Well, good luck anyways."
+                MC "Thanks."
+        elif isEventCleared("WGB005"):
+            MC "Besides, I was hoping to get to hang out with Okisho."
+            RM "The music club president?"
+            MC "You know her?"
+            show RM neutral-2
+            RM "Not personally, no. But I became aware of her due to overhearing Nikumaru airing her apparent grievances about her." 
+            MC "Sounds about right."
+            RM "Another case of an obvious weight gain factor I documented in my notes."
+            MC "She's pretty cool. But I never really know her schedule. That's why I said I'm {i}hoping{/i} to hang out with her."
+            show RM happy
+            RM "Well, good luck then."
+            MC "Thanks."
+        else:
+            MC "That and I already made some plans."
+            show RM smug
+            RM "Oh, I see. Her again, I presume?"
+            MC "...I have no idea what you're talking about."
+            RM "Yeah, sure. You totally don't."
+            MCT "Not my best excuse, but that's all he's getting." 
+        show RM happy
+        RM "That's fine, it can wait a few days. It's not a time sensitive locale. I just think it might crack this case back open if we could get some fresh leads."
+        if getFlag("MC010RM"):
+            show RM concerned            
+            RM "Uhh, umm, by the way. How's your sister doing? After... well, you know..."
+            show RM concerned-2
+            MC "She's still pretty pissed off at you to be honest, and I don't blame her."
+            RM "{i}Sigh{/i}... Yeah, that figures."
+            MC "I don't expect it's something she'll forget anytime soon, but besides that, she's doing okay."
+            MCT "Well, at least Tomo's version of \"okay\"."
+            show RM sad
+            RM "Yeah... I'm still really sorry about that. I do understand what you said, I really did cross the line there." 
+            show RM doubt
+            RM "No one from the school has questioned me about the incident so I appreciate whatever you said to smooth things over with her."
+            show RM concerned-2
+            MC "Let's just say I had to pull a few strings, so just keep that in mind if in the future you ever think of pulling that kind of shit again."
+            MC "If nothing else though, it's good to know you've owned up to your mistake."
+            RM "Yeah, kinda hard not to though."
+    else:
+        MC "Something that might be worth checking out to get more info on the island is the local matsuri coming up. I found out about it from an email advertising the local \"Blossom Festival\" in town."
+        show RM neutral
+        RM "I have heard about it, yes."
+        MC "It's a big yearly event celebrating the end of spring. I was thinking about going, seeing as it's a local tradition and all, and I enjoyed going to those kind of things when I was a kid."
+        MC "Not that public appearances seem to be your thing, but I figured you'd be all over it as a reconnaissance opportunity."
+        show RM smug
+        RM "Don't worry about me. You should go to the festival, the hotel trip can wait. I have some plans for that night already, so it's all good. We can catch up in the next few days."
+        show RM doubt
+        MC "Why didn't you mention the festival before then if it's smack in the middle of when you were thinking of going to the hotel?"
+        show RM sad
+        RM "Um, well, uh... I just assumed you were already planning on going anyway. So, I uh... just chalked it up as a bit of a write-off." 
+        show RM smug
+        extend " That's all. {w}Yeah..."
+        MCT "What is this guy getting at?"
+        show RM doubt
+        MC "Just what exactly are your \"plans\" for the day of the matsuri?"
+        RM "What? What do you mean about my plans? They're just plans. Some stuff. I like doing stuff sometimes. Don't you like stuff? I'm just doing some things."
+        if getFlag("MC005RM"):
+            MCT "He was acting suspicious like this in the lead up to Golden Week, and we all know how that ended."
+            show RM sad
+            MC "You aren't planning on tailing someone again like last time are you?"
+            show RM angry-2
+            RM "No, I'm not going to do any such thing."
+            MCT "I'll take that with a pinch of salt. Hopefully he won't stick his nose into something again, especially if I'm not there to bail him out."
+        MC "Sure man, whatever. As long as I don't come back to the dorm to find someone duct-taped to a chair after being interrogated for twelve hours, I don't give a shit."
+        show RM happy-2
+        RM "Well now I'll have to change my plans..."
+        MC "!?"
+        show RM doubt
+        RM "Kidding. I'm kidding."
+        MC "..."
+        show RM angry
+        RM "For real."
+        MC "You're the only person I know that {i}couldn't{/i} make that joke funny."
+    show RM neutral-2
+    MC "You mentioned earlier some other thing besides the hotel. What was that again?"
+    RM "Well, seeing as we're now partners working together, I figured I could trust you to do some evidence gathering missions on your own." 
+    RM "I have a few things in mind that I think could be really useful to investigate, but I'd be stretching myself too thin if I tried to get to all of them."
+    show RM happy
+    RM "By giving you your own assignments, we can cover more ground this way."
+    MCT "Ah yes, twice the stalking, naturally."
+    MC "Just what exactly do you have in mind for these so called \"investigations\"?"
+    show RM neutral-2
+    RM "Nothing that intense, if that's what you're worried about. They're more \"gigs\" than investigations to be honest."
+    MC "Gigs? Does sound too bad. What do you mean by that though?"
+    show RM smug
+    RM "Little thingies here and there that may be worth checking out, but at the same time are difficult to predict how relevant they might be to their investigation."
+    show RM happy
+    RM "Individual loose threads that might turn up nothing, but I think it'd be a real blindspot to neglect them entirely, which is why it'd be helpful to have a second pair of eyes on things."
+    RM "They're completely optional, and it's up to you if you want to do them or not."
+    MCT "Sounds like he wants to offload the fluff pieces and busywork on to me." 
+    MCT "I'm certainly not going to complain. He probably realizes he's not going to get me to sit inside a dumpster for twelve hours just to spot when someone suspicious leaves work."
+    MC "Alright, I'm interested. {w}Potentially."
+    show RM happy-2
+    RM "Good. I figured you might be."
+    MC "Sounds like you have something in mind already."
+    RM "Correct."
+    MC "Nothing sketchy, right?"
+    show RM distrustful
+    "Daichi shook his head, half in frustration that I would ask, the other half in frustration knowing full well why I would ask."
+    show RM neutral
+    RM "No, it's actually quite simple. {w}It will just take some time. Time that I don't have because I'm currently working on something else."
+    jump RM007_mainmenu
+
+label RM007_mainmenu:
+    menu:
+        "Check Daichi's gigs":
+            show RM neutral-2
+            MC "I'm interested, but I'd need to know some more details."
+            show RM happy
+            $setAffection(RM, 1)
+            RM "Of course. Ask away."
+            jump RM007gig_menu
+
+        "Leave it for later":
+            MC "I don't have time now, but maybe later."
+            RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
+            $setFlag("RM007_Pass")
+            jump RM007_Epilogue
+
+        "Ask what he's working on":
+            MC "What are you working on then?"
+            show RM smug
+            RM "I'm going to try to learn more about the manufacturer of the keypad on the gate to the Giant's Dorms."
+            "Daichi pointed to the board near the quadrant devoted to the Giant's Dorms."
+            RM "It's written on here if you wanted to take a look."
+            MC " \"JJN\" Never heard of them"
+            show RM neutral-2
+            RM "That's because it's not just one manufacturer, but multiple manufacturers developing a security system in collaboration." 
+            MC "So it was a custom product of sorts."
+            RM "Exactly."
+            MCT "Looks like Daichi was on to something after all."
+            RM "Makes sense, considering the scale of it, but it's also the reason why I can't find anything about it. It's apparently one of a kind."
+            RM "Which seems to be a repeating thing at this place."
+            MC "What do you mean?"
+            show RM neutral
+            RM "Haven't you noticed? Almost everything at the Academy seems to be custom made, from the building design, down to the furniture."
+            MC "Doesn't sound too efficient in that regard."
+            RM "Precisely."
+            MC "Isn't that kind of the point though? Non-standard sized buildings and accommodations for nonstandard sized residents?"
+            show RM smug
+            RM "Perhaps, but you're only thinking at the surface level."
+            MCT "Maybe, but at least I'm not diving into the deep end at the drop of a hat."
+            MC "What do you mean?"
+            RM "It creates a problem for the school; it'd be impossible to replace or fix damn near any of it unless they somehow had an in-house solution."
+            "Daichi's conclusion rang a couple bells inside my head. I looked back over towards the board at the facility personnel."
+            MCT "Mukashi Misuboro: Carpenter and maintenance staff."
+            MC "You think this Misuboro guy might help us out then?"
+            show RM doubt
+            "Daichi walked back to the board, with his hand to his chin he seemed to be mulling over my suggestion."
+            RM "Hmm. {w}It's not a bad idea, but I doubt he would give us an answer if we just asked him directly."
+            show RM angry-2
+            MC "Well, that approach would have saved us a lot of time with Nurse Kiyomi."
+            RM "But it didn't with Tsubasa-sensei."
+            MC "That's on you and your {i}schtick{/i}. I don't know what else to tell you."
+            show RM angry
+            RM "Yeah, yeah." 
+            show RM doubt 
+            extend " Still though, if we could get him talking, he might divulge some details about the Giant's Dorms, seeing how he has to service that part of campus as well."
+            jump RM007gig2_menu 
+
+        "I've changed my mind, let's focus only on the main task.":
+            show RM angry
+            MC "On second thought, I've changed my mind, let's focus only on the main task."
+            $setAffection(RM, -1)
+            show RM distrustful
+            RM "Hmph, well I guess that's fair."
+            jump RM007_Epilogue
+
+label RM007gig_menu:
+    menu:
+        "Ask about the gig":
+            show RM happy
+            MC "What's this idea for a \"gig\" as you call it, that you have in mind?"
+            RM "That's a simple one. All I need you to do for me is go into a bus stop and see where the bus goes by making a full circle on the route."
+            MC "What? That's all? Doesn't it just go straight to town? I know you've been there before."
+            show RM happy-2
+            RM "Yes, but that's just it, there are {i}two{/i} bus lines: one that goes straight to Seichou Town, and another that goes all around the island."
+            show RM neutral-2
+            RM "I'm curious about where the other one goes, but I haven't had time to check it yet. Presumably it would take quite a bit longer than the standard route."
+            menu:
+                "Take the gig":
+                    $setFlag("RMG001_Unlock")
+                    MC "Alright, I can take this one. When I get a free afternoon I'll try to catch a ride on the longer bus route."
+                    RM "Excellent. I'll be interested to know what you find. Might be some more locations worth checking out."
+                    jump RM007_menualt
+                "Leave it for later":
+                    show RM neutral
+                    MC "I don't have time now, but maybe later."
+                    RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
+                    jump RM007_Epilogue
+
+label RM007gig2_menu:    
+    menu:
+        "Suggest going there together":
+            MC "Sounds like we should go there together then."
+            $setFlag("RMG002_Unlock")
+            RM "I agree. That would likely be the best approach. Perhaps one of us could distract him while the other snoops around his shop?"
+            MC "Maybe, just don't plan on taking anything."
+            RM "I wasn't, but I do suspect the code might be laying around somewhere in there."
+            jump RM007_Epilogue
+        "Leave it for later":
+            MC "I don't have time now, but maybe later."
+            RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
+            jump RM007_Epilogue
+
+label RM007_menualt
+    menu:
+        "Ask what he's working on":
+            show RM happy
+            MC "What are you working on then?"
+            RM "I'm going to try to learn more about the manufacturer of the keypad on the gate to the Giant's Dorms."
+            "Daichi pointed to the board near the quadrant devoted to the Giant's Dorms."
+            show RM happy-2
+            RM "It's written on here if you wanted to take a look."
+            MC "\"JJN\" Never heard of them"
+            RM "That's because it's not just one manufacturer, but multiple manufacturers developing a security system in collaboration." 
+            MC "So it was a custom product of sorts."
+            show RM smug
+            RM "Exactly."
+            MCT "Looks like Daichi was on to something after all."
+            show RM doubt
+            RM "Makes sense, considering the scale of it, but it's also the reason why I can't find anything about it. It's apparently one of a kind."
+            RM "Which seems to be a repeating thing at this place."
+            MC "What do you mean?"
+            RM "Haven't you noticed? Almost everything at the Academy seems to be custom made, from the building design, down to the furniture."
+            MC "Doesn't sound too efficient in that regard."
+            RM "Precisely."
+            MC "Isn't that kind of the point though? Non-standard sized buildings and accommodations for nonstandard sized residents?"
+            show RM neutral
+            RM "Perhaps, but you're only thinking at the surface level."
+            MCT "Maybe, but at least I'm not diving into the deep end at the drop of a hat."
+            MC "What do you mean?"
+            show RM neutral-2
+            RM "It creates a problem for the school; it'd be impossible to replace or fix damn near any of it unless they somehow had an in-house solution."
+            "Daichi's conclusion rang a couple bells inside my head. I looked back over towards the board at the facility personnel."
+            MCT "Mukashi Misuboro: Carpenter and maintenance staff."
+            MC "You think this Misuboro guy might help us out then?"
+            show RM doubt
+            "Daichi walked back to the board, with his hand to his chin he seemed to be mulling over my suggestion."
+            RM "Hmm. {w}It's not a bad idea, but I doubt he would give us an answer if we just asked him directly."
+            MC "Well, that approach would have saved us a lot of time with Nurse Kiyomi."
+            RM "But it didn't with Tsubasa-sensei."
+            MC "That's on you and your {i}schtick{/i}. I don't know what else to tell you."
+            RM "Yeah, yeah. {w}Still though, if we could get him talking, he might divulge some details about the Giant's Dorms, seeing how he has to service that part of campus as well."
+            jump RM007gig2_menu 
+
+        "I think I'm good for now":
+            show RM neutral-2
+            MC "I think I'm good for now. Sounds like we both got enough on our plate to keep us occupied for the time being."
+            RM "Yeah, no need to rush at this point. Just let me know when you're up for more."
+            jump RM007_Epilogue
+
+label RM007_Epilogue:
+    show RM neutral-2
+    RM "Well, that covers everything I had for this meeting."
+    RM "Let's try to pick this back up in the next few days like we discussed."
+    RM "We'll go together to the hotel in Seichou Town."
+    if getFlag("RMG001_Unlock") and ("RMG002_Unlock"):
+        show RM happy
+        RM "Let me know where that bus line leads and if you have an opening some afternoon to go down to the shop." 
+        MC "Sounds good. Will do."
+        RM "It might not be much, but who knows? Could lead to something bigger."
+    elif getFlag("RMG001_Unlock"):
+        show RM happy
+        RM "Let me know where that bus line leads."
+        MC "Will do."
+        RM "It might not be much, but who knows? Could lead to something bigger."
+    elif getFlag("RMG002_Unlock"):
+        show RM happy
+        RM "Let me know when you have an opening some afternoon to go down to the shop." 
+        MC "Sounds good. Will do."
+        show RM doubt
+        RM "I've never met this Misuboro guy before, but if he knows the ins and outs of this facility like I suspect, I'd bet big money he has his share of secrets to tell." 
+        MC "It's certainly possible."
+    MC "If that's all there is then, I think I'm gonna head out."
+    show RM happy-2
+    RM "Meeting adjourned then. {i}Gavel gavel{/i}."
+    MC "What is this? Your court room all of a sudden?"
+    hide RM with dissolve
+    pause 1
+    MC "Where the fuck did he...?"
+    MC "Seriously, now? {w}Whatever. I'm overdue for that sandwich." 
+    jump daymenu
