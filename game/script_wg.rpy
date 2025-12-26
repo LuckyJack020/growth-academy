@@ -36324,6 +36324,8 @@ label WGB004:
     jump daymenu
 
 label WGB005:
+    if not getFlag("XX25"):
+        $setFlag("XX25")
     $setProgress("WGB", "WGB006")    
     scene Woods with fade
     play music ClearSkies
@@ -36521,6 +36523,666 @@ label WGB005:
     jump daymenu
 
 label WGB006:
+    $setProgress("WGB", "WGB007")     
+    scene Cafeteria with fade
+    play music Peaceful
+    "It had been a bit of a hectic day so far." 
+    "There was a quiz in Tashi's class that I wish I would have studied more for, but instead spent way more time than I expected to scrambling this morning to finish an assignment for Hageshi's test."
+    "Needless to say I didn't exactly have an easy time staying away in Tsubasa's class, which was a feat in and of itself when I was feeling slightly more conscious than my current state."
+    "The day wasn't even half over and I was already beat, but at least the lunch hour promised a nice reprieve before getting back to the grind."
+    show Okisho neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Looking around for a seat, I came across an all too rare site. An Okisho out in the wild. I never really knew that girl's schedule and always seemed to just catch her coming and going."
+    MCT "Looks like things are looking up."
+    "Seizing the rare opportunity cozied on up to a seat opposite of her at the table."
+    show GTS neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Only to realize she wasn't alone."
+    GTS "Hello, Hotsure-san."
+    "Kinda hard to miss Naomi these days with her standing a head above most people, but I was so transfixed on Okisho, I hadn't noticed."
+    MC "Oh, hi Yamazaki-san. Mind if I sit here?"
+    GTS "I certainly wouldn't mind. I don't think Mizawa-san would mind either."
+    Okisho "I don't know Yamazaki-san... Are you sure he's cool enough to sit with us?"
+    show GTS neutral
+    GTS "Hotsure-san has given me the impression of a diligent and temperate gentleman. Certainly I see no harm in his society."
+    show GTS neutral-2
+    Okisho "Well today is your lucky day, Hotshot. I was gonna say no, but if Yamazaki-san is willing to vouch for you, then I can't argue with that."
+    MC "Is that so? Cause I have a feeling if I tried to walk past you you'd try to flag me down in hopes of hitting me up for some free snacks."
+    Okisho "Since when did you become a mind reader?"
+    MC "This isn't really hair growing on my head, they're brain antennae."
+    Okisho "And here I thought you were starting to grow your own cocoon instead, Bugboy."
+    MC "At the rate these things are growing, I wouldn't rule out that possibility either."
+    MC "Here, catch."
+    "I tossed Okisho a pack of chocolate pocky I pulled out of my bag." 
+    Okisho "Either you're a mind reader or can predict the future. Thanks."
+    "Truth be told, I got it from a vending machine a few days ago hoping to give it to her when I saw her, but tried to play it off as a more spontaneous thing."
+    show GTS happy-2
+    GTS "It seems you have impeccable timing, Hotsure-san. Mizawa-san was just saying she was hoping to get something sweet."
+    show GTS embarrassed
+    MC "Well, whether it's reading Mizawa-san's mind or predicting her future, the answer is still the same: \"I'm hungry\"."
+    Okisho "Bwhahaha! {w}You got that right."
+    show GTS neutral
+    Okisho "Maybe this guy's worth keeping around after all... What do you think, Yamazaki-san?"
+    show GTS pondering
+    GTS "Hmhmhm! He certainly seems to understand you well, Mizawa-san. I dare say he would make a most suiting friend." 
+    show GTS happy-2
+    Okisho "Sounds like you have a wingman, Hotshot."
+    MCT "Nice. Maybe with a little nudging from Naomi it might convince her to start going more steady instead of how sporadic she's been with making time for dates."
+    MC "I think I'm gonna need a whole flight crew if I'm going to have to keep making snack shipments."
+    show GTS neutral-2
+    Okisho "I'm sure you'll manage, Captain."
+    MC "Speaking of refueling, you up to getting ice cream again sometime? There's this other place that sells custard. I thought it'd be something you might like to try."
+    MCT "Because it's more fattening than ice cream..."
+    Okisho "Say less. {w}You had me when you mentioned food."
+    MC "How's this Saturday looking for you?"
+    "I didn't want to be rude and ignore Naomi in the conversation, but by now I knew enough if I didn't seal the deal when I caught Okisho, I wouldn't know when my next chance to see her would be."
+    Oksiho "Eh, I'm busy that day. Yamazaki-san and I were planning on doing something."
+    show GTS pondering
+    GTS "So we were, but you could join us if you like, Hotsure-san..."
+    pause .5
+    show GTS surprised
+    GTS "Ah, perhaps I spoke out of turn. Assuming Mizawa-san would not object..."
+    show GTS neutral-2
+    Okisho "I'm cool, I just didn't think he'd be up for it."
+    MCT "I'd be up for just about anything if it involved hanging out with Okisho and my new found wingman. With someone in my corner it could only be good. Just hope Naomi won't feel like a third wheel."
+    MC "Sure, I'm up for whatever. What did you have in mind?"
+    show GTS neutral
+    GTS "Well, we'll be enacting-"
+    show GTS surprised
+    Okisho "{w}It's a surprise!{/i}"
+    MC "Oh?"
+    GTS "Oh?"
+    show GTS pondering
+    Okisho "You already agreed to it. There's no backing out now."
+    MC "I guess you got me there. I'm at your mercy now."
+    Okisho "Exactly. Hehehe!"
+    GTS "You make it sound so insidious, Mizawa-san."
+    Okisho "Perhaps it is? What would he know?"
+    show GTS neutral-2
+    MC "Thankfully if Yamazaki-san is involved I feel pretty safe whatever I'm walking into doesn't involve my imminent demise."
+    MC "Something I'm not so sure of if it were your idea alone."
+    show GTS happy-2
+    Okisho "Man, this guy really does read minds."
+    show GTS neutral-2
+    MC "Now that I think about it, how do you two know each other?"
+    "Truth be told, I couldn't think of a more diametrically opposed pair..."
+    MCT "No wait, scratch that, I don't have to think, I've {i}seen{/i} that already."
+    "But still, Okisho's larger-than-life loudmouth personality was certainly a contrast to Naomi's reserved nature and strict adherence to proper etiquette."
+    Okisho "We're roommates." 
+    show GTS happy-2
+    GTS "Indeed. We met on our first day here and have been friends ever since."
+    show GTS neutral
+    "Suddenly this unlikely odd-couple made a lot more sense. They wouldn't normally run in the same circles, but being forced into the same space by circumstance made it happen."
+    MCT "Not unlike my own unlikely relationship with my roommate now that I think about it..."
+    Okisho "Yup, back then she was just a little peanut. Didn't even come up to my shoulders. Now she's even taller than me! {w}HA! Who would have thought that?"
+    show GTS embarrassed
+    GTS "How wildly does life churn."
+    show GTS surprised
+    Okisho "I'll say! Can't say I ever expected to be this fat even if I did let myself go after high school, but apparently I'm just getting started!"
+    Okisho "In no small part to Mr. Snacktacular over here."
+    MC "Not the greatest superhero name, but I'll take it."
+    show GTS embarrassed
+    "Clearly not as comfortable with the subject of her own growth, Naomi attempted to steer the topic of conversation elsewhere."
+    show GTS neutral
+    GTS "Mizawa-san is an excellent musician. Have you had the chance to hear her perform, Hotsure-san? It's quite a delight."
+    MC "Oh yeah. She's a wiz on the guitar and keyboard."
+    show GTS pondering
+    GTS "Ah, yes. I remember her saying she plays a number of instruments. I've yet to hear them all personally, but I'm quite fond of her recitations of traditional Japanese music."
+    show GTS happy
+    GTS "Her mastery of the biwa is at a level I've never seen before in all my years of attending traditional performances."
+    MC "Wow, that's pretty high praise coming from you, Yamazaki-san."
+    show GTS neutral-2
+    Okisho "Ha! Well, it was the second instrument I learned after piano. I'd hope I'd still be good at it even if I don't play it as much as I used to. {w}Sure made learning bass guitar a lot easier."
+    MC "Well, she did say she plays about a dozen instruments. Let's see, we got biwa, piano/keyboard, bass guitar, and regular guitar. I guess we can count four on the list so far."
+    GTS "She also has a lovely and very unique singing voice." 
+    MC "Ah yes, her vocals. That's sort of an instrument. So that's like four and a half."
+    Okisho "Ha! That's interesting counting here... Are you sure about that?"
+    MC "Oh yeah, and there's harmonica, so we're up to five now."
+    show GTS pondering
+    GTS "Interesting. I've yet to hear her play that one myself."
+    show GTS happy
+    Okisho "Hey! The harmonica counts as a full one."
+    MC "Oh please, it's barely above the triangle and only two steps above the kazoo in the hierarchy of instruments that {i}sort of{/i} count."
+    "Okisho for her part just shook her head and shrugged as she cracked a smile."
+    Okisho "He's got me there. {w}This guy is smarter than he looks."
+    show GTS unique
+    GTS "{i}Ara ara{/i}, a man of resolve as well. Have you met your match, Mizawa-san?."
+    Okisho "Possibly... but I guess he's not so bad after all."
+    show GTS neutral-2
+    MC "Eh, not really. I just promised her more snacks to say that."
+    Okisho "Haha! Don't tell Yamazaki-san that! {w}She's seen how I eat- she might actually believe you!" 
+    Okisho "Come to think of it, that's what's been pushing the buttons on my pants, so I guess it's true in a way too."
+    show GTS surprised
+    "Okisho gave her gut a firm slap, emphasizing the pudge that oozed over the waistline of her skirt."
+    "Naomi for her part seemed shocked and caught off guard by Okisho's rather shameless act of calling attention to her expanding midriff."
+    GTS "Oh my... Well..."
+    MCT "\"Oh my\" indeed."
+    show GTS embarrassed
+    GTS "Mizawa-san, didn't you say you had one of the practice rooms booked you needed to get to after lunch?"
+    show GTS neutral-2
+    Okisho "Oh shoot! You're right. Thanks Yamazaki-san, I would have been running behind if you hadn't reminded me."
+    Okisho "I gotta go. If you end up not using the rooms that you booked you'll get a hold on your ability to reserve them in the future."
+    MC "Gotcha. Well, glad I got to run into you, Okisho."
+    Okisho "Likewise Hotshot."
+    Okisho "Yamazaki-san can tell you where to get to our room. Just be there on Saturday, noon, sharp."
+    MC "Gotcha."
+    Okisho "And wear your yukata."
+    hide Okisho with dissolve
+    MC "My what!?"
+    show GTS pondering
+    GTS "You do have a Yukata, don't you Hotsure-san? You know, for special occasions?"
+    if isEventCleared("MC010"):
+        MC "Yeah, I wore it at the Blossom Festival not that long ago. Glad I brought it with me here."
+    else:
+        MC "Yeah, haven't had to use it since I brought it here, but I guess it's a good thing that I did."
+    MCT "Just what the hell did I agree to?"
+    scene black with fade
+    pause .5
+
+    scene Dorm Hallway with fade
+    $setMCOutfit(OutfitEnum.TRADITIONAL)
+    $setGTSOutfit(OutfitEnum.TRADITIONAL)
+    $setOkishoOutfit(OutfitEnum.TRADITIONAL)
+    play music DormLife
+    "Well, the day had come. I had been looking forward to another date with Okisho, even if it was more of a chill hangout this time around with Naomi going to be in the mix."
+    "Despite my initial enthusiasm, the more than a few awkward looks I garnered in just the short trek from my dorm over to the girl's room by wearing my yukata reminded me that I might want to be a bit more cautious of what I signed up for."
+    "Of course, as it would just so happen to be, I only started to hesitate as I stood right in front of the door to their dorm room."
+    MCT "Oh well, I already agreed to it. Can't back out now."
+    "Just as I brought my hand up to knock, I heard some heavy footsteps approach the door."
+    "{i}*Click*{/i}"
+    "Low and behold the door slid open before I even touched the door."
+    show Okisho neutral with dissolve
+    MCT "Holy smokes... She's smoking in that yukata."
+    "I was shocked to say the least, Okisho didn't strike me as the dress up type, but she wore it well. {w}A little too tight, but all the better as far as I was concerned."
+    Okisho "{size=-6}Right on time. Good to know I can count on you.{/size}"
+    MC "{size=-6}You made it sound like it was important.{/size}"
+    Okisho "{size=-6}Yeah, cause we would have started without you.{/size}"
+    MC "{size=-6}Oh. Well, noted.{/size}"
+    MC "{size=-6}...Why are we whispering.{/size}"
+    Okisho "{size=-6}Because we're supposed to be quiet. Once you step inside, no talking.{/size}"
+    MC "{size=-6}That's a little surprising coming from you of all people.{/size}"
+    Okisho "{size=-6}I know, I know. Do you want to do this or not?{/size}"
+    MC "{size=-6}Yeah, yeah. I showed up in the yukata after all, didn't I?{/size}"
+    Okisho "{size=-6}Alright, take off your shoes and step inside.{/size}"
+    MCT "Just what the fuck did I agree to?" 
+    "At this point I'd guess I was walking into an orgy or a blood sacrifice if I hadn't known Naomi was involved. Which only made the possibilities even more confusing."
+    scene Dorm GTS with fade
+    play music GTSAlt
+    "Walking into their room, I was caught off guard by how... traditional it all looked. What with the tatami mats set out in all."
+    show GTS neutral-2 with dissolve
+    "Naomi for her part was also decked out in her finest traditional garb. Even with her usual reserved demeanor, I could tell by the way she carried herself she was quite excited to have a reason to wear it." 
+    GTS "Greetings, Hotsure-san." 
+    show GTS neutral
+    "Naomi bowed deeply in a gracious gesture as hostess. I returned the greeting in kind, after which Naomi and Okisho exchanged bows as well."
+    GTS "Thank you Mizawa-san for guiding our guest."
+    show GTS neutral-2
+    GTS "Let us now purify our hands before we begin."
+    MC "???"
+    "I shot Okisho a confused look, to which she just rolled her eyes before tilting her head to the deep wooden bowl of water."
+    "Luckily she just jumped right into it to wash her hands and I could just follow right afterwards."
+    "As I tried off my hands I started to slowly piece things together that this was some time of traditional practice."
+    MCT "...But if I'm still getting the hell out of here if they ask me to put a blindfold on."
+    "The silence of it all felt awkward at first, until I realized I was able to pick up the faint chirping of birds and the rustling of the wind from the open window."
+    MCT "Perhaps there's a point to this after all..."
+    "The silence that I first thought to be unsettling, started to feel kind of relaxing."
+    show GTS happy-2
+    "Naomi directed us with her hands over to the center of the room. Following Okisho's lead we both sat down on the tatami mats."
+    show GTS neutral
+    "Not just sat down mind you, but on our knees sitting on our feet, traditional style."
+    MCT "Well this is about as comfortable as a root canal..."
+    "A small collection of earthen bowls and pots were laid out on the floor next to where Naomi sat."
+    "At first I thought it might be a hotpot, when I saw an electric hotplate under one of the larger vessels, until I noticed a bamboo whisk that finally offered a clue as to what was going on..."
+    MCT "OH! {w}It's a tea ceremony..."
+    "Suddenly everything made sense."
+    "Needless to say I felt kind of stupid for thinking I might have accidentally walked into something freaky."
+    show GTS neutral-2
+    GTS "Greetings, thank you both for coming."
+    GTS "Allow me to prepare the pot first."
+    "Naomi moved the larger pot, one that I now recognized as a traditional kettle, onto a hotplate. If I had to guess, she would not have elected to use this if not for a strict prohibition on using the traditional charcoal in the dorms."
+    GTS "While that warms, please help yourself to this Namagashi to prepare your tastebuds and stomachs for the tea."
+    show GTS neutral
+    "Naomi daintily opened a bento looking box that contained the sweets in question, and carefully placing them on a small plate slid them towards us. They each were a bright vibrant splash of color rolled into a ball."
+    show GTS neutral-2
+    "Bowing graciously, yet still silent, we both took the dessert."
+    "Okisho for her part inhaled it in one bite, like it was a piece of nigiri. I didn't know what was supposed to be until I took a bite. Once I did, I realized they were sweetened rice paste wrapped around sweetened bean paste."
+    "It was pretty good. Judging by the way Okisho was looking at me though I think she was hoping to get another."
+    MCT "Too bad, this one's mine."
+    show GTS neutral
+    "Naomi took back the small serving plates from us. Now sitting patiently, the sound of the water gently simmering filled the otherwise empty air in the room."
+    "Meanwhile, opening what appeared to be a small cylindrical container, the intensely green spoonfuls of powder Naomi dispensed into the three bowls revealed what she was preparing."
+    MCT "I'm not that big on matcha, but I'm not exactly in a position to complain either."
+    show GTS unique
+    "Dipping the ceremonial wooden ladle into the pot, Naomi dispensed the hot water into each bowl before rigorously agitating it with the whisk."
+    MCT "Kinda reminds me of those old school barber shave brushes."
+    "It was apparent Naomi had done this many times before. Her stirring was quick and efficient, not hurried or random in its motions."
+    "The whole affair thus far had been a bit plodding and... well, {w}unexciting so far, if I was being honest. {w}But judging by the smile on her face as she whisked away, Naomi seemed to be enjoying herself at least."
+    show GTS neutral
+    "Finally, the moment of truth had come. Naomi set the earthenware bowls before each of us, half filled with a brilliant green, almost goopy liquid."
+    "Unable to refuse even if I had wanted to, I bowed and took the bowl, grasping it on the side and supporting underneath it with my hands and proceeded to take a big glug."
+    show GTS neutral-2
+    "It was surprisingly thick, like espresso. Not sticky or viscous by any means, but much more body to it than any tea I ever had before."
+    "The strong grassy, almost swampy taste, filled my mouth, nearly overwhelming my taste buds with its intensity."
+    MCT "Not exactly looking forward to round two... but bottoms up I guess."
+    "Okisho for her part seemed unfazed by the taste, while Naomi had her eyes closed and appeared to be savoring each sip like it was ambrosia."
+    show GTS happy-2
+    "Noticing she was distracted by the enjoyment of the experience, I more or less chugged the rest to get through it, not being keen to savor a mouth full of grass clippings myself."
+    pause 1
+    show GTS neutral
+    "Having finished her tea herself, Naomi appeared to awaken from her almost zen-like trance of tranquility, and received our bowls back."
+    music fadeout 1.0
+    play music DormLife
+    show GTS neutral-2
+    GTS "Thank you for attending my tea ceremony today and indulging my desire to experience the trappings of my home once again."
+    Okisho "You're most welcome, and a gracious host."
+    MC "Yes, thanks for thinking to include me."
+    show GTS embarrassed
+    GTS "I do apologise for the rather lackluster accommodations. I wish I had more appropriate serving vessels to choose from for my guest, as well as a proper waiting room."
+    GTS "Alas, I could only really accommodate this abbreviated ceremony."
+    show GTS neutral
+    Okisho "Well it was good enough for me. Don't beat yourself up over it."
+    GTS "If you would like, I can serve you some Usu-cha tea at this time. It is a bit thinner in consistency. Most people seem to enjoy it more."
+    Okisho "Sure, give us both a round of that."
+    MCT "Speak for yourself..."
+    Okisho "Alright, now that you entertained us, I suppose it's my turn to entertain as well."
+    "Okisho stood up and walked out of the room, only to quickly come back with a gourd shaped instrument, somewhat flat on one side and rounded in the back, with five strings and five frets."
+    "I'd never seen one up close before but I recognized it from pictures, this must have been her biwa."
+    "Okisho plopped her fat butt down on the mat before settling into position, pulling out the shamasan style pick, eager to start strumming away."
+    Okisho "Any request?"
+    show GTS neutral
+    GTS "I will offer the choice to our guest."
+    MC "Hmm, well I'm not too familiar with traditional biwa songs. I'll defer to your judgement, Yamazaki-san."
+    show GTS unique
+    GTS "That is quite generous of you, Hotsure-san. I would like to request, "The Rushing Waters"."
+    Okisho "Ah, up for something a little fast-paced after all that matcha, huh?"
+    show GTS wink
+    GTS "Ara-ara! You might say so."
+    show GTS neutral
+    Okisho "You want it, you got it!"
+    "In dramatic fashion, Okisho raised her arm up high, before clacking down hard on the strings, ringing out a deep springy twang from the strings, briefly pausing before unleashing a flurry of downstroke strumming."
+    "Rushing waters was an apt title for the song, the momentum of Okisho's strumming painted a picture of urgency and force." 
+    "The tumult of her picking blurred into a steady drone with flourishes of precise bits of discord, punctuating the dangers of rapids that were sweeping our ears away."
+    show GTS neutral-2
+    GTS "It is said that the biwa is a tool that can pierce the spirit world." 
+    "Listening to Okisho, I could see what Naomi was talking about. The low droning of the instrument had this forlorn quality that gave it an almost ethereal tone to it if you were really listening."
+    GTS "I find it to be the perfect instrument to accompany tales of great tribulation and sorrow. It makes sense why it would be the chosen vessel to deliver the lessons our ancestors would have us learn." 
+    "Whether it truly had a transcendent air to it, I could not say myself, but what I could say for sure was that Okisho could sure play the hell out of it."
+    show GTS happy
+    Okisho "How was that?"
+    GTS "My heart is aflutter, Mizawa-san! As ever. Thank you again for gracing us with your instrumental talents. It is a rare and tremendous pleasure."
+    Okisho "Eh, not a problem. Gotta keep this from collecting dust anyway."
+    show GTS neutral-2
+    GTS "Well thank you for a lovely afternoon, both of you."
+    GTS "Having foregone my usual morning routine in order to prepare for the ceremony, I'm afraid I must now attend to my volunteer duties of maintaining the school's garden. I will leave you two to enjoy each other's company."
+    Okisho "Take it easy."
+    MC "Thanks again, Yamazaki-san."
+    show GTS happy-2
+    GTS "You're most welcome, Hotsure-san."
+    hide GTS with dissolve
+    play music Sunset
+    pause 1
+    Okisho "..."
+    MC "..."
+    Okisho "{i}Pffft! Hahaha!{/i}"
+    Okisho "The look on your face the whole time! Bwhaha!"
+    MC "What? Was it that obvious?"
+    Okisho "Obvious? You jackass. It took everything I had to not bust out laughing the whole damn time watching you nearly shit a goose-egg trying to figure just what the hell was going on."
+    MC "Hey, I thought I held it together pretty well, considering I thought I was going to be the offering in a ritualistic sacrifice."
+    Okisho "What is wrong with you?"
+    MC "I don't know, you seem like you might be into some kinky shit. Not that I thought you'd be able to convince Naomi to go along with it, but still."
+    Okisho "The second part, {i}hell no{/i}, you know how she is. {w}As for that first part... let's just say maybe."
+    MC "What now?"
+    Okisho "Besides, if this was going to be a blood sacrifice you'd have been fine since the fattened calf is right here."
+    "Okisho jiggled her belly fat with the edge of her biwa pick, unable to stop giggling."
+    MC "So what was that all about then? You don't strike me as the traditional type."
+    Okisho "I'm not, but there was a time that I was. Maybe I still kinda am... in a weird way, I guess."
+    Okisho "I grew up doing that kind of stuff. In some ways it reminds me of home, and my family... {w}When we used to be a family anyway. At least one that I was a part of."
+    MC "Oh. Um, I'm sorry-"
+    Okisho "But it was fun to revisit that for old time sake I guess. I mean, I really wanted to do it for Naomi. She's really conscious of the changes happening to her, and she just seems so homesick."
+    Okisho "You should have seen how her eyes lit up when I suggested we do this."
+    Okisho "I know it's a bit stodgy and boring, but I'd do it again in a heartbeat for her."
+    MC "Sounds like you're pretty good friends then."
+    Okisho "Yeah, you could say that."
+    Okisho "Hey, I don't know about you, but that bean paste dessert left me way more hungry than satisfied. Wanna go grab lunch?"
+    MC "Sure. I heard about this soba shack in town that's supposed to be good. Maybe we can hit that up and then go for custard afterwards?"
+    Okisho "You had me at \"sure\"."
+    MC "Alright, let's go. Should we change first?"
+    Okisho "No, that would take valuable time. Time is too valuable to waste when food is at stake."
+    MC "Sounds like you really are hungry."
+    Okisho "Yes, which is why I want to hit up a couple of snack machines before we get on the bus."
+    MC "I thought you said time is too valuable to waste?"
+    Okisho "Yeah, except when it comes to getting other food, duh. I'm hungry now, not fifteen minutes from now."
+    MC "So you need to eat before you can eat?"
+    Okisho "Now you're starting to catch on, Hotshot."
+    MC "Would it be weird if I told you that's really fucking hot?"
+    Okisho "Yes... but I kinda like it."
+    Okisho "Now let's get going."
+    scene black with fade
+    $setTimeFlag("XX32")
+    $setTimeFlag("size3exp")
+    jump daymenu
+
+label WGB007:
+    $setProgress("WGB", "WGB008")
+    scene Hallway2 with fade
+    play music HigherEdu
+    "For the first time since our first date, I was feeling pretty good about how things were going with Okisho."
+    "Sure, she definitely seemed interested, I never got the impression otherwise when we hung out. But still... She was a hard one to pin down. {w}She never wanted to make any definitive plans for the next time we'd meet up."
+    "I know the music club ate up a lot of her time. Hell, the cafeteria must have {i}literally{/i} ate up her time judging by how much that girl can eat. And that doesn't even cover all the time she spends practicing her instruments." 
+    "I mean, that was my guess anyway, I honestly didn't know for sure." 
+    "But despite all that, my hope was we might start going steady rather than just a few casual dates."
+    "By this point I had a much better idea of Okisho's schedule... (Well, whatever semblance of a schedule someone as spontaneous as Okisho keeps.) and was hoping to catch her after a music club practice."
+    "Seeing a group of students carrying instruments coming from the other direction down the hall, I knew I had hit the timing right."
+    scene Music Classroom with fade 
+    "It looked like the rest of the students had cleared out- except for one."
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Okisho neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "Honestly, Mizawa-san, have you given any thought to some custom apparel? Something that might flatter your rather {i}unique{/i} proportions rather than calling undue attention to them?"
+    "Both Okisho and Alice had plumped up quite a bit in the recent weeks. {w}Scratch that, they were both looking down right {i}fat{/i}- borderline massive!"
+    Okisho "Nah. I'm okay."
+    MCT "Whew... That's a relief. It'd be a crime to cover up that big beauty of a belly."
+    WG "Are you sure about that?"
+    Okisho "Yup. Pretty sure."
+    show WG pondering
+    WG "Interesting. I guess I would have thought the president of the music club would want to look more... {i}presentable{/i}, given that she's the face of the music club to the rest of the school."
+    show WG doubt
+    Okisho "Can't say I'm terribly concerned about what other people think."
+    show WG haughty
+    WG "Is that so? Because some might think it reflects rather poorly on the music club for their president to walk around looking like a disheveled fat slob..."
+    Okisho "Gee, I wonder just {i}who{/i} might be thinking that."
+    show WG bored
+    Okisho "I'm not too worried about those people, whoever they are. I mean, better to look like a fat slob than looking full term with twins and about to burst with blubber... {w}But that's just a hypothetical."
+    show WG angry
+    WG "{i}Errrrr{/i}..."
+    show WG stern
+    WG "Fine, be that way. I wanted to try to help you with your style, but you're free to look like a poorly put together mess if you want. But I don't think it's working out for you." 
+    show WG sly
+    WG "Just so you know, people call you \"Okisho the Oinker\" behind your back."
+    Okisho "Ha! I guess that's not too flattering, you're right. {w} But I don't care. Pigs are cute." 
+    show WG surprise-2
+    Okisho "Besides, it's a much better nickname than \"The Big Rich Bitch\"."
+    show WG stern
+    Okisho "I can't imagine who they were talking about when I heard that one, but she must be even fatter than me."
+    Okisho "Not to mention stuck up and rude, if she earned that name."
+    show WG angry
+    WG "Argggh!..."
+    pause 1
+    show WG doubt
+    pause 1
+    show WG neutral
+    WG "Heh."
+    show WG happy
+    WG "Hehehe..."
+    show WG happy-2
+    WG "HAHAHA!"
+    Oksiho "What's so funny?"
+    show WG haughty
+    WG "Ahhh..."
+    show WG coy
+    WG "Tsk, tsk... {w}You don't know it yet, but one of these days, your big mouth is going to get you in even bigger trouble. {w}And unfortunately for you, you won't be able to eat yourself out of it when that happens."
+    WG "And when that day comes, I'll be ready and waiting."
+    pause .5
+    show WG haughty
+    WG "Have a good rest of the afternoon, Mizawa-san."
+    "Okisho for her part, despite having successfully fended off Alice's thinly veiled barbs with ease moments ago, seemed pretty perturbed by that last not so thinly veiled threat."
+    Okisho "{size=-6}Just what are you plotting, Nikumaru-san?{/size}"
+    "Alice on the other hand, seemingly satisfied she finally managed to get under Okisho's skin, turned around and out towards the exit, but not before noticing me."
+    show WG neutral
+    WG "Oh, Hotsure-san. Nice to see you."
+    MC "Hello, Nikumaru-san."
+    show WG sly
+    WG "If you were looking to visit with Mizawa-san, perhaps you might want to come back another day. She doesn't seem to be in a particularly good mood."
+    MC "Gee, I wonder why?"
+    show WG coy
+    WG "Who's to say? Some people just lack any sort of temperance. They just can't be helped."
+    show WG haughty
+    WG "I'll see you in class."
+    show Okisho neutral at altMove(0.5, 0.5)
+    hide WG with dissolve
+    "Overhearing our brief conversation, looking back at the music desk, I noticed Okisho staring daggers into her back as Alice sauntered her fat butt out of the room."
+    MCT "Oh great. Thanks for that handoff, Alice."
+    MC "Hey."
+    Okisho "Hey."
+    "Upon seeing me walk up to her desk, Okisho's mood instantly lightened. But I could tell something was still hanging over her."
+    MC "You, uh, okay?"
+    MC "I know Nikumaru can be a bit insistent when she doesn't get her way."
+    Okisho "Oh. Her? Yeah. Whatever. {w}Fuck her. Hahaha!"
+    Okisho "I deal with that kind of shit from her all the time, but this was the first time she tried to hock her clothing business to me."
+    MC "Sounds like she needs to work on her sales pitch."
+    Okisho "Hehe. You could say that. Apparently it's pretty popular with a lot of students."
+    MC "No offense, but you do look like you've had to upgrade your wardrobe recently."
+    Okisho "Excuse me!? {i}What{/i} did you just say?"
+    MC "You're not going to trick me with that anymore. I know you don't give a shit."
+    Okisho "Damnit. I guess I've milked that too much already. That's too bad though, you're pretty cute when you're flustered."
+    MC "But you do look good, if I do say so myself."
+    Okisho "Aww, there it is! Little flustered fatty lover..."
+    MCT "Can't say I anticipated that nickname. Hopefully that one doesn't stick."
+    Okisho "But yes, I've gotten fat as hell. Thank you for noticing."
+    "Okisho cracked a cocky smirk as she leaned back in her chair, showing off the full extent of her belly-hang in the process."
+    MC "Oh I'm noticing..."
+    Okisho "Hehehe. You sure notice a lot for a guy who shouldn't be able to see a damn thing. Has your hair gotten even longer?"
+    MC "Yeah. I cut it earlier this week, but it's already back to this."
+    Okisho "Damn, that sounds awesome! I'd try out all sorts of crazy hair styles if I knew mine would grow back in a few days."
+    MC "Glad someone thinks it's cool, I guess. Never thought I'd have to spend so much time on my hair each morning as a guy."
+    Okisho "Hey, you'll get no sympathy from me. I've been maintaining this long ass hairdo every day for years."
+    MC "Can't say I'm a particularly sympathetic person around these parts..."
+    MC "Hey, hope this was a good time for you, with club practice being finished in all. I was wondering if you'd be up for getting dinner later?"
+    Okisho "Took you long enough to ask."
+    MC "What can I say? I like to keep you in suspense."
+    Okisho "Well here's a tip, the faster you get around to asking, the sooner I end up with food. I like that arrangement better."
+    MC "Fair. Well noted."
+    MC "There's this chicken karaage place in town I heard good things about, they specialize in fried food. Sounds like it'd be right up your alley."
+    Okisho "I'm sold. Let's go."
+    MC "What, like now? It's not dinner time yet."
+    Okisho "Yeah but any time is dinner time when you're hungry."
+    Okisho "Keep up man, you're dating a fat chick, remember?"
+    MC "I guess it's nice to be reminded every now and then."
+    #Okisho "But let me change into something more comfortable before we go, this new shirt is already too tight."
+    scene black with fade
+    #$setOkishoOutfit(OutfitEnum.CASUAL)
+    #$setMCOutfit(OutfitEnum.CASUAL)
+    pause .5
+    scene Bus Interior
+    show Okisho neutral
+    with fade
+    play music DormLife
+    "The bus ride over was fairly uneventful, though it was pretty noticeable how much more space Okisho took up in her seat next to mine."
+    "We didn't say too much. Okisho for her part was listening to some music on her headphones, semi-sorta dancing in her seat as she bobbed back and forth to the music, bumping into me with her squishy bits each time."
+    "It was pretty nice to be honest."
+    "For my part I just flipped through my phone. Hit the refresh on my feed a few times but nothing that interesting popped up."
+    "As we neared our destination though, Okisho turned off her headphones and put them in her purse."
+    Okisho "Hey. I just wanted to say, thanks for coming by the music room earlier and getting me to go off campus for a bit."
+    MC "No problem. Everyone needs a change of pace every now and then."
+    Okisho "You can say that again. To be honest I've been really feeling down in the dumps since Naomi had to move out."
+    MC "Oh, yeah. Sorry, I meant to ask how you were doing with that whole situation, but then Alice was there... {w}Well, you were there, you know."
+    Okisho "The less said about her the better."
+    MC "Yeah, I get that."
+    MC "Back to what I meant to say, it was a pretty big shock to all of us in our homeroom when we found out Naomi had to move out, so I imagine it was an even bigger shock to you."
+    Okisho "Yeah it sucks, like just when we were starting to become closer as friends too, this stupid growth stuff just went and pulled the rug out from under that."
+    MC "Well you can still visit her. In fact I'm sure she'd like that, I imagine she's feeling pretty lonely now too. I bet it would cheer her up to have you play something for her."
+    Okisho "That's a great idea!{w} In fact, now that I think about it, I should write a song for her on the biwa. I bet she'd really like that."
+    MC "For sure."
+    Okisho "Man, I really have been in a big funk lately. Why didn't I think about that sooner?"
+    MC "You can't always be expected to think of everything."
+    MC "That's what I'm here for."
+    Okisho "HA! Trust me, I'm overwhelmed with gratitude you'd grace me with your mere presence, All Knowing One."
+    MC "You're welcome to grovel some more. I'll allow it."
+    Okisho "Hahaha! You're so full of shit,{w} or yourself. {w}I can't tell the difference."
+    MC "Me neither to be honest."
+    Okisho "But then again, you were also kinda right. I'll give you that."
+    "Giggling the whole time, Okisho gave my hair a firm tussle while shooting me her usual sexy, cocky smile."
+    Okisho "Thanks, Hotshot."
+    "The bus lurched to a stop as the air brake hissed. Signalling we had finally arrived at the destination."
+    Okisho "Well, good thing we're gonna be getting some food, cause I can't write a song on an empty stomach anymore."
+    MC "Why? Does it just turn into something about food?"
+    Okisho "...I'm going to choose not to answer that question."
+    scene black with fade
+    pause .5
+    
+    scene Restaurant
+    show Okisho neutral
+    with fade
+    play music DayByDay
+    Okisho "Ooo... This place smells {i}good{/i}."
+    MC "By good, you mean like crispy meat and chicken grease?"
+    Okisho "Are you saying that smells bad?"
+    MC "On my plate, no, but probably not on my shirt a few hours from now."
+    Okisho "Ah, I'm sure it'll be worth it."
+    "It didn't take us long to get a seat since we got here before the dinner rush."
+    "Part of me was worried about how this was going to hit my pocket book. Not that I wouldn't go into the poor house to fund fattening up my girlfriend, mind you." 
+    "Well, assuming she thought she was my girlfriend too."
+    MCT "Early bird special pricing. Nice! {w}Gotta find some way to save a bit if I'm going to be funding an appetite like hers."
+    Okisho "What should we get?"
+    MC "Whatever you want. I'm not gonna eat that much since I'm not that hungry, but we gotta make sure you get rid of that writer's block. So you better stuff yourself extra just to be sure."
+    Okisho "You're about as transparent as worn out panties, you know that?"
+    Okisho "Trying to unknowingly fatten this poor girl to satisfy your own desires? Is that your game?"
+    MC "First of all, I don't deny any of those accusations, and second of all, you seem to be doing most of the work on your own."
+    Okisho "Hehe. I wouldn't call it work, it's all been quite fun. I mean, it's not like I'm trying to be a giant fatass, but if I can't help it, I'm going to ride the wave until I'm a beached whale on the shore."
+    Waitress "Have you decided what you'll be having?"
+    Okisho "I'll have these."
+    "Okisho just ran her finger from the top to the bottom of the menu page marked \"Tempura\"."
+    Waitress "Oh... So one of each then?"
+    Okisho "Hmm, make it three of the chicken karaage."
+    Waitress "Sure thing. I'll get those right in."
+    "The waitress frantically tried to jot down the extensive list all on one ticket before walking back to the kitchen."
+    Waitress "{size=-6}What a fatty. Even a heifer like her is not going to be able to eat all of that.{/size}"
+    "The kitchen wasn't all that busy so it didn't take them long to bring out the food. All of it fresh and hot off the fryer."
+    "The waitress piled basket upon basket of fried fattening goodness onto the table until the entire surface was covered."
+    "Okisho wasted no time diving into the deep fried delicacies, not even waiting for the waitress to finish setting everything down."
+    Okisho "{i}Ooo! Ott ott! {w}*Gulp*{/i}"
+    MC "Apparently food is pretty hot just after coming out of the fryer. Who knew?"
+    Okisho "Oh, shut up. When I see food in front of me, I want to eat it now."
+    MC "As opposed to food that's far away?"
+    Okisho "Hey, I don't discriminate, it's just that food that's out of reach is lower priority."
+    "We had quite the spread. Chicken karaage, tonkatsu, korokke, harumaki, menchi katsu, and a big plate of chicken katsu curry. Each was enough for two to three people... or one particularly hungry oinker as was the case."
+    Okisho "Mmmm! So guud!"
+    "Okisho wasn't one to have any qualms about talking with her mouthful, that was for sure." 
+    "With the hot fry oil still glistening on the golden brown goodness, Okisho successfully managed to cool things down by dunking everything in soy sauce and mayo."
+    Okisho "Oof! This korokke is good. I probably should have ordered more."
+    "Deep fried potato mush oozed out the sides of the last of the fried croquette like balls as she bit down into it, causing gravy and mayo to brush the sides of her mouth."
+    MC "You uh, got something on your..."
+    Okisho "Oh?"
+    "Instead of opting for a napkin, Okisho lapped up each dollop left on the sides of her cheeks before diving headfirst back into the baskets of grease pockets in front of her."
+    MCT "Damn, that tongue's got some reach." 
+    "Whether she was confident she got it all or just didn't mind, I couldn't tell because she didn't stop to ask me."
+    "By this point she had already polished off the harumaki before I could have any."
+    MC "I didn't realize you liked vegetables."
+    "Perhaps it was for the best, I wasn't sure I wanted any now since I could see the fried wrapping go clear with grease seeping out of it each time she took a bite of one."
+    Okisho "Eh, I mean, they aren't my favorite, but they're still food. And like all other foods they're much better fried."
+    MC "I stand corrected."
+    "For my part, I mostly stuck with the chicken katsu curry. It was pretty good, went well with the savory brown sauce and rice. Made me want to come back when I was actually hungry because I only managed a few bites since it was so filling."
+    Okisho "You done with that?"
+    MC "I'm throwing in the towel. Go for it."
+    Okisho "Such a light weight."
+    "Okisho grabbed a shovel, {w}excuse me, a {i}fork{/i}." 
+    "But I could be forgiven for not being able to tell the difference when watching her slide the contents of her plate down her gullet in just a handful of sweeping scoops with the plate to her mouth." 
+    MCT "Geez, I hope I don't fall into a deep fryer, she'd probably eat me instead of calling an ambulance."
+    "Other than that, I had a few pieces of the chicken karaage, which is what the place was known for. The ginger and soy marinade still came through with the crispy friend batter on it. It was damn good."
+    MCT "No wonder she ordered three thighs of it."
+    Okisho "Oh man! Next time I'm just ordering all this. That other stuff was good, but I could eat this all day."
+    MC "I think they'll run out of chicken before that happens."
+    Okisho "Eh, a girl can dream, right?"
+    "By this point Okisho's gut was looking quite distended. The top part of her domed out belly contrasted with the thick hanging flab of her lower belly flap."
+    "The glistening grease and speckled fry batter across her cheeks told the tale of utter deep fried decimation that had been visited upon the stacks of now empty food baskets."
+    Okisho "Wheww... {w}I think I might be full."
+    MC "Think? Is this a new experience for you?"
+    Okisho "Haha! You ass!"
+    Okisho "I'll have you know it is possible for me to get full. It happens quite often in fact."
+    MC "You don't say..."
+    Okisho "This is clearly entrapment. If I'm never full, then I admit I'm some bottomless pit. But if I say I constantly get full, then I admit to eating like a pig. Either way I have to fess up to being a fattass."
+    MC "That is what they call checkmate."
+    Okisho "You are diabolical."
+    Okisho "{i}Urrp... *Burp*!{/i}"
+    Okisho "Okay, I take it back- I'm not completely full anymore."
+    MC "You're not exactly helping your case."
+    Okisho "I know, but I'm thinking about getting more..."
+    MC "Why don't we go somewhere else for dessert instead?"
+    Okisho "You are just full of good ideas today, aren't you?"
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+    scene Park with fade
+    play music Sunset
+    "I knew there was a park not far from the restaurant and figured a little stroll would help cap off the deep fried festivities."
+    "Not that getting her dessert wasn't part of my agenda, but the main part of my suggestion had to do with the hope of extending the date a little longer."
+    show Okisho neutral with dissolve
+    "Luckily there was a shaved ice vendor in the vicinity to help me seal the deal."
+    MC "What flavor do you want?"
+    Okisho "Easy. Tiger blood. They gotta mix like five flavors together and they always end up adding extra syrup to do it."
+    MC "Ah, the cost effective strategy. It's solid."
+    Okisho "You gotta be a thrifty fatty to get this big on a musician's salary."
+    Okisho "What about you?"
+    MC "I'm gonna go for the Hawaiian. It tastes like blue, that's good enough for me."  
+    Okisho "What does blue taste like?"
+    MC "Well if it's like any of the other food I get on a date, you'll be eating over half of it anyway, so I'm sure you'll figure it out."
+    Okisho "I was right, you really can see into the future."
+    pause .5
+    MC "One extra large Tiger Blood and a medium Hawaiian, please."
+    Vendor "Alright. Here you go!"
+    MC "Thanks."
+    "Okisho didn't even hesitate before practically unhinging her maw to take a {i}chomp{/i} out of her massive mound of pink snow shards."
+    Okisho "{i}Mmmmm!{/i}"
+    Okisho "...{w} ! {w}!!!"
+    "Okisho's expression turned from utter ecstasy to paralysis in what amounted to less than two seconds."
+    Okisho "Ow ow {i}owowowowow{/i}!"
+    MC "I'd ask if you have brain freeze, but that requires a brain in the first place."
+    Okisho "Har! Har! {w}It's not my fault it's too delicious for my own good."
+    MC "Oh, I'm pretty sure it is."
+    Okisho "I think it's {i}your{/i} fault. You knew this would happen after the first time we got ice cream."
+    MC "You're right, I orchestrated this whole thing just to make sure you'd get a self-afflicted brain freeze. I only use my powers of foresight for the lamest of evil acts."
+    Okisho "I'll say. You're terrible. A monster even."
+    MC "Oh don't say that, how can I make it up to you?"
+    Okisho "Maybe if you let me have some of your snowcone..."
+    scene black with fade
+    pause .5
+    scene Park with fade
+    "The coolness of the shaved ice proved to be a nice follow up to the hot fried greasiness of the previous meal. For all of the few bites I got to have of mine anyway."
+    show Okisho neutral with dissolve
+    "We found a nice little park bench to sit down on after Okisho mentioned she could use some \"time to digest\" and I didn't mind getting to sit just a little closer."
+    MC "{i}*Yawwn*{/i}"
+    "Pathetically cliché as it was, I pulled out the ol' casual arm stretch into the arm around the shoulder routine, hoping I came across more nonchalant than desperately thirsty."
+    Okisho "Oh, just go for it, Hotshot. You've earned it!"
+    "Before I could fall out of my seat, Okisho pulled me by the neck and leaned in with her still blue stained lips right on the smacker."
+    MC "!"
+    MCT "Mmmm."
+    "Her lips were soft, pouty and full of the hunger she had displayed before, just a different type. I felt the puffiness of her soft cheeks on my nose as they brushed against mine too."
+    "And she tasted... {w}like pineapple and coconut?"
+    MCT "Hehe, guess that makes sense."
+    Okisho "I... got a little tired of waiting."
+    MC "Next time I'll try to move quicker."
+    Okisho "Good. I'd like that."
+    Okisho "I had a good time tonight. I had a lot on my mind and it felt good to just cut loose."
+    Okisho "I know most guys aren't into fat, but {i}fuck me{/i} I'm just hungry all the time these days and it's so nice to be with someone who's not gonna give me dirty looks constantly just because I gotta eat."
+    Okisho "I mean most of the time it doesn't bother me, but it wears you down when it's {i}all{/i} of the time."
+    Okisho "And then there's you, getting a kick out of. Hell, you even {i}encourage{/i} it."
+    MC "Well, for what it's worth, it's a relief for me too. It's not exactly lauded in popular circles to be into fat chicks. Even dating heavier women, you still have to dance around it or they become self conscious."
+    MC "With you, I don't have to hide it. You look hot. You're the hottest girl I've ever dated."
+    Okisho "Haha! You would say that wouldn't you?"
+    Okisho "What did I get myself into?"
+    MC "What do you mean?"
+    Okisho "I knew I was gonna get fat, but having a boyfriend like you, I'm probably gonna get even fatter."
+    MCT "Boyfriend, eh? {w}...{i}YES!{/i}"
+    MC "You make that sound like a bad thing."
+    Okisho "It's not, as long as you're into it."
+    Okisho "Hey! That gives me an idea."
+    Okisho "This bench is feeling too hard on my fat butt. I could use some extra cushioning."
+    MC "What do you mean- {i}Ooof!{/i}"
+    "Without hesitation, Okisho shifted her hips up and over my thigh and plopped her fat ass right in my lap."
+    Okisho "My belly's pretty full. Think you could massage it a bit to help it digest before I waddle back to campus?"
+    MC "I'm the man for the job."
+    Okisho "I had a feeling you would be."
+    "Having been given the green light I proceeded to reach around her thick waist to grab a nice flap of flab from her side. It was loose, and luscious at the same time, but also heavy."
+    "Maybe not crushingly heavy like the weight of Okisho on my lap, but there was some definite heft to her folds by this point."
+    Okisho "Hehe! That just tickles. Play with that later, you need to get in right here, where the food's settled."
+    "Okisho apparently had no problems telling me how to do my job, and as a professional belly rubber, I take feedback on my craft very seriously."
+    "It was wild, the contrast between the taut part of her belly just beneath her ribcage and the gelatinous pooling fat below and to the sides of it."
+    "It spilled all the way down past her hips into her lap, my elbow brushing against the lower half as I tried to rub the taut dome top with my hand."
+    MCT "Holy shit, she's huge!"
+    Okisho "Hey! Stop poking me."
+    MC "I'm not poking your belly. I'm just giving it a little jiggle, that's all."
+    Okisho "Uhh, I didn't say it was my belly where you were poking me, Hotshot."
+    MC "!"
+    jump daymenu
+
+label WGB008:
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Okisho's side route.{/outlinecolor}{/size}"

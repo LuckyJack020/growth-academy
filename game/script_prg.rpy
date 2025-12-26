@@ -45119,155 +45119,119 @@ label PRG063:
     Takamura "You must remember, we do work with knives, fire, and heat in here nearly each day."
     Takamura "If someone's factor develops to the point where they can't work safely, then there isn't much of a choice, as truly unfortunate as it is."
     Takamura "Having said that, I do try my absolute hardest to keep those who want to stay involved in the club around in some capacity. Though, it's not always easy."
-    Takamura "Anyways, as we were. Since you two are also a newer team, I thought it would be fitting to pair you up with another team who's also just finding their footing. Make it a fair match, you understand."
-    Kanami "Of course."
-    PRG "Taguchi-san has a new partner then, Sensei?"
-    Takamura "Indeed she does."
-    Takamura "I've actually just finished a meeting with the new member, if you'd like to meet."
-    PRG "Um... okay."
+    Takamura "Anyways, as we were. Since we had an even number of teams prior to this, should worse come to worst and Tagushi-san can't find a partner before the competition, you two will receive a bye."
+    show PRG unsure
     stop music fadeout 2.0
-    "Takamura smiled, and walked to the door."
-    Takamura "Come along. They're quite welcoming, I assure you."
-    hide Takamura with dissolve
-    pause 1
-    show Sakura neutral-2 at Position(xcenter=0.8, yalign=1.0) with easeinright
-    show PRG surprised
-    pause 1
-    show Sakura neutral
-    pause 1
-    Sakura "... Surprise."
-    PRG2 "I-I-"
-    play music DormLife fadein 2.0
-    Sakura "... Hope you don't mind me showing back up again."
-    Kanami "Never. Of course not."
-    Sakura "'Kay..."
-    Sakura "Sensei gave me a little talk. She..."
-    Sakura "... She helped pick me up a little."
-    Sakura "And... and so did you, Aida. You and Keisuke."
-    Sakura "I love this club. And... and I wanna be here."
-    Sakura "And, if I'm feeling so bad about things, then... maybe doing something that makes me happy will help perk me up."
-    show PRG sad-2
-    PRG "Sakura..."
-    show Sakura sad-3
-    "Sakura came forward, going to Aida at her station, and wrapped her arms around her."
-    Sakura "... I missed you."
-    PRG "I-I missed you too..."
-    show Sakura neutral
-    "Sakura pulled back after a moment and smiled, rubbing her eyes a little."
-    Sakura "So, yep! I'll be here on Thursday!"
+    PRG "Oh... okay."
+    "Both Aida and Kanami seemed to fall a bit as Takamura-sensei walked forward, laying a hand on the counter."
+    Takamura "I don't make this decision lightly, girls. If I had any other way of setting it up, such as a group of three against each other, I would take it."
+    Takamura "However, we're far too close to competition day to attempt that at this point. I'm going to do my best to find someone that would fit the bill. I promise you both."
+    Takamura "As well, if another team has to drop out, then I'll shuffle you two into their place."
     show PRG worried
-    "Aida blinked."
-    PRG "And we... we really have to cook against each other?"
-    Sakura "Yep. I'm on the bad guy's team now."
-    Sakura "I had originally asked Takamura-sensei if we could do like a group of three against another group of three, but she told me it was too close to the competition to try that."
-    Sakura "Plus, it wouldn't be in the spirit of the competition format to mix things up like that."
+    PRG "We... we understand, Sensei."
+    Kanami "Yes. It's simply poor circumstances."
+    Takamura "And I appreciate it."
+    Takamura "Now, feel free to take your time cleaning up. However, the building will soon need to be locked up."
+    PRG "Y-Yes, Sensei."
+    "Takamura-sensei turned and left the room as quickly as she'd entered."
     show PRG unique
-    PRG "R-Right..."
-    Sakura "So yeah... hope you guys can keep up with me."
-    Sakura "... Cuz I'm gonna come in ready to wipe the floor with you."
-    show PRG blush-2
-    PRG "I-I..."
-    Kanami "... Come and try."
-    show Sakura happy
-    Sakura "Oh, you guys are totally getting creamed."
-    hide Kanami with dissolve
-    show Takamura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    Takamura "Fight nicely, now, ladies."
-    Takamura "But yes. That is the plan for Thursday."
-    show PRG neutral
-    show Sakura neutral
-    PRG "T-Thank you, Sensei."
-    hide Takamura with dissolve
-    show Kanami neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    Kanami "Yes. Thank you very much."
-    "Takamura nodded, and turned, heading back out into the hall."
-    Kanami "Myoga-san, once this competition is over, I'd rather you not feel as though I took your spot. If you'd prefer to join back with Kodama-san, you're more than welcome."
-    show Sakura neutral-2
-    Sakura "I... well, I'm gonna be honest, I'd appreciate it."
+    PRG "... Mmn."
+    Kanami "A shame."
+    MC "Yeah..."
+    Kanami "I suppose... we can keep our taiyaki as an idea for next time."
+    Kanami "We did learn to work together much better over this time, Kodama-san. I wouldn't call all of this a waste."
     show PRG worried
-    Sakura "Though, that'd mean you'd be stuck with Taguchi-san."
-    Sakura "And that's, well..."
-    PRG "S-She's... kind of nice, Sakura."
-    Sakura "Aida... like, come on. Even you can't say you like her."
-    Kanami "I hate to admit it, but I can't stand her either."
-    MC "Who is this, exactly?"
-    Sakura "She's... well, you've probably seen her around. Brown hair, a little taller than me. Skinny. She has a fingernail factor, like that one nurse does."
-    Sakura "She's been in a few competitions, and she would've been at the summer break party we had here."
-    Kanami "She has a tendency to be overly critical. And, she's not above... outright making fun of people behind their backs."
-    MC "Does Takamura-sensei know about this?"
-    Kanami "Taguchi-san is a bit of a social chameleon. She's quite good at making those with authority think she's a model student."
-    Sakura "I don't think Takamura-sensei believes everything she says though."
-    Sakura "Kinoshita-san told me once that he overheard Taguchi-san try to tell Sensei that I threw out a perfectly good bowl of broth, and wasted the entire thing."
-    Sakura "And I remember this, because Sensei came to me like shortly before he told me about this, and asked me if I knew anything about a bowl of soup broth that had been dumped out."
-    Sakura "I told her that the 'broth' was a bowl of water I'd been using to wash fruit off in. Which is what I had been doing."
-    Sakura "And Sensei was just totally like, 'yes, of course. I thought so. Carry on, Myoga-san.'"
-    PRG "I remember that..."
-    PRG "You were really upset."
-    show Sakura angry
-    Sakura "Of course I was! Like, she totally tried to throw me under the bus! And, this other time-!"
-    show Sakura neutral-2
-    Sakura "... Ech, whatever. Point is, she's annoying."
-    PRG "I haven't talked to her a lot. I-I just try to keep to myself when she's around."
-    MC "Probably for the best, honestly. Just keep her at length."
-    Sakura "Which is why I'm not looking forward to cooking with her. Or, dumping her onto you, Tozakura-san."
-    Kanami "I'll manage. Takamura-sensei has a fair amount of trust in me, I reckon."
-    Kanami "And, should Taguchi-san let her attitude show, I'm not above humbling her."
-    Sakura "She probably deserves that at this point."
-    Sakura "Doesn't help that, apparently, her parents feed into her."
-    Sakura "Kinoshita-san also let me know that she was bragging to some of the other girls that her dad paid for a vacation for her, once this 'factor nonsense' is over with."
-    Sakura "And her mother was 'oh so sad to see her darling girl go!'"
-    Sakura "Like, her parents see her as their angel, and treat her like she's a goddess or something."
-    MC "So, who's Kinoshita-san?"
-    show Sakura neutral
-    show PRG neutral
-    Sakura "... Just a boy."
-    PRG "A boy who always says hi to you when you walk into the kitchen."
-    PRG "And who offers to get things off the top shelf of the pantry for you when you can't reach."
-    Kanami "... And offered up the idea of us doing a 'partner swap' for a competition, and brought up having Kodama-san work with Fujii-san for this very same competition."
-    show Sakura happy-2
-    Sakura "..."
-    MC "... So, he's into you."
-    show Sakura neutral
-    Sakura "{i}Was.{/i} I..."
+    play music DormLife fadein 2.0
+    PRG "N-No. Neither would I."
+    show PRG unsure
+    PRG "I just... I was looking forward to it."
+    Kanami "You're not alone in that."
+    "Kanami turned the water back on and let it run for a moment, squirting soap into the sink."
+    Kanami "At the very least, Taguchi-san is also unable to compete."
+    PRG "I guess."
+    Kanami "I was hoping to really-"
+    Kanami "..."
+    "I glanced at Aida, giving her a look."
+    MC "I don't mean to poke my nose in, but... everything good?"
     show PRG worried
-    show Sakura sad-3
-    Sakura "... Doubt he would be anymore."
-    Sakura "He's got huge muscles. And I..."
-    Sakura "... Do I look like I belong anywhere near a gym?"
-    PRG "Y-You... You don't know that, Sakura..."
-    PRG "You haven't seen him in over a month."
-    Sakura "Yeah. I haven't. And he hasn't seen this either."
-    "Sakura gestured around herself."
-    Kanami "... Which is all the more reason to not jump to conclusions."
-    Kanami "You haven't a clue what he's thinking. As well, with the amount of work he was putting in just to speak to you, I highly doubt his opinion would change so quickly."
-    Sakura "... Right."
-    show Sakura neutral-2
-    show PRG neutral
-    Sakura "B-But, look. Anyways. Back to other stuff."
-    PRG "Yeah. Other things."
-    show Sakura neutral
-    Sakura "When Thursday comes, you two better be ready. Because I'm bringing the heat."
-    show PRG satisfied
-    PRG "... I-I'm gonna shut your heat off."
-    MC "Damn!"
-    "Sakura snickered, turning for the door."
-    Sakura "See you guys then."
-    show PRG neutral
-    hide Sakura with dissolve
-    "Sakura exchanged a look with Aida as she left, to which Aida looked from me, to Kanami."
-    Kanami "It's good to see her."
+    Kanami "I..."
+    "Kanami rubbed one arm with her other hand, shutting the water off."
+    Kanami "Apologies, Hotsure-san. I didn't mean to leave you in the dark."
+    Kanami "Taguchi-san is... not someone I would call a friend."
+    Kanami "To be completely blatant, I don't care for her."
+    MC "Sorry. Have I met this person, Aida?"
+    PRG "Umm... not face to face. I think she was at that party we had before summer break, though. Maybe."
+    MC "Okay. So, what bugs you with her, Tozakura-san?"
+    Kanami "Where do I begin, I-"
+    Kanami "I truly hope that this doesn't come off as insulting her on my end, however... Taguchi-san is the type of girl who believes that she can do no wrong."
+    Kanami "She's a bit bossy."
+    show PRG unsure
+    PRG "... A bit?"
+    Kanami "Right. Might as well be forthright if we're all on the same team."
+    Kanami "She's entirely convinced that she's the best chef in the kitchen, and she isn't shy about letting others know that."
+    Kanami "She's also not above outright insulting other competitors behind their backs."
+    MC "Wait, are you serious? How the hell does that fly in here?"
+    PRG "S-She doesn't do it in front of everyone..."
+    MC "Hold up, does Takamura-sensei know about this?"
+    PRG "Well..."
+    Kanami "Taguchi-san is what you might call a 'social chameleon.' She's very good at making the staff believe that she's a darling girl who only wants to do her best."
+    MC "So she acts completely different around staff versus around students?"
+    Kanami "Exactly. And, she's quite convincing with how she does it."
     show PRG worried
-    PRG "I-I just hope she'll stay. I didn't like her not being here."
-    Kanami "Yes. She brings a certain... feeling to the room."
-    PRG "She does."
-    MC "So, not to bring the mood down."
-    MC "But, uh... what time were you guys supposed to be out of here?"
+    PRG "She... can be kind of nice. Sometimes."
+    Kanami "Nice in a passive aggressive sense, perhaps."
+    PRG "Well..."
+    Kanami "Kodama-san, with all due respect, I would ask you to seriously think about your interactions with her and tell me that they've all been positive."
+    show PRG nervous
+    PRG "W-Well... every time I've heard anything that she's supposedly said, it's been from other people telling me. I've never heard her say anything directly. About anyone."
+    Kanami "Yes. However, you've seen firsthand just how brutish she can be."
+    PRG "..."
+    PRG "I... j-just try to keep my distance from her."
+    Kanami "Which is not a bad idea."
+    MC "She sounds like a nightmare."
+    Kanami "Well, and I'm not one hundred percent certain on this, but I overheard her telling someone that her parents paid for a vacation for her once this 'whole factor business' is behind her."
+    Kanami "And, her mother was apparently 'oh, so sad to see their darling angel go.'"
+    Kanami "Her parents treat her like a queen, from what I gather. Or, from what Taguchi-san lets on."
+    "Kanami laid a few dishes into the water and started scrubbing."
+    show PRG worried
+    "Aida made her way over and took a towel, taking a spatula from Kanami and dried it."
+    MC "'After this whole factor business is done?' What factor does she even have?"
+    Kanami "Fingernail growth. Like one of the nurses has."
+    Kanami "'Oh, heavens! I knocked my pencil onto the ground again!'"
+    "As if to accidentally prove a point, Aida turned to set down a dried plate and bumped it with her right breast, sliding it a ways across the counter."
+    Kanami "She almost seems to use her factor for pity. As in, she calls attention to when her factor gets in the way of something."
+    MC "Is her factor that severe?"
+    PRG "... No. T-To anyone else, she would just look like a girl with long nails."
+    Kanami "All the same to her, if she can use it to garner-"
+    "Kanami shut her eyes and took a sharp breath, putting one hand on the side of the counter and drying it with a towel."
+    pause 1
+    Kanami "I apologize." 
+    Kanami "I do not mean to be so blunt and talk ill about someone behind their back. I'm no better than her."
+    MC "I think it's just venting, and that's a ways different from talking crap." 
+    MC "From what you're telling me, this chick sounds like a massive chore to deal with."
+    "Aida looked back at me, and nodded after a second."
+    PRG "Mhm."
+    PRG "She tried to get Sakura into trouble once."
+    Kanami "I remember that day. I'd never seen Myoga-san so irate."
+    MC "What happened?"
+    PRG "So, one day, Sensei came to our station and pulled Sakura aside, asking her if she knew anything about some missing soup broth, and asked her if she'd dumped it down the sink."
+    PRG "Sakura had been washing some fruit off in a bowl and dumped that water out. Not broth of any kind, which is what she told Sensei. And, she apparently was very satisfied with that answer."
+    PRG "Anyways, a few weeks later, Sakura was told by another cooking club member that he overheard Taguchi-san tell Takamura-sensei that Sakura had dumped out an entire bowl of soup broth that day."
+    MC "So, she threw Sakura under the bus?"
+    PRG "Completely."
+    PRG "I-I had to stop Sakura from going over to Taguchi-san and shouting at her."
+    PRG "S-She yanked her apron off and threw a wooden spoon into the sink."
+    MC "I really can't blame her."
+    MC "Well, if you guys do go up against her, I can't wait to watch you beat her ass."
+    PRG "I guess we'll see."
+    Kanami "Either way, if we get a bye, I'd like to go up against her another time. And pick a dish that can really show her what we can do."
+    Kanami "Especially because, by then, we'll have grown even more comfortable working together that we can attempt something harder."
+    "I nodded, and glanced up at the clock."
+    MC "I hate to be that guy, but uh... what time do they usually lock up the building?"
+    "Both girls looked up at the clock."
     show PRG surprised
-    "Both girls looked at the clock on the wall."
-    PRG "OH!"
-    Kanami "I'll wash, Kodama-san."
-    PRG "I-I can dry!"
-    MC "Where's the stuff to clean the counters? I can get that."
+    PRG "Oh no! I-In about ten minutes!"
+    MC "Here, I can get the counters while you two get the dishes. Where's the cleaner and stuff?"
     PRG "I-In the closet over by the entrance door. Make sure to grab the yellow bottle. Takamura-sensei is really particular about what the counters are cleaned with."
     "I nodded, and hurried to the closet, grabbing the proper bottle and came back over, seizing some paper towels along the way."
     scene black with fade
@@ -45278,15 +45242,25 @@ label PRG063:
     with fade
     "After finishing the mad cleaning rush, Aida and I stepped onto the path leading toward the dorms."
     "Kanami had left a few minutes ahead of us, leaving our nighttime walk quiet, yet peaceful."
-    MC "What's that smile for? That little one I see peeking out?"
-    show PRG unique-happy
-    PRG "... Nothing."
-    MC "Feel nice seeing her again?"
-    PRG "R-Really nice, yeah."
-    MC "Good."
-    MC "Feeling better?"
-    PRG "Mhm..."
-    show PRG neutral
+    MC "I've never heard Tozakura-san get {i}that{/i} fired up over something."
+    show PRG worried
+    PRG "I know. I haven't either. I-I was kind of surprised."
+    MC "Yeah."
+    MC "Gotta ask though, now that we're alone. Is that girl really that bad?"
+    show PRG unsure
+    PRG "... She's awful, Keisuke. I-I really don't like her. I-I didn't want to be so negative around Tozakura-san, but... yes."
+    PRG "Even just seeing her. J-Just seeing her face makes me so... mad."
+    MC "Because of what she did to Sakura?"
+    PRG "Well... and just how she is. Again, I haven't heard her say anything, but, j-just the way she carries herself."
+    show PRG worried
+    PRG "She acts like she's the best..."
+    PRG "And she talks like she knows everything, a-and she butts into every conversation as if her words are so important that everyone deserves to hear them."
+    PRG "That's why I wanted to go against her so badly..."
+    PRG "I-I want to... mmn..."
+    MC "Put her in her place?"
+    show PRG unique
+    PRG "Mhm. T-That wasn't what I was thinking of, but... yes."
+    MC "Ah. Well, think I can imagine."
     "I smiled, and walked closer to her, wrapping my hand and arm around her back and giving her a little squeeze."
     "Aida leaned her head over onto my shoulder, resting it there as we went."
     show PRG worried
@@ -45321,6 +45295,606 @@ label PRG063:
     "Or... if she was bottling it up."
     "I rubbed my neck."
     MCT "Get through the ultrasound, then the contest. One step at a time."
+    jump daymenu
+
+label PRG064:
+    $setProgress("PRG", "PRG065")
+    play music Schoolday fadein 2.0
+    scene Dorm Hallway with fade
+    "6:30."
+    "I rubbed my eyes, walking down the hallway of the women's dorm."
+    "The walk I'd taken so many times now."
+    "And, every time, the walk drained every thought and anticipation to the surface, both exciting and anxiety provoking."
+    "Aida's ultrasound, then classes, then Aida's cooking competition that night."
+    "All in all, I was looking at a probably 14 hour day, minimum."
+    MCT "Energy drink in the cafeteria is mandatory today."
+    "I took a breath."
+    "The ultrasound... it felt like this massive chasm that Aida and I had to cross."
+    "I was glad that she was getting the ultrasound done, at the end of it all, despite my worries."
+    "And, I knew she was also feeling worried over it, of course. And, I knew why."
+    "Even for me, there was a slight pang of anxiety of her father being proven right."
+    "I didn't want it to happen. It... {i}]couldn't{/i} happen. But, if it did..."
+    "That was it. The 'but, if.'"
+    "That was what had been all over my head. And Aida's, from what I gathered."
+    "I rubbed my face with one hand, sighing and squeezing my eyes shut, as if to purge my head."
+    MCT "I'm worried... fuck, man. I..."
+    MCT "... It's for the kids. And for Aida's health. It's the best thing to do."
+    "I took a breath. Those nurses in the infirmary... that was their main gig. They were nurses. It was their job to check people over to make sure all was well."
+    MCT "If there were more than three... they would have seen it. I saw the screen myself. There were three. They were literally pointed out to me."
+    "I shut my eyes once more, picturing as best I could the screen from Aida's first ultrasound."
+    "There had been three... it was clear. Right on the screen."
+    "But... it wasn't clear. It was murky, and covered with film."
+    MCT "It's Aida's factor. The nurse said it herself. Fluid buildup. It's why Aida's so much larger."
+    MCT "Aida's factor makes her belly larger. It doesn't make her literally grow children quicker."
+    MCT "... Wait, does it?"
+    "I stopped in the middle of the hall, a few doors away from Aida's."
+    MCT "... Ruminating."
+    MCT "Let's... just get it done."
+    "I came to Aida's door and sent the 'I'm here' text over."
+    MCT "On my list of things that I'm looking forward to, waking up Alice by pounding at the door before seven in the morning is not high on it, so we're just gonna skip over that one."
+    pause .5
+    show PRG worried with dissolve
+    PRG "Hey, Baby..."
+    MC "Hey."
+    MC "I... probably know what's up, but everything okay?"
+    PRG "..."
+    PRG "P-Promise you won't be worried?"
+    MC "Um... sure? I can do my best."
+    MC "Why would I be?"
+    PRG "Because..."
+    show PRG unsure 
+    PRG "I-I didn't sleep well last night."
+    MC "Okay. How much sleep did you get?"
+    PRG "I fell asleep at... midnight?"
+    MC "Gotcha. And, you just got up?"
+    PRG "No... I've been up since four."
+    MC "Ah, okay. Thinking about... it?"
+    PRG "... M-Mhm."
+    PRG "..."
+    PRG "I-I don't want them to prove my dad right..."
+    MC "I know... I know."
+    PRG "W-What if there are more than three? W-What if I... w-what if there's more?"
+    MC "Well... we can tackle that when we get there."
+    MC "For now, we have to go. We have to make sure you're doing okay."
+    show PRG worried
+    PRG "... I-I know."
+    MC "I'm right here."
+    "I held my hand out to her."
+    scene Dorm Hallway
+    show PRG worried
+    with fade
+    "Aida shut her eyes for a moment, then silently nodded and shut the door, locking it and taking my hand."
+    MC "... You look nice today."
+    PRG "I... I look the same almost every day, Keisuke."
+    MC "And? You always look nice. Not a bad problem to have."
+    PRG "... So do you."
+    show PRG neutral
+    PRG "Y-You always look handsome."
+    MC "And thank you."
+    scene Dorm Exterior
+    show PRG neutral
+    with fade
+    "Outside, the air was surprisingly brisk. Cold for the time of year."
+    show PRG worried
+    PRG "I-I should have brought a jacket..."
+    "Aida stopped, sighing."
+    show PRG nervous
+    PRG "I-I don't think I have any that fit, anyways..."
+    MC "Well, next thing on the list to take care of."
+    "We started down the path, hand in hand."
+    "A slight bit of mist was in the air, like the clouds were holding the rain back for the most part but couldn't help but let a small dusting out."
+    PRG "... I feel like I've been having a growth spurt lately."
+    MC "What makes you think so?"
+    PRG "I had to order more shirts. Plus those bras from the nurse."
+    PRG "It's hard to explain, but... it almost feels like my skin gets tighter, then... catches back up."
+    MC "Does it hurt at all?"
+    show PRG worried 
+    PRG "No, w-which is what's really strange for me."
+    PRG "Everything in my head is telling me that what I'm going through should really hurt, or sting from getting so big, but... it just doesn't."
+    PRG "A-And, I still don't have any stress marks."
+    MC "See, that's crazy to me."
+    PRG "I-I know. I guess... my skin is just stretching really easy?"
+    MC "I guess so."
+    scene Campus Center
+    show PRG worried
+    with fade
+    "We walked through the middle of campus. Aside from one or two students off on the track in the distance, the campus was dead quiet."
+    MC "It's kind of eerie."
+    PRG "Y-Yeah. Like a horror movie."
+    MC "It is getting colder out. About that time."
+    show PRG neutral 
+    PRG "... We should have a movie night soon. Another one."
+    PRG "Maybe with Alice and Sakura?"
+    MC "Could be very fun. Let's figure something like that out soon."
+    PRG "I wonder if-"
+    show PRG surprised
+    PRG "Oh!"
+    stop music fadeout 2.0
+    "Just as we took one step onto the infirmary walkway, a small vibrating came from Aida."
+    "Aida reached down into her wallet and took her phone out, checking the screen."
+    show PRG worried
+    PRG "I don't have this number saved."
+    MC "Hm. Gonna answer?"
+    show PRG unsure
+    PRG "I... I-I don't know."
+    PRG "I-It might be... D-Dad."
+    MC "Well... how do you wanna do this?"
+    PRG "..."
+    "Aida looked up at the large, imposing building beside us."
+    PRG "... {w}I-I'm gonna do it."
+    "Aida quickly tapped the screen and held her phone to her ear."
+    PRG "H-Hello?"
+    pause 1
+    show PRG worried
+    PRG "Oh, yes?"
+    pause 2
+    PRG "Oh... okay... {w}right. Okay."
+    PRG "Um... maybe next week?"
+    PRG "... Friday should be alright. A-At the same time?"
+    PRG "Okay. Um... thank you. Bye."
+    pause 1
+    MC "... Guessing not your dad?"
+    PRG "No. It was one of the nurses."
+    MC "Huh?"
+    show PRG unsure
+    PRG "T-They couldn't tell me why, for confidentiality, but they said they wouldn't be able to do my ultrasound today, or any time over the weekend."
+    play music PRG fadein 3.0
+    PRG "There's apparently a faculty meeting next Friday, so the students won't have classes. The nurse suggested that day, so we don't have to go right to class and have a really long day after getting up so early."
+    MC "Got it. Well, alright."
+    PRG "..."
+    show PRG worried
+    PRG "I was so worried about getting it done, a-and I still am."
+    PRG "But, now that we're outside, I kind of just want to... g-get it over with."
+    MC "Right... I get that too."
+    MC "Well, it's about seven now. Wanna go to the cafeteria for something before class? We've got some time to kill."
+    PRG "Yes... yes, please."
+    "I took Aida's hand, and walked with her toward the cafeteria, crossing the misty courtyard and heading quickly inside."
+    scene black with fade
+    pause .25
+    scene Cafeteria with fade
+    "After a quick stop at a vending machine, I went to a table with Aida, and slid out a chair for her."
+    show PRG worried with dissolve
+    PRG "Oh, t-thank you, Baby."
+    MC "Of course."
+    "I slid the seat back in and took my own as Aida adjusted herself."
+    "She popped the top of her can of juice as I sipped a tea and sighed, biting into a breakfast pastry."
+    MC "So... hear anything about tonight? Like, as far as the contest?"
+    PRG "We don't know yet."
+    MC "Takamura-sensei hasn't said anything yet?"
+    PRG "No. I didn't see her all day yesterday."
+    MC "Hm. Interesting."
+    PRG "I don't know what to do."
+    MC "I mean, I think I'd just show up. Either way, at least you're present, then."
+    PRG "R-Right..."
+    pause 1
+    "The two of us sat. The cafeteria was so quiet compared to normal, the early morning not drawing any crowd."
+    MC "How are you... feeling?"
+    PRG "... I-I"
+    show PRG unsure
+    extend " don't know, Baby."
+    PRG "I-I... it's everything."
+    PRG "This competition, my ultrasound, Sakura... D-Dad... e-everything."
+    PRG "I-I don't know if I even want to compete today..."
+    PRG "I-I feel like I'm... I-I don't know... I-I don't-"
+    PRG "I feel so... like, I just want to go lay in bed..."
+    show PRG nervous
+    "Aida set down her can of juice and sort of wrapped her arms around, above her breasts, as if she was giving herself a small hug."
+    "I got up and went to her side of the table, sitting in a chair next to her and scooting closer, putting my hand on her back."
+    MC "Well... let's see what happens. If you get a bye, then it might just be a blessing in disguise."
+    MC "And if not, well..."
+    PRG "I-I'll do it..."
+    show PRG worried
+    PRG "E-Even if I don't want to... T-Tozakura-san has been working so hard with me. I-I can't let her down..."
+    MC "Right."
+    MC "Well, either way, I'll be right there to help."
+    PRG "... I-I feel like I need to be there for you, too."
+    MC "You are."
+    PRG "I-I know, but... i-it's always me dealing with something."
+    PRG "And, you're always so supportive and... s-so sweet."
+    show PRG unique
+    PRG "I... I want to do the same thing for you, but... i-it always feels like I'm asking so much, or that I'm being... high maintenance."
+    MC "Well, can I be a little on the nose?"
+    show PRG worried
+    PRG "In what way?"
+    MC "Well, like this. If you were high maintenance, it would mean you're overly demanding, unsatisfied, or like... being rude when someone doesn't give you attention."
+    MC "And, you're none of those things."
+    MC "High maintenance isn't the same thing as leaning on someone for support."
+    MC "The other thing is too, leaning on someone for support shows you trust that person, and also, in my opinion, helps you grow closer to them."
+    MC "And, I think we're pretty close, don't you?"
+    show PRG neutral
+    PRG "... I-I think we are, too."
+    PRG "... It's one of my favorite parts about us."
+    MC "Hm?"
+    PRG "You're my best friend, Baby. A-And my boyfriend."
+    show PRG blush-2
+    PRG "I-I feel like... w-we can have fun together, and do relationship things."
+    PRG "A-And I love that about us..."
+    PRG "W-When you watch my cook, I-I feel like... you genuinely care about it. Not that you're just watching because we're dating and you 'have to.'"
+    MC "And, that feeling goes both ways."
+    MC "It's a special feeling when your girlfriend has a genuine interest in your hobbies as a guy, too."
+    MC "Not many girlfriends will not only watch their boyfriend play games, but actively join in and enjoy it."
+    show PRG neutral
+    PRG "... I love watching you play. A-And... I'm starting to really like playing, too."
+    PRG "Especially that one. The Tales of... something."
+    MC "Lidia?"
+    PRG "Y-Yes. I-I really liked that one."
+    MC "Well... pardon me while I jot some ideas down for your birthday."
+    show PRG happy
+    PRG "M-My birthday isn't until March!"
+    PRG "A-And you set up everything for our vacation, a-and set up that dinner last weekend! Y-You've already done so much!"
+    MC "Ahem... {w}so?"
+    show PRG worried
+    PRG "Mmmn..."
+    MC "Picture a nice, shiny new game console for you to play."
+    PRG "B-But, I can just play yours. I don't need my own. Especially if we're getting an apartment together..."
+    MC "Assuming I'll share?"
+    show PRG neutral
+    PRG "Y-You do already!"
+    MC "Well, what if I want to play?"
+    show PRG excited
+    PRG "T-Then you can! I'm happy watching!"
+    MC "Good to know. Assuming we'll have time."
+    show PRG neutral
+    PRG "Right..."
+    PRG "Well, at night time. Once they're sleeping."
+    MC "Think you might pass out in bed around the same time."
+    MC "Three kids to take care of. Gonna be one tired mama."
+    show PRG blush-2
+    PRG "It... I-I'm still not used to hearing that, or thinking of myself like that."
+    MC "As a mom?"
+    PRG "Specifically the word 'mama.'"
+    PRG "That... someone's going to be calling me that someday. Or, even just being called 'mom.'"
+    show PRG unique-happy
+    PRG "It's..."
+    PRG "... I-It kind of makes me feel warm inside."
+    MC "Good."
+    pause 1
+    show PRG neutral
+    PRG "... How do you do that?"
+    MC "Hm?"
+    PRG "Y-You're... you're so good at getting me talking. A-And getting my mind off of things."
+    MC "On one hand, I think it's a skill."
+    MC "On the other... I think that's just what happens when you care about someone. You know how to get them into their best place."
+    show PRG blush-2
+    PRG "... You're good at it."
+    MC "Same goes for you."
+    PRG "... I cheer you up?"
+    MC "Of course you do."
+    MC "No matter what I've had happen to me during my day, I know I can come see you and everything will just feel a whole lot less sucky."
+    MC "You brighten my day, in literally every way."
+    show PRG neutral
+    PRG "... T-Thank you, Baby. You do the same for me."
+    PRG "Also... did you mean to rhyme that?"
+    MC "Did I?"
+    PRG "Mhm."
+    MC "Well. Call me a poet."
+    "I handed my pastry to Aida."
+    MC "Bite."
+    "She took it from me and took a nibble off one side, a small bit of jelly landing on her lower lip."
+    PRG "Mmhh... mm..."
+    "She licked her lips and handed it back to me."
+    PRG "Thank you."
+    MC "Of course."
+    MC "So, what time does the competition start tonight?"
+    show PRG worried
+    PRG "Um... about 17:00."
+    MC "Okay. Then, after cleaning up and stuff, probably just back to the dorms for bed?"
+    PRG "I figured so. I-I'm probably going to be really tired after everything."
+    MC "Alright. That's kind of what I was thinking too."
+    MC "Picked something that'll keep me upright."
+    "I held up my can of tea so Aida could read the front. All in all, it had enough caffeine to keep me going at least until bedtime."
+    PRG "Mmn..."
+    PRG "I hope I'll make it through the competition okay."
+    PRG "I'm so tired..."
+    MC "Hm. Well, if you can't have caffeine, maybe some fruit at lunch would help? Like, some extra vitamin C? That's supposed to be like a natural energy boost, isn't it?"
+    PRG "Maybe. But, I-I feel like I would need to eat a lot of fruit to even get close..."
+    MC "Could take a little walk before the competition, too. Quick jaunt around the campus."
+    PRG "I could. I-I'll see how I feel."
+    "By now, a few more students had worked their way into the cafeteria, the clock overhead showing the time."
+    MC "Shall we mosey? Get there a little early?"
+    PRG "I think so."
+    "I pushed the last of my pastry into my mouth and finished off my tea, coming around to help Aida up."
+    stop music
+    show PRG scared
+    PRG "B-Baby! That's her! Over there!"
+    MC "Her? Who?"
+    "I turned around, facing the line of students getting morning drinks or snacks."
+    PRG "D-Don't make it obvious!"
+    "Aida grabbed my arm and trying to hurriedly spin me back around."
+    PRG "Her! {w}T-Taguchi-san!"
+    MC "Oh, shit. Where is she?"
+    show PRG worried
+    PRG "The fourth girl in line. Look over your shoulder. See her? With the brown hair?"
+    "I turned just enough so I could angle my head to glance over."
+    "In the food line stood a girl, looking down at her phone, tapping out a message with her rather long finger nails."
+    "She covered her mouth for a moment, then kept typing away, shifting forward without glancing up."
+    MCT "... If I hadn't heard all of the stories, I'd have thought she was just some girl."
+    MC "She... doesn't look like she'd start any trouble. Not that that means anything."
+    PRG "I know. But... she does."
+    "Taguchi-san suddenly let out a small giggle and kept typing, glancing up at her options for morning drinks."
+    MC "Well... let's just skirt around her. Keep to ourselves."
+    play music Sunset 3.0
+    "I took my trash in one hand and Aida's hand in the other, taking it and dividing it into the appropriate bins as Aida recycled her can, and the two of us headed back into the halls."
+    scene HallwayStairs
+    show PRG worried
+    with fade
+    "Now far more alert, the two of us kept off to one side of the hall, walking along toward 3B."
+    MC "Well. Nice to have a name to go with the face."
+    MC "Or, wait... got that backwards. You know what I mean."
+    PRG "R-Right..."
+    MC "I guess even at a place like this, you get a bully or two."
+    PRG "Mhm..."
+    PRG "Were you... bullied at all when you were little?"
+    MC "I mean... here and there. Never anything like crazy. I kept to myself a lot. Mainly just my friends and I."
+    PRG "Mm."
+    MC "There was one time, though. It... it's not really that big a deal."
+    PRG "What?"
+    MC "So... I had this crush on this girl."
+    MC "I think I was like... 12? Maybe?"
+    MC "Anyway. She found out, somehow. No idea how. But, I was walking out of school one day to head home, and I remember I'd had a super rough day. Classes were hard, I was having a tough time in a class. Just a real dump of a day."
+    MC "Plus, it was raining, so just add that on top."
+    MC "But, anyway, I was on my way out the door, when this girl broke away from her group of friends."
+    MC "And she came up to me and just... asked me if I'd want to hang out sometime."
+    PRG "W-Well... that was nice of her."
+    PRG "What did you say?"
+    MC "I kind of stammered, you know? Like, was totally caught off-guard, and not expecting it."
+    MC "Think I said 'sure' or something. I don't know."
+    MC "And she said something like 'I heard that you like me, and I just figured we could hang out.'"
+    MC "And I was like 'okay. Sounds good.'"
+    MC "Then she stopped, and says 'um, just kidding!' Like, right in my face, and runs off laughing to her group of friends, who were all laughing too."
+    show PRG sad-2
+    PRG "Ohh... Baby..."
+    PRG "Mmh... I don't like that."
+    MC "It's fine. It's a long time ago now. Doesn't bug me or anything."
+    PRG "Still... who says that to someone?"
+    show PRG doubt
+    PRG "T-That's so mean... especially when she knew that you liked her."
+    PRG "... I hope she slipped in the rain walking home. And got her clothes all muddy."
+    MC "Eh, it happens. What can you do?"
+    show PRG worried
+    PRG "..."
+    "Aida squeezed my hand tighter."
+    scene Classroom
+    show PRG worried
+    with fade
+    "I walked in and went with Aida to her seat."
+    "Easing her bag off, Aida wriggled into her seat with a small bump as she came down."
+    "Her desk, while large, was... very quickly looking smaller and smaller compared to Aida's form crammed into it."
+    PRG "Mmh... o-one second."
+    "Aida shifted, her belly bumping her desk as she adjusted."
+    PRG "T-There. My skirt got folded funny."
+    "I nodded and came to the front to push the front of her desk back into place a little better, and did my best not to stare."
+    "Right where Aida's belly had bumped her desk, her buttons sat open, a diamond of skin showing through right on her front, and apparently out of eyesight for her."
+    MC "Here. Hold on a sec."
+    show PRG scared
+    "I came around and took Aida's shirt, carefully snapping the buttons together over her belly."
+    PRG "D-Did it pop?"
+    MC "No. Button's still attached. Just came undone. But we're good."
+    show PRG blush
+    PRG "Thank you..."
+    "I smiled and patted her belly gently."
+    "Shiori was in her usual place, as was Alice. Akira walked in behind me and sat down heavily, followed by Honoka, who waved."
+    show PRG blush-2 at Position(xcenter=0.25, yalign=1.0)
+    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    BE "Hands on in class? Tisk tisk~"
+    MC "Perv."
+    hide BE with dissolve
+    "Honoka grinned and took her spot at her desk."
+    "Aida and I both looked at her desk for a moment. It was different..."
+    show PRG neutral at altMove(0.5, 0.5)
+    "Near where Honoka's arms were was a sort of... flat board thing."
+    "Honoka took hold of it and spun it over, as she unzipped her bag and pulled out a notebook, setting it on the board with a pen."
+    show PRG worried
+    PRG "She has a writing board?"
+    MC "Guess so. Must make it easier."
+    PRG "I... I-I should ask Tashi-sensei if I can get one."
+    MC "Your, uh... table isn't working anymore?"
+    show PRG grope
+    PRG "Not as well..."
+    PRG "I-It kind of hurts now. E-Especially when I haven't pumped."
+    MC "Right. Well, might be a good thing to ask on."
+    "I checked the time. It was about three minutes till the bell."
+    MC "I'll see you after class. Fruit for lunch?"
+    show PRG neutral
+    PRG "Y-Yes. I'll need it."
+    MC "Sounds like a plan. I-"
+    stop music fadeout 2.0
+    show PRG worried
+    Unknown "Pardon me, Sensei!"
+    "Tashi-sensei stepped into the room, and was very nearly bumped into."
+    show PRG worried at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    pause .5
+    show PRG surprised
+    pause .5
+    "Shiori glanced up, her eyes training right onto Kanami as she sped-walked right over to Aida and I."
+    PRG "T-Tozakura-san? W-What is it?"
+    Kanami "K-Kodama-san... it's tonight."
+    show PRG worried
+    PRG "What? Are we competing?"
+    Kanami "No... we're not."
+    show PRG unique
+    PRG "Oh..."
+    Kanami "No, I mean no one is."
+    show PRG worried
+    PRG "What...?"
+    Kanami "The competition is canceled."
+    show PRG surprised
+    PRG "What?! T-There's never been a competition that's been... canceled."
+    Kanami "I was just at the kitchen dropping off a recipe card that I borrowed from Takamura-sensei, and there was a sign on the door."
+    Kanami "It was very short, but to the point. There's no competition tonight."
+    show PRG worried
+    PRG "Oh..."
+    PRG "Um... okay."
+    Kanami "I have to go, but we can meet up soon to plan for the next competition."
+    PRG "O-Okay. Thank you for letting me know."
+    show PRG worried at altMove(0.5, 0.5)
+    hide Kanami with easeoutright
+    "Kanami nodded and hurried back out the door, Shiori's eyes following her like a hawk."
+    MC "That's... new."
+    show PRG unique
+    PRG "I-I hope nothing happened..."
+    "The bell rang just as Tashi-sensei stepped to the front of the room. I hurried back to my seat, and looked up just quick enough to see his eyes linger on me for a moment before he flicked open the book in front of him."
+    scene black with fade
+    pause 0.5
+    scene Cafeteria with fade
+    play music Sunset fadein 3.0
+    "After class, I left the line with Aida and walked to a table, pulled out her chair for her, and sat."
+    show PRG worried with dissolve
+    MC "So... what's the plan now?"
+    PRG "I-I guess... just wait to hear if it's going to be rescheduled."
+    show PRG unique
+    PRG "It... it feels like the world or... or something just... keeps getting in the way."
+    PRG "There's always a problem..."
+    MC "Yeah... think that's just life."
+    PRG "Mhm..."
+    "I nodded, letting out a small sigh, and looked at Aida's tray."
+    "In addition to her rice, tamago sandwich, two bowls of noodles, and the small slice of cake on her tray, there were also two large oranges, sliced up into sections."
+    MC "Still on the fruit even still?"
+    show PRG neutral
+    PRG "Well... e-even though the competition isn't happening, oranges sounded really good."
+    MC "Absolutely a good call."
+    "I took some rice with my chopsticks and looked forward at Aida, just as she lost some rice right on top of her boobs, which rolled down onto her belly."
+    "Reaching over herself, she plucked it off carefully and got it back into her mouth."
+    "By now, Aida's spot at the table was growing further and further away from the table itself."
+    "Her belly, along with widening, was beginning to push out further and further away from her, leaving Aida sitting further away from me than ever."
+    "As a result, Aida essentially {i}had{/i} to sit at an angle, so one arm was closer to the table for her."
+    "In addition, she tended to take most plates or bowls and hold them over her boobs, close to her mouth, her arms over the top of her chest in order to reach."
+    PRG "... Baby?"
+    MC "Hm?"
+    show PRG blush-2
+    PRG "... You were staring again."
+    MC "I... sorry."
+    MC "Just kind of... well, you know."
+    PRG "I... I know."
+    show PRG neutral at altMove(0.5, 0.25)
+    PRG "Oh, h-hello."
+    Tomoko "Hey."
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "I turned my head just as Tomo set her tray down next to Aida and sat, scooting in."
+    Tomoko "Sup?"
+    MC "Uh... nothing?"
+    Tomoko "Cool."
+    pause 1
+    MC "So, uh..."
+    Tomoko "Yeah?"
+    MC "... What are you doing here?"
+    show Tomoko annoyed
+    Tomoko "Eating my chicken."
+    show Tomoko neutral
+    show PRG worried
+    MC "Okay. Good. That's good."
+    MC "You never sit with us."
+    Tomoko "So, what if I decided to?"
+    MC "Ugh... whatever."
+    Tomoko "I actually wanted to talk to Kodama-san."
+    show PRG embarrassed
+    PRG "M-Me? Um... okay?"
+    Tomoko "Do you know where Takamura-sensei is?"
+    show PRG worried
+    PRG "I... I haven't seen her today, no."
+    MC "You're in her damn homeroom, Tomo. You literally see her every day."
+    Tomoko "Yeah. And she wasn't here today, dickhead. That's why I'm asking your girlfriend if she knows where she is."
+    show PRG unique
+    PRG "I... don't. No."
+    MC "Well, last we saw her was a couple days ago when you guys were practicing."
+    Tomoko "I wasn't sure if she let the cooking club know or something."
+    PRG "No, nothing. M-Maybe that's why the competition was cancelled?"
+    MC "That very well could be."
+    PRG "I... I hope she's not sick..."
+    MC "Well, where else would she be if she's not here? Like, what other reason? And with like no notice?"
+    PRG "I... I don't know..."
+    MC "Kind of surprised you didn't ask your roommate, Tomo. Isn't she like the one who knows literally everyone's business?"
+    show Tomoko worried
+    Tomoko "She's the reason I need to talk to her."
+    MC "Is she okay? Like, your roommate?"
+    Tomoko "It's..."
+    Tomoko "It's hard to explain."
+    show PRG worried
+    PRG "Well... that at least tells us why it was cancelled."
+    MC "Yeah."
+    MC "I guess we have a free night, then."
+    PRG "I... I might try and sleep. But, if I go to bed too early, then it might make me get up too early tomorrow."
+    show PRG neutral
+    PRG "Maybe... we could play that game? Tales of Lidia?"
+    MC "Oh, I'm down. So down. You, me, some food, and Midnight Dutchess."
+    show Tomoko smile
+    Tomoko "YOU GOT MIDNIGHT DUTCHESS?!"
+    MC "Yep. Aida bought it for me when we were in Kanagawa."
+    Tomoko "How?! That game is backordered everywhere!"
+    show PRG unique-happy
+    PRG "I-I just... found it on a shelf at a game store by the stadium."
+    show Tomoko annoyed
+    Tomoko "Found it on a-"
+    Tomoko "Mmrrhh... my copy has been stuck on processing for like two weeks..."
+    MC "Remember when you got a copy of Seer of Seasons and wouldn't let me play it?"
+    Tomoko "..."
+    show Tomoko neutral
+    show PRG neutral
+    MC "... Haha."
+    PRG "S-She can play with us, Baby. I-I don't mind."
+    MC "I'm just teasing, Tomo. Wanna come over and give it a go?"
+    show Tomoko smile
+    Tomoko "... Kind of."
+    MC "Well, let's keep it in mind for the weekend. On a day when Aida isn't running on four hours of shuteye."
+    show Tomoko neutral
+    Tomoko "... 'Kay."
+    "Tomo took a rather large bite of chicken and sighed, pulling out her phone and looking down at it."
+    "I looked up at Aida, who was eating her sandwich with one hand, her plate balanced on her left boob."
+    "'Balanced' was a strong word. More resting at that point. Her boobs were big enough that she could just set the plate on top and it would be fine, especially with her belly underneath to support her chest."
+    "While she ate her sandwich, her other hand was on the side of her belly... just rubbing gently."
+    "Back and forth, idly as she chewed, Aida subconsciously rubbed her belly, swallowing and setting her sandwich down as she went for her water."
+    "I sighed to myself, just watching."
+    "It was a unique, and simultaneously adorable thing. Just the lightest, little rubs, her hand doing little circles here and there."
+    PRG "Hotsure-san? D-Did your brother tell you that he got paperwork for us to get an apartment?"
+    show Tomoko surprised
+    Tomoko "... Like, together?"
+    MC "That is the idea, Tomo. Yes."
+    Tomoko "Like... soon?"
+    MC "Well, after the school year is over with."
+    Tomoko "Where?"
+    MC "On the island, somewhere. We don't, like, have it yet. I just got the papers for us to fill out."
+    show Tomoko neutral
+    Tomoko "... So, I'm guessing I'll be stuck helping you guys move?"
+    MC "I'm not sure if it's furnished or not. Moving in might just be hauling our stuff from our dorms to it."
+    Tomoko "Cool."
+    Tomoko "I forgot to grab something to drink. Hold on."
+    show PRG worried at altMove(0.5, 0.5)
+    hide Tomoko with dissolve
+    PRG "Um, Baby?"
+    MC "Hm? Yeah?"
+    PRG "What... um... what did you want to do this weekend besides that?"
+    MC "Mm... nothing in particular. Why?"
+    show PRG neutral
+    PRG "No... no reason. I just... had a fun idea for Saturday. Maybe we could play games with your sister on Sunday?"
+    MC "Yeah, sure. Good call. What's your idea?"
+    show PRG blush-2
+    PRG "... I'm not telling."
+    MC "Mmn~"
+    MC "Secrets? How sneaky of you."
+    PRG "Y-You'll find out soon."
+    show PRG neutral at altMove(0.5, 0.25)
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    MC "How does Sunday sound, Tomo?"
+    Tomoko "For games?"
+    MC "Yeah."
+    Tomoko "Okay."
+    MC "Cool."
+    PRG "Should we play at my dorm? So there's more room?"
+    MC "I... yeah, I guess. Never really thought about that."
+    "It really hadn't crossed my mind too much that Aida had an actual separate, and quite large bedroom compared to my setup with Daichi."
+    PRG "Okay. I-I can make something for us to eat, too. W-What foods do you like, Hotsure-san?"
+    show Tomoko smile
+    Tomoko "Eh, whatever."
+    Tomoko "Also, just call me 'Tomoko.' Or Tomo. Whatever."
+    show PRG worried
+    PRG "O-Okay. Y-You can call me Aida, too."
+    Tomoko "Got it."
+    "I watched Tomo rest her head in her palm, scrolling on her phone."
+    "Aida's eyes rested on her for a moment longer before she picked up an orange slice and brought it to her mouth."
+    show PRG neutral
+    "I looked from Aida, back to Tomo, then to Aida again."
+    MCT "Those two playing games together is gonna be interesting."
 
     #Move this disclaimer after each subsequently rewritten scene until route has been fully reworked.
     scene black with fade
@@ -45333,292 +45907,9 @@ label PRG063:
     centered "{size=+3}{outlinecolor=#00ff00}Thank you for following the development of Growth Academy and playing Aida's route. We hope you've enjoyed it.{/outlinecolor}{/size}"
     jump daymenu
 
-label PRG064:
+label PRG065:
     $setSize(5)
     $setTimeFlag("size5")
-    $setProgress("PRG", "PRG065")
-    scene Dorm Exterior with fade
-    play music Rain
-    "After a day of sitting at my desk, staring at the back of Shiori's head, and forcing my eyes back open every five minutes or so, I was really looking forward to doing anything that didn't involve obtaining more useless knowledge."
-    "Aida was off doing homework in her dorm, and I, being the less responsible one, had chosen to push it off until I most likely would be almost asleep in bed tonight and remember it then."
-    "Walking up to my dorm, I was greeted by a bright yellow sticky note pasted onto my door."
-    Note "Meet me in the school kitchen!"
-    Note "PS: This is for Keisuke Hotsure, not the other guy."
-    "Stifling a chuckle, I took the note off before Daichi could get an eyeful of it and crammed it into my pocket. I threw my bag on my bed and took off for the kitchen."
-    scene Cooking Classroom with fade #Kitchen?
-    "When I first entered, my immediate reaction was to the lack of Aida in the room. Instead, all I saw was a shape similar to a certain green and curvy fruit."
-    show Sakura neutral with dissolve
-    MC "Oh, hey, Myoga-chan."
-    Sakura "Afternoon, Hotsure-san! You get my note?"
-    MC "Er, yeah? That was from you?"
-    Sakura "Duh! Who else would it be?"
-    if isEventCleared("PRG055C"):
-        MC "Oh, I don't know. Perhaps my pregnant girlfriend, or mine and Aida's other friend and your most esteemed protégé?"
-    else:
-        MC "Good question. I was expecting it to be from my pregnant girlfriend, to be honest."
-    show Sakura happy
-    Sakura "Nope!"
-    MC "Okay, so why the note?"
-    show Sakura neutral
-    Sakura "Simple."
-    "Sakura reached down behind the counter, pulling up what appeared to be an old school basket. Like, the ones you saw in those old cartoon shorts from way back in the stone age."
-    "She flipped open one side and tilted it toward me. I couldn't quite see everything inside, but I could make out the odds and ends of bits of food here and there."
-    MC "... You want to take me on a picnic?"
-    Sakura "..."
-    Sakura "No, Hotsure-san. I made this for you and Kodama-chan."
-    MC "Eh, why? Not that I don't appreciate it. I'm just curious."
-    "Sakura pulled one of the stools out by the counter and sat, motioning for me to join her."
-    Sakura "Look, I'm not exactly the best at this sort of thing, but I wanted to say thank you to you and Kodama-san. You two did a lot to help me out when my hand was all messed up."
-    "She waved her hand around, which still had a very thin bandage over it."
-    MC "Don't count me as unappreciative, Myoga-chan, but you really didn't have to do this."
-    Sakura "Oh, come on. Of course I did."
-    if isEventCleared("PRG055C"):
-        Sakura "It would've been easy for you, Kodama-chan, and Inoue-san to just leave me behind while you went off to the competition. It probably would've simplified things, to be honest."
-    else:
-        Sakura "It would've been easy for you two to just leave me behind while you both did your own thing."
-    Sakura "But, you kept me around. And, it meant a lot. So, here."
-    "Sakura nudged the basket toward me."
-    MC "Well, I do really appreciate it, Myoga-chan. But, remember that you and Aida are a  team. That's just the kind of thing that teammates do for each other."
-    Sakura "You're kind of on the team too, you know."
-    Sakura "I mean, not officially. But, you're kind of like an honorary member."
-    if isEventCleared("PRG055C"):
-        Sakura "Same thing for Inoue-san. She's part of our crew now too."
-    MC "Well, regardless, you'd do the same for Aida if she got hurt, wouldn't you?"
-    Sakura "Of course I would. I really like Kodama-chan. And, not just as a team member, but as a gal-pal too."
-    Sakura "But, having said that, I'm not taking back my gift. I worked hard on it, and you and Kodama-chan wouldn't want to hurt my feelings, would you?"
-    "Sakura jammed her bottom lip out and quivered it slightly."
-    MC "Alright, alright, I yield. Thank you very much."
-    Sakura "No problem. Tell Kodama-chan I say thank you, too."
-    MC "You got it."
-    scene Dorm Exterior with fade
-    "I lugged the heavy basket across campus back to the dorms. Luckily enough for me, it was brisk out, but the air was still fairly warm. Just enough for sitting outside for awhile."
-    "After a quick stop at my dorm and grabbing an old blanket, I walked around to the girl's dorms and walked down the length of the building."
-    if isEventCleared("PRG056B"):
-        "I took note of the large kink in the concrete, now visible in the open and rainless air."
-        MCT "Not this time, you bastard."
-    else:
-        "I walked down the path, trying to keep the heavy basket from swinging."
-        MCT "The hell did Sakura stuff this thing with?!"
-    "Arriving at Aida's door, I knocked twice."
-    MC "Delivery for a Miss Kodama!"
-    show PRG neutral with dissolve
-    "Aida opened her door and peeked out."
-    PRG "Oh, hey. Shouldn't you be doing homework?"
-    MC "Shouldn't you?"
-    show PRG happy
-    PRG "I was! You interrupted me!"
-    MC "Well, my most sincere apologies, but I have something for you."
-    show PRG neutral
-    "Aida glanced down, only now seeming to notice the large basket and old blanket."
-    show PRG aroused
-    PRG "A picnic? Really?"
-    MC "Well, it isn't technically from me. Sakura actually put this together for us. She wanted to thank us for all we did to help her while she was hurt."
-    show PRG worried
-    PRG "Ah... we didn't really do that much for her specifically, did we?"
-    MC "I didn't think so either, but I couldn't tell her that. She really wanted to give me this so I could take you on a picnic."
-    "Aida glanced back at her books on her desk."
-    MC "We can do the homework together after we eat, if you'd like."
-    PRG "Promise we'll actually study?"
-    MC "Sure! What else would we do?"
-    show PRG admire-2
-    PRG "..."
-    MC "Point taken. Now, let's go!"
-    show PRG neutral
-    PRG "Just give me one second."
-    "Aida disappeared back into her room, returning a minute later with a black tote bag."
-    "She walked out the door and locked it. I silently moved back to make room for her. Standing too close to Aida while she was turning around was asking for a wrecking ball sized stomach straight to the abdomen, and I quite enjoyed having an intact ribcage."
-    MC "So, any place that sounds fun for picnicking?"
-    PRG "Um... what about the woods?"
-    MC "The woods? I don't think I've been through there yet."
-    PRG "I've walked through there once or twice. It's really quiet and calm."
-    MC "Well, hey. Let's check it out."
-    scene Hill Road
-    show PRG neutral
-    with fade
-    MC "So, you said you've been to the woods a few times?"
-    PRG "Mhm. Just when I was feeling like I needed a walk."
-    PRG "It's not too far away, but it's enough where it feels like a nice getaway."
-    MC "Can't wait."
-    "Aida and I left through the school's gates and turned left, heading for the large gathering of trees a little ways away."
-    show PRG worried
-    PRG "Keisuke?"
-    MC "Hm? What's up?"
-    if checkAffection("PRG", ">", 37):
-        show PRG unique
-        PRG "Do you think we could walk just a little bit slower?"
-        MC "Oh! Oh, sure!"
-        "I slowed my gait a bit, falling in right beside Aida. As we walked, her belly swayed from side to side with her body's natural movements. And every so often, Aida's hips and sides would bump up against me."
-        show PRG neutral
-        PRG "Thanks."
-        PRG "Let me have the blanket. So you don't have to carry so much."
-        "I smiled as Aida reached under my arm and took the blanket from me, holding it under her arm."
-    else:
-        PRG "Um... would you like me to hold that blanket for you? So you have less to carry?"
-        MC "Oh, I mean if you're offering, then sure."
-        "I passed the blanket over to Aida and she held it under one arm."
-        show PRG unique
-        PRG "W-We can slow down a little if you need to. That basket looks heavy."
-        menu:
-            "Nah, it's not too bad.":
-                MC "Nah, it's not too bad."
-                $setAffection("PRG", -2)
-                PRG "Oh, okay..."
-            "Good idea.":
-                MC "Good idea."
-                show PRG neutral
-                $setAffection("PRG", 2)
-                "I slowed myself down just a bit. The basket, in return, stayed more steady and wasn't quite as bouncy."
-    scene Woods with fade
-    "As Aida and I drew closer to the woods, we saw a worn path reaching into the woods and snaking around some trees."
-    MC "Through here?"
-    show PRG neutral with dissolve
-    PRG "Yep. Watch your step, though. There's a lot of roots sticking up."
-    "Aida and I walked in past the outer brush, into the trees. The woods were nearly completely silent, save for the occasional brushing of wind through the leaves, and the soft chirp of a bird here and there."
-    "Aida walked in front of me, leading the way through."
-    MC "Any spot in particular that you think would be good? The flatter the better."
-    PRG "I think I know a place."
-    "Aida walked on for about another kilometer until she reached a large cluster of trees with deep brush at their bases, just a bit off the trail."
-    PRG "Come this way."
-    "Aida took my hand and pulled me around the trees through brush that was nearly up to my thigh."
-    "We turned the corner to a tiny clearing no more than a couple of meters across. There was a small opening in the leaves above, allowing for sunlight to touch the earth."
-    PRG "Here we are."
-    MC "Whoa. This is beautiful."
-    PRG "This is my favorite spot on the island. So quiet and peaceful."
-    "Aida unrolled the blanket on the ground, and I set the basket on top of it, weighing it down."
-    MC "All right. So, how do you wanna do this?"
-    PRG "Do what?"
-    MC "Get you sitting on the ground."
-    show PRG nervous
-    PRG "Uhm..."
-    PRG "I haven't really had to do that lately."
-    PRG "Can you hold my hands?"
-    "I walked to the front of Aida and grabbed onto her hands. Aida crouched herself down, and her belly brushed against me as she tried to sit."
-    show PRG doubt
-    PRG "Mmm, no good."
-    MC "Let's try this."
-    "Instead of going from the front, I walked behind Aida and put my hands under her arms."
-    MC "You mind if I get a little hands on?"
-    show PRG worried
-    PRG "Just grab me. You don't need to ask."
-    "Taking my golden ticket, I wrapped my arms around Aida and held her right on the belly."
-    MC "Okay, now slowly crouch down. Try and get your knee under you."
-    "As one unit, Aida and I crouched down together. I felt her left leg move to her knee under us."
-    PRG "Okay. I've got my knee down."
-    MC "Can you get the other?"
-    PRG "Mmph..."
-    PRG "'Kay, I got it."
-    MC "All right. Now, just lean into me and swing your legs out."
-    "Aida's body came back, and I was ready. I held her body with her as I set her down as if she was the most delicate piece of art."
-    show PRG neutral
-    "I didn't let up until her soft ass was resting comfortably on my blanket."
-    "I took a mental note to sleep with this blanket tonight and sat down right across from her, the basket in between us."
-    PRG "Did Sakura say what she packed?"
-    MC "No, actually. I was curious about that too."
-    "I opened up the top of the basket and began unloading."
-    "While I pulled things out, I took note of Aida."
-    "I hadn't thought about it, but sitting on the ground like this left Aida in a predicament."
-    "She didn't really have a place to put her legs with her belly occupying so much room, so she had her legs spread to either side, letting her belly rest in between. In fact, her baby mound was so big now, that it actually was resting on the ground."
-    "The same sort of deal went to her hands. The average person would let them rest in their lap, or possibly on their knees."
-    "Aida's hands found a place right under her boobs, which just sort of perched there on top of her belly."
-    MC "Comfy? Ground feel okay under you?"
-    "Aida simply nodded sweetly."
-    PRG "I'm really comfy. And just..."
-    if checkAffection("PRG", ">", 39):
-        PRG "I'm really happy, Keisuke."
-        PRG "Just... yeah. I don't really know how else to say it, but I just feel good."
-        MC "I'm so glad to hear it."
-    else:
-        PRG "This is nice. Being out here."
-        PRG "No bells going off, or anything else. Just us."
-        MC "Yeah. It is nice."
-    "I pulled out a thermos and a couple of bowls, setting them down."
-    PRG "Can I see that thermos, Keisuke?"
-    "I passed it over to her."
-    "Aida looked it over and, holding it over herself, brought her hands together so she could unscrew the top."
-    "Once the top was off, she brought it to her nose and inhaled."
-    show PRG happy
-    PRG "Mmm... Sakura makes amazing soup."
-    MC "Really? What kind is it?"
-    PRG "Zosui. It's amazing."
-    MC "Huh. Is that her specialty, then?"
-    show PRG neutral
-    PRG "She's good at making a few different soups, but this one is my favorite. I keep on telling her to make them for our competitions sometime, but she keeps refusing."
-    MC "Hm. I wonder why. Especially if they're as good as you said they are."
-    PRG "From what I've heard, she learned how to make soup from her dad. He's apparently a really good cook too."
-    MC "Really?"
-    PRG "Mhm. He taught her all she knows. She told me about how, when she was little, her dad wanted to open a restaurant, but he just didn't have the money for it."
-    PRG "So, he decided to teach her all of his secrets. That's why Sakura usually handles cooking the meat."
-    MC "I see. Well, that makes sense."
-    "I set out two longer bundles and opened them up. Two sandwiches stacked to the nines with fresh looking vegetables and some succulent looking meat poked out from the paper."
-    "At the bottom of the basket were two plates, which I retrieved."
-    "In addition to the sandwiches and soup, Sakura had packed two small bags of chips, and two cans of soda, which I set aside."
-    "I set Aida's sandwich on one of the plates and passed it to her, and laid my own on the other plate."
-    MC "What kind of meat is this? Looks fancy."
-    PRG "I'm almost certain that it's pastrami. It's beef brisket that's been smoked with some herbs after being brined with salt."
-    "All I really understood was that it was food and it sounded good."
-    MC "Let's hope it lives up to the name."
-    "I took a big bite of sandwich, getting a mix of mayo, pastrami, lettuce, tomato, cheese, and the tiniest nip of mustard."
-    MC "Mm... that is good."
-    "Across from me, Aida took a small bite of her sandwich, and chewed thoughtfully."
-    show PRG satisfied
-    PRG "... Yeah. It is really good."
-    scene black with fade
-    $setTime(TimeEnum.EVE)
-    scene Woods with fade
-    "As we ate surrounded by beautiful picturesque trees and plants, I couldn't take my eyes away from her."
-    show PRG neutral with dissolve
-    "Aida just looked around while she ate, almost seeming completely unaware of the amazingly cute baby belly that she was growing."
-    "After about half of her sandwich was gone, Aida leaned over and rubbed her belly with one hand."
-    show PRG admire-2
-    PRG "That good?"
-    "I couldn't help but smile like an idiot. Aida talking to our unborn children was just too cute."
-    "Aida noticed my smile and waved toward herself."
-    show PRG neutral
-    PRG "Come here."
-    "Once I'd scooted closer, Aida took my hand and put it right on her belly."
-    PRG "I was reading online the other day that talking to your babies before they're born is good for them."
-    MC "I think I've heard of that."
-    "Aida nodded and slid over the black tote bag she'd brought with her. She reached into it and pulled out a book with a soft cover."
-    "The book was worn, with the binding frayed on one side and a small wearing on the cover. Across the front, the title read \"Where the Fairies Go Play.\""
-    stop music
-    show PRG unique-happy
-    PRG "I thought that maybe... you and I could read them a story together?"
-    "This entire time, my hand hadn't left Aida's belly, but I smiled at her and rubbed her belly a bit."
-    MC "Of course."
-    show PRG happy
-    "Aida grinned, her cheeks red as she set her sandwich beside her and held the book with the hand closest to me, so I could see."
-    show PRG neutral
-    PRG "Could you turn the pages?"
-    "I nodded and flipped the cover to the first page. On the inside of the cover, the name \"Aida Kodama\" could be seen written in perfect handwriting, with a date written under it."
-    PRG "This was my first book when I was a baby. My mom used to read it to me every night before bed."
-    "I ran my hand gently across it."
-    "Turning the first page, I snuggled in against Aida. Her other hand was on top of her belly, rubbing gently. My free hand was on the other side, rubbing with her."
-    play music PRG
-    PRG "Far out to sea, and away from the shore, lies an island called Shinpi Isle."
-    PRG "On this isle, in the trees, far away from the seas, lies a river that runs for a while."
-    PRG "If you follow this river, down toward the end, you'll find a tiny, small pond."
-    PRG "And around this pond, near the trees and the rocks, is where the fairies go to play."
-    "As Aida read, her voice took on that special tone that only mothers knew how to do. That sort of relaxing, mellow, yet sing-songy tone."
-    "And, not all mothers could pull this off. It seemed like only the best mothers could do it well, and Aida had it down pat."
-    "Her voice rose with excitement during the parts about the fairies, and lowered to a small whisper during the more quiet and gentle parts."
-    "I couldn't help but relax into her, resting my head on top of hers while she read. I let my body fall into the motions of rubbing her belly, holding Aida, and turning the page on occasion."
-    PRG "And then, in the night, when the sun goes away, and the island is ready for dreams."
-    PRG "The fairies go home, and the island grows still, as they sleep to the sounds of the streams."
-    "I shut the book gently and set it back in the bag."
-    "Now, with one hand free, my free hand came up to Aida's head and held her against me, holding her close."
-    "Neither of us spoke. We simply rubbed her belly together, sitting beside each other and listening to the sounds of the forest."
-    if checkAffection("PRG", ">", 35):
-        MC "I love you."
-        PRG "I love you too, Keisuke. So much."
-    else:
-        MC "That was amazing."
-        PRG "Thanks, Keisuke. I've been reading to them a lot."
-    PRG "We should finish our food, though. I don't want to waste it."
-    hide PRG with dissolve
-    "Reluctantly, I peeled myself away from Aida and picked up my plate. Only, this time, I sat right beside her, and enjoyed our picnic properly."
-    jump daymenu
-
-label PRG065:
     $setProgress("PRG", "PRG066")
     scene Hallway
     show PRG neutral

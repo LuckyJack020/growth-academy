@@ -14995,7 +14995,631 @@ label GTS055:
     pause 4.5
     jump daymenu
 
-label GTS056:
+label GTS057:
+    $setProgress("GTS", "GTS058")
+    $setTime(TimeEnum.EVE)
+    $setMCOutfit(OutfitEnum.CASUAL2)
+    $setTomokoOutfit(OutfitEnum.CASUAL)
+    scene Library 
+    show Tomoko neutral 
+    with fade
+    play music Tomoko
+    "Tomo stared back at me from over her wall of books."
+    Tomoko "I know you've got some little comment brewing. Let's hear it."
+    "I shrugged."
+    MC "Nothin'. I'm just proud of you."
+    show Tomoko neutral with vpunch
+    pause 0.5
+    show Tomoko neutral at Transform(xzoom=-1)
+    MC "Heh, looks like that was the worst thing I could've said."
+    "The quiet of the sparsely-peopled library hung a little heavier. Tomo, for her part, wouldn't take her eyes off one book in particular. I couldn't say if she was studying it."
+    "The heading caught my eye and I leaned in a little closer."
+    MC "JSL?"
+    Tomoko "Yeah."
+    MC "Mm."
+    if isEventCleared("MC014"):
+        MC "That's a real sweet thing of you to do for Hotdog Lips."
+        show Tomoko annoyed
+        "Tomoko's mouth wriggled, and her mane canted to the side to envelop her hand as she rested her cheek on it."
+        MC "Hmhm, just joking, sis."
+        MC "Naomi's got this friend in the film club, Tanaka-san. Her factor's this really long, python tongue. Same as Tashi-sensei, if you've seen him around."
+        show Tomoko worried
+        Tomoko "Mm..."
+        show Tomoko neutral 
+        Tomoko "...I'd remember seeing that."
+        MC "Maybe not. Bit of a recluse."
+        MC "I'm just saying... it was a real obstacle for her, too. Maybe not... as bad, but..."
+        MC "I dunno. I'm proud of you, Tomo."
+        show Tomoko flattered
+        "She tapped her pencil twice, jotted something down on her notebook."
+        Tomoko "Thanks."
+    elif isEventCleared("MC024"):
+        MC "Well... I can see how you'd be so moved. Turns out Hotdog Lips has her problems, too."
+        show Tomoko annoyed
+        "A wry smirk crept across her chin just before she pulled the brown curtain over herself, hiding."
+        MC "Ksh... I shouldn't joke. She's got it rough, I know."
+        MC "And it's really good of you to take steps to keep a line open between you. You know she needs it."
+        show Tomoko worried
+        Tomoko "Yeahhhh... I do..."
+        show Tomoko neutral
+        Tomoko "You know what else I know? By the time I can put a sentence together, she'll be doing ninjutsu at me with her friggin' hands."
+        MC "She'll probably learn it from her brother."
+        Tomoko "Ugh."
+        "A snicker escaped me as she pointedly returned to her book."
+    else:
+        MC "That's good. Is it an elective?"
+        "Tomoko's taking a second to ponder her answer caught my attention."
+        Tomoko "Kinda, I guess. Free study."
+        MC "Alright, cool."
+        MC "...Hypothetically, could it happen to have something to do with your roomie?"
+        "Her pen lingered at the end of one line of notes. {i}Tap, tap{/i}."
+        Tomoko "Her factor's getting pretty bad. Even when I'm listening, I catch maybe half of what she says."
+        MC "Really?"
+        Tomoko "Yeah. I can tell she gets pent up about it because even she's realizing it's just going over my head."
+        MC "Rather than just deliberately ignoring her."
+        Tomoko "Right. And the only alternative is if she tries to hand me a note, and then she's all frantic so I can barely read her handwriting, and I gotta write out some kinda fuckin' response..."
+        MC "Oi. Library."
+        show Tomoko annoyed 
+        Tomoko "Yeah, yeah."
+        Tomoko "Ugh, just... can we switch roommates? My mind needs a reclusive weirdo right now. Besides you."
+        MC "Hey Pot, it's Kettle. If I see Matsumoto-san, I'll ask."
+        MC "By the way, have you ever directed her to the school nurse?"
+        show Tomoko neutral 
+        MC "There's an acquaintance of mine who was also having trouble speaking due to her factor, and talking with somebody older with the same thing really helped her adapt."
+        show Tomoko worried
+        Tomoko "Huh... maybe that would get her off my ass..."
+        MC "There ya go."
+    menu:
+        "Anyway... is there anything I can help you with?": 
+            show Tomoko worried
+            Tomoko "Um..."
+            show Tomoko neutral
+            Tomoko "Do we still gotta do the thing today?"
+            "Ah, yes. The very day after the... \"meeting\" with my parents, Naomi had insisted on securing my sister's blessing, too."
+            "As much pull as Tomo's got in this family... Naomi was probably better off with a cash bribe. Or a Kimiko belly rubs bribe. I wanted them to get along, though, and I really just can't tell Naomi 'no'."
+            MC "Yeah, but if you need help I can just shoot her a text. She'll understand if we get there a little later."
+            Tomoko "Okay. In that case, do you happen to remember the answers to the exercises on 172 in trig?"
+            MC "Mmm...{w} {i}tk{/i}, shoot, I really don't. Guess we'll have to go through it the old fashioned way."
+            Tomoko "You {i}so{/i} do. Dick."
+            "I smirked as I unlocked my phone."
+            MC "It's this or socialize. Now, can I get a \"thank you\"?"
+            Tomoko "I'm gonna put wet gum in your hair."
+            MC "And I'll swing my mane into yours, and we'll be eternally linked, and do everything, and go everywhere together~"
+            "She narrowed her eyes at me."
+            MC "Twinnies forever~"
+            Tomoko "Does your girlfriend know you say shit like this?"
+            "I patted the bullet-stopping cascade of hair over her back."
+            MC "Open up your book while I text her."
+            "She groaned as I tapped over to my text messages."
+            show Tomoko distracted
+            MCCell "Hey blossom. Getting ready to head over with Tomo but she needs some help with math. Might take a few minutes. Srry for the wait"
+            GTSCell "No need to say \"sorry\", my love."
+            GTSCell "Never shall I stand in the way of your brotherly duties. Give her just as much time as you see fit."
+            MCCell "Thanks, Nacchan. See you soon"
+            GTSCell "Toodle-oo!"
+            $setAffection("GTS", 1)
+            MC "Heh."
+            show Tomoko distracted-2
+            "I pocketed my phone."
+            MC "Okay, got 172 open?"
+            show Tomoko neutral
+            Tomoko "Yeah, I got it open..."
+            MC "Excellent. So number one, here..."
+            show Tomoko happy
+            MC "..."
+            MC "Yeah?"
+            show Tomoko neutral 
+            Tomoko "Nothin'."
+            MC "Mm."
+            "So it goes. I shortly realized I wasn't cut out for teaching, but somehow we did stumble our way to a set of answers. I flatter myself to think she was starting to understand the how and why."
+            $setSkill("Academics", 1)
+            $setAffection("TM", 1)
+            "The lesson concluded, we packed up, I carried Tomo's overstuffed backpack to her dorm, and we headed back to mine."
+                           
+        "Well, are we ready to get going?":
+            show Tomoko neutral at Transform(xzoom=-1)
+            Tomoko "Mmm..."
+            show Tomoko neutral at Transform(xzoom=1)
+            Tomoko "Yeah, guess so."
+            MC "Cool. I'm gonna let Naomi know we're heading over."
+            show Tomoko distracted 
+            "She grunted and we pulled out our phones."
+            MCCell "Hey, Blossom. Were gonna grab some things from my dorm and well head over"
+            GTSCell "Capital! Then we'll see each other soon."
+            GTSCell "Do dress warmly, both of you. There's rather a chilly wind around the dormitories."
+            MCCell "As you say. See you soon"
+            GTSCell "Toodle-oo!"
+            show Tomoko neutral
+            "We packed up, I carried Tomo's overstuffed backpack to her dorm, and we headed back to mine."
+    scene black with fade
+    pause 1.0
+    scene Dorm Hallway 
+    show Tomoko neutral 
+    with fade
+    Tomoko "This place smells like fermented butt crust. Why are dudes like this?"
+    MC "The carpet's a little stale, sure. There's a nice basil scent by one of the first floor rooms by the stairs, though."
+    Tomoko "Oh yeah, by that big red stain. Where'd that come from, anyway? Was there an axe murder or two in here?"
+    MC "Tomo, this'll be a good day if you allow it. Naomi {i}wants{/i} to be your friend."
+    Tomoko "Well, if she wants it bad enough, she'll do whatever it takes, right?"
+    MC "And what if I want you to be friends?"
+    if checkAffection("TM", ">", 2):
+        show Tomoko worried 
+        pause 1.0
+        show Tomoko neutral 
+        
+    else:
+        "She shrugged."
+        Tomoko "Either we vibe or we don't."
+        Tomoko "But honestly, I wouldn't bet on prim, proper, pretty Yamazaki-san ever actually wanting to be seen with a professional bedrotter like me."
+        Tomoko "She goes outside for fun, dude. We're on different planets."
+        MC "You'd think so, but then I'd be out of the running, too."
+    Tomoko "I dunno. What does it matter what I think? If she treats you right, then..."
+    "My hand froze on the knob."
+    MC "What does it matter?"
+    MC "You're my only sister in this whole Godforsaken universe. We're practically mirror images of each other."
+    Tomoko "Yeah, I guess."
+    "Her tone told me she was genuine- pushing it would do more harm than good."
+    "I nodded over my shoulder and opened the door."
+    show Dorm Interior 
+    show Tomoko neutral
+    with fade
+    MC "You wanna take anything besides Skirmish?"
+    Tomoko "Nah, we'll kill a few hours easy with just that."
+    Tomoko "They're fun, but I dunno why you picked an RTS to introduce her to vidya... hope she's not competitive."
+    MC "Mm."
+    MC "Well, she's actually a pretty big history buff, so I thought she might get into a game about the Sengoku Jidai."
+    "I slid the case into my backpack and zipped it up."
+    Tomoko "Yeah, alright. I guess my question's more like... "
+    show Tomoko worried 
+    extend "uh..."
+    show Tomoko neutral 
+    Tomoko "I dunno how to say this nicely."
+    MC "Shoot."
+    Tomoko "So Yamazaki-san's like fuckoff huge now, right? Like, gigantic."
+    MC "I'd appreciate a slight rephrasing if you happen to discuss it with her directly, but yeah, that's essentially the case."
+    "I began unplugging the console to pack that up, too, puffing a thin layer of dust off each terminal as I went."
+    Tomoko "'Kay. Does she have a fuckoff huge controller to plug into your old Ayystation, or how are we doing this?"
+    MC "We talked about it, and I think what we're gonna do is... basically, I'm gonna be operating the controller for her."
+    Tomoko "..."
+    Tomoko "Alright. Just like old times, then."
+    MC "Exactly!"
+    "Lastly, I opened up the fridge and withdrew two bottles of water."
+    Tomoko "You drink coffee now?... Oh, there's the matcha."
+    MC "Yup."
+    "I gingerly threaded my arms through the straps of my backpack and pulled it tight."
+    MC "Ready, Tomo?"
+    Tomoko "Yeah. Yeah, I guess."
+    MC "Okay... after you."
+    stop music fadeout 4.0
+    play music ChangingSeasons fadein 4.0
+    scene black with fade 
+    pause 2.0
+    show Field
+    show Tomoko annoyed
+    with fade
+    "Just past Chūkan Point, I began to pick up on Tomo's panting over the whistle of the open plains."
+    Tomoko "Do you seriously walk this {i}every day{/i}?"
+    MC "Sure do. There and back, most days."
+    Tomoko "Sorry, that's stupid. Hah... Are you telling me there's no train... no bus, no... rickshaw, nothing?"
+    MC "The fresh air's good for you."
+    show Tomoko worried 
+    Tomoko "Like we're living in... hah... caveman times on this shitty... island. Mngh. Jesus."
+    Tomoko "Kei, I think you're gonna have to carry me the rest of the way."
+    MC "Okay."
+    show Tomoko worried at altMove(0.2, 0.75)
+    Tomoko "Ngh! That was a joke, you goon!"
+    MC "I had to be sure. You look like you're having a time, sis."
+    show Tomoko worried at altMove(0.75, 0.5)
+    "Sensing my qeue, I unzipped my backpack and withdrew a water bottle, which I proffered to her."
+    Tomoko "..."
+    Tomoko "Thank you."
+    MC "You're welcome.{w}.. Tomo, are you sweating?"
+    Tomoko "No."
+    "She stared straight down the trail and took a long drought."
+    MC "It's ten degrees out."
+    Tomoko "Fake news. I checked, it's thirteen."
+    MC "Oh, pardon {i}me{/i} then."
+    MCT "Maybe I should suggest occasional walks into town together..."
+    MCT "...No. One thing at a time."
+    MC "Anyway, I can see the gate up ahead. You can do it, Tomo. You're this close to leveling up."
+    "Despite her sighing, we did reach it and I punched in the gate code."
+    show Giant Dorm Exterior
+    show Tomoko neutral 
+    with fade
+    "It was quiet for a moment after the chain link slinked and tinkled shut. I heard someone digging in the dirt on the other side of Naomi's dorm. All else was a desolate stillness."
+    Tomoko "...Thiiiiis is freaky."
+    MC "It's... quite an experience, your first time passing through."
+    show Tomoko neutral at Transform(xzoom=-1)
+    Tomoko "Those are some big footprints."
+    MC "Yeah."
+    "We got closer, and I picked out a woman's voice around the corner... but not Naomi's. A little husky, low in the gums."
+    show Tomoko worried at Transform(xzoom=1)
+    pause 0.1
+    show Tomoko worried at altMove(2.0, 0.9)
+    "Idly curious, I peeked; they were two girls, in fact- a rather portly one on her hands and knees digging with a shovel like a large spoon, the other forcing sheet iron upright into the dirt. The latter spotted us first."
+    MC "Good afternoon! I don't think we've met, have we?"
+    "The former's eyes flew open on her round face and she whirled her head around to show me the back of it. Her friend gave her a tilt of the head, and then looked at us."
+    Ishida "You're Hotsure-san, right? I'm Ishida! And, uh..." 
+    "I got closer; Ishida was twirling some small necklace on her finger as she looked down at her big-bellied peer, blinking... conspicuously."
+    UNKNOWN "{size=-8}Just... just tell them my name, please, Ume.{/size}"
+    Ishida "{size=-6}Okey dokey.{/size}"
+    Ishida "And this is Masaji-san! Are you guys here to see Yamazaki-san?"
+    MC "Uh, yeah! Is she in?"
+    Ishida "Oh yeah! She said she needed to clean up for some guests. You must be his little sister!"
+    "I smirked as I looked over my shoulder."
+    MC "What do you know, you're... Tomo?"
+    "She was standing several meters behind me, arms wrapping around her stomach, eyes darting between the three of us."
+    "Tomoko grimaced, wrenched her lips apart, and after a moment managed to mouth a \"Hi\"."
+    "She must've seen my frown as I paced towards her; her eyes fixed on her dusty shoes."
+    show Tomoko worried at center with dissolve 
+    MC "{size=-6}It's really big of you to do this with me today, Tomo. Thank you. Let's head inside and play some games, eh?{/size}"
+    "She glanced over my shoulder at the two giantesses before at last meeting my gaze."
+    Tomoko "{size=-6}Yeah.{/size}"
+    "I nodded, put my arm around her shoulder, and turned back to Ishida."
+    MC "Yep! This is Tomoko. Lovely to meet you two."
+    MC "Well, we'd better not keep Naomi waiting. Take care, Ishida-san, Masaji-san."
+    "Masaji's crumpled form cringed, still refusing to look me in the eye. Ishida gave us a vigorous wave and they both returned to their work."
+    "I walked Tomo to the door."
+    Tomoko "..."
+    Tomoko "That was weird."
+    MC "We're all mad here."
+    play sound Knock
+    pause 0.5
+    "I heard Naomi clear her throat."
+    GTS "Come in, my love!"
+    show GTS Dorm Interior
+    show GTS_S happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) at Transform(xzoom=-1)
+    with fade
+    show Tomoko worried at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve 
+    GTS "Welcome! How wonderful to see you both!"
+    "Placing her hands on her lap, Naomi bowed low. Her hair cascaded like a black willow."
+    GTS "I understand the making of this meeting was quite the undertaking. Thank you for coming today."
+    Tomoko "Uh..."
+    "Her arms once again clasped around her middle as she looked away from Naomi."
+    show GTS_S neutral
+    Tomoko "H- {w}uh, {w}hu... {w}h-h-... {w}uh... {w}s-sor... {w}uh..."
+    "I put my hand on her shoulder, patted lightly."
+    Tomoko "He... {w}{size=-8}Hello.{/size}"
+    show GTS_S happy
+    GTS "What an honor it is to meet you at last, I scarce can express."
+    show GTS_S neutral
+    GTS "Now, may I offer you a nice, chilly infusion of peppermint and strawberry? It's quite good after a brisk autumn turn about the fields."
+    "Tomoko contemplated this for a moment, and nodded."
+    GTS "Splendid. My love, would you be so good as to help me pour her a cup?"
+    MC "Sure!"
+    "She turned without lifting her feet, and softly slid one stride at a time towards the counter as I followed."
+    hide Tomoko
+    show GTS_S neutral at center 
+    with dissolve 
+    "After lifting me up onto the counter, she withdrew a plastic tank of a sloshing, rich-orange liquid from the small walk-in fridge on her counter, and gingerly set it in front of me. I took up a large mixing bowl, placed for my convenience."
+    MC "God- {i}khm{/i}. I really love you, you know that?"
+    show GTS_S happy
+    "She regarded me warmly as she unscrewed the cap and inched the top of the tank inch by inch downward with both hands. One eye closed, she poured a stream of the sweet-smelling brew into the mixing bowl."
+    "When she was done, I then poured it into two plastic cups, and Naomi transported me back to the floor without spilling a drop."
+    show GTS_S happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show Tomoko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) 
+    with fade
+    MC "Here ya go."
+    Tomoko "Thanks."
+    Tomoko "...Is this, like, good?"
+    MC "I mean I never tried it, but Naomi makes a mean cup of tea."
+    "She stared up and over my shoulder for a moment, then looked back at me."
+    Tomoko "{size=-6}How?{/size}"
+    MC "Years of practice would be my guess. She was training to be a maiko before they shipped her off here."
+    Tomoko "Alright..."
+    show GTS_S neutral at Transform(xzoom=-1) with dissolve
+    GTS "Should it please you both, I've taken the liberty of setting out furnishings for the evening in my bedroom. Shall we?"
+    MC "We shall."
+    "I glanced over my shoulder to see Tomo tip-toeing behind me as we passed through the great gate."
+    "I heard her breath catch at the sight beyond. I just peered- Naomi's office chair was pulled off to the side, in its place two plum felt lounge chairs bulging with stuffing. My own bed back home didn't look so comfortable."
+    hide GTS_S
+    show GTS neutral
+    with dissolve
+    GTS "There you are. Once you're both seated, I'll place your chairs upon the seat of my chair. It should do no good to strain your necks."
+    MC "Thanks, Nacchan. Wanna give me a lift first so I can install the console?"
+    GTS "Certainly."
+    "I felt my sister's eyes on me as I rose up into the air in Naomi's gentle but sure grip, alighting atop the desk a meter or so away from a neat pair of meter-long pens."
+    Tomoko "So... so... uh..."
+    show Tomoko worried 
+    "She couldn't decide whether to focus on me or her, and so instead chose the floor, a little to her right."
+    if checkAffection("TM", ">", 3):
+        Tomoko "Is this... a normal thing? She just grabs you and... puts you places?"
+        show GTS pondering 
+        MCT "I wish."
+        MC "I mean normally I wouldn't be walking around on top of her desk. It's a special occasion, of course."
+        "She didn't react."
+        MC "And, well... we have different needs. Being together means adapting a little."
+        GTS "But of course. To make one out of two necessitates a sort of change in both."
+        Tomoko "Uh huh... I could... see that."
+    else:
+        MC "...Hm?"
+        Tomoko "N-Never mind..."
+    MCT "I guess I didn't realize how much this would take out of Tomo."
+    MCT "Here's hoping a more familiar pastime will get her feeling comfortable."
+    MC "Well, you can take a load off if you like. I won't be long."
+    Tomoko "'Kay..."
+    "I slipped behind the the screen of the monolithic all-in-one, which, thank God, sported a full array of ports for devices of today and, well... ones like mine."
+    "There was even a standard-scale power outlet just within reach of the Ayystation's cable, and voilà, she was complete."
+    "I found the power button on the back of the screen and, with some effort, pushed it. A submerged hum enveloped my head, quite to my satisfaction."
+    MC "I think it's on now. Nacchan, can you switch it over to RCA input, please?"
+    show GTS pondering 
+    GTS "Ah... yes, erm... certainly..."
+    MCT "Ahhh, my bad."
+    MC "Tomo, if you could just take a look at the remote, please..."
+    show Tomoko worried 
+    Tomoko "Oh... {size=-3}sure...{/size}"
+    MC "Thanks, sis."
+    "I stepped out from behind the black plastic wall to see Tomoko already seated, staring up at the screen with an expression of uncertainty and consternation."
+    "Naomi was seated next to her, doing exactly the same thing. The sight was heartening, in a way."
+    MC "Is it missing?"
+    GTS "Well, not quite, rather..."
+    show GTS embarrassed 
+    "She quickly glanced down at Tomoko before she continued."
+    GTS "I understand a remote is the handheld device used to control a television at distance."
+    MCT "Ohhhh, that's right. 'The things the stations will do for ratings'."
+    MC "Yep, that's it."
+    GTS "Very good. However, I understand that this particular device has no remote. Rather, I was told to give it verbal instructions."
+    GTS "In this I confess I am not well-versed."
+    MC "...Oh. Alright, then, try saying... I dunno... 'Input RCA'."
+    show GTS pondering 
+    GTS "Very well."
+    "She covered her mouth and softly cleared her throat."
+    GTS "Input RCA."
+    "I looked up. Nothing."
+    "Naomi stole a glance at Tomo, and Tomo at Naomi, missing one another by a second."
+    GTS "Input."
+    pause 1.0
+    show GTS embarrassed 
+    show Tomoko worried
+    GTS "Begging your pardon, Hotsure-san, but would you please cover your ears for a moment?"
+    show Tomoko neutral 
+    "After realizing she was being spoken to, she promptly obliged."
+    show GTS neutral 
+    "Naomi gave a shallow bow of thanks, and then dropped her usual whisper."
+    show Tomoko surprised 
+    GTS "{size=36}Input.{/size}"
+    "I felt the word wriggle faintly through my organs. It wasn't nearly as breathy as I'd come to expect, but her voice was perhaps more enveloping by the day."
+    Tomoko "I {i}felt{/i} that!"
+    "Thank God the little gray box finally popped into the corner of the screen."
+    GTS "{size=36}RCA.{/size}"
+    show GTS embarrassed 
+    GTS "Please."
+    "The screen blinked sapphire before swapping to the old familiar void of cyan particle effects and menu icons of digital glass."
+    play sound Victory
+    show GTS neutral 
+    show Tomoko neutral 
+    MC "There we go. I'm gonna pop in Skirmish first."
+    "Once that was done, I did some light parkour off the desk, and with Naomi's assistance we all took our places."
+    "It was a little like a mech cockpit. Braced on either side by giant armrests, the screen was the incontrovertible center of our focus. I handed Tomo the player two controller and opened the first game of the evening." 
+    MC "Alright, Blossom, I'm gonna explain as we go. This game's set in the Sengoku Jidai, and you command troops for either the Tokugawa or the Toyotomi."
+    show GTS pondering 
+    GTS "Indeed?"
+    "An amber light flashed in those vast eyes, and it shone through my blood. Just as I'd hoped."
+    MC "Yeah, and in the mode we're gonna be playing, you're gonna direct your troops across a battlefield and try to defeat... me or Tomo."
+    show GTS neutral 
+    GTS "I see. Intriguing."
+    MC "Yeah. And that's the basic concept... do you wanna play against me first, or Tomo?"
+    GTS "I believe that choice must rightly belong to our guest."
+    Tomoko "..."
+    Tomoko "Oh, me? Uh..."
+    "She caught her chin in her hands and kneaded it, for a moment or two."
+    Tomoko "Can it be me and you, Kei? For the first round?"
+    MC "Sure, whatever you want!"
+    GTS "That would be merciful. I shall study your techniques carefully."
+    MC "Cool."
+    "After the opening roll of logos concluded, I tapped Tomo on the shoulder."
+    MC "Man, doesn't this intro cinematic just take you ba- okay."
+    Tomoko "It was boring in 2006, I don't think it aged as well as you think."
+    show GTS pondering 
+    MC "Nah, dude, it's like the calm before the storm. You... ah, never mind, you philistine. You wanna do skirmish or point defense?"
+    MC "Skirmish."
+    Tomoko "Skir-"
+    "She shot me a glare."
+    Tomoko "Skirmish."
+    MC "Mhm. Tokugawa or Toyotomi?"
+    Tomoko "Toyotomi. Tokugawa's ult blows, I remember that."
+    "I smiled. Personally, I could barely remember what either of them were. I selected Tokugawa."
+    MC "Okay, and what battlefield?"
+    Tomoko "Uh..."
+    Tomoko "I think Sekigahara had some kinda bullshit goi- uh..."
+    show Tomoko worried
+    "She glanced behind her without turning her head."
+    Tomoko "{size=-6}I mean... some kind of... it's hard.{/size}"
+    show GTS neutral 
+    GTS "Please do not police yourself on my account, Hotsure-san. We are here to get to know each other, after all."
+    pause 1.5
+    show Tomoko neutral 
+    Tomoko "I dunno... I barely remember any of these. It's been years."
+    MC "Hmm..."
+    MC "Oh, we could duke it out at a lil' place called {i}Yamazaki{/i}. Eh? Eh?"
+    GTS "Ah, yes, the site of the old family manor. Even today it's quite a charming town."
+    pause 0.5
+    Tomoko "The old family manor?"
+    GTS "Hmhm, let me certify that I am not boasting of it. It was but a large house with what I've heard was a handsome garden, and a workshop or two on the premises."
+    GTS "At least, so it was when it burned down during the battle there."
+    Tomoko "Oh..."
+    MC "Oh, that sucks."
+    MC "But your dad's a real estate guy, right? Have you ever thought of buying the land and rebuilding?"
+    show GTS happy
+    GTS "Hmhmhm! A fine sentiment. I cannot say I have never wished to see the old house with my own eyes."
+    show GTS neutral 
+    GTS "Nevertheless, it is a fine lesson in accepting the world as it is... to accept the possessions long lost, never to be possessed again."
+    GTS "In any case, as it happens my father {i}does{/i} own the land.{w} Today, a corporate housing unit stands there."
+    MC "...Hm."
+    MC "Well, let's see... how about Ueda?"
+    Tomoko "Works for me."
+    MC "Aaaand lastly, let's pick units."
+    show GTS pondering 
+    "I looked over at Tomoko's side of the screen."
+    MC "Eight riflemen and two batteries? Some things never change."
+    Tomoko "Well look at that, caught horsemaxxing again. Your cavalry ain't shit if they get swiss cheesed from the other side of the map."
+    show Tomoko defiant
+    Tomoko "And no looking at my screen!"
+    MC "Don't worry, I won't need to. I've been formulating my strategy. You and your five HP booger flingers are about to find out what horseshoes taste like."
+    show GTS embarrassed 
+    MC "Let's go."
+    show Tomoko neutral 
+    "The fog rolled in. The drums barked. The loading bar filled. The battle was on."
+    show GTS pondering 
+    "My noble, polygonal samurai warriors spawned in, piecemeal, atop a confluence of mottled green-brown triangles, the triple hollyhock banner of the Tokugawa floating in the heavens over their heads."
+    "I realized then that my spawn point led down into a broad, featureless valley, with one small hill for cover."
+    Tomoko "Go ahead, Kei. Take that hill. You can definitely beat me to the top, and then you'll have the high ground."
+    MC "Mhm."
+    MCT "Obviously she's waiting to snipe me from spawn. If I park a couple units {i}behind{/i} that hill, I can take potshots to keep her busy while my cavalry close in."
+    "I promptly moved one cavalry and one riflemen unit up behind the hill, panning the camera around them a little slower than I'd have preferred."
+    MCT "Once I get just the right angle to see her army, it's over."
+    Tomoko "What's the attack button again?"
+    MC "Star, I think."
+    Tomoko "Thanks."
+    MCT "Fuck."
+    "A concentrated horizontal torrent of bullets promptly slammed into my gunners' right flank, deleting the entire unit in a cascade of fading polygons."
+    "Shellshocked, I steered my cavalry to put the hill between me and Tomoko."
+    Tomoko "I wouldn't, personally."
+    "I opted to ignore the comment, to my immediate detriment, as two-dimensional flaming cannonballs rained down on the general area my hapless horsemen had just moved to."
+    "One barrage whiffed, thank God, but the other was sufficient to wipe out some three-quarters of the unit's strength. When the smoke cleared, I thought I saw one of my polygons shakily attempting to light a cigarette."
+    "The rest of the battle more or less followed the tempo of this literal opening salvo."
+    show Tomoko happy
+    "Finally the match was punctuated with the words \"TOYOTOMI VICTORY\" covering the screen in flaming golden letters."
+    Tomoko "Oh, {i}man{/i}, you just got domed by my five HP booger flingers. I didn't even pop my ult. Where's the button to commit seppuku out of embarrassment?"
+    MC "Whatever. That map's design is stupid, you shouldn't be able to snipe literally from your spawn."
+    Tomoko "This is war, Kei. There's no fair or unfair, only winners and losers."
+    MC "Okay, Nacchan, do you wanna hop in?"
+    show GTS neutral 
+    show Tomoko neutral 
+    GTS "I believe I've seen enough. Yes, I'll try my hand at it."
+    GTS "First, what exactly does the Tokugawa... 'ult'... do?"
+    MC "Well... in theory, it makes your commander unit immune to all damage for one move, plus any units right next to your commander."
+    GTS "I see. Yes, I think that will serve."
+    MCT "Better than it did me, I hope."
+    MC "Okay. And the battlefield?"
+    GTS "Minakuchi, if you please."
+    MC "That was quick. Okay... what units do you want?"
+    GTS "Three cavalry, three spearmen, and four archers."
+    MC "You got it. Okay..."
+    Tomoko "You sure she's never played this before?"
+    MC "Her great-great-great grandfather probably fought at the actual battle."
+    GTS "Not at Minakuchi, no."
+    MC "Oh."
+    GTS "Oh, a question before we begin. Is it possible to divide a unit of troops?"
+    MC "You... {i}can{/i} divide each unit once, yeah. They'll move a little faster, but they'll be twice as weak and hit half as hard."
+    GTS "Noted."
+    "The loading screen faded out, and General Yamazaki's troops blipped into existence atop one ridge in a hilly river valley."
+    GTS "Now, move one unit of spearmen to the top of the opposite hill."
+    MCT "That's gonna... okay. I guess. Not like I did any better."
+    "That done, she then ordered me to divide a unit of cavalry and send them down into the gorge, dotted with pixel trees."
+    GTS "Now, if you would, have one of them march ahead to that field, there. Keep them abreast of the mountains."
+    MC "Yes, ma'am."
+    "Predictably, that unit immediately got clapped by multiple of my sister's finest marksmen. {w}But..."
+    MC "Holy shit, I'm alive! I forgot the trees block it!"
+    GTS "Ah, there you are, Hotsure-san. A ring around your battery units, a sensible tactic."
+    Tomoko "..."
+    GTS "My love, please move the rest of the units to the top of that wooded hill by the mouth of the gorge. Put the remaining cavalry at the fore."
+    GTS "Very good. Now, let's move the archers to the edge of the forest, and have our spearmen and the divided cavalry palaver with those units of riflemen whilst they reload."
+    "As I watched the carpet of little sprites crawl across the screen and form into a pincer, it began to dawn on me what my own hands had wrought."
+    show Tomoko defiant
+    "Tomoko leaned forward in her chair."
+    "On Naomi's even-tempered command, I began poking holes in Tomoko's ring of leaden death as she wasted attacks on divided units."
+    "The cost was adding up, but it was forcing her to devote precious time to patching up her line and waste attacks taking out only half a unit."
+    "When Tomoko didn't have enough gunners to block access to her command unit, she formed her remaining troops into a single block, and marched directly into the forest."
+    MCT "Oh, honey, what are you doing, you're gonna– oh fuck, she's got her ult."
+    MCT "And I don't."
+    MC "Uh..."
+    GTS "Divide as many units at the forest as you can and withdraw."
+    show GTS pondering 
+    "I did so, but not in time to get everyone out before Tomoko's general sauntered in and unleashed a wave of fire in a tiringly long cutscene. Half her guys, gone. War is hell."
+    "As I watched them fall, my own ult meter reached full charge."
+    GTS "I see certain liberties have been taken with historicity."
+    show GTS neutral 
+    GTS "Have the cavalry engage the enemy marksmen, and send down our command unit, as well."
+    "I nodded, and pressed the control stick forward with a trembling thumb."
+    "Tomoko was eerily silent as the last vestiges of the Tokugawa army closed in on her."
+    "But it appeared she saw Naomi's plan coming before I did, as she sent one of her last two riflemen to meet the spearmen on the hill."
+    "At the same time, she fired her battery at Naomi's approaching commander, which I narrowly deflected with my ult."
+    MCT "Does she have a secret third thumb?"
+    GTS "Divide the spearmen and send one side down the hill."
+    "I pecked the controls, trying to keep cool. Tomoko registered too late that she was fighting on two sides as pale red crit numbers floated like sakura petals, portending demise."
+    "She raked her fingers across her mouth."
+    GTS "Splendidly done, Keisuke-kun. Now, resume your march on the enemy general."
+    Tomoko "{size=-6}Fuck!{/size}"
+    "Her last surviving riflemen took a pot shot at my commander... which barely tickled, thanks to the tree cover. I could hear the creak of Tomoko's grip tightening."
+    GTS "Now, divide your command unit and circle around to the rear of her battery."
+    MC "Wh- it's right there..."
+    GTS "Do as I say, Keisuke-kun."
+    "I obeyed, and I just barely heard my sister's gasp as we came to a simultaneous realization: her cannons would be reloaded by the time I got into position."
+    "I had a flashback to my little polygonal horsemen at the foot of the hill, as she slammed the star button as hard as any single digit could."
+    "TOYOTOMI VICTORY"
+    "I slumped back in my chair."
+    show Tomoko flattered
+    Tomoko "Whew! For somebody who's never touched a controller in your life, you put up a fight, Yamazaki-san."
+    show GTS happy
+    GTS "I'm happy to have provided a satisfactory challenge. Well fought, Hotsure-san."
+    MC "Bro, we were {i}this{/i} close! You'd have {i}had{/i} her if you just charged straight up."
+    show GTS pondering 
+    show Tomoko happy
+    GTS "That was rather a blunder on my part, yes. I hope you'll forgive me."
+    show GTS neutral 
+    GTS "Thank you for putting your trust in me nevertheless."
+    MC "'Course. I guess... do you want a rematch?"
+    Tomoko "Please say yes. Curbstomping Kei is fun once in a while, but I like a good challenge better."
+    MC "Rude."
+    show GTS unique 
+    GTS "Well, rude though it might be, I believe honor demands I answer the challenge. En garde, Hotsure-san!"
+    stop music fadeout 5.0
+    "So it went for another few hours. Naomi lost most of the matches, but never by much, and her unconventional tactics kept Tomoko on the edge of her seat, clutching the controller."
+    play music Tomoko fadein 3.0
+    "Amidst the laughter and the sharp exhales, I watched two miracles happen."
+    "First, Tomoko actually changed up her \"Guns Guns and More Guns\" strategy after taking a couple losses. She used archers instead, but hey."
+    "Second, they actually started trash-talking each other."
+    Tomoko "How does it feel that two of you together can't beat me?"
+    "Naomi even returned fire, in a backhanded court nobility kind of way."
+    GTS "Ah, I've wandered into a trap, haven't I? You would not permit me to take your castle so easily, surely."
+    "As they began to wind down, I dug my phone out of my pocket."
+    MC "Going on nine... should we call it a night?"
+    show GTS surprised 
+    show Tomoko neutral 
+    GTS "Heavens, is it really? Yes, let us reconvene some other time."
+    Tomoko "Only nine?..."
+    show Tomoko distracted 
+    "A brief protest aside, Tomoko graciously allowed me to start packing up. Naomi, for her part, collected our cups with a smile and led us out into the living room."
+    hide GTS
+    show GTS_S neutral 
+    with dissolve
+    GTS "It has been a distinct pleasure, Hotsure-san. I do hope that you've enjoyed this visit as much as I have."
+    Tomoko "Yeah, this was... nice."
+    show Tomoko worried 
+    Tomoko "And, uh..."
+    Tomoko "If you..."
+    show Tomoko neutral 
+    Tomoko "...N-Never mind. I guess we'll head back now. Good night, Yamazaki-san."
+    GTS "Good night, Hotsure-san. Good night, Keisuke-kun. Please do send me a message when you've arrived in one piece."
+    MC "I will. See you later, Blossom."
+    "At her bow, we took our leave."
+    $setTime.TimeEnum.NIGHT
+    show Giant Dorm Exterior 
+    show Tomoko neutral 
+    with fade
+    MC "Well, did you have fun?"
+    show Tomoko happy
+    Tomoko "I'm a little surprised, but yeah actually. I did."
+    MC "Heh, good. I had a feeling, you were {i}locked in{/i}."
+    show Tomoko neutral 
+    Tomoko "Yeah, it's weird. I swear I was gonna lose that first round, but then..."
+    Tomoko "It's almost like she was throwing.{w} Buuut then she actually won a few, so I guess that was her trying?"
+    MC "Yeah, it was like..."
+    pause 1.0 
+    MCT "Ohhh..."
+    MC "Well, she's not much of a gamer, but she's got a mind for strategy."
+    Tomoko "Must be. By the way..."
+    MC "Yeah?"
+    show Tomoko happy
+    Tomoko "For the next time we come out here... you can tell her she can call me Tomoko."
+    pause 1.0
+    MC "Ksh..."
+    "I brought Tomoko in for a hug around her shoulder, against the chill of the night."
+    MC "I'll let her know."
+    jump daymenu
+
+label GTS058:
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Naomi's route.{/outlinecolor}{/size}"
