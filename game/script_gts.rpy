@@ -15017,20 +15017,7 @@ label GTS057:
     MC "JSL?"
     Tomoko "Yeah."
     MC "Mm."
-    if isEventCleared("MC024"):
-        MC "Well... I can see how you'd be so moved. Turns out Hotdog Lips has her problems, too."
-        show Tomoko annoyed
-        "A wry smirk crept across her chin just before she pulled the brown curtain over herself, hiding."
-        MC "Ksh... I shouldn't joke. She's got it rough, I know."
-        MC "And it's really good of you to take steps to keep a line open between you. You know she needs it."
-        show Tomoko worried
-        Tomoko "Yeahhhh... I do..."
-        show Tomoko neutral
-        Tomoko "You know what else I know? By the time I can put a sentence together, she'll be doing ninjutsu at me with her friggin' hands."
-        MC "She'll probably learn it from her brother."
-        Tomoko "Ugh."
-        "A snicker escaped me as she pointedly returned to her book."
-    elif isEventCleared("MC014"):
+    if isEventCleared("MC014"):
         MC "That's a real sweet thing of you to do for Hotdog Lips."
         show Tomoko annoyed
         "Tomoko's mouth wriggled, and her mane canted to the side to envelop her hand as she rested her cheek on it."
@@ -15046,6 +15033,19 @@ label GTS057:
         show Tomoko flattered
         "She tapped her pencil twice, jotted something down on her notebook."
         Tomoko "Thanks."
+    elif isEventCleared("MC024"):
+        MC "Well... I can see how you'd be so moved. Turns out Hotdog Lips has her problems, too."
+        show Tomoko annoyed
+        "A wry smirk crept across her chin just before she pulled the brown curtain over herself, hiding."
+        MC "Ksh... I shouldn't joke. She's got it rough, I know."
+        MC "And it's really good of you to take steps to keep a line open between you. You know she needs it."
+        show Tomoko worried
+        Tomoko "Yeahhhh... I do..."
+        show Tomoko neutral
+        Tomoko "You know what else I know? By the time I can put a sentence together, she'll be doing ninjutsu at me with her friggin' hands."
+        MC "She'll probably learn it from her brother."
+        Tomoko "Ugh."
+        "A snicker escaped me as she pointedly returned to her book."
     else:
         MC "That's good. Is it an elective?"
         "Tomoko's taking a second to ponder her answer caught my attention."
