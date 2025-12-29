@@ -36767,7 +36767,7 @@ label WGB006:
     pause 1
     show GTS neutral
     "Having finished her tea herself, Naomi appeared to awaken from her almost zen-like trance of tranquility, and received our bowls back."
-    music fadeout 1.0
+    stop music fadeout 1.0
     play music DormLife
     show GTS neutral-2
     GTS "Thank you for attending my tea ceremony today and indulging my desire to experience the trappings of my home once again."
@@ -36790,7 +36790,7 @@ label WGB006:
     GTS "I will offer the choice to our guest."
     MC "Hmm, well I'm not too familiar with traditional biwa songs. I'll defer to your judgement, Yamazaki-san."
     show GTS unique
-    GTS "That is quite generous of you, Hotsure-san. I would like to request, "The Rushing Waters"."
+    GTS "That is quite generous of you, Hotsure-san. I would like to request, \"The Rushing Waters\"."
     Okisho "Ah, up for something a little fast-paced after all that matcha, huh?"
     show GTS wink
     GTS "Ara-ara! You might say so."

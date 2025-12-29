@@ -45613,7 +45613,7 @@ label PRG064:
     PRG "I know. But... she does."
     "Taguchi-san suddenly let out a small giggle and kept typing, glancing up at her options for morning drinks."
     MC "Well... let's just skirt around her. Keep to ourselves."
-    play music Sunset 3.0
+    play music Sunset fadein 3.0
     "I took my trash in one hand and Aida's hand in the other, taking it and dividing it into the appropriate bins as Aida recycled her can, and the two of us headed back into the halls."
     scene HallwayStairs
     show PRG worried

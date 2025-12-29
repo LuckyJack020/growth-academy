@@ -17288,16 +17288,16 @@ label MC023_C2_1:
     BE "Hmm... yeah though..."
     BE "She's just so secretive, and I don't really know that much about her."
     BE "Which is odd. She's my roommate, you know?"
-    if routelock == "BE"
-    MC "Like her real name?"
-    "Honoka nodded."
-    MC "\"The Ebony Lord of Destruction\"."
-    show BE happy
-    BE "\"Master of A Thousand Demons\"."
-    pause 1
-    MC "... And whatever the other thing was."
-    "Honoka smirked."
-    BE "Dork."
+    if routelock == "BE":
+        MC "Like her real name?"
+        "Honoka nodded."
+        MC "\"The Ebony Lord of Destruction\"."
+        show BE happy
+        BE "\"Master of A Thousand Demons\"."
+        pause 1
+        MC "... And whatever the other thing was."
+        "Honoka smirked."
+        BE "Dork."
     else:
         BE "But like, all I really know is... mm..."
         BE "Her real name isn't \"Kokutan\"."
@@ -24887,7 +24887,7 @@ label RM007gig2_menu:
             RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
             jump RM007_Epilogue
 
-label RM007_menualt
+label RM007_menualt:
     menu:
         "Ask what he's working on":
             show RM happy
