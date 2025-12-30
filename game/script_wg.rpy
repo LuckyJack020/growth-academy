@@ -36324,8 +36324,7 @@ label WGB004:
     jump daymenu
 
 label WGB005:
-    if not getFlag("XX25"):
-        $setFlag("XX25")
+    $setTimeFlag("XX25")
     $setProgress("WGB", "WGB006")    
     scene Woods with fade
     play music ClearSkies

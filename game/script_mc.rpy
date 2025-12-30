@@ -24527,7 +24527,7 @@ label RM007:
         MCT " \"Hyperfertility\", {w}a rose by any other name... no matter what you called, it was still hard to imagine something like \"pregnancy growth\" was a thing, but that belly of Aida's told no lies."
     else:
         "Along the list of growths, all the way at the bottom was the final entry: \"hyperfertility\"."
-        if getHighestAffection() == ("BE") or if getHighestAffection() == ("WG"):
+        if getHighestAffection() == ("BE") or getHighestAffection() == ("WG"):
             MC "\"Hyperfertility\", I presume that's referring to Aida's growth factor?"
             show RM smug
             RM "Correct. That appears to be the technical term for it."
