@@ -9032,6 +9032,7 @@ label PRG025_Sex:
 label PRG026:
     $setPregnant()
     $setProgress("PRG", "PRG027")
+    $setTimeFlag("PREG")
     $lockRoute("PRG")
     scene Bathroom with fade
     $setMCOutfit(OutfitEnum.UNDERWEAR)

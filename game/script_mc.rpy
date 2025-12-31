@@ -20521,6 +20521,7 @@ label global026:
     if getHighestAffection() != ("GTS"):
         $setFlag("MC010_Unlock")
     $setPregnant()
+    $setTimeFlag("PREG")
     $disableRoute("PRG")#may need to remove when the "not the father" route is written
     scene Dorm Hallway with fade
     play music HigherEdu
