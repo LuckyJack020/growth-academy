@@ -9601,6 +9601,7 @@ label PRG026:
 label PRG027:
     $setFlag("MC010_Unlock")
     $setProgress("PRG", "PRG028")
+    $setTimeFlag("XX25")
     $setTime(TimeEnum.NIGHT)
     scene Dorm Interior with fade
     pause .75
@@ -45134,6 +45135,7 @@ label PRG063:
     Takamura "Now, feel free to take your time cleaning up. However, the building will soon need to be locked up."
     PRG "Y-Yes, Sensei."
     "Takamura-sensei turned and left the room as quickly as she'd entered."
+    hide Takamura
     show PRG unique
     PRG "... Mmn."
     Kanami "A shame."
@@ -45313,7 +45315,7 @@ label PRG064:
     "I was glad that she was getting the ultrasound done, at the end of it all, despite my worries."
     "And, I knew she was also feeling worried over it, of course. And, I knew why."
     "Even for me, there was a slight pang of anxiety of her father being proven right."
-    "I didn't want it to happen. It... {i}]couldn't{/i} happen. But, if it did..."
+    "I didn't want it to happen. It... {i}couldn't{/i} happen. But, if it did..."
     "That was it. The 'but, if.'"
     "That was what had been all over my head. And Aida's, from what I gathered."
     "I rubbed my face with one hand, sighing and squeezing my eyes shut, as if to purge my head."
@@ -45613,7 +45615,7 @@ label PRG064:
     PRG "I know. But... she does."
     "Taguchi-san suddenly let out a small giggle and kept typing, glancing up at her options for morning drinks."
     MC "Well... let's just skirt around her. Keep to ourselves."
-    play music Sunset 3.0
+    play music Sunset fadein 3.0
     "I took my trash in one hand and Aida's hand in the other, taking it and dividing it into the appropriate bins as Aida recycled her can, and the two of us headed back into the halls."
     scene HallwayStairs
     show PRG worried
@@ -45700,7 +45702,7 @@ label PRG064:
     MC "Sounds like a plan. I-"
     stop music fadeout 2.0
     show PRG worried
-    Unknown "Pardon me, Sensei!"
+    UNKNOWN "Pardon me, Sensei!"
     "Tashi-sensei stepped into the room, and was very nearly bumped into."
     show PRG worried at altMove(0.5, 0.25)
     show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with easeinright

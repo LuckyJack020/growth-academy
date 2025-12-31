@@ -14999,7 +14999,7 @@ label GTS057:
     $setProgress("GTS", "GTS058")
     $setTime(TimeEnum.EVE)
     $setMCOutfit(OutfitEnum.CASUAL2)
-    $setTomokoOutfit(OutfitEnum.CASUAL)
+    $setTomoOutfit(OutfitEnum.CASUAL)
     scene Library 
     show Tomoko neutral 
     with fade
@@ -15239,13 +15239,13 @@ label GTS057:
     "Idly curious, I peeked; they were two girls, in fact- a rather portly one on her hands and knees digging with a shovel like a large spoon, the other forcing sheet iron upright into the dirt. The latter spotted us first."
     MC "Good afternoon! I don't think we've met, have we?"
     "The former's eyes flew open on her round face and she whirled her head around to show me the back of it. Her friend gave her a tilt of the head, and then looked at us."
-    Ishida "You're Hotsure-san, right? I'm Ishida! And, uh..." 
+    "Ishida" "You're Hotsure-san, right? I'm Ishida! And, uh..." 
     "I got closer; Ishida was twirling some small necklace on her finger as she looked down at her big-bellied peer, blinking... conspicuously."
     UNKNOWN "{size=-8}Just... just tell them my name, please, Ume.{/size}"
-    Ishida "{size=-6}Okey dokey.{/size}"
-    Ishida "And this is Masaji-san! Are you guys here to see Yamazaki-san?"
+    "Ishida" "{size=-6}Okey dokey.{/size}"
+    "Ishida" "And this is Masaji-san! Are you guys here to see Yamazaki-san?"
     MC "Uh, yeah! Is she in?"
-    Ishida "Oh yeah! She said she needed to clean up for some guests. You must be his little sister!"
+    "Ishida" "Oh yeah! She said she needed to clean up for some guests. You must be his little sister!"
     "I smirked as I looked over my shoulder."
     MC "What do you know, you're... Tomo?"
     "She was standing several meters behind me, arms wrapping around her stomach, eyes darting between the three of us."
@@ -15267,8 +15267,8 @@ label GTS057:
     pause 0.5
     "I heard Naomi clear her throat."
     GTS "Come in, my love!"
-    show GTS Dorm Interior
-    show GTS_S happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) at Transform(xzoom=-1)
+    show Giant Dorm Interior
+    show GTS_S happy at Transform(xzoom=-1), Position(xpos=0.25, xanchor=0.5, yalign=1.0)
     with fade
     show Tomoko worried at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve 
     GTS "Welcome! How wonderful to see you both!"
@@ -15313,7 +15313,7 @@ label GTS057:
     "I glanced over my shoulder to see Tomo tip-toeing behind me as we passed through the great gate."
     "I heard her breath catch at the sight beyond. I just peered- Naomi's office chair was pulled off to the side, in its place two plum felt lounge chairs bulging with stuffing. My own bed back home didn't look so comfortable."
     hide GTS_S
-    show GTS neutral
+    show GTS neutral behind Tomoko
     with dissolve
     GTS "There you are. Once you're both seated, I'll place your chairs upon the seat of my chair. It should do no good to strain your necks."
     MC "Thanks, Nacchan. Wanna give me a lift first so I can install the console?"
@@ -15594,7 +15594,8 @@ label GTS057:
     GTS "Good night, Hotsure-san. Good night, Keisuke-kun. Please do send me a message when you've arrived in one piece."
     MC "I will. See you later, Blossom."
     "At her bow, we took our leave."
-    $setTime.TimeEnum.NIGHT
+    hide GTS_S
+    $setTime(TimeEnum.NIGHT)
     show Giant Dorm Exterior 
     show Tomoko neutral 
     with fade

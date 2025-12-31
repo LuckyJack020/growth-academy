@@ -17288,16 +17288,16 @@ label MC023_C2_1:
     BE "Hmm... yeah though..."
     BE "She's just so secretive, and I don't really know that much about her."
     BE "Which is odd. She's my roommate, you know?"
-    if routelock == "BE"
-    MC "Like her real name?"
-    "Honoka nodded."
-    MC "\"The Ebony Lord of Destruction\"."
-    show BE happy
-    BE "\"Master of A Thousand Demons\"."
-    pause 1
-    MC "... And whatever the other thing was."
-    "Honoka smirked."
-    BE "Dork."
+    if routelock == "BE":
+        MC "Like her real name?"
+        "Honoka nodded."
+        MC "\"The Ebony Lord of Destruction\"."
+        show BE happy
+        BE "\"Master of A Thousand Demons\"."
+        pause 1
+        MC "... And whatever the other thing was."
+        "Honoka smirked."
+        BE "Dork."
     else:
         BE "But like, all I really know is... mm..."
         BE "Her real name isn't \"Kokutan\"."
@@ -24527,7 +24527,7 @@ label RM007:
         MCT " \"Hyperfertility\", {w}a rose by any other name... no matter what you called, it was still hard to imagine something like \"pregnancy growth\" was a thing, but that belly of Aida's told no lies."
     else:
         "Along the list of growths, all the way at the bottom was the final entry: \"hyperfertility\"."
-        if getHighestAffection() == ("BE") or if getHighestAffection() == ("WG"):
+        if getHighestAffection() == ("BE") or getHighestAffection() == ("WG"):
             MC "\"Hyperfertility\", I presume that's referring to Aida's growth factor?"
             show RM smug
             RM "Correct. That appears to be the technical term for it."
@@ -24887,7 +24887,7 @@ label RM007gig2_menu:
             RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
             jump RM007_Epilogue
 
-label RM007_menualt
+label RM007_menualt:
     menu:
         "Ask what he's working on":
             show RM happy
