@@ -36573,7 +36573,7 @@ label WGB006:
     Okisho "Say less. {w}You had me when you mentioned food."
     MC "How's this Saturday looking for you?"
     "I didn't want to be rude and ignore Naomi in the conversation, but by now I knew enough if I didn't seal the deal when I caught Okisho, I wouldn't know when my next chance to see her would be."
-    Oksiho "Eh, I'm busy that day. Yamazaki-san and I were planning on doing something."
+    Okisho "Eh, I'm busy that day. Yamazaki-san and I were planning on doing something."
     show GTS pondering
     GTS "So we were, but you could join us if you like, Hotsure-san..."
     pause .5
@@ -36586,7 +36586,7 @@ label WGB006:
     show GTS neutral
     GTS "Well, we'll be enacting-"
     show GTS surprised
-    Okisho "{w}It's a surprise!{/i}"
+    Okisho "{i}It's a surprise!{/i}"
     MC "Oh?"
     GTS "Oh?"
     show GTS pondering
@@ -36854,8 +36854,10 @@ label WGB006:
     Okisho "Yes... but I kinda like it."
     Okisho "Now let's get going."
     scene black with fade
-    $setTimeFlag("XX32")
+    $setFlag("XX32")
     $setTimeFlag("size3exp")
+    $setSize(3)
+    $setTimeFlag("size3")
     jump daymenu
 
 label WGB007:
@@ -36912,7 +36914,7 @@ label WGB007:
     WG "Hehehe..."
     show WG happy-2
     WG "HAHAHA!"
-    Oksiho "What's so funny?"
+    Okisho "What's so funny?"
     show WG haughty
     WG "Ahhh..."
     show WG coy

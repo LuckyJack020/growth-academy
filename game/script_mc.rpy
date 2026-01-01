@@ -24766,7 +24766,7 @@ label RM007:
     MC "Just what exactly do you have in mind for these so called \"investigations\"?"
     show RM neutral-2
     RM "Nothing that intense, if that's what you're worried about. They're more \"gigs\" than investigations to be honest."
-    MC "Gigs? Does sound too bad. What do you mean by that though?"
+    MC "Gigs? Doesn't sound too bad. What do you mean by that though?"
     show RM smug
     RM "Little thingies here and there that may be worth checking out, but at the same time are difficult to predict how relevant they might be to their investigation."
     show RM happy
