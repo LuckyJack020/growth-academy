@@ -14128,7 +14128,7 @@ label GTS054:
     GTSCell "Ah, indeed. Do you have any pressing assignments or gaps in your studying regimen that must be addressed presently?"
     if checkSkill("Academics", ">", 7):
         $setFlag("GTS054_read")
-        MC "No, not really. I finished up the body of the paper for Tashi-sensei last night, I just need to doll up my references, dot my 'T's and cross my 'I's"
+        MC "No, not really. I finished up the body of the paper for Tashi-sensei last night, I just need to doll up my references, dot my 'T's and cross my 'I's."
         GTSCell "Hmhm, capital. That being the case, I would like to propose that we meet at Chūkan Point this afternoon at two o' clock."
         GTSCell "There is a certain book which should make me most happy indeed if you would read it to me."
         MC "Uh... yeah! Whatever you like, Blossom."
@@ -14920,7 +14920,7 @@ label GTS054_after:
     jump daymenu
 
 label GTS055:
-    $setProgress("GTS", "GTS056")
+    $setProgress("GTS", "GTS057")
     $setTime(TimeEnum.NIGHT)
     $setMCOutfit(OutfitEnum.CASUAL)
     scene Field with fade
@@ -15165,7 +15165,7 @@ label GTS057:
     with fade
     MC "You wanna take anything besides Skirmish?"
     Tomoko "Nah, we'll kill a few hours easy with just that."
-    Tomoko "They're fun, but I dunno why you picked an RTS to introduce her to vidya... hope she's not competitive."
+    Tomoko "It's fun, but I dunno why you picked an RTS to introduce her to vidya... hope she's not competitive."
     MC "Mm."
     MC "Well, she's actually a pretty big history buff, so I thought she might get into a game about the Sengoku Jidai."
     "I slid the case into my backpack and zipped it up."
@@ -15223,7 +15223,7 @@ label GTS057:
     MCT "...No. One thing at a time."
     MC "Anyway, I can see the gate up ahead. You can do it, Tomo. You're this close to leveling up."
     "Despite her sighing, we did reach it and I punched in the gate code."
-    show Giant Dorm Exterior
+    show Giant Dorm Exterior behind Tomoko
     show Tomoko neutral 
     with fade
     "It was quiet for a moment after the chain link slinked and tinkled shut. I heard someone digging in the dirt on the other side of Naomi's dorm. All else was a desolate stillness."
@@ -15313,7 +15313,7 @@ label GTS057:
     "I glanced over my shoulder to see Tomo tip-toeing behind me as we passed through the great gate."
     "I heard her breath catch at the sight beyond. I just peered- Naomi's office chair was pulled off to the side, in its place two plum felt lounge chairs bulging with stuffing. My own bed back home didn't look so comfortable."
     hide GTS_S
-    show GTS neutral behind Tomoko
+    show GTS neutral at Position(ycenter=0.55) behind Tomoko
     with dissolve
     GTS "There you are. Once you're both seated, I'll place your chairs upon the seat of my chair. It should do no good to strain your necks."
     MC "Thanks, Nacchan. Wanna give me a lift first so I can install the console?"
@@ -15324,7 +15324,7 @@ label GTS057:
     "She couldn't decide whether to focus on me or her, and so instead chose the floor, a little to her right."
     if checkAffection("TM", ">", 3):
         Tomoko "Is this... a normal thing? She just grabs you and... puts you places?"
-        show GTS pondering 
+        show GTS pondering at Position(ycenter=0.35)
         MCT "I wish."
         MC "I mean normally I wouldn't be walking around on top of her desk. It's a special occasion, of course."
         "She didn't react."
@@ -15342,7 +15342,7 @@ label GTS057:
     "There was even a standard-scale power outlet just within reach of the Ayystation's cable, and voilà, she was complete."
     "I found the power button on the back of the screen and, with some effort, pushed it. A submerged hum enveloped my head, quite to my satisfaction."
     MC "I think it's on now. Nacchan, can you switch it over to RCA input, please?"
-    show GTS pondering 
+    show GTS pondering at Position(ycenter=0.35) 
     GTS "Ah... yes, erm... certainly..."
     MCT "Ahhh, my bad."
     MC "Tomo, if you could just take a look at the remote, please..."
@@ -15353,7 +15353,7 @@ label GTS057:
     "Naomi was seated next to her, doing exactly the same thing. The sight was heartening, in a way."
     MC "Is it missing?"
     GTS "Well, not quite, rather..."
-    show GTS embarrassed 
+    show GTS embarrassed at Position(ycenter=0.55)
     "She quickly glanced down at Tomoko before she continued."
     GTS "I understand a remote is the handheld device used to control a television at distance."
     MCT "Ohhhh, that's right. 'The things the stations will do for ratings'."
@@ -15361,7 +15361,7 @@ label GTS057:
     GTS "Very good. However, I understand that this particular device has no remote. Rather, I was told to give it verbal instructions."
     GTS "In this I confess I am not well-versed."
     MC "...Oh. Alright, then, try saying... I dunno... 'Input RCA'."
-    show GTS pondering 
+    show GTS pondering  at Position(ycenter=0.35) 
     GTS "Very well."
     "She covered her mouth and softly cleared her throat."
     GTS "Input RCA."
@@ -15369,7 +15369,7 @@ label GTS057:
     "Naomi stole a glance at Tomo, and Tomo at Naomi, missing one another by a second."
     GTS "Input."
     pause 1.0
-    show GTS embarrassed 
+    show GTS embarrassed  at Position(ycenter=0.55)
     show Tomoko worried
     GTS "Begging your pardon, Hotsure-san, but would you please cover your ears for a moment?"
     show Tomoko neutral 
@@ -15392,11 +15392,11 @@ label GTS057:
     "Once that was done, I did some light parkour off the desk, and with Naomi's assistance we all took our places."
     "It was a little like a mech cockpit. Braced on either side by giant armrests, the screen was the incontrovertible center of our focus. I handed Tomo the player two controller and opened the first game of the evening." 
     MC "Alright, Blossom, I'm gonna explain as we go. This game's set in the Sengoku Jidai, and you command troops for either the Tokugawa or the Toyotomi."
-    show GTS pondering 
+    show GTS pondering  at Position(ycenter=0.35) 
     GTS "Indeed?"
     "An amber light flashed in those vast eyes, and it shone through my blood. Just as I'd hoped."
     MC "Yeah, and in the mode we're gonna be playing, you're gonna direct your troops across a battlefield and try to defeat... me or Tomo."
-    show GTS neutral 
+    show GTS neutral at Position(ycenter=0.55)
     GTS "I see. Intriguing."
     MC "Yeah. And that's the basic concept... do you wanna play against me first, or Tomo?"
     GTS "I believe that choice must rightly belong to our guest."
@@ -15410,7 +15410,7 @@ label GTS057:
     "After the opening roll of logos concluded, I tapped Tomo on the shoulder."
     MC "Man, doesn't this intro cinematic just take you ba- okay."
     Tomoko "It was boring in 2006, I don't think it aged as well as you think."
-    show GTS pondering 
+    show GTS pondering  at Position(ycenter=0.35) 
     MC "Nah, dude, it's like the calm before the storm. You... ah, never mind, you philistine. You wanna do skirmish or point defense?"
     MC "Skirmish."
     Tomoko "Skir-"
@@ -15425,7 +15425,7 @@ label GTS057:
     show Tomoko worried
     "She glanced behind her without turning her head."
     Tomoko "{size=-6}I mean... some kind of... it's hard.{/size}"
-    show GTS neutral 
+    show GTS neutral at Position(ycenter=0.55)
     GTS "Please do not police yourself on my account, Hotsure-san. We are here to get to know each other, after all."
     pause 1.5
     show Tomoko neutral 
@@ -15449,18 +15449,18 @@ label GTS057:
     MC "Well, let's see... how about Ueda?"
     Tomoko "Works for me."
     MC "Aaaand lastly, let's pick units."
-    show GTS pondering 
+    show GTS pondering  at Position(ycenter=0.35) 
     "I looked over at Tomoko's side of the screen."
     MC "Eight riflemen and two batteries? Some things never change."
     Tomoko "Well look at that, caught horsemaxxing again. Your cavalry ain't shit if they get swiss cheesed from the other side of the map."
     show Tomoko defiant
     Tomoko "And no looking at my screen!"
     MC "Don't worry, I won't need to. I've been formulating my strategy. You and your five HP booger flingers are about to find out what horseshoes taste like."
-    show GTS embarrassed 
+    show GTS embarrassed at Position(ycenter=0.55)
     MC "Let's go."
     show Tomoko neutral 
     "The fog rolled in. The drums barked. The loading bar filled. The battle was on."
-    show GTS pondering 
+    show GTS pondering  at Position(ycenter=0.35) 
     "My noble, polygonal samurai warriors spawned in, piecemeal, atop a confluence of mottled green-brown triangles, the triple hollyhock banner of the Tokugawa floating in the heavens over their heads."
     "I realized then that my spawn point led down into a broad, featureless valley, with one small hill for cover."
     Tomoko "Go ahead, Kei. Take that hill. You can definitely beat me to the top, and then you'll have the high ground."
@@ -15484,7 +15484,7 @@ label GTS057:
     MC "Whatever. That map's design is stupid, you shouldn't be able to snipe literally from your spawn."
     Tomoko "This is war, Kei. There's no fair or unfair, only winners and losers."
     MC "Okay, Nacchan, do you wanna hop in?"
-    show GTS neutral 
+    show GTS neutral at Position(ycenter=0.55)
     show Tomoko neutral 
     GTS "I believe I've seen enough. Yes, I'll try my hand at it."
     GTS "First, what exactly does the Tokugawa... 'ult'... do?"
@@ -15525,11 +15525,11 @@ label GTS057:
     MCT "And I don't."
     MC "Uh..."
     GTS "Divide as many units at the forest as you can and withdraw."
-    show GTS pondering 
-    "I did so, but not in time to get everyone out before Tomoko's general sauntered in and unleashed a wave of fire in a tiringly long cutscene. Half her guys, gone. War is hell."
+    show GTS pondering  at Position(ycenter=0.35) 
+    "I did so, but not in time to get everyone out before Tomoko's general sauntered in and unleashed a wave of fire in a tiringly long cutscene. Half our guys, gone. War is hell."
     "As I watched them fall, my own ult meter reached full charge."
     GTS "I see certain liberties have been taken with historicity."
-    show GTS neutral 
+    show GTS neutral at Position(ycenter=0.55)
     GTS "Have the cavalry engage the enemy marksmen, and send down our command unit, as well."
     "I nodded, and pressed the control stick forward with a trembling thumb."
     "Tomoko was eerily silent as the last vestiges of the Tokugawa army closed in on her."
@@ -15554,10 +15554,10 @@ label GTS057:
     show GTS happy
     GTS "I'm happy to have provided a satisfactory challenge. Well fought, Hotsure-san."
     MC "Bro, we were {i}this{/i} close! You'd have {i}had{/i} her if you just charged straight up."
-    show GTS pondering 
+    show GTS pondering  at Position(ycenter=0.35) 
     show Tomoko happy
     GTS "That was rather a blunder on my part, yes. I hope you'll forgive me."
-    show GTS neutral 
+    show GTS neutral at Position(ycenter=0.55)
     GTS "Thank you for putting your trust in me nevertheless."
     MC "'Course. I guess... do you want a rematch?"
     Tomoko "Please say yes. Curbstomping Kei is fun once in a while, but I like a good challenge better."

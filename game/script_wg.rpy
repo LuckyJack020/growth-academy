@@ -36586,7 +36586,7 @@ label WGB006:
     show GTS neutral
     GTS "Well, we'll be enacting-"
     show GTS surprised
-    Okisho "{w}It's a surprise!{/i}"
+    Okisho "{i}It's a surprise!{/i}"
     MC "Oh?"
     GTS "Oh?"
     show GTS pondering
@@ -36854,8 +36854,10 @@ label WGB006:
     Okisho "Yes... but I kinda like it."
     Okisho "Now let's get going."
     scene black with fade
-    $setTimeFlag("XX32")
+    $setFlag("XX32")
     $setTimeFlag("size3exp")
+    $setSize(3)
+    $setTimeFlag("size3")
     jump daymenu
 
 label WGB007:

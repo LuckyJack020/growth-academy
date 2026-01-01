@@ -45365,7 +45365,7 @@ label PRG064:
     "I held my hand out to her."
     scene Dorm Hallway
     show PRG worried
-    with fade
+    with dissolve
     "Aida shut her eyes for a moment, then silently nodded and shut the door, locking it and taking my hand."
     MC "... You look nice today."
     PRG "I... I look the same almost every day, Keisuke."
@@ -45394,7 +45394,7 @@ label PRG064:
     show PRG worried 
     PRG "No, w-which is what's really strange for me."
     PRG "Everything in my head is telling me that what I'm going through should really hurt, or sting from getting so big, but... it just doesn't."
-    PRG "A-And, I still don't have any stress marks."
+    PRG "A-And, I still don't have any stretch marks."
     MC "See, that's crazy to me."
     PRG "I-I know. I guess... my skin is just stretching really easy?"
     MC "I guess so."
@@ -45618,7 +45618,7 @@ label PRG064:
     MC "Well... let's just skirt around her. Keep to ourselves."
     play music Sunset fadein 3.0
     "I took my trash in one hand and Aida's hand in the other, taking it and dividing it into the appropriate bins as Aida recycled her can, and the two of us headed back into the halls."
-    scene HallwayStairs
+    scene Hallway
     show PRG worried
     with fade
     "Now far more alert, the two of us kept off to one side of the hall, walking along toward 3B."
@@ -45677,7 +45677,7 @@ label PRG064:
     PRG "Thank you..."
     "I smiled and patted her belly gently."
     "Shiori was in her usual place, as was Alice. Akira walked in behind me and sat down heavily, followed by Honoka, who waved."
-    show PRG blush-2 at Position(xcenter=0.25, yalign=1.0)
+    show PRG blush-2 at altMove(0.5, 0.25)
     show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     BE "Hands on in class? Tisk tisk~"
     MC "Perv."
