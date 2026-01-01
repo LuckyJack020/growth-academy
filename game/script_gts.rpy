@@ -14128,7 +14128,7 @@ label GTS054:
     GTSCell "Ah, indeed. Do you have any pressing assignments or gaps in your studying regimen that must be addressed presently?"
     if checkSkill("Academics", ">", 7):
         $setFlag("GTS054_read")
-        MC "No, not really. I finished up the body of the paper for Tashi-sensei last night, I just need to doll up my references, dot my 'T's and cross my 'I's"
+        MC "No, not really. I finished up the body of the paper for Tashi-sensei last night, I just need to doll up my references, dot my 'T's and cross my 'I's."
         GTSCell "Hmhm, capital. That being the case, I would like to propose that we meet at Chūkan Point this afternoon at two o' clock."
         GTSCell "There is a certain book which should make me most happy indeed if you would read it to me."
         MC "Uh... yeah! Whatever you like, Blossom."
