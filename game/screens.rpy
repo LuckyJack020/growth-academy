@@ -315,6 +315,9 @@ init python:
 
 screen navigation():
 
+    if main_menu:
+        text "[config.version]" align (0.99, 0.01) outlines [ (absolute(3), "#FFF", absolute(0), absolute(0)) ]
+
     vbox:
         style_prefix "navigation"
 
@@ -453,6 +456,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         add gui.main_menu_background
+
     else:
         add gui.game_menu_background
 

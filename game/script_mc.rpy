@@ -17185,20 +17185,6 @@ label MC023_C2_1:
     show BE happy
     BE "Well, surprise!"
     MCT "Talking about an odd pairing."
-    BE "Oh, I've been looking for Kokutan."
-    Kokutan "And need look no further, Honoka Inoue! Alas, I had little time to tell you, but it's good that you sought the whispers on the wind to find me!"
-    BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
-    Kokutan "Gah! I told you earlier, I needed only the freshest erbs-"
-    BE "To cleanse our space and ward off the darkness, I know."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
-        MCT "Our space?"
-    MC "Wait, are you two roommates?"
-    show BE confused
-    BE "You didn't know?"
-    MC "I don't think you've ever mentioned it."
-    show BE happy
-    BE "Well, surprise!"
-    MCT "Talking about an odd pairing."
     BE "So, did you get the chance to toughen up the straps yet?" 
     BE "It's one thing to walk around with big bazonga, but doing it unsupported is kinda..."
     "I averted my eyes instinctively... after lingering on the outline of her nips through her shirt for a quick spell."
@@ -19497,8 +19483,8 @@ label MC042:
             centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 20 optional Keisuke's stories.{/outlinecolor}{/size}"
         else:
             centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 20 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
-    if isEventCleared("RM006"):
-        centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 6 core scenes from Daichi's side route.{/outlinecolor}{/size}"
+    if isEventCleared("RM007"):
+        centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 7 core scenes from Daichi's side route.{/outlinecolor}{/size}"
     else:
         centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 6 core scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
     centered "{size=+3}{outlinecolor=#00ff00}More are planned for a later release. Until then, feel free to explore the main routes.{/outlinecolor}{/size}"
@@ -21279,7 +21265,6 @@ label global026:
         MC "Can a weight gain factor even focus on one part of the body like that?"
         BE "Ah... Kei-chan. I'm not an expert here either."
         pause .25
-        play music none
         BE "But... look."
         BE "So, the reason everyone is talking is..."
         pause .75
@@ -24796,12 +24781,37 @@ label RM007_mainmenu:
             RM "Of course. Ask away."
             jump RM007gig_menu
 
-        "Leave it for later":
-            MC "I don't have time now, but maybe later."
-            RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
-            $setFlag("RM007_Pass")
+        "I've changed my mind, let's focus only on the main task.":
+            show RM angry
+            MC "On second thought, I've changed my mind, let's focus only on the main task."
+            $setAffection(RM, -1)
+            show RM distrustful
+            RM "Hmph, well I guess that's fair."
             jump RM007_Epilogue
 
+label RM007gig_menu:
+    menu:
+        "Ask about the gig":
+            show RM happy
+            MC "What's this idea for a \"gig\" as you call it, that you have in mind?"
+            RM "That's a simple one. All I need you to do for me is go into a bus stop and see where the bus goes by making a full circle on the route."
+            MC "What? That's all? Doesn't it just go straight to town? I know you've been there before."
+            show RM happy-2
+            RM "Yes, but that's just it, there are {i}two{/i} bus lines: one that goes straight to Seichou Town, and another that goes all around the island."
+            show RM neutral-2
+            RM "I'm curious about where the other one goes, but I haven't had time to check it yet. Presumably it would take quite a bit longer than the standard route."
+            menu:
+                "Take the gig":
+                    $setFlag("RMG001_Unlock")
+                    MC "Alright, I can take this one. When I get a free afternoon I'll try to catch a ride on the longer bus route."
+                    RM "Excellent. I'll be interested to know what you find. Might be some more locations worth checking out."
+                    jump RM007_menualt
+                "Leave it for later":
+                    show RM neutral
+                    MC "I don't have time now, but maybe later."
+                    RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
+                    jump RM007_Epilogue
+        
         "Ask what he's working on":
             MC "What are you working on then?"
             show RM smug
@@ -24843,36 +24853,11 @@ label RM007_mainmenu:
             extend " Still though, if we could get him talking, he might divulge some details about the Giant's Dorms, seeing how he has to service that part of campus as well."
             jump RM007gig2_menu 
 
-        "I've changed my mind, let's focus only on the main task.":
-            show RM angry
-            MC "On second thought, I've changed my mind, let's focus only on the main task."
-            $setAffection(RM, -1)
-            show RM distrustful
-            RM "Hmph, well I guess that's fair."
+        "Leave it for later":
+            show RM neutral
+            MC "I don't have time now, but maybe later."
+            RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
             jump RM007_Epilogue
-
-label RM007gig_menu:
-    menu:
-        "Ask about the gig":
-            show RM happy
-            MC "What's this idea for a \"gig\" as you call it, that you have in mind?"
-            RM "That's a simple one. All I need you to do for me is go into a bus stop and see where the bus goes by making a full circle on the route."
-            MC "What? That's all? Doesn't it just go straight to town? I know you've been there before."
-            show RM happy-2
-            RM "Yes, but that's just it, there are {i}two{/i} bus lines: one that goes straight to Seichou Town, and another that goes all around the island."
-            show RM neutral-2
-            RM "I'm curious about where the other one goes, but I haven't had time to check it yet. Presumably it would take quite a bit longer than the standard route."
-            menu:
-                "Take the gig":
-                    $setFlag("RMG001_Unlock")
-                    MC "Alright, I can take this one. When I get a free afternoon I'll try to catch a ride on the longer bus route."
-                    RM "Excellent. I'll be interested to know what you find. Might be some more locations worth checking out."
-                    jump RM007_menualt
-                "Leave it for later":
-                    show RM neutral
-                    MC "I don't have time now, but maybe later."
-                    RM "That's fine. Like I said, it's not time sensitive, just let me know when you're ready."
-                    jump RM007_Epilogue
 
 label RM007gig2_menu:    
     menu:

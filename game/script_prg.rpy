@@ -8781,8 +8781,9 @@ label PRG025_Sex:
     "Well, almost anyhow. They were still caged by the fabric of her bra. And, from the looks of it, they were fighting to escape."
     "Before moving any further, Aida got off of me and reached down, taking both socks off and throwing them to the side."
     "Next, she worked her hands north and slid her skirt off."
+    hide PRG with dissolve
     $setPRGOutfit(OutfitEnum.UNDERWEAR)
-    show PRG aroused
+    show PRG aroused with dissolve
     pause 1
     "Now, with Aida in only her bra and panties, I could see her true shape for myself, which had always been a little murky from under her clothes."
     pause .5
@@ -8880,7 +8881,6 @@ label PRG025_Sex:
     "I wasn't in any place to compute logic. I had a madly horny girl on top of me, and every single sense of mine was at level eleven."
     "Aida slipped her panties down, and I gazed at her."
     hide PRG with dissolve
-    pause 0.1
     $setPRGOutfit(OutfitEnum.NUDE)
     show PRG aroused with dissolve
     stop music fadeout 1.0

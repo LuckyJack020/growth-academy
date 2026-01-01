@@ -6806,8 +6806,8 @@ label FMG039:
     FMG "Thanks for your help Natsuko-"
     Natsuko "I'm going to stop you right there. Don't ever bring this up when I'm around...Actually, on second thought, don't talk about it at all. Hotsure-san told me he needed help and I was happy to clean up the trash. That's it."
     "Natsuko didn't even give us a chance to respond as she was already out the door."
+    show FMG angry-2 at altMove(0.5, 0.5)
     hide Natsuko with dissolve
-    show FMG angry-2 at Position(xalign=0.5, yalign=1.0) with dissolve
     FMG "Would it kill her to be nice for like five minutes? Everyone goes on and on about how nice she is, yet, we have to deal with this version with a constant stick up her ass."
     MC "Forget about her. How are you feeling?"
     show FMG neutral
@@ -6862,7 +6862,7 @@ label FMG039:
     MC "I hope you don't mind, but I think I'm the one in need of medical attention now."
     "I shuffled my feet towards the bed while popping my back, back into place."
     MC "Ahhh, much better."
-    show Nurse2 neutral with dissolve
+    show Nurse2 neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "It was at this moment the nurse walked back in and saw the situation flipped."
     Nurse2 "It seems a lot happened during my absence. What did I miss?"
     show FMG sad
@@ -23904,7 +23904,7 @@ label FMG101:
     if isEventCleared("FMG006") and isEventCleared("FMG011") and isEventCleared("FMG012") and isEventCleared("FMG025") and isEventCleared("FMG078") and isEventCleared("FMGD001")  and isEventCleared("FMGD002") and isEventCleared("FMGGTS001") and isEventCleared("FMGGTS002") and isEventCleared("FMGWG001") and isEventCleared("FMGWG002") and isEventCleared("FMGWG003") and isEventCleared("FMGWG004") and isEventCleared("FMGWG006"):
         centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 14 optional scenes from Akira's route.{/outlinecolor}{/size}"
     else:
-        centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 14 optional scenes from Alice's route, there are still some that are left.{/outlinecolor}{/size}"
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 14 optional scenes from Akira's route, there are still some that are left.{/outlinecolor}{/size}"
     centered "{size=+3}{outlinecolor=#00ff00}Her story will still receive updates with more content in a later release. We hope you enjoyed her story and hope you'll explore the other routes as well.{/outlinecolor}{/size}"
     jump daymenu_noadvance
 
