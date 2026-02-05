@@ -33685,6 +33685,7 @@ label WG099:
     MCT "I'll never get tired of this."
     "With the combined efforts of Alice pulling up on her folds and me pressing my arms up with all my might, I slid underneath her belly like a shop mechanic trying to do an oil change, on some very heavy machinery."
     "{i}{b}PLOP!{/b}{/i}"
+    show cg WG099 with dissolve
     show WG haughty
     MC "{i}Ooof!{/i}"
     WG "It's too late to protest now. This is what you wanted, remember?"
@@ -33719,6 +33720,7 @@ label WG099:
     show WG happy
     WG "It's fine. Because I know no matter how fat I am, no matter how fat I might get, you'll always love me."
     MC "{size=-6}You know it... Babe.{/size}"
+    hide cg with dissolve
     show WG doubt
     WG "Okay, we're done now. You're starting to turn blue."
     MC "{size=-6}Just... five more minutes.{/size}"
@@ -36795,15 +36797,23 @@ label WGB006:
     GTS "Ara-ara! You might say so."
     show GTS neutral
     Okisho "You want it, you got it!"
+    stop music fadeout 1.0
     "In dramatic fashion, Okisho raised her arm up high, before clacking down hard on the strings, ringing out a deep springy twang from the strings, briefly pausing before unleashing a flurry of downstroke strumming."
+    play music BiwaJam
     "Rushing waters was an apt title for the song, the momentum of Okisho's strumming painted a picture of urgency and force." 
     "The tumult of her picking blurred into a steady drone with flourishes of precise bits of discord, punctuating the dangers of rapids that were sweeping our ears away."
+    pause 5
     show GTS neutral-2
-    GTS "It is said that the biwa is a tool that can pierce the spirit world." 
+    GTS "It is said that the biwa is a tool that can pierce the spirit world."
+    pause 5
     "Listening to Okisho, I could see what Naomi was talking about. The low droning of the instrument had this forlorn quality that gave it an almost ethereal tone to it if you were really listening."
+    pause 5
     GTS "I find it to be the perfect instrument to accompany tales of great tribulation and sorrow. It makes sense why it would be the chosen vessel to deliver the lessons our ancestors would have us learn." 
     "Whether it truly had a transcendent air to it, I could not say myself, but what I could say for sure was that Okisho could sure play the hell out of it."
+    stop music fadeout 1.0
     show GTS happy
+    pause 1
+    play music DormLife
     Okisho "How was that?"
     GTS "My heart is aflutter, Mizawa-san! As ever. Thank you again for gracing us with your instrumental talents. It is a rare and tremendous pleasure."
     Okisho "Eh, not a problem. Gotta keep this from collecting dust anyway."

@@ -35,6 +35,7 @@ define Kokutan = Character('Kokutan', color="#5E774A")
 define Minori = Character('Minori', color="#FF91DC")
 define Natsuko = Character('Natsuko', color="#8E0C0C")
 define Okisho = Character('Okisho', color="#8D2394", what_prefix='{size=+2}', what_suffix='{/size}')
+define OkishoCell = Character('Okisho', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="OkishoCell")
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakura = Character('Sakura', color="#FC79B4")
@@ -253,6 +254,7 @@ image Dorm GTS = DynamicImage("Graphics/ui/bg/archiveBG/GTSdorm_[gametime].webp"
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].webp")
 image Dorm WG = DynamicImage("Graphics/ui/bg/archiveBG/WGDorm_[gametime].webp")
 image Dorm Tomoko = DynamicImage("Graphics/ui/bg/TMDorm_[gametime].webp")
+image Dorm WGB = DynamicImage("Graphics/ui/bg/archiveBG/WGBdorm_[gametime].webp") # Okisho’s Dorm
 image Dorm Student = DynamicImage("Graphics/ui/bg/studentdorm_[gametime].webp") #Used as Sakura and Natsuko Dorm
 
 #Giants Facilities
@@ -672,6 +674,9 @@ image cg WG091 = ConditionSwitch(
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG093 = "Graphics/ui/gallery/WG093.webp"
 image cg WG097_drawing = "Graphics/ui/gallery/WG097_drawing.webp"
+image cg WG099 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/WG099.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 image cg WG101_drawing1 = "Graphics/ui/gallery/WG101_drawing1.webp"
 image cg WG101_drawing2 = "Graphics/ui/gallery/WG101_drawing2.webp"
 image cg WGFMG004B = "Graphics/ui/gallery/WGFMG004B.webp"
@@ -878,6 +883,7 @@ image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]/[GTSOutfit]/side.we
 image side PRGCell = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/side.webp")
 image side TomoCell = DynamicImage("Graphics/minor/tomoko/[globalsize]/[TomoOutfit]/side.webp")
 image side ChibukiCell = DynamicImage("Graphics/minor/chibuki/[globalsize]/[ChibukiOutfit]/side.webp")
+image side OkishoCell = DynamicImage("Graphics/minor/okisho/[globalsize]/[OkishoOutfit]/side.webp")
 image side YukoCell = DynamicImage("Graphics/minor/parents/yuko/side.webp")
 image side YukiCell = DynamicImage("Graphics/minor/yuki/[globalsize]/[YukiOutfit]/side.webp")
 
@@ -1154,6 +1160,7 @@ define audio.Argue = "Audio/BGM/tension.ogg" #Argument
 define audio.Beach = "Audio/BGM/scene_beach.ogg" #Sea Breeze
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH - Hobby Atelier Carrot Wine
 define audio.BigChanges = "Audio/BGM/scene_uncategorized2.mp3"
+define audio.BiwaJam = "Audio/BGM/BiwaJam.ogg"
 define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
 define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH - Pierrot Lunaire
 define audio.ChangingSeasons = "Audio/BGM/ChangingSeasons.ogg" #Contemplation Theme

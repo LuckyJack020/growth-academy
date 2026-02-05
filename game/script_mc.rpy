@@ -10188,14 +10188,22 @@ label MC010_GTS:
     "All around the scene, squat raku pots bursting at the seams with pink and yellow chrysanthemums wreathed the table with an infectious vitality."
     "The younger crowd members clapped and laughed, having fun alongside Okisho who seemed to be enjoying herself by just goofing off, but the older members of the crowd didn't seem so impressed by this perceived lack of reverence." 
     "Sensing she might be losing her audience, she shifted her tone."
+    stop music fadeout 1.0
     Okisho "Alright, intermission's over, I know what you all came here for."
+    play music BiwaJam
     "Expecting to hear one of the traditional chanting style story songs set to gentle plucking, my eyes went wide as my ears were struck by a furious onslaught of rapid fire strumming."
+    pause 5
     "The bass tone of the biwa thundered like a stampede, while the buzz coming from her attack of the strings cut through with a mounting sense of urgency."
-    "The song itself depicted the clash of a historic battle as it swept the audience up in its fury."
+    pause 5
+    "The song itself depicted the roaring rapids of a wide flowing river that swept the audience up in its fury."
+    pause 5
     MC "Wow! She's really good. How does anyone move their fingers that fast?"
     GTS "Mizawa-san descends from a long line of talented musicians. She grew up playing music from a young age."  
+    pause 8
     "Okisho's song reached a crescendo as the entire crowd in the vicinity amongst the festival goers was transfixed. With one final tumultuous bridge in the song she concluded with a strong and abrupt outro."
-    "Crowd" "{i}*Cheers*{/i}" 
+    stop music fadeout 1.0
+    "Crowd" "{i}*Cheers*{/i}"
+    play music Festival
     "The nearby crowd burst into applause. The older members of the crowd, previously skeptical of her choice of music, were now eagerly nodding in approval."
     Okisho "Thank you! I'll be here all night. But first, I gotta get something to eat."
     "As the crowd began to move again, no longer brough to a standstill to listen to her, Naomi cut through the crowd to speak with her."

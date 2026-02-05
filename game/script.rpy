@@ -159,6 +159,7 @@ init python:
         'dock': ("school", (500,700)),
         'dormAE': ("school", (870,300)),
         'dormWG': ("school", (870,280)),
+        'dormWGB': ("school", (870,260)),
         'dormBE': ("school", (870,260)),
         'dormPRG': ("school", (870,280)),
         'dormFMG': ("school", (870,300)),
@@ -1019,6 +1020,7 @@ init python:
         global TakoNsfwOutfit
         global TakoNsfw
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.ALTERNATE or o == OutfitEnum.TRADITIONAL:
+            TakoNsfw = False
             TakoOutfit = o
         elif o == OutfitEnum.NUDE:
             TakoNsfw = True
@@ -1039,6 +1041,7 @@ init python:
         global NatsOutfit
         global NatsNsfw
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL:
+            NatsNsfw = False
             NatsOutfit = o
         elif o == OutfitEnum.NUDE:
             NatsNsfw = True
