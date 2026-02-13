@@ -27969,7 +27969,7 @@ label PRG047:
     "I met Aida's eyes, as she was clearly trying her best to keep her composure."
     PRGCell "I-I'm fine."
     TakaraCell "Alright. I think we're all set then."
-    "The cab slowly pulled away, as I caught a glimpse of the cab driving staring wide-eyed in his rearview mirror at the enormous pregnant girl jolting his passenger side seat forward."
+    "The cab slowly pulled away, as I caught a glimpse of the cab driver staring wide-eyed in his rearview mirror at the enormous pregnant girl jolting his passenger side seat forward."
     "We drove through the city, getting caught up in traffic a few times, but nothing too crazy. Going into night time, the streets were slightly less insane."
     "Aida kept her eyes out the window as we went. And though I watched out the window as well, taking in the city and feelings of home, I also kept my eyes on Aida's belly, and how it was completely pressed up against the passenger seat."
     "Aida noticed this too, and kept both hands on her middle."

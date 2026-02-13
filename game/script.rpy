@@ -1718,9 +1718,12 @@ label debugmenu:
     window show None
 
 label debugtextinput:
-    window hide None
-    call screen debugScene
-    window show None
+    $ _r = renpy.call_screen("debugScene")
+
+    if _r == "confirm":
+        jump debugmenu
+    else:
+        return
 
 label debugvarlist:
     scene black

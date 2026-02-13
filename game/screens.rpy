@@ -4,6 +4,26 @@
 
 init offset = -1
 
+init python:
+    def dbg_set_focus(focus_id):
+        # Try the focus APIs across Ren'Py versions.
+        try:
+            renpy.set_focus(focus_id)
+            return
+        except Exception:
+            pass
+
+        try:
+            renpy.display.behavior.set_focus(focus_id)
+            return
+        except Exception:
+            pass
+
+        try:
+            renpy.display.focus.set_focus(focus_id)
+            return
+        except Exception:
+            pass
 
 ################################################################################
 ## Styles
@@ -2121,12 +2141,40 @@ screen dialogue():
             textbutton _("Confirm") action Hide('dialogue')
 
 screen debugScene():
+    # Keeps clicks/keys from leaking to the game underneath.
+    modal True
+
+    button id "dbg_focus_sink":
+        action NullAction()
+        xpos -10000
+        ypos -10000
+        xsize 1
+        ysize 1
+
+    on "show" action Function(dbg_set_focus, "dbg_focus_sink")
+
+    # Block common advance/dismiss inputs from reaching the game.
+    key "dismiss" action NullAction()
+
+    # Enter confirms the input (same as clicking Confirm), not "advance".
+    key "K_RETURN" action [ Function(dbg_set_focus, "dbg_focus_sink"), Return("confirm") ]
+    key "K_KP_ENTER" action [ Function(dbg_set_focus, "dbg_focus_sink"), Return("confirm") ]
+
     frame:
-        xalign 0.5 yalign 0.5
-        xsize 500 ysize 100
+        xalign 0.5
+        yalign 0.5
+        xsize 500
+        ysize 140
 
         vbox:
             label "Enter debug input:"
-            input:
-                value VariableInputValue('debuginput', returnable=True)
-            textbutton _("Confirm") action Jump("debugmenu")
+
+            input id "dbg_input":
+                value VariableInputValue("debuginput")
+                multiline False
+
+            textbutton _("Confirm"):
+                action [ Function(dbg_set_focus, "dbg_focus_sink"), Return("confirm") ]
+
+            textbutton _("Cancel"):
+                action Return("cancel")
