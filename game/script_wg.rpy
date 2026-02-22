@@ -1520,7 +1520,7 @@ label WG009:
             WG "Well, you shall know soon enough."
     scene Pool with fade
     $setFMGOutfit(OutfitEnum.SWIM)
-    $setWGOutfit(OutfitEnum.SWIMCAP)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
     show FMG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show WG happy at Position(xcenter=0.75, yalign=1.0)
@@ -5255,7 +5255,7 @@ label WG026:
     "I had read somewhere that physical activity could get the mind working, get those creative juices flowing, so I thought I'd do a little exercising."
     "So I decided to head down to the pool."
     scene Pool with fade
-    $setWGOutfit(OutfitEnum.SWIMCAP)
+    $setWGOutfit(OutfitEnum.ALTERNATE)
     "It had been a while since I went for a swim, but it's pretty demanding exercise so I thought it would give me a good bang for my buck to get my head out of the fog."
     if isEventCleared("WG009"):
         "I don't think I'd been here since I watched Alice and Akira face off against each other. Given the surprising outcome of that race, I don't think I could ever forget it."

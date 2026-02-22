@@ -9155,7 +9155,7 @@ label FMG050:
     "That lasted for about five seconds before I heard her screams of anguish."
     FMG "Nooooo! I barely even moved my arms! Ugh!"
     pause 2
-    $setFMGOutfit(OutfitEnum.RIPPED)
+    $setFMGOutfit(OutfitEnum.ALTERNATE)
     show FMG sad with dissolve
     FMG "Welp. They ripped on my shoulders..."
     show FMG flex

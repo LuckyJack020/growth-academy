@@ -20905,7 +20905,7 @@ label AE092:
     show Takamura neutral
     with fade
     play music Requiem
-    $setAEOutfit(OutfitEnum.TIRED)
+    $setAEOutfit(OutfitEnum.ALTERNATE)
     play sound Knock
     "*knock* *knock* *knock*"
     "I knocked on Shiori's dorm room door, looking over my shoulder to ensure no-one was watching."
@@ -21158,7 +21158,7 @@ label AE092:
 
 label AE093:
     $setProgress("AE", "AE094")
-    $setAEOutfit(OutfitEnum.TIRED)
+    $setAEOutfit(OutfitEnum.ALTERNATE)
     scene Hallway2
     show BE sad
     with fade
@@ -21678,7 +21678,7 @@ label AE094_Gold:
 
 label AE095:
     $setProgress("AE", "AE096")
-    $setAEOutfit(OutfitEnum.TIRED)
+    $setAEOutfit(OutfitEnum.ALTERNATE)
     scene Cafeteria with fade
     "As I entered into the cafe area, I couldn't help but notice that there were very few people inside, and those who were, were either looking rather uncomfortable, or were murmuring amongst each other."
     MCT "What the hell is going on here? Why is everyone acting so weird?"
@@ -22132,7 +22132,7 @@ label AE095G:
 
 label AE096:
     $setProgress("AE", "AE097")
-    $setAEOutfit(OutfitEnum.TIRED)
+    $setAEOutfit(OutfitEnum.ALTERNATE)
     $setTime(TimeEnum.EVE)
     scene Roof with fade
     MC "Haaah..."
@@ -24120,7 +24120,7 @@ label AE098D:
 
 label AE099:
     $setProgress("AE", "AE100")
-    $setAEOutfit(OutfitEnum.TIRED)
+    $setAEOutfit(OutfitEnum.ALTERNATE)
     scene Dorm AE with fade
     play music AE
     AE "Haah..."
