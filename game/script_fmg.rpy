@@ -21153,7 +21153,7 @@ label FMG093A:
     show FMG neutral
     "Realizing there was nothing left to pull from the well, Akira set the bar down and motioned with her hands she was done."
     Hageshi "No lift. Competitor is finished. The winner is Mizutani-san!"
-    "Crowd" "{i}*Cheers*{/}"
+    "Crowd" "{i}*Cheers*{/i}"
     Announcer "Wow! What a performance from Mizutani-san!" 
     Announcer2 "What a sight! Though one has to wonder if that extra attempt is going to come back to haunt her as the competition moves forward into the later stages."
     Announcer "We'll have to see— but what a great spectacle for the crowd! Both competitors gave it their all, and that's what we came to see."
@@ -21576,7 +21576,7 @@ label FMG093B:
     MC "Yeah, she's still got this!"
     show FMG angry at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1) with dissolve
     Natsuko "Heh. Let's see you top that."
-    FMG "{size=-4}{i}Arrh!{/size}"
+    FMG "{size=-4}{i}Arrh!{/i}{/size}"
     hide Natsuko with dissolve
     "As calculating as Nat usually was, she definitely made a blunder trying to shit-talk to Akira just now because it lit a fire in her eyes something fierce."
     "Akira mauled the stone with gusto, scooping it up from the ground to her shoulder in one swoop before getting it firmly set on her shoulder."
@@ -23494,7 +23494,7 @@ label FMG099:
     MC "Still waiting, Nat."
     Natsuko "...I'll admit... I didn't think that I was this uninteresting."
     MC "{size=-6}That makes one of us...{/size}"
-    FMG "Aw, don't be so hard on yourself, Nat. There's plenty of interesting stuff about you... {w}Like, um... that one thing you like...{w}{size=-6}crap, that's a gym thing too...{/i}"
+    FMG "Aw, don't be so hard on yourself, Nat. There's plenty of interesting stuff about you... {w}Like, um... that one thing you like...{w}{size=-6}crap, that's a gym thing too...{/size}"
     MC "This is the part where I remind you you aren't helping."
     FMG "It's a lot harder than it looks, okay!"
     show Natsuko annoyed

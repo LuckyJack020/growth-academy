@@ -699,6 +699,7 @@ image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neu
 image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-noglasses.webp")
 image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-smug.webp")
 image AE happy = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy.webp")
+image AE happy-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy-2.webp")
 image AE smile = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy-2.webp")
 image AE pondering = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/pondering.webp")
 image AE sad = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.webp")

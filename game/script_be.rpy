@@ -15818,7 +15818,7 @@ label BE060_c2_1:
     BE "I..."
     show BE surprised-2 at shake3(0.5)
     BE "OH GOD"
-    show BE surpised-2:
+    show BE surprised-2:
         xcenter 0.5
     pause 0.5
     show BE happy

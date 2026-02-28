@@ -16616,7 +16616,7 @@ label WG059S:
         WG "Oh, look at the time! You better head back to your dorm. Shiori is about to begin her patrol, I'd hate for you to have to deal with her."
         MC "I probably should, cause I don't want to either. See you tomorrow in class."
         WG "Goodnight."
-        scene Dorm hallway with fade
+        scene Dorm Hallway with fade
         "I left Alice's dorm and began the walk back to mine. Though not the outcome I had hoped for, I thought I still had managed to salvage something from the situation."
         "I hope that I can broach the subject again at a more opportune time, maybe when Alice was a bit more receptive to the idea."
         jump daymenu
@@ -25384,7 +25384,7 @@ label WG080_Afterchoice:
     WG "He certainly has."
     if getFlag("WG080_C1_2"):
         MCT "Heh, despite saying she wasn't interested in talking about her father to Takamura-sensei, I knew she couldn't resist the opportunity to gush about her old man."
-        Takamaura "Well, that's quite the journey. So where does that put you, if you intend to follow in his steps." 
+        Takamura "Well, that's quite the journey. So where does that put you, if you intend to follow in his steps." 
     MC "Yeah, are you intending to start out as a \"fixer\"?"
     show WG happy-2
     WG "Not particularly, but I could."
@@ -31498,7 +31498,7 @@ label WG094:
     MC "I bet you it's way cleaner than Tomo's room."
     show Tomoko surprised with dissolve
     "Tomo suddenly looked like she had just remembered something she had forgotten."
-    Tomoko "{size=-6}{i}Eeep!{/size}"
+    Tomoko "{size=-6}{i}Eeep!{/i}{/size}"
     Dad "Yes, well that wouldn't surprise me."
     show Tomoko neutral
     Mom "Oh it's not so bad. Look, he has his laundry all folded and put away at least, though you should have your bed made by this time in the afternoon."
@@ -36880,7 +36880,7 @@ label WGB007:
     "I mean, that was my guess anyway, I honestly didn't know for sure." 
     "But despite all that, my hope was we might start going steady rather than just a few casual dates."
     "By this point I had a much better idea of Okisho's schedule... (Well, whatever semblance of a schedule someone as spontaneous as Okisho keeps.) and was hoping to catch her after a music club practice."
-    "Seeing a group of students carrying instruments coming from the other direction down the hall, I knew I had hit the timing right."
+    "Seeing a group of students carrying instrument cases coming my direction as I went down the hall, I knew I had hit the timing right."
     scene Music Classroom with fade 
     "It looked like the rest of the students had cleared out- except for one."
     show WG neutral at Position(xcenter=0.25, yalign=1.0)
@@ -36908,7 +36908,7 @@ label WGB007:
     show WG sly
     WG "Just so you know, people call you \"Okisho the Oinker\" behind your back."
     Okisho "Ha! I guess that's not too flattering, you're right. {w} But I don't care. Pigs are cute." 
-    show WG surprise-2
+    show WG surprised-2
     Okisho "Besides, it's a much better nickname than \"The Big Rich Bitch\"."
     show WG stern
     Okisho "I can't imagine who they were talking about when I heard that one, but she must be even fatter than me."
@@ -39673,7 +39673,7 @@ label WGBE001_After_c1:
     MC "I know, I know. But she was giving me this look-"
     show WG haughty
     WG "My Dear Boy, I'm sure Honoka will still be your friend even if you tell her no sometimes."
-    MCT "Easy for her to say... Those puppy-dogs eyes have {i}no{/} effect on Alice. I wish I knew her secret."
+    MCT "Easy for her to say... Those puppy-dogs eyes have {i}no{/i} effect on Alice. I wish I knew her secret."
     show WG doubt
     WG "As to your second point— I doubt it. There's no better reality check than an invoice that's due." 
     MC "I think you're underestimating Honoka. I know she's not exactly one to stick with things, having jumped through a dozen different clubs this year, but I wouldn't be surprised if she sticks with this."
