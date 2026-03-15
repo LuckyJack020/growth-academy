@@ -23204,6 +23204,7 @@ label RM004_C1_after:
 
 label RM005:
     $setTime(TimeEnum.EVE)
+    $ config.menu_include_disabled = True
     scene Dorm Interior with fade
     play music DormLife
     "The orange glow of the setting sun began to peer through the window, which only now made me realize how much time had passed."
@@ -23812,6 +23813,7 @@ label RM005_AfterCouncil:
     pause 1
     MC "..."
     MC "See? This is exactly what I'm talking about."
+    $ config.menu_include_disabled = False
     jump daymenu
 
 label RM006:
