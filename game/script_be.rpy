@@ -6956,7 +6956,7 @@ label BE035B:
     MC "I have no idea whether I want a heavier one or a lighter one. I guess I'll just use this one for now and if I really suck, I'll switch."
     BE "Hehe, sounds like a plan. Want me to pitch first then?"
     MC "Sure, that'd work."
-    "I discarded by glove to grab the bat, and had the implement in my hand, ready to go."
+    "I discarded my glove to grab the bat, and had the implement in my hand, ready to go."
     UNKNOWN "Oh crap, heads up!"
 
     if checkSkill("Athletics", ">", 7):

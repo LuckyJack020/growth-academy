@@ -16976,7 +16976,7 @@ label FMG080:
     MC "We'll see, I doubt someone like him has many friends at all. The dude seems like he barely gets out as it is."
     FMG "Don't say that about him, I wouldn't be where I am now without his help. He can be stiff sometimes...{w}a lot of the time..."
     FMG "Regardless, let's go find him, the later it gets the harder it's going to be."
-    MC "50 yen, he's at his desk watching old school karate movies eating unsalted walnuts and an absurdly big water bottle ."
+    MC "50 yen, he's at his desk watching old school karate movies eating unsalted walnuts and an absurdly big water bottle."
     FMG "That's oddly specific."
     MC "I walk by his class a lot after hours..."
     FMG "Are you creeping on Hageshi-sensei? I always knew you had a thing for dudes. I've been a cover-up this whole time."

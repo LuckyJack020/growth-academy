@@ -7623,7 +7623,7 @@ label GTS036_c2_1:
         MC "You wouldn't be you if you didn't, would you? That's part of what makes you so special."
         show GTS unique
         "She covered her mouth, and I could hear her chest rumbling with uneven laughter punctuated with a dreamy sigh."
-        "What more was there to say? I stepped in closer, felt her presence, and raised my arms around the back of her neck in a gentle embrace. Naomi reciprocated, bracing my back with one bending arm and catching my arm in her other hand. "
+        "What more was there to say? I stepped in closer, felt her presence, and raised my arms around the back of her neck in a gentle embrace. Naomi reciprocated, bracing my back with one bending arm and catching my arm in her other hand."
         "For a moment, she was the air around me, warmly hazy and still."
         show GTS aroused
         "She lingered a moment longer as I ran my hand down one pearl-like cheek, and kissed the other; while I felt her breath flutter, she turned her head to plant a kiss on my cheek... and despite herself, a bit of my neck and my hair, too."
@@ -8589,7 +8589,7 @@ label GTS040_c2:
     "Apparently, I was just about the only idiot willing to go outside that day. But I did take some comfort in the fact that I was never really alone anymore. She was much quicker to answer this time."
     GTSCell "Good afternoon, Keisuke-kun. Pardon my delay in answering."
     MCCell "Oh, don't worry about it. For you, I'll wait however long I need to."
-    GTSCell "Hmhm, I appreciate your understanding. "
+    GTSCell "Hmhm, I appreciate your understanding."
     GTSCell "Operating my phone has become rather... troublesome of late."
     MCCell "...Oh... I see."
     menu:
@@ -9570,7 +9570,7 @@ label GTS043:
     show FMG happy
     FMG "You two go get ready, then! I'm just happy we got to do this today!"
     show GTS unique
-    GTS "Likewise, Mizutani-san.Thank you for proposing such a fun idea ."
+    GTS "Likewise, Mizutani-san. Thank you for proposing such a fun idea."
     show FMG neutral
     FMG "See ya around, guys. We should definitely do this again sometime."
     show GTS neutral

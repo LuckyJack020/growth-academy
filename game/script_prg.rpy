@@ -422,7 +422,7 @@ label PRG002_c1_2:
     scene black with fade
     $setTime(TimeEnum.EVE)
     scene Dorm Interior with fade
-    "An hour slowly ticked by. I found myself sitting at my desk, digging through my bag, and sorting through the piles of papers I'd be given over the first few days."
+    "An hour slowly ticked by. I found myself sitting at my desk, digging through my bag, and sorting through the piles of papers I'd been given over the first few days."
     "Most of it was trash, and I highly doubted that I'd need any of these, but watch me throw away something that I'd need like three weeks from now."
     "Dumping probably one tree's worth of paper into the bin under my desk, I sat up and stretched out."
     "I sauntered across my dorm to get my blood flowing again. All this sitting lately was getting to me."
@@ -1878,7 +1878,7 @@ label PRG010:
             "After I'd given my book to Aida for her report, I'd decided to do my essay on a few different strength training techniques I'd heard about, and the advantages of each one."
             "I'd had to BS my way through it a bit, especially when it came to an exercise focused on reaching an eventual end goal of bending a horseshoe with your bare hands, but it made sense for the most part."
             MCT "At least, I think it does."
-        elif isHighestSkill("Arts"):
+        elif isHighestSkill("Art"):
             "After I'd given my book to Aida for her report, I'd decided to do my essay on the history of the guitar."
             "With my long hair and topic choice together, I probably came off as a grunge rocker from an age long past, but I didn't really mind. It was all for the grade."
         else:
@@ -1992,7 +1992,7 @@ label PRG010:
     MC "I know. And, I understand that my factor probably seems pretty mild by comparison to the other factors on the table. In all seriousness, I kind of lucked out."
     PRG "Yeah..."
     MC "Well, look. I don't need to know specifics. That's for you to know, and if you don't want people to know, then you don't have to tell."
-    MC "And, having said all of that..."
+    MC "And, having said all of that... "
     pause 1.5
     extend "I think you look really nice today."
     show PRG surprised
@@ -2401,7 +2401,7 @@ label PRG011:
         show PRG neutral
         "Aida giggled lightly as she stirred the soup with a ladle."
         PRG "M-My mom told me that too."
-        "Aida took the pot in both hands and hovered it over the glassware."
+        "Aida took the pot in both hands and hovered it over the glassware. "
         show PRG worried
         extend "She looked down, contemplating the best course of action."
         "As she went to start pouring the soup in, she tried to bring her arms together to get a better angle, but her big breasts got in the way, forcing her arms back out."
@@ -2577,7 +2577,7 @@ label PRG011:
         show PRG neutral
         "Aida giggled lightly as she stirred the soup with a ladle."
         PRG "M-My mom told me that too."
-        "Aida took the pot in both hands and hovered it over the glassware."
+        "Aida took the pot in both hands and hovered it over the glassware. "
         show PRG worried
         extend "She looked down, contemplating the best course of action."
         "As she went to start pouring the soup in, she tried to bring her arms together to get a better angle, but her big breasts got in the way, forcing her arms back out."
@@ -4715,6 +4715,7 @@ label PRG017:
                             PRG "I'm ready when you are."
                             MC "Sweet. Let's roll."
                             hide PRG with dissolve
+                            hide FlowerPRG2 with dissolve
                             "The two of us walked off together."
                             "In the past, Aida would walk a bit of a distance away from me. But now, she was walking beside me, as any normal person would."
                             $setAffection("PRG", 1)
@@ -6409,9 +6410,9 @@ label PRG020_c1_after:
     "As Tashi-sensei jotted the final notes on the board, her pencil fell to the paper, and Aida's eyes began to, ever so slightly, drift shut, her head sliding down from her hand."
     pause .5
     show dummy with vpunch
-    "Aida jolted awake."
+    "Aida jolted awake. "
     show PRG scared
-    extend "She glanced around in a rush,"
+    extend "She glanced around in a rush, "
     show PRG scared at Transform(xzoom=-1)
     hide PRG with moveoutright
     extend "then hurriedly grabbed her things, got up, and flew out of the room, somehow getting out before anyone else."
@@ -19876,7 +19877,7 @@ label PRG038:
     show PRG neutral
     PRG "Alright."
     "As Aida checked the map screen and ran to the nearest campsite, an orange, glowing sparkle shone from under a tree nearby."
-    PRG "I-I should pick that up, right?."
+    PRG "I-I should pick that up, right?"
     MC "Yep. Always good to grab as many items as you can."
     "Aida walked Solis over and picked up the item, and-"
     "Calor""YES!"
@@ -29125,7 +29126,7 @@ label PRG048:
     MC "Right... that's a good point."
     MC "I guess we have some things to think about for future plans now."
     show PRG worried
-    Takara "Pull out your phone once, Hotsure-san. Open up your notes app."
+    Takara "Pull out your phone at once, Hotsure-san. Open up your notes app."
     "Confused, I did as she asked and pulled out my phone, opening it up."
     Takara "Open a new note and make a heading for \"baby plans\"."
     Takara "I'll help you jot down a few things to keep in mind."
@@ -40499,8 +40500,8 @@ label PRG060:
 
 label PRG061:
     $setProgress("PRG", "PRG062")
-    scene Dorm Interior with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
+    scene Dorm Interior with fade
     play sound DoorOpen
     pause 2
     play sound DoorShut
@@ -47075,7 +47076,7 @@ label PRG030Z:
     scene Town with fade
     play music BrightLights
     "Aida and I didn't speak more than a handful of words the entire walk and bus ride into town. And, when we did speak, it was little more than simple, idle small talk and throwing out ideas for our paper."
-    "By the time we got off of the bus, my stomach was really letting me know that I needed something of sustenance ."
+    "By the time we got off of the bus, my stomach was really letting me know that I needed something of sustenance."
     show PRG worried with dissolve
     MC "So, what are you thinking for food?"
     PRG "W-Whatever you want. I'm not picky."
