@@ -20302,7 +20302,7 @@ label WG067:
     "She eventually reemerged with a box wrapped with a bow."
     show WG happy with dissolve
     play music Peaceful
-    WG "I saw this at the bookstore in town and thought you might like it ."
+    WG "I saw this at the bookstore in town and thought you might like it."
     "She handed me the gift, which, if anything to go by, was quite thick— how fitting."
     MC "You know you didn't need to get me anything."
     WG "I don't want to hear it— just open it."
