@@ -4681,6 +4681,7 @@ label PRG017:
                             PRG "All ready."
                             MC "Sweet. Let's roll."
                             hide PRG with dissolve
+                            hide FlowerPRG2 with dissolve
                             "The two of us walked off together."
                             "In the past, Aida would walk a bit of a distance away from me. But now, she was walking beside me, as any normal person would."
                             $setAffection("PRG", 2)
@@ -4825,6 +4826,7 @@ label PRG017:
                 PRG "All ready."
                 MC "Sweet. Let's roll."
                 hide PRG with dissolve
+                hide FlowerPRG2 with dissolve
                 "The two of us walked off together."
                 "In the past, Aida would walk a bit of a distance away from me. But now, she was walking beside me, as any normal person would."
                 $setAffection("PRG", 1)
@@ -4859,6 +4861,7 @@ label PRG017:
                 PRG "I'm ready when you are."
                 MC "Sweet. Let's roll."
                 hide PRG with dissolve
+                hide FlowerPRG2 with dissolve
                 "The two of us walked off together."
                 "In the past, Aida would walk a bit of a distance away from me. But now, she was walking beside me, as any normal person would."
                 jump daymenu
