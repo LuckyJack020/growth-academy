@@ -15621,6 +15621,360 @@ label GTS057:
     jump daymenu
 
 label GTS058:
+    jump GTS059
+
+label GTS059:
+    $setProgress("GTS", "GTS060")
+    play music Nostalgia
+    scene Hallway3 with fade
+    MCT "Uggh... I'm starving. That's what I get for trading sleep for lunch."
+    "In retrospect, I should have known what was going to happen when I decided to lay back on my bed when I got back to my dorm. Luckily I narrowly avoided being late to class."
+    MCT "\"I'll just rest my eyes— my ass!\""
+    "Speaking of ass, I was stuck behind a notably large one standing in line for the vending machine."
+    MCT "Man, this guy is taking forever."
+    "{i}*bzzt* *bzzt*{/i}"
+    "Lucky for me, assman must have had an urgent text because he dropped out of his place in line to go check his phone. Wasting no time, I ran up to the glass display to size up the potential offerings."
+    MCT "Let's see here... chocolate pocky... Nah, that stuff was kinda chalky last time."
+    MCT "Potato chips... Was hoping for something a bit better than that."
+    MCT "Wait a second!..."
+    MCT "Green curry shrimp puffs!?"
+    MC "{i}Jackpot!{/i}"
+    "Without hesitation I shoved my money into the machine as fast as possible... which obviously wasn't a good idea since it wanted me to feed it in at a very specific speed."
+    MC "Come on, come on!"
+    "After a couple smacks to the side of the machine it finally took my money and didn't immediately spit it back out."
+    MC "E7"
+    "{i}*WRRRR* {w}Plunk!*{/i}"
+    MCT "Oh yeah!" 
+    "It was a surprising find. I remembered having this very same brand when I was out on vacation with the fam {i}years{/i} ago." 
+    "We were all starving and dad thought the local restaurants were too expensive, so he let me and Tomo get whatever we wanted from a vending machine."
+    "I bought it because I thought the green color looked funky, you know, since I was like 11, but this turned out to be the sleeper hit out of the big bunch of junk food we bought."
+    "I studied the package, noting that it hadn't changed in all those years, it was definitely the same brand."
+    MC "Wait a second... {w}It's expired."
+    MCT "Well, whatever. Those dates are never accurate anyway. This thing's probably more preservative than food anyway."
+    pause 1
+    MC "Hmm, it's a little stale, but not too bad. Good thing I'm hungry."
+    scene black with fade
+    stop music fadeout 0.5
+    $setMCOutfit(OutfitEnum.UNDERWEAR)
+    pause 1
+    scene Dorm Interior with fade
+    play music Peaceful
+    "{i}*BLUUEERRAAAGGGLEEEE*{i}"
+    MC "Oh Christ, it's coming out of my nose! Fuck—"
+    "{i}EERAAAHHHHGGLGLLLE*{i}"
+    MC "I don't know how I even have anything left inside of me after the fifth time."
+    "Turns out it was not a good thing I was hungry when I downed a whole pack of rotten ass curry shrimp puffs the day before."
+    MC "Now I'm starting to wonder if those really were green curry shrimp puffs, or just curry shrimp puffs that turned green."
+    play sound Knock
+    RM "Are you okay? You sound like you're dying in there."
+    MC "To answer your first question: no. {w}As to the second part: yes."
+    RM "Okay, well stay away from me. I don't want to get what you got."
+    MC "It's food poisoning. It's not contagious."
+    RM "How do you know that?"
+    MC "Let's just say I have a strong suspicion..."
+    "Scraping myself off the rim of the toilet bowl, I stepped out of the bathroom to drag my ass across the room hoping I'd manage the strength to crawl back under my covers."
+    MCT "Just a little further Kei, and then you won't need to get up again the rest of the day..."
+    show RM distrustful with dissolve
+    "Daichi for his part was backed up against the wall, looking like he was prepped for surgery in a full on face mask with a pair of rubber gloves."
+    MC "Oh thank goodness, looks like we got a doctor in the house."
+    RM "As much as you look like you could use one, you're out of luck. I don't care what this looks like, I can't afford to take any chances tonight."
+    "Part of me wanted to ask what was so important about tonight specifically, as opposed to any other myriad of minor reasons that might set off his eccentricities." 
+    "But the lifeforce draining out of my body had taken with it whatever part of me that might have cared."
+    if checkAffection("RM", ">=", 5):
+        RM "Seeing as you're in no condition to attend class, I'll keep you abreast of any announcements of potential upcoming quizzes. {w}Is there any topic you'd like me to take especially detailed notes on?"
+        MC "Thanks for offering. Honestly, if you could get me some good notes from Tsubasa's class, that would help. I can barely keep myself awake, let alone take notes I'll remember."
+        "As nice as the gesture from Daichi was, having seen samples of his handwriting before, I might as well have asked for a transcript in braille."
+        MCT "Better than nothing at least, which is all I'm good for in this state." 
+        RM "Alright, noted. I'm heading out. Maybe you should try to see the nurse today."
+        MC "Thanks, maybe I will."
+    else:
+        MC "I'm in no condition to go to class today. Can you make sure to tell the teachers I'm sick and not just dipping out?"
+        RM "Fine, if that's what it takes for you to stay in bed— and far away from me."
+        MC "Think you could take some notes for me?"
+        RM "Yeah, you can just photocopy from my notebook."
+        MCT "I'm sure that'll prove useful once I learn to decipher chicken scratches."
+        MC "Thanks."
+        RM "Maybe you should see the nurse today."
+        MC "I'll think about that if I manage to move from this bed."
+        RM "Well, I'm going to class, hope you'll still be alive when I get back."
+        MC "I wouldn't bet on it."
+        RM "And I wouldn't bet on that for myself if I stick around here any longer. I'm getting out of here."
+    scene black with fade
+    pause .5
+    scene Dorm Interior with fade
+    "I tried to take a nap. As desperately exhausted I was, the pain of my stomach cramps made the prospect of getting any real rest out of the question." 
+    "More or less giving up on the notion of sleep, I turned my attention to just trying to pass the time and distract myself from my paralyzing discomfort."
+    MCT "Uggh... All this misery over some bastard shrimp puffs."
+    MCT "Given the rapidly expanding student body, I can't conceive of any food item being left around long enough to expire... {w}Just my luck."
+    "Then again, the more I thought about it, I began to realize a wiser me should have taken that as a warning."
+    MCT "I might not be in class today, but I can't say I'm not learning anything."
+    "Thinking that I must have already managed to whittle away a considerable portion of this miserable occasion, I weakly turned my head toward my end table where my phone was."
+    "Clicking the screen on revealed it was barely even two minutes till noon."
+    MCT "Wait a second..."
+    "Being close to noon, normally lunch would be on my mind, but in this instance, far from it. My stomach winced slightly even just giving a thought to the notion."
+    "I was more concerned with the realization that my absence today from class was about to really screw over future-me if I didn't take steps now to ensure that sorry bastard wasn't also going to be an unfortunate victim of my past self's indiscretion."
+    MCCell "<Hey, Nacchan. I can't make it to class today. Could you please take some notes for me on the review for the upcoming quiz in psych?>"
+    GTSCell "<Depend upon it. But pray, what has you indisposed?>"
+    MCCell "<Food poisoning. Had something yesterday that didn't agree with me.>"
+    GTSCell "<Are you certain? What kind of symptoms are you experiencing?>"
+    MCCell "Nausea, vomiting, stomach cramps, can't keep food down... it's not pretty.>"
+    GTSCell "<Heavens! That does sound rather alarming.>"
+    GTSCell "<Never fear, I promise I will take good notes for you.>"
+    MCCell "<Thank you.>"
+    scene black with fade
+    stop music fadeout 0.5
+    pause .5
+    scene Dorm Interior with fade
+    play music ChangingSeasons
+    "Whether due to being in a state of food deprived delirium and losing track of time, or somehow finally managing to doze off cocooned under my covers, my groggy haze was lifted by a sudden rapping on my balcony window."
+    "The rhythm was off-kilter... she tried to be gentle."
+    play sound Knock
+    MC "Whazza?!"
+    MC "Huh?"
+    "As the blur of my heavy eyes began to give way to focus, I thought I might have been hallucinating when I noticed a set of amber eyes peering over the balcony into my room through the exterior sliding glass door."
+    MCT "Wait a second... There's only one person who that could be!"
+    show DormGTSDayNeutral with dissolve 
+    GTS "{size=-6}Are you strong enough to come to the window?{/size}"
+    "The closed window muffled her voice considerably, but I was able to make out what she said."
+    "Unfortunately with the window closed and locked, she wasn't in a position to get it opened, unless she were truly determined to smash her way through it."
+    "Given that I was sick, rather than crumpled on the flood bleeding, the level of urgency wasn't quite there."
+    "Rising from my reclined position to begin placing my feet on the floor, a keen sharp pain in my side proved to be an unexpected impediment."
+    MCT "Uggh, this isn't good. {w}But I can power through, right?"
+    menu:
+        "Take it easy there, champ.":
+            "I shook my head no. As much as I wanted to come out to the balcony and greet her, I knew it was a no go."
+            jump GTS059_NoGo
+
+        "You can make it, you big baby.":
+            if checkSkill("Athletics", ">=", 4):
+                $setAffection("GTS", 2)
+                "I peeled off the covers, struggling a bit in the process since I had been wrapped up so tight from the chills I experienced earlier."
+                "When my feet hit the floor, I was surprisingly unsteady, but I managed to regain my equilibrium before slowly staggering towards the sliding glass door."
+                "Finally reaching the door, I was grateful for something to finally brace against to keep my wobbling legs propped up before sliding it open, finally able to greet her gently smiling face."
+                MCT "Ohh... I'm not sure this was a good idea."
+                "At least that was my initial thought as I struggled to prop myself up against the window frame." 
+                "But seeing Naomi's reassuring expression, despite her imposing size overwhelming me in her shadow on the balcony, I knew I had made the right choice to brave the journey."
+                GTS "Your condition is better than I had feared. Thank heavens for your manly constitution... but let us not overtax it, hm?"
+                "Naomi reached her hand above the balcony to gently pass to me a tote bag from overhead."
+                MC "Oh, thanks! {w}Uh, what do we have here?"
+                GTS "I provided the notes for the upcoming psychology class as you requested, along with some homemade peppermint-ginger pills to help with your nausea."
+                GTS "When you said you had food poisoning, I thought you might have difficulty keeping food and fluids down. Something to calm your stomach should help."
+                MC "Thank you. You're certainly right, I definitely could use these since I haven't been able to keep anything down all morning."
+                GTS "Come closer. Let me take a better look at you."
+                "Naomi leaned in, the sheer size of her face compared to my body would have been startling if I wasn't already so used to it. She gently caressed my head between her fingertips, then down to my shoulders and back with her large enveloping hand."
+                "It was comforting... {w}Not unlike how my mother would comfort me as a sick child."
+                GTS "You look pale, and you feel cold... I think you need to rest more and drink more fluids."
+                MC "Yeah, you're right. Hopefully the pills will let me keep some liquid down."
+                "Being somewhat lost in the moment as I began to feel more at ease with Naomi rubbing my back, I had the sudden realization it couldn't have been but more than the early afternoon."
+                "Surely she would struggle to make it back to class before the break period was over?"
+                MC "Gee, I feel kinda bad. I was just hoping you might help me cover for the psych quiz, but it looks like you really dropped everything just to come help take care of me."
+                GTS "Think nothing of it, my love."
+                GTS "It is my duty to take care of you when you cannot."
+                "I couldn't help but smile from her resolute reassurance."
+                MC "Heh, duty, eh? Well that is certainly comforting."
+                MC "Would you say it is out of a sense of duty, or more so affection?" 
+                GTS "For people like us, my dear Keisuke-kun, they are one and the same."
+                MC "Ah, I see. Well, noted."
+                "Naomi in her comforting touch, stroked my shoulder, easing my tension as she did so."
+                "I felt a profound sense of comfort, but also vulnerability given my fragile state and the overwhelming scale of her sheer size as I melted to her touch like putty in a potter's hands."
+                GTS "How has your reading of \"A Fool's Love\" been going?"
+                MC "I've read up to the part at the Kamakura resort. To be... honest..."
+                MC "Okay, I'm not trying to put down something you like, Blossom."
+                GTS "I understand. Please, tell me what you think."
+                MC "It's like... I'm struggling to see where this book is supposed to be funny. I get that cringe comedy is a thing, but this story actually seems pretty dark to me."
+                MC "I mean, the guy is a straight up groomer, so he can get... I mean, on principle, he completely deserves every hardship that comes his way."
+                MC "And yet, despite that, watching him get emotionally tortured for a hundred pages is weirdly kind of challenging."
+                GTS "We all approach things from a different lens informed by our past experiences. It is very likely you will take away different things than I did when I read it."
+                GTS "In truth, having endured what you have... there may well be some pain in reading through it. If it does cause you pain, Keisuke-kun, you need not continue on my account."
+                menu:
+                    "That's a relief.":
+                        MC "If it's all the same to you, I don't think I will. I can't see how the payoff could make this story worthwhile... to me, anyway."
+                        GTS "That is certainly a fair assessment, one that only you can decide for yourself."
+                    "No, I'll finish it.":
+                        $setVar("GTS_selfhood", getVar("GTS_selfhood") + 2)
+                        $getflag("GTS059_Book")
+                        $setAffection("GTS", 2)
+                        MC "If it means enough to you that you'd want me to share your experience with me, then I'm going to see it through for all it's worth."
+                        MC "Who knows, maybe by the end I'll get it."
+                        GTS "That is a commendable attitude. One who concerns himself with virtue must, after all, be acquainted with suffering."
+                        hide DormGTSDayNeutral
+                        show DormGTSDayHappy
+                        GTS "And you simply must tell me your opinion of the ending."
+                        MC "Depend upon it."
+                        "She grinned."
+                play music Sunset
+                scene black with fade
+                pause .5
+                $setTime(TimeEnum.EVE)
+                scene Dorm Interior 
+                show DormGTSEveNeutral 
+                with fade
+                "In contrast to the slow grind of the early morning where I had been entombed by the throes of my stomach cramps and feebleness, time passed rather quickly in Naomi's presence as she took it upon herself to watch over me."
+                MC "I think I'm starting to feel better. The ginger-peppermint pills must be helping."
+                GTS "You look better. Your color has returned to your face."
+                MC "Thanks for taking the time to come see me."
+                GTS "As I said before, it is my duty and my devotion to make sure you are taken care of."
+                GTS "Please get some more rest for yourself, and have something to eat, if your stomach allows. You still need more time to recover."
+                MC "You're right. I do think my appetite is returning. I'll try to have something light."
+                GTS "Goodnight, my love."
+                MC "Goodnight."
+                hide DormGTSEveNeutral with dissolve
+                "Naomi headed off back towards the Giants' Dorms. I, in turn, returned to my bed."
+                if getFlag("GTS059_Book"):
+                    "Tucking myself back into my covers, a book sitting on my end table caught my attention from the corner of my eye." 
+                    "I picked up the borrowed copy of \"A Fool's Love\", eager to dive back into it, hoping I might find the same spark that made it such a special story to Naomi."
+                    "Though I desired to read it in earnest, it was hard to focus on the emotional tone of the story when the thought at the front of mind was how much I missed her presence already."
+                else:
+                    "Tucking myself back into my covers, it only now hit me how exhausting it had been to stand on the balcony with her."
+                    "Realizing that her mere presence had invigorated my weary body to stay resolute, I collapsed back onto the softness of my pillow, having now been deprived of her sustaining aura, and missing her already." 
+            else:
+                $setFlag("GTS059_Fail")
+                "I peeled off the covers, struggling every bit in the process since I had been wrapped up so tight from the chills I experienced earlier."
+                "I put one shaky foot down on the ground, then the other."
+                MCT "Alright Kei, you got this..."
+                play sound Thud
+                pause .5
+                $setAffection("GTS", -2)
+                "I crumpled to the ground like a broken folding chair."
+                MCT "Alright Kei, you don't got this."
+                "For a moment I almost thought my stomach felt better, but I realized I had just replaced the cramps in my gut for the ringing in my ears and a headache."
+                MC "Aw shit, that hurt! I must have really hit my head."
+                jump GTS059_NoGo 
+
+label GTS059_NoGo:
+    "Taking a moment to ponder my predicament, "
+    hide DormGTSDayNeutral with dissolve
+    extend "Naomi turned and stepped out of view."
+    "Hearing a faint knock from the room next door, I realized she must have been trying to get my neighbor's attention."
+    if getFlag("GTS059_Fail"):
+        "For my part, I managed to crawl back up onto my bed, thoroughly regretting my unfounded sense of bravado."
+    if getFlag("Meet_Genji"):
+        pause 1
+        "A few moments later, I had my second visitor of the day."
+        play sound Knock
+        Genji "Coming in."
+        "Genji walked in with a cloth tote sack that he must have received from Naomi."
+        Genji "Man, she wasn't kidding when she said you were sick. You look like shit man."
+        MC "Feel like it, too."
+        "Genji tossed the bag onto my lap as he walked over to open the balcony glass door."
+        GTS "Thank you, Nakayama-san."
+        Genji "No problem."
+        MC "Appreciate it man."
+        Genji "Well, seeing as I literally jumped out of my seat when I heard a giant hand knock on my window, I was already up and about anyway."
+        show DormGTSDayNeutral with dissolve
+        Genji "I didn't realize those with the height factor could get so tall."
+        GTS "I do beg your pardon for the intrusion. My condition is a rare and at times difficult one."
+        Genji "I'll say."
+        Genji "Well, I'll leave you two to it. {w}Later."
+        MC "Thanks again man."
+        Genji "Let me know if you need me to get you something from the cafeteria."
+        MC "Trust me, I don't think you'll have to worry about that today."
+        Genji "Feel better then."
+        "Genji slipped out the door, presumably back to his room, but in sheer state of surprise from Naomi's sudden appearance, he might not have wanted to resume his previous activity."
+    else:
+        pause 1
+        $setFlag("Meet_Genji")
+        "A few moments later, I had my second visitor of the day."
+        play sound Knock
+        UNKNOWN "Coming in."
+        "Some guy about my age walked in with a cloth tote sack that he must have received from Naomi. Through my brainfog, I recalled seeing him around once or twice."
+        Neighbor "Man, she wasn't kidding when she said you were sick. You look like shit man."
+        MC "Feel like it, too."
+        "He tossed the bag onto my lap as he walked over to open the balcony glass door."
+        GTS "Thank you, Nakayama-san."
+        Neighbor "Sure."
+        MC "Appreciate it."
+        Neighbor "Well, I literally jumped out of my seat when I heard a giant hand knock on my window, so I was up and about anyway."
+        show DormGTSDayNeutral with dissolve 
+        Neighbor "I didn't realize people with the height factor could get so tall. \"Giants\" is right— {i}shit!{/i}"
+        GTS "I do beg your pardon for the intrusion. My condition is a rare and at times difficult one."
+        Neighbor "I'll say."
+        MC "Think I've seen you somewhere, come to think of it."
+        "He furrowed his brow at me for a second."
+        Neighbor "Ah, I think so."
+        Genji "Uh, Genji Nakayama. Beppu."
+        MC "Keisuke Hotsure, Tokyo. That's Naomi Yamazaki... uh, Kyoto."
+        GTS "Charmed."
+        Genji "Uh huh. Cool."
+        Genji "Well, I'll leave you two to it. {w}Later."
+        MC "Thanks again man."
+        Genji "Sure. Let me know if you need me to get you something from the cafeteria."
+        MC "Trust me, I don't think you'll have to worry about that today."
+        Genji "Feel better, then, Tokyo."
+        "Genji slipped out the door, presumably back to his room, but in sheer state of surprise from Naomi's sudden appearance, he might not have wanted to resume his previous activity."
+    "Grateful to not have to leave the bed in my withered state, I began to search through the bag Genji had delivered to me."            
+    MC "What all is in here?"                       
+    GTS "I provided the notes for the upcoming psychology class as you requested, along with some homemade peppermint-ginger pills to help with your nausea."
+    GTS "When you said you had food poisoning, I thought you might have difficulty keeping food and fluids down. Something to calm your stomach should help."
+    MC "Thank you. You're certainly right, I definitely could use these since I haven't been able to keep anything down all morning."
+    "Naomi's expression was rather pensive as she seemingly studied me and my condition from the balcony."
+    GTS "You look pale, and cold... I think you need to rest more and drink more fluids."
+    MC "Yeah, you're right. Hopefully the pills will let me keep some liquid down."
+    "Being somewhat lost in the moment,  I began to feel more at ease with Naomi here to stay with me, until I had the sudden realization it couldn't have been but more than the early afternoon."
+    "Surely she would struggle to make it back to class before the break period was over?"
+    MC "Gee, I feel kinda bad. I was just hoping you might help me cover for the psych quiz, but it looks like you really dropped everything just to come help take care of me."
+    GTS "Think nothing of it, my love."
+    GTS "It is my duty to take care of you when you cannot."
+    "I couldn't help but smile from her resolute reassurance."
+    MC "Heh, duty, eh? Well that is certainly comforting."
+    MC "Would you say it is out of a sense of duty, or more so affection?" 
+    GTS "To people like us, dear Keisuke-kun, they are one and the same."
+    MC "Ah, I see. Well, noted."
+    "My tensions and discomfort quickly evaporated in the light of Naomi's gentle smile and her caring gaze."
+    "I felt a profound sense of comfort, but also vulnerability given my fragile state and the overwhelming scale of her sheer size as I looked on in awe over the balcony from the comfort of my bed."
+    GTS "How has your reading of \"A Fool's Love\" been going?"
+    MC "I've read up to the part at the Kamakura resort. To be... honest..."
+    MC "Okay, I'm not trying to put down something you like, Blossom."
+    GTS "I understand. Please, tell me what you think."
+    MC "It's like... I'm struggling to see where this book is supposed to be funny. I get that cringe comedy is a thing, but this story actually seems pretty dark to me."
+    MC "I mean, the guy is a straight up groomer, so he can get... I mean, on principle, he completely deserves every hardship that comes his way."
+    MC "And yet, despite that, watching him get emotionally tortured for a hundred pages is weirdly kind of challenging."
+    GTS "We all approach things from a different lens informed by our past experiences. It is very likely you will take away different things than I did when I read it."
+    GTS "In truth, having endured what you have... there may well be some pain in reading through it. If it does cause you pain, Keisuke-kun, you need not continue on my account."
+    menu:
+        "That's a relief.":
+            MC "If it's all the same to you, I don't think I will. I can't see how the payoff could make this story worthwhile... to me, anyway."
+            GTS "That is certainly a fair assessment, one that only you can decide for yourself."
+        "No, I'll finish it.":
+            $setVar("GTS_selfhood", getVar("GTS_selfhood") + 2)
+            $getflag("GTS059_Book")
+            $setAffection("GTS", 2)
+            MC "If it means enough to you that you'd want me to share your experience with me, then I'm going to see it through for all it's worth."
+            MC "Who knows, maybe by the end I'll get it."
+            GTS "That is a commendable attitude. One who concerns himself with virtue must, after all, be acquainted with suffering."
+            hide DormGTSDayNeutral
+            show DormGTSDayHappy
+            GTS "And you simply must tell me your opinion of the ending."
+            MC "Depend upon it."
+            "She grinned."
+    play music Sunset    
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+    scene Dorm Interior
+    show DormGTSEveNeutral 
+    with fade
+    "In contrast to the slow grind of the early morning where I had been entombed by the throes of my stomach cramps and feebleness, time passed rather quickly in Naomi's presence as she took it upon herself to watch over me."
+    MC "I think I'm starting to feel better. The ginger-peppermint pills must be helping."
+    GTS "You do look better. The color has returned to your face."
+    MC "Thanks for taking the time to come see me."
+    GTS "As I said before, it is my duty and my devotion to make sure you are taken care of."
+    GTS "Please get some more rest for yourself, and have something to eat, if your stomach allows. You still need more time to recover."
+    MC "You're right. I do think my appetite is returning. I'll try to have something light."
+    GTS "Goodnight, my love."
+    MC "Goodnight."
+    hide DormGTSEveNeutral with dissolve
+    "Naomi headed off back towards the Giants' Dorms. I, in turn, tucked myself back into my covers."
+    if getFlag("GTS059_Book"):
+        "Noticing a book sitting on my end table, suddenly my heavy eyes perked up from their dreary state."
+        "I picked up the borrowed copy of \"A Fool's Love\", eager to dive back into it, hoping I might find the same spark that made it such a special story to Naomi."
+        "Though I desired to read it in earnest, it was hard to focus on the emotional tone of the story when the thought at the front of mind was how much I missed her presence already."
+    else:
+        "As I reclined back onto my pillow, I only now realized how exhausting it had been to sit upright and continue to converse with her in my depleted state." 
+        "Realizing that her mere presence had invigorated my weary body to stay resolute, I felt overwhelmed by the need to rest, having now been deprived of her sustaining aura... and missing her already." 
+    jump daymenu
+
+label GTS060:
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Naomi's route.{/outlinecolor}{/size}"

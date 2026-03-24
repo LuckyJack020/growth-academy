@@ -158,6 +158,7 @@ define Man = Character('Man', color="#C0C0C0")
 define Manager = Character('Manager', color="#C0C0C0")
 define Masseuse1 = Character('Masseuse 1', color="#C0C0C0")
 define Masseuse2= Character('Masseuse 2', color="#C0C0C0")
+define Neighbor= Character('Masseuse 2', color="#C0C0C0")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Owner = Character('Store Owner', color="#C0C0C0")
 define Postwoman = Character('Postwoman', color="#B7A99A")
@@ -295,6 +296,7 @@ image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheat
 image Park = DynamicImage("Graphics/ui/bg/archiveBG/park_[gametime].webp")
 image Pharmacy = DynamicImage("Graphics/ui/bg/archiveBG/pharmacy_[gametime].webp")
 image Restaurant = "Graphics/ui/bg/restaurant.webp"
+image Roadside Town = DynamicImage("Graphics/ui/bg/archiveBG/roadsidetown_[gametime].webp")
 image Sound Studio = DynamicImage("Graphics/ui/bg/archiveBG/soundstudio_[gametime].webp")
 image Store = DynamicImage("Graphics/ui/bg/store_[gametime].webp")
 image Supermarket = DynamicImage("Graphics/ui/bg/archiveBG/supermarket_[gametime].webp")
@@ -310,6 +312,7 @@ image Town Alley = DynamicImage("Graphics/ui/bg/archiveBG/townalley_[gametime].w
 image Town Bus = DynamicImage("Graphics/ui/bg/archiveBG/townbus_[gametime].webp")
 image Town Docks = DynamicImage("Graphics/ui/bg/archiveBG/towndocks_[gametime].webp")
 image Town Omikuji = DynamicImage("Graphics/ui/bg/archiveBG/townomikuji_[gametime].webp")
+image Town Residential = DynamicImage("Graphics/ui/bg/archiveBG/townresidential_[gametime].webp")
 image Town Shops = DynamicImage("Graphics/ui/bg/archiveBG/townshops_[gametime].webp")
 image Town Street = DynamicImage("Graphics/ui/bg/archiveBG/townstreet_[gametime].webp")
 image Town Waterfront = DynamicImage("Graphics/ui/bg/archiveBG/townwaterfront_[gametime].webp")
@@ -317,6 +320,7 @@ image Waterpark = DynamicImage("Graphics/ui/bg/archiveBG/waterpark_[gametime].we
 image Waterpark Pool = DynamicImage("Graphics/ui/bg/archiveBG/waterparkpool_[gametime].webp")
 
 #Satoyama Village
+image Roadside Satoyama = DynamicImage("Graphics/ui/bg/archiveBG/roadsidesatoyama_[gametime].webp")
 image Ryokan Onsen = DynamicImage("Graphics/ui/bg/archiveBG/ryokanonsen_[gametime].webp")
 image Ryokan Onsen Steamed = DynamicImage("Graphics/ui/bg/archiveBG/ryokanonsen_steamed_[gametime].webp")
 image Ryokan Bathroom = DynamicImage("Graphics/ui/bg/archiveBG/ryokanbathroom_[gametime].webp")
@@ -327,6 +331,7 @@ image Ryokan Room = DynamicImage("Graphics/ui/bg/archiveBG/ryokanroom_[gametime]
 image Beach = DynamicImage("Graphics/ui/bg/archiveBG/beach_[gametime].webp")
 image Frozen Beach = "Graphics/ui/bg/archiveBG/beach_frozen.webp"
 image Beachside Clothes Store = "Graphics/ui/bg/archiveBG/beachside_clothesstore.webp"
+image Roadside Beachside = DynamicImage("Graphics/ui/bg/archiveBG/roadsidebeachside_[gametime].webp")
 
 #Giants Town
 image Giants Town = "Graphics/ui/bg/NYI.webp"
@@ -345,6 +350,8 @@ image Flower Clearing = DynamicImage("Graphics/ui/bg/archiveBG/flowerclearing_[g
 image Hill Road = DynamicImage("Graphics/ui/bg/archiveBG/hillroad_[gametime].webp")
 image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].webp")
 image Night Sky = "Graphics/ui/bg/archiveBG/night_sky.webp"
+image Roadside Woods = DynamicImage("Graphics/ui/bg/archiveBG/roadsidewoods_[gametime].webp")
+image Roadside Woods Winter = DynamicImage("Graphics/ui/bg/archiveBG/roadsidewoods_[gametime].webp")
 image Temple = DynamicImage("Graphics/ui/bg/archiveBG/temple_[gametime].webp")
 image Temple Fall = DynamicImage("Graphics/ui/bg/archiveBG/templefall_[gametime].webp")
 image View Point = DynamicImage("Graphics/ui/bg/archiveBG/viewpoint_[gametime].webp")
@@ -1127,6 +1134,10 @@ image AlternateOutfitBE = "Graphics/BE/[globalsize]/overlays/alternate-overlay.w
 image Table = "Graphics/BE/4/overlays/table-overlay.webp"
 image TableBE = "Graphics/BE/4/overlays/table-boobs-overlay.webp"
 image TableBEWorried = "Graphics/BE/4/overlays/table-boobs-worried-overlay.webp"
+image DormGTSDayNeutral = "Graphics/GTS/4/overlays/dorm-day-neutral-overlay.webp"
+image DormGTSDayHappy = "Graphics/GTS/4/overlays/dorm-day-happy-overlay.webp"
+image DormGTSEveNeutral = "Graphics/GTS/4/overlays/dorm-eve-neutral-overlay.webp"
+image DormGTSEveHappy = "Graphics/GTS/4/overlays/dorm-eve-happy-overlay.webp"
 
 #Rain Overlay
 image rain:
@@ -1706,7 +1717,9 @@ init 2 python:
     eventlibrary['GTS054'] = {"name": "His Good Opinion", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,     "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS055", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS055'] = {"name": "Sasameyuki", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS057", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS057'] = {"name": "The Fifth Virtue", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS058", "preobsflags": [], "obsflags": [],       "conditions": []}
-    eventlibrary['GTS058'] = {"name": "Naomi end", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,               "location": "auditorium",          "priority": PrioEnum.NONE,                   "next": "", "preobsflags": [], "obsflags": [],             "conditions": []}
+    eventlibrary['GTS058'] = {"name": "Placeholder", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS059", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['GTS059'] = {"name": "Ebb and Flow", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS060", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['GTS060'] = {"name": "Naomi end", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,               "location": "auditorium",          "priority": PrioEnum.NONE,                   "next": "", "preobsflags": [], "obsflags": [],             "conditions": []}
 
     #Optional
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "preobsflags": [], "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS011"]]}

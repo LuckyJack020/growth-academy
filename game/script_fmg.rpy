@@ -4203,7 +4203,7 @@ label FMG025:
     "She was right, lights camouflaged the floor and the ceiling, surrounding us in rays of various colors. The only thing brighter than the dance floor was Akira's smile. She seemed lost in trying to take in everything around her. It was like watching a kid in a candy store."
     DJ "Welcome everyone! Tonight is going to be crazy, I hope to see everyone moving and having fun."
     DJ "Don't be afraid to come up and ask for requests too, I want everyone to have a good time. Without further ado let's get this party started!"
-    "With that Akira took off running... wWell, as best she could, she was not used to heels."
+    "With that Akira took off running... Well, as best she could, she was not used to heels."
     show FMG angry-2
     FMG "These stupid heels ughhh. I knew I should've gotten flats!"
     MC "Take it easy Akira, no need to get worked up. Here take my hand and we can walk to the dance floor."
