@@ -26030,7 +26030,7 @@ label FMGWG003:
     MCT "Man, I can't have any fun."
     show FMG surprised-2
     show WG surprised-2
-    "The ending was closing in and was the spirit as the girl attempted to perform the ritual. We had all leaned back in our seats carefully watching the final act fall into place."
+    "The ending was closing in and so was the spirit as the girl attempted to perform the ritual. We had all leaned back in our seats carefully watching the final act fall into place."
     "And then... it happened."
     show Chibuki neutral at Position(xcenter=0.5) behind FMG, WG
     Chibuki "What are you guys watching?"
