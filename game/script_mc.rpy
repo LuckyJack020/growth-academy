@@ -18654,6 +18654,1326 @@ label MC024:
     MC "... Do you have another form, please?"
     jump daymenu
 
+label MC027:
+    $setTime(TimeEnum.EVE)
+    scene Dorm Interior with fade
+    play music DormLife
+    "I turned a bit, positioning myself so my handheld was shaded by my head, blocking the sun from shooting glares across my screen."
+    "It was Friday. Nothing to do, and nowhere to go. Just easy time."
+    "I stretched a bit on my bed, pulling one arm up and rolling onto my side, twisting-"
+    "{i}POP!{/i}"
+    MCT "Ahh… there you are."
+    "I turned back over, my spine feeling looser as I navigated my character alongside of a mountain, jumping here and there and completely sequence breaking."
+    MCT "Can walk all the way around the mountain or jump a hell of a lot until the game just says screw it."
+    "I smiled. It was part of the experience. As long as another demon encounter didn't appear out of nowhere for me to kill."
+    play sound Knock
+    pause .5
+    "I glanced up."
+    MC "Who…"
+    pause 1
+    show Tomoko neutral with dissolve
+    Tomoko "Hey."
+    "Tomo walked blankly into my room, as I turned, blinking a few times."
+    MC "Alright, just walk yourself right in."
+    Tomoko "What are you doing?"
+    MC "Playing EarthSky. And you're doing…?"
+    show Tomoko worried
+    Tomoko "I have to go to the cooking club kitchen."
+    MC "Uh… why?"
+    Tomoko "Detention."
+    MC "Of course. Of course, you have detention."
+    show Tomoko neutral
+    Tomoko "Look, I don't wanna go alone."
+    MC "So? Ask your roommate to do it."
+    show Tomoko worried
+    "Tomo sighed, closing her eyes, then looking down at her feet."
+    Tomoko "She's busy…"
+    Tomoko "It offers service points, since it's volunteering for you. As in, final grade stuff."
+    if routelock == "PRG":
+        show Tomoko neutral
+        Tomoko "Plus, I mean… it's in the cooking club kitchen. Maybe you'll run into your girlfriend."
+        MC "I…"
+        MC "... I mean. Hold on."
+        "I reached into my pocket, pulled out my phone, and pulled up Aida's texts."
+        MCCell "What are you up to?"
+        "I glanced up as Tomo walked lazily into my kitchen and opened my fridge."
+        PRGCell "Cooking Club"
+        MC "... Alright. I'm in."
+    else:
+        show Tomoko neutral
+        Tomoko "Gonna need those points somehow, right?"
+        "Tomo walked into my kitchen, throwing the fridge door open."
+        MC "Well… this'll be an easy way to get them, I guess."
+        MC "Alright."
+    show Tomoko smile
+    "Tomo lifted her head up and shut the door, nonchalantly sliding her hair out from inside the door as she held a can of soda at her side."
+    Tomoko "Cool."
+    MC "I'll expect a replacement for that."
+    Tomoko "Nah. My fee."
+    MC "For what?"
+    Tomoko "Hooking you up with hella service points."
+    "Tomo went to the door and waited for me as I yanked my shoes on, grabbed my keys, and went into the hall."
+    scene Campus Center with fade
+    play music Tomoko
+    show Tomoko neutral with dissolve
+    "By the time we'd gotten to the middle of campus, Tomo had barely said two words, despite me asking at least double that in questions."
+    MC "Okay. How did you get detention? I don't need details, just like… how?"
+    Tomoko "... Mouthed off to some bitch in class."
+    MC "Tomo…"
+    Tomoko "She started it! She was talking crap!"
+    MC "Still-"
+    show Tomoko worried
+    Tomoko "Look, I… whatever."
+    Tomoko "You're getting points out of this, so it shouldn't matter."
+    show Tomoko neutral
+    "Tomo walked ahead a little as I sighed."
+    MC "Right…"
+    if isEventCleared("MC024"):
+        MCT "Doesn't change that I don't want to deal with those otherworldly devil harpy secretaries."
+        MCT "Even if they offered the best scholarship in Japan."
+    scene Hallway with fade
+    show Tomoko neutral with dissolve
+    MC "So… did she deserve it?"
+    Tomoko "The chick I was talking to?"
+    MC "Yeah. The one you shit-talked."
+    Tomoko "I didn't- whatever. But, yeah."
+    Tomoko "Takamura-sensei heard it during homeroom, and gave us both detention."
+    MC "So, she'll be there, too? Who is this, exactly?"
+    Tomoko "Thunderthighs-MaGee, that's who."
+    MC "Uhh… that kind of could describe a lot of girls here."
+    Tomoko "Ugh… Fumika Usui."
+    if isEventCleared("MC014") and isEventCleared("GTS018"):
+        MC "Ohh… her. Yeah, I know her. And your guy's beef."
+        show Tomoko worried
+        Tomoko "Yeah…"
+    elif isEventCleared("GTS018"):
+        MC "Ah. Her."
+        MC "She tried to recruit Yamazaki-san to the basketball team way back when. Wasn't very tactful with it, either."
+        Tomoko "Shocker."
+    elif isEventCleared("MC014"):
+        MC "Oh… her. Yeah, I remember you guys had beef or something. At least, from what you told me."
+    else:
+        MC "Huh… don't know her."
+        Tomoko "Well… she's a bitch. And she has wumbo-thighs."
+    show Tomoko neutral
+    "Tomo snugged her bag up onto her shoulder and continued on ahead of me, her steps stilted and sharp."
+    MC "Know anyone else who's coming?"
+    Tomoko "I didn't really look into it."
+    MC "Right… guess we'll see, then."
+    "Tomo and I turned the corner in the hall. Ahead, the cooking club kitchen sat with it's door open, as we closed in."
+    scene Cooking Classroom with fade
+    play music DifferentPaths
+    show Tomoko worried with dissolve
+    "As we entered, Tomo faded back to my side, and I half-led the way in."
+    "Quite a few students, mostly girls, littered the room, the cooking club stations and counters covered in disposable paper."
+    MCT "Well… I doubt everyone here got detention."
+    "I scanned the room, Tomo staying right by me, as nearby, a taller girl was reaching up onto a shelf, and a more muscular one was shifting a table with one hand."
+    if routelock == "PRG":
+        "I shot a warm nod toward Etsuko and Hotaru, as they smiled at me, the two of us moving across the room a little."
+    if isEventCleared(“MC009”) and not routelock == "PRG":
+        "I blinked, staring back at Etsuko Chisaka and Hotaru Wada."
+        MCT "Well… they've changed."
+        "Hotaru leaned up onto a shelf to the point of her skirt riding up enough where I could see the lower crest of her asscheek, and Etsuko had her shirt sleeves rolled up a little, so she could haul the table easier."
+        "I blinked, and kept walking Tomo and I across the room."
+    else:
+        "Nearby, two girls were getting their station prepped."
+        "One of them, who was moving a table, had her shirt sleeves rolled up, showing her biceps bulging rather heavily, while another was reaching up to a shelf, so tall in fact that her skirt rode up ever so slightly."
+        Student1 "Hotaru, can you slide over a little?"
+        Student2 "Hold on a sec."
+        "The taller girl shifted sideways, allowing the other girl to shove the table into place."
+        Student2 "Well done, Etsuko. You moved a table."
+        Student1 "Shut it."
+        "The two girls both started laughing, clearly used to this style of roasting."
+    show Takamura neutral with dissolve
+    "Nearby, Takamura-sensei crossed the room near us, going toward those two."
+    Takamura "Usui-san, you'll be with Chisaka-san and Wada-san! I expect good progress from you!"
+    "I didn't need to look at Tomo as Takamura-sensei led a girl in front of us. Based on the look of her legs, I knew who I was looking at."
+    hide Takamura with dissolve
+    MC "Eesh. Busy in here."
+    "Tomo was, by now, nearly right into my side, her bag pressed into my hipbone."
+    MC "So, wait… what are we doing, exactly?"
+    Tomoko "... Carving pumpkins."
+    MC "I…"
+    "I turned, looking toward the side of the room, where multiple pumpkins were laid out on tables, or larger ones on the floor, the bright orange of the skin contrasting with… basically everything else."
+    MC "For what?"
+    Tomoko "There's a party being thrown in Chūkan Point park."
+    if routelock == "GTS":
+        MC "Ooh… good spot. Been there with Naomi a few times."
+        show Tomoko neutral
+        Tomoko "Cool."
+    elif routelock == "PRG":
+        MC "Mm… cool."
+        MC "Aida and I went there a little while ago. Took some pictures there before a dinner we went to."
+        show Tomoko neutral
+        Tomoko "Cool."
+    elif isEventCleared("RM006") and isEventCleared(“RMG002”):
+        MC "Mm. Went there with Daichi a couple times."
+        MC "Not… even going to go into why."
+        show Tomoko smile
+        Tomoko "Date? I mean, if-"
+        MC "No."
+    elif isEventCleared("RM006"):
+        MC "Went there with Daichi once."
+        MC "Tried to… actually, nevermind."
+        show Tomoko neutral
+        Tomoko "... Weird trip?"
+        MC "Extremely."
+    hide Tomoko with dissolve
+    pause .5
+    show Takamura neutral with dissolve
+    Takamura "Everyone! Eyes up!"
+    "The room quieted nearly on the dot, Tomo and I halting."
+    Takamura "Thank you."
+    show Takamura happy
+    Takamura "Now, I appreciate all of you coming. As you likely know, we'll be having our Halloween celebration in Chūkan Point park very soon."
+    Takamura "As such, we have quite a few pumpkins to carve. I do intend for everyone here to be working. I don't mind chatter, but if you're here, then you should have a pumpkin in front of you or in front of a partner."
+    show Takamura reassuring
+    Takamura "Once you're ready, choose a pumpkin and get to work. Thank you!"
+    show Takamura neutral
+    "The room built back up in volume as the younger teacher stepped out of the middle of the room, and off toward us."
+    show Takamura happy
+    show Tomoko worried with dissolve
+    Takamura "Ah, the Hotsure twins. I see one of you was talked into this?"
+    MC "I was, Sensei."
+    Takamura "Well, the more the merrier. Feel free to find an open spot."
+    Takamura "Oh, and Tomoko-san. I'm glad you came."
+    Tomoko "Not like I really had a choice."
+    Takamura "Now, come on. No need to be gloomy."
+    Takamura "Yes, you're here for detention, but I think you might actually find some fun in this."
+    Takamura "But, anyways. I think there's a spot off by Kodama-san and Tozakura-san."
+    if routelock == "PRG":
+        play music PRG
+        Takamura "Though… I doubt I have to do much convincing for you to head off that way."
+        MC "Sensei!"
+        show Takamura flattered
+        "My mouth opened slightly as Takamura-sensei chuckled lightly."
+        Takamura "Pardon my having a bit of fun. But, please. Get comfortable and carving."
+    MC "Of course, Sensei."
+    pause .5
+    hide Takamura with dissolve
+    hide Tomoko with dissolve
+    "The crowd of students, being packed with not only bodies, but… growth factor boosted bodies in various places, made it hard going through the mass. However, we cut our way through along the side, as Etsuko and Hotaru moved nearby us toward the pumpkins."
+    Etsuko "Where even is this point place?"
+    Hotaru "By the giant's dorms. Big park."
+    Etsuko "You would know, I suppose."
+    Hotaru "True, but I'm not quite up to their standards. You're stuck with me for now."
+    Etsuko "Standards? So exclusive."
+    "Etsuko bent to pick up a pumpkin, easily hauling it up."
+    Hotaru "Alright, now flex."
+    Etsuko "... Really?"
+    Hotaru "Just once. C'mon."
+    Etsuko "... Fine. Because it's you."
+    "Etsuko flexed one arm, as Hotaru giggled."
+    Hotaru "Look how awesome that looks!"
+    Etsuko "It's fake."
+    Etsuko "I didn't work for this. Just some cheated muscles."
+    Hotaru "Suuurrrre…"
+    Etsuko "You're annoying."
+    Hotaru "Ditto."
+    "The two girls laughed as they hauled off their pumpkin toward a station."
+    "I walked alongside the crowd, going to the large cluster of orange and lifting a heavier pumpkin from the floor."
+    show Tomoko neutral with dissolve
+    MC "Alright. Good to go?"
+    show Tomoko worried
+    Tomoko "A… a big one?"
+    MC "Yeah. It'll give us more space. Plus, all the little ones are being taken."
+    show Tomoko neutral
+    Tomoko "Oh… okay."
+    if getFlag(“Meet_Kanami”) or routelock == “PRG”:
+        "Tomo followed me through the crowd, as we managed to work our way to the station across from Aida and Kanami."
+    else:
+        "Tomo followed me through the crowd, as we worked out way to the station across from Aida and… whoever her partner was."
+    if routelock == "PRG":
+        show PRG surprised with dissolve
+        show Kanami neutral with dissolve
+        PRG "B-Baby?!"
+        MC "Surprise!"
+        "I heaved our pumpkin up across from Aida and Kanami, grinning."
+        Kanami "Good evening, Hotsure-san."
+        "I wriggled my way around the station to Aida and Kanami's side, leaning in and kissing Aida on the cheek."
+        show PRG neutral
+        PRG "W-What are you doing here?"
+        MC "Tell you later."
+        MC "And, I'd go for lips, but you know. Cooking club."
+        show PRG blush-2
+        PRG "I… I-I'd better get one later."
+        MC "I'll make sure."
+        "I gave her a quick hug, then went back across the table to Tomo, who was looking around our pumpkin."
+        show PRG neutral
+        PRG "H-Hello again, Hotsure-san."
+        Tomoko "Hey."
+        PRG "Oh, this is my partner, Kanami Tozakura. I'm not sure if you've met."
+        if getFlag("TM_MeetsKanami"):
+            show Tomoko smile
+            Tomoko "We've met. Hey."
+            Kanami "Hello, Hotsure-san…s."
+        else:
+            Tomoko "... Hey."
+            Kanami "Hello. A pleasure."
+            $setFlag("TM_MeetsKanami")
+        show Tomoko neutral
+        "I looked back across at the two, only then realizing the bare counter in front of them."
+        MC "Did you guys already knock out your pumpkin?"
+        Kanami "Well… no."
+        show PRG worried
+        PRG "We were waiting until everyone else took one."
+        PRG "We didn't think it would be so busy…"
+        "I looked at the mass of students all crowded around the pumpkins, and the amount of jostling going on."
+        "Without Aida really having to say much more, I had a pretty good idea why the two of them were waiting."
+        MC "Here. Hold on."
+        "I pushed my arms back, and walked into the crowd with intent, working my way through and seizing another pumpkin, also one of the larger ones, and started back toward them, pumpkin clutched against my torso."
+        "I waddled my way over to Aida and Kanami's side and heaved the pumpkin up onto the counter, panting a bit."
+        show PRG neutral
+        MC "Aghh… there you go."
+        PRG "T-Thank you, Baby…"
+        show Kanami happy
+        Kanami "Yes, thank you, Hotsure-san."
+        "I brushed a bit of dirt off of my shirt and went back to Tomo, rubbing my hands together."
+        show Kanami neutral
+        MC "Alright…"
+        "I glanced across the station, looking around the counter."
+        MC "Where is…"
+        MC "Are there tools at all? Knives, or those scoop things?"
+        show PRG worried
+        PRG "I think Sensei is bringing them."
+        MC "Alright. Well, should we plan it out, Tomo?"
+        show Tomoko annoyed
+        Tomoko "I just thought we'd do a face."
+        MC "Just a normal face?"
+        show PRG neutral
+        show Tomoko neutral
+        Tomoko "Y-Yeah…"
+        MC "Hm…"
+        Kanami "I have a marker here, Hotsure-san."
+        "Kanami slid a black marker across the counter to me."
+        MC "Thanks!"
+        "I uncapped it and started scribbling a triangular eye onto the upper half."
+        MC "Like that?"
+        Tomoko "Whatever…"
+        "I glanced sideways at her, then drew on the other one across from it, using the marker as a sort of measuring stick."
+        "Across from us, Aida and Kanami shifted their pumpkin, the two making marks with another marker."
+        "I took a breath as Aida stood up straight, turning sideways and moving the pumpkin on it's axis."
+        "Aida's belly was… quite a ways larger than the pumpkin on the counter in front of her."
+        "In fact… it was well over twice the size."
+        "I took a quick glance behind us, and at the now more open floor by the pumpkins."
+        "None of the pumpkins were anywhere near the size of her."
+        "As Kanami leaned in, I watched her lay down a line with the marker, her breasts laying on the counter."
+        "While sizeable, and easily larger than some of the smaller pumpkins, Kanami wasn't quite at someone like Honoka's level. But, she was well larger than her own head. In fact, she and Aida were actually in similar ranges when it came to that."
+        MC "What are you guys going to carve?"
+        PRG "Tozakura-san wants to do something scary."
+        MC "Ooh, like what?"
+        show Kanami happy
+        Kanami "I was planning on carving an onryō."
+        MC "Sick. That'll be awesome."
+        show Kanami neutral
+        show Tomoko surprised
+        Tomoko "How?"
+        MC "How… will it be awesome?"
+        show Tomoko neutral
+        Tomoko "N-No. How will you… carve that?"
+        Kanami "Simple. You make your basic face shape, then cut into the front of the pumpkin, but not all the way through."
+        Kanami "Just leave a bit of fruit there, and shave away at it."
+        Kanami "The idea behind it is to leave it thick enough so it holds the shape, but thin enough that light seeps out through it."
+        show Kanami happy
+        Kanami "I can show you, if you'd like."
+        show Tomoko worried
+        Tomoko "N-No… I-I mean. I should… help Keisuke."
+        "Tomo looked at the pumpkin face I was drawing and looked down at it."
+        MC "I don't really have anything to help with now, to be honest. Not till we get tools."
+        MC "Go take a peek. I'll keep drawing."
+        hide Tomoko with dissolve
+        hide Kanami with dissolve
+        "Tomo shuffled in place for a second, before walking around the station to their side."
+        "Aida scooted backwards a little, and came around over to my side."
+        show PRG unique-happy
+        PRG "I-If I knew you liked carving pumpkins, I would have invited you in the first place."
+        MC "Well, I didn't know about it till Tomo came over to my dorm and told me she got detention from Takamura-sensei."
+        show PRG neutral
+        PRG "She did?"
+        MC "Mhm. I'll fill you in later."
+        MC "She seemed like she really wanted me to come."
+        show PRG aroused
+        PRG "Well… I'm glad you're here."
+        "Aida was twirling her hair with one finger, looking down at my drawing."
+        MC "Same thing from me, now. I didn't know you like carving pumpkins."
+        PRG "I… well, it is fun to do. I haven't carved one in some time."
+        show PRG neutral
+        PRG "Takamura-sensei also told the cooking club that whoever came to carve could use any leftover pumpkins to make pie with."
+        MC "I can't say I've had it before. Always thought that was an American thing."
+        PRG "It is, but Takamura-sensei has a recipe for it. I thought I'd try."
+        MC "Cool. Count me in for tasting, as usual."
+        PRG "I always do."
+        "Finishing the mouth shape, I set down my marker and stood upright, glancing at it."
+        MC "What do you think?"
+        PRG "Um… it looks nice. Like a face."
+        MC "That was the plan."
+        show PRG worried
+        "I turned, glancing backwards into the crowd, looking for Takamura."
+        MC "Where are the tools, though?"
+        PRG "I… I don't know. I don't see Sensei anywhere, either."
+        hide PRG with dissolve
+        show Tomoko distracted with dissolve
+        show Kanami happy with dissolve
+        "I shrugged, leaning back against the counter, and glanced over across the counter, where Kanami was showing Tomo something on her phone."
+        pause .5
+        hide Tomoko with dissolve
+        hide Kanami with dissolve
+        show PRG neutral with dissolve
+        "I turned towards Aida again, and came in a little closer to her, leaning in so my mouth was by her ear, both so I didn't have to shout, and also so I could rub her belly gently with one hand."
+        show PRG blush-2
+        MC "And… how are the little pumpkins today?"
+        PRG "They're good. I ate a big lunch today, so they're full for now."
+        MC "Good."
+        "I rubbed the side of Aida's belly again, as she let out a small giggle."
+        show PRG neutral
+        "I looked back across the table, stepping back from Aida just enough so as not to weird out Tomo."
+        show Tomoko distracted with dissolve
+        show Kanami neutral with dissolve
+        MC "How's it looking?"
+        Tomoko "Scary."
+        show Kanami happy
+        Kanami "That's what I was hoping for."
+        Kanami "I'd like to carve something that really sends a shiver."
+        show Tomoko smile
+        Tomoko "Cool."
+        Kanami "Are you a horror movie lover?"
+        show Tomoko neutral
+        Tomoko "I've watched… a few."
+        MC "Through the blanket she covers her face with."
+        show Tomoko embarrassed
+        Tomoko "I… only sometimes."
+        show PRG unique-happy
+        PRG "I do that sometimes too, Hotsure-san."
+        show Kanami neutral
+        show Tomoko neutral
+        Takamura "Oh, heavens!"
+        show PRG worried
+        show Takamura sad with dissolve
+        Takamura "I'm so sorry, all of you. Here you all are."
+        "Takamura reached into a cardboard box she was carrying and laid out various tools for pumpkin carving, including a knife, scoop, and a little potato peeler-esque scraper."
+        Takamura "I thought I had enough for everyone, then so many students showed up, so then I ran out and had to find more, and well… here we are."
+        Kanami "It's alright, Sensei. We've just been getting lines laid out."
+        PRG "Mhm."
+        show Takamura happy
+        Takamura "Wonderful. I'll be around if you need anything."
+        hide Takamura with dissolve
+        show PRG neutral
+        "As Takamura walked off, I dealt out tools to my side of the table, then over to Kanami's."
+        Tomoko "Can you show me how to make a face like you talked about?"
+        show Kanami happy
+        Kanami "Of course I can."
+        show Tomoko smile
+        Tomoko "Cool."
+        show Tomoko neutral
+        show Kanami neutral
+        Tomoko "Uh… Kei, is that okay with you?"
+        MC "Yeah. I can work with Aida on this one."
+        PRG "I'm okay with that."
+        MC "I would hope so."
+        "I smiled as Aida took the small carving knife and dug it into the top, cutting open a hole in the topside of the pumpkin, which she turned and twisted off, setting it off to the side."
+        PRG "Mm… pumpkins smell so nice."
+        MC "Yeah. Like fall."
+        "Across the way, Tomo was cutting the top off of their pumpkin as Kanami watched, working the top off herself as Tomo swapped over to the scoop."
+        hide Tomoko with dissolve
+        hide Kanami with dissolve
+        PRG "Do you want to scoop, Keisuke? Or should I?"
+        MC "Whichever. I can do it if you don't want to get your hands all goopy."
+        PRG "I don't mind."
+        "Aida turned sideways to the counter and reached her hand into the pumpkin's top, drawing out a mass of seeds and sinew, setting it off onto the paper beside her."
+        "She reached in again, drawing out nearly the same amount, as she shook her hand off a little."
+        MC "That's always grossed me out a little. Like the guts of it all."
+        PRG "It's just seeds and plant fibers."
+        "She leaned in again, reaching further this time."
+        "Pulling out some more, she set it into the pile."
+        show PRG worried
+        PRG "Could you go in with the scoop, though? I can't quite reach…"
+        MC "Yeah, gotcha."
+        "I took the scoop, reaching my hand in and scraping the inside wall of the pumpkin hard, drawing off more sinew as I pulled it back and set it off to the side, Aida rinsing her hand and arm off in the sink."
+        show Tomoko neutral with dissolve
+        show Kanami neutral with dissolve
+        "Across from us, Tomo had her hands in the pumpkin as well, pulling out globs of seeds and sinew herself."
+        "Kanami, meanwhile, was gently picking away at the front of the pumpkin with the knife, out of the way of Tomo."
+        MC "Alright. Let me just get this side done, then we'll be good."
+        show PRG neutral
+        PRG "Okay. What do you want me to do?"
+        MC "You can just hang out for a second."
+        "I drew my hand back in, and before I went in for another scrape, a small… slightly devilish idea came into my head."
+        menu:
+            "Keep Scraping":
+                $setFlag("MC027_KeepScraping")
+                "I dug into the side further, drawing out a smaller amount, and glancing in to check."
+                MC "Think it should be all good."
+                PRG "Can I do the eyes?"
+                MC "Of course."
+                "Aida took the small carving knife for herself, and dug into the eye lines of the pumpkin, and gently sliced along it."
+                Kanami "Are you all planning to dress up?"
+                MC "Uhh…"
+                Tomoko "Mnn… dunno."
+                PRG "I want to dress up. I just have to start getting my costume together."
+                Kanami "What are you planning on being?"
+                PRG "... Not telling."
+                Kanami "Ooh. Surprises."
+
+            "Play a Prank on Aida":
+                $setFlag("MC027_PRGPrank")
+                "I smirked, and leaned a bit further in, really pushing my hand down against the bottom of the pumpkin."
+                MC "Alright… if I just-"
+                show PRG worried
+                "I suddenly yanked my arm a bit, as if my hand were glued to the bottom."
+                MC "Oh, crap…"
+                PRG "W-What?"
+                show PRG scared
+                "I shoved my hand down, going on tiptoe and jolting further over, nearly up to my shirt sleeve."
+                MC "Oh! OH! It's got me! It's got me!"
+                PRG "Baby! Wha-"
+                "Aida reached forward suddenly, grabbing my arm and yanking it up as I snickered, bursting into a laugh."
+                PRG "You-"
+                show PRG blush
+                PRG2 "Ohh… that was so mean."
+                MC "Hahah! I mean… I thought it got ahold of me."
+                show PRG excited
+                PRG "Y-You scared me!"
+                show Tomoko happy
+                show Kanami happy
+                "I glanced across the table, where both Kanami and Tomo were smiling, clearly trying to keep it together."
+                "Kanami, in particular, seemed very intent on keeping her head down and into the front of the pumpkin."
+                PRG "You are such a butt!"
+                "Aida reached forward with one hand and pushed me lightly as I giggled."
+                Kanami "Your face is a touch red, Kodama-san."
+                PRG "W-Well, I-I got scared!"
+                "I wiped my hand off in the sink, dried it, then came back over to Aida and put my arm around her waist."
+                show PRG neutral
+                MC "Sorry for the startle."
+                PRG "It's okay."
+                MC "Well, I think it's all cleaned out, then."
+                PRG "Good."
+                PRG "Now, I get to cut the eyes out."
+                MC "But cutting the stuff out is the best part!"
+                show PRG blush-2
+                PRG "You scared me, so now I get to do this."
+                PRG "S-So you can sit there, be a butt, and watch."
+                show Tomoko neutral
+                show Kanami neutral
+                "Aida took the small carving knife for herself, and dug into the eye lines of the pumpkin, and gently sliced along it."
+                show PRG neutral
+                Kanami "Are you all planning to dress up?"
+                MC "Uhh…"
+                Tomoko "Mnn… dunno."
+                PRG "I want to dress up. I just have to start getting my costume together."
+                Kanami "What are you planning on being?"
+                PRG "... Not telling."
+                Kanami "Ooh. Surprises."
+                "Aida looked back to me, and made a face."
+                PRG "And, I'm not telling you either, Mr. Butt."
+                MC "Really weaseled my way out of a little sneak peek, huh?"
+                PRG "You did."
+                show Tomoko smile
+                Tomoko "Damn, bro. Good job."
+                "I glanced over at Tomo and smirked."
+                MC "I'm putting all of the pumpkin guts under your bedsheets."
+                show Tomoko annoyed
+                Tomoko "Ewww…"
+        show Tomoko neutral
+        Tomoko "I… was actually thinking of dressing up as a vampire."
+        MC "Fitting for you."
+        MC "You're pale enough from staying inside all day."
+        show Tomoko defiant
+        Tomoko "... Least I have some creativity. What are you going to be? A feather duster?"
+        show Kanami happy
+        show PRG happy
+        Kanami "{i}HNHH!!{/i}"
+        "Kanami set her knife down and covered her mouth, bursting into about the loudest laugh I'd ever heard from her."
+        "Beside me, Aida was looking up at me, her mouth wrinkled up as she stifled a grin."
+        MC "Something funny?"
+        show PRG blush-2
+        PRG "N… No."
+        PRG "I… I think you'd make a cute duster."
+        show Tomoko smile
+        Tomoko "See?!"
+        show PRG excited
+        PRG "Heheheh!!"
+        "Aida let out a giggle, taking her knife back and working on the other eye as I cleared away the carved off slices."
+        show Tomoko neutral
+        show Kanami neutral
+        show PRG neutral
+        "A few minutes later, I looked up from Aida cutting into the mouth, and over to Tomo."
+        Kanami "Now, shave a bit there, then scrape gently onto this piece. Feather it a little."
+        show Kanami happy
+        Kanami "Just like that. You've got a steady hand, Hotsure-san. Might make a good chef."
+        show Tomoko worried
+        Tomoko "No. I… I'm just here because I got detention."
+        show PRG worried
+        Kanami "Oh… well. All the same, I'm impressed."
+        show Tomoko smile
+        Tomoko "Thanks."
+        show Kanami neutral
+        MC "What… happened, exactly?"
+        show Tomoko worried 
+        "Tomo set down her scrapper, resting her palms on the counter. Beside me, Aida had her knife down as well, listening."
+        Tomoko "..."
+        Tomoko "... That bitch said something really mean about my roommate."
+        Kanami "Who?"
+        show Tomoko neutral
+        Tomoko "Fumika Usui."
+        Tomoko "She… ugh."
+        if isEventCleared(“RM005”):
+            Tomoko "So… she and Yuki used to be really good friends."
+        else:
+            Tomoko "So… she and Yuki, my roommate, used to be really good friends."
+        Tomoko "But, like, lately, they kind of stopped talking. Yuki's been really down lately, and well… the two kind of just stopped hanging out."
+        Tomoko "Then, the other day, Usui-san was in homeroom, and she said that things have been a lot quieter around here lately, and pointed at Yuki."
+        Kanami "Sorry… what did she mean by that?"
+        Tomoko "... My roommate has a lip factor. And she…"
+        Tomoko "It's getting hard for her to… talk. So, she's been kinda mopey, lately. Even for me, it's been… a little much."
+        Kanami "... I see. Please, go on."
+        PRG "Yes…"
+        Tomoko "So… I was sitting nearby, and I got out of my desk and walked over to her, then… well, said something to her, and Takamura-sensei heard it."
+        PRG "Ohh…"
+        MC "Uhm… what did you say?"
+        Tomoko "... Called her a stupid bitch. And told her that the reason it was quiet was because she couldn't hear anything over the sounds of her hamshanks slapping together."
+        show PRG surprised
+        MC "... Tomo."
+        show Tomoko defiant
+        Tomoko "She deserved it! She was talking shit!"
+        MC "Well, look…"
+        show PRG worried
+        MC "You said yourself that your roommate has been mopey, right? Like, you even admitted that it's been a lot."
+        MC "You think the reason those two stopped talking is because Usui-san just got a little burnt out on dealing with it?"
+        show Tomoko neutral
+        Tomoko "Well… yeah. But, she didn't have to go say that."
+        MC "She didn't, no. Like, that was too far. But, doesn't mean you had to go to her level, either."
+        Kanami "It can happen. Especially in a heated moment."
+        show PRG unique
+        PRG "Mhm… people can slip up when they get really mad, and say things they don't mean…"
+        MC "Right. Do you think, maybe, Usui-san just had a rough morning, or something? Maybe she just like… had a lapse in judgment?"
+        Tomoko "I… guess."    
+        show PRG worried
+        "I glanced at Aida beside me, who now was looking over at me, looking down and taking my hand."
+        "I gave her a little nod, and took the knife."
+        MC "Mind if I do a little bit on the mouth?"
+        show PRG neutral
+        PRG "Go ahead, Baby."
+        "I dug the knife in and started cutting a little, digging around the edge carefully."
+        "As I picked away at it, I glanced to my side again."
+        "Aida was slowly working her way around the table, going to Kanami and Tomo's side."
+        "As I watched, she went to Tomo, who was now just standing there and picking at something on her hand."
+        "She leaned down a little and whispered something to her. As Tomo listened, she nodded a little and said something back, as Aida came back around to me, giving me a little nod."
+        pause .5
+        hide Tomoko with dissolve
+        hide Kanami with dissolve
+        MC "What was that?"
+        PRG "Just… told her that I've had times like that too, and that if she ever wants to talk, I'd be there."
+        MC "That was sweet of you."
+        PRG "Well… I just want to be there if I can."
+        "I smiled, gently rubbing Aida's arm with one hand, and kept cutting."
+        scene black with fade
+        pause .25
+        scene Cooking Classroom with fade
+        play music DifferentPaths
+        MC "Alright…"
+        "I brushed away some pumpkin pieces."
+        show PRG neutral with dissolve
+        "Near the end, Aida and I had decided to add a few more details, like a nose, a wider mouth, and some slashes along one side to give it a haggard look."
+        show Tomoko neutral with dissolve
+        show Kanami neutral with dissolve
+        "Kanami and Tomo had been working quietly on the other side. By now, the room had cleared out a little, leaving only a few other groups still working."
+        PRG "It's almost 20:00. Should we start picking up?"
+        MC "Think so."
+        Kanami "Hold on. You need to see our reveal."
+        show Tomoko smile
+        Tomoko "It's cool."
+        show PRG scared
+        "Aida and I both stood there, as Tomo spun the pumpkin around, showing a girl's face carved into the pumpkin. She had no visible irises or eye details at all, just having blank holes."
+        show Tomoko neutral
+        "Her face was carved and scraped thin, her cheeks thin and sunken, with her chin and jaw dropped much lower than should be possible for a normal human face."
+        "Hair draped down around, framing her face, as she was frozen in an everlasting scream."
+        PRG2 "Oh, my-!"
+        MC "Whoa…"
+        MC "That's insane, guys."
+        show Tomoko happy
+        show Kanami happy
+        show PRG neutral
+        Kanami "Thank you very much."
+        MC "That's like… contest winning."
+        PRG "Yeah… I-I kind of want to learn how to do that, as well."
+        Kanami "I can show you sometime. I've taught most of my siblings, too."
+        show Tomoko neutral
+        Tomoko "You have siblings?"
+        Kanami "Oh, several, yes."
+        pause .5
+        hide Tomoko with dissolve
+        hide PRG with dissolve
+        hide Kanami with dissolve
+        "I put the lid back on top of our pumpkin, and picked it up, turning… almost right into Fumika Usui."
+        MC "Oh! Excuse me!"
+        Fumika "It's alright."
+        "She shifted sideways, letting me pass by and set my pumpkin down near the others."
+        show Takamura neutral with dissolve
+        "Nearby, Takamura had laid out little tags for us to write on, and I jotted my name down, as well as Aida's, then pasted it onto our pumpkin's stem, walking back over."
+        hide Takamura with dissolve
+        pause .5
+        show PRG worried with dissolve
+        show Kanami neutral with dissolve
+        "Just as I rejoined Aida, Tomo stepped away from the station, going off by the pumpkins with Fumika."
+        MC "What uh… what did I just miss?"
+        PRG "She… came over and asked if they could talk."
+        Kanami "Seemed rather solemn, as well."
+        MC "Hm."
+        "Kanami lifted her and Tomo's pumpkin and hauled if over to the rest, her breasts laying on top of it as she set it down, marked it with a tag, and promptly moved away so Tomo and Fumika could talk."
+        "I helped Aida roll up the paper, containing all of the seeds and such inside, and packed it into a trash bag."
+        show PRG neutral
+        show Takamura happy with dissolve
+        Takamura "Excellent job tonight, everyone."
+        "Takamura stepped over to our stations, smiling as she put her hand on Kanami's side."
+        Takamura "And Tozakura-san… my word. That was very impressive."
+        show Takamura happy with dissolve
+        Kanami "Thank you, Sensei."
+        Takamura "Reminds me of an old favorite movie of mine from way back when. I must ask, have you taken any art classes or anything past basic level?"
+        Kanami "Not anything notable. Just practiced with my siblings around Halloween."
+        Takamura "Well, once again, very impressive."
+        "Takamura glanced over her shoulder, then turned back, lowering her voice a touch."
+        show Takamura neutral
+        Takamura "And I see conversations are happening."
+        MC "Uh… yeah."
+        Takamura "Well… I'm glad to see that what I hoped would happen is taking place."
+        show PRG worried
+        PRG "W-What do you mean, Sensei?"
+        Takamura "Tonight. I had hoped that by having the two of them work in the same space, they'd have some time to ponder everything, and perhaps, think of the other's perspective."
+        MC "We did kind of hear a bit about it all, Sensei."
+        Takamura "And I assumed you would, Hotsure-san. As would you two as well, girls."
+        Takamura "However, I hoped that, both through working in a mutual area, as well as having some outsider's ears to talk to, that they might get their feelings sorted."
+        "Behind Takamura, the two girls were still talking. Only, based on body language, the two were… much easier in conversation."
+        show PRG neutral
+        PRG "It seems like they're getting there."
+        Takamura "Yes. Well, in any case, I-"
+        "Takamura was interrupted by light footsteps coming back."
+        show Tomoko neutral with dissolve
+        Tomoko "Sorry."
+        Kanami "It's alright. I put our pumpkin in with the others. I marked you down with mine as well."
+        show Tomoko smile
+        Tomoko "Thanks."
+        Takamura "And, well done on your pumpkin as well, Tomoko-san. Very impressive."
+        Tomoko "Uhm… t-thank you, Sensei."
+        Takamura "You two really sorted out that pumpkin. It'll turn heads at the party."
+        Takamura "And now, it's past time to be on our way. Don't worry about the counters, girls. I'll give them a once over before I leave. I have to notate all of the different pumpkin labels down anyway."
+        show Tomoko neutral
+        show PRG worried
+        PRG "Are you sure?"
+        Takamura "Of course. Excellent work tonight. I hope this was fun."
+        show PRG neutral
+        PRG "It was, Sensei."
+        show Kanami happy
+        Kanami "Very."
+        show Tomoko smile
+        Tomoko "Yeah… I had a good time."
+        show Takamura happy
+        Takamura "Good. On your way, then, girls. And Hotsure-san. Have a good evening."
+        "The four of us bowed, then made our way to the door, as I held it for everyone else."
+        scene Hallway with fade
+        $setTime(TimeEnum.NIGHTLIGHTS)
+        "The four of us walked down the hallways, now dark and quiet, until we found our way out into the courtyard."
+        pause .5
+        scene Campus Center with fade
+        show PRG neutral with dissolve
+        show Tomoko neutral with dissolve
+        show Kanami neutral with dissolve
+        Kanami "Mmn… well, I'm off to make some dinner and rest. I enjoyed tonight with you all, everyone."
+        MC "Yeah, same here. Take it easy, Tozakura-san."
+        show Tomoko smile
+        Tomoko "Thanks for everything. I had fun."
+        Kanami "I'm glad, Hotsure-san. Have a good night."
+        show Tomoko neutral
+        Kanami "Oh, Kodama-san? Are we still practicing this week?"
+        PRG "I'd like to, if you're available."
+        Kanami "I'll plan for it, then."
+        "Kanami waved, and started on her way toward the dorms."
+        Tomoko "I should head back, too. I need to-"
+        show Tomoko worried
+        "Tomo's face suddenly went pale."
+        Tomoko "My bag!"
+        hide Tomoko with dissolve
+        "Tomo turned, bolting back toward the door, leaving Aida and I alone in the courtyard."
+        PRG "... Well, I wasn't expecting that tonight."
+        MC "Yeah… sorry for bringing all the drama into the cooking club space."
+        PRG "It wasn't drama, Baby."
+        show PRG unique-happy
+        PRG "Well… maybe a little, but it's okay."
+        show PRG neutral
+        PRG "We got to carve a pumpkin together, though. That was fun."
+        MC "Oh, yeah. I had a great time."
+        MC "And I expect to try some pie once you make it."
+        PRG "I'll make sure you have the first slice."
+        "I smiled, and walked forward into Aida's waiting arms, leaning down…"
+        show Tomoko neutral with dissolve
+        Tomoko "Got it!"
+        "Aida and I pulled apart quickly, glancing over as Tomo was slipping her bag on, not looking forward at all."
+        MC "Good. Glad it wasn't locked yet."
+        PRG "I-I should be going, though. I… I need to make dinner."
+        MC "Alright. Text me tonight, okay?"
+        PRG "I will. Goodnight."
+        "I walked forward, and kissed Aida gently on the lips, rubbing her belly on the side."
+        PRG "Goodnight, Hotsure-san. Sleep well."
+        show Tomoko smile
+        Tomoko "Uh… y-yeah. You too."
+        hide PRG with dissolve
+        "Aida slowly headed off as well, leaving just Tomo and I in the courtyard."
+        show Tomoko neutral
+        $setAffection("TM", 1)
+        Tomoko "Well… thanks for coming with me tonight. Even if you spent more time with your girlfriend than me."
+        MC "It was a group thing. We were all there together."
+        Tomoko "Yeah, you're right."
+        MC "... Shocked you didn't give me an 'ew' or something there."
+        Tomoko "For what?"
+        MC "Well, me kissing Aida in front of you."
+        Tomoko "Nah. I don't mind."
+        MC "Cool."
+        Tomoko "Not to like, be rude or anything, but… she's getting really big."
+        MC "... I know."
+        Tomoko "But, like… she looks good. It's weird to say, but it kind of like… works for her."
+        MC "Yeah, it does."
+        Tomoko "Mhm."
+        Tomoko "... Thanks for not bailing or anything, by the way."
+        Tomoko "Meant a lot… and stuff."
+        MC "No worries. I've got you."
+        MC "But, I am tired and all. So, I'm gonna go throw my comfy clothes on, grab a snack, and lay in bed."
+        Tomoko "Alright. Same here, probably."
+        "I started down the path with Tomo beside me, eventually parting at the dorms as I made my way back, idly picking at a small bit of pumpkin stuck to my finger."
+        jump daymenu
+
+    else:
+        play music PRG
+        show PRG neutral
+        show Kanami neutral
+        PRG "Oh! H-Hi, Hotsure-san!"
+        "I smiled, nodding politely to Aida."
+        PRG "W-What brings you here?"
+        MC "My sister was coming, and she asked me to come along. Figured why not."
+        show PRG surprised
+        PRG "Oh! This is your… sister?"
+        "I nodded, turning to Tomoko."
+        show PRG neutral
+        MC "Tomo, this is Aida Kodama. She's in my homeroom."
+        show Tomoko worried
+        Tomoko "... Hey."
+        "Aida looked at her expectantly for a moment, then turned back to me."
+        PRG "And… this is my partner, Kanami Tozakura."
+        if getFlag("TM_MeetsKanami"):
+            show Tomoko neutral
+            Tomoko "We've met. Hey."
+            Kanami "Hello, Hotsure-san…s."
+        else:
+            Tomoko "... Hey."
+            Kanami "Hello. A pleasure."
+            $setFlag("TM_MeetsKanami")
+        if getFlag("Meet_Kanami"):
+            MC "Hello again."
+        else:
+            MC "Actually, don't know if we've met, either. Nice to meet you."
+            Kanami "Likewise."
+            $setFlag("Meet_Kanami")
+        MC "Well. Wanna get started, Tomo?"
+        show Tomoko neutral
+        Tomoko "Mhm."
+        MC "Alright. Oh, are we… supposed to wait to grab a pumpkin?"
+        show PRG worried
+        PRG "Um… n-no. Y-You don't have to. We're just waiting for now."
+        MC "Gotcha. Alright."
+        "I went forward, snaking my way through the crowd, only to get bumped by… well, someone. It was hard to tell."
+        "I suddenly realized why Aida and Kanami were waiting to take their pick."
+        "Choosing a pumpkin for Tomo and I, I walked it back toward our station and set it down."
+        MC "One sec."
+        "I turned back, heading in and taking one beside where I'd just grabbed ours, then came back out, walking the pumpkin over and setting it in front of Aida and Kanami."
+        show PRG neutral
+        PRG "Oh! T-Thank you, Hotsure-san! T-That was so nice of you!"
+        MC "'Course. No problem."
+        "I came back around by Tomo and looked around."
+        MC "Do we have tools or anything?"
+        Kanami "Takamura-sensei should be bringing some along. For now, would you two care for a marker to make a rough sketch?"
+        MC "Oh, yes please."
+        "Kanami produced a marker from her bag, handing one over to Tomo and I, and bringing another out for her and Aida."
+        MC "Thank you."
+        show Tomoko smile
+        Tomoko "Thanks…"
+        show Tomoko neutral
+        "Kanami nodded, and crouched a little, uncapping her marker. Kanami's breasts came down, and rested right on the table in front of her, pushed up rather high."
+        if routelock == "BE":
+            "I let myself linger a little longer, just… taking them in."
+            MCT "She's… not nearly at Honoka's size. But all the same… wow."
+            show Tomoko smile
+            "I turned back to our pumpkin… and saw Tomo shoot me a small glance, plus a smile."
+            MC "What?"
+            Tomoko "Nothin'."
+            MC "I-I…"
+        show Tomoko neutral
+        "I shook my head, and glanced sideways. Kanami and Aida were actually somewhat similar in size when it came to their chests."
+        PRG "W-What are you two going to carve?"
+        MC "Uhh… Tomo? Any ideas?"
+        Tomoko "Just like… a face."
+        PRG "Oh, okay."
+        MC "You guys?"
+        Kanami "Well, I'm a big fan of horror movies, similar to Kodama-san, so I was thinking we could carve an onryō."
+        MC "Oooh. That'll be sick."
+        Kanami "Actually… I think I'm about done with the sketch, Kodama-san. What do you think?"
+        show PRG worried
+        PRG "I like it… but we still need tools."
+        PRG "I might go try and find Takamura-sensei. I don't see her in here."
+        hide PRG with dissolve
+        "Aida walked out from behind her station's table, and… waddled out into the room, past Tomo and I."
+        hide Kanami with dissolve
+        Tomoko "Kei! KEI!"
+        MC "What?"
+        "Tomo pulled my shirt sleeve, yanking me toward her, and down to her level."
+        Tomoko "Is she the pregnant chick? The one with, like, the actual pregnancy growth factor?"
+        MC "Y-Yeah? Why?"
+        Tomoko "She's HUGE!"
+        Tomoko "And like, she's actually pregnant?!"
+        MC "Yep. She's in my homeroom, remember."
+        MC "Why exactly is this such a big deal?"
+        Tomoko "Bro, LOOK at her!"
+        Tomoko "How is she that big?!"
+        MC "She's got a factor, Tomo. Just like all of us."
+        show Tomoko annoyed
+        Tomoko "I… I know, but… jeez…"
+        show Tomoko neutral
+        Tomoko "Like, that's a {i}big{/i} belly."
+        MC "Yeah…"
+        MC "Be nice to her, Tomo. Kodama-san is a sweetheart."
+        show Tomoko worried
+        Tomoko "I know, I know."
+        show Tomoko neutral
+        "A few minutes later, Takamura came over to our station with a cardboard box, as Aida followed behind her."
+        show Takamura sad with dissolve
+        show PRG neutral with dissolve
+        show Kanami neutral with dissolve
+        Takamura "I'm so sorry, everyone. Here you all are."
+        Takamura "I thought I was going to have enough tools, then I ran out, so I had to go find more, and… well, here we are."
+        MC "Thank you, Sensei."
+        Takamura "Of course. And, Tomoko-san? I'm glad you came."
+        Tomoko "Not like I had the choice."
+        Takamura "Oh, no need to mope."
+        Takamura "I think you just might end up enjoying this."
+        "Takamura smiled and shuffled off, as Tomo took the small scooper thing while I cut the top open."
+        hide Takamura with dissolve
+        "Across from us, Aida started cutting open the top while Kanami helped stabilize the pumpkin."
+        "As I got our pumpkin opened, I noticed how Aida had to essentially turn sideways to work over her boobs and belly, leaving her basically one-handed."
+        "I reached into the pumpkin, yanking out seeds and pumpkin sinew, plopping it onto the table."
+        show Tomoko annoyed
+        Tomoko "Eww…"
+        MC "Hey, it smells nice at least."
+        show Tomoko neutral
+        "I worked more out, making a pile, until I had enough space for Tomo to start scrapping the inside."
+        MC "Want to do any of the cutting?"
+        Tomoko "I can do the mouth, if you wanna do the eyes."
+        MC "Alright."
+        PRG "M-May I ask… what brought you here today, Hotsure-san?"
+        MC "Hm?"
+        MC "Oh… Tomo asked me to come. She was coming here already."
+        show Kanami happy
+        Kanami "You enjoy carving pumpkins, then?"
+        show Tomoko worried
+        Tomoko "... Not as a big hobby, no."
+        show Kanami neutral
+        Kanami "Oh. I see."
+        show Tomoko neutral
+        Tomoko "... I got detention, and this was what Takamura-sensei wanted me to do."
+        show PRG worried
+        PRG "O-Oh…"
+        "Aida's eyes flicked over to me, then back to Tomo."
+        "Tomo seemed even more interested in scraping out our pumpkin, as she pushed even harder, the pumpkin echoing more and more each run through."
+        show PRG worried
+        Tomoko "That's good."
+        MC "Alright. I'll start cutting."
+        "Across from us, Aida finished scrapping out their pumpkin, as Kanami took one of the carving knives, plus a little flat potato peeler looking thing, and started on the front."
+        PRG "I-I'm going to grab another knife, Tozakura-san. So I can help."
+        Kanami "Take your time. This might be a minute."
+        pause .5
+        hide Kanami with dissolve
+        hide PRG with dissolve
+        "Aida walked out again, crossing the room once more."
+        "Again, Tomo's eyes followed her, her head turning to track Aida as she crossed."
+        MC "Tomo, come on."
+        Tomoko "What?"
+        MC "Make it obvious, why don't you?"
+        show Tomoko annoyed
+        Tomoko "I'm just looking…"
+        "I sighed as I started on the eyes, getting the first one popped out by the time Aida came back over."
+        show PRG neutral with dissolve
+        show Tomoko neutral
+        "She set her knife down near their pumpkin and glanced over, before slowly waddling around the station toward us."
+        show PRG worried
+        PRG "I-I… don't mean to pry, but… do you also have a hair factor like your brother, Hotsure-san?"
+        Tomoko "Y-Yeah…"
+        PRG "W-What kind of conditioner do you use?"
+        show Tomoko worried
+        Tomoko "Uh… just normal stuff. I just use a lot more."
+        PRG "I-I see."
+        show Tomoko neutral
+        Tomoko "And, you're… uh…"
+        MC "Tomo…"
+        Tomoko "I'm just asking."
+        PRG "Y-Yes. I'm… pregnant."
+        show Tomoko embarrassed
+        Tomoko "Right…"
+        PRG "I'm… assuming you've heard?"
+        show Tomoko neutral
+        Tomoko "Just like, here and there."
+        PRG "Well… yeah. My factor is one of the rarest ones on the island."
+        Tomoko "Was gonna say… I haven't seen this one yet."
+        PRG "Mhm."
+        show Tomoko worried
+        "Tomo shuffled slightly… away from Aida, toward me."
+        "Tomo's hand went to her bag, sandwiched between her and I, and held it with one hand."
+        PRG "Um…"
+        PRG "Well… I-I just… noticed you looking before."
+        Tomoko "... I'm sorry."
+        "Tomo was nearly jammed into my side now, as I removed the knife from the pumpkin, just in case."
+        PRG "N-No, it's okay. I… I understand."
+        show PRG neutral
+        PRG "Um… i-if you want. You… you can feel."
+        "I blinked, turning to Aida."
+        show Tomoko neutral
+        "Tomo glanced down at Aida's massive baby bump, jutting forward toward her and I like a massive balloon."
+        Tomoko "You… you don't mind if I do that?"
+        PRG "N-No. I'm okay with it. Just… p-please be gentle."
+        "Tomo blinked."
+        "She looked over at me, then rubbed one of her arms with her other hand, nervously looking from me to Aida."
+        MC "Go ahead, Tomo. She said it was okay."
+        "Tomo took a step forward, slowly extending one hand out, as if she expected Aida to bite her or something."
+        "With the care of someone handling glass, Tomo slowly lowered her hand down, and brought it onto Aida's belly, along the top-right side."
+        PRG "Mhh…"
+        show Tomoko embarrassed
+        show PRG unique-happy
+        PRG "S-Sorry… I'm a little sensitive."
+        show Tomoko worried
+        Tomoko "I-Is that too hard?"
+        show PRG neutral
+        "Tomo quickly yanked her hand up, her eyes wide."
+        PRG "N-No. T-The whole thing is sensitive. I'm okay, though."
+        show Tomoko neutral
+        PRG "Y-You can feel again."
+        "Tomoko seemed to exhale, and brought her hand down once more, on the top of Aida's belly. She slowly worked her hand along the side, her hand gently taking in Aida's belly."
+        Tomoko "... Whoa."
+        PRG "M-Mhm…"
+        Tomoko "It's like… a real baby belly."
+        Tomoko "I… can't believe you're gonna be a mom…"
+        PRG "I-I can't either, some days…"
+        Tomoko "Is it heavy?"
+        PRG "Not… exactly. It's a little harder to get around now, a-and I… have to be careful how I walk, b-but it's not like… how it feels to carry a really heavy suitcase or anything. It's just… part of me."
+        Tomoko "How… many are you having?"
+        PRG "Um… three. I-I have an ultrasound next week to check on them, but yes… just three."
+        Tomoko "Cool…"
+        "Tomo felt Aida's belly for a bit longer, then took her hand back."
+        show Tomoko smile
+        Tomoko "Thanks for that. That was… really cool."
+        show Tomoko neutral
+        PRG "You're welcome."
+        if getFlag(“MC009_PRGtalk”) or getFlag(“MC013_PRG”) or getFlag(“MC024_PRGtalk”):
+            "Aida smiled at my sister… then turned to me."
+            hide Tomoko neutral
+            show PRG unique-happy
+            PRG "Hotsure-san? Would… would you like to feel, too?"
+            "I suddenly found myself slightly flushing a bit."
+            menu:
+                "No":
+                    $setFlag("MC027_PRGNo")
+                    MC "Actually… I'm okay. I appreciate it though."
+                    show PRG worried
+                    MC "Wouldn't want to get pumpkin all over you or anything."
+                    PRG "O-Oh. That's okay. I-I just thought I'd offer."
+                "Yes":
+                    $setFlag("MC027_PRGYes")
+                    MC "You… you're sure?"
+                    PRG "Mhm."
+                    MC "I… yeah, sure."
+                    "I switched spots with Tomo, took a small breath, and brought my hand up to rest right on the top of Aida's belly."
+                    show PRG blush-2
+                    "Through her shirt, I could feel her skin. From what I could tell, it was soft, sort of like how a fat stomach might feel."
+                    "But, in addition, there was a sort of tightness to it. It was hard to put into words how something could be soft, yet tight all at once."
+                    "There was also quite a bit of warmth. Like putting your hand on a blanket that just came out of the dryer, though not, like, hot."
+                    MC "Wow…"
+                    MC "This is… amazing."
+                    PRG "..."
+                    MC "It's… kind of wild to think that there's actually babies in there."
+                    PRG "I-I know…"
+                    MC "Have you felt any kicks yet?"
+                    PRG "Not yet. It's still a little early for that, yet."
+                    MC "Huh. Well, there goes hoping. I've… actually never felt a baby kick through a pregnant stomach before."
+                    show PRG neutral
+                    PRG "N-Never?"
+                    MC "No, for whatever reason."
+                    PRG "W-Well… once they start kicking, I'll come find you, so you can feel."
+                    MC "Okay… sounds good."
+                    "I pulled my hand from her baby… well, mound, and smiled."
+                    MC "Thank you. That was something special."
+                    PRG "Y-You're welcome."
+                    $setAffection("PRG", 1)
+            show Tomoko neutral with dissolve
+        show Kanami neutral with dissolve
+        "Aida came back around the table to Kanami's side, where she took her knife back and started working on the eyebrows."
+        MC "You guys work together well."
+        show PRG worried
+        PRG "T-Thank you. We're… well, we're very recent partners in the cooking club, too."
+        show Kanami happy
+        Kanami "Yes."
+        MC "Oh, I see. Been working out well?"
+        show Kanami neutral
+        show PRG unique
+        PRG "Mhm…"
+        Kanami "I would say so. Especially due to the suddenness of it all."
+        MC "Gotcha."
+        "Based on Aida's expression, discussing the sudden partner swap seemed a bit taboo. I worked on carving the other eye, as Tomo picked lightly at the removed pumpkin chunks."
+        Kanami "Are you all planning on going to the Halloween party?"
+        show Tomoko worried
+        show PRG neutral
+        Tomoko "Um… I dunno…"
+        MC "Hadn't really thought about it, but it could be fun."
+        PRG "I-I was thinking about going."
+        Kanami "Well, better start considering costumes, then."
+        show Tomoko neutral
+        Tomoko "... I-I think I could dress as a vampire."
+        MC "Good call. You spend enough time in your dorm, so you won't need to do anything too wild to prep for it. All pale and everything."
+        show Tomoko defiant
+        Tomoko "... So what are your costume plans, Mr. Creative? A feather duster? A mop? A make-up brush?"
+        show PRG unique-happy
+        PRG "Ahehehe…"
+        "Across the table, Aida was doing her best to cover her mouth with one hand, as Kanami seemed bent a little further down by the pumpkin."
+        PRG "I-I think… all of those could work."
+        MC "Kodama-san! Really, now?"
+        PRG "I-I just mean… it would be funny…"
+        MC "True, true."
+        MC "Which means, all of those could work for you, Tomo."
+        "I turned to her, drumming my fingers on the table."
+        MC "Maybe you could be a vampire/broom hybrid."
+        Kanami "Why not make a pair?"
+        show PRG happy
+        MC "You too, Tozakura-san?"
+        Kanami "Just an idea."
+        show PRG neutral
+        Kanami "May I see your progress?"
+        MC "Yeah, totally. Nothing fancy. Just a classic pumpkin."
+        "Kanami walked around the table, turning to our pumpkin."
+        show Kanami happy
+        Kanami "Oh, I think it looks nice!"
+        Kanami "Things are classics for reasons, you know."
+        MC "True. And, thank you."
+        show Kanami neutral
+        "Tomo was working on the mouth, her knife held a bit roughly as she tried to slice up into the sort of zig-zag mouth."
+        Kanami "May I, Hotsure-san?"
+        "Kanami gently took Tomoko's hand, and repositioned the knife at a slight angle, then put her thumb on the back."
+        Kanami "That will help you slice a bit cleaner, while also making sure you don't accidentally slice too far up and into the nose area."
+        Kanami "As well, the angle will look a bit nicer with light inside the pumpkin."
+        "Tomo pushed, the knife moving much easier and stopping right on the end of the line."
+        show Tomoko smile
+        Tomoko "... Thanks."
+        show Kanami happy
+        Kanami "Of course."
+        pause .5
+        show Tomoko neutral
+        show Kanami neutral
+        "Kanami went back over to her station, as Aida was now using the shaver thing on the front of their pumpkin."
+        PRG "Y-You're doing really well, you two."
+        MC "Thanks, Kodama-san."
+        show Tomoko smile
+        Tomoko "Yeah. For detentions, this isn't bad."
+        MC "Silver lining, I guess."
+        Kanami "Yes. This sort of thing can actually be quite therapeutic."
+        show Tomoko worried
+        Tomoko "I… guess."
+        "Tomo set her knife down halfway through the mouth and sighed."
+        Tomoko "I… didn't mean for it to come out as badly as it did. But, she pissed me off."
+        MC "Huh?"
+        show Tomoko neutral
+        Tomoko "Usui-san…"
+        show PRG worried
+        "Tomo sighed, crossing her arms and looking down. Across from us, Aida and Kanami were still working, though they both were looking up now and again."
+        show Tomoko worried
+        Tomoko "... We were in homeroom. And she went and spouted some crap about my roommate."
+        Tomoko "So, I got angry, stood up, and… well, something just flew out."
+        Tomoko "And, Takamura-sensei heard, and gave us both detention."
+        show Tomoko neutral
+        MC "Right…"
+        Kanami "I… truly don't mean to eavesdrop, but… might I offer a thought?"
+        Tomoko "It's… fine. I mean, you guys are right by us, so… whatever. But, yeah?"
+        Kanami "So, I'm one of quite a few siblings. And, when you live with so many people, things are bound to be said without much thought behind them."
+        MC "Right. Remember us, Tomo?"
+        Tomoko "Yeah…"
+        PRG "I… I hope your roommate is okay."
+        show Tomoko worried
+        Tomoko "Ehh…"
+        "Tomo looked over at Aida, who had set her knife down and was just listening."
+        show Tomoko neutral
+        Tomoko "... I feel like I can tell you guys about this. So, my roommate's name is Yuki. Her brother, Daichi, is in your guy's homeroom."
+        PRG "O-Oh… I didn't know he had a sister."
+        Tomoko "Mhm. And, she actually has a factor, unlike him. She has like… lip growth."
+        Kanami "Ah…"
+        Tomoko "So… Usui-san and Yuki used to be really good friends."
+        Tomoko "But, like, lately, they kind of stopped talking. Yuki's been really down lately, and well… the two kind of just stopped hanging out."
+        Tomoko "Then, the other day, Usui-san was in homeroom, and she said that things have been a lot quieter around here lately, and pointed at Yuki."
+        Tomoko "It's getting harder for Yuki to actually… talk. And before, she uh… she liked to gab."
+        Tomoko "So, she's been kinda mopey, lately. Even for me, it's been… a little much."
+        show Tomoko worried
+        Kanami "... I see. Please, go on."
+        PRG "Yes…"
+        show Tomoko neutral
+        Tomoko "So… I was sitting nearby, and I got out of my desk and walked over to her, then… well, said something to her, and Takamura-sensei heard it."
+        PRG "Ohh…"
+        MC "Uhm… what did you say?"
+        Tomoko "... Called her a stupid bitch. And told her that the reason it was quiet was because she couldn't hear anything over the sounds of her hamshanks slapping together."
+        show PRG unique
+        MC "... Tomo."
+        show Tomoko defiant
+        Tomoko "She deserved it! She was talking shit!"
+        MC "Well, look…"
+        show PRG worried
+        MC "You said yourself that your roommate has been mopey, right? Like, you even admitted that it's been a lot."
+        MC "You think the reason those two stopped talking is because Usui-san just got a little burnt out on dealing with it?"
+        show Tomoko neutral
+        Tomoko "Well… yeah. But, she didn't have to go say that."
+        MC "She didn't, no. Like, that was too far. But, doesn't mean you had to go to her level, either."
+        Kanami "It can happen. Especially in a heated moment."
+        PRG "Mhm… p-people can slip up when they get stressed."
+        MC "Right. Do you think, maybe, Usui-san just had a rough morning, or something? Maybe she just like… had a lapse in judgment?"
+        show Tomoko worried
+        Tomoko "I… guess."
+        Tomoko "Still made me mad, though…"
+        MC "Yeah, I can understand why."
+        PRG "... Me too."
+        scene black with fade
+        pause .5
+        scene Cooking Classroom with fade
+        play music DifferentPaths
+        show PRG neutral with dissolve
+        show Tomoko neutral with dissolve
+        show Kanami neutral with dissolve
+        "Nearly half an hour later, Tomo and I had finished cleaning up, while Aida and Kanami were still working."
+        Kanami "Alright… just about done."
+        "Aida had resolved to cleaning up around Kanami, as she put in the finishing touches."
+        MC "This thing is going to be like a masterpiece."
+        PRG "I-It is. I couldn't do that."
+        Kanami "It isn't done, yet. Still need to finish the hair…"
+        "Tomo and I had put our pumpkin with the others, and marked it with some tags that Takamura-sensei had put out."
+        show Takamura happy with dissolve
+        Takamura "Nearly finished, girls?"
+        Kanami "Just about, Sensei."
+        Takamura "And how was it, Tomoko-san?"
+        Tomoko "... It was nice."
+        Takamura "Just nice? Or, are you aiming for your brave, strong-silent face?"
+        Tomoko "..."
+        Takamura "I saw you smiling. I'm glad to see you enjoyed."
+        Kanami "Actually… that should just about do it. I wouldn't want to over-detail it."
+        MC "Well, let us see it, already!"
+        Kanami "Alright, alright now. You two stand over on that side, and I'll turn it around."
+        "Tomo and I stayed where we were, across from them, as Takamura walked over to our side, standing beside us."
+        show Takamura neutral
+        Takamura "Pardon me. I'm curious as well."
+        Kanami "Alright. One… two…"
+        "Kanami spun the pumpkin around quickly."
+        show Tomoko surprised
+        Tomoko "Whoa…"
+        MC "That's sick…"
+        show Takamura happy
+        Takamura "Oh! My word!"
+        "Kanami and Aida's pumpkin had the image of a woman's face in the front, the pumpkin's outer shell cut away, and the inner fruit carved thin, giving the face layers."
+        "The woman had long hair around her face, which was heavily distorted and bent, her jaw dropped far too far for a normal human face, her mouth carved open with clean, yet rough looking teeth around the dark hole."
+        "Her eyes were carved out, with marks around her eyes, and scratches around her face to give the impression of wrinkles."
+        Takamura "That's terrifying, girls. Truly."
+        Takamura "I love it."
+        show Tomoko smile
+        Tomoko "That's awesome. Dude…"
+        show Kanami happy
+        Kanami "Thank you. Kodama-san did the hair and the mouth."
+        PRG "I-I just made a few cuts here and there…"
+        Kanami "Oh, you did more than that."
+        show Kanami neutral
+        show Takamura neutral
+        "Kanami lifted the pumpkin, her breasts resting on top of it as she hauled it to the others and tagged it."
+        Takamura "Well, I'll handle wiping the tables down tonight, so you all can be off once you get everything else picked up."
+        PRG "A-Are you sure, Sensei?"
+        Takamura "Of course, Kodama-san."
+        PRG "O-Okay. Thank you, Sensei."
+        hide Takamura with dissolve
+        "Aida had almost her entire station cleaned, save for the tools, which she started to wash in the sink."
+        "I followed suit and started cleaning ours, as Tomo leaned on the counter beside me."
+        "Behind me, somewhere, I could hear the slight sound of… a smacking? Like, a gentle push of skin on skin."
+        Fumika "Hey. Can we talk for a second?"
+        "I turned around to see Fumika Usui standing right by my sister, as Tomo nodded and walked across the room with Fumika."
+        hide Tomoko with dissolve
+        "I glanced back over at Aida at her sink, who also seemed to be watching."
+        hide Kanami with dissolve
+        hide PRG with dissolve
+        "I shut off the water and dried the tools, setting them on the end of the station, as Takamura came back over."
+        show Takamura happy with dissolve
+        Takamura "I appreciate your coming tonight, Hotsure-san."
+        MC "Oh, of course, Sensei. The service points will be nice, but I figured my sister could use someone to team up with."
+        Takamura "Seems like it helped."
+        show Takamura neutral
+        Takamura "And, it seems like conversations are happening."
+        MC "You mean with those two?"
+        Takamura "Yes."
+        Takamura "It's what I had hoped would happen."
+        Takamura "I was hoping that, by putting the two into a situation where they'd have to work on something in the same room, while not exactly in a one on one scenario, they might come to some sort of peaceful truce."
+        MC "Huh… interesting."
+        Takamura "I do have both girls in my homeroom, so I had a slight reckoning that it might work."
+        MC "Well, seems like it did."
+        Takamura "Thankfully, yes. Likely in no part to you and your friends across the way."
+        show PRG neutral with dissolve
+        hide Takamura with dissolve
+        "Takamura turned, as Aida went slightly red across the counter."
+        MC "Thanks for today, Kodama-san. I had a good time."
+        PRG "I-I did too."
+        "Takamura smiled, then made her way back across the room to the other stations."
+        hide PRG with dissolve
+        show Tomoko neutral with dissolve
+        "Tomo walked back over a minute or so later, looking down."
+        Tomoko "Well… she said she was sorry."
+        MC "That's good."
+        MC "And you did too?"
+        show Tomoko worried
+        Tomoko "Mhm…"
+        MC "Good. Well, shall we?"
+        show Tomoko neutral
+        Tomoko "Yeah."
+        Kanami "It was wonderful to spend some time with you both."
+        MC "For sure. Have a good night, guys."
+        "Tomo and I turned, and started toward the door."
+        PRG "Hotsure-san!"
+        "Both Tomo and I stopped, and turned around."
+        show PRG worried with dissolve
+        PRG "Y-Your bag!"
+        "Aida came waddling over slowly, Tomo's bag in her hand."
+        show Tomoko surprised
+        "Tomo stared, gasping beside me and taking it quickly."
+        show Tomoko smile
+        Tomoko "T-Thanks."
+        PRG "You're welcome…"
+        Tomoko "And, um… thanks for letting me… touch your belly. That was cool."
+        PRG "... You're welcome. Have a good night."
+        Tomoko "Thanks."
+        scene Hallway with fade
+        $setTime(TimeEnum.NIGHTLIGHTS)
+        show Tomoko neutral with dissolve
+        "Tomo and I headed out into the hallway, now darkened and quiet."
+        show Tomoko smile
+        $setAffection("TM", 1)
+        Tomoko "Thanks for not, like… bailing on me."
+        MC "For sure."
+        Tomoko "Meant a lot."
+        MC "Well, gee. Look at you, with all the thank you's and deep feels."
+        Tomoko "... I had a good time."
+        MC "Good."
+        MC "Hell, maybe you could look into the cooking club. Bake some cakes with Kodama-san or something."
+        Tomoko "Ehh… no. I don't have the patience for baking."
+        MC "Yeah… to each their own."
+        "The two of us headed toward the dorms, the wind blowing a bit around us."
+        Tomoko "So, you gonna start carving pumpkins professionally now?"
+        MC "I mean, people do actually do that."
+        Tomoko "So you're gonna be one, right?"
+        MC "... Sure. Just as soon as you become a professional bodybuilder."
+        Tomoko "Uhh… no."
+        MC "My point stands."
+        "I snickered, walking along with Tomo back to the dorms."
+        jump daymenu
+
 label MC032:
     play music ChangingSeasons
     $setTime(TimeEnum.RAIN)
