@@ -15361,7 +15361,7 @@ label GTS057:
     GTS "Very good. However, I understand that this particular device has no remote. Rather, I was told to give it verbal instructions."
     GTS "In this I confess I am not well-versed."
     MC "...Oh. Alright, then, try saying... I dunno... 'Input RCA'."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35) 
     GTS "Very well."
     "She covered her mouth and softly cleared her throat."
     GTS "Input RCA."
@@ -15392,7 +15392,7 @@ label GTS057:
     "Once that was done, I did some light parkour off the desk, and with Naomi's assistance we all took our places."
     "It was a little like a mech cockpit. Braced on either side by giant armrests, the screen was the incontrovertible center of our focus. I handed Tomo the player two controller and opened the first game of the evening." 
     MC "Alright, Blossom, I'm gonna explain as we go. This game's set in the Sengoku Jidai, and you command troops for either the Tokugawa or the Toyotomi."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35) 
     GTS "Indeed?"
     "An amber light flashed in those vast eyes, and it shone through my blood. Just as I'd hoped."
     MC "Yeah, and in the mode we're gonna be playing, you're gonna direct your troops across a battlefield and try to defeat... me or Tomo."
@@ -15410,7 +15410,7 @@ label GTS057:
     "After the opening roll of logos concluded, I tapped Tomo on the shoulder."
     MC "Man, doesn't this intro cinematic just take you ba- okay."
     Tomoko "It was boring in 2006, I don't think it aged as well as you think."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35) 
     MC "Nah, dude, it's like the calm before the storm. You... ah, never mind, you philistine. You wanna do skirmish or point defense?"
     MC "Skirmish."
     Tomoko "Skir-"
@@ -15449,7 +15449,7 @@ label GTS057:
     MC "Well, let's see... how about Ueda?"
     Tomoko "Works for me."
     MC "Aaaand lastly, let's pick units."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35) 
     "I looked over at Tomoko's side of the screen."
     MC "Eight riflemen and two batteries? Some things never change."
     Tomoko "Well look at that, caught horsemaxxing again. Your cavalry ain't shit if they get swiss cheesed from the other side of the map."
@@ -15460,7 +15460,7 @@ label GTS057:
     MC "Let's go."
     show Tomoko neutral 
     "The fog rolled in. The drums barked. The loading bar filled. The battle was on."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35) 
     "My noble, polygonal samurai warriors spawned in, piecemeal, atop a confluence of mottled green-brown triangles, the triple hollyhock banner of the Tokugawa floating in the heavens over their heads."
     "I realized then that my spawn point led down into a broad, featureless valley, with one small hill for cover."
     Tomoko "Go ahead, Kei. Take that hill. You can definitely beat me to the top, and then you'll have the high ground."
@@ -15521,11 +15521,11 @@ label GTS057:
     "On Naomi's even-tempered command, I began poking holes in Tomoko's ring of leaden death as she wasted attacks on divided units."
     "The cost was adding up, but it was forcing her to devote precious time to patching up her line and waste attacks taking out only half a unit."
     "When Tomoko didn't have enough gunners to block access to her command unit, she formed her remaining troops into a single block, and marched directly into the forest."
-    MCT "Oh, honey, what are you doing, you're gonna– oh fuck, she's got her ult."
+    MCT "Oh, honey, what are you doing, you're gonna- oh fuck, she's got her ult."
     MCT "And I don't."
     MC "Uh..."
     GTS "Divide as many units at the forest as you can and withdraw."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35) 
     "I did so, but not in time to get everyone out before Tomoko's general sauntered in and unleashed a wave of fire in a tiringly long cutscene. Half our guys, gone. War is hell."
     "As I watched them fall, my own ult meter reached full charge."
     GTS "I see certain liberties have been taken with historicity."
@@ -15554,7 +15554,7 @@ label GTS057:
     show GTS happy
     GTS "I'm happy to have provided a satisfactory challenge. Well fought, Hotsure-san."
     MC "Bro, we were {i}this{/i} close! You'd have {i}had{/i} her if you just charged straight up."
-    show GTS pondering  at Position(ycenter=0.35) 
+    show GTS pondering at Position(ycenter=0.35)
     show Tomoko happy
     GTS "That was rather a blunder on my part, yes. I hope you'll forgive me."
     show GTS neutral at Position(ycenter=0.55)
@@ -15621,7 +15621,917 @@ label GTS057:
     jump daymenu
 
 label GTS058:
-    jump GTS059
+    $setProgress("GTS", "GTS059")
+    $setMCOutfit(OutfitEnum.CASUAL2)
+    $setVar("GTS058_intros", 0)
+    scene Roof with fade
+    play music HigherEdu 
+    "Death came to the island."
+    "My eye drifted over the barren, spidery branches, dappled with bone-white gobs of snow, all the way across the campus to the black stubble blanketing the mountains."
+    "However, the sky, still and gray, was indifferent to them, and to its stinging breath racing across my fingers."
+    "I tugged the rice paper stems out anyway, brown petals tumbling over my wrists, and swept them into a paper bag. My mind was nowhere in particular."
+    "{i}pipipi{/i}"
+    "Until then. I whipped my phone out and unlocked it."
+    GTSCell "Did she truly?"
+    MCCell "yeah, you really got her out of her shell"
+    GTSCell "I'm glad. Your sister's docile mien belies her ferocity in competition."
+    MCCell "very true. don't get between her and her pocky, she'll bite"
+    GTSCell "Duly noted. I am laughing aloud."
+    MCT "..."
+    MCCell "look at you, learning new things."     
+    GTSCell "Yes, Ishida-san helpfully informed me that it is customary to share that sort of momentary feeling when converting over text."
+    MCCell "yeah, you could say that's the fashion these days"
+    MCCell "besides, it's the next best thing to hearing your voice"
+    "A brief, nettley silence followed that compelled me to look away. As my cheeks started to warm in the wind, my phone chirped again."
+    GTSCell "May I telephone you, Keisuke-kun?"
+    MCCell "of course, Blossom"
+    "It hardly had a chance to ring."
+    GTSCell "Good afternoon, Keisuke-kun. Thank you for your accommodations."
+    MCCell "Good afternoon to you, too. What's the occasion?"
+    GTSCell "Well, firstly, I beg your pardon for that little typo in my earlier message."
+    MCCell "Typo?"
+    pause 0.5
+    GTSCell "...Ah."
+    GTSCell "Yes, I myself only noticed after the fact that this... voice transcription technology or what have you had written 'converting' where I meant 'conversing'."
+    MCCell "Tragic."
+    "I heard a loud but soft puff of air, the start of a chuckle."
+    GTSCell "Moreover, I would like to tell you something that would be better spoken than written."
+    MCCell "Please do."
+    GTSCell "Perhaps you noticed the prior evening, Ishida-san and Masaji-san working near my dormitory."
+    MCCell "That's right, they were. What's with that? New career training program?"
+    GTSCell "Hmhm, not so. During a little social call last week, Ishida-san had the superb idea to throw a community get-together for all of our peers."
+    MCCell "The giant students?"
+    GTSCell "...Yes."
+    GTSCell "That was the initial idea, anyway. They were thankfully receptive to the idea of inviting some friends from the main campus, bless them."
+    GTSCell "Including, of course, my dearest friend in all creation."
+    MCCell "Ooh! Is it me?"
+    GTSCell "Manifestly, my love. Might I then persuade you to come?"
+    MCCell "Oh, I need no persuasion. What time?"
+    GTSCell "Three o' clock. Of course, I should adore to see you earlier than that, provided your business is all attended to."
+    menu:
+        "I may take you up on that.":
+            $setFlag("GTS058_early")
+            MCCell "I'm pulling up the flowers on the roof that look frostbitten, at the moment. I'm almost done."
+            GTSCell "Capital! I trust you are minding the irises, jasmine, and tulips."
+            MC "Of course! Well, excepting some jasmine and tulips that got bit by some disease."
+            GTSCell "Alas. Thank heavens nevertheless that you were there keeping watch. Thank you, my love."
+            GTSCell "I suppose I ought to leave you to it, then. Goodbye for now."
+            MC "See you soon."
+            "{i}beeoop{/i}"
+      
+        "I think I'd like a little time to relax and get ready.":
+            GTS "But of course. The autumn reaping makes the most vital body venerable... in a few senses of the word."
+            GTS "Moreover, there {i}will{/i} be complementary hors d'oeuvres at this affair, if I may be so crass as to offer a bribe."
+            MC "You may, and to great effect, I might add."
+            GTS "Hmhmhm, splendid."
+            GTS "Well, I shall leave you to it, then. See you soon."
+            MC "See you, Blossom."     
+            "She sighed contentedly, and then hung up."
+
+    MC "Mm..."
+    MCT "I kinda hope impromptu picnics won't become a regular thing."
+    MCT "Still, I'm glad she's making friends… and that she wants me to take part in it."
+    "A few minutes later, as a small group of other students alighted on the roof, I realized I was humming and withdrew the song to my head."
+    stop music fadeout 5.0
+    "Another seeming moment and it was done, the planters like a balding pate. I bagged up the chaff and walked away."
+    scene black with fade 
+    pause 1
+    if getFlag("GTS058_early"):
+        scene Giant Dorm Exterior with fade
+        play music DormLife
+        "After filling up a water bottle back at my dorm, I started making my way out to the big event."
+        MCT "...Heh."
+        MCT "Looks like a couple people are hanging out already."
+        if isEventCleared("RM006"):
+            "Among them, I recognized the relatively lithe figure of Junsei faintly swaying as he sat behind the impromptu firepit next to my destination. Jineko stood beside, pointing, chopping, sprinkling invisible salt."
+            MCT "Wonder if his buddy's gonna be at this shindig… hope he's cooled off a little if he is."
+        else:
+            "I recognized Jineko standing by a relatively lithe man apparently serving as the grillmaster. She pointed, chopped, and sprinkled invisible salt as he swayed faintly in his seat, nodding periodically."
+            MCT "Funny she isn't on grill duty. Perhaps there was an experiment gone wrong…"
+            MCT "Damn good salmon, though."
+        "Somehow, neither one took notice as I made my way to Naomi's door."
+        play sound Knock
+        pause 0.5
+        GTS "Come in!"
+        scene Giant Dorm Interior 
+        show GTS happy at Position(ycenter=0.55)
+        with fade
+        GTS "It's good to see you, my love."
+        MC "Not near as good as it is to see your beautiful face."
+        "She chuckled before studying me for a moment as I approached the couch."
+        GTS "Keisuke-kun, have I ever told you about my lavender plant?"
+        MC "I don't think you have. I don't remember seeing one in your dorm, come to think of it."
+        show GTS neutral 
+        GTS "Oh no, I never brought it over. I transplanted it to the ground back home years ago."
+        GTS "In fact, it was the first thing I ever grew."
+        show GTS happy 
+        GTS "Well, the first thing I ever grew that survived the season. Every good doctor has filled a churchyard, as they say."
+        show GTS neutral
+        GTS "Do come and sit down, now. You've had far to travel."
+        MC "Don't have to tell me twice, my dogs are barking."
+        "She lifted me up onto the couch, and once in position I espied a cup of fresh matcha on a tray pushed up against the towering armrest. I glanced at a rolled-up sheet of paper on the table, roughly the size of a movie poster."
+        MC "Thank you."
+        GTS "Of course."
+        MC "So, what brings to mind this {i}particular{/i} plant?"
+        GTS "I found myself reflecting upon the fruits of gradual cultivation during my meditations since Masaji-san offered her idea."
+        GTS "The year I at last raised a lavender to maturity, it quite literally changed the air in my room from its little spot on the windowsill."
+        show GTS pondering at Position(ycenter=0.35)
+        GTS "Have you ever smelled a mature lavender bush, Keisuke-kun?"
+        MC "Once or twice, I think. It's nice. You could call it the archetypal \"flower smell\" in my mind."
+        show GTS unique at Position(ycenter=0.55)
+        GTS "Of which it is quite deserving. Indeed, it is perhaps best known for its soothing aroma."
+        GTS "After a few years of hard lessons, somehow, that little addition made my room a favorite hangout for my circle of friends for a number of years more."
+        show GTS neutral 
+        GTS "Occasionally, I even happened upon Kazumi-chan in my room enjoying the aroma."
+        MC "Did you? Wow. I wonder if there's a kind that smells like pocky."
+        show GTS happy 
+        GTS "Hmhmhm! Who's to say? It is a wide world indeed."
+        show GTS neutral 
+        GTS "Well, more to the point, I suppose I ought to tell you what precisely I mean."
+        "She gingerly reached across a gap I would've had to jump and brought the roll of paper to her lap."
+        GTS "The aim of today's picnic, to which I am solemnly devoted, is firstly to foster a sense of community amongst the other students at this site, united as we are in a common affliction…"
+        GTS "...And secondly, to gather information on the character of each one, and the relationships betwixt them."
+        MC "Interesting. I'm guessing {i}that{/i} part wasn't Masaji-san's idea."
+        GTS "Indeed, I stand on the shoulders of… well, erm…"
+        GTS "That is, two heads are better than one."
+        MC "Sure, Blossom. Though I can't say I would recommend standing on anyone's shoulders for you. {w}Except mine, y'know, if you wanted."
+        show GTS wink
+        GTS "How crass, Keisuke-kun. The law {i}is{/i} the law."
+        MC "Heh."
+        MC "But yeah, she struck me as being really shy."
+        show GTS neutral 
+        GTS "Has she given you that impression? I have known her to at times be candid to a fault."
+        MC "When Tomo and I came over, she all but burrowed into the ground to avoid looking at me, and not for lack of trying."
+        show GTS pondering at Position(ycenter=0.35)
+        GTS "Did she really? Curious. I have no answer for that."
+        show GTS neutral at Position(ycenter=0.55)
+        GTS "Nevertheless, I'm happy to hear you've already begun to acquaint yourself with my peers."
+        GTS "I have a small favor to ask, if I might."
+        if getVar("GTS_selfhood") > 4:
+            MC "Anything for you."
+            GTS "I know, sunshine. Thank you."
+        else:
+            MC "Mmm, maybe I can pencil you in."
+            show GTS happy
+            GTS "Would you really? Thank you ever so much. I understand how much vegetating in your room you're missing to be here."
+            MC "At least {i}someone{/i} understands my plight."
+            show GTS unique
+            GTS "Hmhmhm, quite."
+            show GTS neutral
+        GTS "Now, once the picnic has begun, I would like you make your way amongst the attendees, formally make your introductions to those with whom you have not already done..."
+        GTS "...And briefly engage them in conversation with a point to make a judgment of their temperament."
+        MC "Okay."
+        GTS "Ah, but should you come upon a group already engaged, do withhold yourself a moment until an opportune moment should arise. It will give you a chance to gather valuable information."
+        GTS "Once you've finished, come find me and we shall share what we've learned."
+        MC "Alright, uh, sure."
+        show GTS pondering at Position(ycenter=0.35)
+        pause 0.5
+        GTS "I sense a bit of reticence. What do you think of this idea?"
+        MC "Well... of course I'll do this for you, but I don't know how well suited I am to like, reading people that deeply. Would my input actually be useful?"
+        show GTS surprised at Position(ycenter=0.55)
+        GTS "Do you really wonder?"
+        show GTS neutral
+        GTS "I, for one, have found your attentiveness in personal relations to be one of your more attractive traits."
+        MC "Heh, I guess I'll trust the expert, then."
+        show GTS happy
+        GTS "Splendid! And after all, one never does know what worthwhile connections you might spark in doing this."
+        MC "And failing that, I'm not opposed to a little peoplewatching."
+        GTS "That's the spirit. Now, do you have any questions?"
+        show GTS neutral
+        jump GTS058_c1
+    else:
+        scene Dorm Interior with fade
+        play music DormLife fadein 1.0
+        $setMCOutfit(OutfitEnum.CASUAL2)
+        "Back at my dorm, I began to reflect on how the picnic might go."
+        MCT "This could mean some much needed solidarity, I suppose."
+        MCT "For being the longest people around, they kind of do get the short stick with the height factor."
+        MCT "Funny... looking at some of the less extreme cases still walking around on campus, it's hard not to think they won the lottery. Hell, part of me wishes I were two and a half meters."
+        MCT "But then, how would I get along, not even being able to walk down the street?"
+        MCT "Ugh, the things I do for love."
+        MCT "...Eh, it's just a little get-together. I'd do a lot worse."
+        "And then it was time to decide to To actually decide what to do with myself for the rest of the morning."
+        pause 1.0
+        MCT "Hmm.{w} Four hours doesn't really feel like enough time to do {i}anything{/i}, somehow."
+        menu:
+            "Doodle":
+                MCT "Well, I got enough time to fill a notebook page with nonsense. Been a minute since I did that."
+                "So I did. I flopped into the vertex of the wall and my bed, legs crossed, notebook in my lap."
+                "Shortly a pleasant chaos began to pour out of my hands as I got lost in the music of lead. {w}Unicorn drifting in a Tayoto 2000GT... {w}Noiro from Magiria Knight 2 grinding on some honies in the club... {w}a crab in a leather jacket with a shotgun for his big claw..."
+                $setSkill("Art", 1)
+                "I took a break to get a can of matcha and, on returning, looked out the window and decided to start sketching the class building. Quite architecturally accurate, if I do say so myself."
+                "I like to think it was so even as I started to draw the south half of the building getting flattened under Naomi's thumb."
+                "I sketched the rest of her... gave her some fat, hanging tits that were, if you were to ask me ten minutes later, perhaps a bit excessive..."
+                "I shaded in her midnight black hair waving in the upper atmospheric winds, wrapping around her shapely shoulders..."
+                "But as my dick swelled against the cotton at the heavenly vision unfolding before me, it came time to draw that mischievous smirk she had as she'd crushed a log in front of me."
+                "I just {i}couldn't{/i} get it fucking right."
+                MCT "Redraw it {i}again{/i}, I guess..."
+                MCT "...Actually, what time is it?"
+                MCT "Shit, I need to get going."
+                "I set my book aside, drained my matcha, and threw my jacket around my shoulders as I headed out the door."
+                jump GTS058_picnic
+
+            "Take a nap":
+                MCT "Well... I got nothing to do. Might as well do nothing."
+                "I stretched my taxed muscles a bit before taking my shirt off and tucking in."
+                MCT "God, midday sheets feel exquisite."
+                if checkSkill("Academics", ">", 9):
+                    MCT "I'll just set an alarm for two..."
+                    MC "There. Ahhh..."
+                else:
+                    MC "Ahhh..."
+                "The light beyond my eyelids faded as the sweet release of honk shoo took me."
+                scene black with fade
+                pause 1.5
+                #if checkSkill("Academics", ">", 9):
+                scene Dorm Interior with fade
+                "I blinked awake to see 1:55 on the clock. Appeasing it with a peck of my finger, I contorted and arose."
+                MC "{i}Ghmmmmm... snrk{/i}"
+                MCT "Fuck, that's what it's all about, man."
+                MCT "She probably won't be mad if I head over a little early..."
+                "I re-robed and began my autumn journey."
+                jump GTS058_picnic
+                #else:
+                    #$setTime.TimeEnum.EVE
+                    #scene Dorm Interior with fade
+                    #"Sometime later, probably five minutes, my eyes blinked open and took in two things: a tangerine light filling the room, and a hunchbacked bedsheet ghost sitting at Daichi's desk."
+                    #show RM neutral with dissolve
+                    #RM "Hey."
+                    #pause 1.0
+                    #RM "I know you're awake."
+                    #MCT "I didn't even move..."
+                    #MC "Hey. Hope I wasn't snoring."
+                    #RM "You weren't. I'm just surprised you're not hanging out with Yamazaki."
+                    #MC "Oh, I was gonna, actually. I should probably head out."
+                    #RM "Alright, then."
+                    #"Something acrid began to drip into my stomach as I pulled my shirt on."
+                    #if checkAffection("RM", ">", 3):
+                        #MC "Hey, Daichi... what time is it?"
+                    #else:
+                        #MC "Hey, Utagashi-san... what time is it?"
+                    #show RM concerned
+                    #RM "4:57."
+                    #MC "{i}Shit!{/i}"
+                    #show RM smug
+                    #"Through red flashes and klaxons in my head I clawed my clothes and phone onto my body and stormed out."
+                    #RM "Pff..."
+                    #scene black with fade
+                    #pause 1.0
+                    #jump GTS058_late
+
+            "Study":
+                "I set an alert on my phone for two o' clock and settled at my writing desk with a stack of books, reviewing and expanding my notes."
+                $setSkill("Academics", 1)
+                "After a while, the timer went off and I looked on what I'd done with the time... {w}better than nothing."
+                "I set aside my materials and got dressed to go out."
+                jump GTS058_picnic
+
+label GTS058_c1:
+    menu:
+        "I gather this picnic is for the giant students. Is anyone else gonna be at this shindig?":
+            $setFlag("GTS058_portions") #If this option is taken, Kei may later talk with Okisho, who notes the portion sizes as a motive and Kei thinks "called it"
+            GTS "I did extend invitations to Mizawa-san, Tanaka-san, and Tomoe-san. Tanaka-san, alas, seems to have been occupied with one of her film projects. I doubt she shall have the time to spare."
+            GTS "Mizawa-san, however, seemed quite enthused. I must have caught her on a slow day for the music club."
+            MC "Must be. The fact that you're offering free food in giant-sized portions is of course immaterial."
+            show GTS embarrassed
+            GTS "{i}Khm{/i}… now, now, Keisuke-kun."
+            MC "Hey, we're in private. And really, would she deny it?"
+            GTS "She {i}does{/i} have a commendably forthright manner…"
+            show GTS neutral
+            if isEventCleared("GTSBE005"):
+                GTS "Speaking of which, I've also taken the liberty of inviting Inoue-san."
+                MC "Oh, cool! Now it's a party."
+                GTS "Quite, quite."
+                #placeholder to include possibly inviting Aida and Akira
+            GTS "But yes, I believe that's everyone from the main campus."
+            jump GTS058_c1
+
+        "The way you describe it, you won't be with me for most of it, then?":
+            GTS "I'm afraid I will not. My theory is that we will gain a more rounded insight by speaking to the attendees separately."
+            MC "Fair enough."
+            jump GTS058_c1
+        
+        "I saw Watanabe-san and some other guy working over a firepit outside. I don't suppose there'll be snacks?...":
+            GTS "Never fear, Keisuke-kun. The \"other guy\", Uno-san, has volunteered to make yaki onigiri with tilapia or tofu stuffing. Masaji-san also said she would procure water infused with lemon to drink."
+            MC "Okay, that sounds nice."
+            GTS "I expect it should be quite pleasing indeed."
+            pause 1.0
+            MC "Especially for the given… conditions."
+            "Her shoulders slumped a little as she looked down at me."
+            GTS "Yes."
+            jump GTS058_c1
+        
+        "What's the roll of paper on the table?":
+            show GTS wink
+            GTS "A surprise!"
+            MC "Ah ah ah, no secrets, remember?"
+            show GTS neutral
+            GTS "Quite so, my love. Were this a secret, I should not hesitate to reveal it to you."
+            GTS "Fortunately for my designs, however, it is merely a surprise, to be revealed at the hour of my choosing."
+            MC "Alright, then. Keep your secrets."
+            GTS "Surprises."
+            MC "Mhm. Court adjourned."
+            show GTS unique
+            GTS "Hmhmhm!"
+            show GTS neutral
+            jump GTS058_c1
+
+        "I think I get it.":
+            jump GTS058_c2
+
+label GTS058_c2:
+    GTS "Capital. In that case, it will be a while before everyone starts to gather…"
+    show GTS wink
+    GTS "Might just one more episode of 'Looking Up to Nobi-Sensei' be in order?"
+    MC "By Jove, it just might. Shall we go fire up your computer?"
+    "There was a puff of air from below as she stood, and off we went."
+    stop music fadeout 3.0
+    scene black with fade
+    scene Giant Dorm Exterior
+    show GTS_S happy
+    with fade
+    play music ChangingSeasons fadein 1.0
+    "Naomi was beaming when we stepped out just before three o' clock."
+    "A small crowd... in purely numerical terms, mind you... had already gathered around the grill. Their friendly chatter contended with the boisterous sizzle of frying rice as pale wisps slithered up into the sky."
+    GTS_S "This has the makings of a delightful occasion indeed!"
+    MC "I think so, Blossom, I think so."
+    "I felt the air shift as she turned to face me."
+    GTS_S "Thank you for being a part of this with me."
+    MC "That's what I'm here for. Now, shall we make our rounds?"
+    show GTS_S neutral
+    GTS_S "We shall. Stop by the grill if you get hungry, of course. Uno-san can also pour you a drink."
+    MC "Cool. Thanks, Nacchan."
+    GTS_S "Ah! But first, let me give you the names of some of the fellows you haven't met yet."
+    MC "Oh, yeah, sure. That'd be handy."
+    GTS_S "Indeed."
+    "She turned her head and nodded toward one of the male giant students talking to Ishida."
+    GTS_S "The one talking to Ishida-san is one Daisuke Miyano. He's rather the stoic amongst us, so do not be discouraged if conversation does not go far with him."
+    MC "I see."
+    GTS_S "I mentioned Uno-san, of course. Junsei Uno. I myself find him rather... unserious."
+    MC "Mm... I can vibe with \"unserious\"."
+    GTS_S "He is perfectly agreeable, it is only that he seems given to, well... rambling. Of course, he may too busy today to engage in much of said..."
+    "At last, a faintly weary look shadowed her face as her eye fell on an animated young man talking to Masaji."
+    GTS_S "That leaves Kajiwara-san. Sparking conversation shall be no trouble at all with him."
+    MC "One of those types, eh? Figures, I can hear the Osaka accent from here."
+    GTS_S "Quite. That will be everyone, then."
+    show GTS_S neutral
+    MC "Thanks, Nacchan. Talk to ya soon."
+    "She gave me a modest bow."
+    GTS_S "I believe I shall have a chat with Watanabe-san first. Come find me when you've made your introductions."
+    GTS_S "Do enjoy yourself, my love."
+    "Smiling down at me over her shoulder, she turned to approach Jineko and vanished into the crowd."
+    hide GTS_S with dissolve
+    "...Well, not really. She probably couldn't vanish into a forest."
+    MCT "Alright, time to leave my caterpillar-ass self behind and bloom into a social butterfly. Let's see who we got..."
+    jump GTS058_picnicmenu
+
+label GTS058_picnic:
+    stop music fadeout 3.0
+    scene black with fade
+    pause 1.0
+    scene Giant Dorm Exterior with fade
+    play music ChangingSeasons fadein 1.0
+    "I arrived a short walk later to look upon a small crowd indeed... purely in the numerical sense, that is."
+    "The unmistakable throne around which the court convened was a giant makeshift range sending snaking white whisps up into the vast sky. Then, a kiss on the nose by the aroma of pan-seared rice. I was salivating a little."
+    if isEventCleared("RM006"):
+        "And upon the throne was the lithe form... relatively speaking... of Junsei Uno, his head bobbing and swaying as he used what appeared to be an oar to flip an obscenely huge yaki onigiri."
+        MCT "Wonder if his buddy's gonna be at this shindig... hope he's cooled off a little."
+    else:
+        "And upon the throne was a... relatively... lithe figure bobbing and swaying his head languidly, as he used what appeared to be an oar to flip an obscenely huge yaki onigiri."
+        MCT "Surprised Watanabe-san's not on grill duty. Was there an experiment gone wrong?..."
+    "No matter."
+    "I scanned the crowd and no sooner spotted the object of my search pacing gracefully toward me."
+    show GTS_S happy with dissolve
+    GTS_S "Good afternoon, my love! At last we have the missing piece!"
+    MC "Heh, afternoon to you too, Nacchan. Sorry to keep you waiting."
+    show GTS_S embarrassed
+    GTS_S "Hardly. Uno-san, bless his heart, began cooking the onigiri early, and {i}then{/i} came the hungry masses."
+    "She sighed."
+    GTS_S "It's like herding cats."
+    show GTS_S neutral
+    GTS_S "But all's well that ends well. Please do make your introductions to the other guests, quite a few have not had the pleasure."
+    GTS_S "And of course, if you're hungry, Uno-san is making some scrumptious yaki onigiri with tofu or tilapia filling."
+    GTS_S "There is also water with cucumber and lemon to drink, though I should advise you... the water is quite locally sourced and tastes... rather bold..."
+    MC "I could probably use more minerals in my diet anyway."
+    GTS_S "Hmhm... very good."
+    GTS_S "For my part, I must momentarily attend to some separate business. Let us reconvene after you've made your rounds, shall we?"
+    MC "Uh... sure, sounds good."
+    GTS_S "Capital! {w}And when we do, I should be quite eager to hear your opinion of the other attendees."
+    MC "..."
+    MC "I sense an ulterior motive, which I'm going to ignore because you're hot and I just want free food."
+    show GTS_S neutral-2
+    "Naomi smiled wistfully down at me with her hands behind her back."
+    GTS_S "That shall suffice, then. Enjoy your time, Keisuke-kun."
+    GTS_S "Ah! But first, let me give you the names of some of the fellows you haven't met yet."
+    MC "Oh, yeah, sure. That'd be handy."
+    GTS_S "Indeed."
+    "She turned her head and nodded toward one of the male giant students talking to Ishida."
+    GTS_S "The one talking to Ishida-san is one Daisuke Miyano. He's rather the stoic amongst us, so do not be discouraged if conversation does not go far with him."
+    MC "I see."
+    GTS_S "I mentioned Uno-san, of course. I myself find him rather... unserious."
+    MC "Mm. I can vibe with \"unserious\"."
+    GTS_S "He is perfectly agreeable, it is only that he seems given to, well... rambling. Of course, he may too busy today to engage in much of said..."
+    "At last, a faintly weary look shadowed her face as her eye fell on an animated young man talking to Masaji."
+    GTS_S "Mm... that leaves Gō Kajiwara. Sparking conversation shall be no trouble at all with him."
+    MC "One of those types, eh?"
+    GTS_S "Quite. That will be everyone, then."
+    show GTS_S neutral
+    MC "Thanks, Nacchan. Talk to ya soon."
+    "She gave me a modest bow, gingerly turned and walked off to vanish into the crowd."
+    hide GTS_S with dissolve
+    "...Well, not really. She probably couldn't vanish into a forest."
+    MCT "Alright, time to leave my caterpillar-ass self behind and bloom into a social butterfly. Let's see who we got..."
+    jump GTS058_picnicmenu
+
+label GTS058_picnicmenu:
+    menu:
+        "Talk to Kajiwara & Masaji" if not getFlag("GTS058_kamatalk"):
+            jump GTS058_kama
+        "Talk to Ishida & Miyano" if not getFlag("GTS058_imitalk"):
+            jump GTS058_imi
+        "Talk to Uno, Minori, & Okisho" if not getFlag("GTS058_umiotalk"):
+            jump GTS058_umio
+        "Reconvene with Naomi":
+            jump GTS058_final
+
+label GTS058_kama:
+    $setVar("GTS058_intros", getVar("GTS058_intros") + 1)
+    $setFlag("GTS058_kamatalk")
+    "I circled around the grill and approached the talking pair from behind Masaji. Kajiwara broke into a toothy smirk as he put down his steaming onigiri."
+    Gou "{i}Pot?{/i} Hina, sister, he's the whole fuckin' witch's cauldron! You heard the guy talk?"
+    Hina "...I didn't mean {i}that{/i} way. That's kind of a shitty way to talk behind someone's back."
+    Gou "I, agh, I mean, I'm not judging, y'know, he seems like a nice guy and whatnot."
+    "His eyes darted, looking at anything but her, and he at last spotted me."
+    Gou "Ayyy, if it ain't Yamazaki's little squeeze! Your woman over there can throw a party, I give her that."
+    "Masaji, for her part, hunched her back a little lower and didn't turn around."
+    MC "Uh, hey. Enjoying the picnic?"
+    "I circled around to get a good look at their faces. Thankfully, with them seated on tarps, we were close enough to eye-to-eye."
+    Gou "Yeah, 'sgood."
+    Hina "It's okay."
+    if isEventCleared("RM006"):
+        "Kajiwara's face scrunched up as he pointed his finger at me and wiggled it a little."
+        Gou "Something... something about you's ringing some bells. We met before?"
+        MC "I... don't think so. You've probably seen me around, though."
+        Gou "Nah, but I could swear you were standing outside the gate with some other guy."
+        MC "I feel like I'd remember that."
+        pause 1.5
+        Gou "Maybe I'm wrong.{w} Yeah, I probably just saw you around."
+        MC "Yeah, probably."
+        MCT "I gotta stop tagging along with Daichi."
+    MC "Anyway, I'm Keisuke Hotsure. Pleasure to meet you."
+    Gou "Gou Kajiwara. It {i}is{/i} a pleasure to meet me, ain't it?"
+    Hina "...You can call me Gama."
+    Gou "Why you keep telling people that? That's not your name. Shit's degrading."
+    "I noted a change in the air between them as she took a moment to answer."
+    Hina "...Then I guess you can call me Hina Masaji."
+    Gou "There ya go! I mean, what if I went around like \"Hey how ya doing, my name's Loudmouth Asshole!\" Let people form their own opinions!"
+    "I circled around to look Masaji in the eye and found that huge, hazel glass ready to meet me, quivering."
+    "I took in the pale, moon-round visage and the self-taught bowl cut that framed it... and familiarity sparked in my brain."
+    Gou "...You two know each other or what?"
+    "Her lips stayed firmly shut."
+    MC "I think I remember... you dropped your phone one day early in the year. I, uh, tried to grab it."
+    Hina "Yeah."
+    Hina "I know it was already completely fucked, but thanks for trying anyway."
+    MC "Uh, yeah, 'course."
+    Gou "Don't be coy Hina, you sat on it, didn't you?"
+    Gou "But hey, could be worse! Matsumoto coulda sat on it instead, that sucker woulda been fuckin' {i}gone{/i}."
+    menu:
+        "Chuckle":
+            $setFlag("GouFavor")
+            "Despite my better instincts, I cracked a smirk."
+            "Seeing that, Kajiwara's baseball-sized eyes brightened instantly."
+            Gou "Am I wrong? Am I wrong? Call that shit the Matsumoto Trench, Goddamn."
+            MC "Okay, I dunno..."
+            Hina "That's a real funny joke, Gou. You should tell it to Tomoe over there, I bet she'd love it."
+        "Ignore the joke":
+            "She and I remained silent for a moment, and he straightened his back, looking off somewhere in the distance."
+    Gou "Alright, sheesh, tough crowd."
+    Gou "Well, Hotsure, how's things going for you? What are you studyin' right now?"
+    MC "Me? Uh, well, just working through the basic credit hours. Eventually I wanna go into architecture."
+    Gou "Architecture, alright, yeah. You got family in the biz?"
+    MC "No, honestly, it just seems like something that won't make me wanna off myself before I retire."
+    "Masaji cast her gaze to the dirt with a teetering smile, while Kajiwara snickered and nodded."
+    MC "Which is good, because it's looking like I'm probably not gonna retire."
+    Gou "Fuckin' right? This country, Jesus."
+    Hina "Yeah..."
+    MC "...That got a little dark, sorry about that."
+    "Masaji shrugged, still staring downward."
+    Hina "You're not wrong. You sound like you prolly went to high school, Hotsure."
+    Hina "My mom needed me to get a job more, so I don't even know what the fuck I'm gonna do for the next exams."
+    Hina "Never mind what the fuck either of us are gonna do after this year. Can't go back to the factory {i}now{/i}."
+    Hina "I guess it could be worse, y'know?"
+    Gou "..."
+    MC "...I'm sorry to hear that, Masaji-san."
+    Hina "Thanks."
+    Hina "Uh... what's it like going out with Yamazaki?"
+    MCT "What's with the sudden intense stare?..."
+    MC "Good! She's one of the kindest people I've ever met. Drop dead gorgeous, to boot."
+    Hina "She {i}is{/i} really nice. She invited me over for tea once."
+    "She began to quite noticeably clutch her knees as her stiff comment hung in the air, and then, as Kajiwara opened his mouth, she shot up to her feet."
+    Hina "I'm gonna get some more onigiri."
+    "And that was that- she turned away. We both watched at the back of her skirt thrashing like a mosquito larva to the reverberating drumbeat of her footsteps."
+    Gou "I am never gonna figure that chick out."
+    MC "Is she always that high-strung? That was a little weird."
+    Gou "A little, I guess."
+    "He narrowed his eyes then, glancing once at me before he continued." 
+    if getFlag("GouFavor"):
+        Gou "I think I'm gonna get a refill, too."
+        Gou "Take it easy, Hotsure, alright? Good talking to ya."
+        MC "Yeah, back at you Kajiwara-san. Later."
+        "Not looking at me, he flashed a thumbs-up in my general direction as he stood and walked away."
+    else:
+        Gou "I think I'm gonna get a refill, too. Later."
+        MC "Later."
+        "His eyes were following Masaji as he stood and walked away."
+    MCT "Huh..."
+    MCT "Well, that's two down."
+    jump GTS058_picnicmenu
+
+label GTS058_imi:
+    $setVar("GTS058_intros", getVar("GTS058_intros") + 1)
+    $setFlag("GTS058_imitalk")
+    "I approached Ishida-san next; she was chatting to an athletic type, limbs corded and beard thin. She was smiling and bouncing faintly in place as she spoke, occasionally fidgeting with her necklace."
+    "...As I got closer, I could see that her necklace was, in fact, a hair dryer on a length of nylon rope."
+    Ume "For like a second I thought it was a cricket, but then I noticed how short the chirps were and I realized we're right at the end of Japanese thrush season in our area!"
+    Ishida "I've always wanted to see one up close. You'd love them! The males' heads and chests are pure black, like they got dipped in ink! {i}Snrk!{/i}"
+    Miyano "Mm. Interesting."
+    Ishida "Yeah! I, uh... thought so..."
+    MCT "Sounds like this conversation needs a defibrillator."
+    MC "Hey, guys! How are you liking the party?"
+    Ishida "Hiya, Hotsure-san! It's cool, how about you?"
+    MC "Gotta agree with you there. I may be contractually obligated to be here, but getting to know folks around here is cool."
+    "Ishida gave a polite chuckle while Miyano's dead-fish expression softened {i}just{/i} the slightest bit."
+    MC "Speaking of, I don't think we've formally met. I'm Keisuke Hotsure."
+    Miyano "Daisuke Miyano."
+    MC "Pleasure. What's filling your days, Miyano-san?"
+    Miyano "Hm..."
+    Miyano "Classes. Working out. Watching baseball."
+    Miyano "I guess it'll just be those first two in about a week."
+    MC "Ohhh yeah, the championship game's coming up, isn't it? Think the Finches will clinch it against the Falcons this year?"
+    Miyano "About as likely as an actual finch versus a falcon."
+    MC "...Yeah, probably."
+    Miyano "I'm hoping they win anyway. Or at least I'd like to see the Falcons lose."
+    Miyano "Are you from Tokyo, Hotsure-san?"
+    MC "Yep! Born and raised in Shibuya, right off one of Godzilla's footprints."
+    Miyano "Mm."
+    MC "...{w}By any chance do you hail from Hyōgo?"
+    Miyano "Yeah. Nishiwaki, not that it's a name worth remembering."
+    MC "I had a feeling. That championship game a few years back must've stung as a Bobcats fan, eh?"
+    "He stared at me, trying to maintain his flatline composure before his face scrunched up and he looked away."
+    Miyano "I can't talk about that right now."
+    MC "Sorry, didn't mean to bring up unhappy memories."
+    Miyano "..."
+    MC "..."
+    Ishida "Peregrine falcons actually are known to hunt smaller birds, and they can dive up to 321 kilometers an hour, so... yeah, a typical finch wouldn't have much of a chance."
+    MC "That's pretty quick, wow. That's gotta be like bullet train speed."
+    Ishida "Might be, yeah! They can {i}zoom{/i} when they get going, it's insane!"
+    MC "Oh, you've seen them do it?"
+    Ishida "Yeeeessss! My aunt used to take me birdwatching in this nature reserve by her hometown on Shikoku. Oh my God, it was heaven on earth!"
+    MC "I bet. How do the woods here on the island compare?"
+    Ishida "Veeerry different. You can tell there's some old growth up in the heights. Different climate, too. I coulda swore I heard a Eurasian woodcock call out on a hike a couple weeks ago."
+    MC "How 'bout that."
+    Ishida "Yeaaah, it was freaky."
+    Ishida "Speaking of which, I heard you stared down a {i}bear{/i}?"
+    "Miyano perked up a little at that. My own expression, I expect, wasn't much different."
+    MC "Well, that's one way to phrase it. From my angle, I was just three seconds away from getting disassembled. Naomi managed to wrestle it into submission."
+    Ishida "Jeez, that's so scary! Thank God you're okay!"
+    MC "No kidding. It was pissed."
+    Miyano "Not many would stand their ground under those circumstances. That takes grit."
+    MC "Thanks. But really, I wouldn't say that just standing there was a calculated strategy on my part."
+    Miyano "At least you lived."
+    "Ishida turned to face him, her brow slanted."
+    Miyano "You're never gonna forget that day, are you Hotsure-san? Staring down the barrel and walking away. Now, I couldn't do that if I tried."
+    Miyano "You better not forget."
+    Ishida "..."
+    "Against a backdrop of silence, he simply looked blankly off to my side."
+    Miyano "I dunno."
+    pause 1.0
+    MC "There's more to life than chasing adrenaline, man."
+    "His charcoal eyes alone turned back towards me."
+    Miyano "That's not what I'm talking about."
+    MC "...Mm."
+    MCT "Hey, I tried."
+    MC "Well, I guess I better check on Naomi. See you around."
+    Ishida "I think I'm gonna walk around, too. Laters!"
+    "Miyano nodded, and that was the blessed end of it. I walked away to see where else I needed to introduce myself."
+    jump GTS058_picnicmenu
+
+label GTS058_umio:
+    $setVar("GTS058_intros", getVar("GTS058_intros") + 1)
+    $setFlag("GTS058_umiotalk")
+    "I then turned my eye to the heart of any worthy picnic: the grill, a bristling, hissing fortress of black iron."
+    "And the lord of this fortress... gave the impression of a K-pop star on morphine, humming pieces of some anime intro music as his auburn hair swished and his soft hands waltzed languidly in the shimmering air."
+    "He had company, naturally. Minori and Okisho were parked right in front of the makeshift sheet metal wall containing the cookfire, munching on golden brown onigiri the size of their heads."
+    show Okisho happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1)
+    show Minori neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
+    "One much more efficiently than the other."
+    Okisho "Man, why can't we get portions like these at the main campus? A couple more of these and I think might actually be full for once."
+    if getFlag("GTS058_portions"):
+        MCT "Called it."
+    Minori "They're quite tasty."
+    "Okisho proceeded to take a bite that left me slightly concerned she left her jaw unhinged, leaving a giant crescent shaped chunk taken out of the comically oversized onigiri."
+    Okisho "Yeuh, the rishe is cooked brrfect. I gorra ashk wha' he mrrinared the fish in."
+    Okisho "{i}Gllm! {w}Ahhhh!{/i} Are you gonna finish that?"
+    Minori "...I'm full, actually."
+    Okisho "Well I'm not gonna let it go to waste. Gimmie gimmie!"
+    Okisho "Oh hey, Hotsure-san. I was wondering when you were gonna show up."
+    MC "Yeah, I... {w}am impressed how quickly you two got here."
+    Okisho "I move pretty quick for my size, don't I? That's the power of {i}motivation{/i}— and there's nothing more motivating than free food!"
+    Minori "Luckily, there was nothing pressing at the office today."
+    MC "Hey, whatever works."
+    Junsei "Mm!"
+    "Blinking, the chef waved \"Hello\" with his oar-spatula."
+    Junsei "Afternoon, Hotsure-san. You're just in time for some yaki onigiri fresh off the grill. Are ya hungry? There's some lemon water in a tank over on the left side here."
+    MC "Sure, I'll try one."
+    Junsei "Sure thing, chicken wing. Whatcha feeling today? Tempting tilapia, orrr tantalizing tofu?"
+    MCT "I better go light."
+    MC "Tofu for me, please."
+    Junsei "Good choice there, boss. One cryin' Johnny, comin' up."
+    Junsei "Just gotta give him a blankie..."
+    "Tearing off a long, crackling sheet of aluminum foil, he folded it in a couple places, cupped it to the bottom of the rice ball, and bent over to hand it to me."
+    MC "Thank you."
+    Junsei "Sorry if it's a little much, I got these gorilla mitts..."
+    MC "Heh, all good. It smells divine, honestly."
+    Junsei "Hey man, thanks. My uncle's like an actual cook at an actual food store, one of those sushi joints with the zoomy counters."
+    Junsei "...I said food store, I mean restaurant."
+    Junsei "But yeah, he taught me that neat little recipe just before I took my lil' boat ride. So, uh, make your checks out to Uncle Shō."
+    Okisho "Where is this restaurant, exactly?"
+    Junsei "That'd be in a lil' town called Ha-ko-da-tayyy baby, right off Uchikanjo-sen on the south side. She's called One-Two, big gold lace awning, ya can't miss it."
+    Okisho "I'll check it out if I ever make my way out there.."
+    MC "Was this a potential joining the family business type situation?"
+    "He closed his eyes and rocked his head slowly, as though refining his thoughts by the tumbling method."
+    Junsei "I might go back and do that, yeah. Who can say where that old road goes, you know what I mean?"
+    Junsei "Mainly, I just want to work in an office somewhere, earn my kibble, go home and read manga and... maybe make myself a big pot of spicy soup? I feel like that's where the universe is calling me."
+    MC "Oh, well, that sounds nice."
+    Junsei "Yeah, man."
+    MC "What sort of manga do you like?"
+    Junsei "I'm a little late on this one, but I'm digging Crowd Wacko. Gives me a chuckle."
+    MC "Oh, yeah, that's a good one. How far are you?"
+    Junsei "Uhhh, Crowd just got in a fight with Gawa and then he blew up the school. That was pretty cash money."
+    MC "Oh, so you're on like volume three."
+    Junsei "Yeah."
+    Junsei "...Whaaaa, you, you got some kinda sorta look on your face. Oh man, something happens, doesn't it?"
+    MC "I didn't say anything!"
+    MC "Anyway, guess I should get some water before this thing goes cold."
+    Junsei "Okey dokey, artichokey. In that case, how are you ladies do- oh."
+    show Okisho happy
+    Okisho "{i}Urp!{/i} Woof, that hit the spot. How about two more as a chaser, mister super-chef?"
+    Junsei "Yeah, you betcha, just a second there..."
+    MCT "Damn."
+    show Okisho neutral 
+    "My analysis of the situation complete, I circled around the grill and laid eyes on an industrial plastic storage tank, lightly dappled with dewdrops where the sun hit it. A plastic posterboard zip-tied to the front read \"Water with Lemon\"."
+    MCT "This must be it."
+    "I grabbed a human-size cup and poured some from the spigot. The profound cold resounded through the flesh of my hands even through the plastic, and a faint, pleasantly crisp scent floated around my nose."
+    MC "{i}Thhhp{/i}"
+    MC "Oogh, bruh, that tastes like a bowl of nails without any milk."
+    Minori "Apparently the main well around here is very iron-rich.{w} Understandably."
+    Okisho "There's a decent aftertaste if you chug it down quick."
+    MC "Not a bad idea..."
+    Minori "Incidentally, Uno-san..."
+    Minori "Have you by any chance read the new Vegetables Bushel volume?"
+    Junsei "Oh, I have not, actually. I wanna, I'm loving the series so far. Is the new one any good?"
+    Minori "Well, I haven't read it just yet either."
+    Junsei "Oh, okay. Well, if we're putting down some scratch, where do you think they're gonna go with it?"
+    Minori "It's hard to say, really. Normally, I'm decent at predicting plot beats. But the VB author seems to have something of a knack for twists."
+    Junsei "That's true, that's very true. I'll just be sitting in my jammies scrolling on Manganext and all of a sudden, like, we're doing a murder mystery."
+    Junsei "And like, whoa, man, ya gotta warn me about this stuff, I'm gonna get a headache from this whiplash. My doctor says I can't be doing this."
+    Junsei "I mean, maybe not that example specifically, but- oh jeez, it's burning."
+    "He stuck his tongue out of the corner of his lips and began jimmying furiously with the oar. Black smoke and a hot, plastery smell wafted up in puffs."
+    Junsei "Sorry guys, I should probably focus on my job here. Maybe we can talk later?"
+    MC "You need any help?"
+    Junsei "I'm good! Just need to... uh... woof."
+    Okisho "Alright, good luck with that, then. I'm gonna find somewhere to sit down, I'm not used to feeling this full anymore."
+    "Without another word, she looked around a second and then went off a-wobbling. Minori pondered, and then silently followed."
+    MC "Alright, take it easy, Uno-san. See you."
+    Junsei "Later, skater."
+    hide Okisho
+    hide Minori
+    with dissolve
+    "Quite absorbed as he was in damage control, I departed the scene for wherever my next destination might be."
+    jump GTS058_picnicmenu
+             
+label GTS058_final:
+    "I decided I'd socialized my fill for a day and looked around for my favorite house-high hottie."
+    "Much as I expected, I spotted her giving a modest bow to Minori, before the latter turned away and she surveyed the gathering from the shade of a hangar-dorm, hands folded, lips bent just upwards."
+    show GTS_S happy with dissolve 
+    GTS_S "Ah, hello again!"
+    if getVar("GTS058_intros") < 2:
+        $setFlag("GTS058_fail")
+        show GTS_S pondering 
+        "Her head tilted as she looked down at my approach. I was conscious of the leaden hesitation in my feet, yet powerless to disguise it."
+        GTS_S "I do declare that you made rather short work of this gathering."
+        MC "Uh... yeah..."
+        MC "Admittedly I didn't get around to talking to a lot of them."
+        GTS_S "Oh? Are you feeling under the weather?"
+        MC "I... feel fine, just..."
+        pause 3.0 
+        "As bitter as the silence felt, I couldn't conjure anything to say that would've made it better."
+        "Naomi sighed."
+        show GTS_S neutral 
+        GTS_S "Very well, then. As for myself, I believe I shall hang around and catch up with some more acquaintances."
+        GTS_S "You may return to your business on the main campus, should it please you."
+        MC "You don't want to hang out later?..."
+        "A sharp edge flashed through her brow."
+        GTS_S "You do love me, don't you?"
+        "Her tone was not romantic."
+        MC "Yeah, of course I do. This doesn't change that."
+        if getVar("GTS058_intros") > 0:
+            $setAffection("GTS", -5)
+        else:
+            $setAffection("GTS", -15)
+        GTS_S "Does it not?"
+        GTS_S "Keisuke-san, when I ask you to do something with me, I expect you to regard it as a thing of import."
+        GTS_S "Tell me as much if it makes you uncomfortable, but my requests to you are not to be ignored or cast aside without a word."
+        GTS_S "Do you understand?"
+        MC "Y-Yes. I'm sorry, Nacchan, I didn't think this picnic was that important to you."
+        pause 1.0
+        GTS_S "I accept your apology."
+        GTS_S "If that will be all, then..."
+        MC "I... guess it will. See you later?"
+        GTS_S "See you tomorrow, my love."
+        "She offered a slow, shallow bow, which I returned, unable to meet her gaze."
+        hide GTS_S with dissolve 
+        "And then, I suppose, it was time to go."
+        jump daymenu
+    else:
+        GTS_S "Pray, did you find anything illuminating?"
+        MC "In the technical sense, I suppose I did. I talked a little bit with... hm?"
+        show GTS_S neutral at Transform(xzoom=-1)
+        "I noted her posture shifting slightly."
+        GTS_S "Ah... pardon the interruption. I would like to propose we have our discussion in private."
+        MC "Excellent idea, Blossom. Will the others need any help cleaning up after?"
+        GTS_S "I should think not. Masaji-san kindly offered to handle the matter. I shall make a pass through the grounds later this evening in any event."
+        stop music fadeout 5.0
+        show GTS_S neutral at Transform(xzoom=1)
+        "She turned on her heels and crooked her finger over her shoulder at me."
+        scene black with fade
+        pause 1.0
+        scene Giant Dorm Interior 
+        show GTS_S neutral 
+        with fade
+        play music Rain fadein 5.0
+        "I walked in to see Naomi silently shut the door behind her."
+        GTS_S "Thank you for honoring my request."
+        MC "'Tis a mere nothing, Yamazaki no kimi."
+        show GTS_S happy-2
+        GTS_S "I am grateful nevertheless."
+        GTS_S "Make yourself comfortable, my love. Let us discuss."
+        if getFlag("GTS058_early"):
+            "I did so, noting the sudden absence of Naomi's scroll. The tremor of Naomi sitting down beside me, however, was tremendously effective in focusing my attentions."
+        else:
+            "I did so, and a mere moment later came the resounding quake of Naomi sitting down beside me, the temple bell dispelling every distraction."
+        hide GTS_S
+        show GTS neutral at Position(ycenter=0.55)
+        with dissolve
+        "She had produced a sheet of paper and a pen. Folding the former she, he placed it on her lap and and looked down at me."
+        GTS "Very good, then... {w}thoughts?"
+        MC "Let's see..."
+        if getFlag("GTS058_umiotalk"):
+            MC "I talked a little with Uno-san. He's an interesting fellow. {w}Very open. {w}Maybe a little too open. He {i}does{/i} kinda ramble."
+            GTS "A tad."
+            MC "Good taste in manga, though. And he seems nice, you know?"
+            GTS "Indeed. I do, however, remain persuaded that his manner is lacking in gravity."
+            MC "There are worse crimes out there."
+            GTS "There are, to be sure. I do not mean to condemn him... clearly he has a healthy sense of duty. One hardly had to twist his arm to help out."
+            show GTS pondering at Position(ycenter=0.35)
+            pause 0.5
+            GTS "Hmm..."
+            MC "I believe I see wheels turning."
+            show GTS wink at Position(ycenter=0.55)
+            GTS "How perceptive."
+            MC "Ohhh, okay."
+            show GTS neutral 
+        if getFlag("GTS058_kamatalk"):
+            MC "Uhhh... there was Kajiwara-san and Masaji-san, too."
+            MC "I don't think I can tell you anything you don't know about Kajiwara-san."
+            GTS "Oh?"
+            MC "Yeah, bit of a walking stereotype if we're being frank. Every other sentence is a quip or a joke."
+            "She nodded along with her chin in her fingers."
+            MC "Pretty rude, too. You probably picked that up yourself."
+            MC "Come to think of it... I think he might have, like, a thing for Masaji-san."
+            show GTS pondering at Position(ycenter=0.35)
+            GTS "Intriguing. Pray, how did you come to that conclusion?"
+            MC "I just feel like a guy like... that, would not seek out the company of... a girl like her, unless he felt some strong attraction."
+            MC "Which makes sense, in a way. They both seem to enjoy a bit of gallows humor. They share a language."
+            GTS "Oh? What language would that be?"
+            MC "Obscenity."
+            show GTS unique-2 at Position(ycenter=0.55)
+            GTS "Hmhm, how droll."
+            MC "Hm... I didn't get as much of an impression of Masaji-san herself."
+            show GTS neutral
+            MC "She seems... sad? Kinda anxious? I think she cares about doing the right thing, though."
+            GTS "I'm inclined to agree."
+            GTS "I do wonder if her figure might be a product of the difficulties in her personal life... which I gather are prodigious indeed."
+            show GTS pondering at Position(ycenter=0.35)
+            GTS "Poor girl."
+            MC "She said her mom made her get a factory job instead of going to high school. Can you imagine?"
+            show GTS surprised at Position(ycenter=0.55)
+            GTS "Scarcely! Great God, to try and keep up with materials three years ahead..."
+            MC "Right? I'd keel over at my desk."
+            MC "..."
+            show GTS neutral
+            "It crossed my mind to mention the strange way Hina looked at me the whole time."
+            pause 1.0
+        if getFlag("GTS058_imitalk"):
+            "I scratched my temple, or tried to, through my personal curtain."
+            MC "Well, it goes without saying Ishida-san is super nice. She seems to be pretty into nature, too. I bet you in particular would get along famously."
+            GTS "Her enthusiasm for the natural sciences is readily apparent, that much is true. She could make for an enriching companion indeed."
+            MC "That's what I'm saying! I'm surprised you aren't already sipping afternoon tea with her."
+            GTS "Well, that shall have to be promptly amended, shall it not?"
+            MC "Yeah, get it girl."
+            show GTS pondering at Position(ycenter=0.35)
+            "She tilted her head for a moment."
+            show GTS neutral at Position(ycenter=0.55)
+            GTS "Ah, you mean that as a general call to action."
+            MC "Correct."
+            MC "Oh, and Miyano-san."
+            MC "Talk about edgy. The guy takes things way too seriously."
+            GTS "I must say I concur."
+            MC "I kid you not, I so much as {i}mentioned{/i} his local baseball team losing, and you'd think I shot his mother the way he refused to speak in my presence."
+            MC "At least he's honest. If he's not interested in talking about something, you'll know."
+            GTS "I suppose that is a certain species of sincerity."
+            MC "Yeah."
+        MC "...I think that was everybody."
+        if getVar("GTS058_intros") > 2 and (checkSkill("Art", ">", 10) or checkSkill("Academics", ">", 10)):
+            MC "...You know, looking back... a lot of them seemed to be occupied with what they left behind."
+            GTS "As is to be expected. {w}Do tell, what precisely did they say to suggest it?"
+            MC "Hm... well..."
+            MC "Masaji-san talked about how her and her mom are going to get by..."
+            MC "Ishida-san reminisced quite a bit about going on nature walks back home..."
+            show GTS aroused
+            MC "I get the sense Miyano-san was trying for a career in baseball, and that he's still carrying feelings about it."
+            MC "And unkind as it may be to say... I think Uno-san is kind of in denial."
+            MC "He was talking about whether he wants to work in an office or in his uncle's restaurant, like... he's almost the same size as Watanabe-san. Before long he won't even be able to set foot in city limits."
+            MC "..."
+            MC "You seem intrigued."
+            GTS "You {i}have{/i} presented me with some intriguing insights."
+            $setAffection("GTS", 4)
+            show GTS neutral
+            GTS "I consider myself learned in many strivings of the human heart, but I do confess that my perspective has expanded, with much thanks to you, Keisuke-kun."
+            MC "Well, the pleasure is mine. It's always been my dream to help you expand."
+            GTS "Might I suggest starting with your repertoire?"
+            MC "{i}Oh!{/i} The mouth on youse!"
+            show GTS unique-2
+            GTS "Oh gracious, don't {i}you{/i} start, too."
+            MC "Now this is intriguing. Have I found a button to push?"
+            show GTS aroused
+            "And suddenly, I was quite silenced by the narrowing of her eyes and the lowering of her voice."
+            GTS "You might yet... my love."
+            MC "Ah... I, uh... yeah."
+            show GTS neutral
+            "She chuckled in her soft, motherly way and sat back into the couch."
+        "Tapping her pen for a beat, she began writing notes in elegantly humble strokes."
+        GTS "This was quite a productive afternoon, I daresay. I think everyone is a little tighter-knit. Would you not agree?"
+        MC "I could see it. I dunno that everyone was strictly getting along."
+        GTS "Mm... a fair point.{w} That shall have to be a problem for another day."
+        "After one final flourish, she folded the note, set it and the pen on the table."
+        "Slowly she turned to look me in the eye, her smile a little wider, a little less saintly."
+        GTS "Keisuke-kun, would you be so good as to help me open a bottle?"
+        MC "Of course, my delicate flower. Where can I find it?"
+        hide GTS
+        show GTS_S neutral
+        with dissolve
+        "She stood, and walked to the kitchen counter, producing from the peak two bottles of a thick, creamy beige liquor daintily pinched between her fingers. I trailed her like a wake."
+        "The labels were of a thick, pulpy paper striped with bold black calligraphy: amazake, the old kind you needed to know a guy to buy."
+        GTS_S "Non-alcoholic, of course. We wouldn't want to set you down a path of intemperance."
+        MC "Heh, of course."
+        hide GTS_S
+        show GTS neutral at Position(ycenter=0.55)
+        with dissolve
+        "She opened her hand and I promptly obeyed, twisting just enough to break the metal caps."
+        #high selfhood variant here later
+        "She thanked me and retrieved cups for us both as I held onto the bottles."
+        MC "These... look expensive."
+        GTS "Fortunately, there is an old family friend I was able to call upon."
+        GTS "One cannot, after all, serve middling amazake at the many temples dotting his highness' very city."
+        MC "His highness' {i}former{/i} city."
+        show GTS wink
+        GTS "Do you want a drink or do you not?"
+        MC "I do, I do. May I?"
+        "She proffered the cups and I poured, 1.75 bottles for milady, and the rest for yours truly."
+        "I followed her again to the couch to drink, in slow, plodding steps, enwreathed like incense in sweetness, creaminess, and earthen umami."
+        MC "Mm... this does take me back."
+        show GTS happy
+        GTS "Does it not? It is as though it were only a moment ago... the warmth on your fingers, the snow on your ears, that crisp jingle of the bells..."
+        "For no particular reason, I laughed."
+        MC "Persistent for such a simple thing, isn't it?"
+        GTS "Quite so, quite so."
+        show GTS unique-2
+        "We took the first sip together- I could taste the decades, centuries maybe, imbued in the sweet cream as its understated aroma filled my mouth."
+        GTS "Hmmmm..."
+        MC "Ah..."
+        "No words were needed as we slowly drained our cups."
+        show GTS neutral-2 at Position(ycenter=0.35)
+        "Once she set our cups down on the table, she lay down behind me with her head resting on her folded arms. Her eyes beckoned me."
+        "She kissed my body when I got close, which I returned upon her vast, porcelain cheek. Once, twice, many times."
+        "At last, I paused."
+        MC "If you'll indulge me one more thing, Blossom..."
+        GTS "Yes?"
+        MC "...What's the occasion?"
+        "She lay smiling, perhaps just to herself, for a moment or two before she saw fit to answer."
+        GTS "A changing of seasons."
+        jump daymenu
 
 label GTS059:
     $setProgress("GTS", "GTS060")

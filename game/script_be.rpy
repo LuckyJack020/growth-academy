@@ -15955,6 +15955,618 @@ label BE060_c1_after:
     jump daymenu
 
 label BE061:
+    $setProgress("BE", "BE062")
+    play music DormLife
+    scene Dorm Hallway
+    show BE neutral
+    with fade
+    MC "Are you sure you want me to come with you for this?"
+    show BE happy
+    BE "Oh, come on Kei-chan, it's just like going shopping together!"
+    MC "You're not really selling me on the experience— try again."
+    show BE angry
+    BE "Ugh, what is it about shopping that guys don't like?"
+    MC "The part where you try on everything, don't like any of it, ask for an opinion and don't like that either and then secretly hope I'll pay for it once you finally do make up your mind?"
+    show BE happy
+    BE "Yes, but {i}besiiiides{/i} that, you gotta admit, it's pretty fun!"
+    MC "You couldn't sell cheese to a mouse, you know that?"
+    show BE shrug
+    BE "Maybe so, but this is bra shopping we're talking about, and as far as I'm concerned, the mouse is already in the trap."
+    show BE smug
+    MC "A mouse? Well, lucky for me my whisker growth hasn't kicked in yet."
+    BE "True. I suppose you're more of a guinea pig really, like one of those long haired versions."
+    MC "I consider myself to be more of a capybara, since they're pretty chill, but at least I'm moving up on the hierarchy of rodents."
+    BE "Naw, guinea pigs are way cuter."
+    MC "There's a flattering complement somewhere in all these rodent comparisons, but somehow I'm not finding it."
+    show BE shrug
+    BE "I guess you'll just have to make the most of it until the teeth growth part of your factor kicks in, hehe."
+    MC "Oh, God. At this point I wouldn't doubt there's a non-zero chance of that happening. I gotta put that thought out of my head." 
+    show BE happy
+    BE "Relax, Beaver Boy, I'm sure you'll be fine."
+    MC "If that happens, I'm gonna gnaw a tree down through your window just for jinxing me."
+    show BE seductive
+    BE "And that's the thanks I get for giving you all those whisker scratches..."
+    MCT "Don't tell me she's already planning for it..."
+    show BE neutral
+    "As much as I didn't want to sit around waiting for Honoka to pick out something like our usual shopping experiences, part of me was hoping this could be a positive boost for her." 
+    "Just maybe, I thought that it might help take her mind off the recent challenges she's been having with her growth." 
+    "I mean, if you think about it, if she got a bra that actually fit and wasn't constantly digging into her, it'd be one less constant reminder about how the changes she's going through keep making things more difficult."
+    "Then again, the more I thought about it, this whole ritual of having to get fitted again might just bring everything to a head and hammer home just how out of control the situation has become."
+    pause .5
+    "I tried not to think about that last possibility too much. {w}After all, she was still growing and she would need a new bra eventually. It wasn't something she could put off for much longer anyway, so either way, we had to cross that bridge."
+    "Might as well be now. Thankfully though we had a friend we could trust to guide her through the process."
+    play sound Knock
+    WG "Come in!"
+    scene Dorm WG
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE confused at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    play music WG
+    "Even though we both saw Alice almost everyday in class, for a brief second after opening the door, we were both still caught off guard by the sheer size of her."
+    show BE neutral
+    "As much as Honoka had been growing like crazy, Alice's own extreme proportions were a stark reminder that other students had to be going through similar struggles."
+    show WG coy
+    WG "Right on time. What an unexpected surprise..."
+    show BE surprised-2
+    show WG neutral-2
+    BE "Hey! What's that supposed to mean?"
+    show BE embarrassed-2
+    MC "You know {i}exactly{/i} what she means."
+    show BE shrug
+    BE "Alright, you got me. Good thing you talked me out of doing another round of Worldly Fighters before we left."
+    show WG neutral
+    show BE neutral
+    WG "A prudent decision, especially considering I don't know when else I'd be able to fit you in the schedule. My fitting appointments are booked out for quite some time." 
+    MC "Sounds like business is booming."
+    WG "What can I say? It's a captive market."
+    show WG surprised-2
+    WG "Speaking of that, Honoka, dear, it looks like you're in dire need of something new."
+    show BE embarrassed
+    BE "Tell me about it, I feel like the underwire on this thing is about to cut me in half."
+    show WG pondering
+    WG "Hmm, yes, I see. Let's get you squared away then."
+    play music DayByDay
+    if getFlag("Meet_Chibuki"):
+        show WG neutral
+        WG "My assistant here will take your measurements."
+        show Chibuki neutral with dissolve
+        show BE confused
+        "It almost bowled me over to see just about the last person I expected to emerge from the other room."
+        "I had met Chibuki before, but nothing about her made me suspect being Alice's assistant was a job she wanted. Though judging by her default, somewhat dour disposition, that might be the case anyway."
+        show BE neutral
+        BE "Hello, I don't think we've met before. I'm Honoka Inoue."
+        Chibuki "Name's Chibuki. You don't got to bother with that last name stuff. Alice and I are on the same page with that."
+        show BE happy
+        BE "Ah, I see. You don't sound like you're from around here. Did you grow up overseas like Alice?"
+        show BE confused
+        Chibuki "Oh come now, my accent can't be that bad! Blimey, that's about all anyone says when I open my mouth. I'm still fluent ain't I?"
+        show BE embarrassed-2
+        BE "Sorry, I didn't mean it like that. I was just curious." 
+        show BE happy
+        extend " It's actually kind of neat."
+        show BE neutral
+        Chibuki "Okay, well I guess you didn't mean it like that."
+        Chibuki "To answer your question though, I wouldn't say it was the same as Alice. She was born her then lived in the States for a while."
+        Chibuki "I on the other hand was born and raised in Manchester, England when after me mum moved there from Japan, but eventually we moved back here."
+        show BE happy
+        BE "Oh, really? That's so cool!"
+        BE "This is my boyfriend, Kei."
+        show BE neutral
+        MC "We've met. Nice to see you again, Chibuki. This your new gig?"
+        Chibuki "Everyone's got to make a living, right?"
+        BE "Looks like I'm in good hands, seeing as we share the same factor."
+        Chibuki "I'm not sure if it's considered the same thing, seeing as these things here want to poke through damn near any fabric. My roommate calls me \"Torpedo Nips\" in case I ever forget."
+        show BE surprised
+        BE "OH! You must be Akira's roommate then."
+        show BE neutral
+        Chibuki "I see my reputation precedes me, thanks to that big lummox."
+        Chibuki "Still though, I'd have to say, I'd take this pair of pointers over that set of back-breakers you got."
+        show BE embarrassed
+        BE "You're telling me!"
+    else:
+        show WG neutral        
+        WG "My assistant here will take your measurements."
+        show Chibuki neutral with dissolve
+        show BE confused
+        "As if on cue, a rather curiously looking figure emerged from the next room. {w}Not that I'm one to judge, but her purple hair punk aesthetic seemed at odds with Alice's more posh and traditional sensibilities."
+        "Aside from that, it seemed that this girl also shared Honoka's factor, albeit much reduced in severity." 
+        "Now, maybe Alice kept her room ten degrees cooler than most people (not unlikely given her generous layers of insulation) or those daggers about ready to poke through this girl's shirt represented something else entirely about her growth."
+        show BE neutral
+        BE "Hello, I don't think we've met before. I'm Honoka Inoue."
+        Chibuki "Name's Chibuki. You don't got to bother with that last name stuff. Alice and I are on the same page with that."
+        "Chibuki's accent was quite unique, which suggested she might not have grown up in Japan."
+        MC "I'm Kei, nice to me you, Chibuki."
+        $setFlag("Meet_Chibuki")
+        Chibuki "Nice enough, I suppose. I know who the both of you are. My roommate told me about \"The Big Boob Girl\" and the \"Long Haired Dude\" - her words, not mine- that are in her classes."
+        WG "That does sound like Akira's particular brand of naming convention."
+        show BE happy
+        BE "You're Akira's roommate? Sweet!"
+        MC "That's a nice coincidence then. I don't recall her mentioning her roommate before though."
+        show BE neutral
+        Chibuki "Sounds about right. I swear the big lummox forgets I exist half the time."
+        Chibuki "Alright, let's get your measurements sorted."
+        WG "On that note, the process is rather, shall we say... {i}thorough{/i}. {w}I think it would be best for you to wait outside, Keisuke."
+        show BE happy
+        BE "It's okay, Alice. If it's alright with you, I'd prefer if he could stay."
+        Chibuki "Right, nothing the ol' bloke hasn't already seen before, I'm guessing?"
+        show BE embarrassed
+        BE "Hehe, well..."
+        show BE neutral
+        WG "Okay, that's fine. If it doesn't bother you, it doesn't bother me. Just don't go around telling other clients this is typically how we do things."
+    show WG neutral-2
+    WG "If you would then, Honoka, please disrobe your shirt."
+    BE "Sure thing. Let's get started."
+    "Honoka proceeded with the top button, but as she slowly worked her way down, the limits of her armspan became apparent to Alice, who motioned with her eyes to Chibuki to start giving her a hand."
+    Chibuki "Bloody hell! How do you contain these things, let alone get yourself in a presentable state each morning?"
+    BE "Well, I have a roommate who doesn't seem to mind helping me out with it. She's a bit of an odd duck, but still a good egg."
+    show BE seductive
+    BE "Besides, I have my own assistant who helps me handle things..."
+    "Honoka turned her eyes right in my direction, eliminating any subtlety there might have been about the matter."
+    show WG doubt
+    "Not that I wasn't proud of that fact, but I did blush a bit when I noticed Alice roll her eyes in response to Honoka's obvious insinuation."
+    show BE neutral
+    show WG neutral
+    "Luckily the center of attention changed once Honoka and Chibuki had successfully managed to carefully undo all of the buttons on her shirt."
+    show BE embarrassed-2
+    Chibuki "Alright now, don't get over zealous. I know from experience we can't be too hasty with this process." 
+    "Chibuki was correct, even I knew from experience the whole ordeal was like some kind of pressure release mechanism that needed to be done in the proper order to make sure nothing got ripped."
+    "You'd think though that after her shirt was removed things would get easier from there, but that was just the start of the troubles."
+    show BE doubt
+    Chibuki "Oi! I knew the shirt was tight, but you're about to spill out the top of this thing too."
+    BE "Is it really that bad? I mean I know it hasn't been feeling the most comfortable lately... {w}But I thought it still had some life left in it."
+    show WG neutral-2
+    WG "I'm afraid its life has been stretched beyond its limit. Don't worry though, we'll be able to get you something comfortable. {w}I would also recommend a new shirt with more accommodating dimensions."
+    BE "Yeah, you're probably right..."
+    show BE worried
+    "By this point it seemed Honoka wasn't having as much fun as she expected from her so-called shopping experience." 
+    "It was one thing for both of us to pretend everything was fine, but seeing Alice and Chibuki's reactions to her wardrobe woes hammered home the truth about how aggressive her growth had been lately."
+    show BE neutral
+    Chibuki "Alright, let's release you from the torture chamber."
+    show WG neutral
+    WG "Keisuke, be a dear and assist Chibuki with the process of removing Honoka's brazzier." 
+    show BE wink
+    BE "That's something he can do. He does have plenty of experience after all."
+    show WG happy-2
+    "Alice and Chibuki looked at each other, despite attempting to maintain a veneer of professionalism, I could tell they were quite amused by Honoka's so-called \"complements\" directed towards me."   
+    show WG neutral
+    show BE happy
+    Chibuki "Right-o. You heard the lady. Stop staring with your jaw to the floor and come help me. {w}Since you're the guy here, you're stuck doing the heavy lifting."
+    Chibuki "Lift up on them from the front so I can undo the clasps in the back without so much pressure on them."
+    MCT "Don't have to tell me twice."
+    "As much as I relished in the idea of hoisting those massive mammaries again, it wasn't without difficulty."
+    if checkSkill("Athletics", ">=", 7):
+        MCT "Boy, these babies are heavier than I remembered. Good thing I've been training for this!"
+        show BE embarrassed-2
+        Chibuki "Oi, you lazy lout! Put your back into it!"
+        MC "Oh, sorry."
+        "Apparently it wasn't enough to do a typical bicep like a standard feel'm up— I needed to full on shoulder press these tankards to give Chibuki enough slack to operate the bra strap behind her."
+    else:
+        MCT "Geesh. These things are heavy! How does Honoka carry these busty beasts around all day?"
+        show BE embarrassed-2
+        Chibuki "Oi, you lazy lout! Put your back into it!"
+        MC "Oh, sorry."
+        MCT "Shit. This is a lot more weight than I was anticipating."
+        "Hoping to preserve my back and lift with my legs, I dipped down and brought my hands underneath the massive mammaries, offloading some of the weight onto my shoulders as I squatting upwards"
+        MC "Hnnn!"
+        $setAffection("BE", -1)
+        show BE sad
+        BE "Oh come on, they aren't that heavy... Are they?"
+        MCT "Not that heavy!? I'm holding on for dear life here!"
+    show BE neutral
+    Chibuki "Got it!"
+    show BE confused
+    "With the slack taken out of the clasp in the back, Honoka's breast noticeably dropped down a few centimeters now that the slack had been taken out." 
+    show WG surprised-2
+    show BE embarrassed-2
+    WG "My, that was quite the ordeal."
+    show BE neutral
+    Chibuki "Perhaps we could have used some additional assistance?"
+    show WG doubt
+    WG "You have my assistance. I'm supervising the process. {w}As far as I'm concerned you both performed adequately to the task."
+    show WG bored
+    Chibuki "Boy that's a relief. Couldn't have done it without you, Alice."
+    show WG doubt
+    "Alice for her part, seemingly all too used to Chibuki's facetious commentary, just rolled her eyes in response."
+    MCT "If she wants to bite the hand that holds the pursestrings, that's none of my business."
+    show WG neutral
+    WG "Chibuki, proceed to help Honoka with pulling the straps off her shoulder one at a time, while Honoka looked right at me as she proceeded to do a little shimmy to \"help\" with the process."
+    $setBEOutfit(OutfitEnum.TOPLESS)
+    show BE neutral with dissolve
+    "And there they were, two pristine mountain peaks. I'd seen them in their full glory a number of times before by this point, but each time was even more breathtaking than the last."
+    show BE seductive
+    Chibuki "Don't get too close, you might poke an eye out."
+    MCT "Oi, oi, I'm more worried about those darts poking out from your bra than hers."
+    "Apparently I had been caught staring long enough that it was noticeable to the other two ladies in the room."
+    show BE wink
+    "All according to someone's plan apparently."
+    show WG pondering
+    show BE neutral
+    WG "You'll have to bear with us a bit, Honoka. What I've learned with these more... shall we say, {i}cumbersome{/i} dimensions, is that in order to make a truly custom fit, we'll need to take a lot more measurements than what is standard." 
+    show WG neutral
+    WG "I'm sure it's no surprise to you, but your measuring is looking to be a two person job. Good thing Keisuke is here to assist."
+    MC "Happy to help. I think I've sorta done this before. What's first? Shoulders?"
+    Chibuki "Just hold this end and try not to muck this up for me, will you?"
+    Chibuki "I tell you where to hold it against her, and I'll do the maneuvering, all you have to do is play pin-the-tail on the donkey without a blindfold. Simple right?"
+    show BE happy
+    BE "I'm not so sure about that, Kei-chan has a built-in blindfold."
+    MC "See? I came prepared."
+    Chibuki "Something tells me he's not actually blind judging by how much he keeps staring at your wobbly bits."
+    MC "Echo location."
+    Chibuki "Alright then, Batboy, stand on her left side and hold that end here at the top of her chest and I'll take her shoulder measurement first."
+    "Despite Honoka's rather petite feminine frame, whose shoulders couldn't be described as broad, it was still best done as a two man job, considering there was a journey across two mountains and a valley to get to the other side."
+    Chibuki "Did you get that one Alice?"
+    WG "Yes, I can see it. Do her chest measurement next."
+    MC "Are you sure you have a long enough tape measure for that?"
+    show BE confused
+    BE "Hey!"
+    show BE disoriented 
+    extend " That's what I was gonna say!"
+    show BE happy
+    Chibuki "Don't go off half cocked, we're not there yet. I'm talking about her actual chest measurement underneath the shoulders."
+    show BE seductive
+    "Honoka raised her arms above her head to help us loop the tape measure under— doing a little shimmy in the process that set her pendulums in motion. {w}To which I could only shake my head in response."
+    show BE embarrassed-2
+    "I mean, obviously I liked it, and Honoka knew it, but I had to at least {i}pretend{/i} I was being serious about this whole thing, cause we both knew she wasn't going to be."
+    Chibuki "Easy there! I didn't realize this job came with occupational hazards."
+    show WG doubt
+    WG "Before you ask, you can't use the occasional errant breast as an excuse to get hazard pay."
+    Chibuki "If they come any bigger than this you might have to."
+    show WG pondering
+    WG "Hmm, suggestion noted."
+    show BE confused
+    BE "Oh come on, they are {i}that{/i} big!"
+    MC "Yeah, they're just joking with you. They've probably seen at least a few other girls similar in size if not bigger."
+    MCT "...Right?"
+    WG "Well... If you're really curious... {w}This would be the largest brassiere we've had to make for a student."
+    show BE worried
+    Chibuki "Yep, and by more than a few cup sizes I'd wager."
+    show WG stern
+    "Alice shot Chibuki an unamused look, to which Chibuki sighed, conceding the point."
+    BE "Oh..."
+    show WG neutral
+    show BE neutral
+    Chibuki "But that's why you're here right? Doesn't matter what the size- we're gonna get you sorted out here today."
+    show BE happy
+    "Honoka seemed to perk back up after hearing that. Luckily not too perky though- cause if those fun bags perked up any more than they already were, we both might lose an eye."
+    Chibuki "Alright, we're getting distracted here."
+    Chibuki "Next one is the main one: circumference at the peak."
+    "Chibuki proceeded to pull out a new measuring tape from her pocket, one that draped down to the floor."
+    MCT "Looks like they had to fuse two together. I wonder who else they've needed to use this one on..."
+    show WG neutral-2
+    "Before I gave it any more thought, my dumbass realized the obvious answer was standing in the room with us."
+    "Trying not to get too distracted, I pinned my end of the tape to the front of her left boob using my thumb, with a decent amount of squish... You know... for thoroughness."
+    show BE wink
+    "My attention to detail didn't go unnoticed."
+    Chibuki "Keep holding that there, I'm coming around."
+    "As Chibuki navigated the circumference around Honoka's rack, I noticed slack being taken out from that ridiculously long tape measure that was no longer draped across the floor."
+    show BE flustered
+    Chibuki "!"
+    MCT "Hm?"
+    Chibuki "Got it, right-o. Next one."
+    "Realizing I was too distracted staring down at her boob and that the tape measure across her nipples set something up her spine, I forgot  to see what number it landed on." 
+    "But Chibuki had whipped measuring tape away from me and must have silently mouthed the number to Alice."
+    "As much as I was curious about the number myself, it was probably an attempt to not alarm Honoka."
+    show BE neutral
+    Chibuki "Alright, now we gotta get to the non-standard measurements. We're going to get the circumference parallel to her chest."
+    BE "I don't think I've ever had that measured before."
+    show WG neutral
+    WG "With these non-standard sizes I've found that additional measurements are needed in order to do a proper custom fitting."
+    Chibuki "Be a sport for me and guide this under there. I'm sure she won't mind."
+    show BE aroused
+    "Honoka wiggled her eyebrows at me as I reached under her boob close to the chest. Honestly it was a bit tough because as soft creamy in texture her skin was, my arm was all but pinned to her ribcage by a wall of boob."
+    "Can't say I wasn't enjoying the process, but at this point maybe Honoka was enjoying it a bit too much."
+    WG "Alright, that's the base circumference. Let's get the middle."
+    show BE excited
+    "This was the widest part, where they were the most round, and my task was to cup the underside of her boob to hold the measuring tape in place."
+    MCT "Best job I ever had."
+    "I literally had to toss the other end up over and across Honoka's chest chasm to Chibuki so she could wrap it around and duck under them to close the loop."
+    Chibuki "Alright, quick work of that."
+    show BE confused
+    WG "Now we need the long circumference."
+    BE "What's that?"
+    show BE neutral
+    WG "It's the length from the top side of your chest, down and around the apex to the underside of your breast."
+    Chibuki "Do me a favor and reach down in there and I'll take care of the rest."
+    MC "I'm worried I might lose a hand."
+    show BE unique
+    BE "Don't worry, I'll help you find it."
+    Chibuki "See, I'm sure you'll manage."
+    show BE embarrassed-2
+    "Hoping to avoid pinching my arm this time, I took a heavy handful with my free hand to lift up on her boob to give my hand a little more leeway before getting my hand stuck under its full weight."
+    show BE aroused
+    "Only problem was there wasn't much lifting going on, just a whole bunch of squishing and squeezing as the mass of tit flesh yielded around my hand, just not gravity."
+    MCT "Eh, not the worst problem to have."
+    show BE excited
+    BE "Is squeezeability part of this measurement?"
+    Chibuki "It isn't, he's just a bit shit at this."
+    show BE embarrassed-2
+    MC "Hey, I'm trying here. In case you can't tell, I'm not getting as much \"lift\" as I would hope."
+    Chibuki "You've got to do a bit better than that. We need a real measurement or it isn't going to turn out right."
+    show BE seductive
+    MCT "Hmm, think Kei."
+    "I may not have been the best student, but I've studied long enough that I could probably write a dissertation on the physics of boobs."
+    MCT "Time to test my theorem."
+    MCT "Mass has weight... But it also has inertia."
+    show BE surprised-2
+    "I took a firm grasp palming the underside of her boob."
+    extend " Honoka apparently noticed just how \"firm\" it was too."
+    "I wasn't going to have much luck lifting it straight up, but I could get this ponderous pendulum to swing."
+    show BE unique
+    "Using a swooping arc, I began rocking her boob back and forth. It was heavy but now it was in motion."
+    show BE wink
+    BE "What are you doing down there, Kei-chan?"
+    show WG bored
+    WG "Yes, this isn't the occasion for your personal amusement..."
+    Chibuki "Are you some sort of loon?"
+    MCT "One... Two... {i}Three!{/i}"
+    play sound Boing
+    show BE surprised-2
+    show WG surprised-2
+    "With one last swing and a bounce there was just enough lift for me to reach my free hand right underneath to get the tape measure up there in her underboob before it came slapping down on my hand."
+    show BE aroused
+    play sound Thud
+    MC "OOF!"
+    BE "So that's what you were doing? And here I thought you were just messing around."
+    Chibuki "That was actually kind of brilliant mate."
+    MC "I have my moments, I suppose."
+    show WG sly
+    show BE happy
+    WG "It seems Honoka was right to let you stay, Keisuke. Quite a clever solution."
+    show WG neutral
+    WG "That will be all the required measurements we need. Chibuki, please help Honoka back into the rest of her wardrobe."
+    "With Chibuki's added assistance, putting her clothes back on didn't involve much fanfare, though I suspect my weight relief via more than a handful of hand cupping helped more than just to satisfy my own desires."
+    $setBEOutfit(OutfitEnum.DEFAULT)
+    show BE neutral with dissolve
+    play music Peaceful
+    "Seeing Honoka had been satisfactorily suited back up in presentable condition, Alice pulled out a rather thick binder that she presented to her, which I gather must have been her \"catalog\" so to speak."
+    WG "Alright then, Honoka, go ahead and look through and pick whatever pattern and fabric suits your fancy."
+    show WG haughty 
+    WG "I guarantee the quality of every article of clothing produced, so one will serve your purposes on a budget, but I recommend two to three so you have enough to match for a given mood, dress, or occasion."
+    show WG neutral-2
+    BE "I appreciate the suggestion, but considering my budget, let's stick to one workhorse for now, since I don't know how much more growing I should expect."
+    BE "But I'll definitely order more if it looks like things are going to level out."
+    WG "Understandable. Let me know if I can assist at all in your selection."
+    show BE happy
+    "I was happy to see the spark ignite back in Honoka's eyes. Even if the measuring ordeal had been an unwelcome reminder about the uncomfortably uncharted territory her growth had taken, she was now locked into full on \"shopping mode\"."
+    show BE surprised-2
+    BE "Oh... OH... {i}OHH{/i}!"
+    show BE happy
+    BE "I gotta say, Alice, I'm impressed with the selection."
+    show WG neutral
+    WG "Sadly, I'm personally disappointed at what I can feasibly offer my customers at a reasonable price given the shipping cost to this economic backwater of an island, but I do pride myself on offering a serviceable variety."
+    show BE confused
+    BE "I think this is a little bit more than \"servicable\", Alice. Honestly I'm a bit overwhelmed by the amount of choices."
+    show BE happy
+    BE "Why don't you take a look, Kei-chan? Maybe you could help me decide."
+    show BE wink
+    BE "After all... You're the only other person who's supposed to see it."
+    show WG neutral-2
+    "Alice for her part looked off in the other direction, pretending not to hear our conversation."
+    show BE happy
+    MC "If that's what you want. Sure, I'll take a look."  
+    "I flipped through the pages... and more pages... and even more pages."
+    MCT "Just how much shit is Alice offering? Holy cow!"
+    "As much as Honoka might have been enjoying the shopping experience, true to my word earlier, I was equally {i}not{/i} enjoying it by perusing the catalog."
+    show BE neutral
+    BE "So what do you think?"
+    MCT "Something soft and silky... shiny— and sexy as hell!"
+    MCT "But don't actually tell her that, you dummy!"
+    MC "Uh... I mean, I don't have a strong preference one way or another. I just want you to pick something that's going to be comfortable."
+    MCT "Yes, that's gotta be the right answer..."
+    show BE angry
+    BE "Ugh, you're so lame!"
+    MCT "Swing and a miss there, Bud."
+    show BE happy
+    BE "I want this one!"
+    show WG pondering
+    WG "Pearl plush, quite a tasteful color choice I must say. A nice inbetween of pink and off-white that maintains a wide versatility for style pairings."
+    WG "What fabric did you have in mind?"
+    show BE doubt
+    BE "{i}Oof!{/i} I was thinking silk, but on second thought, that's a bit more expensive than what I had in mind..."
+    show BE neutral
+    WG "I can't in good conscience say there's a perfect substitute for natural fabrics."
+    show WG neutral 
+    WG "But... If you're looking for that soft gliding texture that silk provides, I recommend rayon as a synthetic alternative that provides a similar experience on a budget."
+    show BE shrug
+    BE "Say less. I'm sold."
+    MCT "This woman is a mind reader."
+    show BE neutral
+    WG "Very well, I'll get that order placed then."
+    WG "Luckily the measurement process didn't take as long as I expected, in no small part thanks to your contributions Keisuke."
+    MC "Happy to help."
+    show WG neutral-2
+    WG "Since we have a bit of spare time between now and my next scheduled appointment, would you care to join me for some tea?"
+    "Given that Alice was cutting Honoka a deal and accommodating a short-notice appointment as it was, neither of us were in a position to refuse her hospitality."
+    show BE happy
+    BE "Sure, we got time if you do."
+    "Honoka and I were certainly on the same wavelength with this matter, even if neither of us were big tea drinkers."
+    show Chibuki neutral
+    "As if on cue, Chibuki emerged from the kitchen with a serving tray carrying a tea kettle and three sophistically ornate tea cups, setting it down at a small table in the center of the room Alice gestured us to take a seat at."
+    Chibuki "Tea is served. May I end my shift now?"
+    WG "Yes, you've filled your allotted time on the schedule. I'll see you tomorrow, Chibuki."
+    show BE confused
+    BE "You're not going to stay for tea? I thought afternoon tea was like a big deal in the UK?"
+    show BE neutral
+    Chibuki "Don't get me wrong, I enjoy a good cup of tea as much as any Japanese or English-woman, but I don't really have the stomach for the more exotic fare Alice likes to prepare."
+    show WG coy
+    WG "Don't listen to her. Just this morning she joined me for tea."
+    show WG bored
+    Chibuki "Just cause I enjoy a good English breakfast tea doesn't mean I can swallow all that other gobblety-gook you like." 
+    show WG neutral 
+    extend " Though I will say she knows how to brew a perfect London fog if you get the chance to try it."
+    WG "That will be all, Chibuki."
+    Chibuki "Right, right. I'll see you bright and early tomorrow then. Like always."
+    hide Chibuki with dissolve
+    pause .5
+    show WG doubt
+    WG "I swear, good help is hard to find. Good help that doesn't complain on the other hand seems impossibly rare."
+    show WG neutral-2
+    "Looking at the tea set on the table, one kettle and three cups, I noticed the other two tea party participants lacked the reach to retrieve their cup due to... \"obstacles\" of their respective builds."
+    "Not that neither could manage if need be, but it struck me as an all-too-easy thing for Honoka to accidentally topple the table if those titan sized tatas got out of hand."
+    MC "Here, let me pour the tea."
+    WG "Thank you Keisuke."
+    show BE happy
+    BE "Already promoted to butler after being a tailor's assistant for twenty minutes. You're moving up in the world, Kei-chan."
+    MC "Oh hush. We both know Alice can't afford me."
+    show WG happy
+    "Alice & Honoka" "BWHAHAHA!"
+    "Besides uncontrollable giggles, between the two of them there was more wiggling and jiggling coursing under their shirts than I could keep track of."
+    "Proceeding to pour the tea however seem to present a different challenge."
+    show BE confused
+    MCT "Hm? {w}Why does it look like that? Did Chibuki fuck up this tea or something?"
+    WG "Ah, a nice and rich color. Looks like Chibuki steeped it for the right amount of time."
+    " \"Nice and rich\" was a bit of an understatement. It looked black as night, like some herbal decoction a crazy old lady would give you to relieve a chest cold."
+    show BE doubt
+    "Both Honoka and I looked askance at our tea cups in hand before looking back at each other, then back to Alice, who was sipping her tea contently."
+    BE "Uhh, what is this, Alice?"
+    show WG neutral
+    WG "It's what's referred to as Pu-Erh tea. It is a rare and exotic fermented tea, prized for its unique flavor."
+    "Looking at each other, I could tell both Honoka and I were thinking nothing in that description included the words \"delicious\" \"amazing\" or even \"good\"."
+    show BE sad
+    BE "Ah... {w}Well... I guess it's nice to try something new..."
+    "Recognizing it would be rude to refuse, we both took a big sip..."
+    show BE surprised-2
+    MCT "!"
+    MCT "...{w}What the fuck is this?"
+    show BE worried
+    "Honoka's reaction was much the same if not worse than mine."
+    show BE surprised-2
+    WG "Oh? Is something wrong?"
+    show BE doubt
+    BE "Well... It tastes like grass... and dirt."
+    MC "Now that you say it, it does kinda taste like that wet hay smell."
+    WG "Oh, I thought there was something wrong with it from your reactions. This tea is known for its characteristic grassy and earthy notes."
+    "Honoka and I looked at each other wondering if we were being pranked or if Alice was somehow losing her grip on reality after drinking this stuff."
+    show BE sad
+    show WG neutral
+    BE "Don't take this the wrong way, Alice, but do you have any standard matcha? That's more my speed."
+    show BE neutral
+    WG "Sure, if that's what you want. I have some in the kitchen cabinet. Though I can't imagine why you would opt for that instead. This Pu-Erh tea is a delicacy amongst teas, far more costly too I might add."
+    BE "Are you sure you like this stuff, Alice? or do you just want to like it because it's more expensive and is {i}supposed{/i} to be better."
+    show WG doubt
+    WG "I assure you have no qualms with finding pleasure in the simple." 
+    show WG haughty
+    WG "But my palette is certainly able to discern the breadth and complexity of the aroma and flavors of this tea— and I can definitely state that it is far superior to a simple matcha."
+    show BE doubt
+    BE "Are you sure about that? Is it {i}reeaally{/i} better?"
+    show BE shrug
+    extend " Or is it just because you grew up drinking fancy-pants tea and that's what you're used to?"
+    MC "I'm not sure how anyone could get used to this stuff to be honest."
+    show BE neutral
+    show WG doubt
+    WG "My personal tastes are not merely a product of my upbringing— if that's what you're insinuating." 
+    show WG haughty
+    WG "If anything it's been able to grant me the opportunity for a breadth of experiences to actually discover my true tastes, in contrast to most students who seem content to not venture far from their daily cup-of-noodles."
+    show WG neutral
+    show BE smug
+    "Alice and Honoka both turned their heads directly at me."
+    MC "Hey, don't look at me like that. The vending machine is convenient when you accidentally sleep-in past breakfast."
+    show BE neutral
+    WG "Think about it though, Honoka, most everyone likes lobster when they try it, whether they can afford it or not. That's how foods come to be expensive."
+    BE "Maybe that's true of lobster, but you can't say the same thing about caviar. No matter how fancy you want to get with it, it's just salty fish eggs."
+    WG "Let me guess. {w}You've never had caviar."
+    show BE happy
+    BE "Nope."
+    show BE surprised-2
+    WG "Alright, where's my phone? Okay, I'll place an order and get it express shipped..."
+    BE "Whoa whoa, Alice, that's okay. I wasn't trying to get you to buy me caviar, I was just trying to point out there's a lot of things you like and you do because of how you grew up."
+    show BE shrug
+    BE "That doesn't make it better, it just is what it is."
+    show WG pondering
+    WG "Like what else do you mean?"
+    show BE neutral
+    BE "Well, like this clothing business. I mean, you're the only student here out of how many that would have even thought to do that."
+    show WG haughty
+    WG "So? My father is one of the greatest businessmen in history and he didn't grow up wealthy. I'm sure with his enterprising attitude he could have represented the same type of opportunity if he was in my position."
+    show WG surprised-2
+    BE "Yeah, but would he have made the same impression on you if he was just a normal salaryman?"
+    BE "I mean, look at me. Growing up I never gave much thought to my parents' jobs. What about you, Kei-chan?"
+    MC "Can't say being a store manager ever really spoke to me, I'm certainly not much of a writer either."
+    show BE happy
+    BE "Ya see?"
+    show WG stern
+    show BE unamused
+    WG "No, I don't. My father started from nothing and built one of the greatest business empires in the world— there's no universe where he would have ended up as an ordinary salaryman..."
+    pause 1
+    show WG pondering
+    show BE neutral
+    WG "Hmmm..."
+    WG "Maybe you do have a point..."
+    show BE happy
+    BE "Really?"
+    MC "They still look pretty round to me."
+    show BE embarrassed
+    BE "Quite you! Mr. Boob Brain."
+    show BE neutral
+    WG "You might be onto something, Honoka. Clearly there was something about Father's bluecollar upbringing that forged him into the type of entrepreneur he became."
+    show WG haughty 
+    WG "I need to consider this blindspot in my own perspective if I hope to live up to his legacy."
+    show BE happy
+    show WG neutral-2
+    BE "Don't worry. Kei-chan and I can teach you."
+    MC "We can?"
+    BE "Yes! Come hang out with us downtown this weekend Alice. You'll get the full Inoue-Hotsure experience."
+    MC "I can assure you it's really budget friendly."
+    show WG neutral
+    WG "Alright, I'll make sure Chibuki pens it into my schedule..."
+    BE "No. No assistants, no schedule. Just show up! It'll be fun."
+    show WG doubt
+    WG "Okay, fine. I'll be there."
+    show WG neutral
+    WG "Unfortunately, as much as I would like you to stay, I do have to get ready for my next appointment, but rest assured we'll get your order processed right away."
+    show BE worried
+    BE "At this point I'm just worried I'll have outgrown it by the time it gets here in a couple of weeks."
+    show WG surprised-2
+    WG "A couple of weeks? What are you talking about? You'll have in a couple of days."
+    show BE surprised-2
+    BE "What? Really?"
+    WG "You didn't know? I thought you made an appointment to take advantage of our new super-fast-service option for those with aggressive growths."
+    show WG neutral
+    show BE happy
+    BE "No, I didn't, but that's awesome! {w}I definitely gotta tell Kanami about this, she could use a new one too."
+    MC "How'd you get the orders done so fast?"
+    WG "I have a new seamstress. I was under the impression you've met before. I guess I'll have to introduce you some time."
+    MCT "Wait a moment... {w}Don't tell me..."
+    play sound Knock
+    WG "Oh, that's probably her with the latest order of fabric bolts"
+    show Kokutan neutral with dissolve
+    show BE surprised-2
+    Kokutan "I have returned from my far off journey, with rare silks and linens. Alas, the courier had still not delivered the rose gold silk swatches you ordered many moons ago..."
+    Kokutan "Honoka? Keisuke? What are you two doing here?"
+    BE "Kokutan? What are {i}you{/i} doing here?"
+    show BE neutral
+    Kokutan "I am at the employ of the Baroness. One look at this outfit and she recognized the talents of my craft."
+    show WG neutral-2
+    WG "She's quite a gifted seamstress. I would know, considering my mother made a point to teach me herself."
+    Kokutan "Are you here for a measuring?"
+    "In what I could only describe as some form of halfling goblin magic, she seemed to produce two cloth measuring tapes out of nowhere."
+    show BE shrug
+    BE "Actually we were just finishing up, Chibuki helped us this time."
+    show BE neutral
+    Kokutan "WHAT!? {w}ARRGGH! Not that purple-haired \"Bob's your uncle\" boobie!"
+    Kokutan "Make sure {i}I'm{/i} on the schedule next time you get refitted."
+    show BE doubt
+    BE "Honoka shot me a look with her eyes that screamed \"Dear God no!\"."
+    show BE neutral
+    BE "Sure. Yup. Don't worry. We'll make it happen. But, we gotta go and it sounds like you got another appointment coming up, so I'll see ya later."
+    Kokutan "Alright, alright. Drat! I can't believe I missed her appointment..."
+    scene Dorm Hallway
+    show BE neutral
+    with fade
+    MC "How ya feeling?"
+    show BE excited
+    BE "Sensitive. Thanks to you, Mr. Handfuls."
+    MC "Sorry about that, it was my first day on the job."
+    show BE seductive
+    BE "Well, if you started something the right thing to do would be to see it through until it's finished. What do you say we go back to my room?"
+    MC "You really want that next round of Worldly Fighters, don't you?"
+    show BE angry
+    BE "{i}Psht{/i}, you butthead!"
+    show BE happy
+    BE "But yes, we are definitely doing that later!"
+    jump daymenu
+
+label BE062:
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Honoka's route.{/outlinecolor}{/size}"

@@ -87,12 +87,16 @@ define Gou = Character('Gou', color="#C0C0C0") #RM Route
 define Etsuko = Character('Etsuko', color="#C0C0C0") #MC Route
 define Hamikawa = Character('Hamikawa', color="#C0C0C0") #AE Route
 define Haruhiro = Character('Haruhiro', color="#C0C0C0") #BE Route
+define Hina = Character('Hina', color="#C0C0C0") #GTS Route
 define Hotaru = Character('Hotaru', color="#C0C0C0") #MC Route
+define Ishida = Character('Ishida', color="#C0C0C0") #GTS Route
 define Junsei = Character('Junsei', color="#C0C0C0") #RM Route
 define Koneko = Character('Koneko', color="#C0C0C0") #BE Route
 define Michiko = Character('Michiko', color="#C0C0C0") #PRG Route
+define Miyano = Character('Miyano', color="#C0C0C0") #GTS Route
 define Sakie = Character('Sakie', color="#C0C0C0") #BE Route
 define Takeda = Character('Takeda', color="#C0C0C0") #MC Route
+define Ume = Character('Ume', color="#C0C0C0") #GTS Route
 
 #Background Characters
 define Akio = Character('Akio', color="#C0C0C0") #GTS Route
@@ -1328,6 +1332,8 @@ init 1 python:
     eventlibrary['RM006'] = {"name": "The Gate", "girls": ["RM"], "display": "Daichi's Side Route", "type": EventTypeEnum.OPTIONAL,     "location": "chukanpoint",       "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
     eventlibrary['RM007'] = {"name": "Foundation", "girls": ["RM"], "display": "Daichi's Side Route", "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM006"], [ConditionEnum.TIMEFLAG, "PREG"]]]}
 
+    eventlibrary['RMG001'] = {"name": "What Lies Ahead", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "gatefront",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG001_Unlock"]]}
+
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
     minorDisableTimes = [("testday2", "aftertest"), ("size2", "aftersize2")]
@@ -1524,7 +1530,8 @@ init 2 python:
     eventlibrary['BE058'] = {"name": "Pair-esthesia", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                               "location": "town",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE059", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE059'] = {"name": "Troubles in Tandem", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                             "location": "cookingclassroom",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE060", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE060'] = {"name": "Somewhere I Can Scream", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                         "location": "classroom",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE061", "preobsflags": [], "obsflags": [],                  "conditions": []}
-    eventlibrary['BE061'] = {"name": "Honoka end", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                         "location": "auditorium",        "priority": PrioEnum.NONE,              "next": "", "preobsflags": [], "obsflags": [],                       "conditions": []}
+    eventlibrary['BE061'] = {"name": "The Baroness and the Brassiere", "girls": ["BE", "WG"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,            "location": "dormhallway",            "priority": PrioEnum.NONE, "sp": 10,     "next": "BE062", "preobsflags": [], "obsflags": [],                  "conditions": []}
+    eventlibrary['BE062'] = {"name": "Honoka end", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                         "location": "auditorium",        "priority": PrioEnum.NONE,              "next": "", "preobsflags": [], "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "preobsflags": [], "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -1721,7 +1728,7 @@ init 2 python:
     eventlibrary['GTS054'] = {"name": "His Good Opinion", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,     "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS055", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS055'] = {"name": "Sasameyuki", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS057", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS057'] = {"name": "The Fifth Virtue", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS058", "preobsflags": [], "obsflags": [],       "conditions": []}
-    eventlibrary['GTS058'] = {"name": "Placeholder", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS059", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['GTS058'] = {"name": "Beyond the Vermillion Hide", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,   "location": "roof",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS059", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS059'] = {"name": "Ebb and Flow", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS060", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS060'] = {"name": "Naomi end", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,               "location": "auditorium",          "priority": PrioEnum.NONE,                   "next": "", "preobsflags": [], "obsflags": [],             "conditions": []}
 
@@ -1958,7 +1965,8 @@ init 2 python:
     eventlibrary['WGB005'] = {"name": "Take a Hike", "girls": ["WGB"], "display": "Okisho's Side Route", "type": EventTypeEnum.OPTIONALCORE,                                                          "location": "woods",        "priority": PrioEnum.NONE,              "preobsflags": [], "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB004"]]}
     eventlibrary['WGB006'] = {"name": "The Ritual", "girls": ["WGB"], "display": "Okisho's Side Route", "type": EventTypeEnum.OPTIONALCORE,                                                          "location": "cafeteria",        "priority": PrioEnum.NONE,              "preobsflags": [], "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB005"]]}
     eventlibrary['WGB007'] = {"name": "Growing Out", "girls": ["WGB"], "display": "Okisho's Side Route", "type": EventTypeEnum.OPTIONALCORE,                                                          "location": "hallway",        "priority": PrioEnum.NONE,              "preobsflags": [], "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB006"]]}
-    eventlibrary['WGB008'] = {"name": "Okisho end", "girls": ["WGB"], "display": "Okisho's Side Route", "type": EventTypeEnum.OPTIONALCORE,                                                           "location": "auditorium",          "priority": PrioEnum.NONE,     "next": "", "preobsflags": [], "obsflags": [],                                     "conditions": [[ConditionEnum.EVENT, "WGB007"]]}
+    eventlibrary['WGB008'] = {"name": "Big Dreams", "girls": ["WGB"], "display": "Okisho's Side Route", "type": EventTypeEnum.OPTIONALCORE,                                                          "location": "dorminterior",        "priority": PrioEnum.NONE,              "preobsflags": [], "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGB007"]]}
+    eventlibrary['WGB009'] = {"name": "Okisho end", "girls": ["WGB"], "display": "Okisho's Side Route", "type": EventTypeEnum.OPTIONALCORE,                                                           "location": "auditorium",          "priority": PrioEnum.NONE,         "preobsflags": [], "obsflags": [],           "conditions": [[ConditionEnum.EVENT, "WGB008"]]}
 
     eventlibrary['WGAE001'] = {"name": "Butting Into Her Business", "girls": ["WG", "AE"], "display": "Alice & Shiori Event", "type": EventTypeEnum.OPTIONAL,                                        "location": "hallway",        "priority": PrioEnum.NONE,              "preobsflags": ["size3exp"], "obsflags": ["size3"],            "conditions": [[ConditionEnum.EVENT, "WG012"]]}
 

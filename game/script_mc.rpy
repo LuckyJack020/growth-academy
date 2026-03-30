@@ -18662,24 +18662,24 @@ label MC027:
     "It was Friday. Nothing to do, and nowhere to go. Just easy time."
     "I stretched a bit on my bed, pulling one arm up and rolling onto my side, twisting-"
     "{i}POP!{/i}"
-    MCT "Ahh… there you are."
+    MCT "Ahh... there you are."
     "I turned back over, my spine feeling looser as I navigated my character alongside of a mountain, jumping here and there and completely sequence breaking."
     MCT "Can walk all the way around the mountain or jump a hell of a lot until the game just says screw it."
     "I smiled. It was part of the experience. As long as another demon encounter didn't appear out of nowhere for me to kill."
     play sound Knock
     pause .5
     "I glanced up."
-    MC "Who…"
+    MC "Who..."
     pause 1
     show Tomoko neutral with dissolve
     Tomoko "Hey."
     "Tomo walked blankly into my room, as I turned, blinking a few times."
     MC "Alright, just walk yourself right in."
     Tomoko "What are you doing?"
-    MC "Playing EarthSky. And you're doing…?"
+    MC "Playing EarthSky. And you're doing...?"
     show Tomoko worried
     Tomoko "I have to go to the cooking club kitchen."
-    MC "Uh… why?"
+    MC "Uh... why?"
     Tomoko "Detention."
     MC "Of course. Of course, you have detention."
     show Tomoko neutral
@@ -18687,12 +18687,12 @@ label MC027:
     MC "So? Ask your roommate to do it."
     show Tomoko worried
     "Tomo sighed, closing her eyes, then looking down at her feet."
-    Tomoko "She's busy…"
+    Tomoko "She's busy..."
     Tomoko "It offers service points, since it's volunteering for you. As in, final grade stuff."
     if routelock == "PRG":
         show Tomoko neutral
-        Tomoko "Plus, I mean… it's in the cooking club kitchen. Maybe you'll run into your girlfriend."
-        MC "I…"
+        Tomoko "Plus, I mean... it's in the cooking club kitchen. Maybe you'll run into your girlfriend."
+        MC "I..."
         MC "... I mean. Hold on."
         "I reached into my pocket, pulled out my phone, and pulled up Aida's texts."
         MCCell "What are you up to?"
@@ -18703,7 +18703,7 @@ label MC027:
         show Tomoko neutral
         Tomoko "Gonna need those points somehow, right?"
         "Tomo walked into my kitchen, throwing the fridge door open."
-        MC "Well… this'll be an easy way to get them, I guess."
+        MC "Well... this'll be an easy way to get them, I guess."
         MC "Alright."
     show Tomoko smile
     "Tomo lifted her head up and shut the door, nonchalantly sliding her hair out from inside the door as she held a can of soda at her side."
@@ -18717,62 +18717,62 @@ label MC027:
     play music Tomoko
     show Tomoko neutral with dissolve
     "By the time we'd gotten to the middle of campus, Tomo had barely said two words, despite me asking at least double that in questions."
-    MC "Okay. How did you get detention? I don't need details, just like… how?"
+    MC "Okay. How did you get detention? I don't need details, just like... how?"
     Tomoko "... Mouthed off to some bitch in class."
-    MC "Tomo…"
+    MC "Tomo..."
     Tomoko "She started it! She was talking crap!"
     MC "Still-"
     show Tomoko worried
-    Tomoko "Look, I… whatever."
+    Tomoko "Look, I... whatever."
     Tomoko "You're getting points out of this, so it shouldn't matter."
     show Tomoko neutral
     "Tomo walked ahead a little as I sighed."
-    MC "Right…"
+    MC "Right..."
     if isEventCleared("MC024"):
         MCT "Doesn't change that I don't want to deal with those otherworldly devil harpy secretaries."
         MCT "Even if they offered the best scholarship in Japan."
     scene Hallway with fade
     show Tomoko neutral with dissolve
-    MC "So… did she deserve it?"
+    MC "So... did she deserve it?"
     Tomoko "The chick I was talking to?"
     MC "Yeah. The one you shit-talked."
     Tomoko "I didn't- whatever. But, yeah."
     Tomoko "Takamura-sensei heard it during homeroom, and gave us both detention."
     MC "So, she'll be there, too? Who is this, exactly?"
     Tomoko "Thunderthighs-MaGee, that's who."
-    MC "Uhh… that kind of could describe a lot of girls here."
-    Tomoko "Ugh… Fumika Usui."
+    MC "Uhh... that kind of could describe a lot of girls here."
+    Tomoko "Ugh... Fumika Usui."
     if isEventCleared("MC014") and isEventCleared("GTS018"):
-        MC "Ohh… her. Yeah, I know her. And your guy's beef."
+        MC "Ohh... her. Yeah, I know her. And your guy's beef."
         show Tomoko worried
-        Tomoko "Yeah…"
+        Tomoko "Yeah..."
     elif isEventCleared("GTS018"):
         MC "Ah. Her."
         MC "She tried to recruit Yamazaki-san to the basketball team way back when. Wasn't very tactful with it, either."
         Tomoko "Shocker."
     elif isEventCleared("MC014"):
-        MC "Oh… her. Yeah, I remember you guys had beef or something. At least, from what you told me."
+        MC "Oh... her. Yeah, I remember you guys had beef or something. At least, from what you told me."
     else:
-        MC "Huh… don't know her."
-        Tomoko "Well… she's a bitch. And she has wumbo-thighs."
+        MC "Huh... don't know her."
+        Tomoko "Well... she's a bitch. And she has wumbo-thighs."
     show Tomoko neutral
     "Tomo snugged her bag up onto her shoulder and continued on ahead of me, her steps stilted and sharp."
     MC "Know anyone else who's coming?"
     Tomoko "I didn't really look into it."
-    MC "Right… guess we'll see, then."
+    MC "Right... guess we'll see, then."
     "Tomo and I turned the corner in the hall. Ahead, the cooking club kitchen sat with it's door open, as we closed in."
     scene Cooking Classroom with fade
     play music DifferentPaths
     show Tomoko worried with dissolve
     "As we entered, Tomo faded back to my side, and I half-led the way in."
     "Quite a few students, mostly girls, littered the room, the cooking club stations and counters covered in disposable paper."
-    MCT "Well… I doubt everyone here got detention."
+    MCT "Well... I doubt everyone here got detention."
     "I scanned the room, Tomo staying right by me, as nearby, a taller girl was reaching up onto a shelf, and a more muscular one was shifting a table with one hand."
     if routelock == "PRG":
         "I shot a warm nod toward Etsuko and Hotaru, as they smiled at me, the two of us moving across the room a little."
-    if isEventCleared(“MC009”) and not routelock == "PRG":
+    if isEventCleared("MC009") and not routelock == "PRG":
         "I blinked, staring back at Etsuko Chisaka and Hotaru Wada."
-        MCT "Well… they've changed."
+        MCT "Well... they've changed."
         "Hotaru leaned up onto a shelf to the point of her skirt riding up enough where I could see the lower crest of her asscheek, and Etsuko had her shirt sleeves rolled up a little, so she could haul the table easier."
         "I blinked, and kept walking Tomo and I across the room."
     else:
@@ -18791,30 +18791,30 @@ label MC027:
     hide Takamura with dissolve
     MC "Eesh. Busy in here."
     "Tomo was, by now, nearly right into my side, her bag pressed into my hipbone."
-    MC "So, wait… what are we doing, exactly?"
+    MC "So, wait... what are we doing, exactly?"
     Tomoko "... Carving pumpkins."
-    MC "I…"
-    "I turned, looking toward the side of the room, where multiple pumpkins were laid out on tables, or larger ones on the floor, the bright orange of the skin contrasting with… basically everything else."
+    MC "I..."
+    "I turned, looking toward the side of the room, where multiple pumpkins were laid out on tables, or larger ones on the floor, the bright orange of the skin contrasting with... basically everything else."
     MC "For what?"
     Tomoko "There's a party being thrown in Chūkan Point park."
     if routelock == "GTS":
-        MC "Ooh… good spot. Been there with Naomi a few times."
+        MC "Ooh... good spot. Been there with Naomi a few times."
         show Tomoko neutral
         Tomoko "Cool."
     elif routelock == "PRG":
-        MC "Mm… cool."
+        MC "Mm... cool."
         MC "Aida and I went there a little while ago. Took some pictures there before a dinner we went to."
         show Tomoko neutral
         Tomoko "Cool."
-    elif isEventCleared("RM006") and isEventCleared(“RMG002”):
+    elif isEventCleared("RM006") and isEventCleared("RMG002"):
         MC "Mm. Went there with Daichi a couple times."
-        MC "Not… even going to go into why."
+        MC "Not... even going to go into why."
         show Tomoko smile
         Tomoko "Date? I mean, if-"
         MC "No."
     elif isEventCleared("RM006"):
         MC "Went there with Daichi once."
-        MC "Tried to… actually, nevermind."
+        MC "Tried to... actually, nevermind."
         show Tomoko neutral
         Tomoko "... Weird trip?"
         MC "Extremely."
@@ -18843,7 +18843,7 @@ label MC027:
     Takamura "But, anyways. I think there's a spot off by Kodama-san and Tozakura-san."
     if routelock == "PRG":
         play music PRG
-        Takamura "Though… I doubt I have to do much convincing for you to head off that way."
+        Takamura "Though... I doubt I have to do much convincing for you to head off that way."
         MC "Sensei!"
         show Takamura flattered
         "My mouth opened slightly as Takamura-sensei chuckled lightly."
@@ -18852,7 +18852,7 @@ label MC027:
     pause .5
     hide Takamura with dissolve
     hide Tomoko with dissolve
-    "The crowd of students, being packed with not only bodies, but… growth factor boosted bodies in various places, made it hard going through the mass. However, we cut our way through along the side, as Etsuko and Hotaru moved nearby us toward the pumpkins."
+    "The crowd of students, being packed with not only bodies, but... growth factor boosted bodies in various places, made it hard going through the mass. However, we cut our way through along the side, as Etsuko and Hotaru moved nearby us toward the pumpkins."
     Etsuko "Where even is this point place?"
     Hotaru "By the giant's dorms. Big park."
     Etsuko "You would know, I suppose."
@@ -18867,7 +18867,7 @@ label MC027:
     Hotaru "Look how awesome that looks!"
     Etsuko "It's fake."
     Etsuko "I didn't work for this. Just some cheated muscles."
-    Hotaru "Suuurrrre…"
+    Hotaru "Suuurrrre..."
     Etsuko "You're annoying."
     Hotaru "Ditto."
     "The two girls laughed as they hauled off their pumpkin toward a station."
@@ -18875,14 +18875,14 @@ label MC027:
     show Tomoko neutral with dissolve
     MC "Alright. Good to go?"
     show Tomoko worried
-    Tomoko "A… a big one?"
+    Tomoko "A... a big one?"
     MC "Yeah. It'll give us more space. Plus, all the little ones are being taken."
     show Tomoko neutral
-    Tomoko "Oh… okay."
-    if getFlag(“Meet_Kanami”) or routelock == “PRG”:
+    Tomoko "Oh... okay."
+    if getFlag("Meet_Kanami") or routelock == "PRG":
         "Tomo followed me through the crowd, as we managed to work our way to the station across from Aida and Kanami."
     else:
-        "Tomo followed me through the crowd, as we worked out way to the station across from Aida and… whoever her partner was."
+        "Tomo followed me through the crowd, as we worked out way to the station across from Aida and... whoever her partner was."
     if routelock == "PRG":
         show PRG surprised with dissolve
         show Kanami neutral with dissolve
@@ -18896,7 +18896,7 @@ label MC027:
         MC "Tell you later."
         MC "And, I'd go for lips, but you know. Cooking club."
         show PRG blush-2
-        PRG "I… I-I'd better get one later."
+        PRG "I... I-I'd better get one later."
         MC "I'll make sure."
         "I gave her a quick hug, then went back across the table to Tomo, who was looking around our pumpkin."
         show PRG neutral
@@ -18906,7 +18906,7 @@ label MC027:
         if getFlag("TM_MeetsKanami"):
             show Tomoko smile
             Tomoko "We've met. Hey."
-            Kanami "Hello, Hotsure-san…s."
+            Kanami "Hello, Hotsure-san...s."
         else:
             Tomoko "... Hey."
             Kanami "Hello. A pleasure."
@@ -18914,25 +18914,25 @@ label MC027:
         show Tomoko neutral
         "I looked back across at the two, only then realizing the bare counter in front of them."
         MC "Did you guys already knock out your pumpkin?"
-        Kanami "Well… no."
+        Kanami "Well... no."
         show PRG worried
         PRG "We were waiting until everyone else took one."
-        PRG "We didn't think it would be so busy…"
+        PRG "We didn't think it would be so busy..."
         "I looked at the mass of students all crowded around the pumpkins, and the amount of jostling going on."
         "Without Aida really having to say much more, I had a pretty good idea why the two of them were waiting."
         MC "Here. Hold on."
         "I pushed my arms back, and walked into the crowd with intent, working my way through and seizing another pumpkin, also one of the larger ones, and started back toward them, pumpkin clutched against my torso."
         "I waddled my way over to Aida and Kanami's side and heaved the pumpkin up onto the counter, panting a bit."
         show PRG neutral
-        MC "Aghh… there you go."
-        PRG "T-Thank you, Baby…"
+        MC "Aghh... there you go."
+        PRG "T-Thank you, Baby..."
         show Kanami happy
         Kanami "Yes, thank you, Hotsure-san."
         "I brushed a bit of dirt off of my shirt and went back to Tomo, rubbing my hands together."
         show Kanami neutral
-        MC "Alright…"
+        MC "Alright..."
         "I glanced across the station, looking around the counter."
-        MC "Where is…"
+        MC "Where is..."
         MC "Are there tools at all? Knives, or those scoop things?"
         show PRG worried
         PRG "I think Sensei is bringing them."
@@ -18942,19 +18942,19 @@ label MC027:
         MC "Just a normal face?"
         show PRG neutral
         show Tomoko neutral
-        Tomoko "Y-Yeah…"
-        MC "Hm…"
+        Tomoko "Y-Yeah..."
+        MC "Hm..."
         Kanami "I have a marker here, Hotsure-san."
         "Kanami slid a black marker across the counter to me."
         MC "Thanks!"
         "I uncapped it and started scribbling a triangular eye onto the upper half."
         MC "Like that?"
-        Tomoko "Whatever…"
+        Tomoko "Whatever..."
         "I glanced sideways at her, then drew on the other one across from it, using the marker as a sort of measuring stick."
         "Across from us, Aida and Kanami shifted their pumpkin, the two making marks with another marker."
         "I took a breath as Aida stood up straight, turning sideways and moving the pumpkin on it's axis."
-        "Aida's belly was… quite a ways larger than the pumpkin on the counter in front of her."
-        "In fact… it was well over twice the size."
+        "Aida's belly was... quite a ways larger than the pumpkin on the counter in front of her."
+        "In fact... it was well over twice the size."
         "I took a quick glance behind us, and at the now more open floor by the pumpkins."
         "None of the pumpkins were anywhere near the size of her."
         "As Kanami leaned in, I watched her lay down a line with the marker, her breasts laying on the counter."
@@ -18968,16 +18968,16 @@ label MC027:
         show Kanami neutral
         show Tomoko surprised
         Tomoko "How?"
-        MC "How… will it be awesome?"
+        MC "How... will it be awesome?"
         show Tomoko neutral
-        Tomoko "N-No. How will you… carve that?"
+        Tomoko "N-No. How will you... carve that?"
         Kanami "Simple. You make your basic face shape, then cut into the front of the pumpkin, but not all the way through."
         Kanami "Just leave a bit of fruit there, and shave away at it."
         Kanami "The idea behind it is to leave it thick enough so it holds the shape, but thin enough that light seeps out through it."
         show Kanami happy
         Kanami "I can show you, if you'd like."
         show Tomoko worried
-        Tomoko "N-No… I-I mean. I should… help Keisuke."
+        Tomoko "N-No... I-I mean. I should... help Keisuke."
         "Tomo looked at the pumpkin face I was drawing and looked down at it."
         MC "I don't really have anything to help with now, to be honest. Not till we get tools."
         MC "Go take a peek. I'll keep drawing."
@@ -18993,10 +18993,10 @@ label MC027:
         MC "Mhm. I'll fill you in later."
         MC "She seemed like she really wanted me to come."
         show PRG aroused
-        PRG "Well… I'm glad you're here."
+        PRG "Well... I'm glad you're here."
         "Aida was twirling her hair with one finger, looking down at my drawing."
         MC "Same thing from me, now. I didn't know you like carving pumpkins."
-        PRG "I… well, it is fun to do. I haven't carved one in some time."
+        PRG "I... well, it is fun to do. I haven't carved one in some time."
         show PRG neutral
         PRG "Takamura-sensei also told the cooking club that whoever came to carve could use any leftover pumpkins to make pie with."
         MC "I can't say I've had it before. Always thought that was an American thing."
@@ -19005,12 +19005,12 @@ label MC027:
         PRG "I always do."
         "Finishing the mouth shape, I set down my marker and stood upright, glancing at it."
         MC "What do you think?"
-        PRG "Um… it looks nice. Like a face."
+        PRG "Um... it looks nice. Like a face."
         MC "That was the plan."
         show PRG worried
         "I turned, glancing backwards into the crowd, looking for Takamura."
         MC "Where are the tools, though?"
-        PRG "I… I don't know. I don't see Sensei anywhere, either."
+        PRG "I... I don't know. I don't see Sensei anywhere, either."
         hide PRG with dissolve
         show Tomoko distracted with dissolve
         show Kanami happy with dissolve
@@ -19021,7 +19021,7 @@ label MC027:
         show PRG neutral with dissolve
         "I turned towards Aida again, and came in a little closer to her, leaning in so my mouth was by her ear, both so I didn't have to shout, and also so I could rub her belly gently with one hand."
         show PRG blush-2
-        MC "And… how are the little pumpkins today?"
+        MC "And... how are the little pumpkins today?"
         PRG "They're good. I ate a big lunch today, so they're full for now."
         MC "Good."
         "I rubbed the side of Aida's belly again, as she let out a small giggle."
@@ -19038,10 +19038,10 @@ label MC027:
         Tomoko "Cool."
         Kanami "Are you a horror movie lover?"
         show Tomoko neutral
-        Tomoko "I've watched… a few."
+        Tomoko "I've watched... a few."
         MC "Through the blanket she covers her face with."
         show Tomoko embarrassed
-        Tomoko "I… only sometimes."
+        Tomoko "I... only sometimes."
         show PRG unique-happy
         PRG "I do that sometimes too, Hotsure-san."
         show Kanami neutral
@@ -19051,7 +19051,7 @@ label MC027:
         show Takamura sad with dissolve
         Takamura "I'm so sorry, all of you. Here you all are."
         "Takamura reached into a cardboard box she was carrying and laid out various tools for pumpkin carving, including a knife, scoop, and a little potato peeler-esque scraper."
-        Takamura "I thought I had enough for everyone, then so many students showed up, so then I ran out and had to find more, and well… here we are."
+        Takamura "I thought I had enough for everyone, then so many students showed up, so then I ran out and had to find more, and well... here we are."
         Kanami "It's alright, Sensei. We've just been getting lines laid out."
         PRG "Mhm."
         show Takamura happy
@@ -19066,12 +19066,12 @@ label MC027:
         Tomoko "Cool."
         show Tomoko neutral
         show Kanami neutral
-        Tomoko "Uh… Kei, is that okay with you?"
+        Tomoko "Uh... Kei, is that okay with you?"
         MC "Yeah. I can work with Aida on this one."
         PRG "I'm okay with that."
         MC "I would hope so."
         "I smiled as Aida took the small carving knife and dug it into the top, cutting open a hole in the topside of the pumpkin, which she turned and twisted off, setting it off to the side."
-        PRG "Mm… pumpkins smell so nice."
+        PRG "Mm... pumpkins smell so nice."
         MC "Yeah. Like fall."
         "Across the way, Tomo was cutting the top off of their pumpkin as Kanami watched, working the top off herself as Tomo swapped over to the scoop."
         hide Tomoko with dissolve
@@ -19086,7 +19086,7 @@ label MC027:
         "She leaned in again, reaching further this time."
         "Pulling out some more, she set it into the pile."
         show PRG worried
-        PRG "Could you go in with the scoop, though? I can't quite reach…"
+        PRG "Could you go in with the scoop, though? I can't quite reach..."
         MC "Yeah, gotcha."
         "I took the scoop, reaching my hand in and scraping the inside wall of the pumpkin hard, drawing off more sinew as I pulled it back and set it off to the side, Aida rinsing her hand and arm off in the sink."
         show Tomoko neutral with dissolve
@@ -19097,7 +19097,7 @@ label MC027:
         show PRG neutral
         PRG "Okay. What do you want me to do?"
         MC "You can just hang out for a second."
-        "I drew my hand back in, and before I went in for another scrape, a small… slightly devilish idea came into my head."
+        "I drew my hand back in, and before I went in for another scrape, a small... slightly devilish idea came into my head."
         menu:
             "Keep Scraping":
                 $setFlag("MC027_KeepScraping")
@@ -19107,8 +19107,8 @@ label MC027:
                 MC "Of course."
                 "Aida took the small carving knife for herself, and dug into the eye lines of the pumpkin, and gently sliced along it."
                 Kanami "Are you all planning to dress up?"
-                MC "Uhh…"
-                Tomoko "Mnn… dunno."
+                MC "Uhh..."
+                Tomoko "Mnn... dunno."
                 PRG "I want to dress up. I just have to start getting my costume together."
                 Kanami "What are you planning on being?"
                 PRG "... Not telling."
@@ -19117,10 +19117,10 @@ label MC027:
             "Play a Prank on Aida":
                 $setFlag("MC027_PRGPrank")
                 "I smirked, and leaned a bit further in, really pushing my hand down against the bottom of the pumpkin."
-                MC "Alright… if I just-"
+                MC "Alright... if I just-"
                 show PRG worried
                 "I suddenly yanked my arm a bit, as if my hand were glued to the bottom."
-                MC "Oh, crap…"
+                MC "Oh, crap..."
                 PRG "W-What?"
                 show PRG scared
                 "I shoved my hand down, going on tiptoe and jolting further over, nearly up to my shirt sleeve."
@@ -19129,8 +19129,8 @@ label MC027:
                 "Aida reached forward suddenly, grabbing my arm and yanking it up as I snickered, bursting into a laugh."
                 PRG "You-"
                 show PRG blush
-                PRG2 "Ohh… that was so mean."
-                MC "Hahah! I mean… I thought it got ahold of me."
+                PRG2 "Ohh... that was so mean."
+                MC "Hahah! I mean... I thought it got ahold of me."
                 show PRG excited
                 PRG "Y-You scared me!"
                 show Tomoko happy
@@ -19157,8 +19157,8 @@ label MC027:
                 "Aida took the small carving knife for herself, and dug into the eye lines of the pumpkin, and gently sliced along it."
                 show PRG neutral
                 Kanami "Are you all planning to dress up?"
-                MC "Uhh…"
-                Tomoko "Mnn… dunno."
+                MC "Uhh..."
+                Tomoko "Mnn... dunno."
                 PRG "I want to dress up. I just have to start getting my costume together."
                 Kanami "What are you planning on being?"
                 PRG "... Not telling."
@@ -19172,9 +19172,9 @@ label MC027:
                 "I glanced over at Tomo and smirked."
                 MC "I'm putting all of the pumpkin guts under your bedsheets."
                 show Tomoko annoyed
-                Tomoko "Ewww…"
+                Tomoko "Ewww..."
         show Tomoko neutral
-        Tomoko "I… was actually thinking of dressing up as a vampire."
+        Tomoko "I... was actually thinking of dressing up as a vampire."
         MC "Fitting for you."
         MC "You're pale enough from staying inside all day."
         show Tomoko defiant
@@ -19186,8 +19186,8 @@ label MC027:
         "Beside me, Aida was looking up at me, her mouth wrinkled up as she stifled a grin."
         MC "Something funny?"
         show PRG blush-2
-        PRG "N… No."
-        PRG "I… I think you'd make a cute duster."
+        PRG "N... No."
+        PRG "I... I think you'd make a cute duster."
         show Tomoko smile
         Tomoko "See?!"
         show PRG excited
@@ -19201,13 +19201,13 @@ label MC027:
         show Kanami happy
         Kanami "Just like that. You've got a steady hand, Hotsure-san. Might make a good chef."
         show Tomoko worried
-        Tomoko "No. I… I'm just here because I got detention."
+        Tomoko "No. I... I'm just here because I got detention."
         show PRG worried
-        Kanami "Oh… well. All the same, I'm impressed."
+        Kanami "Oh... well. All the same, I'm impressed."
         show Tomoko smile
         Tomoko "Thanks."
         show Kanami neutral
-        MC "What… happened, exactly?"
+        MC "What... happened, exactly?"
         show Tomoko worried 
         "Tomo set down her scrapper, resting her palms on the counter. Beside me, Aida had her knife down as well, listening."
         Tomoko "..."
@@ -19215,38 +19215,38 @@ label MC027:
         Kanami "Who?"
         show Tomoko neutral
         Tomoko "Fumika Usui."
-        Tomoko "She… ugh."
-        if isEventCleared(“RM005”):
-            Tomoko "So… she and Yuki used to be really good friends."
+        Tomoko "She... ugh."
+        if isEventCleared("RM005"):
+            Tomoko "So... she and Yuki used to be really good friends."
         else:
-            Tomoko "So… she and Yuki, my roommate, used to be really good friends."
-        Tomoko "But, like, lately, they kind of stopped talking. Yuki's been really down lately, and well… the two kind of just stopped hanging out."
+            Tomoko "So... she and Yuki, my roommate, used to be really good friends."
+        Tomoko "But, like, lately, they kind of stopped talking. Yuki's been really down lately, and well... the two kind of just stopped hanging out."
         Tomoko "Then, the other day, Usui-san was in homeroom, and she said that things have been a lot quieter around here lately, and pointed at Yuki."
-        Kanami "Sorry… what did she mean by that?"
-        Tomoko "... My roommate has a lip factor. And she…"
-        Tomoko "It's getting hard for her to… talk. So, she's been kinda mopey, lately. Even for me, it's been… a little much."
+        Kanami "Sorry... what did she mean by that?"
+        Tomoko "... My roommate has a lip factor. And she..."
+        Tomoko "It's getting hard for her to... talk. So, she's been kinda mopey, lately. Even for me, it's been... a little much."
         Kanami "... I see. Please, go on."
-        PRG "Yes…"
-        Tomoko "So… I was sitting nearby, and I got out of my desk and walked over to her, then… well, said something to her, and Takamura-sensei heard it."
-        PRG "Ohh…"
-        MC "Uhm… what did you say?"
+        PRG "Yes..."
+        Tomoko "So... I was sitting nearby, and I got out of my desk and walked over to her, then... well, said something to her, and Takamura-sensei heard it."
+        PRG "Ohh..."
+        MC "Uhm... what did you say?"
         Tomoko "... Called her a stupid bitch. And told her that the reason it was quiet was because she couldn't hear anything over the sounds of her hamshanks slapping together."
         show PRG surprised
         MC "... Tomo."
         show Tomoko defiant
         Tomoko "She deserved it! She was talking shit!"
-        MC "Well, look…"
+        MC "Well, look..."
         show PRG worried
         MC "You said yourself that your roommate has been mopey, right? Like, you even admitted that it's been a lot."
         MC "You think the reason those two stopped talking is because Usui-san just got a little burnt out on dealing with it?"
         show Tomoko neutral
-        Tomoko "Well… yeah. But, she didn't have to go say that."
+        Tomoko "Well... yeah. But, she didn't have to go say that."
         MC "She didn't, no. Like, that was too far. But, doesn't mean you had to go to her level, either."
         Kanami "It can happen. Especially in a heated moment."
         show PRG unique
-        PRG "Mhm… people can slip up when they get really mad, and say things they don't mean…"
-        MC "Right. Do you think, maybe, Usui-san just had a rough morning, or something? Maybe she just like… had a lapse in judgment?"
-        Tomoko "I… guess."    
+        PRG "Mhm... people can slip up when they get really mad, and say things they don't mean..."
+        MC "Right. Do you think, maybe, Usui-san just had a rough morning, or something? Maybe she just like... had a lapse in judgment?"
+        Tomoko "I... guess."    
         show PRG worried
         "I glanced at Aida beside me, who now was looking over at me, looking down and taking my hand."
         "I gave her a little nod, and took the knife."
@@ -19262,15 +19262,15 @@ label MC027:
         hide Tomoko with dissolve
         hide Kanami with dissolve
         MC "What was that?"
-        PRG "Just… told her that I've had times like that too, and that if she ever wants to talk, I'd be there."
+        PRG "Just... told her that I've had times like that too, and that if she ever wants to talk, I'd be there."
         MC "That was sweet of you."
-        PRG "Well… I just want to be there if I can."
+        PRG "Well... I just want to be there if I can."
         "I smiled, gently rubbing Aida's arm with one hand, and kept cutting."
         scene black with fade
         pause .25
         scene Cooking Classroom with fade
         play music DifferentPaths
-        MC "Alright…"
+        MC "Alright..."
         "I brushed away some pumpkin pieces."
         show PRG neutral with dissolve
         "Near the end, Aida and I had decided to add a few more details, like a nose, a wider mouth, and some slashes along one side to give it a haggard look."
@@ -19288,14 +19288,14 @@ label MC027:
         "Her face was carved and scraped thin, her cheeks thin and sunken, with her chin and jaw dropped much lower than should be possible for a normal human face."
         "Hair draped down around, framing her face, as she was frozen in an everlasting scream."
         PRG2 "Oh, my-!"
-        MC "Whoa…"
+        MC "Whoa..."
         MC "That's insane, guys."
         show Tomoko happy
         show Kanami happy
         show PRG neutral
         Kanami "Thank you very much."
-        MC "That's like… contest winning."
-        PRG "Yeah… I-I kind of want to learn how to do that, as well."
+        MC "That's like... contest winning."
+        PRG "Yeah... I-I kind of want to learn how to do that, as well."
         Kanami "I can show you sometime. I've taught most of my siblings, too."
         show Tomoko neutral
         Tomoko "You have siblings?"
@@ -19304,7 +19304,7 @@ label MC027:
         hide Tomoko with dissolve
         hide PRG with dissolve
         hide Kanami with dissolve
-        "I put the lid back on top of our pumpkin, and picked it up, turning… almost right into Fumika Usui."
+        "I put the lid back on top of our pumpkin, and picked it up, turning... almost right into Fumika Usui."
         MC "Oh! Excuse me!"
         Fumika "It's alright."
         "She shifted sideways, letting me pass by and set my pumpkin down near the others."
@@ -19315,8 +19315,8 @@ label MC027:
         show PRG worried with dissolve
         show Kanami neutral with dissolve
         "Just as I rejoined Aida, Tomo stepped away from the station, going off by the pumpkins with Fumika."
-        MC "What uh… what did I just miss?"
-        PRG "She… came over and asked if they could talk."
+        MC "What uh... what did I just miss?"
+        PRG "She... came over and asked if they could talk."
         Kanami "Seemed rather solemn, as well."
         MC "Hm."
         "Kanami lifted her and Tomo's pumpkin and hauled if over to the rest, her breasts laying on top of it as she set it down, marked it with a tag, and promptly moved away so Tomo and Fumika could talk."
@@ -19325,7 +19325,7 @@ label MC027:
         show Takamura happy with dissolve
         Takamura "Excellent job tonight, everyone."
         "Takamura stepped over to our stations, smiling as she put her hand on Kanami's side."
-        Takamura "And Tozakura-san… my word. That was very impressive."
+        Takamura "And Tozakura-san... my word. That was very impressive."
         show Takamura happy with dissolve
         Kanami "Thank you, Sensei."
         Takamura "Reminds me of an old favorite movie of mine from way back when. I must ask, have you taken any art classes or anything past basic level?"
@@ -19334,15 +19334,15 @@ label MC027:
         "Takamura glanced over her shoulder, then turned back, lowering her voice a touch."
         show Takamura neutral
         Takamura "And I see conversations are happening."
-        MC "Uh… yeah."
-        Takamura "Well… I'm glad to see that what I hoped would happen is taking place."
+        MC "Uh... yeah."
+        Takamura "Well... I'm glad to see that what I hoped would happen is taking place."
         show PRG worried
         PRG "W-What do you mean, Sensei?"
         Takamura "Tonight. I had hoped that by having the two of them work in the same space, they'd have some time to ponder everything, and perhaps, think of the other's perspective."
         MC "We did kind of hear a bit about it all, Sensei."
         Takamura "And I assumed you would, Hotsure-san. As would you two as well, girls."
         Takamura "However, I hoped that, both through working in a mutual area, as well as having some outsider's ears to talk to, that they might get their feelings sorted."
-        "Behind Takamura, the two girls were still talking. Only, based on body language, the two were… much easier in conversation."
+        "Behind Takamura, the two girls were still talking. Only, based on body language, the two were... much easier in conversation."
         show PRG neutral
         PRG "It seems like they're getting there."
         Takamura "Yes. Well, in any case, I-"
@@ -19353,7 +19353,7 @@ label MC027:
         show Tomoko smile
         Tomoko "Thanks."
         Takamura "And, well done on your pumpkin as well, Tomoko-san. Very impressive."
-        Tomoko "Uhm… t-thank you, Sensei."
+        Tomoko "Uhm... t-thank you, Sensei."
         Takamura "You two really sorted out that pumpkin. It'll turn heads at the party."
         Takamura "And now, it's past time to be on our way. Don't worry about the counters, girls. I'll give them a once over before I leave. I have to notate all of the different pumpkin labels down anyway."
         show Tomoko neutral
@@ -19365,7 +19365,7 @@ label MC027:
         show Kanami happy
         Kanami "Very."
         show Tomoko smile
-        Tomoko "Yeah… I had a good time."
+        Tomoko "Yeah... I had a good time."
         show Takamura happy
         Takamura "Good. On your way, then, girls. And Hotsure-san. Have a good evening."
         "The four of us bowed, then made our way to the door, as I held it for everyone else."
@@ -19377,7 +19377,7 @@ label MC027:
         show PRG neutral with dissolve
         show Tomoko neutral with dissolve
         show Kanami neutral with dissolve
-        Kanami "Mmn… well, I'm off to make some dinner and rest. I enjoyed tonight with you all, everyone."
+        Kanami "Mmn... well, I'm off to make some dinner and rest. I enjoyed tonight with you all, everyone."
         MC "Yeah, same here. Take it easy, Tozakura-san."
         show Tomoko smile
         Tomoko "Thanks for everything. I had fun."
@@ -19394,32 +19394,32 @@ label MC027:
         hide Tomoko with dissolve
         "Tomo turned, bolting back toward the door, leaving Aida and I alone in the courtyard."
         PRG "... Well, I wasn't expecting that tonight."
-        MC "Yeah… sorry for bringing all the drama into the cooking club space."
+        MC "Yeah... sorry for bringing all the drama into the cooking club space."
         PRG "It wasn't drama, Baby."
         show PRG unique-happy
-        PRG "Well… maybe a little, but it's okay."
+        PRG "Well... maybe a little, but it's okay."
         show PRG neutral
         PRG "We got to carve a pumpkin together, though. That was fun."
         MC "Oh, yeah. I had a great time."
         MC "And I expect to try some pie once you make it."
         PRG "I'll make sure you have the first slice."
-        "I smiled, and walked forward into Aida's waiting arms, leaning down…"
+        "I smiled, and walked forward into Aida's waiting arms, leaning down..."
         show Tomoko neutral with dissolve
         Tomoko "Got it!"
         "Aida and I pulled apart quickly, glancing over as Tomo was slipping her bag on, not looking forward at all."
         MC "Good. Glad it wasn't locked yet."
-        PRG "I-I should be going, though. I… I need to make dinner."
+        PRG "I-I should be going, though. I... I need to make dinner."
         MC "Alright. Text me tonight, okay?"
         PRG "I will. Goodnight."
         "I walked forward, and kissed Aida gently on the lips, rubbing her belly on the side."
         PRG "Goodnight, Hotsure-san. Sleep well."
         show Tomoko smile
-        Tomoko "Uh… y-yeah. You too."
+        Tomoko "Uh... y-yeah. You too."
         hide PRG with dissolve
         "Aida slowly headed off as well, leaving just Tomo and I in the courtyard."
         show Tomoko neutral
         $setAffection("TM", 1)
-        Tomoko "Well… thanks for coming with me tonight. Even if you spent more time with your girlfriend than me."
+        Tomoko "Well... thanks for coming with me tonight. Even if you spent more time with your girlfriend than me."
         MC "It was a group thing. We were all there together."
         Tomoko "Yeah, you're right."
         MC "... Shocked you didn't give me an 'ew' or something there."
@@ -19427,13 +19427,13 @@ label MC027:
         MC "Well, me kissing Aida in front of you."
         Tomoko "Nah. I don't mind."
         MC "Cool."
-        Tomoko "Not to like, be rude or anything, but… she's getting really big."
+        Tomoko "Not to like, be rude or anything, but... she's getting really big."
         MC "... I know."
-        Tomoko "But, like… she looks good. It's weird to say, but it kind of like… works for her."
+        Tomoko "But, like... she looks good. It's weird to say, but it kind of like... works for her."
         MC "Yeah, it does."
         Tomoko "Mhm."
         Tomoko "... Thanks for not bailing or anything, by the way."
-        Tomoko "Meant a lot… and stuff."
+        Tomoko "Meant a lot... and stuff."
         MC "No worries. I've got you."
         MC "But, I am tired and all. So, I'm gonna go throw my comfy clothes on, grab a snack, and lay in bed."
         Tomoko "Alright. Same here, probably."
@@ -19449,18 +19449,18 @@ label MC027:
         PRG "W-What brings you here?"
         MC "My sister was coming, and she asked me to come along. Figured why not."
         show PRG surprised
-        PRG "Oh! This is your… sister?"
+        PRG "Oh! This is your... sister?"
         "I nodded, turning to Tomoko."
         show PRG neutral
         MC "Tomo, this is Aida Kodama. She's in my homeroom."
         show Tomoko worried
         Tomoko "... Hey."
         "Aida looked at her expectantly for a moment, then turned back to me."
-        PRG "And… this is my partner, Kanami Tozakura."
+        PRG "And... this is my partner, Kanami Tozakura."
         if getFlag("TM_MeetsKanami"):
             show Tomoko neutral
             Tomoko "We've met. Hey."
-            Kanami "Hello, Hotsure-san…s."
+            Kanami "Hello, Hotsure-san...s."
         else:
             Tomoko "... Hey."
             Kanami "Hello. A pleasure."
@@ -19474,11 +19474,11 @@ label MC027:
         MC "Well. Wanna get started, Tomo?"
         show Tomoko neutral
         Tomoko "Mhm."
-        MC "Alright. Oh, are we… supposed to wait to grab a pumpkin?"
+        MC "Alright. Oh, are we... supposed to wait to grab a pumpkin?"
         show PRG worried
-        PRG "Um… n-no. Y-You don't have to. We're just waiting for now."
+        PRG "Um... n-no. Y-You don't have to. We're just waiting for now."
         MC "Gotcha. Alright."
-        "I went forward, snaking my way through the crowd, only to get bumped by… well, someone. It was hard to tell."
+        "I went forward, snaking my way through the crowd, only to get bumped by... well, someone. It was hard to tell."
         "I suddenly realized why Aida and Kanami were waiting to take their pick."
         "Choosing a pumpkin for Tomo and I, I walked it back toward our station and set it down."
         MC "One sec."
@@ -19493,32 +19493,32 @@ label MC027:
         "Kanami produced a marker from her bag, handing one over to Tomo and I, and bringing another out for her and Aida."
         MC "Thank you."
         show Tomoko smile
-        Tomoko "Thanks…"
+        Tomoko "Thanks..."
         show Tomoko neutral
         "Kanami nodded, and crouched a little, uncapping her marker. Kanami's breasts came down, and rested right on the table in front of her, pushed up rather high."
         if routelock == "BE":
-            "I let myself linger a little longer, just… taking them in."
-            MCT "She's… not nearly at Honoka's size. But all the same… wow."
+            "I let myself linger a little longer, just... taking them in."
+            MCT "She's... not nearly at Honoka's size. But all the same... wow."
             show Tomoko smile
-            "I turned back to our pumpkin… and saw Tomo shoot me a small glance, plus a smile."
+            "I turned back to our pumpkin... and saw Tomo shoot me a small glance, plus a smile."
             MC "What?"
             Tomoko "Nothin'."
-            MC "I-I…"
+            MC "I-I..."
         show Tomoko neutral
         "I shook my head, and glanced sideways. Kanami and Aida were actually somewhat similar in size when it came to their chests."
         PRG "W-What are you two going to carve?"
-        MC "Uhh… Tomo? Any ideas?"
-        Tomoko "Just like… a face."
+        MC "Uhh... Tomo? Any ideas?"
+        Tomoko "Just like... a face."
         PRG "Oh, okay."
         MC "You guys?"
         Kanami "Well, I'm a big fan of horror movies, similar to Kodama-san, so I was thinking we could carve an onryō."
         MC "Oooh. That'll be sick."
-        Kanami "Actually… I think I'm about done with the sketch, Kodama-san. What do you think?"
+        Kanami "Actually... I think I'm about done with the sketch, Kodama-san. What do you think?"
         show PRG worried
-        PRG "I like it… but we still need tools."
+        PRG "I like it... but we still need tools."
         PRG "I might go try and find Takamura-sensei. I don't see her in here."
         hide PRG with dissolve
-        "Aida walked out from behind her station's table, and… waddled out into the room, past Tomo and I."
+        "Aida walked out from behind her station's table, and... waddled out into the room, past Tomo and I."
         hide Kanami with dissolve
         Tomoko "Kei! KEI!"
         MC "What?"
@@ -19533,10 +19533,10 @@ label MC027:
         Tomoko "How is she that big?!"
         MC "She's got a factor, Tomo. Just like all of us."
         show Tomoko annoyed
-        Tomoko "I… I know, but… jeez…"
+        Tomoko "I... I know, but... jeez..."
         show Tomoko neutral
         Tomoko "Like, that's a {i}big{/i} belly."
-        MC "Yeah…"
+        MC "Yeah..."
         MC "Be nice to her, Tomo. Kodama-san is a sweetheart."
         show Tomoko worried
         Tomoko "I know, I know."
@@ -19546,7 +19546,7 @@ label MC027:
         show PRG neutral with dissolve
         show Kanami neutral with dissolve
         Takamura "I'm so sorry, everyone. Here you all are."
-        Takamura "I thought I was going to have enough tools, then I ran out, so I had to go find more, and… well, here we are."
+        Takamura "I thought I was going to have enough tools, then I ran out, so I had to go find more, and... well, here we are."
         MC "Thank you, Sensei."
         Takamura "Of course. And, Tomoko-san? I'm glad you came."
         Tomoko "Not like I had the choice."
@@ -19558,16 +19558,16 @@ label MC027:
         "As I got our pumpkin opened, I noticed how Aida had to essentially turn sideways to work over her boobs and belly, leaving her basically one-handed."
         "I reached into the pumpkin, yanking out seeds and pumpkin sinew, plopping it onto the table."
         show Tomoko annoyed
-        Tomoko "Eww…"
+        Tomoko "Eww..."
         MC "Hey, it smells nice at least."
         show Tomoko neutral
         "I worked more out, making a pile, until I had enough space for Tomo to start scrapping the inside."
         MC "Want to do any of the cutting?"
         Tomoko "I can do the mouth, if you wanna do the eyes."
         MC "Alright."
-        PRG "M-May I ask… what brought you here today, Hotsure-san?"
+        PRG "M-May I ask... what brought you here today, Hotsure-san?"
         MC "Hm?"
-        MC "Oh… Tomo asked me to come. She was coming here already."
+        MC "Oh... Tomo asked me to come. She was coming here already."
         show Kanami happy
         Kanami "You enjoy carving pumpkins, then?"
         show Tomoko worried
@@ -19577,7 +19577,7 @@ label MC027:
         show Tomoko neutral
         Tomoko "... I got detention, and this was what Takamura-sensei wanted me to do."
         show PRG worried
-        PRG "O-Oh…"
+        PRG "O-Oh..."
         "Aida's eyes flicked over to me, then back to Tomo."
         "Tomo seemed even more interested in scraping out our pumpkin, as she pushed even harder, the pumpkin echoing more and more each run through."
         show PRG worried
@@ -19595,55 +19595,55 @@ label MC027:
         Tomoko "What?"
         MC "Make it obvious, why don't you?"
         show Tomoko annoyed
-        Tomoko "I'm just looking…"
+        Tomoko "I'm just looking..."
         "I sighed as I started on the eyes, getting the first one popped out by the time Aida came back over."
         show PRG neutral with dissolve
         show Tomoko neutral
         "She set her knife down near their pumpkin and glanced over, before slowly waddling around the station toward us."
         show PRG worried
-        PRG "I-I… don't mean to pry, but… do you also have a hair factor like your brother, Hotsure-san?"
-        Tomoko "Y-Yeah…"
+        PRG "I-I... don't mean to pry, but... do you also have a hair factor like your brother, Hotsure-san?"
+        Tomoko "Y-Yeah..."
         PRG "W-What kind of conditioner do you use?"
         show Tomoko worried
-        Tomoko "Uh… just normal stuff. I just use a lot more."
+        Tomoko "Uh... just normal stuff. I just use a lot more."
         PRG "I-I see."
         show Tomoko neutral
-        Tomoko "And, you're… uh…"
-        MC "Tomo…"
+        Tomoko "And, you're... uh..."
+        MC "Tomo..."
         Tomoko "I'm just asking."
-        PRG "Y-Yes. I'm… pregnant."
+        PRG "Y-Yes. I'm... pregnant."
         show Tomoko embarrassed
-        Tomoko "Right…"
-        PRG "I'm… assuming you've heard?"
+        Tomoko "Right..."
+        PRG "I'm... assuming you've heard?"
         show Tomoko neutral
         Tomoko "Just like, here and there."
-        PRG "Well… yeah. My factor is one of the rarest ones on the island."
-        Tomoko "Was gonna say… I haven't seen this one yet."
+        PRG "Well... yeah. My factor is one of the rarest ones on the island."
+        Tomoko "Was gonna say... I haven't seen this one yet."
         PRG "Mhm."
         show Tomoko worried
-        "Tomo shuffled slightly… away from Aida, toward me."
+        "Tomo shuffled slightly... away from Aida, toward me."
         "Tomo's hand went to her bag, sandwiched between her and I, and held it with one hand."
-        PRG "Um…"
-        PRG "Well… I-I just… noticed you looking before."
+        PRG "Um..."
+        PRG "Well... I-I just... noticed you looking before."
         Tomoko "... I'm sorry."
         "Tomo was nearly jammed into my side now, as I removed the knife from the pumpkin, just in case."
-        PRG "N-No, it's okay. I… I understand."
+        PRG "N-No, it's okay. I... I understand."
         show PRG neutral
-        PRG "Um… i-if you want. You… you can feel."
+        PRG "Um... i-if you want. You... you can feel."
         "I blinked, turning to Aida."
         show Tomoko neutral
         "Tomo glanced down at Aida's massive baby bump, jutting forward toward her and I like a massive balloon."
-        Tomoko "You… you don't mind if I do that?"
-        PRG "N-No. I'm okay with it. Just… p-please be gentle."
+        Tomoko "You... you don't mind if I do that?"
+        PRG "N-No. I'm okay with it. Just... p-please be gentle."
         "Tomo blinked."
         "She looked over at me, then rubbed one of her arms with her other hand, nervously looking from me to Aida."
         MC "Go ahead, Tomo. She said it was okay."
         "Tomo took a step forward, slowly extending one hand out, as if she expected Aida to bite her or something."
         "With the care of someone handling glass, Tomo slowly lowered her hand down, and brought it onto Aida's belly, along the top-right side."
-        PRG "Mhh…"
+        PRG "Mhh..."
         show Tomoko embarrassed
         show PRG unique-happy
-        PRG "S-Sorry… I'm a little sensitive."
+        PRG "S-Sorry... I'm a little sensitive."
         show Tomoko worried
         Tomoko "I-Is that too hard?"
         show PRG neutral
@@ -19653,57 +19653,57 @@ label MC027:
         PRG "Y-You can feel again."
         "Tomoko seemed to exhale, and brought her hand down once more, on the top of Aida's belly. She slowly worked her hand along the side, her hand gently taking in Aida's belly."
         Tomoko "... Whoa."
-        PRG "M-Mhm…"
-        Tomoko "It's like… a real baby belly."
-        Tomoko "I… can't believe you're gonna be a mom…"
-        PRG "I-I can't either, some days…"
+        PRG "M-Mhm..."
+        Tomoko "It's like... a real baby belly."
+        Tomoko "I... can't believe you're gonna be a mom..."
+        PRG "I-I can't either, some days..."
         Tomoko "Is it heavy?"
-        PRG "Not… exactly. It's a little harder to get around now, a-and I… have to be careful how I walk, b-but it's not like… how it feels to carry a really heavy suitcase or anything. It's just… part of me."
-        Tomoko "How… many are you having?"
-        PRG "Um… three. I-I have an ultrasound next week to check on them, but yes… just three."
-        Tomoko "Cool…"
+        PRG "Not... exactly. It's a little harder to get around now, a-and I... have to be careful how I walk, b-but it's not like... how it feels to carry a really heavy suitcase or anything. It's just... part of me."
+        Tomoko "How... many are you having?"
+        PRG "Um... three. I-I have an ultrasound next week to check on them, but yes... just three."
+        Tomoko "Cool..."
         "Tomo felt Aida's belly for a bit longer, then took her hand back."
         show Tomoko smile
-        Tomoko "Thanks for that. That was… really cool."
+        Tomoko "Thanks for that. That was... really cool."
         show Tomoko neutral
         PRG "You're welcome."
-        if getFlag(“MC009_PRGtalk”) or getFlag(“MC013_PRG”) or getFlag(“MC024_PRGtalk”):
-            "Aida smiled at my sister… then turned to me."
+        if getFlag("MC009_PRGtalk") or getFlag("MC013_PRG") or getFlag("MC024_PRGtalk"):
+            "Aida smiled at my sister... then turned to me."
             hide Tomoko neutral
             show PRG unique-happy
-            PRG "Hotsure-san? Would… would you like to feel, too?"
+            PRG "Hotsure-san? Would... would you like to feel, too?"
             "I suddenly found myself slightly flushing a bit."
             menu:
                 "No":
                     $setFlag("MC027_PRGNo")
-                    MC "Actually… I'm okay. I appreciate it though."
+                    MC "Actually... I'm okay. I appreciate it though."
                     show PRG worried
                     MC "Wouldn't want to get pumpkin all over you or anything."
                     PRG "O-Oh. That's okay. I-I just thought I'd offer."
                 "Yes":
                     $setFlag("MC027_PRGYes")
-                    MC "You… you're sure?"
+                    MC "You... you're sure?"
                     PRG "Mhm."
-                    MC "I… yeah, sure."
+                    MC "I... yeah, sure."
                     "I switched spots with Tomo, took a small breath, and brought my hand up to rest right on the top of Aida's belly."
                     show PRG blush-2
                     "Through her shirt, I could feel her skin. From what I could tell, it was soft, sort of like how a fat stomach might feel."
                     "But, in addition, there was a sort of tightness to it. It was hard to put into words how something could be soft, yet tight all at once."
                     "There was also quite a bit of warmth. Like putting your hand on a blanket that just came out of the dryer, though not, like, hot."
-                    MC "Wow…"
-                    MC "This is… amazing."
+                    MC "Wow..."
+                    MC "This is... amazing."
                     PRG "..."
-                    MC "It's… kind of wild to think that there's actually babies in there."
-                    PRG "I-I know…"
+                    MC "It's... kind of wild to think that there's actually babies in there."
+                    PRG "I-I know..."
                     MC "Have you felt any kicks yet?"
                     PRG "Not yet. It's still a little early for that, yet."
-                    MC "Huh. Well, there goes hoping. I've… actually never felt a baby kick through a pregnant stomach before."
+                    MC "Huh. Well, there goes hoping. I've... actually never felt a baby kick through a pregnant stomach before."
                     show PRG neutral
                     PRG "N-Never?"
                     MC "No, for whatever reason."
-                    PRG "W-Well… once they start kicking, I'll come find you, so you can feel."
-                    MC "Okay… sounds good."
-                    "I pulled my hand from her baby… well, mound, and smiled."
+                    PRG "W-Well... once they start kicking, I'll come find you, so you can feel."
+                    MC "Okay... sounds good."
+                    "I pulled my hand from her baby... well, mound, and smiled."
                     MC "Thank you. That was something special."
                     PRG "Y-You're welcome."
                     $setAffection("PRG", 1)
@@ -19712,20 +19712,20 @@ label MC027:
         "Aida came back around the table to Kanami's side, where she took her knife back and started working on the eyebrows."
         MC "You guys work together well."
         show PRG worried
-        PRG "T-Thank you. We're… well, we're very recent partners in the cooking club, too."
+        PRG "T-Thank you. We're... well, we're very recent partners in the cooking club, too."
         show Kanami happy
         Kanami "Yes."
         MC "Oh, I see. Been working out well?"
         show Kanami neutral
         show PRG unique
-        PRG "Mhm…"
+        PRG "Mhm..."
         Kanami "I would say so. Especially due to the suddenness of it all."
         MC "Gotcha."
         "Based on Aida's expression, discussing the sudden partner swap seemed a bit taboo. I worked on carving the other eye, as Tomo picked lightly at the removed pumpkin chunks."
         Kanami "Are you all planning on going to the Halloween party?"
         show Tomoko worried
         show PRG neutral
-        Tomoko "Um… I dunno…"
+        Tomoko "Um... I dunno..."
         MC "Hadn't really thought about it, but it could be fun."
         PRG "I-I was thinking about going."
         Kanami "Well, better start considering costumes, then."
@@ -19735,11 +19735,11 @@ label MC027:
         show Tomoko defiant
         Tomoko "... So what are your costume plans, Mr. Creative? A feather duster? A mop? A make-up brush?"
         show PRG unique-happy
-        PRG "Ahehehe…"
+        PRG "Ahehehe..."
         "Across the table, Aida was doing her best to cover her mouth with one hand, as Kanami seemed bent a little further down by the pumpkin."
-        PRG "I-I think… all of those could work."
+        PRG "I-I think... all of those could work."
         MC "Kodama-san! Really, now?"
-        PRG "I-I just mean… it would be funny…"
+        PRG "I-I just mean... it would be funny..."
         MC "True, true."
         MC "Which means, all of those could work for you, Tomo."
         "I turned to her, drumming my fingers on the table."
@@ -19778,64 +19778,64 @@ label MC027:
         MC "Silver lining, I guess."
         Kanami "Yes. This sort of thing can actually be quite therapeutic."
         show Tomoko worried
-        Tomoko "I… guess."
+        Tomoko "I... guess."
         "Tomo set her knife down halfway through the mouth and sighed."
-        Tomoko "I… didn't mean for it to come out as badly as it did. But, she pissed me off."
+        Tomoko "I... didn't mean for it to come out as badly as it did. But, she pissed me off."
         MC "Huh?"
         show Tomoko neutral
-        Tomoko "Usui-san…"
+        Tomoko "Usui-san..."
         show PRG worried
         "Tomo sighed, crossing her arms and looking down. Across from us, Aida and Kanami were still working, though they both were looking up now and again."
         show Tomoko worried
         Tomoko "... We were in homeroom. And she went and spouted some crap about my roommate."
-        Tomoko "So, I got angry, stood up, and… well, something just flew out."
+        Tomoko "So, I got angry, stood up, and... well, something just flew out."
         Tomoko "And, Takamura-sensei heard, and gave us both detention."
         show Tomoko neutral
-        MC "Right…"
-        Kanami "I… truly don't mean to eavesdrop, but… might I offer a thought?"
-        Tomoko "It's… fine. I mean, you guys are right by us, so… whatever. But, yeah?"
+        MC "Right..."
+        Kanami "I... truly don't mean to eavesdrop, but... might I offer a thought?"
+        Tomoko "It's... fine. I mean, you guys are right by us, so... whatever. But, yeah?"
         Kanami "So, I'm one of quite a few siblings. And, when you live with so many people, things are bound to be said without much thought behind them."
         MC "Right. Remember us, Tomo?"
-        Tomoko "Yeah…"
-        PRG "I… I hope your roommate is okay."
+        Tomoko "Yeah..."
+        PRG "I... I hope your roommate is okay."
         show Tomoko worried
-        Tomoko "Ehh…"
+        Tomoko "Ehh..."
         "Tomo looked over at Aida, who had set her knife down and was just listening."
         show Tomoko neutral
         Tomoko "... I feel like I can tell you guys about this. So, my roommate's name is Yuki. Her brother, Daichi, is in your guy's homeroom."
-        PRG "O-Oh… I didn't know he had a sister."
-        Tomoko "Mhm. And, she actually has a factor, unlike him. She has like… lip growth."
-        Kanami "Ah…"
-        Tomoko "So… Usui-san and Yuki used to be really good friends."
-        Tomoko "But, like, lately, they kind of stopped talking. Yuki's been really down lately, and well… the two kind of just stopped hanging out."
+        PRG "O-Oh... I didn't know he had a sister."
+        Tomoko "Mhm. And, she actually has a factor, unlike him. She has like... lip growth."
+        Kanami "Ah..."
+        Tomoko "So... Usui-san and Yuki used to be really good friends."
+        Tomoko "But, like, lately, they kind of stopped talking. Yuki's been really down lately, and well... the two kind of just stopped hanging out."
         Tomoko "Then, the other day, Usui-san was in homeroom, and she said that things have been a lot quieter around here lately, and pointed at Yuki."
-        Tomoko "It's getting harder for Yuki to actually… talk. And before, she uh… she liked to gab."
-        Tomoko "So, she's been kinda mopey, lately. Even for me, it's been… a little much."
+        Tomoko "It's getting harder for Yuki to actually... talk. And before, she uh... she liked to gab."
+        Tomoko "So, she's been kinda mopey, lately. Even for me, it's been... a little much."
         show Tomoko worried
         Kanami "... I see. Please, go on."
-        PRG "Yes…"
+        PRG "Yes..."
         show Tomoko neutral
-        Tomoko "So… I was sitting nearby, and I got out of my desk and walked over to her, then… well, said something to her, and Takamura-sensei heard it."
-        PRG "Ohh…"
-        MC "Uhm… what did you say?"
+        Tomoko "So... I was sitting nearby, and I got out of my desk and walked over to her, then... well, said something to her, and Takamura-sensei heard it."
+        PRG "Ohh..."
+        MC "Uhm... what did you say?"
         Tomoko "... Called her a stupid bitch. And told her that the reason it was quiet was because she couldn't hear anything over the sounds of her hamshanks slapping together."
         show PRG unique
         MC "... Tomo."
         show Tomoko defiant
         Tomoko "She deserved it! She was talking shit!"
-        MC "Well, look…"
+        MC "Well, look..."
         show PRG worried
         MC "You said yourself that your roommate has been mopey, right? Like, you even admitted that it's been a lot."
         MC "You think the reason those two stopped talking is because Usui-san just got a little burnt out on dealing with it?"
         show Tomoko neutral
-        Tomoko "Well… yeah. But, she didn't have to go say that."
+        Tomoko "Well... yeah. But, she didn't have to go say that."
         MC "She didn't, no. Like, that was too far. But, doesn't mean you had to go to her level, either."
         Kanami "It can happen. Especially in a heated moment."
-        PRG "Mhm… p-people can slip up when they get stressed."
-        MC "Right. Do you think, maybe, Usui-san just had a rough morning, or something? Maybe she just like… had a lapse in judgment?"
+        PRG "Mhm... p-people can slip up when they get stressed."
+        MC "Right. Do you think, maybe, Usui-san just had a rough morning, or something? Maybe she just like... had a lapse in judgment?"
         show Tomoko worried
-        Tomoko "I… guess."
-        Tomoko "Still made me mad, though…"
+        Tomoko "I... guess."
+        Tomoko "Still made me mad, though..."
         MC "Yeah, I can understand why."
         PRG "... Me too."
         scene black with fade
@@ -19846,11 +19846,11 @@ label MC027:
         show Tomoko neutral with dissolve
         show Kanami neutral with dissolve
         "Nearly half an hour later, Tomo and I had finished cleaning up, while Aida and Kanami were still working."
-        Kanami "Alright… just about done."
+        Kanami "Alright... just about done."
         "Aida had resolved to cleaning up around Kanami, as she put in the finishing touches."
         MC "This thing is going to be like a masterpiece."
         PRG "I-It is. I couldn't do that."
-        Kanami "It isn't done, yet. Still need to finish the hair…"
+        Kanami "It isn't done, yet. Still need to finish the hair..."
         "Tomo and I had put our pumpkin with the others, and marked it with some tags that Takamura-sensei had put out."
         show Takamura happy with dissolve
         Takamura "Nearly finished, girls?"
@@ -19860,17 +19860,17 @@ label MC027:
         Takamura "Just nice? Or, are you aiming for your brave, strong-silent face?"
         Tomoko "..."
         Takamura "I saw you smiling. I'm glad to see you enjoyed."
-        Kanami "Actually… that should just about do it. I wouldn't want to over-detail it."
+        Kanami "Actually... that should just about do it. I wouldn't want to over-detail it."
         MC "Well, let us see it, already!"
         Kanami "Alright, alright now. You two stand over on that side, and I'll turn it around."
         "Tomo and I stayed where we were, across from them, as Takamura walked over to our side, standing beside us."
         show Takamura neutral
         Takamura "Pardon me. I'm curious as well."
-        Kanami "Alright. One… two…"
+        Kanami "Alright. One... two..."
         "Kanami spun the pumpkin around quickly."
         show Tomoko surprised
-        Tomoko "Whoa…"
-        MC "That's sick…"
+        Tomoko "Whoa..."
+        MC "That's sick..."
         show Takamura happy
         Takamura "Oh! My word!"
         "Kanami and Aida's pumpkin had the image of a woman's face in the front, the pumpkin's outer shell cut away, and the inner fruit carved thin, giving the face layers."
@@ -19879,10 +19879,10 @@ label MC027:
         Takamura "That's terrifying, girls. Truly."
         Takamura "I love it."
         show Tomoko smile
-        Tomoko "That's awesome. Dude…"
+        Tomoko "That's awesome. Dude..."
         show Kanami happy
         Kanami "Thank you. Kodama-san did the hair and the mouth."
-        PRG "I-I just made a few cuts here and there…"
+        PRG "I-I just made a few cuts here and there..."
         Kanami "Oh, you did more than that."
         show Kanami neutral
         show Takamura neutral
@@ -19894,7 +19894,7 @@ label MC027:
         hide Takamura with dissolve
         "Aida had almost her entire station cleaned, save for the tools, which she started to wash in the sink."
         "I followed suit and started cleaning ours, as Tomo leaned on the counter beside me."
-        "Behind me, somewhere, I could hear the slight sound of… a smacking? Like, a gentle push of skin on skin."
+        "Behind me, somewhere, I could hear the slight sound of... a smacking? Like, a gentle push of skin on skin."
         Fumika "Hey. Can we talk for a second?"
         "I turned around to see Fumika Usui standing right by my sister, as Tomo nodded and walked across the room with Fumika."
         hide Tomoko with dissolve
@@ -19912,7 +19912,7 @@ label MC027:
         Takamura "Yes."
         Takamura "It's what I had hoped would happen."
         Takamura "I was hoping that, by putting the two into a situation where they'd have to work on something in the same room, while not exactly in a one on one scenario, they might come to some sort of peaceful truce."
-        MC "Huh… interesting."
+        MC "Huh... interesting."
         Takamura "I do have both girls in my homeroom, so I had a slight reckoning that it might work."
         MC "Well, seems like it did."
         Takamura "Thankfully, yes. Likely in no part to you and your friends across the way."
@@ -19925,11 +19925,11 @@ label MC027:
         hide PRG with dissolve
         show Tomoko neutral with dissolve
         "Tomo walked back over a minute or so later, looking down."
-        Tomoko "Well… she said she was sorry."
+        Tomoko "Well... she said she was sorry."
         MC "That's good."
         MC "And you did too?"
         show Tomoko worried
-        Tomoko "Mhm…"
+        Tomoko "Mhm..."
         MC "Good. Well, shall we?"
         show Tomoko neutral
         Tomoko "Yeah."
@@ -19945,8 +19945,8 @@ label MC027:
         "Tomo stared, gasping beside me and taking it quickly."
         show Tomoko smile
         Tomoko "T-Thanks."
-        PRG "You're welcome…"
-        Tomoko "And, um… thanks for letting me… touch your belly. That was cool."
+        PRG "You're welcome..."
+        Tomoko "And, um... thanks for letting me... touch your belly. That was cool."
         PRG "... You're welcome. Have a good night."
         Tomoko "Thanks."
         scene Hallway with fade
@@ -19955,21 +19955,21 @@ label MC027:
         "Tomo and I headed out into the hallway, now darkened and quiet."
         show Tomoko smile
         $setAffection("TM", 1)
-        Tomoko "Thanks for not, like… bailing on me."
+        Tomoko "Thanks for not, like... bailing on me."
         MC "For sure."
         Tomoko "Meant a lot."
         MC "Well, gee. Look at you, with all the thank you's and deep feels."
         Tomoko "... I had a good time."
         MC "Good."
         MC "Hell, maybe you could look into the cooking club. Bake some cakes with Kodama-san or something."
-        Tomoko "Ehh… no. I don't have the patience for baking."
-        MC "Yeah… to each their own."
+        Tomoko "Ehh... no. I don't have the patience for baking."
+        MC "Yeah... to each their own."
         "The two of us headed toward the dorms, the wind blowing a bit around us."
         Tomoko "So, you gonna start carving pumpkins professionally now?"
         MC "I mean, people do actually do that."
         Tomoko "So you're gonna be one, right?"
         MC "... Sure. Just as soon as you become a professional bodybuilder."
-        Tomoko "Uhh… no."
+        Tomoko "Uhh... no."
         MC "My point stands."
         "I snickered, walking along with Tomo back to the dorms."
         jump daymenu
@@ -26280,4 +26280,350 @@ label RM007_Epilogue:
     pause 1
     MC "Where the fuck did he...?"
     MC "Seriously, now? {w}Whatever. I'm overdue for that sandwich." 
+    jump daymenu
+
+label RMG001:
+    scene Gate Front with fade
+    play music HigherEdu
+    "It had been a pretty slow weekend at Seichou this time. Maybe it was because people were hunkering down to study for upcoming tests, or the weather hadn't been that nice, but the place felt dead."
+    "Which is why I thought it might be a good idea to get out of my room and hopefully out of a funk by getting around to do one of Daichi's \"gig\" assignments he had in mind for me."
+    MCT "Not like there's much else going on on a Sunday morning around here."
+    "By all means it was a pretty mundane task."
+    "Like he said, \"So there are two buses, one goes directly to town, while the other line seems to go around the entire island. Check where the other bus goes.\" "
+    "Normally I would have balked at such a task being the best use of my time, but here I was, pondering my life choices and considering the need to get a new hobby as I waited for the bus outside the school."
+    MCT "I suppose Daichi considers such mundane tasks beneath his more grandeur schemes but as far as I'm concerned it's much better than sitting in the bushes waiting for something to happen."
+    if getFlag("MC010RM"):
+        MCT "Or waiting under somebody's bed— only to get kicked in the face for my efforts."
+    "The more I thought about it, the more I realized despite sounding rather boring, this was far less likely to take a bizarre turn like half the shit Daichi would normally get himself into... {w}So that was a plus."
+    MCT "Then again nothing ever normal seems to emerge from Daichi's plans. Maybe something interesting will happen yet..."
+    "Seeing as there was still no bus in sight, I had some time to kill and walked up to the bus stop board to look at the stop schedule."
+    MC "Hmmm... let's see here."
+    MC "{i}What{/i}? {w}What is this?"
+    "The details on the board were strangely sparse. No listed stops, only when the buses will arrive and some generic letter designations to distinguish both lines."
+    "And that was it. {w}And believe me, I searched all over the poster for anything else, a QR code, a schedule app, or even a website... Nothing. Just the poster board."
+    MCT "Where am I? Did I step back in time to the 20th century?"
+    "Daichi must have had the same realization at some point and made a mental note of it."
+    MCT "Enter one Keisuke Hotsure, now on the case."
+    "With my detective mode activated, for whatever that was worth, I scanned the scene for any potential points of interest, but nothing really caught my attention until I saw a couple of other students walking towards the stop."
+    "I recognized them, having seen them before here and there in the hallways or at the cafeteria, but nothing more than that. Never spoken to either, or knew their names."
+    MCT "Probably easier this way. As much as having a buddy to chat with on the bus would make this go easier, I'm not exactly keen to have to explain to anyone what exactly it is I'm doing out here."
+    MCT "Especially since I'm not so sure I could explain it myself."
+    "The two students walked up and sat on the bus stop bench. We exchanged slight nods, acknowledging a loose acquaintanceship as fellow students, but neither attempted to initiate any conversation, nor did I."
+    "Naturally, being students at the Academy, I couldn't help but begin to speculate on their growths."
+    "Neither was an immediate and obvious case. By this point since arriving on the island, the increasingly exaggerated physiques of the student body had mostly taken the guesswork out of the process."
+    "Stealing a few sideways glances at the pair of students, I was able to analyze a few more details."
+    "Despite a rather unremarkable upper half, the female student's thighs more prominently spread as they partially flattened against the bench, revealing an exaggerated width and heft not typical of one so petite."
+    MCT "Hmm, likely some form of hip or ass factor. Hard to tell exactly which from the front though."
+    "The guy on the other hand didn't seem that remarkable, except that his height bordered on what {i}might{/i} be considered unusual."
+    MCT "Could be a height growth factor, not near as obvious as Naomi or what might meet the threshold for the so-called \"gigantism factor\" as Tsubasa called it."
+    "I couldn't begin to tell you why I thought to engage in such a detailed analysis of these two."
+    "Unlike Daichi, I wasn't obsessively trying to ascertain some kind of trend amongst the student population that might provide some clue as to the nature of the growths."
+    "If anything, it was more so customary by this point in the year that members of the Academy would be curious about a person based on their growth." 
+    "Some would raise a sense of intrigue in the eye of the observer, while others, more of a sense of pity in light of the sheer cosmic misfortune. Not to mention, some were certainly more severe than others. " 
+    "The irony of sizing someone up by virtue of their size wasn't lost on me, but by this point it was as much as part of an introduction to meeting a new person as asking where they were from."
+    "Before I could entertain any more speculation on the growths of the two students, the bus rumbled into view before coming to a halt at the bus stop station, letting out a hiss from its breaks in the process."
+    "Feeling a sense of relief that I wouldn't be stuck waiting, a quick look at the bus number as well as a quick cross reference to the time and the schedule on the board brought the disappointing realization it was the wrong route."
+    MCT "Sigh... The one time I'm early for anything and it doesn't help. Should've just stayed in bed, Kei."
+    "The other two students left their seats to line up for the bus door as a couple of other students and one random island denizen got off."
+    "Briefling looking back, the students likely assumed I would follow behind them. {w}I crossed my arms and leaned back against the bus stop shelter, subtly letting both them and the bus driver know I didn't intend to take this particular ride."
+    "Without much fanfare, the bus door closed and rumbled back to life as it set itself in motion straight back to town."
+    scene black with fade
+    pause .5
+    scene Gate Front with fade
+    play music Country
+    "A few minutes later a new bus rolled up to the stop. Despite being the only possible bus to match this arrival time, I still cross-referenced the bus number to the route line, just to be sure."
+    MCT "Looks like this is my ride."
+    "This time around there was no one else getting off or on at the stop besides me. Not to say I found it unusual, but curious at least."
+    "Stepping up into the bus and giving a nod to the driver, I turned to take a seat only to realize the entire bus was empty save the two of us."
+    MCT "Definitely appears to be the road less traveled. Makes sense it would spark Daichi's interest."
+    scene Bus Interior with fade
+    "I took a seat somewhere in the middle of the bus, taking advantage of getting a window seat to lean against the side wall. I pulled out my notebook looking to start taking notes of the stops."
+    "Whether it was an interesting observation or not, I thought it worth noting that this line seemed rather dead by comparison to the one we typically use."
+    MCT "Bus stops... 1) Seichou Academy."
+    "An obvious initial entry, but I had to start somewhere."
+    if getFlag("MC010BE"):
+        MCT "Bus stops... Or bust stops, as Honoka would say... Hehe."
+        "In retrospect I should have brought her along, given that she would have enjoyed the sense of new found exploration." 
+        "But then again, her persistent curiosity would have made concealing the true purpose of my expedition on behalf of Daichi's interest impossible to conceal."
+        MCT "Sorry, Honoka. Maybe I'll find a new favorite hangout spot for us along the way here."
+    "The squeak reached the middle of the bus as the driver pulled the lever to close the door, and set the bus in motion." 
+    "As simple as this small assignment was, I couldn't help but get a bit excited at the idea of setting off on some sort of an adventure."
+    scene Roadside Satoyama with fade
+    "It hadn't even been a few minutes before the bus had reached its first stop."
+    "Looking through the window of the bus, I was downright stunned. It was a breathtaking view of a quaint little traditional Japanese village set at the foot of a large mountain that loomed over on the horizon."
+    MCT "Where is this place? It can't be that far from the school."
+    "Scanning around the outside to look at the bus stop, the station placard read: \"Satoyama Village\". {w}I jotted it down in my notebook as a few passengers got on the bus."
+    MCT "All adults, no students. Must be residents of the village..."
+    "Without much fanfare the added passengers took their seats." 
+    "The bus itself was quiet, save the hum of the bus going down the road, so it wasn't too hard to pick up the conversation between two ladies that sat down a couple of seats ahead of me."
+    "I would consider them to be older, but they certainly weren't ancient grannies either."
+    "Lady 1" "It's a relief to know the bus still runs on Sunday if we happen to need to get into town like today."
+    "Lady 2" "Well, we wouldn't need to if the Early Bird convenience store was open on Sundays."
+    "Lady 2" "I mean really. Don't bus drivers need days off? Besides, what's so convenient about a store that's closed entirely on some days? {w}You'd think Chiyo-san would have thought about such things..."
+    if isEventCleared("MC005") or getFlag("Meet_Chiyo"):
+        MCT "They must be talking about Tsubasa-sensei's wife. She mentioned having a store in Satoyama. That must be where they live then."
+    "Lady 1" "Well it's not that far of a trip, it isn't a very big island afterall."
+    "As the pair prattled on with obvious observations about the weather that devolved into gossip about other women, I began to lose interest in their conversation and turned my attention more to the window and the scenic view outside."
+    scene Roadside Woods with fade
+    "Most of the countryside was a mix of hills and mountains, but a flash of blue perked my attention when I caught a glimpse of a small lake far out near the horizon, tucked away in a valley between mountains."
+    MCT "Whoah, that was pretty cool. Would make a hell of a picnic spot. {w}Better file that one away for later under \"date ideas\"."
+    "As cool as the scenic views had been so far, they only seemed to serve as a reminder there were literally hundreds of better ways I could have spent today's morning, but that ship had sailed— or at least, that bus had left the stop."
+    scene black with fade
+    pause .5
+    scene Roadside Town with fade
+    play music BrightLights
+    "It hadn't been that long after the stop in Satoyama Village that the routes must synced up again, since we arrived back at the usual end of the line in the town of Seichou."
+    MCT "I recognize this place. This is where the students usually get off. It's the happening part of town, so to speak, with the bulk of the shops and entertainment the island has to offer."
+    "I made a quick note in my notebook of this stop: \"Commercial District - Downtown\"."
+    "But this time, likely due to not being the true end of the line like the A Route, there weren't any students getting on, just an exchange of a handful of adults of various ages and walks of life."
+    "Without near as much time spent stopped at this station as I recalled with the other line, the driver set the bus in gear without any fanfare."
+    if getFlag("VisitedWaterpark") and isEventCleared("BE047"):
+        "Desipite also running through town this took a slightly different path, but I recognized the street as it went past the water park."
+        MCT "Oh I don't think I could ever forget that place— Honoka's bathing suit malfunction made sure of that!"
+        MC "Hehehe."
+        "I chuckled to myself, doubtful that anyone else on the bus heard me since I didn't see any heads turn towards a lunatic laughing at his own jokes."
+    elif getFlag("VisitedWaterpark"):
+        "Desipite also running through town this took a slightly different path, but I recognized the street as it went past the water park."
+        MCT "That was a fun time. Was hoping I could come again before the end of summer."
+    else:
+        "Desipite also running through town the bus took a slightly different path. I didn't recognize the street and was surprised by what I saw."
+        MCT "Wait a minute! This place has a water park!? How did I not know this? {w}This town is full of surprises I guess."
+    scene black with fade
+    pause .5
+    scene Town Residential with fade
+    play music DayByDay
+    "After winding through the busy streets of the shopping district, the bus came to a halt at what I could only estimate to be the far end of town."
+    MCT "Huh, didn't expect it to stop here, seems a bit out of the way. What's this one called?"
+    "I peaked out the window to read the placard on the bus stop shelter outside \"Bus Terminus\"."
+    MCT "So it ends here? That can't be right."
+    "Despite my initial doubts, I noticed most of the passengers remained on the bus, with only a couple getting off, which suggested it really was the end of the loop and most people were waiting to go somewhere else."
+    MCT "Huh, I guess it really is the end. Better make note of it."
+    "The more I thought about it, the more I realized that Seichou Academy may have been the first stop for me, but it wasn't for this bus, which made me realize I had no idea how many stops were still left."
+    MCT "This has got to be a joke, there has to be a website for this thing somewhere, or at least a freaking map!"
+    MCT "Maybe Daichi was on to something about how obscure this place was that it had to be intentional. {w}Maybe this gig is more important than I thought."
+    "Bus Driver" "Departure in five minutes!"
+    "The sudden shout from the driver startled me out of my train of thought, which was probably a good thing since I felt myself spiraling into paranoid mumblings over the seemingly poor logistics of a bus line."
+    "A few of the people gathered their things and got off the bus, but remained milling around the bus stop outside. It struck me as a good idea to get up off my butt and stretch my legs."
+    MCT "No telling how much of this trip is left, might as well enjoy a break."
+    "Stepping off the bus, I took a look around, seeing as I hadn't been in this part of town before."
+
+    if getFlag("VisitedHotel") and isEventCleared("RM008"):
+        "This area looked to be more of a residential district, probably one of the nicer ones too judging by some of the houses in view down the block."
+        "Which made sense when I saw lady Usuda's hotel on the hilltop overlooking the area."
+        MCT "You've got to be kidding me! There was a bus that took us 99%% of the way there! {w}That'd been useful information to have before we walked our asses off to get up there only to have to hike that hill."
+    elif getFlag("VisitedHotel") and not isEventCleared("RM008"):
+        "This area looked to be more of a residential district, probably one of the nicer ones too judging by some of the houses in view down the block."
+        "Which made sense when I saw lady Usuda's hotel on the hilltop overlooking the area."
+        MCT "Looks like we're on the nice side of town. Man, this is way out there from the mainline downtown. Good to know though if I ever have to go back there."
+    else:
+        "This area looked to be more of a residential district, probably one of the nicer ones too judging by some of the houses in view down the block, not to mention what looked to be some old mansion on a hilltop overlooking the area."
+        MCT "What the hell is that? Looks swanky."
+        "Scanning the immediate area I noticed a sign across the street with arrow markers for pedestrians to local destinations."
+        if getFlag("Meet_Takamura"):
+            MCT " 1km west, \"Le Châteaux de Pierre\". {w}No clue what that means, but it sounds fancy. Maybe Takamura-sensei would know what it means? {w}Well anyway, if that's not it, then I certainly give up."
+        else:
+            MCT " 1km west, \"Le Châteaux de Pierre\". {w}No clue what that means, but it sounds fancy. So if that's not it, then I certainly give up."
+        MCT "Hmm, it's listed under \"accomodations\"... Must be a hotel. Here I was thinking it was some rich guy's house."
+        MC "Wait... Is that the same hotel Daichi wanted to go to?"
+        MCT "Well that's pretty useful information for a future investigation. I'll need to write that down when I get back on the bus."
+
+    "I continued to look around to see if there were any other notable landmarks when I noticed the bus driver step off the bus." 
+    "He walked over to the same spot the rest of the passengers were milling about to light up a cigarette. Judging by his relaxed lean against the stop station wall his body had been looking forward to this break."
+    "Bus Driver" "You going swimming?"
+    "It took me a second, but after looking around I realized he wasn't taking to anyone else and was looking right at me."
+    MC "Huh?"
+    "Bus Driver" "Summer is starting soon, most of the students don't take this line unless they're heading out to enjoy the water."
+    "To be honest, I didn't quite understand what he was talking about. I mean, we had just passed the waterpark, so I had no idea what he was referring to."
+    MCT "Maybe this doing this \"mission\" looks more suspicious than I thought it'd be..."
+    menu:
+        "Play along. (Lie)":
+            $setFlag("RMG001_Lie")
+            MC "Yeah. Been looking forward to it."
+            "Bus Driver" "I knew it! You're gonna love it! {w}It's one of the island's hidden gems."
+            MC "Cool, cool."
+            if getFlag("VisitedWaterpark"):
+                MCT "I mean, he's not wrong, it was a pretty cool water park for a town this size."
+            else:
+                MCT "Must be a nice waterpark, I guess?"
+        "Come clean and tell the truth.":
+            MC "Actually, I'm still trying to figure out this place. I was curious where this bus line goes. I've only ever gone straight to town and back from school."
+            MC "I mean, would be nice if there was a map for it... or an app."
+            "Bus Driver" "An app? What kind of budget you think this thing runs on? {w}They're supposed to have maps at the stops but they don't do a good job at restocking them."
+            "Bus Driver" "Would be nice if some of that money saved on not printing maps went back into our pay."
+            "Bus Driver" "There's nothing really special about it though. This here is the terminus where we turn back around." 
+            "Bus Driver" "There's a few more stops in town, then we're going to Beachside, back to town, then to Satoyama, and then back to the school before dropping off at the ferry dock."
+            "Bus Driver" "The bus line was changed a few times to accommodate the needs of passengers. The largest transit demand is between the academy and the town and from the port to the residential district."
+            "Bus Driver" "So somewhere in the middle we have to make sure we're providing access to everything else."
+
+    "The bus driver flicked his cigarette to the ground and gave himself a little push off against the wall with a shrug of his back, springing to life after his brief reprieve."  
+    "Bus Driver" "Alright, break's over. Time to move."
+    "The bus driver walked back onto the bus, briefly doing a few movements to stretch out his shoulders and hips before getting back into the seat again."
+    scene Bus Interior with fade
+    "The rest of the group followed shortly behind him and I took my seat as well. After a brief moment to let everyone settle in, the bus lurched to life again with the rumbling of the engine and the pressure release of the break."
+    if not getFlag("VisitedHotel") and not isEventCleared("RM008"):
+        MCT "Alright, before I forget, gotta jot this down: {w}Bus stop located near the hotel."
+        MCT "Well, assuming that's the same hotel he means. Who really knows with that guy?"
+
+    scene black with fade
+    pause .5
+    scene Town Docks with fade
+    "The next stop wasn't too far away. Looked to be the main port of the city judging by the view of some docks in the distance through the bus window."
+    "In the water and moored along the shore was a mix of fishing boats, commercial cargo vessels, and what looked to be a departing ferry heading off into the horizon."
+    MCT "Hmm, this must be the main entry point from the mainland to the island near the heart of the town, it certainly looks a lot busier than the ferry dock near the academy."
+    MCT "Which makes sense considering the only people who'd really need to use that dock are the students or residents of Satoyama Village. It probably stops there first before making this stop when coming back from the mainland."
+    "A decent portion of the passengers got off, but were replaced by even more that got on, seeming to confirm my previous observation of this being a rather busy location in town."
+    "A mostly blue color looking group, likely dock workers or other businesses that support that type of industry."
+    "None of them particularly noteworthy except for this one unusual looking guy who lumbered down the bus aisle with a particularly exaggerated sway before plopping his butt down with a big thud in the seat opposite of me."
+    "I wasn't any stranger to seeing fat people, especially on this island. Hell, he wasn't even that fat, cause he had thin arms and legs, but unfortunately for me I couldn't escape noticing his fat gut peaking out from under his shirt considerably."
+    "The guy's fat distribution seemed to be concentrated in his chin and belly. I honestly couldn't tell if he had a factor or not, but something told me \"bullfrog growth\" was not a thing." 
+    "Then again, at this point, if someone told me it was, I'd probably believe them."
+    MCT "Can't say it's the strangest thing I've seen since I got here— doesn't even rank in the top ten."
+    "The bus doors closed and we were rolling again." 
+    "Compared to most of the other legs of the journey, it hadn't been that long of a stretch before we made it to the next stop."
+    MCT "What's this one say? {w}\"Residential District\"? Better write this down."
+    "Given that it was a residential district, it made sense to see the majority of the riders from the previous stop had gotten off here."
+    "I found it to be nothing terribly noteworthy, just a bunch of houses and apartment blocks, but more than I expected to see from a town this size to be honest." 
+    "I guess it made sense most people would live near where they work, or stay close to the dock if they go to the mainland frequently."   
+    "We lingered a little longer at this stop to allow more time for people to get on and off, while the bus driver kept a lookout for any potential stragglers, but without much fanfare we were off again."
+    scene black with fade
+    pause .5
+    scene Bus Interior with fade
+    "By this point we had left the town and started getting into more of the forested countryside."
+    "I was starting to get a bit bored by this point, so I popped my head up and took a look around the cabin."
+    "Most of the passengers had gotten off by this point, just a handful of us left, which included Mister Bullfrog Gut still sitting across from me."
+    MCT "Seriously, what's the deal with this guy? Is it a factor? Unfortunate genetics? Or just a big beer gut?"
+    "The more I thought about it, the more I considered that more than one choice might be the correct answer..."
+    "Big Gut Guy" "Hm?"
+    MCT "Oh shit! He caught me staring."
+    "I turned my head back to my window, trying to keep my head down."
+    "Big Gut Guy" "You lookin' at my gut?"
+    MCT "Oh fuck, he's calling me out too. {w}Just play it off."
+    MC "Hm? Uhh, you talking to me?"
+    "Big Gut Guy" "Yeah you! You were looking at my gut!"
+    MC "Uhh, no..."
+    "Big Gut Guy" "Yes you were! I saw ya!"
+    MCT "He's not letting this go..."
+    MC "Well, I just took a little peak is all..."
+    "Big Gut Guy" "Yeah I saw ya. What are ya lookin' at my gut fer?"
+    MCT "I don't know man, cause you're fucking gross looking?"
+    "Is what I wanted to say, but thought the better of it."
+    MC "Sorry."
+    "By this point I just put my head down, boring a hole into the floor desperately trying to avoid eye contact."
+    MCT "Oh, just shoot me in the head now... {w}Of all the things to cause a scene over..."
+    "The guy sitting in front of him on the other hand kept looking back, seemingly visibly annoyed by Bullfrog Gut's insistence on making a big deal of things."
+    MCT "At least I'm not the only one that thinks this was weird."
+    scene black with fade
+    pause .5
+    scene Bus Interior with fade
+    "After Frog Gut seemed to have calmed down, I ventured to tilt my head out the window to look at the outside landscape as the bus rolled along, firmly fixing my gaze so as to not draw his ire again."
+    "Which was fine by me since I didn't want to look at his ugly ass any less than he wanted me to either."
+    "I'm glad I did because it was quite the view. It was a ways off but I got a good look at the costal landscape far off into the distance since we were pretty high up still before getting to the shore."
+    MCT "Wait? What's that sign say?"
+    if isEventCleared("FMG066") or isEventCleared("WGFMG004A"):
+        MCT "Airport. {w}I thought I recognised this part of the road. Hadn't put two and two together since Alice arranged our transport there when we left for Okinawa."
+    else:
+        MCT "They have an airport here? {w}Why would anyone take the ferry then?"
+        MCT "On second thought, I can't imagine it's a very big airport if it services this backwater. Especially since the bus doesn't even seem to be turning off to make it one of its stops."
+        MCT "Might be worth noting for Daichi. Then again I hope it doesn't give him some weird ideas about doing a stake out for smuggled goods or some similarly bat-shit idea."
+    if routelock == "WG":
+        MCT "Now that I think about it, this is probably how most of the wealthy residents of the island transport themselves to and fro. I mean it would be a lot quicker, and I don't recall Alice ever mentioning taking the ferry."
+        MCT "Not exactly the type of people to take the bus. {w}Maybe the hotel has a shuttle? Either way, doesn't appear to be a bus-worthy destination."
+    scene black with fade
+    stop music fadeout .5
+    pause .5
+    scene Roadside Beachside with fade
+    play music Beach
+    "As we wound around the carved out sheer faces of hills and mountains leading downhill as we got closer to the coastline, the ocean came into full view, dominating the landscape."
+    "I could see what looked to be a small coastal village in the distance not that far off from a lighthouse that jutted out from the landscape."
+    MCT "Must be our next destination. Looks like some fishing village, or maybe a vacation hide-away for wealthier residents."
+    "The bus slowed to a stop at a bus stop station pavilion on the corner of what looked like the main road through the town. You could see it lead right down to the pier at the far end of town."
+    "\"Town\" was a bit of a stretch. A collection of shacks and moored boats was more like it."
+    MCT "\"Beachside Village\" Well there you go."
+    "True to its name, it certainly looked to be a nice cozy beach destination for the summer time."
+    MCT "This must be what the driver meant when he was talking about swimming on the beach."
+    if getFlag("VisitedBeach"):
+        MCT "Ugh, I'm such a dumbass. I've been here before. I didn't recognize it cause we hitched a ride to the beach and didn't go into the town."
+    else:
+        MCT "I just assumed he meant the water park, I didn't realize this was here. This place does look pretty cool."
+    "Before I could give it much thought the last of the passengers at the stop got on after about half had emptied out and we were rolling again."
+    scene black with fade
+    stop music fadeout .5
+    pause .5
+    scene Town Bus with fade
+    play music Schoolday
+    "The route back was just a backtrack to where we had gone before. The steep mountains of most of the island's interior apparently didn't lend themselves to the construction of alternative branching routes."
+    MCT "At least I recognise this place pretty well."
+    "We arrived back at where the A Line usually enters into town, or goes back to the Academy, depending on the direction."
+    "A lot of people were waiting at this stop, a decent amount of students along with what I assumed to be residents of Satoyama."
+    if not getFlag("RMG001_Lie"):
+        MCT "This must be what the driver meant about the bus line changing multiple times to accommodate the transit of the island residents."
+    MCT "Alright, checking my notes here, looks like we made a full circle by this point. This covers a decent amount of the island's destinations, but I somehow doubt Daichi will be satisfied about the amount of access the line grants."
+    MCT "Considering it didn't go to the airport, or anywhere near that radio tower he was talking about, I half suspect he's going to fully suspect there's a lot more destinations to uncover."
+    MCT "I guess that will have to wait for another day though."
+    "After taking a brief moment to collect my thoughts, I made the unfortunate mistake of looked up from my notes in the wrong direction."
+    "Big Gut Guy" "OI! Ya doing it again! Quit gawk'n at my gut!"
+    MC "I'm not gawking at anything. I'm just riding the bus, man."
+    "Big Gut Guy" "I don't believe ya! Why you gotta look at my gut!?"
+    "This guy was being so obnoxiously loud with his gut-induced paranoid ramblings that he started drawing the attention of the whole bus towards our conversation as heads turned around or tilted into the aisle."
+    "Which only served to draw more attention to the man's unfortunate physique."
+    "Big Gut Guy" "Hey you! I saw you too! Quit looking at my gut!"
+    "One of the students two seats back looked like a deer in the headlights from getting called out."
+    Student1 "Uhhh, umm... No I wasn't..." 
+    "Big Gut Guy" "Yes you were! I saw ya looking!"
+    Student1 "I was... uhhh... just trying to read what was written on your t-shirt... that's all..." 
+    "Big Gut Guy" "I don't buy that for a minute! Ya here me!"
+    "The student for his part turned his head away, trying to ignore the guy like I did earlier, looking like he was about to die of embarrassment in the process. {w}Not that I blamed him." 
+    "Just as the entire bus was starting to get caught up in the commotion Bullfrog Gut Guy was causing, the guy sitting in front of him snapped himself around looking pretty pissed off."
+    "Passenger 1" "That is enough Taiko-san!"
+    "Passenger 1" "What is your problem?"
+    "Big Gut Guy" "I ain't got a problem! These jerks got a problem! Cause they keep gawkin' at my gut!"
+    "Passenger 1" "People only stare cause that gut of yours is enormous and that shirt is two sizes too small!"
+    "Passenger 1" "Fuck it! Let's just get it over with!"
+    "With no more fucks left to give the guy got up from his seat, reached down to gut guy's shirt and pulled it right up!"
+    "Big Gut Guy" "{i}Eyyye?!{/i}"
+    "Passenger 1" "Alright everyone! Let's get it out of our system. Look at this gut! Get a big ol' eye full."
+    "Passenger 2" "{i}Ugghhhk{/i}... I didn't need to see that..."
+    "Passenger 3" "Don't look... don't look... {w}{i}Shit!{/i} {w}That thing is gross!"
+    "Passenger 4" "Guess it was a good thing I skipped lunch today..."
+    "Big Gut Guy" "Hmph, okay okay."
+    "Realizing he'd been beaten at his own game, Bullfrog Gut Guy pulled his shirt down, at least to what extent was possible, seemingly embarrassed for once by the spectacle he brought upon himself as an uncomfortable silence hung in the air."
+    "Passenger 1" "See? No one freaking cares about your gut."
+    "Passenger 1" "We live on the one island where impossibly exaggerated bodies are outright commonplace and for some stupid reason you gotta make a fuss about your large gut."
+    "Passenger 1" "And as big as it is, in the grand scheme of things, it's pretty small. So just fucking get over it and stop making a scene about it all the time."
+    "In a rather sheepish act of self-consciousness, Bullfrog Gut tugged at his shirt, attempting to pull it back down again, but with little progress to show for the half-hearted effort."
+    "Luckily for him though we had just reached the stop at Satoyama village, where most everyone, including him, were getting off."
+    MCT "Good riddance."
+    "With a longer than usual pause to allow for the bus to empty out most of the passengers, we were off down the road back to the school."
+    "Looking around it was just a handful of us students left and one older lady. I didn't recognize her as a teacher though and just assumed she must have been a staff member." 
+    scene black with fade
+    stop music fadeout .5
+    pause .5
+    scene Gate Front with fade
+    play music DormLife
+    MCT "Alright, gate's in sight. Finally going to be getting off this bus. My butt is getting tired of these hard seats."
+    MCT "Okay, better check my notes. Here's all the stops I noted: Satoyama Village, Commercial District - Downtown, Bus Terminus, Docks at the Port, Residential District and Beachside Village."
+    MCT "After that it loops into the Main Town stop before heading back to Satoyama and the school."
+    if getFlag("RMG001_Lie"):
+        MCT "Well, not the most exciting excursion, but I suppose a bit of sanity serves as a nice palette cleanser to break up Daichi's more typical investigations that always seem to somehow go sideways."
+        "Realizing I was straggling behind the other students who had already gotten off the bus, I grabbed my notes and stepped towards the front of the bus. Before stepping off I caught the bus driver eyeing me suspiciously."
+        MCT "Oh, right."
+        MC "Ugh, yeah... Forgot my swimsuit, heh..."
+        MCT "I don't know if he bought that."
+    else:
+        "Stepping off the bus, it felt good to stretch my legs and get away from the diesel tinged air of the back of the bus cabin."
+        MCT "Well, not the most exciting excursion, but I suppose a bit of sanity serves as a nice palette cleanser to break up Daichi's more typical investigations that always seem to somehow go sideways."
+        if routelock == "AE":
+            MCT "Either way, it managed to kill some time. I wonder what Shiori is doing?"
+        elif routelock == "PRG":
+            MCT "Either way, it managed to kill some time. I wonder what Aida is doing?"
+        elif routelock == "BE" or getHighestAffection() == ("BE"):
+            MCT "Either way, it managed to kill some time. I wonder what Honoka is doing?"
+        elif routelock == "GTS" or getHighestAffection() == ("GTS"):
+            MCT "Either way, it managed to kill some time. I wonder what Naomi is doing?"
+        elif routelock == "FMG" or getHighestAffection() == ("FMG"):
+            MCT "Either way, it managed to kill some time. I wonder what Akira is doing?"  
+        elif routelock == "WG" or getHighestAffection() == ("WG"):
+            MCT "Either way, it managed to kill some time. I wonder what Alice is doing?"
+        else:
+            MCT "Either way, it managed to kill some time. I wonder what Honoka is doing?"
     jump daymenu
