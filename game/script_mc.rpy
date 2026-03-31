@@ -13630,6 +13630,872 @@ label MC012:
     MCT "I'm gonna be the greatest GM to ever live!"
     jump daymenu
 
+label MC012B:
+    $eventname = "The Desolation of the Lich King"
+    $save_name = "The Desolation of the Lich King"
+    $setMCOutfit(OutfitEnum.CASUAL)
+    $setGTSOutfit(OutfitEnum.CASUAL)
+    $setWGOutfit(OutfitEnum.CASUAL)
+    $setBEOutfit(OutfitEnum.CASUAL)
+    $setPRGOutfit(OutfitEnum.CASUAL)
+    scene Chukan Point with fade
+    play music ClearSkies
+    "As I crested the hill, looking out towards the cherry blossom tree in the distance, I held my game materials underneath my arm; notebooks, pencils, and a laptop I could use to pull up any info I needed."
+    "As the warm summer air was cooled by the northern breeze, Chūkan Point was a prime spot for students ready to enjoy their summer break; a few giant students in the distance sitting alongside counterparts with various growths in joyful levity."
+    "I made my way to the park center where my players awaited, Shiori with similar materials at her side as Honoka took her pencil and balanced it on her lip."
+    MC "Hey all."
+    show BE neutral at Position(xcenter=0.15, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.26, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind PRG
+    show WG neutral at Position(xcenter=0.60, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+    with dissolve
+    BE "Well look who decided to show up!"
+    MC "Oh don't even, I'm two minutes early."
+    show BE happy
+    BE "And Shiori looks like she's about to explode!"
+    AE "Can't you tell?"
+    MC "..."
+    show BE neutral
+    BE "..."
+    AE "I am excited, if you can't."
+    BE "SEE!"
+    show FMG upbeat 
+    FMG "Yeah! Let's get this show on the road!"
+    show FMG neutral 
+    if routelock == "AE" or "PRG" or "WG" or "FMG" or "BE" or "GTS":
+        MC "BEFORE WE DO! I need to make an announcement."
+        WG "Oh? Come to your senses already?"
+        MC "Well, no, more that... as you know, you all are my friends."
+        if routelock == "AE":
+            hide BE
+            hide FMG
+            hide WG
+            hide PRG
+            hide GTS
+            with dissolve
+            show AE smile
+            MC "And... well... you know our deal."
+            pause .5
+            hide AE with dissolve
+        elif routelock == "BE":
+            hide AE
+            hide FMG
+            hide WG
+            hide PRG
+            hide GTS
+            with dissolve
+            show BE happy
+            MC "And... well... you know our deal."
+            pause .5
+            hide BE with dissolve
+        elif routelock == "PRG":
+            hide BE
+            hide FMG
+            hide WG
+            hide AE
+            hide GTS
+            with dissolve
+            show PRG unique
+            MC "And... well... you know our deal."
+            pause .5
+            hide PRG with dissolve
+        elif routelock == "WG":
+            hide BE
+            hide FMG
+            hide AE
+            hide PRG
+            hide GTS
+            with dissolve
+            show WG haughty
+            MC "And... well... you know our deal."
+            pause .5
+            hide WG with dissolve
+        elif routelock == "GTS":
+            hide BE
+            hide FMG
+            hide WG
+            hide PRG
+            hide AE
+            with dissolve
+            show GTS happy
+            MC "And... well... you know our deal."
+            pause .5
+            hide GTS with dissolve
+        elif routelock == "FMG":
+            hide BE
+            hide FMG
+            hide WG
+            hide PRG
+            hide GTS
+            with dissolve
+            show FMG happy
+            MC "And... well... you know our deal."
+            pause .5
+            hide FMG with dissolve
+        show BE neutral at Position(xcenter=0.15, yalign=1.0)
+        show PRG neutral at Position(xcenter=0.26, yalign=1.0)
+        show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind PRG
+        show WG neutral at Position(xcenter=0.60, yalign=1.0)
+        show AE neutral at Position(xcenter=0.75, yalign=1.0)
+        show GTS neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+        with dissolve
+        MC "But in short, I'm not gonna play favorites here."
+        show BE wink
+        BE "Shiori-chan would IMMEDIATELY call it out anyways."
+        AE "I would."
+        show BE happy
+        BE "See?"
+        WG "Haaah, very well, but..."
+    else:
+        MCT "It's a good thing we're all just friends here, or else I'd be toast with the arguments of meta gaming..."
+        MCT "I don't even want to know what Shiori would do to me."
+    MC "So, if everyones ready we can..."
+    MC "...B-Begin..."
+    show WG doubt
+    WG "MUST this be done outside? I'm already doing this begrudgingly— a public venue only serves to make a spectacle out of this exercise in childish make-believe."
+    FMG "Aww, whatcha got against Chūkan Point?"
+    show WG neutral
+    WG "I don't deny that it is lovely scenery, but that's not the issue. Matsumoto-san, you understand what I mean in saying this is childish, yes?"
+    AE "When I grew up, I put away childish things, including the fear of childishness."
+    show WG stern
+    WG "You're truly the {i}last{/i} person I expected to hear that from, apart from Yamazaki-san."
+    GTS "I deeply apologize for my impertinence in requesting to join. I had not foreseen the issues it would cause on account of my... situation."
+    PRG "We're here to have fun, Yamazaki-san. It's okay."
+    show BE happy
+    BE "Yeah! It's our way of celebrating the first semester finally coming to an end!"
+    show WG doubt
+    WG "I suppose. While sickeningly saccharine, it is probably worth commemorating the occasion."
+    show WG haughty
+    WG "Wouldn't you agree, Hotsure-san?"
+    MC "..."
+    WG "Hotsure-san?"
+    MCT "FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK-!"
+    MC "Yep! Just prepping everything."
+    MCT "I DON'T HAVE IT READY!"
+    show BE surprised-2
+    BE "Huh? Everything alright, big kahuna?"
+    MC "Y-Yeah uh..."
+    show BE surprised
+    "My eyes darted over my notes. World, starting location, boss stats, all of it is here."
+    "The only thing missing..."
+    "Was the name of the setting."
+    MC "You find yourselves travelers, wanderers in..."
+    menu:
+        "The Enchantic Isles":
+            $ GNGSettingName = "The Enchantic Isles"
+            MC "The Enchantic Isles. A mountainous island chain to the north which is nestled between the frigid arctic and the empire to the south. It is here that you all have been brought abound by ship by tales of ancient mysteries and bountiful treasure..."
+            MC "But be forewarned; magic though this land may be, no enchantment nor spell can withstand..."
+        "Endrelor":
+            $ GNGSettingName = "Endrelor"
+            MC "Far to the west, beyond the great maelstrom, sits an island beset by mystic winds."
+            MC "Its cliffs sheared by the whispers of lost empires, you find yourselves as descendants of those who came here long before through expeditionary efforts, in search of glory and fortune..."
+            MC "Yet whispers of lost empires and the dull echoes of the past whisper only of destruction and desolation..."
+        "Seichou":
+            $ GNGSettingName = "Seisho"
+            MC "North of the mountainous islands beyond the mainland, sits an island nestled in the waters of a northern strait. An island known only to few... as..."
+            MC "... S-Seichou..."
+            MCT "Why didn't I prepare?"
+            show AE neutral-eyebrow
+            AE "..."
+            show BE confused
+            BE "..."
+            show FMG disappointed
+            FMG "..."
+            show GTS surprised
+            GTS "..."
+            show PRG worried
+            PRG "..."
+            show WG doubt
+            WG "... Are you seriou-?"
+            MC "SEISHO! Yeees, the island of Seisho."
+            show AE neutral
+            AE "... Ahuh."
+            show FMG neutral
+            show BE neutral
+            show WG neutral
+            show PRG neutral
+            MC "Erm, w-well, will you be able to save the land and the people who inhabit it? Or will you be just another casualty to..."
+        "Avalon":
+            $ GNGSettingName = "Avalon"
+            MC "A mystical land beset on all sides by mountains, soaring high into the sky. Mt. Avalon looms high above as the region which gives it its namesake holds deep within a memory of a mighty king who ruled the ancient stones with which the peoples paved their roads."
+            MC "Yet these memories of the past are now distant. The king has disappeared and left nothing with which to remember him apart from his legacy. Now the land is beset by a terrible force of death; consumed by darkness and desolation."
+    MC "The Desolation of the Lich King."
+    show BE happy
+    BE "Ooo!~"
+    show BE neutral
+    show PRG unique-happy
+    PRG "Spooky..."
+    show PRG neutral
+    show WG doubt
+    WG "I swear I've heard something like that before..."
+    MC "That'd be a surprise; I came up with it more or less alone."
+    MCT "OH GOD, I THINK SHE'S ON TO ME."
+    "As for the one I know is on to me..."
+    "Shiori remains quiet as she looks as though she's wondering just how many things I stole from."
+    show WG neutral
+    MC "So, then... who are you?"
+    "I glanced over to Honoka, and she smiled widely."
+    BE "That's easy! I'm gonna be...!"
+    show BE happy
+    BE "A HUMAN FIGHTER!"
+    MC "Of course."
+    MC "Matsumoto-sa-!"
+    show BE confused
+    BE "Oy. What do you mean \"of course\", rat boy?"
+    show BE happy
+    MC "R-Rat boy?!"
+    MC "Ugh, fine, just tell me your name."
+    show BE confused
+    BE "Du-Uuuuh...."
+    MC "Need a sec?"
+    BE "Gimmie like 30."
+    show BE neutral
+    MC "Alright. Matsumoto-san! What about you?"
+    AE "What version are we playing?"
+    MC "Huh? Version?"
+    show AE neutral-annoyed
+    AE "The ruleset."
+    MC "Uh..."
+    show AE neutral
+    AE "The number on the book."
+    MC "OH! Uhh... 3.5."
+    AE "Okay."
+    MC "Okay, so-"
+    AE "With the \"Wrath of the Vampire Lord\" rulebook?"
+    MC "Ngh- YES!"
+    AE "Okay."
+    AE "I will be playing an Elven Paladin."
+    MC "Ooo, elegant. What will your name be?"
+    AE "Lúthien."
+    MC "... E-Eh?"
+    show BE happy
+    BE "Woooah, cool! That sounded like, super native!"
+    show FMG flex
+    FMG "No kidding, that sounded cool! ... Whatever she said."
+    show BE neutral
+    show FMG neutral
+    MC "Um... c-can you repeat that?"
+    show AE angry-2
+    AE "Lúthien."
+    MC "... R-Ru... Ruushii... O-Once more, please?"
+    AE "Lú-thi-en." 
+    MC "Uruu... shii-en? Enu?"
+    AE "... Yes. Ruushien."
+    MC "Got it, Lúthien."
+    BE "Close enough! Lúthien doesn't sound as cool as how Shiori said it, though."
+    show GTS unique
+    GTS "How elegant!"
+    MC "O-Oy, give me a break, English is hard."
+    show AE neutral
+    AE "It's Elven, actually."
+    MC "Anyways! Alice?"
+    show WG neutral-2
+    WG "Simple, really. I'd like to be a bard."
+    show FMG upbeat
+    FMG "Pfft! A bard? What are you gonna do when goblin sorcerers are hurling fireballs at you? Throw your flute at them?"
+    show BE doubt
+    BE "I don't know... Maybe she could play something that'd make them fall asleep?"
+    show FMG neutral
+    show BE neutral
+    FMG "{i}I'm{/i} falling asleep just thinking about this class."
+    show WG doubt
+    WG "Hmph, and here I get criticized for lacking imagination..." 
+    show WG neutral
+    WG "I'll have you know I did my research, and class attributes are important for party success. So I chose something I believe had the most potential to bolster the party's capabilities."
+    AE "Nikumaru-san is correct, the bard class has the potential to bestow the party with powerful buffs that could mean the difference between passing or failing encounters."
+    show PRG neutral
+    PRG "Sounds like it could be fun."
+    MC "Mhmm, it's a solid choice, especially since most people aren't necessarily keen on rolling support classes."
+    show GTS neutral
+    GTS "I dare say I didn't expect you to pick a team orientated class, Nikumaru-san."
+    show WG neutral-2
+    WG "It's simple: a rising tide lifts all ships. Even if I'm not an expert in whatever this \"game\" is, I certainly don't intend the burden of our potential failure to fall on me. {w}If that happens to prove you wrong, so much the better."
+    MC "Alright, alright. Let's stay focused on filling out the character sheet. Fill in the rest of the details for me."
+    WG "Her name is Hayden Brahm, half-elf bard."
+    show FMG disappointed
+    FMG "Half-elf!? That's so pedestrian!"
+    show WG stern
+    WG "Well, I'm not going to play as some kind of ugly ogre or half fish-man if you're implying that's what you're {i}supposed{/i} to do."
+    show FMG upbeat
+    FMG "That's {i}exactly{/i} what you're supposed to do!"
+    FMG "I play a human character {i}every{/i} day of my life. This is the chance to be something different!"
+    show FMG neutral
+    show WG neutral
+    AE "What did you have in mind then, Mizutani-san?"
+    FMG "Dragonkin!"
+    MC "Dragonkin? Okay, so like an Dragonkin... warlock or-?"
+    show FMG flex
+    FMG "PALADIN!"
+    show AE surprised
+    AE "Dgh- what?"
+    MC "Paladin it is."
+    AE "What?"
+    show FMG happy
+    FMG "Sweeet~"
+    show AE neutral-annoyed
+    AE "But- dch... nnf... fine."
+    MC "And your name?" 
+    show AE neutral
+    FMG "Something cool and foreign like what Shiori did."
+    FMG "..."
+    show FMG upbeat
+    FMG "Cruccuth Urojurn."
+    MC "..."
+    FMG "You know you love it."
+    show FMG neutral
+    MC "Yamazaki-san, what about you?"
+    show FMG surprised
+    FMG "Oy!"
+    show GTS unique
+    GTS "I will gladly serve in whatever capacity you think me most able."
+    MC "It's a game, you know. You can pick whatever sounds fun to you."
+    show GTS pondering
+    GTS "I see... but I wouldn't want an uninformed decision to spoil the enjoyment of the rest of the group..."
+    MC "How about this, we don't have a cleric yet. How's a human cleric sound to you?"
+    show GTS happy
+    GTS "Ah, that sounds splendid."
+    show GTS neutral
+    GTS "Oh, but would it be alright if I were a halfling instead?"
+    "I scratched out and revised a line in my notes."
+    MC "Sure, that's fine."
+    show GTS happy
+    GTS "They're so cute! Thank you, game master."
+    MC "And finally, how about you, Aida?"
+    show PRG unique-happy
+    PRG "Um... I'd like to be a druid."
+    MC "Ooo nice! Do you have the wild magic table?"
+    AE "I gave her a copy."
+    MC "Perfect. How about your race?"
+    show PRG unique-blush
+    PRG "Um... Nephilim, please."
+    MC "A..."
+    show AE surprised
+    show FMG surprised
+    show BE surprised-2
+    show WG surprised-2
+    show GTS pondering
+    BE "Uh... huh..."
+    GTS "What... is that? Exactly?"
+    PRG "Kind of like a fallen angel type of character. Like... one who used to be good then fell."
+    AE "A... Nephilim Druid... okay."
+    show PRG blush-2
+    PRG "I-I... saw it in a movie."
+    show AE neutral
+    AE "Our party balance is nigh nonexistent, may as well go with what you want to be."
+    MC "Alright, sure! Got a name in mind?"
+    show PRG neutral
+    PRG "Atraya Freywalker."
+    show FMG surprised
+    FMG "Wha- How is it that everyone can come up with cool English names so easily?!"
+    show AE angry
+    AE "It's not Eng- mmmf..."
+    MCT "We need to get started before Shiori gets an aneurysm..."
+    MC "And so, with that... is everyone ready to begin?"
+    "I look around as everyone nods or gives a small agreement before..."
+    "Showtime."
+    MC "The sun rises over the horizon as you all prepare yourself for the road ahead. The River Aleria, at an old ruin where it is said destinies cross, sits not but a few paces into [GNGSettingName]."
+    MC "As you all have, one by one, made your way to the spot where you were meeting for a man to advise you on your journey."
+    "And with that, I look towards Honoka."
+    show BE happy
+    BE "Walking along the riverbend, Morgana Shadowfist looks for treasure, as well as danger!"
+    MC "M-Morgana..."
+    BE "Shadowfist!"
+    MC "... {i}When you cried, I-{/i}"
+    show BE unamused
+    BE "Shut it."
+    MC "Got it."
+    show AE admire
+    AE "Lúthien stands by the water of the Aleric river, kneeling down before the crystal clear shore."
+    MC "Ok-"
+    AE "As the wind blows through her platinum blonde hair, she holds her sword in its scabbard up to the morning star shining in the sky as she sings a song in an ancient tongue; her voice carried by the wind."
+    MC "..."
+    AE "..."
+    MC "Alri-"
+    AE "{i}An I cielia ethora an celebus~{/i}"
+    MCT "O-OY! WHO THE HELL ARE YOU TRYING TO IMPRESS?!"
+    show AE neutral
+    AE "I wish to use our down time to enchant my sword with the Light of Nevaria."
+    MC "Okay, that's one standard action."
+    AE "As Luth-"
+    show AE angry
+    MC "Yamazaki-san, what about you?"
+    GTS "..."
+    show AE neutral-annoyed
+    MC "... Um..."
+    show GTS surprised
+    GTS "Oh! Is it my time to tell a story?"
+    show AE neutral
+    MC "Y-Yes, this is collaborative story telling."
+    show GTS happy
+    GTS "Understood! I have everything prepared."
+    MC "Awesome. In which case, all you need to do-"
+    show GTS happy
+    MC "Is that a Biwa-?"
+    "*CLANG*"
+    GTS "SAAAAAAAAAAAAARU HoDoooOOOO NIIIIIiIiiIIIIiii-"
+    MC "WAIT! WAIT WAIT WAIT WAIT!"
+    show GTS surprised
+    GTS "Oh? Yes?"
+    MC "I-It's not that kind of story telling! You just... like... talk about what your character does from a first person perspective."
+    GTS "Ah. My apologies for the misunderstanding."
+    show AE neutral
+    AE "... I was rather interested in hearing the song."
+    show GTS neutral
+    "Naomi cleared her throat as Alice rolled her eyes."
+    GTS "Many years ago, in the green and peaceful shire of Tomaya, my great-grandfather, Eldo Baggouts, espied a tomato as big as a watermelon floating down a river. When he waded in to catch it, he..."
+    MC "I, uh, meant more like an elevator pitch."
+    show GTS surprised
+    GTS "Ah! Heavens, forgive me."
+    show GTS neutral
+    GTS "I am Izanami Baggouts, maiden of the Tomaya Shrine. I am on a quest to break the curse on my companion Prince Silvios, who has been transformed into a tomato."
+    MC "...I can work with that, but... Baggouts?"
+    FMG "Heheheheh-"
+    GTS "Mizutani-san gracefully recommended me the name."
+    show FMG devious
+    FMG "HEHEHEHEHEHEH."
+    MC "Of course."
+    GTS "Does this story work well for you?"
+    MC "... Ssssuuuuuuuure..."
+    show GTS happy
+    GTS "Excellent!"
+    FMG "After looking over to Izanami, Cruccuth will just look over to Hayden and say \"Hey bard, play me a tune!\" before kicking up her feet on one of the uh... ruin parts hangin out."
+    show WG angry
+    WG "I am not simply going to play music for you, Akira."
+    PRG "Um... I-I think we're supposed to stay in character."
+    WG "... \"It would be UNWISE for me to begin playing music for you out of nowhere for no compensation... Dragonkin.\""
+    show FMG flex
+    FMG "I give myself a million gold so I can pay her to sing for me."
+    show BE embarrassed
+    MC "Nnno, you cannot declare items after the start of the game. Anything you have after character creation you have to get yourself."
+    WG "AND you must put down your personal wealth in a sheet that you have to then detract from your starting bonuses."
+    show FMG angry
+    FMG "Awww, how do you know that?!"
+    show WG coy
+    WG "I spent thirty minutes before we started balancing my character sheet, Mizutani-san."
+    FMG "Pff, lame."
+    show BE neutral
+    MC "ANYWAYS: Atraya, what are you doing?"
+    PRG "Umm... I'm brewing potions from the local wildlife with Morgana by my side."
+    show PRG worried
+    PRG "And... oh, um, what kinds can I make?"
+    MC "Hmm... Silverroot, Rainbowscale, and Irongrass will net you..."
+    MC "..."
+    MC "A uh... growth potion."
+    show BE disoriented 
+    "Slowly, I felt as if every single eye in the circle squinted and looked towards me."
+    show WG coy
+    WG "Mmmhmmmm..."
+    MC "W-Wha?! It's what's around the area!"
+    show BE seductive
+    BE "You're not gonna make this a pervy thing, are you?"
+    MC "N-No! Literally you yourself would have to drink it for anything to take effect!"
+    AE "It... can also be rubbed on things to make them bigger."
+    MC "Yes or it can- OOOY! That's not what I was thinking!"
+    BE "Mmmmmhmmmmm..."
+    MC "I-It legit has a ton of use cases!"
+    show BE wink
+    BE "Nyookaaay, but there better be no pervy stuff."
+    MC "I promise there won't be."
+    "Honoka takes her two fingers and points them from her eyes to mine playfully as I rub my temples."
+    show BE happy
+    BE "\"Thank you for the potion, Atraya!\""
+    show PRG neutral
+    PRG "\"Eheheh, you're welcome! If you could, can you go with me to get me some more water from the river?\""
+    show GTS happy
+    GTS "Of course I can, Kodoma-san!~"
+    MC "That was in character."
+    show GTS sad
+    GTS "Oh, my apologies."
+    BE "Mm, I go get some more water from the river with Atraya."
+    MC "Alright! As you two head off on your own, you mind goes to the man whom you were supposed to meet from earlier. Strange he hasn't arrived, but it gives you more time to prepare."
+    MC "Regardless, you both head down, away from the others, towards the river."
+    MC "The waters shimmer with light as, softly, the birds morning song is halted, giving you time to look at the water."
+    show BE unamused
+    BE "... Hm..."
+    PRG "I would like to lean down to the water to drink-"
+    BE "Insight check."
+    MC "Go for it."
+    MCT "Honoka's shockingly quick on the uptake."
+    "Honoka takes her dice in her hand and shuffles them before rolling them on the table."
+    BE "17."
+    MC "Morgana, you peer into your reflection... just in time to see a figure sneaking up behind you with a blade outstretched."
+    MC "Want some advice, eh, girlie?~"
+    show BE surprised
+    BE "Oh. OH- I turn around!"
+    MC "\"Stand and deliver, your money or your life.\", it's a bandit."
+    show PRG scared
+    PRG "Oh, ah-!"
+    show FMG devious
+    FMG "I PUNT HIM!"
+    MC "Y-You're not here."
+    show FMG neutral
+    FMG "Roll to be here?"
+    MC "N...No?"
+    show FMG angry
+    FMG "Ahh, fiiiine."
+    MC "Ugh... uh- oh- \"Ye picked a bad time to rest by these rivers there, smallstuff! Now it's time to pay up or PAY!\""
+    show PRG worried
+    PRG "I... um..."
+    "Aida glanced over to Honoka."
+    show BE neutral
+    BE "Hmm..."
+    MC "What will you do?"
+    BE "I have an idea."
+    MC "I'm terrified, go on."
+    BE "I would like to distract the bandit."
+    MC "Iiinteresting. How would you like to try and-"
+    show BE happy
+    BE "I flash him."
+    show PRG scared
+    MCT "EAT MY ENTIRE COCK, INOUE!"
+    MC "Roll Charisma."
+    BE "Got it."
+    show FMG angry
+    FMG "Charisma just to show off boobs?"
+    show BE seductive
+    BE "It's an artform, Akira."
+    "She rolls the dice."
+    BE "15!"
+    MC "Mmm... as you flash the bandit, his eyes widen, however...: \"Heh, nice try, girlie; maybe with a bit more meat on your bones I'd be impressed!\'"
+    show BE surprised
+    BE "WHAT?! ON A FIFTEEN?!"
+    MC "The bandit is not impressed by your lithe physique."
+    BE "Son of a..."
+    show BE neutral
+    BE "..."
+    BE "I drink the growth potion."
+    show AE angry-4
+    AE "HUH?!"
+    show PRG surprised
+    PRG "Uh... M-Morgana?"
+    FMG "OOOOHOHOHO!"
+    show WG angry
+    WG "Oh, dear god."
+    MC "Uuugh... okay what do you do with the-?"
+    show BE aroused
+    BE "I put it on my boobs."
+    show FMG happy
+    FMG "PPPFFF HAAAAAAAHAHAHAHAAAAA!~"
+    "I close my eyes begging for deliverance and yet none comes to me."
+    "You begin to reach under you shirt with your potion on your gloves, as you... start to rub... your-"
+    BE "Chesticles?~"
+    MC "Mmmmngh why are you like this... your breasts. As they... get large."
+    show BE happy
+    BE "How does he react?"
+    show FMG devious
+    FMG "Pff heheheh!"
+    MC "...The bandit... suddenly drops his weapon, saying: \"Boingus Bazoingus, those-\""
+    show BE surprised-2
+    BE "Boingus..."
+    show WG surprised
+    WG "Bazoingus?"
+    MC "Gch- HE'S STUNNED KNOCK HIM OUT!"
+    show BE surprised
+    BE "OH! Right, yeah."
+    "Honoka quickly rolls her dice."
+    show BE happy
+    BE "19!"
+    MC "Roll for damage."
+    "And rolls a 1d6."
+    BE "5!"
+    show PRG worried
+    MC "He is knocked unconscious."
+    show BE aroused
+    BE "May I describe how I knock him out?"
+    MC "Uhh, sure."
+    BE "Walking up to the bandit I put my hands on my booba... and WHAM 'EM IN THE FACE WITH THEM!"
+    show AE angry-2
+    AE "Oh for the love of..."
+    show FMG devious
+    FMG "Nighty night, bitch."
+    MC "... He is out."
+    show BE neutral
+    BE "Okay. Atraya run this guys wallet."
+    PRG "O-Okay, Morgana."
+    show PRG insecure
+    PRG "... That means pickpocket, right?"
+    BE "Yep!"
+    show PRG unique
+    PRG "I um... pickpocket him. Or... run his wallet. Whichever." 
+    MC "You... alllright. Well, he has 15 gold on him, along with a note."
+    show PRG surprised
+    PRG "Oh! Um... he had a note on him! And money!"
+    show AE neutral
+    AE "Lúthien comes over."
+    show PRG neutral
+    show FMG neutral
+    FMG "Aaaas does Cruccuth."
+    show GTS neutral
+    GTS "I come- I mean, Izamami comes too!"
+    show WG bored
+    WG "... I walk over with the others."
+    show AE surprised
+    AE "As Lúthien approaches she says \"BY THE DIVINES! What happened to you, girl?!\" before trying to cover her eyes and blushing."
+    show BE seductive
+    BE "\"Aww, just a party trick. What's wrong, Lúthien? My eyes are up here!\""
+    show AE aroused
+    AE "\"Ah! N-No! It's not like that! I-I'm a pure maiden, a paladin of the holy light! I c-couldn't possibly be staring at another woman's heaving breasts!~\""
+    show BE surprised
+    BE "..."
+    show FMG surprised
+    FMG "..."
+    show WG surprised
+    WG "..."
+    MC "..."
+    show AE aroused-3
+    AE "... As Lúthien then says \"N-Never you mind, Atraya, please, read out the note.\""
+    PRG "Atraya takes the note in her hands and, um... reads it out loud."
+    MC "Mmm... you look at the note and it says \"Meet me in Hopes End. I know about Elduvan. Bring the 15 gold you promised.\""
+    show AE pondering
+    AE "Aha. So we now know what the gold was, and why he was here."
+    GTS "Hopes End... sounds like a rather dark place."
+    show WG bored
+    WG "Do we even know where this is?"
+    show AE neutral
+    AE "GM?"
+    MC "Given that there is only one road you see, perhaps it would be a good idea to follow it."
+    AE "Lúthien nods and says \"To the north. We follow the road.\" before beginning to head off."
+    FMG "I follow the Elf."
+    PRG "I do too."
+    GTS "I as well."
+    WG "Indeed."
+    show BE wink
+    BE "I pull down my eyelid and stick my tongue out at the unconscious bandit before I do."
+    MC "Alright, alright, well, after continuing down the road after defeating the bandit, you come across the small village of Hopes End. Including the many stores and shops to browse."
+    MCT "Perfect... six women on a shopping trip, I'll have all the time I need to hash together material for the rest of the session. God damn, I'm good."
+    AE "May we see the map?"
+    MC "The... uh, what do you need a map of this tiny farm village for, exactly?"
+    AE "For tactical planning..."
+    MCT "Oh god."
+    AE "And information on local zoning policies which could be helpful later."
+    MC "...Sure. Gimme a sec to dig through my notes."
+    "Shiori and Naomi could definitely see me chickenscratching a quick village map, and taking more than a sec to do it, but fuck it. I just needed to funnel them into the tavern."
+    MC "Alright, here you go."
+    "Shiori took the sheet and laid it out for the review of the group."
+    show BE disoriented
+    BE "{i}Snrk...{/i}"
+    MC "What?"
+    show GTS surprised
+    GTS "With all due... respect, Hotsure-san..."
+    show FMG disappointed
+    FMG "Is that the actual map? 'Cuz it looks a lot like a chode."
+    show PRG blush
+    "I took the map back, rolling my eyes."
+    MC "For starters, I literally don't know what you're smo-"
+    MCT "Oh my God, the streets look like veins."
+    PRG "And... the river looks like a..."
+    "I furiously erased the shaft and replaced it with three spokes, like a chicken's foot."
+    MC "Uh, yeah, I actually did forget some important features, so thanks for reminding me."
+    BE "Uh huuuuuh~"
+    show FMG devious
+    FMG "Sure, bro. Sure."
+    show PRG neutral
+    MC "Aaaand... there. Okay, you're in town, there's a market, there's pigs walking around... what do you guys do?"
+    show BE neutral
+    show GTS surprised
+    GTS "Ah, Game Master? I would like to distribute alms to the poor."
+    WG "{size=-6}Oh, for crying out loud...{/size}"
+    MC "Don't you want-"
+    MCT "Nope. Stay on target."
+    MC "Got it. Mark off however much you want to give away."
+    GTS "Certainly."
+    "My blood pressure rose slightly, but palpably, as she produced a second notebook."
+    show GTS unique-2
+    GTS "And if I may, what is the family name of the first household I come across?"
+    MC "Uhhh...{w} uh...{w} Morp."
+    GTS "I see, thank you... and what is the name of the head of the Morp household?"
+    MCT "You want their fuckin' tax returns too?"
+    MC "...Marp."
+    show GTS happy
+    GTS "Very good... and I will give Marp Morp two coins..."
+    GTS "And I would also like to ask Mr. Morp about the status of his neighbors, and if any if them might have need of a humble shrine maiden."
+    MC "..."
+    MC "Tell you what, we'll go around the table and get back with you."
+    GTS "Very good. Thank you, Game Master."
+    MC "Okay, anything else we're doing in the village?"
+    show WG haughty
+    WG "Yes, actually. I assume bicycles do not yet exist in this setting."
+    MC "Uh... yeah, probably not."
+    show WG coy
+    WG "Good. I will shop around for a blacksmith, a cartwright, and a lawyer with reasonable rates and commission them to draw up schematics for a bicycle as I dictate it to them..."
+    WG "...And then begin construction of a prototype. I'll offer them each five percent lifetime royalties as compensation."
+    MCT "Did lawyers exist back then?..."
+    MC "Okay, roll Persuasion and tell me what you get."
+    WG "Very well."
+    show WG doubt
+    WG "Let's see... sixteen, plus bonuses is twenty-three."
+    MC "Uhhhhhh yeah, we'll say they'll take that deal, and it'll just cost a gold each for materials."
+    show WG angry
+    WG "They want a gold coin {i}each{/i}? In this backwater dump? For {i}materials{/i}?"
+    show GTS sad
+    GTS "In actual fact, given certain generalities about a late medieval society and the prevalence of banditry in the region, twenty-one grams of gold would be a remarkable bargain for the services of a cartwright alone."
+    show AE neutral-annoyed
+    AE "The generosity is more than a little suspicious..."
+    WG "...Fine. That concludes my business."
+    MCT "Hm... that gives me something to work with..."
+    MC "So... is there anywhere in town you all would like to go?"
+    AE "Hm... I would recommend the tavern. That is where most people would gather."
+    BE "Same."
+    show PRG excited
+    PRG "O-Okay!"
+    show FMG happy
+    FMG "Lets get it."
+    MC "Splendid~"
+    MC "As you all enter the Southwall Corner Club, you find the Dark Elf bartender cleaning a glass with his rag."
+    MC "\"What can I interest ye for, eh?\""
+    show WG pondering
+    WG "... Hm... seeing as I AM the most charismatic... \"Good day to you, sir.\""
+    "I contemplated, giving this guy a heavy and gruff accent, how much of a heel do I make him?"
+    MC "Neugh... what do you want, half-breed? I saw ya stiff my boys outside; that ain't a good way to make friends here."
+    show WG doubt
+    WG "..."
+    "I noticed a glimmer of fire in Alice's eyes for a moment. Her mouth hung open before-"
+    FMG "Hey, fuckwit! Don't talk to lady Hayden like that, or you'll regret it."
+    show PRG scared
+    show WG surprised
+    WG "H-Huh, wha?"
+    "Thiiis is gonna get bad fast."
+    MC "Roll to intimidate."
+    show WG angry
+    WG "Bardic inspiration. Add my roll to yours."
+    "I could sense it. Alice was out for blood."
+    show PRG neutral
+    show FMG flex
+    FMG "LET'S GOOO!"
+    "She rolls."
+    "1"
+    WG "WHAT?!."
+    show FMG angry
+    FMG "C'MON!"
+    "Akira then makes her roll."
+    show FMG devious
+    FMG "NATURAL 20, BABY!"
+    show WG surprised
+    WG "Wha- I... hmph. Well. Make that a 21."
+    MC "The barkeep reels back at your scaled visage as he goes \"Oh by the divines, p-please, I'm sorry miss!\" and cowers."
+    show WG coy
+    WG "\"MUCH better!~ Now... tell me what you know about 'Elduvan' and we will be on our way.\""
+    MC "\"W-Wha...' he looks confused. \"How do you know about that?\""
+    show WG angry
+    WG "\"We have our ways. Now. TALK.\""
+    MC "\"W-Wait, my 15 gold!\""
+    show FMG angry
+    FMG "I snarl at him."
+    MC "Your fangs are barred. \"Oh gods!\" he says, \"Okay! Okay I'll tell you!\" before he catches his breath."
+    MC "\"Elduvan the wise, they call him. A master wizard who once traveled to the heart of Darkmoor Sanctum alongside the hero king Arelen; the greatest lord this land has ever seen.\""
+    show FMG surprised
+    FMG "Woah..."
+    show AE angry
+    AE "Lúthien asks \"Tell me, where is Elduvan, for I much desire to speak with him.\""
+    MC "\"Very well... at the end of the river is the great lake Ulrad. There you will find his tower... but be warned... he is ill, and his health is failing. You will need to make haste to him...\""
+    scene black
+    MC "\"Before his life comes to an end...\""
+    $setTime(TimeEnum.EVE)
+    scene Chukan Point
+    show BE neutral at Position(xcenter=0.15, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.26, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind PRG
+    show WG neutral at Position(xcenter=0.60, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+    with fade
+    "After obtaining the location of the wizard from the barkeep, they almost immediately left the town, fearing the time crunch. They traveled along the road, encounters here and there until, eventually, the sun began to dip in the sky, both in and out of game."
+    MC "Wow... everything is actually going smoothly... too smoothly."
+    "As I watched Shiori go over everyone's abilities with them, a terrifying thought shocked me to my very core."
+    MCT "Wait, what if they get better than me at the game...? I'm not gonna look dumb am I?!"
+    MCT "S-Shit, I need to up the difficulty! But... none of my materials are scaled for that, only for new players..."
+    MCT "I think I should call it here."
+    MC "You all find yourselves around the campfire, your inventory abound. What do you do?"
+    show GTS happy at Position(xcenter=0.90, yalign=1.0) 
+    GTS "I would like to make some tea."
+    MC "You may do so."
+    show WG haughty
+    WG "I will take some as well if you are offering."
+    GTS "Ehehe, of course, Nikumaru-san."
+    show WG happy
+    WG "Many thanks."
+    show PRG happy
+    PRG "I would like some too."
+    "I close my eyes and let out a sigh as I smile."
+    MC "And so... you find yourselves out at the campfire. What do you do, starting with Morgana."
+    show BE neutral
+    BE "Sup?"
+    MC "Morgana, what do you do?"
+    BE "Morgana is... actually up and about, training on a nearby tree."
+    MC "Doing anything else?"
+    show BE happy
+    BE "Nah, trying to adjust to her new cuppage for fighting!"
+    MC "Noted. Lúthien?"
+    show AE neutral
+    AE "Skip me for now, I have something to go to last."
+    MC "... Aaaaalll... right... Hayden?"
+    show WG worried
+    WG "Hm... I will... turn to Akira's character and say... \"Thank you for your... assistance, earlier.\" before... nodding, yes?"
+    FMG "Aaaah, Cruccuth will respond \"Nah, thanks for yours!\" and smile."
+    WG "Pah. For what little help it was."
+    FMG "Cruccuth kinda just says like: \"Every little bit counts. We're allies, after all. Besides, I'm big and scary; I know what it's like to be looked down on for bein' different.\" and she puts her hands behind her head."
+    show WG pondering
+    WG "...Huh..."
+    MC "Hm... Atraya how are you feeling?"
+    PRG "Good. I'm just... sitting. Reading through a potion book."
+    FMG "Having someone skilled with potions will be uber helpful. Glad you joined up."
+    show PRG happy
+    PRG "Um... t-thank you! I hope I can help where I can!"
+    MC "Izanami, as you- where did Yamazaki-san go?"
+    show PRG worried
+    "We looked around for Naomi but... she was long gone, leaving her character sheet in her place."
+    show BE flustered
+    BE "I... dunno where she went."
+    MC "HOW DO YOU LOSE A GIANT?!"
+    "The players, barring Alice, all look to each other in confusion for a moment as I pinch my brow."
+    MC "Haaah..."
+    show BE neutral
+    AE "... May I do my action now?"
+    MC "Sure thing, Lúthien."
+    show AE admire
+    AE "Lúthien, seeing the party begin to wind down, will look out towards the river with the moon hanging above in the sky and close her eyes, singing the night song of the Elves."
+    AE "... {i}Ela eirus vataneus.{/i}"
+    AE "{i}I dora malturea.{/i}"
+    AE "{i}A clerebus ilthanieus.{/i}"
+    AE "{i}Alenod alothera.{/i}"
+    MC "And a frigid wind... carries your voice among the trees."
+    MC "Aaaand... THAT will be session."
+    show FMG happy
+    FMG "WOOO!"
+    show BE happy
+    BE "Okay... THAT was legit really cool."
+    WG "I must say... I will admit this went better than I expected."
+    show AE happy
+    AE "Count me dually surprised."
+    show PRG worried
+    "After our first session, I found myself showered by the one thing that can make a GM feel anything but schadenfreude, rage and spite."
+    "Validation."
+    MC "Thanks! I'm glad you all enjoyed it too!"
+    "I looked around towards the group as they basked in the enjoyment of a successful session one... when I noticed Aida looking down, as if in thought."
+    MC "What's up, Aida? Have a good time?"
+    PRG "Um... y-yeah! I really liked it but..."
+    MCT "Buuut... did I not give her enough to do? Did I give her too much to do? Oh god, how did I mess up my first session-?!"
+    PRG "Um, I was just thinking."
+    PRG "A-Aren't adventures supposed to have weapons?"
+    AE "Yes. We all start with a weapon."
+    PRG "When do we get them?"
+    AE "At the start o-"
+    show AE surprised
+    AE "..."
+    MC "..."
+    show FMG surprised
+    FMG "..."
+    show BE surprised
+    BE "..."
+    show GTS happy
+    GTS "I have returned with the tea."
+    show WG happy
+    WG "Hmm matcha... {size=-6}I guess I shouldn't have expected anything else in retrospect, but I suppose it will do{/size}. Thank you, Yamazaki-san."
+    MCT "This is gonna be a rough game."
+    jump daymenu
+
 label MC013:
     scene Dorm Exterior with fade 
     play music MC
@@ -17233,7 +18099,7 @@ label MC023_C2_1:
     if checkAffection("BE", ">=", 6) and not routelock == "BE": 
         BE "And with managing... well, you know."
         MC "I know?"
-        BE "I know you know because I saw you see ‘em!"
+        BE "I know you know because I saw you see 'em!"
         MC "Am I REALLY not that slick?"
         BE "Pssh, I know you, how could you NOT notice these diamond cutters?"
         MC "M-Mm..."
