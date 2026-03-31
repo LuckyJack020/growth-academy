@@ -19636,7 +19636,7 @@ label MC027:
     "I scanned the room, Tomo staying right by me, as nearby, a taller girl was reaching up onto a shelf, and a more muscular one was shifting a table with one hand."
     if routelock == "PRG":
         "I shot a warm nod toward Etsuko and Hotaru, as they smiled at me, the two of us moving across the room a little."
-    if isEventCleared("MC009") and not routelock == "PRG":
+    elif isEventCleared("MC009") and not routelock == "PRG":
         "I blinked, staring back at Etsuko Chisaka and Hotaru Wada."
         MCT "Well... they've changed."
         "Hotaru leaned up onto a shelf to the point of her skirt riding up enough where I could see the lower crest of her asscheek, and Etsuko had her shirt sleeves rolled up a little, so she could haul the table easier."
@@ -19650,7 +19650,7 @@ label MC027:
         Student2 "Well done, Etsuko. You moved a table."
         Student1 "Shut it."
         "The two girls both started laughing, clearly used to this style of roasting."
-    show Takamura neutral with dissolve
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
     "Nearby, Takamura-sensei crossed the room near us, going toward those two."
     Takamura "Usui-san, you'll be with Chisaka-san and Wada-san! I expect good progress from you!"
     "I didn't need to look at Tomo as Takamura-sensei led a girl in front of us. Based on the look of her legs, I knew who I was looking at."
@@ -19686,7 +19686,7 @@ label MC027:
         MC "Extremely."
     hide Tomoko with dissolve
     pause .5
-    show Takamura neutral with dissolve
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Takamura "Everyone! Eyes up!"
     "The room quieted nearly on the dot, Tomo and I halting."
     Takamura "Thank you."
@@ -19750,8 +19750,9 @@ label MC027:
     else:
         "Tomo followed me through the crowd, as we worked out way to the station across from Aida and... whoever her partner was."
     if routelock == "PRG":
+        show Tomoko neutral at altMove(0.4, 0.19)
         show PRG surprised with dissolve
-        show Kanami neutral with dissolve
+        show Kanami neutral at Position(xcenter=0.78, yalign=1.0) with dissolve
         PRG "B-Baby?!"
         MC "Surprise!"
         "I heaved our pumpkin up across from Aida and Kanami, grinning."
@@ -19847,8 +19848,12 @@ label MC027:
         "Tomo looked at the pumpkin face I was drawing and looked down at it."
         MC "I don't really have anything to help with now, to be honest. Not till we get tools."
         MC "Go take a peek. I'll keep drawing."
-        hide Tomoko with dissolve
-        hide Kanami with dissolve
+        pause 1
+        show Tomoko neutral at altMove(0.6, 0.91)
+        pause 1.5
+        hide Tomoko
+        hide Kanami
+        with easeoutright
         "Tomo shuffled in place for a second, before walking around the station to their side."
         "Aida scooted backwards a little, and came around over to my side."
         show PRG unique-happy
@@ -19879,7 +19884,7 @@ label MC027:
         PRG "I... I don't know. I don't see Sensei anywhere, either."
         hide PRG with dissolve
         show Tomoko distracted with dissolve
-        show Kanami happy with dissolve
+        show Kanami happy at Position(xcenter=0.78, yalign=1.0) with dissolve
         "I shrugged, leaning back against the counter, and glanced over across the counter, where Kanami was showing Tomo something on her phone."
         pause .5
         hide Tomoko with dissolve
@@ -19893,8 +19898,9 @@ label MC027:
         "I rubbed the side of Aida's belly again, as she let out a small giggle."
         show PRG neutral
         "I looked back across the table, stepping back from Aida just enough so as not to weird out Tomo."
-        show Tomoko distracted with dissolve
-        show Kanami neutral with dissolve
+        show PRG neutral at altMove(0.5, 0.18)
+        show Tomoko distracted at Position(xcenter=0.62, yalign=1.0) with dissolve
+        show Kanami neutral at Position(xcenter=0.82, yalign=1.0) with dissolve
         MC "How's it looking?"
         Tomoko "Scary."
         show Kanami happy
@@ -19914,7 +19920,7 @@ label MC027:
         show Tomoko neutral
         Takamura "Oh, heavens!"
         show PRG worried
-        show Takamura sad with dissolve
+        show Takamura sad at Position(xcenter=0.43, yalign=1.0) with dissolve
         Takamura "I'm so sorry, all of you. Here you all are."
         "Takamura reached into a cardboard box she was carrying and laid out various tools for pumpkin carving, including a knife, scoop, and a little potato peeler-esque scraper."
         Takamura "I thought I had enough for everyone, then so many students showed up, so then I ran out and had to find more, and well... here we are."
@@ -19942,6 +19948,7 @@ label MC027:
         "Across the way, Tomo was cutting the top off of their pumpkin as Kanami watched, working the top off herself as Tomo swapped over to the scoop."
         hide Tomoko with dissolve
         hide Kanami with dissolve
+        show PRG neutral at altMove(0.5, 0.30)
         PRG "Do you want to scoop, Keisuke? Or should I?"
         MC "Whichever. I can do it if you don't want to get your hands all goopy."
         PRG "I don't mind."
@@ -19955,8 +19962,8 @@ label MC027:
         PRG "Could you go in with the scoop, though? I can't quite reach..."
         MC "Yeah, gotcha."
         "I took the scoop, reaching my hand in and scraping the inside wall of the pumpkin hard, drawing off more sinew as I pulled it back and set it off to the side, Aida rinsing her hand and arm off in the sink."
-        show Tomoko neutral with dissolve
-        show Kanami neutral with dissolve
+        show Tomoko neutral at Position(xcenter=0.62, yalign=1.0) with dissolve
+        show Kanami neutral at Position(xcenter=0.82, yalign=1.0) with dissolve
         "Across from us, Tomo had her hands in the pumpkin as well, pulling out globs of seeds and sinew herself."
         "Kanami, meanwhile, was gently picking away at the front of the pumpkin with the knife, out of the way of Tomo."
         MC "Alright. Let me just get this side done, then we'll be good."
@@ -20121,6 +20128,7 @@ label MC027:
         PRG "Go ahead, Baby."
         "I dug the knife in and started cutting a little, digging around the edge carefully."
         "As I picked away at it, I glanced to my side again."
+        show PRG neutral at altMove(0.5, 0.45)
         "Aida was slowly working her way around the table, going to Kanami and Tomo's side."
         "As I watched, she went to Tomo, who was now just standing there and picking at something on her hand."
         "She leaned down a little and whispered something to her. As Tomo listened, she nodded a little and said something back, as Aida came back around to me, giving me a little nod."
@@ -20138,10 +20146,10 @@ label MC027:
         play music DifferentPaths
         MC "Alright..."
         "I brushed away some pumpkin pieces."
-        show PRG neutral with dissolve
+        show PRG neutral at Position(xcenter=0.30, yalign=1.0) with dissolve
         "Near the end, Aida and I had decided to add a few more details, like a nose, a wider mouth, and some slashes along one side to give it a haggard look."
-        show Tomoko neutral with dissolve
-        show Kanami neutral with dissolve
+        show Tomoko neutral at Position(xcenter=0.62, yalign=1.0) with dissolve
+        show Kanami neutral at Position(xcenter=0.82, yalign=1.0) with dissolve
         "Kanami and Tomo had been working quietly on the other side. By now, the room had cleared out a little, leaving only a few other groups still working."
         PRG "It's almost 20:00. Should we start picking up?"
         MC "Think so."
@@ -20178,7 +20186,7 @@ label MC027:
         "Nearby, Takamura had laid out little tags for us to write on, and I jotted my name down, as well as Aida's, then pasted it onto our pumpkin's stem, walking back over."
         hide Takamura with dissolve
         pause .5
-        show PRG worried with dissolve
+        show PRG worried at Position(xcenter=0.23, yalign=1.0) with dissolve
         show Kanami neutral with dissolve
         "Just as I rejoined Aida, Tomo stepped away from the station, going off by the pumpkins with Fumika."
         MC "What uh... what did I just miss?"
@@ -20187,8 +20195,9 @@ label MC027:
         MC "Hm."
         "Kanami lifted her and Tomo's pumpkin and hauled if over to the rest, her breasts laying on top of it as she set it down, marked it with a tag, and promptly moved away so Tomo and Fumika could talk."
         "I helped Aida roll up the paper, containing all of the seeds and such inside, and packed it into a trash bag."
-        show PRG neutral
-        show Takamura happy with dissolve
+        show PRG neutral at altMove(0.5, 0.18)
+        show Kanami neutral at altMove(0.5, 0.43) 
+        show Takamura happy at Position(xcenter=0.66, yalign=1.0) with dissolve
         Takamura "Excellent job tonight, everyone."
         "Takamura stepped over to our stations, smiling as she put her hand on Kanami's side."
         Takamura "And Tozakura-san... my word. That was very impressive."
@@ -20213,7 +20222,7 @@ label MC027:
         PRG "It seems like they're getting there."
         Takamura "Yes. Well, in any case, I-"
         "Takamura was interrupted by light footsteps coming back."
-        show Tomoko neutral with dissolve
+        show Tomoko neutral at Position(xcenter=0.86, yalign=1.0) with dissolve
         Tomoko "Sorry."
         Kanami "It's alright. I put our pumpkin in with the others. I marked you down with mine as well."
         show Tomoko smile
@@ -20235,14 +20244,15 @@ label MC027:
         show Takamura happy
         Takamura "Good. On your way, then, girls. And Hotsure-san. Have a good evening."
         "The four of us bowed, then made our way to the door, as I held it for everyone else."
-        scene Hallway with fade
         $setTime(TimeEnum.NIGHTLIGHTS)
+        scene Hallway with fade
         "The four of us walked down the hallways, now dark and quiet, until we found our way out into the courtyard."
         pause .5
+        $setTime(TimeEnum.NIGHT)
         scene Campus Center with fade
-        show PRG neutral with dissolve
+        show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         show Tomoko neutral with dissolve
-        show Kanami neutral with dissolve
+        show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
         Kanami "Mmn... well, I'm off to make some dinner and rest. I enjoyed tonight with you all, everyone."
         MC "Yeah, same here. Take it easy, Tozakura-san."
         show Tomoko smile
@@ -20253,12 +20263,15 @@ label MC027:
         PRG "I'd like to, if you're available."
         Kanami "I'll plan for it, then."
         "Kanami waved, and started on her way toward the dorms."
+        hide Kanami with easeoutright
         Tomoko "I should head back, too. I need to-"
         show Tomoko worried
         "Tomo's face suddenly went pale."
         Tomoko "My bag!"
-        hide Tomoko with dissolve
+        show Tomoko worried at altMove(0.4, 1.43)
+        hide Tomoko with easeoutright
         "Tomo turned, bolting back toward the door, leaving Aida and I alone in the courtyard."
+        show PRG neutral at altMove(0.5, 0.43)
         PRG "... Well, I wasn't expecting that tonight."
         MC "Yeah... sorry for bringing all the drama into the cooking club space."
         PRG "It wasn't drama, Baby."
@@ -20270,8 +20283,10 @@ label MC027:
         MC "And I expect to try some pie once you make it."
         PRG "I'll make sure you have the first slice."
         "I smiled, and walked forward into Aida's waiting arms, leaning down..."
-        show Tomoko neutral with dissolve
+        show Tomoko neutral at Position(xcenter=1.3, yalign=1.0) with dissolve
+        show Tomoko neutral at altMove(0.7, 0.72)
         Tomoko "Got it!"
+        show PRG neutral at altMove(0.1, 0.35)
         "Aida and I pulled apart quickly, glancing over as Tomo was slipping her bag on, not looking forward at all."
         MC "Good. Glad it wasn't locked yet."
         PRG "I-I should be going, though. I... I need to make dinner."
@@ -20283,7 +20298,7 @@ label MC027:
         Tomoko "Uh... y-yeah. You too."
         hide PRG with dissolve
         "Aida slowly headed off as well, leaving just Tomo and I in the courtyard."
-        show Tomoko neutral
+        show Tomoko neutral at altMove(0.5, 0.5)
         $setAffection("TM", 1)
         Tomoko "Well... thanks for coming with me tonight. Even if you spent more time with your girlfriend than me."
         MC "It was a group thing. We were all there together."

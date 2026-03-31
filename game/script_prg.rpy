@@ -45917,7 +45917,7 @@ label PRG065:
     "I stepped outside. The air was warm, but shockingly light. Very little humidity for what felt like the first time ever."
     "I looked up at the sky. A few clouds here and there, but nothing crazy."
     "Turning, I headed over to the women's dorms and headed inside."
-    scene dorm hallway with fade
+    scene Dorm Hallway with fade
     "I took a deep breath as I headed inside, the door swinging shut behind me."
     "As I walked, I shut my eyes for a second, trusting myself to stay walking in a straight line."
     "We were going into town. Aida had an idea for our day. That surprise thing."
@@ -45954,10 +45954,10 @@ label PRG065:
     MC "That's a constant struggle for us gamers, so your consideration means a lot."
     show PRG blush-2
     PRG "Well… I'm dating a gamer. I-I should know these things."
-    scene dorm exterior with fade
+    scene Dorm Exterior with fade
     "Aida walked slightly closer to me as we headed outside the dorms, her hand brushing mine before taking it."
     "It may have been the calm, easy breeze, Aida holding my hand, or the slight scent of Aida's lavender shampoo on the breeze, but for whatever reason, I felt just… calm."
-    scene bus with fade
+    scene Bus Interior with fade
     "I slid into a window seat first so Aida could have the aisle, as she sat carefully, glancing forward to make sure she didn't bump her belly."
     show PRG doubt
     MC "Got it?"
@@ -46211,7 +46211,7 @@ label PRG065:
     PRG "I think-"
     show PRG worried
     PRG "Hmn…"
-    play music rain fadein 2.0
+    play music Rain fadein 2.0
     "Aida took a cart with one hand, and… quickly realized that she couldn't grab the handle with both hands. Not anymore."
     "Her belly pushed the cart forward ahead of her, the cart stopping not too far into the store."
     MC "Here. I got it."
@@ -46248,7 +46248,7 @@ label PRG065:
     MC "Actually, ooh… idea."
     PRG "Hm?"
     MC "For tomorrow. How does ice cream sound?"
-    show PRG unique happy
+    show PRG unique-happy
     PRG "Mmm… we should get some."
     "Aida turned, walking ahead of me and turning toward the freezers. As I followed, I watched her butt shuffle in her skirt as she waddled forward."
     show PRG neutral
@@ -46309,7 +46309,7 @@ label PRG065:
     show PRG blush
     PRG "Uhm… it might be. I-I'm not saying either way! No hints!"
     MC "..."
-    scene dorm hallway with fade
+    scene Dorm Hallway with fade
     "I held the door as Aida walked in and past me, as I followed quickly after."
     MC "Okay. Now, Miss Kodama."
     show PRG neutral
