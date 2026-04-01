@@ -20358,14 +20358,12 @@ label MC027:
         Tomoko "Mhm."
         MC "Alright. Oh, are we... supposed to wait to grab a pumpkin?"
         show PRG worried
-        PRG "Um... n-no. Y-You don't have to. We're just waiting for now."
+        PRG "Um... n-no. We're just waiting for now."
         MC "Gotcha. Alright."
-        #TODO: This has Kei grab one for him & Tomo despite him grabbing one already before the PRG vs not logic split.
-        "I went forward, snaking my way through the crowd, only to get bumped by... well, someone. It was hard to tell."
+        "Glancing back into the massive crowd, I could barely make out the pumpkins on the ground."
         "I suddenly realized why Aida and Kanami were waiting to take their pick."
-        "Choosing a pumpkin for Tomo and I, I walked it back toward our station and set it down."
         MC "One sec."
-        "I turned back, heading in and taking one beside where I'd just grabbed ours, then came back out, walking the pumpkin over and setting it in front of Aida and Kanami."
+        "I turned back, heading in and taking one beside where just grabbed ours, then came back out, walking the pumpkin over and setting it in front of Aida and Kanami."
         show PRG neutral
         PRG "Oh! T-Thank you, Hotsure-san! T-That was so nice of you!"
         MC "'Course. No problem."
