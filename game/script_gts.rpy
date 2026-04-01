@@ -16258,7 +16258,7 @@ label GTS058_umio:
     Junsei "But yeah, he taught me that neat little recipe just before I took my lil' boat ride. So, uh, make your checks out to Uncle Shō."
     Okisho "Where is this restaurant, exactly?"
     Junsei "That'd be in a lil' town called Ha-ko-da-tayyy baby, right off Uchikanjo-sen on the south side. She's called One-Two, big gold lace awning, ya can't miss it."
-    Okisho "I'll check it out if I ever make my way out there.."
+    Okisho "I'll check it out if I ever make my way out there."
     MC "Was this a potential joining the family business type situation?"
     "He closed his eyes and rocked his head slowly, as though refining his thoughts by the tumbling method."
     Junsei "I might go back and do that, yeah. Who can say where that old road goes, you know what I mean?"
@@ -16702,7 +16702,7 @@ label GTS059:
                         GTS "That is certainly a fair assessment, one that only you can decide for yourself."
                     "No, I'll finish it.":
                         $setVar("GTS_selfhood", getVar("GTS_selfhood") + 2)
-                        $getflag("GTS059_Book")
+                        $getFlag("GTS059_Book")
                         $setAffection("GTS", 2)
                         MC "If it means enough to you that you'd want me to share your experience with me, then I'm going to see it through for all it's worth."
                         MC "Who knows, maybe by the end I'll get it."
@@ -16847,7 +16847,7 @@ label GTS059_NoGo:
             GTS "That is certainly a fair assessment, one that only you can decide for yourself."
         "No, I'll finish it.":
             $setVar("GTS_selfhood", getVar("GTS_selfhood") + 2)
-            $getflag("GTS059_Book")
+            $getFlag("GTS059_Book")
             $setAffection("GTS", 2)
             MC "If it means enough to you that you'd want me to share your experience with me, then I'm going to see it through for all it's worth."
             MC "Who knows, maybe by the end I'll get it."
