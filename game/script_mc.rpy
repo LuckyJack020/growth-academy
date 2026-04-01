@@ -13781,6 +13781,8 @@ label MC012B:
     "My eyes darted over my notes. World, starting location, boss stats, all of it is here."
     "The only thing missing..."
     "Was the name of the setting."
+    stop music fadeout .5
+    play music Memories
     MC "You find yourselves travelers, wanderers in..."
     menu:
         "The Enchantic Isles":
@@ -13889,6 +13891,7 @@ label MC012B:
     GTS "How elegant!"
     MC "O-Oy, give me a break, English is hard."
     show AE neutral
+    show GTS neutral
     AE "It's Elven, actually."
     MC "Anyways! Alice?"
     show WG neutral-2
@@ -13949,6 +13952,7 @@ label MC012B:
     show FMG surprised
     FMG "Oy!"
     show GTS unique
+    show FMG neutral
     GTS "I will gladly serve in whatever capacity you think me most able."
     MC "It's a game, you know. You can pick whatever sounds fun to you."
     show GTS pondering
@@ -13962,6 +13966,7 @@ label MC012B:
     MC "Sure, that's fine."
     show GTS happy
     GTS "They're so cute! Thank you, game master."
+    show GTS neutral
     MC "And finally, how about you, Aida?"
     show PRG unique-happy
     PRG "Um... I'd like to be a druid."
@@ -13982,19 +13987,36 @@ label MC012B:
     AE "A... Nephilim Druid... okay."
     show PRG blush-2
     PRG "I-I... saw it in a movie."
+    show FMG neutral
     show AE neutral
+    show BE neutral
+    show GTS neutral
+    show WG neutral
     AE "Our party balance is nigh nonexistent, may as well go with what you want to be."
     MC "Alright, sure! Got a name in mind?"
     show PRG neutral
     PRG "Atraya Freywalker."
-    show FMG surprised
+    show FMG surprised-2
     FMG "Wha- How is it that everyone can come up with cool English names so easily?!"
+    show FMG neutral
     show AE angry
     AE "It's not Eng- mmmf..."
     MCT "We need to get started before Shiori gets an aneurysm..."
     MC "And so, with that... is everyone ready to begin?"
+    show BE happy
+    show PRG worried
+    show FMG happy
+    show WG neutral
+    show AE neutral
+    show GTS happy
     "I look around as everyone nods or gives a small agreement before..."
     "Showtime."
+    show BE neutral
+    show PRG neutral
+    show FMG neutral
+    show WG neutral
+    show AE neutral
+    show GTS neutral
     MC "The sun rises over the horizon as you all prepare yourself for the road ahead. The River Aleria, at an old ruin where it is said destinies cross, sits not but a few paces into [GNGSettingName]."
     MC "As you all have, one by one, made your way to the spot where you were meeting for a man to advise you on your journey."
     "And with that, I look towards Honoka."
@@ -14419,6 +14441,7 @@ label MC012B:
     show PRG happy
     PRG "I would like some too."
     "I close my eyes and let out a sigh as I smile."
+    hide GTS with dissolve
     MC "And so... you find yourselves out at the campfire. What do you do, starting with Morgana."
     show BE neutral
     BE "Sup?"
@@ -14489,7 +14512,7 @@ label MC012B:
     FMG "..."
     show BE surprised
     BE "..."
-    show GTS happy
+    show GTS happy at Position(xcenter=0.90, yalign=1.0) behind AE
     GTS "I have returned with the tea."
     show WG happy
     WG "Hmm matcha... {size=-6}I guess I shouldn't have expected anything else in retrospect, but I suppose it will do{/size}. Thank you, Yamazaki-san."
@@ -27036,7 +27059,7 @@ label RM007gig_menu:
             RM "I'm going to try to learn more about the manufacturer of the keypad on the gate to the Giant's Dorms."
             "Daichi pointed to the board near the quadrant devoted to the Giant's Dorms."
             RM "It's written on here if you wanted to take a look."
-            MC " \"JJN\" Never heard of them"
+            MC " \"JJN\" Never heard of them."
             show RM neutral-2
             RM "That's because it's not just one manufacturer, but multiple manufacturers developing a security system in collaboration." 
             MC "So it was a custom product of sorts."
@@ -27171,8 +27194,9 @@ label RM007_Epilogue:
     jump daymenu
 
 label RMG001:
-    scene Gate Front with fade
+    scene School Front with fade
     play music HigherEdu
+    $setMCOutfit(OutfitEnum.CASUAL)
     "It had been a pretty slow weekend at Seichou this time. Maybe it was because people were hunkering down to study for upcoming tests, or the weather hadn't been that nice, but the place felt dead."
     "Which is why I thought it might be a good idea to get out of my room and hopefully out of a funk by getting around to do one of Daichi's \"gig\" assignments he had in mind for me."
     MCT "Not like there's much else going on on a Sunday morning around here."
@@ -27448,6 +27472,7 @@ label RMG001:
     MCT "Alright, checking my notes here, looks like we made a full circle by this point. This covers a decent amount of the island's destinations, but I somehow doubt Daichi will be satisfied about the amount of access the line grants."
     MCT "Considering it didn't go to the airport, or anywhere near that radio tower he was talking about, I half suspect he's going to fully suspect there's a lot more destinations to uncover."
     MCT "I guess that will have to wait for another day though."
+    scene Bus Interior with fade 
     "After taking a brief moment to collect my thoughts, I made the unfortunate mistake of looked up from my notes in the wrong direction."
     "Big Gut Guy" "OI! Ya doing it again! Quit gawk'n at my gut!"
     MC "I'm not gawking at anything. I'm just riding the bus, man."
@@ -27486,7 +27511,7 @@ label RMG001:
     scene black with fade
     stop music fadeout .5
     pause .5
-    scene Gate Front with fade
+    scene School Front with fade
     play music DormLife
     MCT "Alright, gate's in sight. Finally going to be getting off this bus. My butt is getting tired of these hard seats."
     MCT "Okay, better check my notes. Here's all the stops I noted: Satoyama Village, Commercial District - Downtown, Bus Terminus, Docks at the Port, Residential District and Beachside Village."
