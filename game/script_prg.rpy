@@ -46326,7 +46326,7 @@ label PRG065:
     MC "Gotcha. What can I do?"
     if getFlag("Dom"):
         "Aida set her bag down on the counter and turned to me, wringing her hair around one finger."
-        show PRG blush-2
+        show PRG blush-2 with dissolve
         PRG "Um... it's Saturday. Would you... like to spend the night again?"
         MC "I'd love to. Want me to go pack up a bag?"
         PRG "Y-Yes, please."
@@ -46502,7 +46502,7 @@ label PRG065:
     PRG "Ohh!"
     MC "You okay?"
     PRG "I-I'm fine!"
-    MC "I smiled as I got my clothes off, and slipped on my shorts and t-shirt."
+    "I smiled as I got my clothes off, and slipped on my shorts and t-shirt."
     MC "Alright. Can I come out now?"
     PRG "Not yet!"
     "There was the sound of quick footsteps, before more skidding echoed out, followed by another drop."

@@ -603,7 +603,7 @@ label FMG006:
     FMG "Yooo, what's up, dude?!?"
     MC "You seem more excited than usual."
     show FMG happy
-    FMG "As I should be! You came to me and asked{i}me{/i} to workout instead of me asking you."
+    FMG "As I should be! You came to me and asked {i}me{/i} to workout instead of me asking you."
     FMG "It's exciting, I think you're seriously starting to enjoy this!"
     MC "Heh, let's not get crazy now. I'm still testing the waters as they say and right now the water is lukewarm."
     show FMG neutral
