@@ -36708,7 +36708,8 @@ label WGB006:
     scene Dorm GTS with fade
     play music GTSAlt
     "Walking into their room, I was caught off guard by how... traditional it all looked. What with the tatami mats set out in all."
-    show GTS neutral-2 with dissolve
+    show GTS neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Okisho neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Naomi for her part was also decked out in her finest traditional garb. Even with her usual reserved demeanor, I could tell by the way she carried herself she was quite excited to have a reason to wear it." 
     GTS "Greetings, Hotsure-san." 
     show GTS neutral

@@ -14020,7 +14020,13 @@ label MC012B:
     MC "The sun rises over the horizon as you all prepare yourself for the road ahead. The River Aleria, at an old ruin where it is said destinies cross, sits not but a few paces into [GNGSettingName]."
     MC "As you all have, one by one, made your way to the spot where you were meeting for a man to advise you on your journey."
     "And with that, I look towards Honoka."
-    show BE happy
+    hide PRG
+    hide FMG
+    hide WG
+    hide AE
+    hide GTS
+    with dissolve
+    show BE happy at altMove(0.5, 0.4)
     BE "Walking along the riverbend, Morgana Shadowfist looks for treasure, as well as danger!"
     MC "M-Morgana..."
     BE "Shadowfist!"
@@ -14028,12 +14034,17 @@ label MC012B:
     show BE unamused
     BE "Shut it."
     MC "Got it."
-    show AE admire
+    show BE neutral
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
     AE "Lúthien stands by the water of the Aleric river, kneeling down before the crystal clear shore."
     MC "Ok-"
+    hide BE with dissolve
+    show AE admire
     AE "As the wind blows through her platinum blonde hair, she holds her sword in its scabbard up to the morning star shining in the sky as she sings a song in an ancient tongue; her voice carried by the wind."
     MC "..."
+    show AE embarrassed
     AE "..."
+    show AE admire
     MC "Alri-"
     AE "{i}An I cielia ethora an celebus~{/i}"
     MCT "O-OY! WHO THE HELL ARE YOU TRYING TO IMPRESS?!"
@@ -14043,12 +14054,13 @@ label MC012B:
     AE "As Luth-"
     show AE angry
     MC "Yamazaki-san, what about you?"
+    show GTS pondering at Position(xcenter=0.90, yalign=1.0) behind AE
     GTS "..."
     show AE neutral-annoyed
     MC "... Um..."
-    show GTS surprised
+    hide AE with dissolve
+    show GTS surprised at altMove(0.5, 0.8)
     GTS "Oh! Is it my time to tell a story?"
-    show AE neutral
     MC "Y-Yes, this is collaborative story telling."
     show GTS happy
     GTS "Understood! I have everything prepared."
@@ -14062,38 +14074,44 @@ label MC012B:
     GTS "Oh? Yes?"
     MC "I-It's not that kind of story telling! You just... like... talk about what your character does from a first person perspective."
     GTS "Ah. My apologies for the misunderstanding."
-    show AE neutral
+    show GTS surprised at altMove(0.5, 0.9)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
     AE "... I was rather interested in hearing the song."
     show GTS neutral
     "Naomi cleared her throat as Alice rolled her eyes."
+    hide AE with dissolve
+    show GTS neutral at altMove(0.5, 0.7)
     GTS "Many years ago, in the green and peaceful shire of Tomaya, my great-grandfather, Eldo Baggouts, espied a tomato as big as a watermelon floating down a river. When he waded in to catch it, he..."
     MC "I, uh, meant more like an elevator pitch."
     show GTS surprised
     GTS "Ah! Heavens, forgive me."
     show GTS neutral
     GTS "I am Izanami Baggouts, maiden of the Tomaya Shrine. I am on a quest to break the curse on my companion Prince Silvios, who has been transformed into a tomato."
-    show FMG happy
+    show FMG happy at Position(xcenter=0.40, yalign=1.0) behind PRG
     MC "...I can work with that, but... Baggouts?"
     FMG "Heheheheh-"
     GTS "Mizutani-san gracefully recommended me the name."
     show FMG upbeat
     FMG "HEHEHEHEHEHEH."
     MC "Of course."
-    show FMG neutral
+    hide FMG with dissolve
     GTS "Does this story work well for you?"
     MC "... Ssssuuuuuuuure..."
     show GTS happy
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind PRG
+    show WG neutral at Position(xcenter=0.60, yalign=1.0)
+    show GTS happy at altMove(0.5, 0.9)
     GTS "Excellent!"
     show FMG happy
-    show WG doubt
     FMG "After looking over to Izanami, Cruccuth will just look over to Hayden and say \"Hey bard, play me a tune!\" before kicking up her feet on one of the uh... ruin parts hangin out."
-    show WG angry
+    show WG doubt
     WG "I am not simply going to play music for you, Akira."
+    show PRG neutral at Position(xcenter=0.26, yalign=1.0) 
     PRG "Um... I-I think we're supposed to stay in character."
     WG "... \"It would be UNWISE for me to begin playing music for you out of nowhere for no compensation... Dragonkin.\""
     show FMG flex
     FMG "I give myself a million gold so I can pay her to sing for me."
-    show BE embarrassed
+    show BE embarrassed at Position(xcenter=0.15, yalign=1.0) behind PRG
     show GTS neutral
     MC "Nnno, you cannot declare items after the start of the game. Anything you have after character creation you have to get yourself."
     WG "AND you must put down your personal wealth in a sheet that you have to then detract from your starting bonuses."
@@ -14104,15 +14122,26 @@ label MC012B:
     FMG "Pff, lame."
     show BE neutral
     MC "ANYWAYS: Atraya, what are you doing?"
+    hide BE 
+    hide FMG
+    hide WG
+    hide AE
+    hide GTS
+    with dissolve
     PRG "Umm... I'm brewing potions from the local wildlife with Morgana by my side."
     show PRG worried
     PRG "And... oh, um, what kinds can I make?"
     MC "Hmm... Silverroot, Rainbowscale, and Irongrass will net you..."
     MC "..."
     MC "A uh... growth potion."
-    show BE disoriented 
+    show BE disoriented at Position(xcenter=0.15, yalign=1.0) behind PRG
+    show PRG worried at Position(xcenter=0.26, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind PRG
+    show WG neutral at Position(xcenter=0.60, yalign=1.0)
+    show AE neutral-eyebrow at Position(xcenter=0.75, yalign=1.0)
+    show GTS pondering at Position(xcenter=0.90, yalign=1.0) behind AE
     "Slowly, I felt as if every single eye in the circle squinted and looked towards me."
-    show WG coy
+    show WG coy at Position(xcenter=0.60, yalign=1.0)
     WG "Mmmhmmmm..."
     MC "W-Wha?! It's what's around the area!"
     show BE seductive
@@ -14140,8 +14169,13 @@ label MC012B:
     show GTS neutral
     MC "Alright! As you two head off on your own, you mind goes to the man whom you were supposed to meet from earlier. Strange he hasn't arrived, but it gives you more time to prepare."
     MC "Regardless, you both head down, away from the others, towards the river."
+    hide FMG
+    hide WG
+    hide AE
+    hide GTS
     MC "The waters shimmer with light as, softly, the birds morning song is halted, giving you time to look at the water."
-    show BE unamused
+    show BE unamused at altMove(0.5, 0.4)
+    show PRG neutral at altMove(0.5, 0.6)
     BE "... Hm..."
     PRG "I would like to lean down to the water to drink-"
     BE "Insight check."
@@ -14156,7 +14190,7 @@ label MC012B:
     MC "\"Stand and deliver, your money or your life.\", it's a bandit."
     show PRG scared
     PRG "Oh, ah-!"
-    show FMG devious
+    show FMG devious at Position(xcenter=0.78, yalign=1.0) behind PRG
     FMG "I PUNT HIM!"
     MC "Y-You're not here."
     show FMG neutral
@@ -14164,6 +14198,7 @@ label MC012B:
     MC "N...No?"
     show FMG angry
     FMG "Ahh, fiiiine."
+    hide FMG
     MC "Ugh... uh- oh- \"Ye picked a bad time to rest by these rivers there, smallstuff! Now it's time to pay up or PAY!\""
     show PRG worried
     PRG "I... um..."
@@ -14180,13 +14215,15 @@ label MC012B:
     show PRG scared
     MCT "EAT MY ENTIRE COCK, INOUE!"
     MC "Roll Charisma."
-    show FMG neutral
+    show FMG neutral at Position(xcenter=0.78, yalign=1.0) behind PRG
     BE "Got it."
     show FMG angry
     FMG "Charisma just to show off boobs?"
     show BE seductive
     BE "It's an artform, Akira."
+    hide FMG
     "She rolls the dice."
+    show BE happy
     BE "15!"
     MC "Mmm... as you flash the bandit, his eyes widen, however...: \"Heh, nice try, girlie; maybe with a bit more meat on your bones I'd be impressed!\'"
     show BE surprised
@@ -14199,12 +14236,17 @@ label MC012B:
     BE "..."
     show BE happy
     BE "I drink the growth potion."
-    show AE angry-4
+    show BE happy at altMove(0.5, 0.15)
+    show PRG blush at altMove(0.5, 0.26)
+    show AE angry-4 at Position(xcenter=0.75, yalign=1.0)
+    show FMG upbeat at Position(xcenter=0.40, yalign=1.0) behind PRG
+    show WG doubt at Position(xcenter=0.60, yalign=1.0)
+    show GTS surprised at Position(xcenter=0.90, yalign=1.0) behind AE
     AE "HUH?!"
     show PRG surprised
     PRG "Uh... M-Morgana?"
     FMG "OOOOHOHOHO!"
-    show WG angry
+    show WG angry at Position(xcenter=0.60, yalign=1.0)
     WG "Oh, dear god."
     MC "Uuugh... okay what do you do with the-?"
     show BE aroused
@@ -14244,7 +14286,7 @@ label MC012B:
     show PRG blush
     show FMG happy
     show WG bored
-    show GTS pondering
+    show GTS pondering at Position(xcenter=0.90, yalign=1.0) behind AE
     AE "Oh for the love of..."
     show FMG devious
     FMG "Nighty night, bitch."
@@ -14257,6 +14299,12 @@ label MC012B:
     MC "... He is out."
     show BE neutral
     BE "Okay. Atraya run this guys wallet."
+    hide FMG
+    hide WG
+    hide AE
+    hide GTS
+    show BE neutral at altMove(0.5, 0.4)
+    show PRG neutral at altMove(0.5, 0.6)
     PRG "O-Okay, Morgana."
     show PRG insecure
     PRG "... That means pickpocket, right?"
@@ -14266,14 +14314,16 @@ label MC012B:
     MC "You... alllright. Well, he has 15 gold on him, along with a note."
     show PRG surprised
     PRG "Oh! Um... he had a note on him! And money!"
-    show AE neutral
+    show BE neutral at altMove(0.5, 0.15)
+    show PRG surprised at altMove(0.5, 0.26)
+    show AE neutral at Position(xcenter=0.40, yalign=1.0) behind PRG
     AE "Lúthien comes over."
     show PRG neutral
-    show FMG neutral
+    show FMG neutral at Position(xcenter=0.68, yalign=1.0) behind PRG
     FMG "Aaaas does Cruccuth."
-    show GTS neutral
+    show GTS neutral  at Position(xcenter=0.90, yalign=1.0) behind FMG
     GTS "I come- I mean, Izamami comes too!"
-    show WG bored
+    show WG bored at Position(xcenter=0.55, yalign=1.0)
     WG "... I walk over with the others."
     show AE surprised
     AE "As Lúthien approaches she says \"BY THE DIVINES! What happened to you, girl?!\" before trying to cover her eyes and blushing."
@@ -20403,6 +20453,7 @@ label MC027:
         show Tomoko neutral at altMove(0.4, 0.19)
         show PRG neutral with dissolve
         show Kanami neutral at Position(xcenter=0.78, yalign=1.0) with dissolve
+        show Tomoko at Transform(xzoom=-1)
         PRG "Oh! H-Hi, Hotsure-san!"
         "I smiled, nodding politely to Aida."
         PRG "W-What brings you here?"
@@ -20433,6 +20484,7 @@ label MC027:
         MC "Well. Wanna get started, Tomo?"
         show Tomoko neutral
         Tomoko "Mhm."
+        show Tomoko at Transform(xzoom=1)
         MC "Alright. Oh, are we... supposed to wait to grab a pumpkin?"
         show PRG worried
         PRG "Um... n-no. We're just waiting for now."
@@ -20478,6 +20530,7 @@ label MC027:
         hide PRG with dissolve
         "Aida walked out from behind her station's table, and... waddled out into the room, past Tomo and I."
         hide Kanami with dissolve
+        show Tomoko neutral at altMove(0.5, 0.5)
         Tomoko "Kei! KEI!"
         MC "What?"
         "Tomo pulled my shirt sleeve, yanking me toward her, and down to her level."
