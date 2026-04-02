@@ -13725,7 +13725,7 @@ label MC012B:
             hide GTS with dissolve
         elif routelock == "FMG":
             hide BE
-            hide FMG
+            hide AE
             hide WG
             hide PRG
             hide GTS
@@ -14072,16 +14072,20 @@ label MC012B:
     GTS "Ah! Heavens, forgive me."
     show GTS neutral
     GTS "I am Izanami Baggouts, maiden of the Tomaya Shrine. I am on a quest to break the curse on my companion Prince Silvios, who has been transformed into a tomato."
+    show FMG happy
     MC "...I can work with that, but... Baggouts?"
     FMG "Heheheheh-"
     GTS "Mizutani-san gracefully recommended me the name."
-    show FMG devious
+    show FMG upbeat
     FMG "HEHEHEHEHEHEH."
     MC "Of course."
+    show FMG neutral
     GTS "Does this story work well for you?"
     MC "... Ssssuuuuuuuure..."
     show GTS happy
     GTS "Excellent!"
+    show FMG happy
+    show WG doubt
     FMG "After looking over to Izanami, Cruccuth will just look over to Hayden and say \"Hey bard, play me a tune!\" before kicking up her feet on one of the uh... ruin parts hangin out."
     show WG angry
     WG "I am not simply going to play music for you, Akira."
@@ -14090,6 +14094,7 @@ label MC012B:
     show FMG flex
     FMG "I give myself a million gold so I can pay her to sing for me."
     show BE embarrassed
+    show GTS neutral
     MC "Nnno, you cannot declare items after the start of the game. Anything you have after character creation you have to get yourself."
     WG "AND you must put down your personal wealth in a sheet that you have to then detract from your starting bonuses."
     show FMG angry
@@ -14123,14 +14128,16 @@ label MC012B:
     "Honoka takes her two fingers and points them from her eyes to mine playfully as I rub my temples."
     show BE happy
     BE "\"Thank you for the potion, Atraya!\""
-    show PRG neutral
+    show PRG happy
     PRG "\"Eheheh, you're welcome! If you could, can you go with me to get me some more water from the river?\""
     show GTS happy
     GTS "Of course I can, Kodoma-san!~"
+    show PRG neutral
     MC "That was in character."
     show GTS sad
     GTS "Oh, my apologies."
     BE "Mm, I go get some more water from the river with Atraya."
+    show GTS neutral
     MC "Alright! As you two head off on your own, you mind goes to the man whom you were supposed to meet from earlier. Strange he hasn't arrived, but it gives you more time to prepare."
     MC "Regardless, you both head down, away from the others, towards the river."
     MC "The waters shimmer with light as, softly, the birds morning song is halted, giving you time to look at the water."
@@ -14173,6 +14180,7 @@ label MC012B:
     show PRG scared
     MCT "EAT MY ENTIRE COCK, INOUE!"
     MC "Roll Charisma."
+    show FMG neutral
     BE "Got it."
     show FMG angry
     FMG "Charisma just to show off boobs?"
@@ -14183,10 +14191,13 @@ label MC012B:
     MC "Mmm... as you flash the bandit, his eyes widen, however...: \"Heh, nice try, girlie; maybe with a bit more meat on your bones I'd be impressed!\'"
     show BE surprised
     BE "WHAT?! ON A FIFTEEN?!"
+    show BE angry
+    show PRG blush
     MC "The bandit is not impressed by your lithe physique."
     BE "Son of a..."
     show BE neutral
     BE "..."
+    show BE happy
     BE "I drink the growth potion."
     show AE angry-4
     AE "HUH?!"
@@ -14213,6 +14224,7 @@ label MC012B:
     BE "Boingus..."
     show WG surprised
     WG "Bazoingus?"
+    show WG doubt
     MC "Gch- HE'S STUNNED KNOCK HIM OUT!"
     show BE surprised
     BE "OH! Right, yeah."
@@ -14229,9 +14241,19 @@ label MC012B:
     MC "Uhh, sure."
     BE "Walking up to the bandit I put my hands on my booba... and WHAM 'EM IN THE FACE WITH THEM!"
     show AE angry-2
+    show PRG blush
+    show FMG happy
+    show WG bored
+    show GTS pondering
     AE "Oh for the love of..."
     show FMG devious
     FMG "Nighty night, bitch."
+    show PRG neutral
+    show FMG neutral
+    show AE neutral
+    show BE neutral
+    show WG neutral-2
+    show GTS neutral
     MC "... He is out."
     show BE neutral
     BE "Okay. Atraya run this guys wallet."
@@ -14265,6 +14287,12 @@ label MC012B:
     FMG "..."
     show WG surprised
     WG "..."
+    show PRG neutral
+    show FMG neutral
+    show AE neutral
+    show BE neutral
+    show WG neutral
+    show GTS neutral
     MC "..."
     show AE aroused-3
     AE "... As Lúthien then says \"N-Never you mind, Atraya, please, read out the note.\""
@@ -14314,24 +14342,34 @@ label MC012B:
     show FMG devious
     FMG "Sure, bro. Sure."
     show PRG neutral
+    show FMG neutral
+    show AE neutral
+    show BE neutral
+    show WG neutral
+    show GTS neutral
     MC "Aaaand... there. Okay, you're in town, there's a market, there's pigs walking around... what do you guys do?"
     show BE neutral
     show GTS surprised
     GTS "Ah, Game Master? I would like to distribute alms to the poor."
+    show WG angry
     WG "{size=-6}Oh, for crying out loud...{/size}"
     MC "Don't you want-"
     MCT "Nope. Stay on target."
     MC "Got it. Mark off however much you want to give away."
+    show GTS happy
     GTS "Certainly."
     "My blood pressure rose slightly, but palpably, as she produced a second notebook."
     show GTS unique-2
     GTS "And if I may, what is the family name of the first household I come across?"
     MC "Uhhh...{w} uh...{w} Morp."
+    show GTS pondering
     GTS "I see, thank you... and what is the name of the head of the Morp household?"
-    MCT "You want their fuckin' tax returns too?"
+    if getRoutelock() != "GTS":
+        MCT "You want their fuckin' tax returns too?"
     MC "...Marp."
     show GTS happy
     GTS "Very good... and I will give Marp Morp two coins..."
+    show GTS neutral
     GTS "And I would also like to ask Mr. Morp about the status of his neighbors, and if any if them might have need of a humble shrine maiden."
     MC "..."
     MC "Tell you what, we'll go around the table and get back with you."
@@ -14423,7 +14461,8 @@ label MC012B:
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS neutral at Position(xcenter=0.90, yalign=1.0) behind AE
     with fade
-    "After obtaining the location of the wizard from the barkeep, they almost immediately left the town, fearing the time crunch. They traveled along the road, encounters here and there until, eventually, the sun began to dip in the sky, both in and out of game."
+    "After obtaining the location of the wizard from the barkeep, they almost immediately left the town, fearing the time crunch."
+    "They traveled along the road, encounters here and there until, eventually, the sun began to dip in the sky, both in and out of game."
     MC "Wow... everything is actually going smoothly... too smoothly."
     "As I watched Shiori go over everyone's abilities with them, a terrifying thought shocked me to my very core."
     MCT "Wait, what if they get better than me at the game...? I'm not gonna look dumb am I?!"
@@ -14443,7 +14482,7 @@ label MC012B:
     "I close my eyes and let out a sigh as I smile."
     hide GTS with dissolve
     MC "And so... you find yourselves out at the campfire. What do you do, starting with Morgana."
-    show BE neutral
+    show BE happy
     BE "Sup?"
     MC "Morgana, what do you do?"
     BE "Morgana is... actually up and about, training on a nearby tree."
@@ -14464,7 +14503,7 @@ label MC012B:
     MC "Hm... Atraya how are you feeling?"
     PRG "Good. I'm just... sitting. Reading through a potion book."
     FMG "Having someone skilled with potions will be uber helpful. Glad you joined up."
-    show PRG happy
+    show PRG neutral
     PRG "Um... t-thank you! I hope I can help where I can!"
     MC "Izanami, as you- where did Yamazaki-san go?"
     show PRG worried
@@ -14513,6 +14552,11 @@ label MC012B:
     show BE surprised
     BE "..."
     show GTS happy at Position(xcenter=0.90, yalign=1.0) behind AE
+    show BE neutral
+    show WG neutral
+    show FMG neutral
+    show PRG neutral
+    show AE neutral
     GTS "I have returned with the tea."
     show WG happy
     WG "Hmm matcha... {size=-6}I guess I shouldn't have expected anything else in retrospect, but I suppose it will do{/size}. Thank you, Yamazaki-san."
@@ -19707,6 +19751,16 @@ label MC027:
         show Tomoko neutral
         Tomoko "... Weird trip?"
         MC "Extremely."
+    elif isEventCleared("MC012B"):
+        MC "Ahh..."
+        MC "Played a game there with the girls in homeroom once."
+        Tomoko "What kind?"
+        MC "GnG."
+        show Tomoko neutral
+        Tomoko "... Huh?"
+        MC "Yeah. I was the gm."
+        Tomoko "... Sure."
+        MC "Hey, I'm not lying. Look, it was-"
     hide Tomoko with dissolve
     pause .5
     show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve

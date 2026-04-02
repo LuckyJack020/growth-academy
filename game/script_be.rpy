@@ -15996,6 +15996,7 @@ label BE061:
     "I tried not to think about that last possibility too much. {w}After all, she was still growing and she would need a new bra eventually. It wasn't something she could put off for much longer anyway, so either way, we had to cross that bridge."
     "Might as well be now. Thankfully though we had a friend we could trust to guide her through the process."
     play sound Knock
+    pause 1
     WG "Come in!"
     scene Dorm WG
     show WG neutral at Position(xcenter=0.75, yalign=1.0)
@@ -16139,7 +16140,7 @@ label BE061:
         show BE embarrassed-2
         Chibuki "Oi, you lazy lout! Put your back into it!"
         MC "Oh, sorry."
-        "Apparently it wasn't enough to do a typical bicep like a standard feel'm up— I needed to full on shoulder press these tankards to give Chibuki enough slack to operate the bra strap behind her."
+        "Apparently it wasn't enough to do a typical bicep curl like a standard feel'm up— I needed to full on shoulder press these tankards to give Chibuki enough slack to operate the bra strap behind her."
     else:
         MCT "Geesh. These things are heavy! How does Honoka carry these busty beasts around all day?"
         show BE embarrassed-2
@@ -16192,7 +16193,7 @@ label BE061:
     MC "See? I came prepared."
     Chibuki "Something tells me he's not actually blind judging by how much he keeps staring at your wobbly bits."
     MC "Echo location."
-    Chibuki "Alright then, Batboy, stand on her left side and hold that end here at the top of her chest and I'll take her shoulder measurement first."
+    Chibuki "Alright then, Batboy, stand on her right side and hold that end here at the top of her chest and I'll take her shoulder measurement first."
     "Despite Honoka's rather petite feminine frame, whose shoulders couldn't be described as broad, it was still best done as a two man job, considering there was a journey across two mountains and a valley to get to the other side."
     Chibuki "Did you get that one Alice?"
     WG "Yes, I can see it. Do her chest measurement next."
@@ -16316,7 +16317,9 @@ label BE061:
     WG "That will be all the required measurements we need. Chibuki, please help Honoka back into the rest of her wardrobe."
     "With Chibuki's added assistance, putting her clothes back on didn't involve much fanfare, though I suspect my weight relief via more than a handful of hand cupping helped more than just to satisfy my own desires."
     $setBEOutfit(OutfitEnum.DEFAULT)
-    show BE neutral with dissolve
+    show BE neutral
+    hide Chibuki
+    with dissolve
     play music Peaceful
     "Seeing Honoka had been satisfactorily suited back up in presentable condition, Alice pulled out a rather thick binder that she presented to her, which I gather must have been her \"catalog\" so to speak."
     WG "Alright then, Honoka, go ahead and look through and pick whatever pattern and fabric suits your fancy."
@@ -16380,7 +16383,7 @@ label BE061:
     show BE happy
     BE "Sure, we got time if you do."
     "Honoka and I were certainly on the same wavelength with this matter, even if neither of us were big tea drinkers."
-    show Chibuki neutral
+    show Chibuki neutral with dissolve
     "As if on cue, Chibuki emerged from the kitchen with a serving tray carrying a tea kettle and three sophistically ornate tea cups, setting it down at a small table in the center of the room Alice gestured us to take a seat at."
     Chibuki "Tea is served. May I end my shift now?"
     WG "Yes, you've filled your allotted time on the schedule. I'll see you tomorrow, Chibuki."
@@ -16496,7 +16499,7 @@ label BE061:
     BE "Really?"
     MC "They still look pretty round to me."
     show BE embarrassed
-    BE "Quite you! Mr. Boob Brain."
+    BE "Quiet you! Mr. Boob Brain."
     show BE neutral
     WG "You might be onto something, Honoka. Clearly there was something about Father's bluecollar upbringing that forged him into the type of entrepreneur he became."
     show WG haughty 
