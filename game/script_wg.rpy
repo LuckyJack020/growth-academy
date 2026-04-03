@@ -19070,7 +19070,7 @@ label WG063:
     WG "Umm, well, let's just say I might have double-booked your available time slot."
     "Alice was anything but meek, so her sheepish grin was telling me she had done something she knew was not so good."
     play sound Knock
-    $setFMGOutfit(OutfitEnum.RIPPED)
+    $setFMGOutfit(OutfitEnum.ALTERNATE)
     show WG neutral-2 at altMove(0.5, 0.75)
     show FMG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
     play music Busy
