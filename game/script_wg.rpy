@@ -33685,6 +33685,7 @@ label WG099:
     MCT "I'll never get tired of this."
     "With the combined efforts of Alice pulling up on her folds and me pressing my arms up with all my might, I slid underneath her belly like a shop mechanic trying to do an oil change, on some very heavy machinery."
     "{i}{b}PLOP!{/b}{/i}"
+    $ persistent.unlock_cgWG099 = True
     show cg WG099 with dissolve
     show WG haughty
     MC "{i}Ooof!{/i}"
