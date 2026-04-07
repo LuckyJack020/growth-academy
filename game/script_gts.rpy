@@ -15210,7 +15210,7 @@ label GTS057:
     Tomoko "Ngh! That was a joke, you goon!"
     MC "I had to be sure. You look like you're having a time, sis."
     show Tomoko worried at altMove(0.75, 0.5)
-    "Sensing my qeue, I unzipped my backpack and withdrew a water bottle, which I proffered to her."
+    "Sensing my cue, I unzipped my backpack and withdrew a water bottle, which I proffered to her."
     Tomoko "..."
     Tomoko "Thank you."
     MC "You're welcome.{w}.. Tomo, are you sweating?"
@@ -16702,7 +16702,7 @@ label GTS059:
                         GTS "That is certainly a fair assessment, one that only you can decide for yourself."
                     "No, I'll finish it.":
                         $setVar("GTS_selfhood", getVar("GTS_selfhood") + 2)
-                        $getFlag("GTS059_Book")
+                        $setFlag("GTS059_Book")
                         $setAffection("GTS", 2)
                         MC "If it means enough to you that you'd want me to share your experience with me, then I'm going to see it through for all it's worth."
                         MC "Who knows, maybe by the end I'll get it."
@@ -16736,7 +16736,8 @@ label GTS059:
                     "Though I desired to read it in earnest, it was hard to focus on the emotional tone of the story when the thought at the front of mind was how much I missed her presence already."
                 else:
                     "Tucking myself back into my covers, it only now hit me how exhausting it had been to stand on the balcony with her."
-                    "Realizing that her mere presence had invigorated my weary body to stay resolute, I collapsed back onto the softness of my pillow, having now been deprived of her sustaining aura, and missing her already." 
+                    "Realizing that her mere presence had invigorated my weary body to stay resolute, I collapsed back onto the softness of my pillow, having now been deprived of her sustaining aura, and missing her already."
+                jump daymenu
             else:
                 $setFlag("GTS059_Fail")
                 "I peeled off the covers, struggling every bit in the process since I had been wrapped up so tight from the chills I experienced earlier."

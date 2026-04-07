@@ -14487,7 +14487,7 @@ label FMG071: #Also doubles as FMGWG005 if FMGWG004 has been played
         FMG "That sounds like loser talk, Kei. Maybe Alice wants to throw in the towel, but I'm going to push on."
         WG "We'll see about that!"
         MCT "Dang, Akira was right, my speech skill really {i}is{/i} terrible."
-        Hidaka "Read for another I see? Sorry this one took so long to bring out. You ladies are hard to keep pace with! Enjoy."
+        Hidaka "Ready for another I see? Sorry this one took so long to bring out. You ladies are hard to keep pace with! Enjoy."
         show FMG neutral at Transform(xzoom=-1)
         show WG doubt
         FMG "Ready to give up buttercup?"

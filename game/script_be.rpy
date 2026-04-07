@@ -16047,7 +16047,7 @@ label BE061:
         extend " It's actually kind of neat."
         show BE neutral
         Chibuki "Okay, well I guess you didn't mean it like that."
-        Chibuki "To answer your question though, I wouldn't say it was the same as Alice. She was born her then lived in the States for a while."
+        Chibuki "To answer your question though, I wouldn't say it was the same as Alice. She was born here then lived in the States for a while."
         Chibuki "I on the other hand was born and raised in Manchester, England when after me mum moved there from Japan, but eventually we moved back here."
         show BE happy
         BE "Oh, really? That's so cool!"
@@ -16170,7 +16170,7 @@ label BE061:
     "Alice for her part, seemingly all too used to Chibuki's facetious commentary, just rolled her eyes in response."
     MCT "If she wants to bite the hand that holds the pursestrings, that's none of my business."
     show WG neutral
-    WG "Chibuki, proceed to help Honoka with pulling the straps off her shoulder one at a time, while Honoka looked right at me as she proceeded to do a little shimmy to \"help\" with the process."
+    "Chibuki proceeded to help Honoka with pulling the straps off her shoulder one at a time, while Honoka looked right at me as she proceeded to do a little shimmy to \"help\" with the process."
     $setBEOutfit(OutfitEnum.TOPLESS)
     show BE neutral with dissolve
     "And there they were, two pristine mountain peaks. I'd seen them in their full glory a number of times before by this point, but each time was even more breathtaking than the last."
@@ -16549,7 +16549,7 @@ label BE061:
     Kokutan "WHAT!? {w}ARRGGH! Not that purple-haired \"Bob's your uncle\" boobie!"
     Kokutan "Make sure {i}I'm{/i} on the schedule next time you get refitted."
     show BE doubt
-    BE "Honoka shot me a look with her eyes that screamed \"Dear God no!\"."
+    "Honoka shot me a look with her eyes that screamed \"Dear God no!\"."
     show BE neutral
     BE "Sure. Yup. Don't worry. We'll make it happen. But, we gotta go and it sounds like you got another appointment coming up, so I'll see ya later."
     Kokutan "Alright, alright. Drat! I can't believe I missed her appointment..."
