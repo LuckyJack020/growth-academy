@@ -27580,7 +27580,7 @@ label RMG001:
     MCT "Considering it didn't go to the airport, or anywhere near that radio tower he was talking about, I half suspect he's going to fully suspect there's a lot more destinations to uncover."
     MCT "I guess that will have to wait for another day though."
     scene Bus Interior with fade 
-    "After taking a brief moment to collect my thoughts, I made the unfortunate mistake of looked up from my notes in the wrong direction."
+    "After taking a brief moment to collect my thoughts, I made the unfortunate mistake of looking up from my notes in the wrong direction."
     "Big Gut Guy" "OI! Ya doing it again! Quit gawk'n at my gut!"
     MC "I'm not gawking at anything. I'm just riding the bus, man."
     "Big Gut Guy" "I don't believe ya! Why you gotta look at my gut!?"

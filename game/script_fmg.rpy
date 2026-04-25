@@ -18809,7 +18809,7 @@ label FMG086:
     Mom "Right, silly me, I completely forgot. Got so caught up learning about Akira."
     Mom "Hm, where to start...? I've been a writer for more than two decades now." 
     Mom "It started off as a hobby that I would do from time to time, I only began to get really invested in it while I was pregnant with Keisuke and Tomoko since there wasn't much I could do. At first, it was random short stories of whatever came into my mind."
-    Mom "But one day I noticed a couple of birds outside my bedroom window interacting with each other, they would perch themselves on a branch every day, and every day they would nuzzle up next to other rubbing their heads."
+    Mom "But one day I noticed a couple of birds outside my bedroom window interacting with each other, they would perch themselves on a branch every day, and every day they would nuzzle up next to each other rubbing their heads."
     Mom "I must've watched them for a week straight before the gears in my head started turning. My first real book began forming right before my very eyes."
     Mom "A girl starved for love coming from an abusive household, meeting the boy of her dreams and freeing herself from years of torment and torture."
     Mom "I showed it to Ryuta who encouraged me to send it around to publishers, so I did. After countless rejections, I finally got it published. That one book slingshot my career and the rest is history."
