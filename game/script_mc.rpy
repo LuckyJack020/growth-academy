@@ -6468,7 +6468,7 @@ label MC008:
         MCT "Ah... no. He's been napping for at least half the time."
         if getHighestAffection() == ("AE"):
             MCT "Shiori will almost certainly have everything I'll need. Though... I'll have to sit through a small lecture from her on not disrupting classes."
-            if lockroute("AE") and not isEventCleared("AE025"):
+            if routelock("AE") and not isEventCleared("AE025"):
                 MCT "... If she'll actually talk to me."
         elif getHighestAffection() == ("GTS"):
             MCT "Naomi probably took good  notes... if I wasn't distracting her."
