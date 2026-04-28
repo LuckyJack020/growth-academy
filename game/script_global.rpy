@@ -609,6 +609,7 @@ image cg FMGD002_dream6 = ConditionSwitch(
 
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.webp"
+image cg GTS010 = "Graphics/ui/gallery/GTS010.webp"
 image cg GTS016 = "Graphics/ui/gallery/GTS016.webp"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.webp"
 image cg GTS025 = "Graphics/ui/gallery/GTS025.webp"

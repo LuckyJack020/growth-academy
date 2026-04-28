@@ -18,7 +18,7 @@ define config.log = "debug_log.txt"
 
 ## YYYY.MM.DD - IMPORTANT for version format
 
-define config.name = _("Growth Academy (2026.04.02)")
+define config.name = _("Growth Academy (2026.04.27)")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -29,7 +29,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "2026.04.02"
+define config.version = "2026.04.27"
 
 
 ## Text that is placed on the game's about screen. Place the text between the

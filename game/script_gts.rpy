@@ -1640,14 +1640,14 @@ label GTS010_after:
         MC "Th-thank you. Uh... okay."
         "Something I have to call instinct took over as I clutched the sleeves and twisted them over each other. There was a soft heat on the backs of my hands."
         "Just to be sure I tied a sturdy, secure knot, I lowered myself down until my eyes were just above the gap beneath her shirt. I was on one knee."
-        #show cg GTS010 with dissolve
+        show cg GTS010 with dissolve
         "I heard the distant sound of fabric creaking as I made a loop with one sleeve. A jolt wringed my spine as I began to wrap the other around it, only to become suddenly aware that my knuckle might brush against her."
         GTS "Thank you for this, Hotsure-san. Should the rain not let up, I shall be sure to return it to you by the end of last hour."
         "Hearing her was all I needed. With one more breath, I tightened the knot and let it fall."
         MC "Sure thing, Yamazaki-san. Whatever you wanna do."
         "With the feeling of walking back through a gate I could not see, I stood."
         show GTS embarrassed 
-        #hide cg with dissolve
+        hide cg with dissolve
         MC "There. Does that feel okay? Not too tight or too loose?"
         GTS "I believe this shall serve nicely. Thank you."
         MC "You're welcome." 
