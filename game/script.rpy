@@ -137,7 +137,7 @@ init python:
     datelibrary = {}
     showQuickMenu = False
     charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM', 'WGB']
-    girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
+    girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'WGB']
     lockroutelist = ['FMG030', 'AE020', 'PRG026', 'GTS026', 'WG027', 'WG027A', 'BE030']
     locationlist = {
         #name of place: (map used, x/y pixel position)
@@ -1213,7 +1213,7 @@ init python:
 label start:
     python:
         #Global Variables
-        affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'WG': 0, 'PRG': 0, 'RM': 0, 'TM': 0}
+        affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'WG': 0, 'PRG': 0, 'RM': 0, 'TM': 0, 'WGB': 0}
         prefgirl = ""
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
@@ -1279,7 +1279,7 @@ label start:
             routeprogress[g] = g + "001"
         highlitevent = ""
         hightlitmenuchoice = -1
-        routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'WG': True, 'PRG': True}
+        routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'WG': True, 'PRG': True, 'WGB': False}
         routelock = ""
         eCounter = 0
         spmax = 0
