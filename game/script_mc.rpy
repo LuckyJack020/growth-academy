@@ -7513,211 +7513,30 @@ label MC010:
         MC "Hang on..."
         Tomoko "What?"
         MC "Is that-"
-    if routelock == "AE":
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_AE_RMUnlocked
-        else:
-            jump MC010Menu_AE
-    elif routelock == "PRG":
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_PRG_RMUnlocked
-        else:
-            jump MC010Menu_PRG
-    elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_WG_RMUnlocked
-        else:
-            jump MC010Menu_WG
-    elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_FMG_RMUnlocked
-        else:
-            jump MC010Menu_FMG
-    elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_GTS_RMUnlocked
-        else:
-            jump MC010Menu_GTS
-    elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_BE_RMUnlocked
-        else:
-            jump MC010Menu_BE
-    else:
-        if getFlag("MC010RM_VariantUnlocked"):
-            jump MC010Menu_Alone_RMUnlocked
-        else:
-            jump MC010Menu_Alone
+    jump MC010Menu
 
 
-label MC010Menu_AE_RMUnlocked:
+label MC010Menu:
     menu:
-        "Follow Honoka":
+        "Follow Honoka"if not getHighestAffection() == ("BE") and not isEventCleared("BE025"):
             $setFlag("MC010BE_Friend")
             jump MC010_BE_Friend
-        "Look for Shiori":
+        "Look for Shiori"if routelock == "AE":
             $setFlag("MC010AE")
             jump MC010_AE
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        "Go back to the academy with Tomo":
-            $setFlag("MC010RM")
-            jump MC010_RM
-
-label MC010Menu_AE:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for Shiori":
-            $setFlag("MC010AE")
-            jump MC010_AE
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        
-label MC010Menu_PRG_RMUnlocked:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for a gift for Aida":
+        "Look for a gift for Aida"if routelock == "PRG":
             $setFlag("MC010PRG")
             jump MC010_PRG
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        "Go back to the academy with Tomo":
-            $setFlag("MC010RM")
-            jump MC010_RM
-
-label MC010Menu_PRG:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for a gift for Aida":
-            $setFlag("MC010PRG")
-            jump MC010_PRG
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        
-label MC010Menu_WG_RMUnlocked:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for Alice":
+        "Look for Alice"if getHighestAffection() == ("WG") and isEventCleared("WG025"):
             $setFlag("MC010WG")
             jump MC010_WG
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        "Go back to the academy with Tomo":
-            $setFlag("MC010RM")
-            jump MC010_RM       
-
-label MC010Menu_WG:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for Alice":
-            $setFlag("MC010WG")
-            jump MC010_WG
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-
-label MC010Menu_FMG_RMUnlocked:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Wait for Akira":
+        "Wait for Akira"if getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
             $setFlag("MC010FMG")
             jump MC010_FMG
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        "Go back to the academy with Tomo":
-            $setFlag("MC010RM")
-            jump MC010_RM
-
-label MC010Menu_FMG:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Wait for Akira":
-            $setFlag("MC010FMG")
-            jump MC010_FMG
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-
-label MC010Menu_GTS_RMUnlocked:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for Naomi":
+        "Look for Naomi"if routelock == "GTS":
             $setFlag("MC010GTS")
             jump MC010_GTS
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        "Go back to the academy with Tomo":
-            $setFlag("MC010RM")
-            jump MC010_RM
-
-label MC010Menu_GTS:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Look for Naomi":
-            $setFlag("MC010GTS")
-            jump MC010_GTS
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-
-label MC010Menu_BE_RMUnlocked:
-    menu:
-        "Wait for Honoka":
+        "Wait for Honoka"if getHighestAffection() == ("BE") and isEventCleared("BE025"):
             $setFlag("MC010BE")
             jump MC010_BE
         "Hang out with Tomo":
@@ -7726,48 +7545,9 @@ label MC010Menu_BE_RMUnlocked:
         "Go alone":
             $setFlag("MC010MC")
             jump MC010_MC
-        "Go back to the academy with Tomo":
+        "Go back to the academy with Tomo"if getFlag("MC010RM_VariantUnlocked"):
             $setFlag("MC010RM")
             jump MC010_RM
-
-label MC010Menu_BE:
-    menu:
-        "Wait for Honoka":
-            $setFlag("MC010BE")
-            jump MC010_BE
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-
-label MC010Menu_Alone_RMUnlocked:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
-        "Go back to the academy with Tomo":
-            $setFlag("MC010RM")
-            jump MC010_RM
-
-label MC010Menu_Alone:
-    menu:
-        "Follow Honoka":
-            $setFlag("MC010BE_Friend")
-            jump MC010_BE_Friend
-        "Hang out with Tomo":
-            $setFlag("MC010TM")
-            jump MC010_TM 
-        "Go alone":
-            $setFlag("MC010MC")
-            jump MC010_MC
 
 label MC010_AE:
     "I stood as I put my hand on my hip, exhaling through my nose as I looked down at the town. I'm not entirely sure exactly what happened but... her clamming up usually means that she didn't exactly have the best time."
@@ -26616,7 +26396,7 @@ label RM007:
     MC "Sure, sure. I believe you."
     show RM distrustful
     RM "{i}Tsh!{/i} Shut up."
-    if getFlag("MC010_RM"):
+    if getFlag("MC010RM"):
         "Whatever importance that device might have had for him to risk sneaking into my sister's room, most assuredly it was still in Yuki's hands, as I suspected he would have made a big deal of it had he managed to get it back." 
         "Clearly it was a bit of a sore spot for him still, but given what he put my sister through, I didn't mind rubbing salt into that particular wound. But at the risk of him not opening up with more, I decided to move on from the issue for now."
     else:
@@ -27005,7 +26785,7 @@ label RM007:
             RM "...I'll consider it. Arcades aren't really my thing though."
             MCT "Color me surprised the strangest guy I know isn't into normal guy stuff. {w}Oh well, at least I tried."
         elif routelock == "GTS" or getHighestAffection() == ("GTS"):
-            if isEventCleared("RM006_CompletedGTS030") or isEventCleared("RM007_CompletedGTS030"):
+            if getFlag("RM006_CompletedGTS030") or getFlag("RM007_CompletedGTS030"):
                 MC "That and I've already made plans with... Well, I've already made some plans."
                 show RM neutral
                 "Daichi stared at me rather oddly waiting for me to finish that thought..."
@@ -27125,14 +26905,14 @@ label RM007_mainmenu:
             show RM neutral-2
             MC "I'm interested, but I'd need to know some more details."
             show RM happy
-            $setAffection(RM, 1)
+            $setAffection("RM", 1)
             RM "Of course. Ask away."
             jump RM007gig_menu
 
         "I've changed my mind, let's focus only on the main task.":
             show RM angry
             MC "On second thought, I've changed my mind, let's focus only on the main task."
-            $setAffection(RM, -1)
+            $setAffection("RM", -1)
             show RM distrustful
             RM "Hmph, well I guess that's fair."
             jump RM007_Epilogue
@@ -27273,7 +27053,7 @@ label RM007_Epilogue:
     RM "Well, that covers everything I had for this meeting."
     RM "Let's try to pick this back up in the next few days like we discussed."
     RM "We'll go together to the hotel in Seichou Town."
-    if getFlag("RMG001_Unlock") and ("RMG002_Unlock"):
+    if getFlag("RMG001_Unlock") and getFlag("RMG002_Unlock"):
         show RM happy
         RM "Let me know where that bus line leads and if you have an opening some afternoon to go down to the shop." 
         MC "Sounds good. Will do."

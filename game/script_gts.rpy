@@ -4790,6 +4790,7 @@ label GTS025_c1_2:
     jump daymenu
 
 label GTS026:
+    $lockRoute("GTS")
     $setFlag("MC010_Unlock")
     $setProgress("GTS", "GTS027")
     $setMCOutfit(OutfitEnum.UNDERWEAR)
@@ -5213,6 +5214,7 @@ label GTS026_c4:
     jump daymenu
 
 label GTS027:
+    $lockRoute("GTS")
     if getFlag("GTS015_movie"):
         $setProgress("GTS", "GTS028T")
     elif getFlag("GTS015_shopping"):
@@ -5353,6 +5355,7 @@ label GTS027_c1_2:
     jump daymenu
 
 label GTS028S:
+    $lockRoute("GTS")
     $setProgress("GTS", "GTS029")
     $setMCOutfit(OutfitEnum.CASUAL2)
     scene Town with fade
@@ -6019,6 +6022,7 @@ label GTS028S_c3a:
     jump daymenu
 
 label GTS028T:
+    $lockRoute("GTS")
     $setProgress("GTS", "GTS029")
     $setMCOutfit(OutfitEnum.CASUAL2)
     scene Movie Theater with fade
@@ -6181,6 +6185,7 @@ label GTS028T_c1_after:
     jump daymenu
 
 label GTS029:
+    $lockRoute("GTS")
     $setTimeFlag("size3exp")
     $setProgress("GTS", "GTS030")
     scene Cafeteria with fade
@@ -6290,6 +6295,7 @@ label GTS029_c1_3:
     jump daymenu
 
 label GTS030:
+    $lockRoute("GTS")
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("GTS", "GTS031")
@@ -6434,6 +6440,7 @@ label GTS030_c2_2:
     jump daymenu
 
 label GTS031:
+    $lockRoute("GTS")
     scene Giant Dorm Exterior with fade
     $setProgress("GTS", "GTS032")
     play music GTS
@@ -6586,6 +6593,7 @@ label GTS031_c1_2:
     jump daymenu
 
 label GTS032:
+    $lockRoute("GTS")
     $setProgress("GTS", "GTS034")
     scene Dorm Interior with fade
     play music Busy
@@ -6845,6 +6853,7 @@ label GTS032_after:
     jump daymenu
 
 label GTS034:
+    $lockRoute("GTS")
     $setTime(TimeEnum.EVE)
     $setProgress("GTS", "GTS035")
     $setGTSOutfit(OutfitEnum.CASUAL)
