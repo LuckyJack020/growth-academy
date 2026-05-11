@@ -6939,7 +6939,7 @@ label MC009:
         "..."
         MCT "And... there's an emoji blowing a kiss."
         "Shaking my head, I smiled and continued down the hallway toward the cafeteria."
-    elif getHighestAffection() == "AE" and isEventCleared("AE022"):
+    elif routelock == "AE" and isEventCleared("AE022"):
         "I brought my eyes around the hall, scanning like a sonar on a submarine."
         MCT "Alright... no Minori and no Yuki. Perfect."
         MCT "I guess, in a weird-ass way, that thing with Daichi actually worked, and Shiori kept her promise."
@@ -12933,14 +12933,14 @@ label MC011:
     "Fat Student" "Oh that's {i}real{/i} funny. You think I wanted this? On second thought, I'll be feeling pretty jolly once I knock your sorry ass out."
     "Muscle Student" "You think I'm supposed to feel sorry for you just because you got the shit end of the stick? I've been itching to try these babies out, I'll wreck you in a heartbeat porkchop."
     "Fat Student" "You're all talk, I'll lay you out right here, {i}right now{/i}!"
-    if not isEventCleared("AE029"):
+    if getFlag("Meet_Tako"):
         show Tako excited with dissolve
-        Student "FIGHT!"
+        Tako "FIGHT!"
         show Tako happy
         extend " {i}We got a fiiiight{/i}!"
     else:
         show Tako excited with dissolve
-        Tako "FIGHT!"
+        Student "FIGHT!"
         show Tako happy
         extend " {i}We got a fiiiight{/i}!"
     "Crowd" "{i}Fight! {w}Fight! {w}Fight!{/i}"
@@ -13246,7 +13246,7 @@ label MC012:
     show PRG surprised
     FMG "THE GAME MASTER!"
     show PRG neutral
-    if routelock == "GTS" or isEventCleared("GTS032"):
+    if routelock == "GTS":
         MC "Yamazaki-san?"
         "Surprised, I turned to Honoka, who held up her phone. I looked to her and smiled as she nodded back; we were both on the same page, it seemed."
     else:
@@ -20086,6 +20086,8 @@ label MC027:
         hide PRG with dissolve
         hide Kanami with dissolve
         "I put the lid back on top of our pumpkin, and picked it up, turning... almost right into Fumika Usui."
+        if not getFlag("Meet_Fumika"):
+            $setFlag("Meet_Fumika")
         MC "Oh! Excuse me!"
         Fumika "It's alright."
         "She shifted sideways, letting me pass by and set my pumpkin down near the others."
@@ -20693,6 +20695,8 @@ label MC027:
         "I followed suit and started cleaning ours, as Tomo leaned on the counter beside me."
         "Behind me, somewhere, I could hear the slight sound of... a smacking? Like, a gentle push of skin on skin."
         Fumika "Hey. Can we talk for a second?"
+        if not getFlag("Meet_Fumika"):
+            $setFlag("Meet_Fumika")
         "I turned around to see Fumika Usui standing right by my sister, as Tomo nodded and walked across the room with Fumika."
         hide Tomoko with dissolve
         "I glanced back over at Aida at her sink, who also seemed to be watching."
@@ -21600,19 +21604,23 @@ label MC042:
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of the Keisuke-centric scenes.{/outlinecolor}{/size}"
     if routelock == "FMG" or routelock == "WG":
-        if isEventCleared("MC001") and isEventCleared("MC002") and isEventCleared("MC003") and isEventCleared("MC004") and isEventCleared("MC005") and isEventCleared("MC006") and isEventCleared("MC008") and isEventCleared("MC009") and isEventCleared("MC010") and isEventCleared("MC011") and isEventCleared("MC012") and isEventCleared("MC013") and isEventCleared("MC014") and isEventCleared("MC021") and isEventCleared("MC023") and isEventCleared("MC024") and isEventCleared("MC032") and isEventCleared("MC033") and isEventCleared("MC041"):
-            centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 19 optional Keisuke's stories.{/outlinecolor}{/size}"
+        if isEventCleared("MC001") and isEventCleared("MC002") and isEventCleared("MC003") and isEventCleared("MC004") and isEventCleared("MC005") and isEventCleared("MC006") and isEventCleared("MC008") and isEventCleared("MC009") and isEventCleared("MC010") and isEventCleared("MC011") and isEventCleared("MC012") and isEventCleared("MC012B") and isEventCleared("MC013") and isEventCleared("MC014") and isEventCleared("MC021") and isEventCleared("MC023") and isEventCleared("MC024") and isEventCleared("MC027") and isEventCleared("MC032") and isEventCleared("MC033") and isEventCleared("MC041"):
+            centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 21 optional Keisuke's stories.{/outlinecolor}{/size}"
         else:
-            centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 19 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
+            centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 21 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
     else:
-        if isEventCleared("MC001") and isEventCleared("MC002") and isEventCleared("MC003") and isEventCleared("MC004") and isEventCleared("MC005") and isEventCleared("MC006")  and isEventCleared("MC007") and isEventCleared("MC008") and isEventCleared("MC009") and isEventCleared("MC010") and isEventCleared("MC011") and isEventCleared("MC012") and isEventCleared("MC013") and isEventCleared("MC014") and isEventCleared("MC021") and isEventCleared("MC023") and isEventCleared("MC024") and isEventCleared("MC032") and isEventCleared("MC033") and isEventCleared("MC041"):
-            centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 20 optional Keisuke's stories.{/outlinecolor}{/size}"
+        if isEventCleared("MC001") and isEventCleared("MC002") and isEventCleared("MC003") and isEventCleared("MC004") and isEventCleared("MC005") and isEventCleared("MC006")  and isEventCleared("MC007") and isEventCleared("MC008") and isEventCleared("MC009") and isEventCleared("MC010") and isEventCleared("MC011") and isEventCleared("MC012") and isEventCleared("MC012B") and isEventCleared("MC013") and isEventCleared("MC014") and isEventCleared("MC021") and isEventCleared("MC023") and isEventCleared("MC024") and isEventCleared("MC027") and isEventCleared("MC032") and isEventCleared("MC033") and isEventCleared("MC041"):
+            centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 22 optional Keisuke's stories.{/outlinecolor}{/size}"
         else:
-            centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 20 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
+            centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 22 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
     if isEventCleared("RM007"):
         centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 7 core scenes from Daichi's side route.{/outlinecolor}{/size}"
     else:
-        centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 6 core scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 7 core scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
+    if isEventCleared("RMG001") and isEventCleared("RMG002"):
+        centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 2 optional gig scenes from Daichi's side route.{/outlinecolor}{/size}"
+    else:
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 2 optional gig scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
     centered "{size=+3}{outlinecolor=#00ff00}More are planned for a later release. Until then, feel free to explore the main routes.{/outlinecolor}{/size}"
     jump daymenu
 
