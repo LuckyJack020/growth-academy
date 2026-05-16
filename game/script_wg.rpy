@@ -36879,6 +36879,7 @@ label WGB006:
     jump daymenu
 
 label WGB007:
+    $lockRoute("WGB")
     $setProgress("WGB", "WGB008")
     scene Hallway2 with fade
     play music HigherEdu

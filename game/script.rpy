@@ -138,7 +138,7 @@ init python:
     showQuickMenu = False
     charlist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'MC', 'RM', 'TM', 'WGB']
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG', 'WGB']
-    lockroutelist = ['FMG030', 'AE020', 'PRG026', 'GTS026', 'WG027', 'WG027A', 'BE030']
+    lockroutelist = ['FMG030', 'AE020', 'PRG026', 'GTS026', 'WG027', 'WG027A', 'BE030', 'WGB007']
     locationlist = {
         #name of place: (map used, x/y pixel position)
         'arcade': ("town", (500,700)),
