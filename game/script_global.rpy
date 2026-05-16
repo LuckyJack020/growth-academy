@@ -1237,6 +1237,7 @@ define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
 define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"
 define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"
 define audio.TwilightDusk = "Audio/BGM/twilightDusk.ogg"
+define audio.Village = "audio/BGM/scene_village.ogg" #Village Theme
 define audio.WhatLiesWithin = "Audio/BGM/WhatLiesWithin.ogg"
 define audio.WhatLiesWithinDrums = "Audio/BGM/WhatLiesWithinDrums.ogg"
 define audio.WhatLiesWithinDrumChords = "Audio/BGM/WhatLiesWithinDrumChords.ogg"

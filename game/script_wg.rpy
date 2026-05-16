@@ -29850,7 +29850,7 @@ label WG091:
     "Though somewhat bewildered by her logic, I knew I was in no position to argue."
     MCT "Something tells me this is going to be good."
     scene Ryokan Exterior with fade
-    play music Festival
+    play music Village
     MC "Ohh, this place. What's it called again?"
     show WG neutral with dissolve
     WG "Satoyama village. It's a quaint little town at the foot of the mountains not far from the Academy."
@@ -30283,7 +30283,7 @@ label WG092:
     $setProgress("WG", "WG093")
     $setWGOutfit(OutfitEnum.DRESS)
     $setTime(TimeEnum.EVE)
-    play music Sunset
+    play music Village
     scene Ryokan Room with fade
     WG "Think you could give me a hand back there?"
     MC "No problem. Alright, let's get you all zipped up here. {w}There we go. I think you're ready."

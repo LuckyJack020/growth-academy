@@ -3431,6 +3431,8 @@ label GTS022_invite:
     scene Office
     show AE neutral
     with fade
+    if not getFlag("VisitedAEOffice"):
+        $setFlag("VisitedAEOffice")
     "Behind Matsumoto-san atop her desk were two perfectly level, perfectly square and, to me, frightfully tall stacks of documents. She stood facing me with the tip of a pen peeking out from between her fingers."
     AE "Good morning Hotsure-san. Do you need help finding something?"
     MC "No, not quite. Yamazaki-san and I were going to sit down tomorrow and compose a renga poem together, and we were wondering if you might be interested in joining as the scribe."
@@ -7363,7 +7365,7 @@ label GTS035_testpass:
 
     scene Ryokan Room with fade
     stop music fadeout 1.0
-    play music GTS
+    play music Village
     "As we approached the inn for dinner, it dawned on me that we hadn't considered Naomi's size at all."
     MC "If I may suggest, can dinner be held on the back porch? The weather is quite nice tonight, and it may be beneficial so that everyone can be included in tonight's meal."
     show Akihiro neutral with dissolve
@@ -16089,6 +16091,8 @@ label GTS058_kama:
         MCT "I gotta stop tagging along with Daichi."
     MC "Anyway, I'm Keisuke Hotsure. Pleasure to meet you."
     Gou "Gou Kajiwara. It {i}is{/i} a pleasure to meet me, ain't it?"
+    if not getFlag("Meet_Gou"):
+        $setFlag("Meet_Gou")
     Hina "...You can call me Gama."
     Gou "Why you keep telling people that? That's not your name. Shit's degrading."
     "I noted a change in the air between them as she took a moment to answer."
@@ -16509,38 +16513,183 @@ label GTS058_final:
         show GTS neutral at Position(ycenter=0.55)
         with dissolve
         "She opened her hand and I promptly obeyed, twisting just enough to break the metal caps."
-        #high selfhood variant here later
-        "She thanked me and retrieved cups for us both as I held onto the bottles."
-        MC "These... look expensive."
-        GTS "Fortunately, there is an old family friend I was able to call upon."
-        GTS "One cannot, after all, serve middling amazake at the many temples dotting his highness' very city."
-        MC "His highness' {i}former{/i} city."
-        show GTS wink
-        GTS "Do you want a drink or do you not?"
-        MC "I do, I do. May I?"
-        "She proffered the cups and I poured, 1.75 bottles for milady, and the rest for yours truly."
-        "I followed her again to the couch to drink, in slow, plodding steps, enwreathed like incense in sweetness, creaminess, and earthen umami."
-        MC "Mm... this does take me back."
-        show GTS happy
-        GTS "Does it not? It is as though it were only a moment ago... the warmth on your fingers, the snow on your ears, that crisp jingle of the bells..."
-        "For no particular reason, I laughed."
-        MC "Persistent for such a simple thing, isn't it?"
-        GTS "Quite so, quite so."
-        show GTS unique-2
-        "We took the first sip together- I could taste the decades, centuries maybe, imbued in the sweet cream as its understated aroma filled my mouth."
-        GTS "Hmmmm..."
-        MC "Ah..."
-        "No words were needed as we slowly drained our cups."
-        show GTS neutral-2 at Position(ycenter=0.35)
-        "Once she set our cups down on the table, she lay down behind me with her head resting on her folded arms. Her eyes beckoned me."
-        "She kissed my body when I got close, which I returned upon her vast, porcelain cheek. Once, twice, many times."
-        "At last, I paused."
-        MC "If you'll indulge me one more thing, Blossom..."
-        GTS "Yes?"
-        MC "...What's the occasion?"
-        "She lay smiling, perhaps just to herself, for a moment or two before she saw fit to answer."
-        GTS "A changing of seasons."
-        jump daymenu
+        if getVar("GTS_selfhood") > 4:
+            GTS "Thank you, my love."
+            hide GTS
+            show GTS_S unique-2
+            with dissolve
+            "She stood this time with the languor of a sunning cat, stretching higher and higher into the air, her arms taut, her chin up, her chest thrust out and bulging."
+            show GTS_S neutral
+            GTS "Ahh..."
+            "When her hands went slack, they met again at the front of her collar. She began undoing the buttons, one by one, in no hurry at all."
+            "I felt the bottles in my hands less and less as I listened to every {i}pop{/i}. Her pale skin surged by centimeters with each one as her constraints thinned."
+            "And then she was done, and she discarded her shirt off to her side; it landed with a {i}whumph{/i} that jostled my hair as I stood with parted lips."
+            "I stepped closer, by God, I could feel my blood pulsing."
+            "Her stretchy brassiere followed closely. She shook her hair straight again, setting her enormous teats a-swaying, and at last those amber eyes met mine.{w} She snickered."
+            show GTS_S aroused
+            GTS "I see that we are of one mind in this moment, my love."
+            GTS "That makes me very glad."
+            MC "You are... very persuasive."
+            "Another bright laugh."
+            "She turned and I was uncovered from her shadow. Slow, drumbeat tremors shot up my legs as she walked away- all the usual daintiness was discarded, too."
+            hide GTS_S with dissolve
+            $setGTSOutfit(OutfitEnum.NUDE)
+            GTS "Dispense with your clothing and bring the amazake, would you?"
+            MC "Y-Yes, yes!"
+            $setMCOutfit(OutfitEnum.NUDE)
+            "I obeyed promptly and marched past the fallen shirt and bra, just in time to see her undone skirt fluttering to the bedroom floor."
+            "In my muscles, taut with anticipation, my ravenous eagerness grappled with reverence."
+            show GTS aroused
+            "To see Naomi's towering form seated there, leaning, watching, amused, it was like treading the inner sanctum of a temple."
+            "At the edge of the bed, she outstretched her hand to take the bottles... being so near to the grip of her huge, delicate hand... to think of it closing around me..."
+            "And then it did."
+            "The heat, the pressure, my chest, my ass. God, my legs were weak, my cock throbbed so hard."
+            "When Naomi knelt me down before her I met her eyes again. She grinned ear to ear, drinking in the power. It suited her. Another aching surge made me swell with lust."
+            MC "May I touch you?"
+            show GTS unique-2
+            "Her smile shifted to one of amusement."
+            GTS "By all means."
+            "Hobbling forward on my knees, I straddled one of hers and massaged the pliant baby fat of her endless thigh."
+            "Enwreathed in the savory aroma of roast beef, my heart fluttered- she wanted me as much as I wanted her."
+            MC "I- I love you."
+            show GTS wink            	
+            GTS "As well you should."
+            GTS "Now, I believe you'll agree that a lady ought to be served first."
+            MC "Yeah..."
+            show GTS aroused
+            "She threw her head back and guzzled the bottle down."
+            "Barely a thimblefull to hear, she nevertheless swished it around with appreciation."
+            GTS "Scrumptious~"
+            "The empty she relegated to the bedside table before taking up the second bottle, too. Who was I too resist?"
+            "She poured the latter down her throat at a more contented pace; I was transfixed by its pulsing as she swallowed."
+            "She looked at me again after draining some two-thirds."
+            show GTS happy
+            GTS "And now for your portion, Keisuke-bō."
+            "She leaned back, hovered the bottle over her stomach, tipped it down. It trickled down, down, like a babbling brook, the sweet, cloudy amazake."
+            "It pooled just a second in the dip of her navel, and kep trickling down, down... down..."
+            "The sheets rippled like an ocean as she lay on her back, letting out a contented sigh. Her bent legs spread to either side of me until there was but one path forward."
+            "I couldn't suppress a soft but delirious chuckle."
+            pause 1.0
+            "My instructions clear, I shuffled forward."
+            show GTS unique-2
+            GTS "Oh, Keisuke~..."
+            pause 1.0
+            "I clapped my hands together."
+            MC "Itadakimasu."
+            show GTS happy
+            "The air rippled like a rock plunging into a pond as she guffawed."
+            GTS "Oh heavens, but you are too much!"
+            "Her laughter infected me; nevertheless, I swept my hair back, as much as I could, crept closer on buzzing limbs, and nestled my face up against her humid lips."
+            "I rubbed lightly, adoringly. Pleased at the proffer, she opened up a little wider. I was awash in a savory incense."
+            show GTS unique
+            "I dipped my face in once to get myself slick, kneaded my hair back as best I could, and began to worship."
+            GTS "Mmmm..."
+            "The music of Naomi's gratified growl resonated in my skull, in my guts, in my swollen undercarriage."
+            "Lapping up and down, her flesh swallowed me. I held on through the tremors shooting through her powerful mass."
+            GTS "Your arm!"
+            "At once I drilled my forearm into the gushing depths of her. Her walls responded by swelling, constricting. I was pinned."
+            GTS "Agh, yesss, oh, my gallant little knight, you please me so {i}well!{/i}..."
+            MCT "Just you wait..."
+            "I took her angry-pink rosebud in my mouth and sucked like candy."
+            show GTS aroused
+            GTS "{size=36}{i}MMMMNNGH! Stay there, yes, there!{/i}{/size}"  
+            "Rocking and bouncing against her plush lips, the heat, the sweat, the umami, the sweetness, my world was a vortex of swirling colors."
+            "I moaned as her swelling clit filled more and more of my mouth. The waters cascaded down my lap, her hips bucked to her own beat."
+            "Naomi's ravenous exhortations to the heavens grew more and more ragged as I, slick head to toe, began to sink into her. Hot, throbbing flesh pressed into my {i}aching{/i} boner, stroked it in its mad dance."
+            show GTS surprised
+            "Her girthquakes were getting stronger. I threw up an arm to hang on, oh God. I kept sucking despite the explosive pressure welling at the tip of my cock."
+            "Her pussy shut like a clamshell around me, my arm was going to snap as her legs seized up. It spread to every vast inch of her."
+            GTS "{size=36}{i}Gh-{/i}{/size}"
+            "{i}Foomph{/i}"
+            "When my sight returned, I was drenched and chilly, staring at the ceiling. I leapt to my knees and shambled up to her, both of us panting. I ran a hand down her inner thigh."
+            MC "Hah... how was-"
+            GTS "{size=36}Keep going.{/i}"
+            "Jolting, I grunted and scrambled back into place."
+            show GTS aroused
+            "My lips touched hers. Her breath caught, dripped into a low moan."
+            "One huge, shaky fingertip caressed my back. I shook, too. Greedily she drank in my devotion."
+            "As she began to swell and tighten once more, her titan finger pressed harder, cramming me in. Barely breathing, my neck pounding."
+            GTS "Good boy... {i}Mm!{/i}..."
+            "The last wall fell. Pulsing, convulsing, my own hot cum shot up my chest, splatted under my chin."
+            MC "{i}Ffffffuck{/i}, oh Jesus, oh, Nacchan..."
+            show GTS surprised
+            GTS "Are you alright, Keisuke-kun?..."
+            "I said something in answer and kept servicing her."
+            show GTS unique
+            GTS "Oh!"
+            GTS "Behold... hm! Behold a warrior's spirit! God!"
+            "Despite my limbs feeling like cut telephone wires, I stayed the course, determined that my body would not give way until Naomi willed it."
+            "Luckily for both of us, she climaxed even faster on the second go, and the third came not long after, though I felt her aftershocks waning."
+            "As I tried to lick and suck her to her fourth, I felt a gentle but weighty tap on my back."
+            show GTS aroused
+            GTS "I do believe I'm satisfied, my love. Rest a moment if it pleases you."
+            "Gravity pulled me off her and I bounced onto my back."
+            MC "{size=-6}Jesus Christ.{/size}"
+            "She sighed softly as she lifted one limp hand up to the light."
+            GTS "One moment, and I shall tend to you, Keisuke-kun."
+            MC "Oh, I'm... I'm good."
+            MC "I think I'm tapped out."
+            MC "I nutted so hard, Blossom. Feel like I'm on Mars."
+            show GTS neutral
+            GTS "That's good. Very good."
+            show GTS happy
+            "Her belly trembled with soft laughter."
+            GTS "Heavens above, three times. I can scarce finish twice on my own."
+            GTS "I have half a mind to carry you around in my breast pocket, so you're available on demand."
+            MC "I mean, I basically already am."
+            GTS "Hmhm, yes, one supposes so."
+            MC "Although I might like to negotiate for being carried around in your bra instead."
+            show GTS unique
+            GTS "Perhaps, if you'll be good."
+            show GTS happy
+            GTS "How was the amazake, my love?"
+            MC "Utterly divine."
+            GTS "Mm... normally, I'm not much for sweets, but I do declare the Minakami label is exceptional."
+            "Then, I felt her fingers gently probing around my legs. Upon touching me, she slipped her hand under my back to bring me to her belly, and there I lay."
+            MC "I love you, Nacchan."
+            show GTS neutral
+            GTS "I love you too, Keisuke-kun."
+            "As I rubbed the back of my arm across the pale sea of her damp skin, the fog in my head began to clear."
+            MC "If you don't mind my asking, what's the occasion?"
+            GTS "Well, I was terribly pleased that you came to the picnic and got to know my neighbors."
+            "She laid one hand over me and thrummed a finger on my chest."
+            GTS "Thus, I thought some afternoon tea drinking was in order."
+            MC "Ah... and the two bottles of heirloom amazake? I don't think they sell those at the conbini."
+            "She stroked my chest in thought."
+            GTS "One might call it...{w} a changing of seasons."
+            jump daymenu
+        else:
+            "She thanked me and retrieved cups for us both as I held onto the bottles."
+            MC "These... look expensive."
+            GTS "Fortunately, there is an old family friend I was able to call upon."
+            GTS "One cannot, after all, serve middling amazake at the many temples dotting his highness' very city."
+            MC "His highness' {i}former{/i} city."
+            show GTS wink
+            GTS "Do you want a drink or do you not?"
+            MC "I do, I do. May I?"
+            "She proffered the cups and I poured, 1.75 bottles for milady, and the rest for yours truly."
+            "I followed her again to the couch to drink, in slow, plodding steps, enwreathed like incense in sweetness, creaminess, and earthen umami."
+            MC "Mm... this does take me back."
+            show GTS happy
+            GTS "Does it not? It is as though it were only a moment ago... the warmth on your fingers, the snow on your ears, that crisp jingle of the bells..."
+            "For no particular reason, I laughed."
+            MC "Persistent for such a simple thing, isn't it?"
+            GTS "Quite so, quite so."
+            show GTS unique-2
+            "We took the first sip together- I could taste the decades, centuries maybe, imbued in the sweet cream as its understated aroma filled my mouth."
+            GTS "Hmmmm..."
+            MC "Ah..."
+            "No words were needed as we slowly drained our cups."
+            show GTS neutral-2 at Position(ycenter=0.35)
+            "Once she set our cups down on the table, she lay down behind me with her head resting on her folded arms. Her eyes beckoned me."
+            "She kissed my body when I got close, which I returned upon her vast, porcelain cheek. Once, twice, many times."
+            "At last, I paused."
+            MC "If you'll indulge me one more thing, Blossom..."
+            GTS "Yes?"
+            MC "...What's the occasion?"
+            "She lay smiling, perhaps just to herself, for a moment or two before she saw fit to answer."
+            GTS "A changing of seasons."
+            jump daymenu
 
 label GTS059:
     $setProgress("GTS", "GTS060")

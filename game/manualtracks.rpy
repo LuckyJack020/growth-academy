@@ -754,6 +754,17 @@ init python:
     )
     ost.manualDefineList.append(theme_OsD)
 
+    theme_ViL = ost.soundtrack(
+        name = "The Heart of Satoyama",
+        path = "Audio/BGM/scene_village.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Village Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_ViL)
+
     ## Base Template
     ######################################
 
