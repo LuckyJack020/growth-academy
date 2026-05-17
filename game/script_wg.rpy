@@ -6824,7 +6824,7 @@ label WG032_WG_1:
     show WG stern
     WG "I'm afraid not. That's not how this kind of business operates. These clothes are custom proportions, they can't be placed back on the rack if the customer doesn't pay in full."
     show WG haughty
-    WG "I appreciate your enthusiasm to make a deal Keisuke, and as much as I'd would like to trust Akira to follow through with her financial obligations,"
+    WG "I appreciate your enthusiasm to make a deal Keisuke, and as much as I would like to trust Akira to follow through with her financial obligations,"
     WG "this would set a terrible precedent that could end up jeopardizing the profitability of the business."
     show FMG sad
     FMG "Well, thanks for trying, Keisuke."
@@ -7807,7 +7807,7 @@ label WG036:
     show WG neutral
     WG "Perhaps, but I don't consider such tepid and long-overdue praise to be particularly gracious on her part."
     MCT "Alright, well maybe it's still smoldering."
-    "Clearly Alice wasn't about to let the bad blood between the two of them subside so easily, but the fact she could discuss the matter in a calm, as opposed to fuming, demeanor confirmed my suspicious things were improving."
+    "Clearly Alice wasn't about to let the bad blood between the two of them subside so easily, but the fact she could discuss the matter in a calm, as opposed to fuming, demeanor confirmed my suspicions that things were improving."
     MC "One other thing."
     MC "Are you free Friday? I'd like to go out again."
     MC "Umm, with you— almost forgot to add that last part in."
@@ -8194,14 +8194,14 @@ label WG038_Part2:
     show WG happy
     WG "Charming. Now come with me, I assure you this will be more than those flashing loud \"games\" are."
 
-    if isEventCleared("FMG016"):
-        jump WG038_FMG016
-    elif isEventCleared("FMG009"):
-        jump WG038_FMG009
+    if isEventCleared("MC016"):
+        jump WG038_Chibuki_Know_Work
+    elif isEventCleared("FMG009") or getFlag("Meet_Chibuki"):
+        jump WG038_Chibuki_Know
     else:
-        jump WG038_FMG000
+        jump WG038_Chibuki_Dont_Know
 
-label WG038_FMG016:
+label WG038_Chibuki_Know_Work:
     "Alice had elected to visit the island's only maid café, where I was about to meet Chibuki again."
     "Avoiding this was suddenly my chief concern."
     MC "A maid café? Alice, are you sure?"
@@ -8327,7 +8327,7 @@ label WG038_FMG016:
             WG "Come on now, the next bus to Seichou should be here soon."
             jump daymenu
 
-label WG038_FMG009:
+label WG038_Chibuki_Know:
     "Alice had elected to visit a maid café, likely the only one on the island."
     MC "A maid café? Alice, are you sure?"
     WG "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
@@ -8432,7 +8432,7 @@ label WG038_FMG009:
     WG "Come on now, the next bus to Seichou should be here soon."
     jump daymenu
 
-label WG038_FMG000:
+label WG038_Chibuki_Dont_Know:
     "Alice had elected to stop at a maid café, likely the only one on the island."
     MC "A maid café? Alice, are you sure?"
     WG "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
@@ -9796,7 +9796,7 @@ label WG042_AfterFood:
     MC "You aren't wrong, but indulge me for the moment."
     show WG neutral
     WG "Well, you did wait on me earlier when I selected a game, I suppose it is only fair."
-    "I handed the booth worker my money for the game. I was handed three baseballs and I had to clear out an entire ten bottle pyramide in three shots."
+    "I handed the booth worker my money for the game. I was handed three baseballs and I had to clear out an entire ten bottle pyramid in three shots."
     "Luckily for me now, I wasted plenty of money as a kid on this game so that adult me knew how it worked."
     "You'd think to just hit the bottom ones so the pyramid collapses, but no. They put the heavy ones on the bottom so they won't get knocked over easily. You gotta hit the middle ones so everything falls on the bottom ones."
     "I wound up a slammer on the first pitch, wiping out five of them on the first go."
@@ -40414,7 +40414,7 @@ label WGFMG001:
     extend " Alright, you're right. That was a bit low, even for me."
     MC "I'll have you know, she's quite pleasant if you aren't actively trying to annoy her."
     FMG "Hmmm, I'll think about that."
-    MC "Maybe she does come off as snoody at times, but it's because she expects more from herself and others."
+    MC "Maybe she does come off as snooty at times, but it's because she expects more from herself and others."
     FMG "{size=-6}She should expect herself to eat more salads.{/size}"
     MC "My hair covers my eyes, it doesn't clog my ears, Mizutani-san."
     FMG "Sorry."
@@ -40729,7 +40729,7 @@ label WGFMG001:
     FMG "Sounds good to me. Later."
     stop music
     scene black with fade
-    "I would have counted anything short of tonight being a complete disaster and overwhelming success, but it actually turned out to be kind of fun, even for Alice too."
+    "I would have counted anything short of tonight being a complete disaster an overwhelming success, but it actually turned out to be kind of fun, even for Alice too."
     "Seems to me like they get along better than either would be willing to admit."
     jump daymenu
 
@@ -42742,7 +42742,7 @@ label WGGTS003:
     MC "Hello, Yamazaki-san. It's really nice out today. I was just passing through, but the courtyard garden is looking great. I'm sure you have had a lot to do with that."
     show GTS happy
     GTS "Thank you, Hotsure-san. It is a labor of love that I would do regardless, but it does make me happy to know others have noticed and enjoy the landscaping I've done."
-    MC "Trust me, I think everyone one here appreciates the effort you've been putting in to make this place look better."
+    MC "Trust me, I think everyone here appreciates the effort you've been putting in to make this place look better."
     MC "I'd stay and drink in the scenery a bit more, but I have a few more deliveries to make before it gets too late in the afternoon."
     show GTS neutral
     GTS "Deliveries? I gather that's what those boxes you are carrying are for then. If you don't mind me asking, what are you delivering?"

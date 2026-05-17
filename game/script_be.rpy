@@ -3832,7 +3832,7 @@ label BE023:
         show BE neutral
         BE "Um, hey, Sakie. What's up? Kei-chan, this is Sakie, she was in the basketball club with me."
         MC "Oh. I see. Good to meet you."
-    "I extended my hand out towards Sakie, but she rebuffed my attempt to introduce myself. Instead, she just walked up to Honoka and stopped when her large feet met the ends of Honoka's."
+        "I extended my hand out towards Sakie, but she rebuffed my attempt to introduce myself. Instead, she just walked up to Honoka and stopped when her large feet met the ends of Honoka's."
     show BE surprised
     BE "Sakie, is everything okay?"
     Sakie "No. You missed basketball practice again. That's the fifth one you've missed."

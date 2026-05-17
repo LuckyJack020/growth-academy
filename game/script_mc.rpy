@@ -15601,7 +15601,7 @@ label MC013_aftermenu:
         hide FMG with dissolve
     if routelock == "WG":
         show WG pondering with dissolve
-        "I looked sideways over at Alice, thinking about how excited I was for summer, which I hoped would prove more opportunities to  get to know her better... outside of work that is..."
+        "I looked sideways over at Alice, thinking about how excited I was for summer, which I hoped would provide more opportunities to get to know her better... outside of work that is..."
         MCT "Hmm, getting to spend all that time with her. All of it..."
     if routelock == "BE":
         show BE neutral with dissolve
