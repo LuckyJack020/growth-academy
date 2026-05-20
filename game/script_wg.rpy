@@ -42431,7 +42431,7 @@ label WGFMG005:
     show WG happy-2
     WG "I guess it hasn't been an entire loss."
     show WG worried
-    WG "It just gets frustrating, sometimes overwhelmingly so, it seems like every day I wake up to another outfit that won't fit, or another piece of furniture I knocked over, or something else I can't even reach anymore."
+    WG "It just gets frustrating, sometimes overwhelmingly so. It seems like every day I wake up to another outfit that won't fit, or another piece of furniture I knocked over, or something else I can't even reach anymore."
     show WG surprised-2
     FMG "I bet that does suck, but you know what would be even worse?"
     WG "What do you mean?"
