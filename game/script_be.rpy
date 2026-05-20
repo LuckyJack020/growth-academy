@@ -3821,18 +3821,11 @@ label BE023:
     BE "Oh!"
     "After turning around we saw the voice who called out to her. The voice belonged to a small girl with dark black hair down to her shoulders."
     "More notable were her sneakers, which looked far bigger than any I'd ever seen. One shoe could have fit both of my feet, and maybe both of Honoka's as well."
-    if isEventCleared("BE016"):
-        "Seeing her large feet helped me remember. This girl was in the basketball club back when Honoka was a member."
-        show BE neutral
-        BE "Um, hey, Sakie. What's up?"
-        MC "Oh, Sakie. Right. We met at one of Honoka's basketball practices, remember?"
-        "Sakie looked at me and my outstretched hand, but then simply sidestepped me to get closer to Honoka. It looked like she'd have gotten closer if she could have, but she stopped when Honoka's shoes met hers."
-    else:
-        "I looked over to Honoka to see if there was any expression of remembrance on her face. She sighed and glanced over at my direction, confirming yes, she did."
-        show BE neutral
-        BE "Um, hey, Sakie. What's up? Kei-chan, this is Sakie, she was in the basketball club with me."
-        MC "Oh. I see. Good to meet you."
-        "I extended my hand out towards Sakie, but she rebuffed my attempt to introduce myself. Instead, she just walked up to Honoka and stopped when her large feet met the ends of Honoka's."
+    "Seeing her large feet helped me remember. This girl was in the basketball club back when Honoka was a member."
+    show BE neutral
+    BE "Um, hey, Sakie. What's up?"
+    MC "Oh, Sakie. Right. We met at one of Honoka's basketball practices, remember?"
+    "Sakie looked at me and my outstretched hand, but then simply sidestepped me to get closer to Honoka. It looked like she'd have gotten closer if she could have, but she stopped when Honoka's shoes met hers."
     show BE surprised
     BE "Sakie, is everything okay?"
     Sakie "No. You missed basketball practice again. That's the fifth one you've missed."
