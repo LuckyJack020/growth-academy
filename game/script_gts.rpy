@@ -17051,6 +17051,7 @@ label GTS060:
     jump daymenu_noadvance
 
 label GTSFMG001:
+    setFlag("noFMGGTS001")
     scene Campus Center
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     show GTS neutral at Position(xcenter=0.75, yalign=1.0)

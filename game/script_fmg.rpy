@@ -24554,6 +24554,7 @@ label FMGD002:
     jump daymenu
 
 label FMGGTS001:
+    $setFlag("noGTSFMG001")
     scene Bakery
     show FMG neutral
     with fade

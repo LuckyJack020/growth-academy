@@ -15601,7 +15601,7 @@ label MC013_aftermenu:
         hide FMG with dissolve
     if routelock == "WG":
         show WG pondering with dissolve
-        "I looked sideways over at Alice, thinking about how excited I was for summer, which I hoped would prove more opportunities to  get to know her better... outside of work that is..."
+        "I looked sideways over at Alice, thinking about how excited I was for summer, which I hoped would provide more opportunities to get to know her better... outside of work that is..."
         MCT "Hmm, getting to spend all that time with her. All of it..."
     if routelock == "BE":
         show BE neutral with dissolve
@@ -17338,7 +17338,7 @@ label MC021:
                 MC "I just don't really see you taking much interest in making cogs or construction materials."
                 $setAffection("WG", 2)
                 show WG happy-2
-                WG "Quite an astute observation, Dear. Admitently, per my own taste, Father doesn't exactly operate in the most exciting of industries." 
+                WG "Quite an astute observation, Dear. Admittedly, per my own taste, Father doesn't exactly operate in the most exciting of industries." 
                 WG "But therein lies the genius of Father's business acumen. \"Find the boring work that everyone needs done but no one wants to do.\" That's how he recognizes a business opportunity."
                 MC "So the stuff nobody ever thinks about that they use all the time?"
                 show WG sly
@@ -17348,7 +17348,7 @@ label MC021:
                 WG "That's only the half of it. Even more of his wealth is wrapped up in his holding company that owns a few other companies outright and a minor to sizable stake in several businesses across the globe."
                 MC "So not just big business, but big {i}businesses{/i}, along with investments."
                 show WG happy
-                WG "Correct. As great as a businessman he is, he's arguably an even better investor. Most hedge funds wish they could reach the average returns of his portfolio. So when he makes a move, markets take notice."
+                WG "Correct. As great of a businessman he is, he's arguably an even better investor. Most hedge funds wish they could reach the average returns of his portfolio. So when he makes a move, markets take notice."
                 MC "I guess that explains why he's {i}super{/i} rich."
                 show WG haughty
                 WG "He's done alright for himself you could say. But it wasn't a matter of luck. I have no doubt if he lost it all tomorrow he'd be back to where he is today in less than ten years."
