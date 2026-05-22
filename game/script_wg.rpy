@@ -20982,16 +20982,16 @@ label WG070:
     "I followed him outside the ballroom into the empty hallway outside."
     "As he turned to face me, his expression returned to the cold, calculated face he had earlier."
     show Daitaro neutral at altMove(0.5, 0.5)
-    Daitaro "Alright, Mr. Hotsure-san. I'll cut to the chase. How do I know you're not some slick huckster who's only after her money— {i}my{/i} money."
+    Daitaro "Alright, Mr. Hotsure. I'll cut to the chase. How do I know you're not some slick huckster who's only after her money— {i}my{/i} money."
     MC "Umm, with no disrespect Sir... don't you think she'd see right through me if that were the case?"
     Daitaro "... {w}You do have a point..."
     "Mr. Nikumaru appeared to have been caught off guard by my lack of defensive reaction to his question."
     Daitaro "As sharp as she is, she's still a young woman in love. Love makes people look past a lot of things they would otherwise notice, and make foolish decisions that they wouldn't otherwise dare to entertain."
     "At this point, I half wondered if we were still talking about Alice, and not his own experiences."
     MC "That's fair, Alice is a true romantic at heart. Behind the shrewd business-woman is a lady waiting to be swept off her feet by a knight in shining armor."
-    Daitaro "Ha! It seems you've come to know her quite well, since you've managed to ascertain as much. {w}Tell me then, is that how you see yourself, Mr. Hotsure-san?"
+    Daitaro "Ha! It seems you've come to know her quite well, since you've managed to ascertain as much. {w}Tell me then, is that how you see yourself, Mr. Hotsure?"
     MC "I don't really look the part, I know. To be honest, I don't know what such an extraordinary woman sees in me. But I do love her, and despite the strange circumstances of how we came to meet, I wouldn't trade it for anything."
-    Daitaro "Hmm... {w}It is as I suspected. You really do care for my daughter. But as her father, I have to be honest with you Mr. Hotsure-san— that isn't enough."
+    Daitaro "Hmm... {w}It is as I suspected. You really do care for my daughter. But as her father, I have to be honest with you Mr. Hotsure— that isn't enough."
     Daitaro "It's no small secret that I have my share of connections."
     Daitaro "My sources have given me insight into the nature of these \"growths\", as it were, far more than the government and the school administration would like any outsider to know."
     Daitaro "She won't be able to live a normal life once this is all said and done. You've seen the reactions to her appearance, yes? The wide-eyed stares, the hushed gasps of disbelief— none of it escapes my notice."
@@ -21002,7 +21002,7 @@ label WG070:
     MC "I can't help but respect that, and I want to support her as much as I can, in whatever way possible."
     "Mr. Nikumaru placed his hand on my shoulder. It was large and imposing as I felt the weight of him and his stature press down into me."
     Daitaro "No father ever thinks any man is truly good enough for his daughter. Especially when the daughter in question is my own."
-    Daitaro "But for now, let's just say your potential has caught my attention. Enjoy the rest of your evening with her, Mr. Hotsure-san."
+    Daitaro "But for now, let's just say your potential has caught my attention. Enjoy the rest of your evening with her, Mr. Hotsure."
     "With a new sort of reassurance, I returned with him to the party inside."
     $renpy.music.set_volume(1.0, delay=0.8, channel='music')
     show Daitaro neutral at altMove(0.5, 0.75)
@@ -21060,7 +21060,7 @@ label WG070:
     Daitaro "I still have other investors to talk to this evening. Don't let me detain you any further from enjoying the rest of the evening with each other."
     show WG neutral
     WG "Thank you, Father."
-    Daitaro "Mr. Hotsure-san."
+    Daitaro "Mr. Hotsure."
     "Mr. Nikumaru looked dead at me, nearly boring a hole through me with his steely gaze in the process."
     Daitaro "Make sure she has a lovely evening."
     MC "Will do, sir."
@@ -32181,7 +32181,7 @@ label WG095:
     hide Vivian
     show Daitaro neutral
     with dissolve
-    Daitaro "Mr. Hotsure-san, care to join me in a drink of scotch?"
+    Daitaro "Hotsure-san, care to join me in a drink of scotch?"
     MC "Uh, sure. I'll give it a try. Dad loves this stuff. I've always been curious to try."
     Daitaro "Cheers."
     MCT "!"
@@ -41787,8 +41787,8 @@ label WGFMG004B:
     show WG surprised-2
     FMG "That's pretty rich coming from a person whose face looks like something from a funhouse mirror."
     show WG sly
-    "Walker 2" "S-Shit! She wasn't supposed to hear that."
-    "Walker 1" "She did get you pretty good with that"
+    "Gawker 2" "S-Shit! She wasn't supposed to hear that."
+    "Gawker 1" "She did get you pretty good with that"
     show FMG angry
     FMG "Yeah, get lost."
     show FMG neutral
@@ -42339,7 +42339,7 @@ label WGFMG005:
     MC "{size=-6}Are you sure you don't want to try to save any for yourself Alice? At this rate she's going to tear through it all in a matter of minutes.{/size}"
     show WG happy-2
     WG "{size=-6}Oh, not to worry. As if I would offer up the entire stash for sacrifice. I've learned my lesson about offering to share food with Akira.{/size}"
-    MCT "I'm sure she has, considering Alice looks jipped out of getting enough food whenever she offers to share with just me."
+    MCT "I'm sure she has... considering Alice always ends up looking like she's been fleeced out of getting enough food whenever she offers to share with just me."
     FMG "Dude! That was soooo freaking good!"
     MC "That was four liters of ice cream and an entire large sheet tray of cookies, and you're already finished?"
     show WG neutral-2
