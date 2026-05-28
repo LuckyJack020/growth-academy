@@ -16631,7 +16631,7 @@ label MC014:
             MC "Huh, small world. That's where my girlfriend is from."
             Chie "Okinawa? How lovely."
         Chie "I do miss her quite a bit, but I'm glad she's enjoying herself. Luckily, I've been keeping up around here."
-    elif (isEventCleared("MC007") or isEventCleared("FMGWG001")) and not (getFlag("MC008_RegardsPassed") or not getFlag("RM004_RegardsPassed")):
+    elif (isEventCleared("MC007") or isEventCleared("FMGWG001")):
         MC "Where's your usual cashier up front?"
         Chie "Oh, Haruko?"
         Chie "She's in Okinawa right now with some friends."

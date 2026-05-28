@@ -16552,7 +16552,7 @@ label GTS058_final:
             "Hobbling forward on my knees, I straddled one of hers and massaged the pliant baby fat of her endless thigh."
             "Enwreathed in the savory aroma of roast beef, my heart fluttered- she wanted me as much as I wanted her."
             MC "I- I love you."
-            show GTS wink            	
+            show GTS wink
             GTS "As well you should."
             GTS "Now, I believe you'll agree that a lady ought to be served first."
             MC "Yeah..."
@@ -17051,7 +17051,7 @@ label GTS060:
     jump daymenu_noadvance
 
 label GTSFMG001:
-    setFlag("noFMGGTS001")
+    $setFlag("noFMGGTS001")
     scene Campus Center
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     show GTS neutral at Position(xcenter=0.75, yalign=1.0)
