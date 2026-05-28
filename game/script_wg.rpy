@@ -33394,7 +33394,7 @@ label WG099:
     MC "Great job tonight. When I was in highschool, concerts felt like a chore to attend, but this one was legit amazing. I would have paid to see it."
     Okisho "Glad to know I'm not the only one that thought that."
     Okisho "I'm proud of the club. We had to push to our limits, but everyone came together and practiced their asses off to make it happen."
-    Okisho "Ha! Maybe that's why I still have no ass to show even all of {i}this{/i}."
+    Okisho "Ha! Maybe that's why I still have no ass to show even with all of {i}this{/i}."
     "Okisho gave her generous love handles a squeeze on each side, causing her belly to slosh and jiggle."
     MCT "I don't know, that ass still looks pretty big to me."
     Okisho "As much as I hate to admit it, it wouldn't have turned out nearly as good if it wasn't for Alice's help and her insistence on pushing the club to be their best."
@@ -35489,7 +35489,7 @@ label WG103B:
     "Boss" "You did it kid!"
     "And from there things just keep rolling along. After a string of successful design bids, I became known as one of the go-to architects for high-end luxury and grandiose design projects."
     "Not to say I didn't refine my formula over time, but in the end I just based it on what I thought Alice would like: wide entrances, grand sweeping corridors, breathtaking views, open space."
-    "All of these were luxuriant design features in a country squeezed for space and stack on top of itself, but for those that money wasn't an issue, it's what they wanted. Apparently I was one of the few architects that understood that."
+    "All of these were luxuriant design features in a country squeezed for space and stacked on top of itself, but for those that money wasn't an issue, it's what they wanted. Apparently I was one of the few architects that understood that."
     scene black with fade
     pause .5
     "{font=gui/Caveat-Bold.ttf}{size=*2}Several years later...{/size}{/font}"
@@ -35558,7 +35558,7 @@ label WG103B:
     MCT "!"
     MCT "This can't be real. After all these years... She's right here."
     "I could scarcely believe what I was seeing. I had almost forgotten just how truly massive she was in person."
-    "And yet, after all these years, her face was just as I remembered. {w}Then again, her skin care regimen probably cost more than my yearly salary in a month."
+    "And yet, after all these years, her face was just as I remembered. {w}Then again, her skin care regimen probably costs more than my yearly salary- at least."
     WG "Glad to see you got my request to meet."
     MC "Alice, {i}you're{/i} the building manager?"
     show WG haughty
