@@ -18,8 +18,9 @@ define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTSCell")
 define PRG = Character('Aida', color="#B586EC", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRG2 = Character('Aida', color="#B586EC") #normal speaking voice
-define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
-define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #hidden picture
+define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}', image="PRGCell")
+define PRGTextCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
+define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}') #hidden picture
 define WG = Character('Alice', color="#FFD700")
 define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
 
@@ -1993,4 +1994,4 @@ init 2 python:
     eventlibrary['WGGTS002'] = {"name": "Aggressive Expansion", "girls": ["WG", "GTS"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                               "location": "hallway",          "priority": PrioEnum.NONE,              "preobsflags": ["size3exp", "WG012clear"], "obsflags": ["size3"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG012"], [ConditionEnum.NOEVENT, "WGAE001"]]]}
     eventlibrary['WGGTS003'] = {"name": "Delivery Boy Debacle", "girls": ["WG", "GTS"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                               "location": "dormexterior",     "priority": PrioEnum.NONE,              "preobsflags": ["size4exp"], "obsflags": ["size4"],           "conditions": [[ConditionEnum.EVENT, "WG022"]]}
     eventlibrary['WGGTS004'] = {"name": "A Growing Business", "girls": ["WG", "GTS"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                                "location": "dormexterior",     "priority": PrioEnum.NONE,              "preobsflags": ["size5exp"], "obsflags": ["size5"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size4"], [ConditionEnum.EVENT, "WG054"]]]}
-    eventlibrary['WGGTS005'] = {"name": "A Peace of Clothing", "girls": ["WG", "GTS", "BE"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                          "location": "dorminterior",        "priority": PrioEnum.ALL,              "preobsflags": ["size5exp"], "obsflags": ["size5"],            "conditions": [[ConditionEnum.EVENT, "WGBE005"]]}
+    eventlibrary['WGGTS005'] = {"name": "A Peace of Clothing", "girls": ["WG", "GTS", "BE"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                          "location": "dorminterior",        "priority": PrioEnum.ALL,              "preobsflags": [], "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGBE005"]]}

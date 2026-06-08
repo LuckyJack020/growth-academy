@@ -8916,7 +8916,7 @@ label FMG049:
     FMGCell "Oh, one more thing."
     MCCell "?"
     FMGCell "Don't worry about protection ;)"
-    MC "I wanted to ask her what she'd meant by that, but at the same time I thought I was overthinking things."
+    MCT "I wanted to ask her what she'd meant by that, but at the same time I thought I was overthinking things."
     MCT "I get she's all into sports and all, but can't we lay off all the exercise at this point?"
     MCT "And she's usually the first to advocate for wearing helmets and shin guards... I wonder what she's up to this time? Oh well, I guess I'll see when I get there."
 
@@ -10240,6 +10240,7 @@ label FMG054:
 
 label FMG055:
     $setProgress("FMG", "FMG056")
+    play music ClearSkies
     scene Supermarket with fade
     MC "Aren't we supposed to be at the gym? Today was chest day... and I was looking forward to that."
     show FMG neutral with dissolve
@@ -10285,6 +10286,7 @@ label FMG055:
     MC "Stop... I can walk there... Don't touch me!"
     "And there I was, getting carried to the bathroom..."
 
+    play music Peaceful
     scene Bathroom
     show FMG aroused
     with fade
@@ -10888,27 +10890,27 @@ label FMG058:
     MC "Front double bicep!"
     show FMG flex
     show Natsuko flex
-    "Akira and Natsuko both lifted their arms up, flexing and both took a half step forward towards me. Instinctively, I take a half step backwards and start looking over the pose on my phone."
+    "Akira and Natsuko both lifted their arms up, flexing and both took a half step toward me. Instinctively, I took a half step back and started looking over the pose pulled up on my phone."
     pause 1
-    "After looking back up, I notice Natsuko struggling to keep her balance during the pose, while Akira isn't having any trouble at all."
+    "After looking back up, I notice Natsuko struggling to keep her balance during the pose, while Akira wasn't having any trouble at all."
     MC "Um... Natsuko, are you oka-"
     show Natsuko disappointed
     "Her face turned red and she cut me off before I could finish."
     Natsuko "I-I've seemed to um, misjudged how wide my thighs are now, so I didn't step far enough forward..."
     show FMG happy
     FMG "Pfffft- Ahahahahaha!"
-    "Between Akira and Natsuko, Nat always had the wider thighs, and it seems to have come home to bite her now."
+    "Between Akira and Natsuko, Nat always had the wider thighs, and it seemed to have finally come home to bite her now."
     MC "Pff-{i}Ahem{/i}. There's a male version of the pose that doesn't involve crossing your legs, so we can compromise with that. Does that work for you girls?"
     "The two titans nodded and the tension had loosened up a little."
     MC "Front double bicep!"
     show cg FMG058 with dissolve
-    "This time, they both stepped shoulder width apart and flexed their arms. Considering how relatively simple this pose looks in the picture, seeing it in real life, with these larger than life ladies, I can tell how much of their muscles they were flexing."
+    "This time, they both stepped shoulder width apart and flexed their arms. Considering how relatively simple this pose looked in the picture, now seeing it in real life, with these larger than life ladies, I could tell how much of their muscles they were really flexing."
     MCT "...Hang in there, Kei..."
     "The curvature of both of their bodies was very evident in this pose, even as they did the masculine version of it."
     show FMG flex
     show Natsuko flex
     hide cg with dissolve
-    "And while Akira flexes like this twenty times a day, and I drool over her biceps every single goddamn time, Natsuko's larger biceps and overall hourglass body shape really does this pose justice for her."
+    "And while Akira flexed like this twenty times a day, and I drool over her biceps every single goddamn time, Natsuko's larger biceps and overall hourglass body shape really did this pose justice for her."
     MC "F-first point goes to Natsuko."
     Natsuko "Naturally."
     show FMG neutral
@@ -10926,14 +10928,14 @@ label FMG058:
     MCT "Hm? What was that?"
     "*{i}twitch twitch{/i}*"
     show FMG aroused
-    "Looking back up, I see Akira's boobs bouncing in place. Making eye contact, Akira winked at me and stuck her tongue out."
+    "Looking back up, I saw Akira's boobs bouncing in place. Making eye contact, Akira winked at me and stuck her tongue out."
     MCT "God, I love her."
     "Natsuko saw that my eyes were glued to Akira's massive rack and was quick to catch onto what was happening."
     Natsuko "So you've taken to cheating so you could win. I'm not surprised."
     FMG "It's not cheating, it's {i}appealing{/i}."
     MCT "It is appealing that's for sure...."
     Natsuko "Fine, two can play that game."
-    "With that, Natsuko started bouncing her pecs alongside Akira. The two of them doing this together was overwhelming. It was like a car crash. I shouldn't stare, but I can't look away."
+    "With that, Natsuko started bouncing her pecs alongside Akira. The two of them doing this together was overwhelming. It was like a car crash. I shouldn't stare, but I couldn't look away."
     pause 1
     MC "...Akira wins."
     show FMG happy
@@ -10954,7 +10956,7 @@ label FMG058:
     pause 1
 
     scene Gym with fade
-    "After about another forty seconds of being entranced by my girlfriend's jiggling jugs, We had finally moved onto the other poses."
+    "After about another forty seconds of being entranced by my girlfriend's jiggling jugs, we had finally moved onto the other poses."
     "Honestly, I don't even remember when I started focusing more on their bodies than the proper pose form. Thankfully, before I showed off my monkey brain even more, we made it to the last pose."
     MC "Okay, this is for the win. Since we decided to skip the Abdominal and Thigh pose-"
     show FMG neutral at Position(xcenter=0.75, yalign=1.0)
@@ -10970,7 +10972,7 @@ label FMG058:
     pause 2
     show cg FMG058_pose3 with dissolve
     pause 2
-    "Akira and Nat both bent over and flexed all the muscles on their bodies, Visibly swelling outwards. This pose really hit home how massive these two were. It was breathtaking to say the least."
+    "Akira and Nat both bent over and flexed all the muscles on their bodies, visibly swelling outwards. This pose really hit home how massive these two were. It was breathtaking to say the least."
     MCT "Focus Kei, you have to pick a winner here."
     show FMG flex #flex-2
     show Natsuko flex
@@ -25712,7 +25714,7 @@ label FMGWG003:
     show FMG neutral
     FMG "Let me clear my throat, this is a doozy... *ahem* *hehemmmmm*."
     "Akira then proceeded to mimic Alice's voice doing her best to sound as stuck-up as possible."
-    FMG "Sorry, I have no interest in wasting my time on something as bland as a horror film or any form of cinematography, for that matter."
+    FMG "\"Sorry, I have no interest in wasting my time on something as gauche as a cheap horror films, which themselves are the absolute dregs at the bottom of the barrel of modern cinematography.\""
     MC "You did a solid job mimicking her voice, I felt so talked down to I was starting to hate myself."
     show FMG happy
     FMG "Thank you, I'll be here all week..."
