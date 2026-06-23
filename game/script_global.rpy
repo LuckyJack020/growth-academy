@@ -948,6 +948,8 @@ image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.webp"
 image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.webp"
 image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.webp"
 
+image Naoki neutral = "Graphics/minor/faculty/naoki/neutral.webp"
+
 image Nurse neutral = "Graphics/minor/faculty/kiyomi/hitomi/[NurseOutfit]/neutral.webp"
 image Nurse unique = "Graphics/minor/faculty/kiyomi/hitomi/[NurseOutfit]/unique.webp"
 image Nurse2 neutral = "Graphics/minor/faculty/kiyomi/hanami/neutral.webp"

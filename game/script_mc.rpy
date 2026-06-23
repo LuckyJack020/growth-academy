@@ -1543,7 +1543,7 @@ label MC002:
     "Inside, the room was quiet. However, it was far from empty."
     "In the middle were some desks pressed together to form a sort of \"mega-desk.\""
     play music Rain
-    if isEventCleared("BE006"):
+    if isEventCleared("BE006") or getFlag(“Meet_Takamura”):
         show Takamura neutral with dissolve
         "At it sat a familiar looking teacher, Takamura-sensei."
         hide Takamura with dissolve
@@ -1561,9 +1561,12 @@ label MC002:
     "At the other end of the megadesk sat a guy who I swear, looked like he'd been at the gym for the last four years of his life. His shoulders bulged out against the fabric of his shirt as he made some notes on some papers."
     hide Hageshi with dissolve
     pause .25
+    show Naoki neutral with dissolve
     "All the way across the room stood two other teachers, who were literally standing around the water cooler."
     "One of them had not just one, but three whistles around his neck, and was chatting warmly with the other teacher."
     MCT "Who the hell's attention is he trying to get with those?"
+    hide Naoki with dissolve
+    pause .25
     show Takamura happy with dissolve
     Takamura "My my, Tashi-chan. You look like you could use a nap or three."
     pause .25
@@ -1704,9 +1707,12 @@ label MC002:
     "I looked back at Hageshi-sensei, who somehow managed to look even more intimidating in light of that information. {w}He just gave a slight nod, confirming Tashi's story about him without saying anything for himself."
     show Takamura neutral at altMove(0.5, 0.75)
     "Behind Hageshi-sensei, the two teachers by the water cooler left their positions and exited the room. As they left, I noticed the whistles around the neck of that one faculty member wearing an athletic outfit."
+    pause .25
+    show Naoki neutral with dissolve
     if isEventCleared("BE003"):
         MCT "Huh. That's the same outfit that Honoka had on the other day."
     pause .25
+    hide Naoki with dissolve
     MC "If I may, Takamura-sensei, what's with the... uh..."
     Takamura "The whistles?"
     MC "Yes, Sensei."
@@ -4326,7 +4332,7 @@ label MC006:
     hide Hageshi
     with dissolve
     play music Busy
-    #show Naoki neutral with dissolve
+    show Naoki neutral with dissolve
     if not getFlag("Meet_Naoki"):
         $setFlag("Meet_Naoki")
     Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
@@ -4345,7 +4351,7 @@ label MC006:
     hide RM with dissolve
     Naoki "Alright, let's set the teams here, give us a second."
     Naoki "{size=-6}How should we balance them out, Hageshi-san?{/size}"
-    #hide Naoki with dissolve
+    hide Naoki with dissolve
 
     if getHighestAffection() == ("BE" or "GTS" or "AE"):
         $setFlag("MC006_Team1")
@@ -4387,6 +4393,7 @@ label MC006_Team1:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
+    show Naoki neutral
     Naoki "Alright, Team 1 is Hotsure-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is Utagashi-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
@@ -4413,6 +4420,7 @@ label MC006_Team1:
     hide BE
     hide WG
     hide FMG
+    hide Naoki
     hide HR
     show RM sad
     with dissolve
@@ -4435,9 +4443,12 @@ label MC006_Team1:
     show AE neutral
     AE "That is fine with me as well. I don't claim any remarkable athletic ability, so I would not want to bear the responsibility for preventing the opposing team from scoring."
     MC "Okay, sounds like we got something worked out."
+    show Naoki neutral
     Naoki "Alright, Team 1, here you go."
     play sound Whistle
-    hide BE with dissolve
+    hide BE
+    hide Naoki
+    with dissolve
     "Coach Naoki tossed the ball to Shiori. Naomi and I scrambled up the field to get in position for a pass."
     "Shiori tossed up a leading pass to Naomi... only for her to completely blow past it with unexpected speed, landing it out of bounds."
     show GTS surprised
@@ -4605,7 +4616,7 @@ label MC006_Team1:
     hide GTS
     with dissolve
     pause .2
-    #show Naoki neutral with dissolve
+    show Naoki neutral
     show HR neutral at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -4615,8 +4626,9 @@ label MC006_Team1:
     Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
     "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
     hide HR
-    #hide Naoki with dissolve
+    hide Naoki
     hide Hageshi
+    with dissolve
     show FMG sad-2 at Position(xcenter=0.10, yalign=1.0)
     show WG angry at Position(xcenter=0.28, yalign=1.0) behind FMG
     show PRG sad at Position(xcenter=0.45, yalign=1.0)
@@ -4688,8 +4700,8 @@ label MC006_Team1:
     hide RM
     show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
+    show Naoki
     with dissolve
-    #show Naoki with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
     show HR neutral
@@ -4698,7 +4710,8 @@ label MC006_Team1:
     MCT "I'm not going back to playing blind, at this point it's best if I just own it."
     hide HR
     hide Hageshi
-    #hide Naoki with dissolve
+    hide Naoki
+    with dissolve
     show FMG sad at Position(xcenter=0.10, yalign=1.0)
     show WG doubt at Position(xcenter=0.25, yalign=1.0) behind FMG
     show BE doubt at Position(xcenter=0.6, yalign=1.0) behind PRG
@@ -4941,6 +4954,7 @@ label MC006_Team2:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
+    show Naoki neutral
     Naoki "Alright, Team 1 is Utagashi-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is, Hotsure-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
@@ -4967,6 +4981,7 @@ label MC006_Team2:
     hide BE
     hide WG
     hide FMG
+    hide Naoki
     hide HR
     show RM sad
     with dissolve
@@ -5000,11 +5015,13 @@ label MC006_Team2:
     PRG "I-If you think so..."
     WG "I think that is a good idea as well."
     MC "Okay, sounds like we got something worked out."
+    show Naoki neutral
     Naoki "Alright, Team 1, here you go."
     play sound Whistle
     hide FMG
     hide PRG
     hide WG
+    hide Naoki
     show AE neutral at Position(xcenter=0.25, yalign=1.0)
     show GTS neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -5191,7 +5208,7 @@ label MC006_Team2:
     with dissolve
     pause .2
     show HR neutral at Position(xcenter=0.25, yalign=1.0)
-    #show Naoki neutral with dissolve
+    show Naoki neutral
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
@@ -5201,7 +5218,8 @@ label MC006_Team2:
     "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
     hide HR
     hide Hageshi
-    #hide Naoki with dissolve
+    hide Naoki
+    with dissolve
     show FMG sad-2 at Position(xcenter=0.10, yalign=1.0)
     show WG angry at Position(xcenter=0.28, yalign=1.0) behind FMG
     show PRG sad at Position(xcenter=0.45, yalign=1.0)
@@ -5272,8 +5290,8 @@ label MC006_Team2:
     hide RM
     show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
+    show Naoki
     with dissolve
-    #show Naoki with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
     show HR neutral
@@ -5282,7 +5300,8 @@ label MC006_Team2:
     MCT "I'm not going back to playing blind, at this point it's best if I just own it."
     hide HR
     hide Hageshi
-    #hide Naoki with dissolve
+    hide Naoki
+    with dissolve
     show FMG sad at Position(xcenter=0.10, yalign=1.0)
     show WG doubt at Position(xcenter=0.25, yalign=1.0) behind FMG
     show BE doubt at Position(xcenter=0.6, yalign=1.0) behind PRG
@@ -16851,7 +16870,7 @@ label MC021:
     "I filed into the room and chose an open seat, one that wasn't too far up front, or in the back, hoping that might draw the least amount of attention to myself from Hageshi-sensei's gaze."
     "As I sat down, more students made their way in. Some I recognized, others I didn't."
     if getFlag("Meet_Sakie"):
-        "One of the students I recognized, in so small part because she always stood out. Sakie Iwata, aka \"Foot Girl\" as she's known on campus,{w} though I can't imagine she appreciates that moniker. She sat near the front."
+        "One of the students I recognized, in no small part because she always stood out. Sakie Iwata, aka \"Foot Girl\" as she's known on campus,{w} though I can't imagine she appreciates that moniker. She sat near the front."
         MCT "Man, those clompers are even bigger than the last time I saw them. Wonder what shoe size she's up to?"
         Student1 "Easy their Bigfoot! You trying to trip me or something? Keep those clown shoes out of the aisle before someone gets hurt."
         Sakie "Get bent Karaku-san! Not my fault your fatass can't see your feet when you're walking anymore. I can't help it anymore than you."
@@ -18771,9 +18790,11 @@ label MC024:
     $setSkill("Athletics", 1)
     "Based on the amount of treading and retreading of the school that I'd done, I was sure that I could pinpoint any and every tile of flooring in those buildings by now, and know them all by first and last name, plus birthday."
     "I heard the crack of a bat, and watched a white sphere go flying up and away, followed by the smack of leather on ball."
+    show Naoki neutral with dissolve
     UNKNOWN "OUUUUTTT!!"
     MC "And there he is..."
     MCT "... Fucking finally."
+    hide Naoki with dissolve
     "I walked up to the diamond and glanced through the fencing around it."
     if routelock == "PRG":
         MCT "Well, I can't exactly head out there for his autograph right now."
@@ -18850,6 +18871,7 @@ label MC024:
         PRG "Hngh... mnh..."
         show PRG neutral
         PRG "I-I'll come with."
+        show Naoki neutral with dissolve
         "I smiled at her, then pulled an about face to head toward Naoki-sensei."
         "From what I could see, Naoki was a little over my height, with a fairly trim stature."
         "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
@@ -18888,6 +18910,7 @@ label MC024:
         Naoki "Good. Then, I wish you both a pleasant day. I've a track team to monitor."
         MC "You as well, Sensei."
         "Aida and I both bowed to him, as he hurried off on his way."
+        hide Naoki with dissolve
         PRG "Feel better?"
         MC "You have no earthly idea."
         PRG "Are you... going to go turn that in now, then?"
@@ -19187,6 +19210,7 @@ label MC024:
                 "I watched her for a moment as she left, more just taking in her form as she waddled away. Only then did I turn back to Naoki-sensei, hearing various metal bats clanging against the fencing."
         MCT "This is it. All trials and tribulations end here."
         "I stood up and hurried to him."
+        show Naoki neutral with dissolve
         "From what I could see, Naoki was a little over my height, with a fairly trim stature."
         "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
         pause .5
@@ -19220,6 +19244,7 @@ label MC024:
         MC "I believe so, yes."
         Naoki "Good. Then, I wish you a pleasant day. I've a track team to monitor."
         MC "Thank you, Sensei. Same to you."
+        hide Naoki with dissolve
         "I bowed to him as he hurried away. Wasting not a minute more, I practically sprinted for the administrative building, any pain in my feet well gone."
         scene black with fade
         pause .5
@@ -21818,7 +21843,7 @@ label global005:
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
-    show Nurse neutral with dissolve
+    show Nurse unique with dissolve
     Nurse "Hello, Hotsure-san, please have a seat."
     Nurse "My name is Hitomi Kiyomi. Or, as I usually go by, Nurse Kiyomi."
     "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp."

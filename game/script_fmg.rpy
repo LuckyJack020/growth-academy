@@ -4483,7 +4483,7 @@ label FMG026:
     MC "We did that the last time you bought lunch... and the time before that."
     FMG "Fair. {w}What do you want then?"
     MC "Oh, you're letting me pick? Ummm, soba? Is that good with you?"
-    FMG "I'll eat anything, dude. But that is one of my favorites... I'm am {i}so{/i} down for that."
+    FMG "I'll eat anything, dude. But that is one of my favorites... I'm {i}so{/i} down for that."
     FMG "If you're ever in Okinawa there's this killer soba shop you have to go to. Heh, maybe I'll take you there if you're lucky."
     MC "Pinky promise. {w}And pinky promise that you're paying too, I can already tell that bill is going to be expensive."
     FMG "Heh, fine."

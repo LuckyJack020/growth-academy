@@ -36582,7 +36582,7 @@ label PRG057:
     MC "Okay. Now, back up into me."
     show PRG unique-happy
     "Aida inched backwards. My back was pressed against the wall as she made contact, her butt pressing into my crotch and enveloping... well, everything."
-    if getFlag("PRG057_nakedbed"):
+    if getFlag("PRG57_nakedbed"):
         "Plus, with no skirt there... yeah."
     PRG "I-Is this okay? Do you have enough room?"
     MC "Yep. You?"
