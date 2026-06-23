@@ -1912,8 +1912,12 @@ label FMG016:
     $setMCOutfit(OutfitEnum.ATHLETIC)
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by twelve and it's three o'clock."
     scene Dorm Hallway with fade
-    MC "I gotta hurry to the track, she's going to be pissed."
+    if isEventCleared("FMGB001"):
+        MCT I gotta hurry to the track. We planned on hanging out today, I can't leave her hanging."
+    else:
+        MCT "I gotta hurry to the track, she's going to be pissed."
     "As I rounded the corner I bumped into Akira, knocking myself on the floor."
+    MCT "Ouch! {w}She's as solid as a brick house."
     show FMG surprised with dissolve
     FMG "Jeez Kei-kun, are you alright?!?"
     MC "Hehe ow... I-I'm good."
@@ -1922,13 +1926,20 @@ label FMG016:
     FMG "I'm all good dude, don't worry about it!"
     show FMG neutral
     FMG "Come on, we're burning daylight and we have to get to the track before it gets dark."
+    if isEventCleared("FMGB001"):
+        MCT "I hope this isn't going to turn into another run. I told her before I wasn't interested in training all the time."
     FMG "I hope you're well-rested, you've looked beat these past couple of days. I figured you'd oversleep so I came to get you."
+    if isEventCleared("FMGB001"):
+        MCT "Ughhh, I should have known..."
     MC "Thanks, and I wish, but I was up all night doing math instead— and I freaking hate math."
     show FMG happy
     FMG "I have just the thing to get us in the mood. You down for a race?"
+    if isEventCleared("FMGB001"):
+        MCT "I may not have been keen on running, but I'm a good sport, if nothing else."
     MC "You want to race ME? Can you even handle the embarrassment of losing?"
     show FMG flex
     FMG "I didn't plan on losing."
+    MC "Sounds like you could use a change of plans then."
     show FMG neutral
     FMG "You talk big Kei-kun, but can you back it up?"
     MCT "...perhaps..."
@@ -1953,16 +1964,20 @@ label FMG016:
     FMG "One."
     MC "You didn't even say go."
     FMG "Doesn't matter... two."
+    hide FMG with dissolve
     MC "UGHHHH!"
     "I swear I've never run so fast in my life. I felt like a jaguar. Fast, dangerous and-"
     MC "What the hell just flew past me?"
-    show FMG flex
+    pause .5
+    show FMG flex with dissolve
     FMG "There's always next time, haha. See you at track slowpoke."
     MC "W-wh... How???"
 
     scene Track with fade
     MC "H-H...WOW, my legs are ready to fall off. I went too hard."
     MC "*huff* *huff*...*gasp*. I-Is this what dying feels like???"
+    if isEventCleared("FMGB001"):
+        MCT "I overdid it. Why did I allow myself to get roped into this again?"
     show FMG neutral with dissolve
     FMG "You are so overdramatic."
     MC "O...Okay, I'm-I'm good... I think. Alright, so... How are you so fast?!?!"
@@ -1983,34 +1998,60 @@ label FMG016:
     show FMG neutral
     FMG "What are you on about?"
     "I turned Akira around and pointed to the well-built red head running around the track."
+    if isEventCleared("FMGB001"):
+        MCT "Yup, that's gotta be Okamoto-san. Wonder what she's been up to? {w}Probably training now that I think about it."
     show FMG surprised
     FMG "Wow and I thought I was big. She's on another level!"
     "We must've caught her attention as she stopped right in front of us with a not too pleasant look on her face."
     show FMG surprised at Position(xcenter=0.2, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.8, yalign=1.0)
     with dissolve
-    UNKNOWN "Is there a problem? I don't like people staring at me during my workouts."
+    if isEventCleared("FMGB001"):
+        Natsuko "Is there a problem? I don't like people staring at me during my workouts."
+    else:
+        UNKNOWN "Is there a problem? I don't like people staring at me during my workouts."
     show FMG neutral
     FMG "We didn't mean to make you uncomfortable. We were both taken aback by...well...your size."
-    UNKNOWN "I get that a lot."
-    MC "If you don't mind me asking are you new here? We've never seen you around campus before."
-    UNKNOWN "If you really must know, I transferred here the other day. I came from a school in Fukuoka. The name is Natsuko Okamoto."
-    if not getFlag("Meet_Natsuko"):
-        $setFlag("Meet_Natsuko")
-    MC "Nice to meet you Okamoto-san, I'm Keisuke Hotsure."
-    "She shook my hand with a grip so tight I thought she might break it."
-    show Natsuko happy
-    Natsuko "Nice to meet you Hotsure-san."
-    show Natsuko flirty
-    Natsuko "My, you have beautiful hair and those eyes... I could get lost in them."
-    MC "Ummmm, thanks..."
-    show FMG neutral
-    FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani. But I'd appreciate it if you could keep those types of comments to yourself."
-    show cg FMG016 with dissolve
-    "Natsuko turned towards Akira, staring down at her in disappointment."
-    show Natsuko neutral
-    Natsuko "Unfortunately, I don't take orders from someone like you."
-    MCT "Welp, I'll be honest I didn't see that coming."
+    if isEventCleared("FMGB001"):
+        Natsuko "I get that a lot."
+    else:
+        UNKNOWN "I get that a lot."
+    if isEventCleared("FMGB001"):
+        MC "Hello Okamoto-san. Nice to see you again. I take it you haven't met Mizutani-san before?"
+        Natsuko "Can't say that I have."
+        FMG "Wait, you know this person, Kei?"
+        MC "Yeah, we met a few days ago at the track."
+        FMG "Since when do you come here without me?"
+        MC "We just bumped into each other. She's new here."
+        Natsuko "He's right. I came from a school in Fukuoka. The name is Natsuko Okamoto."
+        FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani. Nice to meet you."
+        Natsuko "Yes, yes. I'm sure it is."
+        Natsuko "Hotsure-san, did you do something with your hair? It really complements your eyes…  I could get lost in them."
+        MC "Uhh… Thanks. It kinda just keeps growing. I can't seem to do much to control it, but thanks. I feel better about how it looks since you said something."
+        FMG "Really? I mean if you're gonna flirt with the dude right in front of me you could at least have some decent game to spit."
+        show cg FMG016 with dissolve
+        "Natsuko turned towards Akira, staring down at her in disappointment."
+        show Natsuko neutral
+        Natsuko "Fortunately, I don't concern myself with the opinions of someone like you."
+    else:
+        MC "If you don't mind me asking are you new here? We've never seen you around campus before."
+        UNKNOWN "If you really must know, I transferred here the other day. I came from a school in Fukuoka. The name is Natsuko Okamoto."
+        if not getFlag("Meet_Natsuko"):
+            $setFlag("Meet_Natsuko")
+        MC "Nice to meet you Okamoto-san, I'm Keisuke Hotsure."
+        "She shook my hand with a grip so tight I thought she might break it."
+        show Natsuko happy
+        Natsuko "Nice to meet you Hotsure-san."
+        show Natsuko flirty
+        Natsuko "My, you have beautiful hair and those eyes... I could get lost in them."
+        MC "Ummmm, thanks..."
+        show FMG neutral
+        FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani. But I'd appreciate it if you could keep those types of comments to yourself."
+        show cg FMG016 with dissolve
+        "Natsuko turned towards Akira, staring down at her in disappointment."
+        show Natsuko neutral
+        Natsuko "Unfortunately, I don't take orders from someone like you."
+        MCT "Welp, I'll be honest I didn't see that coming."
     FMG "And what does that mean?"
     hide cg with dissolve
     play music Rivalry
@@ -2019,9 +2060,11 @@ label FMG016:
     Natsuko "Pretty much everything about you is so...unladylike. Your dirty shirt, that mop you call hair. You are a slob."
     show FMG angry
     FMG "Have you looked in a mirror? I'm surprised you don't have birds living in that nest."
-    "Natsuko ignoring Akira's comment continued to dig into her without hesitation."
+    "Natsuko, ignoring Akira's comment, continued to dig into her without hesitation."
     Natsuko "Not to mention how pitiful you are with a body like that."
     MCT "You've got to be kidding. She could've said anything else and she chose that."
+    if isEventCleared("FMGB001"):
+        MCT "I mean, she seemed pretty friendly when I met her. Looks like she's got a mean streak if you rub her the wrong way."
     show FMG angry-2
     FMG "What? You think I'm small?!? You aren't anything special, red."
     show Natsuko flex
@@ -2049,7 +2092,10 @@ label FMG016:
     Natsuko "Watch closely, Hotsure-san, you are about to witness perfection."
     show Natsuko smug
     Natsuko "Would you be so kind and count down for us?"
-    MCT "Who does this chick think she is? Kick her ass Akira...please."
+     if isEventCleared("FMGB001"):
+        MCT "This is starting to get way out of hand."
+    else:
+        MCT "Who does this chick think she is? Kick her ass Akira...please."
     MC "I'd rather not, but I get the feeling I don't have a choice."
     MC "Okay, when I say go."
     MC "3."
@@ -2058,18 +2104,24 @@ label FMG016:
     MC "GO!"
     "They were both like lightning. Unfortunately, I was hit...with a massive amount of dust, right in my face..."
     MC "*cough* I'm getting real sick of this *cough*."
-    MC "*cough* How is Akira doing?"
+    if isEventCleared("FMGB001"):
+        MC "*cough* What's happening here?"
+    else
+        MC "*cough* How is Akira doing?"
     MCT "Well I'll be damned...Natsuko has a massive lead over her. She's barely breaking a sweat."
-    MC "Come on Akira. I know you can beat her. Push yourself a little more."
+    if isEventCleared("FMGB001"):
+        MC "Well, I'll be damned. Akira might have met her match with this one."
+    else
+        MC "Come on Akira. I know you can beat her. Push yourself a little more."
     "With every passing second, Natsuko's lead grew."
     show Natsuko smug
     Natsuko "Having trouble keeping up? Do you want me to sit down and wait for you to catch up? Maybe you need me to slow down a tiny bit?"
     "With that final remark, Natsuko crossed the finish line and proudly laughed."
     show Natsuko flex
-    Natsuko "Better luck next time Akira-chan."
+    Natsuko "Better luck next time , Mizutani-san."
     "Akira crossed the finish shortly after, left in disbelief and embarrassment."
     show FMG angry
-    FMG "I didn't try hard enough. Damn it, losing to someone like her."
+    FMG "I didn't try hard enough. {w}Damn it, losing to someone like her..."
     MC "Hey, you tried your best Akira, don't let it get to you."
     show Natsuko smug
     Natsuko "It's a shame that her best wasn't very good."
@@ -2078,19 +2130,35 @@ label FMG016:
     FMG "Don't let this win get to your head. This isn't over Natsuko, not by a long shot."
     show Natsuko flex
     Natsuko "That's funny, I didn't think it even began."
+    if isEventCleared("FMGB001"):
+        MC "Whoah, easy now. It's just a friendly competition, Okamoto-san."
+        Natusko "Sure. Friendly. Why not?"
     Natsuko "As much as I'd like to stay and rub it in, I'm running late for my class. I look forward to our rematch Akira, maybe next time I'll try."
     show Natsuko happy
-    Natsuko "Goodbye, for now, I'll see you later Keisuke-san. Don't be afraid to call me."
-    MCT "I don't even have your number. What...?"
-    "She winked at me, then jogged towards the lockers."
-    hide Natsuko with dissolve
-    MCT "I don't think I've ever been more confused in my entire life."
-    MC "Listen, I know you're mad about this but seriously don't let it get to you. This girl isn't important."
+    if isEventCleared("FMGB001"):
+        Natsuko "Goodbye, for now, I'll see you later Hotsure-san. You have my number. Don't be afraid to call me."
+        "She winked at me, then jogged towards the lockers."
+        hide Natsuko with dissolve
+        MCT "That's right. She did give me her number. Maybe I should give her a call."
+    else:
+        Natsuko "Goodbye, for now, I'll see you later Keisuke-san. Don't be afraid to call me."
+        MCT "I don't even have your number. What...?"
+        "She winked at me, then jogged towards the lockers."
+        hide Natsuko with dissolve
+        MCT "I don't think I've ever been more confused in my entire life."
+    if isEventCleared("FMGB001"):
+        MC "Look, Akira, I know you're mad about this but seriously don't let it get to you. She was unbelievably fast."
+    else:
+        MC "Listen, I know you're mad about this but seriously don't let it get to you. This girl isn't important."
     show FMG sad at altMove(0.5, 0.5)
     FMG "I don't know Kei, maybe she is right, maybe my best isn't good enough."
     FMG "I hate this feeling of being weak."
-    MC "I understand, we can plan out a different workout routine and we can work together to knock her down a couple of pegs."
-    MC "It's only a matter of time till you're strong enough to beat her."
+    if isEventCleared("FMGB001"):
+        MC "Just because she may be bigger and faster doesn't make you weak."
+        MC " Who knows? Maybe it's only a matter of time till you're strong enough to beat her."
+    else:
+        MC "I understand, we can plan out a different workout routine and we can work together to knock her down a couple of pegs."
+        MC "It's only a matter of time till you're strong enough to beat her."
     MC "For now, let's get your mind off this. How about we go grab a bite to eat?"
     $setAffection("FMG", 1)
     show FMG happy
