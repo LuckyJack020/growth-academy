@@ -1913,7 +1913,7 @@ label FMG016:
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by twelve and it's three o'clock."
     scene Dorm Hallway with fade
     if isEventCleared("FMGB001"):
-        MCT I gotta hurry to the track. We planned on hanging out today, I can't leave her hanging."
+        MCT "I gotta hurry to the track. We planned on hanging out today, I can't leave her hanging."
     else:
         MCT "I gotta hurry to the track, she's going to be pissed."
     "As I rounded the corner I bumped into Akira, knocking myself on the floor."
@@ -2092,7 +2092,7 @@ label FMG016:
     Natsuko "Watch closely, Hotsure-san, you are about to witness perfection."
     show Natsuko smug
     Natsuko "Would you be so kind and count down for us?"
-     if isEventCleared("FMGB001"):
+    if isEventCleared("FMGB001"):
         MCT "This is starting to get way out of hand."
     else:
         MCT "Who does this chick think she is? Kick her ass Akira...please."
@@ -2106,12 +2106,12 @@ label FMG016:
     MC "*cough* I'm getting real sick of this *cough*."
     if isEventCleared("FMGB001"):
         MC "*cough* What's happening here?"
-    else
+    else:
         MC "*cough* How is Akira doing?"
     MCT "Well I'll be damned...Natsuko has a massive lead over her. She's barely breaking a sweat."
     if isEventCleared("FMGB001"):
         MC "Well, I'll be damned. Akira might have met her match with this one."
-    else
+    else:
         MC "Come on Akira. I know you can beat her. Push yourself a little more."
     "With every passing second, Natsuko's lead grew."
     show Natsuko smug

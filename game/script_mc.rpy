@@ -5504,13 +5504,14 @@ label MC006_Team2:
     hide PRG
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
-    #show Naoki with dissolve
+    show Naoki with dissolve
     Naoki "I knew this guy was a softy at heart."
     Hageshi "You're not the only one, Aoi-san seems to think so too."
     show HR neutral
     HR "Alright, we're done here. Class dismissed."
     hide HR
     hide Hageshi
+    hide Naoki
     with dissolve
     "So it wasn't exactly the greatest game of handball ever played. It was pretty clear things were starting to change. {w}{i}We{/i} were starting to change."
     "I wasn't sure what the future held for all of us, but for now I was glad we all got to have a little fun."
@@ -27493,7 +27494,7 @@ label RMG002:
         MCT "That's the understatement of the year."
 
     show RM doubt
-        RM "Now, as far as I've been able to deduce, given the non-standard size of everything on this campus, maintenance here has to involve a fair amount of custom equipment, including those that service custom security systems."
+    RM "Now, as far as I've been able to deduce, given the non-standard size of everything on this campus, maintenance here has to involve a fair amount of custom equipment, including those that service custom security systems."
     if isEventCleared("RM010"):
         MC "You expect to find some kind of blueprints there?"
     else:
@@ -27876,12 +27877,6 @@ label RMG002:
     "Part of me wanted to press the issue further and ask about the lock manufacturer, but after racking my brain for a feasible reason I was drawing a blank." 
     "Besides, asking about it right after he told us not to talk about the password access was just going to come across as too obvious." 
     "Misuboro-san might not care too much himself, but it was pretty clear from talking to him that he was far more observant and sharp than his withered visage would lead one to assume."
-    #if isEventCleared("RM010):
-        #"I decided to pivot to a different topic instead."
-        #MC "Hey, this might sound out of the blue, but are you familiar with someone named Banri Tokei?"
-        #Misuboro "Are you talking about Saburō? He didn't have any children and I can't say I recall anyone else with that last name."
-        #MC "I was just curious, thought someone around the school might know. Thanks though."
-        #"Before that line of inquiry fell offtrack, Daichi came in with the save."
     show RM happy-2
     RM "All done. Here you go."
     "Daichi handed over the completed form to Misuboro-san. As to what he actually wrote on the thing to help his alibi, I could only guess— other than our room number."
