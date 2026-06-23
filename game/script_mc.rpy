@@ -1543,7 +1543,7 @@ label MC002:
     "Inside, the room was quiet. However, it was far from empty."
     "In the middle were some desks pressed together to form a sort of \"mega-desk.\""
     play music Rain
-    if isEventCleared("BE006") or getFlag(“Meet_Takamura”):
+    if isEventCleared("BE006") or getFlag("Meet_Takamura"):
         show Takamura neutral with dissolve
         "At it sat a familiar looking teacher, Takamura-sensei."
         hide Takamura with dissolve
@@ -27459,4 +27459,523 @@ label RMG001:
             MCT "Either way, it managed to kill some time. I wonder what Alice is doing?"
         else:
             MCT "Either way, it managed to kill some time. I wonder what Honoka is doing?"
+    jump daymenu
+
+label RMG002:
+    scene Chukan Point with fade
+    show RM neutral-2 with dissolve
+    play music DayByDay
+    RM "Okay, looks like we take this fork off the main trail."
+    MC "Are you sure we can even get in?"
+    show RM neutral
+    RM "It's during the day, why wouldn't it be open?"
+    MC "It's not exactly a regular office, or someplace most students have business going to."
+    show RM happy
+    RM "I'm sure it will be fine."
+    show RM smug
+    extend " Why? Are you suggesting we break in and scope out the place after midnight?"
+    show RM doubt
+    MC "That's {i}exactly{/i} what we're {/i}not{/i} going to do."
+    show RM happy
+    RM "Suit yourself. But I figure, regardless, I figure day time is the best chance to get in and take a look around when people would be around to let us in."
+    MCT "Wait a second... That sounds like something {i}I{/i} would say."
+    MC "Don't tell me you already tried bypassing the lock onto this place?"
+    show RM happy-2
+    RM "...Okay. {w}So I won't tell you."
+    MCT "God damnit... this fucking guy."
+    show RM neutral
+    MC "{i}Uggh{/i}. Forget it. I'm not even going to go there. {w}What do you know about the place so far?"
+    if isEventCleared("RM010"):
+        RM "It's the main maintenance facility that services the campus. I figure with its proximity to the Giant's dorm between campus and Chūkan Point there might be some insights we can glean that would give us more information about the Giant's Dorms."
+    else:
+        RM "It's the main maintenance facility that services the campus. I figure with its proximity to the Giant's dorm between campus and Chūkan Point there might be some insights we can glean that would be useful to help us get into the Giant's Dorms."
+        RM "Besides we need a win after that screw-up at the gate."
+        MCT "That's the understatement of the year."
+
+    show RM doubt
+        RM "Now, as far as I've been able to deduce, given the non-standard size of everything on this campus, maintenance here has to involve a fair amount of custom equipment, including those that service custom security systems."
+    if isEventCleared("RM010"):
+        MC "You expect to find some kind of blueprints there?"
+    else:
+        MC "You think we can find the remaining digits to the gate's security code in there?"
+    show RM neutral-2
+    RM "You'd think of all places that information would be stored there, right?"
+    MC "As good a guess as any, I suppose."
+    RM "The facility is run by the chief maintenance tech on campus, one Mukashi Misuboro."
+
+    if isEventCleared("WG076"):
+        MC "I've met him before. I still don't know if we should address him as sensei or not."
+        show RM doubt
+        RM "Hmm, I'm honestly not sure either. His primary duties as staff fall outside the purview of the academy's faculty or administration designation."
+        RM "But then again, as my understanding, he also serves double duty as the workshop's supervisor/instructor. So I guess it's a matter of perspective."
+        MC "True, the academy does offer some trade classes as electives. I'm not familiar with them myself, but I'm aware of their existence."
+        show RM neutral
+        RM "I suppose it's like Takamura's role with the cooking club. People just call her \"sensei\" even though that isn't a specific faculty role."
+        MC "But she is a homeroom teacher though."
+        show RM neutral-2
+        "Daichi just shrugged, not particularly concerned with Takamura's particular case."
+        RM "Let's just go with \"san\" for now, if we do actually get to talk to him that is."
+        show RM distrustful
+        MC "Having met Misuboro-san before, he doesn't strike me as a particularly patient person. Just don't get caught doing anything suspicious or do something to piss him off or we're not going to be able to get much information out of him."
+        RM "Alright. Fine. I'll be good. You don't have to babysit me, you know?"
+        MCT "Oh, but I do..."
+    elif getFlag("Meet_Misuboro"):
+        MC "Don't you think we should address him as sensei?"
+        show RM pondering
+        RM "Hmm, I'm honestly not sure. His primary duties as staff fall outside the purview of the academy's faculty or administration designation."
+        RM "But then again, as my understanding, he also serves double duty as the workshop's supervisor/instructor. So I guess it's a matter of perspective."
+        MC "True, the academy does offer some trade classes as electives. I'm not familiar with them myself, but I'm aware of their existence."
+        show RM neutral
+        RM "I suppose it's like Takamura's role with the cooking club. People just call her \"sensei\" even though that isn't a specific faculty role."
+        MC "But she is a homeroom teacher though."
+        show RM neutral-2
+        "Daichi just shrugged, not particularly concerned with Takamura's particular case."
+        RM "Let's just go with \"san\" for now— if we do actually get to talk to him that is."
+        show RM distrustful
+        MC "Having met Misuboro-san before, he doesn't strike me as a particularly patient person. Just don't get caught doing anything suspicious or do something to piss him off or we're not going to be able to get much information out of him."
+        RM "Alright. Fine. I'll be good. You don't have to babysit me, you know?"
+        MCT "Oh, but I do..."
+    else:
+        MC "I've never met the guy, but I've seen him around campus a few times. He's either fixing something or hauling away something that's broken."
+        show RM happy-2
+        RM "That's our mark."
+        MC "Don't say that. You make it sound like we're going to kidnap him or something."
+        show RM neutral
+        RM "It's standard investigative language."
+        MC "It's also standard heist movie lingo."
+        show RM angry-2
+        RM "This isn't a movie!"
+        MC "You're right, this plot is far too absurd to be a movie."
+        show RM angry-2
+        RM "Which is why it requires an investigation!"
+        MC "Well, when you put it that way, it's all coming together then, isn't it?"
+        show RM pondering
+        MC "Anyway. We should try to make a good impression when we approach him. {w}Don't you think we should address him as sensei?"
+        RM "Hmm, I'm honestly not sure. His primary duties as staff fall outside the purview of the academy's faculty or administration designation."
+        RM "But then again, as my understanding, he also serves double duty as the workshop's supervisor/instructor. So I guess it's a matter of perspective."
+        MC "True, the academy does offer some trade classes as electives. I'm not familiar with them myself, but I'm aware of their existence."
+        show RM neutral
+        RM "I suppose it's like Takamura's role with the cooking club. People just call her \"sensei\" even though that isn't a specific faculty role."
+        MC "But she is a homeroom teacher though."
+        show RM neutral-2
+        "Daichi just shrugged, not particularly concerned with Takamura's particular case."
+        RM "Let's just go with \"san\" for now, if we do actually get to talk to him that is."
+        
+    MC "So, do you have any particular course of action in mind? Or are you just going to wing it once we get there?"
+    show RM smug
+    RM "Given how well just winging it worked with Kajiwara back at the gate, I made sure to plan this out in advance. I got us a good excuse to be there so {i}we{/i}— and by that I mean mostly {i}you{/i}— will get a chance to freely talk with him."
+    MC "That isn't a plan, that's like an {i}idea{/i} of a plan."
+    show RM doubt
+    RM "What? {w}Were you expecting me to write you a script?"
+    MC "Given your conversation skills that sounds like it'd be an even worse idea."
+    show RM happy
+    RM "I'll take that as an endorsement of the plan then."
+    MCT "I think I just got tricked into going along with a bad idea by turning down a worse one..."
+    show RM happy-2
+    if getFlag("VisitedBakery") and isEventCleared("RM008"):
+        RM "Besides, this approach worked well when talking with Nurse Kiyomi, Tsubasa-sensei, and Kazomazumi-san."
+        RM "I didn't have much luck initiating a conversation with the concierge at the hotel either, but you were able to get them to talk."
+        show RM neutral
+        MC "That's because I don't treat most conversations like an interrogation."
+        RM "I doubt it's as simple as that. Even you would have to admit you have some kind of magnetism about you that draws people in and gets them talking."
+        MC "I believe the term for that is \"Main Character Energy\"."
+        show RM angry-2
+        RM "I think the term \"Sidekick Sleuthing\" is more fitting, given that {i}I'm{/i} the lead investigator."
+        MCT "A bit touchy about titles, are we?"
+    elif getFlag("VisitedBakery"):
+        RM "Besides, this approach worked well when talking with Nurse Kiyomi, Tsubasa-sensei, and Kazomazumi-san."
+        show RM neutral
+        MC "That's because I don't treat most conversations like an interrogation."
+        RM "I doubt it's as simple as that. There's something about you that makes you seem trusting that lets people open up to you."
+        MC "Maybe because I don't radiate distrust with every fiber of being... unlike a certain someone."
+        show RM neutral-2
+        RM "Perhaps your naïveté isn't just a liability afterall."
+    elif isEventCleared("RM008"):
+        RM "Besides, this approach worked well when talking with Nurse Kiyomi and Tsubasa-sensei— plus that time at the hotel when you got the concierge talking."
+        show RM neutral
+        MC "That's because I don't treat most conversations like an interrogation."
+        RM "I doubt it's as simple as that. There's something about you that makes you seem trusting that lets people open up to you."
+        show RM neutral-2
+        MC "Did it ever occur to you that projecting suspicion might make other people suspicious?"
+        RM "Not at all. In fact, I'd say most people aren't nearly suspicious enough."
+        MCT "Good thing we've established off the bat I'm doing the talking then..."
+    else:
+        RM "Besides, this approach worked well when talking with Nurse Kiyomi and Tsubasa-sensei."
+        show RM neutral
+        MC "That's because I don't treat most conversations like an interrogation."
+        RM "I doubt it's as simple as that. You seem to have a way with words that makes you seem trusting that lets people open up to you."
+        show RM angry-2
+        MC "They're called conversations. You might become acquainted with the practice if you ever manage to talk to other people outside of class instead of just disappearing."
+        RM "{i}Tch{/i}, shut up."  
+
+    show RM neutral-2
+    RM "Besides, this is a team investigation. We should both be playing to our strongsuits."
+    RM "You handle the witness, I'll be handling the logistics."
+    MC "Logistics? {w}Don't tell me this is going to turn into another one of your heist operations."
+    show RM happy
+    RM "No, no. Don't worry about it. All you gotta do is keep Misuboro-san talking and at some point try to divert the topic to the Giant's Dorms and see what he'll have to say about it."
+    "I just stared at Daichi with a mix of perplexity and disappointment." 
+    "I had no idea what I was about to walk into in the next few minutes. But seeing as I was the one who pitched the idea to come here in the first place, I resigned myself to the realization that my present predicament was far more my fault than his."
+    MC "Alright, let's go then I guess."
+    show RM happy-2
+    RM "Excellent."
+    "And with that we headed up the trail to the workshop. {w}I had my doubts we'd find what we were looking for, but I was pretty sure we were going to find [i}something{/i} at the very least."
+    scene black with fade
+    scene Workshop with fade
+    MC "You think I should ask about the manufacturer problem, with the lock I mean?"
+    show RM doubt with dissolve
+    RM "I'd hold off on that. I don't think it's something that could pass without tipping him off. {w}I mean you have to really get a good look at that thing, intentionally, to spot the manufacturer's markings."
+    show RM neutral-2
+    RM "As much as I'd like to know, only do it if you find a good excuse to mention it."
+    MC "I'll keep that in mind."
+    "We were just now coming up on the workshop, or at least what I assumed it had to be, given that there weren't any other buildings around this place."
+    "It was a rather industrial looking building with a few side entrances and a large garage style door on the narrow side of it that was closed. Some kind of utility vehicle was parked out in front of it."
+    MCT "Maybe that's what Misuboro-san uses to get around campus. He's not exactly going to be hauling furniture across campus himself unless he has some kind of hidden muscle growth factor."
+    "As we approached the entrance we stopped just in front of the white door leading in. I say \"white\" but all manner of grime and dust had marred its original coloring years before we ever laid eyes on it."
+    show RM pondering
+    RM "Well, what do we do now?"
+    MC "I don't know. You think we should knock?"
+    RM "Not sure, I haven't been here before. I honestly don't know. Do you know if visitors are even allowed?" 
+    show RM doubt
+    MC "That question hasn't stopped you before."
+    RM "Yeah yeah. What I mean is, it is a working shop after all. Maybe there's some safety issue where they don't want people just going to and fro?"
+    MC "I mean, they do have classes here. I guess we wouldn't look that out of place by just walking in."
+    show RM neutral
+    RM "That's true. Let's just go for it then."
+    MC "Right."
+    show RM doubt
+    "Despite his new found resolve, Daichi still had me lead the way through the door."
+    scene Workshop with fade
+    play music DormLife
+    "Stepping inside the place was pretty wide open, but busy with the hum of machinery from a few students that appeared to be tinkering around at their work stations."
+    "Most of the workstations however were unmanned, but still occupied with furniture items in various stages of completion or disrepair, many of which were of unusual proportions... as most things at the academy tended to be."
+    "The walls were covered in pegboard, hosting an impressive amount of tools mounted to be kept at the ready." 
+    "It seemed to go on and on, with plenty of tools I hadn't even seen before, which didn't even cover the tools hidden away in the various tool chests dotted between workstations." 
+    MCT "Most seem to be woodworking tools of some kind if I had to guess..."
+    "There was plenty of heavy equipment too. Bandsaws, belt sanders, laiths— I think I even saw an anvil."
+    "The entire place was messy and dirty, with a noticeable coat of dust on everything and the palpable smell of petrol grease in the air. But it wasn't in complete disarray, more or less in the state of any other working shop."
+    "Looking around at the handful of students in the workshop- not a woman in sight mind you- they all appeared to be wearing what looked like school issued mechanical jumpsuits."
+    "Obviously it was to protect their school uniforms from sawdust and grease, and hopefully their skin, but it made me aware that without our own jumpsuits we stood out like sore thumbs here. Daichi seemed to notice as well."
+    show RM neutral with dissolve
+    if routelock == "PRG" or isEventCleared("MC009"):
+        "What struck me though was that Daichi's earlier comparison to Takamura-sensei wasn't that far-fetched. It seemed like the place functioned much like the cooking club, where students worked in pairs on their projects."
+
+    "Workshop Student 1" "I still can't believe Botan picked the music club over the carpentry club."
+    "Workshop Student 2" "Why? Cause you were hoping you'd get him as a partner?"
+    "Workshop Student 1" "That's exactly why." 
+    "Workshop Student 2" "What am I? Chopped liver over here?"
+    "Workshop Student 1" "No, but your dovetail joints certainly look like it."
+    "Workshop Student 2" "Oh, fuck you. Yours didn't line up right the first time either."
+    "Workshop Student 1" "Yeah, well we can't all be as good as him. Besides, even if he wasn't one of our partners it'd still be nice having him around, since Misuboro seems to like him, he's a hell of a lot less angrier when he's in class."
+    "Workshop Student 2" "That's cause if someone fucks something up he can just have Botan fix it instead of him having to."
+    "Workshop Student 1" "True."
+    "Workshop Student 2" "At least we have her... the {i}other{/i} favorite."
+
+    "Normally Daichi would have been keen to stop and listen in on these kinds of conversations for an investigation, but it didn't appear to be yielding much relevant info."
+    show RM neutral-2 
+    "Coupled with the fact we stood out like sore thumbs, he motioned to me with a tilt of his neck that we should move on."
+    "After wandering around the workshop, we stumbled across an older gentleman, hunched over at one of the workstations, with a desk that appeared to have one leg so bent on it that it looked half mutilated."
+    Misuboro "Tripped over it- {i}my ass!{/i} {w}I bet some little shit dropped this out a window. What are these kids doing over there all day?"
+    "The man himself looked to be in his 50s, but enough age on his skin to make me think he already lived a full lifetime." 
+    "Flicking a cigarette butt from one hand while he pulled out a pack from his front pocket with the other offered a clue as to why, since he didn't exactly look like the type to frequent the tanning booth at the spa."
+    MC "{size=-6}That's gotta be him. You gonna do your \"logistics\" thing now, or what?{/size}"
+    show RM smug
+    "Daichi gave a nod."
+    RM "{size=-6}Follow my lead.{/size}"
+    MCT "And here I thought that's exactly what we {i}weren't{/i} going to do this time."
+    Misuboro "I guess I gotta just take this whole thing off. I'm not going to refab this part, it'll go to scrap..."
+    Misuboro "{i}Girl!{/i} Get me a flat-headed screw driver. A big one too... {w}Girl?..."
+    "Misuboro-san picked his head up to look around the shop, realizing no one else was nearby this whole time."
+    "Damnit! Where has that blasted Jineko gone off to again?"
+    if getFlag("Meet_Jineko") and getFlag("MC005RM"):
+        show RM concerned
+        "Daichi froze in his tracks, then nervously started looking around the shop. Something had managed to set off his suspicion, and not in a good way either."
+        MC "{size=-6}What's going on? Is there something in this place you hadn't told me about?"
+        show RM angry-2
+        "Daichi for his part didn't appear to appreciate the question, and looked like he was about to smack me for my troubles."
+        MCT "Looks like I hit a nerve. I wonder what he's not telling me."
+    elif getFlag("Meet_Jineko"):
+        MCT "Makes sense Jineko would be here at this hour. {w}Or at least, {i}was{/i} here."
+
+    if getFlag("Meet_Jineko"):
+        "While craning his head up down and around the shop looking for Jineko, Misuboro-san turned his head back toward our direction once he spotted something out of place."
+    else:
+        "While craning his head up down and around the shop looking for this Jineko person, Misuboro-san turned his head back toward our direction once he spotted something out of place."
+
+    show RM doubt
+    Misuboro "You boys look lost. Something I can help you with?"
+    RM "Uhhh, yeah... {w}I broke my bed and it needs fixing. I was told to come here."
+    MCT "{i}This{/i} is your grand plan?"
+    "I shot Daichi a look that fully communicated \"This is the stupidest thing you've done yet.\" But Daichi for his part was unflinching."
+    MCT "I mean, his bed wasn't broken this morning... At least I think so? Maybe he's telling the truth? {w}After all, Misuboro-san seems like a tough customer you wouldn't want to lie to..."
+    Misuboro "Hmm..."
+    "Misuboro-san looked Daichi up and down with a long hard stare, taking a long drag from his cigarette in the process."
+    MCT "I knew it. This guy's going to see right through his lies, and then we'll be cooked."
+    Misuboro "HA! How did a shrimp like you manage to damage a bed? {w}You're not exactly the \"typical\" type of student who ends up breaking them."
+    show RM concerned-2 
+    RM "Yes, well... You see..."
+    MCT "Don't act evasive. You'll give yourself away."
+    Misuboro "What did you do? Jump on it like a trampoline— like some moron!"
+    show RM concerned
+    RM "No, no, I-I wouldn't do that..."
+    MCT "Oh don't start stammering, now he's really gonna know!"
+    Misuboro "Ahhh, I know what's going on..."
+    MCT "{i}Argg!{/i} You gave yourself away you idiot! {w}This is why {i}I'm{/i} supposed to do the talking!"
+    Misuboro "You had a romp in the sheets with a particularly large chubster, eh?"
+    show RM doubt
+    RM "Wha?"
+    MCT "Nevermind, this guy totally bought it."
+    Misuboro "Ah, there's no use in hiding it, particularly here. Some like'm big, no shame in that."
+    show RM sad
+    RM "Um, well, really... It's not like..."
+    Misuboro "These beds are pretty sturdy, she must have been a {i}biggun{/i} to crack the frame. Or was it because it was {i}you{/i} taking \"more cushion for the pushing\" a little too literal?"
+    show RM concerned
+    RM "Ehh, I wouldn't say that..."
+    "I had to pinch myself to keep from laughing, but at this point I was about to pass out. Daichi for his part was beat red with embarrassment. Clearly he hadn't thought through his alibi nearly as well as he believed."
+    show RM concerned
+    Misuboro "Haha! Ah well, it happens. Hope she was worth it. {w}As much as it's inconvenient for me to fix'm, it's not like you'd want to do it on purpose, since it sucks to sleep on a broken bed."
+
+    if getFlag("WG053_c2_1") or isEventCleared("WG057"):
+        "I couldn't help but think Alice served as a more recent example that led Misuboro-san to speculate on what might have happened."
+    if isEventCleared("WG071"):
+        "Though Misuboro meant it as a more humorous suggestion, it personally had me reflecting fondly on my own personal experience with breaking that bed with Alice. Guess we weren't the first students to do something like that."
+    
+    show RM doubt
+    RM "So this is the right place?" 
+    Misuboro "Oh, you're in the right place, alright."
+    show RM neutral-2
+    "Misuboro put his hands up and gestured around the floor of the shop, noting the scattered bits and pieces of furniture all over the place."
+    Misuboro "But you didn't have to bother coming all the way up here. You could have just reported it to the administration and they would have put in a work order for you."
+    Misuboro "Do you have a photo of it on your phone? If I know the type of damage it'll make it easier."
+    show RM concerned-2
+    RM "Sorry, I didn't think to do that. I guess I got a little hasty in just trying to make the trip up here when I heard I could get it fixed."
+    Misuboro "Well, think next time and save us both the trouble. Now I gotta get some form filled out with all the details so I know where to pick it up."
+    show RM neutral
+    Misuboro "There should be some in my office. Let's just go in there and get this over with."
+    "Misuboro-san had a somewhat quickened pace as he beckoned us to follow behind him." 
+    Misuboro "Now in case you hadn't noticed, I don't get my own secretary out here and I sure as shit don't like doing paperwork."
+    Misuboro "So next time, remember: a picture's worth a thousand forms."
+    show RM sad
+    RM "Right. Sorry."
+    scene black with fade
+    pause .2
+    scene Workshop with fade
+    play music RMInvestigate
+    "Misuboro's office was a small space within the workshop off to the side. The long wall of the room was a full glass window you could see most of the shop from."
+    "The office itself was fairly bare bones. A desk, some file cabinets, and one shelf in the corner that looked to be full of machinery manuals, technical books and the like." 
+    "The place looked like it didn't get used that much, but at the same time looked worn out and old. {w}Maybe it was more accurate to say it just didn't get cleaned that often."
+    "The ashtray on his desk filled to the brim with butts and ashes supported my theory quite nicely."
+    MCT "I'm pretty sure this place is supposed to be a smoke-free campus..."
+    "I barely noticed it out of the corner of my eye, but the instant response of my lizard-brain told me what I was looking at when I saw a wall calendar near his desk that had topless woman as the feature of the month."
+    show RM neutral with dissolve
+    "I gave Daichi a nudge in his side with my elbow, gesturing with my head towards the calendar."
+    show RM distrustful
+    "Daichi for his part didn't look terribly amused and just shook his head. {w}I didn't take him for a prude, so if I had to guess, he was more so in the zone and didn't want to have to entertain such \"distractions\"."
+    MCT "Heh, his loss. She's got a set of knockers on her for sure."
+    if routelock == "BE":
+        "Of course they didn't hold a candle to Honoka's honkers, but who's could?"
+    show RM neutral 
+    MCT "The guy must not have much oversight out here if isn't worried about admin staff walking into his office."
+    "Misuboro-san was rummaging through some of the cabinets, clearly having trouble locating the thing he was looking for."
+    Misuboro "Where are those damn forms? Hell, for all I know I threw them all out so I wouldn't have to do this shit..."
+    Misuboro "I thought it was in here... {w}Oh wait, it's probably in this one."
+    show RM happy
+    "Daichi turned to me and gave me a nod."
+    MCT "Right. Looks like he's distracted, but not critically distracted. Now's gonna be as good an opening as any to see if we can get him to talk." 
+    MC "So... How is it to be working furniture that's so much larger in size?"
+    Misuboro "It's certainly not typical, but I guess I've gotten used to it."
+    Misuboro "Can't speak for other carpenters though. You know, not everyone has the skills to do this kinda job right. {w}This isn't a job any ol' amature can do— it requires a real professional."
+    Misuboro "I've been working here for over a decade. So this kinda stuff became a regular Tuesday. The unusual just sorta became the usual."
+    show RM doubt
+    "Promptly stopping his rummaging through the file cabinets when he saw something that raised his eyebrow, he pulled out a piece of paper, slammed it on his desk."
+    Misuboro "Fill out everything here and give it back to me when you're done. Here you go."
+    "Misuboro tossed a pen onto the desk that skidded towards Daichi's direction but not quite enough to fall off the table."
+    show RM smug
+    RM "That won't be necessary, I brought my own."
+    "Misoboro gave Daichi an odd sort of look, possibly wondering why he bothered to announce that, beyond the man's more general sense of impatience."
+    MCT "Perhaps he's suspicious because we don't have our school bags with us? Maybe he noticed something else?"
+    show RM neutral-2
+    "I decided not to agonize too much over my growing doubts, lest they fully materialize."
+    "Misuboro didn't seem to care all that much as he took a break to recline back in his office chair."
+    Misuboro "Back your question, this work requires a lot of precision. It requires real mindfulness of the dimension and securing all the jointing so that people of various sizes can freely use all of it."
+    Misuboro "Though, every once in a while, a new record holder appears and things that were secure enough in the past are suddenly out of date." 
+    Misubor "Which means sometimes this work can lead to a lot of surprises— and not the good kind. {w}But it is what it is."
+    show RM smug
+    "Daichi appeared to be diligently filling out the form, but it was all just exaggerated theatrics."
+    RM "Ack-eh-hem."
+    "Daichi cleared his throat, signaling me to cut to the chase. Given the past experiences where his abruptness and impatience caused setbacks, I realized it would be prudent for me to broach the subject before he did."
+    MC "What's the largest thing you've ever worked on?"
+    show RM happy
+    Misuboro "Ha! You're talking about basically anything that gets installed at the Giant's Dorms."
+    Misuboro "As big as most things are you might see on the main campus, everything pales in comparison there to that place."
+    Misuboro "Not many students seem to go there, have you heard about it?"
+    MC "Yeah, we're familiar with it, but haven't been..."
+    if isEventCleared("RM010"):
+        "I wasn't proud of myself, but I thought a little white lie here was probably for the best."
+        "I certainly didn't want to lead on about any of our snooping around the Giant's Dorms, and I thought feigning ignorance might get him to divulge some insights we might have overlooked."
+
+    MC "One of our teachers told us about the place and said it's a facility inside a massive quarry. Is that true?"
+    Misuboro "Mm-hmm."
+    "Misuboro-san nodded."
+    Misuboro "You might have noticed before you entered the workshop the various bits of heavy machinery and odd parts lying around outside."
+    Misuboro "Those are the remains of when there was a mining operation within that quarry. I don't really know a lot about those times though, it was long before my tenure."
+    Misuboro "Never asked, never cared to be honest."
+    Misuboro "Within the quarry there are multiple hangars scattered around the pit where the students live. They were repurposed as dorms for the students that get transferred there."
+    Misuboro "Each one has their own hanger, not like other students that have a roommate on the main campus." 
+    show RM neutral-2
+    Misuboro "My guess is that it's because they're never sure how much they'll actually grow. Don't want things getting too cramped for personal space I suppose..."
+    if isEventCleared("GTS030"):
+        MCT "That squares with how Naomi wasn't assigned a roommate when she moved over there."
+        MC "Since you mention it, and I hope I'm not overstepping by asking, but I am curious if it ever happened that a giant \"outgrew\" their hanger."
+    if isEventCleared("RM008"):
+        "Out of the corner of my eye, I could see Daichi still trying to fake progress on his form, while his real attention was taking notice of how I was handling the conversation." 
+        MCT "Hopefully he can learn a thing or two about how to relate to people."
+        show RM doubt
+        "Daichi was anxiously silent as he hoped for Misuboro-san to respond to the question."
+
+    if isEventCleared("RM010"):
+        Misuboro "Tokei and the people he hired covered all of the possible angles. I don't sweat it much personally."
+    else:
+        Misuboro "As far as I can gather from what I've heard, the constructors who came up with repurposing the dorms actually took that into consideration."
+        Misuboro "All of those hangers have metal roofs that can easily be taken off and the height of the hanger can be extended by adding a structure of concrete blocks stacked on the top of the original construction."
+
+    MC "But has that ever happened before?"
+    Misuboro "Well..."
+    play sound knock
+    show RM angry-2
+    "Workshop Student 1" "Misuboro-san, I can't find a pair of aviation snips. Do you know where they're stored?"
+    show RM neutral
+    Misuboro "There in the green toolbox on the back wall with the rest of the metal working shit."
+    "Workshop Student 1" "Oh, right. Yeah, I should have checked there first."
+    Misuboro "Yeah, now get your head out of your ass next time and spend more than 30 seconds looking for shit before you ask me something!"
+    "Workshop Student 1" "Sorry, Misuboro-san."
+    "The student scuttled off in a hurry, while Misuboro shook his head as he watched him leave the office."
+    Misuboro "Kids these days. Dumbshits couldn't find their own pecker if it wasn't already attached to'm."
+    pause 1
+    Misuboro "What was I talking about again? {w}Oh yeah, extending the hangers on the Giant's Dorms."
+    Misuboro "It's happened once before, to my knowledge, at least, but it's not really that common of an occurrence, as opposed to some fat student outgrowing their desk or an ass student outgrowing their chair."
+    MC "So do you not get that many calls to the Giant's Dorms then?"
+    MC "Reason I ask is that our teacher told us that place is more secluded and isn't as publicly accessible as the main campus. So, it's probably a hassle to get over there, I'm assuming."
+    Misuboro "I got there from time to time. It's fine since it's not so far away from here like the rest of the campus."
+    Misuboro "Plus everything inside is so large that moving around with my utility cart is easy peasy."
+    Misuboro "I'm just glad the students rarely ever bother me whenever they forget the password to that blasted gate."
+    show RM happy
+    MC "So some student forget it?"
+    Misuboro "Not so much anymore. It'd be a much bigger pain in the ass if the password was constantly changed, which was how things were before Noguchi became the principal."
+    Misuboro "I bet he got tired of all the calls to the facility when students would be locked out of their dorms." 
+    Misuboro "Password's the same all year round, unless some type of emergency happens to cause a change."
+    show RM happy-2
+    "For a brief second, Daichi's eyes lit up like he just hit a jackpot."
+    show RM neutral-2
+    Misuboro "Might not sound too secure, but consider if a student were to get locked out during a lightning storm or a tornado and the admin couldn't react in time, they'd have been in deep shit, let me tell you."
+    pause .5
+    "Misuboro-san paused and scratched his chin."
+    Misuboro "Hmm, now that I think about it, I probably wasn't supposed to mention anything about that. {w}Eh, you kids can keep it yourselves."
+    show RM neutral
+    "Both Daichi and I gave Misuboro-san a solid nod to confirm. Not that we'd have a reason to share beyond ourselves anyway, but even more so we wouldn't want to draw suspicion to our investigations there."
+    "Part of me wanted to press the issue further and ask about the lock manufacturer, but after racking my brain for a feasible reason I was drawing a blank." 
+    "Besides, asking about it right after he told us not to talk about the password access was just going to come across as too obvious." 
+    "Misuboro-san might not care too much himself, but it was pretty clear from talking to him that he was far more observant and sharp than his withered visage would lead one to assume."
+    #if isEventCleared("RM010):
+        #"I decided to pivot to a different topic instead."
+        #MC "Hey, this might sound out of the blue, but are you familiar with someone named Banri Tokei?"
+        #Misuboro "Are you talking about Saburō? He didn't have any children and I can't say I recall anyone else with that last name."
+        #MC "I was just curious, thought someone around the school might know. Thanks though."
+        #"Before that line of inquiry fell offtrack, Daichi came in with the save."
+    show RM happy-2
+    RM "All done. Here you go."
+    "Daichi handed over the completed form to Misuboro-san. As to what he actually wrote on the thing to help his alibi, I could only guess— other than our room number."
+    Misuboro "Alright, looks like everything's there. I can make it over to your dorm in about half an hour to look at the bed."
+    show RM doubt
+    RM "!"
+    RM "Uh... So soon? {w}I mean... It's by no means an urgent request."
+    Misuboro "That's what I'd say, but the administration told me I gotta prioritize work orders that impact the living conditions of the students."
+    Misuboro "So that desk refurbishing will have to wait I guess."
+    show RM smug
+    RM "Ah... Well, makes sense. I'll be there waiting. Thank you."
+    Misuboro "Goodbye, Hostsure-san."
+    MCT "...{w}I don't remember ever telling him my name."
+    pause 1
+    show RM happy-2
+    MCT "...Because he read it from the form{w}— Oh, you motherfucker!"
+    "I glared at Daichi with the anger of a thousand suns hoping to burn through his skull while he just kept up his stupid little act."
+    RM "See you in a bit, Misuboro-san."
+    pause .5
+    show RM doubt
+    Misuboro "Boy, you forgot something."
+    "For a brief moment, my heart skipped a beat."
+    MCT "Shit. Did he figure out our act?"
+    "Daichi looked confused, ready to panic even."
+    pause .5
+    "Misuboro motioned to the pen Daichi left on his desk."
+    show RM happy
+    RM "Oh, yeah! {w}Sorry. Thanks."
+    "Daichi sheepishly tucked his pen into his front pocket before we both slinked out of the office, hoping to not draw any further suspicion on our way out of the workshop."
+    scene black with fade
+    pause .2
+    scene Chukan Point with fade
+    play music ClearSkies
+    MC "So... When were you planning on telling me you intended to write my name on the form instead?"
+    show RM neutral
+    RM "The less paper trail that can be traced back to me, the better as far as I'm concerned."
+    MC "Dude! We live in the same fucking dorm!"
+    show RM happy-2
+    RM "Exactly."
+    "I reflexively facepalmed, even harder than I intended, smacking myself to the point I had to collect my bearings for half a sec." 
+    MC "You do realize that's going to draw more attention to you if there ever comes a time he realizes the mistake?"
+    show RM neutral
+    RM "In my estimates that's pretty unlikely. In case you can't tell, you have a pretty low profile here compared to most— if not every other student here."
+    MC "Hey! What's so unremarkable about me? I'd have thought hair like this would draw attention anywhere."
+    RM "It's not hard to imagine people might have a hard time remembering the guy who they've never seen half his face."
+    MC "What can I say? I have an air of mystery about me."
+    show RM neutral-2
+    RM "More like an air of obscurity."
+    MC "Oh, shut up. {w}At least I don't have the notorious distinction of being the guy who crawls through the vents."
+    show RM distrustful
+    RM "Who knows about that?"
+    MC "More people than you'd like, I'll say that much."
+    RM "You're merely bluffing."
+    MC "I'm not saying I told anyone, I'm just telling you what I know. Besides, no one would believe me even if I told them."
+    RM "How convenient."
+    MC "Whatever. At least we learned that the code is the same all year."
+    show RM neutral-2
+    if isEventCleared("RM010"):
+        MC "This means the code is good to use if we need it. We won't have to worry about getting a new one half way into the semester."
+    else:
+        MC "We already have part of the code, so we're close to cracking it without having to worry about our work going to waste if we do find the other numbers."
+
+    show RM pondering
+    RM "It's a good breakthrough but I'm rather skeptical."
+    MC "What's new? You're always skeptical."
+    show RM doubt
+    RM "It's a suspiciously obvious security flaw."
+    MC "Did it ever occur to you that behind those gates isn't anything nearly as nefarious as what you might be imagining?"
+    MC "I mean, half the point of this campus in the middle of bumfuck nowhere is so the growth factor students can have some privacy, even more so for the giants."
+    RM "They wouldn't have the gate code in the first place if there wouldn't be something there."
+    MC "You could say the same things about the lock on our dorm room. Should people assume you're hiding something because of that?"
+    show RM distrustful
+    RM "One would be foolish not to hide things from other people."
+    MC "You're hopeless."
+    MC "Honestly, I think you're just overthinking this thing and there's probably a simpler explanation to it all."
+    show RM doubt
+    RM "I doubt it. But that's a question for later. Misuboro-san will be at our dorm soon."
+    MC "So did you lie about your bed being broke, or did something actually happen to it and that was the excuse you needed?"
+    show RM smug
+    RM "I don't even know what you're talking about."
+    show RM happy-2
+    RM "Now if you'll excuse me, I have a bed to smash."
+    "Daichi continued walking along non-chalant, whistling as he went, as I stopped to stare daggers into the back of his head."
+    if getFlag("RMG001_Lie"):
+        MCT "Guess I can let him off the hook, seeing as I thought to lie when it seemed a convenient alibi with my solo investigation on the bus route."
+
+    pause 1
+    MC "...Wait a second."
+    MCT "If he wrote my name on the form..."
+    MC "Hey! Which bed did you report on the form?"
+    show RM happy
+    "Daichi didn't say a word, but noticeably picked up his pace in response to my question."
+    MC "{i}Oi, oi!{/i} Which bed did you report!"
+    hide RM with dissolve
+    "I picked up the pace only to see Daichi wind up into a full sprint."
+    MC "Oy! Daichi! {w}{i}Daaaaaichi!!{/i}"
     jump daymenu

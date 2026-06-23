@@ -15701,7 +15701,7 @@ label GTS058:
 
     MC "Mm..."
     MCT "I kinda hope impromptu picnics won't become a regular thing."
-    MCT "Still, I'm glad she's making friends… and that she wants me to take part in it."
+    MCT "Still, I'm glad she's making friends... and that she wants me to take part in it."
     "A few minutes later, as a small group of other students alighted on the roof, I realized I was humming and withdrew the song to my head."
     stop music fadeout 5.0
     "Another seeming moment and it was done, the planters like a balding pate. I bagged up the chaff and walked away."
@@ -15715,10 +15715,10 @@ label GTS058:
         MCT "Looks like a couple people are hanging out already."
         if isEventCleared("RM006"):
             "Among them, I recognized the relatively lithe figure of Junsei faintly swaying as he sat behind the impromptu firepit next to my destination. Jineko stood beside, pointing, chopping, sprinkling invisible salt."
-            MCT "Wonder if his buddy's gonna be at this shindig… hope he's cooled off a little if he is."
+            MCT "Wonder if his buddy's gonna be at this shindig... hope he's cooled off a little if he is."
         else:
             "I recognized Jineko standing by a relatively lithe man apparently serving as the grillmaster. She pointed, chopped, and sprinkled invisible salt as he swayed faintly in his seat, nodding periodically."
-            MCT "Funny she isn't on grill duty. Perhaps there was an experiment gone wrong…"
+            MCT "Funny she isn't on grill duty. Perhaps there was an experiment gone wrong..."
             MCT "Damn good salmon, though."
         "Somehow, neither one took notice as I made my way to Naomi's door."
         play sound Knock
@@ -15760,10 +15760,10 @@ label GTS058:
         show GTS neutral 
         GTS "Well, more to the point, I suppose I ought to tell you what precisely I mean."
         "She gingerly reached across a gap I would've had to jump and brought the roll of paper to her lap."
-        GTS "The aim of today's picnic, to which I am solemnly devoted, is firstly to foster a sense of community amongst the other students at this site, united as we are in a common affliction…"
+        GTS "The aim of today's picnic, to which I am solemnly devoted, is firstly to foster a sense of community amongst the other students at this site, united as we are in a common affliction..."
         GTS "...And secondly, to gather information on the character of each one, and the relationships betwixt them."
         MC "Interesting. I'm guessing {i}that{/i} part wasn't Masaji-san's idea."
-        GTS "Indeed, I stand on the shoulders of… well, erm…"
+        GTS "Indeed, I stand on the shoulders of... well, erm..."
         GTS "That is, two heads are better than one."
         MC "Sure, Blossom. Though I can't say I would recommend standing on anyone's shoulders for you. {w}Except mine, y'know, if you wanted."
         show GTS wink
@@ -15905,9 +15905,9 @@ label GTS058_c1:
             GTS "Mizawa-san, however, seemed quite enthused. I must have caught her on a slow day for the music club."
             MC "Must be. The fact that you're offering free food in giant-sized portions is of course immaterial."
             show GTS embarrassed
-            GTS "{i}Khm{/i}… now, now, Keisuke-kun."
+            GTS "{i}Khm{/i}... now, now, Keisuke-kun."
             MC "Hey, we're in private. And really, would she deny it?"
-            GTS "She {i}does{/i} have a commendably forthright manner…"
+            GTS "She {i}does{/i} have a commendably forthright manner..."
             show GTS neutral
             if isEventCleared("GTSBE005"):
                 GTS "Speaking of which, I've also taken the liberty of inviting Inoue-san."
@@ -15927,7 +15927,7 @@ label GTS058_c1:
             MC "Okay, that sounds nice."
             GTS "I expect it should be quite pleasing indeed."
             pause 1.0
-            MC "Especially for the given… conditions."
+            MC "Especially for the given... conditions."
             "Her shoulders slumped a little as she looked down at me."
             GTS "Yes."
             jump GTS058_c1
@@ -15951,7 +15951,7 @@ label GTS058_c1:
             jump GTS058_c2
 
 label GTS058_c2:
-    GTS "Capital. In that case, it will be a while before everyone starts to gather…"
+    GTS "Capital. In that case, it will be a while before everyone starts to gather..."
     show GTS wink
     GTS "Might just one more episode of 'Looking Up to Nobi-Sensei' be in order?"
     MC "By Jove, it just might. Shall we go fire up your computer?"
