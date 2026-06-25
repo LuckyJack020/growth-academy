@@ -133,6 +133,8 @@ label AE002:
     scene Office
     show AE neutral
     with fade
+    if not getFlag("VisitedAEOffice"):
+        $setFlag("VisitedAEOffice")
     "The inside of the room was larger than it first looked. There were filing cabinets that lined the walls, and a long table in the middle with different chairs for the representatives and student body to discuss the agenda of the day."
     AE "There. Now, what do you need?"
     MC "Oh, uh, yeah. Yesterday in the library, you forgot this."
