@@ -21025,7 +21025,7 @@ label WG070:
     "In my defense, my relative lack of grace in comparison to hers was not entirely my fault. I was at the absolute limits of my reach to keep one hand on her hip and my other hand in hers as we stepped to-and-fro."
     "Alice for her part had to settle for reaching my elbow instead of my shoulder, as her generous bulk proved prohibitive for her reach, even more so than mine. Something that had become increasingly apparent as of late."
     "But tonight, in this moment, we were able to push aside that growing dilemma to the back of our minds as we embraced each other across the dance floor."
-    "Despite my difficulties attempting to fully reach her, we managed to overcome it by embracing each other tightly. With each step I found myself sinking deeper and deeper into her soft, lucious middle. It was heavenly."
+    "Despite my difficulties attempting to fully reach her, we managed to overcome it by embracing each other tightly. With each step I found myself sinking deeper and deeper into her soft, luscious middle. It was heavenly."
     "I didn't think the material of her dress was thin if it could contain all of her, but I suppose squeezing each other this tight it was impossible for her to have not felt something at this point I had no control over."
     "We both blushed at the realization of what was happening, but were able to compose ourselves accordingly."
     "As we continued to waltz, it was apparent that Alice was the center of attention of the entire ballroom. However, with her full grace and bearing intact despite her growth, this time it was for the right reason."
@@ -27930,7 +27930,7 @@ label WG086:
     with fade
     "The bus ride into town didn't exactly start our date off on the right foot. Her most recent changes in size made negotiating the seemingly spacious doors problematic." 
     "It took a bit of maneuvering to get her hips past the sides of the doors, while her belly presented with some issues of its own negotiating the step up from the entrance."
-    "Thankfully the isles of the bus were pretty spacious where she could navigate reasonably well. Though I found it unfortunate I wasn't able to sit next to her, due to her taking up the entirety of the three seats on the one side of the bus herself."
+    "Thankfully the aisles of the bus were pretty spacious where she could navigate reasonably well. Though I found it unfortunate I wasn't able to sit next to her, due to her taking up the entirety of the three seats on the one side of the bus herself."
     show WG doubt
     WG "I think in the future we'll be wanting to arrange some alternative means of transportation for any future town excursions."
     MC "Noted. Sorry about this, Alice."
@@ -27964,7 +27964,7 @@ label WG086:
         show WG worried
         extend " I doubt the owners would even recognize either of us."
         show WG neutral
-        MC "All the more reason to get acquainted, I'd say. The people who run the shop are nice. The lady working the checkout counter is actually a former student at the Academy."
+        MC "All the more reason to get acquainted, I'd say. The people who run the shop are nice. The lady working the checkout counter is actually a former student from the Academy."
         show WG surprised-2
         WG "Really?"
         show WG neutral
@@ -28032,7 +28032,7 @@ label WG086:
     Cashier "Alright, I'll put that through the slicer and have these wrapped up for you—"
     MC "We'll be eating in, if that's alright."
     "Haruko briefly paused before turning towards Alice, no doubt feeling foolish for her initial assumption."
-    Cashier "Certainly, that's not a problem at all. We have plenty of seats available. Dine-in bread orders come with complementary rosemary olive oil and butter. I will get your order out to your table with them."
+    Cashier "Certainly, that's not a problem at all. We have plenty of seats available. Dine-in bread orders come with complementary rosemary infused olive oil and butter. I will get your order out to your table with them."
     
     scene Bakery with fade
     "Alice and I walked over to the seating area. Even though most of the establishments were built with at least some attempt to accommodate the growths in mind, standard booth seating was a foregone conclusion."
@@ -28218,7 +28218,7 @@ label WG086:
     show WG haughty
     WG "I'll leave the decision in your more than capable hands," 
     show WG sly
-    extend " given you genius intellect after all." 
+    extend " given your genius intellect after all." 
     scene Bakery Entrance with fade
     "I walked back to the counter for another order. Haruko must have seen me waiting and emerged from the back of the shop."
     Cashier "Would you like to make another order?"
@@ -28275,7 +28275,7 @@ label WG086:
     show WG sly
     WG "I'm thinking about admitting you to an institution long before I admit to that notion."
     MC "I'll admit, there is something about those azure eyes and blonde curls of yours that drives me crazy."
-    WG "You are a terrible flatter."
+    WG "You are a terrible flatterer."
     show WG happy-2
     extend " But I love you anyway."
     MC "I love you too, Babe. Don't ever forget it."
@@ -28308,7 +28308,7 @@ label WG086:
     "As if on cue, Haruko approached our table, likely noticing Alice had polished off the last of the order."
     Cashier "I don't mean to rush you two, but we only have a few minutes until closing. Can I get you a box of something to go?"
     WG "I'll take two dozen cupcakes please. It's been a while since I had them from here and they were delightful."
-    Cashier "They are one of our specialties. I do apologize though, we don't quite have enough left over at the end of the, but I could provide an assortment of cupcakes, scones and muffins."
+    Cashier "They are one of our specialties. I do apologize though, we don't quite have enough left over at the end of the day, but I could provide an assortment of cupcakes, scones and muffins."
     show WG pondering
     WG "I suppose a bit more variety would be a good thing."
     show WG neutral-2
@@ -28369,7 +28369,7 @@ label WG087:
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Dorm Hallway with fade
     "The time had come for our awaited movie night. Though earlier on when we first started dating this would have meant a trip to the movie theater, the more private and intimate setting of our rooms lent itself better to the \"other activities\" involved."
-    "...That was her reasoning anyway, though part of me I had reason to suspect Alice was leery of being able to fit in the movie theater seats. She had been quite conscious of such things after her incident with the bathtub." 
+    "...That was her reasoning anyway, though part of me had reason to suspect Alice was leery of being able to fit in the movie theater seats. She had been quite conscious of such things after her incident with the bathtub." 
     "Not to say her concerns were unfounded. Even with the island's facilities being accommodating to the dimensions of its residents, it was clear that Alice's unique proportions exceeded far beyond what most businesses would think to accommodate." 
     MCT "Well, let's hope for tonight we can forget about all of that."
     play sound Knock
@@ -28540,7 +28540,7 @@ label WG087:
     "Then it followed that they were set to marry, but the guy didn't have any money."
     PRG "That's so sad. They love each other. Why is money so important?"
     show WG neutral
-    WG "It especially was in those times. The husband was expected to pay a dower prior to marriage as a form of security if she were to become widowed."
+    WG "It especially was in those times. The husband was expected to pay a dowery prior to marriage as a form of security if she were to become widowed."
     WG "It more or less still stands to this day though. No self-respecting father is going to give away his daughter in marriage to a man who can't support her."
     PRG "It just doesn't seem fair."
     WG "Life isn't often about what's fair, but what you're willing to fight for."
@@ -28551,7 +28551,7 @@ label WG087:
     show WG neutral-2
     "The guy goes off to make his fortune, promising he'll come back, but he dies. A rather grizzly death too, killed by pirates and all. Naturally, the girl is devastated, vowing to never love again."
     PRG "I... thought you said this was a fun romance movie, Alice?"
-    WG "Patience, just a little bit more, you'll see. Sometimes a big payoff just needs a more of an upfront investment."
+    WG "Patience, just a little bit more, you'll see. Sometimes a big payoff just needs more of an upfront investment."
     "Fast forward to the future and we see a prince making an announcement about his upcoming marriage, revealing the female protagonist as his bride to be."
     MC "Well, she seemed to trade up. Good for her."
     PRG "She doesn't love him..." 
@@ -28569,7 +28569,7 @@ label WG087:
     "Of course then after that the real plot twist was revealed that the prince was the one who hired the bandits to kidnap the princess so he could frame her death on the neighboring kingdom to start a war."
     show PRG angry
     PRG "I knew he was all pompous for a reason..."
-    MC "He did come off as kind of dick."
+    MC "He did come off as kind of a dick."
     show PRG surprised
     "In another twist, the bandits the hero defeated broke him out of jail, partly as a favor that he spared them and the other part of practicality, since they needed his help to defeat the prince and his guardsmen."
     show PRG insecure
@@ -28630,7 +28630,7 @@ label WG087:
     play music Memories
     MC "I'm glad she was able to join us. She certainly enjoyed the movie. I got the feeling she was feeling a bit lonely like you said."
     show WG neutral-2 at altMove(0.5, 0.5)
-    WG "She's a sweet girl, selfless to a fault. Honestly, I think she would have laid on a bed of straw throughout her entire pregnancy without so much a whimper rather than ask for a pregnancy pillow for herself."
+    WG "She's a sweet girl, selfless to a fault. Honestly, I think she would have laid on a bed of straw throughout her entire pregnancy without so much as a whimper rather than ask for a pregnancy pillow for herself."
     show WG worried
     WG "I think she doesn't want to interrupt me, but I'd prefer it if she did, rather than allowing me to get so caught up in my business that I nearly forget she's there."
     MC "Sounds like you worry about her quite a bit."
@@ -28866,7 +28866,7 @@ label WG088:
     WG "That's what the tickets say. It's downtown at the local theater."
     Okisho "What? No way! That shithead never said anything to me! {w}Aw man, I bet he was going to try to surprise me."
     MC "Sorry, didn't mean to spoil the surprise. I thought you already knew."
-    Okisho "Naw it's cool. Probably better I'm finding out now cause I don't think he realizes how hard it is to find dresses in size \"super fattass deluxe\"."
+    Okisho "Naw it's cool. Probably better I'm finding out now cause I don't think he realizes how hard it is to find dresses in size \"super fatass deluxe\"."
     show WG surprised-2
     Okisho "Heh, it's been a while since I've seen him— long before all of {i}this{/i}!"
     play sound Thud
@@ -28907,7 +28907,7 @@ label WG088:
     WG "I suppose. Though that's a more generous interpretation than I would offer."
     MC "I mean, no one tried to kill each other it looks like, so that has to count for something, right?"
     WG "I wouldn't discount the possibility if you hadn't brought refreshments. She's not the easiest person to deal with, especially on an empty stomach."
-    "At this point I realized I had unknowingly put myself in harm's way earlier by getting between to hangry fat chicks while carrying boxes full of donuts."
+    "At this point I realized I had unknowingly put myself in harm's way earlier by getting between two hangry fat chicks while carrying boxes full of donuts."
     show WG haughty
     WG "But dealing with difficult people is part of doing business, whether that's clients or employees." 
     WG "To her credit, she's not bereft of redeeming qualities. As Father would say \"genius covers many shortcomings\"."
@@ -29357,7 +29357,7 @@ label WG090:
     "Jineko shot me a wink out of the corner of my eye."
     Jineko "{size=-6}Seems like there's some spark left in the old man after all.{/size}"
     MC "Thanks for your help Misuboro. It means a lot to me."
-    "Misuboro-san, resigned to his commitment, pulled out another cigarette from his front pocket and gave it a lit before taking another long drag."
+    "Misuboro-san, resigned to his commitment, pulled out another cigarette from his front pocket and gave it a light before taking another long drag."
     Misuboro "I can't promise anything. We'll be lucky if we can salvage a single chair out of this mishmash of scrapped garbage."
     MC "I'd be more than happy with that. Anything would be a win compared to walking away with nothing."
     Misuboro "I hope you're looking to get your hands dirty on this too. You can't just drop off a load of junk on someone's doorstep and tell them it's their problem now before walking away."
@@ -29691,7 +29691,7 @@ label WG090:
     WG "Oh my goodness, Keisuke..."
     show WG sad
     WG "It's...It's beautiful."
-    "It turned out we were only able to save one of Alice's three chairs... {w}but by turning three chairs into one seat that could actually fit her. We had to redo the joints, shorten the legs, and fuse the bottom and back as well as re-seem the upholstery."
+    "It turned out we were only able to save one of Alice's three chairs... {w}but by turning three chairs into one seat that could actually fit her. We had to redo the joints, shorten the legs, and fuse the bottom and back as well as re-seam the upholstery."
     "It was more of a parlor bench than a chair at this point, but it looked great. Misuboro-san and Watanabe-san did an amazing job."
     WG "You..."
     show WG happy
@@ -29815,7 +29815,7 @@ label WG091:
     WG "Rather than accepting the reality of another added difficulty and preparing accordingly, I instead found myself burying my head in the sand, hoping things would blow over and I would somehow just stop growing."
     show WG neutral
     WG "A rather silly notion in retrospect, but one I allowed myself to falsely believe in order to satisfy my own ego."
-    MC "Well, I wouldn't be so hard on yourself Alice. Would it really have the best thing if you knew what was ahead of you when you first got here?"
+    MC "Well, I wouldn't be so hard on yourself Alice. Would it really have been the best thing if you knew what was ahead of you when you first got here?"
     WG "You're not wrong. Back then, I couldn't have even fathomed the size I have reached now, let alone in such a short amount of time." 
     WG "But that was the mindset that I used to make it through each day, and I realize now it's not the one that will take me into the future." 
     show WG neutral-2
@@ -29961,7 +29961,7 @@ label WG091:
     show WG haughty
     WG "Excellent. Then it's decided. Don't worry, we'll rendezvous when your massage is finished."
     Manager "Very good. Happy resolution. Thank you for your understanding, Miss Nikumaru."
-    "The manager and Mei sheepily exited the room, closing the door behind them."
+    "The manager and Mei sheepishly exited the room, closing the door behind them."
     Manager "{size=-6}Oi, oi. This is not good... Misaki-san is not going to be happy when she hears this...{/size}"
     show WG neutral-2
     WG "I will be back to check in with you once your appointment is done. Don't worry about me and try to enjoy yourself."
@@ -30005,15 +30005,15 @@ label WG091:
     MCT "...My mouth does not work and I must scream."
     Masseuse1 "Oo, that's a nasty one, haha!"
     MCT "Did she stick my leg in a bear trap or something? What the hell is going on down there?"
-    "Suddenly the pain began to reside and the tension in my calf melted away."
+    "Suddenly the pain began to subside and the tension in my calf melted away."
     MC "{i}Whew... hoo...{/i} How did you do that?"
     Masseuse1 "Haha, feels good doesn't it?"
     MC "I mean, eventually yeah."
     Masseuse1 "Well buckle up buddy. You're stuck with me for two full hours, and if that's what your calves are like, your scapula muscles are going to be in worse shape."
     scene Ryokan Room with fade
     pause .5
-    "The massage continued on in what felt like an eternity that also was over before I knew it."
-    "Sure, there was a lot of pain involved, (I nearly pissed myself when she rolled out my IT band) but by the end of it I felt like I had been molded into a warm pile of relaxed puddy."
+    "The massage continued on for what felt like an eternity that also was over before I knew it."
+    "Sure, there was a lot of pain involved, (I nearly pissed myself when she rolled out my IT band) but by the end of it I felt like I had been molded into a warm pile of relaxed putty."
     "During the whole time we struck up quite a bit of conversation and I tried to pick up and retain as much as I could."
     MC "So you were a student at the Academy I take it?"
     Masseuse1 "Yeah back in the day. That was a long time ago. I forgot when it started, but it hadn't been that long. I was the first person on record to have... well whatever you call this."
@@ -30090,7 +30090,7 @@ label WG091:
     show WG surprised-2
     WG "You hadn't?"
     show WG neutral
-    WG "Oh, Keisuke, Dear, I wish I had known you were so far overdue for one. I'd had arranged it much sooner."
+    WG "Oh, Keisuke, Dear, I wish I had known you were so far overdue for one. I would have arranged it much sooner."
     MC "Now, don't get me wrong, it hurt like hell in some parts, but the end result was worth it. I feel like my muscles got a new lease on life."
     show WG happy
     WG "Excellent. Well I'm glad you were able to enjoy it."
@@ -30158,7 +30158,7 @@ label WG091:
     "I didn't hesitate, having been given the go ahead I full-on mawed those fat tiddies. Caressing them with my lips and my tongue as I let them smack me in the face like wrecking balls made of gelatin." 
     show WG aroused 
     WG "{i}Emph! Ooo!{/i}"
-    "Teasing her by kneading her pert nipples between my fingers, I went for it, latching on like I had just crawled across a desert without a drink in days, I sucked her fat teet."
+    "Teasing her by kneading her pert nipples between my fingers, I went for it, latching on like I had just crawled across a desert without a drink in days, I sucked her fat teat."
     WG "OhhhHHhh! Kei... Mmph!"
     "I wrapped my tongue around her nipple, pumping on it like I needed it to survive, my entire face submerged up to my ears in tit fat. It was suffocating in the best sense possible."
     show WG surprised-2
@@ -30270,7 +30270,7 @@ label WG091:
     show WG happy-2
     WG "Like I said before, this is only a small part of it."
     MC "Are you sure about that? Seems like that'd be the big part."
-    WG "Well the night is still young. There's still the manner of our dinner reservations."
+    WG "Well the night is still young. There's still the matter of our dinner reservations."
     MC "Dinner you say? I guess we better get cleaned up then."
     show WG pondering 
     WG "True..."
@@ -30420,7 +30420,7 @@ label WG092:
     WG "Thank you Yuto."
     "With her situated, the table was brought up to her, where I noticed it was not the standard table height, but one that was above the crest of her belly."
     Waiter "Your seat sir."
-    "The matradee directed me to my chair. Upon sitting in it, I realized it was somewhat akin to a high top style chair in order to match the elevated height of the table. It was a flawless match."
+    "The maître d' directed me to my chair. Upon sitting in it, I realized it was somewhat akin to a high top style chair in order to match the elevated height of the table. It was a flawless match."
     "After the chair incident, it was a welcome sense of relief to know I could set aside my concerns about managing Alice's accommodations for the evening."
     Waiter "Miss Nikumaru, I was told you had looked over the wine list prior to coming, is there anything I can get for you or the table before I bring out the bread?"
     show WG neutral
@@ -30503,7 +30503,7 @@ label WG092:
     MCT "Man, she is deceptively fast when she wants to be."
     show WG neutral
     Waiter "The second of your seafood courses, mademoiselle."
-    "The servers proceeded to clear the oysters and place a platter of clams and linguine pasta as the matradee poured the wine Alice had selected."
+    "The servers proceeded to clear the oysters and place a platter of clams and linguine pasta as the maître d' poured the wine Alice had selected."
     "They then began to serve us from the platter to our serving vessels, which were shallow bowls for this course. Alice got the lion's share with a heaping portion, while mine was rather meager in comparison."
     "In a normal setting this might be cause for complaint, but it was safe to say everyone here knew the score." 
     "I needed to pace myself, as I could only guess how many courses were in store for us, Alice for her part seemed to be running a marathon at a pace I couldn't even sprint."
@@ -30605,7 +30605,7 @@ label WG092:
     Waiter "May I take your plate monsieur?"
     MC "Uh, sure. I'm full already, I can't finish the rest."
     Waiter "Allow me to take your glasses and we will swap that out for the dessert wine."
-    "As the maitredee was pouring our new glasses another server rolled up with a cart that had what looked to be half a dozen different cheese on it."
+    "As the maître d' was pouring our new glasses another server rolled up with a cart that had what looked to be half a dozen different cheeses on it."
     show WG surprised-2
     WG "Oh, what a lovely selection. I didn't expect that she'd be able to source some of my favorites."
     "I didn't quite have the same reaction. The soft texture, strange colors, and pungent odors of the exotic cheeses didn't appeal to my sensibilities at the best of times, let alone when my stomach was at capacity."
@@ -30682,7 +30682,7 @@ label WG092:
     show WG sly
     extend " Though I'm sure you will too."
     show WG happy-2
-    "That I did. I could sit here for hours upon hours watching Alice devore the most fattening treats the world of gastronomy had to offer."
+    "That I did. I could sit here for hours upon hours watching Alice devour the most fattening treats the world of gastronomy had to offer."
     "As I watched Alice, I realized just how she was able to eat so much so quickly. Despite being dense as concrete, Alice worked through that cheesecake like it was an airy sponge cake."
     "Rich, fatty flavors, dense filling textures— none of that phased her. Her appetite and her taste buds gave pause to nothing. No hesitation, no reservation or capacity limits slackened her pace."
     "She was a master of her craft in everything she put her mind to— and eating was no exception."
@@ -30699,7 +30699,7 @@ label WG092:
     Waiter "Excellent. Shall we proceed with the petit fours?"
     show WG neutral
     WG "Actually, I would like to have another dessert course."
-    Waiter "Certainly. We offer a raspberry sorbet, creme brulee, strawberry millefeuille, and a plum galette."
+    Waiter "Certainly. We offer a raspberry sorbet, crème brûlée, strawberry millefeuille, and a plum galette."
     WG "Excellent, that all sounds lovely."
     Waiter "And which one would you like mademoiselle?"
     show WG surprised-2
@@ -30727,7 +30727,7 @@ label WG092:
     show WG sad
     WG "{i}Ooft{/i}, I guess that was quite a lot."  
     "Apparently she had noticed as well."
-    MC "Over do it tonight, Babe?"
+    MC "Overdo it tonight, Babe?"
     show WG neutral-2
     WG "Maybe just a little, but I feel more satisfied than overstuffed. It feels good to actually eat to my heart's content, especially without having to worry about causing a spectacle or damage to my surroundings."
     MC "I know recent events probably put that at the forefront, but I hadn't realized you'd been concerned about that for a while."
@@ -30791,7 +30791,7 @@ label WG092:
     "I kissed it, filling my whole mouth with her succulent blubber in the process as I caressed it with my lips."
     show WG surprised
     WG "Oh my God! Don't stop!"
-    "I succled and sucked, rolling my tongue over her flesh as her lard filled mass enveloped all around me, as I steadily sank into her in the process."
+    "I suckled and sucked, rolling my tongue over her flesh as her lard filled mass enveloped all around me, as I steadily sank into her in the process."
     WG "{i}Ooooh! Ooooh! OH!{/i}"
     "Her whole body began to buck and shiver. I clung tight to her belly, afraid I might get thrown off like some rodeo cowboy trying to stay on a cow."
     "I was completely enveloped in a blubber quake as her flesh slapped against my entire body, sending shockwaves through me. It was a full on five-alarm bellygasm."
@@ -30892,7 +30892,7 @@ label WG093:
     MC "Beats taking the stairs."
     show WG neutral
     WG "Personally, I wouldn't mind taking them, I can certainly navigate them going down with enough precaution, but with my belly in the way, even the smallest step up is a difficult obstacle."
-    "Indeed, Alice's belly was perilously close to the ground, even at her full standing height. It was magnificent in all its roundunt glory, but it was certainly a significant obstruction in its own right."
+    "Indeed, Alice's belly was perilously close to the ground, even at her full standing height. It was magnificent in all its rotund glory, but it was certainly a significant obstruction in its own right."
     show WG worried
     WG "{i}Sigh{/i}... I suppose I can manage just fine, all things considered, but not everywhere is going to have easy elevator access in the future."
     show WG neutral
@@ -31092,7 +31092,7 @@ label WG093:
     MCT "To be fair, I can't imagine the forward view offers that much more visibility, Alice."
     MC "Just like the backstroke— it doesn't feel natural at first, and it certainly wouldn't be anyone's first choice, but with a little practice, it'll feel as natural as all the other strokes."
     WG "That's a good way of thinking about it. After all, walking backwards isn't some entirely unnatural movement. It's just a different application for something I already know how to do."
-    "Alice re-gripped the handrail as she steaded herself for the next step. It groaned in protest with the sudden shift in weight down upon it as she lifted her leg up for the next step." 
+    "Alice re-gripped the handrail as she steadied herself for the next step. It groaned in protest with the sudden shift in weight down upon it as she lifted her leg up for the next step." 
     MCT "That's it, nice and steady. Take your time."
     show WG happy
     WG "This is actually working quite well."
@@ -31195,7 +31195,7 @@ label WG093:
     WG "I must say, I always thought my prince would ride up on a white horse one of these days, but you've certainly proven to be my knight in shining armor."
     MC "I guess I'll have to take equestrian lessons some day to fully seal the deal."
     WG "That won't be necessary. Come here."
-    "Alice leaned in close for a big smooch on lips. I nuzzled her chubby cheek with my nose before she could pull back."
+    "Alice leaned in close for a big smooch on the lips. I nuzzled her chubby cheek with my nose before she could pull back."
     show WG happy
     WG "Hehe, that tickles."
     show WG neutral-2
@@ -31617,7 +31617,7 @@ label WG094:
     show BE happy
     BE "I know what you mean. I was so psyched when I finally realized it was Kei-chan that I ran into on the trail back to the Academy."
     show BE neutral
-    BE "It hasn't been the easiest time here, but having Tomo-chan and Kei-chan around have definitely made it better!"
+    BE "It hasn't been the easiest time here, but having Tomo-chan and Kei-chan around has definitely made it better!"
     Mom "Well we're glad to hear that. {w}It's been ages though! What have you been up to these past years?"
     Dad "Yeah, how are your parents?"
     show BE happy
@@ -31739,7 +31739,7 @@ label WG094:
     Tomoko "Mom, Dad— come on. Don't be like that. {w}It's not her fault. Besides, she's really nice. Give her a chance."
     Mom "You're right Tomoko, I'm sorry. It's just... It's just a lot to take in."
     MCT "Not sure that's the best choice of words, but she isn't wrong..."
-    Dad "Sorry, Kei. I mean, you're mother and I had our suspicions about your preferences in dates, but we didn't think it extended {i}this{/i} far..."
+    Dad "Sorry, Kei. I mean, your mother and I had our suspicions about your preferences in dates, but we didn't think it extended {i}this{/i} far..."
     "I probably should have been embarrassed that my parents had been clued into this particular revelation, but at this point there was nothing left to do but to own up to it. I couldn't deny it, nor did I want to." 
     show WG happy
     MC "Alice, we're here. Sorry we were running late."
@@ -31766,7 +31766,7 @@ label WG094:
     Dad "Ichia? I'm not familiar."
     Mom "He's a famous classical musician."
     Dad "Ah, that would explain it then." 
-    Mom "Well, that sounds quite exclusive. I don't know too much about the man, but I hear it's difficult to get into to see one of his shows."
+    Mom "Well, that sounds quite exclusive. I don't know too much about the man, but I hear it's difficult to get in to see one of his shows."
     WG "It certainly can be, but I would highly recommend the experience if you have an opportunity the next time he is in Tokyo."
     Mom "That would certainly be lovely if I could ever manage to get some tickets."
     show WG haughty
@@ -31862,7 +31862,7 @@ label WG094:
     MC "I know, right? I mean, 1 out of 2 isn't too bad."
     show Tomoko distracted
     Tomoko "{i}Har har{/i}, very funny."
-    Mom "Oh sush, Keisuke. And just when she was boasting about your manners..."
+    Mom "Oh shush, Keisuke. And just when she was boasting about your manners..."
     show WG sly
     WG "He's still a work in progress."
     show WG happy
@@ -32275,7 +32275,7 @@ label WG096:
     show WG sly
     MC "Funny, I took you more for a fashionista in your highschool years."
     show WG happy-2
-    WG "Ah, I can see where you might get that impression. But my approach to clothes is the same as my business. Why bother with designer if you can afford bespoked?"
+    WG "Ah, I can see where you might get that impression. But my approach to clothes is the same as my business. Why bother with designer if you can afford bespoke?"
     MC "Fair enough. Wanna grab a snack before our next class?"
     show WG pondering
     WG "I was just thinking I could use something sweet."
@@ -32549,7 +32549,7 @@ label WG096:
     show WG surprised-2
     Kokutan "...{i}Sniff{/i}... There's nothing I'd want to do more. Thank you so much, Alice!"
     show WG surprised
-    "Kokutan practically lunged forward, clinging to Alice with her eyes tightly shut as her tiny arms futility attempted to wrap around her body, like a little imp clinging to her side as her tiny figure slowly began to sink into Alice's generous layers of extra padding."
+    "Kokutan practically lunged forward, clinging to Alice with her eyes tightly shut as her tiny arms futilely attempted to wrap around her body, like a little imp clinging to her side as her tiny figure slowly began to sink into Alice's generous layers of extra padding."
     show WG happy
     WG "I'm glad you accepted the offer."
     show WG haughty
@@ -32605,7 +32605,7 @@ label WG096:
     show Kokutan neutral with dissolve
     play music WGAlt
     show WG happy
-    WG "Seems like all have a lot to celebrate. How about a company offsite for dinner? My treat."
+    WG "Seems like we all have a lot to celebrate. How about a company offsite for dinner? My treat."
     MC "Where should we go?"
     WG "Let's let them pick this time."
     Kokutan "Ooo, let's do shabu-shabu!"
@@ -32617,7 +32617,7 @@ label WG096:
     MC "Would you look at that? Feels like a company meeting already."
     show WG stern
     WG "Ahem..."
-    "Not that Alice's utterance was particularly loud, but she had used that tone of hers that could always cut right through the noise of their bickering to gain some peace and quite."
+    "Not that Alice's utterance was particularly loud, but she had used that tone of hers that could always cut right through the noise of their bickering to gain some peace and quiet."
     show WG happy
     WG "How about we do both instead?"
     scene black with fade
@@ -32651,7 +32651,7 @@ label WG096:
     Chibuki "Do you even have to ask?"
     show WG neutral-2
     MC "Looks like we could use another order."
-    "I just as I said that the waiter approached the table with an unsteady bit of maneuvering as he looked barely able to hoist the two stacked plates of vegetables for the next round. It was a veritable cornucopia of mushrooms, onions, cabbage, and tofu."
+    "Just as I said that the waiter approached the table with an unsteady bit of maneuvering as he looked barely able to hoist the two stacked plates of vegetables for the next round. It was a veritable cornucopia of mushrooms, onions, cabbage, and tofu."
     Waiter "Oh... I see we are done with the first round already. Would you like another round?"
     show WG happy-2
     WG "Order whatever you want ladies."
@@ -32893,7 +32893,7 @@ label WG097:
     WG "Don't tell me you're just staring— you have a job to do My Dear Boy!"
     show WG happy-2
     MC "Sorry. {w}I was distracted... by your beauty."
-    "I shot her a wink, just to seal the deal on the compliment, to which could only roll her eyes in response."
+    "I shot her a wink, just to seal the deal on the compliment, to which she could only roll her eyes in response."
     show WG doubt
     WG "Keisuke, Dear, I would have to consider that to be your lamest excuse yet to date..."
     show WG happy-2
@@ -33106,18 +33106,18 @@ label WG098:
     if not getFlag("WG030_nofliers"):
         MCT "Looks like all those fliers I made paid off this time."
     MCT "Hmm, I better find a seat before this place fills up."
-    "I figured I should try to find a seat near the front so Alice could see me. Then again with this frock hair pluming out of my head, she probably wouldn't have any trouble picking me out from the crowd no matter where I sat."
+    "I figured I should try to find a seat near the front so Alice could see me. Then again with this frock of hair pluming out of my head, she probably wouldn't have any trouble picking me out from the crowd no matter where I sat."
     "In the process of trying to find the best seat, my mind was made up for me as I recognised a familiar face amongst the crowd."
     show Vivian neutral with dissolve
     "Who happened to be conversing with another familiar face, though I can't say I expected him to recognise mine."
-    Vivian "Itchia, so lovely to run into you again— on this island of all places. I can't begin to express how much I enjoyed your concert. You are a once in a generation talent, simply transcendent, I must say."
-    "Itchia" "Thank you for your kind words, Nikumaru-san. Please, as a friend of my sister, you can call me Ichiro, or Mizawa-san if you prefer. As much as I appreciate the accolades, this evening my sister is to be the star of the show."
+    Vivian "Ichia, so lovely to run into you again— on this island of all places. I can't begin to express how much I enjoyed your concert. You are a once in a generation talent, simply transcendent, I must say."
+    "Ichia" "Thank you for your kind words, Nikumaru-san. Please, as a friend of my sister, you can call me Ichiro, or Mizawa-san if you prefer. As much as I appreciate the accolades, this evening my sister is to be the star of the show."
     Vivian "Certainly, as to be expected. I've heard great things about her musical talents and am looking forward to witnessing them myself. It seems that the apple does not fall far from the tree."
-    "Itchia" "I've heard similarly great things about your daughter's voice as well. A \"pitch-perfect vocal powerhouse\" is how my sister described it, with an unprecedented range as well."
+    "Ichia" "I've heard similarly great things about your daughter's voice as well. A \"pitch-perfect vocal powerhouse\" is how my sister described it, with an unprecedented range as well."
     Vivian "An apt description if there ever was one. I take great pride in my vocal prowess, but it would be foolish of me if I didn't acknowledge her talents exceed my own."
     MC "Mind if I sit here?"
     Vivian "Oh, Hotsure-san, lovely to see you again. I was certain I would run into you here. Please, take a seat. I was just talking with our honored guest here."
-    "Itchia" "Hotsure-san, one of Okisho's friends. I recognize the voice. Nice to run into you again."
+    "Ichia" "Hotsure-san, one of Okisho's friends. I recognize the voice. Nice to run into you again."
     MC "Same here. I'm sure Alice and Okisho will be excited to see you in the audience."
     MC "I'm surprised to see you here, Mrs. Nikumaru. Alice didn't mention you'd be attending."
     Vivian "I didn't let her know. Would hate to have given my word only to have to back out if some urgent matter came up last minute." 
@@ -33258,7 +33258,7 @@ label WG098:
     "True to my expectations, Alice's bellowing soprano voice filled the auditorium." 
     "It wasn't her usual singing voice, and I couldn't understand a word she was saying, but I could tell she was having the time of her life pushing her range and the timbre of her voice to its absolute limits." 
     "I don't think opera was anyone's first choice of music in the auditorium— save for maybe the three people sitting to the right of me— but I could tell the entire crowd was absolutely transfixed by the beauty of her voice."
-    "Ichia" "{size=-6}Exquisite— divine even. {w}The breath of her range and the power of her sustain is something to behold. So this is the true extent of your daughter's voice...{/size}"
+    "Ichia" "{size=-6}Exquisite— divine even. {w}The breadth of her range and the power of her sustain is something to behold. So this is the true extent of your daughter's voice...{/size}"
     Vivian "{size=-6}It's quite amazing, is it not? I've had my share of success as a professional singer and even I must admit I don't quite measure up to her talents.{/size}" 
     Vivian "{size=-6}I'd be jealous if I wasn't so proud.{/size}"
     "Ichia" "{size=-6}As you have every right to be. I knew it had to be something truly special for Okisho to admit someone else surpassed her own vocal prowess.{/size}"
@@ -33318,7 +33318,7 @@ label WG098:
     Okisho "{cps=15}You think I'm stupid- that I can't see{/cps}{nw=.4}"
     Okisho "{cps=15}But you don't know what you're doing{/cps}{nw=.4}"
     Okisho "{cps=15}So why don't you keep on moving -out{/cps}{nw=.4}"
-    Okisho "{cps=15}Take hike down a dusty trail{/cps}{nw=.4}"
+    Okisho "{cps=15}Take a hike down a dusty trail{/cps}{nw=.4}"
     Okisho "{cps=15}Buy a train ticket, take it by rail{/cps}{nw=.4}"
     Okisho "{cps=15}Board a shuttle and get lost in space.{/cps}{nw=.4}"
     Okisho "{cps=15}Just don't come back and GET OUT OF MY FACE!{/cps}{nw=.4}"
@@ -33327,7 +33327,7 @@ label WG098:
     WG "{cps=15}But that's not the way things are gonna be.{/cps}{nw=.4}"
     WG "{cps=15}Cause you don't know what you're doing.{/cps}{nw=.4}"
     WG "{cps=15}And there's no way I'll be losing this.{/cps}{nw=.4}"
-    WG "{cps=15}Go live in cave, crawl down a hole{/cps}{nw=.4}"
+    WG "{cps=15}Go live in a cave, crawl down a hole{/cps}{nw=.4}"
     WG "{cps=15}Wither up like a prune and grow old.{/cps}{nw=.4}"
     WG "{cps=15}Just do me a favor and learn your place{/cps}{nw=.4}"
     WG "{cps=15}Don't ever come back and GET OUT OF MY FACE!{/cps}{nw=.4}"
@@ -33352,7 +33352,7 @@ label WG098:
     WG "Have a lovely evening!"
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Auditorium with fade
-    "And with that curtain drew closed again." 
+    "And with that the curtain drew closed again." 
     MC "I think I figured out what the \"special project\" was that they were working on."
     "Ichia" "Now that's more her style."
     Vivian "I can't say the same for Alice, but I'm proud to see her willing to try something so far outside her comfort zone."
@@ -33387,14 +33387,14 @@ label WG099:
     show Okisho neutral with dissolve
     Okisho "Nothing better to do than staring off into space?"
     MC "AH!"
-    Okisho "Ha! Little jumpy, aren't we?"
+    Okisho "Ha! Little jumpy, are we?"
     MC "Guess I wasn't paying attention."
     Okisho "I'll say. I'm not exactly the sneakiest of people these days."
     "Okisho gave her fat gut a couple good slaps just to drive home her point."
     MC "Great job tonight. When I was in highschool, concerts felt like a chore to attend, but this one was legit amazing. I would have paid to see it."
     Okisho "Glad to know I'm not the only one that thought that."
     Okisho "I'm proud of the club. We had to push to our limits, but everyone came together and practiced their asses off to make it happen."
-    Okisho "Ha! Maybe that's why I still have no ass to show even all of {i}this{/i}."
+    Okisho "Ha! Maybe that's why I still have no ass to show even with all of {i}this{/i}."
     "Okisho gave her generous love handles a squeeze on each side, causing her belly to slosh and jiggle."
     MCT "I don't know, that ass still looks pretty big to me."
     Okisho "As much as I hate to admit it, it wouldn't have turned out nearly as good if it wasn't for Alice's help and her insistence on pushing the club to be their best."
@@ -33525,7 +33525,7 @@ label WG099:
     WG "So I noticed."
     show WG neutral
     MC "Here, let's get you comfortable. You've been on your feet all evening."
-    "I took her by the hand to help guide her decent onto her bed. With a little shimmy of her hips and a whole lot of creaking from her bedframe, I managed to help get her legs up with some extra oomf on my part."
+    "I took her by the hand to help guide her descent onto her bed. With a little shimmy of her hips and a whole lot of creaking from her bedframe, I managed to help get her legs up with some extra oomf on my part."
     show WG happy
     "She appeared to be quite content sitting up in her bed, reclining against the stack of satin pillows on top of the shelf of her ass."
     MC "Comfy?"
@@ -33565,7 +33565,7 @@ label WG099:
     show WG aroused
     WG "Goodness, my word. It really {i}is{/i} divine!" 
     show WG surprised-2 
-    WG "I don't say this lightly, as there are countless near flawless dishes that come to mind, but genuinely think this might be Aida and Sakura's best dish!"
+    WG "I don't say this lightly, as there are countless near flawless dishes that come to mind, but I genuinely think this might be Aida and Sakura's best dish!"
     MC "Sounds like you want more."
     show WG happy
     WG "Most certainly!"
@@ -33576,7 +33576,7 @@ label WG099:
     show WG neutral-2
     WG "Would you mind handing the bowl to me?"
     "I was a bit taken aback at first by her suggestion, wondering if I had somehow made a misstep." 
-    "But upon second thought, it had been quite a while (by her standards) that she had had something to eat. Efficiency was a matter of necessity at this point."
+    "But upon second thought, it had been quite a while (by her standards) since she had had something to eat. Efficiency was a matter of necessity at this point."
     MC "Certainly."
     MCT "Not like I'm going to object if you want to get fatter faster."
     show WG surprised-2
@@ -33630,7 +33630,7 @@ label WG099:
     WG "Ooo."
     "Alice seemed to be enjoying my tongue dancing across her bulging dome. I steadily worked my way up the apex of her belly. It was a long journey but I was up for it."
     "As I got closer to the top, I noticed her jiggling fat began to yield to a much firmer consistency. Looking up, sure enough, Alice had worked her way nearly to the bottom of the bowl already."
-    "The many liters of chocolate flavored fattening cream and cake with sugar were now packed into her bulging gut, growing and swelling with each bite she gorged on. Socking away an unfathomable amount of calories in the process." 
+    "The many liters of chocolate flavored fattening cream and cake with sugar were now packed into her bulging gut, growing and swelling with each bite she gorged on. Stocking away an unfathomable amount of calories in the process." 
     "{i}Ting ting ting{/i}"
     "Alice's spoon was now scraping the bottom of the bowl."
     show WG happy
@@ -33753,8 +33753,8 @@ label WG099:
     WG "Just shut up, bend me over, and fuck me, Kei!"
     show WG back  
     "Alice turned around and leaned against the bed as she bent over. As much as I loved her fondling her belly during sex, the logistics of missionary would have involved scuba gear by this point."
-    "The only real option without assistance from some type of contraction was good ol' doggie style. Not that I was complaining, as sensual as her belly was, her bottom half was every bit as fat and feminine as the rest of her."
-    "Lucious was an understatement to describe her ass. Colossal failed to compare. It was bigger than even the other ass factor girls at school... well, except for one."
+    "The only real option without assistance from some type of contraption was good ol' doggie style. Not that I was complaining, as sensual as her belly was, her bottom half was every bit as fat and feminine as the rest of her."
+    "Luscious was an understatement to describe her ass. Colossal failed to compare. It was bigger than even the other ass factor girls at school... well, except for one."
     "Despite her ass being right there in front of me, I still had quite the distance to wade through as I spread her blubber boulders apart to give me some much needed extra centimeters to work with."
     WG "I know you can't see, but do try to hurry, Dear. This is pretty {i}urgent{/i} on my part."
     MCT "Trust me, you do not want {i}me{/i} to be urgent."
@@ -33823,7 +33823,7 @@ label WG100:
     show WG neutral
     WG "After all, I didn't {i}have{/i} to agree to this rendezvous, but I did of my own accord."
     show WG pondering
-    WG "As much as I share her sentiment that the success of the concert is an occasion to celebrate, the real reason I agreed to meet with her today is that told me she had a business proposition for me."
+    WG "As much as I share her sentiment that the success of the concert is an occasion to celebrate, the real reason I agreed to meet with her today is that she told me she had a business proposition for me."
     MCT "That certainly would be the hook to get Alice to agree to a meeting... Sounds like Okisho figured out the combination to the safe."
     MC "Did she say what it was about?"
     show WG haughty
@@ -33834,7 +33834,7 @@ label WG100:
     MC "Wait, is this the place?"
     show WG doubt
     WG "Unfortunately, I think so."
-    "The outside appeared to be some kind of odd mix of shiny metal, checkered patterned, and stripes. It looked to be some kind of throwback from those scenic depictions in old American movies, all crowned with a big neon sign."
+    "The outside appeared to be some kind of odd mix of shiny metal, checkered patterns, and stripes. It looked to be some kind of throwback from those scenic depictions in old American movies, all crowned with a big neon sign."
     MC " \"American Burger\" "
     WG "{i}Ugh{/i}..." 
     MC "What's wrong with burgers?"
@@ -33862,7 +33862,7 @@ label WG100:
     "Stepping inside, Alice practically took up the entire waiting area in front of the hostess booth, which was currently unmanned. Taking a look around, the place wasn't exactly packed, but it was mostly occupied."
     show WG surprised at altMove(0.5, 0.25)
     show Okisho neutral at Position(xcenter=0.75, yalign=1.0) behind WG with dissolve
-    Okisho "{size=+4}Yo! Goldie Locks! I got a booth in the back that can fit both our fatasses.{/size}" 
+    Okisho "{size=+4}Yo! Goldie Locks! I got a booth in the back that can fit both our fat asses.{/size}" 
     hide Okisho with dissolve
     show WG stern
     "It wouldn't have been hard to miss Okisho in a stadium, let alone a busy diner, but apparently she didn't want to take that risk, and the whole restaurant had to hear about it as well— naturally putting all eyes on Alice."
@@ -33880,7 +33880,7 @@ label WG100:
     show WG stern at Transform(xzoom=-1)
     "We approached the table Okisho was sitting at. Even with the table being taller than usual and her sitting far back, the edge of the table was still digging into her fat gut."
     Okisho "Yo! What's up? Glad you could make it."
-    Okisho "I'm not sure how good the food is here, but I heard that it's one of the few places in town that really caters to fatties like us. I can barely fit my fattass through most shops in town, but I didn't have a problem here."
+    Okisho "I'm not sure how good the food is here, but I heard that it's one of the few places in town that really caters to fatties like us. I can barely fit my fat ass through most shops in town, but I didn't have a problem here."
     MC "Ah... Good thinking."
     show WG neutral
     WG "I suppose..."
@@ -33940,7 +33940,7 @@ label WG100:
     Okisho "Us two wide loads are gonna do one of everything off the burger menu."
     Waitress "Let me guess, you want the fries that come with all of those too?"
     Okisho "Read my mind. I'll do the root beer for the fountain drink."
-    WG "I'll do a cherry cola soda."
+    WG "I'll do a cherry cola."
     Waitress "What about you, skinny?"
     MC "I'll do the club sandwich, that sounded good. Let's get two orders of the mozzarella stick appetizers too."
     MCT "Just so things don't get ugly."
@@ -33952,7 +33952,7 @@ label WG100:
     show WG happy
     Okisho "~Oh my! On second thought, I'll just have a salad.~"
     Okisho "Seriously? My fatass could probably {i}eat{/i} a family of six, let alone a meal for one."
-    "Okisho grabbed the sides of her fat gut and gave her blubber mound a good shake just to drive the point home, leaving the waitress looking nauseated in response to the incessant giggling it caused."
+    "Okisho grabbed the sides of her fat gut and gave her blubber mound a good shake just to drive the point home, leaving the waitress looking nauseated in response to the incessant jiggling it caused."
     show WG surprised-2
     Okisho "—and I look trim and slim standing next to her." 
     show WG doubt
@@ -34081,7 +34081,7 @@ label WG100:
     Okisho "Alright, alright. I'll try it."
     "Okisho took a tiny bite..." 
     show WG bored
-    extend " Causing her eyes to light up before downing it five bites."
+    extend " Causing her eyes to light up before downing it in five bites."
     WG "...I hate watching you eat."
     Okisho "Wut? Id wuz gud, okey!"
     show WG surprised-2
@@ -34477,7 +34477,7 @@ label WG101:
             WG "Oh my Dear Boy, how far you've come."
         MC "Are you sure about that? I mean, I was just the delivery boy. I'm not sure how much I really contributed to the success of it all."
         WG "When things were falling apart all around me, you were there to help me keep it together." 
-        WG "Without your support and all the little things to do everyday to help take care of me, I would have faltered, and the business would have floundered."
+        WG "Without your support and all the little things you do everyday to help take care of me, I would have faltered, and the business would have floundered."
         WG "You see my blind spots, and bolster my weaknesses with your strengths." 
         show WG happy-2
         WG "I'd offer you a promotion to partner, but you already got the job a long time ago."
@@ -34509,7 +34509,7 @@ label WG101:
     show cg WG101_drawing2 with dissolve
     Okisho "Oh, sweet thanks! You even colored it!"
     Okisho "Hahah! That was a damn good burger. Glad somebody thought it was worth commemorating."
-    Okisho "You know, a normal girl would be mad if I guy drew her looking and acting like such a fatass, but I know with you, it's a compliment."
+    Okisho "You know, a normal girl would be mad if a guy drew her looking and acting like such a fatass, but I know with you, it's a compliment."
     MC "Um, well. Sure, I guess. I'm glad you like it."
     hide cg with dissolve
     Okisho "Hey, I ran into you one last time. I didn't get a chance to say it the other day, but thank you for all you did to help me this year." 
@@ -34543,7 +34543,7 @@ label WG102:
     "Attempting to tame the tangled mess with my brush, the tugging on my hair strands all the way down into my skull was a less-than-gentle reminder that no, the past year was in fact {i}not{/i} a dream."
     MCT "No sense in tackling this mess here. Better hop in the shower."
     "It was one of those days where I needed some extra conditioning. This floppy wet mop stuck to my head was an annoyance even at the best of times, but it sure was a lot easier to manage with the hair mask and wet comb Alice gave me."
-    "The steam of the hot shower fogged up the glass door. It felt nice and warm in here— and to be honest, I hesitate to turn off the water, even though I had long since finished washing off."
+    "The steam of the hot shower fogged up the glass door. It felt nice and warm in here— and to be honest, I hesitated to turn off the water, even though I had long since finished washing off."
     "I simply wasn't ready to face the rest of the day... {w}But I didn't want to be late either."
     "It didn't take long to get dressed. Looking in the mirror, with my hair lying flat this time, I pulled it all up and stuck the pin in, just like she showed me how, all those months ago that evening..."
     play sound Knock
@@ -34707,7 +34707,7 @@ label WG102:
     "Lunchlady" "You want some more? Don't be shy now, I have plenty."
     WG "Yes, ma'am."
     "Lunchlady" "That'a girl! Eat up."
-    "Gurīsu-san proceeded to fill up all the empty bowls next to Alice as reached into the giant pot she wheeled up to the table with her massive ladle."
+    "Gurīsu-san proceeded to fill up all the empty bowls next to Alice as she reached into the giant pot she wheeled up to the table with her massive ladle."
     "Lunchlady" "I'll check in to see if you want more when you've finished."
     "With her slight reprieve, Alice renewed her attack on the bowls of stir-fry with gusto."
     "I couldn't help but smile watching her indulge in good food, seeing that dimpled smile spread across her chubby face. It was one of the things I enjoyed the most."
@@ -34737,7 +34737,7 @@ label WG102:
     extend " That does feel nice."
     "As massive as she had grown to be, it still hadn't ceased to amaze me just how much she could pack away."
     WG "Ahh, what a lovely spring day."
-    "It certainly was, one probably first really true warm Spring days we've had this year on the island, as opposed to the still cold early days of Spring."
+    "It certainly was, probably the first truly warm Spring days we've had this year on the island, as opposed to the still cold early days of Spring."
     "Shame though that the nice weather was in part wasted on the dead atmosphere of a mostly empty campus." 
     "By this point most of the students had moved out, only a handful were seen moving about between our trip to the cafeteria and sitting in the middle of campus."
     "It was a little eerie given the hustle and bustle of the place just even a week ago." 
@@ -34835,7 +34835,7 @@ label WG102:
     scene School Front
     show WG neutral
     with fade
-    "We arrived at the front gate shortly after the driver had pulled up. It was one of those black luxury cars that looked normal but was actually armored— and this one must have had one hell of suspension."
+    "We arrived at the front gate shortly after the driver had pulled up. It was one of those black luxury cars that looked normal but was actually armored— and this one must have had one hell of a suspension."
     WG "I trust you brought the package?"
     Driver "Of course, Miss Nikumaru. Here you are."
     show WG happy
@@ -34996,7 +34996,7 @@ label WG103:
     pause .5
     Okisho "Uh... on an unrelated note, Ms. Executive Producer, do you think you could get us a new amp stack for the studio?"
     show WG stern
-    WG "What was wrong with the one you have? It was top of the line, per the specks you asked for."
+    WG "What was wrong with the one you have? It was top of the line, per the specs you asked for."
     show WG bored
     Okisho "Um, well, there was an accident..."
     WG "What {i}kind{/i} of accident?"
@@ -35042,7 +35042,7 @@ label WG103:
     WG "Aside from the fact that workers have improved morale and better productivity when they aren't spending most of their waking hours in a drab environment?"
     Daitaro "Yes, I can see your point, go on..."
     show WG sly
-    WG "With the space freed up from the new floor plan, you'll be able to rent out space on the 6th and 7th floors at a premium to other businesses, allowing the renovation to pay itself in less than ten years."
+    WG "With the space freed up from the new floor plan, you'll be able to rent out space on the 6th and 7th floors at a premium to other businesses, allowing the renovation to pay for itself in less than ten years."
     Daitaro "Seems like you really have thought of everything..."
     show WG happy
     Daitaro "Alright, consider it a done deal. Now let's go celebrate at your favorite restaurant downtown." 
@@ -35489,7 +35489,7 @@ label WG103B:
     "Boss" "You did it kid!"
     "And from there things just keep rolling along. After a string of successful design bids, I became known as one of the go-to architects for high-end luxury and grandiose design projects."
     "Not to say I didn't refine my formula over time, but in the end I just based it on what I thought Alice would like: wide entrances, grand sweeping corridors, breathtaking views, open space."
-    "All of these were luxuriant design features in a country squeezed for space and stack on top of itself, but for those that money wasn't an issue, it's what they wanted. Apparently I was one of the few architects that understood that."
+    "All of these were luxuriant design features in a country squeezed for space and stacked on top of itself, but for those that money wasn't an issue, it's what they wanted. Apparently I was one of the few architects that understood that."
     scene black with fade
     pause .5
     "{font=gui/Caveat-Bold.ttf}{size=*2}Several years later...{/size}{/font}"
@@ -35558,7 +35558,7 @@ label WG103B:
     MCT "!"
     MCT "This can't be real. After all these years... She's right here."
     "I could scarcely believe what I was seeing. I had almost forgotten just how truly massive she was in person."
-    "And yet, after all these years, her face was just as I remembered. {w}Then again, her skin care regimen probably cost more than my yearly salary in a month."
+    "And yet, after all these years, her face was just as I remembered. {w}Then again, her skin care regimen probably costs more than my yearly salary- at least."
     WG "Glad to see you got my request to meet."
     MC "Alice, {i}you're{/i} the building manager?"
     show WG haughty
@@ -37100,7 +37100,7 @@ label WGB007:
     Okisho "Haha! You ass!"
     Okisho "I'll have you know it is possible for me to get full. It happens quite often in fact."
     MC "You don't say..."
-    Okisho "This is clearly entrapment. If I'm never full, then I admit I'm some bottomless pit. But if I say I constantly get full, then I admit to eating like a pig. Either way I have to fess up to being a fattass."
+    Okisho "This is clearly entrapment. If I'm never full, then I admit I'm some bottomless pit. But if I say I constantly get full, then I admit to eating like a pig. Either way I have to fess up to being a fatass."
     MC "That is what they call checkmate."
     Okisho "You are diabolical."
     Okisho "{i}Urrp... *Burp*!{/i}"
@@ -39664,7 +39664,7 @@ label WGBE001_c1_2:
     BE "You wanna know something I saw today that was funny?"
     MC "Let me guess... {i}my{/i} face?"
     show BE smug
-    BE "No, only half it— but that was enough."
+    BE "No, only half of it— but that was enough."
     MC "I suppose I walked into that one too."
     BE "Yeah you did. I still don't know how you see at all with that mop of hair all over the place."
     MC "Alice says I remind her of an Old English sheepdog."
@@ -39792,7 +39792,7 @@ label WGBE001_After_c1:
     BE "Why do you ask?"
     show WG pondering
     WG "It's just a bit odd to me. Despite its rather basic pattern, it's quite evident that the stitching and material are of top quality, which suggest this one was rather pricey when it was originally made..." 
-    WG "Which was quite a few years ago judging by the ware." 
+    WG "Which was quite a few years ago judging by the wear." 
     WG "The colors are nice enough, but woefully outdated and they don't flatter you, if I may say."
     show BE confused
     WG "It's almost as if it wasn't made for you at all..."
@@ -40095,7 +40095,7 @@ label WGBE001_After_c1:
     MC "So are you in?"
     Okisho "Yeah, I'm in. If it's for Yamazaki-san. But if I'm giving up my snack funds for this, tell Nikumaru-san it better be the best damn yukata she's ever seen."
     MC "Will do."
-    Okisho "That does remind me that I should waddle my fatass down to her hanger again and pay her a visit. She always did like to listen to me play my biwa."
+    Okisho "That does remind me that I should waddle my fatass down to her hangar again and pay her a visit. She always did like to listen to me play my biwa."
     show BE happy
     BE "I'm sure she'd like that."
     Okisho "Alright, I gotta get ready for music club practice. You know where the door is."
@@ -40150,7 +40150,7 @@ label WGBE001_After_c1:
     show BE confused
     show PRG neutral
     PRG "I-I have some money saved up from working for Alice. I know it's not much but I'd like Yamazaki-san to have it."
-    PRG "I-I think we all know what it feels like to have our world turned upside since coming here."
+    PRG "I-I think we all know what it feels like to have our world turned upside down since coming here."
     MCT "That would be the understatement of the century coming from Aida."
     show BE surprised-2
     BE "Gosh you two, I don't know what to say. Thank you so much!"
@@ -40180,7 +40180,7 @@ label WGBE001_After_c1:
     show BE smug
     BE "She's not the type to splurge on herself, which is why I think we should help her out this time!"
     Jineko "Heh, knowing her, you're probably right."
-    Jineko "I try to get her to chill out and loosen up, but that girl has a lonesome aire to her that she just can't seem to shake— and I don't blame her at all."
+    Jineko "I try to get her to chill out and loosen up, but that girl has a lonesome air to her that she just can't seem to shake— and I don't blame her at all."
     Jineko "Like they say, it's lonely at the top."
     show BE surprised-2
     Jineko "Here, take this. Misuboro-san pays me for some of the hours I put in at the shop. It's a nice way of making some money."
@@ -41529,7 +41529,7 @@ label WGFMG004A:
     "Alice was working on her face and forearms while I got busy on her lower half. Let's face it, she can't reach around this much ass and I can't even begin to guess when the last time she saw her own feet was."
     "Even if most of it was covered by her swimsuit, there was still a lot of ass to cover. I did long sweeping strokes across cheeks and wide hips, down to her meaty, flabby thighs."
     "Each stroke I used to apply the sunscreen sent ripples of fat quaking through her legs, even reverberating ever so slightly up to her love handles that spilled over the shelf of her hips."
-    "Her body was heavenly. No matter how deep I pressed, no matter how much I squeezed, wrapped, or wiggled there was always more lucious, jiggly fat."
+    "Her body was heavenly. No matter how deep I pressed, no matter how much I squeezed, wrapped, or wiggled there was always more luscious, jiggly fat."
     "Being up close and intimate with each part of her left me awestruck. Having finished, when I stood back up to reveal the full view, I was reminded all over again just how impossibly massive she was—"
     "—and how she was the most beautiful thing I had ever seen."
     show WG happy-2

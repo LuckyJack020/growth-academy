@@ -1547,7 +1547,7 @@ label BE011_c2:
     "I stood up to leave the game."
     MC "I'm really sorry for what I said, Honoka. Here, enjoy the game, I hope you have fun, sincerely."
     hide BE with dissolve
-    BE "I tried not to look back at the bleachers as I left the soccer field. Honoka was never the type to hold grudges, so I didn't think this would come back to bite me later. But I still felt like an idiot saying what I said..."
+    "I tried not to look back at the bleachers as I left the soccer field. Honoka was never the type to hold grudges, so I didn't think this would come back to bite me later. But I still felt like an idiot saying what I said..."
     jump daymenu
 
 label BE011_c3:
@@ -6896,7 +6896,7 @@ label BE035B:
     "They didn't want to put new players in the running right off the bat. So the first few meetings would be learning the basics and seeing where she performed."
     "As seemed traditional by this point, I offered to go with her to the first meeting to check it out, and try it for myself."
     play sound Whistle
-    #show Naoki neutral with dissolve
+    show Naoki neutral with dissolve
     Naoki "All right, everyone. Huddle up, huddle up."
     "The assembled members approached a young man with three whistles around his neck. We joined with the others."
     if isEventCleared("MC006"):
@@ -6907,7 +6907,7 @@ label BE035B:
     Naoki "Okay. Here's the deal. I've got a wicked headache today, so I don't want to hear any bellyaching because it's gonna drive me crazy. Our next match is scheduled in two days, so spend this time brushing up on your catching and throwing."
     Naoki "We've got three batting stations reserved. So if you see one is empty, just go for it with your partner. Try not to hog it. Collect your balls when you're done. We don't wanna leave a mess anywhere."
     Naoki "Any questions? Good. Get out there, have fun."
-    #hide Naoki with dissolve
+    hide Naoki with dissolve
     MC "Huh. Well, he was a bit rough around the edges, huh?"
     show BE neutral with dissolve
     BE "Eh. Headaches are a pain. Literally. What are ya gonna do about it?"
@@ -9455,7 +9455,7 @@ label BE046:
     MCT "Huh...a lot of them seem to have pretty non-obtrusive growth factors."
     if not getFlag("Meet_Naoki"):
         $setFlag("Meet_Naoki")
-    #show Naoki neutral with dissolve
+    show Naoki neutral with dissolve
     Naoki "Alright, final set!"
     "As Naoki-sensei blew his whistle and barked some more orders at the swim team, they finally lined up at the starting point of the pool."
     show BE neutral with dissolve
@@ -9490,7 +9490,7 @@ label BE046:
     Naoki "Heh. I like that. Alright, Inoue. I want 200m out of you. Freestyle, Breaststroke, Backstroke, Butterfly. 50m of each. If you can't manage one of the strokes, finish off with the one most comfortable to you.  Let's get you in the pool."
     show BE happy
     BE "Yes, Sensei!"
-    #hide Naoki with dissolve
+    hide Naoki with dissolve
     "Honoka trotted off towards the poolside and before jumping in, she looked in my direction."
     "I gave Honoka a thumbs up, and she replied with a victory sign."
     "Honoka finally dove into the pool to begin practicing."
@@ -13549,7 +13549,7 @@ label BE055:
     extend " of the first question. But by now, my neck was killing me. I put down my schoolwork and cracked my neck, breathing a sigh of relief."
     Naoki "You're going to give yourself neck strain at this rate. You may as well use the desk in the office."
     MC "Gah! Sorry Sa...Naoki-sensei. I didn't notice you were there."
-    #show Naoki neutral with dissolve
+    show Naoki neutral with dissolve
     Naoki "No problem at all. Though, two things. One, instead of cracking your neck, it's better to do stretches. Chin tucks are easy, just pull your head back like you're trying to give yourself a double chin while keeping your head level." 
     Naoki "Hold for five seconds, then relax, repeating as often as you like. You can also put your palms on your forehead, then try to push your head forward with your neck while pushing back with your hands."
     MC "Oh... I'll have to give those a try then, my neck gets stiff pretty frequently from, uh... all the studying I do."
@@ -13569,7 +13569,7 @@ label BE055:
     Naoki "Could I ask you to relocate yourself, either to the bleachers or perhaps the neighboring first aid room...?"
     MC "Ah, well, I would like to try and get some more work done. I'll take you up on the first aid room. Thank you, sensei."
     Naoki "Mhmm. And... stay alert, Hotsure-san."
-    #hide Naoki with dissolve
+    hide Naoki with dissolve
     "Naoki-sensei nodded as I bowed my head. As I stepped into the first aid room, I heard him blow one of his whistles. The sounds of splashing in the pool died down in response."
     scene First Aid Room with fade
     stop music fadeout 2.0
@@ -13620,7 +13620,7 @@ label BE055_C1:
     BE "..."
     Naoki "{size=-6}Alright.{/size}"
     pause 2
-    #show Naoki neutral
+    show Naoki neutral
     play sound Knock
     "Naoki stood in the doorway and lightly tapped on the frame."
     Naoki "Hotsure-san. As a member of faculty, I {i}should{/i} reprimand you for eavesdropping on a private conversation."
@@ -13628,6 +13628,7 @@ label BE055_C1:
     Naoki "However, given your relationship to Inoue-san, I don't see how I could expect anything else. Take the time you need. The others I need to speak with are boys. We can talk in the changing room."
     "I feebly nodded my head, and put my things in my bag. Naoki-sensei put his hand on my shoulder, and walked toward the boys locker room."
     Naoki "{i}*Haaaaah....*{/i}{size=-3} It never gets easier being the bearer of bad news, either.{/size}"
+    hide Naoki with dissolve
     scene Coach Office with dissolve
     play music Requiem fadein 2.5
     show BE crying with dissolve

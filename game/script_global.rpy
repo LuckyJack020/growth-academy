@@ -18,8 +18,9 @@ define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTSCell")
 define PRG = Character('Aida', color="#B586EC", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRG2 = Character('Aida', color="#B586EC") #normal speaking voice
-define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
-define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #hidden picture
+define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}', image="PRGCell")
+define PRGTextCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
+define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}') #hidden picture
 define WG = Character('Alice', color="#FFD700")
 define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
 
@@ -915,6 +916,7 @@ image RM distrustful = DynamicImage("Graphics/minor/RM/[RMOutfit]/distrustful.we
 image RM doubt = DynamicImage("Graphics/minor/RM/[RMOutfit]/doubt.webp")
 image RM happy = DynamicImage("Graphics/minor/RM/[RMOutfit]/happy.webp")
 image RM happy-2 = DynamicImage("Graphics/minor/RM/[RMOutfit]/happy-2.webp")
+image RM pondering = DynamicImage("Graphics/minor/RM/[RMOutfit]/pondering")
 image RM sad = DynamicImage("Graphics/minor/RM/[RMOutfit]/sad.webp")
 image RM smug = DynamicImage("Graphics/minor/RM/[RMOutfit]/smug.webp")
 
@@ -946,6 +948,8 @@ image Tsubasa neutral = "Graphics/minor/faculty/tsubasa/neutral.webp"
 image Tsubasa annoyed = "Graphics/minor/faculty/tsubasa/annoyed.webp"
 image Tsubasa intrigued = "Graphics/minor/faculty/tsubasa/intrigued.webp"
 image Tsubasa satisfied = "Graphics/minor/faculty/tsubasa/satisfied.webp"
+
+image Naoki neutral = "Graphics/minor/faculty/naoki/neutral.webp"
 
 image Nurse neutral = "Graphics/minor/faculty/kiyomi/hitomi/[NurseOutfit]/neutral.webp"
 image Nurse unique = "Graphics/minor/faculty/kiyomi/hitomi/[NurseOutfit]/unique.webp"
@@ -1337,6 +1341,7 @@ init 1 python:
     eventlibrary['RM007'] = {"name": "Foundation", "girls": ["RM"], "display": "Daichi's Side Route", "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM006"], [ConditionEnum.TIMEFLAG, "PREG"]]]}
 
     eventlibrary['RMG001'] = {"name": "What Lies Ahead", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "gatefront",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG001_Unlock"]]}
+    eventlibrary['RMG002'] = {"name": "The Golden Hand", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "chukanpoint",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG002_Unlock"]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1822,7 +1827,8 @@ init 2 python:
     eventlibrary['PRG063'] = {"name": "Head to Head", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                             "location": "hallwaystairs",           "priority": PrioEnum.NONE, "sp": 15,    "next": "PRG064", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['PRG064'] = {"name": "Suspended", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                   "location": "dormhallway",      "priority": PrioEnum.NONE, "sp": 15,    "next": "PRG065", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['PRG065'] = {"name": "Flicker", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                                  "location": "hallway",           "priority": PrioEnum.NONE, "sp": 15,    "next": "PRG066", "preobsflags": [], "obsflags": [],       "conditions": []}
-    eventlibrary['PRG066'] = {"name": "Aida end", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                                 "location": "auditorium",           "priority": PrioEnum.NONE,             "preobsflags": [], "obsflags": [],                         "conditions": []}
+    eventlibrary['PRG066'] = {"name": "Être aimé", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                                  "location": "dorminterior",           "priority": PrioEnum.NONE, "sp": 15,    "next": "PRG067", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['PRG067'] = {"name": "Aida end", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                                 "location": "auditorium",           "priority": PrioEnum.NONE,             "preobsflags": [], "obsflags": [],                         "conditions": []}
 
     eventlibrary['PRGend_nofather'] = {"name": "Guiding Hand", "girls": ["PRG"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                    "location": "dorminterior",       "priority": PrioEnum.NONE, "sp": 15,     "preobsflags": [], "obsflags": [],                         "conditions": []}
     eventlibrary['PRG027Z'] = {"name": "Guiding Hand", "girls": ["PRG", "BE"], "display": "Aida's Route", "type": EventTypeEnum.CORE,                      "location": "dorminterior",       "priority": PrioEnum.NONE, "sp": 5,     "preobsflags": [], "obsflags": [],                         "conditions": []}
@@ -1993,4 +1999,4 @@ init 2 python:
     eventlibrary['WGGTS002'] = {"name": "Aggressive Expansion", "girls": ["WG", "GTS"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                               "location": "hallway",          "priority": PrioEnum.NONE,              "preobsflags": ["size3exp", "WG012clear"], "obsflags": ["size3"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG012"], [ConditionEnum.NOEVENT, "WGAE001"]]]}
     eventlibrary['WGGTS003'] = {"name": "Delivery Boy Debacle", "girls": ["WG", "GTS"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                               "location": "dormexterior",     "priority": PrioEnum.NONE,              "preobsflags": ["size4exp"], "obsflags": ["size4"],           "conditions": [[ConditionEnum.EVENT, "WG022"]]}
     eventlibrary['WGGTS004'] = {"name": "A Growing Business", "girls": ["WG", "GTS"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                                "location": "dormexterior",     "priority": PrioEnum.NONE,              "preobsflags": ["size5exp"], "obsflags": ["size5"],           "conditions": [[ConditionEnum.AND, [ConditionEnum.TIMEFLAG, "size4"], [ConditionEnum.EVENT, "WG054"]]]}
-    eventlibrary['WGGTS005'] = {"name": "A Peace of Clothing", "girls": ["WG", "GTS", "BE"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                          "location": "dorminterior",        "priority": PrioEnum.ALL,              "preobsflags": ["size5exp"], "obsflags": ["size5"],            "conditions": [[ConditionEnum.EVENT, "WGBE005"]]}
+    eventlibrary['WGGTS005'] = {"name": "A Peace of Clothing", "girls": ["WG", "GTS", "BE"], "display": "Alice & Naomi Event", "type": EventTypeEnum.OPTIONAL,                                          "location": "dorminterior",        "priority": PrioEnum.ALL,              "preobsflags": [], "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WGBE005"]]}
