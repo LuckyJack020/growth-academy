@@ -250,34 +250,28 @@ label FMG003_c2:
     jump daymenu
 
 label FMG003_c3:
-    MCT "Do I really wanna say no here? I mean... it couldn't hurt to just try..."
-    jump FMG003_menu_again
+    $enableRoute("FMGB")
+    MC "...I'm sorry, Akira. I don't really think I have it in me to commit to that."
+    MC "I get why people like you put in the effort to look good, and it definitely suits you…"
+    MC "I'm just happy looking the way I do right now."
+    show FMG sad
+    FMG "Aww man, just when I thought I'll finally have a little gym buddy…"
+    MCT "Jeez, now I feel bad for letting her down."
+    MC "But that doesn't mean we can't hang out anymore!"
+    MC "You know what, lunch is on me next time. How about it?"
+    show FMG happy
+    FMG "...Now you're speaking my language, I'm holding you to that!"
+    show FMG surprised
+    FMG "Oh crap! The bell's gonna ring in like thirty seconds!"
+    show FMG neutral:
+        xzoom -1
+        ease 0.75 xpos 1.2
+    FMG "Later!"
+    "She yelled out before sprinting down the hall... leaving me bewildered."
+    hide FMG with dissolve
+    MC "...Well, I'm glad talking about food always seems to cheer her right up."
+    jump daymenu
 
-label FMG003_menu_again:
-    menu:
-        "Eagerly agree":
-            jump FMG003_c1
-        "Agree but at your own pace":
-            jump FMG003_c2
-        "I could always... say no?":
-            jump FMG003_c3_2
-
-label FMG003_c3_2:
-    MCT "W-Wait, what? Why would I say no?"
-    jump FMG003_menu_again2
-
-label FMG003_menu_again2:
-    menu:
-        "Eagerly agree":
-            jump FMG003_c1
-        "Agree but at your own pace":
-            jump FMG003_c2
-        "I could always... say no?":
-            jump FMG003_c3_3
-
-label FMG003_c3_3:
-    MCT "Still probably not a good idea to say no here..."
-    jump FMG003_menu_again
 
 label FMG004:
     $setProgress("FMG", "FMG007")
@@ -26711,3 +26705,81 @@ label FMGWG006:
     FMG "I'm down. How about you, Kei?"
     MC "Uh, yeah, why not?"
     jump daymenu
+
+
+label FMGB001:
+    $setProgress("FMGB", "FMGB002")
+    $setNatsOutfit(OutfitEnum.ATHLETIC)
+    play music Peaceful
+    MCT "Well, I know I said \"no\" to Akira wanting to turn me into a beefcake, but she definitely wasn't wrong about the fact that I could use some exercise."
+    scene Track with fade
+    "I made my way to the most obvious exercise location I could think of outside of the gym: the track field. Ever since Akira brought it up, the idea had been stuck in the back of my mind." 
+    "I thought it wouldn't hurt to at least see what people did out here before committing to something and making a complete fool out of myself."
+    "Upon my arrival, I was welcomed with an uneventful sight at the track… {w}that is if it weren't for a carmine-haired amazon kicking up a dust trail in her wake- and the startling speed at which she was lapping the field."
+    show Natsuko neutral with dissolve
+    MCT "!"
+    MCT "That's some speed… {w}I came here to learn a thing or two from people at my level, but I don't think I'll be learning much with her making it look that easy."
+    "As she rounded the corner of the track back towards me, I finally caught a brief glimpse of her full stature before she zoomed past."
+    MCT "Whoa! {w} Didn't think I'd get to see someone bigger than Akira here of all places, figured I'd see that in the gym first..."
+    "And what a marvel it was… A tall girl crowned with vivid red hair. Her broad shoulders, and thick sculpted arms with faint veins tracing across her muscles hinting at a recent lifting session."
+    "A sight overwhelming on its own, and yet somehow, paled in comparison to the absurd amount of muscle packed into her powerful legs as she made short work of the track."
+    "In an act of betrayal to my earlier inquisitive mindset, I instead settled for passively watching her performance as one would watch a track athlete on tv." 
+    "I was completely unable to absorb any of the techniques or strategies she was employing, but spent a good while doing so." 
+    "That is, before my little act of idle observation was cut short by the subject herself…"
+    MCT "!"
+    MCT "I think she caught me staring."
+    "As I saw her walk towards my direction with a heated gaze, alarm bells started ringing in my head." 
+    MCT "This doesn't look good."
+    "Now up close, the full extent of her stature was apparent as she stared down at me and I had to lean my head upward to meet her gaze."
+    show Natsuko smug
+    UNKNOWN "You know, I don't really appreciate distractions while doing my routine…"
+    "Sensing the impatience in her tone, I hurriedly raised my hands in a feeble attempt to placate the wrath of this amazon who looked ready to grind my bones into dust."
+    MC "OH! I'm sorry, really didn't mean to…!"
+    show Natsuko flirty
+    UNKNOWN "…But, I don't mind making an exception this time. I haven't seen you around here before, what's your name?"
+    "Needless to say I was caught off guard by her response, and the nervous tension all but left my body."
+    MCT "...Not exactly the statement I expected to come with that facial expression, but I'll definitely take it over getting walloped!"
+    MC "Oh, umm… I'm Keisuke Hotsure. It's a bit weird to say, but I don't really come to the track field much. However, this is my first time seeing you, so… I'm kinda guessing you're new?"
+    show Natsuko happy
+    UNKNOWN "Good guess, I recently transferred here from Fukuoka. My name's Natsuko Okamoto. Pleasure to meet you, Hotsure-san."
+    $setFlag("Meet_Natsuko")
+    "She put her hand forward for a handshake, but had briefly wiped her palm from the sweat from her training before I reciprocated. The moment her hand clasped mine, I felt a firm shake that made me wince a bit." 
+    "The pain wasn't crushing however (as I was still able to feel the rough texture of calluses against my palm) I guess it was expected that she'd work hard for a body like hers, her growth notwithstanding."
+    show Natsuko neutral
+    Natsuko "…So, you've mentioned that you don't usually come around the track much. What brings you here, then? Not that I'm complaining."
+    MC "Well, my friend suggested I join her at the gym. While I also agree that I could definitely use the exercise, I'm not quite sure the heavy strength training she had in mind for me was quite what I was looking for." 
+    MC "I'm not trying to bulk up or anything… so I figured I could look for other options myself. Granted, I have no clue where to start… so you could call it a whim."
+    show Natsuko annoyed
+    "Natsuko stood still for a few seconds, her gaze sharpening ever so slightly; it was an unusual pause from the person that was mainly driving the conversation forward up to that point."
+    "So I figured I might as well get to the point already instead of dancing around it."
+    MC "I get how silly that sounds for someone who actually takes fitness seriously like you, but I would appreciate it if you had any advice for me on how to get started."
+    show Natsuko neutral
+    Natsuko "Oh no, I fully understand that. If anything, I'd say your friend is the one leading you astray— especially for a beginner that can easily get injured working out with weight machines."
+    show Natsuko happy 
+    Natsuko "Not to mention you'd have a hard time stressing out about standing out or watching your diet. Especially among people with physiques like mine."
+    show Natsuko flex
+    "She struck a showy pose, flexing her arm as if to casually emphasize her strength, and shot me an almost flirtatious wink as she finished her point."
+    MC "Right…"
+    "While I found it a bit hot, I'd never admit to anyone- let alone to the person herself- that I'm {i}that{/i} easy."
+    show Natsuko flirty
+    Natsuko "Tell you what, Hotsure-san… I find you easy on the eyes, so if you're looking for a coach- I'd be more than happy to help you out." 
+    Natsuko "I know {i}exactly{/i} the type of workout plan that will feel comfortable for you."
+    MCT "I'm really not sure about taking her up on the offer right after saying no to Akira, but I can't deny that she summarized my apprehensions better than I ever could…"
+    MCT "...It might make things a bit weird with Akira, but we still hang out plenty outside her gym sessions… so it shouldn't be a big deal, right?"
+    MC "Sure, if you're willing to take on a complete beginner, here's my pho-"
+    show Natsuko happy
+    Natsuko "Great! Let me just punch in my phone number, and you can give me a call whenever you're ready to start."
+    MC "Uhm, yeah, that sounds like a plan. Well, I'd better let you get back to your training. Thank you for your time, Okamoto-san."
+    Natsuko "It was my pleasure. Don't be a stranger, Hotsure-san."
+    show Natsuko neutral
+    "Immediately after we said our farewells, her expression settled back into the one I first saw her with as she razed through the track: full of focus and determination."
+    hide Natsuko with dissolve
+    MCT "She seemed nice… a bit overwhelming, but nice. {w}I just hope I haven't signed up for something above my pay grade…"
+    jump daymenu
+
+label FMGB002:
+    $setTime(TimeEnum.NIGHT)
+    scene Auditorium with fade
+    centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Natsuko's side route.{/outlinecolor}{/size}"
+    centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
+    jump daymenu_noadvance

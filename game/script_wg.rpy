@@ -1854,6 +1854,8 @@ label WG010_decline:
             play music Bittersweet
             $disableRoute("WG")
             $setFlag("WG_disabled")
+            if getFlag("WG_disabled") and getFlag("Meet_Mizawa") and (getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1")):
+                $enableRoute("WGB")
             MC "It's not a question of time. I just don't want to work for you."
             $setAffection("WG", -10)
             show WG angry
@@ -4876,6 +4878,8 @@ label WG024_c1:
     $setAffection("WG", -5)
     $disableRoute("WG")
     $setFlag("WG_disabled")
+    if getFlag("WG_disabled") and getFlag("Meet_Mizawa") and (getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1")):
+        $enableRoute("WGB")
     WG "At least you're honest, I'll give you that."
     WG "{i}Huff!{/i}"
     "Alice briefly vented in order to help compose herself a bit more"
@@ -5499,6 +5503,8 @@ label WG027_c1_1:
     MC "Probably best if I don't run into her for a couple days.{w} Or weeks."
     $disableRoute("WG")
     $setFlag("WG_disabled")
+    if getFlag("WG_disabled") and getFlag("Meet_Mizawa") and (getFlag("WG008_C2_M1") or getFlag("WG008_C3_M1")):
+        $enableRoute("WGB")
     jump daymenu
 
 label WG027_c1_2:
@@ -35678,7 +35684,7 @@ label WG104:
     jump daymenu_noadvance
 
 label WGB001:
-    $setProgress("WG", "WGB002")
+    $setProgress("WGB", "WGB002")
     scene Dorm Interior with fade
     play music MCGuitar
     if isEventCleared("WG010") and not isEventCleared("WG011"):
@@ -36874,6 +36880,7 @@ label WGB006:
 
 label WGB007:
     $setProgress("WGB", "WGB008")
+    $lockRoute("WGB")
     scene Hallway2 with fade
     play music HigherEdu
     "For the first time since our first date, I was feeling pretty good about how things were going with Okisho."
@@ -37196,7 +37203,7 @@ label WGB007:
     jump daymenu
 
 label WGB008:
-    $setProgress("WG", "WGB009")
+    $setProgress("WGB", "WGB009")
     play music DormLife
     scene Dorm Interior with fade
     "Now that I more or less knew Okisho's schedule, I found myself bumping into her a lot more frequently, which means we got to hang out more."

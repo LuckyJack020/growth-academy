@@ -4345,7 +4345,7 @@ label MC006:
     Naoki "You can't hold on to the ball for more than three seconds, and you can't take more than three steps with the ball, but you're allowed to dribble it to get around this."
     Naoki "No pushing, shoving, or trying to pull the ball out of another player's hand, but you are allowed to block them and their throws, obviously. Other than that, you need to be trying to score— no stalling."
     Naoki "That's basically everything, any questions?"
-    show RM doubt with dissolve
+    show RM doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
     RM "Yes, what is the point of all of this?"
     Naoki "You will see soon enough, Utagashi-san. {w}You all will, trust me."
     hide RM with dissolve
@@ -4353,14 +4353,15 @@ label MC006:
     Naoki "{size=-6}How should we balance them out, Hageshi-san?{/size}"
     hide Naoki with dissolve
 
-    if getHighestAffection() == ("BE" or "GTS" or "AE"):
+    if getHighestAffection() == "BE" or getHighestAffection() == "GTS" or getHighestAffection() == "AE":
         $setFlag("MC006_Team1")
         jump MC006_Team1
-    elif getHighestAffection() == ("WG" or "FMG" or "PRG"):
+    elif getHighestAffection() == "WG" or getHighestAffection() == "FMG" or getHighestAffection() == "PRG":
         $setFlag("MC006_Team2")
         jump MC006_Team2
     else:
         $setFlag("MC006_Team1")
+        "Oh no, an error"
         jump MC006_Team1
 
 label MC006_Team1:
@@ -4443,10 +4444,10 @@ label MC006_Team1:
     show AE neutral
     AE "That is fine with me as well. I don't claim any remarkable athletic ability, so I would not want to bear the responsibility for preventing the opposing team from scoring."
     MC "Okay, sounds like we got something worked out."
+    hide BE
     show Naoki neutral
     Naoki "Alright, Team 1, here you go."
     play sound Whistle
-    hide BE
     hide Naoki
     with dissolve
     "Coach Naoki tossed the ball to Shiori. Naomi and I scrambled up the field to get in position for a pass."
@@ -4700,7 +4701,7 @@ label MC006_Team1:
     hide RM
     show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
-    show Naoki
+    show Naoki neutral
     with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
@@ -4904,13 +4905,13 @@ label MC006_Team1:
     PRG "W-We like you too Tashi-sensei..."
     show HR neutral
     HR "{i}Ugggh{/i}.... please, no..."
-    show HR unique with None
+    show HR unique at altMove(0.5, 0.25) with None
     hide AE
     hide GTS
     hide WG
     hide FMG
     hide PRG
-    #show Naoki with dissolve
+    show Naoki neutral
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     Naoki "I knew this guy was a softy at heart."
@@ -4919,6 +4920,7 @@ label MC006_Team1:
     HR "Alright, we're done here. Class dismissed."
     hide HR
     hide Hageshi
+    hide Naoki
     with dissolve
     "So it wasn't exactly the greatest game of handball ever played. It was pretty clear things were starting to change. {w}{i}We{/i} were starting to change."
     "I wasn't sure what the future held for all of us, but for now I was glad we all got to have a little fun."
@@ -5015,11 +5017,11 @@ label MC006_Team2:
     PRG "I-If you think so..."
     WG "I think that is a good idea as well."
     MC "Okay, sounds like we got something worked out."
+    hide PRG with dissolve
     show Naoki neutral
     Naoki "Alright, Team 1, here you go."
     play sound Whistle
     hide FMG
-    hide PRG
     hide WG
     hide Naoki
     show AE neutral at Position(xcenter=0.25, yalign=1.0)
@@ -5290,7 +5292,7 @@ label MC006_Team2:
     hide RM
     show HR unique at Position(xcenter=0.25, yalign=1.0)
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
-    show Naoki
+    show Naoki neutral
     with dissolve
     Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
     Naoki "That's the kind of determination we like to see."
@@ -5496,15 +5498,15 @@ label MC006_Team2:
     PRG "W-We like you too Tashi-sensei..."
     show HR neutral
     HR "{i}Ugggh{/i}.... please, no..."
-    show HR unique with None
+    show HR unique at altMove(0.5, 0.25) with None
     hide AE
     hide GTS
     hide WG
     hide FMG
     hide PRG
     show Hageshi neutral at Position(xcenter=0.75, yalign=1.0)
+    show Naoki neutral
     with dissolve
-    show Naoki with dissolve
     Naoki "I knew this guy was a softy at heart."
     Hageshi "You're not the only one, Aoi-san seems to think so too."
     show HR neutral
