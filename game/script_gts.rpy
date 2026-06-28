@@ -17044,6 +17044,556 @@ label GTS059_NoGo:
     jump daymenu
 
 label GTS060:
+    $setProgress("GTS", "GTS062")
+    scene Roof with fade
+    $setGTSOutfit(OutfitEnum.CASUAL)
+    $setMCOutfit(OutfitEnum.CASUAL)
+    play music Schoolday
+    MCT "Okay, I know it's still fall, but this far north I bet the winters get pretty brutal here. It's going to be better to plan ahead and get these tulips transferred out of these planters before winter for Naomi."
+    "With my trusty trowel, gifted to me from Naomi back when she used it herself, I sunk into the soil of the planter's box where the bulbs were sleeping for the rest of the year."
+    "..."
+    MCT "Hmm, they should be up towards the surface... Maybe I gotta dig a little deeper?"
+    "..."
+    "!"
+    MCT "Shit! Where are they?"
+    "I proceeded to tear up the whole planter box, desperate to find the bulbs... but they were nowhere to be found."
+    MCT "What!? Plants don't just get up and walk away. Where did they go?"
+    "Looking up in my frantic state, I noticed a couple other students were around, tending to their own respective plots."
+    MC "Hey, you two wouldn't have happened to take out any tulip bulbs... or know anyone who did by chance do ya?"
+    Student1 "No idea. I haven't seen anyone else touch that bed."
+    Student2 "Wasn't me. Flowers aren't really my thing."
+    MCT "No luck here, I guess. Figures."
+    MC "I'll track down the groundskeeper. He might know. He keeps pretty good tabs on this stuff."
+    scene School Building Side with dissolve
+    MC "Do you happen to know where her tulips might have gone? I was going to transplant them before winter came. Did you beat me to the punch?"
+    "Gardener" "Tulips? There's tulips all over the campus, which ones are you talking about?"
+    MC "The ones in the box on the roof. The one with all the flowers towards the East side, Yakazami-san used to plant in."
+    "Gardener" "Oh those. Yeah, some student spilled soda in the tulip bed and it must have killed them. The bulbs were all rotted so I threw them out."
+    MC "What!? {w}That sounds ridiculous. Is that what really happened?"
+    "The groundskeeper shrugged, seemingly unphased by the absurdity of what he had just suggested." 
+    "Gardener" "It happens. Funny enough it's not the first time I've seen it happen. Just goes to show people shouldn't be drinking that stuff in the first place."
+    MCT "Shit. {w}I'm in deep shit. {w}What is Naomi going to think? How am I going to break this to her?" 
+    MCT "Then again, would she even believe it if I told her what happened? Of all the luck..."
+    MCT "Still, it's no excuse. She loved those flowers, and they died on my watch after she entrusted them to me. {w}How am I gonna get out of this?"
+    pause .5
+    MCT "Alright, Kei, calm down. This is Naomi we're talking about. Few people are as understanding as she is and it won't do any good to lie to her."
+    MCT "After all, \"A harsh truth spoken with love is less injurious than a gentle lie.\" {w}—No idea where that came from, but it sounds like something she'd say."
+    MC "I'll shoot her a text."
+    MCCell "<Can I call you?>"
+    "It took a couple of minutes before I felt the buzz of my phone in my pocket. Not that I expected an immediate response. Naomi certainly wasn't the type to incessantly check her phone."
+    MCCell "Hey, Nacchan."
+    GTSCell "Hello, my love. Is everything alright? Are you sure you've recovered from your sickness?"
+    MCCell "Oh that. Yeah, I think I'm good. Maybe not 100%%, but better than 90."
+    MCCell "That's not what I wanted to call you about though."
+    GTSCell "Oh? Pray tell, what news do you have?"
+    MCCell "The tulips you gave me to take care of... unfortunately they're all dead."
+    GTSCell "Oh my. That is most unfortunate."
+    MCCell "Yeah, it's bad. I'm sorry. {w}I went up onto the roof not too long ago to transplant them to storage for the upcoming winter, and didn't find them."
+    MCCell "I asked the gardener about them and apparently someone spilled soda in the flower bed and it killed them."
+    MCCell "Which when I say that out loud I don't quite believe it myself— but that's what he said."
+    GTSCell "..."
+    MCCell "I know it's gotta be upsetting. I feel bad that I failed to care for something you entrusted me with. I should have been more diligent in checking up on them after the spring blooms had withered."
+    GTSCell "Though unfortunate, it's nothing to be upset about. Cultivation is not always an easy task. Death is the natural counterpart to life, and seldom arrives when we should like it."
+    MCT "To hear her say that... Now I'm wondering if we're talking about the tulips still, or something else..."
+    MCCell "Okay. Well, I just wanted to let you know. Sorry about that."
+    GTSCell "Think nothing of it, my love. Thank you for telling me."
+    MCCell "Are you busy this afternoon?"
+    GTSCell "I do not have any particular plans. Are you thinking of coming by?"
+    MCCell "Yeah, I'll be there in a bit."
+    GTSCell "Lovely! I'll see you soon."
+    MCCell "See you soon."
+    scene Chukan Point with fade
+    play music MC
+    
+    "Despite Naomi's assurances, I wasn't quite convinced it was her sincerest thoughts, or if she was just trying to protect me from her own disappointment."
+    "Not that it ever took much for me to jump at the chance to see her, but I found myself regretting the earlier phone call when I realized now this particular matter could have benefited from a more personable response."
+    "I had to know how she was really feeling."
+    scene black with fade
+    pause .5
+    scene Giant Dorm Interior with fade
+    MC "Are you sure? I mean, I feel like I really let you down. I should have done a better job."
+    show GTS neutral at Position(ycenter=0.55) with dissolve
+    "Naomi kneeled down on her knees in front of me to gently stroke her hands through my hair. Something I learned that she had come to enjoy the feeling of."
+    GTS "My love, there are many more tulips to be found and enjoyed for next year. Nothing has been lost that cannot be replaced."
+    MCT "Maybe she really is just talking about the tulips after all..."
+    MC "I suppose you're right. In fact— I know you're right."
+    show GTS neutral-2 at Position(ycenter=0.35)
+    "Naomi gave a soft smile, showing her usual grace of understanding and affection I should have come to expect, but had somehow determined wouldn't apply in this instance."
+    GTS "You concern yourself for my sake with far too much, my love. I sincerely hope that you know that I do not question your devotion, if that is what troubles you." 
+    MC "I suppose I was foolish to worry as much as I do, but still... I often feel there is so little I can do for you."
+    GTS "Your presence as a companion offers far more than anything I have received from others in this unusual circumstance I've found myself in, and I cherish it dearly. Do not underestimate the power of but a little affection."
+    "I was hesitant to take her at her word, even though I understood how feeling even just a little less alone could make any grim circumstance that much brighter. I realized it was best to let go of it all and not worry for once."
+    MC "And that is something I will always offer, as long as it is welcome."
+    show GTS aroused at Position(ycenter=0.55)
+    GTS "It is {i}always{/i} welcome, I assure you."
+    show GTS neutral
+    GTS "Which is why I have a small request."
+    MC "Sure! Anything."
+    show GTS pondering at Position(ycenter=0.35)
+    GTS "You would respond with \"anything\" even though you do not know what is being requested?"
+    MC "I trust you would not require anything too extraneous or dangerous."
+    show GTS happy-2
+    GTS "I hope that trust will not be misplaced."
+    show GTS neutral-2
+    GTS "I have had the notion of wanting to visit the Giant village on the island again. Would you be willing to accompany me? I would appreciate the company on the long walk." 
+    MC "Of course. My afternoon and evening are wide open."
+    GTS "Wonderful. It will make the journey all the more pleasant."
+    scene School Front with fade
+    "Wasting no time on the departure, I accompanied Naomi across campus as best as I could keep up with, though the pace proved somewhat taxing for my comparatively tiny legs."
+    "The distance from the Giant's Dorm and Chǔkan Point to campus was not a short jog in and of itself, though manageable on its own."
+    show GTS unique at Position(ycenter=0.55)with dissolve
+    "Sensing my increasing fatigue with attempting to match Naomi's pace, per her nurturing instinct, she scooped me up into her arms where I sat saddle in the crook of her elbow as she carried on toward the rest of the journey."
+    "It was a relief in more than one sense, the fatigue in my legs eased, and the worries of my mind dissipated in her close presence... {w}plus it didn't hurt having her boobs as a comfy back rest."
+    scene Roadside Woods with fade
+    play music Country
+    "We trekked on through the wilderness, taking paths where we could find them, but forgoing them if they deviated too much." 
+    "The Giant Village was a long ways by foot, far from the beaten path but made considerably shorter by taking the more direct route."
+    if isEventCleared("RMG001"):
+        MCT "No wonder this place wasn't on the bus route, way too out of the way."
+        MCT "Then again, most of the people having to make that stop probably couldn't fit on the bus anyway."
+    "Taking the direct path involved some rather rough terran, but that was something Naomi was able to manage with a lot more ease than others without her proportions."
+    "For my part, I felt like I was taking some sort of zip line over the island's woodlands." 
+    "Seated up on my \"perch\" as it were, I could really take in a far view of the landscape, which offered a stunning view I would not have been able to see otherwise."
+    MC "Wow. You really have a great view up here."
+    show GTS_S neutral with dissolve
+    GTS_S "It does allow me to take in the majesty of nature more fully. It makes me more aware of the extent of the forest, rivers, and mountains, when before I might have only been able to focus on the few trees nearby."
+    GTS_S "Though this experience has proved unfortunately more isolating, I have come to appreciate the change in perspective lends itself to a more contemplative outlook."
+    MC "I see what you mean. It's a lot to take in all at once. Sort of forces you to want to \"stop and smell the roses\" so to speak."
+    show GTS_S happy-2
+    GTS_S "How perfectly apt, my love."
+    scene black with fade
+    pause .5
+    scene Giants Town with fade
+    play music GTS
+    "We arrived at our destination. Thought that Naomi might have grown tired from carrying me at this point, but gentleness by which she set me down did not suggest any fatigue from her."
+    show GTS_S pondering with dissolve
+    GTS_S "Stay close, my love. I don't know how careful the other denizens of the town will be if they aren't expecting visitors."
+    MC "Gotcha. You're probably right. I'll be extra careful."
+    MC "I guess I forgot to ask, but what made you want to visit here today?"
+    GTS_S "I had been thinking recently that it is a shame that the respective communities of this village and the Giant's Dorms aren't more connected."
+    GTS_S "I know some of the students are aware of the village, but might not have made the trip themselves."
+    show GTS_S despaired-thought
+    GTS_S "For others they might be putting off visiting, as it can represent a level of acknowledgement of the permanence of their circumstance they aren't quite ready for."
+    show GTS_S neutral
+    GTS_S "I think if they could see and interact with others who share their condition, it could help improve their life's outlook and overall mental health."
+    MC "That's a good idea. I mean, it's worth a shot at least."
+    MC "I mean, all of these people here were former students at some point, so I'm sure they can empathize. I bet a lot of them would be eager to help out with something like that."
+    scene Giants Town Store with fade
+    "With that in mind, we walked down to the store to see our friend Fumihiro-san, who was arguably the most connected person in the village. If anything was going to succeed in getting off the ground, he'd have to be involved."
+    Akio "Hmmm, I like the idea, but what specifically do you have in mind for this... what did you call it?"
+    show GTS_S neutral-2 with dissolve
+    GTS_S "A community action committee. A joint organization to facilitate mutual cooperation between the giant students at the Academy and the villagers here."
+    Akio "I like the sound of it. I mean, many of the students will find there aren't a lot of other places for them to go after their time in the Academy." 
+    Akio "We should be doing our best to make them feel like this could be their home, before the world tells them it has to be."
+    "Something about the way he said it didn't sit right with me... was this really going to be the {i}only{/i} place that giant students like Naomi will eventually find themselves?"
+    show GTS_S pondering
+    GTS_S "Though I would like it to grow into something larger, I think it will be best to start with some small things."
+    show GTS_S neutral
+    GTS_S "For instance, something as simple as a local paper or other forms of communal information sharing between the two locations would be nice."
+    Akio "Not sure if this place has enough people to support a newspaper, but a newsletter and some kind of online community forum might be a good start."
+    GTS_S "Yes, that would be suitable. Something that would allow the students to know of upcoming events happening around the village that would invite their attendance."
+    Akio "Yeah, that could work. I know some people that can make something happen. I take it you'd be one of the representatives for the school?"
+    show GTS_S neutral-2
+    GTS_S "Yes, I believe myself and Watanabe-san would be, at least for now. We hope to involve others as we garner interest."
+    Akio "Sure, sounds like a plan. What else do you have in mind?"
+    GTS_S "Watanabe-san and I had discussed wanting to implement some safety features around the Giant's Dorms."
+    Akio "You mean so people can't accidentally fall into the pit?"
+    show GTS_S sad
+    GTS_S "Yes, it would be tragic should the worst case come to fruition some day. I also think the added safety barrier could provide peace of mind."
+    show GTS_S neutral
+    GTS_S "Watanabe-san has the plans drafted, but she would like to draw upon some of the extra manpower from the village residents to help with the construction of the project."
+    MCT "Given the scale of the fence required to serve that purpose, I suppose it would be easier to employ giants to help with the installation."
+    Akio "I think everyone at some point had a close call with The Pit. Wouldn't be hard to get people on board..."
+    scene black with fade
+    pause .5
+    scene Giants Town Store
+    show GTS_S happy
+    with fade
+    Akio "Alright Yamazaki-san, sounds like a plan. Let's make it happen!"
+    "The two titans bowed deeply with respect towards each other before Fumihiro-san returned to his story duties."
+    MC "That went well."
+    GTS_S "Most certainly. I am looking forward to meeting with the other community leaders Fumihiro-san recommended. Hopefully we can arrange a meeting soon."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+    play music GTSAlt
+    scene Giants Town
+    show GTS_S neutral
+    with fade
+    "By the time we were getting ready for the return trip, it had slipped into the early evening. {w}Luckily, we still had a few hours before it would get dark."
+    "As we made our way out towards the town gate, I noticed a local izakaya, which my growling stomach reminded me I had forgotten to eat lunch today in midst of the missing tulip bulb debacle."
+    "Naomi for her part, ever attentive, noticed my brief pause in front of the restaurant." 
+    show GTS_S pondering
+    GTS "Perhaps we should stop for a light dinner before the evening gets away from us?"
+    MC "I wouldn't be opposed to that."
+    scene Ryokan Exterior
+    show GTS neutral at Position(ycenter=0.55)
+    with fade
+    "The inside of the establishment had even more exaggerated proportions than the Academy's facilities."
+    "Given the large height differences between the Giant's the seating didn't conform to a uniform standard size for each set of tables."
+    "Luckily they had a traditional short table style serving set up for some of the seating that allowed me to stand, while Naomi could kneel."
+    "The server brought out a bowl of sticky rice and cucumber chips, something I knew Naomi would enjoy as well."
+    "Truth be told, part of me was kind of disappointed that the cucumber slices and rice grains weren't also gigantic to match the relative size of the patrons, but I had to remind myself the world didn't operate on video game logic."
+    MCT "Sure does look like the giant world level though..."
+    GTS "Do you find the offerings to taste, Keisuke-kun?"
+    MC "Yes, the rice is nice and sticky, and the cucumber chips are light and crispy. It's pretty refreshing. I needed the pick-me-up."
+    GTS "I assumed as much. You were quite distraught earlier today. I thought this trip would help you release yourself from your worries."
+    MC "It certainly did. I didn't know how much I needed this trip until you offered. Thank you for taking me along."
+    show GTS neutral-2 at Position(ycenter=0.35)
+    GTS "Of course. But tell me, my love, why did you allow yourself to become so upset about the tulips dying?"
+    "I stopped mid-bite as the weight of her question hit me square in the chest. Not because I was afraid to answer, but I now finally possessed the presence of mind to actually think about the question."
+    MC "I guess... {w}If I had to articulate what's bothering me, it isn't the loss of some flowers..." 
+    MC "It's that I felt like I betrayed the trust you put in me to take care of things. I don't want you to think I'm going to keep letting you down, especially after we both worked so hard to maintain that garden."
+    show GTS despaired-thought
+    GTS "I understand, my love. I sympathize with dreading the disappointment of loved ones."
+    "She took a bite of rice and chewed slowly, fixed upon the remainder of the mound, before she swallowed and looked at me again."
+    show GTS sad-2
+    GTS "When I was training as a maiko, I lost my sense of composure and rather angrily rebuked a rude customer at my trainer's tea house."
+    MCT "Kind of hard to imagine Naomi losing her temper like that... {w}Then again, I've seen how someone like Alice can bring out the worst in her on a bad day." 
+    GTS "As a result of the incident, I was pulled out of the apprenticeship. Being too old to start over at 19, my prospects of continuing down the path my parents set for me seemed over."
+    show GTS neutral-2
+    GTS "But shortly after that incident, I had a health check-up wherein they discovered the latent growth factor, which would have sent me here regardless of how I might have managed to stay my previous course."
+    MC "So all those years of apprenticeship... gone. {w}I'm sure that must have felt like a heavy weight."
+    GTS "Yes, it certainly felt that way for a time. But I wanted to tell you this so you know that we both understand firsthand what it means to have plans waylaid by circumstance."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "It is why we must learn to accept the waylaying as part of our life's journey, rather than futilely attempt to swim against the current, hoping to somehow recapture what we think we've lost, when we should embrace the dawn of a new day."  
+    MC "You certainly have a way of weaving words together so eloquently and succinctly."
+    show GTS embarrassed
+    GTS "You are far too kind, my love."
+    MC "No, I mean it. You're right. It's okay to let go sometimes." 
+    show GTS neutral
+    MC "It's not that the bulbs were insignificant or the work that we did together was pointless, but those bulbs had their time to bloom, and there's a new season of life to look forward to, for both of us."
+    show GTS happy
+    GTS "Then let us look forward to the joy of new life the unfolding seasons bring— together."
+    jump daymenu
+
+label GTS061:
+    jump GTS062
+
+label GTS062:
+    $setProgress("GTS", "GTS063")
+    $setMCOutfit(OutfitEnum.CASUAL2)
+    scene Field with fade
+    play music ChangingSeasons
+    MC "...Was that?..."
+    "I couldn't say for sure, but I thought I felt a little buzz in my pocket over the wind barreling down the high plain."
+    "I withdrew what I thought the likely culprit, only for it to blare my call jingle in my face. It was Naomi."
+    MC "Hey, Blossom. What's up? Do you need help?"
+    "I said, as though there were anything for which she might require {i}my{/i} help."
+    GTSCell "Good afternoon, Keisuke-kun. I am well."
+    GTSCell "Ah, I believe I hear the wind. You must be on your way."
+    MC "That'd be correct. Can I pick something up for you?"
+    GTSCell "Oh, no. I'm only verifying. Have a pleasant stroll, my love."
+    MC "Alright then, thanks. See you soon!"
+    GTSCell "Please do. Goodbye for now."
+    MC "Goodbye."
+    "She hung up.{w} I stared at my own squinting face through shades of black."
+    stop music fadeout 5.0
+    MCT "Guess I'll find out."
+    scene black with fade
+    pause 1.0
+    scene Giant Dorm Interior with fade
+    "The wind fell silent with a click behind me as I stepped into the living room and found myself alone."
+    "I held fast, and listened.{w} Nothing."
+    "Barren of its usual inhabitant, the eldritch mien of a living room built for a giant slithered around me. Fabricated metal infrastructures stretched high and their shadows yawned."
+    menu:
+        "Nacchan?":
+            "Her resounding voice promptly answered my feeble echoes."
+            GTS "Ah, splendid! Come to the bedroom, please!"
+            MC "Oh?..."
+            show GTS neutral at Position(ycenter=0.55) with dissolve 
+            play music GTS fadein 2.0
+            "But alas, I did as she bade me only to find her sitting half-lotus, fully clothed."
+            MC "I got your, dare I say, rather urgent-sounding phone call. What's going on?"
+        "(Check the bedroom)":
+            "I crossed in silence to the threshold and then had my answer."
+            "Naomi was sitting half-lotus on the foot of her bed with her serene eyes shut. I waited a moment or two for her greeting."
+            pause 2.0
+            MCT "I hear her breathing... is she sleeping?"
+            MCT "Oh, I am gonna give her {i}so{/i} much shit."
+            if checkSkill("Academics", ">", 7):
+                MCT "Although... her eyes aren't moving..."
+            "I paced a little closer."
+            MC "Hey..."
+            show GTS surprised at Position(ycenter=0.55) with vpunch
+            play music GTS fadein 2.0
+            "She gasped, I staggered."
+            show GTS neutral 
+            GTS "Oh, it's you. Good afternoon."
+            MC "Hey. It sounded like you needed me for something urgent?"
+    GTS "Never fear, it's no terribly grave matter. I only need you to do something with me tomorrow evening."
+    MC "Of course!"
+    show GTS wink
+    GTS "I do appreciate your agreeing without knowing what I am to ask of you."
+    MC "I'll always be your mindless lemming."
+    show GTS unique-2 
+    "I blew a punctuating kiss at her, and she chuckled."
+    show GTS neutral 
+    GTS "Well, to cut to the point, it has come to my attention that a journalist from the local paper is seeking to interview me."
+    MC "Oh! That's pretty cool, what's it for?"
+    show GTS embarrassed 
+    GTS "He apparently means to write a short piece on..."
+    "As I tilted my head, she sighed."
+    GTS "It has recently come to light that my height has reached 7.9 meters."
+    MC "Wow, uh... alright."
+    show GTS pondering at Position(ycenter=0.35)
+    MC "I know I see you every day, but something about hearing that out loud..."
+    MC "N-Not to be insensitive..."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "I know, Keisuke-kun. At least I can be glad that you still find me comely."
+    MC "Even more so every new day."
+    GTS "Hmhm."
+    pause 0.5
+    MC "So... how did you find this out, and how did word get out?"
+    GTS "The first count owes to a mere routine medical exam. Unusual circumstances aside, it's nothing to write home about."
+    show GTS angry
+    GTS "Unfortunately, my state was shortly thereafter deduced by Kajiwara-san, and after {i}quite the hullabaloo{/i} I was quite regrettably obliged to make known the sordid details."
+    MC "...{w}I'm sorry, but \"obliged\"? You're almost double the size of most of them, how can they force you to do anything?"
+    "My lips pressed a little tighter as I saw her narrowed eyes focus, like a sunbeam through a magnifying glass, on me."
+    GTS "The {i}ability{/i} to employ force does not release one from the social contract, least of all for one of samurai blood."
+    MC "...Valid point. I'm just curious, you're normally the Miyamoto Musashi of social finesse."
+    show GTS neutral 
+    "She bit her lips too, for a second, and sighed."
+    GTS "In truth, I was rather hoisted by my own petard."
+    GTS "There is... something of a custom among the students who come here, I've learned. Every week, after classes are done, we gather by a wall just inside the class building and record the... progression of our factors upon it."
+    GTS "Thus, my status as the largest human being to ever live is now so much grain for the rumor mill. Word reaching the general public was thence inevitable."
+    pause 0.5
+    MC "I'm sorry it had to turn out this way, Nacchan."
+    GTS "I appreciate your sympathies. The custom does have its merits... everyone is induced to a kind of jollity and there's plenty of light conversation."
+    show GTS angry
+    GTS "But I do wish more courtesy had been shown before having the good name of Yamazaki trotted out for a Friday evening freakshow."
+    MC "Well... it could be they just want to share an interesting local story."
+    MC "I mean, you haven't just broken a record, you are without equal in all of recorded history. I think that's worth celebrating."
+    GTS "I, for one, think celebrations ought to be reserved for honorable things."
+    "As much as she seemed set in her feelings on the matter, attempting to change her perspective seemed ever more futile. I changed course."
+    show GTS neutral 
+    MC "So... what if you called out sick? Or why not even just flat-out call off the interview?"
+    GTS "The ideal being to deflect as much public attention as possible away from my condition, pointedly avoiding the interview would be rather to my disadvantage."
+    GTS "The imagination, given mere hints without substance, induces intrigue, and intrigue begets memory, and worse yet, {i}talk{/i}."
+    MC "Uh... I might need some help understanding what's at stake here. Who is it you don't want knowing about this?"
+    GTS "Chiefly, local land owners that my family may one day be interested in buying from."
+    GTS "Of course they'll find out anyway. I would only prefer the occasion to be as unremarkable as possible."
+    MC "If they're local, surely somebody with a height factor is already unremarkable. Even one who's a little taller than average."
+    GTS "And if I know men in that line of work, they quite prefer their dealings to be with as dependable a partner as possible. They want someone who doesn't make waves."
+    MC "Well... alright. Tomorrow evening?"
+    GTS "Yes, at the gardens on the main campus."
+    MC "Woo, throwback! The site of the Renga Incident."
+    show GTS unique-2
+    GTS "Oh, come now, it wasn't so bad."
+    MC "Ksh, I rrrreally thought I was about to face your wrath that day."
+    GTS "Rest assured that you were not. I seem to recall the occasion was my idea."
+    show GTS aroused
+    GTS "And moreover, I remember reflecting upon it that evening... "
+    show GTS happy
+    if getFlag("GTS022_late"):
+        GTS "I do confess, the steadfast resolve you demonstrated that day led me to regard you in a new light."
+    else:
+        GTS "I do confess, the uncommon gentlemanly tact you demonstrated that day led me to regard you in a new light."
+    MC "Well then, I can't disappoint you {i}now{/i}."
+    MC "What do I have to do exactly?"
+    show GTS neutral
+    GTS "It's quite simple. Should the fellow from the paper see fit to interview you, one Murata-san, as he may well..."
+    GTS "I would like you to answer any questions he might have in the most straightforward, brief, {i}honest{/i}, and above all, dry and forgettable manner."
+    MC "They used to call me {i}Mister{/i} Dry and Forgettable."
+    GTS "As you say. Thank you for your help, my love."
+    MC "My pleasure, Blossom."
+    GTS "Now, if that's settled, would you care to join me in my evening meditation?"
+    "Nodding my assent, she flattened out a patch of bedsheets beside her and patted it. I assumed the proper position in the shadow of her hip."
+    scene black with fade
+    pause 1.0
+    MC "Hmmmmmmmh..."
+    pause 1.0
+    MC "Haaaahhhh..."
+    "Soon, I felt myself nearly drifting off under the gentle breeze and the lilting psithurism of Naomi's breath."
+    pause 2.0
+    GTS "It was a peculiar sensation."
+    MC "Hm? What was?"
+    pause 0.5
+    GTS "I've noticed ever since our day at the beach. Multiple nurses attend my medical check-ups. Apparently, I alone am given such treatment."
+    pause 0.5
+    GTS "What I mean is having so many people... well, crawling over and pacing around me, porting their equipment hither and yon..."
+    GTS "Hmhm..."
+    GTS "A thought came to me of mice worshipping before a great statue of the Buddha."
+    pause 1.0
+    "My lips curled."
+    MC "Pff..."
+    GTS "A silly thought, indeed. Nevertheless, it seems that the rift that I perceive between myself and my fellow man is still slowly widening."
+    MC "...Oh..."
+    pause 1.0
+    stop music fadeout 5.0
+    MC "Does that include... me?"
+    GTS "Of course, Keisuke-kun. However broad the gap, you shall ever be my bridge."
+    pause 1.0
+    MC "So you {i}do{/i} want to step on me?"
+    GTS "Do you know what I always found interesting? In the old days, the Chan masters of China would re-center unruly or unreceptive acolytes with a swift slap on the head."
+    MC "{i}Khm{/i}... anyway, ohmmmmm..."
+    GTS "Hmhm... ohmmmm..."
+    pause 2.0
+    $setTime(TimeEnum.EVE)
+    scene School Planter
+    show GTS neutral at Position(ycenter=0.55)
+    with fade
+    play music Sunset
+    "Few had come to the campus gardens that evening... fewer still remained once Naomi had gingerly stepped over the hedge and they decided they were needed elsewhere."
+    "I saw her lax amber eyes follow them as they briskly abandoned the garden. She said nothing."
+    "In the distance, leaves crunched all around."
+    pause 1.0
+    MC "So... short, honest, and non-specific?"
+    show GTS happy
+    "She looked down at me and nodded with a kindly smile."
+    MC "Okay."
+    "I looked across the way; the reporter's belly as he emerged from betwixt the hedges could've filled a small shopping cart, telling his factor before I could see the whites of his eyes."
+    "Nevertheless he was well-appointed in plain slacks and a button-up, nary a wrinkle on either as he paced even steps towards us."
+    "His sharp, hawkish face kept still as a mannequin all the way, save his eyes, which dartingly studied every distinct thing in the garden."
+    "At just the proper distance, he stopped, and bowed."
+    "Murata" "Hello, there! You are Yamazaki-san and Hotsure-san, if I'm not mistaken."
+    "Murata" "I'm Norio Murata with the Seichou Weekly. Thanks a bunch for meeting me here. How are you both?"
+    GTS "I am well, thank you."
+    MC "Doing good, thanks. How are you?"
+    "Murata" "Just peachy about now. These gardens are much quieter than anywhere in town."
+    "He seated himself at a bench perpendicular to mine, folding his hands."
+    "Murata" "It's a nice break from making phonecalls and scrolling on my desktop. How about you? What do you do with your free time these days?"
+    MC "?..."
+    GTS "Well, spending time with Keisuke-kun and other dear friends, of course. I also tend to a persimmon sapling my Keisuke-kun gave me on my birthday. I'm also quite fond of reading."
+    "Murata" "Always a pleasure to meet a fellow bookworm. Have any recommendations?"
+    GTS "Hiroko Mori's \"For Want of Ezo\" is quite good if you are inclined toward  historical drama."
+    "He nodded appreciatively."
+    "Murata" "And where are my manners? What would you say, Hotsure-san?"
+    MC "Uh... a lot of the same stuff that she said. Video games. Drawing."
+    "Murata" "Heh heh, yep, that sounds about right for a couple your age. Do you find there's any challenges in enjoying these things together?"
+    "Naomi and I locked eyes for a moment."
+    GTS "Yes."
+    pause 1.0
+    "Murata" "Mhm, mhm. Well! Shall we begin the interview proper? Do either of you need anything?"
+    "Naomi declined after a glance toward me, and the man slid a thin, reddish leather notebook out of his pocket. His eyes locked onto hers as he hovered a faded black ballpoint over the pink lines."
+    "Murata" "So... Yamazaki-san. We're here today because you have been recognized, by official medical record, as the tallest human being, not just living, but in recorded history.{w} How do you feel?"
+    show GTS pondering at Position(ycenter=0.35)
+    "She tapped her upper lip."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "I feel surprised, for sure."
+    "Murata" "To be expected. What in particular surprises you the most?"
+    if isEventCleared("GTS005"):
+        GTS "I was told within the first week at the academy that I could expect to grow taller, but I must impress that I had anticipated a gain of perhaps half a meter at the most."
+    "Murata" "Well! I remember seeing you at the spring festival and, pardon my French, you had pretty clearly blown past a meter."
+    if getFlag("MC010_GTS"):
+        MCT "I {i}thought{/i} this guy looked familiar."
+    "Murata" "Hotsure-san, you must have been right there with Yamazaki-san for much of the intervening months. What do you think about the degree to which her factor has developed?"
+    MC "Nothing in particular."
+    pause 0.5
+    "Murata" "That's a pretty stoic perspective. Would you say her record-breaker status and, to be blunt, her size... those things don't matter to you?"
+    MC "I mean... not really.{w} I'd be by her side if she were two meters, two millimeters, or two kilometers tall."
+    show GTS embarrassed
+    "Murata" "That's really lovely. Good for you."
+    "Murata" "And on that note, Yamazaki-san, how has your particular factor affected your day-to-day lifestyle?"
+    show GTS neutral
+    GTS "There have been some substantial changes. I find I am much more keenly aware of the logistics of everyday life than I had been but a year ago."
+    GTS "For example, I occasionally visit a residential area for people who also live with a more extreme case of my condition."
+    GTS "I would venture to say that I believe life there could be easier than it is."
+    "My brow rose a little at that. Murata's certainly did, too, and he began jotting faster as he leaned in just slightly."
+    GTS "Their food supply, while thankfully price-controlled, is ill-equipped to fully meet human nutritional needs and represents a substantial drain on the national reserves. Very little of it is produced locally."
+    "Murata" "Interesting..."
+    GTS "Infrastructure is rather of concern, as well. The population of people dealing with a height factor has steadily compounded for several decades now, and will likely continue to do into the middle 2030's before it starts to level off."
+    GTS "As it stands, standards for housing have been dropping with every year."
+    GTS "In some houses without large and expensive industrial heating systems, people make it through winter with hand-sewn quilts and fire pits full of scrap wood."
+    "I looked over at Naomi with as much  subtlety as I could muster, wondering what happened to 'brief' and 'forgettable'."
+    "Murata" "You... paint quite a picture."
+    GTS "The situation would be quite dreadful were it not for considerable assistance from the central government. Nevertheless, opportunity abounds for those who wish to build stronger communities and with them, a stronger Japan."
+    "Murata" "I see, I see. I'm sure that will be good news for many out there."
+    "Murata" "On the topic of lifestyle, what does a typical morning look like for you, Yamazaki-san?"
+    GTS "Generally speaking, upon rising I do some light stretches, brush my teeth and hair, apply sunscreen, and do some sitting meditation. The latter is tremendously helpful in focusing my efforts and intentions for the day."
+    GTS "Afterward, I gather my study materials and leave my dormitory to break fast. I usually dine with one or two acquaintances. Thereafter, the day takes whatever course it will."
+    "Murata" "And what's a typical breakfast for a giant?"
+    GTS "Rice, zucchini, natto, and tilapia. The same thing every meal, in fact, save of course for the natto. On occasion, the method of preparation varies."
+    "He nodded."
+    "Murata" "Now, Hotsure-san, how do you navigate a relationship with such a drastic difference in stature?"
+    MC "As with any relationship, good communication is essential."
+    "Murata" "I don't mean to pry, but I gather this isn't your first romantic engagement."
+    MC " ...Not really, no."
+    "Murata" "So, what have you found specifically needs to be laid out?"
+    MC "I mean, you've gotta have trust."
+    "Murata" "Mhm."
+    MC "Like... so we came to an agreement not too long ago: no secrets. We can ask each other absolutely anything and expect a full and honest answer."
+    "Murata" "Mm... interesting that you felt the need to come to an agreement about that."
+    "As a frail sound tangled in my throat, Naomi's voice resounded from on high."
+    GTS "That is simply how we have chosen to conduct ourselves. Words are vessels of power, as doubtless you will agree, sir."
+    "Murata" "Ohhh, fully and vigorously. It's just... well, what {i}I{/i} think doesn't really matter here. Let's move on."
+    "Murata" "Obviously a lot of people {i}are{/i} pretty heavily affected by the more extreme manifestations of the height factor."
+    "Murata" "Now, according to my research, you are in a pretty unique position, Yamazaki-san. You are the eldest of two daughters, and thus, the presumed heir of the Yamazaki Land Enrichment corporation."
+    "Her face took on a stillness that promptly took all the stillness out of me."
+    "Murata" "If my sources are correct, the family business manages somewhere around 76,000 square kilometers in land assets. Against that background, how does your new status quo change your future plans and aspirations?"
+    "I leaned in as Naomi looked off to the blood-orange horizon with vacant eyes. After a moment, she turned back to face Murata."
+    GTS "Have you read how my family first became a house of consequence?"
+    "Murata" "I... admit I haven't. What's the story?"
+    GTS "In April of 1185, Yamazaki no Kagetoki dove into the waters of Dan-No-Ura in pursuit of the fallen Kusanagi no Tsurugi."
+    GTS "After fighting for survival from sunrise until sunset, he dove into the churning waters again, and again, and again... he came within a hair's breadth of death."
+    GTS "But come sunrise, sir Kagetoki's courage and persistence won him the holy sword, and with it, the shōgun's favor."
+    GTS "This is the lesson that I and every one of my ancestors since were raised with."
+    "Murata narrowed his eyes as his pen stood still, leaning in."
+    GTS "I don't quite know what that means for me now..."
+    pause 0.5
+    GTS "I only know that I will not sink."
+    "Murata nodded. Despite the solemnity and admiration in his expression, at the same time it was marked by a slackness that looked to me like... perhaps, pity."
+    "Murata" "A very eloquent answer."
+    "Murata" "One last question for Hotsure-san, if you please."
+    "Murata" "Average-size people and giants have been known to live together for a few decades now. Do you believe you might be approaching the limits of that practice? Do you think you might have to assess your options someday soon?"
+    show GTS pondering at Position(ycenter=0.35)
+    MC "Assess our options?..."
+    "Naomi glanced down at me for just an instant, her eyes wide open in thought."
+    MC "Uh, well..."
+    "I shrugged."
+    MC "Maybe someday. Right now, I just want to let a good thing be a good thing."
+    show GTS neutral at Position(ycenter=0.55)
+    "My words echoed back at me amidst the scratching of the pen. My bravado didn't have as pleasant an aftertaste as I'd expected, and I found myself waiting for the scratching to end. And yet, Naomi seemed pleased."
+    "At last, half a second of silence. The ballpoint floated, perfectly still, before Murata laid it down at his side."
+    "Murata" "Well... thank you both very much for chatting with me today. You're in a very unique situation, you two. Hearing your perspectives on the things has been so, so fascinating."
+    "Murata" "I think you'll do well, somehow or another."
+    GTS "Thank you, Murata-san. It has been an uncommon pleasure."
+    "With one last farewell and a shimmying of his loafers, he arose and went on his way."
+    "I leaned back in the bench, loosened my jaw."
+    MC "How do you feel?"
+    show GTS pondering at Position(ycenter=0.35)
+    GTS "That went about as well as I could have hoped."
+    MC "Agreed, I think. Uh... how'd I do?"
+    show GTS happy at Position(ycenter=0.55)
+    GTS "Hmhmhm..."
+    MC "Gwoh!-"
+    "In answer, she hooked her fingers under my armpits and sat me down in the crook of her arm, regarding me as an adorable, hairy kitten."
+    "Despite the evening breeze, the touch of her skin blanketed me in a sultry heat."
+    GTS "Well, for one thing, your merely standing at my side was a tremendous balm to my constitution."
+    GTS "In that, you managed quite expertly."
+    MC "Glad to hear it. And did I, uh, say the right things?"
+    show GTS neutral
+    GTS "You did."
+    MC "Good... good."
+    MC "If I can just clarify one point, I would say I experienced a higher overall level of verbosity than perhaps anticipated."
+    GTS "I've taught you well. It is a fair point you raise, Keisuke-kun. When I asked you to keep your responses vague and brief, my intent was more to provide simple, intuitive instructions for {i}you{/i}."
+    GTS "My original intention, more broadly, was to disassociate my abnormalities from my family at large."
+    show GTS angry
+    GTS "{i}Haaahn{/i}... But then it became apparent that Murata-san intended to put the whole lurid connection on public display regardless. The best I could do was to attempt to shift focus to my family's virtues."
+    MC "I see. That must have been quite the tightrope to walk."
+    show GTS neutral
+    GTS "Time will tell if I said the right things. I do not expect much to come of this in the {i}immediate{/i} future."
+    MC "I think you'll be vindicated. If there's one thing you excel at, it's planting seeds."
+    show GTS happy
+    GTS "Oh, you old rake!"
+    "She chuckled, causing the side of her breast to rhythmically swell against me like an ocean behind a wall of linen. As I absently ran my hand through the silken forest of one of her dangling tresses, I suddenly grabbed onto it for balance."
+    show GTS surprised
+    GTS "Mph!"
+    MC "Sorry! I just-"
+    "She adjusted her posture so my side facing her was angled downward, planting me more securely."
+    GTS "Is that better?"
+    MC "Yep, yep..."
+    scene black with fade
+    pause 1.0
+    $setTime(TimeEnum.NIGHT)
+    scene School Planter
+    show GTS unique at Position(ycenter=0.55)
+    with fade
+    "We passed the last of the day's sunlight with fond hopes and remembrances as little stars drifted down cold from the night sky.{w} Even still, in the silences came the half-thought wonder of why Naomi did not wish to fully share her intentions with me."
+    "I came to conclude that I must simply trust her judgment. At length she stood and we parted ways; she said \"I love you\", and I did the same."
+    jump daymenu
+
+label GTS063:
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Naomi's route.{/outlinecolor}{/size}"
