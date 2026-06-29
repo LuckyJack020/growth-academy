@@ -916,7 +916,7 @@ image RM distrustful = DynamicImage("Graphics/minor/RM/[RMOutfit]/distrustful.we
 image RM doubt = DynamicImage("Graphics/minor/RM/[RMOutfit]/doubt.webp")
 image RM happy = DynamicImage("Graphics/minor/RM/[RMOutfit]/happy.webp")
 image RM happy-2 = DynamicImage("Graphics/minor/RM/[RMOutfit]/happy-2.webp")
-image RM pondering = DynamicImage("Graphics/minor/RM/[RMOutfit]/pondering")
+image RM pondering = DynamicImage("Graphics/minor/RM/[RMOutfit]/pondering.webp")
 image RM sad = DynamicImage("Graphics/minor/RM/[RMOutfit]/sad.webp")
 image RM smug = DynamicImage("Graphics/minor/RM/[RMOutfit]/smug.webp")
 

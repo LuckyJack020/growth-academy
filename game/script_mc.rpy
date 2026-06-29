@@ -27478,7 +27478,7 @@ label RMG002:
     show RM smug
     extend " Why? Are you suggesting we break in and scope out the place after midnight?"
     show RM doubt
-    MC "That's {i}exactly{/i} what we're {/i}not{/i} going to do."
+    MC "That's {i}exactly{/i} what we're {i}not{/i} going to do."
     show RM happy
     RM "Suit yourself. But I figure, regardless, I figure day time is the best chance to get in and take a look around when people would be around to let us in."
     MCT "Wait a second... That sounds like something {i}I{/i} would say."
@@ -27622,7 +27622,7 @@ label RMG002:
     MC "Alright, let's go then I guess."
     show RM happy-2
     RM "Excellent."
-    "And with that we headed up the trail to the workshop. {w}I had my doubts we'd find what we were looking for, but I was pretty sure we were going to find [i}something{/i} at the very least."
+    "And with that we headed up the trail to the workshop. {w}I had my doubts we'd find what we were looking for, but I was pretty sure we were going to find {i}something{/i} at the very least."
     scene black with fade
     scene Workshop with fade
     MC "You think I should ask about the manufacturer problem, with the lock I mean?"
@@ -27689,7 +27689,7 @@ label RMG002:
     Misuboro "I guess I gotta just take this whole thing off. I'm not going to refab this part, it'll go to scrap..."
     Misuboro "{i}Girl!{/i} Get me a flat-headed screw driver. A big one too... {w}Girl?..."
     "Misuboro-san picked his head up to look around the shop, realizing no one else was nearby this whole time."
-    "Damnit! Where has that blasted Jineko gone off to again?"
+    Misuboro "Damnit! Where has that blasted Jineko gone off to again?"
     if getFlag("Meet_Jineko") and getFlag("MC005RM"):
         show RM concerned
         "Daichi froze in his tracks, then nervously started looking around the shop. Something had managed to set off his suspicion, and not in a good way either."
@@ -27802,10 +27802,10 @@ label RMG002:
     "Misuboro didn't seem to care all that much as he took a break to recline back in his office chair."
     Misuboro "Back your question, this work requires a lot of precision. It requires real mindfulness of the dimension and securing all the jointing so that people of various sizes can freely use all of it."
     Misuboro "Though, every once in a while, a new record holder appears and things that were secure enough in the past are suddenly out of date." 
-    Misubor "Which means sometimes this work can lead to a lot of surprises— and not the good kind. {w}But it is what it is."
+    Misuboro "Which means sometimes this work can lead to a lot of surprises— and not the good kind. {w}But it is what it is."
     show RM smug
     "Daichi appeared to be diligently filling out the form, but it was all just exaggerated theatrics."
-    RM "Ack-eh-hem."
+    RM "{i}*Ack-eh-hem.*{/i}"
     "Daichi cleared his throat, signaling me to cut to the chase. Given the past experiences where his abruptness and impatience caused setbacks, I realized it would be prudent for me to broach the subject before he did."
     MC "What's the largest thing you've ever worked on?"
     show RM happy
@@ -27844,7 +27844,7 @@ label RMG002:
 
     MC "But has that ever happened before?"
     Misuboro "Well..."
-    play sound knock
+    play sound Knock
     show RM angry-2
     "Workshop Student 1" "Misuboro-san, I can't find a pair of aviation snips. Do you know where they're stored?"
     show RM neutral
@@ -27967,11 +27967,15 @@ label RMG002:
 
     pause 1
     MC "...Wait a second."
+    show RM happy-2 at altMove(0.5, 0.40)
     MCT "If he wrote my name on the form..."
+    show RM happy-2 at altMove(0.5, 0.30)
     MC "Hey! Which bed did you report on the form?"
-    show RM happy
+    show RM happy-2 at altMove(0.5, 0.20)
+    show RM happy at altMove(0.5, 0.10)
     "Daichi didn't say a word, but noticeably picked up his pace in response to my question."
     MC "{i}Oi, oi!{/i} Which bed did you report!"
+    show RM happy at altMove(0.5, -0.20)
     hide RM with dissolve
     "I picked up the pace only to see Daichi wind up into a full sprint."
     MC "Oy! Daichi! {w}{i}Daaaaaichi!!{/i}"

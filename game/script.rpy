@@ -551,6 +551,8 @@ init python:
         if not girl in charlist:
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
+        if girl not in affection:
+            affection[girl] = 0
         return affection[girl]
 
     def checkAffection(girl, exp, checkVal):
@@ -807,6 +809,8 @@ init python:
             routelock = girl
 
     def isRouteEnabled(girl):
+        if girl not in routeenabled:
+            routeenabled[girl] = False
         return routeenabled[girl] and (routelock == girl or routelock == "")
 
     def getRoutelock():

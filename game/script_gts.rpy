@@ -17140,7 +17140,7 @@ label GTS060:
     GTS "Wonderful. It will make the journey all the more pleasant."
     scene School Front with fade
     "Wasting no time on the departure, I accompanied Naomi across campus as best as I could keep up with, though the pace proved somewhat taxing for my comparatively tiny legs."
-    "The distance from the Giant's Dorm and Chǔkan Point to campus was not a short jog in and of itself, though manageable on its own."
+    "The distance from the Giant's Dorm and Chūkan Point to campus was not a short jog in and of itself, though manageable on its own."
     show GTS unique at Position(ycenter=0.55)with dissolve
     "Sensing my increasing fatigue with attempting to match Naomi's pace, per her nurturing instinct, she scooped me up into her arms where I sat saddle in the crook of her elbow as she carried on toward the rest of the journey."
     "It was a relief in more than one sense, the fatigue in my legs eased, and the worries of my mind dissipated in her close presence... {w}plus it didn't hurt having her boobs as a comfy back rest."
@@ -17221,12 +17221,13 @@ label GTS060:
     show GTS_S neutral
     with fade
     "By the time we were getting ready for the return trip, it had slipped into the early evening. {w}Luckily, we still had a few hours before it would get dark."
+    scene Ryokan Exterior
     "As we made our way out towards the town gate, I noticed a local izakaya, which my growling stomach reminded me I had forgotten to eat lunch today in midst of the missing tulip bulb debacle."
     "Naomi for her part, ever attentive, noticed my brief pause in front of the restaurant." 
     show GTS_S pondering
-    GTS "Perhaps we should stop for a light dinner before the evening gets away from us?"
+    GTS_S "Perhaps we should stop for a light dinner before the evening gets away from us?"
     MC "I wouldn't be opposed to that."
-    scene Ryokan Exterior
+    scene Restaurant
     show GTS neutral at Position(ycenter=0.55)
     with fade
     "The inside of the establishment had even more exaggerated proportions than the Academy's facilities."
