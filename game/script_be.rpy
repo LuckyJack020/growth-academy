@@ -16950,7 +16950,7 @@ label BEGTS002:
     GTS "Sounds good to me. Are you ready to go, Hotsure-san?"
     MC "Right behind you."
 
-    scene Giant Dorm Exterior with fade
+    scene Giant Dorm Gate with fade
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
     show GTS neutral-2 at Position(xcenter=0.8, yalign=1.0)
     show BE neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0)
