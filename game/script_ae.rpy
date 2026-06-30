@@ -22197,20 +22197,20 @@ label AE096:
     AE "But..."
     AE "I'm a woman who, above all, knows how to face a strong possibility with dignity and tact."
     AE "..."
-    #show AE afraid
+    show AE afraid
     AE "Wow, I'm fucked, aren't I?"
     MC "No, you're not."
     AE "You don't understand. I'm doomed."
     AE "More than that, I'm a threat to everyone around me if I don't accept-"
     MC "Shiori-chan, you're acting-!"
-    #show AE hatred
+    show AE hatred
     AE "I REFUSE TO GO DOWN LIKE THIS!!! I'M NOT TAKING YOU OR ANYONE ELSE WITH ME!!!"
     MC "..."
     show AE sad-2
     AE "..."
     AE "You were right...people don't change easily...sin is in one's nature, waiting to be unlocked, and I felt it."
     MC "You don't-"
-    #show AE hatred
+    show AE hatred
     AE "I felt it! When we first held hands, when we first made love, when I had that girl by the neck; I {i}felt{/i} it!"
     show AE sad-2
     AE "...I have no plans to follow in my mothers footsteps. I have no desire to..."

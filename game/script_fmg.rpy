@@ -26778,8 +26778,12 @@ label FMGB001:
     jump daymenu
 
 label FMGB002:
+    #remove once furthest point is past route lock
+    $disableRoute("FMGB")
+    #
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Natsuko's side route.{/outlinecolor}{/size}"
     centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
-    jump daymenu_noadvance
+    #jump daymenu_noadvance
+    jump daymenu

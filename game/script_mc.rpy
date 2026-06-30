@@ -4394,7 +4394,7 @@ label MC006_Team1:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
-    show Naoki neutral
+    show Naoki neutral at Position(xcenter=0.6, yalign=1.0) with dissolve
     Naoki "Alright, Team 1 is Hotsure-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is Utagashi-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
@@ -4407,7 +4407,9 @@ label MC006_Team1:
     hide AE
     show FMG happy at Position(xcenter=0.2, yalign=1.0)
     FMG "Sweet! Anything to get out of that boring stuff."
-    show BE happy at Position(xcenter=0.6, yalign=1.0) with dissolve
+    hide Naoki
+    show BE happy at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
     BE "Not before me you aren't!"
     Naoki "Alright. We'll do a quick coin toss. Heads Team 1 starts with the ball, tails Team 2 starts with it."
     pause .3
@@ -4956,7 +4958,7 @@ label MC006_Team2:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
-    show Naoki neutral
+    show Naoki neutral at Position(xcenter=0.6, yalign=1.0) with dissolve
     Naoki "Alright, Team 1 is Utagashi-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is, Hotsure-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
@@ -4969,7 +4971,9 @@ label MC006_Team2:
     hide AE
     show FMG happy at Position(xcenter=0.2, yalign=1.0)
     FMG "Sweet! Anything to get out of that boring stuff."
-    show BE happy at Position(xcenter=0.6, yalign=1.0) with dissolve
+    hide Naoki
+    show BE happy at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
     BE "Not before me you aren't!"
     Naoki "Alright. We'll do a quick coin toss. Heads Team 1 starts with the ball, tails Team 2 starts with it."
     pause .3
@@ -17051,7 +17055,7 @@ label MC021:
     Student2 "Sooo... what? There a point to this \"exact binomial test\"?"
     Hageshi "That's a fair question. At its most basic level it's a comparison of the expected outcome to the actual outcome, but it's a really good statistical test for detecting cheating."
     hide Hamikawa with dissolve
-    show WG sly behind Hageshi with dissolve
+    show WG sly behind Hageshi at Position(xcenter=0.65, yalign=1.0) with dissolve
     WG "Or if someone is cooking the books."
     Hageshi "Also true."
     show WG pondering 
@@ -17059,7 +17063,7 @@ label MC021:
     Hageshi "But if I flipped a coin 50 times and 40 of those came out heads..."
     Genji "That'd be a little \"too\" lucky."
     Hageshi "I'd say so."
-    show Hamikawa surprised with dissolve
+    show Hamikawa surprised at Position(xcenter=0.85, yalign=1.0) with dissolve
     Student2 "...Oh. {w}I mean... I think."
     Student2 "{size=-6}...This dudes pretty smart for a big lunk...{/size}"
     hide Hamikawa with dissolve
@@ -18874,7 +18878,8 @@ label MC024:
         PRG "Hngh... mnh..."
         show PRG neutral
         PRG "I-I'll come with."
-        show Naoki neutral with dissolve
+        show PRG neutral at altMove(0.5, 0.75)
+        show Naoki neutral at Position(xcenter=0.40, yalign=1.0) with dissolve
         "I smiled at her, then pulled an about face to head toward Naoki-sensei."
         "From what I could see, Naoki was a little over my height, with a fairly trim stature."
         "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
@@ -18914,6 +18919,7 @@ label MC024:
         MC "You as well, Sensei."
         "Aida and I both bowed to him, as he hurried off on his way."
         hide Naoki with dissolve
+        show PRG neutral at altMove(0.5, 0.50)
         PRG "Feel better?"
         MC "You have no earthly idea."
         PRG "Are you... going to go turn that in now, then?"

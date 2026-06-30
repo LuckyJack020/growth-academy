@@ -29423,26 +29423,7 @@ label PRG048:
         "Keisuke" "Hahh... hmngh... I want to watch them grow..."
         PRG "I... I... mmmn..."
         PRG "I-I want you to watch me grow..."
-        if checkAffection("PRG", "<", 30):
-            "I kept rubbing like this, pulling them up and down with force."
-            "They were so massive, I could feel her soft tit-flesh roll over and around my fingers as I squeezed into them."
-            "Eventually, Aida shifted a bit, patting the pillow."
-            PRG "Here... lay down."
-            "I did so, feeling... and hearing Aida's massive body come to rest again."
-            PRG "Lay your head here..."
-            "I followed her hand and brought my head down, right under her shoulder by her collar."
-            "I wrapped my arms around Aida, one going under her pillow and the other going over her, under her boobs... well, boob. I couldn't really make it that far over her."
-            PRG "I can't wait..."
-            "Keisuke" "Same here..."
-            PRG "We should sleep, though... I don't want to be tired tomorrow."
-            "I nodded on her. She gently shifted me and kissed my forehead."
-            PRG "Goodnight, Baby..."
-            "Keisuke" "Night..."
-            "I cuddled back up to her, listening to her breathing soften out."
-            "This was it. This was bliss."
-            "I couldn't ask for more."
-            jump daymenu
-        else:
+        if checkAffection("PRG", ">=", 30):
             $setFlag("PRG048_handjob")
             "I kept rubbing like this, pulling them up and down in my hands."
             "Aida's breathing quickened, and out of nowhere, she grabbed my wrist with one of her arms."
@@ -29567,6 +29548,25 @@ label PRG048:
             PRG "... I think that's a word you could use."
             "Aida kissed me on the jaw again, nuzzling me again."
             PRG "You always are to me..."
+            jump daymenu
+        else:
+            "I kept rubbing like this, pulling them up and down with force."
+            "They were so massive, I could feel her soft tit-flesh roll over and around my fingers as I squeezed into them."
+            "Eventually, Aida shifted a bit, patting the pillow."
+            PRG "Here... lay down."
+            "I did so, feeling... and hearing Aida's massive body come to rest again."
+            PRG "Lay your head here..."
+            "I followed her hand and brought my head down, right under her shoulder by her collar."
+            "I wrapped my arms around Aida, one going under her pillow and the other going over her, under her boobs... well, boob. I couldn't really make it that far over her."
+            PRG "I can't wait..."
+            "Keisuke" "Same here..."
+            PRG "We should sleep, though... I don't want to be tired tomorrow."
+            "I nodded on her. She gently shifted me and kissed my forehead."
+            PRG "Goodnight, Baby..."
+            "Keisuke" "Night..."
+            "I cuddled back up to her, listening to her breathing soften out."
+            "This was it. This was bliss."
+            "I couldn't ask for more."
             jump daymenu
     
     else:
@@ -46581,7 +46581,7 @@ label PRG065:
 
 label PRG066:
     $setProgress("PRG", "PRG067")
-    play music none
+    stop music
     scene black with fade
     pause 1
     PRG "Baby…"
@@ -46594,7 +46594,7 @@ label PRG066:
     MC "Mmh… I was?"
     PRG "Mhm. You were making little groaning sounds…"
     MC "Hmn. Can't remember it."
-    play music sunset fadein 2.0
+    play music Sunset fadein 2.0
     "Something regarding a long hallway and a crying sound echoed in my head before fading into the dreamland aether, as I looked up at Aida in her pajamas, sitting on the side of the bed."
     MC "Sorry… hope I didn't scare you."
     PRG "You didn't."
@@ -46737,7 +46737,7 @@ label PRG066:
     PRG "..."
     MC "Okay. What about yourself do you think she wouldn't like?"
     PRG "..."
-    play music dormLife fadein 2.0
+    play music DormLife fadein 2.0
     MC "Here. Let's eat in the kitchen, and we can get ready for her at the same time."
     PRG "But-"
     MC "C'mon."
@@ -46983,7 +46983,7 @@ label PRG066:
     MC "Yeah… I think so."
     "Rinsing out the conditioner and throwing my hands through my hair, I spun my body around to rinse off the soap, and stepped out of the shower, leaving the water running."
     $setPRGOutfit(OutfitEnum.NUDE)
-    show PRG blush-2
+    show PRG blush-2 with dissolve
     "Aida was looking at herself in the mirror."
     "... and her eyes were ever so slightly damp."
     PRG "..."
@@ -47017,7 +47017,7 @@ label PRG066:
     MC "Aida's in the shower, but we can head in and get ready."
     Tomoko "Alright."
     "I got the door and led Tomo into the kitchen, where she kicked her shoes off by the entry, then stepped in."
-    show dorm PRG with fade
+    show Dorm PRG with fade
     Tomoko "Her place is huge."
     MC "Yeah. Nice, though."
     Tomoko "Mhm."
@@ -47084,7 +47084,7 @@ label PRG066:
     #play SFX door open
     PRG "S-Sorry."
     $setPRGOutfit(OutfitEnum.CASUAL)
-    show PRG worried with dissolve
+    show PRG worried at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Aida waddled out of the doorway and made her way to the wardrobe, setting her nightie into a drawer."
     PRG "H-Hi… Hotsu-"
     show PRG unique
@@ -47153,7 +47153,7 @@ label PRG066:
     scene black with fade
     pause 1
     scene Dorm PRG with fade
-    show PRG neutral with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     show Tomoko neutral with dissolve
     "An hour or two later, we had made it past where Aida and I had left off, and were on a place called Skyrise Island, after being flung halfway across the ocean by a giant shark."
     PRG "This island is so homey…"
@@ -47213,8 +47213,8 @@ label PRG066:
     hide Tomoko with dissolve
     scene black with fade
     pause 1
-    scene dorm PRG with fade
-    show PRG doubt with dissolve
+    scene Dorm PRG with fade
+    show PRG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
     show Tomoko worried with dissolve
     PRG "How could it be there?! I was right by it!"
     "I watched Aida get scolded for bad aim by the man behind the counter for the about 12th time."
