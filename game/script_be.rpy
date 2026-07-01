@@ -9455,10 +9455,10 @@ label BE046:
     MCT "Huh...a lot of them seem to have pretty non-obtrusive growth factors."
     if not getFlag("Meet_Naoki"):
         $setFlag("Meet_Naoki")
-    show Naoki neutral with dissolve
+    show Naoki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Naoki "Alright, final set!"
     "As Naoki-sensei blew his whistle and barked some more orders at the swim team, they finally lined up at the starting point of the pool."
-    show BE neutral with dissolve
+    show BE neutral at Position(xcenter=0.40, yalign=1.0) with dissolve
     BE "Um, Senbonzakura-sensei?"
     MCT "That's definitely not right. That's too cool of a last name for {i}anyone{/i}."
     Naoki "*sigh* ... Just Naoki-sensei is fine."
@@ -9491,6 +9491,7 @@ label BE046:
     show BE happy
     BE "Yes, Sensei!"
     hide Naoki with dissolve
+    show BE happy at altMove(0.5, 0.5)
     "Honoka trotted off towards the poolside and before jumping in, she looked in my direction."
     "I gave Honoka a thumbs up, and she replied with a victory sign."
     "Honoka finally dove into the pool to begin practicing."
@@ -16949,7 +16950,7 @@ label BEGTS002:
     GTS "Sounds good to me. Are you ready to go, Hotsure-san?"
     MC "Right behind you."
 
-    scene Giant Dorm Exterior with fade
+    scene Giant Dorm Gate with fade
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
     show GTS neutral-2 at Position(xcenter=0.8, yalign=1.0)
     show BE neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0)

@@ -822,23 +822,23 @@ image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/uni
 image GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/despaired-thought.webp")
 image GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/[GTSOutfit]/pondering.webp")
 
-image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.webp")
-image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.webp") #nyi
-image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side/happy.webp")
-image side GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/happy.webp") #nyi
-image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side/sad.webp")
-image side GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/sad-2.webp")
-image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side/surprised.webp")
-image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side/angry.webp")
-image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side/aroused.webp")
-image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.webp")
-image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.webp")
-image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side/embarrassed.webp")
-image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side/wink.webp")
-image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side/unique.webp")
-image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side/unique-2.webp")
-image side GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side/despaired-thought.webp")
-image side GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/side/pondering.webp")
+image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/neutral.webp")
+image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/neutral.webp") #nyi
+image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/happy.webp")
+image side GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/happy.webp") #nyi
+image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/sad.webp")
+image side GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/sad-2.webp")
+image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/surprised.webp")
+image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/angry.webp")
+image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/aroused.webp")
+image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/embarrassed.webp")
+image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/embarrassed.webp")
+image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/embarrassed.webp")
+image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/wink.webp")
+image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/unique.webp")
+image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/unique-2.webp")
+image side GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/despaired-thought.webp")
+image side GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/side-[GTSOutfit]/pondering.webp")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/neutral.webp")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/[PRGOutfit]/happy.webp")
@@ -916,7 +916,7 @@ image RM distrustful = DynamicImage("Graphics/minor/RM/[RMOutfit]/distrustful.we
 image RM doubt = DynamicImage("Graphics/minor/RM/[RMOutfit]/doubt.webp")
 image RM happy = DynamicImage("Graphics/minor/RM/[RMOutfit]/happy.webp")
 image RM happy-2 = DynamicImage("Graphics/minor/RM/[RMOutfit]/happy-2.webp")
-image RM pondering = DynamicImage("Graphics/minor/RM/[RMOutfit]/pondering")
+image RM pondering = DynamicImage("Graphics/minor/RM/[RMOutfit]/pondering.webp")
 image RM sad = DynamicImage("Graphics/minor/RM/[RMOutfit]/sad.webp")
 image RM smug = DynamicImage("Graphics/minor/RM/[RMOutfit]/smug.webp")
 
@@ -1742,7 +1742,10 @@ init 2 python:
     eventlibrary['GTS057'] = {"name": "The Fifth Virtue", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS058", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS058'] = {"name": "Beyond the Vermillion Hide", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,   "location": "roof",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS059", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS059'] = {"name": "Ebb and Flow", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "library",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS060", "preobsflags": [], "obsflags": [],       "conditions": []}
-    eventlibrary['GTS060'] = {"name": "Naomi end", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,               "location": "auditorium",          "priority": PrioEnum.NONE,                   "next": "", "preobsflags": [], "obsflags": [],             "conditions": []}
+    eventlibrary['GTS060'] = {"name": "Caroline", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "roof",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS062", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['GTS061'] = {"name": "Caroline", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "roof",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS062", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['GTS062'] = {"name": "Peerless", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,           "location": "field",  "priority": PrioEnum.NONE, "sp": 10,  "next": "GTS063", "preobsflags": [], "obsflags": [],       "conditions": []}
+    eventlibrary['GTS063'] = {"name": "Naomi end", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,               "location": "auditorium",          "priority": PrioEnum.NONE,                   "next": "", "preobsflags": [], "obsflags": [],             "conditions": []}
 
     #Optional
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "preobsflags": [], "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS011"]]}

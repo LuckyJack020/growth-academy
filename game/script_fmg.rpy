@@ -5798,7 +5798,7 @@ label FMG034:
     FMG "Okay, okay let me get us back on topic! When we first met her, it started out... decently. But After that five minutes passed she was a different person. Which is weird, now that I think about it."
     FMG "I just can't imagine her being sunshine and rainbows all the time, especially when she has that hard of a resting bitch face."
     FMG "It's... It's so hard to believe that someone like her volunteers to {i}help{/i} people. I'm surprised she isn't tripping people in the hallway and kicking puppies."
-    MC "She's uh... what's the word I'm looking for...? {w}Ah, Unique.{w}I don't honestly understand why she doesn't like you. I'd figure with you being one of the bigger muscle students she'd be open to training with you at the very least."
+    MC "She's uh... what's the word I'm looking for...? {w}Ah, Unique.{w} I don't honestly understand why she doesn't like you. I'd figure with you being one of the bigger muscle students she'd be open to training with you at the very least."
     MC "I don't really get it. The whole thing is so odd. She hates you and she hits on me... {w}I knew I was good-looking, but damn! I can't keep the ladies off me."
     show FMG sad-2
     FMG "She'd get over you if she heard you talk more..."
@@ -8615,7 +8615,7 @@ label FMG047:
     "The dynamic duo slid each of us a dish with a massive fluffy slice of cheesecake. Thankfully both behemoths seemed hypnotized by it, completely forgetting they were arguing."
     show PRG happy at Position(xcenter=0.25, yalign=1.0)
     show Sakura happy at Position(xcenter=0.75, yalign=1.0)
-    MCT "Thank god, the food relaxed these two. They were ready to rip each other heads off..."
+    MCT "Thank god, the food relaxed these two. They were ready to rip each other's heads off..."
     PRG "T-Tell us what you think! A-And please be honest!"
     MC "Mmmmm.... wow... that is a good freaking piece of cheesecake. It's so light but it's packed with flavor. Can I um... take the rest home?"
     show PRG neutral
@@ -26778,8 +26778,12 @@ label FMGB001:
     jump daymenu
 
 label FMGB002:
+    #remove once furthest point is past route lock
+    $disableRoute("FMGB")
+    #
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Natsuko's side route.{/outlinecolor}{/size}"
     centered "{size=+3}{outlinecolor=#00ff00}Her story will be continued in a later release. Until then, feel free to explore other routes.{/outlinecolor}{/size}"
-    jump daymenu_noadvance
+    #jump daymenu_noadvance
+    jump daymenu

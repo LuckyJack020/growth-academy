@@ -4394,7 +4394,7 @@ label MC006_Team1:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
-    show Naoki neutral
+    show Naoki neutral at Position(xcenter=0.6, yalign=1.0) with dissolve
     Naoki "Alright, Team 1 is Hotsure-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is Utagashi-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
@@ -4407,7 +4407,9 @@ label MC006_Team1:
     hide AE
     show FMG happy at Position(xcenter=0.2, yalign=1.0)
     FMG "Sweet! Anything to get out of that boring stuff."
-    show BE happy at Position(xcenter=0.6, yalign=1.0) with dissolve
+    hide Naoki
+    show BE happy at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
     BE "Not before me you aren't!"
     Naoki "Alright. We'll do a quick coin toss. Heads Team 1 starts with the ball, tails Team 2 starts with it."
     pause .3
@@ -4956,7 +4958,7 @@ label MC006_Team2:
     with dissolve
     Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
     Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
-    show Naoki neutral
+    show Naoki neutral at Position(xcenter=0.6, yalign=1.0) with dissolve
     Naoki "Alright, Team 1 is Utagashi-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is, Hotsure-san, Nikumaru-san, Mizutani-san, and Kodama-san."
     show WG doubt
     WG "Just what exactly are we hoping to gain by winning?"
@@ -4969,7 +4971,9 @@ label MC006_Team2:
     hide AE
     show FMG happy at Position(xcenter=0.2, yalign=1.0)
     FMG "Sweet! Anything to get out of that boring stuff."
-    show BE happy at Position(xcenter=0.6, yalign=1.0) with dissolve
+    hide Naoki
+    show BE happy at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
     BE "Not before me you aren't!"
     Naoki "Alright. We'll do a quick coin toss. Heads Team 1 starts with the ball, tails Team 2 starts with it."
     pause .3
@@ -17051,7 +17055,7 @@ label MC021:
     Student2 "Sooo... what? There a point to this \"exact binomial test\"?"
     Hageshi "That's a fair question. At its most basic level it's a comparison of the expected outcome to the actual outcome, but it's a really good statistical test for detecting cheating."
     hide Hamikawa with dissolve
-    show WG sly behind Hageshi with dissolve
+    show WG sly behind Hageshi at Position(xcenter=0.65, yalign=1.0) with dissolve
     WG "Or if someone is cooking the books."
     Hageshi "Also true."
     show WG pondering 
@@ -17059,7 +17063,7 @@ label MC021:
     Hageshi "But if I flipped a coin 50 times and 40 of those came out heads..."
     Genji "That'd be a little \"too\" lucky."
     Hageshi "I'd say so."
-    show Hamikawa surprised with dissolve
+    show Hamikawa surprised at Position(xcenter=0.85, yalign=1.0) with dissolve
     Student2 "...Oh. {w}I mean... I think."
     Student2 "{size=-6}...This dudes pretty smart for a big lunk...{/size}"
     hide Hamikawa with dissolve
@@ -18874,7 +18878,8 @@ label MC024:
         PRG "Hngh... mnh..."
         show PRG neutral
         PRG "I-I'll come with."
-        show Naoki neutral with dissolve
+        show PRG neutral at altMove(0.5, 0.75)
+        show Naoki neutral at Position(xcenter=0.40, yalign=1.0) with dissolve
         "I smiled at her, then pulled an about face to head toward Naoki-sensei."
         "From what I could see, Naoki was a little over my height, with a fairly trim stature."
         "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
@@ -18914,6 +18919,7 @@ label MC024:
         MC "You as well, Sensei."
         "Aida and I both bowed to him, as he hurried off on his way."
         hide Naoki with dissolve
+        show PRG neutral at altMove(0.5, 0.50)
         PRG "Feel better?"
         MC "You have no earthly idea."
         PRG "Are you... going to go turn that in now, then?"
@@ -27478,7 +27484,7 @@ label RMG002:
     show RM smug
     extend " Why? Are you suggesting we break in and scope out the place after midnight?"
     show RM doubt
-    MC "That's {i}exactly{/i} what we're {/i}not{/i} going to do."
+    MC "That's {i}exactly{/i} what we're {i}not{/i} going to do."
     show RM happy
     RM "Suit yourself. But I figure, regardless, I figure day time is the best chance to get in and take a look around when people would be around to let us in."
     MCT "Wait a second... That sounds like something {i}I{/i} would say."
@@ -27622,7 +27628,7 @@ label RMG002:
     MC "Alright, let's go then I guess."
     show RM happy-2
     RM "Excellent."
-    "And with that we headed up the trail to the workshop. {w}I had my doubts we'd find what we were looking for, but I was pretty sure we were going to find [i}something{/i} at the very least."
+    "And with that we headed up the trail to the workshop. {w}I had my doubts we'd find what we were looking for, but I was pretty sure we were going to find {i}something{/i} at the very least."
     scene black with fade
     scene Workshop with fade
     MC "You think I should ask about the manufacturer problem, with the lock I mean?"
@@ -27689,7 +27695,7 @@ label RMG002:
     Misuboro "I guess I gotta just take this whole thing off. I'm not going to refab this part, it'll go to scrap..."
     Misuboro "{i}Girl!{/i} Get me a flat-headed screw driver. A big one too... {w}Girl?..."
     "Misuboro-san picked his head up to look around the shop, realizing no one else was nearby this whole time."
-    "Damnit! Where has that blasted Jineko gone off to again?"
+    Misuboro "Damnit! Where has that blasted Jineko gone off to again?"
     if getFlag("Meet_Jineko") and getFlag("MC005RM"):
         show RM concerned
         "Daichi froze in his tracks, then nervously started looking around the shop. Something had managed to set off his suspicion, and not in a good way either."
@@ -27802,10 +27808,10 @@ label RMG002:
     "Misuboro didn't seem to care all that much as he took a break to recline back in his office chair."
     Misuboro "Back your question, this work requires a lot of precision. It requires real mindfulness of the dimension and securing all the jointing so that people of various sizes can freely use all of it."
     Misuboro "Though, every once in a while, a new record holder appears and things that were secure enough in the past are suddenly out of date." 
-    Misubor "Which means sometimes this work can lead to a lot of surprises— and not the good kind. {w}But it is what it is."
+    Misuboro "Which means sometimes this work can lead to a lot of surprises— and not the good kind. {w}But it is what it is."
     show RM smug
     "Daichi appeared to be diligently filling out the form, but it was all just exaggerated theatrics."
-    RM "Ack-eh-hem."
+    RM "{i}*Ack-eh-hem.*{/i}"
     "Daichi cleared his throat, signaling me to cut to the chase. Given the past experiences where his abruptness and impatience caused setbacks, I realized it would be prudent for me to broach the subject before he did."
     MC "What's the largest thing you've ever worked on?"
     show RM happy
@@ -27844,7 +27850,7 @@ label RMG002:
 
     MC "But has that ever happened before?"
     Misuboro "Well..."
-    play sound knock
+    play sound Knock
     show RM angry-2
     "Workshop Student 1" "Misuboro-san, I can't find a pair of aviation snips. Do you know where they're stored?"
     show RM neutral
@@ -27967,11 +27973,15 @@ label RMG002:
 
     pause 1
     MC "...Wait a second."
+    show RM happy-2 at altMove(0.5, 0.40)
     MCT "If he wrote my name on the form..."
+    show RM happy-2 at altMove(0.5, 0.30)
     MC "Hey! Which bed did you report on the form?"
-    show RM happy
+    show RM happy-2 at altMove(0.5, 0.20)
+    show RM happy at altMove(0.5, 0.10)
     "Daichi didn't say a word, but noticeably picked up his pace in response to my question."
     MC "{i}Oi, oi!{/i} Which bed did you report!"
+    show RM happy at altMove(0.5, -0.20)
     hide RM with dissolve
     "I picked up the pace only to see Daichi wind up into a full sprint."
     MC "Oy! Daichi! {w}{i}Daaaaaichi!!{/i}"
