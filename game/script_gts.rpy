@@ -16560,7 +16560,7 @@ label GTS058_final:
             "She threw her head back and guzzled the bottle down."
             "Barely a thimblefull to hear, she nevertheless swished it around with appreciation."
             GTS "Scrumptious~"
-            "The empty she relegated to the bedside table before taking up the second bottle, too. Who was I too resist?"
+            "The empty she relegated to the bedside table before taking up the second bottle, too. Who was I to resist?"
             "She poured the latter down her throat at a more contented pace; I was transfixed by its pulsing as she swallowed."
             "She looked at me again after draining some two-thirds."
             show GTS happy

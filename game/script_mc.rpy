@@ -20413,7 +20413,7 @@ label MC027:
         show PRG worried
         Tomoko "That's good."
         MC "Alright. I'll start cutting."
-        "Across from us, Aida finished scrapping out their pumpkin, as Kanami took one of the carving knives, plus a little flat potato peeler looking thing, and started on the front."
+        "Across from us, Aida finished scraping out their pumpkin, as Kanami took one of the carving knives, plus a little flat potato peeler looking thing, and started on the front."
         PRG "I-I'm going to grab another knife, Tozakura-san. So I can help."
         Kanami "Take your time. This might be a minute."
         pause .5
@@ -21101,7 +21101,7 @@ label MC033:
 
     scene Dorm Hallway with fade
     play sound Knock
-    "After a short delay, Tomo answered the door."
+    "After a short delay, Tomo answered the door. "
     show Tomoko neutral with dissolve
     extend "Wearing a blanket no less."
     MCT "Yikes. She looks like shit. I guess she wasn't kidding. Glassy eyes, red nose, that and she's practically shivering— I probably shouldn't stay long or I might catch what she's got."
@@ -26301,7 +26301,7 @@ label RM006:
         MC "Why didn't you just mention Yamazaki-san instead? That would have been a sure-fire ticket in, since he'd know her."
         show RM concerned
         RM "{i}Uggh{/i}..."
-        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        "Daichi took off his glasses to rub his eyes as he squinted in deep frustration before putting them back on."
         show RM concerned-2
         RM "You're right... I messed up. It wasn't the right call. {w}{i}Sigh{/i}... I was hoping to wrap up two leads at the same time. If I couldn't find her, then it made sense she'd be here. I was certain of it... but she wasn't."
         MCT "I'll say."
@@ -26312,7 +26312,7 @@ label RM006:
         "In contrast to his usual defensiveness of his hairbrained schemes, Daichi didn't seem to have anything to say in response."
         RM "Uggh..."
         show RM concerned
-        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        "Daichi took off his glasses to rub his eyes as he squinted in deep frustration before putting them back on."
         show RM concerned-2
         RM "You're right... I messed up. It wasn't the right call. {w}{i}Sigh{/i}... I was hoping to wrap up two leads at the same time. If I couldn't find her, then it made sense she'd be here. I was certain of it... but she wasn't."
         MCT "Just what is his obsession with this mystery girl? I get the feeling there's something he's not telling me. I don't know why else he'd continue to waste time on this red herring."
@@ -26321,7 +26321,7 @@ label RM006:
         MC "Why didn't you just mention Yamazaki-san instead? That would have been a sure-fire ticket in, since he'd know her."
         RM "Uggh..."
         show RM concerned
-        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        "Daichi took off his glasses to rub his eyes as he squinted in deep frustration before putting them back on."
         show RM concerned-2
         RM "It's a long story. {w}I was trying to learn more about students with factors, specifically siblings with factors to find any possible correlation that could help with learning more about Yuki-chan's growth factor."
         RM "I stumbled upon data about two siblings named Watanabe but one of the records was incomplete. {w}Something seemed fishy about that, so I suspected it could be an important lead someone was trying to conceal." 
@@ -26340,7 +26340,7 @@ label RM006:
         MC "What the hell was that, dude? Did you just make up that name hoping the {i}one guy{/i} who supposedly knew everyone wouldn't have any questions about it?"
         RM "Uggh..."
         show RM concerned
-        "Daichi took off his classes to rub his eyes as he squinted in deep frustration before putting them back on."
+        "Daichi took off his glasses to rub his eyes as he squinted in deep frustration before putting them back on."
         show RM concerned-2
         RM "It's a long story. {w}I was trying to learn more about students with factors, specifically siblings with factors to find any possible correlation that could help with learning more about Yuki-chan's growth factor."
         RM "I stumbled upon data about two siblings named Watanabe but one of the records was incomplete. {w}Something seemed fishy about that, so I suspected it could be an important lead someone was trying to conceal."

@@ -15999,7 +15999,7 @@ label FMG076:
     play music Peaceful
     "My train of thought was interrupted when it looked like Hageshi-sensei was getting ready to dismiss the club meeting."
     Hageshi "And remember, just because someone else is bigger and stronger, doesn't excuse you from having to work to be better than you are now. {w}That's enough for the day. Now hit the showers."
-    "Hageshi-sensei looked around as the group walked off while we hurried to to meet up with him."
+    "Hageshi-sensei looked around as the group walked off while we hurried to meet up with him."
     MC "Damn, Hageshi-sensei! You don't hold back for nothing!"
     Hageshi "Oh? Hello, Hotsure-san. I take it you saw my demonstration? {w}Funny you would say that though, I was holding back plenty. He is a student after all."
     MC "You call {i}that{/i} holding back? You bounced his fat butt off the mat! I saw air between him and the floor after he landed."
@@ -17854,7 +17854,7 @@ label FMG082:
     FMG "And you should keep {i}your{/i} hands to yourself!"
     MC "Don't move that arm or you lose, Akira!"
     show FMG sad
-    FMG "You've lost your mind."
+    FMG "You've lost your mind. "
     show FMG angry
     extend "Doesn't mean I'll lose to you though!"
     MC "Noooooooo!"
@@ -22078,7 +22078,7 @@ label FMG093C:
     "Akira and Nat lined up opposite each other, both 5 meters back from the midline. They took their grip, wrapping their right forearm over the rope, under their right arm and over the left shoulder."
     "I hadn't seen that done before. This wasn't going to be a kid's game of tug-o-war. It was a solid grip that would let them brace their bodies against the rope tension and prevent it from slipping."
     Hageshi "Athletes, line up."
-    "With a slight tug both Akir and Nat brought the rope perfectly parallel to the ground.The rope was thick, even if it looked like a normal one on their herculean bodies. It had to have taken hundreds of kilos worth of force just to take the slack out of it."
+    "With a slight tug both Akira and Nat brought the rope perfectly parallel to the ground.The rope was thick, even if it looked like a normal one on their herculean bodies. It had to have taken hundreds of kilos worth of force just to take the slack out of it."
     show FMG angry
     Hageshi "Athletes ready!"
     "Akira and Nat did their last second adjustments to their foot placement, biting into the ground to brace for the pull as they tightened their grip..."
@@ -24052,7 +24052,7 @@ label FMGD001:
     MC "Always so aggressive and emotionally disconnected."
     Natsuko "I fail to see a problem. Going off the stories Akira has told me, I assumed you'd be over the moon."
     show Natsuko smug
-    Natsuko "Not everyone can be as lucky as you to be surrounded by the biggest muscle growth students on campus constantly, much less bath in a hot spring with them."
+    Natsuko "Not everyone can be as lucky as you to be surrounded by the biggest muscle growth students on campus constantly, much less bathe in a hot spring with them."
     show Natsuko flex
     Natsuko "Think of what you'll see that others could only dream of."
     show FMG neutral
