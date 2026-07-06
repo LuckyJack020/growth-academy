@@ -85,7 +85,7 @@ define MomTextCell = Character('Mom', color="#C0C0C0", what_prefix='{i}<', what_
 define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0") #Aida’s Mother
 define Takara = Character('Takara', color="#C0C0C0") #Aida’s Mother
 define TakaraCell = Character('Takara', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Aida's Mother Cell
-define TakaratTextCell = Character('Takara', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}') #Aida's Mother Cell
+define TakaraTextCell = Character('Takara', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}') #Aida's Mother Cell
 define Tomoko = Character('Tomo', color="#57C5F2") #Keisuke’s Sister
 define TomokoCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell") #Keisuke’s Sister Cell
 define TomokoTextCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="TomoCell") #Keisuke’s Sister Cell
