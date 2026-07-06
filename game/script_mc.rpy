@@ -27865,7 +27865,7 @@ label RMG002:
     Misuboro "It's happened once before, to my knowledge, at least, but it's not really that common of an occurrence, as opposed to some fat student outgrowing their desk or an ass student outgrowing their chair."
     MC "So do you not get that many calls to the Giant's Dorms then?"
     MC "Reason I ask is that our teacher told us that place is more secluded and isn't as publicly accessible as the main campus. So, it's probably a hassle to get over there, I'm assuming."
-    Misuboro "I got there from time to time. It's fine since it's not so far away from here like the rest of the campus."
+    Misuboro "I go there from time to time. It's fine since it's not so far away from here like the rest of the campus."
     Misuboro "Plus everything inside is so large that moving around with my utility cart is easy peasy."
     Misuboro "I'm just glad the students rarely ever bother me whenever they forget the password to that blasted gate."
     show RM happy
