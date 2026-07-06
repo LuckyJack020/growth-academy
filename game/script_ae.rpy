@@ -18304,7 +18304,7 @@ label AE078:
     "{i}Klk!{/i}"
     MC "Ach."
     "I squinted as I had to let my eyes adjust to the sudden burst of light from the screen, each blink stinging as I looked to find two messages awaiting me. My eyes adjusted to the screen as my thumb tapped on the message box and lingered for a moment."
-    AECell "<Apologies, but I'm currently unable to enter my room. I just left the physical therapy building.>"
+    AETextCell "Apologies, but I'm currently unable to enter my room. I just left the physical therapy building."
     "Exhaling through my nose, I stumbled out of bed and threw on the pair of clothes I dropped onto the floor, and headed out."
     $setMCOutfit(OutfitEnum.CASUAL)
     scene Dorm Exterior with fade

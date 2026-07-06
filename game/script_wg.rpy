@@ -3106,7 +3106,7 @@ label WG016:
     MC "?"
     "It wasn't a call, though. It was a text."
     "I couldn't remember the last time someone had ever texted me, much less the last time I had sent one since I got here."
-    WGCell "<Hello, Keisuke. This is Alice. How are you?>"
+    WGTextCell "Hello, Keisuke. This is Alice. How are you?"
     MCT "Ah crap, is there another urgent delivery? ...Wait a second— she'd have gotten straight to the point if that was the case."
     "I spent a few seconds staring at the message, confused. Why was she texting me?"
     "Then I realized she might not want anything. Maybe she just wanted to talk... which would be nice for a change. Still, it seemed a bit of a departure from her taskmaster nature."
@@ -3121,33 +3121,33 @@ label WG016:
             jump WG016_c1_3
 
 label WG016_c1_1:
-    MCCell "<I'm good. I'm not up to anything special, just having a quiet afternoon to myself.>"
+    MCTextCell "I'm good. I'm not up to anything special, just having a quiet afternoon to myself."
     "I unpaused the game - good thing I was between fights - when I heard another beep from my phone."
     MCT "That was fast."
     MCT "Or direct, I should say. Fitting."
-    WGCell "<I am currently idle as well. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect.>"
-    WGCell "<Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time.>"
+    WGTextCell "I am currently idle as well. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect."
+    WGTextCell "Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time."
     "I wasn't sure how to feel that she was hoping I could keep her entertained, but this did imply she wasn't contacting me with a new delivery assignment."
     "Right?"
     "I guess I shouldn't be too surprised, but this did seem uncharacteristically chummy of her. Hmm, I wonder if she might be starting to think of me as a bit more than an employee..."
     jump WG016_c1_after
 
 label WG016_c1_2:
-    MCCell "<Did you need something? Do we have another delivery to make?>"
+    MCTextCell "Did you need something? Do we have another delivery to make?"
     "Her response was immediate."
     $setAffection("WG", 1)
-    WGCell "<No, no. This is just friendly small talk. Though I appreciate the eagerness for more work.>"
-    WGCell "<Our company is still in its infancy, building a customer base, waiting for word of mouth and customer satisfaction to rise.>"
-    MCCell "<Well I'm on call if you need me ;)>"
-    WGCell "<Much appreciated. I hope you don't mind if I reach out to you on occasion with matters unrelated to business.>"
-    MCCell "<Not at all. What's on your mind?>"
-    WGCell "<Not much and that is precisely the problem. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect.>"
-    WGCell "<As a consequence, I find myself idle as I wait.>"
+    WGTextCell "No, no. This is just friendly small talk. Though I appreciate the eagerness for more work."
+    WGTextCell "Our company is still in its infancy, building a customer base, waiting for word of mouth and customer satisfaction to rise."
+    MCTextCell "Well I'm on call if you need me ;)"
+    WGTextCell "Much appreciated. I hope you don't mind if I reach out to you on occasion with matters unrelated to business."
+    MCTextCell "Not at all. What's on your mind?"
+    WGTextCell "Not much and that is precisely the problem. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect."
+    WGTextCell "As a consequence, I find myself idle as I wait."
     "Huh, interesting. I guess I shouldn't be too surprised, we do hang out a fair amount. Maybe we're a bit more than boss and employee by this point if she thought to message me just for the heck of it?"
     jump WG016_c1_after
 
 label WG016_c1_after:
-    WGCell "<I'm not interrupting anything, am I?>"
+    WGTextCell "I'm not interrupting anything, am I?"
     menu:
         "Not really.":
             jump WG016_c2_1
@@ -3155,30 +3155,30 @@ label WG016_c1_after:
             jump WG016_c1_3
 
 label WG016_c2_1:
-    MCCell "<Not really. I was just doing some level-grinding.>"
+    MCTextCell "Not really. I was just doing some level-grinding."
     "I turned my player character back around and headed back to the village."
     "When my phone beeped again I kept one hand on my mouse and used the other read her response."
     play music Schoolday
-    WGCell "<I am not familiar with that term. What does it mean?>"
-    MCCell "<Sorry, I should have specified. It's a term used in video games to describe mindless tasks repeated to make your character more powerful.>"
-    WGCell "<That explains my ignorance. I have never been one for frivolities such as that.>"
-    MCCell "<There's nothing wrong with video games.>"
-    WGCell "<Perhaps not, but there are always better uses of your time.>"
-    MCCell "<That's subjective. If I'm having fun, if it helps me relax, that's good enough for me.>"
-    WGCell "<You yourself said what you were doing was mindless.>"
-    MCCell "<True, but grinding involves putting in work now so the more engaging parts of the game become accessible, or at least easier. It's not so different from how we manage our time with other things.>"
-    WGCell "<Perhaps, but there are other, more enriching art forms available to you, rather than choosing to wallow in crude power fantasies.>"
+    WGTextCell "I am not familiar with that term. What does it mean?"
+    MCTextCell "Sorry, I should have specified. It's a term used in video games to describe mindless tasks repeated to make your character more powerful."
+    WGTextCell "That explains my ignorance. I have never been one for frivolities such as that."
+    MCTextCell "There's nothing wrong with video games."
+    WGTextCell "Perhaps not, but there are always better uses of your time."
+    MCTextCell "That's subjective. If I'm having fun, if it helps me relax, that's good enough for me."
+    WGTextCell "You yourself said what you were doing was mindless."
+    MCTextCell "True, but grinding involves putting in work now so the more engaging parts of the game become accessible, or at least easier. It's not so different from how we manage our time with other things."
+    WGTextCell "Perhaps, but there are other, more enriching art forms available to you, rather than choosing to wallow in crude power fantasies."
     "I didn't want to get into an argument over the merits of video games, but when I saw a flaw in her argument I felt I had to press."
-    MCCell "<If you've never played video games, then you can't really criticize them, can you?>"
+    MCTextCell "If you've never played video games, then you can't really criticize them, can you?"
     "That bought me all of a couple seconds. Maybe I had stunned her."
-    WGCell "<I have seen what those games are like.>"
-    WGCell "<Either a cartoonish mascot jumping from one cliff to another, hopping onto creatures that get in his way.>"
-    WGCell "<Or an orgy of ultraviolence that allows the disturbed to play out their grotesque fantasies.>"
+    WGTextCell "I have seen what those games are like."
+    WGTextCell "Either a cartoonish mascot jumping from one cliff to another, hopping onto creatures that get in his way."
+    WGTextCell "Or an orgy of ultraviolence that allows the disturbed to play out their grotesque fantasies."
     "Now I was getting a little peeved, but the calm and collected approach was the only way to prevail."
-    MCCell "<I wouldn't have pegged you as a moral prude, Alice.>"
-    WGCell "<Far from it, but anything that relies on the vulgar and obscene to capture the attention of the audience does so only because it lacks substance.>"
-    MCCell "<That sometimes may be the case, but I think you're oversimplifying things. There are far more types of games than just platformers and shoot 'em ups.>"
-    WGCell "<Such as?>"
+    MCTextCell "I wouldn't have pegged you as a moral prude, Alice."
+    WGTextCell "Far from it, but anything that relies on the vulgar and obscene to capture the attention of the audience does so only because it lacks substance."
+    MCTextCell "That sometimes may be the case, but I think you're oversimplifying things. There are far more types of games than just platformers and shoot 'em ups."
+    WGTextCell "Such as?"
     jump WG016_c3
 
 label WG016_c3:
@@ -3192,13 +3192,13 @@ label WG016_c3:
 
 label WG016_c3_1:
     $setFlag("WG016_c3_1")
-    MCCell "<Like fighting games.>"
-    WGCell "<Let me guess, the objective is to pummel your opponent to death? I fail to see how such a genre transcends my previous point about their general mindless violence.>"
-    MCCell "<I wouldn't call it mindless. You have to have quicker reflexes and a counter strategy if you're going to beat your opponent."
-    WGCell "<Forgive me if I'm not convinced that beating your opponent into bloody heap isn't exactly the ultimate battle of wits.>"
+    MCTextCell "Like fighting games."
+    WGTextCell "Let me guess, the objective is to pummel your opponent to death? I fail to see how such a genre transcends my previous point about their general mindless violence."
+    MCTextCell "I wouldn't call it mindless. You have to have quicker reflexes and a counter strategy if you're going to beat your opponent."
+    WGTextCell "Forgive me if I'm not convinced that beating your opponent into bloody heap isn't exactly the ultimate battle of wits."
     MCT "Swing and a miss with that one."
     "Wasn't the best answer in retrospect, but I thought I could still prove my point."
-    WGCell "<I take it you had some other example in mind?>"
+    WGTextCell "I take it you had some other example in mind?"
     MCT "Let's see..."
     "I gritted my teeth, trying to think of an example that would blow away her contempt in one move."
     jump WG016_c3
@@ -3214,48 +3214,48 @@ label WG016_c3_2:
 
 label WG016_c3_3:
     $setFlag("WG016_testpass")
-    MCCell "<Like simulator games.>"
+    MCTextCell "Like simulator games."
     "Another pause of a couple seconds followed."
-    WGCell "<Explain. Please.>"
-    MCCell "<It's right there in the name. They're games that simulate something, like farming or flying an airplane.>"
-    MCCell "<A lot of them are simple by design, a way to unwind by doing something repetitive, but also slowly building towards something bigger.>"
+    WGTextCell "Explain. Please."
+    MCTextCell "It's right there in the name. They're games that simulate something, like farming or flying an airplane."
+    MCTextCell "A lot of them are simple by design, a way to unwind by doing something repetitive, but also slowly building towards something bigger."
     "I started typing \"I'm not really into them,\" but then inspiration hit."
     "My lips curling up in a smile, I quickly changed what I planned to send."
-    MCCell "<The more complex ones have you running a city or a business.>"
+    MCTextCell "The more complex ones have you running a city or a business."
     "I hit send, and waited."
     "This time it took almost ten seconds for her to respond. I had enough time to enter the inn and save my game."
-    WGCell "<There are business video games?>"
-    MCCell "<Oh yeah, it's a whole sub-genre. They aren't like regular businesses where you create a product and sell it usually.>"
-    MCCell "<The bigger titles revolve around more exciting things like amusement parks or zoos.>"
-    WGCell "<How do they work?>"
+    WGTextCell "There are business video games?"
+    MCTextCell "Oh yeah, it's a whole sub-genre. They aren't like regular businesses where you create a product and sell it usually."
+    MCTextCell "The bigger titles revolve around more exciting things like amusement parks or zoos."
+    WGTextCell "How do they work?"
     "Cue victory fanfare."
     $renpy.music.set_pause(True)
     play sound Victory
     pause 3
     $renpy.music.set_pause(False)
-    MCCell "<You're put in charge of a business that's starting out or is struggling, and your job is to make it profitable.>"
-    MCCell "<You create rides or buy animals, set ticket prices, add concession stands or whatever. Hire and fire people, take out loans, manage inventory, the whole deal, but if you go bankrupt- game over.>"
+    MCTextCell "You're put in charge of a business that's starting out or is struggling, and your job is to make it profitable."
+    MCTextCell "You create rides or buy animals, set ticket prices, add concession stands or whatever. Hire and fire people, take out loans, manage inventory, the whole deal, but if you go bankrupt- game over."
     pause 2
-    WGCell "<Do you have any of those types of games?>"
-    MCCell "<I don't, but I can find one or two.>"
-    MCCell "<Interested in trying them?>"
-    WGCell "<I suppose I owe it to myself to sample all forms of art, so that I may make a more discerning judgment.>"
-    WGCell "<Certainly it is more impressive to appreciate the interplay of light and shadow in a Raphael than to master some violent spectacle.>"
-    WGCell "<I will take you up on your proposition so that I can judge for myself.>"
-    MCCell "<I'll look into finding some business management simulators.>"
-    WGCell "<Money is no object. I can reimburse you.>"
-    WGCell "<It looks like Kodama-san is ready to serve the dish, so I will take my leave.>"
-    "I sent a final message <Enjoy> and put my phone down."
+    WGTextCell "Do you have any of those types of games?"
+    MCTextCell "I don't, but I can find one or two."
+    MCTextCell "Interested in trying them?"
+    WGTextCell "I suppose I owe it to myself to sample all forms of art, so that I may make a more discerning judgment."
+    WGTextCell "Certainly it is more impressive to appreciate the interplay of light and shadow in a Raphael than to master some violent spectacle."
+    WGTextCell "I will take you up on your proposition so that I can judge for myself."
+    MCTextCell "I'll look into finding some business management simulators."
+    WGTextCell "Money is no object. I can reimburse you."
+    WGTextCell "It looks like Kodama-san is ready to serve the dish, so I will take my leave."
+    "I sent a final message <Enjoy and put my phone down."
     "I was free to return to Titans of Eververse, but the thought of getting Alice into gaming, even if it was the \"Zoo Manager\" variety I'm not interested in, lingered in my mind."
     "So I went to my usual PC gaming store page and started looking through the business management titles."
     jump daymenu
 
 label WG016_c1_3:
-    MCCell "<Well actually, I was in the middle of something. Can I talk to you later?>"
+    MCTextCell "Well actually, I was in the middle of something. Can I talk to you later?"
     "This time she actually took a moment to respond."
     stop music
     $setAffection("WG", -1)
-    WGCell "<Oh, well I wouldn't want to intrude on your time off. Enjoy your afternoon. I'll let you know when we have another order.>"
+    WGTextCell "Oh, well I wouldn't want to intrude on your time off. Enjoy your afternoon. I'll let you know when we have another order."
     "I see plenty of her when I'm working, I just felt like having a break. Still though, despite the cordial tone of her last text, I couldn't help but think she was a little bit disappointed I didn't want to chat."
     jump daymenu
 
@@ -3801,7 +3801,7 @@ label WG019:
     "I found out early on if I didn't keep up with the reading in Tashi-sensei's class I was going to fall behind real quick."
     "Just when I was about to motivate myself to do something productive, my phone buzzed."
     "It was Alice."
-    WGCell "<Can you come to my room? I need help with something.>"
+    WGTextCell "Can you come to my room? I need help with something."
     "I wasn't doing anything important right this minute, but part of me was leery that she was up to something of questionable permissibility."
     menu:
         "\"I'll be right over.\"":
@@ -4001,12 +4001,12 @@ label WG019_c1_3:
     "I wasn't really in the mood for whatever Alice had in mind right now. Probably some chore she wanted me to do for her, but hopefully not something violating the rules."
     if checkAffection("WG", ">=", 16):
         "I texted back that I was in the middle of studying and explained that I needed to catch up, and could I take a rain check?"
-        WGCell "<That's fine. I should have planned ahead better if I knew I might need your assistance. I'll see you in class tomorrow.>"
+        WGTextCell "That's fine. I should have planned ahead better if I knew I might need your assistance. I'll see you in class tomorrow."
     else:
         "I texted back that I was in the middle of something, and could I take a rain check?"
         $setAffection("WG", -1)
     "Her response was quick, and kind of curt."
-    WGCell "<If you're busy, just say you're busy. I shall find someone else to assist me.>"
+    WGTextCell "If you're busy, just say you're busy. I shall find someone else to assist me."
     "So I was off the hook, but part of me wondered if she was going to take this personally..."
     jump daymenu
 
@@ -5890,17 +5890,17 @@ label WG029:
     scene Dorm Interior with fade
     play music DayByDay
     "Shortly after waking up the next morning I got a text from Alice."
-    WGCell "<I'm feeling much better this morning, back to 100%% in fact.>"
+    WGTextCell "I'm feeling much better this morning, back to 100%% in fact."
     if getFlag("WG028_Tea"):
-        WGCell "<I think the tea must have helped.>"
+        WGTextCell "I think the tea must have helped."
         "It appears my efforts were more than worth the trek through the monsoon after all."
-    MCCell"<I'm glad you're feeling better.>"
+    MCTextCell"I'm glad you're feeling better."
     "Part of me hesitated... I was nervous all over again— but I had to know."
-    MCCell "<I know yesterday threw a wrench in our plans, but now that it's passed I was wondering if we're still on for our date tonight?>"
+    MCTextCell "I know yesterday threw a wrench in our plans, but now that it's passed I was wondering if we're still on for our date tonight?"
     "It didn't take her long to respond."
-    WGCell "<Of course. I was hoping you'd still be available. I just wanted to check before I cleared my afternoon schedule.>"
-    MCCell "<Perfect! Meet you at the school entrance in a few hours?>"
-    WGCell "<I'll be there, don't keep me waiting now.>"
+    WGTextCell "Of course. I was hoping you'd still be available. I just wanted to check before I cleared my afternoon schedule."
+    MCTextCell "Perfect! Meet you at the school entrance in a few hours?"
+    WGTextCell "I'll be there, don't keep me waiting now."
     "Whether I was ready or not, my first date with Alice had come."
     MCT "Show time."
     "It was easy — terrifyingly easy — to be intimidated by her. She was rich, she was used to the finer things, she was a bit... forceful in personality.{w} That and she's really pretty, beautiful even."
@@ -8160,9 +8160,9 @@ label WG038:
     MCT "No need to give that a second thought anymore."
     "I checked my phone, pleasantly surprised to see a text from Alice."
     play music WG
-    WGCell "< Come to the arcade, I have something fun to show you. >"
+    WGTextCell " Come to the arcade, I have something fun to show you. "
     MCT "Alice? At the arcade? Ohhh, this {i}will{/i} be fun!"
-    MCCell "<I'm on my way.>"
+    MCTextCell "I'm on my way."
     $setMCOutfit(OutfitEnum.CASUAL)
     "I got dressed and rushed to the bus stop. I had to be there as soon as possible."
 
@@ -8547,7 +8547,7 @@ label WG039:
     $setProgress("WG", "WG041")
     play music Peaceful
     "In the middle of getting dressed for the day my phone buzzed with a text. It was from Alice."
-    WGCell "I need your help with something. Can you come to my dorm room?"
+    WGTextCell "I need your help with something. Can you come to my dorm room?"
     "A week ago I would have assumed this was something work related, but after our third date I let myself hope this would turn out to be something..."
     "... more intimate, perhaps?"
     "I checked myself in the mirror to make sure I was more than \"classroom presentable,\" then left for the girl's dorm."
@@ -11041,15 +11041,15 @@ label WG045Z:
     "My phone immediately replicated the sound of a beehive as a swarm of texts from Alice came through at once."
     MCT "I forgot that was today."
     "I quickly opened my messages to see everything that I missed."
-    WGCell "Hey, don't forget to sleep at a responsible time tonight, we have a big day tomorrow.    8:32pm"
-    WGCell "I'm assuming you have already fallen asleep, it isn't like you to not respond. I hope your dreams are pleasant. Goodnight.    8:47pm"
-    WGCell "Good morning Keisuke, I hope you slept well. Please come to my dorm at 7:30 so I can tell you what to expect today.    7:10am"
+    WGCell "<Hey, don't forget to sleep at a responsible time tonight, we have a big day tomorrow.>    8:32pm"
+    WGCell "<I'm assuming you have already fallen asleep, it isn't like you to not respond. I hope your dreams are pleasant. Goodnight.>    8:47pm"
+    WGCell "<Good morning Keisuke, I hope you slept well. Please come to my dorm at 7:30 so I can tell you what to expect today.>    7:10am"
     if getFlag("WG034_c2_2"):
-        WGCell "Don't forget to wear your suit, you'll look great.    7:11am"
+        WGCell "<Don't forget to wear your suit, you'll look great.>    7:11am"
     elif getFlag("WG034_c2_1"):
-        WGCell "You will look a little overdressed in your suit, but it will still look rather appropriate.    7:11am"
+        WGCell "<You will look a little overdressed in your suit, but it will still look rather appropriate.<    7:11am"
     else:
-        WGCell "I bought you a suit for the occasion, you can get changed in my dorm.    7:11am"
+        WGCell "<I bought you a suit for the occasion, you can get changed in my dorm.>    7:11am"
     "I looked at the clock in the corner of my phone screen."
     MCT "7:29am, this is not going to end well."
     "I got up and left Daichi to his book as I went to brush my teeth."
@@ -13670,7 +13670,7 @@ label WG053:
     $setProgress("WG", "WG054")
     $setMCOutfit(OutfitEnum.SUIT)
     "I had the tickets in hand when my phone buzzed from a text. It was from Alice."
-    WGCell "Head over when you are presentable, I'm ready."
+    WGTextCell "Head over when you are presentable, I'm ready."
     play music WG
     "Far more nervous than I probably should have been, I checked myself over again since I'm dressing far more formally than I have on any of our previous dates. Straightening my tie, I headed towards her dorm."
     $setTime(TimeEnum.EVE)
@@ -14466,11 +14466,11 @@ label WG054_c3_fail:
     "Not being sure I decided to head to lunch and see if she had popped up there."
     scene Cafeteria with fade
     MC "I ended up searching for a few minutes before my phone buzzed."
-    WGCell "<I wasn't feeling too great today so I visited the nurse and went back to my room.>"
-    MCCell "<Need me to bring you anything?>"
-    WGCell "<Not right now, I ate earlier and I have some orders to fill out. Though I may need some help tomorrow if you are available.>"
-    MCCell "<I certainly can be.>"
-    WGCell "<Thank you Kei, have a good day.>"
+    WGTextCell "I wasn't feeling too great today so I visited the nurse and went back to my room."
+    MCTextCell "Need me to bring you anything?"
+    WGTextCell "Not right now, I ate earlier and I have some orders to fill out. Though I may need some help tomorrow if you are available."
+    MCTextCell "I certainly can be."
+    WGTextCell "Thank you Kei, have a good day."
     MCT "Guess she must've just been feeling under the weather."
     jump daymenu
 
@@ -14779,11 +14779,11 @@ label WG056:
     "Alice didn't exactly shy away from teasing me about my sleeping habits, but Tomo made me look like a paragon of industriousness by comparison."
     MCT "Alright, don't chicken out now man. Just like a band-aid, better to pull it off all at once."
     "I shot her a quick text."
-    MCCell "<Hey Alice, you up for stopping by my sister's room so you can meet her? She should be around.>"
+    MCTextCell "Hey Alice, you up for stopping by my sister's room so you can meet her? She should be around."
     "Part of me hoped she didn't have her phone on her, but it didn't even take her a couple of minutes to reply."
-    WGCell "<Absolutely. What time?>"
-    MCCell "<Now if that works. I'll meet you at your place and we'll walk over.>"
-    WGCell "<Okay, see you soon.>"
+    WGTextCell "Absolutely. What time?"
+    MCTextCell "Now if that works. I'll meet you at your place and we'll walk over."
+    WGTextCell "Okay, see you soon."
     scene Dorm Exterior with fade
     "I stepped out into the afternoon sun. The short walk to Alice's room, a walk I'd done many times by this point, had never felt so long."
     "The bright blue sky dotted with puffy clouds, the gentle breeze that fluttered around me, I tried to take it all in like it was my last day on earth."
@@ -15440,12 +15440,12 @@ label WG057_c1_after:
         MCT "Man, I am {i}so{/i} down for that!"
     "Filing that away for future reference, I moved back to the task at hand."
     MC "Alright, let me check and see if Alice is back at her dorm."
-    MCCell "<Alice, are you back at your room yet?>"
+    MCTextCell "Alice, are you back at your room yet?"
     "It didn't take too long to get a response."
-    WGCell "<I am, did you want to come over?>"
-    MCCell "<Yes, I have a surprise for you.>"
-    WGCell "<Is that so? Now I'm intrigued.>"
-    MCCell "<Be there soon.>"
+    WGTextCell "I am, did you want to come over?"
+    MCTextCell "Yes, I have a surprise for you."
+    WGTextCell "Is that so? Now I'm intrigued."
+    MCTextCell "Be there soon."
     MC "Alright, let's head back."
     scene black with fade
     pause 1
@@ -16040,15 +16040,15 @@ label WG059:
     play music Busy
     "There were still a few hours left in the school day, but rather than having my mind on classes, I was looking forward to meeting up with Alice after they were done."
     "I stopped by my dorm to pick up some books I needed for the remaining classes before heading out when I got a text from her."
-    WGCell "<Hey, I know we were going to hang out at the park this evening, but something came up with Aida. I hope you don't mind if we change our plans.>"
-    MCCell "<Oh, that's fine. I hope everything is alright.>"
-    WGCell "<No, it's nothing like that. Aida and her friend Sakura are practicing for their cooking competition and they asked if I could be their mock judge.>"
-    MCCell "<That sounds fun.>"
-    WGCell "<Naturally, I have the best palate in the school, so it only makes sense they would ask me. Would you like to come along?>"
+    WGTextCell "Hey, I know we were going to hang out at the park this evening, but something came up with Aida. I hope you don't mind if we change our plans."
+    MCTextCell "Oh, that's fine. I hope everything is alright."
+    WGTextCell "No, it's nothing like that. Aida and her friend Sakura are practicing for their cooking competition and they asked if I could be their mock judge."
+    MCTextCell "That sounds fun."
+    WGTextCell "Naturally, I have the best palate in the school, so it only makes sense they would ask me. Would you like to come along?"
     "Like I was going to miss an opportunity to watch Alice eat."
-    MCCell "<Absolutely. What time and where?>"
-    WGCell "<Just come by my room after class. We'll walk over together.>"
-    MCCell "<Sounds good, I'll see you then.>"
+    MCTextCell "Absolutely. What time and where?"
+    WGTextCell "Just come by my room after class. We'll walk over together."
+    MCTextCell "Sounds good, I'll see you then."
     if getFlag("Meet_Sakura"):
         "So I was finally going to meet Sakura again. I couldn't help but wonder how much she had grown since our initial meeting earlier in the year."
     else:
@@ -16939,7 +16939,7 @@ label WG060S_LiePath:
     "It seemed fishy to me, but I felt confident enough I made the correct choice to allay suspicion."
     "Still though, I was a bit on edge as to what the next text or conversation held for us."
     "As the sun was setting, I was just finishing a shower when my phone lit up."
-    WGCell "<I'd like you to come over tonight. I have something I want to discuss.>"
+    WGTextCell "I'd like you to come over tonight. I have something I want to discuss."
     MCT "Shit! Despite my best efforts to deflect the issue, she knows!"
     MCT "Right? ... I mean, what else could it be about?"
     "My mind was pulling in two directions: was she actually up for it or would this be the final test? I hoped against all hope that it was the former and not the latter."
@@ -17074,7 +17074,7 @@ label WG060S_TruthPath:
     "It had been a full day since the talk with Sakura, and Alice had not even made herself present. No note, not even a text from her since then. I had encountered Aida earlier that morning, but even she seemed to be as lost as I."
     "My worries had not subsided and I truly feared what the next text or conversation held for us."
     "As the sun was setting, I was just finishing a shower when my phone lit up."
-    WGCell "<I'd like you to come over tonight. I have something I want to discuss. On your way please stop by the cooking club and retrieve a cart from the fridge.>"
+    WGTextCell "I'd like you to come over tonight. I have something I want to discuss. On your way please stop by the cooking club and retrieve a cart from the fridge."
     "My mind was pulling in two directions. Unfettering excitement that this cart may lead to what I think it might, and concern that I'm misinterpreting this."
     "Shit! Either she's gonna end it tonight... or she just needs me to fetch something completely unrelated. My anxiety did not subside, but a bit of hope was restored."
     "Taking a deep breath I got on my clothes and headed down to the club room"
@@ -18040,7 +18040,7 @@ label WG061S:
         jump daymenu
     else:
         "As I made my way through the pile of dishes, the buzzing of my phone distracted me."
-        WGCell "<Can you come to the bathroom for a moment?>"
+        WGTextCell "Can you come to the bathroom for a moment?"
         MCT "Am I about to do, what I think I'm about to do?"
         "Abandoning the pile of dishes, I collectedly, but eagerly, made my way towards her bathroom door."
         play sound Knock
@@ -19334,18 +19334,18 @@ label WG065:
     "Once the game finally loaded in, after what seemed like forever, I started considering Alice's earlier offer about getting a better laptop when I heard my phone buzz."
     "{i}*bzzt bzzt*{/i}"
     MCT "Ugh, who is it now? I'm busy!"
-    WGCell "<Aida and Sakura are testing out some desserts in the cooking room. They need taste testers. They asked me if you'd like to come.>"
+    WGTextCell "Aida and Sakura are testing out some desserts in the cooking room. They need taste testers. They asked me if you'd like to come."
     "Seeing it was a text from Alice, my soured mood from being interrupted had considerably softened. Still though, I wasn't so keen on this wrench in my plans, even if free food was up for grabs."
     menu:
         "Sure, I'm not too busy.":
-            MCCell "<Sure, I'm not too busy. I'll be right down.>"
+            MCTextCell "Sure, I'm not too busy. I'll be right down."
             $setAffection("WG", 1)
-            WGCell "<Great! Sorry to spring this on you at the last minute, but I'm sure they'll appreciate the help.>"
+            WGTextCell "Great! Sorry to spring this on you at the last minute, but I'm sure they'll appreciate the help."
         "I'm a little busy.":
-            MCCell "<I'm a little busy right now. Is it important?>"
-            WGCell "<They are asking about you. But I'm telling you. Get your butt down here and help them out.>"
+            MCTextCell "I'm a little busy right now. Is it important?"
+            WGTextCell "They are asking about you. But I'm telling you. Get your butt down here and help them out."
             MCT "!"
-            MCCell "<Say no more, I'm on my way.>"
+            MCTextCell "Say no more, I'm on my way."
     MC "{i}Ugghh{/i}, guess I have to do the responsible thing and be social instead."
     scene black with fade
     pause 1
@@ -23560,8 +23560,8 @@ label WG077_Soup:
         scene Cooking Classroom with fade
         $setSkill("Art", 1)
         MC "Alright, looks like the soup has reduced. Add salt and pepper to taste... {w}Hey that's pretty good. I guess it's ready to serve then. I'll text her to see if she's done with music club practice."
-        MCCell "<Is practice over yet? I got a surprise for you in the cooking classroom.>"
-        WGCell "<A surprise you say? I'll be on my way shortly. We just finished.>"
+        MCTextCell "Is practice over yet? I got a surprise for you in the cooking classroom."
+        WGTextCell "A surprise you say? I'll be on my way shortly. We just finished."
         pause 1
         play music Rain
         "It didn't take her too long to get there, barely enough time to pop the serving dish in the broiler long enough to melt the cheese, but I had it already for her when she got there."
@@ -23638,8 +23638,8 @@ label WG077_Soup:
         pause .5
         scene Cooking Classroom with fade
         MC "Alright, looks like the soup has reduced. Add salt and pepper to taste... {w}Hey that's pretty good, especially for the amount of effort. I guess it's ready to serve then. I'll text her to see if she's done with music club practice."
-        MCCell "<Is practice over yet? I got a surprise for you in the cooking classroom.>"
-        WGCell "<A surprise you say? I'll be on my way shortly. We just finished.>"
+        MCTextCell "Is practice over yet? I got a surprise for you in the cooking classroom."
+        WGTextCell "A surprise you say? I'll be on my way shortly. We just finished."
         pause 1
         play music Rain
         "It didn't take her too long to get there, barely enough time to pop the serving dish in the broiler long enough to melt the cheese, but I had it already for her when she got there."
@@ -23723,8 +23723,8 @@ label WG077_Chicken:
         "It was going to go well with the red wine bacon gravy that the braising liquid had reduced down to."
         $setSkill("Art", 1)
         MC "Man, this looks pretty good, if I do say so myself. The chicken looks like it's been roasted on a hot skillet but it's fork tender at the same time. I guess it's ready to serve then. I'll text her to see if she's done with music club practice."
-        MCCell "<Is practice over yet? I got a surprise for you in the cooking classroom.>"
-        WGCell "<A surprise you say? I'll be on my way shortly. We just finished.>"
+        MCTextCell "Is practice over yet? I got a surprise for you in the cooking classroom."
+        WGTextCell "A surprise you say? I'll be on my way shortly. We just finished."
         pause 1
         play music Rain
         "It didn't take her too long to get there, but still plenty of time to plate up a generous portion of chicken on top of the potatoes, smothered in velvety red wine sauce."
@@ -23803,8 +23803,8 @@ label WG077_Chicken:
         MC "Alright, time to pull it out of the oven... {w}Huh, I thought it would look a little different."
         MCT "I mean, I don't know what it was supposed to look like, but I followed the recipe, so it should be good."
         MCT "I guess it's ready to serve then. I'll text her to see if she's done with music club practice."
-        MCCell "<Is practice over yet? I got a surprise for you in the cooking classroom.>"
-        WGCell "<A surprise you say? I'll be on my way shortly. We just finished.>"
+        MCTextCell "Is practice over yet? I got a surprise for you in the cooking classroom."
+        WGTextCell "A surprise you say? I'll be on my way shortly. We just finished."
         pause 1
         play music Rain
         "It didn't take her too long to get there, but still plenty of time to plate up a generous portion of chicken on top of the potatoes, smothered in velvety red wine sauce."
@@ -23903,8 +23903,8 @@ label WG077_Beef:
         MC "Man, this looks pretty good, if I do say so myself. I guess it's ready to serve then."
         MC "One last check for salt and pepper... and BINGO! {w}Damn! This will knock her socks off."
         MCT "This is easily the best thing I had ever cooked, I can't wait for her to try it. I'll text her to see if she's done with music club practice."
-        MCCell "<Is practice over yet? I got a surprise for you in the cooking classroom.>"
-        WGCell "<A surprise you say? I'll be on my way shortly. We just finished.>"
+        MCTextCell "Is practice over yet? I got a surprise for you in the cooking classroom."
+        WGTextCell "A surprise you say? I'll be on my way shortly. We just finished."
         pause 1
         play music Rain
         "It didn't take her too long to get there, but still plenty of time to plate up a generous portion of semi-gelatinous velvety thick beef stew."
@@ -23998,8 +23998,8 @@ label WG077_Beef:
         $setSkill("Art", 1)
         MC "Man, this looks pretty good, if I do say so myself. I guess it's ready to serve then."
         MCT "This has got to be the most complicated thing I have ever cooked, I can't wait for her to try it. I'll text her to see if she's done with music club practice."
-        MCCell "<Is practice over yet? I got a surprise for you in the cooking classroom.>"
-        WGCell "<A surprise you say? I'll be on my way shortly. We just finished.>"
+        MCTextCell "Is practice over yet? I got a surprise for you in the cooking classroom."
+        WGTextCell "A surprise you say? I'll be on my way shortly. We just finished."
         pause 1
         play music Rain
         "It didn't take her too long to get there, but still plenty of time to plate up a generous portion of semi-gelatinous beef stew."
@@ -26347,16 +26347,16 @@ label WG083:
         MCT "On second thought, this is a call, not a text. Either Tomo is dying or that means it's-"
     else: 
         MCT "Oh, who am I kidding? It's a call, not a text— definitely not Tomo."
-    MC "Hey Alice. What's going on? I figured you'd be busy. Something come up?"
+    MCCell "Hey Alice. What's going on? I figured you'd be busy. Something come up?"
     WGCell "Hello Keisuke. I hope I didn't catch you in the middle of something."
-    MC "Nothing I can't do later. Whatcha need?" 
+    MCCell "Nothing I can't do later. Whatcha need?" 
     WGCell "Would it be possible for me to come to your room for a bit?"
-    MC "Sure, no problem." 
+    MCCell "Sure, no problem." 
     MCT "Wait a second... {w}She's literally {i}never{/i} asked this before."
-    MC "Uh, can I ask what prompted this question?"
+    MCCell "Uh, can I ask what prompted this question?"
     WGCell "I've had an issue with the bathroom sink not draining correctly for a while. The maintenance tech, Misuboro-san came by to fix it, but it turned into a bigger job than he originally estimated." 
     WGCell "The bathroom is a mess with parts and tools everywhere and it's making a lot of noise, so I'd rather not stick around."
-    MC "Sure, come on over."
+    MCCell "Sure, come on over."
     WGCell "Wonderful, I'll be right there."
     MCT "Well, I guess that throws a wrench into my gaming plans. {w}Unless..."
     MCT "Oh, crap! What did I just agree to? {w}This place is a mess! I gotta clean this dump before she gets here."
@@ -29672,16 +29672,16 @@ label WG090:
     MC "Oh! Sorry, Babe, I gotta take this, I was expecting this one."
     show WG neutral
     WG "Oh?"
-    FMGCell "<The eagle has landed>"
+    FMGTextCell "The eagle has landed"
     MCT "???"
-    MCCell "<What does that mean?>"
-    FMGCell "<I delivered your thing>"
-    MCCell "<Then say that>"
-    FMGCell "<idk, I thought I was supposed to keep it a secret. So I used a code>"
-    MCCell "<It's too secret if I don't even know what the hell you're talking about>"
-    FMGCell "<Do you want me to take it back then?>"
-    MCCell "<NO! We'll be there soon. Thanks again>"
-    FMGCell "<Np>"
+    MCTextCell "What does that mean?"
+    FMGTextCell "I delivered your thing"
+    MCTextCell "Then say that"
+    FMGTextCell "idk, I thought I was supposed to keep it a secret. So I used a code"
+    MCTextCell "It's too secret if I don't even know what the hell you're talking about"
+    FMGTextCell "Do you want me to take it back then?"
+    MCTextCell "NO! We'll be there soon. Thanks again"
+    FMGTextCell "Np"
     MC "Alright, looks like your package has arrived. Let's go see."
     show WG surprised-2
     WG "{i}My{/i} package? What do you mean?"
@@ -37209,23 +37209,23 @@ label WGB008:
     "Now that I more or less knew Okisho's schedule, I found myself bumping into her a lot more frequently, which means we got to hang out more."
     "We certainly weren't at the \"talk for hours on the phone\" stage of our relationship, but Okisho never struck me as that type of girl anyway." 
     "At least I got her number now and I could hit her up whenever. Or at least whenever she felt like getting around to responding to my texts."
-    MCCell "<Hey was thinking about going to the cafeteria for dinner soon. U up for meeting me down there?>"
+    MCTextCell "Hey was thinking about going to the cafeteria for dinner soon. U up for meeting me down there?"
     "Truth be told I didn't expect a reply. She usually got back to me later saying she didn't see my text, or more commonly, that she already ate."
     "{i}*Bzzt*{/i}"
     MCT "Hmm? Is that really gonna be her?"
     MCT "!"
     MCT "It is!"
-    OkishoCell "<Nah I already ate>"
+    OkishoTextCell "Nah I already ate"
     MC "Uggh... Figures."
     "I'd be lying if I said I wasn't disappointed— even if it was expected. It wasn't that surprising given her eating habits, but sometimes it felt like I was the only one putting any effort into this thing."
     MCT "Well, that's that, I guess. I'm sure we'll at least get to hang out this weekend at some point."
     "{i}*Bzzt*{/i}"
     MC "Hmm?"
-    OkishoCell "<Why don't u come on over? We can hang out in my room u know where it is>"
+    OkishoTextCell "Why don't u come on over? We can hang out in my room u know where it is"
     MCT "Interesting, she's never suggested this before. Is this one of her friends pulling my leg?"
-    OkishoCell "<Besides Im sure I'll be hungry again later.>"
+    OkishoTextCell "Besides Im sure I'll be hungry again later."
     MCT "Nope, that's definitely her."
-    MCCell "<Sure I'll be right over>"
+    MCTextCell "Sure I'll be right over"
     scene Dorm Hallway with fade
     "Even though I had been to her dorm before with the whole tea ceremony, this still felt like a it was going to be a new first for us. {w}I mean, all I really got to see was the foyer, if you could even call it that in a dorm." 
     "As much as it was regrettable Naomi had to move out, the added privacy of Okisho living by herself now did open the possibilities for what she might have in mind for this little visit..."
@@ -38309,11 +38309,11 @@ label WGBE003:
     WG "I'll call Honoka and tell her."
     "Alice picked up her phone and dialed."
     WG "Hello, Honoka? A special package arrived, I think you'll be pleasantly surprised to see what it is."
-    BECell "<Is it what I think it is?>"
+    BECell "Is it what I think it is?"
     MCT "Yes, a box full of regret and self-loathing."
     WG "Well, you'll just have to come and see."
     MC "Better hurry Honoka, they're almost all gone!"
-    BECell "<What!? They better not be! I'll be right over. Don't hog them all, you butthead!>"
+    BECell "What!? They better not be! I'll be right over. Don't hog them all, you butthead!"
     "*{i}Click{/i}*"
     MC "Hehe..."
     "A better friend would have tried to hide them from her, but I was not that friend."
@@ -40256,7 +40256,7 @@ label WGFMG001:
     "Even if I was more persuasive than Akira, knowing Alice, I'd have better chances betting my life's savings at the roulette table than getting her to agree to come watch horror movies."
     MC "Sure... good thinking. I'll just shoot her a text."
     MCT "What the hell am I doing?"
-    MCCell "<Hey, Alice, Akira was wondering if you'd want to watch some horror movies at her place tonight with us.>"
+    MCTextCell "Hey, Alice, Akira was wondering if you'd want to watch some horror movies at her place tonight with us."
     MC "Okay. Sent."
     FMG "Sweet. Hopefully, she doesn't take too long to respond."
     show FMG surprised-2
@@ -40276,7 +40276,7 @@ label WGFMG001:
     show FMG neutral
     FMG "Promise."
     MC "Okay, here it goes:"
-    WGCell "<Sorry, but I have no interest in wasting my time on something as tasteless as a horror film or whatever passes for cinematography these days.>"
+    WGTextCell "Sorry, but I have no interest in wasting my time on something as tasteless as a horror film or whatever passes for cinematography these days."
     show FMG angry
     pause .5
     MC "Hey now, you promised you wouldn't get mad."
@@ -41237,10 +41237,10 @@ label WGFMG004A:
     "I was making pretty good time, or at least I thought, until I heard my phone go off."
     "{i}*Bzzt... Bzzt*{/i}"
     MC "Looks like I got a text."
-    WGCell "<Dear, when you're done with the deliveries can you come by my room? I have something I wanted to discuss with you.>"
+    WGTextCell "Dear, when you're done with the deliveries can you come by my room? I have something I wanted to discuss with you."
     MCT "Huh? That sounds... odd."
     "Not that I suspected bad news, I just found it odd she wouldn't elaborate further."
-    MCCell "<Sure. I'll be on my way over soon.>"
+    MCTextCell "Sure. I'll be on my way over soon."
     MCT "Guess I should hurry up. Don't want to keep her waiting."
     scene black with fade
     pause 0.5

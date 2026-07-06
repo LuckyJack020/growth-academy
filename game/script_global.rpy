@@ -4,18 +4,23 @@
 define MC = Character('Keisuke', color="#0066CC", image="MC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')', image="MC")
 define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="MC")
+define MCTextCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="MC")
 define AltMC = Character('Keisuke', color="#0066CC") #For flashback Keisuke, will not show graphic alongside his text.
 
 #Main Cast
 define AE = Character('Shiori', color="#7FB3D5")
 define AECell = Character('Shiori', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="AECell")
+define AETextCell = Character('Shiori', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="AECell")
 define BE = Character('Honoka', color="#FF6E6E")
 define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
+define BETextCell = Character('Honoka', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
 define FMGCell = Character('Akira', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="FMGCell")
+define FMGTextCell = Character('Akira', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="FMGCell")
 define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTSCell")
+define GTSTextCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="GTSCell")
 define PRG = Character('Aida', color="#B586EC", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRG2 = Character('Aida', color="#B586EC") #normal speaking voice
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}', image="PRGCell")
@@ -23,6 +28,7 @@ define PRGTextCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_
 define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}') #hidden picture
 define WG = Character('Alice', color="#FFD700")
 define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
+define WGTextCell = Character('Alice', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="WGCell")
 
 define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
 define MC_BE = Character('Keisuke & Honoka', color="#C0C0C0")
@@ -37,12 +43,14 @@ define Minori = Character('Minori', color="#FF91DC")
 define Natsuko = Character('Natsuko', color="#8E0C0C")
 define Okisho = Character('Okisho', color="#8D2394", what_prefix='{size=+2}', what_suffix='{/size}')
 define OkishoCell = Character('Okisho', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="OkishoCell")
+define OkishoTextCell = Character('Okisho', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="OkishoCell")
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakura = Character('Sakura', color="#FC79B4")
 define Tako = Character('Tako', color="#ce9b50")
 define Yuki = Character('Yuki', color="#BDB8A5")
 define YukiCell = Character('Yuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="YukiCell")
+define YukiTextCell = Character('Yuki', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="YukiCell")
 define Yua = Character('Yua', color="#C0C0C0") #Natsuko’s Mother
 
 #School Staff
@@ -62,6 +70,7 @@ define Tsubasa = Character('Tsubasa-sensei', color="#B7A99A")
 define Akihiro = Character('Akihiro', color="#C0C0C0") #Naomi’s Father
 define Dad = Character('Dad', color="#57C5F2") #Ryuta - Keisuke’s Father
 define DadCell = Character('Dad', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Father Cell
+define DadTextCell = Character('Dad', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}') #Keisuke’s Father Cell
 define Enmei = Character('Enmei', color="#C0C0C0") #Aida's Father
 define Daitaro = Character('Daitaro', color="#C0C0C0") #Alice’s Father
 define Fujio = Character('Fujio', color="#C0C0C0") #Honoka's Father
@@ -72,11 +81,14 @@ define Miko = Character('Miko', color="#C0C0C0") #Naomi’s Mother
 define Minami = Character('Minami', color="#C0C0C0") #Shiori’s Mother
 define Mom = Character('Mom', color="#57C5F2") #Himari - Keisuke’s Mother
 define MomCell = Character('Mom', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Mother Cell
+define MomTextCell = Character('Mom', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}') #Keisuke’s Mother Cell
 define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0") #Aida’s Mother
 define Takara = Character('Takara', color="#C0C0C0") #Aida’s Mother
 define TakaraCell = Character('Takara', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Aida's Mother Cell
+define TakaratTextCell = Character('Takara', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}') #Aida's Mother Cell
 define Tomoko = Character('Tomo', color="#57C5F2") #Keisuke’s Sister
 define TomokoCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell") #Keisuke’s Sister Cell
+define TomokoTextCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="TomoCell") #Keisuke’s Sister Cell
 define Vivian = Character('Vivian', color="#C0C0C0") #Alice’s Mother
 define Yuko = Character('Yuko', color="#FF3300") #Akira’s Mother
 define YukoCell = Character('Yuko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="YukoCell") #Akira’s Mother Cell
@@ -183,6 +195,7 @@ define Teacher = Character('Teacher', color="#B7A99A")
 define Umpire = Character('Umpire', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define UNKNOWNCell = Character('???', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define UNKNOWNTextCell = Character('???', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}')
 define Vendor = Character('Vendor', color="#FFFFFF")
 define Waiter = Character('Waiter', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
