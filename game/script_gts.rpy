@@ -17273,6 +17273,7 @@ label GTS061:
 
 label GTS062:
     $setProgress("GTS", "GTS063")
+    $setFlag("XX62")
     $setMCOutfit(OutfitEnum.CASUAL2)
     scene Field with fade
     play music ChangingSeasons
