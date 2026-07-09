@@ -409,6 +409,10 @@ init python:
         pool = []
         priority = False #true = girl priority
 
+        #Catch code for backwards compatability when new routes are added to an existing save
+        if girl not in routeprogress:
+            routeenabled[girl] = girl + "001"
+
         #Populate optional event pool (to find priority stuff)
         for k, v in eventlibrary.iteritems():
             badFlag = False
