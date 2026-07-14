@@ -18334,6 +18334,7 @@ label AE078:
     scene Dorm Exterior with fade
     "As we walked toward the other side of the building towards the entrance of the men's dorm, for the first time I noticed Shiori shivering; something I never thought I'd see."
     MC "Well, at the very least you shouldn't mind the temp, right?"
+    show AE neutral with dissolve
     AE "What on earth are you saying? It's brick outside."
     MC "... Huh?"
     show AE embarrassed
