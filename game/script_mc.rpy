@@ -1315,10 +1315,6 @@ label MC001:
 label MC002:
     scene Classroom with fade
     play music Schoolday
-    if not getFlag("Meet_Takamura"):
-        $setFlag("Meet_Takamura")
-    $setFlag("Meet_Hageshi")
-    $setFlag("Meet_Tsubasa")
     pause .25
     "The knowledge I'd picked up over my first week or so at the academy had been, for the most part, things completely outside of my scope."
     "The oversized doorways and halls, the remote campus and island, and the looming idea of our bodies morphing in ways that would have to be seen to believe were, in every way, the stuff of fiction."
@@ -1551,14 +1547,17 @@ label MC002:
         show Takamura neutral with dissolve
         "At it sat a familiar looking teacher, who upon further inspection, I recognized from when I'd first arrived on the island with Tomo."
         hide Takamura with dissolve
+        $setFlag("Meet_Takamura")
     pause .25
     show Tsubasa neutral with dissolve
     "Across from her was a man that I could only describe as a stereotypical professor type, with thick, black-rimmed glasses perched on his nose."
     "He held a newspaper in front of him, and was skimming through it with a bored look on his face."
+    $setFlag("Meet_Tsubasa")
     hide Tsubasa with dissolve
     pause .25
     show Hageshi neutral with dissolve
     "At the other end of the megadesk sat a guy who I swear, looked like he'd been at the gym for the last four years of his life. His shoulders bulged out against the fabric of his shirt as he made some notes on some papers."
+    $setFlag("Meet_Hageshi")
     hide Hageshi with dissolve
     pause .25
     show Naoki neutral with dissolve

@@ -18731,8 +18731,6 @@ label WG062_C1_after:
     BE "Not to worry, I'm alive and well. I was just having some tea with Kei-chan."
     "I waved as Honoka introduced me."
     MC "Hello."
-    if not getFlag("Meet_Kokutan"):
-        $setFlag("Meet_Kokutan")
     BE "And Alice Nikumaru."
     WG "Charmed, I'm sure."
     Kokutan "H-Hello."
@@ -18785,6 +18783,8 @@ label WG062_C1_after:
     show PRG neutral
     show WG coy
     "Alice and I turned to look at each other with raised eyebrows, realizing our encounter with Kokutan left us with more questions than answers."
+    if not getFlag("Meet_Kokutan"):
+        $setFlag("Meet_Kokutan")
     jump daymenu
 
 label WG063:
