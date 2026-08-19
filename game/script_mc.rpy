@@ -17493,7 +17493,8 @@ label MC023:
     MCT "Did I just get called a nimrod?"
     if getFlag("Meet_Kokutan"):
         "Standing up, I found what caused the commotion. A girl in a strange uniform sat on the floor picking up their books. It was unmistakably a school uniform, but its design was completely foreign; like an almost fantastical gothic design."
-        MCT "Oh, I know her. Honoka's odd roommate, Kokutan."
+        if not isEventCleared("BE039") or not isEventCleared("WG062"):
+            MCT "Oh, I know her. Honoka's odd roommate, Kokutan."
         "Her eyes were a sharp, vibrant shade of pink which only added to her odd, uncanny appearance."
         "Despite this, she was rather diminutive in height, which detracted somewhat from the sheer gravitas of her presence, and yet at the same time only made her that much more befuddling to behold."
         if routelock == "AE":
@@ -17704,7 +17705,7 @@ label MC023_C1_1:
     BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
     Kokutan "Gah! I told you earlier, I needed only the freshest herbs-"
     BE "To cleanse our space and ward off the darkness, I know."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+    if not isEventCleared("BE039") and not isEventCleared("WG062"):
         MCT "Our space?"
         MC "Wait, are you two roommates?"
         show BE confused
@@ -17972,14 +17973,14 @@ label MC023_C2_1:
     BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
     Kokutan "Gah! I told you earlier, I needed only the freshest herbs-"
     BE "To cleanse our space and ward off the darkness, I know."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+    if not isEventCleared("BE039") and not isEventCleared("WG062"):
         MCT "Our space?"
-    MC "Wait, are you two roommates?"
-    show BE confused
-    BE "You didn't know?"
-    MC "I don't think you've ever mentioned it."
-    show BE happy
-    BE "Well, surprise!"
+        MC "Wait, are you two roommates?"
+        show BE confused
+        BE "You didn't know?"
+        MC "I don't think you've ever mentioned it."
+        show BE happy
+        BE "Well, surprise!"
     MCT "Talking about an odd pairing."
     BE "So, did you get the chance to toughen up the straps yet?" 
     BE "It's one thing to walk around with big bazonga, but doing it unsupported is kinda..."
@@ -18470,7 +18471,7 @@ label MC024:
         MCT "Well... gotta start somewhere."
     if isEventCleared("MC002"):
         MCT "He does wear a lot of whistles..."
-    if not isEventCleared("MC002") or not isEventCleared("MC006"):
+    if not isEventCleared("MC006"):
         MCT "I... think he was there for that handball game we had? Maybe?"
         MCT "... What does he look like again?"
     MCT "I just feel like I'm spitballing here."
