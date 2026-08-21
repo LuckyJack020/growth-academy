@@ -24,7 +24,7 @@ define GTSTextCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}<', wha
 define PRG = Character('Aida', color="#B586EC", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRG2 = Character('Aida', color="#B586EC") #normal speaking voice
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}', image="PRGCell")
-define PRGTextCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
+define PRGTextCell = Character('Aida', color="#C0C0C0", what_prefix='{i}<', what_suffix='>{/i}', image="PRGCell")
 define AltPRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}{size=-6}', what_suffix='{/size}{/i}') #hidden picture
 define WG = Character('Alice', color="#FFD700")
 define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")

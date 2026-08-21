@@ -1315,10 +1315,6 @@ label MC001:
 label MC002:
     scene Classroom with fade
     play music Schoolday
-    if not getFlag("Meet_Takamura"):
-        $setFlag("Meet_Takamura")
-    $setFlag("Meet_Hageshi")
-    $setFlag("Meet_Tsubasa")
     pause .25
     "The knowledge I'd picked up over my first week or so at the academy had been, for the most part, things completely outside of my scope."
     "The oversized doorways and halls, the remote campus and island, and the looming idea of our bodies morphing in ways that would have to be seen to believe were, in every way, the stuff of fiction."
@@ -1551,14 +1547,17 @@ label MC002:
         show Takamura neutral with dissolve
         "At it sat a familiar looking teacher, who upon further inspection, I recognized from when I'd first arrived on the island with Tomo."
         hide Takamura with dissolve
+        $setFlag("Meet_Takamura")
     pause .25
     show Tsubasa neutral with dissolve
     "Across from her was a man that I could only describe as a stereotypical professor type, with thick, black-rimmed glasses perched on his nose."
     "He held a newspaper in front of him, and was skimming through it with a bored look on his face."
+    $setFlag("Meet_Tsubasa")
     hide Tsubasa with dissolve
     pause .25
     show Hageshi neutral with dissolve
     "At the other end of the megadesk sat a guy who I swear, looked like he'd been at the gym for the last four years of his life. His shoulders bulged out against the fabric of his shirt as he made some notes on some papers."
+    $setFlag("Meet_Hageshi")
     hide Hageshi with dissolve
     pause .25
     show Naoki neutral with dissolve
@@ -6494,7 +6493,7 @@ label MC008:
         MCT "Ah... no. He's been napping for at least half the time."
         if getHighestAffection() == ("AE"):
             MCT "Shiori will almost certainly have everything I'll need. Though... I'll have to sit through a small lecture from her on not disrupting classes."
-            if routelock("AE") and not isEventCleared("AE025"):
+            if getRoutelock() == "AE" and not isEventCleared("AE025"):
                 MCT "... If she'll actually talk to me."
         elif getHighestAffection() == ("GTS"):
             MCT "Naomi probably took good  notes... if I wasn't distracting her."
@@ -17494,7 +17493,8 @@ label MC023:
     MCT "Did I just get called a nimrod?"
     if getFlag("Meet_Kokutan"):
         "Standing up, I found what caused the commotion. A girl in a strange uniform sat on the floor picking up their books. It was unmistakably a school uniform, but its design was completely foreign; like an almost fantastical gothic design."
-        MCT "Oh, I know her. Honoka's odd roommate, Kokutan."
+        if not isEventCleared("BE039") or not isEventCleared("WG062"):
+            MCT "Oh, I know her. Honoka's odd roommate, Kokutan."
         "Her eyes were a sharp, vibrant shade of pink which only added to her odd, uncanny appearance."
         "Despite this, she was rather diminutive in height, which detracted somewhat from the sheer gravitas of her presence, and yet at the same time only made her that much more befuddling to behold."
         if routelock == "AE":
@@ -17705,7 +17705,7 @@ label MC023_C1_1:
     BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
     Kokutan "Gah! I told you earlier, I needed only the freshest herbs-"
     BE "To cleanse our space and ward off the darkness, I know."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+    if not isEventCleared("BE039") and not isEventCleared("WG062"):
         MCT "Our space?"
         MC "Wait, are you two roommates?"
         show BE confused
@@ -17973,14 +17973,14 @@ label MC023_C2_1:
     BE "I kinda figured you'd be around here. You skulk around for herbs more often than your average gal, so the biggest place outside wasn't too wild of a guess."
     Kokutan "Gah! I told you earlier, I needed only the freshest herbs-"
     BE "To cleanse our space and ward off the darkness, I know."
-    if not isEventCleared("BE039") or not isEventCleared("WG062"):
+    if not isEventCleared("BE039") and not isEventCleared("WG062"):
         MCT "Our space?"
-    MC "Wait, are you two roommates?"
-    show BE confused
-    BE "You didn't know?"
-    MC "I don't think you've ever mentioned it."
-    show BE happy
-    BE "Well, surprise!"
+        MC "Wait, are you two roommates?"
+        show BE confused
+        BE "You didn't know?"
+        MC "I don't think you've ever mentioned it."
+        show BE happy
+        BE "Well, surprise!"
     MCT "Talking about an odd pairing."
     BE "So, did you get the chance to toughen up the straps yet?" 
     BE "It's one thing to walk around with big bazonga, but doing it unsupported is kinda..."
@@ -18471,7 +18471,7 @@ label MC024:
         MCT "Well... gotta start somewhere."
     if isEventCleared("MC002"):
         MCT "He does wear a lot of whistles..."
-    if not isEventCleared("MC002") or not isEventCleared("MC006"):
+    if not isEventCleared("MC006"):
         MCT "I... think he was there for that handball game we had? Maybe?"
         MCT "... What does he look like again?"
     MCT "I just feel like I'm spitballing here."

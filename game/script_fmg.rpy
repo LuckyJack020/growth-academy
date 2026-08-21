@@ -2126,7 +2126,7 @@ label FMG016:
     Natsuko "That's funny, I didn't think it even began."
     if isEventCleared("FMGB001"):
         MC "Whoah, easy now. It's just a friendly competition, Okamoto-san."
-        Natusko "Sure. Friendly. Why not?"
+        Natsuko "Sure. Friendly. Why not?"
     Natsuko "As much as I'd like to stay and rub it in, I'm running late for my class. I look forward to our rematch Akira, maybe next time I'll try."
     show Natsuko happy
     if isEventCleared("FMGB001"):
