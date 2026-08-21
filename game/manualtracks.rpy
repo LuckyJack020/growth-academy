@@ -798,7 +798,6 @@ init python:
     )
     ost.manualDefineList.append(theme_GnG)
 
->>>>>>> 695e3f9f (New Sprites and Songs)
     ## Base Template
     ######################################
 

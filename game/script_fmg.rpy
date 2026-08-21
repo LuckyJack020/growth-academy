@@ -24485,18 +24485,11 @@ label FMGD002:
     Natsuko "No! I'm not going to be your anything! Now, let me go!"
     FMG "You're no fun at all, Nat. Even when you're so little, you're still the biggest killjoy."
     FMG "Mmmmm... Your teeny, tiny little size."
-<<<<<<< HEAD
-    "Akira pressed her finger up against Natsuko who tried to fight back... only to look in shock as Akira grew even larger."
-=======
-<<<<<<< Updated upstream
     "Akira pressed her finger up against Natsuko who tried to fight back...  only to look in shock as Akira grew even larger."
-=======
     hide cg FMGD002_dream7
     show cg FMGD002_dream5
     with dissolve
     "Akira pressed her finger up against Natsuko who tried to fight back... only to look in shock as Akira grew even larger."
->>>>>>> Stashed changes
->>>>>>> 695e3f9f (New Sprites and Songs)
     Natsuko "H-Huh?!"
     FMG "Hooh..."
     "Akira's body seemed to swell in pulses, pumping bigger and bigger as her musculature stiffened, Natsuko becoming utterly dwarfed in the palms of the giantess' hands."
