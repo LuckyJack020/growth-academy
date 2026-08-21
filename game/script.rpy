@@ -23,6 +23,7 @@ default ChibukiOutfit = OutfitEnum.DEFAULT
 default RMOutfit = OutfitEnum.DEFAULT
 default NurseOutfit = OutfitEnum.DEFAULT
 default YukiOutfit = OutfitEnum.DEFAULT
+default IchiroOutfit = OutfitEnum.DEFAULT
 default AENsfw = False
 default BENsfw = False
 default FMGNsfw = False
@@ -1115,6 +1116,11 @@ init python:
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2:
             YukiOutfit = o
 
+    def setIchiroOutfit(o):
+        global IchiroOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.FORMAL:
+            IchiroOutfit = o  
+
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
         global prgsize
@@ -1276,6 +1282,7 @@ label start:
         RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
+        IchiroOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []
@@ -1348,6 +1355,7 @@ label splashscreen:
         RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
+        IchiroOutfit = OutfitEnum.DEFAULT
     scene black
     with Pause(1)
     centered "{size=+3}The following represents a work in progress.{/size}"
@@ -1784,6 +1792,7 @@ label startevent:
         RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
+        IchiroOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
         updateSP()
         showQuickMenu = True

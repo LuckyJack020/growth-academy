@@ -18299,7 +18299,7 @@ label AE078:
     "{i}BRRR-{/i}...{i}BRRR-{/i}..."
     MC "M-Mgn..."
     scene Dorm Interior with fade
-    play music Requiem
+    play music FullMoon
     "As my eyes fluttered open from my dreamless sleep, I felt, for a moment, that I was not yet awake as my eyes adjusted to the moonlight shining into the room. Reaching over to the nightstand, I grabbed for my phone."
     "{i}Klk!{/i}"
     MC "Ach."
@@ -22435,6 +22435,7 @@ label AE097:
     "Silence."
     "Silence and nothing more."
     if checkAffection("AE", ">=", 20):
+        play music FullMoon
         MCT "Am I really okay with letting it end like that?"
         MCT "..."
         scene Dorm Interior with fade

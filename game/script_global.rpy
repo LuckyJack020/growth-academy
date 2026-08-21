@@ -92,6 +92,8 @@ define TomokoTextCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}<', w
 define Vivian = Character('Vivian', color="#C0C0C0") #Alice’s Mother
 define Yuko = Character('Yuko', color="#FF3300") #Akira’s Mother
 define YukoCell = Character('Yuko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="YukoCell") #Akira’s Mother Cell
+define Ichiro = Character('Ichiro', color="#FF3300") #Ichiro Mizawa - Okisho’s Brother
+define Ichia = Character('Ichia', color="#FF3300") #Ichiro Mizawa - Stage Name
 
 #Other Students
 define Fumika = Character('Fumika', color="#FF91DC") #GTS Route
@@ -620,7 +622,9 @@ image cg FMGD002_dream5 = ConditionSwitch(
 image cg FMGD002_dream6 = ConditionSwitch(
     "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMGD002_dream6.webp",
     "True", "Graphics/ui/gallery/nsfw-cg.webp")
-
+image cg FMGD002_dream7 = ConditionSwitch(
+    "persistent.enable_nsfw == True", "Graphics/ui/gallery/FMGD002_dream7.webp",
+    "True", "Graphics/ui/gallery/nsfw-cg.webp")
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.webp"
 image cg GTS010 = "Graphics/ui/gallery/GTS010.webp"
@@ -1146,6 +1150,8 @@ image Vivian neutral = "Graphics/minor/parents/vivian/neutral.webp"
 image Vivian happy = "Graphics/minor/parents/vivian/happy.webp"
 image Vivian surprised = "Graphics/minor/parents/vivian/surprised.webp"
 
+image Ichiro neutral = "Graphics/minor/other/ichiro/neutral.webp"
+
 image dummy = "Graphics/ui/dummy.png"
 
 #Overlays
@@ -1211,7 +1217,10 @@ define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH - Yoshiki Ara
 define audio.DifferentPaths = "Audio/BGM/differentpaths.ogg"
 define audio.DormLife = "Audio/BGM/scene_dorm.ogg"
 define audio.Festival = "Audio/BGM/scene_festival.ogg" #Dokkoi!
+define audio.FullMoon = "Audio/BGM/FullMoon.ogg"
+define audio.GNG = "Audio/BGM/GnomesAndGiants.ogg" #Enchanted Lands
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
+define audio.Halloween = "Audio/BGM/scene_Halloween.ogg" #Halloween Theme
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.HigherEduC = "Audio/BGM/scene_highereduC.ogg" #Higher Education Claviola Variant
 define audio.Holiday = "Audio/BGM/scene_holiday.ogg" #Winter Wonderland
@@ -1254,7 +1263,8 @@ define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
 define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"
 define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"
 define audio.TwilightDusk = "Audio/BGM/twilightDusk.ogg"
-define audio.Village = "audio/BGM/scene_village.ogg" #Village Theme
+define audio.Village = "Audio/BGM/scene_village.ogg" #Village Theme
+>>>>>>> 695e3f9f (New Sprites and Songs)
 define audio.WhatLiesWithin = "Audio/BGM/WhatLiesWithin.ogg"
 define audio.WhatLiesWithinDrums = "Audio/BGM/WhatLiesWithinDrums.ogg"
 define audio.WhatLiesWithinDrumChords = "Audio/BGM/WhatLiesWithinDrumChords.ogg"

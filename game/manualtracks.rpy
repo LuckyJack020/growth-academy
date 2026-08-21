@@ -765,6 +765,40 @@ init python:
     )
     ost.manualDefineList.append(theme_ViL)
 
+    theme_FlM = ost.soundtrack(
+        name = "Full Moon",
+        path = "Audio/BGM/FullMoon.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Nighttime Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_FlM)
+
+    theme_HlN = ost.soundtrack(
+        name = "Halloween",
+        path = "Audio/BGM/scene_Halloween.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Seasonal Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_HlN)
+
+    theme_GnG = ost.soundtrack(
+        name = "Enchanted Lands",
+        path = "Audio/BGM/GnomesAndGiants.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Gnomes and Giants Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_GnG)
+
+>>>>>>> 695e3f9f (New Sprites and Songs)
     ## Base Template
     ######################################
 

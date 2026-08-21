@@ -24474,14 +24474,29 @@ label FMGD002:
     FMG "Hahaha, guess you aren't the biggest anymore!"
     "Akira's chest bounced hypnotically in rhythm with her amused laughter."
     FMG "Heh, let me get a better look at you."
-    "With one swift motion and one hand, Akira picked up Nat like she was nothing more than a child." 
+    "With one swift motion and one hand, Akira picked up Nat like she was nothing more than a child."
+    $ persistent.unlock_cgFMGD002_dream7 = True
+    hide cg FMGD002_dream5
+    show cg FMGD002_dream7
+    with dissolve
     FMG "Awww, look at you! You're so adorable! Thinking you were going to be bigger than me, don't make me laugh."
     Natsuko "Put me down!"
     FMG "I bet you hate this, haha. You're like a toy to me. I could get some use out of you, maybe. {w}Oh, that's it! You could be my servant!"
     Natsuko "No! I'm not going to be your anything! Now, let me go!"
     FMG "You're no fun at all, Nat. Even when you're so little, you're still the biggest killjoy."
     FMG "Mmmmm... Your teeny, tiny little size."
+<<<<<<< HEAD
     "Akira pressed her finger up against Natsuko who tried to fight back... only to look in shock as Akira grew even larger."
+=======
+<<<<<<< Updated upstream
+    "Akira pressed her finger up against Natsuko who tried to fight back...  only to look in shock as Akira grew even larger."
+=======
+    hide cg FMGD002_dream7
+    show cg FMGD002_dream5
+    with dissolve
+    "Akira pressed her finger up against Natsuko who tried to fight back... only to look in shock as Akira grew even larger."
+>>>>>>> Stashed changes
+>>>>>>> 695e3f9f (New Sprites and Songs)
     Natsuko "H-Huh?!"
     FMG "Hooh..."
     "Akira's body seemed to swell in pulses, pumping bigger and bigger as her musculature stiffened, Natsuko becoming utterly dwarfed in the palms of the giantess' hands."

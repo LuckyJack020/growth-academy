@@ -11951,7 +11951,7 @@ label MC010_RM:
     scene Bus Interior
     show Tomoko neutral
     with fade
-    play music DormLife
+    play music FullMoon
     $eventname = "Interloper"
     $save_name = "Interloper"
 
@@ -13588,7 +13588,7 @@ label MC012B:
     "The only thing missing..."
     "Was the name of the setting."
     stop music fadeout .5
-    play music Memories
+    play music GNG
     MC "You find yourselves travelers, wanderers in..."
     menu:
         "The Enchantic Isles":
