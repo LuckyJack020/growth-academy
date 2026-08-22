@@ -6899,8 +6899,8 @@ label BE035B:
     show Naoki neutral with dissolve
     Naoki "All right, everyone. Huddle up, huddle up."
     "The assembled members approached a young man with three whistles around his neck. We joined with the others."
+    MCT "Huh, he looks sort of familiar."
     if isEventCleared("MC006"):
-        MCT "Huh, he looks sort of familiar."
         MCT "Ah! Right, that's Naoki-sensei. I remember him, he was helping run that handball game we played earlier in the school year."
     else:
         $setFlag("Meet_Naoki")
@@ -9482,7 +9482,9 @@ label BE046:
     BE "I do, Sensei. I really, really want this."
     Naoki "I understand. However, I just think it's only fair for me to be transparent with you. Students with your factor tend to have a more difficult time in this club. So you'll have your work cut out for you."
     if getFlag("BE_SOFTBALL"):
-        Naoki "Besides, you've joined and quit many clubs already, including the softball club."
+        Naoki "Besides, you've joined and quit many clubs already, including the soccer and softball clubs."
+    else:
+        Naoki "Besides, you've joined and quit many clubs already, including the soccer club."
     MC "Harsh, but fair. He's only trying to look out for his students."
     "However, Honoka only looked Naoki-sensei straight in his eyes, determined."
     BE "Thank you for the warning, Sensei. But I don't want this to hinder me. I'll swim my heart out just so I can keep up with the rest of the team. You don't have to worry about me."

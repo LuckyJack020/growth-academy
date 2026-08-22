@@ -258,7 +258,7 @@ image Stage = DynamicImage("Graphics/ui/bg/archiveBG/stage_[gametime].webp")
 image Sonography = DynamicImage("Graphics/ui/bg/archiveBG/sonography_[gametime].webp")
 image Student Government = DynamicImage("Graphics/ui/bg/archiveBG/studentgovernment_[gametime].webp")
 image Track = DynamicImage("Graphics/ui/bg/archiveBG/track_[gametime].webp")
-image Workshop = "Graphics/ui/bg/NYI.webp"
+image Workshop = "Graphics/ui/bg/workshop.webp" #Misuboro’s Workshop
 
 #Dorms
 image Bathroom = "Graphics/ui/bg/archiveBG/bathroom.webp"
@@ -1362,8 +1362,8 @@ init 1 python:
     eventlibrary['RM006'] = {"name": "The Gate", "girls": ["RM"], "display": "Daichi's Side Route", "type": EventTypeEnum.OPTIONAL,     "location": "chukanpoint",       "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM005"], [ConditionEnum.FLAG, "XX22"]]]}
     eventlibrary['RM007'] = {"name": "Foundation", "girls": ["RM"], "display": "Daichi's Side Route", "type": EventTypeEnum.OPTIONAL,     "location": "dorminterior",       "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "RM006"], [ConditionEnum.TIMEFLAG, "PREG"]]]}
 
-    eventlibrary['RMG001'] = {"name": "What Lies Ahead", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "gatefront",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG001_Unlock"]]}
-    eventlibrary['RMG002'] = {"name": "The Golden Hand", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "chukanpoint",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG002_Unlock"]]}
+    eventlibrary['RMG001'] = {"name": "What Lies Ahead", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "businterior",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG001_Unlock"]]}
+    eventlibrary['RMG002'] = {"name": "The Golden Hand", "girls": ["RM"], "display": "Daichi's Gig", "type": EventTypeEnum.OPTIONAL,  "location": "workshop",  "priority": PrioEnum.NONE, "next": "", "preobsflags": ["size6exp"], "obsflags": ["size6"],          "conditions": [[ConditionEnum.FLAG, "RMG002_Unlock"]]}
 
     #Causes minor character scenes to be disabled if time is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)

@@ -23098,8 +23098,7 @@ label WG076:
     play music WinterVocal
     "I braved the frigid winter air again, but it was a small price to pay knowing Alice was suffering a lot more than I was to do this."
     "I knew what I needed, I just had to make sure I could find it."
-    scene Giant Dorm Exterior with fade
-    #scene shop with fade
+    scene Workshop with fade
     "I heard the school had a workshop that was used for some classes and personal student use, but I hadn't needed to use it before, until now. Though I wasn't exactly a stranger to a lot of this stuff, thanks to my dad."
     show Jineko neutral with dissolve
     if isEventCleared("WGGTS004"):

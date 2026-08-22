@@ -201,7 +201,8 @@ init python:
         'track': ("school", (570,165)),
         'unknown': ("school", (550, 550)),
         'waterpark': ("town", (500,700)),
-        'woods': ("school", (825,65))
+        'woods': ("school", (825,65)),
+        'workshop': ("school", (975,50))
     }
     debugenabled = True
     debuginput = ""

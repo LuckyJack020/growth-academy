@@ -27170,7 +27170,7 @@ label RMG001:
     "Without much fanfare, the bus door closed and rumbled back to life as it set itself in motion straight back to town."
     scene black with fade
     pause .5
-    scene Gate Front with fade
+    scene School Front with fade
     play music Country
     "A few minutes later a new bus rolled up to the stop. Despite being the only possible bus to match this arrival time, I still cross-referenced the bus number to the route line, just to be sure."
     MCT "Looks like this is my ride."
