@@ -1484,7 +1484,7 @@ screen daymenu():
 
     #debug menu toggle (if debug is enabled)
     if debugenabled and highlitevent == "":
-        #textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
+        textbutton "Profiles" xalign 0.7 yalign 0.95 action Jump("profileselect")
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
 
 screen notification1(img):
