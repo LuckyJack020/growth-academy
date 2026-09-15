@@ -25,7 +25,7 @@ init python:
             "pimgdates": None,
             "desc": [
                 ([], "It's Kei-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
-                ([("test", True)], "Hello this is a second line.")]
+                ([("XX37", True)], "Hello this is a second line.")]
         },
         "BE":
         {
@@ -92,18 +92,18 @@ init python:
                 ([], "It's Akira-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
         },
-        "BBW":
+        "WG":
         {
             "name": "Alice Nikumaru",
-            "affection": "BBW",
+            "affection": "WG",
             "sex": False,
             "DOB": "1/1/2000",
             "height": [("size_1", 100)],
-            "weight": [("BBW_size_2", 1500), ("size_1", 100)],
-            "BWH": [("BBW_size_2", [50, 9999, 50]), ("size_1", [50, 999, 50])],
+            "weight": [("WG_size_2", 1500), ("size_1", 100)],
+            "BWH": [("WG_size_2", [50, 9999, 50]), ("size_1", [50, 999, 50])],
             "factor": "Fat growth",
-            "factorlimit": "BBW_size_3",
-            "pimgdates": ["BBW_size_3", "BBW_size_2", "size_1"],
+            "factorlimit": "WG_size_3",
+            "pimgdates": ["WG_size_3", "WG_size_2", "size_1"],
             "desc": [
                 ([], "Graduated from Golden Chrysanthemum Academy in Tokyo with high marks. Previous time spent at Langdon Hills Academy in America. No disciplinary record. Member of Future Business Leaders club. Spent two years as class treasurer. Was on shortlist for admission to Tokyo University, as well as other high-ranking institutions outside Japan, prior to enrollment at Seichou."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -140,7 +140,7 @@ init python:
                 ([("test", True)], "Hello this is a second line.")]
         }
     }
-    profilepages = {"main": ["MC", None, "BE", None, "AE", None, "GTS", None, "FMG", None, "BBW", None, "PRG", None],
+    profilepages = {"main": ["MC", None, "BE", None, "AE", None, "GTS", None, "FMG", None, "WG", None, "PRG", None],
         "minor": ["RM", None, None, None, None, None, None, None, None, None, None, None, None, None]}
     activeprofile = ""
     activepage = "main"
