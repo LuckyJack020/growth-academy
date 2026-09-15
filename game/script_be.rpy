@@ -5,19 +5,22 @@ label BE001:
     "After the bell rang, there was the familiar sound of chairs getting scraped along the ground as everyone prepared to leave."
     show FMG happy at Position (xcenter=1.40, yalign=1.0)
     show FMG happy at Position (xcenter=-0.4, yalign=1.0) with mov3
+    $ renpy.pause(3,hard=True)
     "The only difference was the volume. Compared to what I was used to at my old school, it was a lot quieter."
     pause 1
     show AE pondering at Position (xcenter=1.40, yalign=1.0)
     show AE pondering at Position (xcenter=-0.4, yalign=1.0) with mov3
-    pause 1
+    $ renpy.pause(3,hard=True)
     #play sound MovingChair 
     show WG neutral at Position (xcenter=1.40, yalign=1.0)
     show WG neutral at Position (xcenter=-0.4, yalign=1.0) with mov3
+    $ renpy.pause(3,hard=True)
     "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
     pause 1
     "Then again, there was another seat in the room that easily caught my attention, thanks to how big it was. It was without a doubt, the largest I'd ever seen, and now it was clear why."
     show PRG insecure at Position (xcenter=1.40, yalign=1.0)
     show PRG insecure at Position (xcenter=-0.4, yalign=1.0) with mov3
+    $ renpy.pause(3,hard=True)
     "Although, the teacher, Kaeru Tashi, said not everyone's growth factor was visible right away, it could have been something else."
     pause 1
     "The classroom slowly started to empty out, and I made my way out of the room as well."
