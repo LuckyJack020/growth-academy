@@ -211,7 +211,7 @@ label global000:
     BE "I-I thought, but I... Oh my god, it's been years!"
     MCT "There's that boyish grin I remember."
     "Honoka Inoue. My old childhood friend. The two of us were thick as thieves back in the day. When we weren't terrorizing Shibuya, we were spending our days chilling out in the countryside."
-    "Until one day, she was just gone. Moved over to an all-girls' school in a different part of the country. We never saw each other again."
+    "Until one day, she was just gone. Moved over to an all-girls' school in Kanagawa. We never saw each other again."
     BE "You dork! Why didn't you say anything the first time..."
     MC "What would be the chances?!"
     MCT "I mean, you look so different! You look..."
@@ -224,7 +224,7 @@ label global000:
     MC "The hell were they feeding you girls out there?! "
     show BE embarrassed
     BE "Pfff, you butthead!"
-    MC "Tsssh"
+    MC "Tsssh."
     show BE wink
     BE "I {i}told{/i} you they'd get bigger eventually! But you never listened!"
     MC "How could I have known? We were both kids!"
@@ -1709,7 +1709,7 @@ label MC002:
     pause .25
     show Naoki neutral with dissolve
     if isEventCleared("BE003"):
-        MCT "Huh. That's the same outfit that Honoka had on the other day."
+        MCT "Huh. Same teacher from that soccer club meeting with Honoka."
     pause .25
     hide Naoki with dissolve
     MC "If I may, Takamura-sensei, what's with the... uh..."
@@ -2488,7 +2488,7 @@ label MC005:
     "Images of the island and different locations on it were spread all across it, with little descriptions and text bubbles alongside them, pointing out different odds and ends."
     MCT "Hm... almost forgot about the town."
     "Pictures of the town stuck out to me, featuring a ton of different locations, some of which were new to me."
-    if isEventCleared("BE012"):
+    if isEventCleared("BE013"):
         MCT "Oh dang... that's the arcade I went to with Honoka that day."
         MCT "I'll have to remember to hit up the bus sometime and head down there."
         "I looked at the arcade in the photo."
@@ -3606,6 +3606,8 @@ label MC005_TM:
     Tomoko "..."
     show Tomoko smile
     Tomoko "... Pick up a paddle, smartass."
+    if isEventCleared("BE013"):
+        MCT "Glad she didn't come to the arcade the other day and see me absolutely eat it."
     "She walked away to one side of the table and took the red paddle for herself, leaving me with the blue one."
     MC "You're on."
     show Tomoko neutral
@@ -18882,7 +18884,7 @@ label MC024:
         show Naoki neutral at Position(xcenter=0.40, yalign=1.0) with dissolve
         "I smiled at her, then pulled an about face to head toward Naoki-sensei."
         "From what I could see, Naoki was a little over my height, with a fairly trim stature."
-        "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
+        "He wore the standard athletic outfit, though with a cap perched on his head." 
         Naoki "-tastic strategy. You all really turned that around at the end."
         "I stopped close to the fence and waited for the players to clear out."
         pause .5
@@ -19221,7 +19223,7 @@ label MC024:
         "I stood up and hurried to him."
         show Naoki neutral with dissolve
         "From what I could see, Naoki was a little over my height, with a fairly trim stature."
-        "He wore the standard athletic outfit with longer hair tied in a bun, and some light facial hair." 
+        "He wore the standard athletic outfit, though with a cap perched on his head." 
         pause .5
         MC "Pardon me. Say... mon-"
         if not getFlag("Meet_Naoki"):
