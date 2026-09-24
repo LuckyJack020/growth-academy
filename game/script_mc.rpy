@@ -21649,10 +21649,10 @@ label MC042:
             centered "{size=+3}{outlinecolor=#00ff00}You have completed all of the currently available 22 optional Keisuke's stories.{/outlinecolor}{/size}"
         else:
             centered "{size=+3}{outlinecolor=#00ff00}You haven't completed all of the currently available 22 optional Keisuke's stories, there are still some that are left.{/outlinecolor}{/size}"
-    if isEventCleared("RM007"):
-        centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 7 core scenes from Daichi's side route.{/outlinecolor}{/size}"
+    if isEventCleared("RM007B"):
+        centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 8 core scenes from Daichi's side route.{/outlinecolor}{/size}"
     else:
-        centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 7 core scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
+        centered "{size=+3}{outlinecolor=#00ff00}You haven't yet completed all of the currently available 8 core scenes from Daichi's side route, there are still some that are left.{/outlinecolor}{/size}"
     if isEventCleared("RMG001") and isEventCleared("RMG002"):
         centered "{size=+3}{outlinecolor=#00ff00}You also completed all of the currently available 2 optional gig scenes from Daichi's side route.{/outlinecolor}{/size}"
     else:
