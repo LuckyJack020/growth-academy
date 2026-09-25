@@ -1064,7 +1064,7 @@ init python:
 
     def setOkishoOutfit(o):
         global OkishoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.TRADITIONAL:
             OkishoOutfit = o
 
     def setSakuraOutfit(o):

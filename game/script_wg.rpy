@@ -31881,6 +31881,7 @@ label WG095:
     play music Stardust
     $setTime(TimeEnum.EVE)
     $setWGOutfit(OutfitEnum.DRESS)
+    $setIchiroOutfit(OutfitEnum.DRESS)
     $setMCOutfit(OutfitEnum.SUIT)
     MC "Alright, just a few more adjustments... Alright looks like we got it tied up back here."
     show WG happy with dissolve
@@ -31958,6 +31959,7 @@ label WG095:
     "Hearing her voice, Vivian and Daitaro drew their attention over to us. Both seemed to raise an eyebrow at the sight of their daughter's current state."
     "I had no reason to think Alice was not forthcoming about her more recent changes, but understandably, seeing them in person was another thing altogether."
     "In contrast to my parents, whatever shock the two might have experienced, they seemed to recover quickly."
+    show Vivian happy
     Vivian "Darling, so lovely to see you again."
     Daitaro "My little princess, it's been too long."
     show WG sly
@@ -31965,6 +31967,7 @@ label WG095:
     show WG happy
     "Neither individually being adequate to the task, both her mom and dad wrapped themselves around Alice as best they could for a hug."
     "Admittedly, both of them initially struck me as rather aloof, but it was pretty evident to me now that they really cared for their daughter, and certainly understanding of what she had been going through this past year."
+    show Vivian neutral
     Vivian "And I see you've brought this strapping young man with you this evening. {w}Nice to see you again, Hotsure-san."
     MC "Nice to see you as well, Mrs. Nikumaru."
     Daitaro "Good to see you, Hotsure-san."
@@ -31980,6 +31983,7 @@ label WG095:
     Vivian "Now look at you, a world class fashion designer."
     show WG sly
     WG "Really now, I don't know if I would go that far, Mother."
+    show Vivian happy
     Vivian "Oh hush, I simply must show your dress to Usuda-san. The poor dear could use some style assistance, and more than a few pointers about flattering her figure."
     hide WG 
     hide Vivian
@@ -32024,7 +32028,9 @@ label WG095:
     WG "Well, no, not real-"
     Vivian "Marvelous, what is your name, young lady?"
     Okisho "Okisho. My brother is Ichia, he got me this seat."
+    show Vivian surprised
     Vivian "Oh, my! I heard Ichia comes from a line of talented musicians, I'm sure you are no exception."
+    show Vivian neutral
     Okisho "True, I can't say I'm on the same level that big-bro is, but I like to think I can hold my own."
     Vivian "Lovely. Being quite the music lover herself, I'm sure you and Alice have a lot of mutual interests. I'm also relieved to see she has someone else she can relate to with her same condition."
     Okisho "Umm, yeah... sure."
@@ -32048,6 +32054,9 @@ label WG095:
     stop music fadeout 1.5
     WG "Oh! Looks like it's about to start."
     "The lights dimmed and the spotlight hit the stage. Applause from the crowd swelled as the shadowy figure emerged from behind the stage curtain."
+    hide WG
+    show Ichiro neutral
+    with dissolve
     "A tall wiry man wearing a suit came into the light, sporting a pair of visor sunglasses as he gently swept a long cane across the stage in front of him."
     MCT "Wait a second... {w}He's blind!?"
     "Needless to say I felt like a pretty big douche for harboring so much petty jealousy against a blind guy."
@@ -32058,7 +32067,9 @@ label WG095:
     play music SoloCelloPassion
     pause 7
     "He was one of those musicians that played with his whole body, the ferocity and passion in his movements was evident, and all of it came out in his sound."
+    hide Ichiro
     show WG surprised-2
+    with dissolve
     pause 5
     "Alice for her part seemed absolutely transfixed by his performance."
     "And now I could understand why. It was like viewing a classical painting, an exquisite work of art."
@@ -32071,14 +32082,18 @@ label WG095:
     scene black with fade 
     pause .5
 
-    scene Theater Concert Spotlight with fade
+    scene Theater Concert Spotlight
+    show Ichiro neutral
+    with fade
     pause 2
     play music Bourree
     "The concert had been going for hours and was starting to wind down. After taking the audience on a musical {i}tour de force{/i}, we were able to start to relax with a soothing piano piece."
     "It was a testament to his abilities to craft a performance, we all needed a break after the emotional whirlwind his music provoked."
     "He certainly proved his reputation as one of the best classical guitarists on the planet, and I didn't even know it was possible to play the lute that fast."
     "The guy was practically a jukebox cyborg. He would pick up one new instrument after the other, playing in a completely different tempo, key, and tuning from the previous piece he just did."
-    show WG happy with dissolve
+    hide Ichiro
+    show WG happy
+    with dissolve
     "By this point I was right there riding the Ichia hype train along with Alice." 
     stop music fadeout 2.0
     "At this point in the show, a different, slightly smaller piano-like instrument was rolled out on the stage for him."
@@ -32112,10 +32127,12 @@ label WG095:
     "Ichia got a standing ovation for what had to have been a solid two minutes."
     MC "That was amazing!"
     WG "It was magnificent! Utterly brilliant!"
+    show Vivian happy
     Vivian "Absolutely marvelous!"
     show WG sly
     Okisho "Heh, you're damn right. Big Bro is the best at what he does."
     show WG neutral-2
+    show Vivian neutral
     Vivian "It certainly was the performance of a lifetime. Your brother is a national treasure."
     show WG surprised
     Okisho "I wouldn't be one to disagree. Would you like to meet him?"
@@ -32131,6 +32148,7 @@ label WG095:
     with fade
     Okisho "Hey, you can come on back."
     Okisho "Ichiro, you have some fans that would like to meet you."
+    show Ichiro neutral with dissolve
     "Here he was, the man of the hour himself. Larger than life on stage, and just as much so in person— the guy was chin to eye with Alice's dad, who was an imposing figure in his own right."
     "In contrast to his nearly spherical sister, the man was practically a pole. Up close you could see his long spindly fingers, which no doubt helped him reach any note he wanted, be that on the keyboard or fretboard."
     "Ichia" "Is this your friend from school?"
@@ -32175,7 +32193,7 @@ label WG095:
     scene Hotel Restaurant with fade
     play music WGAlt
     "Back at the hotel, champagne bottles were popped, and the drinks were flowing— not to mention the gossip."
-    show Vivian neutral at Position(xcenter=0.25, yalign=1.0)
+    show Vivian surprised at Position(xcenter=0.25, yalign=1.0)
     show WG sly at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     Vivian "You mean, {i}she{/i} was the Mizawa-san you told me about?"
@@ -32205,7 +32223,9 @@ label WG095:
     show WG doubt
     Vivian "She didn't seem as grating and uncouth as you described."
     WG "I can assure that's only because you saw her at a venue where you're not allowed to talk or eat during the performance."
+    show Vivian happy
     MC "Oh, don't let her fool you Mrs. Nikumaru. I think she's starting to grow on Alice."
+    show Vivian neutral
     WG "I can't imagine her growing on anyone, but she's certainly been growing out of her clothes. {w}She walks around dressed like an overstuffed pig." 
     show WG stern
     WG "I even offered to give her a free refit for her uniform just so {i}I{/i} wouldn't have to look at the dilapidated state of her current one."
@@ -37479,6 +37499,401 @@ label WGB008:
     jump daymenu
 
 label WGB009:
+    $setFlag("XX35")
+    $setProgress("WGB", "WGB010")
+    $setTime(TimeEnum.EVE)
+    scene Dorm Interior with fade
+    "Tonight was the night of the first concert of the year the music club was putting on."
+    "From what Okisho told me, they put on one during summer (which was this one), one near the end of the year, and a few others throughout the year for holidays and special occasions."
+    "She told me I didn't have to come, that it wasn't going to be anything special, but it seemed like a big enough deal to me that it was important that I came for her sake at least."
+    "I mean, as talented as a musician she was, I {i}wanted{/i} to come, even if she wasn't going to force me."
+    "I guess to her it might not have been the big grand stage debut of the band she planned to put together after this place, but it seemed like a notable milestone given her status as the head of the music club."
+    "Besides, when a woman tells you not to bother with something, there's no guarantee it isn't some kind of test to see if you will anyway."
+    "Okisho didn't strike me as the type to play those kinds of games, but I wasn't planning on taking that risk." 
+    "I looked myself up and down in front of the mirror, wondering if I was dressed appropriately for the occasion."
+    MCT "From what I gather it's kind of a formal thing. But something tells me I'm not scoring any points with Okisho by showing up in a three piece suit."
+    MCT "Then again, showing up in sweatpants and sneakers probably isn't the best call either."
+    MCT "I'll just play it safe and keep the school uniform on."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.NIGHT)
+    $setWGOutfit(OutfitEnum.DRESS)
+    $setOkishoOutfit(OutfitEnum.DRESS)
+    scene Auditorium with fade
+    "Heading into the auditorium I had to check the time on my phone to see what time it was, worried that I somehow came too early."
+    MCT "Nope, just five minutes to spare, like I planned."
+    "Not that I was expecting to not get a seat if I came late, but I had expected a bit more people to be in attendance than what I was seeing."
+    "A brief bit of counting had me estimating about a third or so of the seats were filled. Seating was rather sparse in the middle rows on up and pretty scattered overall."
+    MCT "Maybe those fliers I redesigned for Okisho didn't have the pizzazz I thought they did... Not much of a turn out."
+    "Whether it was a show of 100,000 or 10, I don't think that would impact the energy Okisho would put into her performance. She loved music for music's sake, afterall." 
+    "But I suspected it would be discouraging for other members of the music club to see so few people in the auditorium once the curtain drew back."
+    show PRG neutral with dissolve
+    "Looking around to find a good spot to sit, since I had plenty of options, I was drawn to a familiar face and took a seat next to her."
+    MC "Hi, Aida. Mind if I sit next to you?"
+    PRG "N-Not at all. I got here a little early thinking it might be hard to find a seat... But now I feel like I'm standing out by being the only one sitting upfront."
+    MC "Yeah, there doesn't seem to be too many people. All the more reason to show our support, right?"
+    PRG "I think so too. I'm sure Alice would appreciate it. She put a lot of effort into practicing for tonight."
+    MC "I'm not sure how much she'd appreciate me coming, what with how things ended between us."
+    show PRG insecure
+    PRG "She never said much to me, but I could tell she was upset at the time. She seems fine now, though. I-I don't think she holds a grudge against you, if that's what you're thinking, Hotsure-san."
+    MC "Good to know, cause she certainly strikes me as the type to hold a grudge."
+    show PRG nervous
+    PRG "I take it you're referring to her... feelings towards Mizawa-san?"
+    if isEventCleared("WGGTS001") or isEventCleared("GTSWG001"):
+        MC "Not that that's the only one I'm aware of, but yeah. You could say that."
+    else:
+        MC "You could say that, yeah."
+    show PRG sad-2
+    PRG "Mmgh... I wish she wouldn't let Mizawa-san get to her as much as she does. She's normally a much nicer person than when she's around her."
+    MC "I know she can be, but you don't have to make excuses for her, Kodama-san."
+    PRG "I know, I don't think she'd want me to either, but... I-I don't think Mizawa-san does anything to help the situation." 
+    show PRG doubt
+    extend " In fact, it sounds like she goes out of her way to make more trouble for Alice."
+    show PRG neutral
+    MC "That doesn't surprise me either. But at least they both seem to respect each other's musicianship, so I don't expect they'll let their personal feelings toward one another get in the way of putting on a good show tonight."
+    PRG "I-I think you're right."
+    MC "How have you been doing? Still working for Alice?"
+    show PRG insecure
+    PRG "Not directly as her assistant anymore. She didn't want to put the strain on me because of... well, everything."
+    MC "Ah, yeahhhh..."
+    MCT "Should have known {i}that{/i} was going to come up. {w}Not sure how to lead off from that."
+    show PRG neutral
+    PRG "But I still work for her preparing meals. It's been fun trying out new recipes that Alice requests."
+    MCT "Poor girl. As much food as that woman eats, she must be overworking her."
+    hide PRG with dissolve
+    "The lights grew dim and our conversation hushed as the curtain unraveled, revealing the assembled choir and orchestra."
+    show Okisho neutral with dissolve
+    "Okisho waddled out on stage looking like a stuffed sausage casing in a dress that was a couple of sizes too tight." 
+    MCT "That dress is a fancy number. She never struck me as the type to want to dress up, but she looks damn good doing it."
+    "In a silent, if not slightly theatric display, Okisho bowed before the audience, serving as the sort of master of ceremonies for the evening as the head of the music club."
+    "As she looked up, I could tell she noticed me in the crowd,"
+    show Okisho happy
+    extend " and flashed me a quick smile."
+    "Just as fast, she turned her gaze back towards the crowd out in the auditorium as the curtain drew back behind her."
+    play music AgnusDeiX
+    "I was practically jolted out of my seat by the bellowing intro. The club wasted no time hitting the gas right out of the gate before the curtains were finished fully opening."
+    MCT "Sounds like we're off to the races already."
+    "The harmony of the chorus was seamless along with the timing of the instruments with this booming intro. I was pleasantly surprised I wouldn't have to just feign interest for Okisho's sake."
+    pause 5
+    scene black with fade
+    pause 5
+
+    scene Auditorium with fade
+    stop music fadeout 2.0
+    "The concert lasted a little over an hour, mixing a couple classical-sounding tunes with a lot of modern hits redone for an orchestra and squad of singers."
+    play music AngelsWeep
+    "Eventually came the finale, where the singers were really able to shine."
+    show Okisho neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "There were several other singers and an entire ensemble of musicians, but it was Alice and Okisho's powerful voices that were the focal point of the performance."
+    "Alice had a commandingly powerful soprano voice that rose above the rest of the ensemble, coming in crystal clear."
+    "Okisho in contrast sang the alto part, with her lower, more soulful tone in her voice that was just as powerful in its own right as well."
+    "Alternating between perfect harmony with each other into point and counterpoint melodies— they both stole the show."
+    "Though unbeknownst to most of the audience, the irony wasn't lost on me how the two could blend their voices so seamlessly, while the two themselves were like oil and water."
+    MCT "If one of them hit a sour note, the other wouldn't let them hear the end of it. Heh, maybe that's why they're both so locked in."
+    MCT "Two colossal talents to match two colossal waistlines. It's a shame they can't get along better cause they certainly make great music together."
+    pause 5
+    stop music fadeout 2.0
+    scene black with fade
+    pause .5
+
+    scene Auditorium with fade
+    play music Peaceful
+    "After the concert, I kinda milled around the auditorium for a bit as the relatively small crowd of student attendees filtered out of the place, while I waited on Okisho to come back out from behind the curtain."
+    "I figured with being the head of the music club Okisho might be stuck doing a debrief with the group, or maybe cleaning up some stuff— or whatever last minute organization stuff that might come up."
+    show WG neutral with dissolve
+    "I saw one wide figure, but not exactly the one I was looking for." 
+    "Knowing there's been a certain level of tension between us still, I thought this might be a good opportunity to break the ice with her again."
+    MC "Great job tonight, Alice." 
+    WG "Hm? {w}Oh, hello Keisuke."
+    WG "Thank you. I do take pride in my performance."
+    MC "Well, it's certainly deserved. I knew you were a singer, but I had no idea just how good you really were. You have quite the range. I was impressed."
+    show WG haughty
+    WG "I appreciate your compliments, but I wouldn't consider these songs as particularly challenging for my range. I'm honestly capable of much more."
+    MC "Ah, I see. Well, for what it's worth, I thought yours and Okisho's voice complemented each other really well. The contrast in ranges created a nice harmony."
+    show WG doubt 
+    WG "I suppose to the laity it was sufficiently executed, but I had personally wanted to take on some more challenging material."
+    show WG haughty
+    WG "That being said, I will admit Okisho's range is relatively rare and she does know how to use it effectively."
+    MCT "Alice giving Okisho a compliment? {w}Do pigs fly now?"
+    show WG doubt
+    WG "Though I wish she would at least attempt to tackle some more challenging material for us to put our vocal prowess to the test, rather than these training wheel exercises."
+    MCT "Ah, now we're back to reality."
+    MC "Still though, it was really good. The audience loved it."
+    show WG bored
+    WG "People may express their appreciation with applause, but they vote with their feet. Whatever was on offer tonight didn't drum up much interest."
+    "As much as I would have liked to object to her sentiment, I couldn't argue with her conclusion. Okisho was probably disappointed in the low attendance as well."
+    show WG sly
+    WG "Hopefully the next concert will show a better turn out..."
+    MCT "Why does she look so sinister when saying that?"
+    show WG haughty
+    WG "With all that said, your attendance tonight was appreciated, Keisuke. Have a good rest of your evening. I will see you in class."
+    MC "You're welcome. Later, Alice."
+    hide WG with dissolve
+    MCT "Well, at least I know she'll still talk to me. And she didn't lose her shit just by mentioning Okisho. {w}I guess I can call that progress."
+    pause 1
+    "I swaddled around a bit longer wondering if she might have left out some side door in the back of the auditorium, but I knew she saw me. Surely she wasn't trying duck me...{w} Right?"
+    MCT "Then again, if she was hungry, maybe she made a break for it once she could finally leave."
+    show Okisho neutral with dissolve
+    Okisho "You're still here?"
+    MC "Yup, just waiting around for someone who likes to take their sweet time."
+    show Okisho angry
+    Okisho "Well get the hell out of here! I can't close things up until everyone leaves."
+    pause .5
+    MC "Oh. Uhh... I guess I didn't think about that."
+    show Okisho laugh
+    Okisho "HAHA! {w}The look on your face! {w}So deflated! {w}Ohhh, you're too easy to tease, Kei."
+    show Okisho neutral
+    "Mentally I kicked myself for walking into such an obvious trap. You'd think I'd recognize her more playful verbal jabs, but she had a way of keeping me on the backfoot all the time."
+    MC "What can I say? I'm a sensitive soul."
+    Okisho "Oh certainly, a scholar and a poet I'm sure..."
+    MC "Hey I got the hair for it, that's a start."
+    Okisho "Do you realize you just called yourself a hermit?"
+    MC "Not true. I'll have you know I've been known to bathe{w}... On occasion."
+    Okisho "Oh wow. Don't put such high standards on yourself for my sake."
+    MC "I'm afraid it's too late. I've disavowed my hermit ways since there's no fat chicks in empty caves."
+    Okisho "Haha. Well, we all have to follow what inspires us, I suppose."
+    Okisho "But seriously, I can't close up until you leave, so let's get the hell out of here."
+    MC "Sounds like a plan."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.NIGHT)
+    scene Campus Center with fade
+    "Okisho hit the lights and we stepped out to enjoy the cooler summer night air."
+    show Okisho neutral with dissolve
+    Okisho "Ahh, that feels nice. I was baking under those stage lights."
+    MC "I bet."
+    MCT "Probably doesn't help that she's got all those layers of insulation."
+    show Okisho angry
+    Okisho "What do you mean \"I bet\"? {w}Are you saying that because I'm fat?"
+    MC "Nice try, but you already tricked me once today already."
+    show Okisho neutral
+    Okisho "Damnit. I got too greedy."
+    MC "And too fat, apparently."
+    show Okisho happy
+    Okisho "Hahaha! You're telling me. I felt like a trussed ham on stage packed into this dress."
+    MC "Well it looks nice on you."
+    show Okisho laugh
+    Okisho "Damn, coming from you I must look {i}really{/i} fat in this thing! Haha!"
+    show Okisho neutral
+    MC "I'm not going to confirm or deny that speculation."
+    MC "But I will say despite the distraction of that spectacle, I did manage to enjoy the music quite a bit. I thought the club put on a hell of a show."
+    Okisho "Yeah, you and the three other people that showed up."
+    MC "Oh, come on. It was more than that."
+    Okisho "I know. I mean, I didn't have huge expectations for attendance, since most students probably aren't that interested in other student clubs." 
+    Okisho "Personally, I'd rather play to a dozen people that are really into it than a crowd who doesn't give a shit, but I could tell the thin attendance was discouraging for a lot of the other club members."
+    MC "Well, I can definitely say the people that did attend seemed to be into it. I know Aida who sat next to me enjoyed it quite a bit."
+    Okisho "Who's she?"
+    MC "She's a classmate of mine in Tashi-sensei's homeroom."
+    Okisho "The one with really big boobs?"
+    MC "Uh, the pregnant one."
+    show Okisho surprised
+    Okisho "Ohhh, her. {w}Yeah... Gotcha."
+    pause .5
+    show Okisho neutral
+    "As brash as Okisho may be, even she was put on the backfoot once she realized she accidentally broached that subject."
+    Okisho "Yeah, well I'm glad people were into it. I made all the arrangements of those songs so that everyone could play their parts relatively easily."
+    MC "It didn't sound easy to me. I thought it was good."
+    Okisho "Well, easy for trained musicians, not so much for novices."
+    Okisho "As much as I like music, being the president of the music club can be a drain sometimes."
+    Okisho "The people that are really good with their instruments want more challenging material, while the students who only ever played their instruments in school keep telling me the stuff is too hard."
+    Okisho "I feel like I'm always caught in the middle and no one is ever happy."
+    MC "Especially a certain someone?"
+    show Okisho angry
+    Okisho "Yeah, especially {i}her{/i}."
+    show Okisho neutral
+    MC "Speaking of \"her who shall not be named\", I was pretty pretty blown away with how well she sang. {w}I mean, I know she said she was a singer, but I didn't realize she could sing like {i}that{/i}."
+    Okisho "Yeah, as much as I hate to admit it, she's a pro. Her range is crazy. She can comfortably hit an F6 consistently, which is {i}insane{/i}."
+    MC "...I'm not sure what that means."
+    Okisho "Don't worry about it, just know that it's super rare."
+    MC "Whatever it means, your voices seem to play off each other well."
+    Okisho "Our ranges are more or less exactly a half octave apart. They can blend pretty well because of that."
+    Okisho "Heh, honestly, if she wasn't such a bitch I'd want her in my band as another singer."
+    MC "I'm surprised to hear {i}you{/i} say that."
+    Okisho "Don't ever tell her this, since she already seems to take it to heart, but you can afford to be a bit of a dick if you're super talented at something. People will put up with it— but she's already pushing it as it is."
+    MCT "...I can't help but wonder if they would have hit it off better if they both hadn't been vying to be the president of the music club."
+    Okisho "But whatever. {w}She did her job. We all did. It's over now. On to the next gig."
+    pause .5
+    Okisho "Hey, give me a bit to run back to my dorm. I want to get out of this dress. Let's go into town and get something to eat."
+    MC "Yeah it is getting kinda late. I figured you might have already had some food stashed backstage to tide you over."
+    Okisho "Well, duh. {w}But it ran out. So here we are."
+    MC "That timeline tracks."
+    Okisho "Hehe. Shut up." 
+    show Okisho happy-2
+    extend " Wait up for me, okay?"
+    MC "No problem."
+    scene black with fade
+    pause .5
+    scene Bus Interior with fade
+    "It didn't take long at all for her to get back down, which honestly surprised me given how most girls would endlessly fuss with their makeup or hair, but Okisho was ready to go so we hopped on the bus headed to town." 
+    MC "I didn't get to mention it before, but you have a really nice singing voice."
+    show Okisho angry
+    Okisho "Does that mean you don't like my normal voice?"
+    MC "Did the ear plugs give it away?"
+    show Okisho laugh
+    Okisho "HAHA! Now you're catching on, Hotshot."
+    show Okisho happy
+    Okisho "...But let me check just in case."
+    show Okisho neutral
+    "Okisho put her hands on both sides of head and turned me towards her as she proceeded to run her fingers through my hair, giving me a devilish little grin in the process." 
+    "She gave me a little scratch on the head before tilting my head and pulling back some of the hair to check my ears."
+    Okisho "Nope, no ear plugs. You're a bad liar."
+    "She gave my hair a tussle before relinquishing control of my head back to me."
+    MC "Hey, I didn't lie. {w}They're natural ear plugs— from all the ear hair."
+    show Okisho surprised
+    Okisho "..."
+    Okisho "...Is that a thing?"
+    "I just stared at her with the most soberingly grim expression I could muster..."
+    show Okisho angry
+    extend " until I couldn't hold it anymore as a sly smile creeped across my face."
+    show Okisho angry
+    Okisho "Oh, fuck me! {w}You really got me that one."
+    show Okisho neutral
+    Okisho "{i}Ugghh!{/i} I can't {i}believe{/i} I fell for that!"
+    MC "And after you just got done telling me I'm a bad liar."
+    Okisho "Alright, alright. I guess that's what I get for trying to bust your balls all the time."
+    MCT "She's busting them more than she thinks with a body like that."
+    Okisho "I thought I was picking on an amateur, but I just got outplayed by a pro. Damn."
+    MC "Just because you fooled me a few times doesn't mean you clown me forever."
+    Okisho "HA! {w}We'll see about that!"
+    MC "Oh, is that so?"
+    Okisho "Yes. Totally so. You'll see."
+    scene Town Bus with fade
+    "Just as we were starting to wind each other back up again, the bus began to pull over towards the sidewalk as it slowed to a halt, letting out the pressure on the breaks, meaning we must have made it to the first bus stop in town."
+    show Okisho neutral with dissolve
+    Okisho "Alright! We made it. Let's go get some food."
+    "Okisho started scooting herself out of her seat before I could even get out of the way. Reasoning that I was about to get squashed flat by her big fat butt if I didn't make equal haste, I got up quickly myself."
+    show Okisho happy
+    Okisho "Faster faster! Hehe!"
+    "Okisho was gently pushing me from behind. It was quite playful but there was an undeniable sense of urgency to her pace as well."
+    scene Town
+    show Okisho neutral
+    with fade
+    MC "So where were you looking to go eat?"
+    Okisho "I don't know. I didn't have a plan."
+    MC "..."
+    Okisho "What? Don't look at me like that. {w}It's the town. There's all sorts of restaurants around here. You practically trip over them."
+    MC "Well, do you see any right here?"
+    Okisho "No."
+    MC "..."
+    show Okisho angry
+    Okisho "Shut up!"
+    MC "I didn't say anything..."
+    scene Town with fade
+    "Luckily we didn't have to go too far to find something. After just a couple of blocks the unmistakable odor of frying grease filled the air."
+    show Okisho surprised with vpunch
+    Okisho "!"
+    "Okisho's eyes lit up as the aroma hit her nostrils, and she wandered in the general direction where the smell began to get stronger."
+    MC "Hey, wait up!"
+    show Okisho neutral
+    "She was on the hunt. I felt like a farmer trying to keep up with a pig that found a truffle."
+    Okisho "{i}Yes!{/i} {w}See? I told you we'd find something!"
+    "Rounding the corner of the block, I could finally see the tempura shack that Okisho had caught wind of. It was a small curbside outlet, one of those street food style vendors rather than any sort of sitdown restaurant."
+    "Okisho rushed up to the window, causing the guy running the stall to look up from his phone. Judging by his bug-eyed expression he was quite surprised at her sheer size, but didn't show it in his tone."
+    "FryGuy" "Good evening. What can I help you with?"
+    Okisho "What do you got?"
+    "FryGuy" "Whatever you see on the menu, expect it to be tempura fried served in a small basket with a side of tentsuyu sauce."
+    Okisho "Gotcha. Sounds good. Give me that."
+    "FryGuy" "...Were you going to order something?"
+    MC "I think what she means is, she wants to try a bit of everything."
+    "FryGuy" "Oh, uh, you could get the Baketsu special. It's a big bucket of all our menu items fried up: lotus root, eggplant, asparagus, carrot, kabocha, sweet potato, shrimp, onion..."
+    show Okisho happy
+    Okisho "You had me at \"big bucket\"."
+    "FryGuy" "Okay, but it serves a family of four."
+    show Okisho happy-2
+    Okisho "Make it a family of six."
+    "The guy looked at her, then at me. Giving him a slight nod of reassurance, he then turned back at Okisho, seemingly sizing up just who was in front of him."
+    show Okisho neutral
+    "FryGuy" "Alright. Whatever, sure."
+    "FryGuy" "Just give me a bit, we do it all fresh here so it comes out hot."
+    pause 2
+    "It turned out to not take him too long to get the whole thing out to us. I assumed that most of the ingredients were ready to go, they just needed a minute or two in the deep fryer."
+    Okisho "Oh yeah, that's what I like to see."
+    "The vendor handed over what looked to be a four liter paper bucket overflowing with a smorgasbord of fried vegetables and shrimp. The white paper of the bucket was splotched all over with slightly more translucent grease spots."
+    "FryGuy" "Here's your sauce."
+    "Seeing that both of Okisho's hands were occupied with one holding the bucket and the other pulling out pieces to snatch down her gullet as fast as possible, he gave the cup with a sealed plastic lid on it to me."
+    "FryGuy" "Enjoy your evening."
+    MC "Thanks."
+    Okisho "Whangks! Om, ohm, {i}*munch*{/i}."
+    MC "Huh, well, would have been nice if there were some seats to sit down and eat."
+    Okisho "Eh, let's go to the park across the street here. They gotta have some benches."
+    MC "The park signs say it's closed after dark."
+    Okisho "All the better. I don't want to deal with anyone's shitty looks while I dig into this bucket of grease. I'm so fucking hungry, and I earned this tonight."
+    MC "Well, I can't argue with that."
+    scene Park
+    show Okisho neutral
+    with fade
+    "We did a short little walk across the street and into the park, all the while as Okisho was going to town on her mini mountain of fried grease, not even breaking her stride in the process."
+    "Part of me wondered if that was the most vegetables she had had in a while, judging by her propensity to indulge in junk food."
+    Okisho "Oh good. Here's a bench. Having to walk and eat is slowing down the eating part. I don't know about you but I'm parking my fatass right here."
+    play sound Boing
+    "Okisho fell back heavily into the bench, judging by how wide her eyes flashed and how much her body jiggled from the shockwave, it was a bit heavier of a drop than she had intended."
+    "Undeterred however, she kept shoving the random pieces of golden fried goodness into her fat cheeks. Hell, half the bucket was already gone by now."
+    MC "Is it good?"
+    Okisho "Oh, hell yeah. It's really hitting the spot."
+    MCT "As if I didn't already know the answer to the question."
+    MC "Looks kinda heavy, you sure you're not going to get a gut ache from all that grease?"
+    Okisho "Can't say that I do, but the fatter I get, the more I like fattening things... if that makes any sense."
+    MC "I mean that's just like basic math, right?"
+    show Okisho happy
+    Okisho "Exactly! It's gotta be heavy if it's going to fill up this heavy gut."
+    "Okisho gave her belly a couple of light slaps. It jiggled slightly, revealing that it was starting to fill up since it wasn't a completely loose jiggle like I expected."
+    "The look on her face was one of inviting, granting permission to touch. {w}And who was I to refuse the offer?"
+    show Okisho neutral
+    "I gave it a slight rub, a chub rub if you will, which sent a jiggle coursing through her abdomen and the pudge that pooled up around her skirt line on her sides."
+    Okisho "Oh! That's the spot. God, I feel like such a fat pig stuffing my face while I get a good gut rub."
+    MC "Is that a good thing, or a bad thing?"
+    Okisho "Dangerous more than anything. I'm going to get super fucking fat if this keeps happening, I know that much. But it makes the food feel all the better going down."
+    MC "Oh, speaking of that. Here's your sauce."
+    show Okisho surprised
+    Okisho "Oh! Gimmie!"
+    show Okisho neutral
+    "Okisho sat up to reach for the container as I popped the lid off, only to jostle it, causing it to splash some onto my pants while it sloshed over."
+    show Okisho surprised
+    Okisho "Oh shit! Sorry."
+    MC "Ah, it's okay. As long as you don't mind being seen with a guy that looks like he peed his pants."
+    Okisho "Oh, no no that won't do."
+    "Okisho rocked herself up out of her seat to take a look at the stain, her face staring right at my crotch."
+    MC "Uh, it's okay. I'll just put it in the wash."
+    show Okisho happy
+    Okisho "No, we gotta make sure it didn't soak through. Let me get a look here."
+    "Okisho pulled her head in even closer, proceeding to unfasten my belt."
+    MC "Uhh, what are you-"
+    show Okisho neutral
+    "Not stopping with my belt, she proceeded to unbutton my pants working her way down to the fly zipper."
+    MCT "Oh...{w}OHHH!"
+    show Okisho happy
+    Okisho "See? It's soaked into your briefs! I gotta make sure you get dried off."
+    "Noticing that she wasn't pulling out the napkins, I could only guess what she was going to use to lap up the sauce."
+    show Okisho neutral
+    "By this point my rod was about to poke through my underwear even if she wasn't in the process of pulling down the front of them."
+    MCT "Oh shit! She's gonna do it! Zero hesitation."
+    MCT "In the middle of a park of all places. This chick is crazy-"
+    "Park Staff" "Hey! Who's there?"
+    MCT "FUCK!"
+    hide Okisho with dissolve
+    "Without hesitation, the both of us tumbled around each side of the park bench into a bush behind it. Considering her size, Okisho could still move quick when she needed to."
+    "Park Staff" "Hmm... Thought someone was here."
+    "Shining a flashlight on the bench, the member of the park staff didn't detect anything, save an empty bucket left at the scene."
+    "Park Staff" "Ugh, just some garbage left over. People are pigs."
+    "Picking up the leftover trash, the park staff member seemed satisfied that no one else was around and left."
+    MC "That was close."
+    show Okisho neutral with dissolve
+    Okisho "Yeah, that could have been bad. I guess it is kinda late."
+    MC "Yeah, we should head back to the bus stop so we don't miss the last leg back to campus."
+    show Okisho surprised
+    Okisho "Oh shit, I forgot about that. We don't want to get stranded here. Let's go."
+    scene Bus Interior with fade
+    "Whatever this night was, it was certainly a wild ride."
+    show Okisho neutral with dissolve
+    "Sitting next to Okisho on the trip back, surprisingly she didn't have much to say about what just happened earlier. Or I guess, what {i}almost{/i} happened earlier."
+    "She just kinda leaned back in a sleepy stupor from a heavy dinner."
+    "Part of me wanted to press the issue. Maybe ask her how she was feeling. Truth be told, I was mostly hoping if I could get a rain check on the offer since we got interrupted."
+    "But the other part of me reasoned, if this chick is half as crazy as I've seen so far, I wouldn't have to wait that long for that rain check."
+    jump daymenu
+
+label WGB010:
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     centered "{size=+3}{outlinecolor=#00ff00}This marks the current end of Okisho's side route.{/outlinecolor}{/size}"

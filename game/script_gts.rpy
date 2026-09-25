@@ -17044,7 +17044,7 @@ label GTS059_NoGo:
     jump daymenu
 
 label GTS060:
-    $setProgress("GTS", "GTS062")
+    $setProgress("GTS", "GTS061")
     scene Roof with fade
     $setGTSOutfit(OutfitEnum.CASUAL)
     $setMCOutfit(OutfitEnum.CASUAL)
@@ -17269,7 +17269,307 @@ label GTS060:
     jump daymenu
 
 label GTS061:
-    jump GTS062
+    $setProgress("GTS", "GTS062")
+    scene Chukan Point
+    show GTS pondering at Position(ycenter=0.35)
+    with fade
+    play music Peaceful
+    GTS "Indeed?"
+    MC "Yeah. Tallest tower in the country. Just {i}imagine{/i} the view."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "I can imagine a fall from that height would smart something fierce. And after all, doubtless Mount Fuji would grant you a yet superior vantage point."
+    MC "Well yeah, but I could {i}walk{/i} up Mount Fuji just as I am now."
+    if checkSkill("Athletics", ">", 1):
+            GTS "I suppose you could."
+            MC "Anyway, what would {i}you{/i} do?"
+    else:
+            GTS "Could you, now?"
+            MC "I mean, I... uh..."
+            MC "I walk from campus to your dorm almost every day, that's gotta count for something."
+            GTS "Oh, that it does."
+            MC "{i}Anyway{/i}, uh... well, what would you do in that situation?"  
+    GTS "Hmm..."
+    GTS "Well, I am rather fortunate in that my hairstyle is a relatively simple one. Should it come to it, I believe I could cut it myself."
+    MC "True, true. Do note, however, that you're gonna be cutting the side... danglies..."
+    GTS "Tresses?"
+    MC "Yeah. Yeah, probably every two hours for those."
+    GTS "Well that shan't do at all. I know {i}you{/i} don't cut your hair that often."
+    MC "Right you are madame, and that's because I don't cut it period. You gotta embrace the ruggedly handsome caveman look, like I do."
+    show GTS unique
+    GTS "Yes, yes, that's the thing for me. What a figure I shall cut in deerhide and a reed cloak!"
+    MC "Oh, or if you didn't wanna cut it, maybe I could tie your hair around my neck and carry you around like a necklace."
+    show GTS pondering at Position(ycenter=0.35)
+    GTS "Hm..."
+    show GTS neutral at Position(ycenter=0.55)
+    GTS "I suppose you could, couldn't you?"
+    MC "...{w}Actually I take that back, it's a stupid idea, never work."
+    show GTS wink
+    GTS "Oh, we simply must test it first. Hold still, won't you my love?"
+    MC "Hey now!-"
+    "She raised her hand, wiggled her fingers, and I needed no more warning to spring from my seat."
+    "To the off-beat of Naomi's laughter, I sidestepped a couple more half-hearted grabs. And nevertheless, just barely."
+    show GTS sad at Position(ycenter=0.35)
+    GTS "Won't you please just allow me to make you into a necklace, Keisuke-kun? I just want to try you on..."
+    MC "You really don't want tha-whoah! I'm so last year!"
+    show GTS happy at Position(ycenter=0.55)
+    GTS "That's quite alright, vintage fashion suits me. Wouldn't you agree?"
+    "Then she was done with the game, as her thick, strong digits wrapped around my torso and conveyed the side of my head to her plush cheek."
+    show GTS unique-2
+    GTS "Mmm..."
+    MC "Comfy, Blossom?"
+    GTS "Quite. How well you remedy the autumn breeze..."
+    show GTS embarrassed
+    "Her hand twitched, and suddenly I was drifting back down to the bench."
+    GTS "Well, let us not forget ourselves."
+    MC "Right... okay."
+    show GTS neutral
+    "The sky was awake that day, blowing a curtain of cold red and orange embers down the yellowing plateau. And of course, wherever there were falling leaves, even on a windswept plateau on our cold, lonely island... there, too, were sightseers."
+    "Despite my wishes, I couldn't blame her."
+    "Naomi breathed in deep, creating a peculiar upward breeze, as she replaced a large piece of posterboard on her lap."
+    GTS "It brings to mind... standing on the other side of a veil, or a screen, beholding a familiar silhouette just near enough to touch... and yet..."
+    MC "...What does?"
+    "A few of said sightseers stopping a stone's throw before us were two ladies dressed for leisure, with a toddling boy in tow. The lad was picking up fallen maple seeds and cornelian berries."
+    GTS "The sun seems to hang low here in this season, when it {i}does{/i} show itself. The shadows are a little deeper, are they not? Even high noon is painted with a thin twilight."
+    MC "Ah, I see. The 'autumn dusk' means something a little different here, eh?"
+    GTS "So it does."
+    GTS "It rather accentuates how singular our country's artistic tradition is. Though today this land flies our flag, its symbolic language differs quite distinctly."
+    MC "You could say that, yeah."
+    MC "If you ask me, the truth beneath the limbolic sanguage is- oh my God."
+    show GTS unique-2
+    "Her hand flew to her mouth as her chest shuddered."
+    GTS "Do tell, my love."
+    MC "{i}Khm{/i}... I think the {i}sym{w}bol{w}ic {w}lan{w}guage{/i} is secondary to the emotional connections they represent."
+    MC "The symbols might change, but we don't."
+    show GTS neutral
+    GTS "Aptly put."
+    GTS "Now that I think of it, I wonder. What was autumn like in Shibuya?"
+    MC "Hm..."
+    MC "You know like just before the end of a fireworks show, where it's... still objectively loud, busy, flashy and obnoxious, but compared to what comes before and after, it {i}feels{/i} like a lull?"
+    show GTS happy
+    GTS "Hmhmhm, I see what you mean."
+    MC "Yeah, like that."
+    MC "I guess a lot of the like... nature stuff is pretty theoretical for me."
+    show GTS neutral
+    GTS "I could see why, I suppose."
+    show GTS wink
+    "Then Naomi's arm twitched as a wry smirk crossed her face."
+    GTS "{i}Ara ara{/i}! What seems to have possessed us so suddenly?"
+    MC "I... didn't do anything."
+    GTS "You may dispense with your coy circumlocutions, Hotsure no kimi. I-"
+    show GTS surprised
+    extend " Good gracious!"
+    "I craned my neck to look, and beheld the small boy I saw earlier climbing the back of Naomi's arm."
+    MC "What the-"
+    GTS "Young man, this shall not do! Please climb down off my arm at once!"
+    "Presently one of the women was beside me, consternated, hugging her quilted jacket to her thin frame."
+    Woman "Hiroto! Get... get off that lady! Quit monkeying around!"
+    "But Hiroto was unfazed, surmounting Naomi's elbow and shimmying up her humerus."
+    MC "Hey! You're gonna smash your melon, dude! Stop that!"
+    "But his melon was determined to overcome, his diminutive sneakers pawing into Naomi's skin as he tried to pull himself up on her sleeve."
+    "Naomi, for her part, was still as a statue, and whom I presumed to be his mom twitched as though she were watching from past a barbed wire fence."
+    MCT "Ah, hell."
+    menu:
+        "Pursue Hiroto":
+            $setFlag("GTS061_pursue")
+            "I peeled my sleeves back to my forearms and circled around behind Naomi."
+            MC "Pardon me, Blossom..."
+            show GTS sad at Position(ycenter=0.35)
+            GTS "Be careful!"
+            "I hugged the plush, untoned muscle of her forearm between my own, followed by my legs, and began to climb."
+            "With some effort I caught up with the small, uncoordinated child and reached my arms out to him, a little unstable."
+            MC "C'mon kid, I gotcha."
+            "Sparing me a glance over his shoulder, he started to turn towards me, whereupon the little bastard flung a fistful of crushed maple seeds and dogwood berries at my face."
+            if checkSkill("Athletics", ">", 6):
+                show GTS surprised at Position(ycenter=0.55)
+                "I turned my cheek and my whipping hair deflected the spray. I stretched out, blind, and caught his waist."
+                MC "Feisty today, aren't we?"
+                "He replied with soft, uncoordinated kicks against my chest as I fireman slid down Naomi's arm. I emerged from her shadow and let Hiroto down on the ground in front of his mother."
+                $setAffection("GTS", 1)
+                show GTS unique-2
+                "No sooner than his sneakers hit the ground did she snatch him up in both arms."
+                Woman "Oh my God, thaaank you so much, uh..."
+                MC "Hotsure, ma'am. Don't mention it."
+                show GTS neutral
+                Woman "Uggh, Hiroto, you {i}can't{/i} climb anything taller than you are, okay? {i}Especially{/i} not people. You're not getting any pistachio shaved ice tonight."
+                Woman "Now, say you're sorry to the lady."
+                "She put him out at arm's length facing Naomi. At length, he bowed his head in contrition."
+                GTS "Now, will you listen to what your parents tell you, Hiroto-kun?"
+                "Hiroto begrudgingly nodded."
+                show GTS happy
+                GTS "Splendid! Then I accept your apology. You are an honorable young man. That will serve you well."
+                Woman "Uh, sorry about my little goblin..."
+                show GTS neutral
+                GTS "Think nothing of it, madame. Boys will be boys, after all."
+                Woman "Tell me about it. Okay, we better head home..."
+                "Collecting her companion, the three made for town again, trailing noises of consternation like trainsmoke."
+                GTS "Thank you for that."
+                MC "Of course. Maybe it's a slight breach of etiquette, but we can't have him falling on his noggin."
+                show GTS surprised
+                GTS "Heaven forbid!"
+                show GTS neutral
+                jump GTS061_b
+            else:
+                show GTS surprised at Position(ycenter=0.55) with vpunch
+                MC "Akh!"
+                "The stinging flakes and juice shot down my throat; hacking, tears welling, I found myself belly up in the cold grass."
+                "I rolled onto my hands and knees, not really seeing anything but the color green."
+                MC "{i}Akhf{/i}... Just hold still, I, I gotcha..."
+                GTS "I've got him, madame. Come, I'll let him down for you."
+                "Footsteps flitted past me and I stood, wiped my eyes."
+                Woman "Hiroto, you {i}can't{/i} climb people without asking. You're not getting your pistachio shaved ice tonight, okay?"
+                Woman "Hey man, are you okay?"
+                MC "{i}Khm{/i}... Yep, I'm okay. Thank you."
+                show GTS neutral
+                MC "If you'll excuse me, though, I think I could use some water."
+                Woman "Fair enough. Sorry, he's a little goblin sometimes..."
+                "I promptly made for the river, and having washed down the seed flakes in the chilly flow I returned to see the visitors had gone."
+                jump GTS061_b
+            
+        "Coax Hiroto down":
+            $setFlag("GTS061_coax")
+            "Seeing appeals to authority or safety were finding no purchase with this animal, I circled around behind Naomi and tried a new tactic."
+            if checkSkill("Art", ">", 6):
+                MC "Hey. You heard about the Red Demon Sword of One Hundred Dragons Mountain?"
+                show GTS happy
+                "Hiroto paused. {w}Then, he turned his head and looked me in the eye."
+                MC "They say it was made out of the heart of a fiery volcano... by dinosaurs. You know about dinosaurs, Hiroto-san?"
+                "He nodded, sagely."
+                MC "Maybe I can tell you the secret of where to find the Sword... but only if you come here, so I can tell you secretly."
+                $setAffection("GTS", 2)
+                show GTS neutral
+                "As he weighed my offer, Naomi's hand crept up from behind and like a blossom in reverse, gently closed around him."
+                MCT "Oldest trick in the book."
+                GTS "I've got him, madame. Come, I'll let him down for you."
+                Woman "Oh God, thank you so much."
+                GTS "Of course."
+                Woman "What am I gonna do with you, kid? {i}Haaahn{/i}... I guess we'd better head home. Thanks guys, again, and sorry for the disruption."
+                MC "All's well that ends well. Have a good one."
+                "Nodding without looking at us, she collected her companion and headed back down the path, trailing noises of consternation like trainsmoke."
+                MC "And as mysteriously as he arrived..."
+                show GTS unique-2
+                GTS "Hmhmhm! Oh, I must tell Father and Mother about this."
+                MC "...Did I do something... bad?"
+                GTS "Far from it, my love! I don't believe I have ever been quite so proud of you as I am now."
+                "A warmth suddenly poured down my neck, into my thrumming chest."
+                MC "R-Really?"
+                show GTS happy
+                GTS "Your assessment of that child's character was so expertly done as I might expect from a blood relative. You are enchanting to behold."
+                MC "Kheh... I learned at the feet of the master."
+                show GTS neutral
+                GTS "Grammatically, the proper term would be 'mistress'."
+                MC "Sorry... mistress."
+                show GTS wink
+                GTS "There you are."
+                show GTS neutral
+                "Her eyes glided over our environs before returning to me."
+                GTS "However, please do remember to practice right speech."
+                GTS "There is occasional utility in omitting the truth, but deceit only serves to pollute human relations."
+                MC "In my defense, I don't know him and have basically zero pull in that situation."
+                GTS "Fair enough. Life seldom deals in easy choices."
+                jump GTS061_b
+            else:
+                MC "Hey, Hiroto-kun!"
+                "I held my fist out in front of me."
+                MC "You a fan of cookies? I got a freeesh baked cookie with your name on it."
+                "He turned his head only enough to flash a rebuking glare, and returned to climbing. Clambering atop Naomi's shoulder, his stubby legs teetered."
+                "His mother suddenly stood beside me in Naomi's shadow."
+                Woman "C'mon Hiro, I'm not asking again!"
+                show GTS sad at Position(ycenter=0.35)
+                GTS "Ow!..."
+                Woman "Hiro!"
+                "I winced a little, too, as he grabbed onto ropelike handfuls of her hair, suspended."
+                "And nearly as soon as he'd done it, five huge digits bloomed from within the black curtain and gently closed around him. His mother's breath caught."
+                show GTS neutral at Position(ycenter=0.55)
+                GTS "I have him, madame. Come, I'll let him down."
+                GTS "Do take care, he's kicking quite vigorously."
+                Woman "Ohhh my God, thank you, uh, madame."
+                Woman "Agh, stop with the- ugh, what am I gonna do with you, kid?"
+                Woman "Well, looks like we're going home now. Sorry to bother you guys."
+                MC "No problem. You two take care."
+                GTS "Yes, good evening."
+                "The harried three made for town, trailing noises of consternation, and the air around us was once more quiet."
+                "A cross breeze jostled my hair as the mottled sky cloaked the sun."
+                MC "Seems I have more to learn yet."
+                show GTS happy
+                GTS "Perhaps. Your fundamental idea, was, I think, the right one."
+                show GTS neutral
+                "Her eyes glided over our environs before returning to me."
+                GTS "However, please do remember to practice right speech."
+                GTS "There is occasional utility in omitting the truth, but deceit only serves to pollute human relations... as well as leave one vulnerable to misjudging the credulity of the other."
+                MC "Well maybe I should try another gig if I can't even fool a baby."
+                GTS "I do believe you've inched closer to enlightenment this day, Keisuke-kun."
+                jump GTS061_b
+
+label GTS061_b:
+    GTS "At any rate, I have gained some tremendously valuable information today."
+    MC "Oh? And what's that?"
+    show GTS wink
+    GTS "Why, how you handle children, of course."
+    MC "I gather you were waiting with bated breath to get that answer.{w} Did I pass?"
+    show GTS neutral
+    GTS "I should say so, not that I was about to discard you by the roadside had I been disappointed."
+    GTS "I scarce need tell you how much it means for me to be a mother some day."
+    MC "That's... about how I pegged you, if you don't mind my saying."
+    GTS "Not at all. In my desire to recreate the relationship I had with my own mother, I am sure I am quite unexceptional."
+    stop music fadeout 5.0
+    GTS "It is... more than that, though."
+    GTS "I have always thought of myself as something for which I can conjure no better term than 'a cultivator'."
+    "I nodded, thinking this accurate in the extreme. As she went on, it looked more like she was looking through me than at me."
+    play music GTS fadein 2.0
+    GTS "Beyond the literal, which in all fairness also applies, there is something about the idea of helping to shape someone into a better and happier version of themselves."
+    show GTS happy
+    GTS "My friends in school never ceased to groan on my behalf when I was obliged to look after Kazumi, but... really, little made me happier."
+    GTS "Even their society never did fill my heart quite like it did to see Kazumi change in my hands."
+    MC "That... is interesting. And that's what draws you to starting a family."
+    show GTS neutral
+    GTS "Most inconquerably."
+    "Her expression flickered, and then she locked eyes with me again."
+    GTS "Keisuke-kun, how do you feel about starting a family of our own?"
+    MC "...{w}Well...{w}I knew what sort of life you would want, and I've decided that's what I want, too."
+    show GTS embarrassed
+    pause 1
+    GTS "I really do not mean to put you on the back foot, and I know we are yet not wont to speak in such direct terms... {w}but that was not my question."
+    show GTS neutral
+    GTS "Imagine being a father. Imagine {i}raising{/i} children. What does that make you feel inside?"
+    GTS "Never mind if I am there or not."
+    MC "I dunno. Before I met you, I'd just never really thought about it."
+    MC "I mean up until my last year of high school I thought I wanted to be a race car driver. To be honest with you, I don't really have a plan for... anything."
+    MC "I guess that's part of the reason I'm so drawn to you. It's like the way a speeding train pulls the air and the smaller things along with it."
+    show GTS aroused
+    "She tensed a little, softly scratching her shiny pink nails down her blooming cheek while her eyes flitted across our surroundings."
+    GTS "That is..."
+    show GTS embarrassed
+    GTS "{i}Ahem{/i}..."
+    show GTS neutral
+    GTS "That is perfectly natural. I think it fair to say most people are not brought up with a particularly clear vision for their lives. Whether one is or is not, following a vision is ever more complex than one would anticipate."
+    pause 0.5
+    GTS "For my part, I don't know if I still can be a mother."
+    MC "Huh? What do you mean?"
+    GTS "Keisuke-kun..."
+    GTS "How am I to feed our baby?"
+    GTS "How am I to wash the grass stains off his hands and knees?"
+    GTS "How am I to let him in our bed when he has a bad dream?"
+    MC "Well... that's what you've got me for. I can still do all that stuff."
+    show GTS embarrassed
+    "She tried to give me a polite look."
+    GTS "Yes, you can."
+    show GTS sad at Position(ycenter=0.35)
+    GTS "But..."
+    GTS "If only you can touch him, does he really have a mother at all?"
+    MC "Well... like, you can still talk to them. That would still get you what you basically want, would it not?"
+    GTS "In the most basic sense, I suppose it would."
+    pause 1.0
+    show GTS neutral at Position(ycenter=0.55) with dissolve
+    GTS "Well, let's not dwell on things. This chapter shall not read itself."
+    MC "Oh? You're sure you don't want to talk about... that?"
+    GTS "I don't know what more there is to uncover. Frankly, I don't know if there {i}is{/i} anything. Do you?"
+    pause 2.0
+    GTS "I believe we left off on page 412."
+    MC "Right, yeah."
+    "I opened my book, turned it to the optimal angle for her."
+    MC "I love you, Nacchan."
+    GTS "I love you, too."
+    jump daymenu
 
 label GTS062:
     $setProgress("GTS", "GTS063")
