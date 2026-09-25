@@ -1707,7 +1707,7 @@ init 2 python:
 
 
     #Core
-    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 0,          "next": "GTS002", "preobsflags": [], "obsflags": ["testday"],       "conditions": []}
+    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 0,          "next": "GTS002", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 0,          "next": "GTS003", "preobsflags": [], "obsflags": [],       "conditions": []}
     eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,                     "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 0,              "next": "GTS004", "preobsflags": [], "obsflags": [],      "conditions": []}
     eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "display": "Naomi's Route", "type": EventTypeEnum.CORE,                         "location": "library",          "priority": PrioEnum.NONE, "sp":0,           "next": "GTS006","preobsflags": [], "obsflags": [],        "conditions": []}
