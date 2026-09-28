@@ -27128,7 +27128,6 @@ label RM007B:
     $setTime(TimeEnum.EVE)
     play music DayByDay
     scene Bus Interior with fade
-    $setRyokoOutfit(OutfitEnum.CASUAL)
     MC "Ugghhh..."
     MCT "Man, I'm tired. {w}It's been a long ass day."
     "The bus was just starting to pull up to the front of the school."
@@ -27592,7 +27591,7 @@ label RM007B:
     Ryoko "The suitcase is the only hero prop, so it stands out."
     MC "Props have ranks?"
     show Ryoko neutral
-    Ryoko " \"Hero prop\" just means it's used by the main character in the scene. Everything else in the background is \"gak\", which just means extra stuff in the background to make things look more busy, a bit more lived in."
+    Ryoko "\"Hero prop\" just means it's used by the main character in the scene. Everything else in the background is \"gak\", which just means extra stuff in the background to make things look more busy, a bit more lived in."
     MC "Gotcha."
     Ryoko "Makoto, Misao's character, was observing the owners of this suitcase in this scene, but later on is holding the suitcase in a scene that's meant to take place chronologically after that one."
     MC "I see. People don't tend to squeeze in breast reduction surgery on their way to the bus stop."
@@ -27619,7 +27618,7 @@ label RM007B:
     Ryoko "It sucks because Misao-chan loved this project so much. You could really feel it too in her performance. She didn't just give 100%%, she always aimed for more than that. Every scene, she just nailed it!"
     show Ryoko neutral-2
     Ryoko "I suspect that's why she asked for it to be recasted." 
-    MC "Seems a bit drastic, honestly" 
+    MC "Seems a bit drastic, honestly." 
     Ryoko "I thought so too. We were trying to examine different options before she resigned. My guess is she didn't feel like her efforts could give the project what she had wanted for it."
     MC "Even with reshoots?"
     Ryoko "I thought about it, but with her still growing that was going to be futile. I mean, you saw how far apart the timestamps were on those clips. It wasn't that long."
@@ -27759,7 +27758,7 @@ label RM007B:
         MC "What happened?"
         show Minori neutral
         UNKNOWN "Oh, apologies Tanaka-san. I didn't realize you were engaged in conversation with someone else."
-        Ryoko "No problem, this is Keisuke-Hotsure. He happened to stumble upon our set and was curious about the operation."
+        Ryoko "No problem, this is Keisuke Hotsure. He happened to stumble upon our set and was curious about the operation."
         show Ryoko happy
         Ryoko "This is my trusted assistant I was telling you about, Minori Tomoe."
         show Ryoko neutral
@@ -27901,7 +27900,7 @@ label RM007B:
     show Ryoko annoyed
     Ryoko "Oh, who could have imagined... except everyone."
     show Ryoko neutral-2
-    Minori "She tries to do her best but she doesn't feel her character and she would love to try a different role. She's just unable to muster enough courage to actually ask her... which only leads to more mood swings."
+    Minori "She tries to do her best but she doesn't feel her character and she would love to try a different role. She's just unable to muster enough courage to actually ask you... which only leads to more mood swings."
     Minori "That's why she told me about it, hoping to help out Hasegawa-san. She tries to do her best, but she's not feeling her character and would love to try another role."
     MC "Aren't actors supposed to act? Why can't she just act like she wants to play the part?"
     show Ryoko neutral
@@ -28013,10 +28012,11 @@ label RM007B:
     "Ryoko packed her stuff back up and pulled her phone out of the bag, giving it a few taps."
     show Ryoko neutral
     Ryoko "Misao? I know it's late, but do you have time by any chance?"
-    hide Ryoko with dissolve
+    hide Ryoko with easeoutleft
     "Ryoko started walking away as her phone conversation faded out of my range, but she seemed excited because she motioned to Minori to follow her."
     show Minori embarrassed
     Minori "Oh. Looks like we have a promising lead. I'll see you later, Hotsure-san."
+    hide Minori with easeoutright
     scene Dorm Entrance with fade
     if isEventCleared("GTS023"):
         MCT "Did I really just pitch to Ryoko an idea for making an expansion flick?"
