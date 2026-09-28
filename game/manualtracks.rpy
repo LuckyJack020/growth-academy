@@ -788,11 +788,11 @@ init python:
     ost.manualDefineList.append(theme_HlN)
 
     theme_GnG = ost.soundtrack(
-        name = "Enchanted Lands",
+        name = "Gnomes and Giants",
         path = "Audio/BGM/GnomesAndGiants.ogg",
         priority = 3,
         author = "Post-Bop",
-        description = "Gnomes and Giants Theme",
+        description = "GnG Event Theme",
         cover_art = False,
         unlocked = True
     )

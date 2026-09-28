@@ -211,7 +211,7 @@ label global000:
     BE "I-I thought, but I... Oh my god, it's been years!"
     MCT "There's that boyish grin I remember."
     "Honoka Inoue. My old childhood friend. The two of us were thick as thieves back in the day. When we weren't terrorizing Shibuya, we were spending our days chilling out in the countryside."
-    "Until one day, she was just gone. Moved over to an all-girls' school in Kanagawa. We never saw each other again."
+    "Until one day, she was just gone. Moved over to an all-girls' school in Kagoshima. We never saw each other again."
     BE "You dork! Why didn't you say anything the first time..."
     MC "What would be the chances?!"
     MCT "I mean, you look so different! You look..."
@@ -8516,6 +8516,7 @@ label MC010_BE:
     $setTime(TimeEnum.NIGHTLIGHTS) 
     scene Festival
     show BE neutral
+    show WmHairpinBE2
     with fade
     MC "What are you feeling?"
     BE "Uhh... hm. Good question."

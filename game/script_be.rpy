@@ -629,8 +629,8 @@ label BE004:
     $setProgress("BE", "BE006")
     scene Cafeteria with fade
     "To say I was still adjusting to this place would be an understatement, but whatever could be said about finding ourselves in this predicament that landed us all here, at least they fed us."
-    "Besides that, lunch hour was always a good break in the middle of the day. I for one was looking forward to digging into this katsu curry after finding a seat next to my original school lunch buddy from all those years ago."
     play music BE
+    "Besides that, lunch hour was always a good break in the middle of the day. I for one was looking forward to digging into this katsu curry after finding a seat next to my original school lunch buddy from all those years ago."
     show BE happy with dissolve
     "Putting my tray down, I glanced over to Honoka, who was comfortably seated way back in her chair  with a juicebox to her mouth and her legs crossed- as carefree as ever."
     show BE doubt
@@ -649,8 +649,8 @@ label BE004:
     BE "Baaah."
     hide BE with dissolve
     pause .5
-    show Minori neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
-    show Yuki neutral at Position(xcenter=0.35, yalign=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
+    show Minori neutral at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1) with dissolve
     "I chuckled to myself as my vision drifted over towards the other side of the cafeteria, where I saw two students in blazers and red armbands walk by, one chatting loudly at the other who nodded along patiently."
     "As she listened to the rapid fire of words from the smaller girl's mouth, the bespectacled girl jotted everything down on her clipboard with almost blinding speed."
     "I wasn't sure how she was able to keep up, because the chatty one of the two was going on and on at a pace that I found to be dizzily annoying after just listening for a few moments."
@@ -757,6 +757,8 @@ label BE004:
     MC "Alright, lead the way."
     show BE wink
     BE "What, so you can stare at my butt like the other girls?"
+    show BE happy
+    hide BE with moveoutleft
     "As she ran off at full speed."
     MC "No, so I can kick it!"
     "And I followed her closely behind."
@@ -2005,11 +2007,11 @@ label BE012_after:
     scene HallwayStairs with fade
     play music DifferentPaths
 
-    show AE neutral at Position(xcenter=1.25, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=1.45, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=1.45, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=1.25, yalign=1.0) with dissolve
 
-    show AE neutral at altMove(0.5, 0.85)
-    show BE neutral at altMove(0.5, 0.65)
+    show AE neutral at altMove(0.9, 0.85)
+    show BE neutral at altMove(0.9, 0.65)
     "Shori placed the last of her notes away in her binder and placed it under her arm as we made our way towards the cafeteria, her basketball sized cheeks wobbling as-."
     show BE happy
     BE "And no lagging behind Matsumoto-san, Kei-chan!"
@@ -2023,10 +2025,10 @@ label BE012_after:
     show BE happy at altMove(0.4, 0.15)
     show AE neutral at altMove(0.4, 0.45)
     "We walked side by side down the hallway with Shiori following behind instead, which proved no less distracting as Honoka's chest bounced subtly with each step out of the corner of my eye."    
-    show BE happy at altMove(0.3, -0.25)
-    show AE neutral at altMove(0.3, 0.15)
+    show BE happy at altMove(0.5, -0.25)
+    show AE neutral at altMove(0.5, 0.15)
     pause 0.5
-    show AE neutral at altMove(0.3, -0.25)
+    show AE neutral at altMove(0.5, -0.25)
     scene Cafeteria with fade
     show AE neutral at Position(xcenter=0.65, yalign=1.0) with dissolve
     show BE happy at Position(xcenter=0.35, yalign=1.0) with dissolve
@@ -2284,7 +2286,9 @@ label BE012_finale:
     AE "See you in class tomorrow."
     show BE surprised-2
     "With a smile, Shiori picked up her bowl and walked away, swinging her hips as she did."
-    show BE angry
+    show AE at Position(xcenter=0.65, yalign=1.0), Transform(xzoom=-1)
+    hide AE with moveoutright 
+    show BE angry at altMove(0.5, 0.5)
     BE "Wha- THAT LITTLE! How dare you secretly make me study in my free time!"
     MCT "Damn… she is good…"
     MCT "But I can't help but wonder how much of that was really just a ploy, and how much was more than that…"
@@ -2437,7 +2441,6 @@ label BE013:
     pause 1
     scene Arcade with fade
     show BE happy with dissolve
-    with fade
     play music MomentTime
     "As soon as the game began, I was doomed. Before I could even move my character, Honoka had leapt across the stage, performed a 14-hit combo on me, and removed a third of my health bar in one go."
     "From her side of the cabinet, I could hear the announcer cheering her on for her devastating attacks, while he berated me on my side."
