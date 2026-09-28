@@ -27124,6 +27124,913 @@ label RM007_Epilogue:
     MC "Seriously, now? {w}Whatever. I'm overdue for that sandwich." 
     jump daymenu
 
+label RM007B:
+    $setTime(TimeEnum.EVE)
+    play music DayByDay
+    scene Bus Interior with fade
+    $setRyokoOutfit(OutfitEnum.CASUAL)
+    MC "Ugghhh..."
+    MCT "Man, I'm tired. {w}It's been a long ass day."
+    "The bus was just starting to pull up to the front of the school."
+    "I had decided earlier to treat myself to a trip in town to hit up an arcade and grab a big ol' bowl of katsudon." 
+    "Though it was a much needed break to help blow off some steam after a disappointing day, the setting sun in the amber sky only further hammered home how much of the day had gotten away from me."
+    MCT "My brain's still hurting from Hageshi's class and that unexpected quiz he sprung on us at the end. {w}...I swear that guy enjoys torturing students."
+    MCT "Tashi-sensei wasn't much better. He gave us another paper to work on, this time about the early years of Asuka's period during the reign of Emperor Kinmei."
+    if getFlag("MC010GTS"):
+        "Don't ask me how I even managed to remember that. {w}But if I had to guess it might just be due to Naomi's tale she recited at the Blossom Festival, which was also about Kinmei."
+        MCT "Heh, that'd do it."
+        "I couldn't help but crack a smile at the thought of it all over again. She really put on an amazing performance."
+        "I guess I didn't mind it too much, but it still was kind of a bummer because we just finished one of his long form paper assignments earlier in the week."
+    else:
+        "Don't ask me how I even managed to remember that. It wouldn't even have been such a bummer if it wasn't for the fact we just finished one of his long form paper assignments." 
+    "Usually, that was supposed to mean at least {i}some{/i} kind of break from the next one."
+    MCT "No luck there either."
+    scene School Front with fade
+    "Walking back towards campus, my feet felt heavy due to my exhausted state."
+    MCT "Good thing I managed a few winks of rest during Tsubasa-sensei's class during one of his {i}riveting{/i} lectures, or else I might have fallen asleep on the bus."
+    MCT "I always thought it was weird how different he acts in class compared to when you talk to him in person outside of the classroom."
+    MCT "Like that time Daichi and I were talking to him about the Giant's Dorms. {w}He was sharp, focused, and excited to hear about our observations."
+    MCT "A stark contrast to class where the driest material imaginable is dripped out with a slow, flat inflection that lacks any sort of animation that fails to convince your ears you're not just listening to a recording."
+    MCT "I guess the guy's just bored... {w}Well, he can join the club then."
+    MCT "I mean, I'd probably get bored too if I had to repeat the same sentences for decades during lectures. {w}Maybe that's why?"
+    MCT "I suppose I should cut him some slack, but then again, Tashi and Hageshi-sensei seem to still have at least some spark for their subjects."
+    MCT "Either way, they're all still lightyears better than the one that teaches economics and civics. I hate that class and the stupid project that I haven't even started on." 
+    MCT "That teacher is easily the worst. Tsubasa-sensei may be boring, but at least he's not a total prick."
+
+    scene Campus Center with fade
+    "Still though, it hadn't been a bad day entirely."
+    if routelock == "AE":
+        "I worked on helping Shiori sort more papers for the council. It's a small thing, I don't feel like I do much, but she is quite insistent that it's helpful."
+    if routelock == "BE":
+        "I got to play a few levels of \"Raging Streets\" with Honoka back at her room. {w}We didn't get too far because we forgot to turn off player to player damage. Naturally, hilarity ensued after we started hitting each other on purpose."
+        "All the same though, because the game is like a thousand times more difficult with it on, so we weren't going to get that far anyway."
+    if routelock == "FMG":
+        "Akira talked me into an early morning run. She told me it was going to get the blood pumping, which I guess did help with the mental focus on the test later in the day, but it was an experience I hoped to never relive again."
+        "...At least until the next time she wants to hang out."
+    if routelock == "GTS":
+        if isEventCleared("GTS030"):
+            "Before the trip in town I made a point to swing by the Giant's Dorm to see Naomi. She still seems like she's getting adjusted to her new place and she seemed happy to have company."
+            "It gave me a little extra spring in my step knowing that a small little gesture like that made her smile."
+        else:
+            "Earlier in the morning I got to stop by the garden to help Naomi out with her plants. Something about getting your hands dirty and spending time outside helps reset oneself. No wonder Naomi always has that serene aura about her."
+    if routelock == "PRG":
+        "I got to talk with Aida earlier. Though things had certainly changed since our lives got turned upside down from... well {i}that{/i}, {w}it hadn't changed that I still liked taking every chance I could to hang out with her."
+        "She was going to be busy all afternoon with cooking club stuff, so I took it as an opportunity to go on this little urban excursion. {w}I suspected there would be some treats for me after the fact when I saw her next."
+    if routelock == "WG":
+        "Business was booming for Alice as the student population had started busting out of their seams. I was caught up on my deliveries, except a supply order Alice needed picked up in town."
+        "She told me there was no rush on it, but I decided to kill two birds in one stone to pick up the order and make an afternoon out of the trip." 
+        "I'm sure it would make Alice happy to know I was thinking of the business even on my time off."
+    else:
+        "I hung out with Tomo in her dorm. I was hoping I could coax her into doing a multiplayer game, but she wasn't interested." 
+        "So I ended up playing backseat driver while watching her repeatedly die on the same stage over and over again while playing Pickaxe Paladin. {w}Apparently I was \"bad luck\" and she kicked me out, but I got a chuckle out of it."
+
+    "But all that was done and now that I was back on campus I had to face the harsh reality: {w}I desperately need to start working on my homework."
+    "I was supposed to start working on it earlier but the procrastinator in me reasoned that I needed to do a grocery run... which turned into an arcade run... which turned into a ramen run..."
+    "Which left next to zero time for grocery shopping, but I managed to fill my backpack with a bunch of junk and some fruit that was jumbling around across my back in the most uncomfortable shapes imaginable."
+    MCT "One of these days I'm going to stop procrastinating so much— but that day is tomorrow."
+    "Luckily despite my procrastination the lengthening days of the season meant that it was still bright outside despite being late." 
+    "This made it easier to orientate myself around campus, but also odd to see no one else around the campus green despite it being practically broad daylight."
+    "Heading towards my dorm, I was hoping Daichi would be in the room, but I doubted it. I wanted to ask him about the trip to the hotel he was planning. We were supposed to talk about it soon."
+    if isEventCleared("RMG001") or isEventCleared("RMG002"):
+        "It's not like I was slacking off either, I had already helped Daichi with some of his \"gigs\."
+    "Lost in thought, my train of logic was suddenly derailed."
+    if getFlag("Meet_Ryoko"):
+        Ryoko "{i}CUT!!{/i}"
+    else:
+        UNKNOWN "{i}CUT!!{/i}"
+    "Jolting my head up straight from the sudden shout, I looked up and noticed a petite girl with long dark hair was sitting on a bench with a letter in her hand... who appeared to be wearing some kind of costume..."
+    MCT "That's odd." 
+    "Turning my head as I began to wonder just what the hell is going on here, I realized I was flanked by a group of students with video cameras and sound equipment..."
+    pause .5
+    MCT "Oh shit, this is a set for the film club."
+    Student1 "You're ruining the shot, dummy!"
+    "The petite girl's insulting interjection jarred me out of my malaise back into the present moment. Her dreamy puppydog eyes she had been playing up for the camera turned to an intense scowl that let me know for certain I was a bumbling idiot."
+
+    if getFlag("Meet_Ryoko") and isEventCleared("GTS023"):
+        MC "S-Sorry. I wasn't watchin-"
+        show Ryoko annoyed with dissolve
+        Ryoko "Apparently you can't tell time or know where you're going. Did you just forget? Or did you always intend on bailing on this project until now?"
+        MC "What? {w}Oh, shit. Yeah, I'm sorry, Ryoko. I forgot all about it. I've just been so busy. It's been test after test at this place."
+        Ryoko "Nothing anyone else here isn't also dealing with."
+        MC "This is true... {w}Look, I'm really sorry I ruined the shot. I got lost in my thoughts and I wasn't paying attention to where I was going."
+        MC "I'm sorry everyone, I know the setup on these things is a lot of work. I'll get out of the way so you can do your thing."
+        "Most of the crew just shrugged their shoulders and were cool about it, content to get back to work without any feathers ruffled."
+        "Though that couldn't be said about everyone."
+        show Ryoko surprised
+        Student1 "You'd better be a lot more sorry than that."
+        "The girl with dark hair and her wispy bangs (which I still couldn't tell if it was a wig or not), was clearly having none of it."
+        Student1 "Do you know how much time I had to spend in a makeup chair just to get ready for this?"
+        MCT "Could use a little more if I'm being honest."
+        show Ryoko neutral-2
+        Ryoko "It's okay, things like this happen. We've already over extended our shoot time for the day trying to finish this and it's super late anyway."
+        show Ryoko neutral
+        "{i}*CLAP*{i}"
+        Ryoko "Alright! That's a wrap people. Pack it in for the day."
+        "Ryoko pulled a key out of her pocket and tossed it to the guy holding the boom mic, who caught it mid air."
+        Ryoko "I'll see you all tomorrow after class."
+        "The crew all seemed content to shuffle off as they packed up their gear, but the short statured girl with the wispy banged suspiciously wigged hair was clearly not content with that agenda, judging by her cold, mildly intimidating stare."
+        show Ryoko annoyed
+        Student "I thought you said we were going to finish this take."
+        Ryoko "You'll get to finish it the next shoot."
+        Student1 "But it was supposed to be {i}this{/i} shoot."
+        Ryoko "Welcome to Murphy's law. Just come back tomorrow and do exactly what you just did. We've got it."
+        "The tiny ball of rage looked as if she was about to unload on Ryoko in a furious tirade, but she seemingly resigned herself not to as her shoulders relaxed lower and her glare turned more to a pout before turning away."
+        show Ryoko confused
+        "Ryoko for her part in response to the whole ordeal just rolled her eyes and shook her head."
+        show Ryoko neutral
+        Ryoko "Glad that's out of the way."
+        Ryoko "Shame you couldn't make it before. But don't worry too much about it. I know exactly what you mean when you say you were \"{i}sooo{/i} busy\"."
+        show Ryoko neutral-2
+        Ryoko "I'll let it slide."
+        MC "Oh, well... umm... ya know... I just got entangled in a lot of... stuff. Yeah... stuff... I-I just wasn't able to find time."
+        show Ryoko happy
+        Ryoko "I understand. I was just teasing you."
+        Ryoko "It's all cool. I appreciate your help from before. You and Yamazaki-san are always welcome on set." 
+
+    elif getFlag("Meet_Ryoko"):
+        MC "S-Sorry. I wasn't watchin-"
+        "Film Crew" "{i}Booo!{/i}"
+        "Film Crew" "Get out of the shot, loser."
+        show Ryoko annoyed with dissolve
+        UNKNOWN "Dammit, that was the take! What are you {i}doing{/i} here? Don't tell me you didn't see the camera crew and the lights?"
+        "Ryoko Tanaka, the president of the film club. I had met her before briefly, but we didn't know each other that well. Certainly not enough for her to cover for my ass in this situation."
+        MC "I know, I fucked up. My bad. I got lost in my thoughts and I wasn't paying attention to where I was going."
+        MC "I'm really sorry I ruined the shot, everyone. I know the setup on these things is a lot of work. I'll get out of the way so you can do your thing."
+        "Most of the crew just stared impatiently, but someone else had a bit more to say apparently."
+        show Ryoko surprised
+        Student1 "You'd better be a lot more sorry than that."
+        if routelock == "AE":
+            "Turning back towards the dark haired girl with the wispy bangs, I realized I had seen her before with Shiori. She must have been one of the student council members... and now was moonlighting as an actress apparently?"
+        else:
+            "The girl with dark hair and her wispy bangs (which I still couldn't tell if it was a wig or not), was clearly having none of it."
+        Student1 "Do you know how much time I had to spend in a makeup chair just to get ready for this?"
+        MCT "Could use a little more if I'm being honest."
+        "Film Crew" "You still need to move out of the shot, dumbass!"
+        MC "Right. Sorry. Moving along..."
+        "Film Crew" "About time!"
+        show Ryoko annoyed
+        Ryoko "Alright, give the guy a break. We've dealt with this kind of thing before. Stuff like this happens. Besides, we've already over extended our shoot time for the day trying to finish this and it's super late anyway."
+        "{i}*CLAP*{i}"
+        show Ryoko neutral
+        Ryoko "That's a wrap, people. Pack it in for the day."
+        "Ryoko pulled a key out of her pocket and tossed it to the guy holding the boom mic, who caught it mid air."
+        Ryoko "I'll see you all tomorrow after class."
+        "The crew all seemed content to shuffle off as they packed up their gear, but the short statured girl with the wispy banged suspiciously wigged hair was clearly not content with that agenda, judging by her cold, mildly intimidating stare."
+        show Ryoko annoyed
+        Student1 "I thought you said we were going to finish this take."
+        Ryoko "You'll get to finish it the next shoot."
+        Student1 "But it was supposed to be {i}this{/i} shoot."
+        Ryoko "Welcome to Murphy's law. Just come back tomorrow and do exactly what you just did. We've got it."
+        "The tiny ball of rage looked as if she was about to unload on Ryoko in a furious tirade, but she seemingly resigned herself not to as her shoulders relaxed lower and her glare turned more to a pout before turning away."
+        show Ryoko confused
+        "Ryoko for her part in response to the whole ordeal just rolled her eyes and shook her head."
+        show Ryoko neutral-2
+        Ryoko "Glad that's out of the way."
+        MC "Sorry again about the shot."
+        Ryoko "If you're that broken up about it, why don't you come help with setup tomorrow?"
+        MC "Yeah, just shoot me a time. I should be able to help for a bit. I do feel bad."
+        Ryoko "Works for me. I'll text you a time to show up."
+
+    else:
+        MC "S-Sorry. I wasn't watchin-"
+        "Film Crew" "{i}Booo!{/i}"
+        "Film Crew" "Get out of the shot, loser."
+        show Ryoko annoyed with dissolve
+        UNKNOWN "What the hell, man?" 
+        UNKNOWN "The red haired girl with the ponytail looked like she was the one calling the shots... literally since this was a film set."
+        MCT "She must be the director. {w}Or producer? {w}I'm not really sure how these things work..."
+        show Ryoko confused
+        UNKNOWN "Dammit, that was the take! {w}Who are you? Did you not see the cameras and the lights or what?"
+        "I firmly planted my right palm onto my forehead, if only to drive home the sheer stupidity of my actions to myself."
+        MC "I know, I fucked up. My bad. I got lost in my thoughts and I wasn't paying attention to where I was going. I've just been so preoccupied with stuff going. It's been test after test at this place, you know?"
+        show Ryoko annoyed
+        UNKNOWN "Nothing anyone else here isn't also dealing with."
+        MC "Sigh... You're right. That's the end of my excuses. Sorry I ruined the shot. I have to imagine the setup on these things is a lot of work."
+        "Most of the crew just stared impatiently, but someone else had a bit more to say apparently."
+        show Ryoko confused
+        Student1 "You'd better be a lot more sorry than that."
+        if routelock == "AE":
+            "Turning back towards the dark haired girl with the wispy bangs, I realized I had seen her before with Shiori. She must have been one of the student council members... and now was moonlighting as an actress apparently?"
+        else:
+            "The girl with dark hair and her wispy bangs (which I still couldn't tell if it was a wig or not), was clearly having none of it."
+        Student1 "Do you know how much time I had to spend in a makeup chair just to get ready for this?"
+        MCT "Could use a little more if I'm being honest."
+        "Film Crew" "You still need to move out of the shot, dumbass!"
+        MC "Right. Sorry. Moving along..."
+        "Film Crew" "About time!"
+        show Ryoko annoyed
+        UNKNOWN "Alright, give the guy a break. We've dealt with this kind of thing before. Stuff like this happens. Besides, we've already over extended our shoot time for the day trying to finish this and it's super late anyway."
+        "{i}*CLAP*{i}"
+        show Ryoko neutral
+        UNKNOWN "That's a wrap, people. Pack it in for the day."
+        "The red-haired girl with the ponytail pulled a key out of her pocket and tossed it to the guy holding the boom mic, who caught it mid air."
+        UNKNOWN "I'll see you all tomorrow after class."
+        "The crew all seemed content to shuffle off as they packed up their gear, but the short statured girl with the wispy banged suspiciously wigged hair was clearly not content with that agenda, judging by her cold, mildly intimidating stare."
+        show Ryoko annoyed
+        Student1 "I thought you said we were going to finish this take."
+        UNKNOWN "You'll get to finish it the next shoot."
+        Student1 "But it was supposed to be {i}this{/i} shoot."
+        UNKNOWN "Welcome to Murphy's law. Just come back tomorrow and do exactly what you just did. We've got it."
+        "The tiny ball of rage looked as if she was about to unload on Ryoko in a furious tirade, but she seemingly resigned herself not to as her shoulders relaxed lower and her glare turned more to a pout before turning away."
+        "The red haired girl for her part in response to the whole ordeal just rolled her eyes and shook her head."
+        show Ryoko confused
+        UNKNOWN "Glad that's out of the way."
+        MC "Sorry again about the shot."
+        show Ryoko neutral-2
+        UNKNOWN "Don't worry about it. It's not the worst interruption we've had on set before by far. I respect the fact you owned up to your mistake pretty quick, rather than shouting at us for taking up public space like a lot of people seem to do."
+        show Ryoko neutral
+        UNKNOWN "The name's Ryoko Tanaka. I'm the president of the film club. What's your name?"
+        MC "Keisuke Hotsure. Thanks for sparing me the wrath of your crew."
+        Ryoko "Eh, they're just cranky because we've been at it for hours. I should have cut them loose sooner, so it's partly my bad."
+        MC "So what's this for? A school project or just for fun?"
+        show Ryoko happy
+        Ryoko "Both, hehe."
+        show Ryoko confused
+        "Ryoko cut her laugh short, pausing to seemingly study me up and down."
+        Ryoko "...Haven't we met before? You look familiar."
+        MC "I was thinking the same thing."
+        "Mulling through my thoughts my gaze drifted slightly where my eyes noticed a girl wearing a shirt with a ribbon necktie bow."
+        MCT "! {w}That's it!"
+        MC "I just remembered. The bow."
+        Ryoko "What now?"
+        MC "The blue bow in your hair, you were wearing the blazer in the hallway. I stopped and asked you for directions a few weeks ago to Tsubasa-sensei's room."
+        show Ryoko surprised
+        "Ryoko's eyes widened, the switch flipping in her head too."
+        Ryoko "Oh yeah! You were with that annoying guy who jumped at me asking about the old man's classroom."
+        MC "Yeah that's the guy. He's my roommate."
+        show Ryoko annoyed
+        Ryoko "You have my sympathies."
+        MC "Eh, he's not that bad. A little eccentric, sure, but he's just not that great talking with people."
+        "Ryoko just kinda shrugged, not really buying into my defense of the guy. To be fair, he didn't make a good first impression on her, so I couldn't blame her."
+
+    show Ryoko neutral
+    "Seemingly having concluded our conversation, Ryoko shifted her attention to copying files onto her laptop from the digital camera she grabbed off the stand, which left me just standing there in an awkward silence."
+    stop music fadeout 1.0
+    pause 1
+    play music MomentTime
+    MCT "Should I just go? {w}I mean, I kinda want to, but it'd seem a bit rude at this point..."
+
+    if getFlag("Meet_Ryoko") and isEventCleared("GTS023"):
+        "Looking around, I recognised a few of the film club members that were busy dismantling the set."
+        "The camera on a tripod, a few lightning lamps, several shotgun microphones, a rack with costumes, a portable changing room, and some props lying around on the folding tables."
+        "Nothing terribly impressive if you didn't also consider the shoestring budget they were operating on. I guess they also had access to a green screen kit and some editing software, but I didn't know much about that." 
+        "For such limited resources, Ryoko seemed to find a way to get things done. She must have been doing a good job leading the thing because it was definitely one of the more active clubs on campus."
+        "Ryoko liked hosting screenings of movies which she called \"community cinema\" once a week. The screenings never failed to draw a crowd." 
+        "They had to be one of the better, if not {i}the{/i} best attended club activities on campus. After all, anyone could come, and she did a good job advertising each screening in both dorms."
+        "From what I hear Ryoko was trying to get the administration to extend them to twice a week, but to no avail so far." 
+        "Personally for my money I think two would be a bit much. I didn't need another excuse to procrastinate on my homework in the middle of the week."
+        if isEventCleared("WG011"):
+            "Especially if it just means more movies like \"Waiting for the Wrong Bus\" that I saw with Alice and Aida that one time." 
+            MCT "With any luck, my first time seeing that movie will also be my last time."
+            "Such a clichéd waste of film, but if I had to guess, even a film buff like Ryoko recognized you have to \"play the hits\" if you're going to drum up interest in the club."
+    elif getFlag("Meet_Ryoko"):
+        "Looking around, I watched a few of the film club members that were busy dismantling the set. It was a fairly elaborate setup for what I reckoned could only be run on a shoestring budget at best."
+        "There was a camera on a tripod, a few lightning lamps, several microphones mounted on a boom pole, a rack with costumes, a portable changing room, and some props lying around on the folding tables."
+        "Nothing fancy, but I suppose there's a reason for the saying \"art through adversity\". Judging by the setup, Tanaka-san seemed to run a tight ship."
+        MC "I'm impressed with how organized all of this is. Looks like you're making the most with what you got."
+        Ryoko "Heh. Thanks."
+        show Ryoko happy
+        "Ryoko smiled, I could tell her reaction was understated relative to how the complement was received."
+        Ryoko "We're trying our best. I think we're doing a good job."
+        MC "So, do you guys do a lot of filming?"
+        show Ryoko neutral
+        Ryoko "I guess it looks like that, but filming is only a small part of film making."
+        Ryoko "There's the set planning, filming schedule, casting, costumes, location scouting- not to mention the script."
+        MC "I suppose you gotta get permission from the school to shoot on campus too."
+        show Ryoko embarrassed
+        Ryoko "Yeah... I'm more of a \"shoot first, ask for permission later\" kind of director."
+        MC "Hehe."
+        show Ryoko neutral
+        Ryoko "Even after wrapping filming though, there's still all the post production work, mainly the editing."
+        MC "Sounds like it takes some time."
+        show Ryoko confused
+        Ryoko "Tell me about it."
+        show Ryoko neutral-2
+        Ryoko "But that's not the only thing the film club does. I don't know if you've heard about it, but we host open screenings of movies once a week as part of our community cinema viewings."
+        Ryoko "You should come, they're open to anyone, not just for members."
+        Ryoko "If you want more details, just check out the adverts. I post the info on the upcoming movies on the dorm lobby bulletin boards every week."
+        if isEventCleared("WG011"):
+            MC "I've been to one before, actually. I think the name of it was \"Waiting on the Wrong Bus\". It was some kind of rom com."
+            show Ryoko happy
+            "Ryoko nodded, knowingly."
+            Ryoko "I know it's cliché, but I do love that rom com."
+            MC "Well, I know someone who definitely agrees with you."
+            MCT "And someone who doesn't..."
+            show Ryoko neutral
+        else:
+            MC "Sounds cool. I'll keep it in mind."
+    else:
+        "Looking around the set, I watched a few of the film club members that were busy dismantling the set. It was a fairly elaborate setup for what I reckoned could only be run on a shoestring budget at best."
+        "There was a camera on a tripod, a few lightning lamps, several microphones mounted on a boom pole, a rack with costumes, a portable changing room, and some props lying around on the folding tables."
+        show Ryoko neutral-2
+        Ryoko "What do you think?"
+        "Ryoko must have noticed I was checking out the stage."
+        MC "It's interesting. I've only ever seen equipment like this on behind the scenes videos online, but never in person before."
+        Ryoko "Well, it's not much compared to a Hollywood movie set. We certainly aren't flush with cash, but my crew and I manage to figure out how to make it all work together."
+        Ryoko "After all, filmmaking is our passion, and storytelling is our art."
+        "I could tell she'd been waiting to deliver that line since she introduced herself."
+        show Ryoko neutral
+        Ryoko "Sure, we sometimes encounter little bumps that pop up on the road here and there... like a stray dog wandering on to the set in the middle of a shot."
+        show Ryoko happy
+        "Ryoko gave me a little wink following that example."
+        MC "Hey. I resemble that remark."
+        show Ryoko neutral-2
+        Ryoko "Eh, like I said, not our first time it's happened."
+        Ryoko "It's a process, like anything. With each project we work on, our skills improve. We're always learning new tricks to make the next project much smoother so we can expand our scope and up our production values."
+        MC "Seems like an elaborate crew. Is everyone here a member of the film club?"
+        "Ryoko shook her head."
+        Ryoko "No, the majority of them are, but not everyone." 
+        Ryoko "The club itself is mostly students interested in the process of film making, as opposed to the actors that we usually source from outside the club if we see someone who's a good fit for the script."
+        Ryoko "We wear a lot of hats. There's a lot of different aspects to filmmaking besides the filming you see here: planning, scriptwriting, creating sets, using equipment, special effects, post-production and so on..."
+        MC "Where did you get the costumes?"
+        show Ryoko happy
+        Ryoko "Glad you asked. Some are created by club members, while others we acquire through a deal our club sponsor has with a shop in town."
+        if routelock == "WG":
+            MCT "I wonder if Alice had considered this as an addressable market in her custom clothing business?"
+            $setAffection("WG", 1) 
+            extend " I'm sure she'll appreciate the tip if it gets her some extra orders."
+        show Ryoko neutral
+        MC "Seems like a big expense for this level of budget."
+        Ryoko "You're right. We manage to acquire some through rentals or second hand sales."
+        show Ryoko confused
+        Ryoko "The real problem is how much space they take up. We've already run out of space at the academy's storage room set aside for us. So a lot of the overflow ends up in my dorm."
+        show Ryoko happy
+        Ryoko "Luckily, my neighbor is nice and offered some of her space too."
+        show Ryoko neutral
+        Ryoko "I don't know if you've heard about it, but if you're interested, we host open screenings of movies once a week as part of our community cinema viewings."
+        Ryoko "You should come, they're open to anyone, not just for members."
+        Ryoko "If you want more details, just check out the adverts. I post the info on the upcoming movies on the dorm lobby bulletin boards every week."
+        if isEventCleared("WG011"):
+            MC "I've been to one before, actually. I think the name of it was \"Waiting on the Wrong Bus\". It was some kind of rom com."
+            show Ryoko happy
+            "Ryoko nodded, knowingly."
+            Ryoko "I know it's cliché, but I do love that rom com."
+            MC "Well, I know someone who definitely agrees with you."
+            MCT "And someone who doesn't..."
+            show Ryoko neutral
+        else:
+            MC "Sounds cool. I'll keep it in mind."
+
+    "Ryoko went back to messing with her camera and getting the shots uploaded on her computer. Not wanting to just bolt after our little chat I looked around at the set, noticing the so called \"actress\", the one with the wispy bangs."
+    MCT "Yup, she still looks mad."
+    "She was the next in line to walk into the portable changing room they had nearby out of the shot."
+    MC "Little miss drama over there, she wasn't the most polite, but I feel kinda bad for wrecking the shot. Think I should go apologize to her?"
+    "Ryoko for her part didn't even look up from her laptop."
+    Ryoko "I would advise against it. {w}Hasegawa-san tends to be... well, {i}unpredictable{/i} at the best of times. Talking to her would be just as likely to make things worse, I couldn't honestly tell you, but I wouldn't try either."
+    MC "Hm, good to know. Thanks for the tip."
+    MC "What exactly do you mean by \"unpredictable\" ?"
+    show Ryoko annoyed
+    Ryoko "Sigh... What you saw earlier was one of Izumi's classic mood swings. Perhaps unpredictable was a poor choice of words, given that their frequency almost makes them a certainty."
+    Ryoko "She's normally extremely excitable, but with that comes some downward swings. She might look frustrated now, but it's probably just another mood swing."
+    show Ryoko neutral-2
+    MC "Sounds like you've had to deal with a lot of drama on the set, and not just when the cameras are rolling."
+    Ryoko "Heh, tell me about it."
+    Ryoko "Anyway, if you still want to apologise to her, I'd say wait for another time when her mood swings back the other direction."
+    if routelock == "AE":
+        MCT "Now I remember her. I heard about those mood swings. Other council members gave her the nickname \"Firework Hasegawa\". She was probably on Daichi's board, but it didn't stick out at the time."
+    else:
+        MCT "Izumi Hasegawa... Sounds familiar, but I'm not sure. Maybe she was on Daichi's conspiracy board somewhere."
+    show Ryoko neutral
+    Ryoko "It might sound crazy, but her worst attribute is also her best asset. Her wide range of emotional expression, convincingly at that, makes her perfect for dramatic roles."
+    MC "Hmm, makes sense."
+    show Ryoko annoyed
+    Ryoko "The downside being, she can't control them, which definitely leads to a fair share of tension on set on the bad days. Unfortunately, this project already has enough troubles without her usual antics."
+    if isEventCleared("GTS023"):
+        show Ryoko neutral
+        MC "Is this the same project I helped out on a while back?"
+        Ryoko "Naw, it's a different one. New stuff in the works since then."
+        MC "Oh yeah? What's this one?"
+    else:
+        MC "Troubles? Something wrong with the production?"
+        Ryoko "You could say that."
+        MC "What's it called?"
+    show Ryoko neutral-2
+    Ryoko " \"The Art of Concession\", at least that's what I want to name this short film. I had the title in mind for a while now."
+    Ryoko "Ironically it's taken on its own meaning since the entire production has been a string of concessions away from the initial plans that we've had to adapt to on the fly."
+    MC "Flip the script, so to speak?"
+    show Ryoko annoyed
+    Ryoko "More like \"flip the table\" if I'm being honest." 
+    show Ryoko neutral-2
+    extend " I originally had a different actress tapped to play the lead role. We even recorded the majority of the scenes with her already. She was amazing to work with. I loved her performance too."
+    Ryoko "Misao-chan was absolutely exceptional- {i}magnifique{/i}, as they say in the parisian cinematheque."
+    MC "I'm guessing something came up then?"
+    show Ryoko confused
+    Ryoko "Sigh... It's complicated."
+    "The mere broaching of the subject seemed to have drained the lifeforce out of Ryoko, as she slumped over with a dour look on her face."
+    Ryoko "Misao's role had to be recast. She asked me to do it, I didn't want to, but I had to make the call."
+    Ryoko "Uggh, that one was a gut punch."
+    MC "Damn. What happened?"
+    show Ryoko neutral-2
+    Ryoko "Well, you know, unforeseen circumstances, that's just the harsh reality of having to work around all manner of people's schedules..."
+    "By this point, Ryoko seemed to be dancing around the subject and I realized a bit too late I probably shouldn't have pried."
+    show Ryoko confused
+    Ryoko "Honestly, I should have foreseen this as a potential problem. I mean, everyone here is going through this process, stuff like that is going to happen."
+    Ryoko "I can plan for a lot of things, but I don't even know how I'm supposed to work against limitations like that- or even my own problems!"
+    show Ryoko tongue
+    if not routelock == "GTS":
+        pause 1
+        MC "Huh?"
+        "By this point I was completely confused. Her increasingly distraught tone in our conversation had me thinking she was rather perturbed by recent events, only for her to punctuate it with a humorous gesture by sticking her tongue out at me."
+        MC "...I'm not sure I understand the metaphor."
+        show Ryoko confused
+        Ryoko "Oh."
+    pause 1.5
+    show Ryoko confused
+    "Ryoko took a breather for a second, rubbing her hands across her face to give herself a reset."
+    show Ryoko neutral
+    Ryoko "It's probably easier just to show it on the dailies."
+    "Ryoko pulled up her laptop again and started clicking around."
+    if not isEventCleared("GTS023"):
+        MC "Dailies? I'm not sure I follow."
+        Ryoko "Oh, yeah. Sorry, I spend most of my day surrounded by film nerds. \"Dailies\" are the raw footage shot during production. It's a term that goes back to the old days when movies were shot on film."
+        Ryoko "At the end of each day, the developed footage was synced to sound and printed on film in a batch so the director, actors, and film crew could see it the next day."
+        show Ryoko happy
+        Ryoko "Nowadays everything is digital so the dailies are available instantly and the review process isn't an overnight ordeal, but the term itself still stuck around."
+        MC "Ah, gotcha."
+    show Ryoko neutral
+    "Ryoko pulled up a video file. Going off the timestamp it would have been taken about two and a half weeks ago. It showed a good-looking petite girl I didn't recognize, but assumed was Misao."
+    "She had a light haircut with double buns, a thin waist and a generally \"flat\" body type, a sort of late bloomer that never really bloomed."
+    "She was standing near the academy gates at the bus stop with a silver suitcase in her hand, likely the same one I saw sitting out on the prop table earlier."
+    "Misao, or the character she played I guess, was waiting on a bench, impatiently twitching her leg like she was waiting for something."
+    show Ryoko neutral-2
+    Ryoko "There's that, and then there's this one from a few days ago."
+    "Ryoko clicked on the video, this time around the footage was taking place in a park-like area with a beautiful garden, with Misao's character leaning against a tree, observing three people standing in the park conspicuously talking with one another."
+    "Curiously, one of them was holding the silver suitcase instead."
+    if isEventCleared("RMG002"):
+        MCT "I recognise that spot. That's Chūkan Point, where Daichi and I went through to find Misuboro-san's workshop."
+    else:
+        MCT "I recognise that spot. That's Chūkan Point."
+    MCT "Come to think of it, that must have been the group we saw when we were passing through. Seemed weird at the time, but it's all coming together now."
+    "Looking at the footage though it couldn't have been the same take, but that wasn't the obvious difference."
+    "There was a big difference—two big differences to be exact— between the Misao in this version and the previous one."
+    "She had gone from being flat as a diving board to supplying her own set of pool floaties. Her new size was closer to Honoka when I met her fresh off the ferry... maybe even a little bigger."
+    MCT "{i}Damn{/i}. A late-late bloomer if there ever was one."
+    "Her new assets were... distracting, to put it mildly. Not just due to my particular fixation, but they really strained on her top, giggled with her every breath, and dominated her figure given the contrast to her thin waist."
+    "As much as a welcome sight it would be in any other context, it was inescapably jarring for what Ryoko was trying to convey with any sort of believable continuity."
+    MC "I see what you meant by \"unforeseen circumstances\"."
+    show Ryoko confused
+    Ryoko "Yeah, Misaso's growth factor kicked in and hit her {i}hard{/i}."
+    show Ryoko neutral
+    Ryoko "And it's not like we don't already work with people that have growth factors all the time, but this was our first project that really focused on a lead character. So we weren't really prepared for the impact it could have on production."
+    Ryoko "I'm not really sure what to do about it, since it could technically happen all over again."
+    MC "Yeah, that's quite the transition between scenes."
+    Ryoko "Besides her growth, did you notice anything else?"
+
+    if isEventCleared("GTS023"):
+        MC "You mean the \"continuity\"?"
+        show Ryoko happy
+        Ryoko "Hey, you remembered."
+        show Ryoko neutral
+    else:
+        MC "Well, looking at the two different clips, looks like Misao's outfit was meant to be the same, but in the recent one, it had obviously been replaced by a larger size since she wouldn't have been able to fit the original."
+        MC "The other thing I found odd was the prop, the silver suitcase. In the first scene she had it, in the second one, someone else had it. I suppose those would raise a few eyebrows without any further context between the two."
+        Ryoko "Correct, you see how these problems start to create a lack of continuity in the story."
+
+    MC "That location, I've been through there before. Seems like a cool place to shoot."
+    show Ryoko neutral-2
+    Ryoko "Chūkan Point? Yeah, I like that spot. It's my go to pick for sets. It looks nice, but it's also got this eerie vibe that makes it extra snazzy."
+    Ryoko "The suitcase is the only hero prop, so it stands out."
+    MC "Props have ranks?"
+    show Ryoko neutral
+    Ryoko " \"Hero prop\" just means it's used by the main character in the scene. Everything else in the background is \"gak\", which just means extra stuff in the background to make things look more busy, a bit more lived in."
+    MC "Gotcha."
+    Ryoko "Makoto, Misao's character, was observing the owners of this suitcase in this scene, but later on is holding the suitcase in a scene that's meant to take place chronologically after that one."
+    MC "I see. People don't tend to squeeze in breast reduction surgery on their way to the bus stop."
+    show Ryoko annoyed
+    Ryoko "Among a thousand other things, yes."
+    if getHighestAffection() == ("BE"):
+        show Ryoko confused
+        MC "Well, that's one massive plothole there then. {i}Two{/i} actually."
+        Ryoko "Ermm, yeah I guess."
+        "Sensing that she wasn't exactly comfortable with my more casual treatment of the subject matter that Honoka and I liked to go back and forth with, I decided to pivot the conversation slightly."
+    show Ryoko neutral
+    MC "Not that it magically solves the issues, but why not just shoot the scenes in order? Sorta try to lessen the \"continuity\" problem and maybe add the growth progression into some kind of subplot."
+    Ryoko "Film isn't done like a stageplay. Remember when I said planning was one of the big parts of filmmaking? The idea is to plan the location of shooting in the optimal order to minimize time and resources."
+    Ryoko "An optimum filming schedule is completely unrelated to the story's timeline."
+    Ryoko "But perhaps we might need to factor that into the planning. I hate to think about it though because we're already running on a shoestring budget and nothing but volunteer time. I'm not sure where else I can squeeze any more."
+
+    MC "You seem pretty resourceful, I'm sure you'll figure something out."
+    show Ryoko happy
+    Ryoko "Thanks."
+    show Ryoko neutral 
+    extend " Yeah, you're probably right. It's just really disheartening after putting in all that work. Not just from me and the crew but for her too." 
+    show Ryoko surprised
+    Ryoko "The poor girl felt so bad that her growth was holding her back and that she let us down that she resigned from the club because of it."
+    Ryoko "It sucks because Misao-chan loved this project so much. You could really feel it too in her performance. She didn't just give 100%%, she always aimed for more than that. Every scene, she just nailed it!"
+    show Ryoko neutral-2
+    Ryoko "I suspect that's why she asked for it to be recasted." 
+    MC "Seems a bit drastic, honestly" 
+    Ryoko "I thought so too. We were trying to examine different options before she resigned. My guess is she didn't feel like her efforts could give the project what she had wanted for it."
+    MC "Even with reshoots?"
+    Ryoko "I thought about it, but with her still growing that was going to be futile. I mean, you saw how far apart the timestamps were on those clips. It wasn't that long."
+    MC "True, it came across as some kind of mid-scene costume change."
+    show Ryoko annoyed
+    Ryoko "We even tried playing around with the green screen to edit out her bust digitally with having Misao wear a green suit, but the results turned out worse than we expected, and we didn't have high hopes to begin with."
+    show Ryoko confused
+    Ryoko "It just sucks. It doesn't feel fair to Misao-chan. That's what burns me up the most."
+    Ryoko "She never asked for this..."
+    show Ryoko tongue
+    Ryoko "None of us here asked for this."
+    if not routelock == "GTS":
+        MCT "Am I not picking up something? Is that like some kind of tick she has with her tongue...?"
+    show Ryoko neutral
+    "Student2" "We got it all packed up, we're ready to head back in. Did you finish uploading the files from the camera?"
+    Ryoko "Yeah, give me a sec."
+    "Ryoko pulled out the cable connecting the two from the laptop and hand the camera over to who I assumed was her production assistant, or something like that. She closed up the laptop and shoved it into her bag."
+    "Based on what she had said earlier, she seemed like the kind to take her work back home with her."
+    "Student2" "Later."
+    Ryoko "Later. See you tomorrow."
+    "The rest of her crew filtered out, some going back to the academy, the rest filtering out back to the dorms."
+    if isEventCleared("GTS015") and routelock == "AE":
+        "I flicked away some stray bangs that were really messing with my eye. It's not like I had it that bad, but even I got annoyed with this shit."
+        MC "That sucks. I can't imagine pouring your heart and soul into something just to have it undone by these things, but like you said, we're all going through it."
+        "I said that, but I still wasn't quite sure exactly what her growth was, but I didn't want to pry either."
+        Ryoko "Minori tried to help me find an actress with the potential to take on the role and fill her shoes."
+        show Ryoko annoyed
+        "Ryoko looked up, tilting her head towards Haesegawa-san that had just left the changing room, red sash and all across her shoulder, confirming she was part of the student council where had likely seen her before."
+        show Ryoko neutral
+        Ryoko "Minori explained to me about Hasegawa-san's mood swings and her dreams of becoming an idol. She did well in the audition, so I thought Minori was exaggerating."
+        Ryoko "If anything, I thought I could help mold her as a director to better harness her emotional energy... but she's mostly just managed to drain mine instead."
+        "Ryoko looked up, raising an eyebrow from what she saw, causing me to look back over my shoulder."
+        Ryoko "Speaking of Minori..."
+        "Rushing up to us with what appeared to be urgent news, Minori sounded a little short on breath, suggesting quite a bit of distance covered before coming here, trusty clipboard in hand."
+        MCT "She must work with the council to arrange for setting up around campus. Did something come up?"
+        show Ryoko neutral at altMove(0.5, 0.25)
+        show Minori embarrassed at Position(xcenter=0.75, yalign=1.0) with dissolve
+        Minori "Whew... hu... Tanaka-san... Apologies for getting here so late. There had been a quarrel between the soccer club and track team. They called upon the council to mediate."
+        MC "What happened?"
+        show Ryoko surprised
+        show Minori neutral
+        Minori "The track and soccer field are near each other and they both had their club meeting at the same time. Apparently the captain of the soccer club kicked the ball so hard that it hit one of the guys from the track team who fell to the ground from the impact."
+        Minori "She said it was an accident, but some members of the track team accused her of doing it on purpose... A shouting match ensued...{w}And after that, others began to jump in and... it turned into quite the disaster."
+        show Ryoko neutral
+        Minori "Unfortunately it took longer than expected to resolve, but we managed to get it sorted out."
+        MCT "I wonder if Shiori was involved, or if she dispatched Minori and others to deal with it. I'll have to ask her about it later."
+    elif isEventCleared("GTS015"):
+        "I flicked away some stray bangs that were really messing with my eye. It's not like I had it that bad, but even I got annoyed with this shit."
+        MC "That sucks. I can't imagine pouring your heart and soul into something just to have it undone by these things, but like you said, we're all going through it."
+        "I said that, but I still wasn't quite sure exactly what her growth was, but I didn't want to pry either."
+        Ryoko "Minori tried to help me find an actress with the potential to take on the role and fill her shoes."
+        show Ryoko annoyed
+        "Ryoko looked up, tilting her head towards Haesegawa-san that had just left the changing room, red sash and all across her shoulder, confirming she was part of the student council where had likely seen her before."
+        show Ryoko neutral
+        Ryoko "Minori explained to me about Hasegawa-san's mood swings and her dreams of becoming an idol. She did well in the audition, so I thought Minori was exaggerating."
+        Ryoko "If anything, I thought I could help mold her as a director to better harness her emotional energy... but she's mostly just managed to drain mine instead."
+        "Ryoko looked up, raising an eyebrow from what she saw, causing me to look back over my shoulder."
+        Ryoko "Speaking of Minori..."
+        "Rushing up to us with what appeared to be urgent news, Minori sounded a little short on breath, suggesting quite a bit of distance covered before coming here, trusty clipboard in hand." 
+        show Ryoko neutral at altMove(0.5, 0.25)
+        show Minori embarrassed at Position(xcenter=0.75, yalign=1.0) with dissolve
+        Minori "Whew... hu... Tanaka-san... Apologies for getting here so late. There had been a quarrel between the soccer club and track team. They called upon the council to mediate."
+        MC "What happened?"
+        show Ryoko surprised
+        show Minori neutral
+        Minori "The track and soccer field are near each other and they both had their club meeting at the same time. Apparently the captain of the soccer club kicked the ball so hard that it hit one of the guys from the track team who fell to the ground from the impact."
+        Minori "She said it was an accident, but some members of the track team accused her of doing it on purpose... A shouting match ensued...{w}And after that, others began to jump in and... it turned into quite the disaster."
+        show Ryoko neutral
+        Minori "Unfortunately it took longer than expected to resolve, but we managed to get it sorted out."
+
+    elif routelock == "AE":
+        "I flicked away some stray bangs that were really messing with my eye. It's not like I had it that bad, but even I got annoyed with this shit."
+        MC "That sucks. I can't imagine pouring your heart and soul into something just to have it undone by these things, but like you said, we're all going through it."
+        "I said that, but I still wasn't quite sure exactly what her growth was, but I didn't want to pry either."
+        Ryoko "Minori tried to help me find an actress with the potential to take on the role and fill her shoes."
+        MCT "Huh. Didn't realize she knew Minori."
+        show Ryoko annoyed
+        "Ryoko looked up, tilting her head towards Haesegawa-san that had just left the changing room, red sash and all across her shoulder, confirming she was part of the student council where had likely seen her before."
+        show Ryoko neutral
+        Ryoko "Minori explained to me about Hasegawa-san's mood swings and her dreams of becoming an idol. She did well in the audition, so I thought Minori was exaggerating."
+        Ryoko "If anything, I thought I could help mold her as a director to better harness her emotional energy... but she's mostly just managed to drain mine instead."
+        "Ryoko looked up, raising an eyebrow from what she saw, causing me to look back over my shoulder."
+        Ryoko "Speaking of Minori..."
+        MCT "I would have thought Minori would have been busy enough with the student council. Apparently, production assistant duties occupied extra space on that clipboard as well."
+        "Rushing up to us with what appeared to be urgent news, Minori sounded a little short on breath, suggesting quite a bit of distance covered before coming here, trusty clipboard in hand."
+        show Ryoko neutral at altMove(0.5, 0.25)
+        show Minori embarrassed at Position(xcenter=0.75, yalign=1.0) with dissolve
+        Minori "Whew... hu... Tanaka-san... Apologies for getting here so late. There had been a quarrel between the soccer club and track team. They called upon the council to mediate."
+        MC "Yo Minori!"
+        show Minori neutral
+        Minori "Hotsure-san, what are you doing here?"
+        show Ryoko confused
+        Ryoko "You two know each other?"
+        show Minori happy
+        MC "Yup. We both know Matsumoto-san."
+        show Ryoko embarrassed
+        show Minori neutral
+        Ryoko "Ah, I see. Small world."
+        show Ryoko neutral
+        MC "So Minori is like your assistant then?"
+        Minori "Yes, you've inferred correctly, Hotsure-san."
+        MCT "I suppose that would give more context as to how she got the casting recommendation."
+        show Ryoko happy
+        show Minori happy
+        Ryoko "Minori provides invaluable help to me and the film club. Helps keep me organized and things running smoothly so I can focus on filmmaking instead of schedules."
+        "Ryoko gave Minori's clipboard a couple of playful flicks, directing attention to where their scheduling resided."
+        show Ryoko neutral
+        show Minori embarrassed
+        Minori "Ryoko-san is just exaggerating. No need for flattery."
+        MC "I'm sure you're doing a bang-up job. {w}So what happened with the soccer club and track team?"
+        show Minori neutral
+        Minori "Oh, right."
+        show Ryoko surprised
+        Minori "The track and soccer field are near each other and they both had their club meeting at the same time. Apparently the captain of the soccer club kicked the ball so hard that it hit one of the guys from the track team who fell to the ground from the impact."
+        Minori "She said it was an accident, but some members of the track team accused her of doing it on purpose... A shouting match ensued...{w}And after that, others began to jump in and... it turned into quite the disaster."
+        show Ryoko neutral
+        Minori "Unfortunately it took longer than expected to resolve, but we managed to get it sorted out."
+        MCT "I wonder if Shiori was involved, or if she dispatched Minori and others to deal with it. I'll have to ask her about it later."
+    else:
+        "I flicked away some stray bangs that were really messing with my eye. It's not like I had it that bad, but even I got annoyed with this shit."
+        MC "That sucks. I can't imagine pouring your heart and soul into something just to have it undone by these things, but like you said, we're all going through it."
+        "I said that, but I still wasn't quite sure exactly what her growth was, but I didn't want to pry either."
+        Ryoko "My assistant tried to help me find an actress with the potential to take on the role and fill her shoes."
+        show Ryoko annoyed
+        "Ryoko looked up, tilting her head towards Haesegawa-san that had just left the changing room, red sash and all across her shoulder, confirming she was part of the student council where had likely seen her before."
+        show Ryoko neutral
+        Ryoko "My assistant explained to me about Hasegawa-san's mood swings and her dreams of becoming an idol. She did well in the audition, so I thought it was just an exaggeration."
+        Ryoko "If anything, I thought I could help mold her as a director to better harness her emotional energy... but she's mostly just managed to drain mine instead."
+        "Ryoko looked up, raising an eyebrow from what she saw, causing me to look back over my shoulder."
+        Ryoko "Speaking of my assistant..."
+        "Rushing up to us with what appeared to be urgent news, a girl with short light brown hair and long skirt was rushing towards us, clutching a clipboard tightly to her chest." 
+        "She sounded a little short on breath, suggesting quite a bit of distance covered before coming here."
+        show Ryoko neutral at altMove(0.5, 0.25)
+        show Minori embarrassed at Position(xcenter=0.75, yalign=1.0) with dissolve
+        MCT "That red sash... This person must be one of the council members."
+        UNKNOWN "Whew... hu... Tanaka-san... Apologies for getting here so late. There had been a quarrel between the soccer club and track team. They called upon the council to mediate."
+        MC "What happened?"
+        show Minori neutral
+        UNKNOWN "Oh, apologies Tanaka-san. I didn't realize you were engaged in conversation with someone else."
+        Ryoko "No problem, this is Keisuke-Hotsure. He happened to stumble upon our set and was curious about the operation."
+        show Ryoko happy
+        Ryoko "This is my trusted assistant I was telling you about, Minori Tomoe."
+        show Ryoko neutral
+        show Minori happy
+        MC "Nice to meet you, Minori."
+        Minori "You as well, Hotsure-san. We haven't met, but I have heard your name mentioned before by our mutual acquaintance, Matsumoto-san." 
+        show Ryoko happy
+        Ryoko "Minori provides invaluable help to me and the film club. Helps keep me organized and things running smoothly so I can focus on filmmaking instead of schedules."
+        "Ryoko gave Minori's clipboard a couple of playful flicks, directing attention to where their scheduling resided."
+        show Minori embarrassed
+        Minori "Ryoko-san is just exaggerating. No need for flattery."
+        show Ryoko neutral
+        MC "I'm sure you're doing a bang-up job. {w}So what happened with the soccer club and track team?"
+        show Minori neutral
+        Minori "Oh, right."
+        Minori "The track and soccer field are near each other and they both had their club meeting at the same time." 
+        show Ryoko surprised
+        Minori "Apparently the captain of the soccer club kicked the ball so hard that it hit one of the guys from the track team who fell to the ground from the impact."
+        Minori "She said it was an accident, but some members of the track team accused her of doing it on purpose... A shouting match ensued...{w}And after that, others began to jump in and... it turned into quite the disaster."
+        show Ryoko neutral
+        Minori "Unfortunately it took longer than expected to resolve, but we managed to get it sorted out."
+        MCT "I wonder if Honoka would know the juicy details from her friends in the soccer club. I'll have to ask her next time I see her."
+
+    stop music fadeout 1.0
+    pause 1
+    play music Sunset
+    Minori "Are you going back to the dorms?"
+    "Ryoko nodded."
+    Ryoko "Yup, we got everything."
+    show Ryoko neutral-2
+    Ryoko "You coming with us?"
+    MC "Sure, I was headed to the dorms anyway before I got lost."
+    "Three of us set off walking, not in any particular hurry."
+    show Ryoko embarrassed
+    Ryoko "Were you able to speak to the council president about that other thing, Minori?"
+    "Ryoko put on her best pouty pleading face when forcing the question."
+    MCT "She should probably stick to letting others do the acting..."
+    Minori "Are you referring to the quarry thing?"
+    Ryoko "Yes! Very much the quarry thing."
+    "Ryoko nodded eagerly, seemingly hoping to will a positive answer out of Minori."
+    show Ryoko confused
+    show Minori sad
+    Minori "Sigh... I hate to be the bearer of bad news, but there's been nothing new on that end."
+    show Ryoko annoyed
+    show Minori neutral
+    Ryoko "{i}Euggh!{/i} So frustrating."
+    "Ryoko slumped over, the wrong response clearly knocking the wind out of her sails."
+    MC "Hey, sometimes no news is good news."
+    show Ryoko confused
+    Ryoko "It doesn't sound like good news."
+    MC "But it's not \"no\". So at least you got that."
+    Minori "Hotsure-san has the right perspective. If it were a flat out no, she'd have just said no already."
+    Minori "She would prefer to meet with you about the matter in person."
+    show Ryoko surprised
+    Ryoko "{i}Ahh!{/i} That's even worse! {w}I bet she just wants to meet with me so she can say no, but with extra words. You know how these bureaucratic suit types work!"
+    show Minori sad
+    Minori "I don't know what else can be done about the situation until you try to meet with her."
+    show Ryoko annoyed
+    Ryoko "Ugh! Whatever. In the end everything depends on the call of that proctor guy from the Giant's Dorms."
+    show Minori neutral
+    if isEventCleared("GTS030"):
+        MC "What \"proctor guy\"?"
+    else:
+        "My ears perked up at the mention of the Giant's Dorms, realizing I might have just stumbled into a lead on our investigation."
+        MC "Did you just say something about the Giant's Dorms?"
+    Ryoko "We've been trying to get approval to film in the quarry inside."
+    Minori "Unfortunately it hasn't been going so well." 
+    show Ryoko neutral-2
+    Ryoko "Usually the administration makes approval of the sets after we submit a date and time. Well, at least the ones I bother to ask..."
+    show Minori embarrassed
+    Minori "I told you you're supposed to submit {i}all{/i} of them."
+    show Ryoko happy
+    show Minori neutral
+    Ryoko "Oh, no one cares if I use the campus green or Chūkan Point- or any other place when no one is around!" 
+    show Ryoko annoyed
+    extend " But I know for sure they'd throw a fit if we just started poking around the quarry without asking."
+    MC "Yeah they seem picky about who they give access to that place."
+    show Ryoko annoyed
+    Ryoko "Tell me about it."
+    Ryoko "I tried going through the usual channels but this time around they told me to contact a local proctor who resides there and get his signature, Kazuichi Yasuhara."
+    if isEventCleared("GTS030"):
+        Ryoko "I not only sent e-mails to him but tried to contact him while I was visiting Naomi, but he was always too busy to talk with me."
+        show Ryoko confused
+        Ryoko "Seriously! He can't be {i}that{/i} busy all the damn time!"
+        MCT "Hmm. Mental note. This Kazuichi Yasuhara guy, a proctor residing at the Giant's Dorms. Maybe that's a way in I could use without letting Daichi know Naomi already gave me access."
+    else:
+        Ryoko "I tried sending him several e-mails, but he keeps ghosting me. I even tried to get the guy's phone number from the secretariat, but the secretaries there weren't really helpful."
+        MC "Did you try the principal?"
+        Ryoko "I did. All I could figure was the old man must have enjoyed my struggles because all he told me was to find a way to contact him." 
+        Ryoko "Like excuse the hell out of me for thinking you might know how to reach the people that work at the school you run!" 
+        MCT "Hmm. Mental note. This Kazuichi Yasuhara guy, a proctor residing at the Giant's Dorms. Maybe this guy is our ticket in?"
+        MCT "Ryoko wants to get in there too. Maybe we could tag along if she succeeds? Or maybe we figure out some way to combine our efforts to push the issue."
+        MCT "I'll have to think about it. I don't want to tell Daichi right away. I'll have to let Daichi know, hopefully without resulting in him rushing in and scaring her off."
+
+    scene black with fade
+    pause 1
+    scene Dorm Exterior
+    show Minori neutral at Position(xcenter=0.75, yalign=1.0)
+    show Ryoko neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
+    "We were almost at our destination after walking across the campus center."
+    Minori "You were really quiet about the set today. Did everything go well?"
+    Ryoko "It was fine. We should probably be able to finish the remaining shots there tomorrow like we initially planned."
+    show Ryoko annoyed
+    Ryoko "Well, that is unless we experience some other unexpected complications."
+    Minori "I take it you're referring to one of Hasegawa-san's mood swings?"
+    show Ryoko neutral-2
+    Ryoko "Not necessarily..."
+    "We stopped in front of the fountain in the middle of the courtyard. Ryoko took a moment to sit on a bench next to it, clearly tired herself."
+    Ryoko "That is to say, not always, but probably."
+    show Minori sad
+    "Minori looked ready to speak, but seemed to resign against further commentary on the matter. I assumed it was a conversation both of them were tired of having by this point."
+    show Minori neutral
+    MC "Actually, it was my fault. I accidently walked through the middle of the set during filming because I had my head up my ass distracted by other stuff."
+    show Ryoko confused
+    Ryoko "Well, I wasn't trying to blame you for derailing things, but yeah, that happened too."
+    show Ryoko neutral-2
+    Minori "I'm in no position to chastise anyone, that happened to me once as well."
+    show Ryoko happy
+    Ryoko "Haha! That was actually way worse because we didn't realize Minori was in the shot until very late in post-production."
+    Minori "It was not a very flattering shot either."
+    show Ryoko embarrassed
+    show Minori embarrassed
+    Ryoko "Haha! We caught Minori secretly eating a freaking chocolate bar with an expression of toddler-like joy." 
+    Minori "Tsh, hmmph. {w}Council work can be quite tough, there's not always time to get to the cafeteria... and it was a really tasty chocolate bar."
+    show Ryoko happy
+    Ryoko "I'll say. Hehe!"
+    show Minori neutral
+    Minori "I hope you deleted that footage."
+    Ryoko "Hell no. Don't you think that candy bar company would want to use it for a commercial? That's our ticket to making the big bucks!"
+    show Minori sad
+    Minori "As your production assistant, I would advise against submitting that to ad agencies."
+    show Minori neutral
+    "I got a decent chuckle out of the exchange as well. Only for my mood to be spoiled by a frock of my hair getting into my eye again." 
+    "Flicking my hair up and out of the way, I noticed Minori's expression got more serious as the subject matter had shifted."
+    show Ryoko neutral
+    Minori "I asked about Hasegawa-san because I heard something earlier today that might interest you."
+    Minori "I was approached by Yoritaka-san, another girl from the council who is Izumi's best friend and confidant. She told me that Izumi isn't happy with her role."
+    show Ryoko annoyed
+    Ryoko "Oh, who could have imagined... except everyone."
+    show Ryoko neutral-2
+    Minori "She tries to do her best but she doesn't feel her character and she would love to try a different role. She's just unable to muster enough courage to actually ask her... which only leads to more mood swings."
+    Minori "That's why she told me about it, hoping to help out Hasegawa-san. She tries to do her best, but she's not feeling her character and would love to try another role."
+    MC "Aren't actors supposed to act? Why can't she just act like she wants to play the part?"
+    show Ryoko neutral
+    Ryoko "I like where your head is at Hotsure-san, but it's never that simple when working with actors."
+    Minori "You should probably talk to Hasegawa-san, it sounds like she's not going to be the one to broach the subject."
+    show Ryoko annoyed
+    Ryoko "Sigh... So what role does she have in mind?"
+    Minori "My understanding is that it's a less prominent role, but her friend didn't share specifics, so I'm not sure."
+    show Ryoko confused
+    Ryoko "I wouldn't be entirely opposed to her taking on a new role, it might even be for the best, but that would put us back at square one with this film... again."
+    Ryoko "Honestly, I wish I could just have Misao back playing the role- it sucks that that's not possible, unless we find a way to make it work."
+    show Ryoko annoyed
+    Ryoko "I'll have to think about that one... figure out a new plan of action. Might just end up having to call another audition for the lead role."
+    show Ryoko neutral
+    "I was trying to follow the conversation between the two, but kept getting distracted by my hair falling into my eyes again."
+    MCT "Stupid factor. I didn't think excessive hair growth had the hazard of causing blindness, but here we are."
+    MCT "I guess everyone reaches a certain point where we have to get over it and accept that this is just going to be part of our lives... After all, my hair is just going to keep getting longer, not like I can hide from it."
+    MCT "!"
+    MCT "Wait a second... is it really that simple? {w}I mean, it's kind of dumb, but maybe it's worth a shot."
+    MC "Hey."
+    show Ryoko neutral-2
+    Ryoko "What's up?"
+    MC "I just thought of something."
+    Ryoko "Alright, let's hear it."
+    MC "I was thinking about the growth factors and the conundrum with Misao-san."
+    Ryoko "Yeah."
+    MC "You mentioned you tried to figure out ways to keep her on a project, right?"
+    show Ryoko neutral
+    Ryoko "Yeah, we tried more than a few different ways to hide her growth. None of them worked that well. Some of them looked even worse than doing nothing."
+    MC "Well, I don't know if you're gonna like this one, but instead of trying to hide the growth, have you considered making a growth part of a film's story before?"
+    MC "I mean, we're all enrolled into this place because of growth factors. Whether we like it or not, something's going to keep changing about us."
+    MC "So maybe instead of trying to run from it, you just run with it?"
+    MC "Like maybe just add some extra context into the script to explain the growth?"
+    show Ryoko neutral
+    Ryoko "..."
+    "Ryoko looked at me like I just asked how to use a toilet... Perhaps my lightbulb moment was not the shining beacon of insight it sounded like in my head."
+    show Minori embarrassed
+    Minori "Heh... We couldn't really do something like that... Could we?" 
+    "Minori turned back towards Ryoko, who seemed much more focused in thought as the idea stewed a bit inside her head."
+    show Minori neutral
+    show Ryoko neutral
+    "Ryoko didn't say anything, but opened up her bag and pulled out a pile of papers from it."
+    "The front page read \"The Art of Concession\", so I assumed it was the script, or the screenplay- I didn't know the official terms of most of this crap if I was being honest."
+    "Ryoko was intently flipping through the pages, to the point I don't know how she had an idea where she was as she shuffled through them."
+    show Ryoko confused
+    Ryoko "Hmm... {size=-4}what if we...{/size} {size=-6}no, that has to be...{/size} {size=-8}it could go...{/size} {size=-10}maybe here...{/size}"
+    show Ryoko happy
+    Ryoko "Ooo! That's it! {w}This might be the solution."
+    Minori "It... It might?"
+    show Ryoko embarrassed
+    Ryoko "It totally might! Look, we should be able to shuffle around some scenes to make it work in sequence, and just change the context for why Makoto needs the suitcase."
+    show Ryoko neutral
+    Ryoko "Like, what if there was something inside that could stop her growth?"
+    Minori "Like an antidote?"
+    show Ryoko happy
+    Ryoko "Exactly! We could add some close-ups at Misao's face, which would add some additional lines said by her and dub some new lines with her monologue that bridges the old material into a new direction."
+    show Ryoko neutral
+    Minori "It'd be a lot less work than having to scrap what was done already. What about the ending? This would completely change that."
+    Ryoko "That's just it, it would have to be different— The reveal at the end is that nothing can stop it."
+    Minori "It's certainly a more interesting theme. Not to mention a poignant commentary on our current situation."
+    MC "Wouldn't that be a bit too on the nose?"
+    show Ryoko neutral-2
+    Ryoko "Well, the characters aren't going to spell it out like a PSA. The idea is to show, not tell."
+    show Ryoko neutral
+    Ryoko "As long as we keep it character focused and not theme focused, in a grounded setting, people won't feel cudgeled over the head about coming to terms with the reluctance of accepting their own personal transformation."
+    show Ryoko camera
+    Ryoko "The character's growth is part of the story, but not the main focus. As long as we keep it that way, it will be an asset rather than a distraction."
+    show Ryoko confused
+    Ryoko "Assuming Misao would be on board... "
+    show Minori happy
+    Minori "I don't doubt that she would be."
+    show Ryoko neutral-2
+    Ryoko "I think she would be too. Hell, she's probably the only one that could make this character work like this. If she knew that, she'd jump at the chance to get back into it!"
+    show Ryoko embarrassed
+    Ryoko "Well, shit. I'm going to have to pull an all-nighter to revise the script to make it work, but I think I got an idea how to make it happen."
+    show Minori neutral
+    Minori "Are you sure? This sounds like a big change."
+    show Ryoko neutral
+    MC "Well, maybe it'd be less of a change in the long run since you'll get your first actress back. Won't need to re-recast, and can still use some of the old footage."
+    Ryoko "Hotsure-san does have a point. In that regard it's a wash on time sunk, but this would get Misao back on board and has the potential to be a much more interesting script."
+    Minori "Are you sure you'd be able to reuse those scenes?"
+    show Ryoko embarrassed
+    Ryoko "Hah! That's the beauty of cinema. With a few well placed adjustments and careful editing, you can completely change the context of a scene using the same footage."
+    show Ryoko neutral
+    Ryoko "Besides, even if that fails, voice over narration can do a lot of heavy lifting to make sense of what the audience is seeing."
+    show Minori happy
+    Minori "Sounds like we might have our bases covered then."
+    show Ryoko happy
+    Ryoko "Ohmygod! YES! {w}Kei, you just might have saved this project."
+    if isEventCleared("GTS023"):
+        Ryoko "If we can somehow make this thing work, I'm gonna list your name in the credits under \"Special Thanks\"."
+        MC "Happy to help."
+        show Ryoko neutral
+    else:
+        Ryoko "Alright, what was your name again? I want to make sure I have this written down... \"Keisuke Hotsure\", right?"
+        show Ryoko neutral
+        MC "Huh? Yeah, that's right. Why?"
+        Ryoko " \"Special Thanks\" you'll get your name in the credits if we somehow manage to pull this off."
+        MC "Oh, cool."
+    show Minori neutral
+    Ryoko "Alright. I'm going to try to meet with Misao-chan to pitch her the idea before she goes to bed. If I can get her buy-in, then we'll have a new plan of action."
+    Ryoko "I'll talk with Izumi about a new role, and I think the film crew will be on board getting to work with Misao-chan again. It'll be a win-win for everyone!"
+    if not getFlag("Meet_Ryoko"):
+        $setFlag("Meet_Ryoko")
+    if not getFlag("Meet_Minori"):
+        $setFlag("Meet_Minori")
+    show Ryoko happy   
+    Ryoko "Thanks for the idea, Kei. For what it's worth, I'm glad you decided to crash on our set today. I'll catch you later."
+    "Ryoko packed her stuff back up and pulled her phone out of the bag, giving it a few taps."
+    show Ryoko neutral
+    Ryoko "Misao? I know it's late, but do you have time by any chance?"
+    hide Ryoko with dissolve
+    "Ryoko started walking away as her phone conversation faded out of my range, but she seemed excited because she motioned to Minori to follow her."
+    show Minori embarrassed
+    Minori "Oh. Looks like we have a promising lead. I'll see you later, Hotsure-san."
+    scene Dorm Entrance with fade
+    if isEventCleared("GTS023"):
+        MCT "Did I really just pitch to Ryoko an idea for making an expansion flick?"
+        MCT "Can't say I've heard of that before."
+        MC "I mean, technically my browser history is full of them, but this would be a real one... That's pretty wild."
+    else:
+        MCT "Did I really just pitch to Ryoko an idea for making an expansion flick?"
+        MCT "Can't say I've heard of that before."
+        MCT "I mean, technically my browser history is full of them, but this would be a real one... That's pretty wild."
+        MCT "And to top it off, I managed to get a lead on one of the possible ways to get inside the Giant's Dorms."
+        MCT "I guess good things come to those who... blunder into movie sets...? {i}No, that doesn't sound right..."
+        MCT "Well, regardless it was a good thing I- OH SHIT I STILL NEED TO GET MY HOMEWORK DONE!"
+    jump daymenu
+
 label RMG001:
     scene School Front with fade
     play music HigherEdu
