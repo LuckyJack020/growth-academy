@@ -345,7 +345,7 @@ label BE003:
     BE "I dunno. Figured I'd try it out first, no sense causing a fuss about the size if I end up not liking soccer, after all."
     show BE neutral
     MC "I guess that makes sense, but isn't it a bit light for today? Kinda chilly don't you think?"
-    MCT "Judging by why I can see poking through her shirt, it's more than just {i}kinda{/i} chilly."
+    MCT "Judging by what I can see poking through her shirt, it's more than just {i}kinda{/i} chilly."
     show BE sad
     BE "Yeah, it's not the best right now."
     show BE shrug
