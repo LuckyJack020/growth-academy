@@ -37502,6 +37502,7 @@ label WGB009:
     $setFlag("XX35")
     $setProgress("WGB", "WGB010")
     $setTime(TimeEnum.EVE)
+    play music MC
     scene Dorm Interior with fade
     "Tonight was the night of the first concert of the year the music club was putting on."
     "From what Okisho told me, they put on one during summer (which was this one), one near the end of the year, and a few others throughout the year for holidays and special occasions."
@@ -37516,13 +37517,13 @@ label WGB009:
     MCT "I'll just play it safe and keep the school uniform on."
     scene black with fade
     pause .5
-    $setTime(TimeEnum.NIGHT)
     $setWGOutfit(OutfitEnum.DRESS)
     $setOkishoOutfit(OutfitEnum.DRESS)
+    $setTime(TimeEnum.NIGHTLIGHTS)
     scene Auditorium with fade
     "Heading into the auditorium I had to check the time on my phone to see what time it was, worried that I somehow came too early."
     MCT "Nope, just five minutes to spare, like I planned."
-    "Not that I was expecting to not get a seat if I came late, but I had expected a bit more people to be in attendance than what I was seeing."
+    "Not that I wasn't expecting to get a seat if I came late, but I had expected a bit more people to be in attendance than what I was seeing."
     "A brief bit of counting had me estimating about a third or so of the seats were filled. Seating was rather sparse in the middle rows on up and pretty scattered overall."
     MCT "Maybe those fliers I redesigned for Okisho didn't have the pizzazz I thought they did... Not much of a turn out."
     "Whether it was a show of 100,000 or 10, I don't think that would impact the energy Okisho would put into her performance. She loved music for music's sake, afterall." 
@@ -37561,6 +37562,7 @@ label WGB009:
     PRG "But I still work for her preparing meals. It's been fun trying out new recipes that Alice requests."
     MCT "Poor girl. As much food as that woman eats, she must be overworking her."
     hide PRG with dissolve
+    $setTime(TimeEnum.NIGHT)
     "The lights grew dim and our conversation hushed as the curtain unraveled, revealing the assembled choir and orchestra."
     show Okisho neutral with dissolve
     "Okisho waddled out on stage looking like a stuffed sausage casing in a dress that was a couple of sizes too tight." 
@@ -37569,6 +37571,7 @@ label WGB009:
     "As she looked up, I could tell she noticed me in the crowd,"
     show Okisho happy
     extend " and flashed me a quick smile."
+    show Okisho neutral
     "Just as fast, she turned her gaze back towards the crowd out in the auditorium as the curtain drew back behind her."
     play music AgnusDeiX
     "I was practically jolted out of my seat by the bellowing intro. The club wasted no time hitting the gas right out of the gate before the curtains were finished fully opening."
@@ -37584,7 +37587,7 @@ label WGB009:
     play music AngelsWeep
     "Eventually came the finale, where the singers were really able to shine."
     show Okisho neutral at Position(xcenter=0.25, yalign=1.0)
-    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    show WG haughty at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     "There were several other singers and an entire ensemble of musicians, but it was Alice and Okisho's powerful voices that were the focal point of the performance."
     "Alice had a commandingly powerful soprano voice that rose above the rest of the ensemble, coming in crystal clear."
@@ -37598,6 +37601,7 @@ label WGB009:
     scene black with fade
     pause .5
 
+    $setTime(TimeEnum.NIGHTLIGHTS)
     scene Auditorium with fade
     play music Peaceful
     "After the concert, I kinda milled around the auditorium for a bit as the relatively small crowd of student attendees filtered out of the place, while I waited on Okisho to come back out from behind the curtain."
@@ -37633,7 +37637,7 @@ label WGB009:
     hide WG with dissolve
     MCT "Well, at least I know she'll still talk to me. And she didn't lose her shit just by mentioning Okisho. {w}I guess I can call that progress."
     pause 1
-    "I swaddled around a bit longer wondering if she might have left out some side door in the back of the auditorium, but I knew she saw me. Surely she wasn't trying duck me...{w} Right?"
+    "I dawdled around a bit longer wondering if she might have left out some side door in the back of the auditorium, but I knew she saw me. Surely she wasn't trying duck me...{w} Right?"
     MCT "Then again, if she was hungry, maybe she made a break for it once she could finally leave."
     show Okisho neutral with dissolve
     Okisho "You're still here?"
@@ -37756,10 +37760,15 @@ label WGB009:
     MCT "She's busting them more than she thinks with a body like that."
     Okisho "I thought I was picking on an amateur, but I just got outplayed by a pro. Damn."
     MC "Just because you fooled me a few times doesn't mean you clown me forever."
+    show Okisho laugh
     Okisho "HA! {w}We'll see about that!"
+    show Okisho neutral
     MC "Oh, is that so?"
+    show Okisho happy
     Okisho "Yes. Totally so. You'll see."
+    stop music
     scene Town Bus with fade
+    play music TwilightBright
     "Just as we were starting to wind each other back up again, the bus began to pull over towards the sidewalk as it slowed to a halt, letting out the pressure on the breaks, meaning we must have made it to the first bus stop in town."
     show Okisho neutral with dissolve
     Okisho "Alright! We made it. Let's go get some food."
