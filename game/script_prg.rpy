@@ -47543,7 +47543,7 @@ label PRG067:
             PRG "I-I said no more kisses."
             MC "I know."
             "Smiling lightly, I rested my hand on her back… {w}then brought it down quickly, yanking her skirt up, and slapping my hand across her right asscheek."
-            show PRG scared
+            show PRG scared with vpunch
             PRG2 "AH!"
             "Aida turned quickly."
             "I drew in close, smiling and kissing her on the cheek."
@@ -47584,6 +47584,7 @@ label PRG067:
             "I reached up to her hips, taking hold of her panties, and slowly began to inch them down her hips. Though… they were much harder to get up and around where her hips and ass jutted off of her."
             "I managed to get them over, and pulled them down her thighs, just enough to see her slit poking out from between her legs, slightly puffy and plump."
             MC "There. Now-"
+            stop music
             play sound Knock
             show PRG scared
             pause 1
@@ -47601,6 +47602,7 @@ label PRG067:
             PRG "I-I didn't think I was being… t-that loud."
             "I eased Aida's panties back up and into place, as Aida stood, fixing her skirt behind her."
             MC "Well…"
+            play music ChangingSeasons fadein 2.0
             PRG "N-Now we can study."
             "I held Aida's chair for her as she sat-"
             PRG2 "Mmnh…"
@@ -47695,18 +47697,19 @@ label PRG067:
     PRG "..."
     MC "Tell you what, if we get caught out of our dorms, I'll take the blame and say it was my idea, which it is."
     MC "... Doesn't a nice, big bowl of chicken katsu sound delicious right now? From that place on the main road?"
-    show PRG unique-happy with dissolve
+    show PRG unique-happy
     PRG "... Y-You can't use food to tempt me right now."
     MC "With a nice, big side of gyoza, all covered in sauce and everything?"
     PRG "... {w}H-Help me get my shoes on."
     "I snickered softly. Mission accomplished."
     scene Dorm Entrance with fade
-    show PRG neutral
+    show PRG neutral with dissolve
     "The door closed behind us, as overhead, the light in the sky had almost completely faded."
     PRG "T-The air feels so nice."
     MC "Yeah. Perfect weather. Not hot at all."
     "I took Aida's hand and led her through campus, and out to the main road."
     scene School Front with fade
+    show PRG neutral with dissolve
     "Passing through the gates, I led Aida to the bus stop and sat beside her, as she eased herself back."
     PRG "Mmn…"
     PRG "N-Now you got me thinking about food."
@@ -47848,13 +47851,14 @@ label PRG067:
     pause 1
     scene Dorm PRG with fade
     show PRG unsure with dissolve
-    "Aida and I walked back into her dorm, now about 45 minutes after we'd left her dorm."
+    "Aida and I walked back into her dorm, now about 45 minutes after we'd left."
     "I set three large to-go containers in a bag onto the counter, then went with Aida to her couch, helping her get her shoes off."
     MC "I'll get some chopsticks. Why don't you take these into your room and start getting them opened up?"
-    hide PRG with moveoutleft
+    show PRG at altMove(1.5, -0.35)
     "Aida nodded lamely, and trudged silently into her room, take out bag in hand."
+    hide PRG
     "I took some chopsticks from her drawer and followed her, taking my shoes off quick and putting them by the entry as I came into her room, shutting the door."
-    show PRG sad-2
+    show PRG sad-2 with dissolve
     "Aida sat on her bed heavily, the bag beside her. With one hand, she picked at the knot on top halfheartedly."
     MC "I can get it… here…"
     "I picked the bag open and took out the top container, handing it to Aida, after which I took another out and sat beside her on the bed, opening it up."
@@ -47893,7 +47897,7 @@ label PRG067:
         MC "Babe?"
     if getFlag("PRG044_c1_3"):
         MC "Sweetie?"
-    show PRG worried
+    show PRG worried with dissolve
     "I walked back in. Aida was up, getting changed into her pajamas."
     MC "Do you mind if I try something? To help you relax?"
     PRG "I… mmn…"
@@ -47979,7 +47983,7 @@ label PRG067:
     "The massive orbs had long since grown bigger than any human head, now being closer to large beachballs in comparison."
     "With the care I was taking, and the circles, it took me nearly five minutes to finish each one, the oil thankfully spreading far easier than I'd expected."
     "Crawling back off the bed, I re-oiled, and paused once again."
-    show PRG blush-2
+    show PRG blush-2 with dissolve
     MC "Okay. Let me know if anything feels off."
     PRG "Mhmmm…"
     hide PRG with dissolve
