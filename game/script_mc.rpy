@@ -27252,7 +27252,7 @@ label RM007B:
         "Film Crew" "{i}Booo!{/i}"
         "Film Crew" "Get out of the shot, loser."
         show Ryoko annoyed with dissolve
-        UNKNOWN "Dammit, that was the take! What are you {i}doing{/i} here? Don't tell me you didn't see the camera crew and the lights?"
+        Ryoko "Dammit, that was the take! What are you {i}doing{/i} here? Don't tell me you didn't see the camera crew and the lights?"
         "Ryoko Tanaka, the president of the film club. I had met her before briefly, but we didn't know each other that well. Certainly not enough for her to cover for my ass in this situation."
         MC "I know, I fucked up. My bad. I got lost in my thoughts and I wasn't paying attention to where I was going."
         MC "I'm really sorry I ruined the shot, everyone. I know the setup on these things is a lot of work. I'll get out of the way so you can do your thing."

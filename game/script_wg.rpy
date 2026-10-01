@@ -27238,7 +27238,7 @@ label WG084:
     show WG doubt
     WG "...{w}You can't be serious..."
     Okisho "I'm totally serious. Look, no bullshit. {w}Here."
-    "Okisho pulled out her phone and after clicking a few times on the screen turned it towards us to reveal a startlingly trim and athletic looking Okisho standing next to a tall, lanky man in a graduation gown."
+    "Okisho pulled out her phone, and after clicking a few times on the screen, turned it towards us to reveal a startlingly trim and athletic looking Okisho standing next to a tall, lanky man in a graduation gown rocking a set of visor style sunglasses."
     show WG surprised
     WG "You can't be serious!"
     MC "What? Is that him?"
