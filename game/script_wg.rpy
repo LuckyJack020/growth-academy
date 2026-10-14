@@ -25254,7 +25254,7 @@ label WG080_Afterchoice:
     Takamura "While it is true that your circumstance is... {i}unique{/i},{w} the interest we have in helping students learn to accommodate the growth they are experiencing is not exceptional to individuals." 
     WG "I'm managing quite fine. Thank you for asking."
     Takamura "I see..."
-    "Despite her chipper demeanor, Takamura-sensei was certainly not obvious to the fact that this wasn't working." 
+    "Despite her chipper demeanor, Takamura-sensei was certainly not oblivious to the fact that this wasn't working." 
     pause .5
     "After thinking a bit, Takamura-sensei looked over towards me instead. Her eyes and uneasy smile asked \"Could you help?\"."
     show WG neutral
