@@ -56,13 +56,14 @@ label BE001:
     menu:
         "I'd say it's kind of obvious, isn't it?":
             jump BE001_c1
-        "I don't want to jump to conclusions, it could be anything, really.":
+        "It could be anything, really.":
             jump BE001_c2
-        "Maybe your feet. It would be good karma after all the times you kicked my butt at those dancing games at the arcade.":
+        "Maybe your feet?":
             jump BE001_c3
 
 label BE001_c1:
-    show BE surprised
+    MC "I'd say it's kind of obvious, isn't it?"
+    show BE guilty
     BE "Oh, I haven't the foggiest idea what you could be talking about. A girl's hair does tend to get a bit longer after you haven't seen her for years, Kei-chan."
     MC "Um, actually I was talking about-"
     show BE happy
@@ -91,12 +92,14 @@ label BE001_c1:
     jump BE001_after
 
 label BE001_c2:
+    MC "I don't want to jump to conclusions, it could be anything, really."
+    show BE guilty
     BE "That's true. Still, I think I've got a pretty good idea what mine could be. It starts with \"B\" and rhymes with \"goods\"."
     pause 0.5
     MC "...Boods?"
     show BE surprised-2
     BE "What?"
-    show BE sad
+    show BE doubt
     BE "Shoot, no, I messed that up. I was talking about my boobs."
     show BE neutral
     BE "Like everyone at my old school seemed to do on a daily basis. Hard to blame them really, I made these cans faster than a soda factory."
@@ -131,6 +134,7 @@ label BE001_c2:
 
 label BE001_c3:
     $setAffection("BE", 2)
+    MC "Maybe your feet? It would be good karma after all the times you kicked my butt at those dancing games at the arcade."
     show BE happy
     BE "Oh wow you still remember that! Haha I really did whoop you at all those games, didn't I? Still, huge feet? That's so weird. Imagine how many socks and shoes I'd need to buy!"
     MC "Well, regardless of what we end up getting, we'll all probably have to change our wardrobes eventually. Hopefully they'll help cover expenses."
@@ -203,13 +207,13 @@ label BE002:
         xpos 1.0 xanchor 0.5 yalign 1.0
         linear 0.5 xpos 0.5
     UNKNOWN "W-Woah!"
+    show dummy with vpunch
     MC "Eh? GAH-!"
     "I didn't even have any time to react as, suddenly, I felt the full force of boobage being slammed into me at mach-tiddy."
     "I flew back a foot or so before using my hand to stabilize myself on the wall. I looked up to see who it was... even though I had more or less already known."
     MC "Ach... h-hey, Honoka."
     pause 0.5
     show BE embarrassed
-    show dummy with vpunch
     BE "Oof! Sorry about that, slippery ground!"
     MC "Ah, heh, it's no problem, Honoka. Hard to stop when you get moving, huh?"
     show BE happy
@@ -233,7 +237,7 @@ label BE002:
     show BE happy
     BE "Oh, I was jittering all over the place last night. But I still got like, four hours of sleep which is a lot for me!"
     MC "Really? That seems unhealthy."
-    show BE happy
+    show BE smug
     BE "Hehe, probably. Good thing I'm just messing with you then."
     if isEventCleared("MC002"):
         show BE wink
@@ -354,12 +358,13 @@ label BE003:
     menu:
         "You uh, want some of my drink? Might warm you up.":
             jump BE003_c1_1
-        "Maybe grab something warm to drink then before you get going":
+        "Maybe grab something warm to drink then before you get going.":
             jump BE003_c1_2
         "Are you telling me those sweater puppies of yours don't keep you warm??":
             jump BE003_c1_3
 
 label BE003_c1_1:
+    "You uh, want some of my drink? Might warm you up."
     show BE neutral
     $setAffection("BE", 1)
     BE "Ooh, what did you get?"
@@ -410,6 +415,7 @@ label BE003_c1_1:
     jump BE003_after
 
 label BE003_c1_2:
+    "Maybe grab something warm to drink then before you get going."
     show BE neutral
     play music BE
     BE "Yeah that's probably a good idea. Hm..."
@@ -462,6 +468,7 @@ label BE003_c1_2:
     jump BE003_after
 
 label BE003_c1_3:
+    "Are you telling me those sweater puppies of yours don't keep you warm??"
     $setAffection("BE", -1)
     play music Tension
     show BE angry
@@ -8183,8 +8190,405 @@ label BE037:
     jump daymenu
 
 label BE038A:
+    label BE038A:
     $setProgress("BE", "BE039")
-    "Scene not yet written."
+    scene Cooking Classroom with fade
+    play music DayByDay
+    "Compared to other clubs, the cooking club was considerably more free-form."
+    "Most of the time, it was sort of a free-for-all, with efforts being put into preparations for the occasional cooking club competitions. Hell, half the time, the students spent more time practicing outside of meeting times."
+    "Here and there, time would be taken to have the members of the club all work together on a specific dish, or a sort of general concept of cooking shared among them."
+    "But, once a monthish, they would all work on one part of a large dish as groups, and then split it for a feast as a club."
+    "Honoka and I were assigned to dessert duty. It was late in the day, so I'd tied my hair back so it was out of my eyes. It also made sure it didn't drape over the stovetop and accidentally catch on fire."
+    "I learned my lesson last time I was in the kitchen… {w}I was less so afraid of burning my hair down to my skull as I was about the dreadful smell of burnt hair permeating the place and ruining our appetite to try anything we made."
+    show Takamura neutral with dissolve
+    "And, of course, the presence of our watchful teachers made it that much less daunting of a task… or at least gave the illusion of reassurance as she walked from workstation to workstation."
+    hide Takamura with dissolve
+    pause 1
+    show BE happy with dissolve
+    BE "Okay. Let's see. First, make sure the oven's pre-heated. 175 degrees."
+    MC "Got it. Do you want to do the frosting or the batter?"
+    show BE neutral
+    BE "I'll do the batter."
+    MC "You do realize you're not allowed to lick the mixing spoon with raw batter right?"
+    show BE confused
+    BE "Uhh, yeah… Duh!"
+    pause .5
+    show BE guilty
+    BE "...On second thought, I'll do the frosting."
+    MCT "Yeah… That's what I thought."
+    show BE happy
+    BE "Oh, and I'll do the caramel too, since that's easy."
+    MC "Promise me you'll at least wait for that to cool off before you lick it."
+    show BE angry
+    BE "Hmmm… No."
+    show BE shrug
+    MC "Okay, well I tried."
+    "We had decided to make some cupcakes. It was something that would be good for a lot of people and we could split the work fairly well. Honoka wanted to fill the insides with caramel that gushed out when you bit into them."
+    MC "You sure? I thought you said you hadn't made it before."
+    show BE happy
+    BE "Yeah yeah, but it's going to be a sauce for inside the cakes instead of regular caramel so it'll be easier."
+    MC "Okay. Just be safe. Sugar burns hurt like hell from what I've heard."
+    show BE wink
+    BE "Not a problem. Just because I've got more surface area to burn doesn't mean I'll do it, hehehe."
+    show BE happy
+    "Honoka grabbed a saucepan and placed it on the oven as she got the rest of her ingredients out. She moved fairly quickly, grabbing her ingredients and measuring them out."
+    MC "Wow, you've really picked up some stuff from this club."
+    show BE surprised
+    BE "Yeah. Heh. It turns out, if you prepare all your stuff before you need it, you wind up saving time and energy?"
+    MC "I'm sure the concept of organization came as a shock to you."
+    show BE angry
+    BE "Shush, you!"
+    show BE smug
+    BE "Since my sous chef is not up to speed yet, it was up to me to prepare my own {i}mise en place{i}."
+    MC "Misen-what now?"
+    BE "You mean you don't know \"mise en place\"?
+    show BE surprised-2
+    MC "Something tells me you didn't either until like twenty minutes ago."
+    show BE guilty
+    BE "Nuh-uh…"
+    show BE wink
+    BE "The timing is important, but it means something like \"putting things in place\". It's French- fancy French cooking stuff." 
+    show BE neutral
+    MC "I'm sure that's not something they invented. They just made a phrase for it, but looks like it's working."
+    pause 1
+    show Takamura neutral with dissolve
+    Takamura "La mise en place est le feng shui de la table."
+     MC "Wha-?"
+     Takamura "It means less talking, more prepping."
+    "And, as expected, Takamura-sensei had much to say while overseeing the meeting, with Kanami and the others working on a large dish with multiple moving parts."
+    hide Takamura with dissolve
+    "Honoka and I worked on our separate sections, checking in periodically to make sure our times were correct. Ideally, we wanted the cupcakes to be cool before we stuffed and frosted them."
+    "There's fewer things more miserable in life than when a cupcake's frosting has melted off."
+    "Those were the words Honoka repeated at least thrice while we were discussing our options, so they were seared into my memory like a well-grilled steak."
+    show BE aroused
+    BE "Kei-chan, how's this taste?"
+    "Honoka came up behind me with a spoonful of frosting. I took a lick and smiled."
+    MC "Oh, yeah, that seems on point. Not too sweet, but sweet enough."
+    show BE flustered
+    BE "Hmmm…"
+    MC "Is something wrong? Was that not what you were going for?"
+    show BE embarrassed-2
+    BE "Oh no no, it's perfectly fine. I suppose I'm just wondering, do you think I'm too sweet?"
+
+    menu:
+        "Yes.":
+            jump BE038A_c1_1
+        "Nope.":
+            jump BE038A_c1_2
+
+label BE038A_c1_1:
+    MC "Yes. You're too sweet. You make my teeth hurt just looking at you, Honoka. How on earth do you not break out in cavities just by talking?"
+    show BE unique
+    BE "Oh you're such a kidder, Kei-chan~"
+    "Honoka walked closer to me, and dabbed a bit of the frosting on my cheek. She licked her lips and inched closer."
+    show BE aroused
+    BE "So you're saying if I were to cover my entire body in chocolate frosting, it would be so sweet you wouldn't be able to lick it all off?"
+    MC "I'd certainly try."
+    MC "But you'd need a {i}lot{/i} of frosting in order to cover your chest."
+    show BE happy
+    BE "Oh, and I'm suuuure you'd hate that."
+    "Honoka leaned in to lick the frosting off of me when the sound of a metal spatula hitting the countertop jerked us both to a more alert state."
+    pause 1
+    show Kanami neutral with dissolve
+    Kanami "I better not see any cross-contamination going on in this kitchen~"
+    "Her tone was soft. But in the way a grizzly bear looked soft— but would still leave you a mess on the ground if you annoyed it."
+    MC "Nope! Nothing going on here. Just cooking. Normal cooking."
+    Kanami "Ahh, normal cooking huh? Well… let's just hope it turns out well, hm?"
+    hide Kanami with with moveoutleft
+    pause 1
+    show BE angry
+    BE "Darn it. She has a point though, don't want this recipe ruined."
+    show BE neutral
+    BE "Now if we were making a salad, I'd have no issue with messing it up."
+    jump BE038A_c1_after
+
+label BE038A_c1_2:
+    MC "Too sweet? Nope. I don't think you're too sweet. You're more like a dark chocolate."
+    show BE confused
+    BE "You lost me there. Are you saying I'm bitter?"
+    MC "No no, not that. You're rich in flavor and complexity and some people might not be able to handle a lot of you in one sitting."
+    show BE happy
+    BE "I call those people…"
+    extend "weaklings."
+    MC "Right. So you're delicious, is what I'm saying. I just did it in a very obtuse manner because I'm bad at flirting."
+    show BE neutral
+    BE "Pssh, Kei-chan. To flirt with me all you need to do is go \"Honoka your boobs are looking awesome today!\" "
+    MC "But they look awesome every day."
+    show BE happy
+    BE "Right! I know that but it's still good to hear that once in a while."
+    BE "Or you could compliment my hair, or my smile, or my thighs, or my butt…"
+    MC "I think at a certain point that's not flirting and that's just being complimentary. "
+    show BE angry
+    BE "Eh. Either or. S'fine."
+    BE "Ah, whoops, better get back to cooking. Don't want Kanami all on my bust about this."
+    MC "Ha, good call."
+    pause 1
+    show Kanami neutral with dissolve
+    "Across the way, Kanami was heating up a pan on a stovetop, adding oil and the like. Her partner hovered around her, getting plates laid out and seasonings reading."
+    MC "Looks like she's in a trance."
+    BE "Girl's got motivation, for sure."
+    hide Kanami with dissolve
+jump BE038A_c1_after
+
+label BE038A_c1_after:
+    "After more preparation, my batter was prepared. Honoka helped me deposit proper amounts of it into several cupcake tins, and we set them in the pre-heated oven."
+    MC "Okay, we'll check those in like, fifteen minutes. How are you doing on your parts?"
+    show BE neutral
+    BE "I think I'm good. But I'm not entirely sure about the caramel filling. Can you check?"
+    MC "Sure."
+    "I dipped a butter knife into the vat of caramel sauce and pulled it up to my mouth, away from the pot."
+
+if checkSkill("Art", ">=", 10): 
+        label BE038A_p1_1
+else:
+        label BE038A_p1_2
+
+label BE038A_p1_1:
+    MC "I think it needs a little something else. Maybe some salt? Let me see if I can find that flaky stuff."
+    "I walked over to the extensive spice rack for the kitchen and grabbed one of the containers of flaky sea salt. I came back to an awaiting Honoka."
+    MC "Let's do a little sprinkle of this."
+    "I took a pinch and poured it into the caramel, while Honoka stirred until it was all incorporated. We waited a moment before trying it again."
+    show BE happy
+    $setAffection("BE", 1)
+    BE "Oh yeah, that does add something it needed. Perfect, Kei-chan. Mr Fancy Chef."
+    MC "I can't take credit for that, it's a good caramel sauce. The consistency is thick and rich."
+    show BE happy
+    BE "Ha, the consistency is Alice-tier, then."
+    jump BE038A_p1_after
+
+label BE038A_p1_2:
+    MC "Nope, I think that's tasty. Nice and good caramel sauce. Excellent job, Honoka. I think they'll like this."
+    show BE happy
+    BE "Good! I was thinking about doing some, like, fancy hardened chocolate stuff to put on top but that was a bit out of my skill range."
+    if isEventCleared("MC009"):
+        MC "Yeah. Leave that to the 3-star chefs or ones who can go to pastry school. This is gonna taste good. And that's what matters."
+    else:
+        MC "Yeah. Leave that to the 5-star chefs or ones who can go to pastry school. This is gonna taste good. And that's what matters."
+    show Kanami neutral with dissolve
+    Kanami "3-star chefs."
+    MC "Yeah, exactly."
+    Kanami "No, I mean they only go up to 3-stars."
+    MC "Wow, they must suck then."
+    Kanami "Wha- oh- nngh."
+    show BE embarassed-2
+    BE "HA."
+    pause 1
+    hide Kanami with dissolve
+    show BE neutral
+    BE "Anyways, you're right."
+    show BE unique
+    BE "Now, put this away from me so I don't guzzle down the entire thing and hurt myself."
+    jump BE038A_p1_after
+
+label BE038A_p1_after:
+    "Honoka chuckled a bit and pulled the pot off so it could cool. We wanted the sauce itself to be a bit warm when we put it in the cupcakes. But as it was now, it would all seep through and ruin the texture."
+    show BE neutral
+    BE "Well. Now we play the waiting game."
+    MC "Well we could clean up our mess first instead of waiting for everything to be ready for decorating."
+    show BE sad
+    BE "Yeaaaaaah, I guess we should do that."
+    MCT "...Something seems… off about her tone."
+    MC "... Huh?"
+    "I turned around to see Honoka, lips pursed as she stood with left over batter all over her breast, the bowl that held it being tipped over as she sighed in exasperation."
+    MC "Pfff-!"
+    BE "Yeah, yeah…"
+    MC "I thought we were making cupcakes, not battered breasts."
+    BE "Yuck it up, Hotsure."
+    MC "Well… couldn't hurt to try what we talked about earlier, eh?"
+    show Kanami neutral with dissolve 
+    Kanami "{i}Thaaat{/i} won't be necessary."
+    "Honoka held out her hand as she caught the apron that Kanami threw from behind me."
+    BE "Thanks, Kanami."
+    Kanami "No worries, trust me it happens to me all the time."
+    hide Kanami with dissolve
+    BE "... Oof…"
+    "As we waited for the cakes to finish baking, and then set them out to cool, we made sure our workstation was as clean as could be."
+    "Takamura-sensei always touted that \"a clean kitchen is a happy kitchen\". {w}But I think it was mostly because a clean kitchen meant a happy Takamura-sensei, and that was also good."
+    "The smell of the club area was rich with delicious aromas from everyone else's cooking. It was fun to sit back with Honoka and try to figure out what spices people were using or what vegetables were being sauteed. "
+    "Eventually we helped bring some of the tables out, to unfold them and get everyone seated. It was quite a sight looking at the odd arrangement of seats."
+    "Some chairs would be placed several feet apart to account for students with wide assets. A few of the tables were elevated to make things easier for taller ones, and others were wider so that club members weren't forced to touch each other under the table."
+    "Honoka and I were able to sit next to each other. Kanami wound up sitting across from us, along with several others."
+    "She had made an enormous platter of noodles with several different meats and veggies mixed in. The plate was right in front of us and it smelled amazing."
+    show Kanami neutral with dissolve
+    MC "Smells kinda… spicy."
+    Kanami "Nothing overly heavy. Just enough to bring out the flavor."
+    Kanami "There's a general happy medium to spice. Add too much, and it's all you taste, but don't enough, and it's barely there. The key is to just thread the line."
+    hide Kanami with dissolve
+    pause 1
+    show Takamura neutral with dissolve
+    "Near one of the stations, Takamura held up a hand, as the room quieted."
+    Takamura "Thank you everyone so much for working hard on this meal. It all looks delicious and you should be very proud of yourselves."
+    "There was some light applause and one cheer coming from the brunette right next to me. Once we got the go ahead to dig in, dishes were passed around so that everybody could get what they wanted."
+    hide Takamura with dissolve
+    pause 1
+    show PRG neutral with dissolve
+    PRG "Here you g-"
+    PRG "O-Oh. H-Hi, Hotsure-san."
+    "I blinked, taking the plate of noodles from her."
+    if isEventCleared("PRG013") or isEventCleared("GTSPRG001") or isEventCleared("MC009"):
+        MC "Hey, Kodama-san!"
+        MC "What did you make?"
+    else:    
+        MC "Hey! Didn't realize you were here."
+        PRG "M-Mhm. I've been in the cooking club for… a little while now."
+        MC "Sweet. What did you make?"
+    show PRG worried
+    PRG "Oh, um… m-my partner and I made yakitori. N-Nothing too special."
+    MC "Hey, that sounds special to me. I'll have to try some."
+    MC "Oh, and who's your partner?"
+    "Aida leaned backwards on her chair, just enough to see past her."
+    show Sakura neutral with dissolve
+    PRG "Um… Hotsure-san, this is Sakura Myoga. Sakura, this is Hotsure-san and Inoue-san."
+    if getFlag("Meet_Sakura"):
+        MC "Oh, yeah. We've met."
+        PRG "O-Oh… um."
+    else:
+        $setFlag("Meet_Sakura")
+        Sakura "Hey! Nice to meet you two!"
+    PRG "I-I didn't know you were in the cooking club."
+    MC "I'm not, like, officially. Just here with Honoka."
+    BE "Mmp… hi, Kodama-san!"
+    show PRG neutral
+    PRG "H-Hi…"
+    pause 1
+    hide Kanami with dissolve
+    pause 1
+    MC "... Are you seriously eating a cupcake already?"
+    show BE happy
+    BE "Mmf-mmf!"
+    "She swallowed."
+    Sakura "They look good."
+    BE "They are!"
+    BE "And, of course, Kei-chan! We made them, and I hadn't taste-tested it. I had to make sure they were good enough to be served."
+    MC "Yeaah, yeah, yeah, just make sure you eat some vegetables or else you're gonna have your Growth category changed."
+    show BE confused
+    BE "..."
+    show BE doubt
+    BE "..."
+    show BE embarrassed-2
+    BE "Heh."
+    show BE neutral
+    BE "Fiiine. But keep in mind, you're my boyfriend, not my mom."
+    "Quickly, Honoka grabbed the rest of the cupcake in her hand and shoved it in her mouth before dusting her hands and getting back to it."
+    MC "..."
+    MC "Heh, you know, if I were your mom, I'd have already started putting Natto in these."
+    BE "OH MY GOD, UUUGH {w}How do you remember that?!"
+    MC "The health craze?"
+    BE "Geeez, now I REALLY wanna grab another just out of spite."
+    MC "Ooooy!"
+    show PRG unique-happy
+    PRG "I-I like natto."
+    BE "Girl, not in cupcakes. There is a time and {i}place{/i}."
+    "Honoka plucked another cupcake from the platter, making a face at me."
+    BE "Ehehe~"
+    MC "Ahaha~"
+    hide PRG with dissolve
+    hide Sakura with dissolve
+    show Takamura neutral
+    Takamura "Well now, aren't you two having fun?~"
+    BE "What can I say, light hearts make quick work!"
+    Takamura "I must say, you two are a very nice couple."
+    MC "Heh, thank you. You think so?"
+    Takamura "I do. It's very wholesome. Very cute. Traditional."
+
+    menu:
+        "You're right.":
+            jump BE038A_c2_1
+        "I'm not sure that's right.":
+            jump BE038A_c2_2
+
+label BE038A_c2_1:
+    $setFlag("BE038A_traditional") 
+    MC "You're right about that. Honoka is definitely my sweetheart."
+    "Honoka blushed. I added to it by placing my arm around her shoulder and pulling her in close."
+    "Then I made it easily as red as a habanero by kissing her on the cheek."
+    MC "Yeah, Honoka's the perfect woman for me, as far as I'm concerned."
+    show BE happy
+    BE "K-Kei-chan, you're gonna make me blush."
+    "As if she already wasn't."
+    show Takamura happy
+    Takamura "Now, now, don't tease her, Hotsure-san~"
+    "I let go of her shoulder and got back to eating, but I felt Honoka's hand rest on my thigh."
+    hide Takamura with dissolve
+    show BE neutral
+    BE "Heh, we're a good pair huh? I guess we've got the benefit of the \"childhood friend\" thing to back us up."
+    MC "Mm-hm. A good basis for knowing each other. Means there's not much worry going into the relationship, right?"
+    show BE happy
+    BE "Yep, and you can milk the \"she's all grown up\" thing for all it's worth."
+    MC "Maybe, but, come on, Honoka. Personality is so important. And I really, really, really like your personality."
+    "I could see she was trying not to make a joke about having \"two big personalities\", but she managed to stifle that urge."
+    show BE unique
+    BE "Kei-chan, you're sweet."
+    MC "Heh, you too."
+    show BE happy
+    BE "Oh gosh I think I'm gonna gag if we're this cute for much longer, can we go back to eating?"
+    jump BE038A_c2_after
+
+label BE038A_c2_2:
+    $setFlag("BE038A_freespirit")
+    MC "I wouldn't say it's exactly like that. Honoka's a great gal, but she challenges me."
+    MC "And I mean that in a good way. It's always an adventure with her. I don't even really see myself getting complacent with Honoka."
+    BE "Yeah, you probably wouldn't have gotten out of bed to be here if it wasn't for me."
+    MC "See? That's what I mean. Our relationship has got energy. It's a bit wild. But I like it that way."
+    show BE neutral
+    BE "Ha, you make it sound like I'm a huge tiger you've got to fight every day to keep her in line."
+    MC "Are you saying that's inaccurate?"
+    show BE confused
+    BE "Hm. Maybe. I think I'm more of a… panther."
+    MC "Why's that?"
+    show BE happy
+    BE "Panthers are sexier."
+    show Takamura neutral
+    "I turned back to Takamura-sensei, who was pinching the ridge of her brow trying not to laugh."
+    MC "See? Years of knowing her and she's still saying things that catch me off guard. So it's always a fun time with Honoka."
+    Takamura "Years?"
+    MC "Yep. Cosmic chance brought us here after a long time, but we knew each other from way back."
+    Takamura "Really…"
+    MC "Eh, but you know, like I said, years at this point yet always something new."
+    Takamura "After months of knowing her, I can only imagine what you've heard over the years. It's clear you still hold high affection for her though."
+    MC "Hehe, I do."
+    show BE unique
+    BE "Well I do too! Jeez, Takamura-sensei. This is an equal relationship in all ways."
+    "Honoka brushed some of my hair out of my face, tucking it into the hairband I'd been using."
+    show BE happy
+    BE "See, I make sure he doesn't trip on his hair."
+    MC "And if I do you're gonna catch me, right?"
+    show BE unique
+    BE "You know it, Kei-chan. Soft landing."
+    MC "Oh hey, Honoka, Kinoshita-san just took your other cupcake."
+    show BE surprised
+    BE "He what!?"
+    MC "Kidding. {w}See? I can push your buttons too."
+    show BE angry
+    BE "Oooh. Hmph!"
+    MC "You're the best, Honoka."
+    show BE happy
+    BE "Haha. You too, Kei-chan~"
+jump BE038A_c2_after
+
+label BE038A_c2_after:
+    "I laughed, and got back to eating. It was a great feast, it would be a shame to waste it all and let it get cold after all."
+    "As we ate, everyone discussed what we all had done and gave some critiques on things that might've been done better."
+    Michiko "Aw man, my cookies totally sucked…"
+    Etsuko "Are you kidding? Yours were great, Sano-san. {w}On an unrelated note… anyone want these burnt hockey pucks?"
+    Hotaru "Ooo! I'll take them!"
+    Etsuko "... You're a strange, strange woman, you know that?"
+    if checkSkill("Art", ">=", 8): 
+        "Our salted caramel filling was a big hit, the cupcakes were all devoured by the time it was all over."
+        Hotaru "Uaaah, Etsuko-chan, Etsuko-chan, you gotta try these?"
+        Etsuko "And mess up my figure? No thanks."
+        Hotaru "Come ooon!~"
+        Etsuko "Tsh… aaaaah- Mngh-? Mmf…"
+        Etsuko "..."
+        Etsuko "I don't care if these give me Fumika thighs, I want 20."
+    else:
+        "Our cupcakes were enjoyed but it seemed the consensus was it was missing something. But it was good enough that most of them were gone anyway."
+        Michiko "Hmm… it's subtle, and provocative. Like a coy Dutch woman guarding a dark secret."
+        BE "... Nothing you're saying is helpful."
+        Etsuko "Mid."
+        BE "Eh, fair."
+    "We all had full bellies by the time we were finished up, and were allowed to take leftovers back to our dorms for later. It was important to not let anything go to waste, and none of it did."
+    "I walked out of the club room with Honoka's hand in mine. Takamura-sensei had been right for certain, she was a great girlfriend."
     jump daymenu
 
 label BE038B:
