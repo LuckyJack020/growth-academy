@@ -1380,7 +1380,7 @@ label BE008_c2:
     show BE wink:
         linear 0.05 xpos 0.5
     "It only ceased now because I was staring at them so hard I gave Honoka a chance to catch her breath, and slowly settle her mammaries back down."
-     show dummy with vpunch
+    show dummy with vpunch
     "Unfortunately for me, before I could try and defend myself, she went on the offensive, knocking me over and grabbing one of my feet."
     MC "Oh god, Honoka, no!"
     show BE happy
@@ -8212,7 +8212,6 @@ label BE037:
     jump daymenu
 
 label BE038A:
-    label BE038A:
     $setProgress("BE", "BE039")
     scene Cooking Classroom with fade
     play music DayByDay
@@ -8263,7 +8262,7 @@ label BE038A:
     show BE smug
     BE "Since my sous chef is not up to speed yet, it was up to me to prepare my own {i}mise en place{i}."
     MC "Misen-what now?"
-    BE "You mean you don't know \"mise en place\"?
+    BE "You mean you don't know \"mise en place\"?"
     show BE surprised-2
     MC "Something tells me you didn't either until like twenty minutes ago."
     show BE guilty
@@ -8275,8 +8274,8 @@ label BE038A:
     pause 1
     show Takamura neutral with dissolve
     Takamura "La mise en place est le feng shui de la table."
-     MC "Wha-?"
-     Takamura "It means less talking, more prepping."
+    MC "Wha-?"
+    Takamura "It means less talking, more prepping."
     "And, as expected, Takamura-sensei had much to say while overseeing the meeting, with Kanami and the others working on a large dish with multiple moving parts."
     hide Takamura with dissolve
     "Honoka and I worked on our separate sections, checking in periodically to make sure our times were correct. Ideally, we wanted the cupcakes to be cool before we stuffed and frosted them."
@@ -8316,7 +8315,7 @@ label BE038A_c1_1:
     "Her tone was soft. But in the way a grizzly bear looked soft— but would still leave you a mess on the ground if you annoyed it."
     MC "Nope! Nothing going on here. Just cooking. Normal cooking."
     Kanami "Ahh, normal cooking huh? Well… let's just hope it turns out well, hm?"
-    hide Kanami with with moveoutleft
+    hide Kanami with moveoutleft
     pause 1
     show BE angry
     BE "Darn it. She has a point though, don't want this recipe ruined."
@@ -8361,9 +8360,9 @@ label BE038A_c1_after:
     "I dipped a butter knife into the vat of caramel sauce and pulled it up to my mouth, away from the pot."
 
 if checkSkill("Art", ">=", 10): 
-        label BE038A_p1_1
+        jump BE038A_p1_1
 else:
-        label BE038A_p1_2
+        jump BE038A_p1_2
 
 label BE038A_p1_1:
     MC "I think it needs a little something else. Maybe some salt? Let me see if I can find that flaky stuff."
