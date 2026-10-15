@@ -23144,6 +23144,7 @@ label AE098G:
     pause 1
 
     scene Tokyo Abandoned Building
+    play music OminousPresence
     show AE neutral
     with fade
     "When the door opened, Shiori's home came into full view. The walls were stained and tanned, holes punched or cracked into the drywall adjacent leaving bits of wall on the bare baseboards of the interior, and graffiti spray painted near the window."

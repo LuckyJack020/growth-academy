@@ -21,6 +21,7 @@ default TakamuraOutfit = OutfitEnum.DEFAULT
 default KanamiOutfit = OutfitEnum.DEFAULT
 default ChibukiOutfit = OutfitEnum.DEFAULT
 default RMOutfit = OutfitEnum.DEFAULT
+default KokutanOutfit = OutfitEnum.DEFAULT
 default NurseOutfit = OutfitEnum.DEFAULT
 default YukiOutfit = OutfitEnum.DEFAULT
 default IchiroOutfit = OutfitEnum.DEFAULT
@@ -1026,7 +1027,7 @@ init python:
         global TakoPrevOutfit
         global TakoNsfwOutfit
         global TakoNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.ALTERNATE or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.ALTERNATE or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COSTUME:
             TakoNsfw = False
             TakoOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -1038,7 +1039,7 @@ init python:
 
     def setTomoOutfit(o):
         global TomoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COSTUME:
             TomoOutfit = o
 
     def setNatsOutfit(o):
@@ -1064,7 +1065,7 @@ init python:
 
     def setOkishoOutfit(o):
         global OkishoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.TRADITIONAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.DRESS or o == OutfitEnum.TRADITIONAL or o == OutfitEnum.COSTUME:
             OkishoOutfit = o
 
     def setSakuraOutfit(o):
@@ -1079,7 +1080,7 @@ init python:
 
     def setJinekoOutfit(o):
         global JinekoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME:
             JinekoOutfit = o
 
     def setRyokoOutfit(o):
@@ -1089,7 +1090,7 @@ init python:
 
     def setTakamuraOutfit(o):
         global TakamuraOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.COOKING:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.COOKING or o == OutfitEnum.COSTUME:
             TakamuraOutfit = o
     
     def setMinoriOutfit(o):
@@ -1114,8 +1115,13 @@ init python:
     
     def setYukiOutfit(o):
         global YukiOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.COSTUME:
             YukiOutfit = o
+
+    def setKokutanOutfit(o):
+        global KokutanOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+            KokutanOutfit = o
 
     def setIchiroOutfit(o):
         global IchiroOutfit
@@ -1283,6 +1289,7 @@ label start:
         RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
+        KokutanOutfit = OutfitEnum.DEFAULT
         IchiroOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
@@ -1356,6 +1363,7 @@ label splashscreen:
         RMOutfit = OutfitEnum.DEFAULT
         NurseOutfit = OutfitEnum.DEFAULT
         YukiOutfit = OutfitEnum.DEFAULT
+        KokutanOutfit = OutfitEnum.DEFAULT
         IchiroOutfit = OutfitEnum.DEFAULT
     scene black
     with Pause(1)
