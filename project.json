@@ -6,7 +6,8 @@
   "build_update": false,
   "packages": [
     "win",
-    "mac"
+    "mac",
+    "linux"
   ],
   "add_from": true,
   "tutorial": false

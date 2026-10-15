@@ -798,6 +798,17 @@ init python:
     )
     ost.manualDefineList.append(theme_GnG)
 
+    theme_OmP = ost.soundtrack(
+        name = "Ominous Presence",
+        path = "Audio/BGM/OminousPresence.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Horror Ambience",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(theme_OmP)
+
     ## Base Template
     ######################################
 

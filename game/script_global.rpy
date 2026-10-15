@@ -1242,6 +1242,7 @@ define audio.Nembutsu = "Audio/BGM/scene_nembutsu.ogg" #Morning Mist - altTitle
 define audio.Nostalgia = "Audio/BGM/nostalgia.ogg"
 define audio.NostalgiaSax = "Audio/BGM/nostalgia_sax.ogg"
 define audio.OkishoSongDemo = "Audio/BGM/OkishoSongDemo.ogg"
+define audio.OminousPresence = "Audio/BGM/OminousPresence.ogg"
 define audio.OuttaMyFace = "Audio/BGM/OuttaMyFace.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.PlugAndPlay = "Audio/BGM/PlugAndPlay.ogg"
