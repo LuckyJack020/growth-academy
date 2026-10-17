@@ -12294,12 +12294,16 @@ label MC010_RM_afterchoice:
     "Daichi hung his head like a whipped pup. Reaching into the pocket of his trousers, he pulled out a crumpled piece of paper and handed it to me."
     MCT "What's this now?"
     "Upon inspection, the paper had a message written on it. The handwriting was elegant and pretty, damn near a work of art, a far cry from Daichi's manic chicken scratches."
-    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \"Dear Brother, did you seriously think I was going to leave - whatever that thing was I took from you -  in my own dorm?\"{/size}{/font} "
-    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \"I have no idea what that blasted thing is or what its purpose is, but knowing you, it can't be good. Whatever it is, I refuse to make myself an unknowing accomplice due to your own foolishness.\"{/size}{/font} "
-    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \"I found a safe place for it and you will never find it, but you are of course welcome to try.\"{/size}{/font} "
-    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3} \" XOXO - Sorry for this little scheme\"{/size}{/font} "
+    hide RM with dissolve
+    show PanelPaper1 with dissolve
+    show text _("{font=gui/Caveat-Bold.ttf}{size=*1.4}{color=#000000}Dear Brother, did you seriously think I was going to leave - whatever that thing\n was I took from you -  in my own dorm? I have no idea what that blasted thing is \n or what its purpose is, but knowing you, it can't be good. Whatever it is,\n I refuse to make myself an unknowing accomplice due to your own foolishness.\n I found a safe place for it and you will never find it, but you are of course welcome to try.\n XOXO - Sorry for this little scheme.{/color}{/size}{/font}") at Position(ycenter=0.61)
+    with dissolve
+    pause
+    hide PanelPaper1
+    hide text
+    with dissolve
     MC "...Little scheme?"
-    show RM angry-2
+    show RM angry-2 with dissolve
     RM "You see? The whole thing was rigged from the start!" 
     MC "I think you're reading too much into this. She could have written this right after she took it from you, knowing you'd try at {i}some{/i} point."
     "I said that, but now my curiosity was piqued as to just what happened with Tomo and Yuki at the yukata shop." 
@@ -12779,25 +12783,67 @@ label MC010_MC:
     "My eyes went to the large choice of drawers. I skimmed, keeping an eye out for my number."
     if routelock == "AE":
         "I reached forward, taking the 007 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'Your presence has an effect on everyone around you. Understanding it will decide the future of yourself and others.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}Your presence has an effect on everyone around you.\n Understanding it will decide the future of yourself and others.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     elif routelock == "PRG":
         "I reached forward, taking the 055 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'The vile seeds of the past hinder the growth of the brightest future. Care and patience will yield the richest sunrise.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}The vile seeds of the past hinder the growth of the brightest future.\n Care and patience will yield the richest sunrise.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     elif getHighestAffection() == ("GTS") and isEventCleared("GTS026"):
         "I reached forward, taking the 235 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'Let go and hold tight; close your eyes and see clearly; see clearly, lest the heart be parted of blood.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}Let go and hold tight;\n Close your eyes and see clearly;\n See clearly, lest the heart be parted of blood.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     elif getHighestAffection() == ("WG") and isEventCleared("WG025"):
         "I reached forward, taking the 088 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'The one who seeks wisdom over wealth will find both.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}The one who seeks wisdom over wealth will find both.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     elif getHighestAffection() == ("FMG") and isEventCleared("FMG024"):
         "I reached forward, taking the 115 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'You will be the light that helps guide them out of the darkness.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}You will be the light that helps guide them out of the darkness.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     elif getHighestAffection() == ("BE") and isEventCleared("BE025"):
         "I reached forward, taking the 808 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'Be prepared to broaden your horizons.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}Be prepared to broaden your horizons.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     else:
         "I reached forward, taking the 034 drawer and sliding it open, pulling out the piece of omikuji."
-        MCT "'The purpose of life is a life of purpose.'"
+        show PanelPaper1 with dissolve
+        show text _("{font=gui/Caveat-Bold.ttf}{size=*1.5}{color=#000000}The purpose of life is a life of purpose.{/color}{/size}{/font}") at Position(ycenter=0.60)
+        with dissolve
+        pause
+        hide PanelPaper1
+        hide text
+        with dissolve
     "I tucked the paper into my pocket, folded it a bit, and bowed to the monk."
     "I turned, heading down the line of stands again, this time into the park."
     scene black with fade

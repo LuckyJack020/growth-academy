@@ -7528,7 +7528,13 @@ label GTS036:
     stop music
     "He handed me the box and returned to his room. Looking over the package, there appeared to be no markings besides the address."
     MCT "I wonder who could've sent me this. I doubt my parents would; they normally only send that stuff to Tomo for some reason."
-    Letter "{font=gui/Caveat-Bold.ttf}{size=*1.3}Dear Hotsure-san,{w} our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind.{w} Please accept this gift as a display of hope towards your futures.{/size}{/font}"
+    show PanelPaper1 with dissolve
+    show text _("{font=gui/Caveat-Bold.ttf}{size=*1.4}{color=#000000}Dear Hotsure-san,\n Our meeting the other night was reassuring in many ways to my wife and I.\n We know that our eldest is a special person, and she deserves someone of equal kind.\n Please accept this gift as a display of hope towards your futures.{/color}{/size}{/font}") at Position(ycenter=0.57)
+    with dissolve
+    pause
+    hide PanelPaper1
+    hide text
+    with dissolve
     "After I set the letter down, I began disassembling the brown packaging. Lifting the lid, I spotted an ornate, lacquered black box sitting amongst the packing material. With leaden curiosity, I lifted the box out, and gently opened the smaller box."
     "Inside was a tanto, its flawless blade glaring white in the afternoon sun."
     MCT "...How the hell did this get through customs?"

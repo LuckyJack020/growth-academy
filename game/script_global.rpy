@@ -1183,6 +1183,9 @@ image rain:
     0.1
     repeat
 
+#Panels Overlays
+image PanelPaper1 = "Graphics/ui/overlays/panelpaper1.webp"
+
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"
 define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
