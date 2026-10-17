@@ -85,7 +85,7 @@ label BE001_c1:
     show BE surprised at center, Transform(xzoom=-1)
     BE "I know I said I was in your care, but I didn't think you'd take in that way..."
     MC "Wait, wait, that was a big misunderstanding, I didn't mean to imply anything that-"
-    show BE wink at center, Transform(xzoom=1)
+    show BE guilty at center, Transform(xzoom=1)
     BE "Bahahaha! Oh wow, Kei-chan. Heh, it's too easy to mess with you sometimes, you know that?"
     MC "Yeah, you've certainly taught me that lesson many times in the past. Ow..."
     "I winced as she gave me a playful punch in the arm. One that went a little too deep to be completely painless."
@@ -180,7 +180,7 @@ label BE001_after:
     show BE happy
     BE "Ahh... just like old times, huh Kei-chan?"
     MC "What do you mean?"
-    BE "I mean, you, me, and the roof! The original power trio. How many times do you think we snuck up to the roof when we were younger? 100? 200?"
+    BE "I mean, you, me, and the roof! The original power trio. How many times do you think we snuck up to the roof when we were younger? Hundred? Two hundred?"
     MC "It was probably a few dozen times if that."
     show BE sad
     BE "Eh, you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."
@@ -203,7 +203,7 @@ label BE002:
     "The sun shined down on the courtyard as I walked back from class, stretching my arms above my head."
     MCT "Man, this place is gonna take a bit of getting used to."
     "With a sigh, I began to round the corner, heading out towards the dorm to get some needed rest after another day of classes."
-    show BE neutral:
+    show BE surprised:
         xpos 1.0 xanchor 0.5 yalign 1.0
         linear 0.5 xpos 0.5
     UNKNOWN "W-Woah!"
@@ -281,7 +281,7 @@ label BE002:
     MC "Me? Honestly I'm not sure. I hadn't given it much thought yet. I think I might hold off until I know for sure what my growth factor is. I really don't have any clue yet. I wouldn't want to pick something I'd be unable to do once I started growing."
     BE "That's a good point. Would be really lame to get good at something and then end up being unable to do it. So, probably best if you don't pick something like tap-dancing for when you end up getting gigantic feet."
     MC "If I end up getting gigantic feet, I'll join the soccer club just to show you how hard I'll be able to kick."
-    show BE happy
+    show BE smug
     BE "Hehehe, I'd like to see that."
     "Honoka smiled as she gave me a little tap on the arm. I gave a sharp inhale and laughed as I began to rub the spot where she hit me. Forget worrying about her kicks, her punches still had a good sting to them after all these years."
     "Maybe it's her subconscious way of making up for when she bumped into me with her chest earlier?"
@@ -293,7 +293,7 @@ label BE002:
     show BE neutral
     BE "No, I think that I'll find out later. I mean, I'm like, 95%% positive it's my chest to begin with so even once I find out, it probably won't be a big deal."
     MC "Technically, no matter what you're getting, it's going to be a \"big\" deal."
-    show BE happy
+    show BE wink
     BE "Pfff, that was lame, Kei-chan."
     MC "Hey, I'm trying. I like seeing you laugh."
     MCT "Don't say \"Because it makes my boobs bounce?\". Don't say \"Because it makes my boobs bounce?\". {i}PLEASE{/i} Don't say \"Because it makes my boobs bounce?\"."
@@ -304,10 +304,12 @@ label BE002:
     show BE happy
     BE "Heh, I guess so. I can see your logic there, Kei-chan. But then you really need to work on your sense of humor."
     MC "Hey, you make me laugh all the time, so my sense of humor is fine. You need to get one instead."
-    show BE neutral
+    show BE guilty
     BE "I'll get one when you get fitted for your size 38 feet."
     MC "Hehehe, dangit, Honoka. See, got me laughing that easily."
+    show BE happy
     BE "I know. That's because I'm awesome."
+    show BE smug
     "Honoka smiled and put her fists on her hips in a haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding."
     "We stood there chuckling for a bit more before Honoka noticed the time and decided to get going. I nodded and waved goodbye, sticking my hands in my pockets before heading off myself."
     jump daymenu
@@ -591,7 +593,7 @@ label BE003_c1_3:
     MC "Fine, what was the other win that gives you the majority over me?"
     show BE neutral
     BE "It must have been in the summer, I guess the last one before we had to split up. You tried to shoot a goal like, four times in a row, and you just kept hitting the side of the goal."
-    show BE smug
+    show BE guilty
     BE "Every. Single. Time. It was funny the first three times, but the fourth one was just sad."
     MC "..."
     show BE shrug
@@ -744,10 +746,10 @@ label BE004:
     show BE unamused
     BE "Uhhh duh, I was a curry baby back then. You should see me now!"
     MC "... Chicken or pork katsu?"
-    show BE angry
+    show BE guilty
     BE "... How dare you, Keisuke Hotsure…"
     MC "..."
-    show BE shrug
+    show BE neutral
     BE "..."
     MC "... Pffff HAHAHA-"
     show BE happy
@@ -2392,8 +2394,10 @@ label BE013:
     "Honoka smiled as she scrolled through her messages and got to mine…"
     "As she then proceeded to spam me with emojis."
     MC "Wha-HEY!"
+    show BE guilty
     BE "Ya comfortable yet?"
     MC "Y-Yes, you gremlin! I get the point!"
+    show BE smug
     BE "Hehe~"
     show BE neutral
     BE "Anyway, what did you want to talk about?"
@@ -6485,13 +6489,15 @@ label BE029:
 label BE030:
     $setProgress("BE", "BE031")
     $lockRoute("BE")
-    scene School Planter with fade
+    $setTimeFlag("size3exp")
+    scene Dorm Exterior with fade
     play music HigherEdu
     "As usual, there was only a certain amount of time I could handle Daichi before I felt the need to escape my room. Maybe \"escape\" was a strong word."
     "It certainly wasn't one I would ever use around him, or else he might think I was so invested about his theories on Seichou Academy that I wanted to flee."
     "That certainly wasn't the case, not when it had been made clear multiple times that it'd been helpful for me and others. Not to mention I had people I considered friends here."
     "The weather as I stepped outside was warmer than I expected. Not so hot as to make me miserable, but enough to make staying still for too long seem like a bad idea."
-    "Still, I thought it would be nice to spend some time walking around the campus for a while. "
+    "Still, I thought it would be nice to spend some time walking around the campus for a while."
+    scene School Planter with fade
     "I decided to make my first stop by the garden area, figuring that the sunlight would make the blooming plants look particularly pretty."
     "I just about felt the sun starting to bake my skin a little. It was relieved by a breeze that rolled against me and brushed my hair back."
     "I didn't consider myself a botanist by any means, but the flowers did look splendid. Naomi was doing a good job, it seemed. I'd have to compliment her the next time I ran into her."
@@ -6501,8 +6507,10 @@ label BE030:
     show BE happy with dissolve
     BE "Helloooo Kei-chan! What are you up to?"
     MC "Honestly, not much. Was just kind of killing time, strolling around. Did you want to do something? I'm free."
+    show BE smug
     BE "Sounds good, I was hoping you'd say something like that. Wanted to hang out, and you're my go-to hanging-out person."
     MC "I'm flattered you think so highly of me."
+    show BE happy
     "Honoka giggled, and took my hand. I eagerly squeezed her fingers in return."
     show BE neutral
     BE "Do you want to just, walk around for a while or something?"
@@ -6537,8 +6545,9 @@ label BE030:
     "Honoka rubbed her fingers along mine as we strolled along. No destination in mind, just meandering for the sake of staying in motion. The temperature was just perfect for such a casual stroll."
     "Something about Honoka's hand felt extra soft today. The way her fingers squeezed my hand was comforting. With the gentlest bit of heat coming down on us, her lazy touch was soothing."
     "She even smelled super nice. I never knew if she wore perfume or not, but she'd done something today. Maybe it was just a new shampoo or soap, but the aroma was intoxicating."
+    scene School Front with fade
     "We soon found ourselves strolling closer to the outer gates of the academy, where the sounds of other students grew further away until we couldn't even hear them."
-    show BE neutral
+    show BE neutral with dissolve
     BE "Ah, this school really is pretty. We lucked out coming here, didn't we, Kei-chan?"
     MC "Did we? I mean, the location's nice. But, the reason for us being here feels like it takes away from that a bit."
     show BE sad
@@ -6555,6 +6564,10 @@ label BE030:
     MC "You've... wow, you've really got a way with words sometimes, you know that?"
     show BE neutral
     BE "I do."
+    scene Lake Road
+    show BE neutral
+    with fade
+    play music Love
     "The two of us found ourselves at a familiar little spring, standing at a bridge that crossed the flowing water. We both stared into it, resting on the arch of the bridge."
     "It was quiet. Which by itself wasn't a bad thing. It really helped me appreciate the stillness of the lake. I rested my arms against the wood and leaned forward, watching the serene scene."
     "Eventually a dragonfly stopped by and broke the surface of the water, sending a faint ripple across the water until the waves ceased."
@@ -6694,7 +6707,8 @@ label BE030_neutral:
     jump daymenu
 
 label BE031:
-    $setTimeFlag("size3exp")
+    $setSize(3)
+    $setTimeFlag("size3")
     $setProgress("BE", "BE032")
     scene Dorm Hallway with fade
     play music HigherEdu
@@ -6710,7 +6724,7 @@ label BE031:
     "I stood there for a moment and waited for an answer."
     MC "Honoka?"
     BE "Sorry! Just a sec. Dang socks all over the place. Coming!"
-    #[SFX- Door_Open]
+    play sound DoorOpen
     show BE neutral
     show NoHairpinBE
     with dissolve
@@ -6729,7 +6743,7 @@ label BE031:
     show Dorm BE behind BE with CropMove(0.35, "wipeleft")
     show BE surprised with hpunch
     #[Transition- wipe][(S)Or other  fast  transition, I'm not sure what options we have?]
-    play music Steamy
+    play music Stardust
     "Being unprepared for such an act, I was caught off-balance. My feet tripped over each other, and I began fumbling towards Honoka's chest."
     "She luckily reached out to grab me, preventing me from falling onto the floor, and ensuring I fell right onto her bust instead."
     "That, while nice as it always was, gave me the final clue to figuring out what was different about Honoka."
@@ -6737,6 +6751,7 @@ label BE031:
     "I hadn't kept tabs on what color bra she wore on a day-to-day basis. Typically whatever bra she had was hidden by her shirt, and it wasn't easy to tell the color. But the black she wore now stood out against the white of her uniform top."
     show BE aroused
     BE "Heh, don't get started, yet, Kei-chan. Let me lock the door first."
+    play sound DoorShut
     "Honoka helped me up, and giggled to herself as she made her way to the door. She locked it and gave it a firm tug for good measure."
     show BE happy
     BE "Okay!"
@@ -6832,8 +6847,8 @@ label BE031_c1_after:
     "Another button undid itself, and the pillows of flesh that tried to escape looked like someone had overfilled cake tins."
     "My mouth went dry thinking about what hid behind the fifth button, and the bra beneath. I begged my mind not to overthink it. I didn't want expectations, whether they be exceeded or not. I just wanted to see them."
     "Honoka let out the cutest groan as the last button was undone, and her shirt soon hit the floor afterwards. I was pretty sure I made a whimpering sound, like a puppy that saw a treat held just out of its reach."
-    $ persistent.unlock_cgBE031 = True
-    show cg BE031 with dissolve
+    $setBEOutfit(OutfitEnum.TOPLESS)
+    show BE aroused
     BE "Well. This is it. Or, rather. These are them."
     "Honoka undid the clasp of her bra as quickly as she could. Rather than letting it fall, she carefully placed it aside, before standing up straight to let me get the best view of her breasts."
     "My hand went up to my mouth in shock. I knew they were big. I'd felt them."
@@ -6843,6 +6858,8 @@ label BE031_c1_after:
     "While I'd seen parts of her boobs before, this was the first time I saw her nipples, and they were great to look at as well."
     "Firm and erect, pointing at me and begging me to take hold of them. Honoka moved closer, the slightest motions making her rack wobble up and down."
     "With her bosom up closer to my face, I could even see the soft bumps of her areolae, and how my exhalation against her skin made more goosebumps appear."
+    $ persistent.unlock_cgBE031 = True
+    show cg BE031 with dissolve
     "Honoka's body shivered as I looked up at her, past what seemed like a mile of cleavage just to see her smiling visage."
     "There was a thwump, and suddenly my lap overflowed with Honoka's breasts. Her hands worked magic underneath them, as her fingers found what they needed to, in order to get my pants fully undone."
     "A quick lift of my backside and soon I was completely bottomless."
@@ -6874,8 +6891,8 @@ label BE031_c1_after:
     "My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
     MC "H-Honoka..."
     "I finally found my voice, as weak and groggy as it was. With a gulp, and the arms of the chair, I straightened my posture to look at Honoka. God, she was gorgeous."
-    hide cg
-    stop music
+    hide cg with dissolve
+    play music Love
     "Even sporty, peppy Honoka seemed somewhat exhausted after the workout she'd given herself, and I couldn't blame her."
     show BE aroused
     BE "It, heh, it was good, right?"
@@ -6901,8 +6918,6 @@ label BE031_c1_after:
     jump daymenu
 
 label BE032:
-    $setSize(3)
-    $setTimeFlag("size3")
     $setProgress("BE", "BE033")
     $setFlag("XX32")
     $setBEOutfit(OutfitEnum.ALTERNATE)
