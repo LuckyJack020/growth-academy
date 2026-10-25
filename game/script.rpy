@@ -18,6 +18,7 @@ default RyokoOutfit = OutfitEnum.DEFAULT
 default JinekoOutfit = OutfitEnum.DEFAULT
 default DaitaroOutfit = OutfitEnum.DEFAULT
 default TakamuraOutfit = OutfitEnum.DEFAULT
+default HageshiOutfit = OutfitEnum.DEFAULT
 default KanamiOutfit = OutfitEnum.DEFAULT
 default ChibukiOutfit = OutfitEnum.DEFAULT
 default RMOutfit = OutfitEnum.DEFAULT
@@ -1048,7 +1049,7 @@ init python:
         global NatsNsfwOutfit
         global NatsOutfit
         global NatsNsfw
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.UNDERWEAR or o == OutfitEnum.GYM or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.CASUAL or o == OutfitEnum.COSTUME:
             NatsNsfw = False
             NatsOutfit = o
         elif o == OutfitEnum.NUDE:
@@ -1093,6 +1094,12 @@ init python:
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.COOKING or o == OutfitEnum.COSTUME:
             TakamuraOutfit = o
     
+    def setHageshiOutfit(o):
+        global HageshiOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.COSTUME:
+            HageshiOutfit = o
+
+
     def setMinoriOutfit(o):
         global MinoriOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ALTERNATE:
@@ -1284,6 +1291,7 @@ label start:
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
+        HageshiOutfit = OutfitEnum.DEFAUL
         KanamiOutfit = OutfitEnum.DEFAULT
         ChibukiOutfit = OutfitEnum.DEFAULT
         RMOutfit = OutfitEnum.DEFAULT
@@ -1358,6 +1366,7 @@ label splashscreen:
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
+        HageshiOutfit = OutfitEnum.DEFAUL
         KanamiOutfit = OutfitEnum.DEFAULT
         ChibukiOutfit = OutfitEnum.DEFAULT
         RMOutfit = OutfitEnum.DEFAULT

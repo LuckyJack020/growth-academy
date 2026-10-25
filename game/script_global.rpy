@@ -96,22 +96,25 @@ define Ichiro = Character('Ichiro', color="#FF3300") #Ichiro Mizawa - Okisho’s
 define Ichia = Character('Ichia', color="#FF3300") #Ichiro Mizawa - Stage Name
 
 #Other Students
-define Fumika = Character('Fumika', color="#FF91DC") #GTS Route
-define Genji = Character('Genji', color="#C0C0C0") #MC Route
-define Gou = Character('Gou', color="#C0C0C0") #RM Route
-define Etsuko = Character('Etsuko', color="#C0C0C0") #MC Route
+#Other Students
+define Fumika = Character('Fumika', color="#FF91DC") #Basketball Club Member
+define Genji = Character('Genji', color="#C0C0C0") #MC Neighbor, Announcer
+define Gou = Character('Gou', color="#C0C0C0") #Giants Dorm Student
+define Etsuko = Character('Etsuko', color="#C0C0C0") #Cooking Club Member
 define Hamikawa = Character('Hamikawa', color="#C0C0C0") #AE Route
-define Haruhiro = Character('Haruhiro', color="#C0C0C0") #BE Route
-define Hina = Character('Hina', color="#C0C0C0") #GTS Route
-define Hotaru = Character('Hotaru', color="#C0C0C0") #MC Route
-define Ishida = Character('Ishida', color="#C0C0C0") #GTS Route
-define Junsei = Character('Junsei', color="#C0C0C0") #RM Route
-define Koneko = Character('Koneko', color="#C0C0C0") #BE Route
-define Michiko = Character('Michiko', color="#C0C0C0") #PRG Route
-define Miyano = Character('Miyano', color="#C0C0C0") #GTS Route
-define Sakie = Character('Sakie', color="#C0C0C0") #BE Route
-define Takeda = Character('Takeda', color="#C0C0C0") #MC Route
-define Ume = Character('Ume', color="#C0C0C0") #GTS Route
+define Haruhiro = Character('Haruhiro', color="#C0C0C0") #Archery Club Member
+define Hina = Character('Hina', color="#C0C0C0") #Giants Dorm Student
+define Hotaru = Character('Hotaru', color="#C0C0C0") #Cooking Club Member
+define Ishida = Character('Ishida', color="#C0C0C0") #Giants Dorm Student
+define Itachi = Character('Itachi', color="#C0C0C0") #Male Student Council Member
+define Junsei = Character('Junsei', color="#C0C0C0") #Giants Dorm Student
+define Koneko = Character('Koneko', color="#C0C0C0") #Soccer Club Member
+define Michiko = Character('Michiko', color="#C0C0C0") #Cooking Club Member
+define Miyano = Character('Miyano', color="#C0C0C0") #Giants Dorm Student
+define ReinaM = Character('Reina', color="#C0C0C0") #Female Student Council Member
+define Sakie = Character('Sakie', color="#C0C0C0") #Basketball Club Member
+define Takeda = Character('Takeda', color="#C0C0C0") #Track Team Member
+define Ume = Character('Ume', color="#C0C0C0") #Giants Dorm Student
 
 #Background Characters
 define Akio = Character('Akio', color="#C0C0C0") #GTS Route
@@ -952,9 +955,9 @@ image HR annoyed = "Graphics/minor/faculty/HR/annoyed.webp"
 image HR unique = "Graphics/minor/faculty/HR/unique.webp"
 image HR unique-2 = "Graphics/minor/faculty/HR/unique-2.webp"
 
-image Hageshi neutral = "Graphics/minor/faculty/hageshi/neutral.webp"
-image Hageshi angry = "Graphics/minor/faculty/hageshi/angry.webp"
-image Hageshi satisfied = "Graphics/minor/faculty/hageshi/satisfied.webp"
+image Hageshi neutral = "Graphics/minor/faculty/hageshi/[HageshiOutfit]/neutral.webp"
+image Hageshi angry = "Graphics/minor/faculty/hageshi/[HageshiOutfit]/angry.webp"
+image Hageshi satisfied = "Graphics/minor/faculty/hageshi/[HageshiOutfit]/satisfied.webp"
 
 image Takamura neutral = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/neutral.webp"
 image Takamura flattered = "Graphics/minor/faculty/takamura/[TakamuraOutfit]/flattered.webp"
@@ -1056,7 +1059,7 @@ image Kanami happy = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/happy.we
 image Kanami sad = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/sad.webp"
 image Kanami surprised = "Graphics/minor/kanami/[globalsize]/[KanamiOutfit]/surprised.webp"
 
-image Kokutan neutral = "Graphics/minor/kokutan/neutral.webp"
+image Kokutan neutral = "Graphics/minor/kokutan/[KokutanOutfit]/neutral.webp"
 
 image Minori neutral = "Graphics/minor/minori/[MinoriOutfit]/neutral.webp"
 image Minori happy = "Graphics/minor/minori/[MinoriOutfit]/happy.webp"
