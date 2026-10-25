@@ -15577,7 +15577,7 @@ label WG058:
     scene Woods with fade
     $setWGOutfit(OutfitEnum.CASUAL)
     $setMCOutfit(OutfitEnum.CASUAL)
-    play music HigherEdu
+    play music Country
     "The weather has been really nice recently. The scorching summer from our vacation at the beach had faded into a much more temperate fall climate over the island by now."
     "I knew I'd be kicking myself later if I didn't do something to take advantage of the nice weather before winter set in."
     "Thinking ahead of time for once, I asked Alice out for an outdoor lunch date so we could share some time together during this all-too-brief part of the season."
@@ -15612,7 +15612,7 @@ label WG058:
     "Even if Alice was just impatient, more so than getting tired from the walk, I certainly was getting tired of hauling this giant picnic basket with all the food this far."
     "After rounding one last hill, we got to the spot that I had planned on... or at least close enough to it."
     scene Mountains
-    show WG surprised
+    show WG surprised-2
     with fade
     WG "Keisuke! This looks amazing."
     show WG happy
@@ -15622,12 +15622,14 @@ label WG058:
     MC "I know right? Who would have thought? It's the perfect backdrop for our lunch date."
     "I motioned with my right hand to the picnic basket carried in the crook of my left arm."
     MC "Shall we?"
+    show WG happy-2
     WG "Yes, we shall."
     "I spread out the blanket I brought, one of those classic style red and white checkered patterns you'd see in a movie or a commercial."
     "Maybe it was a bit cliché, but the iconic picnic pattern just stood out from the other patterns they had available at the store where I bought it."
     "It took a bit of smoothing to tamp the blanket down on top of the grass and make sure it was spread out to reveal its true square shape."
     "Sufficiently smoothed out, I patted a spot on the blanket next to where I was sitting, inviting Alice to come join me."
     "Taking her hand in mine, I assisted her with her descent, helping her to sit as gently and elegantly as could be reasonably expected given her size."
+    show WG neutral-2
     "{i}Bloomp{/i}!"
     "I felt a soft squishy thud through the ground when she finally landed. Something told me I didn't have to worry about the picnic cloth blowing away in the autumn breeze this afternoon."
     if isEventCleared("WG059") or isEventCleared("WG059S"):
@@ -15640,7 +15642,7 @@ label WG058:
         "She had made wraps- a more elegant, less messy version of a sandwich. Cut into bite size pieces, these were perfect for the occasion."
         "They were pretty fancy too, she really went all out with the flavor combinations: steak and arugula, turkey avocado bacon, and caprese."
         "For a side, she made real home style kettle chips with sea salt and vinegar. Plus, for dessert there was not just one, but two: blackberry muffins and French macarons."
-    show WG surprised
+    show WG surprised-2
     WG "Keisuke. This looks... exquisite!"
     show WG haughty
     "Alice quickly, but still gracefully, per her composed nature, snatched up a sampling of each of the entrée offerings. Alice delivered her official verdict after having evaluated all the offerings to her satisfaction."
@@ -15649,8 +15651,10 @@ label WG058:
     show WG worried
     WG "But it's all so much!"
     MCT "We'll see about that."
-    MC "Well, we're a little ways away to make other plans if I hadn't thought to bring enough. Besides, you can always take the rest back with you to eat later."
-    show WG neutral
+    MC "Well, we're a little ways away to make other plans if we ended up staying longer and running out." 
+    "That was my cover story anyway. In all honesty her appetite was always growing, so I never knew where the new set point was."
+    MC "Besides, you can always take the rest back with you to eat later."
+    show WG pondering
     WG "That is true."
     "Alice and I worked through the spread that was before us. I was relieved to finally receive the verdict if the culinary offerings provided had satisfied her fine palate."
     show WG happy
@@ -15660,12 +15664,19 @@ label WG058:
     MC "Nothing, I'm just glad to see you like it."
     show WG neutral
     WG "Well I certainly do. This has been lovely so far."
+    show WG happy-2
     MCT "So far? Well knowing me I'll probably eventually say something stupid to ruin it."
+    show WG neutral
     "As the afternoon crawled along a bit, Alice started making her way into the desserts. Contrary to her initial doubts, leftovers were not going to be a problem."
     "That was to be expected, what I didn't expect was to see we had some company. They were a ways off in the distance, but they were definitely students from the school."
     "Judging by the equipment some of them were carrying and the costumes worn by a couple of them, it must have been members of the film club. Looks like they thought to make use of the scenic backdrop here today."
     "One of them was giving orders. She must have been the director."
-    if getFlag("Meet_Ryoko") and isEventCleared("WG011"):
+    if isEventCleared("RM007B"):
+        "I recognised Ryoko out of the group giving orders, pointing here and there." 
+        "As surprised as I was to see her out here, it didn't surprise me she'd be trying to take advantage of the nice weather to get the perfect shot for a setting like this."
+        if not getFlag("RM009B_Ryoko"):
+            MCT "I wonder how their other movie went, the one with the silver brief case. Hopefully it turned out alright in the end." 
+    elif getFlag("Meet_Ryoko") and isEventCleared("WG011"):
         "I recognised Ryoko out of the group. I met her in passing before but I think I first saw her when I went with Alice and Aida to the screening of that chick-flick movie Aida liked that the film club put on." 
     elif getFlag("Meet_Ryoko") and not isEventCleared("WG011"):
         "I recognised Ryoko out of the group. I met her in passing before but didn't know her all that well. She was involved in the film club, I knew that much."
@@ -15679,8 +15690,9 @@ label WG058:
     "They were a good distance from us, but her director's cues were still audible to us." 
     "I don't know too much about cinematography,{w} but they were clearly going for the \"long lost lovers finally reunited\" vibe as the costumed actors raced across the field to embrace each other."
     MC "Looks like the film club is getting some footage. Not quite dinner and a movie, but lunch and a preview isn't too bad for a date, huh?"
-    show WG stern
-    WG "Tsk, they're interrupting our view of the mountain vista. Cinema is the lowest form of the visual arts. How much more cliché than this typological scene could they get?"
+    show WG bored
+    WG "As much as I appreciate the visual arts, I'd prefer an unblemished view of the mountain vista than the spectacle of the film club's usual amateur antics." 
+    WG "The far off sighted turned long running united scene... Honestly, wow much more cliché than this typological scene could they get?"
     show Ryoko annoyed
     Ryoko "Cut! We're going to need to shoot that one again. Remember— don't look at the camera!"
     "Given the level of experience the actors had, it looked like they were going to need plenty of takes before they were going to wrap up shooting."
@@ -15691,23 +15703,28 @@ label WG058:
     "Whether she was happy, mad, or being contemplative, against this idyllic backdrop, Alice looked like a movie star to me."
     "She certainly had all the makings of one: the poise, the talent, passion for the arts... and a flair for the dramatic."
     "I could see it, pantomiming the student director from earlier, I framed Alice's face with a box formed from the first two fingers of each hand."
-    show WG doubt
+    show WG coy
     WG "What are you doing?"
     MC "How about it, Alice? Have you ever thought about wanting to be a famous movie star? You've got the talent, looks, and work ethic to make it happen."
     MCT "Not to mention the connections..."
-    show WG happy
+    show WG happy-2
     WG "Flatterer."
     show WG haughty
-    WG "If I'm going to be famous, I'd want it to be for good reasons. Movies are for the uncultured masses that don't have an appreciation for high art and in-depth story telling."
-    MCT "Ouch. I resemble that remark."
+    WG "If I'm going to be famous, I'd want it to be for something with greater importance in the world."
+    WG "Movies, for all their entertainment value are by and large a \"low art\"medium designed to sell buckets of popcorn rather than a suitable vehicle for in-depth story telling that leaves a lasting cultural footprint."
+    MC "Hmm, you might have a point there, I don't remember much about the last movie I saw."
+    show WG sly
     "Still holding out my hand formed picture frame, I could tell she found it both annoying and funny at the same time."
     MC "Sure, major blockbusters are pretty mindless and dumbed down, but what about fancy art house films, silent movies, or even musicals?"
-    show WG neutral
-    WG "Musicals? Like the ones in theatre?"
-    MC "The very same. In fact, most movie musicals are just adaptations of theatrical musicals."
+    show WG pondering
+    WG "I suppose. But then again that's essentially taking a high art medium like theatre and making a cheaper copy of it."
+    show WG neutral-2
+    MC "You're probably right, but how else do you think you can get high art distributed to the masses without the right vehicle? Not everyone lives on broadway."
     "I stopped doing the picture frame with my hands. I was getting tired of holding it."
-    show WG neutral
-    WG "Well, what's an example of a good one?"
+    show WG pondering
+    play music WGAlt
+    WG "You might be on to something with that. What's your favorite example?"
+    MCT "Shit! She's calling my bluff. Better think of something impressive sounding."
     menu:
         "My Fairest Lady" if checkSkill("Art", ">", 7):
             jump WG058_c1_1
@@ -15718,77 +15735,80 @@ label WG058:
 
 label WG058_c1_1:
     MC "My Fairest Lady."
-    show WG haughty
-    WG "Oh? What's it about?"
-    MC "I'm surprised you aren't aware of it— it's one of those all-time classics. A wealthy linguist meets a lady whose manner of speaking is so uncultured and vulgar that it is almost unintelligible."
-    MC "He wagers his friend that he will be able to teach her proper speech and mannerisms such that she will be able to pass as a proper lady."
-    show WG neutral-2
+    show WG sly
+    WG "Oh? Why's that?"
+    MC "Umm... What's not to love?— It's one of those all-time classics! {w}A wealthy linguist meets a lady whose manner of speaking is so uncultured and vulgar that it is almost unintelligible."
+    MC "He wagers his friend that he will be able to teach her proper speech and mannerisms such that she will be able to pass as a proper lady. Quite the scheme."
+    show WG sly
     WG "{size=-6}...I think I can relate to this character's motivation.{/size}"
-    MC "What was that?"
-    show WG surprised
-    WG "Oh, nothing."
+    MC "Hehe. Is that why you like it?"
+    show WG sly
+    WG "Perhaps."
     show WG neutral
-    WG "Please continue. Does he succeed?"
-    MC "Very much so. She is even able to pass as a princess at a ball. And despite his critical disposition towards her, they become endeared to each other in the end."
-    WG "What a lovely character arc. And this is all told through singing?"
-    MC "Well, a lot of it anyway. I haven't seen the whole thing, just some of the more classic numbers and I heard the gist of the plot."
-    show WG haughty
-    WG "Well, I'm sold. I think I will make an exception to my usual rule and watch this film."
+    WG "Please continue. Didn't mean to interrupt."
+    MC "Well, the guy succeeds, she is even able to pass as a princess at a ball. And despite his critical disposition towards her, they become endeared to each other in the end."
+    MC "If I had to guess why people like it so much is that despite the self serving nature of the characters an inexpressible emotional bond between them is formed. Love is strange like that sometimes and I think that clicks with people."
+    show WG happy
+    WG "What a lovely analysis, Dear. It's one of my favorites as well. We should watch it together sometime."
     $setAffection("WG", 1)
-    show WG neutral
-    WG "And I have just the person in mind to watch it with me."
-    MCT "I hope she's talking about Aida, that movie is like three hours long."
+    MCT "Crap! My answer was {i}too{/i} good. That movie is like three hours long."
+    MC "Sure. Tell Chibuki to ink it into your schedule."
     jump WG058_c1_after
 
 label WG058_c1_2:
     MC "Genteel Men Prefer Blondes."
-    show WG stern
+    show WG coy
     WG "Really Keisuke? Is that the best you can come up with?"
     MC "Well, admittedly it is. But you have to admit it's a catchy title. True to life."
     MC "*{i}Wink{/i}*"
-    show WG neutral
+    show WG sly
     "Alice rolled her eyes."
-    WG "Your attempts at flattery are as subtle as a fire alarm Keisuke."
+    WG "Your attempts at flattery are as subtle as a fire alarm, Dear."
     MC "But it's a real movie, I swear."
-    show WG doubt
+    show WG haughty
     WG "Oh really? Well, what's it about then?"
     MC "Uh, well, it stars this famous Blonde Bombshell actress from the 50's..."
-    show WG neutral-2
+    show WG sly
     WG "Go on."
     MC "She's a showgirl... she really likes diamonds... I think."
     show WG haughty
     WG "Is that it?"
     MC "Okay— you got me. That's about all I know. For {i}some{/i} reason that was the first thing to come to my mind."
-    show WG stern
+    show WG bored
     WG "I sometimes wonder Keisuke if that's the only thing that's ever on your mind."
     show WG haughty
-    WG "It must not have been very memorable if that's all you can think of. And that only proves my point about movies."
-    WG "There's not enough substance to the story, so they have to dangle some eye candy out in front to keep the simple-minded interested enough to follow what little plot there is."
-    "Not sure I fully agreed with that characterization, but she wasn't exactly wrong, and at this point I didn't have a leg to stand on to argue any different."
+    WG "It must not have been very memorable if that's all you can think of. Personally, it's not one of my favorites."
+    show WG neutral-2
+    WG "Though don't tell my mother I said that if you meet her. She was quite fond of getting to play the titular role in that musical in a broadway run." 
+    MC "Oh, so that's where you got your penchant for enjoying theatre then?"
+    show WG neutral
+    WG "I can't deny she was a strong influence."
     jump WG058_c1_after
 
 label WG058_c1_3:
     MC "Little Shop of Horribles."
     show WG doubt
-    WG "That sounds rather morbid. Is it supposed to be a horror film? Those are always so tasteless."
-    MC "It isn't a horror film, but it does have some dark themes."
-    show WG neutral-2
-    WG "Well, I suppose that can still work as part of a good story. What's it about?"
-    MC "A guy who runs a flower shop comes across a mysterious plant."
-    show WG doubt
-    WG "How's a plant supposed to be scary?"
-    MC "Well it's like a Venus fly trap, but with teeth and it can talk. It grows from consuming blood, and demands to be fed people."
-    MC "The shop owner gives into its demands and feeds it the body of his romantic rival. In the end it turns out it wasn't really a plant, but some alien lifeform."
-    show WG angry
+    WG "Ugh, not that one. So morbid and blasé at the same time."
+    MC "Oh, come on it's not that bad. Horror films are big business, why not horror theatre?"
+    show WG bored
+    WG "Alright, fine. Try to sell me on it."
+    MC "Well, a guy who runs a flower shop comes across a mysterious plant. Little ominous."
+    show WG haughty
+    WG "And how's a plant supposed to be scary?"
+    show WG bored
+    MC "Well... it uhhh... gets big! And it's like a Venus fly trap, but a big one! Then suddenly it's got teeth and it can talk."
+    show WG bored
     $setAffection("WG", -1)
-    WG "Keisuke, that is completely gross, and it sounds exactly like some cheap horror flick, but with a plant alien monster instead of a regular monster."
-    MC "I guess my description didn't do it much justice. It's a really well loved and popular musical film."
-    MCT "One that I totally picked the wrong audience for, apparently."
+    WG "How thrilling... Such tantalizing horror."  
+    MC "Not sold on the scary plant premise?"
     show WG doubt
-    WG "All the same, I think I'll pass. Such a crude and vulgar medium."
+    WG "I mean, it's a plant. Just stop feeding it and keep it in a dark room and \"the horror\" will sort itself out."
+    MC "I suppose when you put it that way it doesn't really stack up compared to Dracula or a werewolf."
+    show WG neutral
     jump WG058_c1_after
 
 label WG058_c1_after:
+    play music MomentTime
     "Our discussion moved on to other subjects as the afternoon rolled on and we worked through the desserts until we finished them."
     "Well, Alice finished them. I only had half a muffin and a single macaron."
     "Our conversation meandered between the weather, the view, classes— I tried hard to keep the subject away from business matters, as Alice is wont to do."
@@ -15811,7 +15831,30 @@ label WG058_c1_after:
     Ryoko "I'll catch up with you guys tomorrow."
     show Ryoko happy
     "She waved with a wide arc, using her whole arm as she greeted us with an eager smile on her face."
-    if getFlag("Meet_Ryoko"):
+    if isEventCleared("RM007B"):
+        Ryoko "Hey, Hotsure-san!"
+        MC "Hey, Ryoko. Long time no see."
+        if not getFlag("RM009B_Ryoko"):
+            MC "How'd that one movie turn out? The one with the silver briefcase?"
+            Ryoko "Oh yeah, that one! It worked really well. I think the students liked it. Thanks again for the idea!"
+            show WG doubt
+            "Alice for her part seemed quite perplexed with what we were talking about. I should have led with an introduction so as to not leave her out of the conversation."
+        show WG neutral
+        MC "I'm not sure if you two have met before. This is Alice Nikumaru."
+        show WG neutral-2
+        WG "Hello."
+        Ryoko "My name is Ryoko Tanaka! Yeah, I've seen you around the academy before, but I never got the chance to say hi and introduce myself."
+        if isEventCleared("WG011"):
+            Ryoko "Oh yeah, I remember now! I saw both of you with another girl at one of our screenings. Did you enjoy the movie?"
+            show WG neutral
+            WG "Not really to be honest."
+            MC "It was alright."
+            show Ryoko annoyed
+            Ryoko "Oh."
+            MC "But our friend Aida loved it. It was one of her favorites."
+            show Ryoko happy
+            Ryoko "Well, I'm glad to hear that then! I'm the president of the film club at the academy. I guess you could see us filming from here earlier."
+    elif getFlag("Meet_Ryoko"):
         Ryoko "Hey, Hotsure-san!"
         MC "Hey, Ryoko. Long time no see."
         show WG pondering
@@ -15906,12 +15949,13 @@ label WG058_c2_1:
     WG "You mean to tell me being a pervert who enjoys being sat on by me and Matsumodo is not reflective of your personality?"
     MC "..."
     MCT "Damn, she really saw through me this time."
-    WG "I refuse to be the literal butt of a joke. I don't care if it's supposed to be funny, or it's not supposed to be me as a person— it's still me being made a fool of!"
+    show WG stern
+    WG "I refuse to be the literal butt of a joke.{w} I don't care if it's supposed to be funny, or it's not supposed to be me as a person— it's still me being made a fool of!"
     show Ryoko embarrassed
     Ryoko "Whoa! Look, I'm really sorry! I didn't mean to imply anything like that. I just wanted a good setup for the scene."
     show Ryoko confused
     Ryoko "It wasn't supposed to be so serious."
-    show WG stern
+    show WG doubt
     WG "Well it certainly seemed so to me."
     show Ryoko embarrassed
     Ryoko "Sorry about that."
@@ -15919,9 +15963,12 @@ label WG058_c2_1:
     Ryoko "I should probably get going. I got a lot of editing to do. It was nice to finally get to meet both of you... Sorry to interrupt your picnic."
     "Ryoko began her walk back to the academy."
     hide Ryoko with dissolve
+    show WG stern
     WG "Keisuke..."
     MC "Yeah?"
+    show WG sly
     WG "You don't need to concoct some contrived scheme to set up a scenario where you get to touch my body. If you're so obsessed with my ass, you could have just made a move and I might have just let you have your fun."
+    show WG stern
     WG "But if that's all I am to you and you don't even care if that makes me a joke to everyone else, then you're free to laugh all by yourself."
     MC "I'm sorry, Alice. That was pretty insensitive of me. I didn't take the time to think about how you might feel about what Ryoko was asking."
     MC "I guess I forget sometimes that not everyone sees you the way I see you... I'd never want to force you to do something that would make you an object of ridicule, especially over your factor."
@@ -15939,12 +15986,12 @@ label WG058_c2_1:
 
 label WG058_c2_2:
     MC "I think we'll pass."
-    show WG surprised-2
+    show WG happy-2
     "As much as I would certainly enjoy getting smothered by the two biggest asses I've ever seen. This was clearly not something Alice would want to do."
     MC "Tanaka-san, I'm sure you didn't mean it that way, but a lot of people at the academy are still trying to come to terms with their growth and learning to be comfortable in their own skin again."
     MC "Maybe some are able to laugh at themselves, but making a joke at the expense of someone because of their growth for an entire audience to see is a bit insensitive."
     show Ryoko surprised
-    show WG stern
+    show WG bored
     Ryoko "Oh..."
     "Ryoko turned her attention away from me over towards Alice."
     "Despite how well Alice carries her weight, it didn't take a lot of imagination on Ryoko's part to begin to realize why someone with her factor might not find any humor with it being used as the basis for a joke."
@@ -15956,6 +16003,7 @@ label WG058_c2_2:
     show Ryoko happy
     Ryoko "Oh for sure, at some point! We don't really have access to fancy sound editing software like a major studio, so we're going to need actors that can really sing if we're going to be able to do a musical."
     show Ryoko camera
+    show WG surprised-2
     Ryoko "Good to know we have some talent to tap for future projects. Think you'd be interested, Nikumaru-san?"
     show WG neutral-2
     WG "Possibly. I'd have to see the script first. I won't invest my time and effort into just anything."
@@ -15974,7 +16022,7 @@ label WG058_c2_2:
     WG "Keisuke..."
     "Okay, probably time to ditch the director shtick."
     MC "Yeah? What's on your mind."
-    show WG neutral-2
+    show WG happy
     WG "Thanks for speaking up to Ryoko earlier."
     show WG worried
     WG "I've been managing to come to terms with my factor, and I don't feel sorry for myself. But I also don't think it's very funny, and I don't think it should be used as a reason to make me the butt of a joke."
@@ -15983,6 +16031,7 @@ label WG058_c2_2:
     MC "Any time Alice. You'll always have my support."
     "We talked a little while longer, breathing some much-needed levity into the conversation after a rare moment of emotional vulnerability."
     WG "Hey, it's getting later in the day. I'd love to spend more time with you today, but I have to get going. Thanks for the lovely picnic lunch."
+    show WG happy-2
     WG "With the exception of a minor interruption, this was the perfect lunch date."
     show WG happy
     "Alice leaned in close, giving me a long soft kiss... she tasted sweet."
@@ -16008,7 +16057,7 @@ label WG058_c2_3:
     Ryoko "I, uh, um..."
     show Ryoko embarrassed
     Ryoko "Look, I'm really sorry. I was just thinking about the setup for the scene, not the people involved or how it could come across to others."
-    show WG stern
+    show WG bored
     WG "Hmph. Well, be more considerate next time you ask someone if they want to play a role- but make sure it's someone else, because I'm not interested."
     show WG angry
     show Ryoko annoyed
@@ -16023,7 +16072,7 @@ label WG058_c2_3:
     MC "I know it was rude, but it was just a mistake. I didn't want to pile it on top of her. She seemed genuinely sorry."
     show WG stern
     WG "I suppose you're right. I can fight my own battles just fine, but just because I can handle things by myself doesn't mean I don't appreciate a little support from you every now and then."
-    "She had a point. I know she doesn't appreciate me doting on her every whim, but Ryoko's proposition brought up a sensitive subject that even someone as self-assured as Alice could have used some emotional support."
+    "She had a point. I know she doesn't appreciate me doting on her every whim, but Ryoko's proposition brought up a sensitive subject that even someone as self-assured as Alice could still have a sore spot for."
     MC "Sorry about that. For what it's worth, you always have my support, even if I forget to show it at the right time."
     show WG neutral
     WG "Thanks, Keisuke. But try to be more mindful in the future."
@@ -16031,7 +16080,7 @@ label WG058_c2_3:
     WG "Hey, it's getting later in the day. Thanks for the lovely picnic lunch. It was a shame it had to be tarnished by such an inconsiderate interruption."
     WG "I have to get going. See you tomorrow, Keisuke."
     "Alice stood up, brushing the crumbs off her dress before turning and walking back to the academy while I began to pack up the picnic blanket and food containers back into the basket."
-    "The afternoon was getting long and I hadn't meant to take up so much of Alice's time, but I had a feeling if I had played my cards right she would have stuck around a little longer to walk back with me."
+    "The afternoon was getting long and I hadn't meant to take up so much of Alice's time, but part of me wished she would have canceled her plans to hang out a bit longer."
     jump daymenu
 
 label WG059:

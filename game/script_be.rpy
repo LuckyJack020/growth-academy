@@ -660,7 +660,10 @@ label BE004:
     pause .5
     show Yuki neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
     show Minori neutral at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1) with dissolve
-    "I chuckled to myself as my vision drifted over towards the other side of the cafeteria, where I saw two students in blazers and red armbands walk by, one chatting loudly at the other who nodded along patiently."
+    if getFlag("Meet_Yuki"):
+        "I chuckled to myself as my vision drifted over towards the other side of the cafeteria, where I saw Yuki and another member of the Student Council walk by, Yuki talking up a storm while the other listened and nodded intently."
+    else:
+        "I chuckled to myself as my vision drifted over towards the other side of the cafeteria, where I saw two students in blazers and red armbands walk by, one chatting loudly at the other who nodded along patiently."
     "As she listened to the rapid fire of words from the smaller girl's mouth, the bespectacled girl jotted everything down on her clipboard with almost blinding speed."
     "I wasn't sure how she was able to keep up, because the chatty one of the two was going on and on at a pace that I found to be dizzily annoying after just listening for a few moments."
     show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
