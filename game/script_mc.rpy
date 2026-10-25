@@ -4337,7 +4337,16 @@ label MC006:
     if not getFlag("Meet_Naoki"):
         $setFlag("Meet_Naoki")
     Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
-    if isEventCleared("MC002"):
+    if isEventCleared("BE003") and isEventCleared("MC002"):
+        BE "Hey coach!"
+        Naoki "Hello, Inoue-san."
+        MCT "Oh yeah, he was the coach at the soccer club meeting."
+        MCT "He's also the same guy I saw in the faculty room with three whistles. I guess that explains why he has {i}a{/i} whistle— but not three."
+    elif isEventCleared("BE003"):
+        BE "Hey coach!"
+        Naoki "Hello, Inoue-san."
+        MCT "Oh yeah, he was the coach at the soccer club meeting."
+    elif isEventCleared("MC002"):
         MCT "That's the guy I saw in the faculty room with three whistles. I guess that explains why he has {i}a{/i} whistle— but not three."
     Naoki "Today we're going to be playing a game called handball. As you might have guessed by the name, you handle a ball... with your hands. It's not that complicated really."
     Naoki "Sort of like soccer where you pass the ball and score only using your feet, just think the opposite of that."
@@ -24023,6 +24032,8 @@ label RM002:
     Student1 "So, who's your pick? There's more than a few good ones to choose from here."
     MCT "Hmm, already sizing up the guys at the school? Not that I'm particularly interested in any of them over there, but I'd be curious how I rank."
     CMF "Isn't it obvious? It's easily Hageshi-sensei. He's tall, super buff, and those eyes... I could just stay lost forever in their gaze. Girl, you don't even know!"
+    if isEventCleared("BE004"):
+        MCT "That girl... I've seen her before... I think I saw her the other day at the cafeteria when I was with Honoka."
     Student1 "Hehe! Oh, believe me, I know. He's a total dreamboat!"
     MCT "Yeesh. They're talking about the faculty. Girls in high school would do this too. {w}Hageshi I kind of understand, but some of these dudes are old enough to be their dads. What the hell is wrong with these chicks?"
     Student1 "What about you Etsuko?"

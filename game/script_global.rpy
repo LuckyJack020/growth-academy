@@ -285,6 +285,7 @@ image Dorm Student = DynamicImage("Graphics/ui/bg/studentdorm_[gametime].webp") 
 
 #Giants Facilities
 image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].webp")
+image Chukan Point Trail = DynamicImage("Graphics/ui/bg/archiveBG/chukanpoint_trail_[gametime].webp")
 image Courtyard GTS = "Graphics/ui/bg/NYI.webp"
 image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].webp")
 image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].webp")
@@ -382,6 +383,7 @@ image Temple Fall = DynamicImage("Graphics/ui/bg/archiveBG/templefall_[gametime]
 image View Point = DynamicImage("Graphics/ui/bg/archiveBG/viewpoint_[gametime].webp")
 image Woods = DynamicImage("Graphics/ui/bg/archiveBG/woods_[gametime].webp")
 image Woods Winter = "Graphics/ui/bg/archiveBG/woods_winter.webp"
+image Woods Entrance = DynamicImage("Graphics/ui/bg/archiveBG/woodsentrance_[gametime].webp")
 
 #Other - Alice’s Summer Estate (WG Route)
 image RV Interior = "Graphics/ui/bg/WG_summer_rv.webp"
@@ -1577,7 +1579,7 @@ init 2 python:
     eventlibrary['BE062'] = {"name": "Honoka end", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                         "location": "auditorium",        "priority": PrioEnum.NONE,              "next": "", "preobsflags": [], "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "preobsflags": [], "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['BE005'] = {"name": "Wind of Change", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.OPTIONALCORE,                             "location": "hallway",        "priority": PrioEnum.GIRL, "sp": 1,     "preobsflags": [], "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['BE010'] = {"name": "Surprise, Her Boobs are Bigger", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.OPTIONALCORE,        "location": "dorminterior",     "priority": PrioEnum.GIRL, "sp": 2,     "preobsflags": [], "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
 
     eventlibrary['BEGTS001'] = {"name": "You Make Me Feel Like a Woman", "girls": ["BE", "GTS"], "display": "Honoka & Naomi Event", "type": EventTypeEnum.OPTIONAL,        "location": "dormexterior",     "priority": PrioEnum.NONE,               "preobsflags": [], "obsflags": [],                                   "conditions": [[ConditionEnum.AND, [ConditionEnum.VAR, "BEMode", "Feminine"], [ConditionEnum.EVENT, "BE020"]]]}
