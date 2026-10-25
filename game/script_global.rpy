@@ -115,6 +115,7 @@ define ReinaM = Character('Reina', color="#C0C0C0") #Female Student Council Memb
 define Sakie = Character('Sakie', color="#C0C0C0") #Basketball Club Member
 define Takeda = Character('Takeda', color="#C0C0C0") #Track Team Member
 define Ume = Character('Ume', color="#C0C0C0") #Giants Dorm Student
+define Sota = Character('Sota', color="#FF91DC") #Karaku - MC Elective Classmate
 
 #Background Characters
 define Akio = Character('Akio', color="#C0C0C0") #GTS Route
