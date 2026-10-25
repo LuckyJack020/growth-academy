@@ -1366,7 +1366,7 @@ label splashscreen:
         JinekoOutfit = OutfitEnum.DEFAULT
         DaitaroOutfit = OutfitEnum.DEFAULT
         TakamuraOutfit = OutfitEnum.DEFAULT
-        HageshiOutfit = OutfitEnum.DEFAUL
+        HageshiOutfit = OutfitEnum.DEFAULT
         KanamiOutfit = OutfitEnum.DEFAULT
         ChibukiOutfit = OutfitEnum.DEFAULT
         RMOutfit = OutfitEnum.DEFAULT

@@ -1187,7 +1187,7 @@ image rain:
     repeat
 
 #Panels Overlays
-image PanelPaper1 = "Graphics/ui/overlays/panelpaper1.webp"
+image PanelPaper1 = "Graphics/ui/overlays/paperpanel1.webp"
 
 #Audio
 define audio.AE = "Audio/BGM/scene_AE.ogg"
