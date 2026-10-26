@@ -11915,6 +11915,7 @@ label FMG062:
 
 label FMG063:
     $setProgress("FMG", "FMG064")
+    $setFlag("XX63")
     scene Cafeteria with fade
     play music FMG
     MC "I've been thinking..."
@@ -20209,9 +20210,12 @@ label FMG090:
     show FMG sad
     FMG "...Are you joking?"
     Chibuki "I wish I was..."
-    MC "You guys are being too hard on her. Surely, she isn't that bad."
-    Chibuki "...{w}He hasn't met her yet?"
-    FMG "He's been lucky up until now."
+    if getFlag(“Meet_Kokutan”):
+        MC "You guys are being too hard on her. She isn't that bad."
+    else:
+        MC "You guys are being too hard on her. Surely, she isn't that bad."
+        Chibuki "...{w}He hasn't met her yet?"
+        FMG "He's been lucky up until now."
     Chibuki "Have you seen the \"King of the Sphere\" movies?"
     MC "I've seen clips from the films but I haven't watched them in their entirety."
     Chibuki "You know that weird dude who crawls around on all fours and talks out loud speaking nonsense?"
@@ -20251,7 +20255,9 @@ label FMG090:
     FMG "Yeah, just wait..."
     "Suddenly, the door swung open. Standing in the doorway was a girl who must be Kokutan. She stood there for a second in a strange dramatic pose before speaking."
     show Kokutan neutral with dissolve
-    Kokutan "I have... arrived! It is I... {w}Kokutan, the Ebony Lord of Destruction, Master of A Thousand Demons, Emperor of the New World!"
+    if not getFlag(Meet_Kokutan):
+        $setFlag(Meet_Kokutan)
+    Kokutan "I have... arrived! It is I... {w}Kokutan, the Ebony Lord of Destruction, Master of A Thousand Demons, Malevolent Overseer, Emperor of the New World!"
     MC "..."
     FMG "..."
     Chibuki "{i}Sigh{/i} I should've said no to this..."

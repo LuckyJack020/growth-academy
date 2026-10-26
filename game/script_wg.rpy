@@ -18838,6 +18838,7 @@ label WG062_C1_after:
 
 label WG063:
     $setProgress("WG", "WG064")
+    $setFlag("XX63")
     play music Schoolday
     scene Dorm Exterior with fade
     "I was walking back to my dorm, getting ready to grab some stuff I'd need for my afternoon classes."

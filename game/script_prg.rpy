@@ -44728,8 +44728,8 @@ label PRG062B:
     jump daymenu
 
 label PRG063:
-    $setTimeFlag("size5exp")
     $setProgress("PRG", "PRG064")
+    $setFlag("XX63")
     play music Schoolday fadein 2.0
     scene HallwayStairs with fade
     "Opening the door into the main building, I stepped inside, almost walking into a girl turning into the door beside me."
@@ -46151,19 +46151,41 @@ label PRG065:
     PRG "I've heard some before."
     MC "In movies?"
     PRG "Well... yes. But, since I still listen to music on my radio most of the time, I hear some older stuff along with newer songs."
-    MC "Did you ever play an instrument or anything?"
-    PRG "No. I... well, I would have liked to, but I just never really had the chance. Besides playing the recorder in class a few times when I was little."
-    show PRG unique-happy
-    PRG "I... um..."
-    pause 1
-    PRG "... I do like to dance, though."
-    MC "Really?"
-    PRG "Mhm. I... sometimes when my grandparents would go out to see friends or something like that, I'd go into the living room and put a CD into the DVD player, so it would play on the speakers."
-    PRG "A-And I'd make dinner and dance around the kitchen, or... sometimes, I'd put on slower piano music and just listen to it, and let myself dance however I wanted to."
-    PRG "I-I never took lessons or anything, though. But... I have danced with my grandpa a few times. At celebrations and things like that."
-    MC "That's so sweet. Not sure why, but I can see you being a pretty good dancer."
-    PRG "I-I'm not. I kind of just... like doing it."
-    MC "Mm. Just a side hobby?"
+    if isEventCleared(“MC028”):
+        MC "Mm. Well, from such a fancy clarinet player, I wasn't sure what you'd enjoy."
+        show PRG excited with dissolve
+        PRG "I-I only played for like a year! And I was terrible!"
+        MC "Well, you're not terrible at dancing, that I know."
+        show PRG blush-2
+        PRG "... That was so much fun."
+        MC "I know…"
+        MC "So, you said you used to practice when you were home alone?"
+        PRG "Mhm. I… sometimes when my grandparents would go out to see friends or something like that, I'd go into the living room and put a CD into the DVD player, so it would play on the speakers."
+        PRG "A-And I'd make dinner and dance around the kitchen, or… sometimes, I'd put on slower piano music and just listen to it, and let myself dance however I wanted to."
+        show PRG neutral
+        PRG "I-I never took lessons or anything, though. But… I have danced with my grandpa a few times. At celebrations and things like that."
+        MC "That's so sweet. You are a pretty great dancer though."
+        show PRG blush-2
+        PRG "I-I'm not. I kind of just… like doing it."
+        MC "I would heavily beg to differ. You're awesome at it."
+        "Aida blushed deeply, glancing down at the table."
+        MC "It's cool to see another hobby of yours, though."
+    else:
+        MC "Did you ever play an instrument or anything?"
+        PRG "Well… I played the clarinet for a little while. I… I was really bad."
+        PRG "I tried learning for about a year and just never really got any better."
+        PRG "I never had lessons or anything, but still."
+        show PRG unique-happy
+        PRG "I… um…"
+        pause 1
+        PRG "... I do like to dance, though."
+        MC "Really?"
+        PRG "Mhm. I… sometimes when my grandparents would go out to see friends or something like that, I'd go into the living room and put a CD into the DVD player, so it would play on the speakers."
+        PRG "A-And I'd make dinner and dance around the kitchen, or… sometimes, I'd put on slower piano music and just listen to it, and let myself dance however I wanted to."
+        PRG "I-I never took lessons or anything, though. But… I have danced with my grandpa a few times. At celebrations and things like that."
+        MC "That's so sweet. Not sure why, but I can see you being a pretty good dancer."
+        PRG "I-I'm not. I kind of just… like doing it."
+        MC "Mm. Just a side hobby?"
     show PRG neutral
     PRG "Mhm. It wasn't just movies, drawing, and cooking for me."
     MC "Actually, hold on. I have to ask this."

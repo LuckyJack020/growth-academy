@@ -14963,6 +14963,7 @@ label AE062:
 
 label AE063:
     $setProgress("AE", "AE064")
+    $setFlag("XX63")
     scene Dorm Interior with fade
     play music Schoolday
     #*Faucet SFX*
