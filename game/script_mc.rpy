@@ -22663,7 +22663,7 @@ label MC028:
         Yuki "Mmmghmm!"
     else:
         MC "I'm shocked you're here, by the way."
-        show RM neutral
+        show RM neutral at Position(xcenter=0.80, yalign=1.0)
         show Yuki neutral
         with dissolve
         "Daichi looked over, as if surprised I was talking to him."
@@ -23133,10 +23133,10 @@ label MC028:
     "I hurried ahead, catching up with the girls as they were all sitting at a table together, Naomi seated off by some of the other giant students."
     if routelock == "GTS":
         show GTS neutral at Position(ycenter=0.55) with dissolve
-        show Jineko neutral with dissolve
+        show Jineko neutral at Position(xcenter=0.23, yalign=1.0) with dissolve
         "Stealing a chair from the 'normie' table, I shuffled off with it toward Naomi, popping a squat beside her."
         "Near her was Jineko, as well as Gou, Hina, and Yasuhara-san, the four in deep conversation."
-        Yasuhara "- Pulled out all the stops, really, to make this happen. I'm in awe."
+        "Yasuhara" "- Pulled out all the stops, really, to make this happen. I'm in awe."
         Jineko "Same here. I'm just glad it all worked out."
         "Naomi glanced down to me and leaned in."
         GTS "They're talking about making this event work for us giant students."
@@ -23173,12 +23173,13 @@ label MC028:
             show AE neutral with dissolve
             "I sat beside Shiori, as she seemed to be adjusting her chair under her."
 
-    show FMG neutral
-    show WG neutral
-    show BE neutral
     hide GTS
     hide AE
     hide PRG
+    show FMG neutral at Position(xcenter=0.23, yalign=1.0)
+    show WG neutral at Position(xcenter=0.74, yalign=1.0)
+    show BE neutral at Position(xcenter=0.45, yalign=1.0)
+    
     with dissolve
     FMG "So, Alice. Does the decor remind you of America at all?"
     WG "Mm, yes and no."
@@ -23188,16 +23189,18 @@ label MC028:
     WG "Oh, they do. It's one of the largest holidays of the year."
     hide WG
     hide FMG
-    show AE neutral
-    show GTS neutral at Position(ycenter=0.55)
+    show AE neutral at Position(xcenter=0.23, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.85, ycenter=0.55) behind BE, PRG, FMG, WG, AE
     with dissolve
     "Shiori rose from the table after only having a scant few bites."
     AE "Pardon me. The ceremony will begin soon, and I need to check in with the council members, should they need assistance."
     BE "'Kay. See ya."
     GTS "Best of luck, Matsumoto-san."
+    show AE at altMove(0.5, -0.2), Transform(xzoom=1)
+    pause .5
     hide AE
     hide GTS
-    show FMG neutral
+    show FMG neutral at Position(xcenter=0.73, yalign=1.0)
     with dissolve
     "On the table, a ouija board sat out, which Honoka was picking at with the blunt end of her chopstick."
     FMG "Are you trying to upset a spirit?"
@@ -23222,8 +23225,8 @@ label MC028:
     Takamura "I do truly hope you have fun with it, and anyone who would like to participate, you may sign up in a few moments."
     Takamura "To add onto that, we have challenges fit for all students, including those from the giants dorms, so please don't get your hopes dashed!"
     hide Takamura with dissolve
-    show BE neutral
-    show PRG neutral
+    show BE neutral at Position(xcenter=0.63, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.23, yalign=1.0)
     with dissolve
     "Honoka leaned over toward Aida, nudging Aida's arm."
     BE "I've never heard her talk so loud before."
@@ -23239,10 +23242,11 @@ label MC028:
     show HR annoyed with dissolve
     pause .5
     "Scattered laughter rose with a few students outright applauding as Tashi-sensei shot Takamura a look, who laughed brightly and waved, stepping out of the center of the room and back to her table."
-    show WG neutral-2
-    show BE neutral
-    show PRG neutral
-    show FMG neutral
+    hide HR
+    show WG neutral-2 at Position(xcenter=0.76, yalign=1.0)
+    show BE neutral at Position(xcenter=0.37, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.15, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.60, yalign=1.0)
     with dissolve
     show WG happy
     WG "Well, judging by the sound of it, we have an enjoyable evening ahead of us."
@@ -23262,37 +23266,39 @@ label MC028:
     hide PRG
     with dissolve
     if not routelock == "GTS":
-        show GTS_S neutral with dissolve
+        show GTS_S neutral at Position(xcenter=0.73, yalign=1.0) with dissolve
         "A heavy footfall near our table made all of us glance up, as Naomi stood, almost quite literally over our table, looking down."
         GTS "Pardon my interruption, but if all of you wouldn't mind, I'd like you all to meet a few of my friends from the giants' dorms."
         hide GTS_S with dissolve
         show BE happy
         BE "Oh, for sure!"
-        show GTS happy at Position(ycenter=0.55) with dissolve
+        show BE at altMove(0.5, 0.2)
+        show GTS happy at Position(xcenter=0.85, ycenter=0.55) behind BE, PRG, FMG, WG, AE with dissolve
         "Naomi glanced behind her and waved her hand gently, as behind her, three more giant students came forward."
-        show Jineko neutral with dissolve
+        show Jineko neutral at Position(xcenter=0.50, yalign=1.0) with dissolve
         "I, and I'm sure everyone else at the table, glanced up, going from face to face."
         GTS "This is Hina Masaji, Gou Kajiwara, and Jineko Watanabe."
         if not getFlag("Meet_Hina"):
             $setFlag("Meet_Hina")
-        Hina "Or ‘Gama' for short."
+        Hina "Or 'Gama' for short."
         Gou "{size=-6}Christ's sakes…{/size}"
         GTS "Let us put our best foot forward, dear Masaji-san."
         hide GTS
         hide Jineko
         with dissolve
         pause .5
-        show BE neutral
-        show PRG neutral
-        show FMG neutral
-        show WG neutral-2        
+        show BE neutral at altMove(0.5, 0.37)
+        show WG neutral-2 at Position(xcenter=0.76, yalign=1.0)
+        show PRG neutral at Position(xcenter=0.15, yalign=1.0)
+        show FMG neutral at Position(xcenter=0.60, yalign=1.0)     
         with dissolve
         GTS "Now, this is Honoka Inoue, Aida Kodama, Akira Mizutani, Alice Nikumaru, and Keisuke Hotsure."
         hide PRG
         hide FMG
         hide WG
         with dissolve
-        show GTS neutral at Position(ycenter=0.55)
+        show BE at altMove(0.5, 0.2)
+        show GTS neutral at Position(xcenter=0.85, ycenter=0.55)
         show Jineko neutral
         with dissolve
         GTS "Oh, and there is also Shiori Matsumoto. However, it appears she had an engagement to attend to."
@@ -23334,7 +23340,7 @@ label MC028:
             "I let my gaze linger for a moment, suddenly grateful for my mask."
             MCT "Please don't recognize me. Not now…"
             "Gou looked down at me for a moment, his look holding there for a few moments, before his brow furrowed and he looked away."
-        show GTS neutral at Position(ycenter=0.55)
+        show GTS neutral at Position(xcenter=0.85, ycenter=0.55)
         show Jineko neutral
         with dissolve
         Jineko "Anyway, Yasuhara-san is waiting for us, so we should get moving."
@@ -23343,7 +23349,7 @@ label MC028:
         Jineko "Will do!"
         hide Jineko
         show BE neutral
-        show FMG neutral
+        show FMG neutral at Position(xcenter=0.24, yalign=1.0)
         with dissolve
         "Naomi returned to the table she'd been at, taking a chair and bringing it over, having a seat beside us."
         GTS "Yasuhara-san is a proctor in the giant's dorms. He assists us whenever needed. He's a jovial fellow, and quite kind."
@@ -23369,10 +23375,10 @@ label MC028:
         WG "... Very familiar dress. Very familiar."
         hide WG with dissolve
     "After about ten or so minutes of chit-chat and finishing off food, Honoka thumped her hands on the table and stood up."
-    show BE happy
-    show FMG neutral
-    show WG neutral
-    show PRG neutral
+    show BE happy at Position(xcenter=0.37, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.60, yalign=1.0)
+    show WG neutral at Position(xcenter=0.76, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.15, yalign=1.0)
     with dissolve
     BE "Alright! Anyone else want to get in on some Fright Night Frenzy?"
     FMG "Mmnn…"
@@ -23403,8 +23409,8 @@ label MC028:
     with dissolve
     "The table was quiet for… just long enough to feel awkward."
     pause .75
-    show BE neutral
-    show PRG neutral
+    show BE neutral at Position(xcenter=0.60, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.30, yalign=1.0)
     with dissolve
     PRG "... Um. {w}I-I'll do it with you."
     if routelock == "PRG":
@@ -23413,7 +23419,7 @@ label MC028:
     else:
         show BE happy
         BE "Yes! See? Kodama-san's into it!"
-    show GTS neutral-2 at Position(ycenter=0.35) with dissolve
+    show GTS neutral-2 at Position(xcenter=0.77, ycenter=0.35) behind BE, PRG, FMG, WG, AE with dissolve
     GTS "Mngh…"
     GTS "I… would love to join. However, I would absolutely hate to harm someone should I take part."
     show BE confused
@@ -23433,7 +23439,7 @@ label MC028:
     BE "YES!"
     hide PRG
     hide GTS
-    show FMG neutral with dissolve
+    show FMG neutral at Position(xcenter=0.32, yalign=1.0) with dissolve
     "Honoka glanced back at Akira and Alice, her arms out."
     show BE neutral
     FMG "I'm out."
@@ -23444,7 +23450,7 @@ label MC028:
     hide BE with dissolve
     "Behind Akira, an… imposing figure dressed as a police officer walked up, arms crossed."
     if routelock == "FMG" or getFlag("Meet_Natsuko"):
-        show Natsuko neutral
+        show Natsuko neutral at Position(xcenter=0.65, yalign=1.0)
         Natsuko "Even if the prize isn't worth it, it's still a good chance to work as a team."
         Natsuko "You probably just think your team will lose, so you don't wanna try harder than you have to."
         Natsuko "Have fun playing ring toss or something."
@@ -23453,7 +23459,7 @@ label MC028:
         "Natsuko gave a flex, then walked off out of the tent."
         hide Natsuko with dissolve
     else:
-        show Natsuko neutral
+        show Natsuko neutral at Position(xcenter=0.65, yalign=1.0)
         UNKNOWN "Even if the prize isn't worth it, it's still a good chance to work as a team."
         UNKNOWN "You probably just think your team will lose, so you don't wanna try harder than you have to."
         UNKNOWN "Have fun playing ring toss or something."
@@ -23465,7 +23471,7 @@ label MC028:
         FMG "Mmh… Natsuko Okamoto."
         FMG "Calling her a rival sounds lame, but… yeah. She's half that and half frenemy."
         FMG "It's a work in progress."
-    show PRG neutral with dissolve
+    show PRG neutral at Position(xcenter=0.65, yalign=1.0) with dissolve
     "The table was quiet, as Aida shifted her chair to stand up, then suddenly jumped."
     show PRG scared
     show FMG happy
@@ -23490,8 +23496,8 @@ label MC028:
     Student1 "Not for that. I want to get done fast so that fat, rich girl with the curls doesn't plow through all the food before we're done."
     show WG angry
     "The group passed by us, not once looking over."
-    show BE surprised
-    show PRG worried
+    show BE surprised at Position(xcenter=0.79, yalign=1.0)
+    show PRG worried at Position(xcenter=0.15, yalign=1.0)
     with dissolve
     BE "... The hell?"
     PRG "Alice-"
@@ -23505,9 +23511,9 @@ label MC028:
     play music MC
     "The group and I started toward the large booth with Takamura behind it, a crowd of people in front of it."
     MCT "Should we ask Daichi, too? I mean, he's here…"
-    show BE happy
-    show FMG neutral
-    show WG neutral-2
+    show BE happy at Position(xcenter=0.79, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.22, yalign=1.0)
+    show WG neutral-2 at Position(xcenter=0.50, yalign=1.0)
     with dissolve
     "Honoka craned her neck a little, glancing up to see forward."
     BE "Looks like we'll have competition."
@@ -23517,13 +23523,17 @@ label MC028:
     WG "Well said, Akira."
     hide FMG
     hide WG
-    show PRG neutral
+    show PRG neutral at Position(xcenter=0.22, yalign=1.0)
     show GTS_S neutral
     with dissolve
     PRG "I-I wonder what kind of challenges we'll have to do."
     GTS "Most likely the standard Halloween affair, Kodama-san. Simple party games and such."
     MC "Eh, could be something different. Never know, I guess."
-    show Takamura neutral with dissolve
+    show BE at altMove(0.5,0.92)
+    show GTS_S at altMove(0.5,0.68)
+    show PRG at altMove(0.5,0.43)
+
+    show Takamura neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1) with dissolve
     Takamura "Alright, off to that side, then! You'll find your first challenge along the way!"
     Takamura "Ahh, class 3-B. Ready to show your stuff?"
     show BE happy
@@ -23532,12 +23542,13 @@ label MC028:
     hide GTS_S
     hide WG
     with dissolve
+    show FMG neutral at Position(xcenter=0.68, yalign=1.0)
     Takamura "Now, let's see… Inoue-san, Kodama-san, the male Hotsure-san, aaaaand… Mizutani-san, I see. Yes…"
     hide BE
     hide PRG
     hide FMG
-    show GTS_S neutral
-    show WG stern
+    show GTS_S neutral at Position(xcenter=0.88, yalign=1.0)
+    show WG stern at Position(xcenter=0.50, yalign=1.0)
     with dissolve
     Takamura "Oh! And Yamazaki-san and Nikumaru-san, of course!"
     hide GTS_S
@@ -23558,8 +23569,8 @@ label MC028:
     AE "Mmn…"
     "Shiori glanced down once again."
     hide Takamura
-    show BE neutral
-    show GTS neutral at Position(ycenter=0.55)
+    show BE neutral at Position(xcenter=0.22, yalign=1.0), Transform(xzoom=-1)
+    show GTS neutral at Position(xcenter=0.85, ycenter=0.55) behind BE, PRG, FMG, WG, AE
     with dissolve
     BE "Come on, Matsumoto-san! It's all just for fun!"
     GTS "Yes. Please join. I've… rather missed spending time together as a class."
@@ -23602,12 +23613,12 @@ label MC028:
         BE "Yep! All good!"
         hide BE with dissolve
     "I stepped off to the side, over toward them."
-    show Tomoko neutral
-    show RM neutral
-    show Yuki neutral
+    show Tomoko neutral at Position(xcenter=0.30, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.50, yalign=1.0)
+    show RM neutral at Position(xcenter=0.80, yalign=1.0)
     with dissolve
     MC "Hey, uh, any of you guys wanna join our team? We have an open spot."
-    show Tomo worried
+    show Tomoko worried
     Tomoko "Mhhh…"
     show RM concerned-2
     "Tomo lightly tapped her thigh with her hand, as Daichi… stared at me, shaking his head in small adjustments."
@@ -23678,16 +23689,25 @@ label MC028:
     MC "I uh, I already have a team. Sorry, though."
     Fumika "Mm, alright."
     if routelock == "WGB":
-        show Okisho neutral with dissolve
+        show Tomoko at altMove(0.5,0.48)
+        show Yuki at altMove(0.5,0.65)
+        show RM at altMove(0.5,0.92)
+        show Okisho neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM with dissolve
         "Someone… large moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
         MCT "Oh, there she is. I was hoping to see her soon."
         Okisho "Will the class president do?"
     elif getFlag("Meet_Mizawa"):
-        show Okisho neutral with dissolve
+        show Tomoko at altMove(0.5,0.48)
+        show Yuki at altMove(0.5,0.65)
+        show RM at altMove(0.5,0.92)
+        show Okisho neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM with dissolve
         "Someone… large moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
         Okisho "Will the class president do?"
     else:
-        show Okisho neutral with dissolve
+        show Tomoko at altMove(0.5,0.48)
+        show Yuki at altMove(0.5,0.65)
+        show RM at altMove(0.5,0.92)
+        show Okisho neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM with dissolve
         "Someone… large and dressed like a pig… a very revealed one, moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
         MCT "Uhh…"
         UNKNOWN "Will the class president do?"
@@ -23703,8 +23723,8 @@ label MC028:
         "Okisho gave me a wink, grinning."
     play music Halloween
     UNKNOWN "Can you make room for us?"
-    show Jineko neutral
-    show Tako neutral
+    show Jineko neutral at Position(xcenter=0.35, yalign=1.0) behind Okisho, Tomoko
+    show Tako neutral at Position(xcenter=0.80, yalign=1.0) behind Yuki, RM
     with dissolve
     MC "Oh! Hey, and-"
     "Jineko walked back up to us, as well as another girl, wrapped head to toe in-"
@@ -23742,7 +23762,9 @@ label MC028:
     show Tako neutral
     show Tomoko annoyed
     Tomoko "... The hell?"
-    show AE neutral with dissolve
+    hide Okisho
+    show AE neutral at Position(xcenter=0.18, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
     AE "..."
     "Shiori walked up beside me, hands on her waist."
     hide Okisho
@@ -23813,7 +23835,7 @@ label MC028:
     scene Chukan Point with fade
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind AE
@@ -23884,7 +23906,7 @@ label MC028:
     scene Chukan Point Trail with fade
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
@@ -23959,7 +23981,7 @@ label MC028:
     "Aside from the crunching of leaves and every so often, a stick beneath someone's foot, there was… nothing."
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
@@ -24019,7 +24041,7 @@ label MC028:
     pause .5
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
@@ -24050,7 +24072,7 @@ label MC028:
     pause .5
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
@@ -24093,7 +24115,7 @@ label MC028:
     show FMG neutral
     BE "Ahh… h-hah… s-sorry, Y-Yamazaki-san."
     show GTS_S neutral-2
-    GTS_S "{size=-6}-hō ren ge– oh? Ah… th-think nothing of it, Inoue-san."
+    GTS_S "{size=-6}-hō ren ge–{/size} oh? Ah… th-think nothing of it, Inoue-san."
     show PRG worried
     if not routelock == "BE":
         MCT "... The most Honoka thing ever."
@@ -24356,7 +24378,7 @@ label MC028:
     GTS_S "Right…"
     GTS_S "{i}Mcchh-hnnh{/i}"
     show dummy with vpunch
-    GTS_S "INOUE-SAN!"
+    GTS_S "{size=36}INOUE-SAN!{/size}"
     show AE surprised
     show PRG scared
     show FMG surprised
@@ -24402,7 +24424,7 @@ label MC028:
         show BE embarrassed-2
         "Honoka's… nipples were jutting forward into the fabric of her costume."
     MC "Here, hold up."
-    show FMG neutral
+    show FMG neutral at Position(xcenter=0.72, yalign=1.0)
     "I stepped down the path and over to her, hearing footsteps behind me and glancing back, seeing Akira following."
     "The two of us came to her, as Akira grabbed her hands and started pulling, getting the sticks off at least. Though, Honoka still stuck to the webbing."
     FMG "Mmh… well, at least I got the sticks off."
@@ -24412,7 +24434,7 @@ label MC028:
     BE "Ummm…"
     show BE unamused at Position(xcenter=0.23, yalign=1.0)
     show PRG surprised at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG doubt at Position(xcenter=0.60, yalign=1.0)
     show AE neutral-eyebrow at Position(xcenter=0.75, yalign=1.0)
     show GTS surprised at Position(xcenter=0.90, ycenter=0.55) behind AE
@@ -24447,7 +24469,8 @@ label MC028:
     BE "... You all were asking."
     show WG neutral
     BE "Also, can someone get this off of me? This is the biggest spiderweb I've ever seen."
-    show GTS_S neutral
+    hide GTS
+    show GTS_S neutral at Position(xcenter=0.85, ycenter=0.35) behind AE
     GTS_S "That… does not look natural, Inoue-san. No matter the spider, no webbing is as thick as a finger."
     "She knelt, and gently touched the spiderweb, which stuck to her finger like glue."
     AE "It seems to be a decoration, so we're likely still on the trail."
@@ -24480,10 +24503,10 @@ label MC028:
     hide BE
     with dissolve
     pause .5
-    show AE neutral
-    show WG neutral-2
-    show GTS_S neutral
-    show PRG worried
+    show AE neutral at Position(xcenter=0.33, yalign=1.0)
+    show WG neutral-2 at Position(xcenter=0.62, yalign=1.0)
+    show GTS_S neutral at Position(xcenter=0.80, yalign=1.0)
+    show PRG worried at Position(xcenter=0.12, yalign=1.0)
     with dissolve
     MC "Alright, alright. We'll figure something out."
     WG "Right. We need a way to separate the skin from the webbing."
@@ -24511,8 +24534,8 @@ label MC028:
     hide GTS_S
     hide PRG
     with dissolve
-    show BE flustered
-    show FMG devious
+    show BE flustered at Position(xcenter=0.23, yalign=1.0)
+    show FMG devious at Position(xcenter=0.40, yalign=1.0)
     with dissolve
     BE "You are warm. What the hell…"
     FMG "I told you! Us barbarians are always hot!"
@@ -24530,7 +24553,7 @@ label MC028:
         FMG "Yeah. Thank you."
         MC "Course."
         "By the others, Shiori made a small, irritated noise."
-    if isHighestSkill("Athletics"):
+    elif isHighestSkill("Athletics"):
         "I dug the stick between Honoka's sides and Akira's hands, prying upwards as if it were a crowbar."
         "Going in small increments, I loosened it here and there, the webbing pulling up along the two girls as I worked around Honoka's body."
         "Finally, coming around the end, I pulled the stick free from the webs, glancing at the two."
@@ -24540,17 +24563,17 @@ label MC028:
         with dissolve
         pause .5
         "I turned back toward Shiori, Alice, Naomi, and Aida."
-        show AE neutral
-        show WG neutral-2
-        show GTS neutral at Position(ycenter=0.55)
-        show PRG worried
+        show AE neutral at Position(xcenter=0.75, yalign=1.0)
+        show WG neutral-2 at Position(xcenter=0.60, yalign=1.0)
+        show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind BE, PRG, FMG, WG, AE
+        show PRG worried at Position(xcenter=0.12, yalign=1.0)
         with dissolve
         MC "Could one of you guys get her other arm? That way, we can both catch her?"
         "Aida stepped forward, as… Shiori touched her arm."
         AE "Please. Allow me, Kodama-san."
         PRG "Uh… o-okay."
-        show BE unamused with dissolve
-        show FMG angry with dissolve
+        show BE unamused at Position(xcenter=0.23, yalign=1.0) with dissolve
+        show FMG angry at Position(xcenter=0.40, yalign=1.0) with dissolve
         "Shiori came forward, and grabbed Honoka's other arm."
         "I rolled Honoka's sleeve up a little, getting a grip on her skin."
         MC "Push forward. Toward us."
@@ -24582,8 +24605,8 @@ label MC028:
         hide BE
         with dissolve
         pause .5
-        show WG angry
-        show AE neutral
+        show WG angry at altMove(0.5,0.82)
+        show AE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
         with dissolve
         WG "This is eating into our time…"
         show WG stern
@@ -24595,9 +24618,10 @@ label MC028:
         MC "Alice, can you catch Honoka if she stumbles?"
         WG "I suppose."
         "I glanced back at her, and behind her, Naomi and Aida, who were watching, both looking slightly unnerved."
-        show BE unamused with dissolve
+        show BE unamused at Position(xcenter=0.45, yalign=1.0), Transform(xzoom=-1) with dissolve
         MC "Alright. One, two… three!"
         "I yanked the stick forward as Shiori matched me, Honoka's middle tugging forward and off of the web."
+        show BE at altMove(0.5, 0.8)
         "Whether it was from her pulling or the sheer weight of her chest, Honoka's upper back and shoulders yanked free as well, as she stumbled a bit, her legs pulling free."
         "Honoka fell forward, lightly bumping against Alice, who put her arms out to support her."
         MC "There!"
@@ -24606,12 +24630,12 @@ label MC028:
         hide AE
         with dissolve
         pause .5
-        show FMG angry with dissolve
+        show FMG angry at Position(xcenter=0.75, yalign=1.0) with dissolve
         FMG "Uh, still one girl stuck here!"
         "I jammed the stick through the web, pressing it between Akira's left hand and the web, which easily pulled it away."
         "Taking it, Akira wrenched free her other hand and arm, grimacing."
-        show BE neutral
-        show AE neutral
+        show BE neutral at Position(xcenter=0.23, yalign=1.0)
+        show AE neutral at Position(xcenter=0.50, yalign=1.0)
         with dissolve
         BE "T-Thanks, guys."
         show FMG neutral
@@ -24620,7 +24644,7 @@ label MC028:
         AE "Hmmgh…"
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE, WG
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind AE
@@ -24652,7 +24676,7 @@ label MC028:
     hide GTS with dissolve
     "Naomi headed down the path into the darkness."
     GTS_S "... Mmmnnhh."
-    show GTS_S neutral at Position(xcenter=0.90, ycenter=0.55) behind AE with dissolve
+    show GTS_S neutral at Position(xcenter=0.90, yaligh=1.0) behind AE with dissolve
     "The loud creaking of wood echoed as Naomi emerged from the dark, carrying about seven or eight large logs."
     "She went to the webbing and adjusted her feet, ensuring she wouldn't drop half a tree onto her foot."
     "{i}CRASH!{/i}"
@@ -24682,10 +24706,10 @@ label MC028:
     play music TwilightBright
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE, WG
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
-    show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind AE
+    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
     with dissolve
     "The trail spread back out into a small clearing."
     "A tree stump sat in the middle, a… very bored looking female student sitting cross-legged on it, her chin in her hands as she stared into space."
@@ -24796,14 +24820,14 @@ label MC028:
     hide BE
     hide AE
     hide FMG
-    hide GTS
+    hide GTS_S
     hide WG
     hide PRG
     ReinaM "Group one shall be you, then… mmm."
-    show FMG neutral with dissolve
+    show FMG neutral at Position(xcenter=0.83, yalign=1.0) with dissolve
     ReinaM "Those of rotund waist. Yes, those two and you!"
-    show WG angry
-    show PRG wistful
+    show WG angry at Position(xcenter=0.50, yalign=1.0)
+    show PRG wistful at Position(xcenter=0.15, yalign=1.0)
     with dissolve
     "Alice glared at Reina, while Aida simply glanced down."
     pause .5
@@ -24812,9 +24836,10 @@ label MC028:
     hide FMG
     with dissolve
     pause .5
-    show BE neutral
-    show AE neutral
-    show GTS neutral at Position(ycenter=0.55)
+    show BE neutral at Position(xcenter=0.23, yalign=1.0)
+    show AE neutral at Position(xcenter=0.50, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.88, ycenter=0.55)
+    with dissolve
     ReinaM "Then, group two is the other two girls, and you, Madame President."
     show BE confused
     BE "Uhh… what about Kei-chan?"
@@ -24834,13 +24859,13 @@ label MC028:
     elif routelock == "BE" or routelock == "AE" or routelock == "GTS":
         jump MC028_group2
     else:
-        show BE neutral at Position(xcenter=0.23, yalign=1.0)
-        show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-        show FMG neutral at Position(xcenter=0.35, yalign=1.0)
-        show WG neutral at Position(xcenter=0.60, yalign=1.0)
-        show AE neutral at Position(xcenter=0.75, yalign=1.0)
-        show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind AE
-    with dissolve
+            show BE neutral at Position(xcenter=0.23, yalign=1.0)
+            show PRG neutral at Position(xcenter=0.12, yalign=1.0)
+            show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
+            show WG neutral at Position(xcenter=0.60, yalign=1.0)
+            show AE neutral at Position(xcenter=0.75, yalign=1.0)
+            show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind AE with dissolve
+            with dissolve
     pause .5
     menu:
         "Go with Akira, Alice and Aida.":
@@ -26362,7 +26387,7 @@ label MC028_finale:
         MC "Alright? It's great!"
         MC "What uh… what is it?"
         show AE aroused
-        AE "I'm… I uh… uch… I'm the ‘Mistress of the Night'..."
+        AE "I'm… I uh… uch… I'm the 'Mistress of the Night'..."
         MC "Wow… okay then… well… the night is young."
         "I held my hand out."
         MC "Shall we?"
