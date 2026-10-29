@@ -61,6 +61,9 @@ define mov3 = { "master" : MoveTransition(3.0)}
 #if combining with "Transform(xzoom=+-1)", separate into two different "show ______ at" statements
 #error happens whenever xzoom is set to +1 only, but for consistency's sake; we'll separate them regardless.
 
+transform altMoveY (ySp, yCen):
+    linear ySp ycenter yCen
+
 transform altMove (xSp, xCen):
     linear xSp xcenter xCen
 
