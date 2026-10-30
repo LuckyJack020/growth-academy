@@ -20887,7 +20887,7 @@ label MC028:
     if routelock == "PRG":
         $setMCOutfit(OutfitEnum.COSTUME)
         scene Dorm Interior with fade
-        MCT "Alright… ten minutes." 
+        MCT "Alright... ten minutes." 
         "I checked my phone, then tossed it on my bed, grabbing my gloves beside it and pulling them on."
         "The slightly patchy, purposely dingy looking fur made pulling them on a bit tricky, but once they were on, I adjusted them around each finger."
         "I took the mask from the bed and pulled it on, taking my phone and pulling up my camera, gazing at myself."
@@ -20895,7 +20895,7 @@ label MC028:
         "The wolf mask sat over my eyes, hair drifting over the top, leaving my mouth out at the bottom."
         MCT "I make a good werewolf."
         MCT "Well, maybe a werewolf in a hair metal band."
-        MCT "Then again, if this hair keeps on growing maybe I will become one for real…{w}Best not to think about that."
+        MCT "Then again, if this hair keeps on growing maybe I will become one for real...{w}Best not to think about that."
         "Pulling on the front of my jacket to make sure it was straight, I walked into the bathroom doorway and looked in the mirror, turning a bit to make sure I hadn't missed anything."
         "I grabbed my phone again, and brushing a few pieces of hand fur out of the way, unlocked it and went to my texts."
         MCTextCell "Good if I head over?"
@@ -20906,23 +20906,23 @@ label MC028:
         MCT "Now I can finally see what the fuss is all about."
         "Ever since plans had been laid down for our Halloween party, everyone had gotten pretty involved in planning costumes and such, as well as ideas for what we could do, and where we would go."
         "In particular, Aida had been almost silent about her costume, and as such, we'd spent way more time either at my dorm, or out and about on the island."
-        "Of course, my mind had wandered, and I had… ideas on what Aida could be dressed as."
+        "Of course, my mind had wandered, and I had... ideas on what Aida could be dressed as."
         MCT "Going at it from the movie angle, maybe she's like a zombie or a vampire. Or something like 'classic horror.'"
-        MCT "Hm… not sure if Aida is squeamish with blood or anything, so I don't know."
+        MCT "Hm... not sure if Aida is squeamish with blood or anything, so I don't know."
         MCT "Ghost bride, maybe? Like, long white dress with rips in it, gloves, and like a wilting flower bouquet?"
-        MCT "Mm… nah. Doesn't feel like her."
+        MCT "Mm... nah. Doesn't feel like her."
         scene Dorm Exterior with fade
         MCT "Well, and what says she's gonna go spooky? Maybe she's going for like cute or something funny?"
-        MCT "Ehh… Honoka would go funny. Aida… I dunno."
-        MCT "She really could be anything…"
+        MCT "Ehh... Honoka would go funny. Aida... I dunno."
+        MCT "She really could be anything..."
         "I tried to think back throughout the last few weeks. Aida had mentioned a couple of things that she'd gotten, and she'd taken quite a bit of time alone to work on it, so I knew she was actually putting work into it."
         "I glanced down, suddenly a touch self conscious."
-        MCT "Hm… okay, think cute."
+        MCT "Hm... okay, think cute."
         MCT "A cat?"
-        MCT "Nah. Way too basic for her. Plus, the cat costume at Halloween is more… slut."
+        MCT "Nah. Way too basic for her. Plus, the cat costume at Halloween is more... slut."
         MCT "... Would she, though?"
         "I shook my head, though the idea of Aida in like a miniskirt with tights, fake ears and paws, and a skimpy top wasn't unwelcome."
-        MCT "Mmm… maybe a mummy? Still spooky, but like, could be cute with just her eyes and hair poking out."
+        MCT "Mmm... maybe a mummy? Still spooky, but like, could be cute with just her eyes and hair poking out."
         pause .75
         MCT "... Cow?"
         "I actually stopped walking for a moment, and smirked."
@@ -20931,20 +20931,20 @@ label MC028:
         MCT "Honoka would love it. Alice and Shiori would have their jaws on the floor."
         scene Dorm Hallway with fade
         MCT "I wonder if she did something that like incorporates her belly in some way. Like a baker, and her belly is painted with like cinnamon rolls all over it or something."
-        MCT "That… would likely mean that Alice would have to paint her, though."
+        MCT "That... would likely mean that Alice would have to paint her, though."
         MCT "... Or me."
         "I suddenly wondered if I would be walking in and have to break out my inner artist."
         "Coming up to her door, I knocked a bit quicker than I would have about twenty seconds before."
         PRG "Keisuke?"
         MC "Yep!"
         show PRG neutral with dissolve
-        PRG "Ohh… I like it."
-        MC "Is it too like… tossed together?"
+        PRG "Ohh... I like it."
+        MC "Is it too like... tossed together?"
         PRG "N-No."
         PRG "I like it."
         show PRG blush-2
-        PRG "But… m-maybe some more fur in other places? Like from your pant legs and your shirt collar?"
-        MC "Ah… yeah. That would have been good."
+        PRG "But... m-maybe some more fur in other places? Like from your pant legs and your shirt collar?"
+        MC "Ah... yeah. That would have been good."
         scene Dorm PRG with fade
         show PRG neutral
         "Walking through the main room and into Aida's, I saw that her and Alice's dorm was a mess."
@@ -20953,26 +20953,26 @@ label MC028:
         "Another box sat on the other side of the desk, pieces of colored fabric and string stuck to the top."
         "On Aida's desk itself was a pretty beastly looking sewing machine, not that I knew anything about them."
         "It was all black, with a wide bottom part. Various spools of thread and other bits and pieces were laid across her desk, though somewhat organized. A pair of scissors and a few craft knives were laid neatly near the machine."
-        "Along the floor were small puffs of cotton, drifted off into the corners or laying as dust bunnies. Or… cotton bunnies."
+        "Along the floor were small puffs of cotton, drifted off into the corners or laying as dust bunnies. Or... cotton bunnies."
         MC "Whoa. You've been busy."
         PRG2 "I-I made most of it myself."
         PRG2 "Alice started working with another student who helps her tailor her outfits, so Alice bought her a new sewing machine."
         show PRG unique-happy
         PRG2 "So, I borrowed it for a little while."
         MC "Well, don't keep me in suspense any longer. Let's see!"
-        PRG "I… I need help putting it on."
-        MC "Oh, uh… sure. Yeah, whatever you need."
+        PRG "I... I need help putting it on."
+        MC "Oh, uh... sure. Yeah, whatever you need."
         show PRG neutral
         "Aida went over to her bed, which now that I looked at it, was lumpy, and clearly had something under it."
         PRG "I-I want you to keep your eyes shut while you're helping, though."
-        MC "Ahh… okay? I mean, I'll do my best, but it'll be hard not being able to see what I'm doing."
+        MC "Ahh... okay? I mean, I'll do my best, but it'll be hard not being able to see what I'm doing."
         show PRG unique
-        PRG "It'll be okay. Um… can you take your mask off, though? So I can make sure your eyes are closed?"
+        PRG "It'll be okay. Um... can you take your mask off, though? So I can make sure your eyes are closed?"
         MC "You can't see my eyes most of the time anyway!"
         $setMCOutfit(OutfitEnum.CASUAL)
         show PRG neutral
         PRG "... R-Right."
-        PRG "O-Okay, um… can you close them?"
+        PRG "O-Okay, um... can you close them?"
         scene black with fade
         hide PRG with dissolve
         MC "Alright. Closed."
@@ -20980,46 +20980,46 @@ label MC028:
         MC "Yep!"
         "I heard Aida's footsteps come closer, and felt air being pushed past my face."
         MC "... Did you just like try to test if I actually shut them? Like throwing a fake punch or something?"
-        PRG2 "I-I didn't punch! I just kind of… swatted my hand in front of your face a few times."
+        PRG2 "I-I didn't punch! I just kind of... swatted my hand in front of your face a few times."
         MC "Alright, alright."
-        PRG "S-Sorry. I know I'm being overly picky with this…"
+        PRG "S-Sorry. I know I'm being overly picky with this..."
         MC "No, no. Not at all. It's super cute that you're all excited for this."
-        PRG "I like making things…"
+        PRG "I like making things..."
         "I heard the snaps on Aida's shirt come undone, then something hit the floor."
         MC "Damn. My girlfriend is getting undressed in front of me, and I can't even watch."
         PRG "I still have my panties on!"
         MC "The werewolf smells the pretty girl before him in her natural state, prime and supple. The better to nibble on."
         "More footsteps, then Aida grabbed my right arm."
-        PRG "For your help…"
+        PRG "For your help..."
         "Aida lifted my hand up, and it made contact with something very soft, with a large protrusion in the middle."
-        MC "Mm… boob."
+        MC "Mm... boob."
         MC "... Wait, that is your boob, right?"
         PRG2 "Yes, you butt."
         MC "Well, hey! You could have been handing me like a costume piece or something!"
         PRG2 "Hehehe!"
         "Aida backed up, and came back over after a second, lifting my hands and handing me something, putting my hands specifically on something with metal loops and hooks."
         PRG2 "Okay. I'll guide you, but I need you to hook this for me."
-        MC "This a… bra?"
+        MC "This a... bra?"
         PRG2 "Mhm. It's strapless."
         MC "Strapless?"
-        MC "Uh… not to be rude, but will that like… hold you up okay?"
+        MC "Uh... not to be rude, but will that like... hold you up okay?"
         PRG2 "I-I never would wear it on a day to day basis. But, it'll be okay for tonight."
         PRG2 "I tried to add some support into the costume itself, so it should be fine."
         MC "Gotcha."
         "Aida guided my hands, as I felt her butt press into my front, her hands bringing the fabric around herself, then to her back."
         PRG2 "Okay. You can hook it."
-        PRG2 "Ohh… hold on. That's gonna be really hard if you can't see…"
+        PRG2 "Ohh... hold on. That's gonna be really hard if you can't see..."
         PRG2 "Turn to your left."
         "I started rotating on the spot, feeling Aida move with me as we shifted a little."
-        PRG2 "Okay. You can open your eyes for this part. Just… please don't look behind you."
+        PRG2 "Okay. You can open your eyes for this part. Just... please don't look behind you."
         scene Dorm PRG with fade
         "I made sure I was looking down when I opened, and saw Aida's wall in front of her, with Aida standing literally right in front of me, facing away."
         "In order to reach her back, her ass basically had to be right in my crotch."
-        MC "Alright. Hoooly… okay, yeah, this is a lot of hooks."
+        MC "Alright. Hoooly... okay, yeah, this is a lot of hooks."
         MC "How many hooks do most bras have? Like two or three?"
-        PRG "U-Usually…"
-        "I looked down at the… seven hooks in my hand, and one by one, hooked the back up."
-        PRG "I-I purposely didn't pump this afternoon, so they'll be a little more… firm."
+        PRG "U-Usually..."
+        "I looked down at the... seven hooks in my hand, and one by one, hooked the back up."
+        PRG "I-I purposely didn't pump this afternoon, so they'll be a little more... firm."
         MC "Mm. Makes them easier to hold?"
         PRG "Mhm. I'm hoping it'll work better with a strapless."
         MC "Gotcha. Alright, feel okay?"
@@ -21034,10 +21034,10 @@ label MC028:
         PRG "Y-You can just stay there for a second. I have to get my tights on."
         MC "... Tights?"
         PRG "M-Mhm."
-        "I heard Aida's bed squeak and groan, then…"
-        PRG "... Baby, can you help? I… can't reach."
+        "I heard Aida's bed squeak and groan, then..."
+        PRG "... Baby, can you help? I... can't reach."
         MC "Of course, Hun."
-        PRG "Um… turn to the right, then take one step, and kneel down."
+        PRG "Um... turn to the right, then take one step, and kneel down."
         "I followed her instructions, then got to my knees and felt forward."
         "My hands came down on something very round, with a bit of give."
         MC "... Belly?"
@@ -21049,32 +21049,32 @@ label MC028:
         "I fumbled a bit, but managed to get them on, adjusting the toe until the little seam lined up with Aida's toe line."
         PRG "H-How did you know to adjust the toe like that?"
         MC "Because if your sock is ever in the wrong spot, it feels annoying as hell when you're walking."
-        PRG "It does. Thank you…"
+        PRG "It does. Thank you..."
         PRG "Okay, you can back up a couple of steps. I can do the rest."
         "I got up and stepped back, hearing Aida's bed creak as she got up, then heard a soft rubbing sound, followed by a little snap."
         PRG "There. Okay."
         "Aida handed me some sort of heavy fabric thing."
-        PRG2 "Hold it like… this. Perfect."
+        PRG2 "Hold it like... this. Perfect."
         "Aida adjusted my hand, then I could feel her arm slip into it, then the same on the other side."
-        PRG2 "Then… here. You can let go."
+        PRG2 "Then... here. You can let go."
         "I dropped the fabric, as Aida stepped away from me."
         PRG2 "Okay. Give me two seconds."
         "There was more rustling and adjusting sounds near Aida's mirror on the wall. I stood, racking my brain as to what I was about to see."
-        PRG2 "Okay… good. Can you hold this?"
-        "I suddenly felt something… very fluffy being pushed into my hands. It wasn't heavy by any means, but the fluff on the outside felt kind of like a really plush rug."
+        PRG2 "Okay... good. Can you hold this?"
+        "I suddenly felt something... very fluffy being pushed into my hands. It wasn't heavy by any means, but the fluff on the outside felt kind of like a really plush rug."
         "Aida adjusted my hands, until I found something stretchy and wide."
         PRG2 "This goes around my waist. I think it'll be easiest if I just step in."
-        MC "Oh, like…"
+        MC "Oh, like..."
         PRG2 "Here. Set it down on the floor, but still hold it, then once I get in, you can hand it to me and I can adjust it."
         "I bent down and laid the loop on the floor, then felt some sort of heavy fabric brush over my arms and hands."
         "Lifting a little, I felt Aida take it from me and let go, then backed up."
-        PRG2 "Mmn… alright. There."
+        PRG2 "Mmn... alright. There."
         PRG2 "I can get everything else. Thank you, Baby."
         MC "Of course. Can I open?"
         PRG2 "No! Not yet, not yet!"
         MC "Alright, alright."
         MC "Can I sit on your bed, then?"
-        PRG2 "Mhm. Here…"
+        PRG2 "Mhm. Here..."
         "I felt Aida's hands take mine, and she guided me over to the bed where I sat."
         PRG2 "Alright. I'll be in the bathroom for about ten minutes. Once I let you know, you can open your eyes while I'm gone."
         MC "Gotcha."
@@ -21128,7 +21128,7 @@ label MC028:
         MCT "Alright, we're good."
         "I looked down at my gloved, furry hands and turned them, making sure they were even."
         "Ever since plans had been laid down for our Halloween party, everyone had gotten pretty involved in planning costumes and such, as well as ideas for what we could do, and where we would go."
-        "While I'd been more than excited for the party itself, planning the actual costume had been more… pushed to the wayside."
+        "While I'd been more than excited for the party itself, planning the actual costume had been more... pushed to the wayside."
         "Granted, I had tried to pick a costume that went well with my hair, which left me with werewolf and precious little else."
         "The mask and gloves had thankfully been easy to find, with the jacket just being my usual one."
         MCT "Of course, there's gonna be someone who just went absolutely insane on the details."
@@ -21139,14 +21139,14 @@ label MC028:
         "About 30 seconds later, the door opened at the front of the dorms."
         show FMG neutral with dissolve
         FMG "Hey, Kei-kun!"
-        MC "Oh, holy barbarian…"
+        MC "Oh, holy barbarian..."
         "As she walked over, my eyes, thankfully covered by hair and mask, trailed downwards."
         MC "So, did you just decide to roll with as little clothing as possible for this? Just the loincloth and all?"
         show FMG happy
         FMG "Didn't think of of everyone, {i}you'd{/i} be the one arguing."
         MC "Oh, I'm not! Not at all!"
         MC "I appreciate the view, is all I'm saying."
-        FMG "Heheh… figured."
+        FMG "Heheh... figured."
         show FMG flex
         "She struck a pose, arms up in a sort of brutish flex."
         FMG "Least I put effort in, unlike {i}some{/i} people who'll be attending."
@@ -21159,8 +21159,8 @@ label MC028:
         FMG "Ahahah! Yeah, guess you're right."
         show FMG neutral
         FMG "What time is it?"
-        MC "Uhhh…"
-        MC "It's… 16:35."
+        MC "Uhhh..."
+        MC "It's... 16:35."
         MC "Should probably get rolling. Everything starts in a little over 20 minutes."
         "Akira glanced behind her at a few other groups of students all clustered in costumes or making their way down the paths."
         FMG "Eh, should be fine. We can just follow the crowd."
@@ -21173,7 +21173,7 @@ label MC028:
         FMG "Alright, fine. You got me. But if you're gonna ask me to come to the party with you, you gotta do it in werewolf language."
         MC "... I am not howling in front of this wholeass crowd of people."
         show FMG disappointed
-        FMG "Come {i}onnn{/i}…"
+        FMG "Come {i}onnn{/i}..."
         MC "Well, werewolves are human part of the time, which means they can speak normally."
         MC "So again, you coming?"
         show FMG neutral
@@ -21185,7 +21185,7 @@ label MC028:
         $setMCOutfit(OutfitEnum.COSTUME)
         scene Dorm Hallway with fade
         "I let the door close behind me to the girl's dorms, following the well-worn path toward Alice and Aida's dorm."
-        "Alice had been… rather reserved with details on her costume, though I'd tried my best to pick out bits and pieces based on the information she did hint at."
+        "Alice had been... rather reserved with details on her costume, though I'd tried my best to pick out bits and pieces based on the information she did hint at."
         "At Alice and Aida's door, I knocked and took a step back."
         Chibuki "Oh, come off it, it's fine!"
         "I knocked one more time."
@@ -21196,7 +21196,7 @@ label MC028:
         "She held the door politely, letting me enter as the door closed behind me."
         MC "What's the deal? You going to the party dressed as an overworked executive assistant with an attitude problem, or are you just not coming?"
         Chibuki "You're a cheeky one, that's for sure." 
-        Chibuki "But to answer your question… {w}Eh… I dunno. Might, might not."
+        Chibuki "But to answer your question... {w}Eh... I dunno. Might, might not."
         MC "I get it. Not feeling the season?"
         Chibuki "Let's chalk it up to that, yeah."
         MC "Gotcha. Alice around?"
@@ -21208,7 +21208,7 @@ label MC028:
         scene Dorm WG with fade
         show WG neutral with fade
         MCT "Whoa! She really went all out on the materials for her costume. It's practically a period piece. {w}I mean, not that I'd expect anything less from Alice when it comes to clothes."
-        WG "Mmph… Oh hello, Dear. Pardon me a moment."
+        WG "Mmph... Oh hello, Dear. Pardon me a moment."
         "Alice sat on her bed, adjusting one of the flats she wore, then stood back up, brushing down her dress with her hands."
         show WG happy
         WG "And how do I look?"
@@ -21216,17 +21216,17 @@ label MC028:
         MC "Regal? Royal? Radiant?"
         WG "Thank you, Dear. Wonderful alliteration, by the way."
         show WG pondering
-        WG "Hmm…"
+        WG "Hmm..."
         "Alice for her part was giving me the up and down with her eyes, thoroughly scrutinizing my choice of costume no doubt."
         show WG happy
-        WG "Hehe… HAHA!"
+        WG "Hehe... HAHA!"
         "Admitantly it wasn't the best idea I ever had, but I thought it was somewhat clever to lean into my condition rather than work against it for my costume. Apparently Alice was not impressed."
         MC "What? Not a fan I take it?"
         show WG coy
         WG "Oh, no. Quite the contrary. It's surprisingly clever of you, Dear. I'm impressed."
         MC "You are?"
         show WG pondering
-        WG "A tale as old as time. Beauty… and the Beast. Such a cleverly thematic pairing with our costumes."
+        WG "A tale as old as time. Beauty... and the Beast. Such a cleverly thematic pairing with our costumes."
         MCT "I may not have swung for the fences on this one, but still managed to knock it out of the park."
         MC "Well, I took a few hints that you offered about your costume and pieced it together with a bit of poetic license."
         show WG sly
@@ -21252,7 +21252,7 @@ label MC028:
         "There was a soft sound of something dropping."
         PRG2 "Oh-"
         PRG2 "I-I'll meet you there!"
-        PRG "Um… Chibuki, could you… help me grab something?"
+        PRG "Um... Chibuki, could you... help me grab something?"
         Chibuki "Of course."
         "Chibuki came to the door as Alice and I turned away politely."
         WG "We'll see you there then, Aida."
@@ -21272,7 +21272,7 @@ label MC028:
         WG "Well, at least for some people, but at the very least, most everyone likes to use it as an excuse to have some Halloween candy."
         MC "Well, we can have some fun tonight and relax. Hang out, chat, have some snacks, and enjoy the time."
         WG "Indeed we shall."
-        MCT "Got a feeling the snacks will be more than enjoyed…"
+        MCT "Got a feeling the snacks will be more than enjoyed..."
         
     elif routelock == "BE":
         $setMCOutfit(OutfitEnum.COSTUME)
@@ -21303,15 +21303,15 @@ label MC028:
         MC "Fair point."
         MC "Alright, the suspense is killing me. Let's see."
         show BE neutral
-        BE "Alright, that's more like it! {w}Uh… turn around. Like, go into the kitchen or something."
+        BE "Alright, that's more like it! {w}Uh... turn around. Like, go into the kitchen or something."
         MC "What? I can't see you naked?"
         show BE guilty
         BE "It's supposed to be a surprise! In there, Mr. Fluffy!"
         hide BE with dissolve
         "I sighed, putting my illusionary tail between my legs and walked off into Honoka's kitchen, making sure I was facing away."
         "I could hear the subtle sound of fabric hitting the floor and different articles of clothing being shuffled around."
-        BE "Alright… hnng!"
-        "I heard the sound of something… clearly stretching, thankfully not hearing any pops or the like."
+        BE "Alright... hnng!"
+        "I heard the sound of something... clearly stretching, thankfully not hearing any pops or the like."
         BE "'Kay! Reveal time!"
         $setBEOutfit(OutfitEnum.COSTUME)
         show BE happy with dissolve
@@ -21330,12 +21330,12 @@ label MC028:
         BE "Thanks~"
         MC "Kinda like you!"
         show BE angry
-        BE "Thanks… I guess."
+        BE "Thanks... I guess."
         MC "Hehe."
         show BE shrug
         BE "I was gonna do like, a more simple ghost. Just like with the sheet and stuff."
         show BE neutral
-        BE "But, I mean… kinda felt lame since there's two big spoilers for who's under it."
+        BE "But, I mean... kinda felt lame since there's two big spoilers for who's under it."
         show BE happy
         BE "So yeah. This felt like more fun."
         show BE unique
@@ -21350,7 +21350,7 @@ label MC028:
         MC "Hey! The mask and claws are cool!"
         show BE wink
         BE "And? Anyone can buy a costume. I {i}crafted{/i} mine."
-        MC "Pff…"
+        MC "Pff..."
         pause .75
         show BE smug
         BE "... Gonna follow that up, or just gonna leave it there?"
@@ -21395,7 +21395,7 @@ label MC028:
         "We headed to the end of the hall and outside, turning toward Chūkan Point."
     elif routelock == "GTS":
         $setMCOutfit(OutfitEnum.CASUAL)    
-        scene GTS Dorm Interior with fade
+        scene Giant Dorm Interior with fade
         "I heard rustling from the bedroom, heavy footsteps."
         MC "Hey, Nacchan, I'm here!"
         GTS "Ah, capital! Come here, and we'll get ready."
@@ -21437,7 +21437,7 @@ label MC028:
         show GTS_S pondering at Transform(xzoom=1)
         MC "Eeeverything's gonna be fine, Blossom. We're gonna have a nice party and I'll be at your side no matter where we go."
         pause 1.0
-        show GTS_S happy_2
+        show GTS_S happy-2
         GTS "I would like that."
         MC "It would be my pleasure. And if I see any ghosts, I'll just kick 'em square in the nuts."
         show GTS_S embarrassed
@@ -21471,7 +21471,7 @@ label MC028:
         scene Dorm Hallway with fade
         "The door slammed behind me, as I turned down the hall, making my way toward Shiori's dorm."
         "The dorms, though undecorated and in their usual state of professionalism, had a certain air about them, helped by the groups of students standing outside and around campus, all dressed up in Halloween costumes."
-        "Since planning had been started on the holiday festivities, much of class 3-B had been enthused on the idea, but not all though…"
+        "Since planning had been started on the holiday festivities, much of class 3-B had been enthused on the idea, but not all though..."
         "I sighed slightly."
         "Shiori, while helping with the planning, hadn't really seemed to get overly jazzed about the idea of celebrating. She'd been more of the logistics planner than anything, and had handled the 'where' and 'when' more than the actual 'what' part."
         "I had bought a werewolf mask and some gloves with fur and claws on them for the event. Nothing overly showy, and of course, I could have put in more effort, but they at least would work for the one day event."
@@ -21481,7 +21481,7 @@ label MC028:
         MC "Hey. Evening."
         "I took the door from Shiori and entered, closing the door behind us and blinked a few times, attempting to adjust my eyes."
         scene Dorm AE with fade
-        "The room was… dark. Overly so."
+        "The room was... dark. Overly so."
         "A candle or two had been lit near Shiori's bed, and as my eyes adjusted, I could see a book with a thick, black cover, laying on Shiori's blankets."
         show AE neutral with dissolve
         MC "Oh, I'm sorry if I interrupted anything. Getting some reading in?"
@@ -21493,17 +21493,17 @@ label MC028:
         MC "Huh."
         show AE neutral-eyebrow
         AE "Yes?"
-        MC "Oh, nothing. Just… can I ask why you don't seem… overly into the idea?"
+        MC "Oh, nothing. Just... can I ask why you don't seem... overly into the idea?"
         show AE neutral
-        AE "Nn…"
-        AE "Simply that… I've never really had the chance to celebrate the occasion myself."
+        AE "Nn..."
+        AE "Simply that... I've never really had the chance to celebrate the occasion myself."
         AE "And I'm not sure it's appropriate to start celebrating now, as an adult."
         MC "Well, I hate to drop a cheesy phrase, but no time like the present, right?"
         MC "Who cares if the first time celebrating it was ten years ago, or ten years from now? Part of the day is having fun and enjoying the spirit of it all, right?"
         MC "Plus, all of our classmates will be there, and getting into the swing of everything. Seems like a golden opportunity to me."
         MC "I can't say I'm sure how things will go either. But, I bought a werewolf mask and some gloves to wear, so I'll be rocking those."
         show AE pondering
-        AE "Hmm…"
+        AE "Hmm..."
         show AE neutral
         AE "Alright. I'll join in."
         AE "However, I will be wearing my usual attire."
@@ -21525,7 +21525,7 @@ label MC028:
         "I looked down, adjusting one of my fuzzy, werewolf gloves."
         "I turned, heading for Chūkan Point along with the large clusters of students."
         if routelock == "WGB":
-            MCT "Haven't heard from Okisho in a while…"
+            MCT "Haven't heard from Okisho in a while..."
             MCT "She'll probably be there, though. Don't see why she'd miss it."
             "Truth be told, we never really did coordinate anything about going to the Halloween party, together or otherwise."
             MCT "Doesn't help that she's always busy as hell. Or just likes to disappear from time to time. I can't really tell, honestly."
@@ -21544,12 +21544,12 @@ label MC028:
             RM "{i}SHH!{/i}"
             MC "Dude, it's the same thing you wear every time you get up to this sort of thing. Changing it up would help you more than anything."
             show RM distrustful
-            RM "That's… rrgh."
+            RM "That's... rrgh."
             MC "Whatever. What are you up to this time? Actually going to the party?"
         else:
             "I walked along one of the groups, turning off the path a bit and standing beside one of the large bushes, still shaking from it's occupant diving into it."
             show RM pondering with dissolve
-            MC "You're uh… outfit looks cool. But, I don't think you can bring the shrub with you to the party."
+            MC "You're uh... outfit looks cool. But, I don't think you can bring the shrub with you to the party."
             show RM angry-2
             RM "I'm not-!"
             show RM angry
@@ -21564,9 +21564,10 @@ label MC028:
         show RM distrustful
         MC "Look, whatever you-"
         UNKNOWN "Hey, bro."
-        show RM concerned-2
-        show Tomoko neutral with dissolve
-        show Yuki neutral with dissolve
+        show RM concerned-2 at Position(xcenter=0.75, yalign=1.0)
+        show Tomoko neutral at Position(xcenter=0.25, yalign=1.0)
+        show Yuki neutral
+        with dissolve
         MC "Oh, hey. Wait, how did you know it was-"
         MC "Hair, right. My bad."
         show RM neutral
@@ -21579,7 +21580,7 @@ label MC028:
         "Color me surprised to see Tomo heading to a big party, but once I realized the situation with her roommate, it was easy to tell exactly why Tomo had decided to join."
         "Yuki turned her clipboard toward Daichi and I."
         show RM concerned
-        RM "You… overheard I was coming and wanted to go with me?"
+        RM "You... overheard I was coming and wanted to go with me?"
         "Yuki nodded her head quickly."
         show RM neutral
         Tomoko "She was pretty hyped for it."
@@ -21594,14 +21595,14 @@ label MC028:
         MC "Cool. Like the outfits, by the way."
         if isEventCleared("MC014B"):
             MC "Nice Gaelle cosplay, Tomo."
-            Tomoko "Eh… mm… thanks."
-            Tomoko "I uh… like yours too."
+            Tomoko "Eh... mm... thanks."
+            Tomoko "I uh... like yours too."
             MCT "... She actually put effort into hers. Least compared to mine."
         else:
             MC "What's yours from, Tomo?"
             Tomoko "Just a game I like."
             MC "Well, I like it. Looks nice."
-            Tomoko "Thanks…"
+            Tomoko "Thanks..."
             MCT "She put effort in. More than I did, anyway."
     $setMCOutfit(OutfitEnum.COSTUME)
     $setPRGOutfit(OutfitEnum.COSTUME)
@@ -21616,7 +21617,7 @@ label MC028:
         "Coming from the academy, Aida and I walked into Chūkan Point park."
         MC "Looks like we're some of the last ones here."
         show PRG worried
-        PRG "Yeah… I'm sorry. I should have called you over sooner to help me get dressed."
+        PRG "Yeah... I'm sorry. I should have called you over sooner to help me get dressed."
         MC "Oh, I don't care. Just making an observation."
     elif routelock == "FMG":
         "Coming from the academy, Akira and I walked into Chūkan Point park."
@@ -21661,30 +21662,31 @@ label MC028:
     else:
         "Coming into the park, we saw just how crowded the park actually was, with various tables set up and the like all dotting the huge park."
         "The group halted, scanning the crowd first before diving in."
-        show RM neutral with dissolve
-        show Yuki neutral with dissolve
-        show Tomoko worried with dissolve
+        show RM neutral at Position(xcenter=0.75, yalign=1.0)
+        show Yuki neutral
+        show Tomoko worried at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
         "Yuki stepped forward a bit, then shied back slightly, turning to Daichi."
-        Yuki "Cohmmmwi… shhhyaherfor ahhlighhhllwiw?"
+        Yuki "Cohmmmwi... shhhyaherfor ahhlighhhllwiw?"
         show RM neutral-2
-        RM "Sorry… once more?"
+        RM "Sorry... once more?"
         "I felt something in my chest sink a little as Yuki hung her head."
         show Tomoko neutral
-        Tomoko "Could you… do it in sign language, Yuki?"
-        Yuki "Rrrrmmmm…"
+        Tomoko "Could you... do it in sign language, Yuki?"
+        Yuki "Rrrrmmmm..."
         "Yuki shook her head, her cheeks going slightly pink, and held her clipboard, quickly scribbling something, then showing Tomo and Daichi."
         show RM neutral
-        RM "Ohh…"
+        RM "Ohh..."
         show RM concerned-2
         show Tomoko worried
         RM "Keisuke, if you want to go to the tent or something, feel free. We're going to hang out here for a minute."
-        MC "Uh, sure. I mean, I can hang out, if you guys wanna…"
+        MC "Uh, sure. I mean, I can hang out, if you guys wanna..."
         "I slowed to a stop, seeing Daichi slightly nod his head toward Yuki, who was looking off into the crowds, her eyes darting this way and that."
         MC "Yeah, I'll check things out. Hope you guys have a good time."
         "Daichi gave me a small nod, as Yuki glanced over, walking toward me a little."
-        Yuki "Umhh… schohrry. Yhh…"
+        Yuki "Umhh... schohrry. Yhh..."
         "Yuki huffed through her nose, and went for her clipboard."
-        MC "Hey, hey… it's alright. I was gonna go over by some of my classmates anyways. No worries."
+        MC "Hey, hey... it's alright. I was gonna go over by some of my classmates anyways. No worries."
         "Yuki nodded slowly, and backed up by the others as I turned and headed off into the festival."
     scene Chukan Point with fade
     play music Halloween
@@ -21695,8 +21697,8 @@ label MC028:
     Hageshi "It looks deceptively simple, but the buoyancy of the apples will cause aggressive moments to push them away from you. Be patient, and if you find your movements are restricted, wait for the apple to come to you instead."
     "As I looked, I could see that several of the girls clearly had breast factors, with a few giants students nearby, buckets in front of them that were the size of jacuzzi tubs."
     hide Hageshi with dissolve
-    "Near that…"
-    MCT "Ugh…"
+    "Near that..."
+    MCT "Ugh..."
     "A ring toss game sat, the bottles glowing in the twilight."
     MCT "... Boooo Bottles?"
     MCT "Who the hell thought of that cheesy-ass name?"
@@ -21723,7 +21725,7 @@ label MC028:
             show BE neutral with dissolve
             BE "True. I mean, it is just a park, normally. Not exactly a huge crowd draw."
             BE "It's so pretty here, though. Kind of sad that a lot of people probably haven't been here yet."
-            MC "Yeah…"
+            MC "Yeah..."
         elif routelock == "GTS":
             show GTS_S neutral with dissolve
             GTS_S "Very much so. The most common visitor the park sees are the giants, after all. It makes some degree of sense."
@@ -21732,14 +21734,14 @@ label MC028:
         elif routelock == "AE":
             show AE neutral with dissolve
             AE "Indeed."
-            MC "Mm…"
+            MC "Mm..."
         "I glanced back at the main tent, noticing how it seemed to match the scale of the benches, telescopes, and the like that dotted the park."
     else:
         $setFlag("VisitedChukanPoint")
-        MCT "This place feels… eerie."
-        MCT "Can't really put my finger on it, but… hm."
+        MCT "This place feels... eerie."
+        MCT "Can't really put my finger on it, but... hm."
         "I looked at a bench nearby, which was so colossal, it would require sticking my hands over my head and crawling onto it to actually sit."
-        MCT "Feels like everything is like… closer to me than it really is. Like a car mirror."
+        MCT "Feels like everything is like... closer to me than it really is. Like a car mirror."
     if isEventCleared("MC027"):
         "My eyes led me along to the other side of the tent, where the carved pumpkins sat on the grass, currently being lit with large candles."
         if routelock == "PRG":
@@ -21749,33 +21751,34 @@ label MC028:
             PRG "I do too~"
         else:
             "I smirked, looking over at mine and Tomo's pumpkin."
-            MCT "Guess it looks fine… {w}ish?"
-            MCT "Probably… not something I'm gonna go showing off as a masterpiece though."
+            MCT "Guess it looks fine... {w}ish?"
+            MCT "Probably... not something I'm gonna go showing off as a masterpiece though."
     
     "I looked around the crowd, scanning as I went for any familiar faces. At least, those who weren't covered in masks."
     if getFlag("Meet_Genji") and isEventCleared("MC021"):
         "My eyes halted on a larger looking guy in a goblin outfit."
-        MCT "Sota Karaku… hm. Won't be making a point to talk to him"
-        MCT "Oh, and Genji. Nice… Grindolph the Gray outfit. At least, I think."
+        MCT "Sota Karaku... hm. Won't be making a point to talk to him"
+        MCT "Oh, and Genji. Nice... Grindolph the Gray outfit. At least, I think."
         MCT "Eh, I'll chat with him later. Cool dude."
         "I raised one hand and gave him a wave, as Genji returned it, smiling back."
     elif getFlag("Meet_Genji"):
         MCT "Oh, shit. Genji."
-        MCT "And a… Grindolph the Gray costume? I think?"
+        MCT "And a... Grindolph the Gray costume? I think?"
         MCT "Nice reference, if so."
         "I raised a hand and waved to him, as Genji waved back, grinning."
         MCT "I'll hit him up later. Cool guy."
     else:
-        MCT "Huh… seen a few of these people before, I think. At least, around the hallways."
+        MCT "Huh... seen a few of these people before, I think. At least, around the hallways."
         MCT "Oh, that's that Genji dude. From Hageshi's classes."
-        MCT "Nice… Grindolph the Gray outfit."
+        MCT "Nice... Grindolph the Gray outfit."
     if routelock == "WG":
         "A large form stepped out in front of Alice and I."
-        show WG bored with dissolve
-        show Okisho happy with dissolve
+        show WG bored at Position(xcenter=0.75, yalign=1.0)
+        show Okisho happy at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
         MCT "... Oh, shit."
         Okisho "How's it hanging, Chubs?"
-        WG "Ugh… Could you just not talk to me instead of referring to me in that manner?"
+        WG "Ugh... Could you just not talk to me instead of referring to me in that manner?"
         show Okisho laugh
         Okisho "Hehe. Could, and want to, are pretty different things in case you didn't know."
         WG "Believe me, I know."
@@ -21792,7 +21795,7 @@ label MC028:
         show Okisho laugh
         Okisho "Did it ever occur to you that your insinuations that I'm a fat pig might say something far worse about the only other person here that's fatter than me?"
         show Okisho neutral 
-        MC "Girls… come on. Even you two must get bored with this whole charade every time."
+        MC "Girls... come on. Even you two must get bored with this whole charade every time."
         MC "It's a party. Everyone is here to have fun."
         show WG stern
         WG "Hmph."
@@ -21800,11 +21803,12 @@ label MC028:
         WG "Come along, Keisuke."
         "Alice led me away from Okisho, her footsteps slightly faster than the usual."
     elif routelock == "WGB":
-        "Across a few groups, I saw… a distinct ponytail, and a flash of golden hair."
-        show WG angry with dissolve
-        show Okisho angry with dissolve
+        "Across a few groups, I saw... a distinct ponytail, and a flash of golden hair."
+        show WG angry at Position(xcenter=0.75, yalign=1.0)
+        show Okisho angry at Position(xcenter=0.25, yalign=1.0)
+        with dissolve
         MCT "Oh shit. {w}I should have brought a hose, because it looks like there's a fire I need to put out."
-        Okisho "And for the record, I'm more than confident in myself to wear this! I don't need you and your… fancily embroidered garbage bag to show {i}me{/i} how to dress!"
+        Okisho "And for the record, I'm more than confident in myself to wear this! I don't need you and your... fancily embroidered garbage bag to show {i}me{/i} how to dress!"
         WG "Embroidered garbage? Your ears may be pitch perfect, but your eyes must be blind. Clearly your eyes aren't used to admiring quality handiwork!"
         show WG haughty
         WG "Though I'll admit, your costume is superior. I can't imagine anyone else here so thoroughly embodying the persona of their costume than you as a pig."
@@ -21825,7 +21829,7 @@ label MC028:
         show Okisho laugh
         Okisho "And you, calling someone else a pig, that's the pot calling the kettle fat."
         show Okisho neutral
-        MC "Easy, easy… Hold up now."
+        MC "Easy, easy... Hold up now."
         MC "Do we really have to do this all over again, every time?"
 
         show Okisho happy
@@ -21846,22 +21850,22 @@ label MC028:
     show Takamura happy with dissolve
     "Takamura was behind one of the tables, taking a large container from a student."
     "She seemed to be a sorceress of some sort."
-    MCT "Did she… dye her hair?"
+    MCT "Did she... dye her hair?"
     pause .5
     hide Takamura with dissolve
     if routelock == "PRG":
         MC "Here, wanna put your dessert down by the others?"
         show PRG neutral with dissolve
-        PRG "Yes. Um… what's the easiest way to get through here?"
+        PRG "Yes. Um... what's the easiest way to get through here?"
         "A large crowd had built up between us and the tables."
-        MC "Uhh… let's just go around. Here."
+        MC "Uhh... let's just go around. Here."
         "I led Aida around one side, taking in the tables as we grew closer."
         MC "Did the whole cooking club help out with this? There's a ton of stuff here."
         PRG "Mhm. Almost everyone did, I think."
         MC "Cool. What did you make?"
         PRG "I found some recipes online. A couple of different ones that looked fun. I think they're from America."
         PRG "One is kind of like a cupcake, but you put pudding into a cup, then add cookies on top of it, then add gummy candies into it. I think it's called a dirt cup."
-        MC "Sounds tasty… I'm sure earthworms would love it."
+        MC "Sounds tasty... I'm sure earthworms would love it."
         show PRG excited
         PRG "Eheheheh!"
         show PRG neutral
@@ -21884,22 +21888,22 @@ label MC028:
         Takamura "And, my {i}word,{/i} Kodama-san. Your costume is splendid!"
         show PRG blush-2
         Takamura "Did you make it yourself?"
-        PRG "M-Most of it…"
+        PRG "M-Most of it..."
         Takamura "Incredible. You're a talented girl, I'm coming to find out."
-        PRG "T-T-Thank you, Sensei…"
+        PRG "T-T-Thank you, Sensei..."
         show Takamura reassuring
         "Takamura smiled, and was quickly pulled away by another student."
         hide Takamura with dissolve
         show PRG at altMove(0.5, 0.5)
         MC "Look at you, drawing all the attention."
-        PRG "I-It's a little embarrassing…"
+        PRG "I-It's a little embarrassing..."
         show PRG worried
         PRG "Oh, Keisuke-"
         "Aida tugged my sleeve and pulled me back a bit, pointing across the table toward the end, where a few pies were being laid out."
         PRG "Sakura made one of those."
         MC "She did? I thought she was like, not in the club for now."
         PRG "She isn't, but I guess Takamura-sensei asked her about it after class, and asked if she would want to make something."
-        PRG "Can you… please try a piece later? I think it would make her feel good if she heard people liked her dessert."
+        PRG "Can you... please try a piece later? I think it would make her feel good if she heard people liked her dessert."
         MC "Of course I will."
         PRG "Thank you."
     elif routelock == "BE":
@@ -21911,7 +21915,7 @@ label MC028:
         BE "It's been their main thing they've been working on for the last week."
         BE "I guess Takamura-sensei even delayed one of their competitions for this."
         MC "Wow."
-        BE "Mhm. I actually made something for this whole thing too, but… eh, I don't think it came out the best."
+        BE "Mhm. I actually made something for this whole thing too, but... eh, I don't think it came out the best."
         MC "Well, where is it? I'll be your judge."
         show BE flustered
         BE "Kei-chan, don't even bother. Really, I don't think I did very well with it."
@@ -21939,7 +21943,7 @@ label MC028:
         GTS "Oh! There's the rest of our class!"
         "I glanced off in her direction and saw the others, heading over with Naomi."
     elif getFlag("MC028_alt"):
-        "Near one of the large benches nearby, I spotted Naomi towering above… near everything else."
+        "Near one of the large benches nearby, I spotted Naomi towering above... near everything else."
         "Nearby her were the rest of class 3-B, all chatting amongst each other."
     else:
         "Turning away from the tent, I spotted one giant standing off to the side. A very familiar face."
@@ -21967,7 +21971,7 @@ label MC028:
         PRG "H-Hi! Sorry we're a little late."
         FMG "Pff, not like there's a call time for this. No worries."
         show BE surprised
-        BE "Aida, girl… your costume is KILLER!"
+        BE "Aida, girl... your costume is KILLER!"
         show PRG blush-2
         show BE happy
         GTS "I was going to say, Kodama-san, I love your costume! You make a wonderful kitsune!"
@@ -21976,9 +21980,9 @@ label MC028:
         PRG "M-Mostly. Altering the kimono was the hardest part."
         AE "I can scarcely tell. It's very well done."
         show WG neutral-2
-        WG "She's been working on it for… how long, Aida?"
+        WG "She's been working on it for... how long, Aida?"
         show PRG neutral
-        PRG "Um… a few weeks."
+        PRG "Um... a few weeks."
         show BE happy
         BE "I just finished mine like, literally tonight!"
         BE "And I started like three or four days ago!"
@@ -21987,7 +21991,7 @@ label MC028:
         GTS "You know, Kodama-san, it's said that the more tails a kitsune has, the older and wiser they've become."
         show BE neutral
         BE "Well, I count five, so you're over 500 years old then, Aida?"
-        PRG "Mmm… I-I guess."
+        PRG "Mmm... I-I guess."
         show FMG happy
         FMG "You don't look a day over 490!"
         show PRG excited
@@ -21997,8 +22001,8 @@ label MC028:
         show FMG neutral
         "How simple ideas and costume choices had to be adapted to fit their bodies."
         show PRG worried
-        PRG "Um, Mizutani-san? I… I don't mean to be rude, but…"
-        PRG "Aren't you… {w}cold?"
+        PRG "Um, Mizutani-san? I... I don't mean to be rude, but..."
+        PRG "Aren't you... {w}cold?"
         show FMG upbeat
         FMG "Me? Nah, I run hot! I'm all good!"
         show PRG neutral
@@ -22007,13 +22011,13 @@ label MC028:
         show GTS surprised
         GTS "I'd be shaking like a leaf in something like that, barbarian or not!"
         show BE smug
-        BE "Pff, no offense, Yamazaki-san, but I can't picture you ever being 'barbaric.' You're more like… a deadly, yet elegant samurai, who like stores a katana in a parasol or something."
+        BE "Pff, no offense, Yamazaki-san, but I can't picture you ever being 'barbaric.' You're more like... a deadly, yet elegant samurai, who like stores a katana in a parasol or something."
         show BE neutral
         show GTS pondering at Position(xcenter=0.75, ycenter=0.35)
         GTS "Hm. Quite the image, but not unwelcome. Mayhaps another costume idea for the future!"
         show FMG devious
-        FMG "Okay, but like… Hotsure-san, did you put any effort in? Like, at all?"
-        MC "I… uh…"
+        FMG "Okay, but like... Hotsure-san, did you put any effort in? Like, at all?"
+        MC "I... uh..."
         show FMG happy
         MC "It was kinda last minute."
         show BE happy
@@ -22022,26 +22026,26 @@ label MC028:
         show BE neutral
         show FMG neutral
         FMG "Alright, I gotta ask."
-        FMG "Kodama-san… do you like him with short hair or long hair better?"
+        FMG "Kodama-san... do you like him with short hair or long hair better?"
         show PRG aroused
-        PRG "It… w-wouldn't really matter to me regardless. I like him either way."
+        PRG "It... w-wouldn't really matter to me regardless. I like him either way."
         PRG "... B-But I do really like his hair when it's long."
         FMG "Ooooh!"
         show BE neutral
         show BE smug
         BE "Mhm! Aida likes her men rugged~"
         show PRG blush-2
-        PRG "Eheheh…"
+        PRG "Eheheh..."
         "Aida glanced up at me, smiling as her cheeks flushed red."
-        PRG "I-I do…"
+        PRG "I-I do..."
         show PRG neutral
         PRG "Oh, Matsumoto-san, I was going to say, I really like your costume too!"
         show AE neutral-eyebrow
-        AE "Erm… thank you, Kodama-san."
+        AE "Erm... thank you, Kodama-san."
         show AE neutral
-        AE "However, this is… not a costume. It's just a casual outfit I wear outside of the academy on occasion."
+        AE "However, this is... not a costume. It's just a casual outfit I wear outside of the academy on occasion."
         show PRG scared
-        PRG "Oh! I-I… I'm sorry."
+        PRG "Oh! I-I... I'm sorry."
         show FMG surprised
         show BE surprised
         show GTS surprised at Position(xcenter=0.90, ycenter=0.55)
@@ -22050,14 +22054,14 @@ label MC028:
         BE "WHAT?! You're NOT trying to be like a nun or something?!"
         show GTS neutral
         show WG neutral-2
-        GTS "I… will admit, I wouldn't have taken that as a standard outfit either."
+        GTS "I... will admit, I wouldn't have taken that as a standard outfit either."
         show BE neutral
         GTS "Well, I do think it looks nice, Matsumoto-san."
         show AE neutral-eyebrow
         show PRG worried
         "Shiori backed up a little, glancing down at her outfit."
         show BE happy
-        BE "Well, going back for a second, I gotta say… you two look adorable together."
+        BE "Well, going back for a second, I gotta say... you two look adorable together."
         "Aida stepped in closer to me, holding my hand and leaning into me."
         show FMG happy
         FMG "Bro got charmed by the kitsune."
@@ -22080,7 +22084,7 @@ label MC028:
         show BE neutral
         BE "Ahh."
         show AE neutral-eyebrow
-        AE "Mizutani-san… apart from your frankly near-nudity, are you not cold?"
+        AE "Mizutani-san... apart from your frankly near-nudity, are you not cold?"
         show AE neutral
         show FMG upbeat
         FMG "First off, I'm covered! It's basically just a more haggard swimsuit!"
@@ -22089,16 +22093,16 @@ label MC028:
         show FMG neutral
         FMG "Guessing you're all toasty in that, though. Nice nun costume."
         show AE neutral-eyebrow
-        AE "This… is actually not a costume."
+        AE "This... is actually not a costume."
         show BE confused
-        BE "Wait… that's just like a normal outfit for you?"
+        BE "Wait... that's just like a normal outfit for you?"
         show AE neutral
-        AE "Yes… yes, it is."
+        AE "Yes... yes, it is."
         show BE doubt
         "It was funny how the costumes seemed to draw more attention to each of their factors than their normal outfits did."
         "How simple ideas and costume choices had to be adapted to fit their bodies."
         show BE neutral
-        BE "Uhh… oh, hey!"
+        BE "Uhh... oh, hey!"
         show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1) with dissolve
         PRG "H-Hi! Sorry I'm late!"
         show WG neutral
@@ -22106,7 +22110,7 @@ label MC028:
         show BE happy
         BE "Yeah, holy crap, girl! That's awesome!"
         show PRG blush-2
-        PRG "T-Thank you…"
+        PRG "T-Thank you..."
         PRG "Yours all look very nice, too. I really like yours, Yamazaki-san."
         show GTS unique-2 at Position(ycenter=0.55)
         GTS "Thank you!"
@@ -22118,7 +22122,7 @@ label MC028:
         FMG "That's what I said!"
         show BE neutral
         BE "All this time, he's actually just been turning into a werewolf instead of having a factor."
-        MC "Look, I…"
+        MC "Look, I..."
         MC "Alright, yeah. Probably could have done more."
         show BE happy
         BE "Well, you two look cute together. That's the important thing."
@@ -22127,7 +22131,7 @@ label MC028:
         
     elif routelock == "WG":
         show FMG devious
-        FMG "All hail the princess and her… feather duster."
+        FMG "All hail the princess and her... feather duster."
         MC "Clever. Stay up all night working on that?"
         show FMG happy
         FMG "Eh, I got to bed like one or twoish."
@@ -22148,7 +22152,7 @@ label MC028:
         show WG happy
         WG "Thank you."
         "Alice did a delicate curtsy as I glanced around."
-        "It was interesting how each of their costumes seemed either quite fitting, or rather… unique for them."
+        "It was interesting how each of their costumes seemed either quite fitting, or rather... unique for them."
         "As well, the costumes seemed to exaggerate their factor boosted bodies further than their usual uniforms did, showing just how far things had come since day one."
         show BE neutral
         BE "Is Kodama-san coming tonight, too?"
@@ -22159,19 +22163,19 @@ label MC028:
         show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1) with dissolve
         PRG "H-Hi, everyone! Sorry I'm late!"
         BE "No worries at all!"
-        AE "My word, Kodama-san… your costume is beautiful."
+        AE "My word, Kodama-san... your costume is beautiful."
         show PRG unique-happy
-        PRG "T-Thank you…"
+        PRG "T-Thank you..."
         PRG "You all look great too."
-        GTS "Matsumoto-san, if I may… your outfit is meant to resemble a nun, yes?"
+        GTS "Matsumoto-san, if I may... your outfit is meant to resemble a nun, yes?"
         show AE neutral-eyebrow
-        AE "Erm… this is not meant to be a costume."
+        AE "Erm... this is not meant to be a costume."
         show FMG surprised
-        FMG "So, those are just like… clothes?"
+        FMG "So, those are just like... clothes?"
         show AE neutral
         AE "Yes."
         show BE surprised
-        BE "Uhh…"
+        BE "Uhh..."
         
     elif routelock == "BE":
         show GTS happy at Position(ycenter=0.55)
@@ -22179,14 +22183,14 @@ label MC028:
         show BE happy
         BE "Hello, hello!"
         show WG surprised-2
-        WG "Keisuke… what is that?"
+        WG "Keisuke... what is that?"
         MC "What?"
         show WG doubt
-        WG "Your… can you actually call that a costume?"
-        MC "It's a werewolf…?"
+        WG "Your... can you actually call that a costume?"
+        MC "It's a werewolf...?"
         show WG bored
         WG "And how much time did you spend on that?"
-        MC "Uhh…"
+        MC "Uhh..."
         show WG happy
         show FMG happy
         "Alice laughed, as beside her, Akira smirked."
@@ -22199,19 +22203,19 @@ label MC028:
         BE "That means you get to help me clean my dorm next time you come over."
         MC "... So, wanna do movies at my place tomorrow or something?"
         show BE happy
-        BE "Hehehe…"
-        "It was interesting how each of their costumes seemed either quite fitting or rather… unique for them."
+        BE "Hehehe..."
+        "It was interesting how each of their costumes seemed either quite fitting or rather... unique for them."
         "As well, the costumes seemed to exaggerate their factor boosted bodies further than their usual uniforms did, showing just how far things had come since day one."
         BE "You guys all look great! Really like yours, Yamazaki-san! The Yuki Onna is sick!"
         GTS "Likewise! It seems we had similar ideas in mind. I do enjoy your Yurei."
         BE "Oh, and I like yours too, Matsumoto-san! Wouldn't have guessed you'd pick a nun as your first choice, but it works!"
         show AE neutral-eyebrow
-        AE "I… em, thank you."
+        AE "I... em, thank you."
         show AE neutral
-        AE "But… this isn't a costume. This is simply one of my casual outfits."
+        AE "But... this isn't a costume. This is simply one of my casual outfits."
         show BE confused
-        BE "Uhh… oh. I'm uh… my bad."
-        AE "Hnn… no harm done."
+        BE "Uhh... oh. I'm uh... my bad."
+        AE "Hnn... no harm done."
         show BE neutral
         AE "Will Kodama-san be joining us tonight?"
         show WG neutral-2
@@ -22225,18 +22229,18 @@ label MC028:
         PRG "H-Hi everyone! Sorry I'm late!"
         GTS "No trouble at all, Kodama-san."
         show GTS unique-2 at Position(ycenter=0.55)
-        GTS "And my… you make a very eye-catching kitsune."
+        GTS "And my... you make a very eye-catching kitsune."
         show PRG blush-2
         show BE happy
         BE "I'll say!"
         PRG "T-Thank you. You all look great too."
         show FMG happy
         FMG "... Except for Hotsure-san."
-        PRG "I… I like his costume too."
+        PRG "I... I like his costume too."
         show FMG neutral
-        FMG "Eh… well, he and Inoue-san do look cute together, so he's got that going for him."
+        FMG "Eh... well, he and Inoue-san do look cute together, so he's got that going for him."
         show BE guilty
-        BE "Hehehe…"
+        BE "Hehehe..."
         show BE smug
         "Honoka poked my cheek and grinned."
         BE "You look cute with meee~"
@@ -22256,7 +22260,7 @@ label MC028:
         "Alice gave Naomi a slight look as Akira raised her arms beside her."
         FMG "So do you!"
         show FMG upbeat
-        FMG "As for your… fluffy thing."
+        FMG "As for your... fluffy thing."
         MC "Look, it was a last minute thing."
         show BE smug
         BE "Kei-chan never had a factor, and is slowly becoming a real werewolf before our eyes."
@@ -22268,14 +22272,14 @@ label MC028:
         "Naomi grinned, sitting herself delicately on the ground and adjusting her outfit."
         GTS "There we are."
         show GTS surprised
-        GTS "Oh, it seems… will Kodama-san not be joining our soiree tonight?"
+        GTS "Oh, it seems... will Kodama-san not be joining our soiree tonight?"
         show BE confused
-        BE "Uhh… huh. Good point. Alice?"
+        BE "Uhh... huh. Good point. Alice?"
         show WG neutral-2
-        WG "Mm… she'll be coming. My assistant was helping her get her costume on when I left."
+        WG "Mm... she'll be coming. My assistant was helping her get her costume on when I left."
         FMG "Must be something pretty crazy then. Especially if she needs help."
         show WG neutral
-        WG "Pardon me, but you haven't dealt with a large… obstruction on your front before."
+        WG "Pardon me, but you haven't dealt with a large... obstruction on your front before."
         show WG neutral-2
         WG "Consider how that might affect doing, well, any number of things."
         show BE sad
@@ -22284,21 +22288,21 @@ label MC028:
         BE "Anyway, I really like your outfit, by the way, Matsumoto-san!"
         "Shiori, who had been standing a bit off from the group, glanced up."
         show AE neutral
-        AE "Mnn… thank you."
+        AE "Mnn... thank you."
         show BE smug
         BE "What are you dressed as? A nun?"
         show AE neutral-eyebrow
-        AE "Ngh… no."
+        AE "Ngh... no."
         show AE neutral
-        AE "This is actually… just a standard outfit of mine. I'm not meant to be anything."
+        AE "This is actually... just a standard outfit of mine. I'm not meant to be anything."
         show BE surprised
         show FMG surprised
-        FMG "Uhh… what?"
+        FMG "Uhh... what?"
         show GTS neutral at Position(ycenter=0.55)
         "I glanced up at Naomi, who gave me a slight eyebrow raise before looking back down."
         GTS "I, for one, think it looks quite fetching."
-        AE "Mm… thank you."
-        "It was interesting how each of their outfits seemed to… bring out their factors more."
+        AE "Mm... thank you."
+        "It was interesting how each of their outfits seemed to... bring out their factors more."
         "Even more so compared to their uniforms. Their factors exaggerating the costumes they were wearing seemed to be draw more attention than otherwise."
         show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1) with dissolve
         PRG "H-Hi, everyone! Sorry I'm late!"
@@ -22317,7 +22321,7 @@ label MC028:
         show GTS pondering at Position(ycenter=0.35)
         GTS "So, she'd be between five and six hundred years old. And possess as many years' worth of wisdom."
         show PRG excited
-        PRG "I-I… I hope I don't look five hundred years old!"
+        PRG "I-I... I hope I don't look five hundred years old!"
         show GTS neutral-2 at Position(ycenter=0.35)
         GTS "Oh, not a chance! Wouldn't you agree, my love?"
         show PRG neutral
@@ -22335,15 +22339,15 @@ label MC028:
     elif routelock == "AE":
         MC "Oh! There's everyone else!"
         show AE neutral
-        AE "Mm… right."
+        AE "Mm... right."
         "The two of us headed over, as Honoka glanced up."
         show BE happy
         BE "There's the happy couple!"
         AE "Yes. Hello, Inoue-san."
         show FMG neutral
-        FMG "Uh… you're a nun?"
+        FMG "Uh... you're a nun?"
         show AE neutral-eyebrow
-        AE "N-No, I… rgh."
+        AE "N-No, I... rgh."
         show AE neutral
         AE "This is not a costume. Simply a normal outfit."
         show FMG surprised
@@ -22351,14 +22355,14 @@ label MC028:
         show BE surprised
         BE "Ah-"
         show BE confused
-        BE "Alright…"
+        BE "Alright..."
         "Glancing up in my mask for a moment, I watched Naomi's face shift a little before returning to her usual."
         show BE neutral
         show FMG neutral
-        AE "You all look… in the spirit of things."
+        AE "You all look... in the spirit of things."
         show BE happy
         BE "Thanks! Bringing out my inner spookiness!"
-        MC "Uh… Mizutani-san, aren't you like… cold?"
+        MC "Uh... Mizutani-san, aren't you like... cold?"
         show FMG upbeat
         FMG "Pff, nah! I'm good! Us barbarians are tough as nails!"
         show WG coy
@@ -22374,21 +22378,21 @@ label MC028:
         BE "They went like ALL OUT! The island is gonna run out of sugar at this rate!"
         show BE happy
         GTS "I will say, the apples covered in caramel looked particularly delectable."
-        GTS "I… might need to find someone who'd be willing to cut it up for me, however. I have suffered a regrettable deficit of manual dexterity."
+        GTS "I... might need to find someone who'd be willing to cut it up for me, however. I have suffered a regrettable deficit of manual dexterity."
         show BE happy
         BE "I gotcha! Can't leave someone out from enjoying the sweet treats!"
         show GTS neutral at Position(ycenter=0.55)
         GTS "Much obliged, Inoue-san."
         GTS "Oh, here she comes! Koda-"
         show GTS surprised
-        GTS "My word…"
+        GTS "My word..."
         show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1) with dissolve
-        PRG "H-Hi everyone! Sorry I'm late…"
+        PRG "H-Hi everyone! Sorry I'm late..."
         show AE happy
         AE "... Kodama-san, your costume is wonderful."
         AE "Did you handmake this?"
         show PRG unique-blush
-        PRG "M-Most of it. I… I had to alter the kimono quite a bit."
+        PRG "M-Most of it. I... I had to alter the kimono quite a bit."
         show AE neutral
         show BE surprised
         BE "I couldn't even tell! It looks like you just pulled it off the rack!"
@@ -22396,12 +22400,12 @@ label MC028:
         show BE neutral
         AE "And the tails. May I, Kodama-san?"
         show PRG surprised
-        PRG "O-Oh! Um… s-sure. Just… p-please don't pull them too hard. I-I don't know if they'll stay on the belt that well."
+        PRG "O-Oh! Um... s-sure. Just... p-please don't pull them too hard. I-I don't know if they'll stay on the belt that well."
         show PRG worried
         "Shiori brought her hand to one of Aida's tails, and felt down the length of one."
-        AE "Very well done… seamless."
+        AE "Very well done... seamless."
         show PRG neutral
-        PRG "T-Thanks…"
+        PRG "T-Thanks..."
         PRG "I-I like your outfit, too."
         AE "Thank you."
         show AE neutral
@@ -22411,12 +22415,12 @@ label MC028:
         show AE neutral-eyebrow
         AE "Hm? Kodama-san and I?"
         show BE confused
-        BE "No! Uh… well, that too, kind of. Never really see you guys talk."
+        BE "No! Uh... well, that too, kind of. Never really see you guys talk."
         show BE happy
         show AE neutral
         BE "But, no! I meant you and Kei-chan! You guys are cute together!"
         show BE smug
-        BE "Your nun getup and your… guy who totally doesn't have a factor and is just slowly becoming an actual werewolf."
+        BE "Your nun getup and your... guy who totally doesn't have a factor and is just slowly becoming an actual werewolf."
         show AE neutral-annoyed
         AE "I-dch, t-this is just my casual wear."
         show BE surprised
@@ -22424,7 +22428,7 @@ label MC028:
         show AE neutral
         AE "Yes!"
         show BE happy
-        BE "Oh… w-well, uh, you still look cute together!"
+        BE "Oh... w-well, uh, you still look cute together!"
         show GTS happy at Position(ycenter=0.55)
         GTS "... I agree. On the cute match bit, I should say."
         PRG "M-Me too."
@@ -22433,12 +22437,12 @@ label MC028:
         show AE happy
         AE "I appreciate it."
         MC "Same."
-        "Glancing around, it was strange how much more… obvious each of their growths seemed to be."
+        "Glancing around, it was strange how much more... obvious each of their growths seemed to be."
         "The costumes, while clearly eye-catching, seemed to demonstrate how exaggerated they'd all been, showing off their factors more than the standard uniforms ever did."
 
     else:
         show BE confused
-        BE "And there's… uh…"
+        BE "And there's... uh..."
         show BE surprised-2
         BE "Kei-chan?"
         show BE smug
@@ -22449,7 +22453,7 @@ label MC028:
         show BE neutral
         show FMG happy
         FMG "... Dude, you put on a mask and some gloves."
-        MC "I…"
+        MC "I..."
         MC "Alright, you're right."
         MC "Well, you guys all look awesome, at least!"
         show BE happy
@@ -22465,8 +22469,8 @@ label MC028:
         "It was strange, but each of them seemed fitting in some ways, but in others, very unique."
         "Their costumes seemed to exaggerate their factors even more so. More even than their uniforms did."
         show WG neutral-2
-        "I paused after Alice, seeing a blank… pregnant girl shaped space."
-        MC "Is… Kodama-san not coming?"
+        "I paused after Alice, seeing a blank... pregnant girl shaped space."
+        MC "Is... Kodama-san not coming?"
         WG "Oh, she'll be here. My assistant was helping her get ready when I left."
         show WG happy
         WG "She shouldn't be overly- oh, there she is."
@@ -22491,9 +22495,9 @@ label MC028:
         FMG "And doesn't look a day over 490."
         "Aida turned back around, and glanced around the circle."
         PRG "Oh, and who is-"
-        PRG "Uhm… H-Hotsure-san?"
+        PRG "Uhm... H-Hotsure-san?"
         MC "Yep!"
-        PRG "Oh! U-Um… hi. I-I like your costume."
+        PRG "Oh! U-Um... hi. I-I like your costume."
         MC "Yours is awesome too!"
         show FMG upbeat
         FMG "Hers blows yours out of the water. Don't lie."
@@ -22503,22 +22507,22 @@ label MC028:
         "I glanced across the group, where Shiori stood a bit outside of the circle, somewhat to herself."
         MC "I like yours as well, Matsumoto-san. A nun, right?"
         show AE neutral-eyebrow
-        AE "Hm? Ah… thank you, but… no."
+        AE "Hm? Ah... thank you, but... no."
         show AE neutral
-        AE "This is… actually just a normal outfit. Not meant as a costume."
+        AE "This is... actually just a normal outfit. Not meant as a costume."
         show FMG surprised
         FMG "Huh?!"
         show BE confused
-        BE "Uhhh…"
+        BE "Uhhh..."
         show GTS neutral at Position(ycenter=0.55)
         GTS "Well, I still think it looks nice, Matsumoto-san. Very fitting for the season."
         AE "... Thank you."
         if routelock == "WGB":
             "I glanced around."
-            "Okisho was… nowhere in sight."
+            "Okisho was... nowhere in sight."
             MCT "Probably in some donut and cider induced food coma under a tree somewhere. Hopefully that means I get in on some stuffed belly rubbing action later."
         else:
-            "I glanced around, seeing… no one overly notable."
+            "I glanced around, seeing... no one overly notable."
             MCT "Mm. Damn."
     scene Chukan Point with fade
     "I turned, looking back toward the large tent."
@@ -22528,7 +22532,7 @@ label MC028:
     "Tashi-sensei stood off to one side, his eyes nearly half closed, talking to a man in a black top hat and a black suit, patterned like a skeleton."
     "Turning, his face glimmered into view as he broke into a laugh, putting a hand on Tashi-sensei's shoulder."
     MCT "... The principal?"
-    MCT "He… really? Wow."
+    MCT "He... really? Wow."
     hide HR with dissolve
     #hide Principal with dissolve
     if isEventCleared("MC024"):
@@ -22545,6 +22549,10 @@ label MC028:
         show RM neutral at Position(xcenter=0.80, yalign=1.0)
         with dissolve
         "Tomo, Yuki, and Daichi were all together, walking along some of the cooking club tables."
+        hide Tomoko
+        hide Yuki
+        hide RM
+        with dissolve
     else:
         "Off by the cooking club tables, I blinked."
         show Tomoko neutral at Position(xcenter=0.30, yalign=1.0)
@@ -22552,12 +22560,12 @@ label MC028:
         show RM neutral at Position(xcenter=0.80, yalign=1.0)
         with dissolve
         if getFlag("Meet_Yuki"):
-            "Tomo, Yuki, and… Daichi were all together, walking along some of the cooking club tables."
+            "Tomo, Yuki, and... Daichi were all together, walking along some of the cooking club tables."
             MCT "... {w}Daichi actually showed up?"
             MCT "And he isn't playing hide and seek?"
             "Though, Daichi was still rocking a trench coat, while Yuki was beside him, clad in an arabian princess style look. Beside her, Tomo followed closely, dressed as a pirate."
         else:
-            "Tomo, Daichi, and… some other girl were walking together, looking at the cooking club tables."
+            "Tomo, Daichi, and... some other girl were walking together, looking at the cooking club tables."
             MCT "That other chick must be Yuki, Tomo's roommate. Think that was her name, anyway."
             MCT "And Daichi actually showed up. Damn. And he isn't hiding in the nearest bush."
         hide Tomoko
@@ -22568,13 +22576,13 @@ label MC028:
     MC "Ah, 'scuse me one sec. Be right back."
     if routelock == "PRG":
         show PRG worried with dissolve
-        PRG "Is… everything okay, Baby?"
+        PRG "Is... everything okay, Baby?"
         MC "Yeah. Tomo's over there. Just gonna go see her."
         show PRG neutral
         PRG "Oh, o-okay."
         hide PRG with dissolve
     elif routelock == "FMG":
-        show FMG surprised with dissolve
+        show FMG neutral with dissolve
         FMG "Huh?"
         MC "Sister's over there. One sec."
         show FMG neutral
@@ -22618,7 +22626,7 @@ label MC028:
     show Tomoko worried with dissolve
     MC "Hey, Tomo. How is it?"
     show Tomoko neutral
-    Tomoko "Uh… good?"
+    Tomoko "Uh... good?"
     show Tomoko smile
     Tomoko "... Your costume sucks."
     MC "Nice to see you, too."
@@ -22637,13 +22645,13 @@ label MC028:
         if isEventCleared("MC014B"):
             MC "Nice Gaelle cosplay, by the way."
             show Tomoko smile
-            Tomoko "Uhh… thanks."
+            Tomoko "Uhh... thanks."
             MCT "She put a lot into that."
             MCT "... Compared to me, anyway."
         else:
             MC "Nice pirate outfit, by the way."
             show Tomoko smile
-            Tomoko "Uh… thanks."
+            Tomoko "Uh... thanks."
             show Tomoko neutral
             Tomoko "It's from a game I like."
             MC "I kinda figured. I like it, though."
@@ -22652,8 +22660,8 @@ label MC028:
             MCT "She definitely sunk some time into it."
             MCT "... More time than I did, anyway."
     elif getFlag("MC028_alt"):
-        show RM neutral
-        show Yuki neutral
+        show RM neutral at Position(xcenter=0.25, yalign=1.0)
+        show Yuki neutral at Position(xcenter=0.75, yalign=1.0)
         with dissolve
         MC "So, what do you guys think of the party?"
         show RM neutral-2
@@ -22671,7 +22679,7 @@ label MC028:
         show RM concerned-2
         RM "Me too."
         show RM neutral
-        RM "But… eh. Everyone takes a break here and there."
+        RM "But... eh. Everyone takes a break here and there."
         if isEventCleared("RM005"):
             MCT "..."
             MCT "... He's wearing the stakeout trenchcoat. Seriously?"
@@ -22682,7 +22690,7 @@ label MC028:
             Yuki "Mmmh?"
             MC "Liking the party?"
             Yuki "Mmmmhghm! Ishhlosh-"
-            Yuki "Hmmgh…"
+            Yuki "Hmmgh..."
             "Yuki raised her clipboard and scribbled something, raising it up."
             Yuki "{i}Party is alright!{/i}"
             MC "Gotcha! I like what you guys did with the place."
@@ -22693,12 +22701,12 @@ label MC028:
             if getFlag("Meet_Yuki"): 
                 hide RM with dissolve
                 "I sighed softly. Even with the mouth covering, I could see the large bulge beneath, jutting out from Yuki's face."
-                MCT "She used to be so… chatty."
+                MCT "She used to be so... chatty."
                 MC "Yuki?"
                 Yuki "Mmmh?"
                 MC "Liking the party?"
                 Yuki "Mmmmhghm! Ishhlosh-"
-                Yuki "Hmmgh…"
+                Yuki "Hmmgh..."
                 "Yuki raised her clipboard and scribbled something, raising it up."
                 Yuki "{i}Party is alright!{/i}"
                 MC "Gotcha! I like what you guys did with the place."
@@ -22716,7 +22724,7 @@ label MC028:
                 "Yuki nodded a few times."
                 MC "Liking the party?"
                 Yuki "Mmmmhghm! Ishhlosh-"
-                Yuki "Hmmgh…"
+                Yuki "Hmmgh..."
                 "Yuki raised her clipboard and scribbled something, raising it up."
                 Yuki "{i}Party is alright!{/i}"
                 MC "Gotcha! I like what you guys did with the place."
@@ -22731,7 +22739,7 @@ label MC028:
     Tomoko "For what?"
     MC "I wanted to introduce you to my class. With everyone here, seems like a good time."
     show Tomoko neutral
-    Tomoko "Uhh… sure? I guess."
+    Tomoko "Uhh... sure? I guess."
     MC "You guys good for a sec?"
     show Yuki neutral at Position(xcenter=0.70, yalign=1.0)
     show RM neutral at Position(xcenter=0.90, yalign=1.0)
@@ -22741,23 +22749,23 @@ label MC028:
     hide Yuki
     hide RM
     with dissolve
-    "I nodded and turned, Tomo alongside me, as I led the way back toward everyone else. Well… mainly using Naomi as a bit of a guide."
+    "I nodded and turned, Tomo alongside me, as I led the way back toward everyone else. Well... mainly using Naomi as a bit of a guide."
     if getFlag("MC010RM"):
-        MC "So… are you and Daichi like good now, or what's up?"
+        MC "So... are you and Daichi like good now, or what's up?"
         show Tomoko annoyed
         Tomoko "Urgh."
         Tomoko "We aren't talking."
-        MC "So you're still…"
+        MC "So you're still..."
         show Tomoko defiant
         Tomoko "Yes."
         show Tomoko neutral
         Tomoko "I'm not gonna make a big deal since he's Yuki's brother, but still. It's only for tonight. She needs friends right now."
-        MC "I get it. He… definitely overstepped."
-        MC "But, he wasn't trying to be like… messed up or anything."
+        MC "I get it. He... definitely overstepped."
+        MC "But, he wasn't trying to be like... messed up or anything."
         MC "He was just trying to get something that Yuki had that was his."
         Tomoko "He snuck into our room."
-        MC "Right… yeah."
-        MC "I know he's eccentric, but he isn't like… a bad guy."
+        MC "Right... yeah."
+        MC "I know he's eccentric, but he isn't like... a bad guy."
         Tomoko "... Look, I'll think about it. I understand, but give me some time."
         MC "That's all I ask."
         pause 1
@@ -22773,7 +22781,7 @@ label MC028:
     else:
         MC "So, how are you getting along with him?"
         show Tomoko neutral
-        Tomoko "Daichi? I mean… he's weird. But, he's not a bad guy."
+        Tomoko "Daichi? I mean... he's weird. But, he's not a bad guy."
         Tomoko "I'm glad he's here for Yuki, though. She needs friends right now."
         MC "Right."
         MC "So, is that why you're here too?"
@@ -22896,17 +22904,17 @@ label MC028:
         show WG neutral-2 at Position(xcenter=0.18, yalign=1.0)
         show GTS neutral at Position(xcenter=0.85, ycenter=0.55) behind BE, PRG, FMG, WG, AE
         with dissolve
-        MC "Uhh… yeah. But, this is Alice Nikumaru, Naomi Yamazaki, Akira Mizutani, Aida Kodama, and Shiori Matsumoto."
+        MC "Uhh... yeah. But, this is Alice Nikumaru, Naomi Yamazaki, Akira Mizutani, Aida Kodama, and Shiori Matsumoto."
         hide BE
         hide WG
         hide GTS
         with dissolve
-        pause .5
+        pause
         show FMG happy at Position(xcenter=0.85, yalign=1.0)
         show PRG neutral at Position(xcenter=0.18, yalign=1.0)
         show AE neutral
         with dissolve
-        pause .5
+        pause
         hide FMG
         hide PRG
         hide AE
@@ -22924,8 +22932,10 @@ label MC028:
         show PRG embarrassed
         PRG "I-I didn't-"
         MC "No, no! Tomo was in detention! Her detention was working with the cooking club and she met Kodama-san there! Kodama-san wasn't in detention herself!"
+        show FMG surprised-2
         show BE confused
         BE "Ohhh!"
+        show GTS neutral
         show FMG neutral
         FMG "Learn some phrasing, man."
         MC "Right."
@@ -22937,20 +22947,21 @@ label MC028:
     if routelock == "AE":
         show Tomoko smile at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1)
         show AE neutral at Position(xcenter=0.68, yalign=1.0)
-        Tomoko "I uh… like your nun outfit. Fits you well."
-        AE "Mmgh…"
+        with dissolve
+        Tomoko "I uh... like your nun outfit. Fits you well."
+        AE "Mmgh..."
         show AE neutral-annoyed
         AE "It's not a costume. Honestly, why does everyone keep arriving at this conclusion."
         show Tomoko neutral
         "Naomi and Aida covered their mouths politely, as Akira and Honoka stepped back from the crowd, stifling laughs of their own."
         hide AE with dissolve
     else:
-        show Tomoko neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1)
+        show Tomoko neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1) with dissolve
         Tomoko "I've met you before, I think."
         "Tomo nodded toward Shiori."
-        show AE neutral at Position(xcenter=0.68, yalign=1.0)
+        show AE neutral at Position(xcenter=0.68, yalign=1.0) with dissolve
         AE "Yes."
-        AE "I… do hope you don't hold a grudge over that silly rumor I had to investigate."
+        AE "I... do hope you don't hold a grudge over that silly rumor I had to investigate."
         Tomoko "Eh, it's whatever."
         MC "Sorry, rumor?"
         show Tomoko worried
@@ -22959,7 +22970,7 @@ label MC028:
         show Tomoko smile
         Tomoko "... Like your outfit, by the way. The nun costume suits you."
         show AE neutral-eyebrow
-        AE "Mmh… it is not a costume."
+        AE "Mmh... it is not a costume."
         show AE neutral-annoyed
         AE "Honestly, why is this conclusion the only one anyone seems to come up with?"
         show Tomoko neutral
@@ -22975,16 +22986,16 @@ label MC028:
     show BE neutral
     BE "Totally. Cool to see something new."
     show FMG neutral
-    FMG "If I see one more chick dressed as a cat, I swear…"
+    FMG "If I see one more chick dressed as a cat, I swear..."
     GTS "It is a common choice, from what I've seen."
     hide BE
     hide GTS
     show PRG neutral at Position(xcenter=0.38, yalign=1.0)
     show WG neutral-2 at Position(xcenter=0.86, yalign=1.0)
     with dissolve
-    PRG "I-It's… simple. I guess that's why it's popular."
+    PRG "I-It's... simple. I guess that's why it's popular."
     FMG "But it's every damn {i}year!{/i}"
-    WG "True… I'll admit, I do enjoy seeing some variety, as well."
+    WG "True... I'll admit, I do enjoy seeing some variety, as well."
     show Tomoko smile
     Tomoko "R-Right."
     MC "Well, at least I did something unique, too. That's something."
@@ -23029,12 +23040,12 @@ label MC028:
     show BE neutral
     BE "... It's good to see her hanging out with some new people."
     MC "Yeah, you're telling me."
-    GTS "I surely don't mean to pry, but…"
-    MC "No, you're not. She's… she's always been the more… solitary one of the two of us."
-    MC "It's been… hell, years since she really has connected with someone, especially to the point of calling them a friend."
+    GTS "I surely don't mean to pry, but..."
+    MC "No, you're not. She's... she's always been the more... solitary one of the two of us."
+    MC "It's been... hell, years since she really has connected with someone, especially to the point of calling them a friend."
     MC "I'm proud of her. That's all I'm saying."
     show GTS happy at Position(ycenter=0.55)
-    GTS "Oh… that's lovely."
+    GTS "Oh... that's lovely."
     show PRG neutral
     PRG2 "Yeah."
     show AE smile
@@ -23043,21 +23054,21 @@ label MC028:
     hide AE
     show WG neutral at Position(xcenter=0.64, yalign=1.0) behind BE
     with dissolve    
-    "{i}Rrrrrrghhh…{/i}"
+    "{i}Rrrrrrghhh...{/i}"
     show BE flustered
     "Nearly every eye slid over."
     show BE wink
-    BE "Well, I uh… hate to cut in, but I uh… kind of didn't eat today, and I'm starving."
+    BE "Well, I uh... hate to cut in, but I uh... kind of didn't eat today, and I'm starving."
     show BE neutral
     show GTS neutral at Position(ycenter=0.55)
     GTS "I'd like something to eat as well. I skipped lunch today to finish my outfit."
-    show FMG happy at Position(xcenter=0.33, yalign=1.0) behind BE, PRG
+    show FMG happy at Position(xcenter=0.33, yalign=1.0) behind BE, PRG with dissolve
     FMG "You two hungry, too?"
     show WG happy
     WG "I would like to sample a few things, yes."
     FMG "Sweet. Foxy lady?"
     show PRG worried
-    PRG "Huh? I-I… I'll come along too."
+    PRG "Huh? I-I... I'll come along too."
     hide GTS
     hide WG
     hide FMG
@@ -23105,7 +23116,7 @@ label MC028:
         MC "Ohp, my bad. Excuse me."
         Genji "Yo, Tokyo."
         MC "Oh! Genji, hey!"
-        MC "Is uh… is that Grindolph the Grey?"
+        MC "Is uh... is that Grindolph the Grey?"
         Genji "One and only."
         Genji "The beard actually helped with something, for a change. I always liked him more than the other one anyway."
         Genji "What are you up to?"
@@ -23121,7 +23132,7 @@ label MC028:
         MC "Ohp, my bad. Excuse me."
         Genji "Yo, Tokyo."
         MC "Oh! Nakayama-san, hey!"
-        MC "Is uh… is that Grindolph the Grey?"
+        MC "Is uh... is that Grindolph the Grey?"
         Genji "One and only."
         Genji "The beard actually helped with something, for a change. I always liked him more than the other one anyway."
         Genji "What are you up to?"
@@ -23134,7 +23145,7 @@ label MC028:
     "I hurried ahead, catching up with the girls as they were all sitting at a table together, Naomi seated off by some of the other giant students."
     if routelock == "GTS":
         show GTS neutral at Position(ycenter=0.55) with dissolve
-        show Jineko neutral at Position(xcenter=0.23, yalign=1.0) with dissolve
+        show Jineko neutral at Position(xcenter=0.23, yalign=1.0), Transform(xzoom=-1) with dissolve
         "Stealing a chair from the 'normie' table, I shuffled off with it toward Naomi, popping a squat beside her."
         "Near her was Jineko, as well as Gou, Hina, and Yasuhara-san, the four in deep conversation."
         "Yasuhara" "- Pulled out all the stops, really, to make this happen. I'm in awe."
@@ -23156,9 +23167,9 @@ label MC028:
         if routelock == "PRG":
             show PRG neutral with dissolve
             "I took my seat beside Aida, who gave me a soft look and squeezed my hand."
-            MC "Is… Sakura here?"
+            MC "Is... Sakura here?"
             show PRG worried
-            PRG "I… I don't know. I asked her if she was coming, but… she never really gave me an answer."
+            PRG "I... I don't know. I asked her if she was coming, but... she never really gave me an answer."
         elif routelock == "WG":
             show WG neutral with dissolve
             "I took a seat beside Alice, who nodded approvingly."
@@ -23180,7 +23191,6 @@ label MC028:
     show FMG neutral at Position(xcenter=0.23, yalign=1.0)
     show WG neutral at Position(xcenter=0.74, yalign=1.0)
     show BE neutral at Position(xcenter=0.45, yalign=1.0)
-    
     with dissolve
     FMG "So, Alice. Does the decor remind you of America at all?"
     WG "Mm, yes and no."
@@ -23190,6 +23200,7 @@ label MC028:
     WG "Oh, they do. It's one of the largest holidays of the year."
     hide WG
     hide FMG
+    show BE neutral at altMove(0.5, 0.5)
     show AE neutral at Position(xcenter=0.23, yalign=1.0)
     show GTS neutral at Position(xcenter=0.85, ycenter=0.55) behind BE, PRG, FMG, WG, AE
     with dissolve
@@ -23254,7 +23265,7 @@ label MC028:
     show BE happy
     BE "Yeah! I'm just psyched to see Tashi-sensei's dance."
     show WG doubt
-    WG "I… don't believe Takamura-sensei was serious."
+    WG "I... don't believe Takamura-sensei was serious."
     show BE neutral
     BE "Oh, I know she wasn't. But, knowing her, she'll probably try to get Tashi-sensei out onto the dance floor somehow."
     show FMG happy
@@ -23282,7 +23293,7 @@ label MC028:
         if not getFlag("Meet_Hina"):
             $setFlag("Meet_Hina")
         Hina "Or 'Gama' for short."
-        Gou "{size=-6}Christ's sakes…{/size}"
+        Gou "{size=-6}Christ's sakes...{/size}"
         GTS "Let us put our best foot forward, dear Masaji-san."
         hide GTS
         hide Jineko
@@ -23307,14 +23318,14 @@ label MC028:
         show BE happy
         BE "Nice to meet you all!"
         Jineko "Hello!"
-        "Beside Naomi, Gou seemed… either preoccupied or irritated, glancing around the table, then back to Naomi."
+        "Beside Naomi, Gou seemed... either preoccupied or irritated, glancing around the table, then back to Naomi."
         if routelock == "GTS2":
             "I grinned wide, glancing up."
             MC "Hi, Jineko."
             show Jineko happy
             Jineko "Hi~"
             show BE happy
-            BE "Aww…"
+            BE "Aww..."
         elif getFlag("Meet_Jineko"):
             MC "Evening, Watanabe-san."
             show Jineko happy
@@ -23339,14 +23350,14 @@ label MC028:
             Gou "Sure. Beats sitting at home twiddling my thumbs."
         if isEventCleared("RM006") and not getFlag("RM009B_Gou"):
             "I let my gaze linger for a moment, suddenly grateful for my mask."
-            MCT "Please don't recognize me. Not now…"
+            MCT "Please don't recognize me. Not now..."
             "Gou looked down at me for a moment, his look holding there for a few moments, before his brow furrowed and he looked away."
         show GTS neutral at Position(xcenter=0.85, ycenter=0.55)
         show Jineko neutral
         with dissolve
         Jineko "Anyway, Yasuhara-san is waiting for us, so we should get moving."
         GTS "Ah."
-        GTS "Mm… {w}well, give him my best. I'll be staying here for the evening, if you don't mind."
+        GTS "Mm... {w}well, give him my best. I'll be staying here for the evening, if you don't mind."
         Jineko "Will do!"
         hide Jineko
         show BE neutral
@@ -23382,7 +23393,7 @@ label MC028:
     show PRG neutral at Position(xcenter=0.15, yalign=1.0)
     with dissolve
     BE "Alright! Anyone else want to get in on some Fright Night Frenzy?"
-    FMG "Mmnn…"
+    FMG "Mmnn..."
     "Aida looked down at her cup, drinking the last of the tea she'd been sipping at."
     show WG doubt
     WG "I can't say I'm certain what Takamura-sensei might consider fun."
@@ -23408,7 +23419,7 @@ label MC028:
     hide WG
     hide PRG
     with dissolve
-    "The table was quiet for… just long enough to feel awkward."
+    "The table was quiet for... just long enough to feel awkward."
     pause .75
     show BE neutral at Position(xcenter=0.60, yalign=1.0)
     show PRG neutral at Position(xcenter=0.30, yalign=1.0)
@@ -23421,10 +23432,10 @@ label MC028:
         show BE happy
         BE "Yes! See? Kodama-san's into it!"
     show GTS neutral-2 at Position(xcenter=0.77, ycenter=0.35) behind BE, PRG, FMG, WG, AE with dissolve
-    GTS "Mngh…"
-    GTS "I… would love to join. However, I would absolutely hate to harm someone should I take part."
+    GTS "Mngh..."
+    GTS "I... would love to join. However, I would absolutely hate to harm someone should I take part."
     show BE confused
-    BE "Uh… hey. Yamazaki-san…"
+    BE "Uh... hey. Yamazaki-san..."
     show BE neutral
     BE "Takamura-sensei said everyone could take part, no matter if they're a giant or not."
     BE "If you want in, you can totally join."
@@ -23434,7 +23445,7 @@ label MC028:
     show PRG happy
     PRG "Y-Yes! Of course!"
     show GTS pondering at Position(ycenter=0.35)
-    GTS "Hmm… right then. I'll join you."
+    GTS "Hmm... right then. I'll join you."
     show PRG neutral
     show BE smug
     BE "YES!"
@@ -23449,7 +23460,7 @@ label MC028:
     FMG "Not really worth the effort if I'm not gonna-"
     UNKNOWN "Figures."
     hide BE with dissolve
-    "Behind Akira, an… imposing figure dressed as a police officer walked up, arms crossed."
+    "Behind Akira, an... imposing figure dressed as a police officer walked up, arms crossed."
     if routelock == "FMG" or getFlag("Meet_Natsuko"):
         show Natsuko neutral at Position(xcenter=0.65, yalign=1.0)
         Natsuko "Even if the prize isn't worth it, it's still a good chance to work as a team."
@@ -23468,9 +23479,9 @@ label MC028:
         show Natsuko flex
         "The girl gave a flex, then walked off out of the tent."
         hide Natsuko with dissolve
-        MC "Who… is that?"
-        FMG "Mmh… Natsuko Okamoto."
-        FMG "Calling her a rival sounds lame, but… yeah. She's half that and half frenemy."
+        MC "Who... is that?"
+        FMG "Mmh... Natsuko Okamoto."
+        FMG "Calling her a rival sounds lame, but... yeah. She's half that and half frenemy."
         FMG "It's a work in progress."
     show PRG neutral at Position(xcenter=0.65, yalign=1.0) with dissolve
     "The table was quiet, as Aida shifted her chair to stand up, then suddenly jumped."
@@ -23511,7 +23522,7 @@ label MC028:
     MC "Alright. Well, that makes us a team of six, so we can form a group."
     play music MC
     "The group and I started toward the large booth with Takamura behind it, a crowd of people in front of it."
-    MCT "Should we ask Daichi, too? I mean, he's here…"
+    MCT "Should we ask Daichi, too? I mean, he's here..."
     show BE happy at Position(xcenter=0.79, yalign=1.0)
     show FMG neutral at Position(xcenter=0.22, yalign=1.0)
     show WG neutral-2 at Position(xcenter=0.50, yalign=1.0)
@@ -23544,7 +23555,7 @@ label MC028:
     hide WG
     with dissolve
     show FMG neutral at Position(xcenter=0.68, yalign=1.0)
-    Takamura "Now, let's see… Inoue-san, Kodama-san, the male Hotsure-san, aaaaand… Mizutani-san, I see. Yes…"
+    Takamura "Now, let's see... Inoue-san, Kodama-san, the male Hotsure-san, aaaaand... Mizutani-san, I see. Yes..."
     hide BE
     hide PRG
     hide FMG
@@ -23555,7 +23566,7 @@ label MC028:
     hide GTS_S
     hide WG
     with dissolve
-    Takamura "I… hm. Seems you're down a member."
+    Takamura "I... hm. Seems you're down a member."
     Takamura "Mm. Pardon me a moment. Please wait in line to sign up."
     show AE neutral with dissolve
     "Takamura leaned forward, looking along the table, where a few steps down, Shiori stood, overseeing the student council and the sign up process."
@@ -23564,17 +23575,17 @@ label MC028:
     Takamura "Matsumoto-san, while I do understand how important the preparations are and have been to you, the entire rest of your class is here to sign up for the event."
     Takamura "Why not take some time and join them? We'll have everything handled here."
     show AE neutral-eyebrow
-    AE "You're… certain?"
+    AE "You're... certain?"
     Takamura "Completely."
     show AE neutral
-    AE "Mmn…"
+    AE "Mmn..."
     "Shiori glanced down once again."
     hide Takamura
     show BE neutral at Position(xcenter=0.22, yalign=1.0), Transform(xzoom=-1)
     show GTS neutral at Position(xcenter=0.85, ycenter=0.55) behind BE, PRG, FMG, WG, AE
     with dissolve
     BE "Come on, Matsumoto-san! It's all just for fun!"
-    GTS "Yes. Please join. I've… rather missed spending time together as a class."
+    GTS "Yes. Please join. I've... rather missed spending time together as a class."
     show BE happy
     BE "Yeah! Do it for Yamazaki-san!"
     AE "... Fine."
@@ -23605,7 +23616,7 @@ label MC028:
     elif routelock == "PRG":
         show PRG neutral with dissolve
         MC "Aida? Could you hold my spot for a second?"
-        PRG "Oh, um… okay."
+        PRG "Oh, um... okay."
         hide PRG with dissolve
     else:
         show BE neutral with dissolve
@@ -23620,9 +23631,9 @@ label MC028:
     with dissolve
     MC "Hey, uh, any of you guys wanna join our team? We have an open spot."
     show Tomoko worried
-    Tomoko "Mhhh…"
+    Tomoko "Mhhh..."
     show RM concerned-2
-    "Tomo lightly tapped her thigh with her hand, as Daichi… stared at me, shaking his head in small adjustments."
+    "Tomo lightly tapped her thigh with her hand, as Daichi... stared at me, shaking his head in small adjustments."
     Yuki "Mmmmhm!"
     "Yuki clapped her hands twice, and jumped up and down excitedly."
     Yuki "Sssthignnme upppthh!"
@@ -23635,15 +23646,15 @@ label MC028:
     RM "I have a name."
     Tomoko "Sure, cool. Anyway."
     show RM distrustful
-    Yuki "... Tmmmmhhhmmmmphhh… mmmmttthhfff.."
+    Yuki "... Tmmmmhhhmmmmphhh... mmmmttthhfff.."
     "Yuki lifted her clipboard and started on something, before Tomo put her hand on Yuki's arm."
     Tomoko "I got it. It's okay."
     show RM angry-2
-    RM "Do I… uh."
+    RM "Do I... uh."
     "Yuki raised her head and looked at him."
     show RM concerned
     "She gave him a deadpan look, exhaling through her nose without breaking eye contact."
-    RM "Haghhh… alright."
+    RM "Haghhh... alright."
     show Tomoko smile
     show RM pondering
     Tomoko "Okay. So, we need three more people."
@@ -23652,36 +23663,36 @@ label MC028:
     "Behind where we stood, a girl stood, her thighs clearly bulging out the legs of her pants beyond what most girls legs would."
     "She wore a tracksuit, a large 18 on the front, which bore a resemblance to that one Korean TV show that everyone had gone gaga over."
     if isEventCleared("MC027") and getFlag("Meet_Fumika"):
-        MCT "Wait… weren't they beefing with this chick?!"
+        MCT "Wait... weren't they beefing with this chick?!"
     elif getFlag("Meet_Fumika"):
-        MCT "Oh… that one chick from basketball. Fumika… Usumi, I think."
+        MCT "Oh... that one chick from basketball. Fumika... Usumi, I think."
     else:
         Tomoko "... Fumika?"
     Fumika "You would need only two more, if you and Yuki agree."
     "She looked down a little, grinding the toe of her running shoe into the dirt."
-    Fumika "I uh… I'm sorry for… uhm… you know."
-    Fumika "Being all… catty."
+    Fumika "I uh... I'm sorry for... uhm... you know."
+    Fumika "Being all... catty."
     Yuki "... Thhhathhhhit?"
-    Fumika "I… understand if you don't want to. You know, I get it."
-    Fumika "I uh… kinda crossed the line."
+    Fumika "I... understand if you don't want to. You know, I get it."
+    Fumika "I uh... kinda crossed the line."
     "She glanced up at Tomo, then back down at her feet."
     show Tomoko worried
-    Fumika "A few times, actually. And… I'm sorry. I'm so sorry."
-    Fumika "I just… y'know. I um… wanted to try and smooth everything over."
-    Fumika "I… miss hanging out with you."
+    Fumika "A few times, actually. And... I'm sorry. I'm so sorry."
+    Fumika "I just... y'know. I um... wanted to try and smooth everything over."
+    Fumika "I... miss hanging out with you."
     "Yuki looked at Fumika for what felt like some time, then looked down, her eyes riddled with thoughts."
     "Yuki turned her face back up and nodded, the edges under her face covering turning up."
     Fumika "Yeah? O-Okay."
-    Fumika "And uh… Hotsure-san? I… meant all that for you, too."
-    Fumika "I'm… I'm sorry. I hope you can forgive me."
+    Fumika "And uh... Hotsure-san? I... meant all that for you, too."
+    Fumika "I'm... I'm sorry. I hope you can forgive me."
     show Tomoko neutral
     Tomoko "... {w}It's alright."
     Tomoko "I-I didn't handle things the best either."
-    Tomoko "I… do hope we can move past it."
-    Fumika "I want to. I do. I'm… I'm glad to hear you say that."
-    Tomoko "Alright… then two members left."
+    Tomoko "I... do hope we can move past it."
+    Fumika "I want to. I do. I'm... I'm glad to hear you say that."
+    Tomoko "Alright... then two members left."
     "I paused, half from shock and half from admiration."
-    "She'd… matured. A lot in a few months."
+    "She'd... matured. A lot in a few months."
     Fumika "Yep. Two members."
     Fumika "It would be {i}reeeeeally{/i} awesome if someone else came in clutch."
     "She glanced at me, as I turned, cocking my head."
@@ -23694,7 +23705,7 @@ label MC028:
         show Yuki at altMove(0.5,0.65)
         show RM at altMove(0.5,0.92)
         show Okisho neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM with dissolve
-        "Someone… large moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
+        "Someone... large moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
         MCT "Oh, there she is. I was hoping to see her soon."
         Okisho "Will the class president do?"
     elif getFlag("Meet_Mizawa"):
@@ -23702,15 +23713,15 @@ label MC028:
         show Yuki at altMove(0.5,0.65)
         show RM at altMove(0.5,0.92)
         show Okisho neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM with dissolve
-        "Someone… large moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
+        "Someone... large moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
         Okisho "Will the class president do?"
     else:
         show Tomoko at altMove(0.5,0.48)
         show Yuki at altMove(0.5,0.65)
         show RM at altMove(0.5,0.92)
         show Okisho neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM with dissolve
-        "Someone… large and dressed like a pig… a very revealed one, moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
-        MCT "Uhh…"
+        "Someone... large and dressed like a pig... a very revealed one, moved up behind Tomo. Not exactly {i}right{/i} behind her, but not far away either."
+        MCT "Uhh..."
         UNKNOWN "Will the class president do?"
     show Tomoko surprised with vpunch
     Tomoko "AH!"
@@ -23731,10 +23742,10 @@ label MC028:
     "Jineko walked back up to us, as well as another girl, wrapped head to toe in-"
     MC "... Is that toilet paper?"
     UNKNOWN "Mhm!"
-    "Her face covered, it was… admittedly hard to tell who was behind the… paper. She clung onto a baseball bat, holding it over her shoulder."
+    "Her face covered, it was... admittedly hard to tell who was behind the... paper. She clung onto a baseball bat, holding it over her shoulder."
     "Whoever it was had {i}hips{/i} though."
     if routelock == "AE" or getFlag("Meet_Tako"):
-        MC "Pff… yo, Tako."
+        MC "Pff... yo, Tako."
         MC "You know if it rains, that's gonna be hell to get off, right?"
         "Yuki started scribbling on her clipboard again."
         Yuki "{i}Tako-chan, really?!{/i}"
@@ -23743,7 +23754,7 @@ label MC028:
         Yuki "{i}Tako-chan, really?!{/i}"
     show Tako excited
     Tako "Of course!"
-    "Yuki made a sound that… seemed to be a giggle."
+    "Yuki made a sound that... seemed to be a giggle."
     show Tako neutral
     Jineko "Time with Yureno-san is a great time, so I'm happy to tag along too."
     show Jineko happy
@@ -23752,11 +23763,11 @@ label MC028:
     Jineko "Howdy, Specs. Fancy seeing you here."
     Jineko "This'll be fun, then."
     show RM concerned
-    RM "Ahh… uhh-"
+    RM "Ahh... uhh-"
     show Jineko neutral
     show RM neutral-2
     show Tako confused
-    Tako "Okay… this feels like an awkward family reunion."
+    Tako "Okay... this feels like an awkward family reunion."
     show Tako happy
     Tako "Alright! Now, my second favorite thing is counselling, so here we go!"
     "Tako took her bat and gave it a swing, clearly making sure she wouldn't pelt someone's cranium into the stratosphere."
@@ -23773,18 +23784,19 @@ label MC028:
     hide Yuki
     hide RM
     with dissolve
+    show Jineko neutral at altMove(0.5, 0.5)
     show AE neutral-eyebrow
     AE "... Yureno-san, why do you have a bat?"
     show Tako excited
     Tako "I'm a {i}dangerous{/i} mummy!"
     show AE neutral-annoyed
-    AE "As if I needed to ask…"
+    AE "As if I needed to ask..."
     if not routelock == "AE":
-        MC "Sorry… you guys know each other?"
+        MC "Sorry... you guys know each other?"
         show AE neutral
         if not getFlag("Meet_Tako"):
             $setFlag("Meet_Tako")
-        AE "This… would be my roommate."
+        AE "This... would be my roommate."
         MC "Ah."
         MCT "... I'm not sure if I should be surprised or not."
     show Tako neutral
@@ -23795,7 +23807,7 @@ label MC028:
     show Jineko happy
     Jineko "We weren't gonna do anything bad!"
     AE "Of course you weren't."
-    AE "... Also, Jineko… please dress more SENSIBLY, will you?"
+    AE "... Also, Jineko... please dress more SENSIBLY, will you?"
     show Jineko surprised
     Jineko "Whaaat?! What about Yureno! I'm covering up way more than she is!"
     show AE neutral-annoyed
@@ -23811,7 +23823,7 @@ label MC028:
     AE "Now, Hotsure-san, everyone is waiting for you, when you're finished."
     MC "Oh! My bad!"
     if routelock == "WGB":
-        MC "Give me like… two seconds."
+        MC "Give me like... two seconds."
         AE "Please be prompt."
         MC "Right."
         hide AE
@@ -23821,9 +23833,9 @@ label MC028:
         "She nodded, and stepped off to the side with me, near some of the empty tables."
         MC "Just wanted to say that I love your costume. It works so well. Very showy."
         show Okisho happy-2
-        Okisho "Hehe… Oink oink~"
+        Okisho "Hehe... Oink oink~"
         show Okisho neutral
-        MC "Would you… want to hang out later? After the contest stuff?"
+        MC "Would you... want to hang out later? After the contest stuff?"
         Okisho "You know I would."
         Okisho "To make things fun, whichever group gets back first is the winner."
         Okisho "And, either you or I get to make a wish based on who wins."
@@ -23850,7 +23862,7 @@ label MC028:
         "I walked over to Alice, smiling beside her."
         MC "Tasty?"
         show WG happy
-        WG "Mmghh… very much so."
+        WG "Mmghh... very much so."
     elif routelock == "PRG":
         "I went to Aida's side, rubbing her back."
         MC "Finish off a couple of bowls?"
@@ -23863,8 +23875,8 @@ label MC028:
         PRG "Taste. For her."
         MC "Of course."
         "I took a bite of pie, and shut my eyes, sighing."
-        MC "Mmh… God, that's good."
-        PRG "It's so good…"
+        MC "Mmh... God, that's good."
+        PRG "It's so good..."
         "Aida nodded, and walked beside me, nibbling at the pie as she went, and occasionally sneaking a bite to me."
     "We headed off toward the forest nearby, all in our group."
     if routelock == "PRG":
@@ -23885,22 +23897,22 @@ label MC028:
         BE "Takamura-sensei said you made these?"
         show PRG neutral
         PRG "Y-Yes, I did."
-    PRG "Um… it's an American custom. Caramel apples. Sometimes, they even put nuts or other things on top with the caramel."
-    GTS "Mmnh… they're delicious."
-    "Naomi had a pair of chopsticks, and was picking out large slices from her bowl… of which based on the size, she likely had at least six whole apples diced up."
+    PRG "Um... it's an American custom. Caramel apples. Sometimes, they even put nuts or other things on top with the caramel."
+    GTS "Mmnh... they're delicious."
+    "Naomi had a pair of chopsticks, and was picking out large slices from her bowl... of which based on the size, she likely had at least six whole apples diced up."
     "Shiori glanced up at her, blinking."
-    AE "Caramel? On… top of an apple?"
-    BE "You NEED to try it! It's like… I've never had anything like it."
+    AE "Caramel? On... top of an apple?"
+    BE "You NEED to try it! It's like... I've never had anything like it."
     "Naomi paused, and bent down, lowering her bowl."
     GTS "Please, have a piece, Matsumoto-san. Feel free to grab whichever one fancies you."
     "Shiori exhaled, then after glancing down into the bowl for a second, delicately plucked a piece of apple out, grabbing it carefully by the un-carameled side, and bit a small chunk off."
-    BE "And…?"
+    BE "And...?"
     AE "..."
     AE "... Oh, heavens."
-    AE "I… hmnn…"
-    AE "This is… mhh… stupendous."
+    AE "I... hmnn..."
+    AE "This is... mhh... stupendous."
     PRG "I-I made a lot of them, i-if you want one when we get back."
-    AE "I… very well might. Thank you."
+    AE "I... very well might. Thank you."
     pause .5
     scene black with fade
     $setTime(TimeEnum.NIGHT)
@@ -23928,11 +23940,11 @@ label MC028:
     AE "There are roadsigns in the woods, too, as guides."
     FMG "You guys really tried to cover everything, huh?"
     AE "Safety is the first component to cover."
-    AE "This was a large undertaking with everyone involved. Student council, faculty, the staff. Takamura-sensei especially was the one who suggested Chukan Point park in the first place, so it could include the giant students as well."
+    AE "This was a large undertaking with everyone involved. Student council, faculty, the staff. Takamura-sensei especially was the one who suggested Chūkan Point park in the first place, so it could include the giant students as well."
     AE "And, even with all of that, safety needs to be at the forefront."
     show WG pondering
     WG "The giant students were not included in the past?"
-    AE "Not necessarily that, but it was more… split. The giant students had their own celebration, while the main campus had their own in turn."
+    AE "Not necessarily that, but it was more... split. The giant students had their own celebration, while the main campus had their own in turn."
     show WG neutral-2
     AE "Watanabe-san and Misuboro-san spent quite a large chunk of time in the workshop making all of this come to fruition."
     show GTS_S neutral
@@ -23963,12 +23975,12 @@ label MC028:
     hide PanelPaper1
     hide text
     with dissolve
-    MC "Huh…"
+    MC "Huh..."
     MC "No idea what that refers to."
     show PRG neutral with dissolve
     PRG "M-Maybe it's a clue we'll understand when we get closer?"
-    MC "Yeah… maybe."
-    MC "This map isn't… really doing a lot favors, though."
+    MC "Yeah... maybe."
+    MC "This map isn't... really doing a lot favors, though."
     MC "Everything kind of looks the same in here."
     "I looked up."
     hide PRG with dissolve
@@ -23979,27 +23991,27 @@ label MC028:
     "But, that had been around Tokyo."
     "No matter how far I had gone, I had been able to make out the sound of traffic, or the sounds of the city in the distance."
     "Now, out here, on an island, the silence was piercing."
-    "Aside from the crunching of leaves and every so often, a stick beneath someone's foot, there was… nothing."
-    show BE neutral at Position(xcenter=0.23, yalign=1.0)
+    "Aside from the crunching of leaves and every so often, a stick beneath someone's foot, there was... nothing."
+    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)    
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
-    show AE neutral at Position(xcenter=0.75, yalign=1.0)
-    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind BE
     with dissolve
     BE "Lemme see the clue again, Kei-chan."
     show WG haughty
     WG "Ah, here."
-    "Out of the shadows, a signpost with an arrow bled into view, the text 'Haunted Trail' written in very rough and… perhaps purposely faded kanji."
+    "Out of the shadows, a signpost with an arrow bled into view, the text 'Haunted Trail' written in very rough and... perhaps purposely faded kanji."
     show WG neutral-2
-    FMG "Hmh… 'your answer hides from the light of day.'"
+    FMG "Hmh... 'your answer hides from the light of day.'"
     if checkSkill("Academics", ">=", 10):
-        MC "Hides from the light of day…"
-        MC "Means that… maybe it could come out at night? A shadow?"
-        MC "Or… no. Maybe… behind the sign?"
+        MC "Hides from the light of day..."
+        MC "Means that... maybe it could come out at night? A shadow?"
+        MC "Or... no. Maybe... behind the sign?"
     else:
         AE "'Flip the sign'... 'answer hides from the light of day'..."
-        AE "Perhaps… behind the sign?"
+        AE "Perhaps... behind the sign?"
     show WG neutral
     WG "That might be it."
     "Honoka walked to the sign and went behind it."
@@ -24010,19 +24022,19 @@ label MC028:
     show FMG happy
     FMG "Yes!"
     show BE confused
-    BE "Oh, there's another clue…"
+    BE "Oh, there's another clue..."
     show BE neutral
     "Honoka fished her hand in and pulled out the sheet of paper, which rustled in her hand."
     show BE doubt
-    BE "Um… anyone got their phone handy? It's like trying to read in a cave in here."
+    BE "Um... anyone got their phone handy? It's like trying to read in a cave in here."
     show BE neutral
     MC "I've got mine."
     "I reached into my pocket, taking my phone out and turning on my flashlight, the ground around us brightening."
-    MC "Alright…"
-    "I shone the light onto the paper, which was yellow and… likely purposely aged. The edges were tattered and town, the paper itself feeling like it might fall to pieces in my hand."
+    MC "Alright..."
+    "I shone the light onto the paper, which was yellow and... likely purposely aged. The edges were tattered and town, the paper itself feeling like it might fall to pieces in my hand."
     show PRG worried
-    "Everyone crowded around me, to which I felt… at least four different boobs pressed into me due to how close everyone had to be to see it."
-    MC "Okay, uh…"
+    "Everyone crowded around me, to which I felt... at least four different boobs pressed into me due to how close everyone had to be to see it."
+    MC "Okay, uh..."
     "I glanced down, reading from the paper."
     hide BE
     hide FMG
@@ -24033,19 +24045,19 @@ label MC028:
     with dissolve
     pause .5
     show PanelPaper1 with dissolve
-    show text _("{font=gui/Caveat-Bold.ttf}{size=*1.4}{color=#000000}Follow the radiant path…\n and keep your wits in hand.{/color}{/size}{/font}") at Position(ycenter=0.60)
+    show text _("{font=gui/Caveat-Bold.ttf}{size=*1.4}{color=#000000}Follow the radiant path...\n and keep your wits in hand.{/color}{/size}{/font}") at Position(ycenter=0.60)
     with dissolve
     pause
     hide PanelPaper1
     hide text
     with dissolve
     pause .5
-    show BE neutral at Position(xcenter=0.23, yalign=1.0)
+    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
-    show AE neutral at Position(xcenter=0.75, yalign=1.0)
-    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind BE
     with dissolve
     "I brought my phone down, swiping to turn off the light."
     show GTS_S pondering
@@ -24064,36 +24076,36 @@ label MC028:
     with dissolve
     pause .5
     show PanelPaper1 with dissolve
-    show text _("{font=gui/Caveat-Bold.ttf}{size=*1.4}{color=#000000}Best plan your hunt during the day,\n for at night… {i}they{/i} come out to play.{/color}{/size}{/font}") at Position(ycenter=0.60)
+    show text _("{font=gui/Caveat-Bold.ttf}{size=*1.4}{color=#000000}Best plan your hunt during the day,\n for at night... {i}they{/i} come out to play.{/color}{/size}{/font}") at Position(ycenter=0.60)
     with dissolve
     pause
     hide PanelPaper1
     hide text
     with dissolve
     pause .5
-    show BE neutral at Position(xcenter=0.23, yalign=1.0)
+    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
-    show AE neutral at Position(xcenter=0.75, yalign=1.0)
-    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind BE
     with dissolve
-    MC "'... {w}Best plan your hunt during the day, for at night… {i}they{/i} come out to play.'"
+    MC "'... {w}Best plan your hunt during the day, for at night... {i}they{/i} come out to play.'"
     show PRG worried
     show BE surprised
     BE "... T-They?"
     BE "W-Who's 'they?'"
     show WG haughty
-    WG "It's… simple phrasing, Inoue-san. Flavor text."
+    WG "It's... simple phrasing, Inoue-san. Flavor text."
     show BE unamused
     "Honoka flicked her head back toward the sign, then toward the group as I stuck my phone back into my pocket."
     show BE neutral
     BE "C-Can you put the coin in there, too?"
     MC "Yeah, of course."
     "I tucked the coin in beside my phone."
-    "Glancing around, Honoka stuffed the map… between her boobs, pressing it down deep as she sighed, looking around at everyone else."
+    "Glancing around, Honoka stuffed the map... between her boobs, pressing it down deep as she sighed, looking around at everyone else."
     show BE doubt
-    BE "T-This trail isn't… actually haunted, right?"
+    BE "T-This trail isn't... actually haunted, right?"
     show WG doubt
     WG "Of course not. It's a game."
     #play SFX howl
@@ -24110,13 +24122,13 @@ label MC028:
     FMG "HAHGH?!"
     PRG2 "AH!"
     BE "AAAAH!!"
-    "Honoka literally jumped in place, and reached sideways, clutching onto the nearest person… which happened to be Naomi's leg."
+    "Honoka literally jumped in place, and reached sideways, clutching onto the nearest person... which happened to be Naomi's leg."
     show WG doubt
     show BE embarrassed
     show FMG neutral
-    BE "Ahh… h-hah… s-sorry, Y-Yamazaki-san."
+    BE "Ahh... h-hah... s-sorry, Y-Yamazaki-san."
     show GTS_S neutral-2
-    GTS_S "{size=-6}-hō ren ge–{/size} oh? Ah… th-think nothing of it, Inoue-san."
+    GTS_S "{size=-6}-hō ren ge–{/size} oh? Ah... th-think nothing of it, Inoue-san."
     show PRG worried
     if not routelock == "BE":
         MCT "... The most Honoka thing ever."
@@ -24124,7 +24136,7 @@ label MC028:
         pause .5
         MCT "... And also dresses as a ghost."
     show FMG angry
-    FMG "That… that was really lame, Hotsure-san."
+    FMG "That... that was really lame, Hotsure-san."
     MC "What are you talking about?"
     show FMG disappointed
     FMG "Howling, werewolf boy."
@@ -24135,12 +24147,12 @@ label MC028:
     if getFlag("MC023_No"):
         MCT "... Not spooked at all. Nope. Not telling them that."
     show BE happy
-    BE "Maybe uh… maybe Kei-chan doesn't have a factor after all, and he is actually turning into a werewolf."
+    BE "Maybe uh... maybe Kei-chan doesn't have a factor after all, and he is actually turning into a werewolf."
     show WG sly
-    WG "Hmph… perhaps so."
+    WG "Hmph... perhaps so."
     if isHighestSkill("Academics"):
         show FMG happy
-        FMG "Maybe he spends all of his time in the library looking up werewolf rituals. Changing himself. Growing… stronger."
+        FMG "Maybe he spends all of his time in the library looking up werewolf rituals. Changing himself. Growing... stronger."
         MC "Oh, for real. Come on."
         show FMG neutral
     elif isHighestSkill("Art"):
@@ -24156,7 +24168,7 @@ label MC028:
         pause 1
         MC "... Why are you all quiet?"
         show BE neutral
-        BE "... Kei-chan, you have been working out a lot. And… getting more buff."
+        BE "... Kei-chan, you have been working out a lot. And... getting more buff."
         MC "... Really?"
     show WG neutral    
     MC "Okay, anyways. Let's go."
@@ -24167,60 +24179,60 @@ label MC028:
         BE "K-Kei-chan?"
         MC "Hm?"
         show BE flustered
-        BE "C-Can you… hold my hand?"
-        "I took it, holding Honoka's… slightly sweaty palm in mine."
+        BE "C-Can you... hold my hand?"
+        "I took it, holding Honoka's... slightly sweaty palm in mine."
         show BE unamused
     elif routelock == "AE":
         MC "Doing alright?"
-        AE "Yes. Of course. That was simple… a bit of a jump."
+        AE "Yes. Of course. That was simple... a bit of a jump."
         MC "Right."
     elif routelock == "FMG":
         MC "Doin' okay?"
         show FMG surprised-2
         FMG "Y-Yeah."
-        FMG "This… it's so quiet."
-        MC "I know…"
+        FMG "This... it's so quiet."
+        MC "I know..."
         show FMG neutral
     elif routelock == "GTS":
         "I backed up, to where Naomi was walking, near the back of the group."
         MC "Doing okay?"
         show GTS_S neutral
-        GTS_S "Quite. I… did have a bit of a startle at that howl, however."
-        MC "Yeah… I get that."
+        GTS_S "Quite. I... did have a bit of a startle at that howl, however."
+        MC "Yeah... I get that."
     elif routelock == "WG":
         "I went beside Alice, touching her side."
         MC "Doing okay?"
         show WG neutral-2
         WG "Of course. It's a simple game, after all."
         show WG doubt
-        WG "That howl was… curiously timely, however."
+        WG "That howl was... curiously timely, however."
         "I nodded, and went alongside her."
         show WG neutral-2
     elif routelock == "PRG":
         MC "Doing okay?"
         "I moved beside Aida, who was walking a little more off to one side."
         PRG "Y-Yes."
-        PRG "I-I was okay until that howl. That… i-it was so haunting."
-        MC "Yeah…"
+        PRG "I-I was okay until that howl. That... i-it was so haunting."
+        MC "Yeah..."
     
     show BE confused
-    BE "Do you guys see like… glowing stuff?"
+    BE "Do you guys see like... glowing stuff?"
     WG "Yes. Along the ground."
-    "Splatters and smears of… something glowing a pale green were ran along the trail, which lead even deeper still into the forest."
+    "Splatters and smears of... something glowing a pale green were ran along the trail, which lead even deeper still into the forest."
     show BE unamused
     show FMG neutral
     FMG "The radiant path. Doesn't get more radiant than literal glowing."
     show PRG worried
     PRG "O-Oh, Yamazaki-san. W-Will you be okay in here?"
     show GTS_S pondering
-    GTS "Okay? As in…?"
+    GTS "Okay? As in...?"
     PRG "Hitting your head?"
     show GTS_S happy
     GTS "Oh, quite."
     show GTS_S neutral
     GTS "I've been here in the daytime a time or two. These trees are pruned quite high. I'll be fit as a fiddle in here."
     "Naomi stepped ahead of the group, and started down the main path, the rest of us following."
-    "The silence… grew."
+    "The silence... grew."
     "Aside from our own footsteps, and Naomi's deep, heavy footfalls, the only sounds to be heard were the occasional bug, and the ground crunching underfoot."
     show FMG surprised
     FMG "Look!"
@@ -24229,22 +24241,22 @@ label MC028:
     BE "M-Mizutani-san!"
     show PRG worried
     show FMG surprised-2
-    FMG "Ach, a… s-sorry."
+    FMG "Ach, a... s-sorry."
     show FMG neutral
     show BE unamused
-    FMG "But, there's lights…"
+    FMG "But, there's lights..."
     "She pointed into the dark, shadowed void, where every few seconds, a small light was dotting on and off, shifting places every few seconds."
     show BE surprised
     BE "I-Is it a ghost?!"
     GTS_S "No, no. Have no fear, Inoue-san."
     GTS_S "Just fireflies. We're quite lucky to see them out this time of year."
     show BE unamused
-    BE "Ohh… fireflies. Good."
+    BE "Ohh... fireflies. Good."
     "The sight of the small, glimmering dots broke the pall over us."
     show GTS_S happy
     GTS_S "It's just a game. Remember."
     show WG happy
-    WG "I… agree. It is simply a game. For fun."
+    WG "I... agree. It is simply a game. For fun."
     show GTS_S neutral
     show WG neutral-2
     FMG "... You know, once, I saw this movie where a guy lived in a house built over some clay pits, and his new wife was all suspicious about it and everything."
@@ -24256,14 +24268,14 @@ label MC028:
     show FMG happy
     FMG "It's such a good movie!"
     show BE unamused
-    BE "Uhm… M-Matsumoto-san. Do you know what… might be coming?"
+    BE "Uhm... M-Matsumoto-san. Do you know what... might be coming?"
     show AE neutral-eyebrow
     AE "Hm?"
-    BE "B-Because you like… helped plan all this?"
+    BE "B-Because you like... helped plan all this?"
     show AE neutral
     AE "I should say, I only helped plan the events at the park. Takamura-sensei handled most of this. I'm just as in the dark as you."
     AE "... I have a feeling she was likely trying to get me roped into joining you from the beginning."
-    BE "Oh… r-right."
+    BE "Oh... r-right."
     show AE neutral-eyebrow
     AE "Hold a moment."
     AE "... Did any of you hear that?"
@@ -24271,17 +24283,17 @@ label MC028:
     show FMG surprised-2
     show BE surprised
     show AE neutral
-    FMG "Hear… what?"
+    FMG "Hear... what?"
     pause 1
     "There was nothing."
     show BE unamused
     show FMG neutral
     BE "Oh, come on, Matsumoto-san! I know you're in on it! Stop trying to build suspense!"
-    AE "I… I'm not…"
+    AE "I... I'm not..."
     pause 1
     "... There it was."
-    "A soft… almost silent… whistling. As if something was sitting just out of eyesight, easing its breath through dried, shriveled lips."
-    "It seemed similar to someone trying to whistle, but just… not quite being able to."
+    "A soft... almost silent... whistling. As if something was sitting just out of eyesight, easing its breath through dried, shriveled lips."
+    "It seemed similar to someone trying to whistle, but just... not quite being able to."
     "Everyone drove to a halt."
     show WG doubt
     show GTS_S pondering
@@ -24292,7 +24304,7 @@ label MC028:
     BE "I-I wanna go back!"
     show BE surprised-2
     show WG neutral-2
-    WG "Inoue-san, it's… it's just a game. A… a game."
+    WG "Inoue-san, it's... it's just a game. A... a game."
     show GTS_S neutral
     show FMG neutral
     GTS_S "Inoue-san, it's okay. I promise."
@@ -24300,20 +24312,20 @@ label MC028:
     show BE flustered
     show PRG worried
     BE "S-Sorry! I-I-"
-    PRG "It's okay…"
+    PRG "It's okay..."
     show BE unamused
     "The glow of the path had eased, now barely visible underfoot."
     "Whatever fireflies there were seemed to have been left behind, the dark, shadowed void around us creeping in."
-    "Past the trees that lie about three paces away from us, there lay… nothing. Nothing but… black."
-    "An unimpeded, yet soft wind blew, touching my skin, as if something was breathing on me… down my neck, hovering just overhead…"
+    "Past the trees that lie about three paces away from us, there lay... nothing. Nothing but... black."
+    "An unimpeded, yet soft wind blew, touching my skin, as if something was breathing on me... down my neck, hovering just overhead..."
     pause 1
-    "Heavy… labored breathing."
+    "Heavy... labored breathing."
     show BE surprised
     BE "W-Who is that?"
     show FMG surprised
     show BE surprised-2
     FMG "Who's there?!"
-    "A deep, strained… laugh."
+    "A deep, strained... laugh."
     show BE surprised with vpunch
     BE "AAAAAAAHH!!"
     show BE at altMove(0.5, -0.3)
@@ -24327,43 +24339,43 @@ label MC028:
     show FMG surprised-2
     FMG "HONOKA!"
     BE "NO! NO NO NO! GET AWAY FROM ME!"
-    MC "Oh, God…"
+    MC "Oh, God..."
     "Her frantic, flying footsteps drifted away into the woods, as Naomi stepped forward."
     show GTS_S sad
-    GTS_S "Oh… mnn…"
+    GTS_S "Oh... mnn..."
     show PRG worried
     show WG doubt
-    MC "Alright… we have to go get her."
-    MC "Are… you guys okay?"
+    MC "Alright... we have to go get her."
+    MC "Are... you guys okay?"
     "I fished out my phone again, turning the flashlight on."
     "Everyone's faces appeared in the dark, suddenly wincing from the light."
-    MC "Sorry, sorry…"
+    MC "Sorry, sorry..."
     show FMG neutral
-    FMG "I'm… all good."
-    FMG "Whoever made this is… they have some issues."
+    FMG "I'm... all good."
+    FMG "Whoever made this is... they have some issues."
     show WG stern
-    WG "I'm fine…"
+    WG "I'm fine..."
     show AE neutral
-    AE "As am I…"
+    AE "As am I..."
     "Beside Shiori, Aida stood, her hands on her belly."
     GTS_S "Are you quite alright, Kodama-san?"
-    PRG "Y-Yes. I… I wasn't that scared. It just made me jump."
+    PRG "Y-Yes. I... I wasn't that scared. It just made me jump."
     PRG "I-I know it's just a game."
     MC "Right."
     if routelock == "PRG":
-        PRG "I… I think Honoka was really scared, though."
+        PRG "I... I think Honoka was really scared, though."
         "Aida held up her arm, where tiny, round marks were dug into her forearm."
         PRG "She was digging her nails into my arm."
-        MC "Mmnh… yeah, that tracks."
+        MC "Mmnh... yeah, that tracks."
     else:
-        PRG "I-I think… I-Inoue-san was really scared, though."
+        PRG "I-I think... I-Inoue-san was really scared, though."
         "Aida held up her arm, where tiny, round marks were dug into her forearm."
         PRG "S-She was digging her nails into my arm."
-        MC "Urgh… alright."
+        MC "Urgh... alright."
     MC "Okay. Yamazaki-san, you didn't happen to see which way Honoka ran, did you?"
     show GTS_S sad
     GTS_S "Down the main path, it seems. I'd imagine she's trying to wrap this up as quickly as possible."
-    GTS_S "Should be… this way."
+    GTS_S "Should be... this way."
     "Naomi started off, the rest of us following."
     FMG "Honoka!!"
     "We all waited and listened, still walking."
@@ -24372,13 +24384,13 @@ label MC028:
     WG "Oh, heavens."
     WG "Inoue-san!!"
     pause 1
-    AE "Mmn…"
+    AE "Mmn..."
     MC "Alright, hold on."
     "I cleared my throat, before Naomi held her hand down."
-    GTS_S "Apologies, Hotsure-san. May… may I?"
-    MC "Uh… by all means."
+    GTS_S "Apologies, Hotsure-san. May... may I?"
+    MC "Uh... by all means."
     "We walked a bit further. It was impossible to tell how far, but maybe two or three minutes further."
-    GTS_S "Right…"
+    GTS_S "Right..."
     GTS_S "{i}Mcchh-hnnh{/i}"
     show dummy with vpunch
     GTS_S "{size=36}INOUE-SAN!{/size}"
@@ -24389,7 +24401,7 @@ label MC028:
     "Every one of us jumped. Naomi's voice boomed into the dark like a foghorn."
     show FMG surprised-2
     FMG "Holy shit, girl!"
-    AE "Heavens…"
+    AE "Heavens..."
     show PRG worried
     show AE neutral
     show FMG neutral
@@ -24412,7 +24424,7 @@ label MC028:
     hide GTS with dissolve
     "I brandished my phone again, turning the light on and shining it ahead."
     show BE flustered with dissolve
-    "Honoka lay… just off the path, her face beet red."
+    "Honoka lay... just off the path, her face beet red."
     "She lay among some branches, many of which were jammed into her long, draping outfit, holding her there."
     "She was on the trail, the sticks of some nearby trees holding her there."
     "In addition, a large spider web lay across the entire path, Honoka stuck to it like a very busty fly."
@@ -24420,27 +24432,27 @@ label MC028:
         "I breathed."
         "Honoka's nipples were sticking out right into the front of her costume."
         show BE embarrassed-2
-        BE "I'm-I'm okay. I promise…"
-        BE "J-Just got scared…"
+        BE "I'm-I'm okay. I promise..."
+        BE "J-Just got scared..."
     else:
         "I paused."
         show BE embarrassed-2
-        "Honoka's… nipples were jutting forward into the fabric of her costume."
+        "Honoka's... nipples were jutting forward into the fabric of her costume."
     MC "Here, hold up."
     show FMG neutral at Position(xcenter=0.72, yalign=1.0)
     "I stepped down the path and over to her, hearing footsteps behind me and glancing back, seeing Akira following."
     "The two of us came to her, as Akira grabbed her hands and started pulling, getting the sticks off at least. Though, Honoka still stuck to the webbing."
-    FMG "Mmh… well, at least I got the sticks off."
+    FMG "Mmh... well, at least I got the sticks off."
     show BE unamused
-    BE "T-Thanks…"
+    BE "T-Thanks..."
     show BE embarrassed-2
-    BE "Ummm…"
-    show BE unamused at Position(xcenter=0.23, yalign=1.0)
+    BE "Ummm..."
+    show AE neutral-eyebrow at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show PRG surprised at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE
     show WG doubt at Position(xcenter=0.60, yalign=1.0)
-    show AE neutral-eyebrow at Position(xcenter=0.75, yalign=1.0)
-    show GTS surprised at Position(xcenter=0.90, ycenter=0.55) behind AE
+    show BE unamused at Position(xcenter=0.75, yalign=1.0)
+    show GTS surprised at Position(xcenter=0.90, ycenter=0.55) behind BE
     with dissolve
     FMG "... I mean, it is chilly tonight."
     WG "And that's your own fault."
@@ -24452,20 +24464,20 @@ label MC028:
     FMG "And barbarians don't get cold, unlike ghosts."
     show BE embarrassed-2
     show WG neutral
-    BE "Eh… hehehe…"
+    BE "Eh... hehehe..."
     show BE aroused
     show PRG worried
-    BE "Just need to uh… calm the girls down. Guess they got scared too…"
+    BE "Just need to uh... calm the girls down. Guess they got scared too..."
     show AE neutral
-    AE "Mhh…"
+    AE "Mhh..."
     show WG bored
     WG "Oh, for crying out loud--"
     show BE wink
-    BE "It's… not even the cold. At least, mostly."
+    BE "It's... not even the cold. At least, mostly."
     show BE aroused
-    BE "I've gotten to be a lot more of a… sensitive girl recently… eheheh…"
+    BE "I've gotten to be a lot more of a... sensitive girl recently... eheheh..."
     show BE embarrassed-2
-    BE "When they rub together it… can happen."
+    BE "When they rub together it... can happen."
     show WG doubt
     WG "That context was not needed, Inoue-san."
     show BE unamused
@@ -24473,21 +24485,22 @@ label MC028:
     show WG neutral
     BE "Also, can someone get this off of me? This is the biggest spiderweb I've ever seen."
     hide GTS
-    show GTS_S neutral at Position(xcenter=0.85, ycenter=0.35) behind AE
-    GTS_S "That… does not look natural, Inoue-san. No matter the spider, no webbing is as thick as a finger."
+    show GTS_S neutral at Position(xcenter=0.85, ycenter=0.35) behind BE
+    GTS_S "That... does not look natural, Inoue-san. No matter the spider, no webbing is as thick as a finger."
     "She knelt, and gently touched the spiderweb, which stuck to her finger like glue."
     AE "It seems to be a decoration, so we're likely still on the trail."
     show AE neutral-eyebrow
     AE "Strange. We took so many safety precautions. I doubt Takamura-sensei would do anything like this."
     show AE neutral
-    AE "Yet, the light leads right here…"
+    AE "Yet, the light leads right here..."
     "Honoka yanked her arms apart, still stuck to her sides, no matter how hard she tugged."
     hide AE
     hide GTS_S
     hide WG
     hide PRG
     with dissolve
-    show FMG neutral
+    show BE unamused at altMove(0.5, 0.65)
+    show FMG neutral at altMove(0.5, 0.35)
     FMG "I got it."
     show FMG flex
     FMG "Just needs the ol' elbow grease!"
@@ -24506,10 +24519,10 @@ label MC028:
     hide BE
     with dissolve
     pause .5
-    show AE neutral at Position(xcenter=0.33, yalign=1.0)
-    show WG neutral-2 at Position(xcenter=0.62, yalign=1.0)
-    show GTS_S neutral at Position(xcenter=0.80, yalign=1.0)
-    show PRG worried at Position(xcenter=0.12, yalign=1.0)
+    show AE neutral at Position(xcenter=0.45, yalign=1.0)
+    show WG neutral-2 at Position(xcenter=0.70, yalign=1.0)
+    show GTS_S neutral at Position(xcenter=0.85, yalign=1.0)
+    show PRG worried at Position(xcenter=0.20, yalign=1.0)
     with dissolve
     MC "Alright, alright. We'll figure something out."
     WG "Right. We need a way to separate the skin from the webbing."
@@ -24533,14 +24546,14 @@ label MC028:
     MC "I can take that, Matsumoto-san."
     "I took the stick from her, and headed back to Honoka and Akira, who were now basically leaned into each other."
     hide AE
-    hide BE
     hide GTS_S
     hide PRG
+    hide WG
     with dissolve
-    show BE flustered at Position(xcenter=0.23, yalign=1.0)
-    show FMG devious at Position(xcenter=0.40, yalign=1.0)
+    show BE flustered at Position(xcenter=0.65, yalign=1.0)
+    show FMG devious at Position(xcenter=0.35, yalign=1.0)
     with dissolve
-    BE "You are warm. What the hell…"
+    BE "You are warm. What the hell..."
     FMG "I told you! Us barbarians are always hot!"
     if isHighestSkill("Art"):
         "Taking the stick, I stuck the more narrow end in between where Akira's hands met Honoka's sides, and eased the stick around Honoka's back."
@@ -24551,7 +24564,7 @@ label MC028:
         show FMG happy
         "Behind her, Akira fell backwards, sighing."
         show BE happy
-        BE "Ugh… thanks, Kei-chan."
+        BE "Ugh... thanks, Kei-chan."
         show FMG upbeat
         FMG "Yeah. Thank you."
         MC "Course."
@@ -24566,22 +24579,27 @@ label MC028:
         with dissolve
         pause .5
         "I turned back toward Shiori, Alice, Naomi, and Aida."
-        show AE neutral at Position(xcenter=0.75, yalign=1.0)
-        show WG neutral-2 at Position(xcenter=0.60, yalign=1.0)
-        show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind BE, PRG, FMG, WG, AE
-        show PRG worried at Position(xcenter=0.12, yalign=1.0)
+        show AE neutral at Position(xcenter=0.45, yalign=1.0)
+        show WG neutral-2 at Position(xcenter=0.70, yalign=1.0)
+        show GTS neutral at Position(xcenter=0.85, yalign=1.0) behind BE, PRG, FMG, WG, AE
+        show PRG worried at Position(xcenter=0.20, yalign=1.0)
         with dissolve
         MC "Could one of you guys get her other arm? That way, we can both catch her?"
-        "Aida stepped forward, as… Shiori touched her arm."
+        "Aida stepped forward, as... Shiori touched her arm."
         AE "Please. Allow me, Kodama-san."
-        PRG "Uh… o-okay."
-        show BE unamused at Position(xcenter=0.23, yalign=1.0) with dissolve
-        show FMG angry at Position(xcenter=0.40, yalign=1.0) with dissolve
+        PRG "Uh... o-okay."
+        show AE neutral at altMove(0.5, 0.75)
+        show WG neutral-2 at altMove(0.5, 0.6)
+        show GTS neutral at altMove(0.5, 0.9)
+        show PRG worried at altMove(0.5, 0.12)
+        show BE unamused at Position(xcenter=0.23, yalign=1.0)
+        show FMG angry at Position(xcenter=0.40, yalign=1.0)
+        with dissolve
         "Shiori came forward, and grabbed Honoka's other arm."
         "I rolled Honoka's sleeve up a little, getting a grip on her skin."
         MC "Push forward. Toward us."
         "Honoka nodded and shifted her weight forward."
-        MC "Alright, on three. One, two… three!"
+        MC "Alright, on three. One, two... three!"
         "Shiori and I pulled Honoka forward, as Akira wrenched herself back."
         "Springing, as if shot forward by a spring, Honoka stumbled ahead, directly into Shiori and I."
         MC "There!"
@@ -24595,7 +24613,7 @@ label MC028:
         "Shiori brushed her front off, to which I realized that based on what I had just felt, she likely had received Honoka's entire right tit straight to the stomach."
         show BE neutral
         show AE neutral
-        BE "T-Thank you…"
+        BE "T-Thank you..."
         show FMG neutral 
         FMG "Yeah, thanks, guys."
         MC "Of course."
@@ -24603,7 +24621,7 @@ label MC028:
         "Shiori backed up, looking at the web."
     else:
         "I looked back as the others made it back to the trail."
-        MC "Could two of you give me a hand? Maybe… Alice and Matsumoto-san?"
+        MC "Could two of you give me a hand? Maybe... Alice and Matsumoto-san?"
         hide FMG
         hide BE
         with dissolve
@@ -24611,7 +24629,7 @@ label MC028:
         show WG angry at altMove(0.5,0.82)
         show AE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
         with dissolve
-        WG "This is eating into our time…"
+        WG "This is eating into our time..."
         show WG stern
         "I got the stick behind Honoka, against the small of her back."
         "Shiori stood on the other side of Honoka, while Alice stood in front."
@@ -24622,7 +24640,7 @@ label MC028:
         WG "I suppose."
         "I glanced back at her, and behind her, Naomi and Aida, who were watching, both looking slightly unnerved."
         show BE unamused at Position(xcenter=0.45, yalign=1.0), Transform(xzoom=-1) with dissolve
-        MC "Alright. One, two… three!"
+        MC "Alright. One, two... three!"
         "I yanked the stick forward as Shiori matched me, Honoka's middle tugging forward and off of the web."
         show BE at altMove(0.5, 0.8)
         "Whether it was from her pulling or the sheer weight of her chest, Honoka's upper back and shoulders yanked free as well, as she stumbled a bit, her legs pulling free."
@@ -24644,13 +24662,13 @@ label MC028:
         show FMG neutral
         FMG "Yeah."
         MC "No worries."
-        AE "Hmmgh…"
-    show BE neutral at Position(xcenter=0.23, yalign=1.0)
+        AE "Hmmgh..."
+    show AE neutral at Position(xcenter=0.23, yalign=1.0), Transform(xzoom=-1)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE, WG
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE, WG
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
-    show AE neutral at Position(xcenter=0.75, yalign=1.0)
-    show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind AE
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind BE
     with dissolve
     show AE angry
     AE "I will be speaking to someone regarding this. Completely unacceptable."
@@ -24658,7 +24676,7 @@ label MC028:
     WG "I agree. Fully."
     FMG "Well, let's just keep going. We already lost a lot of time."
     GTS "We can't simply leave this here, though. Heavens knows what would happen if a smaller group were to come upon it."
-    MC "Ech… yeah."
+    MC "Ech... yeah."
     show PRG worried
     PRG "... I-I might have an idea."
     show BE confused
@@ -24670,7 +24688,7 @@ label MC028:
         PRG "W-When Hotsure-san had his light on before, I-I saw a wood pile down this path, and something metal. It looked kind of like a fire stand."
     show BE neutral 
     GTS "There is. It's a small area with a campsite."
-    PRG "Maybe if… Yamazaki-san were to take some of the logs and drop them onto the web, it would pull it off the trees and open the path?"
+    PRG "Maybe if... Yamazaki-san were to take some of the logs and drop them onto the web, it would pull it off the trees and open the path?"
     PRG "Then, she could set the logs off to the side, to get them out of the way, and so Matsumoto-san knows where the web is so she can show it later?"
     AE "That's a smart idea, Kodama-san. Let's try it."
     AE "Would you mind, Yamazaki-san?"
@@ -24682,6 +24700,7 @@ label MC028:
     show GTS_S neutral at Position(xcenter=0.90, yaligh=1.0) behind AE with dissolve
     "The loud creaking of wood echoed as Naomi emerged from the dark, carrying about seven or eight large logs."
     "She went to the webbing and adjusted her feet, ensuring she wouldn't drop half a tree onto her foot."
+    show dummy with vpunch
     "{i}CRASH!{/i}"
     "The logs fell, snapping the web from the trees with force and crushing it underneath."
     show BE happy
@@ -24693,29 +24712,29 @@ label MC028:
     show WG pondering
     WG "Hm."
     PRG "What is it, Alice?"
-    WG "How… did you get to be stuck on the web backwards, Inoue-san?"
+    WG "How... did you get to be stuck on the web backwards, Inoue-san?"
     show BE confused
     BE "Huh?"
     WG "When we came upon you, you weren't facing down the path in the direction you were running. You were turned backwards, facing toward us."
     show BE embarrassed
-    BE "Oh, I… stopped running when I felt the fabric chaffing my… well, you know."
+    BE "Oh, I... stopped running when I felt the fabric chaffing my... well, you know."
     show WG doubt
-    BE "And I looked backwards to see if you guys were following me and kinda… backed into it."
-    WG "I see…."
+    BE "And I looked backwards to see if you guys were following me and kinda... backed into it."
+    WG "I see...."
     show WG surprised-2
     show PRG surprised
     PRG "Oh, look! Lights!"
     show Woods with fade
     play music TwilightBright
-    show BE neutral at Position(xcenter=0.23, yalign=1.0)
+    show AE neutral at Position(xcenter=0.23, yalign=1.0), Transform(xzoom=-1)
     show PRG neutral at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE, WG
-    show WG neutral at Position(xcenter=0.60, yalign=1.0)
-    show AE neutral at Position(xcenter=0.75, yalign=1.0)
-    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind AE
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE, WG
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    show WG neutral at Position(xcenter=0.60, yalign=1.0) behind BE
+    show GTS_S neutral at Position(xcenter=0.90, yalign=1.0) behind BE
     with dissolve
     "The trail spread back out into a small clearing."
-    "A tree stump sat in the middle, a… very bored looking female student sitting cross-legged on it, her chin in her hands as she stared into space."
+    "A tree stump sat in the middle, a... very bored looking female student sitting cross-legged on it, her chin in her hands as she stared into space."
     "She wore a green, fairy-like outfit, with antlers stuck in her hair and vines around her legs."
     if routelock == "AE":
         MCT "... Is she on the student council?"
@@ -24728,7 +24747,7 @@ label MC028:
     AE "Yes, well. I was offered to join my class on this excursion."
     UNKNOWN "I did not think you'd be dressing up! Your nun outfit is quite outstanding."
     show FMG devious
-    FMG "Hehehe…"
+    FMG "Hehehe..."
     show BE smug
     "Honoka covered her mouth, one or two giggles escaping."
     AE "Reina, this is not a costume."
@@ -24748,16 +24767,16 @@ label MC028:
     AE "Yes, yes. Now, explain to me the spiderweb in the woods."
     ReinaM "There are countless spiderwebs in the woods."
     show AE angry
-    AE "No, I…"
+    AE "No, I..."
     show AE neutral
     AE "A fake spiderweb. As in, something put up for a practical joke."
-    ReinaM "I know of… none such as that."
+    ReinaM "I know of... none such as that."
     show BE confused
     BE "It was all the way across the trail! How could you NOT see it?!"
     show FMG surprised-2
     FMG "And sticky as hell! Someone could have gotten all tangled up in it!"
     show BE wink
-    BE "Yeah, someone. Like… y'know, if they were walking on the trail or something."
+    BE "Yeah, someone. Like... y'know, if they were walking on the trail or something."
     "I looked out of the corner of my eye and smirked at the stray pieces of webbing on Honoka's hip and Akira's upper arm."
     show BE neutral
     show FMG neutral
@@ -24771,11 +24790,11 @@ label MC028:
     AE "This will be brought up at our next council meeting."
     ReinaM "Okay."
     pause 1
-    ReinaM "Mm…"
+    ReinaM "Mm..."
     ReinaM "..."
     ReinaM "In any regard, congratulations on finishing the haunted trail."
     "Reina held a coin up, the same as the one we already had."
-    "Based on no one moving, I think the entire group expected her to get up and hand it over, but she simply… held it there. On her stump."
+    "Based on no one moving, I think the entire group expected her to get up and hand it over, but she simply... held it there. On her stump."
     MC "... Alright, uh thank you."
     "I awkwardly walked forward to her and took it, pressing it into my pocket."
     ReinaM "Do you have your map?"
@@ -24784,8 +24803,8 @@ label MC028:
     BE "Huh?"
     MC "The map?"
     show BE doubt
-    BE "I… uh…"
-    BE "Uhm… t-this is awkward…"
+    BE "I... uh..."
+    BE "Uhm... t-this is awkward..."
     show BE embarrassed
     BE "... I lost it."
     show PRG worried
@@ -24797,17 +24816,17 @@ label MC028:
         "Honoka slammed her hand down the neck of her shirt, her hand dipping into her cleavage."
         show BE excited
         BE "Yep! It was just the map!"
-        BE "But… yeah. I did lose that…"
+        BE "But... yeah. I did lose that..."
     "Reina paused, blinking a couple of times, her eyes focused on Honoka, and down slightly."
     show BE confused
-    BE "Uhh… {w}my eyes are up here?"
+    BE "Uhh... {w}my eyes are up here?"
     ReinaM "It is of no concern."
     "The girl stood up directly on her stump, then leapt off, landing on the ground and stepping toward a large crossroads."
     ReinaM "The fairy can point the way."
     "She pointed at herself, waiting for everyone to notice, then let her hand drop."
-    ReinaM "I have been provided with a riddle to say, however… the inspiration does not strike me. Listen instead to the woodland song to be your eternal guide."
+    ReinaM "I have been provided with a riddle to say, however... the inspiration does not strike me. Listen instead to the woodland song to be your eternal guide."
     show AE neutral-annoyed
-    AE "…"
+    AE "..."
     show AE neutral
     ReinaM "You need two more coins, so you need to split up and finish the objective at the end of each path."
     ReinaM "One goes left, and one goes right. Then you follow that into the clearing."
@@ -24826,7 +24845,8 @@ label MC028:
     hide GTS_S
     hide WG
     hide PRG
-    ReinaM "Group one shall be you, then… mmm."
+    with dissolve
+    ReinaM "Group one shall be you, then... mmm."
     show FMG neutral at Position(xcenter=0.83, yalign=1.0) with dissolve
     ReinaM "Those of rotund waist. Yes, those two and you!"
     show WG angry at Position(xcenter=0.50, yalign=1.0)
@@ -24840,14 +24860,14 @@ label MC028:
     with dissolve
     pause .5
     show BE neutral at Position(xcenter=0.23, yalign=1.0)
-    show AE neutral at Position(xcenter=0.50, yalign=1.0)
+    show AE neutral at Position(xcenter=0.60, yalign=1.0)
     show GTS neutral at Position(xcenter=0.88, ycenter=0.55)
     with dissolve
     ReinaM "Then, group two is the other two girls, and you, Madame President."
     show BE confused
-    BE "Uhh… what about Kei-chan?"
+    BE "Uhh... what about Kei-chan?"
     "She pointed at me, as Reina turned."
-    ReinaM "…"
+    ReinaM "..."
     show BE neutral
     ReinaM "I shall not constrain him, for he is not of our design. He may travel where his heart chooses."
     AE "In other words, an odd number."
@@ -24900,7 +24920,7 @@ label MC028_group1:
     pause .5
     show BE neutral at Position(xcenter=0.23, yalign=1.0), Transform(xzoom=-1) behind PRG
     show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1) behind BE
+    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind BE
     show WG neutral at Position(xcenter=0.60, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind BE, PRG, FMG, WG, AE
@@ -24927,7 +24947,7 @@ label MC028_group1:
     hide GTS
     hide BE
     show PRG neutral at altMove(0.5, 0.18)
-    show FMG neutral at altMove(0.5, 0.85)
+    show FMG neutral at altMove(0.5, 0.80)
     show WG bored at altMove(0.5, 0.5)
     with dissolve
     "I stepped down the lefthand path with Akira, Aida, and Alice."
@@ -24941,38 +24961,38 @@ label MC028_group1:
     show FMG upbeat
     FMG "Yeah! Alice, Aida, Akira! All A's!"
     show PRG neutral
-    PRG "I… never noticed that."
+    PRG "I... never noticed that."
     show WG stern
-    WG "Doubtful. What an annoying girl…"
+    WG "Doubtful. What an annoying girl..."
     show FMG surprised
     FMG "Wha-!"
     show WG surprised-2
     WG "Not you!" 
     show WG stern
-    extend " That… Reina."
+    extend " That... Reina."
     show FMG neutral
-    FMG "Yeah… bet she's all high on nature."
-    show WG bored
+    FMG "Yeah... bet she's all high on nature."
+    show WG bored at altMove(0.5, 1.5)
     WG "I couldn't give a damn what she's on. She's got nothing but air between her ears."
     hide WG with dissolve
     "Alice walked off ahead of our group, leaving Aida, Akira, and I to follow."
     if routelock == "PRG":
         show FMG at Transform(xzoom=1)
-        FMG "You know… we haven't really hung out or anything before, have we?"
-        PRG "I-I… guess not. Not since the bird."
+        FMG "You know... we haven't really hung out or anything before, have we?"
+        PRG "I-I... guess not. Not since the bird."
         FMG "Oh, yeah! God, that was a long time ago!"
-        FMG "How's uh… everything going? Like, with the… babies and stuff?"
-        PRG "Uhm… good. They… they're growing."
+        FMG "How's uh... everything going? Like, with the... babies and stuff?"
+        PRG "Uhm... good. They... they're growing."
         show FMG happy
-        FMG "That's good! Yeah, they… that's good."
+        FMG "That's good! Yeah, they... that's good."
         show FMG neutral
-        FMG "Sorry, I uh…"
-        FMG "So… uh…"
+        FMG "Sorry, I uh..."
+        FMG "So... uh..."
         "Akira fell off, rubbing the back of her head."
         show FMG upbeat
-        FMG "What kind of… stretches do you do? To help you keep loose and everything?"
+        FMG "What kind of... stretches do you do? To help you keep loose and everything?"
         show PRG worried
-        PRG "Um… nothing right now."
+        PRG "Um... nothing right now."
         show PRG unsure
         PRG "I-I probably should, though. M-My mom told me that too when Keisuke and I visited."
         FMG "Oh, right! You guys were gone for a little while! Where are you from?"
@@ -24982,14 +25002,14 @@ label MC028_group1:
         FMG "Cool!"
         FMG "But, yeah! You should look into some stretches sometime! They might help keep you limber and everything."
         show PRG neutral
-        PRG "O-Okay…"
+        PRG "O-Okay..."
         "The three of us hurried up, seeing Alice stopped up ahead."
     elif routelock == "FMG":
         show FMG at Transform(xzoom=1)
         "I glanced over at Aida, who walked with a bit of a distance between her and Akira."
         "She seemed to be glancing towards Alice and back down in front of her every so often."
         show FMG happy
-        FMG "I uh… just wanted to say, since I didn't before, your costume is awesome."
+        FMG "I uh... just wanted to say, since I didn't before, your costume is awesome."
         "Aida seemed to not notice, glancing forward."
         show FMG neutral
         FMG "... Kodama-san?"
@@ -25003,21 +25023,21 @@ label MC028_group1:
         show FMG happy
         FMG "Thanks! You can talk crap on Kei-kun's, if you want. I give you permission."
         show PRG blush
-        PRG "I-I like his too…"
-        PRG "It… fits in well."
+        PRG "I-I like his too..."
+        PRG "It... fits in well."
         MC "Thanks, Kodama-san."
         show PRG neutral
         PRG "Mhm!"
         show FMG neutral
-        FMG "So… how's everything going? With like… the babies?"
-        PRG "I… actually just put in an application for an apartment, for after graduation."
+        FMG "So... how's everything going? With like... the babies?"
+        PRG "I... actually just put in an application for an apartment, for after graduation."
         show FMG surprised-2
         FMG "Seriously? Like, on the island?"
         PRG "M-Mhm. I-I'm planning to stay."
         show FMG neutral
-        PRG "My cook… mmn. O-One of my friends offered to live with me, both to have a place to stay, and to help me take care of them."
+        PRG "My cook... mmn. O-One of my friends offered to live with me, both to have a place to stay, and to help me take care of them."
         FMG "That's sweet of them. I hope everything works out with that."
-        PRG "I do too…"
+        PRG "I do too..."
         "The three of us hurried on, Alice stopping ahead."
     elif routelock == "WG":
         "I sped-walked after Alice."
@@ -25025,14 +25045,14 @@ label MC028_group1:
     else:
         "I glanced at Akira, who sort of gave me a shrug, then continued on."
     scene Woods Entrance with fade
-    "Coming up beside her, we saw… a tent. Just sitting there."
-    "Under it was… basically a household living room, complete with a small couch, a coffee table, some plush carpet, a few chairs, a TV stand with a… clearly fake TV, and so on."
-    "Three boards sat around it with text on them, while in the middle of the 'room,' someone dressed in an elegant shirt lay on his front, the shirt smeared with something red and… vaguely tomato smelling, even from a few steps back."
+    "Coming up beside her, we saw... a tent. Just sitting there."
+    "Under it was... basically a household living room, complete with a small couch, a coffee table, some plush carpet, a few chairs, a TV stand with a... clearly fake TV, and so on."
+    "Three boards sat around it with text on them, while in the middle of the 'room,' someone dressed in an elegant shirt lay on his front, the shirt smeared with something red and... vaguely tomato smelling, even from a few steps back."
     show PRG worried at Position(xcenter=0.18, yalign=1.0)
     show FMG neutral at Position(xcenter=0.85, yalign=1.0)
     show WG neutral-2 at Position(xcenter=0.50, yalign=1.0) behind FMG
     with dissolve
-    PRG "I-Is… he okay?"
+    PRG "I-Is... he okay?"
     "I stepped closer, leaning over him."
     show PRG at altMove(0.5, 0.30)
     show WG at altMove(0.5, 0.6) behind FMG
@@ -25056,11 +25076,11 @@ label MC028_group1:
     Kokutan "You had best ignore checking the corpse, as you are gathered here to solve that which killed him. In this MURDER MYSTERY!"
     play music RMInvestigate
     show WG coy
-    WG "A murder… mystery?"
+    WG "A murder... mystery?"
     show PRG surprised
     PRG "O-Oh-"
     show FMG upbeat
-    FMG "Ohhh yeah. Fuckin' sweet…"
+    FMG "Ohhh yeah. Fuckin' sweet..."
     if isEventCleared("RM005"):
         MCT "... Daichi missed out on this one."
         MCT "Eh, I'll rub it in later."
@@ -25073,11 +25093,11 @@ label MC028_group1:
     Kokutan "I am the Malevolent Overseer. And I shall be your guide."
     Kokutan "As you peruse amongst the deceased's belongings and baubles, take care to not disturb, lest your touch taint their last contacts!"
     Kokutan "Do, as well, take the utmost care with the deceased himself, as he is liable to-"
-    "Dead Guy" "Nnnhh… Kokutan."
+    "Dead Guy" "Nnnhh... Kokutan."
     "Dead Guy" "How long is this gonna be? My leg's cramping up."
     Kokutan "{i}The dead will never speak{/i}, as their voices {i}cannot reach{/i} our corporeal ears!"
     Kokutan "For the only one who may speak is I, the MALEVOLENT OVERSEER!"
-    "Dead Guy" "Mmmhhhh…"
+    "Dead Guy" "Mmmhhhh..."
     FMG "... And us, right?"
     Kokutan "A question?!"
     FMG "... We can speak, right?"
@@ -25085,9 +25105,9 @@ label MC028_group1:
     Kokutan "Now you are gathered here to solve the mystery of the guest who was murdered in this Taigh Mor!"
     FMG "... The what?"
     show PRG worried
-    "Dead Guy" "She means the mansion. The body in the mans-."
+    "Dead Guy" "She means the mansion. The body in the mans-..."
     Kokutan "Taigh Mor! You are all gathered here to solve the mystery of the guest who was murdered in this Taigh Mor!"
-    Kokutan "Please ignore the… suspects who are clearly not here, as they would not keep quiet about feeling hungry or having complaints on their roles."
+    Kokutan "Please ignore the... suspects who are clearly not here, as they would not keep quiet about feeling hungry or having complaints on their roles."
     "Dead Guy" "And if you didn't have the boards, you'd be screwed."
     Kokutan "The corpse shall SHUSH!"
     Kokutan "Each of these suspects, in the form of boards, contain information about the suspects and their testimonies."
@@ -25101,29 +25121,29 @@ label MC028_group1:
     hide WG
     hide Kokutan
     with dissolve
-    "The four of us glanced at the tent. And at… nothing."
+    "The four of us glanced at the tent. And at... nothing."
     show PRG neutral at Position(xcenter=0.18, yalign=1.0)
     show FMG neutral at Position(xcenter=0.85, yalign=1.0)
     show WG neutral-2 at Position(xcenter=0.50, yalign=1.0) behind FMG
     with dissolve
     pause .5
     FMG "The hell kind of-"
-    "Kokutan was gone… with a ring of salt around where she had been."
-    MC "What…"
+    "Kokutan was gone... with a ring of salt around where she had been."
+    MC "What..."
     hide PRG
     hide FMG
     hide WG
     with dissolve
     pause .5
     show Kokutan neutral with dissolve
-    "A branch suddenly cracked behind us, as all four of us turned… to see Kokutan."
+    "A branch suddenly cracked behind us, as all four of us turned... to see Kokutan."
     hide Kokutan with dissolve
     pause .5
     show PRG scared at Position(xcenter=0.18, yalign=1.0)
     show FMG surprised-2 at Position(xcenter=0.85, yalign=1.0)
     show WG stern at Position(xcenter=0.50, yalign=1.0) behind FMG
     with dissolve
-    FMG "Did she just… {w}yep, she fell."
+    FMG "Did she just... {w}yep, she fell."
     hide PRG
     hide FMG
     hide WG
@@ -25142,12 +25162,12 @@ label MC028_group1:
     show WG haughty at Position(xcenter=0.50, yalign=1.0) behind FMG
     WG "Don't worry about her, she'll be fine. Believe it or not, she's acting far less strange than usual- if you can believe that."
     show WG neutral-2
-    MC "I uh… wasn't worried."
+    MC "I uh... wasn't worried."
     if isEventCleared("RM005"):
-        MC "I guess… let's start with the body?"
+        MC "I guess... let's start with the body?"
         FMG "Yeah. That's probably the easiest place first."
         "We crowded around the body in the middle, each of us taking a side."
-        "Near him was a knife… clearly made of plastic, with one of those toy blades that had the liquid fake blood in it that moved based on how you turned it."
+        "Near him was a knife... clearly made of plastic, with one of those toy blades that had the liquid fake blood in it that moved based on how you turned it."
         MC "Well, based on the victim's wound, this was probably the weapon."
         FMG "You think?"
         MC "Hey, you know, I'm something of an investigator myself."
@@ -25157,7 +25177,7 @@ label MC028_group1:
         if routelock == "PRG":
             show PRG worried
             PRG "... Do they involve your roommate?"
-            MC "Ehh… hehe…"
+            MC "Ehh... hehe..."
     show WG neutral-2
     "The four of us moved to the boards, all crowding around the first one."
     WG "The words of a chef."
@@ -25172,16 +25192,16 @@ label MC028_group1:
     "We moved to the next board, glancing down."
     FMG "You read this one, Kodama-san."
     show PRG unique
-    PRG "O-Okay, umm…"
+    PRG "O-Okay, umm..."
     show PRG worried
     PRG "'The words of a butler.'"
     PRG "'I-I greeted the guest this evening, and pointed them to the living room. I was busy checking that everything was in order for this evening.'"
     PRG "'I spoke briefly with the chef about the wine selection, and passed the maid once on the stairs. I did not pay attention to the knives in the kitchen.'"
     PRG "'At the time of the murder, I was alone in my office.'"
     show PRG neutral
-    FMG "Okay… third one."
+    FMG "Okay... third one."
     "We moved on, and looked down."
-    FMG "Alright…"
+    FMG "Alright..."
     FMG "'The words of a maid.'"
     show FMG happy
     FMG "'I was busy cleaning the-'"
@@ -25192,11 +25212,11 @@ label MC028_group1:
     show WG neutral-2
     FMG "'I was busy cleaning the bedrooms at the time of the murder. I went into the kitchen twice to pick up the trays and can indeed confirm that the chef was there.'"
     FMG "'I did, in fact, notice the missing knife between my visits, and hadn't seen the butler all evening.'"
-    MC "Alright… well, that's simple enough."
+    MC "Alright... well, that's simple enough."
     WG "What do we know?"
-    PRG "Well… the chef was in the kitchen all day, a-and the two others saw him as they passed through, so it can't be him."
+    PRG "Well... the chef was in the kitchen all day, a-and the two others saw him as they passed through, so it can't be him."
     FMG "It's the butler. Has to be."
-    "Dead Guy" "Guys, please… can you go a little faster?"
+    "Dead Guy" "Guys, please... can you go a little faster?"
     MC "Mr. MacLaod is chatty for a dead guy."
     "Dead Guy" "Dude, fuck off."
     MC "And rude."
@@ -25204,19 +25224,19 @@ label MC028_group1:
     FMG "HAHA!"
     show WG stern
     show PRG flattered
-    "Alice covered her face as Aida… snorted, suddenly going red and covering her mouth."
+    "Alice covered her face as Aida... snorted, suddenly going red and covering her mouth."
     "I glanced at her, grinning."
     if routelock == "PRG":
         show PRG unique
-        PRG "D-Don't look at me…"
+        PRG "D-Don't look at me..."
     else:
         show PRG unique
-        PRG "Um… m-moving on."
+        PRG "Um... m-moving on."
     show PRG neutral
     show FMG neutral
     show WG neutral-2
-    WG "The butler was in his office alone, as he says. And… no one can back that up aside from him."
-    PRG "A-And the maid never saw the butler all night…"
+    WG "The butler was in his office alone, as he says. And... no one can back that up aside from him."
+    PRG "A-And the maid never saw the butler all night..."
     WG "Who do you think, Hotsure-san?"
     menu:
         "Chef":
@@ -25229,7 +25249,7 @@ label MC028_group1:
             WG "The maid claimed she didn't see the butler, and she noticed a missing knife between her two visits, while the butler attempted to downplay the knife, and claimed to have seen the maid on the stairs."
         "Butler":
             FMG "Damn right. It's always the butler."
-            PRG "Well… it can't be the chef. He was in the kitchen all day."
+            PRG "Well... it can't be the chef. He was in the kitchen all day."
             PRG "And, the butler and maid corroborated him."
             show WG neutral
             WG "Agreed. The maid claimed she did not see the butler, and noticed a missing knife between her two visits, while the butler downplayed the knife and claimed to have seen the maid once on the stairs."
@@ -25243,24 +25263,24 @@ label MC028_group1:
             show WG neutral
     MC "Butler it is, then."
     if getFlag("Meet_Kokutan"):
-        MC "Uhh… Kokutan!"
+        MC "Uhh... Kokutan!"
     else:
-        MC "Uhh… what was her name again?"
+        MC "Uhh... what was her name again?"
         "Dead Guy" "Kokutan."
-        MC "Thank you uh… body."
+        MC "Thank you uh... body."
         MC "Kokutan!"
     MC "We're ready!"
     pause 1
     MC "Kokutan?"
-    show FMG at altMove(0.5, 0.30)
-    show WG at altMove(0.5, 0.6) behind FMG
     Kokutan "There is no Kokutan here. Only the Malevolent Overseer."
-    MC "Urgh…"
+    MC "Urgh..."
     MC "Malevolent Overseer?"
     Kokutan "Yes?"
-    MC "I just… ugh."
+    MC "I just... ugh."
     MC "We're ready to answer."
     "Steps came from out of the forest, running up."
+    show FMG at altMove(0.5, 0.30)
+    show WG at altMove(0.5, 0.6) behind FMG
     show Kokutan neutral at Position(xcenter=0.1, yalign=1.0), Transform(xzoom=-1) with dissolve
     Kokutan "What is it? Who did it?"
     MC "The butler did it."
@@ -25282,7 +25302,7 @@ label MC028_group1:
     pause 1
     MC "... {w}That is the biggest load of-"
     "Dead Guy" "Yeah, I'm done."
-    "The… body rose from the middle of the tent."
+    "The... body rose from the middle of the tent."
     "Dead Guy" "It's the butler."
     Kokutan "The dead cannot overrule the words of the Malevolent Overseer, as her words are absolute!"
     "Dead Guy" "The others left because of this Samhain crap. I only stayed because she offered to alter my girlfriend's favorite blouse to fit her new size."
@@ -25291,7 +25311,7 @@ label MC028_group1:
     "Alice turned and glanced at Kokutan, cocking her head."
     Kokutan "The deal was made before I started working for a blonde haired maiden."
     show WG coy
-    WG "Hnnnn…"
+    WG "Hnnnn..."
     show WG neutral-2
     MC "There's no hint at anything supernatural here. On none of the signs, or in the evidence under the tent."
     if getFlag("MC023_Yes"):
@@ -25314,18 +25334,20 @@ label MC028_group1:
     "Dead Guy" "I want to go to the party."
     pause 1
     Kokutan "... Alright, fine."
-    Kokutan "I wanted to use the clearing as a setting for this to incorporate elements of Sidhe, but the administration had to spoil it…"
+    Kokutan "I wanted to use the clearing as a setting for this to incorporate elements of Sidhe, but the administration had to spoil it..."
     Kokutan "They wanted a 'classic mystery,' which is so boring!"
     "Kokutan sighed heavily, and pulled a coin from her dress, holding it out."
     Kokutan "Here."
-    Kokutan "Congratulations… I guess."
+    Kokutan "Congratulations... I guess."
     show PRG neutral
     "She bowed slowly, and pointed down a path near the back of the tent."
     Kokutan "That way back to the park."
     MC "Alright, thank you."
     "The four of us headed around the tent, going for the path."
-    Kokutan "At least the Haunted Trail stuck…"
-    MCT "... Hope she didn't mean the spiderweb. For Mizutani-san's sake."      
+    Kokutan "At least the Haunted Trail stuck..."
+    MCT "... Hope she didn't mean the spiderweb. For Mizutani-san's sake."
+    scene black with fade
+    pause 1
     jump MC028_merge        
 
 label MC028_group2:
@@ -25370,7 +25392,6 @@ label MC028_group2:
     show BE neutral at altMove(0.5, 0.18)
     show AE neutral at altMove(0.5, 0.5)
     show GTS_S neutral at altMove(0.5, 0.8)
-    with dissolve
     pause .5
     "The four of us headed down the right-hand path, moving along it quickly."
     "Coming into a clearing, we paused."
@@ -25384,22 +25405,22 @@ label MC028_group2:
     pause .5
     "The area was filled with flowers, and fireflies flitting above them, illuminating the grass and foliage."
     show GTS_S surprised
-    GTS_S "Oh, my…"
-    "I glanced back at Honoka, who had been walking near the rear of the group… and at the front of her robes."
+    GTS_S "Oh, my..."
+    "I glanced back at Honoka, who had been walking near the rear of the group... and at the front of her robes."
     MCT "Least they've calmed down."
     show AE happy
     AE "This is lovely."
     show GTS_S neutral
-    GTS_S "Ah, there's a student… or someone, near the center."
+    GTS_S "Ah, there's a student... or someone, near the center."
     show AE neutral
     AE "That way, then."
     "We took off through the field, making our way up a slight hill to the top."
     MC "Where are they, Yamazaki-san?"
     show GTS_S surprised
-    GTS_S "They were… right here. Just at this spot."
+    GTS_S "They were... right here. Just at this spot."
     MC "Huh?"
     show GTS_S pondering
-    "I turned to look behind us… and saw someone standing right beside me."
+    "I turned to look behind us... and saw someone standing right beside me."
     show dummy with vpunch
     show BE surprised
     MC "AHH!"
@@ -25414,7 +25435,7 @@ label MC028_group2:
     BE "I wasn't that scared!"
     "I cocked my head, giving her a 'really' look, which was likely lost behind the mask."
     show BE unamused
-    BE "... Okay, okay… maybe I was."
+    BE "... Okay, okay... maybe I was."
     show AE neutral
     AE "Good day."
     if routelock == "AE":
@@ -25433,7 +25454,7 @@ label MC028_group2:
         show GTS_S unique
         GTS_S "Hello."
         show BE happy
-        BE "Uh… hey."
+        BE "Uh... hey."
         MC "Hey."
     if not getFlag("Meet_Itachi"):
         $setFlag("Meet_Itachi")
@@ -25463,14 +25484,14 @@ label MC028_group2:
     show BE confused
     BE "This one is more complex than the one from the trail."
     show GTS pondering at Position(ycenter=0.35)
-    GTS "Hm. Let me think…"
+    GTS "Hm. Let me think..."
     GTS "'The space where trees step back.' So, a clearing. As in here."
     show BE neutral
     BE "Can I see, Kei-chan?"
     "Honoka stepped forward, and leaned over to read, jamming her boobs right into my arm and side."
     if routelock == "BE":
         "My mind seemed to blank out like an unplugged computer monitor."
-        "The feeling of her… tits just jammed into me. It had always been one of my favorite things."
+        "The feeling of her... tits just jammed into me. It had always been one of my favorite things."
         "And, she even did that back when we first got to the island."
         "I blinked, glancing back at the map, and one of Honoka's boobs covering the bottom."
     else:
@@ -25478,7 +25499,7 @@ label MC028_group2:
         show BE smug
         BE "Zip it or leave it, fluff-butt."
     show BE neutral
-    BE "Okay, we need to find the stone that looks like a shell. Is that literally? Or like…"
+    BE "Okay, we need to find the stone that looks like a shell. Is that literally? Or like..."
     AE "It's designed in a way that it should be straightforward to understand, so likely yes."
     BE "Hm. There's a rock on the edge over there that kinda looks like a shell."
     show AE neutral-eyebrow
@@ -25501,18 +25522,18 @@ label MC028_group2:
         MCT "I know I've heard a name like that before."
     AE "This is simple. It's a Halloween carved pumpkin. They call them Jack-o'-lanterns in the west."
     if isEventCleared("MC027"):
-        MCT "That was it… but there aren't any pumpkins here."
+        MCT "That was it... but there aren't any pumpkins here."
     else:
         MC "There aren't any pumpkins here, though."
     show GTS neutral-2 at Position(ycenter=0.35)
-    GTS "Hidden among the leaves… perhaps a nearby shrub or bush?"
+    GTS "Hidden among the leaves... perhaps a nearby shrub or bush?"
     "Shiori, Honoka, and I spread out, as I headed near a large tree beside the rock, going around it to a large bush and spread some leaves open."
     MC "Here! Found it!"
     "I reached in, heaved the pumpkin out from the brush, and brought it back near the rock, setting it down carefully."
-    MC "Alright… {w}what now?"
+    MC "Alright... {w}what now?"
     show BE neutral
     BE "... Maybe it's inside?"
-    "I felt around for a hole, or a slice, or… anything really."
+    "I felt around for a hole, or a slice, or... anything really."
     MC "Well, somehow, I don't feel that asking Yamazaki-san to drop it would be the answer this time."
     show BE happy
     BE "We should, though! It would be so satisfying!"
@@ -25521,7 +25542,7 @@ label MC028_group2:
     GTS "Oh, no. I wouldn't wish to waste a perfectly good pumpkin."
     "She reached down, and patted it gently, as if comforting the poor, likely now terrified pumpkin."
     show GTS neutral-2 at Position(ycenter=0.35)
-    AE "Besides, it couldn't be so simple as being an object inside the pumpkin…"
+    AE "Besides, it couldn't be so simple as being an object inside the pumpkin..."
     menu:
         "The pumpkin is the hidden object":
             AE "It can't be. It doesn't make sense. The riddle mentions 'the one who deceives.'"
@@ -25530,7 +25551,7 @@ label MC028_group2:
             MC "We should check the hiding spot again."
             show BE happy
             BE "I got it!"
-            "Honoka ran… almost whacking herself in the face with her bouncing chest, and leaned down into the bush."
+            "Honoka ran... almost whacking herself in the face with her bouncing chest, and leaned down into the bush."
             show BE sad
             BE "Nada."
             "She came over again as I pulled out the paper again."
@@ -25549,7 +25570,7 @@ label MC028_group2:
     AE "'Only one of you can reach the key.'"
     show AE pondering
     AE "What might that be?"
-    MC "Reach… for the pumpkin? We already have it."
+    MC "Reach... for the pumpkin? We already have it."
     "Honoka sighed, putting her hands behind her head and glanced down."
     "Suddenly, she wound up, and pelted a small rock, sending it off into the woods."
     show BE happy
@@ -25569,7 +25590,7 @@ label MC028_group2:
     AE "Our groups were planned in advance, so they could make sure only one of us could reach the key. Physically reach it."
     MC "So it's up high?"
     AE "Yamazaki-san? Could you have a look in the trees? Specifically, the one near the bush the pumpkin was in?"
-    GTS "If… you'd like me to."
+    GTS "If... you'd like me to."
     hide AE
     hide BE
     hide GTS
@@ -25578,7 +25599,7 @@ label MC028_group2:
     show GTS_S neutral with dissolve
     "Naomi stepped so her head was basically in the tree branches and worked her hands around, pushing leaves about."
     GTS_S "Hmn."
-    GTS_S "There is something here. Similar to a… glowing bag?"
+    GTS_S "There is something here. Similar to a... glowing bag?"
     show GTS_S surprised
     GTS_S "I can't get at it, however. My hand is much too large."
     AE "Can you shift the branch so it falls? Gently?"
@@ -25608,14 +25629,14 @@ label MC028_group2:
     show BE neutral
     BE "Ohh!"
     show BE happy
-    BE "Uhh… I'm glad I brought something to the team."
+    BE "Uhh... I'm glad I brought something to the team."
     BE "Besides the obvious."
     show BE unique
     "She grinned, and reached down, pressing her boobs together."
     show AE neutral-eyebrow
     show BE guilty
     "Shiori raised an eyebrow, as Honoka dropped her arms and glanced away."
-    MC "Eheh… anyway. Let's check the bag."
+    MC "Eheh... anyway. Let's check the bag."
     show AE neutral
     show BE neutral
     hide GTS_S with dissolve
@@ -25624,7 +25645,7 @@ label MC028_group2:
     "The end was shaped like a ghost, the rest of the key a standard shape."
     MC "Got it."
     "I turned to show it to Itachi."
-    MC "Uhh… where is he?"
+    MC "Uhh... where is he?"
     AE "He's always around. Right, Itachi-san?"
     Itachi "Of course."
     show dummy with vpunch
@@ -25638,10 +25659,12 @@ label MC028_group2:
     "He held a coin out, which I took quickly."
     Itachi "You'll find the path out that way."
     "I took the coin, and leaving the pumpkin and key behind, headed off ahead of the girls toward the path."
+    scene black with fade
+    pause 1
     jump MC028_merge
     
 label MC028_merge:    
-    scene Chukan Point
+    scene Chukan Point with fade
     play music FullMoon
     "We came back to the park, glancing around for the other group."
     if getFlag("MC028_JoinedGroup1"):
@@ -25661,14 +25684,14 @@ label MC028_merge:
         show PRG neutral
         PRG "Alice and I watched 'Horn' a few weeks ago. The story where a man is brainwashed into thinking he's a unicorn by his crazy ex-girlfriend, then she stuffs him into a fake horse body and grafts a horn onto his head!"
         show WG doubt
-        WG "Truly… disturbing. If not a bit over the top."
+        WG "Truly... disturbing. If not a bit over the top."
         FMG "Which is what good horror should be! That's why 10,000 Cadaviers is so good!"
         show PRG insecure
         PRG "B-But it has no story!"
         show WG neutral
     if getFlag("MC028_JoinedGroup2"):
         show BE neutral at Position(xcenter=0.23, yalign=1.0), Transform(xzoom=-1)
-        show AE neutral at Position(xcenter=0.75, yalign=1.0)
+        show AE neutral
         show GTS_S neutral at Position(xcenter=0.85, yalign=1.0) behind AE
         with dissolve
         pause .5
@@ -25679,13 +25702,13 @@ label MC028_merge:
     "As the girls chatted together, I stepped forward, squinting a little through the mask."
     if isEventCleared("MC021"):
         "Genji stood nearby, clearly tuned in to a nearby conversation."
-        "A girl and guy stood nearby, the girl quiet and not seeming to be replying, while the guy almost seemed to be… laughing?"
-        MCT "Oh, shit… Sakie Iwata and Sota Karaku."
+        "A girl and guy stood nearby, the girl quiet and not seeming to be replying, while the guy almost seemed to be... laughing?"
+        MCT "Oh, shit... Sakie Iwata and Sota Karaku."
         "I took a step closer, their conversation coming a bit clearer."
         Sota "-walk like that? Like, can you even run anymore?"
         Sota "I bet half the school can hear you heading down the hall with those kayaks strapped to your legs!"
         "As I watched, I saw Genji whip his head over, the beard flipping around his neck."
-        Sota "'Oh no! Here comes the lamest superhero ever! Waterski Woman!"
+        Sota "Oh no! Here comes the lamest superhero ever! Waterski Woman!"
         "Genji broke off from where he'd been standing, and walked stiffly toward the two, pressing between the two and throwing his shoulders back, eye to eye with Sota."
         Genji "I don't know what your problem is, but in case you haven't noticed, no one here signed up for this place hoping to get in. It was forced on us because something's happening to our bodies that {i}we can't change{/i}."
         Genji "And we all came to this party dressed up as someone else, so that maybe, {i}just maybe{/i}, we could think about something else besides how we don't even recognise the person in the mirror from six months ago for just a couple of hours. "
@@ -25696,14 +25719,14 @@ label MC028_merge:
         "Genji nodded as Sakie walked away, leaving Genji alone."
     else:
         "Nakayama-san stood nearby, clearly tuned in to a nearby conversation."
-        "A girl and guy stood nearby, the girl quiet and not seeming to be replying, while the guy almost seemed to be… laughing?"
-        MCT "Oh shit… they're from my elective. Sakie Iwata and Sota Karaku…"
-        "The girl, Sakie, had… very large feet while Sota across from her was quite heavy, a sizable gut sticking out in front of him."
+        "A girl and guy stood nearby, the girl quiet and not seeming to be replying, while the guy almost seemed to be... laughing?"
+        MCT "Oh shit... they're from my elective. Sakie Iwata and Sota Karaku..."
+        "The girl, Sakie, had... very large feet while Sota across from her was quite heavy, a sizable gut sticking out in front of him."
         "I took a step closer, their conversation coming a bit clearer."
         Sota "-walk like that? Like, can you even run anymore?"
         Sota "I bet half the school can hear you heading down the hall with those kayaks strapped to your legs!"
         "As I watched, I saw Genji whip his head over, the beard flipping around his neck."
-        Sota "'Oh no! Here comes the lamest superhero ever! Waterski Woman!"
+        Sota "Oh no! Here comes the lamest superhero ever! Waterski Woman!"
         "Genji broke off from where he'd been standing, and walked stiffly toward the two, pressing between the two and throwing his shoulders back, eye to eye with Sota."
         Genji "I don't know what your problem is, but in case you haven't noticed, no one here signed up for this place hoping to get in. It was forced on us because something's happening to our bodies that {i}we can't change{/i}."
         Genji "And we all came to this party dressed up as someone else, so that maybe, {i}just maybe{/i}, we could think about something else besides how we don't even recognise the person in the mirror from six months ago for just a couple of hours. "
@@ -25716,17 +25739,17 @@ label MC028_merge:
     "As Genji turned and walked off into the tent himself, I glanced a bit away, noticing a girl dressed in green head to toe, watching this exchange happen."
     "She seemed to be a leprechaun, and her chest was sizable, at least by the island's standards."
     "People were buzzing around her, so trying to make anything else out was not happening."
-    if getFlag("JoinedGroup1"):
+    if getFlag("MC028_JoinedGroup1"):
         "I turned back, seeing the three behind me."
         "They weren't talking movies anymore. They had seen everything."
         show FMG surprised-2
-        FMG "Damn… that was intense."
+        FMG "Damn... that was intense."
         show PRG worried
         show WG sad
         "I looked from Alice to Aida, neither of the two speaking."
         "Behind them, I saw Naomi's head appear from the trees, Shiori and Honoka at her feet following along."
         MC "There's the others."
-    if getFlag("JoinedGroup2"):
+    if getFlag("MC028_JoinedGroup2"):
         show BE neutral
         BE "... That guy is right."
         "Honoka walked forward a little, then turned back."
@@ -25761,7 +25784,7 @@ label MC028_merge:
         show FMG neutral
         show WG neutral-2
         hide Chibuki with dissolve
-        "Chibuki turned, and headed off toward the tent… toward where Genji had gone."
+        "Chibuki turned, and headed off toward the tent... toward where Genji had gone."
     elif isEventCleared("MC015") or isEventCleared("MC026"):
         show BE neutral at Position(xcenter=0.23, yalign=1.0), Transform(xzoom=-1) behind PRG
         show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1)
@@ -25779,7 +25802,7 @@ label MC028_merge:
         Chibuki "Honestly, I'm shocked myself."
         show WG happy
         WG "Well, I'm glad for you regardless."
-        Chibuki "Eh… cheers."
+        Chibuki "Eh... cheers."
         "Chibuki rubbed the back of her neck, looking away."
         show FMG happy
         FMG "Yo, roommate!"
@@ -25799,11 +25822,12 @@ label MC028_merge:
         show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind BE, PRG, FMG, WG, AE
         show Chibuki neutral at Position(xcenter=0.82, yalign=1.0)
         show WG surprised-2
+        with dissolve
         WG "Surprised to see you here."
         Chibuki "Honestly, I'm surprised myself."
         show WG happy
         WG "Well, I'm glad for you regardless."
-        Chibuki "Eh… cheers."
+        Chibuki "Eh... cheers."
         "Chibuki rubbed the back of her neck, looking away."
         show FMG happy
         FMG "Yo, roommate!"
@@ -25815,7 +25839,7 @@ label MC028_merge:
         hide Chibuki with dissolve
         "She turned, heading off into the tent, toward where Genji had gone."
     show AE sad   
-    AE "... It's not… a nun costume."
+    AE "... It's not... a nun costume."
     if getFlag("MC028_JoinedGroup1"):
         show BE happy
         BE "What did you guys have?"
@@ -25834,7 +25858,7 @@ label MC028_merge:
         WG "Surprisingly entertaining, I must say."
         PRG "I liked it."
         show FMG happy
-        FMG "Fucking loved it. Even though our host was… kind of on her own track."
+        FMG "Fucking loved it. Even though our host was... kind of on her own track."
         MC "What about you guys?"
         show BE smug
         BE "Heh, 'Sky high!'"
@@ -25854,7 +25878,7 @@ label MC028_merge:
         BE "Sky high!"
         FMG "Huh??"
         MC "Scavenger hunt with a twist."
-        PRG "That sounds interesting. And… it involved the sky?"
+        PRG "That sounds interesting. And... it involved the sky?"
         show GTS happy at Position(ycenter=0.55)
         GTS "In a way."
         BE "What about you guys?"
@@ -25880,7 +25904,7 @@ label MC028_merge:
     "One of them seemed to be talking about red light green light, which somehow involved a pumpkin that hummed."
     Student1 "That slowpoke Karaku dragged forever! But, Okamoto-san got first, at least."
     show FMG disappointed
-    FMG "Ugh…"
+    FMG "Ugh..."
     hide BE
     hide PRG
     hide FMG
@@ -25893,8 +25917,8 @@ label MC028_merge:
     show Yuki happy at Position(xcenter=0.65, yalign=1.0)
     show RM neutral-2 at Position(xcenter=0.92, yalign=1.0)
     show Okisho happy at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind Tomoko, Yuki, RM
-    show Jineko happy at Position(xcenter=0.35, yalign=1.0) behind Okisho, Tomoko
-    show Tako unique at Position(xcenter=0.80, yalign=1.0) behind Yuki, RM
+    show Jineko happy at Position(xcenter=0.80, yalign=1.0) behind Yuki, RM
+    show Tako unique at Position(xcenter=0.30, yalign=1.0), Transform(xzoom=-1) behind Okisho, Tomoko
     with dissolve
     "Okisho was waving, as beside her, Tako was chanting something and waving her bat around like an out of control balloon."
     "Yuki was scribbling furiously on her notepad which she showed to Tomo, who was smiling, beside a cheerful looking Fumika."
@@ -25902,7 +25926,7 @@ label MC028_merge:
     MCT "... He looks fucking bushed."
     if getFlag("MC028_JoinedGroup1"):
         MCT "I could rub the murder mystery in."
-        MCT "Nah… later."
+        MCT "Nah... later."
     hide Okisho
     hide Tako
     hide Yuki
@@ -25980,11 +26004,11 @@ label MC028_merge:
     show WG neutral
     WG "Carry on."
     hide AE
-    show BE neutral at Position(xcenter=0.23, yalign=1.0) behind PRG
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     "Shiori went off with Tako, as Honoka burst through the crowd."
     show BE confused
-    BE "Got the medals! They- oh… where's Matsumoto-san going?"
+    BE "Got the medals! They- oh... where's Matsumoto-san going?"
     MC "I dunno. Left for bit. She'll probably be back."
     "Honoka held up medals, and handed one to each of us."
     "I held mine up, turning it."
@@ -25993,12 +26017,12 @@ label MC028_merge:
     FMG "I'll say."
     MC "Eh, at least the games were fun. And we got a memento for it."
     show WG neutral-2
-    WG "Well… I must say, fun as it was, all of that excitement has me peckish."
+    WG "Well... I must say, fun as it was, all of that excitement has me peckish."
     show WG stern
-    "She craned her neck, seeing through a space in the crowd that… the entire food table was empty."
+    "She craned her neck, seeing through a space in the crowd that... the entire food table was empty."
     "Student1" "Ah, damnit! Figures. I knew the fat students were going to demolish the dessert tray before I got back from the \"Fright Night Frenzy\"."
     "Student2" "I bet it was that fat blonde one. She's friggin' {i}massive{/i}. I wouldn't be surprised if she horfed down the whole thing by herself."
-    "Turning around, both of the complaining students had the color drain from their face… as if they saw a ghost, once they realized Alice was right behind them."
+    "Turning around, both of the complaining students had the color drain from their face... as if they saw a ghost, once they realized Alice was right behind them."
     "Student1" "Uh, I guess I'll just settle for some Halloween candy."
     "Student2" "Yeah, let's go."
     show WG angry
@@ -26011,7 +26035,7 @@ label MC028_merge:
     hide PRG
     hide BE
     with dissolve
-    "I went over to the table, reaching my hand out… just as another hand went for it."
+    "I went over to the table, reaching my hand out... just as another hand went for it."
     show Tomoko neutral with dissolve
     MC "... Fuck no."
     MC "I was here first."
@@ -26023,7 +26047,7 @@ label MC028_merge:
     "I smirked, glancing at Tomo."
     "We each made a fist."
     MC "First is rock."
-    MC "Janken…"
+    MC "Janken..."
     MC "PON!"
     scene black with fade   
     if routelock == "AE" or routelock == "BE" or routelock == "FMG" or routelock == "GTS" or routelock == "PRG" or routelock == "WG" or routelock == "WGB" or routelock == "GTS2":
@@ -26036,7 +26060,7 @@ label MC028_finale:
     play music Stardust
     $setAEOutfit(OutfitEnum.COSTUME)
     "Still in the tent, and takoyaki gone, Naomi had returned and was pointing out a few different locations around the park."
-    "From around us… a soft sound rose."
+    "From around us... a soft sound rose."
     "Then rose higher, speakers pounding with an upbeat pop track."
     show Takamura happy with dissolve
     Takamura "Congratulations to all of our winners! And, to cap off our evening, everyone enjoy themselves!"
@@ -26050,7 +26074,7 @@ label MC028_finale:
     show GTS neutral at Position(xcenter=0.90, ycenter=0.55) behind BE, PRG, FMG, WG, AE
     with dissolve
     show BE happy
-    BE "Ohh… hell yeah. Time to get my dancing shoes on."
+    BE "Ohh... hell yeah. Time to get my dancing shoes on."
     show FMG happy
     FMG "Pff, like you can dance."
     show BE smug
@@ -26077,8 +26101,8 @@ label MC028_finale:
     pause .5
     hide HR with dissolve
     if isEventCleared("MC002") or isEventCleared("MC013"):
-        MCT "What… I thought they got along? What the-"
-        MCT "I… guess that might just be in front of students?"
+        MCT "What... I thought they got along? What the-"
+        MCT "I... guess that might just be in front of students?"
     "I thought for a moment, then looked back out at the dance floor."
     if routelock == "BE":
         show BE neutral with dissolve
@@ -26111,16 +26135,16 @@ label MC028_finale:
         "Honoka grinned, and pulled me closer toward her, her massive tits bunching up in between the two of us, squishing tight and pressing against the insides of my arms."
         show BE happy
         BE "There~"
-        "We broke into a quicker… and likely awkward looking dance, her eyes locked on mine as we did a little spin, then I reached my hand overhead and twirled her, spinning her around into me."
+        "We broke into a quicker... and likely awkward looking dance, her eyes locked on mine as we did a little spin, then I reached my hand overhead and twirled her, spinning her around into me."
         BE "I think that's a ballroom move."
         MC "Doesn't matter. It's for show."
         "As the song changed to a slower tune, Honoka pulled in toward me, the lights dimming as she laid her head onto my shoulder, closing her eyes."
         BE "... This was such a great night."
-        MC "The best…"
+        MC "The best..."
         "I leaned down, put my lips to her forehead, and held them there for a second."
         "Honoka raised her hand up, brushing the bottom of my jaw."
         show BE seductive
-        BE "Now I'm gonna turn into a lady werewolf…"
+        BE "Now I'm gonna turn into a lady werewolf..."
         show BE smug
         BE "And we're gonna have to go running through the forest, looking for fresh meat together."
         MC "Hey, as long as I'm running with you, I don't care what I look like."
@@ -26131,13 +26155,13 @@ label MC028_finale:
         show FMG neutral at Position(xcenter=0.23, yalign=1.0) behind BE with dissolve 
         show WG neutral-2 at Position(xcenter=0.78, yalign=1.0) behind BE with dissolve 
         FMG "Two can do this crap!"
-        "Akira was stomping toward us… with Alice behind her."
+        "Akira was stomping toward us... with Alice behind her."
         show BE confused
         BE "What are you doing?"
         show BE happy
         "Honoka laughed her way through her words as the song changed back to a more upbeat, quicker tune."
         hide BE with dissolve
-        "Akira began doing a sort of… jerky, quick-paced dance, as Alice put her hands on her hips beside her, then began doing a few elegant, surprisingly fluid moves."
+        "Akira began doing a sort of... jerky, quick-paced dance, as Alice put her hands on her hips beside her, then began doing a few elegant, surprisingly fluid moves."
         show BE surprised-2 with dissolve
         BE "Oh, wow!"
         show FMG happy
@@ -26188,7 +26212,7 @@ label MC028_finale:
         MC "What's on your mind?"
         FMG "Just that you and I haven't danced since that disco club."
         FMG "Time to make up for last time!"
-        "Taking my hand, Akira… literally dragged me out onto the floor."
+        "Taking my hand, Akira... literally dragged me out onto the floor."
         MC "Hey! HEY!"
         show FMG happy
         FMG "Oh, shut it!"
@@ -26201,21 +26225,22 @@ label MC028_finale:
         FMG "I don't see you leavin'."
         MC "... Alright, screw it."
         show FMG happy
-        pause .5
+        pause
         hide FMG
         show BE happy at Position(xcenter=0.38, yalign=1.0)
         show GTS_S neutral at Position(xcenter=0.68, yalign=1.0)
-        "I broke into something that was… clearly not the best, as around us, Honoka made her way out, dancing at a quicker pace… with Naomi behind her."
+        with dissolve
+        "I broke into something that was... clearly not the best, as around us, Honoka made her way out, dancing at a quicker pace... with Naomi behind her."
         GTS_S "Inoue-san, I'm not certain I can keep up with this pace."
         BE "You'll be fine, girl! It's a dance! Just feel it!"
-        "Keeping her feet firmly in place, Naomi… attempted a dance, while Honoka worked her way around her."
+        "Keeping her feet firmly in place, Naomi... attempted a dance, while Honoka worked her way around her."
         hide BE
         hide GTS_S 
         with dissolve
         show FMG angry with dissolve
         FMG "Alright, Kei-kun. Time to show her."
         show FMG happy
-        "Just as we went into it… the song ended, and a slow one started."
+        "Just as we went into it... the song ended, and a slow one started."
         show FMG disappointed
         FMG "LAME!"
         hide FMG with dissolve
@@ -26243,7 +26268,7 @@ label MC028_finale:
         show GTS_S neutral at Position(xcenter=0.74, yalign=1.0)
         GTS_S "Use your hips more. Flow into it."
         hide GTS_S
-        "Taking her advice, Akira worked her hips into the beat, as Honoka came into the circle with Akira and I, the three of us doing moves that… certainly couldn't be taught."
+        "Taking her advice, Akira worked her hips into the beat, as Honoka came into the circle with Akira and I, the three of us doing moves that... certainly couldn't be taught."
         scene black with fade
         jump daymenu
     elif routelock == "GTS":
@@ -26252,12 +26277,12 @@ label MC028_finale:
         show GTS neutral at Position(ycenter=0.55)
         GTS "Hm?"
         MC "Cultivated enough courage for a dance or three?"
-        GTS "It might be a tad tricky due to… well, you know."
+        GTS "It might be a tad tricky due to... well, you know."
         MC "Let's just give it a shot."
         hide GTS with dissolve
         "I led Naomi out into the dance floor, a few eyes going up as she entered."
-        Student1 "Whoa…"
-        "I chose a spot… and sat down. In the middle of the floor."
+        Student1 "Whoa..."
+        "I chose a spot... and sat down. In the middle of the floor."
         show GTS surprised at Position(ycenter=0.55)
         "Taking my lead, Naomi joined me, glancing about."
         MC "There. Now, we just work like this."
@@ -26276,14 +26301,14 @@ label MC028_finale:
         MC "There we are."
         MC "Have a good time?"
         show GTS happy-2 at Position(ycenter=0.35)
-        GTS "Simply the best…"
-        GTS "It's been lovely… feeling a part of the entourage once again."
+        GTS "Simply the best..."
+        GTS "It's been lovely... feeling a part of the entourage once again."
         "She leaned down, and planted a large kiss on one cheek, and most of the left side of my face, then the right, then right in the center, as I kissed back eagerly."
         scene black with fade
         jump daymenu
     elif routelock == "WG":
         "I pursed my lips. I could think about that later."
-        "For now…"
+        "For now..."
         show WG neutral with dissolve
         "I turned to Alice, as she took my arm before I offered."
         show WG haughty
@@ -26292,9 +26317,9 @@ label MC028_finale:
         show WG happy      
         WG "So many do a simple swap while holding hands. No. The music needs to breathe through you."
         show WG neutral
-        WG "As such…"
+        WG "As such..."
         "The music kicked into a faster song, as Alice walked me along a path."
-        WG "Now extend your arm… just like that. Excellent."
+        WG "Now extend your arm... just like that. Excellent."
         "I followed her lead, then took the lead from her, leading her along and letting myself feel it. It wasn't perfect by any means, but by imitating TV shows, I was able to make something work."
         "The song ended, bleeding into a slow song, as Alice drew in closer, my arms going around as much of her sides as I could get, though gripping mostly her belly."
         MC "Good evening for you?"
@@ -26331,7 +26356,7 @@ label MC028_finale:
         show WG happy
         MC "Perfect? I beg to differ."
         "I leaned in, and holding her chin in one hand, kissed her lips firmly."
-        MC "Mmnn…"
+        MC "Mmnn..."
         MC "There. Now, I'm sure you can see why mine is the proper choice."
         show WG happy-2
         WG "... I've been convinced."
@@ -26347,7 +26372,7 @@ label MC028_finale:
         show WG stern
         WG "Well I do, I'll have you know!"
         show FMG disappointed
-        FMG "{i}Ehh{/i}… Does she though?"
+        FMG "{i}Ehh{/i}... Does she though?"
         show FMG neutral
         show WG neutral
         "Akira and Alice basically had to shout to hear over the music."
@@ -26356,7 +26381,7 @@ label MC028_finale:
         "Aida came over, doing a sort of hip-sway, working her arms along either side of her."
         "She was actually shockingly decent, though clearly working around her middle."
         show PRG neutral
-        "Aida said something, her mouth moving, but… nothing being heard."
+        "Aida said something, her mouth moving, but... nothing being heard."
         FMG "Louder!"
         PRG2 "You think I can't dance?"
         show WG surprised
@@ -26367,7 +26392,7 @@ label MC028_finale:
         hide PRG
         with dissolve
         show WG neutral
-        "Beside her, Alice kept her rhythm, the beat rising… then dropping."
+        "Beside her, Alice kept her rhythm, the beat rising... then dropping."
         hide WG with dissolve
         show BE happy at Position(xcenter=0.45, yalign=1.0)
         show GTS happy at Position(xcenter=0.83, ycenter=0.55)
@@ -26391,16 +26416,16 @@ label MC028_finale:
         show BE happy with dissolve
         BE "Come on! Let's go dance!"
         BE "All of you!"
-        MC "I'm gonna wait…"
+        MC "I'm gonna wait..."
         show BE unamused
-        BE "Mmm… gotcha. Alright."
+        BE "Mmm... gotcha. Alright."
         show BE happy
         BE "Come on, girls! Let's go!"
         show FMG happy at Position(xcenter=0.25, yalign=1.0)
         show WG happy at Position(xcenter=0.72, yalign=1.0) behind BE
         with dissolve
         "Akira and Alice stepped out."
-        GTS_S "Inoue-san, I… don't know if my dancing is a wise choice."
+        GTS_S "Inoue-san, I... don't know if my dancing is a wise choice."
         BE "Oh, it'll be fine! We'll go off to the side!"
         show PRG happy at Position(xcenter=0.12, yalign=1.0) with dissolve
         "Aida walked out after Alice and Akira, smiling and moving her arms a little bit with the music."
@@ -26412,21 +26437,22 @@ label MC028_finale:
         hide WG
         hide PRG
         with dissolve
-        "I turned, and looked toward the other side near the film clubs area…"
+        "I turned, and looked toward the other side near the film clubs area..."
         MCT "... HOLY!"
         #AE costume change
         show AE neutral with dissolve
-        "The gothic gown… arcing around her hips, yet tight at her waist as it was held with a sash and dagger, showing every single curve. Her chest area was completely exposed about her cleavage, with no bra visible beneath. Finally, their hair was pushed upwards, giving it a distinctive shape."
-        "It was… everything."
+        "The gothic gown... arcing around her hips, yet tight at her waist as it was held with a sash and dagger, showing every single curve. Her chest area was completely exposed about her cleavage, with no bra visible beneath."
+        "Finally, their hair was pushed upwards, giving it a distinctive shape."
+        "It was... everything."
         MC "Hey! I like it!"
         show AE happy
-        AE "Hide that blush, Hotsure. I had limited choices due to… what fit properly."
+        AE "Hide that blush, Hotsure. I had limited choices due to... what fit properly."
         MCT "THAT counts as fits properly?!"
         MC "Alright? It's great!"
-        MC "What uh… what is it?"
+        MC "What uh... what is it?"
         show AE aroused
-        AE "I'm… I uh… uch… I'm the 'Mistress of the Night'..."
-        MC "Wow… okay then… well… the night is young."
+        AE "I'm... I uh... uch... I'm the 'Mistress of the Night'..."
+        MC "Wow... okay then... well... the night is young."
         "I held my hand out."
         MC "Shall we?"
         show AE happy
@@ -26435,39 +26461,39 @@ label MC028_finale:
         AE "Gladly."
         "I led her out onto the dance floor, aiming a bit further away from the crowds."
         "A faster song was ending, as a slow one kicked in, the lights dimming."
-        MC "Well… I suppose now's the time for this."
+        MC "Well... I suppose now's the time for this."
         "I smiled, and drew Shiori in closer, putting my hands on her waist."
-        MC "There…"
+        MC "There..."
         show AE surprised
         AE "Gnh- H-Hotsure-san!"
         MC "Hehe, what's the matter? Isn't this better?"
         AE "..."
         show AE neutral
-        AE "This is better… I prefer the slower pace."
+        AE "This is better... I prefer the slower pace."
         MC "I'm not arguing either."
         "I held her close as I looked into her eyes with a smile."
         MC "Have a good time tonight?"
         show AE happy
-        AE "... I did. I… enjoyed the camaraderie."
+        AE "... I did. I... enjoyed the camaraderie."
         MC "Yeah, me too."
         "As we swayed, I felt the warmth of her hand as our fingers interlocked."
         MC "It's fun being a part of a group like that, isn't it?"
         AE "Yes. With the right people."
         MC "And you enjoy them?"
         show AE neutral
-        AE "I do… Inoue-san and Mizutani-san can be a tad… much on occasion, but they mean well."
+        AE "I do... Inoue-san and Mizutani-san can be a tad... much on occasion, but they mean well."
         AE "Yamazaki-san is always so pleasant, as is Kodama-san."
-        AE "And, Nikumaru-san is… well, I'm not sure on her on occasion, but she has her kind sides."
+        AE "And, Nikumaru-san is... well, I'm not sure on her on occasion, but she has her kind sides."
         "Shiori leaned in, and leaned her head in against my shoulder, her arms around my neck."
         show AE happy
-        AE "This is nice…"
-        MC "Yeah…"
+        AE "This is nice..."
+        MC "Yeah..."
         "The slow song drew to a close, as the next song kicked up. Faster, and with a heavier bass beat."
-        MC "Alright… wanna step off for a bit?"
+        MC "Alright... wanna step off for a bit?"
         show AE neutral
-        AE "Mnh… perhaps we should. The bass gets a bit… mnn… frazzling."
+        AE "Mnh... perhaps we should. The bass gets a bit... mnn... frazzling."
         show BE neutral at Position(xcenter=0.23, yalign=1.0) with dissolve
-        BE "I found them! There they- whoa…"
+        BE "I found them! There they- whoa..."
         show BE surprised
         pause .5
         show FMG surprised at Position(xcenter=0.60, yalign=1.0) behind AE, WG
@@ -26478,11 +26504,11 @@ label MC028_finale:
         "Honoka worked her way through the crowd, followed closely by Akira, Aida, Alice, and Naomi."
         show AE embarrassed
         AE "Oh dear god."
-        FMG "Damn…"
+        FMG "Damn..."
         show WG coy
-        WG "My, my…"
+        WG "My, my..."
         PRG "..."
-        GTS_S "Oh… stunning."
+        GTS_S "Oh... stunning."
         AE "..."
         pause .5
         show AE neutral
@@ -26510,8 +26536,8 @@ label MC028_finale:
         show AE embarrassed
         "Shiori's face was near beet-red, her skin the color of an overripe strawberry."
         "She glanced around at Honoka, Naomi, Alice, Aida, and Akira, then at me."
-        MC "We're off to the side. It's just us…"
-        "Shiori gripped the fabric of her costume a little… and slowly began to sway her hips ever so slightly in time with the music."
+        MC "We're off to the side. It's just us..."
+        "Shiori gripped the fabric of her costume a little... and slowly began to sway her hips ever so slightly in time with the music."
         BE "There ya go!"
         hide BE
         hide GTS_S
@@ -26520,7 +26546,7 @@ label MC028_finale:
         hide WG
         with dissolve
         "As the song reached it's ending, another slower song kicked in, Shiori coming into my arms once more, moving with me to the music."
-        MC "You did so good…"
+        MC "You did so good..."
         show AE neutral
         AE "... Thank you."
         scene black with fade
@@ -26528,18 +26554,18 @@ label MC028_finale:
      
     if routelock == "PRG":
         "I sighed, looking over to her."
-        "I had a feeling Aida would have her eyes on Takamura too, but that could wait…"
+        "I had a feeling Aida would have her eyes on Takamura too, but that could wait..."
         "I looked over at her and smiled."
         MC "Shall we?"
         show PRG blush-2
         "Aida nodded."
         PRG "Yeah."
-        "She… led me out onto the dance floor, as a quicker song was playing."
-        MC "Are you… sure you should be dancing to something this fast when you're pregnant?"
+        "She... led me out onto the dance floor, as a quicker song was playing."
+        MC "Are you... sure you should be dancing to something this fast when you're pregnant?"
         show PRG neutral
         PRG2 "It's okay. I saw there was a dance tonight, and I looked it up."
         PRG2 "If I feel faint or anything, I'll go sit down, but I'm okay."
-        "Aida kept a few paces away from me, dancing in front of me, as she did a few arm movements that… actually looked good."
+        "Aida kept a few paces away from me, dancing in front of me, as she did a few arm movements that... actually looked good."
         "She smiled and did a twirl, keeping her balance as she came toward me, taking my arm and pulling me toward her."
         if isEventCleared("PRG065"):
             MC "I guess you do like dancing, huh?"
@@ -26547,7 +26573,7 @@ label MC028_finale:
             PRG2 "I wasn't lying!"
             MC "Another thing I'm learning about you!"
         else:
-            MC "H-How are you… did you take dance lessons as a kid or something?!"
+            MC "H-How are you... did you take dance lessons as a kid or something?!"
             PRG2 "No. I used to practice dancing in the living room when my grandparents weren't home. I love dancing."
             MC "Wow. Another thing I know about you."
         MC "Ever play an instrument or anything?"
@@ -26557,7 +26583,7 @@ label MC028_finale:
         PRG2 "I used to try different hobbies a lot back then."
         MC "Yeah, you said you played softball, didn't you? Or baseball? Whichever one."
         show PRG neutral
-        PRG2 "I did. I… well, I was okay at catching the ball, but I couldn't throw very well, at least good enough to be on a team. I like watching it more than I like actually playing."
+        PRG2 "I did. I... well, I was okay at catching the ball, but I couldn't throw very well, at least good enough to be on a team. I like watching it more than I like actually playing."
         MC "Gotcha."
         "As the faster song ended, a slow song kicked in."
         show PRG worried
@@ -26567,21 +26593,21 @@ label MC028_finale:
         show PRG blush-2
         "Aida turned, and backed into me, nestling herself against me and leaning back, her belly sticking out in front of her."
         MC "Good?"
-        PRG2 "Perfect…"
+        PRG2 "Perfect..."
         "Aida swayed gently in my embrace, her butt shifting heavily across my crotch as I brought my hands around her, holding her belly and rubbing it."
         "She turned her head over her shoulder, her eyes closed and hair draped along her face."
-        PRG2 "Kiss me…"
+        PRG2 "Kiss me..."
         "I leaned around, kissing her deeply and holding her there, sighing and rubbing her shoulder and exposed upper arm."
         "As she left the kiss and gazed into my mask, I looked down into the absolute canyon of cleavage before me. The huge, pale orbs held just barely by her kimono."
         PRG2 "... I can tell you're looking."
         MC "Well, I've been going around with you all night, trying to not stare in front of everyone else."
         MC "When it's all I wanted to do."
-        MC "Guess I got charmed by the kitsune…"
-        PRG2 "Right into my arms… where you should be."
+        MC "Guess I got charmed by the kitsune..."
+        PRG2 "Right into my arms... where you should be."
         MC "Not often you get to dance with a 500 year old fox lady."
         show PRG neutral
         PRG2 "563, to be exact."
-        MC "I see… and she's lovely."
+        MC "I see... and she's lovely."
         show PRG blush-2
         "Aida blushed, then leaned in and kissed me again, holding me there until the song ended."
         "The next song started slower, then picked up faster, the bass more heavy and rhythmic."
@@ -26604,12 +26630,12 @@ label MC028_finale:
         hide FMG
         MC "I love seeing you be you. Not worrying about what anyone else thinks."
         "Aida motioned for my ear, as I leaned my head down."
-        PRG2 "After what my dad said… I don't care what he thinks. Not now. Not when I'm having fun."
+        PRG2 "After what my dad said... I don't care what he thinks. Not now. Not when I'm having fun."
         MC "Good."
         "I smiled at her, as she glanced to Honoka, who was attempting a shuffle move, her boobs bouncing up and down against her thighs."
-        "She looked at Akira, who was moving in such a way that parts of her costume were flying up, showing that it… was basically just a bikini with fur."
-        "Aida… turned back around and backed into me, in the same position as for the slow dance."
-        "She put her hands along either side of her belly, down onto her legs… and slowly pressed her ass against me, rubbing it in time with the music as Honoka stared, then burst out into a cheer."
+        "She looked at Akira, who was moving in such a way that parts of her costume were flying up, showing that it... was basically just a bikini with fur."
+        "Aida... turned back around and backed into me, in the same position as for the slow dance."
+        "She put her hands along either side of her belly, down onto her legs... and slowly pressed her ass against me, rubbing it in time with the music as Honoka stared, then burst out into a cheer."
         show BE happy at Position(xcenter=0.73, yalign=1.0) behind PRG with dissolve 
         BE "Get it, girl!"
         hide BE with dissolve
@@ -26618,7 +26644,7 @@ label MC028_finale:
         hide WG with dissolve
         "Aida turned her head a little, where I saw her eyes were closed."
         "She opened them for a moment, and brought her arms around my neck behind her, and started rubbing again, as I put my hands down on her hips, grinding into her."
-        "I could feel her… against me. Letting it all loose."
+        "I could feel her... against me. Letting it all loose."
         "Having fun."
         show FMG happy at Position(xcenter=0.23, yalign=1.0) behind PRG with dissolve
         FMG "WOOOOOO!"
@@ -26635,7 +26661,7 @@ label MC028_finale:
         PRG2 "I know!"
         "The two girls giggled together, as I blushed and smirked, not at the attention being on me, or at the slight growing situation that was happening below the belt, thankfully covered by Aida's stomach."
         hide BE with dissolve
-        "But at Aida… having fun with her friends… our friends, and forgetting the troubles."
+        "But at Aida... having fun with her friends... our friends, and forgetting the troubles."
         scene black with fade
         jump daymenu
     
@@ -26707,7 +26733,7 @@ label MC028_finale:
             MC "That's true, yeah."
         else:
             Jineko "Huh. Small world, huh?"
-            MC "Yeah. Really is…"
+            MC "Yeah. Really is..."
         scene black with fade
         jump daymenu
 
@@ -27624,9 +27650,10 @@ label global005:
     hide AE
     with dissolve
     if getHighestAffection() == "BE":
-        show BE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+        show BE happy at Position(xcenter=0.5, yalign=1.0) with dissolve
         BE "Hey there, Kei-chan! How are things going for you?"
         MC "Oh, pretty good. You?"
+        show BE neutral
         BE "Still getting used to how big this campus is! I've been spending some time walking around each night and I still haven't seen it all!"
         MC "Wow, I haven't been around much either..."
         BE "Maybe we can go exploring together sometime!"

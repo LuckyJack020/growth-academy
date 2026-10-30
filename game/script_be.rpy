@@ -296,7 +296,7 @@ label BE002:
     show BE wink
     BE "Pfff, that was lame, Kei-chan."
     MC "Hey, I'm trying. I like seeing you laugh."
-    MCT "Don't say \"Because it makes my boobs bounce?\". Don't say \"Because it makes my boobs bounce?\". {i}PLEASE{/i} Don't say \"Because it makes my boobs bounce?\"."
+    MCT "Don't say \"Because it makes my boobs bounce?\". {w}Don't say \"Because it makes my boobs bounce?\". {w}{i}PLEASE{/i} don't say \"Because it makes my boobs bounce?\"."
     show BE unique
     BE "Because it makes my boobs bounce?"
     MCT "Damnit."
@@ -761,6 +761,7 @@ label BE004:
     BE "I knoooow, me too."
     show BE neutral
     "Honoka pushed forward with her chest, jolting herself up from her seat."
+    show BE happy
     BE "C'mon. It's almost homeroom time."
     if not isEventCleared("global005"):
         MC "Ah, really?"
@@ -834,7 +835,9 @@ label BE005:
     show BE happy at center with dissolve
     BE "Oi, Kei-chan."
     "There she was."
+    show BE wink
     "Skipping along as her chest bounced rhythmically, she gave me an excited wave."
+    show BE happy
     MC "Hey, Honoka. What's going on?"
     "I spoke with a neutral, somewhat solemn tone, given the general vibe of the rest of the room, yet Honoka smiled, and stood next to me." 
     "She groaned with a yawn and stretched out her back, closing her eyes and looking extra cute as she popped something in her back."
@@ -944,7 +947,7 @@ label BE005_p1_c2:
     MC "Ha."
     "..."
     MCT "Please say something else."
-    show BE neutral
+    show BE guilty
     BE "No, see, this is supposed to be the point where you say \"Out here, where anyone could see? You're such a naughty girl, Honoka.\""
     MC "No, I wouldn't say something like that."
     show BE happy
@@ -1061,9 +1064,9 @@ label BE005_merge:
     BE "I aim to please. So, tell me, any plans for how you're going to deal with your hair? Going to go ahead and grow it out for a while, to try something new?"
     menu:
         "Eh, I don't really care, it's just hair.":
-            jump BE005_c1
+            jump BE005_p2_c1
         "Maybe. You think it'd look good?":
-            jump BE005_c2
+            jump BE005_p2_c2
 
 label BE005_p2_c1:
     MC "Eh, I don't really care, it's just hair."
@@ -1092,7 +1095,7 @@ label BE005_p2_c1:
     pause .5
     if isEventCleared("MC002"):
         show BE neutral
-        show Hageshi neutral with dissolve
+        show Hageshi neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
         "Honoka went silent as our math teacher walked in. The other students all began to hush after a while, ready for class to begin."
     else:
         "Honoka went silent. The other students all began to hush after a while, ready for math class to begin."
@@ -1145,7 +1148,7 @@ label BE005_p2_c2:
     play sound Bell
     if isEventCleared("MC002"):
         show BE neutral
-        show Hageshi neutral with dissolve
+        show Hageshi neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
         "Honoka chuckled, and then went silent as our math teacher walked in. The other students all began to hush after a while, ready for class to begin."
     else:
         "Honoka chuckled. The other students all began to hush after a while, ready for math class to begin."
@@ -1450,7 +1453,9 @@ label BE008:
     if isEventCleared("RM002"):
         MCT "Wait a minute... No way that's Daichi, he doesn't seem like someone who forgets anything... {w}Well, sanity and any sense of privacy notwithstanding."
     pause 1
-    show BE wink with dissolve
+    scene Dorm Hallway
+    show BE happy
+    with fade
     "Instead, I found Honoka standing there with a wide grin on her face, one hand on her hip as she gave a peace sign with her other."
     MC "Hey, what's up?"
     show BE happy
@@ -1471,7 +1476,9 @@ label BE008:
     MC "Naughty? Um. No, wait. No, I can't have been planning anything naughty, you were the one who showed up here in the first place!"
     show BE guilty
     BE "Oh. Right. I did do that, didn't I?"
+    scene Dorm Interior
     show BE happy
+    with fade
     "Honoka giggled as she walked into my room and slumped down on a nearby seat with a smile. I couldn't help but notice how the forceful way she planted herself down onto the chair made her boobs bounce in such a dramatic fashion."
     show BE neutral
     BE "So, how's it going?"
@@ -8474,11 +8481,13 @@ label BE038A:
     show BE neutral
     MC "I'm sure that's not something they invented. They just made a phrase for it, but looks like it's working."
     pause 1
-    show Takamura neutral with dissolve
+    show BE neutral at altMove(0.5, 0.25)
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Takamura "La mise en place est le feng shui de la table."
     MC "Wha-?"
     Takamura "It means less talking, more prepping."
     "And, as expected, Takamura-sensei had much to say while overseeing the meeting, with Kanami and the others working on a large dish with multiple moving parts."
+    show BE neutral at altMove(0.5, 0.5)
     hide Takamura with dissolve
     "Honoka and I worked on our separate sections, checking in periodically to make sure our times were correct. Ideally, we wanted the cupcakes to be cool before we stuffed and frosted them."
     "There's fewer things more miserable in life than when a cupcake's frosting has melted off."
@@ -8512,11 +8521,13 @@ label BE038A_c1_1:
     BE "Oh, and I'm suuuure you'd hate that."
     "Honoka leaned in to lick the frosting off of me when the sound of a metal spatula hitting the countertop jerked us both to a more alert state."
     pause 1
-    show Kanami neutral with dissolve
+    show BE happy at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Kanami "I better not see any cross-contamination going on in this kitchen~"
     "Her tone was soft. But in the way a grizzly bear looked soft— but would still leave you a mess on the ground if you annoyed it."
     MC "Nope! Nothing going on here. Just cooking. Normal cooking."
     Kanami "Ahh, normal cooking huh? Well... let's just hope it turns out well, hm?"
+    show BE happy at altMove(0.5, 0.5)
     hide Kanami with moveoutleft
     pause 1
     show BE angry
@@ -8546,10 +8557,12 @@ label BE038A_c1_2:
     BE "Ah, whoops, better get back to cooking. Don't want Kanami all on my bust about this."
     MC "Ha, good call."
     pause 1
-    show Kanami neutral with dissolve
+    show BE angry at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Across the way, Kanami was heating up a pan on a stovetop, adding oil and the like. Her partner hovered around her, getting plates laid out and seasonings reading."
     MC "Looks like she's in a trance."
     BE "Girl's got motivation, for sure."
+    show BE angry at altMove(0.5, 0.5)
     hide Kanami with dissolve
 jump BE038A_c1_after
 
@@ -8587,15 +8600,17 @@ label BE038A_p1_2:
         MC "Yeah. Leave that to the 3-star chefs or ones who can go to pastry school. This is gonna taste good. And that's what matters."
     else:
         MC "Yeah. Leave that to the 5-star chefs or ones who can go to pastry school. This is gonna taste good. And that's what matters."
-    show Kanami neutral with dissolve
+    show BE happy at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Kanami "3-star chefs."
     MC "Yeah, exactly."
     Kanami "No, I mean they only go up to 3-stars."
     MC "Wow, they must suck then."
     Kanami "Wha- oh- nngh."
-    show BE embarassed-2
+    show BE embarrassed-2
     BE "HA."
     pause 1
+    show BE embarrassed-2 at altMove(0.5, 0.5)
     hide Kanami with dissolve
     show BE neutral
     BE "Anyways, you're right."
@@ -8618,11 +8633,13 @@ label BE038A_p1_after:
     MC "I thought we were making cupcakes, not battered breasts."
     BE "Yuck it up, Hotsure."
     MC "Well... couldn't hurt to try what we talked about earlier, eh?"
-    show Kanami neutral with dissolve 
+    show BE sad at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve 
     Kanami "{i}Thaaat{/i} won't be necessary."
     "Honoka held out her hand as she caught the apron that Kanami threw from behind me."
     BE "Thanks, Kanami."
     Kanami "No worries, trust me it happens to me all the time."
+    show BE sad at altMove(0.5, 0.5)
     hide Kanami with dissolve
     BE "... Oof..."
     "As we waited for the cakes to finish baking, and then set them out to cool, we made sure our workstation was as clean as could be."
@@ -8632,19 +8649,20 @@ label BE038A_p1_after:
     "Some chairs would be placed several feet apart to account for students with wide assets. A few of the tables were elevated to make things easier for taller ones, and others were wider so that club members weren't forced to touch each other under the table."
     "Honoka and I were able to sit next to each other. Kanami wound up sitting across from us, along with several others."
     "She had made an enormous platter of noodles with several different meats and veggies mixed in. The plate was right in front of us and it smelled amazing."
-    show Kanami neutral with dissolve
+    show BE sad at altMove(0.5, 0.25)
+    show Kanami neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "Smells kinda... spicy."
     Kanami "Nothing overly heavy. Just enough to bring out the flavor."
     Kanami "There's a general happy medium to spice. Add too much, and it's all you taste, but don't enough, and it's barely there. The key is to just thread the line."
     hide Kanami with dissolve
     pause 1
-    show Takamura neutral with dissolve
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Near one of the stations, Takamura held up a hand, as the room quieted."
     Takamura "Thank you everyone so much for working hard on this meal. It all looks delicious and you should be very proud of yourselves."
     "There was some light applause and one cheer coming from the brunette right next to me. Once we got the go ahead to dig in, dishes were passed around so that everybody could get what they wanted."
     hide Takamura with dissolve
     pause 1
-    show PRG neutral with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Here you g-"
     PRG "O-Oh. H-Hi, Hotsure-san."
     "I blinked, taking the plate of noodles from her."
@@ -8707,13 +8725,12 @@ label BE038A_p1_after:
     MC "Ahaha~"
     hide PRG with dissolve
     hide Sakura with dissolve
-    show Takamura neutral
+    show Takamura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Takamura "Well now, aren't you two having fun?~"
     BE "What can I say, light hearts make quick work!"
     Takamura "I must say, you two are a very nice couple."
     MC "Heh, thank you. You think so?"
     Takamura "I do. It's very wholesome. Very cute. Traditional."
-
     menu:
         "You're right.":
             jump BE038A_c2_1
@@ -8732,8 +8749,8 @@ label BE038A_c2_1:
     show Takamura happy
     Takamura "Now, now, don't tease her, Hotsure-san~"
     "I let go of her shoulder and got back to eating, but I felt Honoka's hand rest on my thigh."
+    show BE neutral at altMove(0.5, 0.5)
     hide Takamura with dissolve
-    show BE neutral
     BE "Heh, we're a good pair huh? I guess we've got the benefit of the \"childhood friend\" thing to back us up."
     MC "Mm-hm. A good basis for knowing each other. Means there's not much worry going into the relationship, right?"
     show BE happy
@@ -8787,7 +8804,7 @@ label BE038A_c2_2:
     MC "You're the best, Honoka."
     show BE happy
     BE "Haha. You too, Kei-chan~"
-jump BE038A_c2_after
+    jump BE038A_c2_after
 
 label BE038A_c2_after:
     "I laughed, and got back to eating. It was a great feast, it would be a shame to waste it all and let it get cold after all."

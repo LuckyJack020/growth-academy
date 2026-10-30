@@ -15813,7 +15813,7 @@ label WG058_c1_after:
     "Well, Alice finished them. I only had half a muffin and a single macaron."
     "Our conversation meandered between the weather, the view, classes— I tried hard to keep the subject away from business matters, as Alice is wont to do."
     "She spends enough time with that, I want our dates to be a time where she can get away from it for a little while."
-    show WG neutral at Position(xcenter=0.2, yalign=1.0)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
     show Ryoko camera at Position(xcenter=0.8, yalign=1.0)
     with dissolve
     "In the background, our conversation would occasionally be interjected with \"{i}Action!{/i}\" and \"{i}Cut!{/i}\" from the distant exuberant shouts from the director."
