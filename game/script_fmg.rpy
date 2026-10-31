@@ -20210,7 +20210,7 @@ label FMG090:
     show FMG sad
     FMG "...Are you joking?"
     Chibuki "I wish I was..."
-    if getFlag(“Meet_Kokutan”):
+    if getFlag("Meet_Kokutan"):
         MC "You guys are being too hard on her. She isn't that bad."
     else:
         MC "You guys are being too hard on her. Surely, she isn't that bad."
@@ -20255,8 +20255,8 @@ label FMG090:
     FMG "Yeah, just wait..."
     "Suddenly, the door swung open. Standing in the doorway was a girl who must be Kokutan. She stood there for a second in a strange dramatic pose before speaking."
     show Kokutan neutral with dissolve
-    if not getFlag(Meet_Kokutan):
-        $setFlag(Meet_Kokutan)
+    if not getFlag("Meet_Kokutan"):
+        $setFlag("Meet_Kokutan")
     Kokutan "I have... arrived! It is I... {w}Kokutan, the Ebony Lord of Destruction, Master of A Thousand Demons, Malevolent Overseer, Emperor of the New World!"
     MC "..."
     FMG "..."

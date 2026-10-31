@@ -34,7 +34,7 @@ define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
 define MC_BE = Character('Keisuke & Honoka', color="#C0C0C0")
 
 #Supporting Cast
-define Chibuki = Character('Chibuki', color="#49516D")
+define Chibuki = Character('Chibuki', color="#C0C0C0")
 define ChibukiCell = Character('Chibuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="ChibukiCell")
 define Jineko = Character('Jineko', color="#EFAC87")
 define Kanami = Character('Kanami', color="#C0C0C0")
@@ -115,7 +115,7 @@ define ReinaM = Character('Reina', color="#C0C0C0") #Female Student Council Memb
 define Sakie = Character('Sakie', color="#C0C0C0") #Basketball Club Member
 define Takeda = Character('Takeda', color="#C0C0C0") #Track Team Member
 define Ume = Character('Ume', color="#C0C0C0") #Giants Dorm Student
-define Sota = Character('Sota', color="#FF91DC") #Karaku - MC Elective Classmate
+define Sota = Character('Sota', color="#C0C0C0") #Karaku - MC Elective Classmate
 
 #Background Characters
 define Akio = Character('Akio', color="#C0C0C0") #GTS Route
@@ -1551,7 +1551,7 @@ init 2 python:
     eventlibrary['BE035B'] = {"name": "Pop Flies", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                     "location": "track",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE036'] = {"name": "Flower Gazing", "girls": ["BE", "GTS"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                               "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 8,     "next": "BE037", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE037'] = {"name": "Dock Musing", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                        "location": "lakeroad",         "priority": PrioEnum.NONE, "sp": 8,     "next": "BE038A", "preobsflags": [], "obsflags": [],                 "conditions": []}
-    eventlibrary['BE038A'] = {"name": "Cooking Club Scene 2", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                   "location": "classroom",        "priority": PrioEnum.NONE, "sp": 8,     "next": "BE039", "preobsflags": [], "obsflags": [],                  "conditions": []}
+    eventlibrary['BE038A'] = {"name": "Mise en Place", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                   "location": "classroom",        "priority": PrioEnum.NONE, "sp": 8,     "next": "BE039", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE038B'] = {"name": "Based", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                      "location": "schoolexterior",    "priority": PrioEnum.NONE, "sp": 8,     "next": "BE039", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE039'] = {"name": "Honoka's Roommate", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                                  "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 8,     "next": "BE041A", "preobsflags": [], "obsflags": [],                  "conditions": []}
     eventlibrary['BE041A'] = {"name": "Cooking Club Scene 3", "girls": ["BE"], "display": "Honoka's Route", "type": EventTypeEnum.CORE,                          "location": "cookingclassroom",     "priority": PrioEnum.NONE, "sp": 9,     "next": "BE042", "preobsflags": [], "obsflags": [],                  "conditions": []}
