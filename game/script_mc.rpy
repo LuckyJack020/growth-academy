@@ -25672,7 +25672,7 @@ label MC028_merge:
     if getFlag("MC028_JoinedGroup1"):
         show PRG neutral at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1)
         show FMG neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1)
-        show WG neutral-2 at Position(xcenter=0.60, yalign=1.0)
+        show WG neutral-2 at Position(xcenter=0.75, yalign=1.0)
         with dissolve
         pause .5
         "Alice, Aida, and Akira were talking together, the three in a rather intense conversation."
