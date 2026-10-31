@@ -24447,12 +24447,12 @@ label MC028:
     BE "T-Thanks..."
     show BE embarrassed-2
     BE "Ummm..."
-    show AE neutral-eyebrow at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    show PRG surprised at Position(xcenter=0.12, yalign=1.0)
-    show FMG neutral at Position(xcenter=0.40, yalign=1.0) behind AE
-    show WG doubt at Position(xcenter=0.60, yalign=1.0)
-    show BE unamused at Position(xcenter=0.75, yalign=1.0)
-    show GTS surprised at Position(xcenter=0.90, ycenter=0.55) behind BE
+    show AE neutral-eyebrow at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) behind BE
+    show PRG surprised at Position(xcenter=0.12, yalign=1.0), Transform(xzoom=-1)
+    show FMG neutral at Position(xcenter=0.72, yalign=1.0) behind AE
+    show WG doubt at Position(xcenter=0.40, yalign=1.0) behind BE, AE
+    show BE unamused at Position(xcenter=0.50, yalign=1.0)
+    show GTS surprised at Position(xcenter=0.90, ycenter=0.55) behind BE, FMG
     with dissolve
     FMG "... I mean, it is chilly tonight."
     WG "And that's your own fault."
@@ -24499,8 +24499,10 @@ label MC028:
     hide WG
     hide PRG
     with dissolve
-    show BE unamused at altMove(0.5, 0.65)
+    show BE unamused at altMove(0.5, 0.50)
     show FMG neutral at altMove(0.5, 0.35)
+    pause .5
+    show FMG  at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1)
     FMG "I got it."
     show FMG flex
     FMG "Just needs the ol' elbow grease!"
@@ -24550,8 +24552,8 @@ label MC028:
     hide PRG
     hide WG
     with dissolve
-    show BE flustered at Position(xcenter=0.65, yalign=1.0)
-    show FMG devious at Position(xcenter=0.35, yalign=1.0)
+    show BE flustered at Position(xcenter=0.50, yalign=1.0)
+    show FMG devious at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1)
     with dissolve
     BE "You are warm. What the hell..."
     FMG "I told you! Us barbarians are always hot!"
@@ -24588,12 +24590,12 @@ label MC028:
         "Aida stepped forward, as... Shiori touched her arm."
         AE "Please. Allow me, Kodama-san."
         PRG "Uh... o-okay."
-        show AE neutral at altMove(0.5, 0.75)
-        show WG neutral-2 at altMove(0.5, 0.6)
+        show AE neutral at altMove(0.5, 0.72)
+        show WG neutral-2 at altMove(0.5, 0.25)
         show GTS neutral at altMove(0.5, 0.9)
         show PRG worried at altMove(0.5, 0.12)
-        show BE unamused at Position(xcenter=0.23, yalign=1.0)
-        show FMG angry at Position(xcenter=0.40, yalign=1.0)
+        show BE unamused at Position(xcenter=0.50, yalign=1.0)
+        show FMG angry at Position(xcenter=0.35, yalign=1.0), Transform(xzoom=-1)
         with dissolve
         "Shiori came forward, and grabbed Honoka's other arm."
         "I rolled Honoka's sleeve up a little, getting a grip on her skin."
