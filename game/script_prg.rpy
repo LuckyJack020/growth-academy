@@ -46151,7 +46151,7 @@ label PRG065:
     PRG "I've heard some before."
     MC "In movies?"
     PRG "Well... yes. But, since I still listen to music on my radio most of the time, I hear some older stuff along with newer songs."
-    if isEventCleared(“MC028”):
+    if isEventCleared("MC028"):
         MC "Mm. Well, from such a fancy clarinet player, I wasn't sure what you'd enjoy."
         show PRG excited with dissolve
         PRG "I-I only played for like a year! And I was terrible!"
