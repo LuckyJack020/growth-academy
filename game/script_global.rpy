@@ -788,6 +788,7 @@ image BE flustered = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/flustered
 image BE furious = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/furious.webp")
 image BE guilty = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/guilty.webp")
 image BE seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.webp")
+image BE scared = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/scared.webp")
 image BE shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.webp")
 image BE unamused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unamused.webp")
 image BE wink = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/wink.webp")
