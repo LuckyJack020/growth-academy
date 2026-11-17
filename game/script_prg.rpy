@@ -29611,28 +29611,23 @@ label PRG049:
     "She leaned over and kissed me on the collarbone, then gently up my neck."
     MC "Someone's a little frisky today."
     show PRG blush-2
-    if getFlag("PRG048_kiss"):
-        "Aida leaned in and kissed me again, now craning over to the point of her boobs laying on top of me."
-        PRG "W-What's wrong with that?"
-        MC "Nothing. I'm not filing any complaints."
-        MC "Well... actually, yes I am. There was a bit more heat to the kisses last night. I'm going to need to see a bit more effort."
-        "With the arm closest, Aida took my shoulder and pulled me a bit, as I went with the motion and laid on my side."
-        "Aida scooted in on her back, keeping her belly and boobs pointed up."
-        "She kissed me deeply, just as the night prior, her head angling and pulling me closer as her tongue met mine."
-        PRG "Mmn~"
-        PRG "There... {w}better?"
-        MC "Much. Thank you."
-        "I laid closer to her as Aida shifted her arms, and something heavy spread across my chest."
-        "Looking down, Aida's right boob spilled over against my chest, her sideboob poking out from her pajamas." 
-        "Unsupported by a bra, Aida's boob had free reign to do as it naturally did."
-        show PRG blush
-        "Aida brought her arm back over and scooted her boob back up."
-        pause .5
-        PRG "This is the other reason I don't lay on my back that often."
-        "I smirked and kissed her cheek."
-        MC "Shut it. You're beautiful."
+    if getFlag("PRG048_handjob"):
+        MC "Though... after last night, this is pretty tame."
+        show PRG aroused
+        pause .75
+        PRG "... Are you saying you didn't like it?"
+        MC "Nonono! I-It was great! I... I loved it."
+        show PRG neutral
+        PRG "... I could tell."
+        "Aida smooched me on the cheek, her boobs pressing into my side."
+        show PRG aroused
+        PRG "And... I wasn't the only one that was frisky~"
+        "I turned over, kissing her on the nose and running a hand through her hair."
+        MC "And did you mind?"
         show PRG blush-2
-    if getFlag("PRG048_boob"):
+        PRG "... No."
+        MC "Perfect."
+    elif getFlag("PRG048_boob"):
         "Aida blushed and leaned in a little."
         PRG "A-And you weren't frisky last night?"
         MC "I mean... you gave me permission."
@@ -29654,22 +29649,27 @@ label PRG049:
         "I looked back up."
         "Aida still had her eyes shut."
         "I leaned out, gently kissing her nose."
-    elif getFlag("PRG048_handjob"):
-        MC "Though... after last night, this is pretty tame."
-        show PRG aroused
-        pause .75
-        PRG "... Are you saying you didn't like it?"
-        MC "Nonono! I-It was great! I... I loved it."
-        show PRG neutral
-        PRG "... I could tell."
-        "Aida smooched me on the cheek, her boobs pressing into my side."
-        show PRG aroused
-        PRG "And... I wasn't the only one that was frisky~"
-        "I turned over, kissing her on the nose and running a hand through her hair."
-        MC "And did you mind?"
+    elif getFlag("PRG048_kiss"):
+        "Aida leaned in and kissed me again, now craning over to the point of her boobs laying on top of me."
+        PRG "W-What's wrong with that?"
+        MC "Nothing. I'm not filing any complaints."
+        MC "Well... actually, yes I am. There was a bit more heat to the kisses last night. I'm going to need to see a bit more effort."
+        "With the arm closest, Aida took my shoulder and pulled me a bit, as I went with the motion and laid on my side."
+        "Aida scooted in on her back, keeping her belly and boobs pointed up."
+        "She kissed me deeply, just as the night prior, her head angling and pulling me closer as her tongue met mine."
+        PRG "Mmn~"
+        PRG "There... {w}better?"
+        MC "Much. Thank you."
+        "I laid closer to her as Aida shifted her arms, and something heavy spread across my chest."
+        "Looking down, Aida's right boob spilled over against my chest, her sideboob poking out from her pajamas." 
+        "Unsupported by a bra, Aida's boob had free reign to do as it naturally did."
+        show PRG blush
+        "Aida brought her arm back over and scooted her boob back up."
+        pause .5
+        PRG "This is the other reason I don't lay on my back that often."
+        "I smirked and kissed her cheek."
+        MC "Shut it. You're beautiful."
         show PRG blush-2
-        PRG "... No."
-        MC "Perfect."
     MC "So... is the star player ready for her game today?"
     show PRG unique-happy
     PRG "I-I'm so excited. I-I still can't believe we're going."
